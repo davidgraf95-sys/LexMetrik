@@ -48,12 +48,17 @@ export function letzerTagDesMonats(d: Date): Date {
   return endOfMonth(d);
 }
 
+/** Reines yyyy-MM-dd-FORMAT (SSOT-Konstante, B18/H-9). ACHTUNG: prüft nur die
+ *  Form, NICHT die Kalender-Plausibilität — akzeptiert z. B. 2026-02-30. Für die
+ *  echte Datums-Gültigkeit `istGueltigesISO` verwenden, NICHT diese Regex. */
+export const ISO_DATUM_RE = /^\d{4}-\d{2}-\d{2}$/;
+
 /** ISO-String (yyyy-mm-dd) ist ein REAL existierendes Kalenderdatum?
  *  (Format UND Monat/Tag-Plausibilität inkl. Schaltjahr via UTC-Rückvergleich.)
  *  Heimat der Datums-Validierung (/simplify Reuse#3, 7.6.2026) — permalink.ts
  *  re-exportiert sie als istISO für die Permalink-Specs. */
 export function istGueltigesISO(v: string): boolean {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) return false;
+  if (!ISO_DATUM_RE.test(v)) return false;
   const [j, m, t] = v.split('-').map(Number);
   const d = new Date(Date.UTC(j, m - 1, t));
   return d.getUTCFullYear() === j && d.getUTCMonth() === m - 1 && d.getUTCDate() === t;

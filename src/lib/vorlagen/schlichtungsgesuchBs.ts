@@ -159,7 +159,9 @@ export function sgStreitwert(a: SgAnswers): number | null {
   // betrag als vorläufiger Streitwert (Art. 85 ZPO); sonst manuelle Angabe.
   const roh = a.geld?.betrag ?? a.unbeziffert?.mindestbetrag ?? a.streitwert;
   if (roh == null || roh === '') return null;
-  // gleiche Normalisierung wie fmtCHF (Apostroph, Leerzeichen, Dezimal-Komma)
+  // gleiche Normalisierung wie fmtCHF (Apostroph, Leerzeichen, Dezimal-Komma).
+  // Bewusst lokal (B15/§1): Randsemantik (leer→0 ohne Trim-Guard) verschieden
+  // von `vorlagen/datum.zahl` (leer→null) — leer ist hier oben schon abgefangen.
   const n = Number(String(roh).replace(/['’\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) ? n : null;
 }
@@ -271,7 +273,9 @@ export function sgMaengel(a: SgAnswers): SgMangel[] {
     m0.push({ schritt: 0, text: `Zuständige Schlichtungsbehörde für den Kanton ${a.gerichtsKanton} bestimmen (PLZ/Gemeinde eingeben bzw. Stelle wählen) — oder die Adresse von Hand erfassen.` });
   }
   const m: SgMangel[] = [...m0];
-  const num = (s?: string) => Number(String(s ?? '').replace(/['’\s]/g, '').replace(',', '.')); // wie fmtCHF
+  // wie fmtCHF; bewusst lokal (B15/§1): liefert die Roh-Zahl (leer→0, ungültig→NaN),
+  // NICHT `null` wie `vorlagen/datum.zahl` — Aufrufer prüfen unten selbst. Nicht mergen.
+  const num = (s?: string) => Number(String(s ?? '').replace(/['’\s]/g, '').replace(',', '.'));
   if (!a.streitgegenstandTyp) m.push({ schritt: 0, text: 'Art des Streitgegenstands wählen.' });
   if (a.klaeger.length < 1 || !a.klaeger.every(parteiVollstaendig)) m.push({ schritt: 1, text: 'Klagende Partei(en) vollständig erfassen (Name, Strasse, 4-stellige PLZ, Ort).' });
   if (a.beklagte.length < 1 || !a.beklagte.every(parteiVollstaendig)) m.push({ schritt: 2, text: 'Beklagte Partei(en) vollständig erfassen (Art. 202 Abs. 2 ZPO).' });

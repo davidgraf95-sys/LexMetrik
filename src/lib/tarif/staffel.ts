@@ -21,6 +21,8 @@
 // — die diskriminierte Ergebnis-Union zwingt die UI, den Rahmen/Hinweis
 // auszuweisen statt eine Scheinzahl anzuzeigen.
 
+import { chfGanz } from '../format';
+
 /** Ein Band einer flachen Bracket-Staffel: bis zur Grenze gilt der Festbetrag.
  *  Das letzte Band MUSS `bisChf: Infinity` tragen (Bereich lückenlos decken). */
 export interface StaffelBand {
@@ -121,7 +123,8 @@ export type TarifErgebnis =
 
 const round2 = (x: number) => Math.round(x * 100) / 100;
 // Gebühren werden ganzzahlig dargestellt (Frankenbeträge; Bug-Check 14.6.2026).
-const chf = (x: number) => `CHF ${Math.round(x).toLocaleString('de-CH')}`;
+// Geteilte Formatter-Heimat (lib/format, H-9) statt Lokal-Duplikat — byte-gleich.
+const chf = chfGanz;
 
 const pruefeBasis = (basisChf: number): void => {
   if (!Number.isFinite(basisChf) || basisChf < 0) {

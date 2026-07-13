@@ -96,6 +96,8 @@ export function ErbteilungForm() {
   const elternteil = (s: ElternStatus) =>
     s === 'keine_angabe' ? undefined : { lebt: s === 'lebt', stammNachkommen: s === 'vorverstorben_mit' };
   // Transiente Tipp-Zustände («-», «.») nie als NaN weiterreichen (Bug-Check 5.6.2026)
+  // Bewusst lokal (B15/§1): plainer Number-Parse OHNE CH-Normalisierung
+  // (Apostroph/Komma), leer/ungültig→undefined statt `vorlagen/datum.zahl`→null. Nicht mergen.
   const num = (s: string) => { const n = Number(s); return s.trim() === '' || !Number.isFinite(n) ? undefined : n; };
 
   const hatErste = kinderLebend > 0 || staemme.some((s) => s.enkel > 0);

@@ -169,6 +169,8 @@ const alterAm = (gebIso: string, stichtagIso: string): number | null => {
   return a;
 };
 
+// Bewusst lokal (B15/§1): Randsemantik weicht von `vorlagen/datum.zahl` ab —
+// hier leer→0 (Number('')===0, KEIN Trim-Guard), dort leer→null. Nicht mergen.
 const lohnZahl = (roh: string): number | null => {
   const n = Number(String(roh).replace(/['’\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) ? n : null;

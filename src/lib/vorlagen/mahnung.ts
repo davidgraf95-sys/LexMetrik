@@ -107,6 +107,8 @@ export function pruefeMaGates(a: MaAntworten): MaGateErgebnis {
       );
     }
     if (a.zinsVertraglich) {
+      // Bewusst lokal (B15/§1): Roh-Zahl-Parse (leer→0, ungültig→NaN) statt
+      // `vorlagen/datum.zahl` (→null); die isFinite-Prüfung folgt direkt darunter.
       const satz = Number(String(a.zinssatzProzent).replace(/['’\s]/g, '').replace(',', '.'));
       if (!Number.isFinite(satz) || satz <= 5) {
         // BLOCKER statt Warnung (Bug-Check 11.6.2026, Defense-in-depth §3):

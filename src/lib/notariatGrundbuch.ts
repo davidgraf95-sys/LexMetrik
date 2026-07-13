@@ -11,6 +11,7 @@
 // Quelle/Verifikation je Wert: bibliothek/kosten/notariat-grundbuch-kantone.md.
 
 import type { Berechnungsergebnis, Rechenschritt } from '../types/legal';
+import { chfGanz } from './format';
 import type { KantonCode, KantonalerTarif } from '../data/tarif/typen';
 import { auswertenTarif, type TarifErgebnis } from './tarif/staffel';
 import { NOTARIAT, GRUNDBUCH, GRUNDPFAND, HANDAENDERUNGSSTEUER } from '../data/tarif/notariat-grundbuch';
@@ -135,7 +136,9 @@ export function notariatGrundbuchBericht(e: NotariatGrundbuchErgebnis): Berechnu
   const rechenweg: Rechenschritt[] = [schritt('Beurkundung (Notariat)', e.beurkundung), schritt('Grundbuch', e.grundbuch)];
   if (e.grundpfand) rechenweg.push(schritt('Grundpfand (Schuldbrief)', e.grundpfand));
   if (e.handaenderungssteuer) rechenweg.push(schritt('Handänderungssteuer (kantonale Steuer)', e.handaenderungssteuer));
-  const spanneTxt = (s: Spanne | null) => !s ? 'nicht beziffert' : s.vonChf === s.bisChf ? `CHF ${Math.round(s.vonChf).toLocaleString('de-CH')}` : `CHF ${Math.round(s.vonChf).toLocaleString('de-CH')} – ${Math.round(s.bisChf).toLocaleString('de-CH')}`;
+  // Das rechte Glied trägt bewusst KEIN «CHF »-Präfix (die Spanne führt es nur
+  // einmal), bleibt daher bei Math.round(...).toLocaleString — nicht chfGanz (H-9).
+  const spanneTxt = (s: Spanne | null) => !s ? 'nicht beziffert' : s.vonChf === s.bisChf ? chfGanz(s.vonChf) : `${chfGanz(s.vonChf)} – ${Math.round(s.bisChf).toLocaleString('de-CH')}`;
   return {
     ergebnis: `Notariat ${ngPostenText(e.beurkundung)} · Grundbuch ${ngPostenText(e.grundbuch)} · Gebühren gesamt ${spanneTxt(e.gesamtGebuehren)}${e.handaenderungssteuer ? ` · inkl. Handänderungssteuer ${spanneTxt(e.gesamtMitSteuer)}` : ''}`,
     status: 'ok',
@@ -157,7 +160,7 @@ export function notariatGrundbuchBericht(e: NotariatGrundbuchErgebnis): Berechnu
 /** Anzeige-Hilfe: ein Posten als kurzer Text (Betrag, Spanne oder «nach Vereinbarung»). */
 export function ngPostenText(p: NgPosten): string {
   const e = p.ergebnis;
-  const chf = (n: number) => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
+  const chf = chfGanz; // geteilte Formatter-Heimat (lib/format, H-9), byte-gleich
   if (e.deterministisch) return chf(e.betragChf);
   const von = typeof e.vonChf === 'number' ? chf(e.vonChf) : null;
   const bis = typeof e.bisChf === 'number' ? chf(e.bisChf) : null;
