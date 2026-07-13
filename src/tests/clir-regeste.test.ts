@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  parseClirRegeste, schneideRegesteDiv, inlineZuText, bgeRefZuClirId, clirUrl,
+  parseClirRegeste, schneideRegesteDiv, inlineZuText, bgeRefZuClirId, clirUrl, parseClirUrteilskopf,
 } from '../../scripts/normtext/clir-regeste';
 
 const FIX = (n: string) => readFileSync(join(__dirname, 'fixtures', n), 'utf8');
@@ -73,5 +73,28 @@ describe('parseClirRegeste (echte amtliche BGE-Seite)', () => {
   it('lässt den Regestentitel NICHT in den Kopf-Text lecken (kein sup-Rest)', () => {
     expect(p!.kopf).not.toContain('<');
     expect(p!.absaetze[0]).not.toContain('<');
+  });
+});
+
+// ─── parseClirUrteilskopf (W2·6 BGE-Band-Nachzug; Fix Gegenprüfung 12.7.2026) ──
+// Der clir-Urteilskopf ist die AMTLICHE aza↔BGE-Bindung: OCLs docket_number_2 war
+// bei BGE 146 II 304 falsch (1C_345/2014 = nur zitiertes Präjudiz); der Kopf nennt
+// das eigene Az. + echtes Urteilsdatum. Fixtures = echte bger.ch-Seiten (utf8-
+// dekodiert im Cache-Format, wie holeClirHtml sie liefert).
+describe('parseClirUrteilskopf', () => {
+  it('extrahiert eigenes Az. + Datum, verbundene Verfahren → ERSTES Az. (146 II 304)', () => {
+    const k = parseClirUrteilskopf(FIX('clir-urteilskopf-146-II-304-de.html'));
+    // Kopf: «… 1C_22/2019 / 1C_476/2019 vom 6. April 2020 …» — NICHT das in den
+    // Erwägungen zitierte 1C_345/2014 (das falsche docket_number_2 der Quelle).
+    expect(k.aza).toBe('1C_22/2019');
+    expect(k.datumIso).toBe('2020-04-06');
+  });
+  it('parst den französischen Urteilskopf auf der DE-Seite (147 III 463: «du 1er septembre 2021»)', () => {
+    const k = parseClirUrteilskopf(FIX('clir-urteilskopf-147-III-463-de.html'));
+    expect(k.aza).toBe('4A_606/2020');
+    expect(k.datumIso).toBe('2021-09-01');
+  });
+  it('gibt {null,null} ohne Urteilskopf (nie raten, §1)', () => {
+    expect(parseClirUrteilskopf('<html><body>kein Kopf</body></html>')).toEqual({ aza: null, datumIso: null });
   });
 });

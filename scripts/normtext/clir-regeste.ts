@@ -129,6 +129,44 @@ export function parseClirRegeste(html: string): RegesteSprachfassungRoh | null {
   return { sprache: spr, kopf, absaetze };
 }
 
+/**
+ * Urteilskopf der DE-clir-Seite → eigenes aza-Aktenzeichen + echtes Urteilsdatum.
+ * AMTLICHE Quelle der aza↔BGE-Bindung (Befund Gegenprüfung 12.7.2026: OCLs
+ * `docket_number_2` ist vereinzelt falsch — BGE 146 II 304 trägt dort das in den
+ * Erwägungen nur ZITIERTE 1C_345/2014; der clir-Urteilskopf nennt strukturell das
+ * eigene Az. «1C_22/2019 / 1C_476/2019 vom 6. April 2020» direkt vor «Regeste»).
+ * Bei verbundenen Verfahren wird das ERSTE Az. genommen (Leiturteil, gleiche
+ * Konvention wie azaAusBgeKopf). Rein (netzfrei) → unit-testbar.
+ */
+export function parseClirUrteilskopf(html: string): { aza: string | null; datumIso: string | null } {
+  const i = html.indexOf('Urteilskopf');
+  if (i < 0) return { aza: null, datumIso: null };
+  // Segment bis «Regeste» (dort beginnt der Regesten-Block), höchstens 2500 Z.
+  let seg = html.slice(i, i + 2500);
+  const r = seg.indexOf('Regeste');
+  if (r > 0) seg = seg.slice(0, r);
+  const text = inlineZuText(seg);
+  // Eigenfall-Signatur: «<Az.>( / <Az.>)* vom|du|del <T>(.|er|°) <Monat> <JJJJ>» —
+  // der Urteilskopf steht auch auf der DE-Seite in der VERFAHRENSSPRACHE
+  // («Extrait de l'arrêt … 4A_606/2020 du 1er septembre 2021»).
+  const m = /(\d[A-Z][._ ]\d+\/\d{4})(?:\s*\/\s*\d[A-Z][._ ]\d+\/\d{4})*\s+(?:vom|du|del|dell['’])\s*(\d{1,2})(?:\.|er|°)?\s*([A-Za-zàâéèêôûäöüÀÂÉ]+)\s+(\d{4})/.exec(text);
+  if (!m) return { aza: null, datumIso: null };
+  const MONATE: Record<string, string> = {
+    // de
+    januar: '01', februar: '02', 'märz': '03', april: '04', mai: '05', juni: '06',
+    juli: '07', august: '08', september: '09', oktober: '10', november: '11', dezember: '12',
+    // fr
+    janvier: '01', 'février': '02', mars: '03', avril: '04', juin: '06',
+    juillet: '07', 'août': '08', septembre: '09', octobre: '10', novembre: '11', 'décembre': '12',
+    // it
+    gennaio: '01', febbraio: '02', marzo: '03', aprile: '04', maggio: '05', giugno: '06',
+    luglio: '07', agosto: '08', settembre: '09', ottobre: '10', dicembre: '12',
+  };
+  const mm = MONATE[m[3].toLowerCase()];
+  const datumIso = mm ? `${m[4]}-${mm}-${m[2].padStart(2, '0')}` : null;
+  return { aza: m[1].replace(/^(\d[A-Z])[._ ]/, '$1_'), datumIso };
+}
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /**

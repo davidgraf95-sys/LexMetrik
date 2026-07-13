@@ -844,6 +844,15 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     Regeste nur amtlich oder eigene maschinelle, «maschinell»-Marker behalten).
   - **Gerichts-/Behörden-Adressregister** (Lese-/Index-Schicht über bestehende Stores, kein
     Duplikat; Abnahme-Status + Verfallsregister je Eintrag).
+  - **BGE-Band-Nachzug 146–149 (Jahrgänge 2020–2023) [Auftrag David 12.7.2026 «bge bis 2020»]:**
+    **PR-A (146+147 = 404 BGE, alle Sprachen) 12.7.2026** — band-basierte de/fr/it-Enumeration
+    (`enumeriereBgeBaender`; Q1-Bandjahr-Quirk + Sprachfilter-Falle: `language=de` verlöre 247
+    fr/it-BGE), additiv (Bestand byte-treu), aza-Bindung + Urteilsdatum aus dem AMTLICHEN
+    clir-Urteilskopf (`parseClirUrteilskopf`; Fix nach Gegenprüfungs-R1 `widerlegt`: 31 Streudaten +
+    2 aza-Fehlzuordnungen + fehlende fr/it-BGE), clir-Regeste dreisprachig, BUDGET_MB 35→100,
+    Determinismus 2 Läufe byte-gleich, VOLLE Gegenprüfungs-Runde 2 (Opus) je PR. **PR-B
+    (148+149 = 384 BGE)** gleiche Mechanik, band-weise (Datenmenge/Crawl-Risiko).
+    Beleg `bibliothek/rechtsprechung/bge-baender-146-149-nachzug-2026-07-12.md`.
   - **Rechtsprechungs-Übersicht** *(KANTONALE/ENTSCHEIDSUCHE/RECHTSPRECHUNG)*: **P0-Fix** SG-Regeste
     + kant. Norm-Resolver (Bugfix, **öffnet keinen 26×-Slot**); **Korpus-/Übersichts-Breite [OF]**
     (Facetten/Sprachfilter-Vorbereitung). Live-Adapter §4-blockiert → geparkt. §14-gebündelt (Phase 0):

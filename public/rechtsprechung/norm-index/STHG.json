@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-07-02",
+  "erzeugt": "2026-07-12",
   "erlass": "STHG",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -9,6 +9,18 @@
         "zitierung": "BGE 151 II 615",
         "regesteKurz": "Art. 8 Abs. 1, Art. 9 und 127 Abs. 2 BV; Art. 83a Abs. 2 BVG; Art. 11 Abs. 3 StHG; Wohneigentumsförderung; Vorbezug aus beruflicher Vorsorge; Berechnung der Steuerrückerstattung bei Wiedereinzahlung des Vorbezugs. Steuerliche Behandlung de…",
         "datum": "2025-03-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "3": [
+      {
+        "key": "bge_147_III_457",
+        "zitierung": "BGE 147 III 457",
+        "regesteKurz": "Art. 276 Abs. 1 und 2, Art. 285 Abs. 1 ZGB; Unterhaltsberechnung; Berücksichtigung eines Steueranteils im Barbedarf des Kindes. Stehen genügend Mittel zur Verfügung, um bei der Unterhaltsberechnung über das betreibungsrechtliche Existenzmi…",
+        "datum": "2021-06-25",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -33,6 +45,18 @@
         "zitierung": "BGE 150 II 409",
         "regesteKurz": "Art. 89 Abs. 1 lit. c, Art. 111 Abs. 1 BGG; Beschwerdelegitimation im vorinstanzlichen Verfahren bei beantragter Höherveranlagung betr. direkte Bundessteuer. Fehlt es im steuerrechtlichen Prozess an einem schutzwürdigen Interesse an der Au…",
         "datum": "2024-05-16",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "10": [
+      {
+        "key": "bge_147_II_209",
+        "zitierung": "BGE 147 II 209",
+        "regesteKurz": "Art. 957 ff., 960e Abs. 3 Ziff. 1-4 OR; Art. 28, 29 Abs. 1 i.V.m. Art. 27 Abs. 1 und 2 lit. a DBG; Art. 10 StHG; geschäftsmässige Begründetheit pauschaler Rückstellungen für Reparaturen von Geschäftsliegenschaften. Übersicht über die hande…",
+        "datum": "2020-12-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -147,14 +171,44 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
+      },
+      {
+        "key": "bge_147_I_325",
+        "zitierung": "BGE 147 I 325",
+        "regesteKurz": "Art. 127 Abs. 3 BV; Art. 20 Abs. 1 StHG; Art. 626 Ziff. 1 OR i.V.m. Art. 56 ZGB; Doppelbesteuerungsverbot; Hauptsteuerdomizil und Sitzwechsel. Verwirkung des doppelbesteuerungsrechtlichen Beschwerderechts des Steuerpflichtigen (E. 4.2). Üb…",
+        "datum": "2020-08-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       }
     ],
     "23": [
+      {
+        "key": "bge_147_II_287",
+        "zitierung": "BGE 147 II 287",
+        "regesteKurz": "Art. 56 lit. g DBG; Art. 23 Abs. 1 lit. f StHG; direkte Steuer; Steuerbefreiung; juristische Person; öffentlicher oder gemeinnütziger Zweck; unternehmerischer Zweck; Stiftung; Holdinggesellschaft. Voraussetzungen der Steuerbefreiung einer…",
+        "datum": "2021-05-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
       {
         "key": "bge_151_II_581",
         "zitierung": "BGE 151 II 581",
         "regesteKurz": "Art. 56 lit. g DBG; Art. 23 Abs. 1 lit. f StHG; Steuerbefreiung wegen Gemeinnützigkeit; Erfordernis der Uneigennützigkeit; Wirkung des Entzugs der Steuerbefreiung in zeitlicher Hinsicht. Der ein Hotel und eine gemeinnützige Herberge betrei…",
         "datum": "2024-10-28",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_147_II_454",
+        "zitierung": "BGE 147 II 454",
+        "regesteKurz": "Art. 23 Abs. 3 und Art. 53 StHG; Art. 91 des waadtländischen Gesetzes vom 4. Juli 2000 über die direkten kantonalen Steuern; vorübergehende Steuerbefreiung; Unternehmen; verwaltungsrechtlicher Vertrag; Sitzverlegung; Widerruf; Rückwirkung;…",
+        "datum": "2021-12-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -167,6 +221,18 @@
         "zitierung": "BGE 151 II 860",
         "regesteKurz": "Art. 87, 90 Abs. 2 KAG; Art. 957 ff. OR; Buchführungspflichten für Immobilienfonds mit direktem Grundbesitz; Niederstwertprinzip; Erst- und Folgebewertung; Periodizitätsprinzip und Nachholung von Aufwandbuchungen. Erstmals in eine Bilanz a…",
         "datum": "2025-06-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "28": [
+      {
+        "key": "bge_147_II_155",
+        "zitierung": "BGE 147 II 155",
+        "regesteKurz": "Auslegung von Art. 62 Abs. 4 DBG (Art. 28 Abs. 1 ter StHG). Art. 62 Abs. 4 DBG ist eine steuerrechtliche Berichtigungsbestimmung. Sie ermöglicht, beim steuerbaren Gewinn der geprüften Periode nicht begründete Abschreibungen oder Wertberich…",
+        "datum": "2020-11-26",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",

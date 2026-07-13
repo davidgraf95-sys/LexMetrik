@@ -1,0 +1,324 @@
+{
+  "erzeugt": "2026-07-12",
+  "eintraege": [
+    {
+      "id": "bund/bge/146_III_55",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "146 III 55",
+      "bgeReferenz": "146 III 55",
+      "zitierung": "BGE 146 III 55",
+      "datum": "2019-08-06",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": null,
+      "rubrum": {
+        "besetzung": "Bundesrichterin Kiss, Präsidentin, Bundesrichterinnen Klett, Hohl, Niquille, May Canellas, Gerichtsschreiber Curchod",
+        "parteien": "A.________ AG, vertreten durch Dr. Rudolf A. Rentsch und Ernst J. Brem, Beschwerdeführerin, gegen B.________ AG, vertreten durch Rechtsanwalt Dr. Christoph Gasser, Beschwerdegegnerin",
+        "gegenstand": "Erfindungspatente, Novenrecht",
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Art. 225 und 229 ZPO; Novenrecht, Aufteilung der Replik, Dupliknoven. Thematische Beschränkung der Replik und Novenrecht (E. 2.3-2.4). Voraussetzungen für die Entgegnung von Dupliknoven mit (echten und unechten) Noven (E. 2.5).\nRegeste\n Art. 225 et 229 CPC; faits et moyens de preuve nouveaux (nova), division de la réplique, nova invoqués dans la duplique. Limitation thématique de la réplique et droit d'invoquer des nova (consid. 2.3-2.4). Conditions pour contrer, par des nova (proprement et improprement dits), des nova produits dans la duplique (consid. 2.5).\nRegesto\n Art. 225 e 229 CPC; nuovi fatti e nuovi mezzi di prova (nova); divisione della replica, nova invocati nella duplica. Limitazione tematica della replica e diritto di invocare nova (consid. 2.3-2.4). Presupposti per controbattere con dei nova (in senso proprio e improprio), i nova proposti con la duplica (consid. 2.5).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 225 und 229 ZPO; Novenrecht, Aufteilung der Replik, Dupliknoven.",
+            "absaetze": [
+              "Thematische Beschränkung der Replik und Novenrecht (E. 2.3-2.4). Voraussetzungen für die Entgegnung von Dupliknoven mit (echten und unechten) Noven (E. 2.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-55%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 225 et 229 CPC; faits et moyens de preuve nouveaux (nova), division de la réplique, nova invoqués dans la duplique.",
+            "absaetze": [
+              "Limitation thématique de la réplique et droit d'invoquer des nova (consid. 2.3-2.4). Conditions pour contrer, par des nova (proprement et improprement dits), des nova produits dans la duplique (consid. 2.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-55%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 225 e 229 CPC; nuovi fatti e nuovi mezzi di prova (nova); divisione della replica, nova invocati nella duplica.",
+            "absaetze": [
+              "Limitazione tematica della replica e diritto di invocare nova (consid. 2.3-2.4). Presupposti per controbattere con dei nova (in senso proprio e improprio), i nova proposti con la duplica (consid. 2.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-55%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die B.________ AG, C.________ (Patentinhaberin, Klägerin, Beschwerdegegnerin) ist Inhaberin des Schweizer Patents CH xxx \"Durchflussmessfühler\", das am 7. September 2009 angemeldet und am 14. März 2014 erteilt wurde. Durchflussmessfühler dienen der Bestimmung der Atemluftströmung eines menschlichen Patienten. Sie funktionieren grundsätzlich so, dass ein Strömungswiderstand in den Luftstrom eines Gehäuses eingebracht wird, wodurch ein Druckabfall zwischen der \"Kammer\" vor dem Widerstand und derjenigen nach dem Widerstand proportional zur Durchflussmenge entsteht, der zur Bestimmung der Atemluftströmung gemessen wird. Für die Messung wird ein (Differential-) Drucksensor verwendet, der über Sensorschläuche mit der ersten und der zweiten \"Kammer\" verbunden ist. Das Patent CH xxx dient der Verbesserung vorbekannter Durchflussmessfühler. Die Patentansprüche 1, 4 und 10 lauten wie folgt: \"1. Durchflussmessfühler mit - einem ein zylindrisches Gehäuse definierenden Durchgang mit einer ersten Durchgangsöffnung und einer zweiten Durchgangsöffnung, - einem im Durchgang des Gehäuses angeordneten Strömungswiderstand, welcher das Gehäuse in einen ersten und einen zweiten Gehäuseteil unterteilt, - einer ersten Anschlussstelle mit einer Verbindung zum Innern des ersten Gehäuseteils, und - einer zweiten Anschlussstelle mit einer Verbindung zum Innern des zweiten Gehäuseteils, dadurch gekennzeichnet, dass die ersten und zweiten Anschlussstellen in einem Abstand voneinander auf dem gleichen Gehäuseteil angeordnet sind. 4. Durchflussmessfühler gemäss einem der vorhergehenden Ansprüche, wobei am ersten Gehäuseteil und am zweiten Gehäuseteil zur Verbindung der Gehäuseteile Flansche mit Flanschdruckflächen ausgebildet sind. 10. Durchflussmessfühler gemäss einem der Ansprüche 4-9, wobei die Verbindungen teilweise in den Flanschdruckflächen verlaufen und/ oder als dichtungsflächenseitige Öffnungen durch die Flanschdruckfläche austreten.\" Die A.________ AG, D.________ (Beklagte, Beschwerdeführerin) vertreibt unter anderem die Durchflussmessfühler \"E.________\" bzw. \"F.________\" und \"G.________\" (Erwachsenenausführung) und \"H.________\" bzw. \"I.________\" (Kinderausführung), die nach der Behauptung der Patentinhaberin das CH-Patent Nr. xxx verletzen."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 31. Mai 2016 beantragte die Patentinhaberin dem Bundespatentgericht im Wesentlichen, es sei der Beklagten der Vertrieb von Durchflussmessfühlern mit bestimmten Merkmalen zu verbieten sowie die Einziehung und Anordnung der sich im Eigentum der Beklagten befindenden entsprechenden Durchflussmessfühler anzuordnen. Die Beklagte sei zudem zur Rechnungslegung und Gewinnherausgabe zu verpflichten. In der Klageantwort vom 19. September 2016 beantragte die Beklagte im Wesentlichen die Abweisung der Klage und erhob namentlich den Einwand der Patentnichtigkeit. Am 10. November 2016 erstattete die Klägerin die auf den Nichtigkeitseinwand beschränkte Replik. Am 20. Dezember 2016 fand eine Instruktions-/ Vergleichsverhandlung statt. Am 20. März 2017 erstattete die Klägerin eine ergänzende Replik und änderte ihre Rechtsbegehren. Mit Eingabe vom 6. Juni 2017 erstattete die Beklagte die Duplik und änderte ihre Rechtsbegehren. Am 7. Juli 2017 nahm die Klägerin Stellung zur Duplik. Am 10. April 2018 erstattete Patentrichter Tobias Bremi ein Fachrichtervotum, wozu die Klägerin am 3. Mai 2018 Stellung nahm. Am 14. Mai 2018 wurde das Verfahren bis 30. Juni 2018 sistiert. Nach Aufhebung der Sistierung am 4. Juli 2018 nahm die Beklagte am 13. Juli 2018 zum Fachrichtervotum Stellung. Am 29. Oktober 2018 fand die Hauptverhandlung vor dem Bundespatentgericht statt. Mit Teilurteil vom 18. Dezember 2018, das mit Beschluss vom 24. Januar 2019 wegen Schreibfehlern berichtigt wurde (die im Folgenden ohne besondere Kennzeichnung berücksichtigt sind), erkannte das Bundespatentgericht wie folgt: \"1. In teilweiser Gutheissung des Unterlassungsbegehrens wird der Beklagten unter Androhung einer Ordnungsbusse von CHF 1'000 für jeden Tag der Nichterfüllung, mindestens aber CHF 5'000, sowie der Bestrafung ihrer Organe nach Art. 292 StGB mit Busse im Widerhandlungsfall, verboten, Durchflussmessfühler in der Schweiz und in Liechtenstein zu vertreiben, in die Schweiz und in Liechtenstein einzuführen, aus der Schweiz und aus Liechtenstein auszuführen, in der Schweiz und in Liechtenstein und aus der Schweiz und aus Liechtenstein anzubieten, in der Schweiz und in Liechtenstein und aus der Schweiz und aus Liechtenstein zu verkaufen, in der Schweiz und in Liechtenstein sonst wie in Verkehr zu bringen und dafür Werbung zu betreiben (auch über Internet), in der Schweiz und in Liechtenstein zu besitzen, in der Schweiz und in Liechtenstein zu diesen Zwecken herzustellen oder herstellen zu lassen und/oder zu solchen Handlungen Dritte anzustiften und/oder bei ihnen mitzuwirken und/oder ihre Begehung zu begünstigen und/ oder zu erleichtern, wobei die Durchflussmessfühler folgende Merkmale aufweisen: -ein zylindrisches Gehäuse, das einen Durchgang mit einer ersten Durchgangsöffnung am einen Ende und einer zweiten Durchgangsöffnung am anderen Ende aufweist; - das zylindrische Gehäuse ist aus einem ersten Gehäuseteil und einem zweiten Gehäuseteil zusammengesetzt, zwischen denen eine dünne Membran eingeklemmt ist, die sich durch den Durchgang des Gehäuses erstreckt; eine erste Anschlussstelle für eine Verbindungsleitung, welche erste Anschlussstelle über einen zwischen dem ersten und zweiten Gehäuseteil verlaufenden Kanal sowie einen im ersten Gehäuseteil verlaufenden ersten Verbindungskanal mit dem Innern des ersten Gehäuseteils verbunden ist; -eine zweite Anschlussstelle für eine Verbindungsleitung, welche zweite Anschlussstelle über einen zwischen dem ersten und zweiten Gehäuseteil verlaufenden Kanal sowie einen im zweiten Gehäuseteil verlaufenden zweiten Verbindungskanal mit dem Innern des zweiten Gehäuseteils verbunden ist; - die erste und zweite Anschlussstelle sind in einem Abstand voneinander auf dem ersten Gehäuseteil angeordnet; - das erste Gehäuseteil umfasst einen ersten Flansch mit einem Flanschfortsatz, das zweite Gehäuseteil umfasst einen zweiten Flansch mit einem Flanschfortsatz, und das erste Gehäuseteil und das zweite Gehäuseteil sind über den ersten Flansch mit Flanschfortsatz und den zweiten Flansch mit Flanschfortsatz bzw. deren aneinander liegenden Flanschdruckflächen miteinander verbunden; und - die Verbindung von der zweiten Anschlussstelle zum Innern des zweiten Gehäuseteils verläuft teilweise über einen zwischen dem ersten und zweiten Flansch mit Flanschfortsatz verlaufenden Kanal über die Flanschdruckflächen hinweg. Im weiteren Umfang wird das Unterlassungsbegehren gemäss Ziff. 1 abgewiesen. 2. Die Unterlassungsbegehren gemäss Ziff. 2 und 3 werden abgewiesen. 3. In teilweiser Gutheissung des Rechtsbegehrens Ziff. 6 wird die Beklagte verpflichtet, unter Androhung einer Ordnungsbusse von CHF 1'000 für jeden Tag der Nichterfüllung, mindestens aber CHF 5'000, sowie der Bestrafung ihrer Organe nach Art. 292 StGB mit Busse im Widerhandlungsfall, binnen 30 Tagen nach Eintritt der Rechtskraft dieses Teilurteils sämtliche sich in der Schweiz oder in Liechtenstein in ihrer Verfügungsgewalt befindlichen Vorrichtungen gemäss Ziff. 1 vorstehend zu vernichten. Im weiteren Umfang wird das Einziehungs- und Vernichtungsbegehren gemäss Ziff. 6 abgewiesen. 4. In teilweiser Gutheissung des Rechtsbegehrens Ziff. 4 wird die Beklagte verpflichtet, der Klägerin binnen 60 Tagen nach Eintritt der Rechtskraft dieses Teilurteils - Namen und Anschrift aller gewerblichen Abnehmer der Vorrichtungen gemäss Ziff. 1 vorstehend mitzuteilen, - sämtliche Rechnungen (mit Lieferzeiten und -preisen) für Vorrichtungen gemäss Ziff. 1 vorstehend in Kopie zur Verfügung zu stellen. Im weiteren Umfang wird das Auskunfts- und Rechnungslegungsbegehren gemäss Ziff. 4 abgewiesen. -..]\" Das Bundespatentgericht gelangte zum Schluss, dass der Anspruch 1 des Patents CH xxx durch das von der Beklagten in der Duplik eingereichte japanische Patent JP yyy (in der Übersetzung eingereicht als \"E10\") neuheitsschädlich vorweggenommen sei. Dagegen hiess das Gericht das Eventualbegehren zu Rechtsbegehren 1 gut, das die Klägerin in der ergänzenden Replik vom 20. März 2017 gestellt hatte. Dabei fasste das Gericht die Merkmale des auf einer Kombination der erteilten Ansprüche 1, 4 und 10 beruhenden Hauptanspruchs in den Merkmalen a-k (ohne g und h) zusammen und kam zum Schluss, dass der so definierte Anspruch der Klägerin nicht neuheitsschädlich vorweggenommen sei und auf erfinderischer Tätigkeit beruhe. Das Gericht kam sodann zum Schluss, die Ausführungen der Beklagten würden sämtliche Merkmale des eingeschränkten Hauptanspruchs wortsinngemäss verwirklichen."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in Zivilsachen stellt die Beklagte das Rechtsbegehren, das Teilurteil des Bundespatentgerichtes vom 18. Dezember 2018 mit Berichtigung vom 24. Januar 2019 sei aufzuheben und die Klage sei vollumfänglich abzuweisen, eventualiter sei die Sache zu neuem Entscheid an die Vorinstanz zurückzuweisen. Sie kritisiert zunächst die Zulassung von Noven zur Frage der Patentnichtigkeit in der ergänzenden Replik der Beschwerdegegnerin trotz gegenteiliger Äusserung des damaligen Instruktionsrichters. In diesem Zusammenhang rügt sie eine Verletzung des Grundsatzes von Treu und Glauben, des Gebots der Rechtssicherheit, des Dispositionsgrundsatzes und des Verhandlungsgrundsatzes. Ausserdem bringt sie eventualiter vor, die Vorinstanz habe technische Begriffe willkürlich ausgelegt, ihr das rechtliche Gehör verweigert, das Patentrecht und den Verhandlungsgrundsatz verletzt. Die Beschwerdegegnerin beantragt die Abweisung der Beschwerde. In der Vernehmlassung weist die Vorinstanz insbesondere darauf hin, die Beschwerdeführerin sei in der Einladung zur Duplik ausdrücklich darauf hingewiesen worden, dass die Spruchkammer über die Zulässigkeit der Noven in der ergänzenden Replik zu befinden habe, weshalb sich die Beschwerdeführerin auf eine frühere Erklärung des Instruktionsrichters nicht habe verlassen dürfen. Die Parteien haben unaufgefordert repliziert und dupliziert."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Die Beschwerde betrifft eine Zivilsache (Art. 72 BGG), sie richtet sich gegen einen Entscheid des Bundespatentgerichts (Art. 75 Abs. 1 BGG), mit dem über einen Teil der objektiv gehäuften, unabhängigen Begehren endgültig entschieden worden ist (Art. 91 lit. a BGG), die Beschwerdeführerin ist mit ihren Begehren nicht vollständig durchgedrungen (Art. 76 BGG), ein Streitwert ist nicht erforderlich (Art. 74 Abs. 2 lit. b BGG) und die Beschwerdefrist ist eingehalten (Art. 100, 46 Abs. 1 lit. c BGG). Auf die Beschwerde ist unter Vorbehalt hinreichend begründeter Rügen (Art. 42 Abs. 2, 106 Abs. 2 BGG) einzutreten."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin rügt, die Vorinstanz habe zu Unrecht die Änderung des massgebenden Patentanspruchs in der ergänzenden Replik zugelassen."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Die Vorinstanz führte aus, es entspreche der Praxis des Bundespatentgerichts, dass nach dem ersten Schriftenwechsel eine Instruktionsverhandlung stattfinde. Letztere diene ausschliesslich dem Versuch, das Verfahren durch Vergleich zu erledigen; den Parteien sei es ausdrücklich untersagt, an dieser Verhandlung zu plädieren. Da die Beklagte in einem Patentverletzungsprozess erfahrungsgemäss in aller Regel die Einrede der Nichtbeständigkeit der geltend gemachten Ansprüche des Klagepatents erhebe und sich die Klägerin zur Frage der Beständigkeit des fraglichen Patents im ersten Schriftenwechsel noch nicht geäussert habe, sei es sinnvoll, ihr vor der Instruktionsverhandlung Gelegenheit zu geben, sich in einer\n\nbeschränkten Replik ausschliesslich zu dieser Frage zu äussern. In dieser beschränkten Replik dürfe sich die Klägerin, um die Waffengleichheit der Parteien zu wahren, nicht zur Verletzung des Klagepatents äussern. Werde an der Instruktionsverhandlung kein Vergleich erzielt, werde das Verfahren mit einer\n\nergänzenden Replik fortgesetzt. Diese ergänzende Replik sei jedoch nicht thematisch beschränkt: in dieser dürfe sich die Klägerin zu allen Streitfragen äussern. Nach Ansicht der Vorinstanz sei diese Ausgestaltung des Verfahrens die \"einzige Lösung, die den Aktenschluss in einem Patentverletzungsprozess nach zweimaligem unbeschränkten Vortrag jeder Partei zum gesamten Streitgegenstand eintreten [lasse]\"."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin kritisiert die Vorgehensweise der Vorinstanz in mehrfacher Hinsicht. Sie rügt, sie sei in ihrem Vertrauen verletzt worden, weil der damalige Instruktionsrichter anlässlich der Instruktionsverhandlung vom 20. Dezember 2016 erklärt habe, die Gegenpartei könne in der ergänzenden Replik keine Noven zur Frage der Patentnichtigkeit mehr vorbringen. Indem die Vorinstanz anlässlich der Hauptverhandlung die gegenteilige Auffassung vertreten und den in der ergänzenden Replik verbal eingeschränkten Anspruch der Beschwerdegegnerin geprüft habe, habe sie insbesondere den Grundsatz von Treu und Glauben und das Gebot der Rechtssicherheit verletzt. Im Ergebnis habe die Beschwerdegegnerin, durch Zulassung von Noven zur Frage der Patentnichtigkeit in der ergänzenden Replik, sich dreimal zur Sache äussern können. Die Berücksichtigung verspäteter Vorbringen in Verletzung der Eventualmaxime führe folglich zu einer Ungleichbehandlung der Parteien."
+            },
+            {
+              "marke": "E. 2.3.1",
+              "tiefe": 3,
+              "text": "Nach nunmehr gefestigter Rechtsprechung haben die Parteien im ordentlichen Verfahren wie auch im vereinfachten Verfahren zweimal unbeschränkt die Möglichkeit, sich zur Sache zu äussern und namentlich neue Tatsachen in den Prozess einzuführen (vgl. zum summarischen Verfahren hingegen BGE 144 III 117 E. 2.2, wonach der Aktenschluss grundsätzlich nach einmaliger Äusserung eintritt). Danach haben sie nur noch unter den eingeschränkten Voraussetzungen von Art. 229 Abs. 1 ZPO das Recht, neue Tatsachen und Beweismittel vorzubringen (BGE 144 III 67 E. 2.1; 140 III 312 E. 6.3.2). Angesichts der grundsätzlichen Bedeutung des Novenrechts im Zivilprozess ist es unausweichlich, dass klare und eindeutige allgemeine Regeln bestehen, die es den Parteien ermöglichen, mit Sicherheit zu bestimmen, bis wann sie sich zur Sache unbeschränkt äussern dürfen. Es kann folglich nicht sein, dass der Aktenschluss ins Ermessen des Gerichts gestellt wird (BGE 144 III 67 E. 2.1 mit Verweisen).\n\nDie Beschränkung der Zulassung von neuen Tatsachen und Beweismitteln kann insbesondere nicht dadurch umgangen werden, dass Instruktionsverhandlungen durchgeführt werden, in deren Rahmen zusätzlich unbeschränkt Noven vorgebracht werden können (vgl. zu den Zwecken von Instruktionsverhandlungen etwa KILLIAS, Berner Kommentar, N. 3 zu Art. 226 ZPO, LEUENBERGER, in Sutter-Somm et al. ZPO 3. Aufl., Rz. 4-9 zu Art. 226; WILLISEGGER, Basler Kommentar, 3. Aufl. Rz. 10-14 zu Art. 226 ZPO). Dem Instruktionsrichter steht es hingegen offen, eine Instruktionsverhandlung bloss zum Zweck von Vergleichsverhandlungen anzusetzen, womit die Verhandlung nicht als zweite Gelegenheit der Parteien zu unbeschränktem Vorbringen neuer Tatsachen und Beweismittel dienen und der Aktenschluss anschliessend noch nicht eintreten kann (BGE 144 III 67 E. 2.4.2)."
+            },
+            {
+              "marke": "E. 2.3.2",
+              "tiefe": 3,
+              "text": "Gemäss Art. 125 lit. a ZPO kann das Gericht zur Vereinfachung des Prozesses insbesondere\n\ndas Verfahren auf einzelne Fragen oder einzelne Rechtsbegehren beschränken (vgl. Urteil 4A_267/2014 vom 8. Oktober 2014 E. 4.2). Infolge Verfahrensbeschränkung wird ein Teilentscheid (Art. 236 ZPO) bzw. ein Zwischenentscheid (Art. 237 ZPO) erlassen (LEUENBERGER, a.a.O. N. 12 zu Art. 222; WILLISEGGER, a.a.O. N. 33-38 zu Art. 222 ZPO; KILLIAS, a.a.O. N. 28 zu Art. 222 ZPO). Eine derartige Beschränkung kann das Gericht insbesondere mit der Fristansetzung für die Klageantwort anordnen (Art. 222 Abs. 3 ZPO). Ob eine Verfahrensbeschränkung auch noch mit der Fristansetzung für die Replik angeordnet werden kann, sei dahingestellt. Denn eine Beschränkung des Verfahrens im Blick auf einen Teil- bzw. Zwischenentscheid über die Frage der Nichtigkeit des Klagepatents hat der Instruktionsrichter nicht angeordnet. Er hat vielmehr einseitig der Klägerin die Gelegenheit eingeräumt, zu einem Teil der Vorbringen in der Klageantwort vorgängig der Instruktionsverhandlung Stellung zu nehmen und in diesem Rahmen zu replizieren, d.h. unbeschränkt Noven in den Prozess einzuführen."
+            },
+            {
+              "marke": "E. 2.4",
+              "tiefe": 2,
+              "text": "Ob eine thematische Aufteilung der Replik zulässig ist, erscheint fraglich (kritisch dazu WILLISEGGER, N. 11 zu Art. 225 ZPO, wonach das Gericht zwar das Verfahren auf einzelne Fragen oder Rechtsbegehren beschränken dürfe, nicht aber den Schriftenwechsel selbst). Es ist ausserdem zweifelhaft, ob eine derartige Vorgehensweise überhaupt sinnvoll ist, setzt sie doch mindestens voraus, dass sich die vorweggenommene Frage klar vom übrigen Prozessstoff abgrenzen lässt, was die Beschwerdegegnerin mit guten Gründen für die Frage der Patentnichtigkeit im Verhältnis zur Frage der Verletzung bestreitet. Eine derartige thematische Aufteilung darf jedenfalls nicht dazu führen, dass die Klagepartei sich mehr als zweimal unbeschränkt äussert."
+            },
+            {
+              "marke": "E. 2.4.1",
+              "tiefe": 3,
+              "text": "Im vorliegenden Fall konnte sich die Beschwerdegegnerin in ihrer Klage ein erstes Mal ohne Beschränkung zur Sache äussern. Eine zweite Äusserungsmöglichkeit erhielt sie in einer beschränkten Replik, wobei sie sich gemäss ausdrücklicher Anordnung der Vorinstanz auf die Frage der Beständigkeit des fraglichen Patents zu beschränken hatte. Ein drittes Mal durfte sich die Beschwerdegegnerin in der ergänzenden Replik äussern, dieses Mal wiederum ohne thematische Beschränkung. Im Ergebnis hatte die Beschwerdegegnerin dreimal die Gelegenheit, neue Tatsachen bzw. Beweismittel vorzubringen, zweimal thematisch unbeschränkt und einmal zusätzlich ausschliesslich zur Frage der Beständigkeit des Klagepatents. Dies lässt sich mit der zitierten bundesgerichtlichen Rechtsprechung nicht in Einklang bringen, wonach die Parteien im ordentlichen Verfahren nur zweimal unbeschränkt die Möglichkeit haben, sich zur Sache zu äussern und namentlich neue Tatsachen in den Prozess einzuführen."
+            },
+            {
+              "marke": "E. 2.4.2",
+              "tiefe": 3,
+              "text": "Die Ansicht der Vorinstanz, wonach bei ihrer thematischen Herangehensweise sich die Beschwerdegegnerin nur zwei Mal zu jedem der beiden Themen (Patentverletzung und Nichtigkeit) äusserte, überzeugt nicht. Denn entgegen ihrer Ansicht ist es der Klagepartei selbstverständlich möglich, schon in der Klage allfällige Einwände zur Nichtigkeit zu entkräften. Dass sie dazu keinen Anlass haben mag, ist dabei ohne Relevanz. Denn die Möglichkeit, sich unbeschränkt zur Streitsache zu äussern und damit jedwede neuen Tatsachen oder Beweise vorzubringen, zeichnet sich gerade dadurch aus, dass sie unabhängig davon besteht, ob die Gegenpartei Anlass zu einer Stellungnahme oder zu Entgegnungen gegeben hat. Es entspricht dem Wesen des (Zivil-) prozesses, dass die Klagepartei zum Zeitpunkt der Klage - d.h. novenrechtlich zum Zeitpunkt ihrer ersten unbeschränkten Äusserungsmöglichkeit - die Entgegnungen der beklagten Partei noch nicht mit Sicherheit kennt. Dass diese Problematik in einem Patentverletzungsprozess aufgrund der Vielfalt der existierenden Patentdokumente besonders ausgeprägt sei, wie die Vorinstanz in ihrer Vernehmlassung ausführt, ändert daran nichts. Wie bereits ausgeführt, ist das Bestehen von klaren Regeln, die grundsätzlich vor allen Gerichten in Anwendung der ZPO Geltung beanspruchen, aus Sicht der Rechtssicherheit von zentraler Bedeutung. Eine Unterscheidung je nach Vorhersehbarkeit der Einreden bzw. Einwendungen der Gegenpartei würde die Rechtssicherheit erheblich gefährden, weshalb sich eine Ausnahme von der allgemeinen Regel der zweimaligen unbeschränkten Äusserungsmöglichkeit im Bereich des Patentrechts nicht rechtfertigt. Im Übrigen verhält es sich nicht grundsätzlich anders, wenn mit der Einrede der Nichtigkeit des Klagepatents neue Fragen in Zusammenhang mit der Streitsache aufgeworfen werden, als wenn etwa gegen eine Forderung die Einrede der Verjährung erhoben oder eine andere Forderung zur Verrechnung gestellt wird. Werden in der Klageantwort derartige neue Behauptungen aufgestellt, führt dies nicht dazu, dass sich die klagende Partei dreimal unbeschränkt zu diesen Fragen äussern darf. Entgegen der Ansicht der Vorinstanz lässt sich ihr Vorgehen folglich nicht durch Besonderheiten von Patentrechtsstreitigkeiten rechtfertigen."
+            },
+            {
+              "marke": "E. 2.4.3",
+              "tiefe": 3,
+              "text": "Nach dem Gesagten hat die Vorinstanz Bundesrecht verletzt, indem sie der Beschwerdegegnerin ermöglichte, (wenigstens) zur Frage der Patentgültigkeit dreimal unbeschränkt Tatsachen und Beweismittel vorzutragen und gestützt darauf namentlich ihre Patentansprüche neu zu formulieren, ohne zu prüfen, ob die fraglichen Noven ausnahmsweise nach Art. 229 Abs. 1 ZPO zulässig sind. Da der damalige Instruktionsrichter in der Instruktionsverhandlung zutreffend darauf hinwies, dass die Beschwerdegegnerin von ihrem unbeschränkten zweimaligen Äusserungsrecht in Bezug auf die Patentnichtigkeit in der beschränkten Replik schon Gebrauch gemacht hatte, stellt sich die Frage des Vertrauensschutzes nicht."
+            },
+            {
+              "marke": "E. 2.5",
+              "tiefe": 2,
+              "text": "Die Beschwerdegegnerin bringt in der Antwort vor, die Beschwerdeführerin habe die neuheitsschädliche japanische Patentschrift JP yyy als Entgegenhaltung 10 (E10) erst in der Duplik formell ins Verfahren eingebracht. Zur Entkräftung von Dupliknoven sei ihr erlaubt, Noven vorzubringen und namentlich ihre Patentansprüche entsprechend zu beschränken."
+            },
+            {
+              "marke": "E. 2.5.1",
+              "tiefe": 3,
+              "text": "Nach den Erwägungen der Vorinstanz werde Anspruch 1\n\ngemäss\n\nerteilter Fassung durch E10 neuheitsschädlich vorweggenommen. Anders fällt jedoch die Prüfung des Hauptanspruches\n\ngemäss verbaler Einschränkung aus. Für den eingeschränkten Anspruch seien weder E10 noch die anderen von der Beschwerdeführerin zu den Akten eingereichten Patentschriften neuheitsschädlich. Die Beschwerdeführerin reichte die Entgegenhaltung 10 erst mit der Duplik zu den Akten. Mit der Neuformulierung von Patentansprüchen wird der Schutzbereich des Patents neu definiert. Ob die Neuformulierung bzw. Ergänzung die bisher streitigen Patentansprüche in zulässiger Weise einschränkt, ergibt sich erst aufgrund einer Beurteilung, welche eine Prüfung in tatsächlicher Hinsicht erfordert. Deshalb ist die Neuformulierung von Patentansprüchen im Zivilprozess dem Vorbringen von Noven gleich zu achten (vgl. Urteile 4A_282/2018 vom 4. Oktober 2018 E. 5.2: 4A_543/2017 vom 8. Mai 2018 E. 2.2-2.3)."
+            },
+            {
+              "marke": "E. 2.5.2",
+              "tiefe": 3,
+              "text": "Nach dem Aktenschluss haben die Parteien nur noch unter den eingeschränkten Voraussetzungen von Art. 229 Abs. 1 ZPO das Recht, neue Tatsachen und Beweismittel vorzubringen. Das gilt insbesondere auch für die Entgegnung auf sog.\n\nDupliknoven, d.h. neue Tatsachen oder Beweismittel, die von der beklagten Partei (erst) in der Duplik vorgetragen werden (vgl. etwa REUT, Noven nach der Schweizerischen Zivilprozessordnung, 2017, Rz. 119; BAERISWYL, Replikrecht, Novenrecht und Aktenschluss - endloser Weg zur Spruchreife, in: SJZ 111/2015, S. 519; vgl. zum (ungenauen) Begriff der Dupliknoven SCHMID/HOFER, Bestreitung von neuen Tatsachenbehauptungen in der schriftlichen Duplik, in: ZZZ 2016, FN 46). Ist die klagende Partei zur Entgegnung der in der Duplik vorgetragenen und sich auf neue Tatsachen und Beweismittel stützenden Behauptungen auf\n\nechte Noven angewiesen, dürfen diese gemäss Art. 229 Abs. 1 lit. ZPO a ohne Weiteres vorgebracht werden. Bei\n\nunechten Noven ist gemäss Art. 229 Abs. 1 lit. b ZPO hingegen erforderlich, dass diese trotz zumutbarer Sorgfalt nicht vorher vorgebracht werden konnten.\n\nUnter welchen Voraussetzungen unechte Noven im Anschluss an die Duplik vorgebracht werden können, ist in der Lehre im Einzelnen umstritten (vgl. etwa für den Meinungsstreit zur Rechtzeitigkeit SCHMID/HOFER, a.a.O., S. 292 f. und zum Verhältnis zwischen dem Novenrecht und dem sog. (ewigen) Replikrecht BAERISWYL, a.a.O.). Grundsätzlich ist indes davon auszugehen, dass der klagenden Partei weder möglich noch zumutbar ist, auf Vorrat in ihrer Replik sämtliche denkbaren Noven zu entkräften, mit denen der Prozessstoff in der Duplik noch ausgedehnt werden kann. Wenn daher in der Duplik Noven vorgebracht werden, welche die Klägerin ihrerseits mit unechten Noven entkräften will, so ist insofern die Voraussetzung von Art. 229 Abs. 1 lit. b ZPO erfüllt, dass diese Noven vor Aktenschluss trotz zumutbarer Sorgfalt nicht vorgebracht werden konnten (REUT, a.a.O., Rz. 119; BAERISWYL, a.a.O. S. 519). Damit der klagenden Partei dieser Sorgfaltsnachweis gelingt, ist immerhin unabdingbar, dass die Dupliknoven für diese Noveneingabe\n\nkausal sind (REUT, a.a.O, Rz. 119). Erforderlich ist einerseits, dass (erst) die Dupliknoven das Vorbringen der unechten Noven veranlasst haben, andererseits dass die unechten Noven in technischer bzw. thematischer Hinsicht als Reaktion auf die Dupliknoven aufzufassen sind. Für die Prüfung dieses Kausalzusammenhanges ist folglich eine genaue Betrachtung der zur Diskussion stehenden neuen Tatsachen und Beweismittel unumgänglich."
+            },
+            {
+              "marke": "E. 2.5.3",
+              "tiefe": 3,
+              "text": "Nach den Erwägungen der Vorinstanz ist der Hauptanspruch in der erteilten Fassung durch die Entgegenhaltung 10 neuheitsschädlich vorweggenommen. Vor der (formell gehörigen) Einreichung dieser Entgegenhaltung hatte die Beschwerdegegnerin keinen ersichtlichen Anlass, ihren Hauptanspruch so einzuschränken, dass dieser Entgegenhaltung Rechnung getragen wird. Wenn daher auf den ersten Blick einiges dafür spricht, dass die Einschränkung durch das Dupliknovum E10 veranlasst wurde, wird zu prüfen sein, ob ein Kausalzusammenhang im Sinne der obigen Ausführungen besteht. Dabei ist immerhin festzuhalten, dass der Umstand, dass die Beschwerdegegnerin\n\nin casu die Einschränkung der Patentansprüche bereits in der sog. ergänzenden Replik - also noch bevor die fragliche japanische Patentschrift formell ins Verfahren eingebracht wurde - vornahm, bei dieser Prüfung ohne Belang ist. Sollte sich erweisen, dass die Einschränkung in technischer Hinsicht spezifisch im Blick auf das Dupliknovum E10 vorgenommen wurde, so kann der Beschwerdegegnerin nicht vorgeworfen werden, dass sie diese eventualiter schon vor diesem Zeitpunkt (etwa als Reaktion auf das informelle Einbringen dieser Entgegenhaltung im Rahmen der Instruktionsverhandlung) vornahm."
+            },
+            {
+              "marke": "E. 2.5.4",
+              "tiefe": 3,
+              "text": "Die Vorinstanz hat die Einschränkung des Patentanspruchs vorbehaltlos zugelassen in der Meinung, dass der Beschwerdegegnerin in der ergänzenden Replik das Recht zustand, noch unbeschränkt Noven vorzubringen. Sie hat daher nicht geprüft, ob zwischen dem in der Duplik vorgetragenen unechten Novum und der verbalen Einschränkung des Klagepatents ein Kausalzusammenhang besteht, d.h. ob die Einschränkung spezifisch durch das Dupliknovum E10 veranlasst wurde. Die Sache ist zur Prüfung dieser Frage an die Vorinstanz zurückzuweisen."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin rügt, die Vorinstanz habe technische Begriffe willkürlich ausgelegt, ihr das rechtliche Gehör verweigert, und das Patentrecht und den Verhandlungsgrundsatz verletzt. Diese Rügen bringt sie nur eventualiter für den Fall vor, dass das Bundesgericht den angefochtenen Entscheid nicht schon aufgrund ihrer übrigen Vorbringen aufhebt. Während sie nach dem Gesagten nicht mehr zu behandeln sind, ist festzuhalten, dass sie\n\nprima facie unbegründet sind."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist gutzuheissen und der Entscheid des Bundespatentgerichts aufzuheben. Die Sache ist zur neuen Beurteilung im Sinne der Erwägungen an die Vorinstanz zurückzuweisen. Bei diesem Ausgang des Verfahrens sind die Gerichtskosten der Beschwerdegegnerin aufzuerlegen, die mit ihren Anträgen unterlegen ist (Art. 66 Abs. 1). Die Beschwerdegegnerin hat der Beschwerdeführerin deren Parteikosten für das bundesgerichtliche Verfahren zu entschädigen (Art. 68 Abs. 2 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen, das Urteil des Bundespatentgerichts vom 18. Dezember 2018 wird aufgehoben und die Sache wird zu neuer Beurteilung an die Vorinstanz zurückgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 18'000.-- werden der Beschwerdegegnerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdegegnerin hat der Beschwerdeführerin deren Parteikosten für das bundesgerichtliche Verfahren mit Fr. 20'000.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien und dem Bundespatentgericht schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 6. August 2019\n\nIm Namen der I. zivilrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDie Präsidentin: Kiss\n\nDer Gerichtsschreiber: Curchod"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen, das Urteil des Bundespatentgerichts vom 18. Dezember 2018 wird aufgehoben und die Sache wird zu neuer Beurteilung an die Vorinstanz zurückgewiesen.",
+        "Die Gerichtskosten von Fr. 18'000.-- werden der Beschwerdegegnerin auferlegt.",
+        "Die Beschwerdegegnerin hat der Beschwerdeführerin deren Parteikosten für das bundesgerichtliche Verfahren mit Fr. 20'000.-- zu entschädigen.",
+        "Dieses Urteil wird den Parteien und dem Bundespatentgericht schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 125 ZPO",
+        "Art. 222 Abs. 3 ZPO",
+        "Art. 222 ZPO",
+        "Art. 225 ZPO",
+        "Art. 226 ZPO",
+        "Art. 229 Abs. 1 ZPO",
+        "Art. 236 ZPO",
+        "Art. 237 ZPO"
+      ],
+      "normKeys": [
+        "ZPO"
+      ],
+      "zitierteEntscheide": [
+        "4A_267/2014",
+        "4A_282/2018",
+        "4A_543/2017",
+        "4A_70/2019",
+        "BGE 144 III 117",
+        "BGE 144 III 67"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=9&from_date=&to_date=&from_year=2019&to_year=2019&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=90&highlight_docid=atf%3A%2F%2F146-III-55%3Ade&number_of_ranks=216&azaclir=clir",
+      "abgerufen": "2026-07-12",
+      "fassungsToken": "c987befc1b75b166fc557bbcf6c2243d1bfd32785d2ed8c19c120f6b48a900fb",
+      "sha": "ee020318f19642c35d1e1554d6cee72e029747debb4b671fb034f26deadab3f3",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die B. AG, C. (Patentinhaberin, Klägerin, Beschwerdegegnerin) ist Inhaberin des Schweizer Patents CH x \"Durchflussmessfühler\", das am 7. September 2009 angemeldet und am 14. März 2014 erteilt wurde. Durchflussmessfühler dienen der Bestimmung der Atemluftströmung eines menschlichen Patienten. Das Patent CH x dient der Verbesserung vorbekannter Durchflussmessfühler. Die A. AG, D. (Beklagte, Beschwerdeführerin) vertreibt unter anderem die Durchflussmessfühler \"E.\" bzw. \"F.\" und \"G.\" (Erwachsenenausführung) und \"H.\" bzw. \"I.\" (Kinderausführung), die nach der Behauptung der Patentinhaberin das CH-Patent Nr. x verletzen."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 31. Mai 2016 beantragte die Patentinhaberin dem Bundespatentgericht im Wesentlichen, es sei der Beklagten der Vertrieb von Durchflussmessfühlern mit bestimmten Merkmalen zu verbieten sowie die Einziehung und Anordnung der sich im Eigentum der Beklagten befindenden entsprechenden Durchflussmessfühler anzuordnen. Die Beklagte sei zudem zur Rechnungslegung und Gewinnherausgabe zu verpflichten. In der Klageantwort vom 19. September 2016 beantragte die Beklagte im Wesentlichen die Abweisung der Klage und erhob namentlich den Einwand der Patentnichtigkeit. Am 10. November 2016 erstattete die Klägerin eine auf den Nichtigkeitseinwand beschränkte Replik. Am 20. Dezember 2016 fand eine Instruktions-/Vergleichsverhandlung statt. Am 20. März 2017 erstattete die Klägerin eine ergänzende Replik und änderte ihre Rechtsbegehren. Mit Eingabe vom 6. Juni 2017 erstattete die Beklagte die Duplik und änderte ihre Rechtsbegehren. Am 7. Juli 2017 nahm die Klägerin Stellung zur Duplik. Am 10. April 2018 erstattete Patentrichter Tobias Bremi ein Fachrichtervotum, wozu die Klägerin am 3. Mai 2018 Stellung nahm. Am 14. Mai 2018 wurde das Verfahren bis 30. Juni 2018 sistiert. Nach Aufhebung der Sistierung am 4. Juli 2018 nahm die Beklagte am 13. Juli 2018 zum Fachrichtervotum Stellung. Am 29. Oktober 2018 fand die Hauptverhandlung vor dem Bundespatentgericht statt. Mit Teilurteil vom 18. Dezember 2018 hiess das Bundespatentgericht das erste Unterlassungsbegehren, das Vernichtungsbegehren sowie das Auskunfts- und Rechnungslegungsbegehren der Klägerin teilweise gut. Im Übrigen wies es die Klage ab. Während es zum Schluss gelangte, der Anspruch 1 des Patents CH x sei durch das von der Beklagten in der Duplik eingereichte japanische Patent JP y (in der Übersetzung eingereicht als \"E10\") neuheitsschädlich vorweggenommen, hiess es das Eventualbegehren zu Rechtsbegehren 1 gut, das die Klägerin in der ergänzenden Replik vom 20. März 2017 gestellt hatte. Dabei fasste das Gericht die Merkmale des auf einer Kombination der erteilten Ansprüche 1, 4 und 10 beruhenden Hauptanspruchs in den Merkmalen a-k (ohne g und h) zusammen und kam zum Schluss, dass der so definierte Anspruch der Klägerin nicht neuheitsschädlich vorweggenommen sei und auf erfinderischer Tätigkeit beruhe. Das Gericht kam sodann zum Schluss, die Ausführungen der Beklagten würden sämtliche Merkmale des eingeschränkten Hauptanspruchs wortsinngemäss verwirklichen."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in Zivilsachen stellt die Beklagte das Rechtsbegehren, das Teilurteil des Bundespatentgerichtes sei aufzuheben und die Klage sei vollumfänglich abzuweisen, eventualiter sei die Sache zu neuem Entscheid an die Vorinstanz zurückzuweisen. Sie kritisiert zunächst die Zulassung von Noven zur Frage der Patentnichtigkeit in der ergänzenden Replik der Beschwerdegegnerin trotz gegenteiliger Äusserung des damaligen Instruktionsrichters. In diesem Zusammenhang rügt sie eine Verletzung des Grundsatzes von Treu und Glauben, des Gebots der Rechtssicherheit, des Dispositionsgrundsatzes und des Verhandlungsgrundsatzes. Ausserdem bringt sie eventualiter vor, die Vorinstanz habe technische Begriffe willkürlich ausgelegt, ihr das rechtliche Gehör verweigert, das Patentrecht und den Verhandlungsgrundsatz verletzt. Das Bundesgericht heisst die Beschwerde gut, hebt das Urteil des Bundespatentgerichts auf und weist die Sache zu neuer Beurteilung an die Vorinstanz zurück. (Zusammenfassung)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "(...)"
+            },
+            {
+              "marke": "E. 2.3.1",
+              "tiefe": 3,
+              "text": "Nach nunmehr gefestigter Rechtsprechung haben die Parteien im ordentlichen Verfahren wie auch im vereinfachten Verfahren zweimal unbeschränkt die Möglichkeit, sich zur Sache zu äussern und namentlich neue Tatsachen in den Prozess einzuführen (vgl. zum summarischen Verfahren hingegen BGE 144 III 117 E. 2.2, wonach der Aktenschluss grundsätzlich nach einmaliger Äusserung eintritt). Danach haben sie nur noch unter den eingeschränkten Voraussetzungen von Art. 229 Abs. 1 ZPO das Recht, neue Tatsachen und Beweismittel vorzubringen (BGE 144 III 67 E. 2.1; BGE 140 III 312 E. 6.3.2). Angesichts der grundsätzlichen Bedeutung des Novenrechts im Zivilprozess ist es unausweichlich, dass klare und eindeutige allgemeine Regeln bestehen, die es den Parteien ermöglichen, mit Sicherheit zu bestimmen, bis wann sie sich zur Sache unbeschränkt äussern dürfen. Es kann folglich nicht sein, dass der Aktenschluss ins Ermessen des Gerichts gestellt wird (BGE 144 III 67 E. 2.1 mit Verweisen). Die Beschränkung der Zulassung von neuen Tatsachen und Beweismitteln kann insbesondere nicht dadurch umgangen werden, dass Instruktionsverhandlungen durchgeführt werden, in deren Rahmen BGE 146 III 55 S. 58 zusätzlich unbeschränkt Noven vorgebracht werden können (vgl. zu den Zwecken von Instruktionsverhandlungen etwa KILLIAS, Berner Kommentar, Schweizerische Zivilprozessordnung, Bd. II, 2012, N. 3 zu Art. 226 ZPO; LEUENBERGER, in: Kommentar zur Schweizerischen Zivilprozessordnung, Sutter-Somm und andere [Hrsg.], 3. Aufl. 2016, Rz. 4-9 zu Art. 226 ZPO; WILLISEGGER, in: Basler Kommentar, Schweizerische Zivilprozessordnung, 3. Aufl. 2017, Rz. 10-14 zu Art. 226 ZPO). Dem Instruktionsrichter steht es hingegen offen, eine Instruktionsverhandlung bloss zum Zweck von Vergleichsverhandlungen anzusetzen, womit die Verhandlung nicht als zweite Gelegenheit der Parteien zu unbeschränktem Vorbringen neuer Tatsachen und Beweismittel dienen und der Aktenschluss anschliessend noch nicht eintreten kann (BGE 144 III 67 E. 2.4.2)."
+            },
+            {
+              "marke": "E. 2.3.2",
+              "tiefe": 3,
+              "text": "Gemäss Art. 125 lit. a ZPO kann das Gericht zur Vereinfachung des Prozesses insbesondere das Verfahren auf einzelne Fragen oder einzelne Rechtsbegehren beschränken (vgl. Urteil 4A_267/2014 vom 8. Oktober 2014 E. 4.2). Infolge Verfahrensbeschränkung wird ein Teilentscheid (Art. 236 ZPO) bzw. ein Zwischenentscheid (Art. 237 ZPO) erlassen (LEUENBERGER, a.a.O., N. 12 zu Art. 222 ZPO; WILLISEGGER, a.a.O., N. 33-38 zu Art. 222 ZPO; KILLIAS, a.a.O., N. 28 zu Art. 222 ZPO). Eine derartige Beschränkung kann das Gericht insbesondere mit der Fristansetzung für die Klageantwort anordnen (Art. 222 Abs. 3 ZPO). Ob eine Verfahrensbeschränkung auch noch mit der Fristansetzung für die Replik angeordnet werden kann, sei dahingestellt. Denn eine Beschränkung des Verfahrens im Blick auf einen Teil- bzw. Zwischenentscheid über die Frage der Nichtigkeit des Klagepatents hat der Instruktionsrichter nicht angeordnet. Er hat vielmehr einseitig der Klägerin die Gelegenheit eingeräumt, zu einem Teil der Vorbringen in der Klageantwort vorgängig der Instruktionsverhandlung Stellung zu nehmen und in diesem Rahmen zu replizieren, d.h. unbeschränkt Noven in den Prozess einzuführen."
+            },
+            {
+              "marke": "E. 2.4",
+              "tiefe": 2,
+              "text": "Ob eine thematische Aufteilung der Replik zulässig ist, erscheint fraglich (kritisch dazu WILLISEGGER, a.a.O., N. 11 zu Art. 225 ZPO, wonach das Gericht zwar das Verfahren auf einzelne Fragen oder Rechtsbegehren beschränken dürfe, nicht aber den Schriftenwechsel selbst). Es ist ausserdem zweifelhaft, ob eine derartige Vorgehensweise überhaupt sinnvoll ist, setzt sie doch mindestens voraus, dass sich die vorweggenommene Frage klar vom übrigen Prozessstoff abgrenzen lässt, was die Beschwerdegegnerin mit guten Gründen für die Frage der Patentnichtigkeit im Verhältnis zur Frage der Verletzung BGE 146 III 55 S. 59 bestreitet. Eine derartige thematische Aufteilung darf jedenfalls nicht dazu führen, dass die Klagepartei sich mehr als zweimal unbeschränkt äussert."
+            },
+            {
+              "marke": "E. 2.4.1",
+              "tiefe": 3,
+              "text": "Im vorliegenden Fall konnte sich die Beschwerdegegnerin in ihrer Klage ein erstes Mal ohne Beschränkung zur Sache äussern. Eine zweite Äusserungsmöglichkeit erhielt sie in einer beschränkten Replik, wobei sie sich gemäss ausdrücklicher Anordnung der Vorinstanz auf die Frage der Beständigkeit des fraglichen Patents zu beschränken hatte. Ein drittes Mal durfte sich die Beschwerdegegnerin in der ergänzenden Replik äussern, dieses Mal wiederum ohne thematische Beschränkung. Im Ergebnis hatte die Beschwerdegegnerin dreimal die Gelegenheit, neue Tatsachen bzw. Beweismittel vorzubringen, zweimal thematisch unbeschränkt und einmal zusätzlich ausschliesslich zur Frage der Beständigkeit des Klagepatents. Dies lässt sich mit der zitierten bundesgerichtlichen Rechtsprechung nicht in Einklang bringen, wonach die Parteien im ordentlichen Verfahren nur zweimal unbeschränkt die Möglichkeit haben, sich zur Sache zu äussern und namentlich neue Tatsachen in den Prozess einzuführen."
+            },
+            {
+              "marke": "E. 2.4.2",
+              "tiefe": 3,
+              "text": "Die Ansicht der Vorinstanz, wonach bei ihrer thematischen Herangehensweise sich die Beschwerdegegnerin nur zwei Mal zu jedem der beiden Themen (Patentverletzung und Nichtigkeit) äusserte, überzeugt nicht. Denn entgegen ihrer Ansicht ist es der Klagepartei selbstverständlich möglich, schon in der Klage allfällige Einwände zur Nichtigkeit zu entkräften. Dass sie dazu keinen Anlass haben mag, ist dabei ohne Relevanz. Denn die Möglichkeit, sich unbeschränkt zur Streitsache zu äussern und damit jedwede neuen Tatsachen oder Beweise vorzubringen, zeichnet sich gerade dadurch aus, dass sie unabhängig davon besteht, ob die Gegenpartei Anlass zu einer Stellungnahme oder zu Entgegnungen gegeben hat. Es entspricht dem Wesen des (Zivil-)prozesses, dass die Klagepartei zum Zeitpunkt der Klage - d.h. novenrechtlich zum Zeitpunkt ihrer ersten unbeschränkten Äusserungsmöglichkeit - die Entgegnungen der beklagten Partei noch nicht mit Sicherheit kennt. Dass diese Problematik in einem Patentverletzungsprozess aufgrund der Vielfalt der existierenden Patentdokumente besonders ausgeprägt sei, wie die Vorinstanz in ihrer Vernehmlassung ausführt, ändert daran nichts. Wie bereits ausgeführt, ist das Bestehen von klaren Regeln, die grundsätzlich vor allen Gerichten in Anwendung der ZPO Geltung beanspruchen, aus Sicht der Rechtssicherheit von zentraler Bedeutung. BGE 146 III 55 S. 60 Eine Unterscheidung je nach Vorhersehbarkeit der Einreden bzw. Einwendungen der Gegenpartei würde die Rechtssicherheit erheblich gefährden, weshalb sich eine Ausnahme von der allgemeinen Regel der zweimaligen unbeschränkten Äusserungsmöglichkeit im Bereich des Patentrechts nicht rechtfertigt. Im Übrigen verhält es sich nicht grundsätzlich anders, wenn mit der Einrede der Nichtigkeit des Klagepatents neue Fragen in Zusammenhang mit der Streitsache aufgeworfen werden, als wenn etwa gegen eine Forderung die Einrede der Verjährung erhoben oder eine andere Forderung zur Verrechnung gestellt wird. Werden in der Klageantwort derartige neue Behauptungen aufgestellt, führt dies nicht dazu, dass sich die klagende Partei dreimal unbeschränkt zu diesen Fragen äussern darf. Entgegen der Ansicht der Vorinstanz lässt sich ihr Vorgehen folglich nicht durch Besonderheiten von Patentrechtsstreitigkeiten rechtfertigen."
+            },
+            {
+              "marke": "E. 2.4.3",
+              "tiefe": 3,
+              "text": "Nach dem Gesagten hat die Vorinstanz Bundesrecht verletzt, indem sie der Beschwerdegegnerin ermöglichte, (wenigstens) zur Frage der Patentgültigkeit dreimal unbeschränkt Tatsachen und Beweismittel vorzutragen und gestützt darauf namentlich ihre Patentansprüche neu zu formulieren, ohne zu prüfen, ob die fraglichen Noven ausnahmsweise nach Art. 229 Abs. 1 ZPO zulässig sind. Da der damalige Instruktionsrichter in der Instruktionsverhandlung zutreffend darauf hinwies, dass die Beschwerdegegnerin von ihrem unbeschränkten zweimaligen Äusserungsrecht in Bezug auf die Patentnichtigkeit in der beschränkten Replik schon Gebrauch gemacht hatte, stellt sich die Frage des Vertrauensschutzes nicht."
+            },
+            {
+              "marke": "E. 2.5",
+              "tiefe": 2,
+              "text": "Die Beschwerdegegnerin bringt in der Antwort vor, die Beschwerdeführerin habe die neuheitsschädliche japanische Patentschrift y als Entgegenhaltung 10 (E10) erst in der Duplik formell ins Verfahren eingebracht. Zur Entkräftung von Dupliknoven sei ihr erlaubt, Noven vorzubringen und namentlich ihre Patentansprüche entsprechend zu beschränken."
+            },
+            {
+              "marke": "E. 2.5.1",
+              "tiefe": 3,
+              "text": "Nach den Erwägungen der Vorinstanz werde Anspruch 1 gemäss erteilter Fassung durch E10 neuheitsschädlich vorweggenommen. Anders fällt jedoch die Prüfung des Hauptanspruches gemäss verbaler Einschränkung aus. Für den eingeschränkten Anspruch seien weder E10 noch die anderen von der Beschwerdeführerin zu den Akten eingereichten Patentschriften neuheitsschädlich. Die Beschwerdeführerin reichte die Entgegenhaltung 10 erst mit der BGE 146 III 55 S. 61 Duplik zu den Akten. Mit der Neuformulierung von Patentansprüchen wird der Schutzbereich des Patents neu definiert. Ob die Neuformulierung bzw. Ergänzung die bisher streitigen Patentansprüche in zulässiger Weise einschränkt, ergibt sich erst aufgrund einer Beurteilung, welche eine Prüfung in tatsächlicher Hinsicht erfordert. Deshalb ist die Neuformulierung von Patentansprüchen im Zivilprozess dem Vorbringen von Noven gleich zu achten (vgl. Urteile 4A_282/2018 vom 4. Oktober 2018 E. 5.2; 4A_543/2017 vom 8. Mai 2018 E. 2.2-2.3)."
+            },
+            {
+              "marke": "E. 2.5.2",
+              "tiefe": 3,
+              "text": "Nach dem Aktenschluss haben die Parteien nur noch unter den eingeschränkten Voraussetzungen von Art. 229 Abs. 1 ZPO das Recht, neue Tatsachen und Beweismittel vorzubringen. Das gilt insbesondere auch für die Entgegnung auf sog. Dupliknoven, d.h. neue Tatsachen oder Beweismittel, die von der beklagten Partei (erst) in der Duplik vorgetragen werden (vgl. etwa REUT, Noven nach der Schweizerischen Zivilprozessordnung, 2017, Rz. 119; BAERISWYL, Replikrecht, Novenrecht und Aktenschluss, endloser Weg zur Spruchreife?, SJZ 111/2015 S. 519; vgl. zum (ungenauen) Begriff der Dupliknoven SCHMID/HOFER, Bestreitung von neuen Tatsachenbehauptungen in der schriftlichen Duplik, ZZZ 2016 S. 286). Ist die klagende Partei zur Entgegnung der in der Duplik vorgetragenen und sich auf neue Tatsachen und Beweismittel stützenden Behauptungen auf echte Noven angewiesen, dürfen diese gemäss Art. 229 Abs. 1 lit. a ZPO ohne Weiteres vorgebracht werden. Bei unechten Noven ist gemäss Art. 229 Abs. 1 lit. b ZPO hingegen erforderlich, dass diese trotz zumutbarer Sorgfalt nicht vorher vorgebracht werden konnten. Unter welchen Voraussetzungen unechte Noven im Anschluss an die Duplik vorgebracht werden können, ist in der Lehre im Einzelnen umstritten (vgl. etwa für den Meinungsstreit zur Rechtzeitigkeit SCHMID/HOFER, a.a.O., S. 292 f. und zum Verhältnis zwischen dem Novenrecht und dem sog. [ewigen] ReplikrechtBAERISWYL, a.a.O., S. 519). Grundsätzlich ist indes davon auszugehen, dass der klagenden Partei weder möglich noch zumutbar ist, auf Vorrat in ihrer Replik sämtliche denkbaren Noven zu entkräften, mit denen der Prozessstoff in der Duplik noch ausgedehnt werden kann. Wenn daher in der Duplik Noven vorgebracht werden, welche die Klägerin ihrerseits mit unechten Noven entkräften will, so ist insofern die Voraussetzung von Art. 229 Abs. 1 lit. b ZPO erfüllt, dass diese Noven vor Aktenschluss trotz zumutbarer Sorgfalt nicht vorgebracht BGE 146 III 55 S. 62 werden konnten (REUT, a.a.O., Rz. 119; BAERISWYL, a.a.O., S. 519). Damit der klagenden Partei dieser Sorgfaltsnachweis gelingt, ist immerhin unabdingbar, dass die Dupliknoven für diese Noveneingabe kausal sind (REUT, a.a.O., Rz. 119). Erforderlich ist einerseits, dass (erst) die Dupliknoven das Vorbringen der unechten Noven veranlasst haben, andererseits dass die unechten Noven in technischer bzw. thematischer Hinsicht als Reaktion auf die Dupliknoven aufzufassen sind. Für die Prüfung dieses Kausalzusammenhanges ist folglich eine genaue Betrachtung der zur Diskussion stehenden neuen Tatsachen und Beweismittel unumgänglich."
+            },
+            {
+              "marke": "E. 2.5.3",
+              "tiefe": 3,
+              "text": "Nach den Erwägungen der Vorinstanz ist der Hauptanspruch in der erteilten Fassung durch die Entgegenhaltung 10 neuheitsschädlich vorweggenommen. Vor der (formell gehörigen) Einreichung dieser Entgegenhaltung hatte die Beschwerdegegnerin keinen ersichtlichen Anlass, ihren Hauptanspruch so einzuschränken, dass dieser Entgegenhaltung Rechnung getragen wird. Wenn daher auf den ersten Blick einiges dafür spricht, dass die Einschränkung durch das Dupliknovum E10 veranlasst wurde, wird zu prüfen sein, ob ein Kausalzusammenhang im Sinne der obigen Ausführungen besteht. Dabei ist immerhin festzuhalten, dass der Umstand, dass die Beschwerdegegnerin in casu die Einschränkung der Patentansprüche bereits in der sog. ergänzenden Replik - also noch bevor die fragliche japanische Patentschrift formell ins Verfahren eingebracht wurde - vornahm, bei dieser Prüfung ohne Belang ist. Sollte sich erweisen, dass die Einschränkung in technischer Hinsicht spezifisch im Blick auf das Dupliknovum E10 vorgenommen wurde, so kann der Beschwerdegegnerin nicht vorgeworfen werden, dass sie diese eventualiter schon vor diesem Zeitpunkt (etwa als Reaktion auf das informelle Einbringen dieser Entgegenhaltung im Rahmen der Instruktionsverhandlung) vornahm."
+            },
+            {
+              "marke": "E. 2.5.4",
+              "tiefe": 3,
+              "text": "Die Vorinstanz hat die Einschränkung des Patentanspruchs vorbehaltlos zugelassen in der Meinung, dass der Beschwerdegegnerin in der ergänzenden Replik das Recht zustand, noch unbeschränkt Noven vorzubringen. Sie hat daher nicht geprüft, ob zwischen dem in der Duplik vorgetragenen unechten Novum und der verbalen Einschränkung des Klagepatents ein Kausalzusammenhang besteht, d.h. ob die Einschränkung spezifisch durch das Dupliknovum E10 veranlasst wurde. Die Sache ist zur Prüfung dieser Frage an die Vorinstanz zurückzuweisen."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "4A_70/2019",
+        "key": "bger_4A_70_2019",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=06.08.2019_4A_70/2019"
+      },
+      "ecli": "ECLI:CH:BGE:2019:146.III.55"
+    }
+  ]
+}

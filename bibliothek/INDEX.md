@@ -62,6 +62,14 @@ BGE-Leitentscheide ab 2024 (265 dt., curated statt Routine) aus OpenCaseLaw (Cou
 Quelle/Stand, Pipeline (`adapter-entscheide`/`normtext-entscheide`), Datum via aza-Cross-Fetch
 + Bandjahr-Fallback, Sachgebiet-Ableitung. Inhaltliche Einzelabnahme: David, offen.
 
+**BGE-Band-Nachzug 146–149 (2020–2023):** [rechtsprechung/bge-baender-146-149-nachzug-2026-07-12.md](rechtsprechung/bge-baender-146-149-nachzug-2026-07-12.md) —
+Auftrag David 12.7.2026 «bge bis 2020 integrieren» (W2·6): die vollständigen amtlichen
+BGE-Bände 146–149 (**788** BGE, alle Sprachen) additiv zum Bestand, **band-basiert de/fr/it**
+enumeriert (Q1-Bandjahr-Quirk + Sprachfilter-Falle: `language=de` verlöre 247 fr/it-BGE);
+aza-Bindung + Urteilsdatum aus dem amtlichen clir-Urteilskopf (Fix nach Gegenprüfungs-R1
+`widerlegt`), dreisprachige clir-Regeste (A18). Band-weise (PR-A 146+147 = 404, PR-B
+148+149 = 384), BUDGET_MB 35→100. Quelle/Stand, Regel, Band-Zählungen, Gegenprüfungs-Historie.
+
 **BGer-Korpus-Ausbau (Zitiergraph-Pfad):** [rechtsprechung/bger-korpus-ausbau-2026-06-26.md](rechtsprechung/bger-korpus-ausbau-2026-06-26.md) —
 Ausbau auf 610 Entscheide (580 Bund + 30 kantonal, +240 BGer) via Default-`bger`-
 Citation-Graph (Auftrag David 26.6.2026, §12-isoliert auf Branch

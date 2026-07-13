@@ -1,7 +1,7 @@
 {
-  "erzeugt": "2026-07-02",
+  "erzeugt": "2026-07-12",
   "erlass": "VVG",
-  "gewichtQuelle": "e4",
+  "gewichtQuelle": "alt",
   "proArtikel": {
     "39": [
       {
@@ -21,6 +21,30 @@
         "zitierung": "BGE 151 V 280",
         "regesteKurz": "Art. 82 Abs. 2 BVG; gebundene Vorsorge (Säule 3a); Beweismass. Der Nachweis strittiger Fakten ist in Streitigkeiten der gebundenen Vorsorge (Säule 3a) grundsätzlich mit dem strikten Beweismass zu erbringen. Eine Herabsetzung der Beweisanfo…",
         "datum": "2025-05-26",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "46": [
+      {
+        "key": "bge_146_III_14",
+        "zitierung": "BGE 146 III 14",
+        "regesteKurz": "Art. 60 Abs. 1 OR; Art. 127 i.V.m. Art. 130 Abs. 1 OR; Schadenersatzansprüche der Erben eines Asbestopfers; Beginn der absoluten Verjährung vertraglicher und ausservertraglicher Ansprüche. Keine Änderung der Rechtsprechung nach dem Urteil…",
+        "datum": "2019-11-06",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "96": [
+      {
+        "key": "bge_147_III_402",
+        "zitierung": "BGE 147 III 402",
+        "regesteKurz": "a Art. 45 Abs. 3 OR; Methode der Berechnung des Versorgungsschadens. Der Versorgungsschaden ist (abstrakt) durch Kapitalisierung auf den Zeitpunkt des Todes des Versorgers zu berechnen (Bestätigung der Rechtsprechung; E. 5). Regeste b Art.…",
+        "datum": "2021-05-18",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",

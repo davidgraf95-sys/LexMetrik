@@ -1,0 +1,325 @@
+{
+  "erzeugt": "2026-07-12",
+  "eintraege": [
+    {
+      "id": "bund/bge/147_V_369",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "V",
+      "nummer": "147 V 369",
+      "bgeReferenz": "147 V 369",
+      "zitierung": "BGE 147 V 369",
+      "datum": "2021-07-20",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "legalArea": null,
+      "rubrum": {
+        "besetzung": "Bundesrichter Parrino, Präsident, Bundesrichter Stadelmann, Bundesrichterinnen Heine, Moser-Szeless, Bundesrichter Wirthlin, Gerichtsschreiberin Dormann",
+        "parteien": "A.________, vertreten durch B.________, Beschwerdeführer, gegen Ausgleichskasse des Kantons Bern, Abteilung Ergänzungsleistungen, Chutzenstrasse 10, 3007 Bern, Beschwerdegegnerin",
+        "gegenstand": "Ergänzungsleistung zur AHV/IV",
+        "vorinstanz": "Verwaltungsgerichts des Kantons Bern vom 29. Oktober 2020 (200 20 552 EL)"
+      },
+      "regeste": {
+        "text": "Art. 25 Abs. 1 ATSG und Art. 2 Abs. 1 lit. b ATSV; Rückerstattungspflicht. Der Krankenversicherer ist für die Entgegennahme von Ergänzungsleistungen im Rahmen von Art. 21a ELG (Pauschalbetrag für die obligatorische Krankenpflegeversicherung) als blosse Inkasso- resp. Zahlstelle zu qualifizieren. Folglich trifft ihn diesbezüglich keine Rückerstattungspflicht (E. 4.3.3).\nRegeste\n Art. 25 al. 1 LPGA et art. 2 al. 1 let. b OPGA; obligation de restituer. En ce qui concerne la réception du montant des prestations complémentaires dans le cadre de l'art. 21a LPC (montant forfaitaire pour l'assurance obligatoire des soins), l'assureur-maladie doit être qualifié de simple organe d'encaissement ou de paiement. Par conséquent, il n'est pas soumis à l'obligation de restituer (consid. 4.3.3).\nRegesto\n Art. 25 cpv. 1 LPGA e art. 2 cpv. 1 lett. b OPGA; obbligo di restituzione. L'assicuratore malattie deve essere qualificato come un semplice organo d'incasso o di pagamento per l'ottenimento delle prestazioni complementari nell'ambito dell'art. 21a LPC (importo forfettario per l'assicurazione obbligatoria delle cure medico-sanitarie). Di conseguenza, esso non ha alcun obbligo di restituzione (consid. 4.3.3).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 25 Abs. 1 ATSG und Art. 2 Abs. 1 lit. b ATSV; Rückerstattungspflicht.",
+            "absaetze": [
+              "Der Krankenversicherer ist für die Entgegennahme von Ergänzungsleistungen im Rahmen von Art. 21a ELG (Pauschalbetrag für die obligatorische Krankenpflegeversicherung) als blosse Inkasso- resp. Zahlstelle zu qualifizieren. Folglich trifft ihn diesbezüglich keine Rückerstattungspflicht (E. 4.3.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-369%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 25 al. 1 LPGA et art. 2 al. 1 let. b OPGA; obligation de restituer.",
+            "absaetze": [
+              "En ce qui concerne la réception du montant des prestations complémentaires dans le cadre de l'art. 21a LPC (montant forfaitaire pour l'assurance obligatoire des soins), l'assureur-maladie doit être qualifié de simple organe d'encaissement ou de paiement. Par conséquent, il n'est pas soumis à l'obligation de restituer (consid. 4.3.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-369%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 25 cpv. 1 LPGA e art. 2 cpv. 1 lett. b OPGA; obbligo di restituzione.",
+            "absaetze": [
+              "L'assicuratore malattie deve essere qualificato come un semplice organo d'incasso o di pagamento per l'ottenimento delle prestazioni complementari nell'ambito dell'art. 21a LPC (importo forfettario per l'assicurazione obbligatoria delle cure medico-sanitarie). Di conseguenza, esso non ha alcun obbligo di restituzione (consid. 4.3.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-369%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. Die Ausgleichskasse des Kantons Bern sprach dem 1962 geborenen A.________ Ergänzungsleistungen zur Rente der Invalidenversicherung vom 1. Juli 2012 bis zum 31. Dezember 2016 zu. Dabei zahlte sie die jährlichen Pauschalbeträge für die obligatorische Krankenpflegeversicherung ab dem 1. Januar 2015 direkt der Visana AG (nachfolgend: Visana) als zuständigem Krankenversicherer aus. Am 22. März 2017 teilte die Previs Vorsorge der Ausgleichskasse mit, dass sie die Invalidenleistungen aus beruflicher Vorsorge nicht korrekt berechnet habe und A.________ für die Zeit vom 1. April 2013 bis zum 31. März 2017 Anspruch auf eine Nachzahlung von Fr. 42'055.20 habe. In der Folge berechnete die Ausgleichskasse die Ergänzungsleistungen ab 1. April 2013 neu. Am 24. April 2017 stellte sie bei der Previs Vorsorge einen Verrechnungsantrag hinsichtlich der Rentennachzahlung. Mit Verfügungen vom 28. April 2017verpflichtete sie A.________ zur Rückerstattung von unrechtmässig bezogenen Ergän zungsleistungen (Fr. 9'290.- für die Zeit vom 1. April 2013 bis zum 31. Dezember 2014 und Fr. 2'504.- für die Zeit vom 1. Januar 2015 bis zum 31. Dezember 2016), wobei diese Rückforderungen mit der Nachzahlung der Previs Vorsorge verrechnet würden. Die Previs Vorsorge leistete die Nachzahlung im Umfang von insgesamt Fr. 11'794.- an die Ausgleichskasse (bestätigt mit Urteil [200 19 753 BV] des Verwaltungsgerichts des Kantons Bern vom 24. Februar 2020). Die Visana erstattete die 2015 und 2016an sie ausbezahlten Pauschalbeträge zurück und stellte dem Versicherten eine entsprechende \"Forderung KVG\" über Fr. 12'961.20 in Rechnung. A.b. Mit Verfügung vom 21. Februar 2018und \"Einspracheverfügung\" vom 11. April 2018verneinte das kantonale Amt für Sozialversicherungen einen Anspruch des A.________ und seiner Familienmitglieder auf Prämienverbilligung ab dem 1. August 2015. Gleichzeitig trat es auf das \"Ersuchen um Erlass der von der Krankenkasse geltend gemachten Rückforderung\" wegen Unzuständigkeit nicht ein. Im Juli 2018 stellte der Versicherte ein (kantonalrechtlich begründetes) Gesuch \"Härtefall gemäss 27 Abs. 3 EG KUMV\" betreffend \"Prämienverbilligungen für die Jahre 2015 und 2016\" bei der Aus gleichskasse. Darauf trat diese mit Verfügung vom 18. Februar 2019 resp. Einspracheentscheid vom 4. Dezember 2019 nicht ein. Die dagegen erhobene Beschwerde wies das Verwaltungsgericht des Kantons Bern mit Urteil (200 19 915 EL) vom 24. Februar 2020 ab, soweit es darauf eintrat. A.c. Am 4. März 2020 ersuchte der Versicherte die Ausgleichskasse um \"Erlass der Rückerstattung gemäss Art. 25 Abs. 1 ATSG \" im Umfang der nachgeforderten Krankenversicherungsbeiträge. Auch darauf trat die Ausgleichskasse mit Verfügung vom 29. Juni 2020 resp. Einspracheentscheid vom 13. Juli 2020 nicht ein."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Die dagegen erhobene Beschwerde wies das Verwaltungsgericht des Kantons Bern mit Urteil (200 20 552 EL) vom 29. Oktober 2020 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A.________ lässt mit Beschwerde in öffentlich-rechtlichen Angelegen heiten beantragen, \"das Urteil des Verwaltungsgerichts des Kantons Bern vom 29. Oktober 2020 sei aufzuheben und die Sache zur Neubeurteilung an die Beschwerdegegnerin zurückzuweisen\". Die Ausgleichskasse schliesst auf Abweisung der Beschwerde. Das Bundesamt für Sozialversicherungen (BSV) verzichtet auf eine Vernehmlassung."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Mit der Beschwerde in öffentlich-rechtlichen Angelegenheiten kann eine Rechtsverletzung nach Art. 95 f. BGG gerügt werden. Das Bundesgericht wendet das Recht von Amtes wegen an (Art. 106 Abs. 1 BGG). Dennoch prüft es - offensichtliche Fehler vorbehalten - nur die in seinem Verfahren gerügten Rechtsmängel (Art. 42 Abs. 1 f. BGG; BGE 135 II 384 E. 2.2.1). Es legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG). Es kann ihre Sachverhaltsfeststellung von Amtes wegen berichtigen oder ergänzen, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruht und wenn die Behebung des Mangels für den Verfahrensausgang entscheidend sein kann (Art. 97 Abs. 1, Art. 105 Abs. 2 BGG)."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Nach den allgemeinen intertemporalrechtlichen Grundsätzen (vgl. BGE 140 V 41 E. 6.3.1 mit Hinweisen) sind hier die Bestimmungen des ATSG (SR 830.1), der ATSV (SR 830.11), des ELG (SR 831.30) und der ELV (SR 831.301) in der bis Ende 2020 geltenden Fassung anwendbar. Sie werden im Folgenden jeweils in dieser Version wiedergegeben, zitiert und angewendet."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Unrechtmässig bezogene Leistungen sind zurückzuerstatten. Wer Leistungen in gutem Glauben empfangen hat, muss sie nicht zurückerstatten, wenn eine grosse Härte vorliegt (Art. 25 Abs. 1 ATSG, hier i.V.m. Art. 1 Abs. 1 ELG).\n\nRückerstattungspflichtig sind insbesondere der Bezüger der unrechtmässig gewährten Leistungen und Dritte oder Behörden, mit Ausnahme des Vormundes oder der Vormundin, denen Geldleistungen zur Gewährleistung zweckgemässer Verwendung nach Art. 20 ATSG oder den Bestimmungen der Einzelgesetze ausbezahlt wurden (Art. 2 Abs. 1 lit. a und b ATSV). Der Anspruch des Versicherers auf Rückerstattung richtet sich im Umfang, in welchem die unrechtmässig gewährten Leistungen gemäss der Regelung der einzelnen Sozialversicherungen mit Nachzahlungen anderer Sozialversicherungen verrechnet werden können, gegen den nachzahlungspflichtigen Versicherer (Art. 2 Abs. 3 ATSV). Wer unrechtmässige Leistungen lediglich als Inkasso- oder Zahlstelle entgegengenommen hat, ist nicht rückerstattungspflichtig (BGE 140 V 233 E. 3.1 und 3.3; 118 V 214 E. 4a; 110 V 10 E. 2b; vgl. auch BGE 142 V 358 mit Blick auf Art. 35a BVG)."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht hat erwogen, für die jährlichen Pauschalbeträge, die direkt der Visana ausbezahlt worden waren, sei diese rückerstattungspflichtig gewesen. Ihr gegenüber sei ein Erlass der Rückforderung ausgeschlossen. Der Versicherte sei von der Rückerstattungspflicht des Krankenversicherers nicht berührt und erleide keinen direkten Nachteil, auch wenn er sich in der Folge mit einer \"gleichsam originären\" Prämienforderung der Visana konfrontiert sehe. Die Ausgleichskasse habe die Pauschalbeträge gar nie vom Beschwerdeführer zurückgefordert. Am Erlass einer nicht gegen ihn gerichteten Forderung sei ihm von vornherein ein Rechtsschutzinteresse abgegangen. Die Ausgleichskasse sei daher zu Recht nicht auf das Erlassgesuch vom März 2020 eingetreten."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Der Beschwerdeführer macht im Wesentlichen geltend, die Vorinstanz habe verkannt, dass die Visana bei der Entgegennahme der jährlichen Pauschalbeträge als reine Zahl- resp. Inkassostelle fungiert habe. Die entsprechende Rückforderung hätte daher nicht an den Krankenversicherer gerichtet werden dürfen, vielmehr hätte sie gegenüber ihm erfolgen müssen. Er könne sich, im Gegensatz zur Visana, hinsichtlich der Rückerstattung auf eine grosse Härte berufen. Damit habe die Ausgleichskasse auch sein Erlassgesuch zu beurteilen."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "In Bezug auf die Rückerstattungspflicht einerseits und den Anspruch auf Erlass der Rückerstattungsschuld anderseits liegen unterschiedliche Rechtsverhältnisse (vgl. zu diesem Begriff BGE 125 V 413) vor (vgl. SVR 2015 AHV Nr. 10 S. 35, 9C_466/2014 E. 3.1; Urteil 8C_77/2018 vom 30. April 2018 E. 3.2; vgl. auch UELI KIESER, Kommentar zum ATSG, 4. Aufl. 2020, N. 76 zu Art. 25 ATSG; JOHANNA DORMANN, in: Basler Kommentar, Allgemeiner Teil des Sozialversicherungsrechts, 2020, N. 93 zu Art. 25 ATSG; SYLVIE PÉTREMAND, in: Commentaire Romand, Loi sur la partie générale des assurances sociales, 2018, N. 61 zu Art. 25 ATSG). Der Erlass ist eine besondere Form der Tilgung einer Rückerstattungsschuld (BGE 116 V 290 E. 5b; vgl. auch DORMANN, a.a.O., N. 70 und 81 zu Art. 25 ATSG). Er fällt somit überhaupt erst in Betracht, wenn und soweit eine Rückerstattungspflicht der um Erlass ersuchenden Person rechtsbeständig feststeht.\n\nDie vorinstanzliche Feststellung, wonach die Ausgleichskasse die hier interessierende Rückerstattung nicht vom Beschwerdeführer gefordert habe, ist unbestritten und für das Bundesgericht verbindlich (vorangehende E. 1). Unter diesen Umständen bestand in der Tat kein Anlass, auf das Erlassgesuch (im Sinne von Art. 25 Abs. 1 Satz 2 ATSG) einzutreten. Abgesehen davon kann sich von vornherein nicht auf einen wirtschaftlichen Härtefall berufen, wer im Zusammenhang mit der Nachzahlung einer Sozialversicherungsleistung mit einer kompensatorischen Rückforderung rechnete oder rechnen musste (SVR 2018 EL Nr. 7 S. 17, 9C_728/2016 E. 1.2 und 2.4). Insoweit ist die Beschwerde unbegründet. Näher zu betrachten ist indessen die Rückerstattungspflicht der Visana."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Rechtsbegehren sind nach Treu und Glauben auszulegen, insbesondere im Lichte der dazu gegebenen Begründung. Eine sichtlich ungewollte oder unbeholfene Wortwahl der am Recht stehenden Person schadet ebenso wenig wie eine nicht geglückte oder rechtsirrtümliche Ausdrucksweise. Es genügt, wenn der Beschwerde insgesamt entnommen werden kann, was die beschwerdeführende Person verlangt (Urteil 8C_62/2018 vom 19. September 2018 E. 1.2.2, nicht publ. in: BGE 144 V 418, mit Hinweisen).\n\nVerwaltungsverfügungen (resp. Einspracheentscheide) sind nicht nach ihrem bisweilen nicht sehr treffend verfassten Wortlaut, sondern - vorbehältlich des (hier nicht interessierenden) Vertrauensschutzes - nach ihrem wirklichen rechtlichen Bedeutungsgehalt zu verstehen (BGE 141 V 255 E. 1.2; 132 V 74 E. 2; 120 V 496 E. 1a; Urteil 9C_777/2019 vom 24. November 2020 E. 5.2.1, nicht publ. in: BGE 147 V 73)."
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Der Versicherte verfolgt (e) klar das - grundsätzlich legitime - Ziel, den Prämiennachforderungen der Visana zu entgehen. Bereits im Verwaltungsverfahren (vgl. Gesuch vom 4. März 2020 und Einsprache vom 30. Juni 2020) brachte er u.a. vor, dass die Visana die jährlichen Pauschalbeträge von der Ausgleichskasse lediglich als reine Zahlstelle entgegengenommen habe und darum gar nicht rückerstattungspflichtig gewesen sei; diesbezüglich hätte eine Verfügung erlassen werden müssen; er habe keine Gelegenheit gehabt, gegen die Rückerstattung durch die Visana vorzugehen.\n\nMit diesem Angriff auf die Rückerstattungspflicht des Krankenversicherers an sich (vgl. Art. 25 Abs. 1 Satz 1 ATSG) verlangte der Versicherte - alternativ resp. eventualiter zum Erlass im Sinne von Art. 25 Abs. 1 Satz 2 ATSG - wenn auch nicht ausdrücklich, so doch unmissverständlich die \"Rückabwicklung\" der bereits erfolgten Rückerstattung, d.h. die erneute Zahlung der Pauschalbeträge an die Visana durch die Ausgleichskasse."
+            },
+            {
+              "marke": "E. 4.2.3",
+              "tiefe": 3,
+              "text": "Ob die Ausgleichskasse den Beschwerdeführer bereits vor der Rückerstattung durch den Krankenversicherer in das entsprechende Verfahren hätte einbeziehen müssen (vgl. zu den Verfahrensrechten der versicherten Person bei Rückforderungen von Dritten Rz. 4660.02 der Wegleitung des BSV über die Ergänzungsleistungen zur AHV und IV [WEL]; KIESER, a.a.O., N. 56 zu Art. 25 ATSG; DORMANN, a.a.O., N. 94 zu Art. 25 ATSG), kann offenbleiben. Sie äusserte sich in ihrer Verfügung vom 29. Juni 2020 und ihrem Einspracheentscheid vom 13. Juli 2020zwar nicht dispositivmässig zur Rückerstattungspflicht des Krankenversicherers und zur beantragten \"Rückabwicklung\". Indessen befasste sie sich dennoch damit: Indem sie in ihren jeweiligen Erwägungen die Rückerstattungspflicht der Visana bejahte, verneinte sie gleichzeitig implizit, aber (unter Vorbehalt der Anfechtung) verbindlich einen Anspruch auf erneute Zahlung der Pauschalbeträge.\n\nDieses Rechtsverhältnis bildete auch Gegenstand des vorinstanzlichen Urteils (vgl. vorinstanzliche Beschwerde und vorangehende E. 3.1). Im vorliegenden Verfahren verlangt der Beschwerdeführer sinngemäss wiederum (auch), dass die Ausgleichskasse verpflichtet werden soll, die Pauschalbeträge (Fr. 12'961.20) erneut zu bezahlen, wie sich aus der Beschwerdebegründung deutlich ergibt."
+            },
+            {
+              "marke": "E. 4.3.1",
+              "tiefe": 3,
+              "text": "Als reines Inkasso- resp. Zahlstellenverhältnis beurteilte das Bundesgericht etwa die Entgegennahme von Leistungen durch eine Bank (BGE 110 V 10 E. 2b), von Kinderrenten durch den Sozialdienst, die dieser direkt an den Inhaber der elterlichen Gewalt weiterleitet (BGE 118 V 214 E. 4a), oder von Familienzulagen durch den Arbeitgeber, sofern er sie nicht zur Verwaltung bzw. mit dem Auftrag, fürsorgerisch tätig zu sein, erhalten hat (BGE 140 V 233 E. 3.1 und 3.3). Nicht als blosse Inkasso- resp. Zahlstelle und damit als rückerstattungspflichtige Drittperson resp. Behörde erachtete das Bundesgericht beispielsweise den Sozialdienst, dem die Stammrente zur Verwaltung für die Versicherte ausgerichtet wird (BGE 118 V 214 E. 4a), und die Arbeitgeberin, die während der Dienstleistung des Arbeitnehmers den Lohn weiterhin bezahlt und damit die entgegengenommene Erwerbsausfallentschädigung verrechnet (BGE 142 V 43 E. 3.1).\n\nEntscheidendes Kriterium für die Abgrenzung war stets das Vorhandensein von Rechten und Pflichten im Zusammenhang mit dem Leistungsverhältnis. Es besteht kein Anlass zur Änderung dieser Rechtsprechung (vgl. BGE 145 V 304 E. 4.4; 141 II 297 E. 5.5.1)."
+            },
+            {
+              "marke": "E. 4.3.2",
+              "tiefe": 3,
+              "text": "Bei der Berechnung der jährlichen Ergänzungsleistung ist ein jährlicher Pauschalbetrag für die obligatorische Krankenpflegeversicherung als anerkannte Ausgabe zu berücksichtigen (Art. 9 Abs. 1 i.V.m. Art. 10 Abs. 3 lit. d ELG). Der Pauschalbetrag ist in Abweichung von Art. 20 ATSG direkt dem Krankenversicherer auszuzahlen (Art. 21a ELG). Dieser bezahlt der versicherten Person die Differenz aus, wenn seine restlichen Prämienforderungen für das laufende Kalenderjahr und seine anderen fälligen Forderungen aus der obligatorischen Krankenpflegeversicherung, für die kein Verlustschein vorliegt, kleiner sind als der vom Kanton gewährte Pauschalbetrag nach Art. 10 Abs. 3 lit. d ELG (Art. 106c Abs. 5 lit. b KVV [SR 832.102]).\n\nArt. 65 Abs. 1 KVG, der die direkte Auszahlung der Prämienverbilligung an den Krankenversicherer vorsieht, garantiert, dass die Beiträge tatsächlich zum Zweck der Prämienverbilligung resp. der Begleichung von Krankenversicherungsprämien für die Anspruchsberechtigten eingesetzt werden. Zudem vermindert dieses System das Risiko der Zahlungsausstände bei den Versicherten (Bericht der Kommission für soziale Sicherheit und Gesundheit des Nationalrates vom 28. August 2009 zur Parlamentarischen Initiative Artikel 64a KVG und unbezahlte Prämien, BBl 2009 6623 Kommentar zu Art. 65 Abs. 1 KVG). Das gilt analog für Art. 21a ELG, der erst anlässlich der Beratungen der soeben erwähnten Parlamentarischen Initiative in den Eidgenössischen Räten formuliert und beschlossen wurde (AB N 2010 S. 49 f.; AB S 2010 S. 170; vgl. auch Botschaft zur Änderung des Bundesgesetzes über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung [EL-Reform] vom 16. September 2016, BBl 2016 7540 Kommentar zu Art. 21a ELG)."
+            },
+            {
+              "marke": "E. 4.3.3",
+              "tiefe": 3,
+              "text": "Damit besteht - im hier interessierenden Zusammenhang - die einzige Verpflichtung des Krankenversicherers darin, die Zahlungen von der Ausgleichskasse zur Anrechnung an ihre Forderungen gegenüber dem Versicherten entgegenzunehmen und einen allfälligen Überschuss an diesen weiterzuleiten. Dass er eigene Rechte und Pflichten im Zusammenhang mit dem Leistungsverhältnis (wie Verrechnungsrecht, Verwaltungs- oder Fürsorgepflicht) haben soll, bringt die Ausgleichskasse nicht vor und ist auch nicht ersichtlich. Demnach ist dem Beschwerdeführer beizupflichten, dass die Visana für die Entgegennahme der jährlichen Pauschalbeträge von der Ausgleichskasse als blosse Inkasso- resp. Zahlstelle zu qualifizieren ist. Folglich trifft sie diesbezüglich auch keine Rückerstattungspflicht als Drittperson oder Behörde im Sinne von Art. 2 Abs. 1 lit. b ATSV. Entgegen der vorinstanzlichen Auffassung ist die dazu im Widerspruch stehende Weisung von Rz. 4660.02 WEL bundesrechtswidrig (vgl. zur Bedeutung von Verwaltungsweisungen BGE 145 V 84 E. 6.1.1; 142 V 442 E. 5.2)."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Nach dem Gesagten hätte die Ausgleichskasse die Rückforderung auch der Pauschalbeträge gegenüber dem Versicherten oder (ohne dass hier abschliessend darüber zu entscheiden ist) der nachzahlenden Vorsorgeeinrichtung geltend machen müssen. Sie kann dies nicht mehr nachholen, nachdem die (relative) einjährige Frist von Art. 25 Abs. 2 ATSG offensichtlich verwirkt ist. Diesbezüglich entfällt somit auch die Möglichkeit einer Verrechnung mit der \"Rückabwicklung\" resp. erneuten Leistung der Pauschalbeträge. Dass diese aus einem anderen Grund nicht möglich sein soll, ist nicht ersichtlich und wird auch nicht ansatzweise geltend gemacht. In diesem Sinn ist die Beschwerde begründet."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Dem Ausgang des Verfahrens entsprechend hat die Beschwerdegegnerin die Gerichtskosten zu tragen (Art. 66 Abs. 1 BGG). Der Beschwerdeführer ist - wie bereits im vorangegangenen Verfahren - unentgeltlich vertreten, weshalb ein Anspruch auf Parteientschädigung gemäss Art. 68 Abs. 1 und 2 BGG entfällt. Das Urteil hat keine Auswirkung auf die vorinstanzliche Kostenverlegung."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird teilweise gutgeheissen. Das Urteil des Verwaltungsgerichts des Kantons Bern vom 29. Oktober 2020 und der Einspracheentscheid der Ausgleichskasse des Kantons Bern vom 13. Juli 2020 werden aufgehoben, soweit sie die Rückerstattungspflicht der Visana betreffen. Die Beschwerdegegnerin hat der Visana Fr. 12'961.20 zu bezahlen. Im Übrigen wird die Beschwerde abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 500.- werden der Beschwerdegegnerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Bern und dem Bundesamt für Sozialversicherungen schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 20. Juli 2021\n\nIm Namen der II. sozialrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDer Präsident: Parrino\n\nDie Gerichtsschreiberin: Dormann"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird teilweise gutgeheissen. Das Urteil des Verwaltungsgerichts des Kantons Bern vom 29. Oktober 2020 und der Einspracheentscheid der Ausgleichskasse des Kantons Bern vom 13. Juli 2020 werden aufgehoben, soweit sie die Rückerstattungspflicht der Visana betreffen. Die Beschwerdegegnerin hat der Visana Fr. 12'961.20 zu bezahlen. Im Übrigen wird die Beschwerde abgewiesen.",
+        "Die Gerichtskosten von Fr. 500.- werden der Beschwerdegegnerin auferlegt.",
+        "Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Bern und dem Bundesamt für Sozialversicherungen schriftlich mitgeteilt.\n\nLuzern, 20. Juli 2021"
+      ],
+      "zitierteNormen": [
+        "Art. 1 Abs. 1 ELG",
+        "Art. 10 Abs. 3 ELG",
+        "Art. 106c Abs. 5 KVV",
+        "Art. 2 Abs. 1 ATSV",
+        "Art. 2 Abs. 1 OPGA",
+        "Art. 2 Abs. 3 ATSV",
+        "Art. 20 ATSG",
+        "Art. 21a ELG"
+      ],
+      "normKeys": [
+        "ELG",
+        "ATSG",
+        "BGG"
+      ],
+      "zitierteEntscheide": [
+        "8C_62/2018",
+        "8C_77/2018",
+        "9C_466/2014",
+        "9C_716/2020",
+        "9C_728/2016",
+        "9C_777/2019",
+        "BGE 110 V 10",
+        "BGE 116 V 290",
+        "BGE 118 V 214",
+        "BGE 125 V 413",
+        "BGE 135 II 384",
+        "BGE 140 V 233",
+        "BGE 140 V 41",
+        "BGE 141 V 255",
+        "BGE 142 V 358",
+        "BGE 142 V 43",
+        "BGE 144 V 418",
+        "BGE 145 V 304",
+        "BGE 145 V 84",
+        "BGE 147 V 73"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=9&from_date=&to_date=&from_year=2021&to_year=2021&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=89&highlight_docid=atf%3A%2F%2F147-V-369%3Ade&number_of_ranks=224&azaclir=clir",
+      "abgerufen": "2026-07-12",
+      "fassungsToken": "62f055faedcddcff434ed9e46f2a1c436fc4f532ebcf0e1106a997fcba1990c7",
+      "sha": "55c43e964b79e4110aba45fde301e47ff4f8ff7881f78cd25c02f656b9060add",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Die Ausgleichskasse des Kantons Bern sprach dem 1962 geborenen A. Ergänzungsleistungen zur Rente der Invalidenversicherung vom 1. Juli 2012 bis zum 31. Dezember 2016 zu. Dabei zahlte sie die jährlichen Pauschalbeträge für die obligatorische Krankenpflegeversicherung ab dem 1. Januar 2015 direkt der Visana AG (nachfolgend: Visana) als zuständigem Krankenversicherer aus. Am 22. März 2017 teilte die Previs Vorsorge der Ausgleichskasse mit, dass sie die Invalidenleistungen aus beruflicher Vorsorge nicht korrekt berechnet habe und A. für die Zeit vom 1. April 2013 bis zum 31. März 2017 Anspruch auf eine Nachzahlung von Fr. 42'055.20 habe. In der Folge berechnete die Ausgleichskasse die Ergänzungsleistungen ab 1. April 2013 neu. Am 24. April 2017 stellte sie bei der Previs Vorsorge einen Verrechnungsantrag hinsichtlich der Rentennachzahlung. Mit Verfügungen vom 28. April 2017 verpflichtete sie A. zur Rückerstattung von unrechtmässig bezogenen Ergänzungsleistungen (Fr. 9'290.- für die Zeit vom 1. April 2013 bis zum 31. Dezember 2014 und Fr. 2'504.- für die Zeit vom 1. Januar 2015 bis zum 31. Dezember 2016), wobei diese Rückforderungen mit der Nachzahlung der Previs Vorsorge verrechnet würden. Die Previs Vorsorge leistete die Nachzahlung im Umfang von insgesamt Fr. 11'794.- an die Ausgleichskasse (bestätigt mit Urteil des Verwaltungsgerichts des Kantons Bern vom 24. Februar 2020). Die Visana erstattete die 2015 und 2016 an sie ausbezahlten Pauschalbeträge zurück und stellte dem Versicherten eine entsprechende \"Forderung KVG\" über Fr. 12'961.20 in Rechnung."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Mit Verfügung vom 21. Februar 2018 und \"Einspracheverfügung\" vom 11. April 2018 verneinte das kantonale Amt für Sozialversicherungen einen Anspruch des A. und seiner Familienmitglieder auf Prämienverbilligung ab dem 1. August 2015. Gleichzeitig trat es auf das \"Ersuchen um Erlass der von der Krankenkasse geltend gemachten Rückforderung\" wegen Unzuständigkeit nicht ein. Im Juli 2018 stellte der Versicherte ein (kantonalrechtlich begründetes) Gesuch \"Härtefall gemäss 27 Abs. 3 EG KUMV\" betreffend \"Prämienverbilligungen für die Jahre 2015 und 2016\" bei der Ausgleichskasse. Darauf trat diese mit Verfügung vom 18. Februar 2019 resp. Einspracheentscheid vom 4. Dezember 2019 nicht ein. Die dagegen erhobene Beschwerde wies das Verwaltungsgericht des Kantons Bern mit Urteil vom 24. Februar 2020 ab, soweit es darauf eintrat."
+            },
+            {
+              "marke": "A.c",
+              "tiefe": 2,
+              "text": "Am 4. März 2020 ersuchte der Versicherte die Ausgleichskasse um \"Erlass der Rückerstattung gemäss Art. 25 Abs. 1 ATSG \" im Umfang der nachgeforderten Krankenversicherungsbeiträge. Auch darauf trat die Ausgleichskasse mit Verfügung vom 29. Juni 2020 resp. Einspracheentscheid vom 13. Juli 2020 nicht ein. B. Die dagegen erhobene Beschwerde wies das Verwaltungsgericht des Kantons Bern mit Urteil vom 29. Oktober 2020 ab. C. A. lässt mit Beschwerde in öffentlich-rechtlichen Angelegenheiten beantragen, \"das Urteil des Verwaltungsgerichts des Kantons Bern vom 29. Oktober 2020 sei aufzuheben und die Sache zur Neubeurteilung an die Beschwerdegegnerin zurückzuweisen\". Die Ausgleichskasse schliesst auf Abweisung der Beschwerde. Das Bundesamt für Sozialversicherungen (BSV) verzichtet auf eine Vernehmlassung. Das Bundesgericht heisst die Beschwerde teilweise gut."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Nach den allgemeinen intertemporalrechtlichen Grundsätzen (vgl. BGE 140 V 41 E. 6.3.1 mit Hinweisen) sind hier die Bestimmungen des ATSG (SR 830.1), der ATSV (SR 830.11), des ELG(SR 831.30) und der ELV (SR 831.301) in der bis Ende 2020 geltenden Fassung anwendbar. Sie werden im Folgenden jeweils in dieser Version wiedergegeben, zitiert und angewendet."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Unrechtmässig bezogene Leistungen sind zurückzuerstatten. Wer Leistungen in gutem Glauben empfangen hat, muss sie nicht zurückerstatten, wenn eine grosse Härte vorliegt (Art. 25 Abs. 1 ATSG, hier i.V.m. Art. 1 Abs. 1 ELG). Rückerstattungspflichtig sind insbesondere der Bezüger der unrechtmässig gewährten Leistungen und Dritte oder Behörden, mit Ausnahme des Vormundes oder der Vormundin, denen Geldleistungen zur Gewährleistung zweckgemässer Verwendung nach Art. 20 ATSG oder den Bestimmungen der Einzelgesetze ausbezahlt wurden (Art. 2 Abs. 1 lit. a und b ATSV). Der Anspruch des Versicherers auf Rückerstattung richtet sich im Umfang, in welchem die unrechtmässig gewährten Leistungen gemäss der Regelung der einzelnen Sozialversicherungen mit Nachzahlungen anderer Sozialversicherungen verrechnet werden können, gegen den nachzahlungspflichtigen Versicherer (Art. 2 Abs. 3 ATSV). Wer unrechtmässige Leistungen lediglich als Inkasso- oder Zahlstelle entgegengenommen hat, ist nicht rückerstattungspflichtig (BGE 140 V 233 E. 3.1 und 3.3; BGE 118 V 214 E. 4a; BGE 147 V 369 S. 372 BGE 110 V 10 E. 2b; vgl. auch BGE 142 V 358 mit Blick auf Art. 35a BVG)."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht hat erwogen, für die jährlichen Pauschalbeträge, die direkt der Visana ausbezahlt worden waren, sei diese rückerstattungspflichtig gewesen. Ihr gegenüber sei ein Erlass der Rückforderung ausgeschlossen. Der Versicherte sei von der Rückerstattungspflicht des Krankenversicherers nicht berührt und erleide keinen direkten Nachteil, auch wenn er sich in der Folge mit einer \"gleichsam originären\" Prämienforderung der Visana konfrontiert sehe. Die Ausgleichskasse habe die Pauschalbeträge gar nie vom Beschwerdeführer zurückgefordert. Am Erlass einer nicht gegen ihn gerichteten Forderung sei ihm von vornherein ein Rechtsschutzinteresse abgegangen. Die Ausgleichskasse sei daher zu Recht nicht auf das Erlassgesuch vom März 2020 eingetreten."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Der Beschwerdeführer macht im Wesentlichen geltend, die Vorinstanz habe verkannt, dass die Visana bei der Entgegennahme der jährlichen Pauschalbeträge als reine Zahl- resp. Inkassostelle fungiert habe. Die entsprechende Rückforderung hätte daher nicht an den Krankenversicherer gerichtet werden dürfen, vielmehr hätte sie gegenüber ihm erfolgen müssen. Er könne sich, im Gegensatz zur Visana, hinsichtlich der Rückerstattung auf eine grosse Härte berufen. Damit habe die Ausgleichskasse auch sein Erlassgesuch zu beurteilen."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "In Bezug auf die Rückerstattungspflicht einerseits und den Anspruch auf Erlass der Rückerstattungsschuld anderseits liegen unterschiedliche Rechtsverhältnisse (vgl. zu diesem Begriff BGE 125 V 413) vor (vgl. SVR 2015 AHV Nr. 10 S. 35, 9C_466/2014 E. 3.1; Urteil 8C_77/2018 vom 30. April 2018 E. 3.2; vgl. auch UELI KIESER, Kommentar zum ATSG, 4. Aufl. 2020, N. 76 zu Art. 25 ATSG; JOHANNA DORMANN, in: Basler Kommentar, Allgemeiner Teil des Sozialversicherungsrechts, 2020, N. 93 zu Art. 25 ATSG; SYLVIE PÉTREMAND, in: Commentaire romand, Loi sur la partie générale des assurances sociales, 2018, N. 61 zu Art. 25 ATSG). Der Erlass ist eine besondere Form der Tilgung einer Rückerstattungsschuld (BGE 116 V 290 E. 5b; vgl. auch DORMANN, a.a.O., N. 70 und 81 zu Art. 25 ATSG). Er fällt somit überhaupt erst in Betracht, wenn und soweit eine Rückerstattungspflicht der um Erlass ersuchenden Person rechtsbeständig feststeht. BGE 147 V 369 S. 373 Die vorinstanzliche Feststellung, wonach die Ausgleichskasse die hier interessierende Rückerstattung nicht vom Beschwerdeführer gefordert habe, ist unbestritten und für das Bundesgericht verbindlich (nicht publ. E. 1). Unter diesen Umständen bestand in der Tat kein Anlass, auf das Erlassgesuch (im Sinne von Art. 25 Abs. 1 Satz 2 ATSG) einzutreten. Abgesehen davon kann sich von vornherein nicht auf einen wirtschaftlichen Härtefall berufen, wer im Zusammenhang mit der Nachzahlung einer Sozialversicherungsleistung mit einer kompensatorischen Rückforderung rechnete oder rechnen musste (SVR 2018 EL Nr. 7 S. 17, 9C_728/2016 E. 1.2 und 2.4). Insoweit ist die Beschwerde unbegründet. Näher zu betrachten ist indessen die Rückerstattungspflicht der Visana."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Rechtsbegehren sind nach Treu und Glauben auszulegen, insbesondere im Lichte der dazu gegebenen Begründung. Eine sichtlich ungewollte oder unbeholfene Wortwahl der am Recht stehenden Person schadet ebenso wenig wie eine nicht geglückte oder rechtsirrtümliche Ausdrucksweise. Es genügt, wenn der Beschwerde insgesamt entnommen werden kann, was die beschwerdeführende Person verlangt (Urteil 8C_62/2018 vom 19. September 2018 E. 1.2.2, nicht publ. in: BGE 144 V 418, mit Hinweisen). Verwaltungsverfügungen (resp. Einspracheentscheide) sind nicht nach ihrem bisweilen nicht sehr treffend verfassten Wortlaut, sondern - vorbehältlich des (hier nicht interessierenden) Vertrauensschutzes - nach ihrem wirklichen rechtlichen Bedeutungsgehalt zu verstehen (BGE 141 V 255 E. 1.2; BGE 132 V 74 E. 2; BGE 120 V 496 E. 1a; Urteil 9C_777/2019 vom 24. November 2020 E. 5.2.1, nicht publ. in: BGE 147 V 73)."
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Der Versicherte verfolgt(e) klar das - grundsätzlich legitime - Ziel, den Prämiennachforderungen der Visana zu entgehen. Bereits im Verwaltungsverfahren brachte er u.a. vor, dass die Visana die jährlichen Pauschalbeträge von der Ausgleichskasse lediglich als reine Zahlstelle entgegengenommen habe und darum gar nicht rückerstattungspflichtig gewesen sei; diesbezüglich hätte eine Verfügung erlassen werden müssen; er habe keine Gelegenheit gehabt, gegen die Rückerstattung durch die Visana vorzugehen. Mit diesem Angriff auf die Rückerstattungspflicht des Krankenversicherers an sich (vgl. Art. 25 Abs. 1 Satz 1 ATSG) verlangte der Versicherte - alternativ resp. eventualiter zum Erlass im Sinne von Art. 25 Abs. 1 Satz 2 ATSG - wenn auch nicht ausdrücklich, so BGE 147 V 369 S. 374 doch unmissverständlich die \"Rückabwicklung\" der bereits erfolgten Rückerstattung, d.h. die erneute Zahlung der Pauschalbeträge an die Visana durch die Ausgleichskasse."
+            },
+            {
+              "marke": "E. 4.2.3",
+              "tiefe": 3,
+              "text": "Ob die Ausgleichskasse den Beschwerdeführer bereits vor der Rückerstattung durch den Krankenversicherer in das entsprechende Verfahren hätte einbeziehen müssen (vgl. zu den Verfahrensrechten der versicherten Person bei Rückforderungen von Dritten Rz. 4660.02 der Wegleitung des BSV über die Ergänzungsleistungen zur AHV und IV [WEL]; KIESER, a.a.O., N. 56 zu Art. 25 ATSG; DORMANN, a.a.O., N. 94 zu Art. 25 ATSG), kann offenbleiben. Sie äusserte sich in ihrer Verfügung vom 29. Juni 2020 und ihrem Einspracheentscheid vom 13. Juli 2020 zwar nicht dispositivmässig zur Rückerstattungspflicht des Krankenversicherers und zur beantragten \"Rückabwicklung\". Indessen befasste sie sich dennoch damit: Indem sie in ihren jeweiligen Erwägungen die Rückerstattungspflicht der Visana bejahte, verneinte sie gleichzeitig implizit, aber (unter Vorbehalt der Anfechtung) verbindlich einen Anspruch auf erneute Zahlung der Pauschalbeträge. Dieses Rechtsverhältnis bildete auch Gegenstand des vorinstanzlichen Urteils (vgl. vorangehende E. 3.1). Im vorliegenden Verfahren verlangt der Beschwerdeführer sinngemäss wiederum (auch), dass die Ausgleichskasse verpflichtet werden soll, die Pauschalbeträge (Fr. 12'961.20) erneut zu bezahlen, wie sich aus der Beschwerdebegründung deutlich ergibt."
+            },
+            {
+              "marke": "E. 4.3.1",
+              "tiefe": 3,
+              "text": "Als reines Inkasso- resp. Zahlstellenverhältnis beurteilte das Bundesgericht etwa die Entgegennahme von Leistungen durch eine Bank (BGE 110 V 10 E. 2b), von Kinderrenten durch den Sozialdienst, die dieser direkt an den Inhaber der elterlichen Gewalt weiterleitet (BGE 118 V 214 E. 4a), oder von Familienzulagen durch den Arbeitgeber, sofern er sie nicht zur Verwaltung bzw. mit dem Auftrag, fürsorgerisch tätig zu sein, erhalten hat (BGE 140 V 233 E. 3.1 und 3.3). Nicht als blosse Inkasso- resp. Zahlstelle und damit als rückerstattungspflichtige Drittperson resp. Behörde erachtete das Bundesgericht beispielsweise den Sozialdienst, dem die Stammrente zur Verwaltung für die Versicherte ausgerichtet wird (BGE 118 V 214 E. 4a), und die Arbeitgeberin, die während der Dienstleistung des Arbeitnehmers den Lohn weiterhin bezahlt und damit die entgegengenommene Erwerbsausfallentschädigung verrechnet (BGE 142 V 43 E. 3.1). BGE 147 V 369 S. 375 Entscheidendes Kriterium für die Abgrenzung war stets das Vorhandensein von Rechten und Pflichten im Zusammenhang mit dem Leistungsverhältnis. Es besteht kein Anlass zur Änderung dieser Rechtsprechung (vgl. BGE 145 V 304 E. 4.4; BGE 141 II 297 E. 5.5.1)."
+            },
+            {
+              "marke": "E. 4.3.2",
+              "tiefe": 3,
+              "text": "Bei der Berechnung der jährlichen Ergänzungsleistung ist ein jährlicher Pauschalbetrag für die obligatorische Krankenpflegeversicherung als anerkannte Ausgabe zu berücksichtigen (Art. 9 Abs. 1 i.V.m. Art. 10 Abs. 3 lit. d ELG). Der Pauschalbetrag ist in Abweichung von Art. 20 ATSG direkt dem Krankenversicherer auszuzahlen (Art. 21a ELG). Dieser bezahlt der versicherten Person die Differenz aus, wenn seine restlichen Prämienforderungen für das laufende Kalenderjahr und seine anderen fälligen Forderungen aus der obligatorischen Krankenpflegeversicherung, für die kein Verlustschein vorliegt, kleiner sind als der vom Kanton gewährte Pauschalbetrag nach Art. 10 Abs. 3 lit. d ELG (Art. 106c Abs. 5 lit. b KVV [SR 832.102]). Art. 65 Abs. 1 KVG, der die direkte Auszahlung der Prämienverbilligung an den Krankenversicherer vorsieht, garantiert, dass die Beiträge tatsächlich zum Zweck der Prämienverbilligung resp. der Begleichung von Krankenversicherungsprämien für die Anspruchsberechtigten eingesetzt werden. Zudem vermindert dieses System das Risiko der Zahlungsausstände bei den Versicherten (Bericht der Kommission für soziale Sicherheit und Gesundheit des Nationalrates vom 28. August 2009 zur Parlamentarischen Initiative Artikel 64a KVG und unbezahlte Prämien, BBl 2009 6623 Kommentar zu Art. 65 Abs. 1 KVG). Das gilt analog für Art. 21a ELG, der erst anlässlich der Beratungen der soeben erwähnten Parlamentarischen Initiative in den Eidgenössischen Räten formuliert und beschlossen wurde (AB 2010 N 49 f.; AB 2010 S 170; vgl. auch Botschaft vom 16. September 2016 zur Änderung des Bundesgesetzes über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung [EL-Reform], BBl 2016 7540 Kommentar zu Art. 21a ELG)."
+            },
+            {
+              "marke": "E. 4.3.3",
+              "tiefe": 3,
+              "text": "Damit besteht - im hier interessierenden Zusammenhang - die einzige Verpflichtung des Krankenversicherers darin, die Zahlungen von der Ausgleichskasse zur Anrechnung an ihre Forderungen gegenüber dem Versicherten entgegenzunehmen und einen allfälligen Überschuss an diesen weiterzuleiten. Dass er eigene Rechte und Pflichten im Zusammenhang mit dem Leistungsverhältnis (wie Verrechnungsrecht, Verwaltungs- oder Fürsorgepflicht) haben soll, bringt die Ausgleichskasse nicht vor und ist auch nicht ersichtlich. BGE 147 V 369 S. 376 Demnach ist dem Beschwerdeführer beizupflichten, dass die Visana für die Entgegennahme der jährlichen Pauschalbeträge von der Ausgleichskasse als blosse Inkasso- resp. Zahlstelle zu qualifizieren ist. Folglich trifft sie diesbezüglich auch keine Rückerstattungspflicht als Drittperson oder Behörde im Sinne von Art. 2 Abs. 1 lit. b ATSV. Entgegen der vorinstanzlichen Auffassung ist die dazu im Widerspruch stehende Weisung von Rz. 4660.02 WEL bundesrechtswidrig (vgl. zur Bedeutung von Verwaltungsweisungen BGE 145 V 84 E. 6.1.1; BGE 142 V 442 E. 5.2)."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Nach dem Gesagten hätte die Ausgleichskasse die Rückforderung auch der Pauschalbeträge gegenüber dem Versicherten oder (ohne dass hier abschliessend darüber zu entscheiden ist) der nachzahlenden Vorsorgeeinrichtung geltend machen müssen. Sie kann dies nicht mehr nachholen, nachdem die (relative) einjährige Frist von Art. 25 Abs. 2 ATSG offensichtlich verwirkt ist. Diesbezüglich entfällt somit auch die Möglichkeit einer Verrechnung mit der \"Rückabwicklung\" resp. erneuten Leistung der Pauschalbeträge. Dass diese aus einem anderen Grund nicht möglich sein soll, ist nicht ersichtlich und wird auch nicht ansatzweise geltend gemacht. In diesem Sinn ist die Beschwerde begründet."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "9C_716/2020",
+        "key": "bger_9C_716_2020",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=20.07.2021_9C_716/2020"
+      },
+      "ecli": "ECLI:CH:BGE:2021:147.V.369"
+    }
+  ]
+}

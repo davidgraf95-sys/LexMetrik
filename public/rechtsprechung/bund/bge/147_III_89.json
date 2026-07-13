@@ -1,0 +1,392 @@
+{
+  "erzeugt": "2026-07-12",
+  "eintraege": [
+    {
+      "id": "bund/bge/147_III_89",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "147 III 89",
+      "bgeReferenz": "147 III 89",
+      "zitierung": "BGE 147 III 89",
+      "datum": "2020-11-05",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": "public",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Kiss, Präsidentin, Bundesrichterinnen Hohl, Niquille, Bundesrichter Rüedi, Bundesrichterin May Canellas, Gerichtsschreiber Brugger",
+        "parteien": "A.________ AG, vertreten durch Rechtsanwälte Dr. Christian Hilti und Dr. Demian Stauber, Beschwerdeführerin, gegen B.________ GmbH, vertreten durch Rechtsanwälte Dr. Andri Hess und Dr. Roman Baechler, Beschwerdegegnerin",
+        "gegenstand": "Ausstand",
+        "vorinstanz": "Verwaltungskommission des Bundespatentgerichts vom 8. April 2020 (O2017_022)"
+      },
+      "regeste": {
+        "text": "Art. 30 Abs. 1 BV, Art. 6 Ziff. 1 EMRK, Art. 47 ZPO; Anschein der Befangenheit eines nebenamtlichen Richters. Zusammenstellung der in der Rechtsprechung entwickelten Grundsätze (E. 4). Prüfung der Befangenheit eines nebenamtlichen Bundespatentrichters bei administrativen Tätigkeiten (Vertretung gegenüber dem nationalen Patentamt) seiner Anwaltskanzlei (E. 5 und 6).\nRegeste\n Art. 30 al. 1 Cst., art. 6 par. 1 CEDH, art. 47 CPC; apparence de prévention d'un juge suppléant. Récapitulation des principes développés par la jurisprudence (consid. 4). Examen de la prévention d'un juge suppléant du Tribunal fédéral des brevets en cas d'activités administratives (représentation devant l'office national des brevets) déployées par son cabinet d'avocats (consid. 5 et 6).\nRegesto\n Art. 30 cpv. 1 Cost., art. 6 n. 1 CEDU, art. 47 CPC; apparenza di prevenzione di un giudice supplente. Riepilogo dei principi sviluppati dalla giurisprudenza (consid. 4). Esame della prevenzione di un giudice supplente del Tribunale federale dei brevetti nel caso di attività amministrative (rappresentanza innanzi all'ufficio nazionale dei brevetti) svolte dal suo studio legale (consid. 5 e 6).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 30 Abs. 1 BV, Art. 6 Ziff. 1 EMRK, Art. 47 ZPO; Anschein der Befangenheit eines nebenamtlichen Richters.",
+            "absaetze": [
+              "Zusammenstellung der in der Rechtsprechung entwickelten Grundsätze (E. 4).",
+              "Prüfung der Befangenheit eines nebenamtlichen Bundespatentrichters bei administrativen Tätigkeiten (Vertretung gegenüber dem nationalen Patentamt) seiner Anwaltskanzlei (E. 5 und 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-89%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 30 al. 1 Cst., art. 6 par. 1 CEDH, art. 47 CPC; apparence de prévention d'un juge suppléant.",
+            "absaetze": [
+              "Récapitulation des principes développés par la jurisprudence (consid. 4).",
+              "Examen de la prévention d'un juge suppléant du Tribunal fédéral des brevets en cas d'activités administratives (représentation devant l'office national des brevets) déployées par son cabinet d'avocats (consid. 5 et 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-89%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 30 cpv. 1 Cost., art. 6 n. 1 CEDU, art. 47 CPC; apparenza di prevenzione di un giudice supplente.",
+            "absaetze": [
+              "Riepilogo dei principi sviluppati dalla giurisprudenza (consid. 4).",
+              "Esame della prevenzione di un giudice supplente del Tribunale federale dei brevetti nel caso di attività amministrative (rappresentanza innanzi all'ufficio nazionale dei brevetti) svolte dal suo studio legale (consid. 5 e 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-89%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. Am 29. November 2017 erhob die B.________ GmbH (Klägerin, Beschwerdegegnerin) am Bundespatentgericht eine Patentverletzungsklage gegen die A.________ AG (Beklagte, Beschwerdeführerin). Die Klägerin macht darin eine Verletzung der Schweizer Teile von drei europäischen Patenten (xxx, yyy und zzz) durch die Einweg-Injektionspens \"C.________\" der Beklagten geltend. Sie verlangt zusammengefasst die Unterlassung der weiteren Herstellung und des weiteren Vertriebs der \"C.________\" sowie Auskunft, Rechnungslegung und finanziellen Ausgleich. In diesem Verfahren mit der Verfahrensnummer O2017_022 setzt sich der Spruchkörper des Bundespatentgerichts aus den Richtern Christoph Gasser (Instruktionsrichter), Tobias Bremi (Referent) und Kurt Sutter zusammen. A.b. Das Bundespatentgericht beschränkte das Verfahren vorerst auf die Unterlassung sowie Auskunft und Rechnungslegung. Nach durchgeführter Instruktionsverhandlung und doppeltem Schriftenwechsel mit anschliessenden Noveneingaben der Beklagten wurde den Parteien am 7. Januar 2020 das Fachrichtervotum von Richter Tobias Bremi zur Stellungnahme zugestellt. Im Fachrichtervotum kommt Richter Bremi zum Schluss, dass die \"C.________\" Injektionspens der Beklagten die Klagepatente yyy und zzz verletzten, nicht aber das Patent xxx. Die Klagepatente xxx und zzz seien rechtsbeständig, nicht aber das Patent yyy. Entsprechend sei das Klagepatent zzz rechtsbeständig und verletzt und das sich auf dieses Klagepatent stützende Rechtsbegehren sei gutzuheissen. A.c. Am 13. Januar 2020 ging am Bundespatentgericht eine weitere Patentverletzungsklage gegen die Beklagte ein (Verfahren Nr. O2020_001). In diesem Verfahren wird durch eine Drittgesellschaft die Verletzung ihres Patents durch die gleichen \"C.________\" Injektionspens der Beklagten geltend gemacht, die auch Anfechtungsgegenstand des ersten Verfahrens O2017_022 sind. Die Klägerin des zweiten Patentverletzungsverfahrens wird von der Kanzlei D.________ AG anwaltlich vertreten und patentanwaltlich unterstützt durch eine bei dieser Kanzlei angestellte europäische Patentanwältin."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Am 14. Februar 2020 stellte die Beklagte das Gesuch, Richter Tobias Bremi habe im ersten Patentverletzungsverfahren O2017_022 in den Ausstand zu treten. Die Arbeitgeberin von Richter Bremi, die Kanzlei E.________ AG, sei als Vertreterin von Patenten der Klägerin des zweiten Verfahrens O2020_001 gegenüber dem Eidgenössischen Institut für Geistiges Eigentum eingetragen. Die zweite Klage im Verfahren O2020_001 richte sich gegen die gleichen \"C.________\" Injektionspens der Beklagten wie im ersten Verfahren O2017_022, weshalb das erste Verfahren für das zweite eine erhebliche präjudizielle Bedeutung habe. Mit Beschluss vom 8. April 2020 wies die Verwaltungskommission des Bundespatentgerichts das Ausstandsgesuch ab. Sie erachtete es als rechtzeitig im Sinne von Art. 49 Abs. 1 ZPO gestellt, kam aber zusammengefasst zum Ergebnis, dass ein Angestellter einer Arbeitgeberin, die für eine Drittpartei administrative Hilfstätigkeiten erledige, die aus einem anderen Rechtsgrund gegen die Beklagte in einem Verfahren klage, in dem der Angestellte als nebenamtlicher Richter tätig sei, objektiv kein Misstrauen in die Unparteilichkeit des nebenamtlichen Richters erwecken könne."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Dagegen erhob die Beschwerdeführerin Beschwerde in Zivilsachen an das Bundesgericht. Sie beantragte, der Beschluss des Bundespatentgerichts sei aufzuheben und Fachrichter Tobias Bremi sei in den Ausstand zu versetzen. Die Beschwerdegegnerin erklärte, gestützt auf die wenigen Informationen, die ihr vorlägen, sei eine inhaltliche Stellungnahme zur Beschwerdebegründung nicht möglich. Sie verzichte deshalb auf eine Vernehmlassung zur Beschwerde. Die Vorinstanz verzichtete ebenfalls auf eine Stellungnahme."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Die Sachurteilsvoraussetzungen sind erfüllt und geben zu keinen Bemerkungen Anlass. Es ist daher auf die Beschwerde einzutreten."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Strittig ist, ob Richter Bremi im ersten Patentverletzungsverfahren O2017_022 in den Ausstand zu treten hat. Dabei ist von folgenden Tatsachen auszugehen:\n\n- Tobias Bremi übt zwei Funktionen aus: Einerseits ist er der zweite hauptamtliche Richter (im Teilpensum) am Bundespatentgericht, andererseits ist er Patentanwalt in der Patentanwalts- und Markenrechtskanzlei E.________ AG. In seiner Funktion als Bundespatentrichter ist er im vorliegenden ersten Patentverletzungsverfahren O2017_022 Referent.\n\n- Im zweiten Patentverletzungsverfahren O2020_001 ist Tobias Bremi weder als Richter beteiligt, noch vertritt seine Kanzlei eine der Prozessparteien als Rechtsvertreter.\n\n- Gemäss Feststellung der Vorinstanz (angefochtener Beschluss, Erwägung 12, S. 10 oben) erschöpft sich die Tätigkeit der Kanzlei E.________ AG für die Klägerin des zweiten Verfahrens O2020_001 in der administrativen Vertretung gegenüber dem Eidgenössischen Institut für Geistiges Eigentum (IGE)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin stellt sich entgegen der Auffassung der Vorinstanz auf den Standpunkt, der Anschein einer befangenen Gerichtsperson sei gegeben und die Abweisung des Ausstandsgesuchs verletze Art. 47 lit. a und f ZPO in Verbindung mit Art. 30 Abs. 1 BV. Sie rügt dabei auch eine unvollständige Feststellung des Sachverhalts.\n\nSie macht zusammengefasst geltend, es sei unbestritten und im Übrigen aus dem Patentregister ersichtlich, dass zwischen der Klägerin des zweiten Patentverletzungsverfahrens und der Kanzlei E.________ AG, in der Tobias Bremi als Partner tätig sei, ein Mandatsverhältnis bestehe. Die Beschwerdegegnerin verfolge das gleiche Ziel wie die Klägerin des zweiten Verfahrens, nämlich hauptsächlich die Unterlassung der Herstellung und des Vertriebs des \"C.________\" Injektionspens. Ein Unterlassungsurteil zu Gunsten der Beschwerdegegnerin als klagende Partei im ersten Verfahren würde sich unmittelbar zu Gunsten der Klägerin des zweiten Verfahrens auswirken. Die Klägerin des zweiten Verfahrens und mehrjährige Mandantin der Kanzlei, in welcher Patentanwalt Bremi als Partner tätig sei, habe damit ein Interesse an der Gutheissung der ersten Klage, bei welcher Tobias Bremi als Richter mitwirke."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Nach Art. 30 Abs. 1 BV und Art. 6 Ziff. 1 EMRK hat jede Person, deren Sache in einem gerichtlichen Verfahren beurteilt werden muss, Anspruch darauf, dass ihre Streitsache von einem unbefangenen, unvoreingenommenen und unparteiischen Richter beurteilt wird. Es soll garantiert werden, dass keine sachfremden Umstände, die ausserhalb des Prozesses liegen, in sachwidriger Weise zugunsten oder zulasten einer Partei auf das gerichtliche Urteil einwirken. Art. 30 Abs. 1 BV soll zu der für einen korrekten und fairen Prozess erforderlichen Offenheit des Verfahrens im Einzelfall beitragen und damit ein gerechtes Urteil ermöglichen (BGE 144 I 159 E. 4.3 S. 162; 142 III 732 E. 4.2.2 S. 736; 140 III 221 E. 4.1).\n\nDie Garantie des verfassungsmässigen Richters wird bereits verletzt, wenn bei objektiver Betrachtung Gegebenheiten vorliegen, die den Anschein der Befangenheit oder die Gefahr der Voreingenommenheit zu begründen vermögen. Voreingenommenheit und Befangenheit in diesem Sinne werden nach der Rechtsprechung angenommen, wenn im Einzelfall anhand aller tatsächlichen und verfahrensrechtlichen Umstände Gegebenheiten aufscheinen, die geeignet sind, Misstrauen in die Unparteilichkeit des Richters zu erwecken. Dabei ist nicht auf das subjektive Empfinden einer Partei abzustellen. Das Misstrauen in die Unvoreingenommenheit muss vielmehr in objektiver Weise begründet erscheinen. Es genügt, wenn Umstände vorliegen, die bei objektiver Betrachtung den Anschein der Befangenheit und Voreingenommenheit hervorrufen. Für die Ablehnung wird nicht verlangt, dass der Richter tatsächlich befangen ist (BGE 142 III 732 E. 4.2.2; 140 III 221 E. 4.1; 139 III 433 E. 2.1.2 S. 436)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Das Bundesgericht hatte sich wiederholt mit Fällen zu befassen, in denen ein nebenamtlicher Richter (oder Schiedsrichter) wegen seiner hauptamtlichen Tätigkeit in einer Anwaltskanzlei mit einer Prozesspartei besonders verbunden war."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Die Garantie des verfassungsmässigen Richters gilt für amtliche und nebenamtliche Richter gleichermassen. Der Umstand, dass beim Einsatz nebenamtlicher Richter die Wahrscheinlichkeit beruflicher Beziehungen zu einer der Verfahrensparteien zunimmt im Vergleich zu vollamtlichen Richtern, die keiner anderen Erwerbstätigkeit nachgehen, rechtfertigt keine unterschiedliche Anwendung der verfassungsrechtlichen Vorgaben (BGE 139 III 433 E. 2.1.3 S. 436). Übt der Richter neben seiner gerichtlichen Tätigkeit eine weitere Funktion als (Patent) anwalt aus, ist der Schutz der Rechtsunterworfenen besonders gefordert. Die Garantie des verfassungsmässigen Richters (Art. 30 Abs. 1 BV) hat ihren eigentlichen Zweck zu erfüllen, auch in Anbetracht solcher Verbindungen einen korrekten und fairen Prozess sicherzustellen (BGE 139 III 433 E. 2.1.3 S. 436 f.).\n\nDas gilt insbesondere bei dem für das Bundespatentgericht gewählten Modell der Gerichtsorganisation mit zwei hauptamtlichen Richtern und einer überwiegenden Mehrzahl von nebenamtlichen Richtern (Art. 8 Abs. 2 des Bundesgesetzes vom 20. März 2009 über das Bundespatentgericht; SR 173.41). Im Interesse der Glaubwürdigkeit des Gerichts muss ganz besonders auf die richterliche Unabhängigkeit geachtet werden (Cyrill P. Rigamonti, Ein Jahr schweizerisches Bundespatentgericht, Zeitschrift für vergleichende Rechtswissenschaft 112/2013, S. 293 ff., S. 300). Umgekehrt hat der Gesetzgeber die Organisation eines auf Patentrecht spezialisierten Fachgerichts bewusst gewollt und es mit Fachrichtern bestückt, die hauptberuflich ebenfalls Bezüge zum Patentrecht aufweisen. Auch dies ist zu berücksichtigen."
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Nach ständiger Rechtsprechung erscheint ein als Richter amtender Anwalt als befangen, wenn zu einer Partei ein noch offenes Mandat besteht oder er für eine Partei in dem Sinne mehrmals anwaltlich tätig geworden ist, dass zwischen ihnen eine Art Dauerbeziehung besteht. Das gilt unabhängig davon, ob das Mandat in einem Sachzusammenhang mit dem zu beurteilenden Streitgegenstand steht oder nicht (BGE 140 III 221 E. 4.3.1; 139 III 433 E. 2.1.4 S. 437; 138 I 406 E. 5.3 S. 407; 135 I 14 E. 4.1 S. 15 f.). Der als Richter amtierende Anwalt kann in einer solchen Situation, wenn auch unbewusst, versucht sein, seinen Mandanten nicht durch einen für diesen ungünstigen Entscheid vergrämen zu wollen (BGE 135 I 14 E. 4.3 S. 18).\n\nDarüber hinaus hat das Bundesgericht anerkannt, dass ein als Richter bzw. Schiedsrichter amtierender Anwalt nicht nur dann als befangen erscheint, wenn er in einem anderen Verfahren eine der Prozessparteien vertritt oder kurz vorher vertreten hat, sondern auch dann, wenn im anderen Verfahren ein solches Vertretungsverhältnis zur Gegenpartei einer der Prozessparteien besteht bzw. bestanden hat (BGE 139 III 433 E. 2.1.4 S. 437; 138 I 406 E. 5.3 S. 407 f.; 135 I 14 E. 4.1-4.3; vgl. auch BGE 139 I 121 E. 5.1 S. 126 und 139 III 120 E. 3.2.1 S. 124). Das Bundesgericht erwog dazu, in Fällen, in denen der Richter in anderen Verfahren zwar nicht die Prozesspartei selbst, sondern deren Gegenpartei vertritt oder vertrat, bestehe insofern ein Anschein der Befangenheit, als die Prozesspartei objektiv gesehen befürchten könne, der Richter könnte nicht zu ihren Gunsten entscheiden wollen, weil sie im anderen Verfahren Gegenpartei seines Mandanten sei. Daran ändere nichts, dass von einem Anwalt, der als (nebenamtlicher) Richter oder als Schiedsrichter tätig sei, erwartet werden können sollte, dass er in einem zu beurteilenden Fall beiden Prozessparteien gleichermassen Gerechtigkeit widerfahren lässt, unabhängig davon, dass er in einem anderen Verfahren als Anwalt gegen eine der Prozessparteien auftritt oder auftrat. Das Bundesgericht wies dazu auf die Erfahrungstatsache hin, dass eine Prozesspartei ihre negativen Gefühle gegenüber der Gegenpartei oft auf deren anwaltlichen Vertreter überträgt, da dieser die Gegenpartei in der Auseinandersetzung mit ihr unterstützt. Für viele Parteien gelte der Anwalt der Gegenpartei ebenso als Gegner wie die Gegenpartei selbst, umso mehr, als er als der eigentliche Stratege im Prozess wahrgenommen werde. Es sei deshalb nachvollziehbar, dass eine Partei von einem Richter, der sie in einem anderen Verfahren als Vertreter der dortigen Gegenpartei bekämpft (e) und sie - aus ihrer Sicht - möglicherweise um ihr Recht bringen wird oder gebracht hat, nicht erwartet, er werde ihr plötzlich völlig unbefangen gegenübertreten (BGE 138 I 406 E. 5.3; 135 I 14 E. 4.3 S. 18). Das gelte unabhängig davon, ob das Mandat des Anwalts in einem Sachzusammenhang mit dem als Richter zu beurteilenden Streitgegenstand stehe oder nicht (BGE 138 I 406 E. 5.4.1 S. 409).\n\nIn solchen Fällen geht das Bundesgericht ungeachtet der weiteren konkreten Umstände, also abstrakt ohne eine konkrete fallbezogene Prüfung, von einem Anschein der Befangenheit aus (BGE 139 III 433 E. 2.1.4 S. 437; 138 I 406 E. 5.4.1). Insbesondere kann es etwa bei einem offenen Auftragsverhältnis zu einer Verfahrenspartei aufgrund der damit einhergehenden Interessenbindungen und Loyalitätspflichten des nebenamtlich als Richter tätigen Anwalts nicht darauf ankommen, ob das wahrgenommene Mandat von der Partei bzw. vom Anwalt als wichtig oder weniger bedeutsam erachtet wird (BGE 139 III 433 E. 2.1.4 S. 437 f.)."
+            },
+            {
+              "marke": "E. 4.2.3",
+              "tiefe": 3,
+              "text": "Ein Anschein der Befangenheit ergibt sich nach der Rechtsprechung auch daraus, dass nicht der nebenamtliche Richter selbst, sondern ein anderer Anwalt seiner Kanzlei ein Mandat mit einer Prozesspartei unterhält bzw. kurz zuvor oder im Sinn eines Dauerverhältnisses mehrmals unterhalten hat. Der Mandant erwartet nicht nur von seinem Ansprechpartner innerhalb der Anwaltskanzlei, sondern von deren Gesamtheit Solidarität. Die einheitliche Betrachtung entspricht auch dem anwaltlichen Berufsrecht, das im Hinblick auf einen Interessenkonflikt alle in einer Kanzleigemeinschaft zusammengefassten Anwälte wie einen Anwalt behandelt (BGE 140 III 221 E. 4.3.2; 139 III 433 E. 2.1.5 S. 438)."
+            },
+            {
+              "marke": "E. 4.2.4",
+              "tiefe": 3,
+              "text": "Zur Annahme einer besonderen Verbundenheit des Richters mit einer Verfahrenspartei, die den Anschein der Befangenheit erweckt, kommt auch eine andere Beziehung als ein direktes Mandatsverhältnis zu dieser Partei oder deren Gegenpartei in Betracht. So hat das Bundesgericht es etwa als unzulässig erachtet, dass ein Anwalt als Richter in einer Sache mitwirkt, die für ein gleichgelagertes Verfahren, in dem er eine Drittpartei als Anwalt vertritt, eine erhebliche präjudizielle Bedeutung haben kann (BGE 139 III 433 E. 2.1.6 S. 439). So bestünde ein Anschein der Befangenheit, wenn ein nebenamtlicher Richter in einer Sache zur Entscheidung berufen wird, in der sich die gleichen Rechtsfragen stellen wie in einem anderen hängigen Verfahren, in dem er als Anwalt auftritt (BGE 128 V 82 E. 2a S. 85 und E. 3d; 124 I 121 E. 3). Unter Verweis auf diese beiden Entscheide hat das Bundesgericht später erwogen, dass sich die Ausstandsfrage stellen könne, wenn ein Richter in einem parallelen Verfahren ohne Bezug zu den Parteien eine Drittperson vertrete, welche die gleichen Interessen wie eine der Verfahrensparteien verfolge. Damit solle vermieden werden, dass der Richter in einer Weise über eine Streitfrage entscheide, die seine anwaltliche Stellung im Parallelverfahren verbessern könnte (BGE 133 I 1 E. 6.4.3 S. 8)."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Bei der zitierten Rechtsprechung bezüglich des Anscheins der Befangenheit von nebenamtlichen Richtern geht es um Befangenheiten, die aufgrund einer anwaltlichen Tätigkeit eines Richters entstehen können. Damit sind Situationen angesprochen, in denen eine anwaltliche Mandatsbeziehung im Sinne der eigentlichen, berufsspezifischen Rechtsanwaltstätigkeit zwischen den oben genannten Personen besteht oder bestanden hat. Zur typischen Anwaltstätigkeit gehört die Wahrung von Klienteninteressen im Rahmen der Rechtsberatung, das Abfassen von juristischen Eingaben und die Vertretung vor einer Verwaltungsbehörde oder vor Gericht (vgl. BGE 135 III 410 E. 3.3 S. 414, 597 E. 3.3 S. 601).\n\nFür solche Anwaltstätigkeiten rechtfertigt sich bezüglich der richterlichen Unabhängigkeit eine strikte Haltung: Denn dabei hat der Anwalt für die Wahrung der Klienteninteressen den Standpunkt seines Klienten in einem gewissen Masse zu seinem eigenen zu machen, was den Anschein erwecken kann, dass er einen gleichgelagerten Fall als Richter nicht unbefangen beurteilen könnte. Sodann können die Parteien in solchen Mandaten oft nicht eindeutig zwischen der Partei und dem Rechtsvertreter unterscheiden und nehmen jenen als eigentlichen Prozessstrategen wahr."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Das bedeutet aber nicht, dass rein administrative Tätigkeiten des als nebenamtlicher Richter tätigen Anwalts bzw. seiner Kanzlei für eine Verfahrenspartei per se unbedenklich wären. Aber nicht jede irgendwie geartete Beziehung wirtschaftlicher, beruflicher oder persönlicher Natur begründet für sich allein den Anschein der Befangenheit (vgl. BGE 125 II 541 E. 4b). Damit eine solche Beziehung Besorgnis der Befangenheit zu begründen vermag, müssen objektive Umstände auf eine gewisse Intensität der Beziehung hindeuten (Urteile 9C_257/2016 vom 29. Juni 2016 E. 4.2.1; 8C_467/2014 vom 29. Mai 2015 E. 4; 4A_256/2010 vom 26. Juli 2010 E. 2.4). Ob eine Beziehung diesen Grad der Intensität erreicht, beurteilt sich aufgrund der konkreten Umstände des Einzelfalls (vgl. etwa Urteil 4A_256/2010 vom 26. Juli 2010 E. 2.5 bezüglich einer Patentanmeldung). Besteht die beanstandete Beziehung nicht zu einer Verfahrenspartei sondern zu deren Gegenpartei oder einer Drittpartei in einem anderen Verfahren, ist auch die Wirkung der beiden Verfahren aufeinander beim Entscheid über den Ausstand zu berücksichtigen."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Vorliegend steht nach den Feststellungen der Vorinstanz keine berufsspezifische rechtsanwaltliche Tätigkeit der Kanzlei von Richter Tobias Bremi für die Klägerin des zweiten Patentverletzungsprozesses O2020_001 im Raum. Insbesondere vertritt die Kanzlei E.________ AG die Klägerin des zweiten Verfahrens nicht als Rechtsvertreterin. Aus den Feststellungen der Vorinstanz ergibt sich auch nicht, dass eine berufsspezifische, patentanwaltliche Mandatsbeziehung vorliegen würde, indem die Kanzlei E.________ AG für die Klägerin des zweiten Verfahrens etwa den Erfindungsschutz vorbereitet oder sie bei der Patentanmeldung oder bei der Durchsetzung ihrer Patente vertreten hätte."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Nach den Feststellungen der Vorinstanz beschränkt sich die Tätigkeit der Kanzlei E.________ AG für die Klägerin des zweiten Patentverletzungsverfahrens auf die rein administrative Vertretung gegenüber dem IGE. Die Kanzlei ist mithin einzig als (administrative) Vertreterin von Schweizer Teilen von europäischen Patenten im Patentregister eingetragen, d.h. von Patenten, die durch das europäische Patentamt geprüft und erteilt wurden und in der Schweiz auf entsprechenden Antrag und gegen Bezahlung der Jahresgebühr im Patentregister eingetragen werden (Art. 117, Art. 118a der Verordnung vom 19. Oktober 1977 über die Erfindungspatente; SR 232.141).\n\nDie Aufgabe des Vertreters eines nationalen Teils eines europäischen Patents gegenüber dem nationalen Patentamt erschöpft sich darin, als Zustelladresse zu fungieren und Mitteilungen des nationalen Patentamtes an den Patentinhaber weiterzuleiten. Je nach Umfang des Auftrages kann auch die rechtzeitige Bezahlung fälliger Gebühren zum Auftrag hinzukommen. Es handelt sich damit bei der Tätigkeit als administrative Zustelladresse um eine blosse passive Übermittlerrolle. Diese ist notwendig, weil Parteien, die keinen Wohnsitz oder Sitz in der Schweiz haben, ein Zustellungsdomizil in der Schweiz bezeichnen müssen (Art. 13 des Bundesgesetzes vom 25. Juni 1954 über die Erfindungspatente; SR 232.14). Damit soll vermieden werden, dass das Eidgenössischen Institut für Geistiges Eigentum Schriftstücke ins Ausland senden muss (Mark Schweizer, in: Schweizer/Zech [Hrsg.], Stämpflis Handkommentar, Patentgesetz [PatG], 2019, N. 2 zu Art. 13 PatG). Diese gesetzliche Regelung führt dazu, dass grössere Patentanwaltskanzleien oftmals bei mehreren Tausend Patenten als Vertreter gegenüber dem IGE eingetragen sind (vgl. Beschluss der Gerichtsleistung des Bundespatentgerichts vom 9. Juni 2016, O2014_013, E. 7; Marco Zardi, I problemi pratici di applicazione delle Direttive sull'indipendenza del Tribunale federale dei brevetti, Justice - Justiz - Giustizia [Richterzeitung], 2012/3, Rz. 28).\n\nEin solches Mandat als Zustelladresse kann nicht mit einer aktiven Vertretung im Rahmen eines typischen (Patent) anwaltsmandats verglichen werden. Während der (Patent) anwalt sich für eine wirkungsvolle Vertretung die Standpunkte seines Klienten bis zu einem gewissen Grad zu eigen machen muss, vertritt der nationale Vertreter gegenüber dem Patentamt keine anderen Interessen des Patentinhabers als diejenigen, die Mitteilungen des Patentamtes zu erhalten (und eventuell fällige Gebühren zu bezahlen). Aufgrund dieser Unterschiede rechtfertigt es sich bei rein administrativen Tätigkeiten wie dem Zurverfügungstellen einer Zustelladresse nicht, für den Ausstand die gleiche, strenge Haltung wie bei einem (patent) anwaltlichen Mandat anzuwenden. Die Anwendung der oben genannten, für die anwaltliche Tätigkeit entwickelte strenge Rechtsprechung zum Ausstand kommt damit vorliegend nicht zum Tragen (Erwägung 5.1)."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Auch das Bundespatentgericht setzt in seinen internen Richtlinien zur Unabhängigkeit die administrative Tätigkeit und das Zurverfügungstellen einer Zustelladresse nicht mit der (patent) anwaltlichen Tätigkeit gleich (Richtlinien zur Unabhängigkeit des Bundespatentgerichts, revidiert am 5. Dezember 2014). Das Bundespatentgericht geht aber auch nicht davon aus, dass solche Tätigkeiten bezüglich des Anscheins der Befangenheit in jedem Fall unproblematisch wären. Gemäss Art. 4 lit. f der Richtlinien tritt der Richter in der Ausstand, wenn er oder das Unternehmen, bei dem er tätig ist, als Zustelladressat des den Streitgegenstand bildenden Patents administrativ tätig ist oder war. Nach lit. g des gleichen Artikels tritt der Richter sodann in den Ausstand, wenn er oder das Unternehmen, bei dem er tätig ist, innerhalb des Jahres oder regelmässig von der Streitpartei direkt als Zustelladressat und zur Aufrechterhaltung der Wirksamkeit ihrer Schutzrechte mandatiert ist oder war.\n\nNach diesen internen Richtlinien darf Richter Bremi aufgrund der von der Vorinstanz festgestellten administrativen Beziehung seiner Kanzlei zur Klägerin des zweiten Verfahrens in diesem zweiten Patentverletzungsprozess O2020_001 nicht als Richter mitwirken (Art. 4 lit. g der Richtlinien). Umgekehrt besteht nach diesen Richtlinien für den ersten Patentverletzungsprozess keine Befangenheit von Richter Bremi, da seine Kanzlei nicht von einer \"Streitpartei direkt\" als Zustelladressatin und zur Aufrechterhaltung der Wirksamkeit ihrer Schutzrechte mandatiert wurde. Die Kanzlei wurde von einer Drittpartei mandatiert, nämlich von der Klägerin des zweiten Verfahrens O2020_001, die nicht Partei im ersten Patentverletzungsverfahren O2017_022 ist.\n\nSolche generellen, gerichtsinternen Richtlinien können dem betroffenen Richter helfen, seine Befangenheit im konkreten Fall besser einzuschätzen. Ihnen kommt aber keine normative Geltung zu (BGE 139 III 433 E. 2.2 S. 441). Insbesondere sollen sie nicht zum Schluss verleiten, dass ein Richter bei administrativen Arbeiten, abgesehen von den in Art. 4 lit. f und g geregelten Konstellationen, kategorisch nicht befangen wäre. Ob ein Ausstandsgrund vorliegt, beurteilt sich nach Art. 47 ZPO unter Berücksichtigung der aus Art. 30 Abs. 1 BV fliessenden Grundsätzen nach den konkreten Umständen des Einzelfalls. Es ist entsprechend auch bei rein administrativen Tätigkeiten in jedem Fall eine konkrete und fallbezogene Prüfung vorzunehmen, ob ein Grund für eine Befangenheit vorliegt (David Rüetschi, in: Calame/Hess-Blumer/Stieger [Hrsg], Patentgerichtsgesetz - Kommentar, 2013, N. 33 zu Art. 28 PatGG)."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Dementsprechend ist nachfolgend nach den oben genannten Grundsätzen (Erwägung 5.2) zu beurteilen, ob die Beziehung zwischen der Kanzlei E.________ AG und der Klägerin des zweiten Patentverletzungsverfahrens unter den konkreten Umständen den notwendigen Grad der Intensität erreicht, damit Richter Bremi im ersten Patentverletzungsverfahren als befangen erscheint. Dafür ist einerseits das Ausmass der Beziehung der Kanzlei E.________ AG zur Klägerin des zweiten Verfahrens zu berücksichtigen. Andererseits ist auch die Wirkung des ersten auf den zweiten Patentverletzungsprozess im Ausstandsentscheid zu berücksichtigen."
+            },
+            {
+              "marke": "E. 7.1.1",
+              "tiefe": 3,
+              "text": "Die Vorinstanz verwarf die These der Beschwerdeführerin, wonach die Klägerin des zweiten Verfahrens ein Interesse an der Gutheissung der ersten Klage habe. Zwar sei es richtig, dass bei Gutheissung der ersten Klage die Herstellung und der Vertrieb der \"C.________\" Injektionspens in ihrer derzeitigen Ausgestaltung verboten würden. Ein Urteil, das sich auf ein oder mehrere der im Verfahren O2017_022 geltend gemachten Patente stütze, lasse es der Beschwerdeführerin aber unbenommen, eine alternative Lösung zu entwickeln und anzubieten, die ausserhalb des Schutzbereichs der im Verfahren O2017_022 geltend gemachten Patente liege, aber im Schutzbereich des im Verfahren O2020_001 geltend gemachten Patents. Es sei daher nicht richtig, dass das Interesse der Klägerin des zweiten Verfahrens an ihrer Verletzungsklage hinfällig würde, wenn die erste Klage gutgeheissen würde. Ebenso habe die Klägerin des zweiten Verfahrens ein Interesse daran, dass die Verletzung ihres Patents festgestellt werde, da sie nur dann finanzielle Wiedergutmachungsansprüche für vergangene Verletzungshandlungen habe."
+            },
+            {
+              "marke": "E. 7.1.2",
+              "tiefe": 3,
+              "text": "Die Beschwerdeführerin macht diesbezüglich eine unvollständige Feststellung des Sachverhalts durch die Vorinstanz geltend. Sie stellt sich wie bereits vor der Vorinstanz (Ausstandsgesuch vom 14. Februar 2020 Rz. 11 - 16; Stellungnahme vom 2. März 2020 Rz. 7 f.) auf den Standpunkt, der \"C.________\" Injektionspen im ersten Patentverletzungsverfahren sei das identische Produkt wie der \"C.________\" im zweiten Verfahren. Ein Unterlassungsurteil zu Gunsten der Beschwerdegegnerin gegen den \"C.________\" im ersten Verfahren O2017_022 würde sich unmittelbar zu Gunsten der Klägerin des zweiten Verfahrens O2020_001 auswirken. Die Klägerin des zweiten Verfahrens und Mandantin der Kanzlei von Richter Bremi hätte damit erreicht, was sie mit ihrer Klage anstrebt, nämlich ein Verbot des \"C.________\" Injektionspens der Beschwerdeführerin. Die Klägerin des zweiten Verfahrens stütze sich selbstverständlich auf ihr eigenes Streitpatent. Sie verfolge mit ihrer Unterlassungsklage aber genau dasselbe Ziel wie die klagende Beschwerdegegnerin im ersten Verfahren: Der weitere Vertrieb ein und desselben Produkts soll der Beschwerdeführerin im ersten wie im zweiten Verfahren unterbunden werden. Die Interessenlage der Klägerin des ersten Verfahrens (Beschwerdegegnerin) und der Klägerin des zweiten Verfahrens sei daher ein und dieselbe. Werde im ersten Verfahren, an dem Richter Bremi mitwirke, eine Unterlassung zu Gunsten der Klägerin im ersten Verfahren ausgesprochen, dann wirke sich diese ohne Weiteres auch zu Gunsten der Klägerin im zweiten Verfahren und Mandantin der Kanzlei E.________ AG aus.\n\nDie Vorinstanz räume selbst ein, dass bei Gutheissung der ersten Klage die Herstellung und der Vertrieb der \"C.________\" Injektionspens in ihrer derzeitigen Ausgestaltung verboten würden. Das Bundespatentgericht meine aber, dies lasse es der Beschwerdeführerin unbenommen, eine alternative Lösung anstelle des \"C.________\" Injektionspens zu entwickeln und anzubieten, weshalb die Beschwerdeführerin im zweiten Verfahren unabhängig vom ersten Verfahren exponiert sei. Bei dieser Begründung der Vorinstanz handle es sich um eine willkürliche, neue und konstruierte Sachverhaltsunterstellung. Die Vorinstanz anerkenne zwar den erheblichen Einfluss des ersten Verfahrens auf das zweite, konstruiere dann aber von sich aus Alternativszenarien, welche diesen Einfluss angeblich wieder schmälern würden.\n\nDarüber hinaus gehe die Vorinstanz aus zwei Gründen an der Realität vorbei. Erstens könnten \"alternative Lösungen\" bei Medizinalprodukten nicht einfach kurzerhand entwickelt werden. Zweitens sei es gerichtsnotorisch und auch der Vorinstanz bekannt, dass Medizinalprodukte wie Injektionspens und pharmazeutische Produkte sehr aufwendige regulatorische Zulassungsverfahren zu überstehen haben, bevor sie überhaupt auf einem Markt zugelassen würden. Entgegen den Feststellungen der Vorinstanz würde die zweite Klage daher praktisch weitgehend hinfällig, wenn die erste Verletzungsklage gutgeheissen würde. Sodann sei das vom Bundespatentgericht angesprochene selbstständige Interesse bezüglich Wiedergutmachungsansprüchen bei einer direkten Konkurrenzsituation zweifellos nicht von primärer Bedeutung."
+            },
+            {
+              "marke": "E. 7.1.3",
+              "tiefe": 3,
+              "text": "Bezüglich der Wirkung des ersten auf das zweite Patentverletzungsverfahren ist im vorinstanzlichen Sachverhalt einzig festgestellt, dass im zweiten Verfahren eine nicht namentlich genannte Drittpartei eine Verletzung eines nicht spezifisch genannten anderen Patents durch den gleichen \"C.________\" Injektionspen der Beschwerdeführerin geltend macht, der auch Anfechtungsgegenstand des ersten Verfahrens ist. Weitere Angaben fehlen; nicht einmal der Name der Klägerin des zweiten Verfahrens ist bekannt. Es ist auch nicht festgestellt, auf welches Patent sich die Klägerin im zweiten Verfahren stützt und ob sich die beiden Klagen gegen die gleiche Ausführungsform des \"C.________\" Injektionspens richten. Ebensowenig ist bekannt, ob es sich bei der Klägerin des zweiten Verfahrens um eine Konkurrentin der Beschwerdeführerin handelt, welche von einer Gutheissung der ersten Klage profitieren könnte.\n\nImmerhin kann festgehalten werden, dass die Klägerin des zweiten Patentverletzungsverfahrens sich auf ihr eigenes und damit auf ein anderes Patent als die klagende Beschwerdegegnerin im ersten Verfahren stützt. Aufgrund der unterschiedlichen Streitpatente stellen sich im zweiten Patentverletzungsverfahren gegen die Beschwerdeführerin mutmasslich andere technische und rechtliche Fragen wie im vorliegenden ersten Patentverletzungsprozess. Trotzdem kann eine unter dem Blickwinkel der Befangenheit heikle Wechselwirkung bestehen, etwa wenn die Klägerin des zweiten Verfahrens die gleichen Interessen wie die klagende Beschwerdegegnerin im ersten Prozess verfolgt (Erwägung 4.2.4).\n\nSolches könnte hier zutreffen: Nach den durch die Vorinstanz noch beweismässig festzustellenden Vorbringen der Beschwerdeführerin, könnte die Klägerin des zweiten Verfahrens die gleichen Interessen wie die klagende Beschwerdegegnerin im ersten Prozess verfolgen, nämlich ein Verbot der Herstellung und des Vertriebs des \"C.________\" Injektionspens. Entsprechend würde ein solches Verbot im ersten Verfahren auch der Klägerin des zweiten Verfahrens und Klientin der Kanzlei von Richter Bremi dienen. Die Beschwerdeführerin könnte zwar bei Gutheissung der Klage der Beschwerdegegnerin eine alternative Lösung entwickeln, die ausserhalb des Schutzbereichs der im Verfahren O2017_022 geltend gemachten Patente liegt. Wie die Beschwerdeführerin aber zutreffend vorbringt, ist allgemein bekannt, das Medizinalprodukte nicht von heute auf morgen angepasst und auf den Markt gebracht werden können, sondern regulatorische Hürden zu überwinden haben, sodass für die Klägerin des zweiten Verfahrens durchaus ein Interesse an der Gutheissung der Klage der Beschwerdegegnerin bestehen könnte.\n\nBei dieser Sachlage hätte die Vorinstanz für die Frage des Ausstandes von Richter Bremi im ersten Patentverletzungsverfahren die konkreten Auswirkungen der beiden hängigen Patentverletzungsprozesse abklären müssen. Einzig aufgrund der im angefochtenen Entscheid festgestellten Sachverhaltselemente ist es für das Bundesgericht nicht möglich, die konkreten Wirkungen des ersten Patentverletzungsverfahrens O2017_022 auf das zweite Verfahren O2020_001 abschliessend zu prüfen. Die Vorinstanz hat somit nicht alle relevanten Tatsachen für die korrekte Anwendung des materiellen Rechts feststellt, womit das Bundesgericht an der richtigen Anwendung der Ausstandsvorschriften gehindert ist."
+            },
+            {
+              "marke": "E. 7.2.1",
+              "tiefe": 3,
+              "text": "Bezüglich der Beziehungen zwischen der Klägerin des zweiten Verfahrens und der Kanzlei E.________ AG ist im angefochtenen Entscheid nur festgestellt, dass sich die Tätigkeit der Kanzlei von Richter Bremi für die Klägerin des zweiten Verfahrens auf die rein administrative Vertretung gegenüber dem IGE erschöpfe."
+            },
+            {
+              "marke": "E. 7.2.2",
+              "tiefe": 3,
+              "text": "Dagegen macht die Beschwerdeführerin geltend, dass sich aus dem angefochtenen Entscheid nicht erschliesse, woher die Vorinstanz dies wisse. Sie macht auch diesbezüglich eine unvollständige Feststellung geltend.\n\nWie bereits vor der Vorinstanz (Ausstandsgesuch vom 14. Februar 2020, Rz. 8 f.; Stellungnahme vom 2. März 2020, Rz. 5 - 7) beruft sich die Beschwerdeführerin darauf, dass es eine registerrechtlich verifizierte Tatsache sei, dass die Kanzlei von Richter Bremi seit 2004 für die Klägerin des zweiten Verfahrens als Vertreterin im Patentregister eingetragen sei und insofern auch zahlreiche für Injektionspens relevante Patente - darunter auch das Streitpatent im zweiten Verfahren - verwalte. Es sei in einem solchen, über 15 Jahre dauernden und 70 Patente umfassenden Mandatsverhältnis schlicht nicht zutreffend und entspreche auch nicht der Praxis und Erfahrung, dass eine Patentsanwaltskanzlei keine anderen Interessen des Patentinhabers vertrete, als diejenigen, die Mitteilungen des Patentamtes rechtzeitig zu erhalten. Vielmehr sei davon auszugehen, dass ausländische Unternehmen, die seit Jahrzehnten mit einer Schweizer Patentanwaltskanzlei ein Mandatsverhältnis unterhielten, in aller Regel in einem Schweizer Streitfall zuerst bei ihrer Schweizer Patentanwaltskanzlei Rat suchten, wenn sie patentrechtliche Fragen hätten, welche die Schweiz beträfen. Mindestens könne diese Vorgehensweise nicht ausgeschlossen werden. Es könne auch nicht ausgeschlossen werden, dass die Klägerin des zweiten Verfahrens die Kanzlei E.________ AG angefragt habe, ob sie für eine patentrechtlich-technische Beratung zur Verfügung stehe."
+            },
+            {
+              "marke": "E. 7.2.3",
+              "tiefe": 3,
+              "text": "In der Tat stellte die Vorinstanz im angefochtenen Entscheid bloss ohne weitere Angaben fest, dass sich die Tätigkeit der Kanzlei von Richter Bremi für die Klägerin des zweiten Verfahrens auf die rein administrative Vertretung beschränke (angefochtener Beschluss, Erwägung 12, S. 10 oben). Ein Beleg für diese Feststellung fehlt, was die Beschwerdeführerin zu Recht rügt. Die Beschwerdeführerin präsentiert nicht blosse, von vornherein haltlose Mutmassungen, wenn sie vorbringt, dass bei einer über 15 Jahre langen dauernden Geschäftsbeziehung nicht ohne weitere Abklärungen davon ausgegangen werden könne, die Kanzlei vertrete keine anderen Interessen der Klägerin des zweiten Verfahrens als die Post des Patentamtes zu erhalten. Unter diesen Umständen hätte die Vorinstanz die Art, den Umfang und die Dauer der konkreten Geschäftsbeziehung zwischen der Klägerin des zweiten Verfahrens und der Kanzlei E.________ AG abklären und insbesondere verifizieren müssen, ob die Kanzlei die Klägerin des zweiten Verfahrens nicht doch weitergehend (patent) anwaltlich beraten hat, wie die Beschwerdeführerin behauptet."
+            },
+            {
+              "marke": "E. 7.3",
+              "tiefe": 2,
+              "text": "Zusammenfassend kann das Bundesgericht bei dieser Sachlage nicht beurteilen, ob Richter Bremi im ersten Patentverletzungsverfahren O2017_022 befangen ist. Der angefochtene Entscheid ist daher zur weiteren Feststellung des Sachverhalts und zu neuer Entscheidung an die Vorinstanz zurückzuweisen, sofern auch die Eventualerwägung der Vorinstanz nicht trägt."
+            },
+            {
+              "marke": "E. 8.1",
+              "tiefe": 2,
+              "text": "Die Vorinstanz kam in einer Eventualbegründung zum Schluss, dass selbst wenn man annähme, der Sachverhalt begründe objektiv einen Anschein der Befangenheit, könnte sich die Beschwerdeführerin wegen eines Verstosses gegen das Gebot des Handelns nach Treu und Glauben im Prozess (Art. 52 ZPO) nicht darauf berufen. Denn die Beschwerdeführerin habe den Ausstandsgrund durch ihr Ausstandsgesuch selbst geschaffen.\n\nDa Richter Bremi im zweiten Verfahren O2020_001 nicht mitwirke, sei ihm aus diesem Verfahren ausser den Namen der beteiligten Parteien nichts bekannt. Seine Arbeitgeberin sei am zweiten Verfahren nicht beteiligt. Namentlich sei ihm bis zum Ausstandsgesuch der Beschwerdeführerin vom 14. Februar 2020 nicht bekannt gewesen, dass sich die Klage vom 13. Januar 2020 gegen die gleichen \"C.________\" Injektionspens richte, die auch Gegenstand des ersten Verfahrens O2017_022 bildeten. Die Beschwerdeführerin biete nicht nur die \"C.________\" Injektionspens an, sondern neben verschiedenen Injektionssystemen auch Insulinpumpen und Blutzuckermessgeräte, die in den Schutzbereich von Patenten fallen könnten.\n\nDie vermeintliche Befangenheit von Richter Bremi leite die Beschwerdeführerin aber genau daraus ab, dass die Klägerin des zweiten Verfahrens ein Interesse daran habe, dass die Klage im ersten Verfahren, die sich gegen die gleichen \"C.________\" Injektionspens richte, gutgeheissen werde, weil dadurch die zweite Klage - und die damit verbundenen Kosten und Risiken - hinfällig würden. Befangen sei Richter Bremi nach der Argumentation der Beschwerdeführerin nur, weil er wisse, dass die Klägerin des zweiten Verfahrens - und daher angeblich die Arbeitgeberin von Richter Bremi - ein Interesse an der Gutheissung der ersten Klage habe. Dieses Wissen habe ihm erst die Beschwerdeführerin verschafft. Es sei mit dem Gebot des Handelns nach Treu und Glauben im Prozess nicht vereinbar, einem Richter genau das Wissen zu verschaffen, das ihn angeblich befangen erscheinen lasse. Hätte die Beschwerdeführerin kein Ausstandsgesuch gestellt, hätte gar kein Anschein der Befangenheit entstehen können, weil Richter Bremi schlicht nicht gewusst hätte, dass seine Arbeitgeberin (angeblich) ein Interesse daran habe solle, dass er im Verfahren O2017_022 gegen die Beschwerdeführerin entscheide. Die Beschwerdeführerin könnte sich deshalb nicht auf den Ausstandsgrund berufen, selbst wenn er vorliegen würde."
+            },
+            {
+              "marke": "E. 8.2",
+              "tiefe": 2,
+              "text": "Diese Auffassung geht fehl, wie die Beschwerdeführerin zutreffend geltend macht."
+            },
+            {
+              "marke": "E. 8.2.1",
+              "tiefe": 3,
+              "text": "Es geht vorliegend nicht darum, dass die Beschwerdeführerin Richter Bremi mit dem Ausstandsgesuch spezifisches Wissen verschafft hätte, welches erst seinen Ausstand begründet hat. Vielmehr gründet ein allfälliger Ausstandsgrund von Richter Bremi im ersten Patentverletzungsprozess in der bestehenden Geschäftsbeziehung seiner Kanzlei mit der Klägerin des zweiten Verfahrens."
+            },
+            {
+              "marke": "E. 8.2.2",
+              "tiefe": 3,
+              "text": "Ob ein Richter in den Ausstand zu treten hat, beurteilt sich danach, ob bei objektiver Betrachtung Gegebenheiten vorliegen, die den Anschein der Befangenheit oder die Gefahr der Voreingenommenheit zu begründen vermögen. Für seine Ablehnung wird nicht verlangt, dass er tatsächlich befangen ist (dazu oben Erwägung 4.1). Die Befangenheit als innerer Zustand kann auch kaum nachgewiesen werden (BGE 128 V 82 E. 2a S. 84; 125 I 119 E. 3a S. 122; 116 Ia 135 E. 2b).\n\nDa es für die Befangenheit eines Richters nicht darauf ankommt, ob er tatsächlich befangen ist, kann es für die Beurteilung des Ausstandsgrundes auch nicht entscheidend sein, ob der Richter im Zeitpunkt der Stellung des Ausstandsgesuchs bereits tatsächlich wusste, ob aufgrund bestehender Gegebenheiten ein bestimmter Ausstandsgrund vorliegt oder ob ihn erst eine Partei auf einen solchen aufmerksam machte. In letzter Konsequenz würde die Argumentation der Vorinstanz zur Folge haben, dass überall dort, wo sich ein Richter eines bestehenden Ausstandsgrundes selbst (noch) nicht bewusst ist, kein Ausstandsgesuch gestellt werde könnte, weil die Partei sonst gegen Treu und Glaube verstiesse, indem sie den Richter auf den Ausstandsgrund aufmerksam machte. Eine solche Argumention verkennt den Sinn der Ausstandsvorschriften.\n\nAuch die Eventualerwägung der Vorinstanz trägt nach dem Gesagten nicht."
+            },
+            {
+              "marke": "E. 9",
+              "tiefe": 1,
+              "text": "Nach dem Ausgeführten ist die Beschwerde gutzuheissen. Der Beschluss der Verwaltungskommission des Bundespatentgerichts vom 8. April 2020, O2017_022, ist vollständig aufzuheben. Die Sache ist zur Ergänzung des Sachverhalts und zu neuer Entscheidung im Sinne der Erwägungen an die Vorinstanz zurückzuweisen. Die Vorinstanz hat insbesondere die Beziehung zwischen der Klägerin des zweiten Verfahrens und der Kanzlei E.________ AG sowie die Wirkungen des ersten Patentverletzungsverfahrens O2017_022 auf das zweite Verfahren O2020_001 abzuklären. Gestützt auf diese zusätzlichen tatsächlichen Feststellungen hat die Vorinstanz in rechtlicher Hinsicht nochmals zu beurteilen, ob bei Richter Tobias Bremi im vorliegenden ersten Patentverletzungsverfahren O2017_022 ein Anschein der Befangenheit besteht."
+            },
+            {
+              "marke": "E. 10",
+              "tiefe": 1,
+              "text": "Die Beschwerdegegnerin hat zwar inhaltlich auf eine Vernehmlassung verzichtet. Sie hat sich aber nicht der Beschwerde angeschlossen, weshalb es sich im konkreten Fall dennoch rechtfertigt, ihr die - allerdings reduzierten - Kosten aufzuerlegen und sie zur Zahlung einer Parteientschädigung zu verpflichten (Art. 66 Abs. 1, Art. 68 Abs. 1 und 2 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen. Der Beschluss der Verwaltungskommission des Bundespatentgerichts vom 8. April 2020, O2017_022, wird aufgehoben. Die Sache wird zur Ergänzung des Sachverhalts und zu neuer Entscheidung im Sinne der Erwägungen an die Vorinstanz zurückgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 1'000.-- werden der Beschwerdegegnerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdegegnerin hat die Beschwerdeführerin für das bundesgerichtliche Verfahren mit Fr. 2'500.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien und dem Bundespatentgericht schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 5. November 2020\n\nIm Namen der I. zivilrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDie Präsidentin: Kiss\n\nDer Gerichtsschreiber: Brugger"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen. Der Beschluss der Verwaltungskommission des Bundespatentgerichts vom 8. April 2020, O2017_022, wird aufgehoben. Die Sache wird zur Ergänzung des Sachverhalts und zu neuer Entscheidung im Sinne der Erwägungen an die Vorinstanz zurückgewiesen.",
+        "Die Gerichtskosten von Fr. 1'000.-- werden der Beschwerdegegnerin auferlegt.",
+        "Die Beschwerdegegnerin hat die Beschwerdeführerin für das bundesgerichtliche Verfahren mit Fr. 2'500.-- zu entschädigen.",
+        "Dieses Urteil wird den Parteien und dem Bundespatentgericht schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 13 PATG",
+        "Art. 28 PATGG",
+        "Art. 30 Abs. 1 BV",
+        "Art. 30 Abs. 1 CST",
+        "Art. 47 CPC",
+        "Art. 47 ZPO",
+        "Art. 49 Abs. 1 ZPO",
+        "Art. 6 CEDU"
+      ],
+      "normKeys": [
+        "BV",
+        "ZPO"
+      ],
+      "zitierteEntscheide": [
+        "4A_243/2020",
+        "4A_256/2010",
+        "8C_467/2014",
+        "9C_257/2016",
+        "BGE 125 II 541",
+        "BGE 128 V 82",
+        "BGE 133 I 1",
+        "BGE 135 I 14",
+        "BGE 135 III 410",
+        "BGE 138 I 406",
+        "BGE 139 I 121",
+        "BGE 139 III 433",
+        "BGE 140 III 221",
+        "BGE 142 III 732",
+        "BGE 144 I 159"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=3&from_date=&to_date=&from_year=2020&to_year=2020&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=30&highlight_docid=atf%3A%2F%2F147-III-89%3Ade&number_of_ranks=200&azaclir=clir",
+      "abgerufen": "2026-07-12",
+      "fassungsToken": "1a9c81859cd62bfb05b8750ca5aff8bae0d45a693a81b994f5cc7400261fd139",
+      "sha": "ba37f063bd7c0060cea627c7b37c9d479ef518e31b10c879035405ace7355fa7",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Am 29. November 2017 erhob die B. GmbH (Klägerin, Beschwerdegegnerin) am Bundespatentgericht eine Patentverletzungsklage gegen die A. AG (Beklagte, Beschwerdeführerin). Die Klägerin macht darin eine Verletzung der Schweizer Teile von drei europäischen Patenten (x, y und z) durch die Einweg-Injektionspens \"C.\" der Beklagten geltend. Sie verlangt zusammengefasst die Unterlassung der weiteren Herstellung und des weiteren Vertriebs der \"C.\" sowie Auskunft, Rechnungslegung und finanziellen Ausgleich. In diesem Verfahren mit der Verfahrensnummer O2017_022 setzt sich der Spruchkörper des Bundespatentgerichts aus den Richtern Christoph Gasser (Instruktionsrichter), Tobias Bremi (Referent) und Kurt Sutter zusammen."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Das Bundespatentgericht beschränkte das Verfahren vorerst auf die Unterlassung sowie Auskunft und Rechnungslegung. Nach durchgeführter Instruktionsverhandlung und doppeltem Schriftenwechsel mit anschliessenden Noveneingaben der Beklagten wurde den Parteien am 7. Januar 2020 das Fachrichtervotum von Richter Tobias Bremi zur Stellungnahme zugestellt. Im Fachrichtervotum kommt Richter Bremi zum Schluss, dass die \"C.\" Injektionspens der Beklagten die Klagepatente y und z verletzten, nicht aber das Patent x. Die Klagepatente x und z seien rechtsbeständig, nicht aber das Patent y. Entsprechend sei das Klagepatent z rechtsbeständig und verletzt und das sich auf dieses Klagepatent stützende Rechtsbegehren sei gutzuheissen."
+            },
+            {
+              "marke": "A.c",
+              "tiefe": 2,
+              "text": "Am 13. Januar 2020 ging am Bundespatentgericht eine weitere Patentverletzungsklage gegen die Beklagte ein (Verfahren Nr. O2020_001). In diesem Verfahren wird durch eine Drittgesellschaft die Verletzung ihres Patents durch die gleichen \"C.\" Injektionspens der Beklagten geltend gemacht, die auch Anfechtungsgegenstand des ersten Verfahrens O2017_022 sind. Die Klägerin des zweiten Patentverletzungsverfahrens wird von der Kanzlei D. AG anwaltlich vertreten und patentanwaltlich unterstützt durch eine bei dieser Kanzlei angestellte europäische Patentanwältin. B. Am 14. Februar 2020 stellte die Beklagte das Gesuch, Richter Tobias Bremi habe im ersten Patentverletzungsverfahren O2017_022 in den Ausstand zu treten. Die Arbeitgeberin von Richter Bremi, die Kanzlei E. AG, sei als Vertreterin von Patenten der Klägerin des zweiten Verfahrens O2020_001 gegenüber dem Eidgenössischen Institut für Geistiges Eigentum eingetragen. Die zweite Klage im Verfahren O2020_001 richte sich gegen die gleichen \"C.\" Injektionspens der Beklagten wie im ersten Verfahren O2017_022, weshalb das erste Verfahren für das zweite eine erhebliche präjudizielle Bedeutung habe. Mit Beschluss vom 8. April 2020 wies die Verwaltungskommission des Bundespatentgerichts das Ausstandsgesuch ab. Sie erachtete es als rechtzeitig im Sinne von Art. 49 Abs. 1 ZPO gestellt, kam aber zusammengefasst zum Ergebnis, dass ein Angestellter einer Arbeitgeberin, die für eine Drittpartei administrative Hilfstätigkeiten erledige, die aus einem anderen Rechtsgrund gegen die Beklagte in einem Verfahrenklage, in dem der Angestellte als nebenamtlicher Richter tätig sei, objektiv kein Misstrauen in die Unparteilichkeit des nebenamtlichen Richters erwecken könne. C. Dagegen erhob die Beschwerdeführerin Beschwerde in Zivilsachen an das Bundesgericht. Sie beantragte, der Beschluss des Bundespatentgerichts sei aufzuheben und Fachrichter Tobias Bremi sei in den Ausstand zu versetzen. (...) Das Bundesgericht heisst die Beschwerde gut und weist die Sache zur Ergänzung des Sachverhalts und zu neuer Entscheidung an die Vorinstanz zurück. (Auszug)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Nach Art. 30 Abs. 1 BV und Art. 6 Ziff. 1 EMRK hat jede Person, deren Sache in einem gerichtlichen Verfahren beurteilt werden muss, Anspruch darauf, dass ihre Streitsache von einem unbefangenen, unvoreingenommenen und unparteiischen Richter beurteilt wird. Es soll garantiert werden, dass keine sachfremden Umstände, die ausserhalb des Prozesses liegen, in sachwidriger Weise zugunsten oder zulasten einer Partei auf das gerichtliche Urteil einwirken. Art. 30 Abs. 1 BV soll zu der für einen korrekten und fairen Prozess erforderlichen Offenheit des Verfahrens im Einzelfall beitragen und damit ein gerechtes Urteil ermöglichen (BGE 144 I 159 E. 4.3 S. 162; 142 III 732 E. 4.2.2 S. 736; 140 III 221 E. 4.1). Die Garantie des verfassungsmässigen Richters wird bereits verletzt, wenn bei objektiver Betrachtung Gegebenheiten vorliegen, die den Anschein der Befangenheit oder die Gefahr der Voreingenommenheit zu begründen vermögen. Voreingenommenheit und Befangenheit BGE 147 III 89 S. 92 in diesem Sinne werden nach der Rechtsprechung angenommen, wenn im Einzelfall anhand aller tatsächlichen und verfahrensrechtlichen Umstände Gegebenheiten aufscheinen, die geeignet sind, Misstrauen in die Unparteilichkeit des Richters zu erwecken. Dabei ist nicht auf das subjektive Empfinden einer Partei abzustellen. Das Misstrauen in die Unvoreingenommenheit muss vielmehr in objektiver Weise begründet erscheinen. Es genügt, wenn Umstände vorliegen, die bei objektiver Betrachtung den Anschein der Befangenheit und Voreingenommenheit hervorrufen. Für die Ablehnung wird nicht verlangt, dass der Richter tatsächlich befangen ist (BGE 142 III 732 E. 4.2.2; BGE 140 III 221 E. 4.1; BGE 139 III 433 E. 2.1.2 S. 436)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Das Bundesgericht hatte sich wiederholt mit Fällen zu befassen, in denen ein nebenamtlicher Richter (oder Schiedsrichter) wegen seiner hauptamtlichen Tätigkeit in einer Anwaltskanzlei mit einer Prozesspartei besonders verbunden war."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Die Garantie des verfassungsmässigen Richters gilt für amtliche und nebenamtliche Richter gleichermassen. Der Umstand, dass beim Einsatz nebenamtlicher Richter die Wahrscheinlichkeit beruflicher Beziehungen zu einer der Verfahrensparteien zunimmt im Vergleich zu vollamtlichen Richtern, die keiner anderen Erwerbstätigkeit nachgehen, rechtfertigt keine unterschiedliche Anwendung der verfassungsrechtlichen Vorgaben (BGE 139 III 433 E. 2.1.3 S. 436). Übt der Richter neben seiner gerichtlichen Tätigkeit eine weitere Funktion als (Patent)anwalt aus, ist der Schutz der Rechtsunterworfenen besonders gefordert. Die Garantie des verfassungsmässigen Richters (Art. 30 Abs. 1 BV) hat ihren eigentlichen Zweck zu erfüllen, auch in Anbetracht solcher Verbindungen einen korrekten und fairen Prozess sicherzustellen (BGE 139 III 433 E. 2.1.3 S. 436 f.). Das gilt insbesondere bei dem für das Bundespatentgericht gewählten Modell der Gerichtsorganisation mit zwei hauptamtlichen Richtern und einer überwiegenden Mehrzahl von nebenamtlichen Richtern (Art. 8 Abs. 2 des Bundesgesetzes vom 20. März 2009 über das Bundespatentgericht [PatGG; SR 173.41]). Im Interesse der Glaubwürdigkeit des Gerichts muss ganz besonders auf die richterliche Unabhängigkeit geachtet werden (CYRILL P. RIGAMONTI, Ein Jahr schweizerisches Bundespatentgericht, Zeitschrift für vergleichende Rechtswissenschaft 112/2013, S. 293 ff., 300). Umgekehrt hat der Gesetzgeber die Organisation eines auf Patentrecht spezialisierten Fachgerichts bewusst gewollt und es mit Fachrichtern bestückt, die hauptberuflich ebenfalls Bezüge zum Patentrecht aufweisen. Auch dies ist zu berücksichtigen. BGE 147 III 89 S. 93"
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Nach ständiger Rechtsprechung erscheint ein als Richter amtender Anwalt als befangen, wenn zu einer Partei ein noch offenes Mandat besteht oder er für eine Partei in dem Sinne mehrmals anwaltlich tätig geworden ist, dass zwischen ihnen eine Art Dauerbeziehung besteht. Das gilt unabhängig davon, ob das Mandat in einem Sachzusammenhang mit dem zu beurteilenden Streitgegenstand steht oder nicht (BGE 140 III 221 E. 4.3.1; BGE 139 III 433 E. 2.1.4 S. 437; BGE 138 I 406 E. 5.3 S. 407; BGE 135 I 14 E. 4.1 S. 15 f.). Der als Richter amtierende Anwalt kann in einer solchen Situation, wenn auch unbewusst, versucht sein, seinen Mandanten nicht durch einen für diesen ungünstigen Entscheid vergrämen zu wollen (BGE 135 I 14 E. 4.3 S. 18). Darüber hinaus hat das Bundesgericht anerkannt, dass ein als Richter bzw. Schiedsrichter amtierender Anwalt nicht nur dann als befangen erscheint, wenn er in einem anderen Verfahren eine der Prozessparteien vertritt oder kurz vorher vertreten hat, sondern auch dann, wenn im anderen Verfahren ein solches Vertretungsverhältnis zur Gegenpartei einer der Prozessparteien besteht bzw. bestanden hat (BGE 139 III 433 E. 2.1.4 S. 437; BGE 138 I 406 E. 5.3 S. 407 f.; 135 I 14 E. 4.1-4.3; vgl. auch BGE 139 I 121 E. 5.1 S. 126 und BGE 139 III 120 E. 3.2.1 S. 124). Das Bundesgericht erwog dazu, in Fällen, in denen der Richter in anderen Verfahren zwar nicht die Prozesspartei selbst, sondern deren Gegenpartei vertritt oder vertrat, bestehe insofern ein Anschein der Befangenheit, als die Prozesspartei objektiv gesehen befürchten könne, der Richter könnte nicht zu ihren Gunsten entscheiden wollen, weil sie im anderen Verfahren Gegenpartei seines Mandanten sei. Daran ändere nichts, dass von einem Anwalt, der als (nebenamtlicher) Richter oder als Schiedsrichter tätig sei, erwartet werden können sollte, dass er in einem zu beurteilenden Fall beiden Prozessparteien gleichermassen Gerechtigkeit widerfahren lässt, unabhängig davon, dass er in einem anderen Verfahren als Anwalt gegen eine der Prozessparteien auftritt oder auftrat. Das Bundesgericht wies dazu auf die Erfahrungstatsache hin, dass eine Prozesspartei ihre negativen Gefühle gegenüber der Gegenpartei oft auf deren anwaltlichen Vertreter überträgt, da dieser die Gegenpartei in der Auseinandersetzung mit ihr unterstützt. Für viele Parteien gelte der Anwalt der Gegenpartei ebenso als Gegner wie die Gegenpartei selbst, umso mehr, als er als der eigentliche Stratege im Prozess wahrgenommen werde. Es sei deshalb nachvollziehbar, dass eine Partei von einem Richter, der sie in einem anderen Verfahren als Vertreter BGE 147 III 89 S. 94 der dortigen Gegenpartei bekämpft(e) und sie - aus ihrer Sicht - möglicherweise um ihr Recht bringen wird oder gebracht hat, nicht erwartet, er werde ihr plötzlich völlig unbefangen gegenübertreten (BGE 138 I 406 E. 5.3; BGE 135 I 14 E. 4.3 S. 18). Das gelte unabhängig davon, ob das Mandat des Anwalts in einem Sachzusammenhang mit dem als Richter zu beurteilenden Streitgegenstand stehe oder nicht (BGE 138 I 406 E. 5.4.1 S. 409). In solchen Fällen geht das Bundesgericht ungeachtet der weiteren konkreten Umstände, also abstrakt ohne eine konkrete fallbezogene Prüfung, von einem Anschein der Befangenheit aus (BGE 139 III 433 E. 2.1.4 S. 437; BGE 138 I 406 E. 5.4.1). Insbesondere kann es etwa bei einem offenen Auftragsverhältnis zu einer Verfahrenspartei aufgrund der damit einhergehenden Interessenbindungen und Loyalitätspflichten des nebenamtlich als Richter tätigen Anwalts nicht darauf ankommen, ob das wahrgenommene Mandat von der Partei bzw. vom Anwalt als wichtig oder weniger bedeutsam erachtet wird (BGE 139 III 433 E. 2.1.4 S. 437 f.)."
+            },
+            {
+              "marke": "E. 4.2.3",
+              "tiefe": 3,
+              "text": "Ein Anschein der Befangenheit ergibt sich nach der Rechtsprechung auch daraus, dass nicht der nebenamtliche Richter selbst, sondern ein anderer Anwalt seiner Kanzlei ein Mandat mit einer Prozesspartei unterhält bzw. kurz zuvor oder im Sinn eines Dauerverhältnisses mehrmals unterhalten hat. Der Mandant erwartet nicht nur von seinem Ansprechpartner innerhalb der Anwaltskanzlei, sondern von deren Gesamtheit Solidarität. Die einheitliche Betrachtung entspricht auch dem anwaltlichen Berufsrecht, das im Hinblick auf einen Interessenkonflikt alle in einer Kanzleigemeinschaft zusammengefassten Anwälte wie einen Anwalt behandelt (BGE 140 III 221 E. 4.3.2; BGE 139 III 433 E. 2.1.5 S. 438)."
+            },
+            {
+              "marke": "E. 4.2.4",
+              "tiefe": 3,
+              "text": "Zur Annahme einer besonderen Verbundenheit des Richters mit einer Verfahrenspartei, die den Anschein der Befangenheit erweckt, kommt auch eine andere Beziehung als ein direktes Mandatsverhältnis zu dieser Partei oder deren Gegenpartei in Betracht. So hat das Bundesgericht es etwa als unzulässig erachtet, dass ein Anwalt als Richter in einer Sache mitwirkt, die für ein gleichgelagertes Verfahren, in dem er eine Drittpartei als Anwalt vertritt, eine erhebliche präjudizielle Bedeutung haben kann (BGE 139 III 433 E. 2.1.6 S. 439). So bestünde ein Anschein der Befangenheit, wenn ein nebenamtlicher Richter in einer Sache zur Entscheidung berufen wird, in der sich die gleichen Rechtsfragen stellen wie in einem anderen hängigen Verfahren, in dem er als Anwalt auftritt BGE 147 III 89 S. 95 (BGE 128 V 82 E. 2a S. 85 und E. 3d; BGE 124 I 121 E. 3). Unter Verweis auf diese beiden Entscheide hat das Bundesgericht später erwogen, dass sich die Ausstandsfrage stellen könne, wenn ein Richter in einem parallelen Verfahren ohne Bezug zu den Parteien eine Drittperson vertrete, welche die gleichen Interessen wie eine der Verfahrensparteien verfolge. Damit solle vermieden werden, dass der Richter in einer Weise über eine Streitfrage entscheide, die seine anwaltliche Stellung im Parallelverfahren verbessern könnte (BGE 133 I 1 E. 6.4.3 S. 8)."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Bei der zitierten Rechtsprechung bezüglich des Anscheins der Befangenheit von nebenamtlichen Richtern geht es um Befangenheiten, die aufgrund einer anwaltlichen Tätigkeit eines Richters entstehen können. Damit sind Situationen angesprochen, in denen eine anwaltliche Mandatsbeziehung im Sinne der eigentlichen, berufsspezifischen Rechtsanwaltstätigkeit zwischen den oben genannten Personen besteht oder bestanden hat. Zur typischen Anwaltstätigkeit gehört die Wahrung von Klienteninteressen im Rahmen der Rechtsberatung, das Abfassen von juristischen Eingaben und die Vertretung vor einer Verwaltungsbehörde oder vor Gericht (vgl. BGE 135 III 410 E. 3.3 S. 414, BGE 135 III 597 E. 3.3 S. 601). Für solche Anwaltstätigkeiten rechtfertigt sich bezüglich der richterlichen Unabhängigkeit eine strikte Haltung: Denn dabei hat der Anwalt für die Wahrung der Klienteninteressen den Standpunkt seines Klienten in einem gewissen Masse zu seinem eigenen zu machen, was den Anschein erwecken kann, dass er einen gleichgelagerten Fall als Richter nicht unbefangen beurteilen könnte. Sodann können die Parteien in solchen Mandaten oft nicht eindeutig zwischen der Partei und dem Rechtsvertreter unterscheiden und nehmen jenen als eigentlichen Prozessstrategen wahr."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Das bedeutet aber nicht, dass rein administrative Tätigkeiten des als nebenamtlicher Richter tätigen Anwalts bzw. seiner Kanzlei für eine Verfahrenspartei per se unbedenklich wären. Aber nicht jede irgendwie geartete Beziehung wirtschaftlicher, beruflicher oder persönlicher Natur begründet für sich allein den Anschein der Befangenheit (vgl. BGE 125 II 541 E. 4b). Damit eine solche Beziehung Besorgnis der Befangenheit zu begründen vermag, müssen objektive Umstände auf eine gewisse Intensität der Beziehung hindeuten (Urteile 9C_257/2016 vom 29. Juni 2016 E. 4.2.1; 8C_467/2014 vom 29. Mai 2015 E. 4; 4A_256/2010 vom 26. Juli 2010 E. 2.4). Ob eine Beziehung diesen Grad der Intensität erreicht, beurteilt sich aufgrund der BGE 147 III 89 S. 96 konkreten Umstände des Einzelfalls (vgl. etwa Urteil 4A_256/2010 vom 26. Juli 2010 E. 2.5 bezüglich einer Patentanmeldung). Besteht die beanstandete Beziehung nicht zu einer Verfahrenspartei sondern zu deren Gegenpartei oder einer Drittpartei in einem anderen Verfahren, ist auch die Wirkung der beiden Verfahren aufeinander beim Entscheid über den Ausstand zu berücksichtigen."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Vorliegend steht nach den Feststellungen der Vorinstanz keine berufsspezifische rechtsanwaltliche Tätigkeit der Kanzlei von Richter Tobias Bremi für die Klägerin des zweiten Patentverletzungsprozesses O2020_001 im Raum. Insbesondere vertritt die Kanzlei E. AG die Klägerin des zweiten Verfahrens nicht als Rechtsvertreterin. Aus den Feststellungen der Vorinstanz ergibt sich auch nicht, dass eine berufsspezifische, patentanwaltliche Mandatsbeziehung vorliegen würde, indem die Kanzlei E. AG für die Klägerin des zweiten Verfahrens etwa den Erfindungsschutz vorbereitet oder sie bei der Patentanmeldung oder bei der Durchsetzung ihrer Patente vertreten hätte."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Nach den Feststellungen der Vorinstanz beschränkt sich die Tätigkeit der Kanzlei E. AG für die Klägerin des zweiten Patentverletzungsverfahrens auf die rein administrative Vertretung gegenüber dem Eidgenössischen Institut für Geistiges Eigentum (IGE). Die Kanzlei ist mithin einzig als (administrative) Vertreterin von Schweizer Teilen von europäischen Patenten im Patentregister eingetragen, d.h. von Patenten, die durch das europäische Patentamt geprüft und erteilt wurden und in der Schweiz auf entsprechenden Antrag und gegen Bezahlung der Jahresgebühr im Patentregister eingetragen werden (Art. 117 und Art. 118a der Verordnung vom 19. Oktober 1977 über die Erfindungspatente[PatV; SR 232.141]). Die Aufgabe des Vertreters eines nationalen Teils eines europäischen Patents gegenüber dem nationalen Patentamt erschöpft sich darin, als Zustelladresse zu fungieren und Mitteilungen des nationalen Patentamtes an den Patentinhaber weiterzuleiten. Je nach Umfang des Auftrages kann auch die rechtzeitige Bezahlung fälliger Gebühren zum Auftrag hinzukommen. Es handelt sich damit bei der Tätigkeit als administrative Zustelladresse um eine blosse passive Übermittlerrolle. Diese ist notwendig, weil Parteien, die keinen Wohnsitz oder Sitz in der Schweiz haben, ein Zustellungsdomizil in der Schweiz bezeichnen müssen (Art. 13 des Bundesgesetzes vom 25. Juni 1954 über die Erfindungspatente [PatG; SR 232.14]). BGE 147 III 89 S. 97 Damit soll vermieden werden, dass das IGE Schriftstücke ins Ausland senden muss (MARK SCHWEIZER, in: Patentgesetz [PatG], Schweizer/Zech [Hrsg.], 2019, N. 2 zu Art. 13 PatG). Diese gesetzliche Regelung führt dazu, dass grössere Patentanwaltskanzleien oftmals bei mehreren Tausend Patenten als Vertreter gegenüber dem IGE eingetragen sind (vgl. Beschluss der Gerichtsleistung des Bundespatentgerichts vom 9. Juni 2016, O2014_013, E. 7; MARCO ZARDI, I problemi pratici di applicazione delle Direttive sull'indipendenza del Tribunale federale dei brevetti, Justice - Justiz - Giustizia 2012/3 Rz. 28). Ein solches Mandat als Zustelladresse kann nicht mit einer aktiven Vertretung im Rahmen eines typischen (Patent)anwaltsmandats verglichen werden. Während der (Patent)anwalt sich für eine wirkungsvolle Vertretung die Standpunkte seines Klienten bis zu einem gewissen Grad zu eigen machen muss, vertritt der nationale Vertreter gegenüber dem Patentamt keine anderen Interessen des Patentinhabers als diejenigen, die Mitteilungen des Patentamtes zu erhalten (und eventuell fällige Gebühren zu bezahlen). Aufgrund dieser Unterschiede rechtfertigt es sich bei rein administrativen Tätigkeiten wie dem Zurverfügungstellen einer Zustelladresse nicht, für den Ausstand die gleiche, strenge Haltung wie bei einem (patent)anwaltlichen Mandat anzuwenden. Die Anwendung der oben genannten, für die anwaltliche Tätigkeit entwickelte strenge Rechtsprechung zum Ausstand kommt damit vorliegend nicht zum Tragen (E. 5.1)."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Auch das Bundespatentgericht setzt in seinen internen Richtlinien zur Unabhängigkeit die administrative Tätigkeit und das Zurverfügungstellen einer Zustelladresse nicht mit der (patent)anwaltlichen Tätigkeit gleich (Richtlinien zur Unabhängigkeit des Bundespatentgerichts, revidiert am 5. Dezember 2014). Das Bundespatentgericht geht aber auch nicht davon aus, dass solche Tätigkeiten bezüglich des Anscheins der Befangenheit in jedem Fall unproblematisch wären. Gemäss Art. 4 lit. f der Richtlinien tritt der Richter in der Ausstand, wenn er oder das Unternehmen, bei dem er tätig ist, als Zustelladressat des den Streitgegenstand bildenden Patents administrativ tätig ist oder war. Nach lit. g des gleichen Artikels tritt der Richter sodann in den Ausstand, wenn er oder das Unternehmen, bei dem er tätig ist, innerhalb des Jahres oder regelmässig von der Streitpartei direkt als Zustelladressat und zur Aufrechterhaltung der Wirksamkeit ihrer Schutzrechte mandatiert ist oder war. Nach diesen internen Richtlinien darf Richter Bremi aufgrund der von der Vorinstanz festgestellten administrativen Beziehung seiner BGE 147 III 89 S. 98 Kanzlei zur Klägerin des zweiten Verfahrens in diesem zweiten Patentverletzungsprozess O2020_001 nicht als Richter mitwirken (Art. 4 lit. g der Richtlinien). Umgekehrt besteht nach diesen Richtlinien für den ersten Patentverletzungsprozess keine Befangenheit von Richter Bremi, da seine Kanzlei nicht von einer \"Streitpartei direkt\" als Zustelladressatin und zur Aufrechterhaltung der Wirksamkeit ihrer Schutzrechte mandatiert wurde. Die Kanzlei wurde von einer Drittpartei mandatiert, nämlich von der Klägerin des zweiten Verfahrens O2020_001, die nicht Partei im ersten Patentverletzungsverfahren O2017_022 ist. Solche generellen, gerichtsinternen Richtlinien können dem betroffenen Richter helfen, seine Befangenheit im konkreten Fall besser einzuschätzen. Ihnen kommt aber keine normative Geltung zu (BGE 139 III 433 E. 2.2 S. 441). Insbesondere sollen sie nicht zum Schluss verleiten, dass ein Richter bei administrativen Arbeiten, abgesehen von den in Art. 4 lit. f und g geregelten Konstellationen, kategorisch nicht befangen wäre. Ob ein Ausstandsgrund vorliegt, beurteilt sich nach Art. 47 ZPO unter Berücksichtigung der aus Art. 30 Abs. 1 BV fliessenden Grundsätzen nach den konkreten Umständen des Einzelfalls. Es ist entsprechend auch bei rein administrativen Tätigkeiten in jedem Fall eine konkrete und fallbezogene Prüfung vorzunehmen, ob ein Grund für eine Befangenheit vorliegt (DAVID RÜETSCHI, in: Patentgerichtsgesetz [PatGG] - Kommentar, Calame/Hess-Blumer/Stieger [Hrsg.], 2013, N. 33 zu Art. 28 PatGG)."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "4A_243/2020",
+        "key": "bger_4A_243_2020",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=05.11.2020_4A_243/2020"
+      },
+      "ecli": "ECLI:CH:BGE:2020:147.III.89"
+    }
+  ]
+}

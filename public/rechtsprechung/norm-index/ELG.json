@@ -1,9 +1,55 @@
 {
-  "erzeugt": "2026-07-02",
+  "erzeugt": "2026-07-12",
   "erlass": "ELG",
-  "gewichtQuelle": "e4",
+  "gewichtQuelle": "alt",
   "proArtikel": {
+    "1": [
+      {
+        "key": "bge_147_V_369",
+        "zitierung": "BGE 147 V 369",
+        "regesteKurz": "Art. 25 Abs. 1 ATSG und Art. 2 Abs. 1 lit. b ATSV; Rückerstattungspflicht. Der Krankenversicherer ist für die Entgegennahme von Ergänzungsleistungen im Rahmen von Art. 21a ELG (Pauschalbetrag für die obligatorische Krankenpflegeversicherun…",
+        "datum": "2021-07-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "4": [
+      {
+        "key": "bge_147_V_441",
+        "zitierung": "BGE 147 V 441",
+        "regesteKurz": "Art. 9 Abs. 2 und Art. 10 Abs. 3 lit. e ELG; Berechnung der Ergänzungsleistung bei Personen, die eine Hilflosenentschädigung der IV beziehen. Eine gemeinsame EL-Berechnung im Sinne von Art. 9 Abs. 2 ELG findet bei Personen, die eine Hilflo…",
+        "datum": "2021-09-01",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "9": [
+      {
+        "key": "bge_146_V_306",
+        "zitierung": "BGE 146 V 306",
+        "regesteKurz": "Art. 11 Abs. 1 lit. g ELG; anrechenbare Einnahmen bei Verschwendung des Vermögens. Auch wenn Ergänzungsleistungen ein gewisser sozialhilferechtlicher Charakter beigemessen wird, bleiben sie Sozialversicherungsleistungen. Bestätigung der Re…",
+        "datum": "2020-06-30",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "10": [
+      {
+        "key": "bge_147_V_312",
+        "zitierung": "BGE 147 V 312",
+        "regesteKurz": "Art. 14 Abs. 1 lit. b ELG; Art. 13 Abs. 1 der st. gallischen Verordnung über die Vergütung von Krankheits- und Behinderungskosten bei Ergänzungsleistungen; Art. 8 Abs. 1 und Art. 13 Abs. 1 BV; Krankheits- und Behinderungskosten. Eine kanto…",
+        "datum": "2021-05-28",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
       {
         "key": "bge_151_V_88",
         "zitierung": "BGE 151 V 88",
@@ -33,6 +79,26 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
+      },
+      {
+        "key": "bge_147_V_441",
+        "zitierung": "BGE 147 V 441",
+        "regesteKurz": "Art. 9 Abs. 2 und Art. 10 Abs. 3 lit. e ELG; Berechnung der Ergänzungsleistung bei Personen, die eine Hilflosenentschädigung der IV beziehen. Eine gemeinsame EL-Berechnung im Sinne von Art. 9 Abs. 2 ELG findet bei Personen, die eine Hilflo…",
+        "datum": "2021-09-01",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_147_V_369",
+        "zitierung": "BGE 147 V 369",
+        "regesteKurz": "Art. 25 Abs. 1 ATSG und Art. 2 Abs. 1 lit. b ATSV; Rückerstattungspflicht. Der Krankenversicherer ist für die Entgegennahme von Ergänzungsleistungen im Rahmen von Art. 21a ELG (Pauschalbetrag für die obligatorische Krankenpflegeversicherun…",
+        "datum": "2021-07-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       }
     ],
     "11": [
@@ -44,7 +110,47 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 2
+        "gewicht": 0
+      },
+      {
+        "key": "bge_147_V_441",
+        "zitierung": "BGE 147 V 441",
+        "regesteKurz": "Art. 9 Abs. 2 und Art. 10 Abs. 3 lit. e ELG; Berechnung der Ergänzungsleistung bei Personen, die eine Hilflosenentschädigung der IV beziehen. Eine gemeinsame EL-Berechnung im Sinne von Art. 9 Abs. 2 ELG findet bei Personen, die eine Hilflo…",
+        "datum": "2021-09-01",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_147_III_393",
+        "zitierung": "BGE 147 III 393",
+        "regesteKurz": "Art. 176 Abs. 1 Ziff. 1 ZGB; Eheschutzmassnahmen; Ehegatten- und Kindesunterhalt; zumutbarer Vermögensverzehr. Zusammenfassung der bundesgerichtlichen Rechtsprechung zur Zumutbarkeit der Anzehrung von Vermögen, wenn die laufenden Einkünfte…",
+        "datum": "2021-07-01",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_146_V_331",
+        "zitierung": "BGE 146 V 331",
+        "regesteKurz": "Art. 11 Abs. 1 lit. c ELG; Art. 16 Abs. 2 FZV; Zeitpunkt der Anrechnung von Guthaben eines Freizügigkeitskontos bei rückwirkender Ausrichtung von Ergänzungsleistungen zur Invalidenrente. Übersicht über die Rechtsprechung. Ein verzehrbarer…",
+        "datum": "2020-09-30",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_146_V_306",
+        "zitierung": "BGE 146 V 306",
+        "regesteKurz": "Art. 11 Abs. 1 lit. g ELG; anrechenbare Einnahmen bei Verschwendung des Vermögens. Auch wenn Ergänzungsleistungen ein gewisser sozialhilferechtlicher Charakter beigemessen wird, bleiben sie Sozialversicherungsleistungen. Bestätigung der Re…",
+        "datum": "2020-06-30",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       }
     ],
     "12": [
@@ -53,6 +159,18 @@
         "zitierung": "BGE 150 III 408",
         "regesteKurz": "Art. 92 Abs. 1 Ziff. 9a SchKG; Pfändung von Sparguthaben aus Sozialversicherungsleistungen. Zur Frage, ob der Pfändung auch Sparguthaben unterliegen, die aus unpfändbaren AHV- oder IV-Renten, Ergänzungsleistungen oder Leistungen der Famili…",
         "datum": "2024-08-02",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "13": [
+      {
+        "key": "bge_147_V_312",
+        "zitierung": "BGE 147 V 312",
+        "regesteKurz": "Art. 14 Abs. 1 lit. b ELG; Art. 13 Abs. 1 der st. gallischen Verordnung über die Vergütung von Krankheits- und Behinderungskosten bei Ergänzungsleistungen; Art. 8 Abs. 1 und Art. 13 Abs. 1 BV; Krankheits- und Behinderungskosten. Eine kanto…",
+        "datum": "2021-05-28",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -81,6 +199,18 @@
         "gewicht": 0
       }
     ],
+    "21": [
+      {
+        "key": "bge_147_V_156",
+        "zitierung": "BGE 147 V 156",
+        "regesteKurz": "Art. 25a Abs. 5 KVG; Restfinanzierung der Pflegekosten; Zuständigkeit. Bei im Zeitpunkt des Inkrafttretens der neuen Fassung von Art. 25a Abs. 5 KVG am 1. Januar 2019 bereits bestehendem Pflegeverhältnis mit Wohnsitzverlegung an den Stando…",
+        "datum": "2021-02-17",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "11a": [
       {
         "key": "bge_150_V_105",
@@ -90,7 +220,17 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 1
+        "gewicht": 0
+      },
+      {
+        "key": "bge_146_V_306",
+        "zitierung": "BGE 146 V 306",
+        "regesteKurz": "Art. 11 Abs. 1 lit. g ELG; anrechenbare Einnahmen bei Verschwendung des Vermögens. Auch wenn Ergänzungsleistungen ein gewisser sozialhilferechtlicher Charakter beigemessen wird, bleiben sie Sozialversicherungsleistungen. Bestätigung der Re…",
+        "datum": "2020-06-30",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       }
     ],
     "16a": [
@@ -102,7 +242,19 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 1
+        "gewicht": 0
+      }
+    ],
+    "21a": [
+      {
+        "key": "bge_147_V_369",
+        "zitierung": "BGE 147 V 369",
+        "regesteKurz": "Art. 25 Abs. 1 ATSG und Art. 2 Abs. 1 lit. b ATSV; Rückerstattungspflicht. Der Krankenversicherer ist für die Entgegennahme von Ergänzungsleistungen im Rahmen von Art. 21a ELG (Pauschalbetrag für die obligatorische Krankenpflegeversicherun…",
+        "datum": "2021-07-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       }
     ]
   }

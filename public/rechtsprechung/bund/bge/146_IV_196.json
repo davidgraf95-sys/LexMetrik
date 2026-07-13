@@ -1,0 +1,231 @@
+{
+  "erzeugt": "2026-07-12",
+  "eintraege": [
+    {
+      "id": "bund/bge/146_IV_196",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "IV",
+      "nummer": "146 IV 196",
+      "bgeReferenz": "146 IV 196",
+      "zitierung": "BGE 146 IV 196",
+      "datum": "2020-07-10",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "straf",
+      "legalArea": "public",
+      "rubrum": {
+        "besetzung": "Bundesrichter Denys, Präsident, Bundesrichterin Jacquemoud-Rossari, Bundesrichter Muschietti, Bundesrichterin van de Graaf, Bundesrichterin Koch, Gerichtsschreiber Moses",
+        "parteien": "A.________, vertreten durch Rechtsanwalt Marko Mrljes, Beschwerdeführerin, gegen Oberstaatsanwaltschaft des Kantons Aargau, Beschwerdegegnerin",
+        "gegenstand": "Strafbefehl; Kosten",
+        "vorinstanz": "Obergerichts des Kantons Aargau, Beschwerdekammer in Strafsachen, vom 7. November 2019"
+      },
+      "regeste": {
+        "text": "Art. 422 Abs. 1 StPO; Gebühren. Die Gebühren im Sinne von Art. 422 Abs. 1 StPO haben sich nicht an der Höhe der Sanktion zu orientieren (E. 2.2).\nRegeste\n Art. 422 al. 1 CPP; émoluments. Les émoluments au sens de l'art. 422 al. 1 CPP doivent être arrêtés sans égard à la quotité de la sanction (consid. 2.2).\nRegesto\n Art. 422 cpv. 1 CPP; emolumenti. Gli emolumenti ai sensi dell'art. 422 cpv. 1 CPP non devono essere stabiliti in funzione dell'entità della sanzione (consid. 2.2).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 422 Abs. 1 StPO; Gebühren.",
+            "absaetze": [
+              "Die Gebühren im Sinne von Art. 422 Abs. 1 StPO haben sich nicht an der Höhe der Sanktion zu orientieren (E. 2.2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-IV-196%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 422 al. 1 CPP; émoluments.",
+            "absaetze": [
+              "Les émoluments au sens de l'art. 422 al. 1 CPP doivent être arrêtés sans égard à la quotité de la sanction (consid. 2.2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-IV-196%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 422 cpv. 1 CPP; emolumenti.",
+            "absaetze": [
+              "Gli emolumenti ai sensi dell'art. 422 cpv. 1 CPP non devono essere stabiliti in funzione dell'entità della sanzione (consid. 2.2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-IV-196%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Infolge eines Verkehrsunfalls erklärte die Staatsanwaltschaft Baden A.________ am 22. Mai 2019 mittels Strafbefehl der einfachen Verletzung der Verkehrsregeln schuldig und bestrafte sie mit einer Busse von Fr. 300.--. Gleichzeitig auferlegte sie ihr die Verfahrenskosten von insgesamt Fr. 710.--, bestehend aus einer \"Strafbefehlsgebühr\" von Fr. 400.-- und \"Polizeikosten\" von Fr. 310.--. Am 28. August 2019 erhob A.________ Einsprache gegen den Strafbefehl, wobei sie diese auf den Kostenpunkt beschränkte."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Das Bezirksgericht Baden stellte am 23. Juli 2019 fest, dass der Strafbefehl hinsichtlich Schuldspruch und Strafe in Rechtskraft erwachsen war und befand, dass die \"Polizeikosten\" in der Höhe von Fr. 310.-- nicht geschuldet seien. Entsprechend reduzierte es die Kosten für den Strafbefehl auf insgesamt Fr. 400.--."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Auf Beschwerde der Oberstaatsanwaltschaft hob das Obergericht des Kantons Aargau die Verfügung des Bezirksgerichts am 7. November 2019 auf und wies die Einsprache gegen den Strafbefehl ab."
+            },
+            {
+              "marke": "D.",
+              "tiefe": 1,
+              "text": "A.________ führt Beschwerde in Strafsachen. Sie beantragt, der Entscheid des Obergerichts sei aufzuheben und die Kosten für den Strafbefehl seien bei Fr. 400.-- zu belassen."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin rügt, bei den \"Polizeikosten\" handle es sich um Auslagen, deren Auferlegung der beschuldigten Person unzulässig sei."
+            },
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Die Verfahrenskosten setzen sich gemäss Art. 422 Abs. 1 StPO aus den Gebühren zur Deckung des Aufwands und den Auslagen im konkreten Straffall zusammen. Art. 422 Abs. 2 StPO bestimmt den Begriff der Auslagen näher. Bund und Kantone regeln die Berechnung der Verfahrenskosten und legen die Gebühren fest (Art. 424 Abs. 1 StPO).\n\nDie Gebühren werden vom Staat für die Inanspruchnahme einer staatlichen Leistung erhoben. Sie stellen eine öffentlich-rechtliche Gegenleistung für das Tätigwerden der Behörden dar. Die Gebühren im Sinne von Art. 422 Abs. 1 StPO decken den allgemeinen Aufwand des Staates (Besoldung, Räumlichkeiten etc.) für die Bereitstellung der Strafbehörden. Diese allgemeinen Kosten gehen grundsätzlich zu Lasten des Gemeinwesens, welches das Verfahren führt (vgl. Art. 423 Abs. 1 StPO). Die Parteien partizipieren daran, indem ihnen nach Art. 422 Abs. 1 StPO Gebühren auferlegt werden dürfen. Gebühren bedürfen einer gesetzlichen Grundlage, die den Gegenstand, die Bemessungsgrundlagen und die Abgabepflichtigen festlegt. Die Auslagen erfassen demgegenüber die im konkreten Strafverfahren entstandenen notwendigen finanziellen Aufwendungen des Staates. Zwar ist die Möglichkeit der Kostenauflage im Strafverfahren in der StPO abschliessend geregelt. Die Auflistung der Auslagen in Art. 422 Abs. 2 StPO ist dennoch nur beispielhaft (\"namentlich\") zu verstehen (BGE 141 IV 465 E. 9.5.1 mit Hinweisen).\n\nGemäss § 15 des (aargauischen) Dekrets über die Verfahrenskosten vom 24. November 1987 (VKD/AG; SAR 221.150) beträgt die Gebühr für das Strafbefehlsverfahren einschliesslich des Vorverfahrens Fr. 200.-- bis Fr. 10'000.-- (Abs. 1). Dabei werden für die Tatbestandsaufnahme durch die Polizei bei Strassenverkehrsunfällen, bei Einsätzen bis zu 3 Stunden zwischen 6 und 20 Uhr, pauschal Fr. 310.-- berechnet (Abs. 2 lit. a Ziff. 1)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Die Vorinstanz erwägt, bei den Pauschalen gemäss § 15 Abs. 2 VKD/AG handle es sich nicht um Auslagen im Sinne von Art. 422 Abs. 2 StPO, sondern um einen Bestandteil der in § 15 Abs. 1 VKD/AG geregelten Gebühren. Die Beschwerdeführerin wendet ein, bei den erhobenen Polizeikosten handle es sich um Auslagen im Sinne von Art. 422 Abs. 2 StPO, da die Polizei einen Kostenrapport eingereicht habe. Die Aufnahme des Sachverhalts und deren aktenmässige Verarbeitung seien allgemeine Aufwendungen der Polizei, für welche nach BGE 141 IV 465 E. 9.5.3 keine Auslagen verrechnet werden dürften. Die Schweizerische Strafprozessordnung unterscheide nur zwischen Gebühren und Auslagen, weshalb im vorliegenden Fall die \"Polizeikosten\" als Auslagen zu qualifizieren seien. Die Beschwerdeführerin rügt weiter, dass die Pauschalisierung von Auslagen gemäss Art. 424 Abs. 2 StPO nicht zulässig sei. Der kantonale Gesetzgeber habe mit § 15 Abs. 2 VKD/AG einzig einen Weg gesucht, die Rechtsprechung des Bundesgerichts, wonach separate Kostenblätter der Polizei nicht als Auslagen verrechnet werden können, zu umgehen. Der Gebührenrahmen sei bereits mit § 15 Abs. 1 VKD/AG festgelegt worden; innerhalb dieses Rahmens sei die Strafbefehlsgebühr anhand des Äquivalenzprinzips im Einzelfall zu bestimmen. Es bedürfe keiner gesetzlichen Erhöhung der Mindestgebühren für die Dienstleistungen der Polizei bei Verkehrsunfällen.\n\nIn dem von der Beschwerdeführerin erwähnten BGE 141 IV 465 hat das Bundesgericht festgehalten, dass allgemeine Aufwendungen der Polizei, welche diese aufgrund ihrer Stellung als Strafbehörde in einem konkreten Strafverfahren zu erbringen hat, wie beispielsweise Fahndungs- und Festnahmekosten, Ermittlungskosten, Kosten der Beweissicherung oder Kosten der polizeilichen Foto- und Erkennungsdienste keine Auslagen im Sinne von Art. 422 Abs. 2 lit. d StPO darstellen, die der beschuldigten Person verrechnet werden können. Zulässig sei es demgegenüber, diese allgemeinen polizeilichen Leistungen bei der Festsetzung der Gebühren zu berücksichtigen, wenn hierfür eine ausreichende gesetzliche Grundlage besteht (E. 9.5.3). Diese Rechtsprechung schliesst - entgegen der Ansicht der Beschwerdeführerin - eine Überbindung der Kosten für polizeiliche Dienstleistungen nicht schlechthin aus, sondern nur ohne eine gesetzliche Grundlage unter dem Deckmantel von Art. 422 Abs. 2 lit. d StPO. Den Kantonen ist es damit nicht verwehrt, in ihren Erlassen die Erhebung von Gebühren (im Sinne von Art. 422 Abs. 1 StPO) für die Tätigkeit der Polizei vorzusehen. Von dieser Möglichkeit hat der kantonale Gesetzgeber mit § 15 Abs. 2 VKD/AG Gebrauch gemacht, womit die Auferlegung der \"Polizeikosten\" als Gebühr im Sinne von Art. 422 Abs. 1 StPO zu qualifizieren ist und sich als rechtmässig erweist. Dass die Polizei ein Kostenblatt einreichte, ändert daran nichts. Es erübrigt sich damit auf die Frage einzugehen, ob Auslagen - zu welchen der zur Diskussion stehende Betrag von Fr. 310.-- nicht zählt - pauschalisiert werden dürfen."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin rügt, das Äquivalenzprinzip sei verletzt worden. Sie sei mit einer Busse von Fr. 300.-- bestraft worden. Die Strafandrohung für den Tatbestand von Art. 90 Abs. 1 SVG laute auf Busse von Fr. 1.-- bis Fr. 10'000.--. Im ordentlichen Verfahren sollte eine Busse nicht niedriger als die höchste Ordnungsbusse sein, weshalb der Strafrahmen zwischen Fr. 300.-- und Fr. 10'000.-- liege. Dieses Spektrum sei mit dem Gebührenrahmen für das Strafbefehlsverfahren gemäss § 15 Abs. 1 VKD/AG in Beziehung zu setzen. Anhand der ausgesprochenen Strafe sei eine Gebühr von Fr. 710.-- übermässig."
+            },
+            {
+              "marke": "E. 2.2.1",
+              "tiefe": 3,
+              "text": "Gerichtskosten sind Kausalabgaben, weshalb sie dem Kostendeckungs- und Äquivalenzprinzip genügen müssen. Das Kostendeckungsprinzip besagt, dass der Gebührenertrag die gesamten Kosten des betreffenden Verwaltungszweigs nicht oder nur geringfügig übersteigen soll. Das Äquivalenzprinzip konkretisiert das Verhältnismässigkeitsprinzip (Art. 5 Abs. 2 BV) und das Willkürverbot (Art. 9 BV) für den Bereich der Kausalabgaben. Es bestimmt, dass eine Gebühr nicht in einem offensichtlichen Missverhältnis zum objektiven Wert der Leistung stehen darf und sich in vernünftigen Grenzen halten muss. Der Wert der Leistung bemisst sich nach dem wirtschaftlichen Nutzen, den sie dem Pflichtigen bringt, oder nach dem Kostenaufwand der konkreten Inanspruchnahme im Verhältnis zum gesamten Aufwand des betreffenden Verwaltungszweigs, wobei schematische, auf Wahrscheinlichkeit und Durchschnittserfahrungen beruhende Massstäbe angelegt werden dürfen. Es ist nicht notwendig, dass die Gebühren in jedem Fall genau dem Verwaltungsaufwand entsprechen; sie sollen indessen nach sachlich vertretbaren Kriterien bemessen sein und nicht Unterscheidungen treffen, für die keine vernünftigen Gründe ersichtlich sind. Bei der Festsetzung von Verwaltungsgebühren darf deshalb innerhalb eines gewissen Rahmens auch der wirtschaftlichen Situation des Pflichtigen und dessen Interesse am abzugeltenden Akt Rechnung getragen werden. Die Gebühr darf im Übrigen die Inanspruchnahme bestimmter staatlicher Leistungen nicht verunmöglichen oder übermässig erschweren. Bei der Festsetzung der Gerichtsgebühr verfügt das Gericht über einen grossen Ermessensspielraum. Das Bundesgericht greift in diesen nicht bereits dann ein, wenn sich die Gebühr als unangemessen erweist, sondern nur, wenn das Ermessen über- bzw. unterschritten oder missbraucht und damit Bundesrecht verletzt wird (BGE 141 I 105 E. 3.3.2 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 2.2.2",
+              "tiefe": 3,
+              "text": "In einem vereinzelten und nicht publizierten Entscheid, auf welchen sich die Beschwerdeführerin beruft, hat das Bundesgericht zusammengefasst erwogen, die Strafbefehlsgebühr bei Geschwindigkeitsüberschreitungen sei in Anwendung des aargauischen Verfahrenskostendekrets anhand der ausgesprochenen Sanktion zu bestimmen. Es hat dabei unter anderem festgehalten, es sei zulässig, wenn sich eine Strafbefehlsgebühr einerseits am erfahrungsgemäss zeitlichen Aufwand orientiere, andererseits aber die Bedeutung des Verfahrens auch unter dem Gesichtspunkt des verhängten Strafmasses im Blick behalte. Im Rahmen einer primär aufwandorientierten Betrachtung könnten unverhältnismässig hohe oder tiefe Gebühren einzelfallweise verhindert werden, wenn das Strafmass als korrektives Bemessungskriterium herangezogen werde. Das Strafmass werde dort gar zum Leitkriterium, wo gleichartige Verstösse ungeachtet unterschiedlicher Schweregrade jeweils standardisiert, ohne Rücksicht auf die konkreten Umstände und mit mehr oder weniger gleichem Aufwand, untersucht und bearbeitet werden. Dies treffe auf den Bereich der Geschwindigkeitsüberschreitungen ausgesprochen zu (Urteil 6B_253/2019 vom 1. Juli 2019 E. 3.6 - 3.8). In der Lehre wird dieser Entscheid dahingehend kritisiert, dass das strafrechtliche Verschulden allein für die Strafzumessung von Bedeutung ist und sich die Gebühren nach dem Kostendeckungs- und Äquivalenzprinzip richten. Sinn und Zweck der Verfahrenskosten im Strafprozess sei die Abgeltung behördlichen Aufwands, nicht die zusätzliche Bestrafung für ein strafrechtliches Unrecht (NIKLAUS OBERHOLZER, Grundzüge des Strafprozessrechts, 4. Aufl. 2020, Rn. 2245; STEFAN MEICHSSNER, forum poenale 2020 S. 195 ff.).\n\nDie Gebühren im Sinne von Art. 422 Abs. 1 StPO dienen ausschliesslich der Deckung des Aufwands im konkreten Straffall. Die Berücksichtigung der Höhe der Sanktion - und damit des Verschuldens - führt zwangsläufig zu einer zusätzlichen Bestrafung, was unzulässig ist und dem Zweck der Gebührenerhebung widerspricht. Am Entscheid 6B_253/2019 vom 1. Juli 2019 kann deshalb nicht festgehalten werden. Ob allenfalls das Verschulden als Höchstgrenze berücksichtigt werden darf, um Gebühren zu vermeiden, die in keinem Verhältnis zur Schwere der Straftat stehen (in diesem Sinne NIKLAUS OBERHOLZER, Gerichts- und Parteikosten im Strafprozess, in: Christian Schöbi [Hrsg.], Gerichtskosten, Parteikosten, Prozesskaution, unentgeltliche Prozessführung, 2001, S. 35), kann offenbleiben, zumal zwischen dem strafbaren Verhalten der Beschwerdeführerin und der Höhe der Gebühren im vorliegenden Fall kein offensichtliches Missverhältnis besteht. Die Rüge, die Gebühr habe sich an der Sanktion zu orientieren, erweist sich damit als unbegründet."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist abzuweisen. Die Beschwerdeführerin trägt die Kosten des Verfahrens (Art. 66 Abs. 1 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 3'000.-- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien und dem Obergericht des Kantons Aargau, Beschwerdekammer in Strafsachen, schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 10. Juli 2020\n\nIm Namen der Strafrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDer Präsident: Denys\n\nDer Gerichtsschreiber: Moses"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird abgewiesen.",
+        "Die Gerichtskosten von Fr. 3'000.-- werden der Beschwerdeführerin auferlegt.",
+        "Dieses Urteil wird den Parteien und dem Obergericht des Kantons Aargau, Beschwerdekammer in Strafsachen, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 422 Abs. 1 CPP",
+        "Art. 422 Abs. 1 STPO",
+        "Art. 5 Abs. 2 BV",
+        "Art. 9 BV",
+        "Art. 90 Abs. 1 SVG"
+      ],
+      "normKeys": [
+        "STPO",
+        "BV",
+        "BGG"
+      ],
+      "zitierteEntscheide": [
+        "6B_1430/2019",
+        "6B_253/2019",
+        "BGE 141 I 105",
+        "BGE 141 IV 465"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=10&from_date=&to_date=&from_year=2020&to_year=2020&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=99&highlight_docid=atf%3A%2F%2F146-IV-196%3Ade&number_of_ranks=200&azaclir=clir",
+      "abgerufen": "2026-07-12",
+      "fassungsToken": "855cf40c9ccd34933cba0d6618bfbf8e1b485163976ee3043863a8a1bfba49c1",
+      "sha": "edb58eceb7158787d2e5174dd8d6218f8b554915c2cd4d2bda4480255833d006",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Infolge eines Verkehrsunfalls erklärte die Staatsanwaltschaft Baden A. am 22. Mai 2019 mittels Strafbefehl der einfachen Verletzung der Verkehrsregeln schuldig und bestrafte sie mit einer Busse von Fr. 300.-. Gleichzeitig auferlegte sie ihr die Verfahrenskosten von insgesamt Fr. 710.-, bestehend aus einer \"Strafbefehlsgebühr\" von Fr. 400.- und \"Polizeikosten\" von Fr. 310.-. Am 28. August 2019 erhob A. Einsprache gegen den Strafbefehl, wobei sie diese auf den Kostenpunkt beschränkte."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Das Bezirksgericht Baden stellte am 23. Juli 2019 fest, dass der Strafbefehl hinsichtlich Schuldspruch und Strafe in Rechtskraft erwachsen war und befand, dass die \"Polizeikosten\" in der Höhe von Fr. 310.- nicht geschuldet seien. Entsprechend reduzierte es die Kosten für den Strafbefehl auf insgesamt Fr. 400.-."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Auf Beschwerde der Oberstaatsanwaltschaft hob das Obergericht des Kantons Aargau die Verfügung des Bezirksgerichts am 7. November 2019 auf und wies die Einsprache gegen den Strafbefehl ab."
+            },
+            {
+              "marke": "D.",
+              "tiefe": 1,
+              "text": "A. führt Beschwerde in Strafsachen. Sie beantragt, der Entscheid des Obergerichts sei aufzuheben und die Kosten für den Strafbefehl seien bei Fr. 400.- zu belassen."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin rügt, das Äquivalenzprinzip sei verletzt worden. Sie sei mit einer Busse von Fr. 300.- bestraft worden. Die Strafandrohung für den Tatbestand von Art. 90 Abs. 1 SVG laute auf Busse von Fr. 1.- bis Fr. 10'000.-. Im ordentlichen Verfahren sollte eine Busse nicht niedriger als die höchste Ordnungsbusse sein, weshalb der Strafrahmen zwischen Fr. 300.- und Fr. 10'000.- liege. Dieses Spektrum sei mit dem Gebührenrahmen für das Strafbefehlsverfahren gemäss § 15 Abs. 1 des Dekrets über die Verfahrenskosten vom 24. November 1987 (VKD/AG; SAR 221.150) in Beziehung zu setzen. Anhand der ausgesprochenen Strafe sei eine Gebühr von Fr. 710.- übermässig."
+            },
+            {
+              "marke": "E. 2.2.1",
+              "tiefe": 3,
+              "text": "Gerichtskosten sind Kausalabgaben, weshalb sie dem Kostendeckungs- und Äquivalenzprinzip genügen müssen. Das Kostendeckungsprinzip besagt, dass der Gebührenertrag die gesamten Kosten des betreffenden Verwaltungszweigs nicht oder nur geringfügig übersteigen soll. Das Äquivalenzprinzip konkretisiert das Verhältnismässigkeitsprinzip (Art. 5 Abs. 2 BV) und das Willkürverbot (Art. 9 BV) für den Bereich der Kausalabgaben. Es bestimmt, dass eine Gebühr nicht in einem offensichtlichen Missverhältnis zum objektiven Wert der Leistung stehen darf und sich in vernünftigen Grenzen halten muss. Der Wert der Leistung bemisst sich nach dem wirtschaftlichen Nutzen, den sie dem Pflichtigen bringt, oder nach dem Kostenaufwand der konkreten Inanspruchnahme im Verhältnis zum gesamten Aufwand des betreffenden Verwaltungszweigs, wobei schematische, auf Wahrscheinlichkeit und Durchschnittserfahrungen beruhende Massstäbe angelegt werden dürfen. Es ist nicht notwendig, dass die Gebühren in jedem Fall genau dem Verwaltungsaufwand entsprechen; sie sollen indessen nach sachlich vertretbaren Kriterien bemessen sein und nicht Unterscheidungen treffen, für die keine vernünftigen Gründe ersichtlich sind. Bei der Festsetzung von Verwaltungsgebühren darf deshalb innerhalb eines gewissen Rahmens auch der wirtschaftlichen Situation des Pflichtigen und dessen Interesse am abzugeltenden Akt Rechnung getragen werden. Die Gebühr darf im Übrigen die Inanspruchnahme bestimmter staatlicher Leistungen nicht verunmöglichen oder übermässig erschweren. Bei der Festsetzung der Gerichtsgebühr verfügt das Gericht über einen grossen BGE 146 IV 196 S. 198 Ermessensspielraum. Das Bundesgericht greift in diesen nicht bereits dann ein, wenn sich die Gebühr als unangemessen erweist, sondern nur, wenn das Ermessen über- bzw. unterschritten oder missbraucht und damit Bundesrecht verletzt wird (BGE 141 I 105 E. 3.3.2 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 2.2.2",
+              "tiefe": 3,
+              "text": "In einem vereinzelten und nicht publizierten Entscheid, auf welchen sich die Beschwerdeführerin beruft, hat das Bundesgericht zusammengefasst erwogen, die Strafbefehlsgebühr bei Geschwindigkeitsüberschreitungen sei in Anwendung des aargauischen Verfahrenskostendekrets anhand der ausgesprochenen Sanktion zu bestimmen. Es hat dabei unter anderem festgehalten, es sei zulässig, wenn sich eine Strafbefehlsgebühr einerseits am erfahrungsgemäss zeitlichen Aufwand orientiere, andererseits aber die Bedeutung des Verfahrens auch unter dem Gesichtspunkt des verhängten Strafmasses im Blick behalte. Im Rahmen einer primär aufwandorientierten Betrachtung könnten unverhältnismässig hohe oder tiefe Gebühren einzelfallweise verhindert werden, wenn das Strafmass als korrektives Bemessungskriterium herangezogen werde. Das Strafmass werde dort gar zum Leitkriterium, wo gleichartige Verstösse ungeachtet unterschiedlicher Schweregrade jeweils standardisiert, ohne Rücksicht auf die konkreten Umstände und mit mehr oder weniger gleichem Aufwand, untersucht und bearbeitet werden. Dies treffe auf den Bereich der Geschwindigkeitsüberschreitungen ausgesprochen zu (Urteil 6B_253/2019 vom 1. Juli 2019 E. 3.6-3.8). In der Lehre wird dieser Entscheid dahingehend kritisiert, dass das strafrechtliche Verschulden allein für die Strafzumessung von Bedeutung ist und sich die Gebühren nach dem Kostendeckungs- und Äquivalenzprinzip richten. Sinn und Zweck der Verfahrenskosten im Strafprozess sei die Abgeltung behördlichen Aufwands, nicht die zusätzliche Bestrafung für ein strafrechtliches Unrecht (NIKLAUS OBERHOLZER, Grundzüge des Strafprozessrechts, 4. Aufl. 2020, Rz. 2245; STEFAN MEICHSSNER, forum poenale 2020 S. 195 ff.). Die Gebühren im Sinne von Art. 422 Abs. 1 StPO dienen ausschliesslich der Deckung des Aufwands im konkreten Straffall. Die Berücksichtigung der Höhe der Sanktion - und damit des Verschuldens - führt zwangsläufig zu einer zusätzlichen Bestrafung, was unzulässig ist und dem Zweck der Gebührenerhebung widerspricht. Am Entscheid 6B_253/2019 vom 1. Juli 2019 kann deshalb nicht festgehalten werden. Ob allenfalls das Verschulden als Höchstgrenze BGE 146 IV 196 S. 199 berücksichtigt werden darf, um Gebühren zu vermeiden, die in keinem Verhältnis zur Schwere der Straftat stehen (in diesem Sinne NIKLAUS OBERHOLZER, Gerichts- und Parteikosten im Strafprozess, in: Gerichtskosten, Parteikosten, Prozesskaution, unentgeltliche Prozessführung, Christian Schöbi [Hrsg.], 2001, S. 35), kann offenbleiben, zumal zwischen dem strafbaren Verhalten der Beschwerdeführerin und der Höhe der Gebühren im vorliegenden Fall kein offensichtliches Missverhältnis besteht. Die Rüge, die Gebühr habe sich an der Sanktion zu orientieren, erweist sich damit als unbegründet."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "6B_1430/2019",
+        "key": "bger_6B_1430_2019",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=10.07.2020_6B_1430/2019"
+      },
+      "ecli": "ECLI:CH:BGE:2020:146.IV.196"
+    }
+  ]
+}
