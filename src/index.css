@@ -33,16 +33,26 @@
        Dunkel-Tinten-Wert — speist helles ink-900 UND --auf-gold. Flippt
        bewusst NIE mit dem Thema (der Dunkel-Block überschreibt ink-900 separat).
        Bei D-4-Rekalibrierung wandern beide Verbraucher mit EINEM Wert. */
-    --ink-fixed-dark:#1A1A17;
-    --ink-900:var(--ink-fixed-dark); --ink-800:#2A2A25; --ink-700:#3A3A33; --ink-600:#54544B; --ink-500:#6E6E64;
-    --ink-400:#8B8B81; --ink-300:#A9A99F;
+    /* D-4 (Ink-Wärme, 13.7.2026): die Grau-Achse ist EINE OKLCH-Hue-Normalisierung
+       auf den Brass-nahen Ziel-Hue 88° (Radix «saturated gray closest to accent»;
+       hell lag die Rampe zuvor bei ~107°=grün-gelb, jetzt brass-verwandt 88°).
+       L GEHALTEN (WCAG-Näherung, alle Werte F2-gemessen, culori) — Ausnahme: ink-500
+       hell −0.007 L, damit ink-500/well ≥4.5 statt 4.48 (Riss geheilt, s. D-4-Nachtrag).
+       Chroma = flache Glocke (C≈0.008 Enden, ~0.012–0.015 Mitten 600–400 — dort sitzt
+       Meta-/Sekundärtext, die sichtbarste Wärme-Fläche). Haarlinien erben via
+       color-mix-Rezepten automatisch. Hue-Drift jetzt HART im check:farbwelt (Span 1.3°). */
+    --ink-fixed-dark:#1C1A15;
+    --ink-900:var(--ink-fixed-dark); --ink-800:#2B2924; --ink-700:#3C3932; --ink-600:#56534C; --ink-500:#6F6B61;
+    --ink-400:#8D8A83; --ink-300:#AAA8A3;
     /* Eigener Platzhalter-Ton (Auftrag David 25.6.2026, max. Lesbarkeit):
        ink-300 war auf dem Well nur ~2:1 → quasi unsichtbar. Eigenes Token
        4.75:1 auf --well (WCAG 1.4.3 AA erfüllt), ohne den Haarlinien-/Deko-Ton
        ink-300 zu verschieben. (#7A7A70 erreichte real nur 3.77:1.)
        D-1.8: als DOKUMENTIERTE Stufe der ink-Rampe geführt (zwischen 500 und
        400) — D-4 rekalibriert sie mit der Rampe, sie ist kein Ad-hoc-Wert. */
-    --placeholder:#6A6A60;
+    /* D-4: mit der ink-Rampe auf Hue 88° normalisiert (C≈0.015), L gehalten;
+       ≥4.5:1 auf --well bleibt erfüllt (4.76:1, vorher 4.75:1). */
+    --placeholder:#6D695F;
     /* Papier – Flächen. Token-Landkarte (Regel, ohne Wertänderung):
        --paper*   = SEITENHINTERGRUND (Body, grosse Flächen)
        --surface* = KARTEN/Panels (lc-card, lc-tile, lc-panel)
@@ -217,9 +227,12 @@
   html.dark {
     color-scheme: dark;
     /* Tinte → hell (Text & Struktur auf dunklem Papier) */
-    --ink-900:#ECE7DA; --ink-800:#DFD9CB; --ink-700:#D2CCBD; --ink-600:#B4AE9F; --ink-500:#928D80;
-    --ink-400:#736F64; --ink-300:#56524A;
-    --placeholder:#8A857A; /* Platzhalter dunkel: ≥4.4:1 auf --well (#100F0A) */
+    /* D-4 (Ink-Wärme, 13.7.2026): Dunkel-Rampe auf denselben Ziel-Hue 88°
+       normalisiert (vorher 84–90° gestreut), L gehalten, Chroma-Glocke wie hell.
+       Alle Kontraste F2-gemessen: ink-500 ≥5.2:1 auf paper/surface/well. */
+    --ink-900:#E9E7E2; --ink-800:#DCD9D2; --ink-700:#CFCCC5; --ink-600:#B2AEA4; --ink-500:#918D83;
+    --ink-400:#726F68; --ink-300:#54524D;
+    --placeholder:#89857B; /* Platzhalter dunkel: ≥4.4:1 auf --well (#100F0A) — D-4: 5.2:1 */
     /* Papier → warmes Dunkel (kein Reinschwarz — die Papier-Wärme bleibt) */
     --paper:#16150F; --paper-raised:#201E16; --paper-sunken:#100F0A;
     --surface:#1D1B14; --surface-raised:var(--paper-raised);
