@@ -250,13 +250,17 @@ prüft der Orchestrator separat). Vier Klassen:
 3. **Bekannte Risse (WARNUNG + FAIL nur bei Verschlechterung — D-1-Input):**
    heute unter der Schwelle liegende Paare als Baseline-Guard, damit das Tor auf
    dem IST-Stand grün ist, ohne die Risse zu verstecken:
-   `ink-500/well` hell 4.48 (Ziel 4.5, D-4) · `danger-500/paper` dunkel 2.72
-   (Ziel 3.0, D-1.3, Direkt-Nicht-Text — der Linien-Ton nutzt bereits danger-700).
+   `danger-500/paper` dunkel 2.72 (Ziel 3.0, D-1.3, Direkt-Nicht-Text — der
+   Linien-Ton nutzt bereits danger-700).
+   *(D-4, 13.7.: `ink-500/well` hell 4.48→**4.62** geheilt → aus der Riss-Liste in
+   die WCAG-Pflichtpaare gewandert.)*
 4. **OKLCH-Struktur:** Flächen-L-Leiter `well < paper < surface < paper-raised`
    je Modus (harter FAIL — Erhebungs-Logik). Hue-Drift je Familie ≤ 8° +
-   L-Monotonie der Rampen sowie Chroma-Dämpfung Akzent (dunkel C ≤ hell −10 %) =
-   **Erstlauf-WARNUNG** (Sollwerte legen erst D-4/D-5 fest, dann scharf).
-   **APCA-Spalte NUR beratend** (Lc), nie Fail — WCAG 2.2 bleibt das Gate.
+   L-Monotonie der Rampen: **für `ink` seit D-4 harter FAIL** (die Grau-Achse ist
+   auf EINEN Ziel-Hue 88° normalisiert, Span 1.3°); `brass` bleibt **WARNUNG**
+   (Sollwerte legt erst D-9/Stripe-L-Anker fest). Chroma-Dämpfung Akzent (dunkel
+   C ≤ hell −10 %) = WARNUNG. **APCA-Spalte NUR beratend** (Lc), nie Fail —
+   WCAG 2.2 bleibt das Gate.
 
 **F2b-Nachtrag D-3 (12.7.2026) — color-mix `in srgb` → `in oklab` (Befund 36,
 FAHRPLAN-DESIGN-WAERME D-3).** Alle 19 `color-mix`-Rezepte in `src/index.css`
@@ -287,6 +291,32 @@ Status-Flächen wurden grauer/kälter als das Rezept verspricht). Neu gemessen
   Alle 46 farbwelt-Pflichtpaare bleiben ≥ Schwellen; kein Guard musste bewegt
   werden. Neue Rezepte schreiben `color-mix(in oklab, …)`; `in srgb` ist für
   Farb-Rezepte nicht mehr zulässig (Ausnahme: keine bekannt).
+
+**F2b-Nachtrag D-4 (13.7.2026) — Ink-Wärme: EINE Hue-Normalisierung der Grau-Achse
+(FAHRPLAN-DESIGN-WAERME D-4, Befunde 3+34).** Die ink-Rampe (900…300) + `--placeholder`
+sind in beiden Modi (16 Werte) in OKLCH auf **EINEN Ziel-Hue 88°** (brass-verwandt,
+Radix «saturated gray closest to accent») normalisiert; hell lag die Achse zuvor bei
+~107° (grün-gelb), dunkel bei 84–90° gestreut. **L gehalten** (WCAG-Näherung, alle
+Werte deterministisch mit culori gemessen), Chroma als flache Glocke (C≈0.008 an den
+Enden, ~0.012–0.015 in den Mitten 600–400). Hue-Drift/L-Monotonie sind für `ink` jetzt
+**harter FAIL** im Tor (Span 1.3° hell / 1.2° dunkel). Einzige bewusste L-Abweichung:
+`ink-500` hell −0.007 L, damit `ink-500/well` die 4.5:1 erreicht (Riss geheilt).
+
+- **Kontraste (culori, hell/dunkel, ≥-Schwelle-Text 4.5:1 = Pflicht):**
+
+  | Rolle | hell alt→neu (paper·surface·well) | dunkel alt→neu (paper·surface·well) |
+  |---|---|---|
+  | ink-600 (Sekundär) | 7.20·7.44·6.65 → **7.22·7.47·6.67** | 8.27·7.79·8.67 → **8.26·7.78·8.66** |
+  | ink-500 (Tertiär) | 4.85·5.01·**4.48** → **5.00·5.17·4.62** | 5.52·5.20·5.79 → **5.52·5.20·5.79** |
+  | `--placeholder` | 5.14·5.32·**4.75** → **5.15·5.33·4.76** | 4.98·4.69·5.22 → **4.97·4.68·5.21** |
+
+  ink-500/well hell überschreitet neu 4.5:1 (**4.62**, vorher 4.48 = Riss) → als
+  WCAG-Pflichtpaar geführt; `--placeholder`/well bleibt ≥4.5:1 (4.76 hell / 5.21
+  dunkel). ink-400/ink-300 sind Haarlinien-/Deko-Töne (kein 3:1-Textanspruch, §4b).
+  Haarlinien (`--line`/`--rule-*`) erben die Wärme automatisch über die
+  color-mix-Rezepte auf `var(--ink-900)`. `--ink-fixed-dark` (Solitär, speist hell
+  ink-900 UND `--auf-gold`) wanderte mit EINEM Wert `#1A1A17`→`#1C1A15`; `--auf-gold`
+  auf `brass-300` bleibt 10.71:1.
 
 ## G · Rollen, Farb-Wörterbuch & Wärme-Architektur (D-2-Nachträge)
 
