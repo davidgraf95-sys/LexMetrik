@@ -58,6 +58,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 
 | Modul | Grundlage | Stand |
 |---|---|---|
+| format.ts (Formatter-Heimat) · datumsUtils.ts | — (fachneutral, §3) | **Formatter-Heimat = `lib/format.ts`** (Datum-/CHF-/Zahl-Formatter; `vorlagen/datum.ts` = Fassade, H-9); `ISO_DATUM_RE` als Format-SSOT in `datumsUtils.ts` |
 | fedlex.ts + scripts/fedlex-cache.sh | register/quellen-register.md (Pins) | gepflegt; bei jedem neuen Gesetz Pin + Pflicht-Anker |
 | startseiteConfig.ts (Katalog) | recherche/INDEX.md (geplant-Cluster) | SSoT §5; Zählung im Test |
 | bge.ts | rechtsprechung/bge-register.md | entwurf; Teil-Regex-Fix 7.6. |

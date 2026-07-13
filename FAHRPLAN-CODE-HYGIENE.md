@@ -512,3 +512,34 @@
   KARTEN sha256 `da84fb7c…3290` (42 498 B, 63 Keys); volle Hashes im Commit `B26`.
   `npm run gate` (voll) GRÜN (tsc · vitest · golden · lint · check). Gegenprüfung n/a
   (G1, verhaltensneutraler Move/Split, kein Risikopfad).
+- **13.7.2026: H-9 gebaut (GP AUSSTEHEND)** Format-/Parse-SSOT `src/lib/format.ts`
+  (Worktree `lm-h9`, Branch `chore/h9-format-ssot`). **Kern:** neues neutrales
+  `src/lib/format.ts` als Formatter-Heimat (fachneutrale Datum-/CHF-/Zahl-
+  Formatter, ausserhalb des Risikopfad-Namespaces `vorlagen/`); `vorlagen/datum.ts`
+  jetzt reine Fassade (`export * from '../format'`) — alle 16 Konsumenten-
+  Importpfade unverändert. **Ersetzt (byte-identische chfGanz-Reimplementationen;
+  Zeilennummern origin/main verifiziert):** `tarif/staffel.ts:124` (`chf`),
+  `prozesskosten.ts:621` (`chfText`) + `:783` (Inline-Ausdruck),
+  `notariatGrundbuch.ts:138` (`spanneTxt`, nur linkes Glied) + `:160` (`chf`) →
+  Import aus `lib/format`. **Bewusst BELASSEN (Korrekturen der Kritiken):**
+  `prozesskosten.ts:784` `f` = Nullable-Wrapper (n==null→null) bleibt lokale Hülle
+  um `chfGanz`; rechtes Spannen-Glied `notariatGrundbuch.ts:138` bleibt
+  `Math.round(...).toLocaleString` OHNE «CHF »-Präfix (Spanne trägt es nur einmal;
+  chfGanz hätte es verdoppelt = Verhaltensänderung). Kommentar «BEWUSST verschieden
+  von `chf` … nicht zusammenführen (§1)» mit `chfGanz` nach `lib/format` gewandert;
+  `chf`/`chfGanz` bleiben getrennte Exporte. **B18 (Beifang):** nur die KONSTANTE
+  `export const ISO_DATUM_RE` in `datumsUtils.ts` zentralisiert; einzige ersetzte
+  Kopie = `istGueltigesISO` selbst (ohnehin offene Datei); NIRGENDS auf
+  `istGueltigesISO` umgestellt (Regex akzeptiert 2026-02-30 — Umstellung wäre
+  Verhaltensänderung). **B15 (abgewertet):** die 6 lokalen Schweizer-Zahl-Parser
+  (`arbeitsvertrag.lohnZahl` · `schlichtungsgesuchBs.ts` ×2 · `klageVereinfacht` ·
+  `mahnung` · `ErbteilungForm.num`) NICHT gemergt — je Stelle Kommentar «bewusst
+  lokal, Randsemantik (leer→0/NaN vs. `vorlagen/datum.zahl`→null) verschieden»;
+  kein Merge (kein trivial belegbarer Äquivalenzfall angefasst, §1 lieber Duplikat).
+  **Konvention:** CLAUDE.md §6 Ziff. 6 + engine-map «Daten/Infra» → «Formatter-
+  Heimat = `lib/format.ts`». **Beweis G1:** tsc + vitest (unangepasst) + golden
+  byte-gleich; volles `npm run gate` — einzig erwartetes Rot `check:gegenpruefung`
+  (G3: tarif/prozesskosten/vorlagen berührt, by design bis Quittung). **G3:
+  Gegenprüfung R1 BESTANDEN 13.7.2026** (unabhängiger Opus-Prüfer: Diff-Sichtung,
+  9 Stichproben inkl. unabhängiger ZH-NotGebV-Rechnung, golden 209/209 selbst
+  verifiziert; Quittungs-Commit mit Trailer auf dem Branch).
