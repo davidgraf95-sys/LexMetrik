@@ -32,7 +32,23 @@
             "absaetze": [
               "Prozessuale Behandlung eines im bundesgerichtlichen Beschwerdeverfahren neu eingereichten Rechtsgutachtens (E. 3.1)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-89%3Ade&lang=de&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-89%3Ade&lang=de&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 99 Abs. 1 BGG; Rechtsgutachten.",
+                "absaetze": [
+                  "Prozessuale Behandlung eines im bundesgerichtlichen Beschwerdeverfahren neu eingereichten Rechtsgutachtens (E. 3.1)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 178 Abs. 2 und Art. 190 Abs. 2 lit. b IPRG; Art. 31 f. VRK; internationale Schiedsgerichtsbarkeit, Investitionsstreitigkeit, Zuständigkeit des Schiedsgerichts.",
+                "absaetze": [
+                  "Bundesgerichtliche Prüfung der Zuständigkeitsrüge bei internationalen Investitionsstreitigkeiten (E. 4.2.1). Grundsätze der Auslegung völkerrechtlicher Verträge (E. 4.2.2). Keine Anwendung der Auslegungsregel, nach der die Vertragsparteien eine umfassende Zuständigkeit des Schiedsgerichts wünschten, bei Auslegung eines Investitionsschutzabkommens, das sowohl die Zuständigkeit der staatlichen Gerichte als auch diejenige eines Schiedsgerichts vorsieht (E. 5.1)."
+                ]
+              }
+            ]
           },
           {
             "sprache": "fr",
@@ -40,7 +56,23 @@
             "absaetze": [
               "Traitement procédural d'un avis de droit nouvellement produit au stade de la procédure de recours devant le Tribunal fédéral (consid. 3.1)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-89%3Afr&lang=fr&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-89%3Afr&lang=fr&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 99 al. 1 LTF; avis de droit.",
+                "absaetze": [
+                  "Traitement procédural d'un avis de droit nouvellement produit au stade de la procédure de recours devant le Tribunal fédéral (consid. 3.1)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 178 al. 2 et art. 190 al. 2 let. b LDIP; art. 31 s. CV; arbitrage international, litige en matière d'investissement, compétence du tribunal arbitral.",
+                "absaetze": [
+                  "Examen par le Tribunal fédéral du grief d'incompétence dans les litiges internationaux en matière d'investissements (consid. 4.2.1). Principes d'interprétation des traités internationaux (consid. 4.2.2). Pas d'application de la règle d'interprétation selon laquelle les parties souhaitaient une compétence étendue du tribunal arbitral lorsqu'il s'agit d'interpréter un traité international de protection des investissements prévoyant à la fois la compétence des tribunaux étatiques et celle d'un tribunal arbitral (consid. 5.1)."
+                ]
+              }
+            ]
           },
           {
             "sprache": "it",
@@ -48,7 +80,23 @@
             "absaetze": [
               "Trattamento procedurale di un parere giuridico inoltrato per la prima volta nella procedura di ricorso innanzi al Tribunale federale (consid. 3.1)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-89%3Ait&lang=it&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-89%3Ait&lang=it&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 99 cpv. 1 LTF; parere giuridico.",
+                "absaetze": [
+                  "Trattamento procedurale di un parere giuridico inoltrato per la prima volta nella procedura di ricorso innanzi al Tribunale federale (consid. 3.1)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 178 cpv. 2 e art. 190 cpv. 2 lett. b LDIP; art. 31 seg. CV; arbitrato internazionale, controversia sugli investimenti, competenza del tribunale arbitrale.",
+                "absaetze": [
+                  "Esame da parte del Tribunale federale della censura di incompetenza nelle controversie internazionali sugli investimenti (consid. 4.2.1). Principi per l'interpretazione di trattati internazionali (consid. 4.2.2). Nell'interpretazione di un trattato di protezione degli investimenti che prevede sia la competenza dei tribunali statali sia quella di un tribunale arbitrale, non viene applicata la regola di interpretazione secondo cui le parti desiderano una competenza estesa del tribunale arbitrale (consid. 5.1)."
+                ]
+              }
+            ]
           }
         ]
       },

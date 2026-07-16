@@ -32,7 +32,23 @@
             "absaetze": [
               "Bei einer (Teil-)Liquidation darf das Altersguthaben gemäss Art. 15 BVG nicht geschmälert werden. I.c. keine rechtsmissbräuchliche Berufung auf diese Vorgabe (E. 2.1 und 2.2)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-86%3Ade&lang=de&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-86%3Ade&lang=de&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 53d Abs. 3 BVG; Zuweisung des Fehlbetrags bei (Teil-)Liquidation.",
+                "absaetze": [
+                  "Bei einer (Teil-)Liquidation darf das Altersguthaben gemäss Art. 15 BVG nicht geschmälert werden. I.c. keine rechtsmissbräuchliche Berufung auf diese Vorgabe (E. 2.1 und 2.2)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 53d Abs. 6 und Art. 73 BVG; Zuständigkeit.",
+                "absaetze": [
+                  "Die Verzinsung der aus der (Teil-)Liquidation resultierenden individuellen Austrittsleistung ist im Klageverfahren zu klären (E. 3.2)."
+                ]
+              }
+            ]
           },
           {
             "sprache": "fr",
@@ -40,7 +56,23 @@
             "absaetze": [
               "L'avoir de vieillesse selon l'art. 15 LPP ne peut pas être réduit en cas de liquidation (partielle). Pas de référence abusive à cette prescription en l'occurrence (consid. 2.1 et 2.2)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-86%3Afr&lang=fr&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-86%3Afr&lang=fr&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 53d al. 3 LPP; affectation du découvert en cas de liquidation (partielle).",
+                "absaetze": [
+                  "L'avoir de vieillesse selon l'art. 15 LPP ne peut pas être réduit en cas de liquidation (partielle). Pas de référence abusive à cette prescription en l'occurrence (consid. 2.1 et 2.2)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 53d al. 6 et art. 73 LPP; compétence.",
+                "absaetze": [
+                  "Les intérêts sur la prestation de sortie individuelle résultant de la liquidation (partielle) doivent être clarifiés dans la procédure d'action (consid. 3.2)."
+                ]
+              }
+            ]
           },
           {
             "sprache": "it",
@@ -48,7 +80,23 @@
             "absaetze": [
               "In caso di liquidazione (parziale) l'avere di vecchiaia nel senso dell'art. 15 LPP non può essere ridotto. In concreto nessun riferimento abusivo a tale disposizione (consid. 2.1 e 2.2)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-86%3Ait&lang=it&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-V-86%3Ait&lang=it&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 53d cpv. 3 LPP; ripartizione dell'importo del disavanzo in caso di liquidazione (parziale).",
+                "absaetze": [
+                  "In caso di liquidazione (parziale) l'avere di vecchiaia nel senso dell'art. 15 LPP non può essere ridotto. In concreto nessun riferimento abusivo a tale disposizione (consid. 2.1 e 2.2)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 53d cpv. 6 e art. 73 LPP; competenza.",
+                "absaetze": [
+                  "Gli interessi sulla prestazione d'uscita individuale che risultano da una liquidazione (parziale) devono essere verificati nella procedura d'azione (consid. 3.2)."
+                ]
+              }
+            ]
           }
         ]
       },

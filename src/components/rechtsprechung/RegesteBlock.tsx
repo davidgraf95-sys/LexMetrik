@@ -16,18 +16,36 @@ const SPRACH_LABEL: Record<EntscheidSprache, string> = {
   de: 'Deutsch', fr: 'Français', it: 'Italiano', rm: 'Rumantsch',
 };
 
-/** Eine Sprachfassung: Regestenkopf (fett) + Textabsätze. */
-function Fassung({ f }: { f: RegesteSprachfassung }) {
+/** Ein Regeste-Teil: optionales Teil-Label («Regeste a») + Kopf (fett) + Absätze. */
+function Teil({ label, kopf, absaetze }: { label?: string | null; kopf: string; absaetze: string[] }) {
   return (
     <div className="space-y-2">
+      {label && <p className="lc-overline text-ink-600">Regeste {label}</p>}
       {/* Regestenkopf = massgebliche Artikel + Regestentitel; in der amtlichen
           Sammlung FETT (David: «massgebliche Artikel fett»). */}
-      <p className="font-serif text-body-l font-semibold leading-[1.7] text-ink-900">{f.kopf}</p>
-      {f.absaetze.map((a, i) => (
+      <p className="font-serif text-body-l font-semibold leading-[1.7] text-ink-900">{kopf}</p>
+      {absaetze.map((a, i) => (
         <p key={i} className="font-serif text-body-l leading-[1.7] text-ink-900">{a}</p>
       ))}
     </div>
   );
+}
+
+/**
+ * Eine Sprachfassung. Mehrteilige amtliche Regeste («Regeste a / b / c», Bug-Fix
+ * A29) → alle Teile mit Label; sonst der eine Kopf+Absätze (byte-treu zum Altstand).
+ */
+function Fassung({ f }: { f: RegesteSprachfassung }) {
+  if (f.weitereRegesten?.length) {
+    return (
+      <div className="space-y-4">
+        {f.weitereRegesten.map((t, i) => (
+          <Teil key={i} label={t.label} kopf={t.kopf} absaetze={t.absaetze} />
+        ))}
+      </div>
+    );
+  }
+  return <Teil kopf={f.kopf} absaetze={f.absaetze} />;
 }
 
 interface Props {
