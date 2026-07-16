@@ -217,3 +217,66 @@ Zuständigkeits-Behördenadressen über BS hinaus (L, Pflegelast → Verfallsreg
 Härtungs-Einheit) → 3. **O-3.1–3.3** (Golden-Matrix + Flake-Wurzel + Sharding) →
 4. **O-4 sofort-Teil** → 5. O-2-Rest / O-3.4 → Gates: O-2-Rahmen (einmalig), O-4-Filter,
 O-6-Einzelentscheide, O-5 entparken.
+
+## Bau-Status QS-OPT (additiv — nur Fakten, keine Freigaben)
+
+Bau-Agent-Kette 16.7.2026 (Opus), sequenziell, je Einheit eigener PR + armierter Auto-Merge:
+
+- **O-1 Betrieb & Wachhund** — **gebaut, PR #244.** Posten #1 CSP-Fix (entscheidsuche.ch
+  in connect-src + Invariant-Tor), #2/#3 Monitor (Prod-Smoke + `check:netz` 6→10 Tore),
+  #4 Soft-404 (extensions-basiertes Rewrite, SPA-Deep-Routes unangetastet), #6 LIK-Frische
+  (Monitor-Tor), #7 Loader-Fehler-Cache (laden.ts/browse.ts), #8 Zefix/geo-Vertragstests.
+  Übersprungen: **#5 Case-Redirect** (fragil in vercel.json — Enumeration/Prerender nötig),
+  **#9 /api/fehler** (Mini-Gate: Datenschutz-Wortlaut David).
+- **O-3.1 Golden-Matrix Rechen-Blindspot** — **gebaut, PR #247.** 40 Fälle für
+  prozesskosten/beurkundung/grundbuchgebuehren/notariatGrundbuch (209→249), verhaltensneutral
+  (strikt additiv, 0 Deletions), throw-frei; per-Zelle-Kantonstaffel-Korrektur deferiert
+  (Gate-Note). O-3.2 Flake-Wurzel / O-3.3 Sharding / O-3.4 e2e-Masse: **offen** (nächste Kette;
+  e2e-Validierungs-lastig, O-3.2 Kollision mit Splitview-e2e-Worktree beachten).
+- **O-2 Frische-Automatik** — **NICHT gebaut (O-2-Rahmen-Gate David ausstehend).**
+- **O-4 FR/IT** — sofort-Teil (Alias-Tabelle/Chips) **offen** (Alias = Risikopfad-Verifikation
+  ~60–80 amtl. Abk.; Chips kollidieren mit Reader-PRs); **DE-Filter-Heben NICHT gebaut
+  (O-4-klein-Gate David ausstehend).**
+- **O-5 SEO** — geparkt (kein Bau). **O-6 Werkzeuge/Vorlagen** — §0a/Katalog-Gate (kein Bau).
+
+Bau-Agent-Kette 16.7.2026 (Opus, abends — Fortsetzung nach den David-Gate-Freigaben):
+
+**David-Freigaben 16.7.2026 (Auswahl-Dialog, wörtlich protokolliert):**
+- **O-2-Rahmen-Gate:** «Ja, voll freigeben» — scheduled Daten-Reparatur-PRs dürfen bei
+  grünen Toren unbeaufsichtigt auto-mergen (Prod-Auto-Deploy inkl.); Turso-Schreib-Token
+  als CI-Secret freigegeben. Schaltet O-2.1 Batch-Re-Pin für den 1.8.-Berg scharf.
+- **O-4-klein-Gate:** «Ja, FR/IT aufnehmen» — der harte de-Filter
+  (`scripts/normtext-entscheide.ts:111/133`) fällt; FR/IT-BGer-Originale mit Sprach-Badge.
+- **O-1.9:** «Bauen, Wortlaut schlägt Agent vor» — /api/fehler bauen, Datenschutz-Absatz
+  als Entwurf (Status entwurf §8, David passt bei Abnahme an).
+
+- **Turso-Schreib-Token** als CI-Secret `TURSO_AUTH_TOKEN` **gesetzt** (`gh secret set`),
+  Rahmen freigegeben — schaltet O-2.6 turso-sync + O-2-Reparatur-Auto-Merge scharf.
+- **O-2 Frische-Automatik** — **gebaut, PR #259 (Auto-Merge, Gegenprüfung bestanden).**
+  `scripts/fedlex-repin-batch.ts` (O-2.1): hebt überholte Bund-Pins in EINEM Lauf auf die
+  geltende Konsolidierung (neues kons-Datum + kanonisches html-N via isExemplifiedBy,
+  byte-präzise cache.sh-Feld-3/4-Ersetzung); **§7-treu: künftige Fassungen (der 1.8.-Berg)
+  werden NIE re-pinnt.** Zwei eigene Workflows (`fedlex-frische.yml` Reparatur-Arm mit
+  Auto-Merge-PR + Handschritt-Zettel; `turso-sync.yml` an Daten-Diff + Live-Parität) —
+  bewusst getrennt von `normen-monitor.yml`, um die Kollision mit dem O-1-Umbau (#244) zu
+  vermeiden. **Live-Befund:** asylv2 fällig (2026-06-12→2026-07-14/html-1, adversarial
+  gegen Fedlex bestätigt), chemrrv überholt aber html-N noch nicht publiziert (Handschritt);
+  beide behandelt der scheduled Lauf — der PR selbst mutiert den Korpus NICHT (§14.2).
+  Gegenprüfung bestanden (unabh. Opus, Fedlex-SPARQL/Filestore). **Offen O-2:** #2.3 BGE-
+  Currency-Sonde, #2.4 check:entscheide-netz, #2.5 Kantons-Repair-Pfad, #2.7 Frische-SLA.
+- **O-1.9 /api/fehler** — **gebaut, PR #257 (Auto-Merge).** Edge-Fehlerkanal ('self',
+  POST-only, ratenbegrenzt, sanitisiert, 3 längenbegrenzte Felder, keine PII/Fingerprinting)
+  + Client (`fehlermeldung.ts`, gesampelt 0.25, fire-and-forget, nur pathname) + ErrorBoundary/
+  window.onerror-Verdrahtung + VITE_BUILD_ID + Datenschutz-§8-**Entwurf** (David-Wortlaut bei
+  Abnahme). Kein Risikopfad → Gegenprüfung n/a. (Löst O-1 #9, in #244 übersprungen.)
+- **O-4 Alias-Tabelle FR/IT** — **Bau-Agent (Fork) dispatcht** (normQuery.ts DE↔FR/IT,
+  ~60–80 amtl. Abk., Risikopfad-Verifikation + Gegenprüfung); PR folgt. **O-4 DE-Filter-Heben
+  + Sprach-Badge + Korpus-Re-Lauf: OFFEN** (heavy: hunderte FR/IT-Fetches über Netz,
+  deterministischer Generator-Lauf, Budget aus check:entscheide ggf. Band-Tranchen,
+  Gegenprüfung ×3 Sprachen gegen bger.ch) → eigene schwere Bau-Einheit. **FR|IT-Chips im
+  Leser: ans Ketten-Ende** (Kollision mit laufenden Reader-PRs).
+- **O-3.2 Flake-Wurzel** — separat fortgesetzt (eigener Agent). **O-3.3 Sharding** — OFFEN,
+  Vorbedingung Hotfix #248 (ci.yml). **O-3.4 e2e-Masse** — OFFEN.
+- **CI-Abhängigkeit:** grünes CI der PRs #257/#259 setzt Hotfix **#248** (bibliothek-check
+  S7.3, Auto-Merge offen) auf main voraus — bis dahin `check:bibliothek` vorbestehend rot;
+  Auto-Merge greift, sobald #248 landet und die Branches nachgezogen sind.
