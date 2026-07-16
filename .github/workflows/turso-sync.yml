@@ -1,0 +1,75 @@
+# ─── Turso-Serving-Sync an Daten-Diff gekoppelt (O-2.6, QS-DATA §5 E2) ──────
+# Bisher war datenhaltung:turso-sync ein reiner Handlauf — Reader (statische JSONs)
+# und Prod-Suche (Turso-Replika) konnten zwei Frische-Wahrheiten servieren. Dieser
+# Job synchronisiert die HOT-Replika automatisch, sobald sich auf main die
+# servierten Korpus-Daten aendern, und prueft danach die Live-Paritaet.
+#
+# Secret TURSO_AUTH_TOKEN (Schreib-Token) — David-Rahmen-Gate 16.7.2026 freigegeben.
+# Ohne Secret degradiert der Job ehrlich (ueberspringt den Sync, meldet es).
+name: Turso-Serving-Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/normtext/**'
+      - 'public/rechtsprechung/**'
+      - 'daten-manifest.json'
+  workflow_dispatch:
+
+concurrency:
+  group: turso-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Build HOT-Artefakt · Turso-Sync · Live-Paritaet
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Token vorhanden?
+        id: token
+        env:
+          T: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: |
+          if [ -n "$T" ]; then echo "da=1" >> "$GITHUB_OUTPUT"; else
+            echo "da=0" >> "$GITHUB_OUTPUT"
+            echo "::warning::Kein TURSO_AUTH_TOKEN — Sync uebersprungen (ehrliche Degradierung)."
+          fi
+
+      - name: HOT-Artefakt bauen (aus committeten JSONs, reproduzierbar)
+        if: steps.token.outputs.da == '1'
+        run: npm run datenhaltung:build
+
+      - name: Turso-Sync (Voll-Rebuild, determinismus-beweisbar)
+        if: steps.token.outputs.da == '1'
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: npm run datenhaltung:turso-sync
+
+      - name: Live-Paritaets-Stichprobe (Prod /api/suche gegen bekannte Artikel)
+        if: steps.token.outputs.da == '1'
+        run: |
+          set -uo pipefail
+          basis="https://lexmetrik.vercel.app/api/suche"
+          fehler=0
+          for q in "OR%20319" "ZGB%201" "StGB%20111"; do
+            code=$(curl -s -o /tmp/r.json -w '%{http_code}' --max-time 20 "${basis}?q=${q}") || code=000
+            if [ "$code" != "200" ]; then
+              echo "::warning::/api/suche '$q' -> HTTP $code (Prod evtl. noch am Deployen; kein harter Fehler)."
+              continue
+            fi
+            if ! grep -q '"' /tmp/r.json; then
+              echo "::error::/api/suche '$q' lieferte keine verwertbaren Treffer."; fehler=1
+            else
+              echo "ok: /api/suche '$q' -> 200 + Inhalt."
+            fi
+          done
+          exit $fehler

@@ -1,0 +1,140 @@
+# ─── Fedlex-Frische-Automatik (O-2, QS-OPT / QS-CURRENCY) ───────────────────
+# Der REPARATUR-Arm des Frische-Kreislaufs (der Normen-Monitor ist der Detektions-
+# Arm). Zwei Schritte, beide rein amtlich (Fedlex-SPARQL):
+#   1. gen:fedlex-wiedervorlage  — currency.json + AUTO-Wiedervorlage-Block frisch
+#      halten (Reader-Chips «geltend geprüft am …» bleiben ≤7 Tage alt).  [O-2.2]
+#   2. fedlex:repin-batch --write — ALLE überholten Bund-Pins (geltende
+#      Konsolidierung ≤ heute > Pin) auf die geltende Fassung heben, Snapshots +
+#      Struktur regenerieren, Normtext-Tore fahren.  [O-2.1]
+# Ergibt sich ein Diff, wird EIN Auto-Merge-PR eröffnet (David-Rahmen-Gate 16.7.2026:
+# «Ja, voll freigeben» — scheduled Daten-Reparatur-PRs dürfen bei grünen Toren
+# unbeaufsichtigt auto-mergen; main deployt auf Prod). Überholte Erlasse ohne
+# auflösbare html-Manifestation (Handschritt) melden einen sichtbaren Aufgaben-Zettel.
+#
+# Getrennt von normen-monitor.yml gehalten (eigene Datei): Detektion ≠ Reparatur,
+# und vermeidet die Kollision mit dem parallelen O-1-Monitor-Umbau (#244).
+name: Fedlex-Frische-Automatik
+
+on:
+  schedule:
+    - cron: '43 4 * * 1' # montags 04:43 UTC (vor dem 05:17-Monitor)
+  workflow_dispatch:
+
+# Auto-Merge-PRs, die von github.token erstellt werden, lösen KEINE CI aus (GH-
+# Limitierung). Ist ein PAT als Secret AUTOMERGE_TOKEN hinterlegt, wird es genutzt
+# (dann läuft die CI auf dem Reparatur-PR); sonst github.token (PR wird eröffnet,
+# CI muss ggf. manuell angestossen werden — im PR-Body vermerkt).
+concurrency:
+  group: fedlex-frische
+  cancel-in-progress: false
+
+jobs:
+  frische:
+    name: Wiedervorlage-Refresh · Batch-Re-Pin
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Laufdatum festlegen (§2 — kein Date.now in der Erhebung)
+        id: datum
+        run: echo "iso=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Wiedervorlage + Currency frisch halten (O-2.2)
+        run: npm run gen:fedlex-wiedervorlage -- --datum=${{ steps.datum.outputs.iso }}
+
+      - name: Batch-Re-Pin überholter Pins (O-2.1)
+        id: repin
+        run: |
+          set -uo pipefail
+          npm run fedlex:repin-batch -- --datum=${{ steps.datum.outputs.iso }} --write | tee repin.log
+          # Handschritt-Fälle (überholt, aber html-N nicht auflösbar) markieren.
+          if grep -q '⚠' repin.log; then echo "handschritt=1" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Regenerierung (nur wenn cache.sh re-gepinnt wurde)
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- scripts/fedlex-cache.sh; then
+            echo "Kein Re-Pin — keine Regenerierung nötig."
+          else
+            echo "cache.sh re-gepinnt → Snapshots/Struktur/Register regenerieren."
+            npm run normtext -- --datum=${{ steps.datum.outputs.iso }}
+            npm run normtext:register -- --datum=${{ steps.datum.outputs.iso }}
+            npm run normtext:struktur -- --datum=${{ steps.datum.outputs.iso }}
+            npm run gen:fedlex-wiedervorlage -- --datum=${{ steps.datum.outputs.iso }}
+            npm run gen:verfall
+            npm run datenhaltung:manifest
+          fi
+
+      - name: Diff feststellen
+        id: diff
+        run: |
+          if git diff --quiet; then
+            echo "geaendert=0" >> "$GITHUB_OUTPUT"
+            echo "Kein Frische-Diff — nichts zu tun."
+          else
+            echo "geaendert=1" >> "$GITHUB_OUTPUT"
+            git diff --stat
+          fi
+
+      - name: Offline-Tore vor dem PR (kein roter Auto-Merge-PR)
+        if: steps.diff.outputs.geaendert == '1'
+        run: |
+          set -euo pipefail
+          npm run check:normtext
+          npm run check:struktur-konsistenz
+          npm run golden:vergleich
+          npm run check:verfall
+          npm run check:paritaet
+
+      - name: Reparatur-PR eröffnen + Auto-Merge (David-Rahmen 16.7.2026)
+        if: steps.diff.outputs.geaendert == '1'
+        env:
+          GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN || github.token }}
+          DATUM: ${{ steps.datum.outputs.iso }}
+        run: |
+          set -euo pipefail
+          branch="chore/fedlex-frische-${DATUM}"
+          git config user.name  "fedlex-frische-bot"
+          git config user.email "noreply@anthropic.com"
+          git checkout -b "$branch"
+          git add -A
+          git commit -m "chore(currency): Fedlex-Frische-Automatik ${DATUM} — Re-Pin/Wiedervorlage
+
+          Automatischer Reparatur-Lauf (O-2.1/O-2.2). Re-Pin überholter Bund-Pins auf
+          die geltende Fedlex-Konsolidierung + Currency/Wiedervorlage-Refresh.
+          Offline-Tore grün (check:normtext, struktur-konsistenz, golden, verfall, paritaet).
+
+          Roadmap: QS-OPT
+          Gegenpruefung: automatisch — SPARQL-dateApplicability-Arbiter (fedlex-repin-batch), §7 künftige Fassungen ausgeschlossen
+          Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
+          git push -u origin "$branch"
+          gh pr create --fill --base main --head "$branch" \
+            --title "chore(currency): Fedlex-Frische ${DATUM} (Auto-Merge)" \
+            --body "Automatischer Frische-Lauf (O-2.1 Batch-Re-Pin + O-2.2 Wiedervorlage). David-Rahmen-Gate 16.7.2026 («Ja, voll freigeben»): scheduled Reparatur-PRs auto-mergen bei grünen Toren; main → Prod. Netz-Currency-Tor (check:fedlex-versionen) läuft im wöchentlichen Normen-Monitor. Falls dieser PR von github.token stammt, startet die CI ggf. nicht selbst — dann manuell anstossen." \
+            || echo "PR evtl. schon offen (idempotent)."
+          gh pr merge --auto --squash "$branch" || echo "Auto-Merge nicht aktivierbar (Repo-Setting/Token) — PR bleibt offen zur Abnahme."
+
+      - name: Handschritt-Zettel (überholt, aber html-N nicht auflösbar)
+        if: steps.repin.outputs.handschritt == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          offen=$(gh issue list --state open --search 'Fedlex-Re-Pin Handschritt in:title' --json number --jq '.[0].number // empty')
+          rumpf="Ein überholter Bund-Pin ist NICHT automatisch re-pinnbar (keine kanonische html-Manifestation für die geltende Konsolidierung — oft: die Fassung ist eben erst in Kraft getreten, das HTML-Exemplar lagert noch nach). §7-Handschritt: html-N via SPARQL isExemplifiedBy prüfen, sobald verfügbar, dann fedlex:repin-batch erneut. Details im Lauf-Log: ${RUN_URL}"
+          if [ -n "$offen" ]; then
+            gh issue comment "$offen" --body "Erneut am $(date -u +%F). ${rumpf}"
+          else
+            gh issue create --title "🟠 Fedlex-Re-Pin Handschritt fällig ($(date -u +%F))" --body "$rumpf"
+          fi

@@ -221,5 +221,8 @@ async function main() {
   console.log('\nNachlauf: `npm run gen:verfall` (UI-Datenmodul), `npm run datenhaltung:manifest` (Paritäts-Dump).');
 }
 
-// Als CLI ausführen; beim Import aus dem Unit-Test (VITEST gesetzt) NICHT laufen.
-if (!process.env.VITEST) void main();
+// Als CLI ausführen; beim Import aus dem Unit-Test (VITEST gesetzt) NICHT laufen —
+// ebenso wenig, wenn ein anderes Skript nur die reinen Funktionen (`erhebe`,
+// `abstraktEli`) importiert und dazu FEDLEX_NUR_IMPORT setzt (fedlex-repin-batch),
+// sonst schriebe der Import ungewollt parameter-verfall.md + currency.json.
+if (!process.env.VITEST && !process.env.FEDLEX_NUR_IMPORT) void main();
