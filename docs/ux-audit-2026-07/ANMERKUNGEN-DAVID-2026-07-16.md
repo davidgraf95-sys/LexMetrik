@@ -90,6 +90,31 @@ https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_
 (welchen Entscheid zeigt bger.ch dort wirklich? existiert atf://150-III-38?),
 Link-Format korrigieren oder ehrlicher Such-Query-Fallback.
 
+## Nachtrag 2 (gleiche Session, abends)
+
+12. (→ **A41**, UI-Bug, bündelt mit E5/A35)
+«kopfzeile bei gesetzen verdeckt suchresultate aus dem header»
+*Einordnung:* Das Suchresultate-Dropdown der Header-Suche liegt unter der
+sticky Gesetzes-Kopfzeile (Stacking/z-index) — Overlay-Bug.
+
+13. (→ **A42**, kantonale Extraktions-Treue, Heimat W2·13/K-1, Risiko-Pfad)
+«https://lexmetrik.vercel.app/gesetze/kanton/BS-154.100
+enhält keine marginalen und auch keinen ingress»
+«und keine gliederung»
+«enthält auch keine fussnoten»
+«ingress soll analog zu pdf ingress verlinked sein
+file:///Users/david/Downloads/154.100-9-1.de.pdf»
+*Einordnung:* Referenzfall für die kantonale Reader-/Extraktions-Treue
+(BS 154.100): Marginalien, Ingress (mit Rechtsgrundlagen-VERLINKUNG wie im
+amtlichen PDF), Gliederung und Fussnoten fehlen im Kanton-Snapshot komplett.
+Lokale PDF-Referenz: ~/Downloads/154.100-9-1.de.pdf (amtliche BS-Publikation).
+
+14. (→ **A43**, Fussnoten-Zuordnung, Fläche A31a)
+«https://lexmetrik.vercel.app/gesetze/bund/SCHKG#art-56 reihenfolge fussnoten
+falsch. resp. bezieht sich fussnote 95 auf marginale. vgl. fedlex»
+*Einordnung:* Fussnoten-ZUORDNUNGS-Fall (Marginalie vs. Artikelebene) +
+Reihenfolge — an den A31a-Strang übergeben (PR #255 offen).
+
 ## Nachtrag 3 (gleiche Session — Auftrag Gesetze-Aufteilung V2)
 
 «verbessere mit ultracode und fable die aufteilung der gesetze kantonal und
