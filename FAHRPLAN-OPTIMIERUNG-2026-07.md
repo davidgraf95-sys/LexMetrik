@@ -233,8 +233,31 @@ Bau-Agent-Kette 16.7.2026 (Opus), sequenziell, je Einheit eigener PR + armierter
   (strikt additiv, 0 Deletions), throw-frei; per-Zelle-Kantonstaffel-Korrektur deferiert
   (Gate-Note). O-3.2 Flake-Wurzel / O-3.3 Sharding / O-3.4 e2e-Masse: **offen** (nächste Kette;
   e2e-Validierungs-lastig, O-3.2 Kollision mit Splitview-e2e-Worktree beachten).
-- **O-2 Frische-Automatik** — **NICHT gebaut (O-2-Rahmen-Gate David ausstehend).**
-- **O-4 FR/IT** — sofort-Teil (Alias-Tabelle/Chips) **offen** (Alias = Risikopfad-Verifikation
-  ~60–80 amtl. Abk.; Chips kollidieren mit Reader-PRs); **DE-Filter-Heben NICHT gebaut
-  (O-4-klein-Gate David ausstehend).**
+  Fortsetzungs-Kette 16.7.2026 (Opus): **O-3.2/3.3/3.4** — O-3.2 Flake-Wurzel separater
+  Bau-Agent (läuft), **O-3.3 Sharding** wartet auf Hotfix #248-Merge, **O-3.4 e2e-Masse** offen.
+- **O-1.9 /api/fehler** — **gebaut, PR #257** (aus O-1 #9 nachgezogen). Edge-`api/fehler.ts`
+  ('self', POST-only, ratenbegrenzt, sanitisiert, nur meldung/route/build — keine Eingaben/
+  Fingerprinting) + gesampelter fire-and-forget-Client (`components/fehlermeldung.ts`) +
+  ErrorBoundary/window.onerror-Verdrahtung + VITE_BUILD_ID; Datenschutz-Absatz als **ENTWURF**
+  (§8, Status entwurf). **David-Freigabe 16.7.2026 (Auswahl-Dialog): «O-1.9 ERTEILT — Bauen,
+  Wortlaut schlägt Agent vor.»** Kein Risikopfad → Gegenprüfung n/a.
+- **O-2 Frische-Automatik** — **gebaut, PR #259.** `scripts/fedlex-repin-batch.ts` (O-2.1,
+  Batch-Re-Pin überholter Bund-Pins auf die geltende Konsolidierung, §7-treu: künftige
+  Fassungen NIE re-pinnt) + `.github/workflows/fedlex-frische.yml` (scheduled Reparatur-Arm →
+  Auto-Merge-PR) + `.github/workflows/turso-sync.yml` (O-2.6, Daten-Diff → Turso-Sync + Live-
+  Parität). **Turso-Schreib-Token als CI-Secret gesetzt** (`TURSO_AUTH_TOKEN`). Eigene Workflow-
+  Dateien statt normen-monitor.yml-Eingriff (Kollision mit #244 vermieden). Live-Befund:
+  asylv2 fällig (→ 2026-07-14/html-1), chemrrv Handschritt — Korpus in diesem PR NICHT mutiert.
+  **Gegenprüfung bestanden** (unabh. Opus gegen Fedlex-SPARQL/Filestore: asylv2/html-1 verifiziert,
+  §7-Berg USG/KVV/AVIV/BVV2/KLV echt künftig korrekt ausgeschlossen, chemrrv 0-Manifestation
+  korrekt geflaggt). **David-Rahmen-Gate 16.7.2026 (Auswahl-Dialog): «O-2-Rahmen-Gate ERTEILT —
+  Ja, voll freigeben»** (scheduled Reparatur-PRs auto-mergen bei grünen Toren, Prod-Auto-Deploy
+  inkl.; Turso-Schreib-Token als CI-Secret freigegeben).
+- **O-4 FR/IT** — sofort-Teil geteilt: **Alias-Tabelle** (normQuery FR/IT) separater Bau-Agent
+  (läuft, feat/qsopt-o4-alias); **DE-Filter-Heben + Sprach-Badge** als isolierter Worktree-WIP
+  (`feat/qsopt-o4-frit`: scripts/normtext-entscheide.ts + EntscheidKarte/Zeile/format/EntscheidLeser)
+  — **offen bleibt die schwere Korpus-Regenerierung** (hunderte FR/IT-Volltexte übers Netz +
+  Gegenprüfung ×3 Sprachen + check:entscheide-Budget/Tranchen); Chips ans Ketten-Ende (Reader-PR-
+  Kollision). **David-Freigabe 16.7.2026 (Auswahl-Dialog): «O-4-klein-Gate ERTEILT — Ja, FR/IT
+  aufnehmen»** (harter de-Filter fällt; FR/IT-BGer-Originale mit Sprach-Badge).
 - **O-5 SEO** — geparkt (kein Bau). **O-6 Werkzeuge/Vorlagen** — §0a/Katalog-Gate (kein Bau).
