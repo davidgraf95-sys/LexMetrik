@@ -1575,3 +1575,179 @@ E2 (Rendering) ‖ E3 (Pane) parallel in Worktrees → dann E4 → E5 → E6 →
 A38/D-Kette und A39/PR-B/PR-C laufen als eigene Stränge (andere Flächen).
 Je Einheit gilt die A9-DoD-Zeile (§10.4) wörtlich; Risiko-Einheiten (E1, A39,
 A40-Anteil) mit Gegenprüfungs-Quittung.
+
+
+## 11 · Gesetze-Aufteilung Bund/Kantone V2 — «Erfassungsgrad-Staffel» (VERBINDLICHE Bau-Spec, 16.7.2026)
+
+**Quelle (WÖRTLICH massgeblich):** David-Auftrag 16.7.2026 — «verbessere mit ultracode
+und fable die aufteilung der gesetze kantonal und bund … sinnvoller und praxistauglicher
+aufbau und man schnell relevantes findet». Methodik: 5 Empirie-Miner + 3 Entwürfe +
+3-Linsen-Judge-Panel + Synthese.
+
+**Herkunft:** Ultracode-Panel 16.7. (3 Entwürfe, 3 Judges). Sieger = «Erfassungsgrad-Staffel — ein Korpus, dichte-neutral gestaffelt», ergänzt um die einstimmigen Judge-Grafts (Named-Article-Garantie als vorgezogene Engine-Einheit, Treffer-Dedup + Kopfzeile, Scope-Chip, interne Rechtsgebiet-Kanonisierung, Mobil-Kollaps als DoD, /international-Kanonik nur als eigene Mini-Einheit). Empirie-Basis: ist-ia (H1–H5), Praxis-Friktions-Audit (12 Tasks, Reibungs-Ranking), Muster-Recherche (M1–M8), plan-bestand-Kollisionskarte.
+
+**Kernidee (bindend):** Der Bestand ist die Wahrheit, die die Struktur tragen muss — BS 859 · AR 266 · Rest 1–7 Erlasse. Der **Erfassungsgrad** (Erlass-Zahl + konservatives Zustands-Wort) wird das ERSTE sichtbare Signal an jeder Kantons-Weiche; «kein Treffer» in einem dünnen Kanton wird als **Abdeckungslücke mit Weiterweg** gerendert, nie als Sackgasse. Die gebauten Säulen (G4), die Kantons-Entrümpelung (G5), das Rechtsgebiets-Gerüst (G6) und der Gliederungs-Umschalter (A15) bleiben unangetastet — der Entwurf ist **additiv** auf ein dicht bebautes Feld.
+
+---
+
+### 11.0 · Skalierungs-Invariante (Bau-Prinzip, gilt für JEDE Einheit dieses §)
+
+Erfassungsgrad-Badges und der dichte-neutrale Kanton-Baustein sind **Dauerform, kein Sonderfall** für die heutige Asymmetrie. Füllt E3 morgen alle 26 Kantone: **es kippen nur Werte (Badges, Listen→Bäume), keine Struktur.** Jede Einheit muss in ihrem PR-Text belegen, dass sie diese Invariante hält (kein Code-Pfad «if kanton === 'BS'», keine hartkodierten Mengen ausser dokumentierten Schwellen in der SSoT §11.2).
+
+### 11.1 · Ziel-IA (Seiten / Routen / Ebenen)
+
+`[NEU]` = Neubau dieses §; alles Übrige ist GEBAUT und bleibt. **Alle bestehenden Deep-Links bleiben auflösbar** (Leitplanke E.4: `?gliederung=` / `?ebene=` / `?kt=` / `#sys-` / `?ansicht=rechtsgebiet`).
+
+```
+/gesetze — neutraler Landeplatz (G4 §4.1, unverändert: 3 Kacheln + Live-Statistik, KEIN stiller Bund-Default)
+├─ Sprung-/Such-CTA → HeaderSuche (⌘K/Ctrl-K/«/», A5 — bleibt der EINE Suchpfad)
+├─ [NEU IA-3] A–Z-/Kürzel-Register — Browse-Zwilling zum Norm-Sprung (Muster M6 gesetze-im-internet):
+│     Buchstaben-Leiste + Titel/Kürzel-Filter, title-only auf dem BEREITS geladenen register.json
+│     (1469 Erlasse) — KEIN zweiter Index (K10). Virtualisiert (§11.6-Perf).
+├─ 3 Säulen-Kacheln (Live-Count aus Manifest, G4):
+│   ├─ Bundesrecht (201 Erlasse / 23'974 Artikel)
+│   ├─ Kantone (26) — [NEU IA-2] Erfassungsgrad-Kurzlegende auf der Kachel
+│   └─ International (37) — Kanonik = diese Säule; /international bleibt Alias-Seite (§11.4, IA-6)
+├─ 4. Kachel Rechtsgebiet (?ansicht=rechtsgebiet): bleibt UNVERÄNDERT sichtbar.
+│     Demotion zur reinen Gliederungs-Option = David-Frage Y-A (§11.8) — NICHT autonom bauen.
+├─ Lokales Filterfeld: [NEU IA-4] Scope-Label + Chip «auf alle Ebenen erweitern» (O5)
+└─ Link «Abdeckung» → /abdeckung (Seite EXISTIERT: src/pages/Abdeckung.tsx — nur Verlinkung, K-2c)
+
+?ebene=bund — unverändert (Systematisch default · Relevanz · Rechtsgebiet, A15/A14)
+?ebene=international — unverändert (37 Erlasse, SR-0.*-Sachklassen)
+?ebene=kanton
+├─ Stufe A: 26er-Raster (Karte|Liste, G5) + [NEU IA-2] Erfassungsgrad-Badge je Kachel
+│     (Zahl + Zustands-Wort; «keine Erlasse» im aria-label der SchweizKarte, O4)
+│     Sortierung: Alphabet | Erlass-Zahl | Region (G5, unverändert) + [NEU] Erfassungsgrad.
+│     DEFAULT bleibt unverändert — Umstellung auf Erlass-Zahl = David-Frage Y-B (§11.8).
+└─ Stufe B (?kt=XX):
+    ├─ [NEU IA-2] Erfassungs-Kopf: «n Erlasse erfasst — [vollständig|Auswahl|dünn]»
+    │     + Link amtliche Sammlung des Kantons + Link /abdeckung (K-2c-Semantik §11.2)
+    ├─ Schnellwechsel-Pills: [NEU IA-2] Erlass-Zahl-Badge an jeder der 26 Pills (M4:
+    │     Asymmetrie an JEDER Kantons-Weiche sichtbar)
+    ├─ Kanton MIT Systematik-Baum (19/26): Baum unverändert (3 Gliederungen, A15)
+    └─ Kanton OHNE Baum / dünn (GE,JU,NE,SZ,TI,VD,ZH…): [NEU IA-2] dichte-neutraler Baustein =
+          flache ehrliche Liste (0 Akkordeon-Ebenen) + K-2e-Hinweis «amtliche Systematik folgt»
+          + Lücken-Hinweis mit Link lexfind/Amtsquelle. Null-Treffer im Kanton-Scope rendert
+          IMMER die Abdeckungslücke («ZH: 3 Erlasse erfasst — Vollständigkeit: amtliche
+          Sammlung/lexfind»), nie einen leeren Zustand (praxis #4/#11, Reibung 5).
+
+Reader = /gesetze/{ebene}/{key}#art-… — getrennte harte Kette, in diesem § NICHT berührt
+(Leitplanke E.1/§14.2; Anker bleibt IMMER #art-, NIE #par- — R8/K2).
+/suche (S5, 12.7. gebaut) — bleibt unverändert bestehen, KEIN 301 (§11.7).
+Sidebar-Kantonsliste: [NEU IA-7] Erlass-Zahl-Badges (geteilte Nav → eigene Einheit).
+```
+
+### 11.2 · Erfassungsgrad-Semantik (SSoT, konservativ-dreistufig — BINDEND)
+
+Neue SSoT **`src/lib/normtext/erfassungsgrad.ts`** (eine Stelle, wie G6 es für Themen-Mitgliedschaft vorgemacht hat; Vorbild A14: «dokumentiert-deterministisch, §8, KEINE geratene Wichtigkeit»):
+
+1. **`vollständig`** NUR wenn ein empirischer **Enumerations-Beleg** vorliegt (belegtes N der amtlichen Sammlung mit Datum + Quelle, im Code als Kommentar-Fakt dokumentiert) UND erfasst n ≥ N. Bindender plan-bestand-Wortlaut K-2c: *«N nur ausweisen, wo empirisch belegt (Enumerations-Fakt mit Datum), sonst weglassen.»* Heute qualifiziert bestenfalls BS — und auch BS erst NACH Beleg-Erhebung, sonst «Auswahl».
+2. **`Auswahl`** wenn n ≥ 20 (dokumentierte, deterministische Roh-Schwelle — heute: AR 266, ggf. BS bis Beleg).
+3. **`dünn`** wenn n < 20 (heute: 24 Kantone).
+4. **NIE ein Prozentsatz ohne belegtes N.** Keine Wort-Ampel mit Werturteil («voll/Stichprobe») — nur die belegte Zahl + der konservative Zustandstext (Judge-Konsens; §8 «nie raten»).
+5. Schwellen-Änderungen nur per Spec-Änderung an diesem §, nie ad hoc im Code.
+
+**Gate-Folge:** `erfassungsgrad.ts` liegt unter `src/lib/normtext/` ⇒ **`check:gegenpruefung` Pflicht (KC2)** — IA-2 ist NICHT «reine UI» (Leitplanke E.6).
+
+### 11.3 · Interaktions-Budgets je Praxis-Task (DoD-Artefakt)
+
+Zählregel: 1 Interaktion = 1 Klick ODER 1 abgeschlossene Eingabe+Enter. Diese Tabelle ist **Abnahme-Artefakt** jeder Einheit (Judge-Graft: «Abnahme gegen reale Aufgaben statt Struktur-Schönheit») und wird als e2e-Walk automatisiert (§11.6).
+
+| # | Praxis-Task (Audit 16.7.) | Weg nach V2 | Budget | Voraussetzung |
+|---|---|---|---|---|
+| 1/9 | Art. 336c OR / «OR 257d» nachschlagen | Norm-Sprung → Reader `#art-…` | **1** | **IA-1** (heute Fiktion: API liefert zitierende Artikel, `OR 257d` = 0 Treffer) |
+| — | dito, Fallback ohne exakten Parser-Match | Ergebnisliste, Zielartikel OBEN | **2** | IA-1 |
+| — | Erlass per Kürzel (OR), Kürzel bekannt | Norm-Sprung | **1** | gebaut (A5) |
+| — | Erlass OHNE Kürzel-Kenntnis (H1) | A–Z-Register: Buchstabe → Titel | **2** | IA-3 (heute 3–4 + Scroll) |
+| 5 | Thema Arbeitsrecht (Bund) | Rechtsgebiet-Gliederung → Bündel | **2** | gebaut (G6/A15) |
+| 3 | BS Anwaltsgesetz | Suche «Anwaltsgesetz Basel» → Treffer | **2** | gebaut (Synonym-Brücke) |
+| 4/11 | «Regelt ZH/BE etwas zu X?» | Kantone → ZH (Badge «3 · dünn») → ehrliche Liste + Lücken-Link | **2 bis ehrliche Antwort** | IA-2 (heute: Sackgasse, Reibung 5) |
+| 10 | Datenschutz überblicken | Suche → dedupliziert + Kopfzeile «n Treffer, davon x Erlasse / y Artikel» | **2** | IA-1 (Dedup-Teil) |
+| — | Kalt-Browse /gesetze → gelesener Bund-Erlass | Kachel → Systematik → Karte | **≤ 4** | gebaut (Regressions-Wächter: darf nicht schlechter werden) |
+
+### 11.4 · Migrations- / Redirect-Regeln (bestehende Routen)
+
+1. **Kein einziger 301 in diesem §.** Alle heutigen URLs bleiben mit identischem Inhalt auflösbar (Leitplanke E.4; hält alle bestehenden e2e-Assertions grün).
+2. **`?ansicht=rechtsgebiet` (IA-5):** intern wird EIN kanonischer Zustand geführt (`?gliederung=rechtsgebiet`, A15-Mechanik); die Alt-URL bleibt auflösbarer Alias und darf beim Parse auf die kanonische Form normalisiert werden. Bindend A15: *«Tür bleibt zusätzlich erreichbar, NICHT entfernt.»* Beweis: `e2e/gesetze-uebersicht-u.e2e.ts:112` («?ansicht=rechtsgebiet (G6-Tür) bleibt erreichbar») und `e2e/gesetze-rechtsgebiet-g6.e2e.ts:62` bleiben grün; wo Assertions die URL-FORM statt Erreichbarkeit prüfen, Anpassung mit Begründung im PR deklarieren.
+3. **`/international` (IA-6, Stufe 1):** Kanonik = Säule `?ebene=international`; `/international` bleibt voll funktionale Alias-Seite inkl. der 5 Hash-Anker (`src/lib/navigation.ts:132–136`: `#menschenrechte`, `#privat-zivil`, `#rechtshilfe`, `#schweiz-eu`, `#eu-verordnungen`). Stufe 1 = nur `rel=canonical` + Vereinheitlichung interner Links. **Stufe 2 (echter Redirect) NUR mit separatem David-Go** + Hash-Mapping aller 5 Anker + Deep-Link-Regressionstest (Judge-Graft G3; R-SCOPE-4: geteilte Nav ausserhalb `Gesetze.tsx`).
+4. **`/suche` (S5):** bleibt. Erst am 12.7. gebaut (5 e2e-Tests in `suche-seite.e2e.ts`) — jeder 301-Vorstoss ist verworfen (§11.7).
+5. **Reader-Routen** `/gesetze/{ebene}/{key}` + `#art-`-Anker: unberührt. Karten tragen weiter den nackten Basispfad (SEO/Mittelklick).
+6. `/abdeckung`: bestehende Seite, wird nur verlinkt (kein Routen-Neubau).
+
+### 11.5 · Etappierung — PR-grosse Bau-Einheiten (Opus baut, Fable orchestriert)
+
+Je Einheit gilt die **A9-DoD-Zeile (§10.4) wörtlich** (CPU-Throttle 6×, CLS 0, `check:perf-budget` grün, Golden byte-gleich — Default `systematisch` hält Prerender/Golden byte-gleich, A15).
+
+**IA-1 · Named-Article-Garantie + Dedup (Engine, VORGEZOGEN — höchste Einzelpriorität der Kampagne)**
+- **Spec:** Für Norm-Queries («OR 336c», «Art. 336c OR», «336c OR») ist der **Zielartikel IMMER oberster Treffer der `sprung`-Gruppe** (A6-Rangfolge bleibt: Norm-Sprung → Gesetze/Artikel → Entscheide → Materialien → Werkzeuge); Enter = Direkt-Sprung in den Reader auf den kanonischen `#art-`-Anker (exakte Schreibweise = bestehende Reader-Anker, empirisch ablesen; NIE `#par-`, R8/K2). Greift der Parser nicht exakt: **Fallback in die Ergebnisliste MIT Zielartikel oben** — nie «0 Treffer» bei existierendem Artikel (heilt praxis #1/#9, Reibung 5+4). Quelle: bestehende `artikelVolltext`-Quelle über `src/lib/suche/normQuery.ts` — bindend K10: *«KEIN zweiter Suchindex.»*
+- Im selben Engine-PR: **Treffer-Dedup** (Riehen-Doppel, `RiE`-Varianten) + **Ergebnis-Kopfzeile «n Treffer, davon x Erlasse / y Artikel»** (praxis #10).
+- **Empirie VOR Bau (Pflicht):** Playwright-Klick-Test auf `/gesetze/bund/OR` + HeaderSuche («OR 336c», «OR 257d») — der Praxis-Befund war API-abgeleitet [UI-unbestätigt]; erst Repro, dann Fix.
+- **Gates/Kollision:** Risiko-Pfad ⇒ `check:gegenpruefung` Pflicht (KC2). `suche-seite.e2e.ts` (5 Tests) muss grün bleiben. `/api/suche` wird auch vom Verzahnungs-Strang konsumiert (**laufende PRs: #232, W2·6 PR-B/PR-C**) — nach bzw. koordiniert mit #232-Merge starten. §10.10 **E5 (A35 Reader-Suchfenster)** ist eine ANDERE Fläche (Reader-Kopfzeile) — nicht mischen (§14.2), Wording abstimmen.
+
+**IA-2 · Erfassungsgrad sichtbar (O4 + K-2c + K-2e — Übersicht-UI + SSoT §11.2)**
+- Badges auf 26er-Raster (Karte + Liste) + Kachel-Legende auf /gesetze; `SchweizKarte.tsx`-aria-label inkl. «keine Erlasse» (O4; Achtung plan-bestand: role/aria/tabIndex existieren bereits, `SchweizKarte.tsx:64–71` — nur ergänzen); Erlass-Zahl-Badges an den 26 Schnellwechsel-Pills (Stufe B); Erfassungs-Kopf je `?kt=XX` (§11.1) mit Link amtliche Sammlung + `/abdeckung`; dichte-neutraler Baustein für baumlose/dünne Kantone inkl. Null-Treffer-als-Lücke; zusätzliche Sortier-Option «Erfassungsgrad» (Default unverändert, Y-B). K-2c-Überlappung mit der G5-Kontextzeile (§4.3 Punkt 1) auflösen, **nicht doppelt bauen**.
+- **Gates/Kollision:** `src/lib/normtext/erfassungsgrad.ts` ⇒ `check:gegenpruefung` Pflicht. `gesetze-kanton-g5.e2e.ts` erweitern, nicht brechen. Flächen: `Gesetze.tsx`, `KantonAuswahl`, `SchweizKarte.tsx`, `ErlassKarte.tsx` — KEINE §10.10-Einheit (E1–E7) berührt diese Dateien, aber Worktree-Disziplin wegen paralleler Verzahnungs-PRs. Mobil: kollabierte Form Pflicht-DoD (§3.1 «keine Wucherung», S6-Anschluss).
+
+**IA-3 · A–Z-/Kürzel-Register (Browse-Zwilling, M6)**
+- Buchstaben-Leiste + title-only-Filter auf dem bereits client-geladenen `register.json` (kein zweiter Index, K10; kein Client-Kanton-Suchindex, K10/§15.3). **Virtualisierung/Lazy-je-Buchstabe Pflicht** (1469 Titel; R-PERF-5): CLS 0 unter CPU-Throttle 6×. Mobil kollabiert. Budget-Beweis: Erlass ohne Kürzel-Kenntnis in 2 Interaktionen (H1-Heilung).
+- Reine UI ⇒ `gegenpruefung: n/a`. Kollision: `Gesetze.tsx` mit IA-2 ⇒ **nach IA-2** (gleiche Datei).
+
+**IA-4 · Scope-Chip lokale Suche (O5-Rest)**
+- Jedes lokale Browse-Filterfeld: Scope-Label («Filtert: Kanton BS») + Chip **«auf alle Ebenen erweitern»** (Default-Scope = aktive Ebene, 1 Klick weitet). Bindend O5/A5: die Sprung-Karte bleibt CTA auf die HeaderSuche — *«KEIN dritter Suchpfad»*, keine vierte Suchfläche. Reine UI, klein; nach IA-2/IA-3.
+
+**IA-5 · Rechtsgebiet-Parameter-Kanonisierung (Mini-PR)** — §11.4 Ziff. 2. Reine UI. Die 4. Kachel bleibt unverändert.
+
+**IA-6 · International-Kanonik Stufe 1 (Mini-PR, geteilte Nav)** — §11.4 Ziff. 3. **Eigener PR, NIE im Badge-PR** (R-SCOPE-4); Kollisionsabgleich mit FAHRPLAN-UI-NAVIGATION (O2 Sidebar-Konsistenz) vor Start; Deep-Link-Regressionstest (5 Anker + `a11y.e2e.ts`-Assertions) Pflicht.
+
+**IA-7 · Sidebar-Kantonsliste-Badges (R4, Mini-PR, geteilte Nav)** — Erlass-Zahl an den 26 Sidebar-Links (`navigation.ts`), konsumiert `erfassungsgrad.ts` aus IA-2. Nach IA-2, abgestimmt mit O2; nicht mit IA-6 mischen.
+
+**Sequenz:** IA-1 (Engine, gegengeprüft) ‖ IA-2 (UI) parallel in getrennten Worktrees → IA-3 → IA-4 ‖ IA-5 → IA-6 → IA-7. David-Fragen Y-A/Y-B (§11.8) blockieren nichts und werden parallel vorgelegt. IA-1 wartet auf #232-Merge (flaky-CI-Rerun läuft) bzw. koordiniert mit PR-B.
+
+### 11.6 · Mess- / Beweis-Punkte (je Einheit im PR nachzuweisen)
+
+1. **e2e-Task-Walks mit Interaktions-Zählung:** neue Datei `e2e/gesetze-ia-v2-walks.e2e.ts` — pro Zeile der §11.3-Tabelle ein Walk, der Klicks/Submits ZÄHLT und das Budget asserted. Die ausgefüllte Tabelle (Soll/Ist) ist Pflicht-Artefakt jedes IA-PRs.
+2. **IA-1 Klick-Beweis:** Playwright: HeaderSuche «OR 336c» → Enter → URL trägt `/gesetze/bund/OR` + `#art-`-Anker, Zielartikel im Viewport; «OR 257d» analog; Negativ-Fall (Tippfehler) → Liste mit Zielartikel-nahen Treffern oben, nie Leerseite. Gegenprüfungs-Quittung (KC2).
+3. **Sackgassen-Beweis (IA-2):** Kanton ZH, Query ohne Treffer → Lücken-Hinweis mit Erlass-Zahl + Link amtliche Quelle/lexfind sichtbar (e2e-Assertion).
+4. **Determinismus-Beweis (IA-2):** Unit-Test `erfassungsgrad.ts` gegen fixen Manifest-Snapshot; «vollständig» erscheint NUR bei hinterlegtem Enumerations-Beleg (K-2c).
+5. **Perf/CLS:** A9-DoD wörtlich (CPU-Throttle 6×, CLS 0, `check:perf-budget` grün) — kritisch bei IA-3 (1469 Titel) und IA-2 (26 Badges).
+6. **Golden/Prerender:** Default `systematisch` bleibt byte-gleich (A15); `golden:vergleich` IDENTISCH; Übersicht ausserhalb Engine-Golden ⇒ empirischer Prosa-Byte-Beweis im PR.
+7. **Regressions-Sets grün:** `gesetze-kanton-g5.e2e.ts`, `gesetze-uebersicht-u.e2e.ts`, `gesetze-rechtsgebiet-g6.e2e.ts`, `suche-seite.e2e.ts`, `a11y.e2e.ts`.
+8. **a11y:** Badges nie nur Farbe (immer Text-Zahl + Zustands-Wort); aria-labels der SchweizKarte inkl. «keine Erlasse».
+9. **Mobil-Beweis:** Screenshot @390 je Einheit — kollabierte Steuerleiste, keine Wucherung (§3.1).
+
+### 11.7 · Scope-Grenzen — BEWUSST NICHT (verhindert Wiederkehr)
+
+- **Kein Abriss des G4-Landeplatzes**, keine merged «Alle»-Default-Liste (erbt heute BS-859-Rauschen, bricht morgen an 26×-Skalierung + §15) — Panel-Verdikt gegen Entwurf 2; als Nordstern-Notiz archiviert, nicht bauen.
+- **Kein 301 für `/suche`** (S5-Errungenschaft, 12.7.) und **kein 301 für `/international`** in diesem § (nur Kanonik Stufe 1, §11.4).
+- **Kein zweiter Suchindex** (K10), kein Client-Kanton-Suchindex (K10/§15.3), **keine Command-Palette** (A5/§Z1), **kein `#par-`** (R8/K2).
+- **Keine Wort-Ampel/Prozentsätze ohne belegtes N** (§8/K-2c, §11.2) — keine erfundene Systematik/Klartext-Expansion (§4.3 Punkt 5: *«§8 nie raten»*).
+- **Keine Rechtsgebiets-Vollkuration** (K8 + Abnahme-Zeitsperre bis 1.12.2026); Querschnitts-Themen bleiben NUR Bund (G6).
+- **Kein SektionKontextKopf-Revival** (A27), **Auto-Linien-Default bleibt AUS** (A28).
+- **Keine 26×-Korpus-Assets:** K-G1…K-G5 bleiben E3/VPS-gegated — *«NICHT starten»* (FAHRPLAN-KANTONE §1-B).
+- **Kein Reader-Umbau** in diesem § (getrennte harte Kette, Leitplanke E.1; die laufende §10.10-E-Reihe E1–E7 hat dort Vorfahrt).
+- Kein neues Feld `rechtsgebietThema?` im Register (G6-Entscheid: keine zweite Wahrheit).
+
+### 11.8 · David-Fragen (§Y-Verfahren — vorlegen, NICHT autonom bauen)
+
+- **Y-A:** Rechtsgebiet-Sicht von 4. Einstiegskachel zu «nur Gliederungs-Modus» demoten? (grenzt an A15; Alias bleibt so oder so — nur die visuelle Herabstufung ist die Wette.)
+- **Y-B:** Default-Sortierung des 26er-Rasters auf «Erlass-Zahl» (Inhalt zuerst) statt Alphabet?
+- **Y-C:** `/international` Stufe 2 (echter Redirect mit Hash-Mapping) — erst nach Stufe-1-Betrieb.
+
+### 11.9 · Bindende Entscheide (Zitat-Register aus plan-bestand — von JEDER Einheit zu respektieren)
+
+1. §4.1/G4: *«KEIN stiller Default auf ‹Bund›, neutraler Landeplatz + prominente Artikel-Suche»* — Kacheln bleiben.
+2. §4.2/K10 (mehrfach bekräftigt): *«KEIN zweiter Suchindex; Parser sitzt auf bestehender artikelVolltext-Quelle.»*
+3. A5/§Z1: Palette gelöscht, ⌘K fokussiert HeaderSuche — *«Wiedereinführung nur mit neuem David-Entscheid.»*
+4. R8/K2: *«Anker bleibt IMMER `#art-`, Parser erzeugt NIE `#par-`.»*
+5. §4.3/G5 Punkt 5: ehrlicher «Nicht systematisiert»-Block, *«KEINE erfundene Klartext-Expansion (§8 ‹nie raten›)»* — der dichte-neutrale Baustein baut darauf, ersetzt es nicht.
+6. §4.4/G6/K8: *«KEIN Voll-Kuratierungs-Versprechen»*, Querschnitt NUR Bund, «unzugeordnet» zulässig.
+7. A14: Sortierungen *«DOKUMENTIERT-DETERMINISTISCH (§8, KEINE geratene Wichtigkeit)»* — Vorbild für §11.2-Schwellen.
+8. A15: *«?ansicht=rechtsgebiet bleibt zusätzlich erreichbar, NICHT entfernt»*; *«Default `systematisch` hält Prerender/Golden byte-gleich»*; URL-Kompat `?ebene=`/`?kt=`/`#sys-` bindend.
+9. K-2c: *«N nur ausweisen, wo empirisch belegt (Enumerations-Fakt mit Datum), sonst weglassen»* + nicht doppelt zur G5-Kontextzeile bauen.
+10. K-2e: bei baumlosen Kantonen *«‹amtliche Systematik folgt› statt nur ‹Nicht systematisiert›»* (Daten-Nachzug = K-13).
+11. Leitplanke E.1/§14.2: Übersichts-Fläche (`Gesetze.tsx` etc.) und Reader-Kette *«NICHT vermischen — Rechtsinhalt/Extraktion ≠ reines UI in einer Einheit»* ⇒ IA-1 (Engine) strikt getrennt von IA-2 (UI).
+12. §3.1: *«keine Wucherung»* im Kopf/Steuerleiste (2× von David durchgesetzt) — Mobil-Kollaps ist DoD, nicht Kür.
+13. Leitplanke E.6/KC2: sobald `src/lib/normtext`/`register.ts`/`scripts/normtext` berührt ⇒ `check:gegenpruefung` Pflicht (gilt für IA-1 und IA-2).
+14. O4-Korrektur am Code: a11y-Kern der SchweizKarte existiert bereits (`SchweizKarte.tsx:64–71`) — *«Kartenrest nur nach Prod-Repro.»*
+15. FAHRPLAN-KANTONE §1-B: alle 26×-Assets E3-gegated — *«NICHT starten.»*
