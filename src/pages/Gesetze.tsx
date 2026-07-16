@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams, useLocation } from 'react-router-dom';
+import { useSearchParams, useLocation, Link } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { InternationalRubriken } from '../components/normtext/InternationalRubriken';
 import { RechtsgebietSicht, RechtsgebietEinstieg } from '../components/normtext/RechtsgebietSicht';
@@ -19,6 +19,8 @@ import { type KantonSystematik as KantonSystematikBaum } from '../lib/normtext/s
 import { KANTON_NAMEN as KANTON_NAMEN_TYP } from '../data/tarif/typen';
 const KANTON_NAMEN: Record<string, string> = KANTON_NAMEN_TYP;
 import { KantonWappen } from '../components/KantonWappen';
+import { StufeBadge, ErfassungsgradLegende } from '../components/normtext/Erfassungsgrad';
+import { erfassungsgrad, STUFE_WORT } from '../lib/normtext/erfassungsgrad';
 import { usePaneKlasse } from '../components/layout/PaneKontext';
 // H-10 (§6.6 billig, B27): BundSystematik/KantonSystematik/KantonAuswahl
 // (+Kachel) als reiner Move nach gesetze-teile/ — Props/Verhalten unverändert.
@@ -83,9 +85,9 @@ function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, on
   onWahl: (e: Ebene) => void; onBefehl: () => void;
 }) {
   const pk = usePaneKlasse();
-  const kacheln: { id: Ebene; titel: string; zahl: number; einheit: string; sub: string }[] = [
+  const kacheln: { id: Ebene; titel: string; zahl: number; einheit: string; sub: string; legende?: boolean }[] = [
     { id: 'bund', titel: 'Bundesrecht', zahl: bund, einheit: 'Erlasse', sub: `Gesetze & Verordnungen · ${bundArtikel.toLocaleString('de-CH')} Artikel im Volltext` },
-    { id: 'kanton', titel: 'Kantone', zahl: kantone, einheit: 'Kantone', sub: `${kantonErlasse.toLocaleString('de-CH')} kantonale Erlasse` },
+    { id: 'kanton', titel: 'Kantone', zahl: kantone, einheit: 'Kantone', sub: `${kantonErlasse.toLocaleString('de-CH')} kantonale Erlasse`, legende: true },
     { id: 'international', titel: 'International', zahl: international, einheit: 'Erlasse', sub: 'Staatsverträge & EU-Recht' },
   ];
   return (
@@ -121,6 +123,8 @@ function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, on
             </span>
             <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight group-hover:text-brass-700 transition-colors">{k.titel}</span>
             <span className="text-body-s text-ink-500">{k.sub}</span>
+            {/* IA-2 (§11.1): Erfassungsgrad-Kurzlegende auf der Kantone-Kachel. */}
+            {k.legende && <ErfassungsgradLegende className="mt-0.5" />}
             <span aria-hidden className="mt-1 text-body-s font-medium text-brass-700">Öffnen →</span>
           </button>
         ))}
@@ -235,6 +239,14 @@ export function Gesetze() {
     () => (erlasse ? [...new Set(erlasse.filter((e) => e.ebene === 'kanton').map((e) => e.kanton!))].sort() : []),
     [erlasse],
   );
+  // IA-2 (§11.2): erfasste Erlass-Zahl je Kanton (Gesamtkorpus, such-unabhängig) —
+  // trägt Schnellwechsel-Pill-Badge + Erfassungs-Kopf. Eine Ableitung (§3), kein
+  // «if kanton===» und keine hartkodierte Menge (§11.0-Invariante).
+  const kantonAnzahl = useMemo(() => {
+    const m = new Map<string, number>();
+    if (erlasse) for (const e of erlasse) if (e.ebene === 'kanton' && e.kanton) m.set(e.kanton, (m.get(e.kanton) ?? 0) + 1);
+    return m;
+  }, [erlasse]);
   // Kanton-Ansicht: nur kantonale Erlasse (sonst zeigte der Kanton-Zweig das
   // Bund-only `gefiltert` → leeres Raster, keine Kantone). Suche mitgeführt.
   const kantGefiltert = useMemo(
@@ -358,7 +370,21 @@ export function Gesetze() {
                     <Gitter erlasse={intl} />
                   </section>
                 )}
-                {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
+                {treffer.length === 0 && (
+                  aufKanton && kanton ? (
+                    /* IA-2 (§11.1): Null-Treffer im Kanton-Scope rendert IMMER die
+                       Abdeckungslücke mit Weiterweg — nie einen leeren Zustand /
+                       eine Sackgasse (praxis #4/#11, Reibung 5). */
+                    <div className="lc-notice space-y-1.5">
+                      <p className="text-body-s text-ink-700">Kein Treffer für «{suche.trim()}» in {KANTON_NAMEN[kanton] ?? kanton}.</p>
+                      <p className="text-xs text-ink-500">
+                        <span className="num text-ink-700">{kantonAnzahl.get(kanton) ?? 0}</span> {(kantonAnzahl.get(kanton) ?? 0) === 1 ? 'Erlass' : 'Erlasse'} in diesem Kanton erfasst — die vollständige kantonale Sammlung:{' '}
+                        <a href="https://www.lexfind.ch" target="_blank" rel="noopener noreferrer" className="text-brass-700 no-underline hover:text-brass-600">lexfind ↗</a>{' · '}
+                        <Link to="/abdeckung" className="text-brass-700 no-underline hover:text-brass-600">Was ist durchsuchbar</Link>
+                      </p>
+                    </div>
+                  ) : <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>
+                )}
               </div>
             );
           })()}
@@ -418,31 +444,66 @@ export function Gesetze() {
                       ← Alle Kantone
                     </button>
                     <span aria-hidden className="text-ink-300">·</span>
-                    {/* Schnellwechsel zu Nachbarkantonen ohne Umweg über die Übersicht */}
+                    {/* Schnellwechsel zu Nachbarkantonen ohne Umweg über die Übersicht.
+                        IA-2 (§11.1 / M4): Erlass-Zahl-Badge an JEDER Pill — die
+                        Mengen-Asymmetrie bleibt an jeder Kantons-Weiche sichtbar; das
+                        aria-label trägt Name + Zahl + Zustands-Wort (nicht nur Farbe). */}
                     <div className="flex flex-wrap gap-1">
-                      {kantone.map((k) => (
-                        <button type="button" key={k} onClick={() => setzeKanton(k)} aria-pressed={kanton === k}
-                          aria-label={KANTON_NAMEN[k] ?? k}
-                          className={`rounded px-1.5 py-0.5 text-xs font-medium num transition-colors ${
-                            kanton === k ? 'bg-brass-100 text-brass-800' : 'text-ink-500 hover:bg-paper-sunken hover:text-brass-700'
-                          }`}>
-                          {k}
-                        </button>
-                      ))}
+                      {kantone.map((k) => {
+                        const n = kantonAnzahl.get(k) ?? 0;
+                        const g = erfassungsgrad(k, n);
+                        return (
+                          <button type="button" key={k} onClick={() => setzeKanton(k)} aria-pressed={kanton === k}
+                            aria-label={`${KANTON_NAMEN[k] ?? k} — ${n} ${n === 1 ? 'Erlass' : 'Erlasse'}, ${STUFE_WORT[g.stufe]}`}
+                            className={`inline-flex items-baseline gap-1 rounded px-1.5 py-0.5 text-xs font-medium transition-colors ${
+                              kanton === k ? 'bg-brass-100 text-brass-800' : 'text-ink-500 hover:bg-paper-sunken hover:text-brass-700'
+                            }`}>
+                            <span className="num">{k}</span>
+                            {/* Zahl erbt die (kontrast-geprüfte) Pill-Textfarbe —
+                                kein eigenes helleres Token (§13/F2, WCAG ≥4.5). */}
+                            <span aria-hidden className="num text-micro">{n}</span>
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
                   <section className="lc-card p-5 sm:p-6 space-y-5 scroll-mt-24">
-                    <div className="flex items-center gap-3 border-b border-line pb-3">
-                      <KantonWappen kanton={kanton} className="h-11 w-10" />
-                      <span className="flex flex-col">
-                        <span className="flex items-baseline gap-2">
-                          <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight leading-tight">{KANTON_NAMEN[kanton] ?? 'Kanton'}</span>
-                          <span aria-hidden className="num text-body-s text-ink-500">{kanton}</span>
-                        </span>
-                        <span className="lc-overline">Kantonale Erlasse</span>
-                      </span>
-                      <span className="num text-body-s text-ink-500 ml-auto self-end">{kantGefiltert.filter((e) => e.kanton === kanton).length}</span>
-                    </div>
+                    {/* IA-2 Erfassungs-Kopf (§11.1 / K-2c): «n Erlasse erfasst — [Wort]»
+                        + Weiterweg zur amtlichen Sammlung (lexfind) + /abdeckung. Für
+                        dünne Kantone IST diese Zeile der Lücken-Hinweis (nie Sackgasse,
+                        auch bei n=0). Zahl + Zustands-Wort als Text (§11.6.8). Nicht
+                        doppelt zur G5-Kontextzeile (die lebt in der «Alle»-Auswahl). */}
+                    {(() => {
+                      const gesamt = kantonAnzahl.get(kanton) ?? 0;
+                      return (
+                        <div className="border-b border-line pb-3 space-y-2">
+                          <div className="flex items-center gap-3">
+                            <KantonWappen kanton={kanton} className="h-11 w-10" />
+                            <span className="flex flex-col">
+                              <span className="flex items-baseline gap-2">
+                                <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight leading-tight">{KANTON_NAMEN[kanton] ?? 'Kanton'}</span>
+                                <span aria-hidden className="num text-body-s text-ink-500">{kanton}</span>
+                              </span>
+                              <span className="lc-overline">Kantonale Erlasse</span>
+                            </span>
+                          </div>
+                          <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs text-ink-500">
+                            <span><span className="num text-ink-700">{gesamt}</span> {gesamt === 1 ? 'Erlass' : 'Erlasse'} erfasst</span>
+                            <StufeBadge kanton={kanton} n={gesamt} />
+                            <span aria-hidden className="text-ink-300">·</span>
+                            <span>
+                              Vollständigkeit:{' '}
+                              <a href="https://www.lexfind.ch" target="_blank" rel="noopener noreferrer"
+                                className="text-brass-700 no-underline hover:text-brass-600">
+                                Kantonale Gesetzessammlungen (lexfind) ↗
+                              </a>
+                            </span>
+                            <span aria-hidden className="text-ink-300">·</span>
+                            <Link to="/abdeckung" className="text-brass-700 no-underline hover:text-brass-600">Was ist durchsuchbar</Link>
+                          </div>
+                        </div>
+                      );
+                    })()}
                     {/* A14/A15 — Gliederungs-Umschalter für die Erlasse dieses Kantons
                         (die G5-Umschalter Alphabet/Erlass-Zahl/Region auf dem 26er-
                         Raster bleiben davon unberührt — sie ordnen die KANTONE). */}

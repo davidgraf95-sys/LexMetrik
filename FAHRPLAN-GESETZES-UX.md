@@ -1750,8 +1750,8 @@ Je Einheit gilt die **A9-DoD-Zeile (§10.4) wörtlich** (CPU-Throttle 6×, CLS 0
 
 ### 11.8 · David-Fragen (§Y-Verfahren — vorlegen, NICHT autonom bauen)
 
-- **Y-A:** Rechtsgebiet-Sicht von 4. Einstiegskachel zu «nur Gliederungs-Modus» demoten? (grenzt an A15; Alias bleibt so oder so — nur die visuelle Herabstufung ist die Wette.)
-- **Y-B:** Default-Sortierung des 26er-Rasters auf «Erlass-Zahl» (Inhalt zuerst) statt Alphabet?
+- **Y-A ✅ BEANTWORTET (David 16.7.2026, Auswahl-Dialog): JA** — Rechtsgebiet-Sicht wird von der 4. Einstiegskachel zu einem reinen Gliederungs-Modus demoted (A15 bleibt bindend: `?ansicht=rechtsgebiet` weiter erreichbar, nichts entfernt). **NICHT in IA-2 gebaut** (§14.2 kein Concern-Mix): IA-2 = Erfassungsgrad-Fläche (26er-Raster/Kanton-Übersicht); die Rechtsgebiet-Einstiegs-Kachel (`RechtsgebietEinstieg`) ist eine ANDERE Concern-Fläche der Rechtsgebiet-/IA-5-Linie (§11.4 Ziff. 2, Leitplanke E.1/§14.2: Rechtsinhalt/Rechtsgebiet ≠ reines Erfassungsgrad-UI). ⇒ als eigener Mini-Schritt der Rechtsgebiet-Fläche umzusetzen; hier nur protokolliert.
+- **Y-B ✅ BEANTWORTET (David 16.7.2026, Auswahl-Dialog): JA** — Default-Sortierung des 26er-Rasters auf «Erlass-Zahl» (Inhalt zuerst), Alphabet als Umschalter. **In IA-2 UMGESETZT** (`KantonAuswahl.tsx`: Default-State `sortierung='anzahl'`; A15-neutral, client-only, Prerender/Golden byte-gleich unberührt).
 - **Y-C:** `/international` Stufe 2 (echter Redirect mit Hash-Mapping) — erst nach Stufe-1-Betrieb.
 
 ### 11.9 · Bindende Entscheide (Zitat-Register aus plan-bestand — von JEDER Einheit zu respektieren)
@@ -1771,3 +1771,31 @@ Je Einheit gilt die **A9-DoD-Zeile (§10.4) wörtlich** (CPU-Throttle 6×, CLS 0
 13. Leitplanke E.6/KC2: sobald `src/lib/normtext`/`register.ts`/`scripts/normtext` berührt ⇒ `check:gegenpruefung` Pflicht (gilt für IA-1 und IA-2).
 14. O4-Korrektur am Code: a11y-Kern der SchweizKarte existiert bereits (`SchweizKarte.tsx:64–71`) — *«Kartenrest nur nach Prod-Repro.»*
 15. FAHRPLAN-KANTONE §1-B: alle 26×-Assets E3-gegated — *«NICHT starten.»*
+
+### 11.10 · Ausführungsvermerke der §11-Einheiten
+
+**IA-2 · Erfassungsgrad sichtbar ✅ GEBAUT 16.7.2026 (Opus, Worktree `feat/ia2-erfassungsgrad`).**
+Neue SSoT `src/lib/normtext/erfassungsgrad.ts` (dokumentiert-deterministisch nach
+A14, §8 «nie raten»): `erfassungsgrad(kanton, n)` → `vollstaendig` NUR bei
+hinterlegtem Enumerations-Beleg (`ENUMERATIONS_BELEGE`, HEUTE LEER — kein
+geratenes N, kein Prozentsatz, K-2c) UND n≥N; sonst `auswahl` ab n≥20, sonst
+`duenn`. **Beispielwerte (register.json-Zählung 16.7.):** BS 859 → «Auswahl», AR
+266 → «Auswahl», ZH 3 → «dünn» (kein Kanton «vollständig», da beleglos).
+UI (reine Darstellung, §3, über der SSoT): Erfassungs-Badge (Zahl + Zustands-WORT,
+nie nur Farbe) auf jeder Kanton-Kachel (`KantonAuswahl`), Kurzlegende auf der
+«Kantone»-Einstiegskachel (`Gesetze.tsx`), Erlass-Zahl an jeder der 26
+Schnellwechsel-Pills (M4, aria-label Name+Zahl+Wort), Erfassungs-Kopf je `?kt=XX`
+(«n Erlasse erfasst — [Wort]» + Weiterweg lexfind + `/abdeckung`), Karten-
+Bildunterschrift-Zusatz, Sortier-Option «Erfassungsgrad». **Null-Treffer im
+Kanton-Scope rendert IMMER die Abdeckungslücke** (lexfind + `/abdeckung`), nie eine
+Sackgasse (praxis #4/#11). **Y-B umgesetzt** (Default-Sortierung 26er-Raster =
+«Erlass-Zahl»); **Y-A protokolliert, nicht gebaut** (§14.2, siehe §11.8).
+Skalierungs-Invariante (§11.0) gehalten: kein `if kanton===`, keine hartkodierte
+Menge ausser der dokumentierten Schwelle 20 in der SSoT. **Beweise:** Unit-Test
+`src/tests/erfassungsgrad.test.ts` (Determinismus gegen fixen Manifest-Snapshot +
+«vollständig» nur mit Beleg); e2e `e2e/gesetze-ia-v2-walks.e2e.ts` (Task-Walk
+Budget 2, Sackgassen-Beweis, a11y-Wort-als-Text, Mobil@390, Kalt-Browse-Regression
+≤4); Golden byte-gleich (209 Fälle IDENTISCH); `check:perf-budget` grün;
+Regressions-Sets `gesetze-kanton-g5`/`-uebersicht-u`/`-rechtsgebiet-g6`/
+`suche-seite`/`a11y` grün. Risiko-Pfad ⇒ `check:gegenpruefung` (unabhängiger
+Opus-Durchgang, register.json-Rezählung + Stufen-Ableitung). Roadmap W2·5d.

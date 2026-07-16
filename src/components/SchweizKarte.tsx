@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { KANTONE_KARTE } from '../data/kantoneKarte';
 
 // Soft, gut unterscheidbare Füllfarbe je Kanton: Goldwinkel-Streuung über den
@@ -17,11 +17,15 @@ function farbe(i: number, zustand: 'basis' | 'hover' | 'aktiv'): string {
 // unterscheidbarer Pfad. Hover/Fokus heben hervor UND zeigen den Kantonsnamen
 // in der Bildunterschrift; der aktive Kanton ist kräftig markiert. Kantone ohne
 // Erlasse sind gedämpft und nicht wählbar. Reine Darstellung (§3).
-export function SchweizKarte({ aktiv, onWaehle, nameFuer, verfuegbar, className }: {
+export function SchweizKarte({ aktiv, onWaehle, nameFuer, verfuegbar, zusatzFuer, className }: {
   aktiv?: string | null;
   onWaehle: (kanton: string) => void;
   nameFuer?: (kanton: string) => string;
   verfuegbar?: (kanton: string) => boolean;
+  /** Optionaler Zusatz in der Bildunterschrift des gezeigten Kantons (IA-2:
+   *  Erfassungsgrad = Zahl + Zustands-Wort). Nur gerendert, wenn er einen Knoten
+   *  liefert — die Karte bleibt sonst generisch (§3). */
+  zusatzFuer?: (kanton: string) => ReactNode;
   className?: string;
 }) {
   const [hover, setHover] = useState<string | null>(null);
@@ -41,7 +45,9 @@ export function SchweizKarte({ aktiv, onWaehle, nameFuer, verfuegbar, className 
           <>
             <span className="text-body-s font-semibold text-ink-900">{name(gezeigt)}</span>
             <span aria-hidden className="num text-xs text-ink-500">{gezeigt}</span>
-            {verfuegbar && !verfuegbar(gezeigt) && <span className="text-xs text-ink-500">— keine Erlasse</span>}
+            {verfuegbar && !verfuegbar(gezeigt)
+              ? <span className="text-xs text-ink-500">— keine Erlasse</span>
+              : zusatzFuer?.(gezeigt)}
           </>
         ) : (
           <span className="text-xs text-ink-500">Kanton auf der Karte wählen</span>

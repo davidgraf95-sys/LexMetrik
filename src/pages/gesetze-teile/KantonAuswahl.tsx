@@ -10,11 +10,15 @@ import { KANTON_NAMEN as KANTON_NAMEN_TYP } from '../../data/tarif/typen';
 const KANTON_NAMEN: Record<string, string> = KANTON_NAMEN_TYP;
 import { KantonWappen } from '../../components/KantonWappen';
 import { SchweizKarte } from '../../components/SchweizKarte';
+import { StufeBadge } from '../../components/normtext/Erfassungsgrad';
+import { erfassungsgrad, STUFE_RANG, STUFE_WORT } from '../../lib/normtext/erfassungsgrad';
 
-// Eine Kanton-Kachel des Auswahlrasters (Wappen · Vollname · Erlass-Zähler).
-// Mobil-Fix (G5 · §4.3.6): der Vollname wird NICHT mehr abgeschnitten (kein
-// `truncate`) — er umbricht auf bis zu zwei Zeilen; der Code weicht per flex-wrap
-// aus. So bleibt «Basel-Landschaft»/«Appenzell A.Rh.» auf 390px vollständig lesbar.
+// Eine Kanton-Kachel des Auswahlrasters (Wappen · Vollname · Erlass-Zähler +
+// Erfassungsgrad-Badge, IA-2 §11.2). Mobil-Fix (G5 · §4.3.6): der Vollname wird
+// NICHT abgeschnitten (kein `truncate`) — er umbricht auf bis zu zwei Zeilen; der
+// Code weicht per flex-wrap aus. So bleibt «Basel-Landschaft»/«Appenzell A.Rh.»
+// auf 390px vollständig lesbar. Das Stufen-Wort steht als Text neben der Zahl
+// (nie nur Farbe, §11.6.8).
 function KantonKachel({ g, name, onWaehle }: { g: KantonGruppe; name: string; onWaehle: (k: string) => void }) {
   return (
     <button type="button" onClick={() => onWaehle(g.kanton)}
@@ -25,7 +29,10 @@ function KantonKachel({ g, name, onWaehle }: { g: KantonGruppe; name: string; on
           <span className="text-body-s font-medium text-ink-800 group-hover:text-brass-700 transition-colors">{name}</span>
           <span aria-hidden className="num text-xs text-ink-500 shrink-0">{g.kanton}</span>
         </span>
-        <span className="text-xs text-ink-500"><span className="num">{g.erlasse.length}</span> Erlasse</span>
+        <span className="mt-0.5 flex items-center gap-1.5 flex-wrap">
+          <span className="text-xs text-ink-500"><span className="num">{g.erlasse.length}</span> Erlasse</span>
+          <StufeBadge kanton={g.kanton} n={g.erlasse.length} />
+        </span>
       </span>
     </button>
   );
@@ -41,15 +48,26 @@ export function KantonAuswahl({ gruppen, alleKantone, onWaehle }: {
 }) {
   const pk = usePaneKlasse();
   const [ansicht, setAnsicht] = useState<'karte' | 'liste'>('karte');
-  const [sortierung, setSortierung] = useState<'alpha' | 'anzahl' | 'region'>('alpha');
+  // Y-B (David 16.7.2026): Default-Sortierung des 26er-Rasters = «Erlass-Zahl»
+  // (Inhalt zuerst); Alphabet ist der Umschalter. A15-neutral (reine Anzeige, §3),
+  // client-only — Prerender/Golden unberührt.
+  const [sortierung, setSortierung] = useState<'alpha' | 'anzahl' | 'erfassung' | 'region'>('anzahl');
   const name = (k: string) => KANTON_NAMEN[k] ?? k;
+  // Kanton → Gruppe (Erlass-Zahl), für die Karten-Bildunterschrift (§11.2).
+  const proGruppe = useMemo(() => new Map(gruppen.map((g) => [g.kanton, g])), [gruppen]);
 
-  // Flache Sortierung (Alphabet nach Vollname / Erlass-Zahl absteigend). Reine
-  // Anzeige (§3); die Gruppierung selbst bleibt in gruppiereNachKanton.
+  // Flache Sortierung. Reine Anzeige (§3); die Gruppierung selbst bleibt in
+  // gruppiereNachKanton. «Erfassung» (§11.1) sortiert dokumentiert-deterministisch
+  // nach Stufe (dicht → dünn), Gleichstand über die Zahl, dann Vollname (A14).
   const sortiert = useMemo(() => {
     const arr = [...gruppen];
     if (sortierung === 'anzahl') {
       arr.sort((a, b) => b.erlasse.length - a.erlasse.length || name(a.kanton).localeCompare(name(b.kanton), 'de'));
+    } else if (sortierung === 'erfassung') {
+      arr.sort((a, b) =>
+        STUFE_RANG[erfassungsgrad(a.kanton, a.erlasse.length).stufe] - STUFE_RANG[erfassungsgrad(b.kanton, b.erlasse.length).stufe]
+        || b.erlasse.length - a.erlasse.length
+        || name(a.kanton).localeCompare(name(b.kanton), 'de'));
     } else {
       arr.sort((a, b) => name(a.kanton).localeCompare(name(b.kanton), 'de'));
     }
@@ -101,7 +119,7 @@ export function KantonAuswahl({ gruppen, alleKantone, onWaehle }: {
         {ansicht === 'liste' && (
           <div role="group" aria-label="Sortierung" className="inline-flex flex-wrap items-center gap-1.5">
             <span className="lc-overline">Sortieren</span>
-            {([['alpha', 'Alphabet'], ['anzahl', 'Erlass-Zahl'], ['region', 'Region']] as const).map(([id, label]) => (
+            {([['alpha', 'Alphabet'], ['anzahl', 'Erlass-Zahl'], ['erfassung', 'Erfassungsgrad'], ['region', 'Region']] as const).map(([id, label]) => (
               <button key={id} type="button" onClick={() => setSortierung(id)} aria-pressed={sortierung === id}
                 className={`rounded px-2 py-0.5 text-body-s font-medium transition-colors ${sortierung === id ? 'bg-brass-100 text-brass-800' : 'text-ink-500 hover:bg-paper-sunken hover:text-brass-700'}`}>
                 {label}
@@ -117,6 +135,18 @@ export function KantonAuswahl({ gruppen, alleKantone, onWaehle }: {
             onWaehle={onWaehle}
             nameFuer={name}
             verfuegbar={(k) => alleKantone.includes(k)}
+            zusatzFuer={(k) => {
+              // Erfassungsgrad in der Karten-Bildunterschrift (§11.2): Zahl + Wort
+              // (Text, nicht nur Farbe, §11.6.8). Nur für erfasste Kantone.
+              const g = proGruppe.get(k);
+              if (!g) return null;
+              return (
+                <>
+                  <span className="num text-xs text-ink-500">{g.erlasse.length}</span>
+                  <span className="text-xs text-ink-500">{g.erlasse.length === 1 ? 'Erlass' : 'Erlasse'} · {STUFE_WORT[erfassungsgrad(k, g.erlasse.length).stufe]}</span>
+                </>
+              );
+            }}
           />
         </div>
       ) : sortierung === 'region' ? (
