@@ -31,6 +31,7 @@ async function oeffneBgeDaneben(page: Page, artId: string) {
 
 // ── Bug 1: kein Rücksprung auf den früher angeklickten Artikel ────────────────
 test('A34/Bug1 (≥lg): Split-View öffnen erhält die Leseposition, springt NICHT auf den früheren Artikel', async ({ page }) => {
+  test.slow() // schwere Split-View-Interaktion (Panes + idle-Shards + Scroll) — 3× Budget gegen CI-CPU-Starvation
   const fehler = fehlerSammeln(page)
   await page.setViewportSize({ width: 1440, height: 900 })
   // Früher Artikel als aktiver `#art-`-Hash (Deep-Link springt dorthin) …
@@ -66,6 +67,7 @@ test('A34/Bug1 (≥lg): Split-View öffnen erhält die Leseposition, springt NIC
 
 // ── Bug 2: «Ansicht»-Menü im Split-View dauerhaft erreichbar ──────────────────
 test('A34/Bug2 (≥lg): «Ansicht»-Menü im Split-View bleibt beim Scrollen sichtbar und schaltet', async ({ page }) => {
+  test.slow() // schwere Split-View-Interaktion (Panes + Menü-Toggle) — 3× Budget gegen CI-CPU-Starvation
   const fehler = fehlerSammeln(page)
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/gesetze/bund/ZGB#art-684')
