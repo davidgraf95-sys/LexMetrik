@@ -181,14 +181,32 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate,
   // → «N+ … wird noch durchsucht»; erst wenn alles geladen ist, die feste Zahl.
   const nochLaedt = !allesGeladen || gruppen.some((g) => g.laedt);
   const gesamt = gruppen.reduce((n, g) => n + (g.laedt ? 0 : g.gesamt), 0);
+  // Ergebnis-Kopfzeile «n Treffer, davon x Erlasse / y Artikel» (IA-1, praxis #10):
+  // die Aufschlüsselung nennt nur die tatsächlich getroffenen Inhaltsklassen
+  // (Gesetze/Gesetzestext), damit ein Überblick sofort ablesbar ist — kein
+  // «0 …»-Lärm (§8), Singular/Plural sauber.
+  const zahl = (id: string) => gruppen.find((g) => g.id === id && !g.laedt)?.gesamt ?? 0;
+  const erlasse = zahl('gesetz');
+  const artikel = zahl('artikel');
+  const teile: string[] = [];
+  if (erlasse > 0) teile.push(`${erlasse} ${erlasse === 1 ? 'Erlass' : 'Erlasse'}`);
+  if (artikel > 0) teile.push(`${artikel} Artikel`);
+  const kopf = `${gesamt} Treffer${teile.length ? `, davon ${teile.join(' / ')}` : ''}`;
   const status = gruppen.length === 0
     ? (allesGeladen ? 'Keine Treffer' : 'wird durchsucht …')
-    : nochLaedt ? `mindestens ${gesamt} Treffer, wird noch durchsucht …` : `${gesamt} Treffer`;
+    : nochLaedt ? `mindestens ${gesamt} Treffer, wird noch durchsucht …` : kopf;
 
   return (
     <>
-      {/* Knappe Live-Region: nur die Trefferzahl, nicht die ganze Liste (§13/F4). */}
+      {/* Knappe Live-Region: die Trefferzahl (mit Aufschlüsselung), nicht die ganze
+          Liste (§13/F4). */}
       <p className="sr-only" role="status" aria-live="polite">{status}</p>
+      {/* Sichtbare Ergebnis-Kopfzeile (IA-1): erst wenn alles geladen ist und es
+          Treffer gibt (der Leerfall steht ehrlich in der Karte selbst). aria-hidden,
+          weil die Live-Region oben denselben Text bereits ansagt. */}
+      {gruppen.length > 0 && !nochLaedt && (
+        <p aria-hidden className="mb-2 px-1 text-body-s font-medium text-ink-600">{kopf}</p>
+      )}
       {/* «Meinten Sie …?» (S3) — deterministischer Tippfehler-Vorschlag, ausserhalb
           der Listbox (kein Options-Element), setzt bei Klick die Query. */}
       {vorschlag && (

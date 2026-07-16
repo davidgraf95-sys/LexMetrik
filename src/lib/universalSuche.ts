@@ -162,9 +162,51 @@ export function presetGruppe(eintraege: PresetIndexEintrag[] | null, kappung = K
   return { id: 'preset', titel: 'Fristen-Vorlagen', treffer, gesamt: eintraege.length };
 }
 
+// ── Treffer-Dedup (IA-1, §11.5) ──────────────────────────────────────────────
+
+/** Kollabiert inhaltsgleiche Erlass-Doppel, die NUR in der Sammlungs-Nummer
+ *  differieren (kantonale Gemeinde-Sammlungen doppeln denselben Erlass unter
+ *  einem Präfix — «RiE/BeE/BaB 890.800» = Riehen/Bettingen-Kopien des kantonalen
+ *  «890.800», dazu vereinzelte exakte SR-Dubletten). Gruppen-Schlüssel = Ebene +
+ *  Kanton + amtlicher Titel (byte-gleicher Titel im selben Kanton ⇒ derselbe
+ *  Erlass; verschiedene Titel/Kürzel bleiben getrennt). Kanonische Wahl
+ *  DETERMINISTISCH (§2/§8): reine Zahl-Nummer (ohne Sammlungs-Präfix) vor
+ *  präfigierter, sonst lexikografisch kleinster Key. Die Ergebnis-REIHENFOLGE
+ *  bleibt erhalten (nur spätere Dubletten fallen weg) — reine Projektion, keine
+ *  Rechtslogik (§3). Wirkt nur in der SUCHE (gesetzGruppe), nicht im /gesetze-
+ *  Browse (dort ist die volle Sammlungs-Liste gewollt). */
+export function dedupErlasse(treffer: BrowseErlass[]): BrowseErlass[] {
+  const schluessel = (e: BrowseErlass) => `${e.ebene}|${e.kanton ?? ''}|${e.titel.trim()}`;
+  // Präfix-Rang: sr beginnt mit Ziffer (reine Zahl-Nummer) → 0, sonst (Präfix wie
+  // «RiE », «GS », leer) → 1. So gewinnt die kantonale Kern-Nummer vor der Kopie.
+  const rang = (sr: string | null) => (sr && /^\d/.test(sr) ? 0 : 1);
+  const gruppen = new Map<string, BrowseErlass[]>();
+  for (const e of treffer) {
+    const k = schluessel(e);
+    const arr = gruppen.get(k);
+    if (arr) arr.push(e); else gruppen.set(k, [e]);
+  }
+  const kanon = new Map<string, string>();
+  for (const [k, arr] of gruppen) {
+    if (arr.length === 1) { kanon.set(k, arr[0].key); continue; }
+    const gewaehlt = [...arr].sort((a, b) =>
+      rang(a.sr) - rang(b.sr) || (a.key < b.key ? -1 : a.key > b.key ? 1 : 0))[0];
+    kanon.set(k, gewaehlt.key);
+  }
+  const gesehen = new Set<string>();
+  const out: BrowseErlass[] = [];
+  for (const e of treffer) {
+    const k = schluessel(e);
+    if (kanon.get(k) !== e.key || gesehen.has(k)) continue;
+    gesehen.add(k);
+    out.push(e);
+  }
+  return out;
+}
+
 export function gesetzGruppe(erlasse: BrowseErlass[] | null, q: string, kappung = KAPPUNG): SuchGruppe {
   if (erlasse === null) return { id: 'gesetz', titel: 'Gesetze', treffer: [], gesamt: 0, laedt: true };
-  const getroffen = filtern(erlasse, q);
+  const getroffen = dedupErlasse(filtern(erlasse, q));
   const treffer: SuchTreffer[] = getroffen.slice(0, kappung).map((e) => ({
     id: e.key,
     label: e.kuerzel ? `${e.kuerzel} · ${e.titel}` : e.titel,

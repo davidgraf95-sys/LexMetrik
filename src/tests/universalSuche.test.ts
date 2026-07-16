@@ -86,6 +86,55 @@ describe('universalSuche: Gesetze-Gruppe', () => {
   });
 });
 
+describe('universalSuche: Treffer-Dedup (IA-1)', () => {
+  // Riehen/Bettingen-Doppel: derselbe BS-Erlass unter kantonaler Kern-Nummer und
+  // unter Gemeinde-Sammlungs-Präfixen (RiE/BeE) — identischer Titel/Kanton.
+  const asyl = (key: string, sr: string): BrowseErlass => ({
+    key, ebene: 'kanton', kanton: 'BS', kuerzel: 'Asylvertrag',
+    titel: 'Vertrag über die Aufgabenteilung im Bereich Asyl', sr,
+    rechtsgebiet: 'staatsrecht', sprache: 'de', rang: 5, status: 'snapshot',
+    datei: 'kanton/BS.json', artikelAnzahl: 1, stand: '2026', quelleUrl: 'x', fassungsToken: 't',
+  } as unknown as BrowseErlass);
+  const echterRiehen: BrowseErlass = {
+    key: 'BS-RiE 786.100', ebene: 'kanton', kanton: 'BS', kuerzel: 'Abfallordnung',
+    titel: 'Ordnung der Abfallbehandlung in der Gemeinde Riehen', sr: 'RiE 786.100',
+    rechtsgebiet: 'umwelt', sprache: 'de', rang: 5, status: 'snapshot',
+    datei: 'kanton/BS.json', artikelAnzahl: 1, stand: '2026', quelleUrl: 'x', fassungsToken: 't',
+  } as unknown as BrowseErlass;
+
+  it('kollabiert titelgleiche Gemeinde-Doppel auf die kantonale Kern-Nummer', () => {
+    const erlasse = [
+      asyl('BS-890.800', '890.800'),
+      asyl('BS-BeE 890.800', 'BeE 890.800'),
+      asyl('BS-RiE 890.800', 'RiE 890.800'),
+      echterRiehen,
+    ] as unknown as BrowseErlass[];
+    const g = gesetzGruppe(erlasse, 'Vertrag');
+    // Genau EIN Asylvertrag-Treffer, und zwar die reine Zahl-Nummer (kein Präfix).
+    const asylTreffer = g.treffer.filter((t) => t.label.includes('Asylvertrag'));
+    expect(asylTreffer).toHaveLength(1);
+    expect(asylTreffer[0].href).toBe('/gesetze/kanton/BS-890.800');
+    expect(g.gesamt).toBe(1);
+  });
+
+  it('lässt echte Riehen-Erlasse (kein kantonales Doppel) unberührt', () => {
+    const g = gesetzGruppe([echterRiehen] as unknown as BrowseErlass[], 'Riehen');
+    expect(g.treffer).toHaveLength(1);
+    expect(g.treffer[0].href).toBe('/gesetze/kanton/BS-RiE%20786.100');
+  });
+
+  it('nur Präfix-Varianten (kein reines Zahl-Doppel) → deterministisch kleinster Key', () => {
+    const erlasse = [
+      asyl('BS-RiE 411.500', 'RiE 411.500'),
+      asyl('BS-BeE 411.500', 'BeE 411.500'),
+    ] as unknown as BrowseErlass[];
+    const g = gesetzGruppe(erlasse, 'Vertrag');
+    expect(g.treffer).toHaveLength(1);
+    // «BS-BeE …» < «BS-RiE …» lexikografisch → deterministische Wahl.
+    expect(g.treffer[0].href).toBe('/gesetze/kanton/BS-BeE%20411.500');
+  });
+});
+
 describe('universalSuche: Rechtsprechung-Gruppe', () => {
   const liste = [
     { key: 'bge-1', gericht: 'bger', gerichtName: 'Bundesgericht', kanton: 'CH', nummer: '5A_1', bgeReferenz: 'BGE 150 III 1', datum: '2024-01-01', zitierung: 'BGE 150 III 1', leitcharakter: 'leitentscheid', regesteVorhanden: true, regesteKurz: 'Regeste', sachgebiet: 'zpo', sprache: 'de', normKeys: ['ZPO'], bestand: 'snapshot', kuratierung: 'maschinell', datei: 'bund/bger/x.json', quelle: 'ocl', quelleUrl: 'x', fassungsToken: 't' },

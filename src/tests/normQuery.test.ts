@@ -9,28 +9,30 @@ import { baueNormIndex, parseNormQuery, type NormErlass } from '../lib/suche/nor
 // Repräsentative Fixtures (Bund + Kanton, snapshot/pdf-embed) — bewusst NICHT an
 // die konkrete Manifest-Grösse gekoppelt (§ M1 lässt register.json wachsen).
 const ERLASSE: NormErlass[] = [
-  { key: 'OR', ebene: 'bund', kanton: null, kuerzel: 'OR', titel: 'Obligationenrecht', status: 'snapshot' },
-  { key: 'ZGB', ebene: 'bund', kanton: null, kuerzel: 'ZGB', titel: 'Zivilgesetzbuch', status: 'snapshot' },
-  { key: 'AIG', ebene: 'bund', kanton: null, kuerzel: 'AIG', titel: 'Ausländer- und Integrationsgesetz', status: 'snapshot' },
-  { key: 'VMWG', ebene: 'bund', kanton: null, kuerzel: 'VMWG', titel: 'Mietrechtsverordnung', status: 'snapshot' },
-  { key: 'STGB', ebene: 'bund', kanton: null, kuerzel: 'StGB', titel: 'Strafgesetzbuch', status: 'snapshot' },
-  { key: 'ZPO', ebene: 'bund', kanton: null, kuerzel: 'ZPO', titel: 'Zivilprozessordnung', status: 'snapshot' },
-  { key: 'SchKG', ebene: 'bund', kanton: null, kuerzel: 'SchKG', titel: 'Schuldbetreibung und Konkurs', status: 'snapshot' },
+  { key: 'OR', ebene: 'bund', kanton: null, kuerzel: 'OR', titel: 'Obligationenrecht', status: 'snapshot', sr: '220' },
+  { key: 'ZGB', ebene: 'bund', kanton: null, kuerzel: 'ZGB', titel: 'Zivilgesetzbuch', status: 'snapshot', sr: '210' },
+  { key: 'AIG', ebene: 'bund', kanton: null, kuerzel: 'AIG', titel: 'Ausländer- und Integrationsgesetz', status: 'snapshot', sr: '142.20' },
+  { key: 'VMWG', ebene: 'bund', kanton: null, kuerzel: 'VMWG', titel: 'Mietrechtsverordnung', status: 'snapshot', sr: '221.213.11' },
+  { key: 'STGB', ebene: 'bund', kanton: null, kuerzel: 'StGB', titel: 'Strafgesetzbuch', status: 'snapshot', sr: '311.0' },
+  { key: 'ZPO', ebene: 'bund', kanton: null, kuerzel: 'ZPO', titel: 'Zivilprozessordnung', status: 'snapshot', sr: '272' },
+  { key: 'SchKG', ebene: 'bund', kanton: null, kuerzel: 'SchKG', titel: 'Schuldbetreibung und Konkurs', status: 'snapshot', sr: '281.1' },
   { key: 'GEBV_SCHKG', ebene: 'bund', kanton: null, kuerzel: 'GebV SchKG', titel: 'Gebührenverordnung SchKG', status: 'snapshot' },
   { key: 'ARGV1', ebene: 'bund', kanton: null, kuerzel: 'ArGV 1', titel: 'Verordnung 1 zum Arbeitsgesetz', status: 'snapshot' },
   { key: 'STG', ebene: 'bund', kanton: null, kuerzel: 'StG', titel: 'Stempelabgaben', status: 'snapshot' },
   { key: 'BGOE', ebene: 'bund', kanton: null, kuerzel: 'BGÖ', titel: 'Öffentlichkeitsgesetz', status: 'snapshot' },
+  { key: 'BV', ebene: 'bund', kanton: null, kuerzel: 'BV', titel: 'Bundesverfassung', status: 'snapshot', sr: '101' },
+  { key: 'IPRG', ebene: 'bund', kanton: null, kuerzel: 'IPRG', titel: 'Bundesgesetz über das Internationale Privatrecht', status: 'snapshot', sr: '291' },
+  { key: 'BGG', ebene: 'bund', kanton: null, kuerzel: 'BGG', titel: 'Bundesgerichtsgesetz', status: 'snapshot', sr: '173.110' },
+  { key: 'STPO', ebene: 'bund', kanton: null, kuerzel: 'StPO', titel: 'Strafprozessordnung', status: 'snapshot', sr: '312.0' },
+  { key: 'MSTG', ebene: 'bund', kanton: null, kuerzel: 'MStG', titel: 'Militärstrafgesetz', status: 'snapshot', sr: '321.0' },
   { key: 'EMRK', ebene: 'bund', kanton: null, kuerzel: 'EMRK', titel: 'EMRK', status: 'pdf-embed' },
-  // O-4: Ziele der erweiterten FR/IT-Alias-Tabelle (Kürzel = norm(key)/norm(kuerzel)).
-  { key: 'BV', ebene: 'bund', kanton: null, kuerzel: 'BV', titel: 'Bundesverfassung', status: 'snapshot' },
-  { key: 'BGG', ebene: 'bund', kanton: null, kuerzel: 'BGG', titel: 'Bundesgerichtsgesetz', status: 'snapshot' },
-  { key: 'STPO', ebene: 'bund', kanton: null, kuerzel: 'StPO', titel: 'Strafprozessordnung', status: 'snapshot' },
+  // O-4: weitere Ziele der erweiterten FR/IT-Alias-Tabelle (BV/BGG/STPO/IPRG stehen
+  // bereits oben mit SR-Nummer — hier nur die noch fehlenden Ziel-Kürzel + Kantone).
   { key: 'VWVG', ebene: 'bund', kanton: null, kuerzel: 'VwVG', titel: 'Verwaltungsverfahrensgesetz', status: 'snapshot' },
-  { key: 'IPRG', ebene: 'bund', kanton: null, kuerzel: 'IPRG', titel: 'IPR-Gesetz', status: 'snapshot' },
   { key: 'MWSTG', ebene: 'bund', kanton: null, kuerzel: 'MWSTG', titel: 'Mehrwertsteuergesetz', status: 'snapshot' },
   { key: 'KG', ebene: 'bund', kanton: null, kuerzel: 'KG', titel: 'Kartellgesetz', status: 'snapshot' },
-  { key: 'AI-640.000', ebene: 'kanton', kanton: 'AI', kuerzel: 'StG', titel: 'Steuergesetz AI', status: 'snapshot' },
-  { key: 'AR-621.12', ebene: 'kanton', kanton: 'AR', kuerzel: 'ABRG', titel: 'ABRG', status: 'snapshot' },
+  { key: 'AI-640.000', ebene: 'kanton', kanton: 'AI', kuerzel: 'StG', titel: 'Steuergesetz AI', status: 'snapshot', sr: '640.000' },
+  { key: 'AR-621.12', ebene: 'kanton', kanton: 'AR', kuerzel: 'ABRG', titel: 'ABRG', status: 'snapshot', sr: '621.12' },
 ];
 
 const idx = baueNormIndex(ERLASSE);
@@ -82,6 +84,13 @@ describe('parseNormQuery — Positivfälle (Deep-Link)', () => {
     ['LP 88', '/gesetze/bund/SchKG#art-88'],
     // Alias-Kompaktform kombiniert
     ['co257d', '/gesetze/bund/OR#art-257_d'],
+    // IA-1-Alias-Ausbau (amtliche FR/IT-Kurztitel weiterer Kodifikationen)
+    ['art. 29 Cst', '/gesetze/bund/BV#art-29'],          // Constitution fédérale → BV
+    ['Cost. 8', '/gesetze/bund/BV#art-8'],                // Costituzione federale → BV
+    ['art. 190 LDIP', '/gesetze/bund/IPRG#art-190'],      // droit international privé → IPRG
+    ['LTF 42', '/gesetze/bund/BGG#art-42'],               // Tribunal fédéral → BGG
+    ['CPP 10', '/gesetze/bund/STPO#art-10'],              // procédure pénale → StPO
+    ['CPM 3', '/gesetze/bund/MSTG#art-3'],                // pénal militaire → MStG
   ];
   it.each(positiv)('%s → %s', (q, ziel) => {
     expect(href(q)).toBe(ziel);
@@ -152,6 +161,32 @@ describe('parseNormQuery — Positivfälle (Deep-Link)', () => {
     expect(t.erlass.key).toBe('OR');
     expect(t.artikelToken).toBe('257_d');
     expect(t.artikelAnzeige).toBe('257d');
+  });
+});
+
+describe('parseNormQuery — SR-Nummer-Sprung (IA-1)', () => {
+  const sr: [string, string][] = [
+    ['SR 220', '/gesetze/bund/OR'],                 // reiner Erlass-Sprung über die SR-Nummer
+    ['SR 220 336c', '/gesetze/bund/OR#art-336_c'],  // SR-Nummer + Artikel
+    ['SR 220 Art. 257d', '/gesetze/bund/OR#art-257_d'],
+    ['SR 311.0 111', '/gesetze/bund/STGB#art-111'], // dotted SR-Nummer
+    ['SR 311 111', '/gesetze/bund/STGB#art-111'],   // «.0» weggelassen (kollisionsfrei gekürzt)
+    ['SR 101', '/gesetze/bund/BV'],
+    ['sr 173.110 42', '/gesetze/bund/BGG#art-42'],  // klein geschrieben
+  ];
+  it.each(sr)('%s → %s', (q, ziel) => {
+    expect(href(q)).toBe(ziel);
+  });
+
+  it('SR-Nummer NUR für Bund (kantonale Sammlungs-Nummer springt nicht)', () => {
+    // «640.000» ist die kantonale AI-Nummer — kein SR-Sprung (Bund-only, §8).
+    expect(parseNormQuery('SR 640.000', idx)).toBeNull();
+  });
+
+  it('unbekannte / unsaubere SR-Form → kein Fehl-Sprung', () => {
+    expect(parseNormQuery('SR 999.999', idx)).toBeNull(); // unbekannte Nummer
+    expect(parseNormQuery('SR 220 Kündigung', idx)).toBeNull(); // Fremdwort statt Artikel
+    expect(parseNormQuery('SR', idx)).toBeNull(); // nur das Präfix
   });
 });
 

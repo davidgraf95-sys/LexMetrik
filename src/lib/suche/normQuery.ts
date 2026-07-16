@@ -22,6 +22,9 @@ export interface NormErlass {
   kuerzel: string;
   titel: string;
   status: 'snapshot' | 'pdf-embed' | 'nur-live-link';
+  /** Amtliche SR-/Sammlungs-Nummer (BrowseErlass trägt sie; optional in der
+   *  Minimal-Sicht). Nur reine Bund-SR-Nummern speisen den «SR 220»-Sprung. */
+  sr?: string | null;
 }
 
 export interface NormQueryTreffer {
@@ -40,6 +43,12 @@ export interface NormIndex {
   map: Map<string, NormErlass[]>;
   /** Vorhandene Kantonskürzel (2-Buchstaben-Codes) für die Disambiguierung. */
   kantone: Set<string>;
+  /** Amtliche SR-Nummer (nur Bund) → Erlass, für den «SR 220»-Sprung. Die
+   *  SR-Nummer ist bundesweit EINDEUTIG (im Register 0 Kollisionen), Kantone
+   *  zitieren anders → bewusst nur Bundeserlasse. Schlüssel = dotted SR-Nummer
+   *  («220», «312.0»); zusätzlich die um ein Schluss-«.0» gekürzte Form («312»),
+   *  wo sie kollisionsfrei ist (amtliche «SR 311» statt «SR 311.0»). */
+  sr: Map<string, NormErlass>;
 }
 
 // Kürzel/Codes vergleichsfest machen: Grossschreibung, Diakritika weg
@@ -66,10 +75,20 @@ const SUFFIX = /^(\d+)([a-z])?(bis|ter|quater|quinquies)?$/;
 const ARTIKEL_TEIL =
   /^(?:art(?:ikel)?\.?|§|par(?:agraf|agraph)?\.?)?\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)\s*(?:abs\.?\s*\w+)?\s*(?:(?:lit\.?|bst\.?|ziff\.?|ziffer)\s*\w+)?\s*(?:[ivxlcdm]+\.?)?\s*$/i;
 
+/** Extrahiert die Bund-SR-Nummer aus einem BrowseErlass, falls vorhanden. Nur
+ *  reine Zahl-Nummern (Ziffern/Punkte, z. B. «220», «312.0») zählen — kantonale
+ *  Sammlungs-Präfixe («RiE 890.800», «GS III B/7/1») sind KEINE amtliche
+ *  SR-Nummer und werden nicht aufgenommen. */
+function bundSr(e: NormErlass): string | null {
+  const s = e.sr;
+  return s && /^\d[\d.]*$/.test(s.trim()) ? s.trim() : null;
+}
+
 /** Baut den Auflösungs-Index aus der Erlass-Liste (Browse-Manifest). */
 export function baueNormIndex(erlasse: readonly NormErlass[]): NormIndex {
   const map = new Map<string, NormErlass[]>();
   const kantone = new Set<string>();
+  const sr = new Map<string, NormErlass>();
   for (const e of erlasse) {
     if (e.kanton) kantone.add(norm(e.kanton));
     // Sowohl Anzeige-Kürzel als auch Routen-Key indexieren (z. B. «GebV SchKG»
@@ -80,8 +99,19 @@ export function baueNormIndex(erlasse: readonly NormErlass[]): NormIndex {
       if (arr) { if (!arr.includes(e)) arr.push(e); }
       else map.set(k, [e]);
     }
+    // SR-Nummer NUR für Bundeserlasse (eindeutig, s. Interface-Kommentar). Exakte
+    // Nummer plus — kollisionsfrei — die um ein Schluss-«.0» gekürzte Form. Erst
+    // gesetzter Schlüssel gewinnt (deterministisch, kein Überschreiben).
+    if (e.ebene === 'bund') {
+      const n = bundSr(e);
+      if (n) {
+        if (!sr.has(n)) sr.set(n, e);
+        const kurz = n.replace(/\.0$/, '');
+        if (kurz !== n && !sr.has(kurz)) sr.set(kurz, e);
+      }
+    }
   }
-  return { map, kantone };
+  return { map, kantone, sr };
 }
 
 // FR/IT-Kürzel-Aliasse (O-4 · UI-NAV S2/Z3 — billigster Romandie/Ticino-Hebel):
@@ -321,6 +351,31 @@ function kompaktSplit(tokens: string[]): string[] | null {
   return veraendert ? out : null;
 }
 
+// Baut den fertigen Treffer (Deep-Link inkl. #art-Anker) aus Erlass + Artikel.
+function machTreffer(erlass: NormErlass, artikel: { token: string; anzeige: string } | null): NormQueryTreffer {
+  return {
+    erlass,
+    artikelToken: artikel?.token ?? null,
+    artikelAnzeige: artikel?.anzeige ?? null,
+    href: bauHref(erlass, artikel?.token ?? null),
+  };
+}
+
+// SR-Nummer-Sprung «SR 220» / «SR 312.0 Art. 5»: löst über die amtliche
+// SR-Nummer (nur Bund, eindeutig) auf. Die Nummer steht als EIN Token direkt nach
+// «SR» (dotted, z. B. «312.0»); danach optional ein Artikel-Designator. Ohne
+// Artikel → Erlass-Sprung; mit unsauberem Rest → null (→ normale Suche, kein
+// Fehl-Sprung, spiegelt die Kürzel-Strenge). Exakte SR-Nummer (§8 «nie raten»).
+function versucheSr(index: NormIndex, tokens: string[]): NormQueryTreffer | null {
+  if (tokens.length < 2 || norm(tokens[0]) !== 'SR') return null;
+  const erlass = index.sr.get(tokens[1].trim());
+  if (!erlass) return null;
+  const rest = tokens.slice(2);
+  if (rest.length === 0) return machTreffer(erlass, null);
+  const artikel = parseArtikel(rest);
+  return artikel ? machTreffer(erlass, artikel) : null;
+}
+
 // Ein Auflösungs-Versuch für eine gegebene Token-Liste (Kantons-Pfad zuerst).
 function versuche(index: NormIndex, tokens: string[]): NormQueryTreffer | null {
   // Explizite Kantons-Angabe (2-Buchstaben-Code irgendwo in der Eingabe) grenzt
@@ -346,6 +401,9 @@ export function parseNormQuery(query: string, index: NormIndex): NormQueryTreffe
   const roh = query.trim();
   if (!roh) return null;
   const tokens = roh.split(/\s+/);
+  // SR-Nummer-Sprung zuerst (eindeutig, günstig); danach der Kürzel-Pfad.
+  const perSr = versucheSr(index, tokens);
+  if (perSr) return perSr;
   const direkt = versuche(index, tokens);
   if (direkt) return direkt;
   // Fallback: Kompaktform «or257d» auftrennen und erneut versuchen.
