@@ -589,6 +589,17 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const n = { ...o }; for (const id of ids) n[id] = true; return n;
   });
 
+  // E3/A34 (David 16.7.2026): der Seed-Sprung unten darf pro Erlass-Ladung NUR
+  // EINMAL feuern — nicht erneut, wenn die Einzelansicht in den Split-View kippt
+  // (`imPane`/`wurzel` wechseln von false→true). Sonst las der Effekt beim Pane-
+  // Öffnen erneut `window.location.hash` (= der zuvor angeklickte Artikel) und
+  // sprang das frisch weitergescrollte Gesetz-Pane auf diesen früheren Artikel
+  // zurück (Scroll-Verlust, §15 Funktions-Treue «Split-View-Pane-Zustand»). Der
+  // Wächter wird pro Erlass zurückgesetzt; spätere Hash-Wechsel trägt ohnehin der
+  // letzteNavKey-Effekt (Primär) bzw. die eigene Pane-History (A16/A17).
+  const hashSeedGetan = useRef(false);
+  useEffect(() => { hashSeedGetan.current = false; }, [ebene, schluessel]);
+
   // Hash-Sprung: alle Vorfahren des Ziel-Artikels öffnen + scrollen.
   // W2·5d U-POSITION/A17: auch im SEKUNDÄREN Pane an die Fundstelle springen —
   // der ⧉-Öffner legt den Pfad MIT `#art-token` ab (NormPopover readerLink), aber
@@ -599,6 +610,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // sonst wie bisher die echte Fenster-URL (Primär/Einzelansicht byte-gleich).
   useEffect(() => {
     if (!eintraege || !sektionen.length || typeof window === 'undefined') return;
+    // A34: nur der ERSTE inhaltsbereite Lauf sät den Sprung. Danach gesperrt —
+    // ein `imPane`/`wurzel`-Wechsel (Split-View öffnet) re-triggert den Effekt,
+    // darf aber NICHT erneut an den (alten) Hash springen. Wächter VOR dem Hash-
+    // Test setzen, damit auch ein hashloser Erststart den späteren Re-Lauf sperrt.
+    if (hashSeedGetan.current) return;
+    hashSeedGetan.current = true;
     const hashQuelle = istSekundaer ? location.hash : window.location.hash;
     const m = hashQuelle.match(/^#art-(.+)$/);
     if (!m) return;
@@ -992,6 +1009,16 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
       className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
   );
+  // E3/A34: das «Ansicht»-Dropdown im SPLIT-VIEW (nur `imPane`). Es lebt in den
+  // pane-lokalen STICKY Leisten (Such-Bar bzw. 2-Spalten-TOC-Sub-Bar) statt im
+  // wegscrollenden ErlassLeserKopf — so bleibt die Ansichtswahl beim Lesen im Pane
+  // dauerhaft erreichbar (A26-Ziel «immer sichtbar», jetzt auch für den Pane).
+  // In der Einzelansicht (!imPane) trägt der sticky Inhalts-Kopf das Menü (A26) →
+  // hier `null`, kein Doppel. Such-Bar (`!zweiSpalten`) und TOC-Sub-Bar
+  // (`zweiSpalten`) schliessen sich aus ⇒ nie zwei Menüs gleichzeitig.
+  const ansichtMenuPane = imPane
+    ? <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} fussnotenAnzahl={fussnotenAnzahl} />
+    : null;
   // 2-Spalten aktiv ⇒ die Suche lebt in der Gliederungs-Spalte (oberhalb der TOC),
   // NICHT als Vollbreite über dem Gesetzestext (Auftrag David).
   // 2-Spalten-Layout ist NUR ab lg aktiv (istXl, R2: 1024px). Darunter immer
@@ -1046,12 +1073,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             {/* W2·5d U-KOPF/A4 + V2·B-1/B-2: «Ansicht»-Dropdown
                 (Linien/Fussnoten/Verweise/Entscheide + Zeitraum) — reine data-*-/
                 CSS-Toggles bzw. JS-Filter (leserOptionen.ts), global, jede Instanz
-                synchron. Linien-Schalter nur bei geschachteltem Gesetz (sonst
-                wirkungslos). A26 (David 11.7.2026): in der EINZELANSICHT wandert das
-                Dropdown in den immer sichtbaren Inhalts-Kopf (oben, via ansichtSlot)
-                — hier bleibt es NUR im Split-View-Pane (dort trägt der PaneKopf keine
-                Optionen). Der Fussnoten-Chip ist als Eintrag ins Menü aufgegangen. */}
-            {imPane && <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} fussnotenAnzahl={fussnotenAnzahl} />}
+                synchron. A26 (David 11.7.2026) verschob es in der EINZELANSICHT in
+                den immer sichtbaren Inhalts-Kopf (via ansichtSlot). E3/A34 (David
+                16.7.2026): im SPLIT-VIEW lag es hier im ErlassLeserKopf — der scrollt
+                mit dem Gesetzestext weg, sodass beim Lesen «keine Möglichkeit mehr,
+                die Ansicht zu ändern» blieb. Das Menü wandert darum in die pane-
+                lokale STICKY Such-/Gliederungs-Leiste (unten `ansichtMenuPane`),
+                die im Pane dauerhaft oben klebt — daher hier NICHT mehr gerendert. */}
             {/* Dasselbe Gesetz zusätzlich in einem zweiten Reiter öffnen (Auftrag
                 David) — zum Vergleich zweier Stellen; die Reiter unterscheiden sich
                 im Label über den Artikel («OR – Art. 41» / «OR – Art. 97»). */}
@@ -1104,12 +1132,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
                 </button>
               )}
               {sucheEingabe}
+              {/* A34: Ansicht-Menü im Split-View in der sticky Such-Bar (rechts). */}
+              {ansichtMenuPane && <span className="shrink-0">{ansichtMenuPane}</span>}
             </div>
           ) : (
-            <button type="button" aria-expanded={tocAuf} onClick={() => setTocAuf((v) => !v)}
-              className="inline-flex items-center gap-1.5 rounded-md border border-line bg-paper px-3 py-1.5 text-body-s font-medium text-ink-600 shadow-sm hover:text-brass-700 hover:border-brass-300 transition-colors">
-              <span aria-hidden>☰</span>{sektionen.length > 0 ? 'Gliederung & Suche' : 'Im Gesetz suchen'}
-            </button>
+            // A34: unter der 2-Spalten-Schwelle trägt die Bar den ☰-Knopf UND (im
+            // Split-View) das sticky Ansicht-Menü — nebeneinander in EINER Zeile.
+            <div className="flex items-center gap-2">
+              <button type="button" aria-expanded={tocAuf} onClick={() => setTocAuf((v) => !v)}
+                className="inline-flex items-center gap-1.5 rounded-md border border-line bg-paper px-3 py-1.5 text-body-s font-medium text-ink-600 shadow-sm hover:text-brass-700 hover:border-brass-300 transition-colors">
+                <span aria-hidden>☰</span>{sektionen.length > 0 ? 'Gliederung & Suche' : 'Im Gesetz suchen'}
+              </button>
+              {ansichtMenuPane && (
+                <span className="shrink-0 inline-flex rounded-md border border-line bg-paper px-2 py-1 shadow-sm">{ansichtMenuPane}</span>
+              )}
+            </div>
           )}
         </div>
       )}
@@ -1176,6 +1213,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
               <div data-such-bar className="mb-3 shrink-0">
                 <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-2.5 py-1.5 shadow-sm">
                   {sucheEingabe}
+                  {/* A34: im BREITEN Split-View-Pane (2-Spalten) trägt die sticky
+                      TOC-Sub-Bar das Ansicht-Menü — die Such-Bar oben entfällt hier. */}
+                  {ansichtMenuPane && <span className="shrink-0">{ansichtMenuPane}</span>}
                 </div>
               </div>
             )}
