@@ -32,3 +32,19 @@ test('ZGB 798a: fn 667 steht INLINE im Fliesstext-Absatz, fn 666 bleibt Artikele
   })
   expect(boxWort, 'Fliesstext trägt «1991» und «bäuerliche Bodenrecht»').toBeTruthy()
 })
+
+// A43 (David-Befund 16.7.): Die Fussnoten-Reihenfolge im Apparat folgt der
+// Fedlex-Dokumentreihenfolge (laufende Nummer). Bei SchKG Art. 56 gehört die
+// Randtitel-/Section-Fussnote 95 («III. Geschlossene Zeiten …», steht ÜBER dem
+// Artikel) VOR die artikel-eigenen 96–98 — vorher wurde sie ans Ende gehängt.
+test('SchKG 56: Fussnoten-Apparat in Fedlex-Reihenfolge (95 vor 96–98)', async ({ page }) => {
+  await page.goto('/gesetze/bund/SCHKG#art-56')
+  const art = page.locator('#art-56')
+  await expect(art).toBeVisible()
+  await art.scrollIntoViewIfNeeded()
+  const order = await art.locator('[data-fn-apparat]').evaluate((el) =>
+    [...el.querySelectorAll('p')].map((p) => p.querySelector('.num')?.textContent?.trim()).filter(Boolean),
+  )
+  expect(order).toEqual(['95', '96', '97', '98'])
+})
+
