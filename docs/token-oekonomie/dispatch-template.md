@@ -96,6 +96,15 @@ konkreten Schwellen werden per T2-Baseline kalibriert.
 
 ---
 
+### 2.1 · Fable-Ausweitung (David 16.7.2026: «arbeite mehr mit fable»)
+
+Fable 5 (`model:'fable'`, Opus-Fallback bei Nichtverfügbarkeit/Safeguard-Umleitung —
+nie stumm auf einen Default fallen lassen) ist der DEFAULT für: adversariale
+Gegenprüfungs-Agenten (vorher fix Opus/high), Root-Cause-/Debugging-Analysen,
+Judge-/Verify-/Refuter-Stufen und Synthesen in T20-Workflows, Spec-/Plan-Synthesen,
+sowie die härtesten Bau-Einheiten (verzwickte Engine-/Extraktor-Logik).
+Routine-/Mechanik-Bau bleibt Opus; Mechanik Haiku/Sonnet nach §2-Tabelle.
+
 ## 3 · Pflicht-Rückgabe-Schema (T4)
 
 Der Sub-Agent gibt an den Orchestrator **nur** die folgenden Felder zurück (Richtwert **≤ 2k
