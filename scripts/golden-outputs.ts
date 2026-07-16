@@ -56,6 +56,10 @@ import { begruendungsAbsatz, fristbeginnZusatz } from '../src/lib/begruendung';
 import { berechneStreitwert } from '../src/lib/streitwert';
 import { berechneTeuerung } from '../src/lib/teuerung';
 import { berechneBetreibungskosten } from '../src/lib/gebvKosten';
+import { berechneProzesskosten } from '../src/lib/prozesskosten';
+import { berechneBeurkundung } from '../src/lib/beurkundung';
+import { berechneGrundbuchgebuehr } from '../src/lib/grundbuchgebuehren';
+import { berechneNotariatGrundbuch } from '../src/lib/notariatGrundbuch';
 import { berechneErbFrist } from '../src/lib/erbFristen';
 
 const faelle: Record<string, unknown> = {};
@@ -160,6 +164,60 @@ f('straf:kaskade:aufenthalt', () => bestimmeStrafZustaendigkeit({ anliegen: 'ger
 f('straf:kaskade:heimatort', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'heimatort' }));
 f('straf:kaskade:auslieferung', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'auslieferung' }));
 f('straf:unternehmen', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'bekannt', spezialforum: 'unternehmen', uebertretung: false }));
+
+// ── Tarif-Engines: Golden-Blindspot geschlossen (QS-OPT O-3.1) ──────────────
+// prozesskosten / beurkundung / grundbuchgebuehren / notariatGrundbuch trugen
+// bislang 0 Golden-Keys — nur strukturell (tarifInvarianten.test.ts) gedeckt;
+// ein fachlich falscher, aber monotoner Betrag passierte alle Tore. Diese Matrix
+// FRIERT das Ist-Verhalten ein (verhaltensneutral, KEINE Engine-Änderung) und
+// macht künftige unbeabsichtigte Betragsänderungen sichtbar. Korrekturen, die
+// sie später aufdeckt, sind eigene gegatete Einheiten (O-3-Gate-Note). Eingaben
+// fachlich plausibel, rein deterministisch; alle 37 Fälle throw-frei verifiziert.
+const TARIF_KANTONE = ['ZH', 'BS', 'TI'] as const;
+
+// prozesskosten: Kanton × Streitwert (klein/gross) + Kanten (Phase, Materie mit
+// Kostenlos-Schwelle Art. 114 ZPO, nicht-vermögensrechtlich, Instanz, Verfahren).
+for (const kanton of KANTONE) {
+  f(`pk:entscheid:allg:12k:${kanton}`, () => berechneProzesskosten({ kanton, streitwertCHF: 12_000, phase: 'entscheid', materie: 'allgemein' }));
+  f(`pk:entscheid:allg:250k:${kanton}`, () => berechneProzesskosten({ kanton, streitwertCHF: 250_000, phase: 'entscheid', materie: 'allgemein' }));
+}
+f('pk:entscheid:allg:1mio:ZH', () => berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 1_000_000, phase: 'entscheid', materie: 'allgemein' }));
+f('pk:schlichtung:allg:12k:ZH', () => berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 12_000, phase: 'schlichtung', materie: 'allgemein' }));
+f('pk:arbeit:25k:ZH', () => berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 25_000, phase: 'entscheid', materie: 'arbeit' }));
+f('pk:miete:25k:ZH', () => berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 25_000, phase: 'entscheid', materie: 'miete_pacht' }));
+f('pk:nichtvermoegen:ZH', () => berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 30_000, phase: 'entscheid', materie: 'allgemein', nichtVermoegensrechtlich: true }));
+f('pk:rechtsmittel:80k:BS', () => berechneProzesskosten({ kanton: 'BS', streitwertCHF: 80_000, phase: 'entscheid', materie: 'allgemein', instanz: 'rechtsmittel' }));
+f('pk:bundesgericht:80k:ZH', () => berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 80_000, phase: 'entscheid', materie: 'allgemein', instanz: 'bundesgericht' }));
+f('pk:summarisch:40k:ZH', () => berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 40_000, phase: 'entscheid', materie: 'allgemein', verfahren: 'summarisch' }));
+
+// beurkundung: wertbasiert (Grundstückkauf klein/gross) × Kantons-Stichprobe +
+// nicht-wertbasiert (Testament-Rahmen) + Gesellschaft (AG-Gründung) + Schuldbrief.
+for (const kanton of TARIF_KANTONE) {
+  f(`bk:grundstueckkauf:500k:${kanton}`, () => berechneBeurkundung({ geschaeftsart: 'grundstueckkauf', kanton, geschaeftswertCHF: 500_000 }));
+  f(`bk:grundstueckkauf:1_5mio:${kanton}`, () => berechneBeurkundung({ geschaeftsart: 'grundstueckkauf', kanton, geschaeftswertCHF: 1_500_000 }));
+}
+f('bk:testament:ZH', () => berechneBeurkundung({ geschaeftsart: 'testament', kanton: 'ZH' }));
+f('bk:ag_gruendung:BS', () => berechneBeurkundung({ geschaeftsart: 'ag_gruendung', kanton: 'BS', geschaeftswertCHF: 100_000 }));
+f('bk:schuldbrief:TI', () => berechneBeurkundung({ geschaeftsart: 'schuldbrief', kanton: 'TI', geschaeftswertCHF: 400_000 }));
+
+// grundbuchgebühren: Eigentumsübertragung (Kauf) × Kantons-Stichprobe + Kanten
+// (Grundpfand, Dienstbarkeit mit Mindestgebühr, Erbgang).
+for (const kanton of TARIF_KANTONE) {
+  f(`gb:eigentum_kauf:500k:${kanton}`, () => berechneGrundbuchgebuehr({ eintragsart: 'eigentum_kauf', kanton, wertCHF: 500_000 }));
+}
+f('gb:eigentum_kauf:1_5mio:ZH', () => berechneGrundbuchgebuehr({ eintragsart: 'eigentum_kauf', kanton: 'ZH', wertCHF: 1_500_000 }));
+f('gb:grundpfand:400k:BS', () => berechneGrundbuchgebuehr({ eintragsart: 'grundpfand', kanton: 'BS', wertCHF: 400_000 }));
+f('gb:dienstbarkeit:50k:ZH', () => berechneGrundbuchgebuehr({ eintragsart: 'dienstbarkeit', kanton: 'ZH', wertCHF: 50_000 }));
+f('gb:eigentum_erbgang:800k:TI', () => berechneGrundbuchgebuehr({ eintragsart: 'eigentum_erbgang', kanton: 'TI', wertCHF: 800_000 }));
+
+// notariatGrundbuch: Erwerbs-Nebenkosten-Bündel × Kantons-Stichprobe + Kanten
+// (mit Grundpfand, mit Handänderungssteuer, Voll-Kombination).
+for (const kanton of TARIF_KANTONE) {
+  f(`ng:kauf:800k:${kanton}`, () => berechneNotariatGrundbuch({ kanton, kaufpreisCHF: 800_000 }));
+}
+f('ng:kauf:800k:pfand:ZH', () => berechneNotariatGrundbuch({ kanton: 'ZH', kaufpreisCHF: 800_000, mitGrundpfand: true }));
+f('ng:kauf:800k:steuer:BS', () => berechneNotariatGrundbuch({ kanton: 'BS', kaufpreisCHF: 800_000, mitHandaenderungssteuer: true }));
+f('ng:kauf:2mio:voll:ZH', () => berechneNotariatGrundbuch({ kanton: 'ZH', kaufpreisCHF: 2_000_000, mitGrundpfand: true, pfandsummeCHF: 1_600_000, mitHandaenderungssteuer: true }));
 
 // ── Vorlagen: assemble-Ergebnisse (Dokument + Protokoll) ────────────────────
 f('vorl:testament', () => testamentZusammenstellen({
