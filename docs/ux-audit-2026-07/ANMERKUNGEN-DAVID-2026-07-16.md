@@ -89,3 +89,15 @@ https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_
 `highlight_docid`-Link landet beim falschen Entscheid. Empirisch verifizieren
 (welchen Entscheid zeigt bger.ch dort wirklich? existiert atf://150-III-38?),
 Link-Format korrigieren oder ehrlicher Such-Query-Fallback.
+
+## Nachtrag 3 (gleiche Session — Auftrag Gesetze-Aufteilung V2)
+
+«verbessere mit ultracode und fable die aufteilung der gesetze kantonal und
+bund … sinnvoller und praxistauglicher aufbau und man schnell relevantes
+findet.»
+
+*Einordnung Orchestrator:* Ultracode-Panel gefahren (5 Empirie-Miner + 3
+Entwürfe + 3-Linsen-Judge-Panel + Synthese). Sieger-Entwurf
+«Erfassungsgrad-Staffel». Verbindliche Bau-Spec eingeordnet in
+`FAHRPLAN-GESETZES-UX.md` §11 (Bau-Einheiten IA-1…IA-7, David-Fragen
+Y-A/Y-B/Y-C); ROADMAP-Anker im W2·5d-Block.

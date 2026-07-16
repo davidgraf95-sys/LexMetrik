@@ -803,6 +803,13 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   (explizites Ultracode-Opt-in, QS-TOK/T20). Ausserdem: A38 «ganze Website heller
   und weisser» → Design-Kette D-5 (`FAHRPLAN-DESIGN-WAERME.md`) · A39 BGE-Band-Lücke
   (150 II 308 fehlt) → W2·6 PR-B (148/149) + PR-C (150/151).
+  **Gesetze-Aufteilung Bund/Kantone V2 «Erfassungsgrad-Staffel» (David-Auftrag 16.7.2026:
+  «sinnvoller und praxistauglicher aufbau … schnell relevantes finden»; Ultracode-Panel
+  5 Miner/3 Entwürfe/3 Judges) → Bau-Spec `FAHRPLAN-GESETZES-UX.md` §11. Bau-Einheiten:
+  IA-1 Named-Article-Garantie+Dedup (Engine, Gegenprüfung, vorgezogen, nach #232) · IA-2
+  Erfassungsgrad-Badges/SSoT `erfassungsgrad.ts` (Gegenprüfung) · IA-3 A–Z-Register · IA-4
+  Scope-Chip · IA-5 Rechtsgebiet-Kanonisierung · IA-6 /international-Kanonik Stufe 1 · IA-7
+  Sidebar-Badges. David-Fragen Y-A/Y-B/Y-C (§11.8). Trailer `Roadmap: W2·5d`.
 - [ ] **5e · UI-Nutzwert & Navigation (Ultracode-Synthese 11.7.)** *(`[OF]`, reine UI/Navigation)*:
   <!-- @meta id: W2·10-UI-NAV · status: ready · of: ja · blocker: null · dep: [W2·5d] · kollision: [src/components/suche, src/lib/suche, src/lib/universalSuche.ts, src/components/layout, src/components/rechtsprechung, src/pages/Rechtsprechung.tsx, src/pages/gesetz-leser, src/pages/GesetzLeser.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-NAVIGATION.md -->
   Priorisierter UI-Verbesserungs-Plan aus 60 empirischen Befunden + 3 Kritik-Linsen
