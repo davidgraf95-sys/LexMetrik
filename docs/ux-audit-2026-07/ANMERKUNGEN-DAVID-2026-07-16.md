@@ -109,6 +109,12 @@ file:///Users/david/Downloads/154.100-9-1.de.pdf»
 amtlichen PDF), Gliederung und Fussnoten fehlen im Kanton-Snapshot komplett.
 Lokale PDF-Referenz: ~/Downloads/154.100-9-1.de.pdf (amtliche BS-Publikation).
 
+14. (→ **A43**, Fussnoten-Zuordnung, Fläche A31a)
+«https://lexmetrik.vercel.app/gesetze/bund/SCHKG#art-56 reihenfolge fussnoten
+falsch. resp. bezieht sich fussnote 95 auf marginale. vgl. fedlex»
+*Einordnung:* Fussnoten-ZUORDNUNGS-Fall (Marginalie vs. Artikelebene) +
+Reihenfolge — an den A31a-Strang übergeben (PR #255 offen).
+
 ## Nachtrag 3 (gleiche Session — Auftrag Gesetze-Aufteilung V2)
 
 «verbessere mit ultracode und fable die aufteilung der gesetze kantonal und
