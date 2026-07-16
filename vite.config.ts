@@ -4,6 +4,13 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  // O-1.9: Build-Kennung für den Fehlerkanal — Vercel-Commit-SHA (kurz), sonst 'dev'.
+  // Erlaubt es, einen gemeldeten Client-Fehler einem Deploy zuzuordnen. Kein Geheimnis.
+  define: {
+    'import.meta.env.VITE_BUILD_ID': JSON.stringify(
+      (process.env.VERCEL_GIT_COMMIT_SHA ?? '').slice(0, 8) || 'dev',
+    ),
+  },
   resolve: {
     alias: {
       // html2canvas wird von jsPDF nur per dynamischem import() in der nie

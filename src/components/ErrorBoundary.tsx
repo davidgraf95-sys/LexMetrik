@@ -1,6 +1,7 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { SeitenKopf } from './layout/SeitenKopf';
 import { KONTAKT_EMPFAENGER } from '../lib/kontakt';
+import { meldeFehler } from './fehlermeldung';
 
 // Auffangnetz für unerwartete Render-Fehler (CLAUDE.md §3: reine Darstellung,
 // keine Rechtslogik). React kennt für solche Fehler nur Klassen-Komponenten
@@ -36,8 +37,11 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    // Nur lokale Diagnose – keine Übermittlung (Eingaben bleiben im Browser).
     console.error('Unerwarteter Render-Fehler:', error, info.componentStack);
+    // O-1.9: gesampelte, datensparsame Meldung an den Fehlerkanal (nur
+    // Meldung + Route + Build; keine Eingaben, kein componentStack). Fire-and-
+    // forget, wirft nie — §8 in der Datenschutzerklärung offengelegt.
+    meldeFehler(error?.message);
   }
 
   render() {
