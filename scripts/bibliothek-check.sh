@@ -23,7 +23,7 @@ done
 grep -rhoE '\]\([a-zA-Z0-9./_-]+\.md\)' --include="*.md" . \
   | sed -E 's/\]\((.*)\)/\1/' | sort -u | while read -r l; do
   ok=0
-  for base in . recherche behoerden normen kosten register rechtsprechung muster; do
+  for base in . recherche behoerden normen kosten register rechtsprechung muster materialien normtext quellen seo werkzeuge; do
     [ -f "$base/$l" ] && ok=1 && break
   done
   [ "$ok" = "0" ] && echo "VERSTOSS [S7] toter Link: $l"
