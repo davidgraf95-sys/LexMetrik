@@ -242,6 +242,33 @@ stabil (T1 entfernt Warn-Injektion), CLAUDE.md nicht mid-Kampagne editieren, Age
 125 %; Präfix = grösster Preisposten); Tok-Volumen unverändert. DoD:
 cacheRead-Quote steigt (T2-Split) nach T1.
 
+**T20 Ultracode-/Workflow-Orchestrierung als Gross-QS-Instrument (mittel/S, Aufnahme
+David 16.7.2026: «das mit ultracode einbauen in fahrplan»).** M: Für Gross-QS und
+Breiten-Arbeit (Audits, adversariale Prüf-Panels, Korpus-Sweeps, Recherche-Fächer,
+Migrationen) läuft der Agenten-Fächer als **deterministisches Workflow-Skript**
+(Harness-`Workflow`-Tool; Opt-in = Davids «ultracode»-Wort im Auftrag oder ausdrücklicher
+Workflow-Auftrag) statt modellgetrieben Hand-über-Hand: `pipeline()` je Einheit ohne
+künstliche Barrieren; Rückgaben **Schema-erzwungen** (JSON-Schema = maschinell prüfbare
+Form des T4-Rückgabe-Schemas); `model`/`effort` je `agent()`-Call explizit (T15-Routing:
+Bau/Prüfung Opus/high, Mechanik Haiku/low); `budget`-API als **harter Token-Deckel**;
+Befund-Ströme durch adversariale Verify-Muster (N unabhängige Refuter, Mehrheits-Kill;
+loop-until-dry bei Discovery unbekannter Grösse); Abbruch/Fortsetzung über Journal +
+`resumeFromRunId` statt Re-Run. Tool-Output bleibt vollständig aus dem
+Orchestrator-Kontext (§14.6-Hebel «Delegieren» maximal). E: kein Volumen-Sparhebel,
+aber der wirksamste Hebel GEGEN die Typ-O-Ausreisser der T2-Baseline (2 Sessions =
+30 % allen Volumens): der Orchestrator-Kontext bleibt klein, das Volumen wandert in
+gecappte, schema-gebundene Subagenten; empirisch lieferten die bisherigen
+ultracode-Einsätze die dichtesten Ergebnisse je Auftrag (Perf-Audit 30.6.: 25
+verifizierte Befunde · Token-Audit 10.7.: 7 Berichte + 3 Lenses · UX-Recherche 10.7.:
+17 Agenten read-only). R: Kostenexplosion/Agenten-Schwarm → NUR mit explizitem Opt-in
+**je Einsatz**; nie für Routine-Bau (eine Bau-Einheit = EIN Opus-Agent, T4); `budget`
+setzen; jede Kappung per `log()` offenlegen (kein stilles Top-N). **K (Leitplanke):**
+Workflow-Verify ERSETZT NIE Pflicht-Tore — `check:gegenpruefung`/golden/`gate` bleiben
+unberührt; die Gegenprüfungs-Quittung läuft weiterhin über den Skill »gegenpruefung« +
+`npm run gegenpruefung:ok`, nie über Workflow-Verdikte. DoD: Konvention hier + Verweis
+in `docs/token-oekonomie/dispatch-template.md`; der nächste ultracode-Einsatz belegt
+budget-Deckel + Schema-Rückgaben im Report.
+
 ## §6 P4 Werkzeuge+Output
 
 **T9 ast-grep als Navigations-Standard (mittel/S).** M: installieren, allow-Permission, im
@@ -306,7 +333,8 @@ Stufe 2 mit check:gegenpruefung bestanden.
    T10 nach Machbarkeits-Verifikation · T13 ausserhalb aktiver Worktree-Flächen ·
    T14-Stufe-1 nach U-Kette + T2-Frequenz-Beleg.
 4. **Nicht ohne separates Go David:** T12-Stufe-2 (Required-Gefüge) · T14 (L) · T16 (CLAUDE.md) ·
-   T10 (Account-Ebene).
+   T10 (Account-Ebene) · **T20 je Einsatz** (Opt-in «ultracode» bzw. ausdrücklicher
+   Workflow-Auftrag; stehende Freigabe gibt es nicht).
 5. Kein Punkt ändert Gate-Semantik/Prüfpflichten; Auto-Merge gilt je PR.
 
 ## §9 Verworfen

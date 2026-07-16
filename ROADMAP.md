@@ -788,6 +788,19 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       DESIGN-REGLEMENT §4b-B Abschluss.
   - [ ] **DEFER FN-5/M14** wortgenaue Marker: hinter QS-PERF/U-POSITION, separates
     David-Go (Entscheid 10.7.). V2 §2 F1.
+
+  **Nachzug-Welle A29–A40 (David 16.7.2026 — BAU-GO in derselben Session: «run till
+  dry» + «und dann wie immer alles mit opus bauen»):** eingeordnet in
+  `FAHRPLAN-GESETZES-UX.md` §10.10; Wortlaut
+  `docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-16.md`. Einheiten E1–E7:
+  E1/A29 Regesten-Extraktions-Fix BGE 147 III 121 (Risiko-Pfad, Gegenprüfung) ·
+  E2/A30+A31 Marginalien-Superscript + Fussnoten im Fliesstext/Abstände ·
+  E3/A34 Split-View-Bugs (Scroll-Sprung, Ansicht-Menü) · E4/A32+A36 Kontextfenster-
+  Position + ZGB-TOC-Kuration · E5/A35+A40 Suche in Kopfzeile + Treffer-Highlight +
+  BGer-Deep-Link-Bug · E6/A37 Reader-Layout-Breite · E7/A33 Gliederungs-Scroll-Spy
+  (explizites Ultracode-Opt-in, QS-TOK/T20). Ausserdem: A38 «ganze Website heller
+  und weisser» → Design-Kette D-5 (`FAHRPLAN-DESIGN-WAERME.md`) · A39 BGE-Band-Lücke
+  (150 II 308 fehlt) → W2·6 PR-B (148/149) + PR-C (150/151).
 - [ ] **5e · UI-Nutzwert & Navigation (Ultracode-Synthese 11.7.)** *(`[OF]`, reine UI/Navigation)*:
   <!-- @meta id: W2·10-UI-NAV · status: ready · of: ja · blocker: null · dep: [W2·5d] · kollision: [src/components/suche, src/lib/suche, src/lib/universalSuche.ts, src/components/layout, src/components/rechtsprechung, src/pages/Rechtsprechung.tsx, src/pages/gesetz-leser, src/pages/GesetzLeser.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-NAVIGATION.md -->
   Priorisierter UI-Verbesserungs-Plan aus 60 empirischen Befunden + 3 Kritik-Linsen

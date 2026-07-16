@@ -1548,3 +1548,30 @@ Typo > Einzug > Guide — die ersten drei liegen ÜBER dem Guide):
 Reihenfolge-Empfehlung (falls David eine Richtung freigibt): #1+#4 zuerst (billig,
 golden-nah, körper-intern) → messen → dann #2/#3 (Chrome-Schicht, teurer). **Alle vier
 sind Skizze; kein Bau ohne separaten David-Entscheid.**
+
+### 10.10 · Anmerkungs-Nachzug A29–A40 (David 16.7.2026) — Einordnung + Bau-Go
+
+**Quelle (WÖRTLICH massgeblich):** Davids Anmerkungen 16.7.2026, persistiert als
+[`docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-16.md`](docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-16.md).
+**Bau-Go liegt vor** (gleiche Session: «run till dry» + «und dann wie immer alles mit
+opus bauen») — anders als beim §10.8-Nachzug ist dieser Batch sofort baubar.
+Fable orchestriert, jede Einheit = Opus-Agent; Ultracode-Einsätze nach
+`FAHRPLAN-TOKEN-OEKONOMIE.md` §5 T20 (A33 trägt ein explizites Ultracode-Opt-in).
+
+| Einheit | A-Nr. (Anm.) | Kern (Wortlaut-Anker) | Risiko / Kollision |
+|---|---|---|---|
+| **E1** | **A29** (1) | BGE 147 III 121 hat im Original Regeste a UND b, LexMetrik zeigt nur a → Mehrfach-Regesten-Fall in der BGE-Extraktion, korpusweiter Sweep auf weitere betroffene Entscheide. | **Risiko-Pfad** (Rechtsprechungs-Extraktion) ⇒ `check:gegenpruefung` Pflicht. VOR W2·6-PR-B/PR-C (Fix muss vor der nächsten Regeneration drin sein). |
+| **E2** | **A30+A31** (2, 3) | A30: Marginalien-Nummerierung mit Buchstaben; «bis»/«ter» bei 1bis etc. hochgestellt (Fedlex-Referenz). A31: Fussnoten-Marker in den Fliesstext; KEIN Abstand zwischen Artikelnummer/Marginalie und Fussnoten-Marker (Fedlex-Referenz); Abstands-Bug ZGB `#art-276` Abs. 1 (Fussnote reisst grossen Abstand zum Folgeabsatz). | Reader-Rendering, voraussichtlich golden-ändernd ⇒ deklarieren, Fedlex-Seitenvergleich als Beweis. Kollision `ArtikelBody.tsx`/Reader-CSS. |
+| **E3** | **A34** (6) | Split-View: Klick auf verlinkten BGE lässt das Gesetz auf den früher angeklickten Artikel zurückspringen (Scroll-Verlust); zudem keine Möglichkeit mehr, die Ansicht im Split-View zu ändern (A26 liess das Menü bewusst im `ErlassLeserKopf` für `imPane` — Regression prüfen). | UI-Bug, golden-neutral; e2e-Beleg Pflicht. Kollision `inhalt.tsx`/Pane. |
+| **E4** | **A32+A36** (4, 8) | A32: Kontextfenster am Gesetzes-Ende schwer sichtbar → attraktiver positionieren, evtl. unterhalb der Gliederung. A36: ZGB-Gliederungseintrag «Wortlaut der früheren Bestimmungen des sechsten Titels» aus der GLIEDERUNG entfernen — der Inhalt selbst bleibt erreichbar (§15-Treue: nur TOC-Kuration, kein Substanz-Drop). | UI, golden-neutral erwartet (TOC-Filter ggf. Sidecar-berührend → dann deklarieren). |
+| **E5** | **A35+A40** (7, 11) | A35: Suchfenster von oberhalb der Gliederung in die Kopfzeile (zu Ansicht etc.); Suchtreffer im Text markieren («Vertrag» im OR gehighlighted). A40: «beim Bundesgericht öffnen ↗» für BGE 150 III 38 führt zum FALSCHEN Entscheid — Deep-Link (`highlight_docid`) empirisch verifizieren, Builder fixen oder ehrlicher Such-Query-Fallback. | UI + Link-Builder; A40 berührt Zitat-Treue (§7) ⇒ empirische Verifikation gegen bger.ch Pflicht. Kollision Kopfzeile mit E3 (sequenzieren). |
+| **E6** | **A37** (9) | Gesetz bekommt mehr Platz; «Zitat»-Link sehr weit rechts; verfügbaren Platz nutzen, optimal über Bildschirmbreiten (390–1920+). | Layout, golden-neutral; Screenshot-Serie über Breiten als Beweis. Kollidiert mit E4/E5 (Spalten-Layout) ⇒ nach deren Merge. |
+| **E7** | **A33** (5) | «Gliederung springt umher. Wenn man sich darin bewegt. Mit ultracode überprüfen und nützlichkeit verbessern.» → T20-Workflow-Audit des Scroll-Spy-/TOC-Verhaltens (mehrere Lenses, empirisch via Playwright), danach Fix-Einheit. | Explizites Ultracode-Opt-in Davids. Kollision `SektionBaumTOC`/Scroll-Spy mit E4 ⇒ sequenzieren. |
+| **→ D-Kette** | **A38** (Nachtrag) | «mache die ganze lexmetrik webseite heller uns weisser» — übersteuert die Flächen-Ton-Zielwerte der Design-Wärme-Kette: D-5 Papier-Treppe mit hellerer/weisserer Basis; Wärme nur noch als Nuance (Tinte/Akzente), nicht als Flächen-Ton. | Heimat `FAHRPLAN-DESIGN-WAERME.md` (D-5); `check:farbwelt`-Zielwerte deklariert nachziehen; Kontrast-Tore (§13/F2) bleiben Arbiter. |
+| **→ W2·6** | **A39** (10) | BGE 150 II 308 bei BGFA Art. 20 nicht verlinkt = Korpus-Lücke (Korpus endet bei Band 147), kein Verzahnungs-Bug → BGE-Nachzug PR-B (148/149) + **PR-C (150+151, soweit publiziert)**, Mechanik/Gegenprüfung wie #232. | Risiko-Pfad-Mechanik wie #232; NACH E1/A29. |
+
+**Reihenfolge (Kollisions-Sequenzierung):** E1 (Risiko, datenseitig, unabhängig) ‖
+E2 (Rendering) ‖ E3 (Pane) parallel in Worktrees → dann E4 → E5 → E6 → E7;
+A38/D-Kette und A39/PR-B/PR-C laufen als eigene Stränge (andere Flächen).
+Je Einheit gilt die A9-DoD-Zeile (§10.4) wörtlich; Risiko-Einheiten (E1, A39,
+A40-Anteil) mit Gegenprüfungs-Quittung.

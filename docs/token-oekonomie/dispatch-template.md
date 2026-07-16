@@ -242,3 +242,14 @@ explizit (DoD T15: Stichprobe 10/10 = 100 % explizit) und hält das Schema aus �
 **DoD-Beweis:** 10/10 Köpfe tragen `model`+`effort` explizit; keiner routet eine Synthese
 (#6) oder einen Risikopfad/Gegenprüfung (#2,#3,#8,#10) unter das jeweilige Minimum; #9 nutzt
 DOM nur für einen Fakt (Positivliste), #10 bleibt Screenshot.
+
+## 8 · Ultracode-Workflows (T20)
+
+Für Gross-QS/Breiten-Arbeit (Audits, Prüf-Panels, Korpus-Sweeps) gilt zusätzlich
+**T20** (`FAHRPLAN-TOKEN-OEKONOMIE.md` §5): Agenten-Fächer als deterministisches
+Workflow-Skript statt Hand-über-Hand — Schema-erzwungene Rückgaben (dieses Template
+§3 als JSON-Schema), `model`/`effort` je `agent()`-Call explizit (§2), `budget` als
+harter Deckel, adversariale Refuter-Mehrheit für Befund-Ströme, Kappungen per `log()`
+offen. **Opt-in je Einsatz durch David** («ultracode»-Wort bzw. ausdrücklicher
+Workflow-Auftrag); nie für Routine-Bau (eine Bau-Einheit = EIN Opus-Agent, §1).
+Pflicht-Tore/Gegenprüfungs-Quittung bleiben unberührt.
