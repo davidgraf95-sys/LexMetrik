@@ -478,7 +478,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     rein HTML gebaut+gegated+gegenprüft: **P2** Split-sup-Merge (6 Blöcke: GEBV/HMG×2/KLV/CO2/VRV), **P4**
     SSV-Kachel-379-Leak, **P1** sha deckt `mehrspaltig.spalten`, **P5** `[tab]`-Negativ-Lexikon (Expected-Fail-Register).
     **[x] P3** Drop-Klasse laut ✅ 5.7.2026 (W2·5b-Restblock, s.u.). Detail STRUKTUR-Karte 2.7. + Spec §7.
-  - [ ] **+ Audit-Andockung 3.7.2026 (Audit 1, `BACKLOG-AUDIT-WERKZEUGE-2026-07.md`):** **N3 · `he` statt
+  - [x] **+ Audit-Andockung 3.7.2026 (Audit 1, `BACKLOG-AUDIT-WERKZEUGE-2026-07.md`):** **N3 · `he` statt
     Handtabelle ✅ 3.7.2026** (Branch `feat/nulltarif-werkzeuge`: Ergebnis BESSER als erwartet — Bund-Regen aus
     gepinnten Caches **0-Byte-Diff** (golden-neutral; die `&ge;`/`&le;`-Klasse sitzt in Kanton-Quellen und
     greift bei deren nächstem Regen); einzige Divergenzen der Alt-Tabelle: `&nbsp;`/`&mu;` als dokumentierte
@@ -750,15 +750,17 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     recovert die verworfenen Schlusstitel-Fussnoten (`disp_uN/art_*`) korpusweit (227 recovert,
     u.a. OR/ZGB); «OR/ZGB byte-gleich» galt NICHT, stattdessen strukturell nicht-regressions-
     bewiesen (nur additiv, 0 Verlust). Gegenprüfung gegen Fedlex bestanden; Detail V2 §2 F1. V2 §2 F1.
-  - [ ] **A20** (FN-3): Präambel-Fussnoten inline (nach U-VERWEIS-Merge). V2 §2 F1.
-    **Bau-Go David ausstehend.**
+  - [x] **A20** (FN-3): Präambel-Fussnoten inline (nach U-VERWEIS-Merge). V2 §2 F1.
+    **✅ GEBAUT 12.7.2026 (`feat/v2-fn3`, PR #212).** Detail §10.8.
   - [ ] **A21** (FN-4): Absatz-Zuordnung Alt-Form (bündelt mit A19-Regen). V2 §2 F1.
     **Bau-Go David ausstehend.**
-  - [ ] **A22** (K-1+K-2): Kopf nützlicher + Fussnoten-Anwahl (koordinierter Kopf-PR
-    mit U-PDF, nach U-VERWEIS). V2 §2 F2. **Bau-Go David ausstehend.**
-  - [ ] **A23** (B-1+B-2): BGE Ab-/Anwahl + Zeitfilter in Rubrik-Ansicht, Kappung
+  - [~] **A22** (K-1+K-2): Kopf nützlicher + Fussnoten-Anwahl (koordinierter Kopf-PR
+    mit U-PDF, nach U-VERWEIS). V2 §2 F2. **K-2 ✅ GEBAUT 11.7.2026 (`feat/v2-kopf-pr`,
+    PR #194) — Fussnoten-Chip. K-1 («in Kraft seit» / SPARQL-Datenteil) weiterhin offen.**
+    Detail §10.8.
+  - [x] **A23** (B-1+B-2): BGE Ab-/Anwahl + Zeitfilter in Rubrik-Ansicht, Kappung
     `LEITFAELLE_SICHTBAR` 5→10 (überstimmt §3.1-«3 Toggles»; nach U-VERWEIS).
-    V2 §2 F3. **Bau-Go David ausstehend.**
+    V2 §2 F3. **✅ GEBAUT 11.7.2026 (`feat/v2-kopf-pr`, PR #194).** Detail §10.8.
   - [~] **A24** (L-1+L-2+L-3): Linien-Reparatur, Auto-Default-Umkehr ZGB/OR (Umkehr
     #161, David freigegeben); L-4 entfällt. V2 §2 F4.
     - [x] **L-1+L-2 ✅ GEBAUT 11.7.2026 (feat/v2-l1-l2):** Einzug-Cap 3→5 + Mobil-
@@ -892,7 +894,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       3108 AS/RO-Änderungs-Erlasse über die 218 Volltext-Erlasse (SPARQL Pfad (b) SR-Taxonomie), RO-Fundstelle aus oc-URI (100 %),
       Botschafts-Join über `ocUris` (477), `nichtKonsolidiert`-Marker (93) + Sammelerlass-Cross-Check gegen Pfad (a) ab 2000 (1942);
       Sidecar `public/normtext/revisionen/` (Übergangslösung bis E1→`erlass_fassungen`), im Norm-Kontext-Bus «Änderungen / Revisionen»
-      neben der Entstehungsgeschichte (Bridge B1); Tore `check:revisionen`(-netz), Gegenprüfung bestanden. **Nächstes: Paket 3** (Vernehmlassungen, POC nötig).
+      neben der Entstehungsgeschichte (Bridge B1); Tore `check:revisionen`(-netz), Gegenprüfung bestanden. **Alle 5 Pakete (1/2/5/3/4) ✅ AUSGEFÜHRT** — Detail `FAHRPLAN-FEDLEX-PORTFOLIO.md`.
 
       (Bridge B1); Join-Felder `projEli/ocUris/botschaftDate` für Paket 5 persistiert. Paket 5/3 (Änderungshistorie/AS,
       Vernehmlassungen) via eigene PRs. **Paket 4 (Staatsverträge, `W2·6`) ✅ 10.7.2026** — 9 kuratierte SR-0.*-Verträge
