@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Checkbox, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { zahlBeliebig as zahl } from './eingabe';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -32,12 +33,6 @@ const GK_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
 const GK_DISCLAIMER =
   'Amtliche Gebühren nach der GebV SchKG (Stand 1.1.2026): fixe Staffeln als Beträge, Rahmengebühren (z. B. Rechtsöffnung, Art. 48) nur als Bandbreite. ' +
   'Auslagen (Art. 13: Porti, Sachverständige) kommen effektiv hinzu und werden nicht beziffert. Der Schuldner trägt die Kosten; der Gläubiger schiesst sie vor (Art. 68 SchKG).';
-
-const zahl = (roh: string): number | undefined => {
-  if (roh.trim() === '') return undefined;
-  const n = Number(roh);
-  return Number.isFinite(n) ? n : undefined;
-};
 
 export function GebvKostenForm({ minimal = false }: { minimal?: boolean } = {}) {
   const ausLink = useMemo(() => {

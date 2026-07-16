@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { zahlBeliebig as zahl } from './eingabe';
 import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { KantonNormText } from '../KantonNormText';
@@ -43,12 +44,6 @@ const PK_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
   quote: { p: 'q', typ: 'num', gueltig: (n) => Number.isInteger(n) && n >= 0 && n <= 100 },
   mwst: { p: 'mw', typ: 'bool' },
   nv: { p: 'nv', typ: 'bool' },
-};
-
-const zahl = (roh: string): number | undefined => {
-  if (roh.trim() === '') return undefined;
-  const n = Number(roh);
-  return Number.isFinite(n) ? n : undefined;
 };
 
 const spanneText = (s?: { vonChf: number; bisChf: number }): string =>

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Field, inputCls } from '../vorlagen/ui';
+import { zahlNichtNegativ as zahl } from './eingabe';
 import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
@@ -23,12 +24,6 @@ import { chfGanz as chf } from '../../lib/vorlagen/datum';
 // ─── Grundbuchgebühren je Eintragungsart (reine Darstellung, §3) ────────────
 // Gerechnet wird in lib/grundbuchgebuehren.ts; §8: fehlt ein kantonaler Tarif
 // noch (Recherche), wird das ehrlich ausgewiesen, nie ein Schätzwert.
-
-const zahl = (roh: string): number | undefined => {
-  if (roh.trim() === '') return undefined;
-  const n = Number(roh);
-  return Number.isFinite(n) && n >= 0 ? n : undefined;
-};
 
 const GB_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
   art: { p: 'ea', typ: 'str', gueltig: einerVon(...GB_EINTRAGSART_IDS) },
