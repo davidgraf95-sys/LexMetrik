@@ -66,6 +66,10 @@ abnahme/startseite-v3/
 # Anleitung in abnahme/responsive-audit/BERICHT.md) — nie committen (Repo-Gewicht + Deploy-Upload-Risiko)
 abnahme/responsive-audit/shots-*/
 
+# D-5/A38 Papier-Treppe: Vorher/Nachher-PNGs (regenerierbar via scratch-shots.mjs,
+# Anleitung in abnahme/design-d5/BERICHT.md) — nur BERICHT.md committen (Auftrag D-5)
+abnahme/design-d5/*.png
+
 # lokaler PDF-Cache für SG-2935-Reparatur (nie committen)
 .pdf-cache/
 

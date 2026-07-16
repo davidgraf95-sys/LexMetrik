@@ -292,8 +292,11 @@ den Tick (`border-left-color`) und die Hover-Utilities; Form/Token/Grösse bleib
 **CLS 0**, keine Layout-Verschiebung. Der Default `'norm'` emittiert die unveränderte
 brass-Klassenzeile ⇒ Grundzustand **byte-gleich** (`golden:vergleich` IDENTISCH; die
 zitierten Normen im KontextPanel bleiben brass). Kontrast als Gate gemessen
-(WCAG 1.4.11 ≥ 3:1 für den Tick, 1.4.3 ≥ 4.5:1 für Glyphen): slate-500-Tick **4.81**
-hell / **3.47** dunkel; warn-700-↻ **5.24** / **9.43**; brass-700-★ **4.91** / **10.48**.
+(WCAG 1.4.11 ≥ 3:1 für den Tick, 1.4.3 ≥ 4.5:1 für Glyphen): slate-500-Tick **5.03**
+hell / **3.47** dunkel; warn-700-↻ **5.48** / **9.43**; brass-700-★ **5.13** / **10.48**.
+*(D-5/A38, 16.7.: die HELL-Werte stiegen [4.81→5.03 · 5.24→5.48 · 4.91→5.13], weil
+`--well` heller/weisser wurde [#F2EFE6→#F6F4EE]; DUNKEL unverändert — s. `DESIGN-REGLEMENT.md`
+§F2b-Nachtrag D-5.)*
 `--slate-500` wird in `html.dark` bewusst NICHT überschrieben (Tick-Kontrast bleibt
 gehalten). **Gegated:** `verzahnung.test` (Default byte-identisch, Entscheid-Slate,
 ↻-warn), Golden byte-gleich. **D-3-Neu-Messung (12.7.2026, color-mix srgb→oklab):
