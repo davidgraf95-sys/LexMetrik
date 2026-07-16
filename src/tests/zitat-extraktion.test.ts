@@ -255,6 +255,60 @@ describe('F2-V10 — Bereichs-Zitat (Bindestrich/Halbgeviert)', () => {
   });
 });
 
+// ─── F2-Nachtrag (nachgeholte Doppel-Prüfung der stumm verworfenen Kandidaten) ─
+// Zwei der vier durch Netz-Abbruch in der Refute-Phase stumm verworfenen
+// Kandidaten wurden nachgeholt als CONFIRMED belegt und hier nachgebaut; die
+// beiden anderen («ch.» Chiffre, bereits durch SUB_MARKER erfasst) sind als
+// Regressions-Schloss in F2-V2/den bestehenden Sub-Marker-Tests mit abgedeckt.
+
+describe('F2-Nachtrag ATF/DTF — frz./ital. BGE-Sigel → «BGE …»-Kanon', () => {
+  it('«ATF»/«DTF» werden auf den dt. «BGE …»-Kopf normalisiert (Verzahnungs-Dedup)', () => {
+    // Sprach-Zwillinge DESSELBEN Leitentscheids teilen jetzt EINEN Schlüssel.
+    expect(extrahiereEntscheidRefs("Selon l'ATF 147 III 121, ...")).toEqual(['BGE 147 III 121']);
+    expect(extrahiereEntscheidRefs('Vedi DTF 141 I 78.')).toEqual(['BGE 141 I 78']);
+    expect(extrahiereEntscheidRefs('BGE 147 III 121 und ATF 147 III 121')).toEqual([
+      'BGE 147 III 121',
+    ]);
+  });
+  it('frz./ital. Erwägungs-Pinpoint «consid.» wird nun mitgeführt (vorher verloren)', () => {
+    expect(extrahiereEntscheidRefs('ATF 147 III 121 consid. 2.3')).toEqual(['BGE 147 III 121 E. 2.3']);
+    expect(extrahiereEntscheidRefs('DTF 140 III 115 consid. 2')).toEqual(['BGE 140 III 115 E. 2']);
+  });
+  it('kein Doppel-Schlüssel: der Zahl-Schwanz wird nicht zusätzlich als Aktenzeichen erfasst', () => {
+    // «ATF 144 IV 313» darf NICHT zusätzlich das bare «144 IV 313» erzeugen.
+    expect(extrahiereEntscheidRefs('Cf. ATF 144 IV 313 et suivants.')).toEqual(['BGE 144 IV 313']);
+  });
+  it('FP-Linse: unvollständige/andere Formen lösen keinen BGE-Treffer aus', () => {
+    // Ohne vollständige «Band röm Seite»-Form kein Kopf.
+    expect(extrahiereEntscheidRefs('ATF 147')).toEqual([]);
+    // Ein bare «147 III 121» OHNE Sigel bleibt die prefix-lose Aktenzeichen-Form
+    // (unveränderte Basis-Semantik der Bare-Nennung).
+    expect(extrahiereEntscheidRefs('Der Verweis 147 III 121 steht allein.')).toEqual([
+      '147 III 121',
+    ]);
+  });
+});
+
+describe('F2-Nachtrag lett — ital. «lett.» (lettera) als Sub-Marker', () => {
+  it('«art. 89 cpv. 1 lett. b LTF» → ART.89.ABS.1.LTF (vorher []: «let» frass «lett»)', () => {
+    expect(normen('art. 89 cpv. 1 lett. b LTF')).toEqual(['ART.89.ABS.1.LTF']);
+    expect(normen('art. 21 cpv. 1 lett. a LStup')).toEqual(['ART.21.ABS.1.LSTUP']);
+    expect(normen('art. 12 lett. c CPP')).toEqual(['ART.12.CPP']);
+    // frz. «litt.» (littera) analog vor «lit» geankert.
+    expect(normen('art. 5 al. 1 litt. b CP')).toEqual(['ART.5.ABS.1.CP']);
+  });
+  it('kürzeres «lit»/«let» bleibt unversehrt (keine Regression durch die Voranstellung)', () => {
+    expect(normen('Art. 89 Abs. 1 lit. b BGG')).toEqual(['ART.89.ABS.1.BGG']);
+    expect(normen('Art. 81 Abs. 1 lit. b Ziff. 5 BGG')).toEqual(['ART.81.ABS.1.BGG']);
+  });
+  it('FP-Linse: «LETT»/«LET» sind geblockte Codes, nie ein Norm-Treffer', () => {
+    expect(INVALID_LAW_CODES.has('LETT')).toBe(true);
+    expect(INVALID_LAW_CODES.has('LET')).toBe(true);
+    // «lett.» ohne folgenden echten Code bleibt leer.
+    expect(normen('Art. 5 lett. b. Weiter im Text')).toEqual([]);
+  });
+});
+
 describe('Normalisierungs-Helfer', () => {
   it('normalisiereStatut mit/ohne Absatz', () => {
     expect(normalisiereStatut('34', '2', 'bv')).toBe('ART.34.ABS.2.BV');

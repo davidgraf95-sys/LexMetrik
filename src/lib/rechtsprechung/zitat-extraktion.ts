@@ -26,6 +26,15 @@
 // Jede F2-Ergänzung ist adversarial FP-geprüft und mit dem in dieser Datei
 // verankerten Filter (`INVALID_LAW_CODES`, Gross-/Umlaut-/Bereichs-Monotonie-Regeln)
 // gegen konstruierte Fehltreffer abgesichert (Tests: `src/tests/zitat-extraktion.test.ts`).
+//
+// ── F2-Nachtrag (nachgeholte Doppel-Prüfung, 16.7.2026) ──────────────────────
+// Vier durch Netz-Abbruch in der Refute-Phase stumm verworfene Kandidaten
+// nachgeholt: (1) «ATF …» frz. + (2) «DTF …» ital. BGE-Sigel → beide auf den
+// «BGE …»-Kanon normalisiert (Verzahnungs-Dedup der Sprach-Zwillinge, sonst
+// stiller Verlust im FR/IT-Korpus; Miner-These 2 empirisch bestätigt) inkl. des
+// vorher verlorenen «consid.»-Pinpoints; (4) «lett.» ital. lettera als Sub-Marker
+// (vorher [] — «let» frass 3 von 4 Zeichen). (3) «ch.» frz. chiffre war bereits
+// über SUB_MARKER erfasst → als geprüft-verworfen dokumentiert.
 
 /** Gesetzes-Zitat mit bewahrtem Artikel-/Absatz-Token. */
 export interface StatutRef {
@@ -60,7 +69,12 @@ const FOLGE_MARKER = '(?:ff|ss|segg)\\.?'; // «und folgende»
 // Untergliederungs-Marker. F2-V3: «Nr» (Staatsvertrags-Standard «Art. 34 Nr. 3
 // LugÜ») VOR «n» in der Alternation, damit «Nr» ganz konsumiert wird statt «n»+«r»
 // — sonst greift «Nr» als law-Kandidat und der Erlass fällt weg (belegt 150_III_423).
-const SUB_MARKER = '(?:Ziff(?:er)?|Nr|lit|Bst|Buchst|S|Satz|ch|let|n)';
+// F2-Nachtrag (lett): «lett» (it «lettera») und «litt» (fr «littera») MÜSSEN VOR den
+// kürzeren «let»/«lit» stehen — sonst frisst «let» nur 3 der 4 Zeichen von «lett»,
+// der Rest-Buchstabe «t» wird als SUB_TOKEN gelesen und das Glied kippt (der law
+// wird «lett», nGross 0 → verworfen). Empirisch: extrahiereStatutRefs(
+// 'art. 89 cpv. 1 lett. b LTF') = [] vor, = 1 Treffer (LTF) nach dem Fix.
+const SUB_MARKER = '(?:Ziff(?:er)?|Nr|litt|lit|Bst|Buchst|S|Satz|ch|lett|let|n)';
 const SUB_TOKEN = '(?:\\d+|[a-z])';
 // Gesetzes-Code: Grossbuchstaben-Kürzel. F2-V5: Umlaut NUR als optionaler END-
 // Buchstabe (Konvention «LugÜ»/«EPÜ»/«SDÜ»/«VeÜ»/«NYÜ»), NIE in der Innenklasse —
@@ -121,8 +135,18 @@ const GLIED_KOPF = new RegExp(
 // die 5-Stellen-Trunkierung und den No-Space-Teilkopf (Basis-Parität).
 const ERW_MARKER = '(?:E\\.|Erw\\.|consid\\.|cons\\.)';
 const ERW_TOKEN = '(?:[IVX]+\\.)?\\d+[a-z]?(?:\\.\\d+[a-z]?)*(?:/[a-z]+|-\\d+[a-z]?)?';
+// F2-Nachtrag (ATF/DTF): Die frz. («ATF») und ital. («DTF») Sigel bezeichnen
+// DENSELBEN Bundesgerichts-Leitentscheid wie das dt. «BGE» — «ATF 147 III 121»
+// ≡ «DTF 147 III 121» ≡ «BGE 147 III 121». Alle drei werden auf den KANONISCHEN
+// «BGE …»-Kopf normalisiert, sonst bekämen die Sprach-Zwillinge verschiedene
+// Schlüssel und die Entscheid↔Entscheid-Verzahnung im FR/IT-Korpus ginge still
+// verloren (Miner-These 2, empirisch belegt). Der frz./ital. Erwägungs-Pinpoint
+// «consid.» ist bereits in ERW_MARKER — er ging für ATF/DTF vorher komplett
+// verloren, weil der Kopf nur über den Blank-Docket-Fallback (ohne Pinpoint)
+// erfasst wurde. `ATF`/`DTF` sind — wie `BGE` — nur in der exakten
+// «Sigel Band röm Seite»-Form treffbar → praktisch FP-frei.
 const BGE_PATTERN = new RegExp(
-  `\\bBGE\\s+(?<vol>\\d{1,3})\\s+(?<div>[IVX]{1,4}[ab]?)\\s+(?<page>\\d{1,4})\\b` +
+  `\\b(?:BGE|ATF|DTF)\\s+(?<vol>\\d{1,3})\\s+(?<div>[IVX]{1,4}[ab]?)\\s+(?<page>\\d{1,4})\\b` +
     `(?:\\s+${ERW_MARKER}\\s*(?<erw>${ERW_TOKEN}))?`,
   'gi',
 );
@@ -346,9 +370,13 @@ export function extrahiereEntscheidRefs(text: string): string[] {
       if (inEcli(start)) continue; // Teil eines bereits erfassten ECLI
       const raw = match[0].trim();
       if (pattern === bareMuster) {
-        // Doppelzählung von BGE-Refs als Aktenzeichen vermeiden.
+        // Doppelzählung von BGE-Refs als Aktenzeichen vermeiden. F2-Nachtrag:
+        // auch die frz./ital. Sigel «ATF»/«DTF» unterdrücken — deren Zahl-Schwanz
+        // «147 III 121» wird sonst zusätzlich als bare Aktenzeichen erfasst und
+        // bekäme den prefix-losen Schlüssel zurück, den der ATF/DTF-Fix gerade
+        // auf den «BGE …»-Kanon hebt (sonst Doppel-Schlüssel statt Dedup).
         const prefix = text.slice(Math.max(0, start - 8), start);
-        if (/\bBGE\s*$/i.test(prefix)) continue;
+        if (/\b(?:BGE|ATF|DTF)\s*$/i.test(prefix)) continue;
       }
       const normalisiert = normalisiereDocket(raw);
       if (!normalisiert || gesehen.has(normalisiert)) continue;
