@@ -113,6 +113,27 @@ export function romanFrei(label: string): { pre: string; rest: string } {
   return m ? { pre: m[1].trim(), rest: m[2].trim() } : { pre: '', rest: label };
 }
 
+// A30 (David 16.7.2026): Marginalien-/Randtitel-Enumeratoren tragen lateinische
+// Ordnungs-Suffixe («IIIbis», «Ia»). Fedlex setzt das Ordnungs-WORT (bis/ter/…)
+// HOCHGESTELLT (<sup>) und einen einzelnen Buchstaben-Suffix (Ia) KURSIV (<i>) —
+// empirisch am gepinnten Filestore-HTML verifiziert (ZGB: «III<sup>bis</sup>.»,
+// «I<i>a</i>.», §7). Reine Darstellung (§3): der Label-STRING bleibt unverändert,
+// nur die Auszeichnung des schon im String liegenden Suffixes wird rekonstruiert.
+// Greift NUR, wenn der Enumerator eine römische Zahl oder arabische Ziffer ist
+// (Buchstaben-Enumeratoren «A.»/«b.» tragen keinen Suffix) UND der Suffix direkt an
+// einem Wort-/Satzende klebt — sonst No-op (Sachtitel wie «Mitgliederverzeichnis»
+// bleiben unberührt; das Ordnungswort nach reinem Römisch/Ziffer-Präfix ist
+// praktisch nur der Enumerator).
+const MARG_ORD = /^((?:[IVXLCDM]+|\d+))(bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)(?=[.\s]|$)/;
+const MARG_BUCHST = /^((?:[IVXLCDM]+|\d+))([a-z])(?=[.\s]|$)/;
+export function margLabel(label: string): ReactNode {
+  const ord = label.match(MARG_ORD);
+  if (ord) return <Fragment>{ord[1]}<sup>{ord[2]}</sup>{label.slice(ord[0].length)}</Fragment>;
+  const bu = label.match(MARG_BUCHST);
+  if (bu) return <Fragment>{bu[1]}<em>{bu[2]}</em>{label.slice(bu[0].length)}</Fragment>;
+  return label;
+}
+
 // Pfad (Sektions-ids Wurzel→Treffer) zur ersten Sektion, die das Prädikat erfüllt.
 export function pfadZu(sektionen: Sektion[], treffer: (s: Sektion) => boolean): string[] | null {
   for (const s of sektionen) {

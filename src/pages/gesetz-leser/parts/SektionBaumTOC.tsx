@@ -1,6 +1,6 @@
 import { memo, type ReactNode } from 'react';
 import type { Sektion } from '../../../lib/normtext/browse';
-import { romanFrei } from '../helpers';
+import { romanFrei, margLabel } from '../helpers';
 
 // TOC-Gliederungsbaum: jede Stufe einklappbar (geteilter Zustand mit dem
 // Fliesstext); Dreieck klappt, Label springt.
@@ -30,7 +30,7 @@ export const SektionBaumTOC = memo(function SektionBaumTOC({ sektionen, aktivPfa
             : <span className="shrink-0 w-4" aria-hidden />}
           <button type="button" onClick={() => onSprung(s.id)} data-toc-aktiv={aktiv ? '1' : undefined} aria-current={aktiv ? 'true' : undefined}
             className={`flex-1 text-left rounded px-1.5 py-0.5 leading-snug transition-colors ${tiefe === 0 ? 'text-body-s' : 'text-xs'} ${aktiv ? 'text-ink-900 font-medium bg-brass-100/40' : 'text-ink-600 hover:text-ink-900 hover:bg-paper-sunken/60'}`}>
-            {pre ? <><span className="font-medium text-ink-700">{pre}:</span> {rest}</> : s.label}
+            {pre ? <><span className="font-medium text-ink-700">{pre}:</span> {margLabel(rest)}</> : margLabel(s.label)}
           </button>
         </div>
         {/* Auf-/Zuklappen via grid-rows (0fr↔1fr) — Kinder bleiben gemountet.
