@@ -15,6 +15,17 @@
 // Gruppen `(?P<name>…)` → `(?<name>…)`; der Lookahead `(?![a-z])` funktioniert in
 // modernem V8. Der Filter (`INVALID_LAW_CODES` + Gross-/Länge-Regeln) verkörpert
 // jahrelang getunte Falsch-Positiv-Vermeidung und wird VERBATIM übernommen.
+//
+// ── Muster-Ausbau F2 (Roadmap W2·7-VZUI, 16.7.2026) ──────────────────────────
+// Die Erwägungs-/Bereichs-/Ketten-/Umlaut-Muster sind angelehnt an den Zitat-
+// Normalizer des Omnilex-AI-Starter-Repos (`src/omnilex/citations/normalizer.py`,
+// Lizenz **Apache-2.0**) — übernommen wurden NUR die Regex-Formen (BGE-Pinpoint
+// `E.`/`Erw.`/`consid.` dezimal/slash/range, Absatz-Marker DE/FR/IT), NICHT das
+// dort naive `if abbrev in raw`-Substring-Matching (Fehlmatch-anfällig). Recherche
+// + Lizenz-/FP-Analyse: `bibliothek/werkzeuge/omnilex-ai-und-kaggle-legal-ir-2026-07-16.md`.
+// Jede F2-Ergänzung ist adversarial FP-geprüft und mit dem in dieser Datei
+// verankerten Filter (`INVALID_LAW_CODES`, Gross-/Umlaut-/Bereichs-Monotonie-Regeln)
+// gegen konstruierte Fehltreffer abgesichert (Tests: `src/tests/zitat-extraktion.test.ts`).
 
 /** Gesetzes-Zitat mit bewahrtem Artikel-/Absatz-Token. */
 export interface StatutRef {
@@ -24,6 +35,12 @@ export interface StatutRef {
   gesetz: string;
   /** Artikel-Token, whitespace-frei und klein — BEWAHRT: '34', '8a', '52bis'. */
   artikel: string;
+  /**
+   * Bereichs-Endpunkt (F2-V10, «Art. 641-654a ZGB» → '654a'); sonst null. Fliesst
+   * NICHT in `normalisiert`/den Norm-Key ein (der bleibt der Start-Artikel) —
+   * nur zur treuen Anzeige des Bereichs (Monotonie-gesichert: `bis` ≥ `artikel`).
+   */
+  artikelBis: string | null;
   /** Absatz-Token (falls genannt), z.B. '2'; sonst null. */
   absatz: string | null;
   /** Normalform, z.B. 'ART.34.ABS.2.BV' bzw. 'ART.8.EMRK'. */
@@ -40,28 +57,88 @@ const ARTIKEL_TOKEN = `\\d+(?:\\s*${ORDINAL_SUFFIX}|[a-z](?![a-z]))?`;
 const ABSATZ_TOKEN = ARTIKEL_TOKEN;
 // Qualifikatoren zwischen Absatz und Gesetzes-Code
 const FOLGE_MARKER = '(?:ff|ss|segg)\\.?'; // «und folgende»
-const SUB_MARKER = '(?:Ziff(?:er)?|lit|Bst|Buchst|S|Satz|ch|let|n)';
+// Untergliederungs-Marker. F2-V3: «Nr» (Staatsvertrags-Standard «Art. 34 Nr. 3
+// LugÜ») VOR «n» in der Alternation, damit «Nr» ganz konsumiert wird statt «n»+«r»
+// — sonst greift «Nr» als law-Kandidat und der Erlass fällt weg (belegt 150_III_423).
+const SUB_MARKER = '(?:Ziff(?:er)?|Nr|lit|Bst|Buchst|S|Satz|ch|let|n)';
 const SUB_TOKEN = '(?:\\d+|[a-z])';
-const GESETZ_CODE = '[A-Z][A-Z0-9]{1,11}(?:/[A-Z0-9]{2,6})?';
+// Gesetzes-Code: Grossbuchstaben-Kürzel. F2-V5: Umlaut NUR als optionaler END-
+// Buchstabe (Konvention «LugÜ»/«EPÜ»/«SDÜ»/«VeÜ»/«NYÜ»), NIE in der Innenklasse —
+// sonst gingen gross geschriebene Umlaut-Wörter (ÖFFENTLICH/KÜNDIGUNG/VERGÜTUNG)
+// als Code durch (Umlaut initial/medial). ASCII-`\b` würde ohne u-Flag mitten im
+// Kürzel («Lug|Ü») eine Grenze ziehen → Endanker `CODE_ENDE` statt `\b`.
+const GESETZ_CODE = '[A-Z][A-Z0-9]{1,11}[ÄÖÜ]?(?:/[A-Z0-9]{2,6})?';
+const CODE_ENDE = '(?![A-Za-z0-9ÄÖÜ_])'; // wie `\b`, aber umlaut-bewusst
+
+// Ein einzelnes Artikel-Glied: Zahl/Bereich (F2-V10) + optional Abs./ff. + bis zu
+// drei verkettete Sub-Marker (F2-V2: «lit. b Ziff. 5»).
+const ARTIKEL_BEREICH = `${ARTIKEL_TOKEN}(?:\\s*[–-]\\s*${ARTIKEL_TOKEN})?`;
+const ARTIKEL_GLIED =
+  `${ARTIKEL_BEREICH}` +
+  `(?:\\s*${ABSATZ_MARKER}\\s*${ABSATZ_TOKEN})?` +
+  `(?:\\s*${FOLGE_MARKER})?` +
+  // Sub-Marker: der Token-Abschluss `(?![A-Za-z0-9])` (Pendant zum alten Pflicht-
+  // `\s+`) verhindert, dass ein Marker-Buchstabe in den Code frisst — z.B. dass
+  // «S» (Satz) das «St» von «StGB» konsumiert und nur «GB» als law übrig bleibt.
+  `(?:\\s*(?:${SUB_MARKER})\\.?\\s*${SUB_TOKEN}(?![A-Za-z0-9])){0,3}`;
+// Konnektor-Kette für Mehrfach-Zitate mit gemeinsamem Code (F2-V6/V8:
+// «Art. 95 und 96 BGG», «Art. 39 ff., 82 ff. und 90 ff. ATSG»). Wort-Konnektoren
+// nur mit beidseitigem Whitespace (it «e» damit zwingend ziffern-geankert, keine
+// Kollision mit Artikel-Suffix «17e»); Komma/& mit optionalem Whitespace. Jedes
+// Kettenglied beginnt mit einer Ziffer (ARTIKEL_GLIED → `\d`).
+const KETTEN_GLIED = `(?:\\s*[,&]\\s*|\\s+(?:und|et|sowie|bzw\\.?|e)\\s+)${ARTIKEL_GLIED}`;
 
 /**
  * Gesetzes-Zitat-Muster. Struktur (mit `i`-Flag → auch klein geschriebene
  * Treffer, die der nachgelagerte Filter aussortiert):
- *   \b Art. <artikel> [Abs. <paragraph>] [ff.] [Ziff. n] <law> \b
+ *   \b Art. <liste: glied (konnektor glied)*> <law> CODE_ENDE
+ * Die einzelnen Glieder der `liste` werden in `extrahiereStatutRefs` per
+ * `KETTEN_TRENNER`/`GLIED_KOPF` in je einen StatutRef mit gemeinsamem Code zerlegt.
  */
 const STATUTE_QUELLE =
   `\\b${ARTIKEL_MARKER}\\s*` +
-  `(?<article>${ARTIKEL_TOKEN})\\s*` +
-  `(?:${ABSATZ_MARKER}\\s*(?<paragraph>${ABSATZ_TOKEN}))?\\s*` +
-  `(?:${FOLGE_MARKER}\\s+)?` +
-  `(?:${SUB_MARKER}\\.?\\s*${SUB_TOKEN}\\s+)?` +
-  `(?<law>${GESETZ_CODE})` +
-  `\\b`;
+  `(?<liste>${ARTIKEL_GLIED}(?:${KETTEN_GLIED})*)` +
+  `\\s*(?<law>${GESETZ_CODE})` +
+  CODE_ENDE;
 const STATUTE_PATTERN = new RegExp(STATUTE_QUELLE, 'gi');
+
+// Trennt eine `liste` an den Konnektoren; spiegelt KETTEN_GLIED (ohne Capture-
+// Gruppen → sauberes String.split).
+const KETTEN_TRENNER = /\s*[,&]\s*|\s+(?:und|et|sowie|bzw\.?|e)\s+/i;
+// Kopf eines Glieds: Start-Artikel (+ optionaler Bereich, + optionaler Absatz).
+// Sub-Marker/ff. werden bewusst NICHT gefangen (fliessen nie in den Norm-Key).
+const GLIED_KOPF = new RegExp(
+  `^\\s*(?<article>${ARTIKEL_TOKEN})(?:\\s*[–-]\\s*(?<articleBis>${ARTIKEL_TOKEN}))?` +
+    `(?:\\s*${ABSATZ_MARKER}\\s*(?<paragraph>${ABSATZ_TOKEN}))?`,
+  'i',
+);
 
 // Abteilung: römische Zahl I–VI (nie höher → kein L/C/D/M) plus optionaler
 // Kleinbuchstabe für die historischen Abteilungen «Ia»/«Ib»/«Va» (Bug-Check E2/E3).
-const BGE_PATTERN = /\bBGE\s+(?<vol>\d{1,3})\s+(?<div>[IVX]{1,4}[ab]?)\s+(?<page>\d{1,4})\b/gi;
+// F2-V1: optionaler Erwägungs-/Konsiderations-Pinpoint hinter dem `\b`-gesicherten
+// Kopf (DE «E.»/«Erw.», FR «consid.»/«cons.»); Token deckt dezimal (1.2.2), Slash
+// (1b/gg), Bereich (2-4) und röm. Präfix (II.3). Der `\b` nach der Seite schliesst
+// die 5-Stellen-Trunkierung und den No-Space-Teilkopf (Basis-Parität).
+const ERW_MARKER = '(?:E\\.|Erw\\.|consid\\.|cons\\.)';
+const ERW_TOKEN = '(?:[IVX]+\\.)?\\d+[a-z]?(?:\\.\\d+[a-z]?)*(?:/[a-z]+|-\\d+[a-z]?)?';
+const BGE_PATTERN = new RegExp(
+  `\\bBGE\\s+(?<vol>\\d{1,3})\\s+(?<div>[IVX]{1,4}[ab]?)\\s+(?<page>\\d{1,4})\\b` +
+    `(?:\\s+${ERW_MARKER}\\s*(?<erw>${ERW_TOKEN}))?`,
+  'gi',
+);
+
+// ECLI-Zitat (F2-V7), inkl. EU-Gerichtshof «ECLI:EU:C:2019:134». Das literale
+// `ECLI:`-Präfix (+ 4-Segment-Kette) ist hochspezifisch → praktisch FP-frei; der
+// Schwanz endet nie auf Satzzeichen (kein gieriger End-Punkt). CH-ECLI-Schwanz
+// «SK.2025.57» bleibt erhalten; die separate Erfassung des Docket-Schwanzes wird
+// per Span-Überlappung in `extrahiereEntscheidRefs` unterdrückt (keine Doppelung).
+const ECLI_PATTERN = /\bECLI:[A-Z]{2}:[A-Z]+:\d{4}:[A-Z0-9]+(?:[._][A-Z0-9]+)*/gi;
+
+// SR-/RS-Fundstellen-Locator (F2-V9): «SR 830.11», fr/it «RS 173.110». Gross-
+// geschrieben (kein `i`-Flag → kein Prosa-«sr/rs»); `\d{3}`-Pflichtkern schliesst
+// Daten/Beträge/Seiten <100 aus; negativer Lookbehind gegen die parlamentarische
+// Klasse «AB/BO JJJJ SR …» (Ständerat, keine Systematik-Nummer).
+const SR_PATTERN = /(?<!AB \d{4} )(?<!BO \d{4} )\b(?:SR|RS)\s+\d{3}(?:\.\d+){0,3}\b/g;
 
 // Aktenzeichen-Muster (Reihenfolge wie im Python-Original; ohne IGNORECASE).
 const DOCKET_PATTERNS: RegExp[] = [
@@ -117,8 +194,16 @@ export const INVALID_LAW_CODES: ReadonlySet<string> = new Set([
   // ── Ordinal- / Strukturwörter ──
   'ART', 'CUM', 'DRITTER', 'ERSTER', 'LETT', 'LET', 'LETTRE',
   'LITT', 'NAPR', 'PHR', 'PRIMA', 'RZ', 'SECONDA', 'ZWEITER',
+  // F2: «NR» (Untergliederungs-Marker «Nummer», nie eine Gesetzes-Abkürzung) und
+  // «BGE» (Entscheid-, keine Norm-Referenz) — beide sonst als law-Kandidat greifbar,
+  // wenn kein echter Code folgt (F2-V2/V3). Die BGE-Erfassung selbst bleibt über
+  // BGE_PATTERN/extrahiereEntscheidRefs unberührt (verhaltensneutral dort).
+  'NR', 'BGE',
   // ── Gängige Abkürzungen, die keine Gesetzes-Codes sind ──
   'AD', 'AGB', 'BI', 'CH', 'NE', 'NI', 'NO', 'OF', 'QU', 'RE', 'SI',
+  // F2-V8: Währungs-/Betrags-Codes — schliesst den einzigen belegten FP-Kanal der
+  // Ketten-Zitate («Art. 41 und 500 EUR» → law=EUR) ohne Verlust echter Treffer.
+  'CHF', 'EUR', 'USD', 'GBP', 'FR', 'FRS', 'SFR',
 ]);
 
 /** Normalisiert ein Gesetzes-Zitat zu 'ART.<art>[.ABS.<abs>].<CODE>'. */
@@ -152,9 +237,19 @@ export function normalisiereDocket(text: string): string {
     .replace(/_+$/, '');
 }
 
-/** Zählt Grossbuchstaben (A–Z) — Pendant zu Pythons `c.isupper()` für ASCII. */
+/**
+ * Zählt Grossbuchstaben — Pendant zu Pythons `c.isupper()`, F2-V5-erweitert um die
+ * Umlaute Ä/Ö/Ü, sonst bliebe «LugÜ» (nur ASCII-`L` → nGross 1, Länge 4>3) fälschlich
+ * verworfen.
+ */
 function anzahlGross(s: string): number {
-  return (s.match(/[A-Z]/g) ?? []).length;
+  return (s.match(/[A-ZÄÖÜ]/g) ?? []).length;
+}
+
+/** Numerischer Teil eines Artikel-Tokens («654a» → 654) für die Bereichs-Monotonie. */
+function artikelNummer(token: string): number {
+  const m = /^\d+/.exec(token);
+  return m ? parseInt(m[0], 10) : NaN;
 }
 
 /**
@@ -170,9 +265,6 @@ export function extrahiereStatutRefs(text: string): StatutRef[] {
   for (const match of text.matchAll(STATUTE_PATTERN)) {
     const g = match.groups!;
     const raw = match[0].trim();
-    const artikel = (g.article ?? '').toLowerCase().replace(/\s+/g, '');
-    const absatzRaw = g.paragraph;
-    const absatz = absatzRaw ? absatzRaw.toLowerCase().replace(/\s+/g, '') : null;
     const lawRaw = g.law;
 
     // Der Treffer muss wie eine juristische Abkürzung aussehen, nicht wie ein
@@ -186,10 +278,27 @@ export function extrahiereStatutRefs(text: string): StatutRef[] {
     const gesetz = lawRaw.toUpperCase();
     if (INVALID_LAW_CODES.has(gesetz)) continue;
 
-    const normalisiert = normalisiereStatut(artikel, absatz, gesetz);
-    if (gesehen.has(normalisiert)) continue;
-    gesehen.add(normalisiert);
-    refs.push({ raw, gesetz, artikel, absatz, normalisiert });
+    // Trefferliste in einzelne Artikel-Glieder zerlegen (F2-V6/V8: Mehrfach-Zitat
+    // mit gemeinsamem Code) — jedes Glied trägt dieselbe Gesetzes-Abkürzung.
+    for (const stueck of (g.liste ?? '').split(KETTEN_TRENNER)) {
+      const km = GLIED_KOPF.exec(stueck);
+      if (!km?.groups) continue;
+      const kg = km.groups;
+      const artikel = (kg.article ?? '').toLowerCase().replace(/\s+/g, '');
+      if (!artikel) continue;
+      const absatz = kg.paragraph ? kg.paragraph.toLowerCase().replace(/\s+/g, '') : null;
+      // Bereichs-Endpunkt (F2-V10) nur bei Monotonie bewahren: ein Rechtsartikel-
+      // Bereich steigt nie ab → verwirft die FR-Binnen-Bindestrich-Falle
+      // («art. 227-23 CP»/«Art. 6-1 EMRK», absteigend gelesen). `bis` fliesst NIE
+      // in den Norm-Key (nur Start-Artikel), nur zur treuen Anzeige.
+      let artikelBis = kg.articleBis ? kg.articleBis.toLowerCase().replace(/\s+/g, '') : null;
+      if (artikelBis && !(artikelNummer(artikelBis) >= artikelNummer(artikel))) artikelBis = null;
+
+      const normalisiert = normalisiereStatut(artikel, absatz, gesetz);
+      if (gesehen.has(normalisiert)) continue;
+      gesehen.add(normalisiert);
+      refs.push({ raw, gesetz, artikel, artikelBis, absatz, normalisiert });
+    }
   }
   return refs;
 }
@@ -205,10 +314,26 @@ export function extrahiereEntscheidRefs(text: string): string[] {
   const refs: string[] = [];
   const gesehen = new Set<string>();
 
-  // BGE-Zitate, z.B. «BGE 147 I 268»
+  // ECLI zuerst (F2-V7) — Spannen merken, damit der Docket-Schwanz (CH-ECLI
+  // «SK.2025.57») nicht zusätzlich als eigenes Aktenzeichen doppelt erfasst wird.
+  const ecliSpans: Array<readonly [number, number]> = [];
+  for (const match of text.matchAll(ECLI_PATTERN)) {
+    const start = match.index ?? 0;
+    ecliSpans.push([start, start + match[0].length]);
+    const normalisiert = match[0].toUpperCase();
+    if (gesehen.has(normalisiert)) continue;
+    gesehen.add(normalisiert);
+    refs.push(normalisiert);
+  }
+  const inEcli = (start: number): boolean => ecliSpans.some(([s, e]) => start >= s && start < e);
+
+  // BGE-Zitate, z.B. «BGE 147 I 268»; F2-V1 hängt den Erwägungs-Pinpoint an
+  // («BGE 137 I 305 E. 3.2»). Der Pinpoint fragmentiert nur diese Funktion — die
+  // Entscheid↔Entscheid-Verzahnung läuft über `kanonZitat` (Kopf-only), unberührt.
   for (const match of text.matchAll(BGE_PATTERN)) {
     const g = match.groups!;
-    const normalisiert = `BGE ${g.vol} ${normAbteilung(g.div)} ${g.page}`;
+    const kopf = `BGE ${g.vol} ${normAbteilung(g.div)} ${g.page}`;
+    const normalisiert = g.erw ? `${kopf} E. ${g.erw}` : kopf;
     if (gesehen.has(normalisiert)) continue;
     gesehen.add(normalisiert);
     refs.push(normalisiert);
@@ -217,10 +342,11 @@ export function extrahiereEntscheidRefs(text: string): string[] {
   const bareMuster = DOCKET_PATTERNS[DOCKET_PATTERNS.length - 1];
   for (const pattern of DOCKET_PATTERNS) {
     for (const match of text.matchAll(pattern)) {
+      const start = match.index ?? 0;
+      if (inEcli(start)) continue; // Teil eines bereits erfassten ECLI
       const raw = match[0].trim();
       if (pattern === bareMuster) {
         // Doppelzählung von BGE-Refs als Aktenzeichen vermeiden.
-        const start = match.index ?? 0;
         const prefix = text.slice(Math.max(0, start - 8), start);
         if (/\bBGE\s*$/i.test(prefix)) continue;
       }
@@ -229,6 +355,25 @@ export function extrahiereEntscheidRefs(text: string): string[] {
       gesehen.add(normalisiert);
       refs.push(normalisiert);
     }
+  }
+  return refs;
+}
+
+/**
+ * Extrahiert SR-/RS-Fundstellen-Locatoren (F2-V9), z.B. «SR 830.11», fr/it
+ * «RS 173.110» — eine Referenz auf einen Erlass über seine Nummer der
+ * Systematischen Rechtssammlung (weder Artikel-Zitat noch Entscheid). Rein und
+ * deterministisch; dedupliziert über die normalisierte Form.
+ */
+export function extrahiereFundstellenRefs(text: string): string[] {
+  if (!text) return [];
+  const refs: string[] = [];
+  const gesehen = new Set<string>();
+  for (const match of text.matchAll(SR_PATTERN)) {
+    const normalisiert = match[0].trim().replace(/\s+/g, ' ');
+    if (gesehen.has(normalisiert)) continue;
+    gesehen.add(normalisiert);
+    refs.push(normalisiert);
   }
   return refs;
 }
