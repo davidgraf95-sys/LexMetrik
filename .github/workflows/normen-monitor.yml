@@ -1,10 +1,21 @@
-# ─── Normen-Monitor: wöchentliche Wache über die gepinnten Rechtsstände ─────
-# (STRATEGIE-PLATTFORM.md F2.4) Drei Netz-Prüfungen gegen amtliche Quellen:
-#   1. fedlex-cache.sh        — gepinnte Filestore-HTMLs abrufbar + Anker da
-#   2. norm-zitate-pruefen    — alle Art.-Zitate der Engines gegen die Caches
-#   3. fedlex-versionen       — SPARQL: neuere/angekündigte Konsolidierungen
-# Schlägt der Lauf fehl, ist ein gepinnter Stand überholt oder ein Anker weg →
-# §7-Verifikation fällig (Pins nachziehen, Wortlaute prüfen, Register führen).
+# ─── Normen-Monitor: wöchentliche Wache über Rechtsstände UND die Live-Site ──
+# (STRATEGIE-PLATTFORM.md F2.4 · QS-OPT O-1/O-2)
+#
+# Zwei Wach-Ebenen:
+#  1. Rechtsstände (amtliche Quellen): `npm run check:netz` — die EINE Netz-Tor-
+#     Kette (Fedlex-Caches, Zitate, Konsolidierungs-Versionen, Kantons-version_uid,
+#     PDF-Erreichbarkeit, PDF-Quellen, Materialien-, Botschaften-, Revisionen- und
+#     Vernehmlassungs-Drift). Vorher liefen nur 6 von 10 Toren einzeln (O-1.3) —
+#     Abdeckung ist jetzt = `check:netz` per Konstruktion.
+#  2. Die Live-Site selbst (O-1.2): Prod-Smoke gegen lexmetrik.vercel.app —
+#     Startseite, /api/suche, je 1 Stichproben-JSON pro Korpus, Soft-404-Signal.
+#     Plus Vertragstests der Runtime-APIs Zefix/geo.admin.ch (O-1.8) und das
+#     LIK-Frische-Tor (O-1.6). Bisher prüfte der Monitor NIE die Site selbst —
+#     ein totes Feature (CSP frisst LiveSuche) blieb so wochenlang unbemerkt.
+#
+# Schlägt ein Schritt fehl, ist ein gepinnter Stand überholt, ein Anker weg, eine
+# amtliche Quelle nicht erreichbar ODER die Live-Site/eine Runtime-API defekt →
+# sichtbarer Aufgaben-Zettel (§7-Verifikation bzw. Betriebs-Fix).
 name: Normen-Monitor
 
 on:
@@ -12,11 +23,14 @@ on:
     - cron: '17 5 * * 1' # montags 05:17 UTC (wöchentlich)
   workflow_dispatch:
 
+env:
+  PROD_URL: https://lexmetrik.vercel.app
+
 jobs:
   normen:
-    name: Fedlex-Caches · Zitate · Versions-Monitoring
+    name: Rechtsstände (check:netz) · Live-Site-Smoke · Runtime-APIs
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     permissions:
       contents: read
       issues: write
@@ -27,24 +41,29 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Fedlex-Caches laden + Anker-Inventar
-        run: npm run check:caches
-      - name: Norm-Zitate gegen die Caches
-        run: npm run check:zitate
-      - name: Konsolidierungs-Versionen (SPARQL)
-        run: npm run check:fedlex-versionen
-      - name: Kantons-Gesetze (live version_uid)
-        if: always()
-        run: npm run check:normtext-netz
-      - name: PDF-Erreichbarkeit (Kanton)
-        if: always()
-        run: npm run check:pdf-netz
-      - name: Materialien-Drift (SECO/EDÖB/ESTV-KS/ESTV-MWST vs. Zustands-Manifest)
-        if: always()
-        run: npm run check:materialien-netz
+
+      # ── 1. Rechtsstände: die EINE Netz-Tor-Kette (O-1.3) ────────────────────
+      - name: Rechtsstände — npm run check:netz (alle 10 Netz-Tore)
+        run: npm run check:netz
+
+      # ── Verfalls-/Frische-Tore (nicht in check:netz, wanduhr-abhängig) ──────
       - name: Verfallsregister (Termine)
         if: always()
         run: npm run check:verfall
+      - name: LIK-Reihe frisch (BFS-Monatsindex, O-1.6)
+        if: always()
+        run: npm run check:lik-frische
+
+      # ── 2. Live-Site-Prod-Smoke (O-1.2 + O-1.4 Soft-404-Signal) ─────────────
+      - name: Prod-Smoke — Live-Site (Startseite, /api/suche, Korpus-JSON, Soft-404)
+        if: always()
+        run: bash .github/scripts/prod-smoke.sh
+
+      # ── 2b. Vertragstests Runtime-APIs Zefix / geo.admin.ch (O-1.8) ─────────
+      - name: Runtime-API-Vertragstests (Zefix + geo.admin.ch)
+        if: always()
+        run: bash .github/scripts/api-vertragstests.sh
+
       # A2 (2.7.2026): Ein roter Lauf verhallte bisher still in der Verlaufsliste (15.6./29.6.
       # real rot, unbemerkt). Bei Rot legen wir einen sichtbaren Aufgaben-Zettel an — ODER
       # kommentieren den bestehenden, damit keine Issue-Flut entsteht.
@@ -56,9 +75,9 @@ jobs:
         run: |
           set -euo pipefail
           offen=$(gh issue list --state open --search 'Normen-Monitor rot in:title' --json number --jq '.[0].number // empty')
-          rumpf="Der wöchentliche Normen-Monitor ist fehlgeschlagen — ein gepinnter Rechtsstand ist möglicherweise überholt, ein Anker weg oder eine amtliche Quelle nicht erreichbar. **§7-Verifikation fällig** (Pins nachziehen, Wortlaute prüfen, Verfallsregister führen). Lauf: ${RUN_URL}"
+          rumpf="Der wöchentliche Normen-Monitor ist fehlgeschlagen — ein gepinnter Rechtsstand ist möglicherweise überholt, ein Anker weg, eine amtliche Quelle nicht erreichbar ODER die Live-Site/eine Runtime-API defekt. Prüfen: **§7-Verifikation** (Pins/Wortlaute/Verfallsregister) bzw. **Betriebs-Fix** (Site/API). Lauf: ${RUN_URL}"
           if [ -n "$offen" ]; then
             gh issue comment "$offen" --body "Erneut rot am $(date +%F). ${rumpf}"
           else
-            gh issue create --title "🔴 Normen-Monitor rot ($(date +%F)) — gepinnter Stand prüfen (§7)" --body "$rumpf"
+            gh issue create --title "🔴 Normen-Monitor rot ($(date +%F)) — Rechtsstand/Site prüfen (§7/Betrieb)" --body "$rumpf"
           fi
