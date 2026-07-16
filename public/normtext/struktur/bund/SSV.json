@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "741.21",
   "titel": "Signalisationsverordnung",
@@ -2896,7 +2896,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 6
     },
     {
      "nr": "173",
@@ -4380,7 +4381,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 4
     },
     {
      "nr": "288",
@@ -5915,7 +5917,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "389",
@@ -5927,7 +5930,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     }
    ]
   },

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "952.0",
   "titel": "Bundesgesetz über die Banken und Sparkassen",
@@ -856,7 +856,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "85",
@@ -1853,7 +1854,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -3423,7 +3425,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -4542,7 +4545,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -4678,7 +4681,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4796,7 +4799,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },

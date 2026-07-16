@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "0.211.231.011",
   "titel": "Übereinkommen über die Zuständigkeit, das anzuwendende Recht, die Anerkennung, Vollstreckung und Zusammenarbeit auf dem Gebiet der elterlichen Verantwortung und der Massnahmen zum Schutz von Kindern",
@@ -105,7 +105,8 @@
      "text": "Österreich (AT): die Obsorge",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     }
    ]
   },
@@ -436,42 +437,48 @@
      "text": "DE: des Rechts zum persönlichen Umgang",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "9",
      "text": "DE: des Rechts zum persönlichen Umgang",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     },
     {
      "nr": "10",
      "text": "DE: des Rechts zum persönlichen Umgang",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     },
     {
      "nr": "11",
      "text": "DE: des Rechts zum persönlichen Umgang",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     },
     {
      "nr": "12",
      "text": "DE: des Rechts zum persönlichen Umgang",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 2
     },
     {
      "nr": "13",
      "text": "DE: des Rechts zum persönlichen Umgang",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 2
     }
    ]
   },
@@ -516,7 +523,8 @@
      "text": "DE: Verwahrer (so auch in den Artikeln 45, 57–60, 62 und 63)",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -561,7 +569,8 @@
      "text": "DE: Legalisation",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -638,14 +647,16 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "17",
      "text": "DE: das Recht zum persönlichen Umgang",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -668,7 +679,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "741.31",
   "titel": "Verkehrsversicherungsverordnung",
@@ -1737,7 +1737,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "99",
@@ -2721,7 +2722,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     },
     {
      "nr": "155",
@@ -2733,7 +2735,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     },
     {
      "nr": "156",
@@ -2745,7 +2748,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 2
     },
     {
      "nr": "157",
@@ -2757,7 +2761,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 2
     },
     {
      "nr": "158",
@@ -2769,7 +2774,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 4
     },
     {
      "nr": "159",
@@ -2781,7 +2787,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 6
     },
     {
      "nr": "160",
@@ -2793,7 +2800,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 6
     },
     {
      "nr": "153",
@@ -3582,7 +3590,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },

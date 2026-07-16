@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "814.318.142.1",
   "titel": "Luftreinhalte-Verordnung",
@@ -1087,7 +1087,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -1500,7 +1501,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },

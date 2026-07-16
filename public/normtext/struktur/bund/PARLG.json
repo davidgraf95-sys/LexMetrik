@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "171.10",
   "titel": "Bundesgesetz über die Bundesversammlung",
@@ -314,7 +314,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -6011,7 +6012,8 @@
      "text": "Heute: Anhang 1.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },

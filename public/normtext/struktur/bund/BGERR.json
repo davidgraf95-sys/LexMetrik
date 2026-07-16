@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "173.110.131",
   "titel": "Reglement für das Bundesgericht",
@@ -943,7 +943,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "30",
@@ -1012,7 +1013,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "34",
@@ -1841,7 +1843,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },

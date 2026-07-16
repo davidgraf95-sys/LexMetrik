@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "0.232.04",
   "titel": "Pariser Übereinkunft zum Schutz des gewerblichen Eigentums revidiert in Stockholm am 14. Juli 1967",
@@ -308,14 +308,16 @@
      "text": "[<i>AS <b>7</b> 517</i>; <i><b>16</b> 358</i>; <i><b>19</b> 212</i>; BS <b>11</b> 965]",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "12",
      "text": "<i>SR <b>0.232.0</b></i><b>l/.03</b>",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     },
     {
      "nr": "13",
@@ -371,7 +373,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -397,7 +400,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     }
    ]
   },

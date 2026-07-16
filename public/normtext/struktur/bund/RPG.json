@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "700",
   "titel": "Bundesgesetz über die Raumplanung",
@@ -428,7 +428,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 5
     }
    ]
   },
@@ -1552,7 +1553,8 @@
      "text": "Bezeichnung gemäss nicht veröffentlichtem BRB vom 17. Mai 2000.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },

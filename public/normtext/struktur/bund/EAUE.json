@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "0.353.1",
   "titel": "Europäisches Auslieferungsübereinkommen",
@@ -80,7 +80,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     }
    ]
   },
@@ -222,7 +223,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -363,7 +365,8 @@
      "text": "Algerien ist heute ein unabhängiger Staat.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     },
     {
      "nr": "14",
@@ -379,7 +382,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 3
     }
    ]
   },
