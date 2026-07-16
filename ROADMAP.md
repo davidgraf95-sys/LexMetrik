@@ -862,6 +862,14 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Desktop+Mobil): tote Rückwege · Erlass-Key-case-insensitiv+hilfreiche Fehlseite · Anker-`--nt-stick` ·
   Kleinposten (Ergebnis-FAB-IO · Rechner-Filter · Streitwert-Leerzustand · Entwurf-Legende-Popover ·
   Entscheid-`?ansicht=` · «In neuem Reiter»-Toast+☰-Tooltip). Rest der Kette (Suche S1–S6 …) offen.
+  **Mess-Werkzeug 16.7. (advisory, kein Gate):** `npm run eval:suche` (`scripts/suche-eval.ts` +
+  Gold `scripts/suche-eval-gold.json`, 69 verifizierte Paare) misst die ECHTE Produkt-Suche
+  deterministisch/LLM-frei (Recall@1/5/10·MRR·NDCG@10 je Klasse) — ruft die Produktions-Pipeline
+  (Sprung-Parser + FlexSearch-Recall + `artikelRanking`), kein Parallel-Index (§5). Baseline
+  16.7. (`bibliothek/werkzeuge/suche-eval-baseline-2026-07-16.md`): Rang-1-Zitate stark
+  (normzitat/bge 0.83), **umgangssprachliche Mehrwort-/Kompositum-Fragen = grösste Lücke**
+  (Recall@10 0.18) → priorisiert die S-Kette (Dekompositions-/Synonym-Hebel · FR/SR-Alias
+  Cst/LDIP im Norm-Sprung). Vorher-Stand für jede künftige Recall-/Ranking-Änderung.
 - [ ] **5f · Design-Wärme & Atmosphäre (Ultracode-Synthese 11.7.)** *(`[OF]`, reine Darstellung/Token-Schicht)*:
   <!-- @meta id: W2·11-DESIGN · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/index.css, tailwind.config.js, DESIGN-REGLEMENT.md, scripts/check-design-tokens.ts, src/components/rechtsprechung, src/pages/EntscheidLeser.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-DESIGN-WAERME.md -->
   Farbklima/Wärme/Typografie-Plan aus 48 Ultracode-Befunden + 3 Kritik-Linsen (reglement-treue ·
