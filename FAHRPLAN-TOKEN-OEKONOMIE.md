@@ -250,7 +250,9 @@ Migrationen) läuft der Agenten-Fächer als **deterministisches Workflow-Skript*
 Workflow-Auftrag) statt modellgetrieben Hand-über-Hand: `pipeline()` je Einheit ohne
 künstliche Barrieren; Rückgaben **Schema-erzwungen** (JSON-Schema = maschinell prüfbare
 Form des T4-Rückgabe-Schemas); `model`/`effort` je `agent()`-Call explizit (T15-Routing:
-Bau/Prüfung Opus/high, Mechanik Haiku/low); `budget`-API als **harter Token-Deckel**;
+Bau Opus/high, Mechanik Haiku/low; **kritische Stufen — Verify/Refuter/Judge und finale
+Synthese — auf Fable 5 heben, mit Opus-Fallback im Skript**, da Workflow-Läufe Fable evtl.
+nicht haben; Anweisung David 16.7.2026); `budget`-API als **harter Token-Deckel**;
 Befund-Ströme durch adversariale Verify-Muster (N unabhängige Refuter, Mehrheits-Kill;
 loop-until-dry bei Discovery unbekannter Grösse); Abbruch/Fortsetzung über Journal +
 `resumeFromRunId` statt Re-Run. Tool-Output bleibt vollständig aus dem
