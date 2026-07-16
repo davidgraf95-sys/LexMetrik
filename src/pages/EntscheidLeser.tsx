@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import RegesteBlock from '../components/rechtsprechung/RegesteBlock';
+import { spracheBadgeTitel } from '../components/rechtsprechung/format';
 import { Tabs } from '../components/ui/Tabs';
 import { ABSCHNITT_TITEL, abschnittAnker, ersteFundstelle } from '../lib/rechtsprechung/abschnitte';
 import { StatusBadge } from '../components/verzahnung/StatusBadge';
@@ -57,10 +58,6 @@ function bgeJahrgang(snap: EntscheidSnapshot): string {
   const band = parseInt(snap.bgeReferenz ?? '', 10);
   return band ? String(band + 1874) : snap.datum.slice(0, 4);
 }
-
-const SPRACH_LABEL: Record<EntscheidSprache, string> = {
-  de: 'Deutsch', fr: 'Französisch', it: 'Italienisch', rm: 'Rätoromanisch',
-};
 
 // Rubrum-Beschriftungen je Sprache (zukunftsfest; heute trägt der Korpus nur de,
 // fr/it greifen automatisch, sobald solche Entscheide importiert werden). rm → de.
@@ -404,7 +401,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
               textgleich zu Suche/Panel/Leitfall-Zeile; hier interaktiv (Begriff-
               Tooltip, fokussier- und touch-bedienbar, Magic Moment 4). */}
           {snap.leitcharakter === 'leitentscheid' && <StatusBadge praedikat="leitentscheid" interaktiv />}
-          <span className="lc-badge lc-badge-soft uppercase" title={SPRACH_LABEL[snap.sprache]}>{snap.sprache}</span>
+          <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(snap.sprache)}>{snap.sprache}</span>
           {snap.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
           <span className="ml-auto inline-flex flex-wrap items-center justify-end gap-2 gap-y-1.5">
             {/* Amtliche Quelle direkt oben erreichbar (massgebliche Fassung, §8) —

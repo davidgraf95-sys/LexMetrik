@@ -3,7 +3,7 @@ import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
 import { themaText, istSynth, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
-import { formatiereDatum } from './format';
+import { formatiereDatum, spracheBadgeTitel } from './format';
 
 // Kompakte Listen-Zeile (Default-Dichte). Bezeichnung führt mit dem THEMA/Leitsatz
 // (Auftrag David: man soll schon sehen, worum es geht) — die BGE-Nummer steht als
@@ -53,7 +53,7 @@ export function EntscheidZeile({ e, onNorm }: {
           {e.kuratierung === 'maschinell' && (
             <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
           )}
-          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>}
+          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
           {e.normKeys.length > 0 && (
             <span className="relative z-10 flex flex-wrap items-center gap-x-2 gap-y-1">
               {e.normKeys.slice(0, 5).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}

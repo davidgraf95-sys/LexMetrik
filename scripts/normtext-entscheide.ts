@@ -88,7 +88,7 @@ const rang = (s: EntscheidSnapshot) =>
 const sortAuswahl = (xs: EntscheidSnapshot[]) =>
   [...xs].sort((a, b) => rang(a) - rang(b) || (a.datum < b.datum ? 1 : -1));
 
-/** Bund: Citation-Graph-BFS ab Seeds (+ Listing-Bonus-Seeds), de-Pool, gewählt nach Rang. */
+/** Bund: Citation-Graph-BFS ab Seeds (+ Listing-Bonus-Seeds), allsprachiger Pool, gewählt nach Rang. */
 async function bundKorpus(): Promise<EntscheidSnapshot[]> {
   const SEEDS = (arg('--seeds') ?? 'bger_5A_1100_2025').split(',').filter(Boolean);
   let startIds = [...SEEDS];
@@ -113,7 +113,12 @@ async function bundKorpus(): Promise<EntscheidSnapshot[]> {
     });
     for (const s of snaps) {
       if (!s) continue;
-      if (s.sprache === 'de') pool.push(s);
+      // O-4 (David-Freigabe 16.7.2026): der harte de-Filter fällt. BGer-Bund-Entscheide
+      // sind einsprachige amtliche Originale — FR/IT ergehen real (~⅓ der BGE frz.) und
+      // kommen mit Sprach-Badge in den Korpus (kein LLM, keine Übersetzung). holeEntscheidOCL
+      // liefert mit {sprache:null} bereits alle Sprachen; der Pool nimmt sie nun alle auf.
+      // Kantone (kantonKorpus) bleiben bewusst de-parametriert.
+      pool.push(s);
       for (const ref of s.zitierteEntscheide) {
         const cid = citedRefZuId(ref);
         if (cid && !visited.has(cid)) queue.push(cid);
@@ -124,7 +129,8 @@ async function bundKorpus(): Promise<EntscheidSnapshot[]> {
   const seen = new Set<string>();
   const uniq = pool.filter((s) => { if (seen.has(s.id)) return false; seen.add(s.id); return true; });
   const gewaehlt = sortAuswahl(uniq).slice(0, bundLimit);
-  console.log(`[bund] BFS ${fetched} geholt, ${uniq.length} unique de → ${gewaehlt.length} gewählt (Regeste: ${gewaehlt.filter((s) => s.regeste).length})`);
+  const spr = gewaehlt.reduce((m, s) => ((m[s.sprache] = (m[s.sprache] ?? 0) + 1), m), {} as Record<string, number>);
+  console.log(`[bund] BFS ${fetched} geholt, ${uniq.length} unique → ${gewaehlt.length} gewählt (${Object.entries(spr).map(([k, v]) => `${k}:${v}`).join(' ')}; Regeste: ${gewaehlt.filter((s) => s.regeste).length})`);
   return gewaehlt;
 }
 

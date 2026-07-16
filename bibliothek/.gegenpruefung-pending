@@ -1,9 +1,9 @@
 {
-  "hash": "5eb0eed7fdac11726e6c81e28ec9cc405ba6eda737511423c5d2839a5f1c8c13",
+  "hash": "3d2beac0f7a6ac1f7fa840205637539a9f0c8e66ff206ea3552a02f1003774e7",
   "verdikt": "bestanden",
-  "quellePin": "bger.ch clir 20260716",
+  "quellePin": "fedlex jolux:titleShort 20260716 (in-force) + bger/bvger/bstger/bpatger Urteile",
   "datum": "2026-07-16",
   "dateien": [
-    "scripts/normtext/clir-regeste.ts"
+    "scripts/normtext-entscheide.ts"
   ]
 }

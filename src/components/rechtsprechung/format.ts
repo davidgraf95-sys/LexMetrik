@@ -10,3 +10,18 @@ export function formatiereDatum(iso: string): string {
 export function kantonLabel(kanton: string): string {
   return kanton === 'CH' ? 'Bund' : kanton;
 }
+
+const SPRACH_NAME: Record<string, string> = {
+  de: 'Deutsch', fr: 'Französisch', it: 'Italienisch', rm: 'Rätoromanisch',
+};
+
+/**
+ * Ehrlicher Tooltip für das Sprach-Badge nicht-deutscher Entscheide (§8, O-4):
+ * BGer/eidg. Entscheide sind EINSPRACHIGE amtliche Originale — es gibt keine
+ * deutsche Übersetzung. Das Badge nennt die Sprache, der Titel macht die
+ * Einsprachigkeit explizit, damit niemand eine fehlende Übersetzung erwartet.
+ */
+export function spracheBadgeTitel(sprache: string): string {
+  const name = SPRACH_NAME[sprache] ?? sprache.toUpperCase();
+  return `${name}sprachiges amtliches Original — einsprachig, keine deutsche Übersetzung`;
+}
