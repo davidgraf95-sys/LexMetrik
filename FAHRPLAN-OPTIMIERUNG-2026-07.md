@@ -217,3 +217,24 @@ Zuständigkeits-Behördenadressen über BS hinaus (L, Pflegelast → Verfallsreg
 Härtungs-Einheit) → 3. **O-3.1–3.3** (Golden-Matrix + Flake-Wurzel + Sharding) →
 4. **O-4 sofort-Teil** → 5. O-2-Rest / O-3.4 → Gates: O-2-Rahmen (einmalig), O-4-Filter,
 O-6-Einzelentscheide, O-5 entparken.
+
+## Bau-Status QS-OPT (additiv — nur Fakten, keine Freigaben)
+
+Bau-Agent-Kette 16.7.2026 (Opus), sequenziell, je Einheit eigener PR + armierter Auto-Merge:
+
+- **O-1 Betrieb & Wachhund** — **gebaut, PR #244.** Posten #1 CSP-Fix (entscheidsuche.ch
+  in connect-src + Invariant-Tor), #2/#3 Monitor (Prod-Smoke + `check:netz` 6→10 Tore),
+  #4 Soft-404 (extensions-basiertes Rewrite, SPA-Deep-Routes unangetastet), #6 LIK-Frische
+  (Monitor-Tor), #7 Loader-Fehler-Cache (laden.ts/browse.ts), #8 Zefix/geo-Vertragstests.
+  Übersprungen: **#5 Case-Redirect** (fragil in vercel.json — Enumeration/Prerender nötig),
+  **#9 /api/fehler** (Mini-Gate: Datenschutz-Wortlaut David).
+- **O-3.1 Golden-Matrix Rechen-Blindspot** — **gebaut, PR #247.** 40 Fälle für
+  prozesskosten/beurkundung/grundbuchgebuehren/notariatGrundbuch (209→249), verhaltensneutral
+  (strikt additiv, 0 Deletions), throw-frei; per-Zelle-Kantonstaffel-Korrektur deferiert
+  (Gate-Note). O-3.2 Flake-Wurzel / O-3.3 Sharding / O-3.4 e2e-Masse: **offen** (nächste Kette;
+  e2e-Validierungs-lastig, O-3.2 Kollision mit Splitview-e2e-Worktree beachten).
+- **O-2 Frische-Automatik** — **NICHT gebaut (O-2-Rahmen-Gate David ausstehend).**
+- **O-4 FR/IT** — sofort-Teil (Alias-Tabelle/Chips) **offen** (Alias = Risikopfad-Verifikation
+  ~60–80 amtl. Abk.; Chips kollidieren mit Reader-PRs); **DE-Filter-Heben NICHT gebaut
+  (O-4-klein-Gate David ausstehend).**
+- **O-5 SEO** — geparkt (kein Bau). **O-6 Werkzeuge/Vorlagen** — §0a/Katalog-Gate (kein Bau).
