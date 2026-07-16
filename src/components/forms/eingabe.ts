@@ -1,39 +1,37 @@
 // ─── Formular-Eingabe-Parser (Darstellungsschicht, SSOT, H-11) ─────────────
 //
-// Zuvor 7× wortnah kopiertes zahl() in den Rechner-Formularen — mit REALER
-// Drift (Guard n>=0, Apostroph-Toleranz, undefined-vs-null). Hier EIN
-// parametrierter Kern + drei bewusst verschiedene Varianten; Commit A ist
-// byte-gleich zum bisherigen lokalen zahl() je Formular (§6). KEINE Rechtsregel:
-// reine Normalisierung der Nutzereingabe in den Formular-Zustand (§3, Darstellung).
+// SSOT der zahl()-Parser der Rechner-Formulare (zuvor 7× copy-paste mit realer
+// Drift). Zwei bewusst verschiedene Achsen bleiben: Guard (n>=0 vs. beliebig)
+// und Rückgabe-Konvention (undefined vs. null). KEINE Rechtsregel: reine
+// Normalisierung der Nutzereingabe in den Formular-Zustand (§3, Darstellung).
+//
+// H-11 Commit B (DEKLARIERTE UI-Änderung, NICHT §6-neutral): die Tausender-
+// Apostroph/Leerzeichen-Toleranz gilt jetzt EINHEITLICH für alle Rechner-
+// Formulare (zuvor nur BgerRechtsweg) — «1'000'000» bzw. «1 000» rechnet überall.
+// Die akzeptierte Eingabemenge wird nur ERWEITERT (Superset), nie verengt; kein
+// zuvor gültiger Wert ändert sein Ergebnis. Guard-Unterschiede unverändert.
 //
 // BEWUSST getrennt von lib/format.ts::zahl (§1, nicht zusammenführen): jener hat
 // einen anderen Vertrag (zusätzlich Komma→Punkt-Toleranz; engine-/vorlagen-
 // seitige Konsumenten). Ziffern-Eingabefeld ≠ fachneutraler Wert-Parser.
 
-interface ZahlOpt {
-  /** true ⇒ nur n>=0 zulassen (Beträge/Werte); false ⇒ jede endliche Zahl. */
-  guard: boolean;
-  /** true ⇒ Tausender-Apostroph/Leerzeichen vor Number() entfernen. */
-  toleranz: boolean;
-}
-
-const kern = (roh: string, { guard, toleranz }: ZahlOpt): number | undefined => {
+/** Nutzereingabe → Zahl: Tausender-Apostroph (gerade + typografisch U+2019) und
+ *  Leerzeichen werden vor Number() entfernt. leer/ungültig → undefined;
+ *  guard=true verwirft zusätzlich negative Werte. */
+const kern = (roh: string, guard: boolean): number | undefined => {
   if (roh.trim() === '') return undefined;
-  const n = Number(toleranz ? roh.replace(/['’\s]/g, '') : roh);
+  const n = Number(roh.replace(/['’\s]/g, ''));
   return Number.isFinite(n) && (!guard || n >= 0) ? n : undefined;
 };
 
-/** Nicht-negative Zahl (Guard n>=0), ohne Apostroph-Toleranz; leer/ungültig → undefined.
+/** Nicht-negative Zahl (Guard n>=0); leer/ungültig → undefined.
  *  Grundbuch/Beurkundung/NotariatGrundbuch. */
-export const zahlNichtNegativ = (roh: string): number | undefined =>
-  kern(roh, { guard: true, toleranz: false });
+export const zahlNichtNegativ = (roh: string): number | undefined => kern(roh, true);
 
-/** Beliebige endliche Zahl (kein Guard), ohne Apostroph-Toleranz; leer/ungültig → undefined.
+/** Beliebige endliche Zahl (kein Guard); leer/ungültig → undefined.
  *  Prozesskosten/Streitwert/GebvKosten. */
-export const zahlBeliebig = (roh: string): number | undefined =>
-  kern(roh, { guard: false, toleranz: false });
+export const zahlBeliebig = (roh: string): number | undefined => kern(roh, false);
 
-/** Nicht-negative Zahl (Guard n>=0), Apostroph/Leerzeichen-tolerant; leer/ungültig → null.
+/** Nicht-negative Zahl (Guard n>=0); leer/ungültig → null.
  *  BgerRechtsweg (bewusst null statt undefined: nachgelagerte === null-Logik). */
-export const zahlNichtNegativTolerant = (roh: string): number | null =>
-  kern(roh, { guard: true, toleranz: true }) ?? null;
+export const zahlNichtNegativOderNull = (roh: string): number | null => kern(roh, true) ?? null;

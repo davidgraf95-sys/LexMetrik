@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import { KANTONE } from '../../lib/kantone';
 import { Checkbox, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
-import { zahlNichtNegativTolerant as zahl } from './eingabe';
+import { zahlNichtNegativOderNull as zahl } from './eingabe';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
