@@ -703,6 +703,14 @@
   @keyframes lc-ziel-blink { 0% { background: var(--brass-100); } 100% { background: transparent; } }
   .lc-ziel-blink { animation: lc-ziel-blink 2.4s var(--ease); border-radius: .375rem; }
 
+  /* A35 (David 16.7.2026): Treffer-Highlight der In-Gesetz-Suche («Vertrag» im OR
+     gehighlighted). Reine PAINT-Schicht über die bestehenden Text-Knoten (CSS
+     Custom Highlight API, suchHighlight.ts) — keine DOM-Mutation, kein Reflow
+     (CLS 0). Messing-Tönung + volle Tinte. --brass-200 UND --ink-900 kippen beide
+     über html.dark (hell: helles Tan + dunkle Tinte; dunkel: dunkles Messing +
+     helle Tinte) → EINE Regel trägt AA in beiden Themes (§13/F2), kein Override. */
+  ::highlight(lc-such-treffer) { background-color: var(--brass-200); color: var(--ink-900); }
+
   .lc-live { display: inline-flex; align-items: center; gap: .4rem; }
   /* F1: Live-Punkt = Zustand «live/ok» → --ok-Rolle (wertidentisch zu sage). */
   .lc-live::before {
