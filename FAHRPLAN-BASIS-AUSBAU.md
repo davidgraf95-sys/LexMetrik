@@ -189,6 +189,38 @@ Gating — `strict=false` heisst: PRs mergen gegen veralteten `main`, Race-Merge
 **Abhängigkeit:** **NACH QS-OPT O-3.2 (Flake-Wurzel) + O-3.3 (Sharding)** — sonst verstopft die Queue.
 **DoD:** Konfig vorbereitet + O-3.2/O-3.3 als Voraussetzung belegt; Aktivierung wartet auf grüne O-3.x + G7.
 
+#### Status-Log · 17.7.2026 — B-12-Vorbereitung erledigt (mit O-3.3)
+
+**Gebaut (branch `feat/o33-e2e-sharding`, lokal):** `merge_group`-Trigger in `.github/workflows/ci.yml`
+eingebaut (schadet ohne Queue nicht) + Tore-Split für O-3.3 (Jobs `tore` → `e2e` [3 Shards] → `perf`).
+Damit ist der Workflow queue-fähig; die **Aktivierung bleibt David-Gate G7**.
+
+**⚠ Zwangs-Begleitschritt aus dem Job-Split (unabhängig von der Queue):** Bisher deckte der EINE Required Check
+`Tore (tsc · Tests · Lint · Build · Checks)` alles ab (er enthielt e2e + perf). Nach dem Split sind e2e/perf
+**eigene Checks**. Aktueller Stand Branch-Protection `main`: required = `Tore …` + `Vercel`, `strict=false`.
+→ **Sobald dieser Branch auf `main` ist, blockieren rote e2e/perf-Läufe NICHT mehr den Merge**, bis die neuen
+Checks als required ergänzt sind. Das ist Teil desselben ~10-Min-Handschritts.
+
+**David-Anleitung (~10 Min, G7 — Reihenfolge einhalten):**
+1. **Required Checks ergänzen** (Settings → Branches → Rule `main` → *Require status checks*): die vier neuen
+   Kontexte hinzufügen — `Tore (tsc · Tests · Lint · Build · Checks)` (bleibt), `Browser-Smoke Shard 1/3 (Playwright)`,
+   `… Shard 2/3 …`, `… Shard 3/3 …`, `Perf-Budget (§15 — nur bei grüner Treue)`, `Vercel` (bleibt). Erst NACH einem
+   ersten grünen Lauf auf `main` erscheinen die neuen Kontexte in der Auswahl-Liste.
+2. **Merge Queue einschalten**: dieselbe Rule → *Require merge queue* anhaken (Default-Settings genügen). Die Queue
+   fährt CI auf `merge_group`-Events — genau dafür der neue Trigger. Ohne Schritt 1 hätte die Queue nichts zu warten.
+3. **`strict` (up-to-date) prüfen**: Die Queue testet jeden PR gegen den frisch serialisierten `main`, darum wird
+   das heutige `strict=false` (Race-Merge-Risiko, Memory-Lektion git/Parallel-Sessions) durch die Queue selbst
+   entschärft — `strict` kann auf `false` bleiben; die Queue ist der Serialisierer.
+4. **Auto-merge bleibt kompatibel**: `gh pr merge --auto` reiht bei aktiver Queue nur ein statt sofort zu mergen —
+   Daueranweisung «Auto-merge bei grüner CI» gilt unverändert. `concurrency: ci-${{ github.ref }}` isoliert
+   Queue-Läufe (eigene ref) von PR-Läufen; kein Umbau nötig.
+5. **Kosten-Notiz (QS-TOK):** Die Queue erhöht CI-Läufe pro Merge (Test-gegen-serialisierten-main); der O-3.3-Split
+   (dist einmal bauen + Shards parallel) hält die Wanduhr je Lauf niedrig und dämpft das ab — darum ist B-12
+   bewusst der LETZTE Posten und erst NACH O-3.3 sinnvoll.
+
+**Rollback:** *Require merge queue* wieder abhaken; Workflow bleibt gültig (der `merge_group`-Trigger feuert dann
+nie). Kein Code-Rückbau nötig.
+
 ---
 
 # §B — David-Schlussblock (alle Handschritte gebündelt, ans Ende)

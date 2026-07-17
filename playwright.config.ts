@@ -9,6 +9,10 @@ import { defineConfig } from '@playwright/test'
 // Standard zu ändern.
 const E2E_PORT = process.env.E2E_PORT ?? '4317'
 
+// Bekannt schwere Specs (Forensik 17.7.): erhalten via Projekt-Override ein
+// 60-s-Timeout statt der globalen 30 s (Begründung unten bei `projects`).
+const SCHWERE_SPECS = ['**/a11y.e2e.ts', '**/leser-linien-kanon.e2e.ts']
+
 export default defineConfig({
   testDir: './e2e',
   testMatch: '**/*.e2e.ts',
@@ -32,6 +36,30 @@ export default defineConfig({
     baseURL: `http://localhost:${E2E_PORT}`,
     trace: 'retain-on-failure',
   },
+  // ── Test-Timeout-Politik (O-3.3, CPU-Drossel-Forensik 17.7.) ───────────────
+  // Der globale Test-Timeout bleibt bei Playwrights Default (30 s). Unter CPU-
+  // Last auf dem 2-Kern-Free-Runner rissen aber die axe-schweren a11y-Specs
+  // (a11y.e2e.ts:174/192) und der tief geschachtelte ZGB-684-Reader
+  // (leser-linien-kanon.e2e.ts:105) reihum genau dieses 30-s-Budget — lokal
+  // 6/6 grün in ~12–19 s, also Contention, kein Code-Defekt. Sharding senkt die
+  // Contention, hebt sie aber nicht sicher unter 30 s; darum laufen genau diese
+  // Dateien im Projekt «schwer» mit 60 s Budget, alle übrigen bleiben bei 30 s.
+  // Das ist INFRASTRUKTUR (Zeitbudget), KEIN Assertion-Change (§6.3): kein
+  // `expect` und kein Prüf-Schritt wird berührt, der Timeout greift nur bei
+  // Überschreitung und verlangsamt grüne Tests nicht. Sharding (`--shard`)
+  // verteilt über beide Projekte hinweg, bleibt also unberührt.
+  projects: [
+    {
+      name: 'schwer',
+      testMatch: SCHWERE_SPECS,
+      timeout: 60_000,
+    },
+    {
+      name: 'chromium',
+      testIgnore: SCHWERE_SPECS,
+      timeout: 30_000,
+    },
+  ],
   webServer: {
     command: `npm run preview -- --port ${E2E_PORT} --strictPort`,
     url: `http://localhost:${E2E_PORT}`,

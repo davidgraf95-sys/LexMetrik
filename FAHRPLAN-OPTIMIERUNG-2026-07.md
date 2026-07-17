@@ -314,8 +314,15 @@ Bau-Agent-Kette 16.7.2026 (Opus, abends — Fortsetzung nach den David-Gate-Frei
   deterministischer Generator-Lauf, Budget aus check:entscheide ggf. Band-Tranchen,
   Gegenprüfung ×3 Sprachen gegen bger.ch) → eigene schwere Bau-Einheit. **FR|IT-Chips im
   Leser: ans Ketten-Ende** (Kollision mit laufenden Reader-PRs).
-- **O-3.2 Flake-Wurzel** — separat fortgesetzt (eigener Agent). **O-3.3 Sharding** — OFFEN,
-  Vorbedingung Hotfix #248 (ci.yml). **O-3.4 e2e-Masse** — OFFEN.
+- **O-3.2 Flake-Wurzel** — separat fortgesetzt (eigener Agent). **O-3.3 Sharding** — **GEBAUT
+  17.7. (branch `feat/o33-e2e-sharding`, lokal, kein Push):** Tore-Split in `.github/workflows/ci.yml`
+  (`tore` baut dist EINMAL → Artefakt; `e2e` fährt `--shard=i/3` als Matrix; `perf` `needs: [tore, e2e]`
+  = §15-Kopplung job-übergreifend). Timeout-Politik in `playwright.config.ts`: Projekt «schwer»
+  (a11y.e2e.ts + leser-linien-kanon.e2e.ts) auf 60 s statt global 30 s — reine Infrastruktur, kein
+  Assertion-Change (§6.3). Lokal gemessen: Baseline seriell (workers:1) **418 s / 215 Tests**; Shards seriell
+  **181 s / 132 s / 109 s** (72/72/71 Tests). Parallel auf CI ⇒ e2e-Wand = langsamster Shard
+  **~181 s (≈ 43 % der Baseline)**, ohne die Contention in EINEN Runner zurückzuholen. `merge_group`-Trigger für B-12
+  gleich mit eingebaut (schadet ohne Queue nicht). **O-3.4 e2e-Masse** — OFFEN (jetzt CI-verträglich).
 - **CI-Abhängigkeit:** grünes CI der PRs #257/#259 setzt Hotfix **#248** (bibliothek-check
   S7.3, Auto-Merge offen) auf main voraus — bis dahin `check:bibliothek` vorbestehend rot;
   Auto-Merge greift, sobald #248 landet und die Branches nachgezogen sind.
