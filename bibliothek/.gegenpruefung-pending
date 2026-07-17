@@ -1,9 +1,15 @@
 {
-  "hash": "3d2beac0f7a6ac1f7fa840205637539a9f0c8e66ff206ea3552a02f1003774e7",
+  "hash": "0a87a34fc4ebe0f827d38625cf2dae74a66129cadc325b952102ee3bb1b738e3",
   "verdikt": "bestanden",
-  "quellePin": "fedlex jolux:titleShort 20260716 (in-force) + bger/bvger/bstger/bpatger Urteile",
-  "datum": "2026-07-16",
+  "quellePin": "fedlex cc/2009/423 + cc/2025/408 20260718",
+  "datum": "2026-07-18",
   "dateien": [
-    "scripts/normtext-entscheide.ts"
+    "public/normtext/register.json",
+    "scripts/fedlex-versionen-pruefen.ts",
+    "scripts/normtext/browse-manifest.ts",
+    "src/lib/normtext/aufhebungen.ts",
+    "src/lib/normtext/browse-typen.ts",
+    "src/lib/normtext/register-typen.ts",
+    "src/lib/normtext/register.ts"
   ]
 }
