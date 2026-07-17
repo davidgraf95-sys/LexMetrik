@@ -40,12 +40,10 @@
 //
 // BEKANNTE_BEFUNDE (Muster a11y-Politik): Verstösse im Bestand werden hier
 // dokumentiert statt im Risikopfad «schnell mitgefixt» (Fix = eigene Folge-
-// Einheit). Aktuell: KEINE Konventions-Verstösse. Getrennt geführte Bestands-
-// Beobachtung (kein Test-Verstoss, Registry-Vollständigkeit, an Orchestrator
-// gemeldet): HR/HA/LV-Sondervorlagen sind über Seiten + golden-outputs verdrahtet,
-// aber NICHT in VORLAGEN_REGISTRY geführt — Registry-Nachtrag berührte den
-// Registry-Drift-Guard (vorlagenRegistry.test.ts ↔ Katalog/Routen) und ist damit
-// eine deklarierte Folge-Einheit, kein H-12-Test-Beifang.
+// Einheit). Aktuell: KEINE Konventions-Verstösse. Die früher separat geführten
+// HR/HA/LV-Sondervorlagen sind seit dem Registry-Nachtrag (Folge-Einheit) in
+// VORLAGEN_REGISTRY aufgenommen und fliessen darum über REGISTRY_EINZEL/
+// ASSEMBLE_KANDIDATEN — keine Sonderliste mehr nötig (§5: kein Hand-Duplikat).
 
 import { describe, expect, it } from 'vitest';
 import {
@@ -61,9 +59,6 @@ import { MUSTER } from '../lib/vorlagen/formatvorlagen';
 import { VORLAGEN_REGISTRY } from '../lib/vorlagen/registry';
 import { AG_ALLE_SCHEMAS } from '../lib/vorlagen/gruendungAgDokumente';
 import { GMBH_ALLE_SCHEMAS } from '../lib/vorlagen/gruendungGmbhDokumente';
-import { HR_SCHEMA, HR_DEFAULTS, hrZusammenstellen } from '../lib/vorlagen/handelsreisendenvertrag';
-import { HA_SCHEMA, HA_DEFAULTS, haZusammenstellen } from '../lib/vorlagen/heimarbeitsvertrag';
-import { LV_SCHEMA, LV_DEFAULTS, lvZusammenstellen } from '../lib/vorlagen/lehrvertrag';
 
 // ── Erlaubte Enum-Mengen, compile-zeitlich an die Engine-Typen gekoppelt ──────
 // `satisfies Record<T, true>` erzwingt Vollständigkeit: ein neuer Typwert bricht
@@ -77,20 +72,16 @@ const ROLLEN = {
 
 // ── Register: ALLE statisch erreichbaren Vorlagen-Schemas ─────────────────────
 // Einzel-Vorlagen aus der Registry ABGELEITET (kein Hand-Duplikat, §5: keine
-// zweite Wahrheit über die Schema-Menge) + Mappen-interne Schema-Arrays + die
-// drei Sondervorlagen. Ein Guard unten erzwingt, dass jede Einzel-Registry-
+// zweite Wahrheit über die Schema-Menge) + Mappen-interne Schema-Arrays. Die
+// arbeitsvertraglichen Sub-Regime (HR/HA/LV) sind seit dem Registry-Nachtrag Teil
+// von VORLAGEN_REGISTRY und darum bereits in REGISTRY_EINZEL enthalten — keine
+// separate Sonderliste mehr. Ein Guard unten erzwingt, dass jede Einzel-Registry-
 // Vorlage abgedeckt bleibt (neue Einzelvorlage ⇒ automatisch mitgeprüft).
 type SchemaEintrag = { schema: VorlageSchema; herkunft: string };
 
 const REGISTRY_EINZEL: SchemaEintrag[] = VORLAGEN_REGISTRY
   .filter((e) => e.art === 'einzel' && e.schema)
   .map((e) => ({ schema: e.schema as VorlageSchema, herkunft: 'registry' }));
-
-const SONDER_VORLAGEN: SchemaEintrag[] = [
-  { schema: HR_SCHEMA, herkunft: 'handelsreisendenvertrag' },
-  { schema: HA_SCHEMA, herkunft: 'heimarbeitsvertrag' },
-  { schema: LV_SCHEMA, herkunft: 'lehrvertrag' },
-];
 
 const MAPPE_INTERN: SchemaEintrag[] = [
   ...AG_ALLE_SCHEMAS.map((schema) => ({ schema, herkunft: 'AG_ALLE_SCHEMAS' })),
@@ -99,19 +90,15 @@ const MAPPE_INTERN: SchemaEintrag[] = [
 
 const ALLE_VORLAGEN_SCHEMAS: SchemaEintrag[] = [
   ...REGISTRY_EINZEL,
-  ...SONDER_VORLAGEN,
   ...MAPPE_INTERN,
 ];
 
 // Assemble-Kandidaten für Konvention 4 (self-contained DEFAULTS je Vorlage):
-// Einzel-Registry-Vorlagen (zusammenstellen + defaults) + Sondervorlagen.
+// alle Einzel-Registry-Vorlagen (inkl. HR/HA/LV seit dem Nachtrag).
 const ASSEMBLE_KANDIDATEN: { id: string; run: () => unknown }[] = [
   ...VORLAGEN_REGISTRY
     .filter((e) => e.art === 'einzel')
     .map((e) => ({ id: e.schemaId, run: () => (e.zusammenstellen as (a: unknown) => unknown)(e.defaults) })),
-  { id: 'handelsreisendenvertrag', run: () => hrZusammenstellen(HR_DEFAULTS) },
-  { id: 'heimarbeitsvertrag', run: () => haZusammenstellen(HA_DEFAULTS) },
-  { id: 'lehrvertrag', run: () => lvZusammenstellen(LV_DEFAULTS) },
 ];
 
 // ── Strukturelle Auflösbarkeit einer Bedingung (matcht die Bedingung-Union) ──
