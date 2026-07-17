@@ -1799,3 +1799,80 @@ Budget 2, Sackgassen-Beweis, a11y-Wort-als-Text, Mobil@390, Kalt-Browse-Regressi
 Regressions-Sets `gesetze-kanton-g5`/`-uebersicht-u`/`-rechtsgebiet-g6`/
 `suche-seite`/`a11y` grün. Risiko-Pfad ⇒ `check:gegenpruefung` (unabhängiger
 Opus-Durchgang, register.json-Rezählung + Stufen-Ableitung). Roadmap W2·5d.
+
+## 12 · Fedlex-eId-Anker & Verifizier-Deep-Links (Intake, Live-Verifikation 17.7.2026)
+
+**Quelle (empirisch massgeblich):** Live-Verifikation 17.7.2026 gegen die Fedlex-SPA
+(DOM), die XML-/HTML-Manifestation ZGB (SR 210, Konsolidierung `20260701`) und die
+ELI-Zitierform — Playwright via Bash, DE/FR/IT-Sprachproben. Kein David-Anmerkungs-Nachzug
+(kein `docs/ux-audit-*`-Wortlaut), sondern eine **struktur-getriebene Enabler-Recherche**.
+**David-GO 17.7.2026 (abends): als Bau-Einheit aufnehmen.** Bau-Go-Status je Teil-Einheit
+in §12.5 (David-Gates ans Ende, §14 «Handschritte-ans-Ende»). Ausführung als Opus-Einheiten;
+Fable orchestriert. Nummerierung `§12.x` = Sektion dieser Datei (nicht zu verwechseln mit
+dem steuerungs-Querverweis «§12 Ziff. 2» = Pathspec-Commit-Konvention).
+
+### 12.0 · Befund (verifiziert, doppelt belegt)
+
+1. **Fedlex-Fragmente sind AKN-eIds.** Gliederungs-Container tragen **kumulative Pfad-eIds**
+   (`book_2/part_2/tit_7/chap_4/lvl_D`); `lvl_*` = Randtitel-Gruppen (XML
+   `fedlex:role="marginal"`), Tiefe via `aria-level` (ZGB: **175 Container-eIds** gezählt).
+   **Artikel-Anker sind flach** (`art_712_a` — Unterstrich VOR dem Suffix), passend zum
+   bestehenden `art_`-Regex (`scripts/normtext/struktur-extrahiere.ts:45`).
+2. **eIds sind sprach-invariant** — DE/FR/IT liefern identische eIds (verifiziert an ZGB).
+3. **Zitierfähige URL-Form = ELI-Fragment** `…/eli/cc/…/de#<eId>`, **NIE die
+   Filestore-URL** (versionsgebunden, bricht bei jeder Konsolidierung). Die ELI-Form liegt
+   je Erlass bereits als `quelleUrl` vor (`src/lib/normtext/browse-typen.ts:27`; Beispiel
+   `src/lib/normtext/bund-stubs.generated.ts:7` = `…/eli/cc/1993/3122_3122_3122/de`).
+
+### 12.1 · Risiko-Grundsatz (bindend)
+
+**Kumulative Container-Pfade sind revisions-brüchig:** ein Kapitel-Einschub verschiebt
+`chap_N` (und damit die eIds) aller Folgeknoten. Daraus folgt hart:
+
+- Fedlex-eIds **NUR als bei jeder Regeneration neu erzeugte Outbound-Links** verwenden,
+  **NIE als eigene persistente Anker.**
+- Die opake **`#art-`-Konvention bleibt unangetastet** (K2/R8: Anker ÜBERALL `#art-<token>`,
+  Parser erzeugt NIE `#par-`). Kein Spiegel-Ankerraum zur amtlichen Struktur.
+
+### 12.2 · Teil-Einheiten (EID-1 · EID-2 · EID-3)
+
+| Einheit | Umfang | Kern (verifizierter Anker) | Tore / Kollision |
+|---|---|---|---|
+| **EID-1 · Enabler: Container-eIds im Sidecar mitschneiden** | S (additiv, verhaltensneutral) | Der Struktur-Extraktor liest heute NUR `art_*`-IDs (`scripts/normtext/struktur-extrahiere.ts:45`, Sidecar-Aufbau `:126`) und wirft die `<section id="book_2/…">`-Container-eIds weg — obwohl sie im ohnehin geparsten HTML stehen. **Sidecar-Schema `gliederung[]` um ein `eId`-Feld erweitern** (reiner Zusatz, keine bestehende Zeile ändert Wert). | **Risiko-Pfad** (`scripts/normtext`, KC2) ⇒ `check:gegenpruefung` Pflicht. `check:struktur-konsistenz` grün + **Golden byte-gleich** (reiner Zusatz, kein Normtext-Snapshot-Diff). Vor Regeneration `fedlex-cache.sh` + «0 übersprungen». |
+| **EID-2 · Verifizier-Deep-Links «amtliche Fassung an genau dieser Stelle»** | S–M | Outbound-Link auf die **ELI-Form** (`quelleUrl` + `#<eId>`): **je Artikel SOFORT möglich** (bestehendes `ankerZuToken`-Mapping, `scripts/normtext/extrahiere-fedlex.ts:958`, + `quelleUrl`); **je Sektion NACH EID-1** (Container-eId aus dem Sidecar). §7/§8-tauglich (Verifikations-/Ehrlichkeits-Schicht: Sprung zur amtlichen Quelle an der gelesenen Stelle). | Sichtbare UX-Oberfläche ⇒ **David-Gate** (§12.5). Reader-Chrome (Golden-neutral erwartet, empirisch prüfen); Link-Ziel empirisch gegen Fedlex verifizieren (§7 Zitat-Treue). Kollision `parts.tsx`/`inhalt.tsx` (Artikel-/Sektions-Kopf) ⇒ Worktree-Disziplin, nicht mit E-Reihe (§10.10) mischen. |
+| **EID-3 · Folge-Härtungen (optional, NACH EID-1)** | M / S | (a) **Breadcrumb-Knoten auf stabile eIds heben:** `SektionKontextKopf` erzeugt heute ephemere `sek-N`-IDs (`src/lib/normtext/browse.ts:250`) → auf die Container-eIds heben ⇒ **teilbare Sektions-Deep-Links** (additiv zu K2/R8). (b) **Linien-Tiefe aus der eId-Pfadlänge** statt aus der Sidecar-Rekursionstiefe/hN-Ableitung speisen (`src/pages/gesetz-leser/linienAufbau.ts`, A8-Fläche) — S, optional. | Golden-neutral anstreben (Reader-CSS/TS); `check:linien-kanon` grün halten (Teil b berührt die Guide-Ebene). **Achtung A27/A28:** `SektionKontextKopf` wurde in A27 entfernt — Teil (a) setzt dessen Wiedereinführung voraus und kollidiert mit dem §11.7-Verdikt «Kein SektionKontextKopf-Revival» ⇒ **nur mit David-Entscheid** (§12.5). |
+
+### 12.3 · Reihenfolge / Kollisions-Sequenzierung
+
+1. **EID-1 zuerst** (Enabler, verhaltensneutral, sofort baubar sobald Bau-Go) — schneidet
+   die Container-eIds mit; ohne ihn bleibt EID-2 auf den Artikel-Teil beschränkt.
+2. **EID-2 gestaffelt:** Artikel-Deep-Link ist EID-1-unabhängig (nur `ankerZuToken` +
+   `quelleUrl`) und könnte vorgezogen werden; Sektions-Deep-Link **hart nach EID-1**.
+3. **EID-3 zuletzt, optional**, hinter David-Entscheid (Teil a re-öffnet die A27/§11.7-Frage).
+4. **Daten-Regeneration bündeln:** EID-1 verlangt EINEN Regenerationslauf (Sidecars) —
+   mit den ohnehin anstehenden Regenerationen (§10.8 Ziff. 4, Fedlex-P1-Pin-Refresh)
+   zusammenlegen, EIN Diff-Audit (OR/ZGB/StGB/BV strukturell nicht-regressions-bewiesen).
+5. **Nicht mit der Reader-E-Reihe (§10.10 E1–E7) mischen** (§14.2 Klassen-Trennung):
+   EID-1 ist Extraktion/Risiko-Pfad, EID-2/3 sind Reader-UI — getrennte PRs.
+
+### 12.4 · Bewusst NICHT (Scope-Grenzen)
+
+- **Keine eigenen kanonischen Anker spiegelbildlich zur amtlichen Struktur** — Drift-Risiko
+  (revisions-brüchige Container-Pfade) + K2/R8-Kollision. Fedlex-eIds bleiben reine,
+  regenerierte Outbound-Ziele, nie persistente Eigen-Anker.
+- **Kein `#par-`, kein Umbau der `#art-`-Konvention** (R8/K2).
+- **Kein Filestore-URL-Zitat** (versionsgebunden) — nur die ELI-Form.
+- **Kein SektionKontextKopf-Revival ohne David-Entscheid** (A27/§11.7) — begrenzt EID-3(a).
+
+### 12.5 · Bau-Go-Status & David-Gate (ans ENDE)
+
+- **EID-1 (Enabler):** verhaltensneutral/additiv, Risiko-Pfad-abgesichert (`check:gegenpruefung`
+  + Golden byte-gleich) — **sofort baubar, sobald Bau-Go erteilt.** Kein Produkt-Entscheid nötig.
+- **EID-2 (Deep-Links):** fügt eine sichtbare Reader-Oberfläche hinzu (Link «amtliche Fassung
+  an genau dieser Stelle») → **David-Gate: Platzierung/Wortlaut/Sichtbarkeit** (Artikel-Zeile
+  vs. Sektions-Kopf) vor Bau vorlegen (§Y-Verfahren).
+- **EID-3 (Folge-Härtungen):** **David-Gate** — Teil (a) re-öffnet die A27/§11.7-Entscheidung
+  (SektionKontextKopf); nur mit ausdrücklichem Entscheid. Teil (b) optional, niedrige Priorität.
+- **Gesamt-Bau-Go (Ausführung der Einheiten):** ausstehend — dieser Abschnitt ist der Intake
+  (David-GO 17.7. = Aufnahme als Bau-Einheit), die Ausführung folgt der Fahrplan-Sequenz mit
+  den obigen Gates.
