@@ -128,7 +128,7 @@ EINTRAEGE=(
   # Wechsel des Versicherers, Art. 64a Abs. 6 Ausstands-Sperre; 20260101 =
   # neuste echte Konsolidierung, 202602–202606 liefern nur die SPA-Shell;
   # Datei OHNE -N-Suffix. Dossier kvg-grundversicherung-kuendigung.md).
-  "kvg|cc/1995/1328_1328_1328|20260701|0|art_7,art_62,art_64_a|832.10"
+  "kvg|cc/1995/1328_1328_1328|20260701|1|art_7,art_62,art_64_a|832.10"
   # KVV: gepinnt 11.6.2026 (besondere Versicherungsformen: Art. 94 Abs. 2 /
   # Art. 100 Abs. 3 — Wechsel nur auf Jahresende, Fassung AS 2024 697).
   "kvv|cc/1995/3867_3867_3867|20260701|1|art_94,art_99,art_100|832.102"
@@ -174,7 +174,7 @@ EINTRAEGE=(
   "avig|cc/1982/2184_2184_2184|20260101|1|art_1|837.0"
   "rpg|cc/1979/1573_1573_1573|20260701|2|art_1|700"
   "usg|cc/1984/1122_1122_1122|20260401|2|art_1|814.01"
-  "vgg|cc/2006/352|20260612|0|art_1|173.32"
+  "vgg|cc/2006/352|20260612|1|art_1|173.32"
   "bgfa|cc/2002/153|20250701|1|art_1|935.61"
   "kkg|cc/2002/593|20230901|4|art_1|221.214.1"
   "gwg|cc/1998/892_892_892|20240301|6|art_1|955.0"
@@ -260,7 +260,7 @@ EINTRAEGE=(
   "vev|cc/2018/493|20260612|1|art_1|142.204"
   "vinta|cc/2018/511|20251201|0|art_1|142.205"
   "asylv1|cc/1999/359|20260612|0|art_1|142.311"
-  "asylv2|cc/1999/360|20260612|0|art_1|142.312"
+  "asylv2|cc/1999/360|20260714|1|art_1|142.312"
   "asylv3|cc/1999/361|20260612|0|art_1|142.314"
   "gschv|cc/1998/2863_2863_2863|20251201|1|art_1|814.201"
   "lrv|cc/1986/208_208_208|20260101|7|art_1|814.318.142.1"
