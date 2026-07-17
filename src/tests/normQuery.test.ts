@@ -21,6 +21,14 @@ const ERLASSE: NormErlass[] = [
   { key: 'STG', ebene: 'bund', kanton: null, kuerzel: 'StG', titel: 'Stempelabgaben', status: 'snapshot' },
   { key: 'BGOE', ebene: 'bund', kanton: null, kuerzel: 'BGÖ', titel: 'Öffentlichkeitsgesetz', status: 'snapshot' },
   { key: 'EMRK', ebene: 'bund', kanton: null, kuerzel: 'EMRK', titel: 'EMRK', status: 'pdf-embed' },
+  // O-4: Ziele der erweiterten FR/IT-Alias-Tabelle (Kürzel = norm(key)/norm(kuerzel)).
+  { key: 'BV', ebene: 'bund', kanton: null, kuerzel: 'BV', titel: 'Bundesverfassung', status: 'snapshot' },
+  { key: 'BGG', ebene: 'bund', kanton: null, kuerzel: 'BGG', titel: 'Bundesgerichtsgesetz', status: 'snapshot' },
+  { key: 'STPO', ebene: 'bund', kanton: null, kuerzel: 'StPO', titel: 'Strafprozessordnung', status: 'snapshot' },
+  { key: 'VWVG', ebene: 'bund', kanton: null, kuerzel: 'VwVG', titel: 'Verwaltungsverfahrensgesetz', status: 'snapshot' },
+  { key: 'IPRG', ebene: 'bund', kanton: null, kuerzel: 'IPRG', titel: 'IPR-Gesetz', status: 'snapshot' },
+  { key: 'MWSTG', ebene: 'bund', kanton: null, kuerzel: 'MWSTG', titel: 'Mehrwertsteuergesetz', status: 'snapshot' },
+  { key: 'KG', ebene: 'bund', kanton: null, kuerzel: 'KG', titel: 'Kartellgesetz', status: 'snapshot' },
   { key: 'AI-640.000', ebene: 'kanton', kanton: 'AI', kuerzel: 'StG', titel: 'Steuergesetz AI', status: 'snapshot' },
   { key: 'AR-621.12', ebene: 'kanton', kanton: 'AR', kuerzel: 'ABRG', titel: 'ABRG', status: 'snapshot' },
 ];
@@ -77,6 +85,55 @@ describe('parseNormQuery — Positivfälle (Deep-Link)', () => {
   ];
   it.each(positiv)('%s → %s', (q, ziel) => {
     expect(href(q)).toBe(ziel);
+  });
+
+  // O-4: erweiterte FR/IT-Alias-Tabelle (amtliche titleShort je Sprachfassung, Fedlex).
+  const aliasFrIt: [string, string][] = [
+    // Spec-Beispiele (Auftrag): CO 97, CC 684, LP 80, Cst. 29
+    ['CO 97', '/gesetze/bund/OR#art-97'],
+    ['CC 684', '/gesetze/bund/ZGB#art-684'],
+    ['LP 80', '/gesetze/bund/SchKG#art-80'],
+    ['Cst. 29', '/gesetze/bund/BV#art-29'],
+    // Punkt-Variante «Cst» ohne Punkt — norm() entfernt Interpunktion
+    ['Cst 29', '/gesetze/bund/BV#art-29'],
+    // Italienische Fassung «Cost.» (differiert von FR) → dasselbe Ziel BV
+    ['Cost. 29', '/gesetze/bund/BV#art-29'],
+    // IT weicht von FR ab: SchKG LEF (it) neben LP (fr)
+    ['LEF 80', '/gesetze/bund/SchKG#art-80'],
+    // Weitere Kodifikationen
+    ['LTF 42', '/gesetze/bund/BGG#art-42'],
+    ['CPP 10', '/gesetze/bund/STPO#art-10'],
+    ['PA 5', '/gesetze/bund/VWVG#art-5'],
+    ['LDIP 116', '/gesetze/bund/IPRG#art-116'],
+    ['LCart 7', '/gesetze/bund/KG#art-7'],
+    // FR und IT der Steuer-MWST: LTVA (fr) / LIVA (it) → MWSTG
+    ['LTVA 18', '/gesetze/bund/MWSTG#art-18'],
+    ['LIVA 18', '/gesetze/bund/MWSTG#art-18'],
+    // Migration: LEI (fr) / LStrI (it) → AIG
+    ['LEI 83', '/gesetze/bund/AIG#art-83'],
+    ['LStrI 83', '/gesetze/bund/AIG#art-83'],
+    // Reines Alias-Kürzel (kein Artikel) → Erlass-Sprung
+    ['CO', '/gesetze/bund/OR'],
+    ['LTF', '/gesetze/bund/BGG'],
+    // Gross-/Kleinschreibung egal
+    ['co 97', '/gesetze/bund/OR#art-97'],
+    ['lp 80', '/gesetze/bund/SchKG#art-80'],
+    ['cst. 29', '/gesetze/bund/BV#art-29'],
+    // Kompaktform ohne Trennzeichen
+    ['cc684', '/gesetze/bund/ZGB#art-684'],
+    ['ltf42', '/gesetze/bund/BGG#art-42'],
+  ];
+  it.each(aliasFrIt)('FR/IT-Alias %s → %s', (q, ziel) => {
+    expect(href(q)).toBe(ziel);
+  });
+
+  it('echtes deutsches Kürzel schlägt den Alias (kein Shadowing durch FR/IT)', () => {
+    // «KG» ist ein echter Bund-Erlass (Kartellgesetz) — die Alias-Auflösung wird
+    // nie erreicht, weil holeErlasse die Karte zuerst prüft; «StG»-Bund/Kanton-
+    // Vorrang bleibt (Regressionsschutz gegen versehentliches Alias-Vorziehen).
+    expect(href('KG 7')).toBe('/gesetze/bund/KG#art-7');
+    expect(href('StG 5')).toBe('/gesetze/bund/STG#art-5');
+    expect(href('StG AI 5')).toBe('/gesetze/kanton/AI-640.000#art-5');
   });
 
   it('«ArGV1» bleibt ganzes Kürzel (Kompaktform-Split greift nicht, Ambiguität)', () => {

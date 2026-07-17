@@ -84,17 +84,160 @@ export function baueNormIndex(erlasse: readonly NormErlass[]): NormIndex {
   return { map, kantone };
 }
 
-// FR/IT-Kürzel-Aliasse (UI-NAV S2/Z3 — billigster Romandie-Hebel): die welschen/
-// italienischen Kurztitel der grossen Kodifikationen zeigen auf das schon
-// vorhandene deutsche Erlass-Kürzel. Normalisierte Alias-Form → normalisierte
-// Ziel-Kürzel-Form. Greift NUR als Fallback: existiert ein echter Erlass mit dem
-// Alias-Kürzel, gewinnt der (holeErlasse prüft die Karte zuerst).
+// FR/IT-Kürzel-Aliasse (O-4 · UI-NAV S2/Z3 — billigster Romandie/Ticino-Hebel):
+// die welschen/italienischen amtlichen Kurztitel der Bundeserlasse zeigen auf das
+// vorhandene deutsche Erlass-Kürzel. Normalisierte Alias-Form (norm(): Grosschrift,
+// Diakritika + Interpunktion weg → «Cst.»=«Cst»=CST, «Cost.»=COST) → normalisierte
+// Ziel-Kürzel-Form (= norm(e.key)/norm(e.kuerzel) im Register).
+//
+// QUELLE (§7, verifiziert 16.7.2026): amtlicher `jolux:titleShort` je Sprach-
+// fassung (DEU/FRA/ITA) der IN-KRAFT-Konsolidierung bei Fedlex SPARQL, je Eintrag
+// mit SR-Nummer belegt (Belege im PR-Body/Gegenprüfung). Die in-force-Filterung
+// ist entscheidend: dieselbe SR-Nummer trägt aufgehobene Vorgänger mit gleichem
+// DE-Kürzel, aber ABWEICHENDER FR/IT-Form (z.B. KG-IT alt «LC» → heute «LCart»).
+//
+// Wo FR und IT abweichen (37 Erlasse), stehen ZWEI Zeilen auf dasselbe Ziel
+// (z.B. SchKG: LP/LEF). Kollisionsprüfung durchgeführt: KEIN FR/IT-Kürzel
+// entspricht einem deutschen Register-Kürzel eines ANDEREN Erlasses. Der Alias
+// greift ohnehin NUR als Fallback: existiert ein echter Erlass mit dem Kürzel,
+// gewinnt er (holeErlasse prüft die Karte zuerst); «StG»-Bund/Kanton-Vorrang
+// (waehle) bleibt. Kein amtlicher FR/IT-Kurztitel bei Fedlex: TxG (SR 810.21),
+// CO2-Gesetz (SR 641.71) — daher bewusst KEIN Alias.
 const ALIAS: Readonly<Record<string, string>> = {
-  CO: 'OR',      // Code des obligations / Codice delle obbligazioni → OR
-  CC: 'ZGB',     // Code civil / Codice civile → ZGB
-  CP: 'STGB',    // Code pénal / Codice penale → StGB
-  CPC: 'ZPO',    // Code de procédure civile / Codice di diritto processuale civile → ZPO
-  LP: 'SCHKG',   // Loi sur la poursuite pour dettes et la faillite → SchKG
+  // ── Zivil-/Handels-/Immaterialgüterrecht ──
+  CO: 'OR',        // Code des obligations / Codice delle obbligazioni (220)
+  CC: 'ZGB',       // Code civil / Codice civile (210)
+  LCA: 'VVG',      // Loi/Legge sur le contrat d'assurance (221.229.1)
+  LFUS: 'FUSG',    // Loi/Legge sur la fusion (221.301)
+  ORC: 'HREGV',    // Ordonnance/Ordinanza sur le registre du commerce (221.411)
+  LDA: 'URG',      // Loi/Legge sur le droit d'auteur (231.1)
+  LPM: 'MSCHG',    // Loi/Legge sur la protection des marques (232.11)
+  LBI: 'PATG',     // Loi/Legge sur les brevets d'invention (232.14)
+  LDES: 'DESG',    // Loi/Legge sur les designs (232.12)
+  LPART: 'PARTG',  // Loi sur le partenariat (fr, 211.231)
+  LUD: 'PARTG',    // Legge sull'unione domestica registrata (it, 211.231)
+  LDIP: 'IPRG',    // Loi/Legge sur le droit international privé (291)
+  LCC: 'KKG',      // Loi/Legge sur le crédit à la consommation (221.214.1)
+  // ── Straf-/Strafprozess-/Rechtshilferecht ──
+  CP: 'STGB',      // Code pénal / Codice penale (311.0)
+  DPMIN: 'JSTG',   // Droit pénal des mineurs / Diritto penale minorile (311.1)
+  LSTUP: 'BETMG',  // Loi/Legge sur les stupéfiants (812.121)
+  DPA: 'VSTRR',    // Droit pénal administratif / Diritto penale amministrativo (313.0)
+  CPM: 'MSTG',     // Code pénal militaire / Codice penale militare (321.0)
+  EIMP: 'IRSG',    // Entraide pénale internationale (fr, 351.1)
+  AIMP: 'IRSG',    // Assistenza internazionale in materia penale (it, 351.1)
+  LAVI: 'OHG',     // Loi sur l'aide aux victimes (fr, 312.5)
+  LAV: 'OHG',      // Legge sull'aiuto alle vittime (it, 312.5)
+  // ── Verfahren / Gerichtsorganisation ──
+  CPC: 'ZPO',      // Code de procédure civile / Codice di procedura civile (272)
+  CPP: 'STPO',     // Code de procédure pénale / Codice di procedura penale (312.0)
+  PPMIN: 'JSTPO',  // Procédure pénale des mineurs / Procedura penale minorile (312.1)
+  LTF: 'BGG',      // Loi/Legge sur le Tribunal fédéral (173.110)
+  LTAF: 'VGG',     // Loi/Legge sur le Tribunal administratif fédéral (173.32)
+  LOAP: 'STBOG',   // Loi/Legge sur l'organisation des autorités pénales (173.71)
+  PA: 'VWVG',      // Procédure administrative / Procedura amministrativa (172.021)
+  LP: 'SCHKG',     // Loi sur la poursuite pour dettes et la faillite (fr, 281.1)
+  LEF: 'SCHKG',    // Legge esecuzione e fallimento (it, 281.1)
+  LLCA: 'BGFA',    // Loi/Legge sur la libre circulation des avocats (935.61)
+  // ── Verfassung / Staat / Politische Rechte ──
+  CST: 'BV',       // Constitution fédérale (fr «Cst.», 101)
+  COST: 'BV',      // Costituzione federale (it «Cost.», 101)
+  LDP: 'BPR',      // Loi/Legge sur les droits politiques (161.1)
+  LPARL: 'PARLG',  // Loi/Legge sur le Parlement (171.10)
+  LOGA: 'RVOG',    // Loi/Legge sur l'organisation du gouvernement (172.010)
+  LPUBL: 'PUBLG',  // Loi sur les publications officielles (fr, 170.512)
+  LPUBB: 'PUBLG',  // Legge sulle pubblicazioni ufficiali (it, 170.512)
+  LPERS: 'BPG',    // Loi/Legge sur le personnel de la Confédération (172.220.1)
+  LTRANS: 'BGOE',  // Loi sur la transparence (fr, 152.3)
+  LTRAS: 'BGOE',   // Legge sulla trasparenza (it, 152.3)
+  LN: 'BUEG',      // Loi sur la nationalité (fr, 141.0)
+  LCIT: 'BUEG',    // Legge sulla cittadinanza (it, 141.0)
+  LRCF: 'VG',      // Loi sur la responsabilité (fr, 170.32)
+  LRESP: 'VG',     // Legge sulla responsabilità (it, 170.32)
+  LMP: 'BOEB',     // Loi sur les marchés publics (fr, 172.056.1)
+  LAPUB: 'BOEB',   // Legge sugli appalti pubblici (it, 172.056.1)
+  // ── Datenschutz / Wettbewerb / Binnenmarkt / Preise ──
+  LPD: 'DSG',      // Loi/Legge sur la protection des données (235.1)
+  LCART: 'KG',     // Loi/Legge sur les cartels (251)
+  LMI: 'BGBM',     // Loi/Legge sur le marché intérieur (943.02)
+  LETC: 'THG',     // Loi sur les entraves techniques au commerce (fr, 946.51)
+  LOTC: 'THG',     // Legge sugli ostacoli tecnici al commercio (it, 946.51)
+  LSPR: 'PUEG',    // Loi/Legge sur la surveillance des prix (942.20)
+  // ── Sozialversicherungsrecht ──
+  LPGA: 'ATSG',    // Loi/Legge sur la partie générale des assurances sociales (830.1)
+  LAVS: 'AHVG',    // Loi/Legge sur l'assurance-vieillesse et survivants (831.10)
+  LAI: 'IVG',      // Loi/Legge sur l'assurance-invalidité (831.20)
+  LPC: 'ELG',      // Loi/Legge sur les prestations complémentaires (831.30)
+  LPP: 'BVG',      // Loi/Legge sur la prévoyance professionnelle (831.40)
+  LFLP: 'FZG',     // Loi/Legge sur le libre passage (831.42)
+  LAA: 'UVG',      // Loi sur l'assurance-accidents (fr, 832.20)
+  LAINF: 'UVG',    // Legge sull'assicurazione contro gli infortuni (it, 832.20)
+  LAMAL: 'KVG',    // Loi/Legge sur l'assurance-maladie (832.10)
+  LACI: 'AVIG',    // Loi sur l'assurance-chômage (fr, 837.0)
+  LADI: 'AVIG',    // Legge sull'assicurazione contro la disoccupazione (it, 837.0)
+  LAFAM: 'FAMZG',  // Loi/Legge sur les allocations familiales (836.2)
+  LAPG: 'EOG',     // Loi sur les allocations pour perte de gain (fr, 834.1)
+  LIPG: 'EOG',     // Legge sulle indennità di perdita di guadagno (it, 834.1)
+  LAM: 'MVG',      // Loi/Legge sur l'assurance militaire (833.1)
+  // ── Steuerrecht ──
+  LIFD: 'DBG',     // Loi/Legge sur l'impôt fédéral direct (642.11)
+  LHID: 'STHG',    // Loi sur l'harmonisation des impôts directs (fr, 642.14)
+  LAID: 'STHG',    // Legge sull'armonizzazione delle imposte dirette (it, 642.14)
+  LIA: 'VSTG',     // Loi sur l'impôt anticipé (fr, 642.21)
+  LIP: 'VSTG',     // Legge sull'imposta preventiva (it, 642.21)
+  LTVA: 'MWSTG',   // Loi sur la TVA (fr, 641.20)
+  LIVA: 'MWSTG',   // Legge sull'IVA (it, 641.20)
+  LT: 'STG',       // Loi sur les droits de timbre (fr, 641.10)
+  LTB: 'STG',      // Legge sulle tasse di bollo (it, 641.10)
+  // ── Migration / Gleichstellung / Bürgerrecht ──
+  LEI: 'AIG',      // Loi sur les étrangers et l'intégration (fr, 142.20)
+  LSTRI: 'AIG',    // Legge sugli stranieri e la loro integrazione (it, 142.20)
+  LASI: 'ASYLG',   // Loi/Legge sur l'asile (142.31)
+  LEG: 'GLG',      // Loi sur l'égalité (fr, 151.1)
+  LPAR: 'GLG',     // Legge sulla parità dei sessi (it, 151.1)
+  // ── Wirtschafts-/Finanzmarktrecht ──
+  LFINMA: 'FINMAG',// Loi/Legge sur l'Autorité fédérale de surveillance des marchés financiers (956.1)
+  LB: 'BANKG',     // Loi sur les banques (fr, 952.0)
+  LBCR: 'BANKG',   // Legge sulle banche e le casse di risparmio (it, 952.0)
+  LSFIN: 'FIDLEG', // Loi sur les services financiers (fr, 950.1)
+  LSERFI: 'FIDLEG',// Legge sui servizi finanziari (it, 950.1)
+  LPCC: 'KAG',     // Loi sur les placements collectifs (fr, 951.31)
+  LICOL: 'KAG',    // Legge sugli investimenti collettivi (it, 951.31)
+  LEFIN: 'FINIG',  // Loi sur les établissements financiers (fr, 954.1)
+  LISFI: 'FINIG',  // Legge sugli istituti finanziari (it, 954.1)
+  LIMF: 'FINFRAG', // Loi sur l'infrastructure des marchés financiers (fr, 958.1)
+  LINFI: 'FINFRAG',// Legge sull'infrastruttura finanziaria (it, 958.1)
+  LSA: 'VAG',      // Loi/Legge sur la surveillance des assurances (961.01)
+  LBA: 'GWG',      // Loi sur le blanchiment d'argent (fr, 955.0)
+  LRD: 'GWG',      // Legge sul riciclaggio di denaro (it, 955.0)
+  LTI: 'BEG',      // Loi sur les titres intermédiés (fr, 957.1)
+  LTCO: 'BEG',     // Legge sui titoli contabili (it, 957.1)
+  // ── Verwaltungs-/Umwelt-/Raum-/Sektorrecht ──
+  LAT: 'RPG',      // Loi sur l'aménagement du territoire (fr, 700)
+  LPT: 'RPG',      // Legge sulla pianificazione del territorio (it, 700)
+  LPE: 'USG',      // Loi sur la protection de l'environnement (fr, 814.01)
+  LPAMB: 'USG',    // Legge sulla protezione dell'ambiente (it, 814.01)
+  LEAUX: 'GSCHG',  // Loi sur la protection des eaux (fr, 814.20)
+  LPAC: 'GSCHG',   // Legge sulla protezione delle acque (it, 814.20)
+  LPN: 'NHG',      // Loi/Legge sur la protection de la nature (451)
+  LEX: 'ENTG',     // Loi sur l'expropriation (fr, 711)
+  LESPR: 'ENTG',   // Legge sull'espropriazione (it, 711)
+  LDFR: 'BGBB',    // Loi/Legge sur le droit foncier rural (211.412.11)
+  LFAIE: 'BEWG',   // Loi sur l'acquisition d'immeubles par des personnes à l'étranger (fr, 211.412.41)
+  LAFE: 'BEWG',    // Legge sull'acquisto di fondi da parte di persone all'estero (it, 211.412.41)
+  LCR: 'SVG',      // Loi sur la circulation routière (fr, 741.01)
+  LCSTR: 'SVG',    // Legge sulla circolazione stradale (it, 741.01)
+  LPTH: 'HMG',     // Loi sur les produits thérapeutiques (fr, 812.21)
+  LATER: 'HMG',    // Legge sugli agenti terapeutici (it, 812.21)
+  LDAL: 'LMG',     // Loi sur les denrées alimentaires (fr, 817.0)
+  LDERR: 'LMG',    // Legge sulle derrate alimentari (it, 817.0)
+  LEP: 'EPG',      // Loi/Legge sur les épidémies (818.101)
+  LENE: 'ENG',     // Loi/Legge sur l'énergie (730.0)
+  LA: 'LFG',       // Loi sur l'aviation (fr, 748.0)
+  LNA: 'LFG',      // Legge sulla navigazione aerea (it, 748.0)
+  LTC: 'FMG',      // Loi/Legge sur les télécommunications (784.10)
+  LAAM: 'MG',      // Loi sur l'armée et l'administration militaire (fr, 510.10)
+  LM: 'MG',        // Legge militare (it, 510.10)
 };
 
 // Kandidaten zu einem normalisierten Kürzel holen; findet die Karte nichts, wird

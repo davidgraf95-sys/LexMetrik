@@ -3,7 +3,7 @@ import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
 import { themaText, istSynth, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
-import { formatiereDatum } from './format';
+import { formatiereDatum, spracheBadgeTitel } from './format';
 
 // Karte eines Entscheids (Dichte 'karten'). Hierarchie-Umkehr ggü. der alten
 // Karte: das THEMA führt (Scent), das Aktenzeichen wandert in die gedämpfte
@@ -81,7 +81,7 @@ export function EntscheidKarte({ e, onNorm }: {
           <span className="text-ink-300" aria-hidden>·</span>
           <span className="num">{formatiereDatum(e.datum)}</span>
           {istBge(e) && <span className="num text-ink-500" title="Aktenzeichen">({e.nummer})</span>}
-          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>}
+          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
         </div>
         <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer"
           className="shrink-0 text-xs text-ink-500 no-underline hover:text-brass-700"
