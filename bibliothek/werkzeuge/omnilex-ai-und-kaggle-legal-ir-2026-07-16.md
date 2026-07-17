@@ -59,3 +59,34 @@ Schweizer Legal-AI-Produktfirma (kommerzielles Recherche-Tool «AI for legal pra
 ## Pflegebedarf
 
 Keine datierten Rechtsparameter → **kein** Verfallsregister-Eintrag. Falls F1/F3 je gebaut werden: LEXam-Version + Abruf-Datum als Provenienz festhalten; Kaggle-Zeitplan/Preise bleiben **offen** (nur mit Kaggle-Login verifizierbar).
+
+## Ausbeute F2 — Zitat-Muster-Ausbau (Bau 16.7.2026, Roadmap W2·7-VZUI)
+
+Aus dem Steinbruch (Zitat-Normalizer, Apache-2.0) wurden — nach adversarialer FP-Linse gegen 752 reale Korpus-Einträge (`public/rechtsprechung`, bger/entscheidsuche) — **die Regex-FORMEN** übernommen, NIE das naive `if abbrev in raw`-Substring-Matching. Fundort: `src/lib/rechtsprechung/zitat-extraktion.ts` (Attribution als Quellen-Kommentar verankert), Tests `src/tests/zitat-extraktion.test.ts`. Diff rein additiv in der Erkennung; **Kanten-Regeneration verschoben** (PR `fix/a29-regesten` bei Bauzeit noch offen).
+
+### Übernommen (10 Varianten, je mit Pflicht-Anker aus der FP-Linse)
+
+| # | Variante | Fundort/Änderung | Nötiger Anker (verbaut) |
+|---|---|---|---|
+| V1 | BGE-Pinpoint «E./Erw./consid.» | `BGE_PATTERN` + `extrahiereEntscheidRefs` | `\b` nach Seite (Trunkierung/No-Space); Pinpoint optional hinter validem Kopf |
+| V2 | verkettete Sub-Marker «lit. b Ziff. 5» | `ARTIKEL_GLIED` sub `{0,3}` | `NR`+`BGE` in INVALID_LAW_CODES; Token-Abschluss `(?![A-Za-z0-9])` |
+| V3 | «Nr.» als Sub-Marker | `SUB_MARKER` +`Nr` (vor `n`) | `NR` in INVALID_LAW_CODES |
+| V4 | klein «art.» + FR-Kürzel | **bereits erfasst** (diese Datei läuft mit `i`) | §7-Abweichung: Vorschlag verortete Lücke in falschem Modul (norm-zitate-RX prüft dt. Vorlagen); nur Regressions-Test |
+| V5 | Umlaut-Endung «LugÜ/EPÜ/SDÜ» | `GESETZ_CODE` `[ÄÖÜ]?` nur am Ende; `anzahlGross`+Umlaut; `CODE_ENDE` statt `\b` | Umlaut NUR End-Buchstabe (ÖFFENTLICH/KÜNDIGUNG abgewiesen); `anzahlGross` umlaut-bewusst (LugÜ nicht verworfen) |
+| V6 | ff.-Aufzählungsliste | `KETTEN_GLIED`-Kette + `split`/`GLIED_KOPF` | Kopf-Anker «Art.» + Pflicht-Trailing-Code (ankerlose Liste emittiert nichts) |
+| V7 | ECLI (inkl. EU-Gerichtshof) | neues `ECLI_PATTERN` + Span-Dedup | Schwanz endet nie auf Satzzeichen; CH-Docket-Schwanz nicht doppelt |
+| V8 | Mehrfach-Zitat gemeinsamer Code | `KETTEN_GLIED` (de/fr/it «e») | Währungs-Codes CHF/EUR/USD/GBP/FR/FRS/SFR geblockt; it «e» ziffern-geankert; KEIN Magnitude-Cap |
+| V9 | SR-/RS-Fundstelle | neue Funktion `extrahiereFundstellenRefs` | `\d{3}`-Kern; Gross-only; neg. Lookbehind «AB/BO JJJJ SR» (Ständerat) |
+| V10 | Bereichs-Zitat «Art. 641-654a» | `ARTIKEL_BEREICH` + Monotonie-Guard | `bis`≥`start` sonst Rückfall auf Start (FR-Binnen-Bindestrich «227-23»); `bis` NICHT im Norm-Key |
+
+**Adversariale Gegenprüfung (bestanden, Opus):** OLD-vs-NEW über 752 Einträge → **0 Phantom-Normen** (jeder Gain-Code literal im Text), **0 Entscheid-Ref verloren**, **+2931** Statut-Refs. Von 140 Alt-Wegfällen sind 97 Trunkierungs-**Fixes** (EP→EPÜ, LUG→LugÜ, BG→BGÖ, HU→HUÜ; gleiche Fundstelle, korrigierter Voll-Code) und 43 Drops davon ~17 **Fixes** (BGE-Phantom-Norm nach Artikel geblockt — «art. 63 BGE 146 II 321»; Wort-Trunkierung «Brüssel»→«Br», «Zusätzliche»→«Zus») + **~26 dokumentierte Residue IVöB/aVöB**.
+
+### Verworfen / nicht gebaut
+
+- **Kandidaten aus der Verwerf-Liste** (al./let./ch./ATF/DTF/consid.-Rejects, lett., RS-as-written): bereits abgedeckt ODER strukturell untragbar (siehe Auftrags-Verwerfliste) — **nicht** gebaut.
+- **V4-Vorschlag as-worded** (40-Zeichen-Gap-Linker in `norm-zitate-pruefen.ts`): **nicht** gebaut — §7-Abweichung: die case-sensitive `norm-zitate-RX` validiert UNSERE deutschen Vorlagen (kein FR-Gerichtstext), die Verzahnungs-Erkennung (`zitat-extraktion.ts`) kennt FR-Kürzel klein längst; der Gap-Linker zielte aufs falsche Modul und erzeugte 19 Fehlzuordnungen. Recognition ist am richtigen Fundort vorhanden → nur Regressions-Schloss.
+
+### Offene Residue (dokumentiert, kein Blocker)
+
+- **IVöB/aVöB u. ä. mixed-case-Codes mit MEDIALEM Kleinbuchstaben-Umlaut** (interkantonale Beschaffungs-Konkordate) werden von V5 (Umlaut nur als GROSS-End-Buchstabe) NICHT erfasst. Alt-Verhalten emittierte hier den **trunkierten Fehl-Key «IV»/«aV»** (kollisions­anfällig mit IVG etc.) — NEU entfernt diesen Fehl-Key sicher (§1: Korrektheit vor Abdeckung). Vollerfassung wäre eine eigene, separat FP-zu-prüfende Variante.
+- **Kanten-Regeneration** (`norm-index.json`/Shards) steht aus, bis `fix/a29-regesten` gemergt ist — dann gezielt additiv nachziehen + erneute Gegenprüfung.
