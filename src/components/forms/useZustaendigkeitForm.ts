@@ -35,6 +35,12 @@ import { DISCLAIMER, STREITSACHEN, MIETE_UNTERFAELLE, DEFAULTS, type State } fro
 // Setup/Hooks/abgeleiteter State der Zuständigkeits-UI — aus
 // ZustaendigkeitForm.tsx ausgelagert (§6 Datei-Schlankheit). Verhaltensneutral:
 // identische Hook-Aufrufe + JSX byte-gleich; die Komponente destrukturiert nur.
+
+/** Gebündeltes Modell des Zuständigkeitsrechners (Hook-Rückgabe). Von den
+ *  ausgelagerten Ergebnis-Teilkomponenten als EIN Prop `z` konsumiert (§6.6-
+ *  Fassaden-Split H-13, verhaltensneutral) — kein Logik-Duplikat, reine Referenz. */
+export type ZustaendigkeitFormModell = ReturnType<typeof useZustaendigkeitForm>;
+
 export function useZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   onRechtswegChange?: (w: Rechtsweg) => void;
   /** Vorauswahl aus dem URL-Hash der Katalog-Split-Karten (#schkg/#straf). */
