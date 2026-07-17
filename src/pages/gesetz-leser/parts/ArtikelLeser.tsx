@@ -15,6 +15,7 @@ import {
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../../lib/normtext/typen';
 import { margStufeStil, fnTextMitLinks, baueZitat } from '../helpers';
+import { zitatMitAusweis, heuteIso } from '../../../lib/format';
 import { schaetzeArtikelHoehe } from '../berechnungen';
 import { setzeZeitraum, useLeitfallZeitraum } from '../leserOptionen';
 import { filtereLeitfaelleNachZeitraum, zeitraumLabel } from '../leitfallFilter';
@@ -235,8 +236,13 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
     return out;
   })();
   const kopiere = (was: 'zitat' | 'link') => {
-    const text = was === 'zitat' ? zitatVoll
-      : `${typeof window !== 'undefined' ? window.location.origin : ''}${basisPfad}#art-${e.artikel}`;
+    const permalink = `${typeof window !== 'undefined' ? window.location.origin : ''}${basisPfad}#art-${e.artikel}`;
+    // B-6 (QS-BASIS): die Zitat-Kopie trägt jetzt den Stand-Ausweis (§7 a–d) —
+    // `zitatVoll` (baueZitat) liefert bereits «… (Stand …)» = die Fassung, der
+    // Baustein ergänzt Abrufdatum + Permalink (kein doppeltes Standdatum, §5).
+    const text = was === 'zitat'
+      ? zitatMitAusweis(zitatVoll, { abruf: heuteIso(new Date()), permalink })
+      : permalink;
     void navigator.clipboard?.writeText(text).then(() => {
       setKopiert(was); window.setTimeout(() => setKopiert(''), 1500);
     });
@@ -357,7 +363,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
         {artOffen && (
         <div className="max-w-reading min-w-0 overflow-x-clip">
           <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
-            zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
+            zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel, fassung: erlass.stand, permalinkBasis: `${basisPfad}#art-${e.artikel}` }}
             fnProAbsatz={fnProAbsatz} fnProItem={fnProItem}
             intern={intern}
             className="space-y-3.5 font-serif text-body-l leading-[1.65] text-ink-800" />

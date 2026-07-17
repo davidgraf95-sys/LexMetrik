@@ -5,6 +5,7 @@ import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normt
 import { trenneAenderungshistorie, absatzMarke, gruppiereTausender, gruppiereBetraege, istAufgehoben } from '../../lib/normtext/darstellung';
 import { NormText, type InternRefs } from '../NormText';
 import { BildFigur, BildKacheln, type BildDaten, type BildKachel } from './BildElemente';
+import { zitatMitAusweis, heuteIso } from '../../lib/format';
 
 // Bild-/Kachel-Felder eines Blocks (bild/bildKacheln) sind neu im Snapshot-Daten-
 // format; die Render-Schicht liest sie über diese lokale Erweiterung des
@@ -13,23 +14,48 @@ import { BildFigur, BildKacheln, type BildDaten, type BildKachel } from './BildE
 type BildBlock = NormSnapshot['bloecke'][number] & { bild?: BildDaten; bildKacheln?: BildKachel[] };
 
 /** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
- *  («Art. X Abs. Y lit. z ERLASS» kopieren). Im Popover undefiniert → unverändert. */
-interface ZitierKontext { artikelLabel: string; kuerzel: string }
+ *  («Art. X Abs. Y lit. z ERLASS» kopieren). Im Popover undefiniert → unverändert.
+ *  B-6 (QS-BASIS): `fassung`/`permalinkBasis` (optional) rüsten die inline-Kopie
+ *  mit dem Stand-Ausweis (§7 a–d) nach; fehlen sie (z. B. Popover), bleibt die
+ *  Marke bei der reinen Fundstelle — byte-gleich zu vorher. */
+interface ZitierKontext {
+  artikelLabel: string;
+  kuerzel: string;
+  /** Konsolidierungs-/Fassungsdatum ISO des Erlasses (Stand-Ausweis). */
+  fassung?: string;
+  /** Permalink-Pfad inkl. #anker OHNE origin (origin kommt zur Klick-Zeit). */
+  permalinkBasis?: string;
+}
 
 /** lit. (Buchstaben, Bund) vs. Ziff. (Zahlen, Kanton) anhand der Marke. */
 function litZiff(marke: string): string {
   return /^\d/.test(marke.trim()) ? 'Ziff.' : 'lit.';
 }
 
+/** Stand-Ausweis-Basis (B-6): dieselbe Fassung + Permalink-Basis für alle Marken
+ *  eines Artikels; der Abruf-Tag und der origin kommen zur Klick-Zeit dazu. */
+interface AusweisBasis { fassung?: string; permalinkBasis: string }
+
 // Klickbare Zitat-Marke (Absatznummer oder lit./Ziff.). Kopiert die präzise
 // Fundstelle; kurzes ✓ als Rückmeldung. Nur in der Lesesicht (zitierKontext).
-function ZitierMarke({ zitat, sup, klasse, children }: {
-  zitat: string; sup?: boolean; klasse?: string; children: React.ReactNode;
+// B-6 (QS-BASIS): liegt eine `ausweis`-Basis vor, wird beim Klick der Stand-
+// Ausweis (Fassung + Abrufdatum + Permalink, §7 a–d) an die Fundstelle gehängt.
+function ZitierMarke({ zitat, ausweis, sup, klasse, children }: {
+  zitat: string; ausweis?: AusweisBasis; sup?: boolean; klasse?: string; children: React.ReactNode;
 }) {
   const [ok, setOk] = useState(false);
-  const kopiere = () => void navigator.clipboard?.writeText(zitat).then(() => {
-    setOk(true); window.setTimeout(() => setOk(false), 1200);
-  });
+  const kopiere = () => {
+    const text = ausweis && typeof window !== 'undefined'
+      ? zitatMitAusweis(zitat, {
+          fassung: ausweis.fassung,
+          abruf: heuteIso(new Date()),
+          permalink: `${window.location.origin}${ausweis.permalinkBasis}`,
+        })
+      : zitat;
+    void navigator.clipboard?.writeText(text).then(() => {
+      setOk(true); window.setTimeout(() => setOk(false), 1200);
+    });
+  };
   const knopf = (
     <button type="button" onClick={kopiere} title={`${zitat} — kopieren`}
       className={`num font-semibold cursor-pointer text-brass-700/55 hover:text-brass-700 hover:underline decoration-dotted underline-offset-2 ${klasse ?? ''}`}>
@@ -405,6 +431,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
   // den eigenen Erlass zeigt. Amtliche Kürzel-Verweise (NORM_IM_TEXT) bleiben aktiv.
   const verlinktFremd = (s: string) => (autolink ? <NormText text={glaetteInterpunktion(s)} /> : s);
   const zk = zitierKontext;
+  // B-6 (QS-BASIS): Stand-Ausweis-Basis EINMAL je Artikel bauen — an jede inline-
+  // ZitierMarke durchgereicht (nur wenn der Reader die Permalink-Basis mitliefert).
+  const ausweisBasis: AusweisBasis | undefined = zk?.permalinkBasis
+    ? { fassung: zk.fassung, permalinkBasis: zk.permalinkBasis }
+    : undefined;
 
   return (
     <div data-lese={zitierKontext ? '' : undefined}
@@ -491,7 +522,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             <p className={zk ? `[overflow-wrap:anywhere] hyphens-manual pl-9 rounded transition hover:bg-brass-100/50 hover:-translate-y-0.5 ${absMarke != null ? '-indent-9' : '[text-indent:0]'}` : undefined}>
               {absMarke != null && (
                 zk
-                  ? <ZitierMarke klasse="text-body-s inline-block w-9 text-left !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
+                  ? <ZitierMarke klasse="text-body-s inline-block w-9 text-left !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`} ausweis={ausweisBasis}>{absMarke}</ZitierMarke>
                   : <sup className="num mr-1 font-semibold text-ink-500">{absMarke}</sup>
               )}
               {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
@@ -611,7 +642,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       {istStrich
                         ? <span className="shrink-0 select-none text-ink-500">{markeAnzeige}</span>
                         : zk
-                          ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500 text-body-s" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
+                          ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500 text-body-s" zitat={itemZitat} ausweis={ausweisBasis}>{markeAnzeige}</ZitierMarke>
                           : <span className="num shrink-0 font-semibold text-ink-500">{markeAnzeige}</span>}
                       <span className="min-w-0 [overflow-wrap:anywhere] hyphens-manual">
                         {/* S13 (BS-Audit 23.6.2026): lange Komposita in Aufzählungen

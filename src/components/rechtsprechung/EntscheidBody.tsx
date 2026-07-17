@@ -2,6 +2,7 @@ import { useState, type MouseEvent } from 'react';
 import type { EntscheidAbschnitt, EntscheidBlock } from '../../lib/rechtsprechung/typen';
 import { ABSCHNITT_TITEL, abschnittAnker, segmente, gruppiereErwaegungen } from '../../lib/rechtsprechung/abschnitte';
 import { NormText } from '../NormText';
+import { zitatMitAusweis, heuteIso } from '../../lib/format';
 
 // EntscheidBody: amtliches BGer-Lesebild (Art. 112 BGG: Sachverhalt → Erwägungen →
 // Dispositiv, feste Reihenfolge als Invariante).
@@ -87,7 +88,12 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
   function kopiere(ev: MouseEvent, zitat: string, anker: string) {
     if (typeof navigator !== 'undefined' && navigator.clipboard && typeof location !== 'undefined') {
       ev.preventDefault();
-      navigator.clipboard.writeText(`${zitat}\n${location.origin}${location.pathname}#${anker}`)
+      // B-6 (QS-BASIS): Fundstellen-Kopie trägt den Stand-Ausweis (§7 a–d) —
+      // Abrufdatum + Permalink. Ein Gerichtsentscheid hat keine Konsolidierung →
+      // KEINE «Fassung» (§8, nichts erfunden), nur Abruf + Permalink.
+      navigator.clipboard.writeText(zitatMitAusweis(zitat, {
+        abruf: heuteIso(new Date()), permalink: `${location.origin}${location.pathname}#${anker}`,
+      }))
         .then(() => setKopiert((k) => ({ text: `Fundstelle ${zitat} kopiert`, n: k.n + 1 })))
         .catch(() => {});
       if (typeof history !== 'undefined') history.replaceState(null, '', `#${anker}`);
