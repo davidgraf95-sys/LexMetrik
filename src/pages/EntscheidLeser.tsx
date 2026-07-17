@@ -7,6 +7,7 @@ import { Tabs } from '../components/ui/Tabs';
 import { ABSCHNITT_TITEL, abschnittAnker, ersteFundstelle } from '../lib/rechtsprechung/abschnitte';
 import { StatusBadge } from '../components/verzahnung/StatusBadge';
 import { entscheidDatum } from '../lib/verzahnung/artikel-revisionen';
+import { zitatMitAusweis, heuteIso } from '../lib/format';
 import { ZitierteNormenGruppe, ZitiertGruppe } from '../components/rechtsprechung/EntscheidVerzahnung';
 import { NormText } from '../components/NormText';
 import { KontextPanel } from '../components/kontext/KontextPanel';
@@ -337,11 +338,14 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
       label: t === 'regeste' && !snap.regesteAmtlich ? 'Zusammenfassung' : ABSCHNITT_TITEL[t],
     }));
 
-  // R12 «Kopieren mit Fundstelle»: Zitierung + Permalink in die Zwischenablage.
+  // R12 «Kopieren mit Fundstelle»: Zitierung + Stand-Ausweis in die Zwischenablage.
+  // B-6 (QS-BASIS): Abrufdatum + Permalink (§7 a–d); ein Entscheid hat keine
+  // Konsolidierung → keine «Fassung» (§8). Ohne origin (SSR/kein window): nur die
+  // Zitierung, ehrlich ohne erfundenen Permalink.
   const kopiereZitat = () => {
     if (typeof navigator === 'undefined' || !navigator.clipboard) return;
     const url = typeof location !== 'undefined' ? `${location.origin}${location.pathname}` : '';
-    navigator.clipboard.writeText(url ? `${snap.zitierung}\n${url}` : snap.zitierung)
+    navigator.clipboard.writeText(url ? zitatMitAusweis(snap.zitierung, { abruf: heuteIso(new Date()), permalink: url }) : snap.zitierung)
       .then(() => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); })
       .catch(() => { /* Clipboard nicht verfügbar */ });
   };

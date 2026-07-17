@@ -73,3 +73,48 @@ export const ganzePositive = (roh?: string): number | null => {
   const n = zahl(roh);
   return n !== null && n > 0 && Number.isInteger(n) ? n : null;
 };
+
+// ─── B-6 · Stand-Ausweis (QS-BASIS) ─────────────────────────────────────────
+//
+// EIN Baustein für den Herkunfts-/Stand-Nachweis JEDER Zitat-Kopie (§7-Zitat-
+// Ausnahme a–d): Fassungs-/Konsolidierungsdatum + Abrufdatum + Permalink. Zuvor
+// hand-rollte jeder Kopier-Pfad (Reader-Artikel, inline-Marke, Entscheid) seinen
+// eigenen `${zitat}\n${url}`-String — Streu-Implementierungen ohne Abruf-/Stand-
+// Angabe (anwaltlich unvollständig, bei der nächsten Revision eine Falle in der
+// eigenen Akte). Fachneutral (§3): baut nur die Nachweiszeile, kennt KEINE
+// Rechtsregel. Fehlende Fassung (Gerichtsentscheide haben keine Konsolidierung)
+// wird EHRLICH weggelassen (§8), nie erfunden. Domain-neutral: der Permalink kommt
+// als fertige absolute URL vom Aufrufer (Klick-Zeit `location.origin`), damit ein
+// späterer Domain-Wechsel (B-4/B-10) nur die Basis tauscht.
+
+export interface StandAusweis {
+  /** Konsolidierungs-/Fassungsdatum ISO (YYYY-MM-DD). Entfällt bei Entscheiden (§8). */
+  fassung?: string;
+  /** Abrufdatum ISO (YYYY-MM-DD) — der Klick-Zeitpunkt der Kopie. */
+  abruf: string;
+  /** Permalink: absolute URL inkl. origin, Pfad und #anker (domain-neutral aufgebaut). */
+  permalink: string;
+}
+
+/** Stand-Ausweis als eine Zeile: «Fassung vom … · abgerufen am … · <url>».
+ *  Reihenfolge fest (§7 a–d); fehlende Fassung wird ehrlich ausgelassen (§8). */
+export function standAusweis(a: StandAusweis): string {
+  const teile: string[] = [];
+  if (a.fassung) teile.push(`Fassung vom ${fmtIsoStrict(a.fassung)}`);
+  teile.push(`abgerufen am ${fmtIsoStrict(a.abruf)}`);
+  if (a.permalink) teile.push(a.permalink);
+  return teile.join(' · ');
+}
+
+/** Kopierbares Zitat: Fundstelle in Zeile 1, Stand-Ausweis in Zeile 2.
+ *  Trägt die Fundstelle bereits ein Standdatum (baueZitat «(Stand …)»), bleibt
+ *  `fassung` weg — sonst stünde das Datum doppelt (§5 «nichts doppelt»). */
+export function zitatMitAusweis(zitat: string, a: StandAusweis): string {
+  return `${zitat}\n${standAusweis(a)}`;
+}
+
+/** ISO-Datum (YYYY-MM-DD) aus einem Date — das Abrufdatum der Kopie. Das Date wird
+ *  als EINGABE geführt (§2: kein arg-loses `new Date()` in src/lib); der Klick-
+ *  Handler in der UI-Schicht reicht `new Date()` herein. So bleibt der Baustein
+ *  deterministisch/testbar, die Uhr sitzt an der UI-Grenze (Muster VerfallUebersicht). */
+export const heuteIso = (jetzt: Date): string => jetzt.toISOString().slice(0, 10);
