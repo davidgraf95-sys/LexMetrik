@@ -562,3 +562,28 @@
   Gegenprüfung R1 BESTANDEN 13.7.2026** (unabhängiger Opus-Prüfer: Diff-Sichtung,
   9 Stichproben inkl. unabhängiger ZH-NotGebV-Rechnung, golden 209/209 selbst
   verifiziert; Quittungs-Commit mit Trailer auf dem Branch).
+- **16.7.2026: H-12 ✅** (Worktree `lm-h12`, Branch `chore/h12-vorlagen-konventionstest`,
+  1 Pathspec-Commit). Vorlagen-Schema-Konventionstest (B28) — reine Prüflogik, KEINE
+  Schema-/Engine-Änderung. Neu `src/tests/vorlagenSchemaKonventionen.test.ts`: Register
+  `ALLE_VORLAGEN_SCHEMAS` (Einzel-Vorlagen aus `VORLAGEN_REGISTRY` ABGELEITET — kein
+  Hand-Duplikat, §5 — + `AG_ALLE_SCHEMAS`/`GMBH_ALLE_SCHEMAS` + Sondervorlagen HR/HA/LV),
+  49 statische Schemas. 5 Konventionen: (1) Baustein-IDs je Schema eindeutig; (2) Gates
+  auflösbar (strukturell wohlgeformt + `erfuellt()`-auswertbar ohne Wurf); (3)
+  `ausgabeArt`/`format`/`rolle` nur gültige Enum-Werte (per `satisfies Record<T,true>`
+  compile-zeitlich an die Engine-Typen gekoppelt); (4) `assemble()` wirft nicht mit
+  gate-erfüllenden Modul-DEFAULTS (Einzel-Registry + HR/HA/LV; roi-Korrektur: nicht mit
+  leeren Defaults); (5) `SCHEMA_STRICHE` ≡ `MUSTER.STRICHE` (erfüllt die in engine.ts:137
+  dokumentierte Test-Erwartung). **Bewusste Scope-Grenzen** (im Testkopf dokumentiert,
+  kein Defekt): Dokumentmappen für Konv. 4 nicht naiv mit ihren Teil-DEFAULTS
+  (`Omit<…, keyof …Eingaben>`) aufgerufen — deren End-zu-End-Assemblierung deckt
+  konventionen.test.ts; Kapitalerhöhungs-Schemas intern generiert → Konv. 1–3 nicht
+  statisch abgreifbar, dynamische Deckung via konventionen.test.ts. **BEKANNTE_BEFUNDE:
+  KEINE Konventions-Verstösse im Bestand** (empirisch belegt). Getrennte Bestands-
+  Beobachtung (kein Test-Verstoss): HR/HA/LV sind über Seiten + golden-outputs verdrahtet,
+  aber NICHT in `VORLAGEN_REGISTRY` — Registry-Nachtrag berührt den Registry-Drift-Guard
+  → deklarierte Folge-Einheit, an Orchestrator gemeldet. **Beweis (G1):** tsc · vitest
+  6/6 neu grün · golden 209/209 byte-gleich · lint 0. `npm run gate` grün ausser
+  fremd-vorbestehend `check:bibliothek` (S7 toter Link omnilex-`.md` aus PR #242, bekannter
+  CI-Blocker) + `check:materialien` (VERN-Frist 2026-07-15 abgelaufen, Datenpflege) —
+  beide identisch rot auf origin/main mit entferntem Testfile bewiesen. `check:gegenpruefung`
+  grün (kein Risikopfad-Diff, nur Testfile). Gegenprüfung n/a — reine Prüflogik.
