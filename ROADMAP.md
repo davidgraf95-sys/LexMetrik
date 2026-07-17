@@ -285,6 +285,23 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   DE-Filter der BGer-Pipeline heben) · **O-5 SEO-Nachträge** (GEPARKT, als §10 in
   `FAHRPLAN-SEO-A11Y-GOVERNANCE.md` einsortiert) · **O-6 Werkzeug-Empirie** (DAVID-GATE §0a,
   als Notiz-Block in `KATALOG-ROADMAP.md` §D verortet). **Nur Plan — kein Bau in diesem Schritt.**
+- **Basis-Ausbau — Fundament-Handlungsplan** *(QS-BASIS, `[OF]`, neu 17.7.2026)*.
+  <!-- @meta id: QS-BASIS · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-BASIS-AUSBAU.md -->
+  Kritik-gefilterte Ablage des Ultracode-Fundament-Research (Auftrag David 17.7.2026: «was ich an der
+  Basis von LexMetrik verbessern kann»; 5 Miner + 3 Fable-Strategen + Fable-Judge, dedupliziert gegen den
+  Plan-Bestand nach §14). Detailquelle **`FAHRPLAN-BASIS-AUSBAU.md`** — 12 B-Einheiten (Wirkung÷Aufwand):
+  **B-1** Betreiber-Identität (DS-Platzhalter + Impressum) · **B-2** Off-site-Backup + Restore-Probe für
+  `daten/` (6,9 GB, heute **null Backup** = höchstes Einzelrisiko) · **B-3** Bund-Currency-Kette vor dem
+  **1.8.-Verfall-Berg** (terminkritisch; Prämisse P1-a/b evtl. schon ✅, vor Bau festnageln) · **B-4** Domain
+  `lexmetrik.ch` registrieren (Entscheid; Umzug bleibt SEO-A11Y W3.4) · **B-5** VPS-Bestell-Dossier +
+  Blocker-Zeile (Serving = QS-DATA) · **B-6** Stand-Ausweis (Fassung/Abruf/Permalink) in jeder Kopie/Export ·
+  **B-7** öffentlicher Determinismus-Nachweis auf `/methodik` (maschinell, nie fachlich) · **B-8**
+  Kantons-Currency-Wachhund + FR/IT-Sprach-Label-Fix · **B-9** append-only Fassungs-Archiv (nach B-2) ·
+  **B-10** Permalink-Beständigkeits-Vertrag (nach B-4) · **B-11** Prod-Watchdog (Delta zu QS-OPT O-1, +
+  PR #244) · **B-12** Merge Queue (zuletzt, nach O-3.2/O-3.3). **David-Gates getrennt** (G1–G7, fachzeit-arm,
+  ein ~30–45-Min-Block: Betreiber-Identität · Backup-Ziel · Domain · VPS · Turso-Env · Monitor-Konto ·
+  Merge-Queue-OK). **Nur Plan — kein Bau in diesem Schritt;** Bau je Einheit nach Priorität bzw. David-Signal.
+  Trailer `Roadmap: QS-BASIS`.
 
 ---
 
