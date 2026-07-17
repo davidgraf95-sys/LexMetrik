@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { zahlNichtNegativ as zahl } from './eingabe';
 import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
@@ -31,12 +32,6 @@ import { chfGanz as chf } from '../../lib/vorlagen/datum';
 // unverändert den bestehenden 4-Block-Rechner (keine Regression). Übrige Arten:
 // die einzelne Beurkundungsgebühr nach Geschäftswert + interkantonaler Vergleich.
 // §8: fehlt ein kantonaler Tarif noch (Recherche), wird das ehrlich ausgewiesen.
-
-const zahl = (roh: string): number | undefined => {
-  if (roh.trim() === '') return undefined;
-  const n = Number(roh);
-  return Number.isFinite(n) && n >= 0 ? n : undefined;
-};
 
 const BK_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
   art: { p: 'ga', typ: 'str', gueltig: einerVon(...GESCHAEFTSART_IDS) },

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { zahlNichtNegativ as zahl } from './eingabe';
 import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { KantonNormText } from '../KantonNormText';
@@ -39,11 +40,6 @@ const NG_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
 
 const spanneText = (s: Spanne | null): string =>
   !s ? '—' : s.vonChf === s.bisChf ? chf(s.vonChf) : `${chf(s.vonChf)} – ${chf(s.bisChf)}`;
-const zahl = (roh: string): number | undefined => {
-  if (roh.trim() === '') return undefined;
-  const n = Number(roh);
-  return Number.isFinite(n) && n >= 0 ? n : undefined;
-};
 
 // Sortier-Untergrenze (günstigste zuoberst); nicht bezifferbar → ans Ende.
 const sortwert = (r: NotariatGrundbuchErgebnis): number => {

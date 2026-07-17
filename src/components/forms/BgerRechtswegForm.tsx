@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import { KANTONE } from '../../lib/kantone';
 import { Checkbox, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { zahlNichtNegativOderNull as zahl } from './eingabe';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -76,12 +77,6 @@ const BGER_DISCLAIMER =
   + 'Den kantonalen Rechtsmittelweg zeigt der Zuständigkeits-Rechner.';
 
 // Spec zentral in lib/rechnerPermalinks.ts (Brücken aus den Fahrplänen, §5).
-
-const zahl = (roh: string): number | null => {
-  if (roh.trim() === '') return null;
-  const n = Number(roh.replace(/['’\s]/g, ''));
-  return Number.isFinite(n) && n >= 0 ? n : null;
-};
 
 export function BgerRechtswegForm() {
   const pk = usePaneKlasse();

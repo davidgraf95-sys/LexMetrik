@@ -496,6 +496,23 @@
   209/209 byte-gleich, lint, check inkl. `check:zyklen`. Gegenprüfung n/a (G1, reine
   Verschiebung/Zyklen-Auflösung, kein Norm-/Tarif-Wert berührt). ESLint
   `consistent-type-imports` bleibt deferiert (G2, wie vorgegeben).
+- **16.7.2026: H-11 ✅** (Worktree `lm-h11`, Branch `chore/h11-zahl-parser`, eigener PR,
+  2 Pathspec-Commits A→B). **B13:** die 7 copy-paste-`zahl()`-Parser der Rechner-Formulare
+  (GrundbuchEintrag/Beurkundung/NotariatGrundbuch/Prozesskosten/Streitwert/GebvKosten/
+  BgerRechtsweg) auf EINEN parametrierten Kern `src/components/forms/eingabe.ts` (§3,
+  Darstellungsschicht). **Commit A (verhaltensneutral):** drei Varianten exakt parametriert
+  — `zahlNichtNegativ` (Guard n>=0, →undefined) · `zahlBeliebig` (kein Guard, →undefined) ·
+  `zahlNichtNegativOderNull` (Guard, →null, BgerRechtsweg); Import je Formular als `… as zahl`,
+  Aufrufstellen unverändert. Bewusst NICHT mit `lib/format.ts::zahl` verschmolzen (§1 — anderer
+  Vertrag: zusätzlich Komma→Punkt, engine-/vorlagen-Konsumenten). **Commit B (DEKLARIERT, nicht
+  §6-neutral):** Apostroph/Leerzeichen-Toleranz für alle 7 harmonisiert (zuvor nur BgerRechtsweg)
+  — «1'000'000»/«1 000» rechnet überall; akzeptierte Eingabe nur ERWEITERT (Superset), kein
+  zuvor gültiger Wert ändert sich, Guard-Unterschiede (a)/(b) unverändert; durabler Test
+  `src/tests/eingabeParser.test.ts` (8 Fälle). **Beweis:** tsc · vitest (3799+8 unangepasst) ·
+  golden 209/209 byte-gleich (interaktive Parser ausserhalb assemble/golden) · lint 0 · `gate`
+  voll GRÜN. **Gegenprüfung bestanden** (Re-Derivation Original-vs-SSOT, 63 Vergleiche/3 Varianten
+  inkl. 1'000'000/negativ/-0/Infinity, Object.is-byte-gleich); `src/components/forms` NICHT im
+  `check:gegenpruefung`-Risikopfad → Tor no-op-grün. PR mit armiertem Auto-Merge.
 - **13.7.2026: H-10 ✅** (Worktree `lm-h10`, Branch `chore/h10-split`, 2 Pathspec-Commits
   B27→B26). **B27:** `Gesetze.tsx` 846→481 Z. (<500 ✓): BundSystematik/KantonSystematik/
   KantonAuswahl(+KantonKachel) als reiner Move nach `src/pages/gesetze-teile/`

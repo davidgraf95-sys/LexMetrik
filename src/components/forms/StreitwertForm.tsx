@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Checkbox, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { zahlBeliebig as zahl } from './eingabe';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -32,12 +33,6 @@ const TYP_LABEL: { code: BegehrenTyp; label: string }[] = [
   { code: 'wiederkehrend', label: 'wiederkehrende Nutzung/Leistung (Art. 92)' },
   { code: 'unbeziffert', label: 'nicht beziffert / Naturalleistung / Verbandsklage' },
 ];
-
-const zahl = (roh: string): number | undefined => {
-  if (roh.trim() === '') return undefined;
-  const n = Number(roh);
-  return Number.isFinite(n) ? n : undefined;
-};
 
 // Hydration-Guard (Pflicht-Konvention für Array-Felder): unbekannte Werte
 // aus dem Permalink werden feldweise auf gültige Defaults normalisiert.
