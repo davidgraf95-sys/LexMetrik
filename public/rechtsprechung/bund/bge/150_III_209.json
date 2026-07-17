@@ -32,7 +32,30 @@
             "absaetze": [
               "Die Pflicht zur Prüfung der drei Identitäten wirkt sich auf der Tatsachenebene lediglich zugunsten des Schuldners, nicht aber des Gläubigers, aus (E. 1.2 und 3.7)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-209%3Ade&lang=de&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-209%3Ade&lang=de&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 84 SchKG; Prüfung der drei Identitäten durch den Rechtsöffnungsrichter.",
+                "absaetze": [
+                  "Die Pflicht zur Prüfung der drei Identitäten wirkt sich auf der Tatsachenebene lediglich zugunsten des Schuldners, nicht aber des Gläubigers, aus (E. 1.2 und 3.7)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 151 ZPO; offenkundige (allgemein notorische) Tatsachen.",
+                "absaetze": [
+                  "Eintragungen in ausländischen Handelsregistern sind keine notorischen Tatsachen (E. 2)."
+                ]
+              },
+              {
+                "label": "c",
+                "kopf": "Art. 229 ZPO; Art. 84 Abs. 2 SchKG; Aktenschluss im Rechtsöffnungsverfahren.",
+                "absaetze": [
+                  "Im Rechtsöffnungsverfahren tritt der Aktenschluss grundsätzlich nach einmaliger Äusserung ein. Die Anordnung eines zweiten Schriftenwechsels muss eine seltene Ausnahme bleiben (E. 3)."
+                ]
+              }
+            ]
           },
           {
             "sprache": "fr",
@@ -40,7 +63,30 @@
             "absaetze": [
               "L'obligation d'examiner les trois identités opère, sur le plan des faits, exclusivement à l'avantage du débiteur, et non du créancier (consid. 1.2 et 3.7)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-209%3Afr&lang=fr&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-209%3Afr&lang=fr&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 84 LP; examen des trois identités par le juge de la mainlevée.",
+                "absaetze": [
+                  "L'obligation d'examiner les trois identités opère, sur le plan des faits, exclusivement à l'avantage du débiteur, et non du créancier (consid. 1.2 et 3.7)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 151 CPC; faits notoires (connus de manière générale du public).",
+                "absaetze": [
+                  "Les inscriptions effectuées dans des registres du commerce étrangers ne sont pas des faits notoires (consid. 2)."
+                ]
+              },
+              {
+                "label": "c",
+                "kopf": "Art. 229 CPC; art. 84 al. 2 LP; clôture de la phase de l'allégation dans la procédure de mainlevée.",
+                "absaetze": [
+                  "Dans la procédure de mainlevée, la phase de l'allégation est en principe close après un seul échange d'écritures. Le fait d'ordonner un second échange d'écritures doit demeurer une rare exception (consid. 3)."
+                ]
+              }
+            ]
           },
           {
             "sprache": "it",
@@ -48,7 +94,30 @@
             "absaetze": [
               "L'obbligo di esaminare le tre identità esplica i suoi effetti a livello dei fatti unicamente a favore del debitore e non anche del creditore (consid. 1.2 e 3.7)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-209%3Ait&lang=it&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-209%3Ait&lang=it&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 84 LEF; esame delle tre identità da parte del giudice del rigetto dell'opposizione.",
+                "absaetze": [
+                  "L'obbligo di esaminare le tre identità esplica i suoi effetti a livello dei fatti unicamente a favore del debitore e non anche del creditore (consid. 1.2 e 3.7)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 151 CPC; fatti di pubblica notorietà.",
+                "absaetze": [
+                  "Le iscrizioni nei registri di commercio esteri non sono fatti notori (consid. 2)."
+                ]
+              },
+              {
+                "label": "c",
+                "kopf": "Art. 229 CPC; art. 84 cpv. 2 LEF; fine della fase allegatoria nella procedura di rigetto dell'opposizione.",
+                "absaetze": [
+                  "Nella procedura di rigetto dell'opposizione, la fine della fase allegatoria sopraggiunge in linea di principio dopo che le parti si sono espresse una volta. L'ordinare un secondo scambio di scritti deve rimanere una rara eccezione (consid. 3)."
+                ]
+              }
+            ]
           }
         ]
       },

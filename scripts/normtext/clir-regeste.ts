@@ -27,10 +27,20 @@ import type { EntscheidSprache } from '../../src/lib/rechtsprechung/typen';
 import { promises as fs } from 'node:fs';
 import * as path from 'node:path';
 
-export interface RegesteSprachfassungRoh {
-  sprache: EntscheidSprache;   // 'de' | 'fr' | 'it'
+export interface RegesteTeilRoh {
+  label: string | null;        // Teil-Buchstabe der amtl. Sammlung ('a'|'b'|'c'…) — null bei Einfach-Regeste
   kopf: string;                // Regestenkopf (fett): Artikel + Regestentitel
   absaetze: string[];          // Textabsätze (paratf) in Quell-Reihenfolge
+}
+
+export interface RegesteSprachfassungRoh {
+  sprache: EntscheidSprache;   // 'de' | 'fr' | 'it'
+  kopf: string;                // Regestenkopf (fett) des ERSTEN Teils (a) — Rückwärtskompat/Fallback
+  absaetze: string[];          // Textabsätze des ERSTEN Teils
+  // Mehrteilige Regeste (amtl. «Regeste a / b / c»): ALLE Teile inkl. a, mit Label,
+  // in Quell-Reihenfolge. NUR gesetzt, wenn die Quelle >1 Regeste-Block trägt (§1:
+  // nie erfunden). Fehlt das Feld ⇒ Einfach-Regeste (kopf/absaetze tragen alles).
+  weitereRegesten?: RegesteTeilRoh[];
 }
 
 /** HTTP-Header: identifizierend, höflich (bger.ch schonen). */
@@ -59,19 +69,41 @@ export function clirUrl(clirId: string, sprache: EntscheidSprache): string {
  * Regeste-Block in dieser Sprachfassung vorhanden.
  */
 export function schneideRegesteDiv(html: string): { sprache: string; inner: string } | null {
-  const start = /<div id="regeste"\s+lang="([a-z]+)"\s*>/i.exec(html);
-  if (!start) return null;
-  const sprache = start[1];
-  const i = start.index + start[0].length;
-  let tiefe = 1;
-  const tag = /<\/?div\b[^>]*>/gi;
-  tag.lastIndex = i;
-  for (let m; (m = tag.exec(html)); ) {
-    if (m[0][1] === '/') tiefe--;
-    else tiefe++;
-    if (tiefe === 0) return { sprache, inner: html.slice(i, m.index) };
+  const alle = schneideAlleRegesteDivs(html);
+  return alle.length ? { sprache: alle[0].sprache, inner: alle[0].inner } : null;
+}
+
+/**
+ * Schneidet ALLE `<div id="regeste" lang="…">`-Teilbäume heraus (Bug-Fix A29,
+ * 16.7.2026): eine amtlich MEHRTEILIGE Regeste («Regeste a / b / c») liegt im
+ * clir-HTML als MEHRERE aufeinanderfolgende `<div id="regeste">`-Blöcke vor (je
+ * ein Teil, jeder mit eigenem `<div class="big bold">Regeste&nbsp;x</div>`-Titel).
+ * Der alte `.exec`-Einzelschnitt nahm nur den ERSTEN Block → Regeste b/c gingen
+ * still verloren. Hier balanciert je Block über die DIVs und iteriert weiter.
+ * (Die Quelle vergibt denselben `id="regeste"` mehrfach — technisch invalides,
+ * aber stabiles amtliches Markup; wir lesen strukturell, nicht per id-Eindeutigkeit.)
+ */
+export function schneideAlleRegesteDivs(html: string): { sprache: string; inner: string }[] {
+  const out: { sprache: string; inner: string }[] = [];
+  const oeffner = /<div id="regeste"\s+lang="([a-z]+)"\s*>/gi;
+  for (let start; (start = oeffner.exec(html)); ) {
+    const sprache = start[1];
+    const i = start.index + start[0].length;
+    let tiefe = 1;
+    const tag = /<\/?div\b[^>]*>/gi;
+    tag.lastIndex = i;
+    for (let m; (m = tag.exec(html)); ) {
+      if (m[0][1] === '/') tiefe--;
+      else tiefe++;
+      if (tiefe === 0) {
+        out.push({ sprache, inner: html.slice(i, m.index) });
+        oeffner.lastIndex = tag.lastIndex;   // hinter dem Block-Ende weitersuchen
+        break;
+      }
+    }
+    if (tiefe !== 0) break;   // unbalanciert → nicht weiter raten (§1)
   }
-  return null;
+  return out;
 }
 
 /** HTML-Inline eines Regeste-Fragments → treuer Klartext.
@@ -105,15 +137,47 @@ function entdecodeEntities(s: string): string {
  * Regeste-Struktur ableitbar (dann Fall dokumentieren, §1: nie raten).
  */
 export function parseClirRegeste(html: string): RegesteSprachfassungRoh | null {
-  const div = schneideRegesteDiv(html);
-  if (!div) return null;
-  const spr = div.sprache;
+  const divs = schneideAlleRegesteDivs(html);
+  if (!divs.length) return null;
+  const spr = divs[0].sprache;
   if (spr !== 'de' && spr !== 'fr' && spr !== 'it') return null;
-  let inner = div.inner;
-  // Titelzeile «Regeste/Regesto» entfernen (big bold).
-  inner = inner.replace(/<div class="big bold">[^<]*<\/div>/i, '');
+  const teile: RegesteTeilRoh[] = [];
+  for (const div of divs) {
+    // Alle Blöcke einer Seite tragen dieselbe Sprache (clir liefert je Sprache eine
+    // Seite); ein abweichender lang wäre ein Quell-Bruch → dann Block auslassen (§1).
+    if (div.sprache !== spr) continue;
+    const t = parseRegesteBlockInner(div.inner);
+    if (t) teile.push(t);
+  }
+  if (!teile.length) return null;
+  const [erster, ...rest] = teile;
+  const roh: RegesteSprachfassungRoh = { sprache: spr, kopf: erster.kopf, absaetze: erster.absaetze };
+  if (rest.length) roh.weitereRegesten = teile;   // alle Teile inkl. a, nur bei Mehrteiligkeit
+  return roh;
+}
+
+/**
+ * Regeste-Teil-Label aus dem «big bold»-Titel («Regeste&nbsp;a» → 'a', «Regesto&nbsp;b»
+ * → 'b', schlichtes «Regeste» → null bei Einfach-Regeste). Deterministisch (§2).
+ */
+export function parseRegesteLabel(titelRoh: string): string | null {
+  const t = inlineZuText(titelRoh).trim();
+  // \s deckt in JS auch NBSP (U+00A0, aus &nbsp;) und schmales NBSP (U+202F) ab.
+  const m = /^Regest[eo](?:\s+([a-z]+))?$/i.exec(t);
+  return m && m[1] ? m[1].toLowerCase() : null;
+}
+
+/**
+ * Parst EINEN `<div id="regeste">`-Block-Inhalt → {label, kopf, absaetze}.
+ * `null`, wenn kein sicherer Kopf ableitbar ist (§1: nie raten).
+ */
+export function parseRegesteBlockInner(inner: string): RegesteTeilRoh | null {
+  // Label aus dem big-bold-Titel, BEVOR er entfernt wird.
+  const titelM = /<div class="big bold">([\s\S]*?)<\/div>/i.exec(inner);
+  const label = parseRegesteLabel(titelM?.[1] ?? '');
+  const ohneTitel = inner.replace(/<div class="big bold">[\s\S]*?<\/div>/i, '');
   // Regestenkopf = <div class="paraatf"> … (bis zum ersten verschachtelten paratf).
-  const kopfM = /<div class="paraatf"\s*>([\s\S]*)$/i.exec(inner);
+  const kopfM = /<div class="paraatf"\s*>([\s\S]*)$/i.exec(ohneTitel);
   if (!kopfM) return null;
   const kopfRoh = kopfM[1].split(/<div class="paratf"\s*>/i)[0];
   const kopf = inlineZuText(kopfRoh);
@@ -122,11 +186,11 @@ export function parseClirRegeste(html: string): RegesteSprachfassungRoh | null {
   // ihn; im clir sind paratf nicht weiter verschachtelt).
   const absaetze: string[] = [];
   const abs = /<div class="paratf"\s*>([\s\S]*?)<\/div>/gi;
-  for (let m; (m = abs.exec(inner)); ) {
+  for (let m; (m = abs.exec(ohneTitel)); ) {
     const t = inlineZuText(m[1]);
     if (t) absaetze.push(t);
   }
-  return { sprache: spr, kopf, absaetze };
+  return { label, kopf, absaetze };
 }
 
 /**
@@ -207,18 +271,26 @@ export async function holeClirHtml(
  */
 export const SPRACH_ORDNUNG: EntscheidSprache[] = ['de', 'fr', 'it'];
 
+export interface RegesteSprachfassungMitUrl extends RegesteSprachfassungRoh {
+  quelleUrl: string;
+}
+
 export async function holeRegesteSprachfassungen(
   bgeRef: string, cacheDir: string, drosselMs = 500,
-): Promise<{ sprache: EntscheidSprache; kopf: string; absaetze: string[]; quelleUrl: string }[]> {
+): Promise<RegesteSprachfassungMitUrl[]> {
   const clirId = bgeRefZuClirId(bgeRef);
   if (!clirId) return [];
-  const out: { sprache: EntscheidSprache; kopf: string; absaetze: string[]; quelleUrl: string }[] = [];
+  const out: RegesteSprachfassungMitUrl[] = [];
   for (const spr of SPRACH_ORDNUNG) {
     const html = await holeClirHtml(clirId, spr, cacheDir, drosselMs);
     if (!html) continue;
     const parsed = parseClirRegeste(html);
     if (!parsed) continue;
-    out.push({ sprache: parsed.sprache, kopf: parsed.kopf, absaetze: parsed.absaetze, quelleUrl: clirUrl(clirId, spr) });
+    const f: RegesteSprachfassungMitUrl = {
+      sprache: parsed.sprache, kopf: parsed.kopf, absaetze: parsed.absaetze, quelleUrl: clirUrl(clirId, spr),
+    };
+    if (parsed.weitereRegesten) f.weitereRegesten = parsed.weitereRegesten;
+    out.push(f);
   }
   return out;
 }

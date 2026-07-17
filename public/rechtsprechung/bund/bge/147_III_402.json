@@ -32,7 +32,30 @@
             "absaetze": [
               "Der Versorgungsschaden ist (abstrakt) durch Kapitalisierung auf den Zeitpunkt des Todes des Versorgers zu berechnen (Bestätigung der Rechtsprechung; E. 5)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-402%3Ade&lang=de&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-402%3Ade&lang=de&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 45 Abs. 3 OR; Methode der Berechnung des Versorgungsschadens.",
+                "absaetze": [
+                  "Der Versorgungsschaden ist (abstrakt) durch Kapitalisierung auf den Zeitpunkt des Todes des Versorgers zu berechnen (Bestätigung der Rechtsprechung; E. 5)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 45 Abs. 3 OR; Anrechenbarkeit von Vermögenserträgen bei der Berechnung des Versorgungsschadens.",
+                "absaetze": [
+                  "Vermögenserträge sind bei der Berechnung des Versorgungsschadens anzurechnen, auch wenn diese nicht bereits während bestehendem Versorgungsverhältnis dem Unterhalt dienten (Bestätigung der Rechtsprechung; E. 10.4 und 10.5)."
+                ]
+              },
+              {
+                "label": "c",
+                "kopf": "Art. 45 Abs. 3 OR; Anrechenbarkeit von Vermögenserträgen aus Kapitalien von Summenversicherungen bei der Berechnung des Versorgungsschadens.",
+                "absaetze": [
+                  "Erträge aus dem aufgrund des Todes des Versorgers ausbezahlten Kapital einer Summenversicherung sind bei der Berechnung des Versorgungsschadens anzurechnen (E. 10.7)."
+                ]
+              }
+            ]
           },
           {
             "sprache": "fr",
@@ -40,7 +63,30 @@
             "absaetze": [
               "Le dommage qui dérive de la perte de soutien doit être calculé de façon abstraite, par capitalisation au jour du décès du soutien (confirmation de la jurisprudence; consid. 5)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-402%3Afr&lang=fr&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-402%3Afr&lang=fr&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 45 al. 3 CO; calcul du dommage consécutif à la perte de soutien.",
+                "absaetze": [
+                  "Le dommage qui dérive de la perte de soutien doit être calculé de façon abstraite, par capitalisation au jour du décès du soutien (confirmation de la jurisprudence; consid. 5)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 45 al. 3 CO; imputabilité des revenus de la fortune.",
+                "absaetze": [
+                  "Les revenus de la fortune doivent être imputés sur la perte de soutien, quand bien même ils n'étaient pas déjà dévolus à l'entretien pendant la période de soutien (confirmation de la jurisprudence; consid. 10.4 et 10.5)."
+                ]
+              },
+              {
+                "label": "c",
+                "kopf": "Art. 45 al. 3 CO; imputabilité des revenus de la fortune découlant de capitaux d'assurances de sommes.",
+                "absaetze": [
+                  "Sont aussi sujets à imputation les revenus d'un capital versé au titre d'une assurance de sommes en raison du décès du soutien (consid. 10.7)."
+                ]
+              }
+            ]
           },
           {
             "sprache": "it",
@@ -48,7 +94,30 @@
             "absaetze": [
               "La perdita di sostegno è da calcolare in modo astratto mediante la capitalizzazione al giorno del decesso del sostegno (conferma della giurisprudenza; consid. 5)."
             ],
-            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-402%3Ait&lang=it&type=show_document"
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F147-III-402%3Ait&lang=it&type=show_document",
+            "weitereRegesten": [
+              {
+                "label": "a",
+                "kopf": "Art. 45 cpv. 3 CO; metodo per calcolare la perdita di sostegno.",
+                "absaetze": [
+                  "La perdita di sostegno è da calcolare in modo astratto mediante la capitalizzazione al giorno del decesso del sostegno (conferma della giurisprudenza; consid. 5)."
+                ]
+              },
+              {
+                "label": "b",
+                "kopf": "Art. 45 cpv. 3 CO; computabilità di redditi da sostanza nel calcolo della perdita di sostegno.",
+                "absaetze": [
+                  "Anche se non servivano già al mantenimento mentre sussisteva il rapporto di sostegno, i redditi da sostanza sono da computare nel calcolo della perdita di sostegno (conferma della giurisprudenza; consid. 10.4 e 10.5)."
+                ]
+              },
+              {
+                "label": "c",
+                "kopf": "Art. 45 cpv. 3 CO; computabilità di redditi da capitali provenienti da assicurazioni di somme nel calcolo della perdita di sostegno.",
+                "absaetze": [
+                  "I redditi provenienti dal capitale di un'assicurazione di somme versato in seguito al decesso del sostegno sono da computare nel calcolo della perdita di sostegno (consid. 10.7)."
+                ]
+              }
+            ]
           }
         ]
       },
