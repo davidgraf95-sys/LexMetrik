@@ -199,10 +199,10 @@ auf einen NEUEN Regress deutet.
    `BGE_KAPPUNG_QUARANTAENE` in `scripts/normtext/check-entscheide.ts`), nicht gate-blockierend.
 
 9. **BUDGET_MB-Deckel — Ort.** Der Mengen-Deckel sitzt **nicht** im Generator, sondern im Tor
-   `scripts/normtext/check-entscheide.ts`: Konstante `BUDGET_MB` (= 35), Verstoss `dirGroesseMB(PUB) >
-   BUDGET_MB` ⇒ exit 1. Freigabe David 26.6.: pro Aufgabe **fliessend** setzen (Ist + grosszügige
-   Reserve) — bremst Unfälle, limitiert nicht künstlich. Bei Korpus-Ausbau hier bewusst nachziehen, mit
-   Begründungs-Kommentar (Historie 8 → 20 → 35 MB steht im File).
+   `scripts/normtext/check-entscheide.ts`: Konstante `BUDGET_MB` (aktueller Wert im Tor), Verstoss
+   `dirGroesseMB(PUB) > BUDGET_MB` ⇒ exit 1. Freigabe David 26.6.: pro Aufgabe **fliessend** setzen
+   (Ist + grosszügige Reserve) — bremst Unfälle, limitiert nicht künstlich. Bei Korpus-Ausbau hier
+   bewusst nachziehen, mit Begründungs-Kommentar (Anpassungs-Historie steht im File).
 
 Weitere am Code verdrahtete Invarianten (für `review.md` relevant), alle in `main()`
 (`scripts/normtext-entscheide.ts`): **BGE-Dedup** — ein bereits als BGE-Volltext erfasstes bger-Urteil

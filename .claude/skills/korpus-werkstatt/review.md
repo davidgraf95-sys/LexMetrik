@@ -6,9 +6,9 @@ Erlass X», «stimmt der Anker/Stand?», «review», «halluziniert da was?», �
 Wenn das kommt, fahre diesen Audit.
 
 **Abgrenzung (zwingend lesen):** Dies ist **NICHT** der §14.4-Pflicht-Pass. Die adversariale
-Gegenprüfung nach jeder Extraktions-Produktion (jeder Normtext-/Entscheid-Bau ist ein
-Risiko-Pfad) läuft **automatisch und verpflichtend** zum Produktionsabschluss, bis das Tor
-`check:gegenpruefung` [OF] steht (`CLAUDE.md` §14.4, siehe `SKILL.md`). `review.md` dagegen
+Gegenprüfung nach jeder Extraktions-Produktion auf einem Risiko-Pfad läuft **verpflichtend**
+zum Produktionsabschluss und wird vom Tor `check:gegenpruefung` erzwungen (`CLAUDE.md` §14.4,
+siehe `SKILL.md`). `review.md` dagegen
 ist der **zusätzliche, on-demand** Audit, den David eigens anstösst. Er ersetzt den
 Pflicht-Pass nicht und wird **nicht** bei jeder Antwort automatisch gefahren.
 

@@ -106,10 +106,11 @@ nicht in der UI.
 behandelt, nicht im Register (der Status «aufgehoben» bleibt sichtbar, die
 Zitatzeile erscheint auf Klick). **DoD ist mehr als grüne Tore** (`CLAUDE.md`
 §14.4/§14.5):
-- Pflicht-Gegenprüfung gelaufen — eine Neu-Extraktion ist ein Risiko-Pfad, die
-  adversariale Gegenprüfung ist verpflichtend, nicht auf Abruf (Tor
-  `check:gegenpruefung` `[OF]` → bis es steht, das Protokoll manuell fahren; Muster
-  `AUDIT-TARIF-…md`, siehe `tools/verifikation.md`).
+- Pflicht-Gegenprüfung gelaufen — eine Bund-Neu-Extraktion (`public/normtext/**/*.json`,
+  `scripts/normtext-snapshot.ts`, `scripts/fedlex-*`) ist ein Risiko-Pfad, die
+  adversariale Gegenprüfung ist verpflichtend, nicht auf Abruf; das Tor
+  `check:gegenpruefung` erzwingt sie (Muster `AUDIT-TARIF-…md`, siehe
+  `tools/verifikation.md`).
 - Status-Marker §8 gesetzt — «verifiziert»/«geprüft» NIE automatisch (Zeitsperre
   bis 1.12.2026, Status-Hebung nur über den `abnahme`-Skill).
 - STRUKTUR.md-Session-Karte nachgezogen.

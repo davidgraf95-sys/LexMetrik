@@ -75,9 +75,13 @@ Diese vier prüfst du nach jedem Lauf (sie sind zugleich review.md-Bugklassen):
 Nicht nur «Tore grün», sondern die volle Definition of Done (§14.4):
 1. **Integritäts-Tor** `npm run check:entscheide` (BUDGET_MB-Deckel) + `npm run gate`
    grün; Tor-Status pro Schritt notiert.
-2. **Pflicht-Gegenprüfung (§14.4).** Rechtsprechung-Bau ist ein Extraktions-/
-   Risiko-Pfad → die adversariale Gegenprüfung ist **verpflichtend**, nicht auf
-   Abruf (manuell fahren, bis das Tor `check:gegenpruefung` steht — derzeit `[OF]`).
+2. **Pflicht-Gegenprüfung (§14.4).** Der Entscheid-Generator
+   `scripts/normtext-entscheide.ts` ist ein Risiko-Pfad (die reinen
+   `public/rechtsprechung/**`-Outputs sind es nicht) → die adversariale Gegenprüfung
+   ist **verpflichtend**, nicht auf Abruf. Das Tor `check:gegenpruefung` erzwingt sie
+   allerdings nur bei Diffs am Generator `scripts/normtext-entscheide.ts`, nicht bei
+   Output-only-Diffs (`public/rechtsprechung/**`) — dort die Pflicht-Gegenprüfung
+   dennoch fahren.
    Linsen: die vier Invarianten oben + die OCL-Quirk-Liste aus
    `tools/rechtsprechung-pipeline.md`. Davon getrennt der user-getriggerte
    `review.md`-Audit («prüf das») — das ist **nicht** dieser Pflicht-Pass.
