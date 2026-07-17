@@ -17,10 +17,14 @@
 
 /** Nutzereingabe → Zahl: Tausender-Apostroph (gerade + typografisch U+2019) und
  *  Leerzeichen werden vor Number() entfernt. leer/ungültig → undefined;
- *  guard=true verwirft zusätzlich negative Werte. */
+ *  guard=true verwirft zusätzlich negative Werte.
+ *  Leere-Prüfung NACH dem Strippen (F-3): Eingaben, die nur aus Apostrophen/
+ *  Leerzeichen bestehen («'», «''», «' '», «’»), werden zu '' und ergeben
+ *  undefined — nicht Number('') === 0 (Formular: leer bleibt unbeziffert). */
 const kern = (roh: string, guard: boolean): number | undefined => {
-  if (roh.trim() === '') return undefined;
-  const n = Number(roh.replace(/['’\s]/g, ''));
+  const bereinigt = roh.replace(/['’\s]/g, '');
+  if (bereinigt === '') return undefined;
+  const n = Number(bereinigt);
   return Number.isFinite(n) && (!guard || n >= 0) ? n : undefined;
 };
 

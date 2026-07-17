@@ -26,6 +26,19 @@ describe('Formular-Eingabe-Parser (H-11 SSOT)', () => {
       expect(zahlNichtNegativ('1’000’000')).toBe(1_000_000);
       expect(zahlNichtNegativ('1 000')).toBe(1000);
     });
+    it('F-3: reine Apostroph-/Leerzeichen-Eingabe → undefined (nicht 0)', () => {
+      expect(zahlNichtNegativ("'")).toBeUndefined();
+      expect(zahlNichtNegativ("''")).toBeUndefined();
+      expect(zahlNichtNegativ("' '")).toBeUndefined();
+      expect(zahlNichtNegativ('’')).toBeUndefined();
+      expect(zahlNichtNegativ("'\t'")).toBeUndefined();
+      expect(zahlNichtNegativ(" ' ")).toBeUndefined();
+    });
+    it('F-3-Regression: gültige Toleranz-Eingaben bleiben unverändert', () => {
+      expect(zahlNichtNegativ("1'000'000")).toBe(1_000_000);
+      expect(zahlNichtNegativ('1 000')).toBe(1000);
+      expect(zahlNichtNegativ("1'000.50")).toBe(1000.5);
+    });
   });
 
   describe('zahlBeliebig — kein Guard, leer/ungültig → undefined', () => {
@@ -41,6 +54,12 @@ describe('Formular-Eingabe-Parser (H-11 SSOT)', () => {
       expect(zahlBeliebig("1'234")).toBe(1234);
       expect(zahlBeliebig('50’000')).toBe(50_000);
     });
+    it('F-3: reine Apostroph-/Leerzeichen-Eingabe → undefined (nicht 0)', () => {
+      expect(zahlBeliebig("'")).toBeUndefined();
+      expect(zahlBeliebig("''")).toBeUndefined();
+      expect(zahlBeliebig("' '")).toBeUndefined();
+      expect(zahlBeliebig('’')).toBeUndefined();
+    });
   });
 
   describe('zahlNichtNegativOderNull — Guard n>=0, leer/ungültig → null', () => {
@@ -50,6 +69,12 @@ describe('Formular-Eingabe-Parser (H-11 SSOT)', () => {
       expect(zahlNichtNegativOderNull('-5')).toBeNull();
       expect(zahlNichtNegativOderNull('')).toBeNull();
       expect(zahlNichtNegativOderNull('abc')).toBeNull();
+    });
+    it('F-3: reine Apostroph-/Leerzeichen-Eingabe → null (nicht 0)', () => {
+      expect(zahlNichtNegativOderNull("'")).toBeNull();
+      expect(zahlNichtNegativOderNull("''")).toBeNull();
+      expect(zahlNichtNegativOderNull("' '")).toBeNull();
+      expect(zahlNichtNegativOderNull('’')).toBeNull();
     });
   });
 });
