@@ -80,23 +80,26 @@ export async function ladeErlass(key: string): Promise<BrowseErlass | null> {
 // ── Volltext-Datei eines Erlasses (lazy, gecacht) ────────────────────────────
 const dateiCache = new Map<string, Promise<NormSnapshotDatei | null>>();
 
-/** Lädt die Snapshot-Datei eines Erlasses (BrowseErlass.datei, z.B. 'bund/OR.json'). */
+/** Lädt die Snapshot-Datei eines Erlasses (BrowseErlass.datei, z.B. 'bund/OR.json').
+ *  Transiente Fehler (5xx/Netz/Parse) werden NICHT gecacht (O-1.7): der
+ *  Cache-Eintrag wird bei Fehlschlag verworfen, der nächste Zugriff versucht neu;
+ *  nur echte 404 (Datei existiert nicht) bleibt als null gecacht. */
 export function ladeErlassDatei(datei: string): Promise<NormSnapshotDatei | null> {
   let p = dateiCache.get(datei);
   if (!p) {
     p = (async () => {
-      try {
-        const res = await fetch(`/normtext/${datei}`);
-        if (!res.ok) return null;
-        const d = (await res.json()) as NormSnapshotDatei;
-        return Array.isArray(d.eintraege) ? d : null;
-      } catch {
-        return null;
-      }
+      const res = await fetch(`/normtext/${datei}`);
+      if (res.status === 404) return null;
+      if (!res.ok) throw new Error(`HTTP ${res.status} für /normtext/${datei}`);
+      const d = (await res.json()) as NormSnapshotDatei;
+      return Array.isArray(d.eintraege) ? d : null;
     })();
+    p.catch(() => {
+      if (dateiCache.get(datei) === p) dateiCache.delete(datei);
+    });
     dateiCache.set(datei, p);
   }
-  return p;
+  return p.then((x) => x, () => null);
 }
 
 // ── Gruppieren / Filtern (rein, testbar) ─────────────────────────────────────
@@ -158,23 +161,25 @@ export interface ErlassKopf {
 interface StrukturDoc { artikel?: StrukturMap; kopf?: ErlassKopf }
 const strukturCache = new Map<string, Promise<StrukturDoc | null>>();
 
-/** Lädt das Struktur-Sidecar-Dokument (Gliederung/Marginalien + Erlass-Kopf), lazy/gecacht. */
+/** Lädt das Struktur-Sidecar-Dokument (Gliederung/Marginalien + Erlass-Kopf), lazy/gecacht.
+ *  Transiente Fehler werden NICHT gecacht (O-1.7): Cache-Eintrag bei Fehlschlag
+ *  verworfen (nächster Zugriff neu); nur echte 404 bleibt als null gecacht. */
 function ladeStrukturDoc(ebene: string, key: string): Promise<StrukturDoc | null> {
   const url = `/normtext/struktur/${ebene}/${key}.json`;
   let p = strukturCache.get(url);
   if (!p) {
     p = (async () => {
-      try {
-        const res = await fetch(url);
-        if (!res.ok) return null;
-        return (await res.json()) as StrukturDoc;
-      } catch {
-        return null;
-      }
+      const res = await fetch(url);
+      if (res.status === 404) return null;
+      if (!res.ok) throw new Error(`HTTP ${res.status} für ${url}`);
+      return (await res.json()) as StrukturDoc;
     })();
+    p.catch(() => {
+      if (strukturCache.get(url) === p) strukturCache.delete(url);
+    });
     strukturCache.set(url, p);
   }
-  return p;
+  return p.then((x) => x, () => null);
 }
 
 /** Lädt die Struktur-Sidecar (Gliederung+Marginalien je Artikel-Token), lazy/gecacht. */
