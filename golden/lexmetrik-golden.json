@@ -6941,6 +6941,1942 @@
    }
   ]
  },
+ "pk:entscheid:allg:12k:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 12000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2030,
+    "schritte": [
+     "Sockel CHF 1'050",
+     "14 % auf CHF 7'000 (Überschuss über CHF 5'000) = CHF 980"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Gebührenverordnung des Obergerichts (GebV OG)",
+    "erlassNr": "LS 211.11",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015 (Nachtrag 087)",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; nach § 4 Abs. 2 ohne betragliche Grenze ermässigbar oder um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöhbar (richterliches Ermessen).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Zeitaufwand des Gerichts",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 GebV OG (Erhöhung § 4 Abs. 2)"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2700,
+    "schritte": [
+     "Sockel CHF 2'400",
+     "15 % auf CHF 2'000 (Überschuss über CHF 10'000) = CHF 300"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung über die Anwaltsgebühren (AnwGebV)",
+    "erlassNr": "LS 215.3",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅔–⅕ («in der Regel auf zwei Drittel bis einen Fünftel ermässigt»).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Verantwortung des Anwalts",
+     "notwendiger Zeitaufwand",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 AnwGebV (Modulation § 4 Abs. 2)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten."
+  ]
+ },
+ "pk:entscheid:allg:250k:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 250000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 14750,
+    "schritte": [
+     "Sockel CHF 7'950",
+     "4 % auf CHF 170'000 (Überschuss über CHF 80'000) = CHF 6'800"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Gebührenverordnung des Obergerichts (GebV OG)",
+    "erlassNr": "LS 211.11",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015 (Nachtrag 087)",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; nach § 4 Abs. 2 ohne betragliche Grenze ermässigbar oder um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöhbar (richterliches Ermessen).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Zeitaufwand des Gerichts",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 GebV OG (Erhöhung § 4 Abs. 2)"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 17650,
+    "schritte": [
+     "Sockel CHF 14'500",
+     "3.5 % auf CHF 90'000 (Überschuss über CHF 160'000) = CHF 3'150"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung über die Anwaltsgebühren (AnwGebV)",
+    "erlassNr": "LS 215.3",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅔–⅕ («in der Regel auf zwei Drittel bis einen Fünftel ermässigt»).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Verantwortung des Anwalts",
+     "notwendiger Zeitaufwand",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 AnwGebV (Modulation § 4 Abs. 2)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten."
+  ]
+ },
+ "pk:entscheid:allg:12k:BS": {
+  "kanton": "BS",
+  "streitwertCHF": 12000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 1000,
+    "bisChf": 3000,
+    "hinweis": "Gebührenrahmen CHF 1'000–CHF 3'000 (Streitwert-Band bis und mit CHF 30'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Reglement über die Gerichtsgebühren (GGR)",
+    "erlassNr": "SG 154.810",
+    "artikel": "§ 5",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+    "stand": "Reglement v. 11.9.2017",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr als Rahmen je Band (§§ 15–17 modifizierbar); >5 Mio: 0,5–1,5 %, mind. CHF 60 000.",
+    "kriterien": [
+     "Bedeutung des Falles",
+     "Zeitaufwand des Gerichts",
+     "tatsächliche und rechtliche Komplexität",
+     "Streitwert bzw. tatsächliches Streitinteresse"
+    ],
+    "kriterienNorm": "§ 2 Abs. 1 GGR"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 2000,
+    "bisChf": 3000,
+    "hinweis": "Gebührenrahmen CHF 2'000–CHF 3'000 (Streitwert-Band bis und mit CHF 30'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Honorarordnung (HoR)",
+    "erlassNr": "SG 291.400",
+    "artikel": "§ 5",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/291.400",
+    "stand": "23.5.2024",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundhonorar als Rahmen je Band; >5 Mio: 1–3 % des Streitwerts. § 5 Abs. 2: vereinfachtes Verfahren >30k −⅓. § 4: Schlichtung max ⅓.",
+    "kriterien": [
+     "Umfang der Bemühungen",
+     "Bedeutung der Sache für die Parteien",
+     "Schwierigkeit (tatsächlich/rechtlich)",
+     "finanzielle Verhältnisse (in besonderen Fällen)"
+    ],
+    "kriterienNorm": "§ 2 HoR"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:entscheid:allg:250k:BS": {
+  "kanton": "BS",
+  "streitwertCHF": 250000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 6000,
+    "bisChf": 20000,
+    "hinweis": "Gebührenrahmen CHF 6'000–CHF 20'000 (Streitwert-Band bis und mit CHF 500'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Reglement über die Gerichtsgebühren (GGR)",
+    "erlassNr": "SG 154.810",
+    "artikel": "§ 5",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+    "stand": "Reglement v. 11.9.2017",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr als Rahmen je Band (§§ 15–17 modifizierbar); >5 Mio: 0,5–1,5 %, mind. CHF 60 000.",
+    "kriterien": [
+     "Bedeutung des Falles",
+     "Zeitaufwand des Gerichts",
+     "tatsächliche und rechtliche Komplexität",
+     "Streitwert bzw. tatsächliches Streitinteresse"
+    ],
+    "kriterienNorm": "§ 2 Abs. 1 GGR"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 10000,
+    "bisChf": 30000,
+    "hinweis": "Gebührenrahmen CHF 10'000–CHF 30'000 (Streitwert-Band bis und mit CHF 500'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Honorarordnung (HoR)",
+    "erlassNr": "SG 291.400",
+    "artikel": "§ 5",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/291.400",
+    "stand": "23.5.2024",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundhonorar als Rahmen je Band; >5 Mio: 1–3 % des Streitwerts. § 5 Abs. 2: vereinfachtes Verfahren >30k −⅓. § 4: Schlichtung max ⅓.",
+    "kriterien": [
+     "Umfang der Bemühungen",
+     "Bedeutung der Sache für die Parteien",
+     "Schwierigkeit (tatsächlich/rechtlich)",
+     "finanzielle Verhältnisse (in besonderen Fällen)"
+    ],
+    "kriterienNorm": "§ 2 HoR"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:entscheid:allg:12k:GE": {
+  "kanton": "GE",
+  "streitwertCHF": 12000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 1000,
+    "bisChf": 3000,
+    "hinweis": "Gebührenrahmen CHF 1'000–CHF 3'000 (Streitwert-Band bis und mit CHF 30'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Règlement fixant le tarif des frais en matière civile (RTFMC)",
+    "erlassNr": "rsGE E 1 05.10",
+    "artikel": "Art. 17",
+    "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+    "stand": "1.7.2025",
+    "verifiziert": "doppelt",
+    "hinweis": "Rahmen je Band.",
+    "kriterien": [
+     "auf dem Spiel stehende Interessen",
+     "Komplexität der Sache",
+     "Umfang des Verfahrens",
+     "Umfang der Arbeit",
+     "Streitwert"
+    ],
+    "kriterienNorm": "Art. 5 RTFMC"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2700,
+    "schritte": [
+     "Sockel CHF 2'400",
+     "15 % auf CHF 2'000 (Überschuss über CHF 10'000) = CHF 300"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Règlement fixant le tarif des frais (RTFMC, défraiement)",
+    "erlassNr": "rsGE E 1 05.10",
+    "artikel": "Art. 84/85",
+    "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+    "stand": "1.7.2025",
+    "verifiziert": "recherche",
+    "hinweis": "Défraiement nach der autonomen GE-Prozentstaffel (Art. 85 RTFMC); Abweichung ±10 % nach Art. 84. Nicht bestimmbar: CHF 600–18 000 (Art. 86). Etikett korrigiert (Re-Verifikation 21.6.): eigenständige GE-Staffel (kein Verweis auf die ZH-Skala), betragsgleich, Tranchen amtlich bestätigt.",
+    "kriterien": [
+     "Streitwert",
+     "Bedeutung der Sache",
+     "Schwierigkeiten",
+     "Umfang der Arbeit",
+     "aufgewendete Zeit"
+    ],
+    "kriterienNorm": "Art. 84 RTFMC (Modulation ±10 % Art. 85)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:entscheid:allg:250k:GE": {
+  "kanton": "GE",
+  "streitwertCHF": 250000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 5000,
+    "bisChf": 30000,
+    "hinweis": "Gebührenrahmen CHF 5'000–CHF 30'000 (Streitwert-Band bis und mit CHF 1'000'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Règlement fixant le tarif des frais en matière civile (RTFMC)",
+    "erlassNr": "rsGE E 1 05.10",
+    "artikel": "Art. 17",
+    "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+    "stand": "1.7.2025",
+    "verifiziert": "doppelt",
+    "hinweis": "Rahmen je Band.",
+    "kriterien": [
+     "auf dem Spiel stehende Interessen",
+     "Komplexität der Sache",
+     "Umfang des Verfahrens",
+     "Umfang der Arbeit",
+     "Streitwert"
+    ],
+    "kriterienNorm": "Art. 5 RTFMC"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 17650,
+    "schritte": [
+     "Sockel CHF 14'500",
+     "3.5 % auf CHF 90'000 (Überschuss über CHF 160'000) = CHF 3'150"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Règlement fixant le tarif des frais (RTFMC, défraiement)",
+    "erlassNr": "rsGE E 1 05.10",
+    "artikel": "Art. 84/85",
+    "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+    "stand": "1.7.2025",
+    "verifiziert": "recherche",
+    "hinweis": "Défraiement nach der autonomen GE-Prozentstaffel (Art. 85 RTFMC); Abweichung ±10 % nach Art. 84. Nicht bestimmbar: CHF 600–18 000 (Art. 86). Etikett korrigiert (Re-Verifikation 21.6.): eigenständige GE-Staffel (kein Verweis auf die ZH-Skala), betragsgleich, Tranchen amtlich bestätigt.",
+    "kriterien": [
+     "Streitwert",
+     "Bedeutung der Sache",
+     "Schwierigkeiten",
+     "Umfang der Arbeit",
+     "aufgewendete Zeit"
+    ],
+    "kriterienNorm": "Art. 84 RTFMC (Modulation ±10 % Art. 85)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:entscheid:allg:12k:TI": {
+  "kanton": "TI",
+  "streitwertCHF": 12000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 500,
+    "bisChf": 4000,
+    "hinweis": "Gebührenrahmen CHF 500–CHF 4'000 (Streitwert-Band bis und mit CHF 30'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Legge sulla tariffa giudiziaria (LTG)",
+    "erlassNr": "RL 178.200",
+    "artikel": "Art. 7",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+    "stand": "10.2.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Rahmen je Band; >10 Mio: oberer Rahmen nach Tarif.",
+    "kriterien": [
+     "Streitwert",
+     "Natur der Sache",
+     "Komplexität"
+    ],
+    "kriterienNorm": "Art. 2 LTG"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 1800,
+    "bisChf": 3000,
+    "hinweis": "Gebührenrahmen CHF 1'800–CHF 3'000 (15–25 % des Streitwerts) (Streitwert-Band bis und mit CHF 20'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Tariffa dell’Ordine degli avvocati (onorari)",
+    "erlassNr": "RL 178.310",
+    "artikel": "Art. 11",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/141",
+    "stand": "29.5.2026",
+    "verifiziert": "doppelt",
+    "hinweis": "Prozent-Rahmen vom Streitwert je Band; Rechtsmittel 30–60 %, Spezialverfahren 20–70 %. Ohne bestimmten Streitwert: Zeitaufwand (CHF 280/Std.).",
+    "kriterien": [
+     "Bedeutung des Streits",
+     "Schwierigkeit",
+     "Umfang der Arbeit",
+     "aufgewendete Zeit",
+     "Verlauf des Mandats"
+    ],
+    "kriterienNorm": "Art. 11 Abs. 5 Tarif-Regolamento (RL 178.310)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:entscheid:allg:250k:TI": {
+  "kanton": "TI",
+  "streitwertCHF": 250000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 8000,
+    "bisChf": 20000,
+    "hinweis": "Gebührenrahmen CHF 8'000–CHF 20'000 (Streitwert-Band bis und mit CHF 500'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Legge sulla tariffa giudiziaria (LTG)",
+    "erlassNr": "RL 178.200",
+    "artikel": "Art. 7",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+    "stand": "10.2.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Rahmen je Band; >10 Mio: oberer Rahmen nach Tarif.",
+    "kriterien": [
+     "Streitwert",
+     "Natur der Sache",
+     "Komplexität"
+    ],
+    "kriterienNorm": "Art. 2 LTG"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 15000,
+    "bisChf": 22500,
+    "hinweis": "Gebührenrahmen CHF 15'000–CHF 22'500 (6–9 % des Streitwerts) (Streitwert-Band bis und mit CHF 500'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Tariffa dell’Ordine degli avvocati (onorari)",
+    "erlassNr": "RL 178.310",
+    "artikel": "Art. 11",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/141",
+    "stand": "29.5.2026",
+    "verifiziert": "doppelt",
+    "hinweis": "Prozent-Rahmen vom Streitwert je Band; Rechtsmittel 30–60 %, Spezialverfahren 20–70 %. Ohne bestimmten Streitwert: Zeitaufwand (CHF 280/Std.).",
+    "kriterien": [
+     "Bedeutung des Streits",
+     "Schwierigkeit",
+     "Umfang der Arbeit",
+     "aufgewendete Zeit",
+     "Verlauf des Mandats"
+    ],
+    "kriterienNorm": "Art. 11 Abs. 5 Tarif-Regolamento (RL 178.310)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:entscheid:allg:12k:VS": {
+  "kanton": "VS",
+  "streitwertCHF": 12000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 900,
+    "bisChf": 3600,
+    "hinweis": "Gebührenrahmen CHF 900–CHF 3'600 (Streitwert-Band bis und mit CHF 20'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Gebührentarif (GTar/LTar)",
+    "erlassNr": "SR 173.8",
+    "artikel": "Art. 16",
+    "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+    "stand": "1.1.2025",
+    "verifiziert": "doppelt",
+    "hinweis": "Rahmen je Band.",
+    "kriterien": [
+     "Streitwert",
+     "Umfang der Sache",
+     "Schwierigkeit",
+     "Prozessverhalten der Parteien",
+     "finanzielle Lage der Parteien"
+    ],
+    "kriterienNorm": "Art. 13 LTar"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 2300,
+    "bisChf": 3300,
+    "hinweis": "Gebührenrahmen CHF 2'300–CHF 3'300 (Streitwert-Band bis und mit CHF 15'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Gebührentarif (LTar)",
+    "erlassNr": "SR 173.8",
+    "artikel": "Art. 32 (i.V.m. Art. 27/28)",
+    "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+    "stand": "1.1.2018",
+    "verifiziert": "doppelt",
+    "hinweis": "Rahmen je Band; >1 Mio: 3,3 % des Streitwerts, max CHF 140 000. Inkl. MwSt. Amtliche Verteidigung 70 %.",
+    "mwstInbegriffen": true,
+    "kriterien": [
+     "Natur und Bedeutung der Sache",
+     "Schwierigkeit",
+     "Umfang der Arbeit",
+     "sinnvoll aufgewendete Zeit",
+     "finanzielle Lage der Partei"
+    ],
+    "kriterienNorm": "Art. 27 Abs. 1 LTar"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:entscheid:allg:250k:VS": {
+  "kanton": "VS",
+  "streitwertCHF": 250000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 9000,
+    "bisChf": 42000,
+    "hinweis": "Gebührenrahmen CHF 9'000–CHF 42'000 (Streitwert-Band bis und mit CHF 500'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Gebührentarif (GTar/LTar)",
+    "erlassNr": "SR 173.8",
+    "artikel": "Art. 16",
+    "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+    "stand": "1.1.2025",
+    "verifiziert": "doppelt",
+    "hinweis": "Rahmen je Band.",
+    "kriterien": [
+     "Streitwert",
+     "Umfang der Sache",
+     "Schwierigkeit",
+     "Prozessverhalten der Parteien",
+     "finanzielle Lage der Parteien"
+    ],
+    "kriterienNorm": "Art. 13 LTar"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 22700,
+    "bisChf": 30500,
+    "hinweis": "Gebührenrahmen CHF 22'700–CHF 30'500 (Streitwert-Band bis und mit CHF 500'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Gebührentarif (LTar)",
+    "erlassNr": "SR 173.8",
+    "artikel": "Art. 32 (i.V.m. Art. 27/28)",
+    "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+    "stand": "1.1.2018",
+    "verifiziert": "doppelt",
+    "hinweis": "Rahmen je Band; >1 Mio: 3,3 % des Streitwerts, max CHF 140 000. Inkl. MwSt. Amtliche Verteidigung 70 %.",
+    "mwstInbegriffen": true,
+    "kriterien": [
+     "Natur und Bedeutung der Sache",
+     "Schwierigkeit",
+     "Umfang der Arbeit",
+     "sinnvoll aufgewendete Zeit",
+     "finanzielle Lage der Partei"
+    ],
+    "kriterienNorm": "Art. 27 Abs. 1 LTar"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:entscheid:allg:1mio:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 1000000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 30750,
+    "schritte": [
+     "Sockel CHF 16'750",
+     "2 % auf CHF 700'000 (Überschuss über CHF 300'000) = CHF 14'000"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Gebührenverordnung des Obergerichts (GebV OG)",
+    "erlassNr": "LS 211.11",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015 (Nachtrag 087)",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; nach § 4 Abs. 2 ohne betragliche Grenze ermässigbar oder um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöhbar (richterliches Ermessen).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Zeitaufwand des Gerichts",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 GebV OG (Erhöhung § 4 Abs. 2)"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 31400,
+    "schritte": [
+     "Sockel CHF 25'400",
+     "1.5 % auf CHF 400'000 (Überschuss über CHF 600'000) = CHF 6'000"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung über die Anwaltsgebühren (AnwGebV)",
+    "erlassNr": "LS 215.3",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅔–⅕ («in der Regel auf zwei Drittel bis einen Fünftel ermässigt»).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Verantwortung des Anwalts",
+     "notwendiger Zeitaufwand",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 AnwGebV (Modulation § 4 Abs. 2)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten."
+  ]
+ },
+ "pk:schlichtung:allg:12k:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 12000,
+  "phase": "schlichtung",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 420,
+    "bisChf": 615,
+    "hinweis": "Gebührenrahmen CHF 420–CHF 615 (Streitwert-Band bis und mit CHF 100'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Gebührenverordnung des Obergerichts (GebV OG)",
+    "erlassNr": "LS 211.11",
+    "artikel": "§ 3",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015 (Nachtrag 087)",
+    "verifiziert": "doppelt",
+    "hinweis": "Streitwertgestufter Rahmen; bei Entscheid/Urteilsvorschlag (Art. 210/212 ZPO) Erhöhung um bis zur Hälfte."
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": true,
+   "kostenlosGrund": "Art. 113 Abs. 1 ZPO: im Schlichtungsverfahren keine Parteientschädigung",
+   "quelle": {
+    "erlassName": "Verordnung über die Anwaltsgebühren (AnwGebV)",
+    "erlassNr": "LS 215.3",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅔–⅕ («in der Regel auf zwei Drittel bis einen Fünftel ermässigt»).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Verantwortung des Anwalts",
+     "notwendiger Zeitaufwand",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 AnwGebV (Modulation § 4 Abs. 2)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Im Schlichtungsverfahren gilt der kantonale Schlichtungstarif (Pauschale, Art. 95 II lit. a ZPO) — ein eigener, vom Entscheidgebühr-Tarif getrennter Ansatz. Fällt die Schlichtungsbehörde einen Entscheid oder unterbreitet sie einen Urteilsvorschlag (Art. 210/212 ZPO), kann er sich erhöhen (siehe Tarif-Hinweis).",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:arbeit:25k:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 25000,
+  "phase": "entscheid",
+  "materie": "arbeit",
+  "gerichtskosten": {
+   "kostenlos": true,
+   "kostenlosGrund": "Art. 114 lit. c ZPO: Arbeitsverhältnis bis Streitwert CHF 30 000",
+   "quelle": {
+    "erlassName": "Gebührenverordnung des Obergerichts (GebV OG)",
+    "erlassNr": "LS 211.11",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015 (Nachtrag 087)",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; nach § 4 Abs. 2 ohne betragliche Grenze ermässigbar oder um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöhbar (richterliches Ermessen).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Zeitaufwand des Gerichts",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 GebV OG (Erhöhung § 4 Abs. 2)"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 4450,
+    "schritte": [
+     "Sockel CHF 3'900",
+     "11 % auf CHF 5'000 (Überschuss über CHF 20'000) = CHF 550"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung über die Anwaltsgebühren (AnwGebV)",
+    "erlassNr": "LS 215.3",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅔–⅕ («in der Regel auf zwei Drittel bis einen Fünftel ermässigt»).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Verantwortung des Anwalts",
+     "notwendiger Zeitaufwand",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 AnwGebV (Modulation § 4 Abs. 2)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Kostenlosigkeit vorbehältlich Art. 115 ZPO: Bei bös- oder mutwilliger Prozessführung können die Gerichtskosten auch im unentgeltlichen Verfahren einer Partei auferlegt werden (Abs. 1); bei Gewaltschutz-Verfahren (Art. 114 lit. f) trägt die unterliegende Partei die Gerichtskosten, wenn gegen sie ein Verbot nach Art. 28b ZGB oder eine elektronische Überwachung nach Art. 28c ZGB angeordnet wird (Abs. 2)."
+  ]
+ },
+ "pk:miete:25k:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 25000,
+  "phase": "entscheid",
+  "materie": "miete_pacht",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 3550,
+    "schritte": [
+     "Sockel CHF 3'150",
+     "8 % auf CHF 5'000 (Überschuss über CHF 20'000) = CHF 400"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Gebührenverordnung des Obergerichts (GebV OG)",
+    "erlassNr": "LS 211.11",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015 (Nachtrag 087)",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; nach § 4 Abs. 2 ohne betragliche Grenze ermässigbar oder um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöhbar (richterliches Ermessen).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Zeitaufwand des Gerichts",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 GebV OG (Erhöhung § 4 Abs. 2)"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 4450,
+    "schritte": [
+     "Sockel CHF 3'900",
+     "11 % auf CHF 5'000 (Überschuss über CHF 20'000) = CHF 550"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung über die Anwaltsgebühren (AnwGebV)",
+    "erlassNr": "LS 215.3",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅔–⅕ («in der Regel auf zwei Drittel bis einen Fünftel ermässigt»).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Verantwortung des Anwalts",
+     "notwendiger Zeitaufwand",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 AnwGebV (Modulation § 4 Abs. 2)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten."
+  ]
+ },
+ "pk:nichtvermoegen:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 30000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 300,
+    "bisChf": 13000,
+    "hinweis": "Behördlicher Gebührenrahmen – kein fester Punktwert."
+   },
+   "quelle": {
+    "erlassName": "Gebührenverordnung des Obergerichts (GebV OG)",
+    "erlassNr": "LS 211.11",
+    "artikel": "§ 5",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Nach Streitinteresse/Aufwand/Schwierigkeit."
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 1400,
+    "bisChf": 16000,
+    "hinweis": "Behördlicher Gebührenrahmen – kein fester Punktwert."
+   },
+   "quelle": {
+    "erlassName": "Anwaltsgebührenverordnung (AnwGebV)",
+    "erlassNr": "LS 215.3",
+    "artikel": "§ 5",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+    "stand": "geltende Fassung",
+    "verifiziert": "doppelt"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Nicht vermögensrechtliche Streitigkeit: kein Streitwert — die Gebühr wird im gesetzlichen Rahmen nach Bedeutung der Sache, Umfang/Schwierigkeit und Zeitaufwand festgesetzt (Ermessen, daher Spanne).",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:rechtsmittel:80k:BS": {
+  "kanton": "BS",
+  "streitwertCHF": 80000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 3000,
+    "bisChf": 9000,
+    "hinweis": "Gebührenrahmen CHF 3'000–CHF 6'000 (Streitwert-Band bis und mit CHF 100'000); Festsetzung im Ermessen der Behörde. · Rechtsmittelinstanz: Faktor 1–1.5 (GGR (SG 154.810); HoR (SG 291.400) § 5, nicht abschliessend verifiziert)"
+   },
+   "quelle": {
+    "erlassName": "Reglement über die Gerichtsgebühren (GGR)",
+    "erlassNr": "SG 154.810",
+    "artikel": "§ 5",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+    "stand": "Reglement v. 11.9.2017",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr als Rahmen je Band (§§ 15–17 modifizierbar); >5 Mio: 0,5–1,5 %, mind. CHF 60 000.",
+    "kriterien": [
+     "Bedeutung des Falles",
+     "Zeitaufwand des Gerichts",
+     "tatsächliche und rechtliche Komplexität",
+     "Streitwert bzw. tatsächliches Streitinteresse"
+    ],
+    "kriterienNorm": "§ 2 Abs. 1 GGR"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 2250,
+    "bisChf": 6670,
+    "hinweis": "Gebührenrahmen CHF 4'500–CHF 10'000 (Streitwert-Band bis und mit CHF 100'000); Festsetzung im Ermessen der Behörde. · Rechtsmittelinstanz: Faktor 0.5–0.667 (GGR (SG 154.810); HoR (SG 291.400) § 5, nicht abschliessend verifiziert)"
+   },
+   "quelle": {
+    "erlassName": "Honorarordnung (HoR)",
+    "erlassNr": "SG 291.400",
+    "artikel": "§ 5",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/291.400",
+    "stand": "23.5.2024",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundhonorar als Rahmen je Band; >5 Mio: 1–3 % des Streitwerts. § 5 Abs. 2: vereinfachtes Verfahren >30k −⅓. § 4: Schlichtung max ⅓.",
+    "kriterien": [
+     "Umfang der Bemühungen",
+     "Bedeutung der Sache für die Parteien",
+     "Schwierigkeit (tatsächlich/rechtlich)",
+     "finanzielle Verhältnisse (in besonderen Fällen)"
+    ],
+    "kriterienNorm": "§ 2 HoR"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Modifikator «Rechtsmittelinstanz»: Faktor auf den erstinstanzlichen Basistarif (GGR (SG 154.810); HoR (SG 291.400) § 5), nicht abschliessend verifiziert.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "pk:bundesgericht:80k:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 80000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 1500,
+    "bisChf": 5000,
+    "hinweis": "Gebührenrahmen CHF 1'500–CHF 5'000 (Streitwert-Band bis und mit CHF 100'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Tarif für die Gerichtsgebühren im Verfahren vor dem Bundesgericht",
+    "erlassNr": "SR 173.110.210.1 (i.V.m. Art. 65 BGG)",
+    "artikel": "Art. 65 BGG / Tarif Ziff. 1",
+    "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/837/de",
+    "stand": "1.1.2007 (BGG Stand 1.4.2026)",
+    "verifiziert": "doppelt",
+    "hinweis": "Bemessung nach Streitwert/Umfang/Schwierigkeit/Prozessführung/finanzieller Lage (Art. 65 Abs. 2 BGG); Überschreitung bis zum Doppelten möglich (Abs. 5)."
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 3000,
+    "bisChf": 10000,
+    "hinweis": "Gebührenrahmen CHF 3'000–CHF 10'000 (Streitwert-Band bis und mit CHF 100'000); Festsetzung im Ermessen der Behörde."
+   },
+   "quelle": {
+    "erlassName": "Reglement über die Parteientschädigung vor dem Bundesgericht",
+    "erlassNr": "SR 173.110.210.3 (i.V.m. Art. 68 BGG)",
+    "artikel": "Art. 68 BGG / Reglement Art. 4",
+    "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/839/de",
+    "stand": "1.1.2007 (BGG Stand 1.4.2026)",
+    "verifiziert": "doppelt",
+    "hinweis": "Honorar inkl. MwSt (Art. 12 Abs. 1 Reglement); Über-/Unterschreitung bei ausserordentlichem Aufwand (Art. 8).",
+    "mwstInbegriffen": true
+   }
+  },
+  "hinweise": [
+   "Beschwerde ans Bundesgericht (Art. 65/68 BGG); Tarife bundesrechtlich, kantonsunabhängig.",
+   "Gerichtsgebühr nach Streitwert (Art. 65 Abs. 3 lit. b BGG); Überschreitung bis zum Doppelten möglich (Abs. 5).",
+   "Kostenvorschuss in Höhe der mutmasslichen Gerichtskosten (Art. 62 BGG); unentgeltliche Rechtspflege Art. 64 BGG."
+  ]
+ },
+ "pk:summarisch:40k:ZH": {
+  "kanton": "ZH",
+  "streitwertCHF": 40000,
+  "phase": "entscheid",
+  "materie": "allgemein",
+  "gerichtskosten": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 2375,
+    "bisChf": 3563,
+    "hinweis": "summarisches Verfahren: Faktor 0.5–0.75 (GebV OG § 8/§ 12; AnwGebV § 9/§ 13, nicht abschliessend verifiziert)"
+   },
+   "quelle": {
+    "erlassName": "Gebührenverordnung des Obergerichts (GebV OG)",
+    "erlassNr": "LS 211.11",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015 (Nachtrag 087)",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; nach § 4 Abs. 2 ohne betragliche Grenze ermässigbar oder um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöhbar (richterliches Ermessen).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Zeitaufwand des Gerichts",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 GebV OG (Erhöhung § 4 Abs. 2)"
+   }
+  },
+  "parteientschaedigung": {
+   "kostenlos": false,
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 1220,
+    "bisChf": 4067,
+    "hinweis": "summarisches Verfahren: Faktor 0.2–0.6667 (GebV OG § 8/§ 12; AnwGebV § 9/§ 13, nicht abschliessend verifiziert)"
+   },
+   "quelle": {
+    "erlassName": "Verordnung über die Anwaltsgebühren (AnwGebV)",
+    "erlassNr": "LS 215.3",
+    "artikel": "§ 4 Abs. 1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+    "stand": "1.1.2015",
+    "verifiziert": "doppelt",
+    "hinweis": "Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅔–⅕ («in der Regel auf zwei Drittel bis einen Fünftel ermässigt»).",
+    "kriterien": [
+     "Streitwert bzw. tatsächliches Streitinteresse",
+     "Verantwortung des Anwalts",
+     "notwendiger Zeitaufwand",
+     "Schwierigkeit des Falls"
+    ],
+    "kriterienNorm": "§ 2 AnwGebV (Modulation § 4 Abs. 2)"
+   }
+  },
+  "hinweise": [
+   "Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO).",
+   "Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).",
+   "Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.",
+   "Modifikator «summarisches Verfahren»: Faktor auf den erstinstanzlichen Basistarif (GebV OG § 8/§ 12; AnwGebV § 9/§ 13), nicht abschliessend verifiziert.",
+   "Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif."
+  ]
+ },
+ "bk:grundstueckkauf:500k:ZH": {
+  "geschaeftsart": "grundstueckkauf",
+  "kanton": "ZH",
+  "geschaeftswertCHF": 500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 500,
+    "schritte": [
+     "1 ‰ von CHF 500'000 = CHF 500"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 1.1.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Amtsnotariat (staatlicher Fixtarif)."
+   }
+  },
+  "herkunft": "grundstueckkauf",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Amtsnotariat (staatlicher Fixtarif)."
+  ]
+ },
+ "bk:grundstueckkauf:1_5mio:ZH": {
+  "geschaeftsart": "grundstueckkauf",
+  "kanton": "ZH",
+  "geschaeftswertCHF": 1500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 1500,
+    "schritte": [
+     "1 ‰ von CHF 1'500'000 = CHF 1'500"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 1.1.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Amtsnotariat (staatlicher Fixtarif)."
+   }
+  },
+  "herkunft": "grundstueckkauf",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Amtsnotariat (staatlicher Fixtarif)."
+  ]
+ },
+ "bk:grundstueckkauf:500k:BS": {
+  "geschaeftsart": "grundstueckkauf",
+  "kanton": "BS",
+  "geschaeftswertCHF": 500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 1250,
+    "schritte": [
+     "0.25 % auf CHF 500'000 = CHF 1'250"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatstarif",
+    "erlassNr": "SG 292.400",
+    "artikel": "§ 11 Abs. 1 Ziff. 17",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/292.400",
+    "stand": "1.7.2016",
+    "verifiziert": "recherche",
+    "hinweis": "Freies Notariat; bis ½ reduzierbar bei eigenem Vorvertrag. 0,25% bis 2 Mio. (min. 500), Mehrbetrag über 2 Mio. 0,2%, über 5 Mio. 0,1%, über 10 Mio. 0,075%, höchstens 50’000. QS-GP 2.7.2026: Degressionsbänder >5/>10 Mio. am amtlichen Tarif-PDF (Version 3875) verifiziert — vorher fehlten sie."
+   }
+  },
+  "herkunft": "grundstueckkauf",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Freies Notariat; bis ½ reduzierbar bei eigenem Vorvertrag. 0,25% bis 2 Mio. (min. 500), Mehrbetrag über 2 Mio. 0,2%, über 5 Mio. 0,1%, über 10 Mio. 0,075%, höchstens 50’000. QS-GP 2.7.2026: Degressionsbänder >5/>10 Mio. am amtlichen Tarif-PDF (Version 3875) verifiziert — vorher fehlten sie."
+  ]
+ },
+ "bk:grundstueckkauf:1_5mio:BS": {
+  "geschaeftsart": "grundstueckkauf",
+  "kanton": "BS",
+  "geschaeftswertCHF": 1500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 3750,
+    "schritte": [
+     "0.25 % auf CHF 1'500'000 = CHF 3'750"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatstarif",
+    "erlassNr": "SG 292.400",
+    "artikel": "§ 11 Abs. 1 Ziff. 17",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/292.400",
+    "stand": "1.7.2016",
+    "verifiziert": "recherche",
+    "hinweis": "Freies Notariat; bis ½ reduzierbar bei eigenem Vorvertrag. 0,25% bis 2 Mio. (min. 500), Mehrbetrag über 2 Mio. 0,2%, über 5 Mio. 0,1%, über 10 Mio. 0,075%, höchstens 50’000. QS-GP 2.7.2026: Degressionsbänder >5/>10 Mio. am amtlichen Tarif-PDF (Version 3875) verifiziert — vorher fehlten sie."
+   }
+  },
+  "herkunft": "grundstueckkauf",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Freies Notariat; bis ½ reduzierbar bei eigenem Vorvertrag. 0,25% bis 2 Mio. (min. 500), Mehrbetrag über 2 Mio. 0,2%, über 5 Mio. 0,1%, über 10 Mio. 0,075%, höchstens 50’000. QS-GP 2.7.2026: Degressionsbänder >5/>10 Mio. am amtlichen Tarif-PDF (Version 3875) verifiziert — vorher fehlten sie."
+  ]
+ },
+ "bk:grundstueckkauf:500k:TI": {
+  "geschaeftsart": "grundstueckkauf",
+  "kanton": "TI",
+  "geschaeftswertCHF": 500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2250,
+    "schritte": [
+     "Sockel CHF 1'250",
+     "0.4 % auf CHF 250'000 (Überschuss über CHF 250'000) = CHF 1'000"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Legge sulla tariffa notarile",
+    "erlassNr": "RL 952.300",
+    "artikel": "Art. 5 cpv. 1",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+    "stand": "1.7.2015",
+    "verifiziert": "recherche",
+    "hinweis": "Höchsttarif (Notar darf unterschreiten, Art. 1 cpv. 5)."
+   }
+  },
+  "herkunft": "grundstueckkauf",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Höchsttarif (Notar darf unterschreiten, Art. 1 cpv. 5)."
+  ]
+ },
+ "bk:grundstueckkauf:1_5mio:TI": {
+  "geschaeftsart": "grundstueckkauf",
+  "kanton": "TI",
+  "geschaeftswertCHF": 1500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 5375,
+    "schritte": [
+     "Sockel CHF 3'875",
+     "0.3 % auf CHF 500'000 (Überschuss über CHF 1'000'000) = CHF 1'500"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Legge sulla tariffa notarile",
+    "erlassNr": "RL 952.300",
+    "artikel": "Art. 5 cpv. 1",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+    "stand": "1.7.2015",
+    "verifiziert": "recherche",
+    "hinweis": "Höchsttarif (Notar darf unterschreiten, Art. 1 cpv. 5)."
+   }
+  },
+  "herkunft": "grundstueckkauf",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Höchsttarif (Notar darf unterschreiten, Art. 1 cpv. 5)."
+  ]
+ },
+ "bk:testament:ZH": {
+  "geschaeftsart": "testament",
+  "kanton": "ZH",
+  "posten": {
+   "ergebnis": {
+    "deterministisch": false,
+    "vonChf": 200,
+    "bisChf": 4000,
+    "hinweis": "Behördlicher Gebührenrahmen – kein fester Punktwert."
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "NotGebV LS 243, Anhang Ziff. 4.3.2 (Oeffentliche letztwillige Verfuegung)",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "01.01.2024",
+    "verifiziert": "recherche",
+    "hinweis": "KORREKTUR: Hoechstbetrag per 1.1.2024 von 5000 auf 4000 gesenkt (Fussnote 15). Rahmen 200-4000. Bloss ein Testamentsentwurf inkl. Beratung waere Ziff. 4.3.1 (50-2000). MwSt nach § 2 zusaetzlich."
+   }
+  },
+  "herkunft": "sondertarif",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Aufwand-/Rahmentarif – die konkrete Festsetzung erfolgt im Einzelfall; ausgewiesen ist die Spanne bzw. der Hinweis.",
+   "KORREKTUR: Hoechstbetrag per 1.1.2024 von 5000 auf 4000 gesenkt (Fussnote 15). Rahmen 200-4000. Bloss ein Testamentsentwurf inkl. Beratung waere Ziff. 4.3.1 (50-2000). MwSt nach § 2 zusaetzlich."
+  ]
+ },
+ "bk:ag_gruendung:BS": {
+  "geschaeftsart": "ag_gruendung",
+  "kanton": "BS",
+  "geschaeftswertCHF": 100000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2000,
+    "schritte": [
+     "Sockel CHF 2'000",
+     "0.24 % auf CHF 0 (Überschuss über CHF 100'000) = CHF 0"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung über den Notariatstarif",
+    "erlassNr": "SG 292.400",
+    "artikel": "§ 11 Ziff. 33 lit. a Notariatstarif SG 292.400",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/292.400",
+    "stand": "1.7.2016",
+    "verifiziert": "recherche",
+    "hinweis": "KORREKTUR: DEGRESSIVE Marginalstaffel. Kapital unter CHF 100000: Rahmen CHF 750 bis CHF 2000; bei CHF 100000 fix CHF 2000 (Sockel); vom Mehrbetrag >100000 0,24%, >200000 0,22%, >1 Mio 0,2%, >3 Mio 0,15%, >5 Mio 0,1%, >10 Mio 0,075%; hoechstens CHF 50000. sockelChf=2000 ist die Gr"
+   }
+  },
+  "herkunft": "sondertarif",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "KORREKTUR: DEGRESSIVE Marginalstaffel. Kapital unter CHF 100000: Rahmen CHF 750 bis CHF 2000; bei CHF 100000 fix CHF 2000 (Sockel); vom Mehrbetrag >100000 0,24%, >200000 0,22%, >1 Mio 0,2%, >3 Mio 0,15%, >5 Mio 0,1%, >10 Mio 0,075%; hoechstens CHF 50000. sockelChf=2000 ist die Gr"
+  ]
+ },
+ "bk:schuldbrief:TI": {
+  "geschaeftsart": "schuldbrief",
+  "kanton": "TI",
+  "geschaeftswertCHF": 400000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 1175,
+    "schritte": [
+     "Sockel CHF 875",
+     "0.2 % auf CHF 150'000 (Überschuss über CHF 250'000) = CHF 300"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Legge sulla tariffa notarile",
+    "erlassNr": "RL 952.300",
+    "artikel": "Art. 6 i.V.m. Art. 5 cpv. 1 u. Art. 3 lit. i Legge sulla tariffa notarile (RL 952.300)",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+    "stand": "1.7.2015",
+    "verifiziert": "recherche"
+   }
+  },
+  "herkunft": "sondertarif",
+  "status": "ok",
+  "hinweise": [
+   "Beurkundungsgebühr des Notariats nach kantonalem Tarif; HReg-/Grundbuchgebühren, Auslagen und allfällige MwSt. (freies Notariat) sind nicht enthalten."
+  ]
+ },
+ "gb:eigentum_kauf:500k:ZH": {
+  "eintragsart": "eigentum_kauf",
+  "kanton": "ZH",
+  "wertCHF": 500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 500,
+    "schritte": [
+     "1 ‰ von CHF 500'000 = CHF 500"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 2.2.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche"
+   }
+  },
+  "herkunft": "eigentum_kauf",
+  "status": "ok",
+  "hinweise": [
+   "Grundbuchgebühr (Eintragung) nach kantonalem Tarif; Notariats-/Beurkundungsgebühr, Handänderungssteuer, Auslagen und MwSt. sind nicht enthalten."
+  ]
+ },
+ "gb:eigentum_kauf:500k:BS": {
+  "eintragsart": "eigentum_kauf",
+  "kanton": "BS",
+  "wertCHF": 500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 500,
+    "schritte": [
+     "1 ‰ von CHF 500'000 = CHF 500"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung zum EG ZGB",
+    "erlassNr": "SG 211.110",
+    "artikel": "§ 51",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+    "stand": "15.8.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Promille gemäss amtl. Merkblatt GVA; § 51-Volltext im Doppelcheck gegenlesen."
+   }
+  },
+  "herkunft": "eigentum_kauf",
+  "status": "ok",
+  "hinweise": [
+   "Grundbuchgebühr (Eintragung) nach kantonalem Tarif; Notariats-/Beurkundungsgebühr, Handänderungssteuer, Auslagen und MwSt. sind nicht enthalten.",
+   "Promille gemäss amtl. Merkblatt GVA; § 51-Volltext im Doppelcheck gegenlesen."
+  ]
+ },
+ "gb:eigentum_kauf:500k:TI": {
+  "eintragsart": "eigentum_kauf",
+  "kanton": "TI",
+  "wertCHF": 500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 5500,
+    "schritte": [
+     "Fix CHF 0 + 1.1 % von CHF 500'000 = CHF 5'500"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Legge sulle tasse e gli emolumenti del registro fondiario (LTORF)",
+    "erlassNr": "RL 216.200",
+    "artikel": "Art. 11 cpv. 1",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/181",
+    "stand": "1.1.2017",
+    "verifiziert": "recherche",
+    "hinweis": "11‰ (Wert < 2 Mio) / 13‰ (> 2 Mio) auf Gesamtwert; erfüllt zugleich die Handänderungs-Funktion (Reduktion 1/8 Ehegatten/Erbgang, Art. 12)."
+   }
+  },
+  "herkunft": "eigentum_kauf",
+  "status": "ok",
+  "hinweise": [
+   "Grundbuchgebühr (Eintragung) nach kantonalem Tarif; Notariats-/Beurkundungsgebühr, Handänderungssteuer, Auslagen und MwSt. sind nicht enthalten.",
+   "11‰ (Wert < 2 Mio) / 13‰ (> 2 Mio) auf Gesamtwert; erfüllt zugleich die Handänderungs-Funktion (Reduktion 1/8 Ehegatten/Erbgang, Art. 12)."
+  ]
+ },
+ "gb:eigentum_kauf:1_5mio:ZH": {
+  "eintragsart": "eigentum_kauf",
+  "kanton": "ZH",
+  "wertCHF": 1500000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 1500,
+    "schritte": [
+     "1 ‰ von CHF 1'500'000 = CHF 1'500"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 2.2.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche"
+   }
+  },
+  "herkunft": "eigentum_kauf",
+  "status": "ok",
+  "hinweise": [
+   "Grundbuchgebühr (Eintragung) nach kantonalem Tarif; Notariats-/Beurkundungsgebühr, Handänderungssteuer, Auslagen und MwSt. sind nicht enthalten."
+  ]
+ },
+ "gb:grundpfand:400k:BS": {
+  "eintragsart": "grundpfand",
+  "kanton": "BS",
+  "wertCHF": 400000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 400,
+    "schritte": [
+     "1 ‰ von CHF 400'000 = CHF 400"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung zum Einführungsgesetz zum Schweizerischen Zivilgesetzbuch (VO EG ZGB), § 51 — Grundbuchgebühren (Gebührenordnung des Grundbuch- und Vermessungsamtes)",
+    "erlassNr": "SG 211.110",
+    "artikel": "§ 51 Ziff. 6 lit. a V EG ZGB SG 211.110",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+    "stand": "1.9.2012",
+    "verifiziert": "recherche",
+    "hinweis": "Ziff. 6 lit. a 'Eintragung und Erhoehung der Pfand- oder Grundlastsumme: 1 promille der Summe bzw. des Erhoehungsbetrages'. Min CHF 200 / max CHF 50000 (Promille-Regel Merkblatt). Schuldneraenderung, Glaeubigeraenderung etc. dagegen je CHF 100 fix (Ziff. 6 lit. d/e)."
+   }
+  },
+  "herkunft": "eintragsart",
+  "status": "ok",
+  "hinweise": [
+   "Grundbuchgebühr (Eintragung) nach kantonalem Tarif; Notariats-/Beurkundungsgebühr, Handänderungssteuer, Auslagen und MwSt. sind nicht enthalten.",
+   "Ziff. 6 lit. a 'Eintragung und Erhoehung der Pfand- oder Grundlastsumme: 1 promille der Summe bzw. des Erhoehungsbetrages'. Min CHF 200 / max CHF 50000 (Promille-Regel Merkblatt). Schuldneraenderung, Glaeubigeraenderung etc. dagegen je CHF 100 fix (Ziff. 6 lit. d/e)."
+  ]
+ },
+ "gb:dienstbarkeit:50k:ZH": {
+  "eintragsart": "dienstbarkeit",
+  "kanton": "ZH",
+  "wertCHF": 50000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 150,
+    "schritte": [
+     "1 ‰ von CHF 50'000 = CHF 50",
+     "Mindestgebühr CHF 150 → CHF 150"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "NotGebV LS 243, Anhang Ziff. 2.4.1 (Dienstbarkeiten/Grundlasten, Eintragung auch Ausdehnung); Aenderung Ziff. 2.4.2",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "01.01.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Eintragung: 1‰ vom Wert der Gegenleistung (wiederkehrend hoechstens 20-facher Jahreswert), mind. 50 pro beteiligtes Grundstueck, mind. 150 je Dienstbarkeit (massgeblicher Mindestbetrag = 150). BEIM FEHLEN EINER GEGENLEISTUNG: pro Grundstueck 50, im Rahmen 150-1000. AENDERUNG (Zif"
+   }
+  },
+  "herkunft": "eintragsart",
+  "status": "ok",
+  "hinweise": [
+   "Grundbuchgebühr (Eintragung) nach kantonalem Tarif; Notariats-/Beurkundungsgebühr, Handänderungssteuer, Auslagen und MwSt. sind nicht enthalten.",
+   "Eintragung: 1‰ vom Wert der Gegenleistung (wiederkehrend hoechstens 20-facher Jahreswert), mind. 50 pro beteiligtes Grundstueck, mind. 150 je Dienstbarkeit (massgeblicher Mindestbetrag = 150). BEIM FEHLEN EINER GEGENLEISTUNG: pro Grundstueck 50, im Rahmen 150-1000. AENDERUNG (Zif"
+  ]
+ },
+ "gb:eigentum_erbgang:800k:TI": {
+  "eintragsart": "eigentum_erbgang",
+  "kanton": "TI",
+  "wertCHF": 800000,
+  "posten": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 1100,
+    "schritte": [
+     "Fix CHF 0 + 0.1375 % von CHF 800'000 = CHF 1'100"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Legge sulle tariffe per le operazioni nel Registro fondiario (LTORF)",
+    "erlassNr": "216.200",
+    "artikel": "LTORF Art. 11/12 (Schwellensatz, Reduktion 1/8 bei Erbgang)",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/181",
+    "stand": "1.1.2017",
+    "verifiziert": "recherche",
+    "hinweis": "Schwellensatz auf den GESAMTwert: bis 2 Mio 1,375‰, darüber 1,625‰ (= 11/13‰ × 1/8). Erbengemeinschaft Art. 13 abweichend."
+   }
+  },
+  "herkunft": "eintragsart",
+  "status": "ok",
+  "hinweise": [
+   "Grundbuchgebühr (Eintragung) nach kantonalem Tarif; Notariats-/Beurkundungsgebühr, Handänderungssteuer, Auslagen und MwSt. sind nicht enthalten.",
+   "Schwellensatz auf den GESAMTwert: bis 2 Mio 1,375‰, darüber 1,625‰ (= 11/13‰ × 1/8). Erbengemeinschaft Art. 13 abweichend."
+  ]
+ },
+ "ng:kauf:800k:ZH": {
+  "kanton": "ZH",
+  "kaufpreisCHF": 800000,
+  "beurkundung": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 800,
+    "schritte": [
+     "1 ‰ von CHF 800'000 = CHF 800"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 1.1.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Amtsnotariat (staatlicher Fixtarif)."
+   }
+  },
+  "grundbuch": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 800,
+    "schritte": [
+     "1 ‰ von CHF 800'000 = CHF 800"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 2.2.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche"
+   }
+  },
+  "gesamtGebuehren": {
+   "vonChf": 1600,
+   "bisChf": 1600
+  },
+  "gesamtMitSteuer": {
+   "vonChf": 1600,
+   "bisChf": 1600
+  },
+  "hinweise": [
+   "Erwerbs-Nebenkosten beim Grundstückkauf: Beurkundung (Notariat) + Grundbucheintrag; optional Grundpfand (Schuldbrief) und Handänderungssteuer.",
+   "Beträge sind die kantonalen Gebühren nach Kaufpreis bzw. Pfandsumme; Auslagen (Porti, Auszüge) und allfällige MwSt. (freies Notariat) sind nicht enthalten."
+  ]
+ },
+ "ng:kauf:800k:BS": {
+  "kanton": "BS",
+  "kaufpreisCHF": 800000,
+  "beurkundung": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2000,
+    "schritte": [
+     "0.25 % auf CHF 800'000 = CHF 2'000"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatstarif",
+    "erlassNr": "SG 292.400",
+    "artikel": "§ 11 Abs. 1 Ziff. 17",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/292.400",
+    "stand": "1.7.2016",
+    "verifiziert": "recherche",
+    "hinweis": "Freies Notariat; bis ½ reduzierbar bei eigenem Vorvertrag. 0,25% bis 2 Mio. (min. 500), Mehrbetrag über 2 Mio. 0,2%, über 5 Mio. 0,1%, über 10 Mio. 0,075%, höchstens 50’000. QS-GP 2.7.2026: Degressionsbänder >5/>10 Mio. am amtlichen Tarif-PDF (Version 3875) verifiziert — vorher fehlten sie."
+   }
+  },
+  "grundbuch": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 800,
+    "schritte": [
+     "1 ‰ von CHF 800'000 = CHF 800"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung zum EG ZGB",
+    "erlassNr": "SG 211.110",
+    "artikel": "§ 51",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+    "stand": "15.8.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Promille gemäss amtl. Merkblatt GVA; § 51-Volltext im Doppelcheck gegenlesen."
+   }
+  },
+  "gesamtGebuehren": {
+   "vonChf": 2800,
+   "bisChf": 2800
+  },
+  "gesamtMitSteuer": {
+   "vonChf": 2800,
+   "bisChf": 2800
+  },
+  "hinweise": [
+   "Erwerbs-Nebenkosten beim Grundstückkauf: Beurkundung (Notariat) + Grundbucheintrag; optional Grundpfand (Schuldbrief) und Handänderungssteuer.",
+   "Beträge sind die kantonalen Gebühren nach Kaufpreis bzw. Pfandsumme; Auslagen (Porti, Auszüge) und allfällige MwSt. (freies Notariat) sind nicht enthalten."
+  ]
+ },
+ "ng:kauf:800k:TI": {
+  "kanton": "TI",
+  "kaufpreisCHF": 800000,
+  "beurkundung": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 3275,
+    "schritte": [
+     "Sockel CHF 3'125",
+     "0.3 % auf CHF 50'000 (Überschuss über CHF 750'000) = CHF 150"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Legge sulla tariffa notarile",
+    "erlassNr": "RL 952.300",
+    "artikel": "Art. 5 cpv. 1",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+    "stand": "1.7.2015",
+    "verifiziert": "recherche",
+    "hinweis": "Höchsttarif (Notar darf unterschreiten, Art. 1 cpv. 5)."
+   }
+  },
+  "grundbuch": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 8800,
+    "schritte": [
+     "Fix CHF 0 + 1.1 % von CHF 800'000 = CHF 8'800"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Legge sulle tasse e gli emolumenti del registro fondiario (LTORF)",
+    "erlassNr": "RL 216.200",
+    "artikel": "Art. 11 cpv. 1",
+    "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/181",
+    "stand": "1.1.2017",
+    "verifiziert": "recherche",
+    "hinweis": "11‰ (Wert < 2 Mio) / 13‰ (> 2 Mio) auf Gesamtwert; erfüllt zugleich die Handänderungs-Funktion (Reduktion 1/8 Ehegatten/Erbgang, Art. 12)."
+   }
+  },
+  "gesamtGebuehren": {
+   "vonChf": 12075,
+   "bisChf": 12075
+  },
+  "gesamtMitSteuer": {
+   "vonChf": 12075,
+   "bisChf": 12075
+  },
+  "hinweise": [
+   "Erwerbs-Nebenkosten beim Grundstückkauf: Beurkundung (Notariat) + Grundbucheintrag; optional Grundpfand (Schuldbrief) und Handänderungssteuer.",
+   "Beträge sind die kantonalen Gebühren nach Kaufpreis bzw. Pfandsumme; Auslagen (Porti, Auszüge) und allfällige MwSt. (freies Notariat) sind nicht enthalten."
+  ]
+ },
+ "ng:kauf:800k:pfand:ZH": {
+  "kanton": "ZH",
+  "kaufpreisCHF": 800000,
+  "beurkundung": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 800,
+    "schritte": [
+     "1 ‰ von CHF 800'000 = CHF 800"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 1.1.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Amtsnotariat (staatlicher Fixtarif)."
+   }
+  },
+  "grundbuch": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 800,
+    "schritte": [
+     "1 ‰ von CHF 800'000 = CHF 800"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 2.2.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche"
+   }
+  },
+  "grundpfand": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 1600,
+    "schritte": [
+     "2 ‰ von CHF 800'000 = CHF 1'600"
+    ]
+   },
+   "quelle": {
+    "erlassName": "NotGebV",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 1.2.1 + 2.3.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Beurkundung 1‰ + Eintrag 1‰."
+   }
+  },
+  "gesamtGebuehren": {
+   "vonChf": 3200,
+   "bisChf": 3200
+  },
+  "gesamtMitSteuer": {
+   "vonChf": 3200,
+   "bisChf": 3200
+  },
+  "hinweise": [
+   "Erwerbs-Nebenkosten beim Grundstückkauf: Beurkundung (Notariat) + Grundbucheintrag; optional Grundpfand (Schuldbrief) und Handänderungssteuer.",
+   "Beträge sind die kantonalen Gebühren nach Kaufpreis bzw. Pfandsumme; Auslagen (Porti, Auszüge) und allfällige MwSt. (freies Notariat) sind nicht enthalten."
+  ]
+ },
+ "ng:kauf:800k:steuer:BS": {
+  "kanton": "BS",
+  "kaufpreisCHF": 800000,
+  "beurkundung": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2000,
+    "schritte": [
+     "0.25 % auf CHF 800'000 = CHF 2'000"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatstarif",
+    "erlassNr": "SG 292.400",
+    "artikel": "§ 11 Abs. 1 Ziff. 17",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/292.400",
+    "stand": "1.7.2016",
+    "verifiziert": "recherche",
+    "hinweis": "Freies Notariat; bis ½ reduzierbar bei eigenem Vorvertrag. 0,25% bis 2 Mio. (min. 500), Mehrbetrag über 2 Mio. 0,2%, über 5 Mio. 0,1%, über 10 Mio. 0,075%, höchstens 50’000. QS-GP 2.7.2026: Degressionsbänder >5/>10 Mio. am amtlichen Tarif-PDF (Version 3875) verifiziert — vorher fehlten sie."
+   }
+  },
+  "grundbuch": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 800,
+    "schritte": [
+     "1 ‰ von CHF 800'000 = CHF 800"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Verordnung zum EG ZGB",
+    "erlassNr": "SG 211.110",
+    "artikel": "§ 51",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+    "stand": "15.8.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Promille gemäss amtl. Merkblatt GVA; § 51-Volltext im Doppelcheck gegenlesen."
+   }
+  },
+  "handaenderungssteuer": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 24000,
+    "schritte": [
+     "30 ‰ von CHF 800'000 = CHF 24'000"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Handänderungssteuergesetz",
+    "erlassNr": "SG 650.100",
+    "artikel": "§ 1 Abs. 2",
+    "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.100",
+    "stand": "2010",
+    "verifiziert": "recherche",
+    "hinweis": "3 %; ermässigt 1,5 % bei ≥6 J selbstbewohnt / Ersatzbeschaffung (§ 4); Befreiung Nachkommen/Ehegatten/Erbteilung."
+   }
+  },
+  "gesamtGebuehren": {
+   "vonChf": 2800,
+   "bisChf": 2800
+  },
+  "gesamtMitSteuer": {
+   "vonChf": 26800,
+   "bisChf": 26800
+  },
+  "hinweise": [
+   "Erwerbs-Nebenkosten beim Grundstückkauf: Beurkundung (Notariat) + Grundbucheintrag; optional Grundpfand (Schuldbrief) und Handänderungssteuer.",
+   "Beträge sind die kantonalen Gebühren nach Kaufpreis bzw. Pfandsumme; Auslagen (Porti, Auszüge) und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Die Handänderungssteuer ist eine kantonale/kommunale STEUER (keine Gebühr); Befreiungen (z. B. unter Ehegatten/Nachkommen) sind einzelfallabhängig und hier nicht berücksichtigt."
+  ]
+ },
+ "ng:kauf:2mio:voll:ZH": {
+  "kanton": "ZH",
+  "kaufpreisCHF": 2000000,
+  "beurkundung": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2000,
+    "schritte": [
+     "1 ‰ von CHF 2'000'000 = CHF 2'000"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 1.1.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Amtsnotariat (staatlicher Fixtarif)."
+   }
+  },
+  "grundbuch": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 2000,
+    "schritte": [
+     "1 ‰ von CHF 2'000'000 = CHF 2'000"
+    ]
+   },
+   "quelle": {
+    "erlassName": "Notariatsgebührenverordnung (NotGebV)",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 2.2.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche"
+   }
+  },
+  "grundpfand": {
+   "ergebnis": {
+    "deterministisch": true,
+    "betragChf": 3200,
+    "schritte": [
+     "2 ‰ von CHF 1'600'000 = CHF 3'200"
+    ]
+   },
+   "quelle": {
+    "erlassName": "NotGebV",
+    "erlassNr": "LS 243",
+    "artikel": "Anhang Ziff. 1.2.1 + 2.3.1",
+    "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+    "stand": "1.1.2024",
+    "verifiziert": "recherche",
+    "hinweis": "Beurkundung 1‰ + Eintrag 1‰."
+   }
+  },
+  "handaenderungssteuer": {
+   "ergebnis": {
+    "deterministisch": false,
+    "hinweis": "ZH erhebt keine Handänderungssteuer (abgeschafft per 1.1.2005)."
+   },
+   "quelle": {
+    "erlassName": "Keine Handänderungssteuer",
+    "erlassNr": "—",
+    "artikel": "—",
+    "quelleUrl": "",
+    "stand": "2026",
+    "verifiziert": "recherche",
+    "hinweis": "ZH erhebt keine Handänderungssteuer (abgeschafft per 1.1.2005)."
+   }
+  },
+  "gesamtGebuehren": {
+   "vonChf": 7200,
+   "bisChf": 7200
+  },
+  "gesamtMitSteuer": null,
+  "hinweise": [
+   "Erwerbs-Nebenkosten beim Grundstückkauf: Beurkundung (Notariat) + Grundbucheintrag; optional Grundpfand (Schuldbrief) und Handänderungssteuer.",
+   "Beträge sind die kantonalen Gebühren nach Kaufpreis bzw. Pfandsumme; Auslagen (Porti, Auszüge) und allfällige MwSt. (freies Notariat) sind nicht enthalten.",
+   "Die Handänderungssteuer ist eine kantonale/kommunale STEUER (keine Gebühr); Befreiungen (z. B. unter Ehegatten/Nachkommen) sind einzelfallabhängig und hier nicht berücksichtigt."
+  ]
+ },
  "vorl:testament": {
   "dokument": {
    "titel": "Letztwillige Verfügung (Testament)",
