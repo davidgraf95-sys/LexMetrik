@@ -15,7 +15,7 @@ import { sucherTerme, rangiere, type RankEintrag } from './artikelRanking';
 // `m` (Marginalie/Gliederung) macht Alltagsbegriffe wie «Miete» auffindbar, die
 // im Artikeltext nie vorkommen (K10: dasselbe Daten-Sidecar, das der Reader nutzt).
 
-interface IndexEintrag extends RankEintrag { k: string; ku: string; a: string; l: string; m: string; n: string; g: string; t: string }
+interface IndexEintrag extends RankEintrag { k: string; ku: string; a: string; l: string; m: string; n: string; g: string; t: string; tb: string; f: string }
 
 // Kandidaten-Pool: deutlich grösser als das Anzeige-Limit, damit die Re-Rangierung
 // die wirklich relevanten Treffer aus einer breiten Recall-Menge heben kann.
@@ -55,7 +55,7 @@ function treffer(e: IndexEintrag, q: string): SuchTreffer {
 // Minimal-Typen für die FlexSearch-Document-Oberfläche (die Lib bringt keine
 // passenden ESM-Typen für diese Nutzung mit).
 interface DocLike {
-  add(doc: { id: number; t: string; l: string; m: string; n: string; g: string }): void;
+  add(doc: { id: number; t: string; l: string; m: string; n: string; g: string; tb: string; f: string }): void;
   search(q: string, opt: { limit: number; suggest: boolean }): { field: string; result: (number | string)[] }[];
 }
 type FlexLike = {
@@ -83,6 +83,11 @@ export function baueSuchFn(eintraege: IndexEintrag[], FlexSearch: FlexLike): (q:
         { field: 'm', tokenize: 'forward' },
         { field: 'n', tokenize: 'forward' },
         { field: 'g', tokenize: 'forward' },
+        // G-SUCH: Tabellen-Tier (Tabellenzellen + Bild-Alt + grundlage) und
+        // Fussnoten-Body als eigene Recall-Felder — findet Werte, die NUR in
+        // einer Tabelle oder Fussnote stehen (Korpus-Suche fand sie bisher nie).
+        { field: 'tb', tokenize: 'forward' },
+        { field: 'f', tokenize: 'forward' },
       ],
     },
     encoder: Charset?.LatinBalance,
@@ -95,13 +100,18 @@ export function baueSuchFn(eintraege: IndexEintrag[], FlexSearch: FlexLike): (q:
     m: e.m.toLowerCase(),
     n: e.n.toLowerCase(),
     g: e.g.toLowerCase(),
+    tb: (e.tb ?? '').toLowerCase(),
+    f: (e.f ?? '').toLowerCase(),
   }));
 
   // Feld-Priorität im Recall: Marginalie/Gliederung ZUERST einsammeln, damit
   // topische Treffer nicht von der (oft grösseren) Textmenge aus dem Pool
   // gedrängt werden. Kritisch für Fälle wie OR 253, dessen Artikeltext das Wort
   // «Miete» nie führt — er ist NUR über die Gliederung «Die Miete» auffindbar.
-  const FELD_PRIO: Record<string, number> = { m: 0, n: 1, g: 2, l: 3, t: 4 };
+  // tb/f sammeln NACH dem Haupttext ein (niedrigster Recall-Rang): ein reiner
+  // Tabellen-/Fussnoten-Treffer soll topische und Haupttext-Treffer nicht aus dem
+  // Pool drängen. Tabelle vor Fussnote (Feld-Gewichtung t > m > n > g > tb > f).
+  const FELD_PRIO: Record<string, number> = { m: 0, n: 1, g: 2, l: 3, t: 4, tb: 5, f: 6 };
 
   return (q: string, limit = 40): SuchTreffer[] => {
     // RECALL: Original-Query + Vokabular-Synonyme (OCL-portiert, §2-deterministisch)

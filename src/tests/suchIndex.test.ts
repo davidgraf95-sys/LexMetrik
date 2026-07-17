@@ -34,5 +34,34 @@ describe('Artikel-Suchindex — keine toten Links', () => {
     expect(e).toHaveProperty('ku');
     expect(e).toHaveProperty('a');
     expect(e).toHaveProperty('t');
+    expect(e).toHaveProperty('tb'); // G-SUCH: Tabellen-/Struktur-Tier
+    expect(e).toHaveProperty('f');  // G-SUCH: Fussnoten-Body
+  });
+});
+
+// G-SUCH: Tabellenzellen + Fussnoten-Body müssen im Index landen — sonst findet
+// die Korpus-Suche keinen Text, der NUR in einer Tabelle oder Fussnote steht.
+describe('Artikel-Suchindex — Tabellen + Fussnoten indexiert (G-SUCH)', () => {
+  const byArt = (k: string, a: string) => index.eintraege.find((e) => e.k === k && e.a === a);
+
+  it('Tabellenzellen (mehrspaltig) stehen im Tabellen-Feld tb', () => {
+    // AHVG 34bis führt die AHV-Zuschlagstabelle; «Grundzuschlags» steht NUR dort.
+    const e = byArt('AHVG', '34_bis');
+    expect(e).toBeDefined();
+    expect(e!.tb.toLowerCase()).toContain('grundzuschlags');
+    expect(e!.t.toLowerCase()).not.toContain('grundzuschlags'); // nicht im Haupttext
+  });
+
+  it('Fussnoten-Body steht im Fussnoten-Feld f (ohne <b>/<i>-Tags)', () => {
+    // ADOV 5 trägt einen Änderungshinweis auf die «Strafregisterverordnung».
+    const e = byArt('ADOV', '5');
+    expect(e).toBeDefined();
+    expect(e!.f.toLowerCase()).toContain('strafregisterverordnung');
+    expect(e!.f).not.toMatch(/<\/?[a-z]/i); // keine HTML-Tags durchgerutscht
+  });
+
+  it('generischer Bild-Alt «Amtliche Abbildung» wird NICHT indexiert (Suchrauschen)', () => {
+    const rausch = index.eintraege.filter((e) => /amtliche abbildung/i.test(e.tb));
+    expect(rausch).toEqual([]);
   });
 });

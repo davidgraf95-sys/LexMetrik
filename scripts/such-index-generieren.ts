@@ -19,8 +19,18 @@ const BUND = resolve(wurzel, 'public/normtext/bund');
 const STRUKTUR = resolve(wurzel, 'public/normtext/struktur/bund');
 const ZIEL = resolve(wurzel, 'public/such-index/artikel-bund.json');
 
-interface Block { absatz?: string; text?: string; items?: { marke?: string; text?: string }[] }
-interface Eintrag { id: string; erlass: string; artikel: string; artikelLabel: string; bloecke?: Block[] }
+// Bild/Kachel: `alt` ist der einzige durchsuchbare Text (SSV-Signalnamen wie
+// «Rechtskurve», «Engpass»). Der generische Fallback «Amtliche Abbildung» (271×
+// im Bund) trägt keinen Inhalt und wird verworfen (§8: kein Suchrauschen).
+interface Bild { alt?: string; formel?: boolean }
+interface Kachel { bild?: Bild; nummer?: string; name?: string }
+interface Mehrspaltig { spalten?: { titel?: string }[]; zeilen?: (string | number)[][] }
+interface Block {
+  absatz?: string; text?: string; items?: { marke?: string; text?: string }[];
+  mehrspaltig?: Mehrspaltig; tabelle?: Record<string, unknown>[];
+  bild?: Bild; bildKacheln?: Kachel[];
+}
+interface Eintrag { id: string; erlass: string; artikel: string; artikelLabel: string; grundlage?: string; bloecke?: Block[] }
 
 /** Durchsuchbarer Plaintext eines Artikels (Absätze + Aufzählungen, Whitespace normalisiert). */
 function artikelText(bloecke: Block[]): string {
@@ -28,6 +38,57 @@ function artikelText(bloecke: Block[]): string {
   for (const b of bloecke) {
     if (b.text) teile.push(b.text);
     for (const it of b.items ?? []) if (it.text) teile.push(it.text);
+  }
+  return teile.join(' ').replace(/\s+/g, ' ').trim();
+}
+
+const GENERISCHES_ALT = /^amtliche abbildung$/i;
+
+/** Nicht-generischer Alt-Text eines Bildes (SSV-Signalname o. Ä.), sonst ''. */
+function bildAlt(b?: Bild): string {
+  const alt = (b?.alt ?? '').trim();
+  return alt && !GENERISCHES_ALT.test(alt) ? alt : '';
+}
+
+/** Tabellen-/Struktur-Tier eines Artikels: Tabellenzellen (mehrspaltig-Spalten-
+ *  titel + Zeilen, Füllpunkt-`tabelle`), Bild-Alt-Texte (SSV-Signalnamen; ohne
+ *  den generischen «Amtliche Abbildung»-Platzhalter) und Kachel-Beschriftungen.
+ *  Ein Rang UNTER Marginalie/Gliederung, ÜBER Fussnote (Feld-Gewichtung S4). */
+function tabellenText(bloecke: Block[]): string {
+  const teile: string[] = [];
+  for (const b of bloecke) {
+    if (b.mehrspaltig) {
+      for (const s of b.mehrspaltig.spalten ?? []) if (s.titel) teile.push(s.titel);
+      for (const z of b.mehrspaltig.zeilen ?? []) for (const c of z) if (c != null && c !== '') teile.push(String(c));
+    }
+    // Füllpunkt-Tabelle (`tabelle`): Array von Zeilen-Objekten mit freien String-
+    // Feldern (Kanton-Gebührentarife: {beschreibung, betrag}). Bund führt aktuell
+    // keine — verhaltensneutral hier, aber der Extraktor bleibt vollständig.
+    for (const zeile of b.tabelle ?? []) {
+      for (const v of Object.values(zeile)) if (typeof v === 'string' && v.trim()) teile.push(v);
+    }
+    const alt = bildAlt(b.bild);
+    if (alt) teile.push(alt);
+    for (const k of b.bildKacheln ?? []) {
+      if (k.name) teile.push(k.name);
+      const ka = bildAlt(k.bild);
+      if (ka) teile.push(ka);
+    }
+  }
+  return teile.join(' ').replace(/\s+/g, ' ').trim();
+}
+
+/** Fussnoten-Body eines Artikels als durchsuchbarer Plaintext (Änderungs-/
+ *  Quellenhinweise, AS-/BBl-Referenzen). Fedlex-Hervorhebungen <b>/<i> und alle
+ *  übrigen Tags fallen; niedrigster Recall-Tier (Feld-Gewichtung S4). */
+function fussnotenText(fussnoten: { text?: string }[]): string {
+  const teile: string[] = [];
+  for (const fn of fussnoten) {
+    // Tags raus, Fedlex-Entities dekodieren; die \s+-Normalisierung unten
+    // fasst nbsp (von \s erfasst) mit ein.
+    const t = (fn.text ?? '').replace(/<[^>]+>/g, ' ')
+      .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    if (t.trim()) teile.push(t);
   }
   return teile.join(' ').replace(/\s+/g, ' ').trim();
 }
@@ -42,7 +103,7 @@ function artikelText(bloecke: Block[]): string {
 // Alltags-Query «Miete» über die Gliederung «Achter Titel: Die Miete» direkt die
 // mietrechtlichen Artikel (OR 253 ff.), die im Artikeltext das Wort «Miete» selbst
 // nie führen (FlexSearch-forward: «miete» ist kein Präfix von «mietvertrag»).
-interface StrukturArtikel { marginalie?: string[]; gliederung?: { ebene?: number; label?: string }[] }
+interface StrukturArtikel { marginalie?: string[]; gliederung?: { ebene?: number; label?: string }[]; fussnoten?: { text?: string }[] }
 interface StrukturDatei { artikel?: Record<string, StrukturArtikel> }
 
 /** Enumerator-Präfix eines Randtitels entfernen («G. Verjährung» → «Verjährung»,
@@ -77,7 +138,12 @@ function labelText(rohe: (string | undefined)[]): string {
 // Rangschicht (artikelRanking.ts) wertet das unterschiedlich.
 // WICHTIG (§8): k MUSS der Dateiname-Stamm sein, NICHT das interne `erlass`-Feld —
 // 71/218 Erlasse haben Kürzel ≠ Dateiname (StGB/STGB, AdoV/ADOV …); sonst tote Links.
-interface IndexEintrag { k: string; ku: string; a: string; l: string; m: string; n: string; g: string; t: string }
+// tb=Tabellen-/Struktur-Tier (Tabellenzellen + Füllpunkt-`tabelle` + Bild-Alt +
+// `grundlage`-Delegationsnorm), f=Fussnoten-Body. Beide sind RECALL-only (kein
+// topischer Boost — eine Fussnoten-/Tabellen-Nennung widmet den Artikel dem Thema
+// nicht) und tragen die von der Korpus-Suche bisher übersehenen Werte, die NUR in
+// Tabellen oder Fussnoten stehen. Feld-Gewichtung: t > m > n > g > tb > f.
+interface IndexEintrag { k: string; ku: string; a: string; l: string; m: string; n: string; g: string; t: string; tb: string; f: string }
 
 export function baueBundIndex(): { erzeugt: string; ebene: 'bund'; eintraege: IndexEintrag[] } {
   const eintraege: IndexEintrag[] = [];
@@ -97,7 +163,13 @@ export function baueBundIndex(): { erzeugt: string; ebene: 'bund'; eintraege: In
       const m = labelText(marg.slice(0, 1)); // primäre (oberste) Marginalie = Hauptthema
       const n = labelText(marg.slice(1)); // nachrangige Randtitel-Stufen
       const g = labelText((sa?.gliederung ?? []).map((x) => x.label));
-      eintraege.push({ k: key, ku: e.erlass, a: e.artikel, l: e.artikelLabel, m, n, g, t });
+      // Tabellen-Tier: Zellen/Bild-Alt aus den Blöcken + `grundlage` (Delegations-
+      // norm-Template, «(Art. 1 ArG)»). Fussnoten-Tier: aus dem Struktur-Sidecar.
+      const tbTeile = tabellenText(e.bloecke);
+      const grundlage = (e.grundlage ?? '').replace(/\s+/g, ' ').trim();
+      const tb = [tbTeile, grundlage].filter(Boolean).join(' ');
+      const f = fussnotenText(sa?.fussnoten ?? []);
+      eintraege.push({ k: key, ku: e.erlass, a: e.artikel, l: e.artikelLabel, m, n, g, t, tb, f });
     }
   }
   // Stabile Reihenfolge (erlass, dann Datei-Reihenfolge der Artikel bleibt erhalten).
