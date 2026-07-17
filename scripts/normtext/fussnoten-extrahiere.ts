@@ -13,7 +13,7 @@
  *    (eli/oc = Amtliche Sammlung, eli/fga = Bundesblatt)
  */
 
-import { findeDlEnde, findeDdEnde, ankerZuToken } from './extrahiere-fedlex';
+import { findeDlEnde, findeDdEnde, ankerZuToken, parseArtikelInner } from './extrahiere-fedlex';
 
 export interface FnLink { label: string; url: string }
 export interface Fussnote {
@@ -22,6 +22,12 @@ export interface Fussnote {
   /** G11: geh\u00f6rt diese Fussnote zu einer \u00dcberschrift/einem Randtitel (section-
    *  heading-footnote), tr\u00e4gt `sektion` dessen Label \u2192 Marker am Sektions-Kopf. */
   sektion?: string;
+  /** A31a: Marker in einem ABSATZLOSEN Fliesstext-Absatz (kein Absatz-<sup>N \u2014
+   *  z. B. ZGB 798a \u00ab\u20261991<sup>667</sup>\u2026\u00bb). `absatz`/`item` k\u00f6nnen den Block dann
+   *  nicht identifizieren (mehrere absatzlose Bl\u00f6cke tragen alle absatz=null); der
+   *  0-basierte Index in die Snapshot-Bloecke (`e.bloecke`) verortet den Marker
+   *  eindeutig im Fliesstext statt auf der Artikelebene. Nur gesetzt, wenn n\u00f6tig. */
+  absatzIndex?: number;
 }
 
 // G15: Hervorhebungen (fett/kursiv) im Fussnotentext bleiben erhalten \u2014 Fedlex
@@ -149,6 +155,31 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
         blockStart.lastIndex = dlEnde;
       }
     }
+    // A31a: für die AMBIGEN Marker (Walk ordnet sie keinem Absatz/Item zu →
+    // absatz=null/item=null: entweder Kopf-/Marginalien-Marker ODER absatzloser
+    // Fliesstext-Marker) den AUTHENTISCHEN Snapshot-Block bestimmen. parseArtikelInner
+    // liefert dieselben Bloecke wie der Snapshot-Extraktor (gleiche Absatz-Numerierung)
+    // plus je Block seinen Quell-Span. Der Kopf-<h6> ist darin entfernt → ein
+    // Kopf-Marker liegt in KEINEM Block-Quelltext (bleibt Artikelebene), ein
+    // Fliesstext-Marker sehr wohl. So wird fn 667 (Fliesstext, ZGB 798a) von fn 666
+    // (Marginalie) unterscheidbar. §1: echte Textposition statt Artikelebene.
+    const innerRoh = body
+      .replace(/<div\s+class="footnotes">[\s\S]*$/i, '')
+      .replace(/<h6\b[^>]*>[\s\S]*?<\/h6>/gi, '');
+    const { bloecke: sbBloecke, quellen: sbQuellen } = parseArtikelInner(innerRoh);
+    const blockFuerMarker = (id: string): { absatz: string | null; index: number } | null => {
+      for (let i = 0; i < sbBloecke.length; i++) {
+        const q = sbQuellen[i];
+        // Nur Text-/Item-tragende Blöcke (reine Bild-/Tabellen-Blöcke tragen keinen
+        // Marker); der Voll-Anschluss `href="#<id>"` inkl. schliessendem " verhindert
+        // Präfix-Kollisionen (fn-d1 vs fn-d10).
+        if (q && q.includes(`href="#${id}"`) && (sbBloecke[i].text !== '' || (sbBloecke[i].items?.length ?? 0) > 0)) {
+          return { absatz: sbBloecke[i].absatz, index: i };
+        }
+      }
+      return null;
+    };
+
     const gesehen = new Set<string>();
     const liste: Fussnote[] = [];
     for (const mm of body.matchAll(/\bhref="#(fn-[^"]+)"/gi)) {
@@ -156,7 +187,21 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
       if (gesehen.has(id)) continue;
       gesehen.add(id);
       const def = defs.get(id);
-      if (def) liste.push({ ...def, absatz: fnAbsatz.has(id) ? fnAbsatz.get(id)! : null, item: fnItem.get(id) ?? null });
+      if (!def) continue;
+      let absatz: string | null = fnAbsatz.has(id) ? fnAbsatz.get(id)! : null;
+      const item: string | null = fnItem.get(id) ?? null;
+      let absatzIndex: number | undefined;
+      if (absatz == null && item == null) {
+        const blk = blockFuerMarker(id);
+        if (blk) {
+          if (blk.absatz != null) absatz = blk.absatz;   // nummerierter Absatz (Numerierung wie Snapshot)
+          else absatzIndex = blk.index;                  // absatzloser Fliesstext-Block → Position
+        }
+        // kein Block gefunden → Kopf/Marginalie → absatz bleibt null (Artikelebene)
+      }
+      const fn: Fussnote = { ...def, absatz, item };
+      if (absatzIndex != null) fn.absatzIndex = absatzIndex;
+      liste.push(fn);
     }
     if (liste.length) perArtikel[token] = liste;
   }

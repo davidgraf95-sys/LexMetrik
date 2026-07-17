@@ -132,6 +132,24 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
     .replace(/<div\s+class="footnotes">[\s\S]*$/i, '') // Apparat steht am Artikelende
     .replace(/<h6\b[^>]*>[\s\S]*?<\/h6>/gi, '');
 
+  const r = parseArtikelInner(innerRoh);
+  // Byte-gleich zum bisherigen Rückgabe-Shape: grundlage-Key nur, wenn gesetzt.
+  return r.grundlage != null ? { grundlage: r.grundlage, bloecke: r.bloecke } : { bloecke: r.bloecke };
+}
+
+/**
+ * Wie {@link extrahiereArtikelAusAnker}, aber liefert je Snapshot-Block ZUSÄTZLICH
+ * seinen Quell-HTML-Span (`quellen[i]`, deckungsgleich mit `bloecke[i]`). Damit
+ * kann ein Aufrufer (Fussnoten-Positionierung, A31a) einen Marker seinem
+ * AUTHENTISCHEN Snapshot-Block zuordnen — mit exakt derselben Absatz-Numerierung
+ * wie der Snapshot, statt einer zweiten, driftenden Block-Parserei. `bloecke`
+ * ist byte-gleich zum bisherigen Pfad (Golden-Tor beweist es). Der übergebene
+ * `innerRoh` hat Kopf-<h6> + Fussnoten-Apparat bereits entfernt → ein
+ * Kopf-/Marginalien-Marker liegt in KEINEM Block-Quelltext (`quellen`), bleibt
+ * also Artikelebene. So wird der absatzlose Fliesstext-Marker (fn 667 in ZGB
+ * 798a) vom Kopf-Marker (fn 666) unterscheidbar.
+ */
+export function parseArtikelInner(innerRoh: string): ArtikelText & { quellen: (string | null)[] } {
   // G23 (M8): Delegationsnorm-Verweis <p class="man-template-referenz">(Art. N ArG)</p>
   // direkt nach der Überschrift — bisher von keiner Block-Alternative erfasst und
   // stumm verloren (~7100 Verordnungs-Bestimmungen). Als artikel-level `grundlage`
@@ -195,12 +213,19 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
     'gi',
   );
   const bloecke: ArtikelText['bloecke'] = [];
+  // A31a: je Block sein Quell-HTML-Span (deckungsgleich mit bloecke). Damit ordnet
+  // die Fussnoten-Positionierung einen Marker seinem authentischen Block zu.
+  const quellen: (string | null)[] = [];
 
   let match: RegExpExecArray | null;
   while ((match = bloeckeUndListenRe.exec(inner)) !== null) {
     // Leer-Match-Schutz: bei einem Null-Längen-Treffer (theoretisch) lastIndex
     // vorrücken, damit der Loop nicht hängt.
     if (match[0] === '') { bloeckeUndListenRe.lastIndex++; continue; }
+    const vorBlockZahl = bloecke.length;
+    // Quell-Span des Matches: für Absatz/Tabelle/Bild = match[0]; für <dl> nur der
+    // Öffnungs-Tag → auf den balancierten Voll-<dl>-Bereich erweitern (unten gesetzt).
+    let matchQuelle = match[0];
     if (match[5] !== undefined) {
       // ── Tabelle (<table><tr><th>…</th></tr><tr><td>…</td></tr></table>) ──────
       // M10: kanonisches spalten-Modell (rechteckig, Staffel verdichtet, T-B1).
@@ -310,6 +335,7 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       // werden (Bug 25.6.2026). dlInner = Inhalt OHNE äusseres <dl>/</dl>.
       const ende = findeDlEnde(inner, match.index);
       const dlInner = inner.slice(match.index + match[4].length, ende - '</dl>'.length);
+      matchQuelle = inner.slice(match.index, ende); // voller <dl>…</dl>-Span (A31a-Quelle)
       bloeckeUndListenRe.lastIndex = ende; // verschachtelte <dl>/<dt> nicht erneut matchen
       const items = parseDefinitionsListe(dlInner);
       if (items.length > 0) {
@@ -354,6 +380,8 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       const txt = entferneTags(entferneFussnotenSups(match[7])).trim();
       if (txt) bloecke.push({ absatz: null, text: txt });
     }
+    // Alle in dieser Iteration erzeugten Blöcke tragen denselben Quell-Span (A31a).
+    for (let qi = vorBlockZahl; qi < bloecke.length; qi++) quellen[qi] = matchQuelle;
   }
 
   // Fallback: kein einziger <p class="absatz"> gefunden → ganzen Artikel-Text zurückgeben.
@@ -365,19 +393,22 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
   // mitten im Satz) auf eines reduzieren.
   if (bloecke.length === 0) {
     const text = entferneTags(entferneFussnotenSups(inner)).replace(/^\s*Art\.\s*\S+\s*/, '').replace(/\s{2,}/g, ' ').replace(/\s+([.,;:])/g, '$1').trim();
-    if (text) return { ...mitGrundlage, bloecke: [{ absatz: null, text }] };
+    if (text) return { ...mitGrundlage, bloecke: [{ absatz: null, text }], quellen: [inner] };
     // Leerer Artikel-Körper (Fedlex rendert aufgehobene, aber noch nummerierte
     // Artikel als blosse Überschrift mit leerem <div class="collapseable">, z.B.
     // SVG art_107): faithful als «aufgehoben»-Block darstellen (Konvention «…»,
     // NormPopover zeigt «aufgehoben»). So bleibt der Artikel in der
     // Vollständigkeit erfasst statt stumm zu fehlen (§8 Ehrlichkeit, kein
     // Aufweichen des Vollständigkeitstests).
-    return { ...mitGrundlage, bloecke: [{ absatz: null, text: '…' }] };
+    return { ...mitGrundlage, bloecke: [{ absatz: null, text: '…' }], quellen: [null] };
   }
 
   ergaenzeFehlendeBilder(bloecke, inner);
   markiereFormeln(bloecke);
-  return { ...mitGrundlage, bloecke };
+  // Nachträglich ergänzte reine Bild-Blöcke (ohne Quell-Span) längentreu auffüllen
+  // (tragen nie einen Fussnoten-Marker) → quellen bleibt deckungsgleich mit bloecke.
+  while (quellen.length < bloecke.length) quellen.push(null);
+  return { ...mitGrundlage, bloecke, quellen };
 }
 
 /**
@@ -751,7 +782,7 @@ const TAB_PLATZHALTER = /<span\b[^>]*\bdata-message="[^"]*"[^>]*>\s*\[[a-z]+\]\s
 // Dokumenttext, darum GANZ (inkl. Inhalt) entfernen, bevor gestrippt wird.
 const NICHT_TEXT_ELEMENTE = /<(style|script)\b[^>]*>[\s\S]*?<\/\1>/gi;
 
-function entferneTags(s: string): string {
+export function entferneTags(s: string): string {
   return dekodiereEntities(
     s
       .replace(NICHT_TEXT_ELEMENTE, '')

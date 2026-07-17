@@ -136,6 +136,11 @@ export interface Fussnote {
   /** G11: Label der Überschrift/des Randtitels, zu der/dem diese section-heading-
    *  Fussnote gehört (Marker am Sektions-/Randtitel-Kopf statt auf Artikelebene). */
   sektion?: string;
+  /** A31a: 0-basierter Index in `bloecke` für einen Marker in einem ABSATZLOSEN
+   *  Fliesstext-Absatz (fn 667 in ZGB 798a) — `absatz`/`item` reichen dort nicht,
+   *  weil mehrere absatzlose Blöcke alle absatz=null tragen. Marker rendert am
+   *  Ende dieses Blocks statt auf der Artikelebene. */
+  absatzIndex?: number;
 }
 export interface ArtikelStruktur {
   gliederung: Array<{ ebene: number; label: string }>;

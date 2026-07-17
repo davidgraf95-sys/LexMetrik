@@ -174,12 +174,28 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // Fussnoten am Fuss: amtliche Sidecar-Fussnoten bevorzugen; fehlen sie, die
   // aus dem Wortlaut-Block abgetrennte Änderungshistorie (Extraktions-Artefakt)
   // hier zeigen — einheitlich EINE Quelle, keine Doppelung.
-  const fussAnzeige: Fussnote[] = fussnoten && fussnoten.length > 0
+  const fussAnzeigeRoh: Fussnote[] = fussnoten && fussnoten.length > 0
     ? fussnoten
     : e.bloecke
         .map((b) => trenneAenderungshistorie(b.text).historie)
         .filter((h): h is string => !!h)
         .map((text): Fussnote => ({ nr: '', text, links: [] }));
+  // A43 (David 16.7.): Fussnoten in Fedlex-ANZEIGE-Reihenfolge = laufende Nummer
+  // (Fedlex nummeriert global nach Dokumentposition). Das Sidecar liefert bewusst
+  // [artikel-eigene, …Section-heading] (load-bearing für den Revisions-Extrakt,
+  // §3) — die Section-heading-Fussnote (z. B. SchKG 56 fn 95 am Randtitel «III.
+  // Geschlossene Zeiten …», steht ÜBER dem Artikel) hat aber eine KLEINERE Nummer
+  // und gehört im Apparat VOR die artikel-eigenen. Darum hier für die DARSTELLUNG
+  // stabil nach numerischer Nr (+ Buchstaben-Suffix «95a») sortieren; leere/nicht-
+  // parsbare Nr behalten stabil ihre Lage. Reine Darstellung — Sidecar/Daten unberührt.
+  const fnNrKey = (nr: string): [number, string] => {
+    const m = /^(\d+)([a-z]*)$/i.exec((nr ?? '').trim());
+    return m ? [parseInt(m[1], 10), m[2].toLowerCase()] : [Number.POSITIVE_INFINITY, nr ?? ''];
+  };
+  const fussAnzeige: Fussnote[] = [...fussAnzeigeRoh].sort((a, b) => {
+    const ka = fnNrKey(a.nr), kb = fnNrKey(b.nr);
+    return ka[0] - kb[0] || ka[1].localeCompare(kb[1]);
+  });
   const [artOffen, setArtOffen] = useState(!ganzAufgehoben); // einzelner Artikel ein-/ausklappbar; aufgehoben → zu
   // Fussnoten dem Absatz zuordnen, den sie betreffen: trägt der Absatz einen
   // Normverweis auf denselben Erlass (eli/cc-Basis), auf den die Fussnote
@@ -199,6 +215,11 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
     if (!f.nr) continue;
     if (f.sektion) { (fnProSektion[f.sektion] ??= []).push(f.nr); continue; }
     let idx = f.absatz != null ? e.bloecke.findIndex((b) => b.absatz === f.absatz) : -1;
+    // A31a: Marker in einem absatzlosen Fliesstext-Absatz (fn 667 in ZGB 798a) → am
+    // Ende SEINES Blocks (0-basierter Index vom Extraktor) statt auf der Artikelebene.
+    // Defensiv: Index im Bereich UND Zielblock wirklich absatzlos (gegen Sidecar-Drift).
+    if (idx < 0 && f.absatzIndex != null && f.absatzIndex >= 0 && f.absatzIndex < e.bloecke.length
+        && e.bloecke[f.absatzIndex].absatz == null) idx = f.absatzIndex;
     if (f.item && idx < 0) idx = e.bloecke.findIndex((b) => (b.items ?? []).some((it) => it.marke === f.item));
     if (idx >= 0 && f.item && (e.bloecke[idx].items ?? []).some((it) => it.marke === f.item)) {
       (fnProItem[`${idx}|${f.item}`] ??= []).push(f.nr); // Fussnote am lit/Ziff-Item

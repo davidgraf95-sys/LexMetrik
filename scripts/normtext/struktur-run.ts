@@ -64,6 +64,14 @@ for (const reg of bund) {
     const rfn = (randtitelFn ?? [])
       .map((rf) => { const f = defs.get(rf.fnId); return f ? { ...f, absatz: null, item: null, sektion: rf.label } : null; })
       .filter((f): f is Fussnote => !!f && !perArt.some((p) => p.nr === f.nr));
+    // A43-Hinweis (David 16.7.): Die ANZEIGE-Reihenfolge der Fussnoten (laufende
+    // Fedlex-Nummer) wird in der Darstellungsschicht hergestellt (ArtikelLeser
+    // sortiert fussAnzeige), NICHT hier. Die Sidecar-Reihenfolge bleibt bewusst
+    // [perArt, …rfn] (artikel-eigene VOR Section-heading-Fussnoten) — sie ist
+    // load-bearing für den Revisions-Extrakt (revisionen-extrakt.ts, Gleichdatum-
+    // Tie-Break first-wins): die eigene «Fassung gemäss»-Fussnote des Artikels muss
+    // VOR einer gleichdatierten Section-heading-Fussnote stehen, sonst attribuiert
+    // der Extrakt die Section-Revision fälschlich dem Artikel (§1/§3).
     const alle = [...perArt, ...rfn];
     sortiert[tok] = alle.length ? { ...rest, fussnoten: alle } : rest;
   }

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-16",
  "kopf": {
   "srNummer": "642.21",
   "titel": "Bundesgesetz über die Verrechnungssteuer",
@@ -604,7 +604,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 5
     },
     {
      "nr": "38",
@@ -616,7 +617,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 6
     },
     {
      "nr": "39",
@@ -640,7 +642,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 6
     },
     {
      "nr": "40",
@@ -1529,7 +1532,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -1572,7 +1576,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
@@ -2830,7 +2835,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     }
    ]
   },
@@ -2872,7 +2878,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     },
     {
      "nr": "123",
@@ -2888,7 +2895,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 1
     },
     {
      "nr": "124",
@@ -3020,7 +3028,8 @@
      "text": "Die Änderungen können unter <i>AS <b>1966</b> 385 </i>konsultiert werden.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "absatzIndex": 0
     }
    ]
   },
