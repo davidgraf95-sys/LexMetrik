@@ -51,7 +51,9 @@
        D-1.8: als DOKUMENTIERTE Stufe der ink-Rampe geführt (zwischen 500 und
        400) — D-4 rekalibriert sie mit der Rampe, sie ist kein Ad-hoc-Wert. */
     /* D-4: mit der ink-Rampe auf Hue 88° normalisiert (C≈0.015), L gehalten;
-       ≥4.5:1 auf --well bleibt erfüllt (4.76:1, vorher 4.75:1). */
+       ≥4.5:1 auf --well bleibt erfüllt (4.76:1, vorher 4.75:1).
+       D-5/A38 (16.7.2026): --well wurde heller/weisser (#F2EFE6→#F6F4EE) →
+       --placeholder/well steigt 4.76→4.98:1 (Ton unverändert, Kontrast-Gewinn). */
     --placeholder:#6D695F;
     /* Papier – Flächen. Token-Landkarte (Regel, ohne Wertänderung):
        --paper*   = SEITENHINTERGRUND (Body, grosse Flächen)
@@ -59,8 +61,32 @@
        --well     = versenkte Eingabefelder (lc-input).
        surface-raised/well sind bewusst Aliasse auf die Papier-Werte —
        eine Tönung, zwei semantische Namensräume. */
-    --paper:#FAF8F2; --paper-raised:#FEFDFA; --paper-sunken:#F2EFE6;
-    --surface:#FDFCF7; --surface-raised:var(--paper-raised);
+    /* D-5 (Flächen-Wärme, Papier-Treppe) + DAVID-DIREKTIVE A38 (16.7.2026,
+       ANMERKUNGEN-DAVID-2026-07-16.md Nachtrag, wörtlich «ausserdem mache die
+       ganze lexmetrik webseite heller uns weisser»): DEKLARIERTE ÜBERSTEUERUNG
+       der D-5-Spec-Zielwerte (FAHRPLAN-DESIGN-WAERME §0.1 «--paper #FAF8F2 ist
+       Fixpunkt» wird durch A38 überschrieben — die helle Fläche wird HELLER +
+       WEISSER). Treppen-MECHANIK der Spec bleibt: gestufte Flächen-Rollen, EINE
+       Papier-Achse (Hue ~90°, brass-/ink-konsistent wie D-4), L strikt steigend
+       well<paper<surface<raised (Erhebungs-Logik), Flexoki-Nuance (tiefere Fläche
+       = eine Spur mehr Chroma). ABER: Chroma site-weit ~30 % gesenkt → Wärme
+       bleibt nur noch feine NUANCE (nicht mehr sichtbar getönte Fläche, A38);
+       L angehoben. Alle Werte deterministisch mit culori in OKLCH entworfen +
+       gemessen (F2, keine Annahme):
+         --paper        #FAF8F2 → #FCFAF6  (L 0.979→0.986, C 0.0082→0.0057)
+         --paper-raised #FEFDFA → #FFFEFC  (L 0.994→0.997, C 0.0041→0.0028; ~weiss,
+                                            aber NICHT #FFFFFF — Reinweiss-Invariante d)
+         --paper-sunken #F2EFE6 → #F6F4EE  (L 0.952→0.967, C 0.0124→0.0082; die
+                                            «graue Mulde» der Wells war der sichtbarste
+                                            Cream-Ton → grösster A38-Gewinn)
+         --surface      #FDFCF7 → #FEFCFA  (L 0.991→0.992, C 0.0067→0.0034; Hue-Ausreisser
+                                            97°→Papier-Achse angeglichen)
+       Kontrast-Effekt: hellere Hintergründe HEBEN jeden Dunkeltext-Kontrast (sichere
+       Richtung) — alle WCAG-Pflichtpaare hell steigen (s. §F2b-Nachtrag D-5). Fixpunkt
+       im Tor auf #FCFAF6 nachgezogen (scharf, nicht entkernt). DUNKEL bleibt
+       UNBERÜHRT (A38 betrifft nur die helle Fläche; D-6 kommt separat). */
+    --paper:#FCFAF6; --paper-raised:#FFFEFC; --paper-sunken:#F6F4EE;
+    --surface:#FEFCFA; --surface-raised:var(--paper-raised);
     --well:var(--paper-sunken);
     /* Haarlinien */
     --line:color-mix(in oklab, var(--ink-900) 10%, transparent);

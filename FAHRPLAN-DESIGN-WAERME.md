@@ -268,8 +268,31 @@ bleibt beratend); ink-500/well aus RISSE in PFLICHT verschoben → `check:farbwe
 - **Referenzfälle:** Startseiten-Untertitel/Meta-Zeilen, Rechner-Hilfetexte, Footer.
 - **Aufwand:** M · flip-reversibel.
 
-### D-5 · Flächen-Wärme: Papier-Treppe im OKLCH-Raum (EIN Entwurf)
+### D-5 · Flächen-Wärme: Papier-Treppe im OKLCH-Raum ✅ (16.7.2026, PR feat/design-d5-papier)
 *(Befunde 2+35 konsolidiert; Befund 1 als Diagnose übernommen, seine `--paper-warm`-Mechanik VERWORFEN — E1-Veto)*
+
+**✅ GEBAUT (16.7.2026) mit DEKLARIERTER ÜBERSTEUERUNG durch DAVID-DIREKTIVE A38.**
+A38 (16.7., wörtlich «ausserdem mache die ganze lexmetrik webseite heller uns weisser»,
+Quelle `docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-16.md` Nachtrag) **übersteuert
+die Flächen-Ton-Zielwerte dieser Spec** — insbesondere Fixpunkt §0.1 (`--paper #FAF8F2`
+war «unantastbar»): die Papier-Treppe wird mit HELLERER, WEISSERER Basis gebaut. Die
+Treppen-MECHANIK der Spec bleibt WÖRTLICH erhalten (gestufte Flächen-Rollen, EINE
+Papier-Achse Hue ~90° = brass-/ink-konsistent wie D-4, L strikt steigend
+`well<paper<surface<raised`, Flexoki-Nuance tiefere Fläche = eine Spur mehr Chroma).
+Abweichung von der Spec: statt «tieferes Papier mit mehr Chroma» wird die Chroma
+site-weit **~30 % gesenkt** (Wärme bleibt nur noch feine NUANCE in Tinte/Akzenten,
+keine sichtbar getönte Fläche mehr, A38) und L angehoben. **Nur `:root` (HELL) —
+DUNKEL bleibt unberührt** (A38 betrifft die helle Fläche; D-6 kommt separat).
+- **Werte (culori/OKLCH, F2-gemessen):** `--paper #FAF8F2→#FCFAF6` · `--paper-raised
+  #FEFDFA→#FFFEFC` (~weiss, NICHT #FFFFFF — Reinweiss-Invariante) · `--paper-sunken/well
+  #F2EFE6→#F6F4EE` · `--surface #FDFCF7→#FEFCFA` (Hue-Ausreisser 97°→Papier-Achse).
+- **Mess-Quittung:** hellere Hintergründe HEBEN jeden Dunkeltext-Kontrast (sichere
+  Richtung) — ink-500/well **4.62→4.83**, `--placeholder`/well **4.76→4.98**, ink-600/well
+  **6.67→6.98**; Referenz C-1/C-2/C-3 hell **4.81→5.03 · 5.24→5.48 · 4.91→5.13** (dunkel
+  unverändert). `check:farbwelt`: Fixpunkt-Hell `#FCFAF6` + Referenz-Hell deklariert
+  nachgezogen (scharf), 48 WCAG-Pflichtpaare grün, L-Leiter beide Modi grün. golden
+  byte-gleich (CSS-only). Reglement-Nachtrag `DESIGN-REGLEMENT.md §F2b-Nachtrag D-5` +
+  `-NORMTEXT §4b-B`. Abnahme-Mappe `abnahme/design-d5/`.
 - **Kern:** `--surface`/`--paper-raised` sind heute KÜHLER als `--paper` (R−B 6/4 vs. 8)
   — Karten entziehen der Seite Wärme. Beide tonal auf die Papier-Achse (Ziel-Hue =
   brass), **heller als paper bleibt Pflicht** (Erhebungs-Logik); zugleich

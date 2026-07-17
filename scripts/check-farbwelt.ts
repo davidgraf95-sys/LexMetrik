@@ -235,15 +235,22 @@ const PFLICHT: Paar[] = [
 // Mixe mit `transparent` rendern wegen premultiplied alpha raumunabhängig gleich.
 type Ref = { fg: string; bg: string; hell: number; dunkel: number; quelle: string };
 const REF_TOL = 0.06;
+// D-5/A38 (16.7.): --well heller/weisser (#F2EFE6→#F6F4EE) → die HELL-Werte steigen
+// (hellerer Grund = mehr Kontrast); DUNKEL unverändert (dunkle Fläche unberührt, A38).
+// Neu deterministisch gemessen (culori) und in §4b-B/§F2b nachgezogen.
 const REFERENZ: Ref[] = [
-  { fg: 'slate-500', bg: 'well', hell: 4.81, dunkel: 3.47, quelle: 'C-1 lc-chip-entscheid Tick (§4b-B)' },
-  { fg: 'warn-700', bg: 'well', hell: 5.24, dunkel: 9.43, quelle: 'C-2 Currency-Chip warn (§4b-B)' },
-  { fg: 'brass-700', bg: 'well', hell: 4.91, dunkel: 10.48, quelle: 'C-3 brass-Tick (§4b-B)' },
+  { fg: 'slate-500', bg: 'well', hell: 5.03, dunkel: 3.47, quelle: 'C-1 lc-chip-entscheid Tick (§4b-B; hell D-5: 4.81→5.03)' },
+  { fg: 'warn-700', bg: 'well', hell: 5.48, dunkel: 9.43, quelle: 'C-2 Currency-Chip warn (§4b-B; hell D-5: 5.24→5.48)' },
+  { fg: 'brass-700', bg: 'well', hell: 5.13, dunkel: 10.48, quelle: 'C-3 brass-Tick (§4b-B; hell D-5: 4.91→5.13)' },
 ];
 
 // (Fixpunkt) --paper hell/dunkel sind unantastbare Anker (Fixpunkt 1).
+// D-5/A38-Übersteuerung (16.7.): der frühere Hell-Fixpunkt #FAF8F2 ist durch Davids
+// Direktive «ganze Website heller und weisser» ausdrücklich überschrieben → neuer,
+// hellerer/weisserer Hell-Anker #FCFAF6 (deklariert, Tor bleibt scharf). DUNKEL bleibt
+// unantastbar (A38 betrifft nur die helle Fläche; D-6 kommt separat).
 const FIXPUNKT: { token: string; mode: Mode; soll: string }[] = [
-  { token: 'paper', mode: 'hell', soll: '#FAF8F2' },
+  { token: 'paper', mode: 'hell', soll: '#FCFAF6' },
   { token: 'paper', mode: 'dunkel', soll: '#16150F' },
 ];
 

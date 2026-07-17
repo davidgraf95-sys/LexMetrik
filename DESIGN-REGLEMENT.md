@@ -241,12 +241,15 @@ prüft der Orchestrator separat). Vier Klassen:
 
    | Rolle | Tick/Text auf `--well` | hell | dunkel |
    |---|---|---|---|
-   | C-1 `lc-chip-entscheid` | slate-500 | 4.81 | 3.47 |
-   | C-2 Currency-Chip warn | warn-700 | 5.24 | 9.43 |
-   | C-3 brass-Tick | brass-700 | 4.91 | 10.48 |
+   | C-1 `lc-chip-entscheid` | slate-500 | 5.03 | 3.47 |
+   | C-2 Currency-Chip warn | warn-700 | 5.48 | 9.43 |
+   | C-3 brass-Tick | brass-700 | 5.13 | 10.48 |
 
-   Fixpunkt (unantastbar, FAHRPLAN Fixpunkt 1): `--paper` hell `#FAF8F2` /
-   dunkel `#16150F`.
+   *(D-5/A38, 16.7.: die HELL-Werte stiegen (4.81→5.03 · 5.24→5.48 · 4.91→5.13),
+   weil `--well` heller/weisser wurde — DUNKEL unverändert; s. F2b-Nachtrag D-5.)*
+
+   Fixpunkt Hell durch A38 überschrieben (deklariert, s. Nachtrag D-5): `--paper`
+   hell `#FCFAF6` (früher `#FAF8F2`) / dunkel unverändert `#16150F`.
 3. **Bekannte Risse (WARNUNG + FAIL nur bei Verschlechterung — D-1-Input):**
    heute unter der Schwelle liegende Paare als Baseline-Guard, damit das Tor auf
    dem IST-Stand grün ist, ohne die Risse zu verstecken:
@@ -317,6 +320,42 @@ Enden, ~0.012–0.015 in den Mitten 600–400). Hue-Drift/L-Monotonie sind für 
   color-mix-Rezepte auf `var(--ink-900)`. `--ink-fixed-dark` (Solitär, speist hell
   ink-900 UND `--auf-gold`) wanderte mit EINEM Wert `#1A1A17`→`#1C1A15`; `--auf-gold`
   auf `brass-300` bleibt 10.71:1.
+
+**F2b-Nachtrag D-5 (16.7.2026) — Flächen-Wärme: Papier-Treppe HELLER + WEISSER
+(FAHRPLAN-DESIGN-WAERME D-5, Befunde 2+35) mit DAVID-DIREKTIVE A38.** A38 (wörtlich
+«ausserdem mache die ganze lexmetrik webseite heller uns weisser»,
+`docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-16.md` Nachtrag) **übersteuert die
+D-5-Spec-Zielwerte**: die Papier-Treppe wird mit hellerer, weisserer Basis gebaut.
+Die Treppen-MECHANIK der Spec bleibt (gestufte Flächen-Rollen, EINE Papier-Achse
+Hue ~90° = brass-/ink-konsistent wie D-4, L strikt steigend `well<paper<surface<raised`,
+Flexoki-Nuance tiefere Fläche = eine Spur mehr Chroma); **geändert** sind nur die
+Zielwerte: Chroma site-weit ~30 % gesenkt (Wärme bleibt feine NUANCE, keine sichtbar
+getönte Fläche mehr), L angehoben. **Nur `:root` (HELL) — DUNKEL bleibt unberührt**
+(A38 betrifft die helle Fläche; D-6 kommt separat). Alle Werte deterministisch in
+OKLCH entworfen + mit culori gemessen (F2):
+
+- **Flächen-Token (hell):**
+
+  | Token | alt → neu | L alt→neu | C alt→neu |
+  |---|---|---|---|
+  | `--paper` | `#FAF8F2`→`#FCFAF6` | 0.979→0.986 | 0.0082→0.0057 |
+  | `--paper-raised` | `#FEFDFA`→`#FFFEFC` | 0.994→0.997 | 0.0041→0.0028 |
+  | `--paper-sunken`/`--well` | `#F2EFE6`→`#F6F4EE` | 0.952→0.967 | 0.0124→0.0082 |
+  | `--surface` | `#FDFCF7`→`#FEFCFA` | 0.991→0.992 | 0.0067→0.0034 |
+
+  `--paper-raised` ist nun nahezu weiss, aber **nicht `#FFFFFF`** (Reinweiss-
+  Invariante d). Hue-Ausreisser von `--surface` (97°) auf die Papier-Achse angeglichen.
+- **Kontrast-Effekt = sichere Richtung:** hellere Hintergründe HEBEN jeden
+  Dunkeltext-Kontrast — alle Hell-Pflichtpaare steigen, kein AA-Riss. Gemessen (culori,
+  fg auf neuem Grund): ink-500 well/paper/surface **4.83·5.10·5.19** (vorher
+  4.62·5.00·5.17) · `--placeholder`/well **4.98** (4.76) · ink-600/well **6.98** (6.67).
+  Referenzwerte C-1/C-2/C-3 hell (Tabelle oben) 4.81→**5.03** · 5.24→**5.48** ·
+  4.91→**5.13** (dunkel unverändert). Status-Badge-Text auf `-bg` (sage/slate/warn/
+  danger-700) steigt ebenfalls (hellere `paper`-Basis der `-bg`-Mixe).
+- **Tor `check:farbwelt`:** Fixpunkt-Hell auf `#FCFAF6` + Referenz-Hell-Werte
+  deklariert nachgezogen (scharf, nicht entkernt); 48 WCAG-Pflichtpaare hell+dunkel
+  grün, Flächen-L-Leiter beide Modi grün. golden byte-gleich (reine CSS-Token). Die
+  8 beratenden Warnungen (brass-Chroma, danger-Riss) sind Bestand, unverändert.
 
 ## G · Rollen, Farb-Wörterbuch & Wärme-Architektur (D-2-Nachträge)
 
