@@ -50,8 +50,9 @@ Für die Karten-ID aus `src/lib/startseiteConfig.ts`:
 **Gate — Phase 2 startet NUR, wenn David ein ausdrückliches Verdikt
 (abgenommen / mit Auflagen / zurückgewiesen) zu GENAU dieser Karte
 geliefert hat.** Kein Verdikt = Phase 1 ist der fertige, abgeschlossene
-Stand; nicht warten, nicht erinnern, nicht drängen (David nimmt selbst ab
-und hat bis 1.12.2026 keine Abnahme-Zeit). Selbstabnahme heisst: David
+Stand; nicht warten, nicht erinnern, nicht drängen (David nimmt selbst ab —
+unbefristete Daueranweisung; zusätzlich hat er bis 1.12.2026 keine
+Abnahme-Zeit, FAHRPLAN-LERNPHASE-2026.md). Selbstabnahme heisst: David
 nimmt ohne Zweitperson ab — nie die Abnahme im Namen Davids oder als
 Agent verfassen.
 

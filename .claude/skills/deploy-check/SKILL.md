@@ -56,8 +56,9 @@ npm run check:perf-budget  # QS-PERF: Bundle-Topologie/-Budget + Single-React;
   Mess-Schritt in Schritt 4 (Nachkontrolle), Punkt 4.
 - Golden-Abweichungen ERST den interleaved Commits der Parallel-Session
   zuordnen, dann erst über Neu-Schreiben entscheiden (nur deklariert).
-- Workflow-/Review-Agents überschreiben /tmp-Fedlex-Caches — vor
-  Zitate-Prüfung Anker-Count der Caches verifizieren.
+- Falls zusätzlich `check:netz`/`check:zitate` gefahren wird: vorher den
+  Anker-Count der /tmp-Fedlex-Caches verifizieren — Workflow-/Review-Agents
+  überschreiben sie.
 
 ## 2 · Bug-Check §9
 
@@ -123,7 +124,7 @@ Arbeitsverzeichnis.
 | Ausrede | Realität |
 |---|---|
 | «Der Skill ist die operative Form von §9 — CLAUDE.md muss ich nicht erneut lesen.» | §9 ist der Arbiter, der Skill nur Ausführungshilfe. Bei Widerspruch gewinnt der aktuelle §9-Text — genau so wurde dieser Skill schon einmal veraltet befolgt. |
-| «§9 nennt selbst ‹Prod: npx vercel --prod› — der Handschritt ist gedeckt.» | Das ist ein Residuum VOR dem Weg-1-Absatz; der Weg-1-Absatz übersteuert: der Merge IST der Deploy. |
+| «§9 nennt selbst ‹Prod: npx vercel --prod› — der Handschritt ist gedeckt.» | Diese alte Prod-Zeile wurde am 17.7.2026 aus §9 gestrichen; Weg 1 «Merge = Deploy» ist der einzige verbindliche Pfad. Wer sich an ‹npx vercel --prod› erinnert, erinnert einen Altstand. |
 | «Doppelt hält besser — ein zusätzlicher vercel --prod aus sauberem Worktree schadet nicht.» | Doppel-Deploy = Race. Der langsamere Build überschreibt den korrekten; bei HEAD ≠ origin/main geht ein falscher Commit live. |
 | «Die GitHub-CI ist grün — das ersetzt die lokalen Tore, ich kann --auto schon mal setzen.» | Grüne CI ist Merge-Voraussetzung, nicht Ersatz für Schritte 0–2. `--auto` vor Abschluss von 0–2 = unkontrollierter Prod-Deploy bei nächstem grünen CI-Lauf. |
 | «David hat nur den Deploy verlangt, den Push nicht wörtlich — also Push einzeln bestätigen lassen.» | Push ist stehend freigegeben (2.7.2026); die Einzel-Nachfrage ist abgeschafft. «Bring das auf Prod» deckt Push + Merge. |
@@ -138,7 +139,7 @@ Arbeitsverzeichnis.
 - Du setzt `gh pr merge --auto`, bevor die Schritte 0–2 abgeschlossen sind.
 - Du willst David für den Push separat um Bestätigung bitten.
 - Du willst mergen, obwohl ein Tor aus Schritt 1 rot oder Schritt 2 offen ist.
-- Du liest §9-Zeile «Prod: `npx vercel --prod`» als Freibrief für einen Handschritt.
+- Du berufst dich auf die alte, am 17.7.2026 gestrichene §9-Zeile «Prod: `npx vercel --prod`» als Freibrief für einen Handschritt.
 - Nach dem Merge willst du «zur Sicherheit» zusätzlich manuell deployen.
 
 **Buchstabe = Geist:** Ein zweiter Prod-Deploy-Pfad, der «technisch kein

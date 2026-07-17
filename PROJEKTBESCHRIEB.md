@@ -241,8 +241,9 @@ Touch-Ziele < 44 px (Polish-Liste).
 
 ## 6. Betrieb & Pflege
 
-- **Deploy**: `npx vercel --prod` (Projekt lexmetrik) — nur nach Davids
-  explizitem Ja; danach Live-Verifikation (Asset-Hash).
+- **Deploy** (Weg 1, David 3.7.2026): Merge nach `main` = Auto-Prod-Deploy
+  via Vercel (Projekt lexmetrik); Push/PR/Auto-Merge stehend freigegeben,
+  §9-Sorgfalt vor dem Merge; danach Live-Verifikation (Asset-Hash).
 - **Monatlich**: LIK-Reihe nach BFS-Publikation regenerieren
   (`scripts/lik-reihe-generieren.py`, Anleitung im Skript-Kopf).
 - **Periodisch**: Referenzzinssatz (Mietrecht), Feiertagsverzeichnis,

@@ -23,10 +23,13 @@ NICHT erledigt, offener Punkt.
 
 1. Tore lokal: `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe,
    nie `tail`!) · `npm run build` · `npm run check`.
-2. §9: Bug-Check (unabhängige Review-Agents) — und **Push/Deploy nur nach
-   explizitem Ja von David.**
-3. Prod: `npx vercel --prod` (im Repo-Root). Danach Live-Verifikation
-   (Asset-Hash der ausgelieferten index.html gegen `dist/`).
+2. §9: Bug-Check (unabhängige Review-Agents) — die gesamte §9-Sorgfalt
+   **vor** dem Merge.
+3. Weg 1 (David 3.7.2026): Der **Merge nach `main` IST der Deploy** — Vercel
+   liefert `main` automatisch auf Prod aus. Push/PR/Auto-Merge sind stehend
+   freigegeben (David 2.7.2026), kein separater `vercel --prod`-Handschritt.
+   Danach Live-Verifikation (Asset-Hash der ausgelieferten index.html gegen
+   `dist/`). Sonderfall ungemergter Stand: `npx vercel --prod --archive=tgz`.
 
 ## Periodische Pflege (maschinell überwacht durch `npm run check:verfall`)
 

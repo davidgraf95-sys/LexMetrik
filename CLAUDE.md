@@ -211,10 +211,11 @@ bestimmen, welche Exportformate überhaupt angeboten werden.
 ## §9 Deploy-Disziplin
 
 Vor jedem Deploy: Bug-Check (unabhängige Review-Agents + empirische Repros +
-Regressionstests). Prod: `npx vercel --prod` (Projekt `lexmetrik`, lexmetrik.vercel.app).
+Regressionstests).
 
 **Merge = Deploy-Entscheid (David 3.7.2026, «Weg 1»):** Vercel liefert `main`
-automatisch auf Prod aus — damit IST die Freigabe zum **Merge nach `main`** die
+automatisch auf Prod aus (Projekt `lexmetrik`, lexmetrik.vercel.app) — damit IST
+die Freigabe zum **Merge nach `main`** die
 Live-Gang-Entscheidung; ein separater `vercel --prod`-Handschritt ist nicht nötig.
 Die §9-Sorgfalt (Bug-Check, grüne Tore, Golden byte-gleich) gilt weiterhin **vor**
 dem Merge. **Push** ist stehend freigegeben («immer ja zum push», 2.7.2026: `git push`
