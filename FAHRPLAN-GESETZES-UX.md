@@ -1576,6 +1576,24 @@ A38/D-Kette und A39/PR-B/PR-C laufen als eigene Stränge (andere Flächen).
 Je Einheit gilt die A9-DoD-Zeile (§10.4) wörtlich; Risiko-Einheiten (E1, A39,
 A40-Anteil) mit Gegenprüfungs-Quittung.
 
+**Status E7/A33 ✅ (17.7.2026, Worktree `lm-a33`, Branch `fix/a33-gliederung`):**
+Ultracode-Audit + Fix-Einheit gebaut. Bestätigte Root-Causes: **RC1** TOC-Mitscroll
+zentrierte animiert (½ Container, `smooth`) statt zu nudgen, ohne Nutzer-Sperre
+(Halb-Container-Sprünge 289–315 px, Blätter-Rückriss, Klickziel-Hazard); **RC2**
+Auto-Akkordeon reflowte unentprellt je Zweigwechsel. Fixes (alle Darstellungsschicht
+§3): **F1** Rand-Nudge instant statt Zentrieren-smooth (Dead-Band == Zielposition,
+kein `scrollIntoView` → Pane-Scope); **F2** Nutzer-Interaktions-Guard (1,5 s Pause bei
+aktiver TOC-Bedienung, passive Input-Listener); **F3** Auto-Akkordeon ~200 ms trailing
+entprellt (Verhalten K bleibt, nur Frequenz sinkt; Klick-Sprung sofort); **V1** stille
+Wiederaufnahme erst beim nächsten Artikelwechsel. Widerlegt (nicht gebaut, nichtBauen
+respektiert): H3/H4 content-visibility-Flip-Flop (0 Flackermuster), keine Hysterese im
+Spy-Kern, kein Abschalten/Animieren des Akkordeons, kein «Zur Stelle»-Button (A28),
+kein SektionKontextKopf-Revival (A27). V3 (rootMargin↔Bezugslinie-Kopplung, H6) bewusst
+deferiert — H6 unreproduziert, Eingriff am Spy-Kern ohne Beleg (offener Härtungs-Posten).
+Beweis: e2e `leser-gliederung-a33.e2e.ts` (F1 0 px vorher 289–315; F2/V1 Δ<24 px;
+Klick-Ruhe; A9-CLS<0.05), CLS-Neutralität gegen Baseline belegt, golden byte-gleich,
+Gegenprüfung n/a (reines UI). Trailer `Roadmap: W2·5d`.
+
 
 ## 11 · Gesetze-Aufteilung Bund/Kantone V2 — «Erfassungsgrad-Staffel» (VERBINDLICHE Bau-Spec, 16.7.2026)
 

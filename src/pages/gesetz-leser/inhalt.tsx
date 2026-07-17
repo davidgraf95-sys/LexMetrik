@@ -251,6 +251,18 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Entprellt die Kopf-Artikel-Meldung: beim schnellen Durchscrollen sonst ein
   // setKopfDaten (Shell) pro Artikelgrenze → unnötige Re-Renders der übrigen Panes.
   const aktArtikelTimer = useRef<number | null>(null);
+  // E7/A33-F3 (RC2): das automatische Auf-/Zuklappen des aktiven Zweigs (K) wird
+  // entprellt — analog aktArtikelTimer/tabArtikelTimer. Beim schnellen Durchscrollen
+  // sonst eine dichte Reflow-Folge des Gliederungsbaums (Δ~100 px pro Zweigwechsel),
+  // die den TOC in Eigenbewegung versetzt («Gliederung springt umher», David 16.7.).
+  const tocBaumTimer = useRef<number | null>(null);
+  // E7/A33-F2 (RC1b): Zeitstempel der letzten NUTZER-Bedienung des TOC (wheel/
+  // pointerdown/touchstart). Solange der Nutzer die Gliederung aktiv durchblättert,
+  // pausiert das automatische Nachführen (Mitscroll-Effekt) — sonst reisst eine
+  // verspätete Rückhol-Bewegung das manuelle Erkunden zurück (Symptom 3). Kein
+  // `scroll`-Event als Auslöser: der eigene programmatische Scroll würde den Guard
+  // sonst selbst armieren.
+  const tocTouchRef = useRef(0);
 
   useEffect(() => {
     let lebt = true;
@@ -435,6 +447,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       // bleiben unangetastet (der Zweig wird vom Spy normal nachgeführt + collabiert
       // beim Wegscrollen wieder), nur ein evtl. manuelles ZU wird aufgehoben.
       for (const id of ids) manuellZuRef.current.delete(id);
+      // F3: einen noch schwebenden Auto-Akkordeon-Timer verwerfen — der Klick-Sprung
+      // setzt den Zielpfad sofort und autoritativ; ein verspäteter Auto-Update dürfte
+      // ihn nicht überschreiben.
+      if (tocBaumTimer.current != null) window.clearTimeout(tocBaumTimer.current);
       setAktivIds(ids);
       setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((id) => [id, true])) }));
       jumpLock.current = true;
@@ -477,6 +493,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const springeZuSektion = useCallback((id: string) => {
     const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
     jumpLock.current = true;
+    // F3: schwebenden Auto-Akkordeon-Timer verwerfen (Klick-Sprung ist autoritativ).
+    if (tocBaumTimer.current != null) window.clearTimeout(tocBaumTimer.current);
     // Sprung-Ziel als MANUELL behandeln (K): in manuellOffenRef aufnehmen und aus
     // dem Auto-Set nehmen, damit der Scroll-Spy den angesprungenen Zweig nicht
     // gleich wieder zuklappt.
@@ -713,26 +731,37 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       //     aktiven Eintrag dann im TOC-Container sichtbar.
       const ids = pfadZu(sektionen, (s) => s.artikel.some((x) => x.artikel === token)) ?? [];
       if (!ids.length) return;
-      // Wertgleichen Pfad nicht neu setzen (pfadZu liefert stets ein neues Array):
-      // sonst Re-Render + Mitscroll-Effekt bei jedem Artikel derselben Blatt-Sektion.
-      setAktivIds((prev) => prev.length === ids.length && prev.every((v, i) => v === ids[i]) ? prev : ids);
-      // Auto-Set fortschreiben (Seiteneffekt ausserhalb des State-Updaters, der
-      // rein bleibt): zuklappen, was automatisch offen war und nicht mehr im
-      // aktiven Pfad liegt; aufklappen, was jetzt im Pfad liegt.
-      const auto = autoOffenRef.current;
-      const schliessen: string[] = [];
-      for (const id of [...auto]) if (!ids.includes(id)) { auto.delete(id); schliessen.push(id); }
-      // Aktive Pfad-IDs auto-aufklappen — aber manuell geöffnete NICHT ins Auto-Set
-      // adoptieren (die bleiben dauerhaft offen) und manuell ZUgeklappte (manuellZuRef)
-      // gar nicht auto-aufklappen (explizites Einklappen des aktiven Zweigs gewinnt).
-      for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) auto.add(id);
-      setTocBaum((o) => {
-        let geaendert = false;
-        const n = { ...o };
-        for (const id of ids) if (!n[id] && !manuellZuRef.current.has(id)) { n[id] = true; geaendert = true; }
-        for (const id of schliessen) if (n[id]) { n[id] = false; geaendert = true; }
-        return geaendert ? n : o; // identische Referenz, wenn nichts ändert → kein Re-Render
-      });
+      // F3 (RC2, Auftrag David 16.7. «Gliederung springt umher»): den (a)-Block
+      // (Markierung + Auto-Akkordeon) TRAILING entprellen (~200 ms, analog aktArtikel/
+      // tabArtikel oben). Der Timer verarbeitet stets das ZULETZT gemeldete `ids` (jeder
+      // neue Frame löscht den vorigen Timer). Wirkung: beim schnellen Durchscrollen EIN
+      // Auf/Zu statt einer dichten Reflow-Folge des Baums. Das Verhalten (Auto-Auf-/
+      // Zuklappen, Auftrag K 26.6.) bleibt — nur seine Frequenz sinkt. Der Klick-Sprung-
+      // Pfad (springeZuArtikel/springeZuSektion) setzt aktivIds/tocBaum weiterhin SOFORT
+      // und löscht diesen Timer (kein Kampf mit einem verspäteten Auto-Update).
+      if (tocBaumTimer.current != null) window.clearTimeout(tocBaumTimer.current);
+      tocBaumTimer.current = window.setTimeout(() => {
+        // Wertgleichen Pfad nicht neu setzen (pfadZu liefert stets ein neues Array):
+        // sonst Re-Render + Mitscroll-Effekt bei jedem Artikel derselben Blatt-Sektion.
+        setAktivIds((prev) => prev.length === ids.length && prev.every((v, i) => v === ids[i]) ? prev : ids);
+        // Auto-Set fortschreiben (Seiteneffekt ausserhalb des State-Updaters, der
+        // rein bleibt): zuklappen, was automatisch offen war und nicht mehr im
+        // aktiven Pfad liegt; aufklappen, was jetzt im Pfad liegt.
+        const auto = autoOffenRef.current;
+        const schliessen: string[] = [];
+        for (const id of [...auto]) if (!ids.includes(id)) { auto.delete(id); schliessen.push(id); }
+        // Aktive Pfad-IDs auto-aufklappen — aber manuell geöffnete NICHT ins Auto-Set
+        // adoptieren (die bleiben dauerhaft offen) und manuell ZUgeklappte (manuellZuRef)
+        // gar nicht auto-aufklappen (explizites Einklappen des aktiven Zweigs gewinnt).
+        for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) auto.add(id);
+        setTocBaum((o) => {
+          let geaendert = false;
+          const n = { ...o };
+          for (const id of ids) if (!n[id] && !manuellZuRef.current.has(id)) { n[id] = true; geaendert = true; }
+          for (const id of schliessen) if (n[id]) { n[id] = false; geaendert = true; }
+          return geaendert ? n : o; // identische Referenz, wenn nichts ändert → kein Re-Render
+        });
+      }, 200);
     };
     const io = new IntersectionObserver((entries) => {
       for (const en of entries) sichtbar.set(en.target, en);
@@ -755,6 +784,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       if (raf) cancelAnimationFrame(raf);
       if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
       if (aktArtikelTimer.current != null) window.clearTimeout(aktArtikelTimer.current);
+      if (tocBaumTimer.current != null) window.clearTimeout(tocBaumTimer.current); // F3
     };
   }, [sektionen, ohneGliederung, basisPfad, offen, sucheDebounced, istSekundaer, imPane, wurzel]);
 
@@ -771,15 +801,50 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const wurzelEl = paneRoot(imPane, wurzel);
     const cont = (wurzelEl ?? document).querySelector('[data-toc]') as HTMLElement | null;
     if (!cont) return;
+    // F2 (RC1b) + V1: solange der Nutzer die Gliederung aktiv durchblättert (letzte
+    // Bedienung < 1,5 s her), NICHT nachführen — er soll sich frei darin bewegen
+    // können (David 16.7. «Wenn man sich darin bewegt»). V1 (stille Wiederaufnahme):
+    // dieser Effekt läuft nur bei echtem aktivIds-/tocBaum-Wechsel; nach Ablauf des
+    // Guards führt also erst der NÄCHSTE Artikelwechsel wieder nach — keine verspätete
+    // Rückhol-Bewegung, die das Erkunden abbricht.
+    if (Date.now() - tocTouchRef.current < 1500) return;
     const aktive = cont.querySelectorAll('[data-toc-aktiv]');
     const el = aktive[aktive.length - 1] as HTMLElement | undefined;
     if (!el) return;
     const cr = cont.getBoundingClientRect();
     const er = el.getBoundingClientRect();
-    if (er.top < cr.top + 8 || er.bottom > cr.bottom - 8) {
-      cont.scrollTo({ top: cont.scrollTop + (er.top - cr.top) - cr.height / 2, behavior: 'smooth' });
-    }
+    // F1 (RC1a): minimaler Rand-NUDGE statt Zentrieren, INSTANT statt smooth. Nur so
+    // weit scrollen, dass der aktive Eintrag knapp in das 8-px-Dead-Band am jeweiligen
+    // Rand rückt (Auslöseschwelle == Zielposition → kein Re-Trigger); Delta ≈ eine
+    // Zeilenhöhe statt ½ Container (früher `- cr.height/2` = Sprünge von 289–315 px).
+    // Bewusst KEIN scrollIntoView({block:'nearest'}): das kann Ancestor/Seite mitscrollen
+    // (E-Regression, Kommentar oben «nie die Seite scrollen»). Kein `smooth`: beseitigt
+    // den Klickziel-Hazard (Buttons wandern nicht mehr unter dem Cursor weg).
+    const dOben = er.top - (cr.top + 8);
+    const dUnten = er.bottom - (cr.bottom - 8);
+    if (dOben < 0) cont.scrollTo({ top: cont.scrollTop + dOben });
+    else if (dUnten > 0) cont.scrollTo({ top: cont.scrollTop + dUnten });
   }, [aktivIds, tocBaum, imPane, wurzel]);
+
+  // F2 (RC1b): Nutzer-Interaktions-Guard. Passive Input-Listener am [data-toc]-
+  // Container (pane-gescopt) armieren den Guard — NICHT `scroll`, sonst würde der
+  // eigene programmatische Nudge den Guard selbst auslösen. Läuft neu, sobald die
+  // TOC-Spalte erscheint/verschwindet (istXl/tocOffen/sektionen).
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const wurzelEl = paneRoot(imPane, wurzel);
+    const cont = (wurzelEl ?? document).querySelector('[data-toc]') as HTMLElement | null;
+    if (!cont) return;
+    const merke = () => { tocTouchRef.current = Date.now(); };
+    cont.addEventListener('wheel', merke, { passive: true });
+    cont.addEventListener('pointerdown', merke, { passive: true });
+    cont.addEventListener('touchstart', merke, { passive: true });
+    return () => {
+      cont.removeEventListener('wheel', merke);
+      cont.removeEventListener('pointerdown', merke);
+      cont.removeEventListener('touchstart', merke);
+    };
+  }, [sektionen, istXl, tocOffen, imPane, wurzel]);
 
   // W2·5d U-POSITION/A16: laufend den Scroll-Anker dieses Reiters festhalten
   // (oberster sichtbarer Artikel `letzterArtToken` + Offset in ihn hinein). Beim
