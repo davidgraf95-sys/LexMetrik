@@ -38,7 +38,7 @@ npm test
 npm run lint        # nie tail/Pipe — hat schon 8 Fehler verschluckt
 npm run build
 npm run golden:vergleich   # byte-gleich; Exit-Code prüfen!
-npm run check       # Sweep, Smoke, Register; check:caches VOR check:zitate
+npm run check       # check:seriell-Kette (Sweep, Smoke, Register u. a.)
 npm run test:e2e    # Playwright (a11y/axe beide Theme-Modi + Funktions-Smokes);
                     # braucht dist (nach build), startet vite preview selbst.
 npm run check:perf-budget  # QS-PERF: Bundle-Topologie/-Budget + Single-React;

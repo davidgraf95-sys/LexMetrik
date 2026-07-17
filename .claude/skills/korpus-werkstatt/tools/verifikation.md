@@ -139,9 +139,15 @@ Pfad ist ein Risiko-Pfad. Dort ist die adversariale Gegenprüfung **verpflichten
   (z. B. Abschnitt B: richtiger Text unter falschem Erlass-Label gefangen). Konkreter
   Gegentest-Kandidat: der dokumentierte **Tabelle-verloren / Spaltenmerge**-Befund (52 Gesetze +
   22 Kantonstarife, `STRUKTUR.md`).
-- **Tor:** das maschinelle `check:gegenpruefung` ist **noch im Aufbau (`[OF]`)**, geführt als
-  Querschnitt **`QS-GP`** im Querschnitt-Band der `ROADMAP.md`. **Bis es steht: das adversariale
-  Protokoll manuell fahren** und das Verdikt im §14.5-Commit-Trailer festhalten
+- **Tor:** das maschinelle `check:gegenpruefung` ist **implementiert und in `npm run check`
+  verdrahtet** (CI-ausgenommen; Querschnitt **`QS-GP`** im Querschnitt-Band der `ROADMAP.md`): es
+  liest `bibliothek/.gegenpruefung-pending` und geht **nur wenn Risiko-Globs im Diff sind**
+  (`scripts/normtext/**`, `public/normtext/*.json`, `src/lib/normtext/**`, `scripts/fedlex-*`, …)
+  bei fehlendem Nachweis, Hash-Mismatch oder Verdikt ≠ «bestanden» ROT. **Reine Entscheid-Outputs
+  (`public/rechtsprechung/**`) deckt es NICHT** — dort die Pflicht-Gegenprüfung trotzdem fahren und
+  nur im §14.5-Trailer quittieren. Quittiert wird über den persönlichen Skill **»gegenpruefung«**
+  (der `npm run gegenpruefung:ok` erst bei Verdikt «bestanden» aufruft), nicht als Direktbefehl:
+  das Verdikt an den Diff-Hash binden und im §14.5-Commit-Trailer festhalten
   (`Gegenpruefung: <Verdikt> (<Modell>, <Linsen>) — <Befunde>`, bzw. `n/a — reine Prüflogik` bei
   Tor-/Test-Code ohne Inhaltsänderung).
 - David-Daueranweisung: **immer Opus**, auch in Sub-Agenten/Workflows (`model:'opus'` explizit

@@ -1,6 +1,6 @@
 ---
 name: abnahme
-description: Bereitet Davids fachliche Abnahme eines Katalog-Eintrags vor (Abnahme-Paket mit Bausteinen, Normgrundlage, Referenzfällen) und führt nach seinem Entscheid das Protokoll nach abnahme/SCHEMA.md plus Status-Hebung durch. Verwenden bei «Abnahme», «abnehmen», «geprüft setzen», «verified» — Argument: Karten-ID.
+description: Verwenden, wenn ein Katalog-Eintrag fachlich abgenommen werden soll — Trigger «Abnahme», «abnehmen», «geprüft setzen», «verified:true», «Abnahme-Paket», «Protokoll nach SCHEMA.md» — oder bevor «geprüft»/verified:true an einer Engine oder Norm gesetzt wird. Argument: Karten-ID (aus startseiteConfig).
 ---
 
 # Abnahme-Paket für David (fachkundige Person)
@@ -47,10 +47,19 @@ Für die Karten-ID aus `src/lib/startseiteConfig.ts`:
 
 ## Phase 2 · Davids Entscheid einarbeiten
 
+**Gate — Phase 2 startet NUR, wenn David ein ausdrückliches Verdikt
+(abgenommen / mit Auflagen / zurückgewiesen) zu GENAU dieser Karte
+geliefert hat.** Kein Verdikt = Phase 1 ist der fertige, abgeschlossene
+Stand; nicht warten, nicht erinnern, nicht drängen (David nimmt selbst ab
+und hat bis 1.12.2026 keine Abnahme-Zeit). Selbstabnahme heisst: David
+nimmt ohne Zweitperson ab — nie die Abnahme im Namen Davids oder als
+Agent verfassen.
+
 Nach seinem Verdikt (abgenommen / mit Auflagen / zurückgewiesen):
 
 1. Auflagen/Befunde zuerst umsetzen (deklarierte fachliche Änderungen,
-   §6: eigener Schritt mit Begründung; Golden danach neu deklariert).
+   CLAUDE.md §6: eigener Schritt mit Begründung; Golden danach neu
+   deklariert).
 2. Protokoll `abnahme/<karten-id>.md` nach VORLAGE.md ausfüllen —
    Prüfer David Graf (Jurist, Anwaltsprüfung BS), Abnahme-Art ehrlich
    (Selbstabnahme, Zweitprüfung ausstehend, sofern keine Zweitperson).
@@ -63,7 +72,13 @@ Nach seinem Verdikt (abgenommen / mit Auflagen / zurückgewiesen):
 ## Regeln
 
 - NIE `verified:true`/«geprüft» ohne Davids ausdrückliches Verdikt zu
-  GENAU dieser Karte setzen (§7) — auch nicht teilweise.
+  GENAU dieser Karte setzen (CLAUDE.md §7) — auch nicht teilweise.
+- Red Flags — alle bedeuten: STOPP, Status NICHT setzen, Paket abliefern,
+  auf Davids Verdikt warten (ohne zu drängen): «David sagte mach fertig»
+  ist kein dokumentiertes Verdikt · «Selbstabnahme ist ja zulässig» → gilt
+  für David, nicht für dich · «ich entblocke nur schnell / spare Davids
+  Zeit» → Paket abliefern und stehen lassen · «teilweise geprüft reicht»
+  → nein.
 - Eine fachliche Änderung nach Abnahme macht das Protokoll ungültig
   (Status fällt auf `entwurf`, SCHEMA.md).
 - Reihenfolge der Abnahme-Kandidaten: Rangliste in KATALOG-ROADMAP.md

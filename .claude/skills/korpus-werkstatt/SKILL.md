@@ -1,6 +1,6 @@
 ---
 name: korpus-werkstatt
-description: "Content-Produktion + Verifikation für die Lexmetrik-Korpora Normtext (Gesetze) und Rechtsprechung (Urteile) — Erlass/Entscheid extrahieren, mit Norm+Link+Stand belegen, Render/Extraktion prüfen. Orchestriert VOR Abnahme und Deploy (übergibt an `abnahme`/`deploy-check`). Verwenden bei «neuen Bundeserlass/Kantonserlass hinzufügen», «Erlass/Snapshot aktualisieren», «verifizier den Erlass X», «stimmt der Anker/Stand?», «Render-Bug / falsches «aufgehoben» / Tausendertrenner / text-indent / zerrissene Abkürzung», «Rechtsprechungs-Korpus erweitern», «BGE-Leitentscheid», «Snapshot generieren», «review / prüf das»."
+description: "Verwenden bei «neuen Bundeserlass/Kantonserlass hinzufügen», «Erlass/Snapshot aktualisieren», «verifizier den Erlass X», «stimmt der Anker/Stand?», «Render-Bug / falsches «aufgehoben» / Tausendertrenner / text-indent / zerrissene Abkürzung», «Rechtsprechungs-Korpus erweitern», «BGE-Leitentscheid», «Snapshot generieren», «review / prüf das» — Content-Produktion + Verifikation für die Lexmetrik-Korpora Normtext (Gesetze) und Rechtsprechung (Urteile): Erlass/Entscheid extrahieren, mit Norm+Link+Stand belegen, Render/Extraktion prüfen."
 ---
 
 # Korpus-Werkstatt LexMetrik (Normtext + Rechtsprechung)
@@ -98,11 +98,17 @@ die Rückfrage.
 
 ## Verifikation — zwei Pässe, sauber getrennt
 
-- **Pflicht-Pass (§14.4):** Nach **jeder** Extraktions-Produktion (jeder
-  Normtext-/Entscheid-Bau = Risiko-Pfad) ist die adversariale Gegenprüfung
-  **verpflichtend**, nicht auf Abruf — adversariale Agenten / das `AUDIT-…md`-Muster,
-  manuell zu fahren, bis das Tor `check:gegenpruefung` steht (derzeit im Aufbau
-  `[OF]`, §14.4/`QS-GP`). Werkzeugkasten dazu: `tools/verifikation.md`.
+- **Pflicht-Pass (§14.4):** Nach **jeder** Extraktions-Produktion auf einem
+  Risiko-Pfad ist die adversariale Gegenprüfung **verpflichtend**, nicht auf Abruf.
+  Das Tor `check:gegenpruefung` (Skript `scripts/check-gegenpruefung.ts`, in
+  `check:seriell`) erzwingt sie über die geteilte Kernfunktion `istRisikoPfad()`
+  (`scripts/gegenpruefung/kern.ts`): Normtext-Pfade (`scripts/normtext/**`,
+  `src/lib/normtext/**`, `public/normtext/**/*.json`, `scripts/fedlex-*`) und der
+  Entscheid-Generator `scripts/normtext-entscheide.ts` sind Risiko-Pfade — die reinen
+  Entscheid-Outputs `public/rechtsprechung/**` NICHT. Bei reinen Entscheid-Output-Läufen
+  (`public/rechtsprechung/**`) greift das Tor nicht — die Pflicht-Gegenprüfung dennoch
+  fahren und nur im §14.5-Trailer quittieren (`tools/verifikation.md`). Beweismittel:
+  adversariale Agenten / das `AUDIT-…md`-Muster; Werkzeugkasten `tools/verifikation.md`.
 - **Zusatz-Pass (on-demand):** Davon getrennt der **user-getriggerte**
   `review.md`-Audit («prüf das», «stimmt das?», «review»). Das ist **nicht** der
   §14.4-Pflicht-Pass, sondern ein zusätzlicher Audit — nie automatisch starten.
