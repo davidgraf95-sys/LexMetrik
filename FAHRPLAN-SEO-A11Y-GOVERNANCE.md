@@ -181,3 +181,23 @@ max-age=0` — CWV-Problem genau auf den Haupt-Keyword-Seiten, Schnitt QS-PERF);
 Befunde sind als **Betriebs-Härtung** nach `FAHRPLAN-OPTIMIERUNG-2026-07.md` O-1
 gewandert (nicht «reines SEO»): Soft-404-Rewrite-Ausnahmen + case-insensitiver
 301-Redirect (`/gesetze/bund/or` → noindex-Shell ohne Redirect, live belegt).
+
+## 11. Intake G-PRERENDER — Prerender-String-Builder ist verlustbehaftet (David 17.7.2026)
+
+> **Herkunft:** Recherche «Informations-Nutzung der Gesetze» (Auftrag David
+> 17.7.2026). **Detailquelle (§11):**
+> `bibliothek/normen/informations-nutzung-gesetze-2026-07-17.md` (dort Tier 2).
+> Hierher verortet, weil **SEO/§15-Fläche** — getrennte Einheit von den
+> Extraktions-Kandidaten (§14 Ziff. 2).
+
+- **Befund:** der Prerender-String-Builder `src/lib/seo-detail.ts` (`bloeckeHtml`,
+  ~Z. 229–286) **droppt** Fussnoten, Verweis-Links, Bilder, Per-Artikel-Anker und
+  tieferes Item-Nesting; React repariert das erst on-mount (render-then-replace).
+  → Crawler + erstes Paint + Ctrl-F-vor-Mount sind verlustbehaftet.
+- **Spannung §15:** mehr Prerender-Treue = mehr HTML-Gewicht auf genau den neu
+  indexierten OR/ZGB-Seiten (~1.8 MB, W1.11-CWV-Tor). Jede Anreicherung braucht
+  eine **explizite Logikverlust-/Geräte-Last-Bewertung** (§15) — Treue vor Tempo,
+  aber begründet.
+- **Abgrenzung:** verwandt mit W1.1/W2.1b (prerenderte Detail-Links), aber die
+  **inhaltliche** Prerender-Treue (Fussnoten/Verweise/Bilder im ersten HTML) ist
+  ein eigener Posten. **Umfang:** M. **🚧 Bau-GO ausstehend (David).**
