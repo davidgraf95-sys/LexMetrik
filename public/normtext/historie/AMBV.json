@@ -1,0 +1,199 @@
+{
+ "erlass": "AMBV",
+ "abdeckung": {
+  "fussnoten": 21,
+  "ereignis": 10,
+  "referenz": 9,
+  "unparsed": 2
+ },
+ "artikel": {
+  "15": {
+   "giltSeit": "2022-01-28",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 16",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "18": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 1605",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/308"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "39": {
+   "giltSeit": "2023-01-23",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-01-23",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 698",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "47": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2023-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2022 723",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/723"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2023-01-01"
+  },
+  "49": {
+   "giltSeit": "2022-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 349",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/349"
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    }
+   ]
+  },
+  "50": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "54": {
+   "giltSeit": "2024-11-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-11-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 322",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/322"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "66": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 568",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    }
+   ]
+  },
+  "68": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 568",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "49_a": {
+   "giltSeit": "2025-03-15",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-03-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 109",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/109"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "13",
+   "nr": "5",
+   "roh": "Steht für: Good Distribution Practice"
+  },
+  {
+   "token": "2",
+   "nr": "3",
+   "roh": "Steht für: Good Manufacturing Practice"
+  }
+ ]
+}

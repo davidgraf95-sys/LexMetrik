@@ -1,0 +1,5724 @@
+{
+ "erlass": "LFG",
+ "abdeckung": {
+  "fussnoten": 320,
+  "ereignis": 274,
+  "referenz": 46,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "bezeichnung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-04-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2011-04-01"
+  },
+  "6": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2197 1069",
+       "url": ""
+      },
+      {
+       "label": "BBl 2001 4202",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-04-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "8": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2014-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2014-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "typ": "inkraft",
+     "datum": "2017-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2016 689",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/132"
+      },
+      {
+       "label": "BBl 2013 3729",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/823"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "11": {
+   "giltSeit": "1964-05-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1964-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1964 325",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/325_317_317"
+      },
+      {
+       "label": "BBl 1962 II 717",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1962/2_717_713_1413"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": "1974-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "1964-05-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1964-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1964 325",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/325_317_317"
+      },
+      {
+       "label": "BBl 1962 II 717",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1962/2_717_713_1413"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "17": {
+   "giltSeit": "1964-05-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1964-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1964 325",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/325_317_317"
+      },
+      {
+       "label": "BBl 1962 II 717",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1962/2_717_713_1413"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "18": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "19": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "20": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2007-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 1989",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/305"
+      },
+      {
+       "label": "BBl 2005 3857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/561"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "21": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5463",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/759"
+      },
+      {
+       "label": "BBl 2006 2489",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/250"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2018-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1960-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1960 357",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1960/357_385_371"
+      },
+      {
+       "label": "BBl 1959 I 1396",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "24": {
+   "giltSeit": "2011-11-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-11-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119 4573",
+       "url": ""
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "27": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-11-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "28": {
+   "giltSeit": "2007-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-11-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 1989",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/305"
+      },
+      {
+       "label": "BBl 2005 3857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/561"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "29": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-11-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "30": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-11-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "bezeichnung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "31": {
+   "giltSeit": "1998-11-15",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-11-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "32": {
+   "giltSeit": "1998-11-15",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-11-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "33": {
+   "giltSeit": "1998-11-15",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-11-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "34": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1995-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "1995-01-01"
+  },
+  "35": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1998-11-15",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "1998-11-15"
+  },
+  "36": {
+   "giltSeit": "2001-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2001-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2001 1678",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/257"
+      },
+      {
+       "label": "BBl 1998 5596",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
+   ]
+  },
+  "38": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 2743",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/498"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "39": {
+   "giltSeit": "2012-06-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2012-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "41": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "42": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "1bis",
+     "item": "b"
+    }
+   ]
+  },
+  "43": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "44": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "45": {
+   "giltSeit": "1978-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1978-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1977 2110",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/2110_2110_2110"
+      },
+      {
+       "label": "BBl 1976 III 1232",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/3_1232_1267_1235"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1985 660",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1985/660_660_660"
+      },
+      {
+       "label": "BBl 1984 I 1253",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1984/1_1253_1281_1013"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "46": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-04-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2011-04-01"
+  },
+  "47": {
+   "giltSeit": "1986-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1986-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1985 660",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1985/660_660_660"
+      },
+      {
+       "label": "BBl 1984 I 1253",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1984/1_1253_1281_1013"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "48": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "49": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "50": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2000-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2000-01-01"
+  },
+  "51": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "52": {
+   "giltSeit": "1994-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1994-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 733",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/733_733_733"
+      },
+      {
+       "label": "BBl 1993 I 805",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    }
+   ]
+  },
+  "56": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "57": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "58": {
+   "giltSeit": "2003-02-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2003-02-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2003 187",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2003/24"
+      },
+      {
+       "label": "BBl 2001 3845",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/686"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "60": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
+   ]
+  },
+  "61": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-04-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2011-04-01"
+  },
+  "67": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2010 1739",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
+      },
+      {
+       "label": "BBl 2006 7221",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2011-01-01"
+  },
+  "68": {
+   "giltSeit": "2020-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5343",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/807"
+      },
+      {
+       "label": "BBl 2014 235",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/65"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "70": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "74": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "75": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1978-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1977 2110",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/2110_2110_2110"
+      },
+      {
+       "label": "BBl 1976 III 1232",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/3_1232_1267_1235"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-04-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "77": {
+   "giltSeit": "2003-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2003-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2002 3371",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
+      },
+      {
+       "label": "BBl 1991 II 185 910",
+       "url": ""
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "88": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "89": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "90": {
+   "giltSeit": "2023-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
+      },
+      {
+       "label": "BBl 2018 2827",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "91": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    }
+   ]
+  },
+  "93": {
+   "giltSeit": "1998-11-15",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-11-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1998 2566",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      {
+       "label": "BBl 1997 III 1181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1181_1058_982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "94": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1974 1857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
+      },
+      {
+       "label": "BBl 1971 I 993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "95": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2018-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2018-01-01"
+  },
+  "96": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "97": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1978-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1977 2110",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/2110_2110_2110"
+      },
+      {
+       "label": "BBl 1976 III 1232",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/3_1232_1267_1235"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/468"
+      },
+      {
+       "label": "BBl 2020 5123",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1224"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/468"
+      },
+      {
+       "label": "BBl 2020 5123",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1224"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "98": {
+   "giltSeit": "1975-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1975-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1974 1857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
+      },
+      {
+       "label": "BBl 1971 I 993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1975-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1974 1857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
+      },
+      {
+       "label": "BBl 1971 I 993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "99": {
+   "giltSeit": "1975-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1975-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1974 1857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
+      },
+      {
+       "label": "BBl 1971 I 993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1975-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1974 1857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
+      },
+      {
+       "label": "BBl 1971 I 993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1975-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1974 1857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
+      },
+      {
+       "label": "BBl 1971 I 993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1975-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1974 1857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
+      },
+      {
+       "label": "BBl 1971 I 993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "100": {
+   "giltSeit": "2022-05-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "101": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1986-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1985 660",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1985/660_660_660"
+      },
+      {
+       "label": "BBl 1984 I 1253",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1984/1_1253_1281_1013"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "102": {
+   "giltSeit": "1974-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "103": {
+   "giltSeit": "2008-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2004-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2004 3867",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/534"
+      },
+      {
+       "label": "BBl 2003 6241",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2003/998"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2008-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2007 5779",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
+      },
+      {
+       "label": "BBl 2005 6029",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    }
+   ]
+  },
+  "104": {
+   "giltSeit": "1998-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1998-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1997 2465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/2465_2465_2465"
+      },
+      {
+       "label": "BBl 1996 III 1306",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_1306_1260_1201"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "106": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "107": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "108": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    }
+   ]
+  },
+  "100_bis": {
+   "giltSeit": "2012-10-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2012-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2012 4993",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/585"
+      },
+      {
+       "label": "BBl 2009 5181",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/917"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1998-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1997 2465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/2465_2465_2465"
+      },
+      {
+       "label": "BBl 1996 III 1306",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_1306_1260_1201"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "100_ter": {
+   "giltSeit": "2022-05-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "101_a": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2008-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2007 5779",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
+      },
+      {
+       "label": "BBl 2005 6029",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2008-01-01"
+  },
+  "101_b": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "102_a": {
+   "giltSeit": "2020-05-07",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2020-05-07",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 1493",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/295"
+      },
+      {
+       "label": "BBl 2020 3667",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/864"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "103_a": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "103_b": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 376",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
+      },
+      {
+       "label": "BBl 2022 2651",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "103_c_103_d": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-04-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2011-04-01"
+  },
+  "107_a": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
+      {
+       "label": "BBl 2017 6941",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
+      {
+       "label": "BBl 2017 6941",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
+      {
+       "label": "BBl 2017 6941",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "107_b": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "108_a": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "108_b": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 565",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/565"
+      },
+      {
+       "label": "BBl 2019 4751",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/1718"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "108_c": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 565",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/565"
+      },
+      {
+       "label": "BBl 2019 4751",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/1718"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 565",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/565"
+      },
+      {
+       "label": "BBl 2019 4751",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/1718"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 565",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/565"
+      },
+      {
+       "label": "BBl 2019 4751",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/1718"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "108_d": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 565",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/565"
+      },
+      {
+       "label": "BBl 2019 4751",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/1718"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "108_e": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 565",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/565"
+      },
+      {
+       "label": "BBl 2019 4751",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/1718"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10_a": {
+   "giltSeit": "2022-05-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "11_a": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1978-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1977 2110",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/2110_2110_2110"
+      },
+      {
+       "label": "BBl 1976 III 1232",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/3_1232_1267_1235"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "19_a": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21_a": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21_b": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21_c": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
+      {
+       "label": "BBl 2017 6941",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
+      {
+       "label": "BBl 2017 6941",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
+   ]
+  },
+  "21_d": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21_e": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21_f": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26_a": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-11-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119 4573",
+       "url": ""
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "26_b": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26_c": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-11-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2011 1119 4573",
+       "url": ""
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2011-11-01"
+  },
+  "36_a": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "36_b": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "36_c": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "36_d": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "36_e": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_a": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_b": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_c": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_d": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_e": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2021-01-01"
+  },
+  "37_f": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "37_g": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_h": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_i": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_k": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_l": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_m": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_n": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_o": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_p": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_q": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_r": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_s": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2007-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2006 2197 1069",
+       "url": ""
+      },
+      {
+       "label": "BBl 2001 4202",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "37_t": {
+   "giltSeit": "2000-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2000-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1999 3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      {
+       "label": "BBl 1998 2591",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_u": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4085",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
+      },
+      {
+       "label": "BBl 2018 4713",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "39_a": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3_a": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "1",
+     "item": "cbis"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 376",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
+      },
+      {
+       "label": "BBl 2022 2651",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "3",
+     "item": "a"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "3",
+     "item": "c"
+    }
+   ]
+  },
+  "3_b": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": "f"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": "g"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": "h"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40_a": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40_a_bis": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "40_b": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40_b_bis": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40_c": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40_d": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40_e": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40_f": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40_g": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41_a": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41_b": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "44_a": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "44_b": {
+   "giltSeit": "1974-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1974-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "53_54": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1994-04-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1994 733",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/733_733_733"
+      },
+      {
+       "label": "BBl 1993 I 805",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "1994-04-01"
+  },
+  "55_a": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/725"
+      },
+      {
+       "label": "BBl 2021 2198",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/2198"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6_a": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6_b": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "76_a": {
+   "giltSeit": "1995-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "82_84": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2010 1739",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
+      },
+      {
+       "label": "BBl 2006 7221",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2011-01-01"
+  },
+  "89_a": {
+   "giltSeit": "2018-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 3010",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/3010_3010_3010"
+      },
+      {
+       "label": "BBl 1992 I 607",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1992/1_607_587_540"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "8_a": {
+   "giltSeit": "2011-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2011-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 1119",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/165"
+      },
+      {
+       "label": "BBl 2009 4915",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "90_bis": {
+   "giltSeit": "2022-05-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1973 1738",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1973/1738_1738_1738"
+      },
+      {
+       "label": "BBl 1971 I 266",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_266_287_197"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2018-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 5607",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/605"
+      },
+      {
+       "label": "BBl 2016 7133",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/1536"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/229"
+      },
+      {
+       "label": "BBl 2021 626",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/626"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "91_bis": {
+   "giltSeit": "1975-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1975-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1974 1857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
+      },
+      {
+       "label": "BBl 1971 I 993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

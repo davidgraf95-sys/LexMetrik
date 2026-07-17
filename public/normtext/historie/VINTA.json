@@ -1,0 +1,146 @@
+{
+ "erlass": "VINTA",
+ "abdeckung": {
+  "fussnoten": 14,
+  "ereignis": 8,
+  "referenz": 6,
+  "unparsed": 0
+ },
+ "artikel": {
+  "10": {
+   "giltSeit": "2025-12-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-12-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 670",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/670"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": "2025-12-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-12-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 670",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/670"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 1229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "2023-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 1229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 46",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/46"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    }
+   ]
+  },
+  "17": {
+   "giltSeit": "2019-05-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 1229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    }
+   ]
+  },
+  "14_a": {
+   "giltSeit": "2019-05-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 1229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "29_a": {
+   "giltSeit": "2019-05-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 1229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

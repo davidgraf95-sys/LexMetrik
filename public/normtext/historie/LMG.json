@@ -1,0 +1,118 @@
+{
+ "erlass": "LMG",
+ "abdeckung": {
+  "fussnoten": 23,
+  "ereignis": 6,
+  "referenz": 17,
+  "unparsed": 0
+ },
+ "artikel": {
+  "62": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 2743",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/498"
+      }
+     ],
+     "absatz": "4",
+     "item": "c"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 2743",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/498"
+      }
+     ],
+     "absatz": "5",
+     "item": "c"
+    }
+   ]
+  },
+  "66": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 2743",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/498"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 2743",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/498"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "73": {
+   "giltSeit": "2021-05-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 240",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/240"
+      },
+      {
+       "label": "BBl 2020 8765",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2318"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "14_a": {
+   "giltSeit": "2024-10-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 457",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/457"
+      },
+      {
+       "label": "BBl 2019 919",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/169"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

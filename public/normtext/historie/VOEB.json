@@ -1,0 +1,30 @@
+{
+ "erlass": "VOEB",
+ "abdeckung": {
+  "fussnoten": 9,
+  "ereignis": 1,
+  "referenz": 8,
+  "unparsed": 0
+ },
+ "artikel": {
+  "24": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 568",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

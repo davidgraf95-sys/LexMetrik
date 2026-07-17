@@ -1,0 +1,223 @@
+{
+ "erlass": "VKKG",
+ "abdeckung": {
+  "fussnoten": 13,
+  "ereignis": 11,
+  "referenz": 2,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2021-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 319",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/319"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2006-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2006-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 95",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2019-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "giltSeit": "2006-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2006-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 95",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "7": {
+   "giltSeit": "2006-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2006-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 95",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3_a": {
+   "giltSeit": "2021-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 319",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/319"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "7_a": {
+   "giltSeit": "2019-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 95",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "7_b": {
+   "giltSeit": "2006-03-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 95",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8_a": {
+   "giltSeit": "2006-03-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 95",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9_a": {
+   "giltSeit": "2016-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2016-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2016 273",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/37"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9_b": {
+   "giltSeit": "2019-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5229",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

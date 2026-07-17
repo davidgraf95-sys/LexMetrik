@@ -1,0 +1,211 @@
+{
+ "erlass": "FINIG",
+ "abdeckung": {
+  "fussnoten": 46,
+  "ereignis": 9,
+  "referenz": 36,
+  "unparsed": 1
+ },
+ "artikel": {
+  "6": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "16": {
+   "giltSeit": "2021-02-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-02-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "32": {
+   "giltSeit": "2024-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40": {
+   "giltSeit": "2024-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "41": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": "3"
+    }
+   ]
+  },
+  "67": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "39_a": {
+   "giltSeit": "2024-03-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "74_a": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 5065",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/803"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 501",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/91"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "75",
+   "nr": "48",
+   "roh": "V vom 6. Nov. 2019 (AS 2019 4631)."
+  }
+ ]
+}

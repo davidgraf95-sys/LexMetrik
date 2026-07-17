@@ -1,0 +1,67 @@
+{
+ "erlass": "BOEB",
+ "abdeckung": {
+  "fussnoten": 17,
+  "ereignis": 2,
+  "referenz": 13,
+  "unparsed": 2
+ },
+ "artikel": {
+  "30": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 648",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
+      },
+      {
+       "label": "BBl 2023 13",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "44": {
+   "giltSeit": "2025-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 257",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/257"
+      },
+      {
+       "label": "BBl 2023 84",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/84"
+      }
+     ],
+     "absatz": "1",
+     "item": "fbis"
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "35",
+   "nr": "13",
+   "roh": "CPV = «Common Procurement Vocabulary» (Gemeinsames Vokabular für öffentliche Aufträge der Europäischen Union)"
+  },
+  {
+   "token": "35",
+   "nr": "14",
+   "roh": "CPC = «Central Product Classification» (Zentrale Gütersystematik der Vereinten Nationen)"
+  }
+ ]
+}

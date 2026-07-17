@@ -1,0 +1,152 @@
+{
+ "erlass": "ARGV5",
+ "abdeckung": {
+  "fussnoten": 16,
+  "ereignis": 7,
+  "referenz": 9,
+  "unparsed": 0
+ },
+ "artikel": {
+  "4": {
+   "giltSeit": "2024-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 93",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": "2024-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 93",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "8": {
+   "giltSeit": "2024-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 93",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21": {
+   "giltSeit": "2014-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2014-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2014 2241",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/375"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "22_a": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2014 2241",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/375"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2024-04-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2024 93",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2024-04-01"
+  },
+  "4_a": {
+   "giltSeit": "2024-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 93",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "4_b": {
+   "giltSeit": "2024-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 93",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

@@ -1,0 +1,121 @@
+{
+ "erlass": "VVK",
+ "abdeckung": {
+  "fussnoten": 11,
+  "ereignis": 6,
+  "referenz": 5,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2023-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 658",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 800",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/800"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 800",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/800"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "19": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2009-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2008 6145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/844"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2009-01-01"
+  },
+  "20": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 6145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/844"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "19_a": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 6145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/844"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

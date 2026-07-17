@@ -1,0 +1,339 @@
+{
+ "erlass": "VAM",
+ "abdeckung": {
+  "fussnoten": 44,
+  "ereignis": 18,
+  "referenz": 24,
+  "unparsed": 2
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2026-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2025 777",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/777"
+      }
+     ],
+     "absatz": "1",
+     "item": "h"
+    }
+   ]
+  },
+  "9": {
+   "giltSeit": "2023-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 723",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/723"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "21": {
+   "giltSeit": "2022-01-28",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 16",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25": {
+   "giltSeit": "2022-01-28",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 16",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "28": {
+   "giltSeit": "2022-01-28",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 16",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "32": {
+   "giltSeit": "2023-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 306",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/306"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "48": {
+   "giltSeit": "2026-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2026-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 777",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/777"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    }
+   ]
+  },
+  "52": {
+   "giltSeit": "2023-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 41",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/41"
+      }
+     ],
+     "absatz": "2",
+     "item": "f"
+    }
+   ]
+  },
+  "54": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5029",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/786"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "60": {
+   "giltSeit": "2022-01-28",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-01-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 16",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-01-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 16",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "76": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 568",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "80": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2023-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2022 723",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/723"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2023-01-01"
+  },
+  "82": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 570",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25_a": {
+   "giltSeit": "2022-01-28",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-01-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 16",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25_c": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "62_a": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5029",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/786"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "69_70": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2026-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2025 777",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/777"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2026-01-01"
+  }
+ },
+ "residuum": [
+  {
+   "token": "51",
+   "nr": "27",
+   "roh": "GLN = Global Location Number"
+  },
+  {
+   "token": "81",
+   "nr": "44",
+   "roh": "Doc.Ref.EMEA/CHMP/SWP/4447/00 vom 1. Juni 2006. Der Text kann bei der EMA bezogen werden: www.ema.europa.eu ."
+  }
+ ]
+}

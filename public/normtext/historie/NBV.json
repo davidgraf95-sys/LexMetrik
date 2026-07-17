@@ -1,0 +1,1069 @@
+{
+ "erlass": "NBV",
+ "abdeckung": {
+  "fussnoten": 81,
+  "ereignis": 63,
+  "referenz": 16,
+  "unparsed": 2
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2013-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "h"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "i"
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2016-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "j"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "k"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "k"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "l"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "l"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "m"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "m"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "n"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "n"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2013-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "o"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2013-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "p"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "q"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "q"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2013-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "r"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2013-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "s"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4627",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/827"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2013-07-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": "2024-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2014 3023",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/511"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 232",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/232"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2020-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2020-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4627",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/827"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 4627",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/827"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "2024-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 232",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/232"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "17": {
+   "giltSeit": "2010-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2009 6373",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/780"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "18": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2016-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "27": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "29": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "31": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "34": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "2",
+     "item": "e"
+    }
+   ]
+  },
+  "35": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "36": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2013-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "n"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    }
+   ]
+  },
+  "37": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2013-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "38": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "39": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2016-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2016-01-01"
+  },
+  "40": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21_a": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2013-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "22_a": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2016-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "22_b": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2016-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "23_a": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2016-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2016-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "h"
+    }
+   ]
+  },
+  "24_b": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2016-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2016-01-01"
+  },
+  "25_a": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "25_b": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25_c": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "28_a": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "28_c": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "32_a": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": "j"
+    }
+   ]
+  },
+  "32_d": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "14",
+   "nr": "37",
+   "roh": "Rechnungslegungsverordnung-FINMA vom 31. Oktober 2019 (SR 952.024.1) sowie FINMA-Rundschreiben 2020/1 vom 31. Oktober 2019 betreffend Rechnungslegung ‒ Banken."
+  },
+  {
+   "token": "2",
+   "nr": "27",
+   "roh": "Rechnungslegungsverordnung-FINMA vom 31. Oktober 2019 (SR 952.024.1) sowie FINMA-Rundschreiben 2020/1 vom 31. Oktober 2019 betreffend Rechnungslegung ‒ Banken."
+  }
+ ]
+}

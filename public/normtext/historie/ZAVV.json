@@ -1,0 +1,92 @@
+{
+ "erlass": "ZAVV",
+ "abdeckung": {
+  "fussnoten": 8,
+  "ereignis": 5,
+  "referenz": 3,
+  "unparsed": 0
+ },
+ "artikel": {
+  "27": {
+   "giltSeit": "2017-03-01",
+   "ereignisse": [
+    {
+     "typ": "bezeichnung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2004 4937",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2017-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 563",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/100"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "35": {
+   "giltSeit": "2015-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 2333",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/435"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2015-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 2333",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/435"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "5_a": {
+   "giltSeit": "2023-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 791",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/791"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

@@ -1,0 +1,1400 @@
+{
+ "erlass": "VSTV",
+ "abdeckung": {
+  "fussnoten": 101,
+  "ereignis": 85,
+  "referenz": 15,
+  "unparsed": 1
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2023-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 4705",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2023-01-01",
+   "ereignisse": [
+    {
+     "typ": "ausdruck",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "ausdruck",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "9": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "10": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "1994-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1993 879",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1993/879_879_879"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "11": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2001-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "16": {
+   "giltSeit": "2010-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2009 3471",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/427"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "17": {
+   "giltSeit": "2012-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2012-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2012 791",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/119"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "19": {
+   "giltSeit": "2012-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2001-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2012-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2012 791",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/119"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "20": {
+   "giltSeit": "2020-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2023-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2022 307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "giltSeit": "2020-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2009-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2009-01-01"
+  },
+  "25": {
+   "giltSeit": "2001-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2001-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26": {
+   "giltSeit": "2001-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2001-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "28": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "ausdruck",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "30": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2009-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "31": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "2bis",
+     "item": "d"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "32": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "33": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 5413",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/854"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "34": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "ausdruck",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "36": {
+   "giltSeit": "2020-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "37": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2019-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "47": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "52": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2022-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2021 77",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/77"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "54": {
+   "giltSeit": "2010-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2009 3471",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/427"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2010-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2009 3471",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/427"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "55": {
+   "giltSeit": "2001-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2001-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    }
+   ]
+  },
+  "57": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "58": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "ausdruck",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 77",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/77"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "59": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 77",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/77"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "60": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "65": {
+   "giltSeit": "2001-01-01",
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2001-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2001-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "66": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 4705",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "68": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    }
+   ]
+  },
+  "69": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2014-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2013 2773",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/569"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2014-01-01"
+  },
+  "14_a": {
+   "giltSeit": "2017-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2963",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/394"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2017-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 775",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/148"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2017-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 775",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/148"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    }
+   ]
+  },
+  "24_a": {
+   "giltSeit": "2001-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2001-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26_a": {
+   "giltSeit": "2023-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2001-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "38_a": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "39_40": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2019-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2019-01-01"
+  },
+  "41_a": {
+   "giltSeit": "2024-06-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 161",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/161"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41_b": {
+   "giltSeit": "2024-06-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 161",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/161"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41_c": {
+   "giltSeit": "2024-06-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 5155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 161",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/161"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "65_a": {
+   "giltSeit": "2001-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2001-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 2994",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "70",
+   "nr": "100",
+   "roh": "BS 6 338]"
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "erlass": "JSTPO",
+ "abdeckung": {
+  "fussnoten": 28,
+  "ereignis": 7,
+  "referenz": 21,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2025-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
+      },
+      {
+       "label": "BBl 2019 6697",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
+      },
+      {
+       "label": "BBl 2019 6697",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
+      },
+      {
+       "label": "BBl 2019 6697",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
+      },
+      {
+       "label": "BBl 2019 6697",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "26": {
+   "giltSeit": "2015-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2014 2055",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/355"
+      },
+      {
+       "label": "BBl 2012 8819",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    }
+   ]
+  },
+  "32": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
+      },
+      {
+       "label": "BBl 2019 6697",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
+      }
+     ],
+     "absatz": "5",
+     "item": "b"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
+      },
+      {
+       "label": "BBl 2019 6697",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
+      }
+     ],
+     "absatz": "5bis",
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

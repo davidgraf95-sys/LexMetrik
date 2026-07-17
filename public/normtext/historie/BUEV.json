@@ -1,0 +1,120 @@
+{
+ "erlass": "BUEV",
+ "abdeckung": {
+  "fussnoten": 10,
+  "ereignis": 6,
+  "referenz": 4,
+  "unparsed": 0
+ },
+ "artikel": {
+  "3": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 3173",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/510"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 3173",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/510"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    }
+   ]
+  },
+  "25": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 2105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/388"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "27": {
+   "giltSeit": "2018-02-15",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2018-02-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 533",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/62"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "15_a": {
+   "giltSeit": "2018-02-15",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-02-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 533",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/62"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "15_b": {
+   "giltSeit": "2018-02-15",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2018-02-15",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 533",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/62"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

@@ -1,0 +1,1462 @@
+{
+ "erlass": "KOV",
+ "abdeckung": {
+  "fussnoten": 106,
+  "ereignis": 87,
+  "referenz": 14,
+  "unparsed": 5
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": "7"
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "1988-12-16",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1989 262",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1989/262_262_262"
+      }
+     ],
+     "absatz": null,
+     "item": "12"
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "10": {
+   "giltSeit": "1938-03-30",
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1997-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1938-03-30",
+     "wirkung": false,
+     "quellen": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "11": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "13": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    }
+   ]
+  },
+  "16": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "28": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "29": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "31": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "33": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "34": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "35": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "37": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    }
+   ]
+  },
+  "38": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-08-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2021-08-01"
+  },
+  "39": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "2",
+     "item": "e"
+    },
+    {
+     "typ": "urspruenglich",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "42": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "43": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "44": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "45": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "46": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "47": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "48": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "50": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "51": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "52": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "53": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "54": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "56": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "57": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "58": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "59": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "60": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "61": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "62": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "65": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "68": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "71": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "74": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1921-01-01",
+     "wirkung": false,
+     "quellen": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "75": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "76": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "78": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-08-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2021-08-01"
+  },
+  "79": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1997-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "1997-01-01"
+  },
+  "81": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1997-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "1997-01-01"
+  },
+  "84": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "85": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "87": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "89": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-08-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2021-08-01"
+  },
+  "90": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1997-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "1997-01-01"
+  },
+  "91": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1923-12-19",
+     "wirkung": true,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "1923-12-19"
+  },
+  "94": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1997-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "1997-01-01"
+  },
+  "95": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "96": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-08-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    }
+   ]
+  },
+  "97": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "98": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "1997-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "15_a": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1979-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1979 813",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1979/813_813_813"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "24_a": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2884",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "54_a": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "21",
+   "nr": "33",
+   "roh": "Im französischen Text besteht dieser Artikel aus drei Absätzen. Dem Abs. 1 entspricht der erste Satzteil des ersten Satzes bis «aufzubewahren», Abs. 2 der zweite Satzteil des ersten Satzes und Abs. 3 der zweite Satz."
+  },
+  {
+   "token": "3",
+   "nr": "7",
+   "roh": "In der AS nicht veröffentlicht."
+  },
+  {
+   "token": "8",
+   "nr": "11",
+   "roh": "Im französischen Text besteht dieser Artikel aus zwei Absätzen."
+  },
+  {
+   "token": "97",
+   "nr": "105",
+   "roh": "Dieser Titel («Obblighi dell’amministrazione speciale di un fallimento») besteht nur im italienischen Text."
+  },
+  {
+   "token": "99",
+   "nr": "109",
+   "roh": "Gegenstandslose UeB."
+  }
+ ]
+}

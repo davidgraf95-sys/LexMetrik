@@ -1,0 +1,831 @@
+{
+ "erlass": "FINFRAV",
+ "abdeckung": {
+  "fussnoten": 69,
+  "ereignis": 52,
+  "referenz": 17,
+  "unparsed": 0
+ },
+ "artikel": {
+  "2": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
+     "item": "f"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
+     "item": "g"
+    }
+   ]
+  },
+  "13": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "1",
+     "item": "g"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
+   ]
+  },
+  "24": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    }
+   ]
+  },
+  "30": {
+   "giltSeit": "2020-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "37": {
+   "giltSeit": "2020-01-01",
+   "ereignisse": [
+    {
+     "typ": "ausdruck",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "4",
+     "item": "1"
+    }
+   ]
+  },
+  "48": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 13",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/13"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2016 1725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/312"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "56": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 13",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/13"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2016-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2016 1725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/312"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "86": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "3",
+     "item": "e"
+    }
+   ]
+  },
+  "100": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "101": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "102": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "103": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2017-08-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "104": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 13",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/13"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "1",
+     "item": "h"
+    }
+   ]
+  },
+  "105": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    }
+   ]
+  },
+  "106": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "2bis",
+     "item": "b"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "2ter",
+     "item": "b"
+    }
+   ]
+  },
+  "113": {
+   "giltSeit": "2020-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "126": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    }
+   ]
+  },
+  "129": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2016 2703",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/434"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "1ter",
+     "item": null
+    }
+   ]
+  },
+  "130": {
+   "giltSeit": "2023-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 576",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/576"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 3377",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/548"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    }
+   ]
+  },
+  "131": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "5",
+     "item": "dbis"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2019 4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
+      }
+     ],
+     "absatz": "5",
+     "item": "e"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "5",
+     "item": "e"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": "5bis",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "5bis",
+     "item": null
+    }
+   ]
+  },
+  "133": {
+   "giltSeit": "2022-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2020-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 3801",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/697"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 539",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/539"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 489",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/489"
+      }
+     ],
+     "absatz": "1ter",
+     "item": null
+    }
+   ]
+  },
+  "100_a": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "100_b": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "101_a": {
+   "giltSeit": "2017-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2017-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 3715",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/429"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "58_a": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

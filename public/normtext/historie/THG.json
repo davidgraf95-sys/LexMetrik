@@ -1,0 +1,958 @@
+{
+ "erlass": "THG",
+ "abdeckung": {
+  "fussnoten": 50,
+  "ereignis": 45,
+  "referenz": 5,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "2",
+     "item": "bbis"
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": "p"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": "q"
+    }
+   ]
+  },
+  "4": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "3",
+     "item": "c"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "4",
+     "item": "e"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "5",
+     "item": "c"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "giltSeit": "2002-06-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2002-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2002 883",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/155"
+      },
+      {
+       "label": "BBl 2001 4963",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/845"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    }
+   ]
+  },
+  "11": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2002-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2002 883",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/155"
+      },
+      {
+       "label": "BBl 2001 4963",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/845"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2002-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2002 883",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/155"
+      },
+      {
+       "label": "BBl 2001 4963",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/845"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "2002-06-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2002-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2002 883",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/155"
+      },
+      {
+       "label": "BBl 2001 4963",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/845"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "16": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2010-07-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "17": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "19": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "20": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "21": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 3459",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
+      },
+      {
+       "label": "BBl 1999 1979",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "24": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 3459",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
+      },
+      {
+       "label": "BBl 1999 1979",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 3459",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
+      },
+      {
+       "label": "BBl 1999 1979",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 3459",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
+      },
+      {
+       "label": "BBl 1999 1979",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "27": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "28": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 3459",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
+      },
+      {
+       "label": "BBl 1999 1979",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    }
+   ]
+  },
+  "29": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 3459",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
+      },
+      {
+       "label": "BBl 1999 1979",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "31": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "16_a": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "16_c": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "bezeichnung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2004 4937",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "16_e": {
+   "giltSeit": "2017-05-01",
+   "ereignisse": [
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2017-05-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2017 249",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+      },
+      {
+       "label": "BBl 2011 5571",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2011/853"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "20_b": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
+      {
+       "label": "BBl 2017 6941",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "28_a": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "4_a": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "5_a": {
+   "giltSeit": "2010-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+      },
+      {
+       "label": "BBl 2008 7275",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

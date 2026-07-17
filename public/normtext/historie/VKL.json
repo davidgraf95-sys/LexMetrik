@@ -1,0 +1,393 @@
+{
+ "erlass": "VKL",
+ "abdeckung": {
+  "fussnoten": 28,
+  "ereignis": 23,
+  "referenz": 5,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2024-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2009-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": "1",
+     "item": "g"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 219",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/219"
+      }
+     ],
+     "absatz": "1",
+     "item": "h"
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2009-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2009-01-01"
+  },
+  "5": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "7": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "10": {
+   "giltSeit": "2025-06-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2025-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 318",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "13": {
+   "giltSeit": "2025-06-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2025-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 318",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": "2025-06-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-06-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 318",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "16": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2009-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2009-01-01"
+  },
+  "10_a": {
+   "giltSeit": "2009-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 5105",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

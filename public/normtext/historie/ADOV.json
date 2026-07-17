@@ -1,0 +1,36 @@
+{
+ "erlass": "ADOV",
+ "abdeckung": {
+  "fussnoten": 5,
+  "ereignis": 1,
+  "referenz": 3,
+  "unparsed": 1
+ },
+ "artikel": {
+  "5": {
+   "giltSeit": "2023-01-23",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-01-23",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 698",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "9",
+   "nr": "4",
+   "roh": "bis 31.12.2012 «Vormundschaftsbehörde»"
+  }
+ ]
+}

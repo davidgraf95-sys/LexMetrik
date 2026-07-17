@@ -1,0 +1,204 @@
+{
+ "erlass": "OHG",
+ "abdeckung": {
+  "fussnoten": 24,
+  "ereignis": 9,
+  "referenz": 14,
+  "unparsed": 1
+ },
+ "artikel": {
+  "2": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2010 1881",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
+      },
+      {
+       "label": "BBl 2006 1085",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
+      }
+     ],
+     "absatz": null,
+     "item": "g"
+    }
+   ]
+  },
+  "8": {
+   "giltSeit": "2011-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 3267",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
+      },
+      {
+       "label": "BBl 2008 8125",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "11": {
+   "giltSeit": "2019-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2011-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 1881",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
+      },
+      {
+       "label": "BBl 2006 1085",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2019-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2018 2947",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/450"
+      },
+      {
+       "label": "BBl 2015 3431",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2015/838"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
+      },
+      {
+       "label": "BBl 2019 6697",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "20": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 163",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/163"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 163",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/163"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    }
+   ]
+  },
+  "34_44": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2011-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2010 1881",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
+      },
+      {
+       "label": "BBl 2006 1085",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2011-01-01"
+  },
+  "8_a": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 468",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
+      },
+      {
+       "label": "BBl 2019 6697",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "49",
+   "nr": "25",
+   "roh": "Das ELG trat am 1. Jan. 2008 in Kraft."
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "erlass": "VGKE",
+ "abdeckung": {
+  "fussnoten": 15,
+  "ereignis": 12,
+  "referenz": 3,
+  "unparsed": 0
+ },
+ "artikel": {
+  "2": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    }
+   ]
+  },
+  "7": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "8": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    }
+   ]
+  },
+  "11": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "13": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    }
+   ]
+  },
+  "18": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "6_a": {
+   "giltSeit": "2010-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2010-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2010 945",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/150"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

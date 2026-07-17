@@ -1,0 +1,72 @@
+{
+ "erlass": "PVUE",
+ "abdeckung": {
+  "fussnoten": 15,
+  "ereignis": 3,
+  "referenz": 10,
+  "unparsed": 2
+ },
+ "artikel": {
+  "13": {
+   "giltSeit": "1984-06-03",
+   "ereignisse": [
+    {
+     "typ": "inkraft",
+     "datum": "1984-06-03",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1984 824",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1984/824_824_824"
+      }
+     ],
+     "absatz": null,
+     "item": "v"
+    },
+    {
+     "typ": "inkraft",
+     "datum": "1984-06-03",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1984 824",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1984/824_824_824"
+      }
+     ],
+     "absatz": null,
+     "item": "7"
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": "1984-06-03",
+   "ereignisse": [
+    {
+     "typ": "inkraft",
+     "datum": "1984-06-03",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1984 824",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1984/824_824_824"
+      }
+     ],
+     "absatz": null,
+     "item": "i"
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "12",
+   "nr": "3",
+   "roh": "In der Schweiz ist das Eidgenössische Institut für geistiges Eigentum die in diesem Artikel erwähnte Behörde (Art. 1 der Markenschutzverordnung vom 23. Dez. 1992 – SR 232.111 –, Art. 19 des BG vom 5. Okt. 2001 über den Schutz von Design – SR 232.12 – und Art. 1 der Patentverordnung vom 19. Okt. 1977 – SR 232.141)."
+  },
+  {
+   "token": "14",
+   "nr": "8",
+   "roh": "Aufgehoben, mit Wirkung seit Juni 1984 (AS 1984 824)."
+  }
+ ]
+}

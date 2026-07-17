@@ -1,0 +1,483 @@
+{
+ "erlass": "ARGV3",
+ "abdeckung": {
+  "fussnoten": 33,
+  "ereignis": 28,
+  "referenz": 5,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "ausdruck",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "7": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2015-10-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "8": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    }
+   ]
+  },
+  "10": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "17": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "19": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2010-05-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2009 6289",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/767"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2010-05-01"
+  },
+  "22": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "27": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "37": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "38": {
+   "giltSeit": "1999-07-01",
+   "ereignisse": [
+    {
+     "typ": "ausdruck",
+     "datum": "1999-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2000 187",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/34"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "39": {
+   "giltSeit": "2015-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2015-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 1079",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "40": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2008-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2007 4477",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2008-01-01"
+  },
+  "24_a": {
+   "giltSeit": "2024-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 316",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/316"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}
