@@ -413,6 +413,28 @@ Sortierung je Norm: Leitentscheide zuerst, dann `mention_count` (Citation-Graph)
 
 **UI-Andock:** `rechtsprechungFuer(idx, erlass.key, art.artikel)` (NICHT `kuerzel`) in `GesetzLeser` neben `werkzeugeFuer(erlass.key)` (`:539`) → „Rechtsprechung zu Art. X"-Sektion. Leeres Resultat → keine Sektion rendern. **Status `kuratierung:'maschinell'`** sichtbar (es ist Roh-Extraktion, kein geprüftes Präjudiz — Review M4: das Wort „verifiziert" für `statutes` ist falsch).
 
+### 8.1a Intake G-VOLLTEXT-VERZ — Index zusätzlich aus Entscheid-Volltext speisen (Zweitprüfung 17.7.2026)
+
+> **Herkunft:** Recherche «Informations-Nutzung der Gesetze», Zweitprüfung David
+> 17.7.2026 (Kanten-Analyse). **Detailquelle (§11):**
+> `bibliothek/normen/informations-nutzung-gesetze-2026-07-17.md`. Eigene Bau-Einheit
+> (Design + GP), **nicht** in den bestehenden `statutes`-Pfad eingefaltet.
+
+- **Quelle + Stand:** eigener OCL-Bestand + F2-Zitat-Analyse (17.7.2026).
+- **Befund (deterministisch):** der `norm-index` speist sich heute aus
+  OCL-**`statutes[]`** (bereits atomisiert; **F2-Delta = 0**, exhaustiv bewiesen —
+  der Produktions-Feed ist F2-konform, kein «Kanten-Regen» mehr offen). Die
+  **+2931 F2-Zitat-Gewinne** liegen im **Entscheid-VOLLTEXT/Regesten**, die den
+  Index **nicht** speisen.
+- **Bau:** den Index (zusätzlich) aus dem Volltext speisen — **eigenes Design +
+  Gegenprüfung**, Determinismus je Build.
+- **Geltungsbereich + Grenze (R2):** Volltext-Treffer sind **Roh-Erwähnung**, kein
+  geprüftes «einschlägig» → nur als **«auch erwähnt»-Klasse** (`kuratierung:
+  'maschinell'`), **nie** als verifiziert (vgl. §11 R2). Kantonale Norm-Auflösung
+  separat (§8.2).
+- **Umfang:** M (eigene Einheit). **Abnahme-Status:** Zweitprüfung (17.7.2026),
+  Bau-GO ausstehend.
+
 ### 8.2 Entscheid → Norm: bestehende Maschinerie
 `<NormText>` im Erwägungstext + „Angewandte Normen"-Sektion aus `statutes`. **Ehrliche Grenze (Review M3):** `NormText`/`fedlexLinkFuerArtikel` löst **nur Bundesrecht** auf. Kantonale Entscheide, die kantonale Normen zitieren, werden von `NormText` **nicht** verlinkt — die „Verzahnung ohne neuen Code" trägt P0 nur für Bund-Normen. Für kantonale Norm-Auflösung braucht es einen kantonskontext-fähigen Resolver (spätere Stufe, nicht „null Code"). Bund-Norm↔Kanton-Entscheid funktioniert (kantonaler Entscheid, der Bundesnormen zitiert, erscheint korrekt unter `OR/271` neben dem BGE).
 
