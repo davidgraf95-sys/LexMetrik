@@ -587,3 +587,37 @@
   CI-Blocker) + `check:materialien` (VERN-Frist 2026-07-15 abgelaufen, Datenpflege) —
   beide identisch rot auf origin/main mit entferntem Testfile bewiesen. `check:gegenpruefung`
   grün (kein Risikopfad-Diff, nur Testfile). Gegenprüfung n/a — reine Prüflogik.
+- **17.7.2026: H-13 (B25) ✅** (Worktree `lm-h13`, Branch `chore/h13-zustaendigkeit-split`,
+  1 Pathspec-Commit). §6.6-Fassaden-Split `ZustaendigkeitForm.tsx` (**1093 → 403 Z.**): die
+  zwei grossen Zivil-Ergebnis-Blöcke JSX-**byte-gleich** (sed-Slice, keine Handabschrift) in
+  Geschwister-Teilkomponenten ausgelagert — `ZustErgebnisRechtsmittel.tsx` (235 Z.) +
+  `ZustErgebnisEinleitung.tsx` (506 Z.), beide < 800. Muster wie
+  Straf-/SchkgZustaendigkeitTeil. Das gebündelte Hook-Modell reist als EIN Prop `z`
+  (`ZustaendigkeitFormModell = ReturnType<typeof useZustaendigkeitForm>`, neuer Typ-Export) —
+  **kein Logik-Duplikat** (§5), Engine `zustaendigkeit.ts` §4-tabu unberührt. **React-Compiler-
+  aus-Leitplanke** eingehalten: RM-Teil hookfrei; Einleitungs-Teil ein einziger unbedingter
+  `usePaneKlasse()` (Kontext-Konsument, Hook-Reihenfolge stabil), keine ref.current-Helfer, die
+  4 Early-Returns exakt in Ordnung. `ZustaendigkeitForm`-Export + Konsumenten-Importe unverändert.
+  **Beweis (G1):** `npm run gate` (voll) **GRÜN** (tsc · vitest · golden **209/209 byte-gleich**
+  · lint 0 · check); Build 63 Routen; `zustaendigkeit.test.ts` (94) **unangepasst** grün; e2e
+  `zustaendigkeit-fluss` 2/2 grün (Zivil-Fluss bis Behörden-Ergebnis + SchKG-Pfad = die
+  ausgelagerte Fläche). Gegenprüfung n/a — reine Darstellung, kein Norm-/Tarif-/Rechenwert
+  berührt. Trailer `Roadmap: W2·12-HYGIENE`.
+  **B24 (`inhalt.tsx`-Split) DEKLARIERT VERSCHOBEN:** die Datei wird am Bau-Tag von den offenen
+  PRs **#240 (A34)** und **#267 (A33)** angefasst — ein paralleler §6.6-Split provozierte eine
+  Konflikt-Kaskade (Kollisions-Precheck der H-13-Spezifikation). B24 läuft nach Merge beider
+  PRs als eigene Einheit (Ziel < 800 Z., Deckel «keine Vollzerlegung» bleibt).
+- **17.7.2026: H-14 ✅** (Worktree `lm-h14`, Branch `chore/h14-engine-map`, gestapelt auf H-13).
+  engine-map-Nachführung (B33). `bibliothek/register/engine-map.md` war stale seit 11.6.: je
+  neue Modul-Familie seit 11.6. eine **gesourcte** Zeile — Normtext-Pipeline · Rubrik-V-Gesetze ·
+  Rechtsprechungs-Korpus + entscheide-Adapter · `lib/materialien/` (Botschaften/Vernehmlassungen) ·
+  Revisionen · Staatsverträge · Prozesskosten (I4). **Auflage erfüllt:** kein erfundener Status —
+  je Zeile Quelle genannt (`bibliothek/INDEX.md`-Eintrag; alle 9 Zitat-Anker vor dem Schreiben
+  gegen INDEX.md verifiziert). Zwei Dossier-only-Zeilen als **verdrahtet** durchgestrichen
+  (Prozesskosten → `lib/prozesskosten.ts`+`lib/tarif/`). **Abgrenzung zu `npm run map` (T8,
+  QS-TOK/P4):** `scripts/repo-map.ts` erzeugt den maschinellen, gitignoreten Symbol-Teil
+  (`.repo-map.generated.md`, nie committet) — der hand-kuratierte Wissens-Grundlagen-Kopf
+  `engine-map.md` (Modul ↔ Dossier ↔ Stand) ist bewusst DAVON getrennt (Skript-Kopf Z. 7–9) und
+  wird NICHT von T8 ersetzt → H-14 bleibt eine echte Doku-Einheit, kein Doppelbau. **Beweis:**
+  read-only-Doku; `npm run gate` (voll) GRÜN (inkl. `check:bibliothek` S1–S10). Gegenprüfung n/a —
+  reine Register-Doku, kein Norm-/Tarif-/Rechenwert. Trailer `Roadmap: W2·12-HYGIENE`.

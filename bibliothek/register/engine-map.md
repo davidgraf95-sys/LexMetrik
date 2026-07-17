@@ -35,6 +35,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | streitwert.ts | recherche/zpo-kosten-streitwert.md | entwurf (gebaut 7.6.) |
 | gebvKosten.ts | recherche/gebv-schkg-kostenrechner.md · kosten/ | entwurf (gebaut 7.6.); GebV-Revision AS 2025 630 vor Abnahme (Plan C.13a) |
 | gewaehrleistung.ts · bruch.ts | (Normen direkt) | entwurf |
+| prozesskosten.ts · tarif/ (gerichtskosten · parteientschaedigung · modifikatoren · nicht-vermoegensrechtlich) · data/tarif/ | recherche/prozesskosten-zpo-95-96.md · register/bemessungskriterien-tarife-kantone.md (I4) · kosten/gerichtsgebuehren-kantone · kosten/anwaltstarife-kantone.md | entwurf; Prozesskosten-Engine (FAHRPLAN-PRODUKTAUSBAU-BURGGRABEN P1). Bemessungskriterien je Kanton mit Beleg-Zitat + confidence auf `KantonalerTarif` (Quelle: INDEX.md «Bemessungskriterien der Prozesskosten-Tarife», neu 1.7.2026, I4) |
 
 ## Vorlagen-Plattform (vorlagen/)
 
@@ -54,6 +55,23 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | notariate.ts | behoerden/notariate-kantone.md | entwurf; UR/AI/BL vor Abnahme |
 | behoerden.ts | behoerden/* (Vollerfassungen) | je Adresse `stand`-Feld |
 
+## Normtext, Rechtssammlung, Rechtsprechungs-Korpus & Materialien (Wissens-Rubriken, ab 16.6.2026)
+
+Nachführung H-14 (17.7.2026): Modul-Familien seit dem letzten Stand (11.6.). Der
+Status je Zeile ist NICHT neu behauptet, sondern aus der genannten Quelle
+(`bibliothek/INDEX.md`-Eintrag) übernommen — keine erfundenen Abnahme-/Prüf-Aussagen.
+
+| Modul | Grundlage | Stand |
+|---|---|---|
+| lib/normtext/ (browse · darstellung · laden · passus · systematik) · scripts/normtext/extrahiere-fedlex.ts (+adapter-htm/-pdf/-lexwork · struktur-extrahiere) · public/normtext/*.json | normen/norm-vorschau-snapshot-system.md | Volltext-Snapshot-System (Bund 5760 Art./18 Gesetze + Kantone LexWork 19 Kt.), speist NormPopover; zweifach geprüft, **Abnahme David offen** (Quelle: INDEX.md «Volltext-Snapshot-System», neu 16.6.2026) |
+| lib/normtext/register.ts (Erlass-Register, SSoT Identität+Taxonomie) · browse.ts · scripts/normtext/browse-manifest.ts → public/normtext/register.json | normen/gesetzessammlung-rubrik-v.md | Rubrik V «Gesetze» (browsbare Sammlung → Lesesicht, 7 Konsistenz-Tore); ERSTRECHERCHE gate-grün/browser-verifiziert, **Abnahme David offen** (Quelle: INDEX.md «Rubrik V», neu 17.6.2026) |
+| lib/rechtsprechung/ (register · browse · livesuche · sachverhalt · rubrum · zitat-extraktion · norm-index) · scripts/normtext/adapter-entscheide.ts (+entscheide-mapping/-schreiben · check-entscheide) | rechtsprechung/bge-leitentscheide-import.md (+bger-korpus-ausbau · entscheidsuche-livesuche) | Korpus zur bestehenden `bge.ts`-Zeile: BGE-Leitentscheide ab 2024 (OpenCaseLaw Court bge), Urteilstext gemeinfrei (Art. 5 URG) (Quelle: INDEX.md «BGE-Leitentscheide-Import») |
+| lib/materialien/ (register SSoT · typen · browse · kanten-shard) · scripts/materialien/material-manifest.ts → public/materialien/register.json · adapter-edoeb/-estv/-seco · soft-law-* | materialien/amtliche-ressourcen-2026-06-27.md | Rubrik «Materialien» P0 (28 Behörden-Ressourcen) (Quelle: INDEX.md «Materialien-Rubrik P0, Auftrag 5») |
+| lib/materialien/botschaften.ts (+.generated) · scripts/materialien/botschaften-generieren.ts · Tor `check:botschaften-netz` | materialien/botschaften-2026-07-10.md | 401 Botschaften, Doktyp botschaft (Fedlex-Portfolio Paket 2, W2·6); maschinell zugeordnet, **Abnahme David offen** (Quelle: INDEX.md) |
+| lib/materialien/vernehmlassungen.ts (+.generated) · scripts/materialien/vernehmlassungen-generieren.ts · Tor `check:vernehmlassungen-netz` | materialien/vernehmlassungen-2026-07-10.md | 822 Vernehmlassungsverfahren, Doktyp vernehmlassung (Paket 3, W3·11); Frist-Assertion laufend & fristEnde<heute ⇒ rot (Quelle: INDEX.md) |
+| lib/normtext/revisionen.ts · scripts/normtext/revisionen-generieren.ts (+inkrafttreten) · public/normtext/revisionen/&lt;KEY&gt;.json · Tore `check:revisionen(-netz)` | normtext/revisionen-2026-07-10.md | Änderungs-/Revisionen-Timeline je Bund-Erlass (3108 AS/RO); Paket 5, W2·6-REV; Gegenprüfung bestanden, **Abnahme David offen** (Quelle: INDEX.md) |
+| Staatsverträge SR 0.* (über die konsolidierte `eli/cc`-Pipeline `extrahiere-fedlex.ts`; kein eigenes Modul) | register/fedlex-staatsvertraege-2026-07-10.md | 9 Verträge als Volltext (Fedlex-Portfolio Paket 4, W2·6); Gegenprüfung bestanden (Quelle: INDEX.md, Ausführungsbeleg §11) |
+
 ## Daten/Infra
 
 | Modul | Grundlage | Stand |
@@ -71,7 +89,7 @@ Kandidaten nach G1-Rangliste, §0a beachten):
 
 | Dossier | Inhalt | Verdrahtungs-Ziel |
 |---|---|---|
-| kosten/gerichtsgebuehren-kantone (Tiefenerfassung 26/26) · kosten/anwaltstarife-kantone.md | kantonale Kosten-/Tarifrahmen, zweifach geprüft | `prozesskosten` (Lücken-Rang 1) |
+| ~~kosten/gerichtsgebuehren-kantone (Tiefenerfassung 26/26) · kosten/anwaltstarife-kantone.md~~ | kantonale Kosten-/Tarifrahmen, zweifach geprüft | VERDRAHTET (1.7.2026, I4) → `src/lib/prozesskosten.ts` + `lib/tarif/` (Quelle: INDEX.md «Bemessungskriterien der Prozesskosten-Tarife») |
 | recherche/bgg-beschwerde-engine.md (Decision Tree A–F) | BGG-Fristen/Zulässigkeit Stufe 2 | `bgg-fristen` (Rang 2; §0a) |
 | ~~behoerden/handelsregisteraemter-kantone.md~~ | HR-Ämter 26 Kt. (zefix-Abgleich offen) | VERDRAHTET 10.6.2026 → `src/data/handelsregisteraemter.ts` (AG-/KE-Mappe) |
 | kosten/notariatstarife-gruendung-kantone.md | Beurkundungstarife (ZH-123/SG offen) | teilverdrahtet (`notariatsgebuehrenGruendung.ts`) |
