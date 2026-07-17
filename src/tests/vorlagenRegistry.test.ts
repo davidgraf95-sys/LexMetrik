@@ -19,6 +19,7 @@ import { ROUTEN_MANIFEST } from '../routesManifest';
 import { kvZusammenstellen as klageVZusammenstellen } from '../lib/vorlagen/klageVereinfacht';
 import { kvZusammenstellen as kvVertragZusammenstellen } from '../lib/vorlagen/kuendigungAllgemein';
 import { agDokumentmappe } from '../lib/vorlagen/gruendungAgDokumente';
+import { VERTRAGS_INVENTAR } from '../lib/vorlagen/variantenInventar';
 
 const katalogVorlagen = ALLE_KARTEN
   .filter((k): k is VorlageCard => k.modus === 'vorlage')
@@ -26,9 +27,28 @@ const katalogVorlagen = ALLE_KARTEN
 
 const katalogSchemaIds = katalogVorlagen.map((k) => k.schemaId as string);
 
+// Registry-Überhang über den Katalog: die Arbeitsvertrag-Sub-Regime (eigenes
+// Schema, aber unter DER 'arbeitsvertrag'-Karte gerendert → keine eigene Karte).
+// SSoT dieser Untertyp-Menge ist VERTRAGS_INVENTAR (kein Hand-Duplikat, §5).
+// Residuum (bewusst, kein Defekt; GP 17.7.): die Menge enthält auch 'einzel'/
+// 'kader' — AV-Untertypen OHNE eigenes Schema (sie teilen AV_SCHEMA/
+// 'arbeitsvertrag'). Ein künftiger Registry-Eintrag mit schema.id 'einzel'/'kader'
+// käme damit durch beide Guards; ein solcher schemaId existiert heute nirgends.
+// Die Latitude ist an die SSoT gebunden (nicht an eine Hand-Liste) — eng genug.
+const AV_UNTERTYP_IDS = new Set(
+  VERTRAGS_INVENTAR.find((k) => k.karte === 'arbeitsvertrag')!.untertypen.map((u) => u.id),
+);
+
 describe('Vorlagen-Registry ↔ Katalog (Drift-Guard P0/C1)', () => {
-  it('deckt jede Katalog-schemaId genau einmal ab und führt keine fremde', () => {
-    expect(new Set(REGISTRY_SCHEMA_IDS)).toEqual(new Set(katalogSchemaIds));
+  it('deckt jede Katalog-schemaId ab; Überhang nur Arbeitsvertrag-Sub-Regime', () => {
+    // (a) jede Katalog-Karte hat einen Registry-Eintrag (kein vergessener Eintrag)
+    for (const id of katalogSchemaIds) expect(REGISTRY_SCHEMA_IDS, id).toContain(id);
+    // (b) Registry-Überhang über den Katalog = ausschliesslich Arbeitsvertrag-Sub-
+    //     Regime (eigenes Schema, kartenlos, golden-gedeckt) — keine sonstige fremde
+    //     Vorlage darf sich einschleichen; die erlaubte Menge stammt aus der SSoT
+    //     VERTRAGS_INVENTAR, nicht aus einer Hand-Liste.
+    const ueberhang = REGISTRY_SCHEMA_IDS.filter((id) => !katalogSchemaIds.includes(id));
+    for (const id of ueberhang) expect(AV_UNTERTYP_IDS.has(id), id).toBe(true);
   });
 
   it('enthält keine doppelten schemaIds', () => {
@@ -53,13 +73,18 @@ describe('Vorlagen-Registry ↔ Katalog (Drift-Guard P0/C1)', () => {
     }
   });
 
-  it('hat für jede schemaId eine Karte mit Route im Manifest', () => {
+  it('hat für jede schemaId eine geroutete Karte (Sub-Regime über die Arbeitsvertrag-Karte)', () => {
     const pfade = new Set(ROUTEN_MANIFEST.map((r) => r.pfad));
-    for (const id of REGISTRY_SCHEMA_IDS) {
+    const routet = (id: string) => {
       const karte = katalogVorlagen.find((k) => k.schemaId === id);
       expect(karte, id).toBeDefined();
       expect(typeof karte?.href, id).toBe('string');
       expect(pfade.has(karte!.href as string), `${id} → ${karte?.href}`).toBe(true);
+    };
+    for (const id of REGISTRY_SCHEMA_IDS) {
+      // Arbeitsvertrag-Sub-Regime haben keine eigene Karte — sie werden über die
+      // 'arbeitsvertrag'-Karte (per Regime-Wahl) gerendert; deren Route muss stehen.
+      routet(AV_UNTERTYP_IDS.has(id) && !katalogSchemaIds.includes(id) ? 'arbeitsvertrag' : id);
     }
   });
 });

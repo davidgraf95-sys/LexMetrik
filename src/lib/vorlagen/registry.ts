@@ -14,6 +14,14 @@
 // mechanisch (Drift-Guard, C4): vergessene Karte/Registry-Eintrag/Route bricht
 // die Suite.
 //
+// EINE bewusste Nicht-Bijektion: die Arbeitsvertrag-Sub-Regime (lehrvertrag/
+// handelsreisendenvertrag/heimarbeitsvertrag) sind eigene, golden-gedeckte
+// Schemas, werden aber unter DER 'arbeitsvertrag'-Karte per Regime-Wahl gerendert
+// (VorlageArbeitsvertrag.tsx) und haben daher keine eigene Katalog-Karte. Die
+// Registry führt sie trotzdem (Ziel: JEDE gebaute Vorlage genau einmal); der
+// Drift-Guard erlaubt genau diesen Überhang, gebunden an VERTRAGS_INVENTAR
+// (arbeitsvertrag.untertypen) — keine sonstige fremde Vorlage.
+//
 // WARNUNG: Dies ist ein Test-/Skript-Modul. NICHT aus UI-Komponenten
 // importieren — es zieht ALLE Schemas in einen Graphen (zu schwer fürs
 // Start-Bundle; die Detailseiten laden ihr Schema je Seite lazy).
@@ -46,6 +54,14 @@ import { VOLLMACHT_SCHEMA, vollmachtZusammenstellen, VOLLMACHT_DEFAULTS, pruefeV
 import { RUBRUM_SCHEMA, rubrumZusammenstellen, RUBRUM_DEFAULTS, pruefeRubrumGates } from './rubrum';
 import { VA_SCHEMA, vaZusammenstellen, VA_DEFAULTS, pruefeVaGates } from './vorsorgeauftrag';
 import { WV_SCHEMA, wvZusammenstellen, WV_DEFAULTS, pruefeWvGates } from './werkvertrag';
+
+// Arbeitsvertrag-Sub-Regime: eigene Schemas, unter der 'arbeitsvertrag'-Karte
+// gerendert (Regime-Wahl in VorlageArbeitsvertrag.tsx), daher KEINE eigene
+// Katalog-Karte — golden-gedeckt (vorl:lv-*/hr-*/ha-*). Nachtrag zur Registry-
+// SSoT, damit sie wirklich JEDE gebaute Vorlage führt (Folge-Einheit H-12/B28).
+import { HR_SCHEMA, hrZusammenstellen, HR_DEFAULTS, pruefeHrGates } from './handelsreisendenvertrag';
+import { HA_SCHEMA, haZusammenstellen, HA_DEFAULTS, pruefeHaGates } from './heimarbeitsvertrag';
+import { LV_SCHEMA, lvZusammenstellen, LV_DEFAULTS, pruefeLvGates } from './lehrvertrag';
 
 import { agDokumentmappe, AG_DOK_DEFAULTS, pruefeAgDokGates } from './gruendungAgDokumente';
 import { gmbhDokumentmappe, GMBH_DOK_DEFAULTS, pruefeGmbhDokGates } from './gruendungGmbhDokumente';
@@ -111,6 +127,10 @@ export const VORLAGEN_REGISTRY: VorlagenEintrag[] = [
   einzel(WV_SCHEMA, wvZusammenstellen, WV_DEFAULTS, pruefeWvGates),
   einzel(NDA_SCHEMA, ndaZusammenstellen, NDA_DEFAULTS, pruefeNdaGates),
   einzel(KK_SCHEMA, kkZusammenstellen, KK_DEFAULTS, pruefeKkGates),
+  // ── Arbeitsvertrag-Sub-Regime (eigenes Schema, unter der 'arbeitsvertrag'-Karte gerendert) ──
+  einzel(LV_SCHEMA, lvZusammenstellen, LV_DEFAULTS, pruefeLvGates),
+  einzel(HR_SCHEMA, hrZusammenstellen, HR_DEFAULTS, pruefeHrGates),
+  einzel(HA_SCHEMA, haZusammenstellen, HA_DEFAULTS, pruefeHaGates),
   // ── Einseitige Willenserklärungen ──
   einzel(KAG_SCHEMA, kagZusammenstellen, KAG_DEFAULTS, pruefeKagGates),
   einzel(KAN_SCHEMA, kanZusammenstellen, KAN_DEFAULTS, pruefeKanGates),
