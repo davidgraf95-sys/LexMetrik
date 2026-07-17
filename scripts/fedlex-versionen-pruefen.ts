@@ -11,6 +11,10 @@
 //   → GANZ-AUFHEBUNG des Erlasses (jolux:dateNoLongerInForce, Abstract-Ebene):
 //     ≤ heute ⇒ Erlass ausser Kraft, Snapshot nicht mehr geltend (ROT);
 //     > heute ⇒ Ablösung angekündigt (WARN). (G-AUFH: Aufhebungs-Blindheit)
+//     AUSNAHME: ist die Aufhebung in src/lib/normtext/aufhebungen.ts ANERKANNT
+//     (bewusst historisch geführt), wird der Repeal LIVE gegen das amtliche
+//     dateNoLongerInForce verifiziert und zu einem ehrlichen OK gehoben — ein
+//     UNDEKLARIERTER Repeal bleibt ROT (§8-ehrlich).
 //
 // SSoT §5: Die Liste der Gesetze/Pins wird aus scripts/fedlex-cache.sh
 // geparst — sie wird hier NICHT dupliziert.
@@ -18,16 +22,20 @@
 //   npm run check:fedlex-versionen
 //
 // Exit 1 → mindestens ein Pin ist ÜBERHOLT (neuere geltende Konsolidierung
-//          existiert) ODER der Erlass ist ganz AUFGEHOBEN: Caches neu pinnen
-//          bzw. Snapshot entfernen/ersetzen, Anker/Wortlaute neu verifizieren
-//          (§7), Quellen-Register nachführen.
-// Exit 0 → alle Pins aktuell; künftige Fassungen/Aufhebungen nur als HINWEIS.
+//          existiert) ODER der Erlass ist ganz AUFGEHOBEN (ohne anerkannte
+//          Deklaration bzw. mit widersprüchlicher Deklaration): Caches neu
+//          pinnen bzw. Snapshot entfernen/ersetzen oder aufhebungen.ts
+//          nachführen, Anker/Wortlaute neu verifizieren (§7), Quellen-Register
+//          nachführen.
+// Exit 0 → alle Pins aktuell; künftige Fassungen/Aufhebungen nur als HINWEIS;
+//          anerkannte Aufhebungen als ehrliches OK «bewusst historisch».
 // Exit 2 → Endpoint/Netz-Fehler (keine Aussage möglich).
 // SSoT §5: die Pin-Liste wird aus scripts/fedlex-cache.sh geparst — die
 // Parse-Logik liegt einmal in scripts/fedlex-pins.ts (auch vom Gegenprüfungs-Tor genutzt).
 import { lesePins, lesePinsVoll, type Pin } from './fedlex-pins';
 import { loeseHtmlManifeste } from './fedlex-manifest';
 import { PDF_EMBED_QUELLEN } from '../src/lib/normtext/pdf-embed.ts';
+import { anerkannteAufhebungNachEli } from '../src/lib/normtext/aufhebungen.ts';
 
 const ENDPOINT = 'https://fedlex.data.admin.ch/sparqlendpoint';
 
@@ -119,6 +127,43 @@ export function bewerte(
     return {
       art: 'FEHLER',
       text: `FEHLER     ${pin.name}: keine Konsolidierungen via SPARQL gefunden (ELI ${pin.eli} prüfen!)`,
+    };
+  }
+  // ─── G-AUFH · Anerkannte Aufhebung (§8-ehrlich, PR #287) ───────────────────
+  // Ein von Fedlex GANZ aufgehobener Erlass bleibt bei uns als HISTORISCHE
+  // Fassung nutzbar (Juristinnen brauchen aufgehobene Fassungen), nie als
+  // geltend. Ist die Aufhebung in aufhebungen.ts DEKLARIERT (anerkannt), wird
+  // sie hier LIVE gegen das amtliche dateNoLongerInForce verifiziert und zu
+  // einem ehrlichen OK gehoben — statt den Check für immer ROT zu halten:
+  //   • Fedlex bestätigt die Aufhebung (noLonger ≤ heute) UND das Datum stimmt
+  //     mit der Deklaration ⇒ OK «bewusst historisch geführt».
+  //   • Fedlex bestätigt sie, aber das Datum weicht ab ⇒ ROT (Deklaration
+  //     nachführen).
+  //   • Fedlex bestätigt KEINE geltende Aufhebung (kein/künftiges noLonger) ⇒
+  //     die Deklaration ist falsch (wir würden einen geltenden Erlass als
+  //     aufgehoben zeigen) ⇒ ROT.
+  // Ein UNDEKLARIERTER Repeal fällt durch auf die AUFGEHOBEN-Blindheitsprüfung
+  // unten und bleibt ROT (Sinn von G-AUFH, PR #285).
+  const anerkannt = anerkannteAufhebungNachEli(pin.eli);
+  if (anerkannt) {
+    const nf = anerkannt.nachfolger
+      ? ` — Nachfolger SR ${anerkannt.nachfolger.sr} (${anerkannt.nachfolger.eli})`
+      : '';
+    if (noLonger && noLonger <= heute && noLonger === anerkannt.seit) {
+      return {
+        art: 'OK',
+        text: `OK (aufgehoben) ${pin.name}: ${pin.eli} amtlich aufgehoben per ${noLonger}, bewusst als historische Fassung geführt${nf}.`,
+      };
+    }
+    if (noLonger && noLonger <= heute) {
+      return {
+        art: 'AUFGEHOBEN',
+        text: `AUFGEHOBEN ${pin.name}: Deklaration seit=${anerkannt.seit}, Fedlex dateNoLongerInForce=${noLonger} → Deklaration in aufhebungen.ts nachführen!`,
+      };
+    }
+    return {
+      art: 'AUFGEHOBEN',
+      text: `AUFGEHOBEN ${pin.name}: als aufgehoben DEKLARIERT (seit ${anerkannt.seit}), aber Fedlex meldet KEINE geltende Aufhebung (${noLonger ?? 'kein noLonger'}) → Deklaration entfernen (Erlass geltend)!`,
     };
   }
   // G-AUFH: Ganz-Aufhebung hat VORRANG vor der Datums-Prüfung. Ein aufgehobener
@@ -225,7 +270,7 @@ async function main() {
 
   console.log('');
   if (ueberholt > 0 || unkanonisch > 0 || aufgehoben > 0) {
-    if (aufgehoben > 0) console.log(`${aufgehoben} Pin(s) AUFGEHOBEN — der Erlass ist ganz ausser Kraft: Snapshot entfernen/ersetzen, Verweise prüfen (§7/§8).`);
+    if (aufgehoben > 0) console.log(`${aufgehoben} Pin(s) AUFGEHOBEN — der Erlass ist ganz ausser Kraft bzw. die Aufhebungs-Deklaration stimmt nicht mit der amtlichen Quelle überein: Snapshot entfernen/ersetzen oder aufhebungen.ts nachführen (§7/§8).`);
     if (ueberholt > 0) console.log(`${ueberholt} Pin(s) überholt oder unauffindbar — Caches/Quellen-Register nachführen, betroffene Anker und Wortlaute neu verifizieren (§7).`);
     if (unkanonisch > 0) console.log(`${unkanonisch} Pin(s) nicht-kanonisch (html-N ≠ isExemplifiedBy) — Alias-/Alt-Revisions-Wurzel: re-pinnen + Snapshots/Struktur regenerieren.`);
     process.exit(1);
