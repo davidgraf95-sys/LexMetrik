@@ -119,6 +119,28 @@ function main() {
         if (i > 0 && RANG[sf[i - 1].sprache] >= RANG[f.sprache]) {
           fehler.push(`${e.key}: sprachfassungen nicht DE→FR→IT sortiert (${sf.map((x) => x.sprache).join('→')})`);
         }
+        // A29: mehrteilige Regeste ist strukturell konsistent — >1 Teil, jeder mit
+        // Kopf, erster Teil trägt Label 'a' (amtliche Enumeration), keine Lücke.
+        const wr = f.weitereRegesten;
+        if (wr) {
+          if (wr.length < 2) fehler.push(`${e.key}: sprachfassung[${f.sprache}] weitereRegesten mit <2 Teilen (nur bei Mehrteiligkeit setzen)`);
+          if (wr[0] && wr[0].label !== 'a') fehler.push(`${e.key}: sprachfassung[${f.sprache}] erster Regeste-Teil hat Label '${wr[0]?.label}' statt 'a'`);
+          if (wr[0] && (wr[0].kopf !== f.kopf || JSON.stringify(wr[0].absaetze) !== JSON.stringify(f.absaetze))) {
+            fehler.push(`${e.key}: sprachfassung[${f.sprache}] weitereRegesten[0] ≠ kopf/absaetze (Fallback-Projektion inkonsistent, §5)`);
+          }
+          for (const t of wr) if (!t.kopf?.trim()) fehler.push(`${e.key}: sprachfassung[${f.sprache}] Regeste-Teil '${t.label}' ohne Kopf`);
+        }
+      }
+      // A29 Anti-Regression: trägt die amtliche Quelle (flacher OCL-Regestetext) einen
+      // zweiten Regeste-Block («Regeste b»/«Regesto b»…), MUSS die DE-Fassung diesen als
+      // weitereRegesten strukturiert führen — sonst ist ein Regeste-Teil verloren
+      // (genau der Bug von BGE 147 III 121). Marker nur am Zeilenanfang → keine Zitat-Treffer.
+      const marker = /\n\s*Regest[eo]\s+([b-z])\s*\n/.exec(snap.regeste?.text ?? '');
+      if (marker) {
+        const de = sf.find((x) => x.sprache === 'de');
+        if (!de?.weitereRegesten || de.weitereRegesten.length < 2) {
+          fehler.push(`${e.key}: Quelle trägt «Regeste ${marker[1]}», aber DE-Fassung ohne weitereRegesten (A29 — Regeste-Teil verloren)`);
+        }
       }
     }
     // BGE-Umschalter-Integrität (§8, Bug-Check 26.6.): auszugAbschnitte ⟹ azaUrteil; und

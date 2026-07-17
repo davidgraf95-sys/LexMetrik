@@ -45,10 +45,26 @@ export interface EntscheidAbschnitt {
  * Wortraten-Heuristik (§2). `kopf` = Regestenkopf (massgebliche Artikel +
  * Regestentitel; in der amtlichen Sammlung fett). `absaetze` = die Textabsätze.
  */
-export interface RegesteSprachfassung {
-  sprache: EntscheidSprache;   // 'de' | 'fr' | 'it'
+/**
+ * Ein Teil einer mehrteiligen amtlichen Regeste («Regeste a / b / c»; Bug-Fix A29).
+ * `label` = Teil-Buchstabe der amtlichen Sammlung.
+ */
+export interface RegesteTeil {
+  label: string | null;
   kopf: string;
   absaetze: string[];
+}
+
+export interface RegesteSprachfassung {
+  sprache: EntscheidSprache;   // 'de' | 'fr' | 'it'
+  kopf: string;                // Regestenkopf des ERSTEN Teils (Rückwärtskompat/Fallback)
+  absaetze: string[];          // Textabsätze des ERSTEN Teils
+  /**
+   * Mehrteilige Regeste (amtl. «Regeste a / b / c»): ALLE Teile inkl. a, mit Label,
+   * in amtlicher Reihenfolge. NUR gesetzt, wenn die Quelle >1 Regeste-Block trägt
+   * (Bug-Fix A29). Fehlt das Feld ⇒ Einfach-Regeste (kopf/absaetze tragen alles).
+   */
+  weitereRegesten?: RegesteTeil[];
   quelleUrl: string;           // amtliche clir-URL DIESER Sprachfassung (§7)
 }
 

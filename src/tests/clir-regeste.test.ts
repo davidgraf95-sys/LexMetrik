@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  parseClirRegeste, schneideRegesteDiv, inlineZuText, bgeRefZuClirId, clirUrl, parseClirUrteilskopf,
+  parseClirRegeste, schneideRegesteDiv, schneideAlleRegesteDivs, parseRegesteLabel,
+  inlineZuText, bgeRefZuClirId, clirUrl, parseClirUrteilskopf,
 } from '../../scripts/normtext/clir-regeste';
 
 const FIX = (n: string) => readFileSync(join(__dirname, 'fixtures', n), 'utf8');
@@ -73,6 +74,47 @@ describe('parseClirRegeste (echte amtliche BGE-Seite)', () => {
   it('lässt den Regestentitel NICHT in den Kopf-Text lecken (kein sup-Rest)', () => {
     expect(p!.kopf).not.toContain('<');
     expect(p!.absaetze[0]).not.toContain('<');
+  });
+});
+
+// ─── Mehrteilige Regeste «Regeste a / b / c» (Bug-Fix A29, 16.7.2026) ──────────
+// Die amtliche Quelle legt jeden Regeste-Teil als EIGENEN <div id="regeste">-Block
+// ab; der alte Einzelschnitt nahm nur den ersten Teil (Regeste b/c gingen verloren
+// — Symptom BGE 147 III 121). Fixture = echte bger.ch-DE-Seite (zwei Teile a+b).
+describe('mehrteilige Regeste (A29)', () => {
+  const H = FIX('clir-regeste-147-III-121-de.html');
+  it('schneideAlleRegesteDivs findet ALLE Regeste-Blöcke (nicht nur den ersten)', () => {
+    const divs = schneideAlleRegesteDivs(H);
+    expect(divs.length).toBe(2);
+    expect(divs.every((d) => d.sprache === 'de')).toBe(true);
+    expect(divs[0].inner).toContain('alternierende Obhut');
+    expect(divs[1].inner).toContain('Erziehungsgutschriften');
+    expect(divs[0].inner).not.toContain('Erziehungsgutschriften'); // Blöcke sauber getrennt
+  });
+  it('parseRegesteLabel liest den Teil-Buchstaben (DE/FR «Regeste x», IT «Regesto x»)', () => {
+    expect(parseRegesteLabel('Regeste&nbsp;a')).toBe('a');
+    expect(parseRegesteLabel('Regeste&nbsp;b')).toBe('b');
+    expect(parseRegesteLabel('Regesto&nbsp;c')).toBe('c');
+    expect(parseRegesteLabel('Regeste')).toBeNull();     // Einfach-Regeste
+    expect(parseRegesteLabel('Regesto')).toBeNull();
+  });
+  it('parseClirRegeste liefert weitereRegesten mit Label a+b, Teile inhaltstreu getrennt', () => {
+    const p = parseClirRegeste(H);
+    expect(p).not.toBeNull();
+    // Rückwärtskompat: kopf/absaetze = erster Teil (a).
+    expect(p!.kopf.startsWith('Art. 298 Abs. 2 ter ZGB')).toBe(true);
+    expect(p!.weitereRegesten?.length).toBe(2);
+    expect(p!.weitereRegesten!.map((t) => t.label)).toEqual(['a', 'b']);
+    expect(p!.weitereRegesten![0].kopf).toBe(p!.kopf);           // Projektions-Konsistenz (§5)
+    expect(p!.weitereRegesten![0].absaetze).toEqual(p!.absaetze);
+    // Teil b trägt seinen eigenen Kopf + Absatz (der verlorene Teil).
+    expect(p!.weitereRegesten![1].kopf).toContain('AHVV');
+    expect(p!.weitereRegesten![1].kopf).toContain('Erziehungsgutschriften');
+    expect(p!.weitereRegesten![1].absaetze[0]).toContain('geteilter Betreuung (E. 3.4).');
+  });
+  it('Einfach-Regeste bleibt ohne weitereRegesten (byte-treu, §6)', () => {
+    const p = parseClirRegeste(FIX('clir-regeste-152-V-2-de.html'));
+    expect(p!.weitereRegesten).toBeUndefined();
   });
 });
 
