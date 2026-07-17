@@ -1,0 +1,548 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/148_V_128",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "V",
+      "nummer": "148 V 128",
+      "bgeReferenz": "148 V 128",
+      "zitierung": "BGE 148 V 128",
+      "datum": "2021-12-10",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "legalArea": "social_insurance",
+      "rubrum": {
+        "besetzung": "Bundesrichter Parrino, Präsident, Bundesrichter Maillard, Stadelmann, Bundesrichterin Moser-Szeless, Bundesrichter Abrecht, Gerichtsschreiberin Fleischanderl",
+        "parteien": "A.________ AG, vertreten durch Rechtsanwalt Dr. Andreas Wildi und/oder Rechtsanwältin Monja Sieber, Beschwerdeführerin, gegen Bundesamt für Gesundheit, Kranken- und Unfallversicherung, Schwarzenburgstrasse 157, 3003 Bern, Beschwerdegegner",
+        "gegenstand": "Krankenversicherung (Spezialitätenliste, dreijährliche Überprüfung der Aufnahmebedingungen)",
+        "vorinstanz": "Bundesverwaltungsgerichts vom 7. Oktober 2020 (C-471/2019)"
+      },
+      "regeste": {
+        "text": "Art. 32 KVG; Art. 65d Abs. 1 KVV; Art. 33, 34d und 34f KLV; Therapeutischer Quervergleich (TQV) im Rahmen der dreijährlichen Überprüfung der Aufnahmebedingungen; Begriff der Zweckmässigkeit. Die Frage der Packungsgrösse des zu überprüfenden Arzneimittels ist, obgleich gewisse Schnittstellen zum Kriterium der Wirtschaftlichkeit aufweisend, unter dem Titel der Zweckmässigkeit zu prüfen (E. 4.3).\nRegeste\n Art. 32 LAMal; art. 65d al. 1 OAMal; art. 33, 34d et 34f OPAS; comparaison thérapeutique (CT) dans le cadre du réexamen triennal des conditions d'admission; notion d'adéquation. La question de la taille de l'emballage du médicament à contrôler doit être examinée sous l'angle du critère de l'adéquation, bien qu'elle présente des points communs avec le critère du caractère économique (consid. 4.3).\nRegesto\n Art. 32 LAMal; art. 65d cpv. 1 OAMal; art. 33, 34d e 34f OPre; confronto terapeutico trasversale (CT) nell'ambito del riesame triennale delle condizioni d'ammissione; nozione dell'appropriatezza. La questione delle dimensioni dell'imballaggio del medicinale da esaminare deve essere valutata secondo il criterio dell'appropriatezza, anche se vi sono dei punti in comune con il criterio dell'economicità (consid. 4.3).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 32 KVG; Art. 65d Abs. 1 KVV; Art. 33, 34d und 34f KLV; Therapeutischer Quervergleich (TQV) im Rahmen der dreijährlichen Überprüfung der Aufnahmebedingungen; Begriff der Zweckmässigkeit.",
+            "absaetze": [
+              "Die Frage der Packungsgrösse des zu überprüfenden Arzneimittels ist, obgleich gewisse Schnittstellen zum Kriterium der Wirtschaftlichkeit aufweisend, unter dem Titel der Zweckmässigkeit zu prüfen (E. 4.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-V-128%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 32 LAMal; art. 65d al. 1 OAMal; art. 33, 34d et 34f OPAS; comparaison thérapeutique (CT) dans le cadre du réexamen triennal des conditions d'admission; notion d'adéquation.",
+            "absaetze": [
+              "La question de la taille de l'emballage du médicament à contrôler doit être examinée sous l'angle du critère de l'adéquation, bien qu'elle présente des points communs avec le critère du caractère économique (consid. 4.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-V-128%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 32 LAMal; art. 65d cpv. 1 OAMal; art. 33, 34d e 34f OPre; confronto terapeutico trasversale (CT) nell'ambito del riesame triennale delle condizioni d'ammissione; nozione dell'appropriatezza.",
+            "absaetze": [
+              "La questione delle dimensioni dell'imballaggio del medicinale da esaminare deve essere valutata secondo il criterio dell'appropriatezza, anche se vi sono dei punti in comune con il criterio dell'economicità (consid. 4.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-V-128%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. Die A.________ AG ist Zulassungsinhaberin des vom Schweizerischen Heilmittelinstitut (Swissmedic) zugelassenen, patentgeschützten Arzneimittels B.________, welches als Trockensubstanz zur Herstellung einer Injektionslösung seit vvv in den Dosierungen www mcg und www mcg als Einerpackung auf der Liste der pharmazeutischen Spezialitäten und konfektionierten Arzneimittel mit Preisen (Spezialitätenliste [SL]) figuriert. Es enthält den Wirkstoff C.________ und dient der Behandlung von (...) bei Patienten mit (...); die zunächst auf erwachsene Patienten beschränkte Anwendbarkeit wurde in der Folge auf mindestens einjährige Kinder erweitert. A.b. Das Bundesamt für Gesundheit (BAG) teilte der A.________ AG mit Rundschreiben vom 13. Dezember 2017 mit, dass B.________ der dreijährlichen Überprüfung der Aufnahmebedingungen der in der SL gelisteten Präparate unterzogen werde, und ersuchte um Eingabe der dafür erforderlichen Daten in die bereitgestellte Internet-Applikation bis 15. Februar 2018. Insbesondere wurden Angaben zur Wirksamkeit und Zweckmässigkeit sowie mit Blick auf das Kriterium der Wirtschaftlichkeit zu den Grundlagen des von der Zulassungsinhaberin vorgenommenen Therapeutischen Quervergleichs (TQV) gefordert. Die A.________ AG schlug daraufhin vor, den TQV von B.________ (Trockensubstanz www mcg/yyy Stk) mit dem Medikament D.________ (Filmtablette xxx mg/yyy Stk) durchzuführen. Nachdem sich die Parteien in der Folge bezüglich der Kriterien der Zweckmässigkeit und Wirtschaftlichkeit nicht einigen konnten, kam das BAG abschliessend mit Verfügung vom 7. Dezember 2018 zum Ergebnis, B.________ werde im Rahmen der bisherigen Darreichungsformen zwar grundsätzlich als zweckmässig eingestuft, dies jedoch unter der Auflage, dass die Zulassungsinhaberin bis Ende 2020 ein Gesuch um Aufnahme einer www mcg-Packung in die SL einreiche; ferner seien, so das BAG im Weiteren, im Hinblick auf die Wirtschaftlichkeit von B.________ beim unstreitig mit D.________ als Vergleichspräparat vorzunehmenden TQV nicht dessen Kosten für die effektiv verabreichte Dosis, sondern der Preis der kleinsten Packung (à www mcg) zu berücksichtigen. Gestützt darauf wurden die ab 1. Februar 2019 geltenden Preise von B.________ neu wie folgt festgesetzt: (...)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Die dagegen erhobene Beschwerde wies das Bundesverwaltungsgericht mit Urteil vom 7. Oktober 2020 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Die A.________ AG lässt Beschwerde in öffentlich-rechtlichen Angelegenheiten führen und beantragen, in Aufhebung des angefochtenen Urteils sowie der Verfügung des BAG vom 7. Dezember 2018 seien die Preise von B.________ per 1. Februar 2019 wie folgt neu festzulegen: (...). Eventualiter sei die Sache zur erneuten Beurteilung an das BAG zurückzuweisen mit der Anordnung, für sämtliche Packungen B.________ Parenteral einschliesslich der neu einzuführenden Packung www mcg sei ein wirtschaftlicher FAP und PP unter Berücksichtigung der Packung www mcg als kleinste Packung und der angemessenen Berücksichtigung des verminderten Verwurfs festzusetzen. Das BAG schliesst auf Abweisung der Beschwerde. Die A.________ AG hält replikweise an ihren Anträgen fest."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Mit der Beschwerde in öffentlich-rechtlichen Angelegenheiten kann u.a. die Verletzung von Bundesrecht gerügt werden (Art. 95 lit. a BGG). Die Feststellung des Sachverhalts kann nur gerügt werden, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruht und wenn die Behebung des Mangels für den Ausgang des Verfahrens entscheidend sein kann (Art. 97 Abs. 1 BGG). Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG). Es kann die Sachverhaltsfeststellung der Vorinstanz von Amtes wegen berichtigen oder ergänzen, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruht (Art. 105 Abs. 2 BGG)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Das Bundesgericht wendet das Recht von Amtes wegen an (Art. 106 Abs. 1 BGG). Indes prüft es, unter Berücksichtigung der allgemeinen Begründungspflicht der Beschwerde (vgl. Art. 42 Abs. 1 BGG), grundsätzlich nur die geltend gemachten Rügen, sofern die rechtlichen Mängel nicht geradezu offensichtlich sind (BGE 145 V 57 E. 4.2 mit Hinweis)."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Im Streit steht, ob Bundesrecht verletzt wurde, indem die Vorinstanz sowohl die durch den Beschwerdegegner verfügte Senkung der Preise des Medikaments B.________ als auch die Auflage bestätigt hat, eine kleinere Packung à www mcg in der Schweiz einzuführen."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Die massgeblichen rechtlichen Grundlagen wurden im angefochtenen Urteil zutreffend dargelegt. Es betrifft dies namentlich die Bestimmungen und Grundsätze des KVG zur Wirksamkeit, Zweckmässigkeit und Wirtschaftlichkeit der Leistungen nach Art. 25-31 KVG (Art. 32 Abs. 1 KVG [sog. WZW-Kriterien]; zum komparativen Charakter der Wirtschaftlichkeit: BGE 142 V 26 E. 5.2.1), zur periodischen Überprüfung dieser Voraussetzungen (Art. 32 Abs. 2 KVG; BGE 142 V 26 E. 5.2.3 und 5.3), zum Ziel der qualitativ hoch stehenden und zweckmässigen gesundheitlichen Versorgung zu möglichst günstigen Kosten (Art. 43 Abs. 6 KVG) sowie zur SL (Art. 52 Abs. 1 lit. b KVG; BGE 145 V 289 E. 2.1). Korrekt wiedergegeben wurden ferner die relevanten Normen der KVV und der KLV zu den Bedingungen für die Aufnahme von Arzneimitteln in die SL, zur Beurteilung der Wirtschaftlichkeit und der Zweckmässigkeit im Allgemeinen sowie zur Überprüfung der SL-Aufnahmebedingungen alle drei Jahre. Darauf wird verwiesen.\n\nHervorzuheben ist dabei insbesondere das (Preis-) Überprüfungsverfahren gemäss Art. 65d Abs. 1 KVV in Verbindung mit Art. 34d KLV, wonach das BAG sämtliche Arzneimittel, die in der SL aufgeführt sind, alle drei Jahre daraufhin überprüft, ob sie die Aufnahmebedingungen noch erfüllen. Die Arzneimittel werden auf Grund ihrer Zugehörigkeit zu einer therapeutischen Gruppe der SL in drei Einheiten aufgeteilt. Jede Einheit wird alle drei Jahre überprüft."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Anerkanntermassen verfügt B.________ über eine gültige Zulassung von Swissmedic. Einig sind sich die Verfahrensbeteiligten im Rahmen der vorzunehmenden dreijährlichen Überprüfung der Aufnahmebedingungen auch dahingehend, dass das Medikament das Kriterium der Wirksamkeit (weiterhin) erfüllt und dessen Wirtschaftlichkeit anhand eines - ebenfalls zu keinen Beanstandungen führenden - Auslandpreisvergleichs (APV; dazu E. 7.2 hiernach) und eines TQV zu beurteilen ist."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Zu Diskussionen Anlass gab und gibt demgegenüber der TQV und dabei insbesondere die dem Vergleichsarzneimittel D.________ (Filmtablette xxx mg/yyy Stk) gegenüberzustellenden Tagestherapiekosten von B.________. Unterschiedliche Auffassungen bestehen ferner in der Hauptsache darüber, ob das - nachstehend vorab zu prüfende - Kriterium der Zweckmässigkeit des Medikaments an die Auflage der Einführung einer kleineren www mcg-Packung geknüpft werden darf."
+            },
+            {
+              "marke": "E. 3.2.1",
+              "tiefe": 3,
+              "text": "Vorinstanz und Beschwerdegegner sind dabei zum Ergebnis gelangt, die bisher in der Schweiz zugelassenen Packungen von B.________ (www mcg und www mcg) seien zwar grundsätzlich als zweckmässig anzusehen, jedoch lediglich verbunden mit der Auflage, dass die Beschwerdeführerin beim BAG ein Gesuch um Aufnahme einer www mcg-Packung in die SL einreiche und gleichzeitig die vorausgesetzte Swissmedic-Zulassung veranlasse. Auf Grund des bei einer benötigten Menge von www mcg pro Kilogramm Körpergewicht hohen Verwurfs des Medikaments, das heisst der zu verwerfenden Restmenge zwischen patientenindividueller, verordneter Dosierung und Packungsgrösse, in der Kinderindikation, bei der Anfangsdosierung für Erwachsene und Jugendliche sowie bei der Behandlung von jungen Erwachsenen mit einem Körpergewicht von bis zu 50 Kilogramm sei eine www mcg-Packung als zweckmässiger einzustufen als die beiden bisherigen Packungen. Gleiches gelte für höhere Dosierungen bei Erwachsenen, bei welchen eine Kombination der www mcg-Packung mit der www mcg-Packung oder bei sehr hohem Bedarf auch mit der www mcg-Packung angezeigter erscheine als der Gebrauch zweier www mcg-Packungen oder die Kombination einer www mcg-Packung mit einer www mcg-Packung. Es rechtfertige sich daher, die Zweckmässigkeit der aktuell in der SL gelisteten Packungen von B.________ längerfristig nur unter der Voraussetzung der Einführung einer kleineren Packung zu bejahen."
+            },
+            {
+              "marke": "E. 3.2.2",
+              "tiefe": 3,
+              "text": "Dem wird in der Beschwerde im Wesentlichen entgegengehalten, B.________ erfülle die Aufnahmebedingung der Zweckmässigkeit auch ohne die entsprechende Auflage weiterhin. Diese entbehre einer gesetzlichen Grundlage und sei unverhältnismässig. Insbesondere sei das Kriterium praxisgemäss nur restriktiv bzw. bei Vorliegen von triftigen Gründen oder einer geänderten Sachlage zu verneinen. Art. 33 KLV verlange nicht nach Ampullen, die eine Mindest- oder Durchschnittsdosierung abdeckten. Ferner sei die Einführung der geforderten Kleinpackung entgegen der Auffassung von Vorinstanz und Beschwerdegegner nicht geeignet, die Verwurfsproblematik zu vermindern. Bei der www mcg-Packung entstehe beim Durchschnittspatienten zwar ein Verwurf, der aber bei schwereren Patienten oder solchen, die aus medizinischen Gründen eine höhere Dosierung benötigten, gerade nicht resultiere. Des Weitern könne der Verwurf auch in Bezug auf die Durchschnittsdosierung, die bei einer erwachsenen Person von 72 Kilogramm www mcg betrage (72 kg x www mcg), nicht korrigiert werden, da diesfalls jeweils zwei www mcg-Packungen erforderlich wären, das heisst, wie bis anhin, www mcg mit einem Verwurf von ebenfalls www mcg. Schliesslich würden für die notwendigen zwei Kleinpackungen auch mehr Vertriebsanteile und Verpackungsmaterial anfallen. Die angeordnete Einführung einer Kleinpackung erweise sich mithin unter sämtlichen Titeln nicht nur als nicht notwendig, sondern sogar als ungeeignet und somit unzweckmässiger als die bisherige Lösung."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Entscheidend für das Kriterium der Zweckmässigkeit ist der diagnostische oder therapeutische Nutzen der Anwendung im Einzelfall unter Berücksichtigung der damit verbundenen Risiken, gemessen am angestrebten Heilerfolg der möglichst vollständigen Beseitigung der körperlichen oder psychischen Beeinträchtigung (BGE 130 V 299 E. 6.1 mit Hinweisen) sowie an der Gefahr missbräuchlicher Verwendung (BGE 129 V 32 E. 4.1). Die Zweckmässigkeit richtet sich dabei nach objektiven medizinischen Kriterien: Ist eine Massnahme medizinisch indiziert, gilt sie als zweckmässig (BGE 130 V 532 E. 2.2 mit Hinweisen; Gebhard Eugster, Krankenversicherung, in: Schweizerisches Bundesverwaltungsrecht [SBVR], Bd. XIV, Soziale Sicherheit, 3. Aufl. 2016, S. 508 f. Rz. 331 und 333; Willy Oggier/Kerstin Noëlle Vokinger, Basler Kommentar, Krankenversicherungsgesetz/Krankenversicherungsaufsichtsgesetz, 2020, N. 13 zu Art. 32 KVG). Nach der Verwaltungspraxis erfolgt die Beurteilung der Zweckmässigkeit auf Grund des Verhältnisses von Erfolg und Misserfolg (Fehlschlägen) einer Anwendung sowie der Häufigkeit von Komplikationen (BGE 127 V 138 E. 5 mit Hinweisen; vgl. auch Oggier/Vokinger, a.a.O., N. 45 zu Art. 32 KVG). Zweckmässigkeit der durch die OKP zu vergütenden Leistung setzt deren Wirksamkeit voraus (BGE 133 V 115 E. 2.2; Oggier/Vokinger, a.a.O., N. 12 zu Art. 32 KVG)."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Das BAG hat sich - auf Empfehlung der Geschäftsprüfungskommission des Nationalrats - im Rahmen seines Arbeitspapiers \"Operationalisierung der Begriffe Wirksamkeit, Zweckmässigkeit und Wirtschaftlichkeit\", Version 2.0, vom 21. Juli 2011 näher mit den entsprechenden Kriterien und damit auch mit dem Begriff der Zweckmässigkeit von Leistungen befasst (abrufbar unter www.bag.admin.ch). Es ist dabei zum Ergebnis gelangt, dass die Zweckmässigkeit einer Leistung zusätzlich zur Wirksamkeit deren Eignung, unter Berücksichtigung von Nutzen und Schaden, deren Erforderlichkeit und Zumutbarkeit sowie die Verhältnismässigkeit des Mitteleinsatzes voraussetze (S. 5 oben). Bezüglich des letztgenannten Elementes hielt es ferner fest, dass dieses nicht gegeben sei, wenn sich eine Massnahme durch eine kostengünstigere Alternative ersetzen lasse, ohne dass dadurch der medizinische Erfolg in Frage gestellt werde (S. 5 Mitte). Bei der Beurteilung von neuen Leistungen komme die Zweckmässigkeit - so das BAG im Weiteren (S. 5 unten) - insbesondere zur Anwendung in Zusammenhang mit Überlegungen, ob flankierende Massnahmen zur Kostenübernahme zu empfehlen seien, die den angemessenen Einsatz der Leistungen sicherstellen sollten."
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Mit den Folgerungen des bundesamtlichen Arbeitspapiers setzte sich im Nachgang auch die Lehre auseinander. So kamen etwa Daniel Widrig/Brigitte Tag (Rechtliche Aspekte der Kosten-/Nutzenbewertung in der Medizin, in: Health Insurance Liability Law [HILL], 2012, Fachartikel Nr. 65) zum Schluss, zweckmässig könne eine Leistung nur dann sein, wenn sie zugleich das Kriterium der Wirksamkeit erfülle. Ob die wirksame Leistung auch zweckmässig sei, beurteile sich in der Regel anhand medizinischer Kriterien. Das \"Z-Kriterium\" solle primär die zweckmässige Auswahl unter verschiedenen medizinischen Massnahmen sicherstellen. Zweckmässig sei eine Massnahme, wenn sie, in Anbetracht des konkreten Krankheitsbildes, die nach objektiven Kriterien am besten geeignete Vorkehr darstelle und den besten medizinischen Nutzen aufweise, das heisst schneller, besser oder einfacher zum verfolgten Behandlungsziel führe. Gebe es für eine Indikation nur eine mögliche medizinische Massnahme, sei sie solange als zweckmässig anzusehen, bis deren Risiken ihren Nutzen überstiegen. Das Z-Kriterium habe demzufolge vergleichenden Charakter. Des Weitern müsse die Leistung, um das Kriterium zu erfüllen, notwendig sein. Sie gelte dann als notwendig, wenn sie aus medizinischer Sicht zur Erzielung des Behandlungserfolgs unentbehrlich sei. Es sei jedoch nicht sachgemäss, die Zweckmässigkeit zu verneinen, sobald die Leistung durch eine gleich wirksame, aber kostengünstigere Alternative ersetzt werden könnte, da dadurch eine Vermischung mit dem Wirtschaftlichkeitskriterium entstünde. Deshalb empfehle es sich, als Voraussetzung für die Zweckmässigkeit einer Leistung zu verlangen, dass die in klinischen Studien nachgewiesene Wirksamkeit sich auch im medizinischen Alltag bestätigen lasse (Rz. 57). Schliesslich führten die Autoren aus, bei der Operationalisierung des Zweckmässigkeitskriteriums weiche das BAG von den vorgegebenen Rahmenbedingungen ab, indem es unter dem Zusatzkriterium eines \"verhältnismässigen Mitteleinsatzes\" die medizinischen Alternativen auf ihre Kostenintensität prüfe. Diese Vermischung mit dem Wirtschaftlichkeitskriterium sei zumindest aus rechtssystematischer Sicht zwar etwas unbefriedigend, führe schliesslich aber zum gleichen Endergebnis (Rz. 62)."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Der Bundesrat äussert sich in der KVV nicht zum Kriterium der Zweckmässigkeit von Arzneimitteln. Erst der vom Departement des Innern erlassene Art. 33 KLV hält fest, die Zweckmässigkeit eines Arzneimittels werde in Bezug auf seine Wirkung und Zusammensetzung nach klinisch-pharmakologischen und galenischen Erwägungen, nach unerwünschten Wirkungen sowie nach der Gefahr missbräuchlicher Verwendung beurteilt (Abs. 1). Das BAG stützt sich dabei - so Abs. 2 der Verordnungsbestimmung - für die Beurteilung der Zweckmässigkeit auf die Unterlagen, die für die Zulassung durch Swissmedic massgebend gewesen sind. Es kann weitere Unterlagen verlangen."
+            },
+            {
+              "marke": "E. 4.3.1",
+              "tiefe": 3,
+              "text": "Art. 33 KLV ist offen formuliert respektive definiert nicht explizit, welche Vorgaben ein Medikament zu erfüllen hat, um im Sinne der obligatorischen Krankenpflegeversicherung (OKP) zweckmässig zu sein. Die Bestimmung lässt somit einen grösseren Spielraum offen, sodass die Beurteilung der Zweckmässigkeit im Einzelfall an die Besonderheit des in Frage stehenden Arzneimittels und seiner Wirkungsweise angepasst werden kann (vgl. Thomas Gächter/Arlette Meienberger, Rechtsgutachten zuhanden der Parlamentarischen Verwaltungskontrolle vom 8. Februar 2013, S. 62 Rz. 134, in: Evaluation der Zulassung und Überprüfung von Medikamenten in der obligatorischen Krankenpflegeversicherung vom 13. Juni 2013 - Materialien zum Bericht der Parlamentarischen Verwaltungskontrolle zuhanden der Geschäftsprüfungskommission des Ständerates, S. 11 ff. [abrufbar unter www.parlament.ch]; Vollzugsevaluation der Zulassung und Überprüfung von Medikamenten in der obligatorischen Krankenpflegeversicherung [nachfolgend: Vollzugsevaluation], S. 105, ebenfalls in: Evaluation der Zulassung und Überprüfung von Medikamenten in der obligatorischen Krankenpflegeversicherung vom 13. Juni 2013 - Materialien zum Bericht der Parlamentarischen Verwaltungskontrolle zuhanden der Geschäftsprüfungskommission des Ständerates, S. 93 ff. [abrufbar unter www.parlament.ch]). Beim Kriterium der Zweckmässigkeit ist zu fragen, wie zweckmässig ein Arzneimittel gegenüber einem anderen Arzneimittel ist bzw. worin sein genereller oder teilweiser Mehrnutzen besteht (vgl. Andreas Wildi, Basler Kommentar, Krankenversicherungsgesetz/Krankenversicherungsaufsichtsgesetz, 2020, N. 50 zu Art. 52/52a KVG)."
+            },
+            {
+              "marke": "E. 4.3.2",
+              "tiefe": 3,
+              "text": "Zu beachten gilt es zunächst, dass Art. 33 KLV Dosierungen und Packungsgrössen - anders als allfällige Nebenwirkungen und eine mögliche missbräuchliche Verwendung - nicht ausdrücklich als zu berücksichtigende Elemente im Rahmen der Zweckmässigkeitsbeurteilung eines Medikaments nennt. Dennoch ergibt sich aus der Begrifflichkeit des Kriteriums, wie die vorstehenden Ausführungen zeigen, dass ein Arzneimittel nur dann zweckmässig sein kann, wenn es im Vergleich zu alternativ einsetzbaren Arzneimitteln wirksam und diese Wirksamkeit von klinischer Relevanz ist. Die Frage nach den angemessenen Dosierungen und Packungsgrössen weist sodann zwar Züge auf, die sich auch dem Kriterium der Wirtschaftlichkeit zuordnen lassen. Darauf wurde sowohl im angefochtenen Urteil als auch in der in E. 4.2.2 hiervor dargestellten Lehrmeinung zum \"verhältnismässigen Mitteleinsatz\" ausdrücklich hingewiesen. Es erscheint indessen, wie sich aus den nachfolgenden Erwägungen ergibt, sachgerecht - und dem widersetzt sich auch die Lehre nicht -, den betreffenden Punkt im Rahmen der vorgelagerten Prüfung der Zweckmässigkeit zu beurteilen."
+            },
+            {
+              "marke": "E. 4.3.2.1",
+              "tiefe": 4,
+              "text": "So hatte sich zum einen bereits der Bundesrat Ende Mai 2006 anlässlich seiner Stellungnahme zur Motion Nr. 06.3124 betreffend die Thematik \"Kleine, zweckmässige und therapiegerechte Medikamentenpackungen\" in diesem Sinne klar geäussert. Er hielt damals fest, das Kriterium der Zweckmässigkeit beinhalte grundsätzlich, dass das BAG bei der Aufnahme von Arzneimitteln in die SL geeignete Packungsgrössen von den Herstellern fordere. Diese Packungsgrössen seien auf die Indikationen des Medikaments abgestimmt. Es müssten also neben den Grosspackungen auch kleine therapiegerechte Probierpackungen zur Aufnahme in die SL gemeldet werden, damit der Beginn einer allfälligen Langzeittherapie mit Kleinpackungen eingeleitet werden könne. Wenn im entsprechenden Aufnahmegesuch keine Kleinpackung angeboten werde, sei das Zweckmässigkeitskriterium nicht erfüllt. Das BAG werde einen derartigen Antrag ablehnen oder in der Aufnahmeverfügung eine Auflage formulieren, wonach die Kleinpackung noch einzuführen sei.\n\nIn seiner Antwort auf die Motion Nr. 09.3255 \"Einsparpotenzial bei der Medikamentenversorgung\" vom 20. Mai 2009 vermerkte der Bundesrat in der Folge, es sei bereits im Rahmen der Stellungnahme zur Motion Nr. 06.3124 hervorgehoben worden, dass bei der Aufnahme von Arzneimitteln in die SL von den Herstellern geeignete Packungsgrössen gefordert würden, um das Kriterium der Zweckmässigkeit zur Anerkennung der Pflichtleistung in der sozialen Krankenversicherung zu erfüllen (Art. 32 KVG). Die Prüfung der zweckmässigen Packungsgrösse allein vermöge allerdings noch keinen entscheidenden Fortschritt zur Senkung der Gesundheitskosten zu bewirken. Es sei Aufgabe sämtlicher Akteure im Gesundheitswesen, mittels effektiver Zusammenarbeit eine hohe und möglichst kostengünstige Behandlung der Versicherten durchzusetzen. Nur auf diese Weise könne eine Medikamentenüberversorgung vermieden werden."
+            },
+            {
+              "marke": "E. 4.3.2.2",
+              "tiefe": 4,
+              "text": "Ferner muss ein medizinischer Bedarf für die Versorgung in der Schweiz gegeben sein und müssen die angebotenen Packungsgrössen und Dosierungen eine angemessene Anwendung in der Praxis gewährleisten (in diesem Sinne Vollzugsevaluation, a.a.O., S. 105; Jörg Indermitte/Andrea Rizzi, Grundsätze zur Bezeichnung von Arzneimitteln, Soziale Sicherheit [CHSS] 3/2018, S. 16 ff., insb. 17). Um dies sicherstellen zu können, haben die Zulassungsinhaberinnen anlässlich der Gesuche um Aufnahme eines Arzneimittels in die SL auch Dosisstärke und Packungsgrösse anzugeben (vgl. \"KEY FACTS-Formular für Neuaufnahmegesuch Originalpräparat [NA]\", in: Anhang 03 a des vom BAG herausgegebenen Handbuchs betreffend die SL, Stand 2017 [fortan: SL-Handbuch, abrufbar unter www.bag.admin.ch]; zum rechtlichen Stellenwert vgl. BGE 145 V 289 E. 5.4.2). Die entsprechenden Auskünfte dienen, wie den \"Allgemeinen Bemerkungen\" zum Neuaufnahmeformular entnommen werden kann - und den beteiligten Akteuren somit klar sein muss -, spezifisch der Zweckmässigkeitsprüfung (vgl. Anhang 03 a SL-Handbuch; zudem Vollzugsevaluation, a.a.O., S. 105 oben und FN 18). Hier sollen die Gründe genannt werden, weshalb ein Arzneimittel zweckmässig im ambulanten Bereich der OKP eingesetzt werden kann und inwiefern die zur SL-Aufnahme beantragten Dosisstärken und Packungsgrössen zweckmässig sein sollen respektive worin der therapeutische Mehrwert bzw. klinische Mehrnutzen gegenüber bisheriger Standardtherapie bestehen soll (Wildi, a.a.O., N. 49 zu Art. 52/52a KVG)."
+            },
+            {
+              "marke": "E. 4.3.3",
+              "tiefe": 3,
+              "text": "Aus dem Dargelegten lässt sich mit Vorinstanz und Beschwerdegegner der Schluss ziehen, dass es sachlich geboten ist, die Frage der Packungsgrösse - wiewohl gewisse Schnittstellen zum Kriterium der Wirtschaftlichkeit aufweisend - unter dem Titel der Zweckmässigkeit zu prüfen. Dem widersetzt sich auch die Beschwerdeführerin nicht."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Anzumerken ist schliesslich, dass sich die vom BAG verfügte Auflage der Einführung einer Kleinpackung als grundsätzlich zulässig erweist, kann das BAG die Aufnahme eines Arzneimittels in die SL gemäss Art. 65 Abs. 5 KVV doch mit Bedingungen und Auflagen versehen. Da ein in der SL aufgeführtes Arzneimittel die Aufnahmebedingungen gemäss der Zielsetzung von Art. 32 Abs. 2 KVG jederzeit erfüllen muss, ansonsten es von der SL gestrichen wird (vgl. Art. 68 Abs. 1 lit. a KVV; BGE 143 V 369 E. 5.3.2; 142 V 26 E. 5.4; Urteil 9C_190/2020 vom 13. November 2020 E. 2.2.2, in: SVR 2021 KV Nr. 6 S. 29), hat dies, um die Einhaltung der Aufnahmebedingungen weiterhin zu garantieren, ebenfalls anlässlich der dreijährlichen Überprüfung nach Art. 65d KVV in Verbindung mit Art. 34d ff. KLV zu gelten. In diesem Sinne hatte sich denn auch bereits der Bundesrat im Rahmen seiner Stellungnahme zur Motion Nr. 06.3124 vernehmen lassen (vgl. E. 4.3.2.1 hiervor).\n\nFolglich bilden Art. 32 Abs. 2 KVG und Art. 33 KLV eine genügende gesetzliche Grundlage für die umstrittene Auflage."
+            },
+            {
+              "marke": "E. 4.5.1",
+              "tiefe": 3,
+              "text": "Überdies bedürfen Nebenbestimmungen wie Auflagen oder Bedingungen nicht zwingend einer im Gesetz ausdrücklich wiedergegebenen Grundlage; ihre Zulässigkeit kann sich unter Umständen auch unmittelbar aus dem Gesetzeszweck und dem damit zusammenhängenden öffentlichen Interesse ergeben. Sachfremde Nebenbestimmungen sind aber unzulässig. Zudem haben Nebenbestimmungen auch mit dem Grundsatz der Verhältnismässigkeit vereinbar zu sein, was bedeutet, dass sie u.a. für die Erreichung des angestrebten Ziels erforderlich sein müssen. Mit den Nebenbestimmungen werden die rechtmässige Ausübung eines eingeräumten Rechts oder einer Bewilligung oder die zweckkonforme Verwendung von staatlichen Leistungen sichergestellt (BGE 138 V 310 E. 5.2 mit Hinweis; 131 I 166 E. 4)."
+            },
+            {
+              "marke": "E. 4.5.2",
+              "tiefe": 3,
+              "text": "Die hier fragliche Anordnung der Einführung einer kleineren Packungsgrösse steht grundsätzlich im Einklang mit dem Zweck der periodischen Überprüfung gemäss Art. 32 Abs. 2 KVG, nämlich die Sicherstellung, dass die Arzneimittel der SL die WZW-Kriterien nach Art. 32 Abs. 1 KVG jederzeit erfüllen. Ebenso dient das damit angestrebte Ziel der Verminderung von Verwurf prinzipiell der Umsetzung des in Art. 43 Abs. 6 KVG statuierten Sparsamkeitsgebots. Von einer sachfremden Auflage kann vorliegend daher nicht gesprochen werden. Auch erweist sie sich, wie die nachstehenden Erwägungen zeigen, als verhältnismässig (vgl. E. 6 hiernach) und damit zulässig."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Weiter wird in der Beschwerde vorgebracht, die geforderte Einführung einer www mcg-Packung von B.________ verletze vor dem Hintergrund, dass die Zweckmässigkeit von B.________ in der Form der bisherigen Packungsgrössen seit der Aufnahme in die SL mehrfach bestätigt worden sei, sowohl das Willkürverbot gemäss Art. 9 BV als auch den Grundsatz von Treu und Glauben nach Art. 5 Abs. 3 BV."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Art. 5 Abs. 3 BV enthält den allgemeinen rechtsstaatlichen Grundsatz, dass staatliche Organe und Private nach Treu und Glauben handeln. Dieses Prinzip wird in Art. 9 BV grundrechtlich ergänzt (\"Jede Person hat Anspruch darauf, von den staatlichen Organen ohne Willkür und nach Treu und Glauben behandelt zu werden\"). Der grundrechtlich verstärkte Grundsatz von Treu und Glauben verleiht einer Person Anspruch auf Schutz des berechtigten Vertrauens in behördliche Zusicherungen oder sonstiges, bestimmte Erwartungen begründendes Verhalten der Behörden. Voraussetzung für eine Berufung auf Vertrauensschutz ist, dass die betroffene Person sich berechtigterweise auf die Vertrauensgrundlage verlassen durfte und gestützt darauf nachteilige Dispositionen getroffen hat, die sie nicht mehr rückgängig machen kann. Die Berufung auf Treu und Glauben scheitert, wenn ihr überwiegende öffentliche Interessen entgegenstehen (BGE 137 I 69 E. www.1; 131 II 627 E. 6.1; 129 I 161 E. 4.1; je mit Hinweisen; Urteil 1C_139/2017 vom 6. Februar 2018 E. 3.2)."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "B.________ wurde von Swissmedic ohne eine www mcg-Packung für den schweizerischen Markt zugelassen. Die Zweckmässigkeit des Arzneimittels mit den Packungen à www mcg und www mcg war sodann seit der Aufnahme in die SL per vvv (in Form der \"Durchstechflasche\") jeweils ohne Auflage bejaht (vgl. Verfügung des BAG vom vvv) und auch zuletzt im Rahmen der Erweiterung der Limitierung um die Kinderindikation mit Verfügung des BAG vom vvv nicht in Frage gestellt worden."
+            },
+            {
+              "marke": "E. 5.3.1",
+              "tiefe": 3,
+              "text": "Zu beachten gilt es in diesem Zusammenhang zunächst, dass ein in der SL aufgeführtes Arzneimittel die WZW-Kriterien von Art. 32 Abs. 1 KVG jederzeit erfüllen muss (vgl. E. 4.4 und 4.5.2 hiervor). Der Verbleib eines Medikaments auf der SL steht deshalb unter dem Vorbehalt der regelmässigen, in Form der dreijährlichen Kontrolle nunmehr in Art. 65d KVV in Verbindung mit Art. 34d ff. KLV auch ausdrücklich verankerten Überprüfung der Aufnahmebedingungen. Der Umstand, dass die betreffenden Kriterien bei Aufnahme eines Präparats in die SL bejaht und auch bei nachfolgenden Überprüfungen nicht beanstandet wurden, darf mithin nicht als Zusicherung verstanden werden, dass künftig keine anderslautenden Beurteilungen mehr möglich wären, und begründet damit kein schutzwürdiges Vertrauen im Sinne der genannten Verfassungsbestimmungen. Anders zu entscheiden hiesse, die periodischen Überprüfungen ihres Sinngehalts zu entleeren."
+            },
+            {
+              "marke": "E. 5.3.2",
+              "tiefe": 3,
+              "text": "Auch die Tatsache, dass B.________ von Swissmedic ohne eine www mcg-Packung für den schweizerischen Markt zugelassen wurde, steht der entsprechenden Auflage nicht entgegen. Die heilmittelrechtliche Zulassung betrifft einzig die gesundheitspolizeiliche Marktzulassung (vgl. Gächter/Meienberger, a.a.O., S. 29 Rz. 34) und stellt nur den Mindeststandard einer wirksamen und zweckmässigen Behandlung nach Massgabe von Art. 32 Abs. 1 KVG sicher (vgl. Eugster, a.a.O., S. 622 Rz. 701). Ob B.________ mit den angebotenen Packungen und Dosierungen auch aus Sicht der OKP eine zweckmässige Behandlung erlaubt, ist vom BAG in den SL-Zulassungs- und periodischen Überprüfungsverfahren zu klären. So sieht Art. 33 Abs. 2 KLV ausdrücklich vor, dass das BAG zur Beurteilung der Zweckmässigkeit eines Arzneimittels neben den Unterlagen der Swissmedic weitere Unterlagen verlangen kann."
+            },
+            {
+              "marke": "E. 5.3.3",
+              "tiefe": 3,
+              "text": "Betreffend B.________ war zudem, wie vorinstanzlich aufgezeigt, die Lancierung einer kleineren Packung bereits 2010 thematisiert und die Aufnahme des Vorgängerpräparats \"B.B.________ 1 Vitr. www/www mcg\" per vvv mit folgender Auflage verbunden worden: \"innerhalb des Jahres 2010 ist ein Vitr. www mcg zur SL-Aufnahme anzumelden, um den Anfang der Behandlung mit einer adäquaten Dosierung einleiten zu können (1 mcg B.________ pro kg KG 1 x pro Woche) \" (Verfügung des BAG vom vvv). Auch hatte sich die Beschwerdeführerin selber in ihrem Aufnahmegesuch hinsichtlich des heutigen B.________ zur Zweckmässigkeit der Packungsgrössen geäussert und auf technische Schwierigkeiten bei der Produktion einer Kleinpackung hingewiesen, jedoch ihre grundsätzliche Bereitschaft signalisiert, eine solche einzuführen (vgl. Gesuch vom vvv samt Formular \"Key Facts für Neuanmeldungsgesuch [NA] Schulmedizin\", Begleitschreiben vom vvv). Der Beschwerdeführerin waren die Vorbehalte des Beschwerdegegners in Bezug auf die Zweckmässigkeit der bislang angebotenen Packungen von B.________ somit hinlänglich bekannt. Von einer vorbehaltlosen behördlichen Zusicherung im Sinne des für die Berufung auf den Grundsatz von Treu und Glauben notwendigen Erfordernisses durfte die Beschwerdeführerin daher zu keinem Zeitpunkt ausgehen.\n\nDas Gleiche hat ferner für die Rückmeldung des Beschwerdegegners vom vvv zu gelten, mit der das Kriterium der Zweckmässigkeit im Rahmen des aktuellen dreijährlichen Überprüfungsprozederes noch als erfüllt betrachtet worden war. Die besagte Mitteilung erging zu Beginn des Abklärungsverfahrens, in dessen Verlauf das BAG erst erfuhr, dass zwischenzeitlich durch die europäische Zulassungsbehörde (anlässlich des Zulassungsverfahrens zur pädiatrischen Indikationserweiterung) in der EU eine www mcg-Packung B.________ genehmigt und später auch eingeführt worden war. Dieser Umstand führte in der Folge dazu, dass der Beschwerdegegner auf seine anfängliche Zweckmässigkeitsbeurteilung, die indessen, was die Beschwerdeführerin zu übersehen scheint, schon vor Jahren - unabhängig von der diesbezüglichen Entwicklung im EU-Raum - grundsätzlich an die Auflage der Einführung einer Kleinpackung gekoppelt worden war, zurückkam und sie widerrief (vgl. Rückmeldung vom vvv). Es wäre entgegen den Vorbringen der Beschwerdeführerin nicht nachvollziehbar, weshalb der Beschwerdegegner auf während des Verwaltungsverfahrens festgestellte veränderte Verhältnisse nicht reagieren und diesen keine Rechnung tragen dürfte. Da die neue Sichtweise auf sachlichen Gründen beruhte, kann dem BAG kein widersprüchliches, gegen Treu und Glauben nach Art. 9 BV verstossendes Verhalten vorgeworfen werden. Im Gegenteil hat die Beschwerdeführerin es während Jahren trotz Zusicherung ihrerseits, der 2010 verfügten Auflage nachkommen zu wollen, unterlassen, diese umzusetzen, wodurch sie in finanzieller Hinsicht profitieren konnte."
+            },
+            {
+              "marke": "E. 5.3.4",
+              "tiefe": 3,
+              "text": "Ebenso wenig ist erkennbar, dass die Beschwerdeführerin im Vertrauen auf die bisherige Zweckmässigkeitseinschätzung Dispositionen getroffen hätte, die nicht ohne Nachteil wieder rückgängig zu machen wären (sog. \"Vertrauensbetätigung\"). Anhaltspunkte für einen Ausnahmefall der Art, wonach Vertrauensschutz auch ohne entsprechende nachteilige Disposition denkbar sein kann, etwa wenn der Rücknahme oder dem Widerruf von rechtskräftigen Verfügungen ein besonders qualifiziertes Verfahren vorangegangen ist, sind nicht auszumachen (vgl. Urteil 9C_190/2020 vom 13. November 2020 E. 4.5, in: SVR 2021 KV Nr. 6 S. 29; zudem BGE 144 III 285 E. 3.5 mit Hinweisen; Häfelin/Müller/Uhlmann, Allgemeines Verwaltungsrecht, 8. Aufl. 2020, Rz. 661 f.)."
+            },
+            {
+              "marke": "E. 5.3.5",
+              "tiefe": 3,
+              "text": "In casu stehen sodann, worauf vorstehend bereits eingehend hingewiesen wurde, mit dem Bestreben der Sicherstellung, dass die Arzneimittel der SL jederzeit die WZW-Kriterien nach Art. 32 Abs. 1 KVG erfüllen, und dem in Art. 43 Abs. 6 KVG verankerten Sparsamkeitsgebot auch gewichtige öffentliche Interessen einer Berufung der Beschwerdeführerin auf Treu und Glauben bzw. den Vertrauensschutz und der damit beabsichtigten Aufhebung der Auflage betreffend Einführung einer www mcg-Packung in der Schweiz entgegen."
+            },
+            {
+              "marke": "E. 5.4",
+              "tiefe": 2,
+              "text": "Auch ergibt sich nach dem Gesagten nicht, inwiefern die Anordnung der Auflage willkürlich sein sollte. Willkür liegt vielmehr erst vor, wenn der betreffende Entscheid offensichtlich unhaltbar ist, zur tatsächlichen Situation in klarem Widerspruch steht, eine Norm oder einen unumstrittenen Rechtsgrundsatz krass verletzt oder in stossender Weise dem Gerechtigkeitsgedanken zuwiderläuft (BGE 147 V 194 E. 6.3.1 mit Hinweis). Davon kann hier keine Rede sein."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin macht überdies geltend, es handle sich bei der betreffenden Auflage um eine unverhältnismässige und deshalb unzweckmässige Vorkehr."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Das in Art. 36 BV verankerte Verhältnismässigkeitsprinzip verlangt (vgl. auch Art. 5 Abs. 2 BV), dass eine Massnahme für das Erreichen ihres Ziels geeignet und erforderlich ist und sich für die Betroffenen in Anbetracht der Schwere der Grundrechtseinschränkung als zumutbar erweist. Es muss eine vernünftige Zweck-Mittel-Relation vorliegen. Eine Massnahme ist unverhältnismässig, wenn das angestrebte Ziel mit einem weniger schweren Grundrechtseingriff erreicht werden kann (BGE 145 I 156 E. 4.1; 140 I 2 E. 9.2.2 mit Hinweisen, 353 E. 8.7; Urteil 1C_www/2021 vom 19. August 2021 E. 6.1).\n\nZu beurteilen ist, ob die vorliegend strittige Auflage geeignet, notwendig und zumutbar ist, das - nach dem Dargelegten im öffentlichen Interesse liegende - Ziel der Aufnahme zweckmässiger Dosierungen und Packungsgrössen auf der SL respektive der Verminderung des Verwurfs bei Anwendung von B.________ zu erfüllen."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Gemäss unbestrittener und daher für das Bundesgericht mangels offensichtlicher Fehlerhaftigkeit verbindlicher (vgl. E. 1 hiervor) Feststellung der Vorinstanz ergibt sich aus der einschlägigen Fachinformation (dazu grundlegend Urteil 9C_612/2020 vom 22. September 2021 E. 4.2-4.2.3, zur Publikation vorgesehen), dass jeder Patient mit einer individuell auf sein Körpergewicht abgestimmten Dosis von B.________ therapiert wird. Die empfohlene Anfangsdosis (sog. Auftitrierung) beträgt 1 mcg pro Kilogramm Körpergewicht, appliziert einmal wöchentlich als subkutane Injektion, sollte aber die maximale Dosis von www mcg/kg nicht überschreiten. Das rekonstituierte Arzneimittel ist überdies innerhalb von 24 Stunden zu verabreichen, da es keine Konservierungsstoffe enthält. Einig sind sich die Verfahrensbeteiligten zudem auch dahingehend, dass die mediane wöchentliche Erhaltungsdosis www mcg/kg beträgt, ein erwachsener Durchschnittspatient mithin wöchentlich mit einer Dosis B.________ von www mcg behandelt wird (72 Kilogramm Körpergewicht x www mcg). Bei Verwendung der bisherigen kleinsten Packung von www mcg entsteht damit wöchentlich ein Verwurf von www mcg, da in der praktischen Handhabung eine Packung - sei es im Heimgebrauch oder in einer ärztlichen Praxis - kaum je für mehrere Patienten verwendet wird (sog. \"Vial-Sharing\"; vgl. dazu Rückmeldung des BAG vom vvv). Eine bloss theoretisch nicht ausgeschlossene Möglichkeit eines \"Vial-Sharing\", wie in der Beschwerde angeführt, ändert an dieser grundsätzlichen Verwurfsproblematik nichts.\n\nIm angefochtenen Urteil wurde ferner bereits darauf hingewiesen, dass, vorbehältlich der Anfangsdosis, auch die Einführung einer kleineren www mcg-Packung zu keiner Behebung der entsprechenden Situation bei einem 72 Kilogramm schweren Patienten führt, resultierte daraus doch ein Verwurf in gleichem Ausmass. Wie Vorinstanz und Beschwerdegegner anhand der Angaben in der Fachinformation jedoch nachvollziehbar aufgezeigt haben, vermag die Verwendung einer www mcg-Packung den Verwurf bei Patienten bis zu 50 Kilogramm Körpergewicht, die mit der medianen Erhaltungsdosis von www mcg/ kg behandelt werden, sowie bei Beginn der Therapie mit der empfohlenen Anfangsdosis von 1 mcg pro Kilogramm bei Patienten mit einem Körpergewicht von bis zu www kg zu reduzieren bzw. zu vermeiden (vgl. E. 3.2.1 hiervor). In diesem Sinne hatte die Beschwerdeführerin in ihrem Schreiben vom vvv an den Beschwerdegegner denn auch selber noch eingeräumt, dass mit der Lancierung einer www mcg-Packung in der Schweiz der \"Waste\"-Problematik bei niedrigen Dosierungen Rechnung getragen werden könne. Dasselbe gilt zudem bei der Behandlung von Patienten, die eine wöchentliche Dosis zwischen www mcg und www mcg respektive zwischen www mcg und www mcg benötigen, fällt dabei doch durch den Einsatz einer www mcg-Packung in Kombination mit einer www mcg- oder einer www mcg-Packung ein deutlich geringerer wöchentlicher B.________-Verwurf an als bei Gebrauch von zwei www mcg-Packungen bzw. einer www mcg-Packung (erste Konstellation) respektive einer www mcg-Packung in Verbindung mit einer www mcg-Packung (zweite Konstellation).\n\nDie Einführung einer kleineren Packung ist somit nicht nur geeignet, sondern auch erforderlich, um den wöchentlichen Verwurf von B.________ zwar nicht vollständig, aber doch in einem nicht unerheblichen Masse verringern zu können. Eine mildere Massnahme ist nicht ersichtlich und wird auch von der Beschwerdeführerin nicht angeführt."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Entgegen den Vorbringen in der Beschwerde handelt es sich aus nachfolgenden Gründen zudem auch um eine zumutbare Auflage."
+            },
+            {
+              "marke": "E. 6.4.1",
+              "tiefe": 3,
+              "text": "So wurde eine www mcg-Packung in anderen europäischen Ländern bereits auf dem Markt eingeführt (vgl. europäische Fachinformation von B.________ [abrufbar unter www.ema.europa.eu/en/medicines/human/EPAR/B.________]; ferner vorinstanzliche Vernehmlassung des Beschwerdegegners vom 22. Mai 2019, Rz. 31; Rückmeldung des Beschwerdegegners vom vvv). Der von der Beschwerdeführerin im Kontext mit der Lancierung einer entsprechenden Packung in der Schweiz behauptete \"grosse finanzielle, konzeptionelle und betriebliche Aufwand\" ist vor diesem Hintergrund nicht auszumachen - und wird denn auch nicht detaillierter dargelegt -, vermag aber jedenfalls keine Unzumutbarkeit der geforderten Massnahme aufzuzeigen. Vielmehr hatte sich die Beschwerdeführerin in ihrer Stellungnahme zuhanden des Beschwerdegegners vom vvv noch grundsätzlich zur Einführung der Kleinpackung auch in der Schweiz bereit erklärt, nachdem ein grosser Forschungsaufwand schon vor Lancierung der www mcg-Packung im EU-Raum hatte geleistet werden müssen."
+            },
+            {
+              "marke": "E. 6.4.2",
+              "tiefe": 3,
+              "text": "Nicht stichhaltig ist auch der Einwand, indem die Auflage ohne gleichzeitige Festsetzung des Fabrikabgabe- bzw. Publikumspreises der neuen Kleinpackung erfolgt sei, erweise sich die Verfügung des Beschwerdegegners vom 7. Dezember 2018 insgesamt als unvollständig begründet und deren Umsetzung daher als unzumutbar."
+            },
+            {
+              "marke": "E. 6.4.2.1",
+              "tiefe": 4,
+              "text": "Die Festsetzung des Preises einer neuen Packung erfolgt grundsätzlich erst bei der Beurteilung des Gesuchs um Aufnahme neuer Packungsgrössen oder Dosisstärken von bereits in der SL aufgeführten Arzneimitteln, innerhalb der bestehenden Indikationen (so ausdrücklich Art. 31 Abs. 2 lit. a bis KLV); der Preis bei einer neuen, kleineren Packung wird dabei nach der Praxis des BAG linear berechnet (vgl. Ziff. C.7 Abs. 2 lit. b SL-Handbuch)."
+            },
+            {
+              "marke": "E. 6.4.2.2",
+              "tiefe": 4,
+              "text": "Ein derartiges Gesuch liegt hier aber unstreitig gerade (noch) nicht vor - weder ist die fragliche Kleinpackung bislang von Swissmedic zugelassen noch in der SL gelistet - und dessen Beurteilung ist nicht Gegenstand des vorliegenden Verfahrens. Die Aufnahmekriterien von B.________ sind vielmehr auf Grund der Gegebenheiten im Zeitpunkt der 2018 in die Wege geleiteten dreijährlichen Überprüfung und die Wirtschaftlichkeit somit ausschliesslich anhand eines TQV mit den bereits in der SL aufgeführten Packungsgrössen oder Dosisstärken zu beurteilen (Art. 34a KLV; Ziff. C.7 Abs. 1 SL-Handbuch). Zukünftige Entwicklungen in Bezug auf Packungen bzw. Preisfestsetzungen haben dabei unberücksichtigt zu bleiben. Auf die Art und Weise der dannzumaligen Preisberechnung respektive die Frage, ob diese den Vorgaben des SL-Handbuchs entsprechend linear erfolgen wird, ist entgegen den Ausführungen in der Beschwerde nicht näher einzugehen.\n\nDieser Umstand lässt somit ebenfalls keine Rückschlüsse darauf zu, dass die entsprechende Auflage unzumutbar und damit unverhältnismässig wäre. Gegenteils ist mit der Vorinstanz nicht zu beanstanden, dass das BAG trotz der von ihm im Zusammenhang mit dem Kriterium der Zweckmässigkeit verfügten Auflage eine Wirtschaftlichkeitsprüfung auf der Grundlage der derzeit in der SL aufgeführten Packungen von B.________ vorgenommen hat. Es ist kein sachlicher Grund erkennbar, weshalb sich bei einem Arzneimittel, dessen Zweckmässigkeit nur noch unter einer Auflage bejaht und in dieser Form auf der SL belassen werden kann, eine reguläre dreijährliche Preisüberprüfung verbieten sollte."
+            },
+            {
+              "marke": "E. 6.5",
+              "tiefe": 2,
+              "text": "Insgesamt handelt es sich bei der fraglichen Auflage somit um eine verhältnismässige - und damit auch unter diesem Titel zweckmässige - Massnahme, die geeignet, erforderlich und zumutbar ist, den Verwurf von B.________ und damit entsprechenden pharmazeutischen Abfall zu vermindern, wodurch wiederum die OKP finanziell entlastet wird."
+            },
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Schliesslich kritisiert die Beschwerdeführerin die von Vorinstanz und Beschwerdegegner vorgenommene Beurteilung des Kriteriums der Wirtschaftlichkeit von B.________. Insbesondere bestreitet sie, dass die Berechnung des TQV unter Berücksichtigung der Kosten für eine ganze Packung B.________ www mcg anstelle der mittleren Tagesdosis bundesrechtskonform sei."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "Ein Arzneimittel gilt nach Art. 65b Abs. 1 KVV als wirtschaftlich, wenn es die indizierte Heilwirkung mit möglichst geringem finanziellem Aufwand gewährleistet. Diese Bestimmung konkretisiert das in Art. 43 Abs. 6 KVG festgehaltene Sparsamkeitsgebot bzw. das Ziel der periodischen Überprüfung gemäss Art. 32 Abs. 2 KVG im Sinne der Sicherstellung, dass die Arzneimittel der SL die WZW-Kriterien von Art. 32 Abs. 1 KVG jederzeit erfüllen (BGE 143 V 369 E. 5.3.2 mit Hinweisen). Die Wirtschaftlichkeit wird auf Grund eines APV und eines TQV beurteilt (Art. 65b Abs. 2 lit. a und b KVV; dazu grundlegend: BGE 147 V 194 E. 5.3.2; 142 V 26 E. 5.2.2 und 5.2.3; vgl. auch BGE 142 V 368 E. 5.3, 488 E. 8.2 f.). Nach der Ermittlung des durchschnittlichen Preises der Referenzländer im APV und des durchschnittlichen Preises anderer Arzneimittel im TQV werden beide Preise je hälftig gewichtet (Art. 65b Abs. 5 KVV).\n\nDie Wirtschaftlichkeit eines Medikaments wird somit - auch im Rahmen der dreijährlichen Überprüfung der Aufnahmebedingungen gemäss Art. 65d und Art. 34d ff. KLV - mittels TQV beurteilt. Dabei werden die Wirksamkeit derjenigen Originalpräparate, die zum Zeitpunkt der Überprüfung in der SL aufgeführt sind, im Verhältnis zu anderen Arzneimitteln, die zur Behandlung derselben Krankheit eingesetzt werden, und die Kosten des Arzneimittels pro Tag oder Kur im Verhältnis zu den Kosten von Arzneimitteln, die zur Behandlung derselben Krankheit eingesetzt werden, überprüft (Art. 65b Abs. 4bis lit. a und b KVV; Art. 34f Abs. 1 KLV). Der TQV wird auf der Basis der kleinsten Packung und Dosierung durchgeführt, es sei denn, die kleinste Packung und Dosierung erlaubt insbesondere auf Grund unterschiedlicher Dosierungen bei Therapiebeginn oder unterschiedlicher Packungsgrössen keinen adäquaten Vergleich (Art. 65d Abs. 3 KVV). Die Zulassungsinhaberin hat dem BAG sämtliche notwendigen Informationen bekannt zu geben (Art. 65d Abs. 5 KVV). Ergibt die Überprüfung, dass der geltende Höchstpreis zu hoch ist, so verfügt das BAG auf den 1. Dezember des Überprüfungsjahrs eine Preissenkung auf den nach Art. 65b Abs. 5 und Art. 67 Abs. 1quater KVV ermittelten Höchstpreis (Art. 65d Abs. 4 Satz 1 KVV)."
+            },
+            {
+              "marke": "E. 8",
+              "tiefe": 1,
+              "text": "Unstreitig ist der TQV von B.________ mit dem Vergleichsarzneimittel D.________ vorzunehmen. Obgleich die Medikamente unterschiedliche galenische Formen aufweisen (B.________: Trockensubstanz zur Herstellung einer Injektionslösung; D.________: Filmtabletten), erweist sich diese Vorgehensweise als sachgerecht. Beide Arzneimittel sind als Zweitlinientherapie für die Behandlung einer (...) mit (...) bei Erwachsenen und Kindern ab einem Jahr indiziert und es existieren laut übereinstimmenden Auskünften keine anderweitigen geeigneten Vergleichsprodukte auf der SL. Ebenfalls steht fest, wie in E. 6.3 hiervor dargelegt, dass bei der Behandlung mit B.________ eine durchschnittliche Erhaltungsdosis von www mcg pro Kilogramm Körpergewicht zur Anwendung kommt und sowohl bei einem Durchschnittspatienten mit 72 kg Körpergewicht als auch bei anderen Patienten mit einem Körpergewicht von bis zu 100 kg Körpergewicht unabhängig von der individuellen Dosis jeweils eine ganze www mcg-Packung B.________ verwendet wird. Dadurch entsteht pro Durchstechflasche ein Verwurf von bis zu www mcg. Das Referenzprodukt D.________ ist als Filmtablette zu xxx mg und xxx mg mit Packungen zu je yyy und yyy Stück erhältlich. Es ist täglich einzunehmen, wobei die - übereinstimmend als massgebliche Vergleichsgrösse heranzuziehende - mediane Tagesdosis bei erwachsenen Patienten, welche anders als bei B.________ nicht individuell auf das Körpergewicht abgestimmt wird, xxx mg beträgt.\n\nUnterschiedliche Betrachtungsweisen bestehen mit Blick auf die Bestimmung der Tagestherapiekosten von B.________. Während Vorinstanz und Beschwerdegegner dafür halten, es seien diesbezüglich die Kosten einer ganzen www mcg-Packung massgeblich, erachtet die Beschwerdeführerin ein Abstellen auf die Kosten der tatsächlich verwendeten Dosis, wie bei D.________, als sachgerecht."
+            },
+            {
+              "marke": "E. 9.1",
+              "tiefe": 2,
+              "text": "In der Beschwerde wird dem Bundesverwaltungsgericht in diesem Zusammenhang zum einen vorgeworfen, seine Sichtweise verletze das Rechtsgleichheitsgebot gemäss Art. 8 BV."
+            },
+            {
+              "marke": "E. 9.2",
+              "tiefe": 2,
+              "text": "Das Gebot der Rechtsgleichheit wird verletzt, wenn ein Erlass rechtliche Unterscheidungen trifft, für die ein vernünftiger Grund in den zu regelnden Verhältnissen nicht ersichtlich ist, oder Unterscheidungen unterlässt, die sich auf Grund der Verhältnisse aufdrängen. Das Rechtsgleichheitsgebot ist insbesondere verletzt, wenn Gleiches nicht nach Massgabe seiner Gleichheit gleich und Ungleiches nicht nach Massgabe seiner Ungleichheit ungleich behandelt wird, was beispielsweise zutrifft, wenn hinsichtlich einer entscheidwesentlichen Tatsache rechtliche Unterscheidungen getroffen werden, für die ein vernünftiger Grund in den zu regelnden Verhältnissen nicht ersichtlich ist, oder wenn Unterscheidungen unterlassen werden, die auf Grund der Verhältnisse hätten getroffen werden müssen (BGE 141 I 153 E. 5.1; vgl. auch BGE 141 I 78 E. 9.1; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 9.3.1",
+              "tiefe": 3,
+              "text": "Nach dem Ausgeführten resultiert bei sämtlichen Patienten bis zu einem Körpergewicht von 100 kg im Rahmen der wöchentlichen Behandlung mit einer www mcg-Packung B.________ ein Verwurf von bis zu www mcg, da das Medikament infolge Fehlens von Konservierungsstoffen innerhalb von 24 Stunden zu verabreichen und im Regelfall kein \"Vial-Sharing\" möglich ist (vgl. E. 6.3 und 8 hiervor). Dennoch werden, mangels (bislang) kleinerer Packung, gegenüber der OKP stets die Kosten einer ganzen www mcg-Packung in Rechnung gestellt.\n\nDas Vergleichsmedikament D.________ wird demgegenüber täglich in Tablettenform eingenommen und die Tagesdosis bei erwachsenen Patienten nicht individuell auf das Körpergewicht abgestimmt. Es fällt damit entgegen der Argumentation der Beschwerdeführerin kein vergleichbarer Verwurf an; auch können angefangene Packungen aufgebraucht werden."
+            },
+            {
+              "marke": "E. 9.3.2",
+              "tiefe": 3,
+              "text": "Offenkundig weisen beide Arzneimittel somit erhebliche Differenzen in der Art der Verabreichung und Dosierung, namentlich hinsichtlich der \"Waste\"-Problematik, auf, weshalb es sich mit Vorinstanz und Beschwerdegegner rechtfertigt, diese in Bezug auf die Bestimmung der für den TQV massgeblichen Tagestherapiekosten unterschiedlich zu behandeln. Die wöchentlichen Kosten einer Behandlung mit B.________ sind demnach mit denjenigen einer www mcg-Packung gleichzusetzen, da stets, auch bei geringerem Verbrauch, eine solche zulasten der OKP in Rechnung gestellt wird (zur Relevanz der vom Krankenversicherer effektiv zu übernehmenden Kosten: BGE 126 V 334 E. 2c).\n\nDaran ändert auch die von der Beschwerdeführerin betonte sog. Überfüllung, welche jede Durchstechflasche enthalte und die dazu führe, dass schwerere Patienten - den Minderverbrauch bei leichteren Patienten gleichsam durch einen Mehrverbrauch kompensierend - keine zweite www mcg- respektive keine www mcg-Packung benötigten, nichts. Die zusätzliche Überfüllung soll laut Fachinformation lediglich sicherstellen, dass www mcg des Wirkstoffs C.________ auch tatsächlich entnommen werden können; sie ist nicht für die Abgabe höherer Dosierungen bestimmt.\n\nEbenfalls zu keinem anderen Resultat führt schliesslich der Hinweis der Beschwerdeführerin auf den in Bezug auf das ebenfalls als parenterale Injektionslösung konzipierte Arzneimittel E.________ vorgenommenen TQV. Bei diesem handelt es sich, wie im angefochtenen Urteil einlässlich dargelegt, nicht um einen \"identischen Präzedenzfall\", da infolge \"Vial-Sharing\" kein Verwurf anfällt und der TQV mit zwei Vergleichspräparaten, eines in Tablettenform, eines in parenteraler Form, durchgeführt wurde. Gestützt darauf können deshalb keine unmittelbaren Rückschlüsse auf die vorliegende Konstellation gezogen werden. Überdies ist im System der Preisüberprüfung von Arzneimitteln der SL jedes Medikament gesondert zu überprüfen, wobei dem Beschwerdegegner bei der Durchführung des TQV ein weiter Ermessensspielraum zusteht (vgl. etwa Urteil 9C_710/2020 vom 10. August 2021 E. 4.2.1 mit Hinweisen, zur Publikation vorgesehen).\n\nDer Kostenvergleich erfolgt damit auf der Grundlage der von der OKP effektiv zu erbringenden Leistungen. Eine Verletzung des Rechtsgleichheitsgebots ist nicht erkennbar."
+            },
+            {
+              "marke": "E. 10.1",
+              "tiefe": 2,
+              "text": "Ebenfalls unter Berufung auf das Rechtsgleichheitsgebot sowie auf den Grundsatz von Treu und Glauben wird zum andern moniert, bereits auf Grund einer entsprechenden gefestigten Praxis des Beschwerdegegners hinsichtlich parenteraler Arzneimittel (sog. Parenteralia [nicht über den Magen-Darm-Trakt applizierte Arzneiformen: sterile Zubereitungen, die zur Injektion, Infusion oder Implantation in den menschlichen oder tierischen Körper bestimmt sind, also als Injektionen, Infusionen, Konzentrate für die Herstellung von Injektionen bzw. Infusionen und Implantate oder - wie bei B.________ - als Pulver für die Herstellung von Injektionen bzw. Infusionen]; vgl. dazu www.prozesstechnik.industrie.de/pharma/lexikon-pharmatechnologie/parenteralia) bestehe Anspruch darauf, dass die Tagestherapiekosten von B.________ im TQV jeweils nach Massgabe der tatsächlich benötigten Tagesdosis und nicht der ganzen Packungen bestimmt würden."
+            },
+            {
+              "marke": "E. 10.2",
+              "tiefe": 2,
+              "text": "In seiner Rückmeldung vom vvv hatte der Beschwerdegegner ausgeführt, der Ermittlung des Verbrauchs von Parenteralia sei ein Durchschnittswert zugrunde zu legen und der TQV auf der Basis von mg Dosis und nicht der ganzen benötigten Packungen vorzunehmen. Würde der TQV auf der Grundlage von ganzen Packungen basierend auf einem durchschnittlichen Rechenwert für die Körperoberfläche berechnet, profitierte einmal das eine oder das andere Präparat bezüglich mehr Verwurf durch das Konkurrenzprodukt. Dieses Vorgehen widerspräche dem Gleichbehandlungsgrundsatz.\n\nIn seiner Mitteilung vom vvv präzisierte der Beschwerdegegner, dass bei B.________ Gründe vorlägen, die ein Abweichen von der üblichen Praxis bei Parenteralia, wonach der Verwurf grundsätzlich keinen Eingang in den TQV fände, erforderlich machten. Diese erweise sich namentlich im Bereich der Onkologie als sachgerecht, da hier angebrochene Packungen in der Regel für mehrere Patienten verwendet würden und es deshalb im Ergebnis kaum zu einem Verwurf kommen dürfte. Da ein solches \"Vial-Sharing\" bei B.________ unwahrscheinlich sei, könne der bei dessen Verwendung entstehende, nicht unerhebliche Verwurf nicht unberücksichtigt gelassen werden."
+            },
+            {
+              "marke": "E. 10.3",
+              "tiefe": 2,
+              "text": "Gemäss unbestrittener Darstellung des Beschwerdegegners wurde der Grundsatz, beim TQV von Parenteralia im Bereich der Onkologie auf die effektiv verwendete Wirkstoffdosis abzustellen und den Verwurf auszuklammern, jedenfalls seit der Einführung der dreijährlichen Überprüfung im Jahr 2017 angewendet. Damit werde, so der Beschwerdegegner, dem Umstand Rechnung getragen, dass es sich zumeist um einen Vergleich von Parenteralia handle und somit bei allen für den TQV zu berücksichtigenden Vergleichspräparaten ein Verwurf entstehe. Es sei daher angezeigt, in diesen Fällen mit Blick auf eine Vereinheitlichung des Vorgehens den Verwurf bei sämtlichen Referenzprodukten ausser Acht zu lassen und stattdessen anlässlich des TQV auf die jeweilige individuelle Dosierung abzustellen."
+            },
+            {
+              "marke": "E. 10.3.1",
+              "tiefe": 3,
+              "text": "Ob diese Methode auch bereits früher - im Sinne einer gefestigten, langjährigen Praxis - galt, wie von der Beschwerdeführerin angeführt, kann offen bleiben. Ebenso wenig braucht die Frage abschliessend beantwortet zu werden, ob es sich dabei bezogen auf einen TQV, bei welchem ausschliesslich Parenteralia im Onkologiebereich verglichen werden, um ein zur Erreichung der gesetzgeberischen Ziele geeignetes Vorgehen handelt. Vorinstanz und Beschwerdegegner weisen vielmehr zutreffend darauf hin, dass so oder anders sachliche Gründe bestehen, die es hier nahe legen, von einer derartigen Praxis abzuweichen. So wird B.________ im Rahmen des TQV einem Arzneimittel (D.________) einer anderen galenischen Form (Tablette, d.h. orale Verabreichung) gegenübergestellt, bei dem kein vergleichbarer Verwurf anfällt. Es liegt folglich ein Sonderfall dergestalt vor, dass ein parenterales mit einem oralen Medikament ohne entsprechenden Verwurf verglichen wird. Diese Tatsache rechtfertigt es, vom üblichen Prozedere zur Berechnung des TQV betreffend den Verbrauch von bzw. den Verwurf bei Parenteralia abzusehen und die Kosten einer ganzen Packung B.________ statt der tatsächlich verwendeten Dosis als massgebliche Tagestherapiekosten einzustufen.\n\nDiese Vorgehensweise erweist sich unter allen Titeln als rechtskonform und entspricht dem Prinzip, dass für jeden TQV gesondert zu prüfen ist, ob die Anwendung einer Praxis sachgerecht ist oder nicht. Regelungen wie der beschriebenen Parenteralia-Praxis können nicht immer in jedem Fall gleichermassen nachgelebt werden, sondern es ist stets den Besonderheiten der jeweiligen Arzneimittel Rechnung zu tragen."
+            },
+            {
+              "marke": "E. 10.3.2",
+              "tiefe": 3,
+              "text": "Keinen anderen Schluss vermag das bereits im vorinstanzlichen Verfahren von der Beschwerdeführerin ins Feld geführte Rundschreiben des BAG zur \"Umsetzung der Überprüfung der Aufnahmebedingungen alle drei Jahre im Jahr 2020\" vom 2. Dezember 2019 (abrufbar unter www.bag.admin.ch) zu bewirken. Gemäss diesem werden für den TQV ab dem Jahr 2020 jeweils ganze Ampullen, Vials (Phiolen), Flaschen, Packungen etc. berücksichtigt, auch wenn unter Beachtung der durchschnittlichen Erhaltungsdosierung keine ganzen Ampullen, Vials, Flaschen, Packungen etc. benötigt würden. Ausnahmen sind, wie aus dem Rundschreiben im Weiteren hervorgeht, möglich, wenn die Fachinformation unter dem Punkt \"Sonstige Hinweise (Haltbarkeit) \" die Anmerkung enthält, dass angebrochene Ampullen, Vials, Flaschen, Packungen etc. derart lange haltbar sind, dass sie für die Therapiefortsetzung (beispielsweise im nächsten Zyklus bei einer Krebsbehandlung) noch eingesetzt werden können.\n\nEntgegen der Argumentation in der Beschwerde ergeben sich daraus keine Anhaltspunkte auf eine frühere, nunmehr geänderte Praxis, wonach bis Ende 2019 grundsätzlich sämtliche der beim TQV zu berücksichtigenden Arzneimittel nicht auf der Basis ganzer Einheiten (Ampullen, Vials, Flaschen, Packungen etc.), sondern nach Massgabe des jeweiligen konkreten Verbrauchs zu vergleichen gewesen wären. Vielmehr dienen die bundesamtlichen Ausführungen der Klärung und sollen ein einheitliches, willkürfreies Verfahren und damit Rechtssicherheit für die beteiligten Akteure gewährleisten. Wie Vorinstanz und Beschwerdegegner zutreffend erläutert haben, entspricht das darin verankerte Vorgehen (zum rechtlichen Stellenwert derartiger bundesamtlicher Kommentierungen: vgl. BGE 145 V 289 E. 5.4.2) im Übrigen dem vorliegenden Ergebnis. So handelt es sich bei B.________ um ein einmal wöchentlich zuzuführendes Medikament, das mangels Haltbarkeit der einmal angebrochenen Packung/Flasche dem Regelfall entspricht und deshalb für den TQV in Bezug auf die relevante durchschnittliche Erhaltungsdosierung nur in seiner ganzheitlichen Form (Packung, Flasche) berücksichtigt werden kann. Das täglich einzunehmende Referenzpräparat D.________ dagegen stellt, da in Packungen à xxx bzw. xxx Tabletten erhältlich und daher zeitnah aufbrauchbar, die erwähnte Ausnahme dar, welche es rechtfertigt, auf die Kosten der tatsächlich verwendeten Dosis abzustellen."
+            },
+            {
+              "marke": "E. 10.4",
+              "tiefe": 2,
+              "text": "Ein Verstoss gegen das Gleichbehandlungsgebot ist somit ebenso wenig ausgewiesen wie ein solcher gegen das Willkürverbot. Auch ist mit dem Bundesverwaltungsgericht nicht ersichtlich, inwiefern die Rechte der Beschwerdeführerin im Vertrauen auf eine bisherige behördliche Praxis in relevanter, den Grundsatz von Treu und Glauben tangierender Weise verletzt sein sollten (vgl. dazu Urteil 2C_60/2018 vom 31. Mai 2019 E. 5.1 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 11",
+              "tiefe": 1,
+              "text": "Dem von der Beschwerdeführerin mit Blick auf die Prüfung des Wirtschaftlichkeitskriteriums von B.________ eventualiter gestellten Antrag um Rückweisung der Angelegenheit an den Beschwerdegegner zur Durchführung des aktuellen TQV unter Berücksichtigung der - noch festzusetzenden - Kosten einer neu einzuführenden www mcg-Packung kann sodann aus den in E. 6.4.2 ff. hiervor dargestellten Gründen nicht entsprochen werden. Dadurch wird weder gegen das Gebot willkürfreien Verhaltens verstossen noch liegt, da der TQV auf der Basis der zur Zeit kleinsten in der Schweiz zugelassenen Packung (www mcg) vorgenommen wurde, eine Verletzung von Art. 65d Abs. 3 KVV vor. Es ist nicht zulässig, zukünftige Packungen respektive Preise, wie beispielsweise denjenigen einer (noch) nicht in der SL gelisteten Kleinpackung von B.________, in die Preisberechnung einzubeziehen. Vielmehr wird die Wirtschaftlichkeit einer neuen Packung von B.________ und damit deren Preis im Zeitpunkt des Gesuchs um Aufnahme in die SL zu beurteilen sein."
+            },
+            {
+              "marke": "E. 12",
+              "tiefe": 1,
+              "text": "Die vom Beschwerdegegner durchgeführte, vorinstanzlich bestätigte Prüfung der Zweckmässigkeit und der Wirtschaftlichkeit von B.________ ist demnach rechtskonform erfolgt. Es hat daher sowohl bei der Verfügung des BAG vom 7. Dezember 2018 als auch beim angefochtenen Urteil sein Bewenden."
+            },
+            {
+              "marke": "E. 13",
+              "tiefe": 1,
+              "text": "Die Gerichtskosten sind von der unterliegenden Beschwerdeführerin zu tragen (Art. 66 Abs. 1 Satz 1 BGG). Das obsiegende Bundesamt hat keinen Anspruch auf eine Parteientschädigung (Art. 68 Abs. 3 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 12'000.- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien und dem Bundesverwaltungsgericht schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 10. Dezember 2021\n\nIm Namen der II. sozialrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDer Präsident: Parrino\n\nDie Gerichtsschreiberin: Fleischanderl"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird abgewiesen.",
+        "Die Gerichtskosten von Fr. 12'000.- werden der Beschwerdeführerin auferlegt.",
+        "Dieses Urteil wird den Parteien und dem Bundesverwaltungsgericht schriftlich mitgeteilt.\n\nLuzern, 10. Dezember 2021"
+      ],
+      "zitierteNormen": [
+        "Art. 32 Abs. 1 KVG",
+        "Art. 32 Abs. 2 KVG",
+        "Art. 32 KVG",
+        "Art. 32 LAMAL",
+        "Art. 33 KLV",
+        "Art. 34d KLV",
+        "Art. 43 Abs. 6 KVG",
+        "Art. 65 Abs. 5 KVV"
+      ],
+      "normKeys": [
+        "BGG"
+      ],
+      "zitierteEntscheide": [
+        "1C_139/2017",
+        "2C_60/2018",
+        "9C_190/2020",
+        "9C_612/2020",
+        "9C_710/2020",
+        "9C_736/2020",
+        "BGE 126 V 334",
+        "BGE 127 V 138",
+        "BGE 129 V 32",
+        "BGE 130 V 299",
+        "BGE 130 V 532",
+        "BGE 133 V 115",
+        "BGE 137 I 69",
+        "BGE 138 V 310",
+        "BGE 141 I 153",
+        "BGE 141 I 78",
+        "BGE 142 V 26",
+        "BGE 142 V 368",
+        "BGE 143 V 369",
+        "BGE 144 III 285",
+        "BGE 145 I 156",
+        "BGE 145 V 289",
+        "BGE 145 V 57",
+        "BGE 147 V 194",
+        "C-471/2019"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=&to_date=&from_year=2021&to_year=2021&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=16&highlight_docid=atf%3A%2F%2F148-V-128%3Ade&number_of_ranks=224&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "292e8f26d12d6fa4f74cdaaab699d5058178358ab281e622cd9793a3d8da4a1e",
+      "sha": "348de321153687d9cf382c98647533e473469d6757127ce3fa7f8d1b6bc84c04",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Die A. AG ist Zulassungsinhaberin des vom Schweizerischen Heilmittelinstitut (Swissmedic) zugelassenen, patentgeschützten Arzneimittels B., welches als Trockensubstanz zur Herstellung einer Injektionslösung seit v in den Dosierungen w mcg und w mcg als Einerpackung auf der Liste der pharmazeutischen Spezialitäten und konfektionierten Arzneimittel mit Preisen (Spezialitätenliste [SL]) figuriert. Es enthält den Wirkstoff C. und dient der Behandlung von (...) bei Patienten mit (...); die zunächst auf erwachsene Patienten beschränkte Anwendbarkeit wurde in der Folge auf mindestens einjährige Kinder erweitert."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Das Bundesamt für Gesundheit (BAG) teilte der A. AG mit Rundschreiben vom 13. Dezember 2017 mit, dass B. der dreijährlichen Überprüfung der Aufnahmebedingungen der in der SL gelisteten Präparate unterzogen werde, und ersuchte um Eingabe der dafür erforderlichen Daten in die bereitgestellte Internet-Applikation bis 15. Februar 2018. Insbesondere wurden Angaben zur Wirksamkeit und Zweckmässigkeit sowie mit Blick auf das Kriterium der Wirtschaftlichkeit zu den Grundlagen des von der Zulassungsinhaberin vorgenommenen Therapeutischen Quervergleichs (TQV) gefordert. Die A. AG schlug daraufhin vor, den TQV von B. (Trockensubstanz w mcg/y Stk) mit dem Medikament D. (Filmtablette x mg/y Stk) durchzuführen. Nachdem sich die Parteien in der Folge bezüglich der Kriterien der Zweckmässigkeit und Wirtschaftlichkeit nicht einigen konnten, kam das BAG abschliessend mit Verfügung vom 7. Dezember 2018 zum Ergebnis, B. werde im Rahmen der bisherigen Darreichungsformen zwar grundsätzlich als zweckmässig eingestuft, dies jedoch unter der Auflage, dass die Zulassungsinhaberin bis Ende 2020 ein Gesuch um Aufnahme einer w mcg-Packung in die SL einreiche. U.a. gestützt darauf wurden die ab 1. Februar 2019 geltenden Preise von B. neu wie folgt festgesetzt: (...). B. Die dagegen erhobene Beschwerde wies das Bundesverwaltungsgericht mit Urteil vom 7. Oktober 2020 ab. C. Die A. AG lässt Beschwerde in öffentlich-rechtlichen Angelegenheiten führen und beantragen, in Aufhebung des angefochtenen Urteils sowie der Verfügung des BAG vom 7. Dezember 2018 seien die Preise von B. per 1. Februar 2019 wie folgt neu festzulegen: (...). Eventualiter sei die Sache zur erneuten Beurteilung an das BAG zurückzuweisen mit der Anordnung, für sämtliche Packungen B. Parenteral einschliesslich der neu einzuführenden Packung w mcg sei ein wirtschaftlicher Fabrikabgabepreis (FAP) und Publikumspreis (PP) unter Berücksichtigung der Packung w mcg als kleinste Packung und der angemessenen Berücksichtigung des verminderten Verwurfs festzusetzen. Das BAG schliesst auf Abweisung der Beschwerde. Die A. AG hält replikweise an ihren Anträgen fest. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Im Streit steht, ob Bundesrecht verletzt wurde, indem die Vorinstanz sowohl die durch den Beschwerdegegner verfügte Senkung der Preise des Medikaments B. als auch die Auflage bestätigt hat, eine kleinere Packung à w mcg in der Schweiz einzuführen. (...)"
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Anerkanntermassen verfügt B. über eine gültige Zulassung von Swissmedic. Einig sind sich die Verfahrensbeteiligten im Rahmen der vorzunehmenden dreijährlichen Überprüfung der Aufnahmebedingungen auch dahingehend, dass das Medikament das Kriterium der Wirksamkeit (weiterhin) erfüllt und dessen Wirtschaftlichkeit anhand eines - ebenfalls zu keinen Beanstandungen führenden - Auslandpreisvergleichs (APV; dazu nicht publ. E. 7.2) und eines TQV zu beurteilen ist."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Zu Diskussionen Anlass gab und gibt demgegenüber der TQV und dabei insbesondere die dem Vergleichsarzneimittel D. (Filmtablette x mg/y Stk) gegenüberzustellenden Tagestherapiekosten von B. Unterschiedliche Auffassungen bestehen ferner in der Hauptsache darüber, ob das - nachstehend vorab zu prüfende - Kriterium der Zweckmässigkeit des Medikaments an die Auflage der Einführung einer kleineren w mcg-Packung geknüpft werden darf. BGE 148 V 128 S. 131"
+            },
+            {
+              "marke": "E. 3.2.1",
+              "tiefe": 3,
+              "text": "Vorinstanz und Beschwerdegegner sind dabei zum Ergebnis gelangt, die bisher in der Schweiz zugelassenen Packungen von B. (w mcg und w mcg) seien zwar grundsätzlich als zweckmässig anzusehen, jedoch lediglich verbunden mit der Auflage, dass die Beschwerdeführerin beim BAG ein Gesuch um Aufnahme einer w mcg-Packung in die SL einreiche und gleichzeitig die vorausgesetzte Swissmedic-Zulassung veranlasse. Auf Grund des bei einer benötigten Menge von w mcg pro Kilogramm Körpergewicht hohen Verwurfs des Medikaments, das heisst der zu verwerfenden Restmenge zwischen patientenindividueller, verordneter Dosierung und Packungsgrösse, in der Kinderindikation, bei der Anfangsdosierung für Erwachsene und Jugendliche sowie bei der Behandlung von jungen Erwachsenen mit einem Körpergewicht von bis zu 50 Kilogramm sei eine w mcg-Packung als zweckmässiger einzustufen als die beiden bisherigen Packungen. Gleiches gelte für höhere Dosierungen bei Erwachsenen, bei welchen eine Kombination der w mcg-Packung mit der w mcg-Packung oder bei sehr hohem Bedarf auch mit der w mcg-Packung angezeigter erscheine als der Gebrauch zweier w mcg-Packungen oder die Kombination einer w mcg-Packung mit einer w mcg-Packung. Es rechtfertige sich daher, die Zweckmässigkeit der aktuell in der SL gelisteten Packungen von B. längerfristig nur unter der Voraussetzung der Einführung einer kleineren Packung zu bejahen."
+            },
+            {
+              "marke": "E. 3.2.2",
+              "tiefe": 3,
+              "text": "Dem wird in der Beschwerde im Wesentlichen entgegengehalten, B. erfülle die Aufnahmebedingung der Zweckmässigkeit auch ohne die entsprechende Auflage weiterhin. Diese entbehre einer gesetzlichen Grundlage und sei unverhältnismässig. Insbesondere sei das Kriterium praxisgemäss nur restriktiv bzw. bei Vorliegen von triftigen Gründen oder einer geänderten Sachlage zu verneinen. Art. 33 KLV (SR 832.112.31) verlange nicht nach Ampullen, die eine Mindest- oder Durchschnittsdosierung abdeckten. Ferner sei die Einführung der geforderten Kleinpackung entgegen der Auffassung von Vorinstanz und Beschwerdegegner nicht geeignet, die Verwurfsproblematik zu vermindern. Bei der w mcg-Packung entstehe beim Durchschnittspatienten zwar ein Verwurf, der aber bei schwereren Patienten oder solchen, die aus medizinischen Gründen eine höhere Dosierung benötigten, gerade nicht resultiere. Des Weitern könne der Verwurf auch in Bezug auf die Durchschnittsdosierung, die bei einer erwachsenen Person von 72 Kilogramm w mcg betrage (72 kg x w mcg), nicht korrigiert werden, da diesfalls jeweils zwei BGE 148 V 128 S. 132 w mcg-Packungen erforderlich wären, das heisst, wie bis anhin, w mcg mit einem Verwurf von ebenfalls w mcg. Schliesslich würden für die notwendigen zwei Kleinpackungen auch mehr Vertriebsanteile und Verpackungsmaterial anfallen. Die angeordnete Einführung einer Kleinpackung erweise sich mithin unter sämtlichen Titeln nicht nur als nicht notwendig, sondern sogar als ungeeignet und somit unzweckmässiger als die bisherige Lösung."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Entscheidend für das Kriterium der Zweckmässigkeit ist der diagnostische oder therapeutische Nutzen der Anwendung im Einzelfall unter Berücksichtigung der damit verbundenen Risiken, gemessen am angestrebten Heilerfolg der möglichst vollständigen Beseitigung der körperlichen oder psychischen Beeinträchtigung (BGE 130 V 299 E. 6.1 mit Hinweisen) sowie an der Gefahr missbräuchlicher Verwendung (BGE 129 V 32 E. 4.1). Die Zweckmässigkeit richtet sich dabei nach objektiven medizinischen Kriterien: Ist eine Massnahme medizinisch indiziert, gilt sie als zweckmässig (BGE 130 V 532 E. 2.2 mit Hinweisen; GEBHARD EUGSTER, Krankenversicherung, in: Soziale Sicherheit, SBVR Bd. XIV, 3. Aufl. 2016, S. 508 f. Rz. 331 und 333; OGGIER/VOKINGER, in: Basler Kommentar, Krankenversicherungsgesetz/Krankenversicherungsaufsichtsgesetz, 2020, N. 13 zu Art. 32 KVG). Nach der Verwaltungspraxis erfolgt die Beurteilung der Zweckmässigkeit auf Grund des Verhältnisses von Erfolg und Misserfolg (Fehlschlägen) einer Anwendung sowie der Häufigkeit von Komplikationen (BGE 127 V 138 E. 5 mit Hinweisen; vgl. auch OGGIER/VOKINGER, a.a.O., N. 45 zu Art. 32 KVG). Zweckmässigkeit der durch die obligatorische Krankenpflegeversicherung (OKP) zu vergütenden Leistung setzt deren Wirksamkeit voraus (BGE 133 V 115 E. 2.2; OGGIER/VOKINGER, a.a.O., N. 12 zu Art. 32 KVG)."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Das BAG hat sich - auf Empfehlung der Geschäftsprüfungskommission des Nationalrats - im Rahmen seines Arbeitspapiers \"Operationalisierung der Begriffe Wirksamkeit, Zweckmässigkeit und Wirtschaftlichkeit\", Version 2.0, vom 21. Juli 2011 näher mit den entsprechenden Kriterien und damit auch mit dem Begriff der Zweckmässigkeit von Leistungen befasst (abrufbar unter www.bag.admin.ch). Es ist dabei zum Ergebnis gelangt, dass die Zweckmässigkeit einer Leistung zusätzlich zur Wirksamkeit deren Eignung, unter Berücksichtigung von Nutzen und Schaden, deren BGE 148 V 128 S. 133 Erforderlichkeit und Zumutbarkeit sowie die Verhältnismässigkeit des Mitteleinsatzes voraussetze (S. 5 oben). Bezüglich des letztgenannten Elementes hielt es ferner fest, dass dieses nicht gegeben sei, wenn sich eine Massnahme durch eine kostengünstigere Alternative ersetzen lasse, ohne dass dadurch der medizinische Erfolg in Frage gestellt werde (S. 5 Mitte). Bei der Beurteilung von neuen Leistungen komme die Zweckmässigkeit - so das BAG im Weiteren (S. 5 unten) - insbesondere zur Anwendung in Zusammenhang mit Überlegungen, ob flankierende Massnahmen zur Kostenübernahme zu empfehlen seien, die den angemessenen Einsatz der Leistungen sicherstellen sollten."
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Mit den Folgerungen des bundesamtlichen Arbeitspapiers setzte sich im Nachgang auch die Lehre auseinander. So kamen etwa WIDRIG/TAG (Rechtliche Aspekte der Kosten-/Nutzenbewertung in der Medizin, Health Insurance Liability Law [HILL] 2012 Fachartikel Nr. 65) zum Schluss, zweckmässig könne eine Leistung nur dann sein, wenn sie zugleich das Kriterium der Wirksamkeit erfülle. Ob die wirksame Leistung auch zweckmässig sei, beurteile sich in der Regel anhand medizinischer Kriterien. Das \"Z-Kriterium\" solle primär die zweckmässige Auswahl unter verschiedenen medizinischen Massnahmen sicherstellen. Zweckmässig sei eine Massnahme, wenn sie, in Anbetracht des konkreten Krankheitsbildes, die nach objektiven Kriterien am besten geeignete Vorkehr darstelle und den besten medizinischen Nutzen aufweise, das heisst schneller, besser oder einfacher zum verfolgten Behandlungsziel führe. Gebe es für eine Indikation nur eine mögliche medizinische Massnahme, sei sie solange als zweckmässig anzusehen, bis deren Risiken ihren Nutzen überstiegen. Das Z-Kriterium habe demzufolge vergleichenden Charakter. Des Weitern müsse die Leistung, um das Kriterium zu erfüllen, notwendig sein. Sie gelte dann als notwendig, wenn sie aus medizinischer Sicht zur Erzielung des Behandlungserfolgs unentbehrlich sei. Es sei jedoch nicht sachgemäss, die Zweckmässigkeit zu verneinen, sobald die Leistung durch eine gleich wirksame, aber kostengünstigere Alternative ersetzt werden könnte, da dadurch eine Vermischung mit dem Wirtschaftlichkeitskriterium entstünde. Deshalb empfehle es sich, als Voraussetzung für die Zweckmässigkeit einer Leistung zu verlangen, dass die in klinischen Studien nachgewiesene Wirksamkeit sich auch im medizinischen Alltag bestätigen lasse (Rz. 57). Schliesslich führten die Autoren aus, bei der Operationalisierung des BGE 148 V 128 S. 134 Zweckmässigkeitskriteriums weiche das BAG von den vorgegebenen Rahmenbedingungen ab, indem es unter dem Zusatzkriterium eines \"verhältnismässigen Mitteleinsatzes\" die medizinischen Alternativen auf ihre Kostenintensität prüfe. Diese Vermischung mit dem Wirtschaftlichkeitskriterium sei zumindest aus rechtssystematischer Sicht zwar etwas unbefriedigend, führe schliesslich aber zum gleichen Endergebnis (Rz. 62)."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Der Bundesrat äussert sich in der KVV (SR 832.102) nicht zum Kriterium der Zweckmässigkeit von Arzneimitteln. Erst der vom Departement des Innern erlassene Art. 33 KLV hält fest, die Zweckmässigkeit eines Arzneimittels werde in Bezug auf seine Wirkung und Zusammensetzung nach klinisch-pharmakologischen und galenischen Erwägungen, nach unerwünschten Wirkungen sowie nach der Gefahr missbräuchlicher Verwendung beurteilt (Abs. 1). Das BAG stützt sich dabei - so Abs. 2 der Verordnungsbestimmung - für die Beurteilung der Zweckmässigkeit auf die Unterlagen, die für die Zulassung durch Swissmedic massgebend gewesen sind. Es kann weitere Unterlagen verlangen."
+            },
+            {
+              "marke": "E. 4.3.1",
+              "tiefe": 3,
+              "text": "Art. 33 KLV ist offen formuliert respektive definiert nicht explizit, welche Vorgaben ein Medikament zu erfüllen hat, um im Sinne der OKP zweckmässig zu sein. Die Bestimmung lässt somit einen grösseren Spielraum offen, sodass die Beurteilung der Zweckmässigkeit im Einzelfall an die Besonderheit des in Frage stehenden Arzneimittels und seiner Wirkungsweise angepasst werden kann (vgl. GÄCHTER/MEIENBERGER, Rechtsgutachten zuhanden der Parlamentarischen Verwaltungskontrolle vom 8. Februar 2013, S. 62 Rz. 134, in: Evaluation der Zulassung und Überprüfung von Medikamenten in der obligatorischen Krankenpflegeversicherung vom 13. Juni 2013 - Materialien zum Bericht der Parlamentarischen Verwaltungskontrolle zuhanden der Geschäftsprüfungskommission des Ständerates, S. 11 ff. [abrufbar unter www.parlament.ch]; Vollzugsevaluation der Zulassung und Überprüfung von Medikamenten in der obligatorischen Krankenpflegeversicherung [nachfolgend: Vollzugsevaluation], S. 105, ebenfalls in: Evaluation der Zulassung und Überprüfung von Medikamenten in der obligatorischen Krankenpflegeversicherung vom 13. Juni 2013 - Materialien zum Bericht der Parlamentarischen Verwaltungskontrolle zuhanden der Geschäftsprüfungskommission des Ständerates, S. 93 ff. [abrufbar unter www.parlament.ch]). Beim Kriterium der Zweckmässigkeit ist zu fragen, wie zweckmässig ein Arzneimittel gegenüber einem anderen BGE 148 V 128 S. 135 Arzneimittel ist bzw. worin sein genereller oder teilweiser Mehrnutzen besteht (vgl. ANDREAS WILDI, in: Basler Kommentar, Krankenversicherungsgesetz/Krankenversicherungsaufsichtsgesetz, 2020, N. 50 zu Art. 52/52a KVG)."
+            },
+            {
+              "marke": "E. 4.3.2",
+              "tiefe": 3,
+              "text": "Zu beachten gilt es zunächst, dass Art. 33 KLV Dosierungen und Packungsgrössen - anders als allfällige Nebenwirkungen und eine mögliche missbräuchliche Verwendung - nicht ausdrücklich als zu berücksichtigende Elemente im Rahmen der Zweckmässigkeitsbeurteilung eines Medikaments nennt. Dennoch ergibt sich aus der Begrifflichkeit des Kriteriums, wie die vorstehenden Ausführungen zeigen, dass ein Arzneimittel nur dann zweckmässig sein kann, wenn es im Vergleich zu alternativ einsetzbaren Arzneimitteln wirksam und diese Wirksamkeit von klinischer Relevanz ist. Die Frage nach den angemessenen Dosierungen und Packungsgrössen weist sodann zwar Züge auf, die sich auch dem Kriterium der Wirtschaftlichkeit zuordnen lassen. Darauf wurde sowohl im angefochtenen Urteil als auch in der in E. 4.2.2 hiervor dargestellten Lehrmeinung zum \"verhältnismässigen Mitteleinsatz\" ausdrücklich hingewiesen. Es erscheint indessen, wie sich aus den nachfolgenden Erwägungen ergibt, sachgerecht - und dem widersetzt sich auch die Lehre nicht -, den betreffenden Punkt im Rahmen der vorgelagerten Prüfung der Zweckmässigkeit zu beurteilen."
+            },
+            {
+              "marke": "E. 4.3.2.1",
+              "tiefe": 4,
+              "text": "So hatte sich zum einen bereits der Bundesrat Ende Mai 2006 anlässlich seiner Stellungnahme zur Motion Nr. 06.3124 betreffend die Thematik \"Kleine, zweckmässige und therapiegerechte Medikamentenpackungen\" in diesem Sinne klar geäussert. Er hielt damals fest, das Kriterium der Zweckmässigkeit beinhalte grundsätzlich, dass das BAG bei der Aufnahme von Arzneimitteln in die SL geeignete Packungsgrössen von den Herstellern fordere. Diese Packungsgrössen seien auf die Indikationen des Medikaments abgestimmt. Es müssten also neben den Grosspackungen auch kleine therapiegerechte Probierpackungen zur Aufnahme in die SL gemeldet werden, damit der Beginn einer allfälligen Langzeittherapie mit Kleinpackungen eingeleitet werden könne. Wenn im entsprechenden Aufnahmegesuch keine Kleinpackung angeboten werde, sei das Zweckmässigkeitskriterium nicht erfüllt. Das BAG werde einen derartigen Antrag ablehnen oder in der Aufnahmeverfügung eine Auflage formulieren, wonach die Kleinpackung noch einzuführen sei. In seiner Antwort auf die Motion Nr. 09.3255 \"Einsparpotenzial bei der Medikamentenversorgung\" vom 20. Mai 2009 vermerkte der BGE 148 V 128 S. 136 Bundesrat in der Folge, es sei bereits im Rahmen der Stellungnahme zur Motion Nr. 06.3124 hervorgehoben worden, dass bei der Aufnahme von Arzneimitteln in die SL von den Herstellern geeignete Packungsgrössen gefordert würden, um das Kriterium der Zweckmässigkeit zur Anerkennung der Pflichtleistung in der sozialen Krankenversicherung zu erfüllen (Art. 32 KVG). Die Prüfung der zweckmässigen Packungsgrösse allein vermöge allerdings noch keinen entscheidenden Fortschritt zur Senkung der Gesundheitskosten zu bewirken. Es sei Aufgabe sämtlicher Akteure im Gesundheitswesen, mittels effektiver Zusammenarbeit eine hohe und möglichst kostengünstige Behandlung der Versicherten durchzusetzen. Nur auf diese Weise könne eine Medikamentenüberversorgung vermieden werden."
+            },
+            {
+              "marke": "E. 4.3.2.2",
+              "tiefe": 4,
+              "text": "Ferner muss ein medizinischer Bedarf für die Versorgung in der Schweiz gegeben sein und müssen die angebotenen Packungsgrössen und Dosierungen eine angemessene Anwendung in der Praxis gewährleisten (in diesem Sinne Vollzugsevaluation, a.a.O., S. 105; INDERMITTE/RIZZI, Grundsätze zur Bezeichnung von Arzneimitteln, Soziale Sicherheit [CHSS] 3/2018 S. 16 ff., insb. 17). Um dies sicherstellen zu können, haben die Zulassungsinhaberinnen anlässlich der Gesuche um Aufnahme eines Arzneimittels in die SL auch Dosisstärke und Packungsgrösse anzugeben (vgl. \"KEY FACTS-Formular für Neuaufnahmegesuch Originalpräparat [NA]\", in: Anhang 03 a des vom BAG herausgegebenen Handbuchs betreffend die SL, Stand 2017 [fortan: SL-Handbuch; abrufbar unter www.bag.admin.ch]; zum rechtlichen Stellenwert vgl. BGE 145 V 289 E. 5.4.2). Die entsprechenden Auskünfte dienen, wie den \"Allgemeinen Bemerkungen\" zum Neuaufnahmeformular entnommen werden kann - und den beteiligten Akteuren somit klar sein muss -, spezifisch der Zweckmässigkeitsprüfung (vgl. Anhang 03 a SL-Handbuch; zudem Vollzugsevaluation, a.a.O., S. 105 oben und Fn. 18). Hier sollen die Gründe genannt werden, weshalb ein Arzneimittel zweckmässig im ambulanten Bereich der OKP eingesetzt werden kann und inwiefern die zur SL-Aufnahme beantragten Dosisstärken und Packungsgrössen zweckmässig sein sollen respektive worin der therapeutische Mehrwert bzw. klinische Mehrnutzen gegenüber bisheriger Standardtherapie bestehen soll (WILDI, a.a.O., N. 49 zu Art. 52/52a KVG)."
+            },
+            {
+              "marke": "E. 4.3.3",
+              "tiefe": 3,
+              "text": "Aus dem Dargelegten lässt sich mit Vorinstanz und Beschwerdegegner der Schluss ziehen, dass es sachlich geboten ist, die Frage der Packungsgrösse - wiewohl gewisse Schnittstellen zum BGE 148 V 128 S. 137 Kriterium der Wirtschaftlichkeit aufweisend - unter dem Titel der Zweckmässigkeit zu prüfen. Dem widersetzt sich auch die Beschwerdeführerin nicht."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Anzumerken ist schliesslich, dass sich die vom BAG verfügte Auflage der Einführung einer Kleinpackung als grundsätzlich zulässig erweist, kann das BAG die Aufnahme eines Arzneimittels in die SL gemäss Art. 65 Abs. 5 KVV doch mit Bedingungen und Auflagen versehen. Da ein in der SL aufgeführtes Arzneimittel die Aufnahmebedingungen gemäss der Zielsetzung von Art. 32 Abs. 2 KVG jederzeit erfüllen muss, ansonsten es von der SL gestrichen wird (vgl. Art. 68 Abs. 1 lit. a KVV; BGE 143 V 369 E. 5.3.2; BGE 142 V 26 E. 5.4; Urteil 9C_190/2020 vom 13. November 2020 E. 2.2.2, in: SVR 2021 KV Nr. 6 S. 29), hat dies, um die Einhaltung der Aufnahmebedingungen weiterhin zu garantieren, ebenfalls anlässlich der dreijährlichen Überprüfung nach Art. 65d KVV in Verbindung mit Art. 34d ff. KLV zu gelten. In diesem Sinne hatte sich denn auch bereits der Bundesrat im Rahmen seiner Stellungnahme zur Motion Nr. 06.3124 vernehmen lassen (vgl. E. 4.3.2.1 hiervor). Folglich bilden Art. 32 Abs. 2 KVG und Art. 33 KLV eine genügende gesetzliche Grundlage für die umstrittene Auflage."
+            },
+            {
+              "marke": "E. 4.5.1",
+              "tiefe": 3,
+              "text": "Überdies bedürfen Nebenbestimmungen wie Auflagen oder Bedingungen nicht zwingend einer im Gesetz ausdrücklich wiedergegebenen Grundlage; ihre Zulässigkeit kann sich unter Umständen auch unmittelbar aus dem Gesetzeszweck und dem damit zusammenhängenden öffentlichen Interesse ergeben. Sachfremde Nebenbestimmungen sind aber unzulässig. Zudem haben Nebenbestimmungen auch mit dem Grundsatz der Verhältnismässigkeit vereinbar zu sein, was bedeutet, dass sie u.a. für die Erreichung des angestrebten Ziels erforderlich sein müssen. Mit den Nebenbestimmungen werden die rechtmässige Ausübung eines eingeräumten Rechts oder einer Bewilligung oder die zweckkonforme Verwendung von staatlichen Leistungen sichergestellt (BGE 138 V 310 E. 5.2 mit Hinweis; BGE 131 I 166 E. 4)."
+            },
+            {
+              "marke": "E. 4.5.2",
+              "tiefe": 3,
+              "text": "Die hier fragliche Anordnung der Einführung einer kleineren Packungsgrösse steht grundsätzlich im Einklang mit dem Zweck der periodischen Überprüfung gemäss Art. 32 Abs. 2 KVG, nämlich die Sicherstellung, dass die Arzneimittel der SL die WZW-Kriterien nach Art. 32 Abs. 1 KVG jederzeit erfüllen. Ebenso dient das BGE 148 V 128 S. 138 damit angestrebte Ziel der Verminderung von Verwurf prinzipiell der Umsetzung des in Art. 43 Abs. 6 KVG statuierten Sparsamkeitsgebots. Von einer sachfremden Auflage kann vorliegend daher nicht gesprochen werden. Auch erweist sie sich, wie die nachstehenden Erwägungen zeigen, als verhältnismässig (vgl. nicht publ. E. 6) und damit zulässig."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "9C_736/2020",
+        "key": "bger_9C_736_2020",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=10.12.2021_9C_736/2020"
+      },
+      "ecli": "ECLI:CH:BGE:2021:148.V.128"
+    }
+  ]
+}

@@ -1,0 +1,473 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/149_V_224",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "V",
+      "nummer": "149 V 224",
+      "bgeReferenz": "149 V 224",
+      "zitierung": "BGE 149 V 224",
+      "datum": "2023-09-21",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "legalArea": "social_insurance",
+      "rubrum": {
+        "besetzung": "Bundesrichter Wirthlin, Präsident, Bundesrichter Maillard, Bundesrichterinnen Heine, Viscione, Bundesrichter Métral, Gerichtsschreiberin Berger Götz",
+        "parteien": "A.________, vertreten durch Rechtsanwalt Jürg Senn, Beschwerdeführerin, gegen AXA Versicherungen AG, General Guisan-Strasse 40, 8400 Winterthur, Beschwerdegegnerin",
+        "gegenstand": "Unfallversicherung (Pflegeleistungen, Heilbehandlung)",
+        "vorinstanz": "Sozialversicherungsgerichts des Kantons Zürich vom 25. August 2022"
+      },
+      "regeste": {
+        "text": "Art. 21 Abs. 1 lit. c UVG; Art. 17 Abs. 2 ATSG; Anspruch auf Heilbehandlung bei Teilrentenbeziehenden nach Eintritt ins AHV-Rentenalter. Aus Art. 21 Abs. 1 lit. c UVG ergibt sich keine Leistungsbefristung auf den Eintritt ins AHV-Rentenalter oder allenfalls auf das erst auf einen späteren Zeitpunkt hin angenommene Ende der Erwerbstätigkeit (E. 6).\nRegeste\n Art. 21 al. 1 let. c LAA; art. 17 al. 2 LPGA; droit au traitement médical pour les bénéficiaires de rentes partielles après l'âge de la retraite AVS. Il ne ressort pas de l'art. 21 al. 1 let. c LAA qu'il existe une limitation à la prestation avec l'entrée à l'âge de la retraite AVS ou, le cas échéant, avec la fin de l'activité lucrative prévue à une date ultérieure (consid. 6).\nRegesto\n Art. 21 cpv. 1 lett. c LAINF; art. 17 cpv. 2 LPGA; diritto alla cura medica per i beneficiari di rendite parziali dopo il raggiungimento dell'età di pensionamento AVS. Dall'art. 21 cpv. 1 lett. c LAINF non risulta nessuna limitazione della prestazione al raggiungimento dell'età di pensionamento AVS o, se del caso, alla fine dell'attività lucrativa prevista in un momento successivo (consid. 6).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 21 Abs. 1 lit. c UVG; Art. 17 Abs. 2 ATSG; Anspruch auf Heilbehandlung bei Teilrentenbeziehenden nach Eintritt ins AHV-Rentenalter.",
+            "absaetze": [
+              "Aus Art. 21 Abs. 1 lit. c UVG ergibt sich keine Leistungsbefristung auf den Eintritt ins AHV-Rentenalter oder allenfalls auf das erst auf einen späteren Zeitpunkt hin angenommene Ende der Erwerbstätigkeit (E. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-V-224%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 21 al. 1 let. c LAA; art. 17 al. 2 LPGA; droit au traitement médical pour les bénéficiaires de rentes partielles après l'âge de la retraite AVS.",
+            "absaetze": [
+              "Il ne ressort pas de l'art. 21 al. 1 let. c LAA qu'il existe une limitation à la prestation avec l'entrée à l'âge de la retraite AVS ou, le cas échéant, avec la fin de l'activité lucrative prévue à une date ultérieure (consid. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-V-224%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 21 cpv. 1 lett. c LAINF; art. 17 cpv. 2 LPGA; diritto alla cura medica per i beneficiari di rendite parziali dopo il raggiungimento dell'età di pensionamento AVS.",
+            "absaetze": [
+              "Dall'art. 21 cpv. 1 lett. c LAINF non risulta nessuna limitazione della prestazione al raggiungimento dell'età di pensionamento AVS o, se del caso, alla fine dell'attività lucrativa prevista in un momento successivo (consid. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-V-224%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. Die 1956 geborene A.________ war seit 1. Oktober 2000 als Pflegehelferin für das Pflegeheim B.________ tätig und dadurch bei der AXA Versicherungen AG (nachfolgend: AXA) gegen die Folgen von Unfällen und Berufskrankheiten versichert. Am 29. Juli 2010 zog sie sich beim Sturz auf einer Traminsel eine Deckplattenimpressionsfraktur des Lendenwirbelkörpers (LWK) 2 zu. Die AXA erbrachte die gesetzlichen Leistungen (Taggeld, Übernahme von Heilbehandlungskosten). Mit Verfügung vom 10. Oktober 2014 stellte sie die vorübergehenden Leistungen per 31. Dezember 2013 ein und sprach A.________ mit Wirkung ab 1. Januar 2014 eine Invalidenrente, basierend auf einem Invaliditätsgrad von 41 %, sowie eine Integritätsentschädigung, gestützt auf eine Integritätseinbusse von 5 % zu. Ausserdem bestätigte sie bis auf Weiteres die Kostenübernahme für eine Langzeit-Physiotherapie im Umfang von einer Sitzung pro Woche zum Erhalt der verbleibenden Teilarbeitsfähigkeit. A.b. Mit Verfügung vom 11. Februar 2020 stellte die AXA die Pflegeleistungen und Kostenvergütungen per 31. Mai 2020 ein mit der Begründung, A.________ werde am 13. Mai 2020 das 64. Altersjahr und damit das ordentliche Rentenalter erreichen. Daran hielt sie auf Einsprache hin fest (Einspracheentscheid vom 11. Dezember 2020)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Das Sozialversicherungsgericht des Kantons Zürich wies die dagegen erhobene Beschwerde ab (Urteil vom 25. August 2022)."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A.________ lässt Beschwerde in öffentlich-rechtlichen Angelegenheiten führen und beantragen, in Aufhebung des sozialversicherungsgerichtlichen Urteils sei die AXA zu verpflichten, auch nach Erreichen des AHV-Rücktrittsalters die gesetzlichen Leistungen in Form von Heilbehandlungskosten zu bezahlen. Das kantonale Gericht verzichtet auf eine Vernehmlassung. Die AXA schliesst auf Abweisung der Beschwerde, während das Bundesamt für Gesundheit (BAG) in seiner Stellungnahme auf eine Antragstellung verzichtet. Der Rechtsvertreter von A.________ geht in seiner Eingabe vom 11. Mai 2023 auf die letztinstanzlich vorgebrachten Argumente der Gegenpartei und des BAG ein. Die AXA hält am 25. Mai 2023 an ihrem Abweisungsantrag fest."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Mit der Beschwerde in öffentlich-rechtlichen Angelegenheiten kann eine Rechtsverletzung nach Art. 95 f. BGG gerügt werden. Das Bundesgericht wendet das Recht von Amtes wegen an (Art. 106 Abs. 1 BGG). Dennoch prüft es - offensichtliche Fehler vorbehalten - nur die in seinem Verfahren gerügten Rechtsmängel (Art. 42 Abs. 1 f. BGG; BGE 148 V 209 E. 2.2)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Im Beschwerdeverfahren um die Zusprechung oder Verweigerung von Geldleistungen der Unfallversicherung ist das Bundesgericht nicht an die vorinstanzliche Feststellung des rechtserheblichen Sachverhalts gebunden (Art. 97 Abs. 2 und Art. 105 Abs. 3 BGG). Da hier indessen einzig Heilbehandlung (Art. 14 ATSG; Art. 10 UVG) zur Diskussion steht, geht es um eine Sachleistung, womit die Ausnahmeregelung in Art. 105 Abs. 3 in Verbindung mit Art. 97 Abs. 2 BGG nicht zur Anwendung gelangt. Bezüglich Sachverhaltsfeststellungen gilt deshalb die eingeschränkte Kognition (BGE 135 V 412; nicht publ. E. 1.1 des Urteils BGE 143 V 148, veröffentlicht in SVR 2017 UV Nr. 34 S. 113). Das Bundesgericht kann demnach eine - für den Ausgang des Verfahrens entscheidende (vgl. Art. 97 Abs. 1 BGG) - Sachverhaltsfeststellung der Vorinstanz nur berichtigen oder ergänzen, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruht (Art. 105 Abs. 1 und 2 BGG). Ansonsten legt es seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG)."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Streitig und zu prüfen ist, ob das kantonale Gericht Bundesrecht verletzte, indem es die von der Beschwerdegegnerin auf den Eintritt der Beschwerdeführerin ins AHV-Rentenalter hin verfügte und mit Einspracheentscheid bestätigte Einstellung der Kostenübernahme für Heilbehandlungen schützte."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Auf den 1. Januar 2017 sind die mit Bundesgesetz vom 25. September 2015 revidierten Bestimmungen des UVG (AS 2016 4375; BBl 2008 5395, 2014 7911) und der UVV (AS 2016 4393) in Kraft getreten. Versicherungsleistungen für Unfälle, die sich vor deren Inkrafttreten ereignet haben, und für Berufskrankheiten, die vor diesem Zeitpunkt ausgebrochen sind, werden nach bisherigem Recht gewährt (vgl. Übergangsbestimmung in Art. 118 Abs. 1 UVG; BGE 143 V 285 E. 2.1). So verhält es sich auch hier, wie die Vorinstanz richtig erkannt hat. Deshalb wird nachfolgend auf das bisherige Recht und die dazu ergangene Rechtsprechung Bezug genommen."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht hat die massgeblichen Bestimmungen zum Anspruch auf die zweckmässige Behandlung der Unfallfolgen (Heilbehandlung; Art. 10 Abs. 1 und 3 UVG in Verbindung mit Art. 15 UVV) zutreffend dargelegt. Darauf wird verwiesen."
+            },
+            {
+              "marke": "E. 3.3.1",
+              "tiefe": 3,
+              "text": "Hervorzuheben ist, dass die verunfallte Person grundsätzlich nur Anspruch auf Heilbehandlung hat, solange von der Fortsetzung der ärztlichen Behandlung eine namhafte Besserung des Gesundheitszustands erwartet werden kann; mit dem Fallabschluss fallen die vorübergehenden Leistungen in Form von Heilbehandlung und Taggeld dahin und es ist der Rentenanspruch zu prüfen (vgl. Art. 19 Abs. 1 UVG; BGE 134 V 109 E. 4.1). Ausnahmsweise werden die Kosten für Heilbehandlung nach der Rentenfestsetzung weiterhin übernommen. Der im Wortlaut wiedergegebene Art. 21 Abs. 1 UVG regelt diese Konstellationen abschliessend:\n\n\"Nach der Festsetzung der Rente werden dem Bezüger Pflegeleistungen und Kostenvergütungen (Art. 10-13 UVG) gewährt, wenn er:\n\na. an einer Berufskrankheit leidet;\n\nb. unter einem Rückfall oder an Spätfolgen leidet und die Erwerbsfähigkeit durch medizinische Vorkehren wesentlich verbessert oder vor wesentlicher Beeinträchtigung bewahrt werden kann;\n\nc. zur Erhaltung seiner verbleibenden Erwerbsfähigkeit dauernd der Behandlung und Pflege bedarf;\n\nd. erwerbsunfähig ist und sein Gesundheitszustand durch medizinische Vorkehren wesentlich verbessert oder vor wesentlicher Beeinträchtigung bewahrt werden kann.\""
+            },
+            {
+              "marke": "E. 3.3.2",
+              "tiefe": 3,
+              "text": "Die hier im Fokus stehende (vgl. nachfolgende E. 4) Heilbehandlung nach Art. 21 Abs. 1 lit. c UVG gilt als Dauerleistung. Ihre nachträgliche Aufhebung oder eine wesentliche Anpassung im Leistungsumfang setzt einen Revisionsgrund im Sinne von Art. 17 Abs. 2 ATSG voraus (BGE 144 V 418)."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin leidet nicht an einer Berufskrankheit, womit Art. 21 Abs. 1 lit. a UVG als Anspruchsgrundlage ausser Betracht fällt. Es sind keine Rückfall- oder Spätfolgen zu beurteilen, weshalb auch Art. 21 Abs. 1 lit. b UVG nicht zur Debatte steht. Sodann steht fest, dass die Beschwerdeführerin bei einem Invaliditätsgrad von 41 % nicht als erwerbsunfähig im Sinne von Art. 21 Abs. 1 lit. d UVG zu qualifizieren ist (vgl. BGE 124 V 52 E. 4), weshalb seitens der Beschwerdegegnerin und der Vorinstanz geprüft wurde, ob weiterhin ein Anspruch auf Heilbehandlung gestützt auf Art. 21 Abs. 1 lit. c UVG gegeben ist. In tatsächlicher Hinsicht ist zu beachten, dass die Beschwerdeführerin schon vor Eintritt des AHV-Rentenalters nicht mehr erwerbstätig war und es war zudem stets unbestritten, dass sie nach Eintritt des AHV-Rentenalters auch im Gesundheitsfall keiner Erwerbstätigkeit mehr nachgegangen wäre."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht lehnt einen Anspruch von teilinvaliden Rentenbeziehenden auf Pflegeleistungen und Kostenvergütungen gestützt auf Art. 21 Abs. 1 lit. c UVG für die Zeit nach der ordentlichen Pensionierung ab mit der Begründung, das Gesetz setze für die Gewährung von Heilbehandlung eine erwerbliche Eingliederungswirksamkeit voraus. Der Wortlaut der anzuwendenden Gesetzesbestimmung bzw. die Formulierung \"Erhaltung seiner verbleibenden Erwerbsfähigkeit\" sei auslegungsbedürftig. Vor dem Altersrücktritt werde eine konkrete Erwerbstätigkeit zwar nicht gefordert, sondern es genüge eine hypothetisch noch vorhandene Arbeitsfähigkeit, die es zu erhalten gelte. Massgebend sei, dass die Erwerbsfähigkeit hypothetisch umgesetzt werden könnte. Davon sei ab dem Zeitpunkt des Erreichens des AHV-Rentenalters nicht mehr auszugehen. Es bestehe eine Verknüpfung des Anspruchs auf Leistungen nach Art. 21 Abs. 1 lit. c UVG mit der Erwerbsfähigkeit bzw. rechtsprechungsgemäss mit der Dauer der erwerblichen Aktivität. Die durchgeführten Behandlungen würden nach Erreichen des Altersrücktritts - mit Ausnahme einer konkret noch im Erwerbsleben stehenden Person - in erster Linie einer Stabilisierung oder Verbesserung des Gesundheitszustandes dienen und könnten sich infolge der ausgerichteten Altersrente nicht mehr auf eine notwendige Erwerbsarbeit, sondern lediglich noch im sozialen Bereich auswirken. Die verbleibende Erwerbsfähigkeit führe somit ab Erreichen des ordentlichen Rentenalters nicht mehr zu einer Erwerbstätigkeit. So verhalte es sich auch vorliegend, ausser die Beschwerdeführerin würde trotz Erreichens des Rentenalters noch einer Erwerbstätigkeit nachgehen. Dies sei jedoch weder geltend gemacht worden noch aus den Akten ersichtlich. Deshalb habe die Beschwerdegegnerin vorliegend die Pflegeleistungen und Kostenvergütungen zu Recht per 31. Mai 2020 eingestellt."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin wendet ein, die Vorinstanz schiebe die in Art. 21 Abs. 1 lit. c UVG nicht erwähnte Eingliederungswirksamkeit vor, um die \"Unklarheit\" des Wortlautes der Bestimmung zu begründen. Der Wortlaut knüpfe aber vielmehr am Begriff der \"Erwerbsfähigkeit\" an, der nichts darüber aussage, ob die medizinisch-theoretischen Erwerbsmöglichkeiten in tatsächlicher Hinsicht umgesetzt würden oder in zeitlicher Hinsicht begrenzt seien. Die Auslegung der Vorinstanz stehe dem Wortlaut der Bestimmung entgegen. Das AHV-Rücktrittsalter als Anknüpfungspunkt sei auch insofern fragwürdig, als der Eintritt ins Rentenalter keinen Einfluss auf die Ausübung einer Erwerbstätigkeit habe. Art. 21 UVG spreche sich nicht explizit für eine Befristung aus. Unter anderem weil eine entsprechende Regelung in einem formellen Gesetz fehle, sei die vorinstanzliche Bestätigung der Leistungseinstellung unhaltbar."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Die Beschwerdegegnerin geht davon aus, dass die in Art. 21 Abs. 1 lit. c UVG verwendeten Begriffe \"Erwerbsfähigkeit\", \"dauernd\" und \"Behandlung und Pflege\" nicht abschliessend klar seien, weshalb das kantonale Gericht zu Recht eine Auslegung vorgenommen habe. Die Bestimmung fokussiere immerhin unzweideutig auf die Erhaltung der Erwerbsfähigkeit. Es dürfe generell vermutet werden, dass jede Möglichkeit einer Erhaltung der verbleibenden Erwerbsfähigkeit durch das Erreichen des Pensionsalters wegfalle. Die Beschwerdeführerin habe nicht vorgebracht, dass es sich bei ihr konkret anders verhalte. Die durch die Beschwerdeführerin vorgebrachten Hinweise hätten weder einzeln noch in ihrer Gesamtheit zur Folge, dass verunfallte teilinvalide Personen über das Pensionsalter hinaus in den Genuss von Leistungen nach Art. 21 Abs. 1 lit. c UVG kommen sollten. Sinn und Zweck der Bestimmung würden gebieten, von einem auf die Dauer der erwerblichen Aktivität beschränkten Anspruch auszugehen."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Demgegenüber spricht nach Auffassung des BAG nichts für eine Befristung der Kostentragung für Heilbehandlungen gemäss Art. 21 Abs. 1 lit. c UVG auf das Erreichen des Pensionsalters hin. Der argumentative Sprung des kantonalen Gerichts von der gesetzlich geforderten Erwerbsfähigkeit, bei der es auch vor der Pension keine Rolle für die Anspruchsberechtigung spiele, ob oder in welchem Ausmass sie realisiert werde, zum Erfordernis der \"Eingliederungswirksamkeit\" mit Eintritt des AHV-Alters entbehre jeglicher Grundlage."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Das Bundesgericht hat sich bisher mit der Frage, ob die von der Unfallversicherung gestützt auf Art. 21 Abs. 1 lit. c UVG zu erbringenden Leistungen je nach Alter der rentenbeziehenden Person begrenzt sind, nur am Rand befasst. Im vom kantonalen Gericht zitierten BGE 116 V 41 wird - ohne Bezugnahme auf das AHV-Rentenalter - festgehalten, dass gemäss Art. 21 Abs. 1 UVG der an einer Berufskrankheit leidende Rentner den Heilbehandlungsanspruch voraussetzungslos habe (lit. a), während die übrigen Tatbestände in unterschiedlichem Masse eine erwerbliche (lit. b und c) oder gesundheitliche (lit. d) Eingliederungswirksamkeit voraussetzen würden (BGE 116 V 41 E. 3b). Diese \"Eingliederungswirksamkeit\" wird in den nachfolgenden Urteilen - soweit ersichtlich ohne weitere Auseinandersetzung mit dem Thema - verschiedentlich aufgenommen, so unter anderem auch im Urteil 8C_1011/2010 vom 19. Mai 2011. Der dortige Beschwerdeführer brachte vor, dass die durchgeführten Behandlungen nachgewiesenermassen zu einer Stabilisierung oder gar Verbesserung des Gesundheitszustandes, insbesondere der Schmerzen, führen und damit auch die Leistungsfähigkeit beeinflussen würden. Das Bundesgericht hielt dazu fest, es möge zutreffen, dass sich die medizinischen Massnahmen im sozialen Bereich eingliederungswirksam auswirkten; dies reiche für eine Leistungspflicht unter dem Titel von Art. 21 Abs. 1 lit. c UVG indessen nicht aus (Urteil 8C_1011/2010 vom 19. Mai 2011 E. 5.5). In BGE 144 V 418 wird unter Hinweis auf KASPAR GEHRING (in: Kommentar KVG/UVG, 2018, N. 7 zu Art. 21 UVG) sowie ALFRED MAURER (Schweizerisches Unfallversicherungsrecht, 1985, S. 384 Fn. 962b) angegeben, das in lit. c angestrebte Ziel (Erhalt der Erwerbsfähigkeit) spreche dafür, dass dieser Anspruch auf die Dauer der erwerblichen Aktivität beschränkt bleibe. Aus der \"Verknüpfung mit der Erwerbsfähigkeit bzw. mit der Dauer der erwerblichen Aktivität\" lasse sich jedoch nicht schliessen, es gehe im Rahmen dieser Bestimmung nicht um Dauerleistungen, umso weniger als die Versicherung der Erwerbsfähigkeit gemäss UVG unter Umständen auch über das ordentliche Rentenalter hinaus andauern könne (BGE 144 V 418 E. 3.3.2). Da es sich konkret nicht um den Anspruch auf Pflegeleistungen einer rentenbeziehenden Person im AHV-Rentenalter handelte, erübrigten sich weitere Ausführungen. Zwar betrifft ein weiteres Urteil 8C_518/2016 vom 8. Mai 2017 einen Rentenbezüger im AHV-Rentenalter. Die Ablehnung einer Kostenübernahme für Physiotherapie wird mit der fehlenden Notwendigkeit der Behandlung hinsichtlich des Erhalts der verbliebenen Erwerbsfähigkeit begründet. Welche Rolle der bereits erfolgte Eintritt ins AHV-Rentenalter (auf den im Urteil verwiesen wird) spielt, bleibt unklar (Urteil 8C_518/2016 vom 8. Mai 2017 E. 3.4). Schliesslich lehnte das Bundesgericht im Urteil 8C_655/2018 vom 31. Oktober 2019 (publ. in: SVR 2020 UV Nr. 14 S. 50) einen Anspruch auf Leistungen gestützt auf lit. c ausdrücklich deshalb ab, weil die Versicherte nach dem Unfall keine Erwerbstätigkeit mehr aufgenommen und wenige Monate nach der Zusprechung einer Invalidenrente das AHV-Rentenalter erreicht hatte. Abgesehen von der Feststellung, dass die Erwerbsfähigkeit nach Festsetzung der Invalidenrente unter diesen Umständen mit weiteren ärztlichen Behandlungen nicht hätte erhalten werden können (\"Dans ces conditions, on ne voit pas en quoi le maintien éventuel du traitement médical après la fixation de la rente d'invalidité aurait de nature à conserver sa capacité résiduelle de gain.\"), fehlt jedoch eine weitere Begründung (SVR 2020 UV Nr. 14 S. 50, 8C_655/2018 E. 7.3)."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Wie soeben erwähnt (E. 5.1 hiervor), fusst die hier interessierende (nicht ergebnisrelevante) Aussage in BGE 144 V 418 auf zwei Literaturstellen. Zitiert wird einerseits KASPAR GEHRING, der bei seiner Kommentierung des lit. c erwähnt, dass aufgrund des klaren Wortlauts der Bestimmung nicht relevant sei, ob die Erwerbsfähigkeit verwertet werde, da von Erwerbsfähigkeit und nicht von Erwerbstätigkeit die Rede sei (GEHRING, a.a.O., N. 7 zu Art. 21 UVG). In seiner generellen Abhandlung zu Heilbehandlungen nach Erreichen des AHV-Rentenalters führt er allerdings in einem gewissen Widerspruch dazu aus, dass Art. 21 Abs. 2 (richtig: Abs. 1) lit. b und c ausdrücklich an die Erwerbstätigkeit anknüpften, weshalb wohl postuliert werden müsse, dass in diesen Fällen mit der definitiven altershalben Aufgabe der Erwerbstätigkeit auch die Leistungspflicht des Unfallversicherers für die Heilbehandlungen ende. Dies führe jedoch zu einer stossenden und falsche Anreize setzenden, ungerechtfertigten Besserstellung von Voll- und Berufskrankheitsrentnern gegenüber Teilrentnern und Verunfallten, die gar keine Rente erhielten (GEHRING, a.a.O., N. 13 zu Art. 21 UVG). Die Beschwerdeführerin macht in diesem Zusammenhang zu Recht darauf aufmerksam, dass der Autor hier die Erwerbstätigkeit aufführt, obwohl der Gesetzestext die Erwerbsfähigkeit als Referenz nennt. ALFRED MAURER nimmt lediglich in einer Fussnote Bezug auf die Problematik. Nach seiner Meinung würde es dem Sinn der Bestimmung entsprechen, dass die Heilbehandlung nicht mehr gewährt werde, sobald der Rentenbezüger altershalber, und nicht weil er voll invalid geworden sei, seine Erwerbstätigkeit aufgebe. Diese Konsequenz scheine jedoch derart unsozial, dass der Gesetzgeber sie kaum gewollt haben könne (MAURER, a.a.O., S. 384 Fn. 962b). Während andere Autorinnen und Autoren das Thema gar nicht behandeln, vertritt ANDRÉ NABOLD die Ansicht, es sei zwar grundsätzlich nicht erforderlich, dass die versicherte Person ihre Erwerbstätigkeit verwerte. Falls sie eine solche jedoch definitiv aufgebe, ende auch der Anspruch nach lit. c. Angenommen werden könne die definitive Aufgabe der Erwerbstätigkeit ab dem Zeitpunkt, in dem die berechtigte Person eine Altersrente der AHV beziehe, spätestens jedoch ab Erreichen des Rentenalters nach der AHV-Gesetzgebung (ANDRÉ NABOLD, in: Basler Kommentar zum Unfallversicherungsgesetz, 2019, N. 16 zu Art. 21 UVG). MATTHIAS HUBER wiederum findet im Rahmen der von ihm vorgenommenen Gesetzesauslegung keine sachdienliche Erklärung für eine Ungleichbehandlung von UVG-Invalidenrentnern ab Eintritt ins AHV-Alter. Eine Privilegierung von Voll- und Berufskrankheitsrentnern innerhalb der sozialen Unfallversicherung erachtet er als stossend, insbesondere für die betroffenen Versicherten und unter Umständen auch für die obligatorische Krankenpflegeversicherung (MATTHIAS HUBER, Ungleichbehandlung von UVG-Invalidenrentnern ab AHV-Alter, in: HAVE 2/2023, S. 1 ff.)."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "In der Literatur bestehen somit kontroverse Auffassungen zur Frage, ob und allenfalls unter welchen Voraussetzungen UV-Teilrentenbeziehende im AHV-Rentenalter Anspruch auf Pflegeleistungen gestützt auf Art. 21 Abs. 1 lit. c UVG haben. Die höchstrichterliche Rechtsprechung hat die Problematik bisher nicht umfassend behandelt. Dies ruft nach einer vertieften Auseinandersetzung mit dem Sinngehalt der Norm."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Ausgangspunkt jeder Auslegung bildet der Wortlaut der Bestimmung. Ist der Text nicht ganz klar und sind verschiedene Interpretationen möglich, so muss nach seiner wahren Tragweite gesucht werden unter Berücksichtigung aller Auslegungselemente. Abzustellen ist dabei namentlich auf die Entstehungsgeschichte der Norm und ihren Zweck, auf die dem Text zu Grunde liegenden Wertungen sowie auf die Bedeutung, die der Norm im Kontext mit anderen Bestimmungen zukommt. Die Gesetzesmaterialien sind zwar nicht unmittelbar entscheidend, dienen aber als Hilfsmittel, um den Sinn der Norm zu erkennen. Das Bundesgericht hat sich bei der Auslegung von Erlassen stets von einem Methodenpluralismus leiten lassen und nur dann allein auf das grammatikalische Element abgestellt, wenn sich daraus zweifelsfrei die sachlich richtige Lösung ergab (BGE 147 V 55 E. 5.1; 145 V 2 E. 4.1; 142 V 442 E. 5.1, je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Gemäss dem in Erwägung 3.3.1 hiervor zitierten Art. 21 Abs. 1 lit. c UVG werden dem Bezüger nach der Festsetzung der Rente die Pflegeleistungen und Kostenvergütungen gewährt, wenn er zur Erhaltung seiner verbleibenden Erwerbsfähigkeit dauernd der Behandlung und Pflege bedarf (frz.: \"lorsqu'il a besoin de manière durable d'un traitement et de soins pour conserver sa capacité résiduelle de gain\"; ital.: \"abbisogna durevolmente di trattamento e cure per mantenere la capacità residua di guadagno\")."
+            },
+            {
+              "marke": "E. 6.1.1",
+              "tiefe": 3,
+              "text": "Der Wortlaut von lit. c stimmt in allen drei Sprachfassungen überein, indem von verbleibender (dt.) oder zurückbleibender (frz./ital.) Erwerbsfähigkeit ausgegangen wird. Art. 21 Abs. 1 lit. c UVG bezieht sich auf Personen, die bereits eine Rente beziehen, aber noch erwerbsfähig sind, also einen Invaliditätsgrad zwischen 10 Prozent und weniger als 100 Prozent (für vollständig Erwerbsunfähige kommt lit. d des Art. 21 Abs. 1 UVG zur Anwendung) aufweisen (BGE 140 V 130 E. 2.3; SVR 2012 UV Nr. 6 S. 21, 8C_191/2011). Gemeint ist mit der verbleibenden Erwerbsfähigkeit folglich eindeutig die Resterwerbsfähigkeit."
+            },
+            {
+              "marke": "E. 6.1.2",
+              "tiefe": 3,
+              "text": "Der in Art. 21 Abs. 1 lit. c UVG zentrale Begriff der Erwerbsfähigkeit wiederum bzw. die Umkehr davon, die Erwerbsunfähigkeit (frz.: incapacité de gain; ital.: incapacità al guadagno), wird in Art. 7 Abs. 1 ATSG definiert: \"Erwerbsunfähigkeit ist der durch Beeinträchtigung der körperlichen, geistigen oder psychischen Gesundheit verursachte und nach zumutbarer Behandlung und Eingliederung verbleibende ganze oder teilweise Verlust der Erwerbsmöglichkeiten auf dem in Betracht kommenden ausgeglichenen Arbeitsmarkt.\""
+            },
+            {
+              "marke": "E. 6.1.3",
+              "tiefe": 3,
+              "text": "Nach dem insoweit klaren Wortlaut des Gesetzes wird keine tatsächliche Umsetzung der Resterwerbsfähigkeit durch die versicherte Person gefordert (vgl. Urteil 8C_50/2018 vom 20. Juli 2018 E. 2.3 mit Verweis auf GEHRING, a.a.O., Rz. 7 zu Art. 21 UVG). Allein mit Blick auf die Formulierung des Art. 21 Abs. 1 lit. c UVG ergibt sich zudem keine Befristung der Sachleistung durch den Eintritt des AHV-Rentenalters. Es lässt sich allerdings nicht von der Hand weisen, dass der in der Bestimmung verwendete Begriff der \"verbleibenden Erwerbsfähigkeit\" einen Bezug zur Erwerbstätigkeit herstellt, die aber - wie gesehen - im konkreten Fall wiederum nicht vorausgesetzt wird. Der Eintritt des AHV-Rentenalters hat keinen Einfluss auf die Erwerbsfähigkeit, auf die Erwerbstätigkeit hingegen schon, da diese in der Regel aufgegeben wird. Auch pensionierte Personen können und dürfen allerdings eine Erwerbstätigkeit ausüben und sie sind diesfalls weiterhin UVG-versichert (vgl. Art. 1a ff. UVG und Art. 22 Abs. 2 lit. a UVV). Das BAG weist zutreffend darauf hin, dass die Anzahl der Erwerbstätigen im Pensionsalter eine nicht zu vernachlässigende Grösse darstellt. Gemäss der Tabelle \"Erwerbsquote und Erwerbsquoten bei Vollzeitäquivalenten (VZÄ) nach Geschlecht, Nationalität und Alter\" des Bundesamtes für Statistik (www.bfs.admin.ch/asset/de/je-d-03.02.01.07.01.01) betrug in den Jahren 2018 bis 2020 die durchschnittliche Erwerbsquote im Alter von 66 Jahren bei Frauen zirka 23 % und bei Männern zirka 31 %, im Alter von 70 Jahren bei Frauen zirka 12 % und bei Männern zirka 21 %, im Alter von 74 Jahren bei Frauen zirka 7 % und bei Männern zirka 14 %. Aus der Statistik geht die Aufgabe der Erwerbstätigkeit im AHV-Rentenalter als Regelfall hervor. Dem Wortlaut des Gesetzes lässt sich nicht entnehmen, dass auf diesen Zeitpunkt hin grundsätzlich auch der Anspruch auf die Sachleistungen enden soll."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Der Gesetzgebungsprozess liefert keine stichhaltigen Hinweise für oder gegen eine entsprechende Befristung dieser Leistungen für Teilrentenbeziehende. Art. 21 Abs. 1 UVG mit den verschiedenen Fallkonstellationen wurde im Bericht der Expertenkommission für die Revision der Unfallversicherung vom 14. September 1973, in der Botschaft zum Bundesgesetz über die Unfallversicherung vom 18. August 1976 (BBl 1976 III 141 ff.) und in den Detailberatungen der national- und ständerätlichen Kommissionen kaum diskutiert. In der Botschaft findet sich zu Art. 21 E-UVG unter dem Titel \"Pflegeleistungen und Kostenvergütungen nach Festsetzung der Rente\" lediglich die Feststellung, dass die Möglichkeit der Gewährung einer notwendigen Heilbehandlung nach der Zusprechung einer Invalidenrente gegenüber dem geltenden Recht erweitert werde; dabei seien die Tatbestände abschliessend umschrieben, die eine Nachbehandlung rechtfertigen würden: Berufskrankheiten, Rückfälle und Spätfolgen, Erhaltung oder Verbesserung der Erwerbsfähigkeit oder Verhinderung einer weiteren Beeinträchtigung des Gesundheitszustandes (BBl 1976 III 191 f.). Zur Situation bei AHV-Rentnern im Speziellen wird in Ziffer 345.2 \"Koordination mit der beruflichen Vorsorge\" vermerkt, Unfallversicherten, die im Alter einen Anspruch der beruflichen Vorsorge erworben hätten, aber nach dem 65. bzw. 62. Altersjahr weiterarbeiten und verunfallen würden, seien die Heilungskosten und allfällige Taggelder zu vergüten, aber es sei nicht mehr zu rechtfertigen, dass sie auch noch Anspruch auf eine Unfallrente hätten (BBl 1976 III 173). Gemäss Protokoll der Kommission des Nationalrates zur Sitzung vom 2./3. November 1977 wird in allgemeiner Weise hervorgehoben, dass Art. 21 E-UVG gegenüber dem geltenden Recht eine Verbesserung für jene Versicherten bringe, die bereits eine Invalidenrente beziehen würden und für die eine weitere Heilbehandlung notwendig sei (Protokoll, S. 35). Ausserdem wird der Unterschied zwischen Art. 21 Abs. 1 lit. b und c UVG diskutiert: Dieser bestehe im Wort \"dauernd\". In lit. b werde angestrebt, durch Heilbehandlungen bei Rückfällen oder Spätfolgen die Erwerbsfähigkeit zu bewahren, in lit. c bedürfe der Leistungsbezüger dauernd der Behandlung und Pflege, um die verbleibende Erwerbsfähigkeit zu erhalten (Protokoll, S. 36). Der (unveränderten) bundesrätlichen Gesetzesvorlage ist schliesslich im Rahmen der parlamentarischen Beratung ohne Wortmeldung zu Art. 21 UVG zugestimmt worden (Amtl. Bull. N 1979 S. 136 ff., 159 ff. [insbesondere. S. 182], 249 ff. und 278 ff.; Amtl. Bull. S. 1980 S. 464 ff. und 493 ff.; Amtl. Bull. N 1981 S. 18 ff., 30 ff. und 429; Amtl. Bull. S 1981 S. 54 f. und 181).\n\nDa unter der Herrschaft des KUVG die Übernahme von Heilbehandlungskosten nach Festsetzung der Rente noch gar nicht vorgesehen war, kann aus der in den Materialien erwähnten Absicht einer Anspruchserweiterung für die Frage, wie es sich mit der Übernahme von Heilungskosten nach Eintritt des AHV-Rentenalters verhalte, nichts abgeleitet werden. Auch die auf über das AHV-Rentenalter hinaus erwerbstätigen und verunfallten Personen fokussierte Bemerkung in der Botschaft zur Koordination mit der beruflichen Vorsorge bei AHV-Rentnern hat keinen Aussagewert für den Anspruch von in der Regel nicht mehr erwerbstätigen Rentenbeziehenden ab Eintritt ins AHV-Rentenalter. Denn hier geht es um den Anspruch auf Heilbehandlung für eine - trotz teilweise erhaltener Erwerbsfähigkeit - nicht mehr erwerbstätige Beschwerdeführerin, die bereits vor dem Eintritt ins AHV-Rentenalter eine Rente der Unfallversicherung bezogen hatte und der daneben auch Heilbehandlungskosten vergütet worden waren."
+            },
+            {
+              "marke": "E. 6.3.1",
+              "tiefe": 3,
+              "text": "Dem Umkehrschluss aus Art. 19 Abs. 1 UVG lässt sich die Regel entnehmen, dass die verunfallte Person Anspruch auf Heilbehandlung im Sinne von Art. 10 UVG hat, solange von der Fortsetzung der ärztlichen Behandlung eine namhafte Besserung des Gesundheitszustands erwartet werden kann; mit dem Fallabschluss fallen die Leistungen in Form von Heilbehandlung und Taggeld dahin und es ist der Rentenanspruch zu prüfen (vgl. E. 3.3.1 hiervor mit Hinweis auf BGE 134 V 109 E. 4.1). Vorbehalten bleiben jedoch die Fälle der Nachbehandlung gemäss Art. 21 UVG. Diese Bestimmung knüpft gesetzessystematisch nahtlos an Art. 19 UVG an (BGE 134 V 109 E. 4.2). Sie regelt die Möglichkeiten der ausnahmsweisen Gewährung einer notwendigen Heilbehandlung nach der Zusprechung einer Invalidenrente und umschreibt dabei die Tatbestände abschliessend, die eine Nachbehandlung rechtfertigen (BGE 140 V 130 E. 2.7 unter Verweis auf die Botschaft, a.a.O., S. 191 f., Ziff. 403.23 zu Art. 21 E-UVG). Im dazwischen liegenden Bereich, wenn also einerseits von der Fortsetzung der ärztlichen Behandlung keine namhafte Besserung im Sinn von Art. 19 Abs. 1 UVG mehr erwartet werden kann und andererseits die Voraussetzungen von Art. 21 Abs. 1 UVG nicht erfüllt sind, hat der Unfallversicherer keine Heilbehandlung mehr zu übernehmen; an seine Stelle tritt der obligatorische Krankenpflegeversicherer (BGE 144 V 418 E. 2.2; 140 V 130 E. 2.2; 134 V 109 E. 4.2)."
+            },
+            {
+              "marke": "E. 6.3.2",
+              "tiefe": 3,
+              "text": "Pflegeleistungen, die zusammen mit der Berentung im Sinne von Art. 21 Abs. 1 lit. c UVG für die Zeit nach Fallabschluss zugesprochen werden, betreffen gemäss BGE 144 V 418 - ungeachtet der konkret in Frage stehenden Leistungsart - ein auf Dauer angelegtes Leistungsverhältnis (vgl. E. 3.3.2 hiervor). Bedeutsam ist in diesem Zusammenhang namentlich, dass Art. 21 Abs. 1 lit. c UVG generell einen zwar behandlungs- bzw. pflegebedürftigen, aber immerhin stationären Gesundheitszustand voraussetzt, war doch im Zeitpunkt der Leistungszusprache prognostisch nicht mehr mit einer namhaften Verbesserung zu rechnen. Denn genau dieser Umstand hatte zuvor Anlass zum Fallabschluss gegeben (BGE 144 V 418 E. 3.3.2 mit Hinweisen; SVR 2019 UV Nr. 43 S. 164, 8C_560/2018 E. 6.1)."
+            },
+            {
+              "marke": "E. 6.3.3",
+              "tiefe": 3,
+              "text": "Zu beachten ist sodann, dass Art. 18 Abs. 1 UVG den Anspruch auf eine Invalidenrente - die wiederum Voraussetzung für die Übernahme von Heilungskosten gestützt auf Art. 21 Abs. 1 UVG bildet - unter anderem davon abhängig macht, dass sich der Unfall vor Erreichen des ordentlichen Rentenalters ereignet hat. Nach Eintritt des ordentlichen Rentenalters wird die Invalidenrente weiterhin ausbezahlt. In Abweichung von Art. 17 Abs. 1 ATSG wird sie zudem durch Art. 22 UVG speziell geschützt, indem sie nach dieser Bestimmung ab dem Monat des AHV-Rentenbezugs, spätestens jedoch ab Erreichen des AHV-Rentenalters, nicht mehr revidiert werden kann. Während die Auswirkungen des AHV-Rentenalters auf die UV-Rente also gesetzlich geregelt sind, finden sich hinsichtlich des Leistungsanspruchs gestützt auf Art. 21 Abs. 1 UVG keine gesetzlichen Vorgaben.\n\nAls Zwischenfazit lässt sich somit festhalten, dass der Wegfall von Pflegeleistungen mit Eintritt des AHV-Rentenalters, wie ihn die Vorinstanz postuliert, zum gesetzlich vorgesehenen Bestandesschutz in Bezug auf die Invalidenrente kontrastieren würde. Sieht das Gesetz bezüglich der UV-Rente ab AHV-Rentenalter eine Beibehaltung der bisherigen Leistungshöhe vor, so liegt es mit anderen Worten aus systematischen Gründen nahe, Gleiches auch für die Heilbehandlungsleistungen anzunehmen, zumal diesbezüglich keine ausdrückliche Befristung statuiert wird."
+            },
+            {
+              "marke": "E. 6.3.4",
+              "tiefe": 3,
+              "text": "Fällt die Invalidenrente revisionsweise weg, so besteht auch kein Anspruch mehr auf Heilbehandlung gemäss Art. 21 Abs. 1 UVG, da diese Bestimmung Rentenbeziehende betrifft. Endet umgekehrt der Anspruch auf Heilbehandlung, so kann eine Rente weiterhin zur Ausrichtung kommen. Die in Art. 21 Abs. 1 lit. a bis d UVG umschriebenen Konstellationen unterscheiden sich folgendermassen: Während bei Rentenbeziehenden, die an einer Berufskrankheit leiden, keine weiteren Voraussetzungen erfüllt sein müssen, um Anspruch auf Pflegeleistungen zu haben (lit. a), wird in lit. b die wesentliche Verbesserung der Erwerbsfähigkeit oder deren Bewahrung vor wesentlicher Beeinträchtigung, in lit. c die Erhaltung der verbleibenden Erwerbsfähigkeit und in lit. d die wesentliche Verbesserung des Gesundheitszustandes oder dessen Bewahrung vor wesentlicher Beeinträchtigung gefordert. Allen Tatbeständen gemeinsam ist, dass - anders als in den vorerwähnten Bestimmungen zum Rentenanspruch (vgl. E. 6.3.3 hiervor) - keine Einschränkung oder gar Befristung im Zusammenhang mit dem Alter festgeschrieben wird. Wie bereits erwähnt, verbleibt einzig aufgrund der Bezugnahme auf die Erhaltung der verbleibenden Erwerbsfähigkeit in lit. c ein Zweifel, ob die teilinvalide Person für den Anspruch auf Pflegeleistungen noch im \"Erwerbsalter\" sein muss.\n\nVon der Systematik her besonders interessant ist der Unterschied in der Regelung für teil- und vollinvalide Rentenbeziehende in Art. 21 Abs. 1 lit. c und d UVG. Die erste Referenzgrösse bezieht sich auf die Erwerbsfähigkeit, die zweite, mangels eines verbliebenen Rests davon (vgl. BGE 140 V 130 E. 2.3), auf den Gesundheitszustand als solchen. Diese Differenz liegt auf den ersten Blick auf der Hand, kann jedoch nicht darüber hinwegtäuschen, dass letztlich auch in lit. c die Erhaltung des Gesundheitszustands zur Erhaltung der verbleibenden Erwerbsfähigkeit führt. Bei vollinvaliden Personen lässt sich als Referenz nur der Gesundheitszustand beiziehen, während sich bei Teilinvaliden die Bezugnahme auf die Erwerbsfähigkeit als massgebende Grösse aufdrängt. Daraus kann nicht schon auf eine beabsichtigte Schlechterstellung der teilinvaliden Rentenbeziehenden im Alter geschlossen werden. Vielmehr weist die systematische Betrachtungsweise darauf hin, dass eine Altersgrenze für rentenbeziehende Personen hinsichtlich Heilbehandlung gestützt auf lit. c wohl - im Sinne der Argumentation der Beschwerdeführerin - nicht existiert. Zumindest bestehen gewisse Anhaltspunkte dafür, dass lit. c und d gleichermassen Sachleistungen garantieren sollen, wenn dadurch der Gesundheitszustand erhalten (lit. c und d) oder verbessert (lit. d) werden kann."
+            },
+            {
+              "marke": "E. 6.3.5",
+              "tiefe": 3,
+              "text": "Sinn und Zweck des Art. 21 Abs. 1 UVG ist die Gewährleistung der Kostenübernahme für Heilbehandlung durch die Unfallversicherung nach Festsetzung der Rente. Diese Kosten stehen in einem Kausalzusammenhang mit einem Unfall oder einer Berufskrankheit, weshalb sie nicht von der Krankenversicherung getragen werden sollen. Die Leistungspflicht ist bei den Berufskrankheiten an keine weiteren Voraussetzungen gebunden (lit. a), während bei den übrigen Konstellationen (lit. b bis d) entweder die Erwerbsfähigkeit oder der Gesundheitszustand massgebende Bezugsgrössen sind. Art. 21 Abs. 1 lit. c UVG im Speziellen ist auf die Erhaltung der verbleibenden Erwerbsfähigkeit ausgerichtet. Es kann nicht mit letzter Sicherheit beantwortet werden, ob die unterschiedlichen Referenzgrössen bei teil- und vollinvaliden Rentenbeziehenden (Erwerbsfähigkeit und Gesundheitszustand) eine unterschiedliche Behandlung im AHV-Rentenalter bezwecken sollen. Klar ist, dass die Erwerbsfähigkeit allein durch den Eintritt ins AHV-Rentenalter nicht endet. Die vom BAG erwähnte Statistik zu Erwerbstätigkeit und Pensionierung zeigt zudem, dass eine nicht vernachlässigbare Anzahl von Personen über das Rentenalter hinaus erwerbstätig bleibt, wobei die Tendenz im Steigen begriffen ist. Mit den statistischen Zahlen wird zudem die ohnehin notorische Tatsache untermauert, dass Personen in den Jahren unmittelbar vor oder spätestens mit Eintritt ins Rentenalter ihre Erwerbstätigkeit im Regelfall beenden. Die (erwerbliche) Eingliederungswirksamkeit im Sinne der erwähnten höchstrichterlichen Urteile fällt bei der überwiegenden Mehrheit der eine Teilrente der Unfallversicherung beziehenden Personen mit dem Eintritt ins AHV-Rentenalter somit weg. Dies spricht für eine Befristung des Anspruchs auf Heilbehandlung im Alter. Ausgenommen davon wären nur die Konstellationen, in denen eine Erwerbstätigkeit beibehalten wird oder davon ausgegangen werden darf, dass eine solche im Gesundheitsfall über das AHV-Rentenalter hinaus ausgeübt worden wäre. Diese Betrachtungsweise schafft allerdings einen Widerspruch zum Umstand, dass nach bisheriger Erkenntnis eine tatsächliche Erwerbstätigkeit nicht gefordert wurde. Begründen liesse sich ein Wegfall des Anspruchs im Alter nur mit der Statistik, indem eine Erwerbstätigkeit bis zum Eintritt des Rentenalters im Regelfall vermutet werden kann, während danach im Gegenteil in der Regel die Aufgabe der Erwerbstätigkeit anzunehmen ist. Ob dies als Revisionsgrund zur Ablehnung einer künftigen Leistungspflicht nach Eintritt des AHV-Rentenalters ausreicht (vgl. E. 3.3.2 hiervor), kann an dieser Stelle offenbleiben. Denn einerseits bleibt es schwierig nachzuvollziehen, weshalb Teilrentenbeziehende ihre Resterwerbsfähigkeit nicht umsetzen müssen, um Anspruch auf die Übernahme von Heilbehandlungskosten zu haben, während Personen im AHV-Rentenalter quasi den Tatbeweis für die erwerbliche Eingliederungswirksamkeit zu erbringen hätten. Diese Ungleichbehandlung könnte nur beseitigt werden, indem bei allen Teilrentenbeziehenden, altersunabhängig, eine erwerbliche Eingliederungswirksamkeit in dem Sinne gefordert würde, dass sie einer Erwerbstätigkeit nachgehen müssen, um Anspruch auf Pflegeleistungen und Kostenvergütungen nach lit. c zu haben. Insoweit besteht aber - wie erwähnt - Einigkeit, dass lit. c dies nicht voraussetzt (Urteil 8C_50/2018 vom 20. Juli 2018 E. 2.3; vgl. E. 6.1.3 hiervor).\n\nGegen eine Befristung spricht aber vor allem der Vergleich von voll- und teilinvaliden Rentenbeziehenden. Es ist offensichtlich, aus welchen Gründen Art. 21 Abs. 1 lit. d UVG bei vollinvaliden Personen den Gesundheitszustand und nicht die Erwerbsfähigkeit als Referenzgrösse nennt. Bei teilinvaliden Personen bildet hingegen die Erhaltung der verbleibenden Erwerbsfähigkeit ein naheliegender, praktikabler Richtwert, obwohl vorstellbar gewesen wäre, auch hier auf den Gesundheitszustand abzustellen. Über die Gründe, die letztlich den Ausschlag für die Erhaltung der verbleibenden Erwerbsfähigkeit gegeben haben, kann nur spekuliert werden. Immerhin erscheint es eher unwahrscheinlich, dass der Gesetzgeber mittels der getroffenen Unterscheidung eine Begrenzung des Anspruchs auf Heilbehandlung für teilinvalide Personen im Alter bezwecken wollte. Denn bei vollinvaliden Rentenbeziehenden werden Heilungskosten gemäss den in lit. d eindeutig formulierten Voraussetzungen altersunabhängig durch die Unfallversicherung getragen. Vor diesem Hintergrund erschliesst sich der Sinn einer Abwälzung der Heilbehandlungskosten auf die Krankenversicherung bei teilinvaliden Rentenbeziehenden ab Eintritt ins AHV-Rentenalter (oder ab hypothetisch erst zu einem späteren Zeitpunkt aufgegebener Erwerbstätigkeit) nicht."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Zusammenfassend sprechen der Wortlaut der Bestimmung, deren Entstehungsgeschichte, der Kontext der Norm, die teleologische Betrachtungsweise und im Rahmen der letzteren zwei Auslegungselemente insbesondere die Gleichbehandlung von voll- und teilinvaliden Rentenbeziehenden überwiegend gegen eine altersmässige Befristung der Leistungen für teilinvalide Rentenbeziehende gestützt auf Art. 21 Abs. 1 lit. c UVG."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Da somit insgesamt aus Art. 21 Abs. 1 lit. c UVG keine Leistungsbefristung auf den Eintritt ins AHV-Rentenalter oder allenfalls auf das erst auf einen späteren Zeitpunkt hin angenommene Ende der Erwerbstätigkeit abgeleitet werden kann, besteht auch im vorliegenden Fall kein Grund für eine revisionsweise Aberkennung des Anspruchs auf Sachleistungen. Die Beschwerdegegnerin ist wie bisher und bis auf Weiteres zur Kostenübernahme für eine Langzeit-Physiotherapie im Umfang von einer Sitzung pro Woche verpflichtet. In Gutheissung der Beschwerde sind somit das angefochtene Urteil und der Einspracheentscheid aufzuheben."
+            },
+            {
+              "marke": "E. 8",
+              "tiefe": 1,
+              "text": "Die unterliegende Beschwerdegegnerin hat die Gerichtskosten zu tragen (Art. 66 Abs. 1 BGG) und der Beschwerdeführerin eine Parteientschädigung auszurichten (Art. 68 Abs. 1 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen. Das Urteil des Sozialversicherungsgerichts des Kantons Zürich vom 25. August 2022 und der Einspracheentscheid der AXA Versicherungen AG vom 11. Dezember 2020 werden aufgehoben. Die Beschwerdegegnerin hat der Beschwerdeführerin über den 31. Mai 2020 hinaus Pflegeleistungen und Kostenvergütungen zu gewähren."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 800.- werden der Beschwerdegegnerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdegegnerin hat die Beschwerdeführerin für das bundesgerichtliche Verfahren mit Fr. 2'800.- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Die Sache wird zur Neuverlegung der Parteientschädigung des vorangegangenen Verfahrens an das Sozialversicherungsgericht des Kantons Zürich zurückgewiesen."
+            },
+            {
+              "marke": "5.",
+              "text": "Dieses Urteil wird den Parteien, dem Sozialversicherungsgericht des Kantons Zürich und dem Bundesamt für Gesundheit schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 21. September 2023\n\nIm Namen der IV. öffentlich-rechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDer Präsident: Wirthlin\n\nDie Gerichtsschreiberin: Berger Götz"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen. Das Urteil des Sozialversicherungsgerichts des Kantons Zürich vom 25. August 2022 und der Einspracheentscheid der AXA Versicherungen AG vom 11. Dezember 2020 werden aufgehoben. Die Beschwerdegegnerin hat der Beschwerdeführerin über den 31. Mai 2020 hinaus Pflegeleistungen und Kostenvergütungen zu gewähren.",
+        "Die Gerichtskosten von Fr. 800.- werden der Beschwerdegegnerin auferlegt.",
+        "Die Beschwerdegegnerin hat die Beschwerdeführerin für das bundesgerichtliche Verfahren mit Fr. 2'800.- zu entschädigen.",
+        "Die Sache wird zur Neuverlegung der Parteientschädigung des vorangegangenen Verfahrens an das Sozialversicherungsgericht des Kantons Zürich zurückgewiesen.",
+        "Dieses Urteil wird den Parteien, dem Sozialversicherungsgericht des Kantons Zürich und dem Bundesamt für Gesundheit schriftlich mitgeteilt.\n\nLuzern, 21. September 2023"
+      ],
+      "zitierteNormen": [
+        "Art. 10 UVG",
+        "Art. 118 Abs. 1 UVG",
+        "Art. 15 UVV",
+        "Art. 17 Abs. 1 ATSG",
+        "Art. 17 Abs. 2 ATSG",
+        "Art. 17 Abs. 2 LPGA",
+        "Art. 18 Abs. 1 UVG",
+        "Art. 19 Abs. 1 UVG"
+      ],
+      "normKeys": [
+        "UVG",
+        "ATSG",
+        "BGG"
+      ],
+      "zitierteEntscheide": [
+        "8C_1011/2010",
+        "8C_191/2011",
+        "8C_50/2018",
+        "8C_518/2016",
+        "8C_560/2018",
+        "8C_620/2022",
+        "8C_655/2018",
+        "BGE 116 V 41",
+        "BGE 124 V 52",
+        "BGE 134 V 109",
+        "BGE 135 V 412",
+        "BGE 140 V 130",
+        "BGE 143 V 148",
+        "BGE 143 V 285",
+        "BGE 144 V 418",
+        "BGE 147 V 55",
+        "BGE 148 V 209",
+        "UV.2021.00013"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=&to_date=&from_year=2023&to_year=2023&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=46&highlight_docid=atf%3A%2F%2F149-V-224%3Ade&number_of_ranks=189&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "fa6f521cde55f87388f11ba2d2ee4d382e4843bdfe385ca8a3b3e82f643d314a",
+      "sha": "09f168cedaf178ef26e9df6546d5eefa25e522ae44a2278a0076615f8c1a154b",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Die 1956 geborene A. war seit 1. Oktober 2000 als Pflegehelferin für das Pflegeheim B. tätig und dadurch bei der AXA Versicherungen AG (nachfolgend: AXA) gegen die Folgen von Unfällen und Berufskrankheiten versichert. Am 29. Juli 2010 zog sie sich beim Sturz auf einer Traminsel eine Deckplattenimpressionsfraktur des Lendenwirbelkörpers (LWK) 2 zu. Die AXA erbrachte die gesetzlichen Leistungen (Taggeld, Übernahme von Heilbehandlungskosten). Mit Verfügung vom 10. Oktober 2014 stellte sie die vorübergehenden Leistungen per 31. Dezember 2013 ein und sprach A. mit Wirkung ab 1. Januar 2014 eine Invalidenrente, basierend auf einem Invaliditätsgrad von 41 %, sowie eine Integritätsentschädigung, gestützt auf eine Integritätseinbusse von 5 % zu. Ausserdem bestätigte sie bis auf Weiteres die Kostenübernahme für eine Langzeit-Physiotherapie im Umfang von einer Sitzung pro Woche zum Erhalt der verbleibenden Teilarbeitsfähigkeit."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Mit Verfügung vom 11. Februar 2020 stellte die AXA die Pflegeleistungen und Kostenvergütungen per 31. Mai 2020 ein mit der Begründung, A. werde am 13. Mai 2020 das 64. Altersjahr und damit das ordentliche Rentenalter erreichen. Daran hielt sie auf Einsprache hin fest (Einspracheentscheid vom 11. Dezember 2020). B. Das Sozialversicherungsgericht des Kantons Zürich wies die dagegen erhobene Beschwerde ab (Urteil vom 25. August 2022). C. A. lässt Beschwerde in öffentlich-rechtlichen Angelegenheiten führen und beantragen, in Aufhebung des sozialversicherungsgerichtlichen Urteils sei die AXA zu verpflichten, auch nach Erreichen des AHV-Rücktrittsalters die gesetzlichen Leistungen in Form von Heilbehandlungskosten zu bezahlen. Das kantonale Gericht verzichtet auf eine Vernehmlassung. Die AXA schliesst auf Abweisung der Beschwerde, während das Bundesamt für Gesundheit (BAG) in seiner Stellungnahme auf eine Antragstellung verzichtet. Der Rechtsvertreter von A. geht in seiner Eingabe vom 11. Mai 2023 auf die letztinstanzlich vorgebrachten Argumente der Gegenpartei und des BAG ein. Die AXA hält am 25. Mai 2023 an ihrem Abweisungsantrag fest."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Streitig und zu prüfen ist, ob das kantonale Gericht Bundesrecht verletzte, indem es die von der Beschwerdegegnerin auf den Eintritt der Beschwerdeführerin ins AHV-Rentenalter hin verfügte und mit Einspracheentscheid bestätigte Einstellung der Kostenübernahme für Heilbehandlungen schützte. BGE 149 V 224 S. 226"
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Auf den 1. Januar 2017 sind die mit Bundesgesetz vom 25. September 2015 revidierten Bestimmungen des UVG (AS 2016 4375; BBl 2008 5395, 2014 7911) und der UVV (AS 2016 4393) in Kraft getreten. Versicherungsleistungen für Unfälle, die sich vor deren Inkrafttreten ereignet haben, und für Berufskrankheiten, die vor diesem Zeitpunkt ausgebrochen sind, werden nach bisherigem Recht gewährt (vgl. Übergangsbestimmung in Art. 118 Abs. 1 UVG; BGE 143 V 285 E. 2.1). So verhält es sich auch hier, wie die Vorinstanz richtig erkannt hat. Deshalb wird nachfolgend auf das bisherige Recht und die dazu ergangene Rechtsprechung Bezug genommen."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht hat die massgeblichen Bestimmungen zum Anspruch auf die zweckmässige Behandlung der Unfallfolgen (Heilbehandlung; Art. 10 Abs. 1 und 3 UVG in Verbindung mit Art. 15 UVV) zutreffend dargelegt. Darauf wird verwiesen."
+            },
+            {
+              "marke": "E. 3.3.1",
+              "tiefe": 3,
+              "text": "Hervorzuheben ist, dass die verunfallte Person grundsätzlich nur Anspruch auf Heilbehandlung hat, solange von der Fortsetzung der ärztlichen Behandlung eine namhafte Besserung des Gesundheitszustands erwartet werden kann; mit dem Fallabschluss fallen die vorübergehenden Leistungen in Form von Heilbehandlung und Taggeld dahin und es ist der Rentenanspruch zu prüfen (vgl. Art. 19 Abs. 1 UVG; BGE 134 V 109 E. 4.1). Ausnahmsweise werden die Kosten für Heilbehandlung nach der Rentenfestsetzung weiterhin übernommen. Der im Wortlaut wiedergegebene Art. 21 Abs. 1 UVG regelt diese Konstellationen abschliessend: \"Nach der Festsetzung der Rente werden dem Bezüger Pflegeleistungen und Kostenvergütungen (Art. 10-13 UVG) gewährt, wenn er: a. an einer Berufskrankheit leidet; b. unter einem Rückfall oder an Spätfolgen leidet und die Erwerbsfähigkeit durch medizinische Vorkehren wesentlich verbessert oder vor wesentlicher Beeinträchtigung bewahrt werden kann; c. zur Erhaltung seiner verbleibenden Erwerbsfähigkeit dauernd der Behandlung und Pflege bedarf; d. erwerbsunfähig ist und sein Gesundheitszustand durch medizinische Vorkehren wesentlich verbessert oder vor wesentlicher Beeinträchtigung bewahrt werden kann.\""
+            },
+            {
+              "marke": "E. 3.3.2",
+              "tiefe": 3,
+              "text": "Die hier im Fokus stehende (vgl. nachfolgende E. 4) Heilbehandlung nach Art. 21 Abs. 1 lit. c UVG gilt als Dauerleistung. Ihre BGE 149 V 224 S. 227 nachträgliche Aufhebung oder eine wesentliche Anpassung im Leistungsumfang setzt einen Revisionsgrund im Sinne von Art. 17 Abs. 2 ATSG voraus (BGE 144 V 418)."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin leidet nicht an einer Berufskrankheit, womit Art. 21 Abs. 1 lit. a UVG als Anspruchsgrundlage ausser Betracht fällt. Es sind keine Rückfall- oder Spätfolgen zu beurteilen, weshalb auch Art. 21 Abs. 1 lit. b UVG nicht zur Debatte steht. Sodann steht fest, dass die Beschwerdeführerin bei einem Invaliditätsgrad von 41 % nicht als erwerbsunfähig im Sinne von Art. 21 Abs. 1 lit. d UVG zu qualifizieren ist (vgl. BGE 124 V 52 E. 4), weshalb seitens der Beschwerdegegnerin und der Vorinstanz geprüft wurde, ob weiterhin ein Anspruch auf Heilbehandlung gestützt auf Art. 21 Abs. 1 lit. c UVG gegeben ist. In tatsächlicher Hinsicht ist zu beachten, dass die Beschwerdeführerin schon vor Eintritt des AHV-Rentenalters nicht mehr erwerbstätig war und es war zudem stets unbestritten, dass sie nach Eintritt des AHV-Rentenalters auch im Gesundheitsfall keiner Erwerbstätigkeit mehr nachgegangen wäre."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht lehnt einen Anspruch von teilinvaliden Rentenbeziehenden auf Pflegeleistungen und Kostenvergütungen gestützt auf Art. 21 Abs. 1 lit. c UVG für die Zeit nach der ordentlichen Pensionierung ab mit der Begründung, das Gesetz setze für die Gewährung von Heilbehandlung eine erwerbliche Eingliederungswirksamkeit voraus. Der Wortlaut der anzuwendenden Gesetzesbestimmung bzw. die Formulierung \"Erhaltung seiner verbleibenden Erwerbsfähigkeit\" sei auslegungsbedürftig. Vor dem Altersrücktritt werde eine konkrete Erwerbstätigkeit zwar nicht gefordert, sondern es genüge eine hypothetisch noch vorhandene Arbeitsfähigkeit, die es zu erhalten gelte. Massgebend sei, dass die Erwerbsfähigkeit hypothetisch umgesetzt werden könnte. Davon sei ab dem Zeitpunkt des Erreichens des AHV-Rentenalters nicht mehr auszugehen. Es bestehe eine Verknüpfung des Anspruchs auf Leistungen nach Art. 21 Abs. 1 lit. c UVG mit der Erwerbsfähigkeit bzw. rechtsprechungsgemäss mit der Dauer der erwerblichen Aktivität. Die durchgeführten Behandlungen würden nach Erreichen des Altersrücktritts - mit Ausnahme einer konkret noch im Erwerbsleben stehenden Person - in erster Linie einer Stabilisierung oder Verbesserung des Gesundheitszustandes dienen und könnten sich infolge der ausgerichteten Altersrente nicht mehr auf eine notwendige Erwerbsarbeit, sondern lediglich noch im sozialen Bereich auswirken. Die verbleibende Erwerbsfähigkeit führe somit ab Erreichen des ordentlichen BGE 149 V 224 S. 228 Rentenalters nicht mehr zu einer Erwerbstätigkeit. So verhalte es sich auch vorliegend, ausser die Beschwerdeführerin würde trotz Erreichens des Rentenalters noch einer Erwerbstätigkeit nachgehen. Dies sei jedoch weder geltend gemacht worden noch aus den Akten ersichtlich. Deshalb habe die Beschwerdegegnerin vorliegend die Pflegeleistungen und Kostenvergütungen zu Recht per 31. Mai 2020 eingestellt."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin wendet ein, die Vorinstanz schiebe die in Art. 21 Abs. 1 lit. c UVG nicht erwähnte Eingliederungswirksamkeit vor, um die \"Unklarheit\" des Wortlautes der Bestimmung zu begründen. Der Wortlaut knüpfe aber vielmehr am Begriff der \"Erwerbsfähigkeit\" an, der nichts darüber aussage, ob die medizinisch-theoretischen Erwerbsmöglichkeiten in tatsächlicher Hinsicht umgesetzt würden oder in zeitlicher Hinsicht begrenzt seien. Die Auslegung der Vorinstanz stehe dem Wortlaut der Bestimmung entgegen. Das AHV-Rücktrittsalter als Anknüpfungspunkt sei auch insofern fragwürdig, als der Eintritt ins Rentenalter keinen Einfluss auf die Ausübung einer Erwerbstätigkeit habe. Art. 21 UVG spreche sich nicht explizit für eine Befristung aus. Unter anderem weil eine entsprechende Regelung in einem formellen Gesetz fehle, sei die vorinstanzliche Bestätigung der Leistungseinstellung unhaltbar."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Die Beschwerdegegnerin geht davon aus, dass die in Art. 21 Abs. 1 lit. c UVG verwendeten Begriffe \"Erwerbsfähigkeit\", \"dauernd\" und \"Behandlung und Pflege\" nicht abschliessend klar seien, weshalb das kantonale Gericht zu Recht eine Auslegung vorgenommen habe. Die Bestimmung fokussiere immerhin unzweideutig auf die Erhaltung der Erwerbsfähigkeit. Es dürfe generell vermutet werden, dass jede Möglichkeit einer Erhaltung der verbleibenden Erwerbsfähigkeit durch das Erreichen des Pensionsalters wegfalle. Die Beschwerdeführerin habe nicht vorgebracht, dass es sich bei ihr konkret anders verhalte. Die durch die Beschwerdeführerin vorgebrachten Hinweise hätten weder einzeln noch in ihrer Gesamtheit zur Folge, dass verunfallte teilinvalide Personen über das Pensionsalter hinaus in den Genuss von Leistungen nach Art. 21 Abs. 1 lit. c UVG kommen sollten. Sinn und Zweck der Bestimmung würden gebieten, von einem auf die Dauer der erwerblichen Aktivität beschränkten Anspruch auszugehen."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Demgegenüber spricht nach Auffassung des BAG nichts für eine Befristung der Kostentragung für Heilbehandlungen gemäss Art. 21 Abs. 1 lit. c UVG auf das Erreichen des Pensionsalters hin. Der BGE 149 V 224 S. 229 argumentative Sprung des kantonalen Gerichts von der gesetzlich geforderten Erwerbsfähigkeit, bei der es auch vor der Pension keine Rolle für die Anspruchsberechtigung spiele, ob oder in welchem Ausmass sie realisiert werde, zum Erfordernis der \"Eingliederungswirksamkeit\" mit Eintritt des AHV-Alters entbehre jeglicher Grundlage."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Das Bundesgericht hat sich bisher mit der Frage, ob die von der Unfallversicherung gestützt auf Art. 21 Abs. 1 lit. c UVG zu erbringenden Leistungen je nach Alter der rentenbeziehenden Person begrenzt sind, nur am Rand befasst. Im vom kantonalen Gericht zitierten BGE 116 V 41 wird - ohne Bezugnahme auf das AHV-Rentenalter - festgehalten, dass gemäss Art. 21 Abs. 1 UVG der an einer Berufskrankheit leidende Rentner den Heilbehandlungsanspruch voraussetzungslos habe (lit. a), während die übrigen Tatbestände in unterschiedlichem Masse eine erwerbliche (lit. b und c) oder gesundheitliche (lit. d) Eingliederungswirksamkeit voraussetzen würden (BGE 116 V 41 E. 3b). Diese \"Eingliederungswirksamkeit\" wird in den nachfolgenden Urteilen - soweit ersichtlich ohne weitere Auseinandersetzung mit dem Thema - verschiedentlich aufgenommen, so unter anderem auch im Urteil 8C_1011/2010 vom 19. Mai 2011. Der dortige Beschwerdeführer brachte vor, dass die durchgeführten Behandlungen nachgewiesenermassen zu einer Stabilisierung oder gar Verbesserung des Gesundheitszustandes, insbesondere der Schmerzen, führen und damit auch die Leistungsfähigkeit beeinflussen würden. Das Bundesgericht hielt dazu fest, es möge zutreffen, dass sich die medizinischen Massnahmen im sozialen Bereich eingliederungswirksam auswirkten; dies reiche für eine Leistungspflicht unter dem Titel von Art. 21 Abs. 1 lit. c UVG indessen nicht aus (Urteil 8C_ 1011/2010 vom 19. Mai 2011 E. 5.5). In BGE 144 V 418 wird unter Hinweis auf KASPAR GEHRING (in: Kommentar KVG/UVG, 2018, N. 7 zu Art. 21 UVG) sowie ALFRED MAURER (Schweizerisches Unfallversicherungsrecht, 1985, S. 384 Fn. 962b) angegeben, das in lit. c angestrebte Ziel (Erhalt der Erwerbsfähigkeit) spreche dafür, dass dieser Anspruch auf die Dauer der erwerblichen Aktivität beschränkt bleibe. Aus der \"Verknüpfung mit der Erwerbsfähigkeit bzw. mit der Dauer der erwerblichen Aktivität\" lasse sich jedoch nicht schliessen, es gehe im Rahmen dieser Bestimmung nicht um Dauerleistungen, umso weniger als die Versicherung der Erwerbsfähigkeit gemäss UVG unter Umständen auch über das ordentliche BGE 149 V 224 S. 230 Rentenalter hinaus andauern könne (BGE 144 V 418 E. 3.3.2). Da es sich konkret nicht um den Anspruch auf Pflegeleistungen einer rentenbeziehenden Person im AHV-Rentenalter handelte, erübrigten sich weitere Ausführungen. Zwar betrifft ein weiteres Urteil 8C_ 518/2016 vom 8. Mai 2017 einen Rentenbezüger im AHV-Rentenalter. Die Ablehnung einer Kostenübernahme für Physiotherapie wird mit der fehlenden Notwendigkeit der Behandlung hinsichtlich des Erhalts der verbliebenen Erwerbsfähigkeit begründet. Welche Rolle der bereits erfolgte Eintritt ins AHV-Rentenalter (auf den im Urteil verwiesen wird) spielt, bleibt unklar (Urteil 8C_518/2016 vom 8. Mai 2017 E. 3.4). Schliesslich lehnte das Bundesgericht im Urteil 8C_655/2018 vom 31. Oktober 2019 (in: SVR 2020 UV Nr. 14 S. 50) einen Anspruch auf Leistungen gestützt auf lit. c ausdrücklich deshalb ab, weil die Versicherte nach dem Unfall keine Erwerbstätigkeit mehr aufgenommen und wenige Monate nach der Zusprechung einer Invalidenrente das AHV-Rentenalter erreicht hatte. Abgesehen von der Feststellung, dass die Erwerbsfähigkeit nach Festsetzung der Invalidenrente unter diesen Umständen mit weiteren ärztlichen Behandlungen nicht hätte erhalten werden können (\"Dans ces conditions, on ne voit pas en quoi le maintien éventuel du traitement médical après la fixation de la rente d'invalidité aurait de nature à conserver sa capacité résiduelle de gain.\"), fehlt jedoch eine weitere Begründung (SVR 2020 UV Nr. 14 S. 50, 8C_655/2018 E. 7.3)."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Wie soeben erwähnt (E. 5.1 hiervor), fusst die hier interessierende (nicht ergebnisrelevante) Aussage in BGE 144 V 418 auf zwei Literaturstellen. Zitiert wird einerseits KASPAR GEHRING, der bei seiner Kommentierung des lit. c erwähnt, dass aufgrund des klaren Wortlauts der Bestimmung nicht relevant sei, ob die Erwerbsfähigkeit verwertet werde, da von Erwerbsfähigkeit und nicht von Erwerbstätigkeit die Rede sei (GEHRING, a.a.O., N. 7 zu Art. 21 UVG). In seiner generellen Abhandlung zu Heilbehandlungen nach Erreichen des AHV-Rentenalters führt er allerdings in einem gewissen Widerspruch dazu aus, dass Art. 21 Abs. 2 (richtig: Abs. 1) lit. b und c ausdrücklich an die Erwerbstätigkeit anknüpften, weshalb wohl postuliert werden müsse, dass in diesen Fällen mit der definitiven altershalben Aufgabe der Erwerbstätigkeit auch die Leistungspflicht des Unfallversicherers für die Heilbehandlungen ende. Dies führe jedoch zu einer stossenden und falsche Anreize setzenden, ungerechtfertigten Besserstellung von Voll- und Berufskrankheitsrentnern gegenüber Teilrentnern und Verunfallten, die gar keine Rente erhielten BGE 149 V 224 S. 231 (GEHRING, a.a.O., N. 13 zu Art. 21 UVG). Die Beschwerdeführerin macht in diesem Zusammenhang zu Recht darauf aufmerksam, dass der Autor hier die Erwerbstätigkeit aufführt, obwohl der Gesetzestext die Erwerbsfähigkeit als Referenz nennt. ALFRED MAURER nimmt lediglich in einer Fussnote Bezug auf die Problematik. Nach seiner Meinung würde es dem Sinn der Bestimmung entsprechen, dass die Heilbehandlung nicht mehr gewährt werde, sobald der Rentenbezüger altershalber, und nicht weil er voll invalid geworden sei, seine Erwerbstätigkeit aufgebe. Diese Konsequenz scheine jedoch derart unsozial, dass der Gesetzgeber sie kaum gewollt haben könne (MAURER, a.a.O., S. 384 Fn. 962b). Während andere Autorinnen und Autoren das Thema gar nicht behandeln, vertritt ANDRÉ NABOLD die Ansicht, es sei zwar grundsätzlich nicht erforderlich, dass die versicherte Person ihre Erwerbstätigkeit verwerte. Falls sie eine solche jedoch definitiv aufgebe, ende auch der Anspruch nach lit. c. Angenommen werden könne die definitive Aufgabe der Erwerbstätigkeit ab dem Zeitpunkt, in dem die berechtigte Person eine Altersrente der AHV beziehe, spätestens jedoch ab Erreichen des Rentenalters nach der AHV-Gesetzgebung (ANDRÉ NABOLD, in: Basler Kommentar, Unfallversicherungsgesetz, 2019, N. 16 zu Art. 21 UVG). MATTHIAS HUBER wiederum findet im Rahmen der von ihm vorgenommenen Gesetzesauslegung keine sachdienliche Erklärung für eine Ungleichbehandlung von UVG-Invalidenrentnern ab Eintritt ins AHV-Alter. Eine Privilegierung von Voll- und Berufskrankheitsrentnern innerhalb der sozialen Unfallversicherung erachtet er als stossend, insbesondere für die betroffenen Versicherten und unter Umständen auch für die obligatorische Krankenpflegeversicherung (MATTHIAS HUBER, Ungleichbehandlung von UVG-Invalidenrentnern ab AHV-Alter, HAVE 2/2023 S. 1 ff.)."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "In der Literatur bestehen somit kontroverse Auffassungen zur Frage, ob und allenfalls unter welchen Voraussetzungen UV-Teilrentenbeziehende im AHV-Rentenalter Anspruch auf Pflegeleistungen gestützt auf Art. 21 Abs. 1 lit. c UVG haben. Die höchstrichterliche Rechtsprechung hat die Problematik bisher nicht umfassend behandelt. Dies ruft nach einer vertieften Auseinandersetzung mit dem Sinngehalt der Norm."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Ausgangspunkt jeder Auslegung bildet der Wortlaut der Bestimmung. Ist der Text nicht ganz klar und sind verschiedene Interpretationen möglich, so muss nach seiner wahren Tragweite gesucht werden unter Berücksichtigung aller Auslegungselemente. BGE 149 V 224 S. 232 Abzustellen ist dabei namentlich auf die Entstehungsgeschichte der Norm und ihren Zweck, auf die dem Text zu Grunde liegenden Wertungen sowie auf die Bedeutung, die der Norm im Kontext mit anderen Bestimmungen zukommt. Die Gesetzesmaterialien sind zwar nicht unmittelbar entscheidend, dienen aber als Hilfsmittel, um den Sinn der Norm zu erkennen. Das Bundesgericht hat sich bei der Auslegung von Erlassen stets von einem Methodenpluralismus leiten lassen und nur dann allein auf das grammatikalische Element abgestellt, wenn sich daraus zweifelsfrei die sachlich richtige Lösung ergab (BGE 147 V 55 E. 5.1; BGE 145 V 2 E. 4.1; BGE 142 V 442 E. 5.1; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Gemäss dem in Erwägung 3.3.1 hiervor zitierten Art. 21 Abs. 1 lit. c UVG werden dem Bezüger nach der Festsetzung der Rente die Pflegeleistungen und Kostenvergütungen gewährt, wenn er zur Erhaltung seiner verbleibenden Erwerbsfähigkeit dauernd der Behandlung und Pflege bedarf (frz.: \"lorsqu'il a besoin de manière durable d'un traitement et de soins pour conserver sa capacité résiduelle de gain\"; ital.: \"abbisogna durevolmente di trattamento e cure per mantenere la capacità residua di guadagno\")."
+            },
+            {
+              "marke": "E. 6.1.1",
+              "tiefe": 3,
+              "text": "Der Wortlaut von lit. c stimmt in allen drei Sprachfassungen überein, indem von verbleibender (dt.) oder zurückbleibender (frz./ital.) Erwerbsfähigkeit ausgegangen wird. Art. 21 Abs. 1 lit. c UVG bezieht sich auf Personen, die bereits eine Rente beziehen, aber noch erwerbsfähig sind, also einen Invaliditätsgrad zwischen 10 Prozent und weniger als 100 Prozent (für vollständig Erwerbsunfähige kommt lit. d des Art. 21 Abs. 1 UVG zur Anwendung) aufweisen (BGE 140 V 130 E. 2.3; SVR 2012 UV Nr. 6 S. 21, 8C_191/2011). Gemeint ist mit der verbleibenden Erwerbsfähigkeit folglich eindeutig die Resterwerbsfähigkeit."
+            },
+            {
+              "marke": "E. 6.1.2",
+              "tiefe": 3,
+              "text": "Der in Art. 21 Abs. 1 lit. c UVG zentrale Begriff der Erwerbsfähigkeit wiederum bzw. die Umkehr davon, die Erwerbsunfähigkeit (frz.: \"incapacité de gain\"; ital.: \"incapacità al guadagno\"), wird in Art. 7 Abs. 1 ATSG definiert: \"Erwerbsunfähigkeit ist der durch Beeinträchtigung der körperlichen, geistigen oder psychischen Gesundheit verursachte und nach zumutbarer Behandlung und Eingliederung verbleibende ganze oder teilweise Verlust der Erwerbsmöglichkeiten auf dem in Betracht kommenden ausgeglichenen Arbeitsmarkt.\""
+            },
+            {
+              "marke": "E. 6.1.3",
+              "tiefe": 3,
+              "text": "Nach dem insoweit klaren Wortlaut des Gesetzes wird keine tatsächliche Umsetzung der Resterwerbsfähigkeit durch die versicherte Person gefordert (vgl. Urteil 8C_50/2018 vom 20. Juli 2018 BGE 149 V 224 S. 233 E. 2.3 mit Verweis auf GEHRING, a.a.O., N. 7 zu Art. 21 UVG). Allein mit Blick auf die Formulierung des Art. 21 Abs. 1 lit. c UVG ergibt sich zudem keine Befristung der Sachleistung durch den Eintritt des AHV-Rentenalters. Es lässt sich allerdings nicht von der Hand weisen, dass der in der Bestimmung verwendete Begriff der \"verbleibenden Erwerbsfähigkeit\" einen Bezug zur Erwerbstätigkeit herstellt, die aber - wie gesehen - im konkreten Fall wiederum nicht vorausgesetzt wird. Der Eintritt des AHV-Rentenalters hat keinen Einfluss auf die Erwerbsfähigkeit, auf die Erwerbstätigkeit hingegen schon, da diese in der Regel aufgegeben wird. Auch pensionierte Personen können und dürfen allerdings eine Erwerbstätigkeit ausüben und sie sind diesfalls weiterhin UVG-versichert (vgl. Art. 1a ff. UVG und Art. 22 Abs. 2 lit. a UVV). Das BAG weist zutreffend darauf hin, dass die Anzahl der Erwerbstätigen im Pensionsalter eine nicht zu vernachlässigende Grösse darstellt. Gemäss der Tabelle \"Erwerbsquote und Erwerbsquoten bei Vollzeitäquivalenten (VZÄ) nach Geschlecht, Nationalität und Alter\" des Bundesamtes für Statistik (www.bfs.admin.ch /asset/de/je-d-03.02.01.07.01.01) betrug in den Jahren 2018 bis 2020 die durchschnittliche Erwerbsquote im Alter von 66 Jahren bei Frauen zirka 23 % und bei Männern zirka 31 %, im Alter von 70 Jahren bei Frauen zirka 12 % und bei Männern zirka 21 %, im Alter von 74 Jahren bei Frauen zirka 7 % und bei Männern zirka 14 %. Aus der Statistik geht die Aufgabe der Erwerbstätigkeit im AHV-Rentenalter als Regelfall hervor. Dem Wortlaut des Gesetzes lässt sich nicht entnehmen, dass auf diesen Zeitpunkt hin grundsätzlich auch der Anspruch auf die Sachleistungen enden soll."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Der Gesetzgebungsprozess liefert keine stichhaltigen Hinweise für oder gegen eine entsprechende Befristung dieser Leistungen für Teilrentenbeziehende. Art. 21 Abs. 1 UVG mit den verschiedenen Fallkonstellationen wurde im Bericht der Expertenkommission vom 14. September 1973 für die Revision der Unfallversicherung, in der Botschaft vom 18. August 1976 zum Bundesgesetz über die Unfallversicherung (BBl 1976 III 141 ff.) und in den Detailberatungen der national- und ständerätlichen Kommissionen kaum diskutiert. In der Botschaft findet sich zu Art. 21 E-UVG unter dem Titel \"Pflegeleistungen und Kostenvergütungen nach Festsetzung der Rente\" lediglich die Feststellung, dass die Möglichkeit der Gewährung einer notwendigen Heilbehandlung nach der Zusprechung einer Invalidenrente gegenüber dem geltenden Recht erweitert werde; dabei seien die Tatbestände abschliessend umschrieben, die eine Nachbehandlung BGE 149 V 224 S. 234 rechtfertigen würden: Berufskrankheiten, Rückfälle und Spätfolgen, Erhaltung oder Verbesserung der Erwerbsfähigkeit oder Verhinderung einer weiteren Beeinträchtigung des Gesundheitszustandes (BBl 1976 III 191 f.). Zur Situation bei AHV-Rentnern im Speziellen wird in Ziffer 345.2 \"Koordination mit der beruflichen Vorsorge\" vermerkt, Unfallversicherten, die im Alter einen Anspruch der beruflichen Vorsorge erworben hätten, aber nach dem 65. bzw. 62. Altersjahr weiterarbeiten und verunfallen würden, seien die Heilungskosten und allfällige Taggelder zu vergüten, aber es sei nicht mehr zu rechtfertigen, dass sie auch noch Anspruch auf eine Unfallrente hätten (BBl 1976 III 173). Gemäss Protokoll der Kommission des Nationalrates zur Sitzung vom 2./3. November 1977 wird in allgemeiner Weise hervorgehoben, dass Art. 21 E-UVG gegenüber dem geltenden Recht eine Verbesserung für jene Versicherten bringe, die bereits eine Invalidenrente beziehen würden und für die eine weitere Heilbehandlung notwendig sei (Protokoll, S. 35). Ausserdem wird der Unterschied zwischen Art. 21 Abs. 1 lit. b und c UVG diskutiert: Dieser bestehe im Wort \"dauernd\". In lit. b werde angestrebt, durch Heilbehandlungen bei Rückfällen oder Spätfolgen die Erwerbsfähigkeit zu bewahren, in lit. c bedürfe der Leistungsbezüger dauernd der Behandlung und Pflege, um die verbleibende Erwerbsfähigkeit zu erhalten (Protokoll, S. 36). Der (unveränderten) bundesrätlichen Gesetzesvorlage ist schliesslich im Rahmen der parlamentarischen Beratung ohne Wortmeldung zu Art. 21 UVG zugestimmt worden (AB 1979 N 136 ff., 159 ff. [insbesondere 182], 249 ff. und 278 ff.; AB 1980 S 464 ff. und 493 ff.; AB 1981 N 18 ff., 30 ff. und 429; AB 1981 S 54 f. und 181). Da unter der Herrschaft des KUVG die Übernahme von Heilbehandlungskosten nach Festsetzung der Rente noch gar nicht vorgesehen war, kann aus der in den Materialien erwähnten Absicht einer Anspruchserweiterung für die Frage, wie es sich mit der Übernahme von Heilungskosten nach Eintritt des AHV-Rentenalters verhalte, nichts abgeleitet werden. Auch die auf über das AHV-Rentenalter hinaus erwerbstätigen und verunfallten Personen fokussierte Bemerkung in der Botschaft zur Koordination mit der beruflichen Vorsorge bei AHV-Rentnern hat keinen Aussagewert für den Anspruch von in der Regel nicht mehr erwerbstätigen Rentenbeziehenden ab Eintritt ins AHV-Rentenalter. Denn hier geht es um den Anspruch auf Heilbehandlung für eine - trotz teilweise erhaltener Erwerbsfähigkeit - nicht mehr erwerbstätige Beschwerdeführerin, die bereits BGE 149 V 224 S. 235 vor dem Eintritt ins AHV-Rentenalter eine Rente der Unfallversicherung bezogen hatte und der daneben auch Heilbehandlungskosten vergütet worden waren."
+            },
+            {
+              "marke": "E. 6.3.1",
+              "tiefe": 3,
+              "text": "Dem Umkehrschluss aus Art. 19 Abs. 1 UVG lässt sich die Regel entnehmen, dass die verunfallte Person Anspruch auf Heilbehandlung im Sinne von Art. 10 UVG hat, solange von der Fortsetzung der ärztlichen Behandlung eine namhafte Besserung des Gesundheitszustands erwartet werden kann; mit dem Fallabschluss fallen die Leistungen in Form von Heilbehandlung und Taggeld dahin und es ist der Rentenanspruch zu prüfen (vgl. E. 3.3.1 hiervor mit Hinweis auf BGE 134 V 109 E. 4.1). Vorbehalten bleiben jedoch die Fälle der Nachbehandlung gemäss Art. 21 UVG. Diese Bestimmung knüpft gesetzessystematisch nahtlos an Art. 19 UVG an (BGE 134 V 109 E. 4.2). Sie regelt die Möglichkeiten der ausnahmsweisen Gewährung einer notwendigen Heilbehandlung nach der Zusprechung einer Invalidenrente und umschreibt dabei die Tatbestände abschliessend, die eine Nachbehandlung rechtfertigen (BGE 140 V 130 E. 2.7 unter Verweis auf die Botschaft, a.a.O., 191 f. Ziff. 403.23 zu Art. 21 E-UVG). Im dazwischen liegenden Bereich, wenn also einerseits von der Fortsetzung der ärztlichen Behandlung keine namhafte Besserung im Sinn von Art. 19 Abs. 1 UVG mehr erwartet werden kann und andererseits die Voraussetzungen von Art. 21 Abs. 1 UVG nicht erfüllt sind, hat der Unfallversicherer keine Heilbehandlung mehr zu übernehmen; an seine Stelle tritt der obligatorische Krankenpflegeversicherer (BGE 144 V 418 E. 2.2; BGE 140 V 130 E. 2.2; BGE 134 V 109 E. 4.2)."
+            },
+            {
+              "marke": "E. 6.3.2",
+              "tiefe": 3,
+              "text": "Pflegeleistungen, die zusammen mit der Berentung im Sinne von Art. 21 Abs. 1 lit. c UVG für die Zeit nach Fallabschluss zugesprochen werden, betreffen gemäss BGE 144 V 418 - ungeachtet der konkret in Frage stehenden Leistungsart - ein auf Dauer angelegtes Leistungsverhältnis (vgl. E. 3.3.2 hiervor). Bedeutsam ist in diesem Zusammenhang namentlich, dass Art. 21 Abs. 1 lit. c UVG generell einen zwar behandlungs- bzw. pflegebedürftigen, aber immerhin stationären Gesundheitszustand voraussetzt, war doch im Zeitpunkt der Leistungszusprache prognostisch nicht mehr mit einer namhaften Verbesserung zu rechnen. Denn genau dieser Umstand hatte zuvor Anlass zum Fallabschluss gegeben (BGE 144 V 418 E. 3.3.2 mit Hinweisen; SVR 2019 UV Nr. 43 S. 164, 8C_ 560/2018 E. 6.1). BGE 149 V 224 S. 236"
+            },
+            {
+              "marke": "E. 6.3.3",
+              "tiefe": 3,
+              "text": "Zu beachten ist sodann, dass Art. 18 Abs. 1 UVG den Anspruch auf eine Invalidenrente - die wiederum Voraussetzung für die Übernahme von Heilungskosten gestützt auf Art. 21 Abs. 1 UVG bildet - unter anderem davon abhängig macht, dass sich der Unfall vor Erreichen des ordentlichen Rentenalters ereignet hat. Nach Eintritt des ordentlichen Rentenalters wird die Invalidenrente weiterhin ausbezahlt. In Abweichung von Art. 17 Abs. 1 ATSG wird sie zudem durch Art. 22 UVG speziell geschützt, indem sie nach dieser Bestimmung ab dem Monat des AHV-Rentenbezugs, spätestens jedoch ab Erreichen des AHV-Rentenalters, nicht mehr revidiert werden kann. Während die Auswirkungen des AHV-Rentenalters auf die UV-Rente also gesetzlich geregelt sind, finden sich hinsichtlich des Leistungsanspruchs gestützt auf Art. 21 Abs. 1 UVG keine gesetzlichen Vorgaben. Als Zwischenfazit lässt sich somit festhalten, dass der Wegfall von Pflegeleistungen mit Eintritt des AHV-Rentenalters, wie ihn die Vorinstanz postuliert, zum gesetzlich vorgesehenen Bestandesschutz in Bezug auf die Invalidenrente kontrastieren würde. Sieht das Gesetz bezüglich der UV-Rente ab AHV-Rentenalter eine Beibehaltung der bisherigen Leistungshöhe vor, so liegt es mit anderen Worten aus systematischen Gründen nahe, Gleiches auch für die Heilbehandlungsleistungen anzunehmen, zumal diesbezüglich keine ausdrückliche Befristung statuiert wird."
+            },
+            {
+              "marke": "E. 6.3.4",
+              "tiefe": 3,
+              "text": "Fällt die Invalidenrente revisionsweise weg, so besteht auch kein Anspruch mehr auf Heilbehandlung gemäss Art. 21 Abs. 1 UVG, da diese Bestimmung Rentenbeziehende betrifft. Endet umgekehrt der Anspruch auf Heilbehandlung, so kann eine Rente weiterhin zur Ausrichtung kommen. Die in Art. 21 Abs. 1 lit. a bis d UVG umschriebenen Konstellationen unterscheiden sich folgendermassen: Während bei Rentenbeziehenden, die an einer Berufskrankheit leiden, keine weiteren Voraussetzungen erfüllt sein müssen, um Anspruch auf Pflegeleistungen zu haben (lit. a), wird in lit. b die wesentliche Verbesserung der Erwerbsfähigkeit oder deren Bewahrung vor wesentlicher Beeinträchtigung, in lit. c die Erhaltung der verbleibenden Erwerbsfähigkeit und in lit. d die wesentliche Verbesserung des Gesundheitszustandes oder dessen Bewahrung vor wesentlicher Beeinträchtigung gefordert. Allen Tatbeständen gemeinsam ist, dass - anders als in den vorerwähnten Bestimmungen zum Rentenanspruch (vgl. E. 6.3.3 hiervor) - keine Einschränkung oder gar BGE 149 V 224 S. 237 Befristung im Zusammenhang mit dem Alter festgeschrieben wird. Wie bereits erwähnt, verbleibt einzig aufgrund der Bezugnahme auf die Erhaltung der verbleibenden Erwerbsfähigkeit in lit. c ein Zweifel, ob die teilinvalide Person für den Anspruch auf Pflegeleistungen noch im \"Erwerbsalter\" sein muss. Von der Systematik her besonders interessant ist der Unterschied in der Regelung für teil- und vollinvalide Rentenbeziehende in Art. 21 Abs. 1 lit. c und d UVG. Die erste Referenzgrösse bezieht sich auf die Erwerbsfähigkeit, die zweite, mangels eines verbliebenen Rests davon (vgl. BGE 140 V 130 E. 2.3), auf den Gesundheitszustand als solchen. Diese Differenz liegt auf den ersten Blick auf der Hand, kann jedoch nicht darüber hinwegtäuschen, dass letztlich auch in lit. c die Erhaltung des Gesundheitszustands zur Erhaltung der verbleibenden Erwerbsfähigkeit führt. Bei vollinvaliden Personen lässt sich als Referenz nur der Gesundheitszustand beiziehen, während sich bei Teilinvaliden die Bezugnahme auf die Erwerbsfähigkeit als massgebende Grösse aufdrängt. Daraus kann nicht schon auf eine beabsichtigte Schlechterstellung der teilinvaliden Rentenbeziehenden im Alter geschlossen werden. Vielmehr weist die systematische Betrachtungsweise darauf hin, dass eine Altersgrenze für rentenbeziehende Personen hinsichtlich Heilbehandlung gestützt auf lit. c wohl - im Sinne der Argumentation der Beschwerdeführerin - nicht existiert. Zumindest bestehen gewisse Anhaltspunkte dafür, dass lit. c und d gleichermassen Sachleistungen garantieren sollen, wenn dadurch der Gesundheitszustand erhalten (lit. c und d) oder verbessert (lit. d) werden kann."
+            },
+            {
+              "marke": "E. 6.3.5",
+              "tiefe": 3,
+              "text": "Sinn und Zweck des Art. 21 Abs. 1 UVG ist die Gewährleistung der Kostenübernahme für Heilbehandlung durch die Unfallversicherung nach Festsetzung der Rente. Diese Kosten stehen in einem Kausalzusammenhang mit einem Unfall oder einer Berufskrankheit, weshalb sie nicht von der Krankenversicherung getragen werden sollen. Die Leistungspflicht ist bei den Berufskrankheiten an keine weiteren Voraussetzungen gebunden (lit. a), während bei den übrigen Konstellationen (lit. b bis d) entweder die Erwerbsfähigkeit oder der Gesundheitszustand massgebende Bezugsgrössen sind. Art. 21 Abs. 1 lit. c UVG im Speziellen ist auf die Erhaltung der verbleibenden Erwerbsfähigkeit ausgerichtet. Es kann nicht mit letzter Sicherheit beantwortet werden, ob die unterschiedlichen Referenzgrössen bei teil- und vollinvaliden Rentenbeziehenden BGE 149 V 224 S. 238 (Erwerbsfähigkeit und Gesundheitszustand) eine unterschiedliche Behandlung im AHV-Rentenalter bezwecken sollen. Klar ist, dass die Erwerbsfähigkeit allein durch den Eintritt ins AHV-Rentenalter nicht endet. Die vom BAG erwähnte Statistik zu Erwerbstätigkeit und Pensionierung zeigt zudem, dass eine nicht vernachlässigbare Anzahl von Personen über das Rentenalter hinaus erwerbstätig bleibt, wobei die Tendenz im Steigen begriffen ist. Mit den statistischen Zahlen wird zudem die ohnehin notorische Tatsache untermauert, dass Personen in den Jahren unmittelbar vor oder spätestens mit Eintritt ins Rentenalter ihre Erwerbstätigkeit im Regelfall beenden. Die (erwerbliche) Eingliederungswirksamkeit im Sinne der erwähnten höchstrichterlichen Urteile fällt bei der überwiegenden Mehrheit der eine Teilrente der Unfallversicherung beziehenden Personen mit dem Eintritt ins AHV-Rentenalter somit weg. Dies spricht für eine Befristung des Anspruchs auf Heilbehandlung im Alter. Ausgenommen davon wären nur die Konstellationen, in denen eine Erwerbstätigkeit beibehalten wird oder davon ausgegangen werden darf, dass eine solche im Gesundheitsfall über das AHV-Rentenalter hinaus ausgeübt worden wäre. Diese Betrachtungsweise schafft allerdings einen Widerspruch zum Umstand, dass nach bisheriger Erkenntnis eine tatsächliche Erwerbstätigkeit nicht gefordert wurde. Begründen liesse sich ein Wegfall des Anspruchs im Alter nur mit der Statistik, indem eine Erwerbstätigkeit bis zum Eintritt des Rentenalters im Regelfall vermutet werden kann, während danach im Gegenteil in der Regel die Aufgabe der Erwerbstätigkeit anzunehmen ist. Ob dies als Revisionsgrund zur Ablehnung einer künftigen Leistungspflicht nach Eintritt des AHV-Rentenalters ausreicht (vgl. E. 3.3.2 hiervor), kann an dieser Stelle offenbleiben. Denn einerseits bleibt es schwierig nachzuvollziehen, weshalb Teilrentenbeziehende ihre Resterwerbsfähigkeit nicht umsetzen müssen, um Anspruch auf die Übernahme von Heilbehandlungskosten zu haben, während Personen im AHV-Rentenalter quasi den Tatbeweis für die erwerbliche Eingliederungswirksamkeit zu erbringen hätten. Diese Ungleichbehandlung könnte nur beseitigt werden, indem bei allen Teilrentenbeziehenden, altersunabhängig, eine erwerbliche Eingliederungswirksamkeit in dem Sinne gefordert würde, dass sie einer Erwerbstätigkeit nachgehen müssen, um Anspruch auf Pflegeleistungen und Kostenvergütungen nach lit. c zu haben. Insoweit besteht aber - wie erwähnt - Einigkeit, dass lit. c dies nicht voraussetzt (Urteil 8C_50/2018 vom 20. Juli 2018 E. 2.3; vgl. E. 6.1.3 hiervor). BGE 149 V 224 S. 239 Gegen eine Befristung spricht aber vor allem der Vergleich von voll- und teilinvaliden Rentenbeziehenden. Es ist offensichtlich, aus welchen Gründen Art. 21 Abs. 1 lit. d UVG bei vollinvaliden Personen den Gesundheitszustand und nicht die Erwerbsfähigkeit als Referenzgrösse nennt. Bei teilinvaliden Personen bildet hingegen die Erhaltung der verbleibenden Erwerbsfähigkeit ein naheliegender, praktikabler Richtwert, obwohl vorstellbar gewesen wäre, auch hier auf den Gesundheitszustand abzustellen. Über die Gründe, die letztlich den Ausschlag für die Erhaltung der verbleibenden Erwerbsfähigkeit gegeben haben, kann nur spekuliert werden. Immerhin erscheint es eher unwahrscheinlich, dass der Gesetzgeber mittels der getroffenen Unterscheidung eine Begrenzung des Anspruchs auf Heilbehandlung für teilinvalide Personen im Alter bezwecken wollte. Denn bei vollinvaliden Rentenbeziehenden werden Heilungskosten gemäss den in lit. d eindeutig formulierten Voraussetzungen altersunabhängig durch die Unfallversicherung getragen. Vor diesem Hintergrund erschliesst sich der Sinn einer Abwälzung der Heilbehandlungskosten auf die Krankenversicherung bei teilinvaliden Rentenbeziehenden ab Eintritt ins AHV-Rentenalter (oder ab hypothetisch erst zu einem späteren Zeitpunkt aufgegebener Erwerbstätigkeit) nicht."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Zusammenfassend sprechen der Wortlaut der Bestimmung, deren Entstehungsgeschichte, der Kontext der Norm, die teleologische Betrachtungsweise und im Rahmen der letzteren zwei Auslegungselemente insbesondere die Gleichbehandlung von voll- und teilinvaliden Rentenbeziehenden überwiegend gegen eine altersmässige Befristung der Leistungen für teilinvalide Rentenbeziehende gestützt auf Art. 21 Abs. 1 lit. c UVG."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Da somit insgesamt aus Art. 21 Abs. 1 lit. c UVG keine Leistungsbefristung auf den Eintritt ins AHV-Rentenalter oder allenfalls auf das erst auf einen späteren Zeitpunkt hin angenommene Ende der Erwerbstätigkeit abgeleitet werden kann, besteht auch im vorliegenden Fall kein Grund für eine revisionsweise Aberkennung des Anspruchs auf Sachleistungen. Die Beschwerdegegnerin ist wie bisher und bis auf Weiteres zur Kostenübernahme für eine Langzeit-Physiotherapie im Umfang von einer Sitzung pro Woche verpflichtet. In Gutheissung der Beschwerde sind somit das angefochtene Urteil und der Einspracheentscheid aufzuheben."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "8C_620/2022",
+        "key": "bger_8C_620_2022",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=21.09.2023_8C_620/2022"
+      },
+      "ecli": "ECLI:CH:BGE:2023:149.V.224"
+    }
+  ]
+}

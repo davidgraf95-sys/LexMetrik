@@ -1,0 +1,391 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/149_III_61",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "149 III 61",
+      "bgeReferenz": "149 III 61",
+      "zitierung": "BGE 149 III 61",
+      "datum": "2023-03-06",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": "civil",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Jametti, Präsidentin, Bundesrichterinnen Hohl, Kiss, Bundesrichter Rüedi, Bundesrichterin May Canellas, Gerichtsschreiber Stähle",
+        "parteien": "1. A.________ AG, 2. B.________ LDA, beide vertreten durch Advokaten Dr. Christian Oetiker und Prabhjot K. Singh, Beschwerdeführerinnen, gegen 1. C1.________ AG, 2. C2.________, 3. C3.________ BV, alle drei vertreten durch Rechtsanwalt Dr. Franz X. Stirnimann, Rechtsanwältin Xenia Rivkin, Beschwerdegegnerinnen",
+        "gegenstand": "Vertragsauslegung; Umrechnungszeitpunkt bei Verrechnung mit Fremdwährungsforderungen",
+        "vorinstanz": "Kantonsgerichts Basel-Landschaft, Abteilung Zivilrecht, vom 14. Dezember 2021 (400 21 103 [B 36])"
+      },
+      "regeste": {
+        "text": "Art. 120 und 124 Abs. 2 OR; Verrechnung von Forderungen unterschiedlicher Währung; Umrechnungszeitpunkt; Rückwirkungsprinzip. Bei Verrechnung von Forderungen unterschiedlicher Währung ist für die Währungsumrechnung vorbehältlich abweichender Parteivereinbarung auf jenen Zeitpunkt abzustellen, in dem die Forderungen zur Verrechnung geeignet einander gegenüberstanden (E. 7).\nRegeste\n Art. 120 et 124 al. 2 CO; compensation entre créances de monnaies différentes; moment de la conversion; principe de la rétroactivité. Lorsque des créances de monnaies différentes sont compensées, la conversion monétaire s'effectue, sauf convention contraire des parties, au moment où elles deviennent compensables (consid. 7).\nRegesto\n Art. 120 e 124 cpv. 2 CO; compensazione di crediti con valute diverse; momento della conversione; principio della retroattività. Nel caso di una compensazione di crediti in valute differenti il momento determinante per la conversione è, riservata una diversa convenzione fra le parti, quello in cui i crediti sono diventati a vicenda compensabili (consid. 7).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 120 und 124 Abs. 2 OR; Verrechnung von Forderungen unterschiedlicher Währung; Umrechnungszeitpunkt; Rückwirkungsprinzip.",
+            "absaetze": [
+              "Bei Verrechnung von Forderungen unterschiedlicher Währung ist für die Währungsumrechnung vorbehältlich abweichender Parteivereinbarung auf jenen Zeitpunkt abzustellen, in dem die Forderungen zur Verrechnung geeignet einander gegenüberstanden (E. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-61%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 120 et 124 al. 2 CO; compensation entre créances de monnaies différentes; moment de la conversion; principe de la rétroactivité.",
+            "absaetze": [
+              "Lorsque des créances de monnaies différentes sont compensées, la conversion monétaire s'effectue, sauf convention contraire des parties, au moment où elles deviennent compensables (consid. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-61%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 120 e 124 cpv. 2 CO; compensazione di crediti con valute diverse; momento della conversione; principio della retroattività.",
+            "absaetze": [
+              "Nel caso di una compensazione di crediti in valute differenti il momento determinante per la conversione è, riservata una diversa convenzione fra le parti, quello in cui i crediti sono diventati a vicenda compensabili (consid. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-61%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Im Rahmen der Transaktion \"Asset Purchase Agreement\" (\"APA\") kaufte die A.________ AG (Klägerin 1, Beschwerdeführerin 1) am 29. Mai 2009 eine Produktionsanlage für chemische Wirkstoffe (\"Active Pharmaceutical Ingredients\"; kurz \"API\") in U.________ von der C4.________ AG. Letztere ist nicht Partei des vorliegenden Verfahrens. Dabei übernahm die Klägerin 1 insgesamt 101 der 104 beschäftigten Mitarbeiter der C4.________ AG. Parallel dazu schlossen die Klägerin 1 und die B.________ LDA (Klägerin 2, Beschwerdeführerin 2) einerseits und die C2.________ (Beklagte 2, Beschwerdegegnerin 2) und die C5.________ Limited, die heute Teil der C1.________ AG (Beklagte 1, Beschwerdegegnerin 1) ist, andererseits das \"Contract Manufacturing Agreement\" (\"CMA\"). Damit verpflichtete sich die Klägerin 1, die Produktionsanlage in U.________ nach der Übernahme während 21 Monaten unverändert weiter zu betreiben und eine vereinbarte Menge an API über die Klägerin 2 als Wiederverkäuferin an die Beklagten zu verkaufen. Im Gegenzug sicherten die Beklagten der Klägerin 2 garantierte jährliche Mindestzahlungen (\"Annual Guaranteed Payments\"; kurz \"AGP\") zu. Die im Rahmen dieser Gesamttransaktion geschlossenen Verträge, das APA und das CMA, wurden am 29. Mai 2009 unterzeichnet und traten am 1. Juli 2009 in Kraft. Ende März 2011, das heisst 21 Monate später, lief das CMA aus."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "B.a. Mit Klage vom 10. April 2012 beim damaligen Bezirksgericht Liestal (heute Zivilkreisgericht Basel-Landschaft Ost) gegen die Beklagten 1 und 2 sowie die C3.________ BV (Beklagte 3) stellten die Klägerinnen folgende Rechtsbegehren: \"1. Es seien die Beklagten solidarisch zu verpflichten, der Klägerin 2 CHF 7'062'126.93 zuzüglich Zins von CHF 401'075.82 für die Periode bis zum 31. März 2012 und von 5% p.a. auf CHF 7'062'126.93 ab dem 1. April 2012 zu bezahlen; Mehrforderungen vorbehalten. 2. Es seien die Beklagten solidarisch zu verpflichten, der Klägerin 1 CHF 2'530'144.63 zuzüglich Zins zu 5% p.a. seit dem 1. April 2011 zu bezahlen; Mehrforderungen vorbehalten.\" Die Forderung gemäss Rechtsbegehren 1 stützte die Klägerin 2 im Wesentlichen auf die Behauptung, die Beklagten hätten zu Unrecht eine Kürzung der AGP vorgenommen und müssten ihr den zurückbehaltenen Teil in Höhe von Fr. 6'514'660.92 bezahlen. Darüber hinaus verlangte die Klägerin 2 mit Rechtsbegehren 1 Fr. 547'466.01, weil die Beklagten bei Verrechnungen falsche Umrechnungskurse zum Nachteil der Klägerin 2 angewendet hätten. Mit Rechtsbegehren 2 verlangte die Klägerin 1 von den Beklagten unter Hinweis auf ihren Inventarbestand nach Ablauf des CMA am 1. April 2011 die Zahlung von Fr. 2'530'144.63 für Rohstoffe, die im Hinblick auf die Herstellung der vereinbarten API-Mengen eingekauft, jedoch aufgrund der geringeren Produktionskapazität des Werkes bis zum Ablauf des CMA nicht verarbeitet worden seien. Die Rohstoffe seien für die Klägerin 1 infolge Nichtfortführung des CMA unnütz geworden, was zu einem Schaden in besagter Höhe geführt habe und dem Verhalten der Beklagten zuzurechnen sei. Im Bestreitungsfalle könne der Inventarbestand per 1. April 2011 durch Expertise oder einer mit einem Augenschein verbundenen Bestandesaufnahme festgestellt werden. B.b. Die Beklagten beantragten in ihrer Klageantwort die Abweisung der Klage sowie Nichteintreten auf die prozessualen Begehren betreffend Gutachten und Augenschein. Ausserdem erhoben sie Widerklage und begehrten, die Klägerinnen seien solidarisch zu verpflichten, der Beklagten 2 Fr. 3'013'650.-- zuzüglich Zins zu 5 % p.a. ab dem 28. Dezember 2010 zu bezahlen; Mehrforderung vorbehalten (Ziffer 3). Sodann seien die Klägerinnen solidarisch zu verpflichten, der Beklagten 3 Fr. 767'461.-- zuzüglich Zins zu 5 % p.a. ab dem 29. November 2011 zu bezahlen; Mehrforderung vorbehalten (Ziffer 4). Eventualiter zu Ziffer 3 und 4 beantragten sie, die Klägerinnen zu verpflichten, der Beklagten 3 Fr. 2'061'470.-- zuzüglich Zins zu 5 % p.a. ab dem 13. Mai 2011 zu bezahlen; Mehrforderung vorbehalten (Ziffer 5). Ferner verlangten sie die solidarische Verpflichtung der Klägerinnen, der Beklagten 3 Fr. 78'454.82 zuzüglich Zins zu 5 % p.a. ab dem 24. Mai 2011 zu bezahlen. Die Klägerinnen trugen auf Abweisung der Widerklage an. B.c. Das Zivilkreisgericht ordnete unter anderem eine Expertise an zu den Themenkreisen der Produktion in der Produktionsanlage U.________ und zum Inventarbestand per 1. April 2011. Mit Urteil vom 12. August 2020 wies es die Klagen ab (Dispositiv-Ziffer 1). Es hiess die Widerklage teilweise gut und verpflichtete die Klägerinnen in solidarischer Verbindung, den Beklagten Fr. 78'454.82 zuzüglich Zins zu 5 % ab dem 24. Mai 2011 zu bezahlen. Im Übrigen wies es die Widerklagen ab, soweit es darauf eintrat (Dispositiv-Ziffer 2). Sodann legte es die Gutachterkosten auf Fr. 217'500.-- zuzüglich 7,7 % MWST, insgesamt auf Fr. 234'247.50 fest (Dispositiv-Ziffer 3). Die Gerichtskosten auferlegte es zu 72 % den Klägerinnen und zu 28 % den Beklagten. Letztere erhielten eine Parteientschädigung von insgesamt Fr. 532'576.30 zulasten der Klägerinnen zugesprochen (Dispositiv-Ziffer 4). B.d. Gegen dieses Urteil erhoben sowohl die Klägerinnen als auch die Beklagte 2 Berufung an das Kantonsgericht Basel-Landschaft. Ferner legte der Gutachter Beschwerde betreffend die Höhe des Gutachterhonorars ein. Das Kantonsgericht eröffnete drei Verfahren: - Im Verfahren Nr. 400 21 103 stellten die Klägerinnen im Wesentlichen die Anträge, ihre Klagen seien vollumfänglich gutzuheissen und die Widerklagen seien vollumfänglich abzuweisen. Weitere Anträge betrafen die Gutachterkosten und die erstinstanzlichen Prozesskosten. - Im Verfahren Nr. 400 21 105 beantragte die Beklagte 2, die Widerklage sei gutzuheissen und die Klägerinnen seien solidarisch zu verpflichten, der Beklagten 2 EUR 2'396'846.25 zuzüglich Zins zu 5 % p.a. ab dem 28. Oktober 2010 [recte 28.12.2010] zu bezahlen. - Das Verfahren Nr. 410 21 92 betraf die Beschwerde des Gutachters Dr. D.________ gegen die Höhe seines Honorars. Das Kantonsgericht führte die Urteilsberatung über alle drei Rechtsmittel gemeinsam am 13. und 14. Dezember 2021 durch. In der Folge verfasste es für die beiden Berufungen zwar eine einheitliche Entscheidbegründung, erliess aber zwei Berufungsentscheide, die sich im Rubrum und im Entscheiddispositiv unterscheiden. Im Verfahren Nr. 400 21 103 (Berufung der Klägerinnen) lautet das Dispositiv des Entscheids vom 14. Dezember 2021 wie folgt: \"1. Die Berufung wird abgewiesen. 2. Auf die Anträge des Gutachters Dr. D.________ wird nicht eingetreten. 3. Die Gerichtskosten dieses Berufungsverfahrens von CHF 130'000.00 werden den Berufungsklägerinnen in solidarischer Verbindung auferlegt. [....] 4. Die Berufungsklägerinnen haben den Berufungsbeklagten für dieses Berufungsverfahren in solidarischer Verbindung eine Parteientschädigung von CHF 223'219.45 zu bezahlen.\" Das Kantonsgericht kam nach eingehender Prüfung der klägerischen Vorbringen zum Schluss, dass sämtliche Rügen der Klägerinnen unbegründet seien, weshalb das Zivilkreisgericht ihre Klagebegehren zu Recht abgewiesen habe. B.e. Mit separaten Entscheiden wies das Kantonsgericht im Verfahren Nr. 400 21 105 die Berufung der Beklagten 2 ab, hiess hingegen im Verfahren Nr. 410 21 92 die Beschwerde des Experten teilweise gut und legte das Gutachterhonorar inklusive MWSt auf Fr. 281'087.-- fest (Änderung von Dispositiv-Ziffer 3 des erstinstanzlichen Urteils)."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Die Klägerinnen beantragen dem Bundesgericht mit Beschwerde in Zivilsachen, den Entscheid des Kantonsgerichts vom 14. Dezember 2021 (400 21 103) aufzuheben und die Klage der Klägerin 2 (Rechtsbegehren 1 und 3 der Klage vom 10. April 2012) vollumfänglich gutzuheissen. Die erst- und zweitinstanzlichen Gerichtskosten (inklusive Gutachterkosten) seien im Umfang von mindestens 73 % den Beklagten aufzuerlegen. Diese hätten in solidarischer Verbindung den Klägerinnen eine angemessene Parteientschädigung für das erst- und zweitinstanzliche Verfahren zu bezahlen. Eventualiter sei die Sache zur Neubeurteilung an das Kantonsgericht, subeventualiter an das Zivilkreisgericht zurückzuweisen. Die Beschwerdegegnerinnen beantragen, die Beschwerde abzuweisen, soweit darauf einzutreten sei. Das Kantonsgericht erachtet die Beschwerde der Klägerinnen als vollumfänglich unbegründet und beantragt deren Abweisung, soweit auf die vorgebrachten Rügen überhaupt eingetreten werden könne. Die Parteien replizierten beziehungsweise duplizierten. Mit Präsidialverfügung vom 12. Oktober 2022 wurde der Beschwerde mit Blick auf den Sitz der Beschwerdegegnerin 2 in V.________ aufschiebende Wirkung erteilt."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerinnen beantragen, den Entscheid des Kantonsgerichts Basel-Landschaft vom 14. Dezember 2021 (400 21 103) aufzuheben. Gegen dessen Dispositiv-Ziffer 2 (Abweisung der Anträge des Gutachters) bringen sie nichts vor, weshalb diesbezüglich mangels Begründung auf die Beschwerde nicht einzutreten ist.\n\nIm Übrigen sind die Sachurteilsvoraussetzungen erfüllt und geben zu keinen Bemerkungen Anlass. Auf die Beschwerde ist einzutreten, allerdings unter Vorbehalt rechtsgenüglicher Begründung (Art. 42 Abs. 2 und Art. 106 Abs. 2 BGG), an der es über weite Strecken mangelt (dazu Erwägung 3.4)."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Es handelt sich um ein internationales Verhältnis. Die Parteien haben in Ziff. 14 CMA als Gerichtsstand das Bezirksgericht Liestal und die Anwendbarkeit von Schweizer Recht vereinbart. Demgemäss sind Zuständigkeit und anwendbares Recht unbestritten, und es erübrigen sich diesbezügliche Ausführungen."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Mit Beschwerde in Zivilsachen können Rechtsverletzungen nach Art. 95 und 96 BGG gerügt werden. Die Beschwerde ist hinreichend zu begründen, ansonsten darauf nicht eingetreten werden kann (BGE 140 III 115 E. 2 S. 116; 134 II 244 E. 2.1). In der Beschwerdeschrift ist in gedrängter Form darzulegen, inwiefern der angefochtene Akt Recht verletzt (Art. 42 Abs. 2 BGG). Unerlässlich ist, dass auf die Begründung des angefochtenen Entscheids eingegangen und im Einzelnen aufgezeigt wird, worin eine vom Bundesgericht überprüfbare Rechtsverletzung liegt. Die beschwerdeführende Partei soll in der Beschwerde an das Bundesgericht nicht bloss die Rechtsstandpunkte, die sie im kantonalen Verfahren eingenommen hat, erneut bekräftigen, sondern mit ihrer Kritik an den als rechtsfehlerhaft erachteten Erwägungen der Vorinstanz ansetzen (BGE 140 III 115 E. 2 S. 116, 86 E. 2).\n\nEine qualifizierte Rügepflicht gilt hinsichtlich der Verletzung von Grundrechten und von kantonalem und interkantonalem Recht. Das Bundesgericht prüft eine solche Rüge nur insofern, als sie in der Beschwerde präzise vorgebracht und begründet worden ist (Art. 106 Abs. 2 BGG). Macht die beschwerdeführende Partei beispielsweise eine Verletzung des Willkürverbots (Art. 9 BV) geltend, genügt es nicht, wenn sie einfach behauptet, der angefochtene Entscheid sei willkürlich; sie hat vielmehr im Einzelnen zu zeigen, inwiefern der angefochtene Entscheid offensichtlich unhaltbar ist (BGE 141 III 564 E. 4.1 mit Hinweisen).\n\nDie Begründung hat ferner in der Beschwerdeschrift selbst zu erfolgen und der blosse Verweis auf Ausführungen in anderen Rechtsschriften oder auf die Akten reicht nicht aus (BGE 143 II 283 E. 1.2.3; 140 III 115 E. 2)."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG). Dazu gehören sowohl die Feststellungen über den streitgegenständlichen Lebenssachverhalt als auch jene über den Ablauf des vor- und erstinstanzlichen Verfahrens, also die Feststellungen über den Prozesssachverhalt (BGE 140 III 16 E. 1.3.1 mit Hinweisen). Es kann die Sachverhaltsfeststellung der Vorinstanz nur berichtigen oder ergänzen, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruht; zudem muss die Behebung des Mangels für den Ausgang des Verfahrens entscheidend sein können (Art. 97 Abs. 1 und Art. 105 Abs. 2 BGG). \"Offensichtlich unrichtig\" bedeutet dabei \"willkürlich\" (BGE 140 III 115 E. 2; 135 III 397 E. 1.5). Neue Tatsachen und Beweismittel dürfen nur so weit vorgebracht werden, als erst der Entscheid der Vorinstanz dazu Anlass gibt (Art. 99 Abs. 1 BGG). Für eine Kritik am festgestellten Sachverhalt gilt ebenfalls das strenge Rügeprinzip von Art. 106 Abs. 2 BGG (BGE 140 III 264 E. 2.3 mit Hinweisen). Die Partei, welche die Sachverhaltsfeststellung der Vorinstanz anfechten will, muss klar und substanziiert aufzeigen, inwiefern diese Voraussetzungen erfüllt sein sollen (BGE 140 III 16 E. 1.3.1 mit Hinweisen). Wenn sie den Sachverhalt ergänzen will, hat sie zudem mit präzisen Aktenhinweisen darzulegen, dass sie entsprechende rechtsrelevante Tatsachen und taugliche Beweismittel bereits bei den Vorinstanzen prozesskonform eingebracht hat (BGE 140 III 86 E. 2 S. 90). Genügt die Kritik diesen Anforderungen nicht, können Vorbringen mit Bezug auf einen Sachverhalt, der vom angefochtenen Entscheid abweicht, nicht berücksichtigt werden (BGE 140 III 16 E. 1.3.1)."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Soweit die Parteien die vorinstanzliche Beweiswürdigung kritisieren, ist zu beachten, dass das Bundesgericht in diese nur eingreift, wenn sie willkürlich ist. Willkür liegt nach der Rechtsprechung nicht schon dann vor, wenn eine andere Lösung ebenfalls in Betracht zu ziehen oder gar vorzuziehen wäre, sondern bloss, wenn der angefochtene Entscheid offensichtlich unhaltbar ist, mit der tatsächlichen Situation in klarem Widerspruch steht, eine Norm oder einen unumstrittenen Rechtsgrundsatz krass verletzt oder in stossender Weise dem Gerechtigkeitsgedanken zuwiderläuft (BGE 141 III 564 E. 4.1; 140 III 16 E. 2.1; je mit Hinweisen). Die Beweiswürdigung ist mithin nicht schon dann willkürlich, wenn sie nicht mit der Darstellung der beschwerdeführenden Partei übereinstimmt, sondern bloss, wenn sie offensichtlich unhaltbar ist (BGE 141 III 564 E. 4.1; 135 II 356 E. 4.2.1). Dies ist dann der Fall, wenn das Gericht Sinn und Tragweite eines Beweismittels offensichtlich verkannt, wenn es ohne sachlichen Grund ein wichtiges und entscheidwesentliches Beweismittel unberücksichtigt gelassen oder wenn es auf der Grundlage der festgestellten Tatsachen unhaltbare Schlussfolgerungen gezogen hat (BGE 140 III 264 E. 2.3 S. 266; 137 III 226 E. 4.2 S. 234; 136 III 552 E. 4.2). Inwiefern die Beweiswürdigung willkürlich sein soll, ist in der Beschwerde klar und detailliert aufzuzeigen (BGE 134 II 244 E. 2.2). Namentlich genügt es nicht, einzelne Beweise anzuführen, die anders als im angefochtenen Entscheid gewichtet werden sollen, und dem Bundesgericht in appellatorischer Kritik die eigene Auffassung zu unterbreiten, als ob diesem freie Sachverhaltsprüfung zukäme (vgl. BGE 140 III 264 E. 2.3)."
+            },
+            {
+              "marke": "E. 3.4",
+              "tiefe": 2,
+              "text": "Die gedrängte Darlegung einer Bundesrechtsverletzung, wie sie Art. 42 Abs. 2 BGG vorschreibt, findet sich in der 75-seitigen Beschwerdeschrift nicht. Darin wird vielmehr über weite Strecken appellatorische Kritik geübt und in unzulässiger Vermengung von Sach- und Rechtsfragen der eigene Standpunkt ausgebreitet.\n\nKeiner der zahlreichen Vorwürfe unrichtiger Sachverhaltsfeststellungen ist rechtsgenügend begründet. Das gilt im Zusammenhang mit der angeblich unrichtigen Auslegung des CMA wie auch betreffend die (eventualiter) geltend gemachte Unmöglichkeit der Herstellung der bestellten Produktmengen. Darauf kann nicht eingetreten werden. Entsprechend ist im Folgenden ausschliesslich auf die Sachverhaltsfeststellungen im angefochtenen Entscheid abzustellen und die zahlreichen Ausführungen, die von diesen abweichen, haben unbeachtet zu bleiben.\n\nDie rechtlichen Vorbringen der Beschwerdeführerinnen sind somit ausschliesslich auf der Grundlage des verbindlich festgestellten Sachverhalts der Vorinstanz zu prüfen. Indessen genügen auch die Rechtsrügen den Begründungsanforderungen kaum. Die Vorinstanz und die Beschwerdegegnerinnen beanstanden die appellatorische Beschwerdeführung zu Recht. Die Beschwerdeführerinnen irren, wenn sie entgegenhalten, betreffend die Verletzung von einfachem Bundesrecht sei ihre Art und Weise der Beschwerdebegründung genügend. Zwar trifft zu, dass lediglich für Verfassungsverletzungen eine qualifizierte Rügepflicht gilt, und das Bundesgericht trotz\n\niura novit curia solche Rügen grundsätzlich nur prüft, wenn sie erhoben und hinlänglich begründet worden sind (Art. 106 Abs. 2 BGG). Das heisst aber nicht, dass die in Art. 42 Abs. 2 BGG und der diesbezüglichen Rechtsprechung (Erwägung 3.1) festgelegten Begründungsanforderungen für die Verletzung von einfachem Bundesrecht derart herabgesetzt wären, dass sich die Beschwerdeführerinnen mit appellatorischer Kritik und der Wiederholung ihres im kantonalen Verfahren vertretenen Standpunktes begnügen könnten. Sie verfehlen daher durchwegs eine hinlängliche Begründung, soweit sie die Erwägungen der Vorinstanz als \"falsch\" bezeichnen und ihnen bloss ihre eigenen, aber vorinstanzlich verworfenen Ansichten als \"richtig\" gegenüberstellen. Sie müssten in gedrängter Form aufzeigen, dass und inwiefern die Beurteilung der Vorinstanz Bundesrecht verletzt. Auf ihre Vorbringen kann daher nur eingegangen werden, soweit wenigstens ansatzweise hinlängliche Rechtsrügen erkennbar sind. Im Übrigen ist darauf nicht einzutreten."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Die Beschwerde richtet sich einzig gegen die Abweisung der Klage der Beschwerdeführerin 2, mithin von Klagebegehren 1 (und 3 betreffend die Prozesskosten). Nicht Gegenstand des vorliegenden Beschwerdeverfahrens bilden hingegen die Abweisung von Klagebegehren 2 und ebensowenig die teilweise Gutheissung der Widerklage."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Mit Klagebegehren 1 machte die Beschwerdeführerin 2 im Wesentlichen geltend, die Beschwerdegegnerinnen hätten zu Unrecht eine Kürzung der AGP vorgenommen. Die Vorinstanz verwarf sowohl die Hauptbegründung der Forderung wegen zurückbehaltener AGP (Unabhängigkeit der AGP von den gelieferten Mengen) als auch die Eventualbegründung (Unmöglichkeit der Produktion der Bestellmengen). Die Beschwerdeführerinnen fechten beides an. Soweit auf ihre Rügen eingetreten werden kann, wird dazu in Erwägung 5 (Hauptbegründung) beziehungsweise 6 (Eventualbegründung) Stellung genommen."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Sodann forderte die Beschwerdeführerin 2 mit Klagebegehren 1 die Bezahlung von Fr. 547'466.01, was sie mit der Anwendung falscher Umrechnungskurse begründete. Die Vorinstanz wies auch diese Forderung ab. Zur dagegen gerichteten Kritik der Beschwerdeführerinnen äussert sich Erwägung 7."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerinnen vertraten die Ansicht, die AGP seien fest zugesicherte Mindestzahlungen gewesen, die zur Deckung der fixen Betriebskosten und unabhängig von den tatsächlich hergestellten Mengen an API geschuldet gewesen seien.\n\nDemgegenüber postulierten die Beschwerdegegnerinnen, die Kürzung der AGP sei unter bestimmten Umständen, insbesondere bei Nicht- oder Zuweniglieferungen zulässig gewesen. Eine anderweitige Vertragsverletzung sei nicht notwendig gewesen."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Im Konsens- wie im Auslegungsstreit hat das Sachgericht vorab zu prüfen, ob sich die Parteien tatsächlich übereinstimmend geäussert, verstanden und in diesem Verständnis geeinigt haben (subjektive Auslegung). Ist dies zu bejahen, liegt ein tatsächlicher Konsens vor. An die Feststellung des tatsächlichen Parteiwillens ist das Bundesgericht gebunden (BGE 147 III 153 E. 5.1; 132 III 268 E. 2.3.2; 123 III 35 E. 2b).\n\nDie Vorinstanz hat einen wirklichen Parteiwillen in Bezug auf das von den Beschwerdeführerinnen aufgeworfene Auslegungsproblem nicht feststellen können."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "In einem solchen Fall beurteilt sich nach dem Vertrauensprinzip, welchen Inhalt eine Willenserklärung hat. Die Erklärung ist danach so auszulegen, wie sie von der Adressatin nach ihrem Wortlaut und Zusammenhang sowie den gesamten Umständen nach Treu und Glauben verstanden werden durfte und musste. Dies stellt eine Rechtsfrage dar, die das Bundesgericht frei überprüft, wobei es an die vorinstanzlichen Feststellungen zu den tatsächlichen Umständen des Vertragsschlusses gebunden ist (BGE 148 III 57 E. 2.2.1; 147 III 153 E. 5.1).\n\nDie Vorinstanz nahm eine objektivierte Vertragsauslegung vor und erwog zusammenfassend, die Parteien hätten Ziff. 5.1.3 CMA in guten Treuen nur so verstehen dürfen und müssen, dass zum einen eine Herstellungs- und Lieferpflicht der Beschwerdeführerinnen von prognostizierten und bestellten Produktmengen vereinbart worden sei und zum anderen bei Nicht- oder Zuweniglieferungen von bestellten Produktmengen durch die Beschwerdeführerinnen als Folge der Verletzung einer CMA-Vertragspflicht eine verhältnismässige Reduktion der AGP durch die Beschwerdegegnerinnen gemäss dem Modus nach Ziff. 5.1.3 CMA zulässig gewesen sei. Damit sei ein Synallagma zwischen den Produktlieferungen und den AGP-Zahlungen vereinbart worden. Dabei habe bereits eine Zuweniglieferung von bestellten Produktmengen als Folge einer Verletzung von Pflichten aus dem CMA die Beschwerdegegnerinnen zur verhältnismässigen Kürzung der AGP nach dem Kürzungsmechanismus gemäss Ziff. 5.1.3 CMA berechtigt, ohne dass eine anderweitige Vertragsverletzung durch die Beschwerdeführerinnen hätte vorliegen müssen. Ferner kam die Vorinstanz zum Schluss, dass sich die Beschwerdeführerin 2 ein Verschulden der Beschwerdeführerin 1 in Bezug auf die Herstellung von bestellten Produktmengen anrechnen lassen müsse, da bereits aus der subjektiven Vertragsauslegung nach dem übereinstimmenden Parteiwillen resultiere, dass beide Beschwerdeführerinnen für die Herstellung und Lieferung der bestellten Produktmengen verantwortlich gewesen seien."
+            },
+            {
+              "marke": "E. 5.4",
+              "tiefe": 2,
+              "text": "Die vorinstanzliche Auslegung nach dem Vertrauensprinzip ist nicht zu beanstanden. Die Erwägungen der Vorinstanz überzeugen. Die dagegen erhobene Kritik der Beschwerdeführerinnen dringt nicht durch: Sie können von vornherein nicht gehört werden, soweit sie ihre Argumentation auf einen Sachverhalt stützen, der von den tatsächlichen Feststellungen im angefochtenen Urteil abweicht, da sie keine hinreichend begründeten Sachverhaltsrügen gemäss den oben (Erwägung 3.2) dargelegten Grundsätzen präsentieren.\n\nSie bestreiten zwar eine Produktelieferpflicht im Grundsatz nicht, beharren aber auf ihrem Standpunkt, dass sie sich bei Abschluss des CMA nicht zur Herstellung und Lieferung bestimmter Produktmengen verpflichtet hätten. Sie meinen, die Beschwerdegegnerinnen hätten die im CMA vorgesehenen AGP unabhängig von allfälligen Produktbestellungen und -lieferungen zahlen müssen. Die Beschwerdeführerinnen stellen mithin in Abrede, dass zwischen der vereinbarten Produktelieferpflicht und der Pflicht zur Zahlung der AGP ein synallagmatisches Verhältnis besteht. Mit diesem Standpunkt und seiner Begründung haben sich sowohl die erste Instanz wie auch die Vorinstanz sehr eingehend auseinandergesetzt und ihn schliesslich mit überzeugenden Erwägungen verworfen. Es ist nicht Aufgabe des Bundesgerichts, eine solche Beurteilung zum dritten Mal vorzunehmen. Die Auslegung der Vorinstanz ist schlüssig und fundiert. Eine Bundesrechtsverletzung ist nicht erkennbar, geschweige denn wird eine solche von den Beschwerdeführerinnen aufgezeigt."
+            },
+            {
+              "marke": "E. 5.5",
+              "tiefe": 2,
+              "text": "Einzig in Bezug auf die Berücksichtigung nachträglichen Parteiverhaltens beanstanden sie grundsätzlich zu Recht, dass solches bei der objektivierten Auslegung nicht von Bedeutung ist (BGE 144 III 43 E 3.3; 132 III 626 E. 3.1 in fine). Indessen stützte die Vorinstanz ihre Auslegung keineswegs massgebend auf nachträgliches Parteiverhalten, sondern auf den Vertragstext in seinem Wortlaut und Zusammenhang, den Vertragszweck sowie die gesamten Umstände, die dem Vertragsabschluss vorausgingen und ihn begleiteten, mithin auf die Entstehungsgeschichte des Vertrags.\n\nDer von den Beschwerdeführerinnen beanstandete Hinweis der Vorinstanz auf das Verhalten der Parteien erscheint denn auch vielmehr als Bekräftigung des Auslegungsergebnisses, das sie ohnedies gefunden hat. Das wird besonders deutlich betreffend die kritisierte Erwägung der Vorinstanz, wonach, wenn die im Anhang 5.1.1 CMA prognostizierten Bestellmengen mit den tatsächlichen Bestellmengen verglichen würden, festgestellt werden könne, dass sich die gesamthaft bestellten Produkte in den 21 Vertragsmonaten weitgehend mit den im Anhang 5.1.1 CMA prognostizierten Bestellmengen für die 21 Vertragsmonate deckten. Zwar beruhen die zum Vergleich herangezogenen tatsächlichen Bestellmengen auf einem dem Vertragsabschluss nachfolgenden Parteiverhalten. Der Umstand bekräftigt aber nur, was die Vorinstanz bereits gestützt auf den Vertragstext und -zweck befand, nämlich dass sich die Beschwerdeführerinnen von Anfang an zur Herstellung und Lieferung der prognostizierten Mengen verpflichtet haben, sofern sie von den Beschwerdegegnerinnen verbindlich bestellt wurden.\n\nGleiches gilt für die im weiteren beanstandete Bezugnahme auf späteres Parteiverhalten, wonach die Beschwerdeführerinnen auf mehrere Anwaltsschreiben, mit denen Nicht- bzw. Zuweniglieferungen gerügt worden seien, nie mit der Entgegnung reagiert hätten, dass sich aus dem CMA gar keine Lieferpflicht ergebe und somit keine Vertragsverletzung durch die Beschwerdeführerinnen vorliege. Wohl ist dieser nachträgliche Umstand bei der objektivierten Vertragsauslegung nicht von Bedeutung, indessen erkannte die Vorinstanz auch ohne diesen eine von Anfang an bestehende Herstellungs- und Lieferpflicht der Beschwerdeführerinnen.\n\nDie grundsätzlich zu Recht gerügte vorinstanzliche Erwähnung nachträglichen Parteiverhaltens im Rahmen der objektivierten Vertragsauslegung entbehrt mithin der Entscheidrelevanz, weshalb sie ebenfalls nichts am im Übrigen bundesrechtskonform gefundenen Auslegungsergebnis der Vorinstanz zu ändern vermag."
+            },
+            {
+              "marke": "E. 5.6",
+              "tiefe": 2,
+              "text": "Unbehelflich ist schliesslich der Vorwurf, es sei offensichtlich \"falsch\", dass sich kein subjektiver tatsächlich übereinstimmender Parteiwille im Zeitpunkt des Vertragsabschlusses feststellen lasse. Die Beschwerdeführerinnen übergehen, dass es nicht genügt - schon gar nicht unter Willkürgesichtspunkten -, einen solchen zu behaupten. Im Bestreitungsfall ist er zu beweisen. Wie die Vorinstanz zutreffend feststellte, divergierten die Standpunkte der Parteien und bestritten die Beschwerdegegnerinnen denjenigen der Beschwerdeführerinnen. Es ist ihnen nicht gelungen, einen übereinstimmenden Parteiwillen in Bezug auf die Voraussetzungen für eine Kürzung der AGP zu beweisen. Indem sie dem Bundesgericht erneut ihre Sicht der Dinge unterbreiten, begründen sie nicht, weshalb der Schluss der Vorinstanz, es könne kein übereinstimmender Parteiwille festgestellt werden, willkürlich sein soll."
+            },
+            {
+              "marke": "E. 5.7",
+              "tiefe": 2,
+              "text": "Das Bundesgericht hat mithin keinen Anlass, den vorinstanzlichen Entscheid, dass die Hauptbegründung für die Klageforderung wegen zurückbehaltener AGP-Zahlungen nicht trägt, zu korrigieren. Die Vertragsauslegung der Vorinstanz ist bundesrechtlich nicht zu beanstanden. Damit waren die Beschwerdegegnerinnen zur Kürzung der AGP berechtigt."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Eventualiter brachten die Beschwerdeführerinnen vor, wegen nicht von ihnen zu vertretender Unmöglichkeit, die bestellten Produktmengen herzustellen und zu liefern, wäre die Kürzung der AGP auch dann unzulässig, wenn die Auslegung der Vorinstanz zuträfe. Eine Kürzung wäre nur möglich gewesen, wenn eine nicht vollständige Lieferung der Bestellmenge sowie kumulativ eine anderweitige Vertragsverletzung vorgelegen hätten. Eine relevante Vertragsverletzung liege jedoch nicht vor, zumal es unmöglich gewesen sei, die Bestellmenge an API gemäss dem CMA herzustellen. Weder die Beschwerdeführerin 1 noch die Beschwerdeführerin 2 habe die Unterschreitung der Bestellmengen zu vertreten. Ergo hätten die Beschwerdegegnerinnen der Beschwerdeführerin 2 den zu Unrecht zurückbehaltenen Teil der AGP in Höhe von Fr. 6'514'660.92 zu bezahlen."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Die Vorinstanz verwarf diese Eventualbegründung für die Klageforderung wegen zurückbehaltener AGP-Zahlungen mit dem Schluss, dass es den Beschwerdeführerinnen nicht gelungen sei, die von ihnen behauptete Unmöglichkeit der Herstellung und Lieferung der bestellten API nachzuweisen, weshalb sie für die vertragswidrige Zuweniglieferung einzustehen hätten."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Diesen gestützt auf Beweiswürdigung getroffenen Schluss der Vorinstanz könnten die Beschwerdeführerinnen nur umstossen, wenn sie ihn als willkürlich auszuweisen vermöchten. Das gelingt ihnen indessen nicht.\n\nSie werfen der Erstinstanz vor, mit ihrem Vorgehen im Zusammenhang mit der Ausarbeitung des gerichtlichen Gutachtens das Recht auf Beweis und das rechtliche Gehör in mehrfacher Hinsicht verletzt zu haben. Die Vorinstanz wiederum habe dieses Vorgehen \"fälschlicherweise\" als zulässig taxiert und ihrerseits das Recht auf Beweis und den Gehörsanspruch der Beschwerdeführerinnen verletzt, unter anderem, indem sie das Gutachten inhaltlich gar nicht gewürdigt habe, obwohl dieses die geltend gemachte Unmöglichkeit belege. Die Vorwürfe sind haltlos.\n\nSoweit direkt das prozessuale Vorgehen der Erstinstanz beanstandet wird, ist darauf von vornherein nicht einzutreten (Art. 75 BGG). Das gilt insbesondere, soweit ihr - neu - vorgeworfen wird, eine unzulässige antizipierte Beweiswürdigung vorgenommen zu haben. Da dieser Vorwurf der Vorinstanz nicht unterbreitet wurde, kann sie in diesem Zusammenhang auch keine Verletzung des Rechts auf Beweis bzw. des rechtlichen Gehörs begangen haben. Die entsprechende Rüge geht ins Leere.\n\nDie Beschwerdeführerinnen erneuern über weite Strecken ihre Beanstandungen am erstinstanzlichen Vorgehen betreffend das Gutachten und die weiteren Beweiserhebungen. Indem sie den Beanstandungen im Wesentlichen jeweils bloss anfügen, die Vorinstanz verletze ihrerseits das Recht auf Beweis und den Gehörsanspruch, weil sie das Vorgehen der Erstinstanz zu Unrecht als zulässig erachtet habe, verfehlen sie einmal mehr die Begründungsanforderungen. Die Vorinstanz hat sich eingehend mit den Beanstandungen am erstinanzlichen Beweisverfahren, insbesondere betreffend das gerichtliche Gutachten befasst. Die Beschwerdeführerinnen müssten sich mit den diesbezüglichen Erwägungen der Vorinstanz auseinandersetzen und im Einzelnen aufzeigen, inwiefern sie gegen Bundesrecht verstossen. Die konzise Rüge einer Bundesrechtsverletzung durch die Vorinstanz enthält die Beschwerde jedoch auch in diesem Zusammenhang nicht.\n\nSodann trifft der Vorwurf der Beschwerdeführerinnen nicht zu, dass die Vorinstanz das Gutachten anders als die Erstinstanz nicht als mangelhaft beurteilt hätte. Auch die Vorinstanz taxierte das Gutachten als \"teilweise mangelhaft\". Sie war daher entgegen der Meinung der Beschwerdeführerinnen nicht \"verpflichtet, das Gutachten auch in Bezug auf die behauptete Unmöglichkeit als Beweismittel zu berücksichtigen und umfassend zu würdigen\".\n\nOhnehin trifft nicht zu, dass sich die Vorinstanz mit dem Gutachten gar nicht auseinandergesetzt habe. Im Gegenteil widmete sie dem Gutachten im Rahmen ihrer ausführlichen Erwägung 4 zum Beweisverfahren betreffend die geltend gemachte Unmöglichkeit grosse Beachtung, wobei sie dieses auch zu den einzelnen Streitpunkten würdigte und darauf abstellte, soweit sie es als klar, schlüssig und vollständig erachtete (insb. E. 4.10 S. 146 betreffend Betrieb des Werks, Reinigungsvorgängen und Sicherheitsmängeln und E. 4.11 S. 153 f. betreffend der \"Due Diligence\"). Da jedoch auch sie gewisse Mängel am Gutachten feststellte, schützte sie ohne Bundesrechtsverletzung das Vorgehen der Erstinstanz, anstatt das Gutachten noch einmal zur Ergänzung zurückzuweisen, zusätzlich die beantragten Zeugen- und Parteibefragungen durchzuführen, welche die Unklarheiten und offenen Fragen im Gutachten zu klären vermochten. Die Beweiswürdigung erfolgte sodann gestützt auf das Gutachten, die vorhandenen Akten und die Zeugen- und Parteiaussagen, mithin in korrektem Einbezug aller abgenommenen Beweise. Eine Verletzung von Beweisregeln ist nicht auszumachen. Richtig besehen, kritisieren die Beschwerdeführerinnen denn auch nicht eine Verletzung des Rechts auf Beweis und ihres Gehörsanspruchs, sondern die vorinstanzliche Beweiswürdigung. Mit ihren Ausführungen missachten sie aber die Begründungsanforderungen, denen die Kritik an der Beweiswürdigung genügen muss (vgl. Erwägung 3.3). Darauf ist nicht weiter einzugehen."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Es bleibt somit beim vorinstanzlichen Schluss, dass die Beschwerdeführerinnen die von ihnen behauptete Unmöglichkeit der Herstellung und Lieferung der bestellten API nicht zu beweisen vermochten, weshalb sie für die vertragswidrige Zuweniglieferung einzustehen hätten.\n\nDie Vorinstanz hat die Forderung der Beschwerdeführerin 2 wegen nicht bezahlter AGP ohne Bundesrechtsverletzung abgewiesen."
+            },
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Vor Bundesgericht streitig ist ferner die von der Beschwerdeführerin 2 mit Klagebegehren 1 geltend gemachte Bezahlung von Fr. 547'466.01. Diese Forderung begründete sie mit der Anwendung falscher Umrechnungskurse bei Verrechnungen. Die Beschwerdegegnerin 2 habe zu Unrecht auf den Wechselkurs im Zeitpunkt der Fälligkeit der Verrechnungsforderungen abgestellt. Hätte sie stattdessen jenen im Zeitpunkt des Zugangs der Verrechnungserklärungen angewendet, resultierte ein (unbestrittener) Betrag von Fr. 547'466.01 zu Gunsten der Beschwerdeführerin 2."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "Die Parteien vereinbarten in Ziff. 6.2 APA bzw. Ziff. 7.3 CMA, dass die Beschwerdegegnerinnen ihre Restforderungen des Kaufpreises und andere Forderungen aus dem APA mit den klägerischen Rechnungsforderungen aus dem CMA verrechnen können. In der Folge verrechnete die Beschwerdegegnerin 2 Forderungen der Beschwerdeführerin 2 in Schweizer Franken teilweise mit eigenen Ansprüchen in Euro und US-Dollar. Um die Verrechnung vornehmen zu können, rechnete sie ihre Fremdwährungsforderungen in Schweizer Franken um. Dabei stellte sie auf die Wechselkurse zum Zeitpunkt der Fälligkeit der Fremdwährungsforderungen ab."
+            },
+            {
+              "marke": "E. 7.3",
+              "tiefe": 2,
+              "text": "Die Vorinstanz schützte die erstinstanzliche Beurteilung, dass für die Umrechnung der Zeitpunkt der Fälligkeit der Verrechnungsforderung massgebend sei. Sie erwog insbesondere, bereits aus dem Wortlaut von Art. 124 Abs. 2 OR ergebe sich, dass die dort vorgesehene Rückwirkung auch das Währungsrisiko umfasse, da Forderung und Gegenforderung bei einer Verrechnung auf den Zeitpunkt als getilgt anzusehen sind, in dem sie zur Verrechnung einander gegenüberstanden.\n\nDie Beschwerdeführerinnen erblicken darin eine Verletzung von Art. 124 OR. Sie postulieren, dass auf den Zeitpunkt des Zugangs der Verrechnungserklärung abzustellen sei, da ansonsten der Verrechnende risikolos Währungsgewinne erzielen könne."
+            },
+            {
+              "marke": "E. 7.4",
+              "tiefe": 2,
+              "text": "Die Verrechnung von Forderungen mit unterschiedlicher Währung ist nach der Rechtsprechung des Bundesgerichts zulässig, ausser wenn eine Effektivleistung vereinbart ist. Eine weitere - hier unstreitig gegebene - Voraussetzung ist die Existenz eines Umrechnungskurses zwischen den jeweiligen Währungen (BGE 130 III 312 E. 6.2; 63 II 383 E. 5b). Das Bundesgericht hat sich bislang nicht zur Frage geäussert, auf welchen\n\nUmrechnungszeitpunkt abzustellen ist."
+            },
+            {
+              "marke": "E. 7.5",
+              "tiefe": 2,
+              "text": "Vorweg ist klarzustellen: Aus Art. 84 Abs. 2 OR, der nur dem Schuldner ein Wahlrecht einräumt, ist für die vorliegende Fragestellung bei Verrechnung nichts abzuleiten. Insbesondere ergibt sich daraus nicht e contrario, dass der Gläubiger als Verrechnender keine Umrechnungsbefugnis habe. Die genannte Bestimmung hat ausschliesslich den Untergang der Obligation durch\n\nErfüllung, d.h. durch Zahlung im Auge, und bezieht sich\n\nnicht auch auf die übrigen Arten des Erlöschens, bei denen, wie gerade bei der Verrechnung, der Schuldner einer Erfüllung enthoben ist (BGE 63 II 383 E. 5 S. 394)."
+            },
+            {
+              "marke": "E. 7.6",
+              "tiefe": 2,
+              "text": "Art. 124 Abs. 2 OR regelt den Inhalt der Verrechnungswirkung und den Zeitpunkt des Wirkungseintritts: Ist Verrechnung erklärt, so wird angenommen, Forderung und Gegenforderung seien, soweit sie sich ausgleichen, schon im Zeitpunkt getilgt worden, in dem sie zur Verrechnung geeignet einander gegenüberstanden (Art. 124 Abs. 2 OR). Danach erfolgt die Tilgungswirkung der Verrechnungserklärung\n\nrückwirkend auf diesen Zeitpunkt (Urteil 4A_17/2013 vom 13. Mai 2013 E. 3.1). Die Verrechnungsbefugnis erlangt der Verrechnende zu dem Zeitpunkt, in dem seine Verrechnungsforderung fällig und die Hauptforderung erfüllbar wird (Urteil 4A_27/2012 vom 16. Juli 2012 E. 5.4.1; Andreas Müller, in: Basler Kommentar, Obligationenrecht I, 7. Aufl. 2020, N. 5 zu Art. 124 OR).\n\nDie Rückwirkung auf den Zeitpunkt, in dem sich Forderung und Gegenforderung zur Verrechnung geeignet gegenüberstanden, betrifft auch die Nebenansprüche, namentlich die Verzinsungspflicht, so dass seit diesem Zeitpunkt bereits eingetretene Verzugsfolgen nachträglich entfallen (Urteile 4A_17/2013 vom 13. Mai 2013 E. 3.1; 4A_27/2012 vom 16. Juli 2012 E. 5.4.1; 4A_285/2011 vom 1. September 2011 E. 3.1). Ebenso entfallen ab diesem Datum Vertragszinsen (Müller, a.a.O., N. 5 zu Art. 124 OR)."
+            },
+            {
+              "marke": "E. 7.7",
+              "tiefe": 2,
+              "text": "Mit der Vorinstanz ist aus der Gesetzesbestimmung von Art. 124 Abs. 2 OR abzuleiten, dass die Rückwirkung der Tilgung auf den Zeitpunkt der Fälligkeit der Verrechnungsforderung auch massgebend ist für den Umrechnungskurs.\n\nDie in Art. 124 Abs. 2 OR stipulierte Rückwirkung findet ihre innere Rechtfertigung in der Überlegung, dass der zur Verrechnung Befugte, solange kein Streit besteht zwischen ihm und dem Verrechnungsgegner, keine dringende Veranlassung hat, von seinem Kompensationsrecht Gebrauch zu machen. Das vom Gesetz als entschuldbar betrachtete Zuwarten mit der Verrechnungserklärung soll ihm nicht schaden; er soll daher, wenn er verrechnet, in die Lage kommen, wie wenn er bei erster Möglichkeit verrechnet hätte (von Tuhr/Escher, Allgemeiner Teil des Schweizerischen Obligationenrechts, Bd. II, 3. Aufl. 1974, S. 207). Mit dieser Überlegung stimmt überein, dass die Rückwirkung auch für die Umrechnung von Fremdwährungsforderungen gilt. Auch diesbezüglich soll dem Verrechnenden das Zuwarten nicht schaden."
+            },
+            {
+              "marke": "E. 7.8",
+              "tiefe": 2,
+              "text": "Gestützt auf dieses Kohärenzargument vertritt auch ein Teil der Lehre die Auffassung, dass bei Verrechnungen auf den Umrechnungskurs im Zeitpunkt der Fälligkeit der Verrechnungsforderung abzustellen ist. So wird dafür gehalten, massgebend für die Kursumrechnung sei \"getreu der üblichen Regel jener Zeitpunkt, in dem auch die übrigen Verrechnungswirkungen eintreten\", im Moment also, in dem sich die Forderungen verrechenbar gegenüberstehen (Corinne Zellweger-Gutknecht, Berner Kommentar, 2012, N. 218 zu Art. 120 OR; Nicolas Jeandin, in: Commentaire romand, Code des obligations I, 3. Aufl. 2021, N. 15 zu Art. 120 OR; Viktor Aepli, Zürcher Kommentar, 3. Aufl. 1991, N. 70 zu Art. 120 OR; Ulrich G. Schroeter, in: Basler Kommentar, Obligationenrecht I, 7. Aufl. 2020, N. 44 zu Art. 84 OR).\n\nDaran ändert nichts, dass in der Lehre bisweilen grundsätzliche Kritik am Rückwirkungsprinzip an sich geübt wird und dieses nicht mehr als angemessen und das Abstellen auf den Zeitpunkt der Verrechnungserklärung als die bessere Lösung bezeichnet wird (Aepli, a.a.O., N. 137 ff. zu Art. 124 OR; ferner etwa Pascal Pichonnaz, Einige Gedanken zur Rückwirkung der Verrechnung, in: Festschrift für Heinz Hausheer, 2002, S. 69 ff., insb. S. 70 und 85). Auch diese Autoren anerkennen aber, dass ihr Vorschlag eine Gesetzesänderung erforderte. Nachdem Art. 124 Abs. 2 OR die Rückwirkung klar vorsieht, ist darauf abzustellen und muss die gesetzliche Vorschrift betreffend alle Wirkungen der Verrechnung angewendet werden. Dies gilt aus Kohärenzgründen also namentlich auch für den Zeitpunkt des Umrechnungskurses."
+            },
+            {
+              "marke": "E. 7.9",
+              "tiefe": 2,
+              "text": "Was die Beschwerdeführerinnen dagegen einwenden, vermag keine andere Beurteilung zu erheischen: Sie verteidigen ihren Standpunkt, massgebend müsse der Zeitpunkt des Zugangs der Verrechnungserklärung sein, im Wesentlichen mit dem Argument, ansonsten entstehe die Gefahr, dass der Verrechnende in Zeiten grösserer Wechselkursschwankungen beabsichtige, risikolose Währungsgewinne zu erzielen. Der Verrechnende kenne nämlich sowohl den Umrechnungskurs im Zeitpunkt der Fälligkeit als auch jenen im Zeitpunkt der Verrechnung. Sei der Fälligkeitskurs besser, würde er sich für die Verrechnung entscheiden, sei der Kurs im Zeitpunkt der ins Auge gefassten Verrechnung besser, würde er auf die Verrechnung verzichten und stattdessen die Bezahlung der Forderung (auf dem Betreibungsweg) geltend machen. Aus diesen Überlegungen wird auch in der Lehre teilweise vorgeschlagen, auf den Zugang der Verrechnungserklärung abzustellen (so etwa Rolf Weber, Berner Kommentar, 2. Aufl. 2005, N. 343 zu Art. 84 OR; Marius Schraner, Zürcher Kommentar, 3. Aufl. 2000, N. 215 zu Art. 84 OR; Eugen Bucher, Schweizerisches Obligationenrecht, Allgemeiner Teil ohne Deliktsrecht, 2. Aufl. 1988, S. 439).\n\nDem wird mit Recht entgegengehalten, dass es dem Verrechnungsgegner frei steht, seine Schuld so rasch als möglich zu begleichen. Mit dem Zuwarten nimmt er selbst an der Währungsspekulation teil. Wenn diese sich zu seinen Ungunsten auswirkt, kann er sich nicht auf den Grundsatz berufen, dass dem Verrechnungsgegner aus der Verrechnung kein Nachteil erwachsen soll (Zellweger-Gutknecht, a.a.O., N. 220 zu Art. 120 OR). Dies gilt umso mehr im vorliegenden Fall, in dem die Parteien die Verrechenbarkeit von gegenseitigen Forderungen vertraglich stipulierten (siehe Erwägung 7.10), und also auch die Beschwerdeführerinnen ihrerseits hätten verrechnen können. Jedenfalls kann nicht gesagt werden, der Verrechnungsgegner werde durchwegs benachteiligt, wenn auf den Zeitpunkt der Fälligkeit der Verrechnungsforderung abgestellt wird."
+            },
+            {
+              "marke": "E. 7.10",
+              "tiefe": 2,
+              "text": "Zu beachten ist ferner, dass Art. 124 Abs. 2 OR dispositives Recht darstellt (Aepli, a.a.O., N. 132 zu Art. 124 OR). Für vertragliche Forderungen können die Parteien abweichende Regelungen vorsehen, wenn sie dies zur Vermeidung der Gefahr, dass der Verrechnende als ungerechtfertigt empfundene Währungsgewinne erzielen könnte, für angezeigt halten. Auch aus diesem Grund besteht kein Anlass, die im Gesetz vorgesehene Rückwirkung der Verrechnung nicht auch auf den Umrechnungszeitpunkt anzuwenden. Der von den Beschwerdeführerinnen beschwörten \"Gefahr eines risikolosen Währungsgewinns\" kann für vertragliche Forderungen durch entsprechende Parteivereinbarungen begegnet werden, die solches ausschliessen. Ein Abgehen vom Gehalt von Art. 124 Abs. 2 OR ist dazu nicht erforderlich.\n\nIm vorliegenden Fall haben die Parteien in Ziff. 6.2 APA bzw. Ziff. 7.3 CMA ausdrücklich die Verrechenbarkeit bestimmter Forderungen stipuliert. Die Beschwerdeführerinnen wussten demnach, dass die Verrechnung von gegenseitigen Forderungen in unterschiedlicher Währung zulässig war und mussten von Beginn weg damit rechnen, dass die Beschwerdegegnerinnen ihre Fremdwährungsforderungen zur Verrechnung bringen. Dennoch wurde in den Vereinbarungen darauf verzichtet, den Umrechnungszeitpunkt zu regeln. Unter diesem Gesichtspunkt ist es folgerichtig, dass die in der dispositiven Vorschrift von Art. 124 Abs. 2 OR vorgesehene Rückwirkung auch auf den Umrechnungszeitpunkt zum Tragen kommt. Mangels spezieller Regelung mussten die Parteien jedenfalls mit der Anwendung dieser Bestimmung rechnen."
+            },
+            {
+              "marke": "E. 7.11",
+              "tiefe": 2,
+              "text": "Ergo erfolgte die Umrechnung zu Recht zum Kurs, der im Zeitpunkt galt, als die Verrechnungsforderungen fällig wurden. Die Rechtsauffassung der Vorinstanz ist nicht zu beanstanden. Die Beschwerde erweist sich in diesem Punkt als unbegründet."
+            },
+            {
+              "marke": "E. 7.12",
+              "tiefe": 2,
+              "text": "Dies gilt auch für die Eventualbegründung, mit der die Beschwerdeführerinnen behaupten, die Vorinstanz habe den Zeitpunkt der Verrechnungslage falsch bestimmt. Sie belegen nicht mit präzisen Aktenhinweisen, im vorinstanzlichen Verfahren hinlänglich behauptet zu haben, dass bei Fälligkeit der Verrechnungsforderungen der Beschwerdegegnerinnen die Verrechnungsvoraussetzungen nicht vorgelegen hätten. Gemäss dem verbindlichen Sachverhalt der Vorinstanz ist von einer jeweils gültigen Verrechnungslage auszugehen. Mit ihren neuen Vorbringen sind die Beschwerdeführerinnen nicht zu hören (Art. 99 Abs. 1 BGG)."
+            },
+            {
+              "marke": "E. 8",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerinnen fechten die Verteilung der erst- und der zweitinstanzlichen Kosten zwar an, jedoch nicht unabhängig vom Verfahrensausgang. Nachdem es beim vorinstanzlichen Entscheid bleibt, entfällt eine andere Kostenverteilung."
+            },
+            {
+              "marke": "E. 9",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist abzuweisen, soweit darauf eingetreten werden kann. Bei diesem Ausgang des Verfahrens werden die Beschwerdeführerinnen in solidarischer Haftbarkeit kosten- und entschädigungspflichtig (Art. 66 Abs. 1 und 5 sowie Art. 68 Abs. 2 und 4 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 29'000.-- werden den Beschwerdeführerinnen auferlegt, in solidarischer Haftbarkeit."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdeführerinnen haben die Beschwerdegegnerinnen für das bundesgerichtliche Verfahren insgesamt mit Fr. 34'000.-- zu entschädigen, in solidarischer Haftbarkeit."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien und dem Kantonsgericht Basel-Landschaft, Abteilung Zivilrecht, schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 6. März 2023\n\nIm Namen der I. zivilrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDie Präsidentin: Jametti\n\nDer Gerichtsschreiber: Stähle"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist.",
+        "Die Gerichtskosten von Fr. 29'000.-- werden den Beschwerdeführerinnen auferlegt, in solidarischer Haftbarkeit.",
+        "Die Beschwerdeführerinnen haben die Beschwerdegegnerinnen für das bundesgerichtliche Verfahren insgesamt mit Fr. 34'000.-- zu entschädigen, in solidarischer Haftbarkeit.",
+        "Dieses Urteil wird den Parteien und dem Kantonsgericht Basel-Landschaft, Abteilung Zivilrecht, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 120 OR",
+        "Art. 124 Abs. 2 OR",
+        "Art. 124 OR",
+        "Art. 84 Abs. 2 OR",
+        "Art. 84 OR"
+      ],
+      "normKeys": [
+        "OR",
+        "BGG"
+      ],
+      "zitierteEntscheide": [
+        "4A_17/2013",
+        "4A_27/2012",
+        "4A_285/2011",
+        "4A_398/2022",
+        "BGE 130 III 312",
+        "BGE 134 II 244",
+        "BGE 140 III 115",
+        "BGE 140 III 16",
+        "BGE 140 III 264",
+        "BGE 140 III 86",
+        "BGE 141 III 564",
+        "BGE 143 II 283",
+        "BGE 144 III 43",
+        "BGE 147 III 153",
+        "BGE 148 III 57",
+        "BGE 63 II 383"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=17&from_date=&to_date=&from_year=2023&to_year=2023&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=161&highlight_docid=atf%3A%2F%2F149-III-61%3Ade&number_of_ranks=189&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "0851cf60c683a4ef65bdce056583ae6af3eacfc11d48e9a56dc7bdab3c543db8",
+      "sha": "5773bcd9138b330423d42c95d0f1b7425263cee215ca57fbcf9f67544ed0363d",
+      "auszugAbschnitte": [
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Vor Bundesgericht streitig ist ferner die von der Beschwerdeführerin 2 mit Klagebegehren 1 geltend gemachte Bezahlung von Fr. 547'466.01. Diese Forderung begründete sie mit der Anwendung falscher Umrechnungskurse bei Verrechnungen. Die Beschwerdegegnerin 2 habe zu Unrecht auf den Wechselkurs im Zeitpunkt der Fälligkeit der Verrechnungsforderungen abgestellt. Hätte sie stattdessen jenen im Zeitpunkt des Zugangs der Verrechnungserklärungen angewendet, resultierte ein (unbestrittener) Betrag von Fr. 547'466.01 zu Gunsten der Beschwerdeführerin 2."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "Die Parteien vereinbarten, dass die Beschwerdegegnerinnen ihre Restforderungen des Kaufpreises und andere Forderungen mit den klägerischen Rechnungsforderungen verrechnen können. In der Folge verrechnete die Beschwerdegegnerin 2 Forderungen der Beschwerdeführerin 2 in Schweizer Franken teilweise mit eigenen Ansprüchen in Euro und US-Dollar. Um die Verrechnung vornehmen zu können, rechnete sie ihre Fremdwährungsforderungen in Schweizer Franken um. Dabei stellte sie auf die Wechselkurse zum Zeitpunkt der Fälligkeit der Fremdwährungsforderungen ab."
+            },
+            {
+              "marke": "E. 7.3",
+              "tiefe": 2,
+              "text": "Die Vorinstanz schützte die erstinstanzliche Beurteilung, dass für die Umrechnung der Zeitpunkt der Fälligkeit der Verrechnungsforderung massgebend sei. Sie erwog insbesondere, bereits aus dem Wortlaut von Art. 124 Abs. 2 OR ergebe sich, dass die dort vorgesehene Rückwirkung auch das Währungsrisiko umfasse, da Forderung und Gegenforderung bei einer Verrechnung auf den Zeitpunkt als getilgt anzusehen sind, in dem sie zur Verrechnung einander gegenüberstanden. Die Beschwerdeführerinnen erblicken darin eine Verletzung von Art. 124 OR. Sie postulieren, dass auf den Zeitpunkt des Zugangs BGE 149 III 61 S. 63 der Verrechnungserklärung abzustellen sei, da ansonsten der Verrechnende risikolos Währungsgewinne erzielen könne."
+            },
+            {
+              "marke": "E. 7.4",
+              "tiefe": 2,
+              "text": "Die Verrechnung von Forderungen mit unterschiedlicher Währung ist nach der Rechtsprechung des Bundesgerichts zulässig, ausser wenn eine Effektivleistung vereinbart ist. Eine weitere - hier unstreitig gegebene - Voraussetzung ist die Existenz eines Umrechnungskurses zwischen den jeweiligen Währungen (BGE 130 III 312 E. 6.2; 63 II 383 E. 5b). Das Bundesgericht hat sich bislang nicht zur Frage geäussert, auf welchen Umrechnungszeitpunkt abzustellen ist."
+            },
+            {
+              "marke": "E. 7.5",
+              "tiefe": 2,
+              "text": "Vorweg ist klarzustellen: Aus Art. 84 Abs. 2 OR, der nur dem Schuldner ein Wahlrecht einräumt, ist für die vorliegende Fragestellung bei Verrechnung nichts abzuleiten. Insbesondere ergibt sich daraus nicht e contrario, dass der Gläubiger als Verrechnender keine Umrechnungsbefugnis habe. Die genannte Bestimmung hat ausschliesslich den Untergang der Obligation durch Erfüllung, d.h. durch Zahlung im Auge, und bezieht sich nicht auch auf die übrigen Arten des Erlöschens, bei denen, wie gerade bei der Verrechnung, der Schuldner einer Erfüllung enthoben ist (BGE 63 II 383 E. 5 S. 394)."
+            },
+            {
+              "marke": "E. 7.6",
+              "tiefe": 2,
+              "text": "Art. 124 Abs. 2 OR regelt den Inhalt der Verrechnungswirkung und den Zeitpunkt des Wirkungseintritts: Ist Verrechnung erklärt, so wird angenommen, Forderung und Gegenforderung seien, soweit sie sich ausgleichen, schon im Zeitpunkt getilgt worden, in dem sie zur Verrechnung geeignet einander gegenüberstanden (Art. 124 Abs. 2 OR). Danach erfolgt die Tilgungswirkung der Verrechnungserklärung rückwirkend auf diesen Zeitpunkt (Urteil 4A_17/2013 vom 13. Mai 2013 E. 3.1). Die Verrechnungsbefugnis erlangt der Verrechnende zu dem Zeitpunkt, in dem seine Verrechnungsforderung fällig und die Hauptforderung erfüllbar wird (Urteil 4A_27/2012 vom 16. Juli 2012 E. 5.4.1; ANDREAS MÜLLER, in: Basler Kommentar, Obligationenrecht, Bd. I, 7. Aufl. 2020, N. 5 zu Art. 124 OR). Die Rückwirkung auf den Zeitpunkt, in dem sich Forderung und Gegenforderung zur Verrechnung geeignet gegenüberstanden, betrifft auch die Nebenansprüche, namentlich die Verzinsungspflicht, so dass seit diesem Zeitpunkt bereits eingetretene Verzugsfolgen nachträglich entfallen (Urteile 4A_17/2013 vom 13. Mai 2013 E. 3.1; 4A_27/ 2012 vom 16. Juli 2012 E. 5.4.1; 4A_285/2011 vom 1. September 2011 E. 3.1). Ebenso entfallen ab diesem Datum Vertragszinsen (MÜLLER, a.a.O., N. 5 zu Art. 124 OR). BGE 149 III 61 S. 64"
+            },
+            {
+              "marke": "E. 7.7",
+              "tiefe": 2,
+              "text": "Mit der Vorinstanz ist aus der Gesetzesbestimmung von Art. 124 Abs. 2 OR abzuleiten, dass die Rückwirkung der Tilgung auf den Zeitpunkt der Fälligkeit der Verrechnungsforderung auch massgebend ist für den Umrechnungskurs. Die in Art. 124 Abs. 2 OR stipulierte Rückwirkung findet ihre innere Rechtfertigung in der Überlegung, dass der zur Verrechnung Befugte, solange kein Streit besteht zwischen ihm und dem Verrechnungsgegner, keine dringende Veranlassung hat, von seinem Kompensationsrecht Gebrauch zu machen. Das vom Gesetz als entschuldbar betrachtete Zuwarten mit der Verrechnungserklärung soll ihm nicht schaden; er soll daher, wenn er verrechnet, in die Lage kommen, wie wenn er bei erster Möglichkeit verrechnet hätte (VON TUHR/ESCHER, Allgemeiner Teil des Schweizerischen Obligationenrechts, Bd. II, 3. Aufl. 1974, S. 207). Mit dieser Überlegung stimmt überein, dass die Rückwirkung auch für die Umrechnung von Fremdwährungsforderungen gilt. Auch diesbezüglich soll dem Verrechnenden das Zuwarten nicht schaden."
+            },
+            {
+              "marke": "E. 7.8",
+              "tiefe": 2,
+              "text": "Gestützt auf dieses Kohärenzargument vertritt auch ein Teil der Lehre die Auffassung, dass bei Verrechnungen auf den Umrechnungskurs im Zeitpunkt der Fälligkeit der Verrechnungsforderung abzustellen ist. So wird dafür gehalten, massgebend für die Kursumrechnung sei \"getreu der üblichen Regel jener Zeitpunkt, in dem auch die übrigen Verrechnungswirkungen eintreten\", im Moment also, in dem sich die Forderungen verrechenbar gegenüberstehen (CORINNE ZELLWEGER-GUTKNECHT, Berner Kommentar, 2012, N. 218 zu Art. 120 OR; NICOLAS JEANDIN, in: Commentaire romand, Code des obligations, Bd. I, 3. Aufl. 2021, N. 15 zu Art. 120 OR; VIKTOR AEPLI, Zürcher Kommentar, 3. Aufl. 1991, N. 70 zu Art. 120 OR; ULRICH G. SCHROETER, in: Basler Kommentar, Obligationenrecht, Bd. I, 7. Aufl. 2020, N. 44 zu Art. 84 OR). Daran ändert nichts, dass in der Lehre bisweilen grundsätzliche Kritik am Rückwirkungsprinzip an sich geübt wird und dieses nicht mehr als angemessen und das Abstellen auf den Zeitpunkt der Verrechnungserklärung als die bessere Lösung bezeichnet wird (AEPLI, a.a.O., N. 137 ff. zu Art. 124 OR; ferner etwa PASCAL PICHONNAZ, Einige Gedanken zur Rückwirkung der Verrechnung, in: Festschrift für Heinz Hausheer [...], 2002, S. 69 ff., insb. S. 70 und 85). Auch diese Autoren anerkennen aber, dass ihr Vorschlag eine Gesetzesänderung erforderte. Nachdem Art. 124 Abs. 2 OR die Rückwirkung BGE 149 III 61 S. 65 klar vorsieht, ist darauf abzustellen und muss die gesetzliche Vorschrift betreffend alle Wirkungen der Verrechnung angewendet werden. Dies gilt aus Kohärenzgründen also namentlich auch für den Zeitpunkt des Umrechnungskurses."
+            },
+            {
+              "marke": "E. 7.9",
+              "tiefe": 2,
+              "text": "Was die Beschwerdeführerinnen dagegen einwenden, vermag keine andere Beurteilung zu erheischen: Sie verteidigen ihren Standpunkt, massgebend müsse der Zeitpunkt des Zugangs der Verrechnungserklärung sein, im Wesentlichen mit dem Argument, ansonsten entstehe die Gefahr, dass der Verrechnende in Zeiten grösserer Wechselkursschwankungen beabsichtige, risikolose Währungsgewinne zu erzielen. Der Verrechnende kenne nämlich sowohl den Umrechnungskurs im Zeitpunkt der Fälligkeit als auch jenen im Zeitpunkt der Verrechnung. Sei der Fälligkeitskurs besser, würde er sich für die Verrechnung entscheiden, sei der Kurs im Zeitpunkt der ins Auge gefassten Verrechnung besser, würde er auf die Verrechnung verzichten und stattdessen die Bezahlung der Forderung (auf dem Betreibungsweg) geltend machen. Aus diesen Überlegungen wird auch in der Lehre teilweise vorgeschlagen, auf den Zugang der Verrechnungserklärung abzustellen (so etwa ROLF WEBER, Berner Kommentar, 2. Aufl. 2005, N. 343 zu Art. 84 OR; MARIUS SCHRANER, Zürcher Kommentar, 3. Aufl. 2000, N. 215 zu Art. 84 OR; EUGEN BUCHER, Schweizerisches Obligationenrecht, Allgemeiner Teil ohne Deliktsrecht, 2. Aufl. 1988, S. 439). Dem wird mit Recht entgegengehalten, dass es dem Verrechnungsgegner frei steht, seine Schuld so rasch als möglich zu begleichen. Mit dem Zuwarten nimmt er selbst an der Währungsspekulation teil. Wenn diese sich zu seinen Ungunsten auswirkt, kann er sich nicht auf den Grundsatz berufen, dass dem Verrechnungsgegner aus der Verrechnung kein Nachteil erwachsen soll (ZELLWEGER-GUTKNECHT, a.a.O., N. 220 zu Art. 120 OR). Dies gilt umso mehr im vorliegenden Fall, in dem die Parteien die Verrechenbarkeit von gegenseitigen Forderungen vertraglich stipulierten (siehe E. 7.10), und also auch die Beschwerdeführerinnen ihrerseits hätten verrechnen können. Jedenfalls kann nicht gesagt werden, der Verrechnungsgegner werde durchwegs benachteiligt, wenn auf den Zeitpunkt der Fälligkeit der Verrechnungsforderung abgestellt wird."
+            },
+            {
+              "marke": "E. 7.10",
+              "tiefe": 2,
+              "text": "Zu beachten ist ferner, dass Art. 124 Abs. 2 OR dispositives Recht darstellt (AEPLI, a.a.O., N. 132 zu Art. 124 OR). Für vertragliche Forderungen können die Parteien abweichende Regelungen BGE 149 III 61 S. 66 vorsehen, wenn sie dies zur Vermeidung der Gefahr, dass der Verrechnende als ungerechtfertigt empfundene Währungsgewinne erzielen könnte, für angezeigt halten. Auch aus diesem Grund besteht kein Anlass, die im Gesetz vorgesehene Rückwirkung der Verrechnung nicht auch auf den Umrechnungszeitpunkt anzuwenden. Der von den Beschwerdeführerinnen beschwörten \"Gefahr eines risikolosen Währungsgewinns\" kann für vertragliche Forderungen durch entsprechende Parteivereinbarungen begegnet werden, die solches ausschliessen. Ein Abgehen vom Gehalt von Art. 124 Abs. 2 OR ist dazu nicht erforderlich. Im vorliegenden Fall haben die Parteien ausdrücklich die Verrechenbarkeit bestimmter Forderungen stipuliert. Die Beschwerdeführerinnen wussten demnach, dass die Verrechnung von gegenseitigen Forderungen in unterschiedlicher Währung zulässig war und mussten von Beginn weg damit rechnen, dass die Beschwerdegegnerinnen ihre Fremdwährungsforderungen zur Verrechnung bringen. Dennoch wurde in den Vereinbarungen darauf verzichtet, den Umrechnungszeitpunkt zu regeln. Unter diesem Gesichtspunkt ist es folgerichtig, dass die in der dispositiven Vorschrift von Art. 124 Abs. 2 OR vorgesehene Rückwirkung auch auf den Umrechnungszeitpunkt zum Tragen kommt. Mangels spezieller Regelung mussten die Parteien jedenfalls mit der Anwendung dieser Bestimmung rechnen."
+            },
+            {
+              "marke": "E. 7.11",
+              "tiefe": 2,
+              "text": "Ergo erfolgte die Umrechnung zu Recht zum Kurs, der im Zeitpunkt galt, als die Verrechnungsforderungen fällig wurden. Die Rechtsauffassung der Vorinstanz ist nicht zu beanstanden. Die Beschwerde erweist sich in diesem Punkt als unbegründet. (...)"
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "4A_398/2022",
+        "key": "bger_4A_398_2022",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=06.03.2023_4A_398/2022"
+      },
+      "ecli": "ECLI:CH:BGE:2023:149.III.61"
+    }
+  ]
+}

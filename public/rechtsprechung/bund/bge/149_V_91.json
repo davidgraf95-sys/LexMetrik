@@ -1,0 +1,354 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/149_V_91",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "V",
+      "nummer": "149 V 91",
+      "bgeReferenz": "149 V 91",
+      "zitierung": "BGE 149 V 91",
+      "datum": "2023-03-15",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "legalArea": "social_insurance",
+      "rubrum": {
+        "besetzung": "Bundesrichter Wirthlin, Präsident, Bundesrichter Maillard, Bundesrichterinnen Heine, Viscione, Bundesrichter Abrecht, Gerichtsschreiber Wüest",
+        "parteien": "A.________, vertreten durch Rechtsanwalt Urs Hochstrasser, Beschwerdeführerin, gegen Allianz Suisse Versicherungs-Gesellschaft AG, Rechtsdienst, Richtiplatz1, 8304 Wallisellen, Beschwerdegegnerin",
+        "gegenstand": "Unfallversicherung (Invalidenrente; Wiedererwägung)",
+        "vorinstanz": "Versicherungsgerichts des Kantons Aargau vom 12. September 2022"
+      },
+      "regeste": {
+        "text": "Art. 22 UVG; Art. 17 Abs. 1 und Art. 53 Abs. 2 ATSG; Rentenaufhebung nach Erreichen des AHV-Rentenalters. Art. 22 UVG, der die revisionsweise Aufhebung einer Invalidenrente der Unfallversicherung nach Bezug einer Altersrente der AHV resp. nach Erreichen des AHV-Rentenalters ausschliesst, steht einer wiedererwägungsweisen Rentenaufhebung nicht entgegen (E. 7).\nRegeste\n Art. 22 LAA; art. 17 al. 1 et art. 53 al. 2 LPGA; suppression de la rente après que l'ayant droit a atteint l'âge de la retraite. L'art. 22 LAA, qui exclut la suppression d'une rente d'invalidité de l'assurance-accident dans le cadre d'une révision à compter du moment où l'ayant droit perçoit une rente de vieillesse de l'AVS, respectivement atteint l'âge de la retraite, ne constitue pas un obstacle à la suppression de la rente par la voie de la reconsidération (consid. 7).\nRegesto\n Art. 22 LAINF; art. 17 cpv. 1 e art. 53 cpv. 2 LPGA; soppressione della rendita dopo il raggiungimento dell'età di pensionamento. L'art. 22 LAINF, che esclude la soppressione della rendita d'invalidità dell'assicurazione contro gli infortuni nell'ambito di una revisione dal momento in cui l'avente diritto riceve una rendita di vecchiaia dell'AVS, rispettivamente raggiunge l'età di pensionamento, non costituisce un ostacolo alla soppressione della rendita mediante riconsiderazione (consid. 7).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 22 UVG; Art. 17 Abs. 1 und Art. 53 Abs. 2 ATSG; Rentenaufhebung nach Erreichen des AHV-Rentenalters.",
+            "absaetze": [
+              "Art. 22 UVG, der die revisionsweise Aufhebung einer Invalidenrente der Unfallversicherung nach Bezug einer Altersrente der AHV resp. nach Erreichen des AHV-Rentenalters ausschliesst, steht einer wiedererwägungsweisen Rentenaufhebung nicht entgegen (E. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-V-91%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 22 LAA; art. 17 al. 1 et art. 53 al. 2 LPGA; suppression de la rente après que l'ayant droit a atteint l'âge de la retraite.",
+            "absaetze": [
+              "L'art. 22 LAA, qui exclut la suppression d'une rente d'invalidité de l'assurance-accident dans le cadre d'une révision à compter du moment où l'ayant droit perçoit une rente de vieillesse de l'AVS, respectivement atteint l'âge de la retraite, ne constitue pas un obstacle à la suppression de la rente par la voie de la reconsidération (consid. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-V-91%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 22 LAINF; art. 17 cpv. 1 e art. 53 cpv. 2 LPGA; soppressione della rendita dopo il raggiungimento dell'età di pensionamento.",
+            "absaetze": [
+              "L'art. 22 LAINF, che esclude la soppressione della rendita d'invalidità dell'assicurazione contro gli infortuni nell'ambito di una revisione dal momento in cui l'avente diritto riceve una rendita di vecchiaia dell'AVS, rispettivamente raggiunge l'età di pensionamento, non costituisce un ostacolo alla soppressione della rendita mediante riconsiderazione (consid. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-V-91%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. Die 1951 geborene A.________ war seit dem 13. Oktober 1976 als Kindergärtnerin angestellt und in dieser Eigenschaft bei der ELVIA Schweizerische Versicherungsgesellschaft Zürich (ELVIA; heute Allianz Suisse Versicherungsgesellschaft AG [nachfolgend Allianz]) gegen die Folgen von Berufsunfällen, Nichtberufsunfällen sowie Berufskrankheiten versichert, als sie am 31. Mai 1994 bei einem Verkehrsunfall ein Schleudertrauma erlitt (Unfallmeldung vom 2. Juni 1994). Die ELVIA erbrachte hierfür die gesetzlichen Leistungen nach UVG. Während laufender medizinischer Abklärungen zum erwähnten Schadenereignis erlitt A.________ anlässlich eines weiteren Verkehrsunfalls vom 1. Mai 1997 Verletzungen an der Brust- und Halswirbelsäule (Unfallmeldung vom 7. August 1997). Die Allianz als Rechtsnachfolgerin der ELVIA sprach A.________ infolge der unfallbedingten Beschwerden vergleichsweise eine Invalidenrente bei einem Invaliditätsgrad von 25 % und eine Integritätsentschädigung bei einer Integritätseinbusse von 25 % zu, wobei sie ihr den Vergleich in Form einer anfechtbaren Verfügung (Verfügung vom 30. September 2002) eröffnete. Diese erwuchs unangefochten in Rechtskraft. A.b. Mit Verfügung vom 16. Oktober 2020 zog die Allianz ihre Verfügung vom 30. September 2002 in Wiedererwägung und stellte ihre Versicherungsleistungen per 31. Oktober 2020 ein. Mit Einspracheentscheid vom 12. Januar 2022 wies sie die von A.________ dagegen erhobene Einsprache ab, hob die Invalidenrente sowie die Integritätsentschädigung wiedererwägungsweise auf und stellte die Versicherungsleistungen per 31. Oktober 2020 ein."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Die hiergegen erhobene Beschwerde wies das Versicherungsgericht des Kantons Aargau mit Urteil vom 12. September 2022 ab. Auf das Gesuch um Erteilung der aufschiebenden Wirkung der Beschwerde trat es nicht ein."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten lässt A.________ beantragen, es sei der Einspracheentscheid vom 12. Januar 2022 aufzuheben und es seien ihr weiterhin die Versicherungsleistungen zu erbringen. Die Vorinstanz und das Bundesamt für Gesundheit (BAG) verzichten auf eine Vernehmlassung. Die Allianz beantragt in ihrer Stellungnahme, auf die Beschwerde sei nicht einzutreten; eventualiter sei diese abzuweisen. Die Beschwerdeführerin lässt eine Replik einreichen."
+            },
+            {
+              "marke": "D.",
+              "tiefe": 1,
+              "text": "Das Bundesgericht hat am 15. März 2023 eine öffentliche Beratung durchgeführt."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Die Beschwerde in öffentlich-rechtlichen Angelegenheiten kann wegen Rechtsverletzungen gemäss den Art. 95 f. BGG erhoben werden. Das Bundesgericht wendet das Recht von Amtes wegen an (Art. 106 Abs. 1 BGG). Unter Berücksichtigung der allgemeinen Pflicht zur Begründung der Beschwerde (Art. 42 Abs. 1 und 2 BGG) prüft es grundsätzlich nur die geltend gemachten Rügen, sofern die rechtlichen Mängel nicht geradezu offensichtlich sind (BGE 145 V 304 E. 1.1)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Im Beschwerdeverfahren um die Zusprechung oder Verweigerung von Geldleistungen der Militär- oder Unfallversicherung ist das Bundesgericht nicht an die vorinstanzliche Feststellung des rechtserheblichen Sachverhalts gebunden (Art. 97 Abs. 2 und Art. 105 Abs. 3 BGG)."
+            },
+            {
+              "marke": "E. 1.3",
+              "tiefe": 2,
+              "text": "Das Rechtsbegehren der Beschwerdeführerin auf Aufhebung des Einspracheentscheids ist sinngemäss als Antrag auf Aufhebung des vorinstanzlichen Urteils zu interpretieren (zur Interpretation von Rechtsbegehren unter Berücksichtigung der Beschwerdebegründung vgl. BGE 136 V 131 E. 1.2)."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Streitig ist, ob die Vorinstanz Bundesrecht verletzte, indem sie die wiedererwägungsweise Aufhebung der Invalidenrente sowie der Integritätsentschädigung durch die Beschwerdegegnerin schützte."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Die Vorinstanz hat die massgebenden Voraussetzungen der Wiedererwägung (Art. 53 Abs. 2 ATSG) sowie deren Anwendung auf Verfügungen, die auf einem Vergleich basieren, zutreffend dargelegt. Ebenso richtig wiedergegeben ist das Erfordernis eines adäquaten Kausalzusammenhangs zwischen dem Unfallereignis und dem eingetretenen Schaden. Darauf wird verwiesen."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Zu betonen ist, dass gleich wie bei der (klaren) Verletzung des Untersuchungsgrundsatzes oder der Ausserachtlassung der bei unklaren Beschwerdebildern ohne nachweisbare organische Grundlage massgeblichen spezifischen Rechtsprechung von BGE 130 V 352 (nunmehr: BGE 141 V 281) eine Rentenzusprechung ohne explizite oder wenigstens implizite Prüfung der Adäquanz eine Leistungszusprechung auf Grund falscher Rechtsanwendung und damit eine zweifellos rechtsfehlerhafte Verfügung darstellt, so dass der Unfallversicherer berechtigt ist, darauf zurückzukommen (SVR 2017 UV Nr. 8, 8C_193/2016 E. 4.3; Urteil 8C_363/2021 vom 25. November 2021 E. 6.3). Gestützt auf diese zweifellose Unrichtigkeit kann eine Überprüfung erfolgen, ohne dass gefragt werden muss, ob die ursprüngliche Verfügung auch im Ergebnis, d.h. im Dispositiv zweifellos unrichtig ist. Dadurch soll mit Wirkung ex nunc et pro futuro ein rechtskonformer Zustand hergestellt werden (SVR 2019 UV Nr. 11 S. 41, 8C_525/2017 E. 7.3 mit Hinweis). Dabei ist wie bei einer materiellen Revision nach Art. 17 Abs. 1 ATSG auf der Grundlage eines richtig und vollständig festgestellten Sachverhalts der Invaliditätsgrad im Zeitpunkt der Verfügung über die Herabsetzung oder Aufhebung einer Rente zu ermitteln (Urteile 8C_72/2020 vom 26. August 2020 E. 6.1; 8C_643/2018 vom 4. Juli 2019 E. 5.1; 8C_117/2019 vom 21. Mai 2019 E. 6.1; 8C_525/2017 vom 30. August 2018 E. 7.3; 8C_638/2017 vom 25. Januar 2018 E. 4.1; 9C_362/2017 vom 8. August 2017 E. 2.2; 8C_861/2015 vom 30. Juni 2016 E. 3.3; 8C_347/2015 vom 20. August 2015 E. 4.2; vgl. auch BGE 141 V 9 E. 2.3)."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Die in Art. 50 Abs. 1 ATSG statuierte Befugnis, Streitigkeiten über sozialversicherungsrechtliche Leistungen durch Vergleich zu erledigen, ermächtigt die Behörde nicht, bewusst eine gesetzwidrige Vereinbarung zu schliessen bzw. von einer von ihr als richtig erkannten Gesetzesanwendung im Sinne eines Kompromisses abzuweichen. Ist der Vergleich im Gesetzesrecht zugelassen, wird damit aber den Parteien bei ungewisser Sach- oder Rechtslage die Befugnis eingeräumt, ein Rechtsverhältnis vertraglich zu ordnen, um die bestehende Rechtsunsicherheit zu beseitigen. Dabei und damit wird in Kauf genommen, dass der Vergleichsinhalt von der Regelung des Rechtsverhältnisses abweicht, zu der es bei umfassender Klärung des Sachverhalts und der Rechtslage allenfalls gekommen wäre. Ein Vergleich ist somit zulässig, soweit der Verwaltung ein Ermessensspielraum zukommt sowie zur Beseitigung rechtlicher und/oder tatsächlicher Unklarheiten (BGE 140 V 77 E. 3.2.1 mit Hinweisen; Urteil 8C_182/2021 vom 9. November 2021 E. 2.2.2; 8C_859/2013 vom 24. Februar 2014 E. 3.2.1)."
+            },
+            {
+              "marke": "E. 3.4",
+              "tiefe": 2,
+              "text": "Wie das kantonale Gericht zutreffend darlegte, kann rechtsprechungsgemäss ein Vergleich im Sinne von Art. 50 ATSG (bzw. die ihn bestätigende Verfügung, vgl. Urteil U 378/05 vom 10. Mai 2006 E. 4.5) grundsätzlich ebenso in Wiedererwägung gezogen werden wie eine Verfügung. Es sind jedoch im Rahmen von Art. 53 Abs. 2 ATSG höhere Anforderungen zu stellen, um dem Vergleichscharakter Rechnung zu tragen. Der Mechanismus der Interessenabwägung ist somit bei der Wiedererwägung eines Vergleichs bzw. einer Verfügung der gleiche. Unterschiede ergeben sich jedoch bei der Gewichtung, namentlich des Schutzes des berechtigten Vertrauens in den Bestand, der tendenziell beim Vergleich stärker als bei der Verfügung ausfällt (BGE 140 V 77 E. 3.2.2 mit Hinweis; Urteile 8C_182/2021 vom 9. November 2021 E. 2.2.3; 8C_86/2020 vom 14. Mai 2020 E. 4.2)."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht bejahte die Voraussetzungen der Wiedererwägung wegen zweifelloser Rechtsfehlerhaftigkeit der Verfügung vom 30. September 2002 infolge unterlassener Adäquanzprüfung. Es erwog insbesondere, die bei der Beschwerdeführerin nach den beiden Unfallereignissen vom 31. Mai 1994 und 1. Mai 1997 aufgetretenen Beschwerden hätten mittels apparativen sowie bildgebenden Untersuchungen nicht bestätigt werden können und beruhten mithin auf einer organisch nicht objektiv ausgewiesenen Verletzung. Die Beschwerdegegnerin hätte daher vor der Leistungszusprechung eine Adäquanzprüfung nach der damals bereits seit längerem eingeführten Schleudertrauma-Praxis vornehmen müssen. In den Akten fänden sich keinerlei Anhaltspunkte dafür, dass vor Erlass der Verfügung vom 30. September 2002 eine Adäquanzprüfung vorgenommen worden sei. Verfügungen der Unfallversicherung, bei welchen eine Rentenzusprechung ohne explizite oder wenigstens implizite Prüfung der Adäquanz erfolgt sei, stellten eine Leistungszusprechung aufgrund falscher Rechtsanwendung und damit eine zweifellos rechtsfehlerhafte Verfügung dar. Daran ändere auch nichts, dass zwischen den Parteien ein Vergleich abgeschlossen worden sei. Die Befugnis zum Abschluss eines Vergleichs ermächtige die Behörde nicht, bewusst eine gesetzwidrige Vereinbarung zu schliessen und damit von einer von ihr als richtig erkannten Gesetzesanwendung im Sinne eines Kompromisses abzuweichen. In der Folge prüfte die Vorinstanz den adäquaten Kausalzusammenhang zwischen den beiden Unfallereignissen und den von der Beschwerdeführerin geklagten Beschwerden nach den Kriterien gemäss BGE 117 V 359 und verneinte diesen."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Demgegenüber macht die Beschwerdeführerin im Wesentlichen geltend, die Integritätsentschädigung sei nie Verfügungsgegenstand gewesen. Der Einspracheentscheid dehne den Entscheid rechtsfehlerhaft auf die Integritätsentschädigung aus, ohne dass diese Leistung von einer eigenständigen Wiedererwägungsverfügung erfasst worden wäre. Die Vorinstanz habe willkürlich nicht geprüft, ob die Aufhebung der Integritätsentschädigung überhaupt Gegenstand des Beschwerdeverfahrens sein könne und die unzulässige Erweiterung des Streitgegenstands geschützt. Die Voraussetzungen der Wiedererwägung gemäss Art. 53 Abs. 2 ATSG seien nicht erfüllt. Die Prüfung der Adäquanz sei von der Beschwerdegegnerin als kommerzielles Versicherungsunternehmen mit einem professionellen Schadenmanagement gestützt auf den zugrunde zu legenden Sachverhalt mindestens implizit vorgenommen worden. Die Verantwortlichen hätten erkannt, dass eine Kausalitätsfrage im Raum stehe und beantwortet werden müsse. Es sei ein typisches Beschwerdebild nach HWS-Trauma gegeben. Ausserdem lägen eine ungewöhnlich lange Dauer der ärztlichen Behandlung, andauernde Dauerbeschwerden und eine durchgehende Arbeitsunfähigkeit bis zum Verfügungserlass vor. Abgesehen davon sei von einem schweren Unfall auszugehen, so dass die Adäquanz ohnehin ohne nähere Prüfung zu bejahen sei."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Zur geltend gemachten unzulässigen Ausdehnung des Streitgegenstands im Einspracheentscheid ist zunächst Folgendes festzuhalten: Zwar wird in der Wiedererwägungsverfügung vom 16. Oktober 2020 nur die Rente ausdrücklich als aufzuhebende Leistung erwähnt. Andererseits ist von der Überprüfung der Rechtmässigkeit der mit Verfügung vom 30. September 2002 zugesprochenen Leistungen die Rede, was die Integritätsentschädigung mitumfassen würde. Im Dispositiv wird lediglich festgehalten, die Versicherungsleistungen würden per 31. Oktober 2020 eingestellt. Im Einspracheentscheid, der an die Stelle der Verfügung trat (Art. 12 Abs. 1 ATSV; BGE 142 V 337 E. 3.2.1; 131 V 407 E. 2.1.2.1), wurde die Wiedererwägung der Integritätsentschädigung sodann ausdrücklich behandelt. Wie es sich mit dieser Rüge der Beschwerdeführerin verhält, braucht nicht näher geprüft zu werden, da auf diesen Einwand bereits aus formellen Gründen nicht weiter einzugehen ist. Die Beschwerdeführerin erhebt diesen Einwand erstmals vor Bundesgericht. Die bundesgerichtliche Rechtsprechung verlangt gestützt auf den auch für Private geltenden Grundsatz von Treu und Glauben und das Verbot des Rechtsmissbrauchs (Art. 5 Abs. 3 BV; BGE 137 V 394 E. 7.1 mit Hinweisen), dass verfahrensrechtliche Einwendungen so früh wie möglich, das heisst nach Kenntnisnahme eines Mangels bei erster Gelegenheit, vorzubringen sind. Es verstösst gegen Treu und Glauben, Mängel dieser Art erst in einem späteren Verfahrensstadium oder sogar erst in einem nachfolgenden Verfahren geltend zu machen, wenn der Einwand schon vorher hätte festgestellt und gerügt werden können. Wer sich auf das Verfahren einlässt, ohne einen Verfahrensmangel bei erster Gelegenheit vorzubringen, verwirkt in der Regel den Anspruch auf spätere Anrufung der vermeintlich verletzten Verfahrensvorschrift (vgl. BGE 143 V 66 E. 4.3; BGE 135 III 334 E. 2.2; 134 I 20 E. 4.3.1; 132 II 485 E. 4.3; 130 III 66 E. 4.3; je mit Hinweisen; Urteile 9C_344/2020 vom 22. Februar 2021 E. 4.3; 9C_614/2020 vom 15. September 2020 E. 3.1)."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Im Übrigen ist mit Bezug auf die mit Verfügung vom 30. September 2002 zugesprochene Integritätsentschädigung auf die Bestimmung von Art. 25 Abs. 2 ATSG (in der seit 1. Januar 2021 geltenden Fassung) hinzuweisen, wonach der Rückforderungsanspruch drei Jahre nachdem die Versicherungseinrichtung davon Kenntnis erhalten hat, spätestens aber fünf Jahre seit der Auszahlung der einzelnen Leistung erlischt (erster Satz). Wird der Rückerstattungsanspruch aus einer strafbaren Handlung hergeleitet, für welche das Strafrecht eine längere Verjährungsfrist vorsieht, so ist diese Frist massgebend (zweiter Satz). Eine Rückforderung der im Jahr 2002 ausgerichteten Integritätsentschädigung fällt somit von vornherein ausser Betracht. Damit fehlt zugleich ein schutzwürdiges Interesse im Sinne von Art. 89 Abs. 1 lit. c BGG an der Aufhebung des angefochtenen Urteils betreffend Integritätsentschädigung. Auch deshalb ist auf die Beschwerde in diesem Punkt nicht einzutreten."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdegegnerin sprach der Beschwerdeführerin vergleichsweise eine Invalidenrente und eine Integritätsentschädigung zu, wobei sie in der Folge ihren Vergleichsvorschlag in Form einer anfechtbaren Verfügung eröffnete (vgl. Verfügung vom 30. September 2002). Die Rentenzusprechung erfolgte nicht gestützt auf objektivierbare Beschwerden, sondern infolge eines Schleudertraumas, so dass für die Leistungsbeurteilung eine separate Prüfung des adäquaten Kausalzusammenhangs nach dem damals massgebenden BGE 117 V 359 hätte vorgenommen werden müssen. Dies wird von der Beschwerdeführerin nicht in Frage gestellt. Sie vertritt aber die Auffassung, dass die Beschwerdegegnerin zumindest eine implizite Adäquanzprüfung vorgenommen habe."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Die Vorinstanz legte eingehend und schlüssig dar, dass sich weder aus der Verfügung vom 30. September 2002 noch aus den übrigen Akten eine explizite oder implizite Adäquanzprüfung ergibt. Auch in der Notiz der Beschwerdegegnerin vom 23. August 2002 betreffend Unterbreitung eines Vergleichsvorschlags wurde die Adäquanz nicht thematisiert. Im Rahmen der Einholung des Gutachtens der Klinik B.________ vom 18. September 1997 sah die ELVIA im ursprünglichen Fragenkatalog noch die Frage nach der Adäquanz der Beschwerden vor, woraufhin der Rechtsvertreter der Beschwerdeführerin einwendete, dass diese Frage von der Verwaltung bzw. vom Rechtsanwender und nicht von den medizinischen Fachpersonen zu prüfen sei (Fragekatalog an Gutachter). Daraus ist zu schliessen, dass zumindest der Rechtsvorgängerin der Beschwerdegegnerin die Voraussetzung des adäquaten Kausalzusammenhangs bewusst war. Für eine Prüfung desselben im weiteren Verlauf bis zur Verfügung vom 30. September 2002 bestehen indessen keine Anhaltspunkte. Der Hinweis des Rechtsvertreters der Beschwerdeführerin in seinem Schreiben vom 22. Januar 1997, wonach die dem Gutachter von der Beschwerdeführerin gestellte Frage der Adäquanz rechtlicher und nicht medizinischer Natur sei, genügt für sich allein für die Annahme einer expliziten oder zumindest impliziten Adäquanzprüfung nicht (vgl. Urteile 8C_363/2021 vom 25. November 2021 E. 6.4; 8C_117/2019 vom 21. Mai 2019 E. 6.3). Auch der Umstand, dass die ELVIA für die Folgen der beiden Unfallereignisse vorübergehende Leistungen in Form von Taggeldern und Heilbehandlung erbrachte, lässt nicht auf eine durchgeführte Adäquanzprüfung schliessen, ist doch eine solche erst im Zeitpunkt des Fallabschlusses (vgl. Art. 19 Abs. 1 UVG), also nach Einstellung der vorübergehenden Leistungen, vorzunehmen (vgl. SVR 2020 UV Nr. 1 S. 1, 8C_117/2019 E. 6.3). Unbehelflich ist auch der Hinweis der Beschwerdeführerin auf das professionelle Schadenmanagement der Beschwerdegegnerin und auf die von dieser geltend gemachten Regressforderungen gegenüber zwei Haftpflichtversicherungen, ergibt sich doch daraus einzig, dass die Beschwerdegegnerin damals von der Rechtmässigkeit der Leistungszusprechung ausging, nicht aber, dass sie die Adäquanz nach den Vorgaben von BGE 117 V 359 auch tatsächlich geprüft hat."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht ging somit zu Recht davon aus, dass die Beschwerdegegnerin vor der Leistungszusprechung den adäquaten Kausalzusammenhang zwischen den organisch nicht objektiv ausgewiesenen Beschwerden und den beiden Unfällen vom 31. Mai 1994 und 1. Mai 1997 nicht geprüft hatte. Die Verfügung vom 30. September 2002 basiert demnach auf einer falschen Rechtsanwendung und ist deshalb ohne Weiteres als zweifellos unrichtig im Sinne von Art. 53 Abs. 2 ATSG zu qualifizieren (vgl. E. 3.2 hiervor). Daran ändert auch der Umstand nichts, dass sich die Verfügung auf einen Vergleichsvorschlag der Beschwerdegegnerin stützte, da, wie die Vorinstanz zutreffend erwog, die Verwaltung im Rahmen eines Vergleichs keine rechtswidrige Vereinbarung abschliessen darf. Weil auch das Erfordernis der erheblichen Bedeutung erfüllt ist (BGE 140 V 85 E. 4.4), erweist es sich nicht als bundesrechtswidrig, dass die Vorinstanz die Voraussetzungen der Wiederwägung nach Art. 53 Abs. 2 ATSG angesichts der bei der Rentenzusprechung unterlassenen Adäquanzprüfung bejahte."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Da die Voraussetzungen der Wiedererwägung vorliegend gegeben sind, gilt es mit Wirkung ex nunc et pro futuro einen rechtskonformen Zustand herzustellen (vgl. E. 3.2 hiervor)."
+            },
+            {
+              "marke": "E. 6.4.1",
+              "tiefe": 3,
+              "text": "Die Vorinstanz stufte den Unfall vom 31. Mai 1994 als mittelschweren und jenen vom 1. Mai 1997 als mittelschweren, im Grenzbereich zu den leichten Unfällen ein. In der Folge prüfte und verneinte sie die Adäquanz im Lichte der Kriterien nach BGE 117 V 359 im Zeitpunkt der leistungszusprechenden Verfügung vom 30. September 2002. Gestützt auf die oben erwähnte Rechtsprechung (vgl. E. 3.2 hiervor) hätte sie diese Prüfung indessen nach BGE 134 V 109 vornehmen müssen, und zwar per 16. Januar 2020 (Verfügungszeitpunkt; vgl. Urteil 8C_147/2017 vom 2. August 2017 E. 3.2). Daraus kann die Beschwerdeführerin aber nichts zu ihren Gunsten ableiten. Denn das kantonale Gericht hat zunächst unter Verweis auf die Rechtsprechung richtig erwogen, es stünden keine schweren Unfälle zur Beurteilung. Sodann hat es sich eingehend mit den massgebenden Kriterien auseinandergesetzt und gestützt auf seine Sachverhaltsfeststellungen dargelegt, weshalb weder ein Kriterium in besonders ausgeprägter Weise erfüllt ist noch mehrere der zu berücksichtigenden Kriterien in zumindest einfacher Weise gegeben sind."
+            },
+            {
+              "marke": "E. 6.4.2",
+              "tiefe": 3,
+              "text": "Die Beschwerdeführerin setzt sich in ihrer Beschwerde mit den vorinstanzlichen Sachverhaltsfeststellungen zu den einzelnen Adäquanzkriterien nicht auseinander und lässt es stattdessen bei der einfachen Behauptung bewenden, es lägen ein schwerer Unfall, eine ungewöhnlich lange Dauer der ärztlichen Behandlung, Dauerbeschwerden und eine durchgehende Arbeitsunfähigkeit bis zum Verfügungserlass (gemeint ist wohl die ursprüngliche Verfügung vom 30. September 2002) vor, was - jedenfalls ohne auch nur einen anderen Sachverhalt zu behaupten - nicht genügt, um eine Bundesrechtsverletzung der Vorinstanz aufzuzeigen. Insbesondere wird in der Beschwerde nicht dargetan, dass und inwiefern die erforderliche Anzahl der Kriterien oder die besondere Ausprägung eines einzelnen bei richtiger Darstellung des Sachverhalts entgegen der Beurteilung der Vorinstanz im Zeitpunkt der ursprünglichen Rentenzusprache gegeben sein soll. Ebenso wenig wird aufgezeigt, inwiefern eine Adäquanzprüfung im Zeitpunkt der Rentenaufhebung (Verfügung vom 16. Januar 2020), wie sie rechtsprechungsgemäss korrekterweise vorzunehmen gewesen wäre, zu einem anderen Ergebnis hätte führen sollen. Soweit die Beschwerdeführerin erst in ihrer Replik eingehendere Ausführungen dazu macht, kann darauf nicht eingegangen werden. Die Beschwerde ist innert der Beschwerdefrist vollständig begründet einzureichen (Art. 42 Abs. 1 und Art. 43 BGG; BGE 134 II 244 E. 2.4). Die Einreichung einer ergänzenden Beschwerdeschrift ist einzig auf dem Gebiet der internationalen Rechtshilfe in Strafsachen grundsätzlich möglich (Art. 43 BGG). Kommt es zu einem zweiten Schriftenwechsel, darf der Beschwerdeführer die Replik nicht dazu verwenden, seine Beschwerde zu ergänzen oder zu verbessern. Die Replik ist nur zu Darlegungen zu verwenden, zu denen die Ausführungen in der Vernehmlassung eines anderen Verfahrensbeteiligten Anlass geben (BGE 135 I 19 E. 2.2; 132 I 42 E. 3.3.4; Urteile 4A_460/2021 vom 3. Januar 2022 E. 2.4; 4A_335/2021 vom 8. November 2021 E. 3.3; 8C_660/2018 vom 7. Mai 2019 E. 1; nicht publiziert in BGE 145 V 231; 4A_300/2013 vom 2. Oktober 2013 E. 2.3; 4A_733/2011 vom 16. Juli 2012 E. 1.3). Da somit beschwerdeweise weder aufgezeigt wird noch sonstwie ersichtlich ist, inwiefern die vorinstanzliche Adäquanzbeurteilung im Ergebnis gegen Bundesrecht verstossen soll, hat es bei der Verneinung des adäquaten Kausalzusammenhangs zwischen den Unfällen vom 31. Mai 1994 sowie 1. Mai 1997 und den weiterhin geltend gemachten Beschwerden somit sein Bewenden."
+            },
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin macht im Weiteren geltend, eine wiedererwägungsweise erfolgte Rentenaufhebung sei in analoger Anwendung von Art. 22 UVG mit Erreichen des Rentenalters nicht mehr zulässig. Der normative Gehalt von Art. 22 UVG sei analog auf die Situation bei einer Wiedererwägung gemäss Art. 53 Abs. 2 ATSG anzuwenden. Der Schutzgedanke sei äquivalent zur Situation bei einer Rentenrevision gestützt auf Art. 17 Abs. 1 ATSG."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "Die Vorinstanz erwog, die Bestimmung von Art. 22 UVG erfasse ausdrücklich nur die (materielle) Revision nach Art. 17 ATSG, welche die Beschwerdegegnerin aufgrund des Erreichens des Rentenalters durch die Beschwerdeführerin (Jahrgang 1951) nicht in Erwägung gezogen habe. Hingegen blieben die (prozessuale) Revision oder die Wiedererwägung im Sinne von Art. 53 ATSG von der Relativierung gemäss Art. 22 UVG unberührt."
+            },
+            {
+              "marke": "E. 7.3",
+              "tiefe": 2,
+              "text": "Ausgangspunkt jeder Auslegung bildet der Wortlaut der Bestimmung. Ist der Text nicht ganz klar und sind verschiedene Interpretationen möglich, so muss nach seiner wahren Tragweite gesucht werden unter Berücksichtigung aller Auslegungselemente. Abzustellen ist dabei namentlich auf die Entstehungsgeschichte der Norm und ihren Zweck, auf die dem Text zu Grunde liegenden Wertungen sowie auf die Bedeutung, die der Norm im Kontext mit anderen Bestimmungen zukommt. Die Gesetzesmaterialien sind zwar nicht unmittelbar entscheidend, dienen aber als Hilfsmittel, um den Sinn der Norm zu erkennen. Das Bundesgericht hat sich bei der Auslegung von Erlassen stets von einem Methodenpluralismus leiten lassen und nur dann allein auf das grammatikalische Element abgestellt, wenn sich daraus zweifelsfrei die sachlich richtige Lösung ergab (BGE 147 V 55 E. 5.1; 145 V 2 E. 4.1 S. 6; 142 V 442 E. 5.1 S. 445, je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 7.4",
+              "tiefe": 2,
+              "text": "Die Bestimmung von Art. 22 UVG lautet wie folgt: \"In Abweichung von Artikel 17 Absatz 1 ATSG kann die Rente ab dem Monat, in dem die berechtigte Person eine Altersrente der AHV bezieht, spätestens jedoch ab Erreichen des Rentenalters nach Artikel 21 des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung nicht mehr revidiert werden.\" \"En dérogation à l'art. 17, al. 1, LPGA, la rente ne peut plus être révisée à compter du mois au cours duquel l'ayant droit perçoit une rente de vieillesse de l'AVS, mais au plus tard lorsqu'il atteint l'âge de la retraite fixé à l'art. 21 de la loi fédérale du 20 décembre 1946 sur l'assurance-vieillesse et survivants.\" \"In deroga all'articolo 17 capoverso 1 LPGA, la rendita non può più essere riveduta dal mese in cui l'avente diritto riceve una rendita di vecchiaia dell'AVS, ma al più tardi dal momento in cui lo stesso raggiunge l'età di pensionamento secondo l'articolo 21 della legge federale del 20 dicembre 1946 sull'assicurazione per la vecchiaia e per i superstiti.\" Die Bestimmung lautete in der vom 1. Januar 1984 bis 31. Dezember 2002 gültig gewesenen Fassung (d.h. vor Inkrafttreten des ATSG) wie folgt (AS 1982 1676): \" 1 Ändert sich der Invaliditätsgrad des Rentenbezügers erheblich, so wird die Rente für die Zukunft entsprechend erhöht, herabgesetzt oder aufgehoben. Nach dem Monat, in dem Männer das 65. und Frauen das 62. Altersjahr vollendet haben, kann die Rente nicht mehr revidiert werden. 2 Für Untersuchungen und Beobachtungen, die für die Revision erforderlich sind, werden die gesetzlichen Leistungen erbracht. Erleidet der Versicherte durch die Untersuchungen oder Beobachtungen eine Verdiensteinbusse, so werden ihm Taggelder gewährt.\""
+            },
+            {
+              "marke": "E. 7.5",
+              "tiefe": 2,
+              "text": "Gemäss Art. 17 Abs. 1 ATSG wird die Rente von Amtes wegen oder auf Gesuch hin für die Zukunft entsprechend erhöht, herabgesetzt oder aufgehoben, wenn sich der Invaliditätsgrad einer Rentenbezügerin oder eines Rentenbezügers erheblich ändert. Anlass zur Revision einer Invalidenrente im Sinne von Art. 17 Abs. 1 ATSG gibt jede wesentliche Änderung in den tatsächlichen Verhältnissen, die geeignet ist, den Invaliditätsgrad und damit den Rentenanspruch zu beeinflussen (BGE 130 V 343 E. 3.5; 113 V 273 E. 1a; siehe auch BGE 112 V 371 E. 2b und 387 E. 1b)."
+            },
+            {
+              "marke": "E. 7.6",
+              "tiefe": 2,
+              "text": "Wie die Vorinstanz zutreffend festhielt, betrifft die Bestimmung von Art. 22 UVG vom klaren Wortlaut her nur die (materielle) Revision nach Art. 17 ATSG und nicht auch die prozessuale Revision und die Wiedererwägung gemäss Art. 53 ATSG. Dies ergibt sich auch aus der vor Inkrafttreten des ATSG geltenden Fassung von Art. 22 UVG, wo von der Änderung des Invaliditätsgrades und somit ebenfalls nur von der materiellen Revision die Rede war. In der Botschaft zum Bundesgesetz über die Unfallversicherung vom 18. August 1976 (BBl 1976 III 141 ff.) wurde zur Begründung für das Dahinfallen der Revisionsmöglichkeit bei Erreichen des Rentenalters ausgeführt, dass zu diesem Zeitpunkt die Altersrente einsetze, die ihrerseits einen Ersatz für entgehendes oder allmählich sinkendes Erwerbseinkommen bilde. Für die Invalidenrenten der Unfallversicherung gingen damit die Möglichkeiten eines Einkommensvergleichs verloren. Eine strengere Anwendung des ökonomischen Prinzips würde allerdings mit dem Beginn des Anspruches auf eine Altersrente zur Einstellung der Unfallversicherungsrente führen. Sozialpolitisch wäre eine derartige Lösung aber kaum zu vertreten. Mit Einführung der sogenannten Komplementärrenten sei hinreichend dafür gesorgt, dass eine Überversicherung jederzeit ausgeschlossen sei (Botschaft a.a.O., S. 192). Die Bestimmung wurde in den Räten gemäss Botschaft genehmigt und gab keinen Anlass zu Diskussionen. Mit Inkrafttreten des ATSG auf den 1. Januar 2003 wurde Art. 22 Abs. 1 Satz 1 UVG ohne inhaltliche Änderung in Art. 17 Abs. 1 ATSG überführt und Art. 22 UVG erfuhr, ebenfalls mit Wirkung ab 1. Januar 2003, eine Aktualisierung. Zur Begründung wurde im Bericht der Kommission des Nationalrates für soziale Sicherheit vom 26. März 1996 ausgeführt, Art. 22 UVG befasse sich mit der Rentenrevision und halte im ersten Satz des Absatzes 1 den Grundsatz fest. Da das ATSG die Revision in Artikel 23 (entsprechend dem heutigen Art. 17 ATSG) regle, erweise sich der erste Satz in Artikel 22 Absatz 1 UVG als überflüssig (Parlamentarische Initiative Sozialversicherungsrecht, Bericht der Kommission des Nationalrates für soziale Sicherheit und Gesundheit vom 26. März 1999, BBl 1999 4523, S. 4690)."
+            },
+            {
+              "marke": "E. 7.7",
+              "tiefe": 2,
+              "text": "Hätte der Gesetzgeber beabsichtigt, die Bestimmung von Art. 22 UVG auch auf Fälle der prozessualen Revision und der Wiedererwägung anzuwenden, hätte er diese zwei Rückkommenstitel in der Bestimmung erwähnt oder ganz allgemein von der Revision gesprochen, ohne darin einzig die Veränderung des Invaliditätsgrades (Bestimmung vor Inkrafttreten des ATSG) bzw. die Bestimmung von Art. 17 ATSG zu nennen. Gegen eine analoge Anwendung von Art. 22 UVG sprechen auch Sinn und Zweck der Wiedererwägung. Die Bestimmung von Art. 53 Abs. 2 ATSG regelt die Korrektur einer anfänglich unrichtigen Rechtsanwendung (THOMAS FLÜCKIGER, in: Basler Kommentar, Allgemeiner Teil des Sozialversicherungsrechts, 2020, N. 1 f. zu Art. 53 ATSG; MARGIT MOSER-SZELESS, in: Commentaire romand, Loi sur la partie générale des assurances sociales [LPGA], 2018, N. 1 ff. zu Art. 53 ATSG). Es geht also um die Konstellation, in der die Leistung von Anfang an zu Unrecht zugesprochen wurde, jedenfalls sofern sich aufgrund der nachträglich korrekten Rechtsanwendung ergibt, dass die Leistung nicht geschuldet gewesen wäre. Ergibt hingegen die Überprüfung der Leistungszusprechung im Rahmen der Wiedererwägung, dass diese zu Recht erfolgte, bleibt es dabei. Nach der Rechtsprechung besteht denn auch keine zeitliche Befristung der Wiedererwägungsmöglichkeit (BGE 140 V 514 E. 3; vgl. aber die Fristen für eine allfällige Rückforderung unrechtmässig bezogener Leistungen gemäss Art. 25 Abs. 2 ATSG sowie der prozessualen Revision nach Art. 53 Abs. 1 ATSG i.V.m. Art. 67 VwVG). Im Rahmen von Art. 17 Abs. 1 ATSG wird dagegen ein anfänglich korrekter Entscheid aufgrund veränderter Verhältnisse für die Zukunft angepasst. Eine analoge Anwendung von Art. 22 UVG auf die Wiedererwägung nach Art. 53 Abs. 2 ATSG ist mit Blick auf diese Unterschiede nicht angezeigt."
+            },
+            {
+              "marke": "E. 7.8",
+              "tiefe": 2,
+              "text": "Demnach verstiess das kantonale Gericht nicht gegen Bundesrecht, indem es Art. 22 UVG bei der Wiedererwägung nicht zur Anwendung brachte (vgl. dazu auch VOLKER PRIBNOW/SARAH EICHENBERGER, in: Hürzeler/Kieser [Hrsg.], Kommentar zum schweizerischen Sozialversicherungsrecht, UVG, 2018, N. 4 zu Art. 22 UVG; JEAN-MAURICE FRÉSARD/MARGIT MOSER-SZELESS, L'assurance-accidents obligatoire, in: Schweizerisches Bundesverwaltungsrecht [SBVR], 3. Aufl. 2016, S. 996 N. 301 ff.)."
+            },
+            {
+              "marke": "E. 8",
+              "tiefe": 1,
+              "text": "Zusammenfassend hält die wiedererwägungsweise Aufhebung der Invalidenrente vor Bundesrecht stand. Damit hat es beim vorinstanzlichen Urteil sein Bewenden. Die Rechtmässigkeit der Rentenaufhebung ändert nichts daran, dass das Vorgehen der Allianz fragwürdig erscheint. Nachdem eine Rentenrevision aufgrund von Art. 22 UVG nicht mehr möglich war, berief sie sich auf den Wiedererwägungsgrund der fälschlicherweise unterlassenen Adäquanzprüfung, um einer 69-jährigen Rentenbezügerin die Rente nach fast 20-jähriger Bezugsdauer auf dem Weg der Wiedererwägung zu streichen. Es sei daran erinnert, dass der Entscheid darüber, ob eine Wiedererwägung im Sinne von Art. 53 Abs. 2 ATSG vorgenommen wird oder nicht, bei Fehlen von Revisionsgründen im alleinigen Ermessen des Versicherungsträgers liegt (\"kann\"; statt vieler: BGE 133 V 50 E. 4.1; Urteil 8C_414/2021 vom 12. Oktober 2021 E. 4.3 mit Hinweisen). Ein bedachtsamer Umgang mit dem Institut der Wiedererwägung wäre deshalb ratsam."
+            },
+            {
+              "marke": "E. 9",
+              "tiefe": 1,
+              "text": "Die unterliegende Beschwerdeführerin hat die Gerichtskosten zu tragen (Art. 66 Abs. 1 und 2 BGG). Die Beschwerdegegnerin hat keinen Anspruch auf eine Parteientschädigung (Art. 68 Abs. 3 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 800.- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien, dem Versicherungsgericht des Kantons Aargau und dem Bundesamt für Gesundheit schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 15. März 2023 Im Namen der IV. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Wirthlin Der Gerichtsschreiber: Wüest"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist.",
+        "Die Gerichtskosten von Fr. 800.- werden der Beschwerdeführerin auferlegt.",
+        "Dieses Urteil wird den Parteien, dem Versicherungsgericht des Kantons Aargau und dem Bundesamt für Gesundheit schriftlich mitgeteilt.\nLuzern, 15. März 2023"
+      ],
+      "zitierteNormen": [
+        "Art. 17 Abs. 1 ATSG",
+        "Art. 17 ATSG",
+        "Art. 22 Abs. 1 UVG",
+        "Art. 22 LAA",
+        "Art. 22 LAINF",
+        "Art. 22 UVG",
+        "Art. 25 Abs. 2 ATSG",
+        "Art. 53 Abs. 1 ATSG"
+      ],
+      "normKeys": [
+        "ATSG",
+        "UVG",
+        "BGG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=16&from_date=&to_date=&from_year=2023&to_year=2023&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=156&highlight_docid=atf%3A%2F%2F149-V-91%3Ade&number_of_ranks=189&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "46683e18015672014f0ee555bc1be105751fa8a8b02119de4dd4c356f20660ff",
+      "sha": "860ab4a82c2d8dc3a35c78c593490243d093c18b324fdc05c60b5d62957497bf",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Die 1951 geborene A. war seit dem 13. Oktober 1976 als Kindergärtnerin angestellt und in dieser Eigenschaft bei der ELVIA Schweizerische Versicherungsgesellschaft Zürich (ELVIA; heute Allianz Suisse Versicherungs-Gesellschaft AG [nachfolgend: Allianz]) gegen die Folgen von Berufsunfällen, Nichtberufsunfällen sowie Berufskrankheiten versichert, als sie am 31. Mai 1994 bei einem Verkehrsunfall ein Schleudertrauma erlitt (Unfallmeldung vom 2. Juni 1994). Die ELVIA erbrachte hierfür die gesetzlichen Leistungen nach UVG. Während laufender medizinischer Abklärungen zum erwähnten Schadenereignis erlitt A. anlässlich eines weiteren Verkehrsunfalls vom 1. Mai 1997 Verletzungen an der Brust- und Halswirbelsäule (Unfallmeldung vom 7. August 1997). Die Allianz als Rechtsnachfolgerin der ELVIA sprach A. infolge der unfallbedingten Beschwerden vergleichsweise eine Invalidenrente bei einem Invaliditätsgrad von 25 % und eine Integritätsentschädigung bei einer Integritätseinbusse von 25 % zu, wobei sie ihr den Vergleich in Form einer anfechtbaren Verfügung (Verfügung vom 30. September 2002) eröffnete. Diese erwuchs unangefochten in Rechtskraft."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Mit Verfügung vom 16. Oktober 2020 zog die Allianz ihre Verfügung vom 30. September 2002 in Wiedererwägung und stellte ihre Versicherungsleistungen per 31. Oktober 2020 ein. Mit Einspracheentscheid vom 12. Januar 2022 wies sie die von A. dagegen erhobene Einsprache ab, hob die Invalidenrente sowie die Integritätsentschädigung wiedererwägungsweise auf und stellte die Versicherungsleistungen per 31. Oktober 2020 ein. B. Die hiergegen erhobene Beschwerde wies das Versicherungsgericht des Kantons Aargau mit Urteil vom 12. September 2022 ab. Auf das Gesuch um Erteilung der aufschiebenden Wirkung der Beschwerde trat es nicht ein. C. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten lässt A. beantragen, es sei der Einspracheentscheid vom 12. Januar 2022 aufzuheben und es seien ihr weiterhin die Versicherungsleistungen zu erbringen. Die Vorinstanz und das Bundesamt für Gesundheit (BAG) verzichten auf eine Vernehmlassung. Die Allianz beantragt in ihrer Stellungnahme, auf die Beschwerde sei nicht einzutreten; eventualiter sei diese abzuweisen. Die Beschwerdeführerin lässt eine Replik einreichen. D. Das Bundesgericht hat am 15. März 2023 eine öffentliche Beratung durchgeführt. Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin macht im Weiteren geltend, eine wiedererwägungsweise erfolgte Rentenaufhebung sei in analoger Anwendung von Art. 22 UVG mit Erreichen des Rentenalters nicht mehr zulässig. Der normative Gehalt von Art. 22 UVG sei analog auf die Situation bei einer Wiedererwägung gemäss Art. 53 Abs. 2 ATSG anzuwenden. Der Schutzgedanke sei äquivalent zur Situation bei einer Rentenrevision gestützt auf Art. 17 Abs. 1 ATSG."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "Die Vorinstanz erwog, die Bestimmung von Art. 22 UVG erfasse ausdrücklich nur die (materielle) Revision nach Art. 17 ATSG, welche die Beschwerdegegnerin aufgrund des Erreichens des Rentenalters durch die Beschwerdeführerin (Jahrgang 1951) nicht in Erwägung gezogen habe. Hingegen blieben die (prozessuale) Revision oder die Wiedererwägung im Sinne von Art. 53 ATSG von der Relativierung gemäss Art. 22 UVG unberührt."
+            },
+            {
+              "marke": "E. 7.3",
+              "tiefe": 2,
+              "text": "Ausgangspunkt jeder Auslegung bildet der Wortlaut der Bestimmung. Ist der Text nicht ganz klar und sind verschiedene Interpretationen möglich, so muss nach seiner wahren Tragweite gesucht werden unter Berücksichtigung aller Auslegungselemente. Abzustellen ist dabei namentlich auf die Entstehungsgeschichte der Norm und ihren Zweck, auf die dem Text zu Grunde liegenden Wertungen sowie auf die Bedeutung, die der Norm im Kontext mit anderen Bestimmungen zukommt. Die Gesetzesmaterialien sind zwar nicht unmittelbar entscheidend, dienen aber als Hilfsmittel, um den Sinn der Norm zu erkennen. Das Bundesgericht hat sich bei der Auslegung von Erlassen stets von einem Methodenpluralismus leiten lassen und nur dann allein auf das grammatikalische Element abgestellt, wenn sich daraus zweifelsfrei die sachlich richtige Lösung ergab (BGE 147 V 55 E. 5.1; BGE 145 V 2 E. 4.1 S. 6; BGE 142 V 442 E. 5.1 S. 445; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 7.4",
+              "tiefe": 2,
+              "text": "Die Bestimmung von Art. 22 UVG lautet wie folgt: \"In Abweichung von Artikel 17 Absatz 1 ATSG kann die Rente ab dem Monat, in dem die berechtigte Person eine Altersrente der AHV bezieht, spätestens jedoch ab Erreichen des Rentenalters nach Artikel 21 des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung nicht mehr revidiert werden.\" BGE 149 V 91 S. 94 \"En dérogation à l'art. 17, al. 1, LPGA, la rente ne peut plus être révisée à compter du mois au cours duquel l'ayant droit perçoit une rente de vieillesse de l'AVS, mais au plus tard lorsqu'il atteint l'âge de la retraite fixé à l'art. 21 de la loi fédérale du 20 décembre 1946 sur l'assurance-vieillesse et survivants.\" \"In deroga all'articolo 17 capoverso 1 LPGA, la rendita non può più essere riveduta dal mese in cui l'avente diritto riceve una rendita di vecchiaia dell'AVS, ma al più tardi dal momento in cui lo stesso raggiunge l'età di pensionamento secondo l'articolo 21 della legge federale del 20 dicembre 1946 sull'assicurazione per la vecchiaia e per i superstiti.\" Die Bestimmung lautete in der vom 1. Januar 1984 bis 31. Dezember 2002 gültig gewesenen Fassung (d.h. vor Inkrafttreten des ATSG) wie folgt (AS 1982 1676): \" 1 Ändert sich der Invaliditätsgrad des Rentenbezügers erheblich, so wird die Rente für die Zukunft entsprechend erhöht, herabgesetzt oder aufgehoben. Nach dem Monat, in dem Männer das 65. und Frauen das 62. Altersjahr vollendet haben, kann die Rente nicht mehr revidiert werden. 2 Für Untersuchungen und Beobachtungen, die für die Revision erforderlich sind, werden die gesetzlichen Leistungen erbracht. Erleidet der Versicherte durch die Untersuchungen oder Beobachtungen eine Verdiensteinbusse, so werden ihm Taggelder gewährt.\""
+            },
+            {
+              "marke": "E. 7.5",
+              "tiefe": 2,
+              "text": "Gemäss Art. 17 Abs. 1 ATSG wird die Rente von Amtes wegen oder auf Gesuch hin für die Zukunft entsprechend erhöht, herabgesetzt oder aufgehoben, wenn sich der Invaliditätsgrad einer Rentenbezügerin oder eines Rentenbezügers erheblich ändert. Anlass zur Revision einer Invalidenrente im Sinne von Art. 17 Abs. 1 ATSG gibt jede wesentliche Änderung in den tatsächlichen Verhältnissen, die geeignet ist, den Invaliditätsgrad und damit den Rentenanspruch zu beeinflussen (BGE 130 V 343 E. 3.5; BGE 113 V 273 E. 1a; siehe auch BGE 112 V 371 E. 2b und 387 E. 1b)."
+            },
+            {
+              "marke": "E. 7.6",
+              "tiefe": 2,
+              "text": "Wie die Vorinstanz zutreffend festhielt, betrifft die Bestimmung von Art. 22 UVG vom klaren Wortlaut her nur die (materielle) Revision nach Art. 17 ATSG und nicht auch die prozessuale Revision und die Wiedererwägung gemäss Art. 53 ATSG. Dies ergibt sich auch aus der vor Inkrafttreten des ATSG geltenden Fassung von Art. 22 UVG, wo von der Änderung des Invaliditätsgrades und BGE 149 V 91 S. 95 somit ebenfalls nur von der materiellen Revision die Rede war. In der Botschaft vom 18. August 1976 zum Bundesgesetz über die Unfallversicherung (BBl 1976 III 141 ff.) wurde zur Begründung für das Dahinfallen der Revisionsmöglichkeit bei Erreichen des Rentenalters ausgeführt, dass zu diesem Zeitpunkt die Altersrente einsetze, die ihrerseits einen Ersatz für entgehendes oder allmählich sinkendes Erwerbseinkommen bilde. Für die Invalidenrenten der Unfallversicherung gingen damit die Möglichkeiten eines Einkommensvergleichs verloren. Eine strengere Anwendung des ökonomischen Prinzips würde allerdings mit dem Beginn des Anspruches auf eine Altersrente zur Einstellung der Unfallversicherungsrente führen. Sozialpolitisch wäre eine derartige Lösung aber kaum zu vertreten. Mit Einführung der sogenannten Komplementärrenten sei hinreichend dafür gesorgt, dass eine Überversicherung jederzeit ausgeschlossen sei (Botschaft, a.a.O., S. 192). Die Bestimmung wurde in den Räten gemäss Botschaft genehmigt und gab keinen Anlass zu Diskussionen. Mit Inkrafttreten des ATSG auf den 1. Januar 2003 wurde Art. 22 Abs. 1 Satz 1 UVG ohne inhaltliche Änderung in Art. 17 Abs. 1 ATSG überführt und Art. 22 UVG erfuhr, ebenfalls mit Wirkung ab 1. Januar 2003, eine Aktualisierung. Zur Begründung wurde im Bericht der Kommission des Nationalrates für soziale Sicherheit vom 26. März 1996 ausgeführt, Art. 22 UVG befasse sich mit der Rentenrevision und halte im ersten Satz des Absatzes 1 den Grundsatz fest. Da das ATSG die Revision in Artikel 23 (entsprechend dem heutigen Art. 17 ATSG) regle, erweise sich der erste Satz in Artikel 22 Absatz 1 UVG als überflüssig (Parlamentarische Initiative Sozialversicherungsrecht, Bericht der Kommission des Nationalrates für soziale Sicherheit und Gesundheit vom 26. März 1999, BBl 1999 4523, 4690)."
+            },
+            {
+              "marke": "E. 7.7",
+              "tiefe": 2,
+              "text": "Hätte der Gesetzgeber beabsichtigt, die Bestimmung von Art. 22 UVG auch auf Fälle der prozessualen Revision und der Wiedererwägung anzuwenden, hätte er diese zwei Rückkommenstitel in der Bestimmung erwähnt oder ganz allgemein von der Revision gesprochen, ohne darin einzig die Veränderung des Invaliditätsgrades (Bestimmung vor Inkrafttreten des ATSG) bzw. die Bestimmung von Art. 17 ATSG zu nennen. Gegen eine analoge Anwendung von Art. 22 UVG sprechen auch Sinn und Zweck der Wiedererwägung. Die Bestimmung von Art. 53 Abs. 2 ATSG regelt die Korrektur einer anfänglich unrichtigen Rechtsanwendung (THOMAS FLÜCKIGER, in: Basler Kommentar, Allgemeiner Teil des BGE 149 V 91 S. 96 Sozialversicherungsrechts, 2020, N. 1 f. zu Art. 53 ATSG; MARGIT MOSER-SZELESS, in: Commentaire romand, Loi sur la partie générale des assurances sociales [LPGA], 2018, N. 1 ff. zu Art. 53 ATSG). Es geht also um die Konstellation, in der die Leistung von Anfang an zu Unrecht zugesprochen wurde, jedenfalls sofern sich aufgrund der nachträglich korrekten Rechtsanwendung ergibt, dass die Leistung nicht geschuldet gewesen wäre. Ergibt hingegen die Überprüfung der Leistungszusprechung im Rahmen der Wiedererwägung, dass diese zu Recht erfolgte, bleibt es dabei. Nach der Rechtsprechung besteht denn auch keine zeitliche Befristung der Wiedererwägungsmöglichkeit (BGE 140 V 514 E. 3; vgl. aber die Fristen für eine allfällige Rückforderung unrechtmässig bezogener Leistungen gemäss Art. 25 Abs. 2 ATSG sowie der prozessualen Revision nach Art. 53 Abs. 1 ATSG i.V.m. Art. 67 VwVG). Im Rahmen von Art. 17 Abs. 1 ATSG wird dagegen ein anfänglich korrekter Entscheid aufgrund veränderter Verhältnisse für die Zukunft angepasst. Eine analoge Anwendung von Art. 22 UVG auf die Wiedererwägung nach Art. 53 Abs. 2 ATSG ist mit Blick auf diese Unterschiede nicht angezeigt."
+            },
+            {
+              "marke": "E. 7.8",
+              "tiefe": 2,
+              "text": "Demnach verstiess das kantonale Gericht nicht gegen Bundesrecht, indem es Art. 22 UVG bei der Wiedererwägung nicht zur Anwendung brachte (vgl. dazu auch PRIBNOW/EICHENBERGER, in: Kommentar zum schweizerischen Sozialversicherungsrecht, UVG, Hürzeler/ Kieser [Hrsg.], 2018, N. 4 zu Art. 22 UVG; FRÉSARD/MOSER-SZELESS, L'assurance-accidents obligatoire, in: Soziale Sicherheit, SBVR Bd. XIV, 3. Aufl. 2016, S. 996 Rz. 301 ff.)."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "8C_616/2022",
+        "key": "bger_8C_616_2022",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=14.03.2023&to_date=17.03.2023&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=42&azaclir=aza&highlight_docid=aza%3A%2F%2F15-03-2023-8C_616-2022&number_of_ranks=85"
+      },
+      "ecli": "ECLI:CH:BGE:2023:149.V.91"
+    }
+  ]
+}

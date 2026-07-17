@@ -1,0 +1,242 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/149_III_23",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "149 III 23",
+      "bgeReferenz": "149 III 23",
+      "zitierung": "BGE 149 III 23",
+      "datum": "2022-07-06",
+      "sprache": "fr",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": null,
+      "rubrum": {
+        "besetzung": "Mmes et M. les Juges fédéraux Hohl, Présidente, Kiss, Niquille, Rüedi et May Canellas. Greffier: M. Douzals",
+        "parteien": "A.________, représenté par Me Albert J. Graf, avocat, recourant, contre B.________, représenté par Me Cédric Aguet, avocat, intimé",
+        "gegenstand": null,
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Art. 83 Abs. 2 SchKG; Art. 90 und 198 ZPO; Aberkennungsklage; objektive Klagenhäufung; Schlichtungsverfahren. Prüfung der Zulässigkeit, eine Aberkennungsklage, die dem Erfordernis eines vorgängigen Schlichtungsverfahrens nicht unterworfen ist, und eine Klage, die von diesem Erfordernis nicht ausgenommen ist, zu häufen (E. 4).\nRegeste\n Art. 83 al. 2 LP; art. 90 et 198 CPC; action en libération de dette; cumul objectif d'actions; procédure de conciliation. Examen de la possibilité de cumuler à une action en libération de dette, dispensée de l'obligation de la conciliation préalable, une action qui n'est pas exemptée de ladite obligation (consid. 4).\nRegesto\n Art. 83 cpv. 2 LEF; art. 90 e 198 CPC; azione di disconoscimento del debito; cumulo oggettivo di azioni; procedura di conciliazione. Esame della possibilità di cumulare un'azione di disconoscimento del debito, dispensata dall'obbligo di una conciliazione preliminare, con un'azione che non è esonerata da tale obbligo (consid. 4).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 83 Abs. 2 SchKG; Art. 90 und 198 ZPO; Aberkennungsklage; objektive Klagenhäufung; Schlichtungsverfahren.",
+            "absaetze": [
+              "Prüfung der Zulässigkeit, eine Aberkennungsklage, die dem Erfordernis eines vorgängigen Schlichtungsverfahrens nicht unterworfen ist, und eine Klage, die von diesem Erfordernis nicht ausgenommen ist, zu häufen (E. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-23%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 83 al. 2 LP; art. 90 et 198 CPC; action en libération de dette; cumul objectif d'actions; procédure de conciliation.",
+            "absaetze": [
+              "Examen de la possibilité de cumuler à une action en libération de dette, dispensée de l'obligation de la conciliation préalable, une action qui n'est pas exemptée de ladite obligation (consid. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-23%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 83 cpv. 2 LEF; art. 90 e 198 CPC; azione di disconoscimento del debito; cumulo oggettivo di azioni; procedura di conciliazione.",
+            "absaetze": [
+              "Esame della possibilità di cumulare un'azione di disconoscimento del debito, dispensata dall'obbligo di una conciliazione preliminare, con un'azione che non è esonerata da tale obbligo (consid. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-23%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Le 14 mai 2018, B.________ (ci-après: le créancier, le défendeur ou l'intimé) a adressé à l'Office des poursuites du district de Nyon une réquisition de poursuite en réalisation de gage immobilier, soit de la créance abstraite incorporée dans la cédule hypothécaire de 250'000 fr., à l'encontre d'A.________ (ci-après: le débiteur, le demandeur ou le recourant), à concurrence du montant de 50'000 fr., intérêts en sus. Le débiteur a formé opposition à ce commandement de payer (complètement selon l' art. 105 al. 2 LTF). Par jugement du 3 septembre 2018, la Juge de paix du district de Nyon a provisoirement levé ladite opposition à concurrence du montant indiqué dans le commandement de payer. En substance, elle a retenu que les parties avaient conclu un contrat prévoyant que le créancier octroierait un prêt de 250'000 fr. au débiteur, que celui-ci lui remettrait une cédule hypothécaire au porteur s'élevant au même montant, qu'il n'était pas contesté que le débiteur avait remboursé 200'000 fr. au créancier, et que le débiteur n'avait pas prouvé par pièces que le montant du prêt initial avait été réduit de 50'000 fr., de sorte que ce solde restait dû."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Le 6 novembre 2018, le débiteur a déposé une demande en libération de dette à l'encontre du créancier auprès du Tribunal civil de l'arrondissement de La Côte, concluant à ce qu'il soit constaté qu'il n'était pas le débiteur du défendeur, à ce que la poursuite litigieuse soit radiée et à ce que le défendeur libère et lui restitue la cédule hypothécaire qu'il lui avait remise. Le défendeur a conclu au rejet de ces conclusions, sous réserve de la conclusion relative à la libération de la cédule hypothécaire qui devait être déclarée irrecevable, et a pris des conclusions reconventionnelles. Par jugement du 10 novembre 2020, le tribunal a rejeté la demande, dans la mesure où elle était recevable, a dit que le demandeur devait payer au défendeur la somme de 55'000 fr., intérêts en sus, correspondant au solde du prêt en 50'000 fr. avec intérêts conventionnels à 4 % l'an capitalisés au 30 avril 2014, date d'échéance du prêt, et a prononcé à concurrence dudit montant la mainlevée définitive de l'opposition au commandement de payer. En substance, il a retenu que l'action en remise de la cédule hypothécaire était irrecevable car la conciliation préalable obligatoire n'avait pas été tentée et que l'action en libération de dette devait être rejetée au motif qu'il ne ressortait pas des pièces produites par le demandeur que les parties eussent eu la volonté réelle et commune de convenir d'une remise de dette à hauteur de 50'000 fr. Par arrêt du 18 octobre 2021, la Cour d'appel civile du Tribunal cantonal du canton de Vaud a rejeté l'appel interjeté par le demandeur et réformé d'office le jugement entrepris, en ce sens que la demande était irrecevable dans son entier, et non rejetée dans la mesure de sa recevabilité. En substance, elle a considéré que l'irrecevabilité des conclusions relatives à la restitution de la cédule hypothécaire, faute de conciliation préalable, entraînait l'irrecevabilité de l'action en libération de dette."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Contre cet arrêt, qui lui a été notifié le 21 octobre 2021, le demandeur a formé un recours en matière civile auprès du Tribunal fédéral le 19 novembre 2021. Il conclut à ce que l'arrêt entrepris soit annulé et, principalement, réformé, en ce sens que l'action en libération de dette soit déclarée recevable, qu'il soit dit qu'il n'est pas le débiteur de l'intimé à hauteur de 50'000 fr., intérêts en sus, et que la radiation de la poursuite litigieuse soit ordonnée et, subsidiairement, à ce que la cause soit renvoyée à la cour cantonale pour nouvelle instruction et nouvelle décision dans le sens des considérants. L'intimé ne s'est pas déterminé sur le recours dans le délai qui lui avait été imparti à cette fin. La cour cantonale se réfère aux considérants de son arrêt."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Interjeté dans le délai fixé par la loi (art. 100 al. 1 et art. 45 al. 1 LTF) par le demandeur, qui a succombé dans ses conclusions (art. 76 al. 1 LTF), et dirigé contre une décision finale (art. 90 LTF) rendue sur appel par le tribunal supérieur du canton de Vaud (art. 75 LTF) dans une affaire civile (art. 72 al. 1 LTF) dont la valeur litigieuse dépasse 30'000 fr. (art. 74 al. 1 let. b LTF), le recours en matière civile est en principe recevable."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Le Tribunal fédéral statue sur la base des faits établis par l'autorité précédente (art. 105 al. 1 LTF). Il ne peut s'en écarter que si ces faits ont été établis de façon manifestement inexacte - ce qui correspond à la notion d'arbitraire au sens de l' art. 9 Cst. (ATF 140 III 115 consid. 2; 137 I 58 consid. 4.1.2; 137 II 353 consid. 5.1) - ou en violation du droit au sens de l' art. 95 LTF (art. 105 al. 2 LTF), et si la correction du vice est susceptible d'influer sur le sort de la cause (art. 97 al. 1 LTF). Concernant l'appréciation des preuves, le Tribunal fédéral n'intervient, du chef de l' art. 9 Cst., que si le juge du fait n'a manifestement pas compris le sens et la portée d'un moyen de preuve, a omis sans raisons objectives de tenir compte des preuves pertinentes ou a effectué, sur la base des éléments recueillis, des déductions insoutenables (ATF 137 III 226 consid. 4.2; 136 III 552 consid. 4.2; 134 V 53 consid. 4.3; 133 II 249 consid. 1.4.3; 129 I 8 consid. 2.1). La critique de l'état de fait retenu est soumise au principe strict de l'allégation énoncé par l' art. 106 al. 2 LTF (ATF 140 III 264 consid. 2.3 et les références citées). La partie qui entend attaquer les faits constatés par l'autorité précédente doit expliquer clairement et de manière circonstanciée en quoi ces conditions seraient réalisées (ATF 140 III 16 consid. 1.3.1 et les références citées). Si elle souhaite obtenir un complètement de l'état de fait, elle doit aussi démontrer, par des renvois précis aux pièces du dossier, qu'elle a présenté aux autorités précédentes, en conformité avec les règles de la procédure, les faits juridiquement pertinents à cet égard et les moyens de preuve adéquats (ATF 140 III 86 consid. 2). Si la critique ne satisfait pas à ces exigences, les allégations relatives à un état de fait qui s'écarterait de celui de la décision attaquée ne pourront pas être prises en considération (ATF 140 III 16 consid. 1.3.1). Les critiques de nature appellatoire sont irrecevables (ATF 130 I 258 consid. 1.3)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Le Tribunal fédéral applique en principe d'office le droit (art. 106 al. 1 LTF) à l'état de fait constaté dans l'arrêt cantonal (ou à l'état de fait qu'il aura rectifié). Cela ne signifie pas que le Tribunal fédéral examine, comme le ferait un juge de première instance, toutes les questions juridiques qui pourraient se poser. Compte tenu de l'obligation de motiver imposée par l' art. 42 al. 2 LTF, il ne traite que les questions qui sont soulevées devant lui par les parties, à moins que la violation du droit ne soit manifeste (ATF 140 III 115 consid. 2, 86 consid. 2). Il n'est en revanche pas lié par l'argumentation juridique développée par les parties ou par l'autorité précédente; il peut admettre le recours, comme il peut le rejeter en procédant à une substitution de motifs (ATF 135 III 397 consid. 1.4)."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Le Tribunal civil d'arrondissement a rejeté la demande dans la mesure où elle était recevable et dit que le demandeur devait payer au défendeur le montant de 55'000 fr. avec intérêts à 5 % l'an dès le 30 mai 2014. Il résulte des motifs de son jugement qu'il est entré en matière sur l'action en libération de dette et qu'il l'a rejetée. Il n'a donc pas eu à statuer sur la restitution de la cédule hypothécaire, laquelle présupposait que le prêt fût remboursé, ce qu'il n'avait pas admis. Examinant d'office, en l'absence de grief, l'action du demandeur tendant à la condamnation du défendeur à restituer la cédule hypothécaire, la cour cantonale a considéré qu'elle était irrecevable. Elle en a déduit que cela entraînait également l'irrecevabilité de l'action en libération de dette. Elle a donc réformé le premier jugement et déclaré la demande irrecevable dans son entier."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Bien que, dans ses conclusions, le demandeur recourant ne conclue qu'à ce qu'il soit déclaré que son action en libération de dette est recevable, il ressort des motifs de son recours qu'il entend que le Tribunal fédéral se prononce également sur la question de la restitution de la cédule hypothécaire, qui, selon lui, n'est pas une action cumulée, mais une conséquence directe du remboursement intégral de sa dette au sens de l' art. 853 ch. 2 CC. La cour cantonale n'ayant pas statué sur l'existence ou l'inexistence du remboursement total de la dette, mais déclaré l'irrecevabilité de l'entier de la demande, la Cour de céans se limitera à examiner cette question procédurale."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Est litigieuse la question de savoir si le débiteur qui ouvre action en libération de dette selon l' art. 83 al. 2 LP, à la suite d'une décision de mainlevée provisoire prononcée dans le cadre d'une poursuite en réalisation de gage immobilier pour la créance abstraite incorporée dans la cédule hypothécaire, mais dont la garantie est limitée par convention de sûreté (ou de fiducie) au montant de la créance de base, c'est-à-dire au montant du prêt non remboursé (remise de la cédule hypothécaire en garantie fiduciaire, désormais présumée par l' art. 842 al. 2 CC; cf. arrêt 4A_559/2019 du 12 mai 2020 consid. 2), action qui est dispensée de la tentative préalable de conciliation (art. 198 let. e ch. 1 CPC), peut y joindre une action additionnelle en restitution de la cédule hypothécaire, au sens d'un cumul objectif d'actions de l' art. 90 CPC, quand bien même cette dernière ne serait pas dispensée de l'obligation de la conciliation préalable. Il s'impose de rappeler d'abord brièvement la jurisprudence relative à l'action en libération de dette, avant d'examiner la question procédurale posée."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Selon l' art. 83 al. 2 LP, l'action en libération de dette est une action en constatation de droit négative, qui ressortit au droit matériel. Elle est le pendant de l'action en reconnaissance de dette prévue à l' art. 79 LP; seul le rôle des parties est renversé, mais non les fardeaux de la preuve et de l'allégation de l'existence de la créance (ATF 134 III 656 consid. 5.3.1; 131 III 268 consid. 3.1; 130 III 285 consid. 5.3.1; 127 III 232 consid. 3a; 124 III 207 consid. 3a). Le débiteur est le demandeur à cette action et le créancier en est le défendeur. Lorsque le débiteur dépose, en même temps que son action en libération de dette, d'autres conclusions, il y a cumul objectif d'actions au sens de l' art. 90 CPC, et non une reconvention (qui n'exigerait pas de conciliation préalable en vertu de l' art. 198 let. g CPC), malgré le renversement des rôles. En effet, la reconvention étant une notion de procédure, et non de droit de fond, elle ne vise que l'action formée dans la même instance par le défendeur, de sorte que les deux actions s'opposent l'une à l'autre; il s'ensuit que, dans l'action en libération de dette, seul le créancier défendeur à cette action peut prendre des conclusions reconventionnelles. Si le débiteur demandeur joint à ses conclusions libératoires d'autres conclusions, il forme une action cumulée (ou additionnelle) au sens de l' art. 90 CPC (ATF 124 III 207 consid. 3a; 58 I 165 consid. 3; arrêt 4A_176/2019 du 2 septembre 2019 consid. 4.3). Selon la jurisprudence et la doctrine, dès lors que l'action cumulée est intentée devant le juge de l'action en libération de dette, au for de la poursuite, elle n'est en principe admissible que si elle est connexe à l'action principale et, par conséquent, entre dans la compétence locale du juge saisi (art. 15 al. 2 CPC), qu'elle ressortit également à sa compétence matérielle et est soumise à la même procédure; sont réservées une prétention invoquée en compensation ou une prétention constituant un simple accessoire de l'action en libération de dette elle-même. Ces conditions ont pour but d 'éviter que l'action en libération de dette ne soit rendue plus difficile ou ne soit retardée (ATF 124 III 207 consid. 3b/bb; 58 I 165 consid. 2; DANIEL STAEHELIN, in Basler Kommentar, 3e éd. 2021, no 52 ad art. 83 LP)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Pour le même motif, l'action cumulée à une action en libération de dette n'est admissible que si elle n'est pas elle-même soumise à la tentative de conciliation préalable (art. 198 et 199 CPC; STAEHELIN, ibid.; STÉPHANE ABBET, in La mainlevée de l'opposition, 2017, no 54 ad art. 83 LP). Si tel n'est pas le cas, elle est irrecevable et la procédure se poursuit sur la seule action en libération de dette. La recevabilité doit être examinée séparément pour chacune des actions. C'est ce que le Tribunal fédéral a admis comme étant la règle en cas de cumul d'actions (arrêt 4A_368/2020 du 9 février 2021 consid. 2, pour l'action en inscription définitive de l'hypothèque légale des artisans et entrepreneurs et l'action en paiement du prix de l'ouvrage) et qu'il a également admis pour les actions cumulées à une action en libération de dette (arrêts 4A_213/2019 du 4 novembre 2019 consid. 3; 4A_176/2019 du 2 septembre 2019 consid. 4.3; 4A_262/2018 du 31 août 2018; 4A_413/2012 du 14 janvier 2013consid. 6.1). Telle est également la position d'une partie importante de la doctrine (CHRISTOPH LEUENBERGER, in Kommentar zur Schweizerischen Zivilprozessordnung, 3e éd. 2016, no 4b ad art. 220 CPC p. 1586; ERIC PAHUD, in Schweizerische Zivilprozessordnung - Kommentar, t. II, 2e éd. 2016, no 14 ad art. 220 CPC; CLAUDE SCHRANK, Das Schlichtungsverfahren nach der Schweizerischen Zivilprozessordnung, 2015, p. 54 n. 94 et p. 59 n. 101; DANIEL STAEHELIN, in Zivilprozessrecht, 3e éd. 2019, p. 364 n. 5; FRANCESCO TREZZINI, in Commentario pratico al Codice di diritto processuale civile svizzero, vol. II, 2e éd. 2017, no 13 ad art. 198 CPC; DOLGE/INFANGER, Schlichtungsverfahren nach Schweizerischer Zivilprozessordnung, 2012, p. 95; FRANÇOIS BOHNET, Das mietrechtliche Schlichtungsverfahren im schweizerischen Zivilprozessrecht, RSPC 4/2010 p. 423 n. 11; ABBET, ibid.; KATIA ELKAIM-LÉVY, Premières expériences avec le nouveau code de procédure civile, le point de vue du magistrat, in Nouvelle procédure civile et espace judiciaire européen, 2012, p. 38; RICHARD PÜNTENER, Zivilprozessrecht für die Mietrechtspraxis, 2016, p. 28 n. 94). Les auteurs qui soutiennent que les deux actions devraient alors être exemptées de la conciliation préalable (FLORIAN MOHS, in Gehri et al. [édit.], ZPO Kommentar, 2e éd. 2015, no 1c ad art. 90 CPC; cf. ELKAIM-LÉVY, op. cit., p. 37) ou, au contraire, qu'elles devaient toutes deux être soumises à la conciliation préalable sous peine d'irrecevabilité (FRANÇOIS BOHNET, in Commentaire romand, 2e éd. 2019, no 20 ad art. 198 CPC; BOHNET/CONOD, Bail et procédure civile suisse: premiers développements, in 17e séminaire sur le droit du bail, 2012, p. 238 n. 68; TAPPY/NOVIER, La procédure de conciliation et la médiation dans le Code de procédure civile suisse [art. 197-218 CPC], in Il Codice di diritto processuale civile svizzero, 2011, p. 91; DENIS TAPPY, Cumul objectif et concours d'actions selon le nouveau CPC, in Nouvelle procédure civile et espace judiciaire européen, 2012, p. 198 s.; AESCHLIMANN-DISLER/HEINZMANN, in Petit commentaire, 2021, no 18 ad art. 197/198 CPC; WYLER/HEINZER, Droit du travail, 4e éd. 2019, p. 954 s.) ne peuvent être suivis. D'une part, l'action cumulée à une action en libération de dette ne constitue pas une action reconventionnelle exemptée de la procédure de conciliation préalable. D'autre part, imposer une tentative de conciliation à l'action en libération de dette serait contraire à l' art. 198 let. e ch. 1 CPC qui l'en exempte. Il y a lieu de faire toutefois une exception pour l'action cumulée en restitution de la cédule hypothécaire lorsqu'elle est un simple accessoire de l'inexistence de la créance objet de l'action en libération de dette. Tel ne serait en revanche pas le cas lorsque la cédule hypothécaire garantit encore d'autres prétentions que celles en litige, comme c'est souvent le cas en vertu des conditions générales des banques et des conventions de fiducie passées avec leurs clients."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "En l'espèce, dans la mesure où elle a jugé que les deux actions étaient irrecevables, la cour cantonale a méconnu le droit. Le recours doit donc être admis, l'arrêt attaqué annulé et la cause renvoyée à la cour cantonale pour nouvelle décision dans le sens des considérants. Sur l'action en libération de dette, il lui appartiendra d'examiner les motifs soulevés par l'appelant. Ce n'est que si l'action en libération de dette devait être admise que se posera la question de l'action cumulée en restitution de la cédule hypothécaire."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Les frais judiciaires (art. 66 al. 1 LTF) et les dépens (art. 68 al. 1 et 2 LTF) de l'instance fédérale doivent être imputés à la partie qui succombe. Cette partie est en l'occurrence l'intimé, qui, même s'il s'est abstenu de se déterminer sur le recours (ATF 128 II 90 consid. 2b et 2c; 123 V 156), avait néanmoins conclu, dans sa duplique, à l'irrecevabilité du chef de conclusions du demandeur tendant à la restitution de la cédule hypothécaire, au motif que cette action n'avait pas fait l'objet de la tentative de conciliation préalable obligatoire."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Le recours est admis, l'arrêt attaqué est annulé et la cause est renvoyée à la cour cantonale pour nouvelle décision dans le sens des considérants."
+            },
+            {
+              "marke": "2.",
+              "text": "Les frais judiciaires, arrêtés à 3'000 fr., sont mis à la charge de l'intimé."
+            },
+            {
+              "marke": "3.",
+              "text": "L'intimé versera au recourant une indemnité de 3'500 fr. à titre de dépens."
+            },
+            {
+              "marke": "4.",
+              "text": "Le présent arrêt est communiqué aux mandataires des parties et à la Cour d'appel civile du Tribunal cantonal du canton de Vaud."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, le 6 juillet 2022 Au nom de la Ire Cour de droit civil du Tribunal fédéral suisse La Présidente: Hohl Le Greffier: Douzals"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Le recours est admis, l'arrêt attaqué est annulé et la cause est renvoyée à la cour cantonale pour nouvelle décision dans le sens des considérants.",
+        "Les frais judiciaires, arrêtés à 3'000 fr., sont mis à la charge de l'intimé.",
+        "L'intimé versera au recourant une indemnité de 3'500 fr. à titre de dépens.",
+        "Le présent arrêt est communiqué aux mandataires des parties et à la Cour d'appel civile du Tribunal cantonal du canton de Vaud."
+      ],
+      "zitierteNormen": [
+        "Art. 15 Abs. 2 CPC",
+        "Art. 198 CPC",
+        "Art. 220 CPC",
+        "Art. 79 LP",
+        "Art. 83 Abs. 2 LEF",
+        "Art. 83 Abs. 2 LP",
+        "Art. 83 Abs. 2 SCHKG",
+        "Art. 83 LP"
+      ],
+      "normKeys": [
+        "SCHKG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=10&from_date=&to_date=&from_year=2022&to_year=2022&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=94&highlight_docid=atf%3A%2F%2F149-III-23%3Ade&number_of_ranks=195&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "87d12d940093c1993df6cfefb909052220d497264b7ecfaa49afea8d9a162723",
+      "sha": "df72ddd584cadf42d1ca0a4d1df540feb5c9f243f91c9c1ee1df3ecde44f97d5",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Le 14 mai 2018, B. (ci-après: le créancier, le défendeur ou l'intimé) a adressé à l'Office des poursuites du district de Nyon une réquisition de poursuite en réalisation de gage immobilier, soit de la créance abstraite incorporée dans la cédule hypothécaire de 250'000 fr., à l'encontre d'A. (ci-après: le débiteur, le demandeur ou le recourant), à concurrence du montant de 50'000 fr., intérêts en sus. Le débiteur a formé opposition à ce commandement de payer (...). Par jugement du 3 septembre 2018, la Juge de paix du district de Nyon a provisoirement levé ladite opposition à concurrence du montant indiqué dans le commandement de payer. En substance, elle a retenu que les parties avaient conclu un contrat prévoyant que le créancier octroierait un prêt de 250'000 fr. au débiteur, que celui-ci lui remettrait une cédule hypothécaire au porteur s'élevant au même montant, qu'il n'était pas contesté que le débiteur avait remboursé 200'000 fr. au créancier, et que le débiteur n'avait pas prouvé par pièces que le montant du prêt initial avait été réduit de 50'000 fr., de sorte que ce solde restait dû."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Le 6 novembre 2018, le débiteur a déposé une demande en libération de dette à l'encontre du créancier auprès du Tribunal civil de l'arrondissement de La Côte, concluant à ce qu'il soit constaté qu'il n'était pas le débiteur du défendeur, à ce que la poursuite litigieuse soit radiée et à ce que le défendeur libère et lui restitue la cédule hypothécaire qu'il lui avait remise. Le défendeur a conclu au rejet de ces conclusions, sous réserve de la conclusion relative à la libération de la cédule hypothécaire qui devait être déclarée irrecevable, et a pris des conclusions reconventionnelles. Par jugement du 10 novembre 2020, le tribunal a rejeté la demande, dans la mesure où elle était recevable, a dit que le demandeur devait payer au défendeur la somme de 55'000 fr., intérêts en sus, correspondant au solde du prêt en 50'000 fr. avec intérêts conventionnels à 4 % l'an capitalisés au 30 avril 2014, date d'échéance du prêt, et a prononcé à concurrence dudit montant la mainlevée définitive de l'opposition au commandement de payer. En substance, il a retenu que l'action en remise de la cédule hypothécaire était irrecevable car la conciliation préalable obligatoire n'avait pas été tentée et que l'action en libération de dette devait être rejetée au motif qu'il ne ressortait pas des pièces produites par le demandeur que les parties eussent eu la volonté réelle et commune de convenir d'une remise de dette à hauteur de 50'000 fr. Par arrêt du 18 octobre 2021, la Cour d'appel civile du Tribunal cantonal du canton de Vaud a rejeté l'appel interjeté par le demandeur et réformé d'office le jugement entrepris, en ce sens que la demande était irrecevable dans son entier, et non rejetée dans la mesure de sa recevabilité. En substance, elle a considéré que l'irrecevabilité des conclusions relatives à la restitution de la cédule hypothécaire, faute de conciliation préalable, entraînait l'irrecevabilité de l'action en libération de dette."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Contre cet arrêt, qui lui a été notifié le 21 octobre 2021, le demandeur a formé un recours en matière civile auprès du Tribunal fédéral le 19 novembre 2021. (...) Le Tribunal fédéral a admis le recours et renvoyé la cause à la cour cantonale pour nouvelle décision dans le sens des considérants. (extrait)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Est litigieuse la question de savoir si le débiteur qui ouvre action en libération de dette selon l' art. 83 al. 2 LP, à la suite d'une décision de mainlevée provisoire prononcée dans le cadre d'une poursuite en réalisation de gage immobilier pour la créance abstraite incorporée dans la cédule hypothécaire, mais dont la garantie est limitée par convention de sûreté (ou de fiducie) au montant de la créance de base, c'est-à-dire au montant du prêt non remboursé (remise de la cédule hypothécaire en garantie fiduciaire, désormais présumée par l' art. 842 al. 2 CC; cf. arrêt 4A_559/2019 du 12 mai 2020 consid. 2), action qui est dispensée de la tentative préalable de conciliation (art. 198 let. e ch. 1 CPC), peut y joindre une action additionnelle en restitution de la cédule hypothécaire, au sens d'un cumul objectif d'actions de l' art. 90 CPC, quand bien même cette dernière ne serait pas dispensée de l'obligation de la conciliation préalable. Il s'impose de rappeler d'abord brièvement la jurisprudence relative à l'action en libération de dette, avant d'examiner la question procédurale posée."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Selon l' art. 83 al. 2 LP, l'action en libération de dette est une action en constatation de droit négative, qui ressortit au droit matériel. Elle est le pendant de l'action en reconnaissance de dette prévue à l' art. 79 LP; seul le rôle des parties est renversé, mais non les fardeaux de la preuve et de l'allégation de l'existence de la créance (ATF 134 III 656 consid. 5.3.1; ATF 131 III 268 consid. 3.1; ATF 130 III 285 consid. 5.3.1; ATF 127 III 232 consid. 3a; ATF 124 III 207 consid. 3a). Le débiteur est le demandeur à cette action et le créancier en est le défendeur. Lorsque le débiteur dépose, en même temps que son action en libération de dette, d'autres conclusions, il y a cumul objectif d'actions au sens de l' art. 90 CPC, et non une reconvention (qui n'exigerait pas de conciliation préalable en vertu de l' art. 198 let. g CPC), malgré le renversement des rôles. En effet, la reconvention étant une notion de procédure, et non de droit de fond, elle ne vise que l'action formée dans la même instance par le défendeur, de sorte que les deux actions s'opposent l'une à l'autre; il s'ensuit que, dans l'action en libération de dette, seul le créancier défendeur à cette action peut prendre des conclusions reconventionnelles. Si le débiteur BGE 149 III 23 S. 26 demandeur joint à ses conclusions libératoires d'autres conclusions, il forme une action cumulée (ou additionnelle) au sens de l' art. 90 CPC (ATF 124 III 207 consid. 3a; 58 I 165 consid. 3; arrêt 4A_176/2019 du 2 septembre 2019 consid. 4.3). Selon la jurisprudence et la doctrine, dès lors que l'action cumulée est intentée devant le juge de l'action en libération de dette, au for de la poursuite, elle n'est en principe admissible que si elle est connexe à l'action principale et, par conséquent, entre dans la compétence locale du juge saisi (art. 15 al. 2 CPC), qu'elle ressortit également à sa compétence matérielle et est soumise à la même procédure; sont réservées une prétention invoquée en compensation ou une prétention constituant un simple accessoire de l'action en libération de dette elle-même. Ces conditions ont pour but d'éviter que l'action en libération de dette ne soit rendue plus difficile ou ne soit retardée (ATF 124 III 207 consid. 3b/bb; 58 I 165 consid. 2; DANIEL STAEHELIN, in Basler Kommentar, Bundesgesetz über Schuldbetreibung und Konkurs, vol. I, 3 e éd. 2021, n° 52 ad art. 83 LP)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Pour le même motif, l'action cumulée à une action en libération de dette n'est admissible que si elle n'est pas elle-même soumise à la tentative de conciliation préalable (art. 198 et 199 CPC; STAEHELIN, ibid.; STÉPHANE ABBET, in La mainlevée de l'opposition, 2017, n° 54 ad art. 83 LP). Si tel n'est pas le cas, elle est irrecevable et la procédure se poursuit sur la seule action en libération de dette. La recevabilité doit être examinée séparément pour chacune des actions. C'est ce que le Tribunal fédéral a admis comme étant la règle en cas de cumul d'actions (arrêt 4A_368/2020 du 9 février 2021 consid. 2, pour l'action en inscription définitive de l'hypothèque légale des artisans et entrepreneurs et l'action en paiement du prix de l'ouvrage) et qu'il a également admis pour les actions cumulées à une action en libération de dette (arrêts 4A_213/2019 du 4 novembre 2019 consid. 3; 4A_176/2019 du 2 septembre 2019 consid. 4.3; 4A_262/2018 du 31 août 2018; 4A_413/2012 du 14 janvier 2013 consid. 6.1). Telle est également la position d'une partie importante de la doctrine (CHRISTOPH LEUENBERGER, in Kommentar zur Schweizerischen Zivilprozessordnung [ZPO], 3 e éd. 2016, n° 4b ad art. 220 CPC p. 1586; ERIC PAHUD, in Schweizerische Zivilprozessordnung [ZPO], Kommentar, vol. II, 2 e éd. 2016, n° 14 ad art. 220 CPC; CLAUDE SCHRANK, Das Schlichtungsverfahren nach der Schweizerischen Zivilprozessordnung [ZPO], 2015, p. 54 n. 94 et p. 59 n. 101;DANIEL BGE 149 III 23 S. 27 STAEHELIN, in Zivilprozessrecht, Adrian Staehelin et al. [éd.], 3 e éd. 2019, p. 364 n. 5; FRANCESCO TREZZINI, in Commentario pratico al Codice di diritto processuale civile svizzero [CPC], vol. II, 2 e éd. 2017, n° 13 ad art. 198 CPC; DOLGE/INFANGER, Schlichtungsverfahren nach Schweizerischer Zivilprozessordnung, 2012, p. 95; FRANÇOIS BOHNET, Das mietrechtliche Schlichtungsverfahren im schweizerischen Zivilprozessrecht, RSPC 4/2010 p. 423 n. 11; ABBET, ibid.; KATIA ELKAIM-LÉVY, Premières expériences avec le nouveau code de procédure civile, le point de vue du magistrat, in Nouvelle procédure civile et espace judiciaire européen, 2012, p. 38; RICHARD PÜNTENER, Zivilprozessrecht für die Mietrechtspraxis, 2016, p. 28 n. 94). Les auteurs qui soutiennent que les deux actions devraient alors être exemptées de la conciliation préalable (FLORIAN MOHS, in ZPO, Kommentar, Schweizerische Zivilprozessordnung, Myriam A. Gehri et al. [éd.], 2 e éd. 2015, n° 1c ad art. 90 CPC; cf. ELKAIM-LÉVY, op. cit., p. 37) ou, au contraire, qu'elles devaient toutes deux être soumises à la conciliation préalable sous peine d'irrecevabilité (FRANÇOIS BOHNET, in Commentaire romand, Code de procédure civile, 2 e éd. 2019, n° 20 ad art. 198 CPC; BOHNET/CONOD, Bail et procédure civile suisse: premiers développements, in 17 e séminaire sur le droit du bail, 2012, p. 238 n. 68; TAPPY/NOVIER, La procédure de conciliation et la médiation dans le Code de procédure civile suisse [art. 197-218 CPC], inIl Codice di diritto processuale civile svizzero, 2011, p. 91; DENIS TAPPY, Cumul objectif et concours d'actions selon le nouveau CPC, in Nouvelle procédure civile et espace judiciaire européen, 2012, p. 198 s.; AESCHLIMANN-DISLER/HEINZMANN, in CPC, Code de procédure civile, 2021, n° 18 ad art. 197/198 CPC; WYLER/HEINZER, Droit du travail, 4 e éd. 2019, p. 954 s.) ne peuvent être suivis. D'une part, l'action cumulée à une action en libération de dette ne constitue pas une action reconventionnelle exemptée de la procédure de conciliation préalable. D'autre part, imposer une tentative de conciliation à l'action en libération de dette serait contraire à l' art. 198 let. e ch. 1 CPC qui l'en exempte. Il y a lieu de faire toutefois une exception pour l'action cumulée en restitution de la cédule hypothécaire lorsqu'elle est un simple accessoire de l'inexistence de la créance objet de l'action en libération de dette. Tel ne serait en revanche pas le cas lorsque la cédule hypothécaire garantit encore d'autres prétentions que celles en litige, comme c'est souvent le cas en vertu des conditions générales des banques et des conventions de fiducie passées avec leurs clients. BGE 149 III 23 S. 28"
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "En l'espèce, dans la mesure où elle a jugé que les deux actions étaient irrecevables, la cour cantonale a méconnu le droit. Le recours doit donc être admis, l'arrêt attaqué annulé et la cause renvoyée à la cour cantonale pour nouvelle décision dans le sens des considérants. Sur l'action en libération de dette, il lui appartiendra d'examiner les motifs soulevés par l'appelant. Ce n'est que si l'action en libération de dette devait être admise que se posera la question de l'action cumulée en restitution de la cédule hypothécaire."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "4A_592/2021",
+        "key": "bger_4A_592_2021",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=04.07.2022&to_date=07.07.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=31&azaclir=aza&highlight_docid=aza%3A%2F%2F06-07-2022-4A_592-2021&number_of_ranks=85"
+      },
+      "ecli": "ECLI:CH:BGE:2022:149.III.23"
+    }
+  ]
+}

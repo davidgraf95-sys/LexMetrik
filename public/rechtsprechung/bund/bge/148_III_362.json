@@ -1,0 +1,313 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/148_III_362",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "148 III 362",
+      "bgeReferenz": "148 III 362",
+      "zitierung": "BGE 148 III 362",
+      "datum": "2022-08-16",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": null,
+      "rubrum": {
+        "besetzung": "Bundesrichterin Hohl, Präsidentin, Bundesrichterinnen Kiss, Niquille, Bundesrichter Rüedi, Bundesrichterin May Canellas, Gerichtsschreiber Stähle",
+        "parteien": "A.________ AG, vertreten durch Rechtsanwalt Dr. B.________, Beschwerdeführerin, gegen Handelsregisteramt des Kantons Zug, Beschwerdegegner, Eidgenössisches Amt für das Handelsregister",
+        "gegenstand": "Erleichterte Fusion; indirekte Beteiligungsverhältnisse (Art. 23 Abs. 1 lit. b FusG)",
+        "vorinstanz": "Verwaltungsgerichts des Kantons Zug, Verwaltungsrechtliche Kammer, vom 13. Januar 2022 (V 2021 53)"
+      },
+      "regeste": {
+        "text": "Art. 23 Abs. 1 lit. b FusG; erleichterte Fusion; indirekte Beteiligungsverhältnisse. Das erleichterte Fusionsverfahren gemäss Art. 23 Abs. 1 lit. b FusG ist nur bei direkten Beteiligungsverhältnissen anwendbar (E. 2-6).\nRegeste\n Art. 23 al. 1 let. b LFus; fusion simplifiée; rapports de participation indirects. La procédure de fusion simplifiée prévue par l'art. 23 al. 1 let. b LFus n'est applicable qu'en cas de rapports de participation directs (consid. 2-6).\nRegesto\n Art. 23 cpv. 1 lett. b LFus; fusione agevolata; rapporti di partecipazione indiretti. La procedura di fusione agevolata secondo l'art. 23 cpv. 1 lett. b LFus è unicamente applicabile nel caso di rapporti di partecipazione diretti (consid. 2-6).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 23 Abs. 1 lit. b FusG; erleichterte Fusion; indirekte Beteiligungsverhältnisse.",
+            "absaetze": [
+              "Das erleichterte Fusionsverfahren gemäss Art. 23 Abs. 1 lit. b FusG ist nur bei direkten Beteiligungsverhältnissen anwendbar (E. 2-6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-III-362%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 23 al. 1 let. b LFus; fusion simplifiée; rapports de participation indirects.",
+            "absaetze": [
+              "La procédure de fusion simplifiée prévue par l'art. 23 al. 1 let. b LFus n'est applicable qu'en cas de rapports de participation directs (consid. 2-6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-III-362%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 23 cpv. 1 lett. b LFus; fusione agevolata; rapporti di partecipazione indiretti.",
+            "absaetze": [
+              "La procedura di fusione agevolata secondo l'art. 23 cpv. 1 lett. b LFus è unicamente applicabile nel caso di rapporti di partecipazione diretti (consid. 2-6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-III-362%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die A.________ AG (Beschwerdeführerin) ist eine Aktiengesellschaft mit Sitz in U.________. Ihr einziger Aktionär ist B.________. Die C.________ GmbH ist eine Gesellschaft mit beschränkter Haftung mit Sitz in V.________. Ihre Gesellschafter sind B.________ (60 % des Stammkapitals) und die D.________ GmbH (40 % des Stammkapitals). Die Stammanteile der D.________ GmbH wiederum werden zu 91 % von B.________ gehalten; 9 % hält die D.________ GmbH selbst (eigene Stammanteile)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Schreiben vom 31. Mai 2021 meldete B.________ beim Handelsregisteramt des Kantons Zug die Fusion der A.________ AG mit der C.________ GmbH zur Eintragung im erleichterten Verfahren an (Absorption: Übernahme der C.________ GmbH durch die A.________ AG). Er stützte sich dabei auf Art. 23 f. FusG (erleichterte Fusion von verbundenen Kapitalgesellschaften). Mit Verfügung vom 24. Juni 2021 verweigerte das Handelsregisteramt die Eintragung der Fusion gemäss der Anmeldung vom 31. Mai 2021. Es stellte sich auf den Standpunkt, die Voraussetzungen nach Art. 23 FusG für eine Fusion im erleichterten Verfahren seien nicht erfüllt. Die dagegen erhobene Beschwerde wies das Verwaltungsgericht des Kantons Zug mit Urteil vom 13. Januar 2022 ab, soweit es darauf eintrat."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Die A.________ AG verlangt mit Beschwerde in Zivilsachen, das Urteil des Verwaltungsgerichts sei aufzuheben. Das Handelsregisteramt des Kantons Zug sei anzuweisen, die am 31. Mai 2021 angemeldete Fusion in Anwendung von Art. 23 FusG in das Handelsregister einzutragen. Die Vorinstanz begehrt unter Verzicht auf Vernehmlassung und Hinweis auf das angefochtene Urteil, die Beschwerde abzuweisen, soweit darauf einzutreten sei. Das Handelsregisteramt des Kantons Zug und das Eidgenössische Amt für das Handelsregister (EHRA) liessen sich vernehmen. Beide sprechen sich unter Hinweis auf den Gesetzeswortlaut und den Willen des Gesetzgebers deutlich gegen die Anwendung des erleichterten Fusionsverfahrens bei indirekten Beteiligungsverhältnissen aus."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Der Beschwerde in Zivilsachen unterliegen öffentlich-rechtliche Entscheide, die in unmittelbarem Zusammenhang mit Zivilrecht stehen, insbesondere Entscheide über die Führung des Handelsregisters (Art. 72 Abs. 2 lit. b Ziff. 2 BGG). Das Verwaltungsgericht hat als Rechtsmittelinstanz im Sinne von Art. 75 Abs. 2 BGG entschieden (vgl. Art. 942 Abs. 2 OR). Die Beschwerde ist in einem Fall wie dem vorliegenden grundsätzlich nur zulässig, wenn der Streitwert mindestens Fr. 30'000.-- beträgt (Urteil 4A_371/2021 vom 9. August 2021 E. 1.2). Entgegen den gesetzlichen Vorschriften (Art. 112 Abs. 1 lit. d BGG) finden sich im angefochtenen Urteil keine Angaben zum Streitwert. Gestützt auf die Verfahrensakten und die diesbezüglichen Ausführungen in der Beschwerdeschrift kann aber davon ausgegangen werden, dass die Streitwertgrenze erreicht ist."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "In Art. 3 ff. des Bundesgesetzes vom 3. Oktober 2003 über Fusion, Spaltung, Umwandlung und Vermögensübertragung (Fusionsgesetz, FusG; SR 221.301) ist die Fusion von Gesellschaften geregelt, darunter insbesondere das dabei einzuhaltende Prozedere. Art. 23 Abs. 1 FusG sieht vor, dass Kapitalgesellschaften unter erleichterten Voraussetzungen fusionieren können, wenn entweder die übernehmende Kapitalgesellschaft alle Anteile der übertragenden Kapitalgesellschaft besitzt, die ein Stimmrecht gewähren (lit. a; sog. \"Mutter-Tochter-Fusion\"), oder aber ein Rechtsträger, eine natürliche Person oder eine gesetzlich oder vertraglich verbundene Personengruppe alle Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt, die ein Stimmrecht gewähren (lit. b; sog. \"Schwesternfusion\"). Das Gesetz spricht von \"erleichterter Fusion\" (\"fusion simplifiée\"; \"fusione agevolata\"). Die Erleichterungen, die bei gegebenen Voraussetzungen von Art. 23 Abs. 1 FusG greifen, sind in Art. 24 Abs. 1 FusG geregelt. So sind die Anforderungen an den Inhalt des Fusionsvertrags (Art. 13 FusG) herabgesetzt, und ferner müssen die an der Fusion beteiligten Kapitalgesellschaften weder einen Fusionsbericht (Art. 14 FusG) erstellen noch den Fusionsvertrag prüfen lassen (Art. 15 FusG) noch das Einsichtsrecht gewähren (Art. 16 FusG) noch den Fusionsvertrag der Generalversammlung zur Beschlussfassung unterbreiten (Art. 18 FusG)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Im vorliegenden Fall geht es um die Frage, ob die Voraussetzungen für eine erleichterte Fusion nach Art. 23 Abs. 1lit. b FusG erfüllt sind. Die Bestimmung setzt nach dem Gesagten voraus, dass jemand (oder eine Personengruppe) \"alle Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt\", die ein Stimmrecht gewähren. B.________ besitzt (unmittelbar) sämtliche Anteile der übernehmenden Gesellschaft (A.________ AG). An der übertragenden Gesellschaft (C.________ GmbH) ist er letztlich zwar ebenfalls vollständig beteiligt, allerdings zu Teilen (nämlich im Umfang von 40 %) nur mittelbar über die von ihm gehaltene Zwischengesellschaft D.________ GmbH (in der er sämtliche Stimmrechte hat; das Stimmrecht der 9 % eigener Stammanteile ruht [Art. 783 Abs. 4 in Verbindung mit Art. 659a Abs. 1 OR]). Kontrovers ist, ob das in Art. 23 Abs. 1 lit. b FusG vorausgesetzte Erfordernis, alle Anteile zu besitzen, auch erfüllt ist, wenn die Anteile nicht unmittelbar, sondern in direkt über eine oder mehrere (jeweils vollständig kontrollierte) Zwischengesellschaften gehalten werden. Dies wird von der Vorinstanz wie auch vom Handelsregisteramt verneint, von der Beschwerdeführerin dagegen bejaht."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Nicht zu beanstanden ist, dass das Handelsregisteramt und mit ihm das Verwaltungsgericht diese Frage mit umfassender Kognition geprüft haben (keine Anwendung des Prinzips der eingeschränkten Prüfungsbefugnis des Registerführers: Art. 937 OR; siehe BGE 125 III 18 E. 3c; Urteile 4A_363/2013 vom 28. April 2014 E. 2.2, nicht publ. in: BGE 140 III 206; 4A.4/2006 vom 20. April 2006 E. 2.2 f., nicht publ. in: BGE 132 III 470; CHRISTIAN CHAMPEAUX, in: Handelsregisterverordnung [HRegV], Siffert/Turin [Hrsg.], 2013, N. 8 zu Art. 131 HRegV). Damit ist auch die volle Prüfungsbefugnis des Bundesgerichts zu bejahen."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Nach der Praxis des EHRA ist eine erleichterte Fusion bei indirekten Beteiligungsverhältnissen ausgeschlossen (EHRA, Kurzkommentar zu den Bestimmungen der Handelsregisterverordnung zum Fusionsgesetz vom 11. Oktober 2004, REPRAX 2004/2-3, S. 10; so auch die [damaligen] Vorsteher des EHRA: HANSPETER KLÄY, Das Fusionsgesetz - ein Überblick, BN 2004, S. 214, und NICOLAS DUC, Les premières expériences dans l'application de la loi sur la fusion, in: Coopération et fusion d'entreprises, 2005, S. 253; sowie der Mitarbeiter des EHRA CHAMPEAUX, a.a.O., N. 80 zu Art. 131 HRegV; derselbe, Fusionsgesetz - Aspekte der Handelsregisterpraxis, REPRAX 2011/2, S. 64 f.). Dies wird namentlich mit Hinweis auf den Schutz der Gläubiger der zwischengeschalteten Gesellschaft (en) begründet. Das EHRA bekräftigt diesen Standpunkt in seiner dem Bundesgericht eingereichten Vernehmlassung. Auch in der Doktrin wird diese Meinung vertreten (FLORIAN BOMMER, in: Fusionsgesetz, Baker & McKenzie [Hrsg.], 2. Aufl. 2015, N. 8 f. zu Art. 23 FusG; MICHAEL GWELESSIANI, Handelsregisterliche Aspekte zum neuen Fusionsgesetz, in: Fusionsgesetz, Auswirkungen auf die Praxis, 2004, S. 242; PETER V. KUNZ, Grundlagen zum Konzernrecht der Schweiz, 2016, S. 151 f. Rz. 373-375; so auch ERBE/JAUSSI/THEILER, Das Fusionsgesetz - ein Überblick aus rechtlicher und steuerlicher Sicht, StR 2003, S. 828, welche die gesetzliche Regelung indes nicht für überzeugend halten)."
+            },
+            {
+              "marke": "E. 5.2.1",
+              "tiefe": 3,
+              "text": "Ein (zumindest quantitativ) grosser Teil des Schrifttums möchte die erleichterte Fusion dagegen auch für Schwestergesellschaften \"unterschiedlicher Stufe\" zulassen, also für den - hier vorliegenden - Fall, dass der übergeordnete Rechtsträger, die übergeordnete natürliche Person oder die übergeordnete Personengruppe die (Stimmrechts-) Anteile an einer der beiden oder an beiden Schwestergesellschaften über eine oder mehrere jeweils vollständig gehaltene Zwischengesellschaften besitzt (ALTENBURGER/CALDERAN/LEDERER, Schweizerisches Umstrukturierungsrecht, 2004, S. 74 f. N. 221-224; PIERA BERETTA, Strukturanpassungen, SPR Bd. VIII/8, 2006, S. 346; PETER BÖCKLI, Schweizer Aktienrecht, 4. Aufl. 2009, S. 403 Rz. 192b; SEBASTIAN BURCKHARDT, in: Zürcher Kommentar zum Fusionsgesetz, 2. Aufl. 2012, N. 17 zu Art. 23 FusG; URS P. GNOS, Die Praxis zur erleichterten Fusion von Konzerngesellschaften, GesKR 2006, S. 191 f.; ISLER/VON SALIS-LÜTOLF, Fusionen nach dem neuen Fusionsgesetz, ZSR 2004 I, S. 28; ROLAND M. MÜLLER, KMU und erleichterte Fusionen, in: Das Fusionsgesetz: Bewährungsprobe nach dem 8. Jahr, 2015, S. 41; OLIVER TRIEBOLD, in: Handkommentar zum Schweizer Privatrecht, Amstutz/ Roberto/Trüeb [Hrsg.], 3. Aufl. 2016, N. 11 zu Art. 23 FusG; RITA TRIGO TRINDADE, in: Commentaire LFus, Peter/Trigo Trindade [Hrsg.], 2005, N. 13 und 24 zu Art. 23 FusG; TRIGO TRINDADE/GRIESSEN COTTI, FusG - Echo aus der Praxis, GesKR 2007/2, S. 149 f.; TSCHÄNI/GABERTHÜEL, in: Basler Kommentar, Fusionsgesetz, 2. Aufl. 2015, N. 20 zu Art. 3 FusG; ALEXANDER VOGEL UND ANDERE, FusG, Kommentar, 3. Aufl. 2017, N. 14 zu Art. 23 FusG; HANS CASPAR VON DER CRONE UND ANDERE, Das Fusionsgesetz, 2. Aufl. 2017, S. 116 Rz. 245; ULYSSES VON SALIS, Fusionsgesetz, 2004, S. 166 f.; MATTHIAS WOLF, in: Basler Kommentar, Fusionsgesetz, 2. Aufl. 2015, N. 4 und 10 zu Art. 23 FusG)."
+            },
+            {
+              "marke": "E. 5.2.2",
+              "tiefe": 3,
+              "text": "Diesen Lehrmeinungen liegt eine wirtschaftliche Betrachtungsweise zugrunde: Die erleichterte Fusion beruht auf dem Gedanken, dass sich die Anwendung der Vorschriften über den Schutz der Gesellschafter als überflüssig erweist, wenn eine Gesellschaft eine Tochtergesellschaft übernimmt, deren Anteile sie bereits zu 100 Prozent hält, oder wenn zwei Schwestergesellschaften fusionieren, die je zu 100 Prozent vom gleichen Rechtsträger gehalten werden (Botschaft vom 13. Juni 2000 zum Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung [nachfolgend: Botschaft], BBl 2000 4422 zu Art. 23 FusG). Gesellschafterinteressen sind nicht gefährdet; Personen mit Minderheitsbeteiligungen (vgl. Art. 1 Abs. 2 FusG) gibt es nicht. Die Bestimmungen zum Gläubiger- und Arbeitnehmerschutz (Art. 25-28 FusG) sind auch bei der erleichterten Fusion anwendbar. Das soeben zitierte Schrifttum (Erwägung 5.2.1) betont nun, dass die Sachlage bei indirekten hundertprozentigen Beteiligungsverhältnissen die gleiche sei: Auch hier seien keine Minderheitsgesellschafter involviert und bestehe kein Bedürfnis zum Schutz der Gesellschafter; die wirtschaftlichen Interessen des übergeordneten Rechtsträgers änderten sich nicht, wenn anstelle direkter Anteilsinhaberschaft indirekte hundertprozentige Beteiligungen träten. Die beteiligungsrechtliche Kontinuität (Art. 7 FusG) sei in jedem Fall gewahrt. Allfälligen zusätzlich involvierten Personen (etwa Gläubigern oder Arbeitnehmern) entstünden bei der erleichterten Fusion keine Nachteile, da die Regeln über den Gläubiger- sowie Arbeitnehmerschutz auch hier gälten und ohnehin die Verfahrensschritte, um die das Fusionsverfahren in den Fällen von Art. 23 Abs. 1 FusG erleichtert werde (Art. 24 Abs. 1 FusG), einzig die Gesellschafter schützten. Insbesondere seien auch die Gläubiger und Arbeitnehmer der Zwischengesellschaft (en) nicht schlechter gestellt als im ordentlichen Fusionsverfahren (ALTENBURGER/CALDERAN/LEDERER, a.a.O., S. 74 f. N. 223 f.; GNOS, a.a.O., S. 191; VON SALIS, a.a.O., S. 166 f.; WOLF, a.a.O., N. 4 und 10 zu Art. 23 FusG). Die Doktrin führt weiter aus, dass die diesbezüglich restriktive Anwendung des Fusionsgesetzes durch das EHRA aus praktischer Sicht auch deshalb nicht tauge, weil sich im Konzern direkte Beteiligungsverhältnisse - etwa fiduziarisches Eigentum - als vorgelagerter Schritt vor der Fusion ohne Weiteres herstellen liessen und die erleichterte Fusion auf diese Weise ohnehin zur Anwendung gebracht werden könne (so GNOS, a.a.O., S. 192; ISLER/VON SALIS-LÜTOLF, a.a.O., S. 28; TRIGO TRINDADE/GRIESSER COTTI, a.a.O., S. 150; WOLF, a.a.O., N. 4 zu Art. 23 FusG). Ferner wird darauf hingewiesen, dass bei einem Vorgehen \"in zwei Schritten\" - etwa: zunächst Übernahme der \"Enkelin\" durch deren Muttergesellschaft (die Zwischengesellschaft) nach lit. a von Art. 23 Abs. 1 FusG, anschliessend Fusion der Zwischengesellschaft mit deren Schwestergesellschaft gemäss lit. b von Art. 23 Abs. 1 FusG - das erleichterte Verfahren für die beiden Schritte jeweils zulässig sei. Es lasse sich nicht rechtfertigen, die Erleichterungen zu verweigern, wenn die Fusion statt in zwei Transaktionen direkt in einem Zug vollzogen werde (im genannten Beispiel: direkt Fusion der \"Enkelin\" mit ihrer \"Tante\"; TSCHÄNI/GABERTHÜEL, a.a.O., N. 20 zu Art. 3 FusG)."
+            },
+            {
+              "marke": "E. 5.2.3",
+              "tiefe": 3,
+              "text": "Auf diese Überlegungen ist nicht im Einzelnen einzugehen. Jedenfalls scheint es plausible Gründe zu geben, dass der Gesetzgeber in diesem Sinne (Zulassung indirekter hundertprozentiger Beteiligungsverhältnisse zur erleichterten Fusion) hätte legi f erieren können."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Der Gesetzgeber hat aber anders legiferiert:"
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Das Gesetz sieht einen Numerus clausus zulässiger Umstrukturierungen und insbesondere einen Numerus clausus zulässiger Fusionen vor (Art. 4 FusG; vgl. Urteil 4A.4/2006 vom 20. April 2006 E. 2.3, nicht publ. in: BGE 132 III 470). Dagegen hatten zwar zahlreiche Vernehmlassungsteilnehmer Kritik erhoben, und insbesondere wurde gewünscht, das Enumerationsprinzip durch eine Generalklausel zu ersetzen, welche die Fusion in allgemeiner Weise - namentlich ungeachtet der Rechtsform der an ihr beteiligten Rechtsträger - zuliesse (Zusammenstellung der Vernehmlassungen zum Fusionsgesetz, 1999, S. 3, 58-63 und 94 f.). Das Parlament folgte diesem Anliegen indes nicht, namentlich unter Hinweis auf die Rechtssicherheit und das relativ allgemein einsetzbare Institut der Vermögensübertragung (Art. 69 ff. FusG; Botschaft, BBl 2000 4393 f. zu Art. 4 FusG; AB 2001 S 149). Es blieb mithin bei der abschliessenden Aufzählung der zulässigen Fusionsvorgänge. Das Bundesgericht hatte im letzten Jahrhundert verschiedentlich Fusionen und Umwandlungen ohne ausdrückliche gesetzliche Grundlage erlaubt und den Grundsatz des Numerus clausus für \"auf dem Gebiete der Fusion und der Umwandlung nicht anwendbar\" erklärt. Diese Rechtsprechung ist nach dem Inkrafttreten des Fusionsgesetzes im Jahr 2004 insoweit überholt (so bereits BGE 132 III 70 E. 5.2; vgl. dagegen noch BGE 125 III 18 E. 4c [Umwandlung einer GmbH in eine AG]; 115 II 415 E. 2 [Fusion zweier Stiftungen]; 53 I 1 E. 3 [Fusion zweier Vereine])."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Art. 23 FusG führt den gesetzlichen Grundgedanken (Numerus clausus) fort: Für abschliessend aufgezählte Tatbestände lässt das Gesetz die erleichterte Fusion - die gegenüber dem ordentlichen Verfahren beträchtliche Erleichterungen mit sich bringt (Art. 24 FusG) - zu (siehe Botschaft, BBl 2000 4422 f. zu Art. 23 FusG). Die Alternative nach Art. 23 Abs. 1 lit. b FusG setzt dabei voraus, dass der übergeordnete Rechtsträger alle (Stimmrechts-) Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt (\"si un sujet [...] détient l'ensemble des parts sociales conférant droit de vote des sociétés de capitaux qui fusionnent\"; \"se un soggetto giuridico [...] possiede tutte le quote delle società di capitali partecipanti alla fusione che conferiscono un diritto di voto\"). Im Gegensatz zu anderen Normen des Handelsrechts, welche auf die wirtschaftliche Kontrolle respektive das \"direkte oder indirekte\" Halten von Stimmanteilen abstellen (siehe nur Art. 963 Abs. 2 OR sowie dann Art. 697j Abs. 2 und 3 oder Art. 790a Abs. 2 OR, ferner etwa im Finanzmarktrecht), knüpft Art. 23 Abs. 1 lit. b FusG einzig und unmittelbar an den Besitz der Anteile der an der Fusion beteiligten Gesellschaften an. Hinzuweisen ist in diesem Zusammenhang auch auf Art. 2 lit. g FusG, wo der Begriff des \"Anteilsinhabers\" ebenfalls mit Bezug auf die unmittelbare Inhaberschaft an Anteilen definiert wird, ohne Rücksichtnahme auf wirtschaftliche Beherrschungsverhältnisse. Bereits der Vorentwurf zum Fusionsgesetz vom November 1997 enthielt in Art. 23 Abs. 1 lit. a und lit. b eine Regelung, die insoweit der heute in Kraft stehenden Bestimmung entspricht (lit. b: \"wenn ein Rechtsträger alle Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt, die ein Stimmrecht gewähren\"). In der Folge regten verschiedene Vernehmlassungsteilnehmer an, die Norm dergestalt zu ändern, dass auch indirekte Beteiligungsverhältnisse erfasst würden (konkret: \"wenn ein Rechtsträger direkt oder indirekt alle Anteile...\"; Zusammenstellung der Vernehmlassungen zum Fusionsgesetz, 1999, S. 5 f. und S. 184 f.). Dieser Vorschlag wurde vom Parlament ausdrücklich abgelehnt. Dies wird verdeutlicht durch ein Votum des Berichterstatters im Ständerat, der - unter Hinweis darauf, dass dies \"später von Belang sein könnte\" - \"präzisierend\" festhielt, dass gemäss Art. 23 FusG \"nur Mutter und Tochter einerseits [Abs. 1 lit. a] und Schwestern andererseits [Abs. 1 lit. b] miteinander fusionieren\" könnten. Eine \"erleichterte Fusion von Grossmutter und Enkelin sowie von Cousinen\" sei nicht möglich. \"In dieser Bestimmung [sei] also auf den direkten und nicht auf den indirekten Besitz von Beteiligungen abzustellen\" (AB 2001 S 152). Dementsprechend ist die Fassung gemäss Vorentwurf Gesetz geworden, welche die erleichterte Fusion für Fälle indirekter Beteiligungsverhältnisse nicht vorsieht. Ein solcher Formalismus ist nicht Selbstzweck, sondern steht im Dienste von Rechtsklarheit, Rechtssicherheit und Transparenz. Genau dies soll das Fusionsgesetz gewährleisten (Art. 1 Abs. 2 FusG)."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Bei dieser Ausgangslage ist es nicht an den Gerichten, das bisweilen als unbefriedigend empfundene, \"etwas eng und gar vorsichtig formuliert ausgefallen[e]\" Gesetz (MÜLLER, a.a.O., S. 41) in berichtigender Rechtsschöpfung zu korrigieren. Ausschlaggebend kann nicht sein, was aus rechtspolitischer Warte allenfalls - je nach Sichtweise und wenn auch mit plausiblen Gründen - wünschbar sein mag. Vielmehr ist die vom Gesetzgeber bewusst so gewollte Regelung für die rechtsanwendenden Behörden massgebend, zumal es nicht um einen Sachverhalt geht, der für den Gesetzgeber nicht vorhersehbar gewesen wäre. Im Übrigen ist auch nicht erkennbar, dass sich die Umstände seit Erlass des Fusionsgesetzes verändert oder sich das Rechtsverständnis gewandelt hätte (siehe dazu BGE 147 V 79 E. 7.3.1; 143 III 624 E. 3.4.2; 141 III 481 E. 3.2.3). Die vom Schrifttum vorgeschlagene wirtschaftliche Betrachtungsweise scheitert mithin daran, dass der Gesetzgeber nach Diskussion dieser Frage in Art. 23 Abs. 1 FusG gerade keinen wirtschaftlichen Anknüpfungspunkt gewählt (siehe auch BGE 126 III 462 E. 3b), sondern die zulässigen Fusionsarten samt dem entsprechenden Verfahren in Nachachtung des umstrukturierungsrechtlichen Grundsatzes des Numerus clausus abschliessend geregelt hat. Eine vom Gericht zu füllende gesetzliche Lücke liegt nicht vor (qualifiziertes Schweigen; siehe auch BGE 140 III 206 E. 3.5.5, 3.6.4 und 3.7; 132 III 470 E. 5.2)."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Demnach ist das aufgeworfene Rechtsproblem wie folgt zu entscheiden: Die Voraussetzungen für eine erleichterte Fusion nach Art. 23 Abs. 1 lit. b FusG sind nur gegeben, wenn der Rechtsträger, die natürliche Person oder die gesetzlich oder vertraglich verbundene Personengruppe die (Stimmrechts-) Anteile der an der Fusion beteiligten Gesellschaften direkt besitzt."
+            },
+            {
+              "marke": "E. 6.5",
+              "tiefe": 2,
+              "text": "Folglich hat das Handelsregisteramt die Eintragung der Fusion der Beschwerdeführerin mit der C.________ GmbH im erleichterten Verfahren nach Art. 23 f. FusG zu Recht verweigert. Dies hat die Vorinstanz im Ergebnis zutreffend erkannt."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Auf die im Fusionsgesetz statuierten Erleichterungen für kleine und mittlere Unternehmen (\"KMU\"; Art. 14 Abs. 2, Art. 15 Abs. 2 und Art. 16 Abs. 2 jeweils in Verbindung mit Art. 2 lit. e FusG) hat sich die Beschwerdeführerin gemäss den vorinstanzlichen Feststellungen in ihrer Anmeldung beim Handelsregisteramt nicht berufen und auch keine entsprechenden Belege eingereicht (vgl. Art. 131 Abs. 2 der Handelsregisterverordnung vom 17. Oktober 2007 [HRegV; SR 221.411]). Das Verwaltungsgericht ging auf diesen Aspekt daher nicht weiter ein. Dies beanstandet die Beschwerdeführerin nicht. Weiterungen erübrigen sich (Art. 42 Abs. 2 Satz 1 BGG)."
+            },
+            {
+              "marke": "E. 8",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin rügt sodann eine Verletzung ihres Anspruchs auf rechtliches Gehör (Art. 29 Abs. 2 BV). Sie moniert im Wesentlichen, das Verwaltungsgericht habe (i) bei der Auslegung von Art. 23 Abs. 1 lit. b FusG den \"übrigen Argumente[n], welche die gegenteilige Meinung begründen\", nicht hinreichend Gewicht beigemessen; (ii) zu Unrecht \"Gläubigerschutzinteressen\" in seine Überlegungen miteinbezogen, obwohl diese \"gemäss Botschaft zum FusG\" unbeachtlich seien; und (iii) den Entscheid des Handelsregisteramts nicht auf \"dessen Übereinstimmung mit den Prinzipien des verwaltungsrechtlichen Handel[n]s\" überprüft. Damit kritisiert die Beschwerdeführerin unter dem Vorwand der Gehörsverletzung die Rechtsanwendung der Vorinstanz. Darauf ist nicht einzutreten."
+            },
+            {
+              "marke": "E. 9",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist abzuweisen, soweit darauf eingetreten werden kann. Bei diesem Ausgang des Verfahrens wird die Beschwerdeführerin kostenpflichtig (siehe Art. 66 Abs. 1 BGG). Dem Beschwerdegegner ist keine Parteientschädigung zuzusprechen (Art. 68 Abs. 3 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 3'000.-- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien, dem Eidgenössischen Amt für das Handelsregister und dem Verwaltungsgericht des Kantons Zug, Verwaltungsrechtliche Kammer, schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 16. August 2022 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Hohl Der Gerichtsschreiber: Stähle"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist.",
+        "Die Gerichtskosten von Fr. 3'000.-- werden der Beschwerdeführerin auferlegt.",
+        "Dieses Urteil wird den Parteien, dem Eidgenössischen Amt für das Handelsregister und dem Verwaltungsgericht des Kantons Zug, Verwaltungsrechtliche Kammer, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 1 Abs. 2 FUSG",
+        "Art. 13 FUSG",
+        "Art. 131 HREGV",
+        "Art. 14 FUSG",
+        "Art. 15 FUSG",
+        "Art. 16 FUSG",
+        "Art. 18 FUSG",
+        "Art. 2 FUSG"
+      ],
+      "normKeys": [
+        "HREGV",
+        "BGG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=8&from_date=&to_date=&from_year=2022&to_year=2022&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=77&highlight_docid=atf%3A%2F%2F148-III-362%3Ade&number_of_ranks=195&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "beee4181af5329515a2a7a5f2909a9a50f161b0a0f98df4db001af4a37078df1",
+      "sha": "fcee57380ce99267f5d67fbdf211b5cd16b9a27a6a3fc01dd02902047dd945c0",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die A. AG (Beschwerdeführerin) ist eine Aktiengesellschaft mit Sitz in U. Ihr einziger Aktionär ist B. Die C. GmbH ist eine Gesellschaft mit beschränkter Haftung mit Sitz in V. Ihre Gesellschafter sind B. (60 % des Stammkapitals) und die D. GmbH (40 % des Stammkapitals). Die Stammanteile der D. GmbH wiederum werden zu 91 % von B. gehalten; 9 % hält die D. GmbH selbst (eigene Stammanteile)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Schreiben vom 31. Mai 2021 meldete B. beim Handelsregisteramt des Kantons Zug die Fusion der A. AG mit der C. GmbH zur Eintragung im erleichterten Verfahren an (Absorption: Übernahme der C. GmbH durch die A. AG). Er stützte sich dabei auf Art. 23 f. FusG (erleichterte Fusion von verbundenen Kapitalgesellschaften). Mit Verfügung vom 24. Juni 2021 verweigerte das Handelsregisteramt die Eintragung der Fusion gemäss der Anmeldung vom 31. Mai 2021. Es stellte sich auf den Standpunkt, die Voraussetzungen nach Art. 23 FusG für eine Fusion im erleichterten Verfahren seien nicht erfüllt. Die dagegen erhobene Beschwerde wies das Verwaltungsgericht des Kantons Zug mit Urteil vom 13. Januar 2022 ab, soweit es darauf eintrat. (...) Das Bundesgericht weist die von der A. AG erhobene Beschwerde in Zivilsachen ab, soweit es darauf eintritt. (Auszug)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "In Art. 3 ff. des Bundesgesetzes vom 3. Oktober 2003 über Fusion, Spaltung, Umwandlung und Vermögensübertragung (Fusionsgesetz, FusG; SR 221.301) ist die Fusion von Gesellschaften geregelt, darunter insbesondere das dabei einzuhaltende Prozedere. Art. 23 Abs. 1 FusG sieht vor, dass Kapitalgesellschaften unter erleichterten Voraussetzungen fusionieren können, wenn entweder die übernehmende Kapitalgesellschaft alle Anteile der übertragenden Kapitalgesellschaft besitzt, die ein Stimmrecht gewähren (lit. a; sog. \"Mutter-Tochter-Fusion\"), oder aber ein Rechtsträger, eine natürliche Person oder eine gesetzlich oder vertraglich verbundene Personengruppe alle Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt, die ein Stimmrecht gewähren (lit. b; sog. \"Schwesternfusion\"). Das Gesetz spricht von \"erleichterter Fusion\" (\"fusion simplifiée\"; \"fusione agevolata\"). Die Erleichterungen, die bei gegebenen Voraussetzungen von Art. 23 Abs. 1 FusG greifen, sind in Art. 24 Abs. 1 FusG geregelt. So sind die Anforderungen an den Inhalt des Fusionsvertrags (Art. 13 FusG) herabgesetzt, und ferner müssen die an der Fusion beteiligten BGE 148 III 362 S. 364 Kapitalgesellschaften weder einen Fusionsbericht (Art. 14 FusG) erstellen noch den Fusionsvertrag prüfen lassen (Art. 15 FusG) noch das Einsichtsrecht gewähren (Art. 16 FusG) noch den Fusionsvertrag der Generalversammlung zur Beschlussfassung unterbreiten (Art. 18 FusG)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Im vorliegenden Fall geht es um die Frage, ob die Voraussetzungen für eine erleichterte Fusion nach Art. 23 Abs. 1 lit. b FusG erfüllt sind. Die Bestimmung setzt nach dem Gesagten voraus, dass jemand (oder eine Personengruppe) \"alle Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt\", die ein Stimmrecht gewähren. B. besitzt (unmittelbar) sämtliche Anteile der übernehmenden Gesellschaft (A. AG). An der übertragenden Gesellschaft (C. GmbH) ist er letztlich zwar ebenfalls vollständig beteiligt, allerdings zu Teilen (nämlich im Umfang von 40 %) nur mittelbar über die von ihm gehaltene Zwischengesellschaft D. GmbH (in der er sämtliche Stimmrechte hat; das Stimmrecht der 9 % eigener Stammanteile ruht [Art. 783 Abs. 4 in Verbindung mit Art. 659a Abs. 1 OR]). Kontrovers ist, ob das in Art. 23 Abs. 1 lit. b FusG vorausgesetzte Erfordernis, alle Anteile zu besitzen, auch erfüllt ist, wenn die Anteile nicht unmittelbar, sondern in direkt über eine oder mehrere (jeweils vollständig kontrollierte) Zwischengesellschaften gehalten werden. Dies wird von der Vorinstanz wie auch vom Handelsregisteramt verneint, von der Beschwerdeführerin dagegen bejaht."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Nicht zu beanstanden ist, dass das Handelsregisteramt und mit ihm das Verwaltungsgericht diese Frage mit umfassender Kognition geprüft haben (keine Anwendung des Prinzips der eingeschränkten Prüfungsbefugnis des Registerführers: Art. 937 OR; siehe BGE 125 III 18 E. 3c; Urteile 4A_363/2013 vom 28. April 2014 E. 2.2, nicht publ. in: BGE 140 III 206; 4A.4/2006 vom 20. April 2006 E. 2.2 f., nicht publ. in: BGE 132 III 470; CHRISTIAN CHAMPEAUX, in: Handelsregisterverordnung [HRegV], Siffert/Turin [Hrsg.], 2013, N. 8 zu Art. 131 HRegV). Damit ist auch die volle Prüfungsbefugnis des Bundesgerichts zu bejahen."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Nach der Praxis des Eidgenössischen Amts für das Handelsregister (EHRA) ist eine erleichterte Fusion bei indirekten Beteiligungsverhältnissen ausgeschlossen (EHRA, Kurzkommentar zu den Bestimmungen der Handelsregisterverordnung zum Fusionsgesetz BGE 148 III 362 S. 365 vom 11. Oktober 2004, Zeitschrift zur Rechtsetzung und Praxis im Gesellschafts- und Handelsregisterrecht [REPRAX] 2-3/2004 S. 10; so auch die [damaligen] Vorsteher des EHRA: HANSPETER KLÄY, Das Fusionsgesetz - ein Überblick, Zeitschrift des Verbandes Bernischer Notare [BN] 2004 S. 214, und NICOLAS DUC, Les premières expériences dans l'application de la loi sur la fusion, in: Coopération et fusion d'entreprises, 2005, S. 253; sowie der Mitarbeiter des EHRA: CHAMPEAUX, a.a.O., N. 80 zu Art. 131 HRegV; derselbe, Fusionsgesetz - Aspekte der Handelsregisterpraxis, REPRAX 2/2011 S. 64 f.). Dies wird namentlich mit Hinweis auf den Schutz der Gläubiger der zwischengeschalteten Gesellschaft(en) begründet. Das EHRA bekräftigt diesen Standpunkt in seiner dem Bundesgericht eingereichten Vernehmlassung. Auch in der Doktrin wird diese Meinung vertreten (FLORIAN BOMMER, in: Fusionsgesetz, Baker & McKenzie [Hrsg.], 2. Aufl. 2015, N. 8 f. zu Art. 23 FusG; MICHAEL GWELESSIANI, Handelsregisterliche Aspekte zum neuen Fusionsgesetz, in: Fusionsgesetz, Auswirkungen auf die Praxis, 2004, S. 242; PETER V. KUNZ, Grundlagen zum Konzernrecht in der Schweiz, 2016, S. 151 f. Rz. 373-375; so auch ERBE/JAUSSI/THEILER, Das Fusionsgesetz - ein Überblick aus rechtlicher und steuerlicher Sicht, StR 58/2003 S. 828, welche die gesetzliche Regelung indes nicht für überzeugend halten)."
+            },
+            {
+              "marke": "E. 5.2.1",
+              "tiefe": 3,
+              "text": "Ein (zumindest quantitativ) grosser Teil des Schrifttums möchte die erleichterte Fusion dagegen auch für Schwestergesellschaften \"unterschiedlicher Stufe\" zulassen, also für den - hier vorliegenden - Fall, dass der übergeordnete Rechtsträger, die übergeordnete natürliche Person oder die übergeordnete Personengruppe die (Stimmrechts-)Anteile an einer der beiden oder an beiden Schwestergesellschaften über eine oder mehrere jeweils vollständig gehaltene Zwischengesellschaften besitzt (ALTENBURGER/CALDERAN/LEDERER, Schweizerisches Umstrukturierungsrecht, 2004, S. 74 f. Rz. 221-224; PIERA BERETTA, Strukturanpassungen, in: SPR Bd. VIII/8, 2006, S. 346; PETER BÖCKLI, Schweizer Aktienrecht, 4. Aufl. 2009, S. 403 Rz. 192b; SEBASTIAN BURCKHARDT, in: Zürcher Kommentar zum Fusionsgesetz, 2. Aufl. 2012, N. 17 zu Art. 23 FusG; URS P. GNOS, Die Praxis zur erleichterten Fusion von Konzerngesellschaften, Gesellschafts- und Kapitalmarktrecht [GesKR] 2-3/2006 S. 191 f.; ISLER/VON SALIS-LÜTOLF, Fusionen nach dem neuen Fusionsgesetz, ZSR 123/2004 I BGE 148 III 362 S. 366 S. 28; ROLAND M. MÜLLER, KMU und erleichterte Fusionen, in: Das Fusionsgesetz: Bewährungsprobe nach dem 8. Jahr, 2015, S. 41; OLIVER TRIEBOLD, in: Wirtschaftsrechtliche Nebenerlasse, Handkommentar zum Schweizer Privatrecht, Amstutz/Roberto/Trüeb [Hrsg.], 3. Aufl. 2016, N. 11 zu Art. 23 FusG; RITA TRIGO TRINDADE, in: Commentaire LFus, Peter/Trigo Trindade [Hrsg.], 2005, N. 13 und 24 zu Art. 23 FusG; TRIGO TRINDADE/GRIESSEN COTTI, FusG - Echo aus der Praxis, GesKR 2/2007 S. 149 f.; TSCHÄNI/GABERTHÜEL, in: Basler Kommentar, Fusionsgesetz, 2. Aufl. 2015, N. 20 zu Art. 3 FusG; ALEXANDER VOGEL UND ANDERE, FusG, Kommentar, 3. Aufl. 2017, N. 14 zu Art. 23 FusG; HANS CASPAR VON DER CRONE UND ANDERE, Das Fusionsgesetz, 2. Aufl. 2017, S. 116 Rz. 245; ULYSSES VON SALIS, Fusionsgesetz, 2004, S. 166 f.; MATTHIAS WOLF, in: Basler Kommentar, Fusionsgesetz, 2. Aufl. 2015, N. 4 und 10 zu Art. 23 FusG)."
+            },
+            {
+              "marke": "E. 5.2.2",
+              "tiefe": 3,
+              "text": "Diesen Lehrmeinungen liegt eine wirtschaftliche Betrachtungsweise zugrunde: Die erleichterte Fusion beruht auf dem Gedanken, dass sich die Anwendung der Vorschriften über den Schutz der Gesellschafter als überflüssig erweist, wenn eine Gesellschaft eine Tochtergesellschaft übernimmt, deren Anteile sie bereits zu 100 Prozent hält, oder wenn zwei Schwestergesellschaften fusionieren, die je zu 100 Prozent vom gleichen Rechtsträger gehalten werden (Botschaft vom 13. Juni 2000 zum Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung, BBl 2000 4422 zu Art. 23 FusG). Gesellschafterinteressen sind nicht gefährdet; Personen mit Minderheitsbeteiligungen (vgl. Art. 1 Abs. 2 FusG) gibt es nicht. Die Bestimmungen zum Gläubiger- und Arbeitnehmerschutz (Art. 25-28 FusG) sind auch bei der erleichterten Fusion anwendbar. Das soeben zitierte Schrifttum (E. 5.2.1) betont nun, dass die Sachlage bei indirekten hundertprozentigen Beteiligungsverhältnissen die gleiche sei: Auch hier seien keine Minderheitsgesellschafter involviert und bestehe kein Bedürfnis zum Schutz der Gesellschafter; die wirtschaftlichen Interessen des übergeordneten Rechtsträgers änderten sich nicht, wenn anstelle direkter Anteilsinhaberschaft indirekte hundertprozentige Beteiligungen träten. Die beteiligungsrechtliche Kontinuität (Art. 7 FusG) sei in jedem Fall gewahrt. Allfälligen zusätzlich involvierten Personen (etwa Gläubigern oder Arbeitnehmern) entstünden bei der erleichterten Fusion keine Nachteile, da die BGE 148 III 362 S. 367 Regeln über den Gläubiger- sowie Arbeitnehmerschutz auch hier gälten und ohnehin die Verfahrensschritte, um die das Fusionsverfahren in den Fällen von Art. 23 Abs. 1 FusG erleichtert werde (Art. 24 Abs. 1 FusG), einzig die Gesellschafter schützten. Insbesondere seien auch die Gläubiger und Arbeitnehmer der Zwischengesellschaft(en) nicht schlechter gestellt als im ordentlichen Fusionsverfahren (ALTENBURGER/CALDERAN/LEDERER, a.a.O., S. 74 f. Rz. 223 f.; GNOS, a.a.O., S. 191; VON SALIS, a.a.O., S. 166 f.; WOLF, a.a.O., N. 4 und 10 zu Art. 23 FusG). Die Doktrin führt weiter aus, dass die diesbezüglich restriktive Anwendung des Fusionsgesetzes durch das EHRA aus praktischer Sicht auch deshalb nicht tauge, weil sich im Konzern direkte Beteiligungsverhältnisse - etwa fiduziarisches Eigentum - als vorgelagerter Schritt vor der Fusion ohne Weiteres herstellen liessen und die erleichterte Fusion auf diese Weise ohnehin zur Anwendung gebracht werden könne (so GNOS, a.a.O., S. 192; ISLER/VON SALIS-LÜTOLF, a.a.O., S. 28; TRIGO TRINDADE/GRIESSER COTTI, a.a.O., S. 150; WOLF, a.a.O., N. 4 zu Art. 23 FusG). Ferner wird darauf hingewiesen, dass bei einem Vorgehen \"in zwei Schritten\" - etwa: zunächst Übernahme der \"Enkelin\" durch deren Muttergesellschaft (die Zwischengesellschaft) nach lit. a von Art. 23 Abs. 1 FusG, anschliessend Fusion der Zwischengesellschaft mit deren Schwestergesellschaft gemäss lit. b von Art. 23 Abs. 1 FusG - das erleichterte Verfahren für die beiden Schritte jeweils zulässig sei. Es lasse sich nicht rechtfertigen, die Erleichterungen zu verweigern, wenn die Fusion statt in zwei Transaktionen direkt in einem Zug vollzogen werde (im genannten Beispiel: direkt Fusion der \"Enkelin\" mit ihrer \"Tante\"; TSCHÄNI/GABERTHÜEL, a.a.O., N. 20 zu Art. 3 FusG)."
+            },
+            {
+              "marke": "E. 5.2.3",
+              "tiefe": 3,
+              "text": "Auf diese Überlegungen ist nicht im Einzelnen einzugehen. Jedenfalls scheint es plausible Gründe zu geben, dass der Gesetzgeber in diesem Sinne (Zulassung indirekter hundertprozentiger Beteiligungsverhältnisse zur erleichterten Fusion) hätte legiferieren können."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Der Gesetzgeber hat aber anders legiferiert:"
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Das Gesetz sieht einen Numerus clausus zulässiger Umstrukturierungen und insbesondere einen Numerus clausus zulässiger Fusionen vor (Art. 4 FusG; vgl. Urteil 4A.4/2006 vom 20. April 2006 E. 2.3, nicht publ. in: BGE 132 III 470). BGE 148 III 362 S. 368 Dagegen hatten zwar zahlreiche Vernehmlassungsteilnehmer Kritik erhoben, und insbesondere wurde gewünscht, das Enumerationsprinzip durch eine Generalklausel zu ersetzen, welche die Fusion in allgemeiner Weise - namentlich ungeachtet der Rechtsform der an ihr beteiligten Rechtsträger - zuliesse (Zusammenstellung der Vernehmlassungen zum Fusionsgesetz, 1999, S. 3, 58-63 und 94 f.). Das Parlament folgte diesem Anliegen indes nicht, namentlich unter Hinweis auf die Rechtssicherheit und das relativ allgemein einsetzbare Institut der Vermögensübertragung (Art. 69 ff. FusG; BBl 2000 4393 f. zu Art. 4 FusG; AB 2001 S 149). Es blieb mithin bei der abschliessenden Aufzählung der zulässigen Fusionsvorgänge. Das Bundesgericht hatte im letzten Jahrhundert verschiedentlich Fusionen und Umwandlungen ohne ausdrückliche gesetzliche Grundlage erlaubt und den Grundsatz des Numerus clausus für \"auf dem Gebiete der Fusion und der Umwandlung nicht anwendbar\" erklärt. Diese Rechtsprechung ist nach dem Inkrafttreten des Fusionsgesetzes im Jahr 2004 insoweit überholt (so bereits BGE 132 III 70 E. 5.2; vgl. dagegen noch BGE 125 III 18 E. 4c [Umwandlung einer GmbH in eine AG]; BGE 115 II 415 E. 2 [Fusion zweier Stiftungen]; 53 I 1 E. 3 [Fusion zweier Vereine])."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Art. 23 FusG führt den gesetzlichen Grundgedanken (Numerus clausus) fort: Für abschliessend aufgezählte Tatbestände lässt das Gesetz die erleichterte Fusion - die gegenüber dem ordentlichen Verfahren beträchtliche Erleichterungen mit sich bringt (Art. 24 FusG) - zu (siehe BBl 2000 4422 f. zu Art. 23 FusG). Die Alternative nach Art. 23 Abs. 1 lit. b FusG setzt dabei voraus, dass der übergeordnete Rechtsträger alle (Stimmrechts-)Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt (\"si un sujet [...] détient l'ensemble des parts sociales conférant droit de vote des sociétés de capitaux qui fusionnent\"; \"se un soggetto giuridico [...] possiede tutte le quote delle società di capitali partecipanti alla fusione che conferiscono un diritto di voto\"). Im Gegensatz zu anderen Normen des Handelsrechts, welche auf die wirtschaftliche Kontrolle respektive das \"direkte oder indirekte\" Halten von Stimmanteilen abstellen (siehe nur Art. 963 Abs. 2 OR sowie dann Art. 697j Abs. 2 und 3 oder Art. 790a Abs. 2 OR, ferner etwa im Finanzmarktrecht), knüpft Art. 23 Abs. 1 lit. b FusG einzig und unmittelbar an den Besitz der Anteile der an der Fusion beteiligten Gesellschaften an. Hinzuweisen ist in diesem Zusammenhang auch auf BGE 148 III 362 S. 369 Art. 2 lit. g FusG, wo der Begriff des \"Anteilsinhabers\" ebenfalls mit Bezug auf die unmittelbare Inhaberschaft an Anteilen definiert wird, ohne Rücksichtnahme auf wirtschaftliche Beherrschungsverhältnisse. Bereits der Vorentwurf zum Fusionsgesetz vom November 1997 enthielt in Art. 23 Abs. 1 lit. a und b eine Regelung, die insoweit der heute in Kraft stehenden Bestimmung entspricht (lit. b: \"wenn ein Rechtsträger alle Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt, die ein Stimmrecht gewähren\"). In der Folge regten verschiedene Vernehmlassungsteilnehmer an, die Norm dergestalt zu ändern, dass auch indirekte Beteiligungsverhältnisse erfasst würden (konkret: \"wenn ein Rechtsträger direkt oder indirekt alle Anteile...\"; Zusammenstellung der Vernehmlassungen zum Fusionsgesetz, 1999, S. 5 f. und 184 f.). Dieser Vorschlag wurde vom Parlament ausdrücklich abgelehnt. Dies wird verdeutlicht durch ein Votum des Berichterstatters im Ständerat, der - unter Hinweis darauf, dass dies \"später von Belang sein könnte\" - \"präzisierend\" festhielt, dass gemäss Art. 23 FusG \"nur Mutter und Tochter einerseits [Abs. 1 lit. a] und Schwestern andererseits [Abs. 1 lit. b] miteinander fusionieren\" könnten. Eine \"erleichterte Fusion von Grossmutter und Enkelin sowie von Cousinen\" sei nicht möglich. \"In dieser Bestimmung [sei] also auf den direkten und nicht auf den indirekten Besitz von Beteiligungen abzustellen\" (AB 2001 S 152). Dementsprechend ist die Fassung gemäss Vorentwurf Gesetz geworden, welche die erleichterte Fusion für Fälle indirekter Beteiligungsverhältnisse nicht vorsieht. Ein solcher Formalismus ist nicht Selbstzweck, sondern steht im Dienste von Rechtsklarheit, Rechtssicherheit und Transparenz. Genau dies soll das Fusionsgesetz gewährleisten (Art. 1 Abs. 2 FusG)."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Bei dieser Ausgangslage ist es nicht an den Gerichten, das bisweilen als unbefriedigend empfundene, \"etwas eng und gar vorsichtig formuliert ausgefallen[e]\" Gesetz (MÜLLER, a.a.O., S. 41) in berichtigender Rechtsschöpfung zu korrigieren. Ausschlaggebend kann nicht sein, was aus rechtspolitischer Warte allenfalls - je nach Sichtweise und wenn auch mit plausiblen Gründen - wünschbar sein mag. Vielmehr ist die vom Gesetzgeber bewusst so gewollte Regelung für die rechtsanwendenden Behörden massgebend, zumal es nicht um einen Sachverhalt geht, der für den Gesetzgeber nicht vorhersehbar gewesen wäre. Im Übrigen ist auch nicht erkennbar, BGE 148 III 362 S. 370 dass sich die Umstände seit Erlass des Fusionsgesetzes verändert oder sich das Rechtsverständnis gewandelt hätte (siehe dazu BGE 147 V 79 E. 7.3.1; BGE 143 III 624 E. 3.4.2; BGE 141 III 481 E. 3.2.3). Die vom Schrifttum vorgeschlagene wirtschaftliche Betrachtungsweise scheitert mithin daran, dass der Gesetzgeber nach Diskussion dieser Frage in Art. 23 Abs. 1 FusG gerade keinen wirtschaftlichen Anknüpfungspunkt gewählt (siehe auch BGE 126 III 462 E. 3b), sondern die zulässigen Fusionsarten samt dem entsprechenden Verfahren in Nachachtung des umstrukturierungsrechtlichen Grundsatzes des Numerus clausus abschliessend geregelt hat. Eine vom Gericht zu füllende gesetzliche Lücke liegt nicht vor (qualifiziertes Schweigen; siehe auch BGE 140 III 206 E. 3.5.5, 3.6.4 und 3.7; BGE 132 III 470 E. 5.2)."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Demnach ist das aufgeworfene Rechtsproblem wie folgt zu entscheiden: Die Voraussetzungen für eine erleichterte Fusion nach Art. 23 Abs. 1 lit. b FusG sind nur gegeben, wenn der Rechtsträger, die natürliche Person oder die gesetzlich oder vertraglich verbundene Personengruppe die (Stimmrechts-)Anteile der an der Fusion beteiligten Gesellschaften direkt besitzt."
+            },
+            {
+              "marke": "E. 6.5",
+              "tiefe": 2,
+              "text": "Folglich hat das Handelsregisteramt die Eintragung der Fusion der Beschwerdeführerin mit der C. GmbH im erleichterten Verfahren nach Art. 23 f. FusG zu Recht verweigert. Dies hat die Vorinstanz im Ergebnis zutreffend erkannt."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "4A_110/2022",
+        "key": "bger_4A_110_2022",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=13.08.2022&to_date=16.08.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=11&azaclir=aza&highlight_docid=aza%3A%2F%2F16-08-2022-4A_110-2022&number_of_ranks=55"
+      },
+      "ecli": "ECLI:CH:BGE:2022:148.III.362"
+    }
+  ]
+}

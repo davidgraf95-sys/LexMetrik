@@ -227,6 +227,18 @@ async function main() {
     for (const id of alleIds) { const b = parseInt(idZuRef(id), 10); if (b) proBand[b] = (proBand[b] ?? 0) + 1; }
     console.log(`[bge-baender] enumeriert (band-basiert): ${alleIds.length} — ${Object.entries(proBand).sort((a, b) => +a[0] - +b[0]).map(([b, n]) => `${b}:${n}`).join(' ')}`);
     let neueIds = alleIds.filter((id) => !bestandIds.has(`bund/bge/${idZuRef(id).replace(/ /g, '_')}`));
+    // §8-Quarantäne (W2·6 PR-B, 17.7.2026): BGE, deren amtliche bger.ch-clir-DE-Seite die
+    // mehrteilige Regeste NICHT vollständig rendert (nur Teil a), während Teile b/c allein
+    // auf der fr-Fallback-Seite (deutscher Text) + it-Seite + im OCL-Flachtext vorliegen —
+    // reproduzierbar (Crawl + Frisch-Fetch, ~46 KB DE-Seite vs. ~86 KB bei mehrteiligen
+    // Nachbarn), also KEINE transiente Drosselung. Ohne fr-Fallback-Sourcing (turnkey-
+    // Follow-up: bibliothek/rechtsprechung/bge-baender-148-151-nachzug-2026-07-17.md, §5)
+    // verlöre die DE-Fassung Teile b/c (A29-Regression, check:entscheide-Tor). §8: lieber
+    // nicht aufnehmen als degradiert. Set wird geleert, sobald der Follow-up greift.
+    const QUARANTAENE_BGE = new Set<string>(['149 IV 1']);
+    const vorQuar = neueIds.length;
+    neueIds = neueIds.filter((id) => !QUARANTAENE_BGE.has(idZuRef(id)));
+    if (neueIds.length !== vorQuar) console.log(`[bge-baender] §8-Quarantäne: ${vorQuar - neueIds.length} BGE ausgeschlossen (bger.ch-DE-Regeste unvollständig): ${[...QUARANTAENE_BGE].join(', ')}`);
     console.log(`[bge-baender] davon neu (noch nicht im Bestand): ${neueIds.length}`);
     // Optionaler Deckel (Smoke-Test / gestaffelter Resume): die N ältesten neuen zuerst
     // (Enumeration ist date_desc → tail = älteste; deterministisch, §2).

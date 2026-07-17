@@ -1,0 +1,392 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/148_III_57",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "148 III 57",
+      "bgeReferenz": "148 III 57",
+      "zitierung": "BGE 148 III 57",
+      "datum": "2022-01-05",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": null,
+      "rubrum": {
+        "besetzung": "Bundesrichterin Hohl, Präsidentin, Bundesrichterin Kiss, Bundesrichter Rüedi, Bundesrichterin May Canellas, nebenamtlicher Bundesrichter Kölz. Gerichtsschreiber Brugger",
+        "parteien": "A.________ AG, vertreten durch Advokat Prof. Dr. Pascal Grolimund, Beschwerdeführerin, gegen B.________ AG, vertreten durch Rechtsanwalt Dr. Volker Pribnow, Beschwerdegegnerin",
+        "gegenstand": "Versicherungsvertrag; Auslegung der Allgemeinen Versicherungsbedingungen, Deckungsausschluss bei Pandemien",
+        "vorinstanz": "Handelsgerichts des Kantons Aargau, 1. Kammer, vom 17. Mai 2021"
+      },
+      "regeste": {
+        "text": "Art. 1 und 18 OR; Allgemeine Geschäftsbedingungen. Geltung und Auslegung Allgemeiner Geschäftsbedingungen (E. 2).\nRegeste\n Art. 1 et 18 CO; conditions générales. Validité et interprétation de conditions générales (consid. 2).\nRegesto\n Art. 1 e 18 CO; condizioni generali. Validità e interpretazione di condizioni generali (consid. 2).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 1 und 18 OR; Allgemeine Geschäftsbedingungen.",
+            "absaetze": [
+              "Geltung und Auslegung Allgemeiner Geschäftsbedingungen (E. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-III-57%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 1 et 18 CO; conditions générales.",
+            "absaetze": [
+              "Validité et interprétation de conditions générales (consid. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-III-57%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 1 e 18 CO; condizioni generali.",
+            "absaetze": [
+              "Validità e interpretazione di condizioni generali (consid. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-III-57%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. Die B.________ AG (Klägerin, Beschwerdegegnerin) betreibt ein Lokal mit Restaurant und Bar in U.________. Sie hat bei der A.________ AG (Beklagte, Beschwerdeführerin) die \"X.________ Geschäftsversicherung KMU\" abgeschlossen, enthaltend eine Fahrhabeversicherung sowie eine Betriebs- und Unfallversicherung. Die Fahrhabeversicherung umfasst laut Police Nr. xxx vom 17. August 2018 unter der Rubrik \"Weitere Gefahren\" auch die Versicherung für Ertragsausfall und Mehrkosten infolge Epidemie bis zu einem Höchstbetrag von Fr. 2'000'000.-- bei einem Selbstbehalt von Fr. 200.--. A.b. Am 16. März 2020 stufte der Bundesrat die Situation in der Schweiz im Zusammenhang mit der Ausbreitung des Coronavirus als ausserordentliche Lage im Sinne von Art. 7 des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz; SR 818.101) ein. Er ordnete mit Wirkung ab dem 17. März 2020 die Schliessung von für das Publikum öffentlich zugänglichen Einrichtungen an, insbesondere von Restaurations- und Barbetrieben (Art. 6 Abs. 2 lit. b und c Verordnung 2 über Massnahmen zur Bekämpfung des Coronavirus [COVID-19]; [COVID-19-Verordnung 2; Änderung vom 16. März 2020]). Restaurations- und Barbetriebe waren für das Publikum erst ab dem 11. Mai 2020 unter einschränkenden Auflagen wieder öffentlich zugänglich (Art. 6 Abs. 3 lit. b bis COVID-19-Verordnung 2 [Transitionsschritt 2: Restaurationsbetriebe; Änderung vom 8. Mai 2020]). Die Betriebsschliessung ab 17. März 2020 führte bei der Klägerin zu einem Ertragsausfall. Am 18. März 2020 errechnete sie einen zu erwartenden Betriebsunterbrechungsschaden bis 30. April 2020 von Fr. 75'397.-- und bat die Beklagte mit Schreiben vom 19. März 2020, die versicherten Leistungen zu erbringen. Mit E-Mail vom 23. März 2020 und Schreiben vom 25. März 2020 lehnte die Beklagte Entschädigungen im Zusammenhang mit dem Coronavirus ab."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Am 21. April 2020 erhob die Klägerin Teilklage am Handelsgericht des Kantons Aargau und beantragte, die Beklagte sei zu verpflichten, ihr Fr. 40'000.-- für Ertragsausfall und Mehrkosten infolge Epidemie zu bezahlen, nebst 5 % Zins seit dem Tag der Klageeinreichung. Die Geltendmachung weiterer Ansprüche behielt sie sich vor. Mit Urteil vom 17. Mai 2021 hiess das Handelsgericht die Klage - abgesehen vom Beginn des Verzugszinslaufes - gut und verpflichtete die Beklagte, der Klägerin Fr. 40'000.-- zuzüglich Zins zu 5 % seit dem 24. April 2020 zu bezahlen."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Dagegen erhob die Beschwerdeführerin Beschwerde in Zivilsachen an das Bundesgericht. Sie begehrt, das Urteil des Handelsgerichts sei aufzuheben und die Klage der Beschwerdegegnerin sei abzuweisen. Eventualiter sei das Urteil des Handelsgerichts aufzuheben und die Streitsache zur Neubeurteilung an die Vorinstanz zurückzuweisen. Die Beschwerdegegnerin und die Vorinstanz beantragten die Abweisung der Beschwerde. Die Beschwerdeführerin replizierte."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Die Parteien stimmen überein, dass zwischen ihnen die Zusatzbedingungen der X.________ Geschäftsversicherung KMU, Erweiterte Versicherung für Nahrungs- und Futtermittel sowie Tiere, Ausgabe April 2017, gelten (nachfolgend Zusatzbedingungen oder ZB), welche die Beschwerdegegnerin global übernommen hat. Diese Zusatzbedingungen sind in zwei Rubriken gegliedert: In der ersten Rubrik sind die Bestimmungen zu den grundsätzlich gedeckten Risiken aufgeführt (\"Versichert sind\"), in der zweiten Rubrik diejenigen zu den Deckungsausschlüssen (\"Nicht versichert sind\"). In der Rubrik \"Versichert sind\" hält die Klausel B1 auf Seite 5 unter dem hervorgehobenen Titel \"Epidemie\" fest, dass Schäden versichert sind \"infolge von Massnahmen, die eine zuständige schweizerische oder liechtensteinische Behörde aufgrund gesetzlicher Bestimmungen verfügt, um durch: a) Schliessung oder Quarantäne von Betrieben oder Betriebsteilen sowie Einschränkungen der betrieblichen Tätigkeit [...] die Verbreitung übertragbarer Krankheiten zu verhindern\". In der Rubrik \"Nicht versichert sind\" umschreibt auf Seite 7 die Klausel B2 ebenfalls unter dem hervorgehobenen Titel \"Epidemie\", welche Risiken in diesem Bereich vom Versicherungsschutz ausgenommen sind. Nicht versichert sind laut Klausel B2 \"Schäden infolge von Influenza-Viren und Prionkrankheiten (Scrapie, Rinderwahnsinn, Creutzfeldt-Jakob usw.) sowie infolge Krankheitserregern für welche national oder international die WHO-Pandemiestufen 5 oder 6 gelten\". Diese Pandemiestufen finden sich nach den unbestrittenen Feststellungen der Vorinstanz in dem in englischer Sprache gehaltenen \"WHO global influenza preparedness plan\" aus dem Jahre 2005 und lauten wie folgt: \"Phase 5: Larger cluster (s) but human-to-human spread still localized, suggesting that the virus is becoming increasingly better adapted to humans, but may not be fully transmissible (substantial pandemic risk). Phase 6: Pandemic: increased and sustained transmission in general population\". Die Parteien stimmen weiter darin überein, dass die Einteilung von Pandemien in sechs Phasen oder Stufen gemäss dem genannten Plan der Weltgesundheitsorganisation (WHO) bereits vor Abschluss des hier strittigen Versicherungsvertrages, der im Zeitraum zwischen dem 12. Oktober 2017 (Antrag der Beschwerdegegnerin) und dem 17. August 2018 (Ausstellung der Police durch die Beschwerdeührerin) liege, überholt war, und diese nicht mehr in Gebrauch gewesen sei. Die WHO folge seit 2013 einem System von vier Pandemiephasen. Die Pandemien würden von der WHO seither dynamisch beschrieben, und ihr Ablauf werde in einem Schaubild grafisch dargestellt, was aus dem WHO-Handbuch \"Pandemic influenza risk management\" vom Mai 2017 hervorgehe. Unbestritten ist schliesslich, dass die Anordnung des Bundesrats, mit Wirkung ab dem 17. März 2020 für das Publikum öffentlich zugängliche Einrichtungen zu schliessen, bei der Beschwerdegegnerin zu einem Ertragsausfall und Mehrkosten von mindestens Fr. 40'000.-- geführt hat. Strittig ist demgegenüber, ob der Passus der Klausel B2 der Zusatzbedingungen, wonach Schäden nicht gedeckt sind, unter anderem \"infolge Krankheitserregern für welche national oder international die WHO-Pandemiestufen 5 oder 6 gelten\", die Deckung für den Schaden der Beschwerdegegnerin im Zusammenhang mit dem Coronavirus (COVID-19) ausschliesst. Das wirft die Frage nach der Geltung der Zusatzbedingungen als Allgemeine Geschäftsbedingungen und deren Inhalt auf."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Allgemeine Geschäftsbedingungen sind Vertragsbestimmungen, die im Hinblick auf den künftigen Abschluss einer Vielzahl von Verträgen generell vorformuliert wurden (vgl. Urteile 4A_47/2015 vom 2. Juni 2015 E. 5.1; 4C.282/2003 vom 15. Dezember 2003 E. 3.1; 4P.135/2002 vom 28. November 2002 E. 3.1)."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Allgemeine Geschäftsbedingungen haben von sich heraus keine Geltung zwischen den Parteien. Sie gelten nur und soweit, als die Parteien sie für ihren Vertrag ausdrücklich oder konkludent übernommen haben (BGE 118 II 295 E. 2a; Urteile 4A_47/2015 vom 2. Juni 2015 E. 5.1; 4A_548/2013 vom 31. März 2014 E. 3.3.1; 4C.282/2003 vom 15. Dezember 2003 E. 3.1). In einem ersten Schritt ist daher zu prüfen, ob die Allgemeinen Geschäftsbedingungen Vertragsbestandteil sind."
+            },
+            {
+              "marke": "E. 2.1.1",
+              "tiefe": 3,
+              "text": "Ist dies der Fall, gelten die Allgemeinen Geschäftsbedingungen nur, wenn keine individuellen Abreden bestehen, die von den allgemeinen Bedingungen abweichen (Vorrang der Individualabrede; BGE 135 III 225 E. 1.4; 125 III 263 E. 4b/bb; 123 III 35 E. 2c/bb; Urteil 4A_503/2020 vom 19. Januar 2021 E. 5.3 mit weiteren Hinweisen)."
+            },
+            {
+              "marke": "E. 2.1.2",
+              "tiefe": 3,
+              "text": "Die Allgemeinen Geschäftsbedingungen können nur dann vom Konsens erfasst sein, wenn die zustimmende Partei bei Vertragsschluss zumindest die Möglichkeit hatte, von ihrem Inhalt in einer zumutbaren Weise Kenntnis zu nehmen (sog. Zugänglichkeitsregel; vgl. BGE 139 III 345 E. 4.4; 77 II 154 E. 4 S. 156; Urteil 4A_47/2015 vom 2. Juni 2015 E. 5.4.1). Für den Versicherungsvertrag bestimmt Art. 3 Abs. 2 VVG darüber hinaus, dass der Versicherungsnehmer in Besitz der Allgemeinen Versicherungsbedingungen sein muss, wenn er den Versicherungsvertrag beantragt oder annimmt."
+            },
+            {
+              "marke": "E. 2.1.3",
+              "tiefe": 3,
+              "text": "Stimmte die Partei der Übernahme der Allgemeinen Geschäftsbedingungen global zu, d.h. ohne diese zu lesen, zur Kenntnis zu nehmen oder deren Tragweite zu verstehen (sog. Globalübernahme; BGE 119 II 443 E. 1a; 109 II 452 E. 4; Urteil 4C.282/2003 vom 15. Dezember 2003 E. 3.1), wird die Geltung Allgemeiner Geschäftsbedingungen durch die sog. Ungewöhnlichkeitsregel eingeschränkt: Der Verfasser von Allgemeinen Geschäftsbedingungen muss nach dem Vertrauensgrundsatz davon ausgehen, dass der Vertragspartner ungewöhnlichen Klauseln nicht zustimmt (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.3). Entsprechend sind von der global erklärten Zustimmung alle ungewöhnlichen Klauseln ausgenommen, auf deren Vorhandensein die zustimmende Partei nicht gesondert aufmerksam gemacht worden ist (BGE 138 III 411 E. 3.1; 135 III 1 E. 2.1, 225 E. 1.3; 119 II 443 E. 1a). Die Ungewöhnlichkeit beurteilt sich aus der Sicht des Zustimmenden im Zeitpunkt des Vertragsabschlusses (BGE 138 III 411 E. 3.1; 135 III 1 E. 2.1; 119 II 443 E. 1a) unter Berücksichtigung der Umstände des Einzelfalls (BGE 135 III 1 E. 2.1; 119 II 443 E. 1a)."
+            },
+            {
+              "marke": "E. 2.1.3.1",
+              "tiefe": 4,
+              "text": "Die Ungewöhnlichkeitsregel ist ein Instrument der Konsenslehre (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.2). Sie konkretisiert das Vertrauensprinzip (BGE 138 III 411 E. 3.1; 135 III 1 E. 2.1 S. 7). Dieses bezweckt den Schutz von Treu und Glauben im Geschäftsverkehr und zielt nicht primär darauf ab, die schwächere oder unerfahrene Partei vor der stärkeren oder erfahreneren zu schützen. Für die Anwendung der Ungewöhnlichkeitsregel braucht es sich daher beim Zustimmenden nicht zwingend um eine schwächere oder unerfahrene Partei zu handeln. Auch eine stärkere, geschäfts- oder branchenerfahrene Vertragspartei kann von einer global übernommenen Klausel in Allgemeinen Geschäftsbedingungen überrascht werden und die Ungewöhnlichkeitsregel anrufen (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.2 mit weiteren Hinweisen). Die Stellung und Erfahrung des Zustimmenden ist dennoch nicht irrelevant, sondern spielt bei der subjektiven Ungewöhnlichkeit eine Rolle."
+            },
+            {
+              "marke": "E. 2.1.3.2",
+              "tiefe": 4,
+              "text": "Die AGB-Klausel hat nämlich für die zustimmende Partei zunächst subjektiv ungewöhnlich zu sein. Zu berücksichtigen ist unter anderem, ob der Zustimmende geschäfts- und branchenkundig ist: Je weniger geschäfts- oder branchenerfahren er ist, umso eher wird eine Klausel für ihn ungewöhnlich sein (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.3). So können branchenübliche Klauseln für einen Branchenfremden ungewöhnlich sein, für einen Branchenkenner demgegenüber nicht (BGE 138 III 411 E. 3.1; 119 II 443 E. 1a). Branchenkenntnis oder Geschäftserfahrung schliesst aber die Ungewöhnlichkeit nicht zwingend aus. Auch für einen Branchenkundigen oder Geschäftserfahrenen kann eine AGB-Klausel unter Umständen ungewöhnlich sein (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.3)."
+            },
+            {
+              "marke": "E. 2.1.3.3",
+              "tiefe": 4,
+              "text": "Neben der subjektiven Ungewöhnlichkeit hat die fragliche Klausel objektiv beurteilt einen geschäftsfremden Inhalt aufzuweisen, damit die Ungewöhnlichkeitsregel zur Anwendung gelangt. Sie hat mithin objektiv ungewöhnlich zu sein. Dies ist dann zu bejahen, wenn sie zu einer wesentlichen Änderung des Vertragscharakters führt oder in erheblichem Masse aus dem gesetzlichen Rahmen des Vertragstypus fällt. Je stärker eine Klausel die Rechtsstellung des Vertragspartners beeinträchtigt, desto eher ist sie als ungewöhnlich zu qualifizieren (BGE 138 III 411 E. 3.1; 135 III 1 E. 2.1, 225 E. 1.3). Bei Versicherungsverträgen sind auch die berechtigten Deckungserwartungen zu berücksichtigen (BGE 138 III 411 E. 3.1; Urteile 4A_232/2019 vom 18. November 2019 E. 2.2; 4A_48/2015 vom 29. April 2015 E. 2.1). Entsprechend kann eine in allgemeinen Versicherungsbedingungen vorgesehene Haftungsbeschränkung als ungewöhnlich qualifiziert werden, wenn der durch die Bezeichnung und Werbung beschriebene Deckungsumfang erheblich reduziert wird, so dass gerade die häufigsten Risiken nicht mehr gedeckt sind (BGE 138 III 411 E. 3.1; Urteile 4A_176/2018 vom 6. August 2018 E. 4.2; 4A_152/2017 vom 2. November 2017 E. 4.3; 4A_187/2007 vom 9. Mai 2008 E. 5.4.2; 5C.134/2004 vom 1. Oktober 2004 E. 4.2; 5C.53/2002 vom 6. Juni 2002 E. 3.1)."
+            },
+            {
+              "marke": "E. 2.1.3.4",
+              "tiefe": 4,
+              "text": "Das Bundesgericht prüft die Anwendung der Ungewöhnlichkeitsregel als Rechtsfrage frei (Art. 106 Abs. 1 BGG; BGE 142 V 466 E. 6.2; 140 V 50 E. 2.3). Es ist dabei an die Feststellungen der kantonalen Gerichte über die äusseren Umstände sowie das Wissen und Wollen der Beteiligten grundsätzlich gebunden (Art. 105 Abs. 1 BGG; BGE 138 III 411 E. 3.4)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Haben die Parteien die Allgemeinen Geschäftsbedingungen in den Vertrag übernommen, ist in einem zweiten Schritt der Inhalt durch Auslegung zu ermitteln."
+            },
+            {
+              "marke": "E. 2.2.1",
+              "tiefe": 3,
+              "text": "Allgemeine Geschäftsbedingungen sind grundsätzlich nach denselben Prinzipien auszulegen wie andere vertragliche Bestimmungen (BGE 142 III 671 E. 3.3; 135 III 1 E. 2). Entscheidend ist demnach in erster Linie der übereinstimmende wirkliche Wille der Vertragsparteien und in zweiter Linie, falls ein solcher nicht festgestellt werden kann, die Auslegung der Erklärungen der Parteien aufgrund des Vertrauensprinzips (BGE 142 III 671 E. 3.3; 140 III 391 E. 2.3). Dabei ist vom Wortlaut der Erklärungen auszugehen, welche jedoch nicht isoliert, sondern aus ihrem konkreten Sinngefüge heraus zu beurteilen sind (BGE 146 V 28 E. 3.2; 142 III 671 E. 3.3; 140 III 391 E. 2.3). Auch wenn der Wortlaut auf den ersten Blick klar erscheint, darf es also nicht bei einer reinen Wortauslegung sein Bewenden haben (BGE 131 III 606 E. 4.2; 130 III 417 E. 3.2; 129 III 702 E. 2.4.1; 127 III 444 E. 1b). Vielmehr sind die Erklärungen der Parteien so auszulegen, wie sie nach ihrem Wortlaut und Zusammenhang sowie den gesamten Umständen verstanden werden durften und mussten (BGE 146 V 28 E. 3.2; 145 III 365 E. 3.2.1; 144 III 327 E. 5.2.2.1). Das Gericht hat auch den vom Erklärenden verfolgten Regelungszweck zu beachten, wie ihn der Erklärungsempfänger in guten Treuen verstehen durfte und musste (BGE 146 V 28 E. 3.2; 142 III 671 E. 3.3; 140 III 391 E. 2.3). Für die Auslegung einer von der einen Vertragspartei aufgesetzten Vertragsbestimmung ist demnach entscheidend, welches Regelungsziel die andere Vertragspartei darin als redliche Geschäftspartnerin vernünftigerweise erkennen durfte und musste (Urteile 4A_203/2019 vom 11. Mai 2020 E. 3.3.2.2., nicht publ. in BGE 146 III 254; 4A_652/2017 vom 24. August 2018 E. 5.1.2; 4C.443/1996 vom 26. März 1997 E. 2a). Dabei ist für den Regelfall anzunehmen, dass der Erklärungsempfänger davon ausgehen durfte, der Erklärende strebe eine vernünftige, sachgerechte Regelung an (Urteil 4A_652/2017 vom 24. August 2018 E. 5.1.2; 4C.443/1996 vom 26. März 1997 E. 2a). Das Bundesgericht überprüft diese objektivierte Auslegung von Willenserklärungen als Rechtsfrage, wobei es an Feststellungen des kantonalen Gerichts über die äusseren Umstände sowie das Wissen und Wollen der Beteiligten grundsätzlich gebunden ist (Art. 105 Abs. 1 BGG; BGE 146 V 28 E. 3.2; 144 III 93 E. 5.2.3; 142 III 671 E. 3.3)."
+            },
+            {
+              "marke": "E. 2.2.2",
+              "tiefe": 3,
+              "text": "Mehrdeutige Wendungen in allgemeinen Geschäftsbedingungen sind im Zweifel zu Lasten jener Partei auszulegen, die sie verfasst hat (sog. Unklarheitsregel). In allgemeinen Versicherungsbedingungen sind mehrdeutige Klauseln somit gegen den Versicherer als deren Verfasser zu interpretieren (BGE 146 III 339 E. 5.2.3; 133 III 61 E. 2.2.2.3; 607 E. 2.2; 124 III 155 E. 1b). Für den Versicherungsvertrag konkretisiert Art. 33 VVG die Unklarheitsregel insofern, als der Versicherer für alle Ereignisse haftet, welche die Merkmale der versicherten Gefahr an sich tragen, es sei denn, dass der Vertrag einzelne Ereignisse in \"bestimmter, unzweideutiger Fassung\" von der Versicherung ausschliesst (Urteil 4A_92/2020 vom 5. August 2020 E. 3.2.2). Es ist somit am Versicherer, die Tragweite der Verpflichtung, die er eingehen will, genau zu begrenzen (BGE 135 III 410 E. 3.2; 133 III 675 E. 3.3; zu Art. 33 VVG vgl. auch Urteil 4A_153/2015 vom 25. Juni 2015 E. 4.1). Die Unklarheitsregel kommt jedoch nur subsidiär zur Anwendung, wenn sämtliche übrigen Auslegungsmittel versagen (BGE 133 III 61 E. 2.2.2.3; 122 III 118 E. 2a und E. 2d; Urteile 4A_279/2020 vom 23. Februar 2021 E. 6.2; 4A_81/2020 vom 2. April 2020 E. 3.1). Es genügt mithin nicht, dass die Parteien über die Bedeutung einer Erklärung streiten, sondern es ist vorausgesetzt, dass die Erklärung nach Treu und Glauben auf verschiedene Weise verstanden werden kann (BGE 118 II 342 E. 1a) und es nicht möglich ist, den Zweifel mit den übrigen Auslegungsmitteln zu beseitigen (Urteile 4A_92/2020 vom 5. August 2020 E. 3.2.2; 4A_186/2018 vom 4. Juli 2019 E. 4.1; 4A_152/2017 vom 2. November 2017 E. 4.2). Wie die Anwendung der Ungewöhnlichkeitsregel prüft das Bundesgericht die Anwendung der Unklarheitsregel als Rechtsfrage frei (dazu Erwägung 2.1.3.4)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Die Vorinstanz kam zusammengefasst zum Schluss, dass die hier strittige Klausel B2 der Zusatzbedingungen nicht (objektiv) ungewöhnlich sei. Sie sei vom Konsens erfasst. Es schade der Übernahme der Klausel in den Vertrag nicht, dass die WHO-Pandemiestufen nicht detailliert umschrieben bzw. bestimmt worden seien. Das Dokument der WHO, worin diese Stufen definiert seien, sei im Zeitpunkt des Vertragsschlusses über das Internet öffentlich zugänglich gewesen und sei es auch heute noch. Bei der Auslegung erwog die Vorinstanz, die Klausel B2 setze voraus, dass die WHO-Pandemiestufen 5 oder 6 Gültigkeit hätten. Neben der Gültigkeit verlange die Klausel, dass entweder die WHO erklärt habe, der epidemisch auftretende Krankheitserreger erfülle die Kriterien der Pandemiestufen 5 oder 6, oder sich eine schweizerische oder liechtensteinische Behörde bei der Anordnung von Massnahmen auf diese Stufen berufen habe. Beides sei nicht der Fall gewesen, womit der Deckungsausschluss gemäss Klausel B2 nicht greife. Die Klausel B2 verweise auch einzig auf die WHO-Pandemiestufen 5 und 6, ohne deren Inhalt im Wort wiederzugeben, womit die Klausel aus sich heraus keinen Sinn ergebe und die WHO-Pandemiestufen 5 und 6 nicht zur Begründung des Deckungsausschlusses herangezogen werden könnten."
+            },
+            {
+              "marke": "E. 4.1.1",
+              "tiefe": 3,
+              "text": "Die Beschwerdegegnerin stellt sich gegen die Auffassung der Vorinstanz, die Klausel B2 sei vom Konsens erfasst. Sie meint, der Klausel sei wegen der Intransparenz des Deckungsausschlusses bereits im Rahmen der Konsenskontrolle die Anwendung zu versagen. Das WHO-Regelwerk sei weder allgemein bekannt noch ohne Weiteres zugänglich, schon gar nicht in deutscher Sprache, in welcher der Vertrag abgefasst sei. Wenn sich die Beschwerdeführerin auf ein Stufensystem berufen wolle, das schon beim Vertragsschluss von Seiten der WHO keine Anwendung mehr gefunden habe, so sei dies im Sinne des Transparenzgebots nur möglich, wenn diese Stufen transparent dargestellt würden, während der Verweis auf nicht unmittelbar anwendbare Normen unverständlich sei. Ein klares Bild dessen, was der Ausschluss in der Klausel B2 tatsächlich bedeute, ergebe sich sodann auch einzig dann, wenn neben den Pandemiestufen 5 und 6 zumindest auch die Pandemiestufe 4 beschrieben werde und damit Dasjenige, was im Rahmen der von der Beschwerdeführerin versprochenen Deckung überhaupt noch erfasst werde."
+            },
+            {
+              "marke": "E. 4.1.2",
+              "tiefe": 3,
+              "text": "Mit diesen Ausführungen setzt sich die Beschwerdegegnerin nicht mit dem Argument der Vorinstanz auseinander, dass das Dokument der WHO, worin die Pandemiestufen definiert würden, über das Internet zugänglich gewesen sei und es daher im Rahmen der \"Konsenskontrolle\" nicht schade, dass die WHO-Pandemiestufen 5 und 6 im Vertrag nicht detailliert umschrieben oder bestimmt worden seien. Mangels hinreichender Rüge bräuchte daher gar nicht auf diesen Punkt eingetreten zu werden. Unabhängig davon ist aber der Beschwerdegegnerin auch in der Sache kein Erfolg beschieden: Die Beschwerdegegnerin stützt sich für ihre Argumentation einzig auf das sog. Transparenzgebot. Nach diesem in der Lehre vertretenen Konzept gehört zur Zumutbarkeit der Kenntnisnahme der Allgemeinen Geschäftsbedingungen (dazu oben Erwägung 2.1.2), dass diese verständlich und (drucktechnisch) lesbar sind (vgl. etwa Ingeborg Schwenzer / Christiana Fountoulakis, Schweizerisches Obligationenrecht, Allgemeiner Teil, 8. Aufl. 2020, Rz. 45.03; Christoph Müller, Berner Kommentar, 2018, N. 326 ff. zu Art. 1 OR; Roman Perrig, in: Ernst A. Kramer / Thomas Probst / Roman Perrig, Schweizerisches Recht der Allgemeinen Geschäftsbedingungen, 2016, Rz. 141 ff.). Die Anwendung dieses Prinzips führt dazu, dass bereits auf der Ebene der Prüfung des Konsenses zu beurteilen ist, ob die AGB oder einzelne Klauseln davon verständlich und lesbar sind, und ihnen, falls solches verneint würde, der Einbezug in den Vertrag zu versagen ist. Ob und inwiefern das sog. Transparenzgebot bei der Prüfung Allgemeiner Geschäftsbedingungen Geltung beansprucht, kann vorliegend offen bleiben: Selbst wenn man davon ausgehen würde, dass bereits auf der Ebene der Prüfung des Konsenses zu entscheiden wäre, ob die Allgemeinen Geschäftsbedingungen verständlich und lesbar wären, könnte dies nicht bedeuten, dass für jeden in den Allgemeinen Geschäftsbedingungen verwendeten Begriff Definitionen oder Erläuterungen im Volltext in den AGB abgedruckt werden müssten, andernfalls die Klausel nicht vom Konsens gedeckt wäre (vgl. aber für Verweise in AGB: Roman Perrig, Die AGB-Zugänglichkeitsregel, 2011, S. 234 ff.). Das muss auch dann gelten, wenn in den Allgemeinen Geschäftsbedingungen von Dritten entwickelte Definitionen als für die Parteien massgebend erklärt werden, wie dies hier der Fall ist, indem die Beschwerdeführerin für den Deckungsausschluss auf ein (früheres) Pandemiestufensystem der WHO abstellte. Wie schon die Vorinstanz zutreffend erwog, schadet es somit für die Übernahme der Klausel B2 der Zusatzbedingungen nicht, dass der Wortlaut der WHO-Pandemiestufen nicht im Volltext in die Zusatzbedingungen übernommen wurde. Wie diese Begrifflichkeiten in den Zusatzbedingungen zu verstehen sind, wird im Rahmen der Auslegung beurteilt (dazu unten Erwägung 5), wie dies im Übrigen auch bei anderen Deckungsausschlüssen, beispielsweise bei \"Krieg\", \"Terrorakt\" oder \"Streik\" der Fall ist."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Die Vorinstanz prüfte in der Folge die Ungewöhnlichkeit der Klausel. Sie stufte die hier strittige Klausel B2 der Zusatzbedingungen als subjektiv ungewöhnlich ein. Das stellt die Beschwerdeführerin vor Bundesgericht nicht in Frage. Ebensowenig wird behauptet, dass die Beschwerdegegnerin auf den Deckungsausschluss gesondert hingewiesen worden wäre. Es stellt sich somit im Rahmen der Beurteilung der Ungewöhnlichkeit der Klausel einzig die Frage, ob diese objektiv ungewöhnlich ist."
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Die Vorinstanz verneinte dies. Die Klausel würde keinen geschäftsfremden Inhalt aufweisen. Sie falle nicht aus dem gesetzlichen Rahmen des Vertragstypus, fänden sich doch Deckungsausschlüsse bei vielen Verträgen des Privatversicherungsrechts. Ebensowenig ändere die Klausel B2 den Charakter des Versicherungsvertrages. Die Klausel sei nur eine von vielen Bestimmungen in den Zusatzbedingungen, welche die Versicherungsleistung einschränke, indem sie unter dem Titel \"Nicht versichert sind\" bestimmte Risiken von der Deckung ausschliesse. Die Klausel B2 sei objektiv nicht ungewöhnlich."
+            },
+            {
+              "marke": "E. 4.2.3",
+              "tiefe": 3,
+              "text": "Dagegen macht die Beschwerdegegnerin geltend, ihre berechtigten Deckungserwartungen seien enttäuscht worden. Sie habe unter dem Titel \"Epidemieversicherung\" eine Zusatzversicherung für Ertragsausfall und Mehrkosten abgeschlossen. Die Klausel B2 schränke diese an sich versprochene Versicherungsdeckung auf Ereignisse ein, bei denen höchstens lokal beschränkte Übertragungen von Mensch zu Mensch auftreten würden (WHO-Pandemiestufe 4). Keine Versicherungsdeckung sei hingegen gegeben, sobald sich mehrere Übertragungen nachweisen liessen, auch wenn sie weiterhin lediglich lokal auftreten würden (WHO-Pandemiestufe 5). Lediglich in einer allerersten Phase, wo behördliche Massnahmen überhaupt denkbar seien, gewähre die Beschwerdeführerin somit Schutz. Dieser Schutz versage jedoch, sobald sich die Ansteckungen häuften und eine Epidemie beginne und darum überhaupt erst ernsthafter Anlass für behördliche Massnahmen entstünden. Die \"Epidemieversicherung\" biete damit nur dort Schutz, wo vereinzelte Krankheitsfälle auftreten, während die Deckung versagt bliebe, wo im landläufigen Sinn eine epidemische Verbreitung beginne. Die Klausel sei damit objektiv ungewöhnlich und sie sei von der Globalübernahme der Zusatzbedingungen nicht gedeckt."
+            },
+            {
+              "marke": "E. 4.2.4",
+              "tiefe": 3,
+              "text": "Die Beschwerdegegnerin stützt sich darauf, dass sie eine \"Epidemieversicherung\" als Zusatzversicherung für Ertragsausfall und Mehrkosten abgeschlossen habe. Soweit sie damit unterstellen möchte, die abgeschlossene Versicherung würde als Epidemieversicherung bezeichnet oder von der Beschwerdeführerin so beworben, ist solches im vorinstanzlichen Sachverhalt nicht festgestellt, und die Beschwerdegegnerin verlangt diesbezüglich keine Sachverhaltsergänzung. Nach den unbestrittenen Feststellungen der Vorinstanz hat die Beschwerdegegnerin mit der Beschwerdeführerin eine \"X.________ Geschäftsversicherung KMU\" abgeschlossen, enthaltend eine Fahrhabeversicherung sowie eine Betriebs- und Unfallversicherung. Die Fahrhabeversicherung umfasst unter der Rubrik \"Weitere Gefahren\" auch die Versicherung infolge Ertragsausfall und Mehrkosten infolge Epidemie. Danach kann keine Rede davon sein, die Parteien hätten eine eigentliche \"Epidemieversicherung\" abgeschlossen."
+            },
+            {
+              "marke": "E. 4.2.5",
+              "tiefe": 3,
+              "text": "Die Epidemie ist bloss eine unter mehreren Gefahren, welche die von der Beschwerdegegnerin abgeschlossene Versicherung deckt. Ausgeschlossen ist demgegenüber die Deckung in diesem Bereich für Schäden infolge von \"Krankheitserregern für welche national oder international die WHO-Pandemiestufen 5 oder 6 gelten\". Durch diesen Ausschluss wird der durch die \"X.________ Geschäftsversicherung KMU\" beschriebene Deckungsfall nicht insofern reduziert, als gerade die häufigsten Risiken nicht mehr gedeckt wären (dazu oben Erwägung 2.1.3.3). Im Gegenteil wird mit dem Pandemieausschluss ein seltenes Risiko aus der Versicherungsdeckung ausgenommen, nämlich aus dem grundsätzlich versicherten Risiko der Epidemie, das spezielle Risiko für Schäden infolge von \"Krankheitserregern für welche national oder international die WHO-Pandemiestufen 5 oder 6 gelten\". Wie die Vorinstanz zutreffend erwog, handelt es sich bei dieser Ausschlussklausel um eine von vielen Bestimmungen in den Zusatzbedingungen, in welchen die Beschwerdeführerin ihre Versicherungsleistung einschränkte, womit weder der Charakter der \"X.________ Geschäftsversicherung KMU\" wesentlich geändert wird, noch diese im erheblichen Masse aus dem gesetzlichen Rahmen des Vertragstypus fallen würde. Inwiefern unter diesen konkreten Umständen des vorliegenden Einzelfalls berechtige Deckungserwartungen im Sinne der bundesgerichtlichen Rechtsprechung enttäuscht worden wären (Erwägung 2.1.3.3), zeigt die Beschwerdegegnerin nicht hinreichend auf. Es genügt für die Ungewöhnlichkeit noch nicht, dass eine Klausel das versicherte Risiko einschränkt, denn auch der durchschnittliche Versicherungsnehmer weiss, dass eine Versicherung nicht alle Risiken deckt. Entsprechend musste auch die Beschwerdegegnerin damit rechnen, dass bei ihrer \"Geschäftsversicherung KMU\" die Beschwerdeführerin die Deckung für spezifische Risiken - namentlich auch im Zusammenhang mit Epidemien - ausschliesst. Die Beschwerdegegnerin vermag damit die hier strittige Klausel B2 der Zusatzbedingungen nicht als objektiv ungewöhnlich auszuweisen."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Die Vorinstanz ist somit zu Recht zum Schluss gekommen, dass die hier strittige Klausel B2 der Zusatzbedingungen vom Konsens der Parteien erfasst ist."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Die Vorinstanz legte in der Folge die Klausel B2 aus. Sie traf dabei keine tatsächlichen Feststellungen zum inneren Willen der Parteien, sondern legte die Bestimmung unter dem Titel \"objektivierte Auslegung\" nach dem Vertrauensprinzip aus. Sie kam dabei mit zwei Begründungssträngen zum Ergebnis, dass der Deckungsausschluss nicht greife, wobei das Verhältnis dieser beiden Argumentationslinien aus dem Entscheid nicht klar wird. Ohnehin vermögen aber beide Erwägungen nicht zu überzeugen."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Die Vorinstanz erwog einerseits, die Klausel B2 ergebe aus sich heraus keinen Sinn und erweise sich als unverständlich. Hätte die Beschwerdeführerin die grundsätzlich nicht mehr gültigen WHO-Pandemiestufen 5 und 6 für anwendbar erklären wollen, hätte sie es nicht bei der blossen Nennung der Pandemiestufen belassen dürfen. Vielmehr wäre sie verpflichtet gewesen, die \"entsprechenden Kriterienkataloge oder Definitionen\" in den Vertragstext aufzunehmen oder zumindest einen gültigen Internet-Dateipfad anzugeben. Weil sie dies unterlassen habe, hätten die früheren WHO-Pandemiestufen 5 und 6 keinen Eingang in den Versicherungsvertrag gefunden und könnten nicht zur Begründung des Deckungsausschlusses herangezogen werden. Dieser Auffassung kann nicht gefolgt werden, wie die Beschwerdeführerin zu Recht geltend macht. Richtig ist zwar, dass bei der Auslegung nach dem Vertrauensprinzip am Wortlaut des Vertragstextes anzusetzen ist. Dieser ist aber nicht isoliert zu interpretieren. Entsprechend braucht der Vertragstext auch nicht aus sich selbst heraus verständlich zu sein, als ob bei der Auslegung einzig auf den Vertragstext abzustellen wäre und alle anderen Umstände nicht zu berücksichtigen wären. Vielmehr ist die Erklärung so auszulegen, wie sie nach ihrem Wortlaut und Zusammenhang sowie den gesamten Umständen verstanden werden durfte und musste (oben Erwägung 2.2.1)."
+            },
+            {
+              "marke": "E. 5.2.1",
+              "tiefe": 3,
+              "text": "Andererseits erwog die Vorinstanz, dass die Voraussetzungen der Klausel B2 nicht erfüllt seien. Sie ging dafür auf den Wortlaut der Klausel ein und legte diese im Zusammenhang mit der Klausel B1 der Zusatzbedingungen aus: Die Klausel B2 setze erstens voraus, dass die WHO-Pandemiestufen 5 oder 6 Gültigkeit haben müssen, d.h. für die Beurteilung solcher Ereignisse nach dem Willen und der Praxis der WHO grundsätzlich massgebend seien. Dies sei in casu nicht der Fall gewesen: Die Pandemiestufen 5 und 6 gemäss dem WHO global influenza preparedness plan von 2005 seien sowohl beim Abschluss des Versicherungsvertrages als auch bei der Bezeichnung der COVID-19-Erkrankung als Pandemie durch den Generaldirektor der WHO am 11. März 2020 nicht mehr massgebend bzw. gültig gewesen. Auch die schweizerischen Behörden hätten sich bei der Anordnung ihrer Massnahmen zur Bekämpfung von COVID-19 nicht auf die genannten WHO-Pandemiestufen bezogen. Zweitens verlange die Klausel B2, dass entweder eine zuständige internationale Behörde, namentlich die WHO, erklärt habe, der epidemisch auftretende Krankheitserreger erfüllte die Kriterien der Pandemiestufe 5 oder 6, oder sich eine für Massnahmen zur Bekämpfung übertragbarer Krankheiten zuständige schweizerische oder liechtensteinische Behörde bei der Anforderung von Massnahmen zur Bekämpfung eines bestimmten Krankheitserregers auf die WHO-Pandemiestufen 5 oder 6 berufen habe. Auch dies sei vorliegend nicht der Fall gewesen: Weder habe sich die WHO bei der Beurteilung der COVID-19-Pandemie noch hätten sich die schweizerischen Behörden bei der Anordnung ihrer Massnahmen zur Bekämpfung von COVID-19 auf die genannten WHO-Pandemiestufen bezogen."
+            },
+            {
+              "marke": "E. 5.2.2",
+              "tiefe": 3,
+              "text": "Dagegen bringt die Beschwerdeführerin zu Recht vor, dass die Vorinstanz bei dieser Auslegung nicht alle Auslegungsmittel beachtet habe und sich hauptsächlich auf den Wortlaut der Klausel B2 stützte. Werden alle im vorinstanzlichen Entscheid festgestellten Umstände in die Interpretation der Klausel B2 der Zusatzbedingungen einbezogen, resultiert eine gegenteilige Auslegung. Im Einzelnen:"
+            },
+            {
+              "marke": "E. 5.2.2.1",
+              "tiefe": 4,
+              "text": "Nach der Klausel B1 der Zusatzbedingungen sind in der Rubrik \"Versichert sind\" unter dem Titel \"Epidemie\" Schäden versichert infolge von Massnahmen, die eine zuständige schweizerische oder liechtensteinische Behörde aufgrund gesetzlicher Bestimmungen verfügt, um die Verbreitung übertragbarer Krankheiten zu verhindern. In lit. a - h der Klausel B1 werden die einzelnen Massnahmen aufgezählt. In der Rubrik \"Nicht versichert sind\" steht die Klausel B2 ebenfalls unter dem Titel \"Epidemie\". In systematischer Hinsicht hängt die Klausel B2 demnach mit der Klausel B1 zusammen: Die Klausel B1 legt fest, welche Risiken bei einer \"Epidemie\" von der Versicherung gedeckt sind, und die Klausel B2 nimmt bestimmte Risiken wieder aus der Deckung aus. In der Klausel B2 werden beim Risiko \"Epidemie\" drei Gruppen von Ereignissen aus der Versicherungsdeckung ausgeschlossen, nämlich Schäden infolge von \"Influenza-Viren\", \"Prionkrankheiten (Scrapie, Rinderwahnsinn, Creutzfeldt-Jakob usw.) \" sowie den hier strittigen \"Krankheitserregern für welche national oder international die WHO Pandemiestufen 5 oder 6 gelten\". Abgestellt wird mit Letzterem auf ein Stufensystem der WHO, ohne dass dieses System in den Zusatzbedingungen oder anderen Vertragsbestandteilen weiter definiert oder konkretisiert würde."
+            },
+            {
+              "marke": "E. 5.2.2.2",
+              "tiefe": 4,
+              "text": "Nach den unbestrittenen und damit für das Bundesgericht verbindlichen Feststellungen der Vorinstanz kann von einem branchenfremden Versicherungsnehmer erwartet werden, dass er wisse, was eine Pandemie sei, nämlich eine weit verbreitete, ganze Länder oder Landstriche erfassende Seuche bzw. eine auf grosse Teile eines Landes oder Erdteils übergreifende Epidemie, eine Epidemie grossen Ausmasses. Wer aber weiss, was eine Pandemie ist, kann aus dem Text der Klausel B2 der Zusatzbedingungen erkennen, dass solche Pandemien nach dem in der Klausel B2 referenzierten System der WHO in verschiedene Stufen eingeteilt, und davon die Stufen 5 und 6 aus der Versicherungsdeckung ausgenommen werden. Sind einzelne Pandemiestufen ausgenommen, konnte die Beschwerdegegnerin nach Treu und Glauben verstehen, dass mit den Pandemiestufen 5 und 6 die beiden höchsten Pandemiestufen gemeint sind, auch wenn sie das WHO-Pandemiestufensystem nicht (im Detail) kennt. Ein Stufensystem ist allgemein verständlich. Die Beschwerdegegnerin macht denn auch nicht geltend, dass ein solcher Schluss nicht zulässig sei oder sie davon ausgegangen wäre, dass es noch weitere Stufen nach der Stufe 6 gegeben hätte. Vielmehr gesteht sie selber ein, dass es \"per se grundsätzlich nicht falsch\" sei, wenn in einem Stufensystem die gravierendsten Stufen von der Versicherungsdeckung ausgenommen seien und die Klausel festlege, \"dass die obersten Stufen nicht gedeckt\" seien. Demnach musste die Beschwerdegegnerin die Klausel B2 so verstehen, dass die höchsten beiden Stufen des Pandemiestufensystems der WHO von der Versicherungsdeckung ausgenommen sind. Ein solches Auslegungsergebnis stimmt auch mit dem Regelungsziel der Beschwerdeführerin überein, welches die Beschwerdegegnerin als redliche Geschäftspartnerin erkennen musste, nämlich mit dieser Klausel aus dem grundsätzlich versicherten Risiko der Epidemie weitreichendste Ausprägungen einer Pandemie, die obersten beiden Stufen des Pandemiestufensystems der WHO, auszunehmen."
+            },
+            {
+              "marke": "E. 5.2.2.3",
+              "tiefe": 4,
+              "text": "Die Vorinstanz stellt sich auf den Standpunkt, dass diese Pandemiestufen \"in Kraft\" oder \"massgeblich\" sein müssten bzw. eine Behörde sich auf die WHO-Pandemiestufen habe berufen müssen, damit der Deckungsausschluss greife. Sie stützt sich dabei auf den Wortlaut der Klausel, wonach die Stufen national oder international zu \"gelten\" haben. Eine solche Auslegung überzeugt nicht: Erstens muss ein Versicherungsnehmer wie die Beschwerdegegnerin den Begriff \"gelten\" nicht ausschliesslich im Sinne von \"Gültigkeit haben\" verstehen. Vielmehr kann \"gelten\" auch so interpretiert werden, dass etwas in einer bestimmten Weise eingeschätzt oder beurteilt wird. Entsprechend konnte die Beschwerdegegnerin die Formulierung, dass die WHO-Pandemiestufen 5 und 6 gelten, auch rein sprachlich so verstehen, dass der Deckungsausschluss greift, wenn eine Pandemie nach dem WHO-Pandemiestufensystem national oder international als eine Stufe 5 oder 6 beurteilt wird, ohne dass die Pandemiestufen im fraglichen Zeitpunkt tatsächlich in Kraft sein müssten. Dass es für eine solche Beurteilung einer Pandemie einer offiziellen Verkündigung durch eine Behörde bedürfte, kann dem Wortlaut der Klausel entgegen der Auffassung der Vorinstanz ebensowenig entnommen werden. Zweitens darf bei der Auslegung nach dem Vertrauensprinzip ohnehin nicht bei einer reinen Buchstabenauslegung stehen geblieben werden. Vielmehr sind auch der Zusammenhang und die gesamten Umstände zu berücksichtigen. Auch ist zu beachten, was das Regelungsziel dieses Deckungsausschlusses ist (Erwägung 2.2.1). Dem Regelungsziel der Klausel trägt die Vorinstanz, wie die Beschwerdeführerin zu Recht kritisiert, nicht Rechnung: Das von der Vorinstanz propagierte Erfordernis der behördlichen Berufung auf die WHO-Pandemiestufen 5 und 6 ist schon deshalb nie erfüllt, weil die WHO nach den unbestrittenen Feststellungen der Vorinstanz das Klassifizierungssystem von Pandemien bereits vor Abschluss des Versicherungsvertrags geändert hat, und folglich weder die WHO noch eine schweizerische oder liechtensteinische Behörde sich während der Geltungsdauer des vorliegenden Versicherungsvertrags je auf solche Pandemiestufen bezog. Eine fehlende Verkündung der Pandemiestufe 5 oder 6 ist insofern eine Folge davon, dass das Klassifizierungssystem der WHO bereits bei Vertragsschluss nicht mehr praktiziert wurde. Die gegenteilige Auslegung - wie von der Vorinstanz vertreten - hätte somit zur Konsequenz, dass der in der Klausel B2 beschriebene Deckungsausschluss nie greifen könnte und somit toter Buchstabe bliebe. Wie die Beschwerdeführerin zu Recht vorbringt, stellt dies jedoch keine sachgerechte Auslegung dar. Damit müsste man nämlich der Beschwerdeführerin unterstellen, sie hätte einen Deckungsausschluss für Pandemieereignisse in den Vertrag aufnehmen wollen, der tatsächlich überhaupt nie zur Anwendung gelangen könnte. Es musste auch der Beschwerdegegnerin als redlicher Geschäftspartnerin klar sein, dass die Beschwerdeführerin keine solche leer gehende Regelung bezwecken wollte (vgl. Erwägung 2.2.1). Das Gleiche gilt auch für die Auffassung der Vorinstanz, dass die entsprechenden WHO-Pandemiestufen 5 und 6 national oder international in Kraft sein müssten, damit die Klausel Anwendung finde. Auch das führte dazu, dass der konkrete Deckungsausschluss gar nie hätte angewandt werden können, weil das Klassifizierungssystem nicht mehr in Gebrauch war. Vielmehr liegt der Klausel B2 die erkennbare Absicht der Beschwerdeführerin zu Grunde, die gravierendsten Pandemieereignisse von der Versicherungsdeckung auszunehmen, mithin solche, welche die Voraussetzungen der WHO-Pandemiestufe 5 oder 6 aufweisen. Unter Berücksichtigung des Zwecks der Bestimmung ist somit klar, wie die Klausel B2 der Zusatzbedingungen zu verstehen ist: Der Beschwerdegegnerin durfte und musste klar sein, dass von der grundsätzlichen Deckung der Schäden bei Epidemien (Klausel B1) die gravierendsten Risiken ausgenommen sind, nämlich nach der Klausel B2 Pandemien, die als WHO-Pandemiestufen 5 und 6 beurteilt werden. Dass dieses Stufensystem von der WHO bereits bei Vertragsschluss nicht mehr im Gebrauch war, ändert an diesem Auslegungsergebnis nichts. Es ist nicht ersichtlich, warum die Beschwerdeführerin für die Umschreibung des Ausschlusses der Versicherungsdeckung bei Epidemie nicht an den früheren Pandemiestufen der WHO hätte anknüpfen dürfen."
+            },
+            {
+              "marke": "E. 5.2.3",
+              "tiefe": 3,
+              "text": "Aus dem Gesagten folgt auch, dass der Klausel nach Treu und Glauben nicht die Bedeutung zugemessen werden kann, dass die WHO-Pandemiestufen 5 und 6 \"in Kraft\" oder \"massgeblich\" sein müssten bzw. eine Behörde sich auf eine WHO-Pandemiestufe habe berufen müssen, damit der Deckungsausschluss greift. Entsprechend kann auch nicht gesagt werden, dass die Klausel B2 nach Treu und Glauben auf verschiedene Weise verstanden werden kann (dazu oben Erwägung 2.2.2). Vielmehr erschliesst sich die Bedeutung der Klausel B2 im Gesamtzusammenhang, womit für die Anwendung der Unklarheitsregel kein Raum bleibt. Diese kommt erst subsidiär zur Anwendung, wenn sämtliche übrigen Auslegungsmittel versagen (Erwägung 2.2.2)."
+            },
+            {
+              "marke": "E. 5.2.4",
+              "tiefe": 3,
+              "text": "Die Beschwerdegegnerin stützt sich im Weiteren auch in diesem Zusammenhang auf das sog. Transparenzgebot. Sie beruft sich darauf, dass der Intransparenz einer Klausel über die Unklarheitsregel Rechnung getragen werden könne, solange sich der Versicherungsnehmer nicht auf den Verstoss gegen das Transparenzgebot berufe. Die Vorinstanz habe daher zutreffenderweise die Intransparenz der Klausel im Rahmen der Auslegungskontrolle zu Lasten der Beschwerdeführerin als derjenigen Partei berücksichtigt, welche die Klausel formuliert habe. Nach der Auffassung der Beschwerdegegnerin ist somit das sog. Transparenzgebot im Rahmen der Auslegung bei der Unklarheitsregel zu berücksichtigen, was die Vorinstanz nach ihrem Verständnis auch zu Recht getan habe. Da für die Unklarheitsregel kein Raum besteht (Erwägung 5.2.3), ist auch diesem Argument von vornherein der Boden entzogen, ohne dass näher darauf einzugehen ist."
+            },
+            {
+              "marke": "E. 5.2.5",
+              "tiefe": 3,
+              "text": "Zusammenfassend sind nach der Klausel B2 der Zusatzbestimmungen unter anderem Pandemien vom Versicherungsschutz ausgenommen, die den Kriterien gemäss WHO-Pandemiestufen 5 und 6 entsprechen."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin beruft sich darauf, dass die Corona-Pandemie (COVID-19) sämtliche Voraussetzungen einer Pandemie der Stufe 6 gemäss einschlägiger Definition der WHO erfülle. Das beanstandet die Beschwerdegegnerin im bundesgerichtlichen Verfahren nicht. Im vorinstanzlichen Verfahren hat sie sodann ausdrücklich zugestanden, dass \"nicht zu bestreiten ist, dass diese Stufen [5 oder 6] inhaltlich erreicht wären\". Somit stimmen die Parteien überein, dass die COVID-19-Pandemie \"inhaltlich\" der Pandemiestufe 5 oder 6 entspräche, wenn Pandemien noch nach dem früheren Stufensystem klassifiziert würden. Mit anderen Worten wird die COVID-19-Pandemie von den Parteien übereinstimmend und zu Recht als eine Pandemie der WHO-Pandemiestufen 5 oder 6 beurteilt, womit nach der Klausel B2 entgegen der Auffassung der Vorinstanz keine Versicherungsdeckung besteht."
+            },
+            {
+              "marke": "E. 5.4",
+              "tiefe": 2,
+              "text": "Problematisch empfindet die Beschwerdegegnerin schliesslich, dass nicht mehr erkennbar sei, wo die Grenze zwischen Deckung und Ausschluss verlaufe. Von Bedeutung sei, wo die Grenze zwischen Versicherungsschutz und Ausschluss gezogen werde. Diese Argumentation ist nicht zielführend: Im vorliegenden Prozess sind die von der Beschwerdegegnerin geltend gemachten Ansprüche zu prüfen. Es ist mithin zu beurteilen, ob die COVID-19-Pandemie die Voraussetzungen der Stufe 5 oder 6 gemäss WHO-Pandemiestufensystem erfüllt und demnach der Deckungsausschluss nach der Klausel B2 der Zusatzbedingungen dafür greift. Beides ist klarerweise erfüllt (dazu Erwägung 5.3). Dagegen ist vorliegend nicht zu entscheiden, ob andere Ereignisse diese Stufen erfüllen, oder wo allgemein die Grenze zwischen Versicherungsschutz oder Ausschluss bei dieser Klausel zu ziehen wäre. Dementsprechend bleibt die Kritik der Beschwerdegegnerin rein hypothetischer Natur und ist nicht entscheidwesentlich."
+            },
+            {
+              "marke": "E. 5.5",
+              "tiefe": 2,
+              "text": "Nach dem Ausgeführten hat die Vorinstanz die Anwendbarkeit des Deckungsausschlusses in Klausel B2 der Zusatzbedingungen zu Unrecht verneint."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist somit gutzuheissen. Das Urteil des Handelsgerichts des Kantons Aargau, HOR.2020.18, vom 17. Mai 2021 wird aufgehoben und die Klage der Beschwerdegegnerin wird abgewiesen. Im Übrigen ist die Sache zur Neuregelung der Kosten- und Entschädigungsfolgen des kantonalen Verfahrens an die Vorinstanz zurückzuweisen (vgl. Art. 67 und 68 Abs. 5 BGG)."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Dem Ausgang des Verfahrens entsprechend wird die unterliegende Beschwerdegegnerin kosten- und entschädigungspflichtig (Art. 66 Abs. 1 und Art. 68 Abs. 2 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "1. Die Beschwerde wird gutgeheissen. Das Urteil des Handelsgerichts des Kantons Aargau, HOR.2020.18, vom 17. Mai 2021 wird aufgehoben. Die Dispositivziffer 1 wird wie folgt neu gefasst: \"1. Die Klage wird abgewiesen.\" 2. Die Gerichtskosten von Fr. 2'000.-- werden der Beschwerdegegnerin auferlegt. 3. Die Beschwerdegegnerin hat die Beschwerdeführerin für das bundesgerichtliche Verfahren mit Fr. 2'500.-- zu entschädigen. 4. Die Sache wird zur Neuregelung der Kosten- und Entschädigungsfolgen des kantonalen Verfahrens an die Vorinstanz zurückgewiesen. 5. Dieses Urteil wird den Parteien und dem Handelsgericht des Kantons Aargau, 1. Kammer, schriftlich mitgeteilt. Lausanne, 5. Januar 2022 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Hohl Der Gerichtsschreiber: Brugger"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen. Das Urteil des Handelsgerichts des Kantons Aargau, HOR.2020.18, vom 17. Mai 2021 wird aufgehoben. Die Dispositivziffer 1 wird wie folgt neu gefasst:\n\"1. Die Klage wird abgewiesen.\"",
+        "Die Gerichtskosten von Fr. 2'000.-- werden der Beschwerdegegnerin auferlegt.",
+        "Die Beschwerdegegnerin hat die Beschwerdeführerin für das bundesgerichtliche Verfahren mit Fr. 2'500.-- zu entschädigen.",
+        "Die Sache wird zur Neuregelung der Kosten- und Entschädigungsfolgen des kantonalen Verfahrens an die Vorinstanz zurückgewiesen.",
+        "Dieses Urteil wird den Parteien und dem Handelsgericht des Kantons Aargau, 1. Kammer, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 105 Abs. 1 BGG",
+        "Art. 106 Abs. 1 BGG",
+        "Art. 3 Abs. 2 VVG",
+        "Art. 33 VVG"
+      ],
+      "normKeys": [
+        "BGG",
+        "VVG",
+        "OR"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=20&from_date=&to_date=&from_year=2022&to_year=2022&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=195&highlight_docid=atf%3A%2F%2F148-III-57%3Ade&number_of_ranks=195&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "4190e5d8c31b7b9f6b2a73b096b8e5b7cb185745c53fa52b314890678994e16f",
+      "sha": "a62055c8f89de0ba20f9d09d3cdea7c25750eed359833eabdc516192204f341b",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Die B. AG (Klägerin, Beschwerdegegnerin) betreibt ein Lokal mit Restaurant und Bar in U. Sie hat bei der A. AG (Beklagte, Beschwerdeführerin) die \"X. Geschäftsversicherung KMU\" abgeschlossen, enthaltend eine Fahrhabeversicherung sowie eine Betriebs- und Unfallversicherung. Die Fahrhabeversicherung umfasst laut Police Nr. x vom 17. August 2018 unter der Rubrik \"Weitere Gefahren\" auch die Versicherung für Ertragsausfall und Mehrkosten infolge Epidemie bis zu einem Höchstbetrag von Fr. 2'000'000.- bei einem Selbstbehalt von Fr. 200.-."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Am 16. März 2020 stufte der Bundesrat die Situation in der Schweiz im Zusammenhang mit der Ausbreitung des Coronavirus als ausserordentliche Lage im Sinne von Art. 7 des Bundesgesetzes vom 28. September 2012 über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz; SR 818.101) ein. Er ordnete mit Wirkung ab dem 17. März 2020 die Schliessung von für das Publikum öffentlich zugänglichen Einrichtungen an, insbesondere von Restaurations- und Barbetrieben (Art. 6 Abs. 2 lit. b und c Verordnung 2 vom 13. März 2020 über Massnahmen zur Bekämpfung des Coronavirus [COVID-19]; [COVID-19-Verordnung 2; SR818.101.24; Änderung vom 16. März 2020]). Restaurations- und Barbetriebe waren für das Publikum erst ab dem 11. Mai 2020 unter einschränkenden Auflagen wieder öffentlichzugänglich (Art. 6 Abs. 3 lit. b bis COVID-19-Verordnung 2 [Transitionsschritt 2: Restaurationsbetriebe; Änderung vom 8. Mai 2020]). Die Betriebsschliessung ab 17. März 2020 führte bei der Klägerin zu einem Ertragsausfall. Am 18. März 2020 errechnete sie einen zu erwartenden Betriebsunterbrechungsschaden bis 30. April 2020 von Fr. 75'397.- und bat die Beklagte mit Schreiben vom 19. März 2020, die versicherten Leistungen zu erbringen. Mit E-Mail vom 23. März 2020 und Schreiben vom 25. März 2020 lehnte die Beklagte Entschädigungen im Zusammenhang mit dem Coronavirus ab. B. Am 21. April 2020 erhob die Klägerin Teilklage am Handelsgericht des Kantons Aargau und beantragte, die Beklagte sei zu verpflichten, ihr Fr. 40'000.- für Ertragsausfall und Mehrkosten infolge Epidemie zu bezahlen, nebst 5 % Zins seit dem Tag der Klageeinreichung. Die Geltendmachung weiterer Ansprüche behielt sie sich vor. Mit Urteil vom 17. Mai 2021 hiess das Handelsgericht die Klage - abgesehen vom Beginn des Verzugszinslaufes - gut und verpflichtete die Beklagte, der Klägerin Fr. 40'000.- zuzüglich Zins zu 5 % seit dem 24. April 2020 zu bezahlen. C. Dagegen erhob die Beschwerdeführerin Beschwerde in Zivilsachen an das Bundesgericht. Sie begehrt, das Urteil des Handelsgerichts sei aufzuheben und die Klage der Beschwerdegegnerin sei abzuweisen. Eventualiter sei das Urteil des Handelsgerichts aufzuheben und die Streitsache zur Neubeurteilung an die Vorinstanz zurückzuweisen. (...) Das Bundesgericht heisst die Beschwerde gut. (Auszug)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Allgemeine Geschäftsbedingungen (AGB) sind Vertragsbestimmungen, die im Hinblick auf den künftigen Abschluss einer Vielzahl von Verträgen generell vorformuliert wurden (vgl. Urteile 4A_47/ 2015 vom 2. Juni 2015 E. 5.1; 4C.282/2003 vom 15. Dezember 2003 E. 3.1; 4P.135/2002 vom 28. November 2002 E. 3.1)."
+            },
+            {
+              "marke": null,
+              "text": "Allgemeine Geschäftsbedingungen haben von sich heraus keine Geltung zwischen den Parteien. Sie gelten nur und soweit, als die Parteien sie für ihren Vertrag ausdrücklich oder konkludent übernommen haben (BGE 118 II 295 E. 2a; Urteile 4A_47/2015 vom 2. Juni 2015 E. 5.1; 4A_548/2013 vom 31. März 2014 E. 3.3.1; 4C.282/2003 vom 15. Dezember 2003 E. 3.1). In einem ersten Schritt ist daher zu prüfen, ob die Allgemeinen Geschäftsbedingungen Vertragsbestandteil sind."
+            },
+            {
+              "marke": null,
+              "text": "Ist dies der Fall, gelten die Allgemeinen Geschäftsbedingungen nur, wenn keine individuellen Abreden bestehen, die von den allgemeinen Bedingungen abweichen (Vorrang der Individualabrede; BGE 135 III 225 E. 1.4; BGE 125 III 263 E. 4b/bb; BGE 123 III 35 E. 2c/bb; Urteil 4A_503/2020 vom 19. Januar 2021 E. 5.3 mit weiteren Hinweisen)."
+            },
+            {
+              "marke": null,
+              "text": "Die Allgemeinen Geschäftsbedingungen können nur dann vom Konsens erfasst sein, wenn die zustimmende Partei bei Vertragsschluss zumindest die Möglichkeit hatte, von ihrem Inhalt in einer zumutbaren Weise Kenntnis zu nehmen (sog. Zugänglichkeitsregel; vgl. BGE 139 III 345 E. 4.4; 77 II 154 E. 4 S. 156; Urteil 4A_47/2015 vom 2. Juni 2015 E. 5.4.1). Für den Versicherungsvertrag bestimmt Art. 3 Abs. 2 VVG (SR 221.229.1) darüber hinaus, dass der Versicherungsnehmer in Besitz der Allgemeinen Versicherungsbedingungen sein muss, wenn er den Versicherungsvertrag beantragt oder annimmt."
+            },
+            {
+              "marke": null,
+              "text": "Stimmte die Partei der Übernahme der Allgemeinen Geschäftsbedingungen global zu, d.h. ohne diese zu lesen, zur Kenntnis zu nehmen oder deren Tragweite zu verstehen (sog. Globalübernahme; BGE 119 II 443 E. 1a; BGE 109 II 452 E. 4; Urteil 4C.282/2003 vom 15. Dezember 2003 E. 3.1), wird die Geltung Allgemeiner BGE 148 III 57 S. 60 Geschäftsbedingungen durch die sog. Ungewöhnlichkeitsregel eingeschränkt: Der Verfasser von Allgemeinen Geschäftsbedingungen muss nach dem Vertrauensgrundsatz davon ausgehen, dass der Vertragspartner ungewöhnlichen Klauseln nicht zustimmt (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.3). Entsprechend sind von der global erklärten Zustimmung alle ungewöhnlichen Klauseln ausgenommen, auf deren Vorhandensein die zustimmende Partei nicht gesondert aufmerksam gemacht worden ist (BGE 138 III 411 E. 3.1; BGE 135 III 1 E. 2.1, BGE 135 III 225 E. 1.3; BGE 119 II 443 E. 1a). Die Ungewöhnlichkeit beurteilt sich aus der Sicht des Zustimmenden im Zeitpunkt des Vertragsabschlusses (BGE 138 III 411 E. 3.1; BGE 135 III 1 E. 2.1; BGE 119 II 443 E. 1a) unter Berücksichtigung der Umstände des Einzelfalls (BGE 135 III 1 E. 2.1; BGE 119 II 443 E. 1a)."
+            },
+            {
+              "marke": null,
+              "text": "Die Ungewöhnlichkeitsregel ist ein Instrument der Konsenslehre (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.2). Sie konkretisiert das Vertrauensprinzip (BGE 138 III 411 E. 3.1; BGE 135 III 1 E. 2.1 S. 7). Dieses bezweckt den Schutz von Treu und Glauben im Geschäftsverkehr und zielt nicht primär darauf ab, die schwächere oder unerfahrene Partei vor der stärkeren oder erfahreneren zu schützen. Für die Anwendung der Ungewöhnlichkeitsregel braucht es sich daher beim Zustimmenden nicht zwingend um eine schwächere oder unerfahrene Partei zu handeln. Auch eine stärkere, geschäfts- oder branchenerfahrene Vertragspartei kann von einer global übernommenen Klausel in Allgemeinen Geschäftsbedingungen überrascht werden und die Ungewöhnlichkeitsregel anrufen (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.2 mit weiteren Hinweisen). Die Stellung und Erfahrung des Zustimmenden ist dennoch nicht irrelevant, sondern spielt bei der subjektiven Ungewöhnlichkeit eine Rolle."
+            },
+            {
+              "marke": null,
+              "text": "Die AGB-Klausel hat nämlich für die zustimmende Partei zunächst subjektiv ungewöhnlich zu sein. Zu berücksichtigen ist unter anderem, ob der Zustimmende geschäfts- und branchenkundig ist: Je weniger geschäfts- oder branchenerfahren er ist, umso eher wird eine Klausel für ihn ungewöhnlich sein (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.3). So können branchenübliche Klauseln für einen Branchenfremden ungewöhnlich sein, für einen Branchenkenner demgegenüber nicht (BGE 138 III 411 E. 3.1; BGE 119 II 443 E. 1a). Branchenkenntnis oder Geschäftserfahrung schliesst aber die Ungewöhnlichkeit nicht zwingend aus. Auch für einen Branchenkundigen oder Geschäftserfahrenen kann eine AGB-Klausel unter BGE 148 III 57 S. 61 Umständen ungewöhnlich sein (Urteil 4A_499/2018 vom 10. Dezember 2018 E. 3.3.3)."
+            },
+            {
+              "marke": null,
+              "text": "Neben der subjektiven Ungewöhnlichkeit hat die fragliche Klausel objektiv beurteilt einen geschäftsfremden Inhalt aufzuweisen, damit die Ungewöhnlichkeitsregel zur Anwendung gelangt. Sie hat mithin objektiv ungewöhnlich zu sein. Dies ist dann zu bejahen, wenn sie zu einer wesentlichen Änderung des Vertragscharakters führt oder in erheblichem Masse aus dem gesetzlichen Rahmen des Vertragstypus fällt. Je stärker eine Klausel die Rechtsstellung des Vertragspartners beeinträchtigt, desto eher ist sie als ungewöhnlich zu qualifizieren (BGE 138 III 411 E. 3.1; BGE 135 III 1 E. 2.1, BGE 135 III 225 E. 1.3). Bei Versicherungsverträgen sind auch die berechtigten Deckungserwartungen zu berücksichtigen (BGE 138 III 411 E. 3.1; Urteile 4A_232/2019 vom 18. November 2019 E. 2.2; 4A_48/2015 vom 29. April 2015 E. 2.1). Entsprechend kann eine in allgemeinen Versicherungsbedingungen vorgesehene Haftungsbeschränkung als ungewöhnlich qualifiziert werden, wenn der durch die Bezeichnung und Werbung beschriebene Deckungsumfang erheblich reduziert wird, so dass gerade die häufigsten Risiken nicht mehr gedeckt sind (BGE 138 III 411 E. 3.1; Urteile 4A_176/2018 vom 6. August 2018 E. 4.2; 4A_152/2017 vom 2. November 2017 E. 4.3; 4A_187/2007 vom 9. Mai 2008 E. 5.4.2; 5C.134/2004 vom 1. Oktober 2004 E. 4.2; 5C.53/2002 vom 6. Juni 2002 E. 3.1)."
+            },
+            {
+              "marke": null,
+              "text": "Das Bundesgericht prüft die Anwendung der Ungewöhnlichkeitsregel als Rechtsfrage frei (Art. 106 Abs. 1 BGG; BGE 142 V 466 E. 6.2; BGE 140 V 50 E. 2.3). Es ist dabei an die Feststellungen der kantonalen Gerichte über die äusseren Umstände sowie das Wisen und Wollen der Beteiligten grundsätzlich gebunden (Art. 105 Abs. 1 BGG; BGE 138 III 411 E. 3.4)."
+            },
+            {
+              "marke": null,
+              "text": "Haben die Parteien die Allgemeinen Geschäftsbedingungen in den Vertrag übernommen, ist in einem zweiten Schritt der Inhalt durch Auslegung zu ermitteln."
+            },
+            {
+              "marke": null,
+              "text": "Allgemeine Geschäftsbedingungen sind grundsätzlich nach denselben Prinzipien auszulegen wie andere vertragliche Bestimmungen (BGE 142 III 671 E. 3.3; BGE 135 III 1 E. 2). Entscheidend ist demnach in erster Linie der übereinstimmende wirkliche Wille der Vertragsparteien und in zweiter Linie, falls ein solcher nicht festgestellt werden kann, die Auslegung der Erklärungen der Parteien aufgrund des Vertrauensprinzips (BGE 142 III 671 E. 3.3; BGE 140 III 391 E. 2.3). BGE 148 III 57 S. 62 Dabei ist vom Wortlaut der Erklärungen auszugehen, welche jedoch nicht isoliert, sondern aus ihrem konkreten Sinngefüge heraus zu beurteilen sind (BGE 146 V 28 E. 3.2; BGE 142 III 671 E. 3.3; BGE 140 III 391 E. 2.3). Auch wenn der Wortlaut auf den ersten Blick klar erscheint, darf es also nicht bei einer reinen Wortauslegung sein Bewenden haben (BGE 131 III 606 E. 4.2; BGE 130 III 417 E. 3.2; BGE 129 III 702 E. 2.4.1; BGE 127 III 444 E. 1b). Vielmehr sind die Erklärungen der Parteien so auszulegen, wie sie nach ihrem Wortlaut und Zusammenhang sowie den gesamten Umständen verstanden werden durften und mussten (BGE 146 V 28 E. 3.2; BGE 145 III 365 E. 3.2.1; BGE 144 III 327 E. 5.2.2.1). Das Gericht hat auch den vom Erklärenden verfolgten Regelungszweck zu beachten, wie ihn der Erklärungsempfänger in guten Treuen verstehen durfte und musste (BGE 146 V 28 E. 3.2; BGE 142 III 671 E. 3.3; BGE 140 III 391 E. 2.3). Für die Auslegung einer von der einen Vertragspartei aufgesetzten Vertragsbestimmung ist demnach entscheidend, welches Regelungsziel die andere Vertragspartei darin als redliche Geschäftspartnerin vernünftigerweise erkennen durfte und musste (Urteile 4A_203/2019 vom 11. Mai 2020 E. 3.3.2.2., nicht publ. in: BGE 146 III 254; 4A_652/2017 vom 24. August 2018 E. 5.1.2; 4C.443/1996 vom 26. März 1997 E. 2a). Dabei ist für den Regelfall anzunehmen, dass der Erklärungsempfänger davon ausgehen durfte, der Erklärende strebe eine vernünftige, sachgerechte Regelung an (Urteile 4A_652/2017 vom 24. August 2018 E. 5.1.2; 4C.443/ 1996 vom 26. März 1997 E. 2a). Das Bundesgericht überprüft diese objektivierte Auslegung von Wilenserklärungen als Rechtsfrage, wobei es an Feststellungen des kantonalen Gerichts über die äusseren Umstände sowie das Wissen und Wollen der Beteiligten grundsätzlich gebunden ist (Art. 105 Abs. 1 BGG; BGE 146 V 28 E. 3.2; BGE 144 III 93 E. 5.2.3; BGE 142 III 671 E. 3.3)."
+            },
+            {
+              "marke": null,
+              "text": "Mehrdeutige Wendungen in allgemeinen Geschäftsbedingungen sind im Zweifel zu Lasten jener Partei auszulegen, die sie verfasst hat (sog. Unklarheitsregel). In allgemeinen Versicherungsbedingungen sind mehrdeutige Klauseln somit gegen den Versicherer als deren Verfasser zu interpretieren (BGE 146 III 339 E. 5.2.3; BGE 133 III 61 E. 2.2.2.3, BGE 133 III 607 E. 2.2; BGE 124 III 155 E. 1b). Für den Versicherungsvertrag konkretisiert Art. 33 VVG die Unklarheitsregel insofern, als der Versicherer für alle Ereignisse haftet, welche die Merkmale der versicherten Gefahr an sich tragen, es sei denn, dass der Vertrag einzelne Ereignisse in \"bestimmter, unzweideutiger Fasung\" von der Versicherung ausschliesst (Urteil 4A_92/2020 vom BGE 148 III 57 S. 63"
+            },
+            {
+              "marke": null,
+              "text": "August 2020 E. 3.2.2). Es ist somit am Versicherer, die Tragweite der Verpflichtung, die er eingehen will, genau zu begrenzen (BGE 135 III 410 E. 3.2; BGE 133 III 675 E. 3.3; zu Art. 33 VVG vgl. auch Urteil 4A_153/2015 vom 25. Juni 2015 E. 4.1). Die Unklarheitsregel kommt jedoch nur subsidiär zur Anwendung, wenn sämtliche übrigen Auslegungsmittel versagen (BGE 133 III 61 E. 2.2.2.3; BGE 122 III 118 E. 2a und E. 2d; Urteile 4A_279/2020 vom 23. Februar 2021 E. 6.2; 4A_81/2020 vom 2. April 2020 E. 3.1). Es genügt mithin nicht, dass die Parteien über die Bedeutung einer Erklärung streiten, sondern es ist vorausgesetzt, dass die Erklärung nach Treu und Glauben auf verschiedene Weise verstanden werden kann (BGE 118 II 342 E. 1a) und es nicht möglich ist, den Zweifel mit den übrigen Auslegungsmitteln zu beseitigen (Urteile 4A_92/ 2020 vom 5. August 2020 E. 3.2.2; 4A_186/2018 vom 4. Juli 2019 E. 4.1; 4A_152/2017 vom 2. November 2017 E. 4.2). Wie die Anwendung der Ungewöhnlichkeitsregel prüft das Bundesgericht die Anwendung der Unklarheitsregel als Rechtsfrage frei (dazu E. 2.1.3.4)."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "4A_330/2021",
+        "key": "bger_4A_330_2021",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=05.01.2022&to_date=08.01.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=47&azaclir=aza&highlight_docid=aza%3A%2F%2F05-01-2022-4A_330-2021&number_of_ranks=69"
+      },
+      "ecli": "ECLI:CH:BGE:2022:148.III.57"
+    }
+  ]
+}

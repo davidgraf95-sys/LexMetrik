@@ -1,19 +1,19 @@
 {
-  "erzeugt": "2026-06-26",
+  "erzeugt": "2026-07-17",
   "eintraege": [
     {
-      "id": "bund/bger/2C_528_2021",
-      "gericht": "bger",
+      "id": "bund/bge/149_I_66",
+      "gericht": "bge",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "abteilung": null,
-      "nummer": "2C_528/2021",
-      "bgeReferenz": null,
-      "zitierung": "BGer 2C_528/2021 vom 23. Juni 2022",
+      "abteilung": "I",
+      "nummer": "149 I 66",
+      "bgeReferenz": "149 I 66",
+      "zitierung": "BGE 149 I 66",
       "datum": "2022-06-23",
       "sprache": "de",
-      "leitcharakter": "routine",
+      "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
       "legalArea": "public",
       "rubrum": {
@@ -23,10 +23,39 @@
         "vorinstanz": "Verwaltungsgerichts des Kantons Zürich, 4. Abteilung, vom 29. April 2021"
       },
       "regeste": {
-        "text": "Erlöschen bzw. Wiedererteilung der Aufenthaltsbewilligung",
-        "quelle": "opencaselaw"
+        "text": "Art. 8 EMRK; Art. 30 Abs. 1 lit. k und Art. 61 Abs. 2 AIG; Umfang des Aufenthaltsrechts gestützt auf das Privatleben nach Erlöschen der Aufenthaltsbewilligung. Hinweis auf die Rechtsprechung, wonach sich ein Ausländer nach einem rechtmässigen Aufenthalt von zehn Jahren in der Schweiz grundsätzlich auf ein Recht auf Verbleib in der Schweiz berufen kann, welches sich aus dem durch Art. 8 Ziff. 1 EMRK garantierten Schutz des Privatlebens ergibt (E. 4.1-4.4). Die in BGE 144 I 266 festgelegten Grundsätze sind nicht anwendbar, wenn der Ausländer um eine neue Aufenthaltsbewilligung ersucht, nachdem er die Schweiz verlassen hat und seine ursprüngliche Aufenthaltsbewilligung gestützt auf Art. 61 Abs. 2 AIG erloschen ist (E. 4.5-4.9).\nRegeste\n Art. 8 CEDH; art. 30 al. 1 let. k et art. 61 al. 2 LEI; portée du droit de séjour fondé sur la vie privée après l'expiration de l'autorisation de séjour. Rappel de la jurisprudence selon laquelle, après un séjour légal de dix ans en Suisse, un étranger peut en principe se prévaloir d'un droit à rester en Suisse issu de la protection de la vie privée garantie par l'art. 8 par. 1 CEDH (consid. 4.1-4.4). Les principes posés dans l' ATF 144 I 266 ne s'appliquent pas lorsque l'étranger demande un nouveau titre de séjour, alors qu'il a quitté la Suisse et perdu son titre de séjour initial en application de l'art. 61 al. 2 LEI (consid. 4.5-4.9).\nRegesto\n Art. 8 CEDU; art. 30 cpv. 1 lett. k e art. 61 cpv. 2 LStrI; portata del diritto di soggiorno sgorgante dalla protezione della vita privata dopo la decadenza dell'autorizzazione di soggiorno. Richiamo della giurisprudenza secondo la quale, dopo un soggiorno legale di dieci anni in Svizzera, uno straniero può in linea di principio prevalersi di un diritto a rimanere in Svizzera sgorgante dalla protezione della vita privata garantita dall'art. 8 n. 1 CEDU (consid. 4.1-4.4). I principi stabiliti nella DTF 144 I 266 non si applicano quando lo straniero chiede una nuova autorizzazione di soggiorno, allorquando ha lasciato la Svizzera e in virtù dell'art. 61 cpv. 2 LStrI ha perso l'autorizzazione di soggiorno di cui fruiva inizialmente (consid. 4.5-4.9).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 8 EMRK; Art. 30 Abs. 1 lit. k und Art. 61 Abs. 2 AIG; Umfang des Aufenthaltsrechts gestützt auf das Privatleben nach Erlöschen der Aufenthaltsbewilligung.",
+            "absaetze": [
+              "Hinweis auf die Rechtsprechung, wonach sich ein Ausländer nach einem rechtmässigen Aufenthalt von zehn Jahren in der Schweiz grundsätzlich auf ein Recht auf Verbleib in der Schweiz berufen kann, welches sich aus dem durch Art. 8 Ziff. 1 EMRK garantierten Schutz des Privatlebens ergibt (E. 4.1-4.4).",
+              "Die in BGE 144 I 266 festgelegten Grundsätze sind nicht anwendbar, wenn der Ausländer um eine neue Aufenthaltsbewilligung ersucht, nachdem er die Schweiz verlassen hat und seine ursprüngliche Aufenthaltsbewilligung gestützt auf Art. 61 Abs. 2 AIG erloschen ist (E. 4.5-4.9)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-I-66%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 8 CEDH; art. 30 al. 1 let. k et art. 61 al. 2 LEI; portée du droit de séjour fondé sur la vie privée après l'expiration de l'autorisation de séjour.",
+            "absaetze": [
+              "Rappel de la jurisprudence selon laquelle, après un séjour légal de dix ans en Suisse, un étranger peut en principe se prévaloir d'un droit à rester en Suisse issu de la protection de la vie privée garantie par l'art. 8 par. 1 CEDH (consid. 4.1-4.4).",
+              "Les principes posés dans l' ATF 144 I 266 ne s'appliquent pas lorsque l'étranger demande un nouveau titre de séjour, alors qu'il a quitté la Suisse et perdu son titre de séjour initial en application de l'art. 61 al. 2 LEI (consid. 4.5-4.9)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-I-66%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 8 CEDU; art. 30 cpv. 1 lett. k e art. 61 cpv. 2 LStrI; portata del diritto di soggiorno sgorgante dalla protezione della vita privata dopo la decadenza dell'autorizzazione di soggiorno.",
+            "absaetze": [
+              "Richiamo della giurisprudenza secondo la quale, dopo un soggiorno legale di dieci anni in Svizzera, uno straniero può in linea di principio prevalersi di un diritto a rimanere in Svizzera sgorgante dalla protezione della vita privata garantita dall'art. 8 n. 1 CEDU (consid. 4.1-4.4).",
+              "I principi stabiliti nella DTF 144 I 266 non si applicano quando lo straniero chiede una nuova autorizzazione di soggiorno, allorquando ha lasciato la Svizzera e in virtù dell'art. 61 cpv. 2 LStrI ha perso l'autorizzazione di soggiorno di cui fruiva inizialmente (consid. 4.5-4.9)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-I-66%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
-      "regesteAmtlich": false,
+      "regesteAmtlich": true,
       "abschnitte": [
         {
           "typ": "sachverhalt",
@@ -217,16 +246,17 @@
         "Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Zürich, 4. Abteilung, und dem Staatssekretariat für Migration mitgeteilt."
       ],
       "zitierteNormen": [
-        "Art. 10 Abs. 3 BV",
-        "Art. 100 Abs. 1 BGG",
-        "Art. 105 Abs. 1 BGG",
-        "Art. 106 Abs. 1 BGG",
-        "Art. 106 Abs. 2 BGG",
-        "Art. 113 BGG",
-        "Art. 115 BGG",
-        "Art. 116 BGG"
+        "Art. 30 Abs. 1 AIG",
+        "Art. 30 AIG",
+        "Art. 61 Abs. 2 AIG",
+        "Art. 61 Abs. 2 LEI",
+        "Art. 61 Abs. 2 LSTRI",
+        "Art. 61 AIG",
+        "Art. 8 CEDH",
+        "Art. 8 CEDU"
       ],
       "normKeys": [
+        "AIG",
         "BV",
         "BGG"
       ],
@@ -234,11 +264,99 @@
       "bestand": "snapshot",
       "kuratierung": "maschinell",
       "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=22.06.2022&to_date=25.06.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=31&azaclir=aza&highlight_docid=aza%3A%2F%2F23-06-2022-2C_528-2021&number_of_ranks=75",
-      "abgerufen": "2026-06-26",
-      "fassungsToken": "5c5c274586d9affc55561c93bd48d8416945f85adef4806d53d9cba50a4ff60e",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=10&from_date=&to_date=&from_year=2022&to_year=2022&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=98&highlight_docid=atf%3A%2F%2F149-I-66%3Ade&number_of_ranks=195&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "a11941a3331c634c8a7ade8f0bc6c0d23719e102e22a544141d98ac2e6272a1e",
       "sha": "38799a8fc0e6f92f6d93eb872b9f3227c93f4789e2cd104762a2f6246764aebe",
-      "ecli": "ECLI:CH:BGER:2022:2C_528.2021"
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "A. (geb. 1988), Staatsangehöriger Somalias, reiste im Jahr 2007 in die Schweiz ein und stellte ein Asylgesuch. Mit Verfügung des Bundesamts für Migration (heute: Staatssekretariat für Migration) vom 16. März 2010 wurde das Asylgesuch ab- und A. aus der Schweiz weggewiesen; jedoch wurde er aufgrund der Unzumutbarkeit der Wegweisung vorläufig aufgenommen. Am 3. Mai 2016 erhielt er gestützt auf ein Härtefallgesuch eine Aufenthaltsbewilligung für den Kanton Aargau. Am 4. Oktober 2017 ersuchte A. das Migrationsamt des Kantons Zürich (nachfolgend: Migrationsamt) um Bewilligung des Kantonswechsels, worauf ihm am 27. Oktober 2017 eine Aufenthaltsbewilligung für den Kanton Zürich erteilt wurde. Letztere wurde regelmässig - zuletzt bis zum 30. April 2020 - verlängert."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Ende 2019 erfuhr das Migrationsamt, dass A. im September 2017 in Frankreich erfolglos einen Asylantrag gestellt und vom 1. September 2018 bis am 29. April 2019 sowie in den Jahren 2016 und 2017 jeweils einen Monat in Somalia geweilt hatte, um seine Ehefrau und seine Familie zu besuchen. B. Mit Verfügung vom 26. Mai 2020 stellte das Migrationsamt fest, dass die Aufenthaltsbewilligung von A. gestützt auf Art. 61 Abs. 2 AIG erloschen sei. Zudem verfügte es, dass dessen Aufenthaltsbewilligung \"nicht wiedererteilt bzw. nicht verlängert\" werde und wies ihn an, die Schweiz bis zum 27. August 2020 zu verlassen. Die dagegen erhobenen Rechtsmittel blieben erfolglos (...). C. Mit Eingabe vom 30. Juni 2021 an das Bundesgericht erhebt A. (Beschwerdeführer) Beschwerde in öffentlich-rechtlichen Angelegenheiten und - sofern Letztere nicht zulässig sei - subsidiäre Verfassungsbeschwerde. Er beantragt die Aufhebung des vorinstanzlichen Urteils; dem Beschwerdeführer sei weiterhin die Aufenthaltsbewilligung zu erteilen. Eventualiter sei in Bezug auf den Beschwerdeführer die vorläufige Aufnahme anzuordnen. Subeventualiter sei die Sache zur ergänzenden Begründung an die Vorinstanz zurückzuweisen. (...) Das Bundesgericht weist sowohl die Beschwerde in öffentlich-rechtlichen Angelegenheiten als auch die subsidiäre Verfassungsbeschwerde ab. (Auszug)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Streitgegenstand des vorliegenden Verfahrens ist die Erteilung einer Aufenthaltsbewilligung an den Beschwerdeführer. Der Schutz des Familienlebens gemäss Art. 8 EMRK ist vorliegend nicht betroffen, denn der Beschwerdeführer verfügt nicht über in der Schweiz gefestigt anwesenheitsberechtigte Familienangehörige (vgl. BGE 144 I 266 E. 3.3) und beruft sich folgerichtig auch nicht auf diesen Aspekt von Art. 8 EMRK. Er leitet sein (potentielles) Aufenthaltsrecht vielmehr aus dem Schutz des Privatlebens gemäss Art. 8 EMRK ab und rügt eine Verletzung des entsprechenden Rechts."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Grundsätzlich verschafft die EMRK keinen Anspruch auf Einreise und Aufenthalt oder auf einen Aufenthaltstitel in einem bestimmten Staat. Nach einem gefestigten Grundsatz des Völkerrechts haben die Staaten das Recht, die Einwanderung und den Aufenthalt von Nicht-Staatsangehörigen auf ihrem Territorium zu regeln. Es ist in erster Linie Sache des Gesetzgebers, im Rahmen einer demokratischen und pluralistischen Auseinandersetzung darüber zu befinden, inwiefern und unter welchen Voraussetzungen es sich im Rahmen der Ausländer- und Einwanderungspolitik rechtfertigt, Bewilligungsansprüche einzuräumen (BGE 144 I 266 E. 3.2; BGE 144 II 1 E. 6.1)."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Unter Berufung auf Art. 8 Ziff. 1 EMRK (Achtung des Privatlebens) kann allerdings nach einer rechtmässigen Aufenthaltsdauer von rund zehn Jahren regelmässig davon ausgegangen werden, dass die sozialen Beziehungen in diesem Land so eng geworden sind, dass es für die Aufenthaltsbeendigung besonderer Gründe bedarf; im Einzelfall kann es sich freilich anders verhalten und die Integration zu wünschen übrig lassen. Es kann aber auch sein, dass schon zu einem früheren Zeitpunkt der Anspruch auf Achtung des Privatlebens betroffen ist. Liegt nach einer längeren, bewilligten Aufenthaltsdauer, die zwar zehn Jahre noch nicht erreicht hat, eine besonders ausgeprägte Integration vor, kann es den Anspruch auf Achtung des Privatlebens verletzen, wenn eine Bewilligung nicht erneuert wird (BGE 144 I 266 E. 3.9)."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Unbestritten ist, dass der Aufenthalt des Beschwerdeführers ab dem Datum der vorläufigen Aufnahme (16. März 2010) als BGE 149 I 66 S. 69 rechtmässiger Aufenthalt gilt (vgl. BGE 147 I 268 E. 4, 4.1 und 4.3 mit Hinweisen auf die Rechtsprechung des EGMR). Nicht als rechtmässiger Aufenthalt zu qualifizieren und deshalb bezüglich des Schutzes des Privatlebens nicht anzurechnen ist dagegen - soweit sich die rechtmässige Anwesenheitsdauer überhaupt als entscheiderheblich erweist (vgl. E. 4.6 ff. unten) - der Aufenthalt während des Asylverfahrens des Beschwerdeführers (vgl. Bst. A.a oben; vgl. BGE 137 II 10 E. 4.6 f.). Ausserdem kann seinem prozeduralen Aufenthalt ab dem 26. Mai 2020 (vgl. Bst. B oben) im Rahmen des Schutzes des Privatlebens - wenngleich nicht bedeutungslos - rechtsprechungsgemäss nicht derselbe Stellenwert beigemessen werden wie einem bewilligten Aufenthalt (Urteile 2C_638/2018 vom 15. Juli 2019 E. 3.3 mit Hinweisen; 2C_403/2018 vom 19. Februar 2019 E. 5.3)."
+            },
+            {
+              "marke": "E. 4.5.1",
+              "tiefe": 3,
+              "text": "Die Vorinstanz hat erwogen, dem prozeduralen Aufenthalt des Beschwerdeführers seit dem 26. Mai 2020 sei weniger Gewicht beizumessen. Da sich der Beschwerdeführer ausserdem vom September 2018 bis April 2019 bzw. acht Monate in Somalia aufgehalten habe (vgl. Bst. A.b oben), liege der rechtmässige Aufenthalt des Beschwerdeführers knapp unter der vom Bundesgericht definierten Leitlinie von zehn Jahren."
+            },
+            {
+              "marke": "E. 4.5.2",
+              "tiefe": 3,
+              "text": "Der Beschwerdeführer macht bezüglich Aufenthaltsdauer geltend, aufgrund der vorläufigen Aufnahme (vom 16. März 2010) habe er sich am 16. März 2020 bereits zehn Jahre rechtmässig in der Schweiz aufgehalten. Sein vorgenannter, achtmonatiger Aufenthalt in Somalia dürfe davon nicht in Abzug gebracht werden, jedenfalls nicht in einem Ausmass, dass ihm dadurch die zehnjährige Anwesenheitsdauer gemäss bundesgerichtlicher Leitlinie abgesprochen werde."
+            },
+            {
+              "marke": "E. 4.5.3",
+              "tiefe": 3,
+              "text": "Wie es sich mit der genauen Dauer der rechtmässigen Anwesenheit verhält, braucht - wie nachfolgend zu zeigen - mangels rechtlicher Relevanz nicht weiter erörtert zu werden."
+            },
+            {
+              "marke": "E. 4.6",
+              "tiefe": 2,
+              "text": "Der Schutz des Privatlebens gemäss Art. 8 EMRK wie vom Bundesgericht in seinem Leitentscheid BGE 144 I 266 anerkannt soll einer ausländischen Person ermöglichen, in der Schweiz zu verbleiben, um die entstandenen sozialen Beziehungen weiter zu pflegen. Der entsprechende Aufenthaltsanspruch betrifft deshalb die Verlängerung der Aufenthaltsbewilligung, nicht aber deren BGE 149 I 66 S. 70 Neuerteilung. Um eine Neuerteilung geht es auch dann, wenn eine einstmals bestehende Bewilligung nicht mehr existiert, etwa weil sie erloschen ist."
+            },
+            {
+              "marke": "E. 4.7",
+              "tiefe": 2,
+              "text": "Gemäss Art. 61 Abs. 2 AIG (SR 142.20) erlischt die Aufenthaltsbewilligung nach sechs Monaten, wenn die ausländische Person die Schweiz verlässt, ohne sich abzumelden. Der Gesetzgeber hat somit für das Erlöschen auf ein formelles Kriterium abgestellt (vgl. BGE 145 II 322 E. 2.3). Wenn dieses formelle Kriterium - eine Auslandsabwesenheit von sechs aufeinanderfolgenden Monaten - erfüllt ist, erlischt die Aufenthaltsbewilligung von Gesetzes wegen bzw. automatisch, dies auch dann, wenn auf die Verlängerung der Bewilligung ein Anspruch bestanden hätte; auf die Gründe bzw. Motive für die Auslandsabwesenheit kommt es nicht an (Urteile 2C_693/2021 vom 25. Oktober 2021 E. 2.2; 2C_2/2018 vom 15. Mai 2018 E. 1.1 und 1.3; vgl. auch Urteile 2C_221/2021 vom 11. Juni 2021 E. 3.1; 2C_691/2017 vom 18. Januar 2018 E. 3.1; betreffend Familiennachzug vgl. Urteil 2C_692/2021 vom 23. Mai 2022 E. 4.3 f.; MARC SPESCHA, in: Migrationsrecht, Spescha/Zünd/Bolzli/Hruschka/de Weck [Hrsg.], 5. Aufl. 2019, N. 6 zu Art. 61 AIG; CARONI/SCHEIBER/ PREISIG/ZOETEWEIJ, Migrationsrecht, 4. Aufl. 2018, S. 239; JEANNERAT/MAHON, in: Code annoté de droit des migrations, Vol. II: Loi sur les étrangers [LEtr] [nachfolgend: Code annoté LEtr], Nguyen/Amarelle [Hrsg.], 2017, N. 16 f. zu Art. 61 AIG)."
+            },
+            {
+              "marke": "E. 4.8",
+              "tiefe": 2,
+              "text": "Der Beschwerdeführer hat vorliegend die Schweiz (vom September 2018 bis April 2019; vgl. Bst. A.b oben) für acht Monate verlassen, um seine Familie in Somalia zu besuchen. Damit ist seine Aufenthaltsbewilligung gemäss Art. 61 Abs. 2 AIG am 28. Februar 2019 von Gesetzes wegen erloschen. In einer solchen Konstellation den Schutz des Privatlebens gemäss Art. 8 EMRK weitergelten zu lassen, hätte zur Folge, dass eine ausländische Person, welche sich einmal längere Zeit rechtmässig in der Schweiz aufgehalten hat, dann aber für sechs Monate oder mehr ins Ausland gezogen ist, zumindest während eines gewissen Zeitraums wiederum gestützt auf den Schutz des Privatlebens (in die Schweiz) einreisen und einen Aufenthaltsanspruch geltend machen könnte. Damit würde Art. 61 Abs. 2 AIG ausgehöhlt, was nicht mit dem Willen des Gesetzgebers vereinbar ist. Ist der Schutzbereich von Art. 8 EMRK nicht eröffnet, hat konsequenterweise auch keine Interessenabwägung nach Art. 8 EMRK stattzufinden (vgl. auch Urteil 2C_691/2017 vom 18. Januar 2018 BGE 149 I 66 S. 71 E. 3.1 und 4.3), womit die von der Vorinstanz im Rahmen von Art. 8 Ziff. 2 EMRK vorgenommene Interessenabwägung und die dagegen vom Beschwerdeführer vorgebrachte Begründung nicht zu überprüfen ist. Die Rüge der Verletzung des Rechts auf Achtung des Privatlebens gemäss Art. 8 EMRK erweist sich deshalb als unbegründet."
+            },
+            {
+              "marke": "E. 4.9",
+              "tiefe": 2,
+              "text": "Der speziellen Situation des Beschwerdeführers könnte eventuell im Rahmen von Art. 30 Abs. 1 lit. k AIG Rechnung getragen werden. Demgemäss kann von den Zulassungsvoraussetzungen abgewichen werden, um die Wiederzulassung von Ausländerinnen und Ausländern, die im Besitz einer Aufenthalts- oder Niederlassungsbewilligung waren, zu erleichtern. Sinn und Zweck dieser Bestimmung ist es unter anderem, Personen, die aufgrund eines langjährigen Voraufenthalts enge Beziehungen zur Schweiz geknüpft haben, deren Bewilligung jedoch aufgrund Art. 61 Abs. 2 AIG erloschen ist, die Wiederzulassung zu ermöglichen (vgl. Botschaft vom 8. März 2002 zum Bundesgesetz über die Ausländerinnen und Ausländer, BBl 2002 3808, 3858, 3868; SPESCHA, a.a.O., N. 6 in fine zu Art. 61 AIG; MINH SON NGUYEN, Code annoté LEtr, a.a.O., N. 150 zu Art. 30 AIG; JEANNERAT/MAHON, Code annoté LEtr, a.a.O., Ziff. 3 zu Art. 61 AIG). Bei einer in diesem Rahmen erteilten Bewilligung handelt es sich allerdings um eine Ermessensbewilligung, weshalb der Rechtsweg an das Bundesgericht (unter Vorbehalt der \"Star-Praxis\" im Rahmen der subsidiären Verfassungsbeschwerde; vgl. Urteile 2C_866/2017 vom 7. März 2018 E. 1.1; 2C_691/2017 vom 18. Januar 2018 E. 1.1) verschlossen ist (vgl. Art. 83 lit. c Ziff. 5 BGG). Auf daraufhin abzielende Ausführungen in der Beschwerde kann deshalb nicht eingegangen werden."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "2C_528/2021",
+        "key": "bger_2C_528_2021",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=22.06.2022&to_date=25.06.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=31&azaclir=aza&highlight_docid=aza%3A%2F%2F23-06-2022-2C_528-2021&number_of_ranks=75"
+      },
+      "ecli": "ECLI:CH:BGE:2022:149.I.66"
     }
   ]
 }

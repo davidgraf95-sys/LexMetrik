@@ -1,9 +1,53 @@
 {
-  "erzeugt": "2026-07-12",
+  "erzeugt": "2026-07-17",
   "erlass": "VVG",
   "gewichtQuelle": "alt",
   "proArtikel": {
+    "3": [
+      {
+        "key": "bge_148_III_201",
+        "zitierung": "BGE 148 III 201",
+        "regesteKurz": "Art. 36 Abs. 2 VAG; Art. 92 Abs. 2 in Verbindung mit Art. 94 VVG; Informationsansprüche der Versicherungsnehmer im Zusammenhang mit Überschussanteilen bei einer Lebensversicherung der Säule 3a. Die Versicherungsunternehmen sind verpflichte…",
+        "datum": "2022-03-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_57",
+        "zitierung": "BGE 148 III 57",
+        "regesteKurz": "Art. 1 und 18 OR; Allgemeine Geschäftsbedingungen. Geltung und Auslegung Allgemeiner Geschäftsbedingungen (E. 2). Regeste Art. 1 et 18 CO; conditions générales. Validité et interprétation de conditions générales (consid. 2). Regesto Art. 1…",
+        "datum": "2022-01-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "33": [
+      {
+        "key": "bge_148_III_57",
+        "zitierung": "BGE 148 III 57",
+        "regesteKurz": "Art. 1 und 18 OR; Allgemeine Geschäftsbedingungen. Geltung und Auslegung Allgemeiner Geschäftsbedingungen (E. 2). Regeste Art. 1 et 18 CO; conditions générales. Validité et interprétation de conditions générales (consid. 2). Regesto Art. 1…",
+        "datum": "2022-01-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "39": [
+      {
+        "key": "bge_148_III_105",
+        "zitierung": "BGE 148 III 105",
+        "regesteKurz": "Art. 8 ZGB; Art. 39 VVG; Beweis des Eintritts des Versicherungsfalls, Beweislast des Anspruchsberechtigten; Beweislastverteilung. Gemäss der auch im Bereich des Versicherungsvertrags geltenden Grundregel von Art. 8 ZGB hat der Anspruchsber…",
+        "datum": "2021-08-31",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
       {
         "key": "bge_151_V_280",
         "zitierung": "BGE 151 V 280",
@@ -17,6 +61,26 @@
     ],
     "40": [
       {
+        "key": "bge_148_III_134",
+        "zitierung": "BGE 148 III 134",
+        "regesteKurz": "Art. 40 VVG; betrügerische Begründung des Versicherungsanspruchs; Beweismass. Für den der Versicherung obliegenden Beweis der Täuschungsabsicht gilt das Beweismass der überwiegenden Wahrscheinlichkeit. Für den ihr obliegenden Nachweis der…",
+        "datum": "2022-01-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_148_III_105",
+        "zitierung": "BGE 148 III 105",
+        "regesteKurz": "Art. 8 ZGB; Art. 39 VVG; Beweis des Eintritts des Versicherungsfalls, Beweislast des Anspruchsberechtigten; Beweislastverteilung. Gemäss der auch im Bereich des Versicherungsvertrags geltenden Grundregel von Art. 8 ZGB hat der Anspruchsber…",
+        "datum": "2021-08-31",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
         "key": "bge_151_V_280",
         "zitierung": "BGE 151 V 280",
         "regesteKurz": "Art. 82 Abs. 2 BVG; gebundene Vorsorge (Säule 3a); Beweismass. Der Nachweis strittiger Fakten ist in Streitigkeiten der gebundenen Vorsorge (Säule 3a) grundsätzlich mit dem strikten Beweismass zu erbringen. Eine Herabsetzung der Beweisanfo…",
@@ -29,10 +93,32 @@
     ],
     "46": [
       {
+        "key": "bge_149_III_242",
+        "zitierung": "BGE 149 III 242",
+        "regesteKurz": "Art. 46 Abs. 1 VVG; Art. 127 OR; Rechtsschutzversicherung; Verjährung des Haftungsanspruchs für die Beratung durch den Versicherer. Auf die Schadenersatzforderung des Versicherten für die juristische Beratung durch die Rechtsschutzversiche…",
+        "datum": "2023-02-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_146_III_14",
         "zitierung": "BGE 146 III 14",
         "regesteKurz": "Art. 60 Abs. 1 OR; Art. 127 i.V.m. Art. 130 Abs. 1 OR; Schadenersatzansprüche der Erben eines Asbestopfers; Beginn der absoluten Verjährung vertraglicher und ausservertraglicher Ansprüche. Keine Änderung der Rechtsprechung nach dem Urteil…",
         "datum": "2019-11-06",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "94": [
+      {
+        "key": "bge_148_III_201",
+        "zitierung": "BGE 148 III 201",
+        "regesteKurz": "Art. 36 Abs. 2 VAG; Art. 92 Abs. 2 in Verbindung mit Art. 94 VVG; Informationsansprüche der Versicherungsnehmer im Zusammenhang mit Überschussanteilen bei einer Lebensversicherung der Säule 3a. Die Versicherungsunternehmen sind verpflichte…",
+        "datum": "2022-03-09",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -45,6 +131,18 @@
         "zitierung": "BGE 147 III 402",
         "regesteKurz": "a Art. 45 Abs. 3 OR; Methode der Berechnung des Versorgungsschadens. Der Versorgungsschaden ist (abstrakt) durch Kapitalisierung auf den Zeitpunkt des Todes des Versorgers zu berechnen (Bestätigung der Rechtsprechung; E. 5). Regeste b Art.…",
         "datum": "2021-05-18",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "100": [
+      {
+        "key": "bge_148_III_105",
+        "zitierung": "BGE 148 III 105",
+        "regesteKurz": "Art. 8 ZGB; Art. 39 VVG; Beweis des Eintritts des Versicherungsfalls, Beweislast des Anspruchsberechtigten; Beweislastverteilung. Gemäss der auch im Bereich des Versicherungsvertrags geltenden Grundregel von Art. 8 ZGB hat der Anspruchsber…",
+        "datum": "2021-08-31",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
