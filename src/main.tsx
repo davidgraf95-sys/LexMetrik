@@ -14,6 +14,7 @@ import App from './App.tsx'
 import { effektivesThema, wendeThemaAn } from './components/thema'
 import { wendeSchriftskalaAn } from './components/layout/useSchriftskala'
 import { wendeLeserOptionenAn } from './pages/gesetz-leser/leserOptionen'
+import { meldeFehler } from './components/fehlermeldung'
 
 // Thema so früh wie möglich anwenden (vor dem ersten App-Render) — ohne
 // CSP-verbotenes Inline-Script bleibt für Dunkel-Nutzer ein kurzes Aufblitzen
@@ -39,6 +40,17 @@ window.addEventListener('vite:preloadError', () => {
       window.location.reload()
     }
   } catch { /* sessionStorage nicht verfügbar */ }
+})
+
+// O-1.9: Fehler ausserhalb des React-Baums (Event-Handler, async, Promises) erreichen
+// den ErrorBoundary nicht. window.onerror/unhandledrejection fangen sie und melden
+// gesampelt + datensparsam (nur Meldung + Route + Build). meldeFehler() wirft nie.
+window.addEventListener('error', (e) => {
+  meldeFehler(e.message || (e.error instanceof Error ? e.error.message : ''))
+})
+window.addEventListener('unhandledrejection', (e) => {
+  const g = e.reason
+  meldeFehler(g instanceof Error ? g.message : typeof g === 'string' ? g : 'Unhandled promise rejection')
 })
 
 createRoot(document.getElementById('root')!).render(

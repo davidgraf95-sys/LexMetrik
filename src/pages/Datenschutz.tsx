@@ -85,6 +85,16 @@ export function Datenschutz() {
           (überwiegendes Interesse) und werden von LexMetrik nicht mit anderen Daten verknüpft.
         </p>
         <p>
+          {/* O-1.9 Fehlerkanal (§8) — ENTWURF, Wortlaut durch David bei der Abnahme zu prüfen. */}
+          Tritt in Ihrem Browser ein unerwarteter technischer Fehler auf, kann LexMetrik einen
+          knappen <strong>technischen Fehlerbericht</strong> an die Server-Logs des Hosting-Anbieters
+          senden, um Defekte zu erkennen und zu beheben. Dieser Bericht enthält
+          <strong> ausschliesslich</strong> die technische Fehlermeldung, die aufgerufene Seite
+          (ohne Ihre Eingaben) und eine Versionskennung der Anwendung. Er enthält
+          <strong> keine</strong> Ihrer Eingaben, keine Kennungen zur Wiedererkennung und dient
+          keiner Analyse Ihres Verhaltens; die Übermittlung erfolgt nur stichprobenweise.
+        </p>
+        <p>
           <span className="text-warn-700">[Zu prüfen/ergänzen: Vercel-Auftragsverarbeitung,
           Datenübermittlung in die USA und einschlägige Garantien.]</span>
         </p>
