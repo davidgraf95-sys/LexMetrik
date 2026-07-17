@@ -119,7 +119,10 @@ export function bgeSprungGruppe(bge: BgeSprung | null): SuchGruppe | null {
     gesamt: 0,
     treffer: [],
     hinweis: `${bge.zitat} ist nicht im Bestand von LexMetrik.`,
-    externLink: { href: bge.amtlichHref, label: `${bge.zitat} beim Bundesgericht öffnen` },
+    // A40: «suchen» statt «öffnen» — der Link ist ein ehrlicher amtlicher SUCH-Link
+    // (bgerSuchLink), kein konstruierter Direkt-Permalink (der landete beim falschen
+    // Entscheid). bger.ch zeigt die Trefferliste zum Zitat, der Nutzer wählt selbst.
+    externLink: { href: bge.amtlichHref, label: `${bge.zitat} beim Bundesgericht suchen` },
   };
 }
 

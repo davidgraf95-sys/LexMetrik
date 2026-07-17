@@ -226,7 +226,7 @@ describe('universalSuche: BGE-Sprung-Gruppe (UI-NAV S2)', () => {
     const g = bgeSprungGruppe(bge)!;
     expect(g.treffer).toHaveLength(0);
     expect(g.hinweis).toContain('nicht im Bestand');
-    expect(g.externLink).toEqual({ href: 'https://search.bger.ch/y', label: 'BGE 145 III 63 beim Bundesgericht öffnen' });
+    expect(g.externLink).toEqual({ href: 'https://search.bger.ch/y', label: 'BGE 145 III 63 beim Bundesgericht suchen' });
   });
 
   it('lädt → Platzhalter-Gruppe (kein voreiliges «nicht im Bestand»)', () => {

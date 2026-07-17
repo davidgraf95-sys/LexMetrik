@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseBgeZitat, baueBgeIndex, parseBgeSprung, bgerPermalink } from '../lib/suche/bgeQuery';
+import { parseBgeZitat, baueBgeIndex, parseBgeSprung, bgerSuchLink } from '../lib/suche/bgeQuery';
 
 // Akzeptanztests des BGE-Zitat-Parsers (UI-NAV S2 · FAHRPLAN-UI-NAVIGATION §2).
 // Deterministisch, ohne Suchindex. Positivfälle prüfen die Zitat-Zerlegung
@@ -41,12 +41,21 @@ describe('parseBgeZitat — Negativfälle (→ normale Suche)', () => {
   });
 });
 
-describe('bgerPermalink — amtliches CLIR-Format', () => {
-  it('baut den docid-Permalink identisch zum Snapshot-quelleUrl', () => {
-    const z = parseBgeZitat('BGE 152 I 65')!;
-    expect(bgerPermalink(z)).toBe(
-      'https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-I-65%3Ade&lang=de&zoom=&type=show_document',
+describe('bgerSuchLink — ehrlicher amtlicher CLIR-SUCH-Link (A40)', () => {
+  it('baut einen simple_query-Suchlink auf das Zitat (KEIN konstruierter docid-Permalink)', () => {
+    // A40 (empirisch 17.7.2026): ein aus dem Zitat konstruierter
+    // highlight_docid-Permalink landet still beim FALSCHEN Entscheid
+    // (atf://150-III-38 → «BGE 150 III 385»). Der ehrliche Fallback ist der
+    // simple_query-Suchlink — bger.ch zeigt die Trefferliste, kein Fehl-Sprung.
+    const z = parseBgeZitat('BGE 150 III 38')!;
+    expect(bgerSuchLink(z)).toBe(
+      'https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=simple_query&query_words=BGE%20150%20III%2038',
     );
+  });
+  it('enthält KEINEN highlight_docid (der Bug-Mechanismus ist entfernt)', () => {
+    const z = parseBgeZitat('BGE 152 I 65')!;
+    expect(bgerSuchLink(z)).not.toContain('highlight_docid');
+    expect(bgerSuchLink(z)).toContain('type=simple_query');
   });
 });
 
@@ -74,7 +83,10 @@ describe('parseBgeSprung — Bestands-Auflösung', () => {
     const s = parseBgeSprung('BGE 145 III 63', index)!;
     expect(s.imBestand).toBe(false);
     expect(s.key).toBeNull();
-    expect(s.amtlichHref).toContain('atf%3A%2F%2F145-III-63%3Ade');
+    // A40: ehrlicher SUCH-Link auf das Zitat, kein konstruierter docid-Permalink.
+    expect(s.amtlichHref).toContain('type=simple_query');
+    expect(s.amtlichHref).toContain('query_words=BGE%20145%20III%2063');
+    expect(s.amtlichHref).not.toContain('highlight_docid');
   });
 
   it('Index lädt noch (null) → laedt, kein voreiliges «nicht im Bestand»', () => {

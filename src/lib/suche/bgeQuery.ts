@@ -32,7 +32,9 @@ export interface BgeSprung {
   imBestand: boolean;
   /** Register-Key des Entscheids, wenn im Bestand; sonst null. */
   key: string | null;
-  /** Amtlicher Bundesgerichts-Permalink (immer gesetzt — auch als Zweitlink). */
+  /** Amtlicher Bundesgerichts-Link (immer gesetzt — auch als Zweitlink). A40:
+   *  ein ehrlicher CLIR-SUCH-Link auf das Zitat, KEIN aus dem Zitat konstruierter
+   *  `highlight_docid`-Permalink (der landet still beim falschen Entscheid, s.u.). */
   amtlichHref: string;
   /** true, solange das Entscheid-Manifest noch lädt (kein voreiliges «nicht im Bestand»). */
   laedt?: boolean;
@@ -59,10 +61,31 @@ export function parseBgeZitat(query: string): BgeZitat | null {
   };
 }
 
-/** Amtlicher Bundesgerichts-Permalink (CLIR), identisch zum Snapshot-`quelleUrl`. */
-export function bgerPermalink(z: BgeZitat): string {
-  const docid = `atf://${z.band}-${z.teil}-${z.seite}:de`;
-  return `https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=${encodeURIComponent(docid)}&lang=de&zoom=&type=show_document`;
+/**
+ * Ehrlicher amtlicher SUCH-Link (CLIR `simple_query`) auf ein BGE-Zitat, das
+ * NICHT im Bestand ist.
+ *
+ * A40 (David 16.7.2026, empirisch gegen bger.ch verifiziert am 17.7.2026, §7):
+ * Ein aus dem Zitat KONSTRUIERTER `highlight_docid=atf://BAND-TEIL-SEITE`-Permalink
+ * ist UNZUVERLÄSSIG und landet still beim FALSCHEN Entscheid. Der CLIR-`docid`
+ * verlangt als «SEITE» die EXAKTE ERSTE Seite des Entscheids; tippt der Nutzer
+ * eine mittendrin liegende (oder falsche) Seite, löst CLIR unangekündigt fuzzy
+ * auf. Belegt: `atf://150-III-38:de` zeigt auf bger.ch «BGE 150 III 385»
+ * (Entscheid Nr. 38, beginnt auf S. 385 — 5A_178/2024), NICHT die zitierte
+ * Fundstelle. Die erste Seite ist aus dem blossen Nutzer-Zitat nicht ableitbar
+ * → ein Permalink wäre geraten. Darum der ehrliche `simple_query`-SUCH-Link:
+ * bger.ch zeigt die echte Trefferliste (für «BGE 150 III 38» u. a. den
+ * enthaltenden Entscheid «BGE 150 III 34»), der Nutzer wählt selbst — statt
+ * scheinbar-direkt beim falschen Entscheid zu landen.
+ *
+ * (Die IN-Bestand-Snapshots tragen ihren `quelleUrl`-`docid` weiterhin selbst —
+ * dort ist die erste Seite aus der amtlichen Extraktion bekannt und korrekt;
+ * dieser Bauer betrifft NUR das aus dem Nutzer-Zitat konstruierte Ausser-Bestand-
+ * Ziel, vgl. `bge.ts` für In-Text-Zitate mit realer Erst-Seite.)
+ */
+export function bgerSuchLink(z: BgeZitat): string {
+  const query = `BGE ${z.band} ${z.teil} ${z.seite}`;
+  return `https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=simple_query&query_words=${encodeURIComponent(query)}`;
 }
 
 /** Baut den Bestands-Index (kanonischer Zitat-Schlüssel → Register-Key) aus dem
@@ -87,7 +110,7 @@ export function baueBgeIndex(
 export function parseBgeSprung(query: string, index: Map<string, string> | null): BgeSprung | null {
   const z = parseBgeZitat(query);
   if (!z) return null;
-  const amtlichHref = bgerPermalink(z);
+  const amtlichHref = bgerSuchLink(z);
   if (index === null) return { zitat: z.anzeige, imBestand: false, key: null, amtlichHref, laedt: true };
   const key = index.get(z.schluessel) ?? null;
   return { zitat: z.anzeige, imBestand: key !== null, key, amtlichHref };

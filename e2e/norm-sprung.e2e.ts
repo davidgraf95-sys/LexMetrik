@@ -79,16 +79,19 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     await expect(page).toHaveURL(/\/rechtsprechung\/bge_152_II_19$/)
   })
 
-  test('BGE nicht im Bestand ⇒ §8-ehrliche Zeile + amtlicher bger.ch-Link (kein stilles Rauschen)', async ({ page }) => {
+  test('BGE nicht im Bestand ⇒ §8-ehrliche Zeile + amtlicher bger.ch-SUCH-Link (A40, kein stilles Rauschen)', async ({ page }) => {
     await page.goto('/gesetze')
     const feld = sucheFeld(page)
     await feld.click()
     await feld.fill('BGE 1 I 1')
     const box = listbox(page)
     await expect(box.getByText(/nicht im Bestand/)).toBeVisible()
-    const amtlich = box.getByRole('link', { name: /beim Bundesgericht öffnen/ })
+    // A40 (David 16.7.2026): EHRLICHER Such-Link statt konstruiertem highlight_docid-
+    // Permalink (der landete beim falschen Entscheid). «suchen» statt «öffnen».
+    const amtlich = box.getByRole('link', { name: /beim Bundesgericht suchen/ })
     await expect(amtlich).toBeVisible()
-    await expect(amtlich).toHaveAttribute('href', /search\.bger\.ch.*atf.*1-I-1/)
+    await expect(amtlich).toHaveAttribute('href', /bger\.ch.*type=simple_query.*query_words=BGE(%20|\+|\s)1(%20|\+|\s)I(%20|\+|\s)1/)
+    await expect(amtlich).not.toHaveAttribute('href', /highlight_docid/)
     await expect(amtlich).toHaveAttribute('target', '_blank')
   })
 
