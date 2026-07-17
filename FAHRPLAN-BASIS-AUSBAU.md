@@ -90,6 +90,8 @@ sichtbar. E3-Serving bleibt QS-DATA, kein Duplikat hier.
 **Aufwand:** S · **Wirkung:** hoch · **Abhängigkeit:** keine (Permalink-Teil profitiert von B-4).
 **DoD:** jede Kopie/jeder Export trägt Fassung + Abrufdatum + Permalink; golden byte-gleich (§6); da die
 Kopie-Fläche an den Norm-/Tarif-Pfad grenzt → **`check:gegenpruefung`** prüfen, ob der Diff Risiko-Globs trifft.
+> **Status 17.7.2026: B-6 ✅ (#275).** Stand-Ausweis in 5 Zitat-Kopie-Pfaden via `lib/format` `standAusweis()`;
+> Vorlagen-Fusszeilen deklariert unberührt, golden byte-gleich.
 
 ### A4 · B-8 · Kantons-Datenwahrheit: Currency-Wachhund für 1231 Erlasse + FR/IT-Sprach-Label-Korrektur  · kein Gate
 **Kern:** `currency.json` deckt exakt die 227 Bund-Kürzel — kantonale Revisionen (inkl. BS mit 859 Erlassen =
@@ -117,6 +119,7 @@ läuft auch ohne Konto) · PR #244 mergen · Rollback-Runbook (`vercel rollback`
 **Aufwand:** S · **Wirkung:** mittel–hoch · **Abhängigkeit:** keine.
 **DoD:** Prod-Smoke-Cron meldet Rot als Issue; externe Sonde vorbereitet (aktiv oder dokumentiert entfallen);
 PR #244 gemergt (CSP-Loch zu); Rollback-Runbook + Env-Inventar dokumentiert.
+> **Status 17.7.2026: B-11 ✅ (#273).** Prod-Smoke 12 Checks grün, 6h-Cron, Runbooks.
 
 ### A6 · B-1-Entwurf · Datenschutz-/Impressums-ENTWURF mit `[PLATZHALTER]`  · **Freigabe → §B (G1)**
 **Kern:** Live und indexierbar steht «[Name und Adresse … wird ergänzt]» in der Datenschutzerklärung,
