@@ -12,6 +12,7 @@
 // da alle bisherigen `from './register'`-Importe weiter aufgelöst werden.
 
 import type { FedlexGesetz } from '../fedlex';
+import type { ErlassAufhebung } from './aufhebungen';
 
 /** Kanzleirelevante Sach-Achsen. Bund deklariert je Erlass; Kanton-Default unten. */
 export type Rechtsgebiet =
@@ -75,4 +76,10 @@ export interface ErlassRegistereintrag {
    *  Kanton-Verifikation gegen die amtliche Quelle (K6/§8). */
   bestimmungsEtikett?: 'art' | 'paragraf';
   bestimmungsEtikettStatus?: 'entwurf';
+  /** §8-Ehrlichkeit: der Erlass ist von Fedlex GANZ aufgehoben (jolux:dateNo-
+   *  LongerInForce). Der Snapshot bleibt als historische Fassung nutzbar, wird
+   *  aber nie mehr als geltend dargestellt. Deklariert in aufhebungen.ts (SSoT),
+   *  per key gemerged (mitAufhebung); der Generator projiziert es nach
+   *  register.json. Absenz = geltend (Default). */
+  aufgehoben?: ErlassAufhebung;
 }

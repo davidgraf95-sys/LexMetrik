@@ -4,6 +4,7 @@
 // public/normtext/register.json; lazy geladen (nie im Bundle, §3).
 
 import type { Rechtsgebiet, Sprache, ErlassStatus } from './register';
+import type { ErlassAufhebung } from './aufhebungen';
 
 export interface BrowseErlass {
   key: string;
@@ -47,6 +48,12 @@ export interface BrowseErlass {
    *  (Konsolidierungsdatum) und vom Erlassdatum «vom …». Kanton trägt es nicht
    *  (LexWork hat kein strukturelles Ur-Inkrafttreten) ⇒ Feld fehlt, §8. */
   inkraftSeit?: string;
+  // ── §8-Ehrlichkeit: Ganz-Aufhebung des Erlasses ──
+  /** Der Erlass ist von Fedlex GANZ aufgehoben (jolux:dateNoLongerInForce). Aus
+   *  dem Register projiziert (SSoT aufhebungen.ts). Der Snapshot bleibt lesbar
+   *  (historische Fassung), wird aber nie als geltend dargestellt: Reader zeigt
+   *  ein Status-Banner, der Katalog ein «Aufgehoben»-Badge. Absenz = geltend. */
+  aufgehoben?: ErlassAufhebung;
 }
 
 export interface BrowseManifest {

@@ -148,6 +148,12 @@ function inkraftFelder(iq: InkraftQuelle | undefined): { inkraftSeit?: string } 
   return iq ? { inkraftSeit: iq.datum } : {};
 }
 
+/** §8-Ehrlichkeit: Aufhebungs-Vermerk aus dem Register durchreichen (nur wenn
+ *  deklariert; SSoT aufhebungen.ts → register.ts:mitAufhebung). */
+function aufhebungFelder(reg: ErlassRegistereintrag): { aufgehoben?: ErlassRegistereintrag['aufgehoben'] } {
+  return reg.aufgehoben ? { aufgehoben: reg.aufgehoben } : {};
+}
+
 function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei, pq?: PdfQuelle, iq?: InkraftQuelle): BrowseErlass {
   return {
     key: reg.key, ebene: 'bund', kanton: null,
@@ -161,6 +167,7 @@ function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei, pq?: 
     pdfPfad: null,
     ...pdfFelder(pq),
     ...inkraftFelder(iq),
+    ...aufhebungFelder(reg),
   };
 }
 
