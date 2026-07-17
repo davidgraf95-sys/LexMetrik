@@ -1,56 +1,113 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeinde Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Benützung"
+    }
+   ],
    "marginalie": [
     "Betriebs- und Öffnungszeiten"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Benützung"
+    }
+   ],
    "marginalie": [
     "Haus- und Badeordnung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren"
+    }
+   ],
    "marginalie": [
     "Gebühren"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren"
+    }
+   ],
    "marginalie": [
     "Schulen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren"
+    }
+   ],
    "marginalie": [
     "Preise für Mietobjekte"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Weitere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verstösse gegen die Haus- und Badeordnung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Weitere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Kontrollen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Weitere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rekurs"
    ]

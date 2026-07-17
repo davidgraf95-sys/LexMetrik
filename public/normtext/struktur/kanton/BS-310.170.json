@@ -1,99 +1,201 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Berufsausübung *"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Eingeschränkte Berufsausübung"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Betriebe"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Stellvertretungsbewilligung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Herstellungsbewilligung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Detailhandelsbewilligung und Abgabebewilligung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Versandhandelsbewilligung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Betäubungsmittelbewilligung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Bewilligung zur Lagerung von Blut und Blutprodukten"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
    "marginalie": [
     "Fortpflanzungsmedizin"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Bewilligungsänderungen"
+    }
+   ],
    "marginalie": [
     "Veränderte Verhältnisse"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Meldungen und Bescheinigungen"
+    }
+   ],
    "marginalie": [
     "Meldungen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Meldungen und Bescheinigungen"
+    }
+   ],
    "marginalie": [
     "Bescheinigungen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Inspektionen, Kontrollen"
+    }
+   ],
    "marginalie": [
     "Inspektionen und Kontrollen"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Inspektionen, Kontrollen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Tarifaufsicht"
+    }
+   ],
    "marginalie": [
     "Tariffestsetzung sowie Genehmigung und Verlängerung von Tarifverträgen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Änderung und Aufhebung bisherigen Rechts"
+    }
+   ],
    "marginalie": []
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflichtige Tätigkeiten und Betriebe"
+    }
+   ],
+   "marginalie": [
+    "Zulassung von ambulanten Leistungserbringern"
+   ]
   }
  }
 }

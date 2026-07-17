@@ -1,44 +1,79 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Intelligente Messsysteme im Bereich Elektrizität"
+    }
+   ],
    "marginalie": [
     "Anzuwendendes Bundesrecht"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Intelligente Messsysteme in den Bereichen Gas, Fernwärme und Wasser"
+    }
+   ],
    "marginalie": [
     "Elemente und Funktionsweise des intelligenten Messsystems"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Intelligente Messsysteme in den Bereichen Gas, Fernwärme und Wasser"
+    }
+   ],
    "marginalie": [
     "Ergänzende anwendbare Bestimmungen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Datenbearbeitung"
+    }
+   ],
    "marginalie": [
     "Datenbearbeitung im Rahmen von § 35a Abs. 1 IWB-Gesetz"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Datenbearbeitung"
+    }
+   ],
    "marginalie": [
     "Datenbearbeitung im Rahmen von § 35a Abs. 2 IWB-Gesetz"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Datenbearbeitung"
+    }
+   ],
    "marginalie": [
     "Bearbeiten"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Datenbearbeitung"
+    }
+   ],
    "marginalie": [
     "Datensicherheit"
    ]

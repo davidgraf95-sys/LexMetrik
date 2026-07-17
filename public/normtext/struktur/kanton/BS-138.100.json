@@ -1,24 +1,96 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Austritt in Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Regelmässiger Austritt"
+    }
+   ],
+   "marginalie": []
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Austritt in Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Austritt im Grossen Rate"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Austritt in Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Austritt bei Beteiligung einer Konkursmasse"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Austritt in Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Austritt bei Beteiligung einer Aktiengesellschaft"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Austritt in Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "E. Kein Austritt bei Staats- und Gemeindeangelegenheiten"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Beschränkung der Stimmgebung bei Wahlen"
+    }
+   ],
+   "marginalie": []
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausschliessung der Wählbarkeit zu Mitgliedern von Behörden"
+    }
+   ],
+   "marginalie": []
+  },
+  "7_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausschliessung der Wählbarkeit zu Mitgliedern von Behörden"
+    }
+   ],
    "marginalie": []
   }
  }

@@ -1,48 +1,93 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Wohnungen"
+    }
+   ],
    "marginalie": [
     "Mieten bei neu erworbenen Liegenschaften"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Wohnungen"
+    }
+   ],
    "marginalie": [
     "Mieten bei Wiedervermietung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Wohnungen"
+    }
+   ],
    "marginalie": [
     "Mieten bei Erstvermietung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Wohnungen"
+    }
+   ],
    "marginalie": [
     "Mietzinsanpassungen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Gewerberäume"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Nebenobjekte"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Nebenkosten"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kostenmiete"
+    }
+   ],
    "marginalie": []
   }
  }

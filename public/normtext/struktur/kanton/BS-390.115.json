@@ -1,276 +1,630 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gegenstand"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Bestattungswesen"
+    }
+   ],
    "marginalie": [
     "Leistungen im Rahmen der unentgeltlichen Bestattung"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Bestattungswesen"
+    }
+   ],
    "marginalie": [
     "Grabarten im Rahmen der unentgeltlichen Bestattung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Bestattungswesen"
+    }
+   ],
    "marginalie": [
     "Bestattung im Kantonsgebiet ohne Anspruch gemäss Bestattungsgesetz"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Weitere Grabarten und Grabzuteilung"
+    }
+   ],
    "marginalie": [
     "Entgeltliche Grabarten"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Weitere Grabarten und Grabzuteilung"
+    }
+   ],
    "marginalie": [
     "Individuelle Anpflanzfläche"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Weitere Grabarten und Grabzuteilung"
+    }
+   ],
    "marginalie": [
     "Zusätzliche Urnenbeisetzung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Weitere Grabarten und Grabzuteilung"
+    }
+   ],
    "marginalie": [
     "Bestattungsschemata"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Weitere Grabarten und Grabzuteilung"
+    }
+   ],
    "marginalie": [
     "Zuteilung und Wahl der Gräber"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Familiengräber"
+    }
+   ],
    "marginalie": [
     "Friedhofregister und Graburkunde"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Familiengräber"
+    }
+   ],
    "marginalie": [
     "Dauer des Nutzungsrechts"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Familiengräber"
+    }
+   ],
    "marginalie": [
     "Anzahl Grabplätze und zusätzliche Belegung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3 Särge und Urnen"
+    }
+   ],
    "marginalie": [
     "Sargmaterial und Sargauskleidung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3 Särge und Urnen"
+    }
+   ],
    "marginalie": [
     "Sarg- und Urnenbeigaben"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3 Särge und Urnen"
+    }
+   ],
    "marginalie": [
     "Bauart der Särge"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3 Särge und Urnen"
+    }
+   ],
    "marginalie": [
     "Urnenmaterial"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Einsargung, Aufbahrung, Trauerfeier und Trauergeleit"
+    }
+   ],
    "marginalie": [
     "Einsargen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Einsargung, Aufbahrung, Trauerfeier und Trauergeleit"
+    }
+   ],
    "marginalie": [
     "Aufbahrung auf dem Friedhof"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Einsargung, Aufbahrung, Trauerfeier und Trauergeleit"
+    }
+   ],
    "marginalie": [
     "Trauerfeier"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Einsargung, Aufbahrung, Trauerfeier und Trauergeleit"
+    }
+   ],
    "marginalie": [
     "Trauergeleit"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.5 Bestattungen und Beisetzungen"
+    }
+   ],
    "marginalie": [
     "Bestattungs- und Beisetzungszeiten"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.5 Bestattungen und Beisetzungen"
+    }
+   ],
    "marginalie": [
     "Ablauf bei Erdbestattungen"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.5 Bestattungen und Beisetzungen"
+    }
+   ],
    "marginalie": [
     "Ablauf bei Kremationen"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.5 Bestattungen und Beisetzungen"
+    }
+   ],
    "marginalie": [
     "Urnenbeisetzung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.5 Bestattungen und Beisetzungen"
+    }
+   ],
    "marginalie": [
     "Grabbeigaben"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.5 Bestattungen und Beisetzungen"
+    }
+   ],
    "marginalie": [
     "Aufbewahrung von Kremationsasche"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Grabgestaltung und Grabbepflanzung"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Grabgestaltung und Grabbepflanzung"
+    }
+   ],
    "marginalie": [
     "Definitive Grabgestaltung und Beginn der Anpflanzung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Grabgestaltung und Grabbepflanzung"
+    }
+   ],
    "marginalie": [
     "Bepflanzung"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Grabgestaltung und Grabbepflanzung"
+    }
+   ],
    "marginalie": [
     "Bewegliche Gegenstände auf den Gräbern"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.7 Benutzung der Friedhofanlagen"
+    }
+   ],
    "marginalie": [
     "Zutritt zu den Friedhöfen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.7 Benutzung der Friedhofanlagen"
+    }
+   ],
    "marginalie": [
     "Öffnungszeiten"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.7 Benutzung der Friedhofanlagen"
+    }
+   ],
    "marginalie": [
     "Sperrzeiten für Arbeiten an Gräbern und Grabmälern"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.7 Benutzung der Friedhofanlagen"
+    }
+   ],
    "marginalie": [
     "Besondere Feiern"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Friedhofwesen der Stadt Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "3.7 Benutzung der Friedhofanlagen"
+    }
+   ],
    "marginalie": [
     "Fahrverkehr"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Gräber mit individuellen Grabmälern"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Entfernung von Grabmälern bei Räumung eines Grabfeldes"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Provisorische Kennzeichnung von Erd- und Urnenreihengräbern sowie von Familiengräbern"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Abweichungen von den Grundsätzen gemäss § 7 GrabmV"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Hölzerne Grabmäler"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Zulässige Masse von Grabmälern"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Portraitfotografien"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Name der Erstellerin oder des Erstellers des Grabmals"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Nachschriften"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Fundament"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Grabmalwesen der Stadt Basel"
+    }
+   ],
    "marginalie": [
     "Standfestigkeit"
    ]

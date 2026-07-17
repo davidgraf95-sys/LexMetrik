@@ -1,98 +1,209 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Gegenstand und Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Gesamtverantwortung"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Leitung der Konferenzen der Volksschulleitung und der Gesamtkonferenz der Schulleitungen *"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Schulstandorte und Angebotsprofile"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Unterrichtsausfall"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Personalrechtliche Aufgaben in Bezug auf die Schulleitungsmitglieder"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Personalrechtliche Aufgaben in Bezug auf die Lehr- und Fachpersonen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Beurteilung sowie Aufnahmeprüfungen und Leistungstests"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Schulausschlüsse"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Leitung Volksschulen"
+    }
+   ],
    "marginalie": [
     "Schulratspräsidien"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Volksschulleitungsmitglieder mit Verantwortung für die Primarstufe, die Sekundarschule und die Sonderpädagogik"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Die Volksschulleitungsmitglieder mit Personalverantwortung für Schulleitungen und die zuständige Stelle der Gemeinden"
+    }
+   ],
    "marginalie": [
     "Führung der Schulleitungen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Die Volksschulleitungsmitglieder mit Personalverantwortung für Schulleitungen und die zuständige Stelle der Gemeinden"
+    }
+   ],
    "marginalie": [
     "Aufsicht, Berichterstattung und Massnahmen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Die Volksschulleitungsmitglieder mit Personalverantwortung für Schulleitungen und die zuständige Stelle der Gemeinden"
+    }
+   ],
    "marginalie": [
     "Personalrechtliche Aufgaben in Bezug auf die Schulleitungsmitglieder"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Die Volksschulleitungsmitglieder mit Personalverantwortung für Schulleitungen und die zuständige Stelle der Gemeinden"
+    }
+   ],
    "marginalie": [
     "Personalrechtliche Aufgaben in Bezug auf die Mitarbeitenden der Schulen"
    ]
   },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Die Volksschulleitungsmitglieder mit Personalverantwortung für Schulleitungen und die zuständige Stelle der Gemeinden"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gemeinsame Bestimmung"
+    }
+   ],
    "marginalie": [
     "Beachtung der Teilautonomie der Schulleitungen"
+   ]
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Volksschulleitungsmitglieder"
+    }
+   ],
+   "marginalie": []
+  },
+  "1_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Zusammensetzung der Volksschulleitung"
    ]
   }
  }

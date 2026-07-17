@@ -1,294 +1,1064 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zweck und Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verursacherprinzip"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Katastrophenschutz"
+    }
+   ],
    "marginalie": [
     "Beurteilung der Risikoermittlung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Katastrophenschutz"
+    }
+   ],
    "marginalie": [
     "Verzeichnis der Gefahrenquellen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Luftverunreinigungen"
+    }
+   ],
    "marginalie": [
     "Meldepflicht"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Luftverunreinigungen"
+    }
+   ],
    "marginalie": [
     "Periodische Emissionsmessungen und -kontrollen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Luftverunreinigungen"
+    }
+   ],
    "marginalie": [
     "Feuerungs- und Verbrennungsanlagen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Luftverunreinigungen"
+    }
+   ],
    "marginalie": [
     "Emissionsgutschriften"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Luftverunreinigungen"
+    }
+   ],
    "marginalie": [
     "Emissionsverbund"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Lärm"
+    }
+   ],
    "marginalie": [
     "Lärmempfindlichkeitsstufen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Lärm"
+    }
+   ],
    "marginalie": [
     "Lärmschutzmassnahmen"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Ziele"
+    }
+   ],
+   "marginalie": [
+    "Förderung umweltfreundlicher Verkehrsmittel und Fortbewegungsarten *"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Rollender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Schutz der Wohngebiete"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Rollender privater Motorfahrzeugverkehr"
+    }
+   ],
    "marginalie": [
     "Einhalten von Verkehrsbeschränkungen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
    "marginalie": [
     "Parkplätze auf öffentlichem Grund"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
    "marginalie": [
     "Finanzielle Unterstützung von Parkierungsanlagen *"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
    "marginalie": [
     "Parkieren von Motorfahrzeugen auf Staatsarealen"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Park-and-Ride- und Bike-and-Ride-Anlagen *"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundsätze"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Übertragung und Übernahme von Aufgaben"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Beseitigung der Abfälle"
+    }
+   ],
    "marginalie": [
     "Wiederverwertung der Siedlungsabfälle"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Beseitigung der Abfälle"
+    }
+   ],
    "marginalie": [
     "Sammlung der Siedlungsabfälle"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Beseitigung der Abfälle"
+    }
+   ],
    "marginalie": [
     "Beseitigung der Siedlungsabfälle"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Beseitigung der Abfälle"
+    }
+   ],
    "marginalie": [
     "Beseitigung von Sonderabfällen aus Haushaltungen und aus dem Kleingewerbe"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Beseitigung der Abfälle"
+    }
+   ],
    "marginalie": [
     "Abfälle aus Industrie und Gewerbe"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Beseitigung der Abfälle"
+    }
+   ],
    "marginalie": [
     "Baustellenabfälle"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Beseitigung der Abfälle"
+    }
+   ],
    "marginalie": [
     "Verbotene Beseitigungsarten"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.III. Abfallanlagen"
+    }
+   ],
    "marginalie": [
     "Bewilligungspflicht"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.III. Abfallanlagen"
+    }
+   ],
    "marginalie": [
     "Abfallverbrennungsanlagen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.III. Abfallanlagen"
+    }
+   ],
    "marginalie": [
     "Zuweisung der Abfälle zu den Abfallanlagen"
    ]
   },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.III. Abfallanlagen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.IV. Aufsicht"
+    }
+   ],
    "marginalie": []
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Belastungen des Bodens"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Belastungen des Bodens"
+    }
+   ],
    "marginalie": [
     "Bodenuntersuchungen"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Belastungen des Bodens"
+    }
+   ],
    "marginalie": [
     "Erhaltung der Bodenfruchtbarkeit"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Belastungen des Bodens"
+    }
+   ],
    "marginalie": [
     "Verunreinigter Aushub"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Belastungen des Bodens"
+    }
+   ],
    "marginalie": [
     "Schneeräumung, Bekämpfung von Glatteis"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Belastungen des Bodens"
+    }
+   ],
    "marginalie": [
     "Altlasten und Bodensanierung"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Kontrollstelle für Chemiesicherheit, Gift und Umwelt"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Überwachung umweltgefährdender Stoffe"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit im Vollzug"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Information und Beratung"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Ausbildung"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Forschung und Entwicklung"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Gebühren"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Umweltverträglichkeitsprüfung"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Beschwerderecht der Umweltschutzorganisationen"
    ]
   },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Selbstverpflichtung des Kantons und der Landgemeinden"
    ]
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
    "marginalie": [
     "Berichterstattung der Regierung"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Änderung bisherigen Rechts"
+    }
+   ],
    "marginalie": [
     "Strafbestimmungen"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Änderung bisherigen Rechts"
+    }
+   ],
    "marginalie": [
     "Hochbautengesetz"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Schlussbestimmung"
+    }
+   ],
    "marginalie": [
     "Referendumsklausel, Inkrafttreten"
+   ]
+  },
+  "13 a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Monitoring"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "13 b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Massnahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "16_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Lademöglichkeiten für Elektroautos"
+   ]
+  },
+  "16_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Finanzielle Förderung der Ladeinfrastruktur für Elektroautos"
+   ]
+  },
+  "16_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Finanzierung des Fonds"
+   ]
+  },
+  "16_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Befristung des ZEM"
+   ]
+  },
+  "16_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Fördergegenstand"
+   ]
+  },
+  "16_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Förderkriterien"
+   ]
+  },
+  "16_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Förderumfang"
+   ]
+  },
+  "16_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Rückforderung"
+   ]
+  },
+  "16_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Vollzug"
+   ]
+  },
+  "19 a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Nichtionisierende Strahlung"
+    }
+   ],
+   "marginalie": [
+    "Kontrolle von Sendeanlagen"
+   ]
+  },
+  "19 b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Nichtionisierende Strahlung"
+    }
+   ],
+   "marginalie": [
+    "Immissionsüberwachung durch den Kanton"
+   ]
+  },
+  "19_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Quartierparkings"
+   ]
+  },
+  "19_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Nichtionisierende Strahlung"
+    }
+   ],
+   "marginalie": [
+    "Gesundheitsschutz"
+   ]
+  },
+  "19_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Immissionsschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Umweltbelastungen aus dem Verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Ruhender privater Motorfahrzeugverkehr"
+    }
+   ],
+   "marginalie": [
+    "Mobilitätsfonds"
+   ]
+  },
+  "20_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Sauberkeit und Abfallvermeidung *"
+   ]
+  },
+  "33 a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Abfälle"
+    },
+    {
+     "ebene": 2,
+     "label": "D.V. Finanzierung"
+    }
+   ],
+   "marginalie": []
+  },
+  "42_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Polizeiliche Kompetenzen Amt für Umwelt und Energie"
+   ]
+  },
+  "51_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Organisation, Vollzug und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Strafbestimmungen"
    ]
   }
  }

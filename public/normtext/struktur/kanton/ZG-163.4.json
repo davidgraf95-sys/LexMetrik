@@ -1,154 +1,333 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendungsregel"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar bei vermögensrechtlichen Streitigkeiten"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar bei nicht vermögensrechtlichen Streitigkeiten und in familienrechtlichen Verfahren *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Zuschläge zum Grundhonorar"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar im summarischen Verfahren"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar in SchKG-Sachen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar im Rechtsmittelverfahren"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar bei Beendigung des Verfahrens ohne Sachentscheid *"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar bei vorzeitiger Beendigung des Mandates"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar bei Mandatserteilung nach Prozessbeginn"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Grundhonorar bei Vertretung mehrerer Parteien *"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Entschädigung für ausserordentliche Bemühungen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Entschädigung des unentgeltlichen Rechtsbeistands bzw. der unentgeltlichen Rechtsbeiständin *"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Honorar in Strafsachen"
+    }
+   ],
    "marginalie": [
     "Bemessung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebühr für Beurkundungen und Beglaubigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Gegenstand der Gebühr"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebühr für Beurkundungen und Beglaubigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Gebührentarif"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebühr für Beurkundungen und Beglaubigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Erhöhung der Gebühr"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebühr für Beurkundungen und Beglaubigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Herabsetzung der Gebühr"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebühr für Beurkundungen und Beglaubigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Mehrere Rechtsgeschäfte"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebühr für Beurkundungen und Beglaubigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2. Beglaubigungen"
+    }
+   ],
    "marginalie": [
     "Bemessung der Gebühr"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebühr für Beurkundungen und Beglaubigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Amtliche Festsetzung der Gebühr"
+    }
+   ],
    "marginalie": [
     "Voraussetzung und Zuständigkeit"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebühr für Beurkundungen und Beglaubigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Amtliche Festsetzung der Gebühr"
+    }
+   ],
    "marginalie": [
     "Einleitung des Verfahrens"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Auslagen"
+    }
+   ],
    "marginalie": [
     "Ersatzanspruch"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen *"
+   ]
+  },
+  "25_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Auslagen"
+    }
+   ],
+   "marginalie": [
+    "Mehrwertsteuer"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Honorar in Zivilsachen"
+    }
+   ],
+   "marginalie": [
+    "Grundhonorar bei Entscheiden der Schlichtungsbehörde"
    ]
   }
  }

@@ -1,76 +1,235 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Begriffe"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Haftung"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Überschreitung des Gebührenrahmens"
+   ]
+  },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Vorschuss, Sicherstellung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Erlass, Stundung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Kanzleigebühren"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Gebührenentscheid"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundstückgeschäfte"
+    }
+   ],
+   "marginalie": [
+    "Grundsätze"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundstückgeschäfte"
+    }
+   ],
    "marginalie": [
     "Gebührenberechnung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundstückgeschäfte"
+    }
+   ],
    "marginalie": [
     "Gebührenschuldner"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundstückgeschäfte"
+    }
+   ],
    "marginalie": [
     "Verzicht auf Gebührenerhebung"
    ]
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundstückgeschäfte"
+    }
+   ],
+   "marginalie": [
+    "Gebührenansätze"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Notariatsgeschäfte"
+    }
+   ],
+   "marginalie": [
+    "Öffentliche Beurkundungen *"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Notariatsgeschäfte"
+    }
+   ],
+   "marginalie": [
+    "Kassengeschäfte"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Notariatsgeschäfte"
+    }
+   ],
+   "marginalie": [
+    "Erbschaften"
+   ]
+  },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Notariatsgeschäfte"
+    }
+   ],
    "marginalie": [
     "Weitere Notariatsgeschäfte"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Straf- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebührenhinterziehung"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Straf- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechtes"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Straf- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "18_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Notariatsgeschäfte"
+    }
+   ],
+   "marginalie": [
+    "Versteigerungen"
    ]
   }
  }

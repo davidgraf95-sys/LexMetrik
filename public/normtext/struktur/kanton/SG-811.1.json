@@ -1,910 +1,5372 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Steuerhoheiten und Steuerarten a) Staat"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "b) Politische Gemeinden"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "c) als öffentlich-rechtliche Körperschaft anerkannte Religionsgemeinschaften *"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "d) Ortsgemeinden und Korporationen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "Steuereinheit"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "Steuerfuss"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Zuschläge a) Zuschläge zur Staatssteuer"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "b) Gemeindeanteile"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "c) Ausgleichsbeiträge an Kirchgemeinden"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "Steuererleichterungen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "Gegenrecht"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Persönliche Zugehörigkeit"
    ]
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Wirtschaftliche Zugehörigkeit"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Umfang der Steuerpflicht"
    ]
   },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Steuerausscheidung"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuerberechnung bei anteiliger Steuerpflicht"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Beginn und Ende der Steuerpflicht"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Familienbesteuerung"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Personengemeinschaften a) Einfache Gesellschaften, Kollektiv- und Kommanditgesellschaften; ausländische Handelsgesellschaften und andere Personengemeinschaften"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "b) Erbengemeinschaften"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Vermögen mit unklaren Anspruchsverhältnissen"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Steuernachfolge"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Haftung"
+   ]
+  },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Besteuerung nach dem Aufwand a) Berechtigte Personen"
    ]
   },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "b) Bemessung und Berechnung"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Steuerliche Vorrechte"
+   ]
+  },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
    "marginalie": [
     "Steuerbare Einkünfte a) Allgemeines"
    ]
   },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "b) Unselbständige Erwerbstätigkeit 1. Allgemeines"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "c) Selbständige Erwerbstätigkeit 1. Allgemeines"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2. Aufschub der Besteuerung stiller Reserven 2.1 Umstrukturierungen"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "d) Bewegliches Vermögen 1. Grundsatz"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "e) Unbewegliches Vermögen"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "f) Einkünfte aus Vorsorge"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "g) Übrige Einkünfte"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "h) Steuerfreie Einkünfte"
+   ]
+  },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
    "marginalie": [
     "Ermittlung des Reineinkommens a) Grundsatz"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
    "marginalie": [
     "b) Unselbständige Erwerbstätigkeit"
    ]
   },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "c) Selbständige Erwerbstätigkeit 1. Allgemeines"
+   ]
+  },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
    "marginalie": [
     "2. Abschreibungen, Wertberichtigungen, Rückstellungen und Rücklagen"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
    "marginalie": [
     "3. Verluste"
    ]
   },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "4. Ersatzbeschaffungen"
+   ]
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "d) Privatvermögen"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Allgemeine Abzüge 1. Von der Höhe des Einkommens unabhängige Abzüge"
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2. Von der Höhe des Einkommens abhängige Abzüge"
+   ]
+  },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
    "marginalie": [
     "f) Nicht abziehbare Kosten und Aufwendungen"
    ]
   },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "g) Sozialabzüge"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "h) Steuerberechnung 1. Steuersatz"
+   ]
+  },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
    "marginalie": [
     "2. Kapitalabfindungen für wiederkehrende Leistungen"
    ]
   },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "3. Kapitalabfindungen mit Vorsorgecharakter"
+   ]
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Steuerbares Vermögen"
+   ]
+  },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
    "marginalie": [
     "Bewertung a) Grundsatz"
    ]
   },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "b) Bewegliches Vermögen 1. Geschäftsvermögen"
+   ]
+  },
+  "56": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2. Wertschriften"
+   ]
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "c) Unbewegliches Vermögen 1. Grundsatz"
+   ]
+  },
+  "58": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2. Ausnahme für land- und forstwirtschaftliche Grundstücke"
+   ]
+  },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
    "marginalie": [
     "Schuldenabzug"
    ]
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
    "marginalie": [
     "Steuerfreies Vermögen"
    ]
   },
+  "64": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Steuerberechnung a) Sozialabzüge"
+   ]
+  },
+  "65": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "b) Steuersatz"
+   ]
+  },
   "66": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Zeitliche Bemessung"
+    }
+   ],
    "marginalie": [
     "Steuerperiode"
    ]
   },
   "67": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Zeitliche Bemessung"
+    }
+   ],
    "marginalie": [
     "Bemessungsperiode"
    ]
   },
+  "68": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Zeitliche Bemessung"
+    }
+   ],
+   "marginalie": [
+    "Bemessung des Vermögens"
+   ]
+  },
+  "69": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Zeitliche Bemessung"
+    }
+   ],
+   "marginalie": [
+    "Begründung und Auflösung der Ehe"
+   ]
+  },
+  "70": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Steuersubjekt"
+   ]
+  },
   "71": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuerliche Zugehörigkeit a) Persönliche Zugehörigkeit"
    ]
   },
   "72": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "b) Wirtschaftliche Zugehörigkeit"
    ]
   },
   "73": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Umfang der Steuerpflicht"
    ]
   },
+  "74": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Steuerausscheidung"
+   ]
+  },
+  "77": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Beginn und Ende der Steuerpflicht"
+   ]
+  },
   "78": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuernachfolge"
    ]
   },
   "79": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Haftung"
    ]
   },
+  "80": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen von der Steuerpflicht"
+   ]
+  },
   "81": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
    "marginalie": [
     "Steuerobjekt a) Gegenstand"
    ]
   },
+  "82": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "b) Berechnung des Reingewinns 1. Grundsätze"
+   ]
+  },
   "83": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
    "marginalie": [
     "2. Erfolgsneutrale Vorgänge"
    ]
   },
+  "84": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "3. Erfolgswirksame Aufwendungen"
+   ]
+  },
   "85": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
    "marginalie": [
     "4. Abschreibungen, Wertberichtigungen und Rückstellungen"
    ]
   },
+  "86": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "5. Verluste"
+   ]
+  },
+  "87": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "6. Ersatzbeschaffungen"
+   ]
+  },
+  "88": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "7. Umstrukturierungen"
+   ]
+  },
+  "89": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "Steuerberechnung a) Steuersatz *"
+   ]
+  },
+  "90": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "b) Gemischte Beteiligungsgesellschaften 1. Grundsatz *"
+   ]
+  },
+  "91": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "2. Kapitalgewinne auf Beteiligungen *"
+   ]
+  },
   "96": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Kapitalsteuer"
+    }
+   ],
    "marginalie": [
     "Steuerobjekt a) Gegenstand"
    ]
   },
   "97": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Kapitalsteuer"
+    }
+   ],
    "marginalie": [
     "b) Kapitalgesellschaften und Genossenschaften"
    ]
   },
+  "98": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Kapitalsteuer"
+    }
+   ],
+   "marginalie": [
+    "c) Übrige juristische Personen und kollektive Kapitalanlagen"
+   ]
+  },
+  "99": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Kapitalsteuer"
+    }
+   ],
+   "marginalie": [
+    "Steuerberechnung"
+   ]
+  },
   "102": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "V. Zeitliche Bemessung"
+    }
+   ],
    "marginalie": [
     "Steuerperiode"
    ]
   },
   "103": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "V. Zeitliche Bemessung"
+    }
+   ],
    "marginalie": [
     "Bemessung des Reingewinns"
    ]
   },
   "104": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "V. Zeitliche Bemessung"
+    }
+   ],
    "marginalie": [
     "Bemessung des Eigenkapitals"
    ]
   },
+  "105": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
+   "marginalie": [
+    "Der Quellensteuerpflicht unterliegende Personen"
+   ]
+  },
+  "106": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
+   "marginalie": [
+    "Steuerbare Leistungen"
+   ]
+  },
   "107": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
    "marginalie": [
     "Steuerabzug auf Erwerbseinkünften a) Grundlage"
    ]
   },
   "108": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
    "marginalie": [
     "b) Ausgestaltung"
    ]
   },
   "109": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
    "marginalie": [
     "Steuerabzug auf Ersatzeinkünften"
    ]
   },
+  "113": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
+   "marginalie": [
+    "Wechsel zwischen Quellensteuerabzug und ordentlicher Veranlagung *"
+   ]
+  },
   "114": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
    "marginalie": [
     "Vergütungen aus dem Ausland *"
    ]
   },
   "115": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
    "marginalie": [
     "Arbeitnehmer"
    ]
   },
   "116": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
    "marginalie": [
     "Künstler, Sportler und Referenten"
    ]
   },
+  "117": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
+   "marginalie": [
+    "Organe juristischer Personen"
+   ]
+  },
   "118": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
    "marginalie": [
     "Hypothekargläubiger"
    ]
   },
   "119": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
    "marginalie": [
     "Empfänger von Vorsorgeleistungen"
    ]
   },
   "120": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
    "marginalie": [
     "Mindesteinkommen"
    ]
   },
   "122": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
    "marginalie": [
     "Abgegoltene Steuer"
    ]
   },
   "123": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Fälligkeit"
    ]
   },
+  "124": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Bezugsprovision"
+   ]
+  },
   "125": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Haftung"
    ]
   },
   "128": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Internationale Verhältnisse"
    ]
   },
+  "129": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gemeindeanteile"
+   ]
+  },
+  "130": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "Gegenstand"
+   ]
+  },
   "131": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "Veräusserungen a) Steuerbegründende Veräusserungen"
    ]
   },
+  "132": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "b) Steueraufschiebende Veräusserungen"
+   ]
+  },
   "133": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "Steuersubjekt und Steueranspruch"
    ]
   },
   "134": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "Steuerobjekt a) Grundstückgewinn"
    ]
   },
   "135": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "b) Erlös"
    ]
   },
   "136": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "c) Anlagekosten 1. Erwerbspreis"
    ]
   },
   "137": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "2. Aufwendungen"
    ]
   },
   "138": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "3. Leistungen Dritter"
    ]
   },
   "139": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "4. Anlagekosten in besonderen Fällen"
    ]
   },
+  "140": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "Steuerberechnung a) Steuersatz"
+   ]
+  },
   "141": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "b) Zuschläge und Ermässigungen"
    ]
   },
   "142": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "Gegenstand a) Allgemeines 1. Erbschaftssteuer"
    ]
   },
   "143": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "2. Schenkungssteuer"
    ]
   },
   "144": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "3. Ansprüche aus Versicherungen"
    ]
   },
   "145": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "Steuerfreie Vermögensübergänge a) An juristische Personen"
    ]
   },
+  "146": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
+   "marginalie": [
+    "b) An natürliche Personen"
+   ]
+  },
   "147": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "Steuerpflicht a) Steuerliche Zugehörigkeit"
    ]
   },
   "148": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "b) Steuersubjekt"
    ]
   },
   "149": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "c) Steueranspruch"
    ]
   },
   "150": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "Steuerbemessung a) Bewertung 1. Grundsatz"
    ]
   },
+  "151": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
+   "marginalie": [
+    "2. Besondere Fälle"
+   ]
+  },
   "152": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "b) Abzüge"
    ]
   },
+  "153": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
+   "marginalie": [
+    "Steuerberechnung a) Steuerfreie Beträge"
+   ]
+  },
+  "154": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
+   "marginalie": [
+    "b) Steuersätze"
+   ]
+  },
   "155": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "c) Ermässigung bei Unternehmensnachfolge 1. Grundsatz"
    ]
   },
   "156": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "2. Wegfall der Ermässigung"
    ]
   },
   "157": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Fünfter Abschnitt: Erbschafts- und Schenkungssteuern"
+    }
+   ],
    "marginalie": [
     "Haftung"
    ]
   },
   "158": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbehörden"
+    }
+   ],
    "marginalie": [
     "Kantonales Steueramt"
    ]
   },
   "160": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbehörden"
+    }
+   ],
    "marginalie": [
     "Gemeindesteueramt"
    ]
   },
   "161": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
    "marginalie": [
     "Massgebendes Recht"
    ]
   },
   "162": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
    "marginalie": [
     "Geheimhaltungspflicht"
    ]
   },
+  "163": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
+   "marginalie": [
+    "Amtshilfe a) Grundsatz"
+   ]
+  },
   "164": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
    "marginalie": [
     "Verfahrensrechtliche Stellung der Ehegatten bei den Einkommens- und Vermögenssteuern"
    ]
   },
   "165": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
    "marginalie": [
     "Verfahrensrechte des Steuerpflichtigen a) Akteneinsicht"
    ]
   },
   "166": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
    "marginalie": [
     "b) Beweisabnahme"
    ]
   },
   "167": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
    "marginalie": [
     "c) Vertragliche Vertretung"
    ]
   },
   "168": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "Verfahrenspflichten des Steuerpflichtigen a) Steuererklärung"
    ]
   },
   "169": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "b) Beilagen zur Steuererklärung"
    ]
   },
   "170": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "c) Weitere Mitwirkungspflichten des Steuerpflichtigen"
    ]
   },
   "171": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "d) Aufbewahrungspflichten"
    ]
   },
   "172": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "Verfahrenspflichten Dritter a) Bescheinigungspflicht Dritter"
    ]
   },
   "173": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "b) Auskunftspflicht Dritter"
    ]
   },
+  "174": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "c) Meldepflicht Dritter"
+   ]
+  },
+  "175": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "d) Pflichten der kollektiven Kapitalanlagen"
+   ]
+  },
   "176": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "Veranlagung a) Durchführung"
    ]
   },
   "177": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "b) Ermessensveranlagung"
    ]
   },
+  "178": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "c) Eröffnung 1. Veranlagung"
+   ]
+  },
+  "180": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "Einsprache a) Voraussetzungen"
+   ]
+  },
   "181": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "b) Verfahren"
    ]
   },
   "182": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "c) Entscheid"
    ]
   },
   "183": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
    "marginalie": [
     "Veranlagungsverjährung"
    ]
   },
+  "184": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "a) für Quellensteuer 1. Pflichten des Schuldners der steuerbaren Leistung"
+   ]
+  },
   "185": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "2. Pflichten des Steuerpflichtigen"
    ]
   },
   "186": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "3. Verfügung"
    ]
   },
   "187": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "4. Ablieferung"
    ]
   },
   "188": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "5. Nachforderung und Rückerstattung"
    ]
   },
   "189": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "6. Einsprache"
    ]
   },
   "190": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "b) für Grundstückgewinnsteuer"
    ]
   },
   "191": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "c) für Erbschafts- und Schenkungssteuern 1. Veranlagungsgrundlage"
    ]
   },
+  "192": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "2. Verfahrenspflichten"
+   ]
+  },
   "193": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "3. Vertretung"
    ]
   },
   "194": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "V. Rekurs und Beschwerde"
+    }
+   ],
    "marginalie": [
     "Rekurs a) Voraussetzungen"
    ]
   },
+  "195": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "V. Rekurs und Beschwerde"
+    }
+   ],
+   "marginalie": [
+    "b) Entscheid"
+   ]
+  },
+  "196": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "V. Rekurs und Beschwerde"
+    }
+   ],
+   "marginalie": [
+    "Beschwerde"
+   ]
+  },
+  "197": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VI. Änderung rechtskräftiger Verfügungen und Entscheide"
+    }
+   ],
+   "marginalie": [
+    "Revision"
+   ]
+  },
   "198": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VI. Änderung rechtskräftiger Verfügungen und Entscheide"
+    }
+   ],
    "marginalie": [
     "Berichtigung"
    ]
   },
   "199": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VI. Änderung rechtskräftiger Verfügungen und Entscheide"
+    }
+   ],
    "marginalie": [
     "Nachsteuer a) Grundsatz"
    ]
   },
+  "200": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VI. Änderung rechtskräftiger Verfügungen und Entscheide"
+    }
+   ],
+   "marginalie": [
+    "b) Besondere Fälle"
+   ]
+  },
+  "201": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VI. Änderung rechtskräftiger Verfügungen und Entscheide"
+    }
+   ],
+   "marginalie": [
+    "c) Verfahren"
+   ]
+  },
   "202": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VI. Änderung rechtskräftiger Verfügungen und Entscheide"
+    }
+   ],
    "marginalie": [
     "d) Kosten und Haftung"
    ]
   },
+  "203": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VI. Änderung rechtskräftiger Verfügungen und Entscheide"
+    }
+   ],
+   "marginalie": [
+    "e) Verwirkung"
+   ]
+  },
   "204": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VII. Inventar"
+    }
+   ],
    "marginalie": [
     "Inventarpflicht"
    ]
   },
+  "205": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VII. Inventar"
+    }
+   ],
+   "marginalie": [
+    "Gegenstand"
+   ]
+  },
   "206": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VII. Inventar"
+    }
+   ],
    "marginalie": [
     "Inventarverfahren a) Mitwirkungspflichten"
    ]
   },
   "207": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VII. Inventar"
+    }
+   ],
    "marginalie": [
     "b) Auskunfts- und Bescheinigungspflichten"
    ]
   },
   "208": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VII. Inventar"
+    }
+   ],
    "marginalie": [
     "c) Sicherung der Inventaraufnahme"
    ]
   },
   "209": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VII. Inventar"
+    }
+   ],
    "marginalie": [
     "d) Mitwirkung der Gemeindebehörden"
    ]
   },
+  "210": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "Vorläufige Steuerrechnung"
+   ]
+  },
+  "211": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "Schlussrechnung"
+   ]
+  },
   "212": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "Ausgleichszinsen"
    ]
   },
   "213": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "Sonderregel für Erbschaftssteuern"
    ]
   },
+  "214": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "Zahlungsfrist und Verzugszins"
+   ]
+  },
   "215": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "Verzicht wegen Geringfügigkeit"
    ]
   },
+  "216": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "Betreibung"
+   ]
+  },
   "217": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "Bezugsverjährung"
    ]
   },
   "218": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "Steuerrückerstattung a) An ungetrennt lebende Ehegatten"
    ]
   },
   "219": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "b) An geschiedene oder getrennt lebende Ehegatten"
    ]
   },
   "220": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "c) Rückforderung bei rechtskräftiger Veranlagung"
    ]
   },
   "221": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "Ausführungsbestimmungen"
    ]
   },
+  "222": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "Einsprache, Rekurs und Beschwerde"
+   ]
+  },
   "223": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
    "marginalie": [
     "Ablieferung"
    ]
   },
+  "224": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerbezug und Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "Stundung und Erlass"
+   ]
+  },
   "225": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Sicherung der Steuer"
+    }
+   ],
    "marginalie": [
     "Sicherstellung"
    ]
   },
   "226": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Sicherung der Steuer"
+    }
+   ],
    "marginalie": [
     "Arrest"
    ]
   },
   "227": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Siebter Abschnitt: Steuerbezug"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Sicherung der Steuer"
+    }
+   ],
    "marginalie": [
     "Gesetzliches Pfandrecht"
    ]
   },
   "228": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Veranlagungs- und Bezugsstellen"
    ]
   },
   "229": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Steuerpflicht, Verfahren und Steuerbezug"
    ]
   },
   "230": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Einsprache"
    ]
   },
   "231": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gesetzliches Pfandrecht"
    ]
   },
   "232": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Einkommens- und Vermögenssteuern"
+    }
+   ],
    "marginalie": [
     "Steuererhebung"
    ]
   },
+  "233": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Einkommens- und Vermögenssteuern"
+    }
+   ],
+   "marginalie": [
+    "Abgrenzung zwischen Gemeinden a) Wechsel der Steuerpflicht innerhalb des Kantons"
+   ]
+  },
   "234": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Einkommens- und Vermögenssteuern"
+    }
+   ],
    "marginalie": [
     "b) Gleichzeitige Steuerpflicht in mehreren Gemeinden"
    ]
   },
   "235": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Einkommens- und Vermögenssteuern"
+    }
+   ],
    "marginalie": [
     "c) Verfahren"
    ]
   },
   "236": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Einkommens- und Vermögenssteuern"
+    }
+   ],
    "marginalie": [
     "Steuerbezug"
    ]
   },
   "237": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Grundsteuer"
+    }
+   ],
    "marginalie": [
     "Gegenstand und Steueranspruch"
    ]
   },
   "238": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Grundsteuer"
+    }
+   ],
    "marginalie": [
     "Steuersubjekt"
    ]
   },
+  "239": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Grundsteuer"
+    }
+   ],
+   "marginalie": [
+    "Steuerbemessung"
+   ]
+  },
+  "240": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Grundsteuer"
+    }
+   ],
+   "marginalie": [
+    "Berechnung"
+   ]
+  },
   "241": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Handänderungssteuer"
+    }
+   ],
    "marginalie": [
     "Gegenstand und Steueranspruch"
    ]
   },
   "242": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Handänderungssteuer"
+    }
+   ],
    "marginalie": [
     "Steuersubjekt"
    ]
   },
   "243": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Handänderungssteuer"
+    }
+   ],
    "marginalie": [
     "Steuerbemessung"
    ]
   },
   "244": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Handänderungssteuer"
+    }
+   ],
    "marginalie": [
     "Steuerfreie Handänderungen"
    ]
   },
   "245": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "DRITTER TEIL: GEMEINDESTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Vierter Abschnitt: Handänderungssteuer"
+    }
+   ],
    "marginalie": [
     "Berechnung"
    ]
   },
   "247": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
    "marginalie": [
     "Verletzung von Verfahrenspflichten"
    ]
   },
+  "248": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
+   "marginalie": [
+    "Steuerhinterziehung a) Vollendete Steuerhinterziehung 1. Grundsatz"
+   ]
+  },
   "249": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
    "marginalie": [
     "b) Versuchte Steuerhinterziehung"
    ]
   },
+  "250": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
+   "marginalie": [
+    "c) Mitwirkung Dritter"
+   ]
+  },
+  "251": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
+   "marginalie": [
+    "d) Verheimlichung oder Beiseiteschaffung von Nachlasswerten im Inventarverfahren 1. Grundsatz"
+   ]
+  },
   "253": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
    "marginalie": [
     "f) Steuerhinterziehung von Ehegatten"
    ]
   },
+  "254": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
+   "marginalie": [
+    "Juristische Personen a) Strafbarkeit"
+   ]
+  },
   "255": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Verfahren vor den Steuerbehörden a) Zuständigkeit"
    ]
   },
+  "256": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "b) Bussenverfügung"
+   ]
+  },
+  "257": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "c) Untersuchung und Strafbefehl 1. Eröffnung der Untersuchung"
+   ]
+  },
   "258": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
    "marginalie": [
     "2. Verteidigung und Übersetzung"
    ]
   },
+  "259": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "3. Untersuchung"
+   ]
+  },
+  "260": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "4. Zeugeneinvernahme"
+   ]
+  },
+  "261": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "5. Abschluss der Untersuchung"
+   ]
+  },
+  "262": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "6. Strafbefehl"
+   ]
+  },
   "263": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Verjährung der Strafverfolgung"
    ]
   },
+  "264": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "Gerichtliche Beurteilung durch die Verwaltungsrekurskommission a) Einsprache"
+   ]
+  },
+  "265": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "b) Überweisung der Akten und Anklage"
+   ]
+  },
   "266": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
    "marginalie": [
     "c) Vorbereitung der Hauptverhandlung"
    ]
   },
   "267": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
    "marginalie": [
     "d) Hauptverhandlung"
    ]
   },
+  "268": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "e) Erscheinungspflicht des Angeschuldigten"
+   ]
+  },
   "269": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
    "marginalie": [
     "f) Verweisung auf das Rekursverfahren"
    ]
   },
   "270": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Beschwerde"
    ]
   },
   "271": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Bezug"
    ]
   },
+  "272": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Steuervergehen"
+    }
+   ],
+   "marginalie": [
+    "Steuerbetrug"
+   ]
+  },
+  "273": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Steuervergehen"
+    }
+   ],
+   "marginalie": [
+    "Veruntreuung von Quellensteuern"
+   ]
+  },
+  "274": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Steuervergehen"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ]
+  },
   "275": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Steuervergehen"
+    }
+   ],
    "marginalie": [
     "Verjährung der Strafverfolgung"
    ]
   },
   "279": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "280": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen a) Leistungen aus beruflicher Vorsorge und aus obligatorischer Unfallversicherung"
    ]
   },
   "281": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "b) Kapitalversicherungen mit Einmalprämie"
    ]
   },
+  "283": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "d) Ergänzende Vermögenssteuer 1. Beginn für die Berechnung"
+   ]
+  },
   "284": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "e) Kapitalgewinne bei gemischten Beteiligungsgesellschaften"
    ]
   },
+  "317": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Ausgleich der Folgen der kalten Progression *"
+   ]
+  },
   "318": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "Verordnung"
    ]
   },
   "319": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
    "marginalie": [
     "Vollzugsbeginn"
+   ]
+  },
+  "320": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung des X. Nachtrags vom 5. August 2014 [85]"
+   ]
+  },
+  "321": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung des XII. Nachtrags vom 4. August 2015 [86]"
+   ]
+  },
+  "322": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung des XIV. Nachtrags vom 14. August 2018"
+   ]
+  },
+  "323": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung des XV. Nachtrags vom 24. April 2019 [87]"
+   ]
+  },
+  "109_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
+   "marginalie": [
+    "Steuerabzug auf rückvergüteten AHV-Beiträgen"
+   ]
+  },
+  "112_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
+   "marginalie": [
+    "Nachträgliche ordentliche Veranlagung a) obligatorische"
+   ]
+  },
+  "112_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
+   "marginalie": [
+    "b) auf Antrag"
+   ]
+  },
+  "117_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
+   "marginalie": [
+    "Empfänger von Mitarbeiterbeteiligungen"
+   ]
+  },
+  "122_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
+   "marginalie": [
+    "Nachträgliche ordentliche Veranlagung a) auf Antrag"
+   ]
+  },
+  "122_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
+   "marginalie": [
+    "b) von Amtes wegen"
+   ]
+  },
+  "122_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "IIbis. Natürliche Personen mit kleinen Arbeitsentgelten aus unselbständiger Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "Der Quellensteuerpflicht unterliegende Personen"
+   ]
+  },
+  "122_quater": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "IIbis. Natürliche Personen mit kleinen Arbeitsentgelten aus unselbständiger Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "Steuerabzug"
+   ]
+  },
+  "122_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "IIbis. Natürliche Personen mit kleinen Arbeitsentgelten aus unselbständiger Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "Steuerbare Leistungen"
+   ]
+  },
+  "128_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Interkantonale Verhältnisse"
+   ]
+  },
+  "128_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Dritter Abschnitt: Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Interkommunale Verhältnisse"
+   ]
+  },
+  "12_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ERSTER TEIL: ALLGEMEINE BESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Eingetragene Partnerschaft"
+   ]
+  },
+  "163_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
+   "marginalie": [
+    "b) Datenbearbeitung"
+   ]
+  },
+  "163_quater": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
+   "marginalie": [
+    "Elektronische Erfassung und Aufbewahrung von Daten"
+   ]
+  },
+  "163_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
+   "marginalie": [
+    "Elektronischer Datenaustausch"
+   ]
+  },
+  "178_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "2. Grundstückwerte"
+   ]
+  },
+  "184_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Besondere Verfahrensbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "1bis. Pflichten der AHV-Ausgleichskasse bei Quellensteuern auf kleinen Arbeitsentgelten aus unselbständiger Erwerbstätigkeit [63]"
+   ]
+  },
+  "203_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Sechster Abschnitt: Organisation und Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "VI. Änderung rechtskräftiger Verfügungen und Entscheide"
+    }
+   ],
+   "marginalie": [
+    "f) Vereinfachte Nachbesteuerung von Erben"
+   ]
+  },
+  "22_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "c) Kollektive Kapitalanlagen"
+   ]
+  },
+  "248_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
+   "marginalie": [
+    "2. Straflose Selbstanzeige"
+   ]
+  },
+  "251_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
+   "marginalie": [
+    "2. Straflose Selbstanzeige"
+   ]
+  },
+  "254_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIERTER TEIL: STEUERSTRAFRECHT"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Straftatbestände und strafbare Personen"
+    }
+   ],
+   "marginalie": [
+    "b) Straflose Selbstanzeige"
+   ]
+  },
+  "283_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "2. Grundlage für die Berechnung"
+   ]
+  },
+  "30_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2. Einkünfte aus echten Mitarbeiterbeteiligungen"
+   ]
+  },
+  "30_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "3. Einkünfte aus unechten Mitarbeiterbeteiligungen"
+   ]
+  },
+  "316_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "FÜNFTER TEIL: SCHLUSSBESTIMMUNGEN"
+    }
+   ],
+   "marginalie": [
+    "Rückwirkung neuen Rechts"
+   ]
+  },
+  "31_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "1 bis . Teilbesteuerung der Einkünfte aus Beteiligungen im Geschäftsvermögen"
+   ]
+  },
+  "31_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "1 ter . Einkommen aus Patenten und vergleichbaren Rechten"
+   ]
+  },
+  "32_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2.2 Weitere Tatbestände"
+   ]
+  },
+  "33_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2. Besondere Fälle"
+   ]
+  },
+  "41_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2 bis . Abzug von Forschungs- und Entwicklungsaufwand bei selbständiger Erwerbstätigkeit"
+   ]
+  },
+  "52_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Erster Abschnitt: Einkommens- und Vermögenssteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "4. Liquidationsgewinne mit Vorsorgecharakter"
+   ]
+  },
+  "83_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "2 bis . Patente und vergleichbare Rechte: Begriffe"
+   ]
+  },
+  "83_quater": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "2 quater . Aufdeckung stiller Reserven bei Beginn der Steuerpflicht"
+   ]
+  },
+  "83_quinquies": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "2 quinquies . Besteuerung stiller Reserven am Ende der Steuerpflicht"
+   ]
+  },
+  "83_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "2 ter . Patente und vergleichbare Rechte: Besteuerung"
+   ]
+  },
+  "85_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "4 bis . Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
+   ]
+  },
+  "85_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "4 ter . Entlastungsbegrenzung"
+   ]
+  },
+  "95_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "d) Juristische Personen mit ideellen Zwecken"
+   ]
+  },
+  "95_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "e) Vereine, Stiftungen und übrige juristische Personen"
+   ]
+  },
+  "99_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "ZWEITER TEIL: STAATSSTEUERN"
+    },
+    {
+     "ebene": 2,
+     "label": "Zweiter Abschnitt: Gewinn- und Kapitalsteuern"
+    },
+    {
+     "ebene": 3,
+     "label": "IIIbis. Mindeststeuer"
+    }
+   ],
+   "marginalie": [
+    "Steuerberechnung"
    ]
   }
  }

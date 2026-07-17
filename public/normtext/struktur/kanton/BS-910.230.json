@@ -1,46 +1,92 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zweck und Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Kein Rechtsanspruch auf Beitragsvergabe"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verwaltung des Stadtbelebungsfonds"
+    }
+   ],
    "marginalie": [
     "Fondsverwaltung und Fondsbuchhaltung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verwaltung des Stadtbelebungsfonds"
+    }
+   ],
    "marginalie": [
     "Fondsrat"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Beitragsgesuche"
+    }
+   ],
    "marginalie": [
     "Form der Beitragsgesuche"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Beitragsgesuche"
+    }
+   ],
    "marginalie": [
     "Prüfung und Entscheidung über Beitragsgesuche"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Beiträge und Auszahlungsmodalitäten"
+    }
+   ],
    "marginalie": [
     "Beitragshöhe"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Beiträge und Auszahlungsmodalitäten"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung [3]"
    ]
   }
  }

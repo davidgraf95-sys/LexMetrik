@@ -1,244 +1,843 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bemessung der amtlichen Gebühren"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bemessung der Gebühren der berufsmässigen Vertretung"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Streitwert"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Schlichtungsverfahren"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Ordentliches Verfahren"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Vereinfachtes Verfahren"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Summarisches Verfahren"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Verfahren nach den Artikeln 271–307 ZPO"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Berufungsverfahren"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Beschwerdeverfahren"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Revisionsverfahren"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.1 Verfahren nach der Schweizerischen Zivilprozessordnung"
+    }
+   ],
    "marginalie": [
     "Übrige Verfahren"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.2 Verfahren nach dem Gesetz über die Verwaltungsrechtspflege"
+    }
+   ],
    "marginalie": [
     "Erstinstanzliche Verfahren"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.2 Verfahren nach dem Gesetz über die Verwaltungsrechtspflege"
+    }
+   ],
    "marginalie": [
     "Rechtsmittelverfahren"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.3 Verfahren nach der Strafprozessordnung und der Jugendstrafprozessordnung"
+    }
+   ],
    "marginalie": [
     "Staatsanwaltschaft"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.3 Verfahren nach der Strafprozessordnung und der Jugendstrafprozessordnung"
+    }
+   ],
    "marginalie": [
     "Oberstaatsanwaltschaft"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.3 Verfahren nach der Strafprozessordnung und der Jugendstrafprozessordnung"
+    }
+   ],
    "marginalie": [
     "Jugendgericht"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.3 Verfahren nach der Strafprozessordnung und der Jugendstrafprozessordnung"
+    }
+   ],
    "marginalie": [
     "Bezirksgericht"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.3 Verfahren nach der Strafprozessordnung und der Jugendstrafprozessordnung"
+    }
+   ],
    "marginalie": [
     "Kriminalgericht"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.3 Verfahren nach der Strafprozessordnung und der Jugendstrafprozessordnung"
+    }
+   ],
    "marginalie": [
     "Zwangsmassnahmengericht"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.3 Verfahren nach der Strafprozessordnung und der Jugendstrafprozessordnung"
+    }
+   ],
    "marginalie": [
     "Kantonsgericht"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1 Gebühren"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.1.3 Verfahren nach der Strafprozessordnung und der Jugendstrafprozessordnung"
+    }
+   ],
    "marginalie": [
     "Amtliche Verteidigung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2 Auslagen"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.2.1 Beweiskosten"
+    }
+   ],
    "marginalie": [
     "Zeuginnen, Zeugen und Auskunftspersonen *"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2 Auslagen"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.2.1 Beweiskosten"
+    }
+   ],
    "marginalie": [
     "Drittpersonen"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2 Auslagen"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.2.1 Beweiskosten"
+    }
+   ],
    "marginalie": [
     "Sachverständige"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2 Auslagen"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.2.2 Sonstige Auslagen"
+    }
+   ],
    "marginalie": [
     "Übersetzerinnen und Übersetzer"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2 Auslagen"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.2.2 Sonstige Auslagen"
+    }
+   ],
    "marginalie": [
     "Vertreter oder Vertreterin des Kindes"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Amtliche Kosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2 Auslagen"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2.2.2 Sonstige Auslagen"
+    }
+   ],
    "marginalie": [
     "Mediatorinnen und Mediatoren"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Parteikosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.3.1 Entschädigung"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3.1.1 Entschädigung an eine nicht berufsmässig vertretene Partei"
+    }
+   ],
    "marginalie": [
     "Umtriebsentschädigung"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Parteikosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.3.1 Entschädigung"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3.1.2 Kosten der berufsmässigen Vertretung"
+    }
+   ],
    "marginalie": [
     "Entschädigungsberechtigte Bemühungen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Parteikosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.3.1 Entschädigung"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3.1.2 Kosten der berufsmässigen Vertretung"
+    }
+   ],
    "marginalie": [
     "Verfahren nach der ZPO und nach dem VRG"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Parteikosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.3.1 Entschädigung"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3.1.2 Kosten der berufsmässigen Vertretung"
+    }
+   ],
    "marginalie": [
     "Verfahren nach der StPO"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Parteikosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.3.2 Auslagen"
+    }
+   ],
    "marginalie": [
     "Ersatzberechtigte Auslagen"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Verwaltungskosten"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Verwaltungskosten"
+    }
+   ],
    "marginalie": [
     "Stundung, Ermässigung und Erlass"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Verwaltungskosten"
+    }
+   ],
    "marginalie": [
     "Gebühren"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Verwaltungskosten"
+    }
+   ],
    "marginalie": [
     "Auslagen"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Verfahrenskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Parteikosten"
+    },
+    {
+     "ebene": 3,
+     "label": "1.3.1 Entschädigung"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3.1.2 Kosten der berufsmässigen Vertretung"
+    }
+   ],
+   "marginalie": [
+    "Akontozahlungen bei amtlicher Verteidigung oder unentgeltlicher Rechtsverbeiständung"
    ]
   }
  }

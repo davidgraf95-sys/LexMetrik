@@ -1,254 +1,560 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gegenstand"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verhältnis zu den Gemeinden Bettingen und Riehen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebührenschuldnerin oder Gebührenschuldner"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Kanton und Einwohnergemeinden"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebührenfestsetzung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Veranstalterbewilligung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenfreie Nutzungen"
+    }
+   ],
    "marginalie": [
     "Meldepflichtige Nutzungen und Nutzungen ohne Melde- oder Bewilligungspflicht"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenfreie Nutzungen"
+    }
+   ],
    "marginalie": [
     "Wohltätige, gemeinnützige, kulturelle oder sportliche Nutzungen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenfreie Nutzungen"
+    }
+   ],
    "marginalie": [
     "Veranstaltungen mit Swisslos-Fonds- oder Swisslos-Sportfonds-Beiträgen"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenfreie Nutzungen"
+    }
+   ],
    "marginalie": [
     "Ausübung politischer Kommunikationsgrundrechte"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenfreie Nutzungen"
+    }
+   ],
    "marginalie": [
     "Überragende Bauteile"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenfreie Nutzungen"
+    }
+   ],
    "marginalie": [
     "Hindernisfreier Zugang"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenfreie Nutzungen"
+    }
+   ],
    "marginalie": [
     "Ausnahmsweise Gebührenbefreiung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Nutzungen ohne fest mit dem Boden verbundene Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Grundtarif"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Nutzungen ohne fest mit dem Boden verbundene Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Bemessung der beanspruchten Fläche"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Nutzungen ohne fest mit dem Boden verbundene Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Bemessung der Dauer der Sondernutzung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Nutzungen ohne fest mit dem Boden verbundene Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Zuschläge"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Nutzungen ohne fest mit dem Boden verbundene Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Spezielle Tarife"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Nutzungen ohne fest mit dem Boden verbundene Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Reduktion"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Nutzungen mit fest mit dem Boden verbundenen Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Bemessungsgrundsatz"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Nutzungen mit fest mit dem Boden verbundenen Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Pauschalsätze"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Nutzungen mit fest mit dem Boden verbundenen Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Pauschaltarife"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Nutzungen mit fest mit dem Boden verbundenen Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Bemessung der beanspruchten Fläche"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Nutzungen mit fest mit dem Boden verbundenen Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Antennenanlagen"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Nutzungen mit fest mit dem Boden verbundenen Bauten und Anlagen"
+    }
+   ],
    "marginalie": [
     "Fischergalgen und Bootsliegeplätze an Bojen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3 Nutzungen mit Reklamen"
+    }
+   ],
    "marginalie": [
     "Reklamen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Nutzungsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3 Nutzungen mit Reklamen"
+    }
+   ],
    "marginalie": [
     "Reklametarife"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Bewilligungsgebühren"
+    }
+   ],
    "marginalie": [
     "Nutzungsbewilligungsgebühr"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Bewilligungsgebühren"
+    }
+   ],
    "marginalie": [
     "Erhöhte Nutzungsbewilligungsgebühr"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Bewilligungsgebühren"
+    }
+   ],
    "marginalie": [
     "Ermässigte Nutzungsbewilligungsgebühr"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Bewilligungsgebühren"
+    }
+   ],
    "marginalie": [
     "Kombinierte Bau- und Nutzungsbewilligung"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Weitere Gebühren"
+    }
+   ],
    "marginalie": [
     "Gebühren für andere Entscheide"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Weitere Gebühren"
+    }
+   ],
    "marginalie": [
     "Kontrollgebühren"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Weitere Gebühren"
+    }
+   ],
    "marginalie": [
     "Gebühren bei unrechtmässigem Plakatieren"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Weitere Gebühren"
+    }
+   ],
    "marginalie": [
     "Gebühren für polizeiliche Ermittlungsverfahren"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Weitere Gebühren"
+    }
+   ],
    "marginalie": [
     "Gebühren nach Zeitaufwand"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Bearbeitungsgebühren und Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Kosten"
+    }
+   ],
    "marginalie": [
     "Expertisen"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Ergänzende Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Fälligkeit"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Ergänzende Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Mahnung und Inkasso"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Ergänzende Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Vorschuss oder Vorauszahlung"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Ergänzende Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Kaution"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]

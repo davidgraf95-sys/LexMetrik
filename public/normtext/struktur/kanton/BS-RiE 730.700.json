@@ -1,20 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Zweck"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Übernahme der Reinigungskosten"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Übernahme der Reinigungskosten"
+    }
+   ],
    "marginalie": []
   }
  }

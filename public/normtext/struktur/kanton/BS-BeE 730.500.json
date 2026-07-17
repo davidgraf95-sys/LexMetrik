@@ -1,38 +1,68 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemein"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Fondsvermögen"
+    }
+   ],
    "marginalie": [
     "Äufnung von Fondsvermögen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Zuständigkeiten und Verfügungskompetenzen"
+    }
+   ],
    "marginalie": [
     "Zuständigkeiten"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Vermögensverwaltung und Rechnungsführung"
+    }
+   ],
    "marginalie": [
     "Vermögensverwaltung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Vermögensverwaltung und Rechnungsführung"
+    }
+   ],
    "marginalie": [
     "Rechnungsführung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
    ]

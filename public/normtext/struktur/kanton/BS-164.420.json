@@ -1,61 +1,286 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Handhabung (Bewilligung, Kontrolle, Visumspflicht)"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Gliederung der Spesen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
    "marginalie": [
     "Verkehrsmittel *"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
+   "marginalie": [
+    "Autoentschädigung *"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
+   "marginalie": []
+  },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
    "marginalie": [
     "Dienstfahrten mit Motorrad-, Moped- und Fahrrad *"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
+   "marginalie": [
+    "Bahnspesen *"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
+   "marginalie": []
+  },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
    "marginalie": [
     "Dienstfahrten mit Tram und Bus *"
    ]
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "B. Verpflegungsspesen"
+    }
+   ],
+   "marginalie": [
+    "Verpflegungsentschädigung"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "C. Übrige Spesen und Kostenbeiträge"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "C. Übrige Spesen und Kostenbeiträge"
+    }
+   ],
    "marginalie": [
     "Funktionsspesen"
    ]
   },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "C. Übrige Spesen und Kostenbeiträge"
+    }
+   ],
+   "marginalie": [
+    "Kostenbeiträge"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II."
+    }
+   ],
    "marginalie": [
     "Schlussbestimmungen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II."
+    }
+   ],
    "marginalie": []
+  },
+  "11_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    },
+    {
+     "ebene": 2,
+     "label": "A. Reise- und Transportspesen"
+    }
+   ],
+   "marginalie": [
+    "Flugspesen"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Reisespesen"
+   ]
   }
  }
 }

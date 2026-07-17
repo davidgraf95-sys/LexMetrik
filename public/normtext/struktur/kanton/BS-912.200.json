@@ -1,254 +1,580 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zweck und Gegenstand"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zusammenarbeit"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation"
+    }
+   ],
    "marginalie": [
     "Fachstelle"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation"
+    }
+   ],
    "marginalie": [
     "Wildtierbeauftragte oder Wildtierbeauftragter"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation"
+    }
+   ],
    "marginalie": [
     "Jagdaufsicht"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Artenschutz"
+    }
+   ],
    "marginalie": [
     "Grundsätze"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Artenschutz"
+    }
+   ],
    "marginalie": [
     "Fütterung von wildlebenden Tieren"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Artenschutz"
+    }
+   ],
    "marginalie": [
     "Leinenpflicht"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Artenschutz"
+    }
+   ],
    "marginalie": [
     "Fallwild"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Artenschutz"
+    }
+   ],
    "marginalie": [
     "Einfangen und Halten von wildlebenden Tieren"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Lebensräume"
+    }
+   ],
    "marginalie": [
     "Wildräume"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Lebensräume"
+    }
+   ],
    "marginalie": [
     "Wildruhegebiete"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Lebensräume"
+    }
+   ],
    "marginalie": [
     "Wildschutzgebiete"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Lebensräume"
+    }
+   ],
    "marginalie": [
     "Wildtierkorridore"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Artenschutz und Lebensräume"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Lebensräume"
+    }
+   ],
    "marginalie": [
     "Schutzmassnahmen der Einwohnergemeinden"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Jagdregal und Revierjagd"
+    }
+   ],
    "marginalie": [
     "Jagdregal"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Jagdregal und Revierjagd"
+    }
+   ],
    "marginalie": [
     "Revierjagd"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Pacht"
+    }
+   ],
    "marginalie": [
     "Pachtvertrag"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Pacht"
+    }
+   ],
    "marginalie": [
     "Auflösung und Kündigung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Pacht"
+    }
+   ],
    "marginalie": [
     "Jagdgesellschaft"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Jagdberechtigung"
+    }
+   ],
    "marginalie": [
     "Jagdpass"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Jagdberechtigung"
+    }
+   ],
    "marginalie": [
     "Ausschluss von der Jagd"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Jagdberechtigung"
+    }
+   ],
    "marginalie": [
     "Jagdprüfung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Jagdberechtigung"
+    }
+   ],
    "marginalie": [
     "Jagdgäste"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Jagdberechtigung"
+    }
+   ],
    "marginalie": [
     "Begehungskarten"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Zielvereinbarung"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Hege"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Waidgerechtigkeit"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Jagdwaffen, Munition und jagdliche Hilfsmittel"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Jagdhundehaltung"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Bewegungsjagd"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Aneignungsrecht"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Kantonale Unterstützung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Jagd"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Ausübung der Jagd"
+    }
+   ],
    "marginalie": [
     "Beschränkung der Jagd"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Wildschaden"
+    }
+   ],
    "marginalie": [
     "Verhütung von Wildschaden"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Wildschaden"
+    }
+   ],
    "marginalie": [
     "Beiträge an Massnahmen zur Wildschadenverhütung"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Wildschaden"
+    }
+   ],
    "marginalie": [
     "Selbsthilfemassnahmen"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Wildschaden"
+    }
+   ],
    "marginalie": [
     "Grundsätze der Entschädigung von Wildschaden"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechtsmittel und Widerhandlungen"
+    }
+   ],
    "marginalie": [
     "Rekurs"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechtsmittel und Widerhandlungen"
+    }
+   ],
    "marginalie": [
     "Strafbestimmungen"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechtsmittel und Widerhandlungen"
+    }
+   ],
    "marginalie": [
     "Strafverfolgung"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechtsmittel und Widerhandlungen"
+    }
+   ],
    "marginalie": [
     "Fehlabschüsse"
    ]

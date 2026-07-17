@@ -1,218 +1,398 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Abweichungen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ergänzendes Recht"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Antritt und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Probezeit"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Antritt und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Kündigung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Antritt und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Kündigung der Unterkunft"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Antritt und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Kündigungsschutz"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Antritt und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Arbeitszeugnis"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Arbeitszeit"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Pausen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Überstunden"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Überzeit"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Ruhezeit"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Freie Tage"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Sonntage und gesetzliche Feiertage"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Ferien"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Bezahlter Urlaub"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Mutterschaftsurlaub"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Aus- und Weiterbildung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Lohn und unverschuldete Arbeitsverhinderung"
+    }
+   ],
    "marginalie": [
     "Höhe des Lohnes"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Lohn und unverschuldete Arbeitsverhinderung"
+    }
+   ],
    "marginalie": [
     "Naturallohn"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Lohn und unverschuldete Arbeitsverhinderung"
+    }
+   ],
    "marginalie": [
     "Lohnauszahlung und Lohnabrechnung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Lohn und unverschuldete Arbeitsverhinderung"
+    }
+   ],
    "marginalie": [
     "Lohn bei unverschuldeter Arbeitsverhinderung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Lohn und unverschuldete Arbeitsverhinderung"
+    }
+   ],
    "marginalie": [
     "Dienstaltersgeschenke"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Versicherungen, Berufliche Vorsorge und Abgangsentschädigung"
+    }
+   ],
    "marginalie": [
     "Sozialabzüge"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Versicherungen, Berufliche Vorsorge und Abgangsentschädigung"
+    }
+   ],
    "marginalie": [
     "Berufliche Vorsorge"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Versicherungen, Berufliche Vorsorge und Abgangsentschädigung"
+    }
+   ],
    "marginalie": [
     "Abgangsentschädigung"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Versicherungen, Berufliche Vorsorge und Abgangsentschädigung"
+    }
+   ],
    "marginalie": [
     "Unfallversicherung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Versicherungen, Berufliche Vorsorge und Abgangsentschädigung"
+    }
+   ],
    "marginalie": [
     "Krankenversicherung und Krankentaggeldversicherung"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Versicherungen, Berufliche Vorsorge und Abgangsentschädigung"
+    }
+   ],
    "marginalie": [
     "Mutterschaftsversicherung"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schutz der Arbeitnehmerinnen und Arbeitnehmer"
+    }
+   ],
    "marginalie": [
     "Schutz der Persönlichkeit"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schutz der Arbeitnehmerinnen und Arbeitnehmer"
+    }
+   ],
    "marginalie": [
     "Arbeitssicherheit und Arbeitshygiene"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schutz der Arbeitnehmerinnen und Arbeitnehmer"
+    }
+   ],
    "marginalie": [
     "Schutz für schwangere Frauen und stillende Mütter"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schutz der Arbeitnehmerinnen und Arbeitnehmer"
+    }
+   ],
    "marginalie": [
     "Schutz für Jugendliche"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aushändigung des Normalarbeitsvertrages und Auskunft"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Gerichtsstandsklausel"
    ]

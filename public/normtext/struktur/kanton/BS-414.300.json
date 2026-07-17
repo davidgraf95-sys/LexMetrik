@@ -1,16 +1,53 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Grundsätze"
+    }
+   ],
+   "marginalie": []
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Grundsätze"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Grundsätze"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schlussbestimmung"
+    }
+   ],
+   "marginalie": []
+  },
+  "4.-14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Vorgehen bei den verschiedenen Beschaffungsarten"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Beschaffung durch Kauf"
+    }
+   ],
    "marginalie": []
   }
  }

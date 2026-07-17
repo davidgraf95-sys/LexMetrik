@@ -1,64 +1,198 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kostendeckungsprinzip"
+    }
+   ],
    "marginalie": [
     "a) Verwaltungsaufwand"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kostendeckungsprinzip"
+    }
+   ],
    "marginalie": [
     "b) Mittelbare Kosten"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kostendeckungsprinzip"
+    }
+   ],
    "marginalie": [
     "c) Unmittelbare Kosten"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kostendeckungsprinzip"
+    }
+   ],
    "marginalie": [
     "d) Gesamtkostendeckung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Äquivalenzprinzip und Interessenprinzip"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gebührenrahmen und Tarife"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Koordination der Gebührenansätze"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kanzleigebühren"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Schreibgebühren"
+    }
+   ],
+   "marginalie": []
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Spruchgebühr"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Zuschlag zur ordentlichen Gebühr"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Parteientschädigung"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "11. Festsetzung von Spruchgebühr und Parteientschädigung"
+    }
+   ],
+   "marginalie": []
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "14. Unentgeltliche Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "a) Unentgeltliche Prozessführung"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "14. Unentgeltliche Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "b) Unentgeltliche Verbeiständung"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "14. Unentgeltliche Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "c) Verfahren"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "15. Schlussbestimmung"
+    }
+   ],
+   "marginalie": []
+  },
+  "14_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "12. Kostenvorschuss"
+    }
+   ],
+   "marginalie": []
+  },
+  "14_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "13. Verzugszins, Mahngebühren"
+    }
+   ],
    "marginalie": []
   }
  }

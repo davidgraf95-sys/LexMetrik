@@ -1,70 +1,213 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "1. Geltungsbereich; Personenbezeichnungen *"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "2. Umfang der Entschädigung *"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "1. Grundentschädigung *"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "2. Streitwert"
    ]
   },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung in Zivilsachen"
+    }
+   ],
+   "marginalie": [
+    "3. Ordentliche Zu- und Abschläge *"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung in Zivilsachen"
+    }
+   ],
+   "marginalie": [
+    "4. Ausserordentliche Zu- und Abschläge *"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung in Zivilsachen"
+    }
+   ],
+   "marginalie": [
+    "5. Rechtsmittelverfahren *"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung in Strafsachen"
+    }
+   ],
    "marginalie": [
     "Bemessung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Unentgeltliche Rechtsvertretung"
+    }
+   ],
    "marginalie": [
     "1. Entschädigung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Unentgeltliche Rechtsvertretung"
+    }
+   ],
    "marginalie": [
     "3. Verfahren"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Auslagen"
+    }
+   ],
    "marginalie": [
     "Ersatzanspruch"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "1. Anpassung an die Teuerung"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "2. Aufhebung bisherigen Rechts"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "3. Übergangsbestimmung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "4. Inkrafttreten"
+   ]
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4bis. Parteientschädigung zu Lasten des Gemeinwesens"
+    }
+   ],
+   "marginalie": [
+    "Reduktion bei hohem Streitwert"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2bis. Entschädigung in Verwaltungssachen"
+    }
+   ],
+   "marginalie": [
+    "1. Entschädigung"
+   ]
+  },
+  "8_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2bis. Entschädigung in Verwaltungssachen"
+    }
+   ],
+   "marginalie": [
+    "2. Besondere Fälle"
+   ]
+  },
+  "8_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2bis. Entschädigung in Verwaltungssachen"
+    }
+   ],
+   "marginalie": [
+    "3. Festsetzung der Entschädigung"
    ]
   }
  }

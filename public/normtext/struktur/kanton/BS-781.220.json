@@ -1,40 +1,235 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Zweck"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ermittlung und Beurteilung der Emissionen"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verschärfung von allgemeinen Emissionsbegrenzungen"
+    }
+   ],
+   "marginalie": [
+    "Emissionsgrenzwerte für Stickoxide"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verschärfung von allgemeinen Emissionsbegrenzungen"
+    }
+   ],
    "marginalie": [
     "Emissionsgrenzwerte für organische gas-, dampf- oder partikelförmige Stoffe"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "Anlagen zum Beschichten und Bedrucken mit organischen Stoffen"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "Abfallverbrennungsanlagen"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
    "marginalie": [
     "Stationäre Verbrennungsmotoren"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Verschärfung von Emissionsbegrenzungen für Feuerungsanlagen"
+    }
+   ],
    "marginalie": [
     "Feuerungsanlagen für Heizöl «Extra leicht» und Gasbrennstoffe"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Verschärfung von Emissionsbegrenzungen für Feuerungsanlagen"
+    }
+   ],
    "marginalie": [
     "Feuerungsanlagen für Heizöl «Mittel», Heizöl «Schwer» und Kohle"
    ]
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Verschärfung von Emissionsbegrenzungen für Feuerungsanlagen"
+    }
+   ],
+   "marginalie": [
+    "Holzfeuerungen"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Vollzug"
+   ]
+  },
+  "11_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "Baustellen"
+   ]
+  },
+  "11_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "Dieselbetriebene Maschinen und Geräte auf baustellenähnlichen Anlagen *"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verschärfung von allgemeinen Emissionsbegrenzungen"
+    }
+   ],
+   "marginalie": [
+    "Reduktion der Emissionen von organischen gas-, dampf- oder partikelförmigen Stoffen"
+   ]
+  },
+  "7_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "7_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "Anlagen für Reinigungs- und Entfettungsprozesse"
+   ]
+  },
+  "7_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
+    }
+   ],
+   "marginalie": [
+    "Massnahmenkatalog"
    ]
   }
  }

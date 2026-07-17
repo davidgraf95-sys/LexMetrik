@@ -1,0 +1,62 @@
+{
+ "erzeugt": "2026-07-17",
+ "artikel": {
+  "1": {
+   "gliederung": [],
+   "marginalie": []
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Hochleistungsstrassen (HLS)"
+    }
+   ],
+   "marginalie": [
+    "Hochleistungsstrassen"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Hauptverkehrsstrassen (HVS)"
+    }
+   ],
+   "marginalie": [
+    "Hauptverkehrsstrassen"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Regionalverbindungsstrassen (RVS)"
+    }
+   ],
+   "marginalie": [
+    "Regionalverbindungsstrassen"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Lokalverbindungsstrassen (LVS)"
+    }
+   ],
+   "marginalie": [
+    "Lokalverbindungsstrassen"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Lokalverbindungsstrassen (LVS)"
+    }
+   ],
+   "marginalie": []
+  }
+ }
+}

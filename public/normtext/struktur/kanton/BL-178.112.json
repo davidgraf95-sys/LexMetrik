@@ -1,96 +1,214 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Berechnungsgrundlage"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Berechnung nach Zeitaufwand"
+    }
+   ],
    "marginalie": [
     "Ansatz"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Berechnung nach Zeitaufwand"
+    }
+   ],
    "marginalie": [
     "Zuschlag"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Berechnung nach Zeitaufwand"
+    }
+   ],
+   "marginalie": [
+    "Betreibungsrechtliche Verfahren"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Berechnung nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Berechnungsmodus"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Berechnung nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Grundhonorar"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Berechnung nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Zuschläge"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Berechnung nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Offenbares Missverhältnis"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Berechnung nach Streitwert"
+    }
+   ],
+   "marginalie": [
+    "2. Instanz"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Berechnung nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Erledigung ohne Urteil"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Berechnung nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Streitberufene Person"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Berechnung nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Kompetenzstreitigkeiten und Prozesseinreden"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Parallelverfahren / Massenverfahren"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Kopiaturen"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Auslagen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Mehrwertsteuer"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7 Aufhebung bisherigen Rechts"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8 Inkrafttreten"
+    }
+   ],
    "marginalie": []
   }
  }

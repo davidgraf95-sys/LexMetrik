@@ -1,182 +1,424 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Gegenstand und Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Allgemeine Grundsätze und Definitionen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Anpassung an die Preisentwicklung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Akteneinsicht durch Dritte"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Bemessung und Festsetzung im Einzelfall"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Zivilverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "2.2.1. Streitige Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Schlichtungsverfahren"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Zivilverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "2.2.1. Streitige Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Ordentliches und vereinfachtes Zivilverfahren"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Zivilverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "2.2.1. Streitige Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Summarisches Verfahren"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Zivilverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "2.2.1. Streitige Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Revisionsverfahren"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Zivilverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "2.2.1. Streitige Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Rechtsmittelverfahren"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Zivilverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "2.2.1. Streitige Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Urteilserläuterung beziehungsweise -berichtigung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Zivilverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "2.2.2. Nichtstreitige Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Nichtstreitige Zivilsachen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Strafsachen"
+    }
+   ],
    "marginalie": [
     "Verfahren vor Zwangsmassnahmengericht"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Strafsachen"
+    }
+   ],
    "marginalie": [
     "Verfahren vor Einzel-, Bezirks- und Jugendgericht"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Strafsachen"
+    }
+   ],
    "marginalie": [
     "Verfahren vor Obergericht"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Strafsachen"
+    }
+   ],
    "marginalie": [
     "Verkürztes Verfahren"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Strafsachen"
+    }
+   ],
    "marginalie": [
     "Nachträgliche Entscheide"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Strafsachen"
+    }
+   ],
    "marginalie": [
     "Revisionsverfahren"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Strafsachen"
+    }
+   ],
    "marginalie": [
     "Pauschalgebühren in einfachen Fällen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gerichtsgebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Verwaltungssachen"
+    }
+   ],
    "marginalie": [
     "Gerichtliche Verwaltungsrechtspflege"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Verwaltungsgebühren"
+    }
+   ],
    "marginalie": [
     "Entscheide von Verwaltungsbehörden"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Verwaltungsgebühren"
+    }
+   ],
    "marginalie": [
     "Verschiedene Leistungen von Verwaltungsbehörden"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Verwaltungsgebühren"
+    }
+   ],
    "marginalie": [
     "Verkürztes Verfahren"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Benutzungsgebühren"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Benutzungsgebühren"
+    }
+   ],
    "marginalie": [
     "Verschiedene Benutzungsgebühren"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Benutzungsgebühren"
+    }
+   ],
    "marginalie": [
     "Nutzung von Geodaten"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Benutzungsgebühren"
+    }
+   ],
    "marginalie": [
     "Nutzung von Daten der amtlichen Vermessung"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Benutzungsgebühren"
+    }
+   ],
    "marginalie": [
     "Betrieb von Hafen- und Umschlagsanlagen"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsrecht"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]

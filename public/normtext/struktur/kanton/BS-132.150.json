@@ -1,100 +1,224 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Anwendungsbereich und Organisation"
+    }
+   ],
    "marginalie": [
     "Testbetrieb"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Anwendungsbereich und Organisation"
+    }
+   ],
    "marginalie": [
     "Zur elektronischen Stimmabgabe zugelassene Stimmberechtigte *"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Anwendungsbereich und Organisation"
+    }
+   ],
    "marginalie": [
     "Organisierende Behörde"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Anwendungsbereich und Organisation"
+    }
+   ],
    "marginalie": [
     "System zur elektronischen Stimmabgabe *"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Anwendungsbereich und Organisation"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abstimmungs- und Wahlunterlagen"
+    }
+   ],
    "marginalie": [
     "Zustellung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Bestimmung der Art der Stimmabgabe"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Elektronische Stimmabgabe"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Öffnung und Schliessung der elektronischen Urne"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Helpdesk"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherheit und Datenschutz"
+    }
+   ],
    "marginalie": [
     "Wahrung des Stimmgeheimnisses"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherheit und Datenschutz"
+    }
+   ],
    "marginalie": [
     "Kontrolle des Doppelstimmverbots"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherheit und Datenschutz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherheit und Datenschutz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherheit und Datenschutz"
+    }
+   ],
    "marginalie": [
     "Schlussprotokoll"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherheit und Datenschutz"
+    }
+   ],
    "marginalie": [
     "Löschung der Daten"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherheit und Datenschutz"
+    }
+   ],
    "marginalie": [
     "Subsidiär anwendbares Recht"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherheit und Datenschutz"
+    }
+   ],
    "marginalie": [
     "Weisungen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmung"
+    }
+   ],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Stimmabgabe"
+    }
+   ],
+   "marginalie": [
+    "Wahlkomitee"
    ]
   }
  }

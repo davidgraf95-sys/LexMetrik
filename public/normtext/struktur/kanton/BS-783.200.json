@@ -1,214 +1,527 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Entwässerungspläne"
+    }
+   ],
    "marginalie": [
     "1. Regionaler Entwässerungsplan (REP)"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Entwässerungspläne"
+    }
+   ],
    "marginalie": [
     "2. Generelle Entwässerungspläne (GEP)"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Gewässer"
+    }
+   ],
    "marginalie": [
     "1. Ökologische Aufwertung der Fliessgewässer"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Gewässer"
+    }
+   ],
    "marginalie": [
     "2. Einleitung und Versickerung von Abwasser *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Gewässer"
+    }
+   ],
    "marginalie": [
     "3. Bauliche Massnahmen in und an Gewässern"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Anlagen mit wassergefährdenden Flüssigkeiten"
+    }
+   ],
    "marginalie": [
     "1. Bewilligungs- und Meldepflicht"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Anlagen mit wassergefährdenden Flüssigkeiten"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Anlagen mit wassergefährdenden Flüssigkeiten"
+    }
+   ],
    "marginalie": [
     "3. Revisionsarbeiten *"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Kanalisationsbewilligung"
+    }
+   ],
    "marginalie": [
     "1. Bewilligungspflicht"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Kanalisationsbewilligung"
+    }
+   ],
    "marginalie": [
     "2. Kanalisationsbegehren"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Kanalisationsbewilligung"
+    }
+   ],
    "marginalie": [
     "3. Voraussetzungen der Bewilligung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Kanalisationsbewilligung"
+    }
+   ],
    "marginalie": [
     "4. Zuständigkeit"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Kanalisationsbewilligung"
+    }
+   ],
    "marginalie": [
     "5. Gültigkeit"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Bauausführung"
+    }
+   ],
    "marginalie": [
     "1. Zugelassene Unternehmen"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Bauausführung"
+    }
+   ],
    "marginalie": [
     "2. Überwachung"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Bauausführung"
+    }
+   ],
    "marginalie": [
     "3. Kontrollschacht"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Bauausführung"
+    }
+   ],
    "marginalie": [
     "4. Grundstückentwässerung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Bauausführung"
+    }
+   ],
    "marginalie": [
     "5. Inbetriebnahme der Abwasseranlagen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebäude- und Grundstückentwässerung"
+    },
+    {
+     "ebene": 2,
+     "label": "D.II. Bauausführung"
+    }
+   ],
    "marginalie": [
     "6. Unterhaltspflicht"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Kanalisationen"
+    }
+   ],
    "marginalie": [
     "1. Öffentliche Kanalisationen"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Kanalisationen"
+    }
+   ],
    "marginalie": [
     "2. Private Kanalisationen"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Abwasserreinigung"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Finanzierung"
+    },
+    {
+     "ebene": 2,
+     "label": "G.I. Kanalisationsbeiträge"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Finanzierung"
+    },
+    {
+     "ebene": 2,
+     "label": "G.II. Abwassergebühren"
+    }
+   ],
    "marginalie": [
     "1. Gebührenpflicht"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Finanzierung"
+    },
+    {
+     "ebene": 2,
+     "label": "G.II. Abwassergebühren"
+    }
+   ],
    "marginalie": [
     "2. Ermittlung der Wassermengen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Finanzierung"
+    },
+    {
+     "ebene": 2,
+     "label": "G.II. Abwassergebühren"
+    }
+   ],
    "marginalie": [
     "3. Ermittlung der versiegelten Flächen *"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Finanzierung"
+    },
+    {
+     "ebene": 2,
+     "label": "G.II. Abwassergebühren"
+    }
+   ],
    "marginalie": [
     "4. Meldepflicht"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Finanzierung"
+    },
+    {
+     "ebene": 2,
+     "label": "G.II. Abwassergebühren"
+    }
+   ],
    "marginalie": [
     "5. Beginn der Gebührenpflicht"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Vollzug"
+    },
+    {
+     "ebene": 2,
+     "label": "H.I. Zuständige Stellen"
+    }
+   ],
    "marginalie": [
     "1. Amt für Umwelt und Energie"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Vollzug"
+    },
+    {
+     "ebene": 2,
+     "label": "H.I. Zuständige Stellen"
+    }
+   ],
    "marginalie": [
     "3. Gemeinden *"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Vollzug"
+    },
+    {
+     "ebene": 2,
+     "label": "H.I. Zuständige Stellen"
+    }
+   ],
    "marginalie": [
     "3. Rheinschifffahrtsdirektion"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Vollzug"
+    },
+    {
+     "ebene": 2,
+     "label": "H.II. Verhinderung und Bekämpfung von Gewässerverunreinigungen"
+    }
+   ],
    "marginalie": [
     "1. Alarmierung"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Vollzug"
+    },
+    {
+     "ebene": 2,
+     "label": "H.II. Verhinderung und Bekämpfung von Gewässerverunreinigungen"
+    }
+   ],
    "marginalie": [
     "2. Gewässerschutz-Pikettdienst"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Vollzug"
+    },
+    {
+     "ebene": 2,
+     "label": "H.II. Verhinderung und Bekämpfung von Gewässerverunreinigungen"
+    }
+   ],
    "marginalie": [
     "3. Zwangsmassnahmen"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Vollzug"
+    },
+    {
+     "ebene": 2,
+     "label": "H.III. Rechtsmittel"
+    }
+   ],
    "marginalie": []
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "1. Änderung des Kanalisationsreglements Dreispitz [6]"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "2. Aufhebung bisherigen Rechts"
+   ]
+  },
+  "29_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Vollzug"
+    },
+    {
+     "ebene": 2,
+     "label": "H.I. Zuständige Stellen"
+    }
+   ],
+   "marginalie": [
+    "2. Tiefbauamt"
+   ]
+  },
+  "35_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H.bis Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Strafbestimmungen"
    ]
   }
  }

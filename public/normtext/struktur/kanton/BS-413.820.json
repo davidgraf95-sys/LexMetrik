@@ -1,129 +1,552 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gegenstand"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Maturitätsausweise und Abschlusszeugnisse"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anerkennung von allgemeinbildenden Vollzeit- und Teilzeitschulen als kantonale Maturitätsschulen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Oberaufsicht *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anforderungen an Lehrpersonen des Maturitätslehrgangs *"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Lehrpläne"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Maturitätsfächer"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
+   "marginalie": [
+    "Zulassung"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Prüfungsleitung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Maturitätsprogramm"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
+   "marginalie": [
+    "Examinatorinnen und Examinatoren"
+   ]
+  },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Expertinnen und Experten *"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
+   "marginalie": [
+    "Prüfungskorrektur und Notensetzung"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Prüfungsfächer *"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
+   "marginalie": [
+    "Prüfungsinhalte, Prüfungsgestaltung und Prüfungsbewertung"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Prüfungsart und Prüfungsdauer"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Maturitätsnote in der Maturaarbeit *"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Maturitätsnoten der Prüfungsfächer"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Maturitätsnoten der Nichtprüfungsfächer"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Validierung der Noten der Nichtprüfungsfächer und der Prüfungsfächer"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Maturitätskonferenz"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Unerlaubte Hilfsmittel und andere Unredlichkeit"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Fernbleiben und Rücktritt von den Maturitätsprüfungen"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Wiederholung der Maturitätsprüfungen"
    ]
   },
-  "40": {
-   "gliederung": [],
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Schweizer Schule São Paulo"
+    }
+   ],
    "marginalie": []
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Maturitätskurse für Berufstätige"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIIbis. Rekursverfahren"
+    }
+   ],
+   "marginalie": []
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Schluss- und Übergangsbestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "40_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Schluss- und Übergangsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung betreffend § 17 Abs. 1 und 4"
+   ]
+  },
+  "9_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
+   "marginalie": [
+    "Prüfungsvorbereitung"
+   ]
+  },
+  "9_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Maturitätsprüfung und Maturaarbeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Gymnasien Basel-Stadt"
+    }
+   ],
+   "marginalie": [
+    "Ressortgruppen, Ressortleitende und Fachkonferenzen *"
+   ]
   }
  }
 }

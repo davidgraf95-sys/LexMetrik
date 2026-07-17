@@ -1,36 +1,288 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
+   "marginalie": []
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
+   "marginalie": []
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Aus gesundheitlichen Gründen"
+    }
+   ],
+   "marginalie": []
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Aus gesundheitlichen Gründen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Aus gesundheitlichen Gründen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Aus gesundheitlichen Gründen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Aus familiären Gründen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Wegen Beanspruchung durch öffentliche Institutionen"
+    }
+   ],
+   "marginalie": []
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Zur Ausbildung für andere Lehrerberufe"
+    }
+   ],
+   "marginalie": []
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Zur Ausbildung für andere Lehrerberufe"
+    }
+   ],
+   "marginalie": []
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Zur Ausbildung für andere Lehrerberufe"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Zur Ausbildung für andere Lehrerberufe"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Fortbildung"
+    }
+   ],
+   "marginalie": []
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Fortbildung"
+    }
+   ],
+   "marginalie": []
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Für wissenschaftliche Arbeiten"
+    }
+   ],
+   "marginalie": []
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Für wissenschaftliche Arbeiten"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Urlaub"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Aus anderen Gründen"
+    }
+   ],
+   "marginalie": []
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausserordentliche Entlastung"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausserordentliche Entlastung"
+    }
+   ],
+   "marginalie": []
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Stellvertretung"
+    }
+   ],
+   "marginalie": []
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Stellvertretung"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

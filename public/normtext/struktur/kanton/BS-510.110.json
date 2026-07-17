@@ -1,113 +1,388 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
    "marginalie": [
     "Einvernahmebefugnisse ziviler Mitarbeitender der Kantonspolizei *"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
    "marginalie": [
     "Aufnahmebedingungen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
    "marginalie": [
     "Wohnsitzpflicht"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
    "marginalie": [
     "Pflichten ausser Dienst"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
    "marginalie": [
     "Probezeit und Lohnzahlung bei Entlassung oder Austritt aus der Grundausbildung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
    "marginalie": [
     "Erstattung der Ausbildungskosten"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Polizeiliche Massnahmen und polizeilicher Zwang"
+    }
+   ],
    "marginalie": [
     "Kennzeichnung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Polizeiliche Massnahmen und polizeilicher Zwang"
+    }
+   ],
    "marginalie": [
     "Vernichtung erkennungsdienstlicher Unterlagen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Polizeiliche Massnahmen und polizeilicher Zwang"
+    }
+   ],
    "marginalie": [
     "Einsatzmittel"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Polizeiliche Massnahmen und polizeilicher Zwang"
+    }
+   ],
    "marginalie": [
     "Sicherstellung von Tieren"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Polizeiliche Massnahmen und polizeilicher Zwang"
+    }
+   ],
    "marginalie": [
     "Publikation"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Rechte und Pflichten Privater"
+    }
+   ],
    "marginalie": [
     "Privatdetektivin/Privatdetektiv"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Rechte und Pflichten Privater"
+    }
+   ],
    "marginalie": [
     "Dienstleistungen im Sicherheitsbereich"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Rechte und Pflichten Privater"
+    }
+   ],
    "marginalie": [
     "Uniformen und ähnliche Erkennungszeichen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Rechte und Pflichten Privater"
+    }
+   ],
    "marginalie": [
     "Private Alarmanlagen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kostenersatz"
+    }
+   ],
    "marginalie": [
     "Grundsätze der Gebühren und des Kostenersatzes *"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
    ]
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Polizeiliche Massnahmen und polizeilicher Zwang"
+    }
+   ],
+   "marginalie": [
+    "Vorgaben für Beratungsstellen nach § 37d PolG"
+   ]
+  },
+  "10_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Polizeiliche Massnahmen und polizeilicher Zwang"
+    }
+   ],
+   "marginalie": [
+    "Datenbekanntgabe zum Schutz privater Rechte"
+   ]
+  },
+  "13_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Polizeiliche Massnahmen und polizeilicher Zwang"
+    }
+   ],
+   "marginalie": [
+    "Kaution"
+   ]
+  },
+  "17_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIIbis. Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Unterstützung Polizeivereine"
+   ]
+  },
+  "17_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kostenersatz"
+    }
+   ],
+   "marginalie": [
+    "Tarif für Polizeieinsätze"
+   ]
+  },
+  "18_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kostenersatz"
+    }
+   ],
+   "marginalie": [
+    "Verursachen eines Polizeieinsatzes"
+   ]
+  },
+  "18_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kostenersatz"
+    }
+   ],
+   "marginalie": [
+    "Alarmwesen"
+   ]
+  },
+  "18_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kostenersatz"
+    }
+   ],
+   "marginalie": [
+    "Bewilligungen"
+   ]
+  },
+  "18_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kostenersatz"
+    }
+   ],
+   "marginalie": [
+    "Polizeieinsätze anlässlich von Veranstaltungen"
+   ]
+  },
+  "18_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kostenersatz"
+    }
+   ],
+   "marginalie": [
+    "Betreibungswesen"
+   ]
+  },
+  "1_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "1_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben der Sicherheitsassistentinnen und Sicherheitsassistenten mit Fachrichtung Verkehr"
+   ]
+  },
+  "1_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben der bewaffneten Sicherheitsassistentinnen und Sicherheitsassistenten"
+   ]
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Dienstrecht"
+    }
+   ],
+   "marginalie": [
+    "Körperliche Leistungsfähigkeit"
+   ]
+  },
+  "8_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Ibis Grenzüberschreitender Polizeieinsatz"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

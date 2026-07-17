@@ -1,70 +1,345 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Geltungsbereich"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Umfang der Gebühr"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebühr für nicht zustandegekommene Geschäfte bzw. bei Absehen von Massnahmen *"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebührentragung"
+   ]
+  },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebührenverfügung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Fälligkeit, Verzugszins"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebührenbefreiung"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebührenerlass"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit für Gebührenerlass"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebühren für den Kanton"
+    }
+   ],
+   "marginalie": [
+    "Gebühren betreffend Namensänderungen, Adoptionen, internationaler Kindes- und Erwachsenenschutz"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebühren für den Kanton"
+    }
+   ],
+   "marginalie": [
+    "Notariatsgebühren"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebühren für den Kanton"
+    }
+   ],
+   "marginalie": [
+    "Erbschaftsgebühren"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebühren für den Kanton"
+    }
+   ],
+   "marginalie": [
+    "Grundbuchgebühren"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Gebühren für die Gemeinden; Entschädigung für Mandatsträgerinnen und Mandatsträger"
+    }
+   ],
+   "marginalie": [
+    "Gebühren im Erwachsenen- und Kindesschutzbereich"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Gebühren für die Gemeinden; Entschädigung für Mandatsträgerinnen und Mandatsträger"
+    }
+   ],
+   "marginalie": [
+    "Entschädigung für Mandatsführung"
+   ]
+  },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Gebühren für die Gemeinden; Entschädigung für Mandatsträgerinnen und Mandatsträger"
+    }
+   ],
    "marginalie": [
     "Fertigungs- und Katastergebühren"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Gebühren für die Gemeinden; Entschädigung für Mandatsträgerinnen und Mandatsträger"
+    }
+   ],
    "marginalie": [
     "Weitere Gebühren"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung der Verordnung über den Heimatschein"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung der Verordnung über die Einführung des Sperrfristbeschlusses"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechtes"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "16_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebühren für den Kanton"
+    }
+   ],
+   "marginalie": [
+    "Gebühren für Viehverpfändungen"
+   ]
+  },
+  "16_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebühren für den Kanton"
+    }
+   ],
+   "marginalie": [
+    "Gebühren für Handlungen gemäss Gesetz über die Einführung des Obligationenrechts (EG OR)"
+   ]
+  },
+  "17_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Gebühren für die Gemeinden; Entschädigung für Mandatsträgerinnen und Mandatsträger"
+    }
+   ],
+   "marginalie": [
+    "Gebührenverzicht"
+   ]
+  },
+  "17_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Gebühren für die Gemeinden; Entschädigung für Mandatsträgerinnen und Mandatsträger"
+    }
+   ],
+   "marginalie": [
+    "Indexierung"
+   ]
+  },
+  "25_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsregelung für die Änderung vom 14. Dezember 2010"
+   ]
+  },
+  "25_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsregelung für die Änderung vom 27. November 2012"
+   ]
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Bemessung der Aufwandgebühren"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebühren in ausserordentlich aufwändigen Fällen"
+   ]
+  },
+  "4_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vorbereitung durch Dritte"
+   ]
+  },
+  "4_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebührenreduktion bei Missverhältnis zum Geschäftswert"
    ]
   }
  }

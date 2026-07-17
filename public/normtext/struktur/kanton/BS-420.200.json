@@ -1,326 +1,806 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    }
+   ],
    "marginalie": [
     "Regierungsrat"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    }
+   ],
    "marginalie": [
     "Departement"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    }
+   ],
    "marginalie": [
     "Zusammenarbeit mit Organisationen der Arbeitswelt"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    }
+   ],
    "marginalie": [
     "Berufsbildungs- und Fachkommissionen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Qualitätsentwicklung"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Berufsberatung"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Berufsberatung"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Vorbereitung auf die berufliche Grundbildung"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Mindestalter für Lernende, Ausnahmen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Bildungsbewilligung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Entzug der Bildungsbewilligung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Höchstzahl der Lernenden"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Bildung und Weiterbildung der Berufsbildnerinnen und Berufsbildner"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Überbetriebliche Kurse und vergleichbare dritte Lernorte"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Berufliche Grundbildung von Behinderten"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Information und Mitsprache"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Anrechnung von Lernleistungen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Berufliche Grundbildung von Begabten"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Lehrvertrag"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Kostenregelung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Probezeit"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Änderung der Dauer der beruflichen Grundbildung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Kinder- und Jugendgesundheitsdienst [3]"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Unfallversicherung"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Lehraufsicht"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Zwischenprüfungen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Lehrvertragsauflösungen"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulische Bildung und Lehrwerkstätten"
+    }
+   ],
    "marginalie": [
     "Schulbesuch"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulische Bildung und Lehrwerkstätten"
+    }
+   ],
    "marginalie": [
     "Befreiung vom Unterricht"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulische Bildung und Lehrwerkstätten"
+    }
+   ],
    "marginalie": [
     "Berufsmaturitätsunterricht, Freikurse, Stützkurse"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulische Bildung und Lehrwerkstätten"
+    }
+   ],
    "marginalie": [
     "Lehrwerkstätten"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulische Bildung und Lehrwerkstätten"
+    }
+   ],
    "marginalie": [
     "Auswärtige Fachklassen"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulische Bildung und Lehrwerkstätten"
+    }
+   ],
    "marginalie": [
     "Private Anbieter"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Organisation"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Zulassung zu den Prüfungen"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Zeitpunkt der Prüfungen"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Unentgeltlichkeit"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Berufsattest und Fähigkeitszeugnis"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Grundbildung mit Berufsattest"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Nachholbildung, berufsorientierte Weiterbildung und höhere Berufsbildung"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Nachholbildung, berufsorientierte Weiterbildung und höhere Berufsbildung"
+    }
+   ],
    "marginalie": [
     "Höhere Berufsbildung"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Entwicklung der Berufsbildung"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Ausbildungs- und Staatsbeiträge"
+    }
+   ],
    "marginalie": [
     "Ausbildungsbeiträge"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Ausbildungs- und Staatsbeiträge"
+    }
+   ],
    "marginalie": [
     "Staatsbeiträge *"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Ausbildungs- und Staatsbeiträge"
+    }
+   ],
    "marginalie": [
     "Entschädigungen"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Ausbildungs- und Staatsbeiträge"
+    }
+   ],
    "marginalie": [
     "Berufsschulsport, Ferienlager, Freizeitsport für Lernende"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Zivilrechtliche Streitigkeiten"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Einsprache"
    ]
   },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "Rekurs"
+   ]
+  },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Strafbestimmungen *"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Interkantonale und regionale Zusammenarbeit"
+    }
+   ],
    "marginalie": [
     "Zusammenarbeit und Vollzug"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Interkantonale und regionale Zusammenarbeit"
+    }
+   ],
    "marginalie": [
     "Interkantonale Konferenzen"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung kantonaler Vorschriften"
    ]
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
+   ]
+  },
+  "40_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Lehrstellenförderung"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
+  "40_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Lehrstellenförderung"
+    }
+   ],
+   "marginalie": [
+    "Fachstelle"
+   ]
+  },
+  "40_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Lehrstellenförderung"
+    }
+   ],
+   "marginalie": [
+    "Fördermassnahmen"
+   ]
+  },
+  "40_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Lehrstellenförderung"
+    }
+   ],
+   "marginalie": [
+    "Zusammenarbeit"
+   ]
+  },
+  "40_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Lehrstellenförderung"
+    }
+   ],
+   "marginalie": [
+    "Berichterstattung"
    ]
   }
  }

@@ -1,136 +1,570 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendbares Recht"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Einteilung und Organisation des Grundbuchs"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Nummerierung der Parzellen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Strassen- und Allmendparzellen"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Anmerkungsgrundstücke"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundbuchanmeldung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Veröffentlichungen"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ausstellen von Schuldbriefen"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Begründung von Stockwerkeigentum vor Gebäudeerstellung oder Umbau"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Eintragung von Dienstbarkeiten und Grundlasten"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rangverhältnisse"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufbewahrung der Belege"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aushändigung entkräfteter Pfandtitel"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    }
+   ],
    "marginalie": [
     "Rechtswirkung des EDV-Grundbuchs"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    }
+   ],
    "marginalie": [
     "Auswertungen aus dem Datenbestand"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    }
+   ],
    "marginalie": [
     "Systemänderungen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    }
+   ],
    "marginalie": [
     "Datenbezug"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    }
+   ],
    "marginalie": [
     "Erweiterter Zugang *"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    }
+   ],
    "marginalie": [
     "Datensicherheit und Datenschutz"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    },
+    {
+     "ebene": 4,
+     "label": "D. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Datenübernahme"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    },
+    {
+     "ebene": 4,
+     "label": "D. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Berichtigung von Dienstbarkeiten bei der Überführung in das EDV Grundbuch"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    },
+    {
+     "ebene": 4,
+     "label": "D. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Altrechtliche Einträge"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    },
+    {
+     "ebene": 4,
+     "label": "D. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Einführung des eidgenössischen Grundbuchs"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    },
+    {
+     "ebene": 4,
+     "label": "D. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Grundbuchführung mit elektronischer Datenbankverarbeitung (EDV-Grundbuch)"
+    },
+    {
+     "ebene": 4,
+     "label": "D. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
+   ]
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Dienstbarkeitspläne"
+   ]
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeit"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Mangelhafte Anträge"
+   ]
+  },
+  "6_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Bereinigungsverfahren"
+   ]
+  },
+  "6_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "7_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Eigentumsangaben im Basler Adressbuch"
+   ]
+  },
+  "9_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Aufteilungspläne"
+   ]
+  },
+  "9_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Bewilligung gemäss § 8 Abs. 5 des Gesetzes über die Wohnraumförderung (Wohnraumfördergesetz, WRFG) vom 5. Juni 2013"
    ]
   }
  }

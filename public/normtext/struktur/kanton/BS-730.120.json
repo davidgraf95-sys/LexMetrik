@@ -1,98 +1,294 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "1. Zweck"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bemessungsregeln *"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Publikation der Baubegehren"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
    "marginalie": [
     "1. Baubegehren für Bauten und Anlagen mit bestimmten Erstellungskosten"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
+   "marginalie": [
+    "2. Baubegehren ohne bestimmte Erstellungskosten"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
    "marginalie": [
     "3. Baubegehren für Reklamen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
    "marginalie": [
     "4. Nichteintreten und Rückzug"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
    "marginalie": [
     "5. Abweisungen"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
+   "marginalie": [
+    "7. Vorentscheide aufgrund genereller Baubegehren"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
    "marginalie": [
     "8. Zuschläge"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
    "marginalie": [
     "9. Umweltverträglichkeitsprüfung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Prüfung der Baubegehren"
+    }
+   ],
    "marginalie": [
     "10. Expertisen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Kontrollen"
+    }
+   ],
    "marginalie": [
     "1. Kontrollen, Abnahmen und Freigaben im Bewilligungsverfahren"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Kontrollen"
+    }
+   ],
    "marginalie": [
     "2. Kontrollen im Meldeverfahren"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Kontrollen"
+    }
+   ],
    "marginalie": [
     "3. Nachkontrollen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Ergänzende Bestimmungen"
+    }
+   ],
    "marginalie": [
     "1. Baupolizeiliche Verfügungen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Ergänzende Bestimmungen"
+    }
+   ],
    "marginalie": [
     "2. Verzeigungen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Ergänzende Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verzugszins, Kanzlei-, Schreib- und Mahngebühren *"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Ergänzende Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "4. Ausleihe von Bauplänen"
    ]
   }
  }

@@ -1,224 +1,578 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)1. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Organisation"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)2. Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Öffentlich-rechtliche Körperschaften und Anstalten"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)2. Geltungsbereich"
+    }
+   ],
    "marginalie": [
     "Institutionen und Personen mit öffentlichen Aufgaben"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)2. Geltungsbereich"
+    }
+   ],
    "marginalie": [
     "Interkantonale Institutionen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben des Staatsarchivs"
+    }
+   ],
    "marginalie": [
     "Öffentlichkeit der Verwaltung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben des Staatsarchivs"
+    }
+   ],
    "marginalie": [
     "Dokumentationsmaterialien"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben des Staatsarchivs"
+    }
+   ],
    "marginalie": [
     "Einschränkung der Unveräusserlichkeit"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Staatsarchiv und Gemeindearchive"
+    }
+   ],
    "marginalie": [
     "Aufsicht"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Staatsarchiv und Gemeindearchive"
+    }
+   ],
    "marginalie": [
     "Archivgut der Gemeinden im Staatsarchiv"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)1. Begriffe"
+    }
+   ],
    "marginalie": [
     "Informationsträger"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)1. Begriffe"
+    }
+   ],
    "marginalie": [
     "Hilfsmittel"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)1. Begriffe"
+    }
+   ],
    "marginalie": [
     "Elektronische Systeme und digitale Unterlagen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Schaffung, Verwaltung und Aufbewahrung von Unterlagen"
+    }
+   ],
    "marginalie": [
     "Ordnung und Sicherung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Schaffung, Verwaltung und Aufbewahrung von Unterlagen"
+    }
+   ],
    "marginalie": [
     "Ordnungsübersicht und Registraturplan"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Schaffung, Verwaltung und Aufbewahrung von Unterlagen"
+    }
+   ],
    "marginalie": [
     "Verantwortliche Person"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Schaffung, Verwaltung und Aufbewahrung von Unterlagen"
+    }
+   ],
    "marginalie": [
     "Beratung durch das Staatsarchiv"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Schaffung, Verwaltung und Aufbewahrung von Unterlagen"
+    }
+   ],
    "marginalie": [
     "Aufbewahrung im Auftrag"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Schaffung, Verwaltung und Aufbewahrung von Unterlagen"
+    }
+   ],
    "marginalie": [
     "Archivierung unter Aufsicht"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)3. Unterlagen aus elektronischen Systemen"
+    }
+   ],
    "marginalie": [
     "Projektierung und Bewertung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)3. Unterlagen aus elektronischen Systemen"
+    }
+   ],
    "marginalie": [
     "Digitale oder analoge Überlieferung"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)4. Anbietung, Bewertung und Ablieferung"
+    }
+   ],
    "marginalie": [
     "Höchstfrist"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)4. Anbietung, Bewertung und Ablieferung"
+    }
+   ],
    "marginalie": [
     "Urkunden und Verträge"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)4. Anbietung, Bewertung und Ablieferung"
+    }
+   ],
    "marginalie": [
     "Bewertung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)4. Anbietung, Bewertung und Ablieferung"
+    }
+   ],
    "marginalie": [
     "Ablieferungsvereinbarung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Unterlagen bei den öffentlichen Organen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)4. Anbietung, Bewertung und Ablieferung"
+    }
+   ],
    "marginalie": [
     "Ablieferungsverzeichnis"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Grundsätze"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Einschränkung oder Ausschluss"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Verwaltungsaufwand"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Entgeltliche und unentgeltliche Leistungen des Staatsarchivs"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Ausschluss von der Benützung"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Belegexemplar"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)2. Schutzfristen"
+    }
+   ],
    "marginalie": [
     "Öffentlich zugängliche Unterlagen"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)2. Schutzfristen"
+    }
+   ],
    "marginalie": [
     "Fristen für Teile einer Archivalieneinheit"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)2. Schutzfristen"
+    }
+   ],
    "marginalie": [
     "Verlängerung"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)2. Schutzfristen"
+    }
+   ],
    "marginalie": [
     "Benützung vor Ablauf der Schutzfrist"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)2. Schutzfristen"
+    }
+   ],
    "marginalie": [
     "Anhören der abliefernden Stelle"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)3. Benützung durch öffentliche Organe"
+    }
+   ],
    "marginalie": [
     "Privilegierter Zugriff"
    ]
   },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)4. Rechte der betroffenen Person"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Benützung"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)4. Rechte der betroffenen Person"
+    }
+   ],
    "marginalie": [
     "Aufwand und Verfahren"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Aufhebung bestehenden Rechts"
+    }
+   ],
    "marginalie": []
   }
  }

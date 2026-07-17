@@ -1,314 +1,574 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Räumlicher Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Persönlicher Geltungsbereich"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Persönlicher Geltungsbereich im Rahmen der 24-Stunden-Betreuung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ausnahmen vom persönlichen Geltungsbereich"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Sachlicher Anwendungsbereich"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ergänzendes Recht"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aushändigung des Normalarbeitsvertrages"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geheimhaltungspflicht"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Arbeitssicherheit und Arbeitshygiene"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Schwangere Frauen und stillende Mütter"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Jugendliche"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Probezeit und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Probezeit"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Probezeit und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Kündigung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Probezeit und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Tod oder Heimeintritt der zu betreuenden Person im Rahmen der 24-Stunden-Betreuung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Probezeit und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Kündigung der Unterkunft"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Probezeit und Beendigung des Arbeitsverhältnisses"
+    }
+   ],
    "marginalie": [
     "Zeugnis"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Arbeitszeit"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Präsenzzeit"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Pausen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Arbeits- und Präsenzzeit sowie Pausen im Rahmen der 24-Stunden-Betreuung"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Ruhezeit"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Überstunden"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Überzeit"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Nachtarbeit"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Arbeitszeiterfassung"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Freie Tage"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Sonntage und gesetzliche Feiertage"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Ferien"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Ferienlohn"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Bezahlter Urlaub"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Mutterschaftsurlaub"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit, Freie Tage und Ferien"
+    }
+   ],
    "marginalie": [
     "Aus- und Weiterbildung"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Höhe des Lohnes"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Lohn für Präsenzzeit im Rahmen der 24-Stunden-Betreuung"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Weitere Lohnbestandteile und Ansprüche der Arbeitnehmenden"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Auslagen"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Lohnauszahlung und Lohnabrechnung"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Annahmeverzug der Arbeitgebenden"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Lohn bei unverschuldeter Arbeitsverhinderung"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Dienstaltersgeschenke"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Lohn"
+    }
+   ],
    "marginalie": [
     "Abgangsentschädigung"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherungen, Berufliche Vorsorge"
+    }
+   ],
    "marginalie": [
     "Sozialabzüge"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherungen, Berufliche Vorsorge"
+    }
+   ],
    "marginalie": [
     "Krankenversicherung im Rahmen der 24-Stunden-Betreuung"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherungen, Berufliche Vorsorge"
+    }
+   ],
    "marginalie": [
     "Krankentaggeldversicherung"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherungen, Berufliche Vorsorge"
+    }
+   ],
    "marginalie": [
     "Unfallversicherung"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherungen, Berufliche Vorsorge"
+    }
+   ],
    "marginalie": [
     "Mutterschaftsversicherung"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherungen, Berufliche Vorsorge"
+    }
+   ],
    "marginalie": [
     "Berufliche Vorsorge"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weisungsbefugnis und Haftung"
+    }
+   ],
    "marginalie": [
     "Weisungsbefugnis"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weisungsbefugnis und Haftung"
+    }
+   ],
    "marginalie": [
     "Haftung der Arbeitnehmenden"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Abweichungen, Streitigkeiten und Übergangsbestimmung"
+    }
+   ],
    "marginalie": [
     "Abweichungen"
    ]
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Abweichungen, Streitigkeiten und Übergangsbestimmung"
+    }
+   ],
    "marginalie": [
     "Streitigkeiten"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Abweichungen, Streitigkeiten und Übergangsbestimmung"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]

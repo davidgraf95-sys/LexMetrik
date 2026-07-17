@@ -1,136 +1,306 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Zweck und Geltungsbereich"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Zweck und Geltungsbereich"
+    }
+   ],
    "marginalie": [
     "Landgemeinden"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Baumschutzgebiete"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übrige Gebiete"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Einzelschutz"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Fällbewilligung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Generelle Fällbewilligung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Bauvorhaben"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Ersatz für erlaubterweise gefällte Bäume"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Ersatz für unerlaubterweise gefällte Bäume"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Förderung von Neupflanzungen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Schutz von Ersatzpflanzungen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Öffentliche Bauvorhaben"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutzbestimmungen"
+    }
+   ],
    "marginalie": [
     "Erhaltung der Lebensfähigkeit geschützter Bäume"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Beiträge und Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Beiträge"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Beiträge und Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vollzugsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Vollzugsbehörden"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vollzugsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufnahme des Baumbestandes"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vollzugsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Kontrollen"
    ]
   },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vollzugsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Baumschutzkommission"
+   ]
+  },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vollzugsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Ersatzvornahme"
    ]
   },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vollzugsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Öffentlich-rechtliche Grundlast"
+   ]
+  },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vollzugsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Strafbestimmung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vollzugsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Ausführungsbestimmungen"
    ]
   },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rechtsmittel"
+    }
+   ],
+   "marginalie": [
+    "Rekursrecht"
+   ]
+  },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]

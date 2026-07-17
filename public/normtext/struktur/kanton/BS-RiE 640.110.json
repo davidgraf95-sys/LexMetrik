@@ -1,98 +1,200 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendung kantonalen Rechts"
    ]
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Verfahren"
+    }
+   ],
    "marginalie": [
     "Datenbearbeitung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Verfahren"
+    }
+   ],
    "marginalie": [
     "Einsichtnahme in Akten und Informationen der kantonalen Steuerverwaltung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Verfahren"
+    }
+   ],
    "marginalie": [
     "Veranlagungsverfahren"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Verfahren"
+    }
+   ],
    "marginalie": [
     "Eigene Veranlagung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Anrechnung von Vorauszahlungen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Anrechnung der Quellensteuer"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Zinsausgleich"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Verzinsung von Vorauszahlungen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Zahlungserleichterungen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Mahnung und Mahngebühren"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "Fristerstreckungsgebühren"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Steuererlass"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Steuerbefreiung"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Steuerstrafrecht"
+    }
+   ],
    "marginalie": [
     "Bussen bei Steuerhinterziehung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Mahngebühren"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

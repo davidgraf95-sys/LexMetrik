@@ -1,98 +1,299 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Stipendien"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Darlehen"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechtigte"
+    }
+   ],
+   "marginalie": [
+    "Schweizer Bürgerinnen und Bürger"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechtigte"
+    }
+   ],
+   "marginalie": [
+    "Ausländerinnen und Ausländer"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Voraussetzung der Beitragsleistung"
+    }
+   ],
    "marginalie": [
     "Schülerinnen und Schüler"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Voraussetzung der Beitragsleistung"
+    }
+   ],
+   "marginalie": [
+    "Eignung"
+   ]
+  },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Voraussetzung der Beitragsleistung"
+    }
+   ],
    "marginalie": [
     "Finanzielle Verhältnisse"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Umfang der Beitragsleistung"
+    }
+   ],
    "marginalie": [
     "Höhe der Ausbildungsbeiträge"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Umfang der Beitragsleistung"
+    }
+   ],
    "marginalie": [
     "Dauer der Gewährung"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Umfang der Beitragsleistung"
+    }
+   ],
    "marginalie": [
     "Ort der Ausbildung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Umfang der Beitragsleistung"
+    }
+   ],
    "marginalie": [
     "Aufenthalte und Reisen im In- und Ausland"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeit"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
    "marginalie": [
     "Mittel"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
    "marginalie": [
     "Kommission für Ausbildungsbeiträge"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
    "marginalie": [
     "Amt für Ausbildungsbeiträge"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
    "marginalie": [
     "Aufgaben der Kommission für Ausbildungsbeiträge"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
    "marginalie": [
     "Beiträge zum Stipendienfonds"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben des Amtes für Ausbildungsbeiträge"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
    "marginalie": [
     "Pflichten des Beitragsbezügers"
    ]
   },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation und Vollzug"
+    }
+   ],
+   "marginalie": [
+    "Rekurs"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vollziehungsverordnung"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Änderung und Ausserkrafttreten bisheriger Gesetze"
+   ]
+  },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "24_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand"
+   ]
+  },
+  "5_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. A. …"
+    }
+   ],
+   "marginalie": [
+    "…"
    ]
   }
  }

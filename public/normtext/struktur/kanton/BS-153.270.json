@@ -1,214 +1,693 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 1. Bearbeiten von Personendaten im Auftrag (§ 7 IDG)"
+    }
+   ],
    "marginalie": [
     "Auftrag"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 2. Datenschutz-Folgeabschätzung und Vorabkonsultation (§§ 12a und 13 IDG)"
+    }
+   ],
    "marginalie": [
     "Hohes Risiko *"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 2. Datenschutz-Folgeabschätzung und Vorabkonsultation (§§ 12a und 13 IDG)"
+    }
+   ],
    "marginalie": [
     "Zeitpunkt und Durchführung der Vorabkonsultation *"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 2. Datenschutz-Folgeabschätzung und Vorabkonsultation (§§ 12a und 13 IDG)"
+    }
+   ],
    "marginalie": [
     "Dokumentation bei Vorhaben zur Bearbeitung von Personendaten *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 3. Videoüberwachung (§§ 17 und 18 IDG)"
+    }
+   ],
    "marginalie": [
     "Reglement"
    ]
   },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 3. Videoüberwachung (§§ 17 und 18 IDG)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 3. Videoüberwachung (§§ 17 und 18 IDG)"
+    }
+   ],
    "marginalie": [
     "Erkennbarkeit der Videoüberwachung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 3. Videoüberwachung (§§ 17 und 18 IDG)"
+    }
+   ],
    "marginalie": [
     "Vorabkonsultation vor der Inbetriebnahme eines Videoüberwachungssystems *"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 3. Videoüberwachung (§§ 17 und 18 IDG)"
+    }
+   ],
    "marginalie": [
     "Vorabkonsultation vor der Verlängerung eines Videoüberwachungsreglements *"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 4. Bekanntgabe von Personendaten zur Aufgabenerfüllung (§§ 21–23 IDG)"
+    },
+    {
+     "ebene": 3,
+     "label": "I. 4.2. Zu nicht personenbezogenen Zwecken und grenzüberschreitend"
+    }
+   ],
    "marginalie": [
     "Bekanntgabe von Personendaten für einen nicht personenbezogenen Zweck (§ 22 IDG)"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 4. Bekanntgabe von Personendaten zur Aufgabenerfüllung (§§ 21–23 IDG)"
+    },
+    {
+     "ebene": 3,
+     "label": "I. 4.2. Zu nicht personenbezogenen Zwecken und grenzüberschreitend"
+    }
+   ],
    "marginalie": [
     "Grenzüberschreitende Bekanntgabe von Personendaten (§ 23 IDG)"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsansprüche der betroffenen Personen"
+    }
+   ],
    "marginalie": [
     "Anspruch auf Berichtigung unrichtiger Personendaten (§ 27 Abs. 1 Bst. a IDG)"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsansprüche der betroffenen Personen"
+    }
+   ],
    "marginalie": [
     "Anspruch auf Unterlassung, Beseitigung oder Feststellung (§ 27 Abs. 1 Bst. b–d IDG)"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsansprüche der betroffenen Personen"
+    }
+   ],
    "marginalie": [
     "Sperrung der Bekanntgabe von Personendaten an Private (§ 28 IDG)"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 1. Aktive Informationstätigkeit"
+    }
+   ],
    "marginalie": [
     "Informationstätigkeit von Amtes wegen (§ 20 IDG)"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 1. Aktive Informationstätigkeit"
+    }
+   ],
    "marginalie": [
     "Verzeichnis der Verfahren, bei denen Personendaten bearbeitet werden (§ 24 IDG)"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 2. Reaktive Informationstätigkeit: Zugang zu Informationen"
+    }
+   ],
    "marginalie": [
     "Nicht fertig gestellte Aufzeichnungen (§ 25 IDG)"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 3. Klassifikation von Informationen"
+    }
+   ],
    "marginalie": [
     "Klassifizierung von schutzwürdigen Informationen *"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 3. Klassifikation von Informationen"
+    }
+   ],
    "marginalie": [
     "Geheime Informationen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 3. Klassifikation von Informationen"
+    }
+   ],
    "marginalie": [
     "Vertrauliche Informationen"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 3. Klassifikation von Informationen"
+    }
+   ],
    "marginalie": [
     "Befristung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 3. Klassifikation von Informationen"
+    }
+   ],
    "marginalie": [
     "Bearbeitungsvorschriften"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 4. Einschränkungen des Zugangs zu Informationen (§§ 29 und 30 IDG)"
+    }
+   ],
    "marginalie": [
     "Einschränkungen zum Schutz überwiegender privater Interessen, Anonymisierung (§ 29 Abs. 3 und § 30 IDG)"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 4. Einschränkungen des Zugangs zu Informationen (§§ 29 und 30 IDG)"
+    }
+   ],
    "marginalie": [
     "Einschränkung zum Schutz des Kollegialitätsprinzips"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 5. Zugang zu Informationen: Verfahren und Gebühren (§§ 31–36 IDG)"
+    }
+   ],
    "marginalie": [
     "Zugang zu den eigenen Personendaten (§ 31 Abs. 2 IDG)"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 5. Zugang zu Informationen: Verfahren und Gebühren (§§ 31–36 IDG)"
+    }
+   ],
    "marginalie": [
     "Stellungnahme zu einem Gesuch auf Zugang zu Informationen (§ 32 Abs. 2 IDG)"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 5. Zugang zu Informationen: Verfahren und Gebühren (§§ 31–36 IDG)"
+    }
+   ],
    "marginalie": [
     "Fristen; besondere Bedürfnisse der Medien (§ 35 IDG)"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 5. Zugang zu Informationen: Verfahren und Gebühren (§§ 31–36 IDG)"
+    }
+   ],
    "marginalie": [
     "Aufwändige Verfahren (§ 36 Abs. 2 Bst. a IDG)"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 5. Zugang zu Informationen: Verfahren und Gebühren (§§ 31–36 IDG)"
+    }
+   ],
    "marginalie": [
     "Reproduktion (§ 36 Abs. 2 Bst. b IDG)"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 6. Umsetzung des Öffentlichkeitsprinzips"
+    }
+   ],
    "marginalie": [
     "Zuständigkeiten"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Öffentlichkeitsprinzip"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 6. Umsetzung des Öffentlichkeitsprinzips"
+    }
+   ],
    "marginalie": [
     "Berichterstattung"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Aufsicht"
+    }
+   ],
    "marginalie": [
     "Kommunale Aufsichtsstelle (§ 43 IDG)"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Änderung und Aufhebung bisherigen Rechts"
+    }
+   ],
    "marginalie": [
     "Änderung bisherigen Rechts [4]"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Änderung und Aufhebung bisherigen Rechts"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
+   ]
+  },
+  "1_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 1a. Datenpools mit Personendaten (§§ 6 Abs. 2 und 9 IDG)"
+    }
+   ],
+   "marginalie": [
+    "Datenpools"
+   ]
+  },
+  "1_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 1a. Datenpools mit Personendaten (§§ 6 Abs. 2 und 9 IDG)"
+    }
+   ],
+   "marginalie": [
+    "Rechtliche Grundlagen"
+   ]
+  },
+  "1_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 1a. Datenpools mit Personendaten (§§ 6 Abs. 2 und 9 IDG)"
+    }
+   ],
+   "marginalie": [
+    "Auflösung"
+   ]
+  },
+  "1_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I.1b. Nachweis für die Einhaltung der Datenschutzbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Dokumentation"
+   ]
+  },
+  "35_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung vom 26. November 2024"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I.2a Informations- und Meldepflicht"
+    }
+   ],
+   "marginalie": [
+    "Umsetzung der Informationspflicht"
+   ]
+  },
+  "4_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I.2a Informations- und Meldepflicht"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen von der Informationspflicht"
+   ]
+  },
+  "4_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I.2b. Datenschutzberatung (§ 16b IDG)"
+    }
+   ],
+   "marginalie": [
+    "Datenschutzberaterinnen und -berater"
+   ]
+  },
+  "9_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 4. Bekanntgabe von Personendaten zur Aufgabenerfüllung (§§ 21–23 IDG)"
+    },
+    {
+     "ebene": 3,
+     "label": "I. 4.1. Mittels Abrufverfahren"
+    }
+   ],
+   "marginalie": [
+    "Abrufverfahren"
+   ]
+  },
+  "9_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 4. Bekanntgabe von Personendaten zur Aufgabenerfüllung (§§ 21–23 IDG)"
+    },
+    {
+     "ebene": 3,
+     "label": "I. 4.1. Mittels Abrufverfahren"
+    }
+   ],
+   "marginalie": [
+    "Autorisierung *"
+   ]
+  },
+  "9_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsätze für den Umgang mit Informationen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 4. Bekanntgabe von Personendaten zur Aufgabenerfüllung (§§ 21–23 IDG)"
+    },
+    {
+     "ebene": 3,
+     "label": "I. 4.1. Mittels Abrufverfahren"
+    }
+   ],
+   "marginalie": [
+    "Mustervorlagen"
    ]
   }
  }

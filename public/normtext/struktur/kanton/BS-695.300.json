@@ -1,62 +1,185 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Bauversicherung (Versicherung während der Bauzeit)"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Bauversicherung (Versicherung während der Bauzeit)"
+    }
+   ],
+   "marginalie": [
+    "Unterlagen"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Bauversicherung (Versicherung während der Bauzeit)"
+    }
+   ],
    "marginalie": [
     "Deckungsumfang"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Definitive Versicherung"
+    }
+   ],
    "marginalie": [
     "Übergang von Bauversicherung zur definitiven Versicherung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Definitive Versicherung"
+    }
+   ],
    "marginalie": [
     "Verfahren"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Definitive Versicherung"
+    }
+   ],
    "marginalie": [
     "Anwesenheit des Gebäudeeigentümers"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Definitive Versicherung"
+    }
+   ],
    "marginalie": [
     "Unterlagen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Definitive Versicherung"
+    }
+   ],
    "marginalie": [
     "Ermittlung des Abzuges für Alter und Abnützung"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Definitive Versicherung"
+    }
+   ],
+   "marginalie": [
+    "Schatzungsergebnisse"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ermittlung der Versicherungswerte"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Definitive Versicherung"
+    }
+   ],
    "marginalie": [
     "Teilweiser Abbruch"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Mit dem Gebäude zu versichernde Einrichtungen"
+    }
+   ],
    "marginalie": [
     "Versicherte Einrichtungen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Mit dem Gebäude zu versichernde Einrichtungen"
+    }
+   ],
    "marginalie": [
     "Ausschlüsse"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Mit dem Gebäude zu versichernde Einrichtungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]

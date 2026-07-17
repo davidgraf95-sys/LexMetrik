@@ -1,304 +1,939 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Geltungsbereich, Verhältnis zum Bundesrecht"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Das Enteignungsrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. I. Legitimation, Verleihung an Dritte"
+    }
+   ],
+   "marginalie": []
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Das Enteignungsrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. II. Zulässigkeit und Umfang der Enteignung"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Das Enteignungsrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. III. Enteignung öffentlicher Grundstücke"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Das Enteignungsrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. IV. Vorübergehende Enteignung"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Das Enteignungsrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. V. Bestandteile und Zugehör"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Das Enteignungsrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. VI. Ausdehnung der Enteignung"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Das Enteignungsrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. VII. Verzicht"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Das Enteignungsrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. VIII. Materielle Enteignung"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. I. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. II. Entschädigung durch Sachleistung"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. III. Bestandteile der Entschädigung"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. IV. Berechnung des Verkehrswertes"
+    }
+   ],
    "marginalie": [
     "1. Zeitpunkt"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. IV. Berechnung des Verkehrswertes"
+    }
+   ],
    "marginalie": [
     "2. Enteignungsbedingte Wertänderungen: Berücksichtigung besonderer Vorteile bei Teilenteignung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. IV. Berechnung des Verkehrswertes"
+    }
+   ],
    "marginalie": [
     "3. Minderwert wegen Belastungen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. V. Entschädigung von beschränkt dinglich und von persönlich Berechtigten"
+    }
+   ],
    "marginalie": [
     "1. Dienstbarkeiten und persönliche Rechte"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. V. Entschädigung von beschränkt dinglich und von persönlich Berechtigten"
+    }
+   ],
    "marginalie": [
     "2. Grundpfand- und Grundlastberechtigte"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Die Entschädigung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. V. Entschädigung von beschränkt dinglich und von persönlich Berechtigten"
+    }
+   ],
    "marginalie": [
     "3. Gefährdung von Grundpfand- und Grundlastrechten durch anderweitige Überbelastung des Grundstücks"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. I. Vorbereitende Handlungen"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. II. Einleitung des Verfahrens"
+    }
+   ],
    "marginalie": [
     "1. Begehren um Erlass des Enteignungsbeschlusses"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. II. Einleitung des Verfahrens"
+    }
+   ],
    "marginalie": [
     "2. Aussteckungen, Modelle, Profile"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. III. Planauflage"
+    }
+   ],
    "marginalie": [
     "1. Auflage und Publikation"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. III. Planauflage"
+    }
+   ],
    "marginalie": [
     "2. Obliegenheiten der Abtretungspflichtigen"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. III. Planauflage"
+    }
+   ],
    "marginalie": [
     "3. Nachträgliche Anmeldung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. III. Planauflage"
+    }
+   ],
    "marginalie": [
     "4. Abgekürztes Verfahren"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. IV. Enteignungsbann"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. V. Weiterer Gang des Verfahrens"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. VI. Einspracheentscheid und Enteignungsbeschluss; Rekurs"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. VII. Nachträgliche Enteignung"
+    }
+   ],
+   "marginalie": []
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Das Planauflageverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. VIII. Enteignung durch die Einwohnergemeinden Riehen und Bettingen und durch die Bürgergemeinde der Stadt Basel"
+    }
+   ],
    "marginalie": []
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. I. Die Expropriationskommission"
+    }
+   ],
    "marginalie": []
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. II. Grundsätze des Schätzungsverfahrens"
+    }
+   ],
    "marginalie": []
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. III. Einigungsverhandlung"
+    }
+   ],
    "marginalie": []
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. IV. Abschlagszahlungen"
+    }
+   ],
    "marginalie": []
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. V. Bestrittene Rechte"
+    }
+   ],
    "marginalie": []
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. VI. Verständigung ausserhalb des Schätzungsverfahrens"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. VII. Entscheid"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. VIII. Rekurs"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Das Schätzungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "5. IX. Vorzeitige Besitzeinweisung"
+    }
+   ],
    "marginalie": []
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Vollzug der Enteignung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. I. Fälligkeit der Entschädigung; Verzug"
+    }
+   ],
    "marginalie": []
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Vollzug der Enteignung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. II. Zahlung"
+    }
+   ],
    "marginalie": []
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Vollzug der Enteignung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. III. Wirkungen der Zahlung"
+    }
+   ],
    "marginalie": []
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Vollzug der Enteignung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. IV. Aufstellen des Verteilungsplanes"
+    }
+   ],
    "marginalie": []
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Vollzug der Enteignung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. V. Anfechtung des Verteilungplanes"
+    }
+   ],
    "marginalie": []
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Vollzug der Enteignung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. VI. Auszahlung"
+    }
+   ],
    "marginalie": []
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Vollzug der Enteignung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. VII. Grundbuch- und Titelbereinigung"
+    }
+   ],
    "marginalie": []
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Rückforderung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. I. Voraussetzungen"
+    }
+   ],
    "marginalie": []
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Rückforderung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. II. Berechtigte"
+    }
+   ],
    "marginalie": []
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Rückforderung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. III. Anzeige an den Berechtigten"
+    }
+   ],
    "marginalie": []
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Rückforderung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. IV. Verwirkung"
+    }
+   ],
    "marginalie": []
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Rückforderung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. V. Auszutauschende Leistungen"
+    }
+   ],
    "marginalie": []
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Rückforderung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. VI. Streitigkeiten; Vollzug"
+    }
+   ],
    "marginalie": []
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. I. Materielle Bestimmungen"
+    }
+   ],
    "marginalie": [
     "1. Begriff und Voraussetzungen der Impropriation"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. I. Materielle Bestimmungen"
+    }
+   ],
    "marginalie": [
     "2. Legitimation"
    ]
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. I. Materielle Bestimmungen"
+    }
+   ],
    "marginalie": [
     "3. Bemessung der Vergütung"
    ]
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. I. Materielle Bestimmungen"
+    }
+   ],
    "marginalie": [
     "4. Abwendung der Impropriation"
    ]
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. I. Materielle Bestimmungen"
+    }
+   ],
    "marginalie": [
     "5. Lastenbereinigung"
    ]
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. II. Verfahren"
+    }
+   ],
    "marginalie": [
     "1. Einleitung des Verfahrens"
    ]
   },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. II. Verfahren"
+    }
+   ],
    "marginalie": [
     "2. Planauflage und Anzeige an die Beteiligten"
    ]
   },
+  "60": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. II. Verfahren"
+    }
+   ],
+   "marginalie": [
+    "3. Obliegenheiten der Beteiligten"
+   ]
+  },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. II. Verfahren"
+    }
+   ],
    "marginalie": [
     "4. Weiterer Gang des Verfahrens"
    ]
   },
+  "62": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. III. Impropriation durch die Einwohnergemeinden Riehen und Bettingen"
+    }
+   ],
+   "marginalie": []
+  },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Die Impropriation"
+    },
+    {
+     "ebene": 2,
+     "label": "8. IV. Vollzug der Impropriation"
+    }
+   ],
    "marginalie": []
   },
   "64": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "9. I. Gebühren"
+    }
+   ],
    "marginalie": []
   },
   "65": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "9. II. Verlegung der Kosten"
+    }
+   ],
    "marginalie": []
   },
   "66": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "9. III. Rekurs"
+    }
+   ],
    "marginalie": []
   },
   "67": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Abschnitt: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "10. I. Aufgehobene und abgeänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "68": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Abschnitt: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "10. II. Vollzug"
+    }
+   ],
    "marginalie": []
   },
   "69": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Abschnitt: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "10. III. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

@@ -1,170 +1,542 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vollzug des Bundesgesetzes über die Krankenpflegeversicherung (KVG)"
+    }
+   ],
    "marginalie": [
     "Zuständige Departemente"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Förderung der Gesundheit"
+    }
+   ],
    "marginalie": [
     "Gemeinsame Institution"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
    "marginalie": [
     "Grundlagen zur Bedarfsermittlung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
    "marginalie": [
     "Spitalliste / Liste der Pflegeheime"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
    "marginalie": [
     "Betriebsvergleiche"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
    "marginalie": [
     "Statistiken"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
    "marginalie": [
     "Ausserkantonale Hospitalisation"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Eigenbeitrag der versicherten Person an die Kosten der stationären Pflege"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Tarifschutz"
+    }
+   ],
    "marginalie": [
     "Ausstand von Leistungserbringern"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Tarifschutz"
+    }
+   ],
    "marginalie": [
     "Sicherstellung der medizinischen Versorgung"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zusammenarbeit Krankenversicherer, Versicherungsobligatorium, Prämien- und Kostenausstände"
+    }
+   ],
    "marginalie": [
     "Zusammenarbeit mit den Krankenversicherern"
    ]
   },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zusammenarbeit Krankenversicherer, Versicherungsobligatorium, Prämien- und Kostenausstände"
+    }
+   ],
+   "marginalie": [
+    "Sicherstellung des Versicherungsobligatoriums gemäss KVG"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zusammenarbeit Krankenversicherer, Versicherungsobligatorium, Prämien- und Kostenausstände"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    }
+   ],
    "marginalie": [
     "Informationspflicht der Krankenversicherer"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Anspruchsentstehung und -berechnung"
+    }
+   ],
    "marginalie": [
     "Anspruchsvoraussetzungen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Anspruchsentstehung und -berechnung"
+    }
+   ],
    "marginalie": [
     "Anspruchsentstehung bei Zuzug aus einem anderen Kanton oder aus dem Ausland sowie bei Personen gemäss Art. 65a lit. a bis c KVG"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Anspruchsentstehung und -berechnung"
+    }
+   ],
    "marginalie": [
     "Anspruchsprüfung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Anspruchsentstehung und -berechnung"
+    }
+   ],
    "marginalie": [
     "Grundlage für die Anspruchsermittlung und -berechnung"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Anspruchsentstehung und -berechnung"
+    }
+   ],
    "marginalie": [
     "Kaufkraftbereinigung des anrechenbaren Einkommens von Personen mit Wohnsitz in der Europäischen Union, Island oder Norwegen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Anspruchsentstehung und -berechnung"
+    }
+   ],
    "marginalie": [
     "Rechtsmittel gegen Gebühr wegen Meldepflichtverletzung (§ 39 SoHaV)"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Massgebende Prämien / Leistungsgrenzen"
+    }
+   ],
    "marginalie": [
     "Massgebende Prämien"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Massgebende Prämien / Leistungsgrenzen"
+    }
+   ],
    "marginalie": [
     "Leistungsgrenzen und Prämienbeiträge"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Finanzierung der Beiträge an die Krankenversicherungsprämien / Subrogation"
+    }
+   ],
    "marginalie": [
     "Finanzierung durch Bund und Kanton"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Finanzierung der Beiträge an die Krankenversicherungsprämien / Subrogation"
+    }
+   ],
    "marginalie": [
     "Subrogation"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Auszahlung der Beiträge an die Krankenversicherungsprämien"
+    }
+   ],
    "marginalie": [
     "Auszahlung der Beiträge an die Krankenversicherungsprämien"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Auszahlung der Beiträge an die Krankenversicherungsprämien"
+    }
+   ],
    "marginalie": [
     "Meldung an die Krankenversicherer / Information der versicherten Personen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Auszahlung der Beiträge an die Krankenversicherungsprämien"
+    }
+   ],
    "marginalie": [
     "Auszahlungsmodus"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Vollzug"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung bisherigen Rechts"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
+   ]
+  },
+  "11_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zusammenarbeit Krankenversicherer, Versicherungsobligatorium, Prämien- und Kostenausstände"
+    }
+   ],
+   "marginalie": [
+    "Revision der Abrechnungen der Krankenversicherer nach Art. 64a KVG"
+   ]
+  },
+  "11_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zusammenarbeit Krankenversicherer, Versicherungsobligatorium, Prämien- und Kostenausstände"
+    }
+   ],
+   "marginalie": [
+    "Einem Verlustschein gleichzusetzende Rechtstitel"
+   ]
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zusammenarbeit Krankenversicherer, Versicherungsobligatorium, Prämien- und Kostenausstände"
+    }
+   ],
+   "marginalie": [
+    "Gebühr für die Prüfung von Befreiungsgesuchen von der Obligatorischen Krankenversicherung"
+   ]
+  },
+  "26_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Beiträge an die Krankenversicherungsprämien"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Auszahlung der Beiträge an die Krankenversicherungsprämien"
+    }
+   ],
+   "marginalie": [
+    "Meldungen der Krankenversicherer [19]"
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung von § 8d Abs. 1 Ziff. 4 vom 22. Oktober 2024"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Förderung ambulanter Untersuchungen und Behandlungen"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Kantonale Beiträge an die Spital- und Pflegeheimtaxen"
+   ]
+  },
+  "8_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Eigenbeitrag der versicherten Person an die Kosten der ambulanten Pflege"
+   ]
+  },
+  "8_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Kantonale Beiträge an die Kosten der ambulanten Pflege"
+   ]
+  },
+  "8_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Restfinanzierung durch den Kanton in Anwendung von Art. 25a Abs. 5 KVG"
+   ]
+  },
+  "8_d_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Taxe für Pension und Betreuung für Pflegeheime"
+   ]
+  },
+  "8_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeit für die Restfinanzierung (Art. 25a Abs. 5 KVG)"
+   ]
+  },
+  "8_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Spitäler und andere Einrichtungen"
+    }
+   ],
+   "marginalie": [
+    "Kantonale Beiträge an die Kosten für hauswirtschaftliche Leistungen"
    ]
   }
  }

@@ -1,340 +1,1113 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gegenstand, Geltungsbereich und Zweck"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.1. Regierungsrat"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.2. Departement"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.3. Gesundheitspolizeiliche Funktionsträgerinnen und Funktionsträger"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.4. Übertragung von Vollzugsaufgaben"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.5. Ethikkommission"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.1. Spitäler"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.2. Pflegeheime"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.3. Spitalexterne Gesundheits- und Krankenpflege"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.3. Spitalexterne Gesundheits- und Krankenpflege"
+    }
+   ],
    "marginalie": [
     "Beiträge an die Pflege zu Hause durch Angehörige oder Dritte"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.4. Zahnpflege"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.4. Zahnpflege"
+    }
+   ],
    "marginalie": [
     "Zahnkliniken"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.4. Zahnpflege"
+    }
+   ],
    "marginalie": [
     "Leistungen für Kinder und Jugendliche"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.5. Aufgaben und Kostenverteilung zwischen dem Kanton und den Einwohnergemeinden"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechte der Patientinnen und Patienten"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.1. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechte der Patientinnen und Patienten"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.2. Palliative Behandlung"
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechte der Patientinnen und Patienten"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.3. Besonderheiten bei Urteilsunfähigkeit"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechte der Patientinnen und Patienten"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.4. Behandlungsabbruch und -verzicht"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechte der Patientinnen und Patienten"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.5. Einwilligung bei Einbezug in die Ausbildung"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechte der Patientinnen und Patienten"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.6. Obduktion"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.1. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.2. Berufsausübung"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.3. Fachpersonen mit Bewilligung zur Berufsausübung"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Berufspflichten für universitäre Medizinalpersonen, Psychotherapeutinnen und Psychotherapeuten sowie Gesundheitsfachpersonen nach dem Bundesgesetz über die Gesundheitsberufe"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.5. Notfalldienst"
+    }
+   ],
    "marginalie": []
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.6. Schweigepflicht"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.6. Schweigepflicht"
+    }
+   ],
    "marginalie": [
     "Ausnahmen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.7. Meldepflicht"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Fachpersonen im Gesundheitswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "V.8. Dokumentation"
+    }
+   ],
    "marginalie": []
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.1. Bewilligung zur Berufsausübung"
+    }
+   ],
    "marginalie": [
     "Bewilligungspflicht"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.1. Bewilligung zur Berufsausübung"
+    }
+   ],
    "marginalie": [
     "Bewilligungsgesuch"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.1. Bewilligung zur Berufsausübung"
+    }
+   ],
    "marginalie": [
     "Bewilligungsvoraussetzungen"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.1. Bewilligung zur Berufsausübung"
+    }
+   ],
    "marginalie": [
     "Bewilligungsdauer"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.1. Bewilligung zur Berufsausübung"
+    }
+   ],
    "marginalie": [
     "Bewilligungsentzug"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.1. Bewilligung zur Berufsausübung"
+    }
+   ],
    "marginalie": [
     "Meldepflicht"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Allgemeine Voraussetzungen"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Besondere Voraussetzung Spitäler und Pflegeheime"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Besondere Voraussetzung spitalexterne Gesundheits- und Krankenpflege"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Besondere Voraussetzung ambulante Einrichtungen"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Besondere Voraussetzungen Geburtshäuser"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Besondere Voraussetzung medizinische Ferndienstleistungen"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Besondere Voraussetzung Apotheken, Drogerien, Augenoptik, medizinische Laboratorien und Rettungsdienste"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Fachpersonen *"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Bewilligungsgesuch"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Bewilligungsdauer"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Betriebe"
+    }
+   ],
    "marginalie": [
     "Bewilligungsentzug"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.3. Einschränkungen"
+    }
+   ],
    "marginalie": []
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.4. Nicht bewilligungspflichtige Tätigkeiten"
+    }
+   ],
    "marginalie": []
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Bewilligungspflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.5. Publikation"
+    }
+   ],
    "marginalie": []
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.1. Generalklausel"
+    }
+   ],
    "marginalie": []
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.2. Bekämpfung übertragbarer Krankheiten und Hygiene"
+    }
+   ],
    "marginalie": []
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.3. Inkonvenienzentschädigungen für Geburtshilfe und Wochenbettbetreuung"
+    }
+   ],
    "marginalie": []
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.4. Werbung"
+    }
+   ],
    "marginalie": []
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.5. Verbot der Selbstdispensation"
+    }
+   ],
    "marginalie": []
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.6. Verursacherprinzip"
+    }
+   ],
    "marginalie": []
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.7. Gesundheitsförderung und Prävention"
+    }
+   ],
    "marginalie": []
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.8. Missbrauch und Abhängigkeit"
+    }
+   ],
    "marginalie": []
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.9. Gesundheitsförderung und Prävention bei Kindern und Jugendlichen"
+    }
+   ],
    "marginalie": []
   },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.10. eHealth und Krebsregister"
+    }
+   ],
    "marginalie": [
     "eHealth-Pilotprojekte *"
    ]
   },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.10. eHealth und Krebsregister"
+    }
+   ],
    "marginalie": [
     "Krebsregister"
    ]
   },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.11. Auflagen und Bedingungen"
+    }
+   ],
    "marginalie": []
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Disziplinarmassnahmen und Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.1. Disziplinarmassnahmen"
+    }
+   ],
    "marginalie": []
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Disziplinarmassnahmen und Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.2. Strafbestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "64": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Disziplinarmassnahmen und Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.2. Strafbestimmungen"
+    }
+   ],
    "marginalie": [
     "Widerhandlungen in Betrieben"
    ]
   },
   "65": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vollzugsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "66": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Statistik und Bericht über die Gesundheit der Bevölkerung sowie die Prämienentwicklung"
+    },
+    {
+     "ebene": 2,
+     "label": "X.1. Statistik"
+    }
+   ],
    "marginalie": []
   },
   "67": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Statistik und Bericht über die Gesundheit der Bevölkerung sowie die Prämienentwicklung"
+    },
+    {
+     "ebene": 2,
+     "label": "X.2. Berichterstattung"
+    }
+   ],
    "marginalie": []
   },
   "68": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.1. Bestehende Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "69": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.2. Bestehende Bewilligungen"
+    }
+   ],
    "marginalie": []
   },
   "70": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.3. Aufhebung bisherigen Rechts"
+    }
+   ],
+   "marginalie": []
+  },
+  "49_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIbis. Zulassung von Leistungserbringern zur Tätigkeit zulasten der obligatorischen Krankenpflegeversicherung"
+    }
+   ],
+   "marginalie": [
+    "Zulassung"
+   ]
+  },
+  "49_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIbis. Zulassung von Leistungserbringern zur Tätigkeit zulasten der obligatorischen Krankenpflegeversicherung"
+    }
+   ],
+   "marginalie": [
+    "Beschränkung der Anzahl Ärztinnen und Ärzte, die im ambulanten Bereich Leistungen zulasten der obligatorischen Krankenpflegeversicherung erbringen"
+   ]
+  },
+  "51_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.2. Bekämpfung übertragbarer Krankheiten und Hygiene"
+    }
+   ],
+   "marginalie": []
+  },
+  "59_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.10. eHealth und Krebsregister"
+    }
+   ],
+   "marginalie": [
+    "Elektronisches Patientendossier"
+   ]
+  },
+  "60_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.10bis. Ausbildung im Bereich der Pflege"
+    }
+   ],
+   "marginalie": [
+    "Förderung der Ausbildung [4]"
+   ]
+  },
+  "60_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Weitere Vorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.10bis. Ausbildung im Bereich der Pflege"
+    }
+   ],
+   "marginalie": [
+    "Ausbildungspflicht [5]"
+   ]
+  },
+  "64_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Disziplinarmassnahmen und Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.2. Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Verkaufsverbot von Tabakwaren an Minderjährige"
+   ]
+  },
+  "64_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Disziplinarmassnahmen und Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.2. Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Plakatwerbung für Alkohol und Tabakwaren auf privatem Grund"
+   ]
+  },
+  "64_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Disziplinarmassnahmen und Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.2. Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Hygienische Missstände und Schädlingsbekämpfung"
+   ]
+  },
+  "69_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.2. Bestehende Bewilligungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "7_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Institutionen"
+    },
+    {
+     "ebene": 2,
+     "label": "III.1. Spitäler"
+    }
+   ],
    "marginalie": []
   }
  }

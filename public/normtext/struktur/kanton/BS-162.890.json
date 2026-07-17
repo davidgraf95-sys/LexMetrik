@@ -1,130 +1,343 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich (§ 1 Personalgesetz)"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.II. Entstehung des Arbeitsverhältnisses (§§ 8–11 Personalgesetz)"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Diensterfüllungspflicht"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Amtsgeheimnis"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Geschenke"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Mitsprache"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Beschwerderecht"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Ferien"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Dienstfreie Tage"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Urlaub, Bewilligungsinstanzen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.III. Rechte und Pflichten (§§ 12–26 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Dienst- und Arbeitskleidung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.IV. Haftung"
+    }
+   ],
    "marginalie": [
     "Haftbarkeit der Mitarbeiterinnen und Mitarbeiter"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.IV. Haftung"
+    }
+   ],
    "marginalie": [
     "Verjährung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.V. Beendigung des Arbeitsverhältnisses (§§ 27–39 Personalgesetz)"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.VI. Fürsorge"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Lohnbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B.I. Allgemeines (§§ 1–25 Lohngesetz)"
+    }
+   ],
    "marginalie": [
     "Einreihungskompetenz (§ 6 Lohngesetz)"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Lohnbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B.I. Allgemeines (§§ 1–25 Lohngesetz)"
+    }
+   ],
    "marginalie": [
     "Neueinreihung (§ 7 Lohngesetz)"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Lohnbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B.I. Allgemeines (§§ 1–25 Lohngesetz)"
+    }
+   ],
    "marginalie": [
     "Ausserordentliche Einreihung ad personam, Abweichung beim Stufenanstieg, Anerkennungsprämien, weitere Zulagen (§§ 9–11, 15 Lohngesetz)"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Lohnbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B.I. Allgemeines (§§ 1–25 Lohngesetz)"
+    }
+   ],
    "marginalie": [
     "Dienstwohnung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Lohnbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B.I. Allgemeines (§§ 1–25 Lohngesetz)"
+    }
+   ],
    "marginalie": [
     "Verpflegung in der Anstalt"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Lohnbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II. Übergangs- und Schlussbestimmungen (§§ 26–34 Lohngesetz und §§ 44–47 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Dienstaltersgeschenk (§ 31 Lohngesetz)"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Lohnbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II. Übergangs- und Schlussbestimmungen (§§ 26–34 Lohngesetz und §§ 44–47 Personalgesetz)"
+    }
+   ],
    "marginalie": [
     "Schlussbestimmung"
+   ]
+  },
+  "15_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Dienstverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "A.VI. Fürsorge"
+    }
+   ],
+   "marginalie": [
+    "Berufliche Vorsorge"
    ]
   }
  }

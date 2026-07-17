@@ -1,406 +1,2873 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Baureife (§§ 2ff. BPG)"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Zuständigkeit"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Baureife (§§ 2ff. BPG)"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Bodenordnungskommission"
+    },
+    {
+     "ebene": 4,
+     "label": "a) Aufgaben"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Baureife (§§ 2ff. BPG)"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Bodenordnungskommission"
+    },
+    {
+     "ebene": 4,
+     "label": "b) Organisation"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Baureife (§§ 2ff. BPG)"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Bodenordnungskommission"
+    },
+    {
+     "ebene": 4,
+     "label": "c) Wirkungen der Entscheide"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "I. Nutzungsverlagerungen (§ 9 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Vorragende Bauteile (§ 17 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Einfriedungen (§ 57 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(III.)1. Definition"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Einfriedungen (§ 57 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(III.)2. Höchsthöhe"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Einfriedungen (§ 57 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(III.)3. Verankerung"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Einfriedungen (§ 57 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(III.)4. Messung"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. Einfriedungen (§ 57 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(III.)5. Beschaffenheit"
+    }
+   ],
    "marginalie": []
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)1. Zuständigkeit"
+    },
+    {
+     "ebene": 5,
+     "label": "(IV.1.)a) Stadt- und Ortsbildkommission"
+    }
+   ],
+   "marginalie": [
+    "Stadtbildkommission"
+   ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)1. Zuständigkeit"
+    },
+    {
+     "ebene": 5,
+     "label": "(IV.1.)b) Denkmalschutz"
+    }
+   ],
    "marginalie": []
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)1. Zuständigkeit"
+    },
+    {
+     "ebene": 5,
+     "label": "(IV.1.)c) Abweichungen"
+    }
+   ],
+   "marginalie": [
+    "Abweichungen"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)2. Organisation des Stadt- und Ortsbildschutzes"
+    }
+   ],
+   "marginalie": [
+    "Stadtbildkommission"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)3. Entscheide und Stellungnahmen"
+    },
+    {
+     "ebene": 5,
+     "label": "(IV.3.)a) …"
+    }
+   ],
+   "marginalie": [
+    "Stadtbildkommission"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)3. Entscheide und Stellungnahmen"
+    },
+    {
+     "ebene": 5,
+     "label": "(IV.3.)b) …"
+    }
+   ],
+   "marginalie": [
+    "Denkmalschutz"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)4. Beschränkung von Fremdreklamen"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3.)I. Technische Normen"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3.)II. Behindertengerechtes Bauen (§ 62 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3.)III. Lüftung (§ 65 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3.)IV. Kennzeichnung der Gebäude (§ 76 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(3.IV.)1. Strassennamen"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3.)IV. Kennzeichnung der Gebäude (§ 76 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(3.IV.)2. Hausnummern"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(4.)1. Befristete Bewilligungen (§§ 79 und 82 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(4.)2. Ausnahmebewilligungen (§ 80 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.I.)1. Bewilligungspflichtige Bauten und Anlagen"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.I.2.)a) Meldepflichtige Bauten und Anlagen"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.I.2.)b) Ohne Bewilligung und Meldung zulässige Vorhaben"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.I.2.)c) Ausnahmen"
+    }
+   ],
+   "marginalie": []
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)II. Verfahrensarten"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.II.)1. Ordentliches Bewilligungsverfahren"
+    }
+   ],
+   "marginalie": []
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)II. Verfahrensarten"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.II.)2. Vereinfachtes Bewilligungsverfahren"
+    }
+   ],
    "marginalie": []
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)II. Verfahrensarten"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.II.)3. Generelles Baubegehren"
+    }
+   ],
    "marginalie": []
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)III. Zuständigkeit"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.III.)1. Bau- und Gastgewerbeinspektorat"
+    }
+   ],
+   "marginalie": []
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.A.)III. Zuständigkeit"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.A.III.)2. Abweichungen"
+    }
+   ],
    "marginalie": []
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)IV. Verfahrenskoordination"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.IV.)1. Koordinationspflicht"
+    }
+   ],
    "marginalie": []
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)IV. Verfahrenskoordination"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.IV.)2. Ausnahmen"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.)1. Fachliche Anforderungen"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.)2. Form"
+    }
+   ],
    "marginalie": []
   },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.)3. Ausfertigungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.4.)a) Zulassungs- und Prüfungsverfahren"
+    }
+   ],
    "marginalie": []
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.4.)b) Stellungnahmen mitwirkender Behörden"
+    }
+   ],
    "marginalie": []
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.4.)c) Bearbeitungsfristen"
+    }
+   ],
    "marginalie": [
     "*"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.4.)d) Fristüberschreitung"
+    }
+   ],
    "marginalie": []
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.4.)e) Sachverständige"
+    }
+   ],
    "marginalie": []
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.5.)a) Publikation"
+    }
+   ],
    "marginalie": []
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.5.)b) Hinweis im Gelände"
+    }
+   ],
    "marginalie": []
   },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.5.)c) Einsichtnahme"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.5.)d) Einsprachen"
+    }
+   ],
+   "marginalie": []
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.5.)e) Beschränkung der Einsprachen"
+    }
+   ],
    "marginalie": []
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.5.)f) Verspätete Einsprachen"
+    }
+   ],
    "marginalie": []
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)VI. Bauentscheid"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.VI.)1. Form und Inhalt"
+    }
+   ],
    "marginalie": []
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)VI. Bauentscheid"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.VI.)2. Einsprachebeantwortung"
+    }
+   ],
    "marginalie": []
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)VI. Bauentscheid"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.VI.)3. Geltungsdauer der Baubewilligung"
+    }
+   ],
+   "marginalie": []
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)VI. Bauentscheid"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.VI.)4. Erlöschen der Baubewilligung"
+    }
+   ],
    "marginalie": []
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)VI. Bauentscheid"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.VI.)5. Widerruf der Baubewilligung"
+    }
+   ],
    "marginalie": []
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)I. Bauausführung"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.I.)1. Baubeginn"
+    }
+   ],
    "marginalie": []
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)I. Bauausführung"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.I.)2. Verantwortliche Fachperson"
+    }
+   ],
    "marginalie": []
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)I. Bauausführung"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.I.)3. Anzeigen"
+    }
+   ],
    "marginalie": []
   },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)II. Abnahme und Freigabe"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.II.1.)a) Durch das Bau- und Gastgewerbeinspektorat"
+    }
+   ],
    "marginalie": []
   },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)II. Abnahme und Freigabe"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.II.1.)b) Durch mitwirkende Behörden"
+    }
+   ],
    "marginalie": []
   },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)II. Abnahme und Freigabe"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.II.1.)c) Ausnahmen"
+    }
+   ],
    "marginalie": []
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)II. Abnahme und Freigabe"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.II.)2. Fristen und Mängelbehebung"
+    }
+   ],
    "marginalie": []
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)II. Abnahme und Freigabe"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.II.)3. Freigabe"
+    }
+   ],
    "marginalie": []
   },
   "64": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)III. Abwehrmassnahmen"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.III.)1. Gefahr"
+    }
+   ],
+   "marginalie": []
+  },
+  "65": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)III. Abwehrmassnahmen"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.III.)2. Ausführung bewilligungspflichtiger Vorhaben ohne Bewilligung oder in Abweichung der Bewilligung"
+    }
+   ],
    "marginalie": []
   },
   "66": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)B. Bauaufsicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.B.)III. Abwehrmassnahmen"
+    },
+    {
+     "ebene": 5,
+     "label": "(5.B.III.)3. Zwangsmittel"
+    }
+   ],
    "marginalie": []
   },
   "67": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)C. Ausführungsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "68": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)D. Anmerkungen im Grundbuch und Führung im ÖREB-Kataster"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.D.)1. Anmerkungen"
+    }
+   ],
    "marginalie": []
   },
   "69": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)D. Anmerkungen im Grundbuch und Führung im ÖREB-Kataster"
+    },
+    {
+     "ebene": 4,
+     "label": "(5.D.)2. Führung im ÖREB-Kataster (§ 119 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "70": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.)1. …"
+    }
+   ],
    "marginalie": [
     "Zweck, Form und Inhalt des kantonalen Richtplans *"
    ]
   },
   "71": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.)2. Teilpläne"
+    }
+   ],
    "marginalie": [
     "Zuständigkeiten *"
    ]
   },
   "72": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.3.)a) …"
+    }
+   ],
    "marginalie": [
     "Begehren um Anpassung *"
    ]
   },
+  "73": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.3.)b) …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "74": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.)4. …"
+    }
+   ],
    "marginalie": [
     "Information und Mitwirkung der Bevölkerung *"
    ]
   },
+  "75": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.)5. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "76": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.)6. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "77": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.)7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "78": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)II. Weitere Richtpläne"
+    }
+   ],
    "marginalie": []
   },
   "79": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)B. Verfahren der Nutzungsplanung (§§ 109–118 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.B.)1. Einleitung"
+    }
+   ],
    "marginalie": []
   },
   "80": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)B. Verfahren der Nutzungsplanung (§§ 109–118 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.B.)2. Vorprüfung"
+    }
+   ],
    "marginalie": []
   },
   "81": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)I. Mehrwertabgaben (§§ 120ff. BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.I.)1. Berechnungsgrundlagen"
+    }
+   ],
    "marginalie": []
   },
   "82": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)I. Mehrwertabgaben (§§ 120ff. BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.I.)2. Festsetzung"
+    }
+   ],
    "marginalie": []
   },
   "83": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)I. Mehrwertabgaben (§§ 120ff. BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.I.)3. Zuständigkeit"
+    }
+   ],
    "marginalie": []
   },
   "84": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)I. Mehrwertabgaben (§§ 120ff. BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.I.)4. Zahlungstermin"
+    }
+   ],
    "marginalie": []
   },
   "85": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)I. Mehrwertabgaben (§§ 120ff. BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.I.)5. Bezug"
+    }
+   ],
+   "marginalie": []
+  },
+  "86": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)I. Mehrwertabgaben (§§ 120ff. BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.I.)6. Verwendung des Ertrags"
+    }
+   ],
    "marginalie": []
   },
   "87": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)II. Minderwertentschädigung (§§ 125f. BPG)"
+    }
+   ],
    "marginalie": []
   },
   "88": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)III. Heimschlag (§ 127 BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.III.)1. Zuständigkeit"
+    }
+   ],
    "marginalie": []
   },
   "89": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)III. Heimschlag (§ 127 BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.III.2.)a) Strassen und Wege"
+    }
+   ],
    "marginalie": []
   },
   "90": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)C. Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.C.)III. Heimschlag (§ 127 BPG)"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.C.III.2.)b) Grundstücke ausserhalb der Bauzonen"
+    }
+   ],
    "marginalie": []
   },
   "91": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)2. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)1. Gesuche um Verfahrenseinleitung (§ 129 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "92": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)2. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)2. Festsetzung des Gebietsabgrenzungsplans (§ 130 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "93": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)2. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)3. Umlegungsbann (§ 131 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "94": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)2. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)4. Kosten (§ 146 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "95": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)I. Kantonsstrassen (§ 154 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "96": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)II. Rechtserwerb und Impropriation (§ 158 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.3.II.)1. Landabtretungsbeschlüsse"
+    }
+   ],
    "marginalie": []
   },
   "97": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)II. Rechtserwerb und Impropriation (§ 158 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.3.II.)2. Verträge"
+    }
+   ],
    "marginalie": []
   },
   "98": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)III. Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.3.III.)1. Strassenbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.3.III.1.)a) Einheitssätze (§ 166 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "99": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)III. Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.3.III.)1. Strassenbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.3.III.1.)b) Verteilung des Ertrags"
+    }
+   ],
    "marginalie": []
   },
   "100": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)III. Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.3.III.)2. Zuständigkeit"
+    }
+   ],
    "marginalie": []
   },
   "101": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)III. Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.3.III.)3. Kanalisationsbeiträge und Abwassergebühren (§§ 166 und 174 BPG)"
+    }
+   ],
    "marginalie": []
   },
   "102": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)IV. Strassenunterhalt (§ 161 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.3.IV.)1. Beseitigung von Verunreinigungen"
+    }
+   ],
    "marginalie": []
   },
   "103": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)3. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.3.)IV. Strassenunterhalt (§ 161 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.3.IV.)2. Winterdienst für den Fussgängerverkehr"
+    }
+   ],
    "marginalie": []
   },
   "104": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil).I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(3.I.)1. Stadtbildkommission"
+    }
+   ],
    "marginalie": []
   },
   "105": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil).I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(3.I.)2. Vorzeitig entrichtete Beiträge (§ 182 BPG)"
+    }
+   ],
+   "marginalie": []
+  },
+  "106": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil).I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(3.I.)3. Altrechtliche Eintragungen und Anmerkungen im Grundbuch"
+    }
+   ],
    "marginalie": []
   },
   "107": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)II. Aufgehobene Erlasse"
+    }
+   ],
+   "marginalie": []
+  },
+  "108": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "109": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "110": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "111": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "112": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "113": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "114": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "115": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "116": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "117": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "118": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(3.Teil)III. Geänderte Erlasse"
+    }
+   ],
+   "marginalie": []
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)1. Zuständigkeit"
+    },
+    {
+     "ebene": 5,
+     "label": "(IV.1.)a) Stadt- und Ortsbildkommission"
+    }
+   ],
+   "marginalie": [
+    "Dorf- und Ortsbildkommission"
+   ]
+  },
+  "15_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)2. Organisation des Stadt- und Ortsbildschutzes"
+    }
+   ],
+   "marginalie": [
+    "Fachsekretariat der Stadtbildkommission"
+   ]
+  },
+  "15_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)2. Organisation des Stadt- und Ortsbildschutzes"
+    }
+   ],
+   "marginalie": [
+    "Dorf- bzw. Ortsbildkommission"
+   ]
+  },
+  "15_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)2. Organisation des Stadt- und Ortsbildschutzes"
+    }
+   ],
+   "marginalie": [
+    "Gemeinsame Bestimmung"
+   ]
+  },
+  "16_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)3. Entscheide und Stellungnahmen"
+    },
+    {
+     "ebene": 5,
+     "label": "(IV.3.)a) …"
+    }
+   ],
+   "marginalie": [
+    "Dorf- und Ortsbildkommission"
+   ]
+  },
+  "17_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. Gestaltung von Bauten und Anlagen (§ 58 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(IV.)3. Entscheide und Stellungnahmen"
+    },
+    {
+     "ebene": 5,
+     "label": "(IV.3.)b) …"
+    }
+   ],
+   "marginalie": [
+    "Gemeinsame Bestimmung"
+   ]
+  },
+  "38_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.)A. Baubewilligungsverfahren"
+    },
+    {
+     "ebene": 4,
+     "label": "(A.)V. Baubegehren"
+    },
+    {
+     "ebene": 5,
+     "label": "(A.V.)2. Form"
+    }
+   ],
+   "marginalie": [
+    "Dokumentation unterirdischer Anlagen"
+   ]
+  },
+  "74_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)A. Richtpläne (§ 94 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.A.)I. Der kantonale Richtplan"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.A.I.)4. …"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung und Berichterstattung"
+   ]
+  },
+  "80 a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)B. Verfahren der Nutzungsplanung (§§ 109–118 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.B.)3. Planungszonen"
+    }
+   ],
+   "marginalie": []
+  },
+  "80 b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)1. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)B. Verfahren der Nutzungsplanung (§§ 109–118 BPG)"
+    },
+    {
+     "ebene": 4,
+     "label": "(2.B.)4. Öffentlichkeit der Pläne"
+    }
+   ],
+   "marginalie": []
+  },
+  "94 a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)2. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "(2.)5. Ausnahmen von der Zugangspflicht (§ 152 Abs. 3 BPG)"
+    }
+   ],
    "marginalie": []
   }
  }

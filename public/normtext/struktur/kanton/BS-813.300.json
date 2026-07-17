@@ -1,174 +1,613 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)I. Geschäftsbereich des Einigungsamtes"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)I. Geschäftsbereich des Einigungsamtes"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)II. Kollektivstreitigkeiten"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)III. Aufgaben des Einigungsamtes"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)IV. Vermittlung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.IV.)A. Private Einigungsämter"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)IV. Vermittlung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.IV.)B. Anzeigepflicht der Parteien"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)IV. Vermittlung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.IV.)B. Anzeigepflicht der Parteien"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)IV. Vermittlung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.IV.)C. Vermittlung von Amtes wegen"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)IV. Vermittlung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.IV.)D. Kollektive Abmachungen, Hinterlegung beim Einigungsamt"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation des Einigungsamtes"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)I. Zusammensetzung des Einigungsamtes"
+    },
+    {
+     "ebene": 3,
+     "label": "(II.I.)A. Als Vermittlungsinstanz und Geschäftsleitung"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation des Einigungsamtes"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)I. Zusammensetzung des Einigungsamtes"
+    },
+    {
+     "ebene": 3,
+     "label": "(II.)B. Als ordentliches Schiedsgericht"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation des Einigungsamtes"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)I. Zusammensetzung des Einigungsamtes"
+    },
+    {
+     "ebene": 3,
+     "label": "(II.)C. Als ausserordentliches Schiedsgericht"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation des Einigungsamtes"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)I. Zusammensetzung des Einigungsamtes"
+    },
+    {
+     "ebene": 3,
+     "label": "(II.)D. Wahlvorschriften"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)I. Forderungen und Anerbietungen, Einreichung"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)II. Parteivertreter"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)II. Parteivertreter"
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)II. Parteivertreter"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)III. Feststellung des Tatbestandes"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)III. Feststellung des Tatbestandes"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)III. Feststellung des Tatbestandes"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)IV. Vermittlungsverfahren"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)V. Schiedsgerichtliches Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.V.)A. Einleitung"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)V. Schiedsgerichtliches Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.V.)B. Durchführung"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)V. Schiedsgerichtliches Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.V.)B. Durchführung"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)V. Schiedsgerichtliches Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.V.)B. Durchführung"
+    }
+   ],
    "marginalie": []
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)V. Schiedsgerichtliches Verfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.V.)C. Bemühungen für Annahme des Schiedsspruchs"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)VI. Zuwiderhandlungen gegen Vereinbarungen und Schiedssprüche"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)VII. Verhandlungen vor dem Einigungsamt"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)VIII. Beratungen und Beschlussfassungen des Einigungsamtes"
+    }
+   ],
    "marginalie": []
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)IX. Austritte"
+    }
+   ],
    "marginalie": []
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)X. Beschleunigung des Verfahrens"
+    }
+   ],
    "marginalie": [
     "Fristen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)XI. Veröffentlichungen"
+    }
+   ],
    "marginalie": [
     "Publikationsmittel"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)XII. Beschwerde"
+    }
+   ],
    "marginalie": [
     "Fristen"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verhandlungen und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)XIII. Vollziehungsverordnung"
+    }
+   ],
    "marginalie": [
     "Nähere Bestimmungen"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)I. Ordnungsbussen"
+    },
+    {
+     "ebene": 3,
+     "label": "(IV.I.)A. Bussenkompetenz"
+    }
+   ],
    "marginalie": [
     "1. Des Einigungsamtes"
    ]
   },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)I. Ordnungsbussen"
+    },
+    {
+     "ebene": 3,
+     "label": "(IV.I.)A. Bussenkompetenz"
+    }
+   ],
+   "marginalie": [
+    "2. Des Regierungsrates"
+   ]
+  },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)II. Überweisung mit Antrag wegen Ungehorsams gegen amtliche Verfügungen"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Strafbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)III. Beschwerde gegen Strafverfügungen"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Vollziehungs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)I. Vollziehungsverordnung"
+    }
+   ],
    "marginalie": []
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Vollziehungs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)II. Aufhebung bestehender Vorschriften"
+    }
+   ],
    "marginalie": []
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Vollziehungs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)III. Beginn der Wirksamkeit des Gesetzes"
+    }
+   ],
    "marginalie": []
   }
  }

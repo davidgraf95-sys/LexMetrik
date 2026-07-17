@@ -1,248 +1,537 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Voraussetzung der Gesundheit der Tiere"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Transport durch Fahrzeuge"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Pflicht der Verantwortlichen während der Sömmerung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufzeichnungspflicht für Tierarzneimittel"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Entsorgung der Tierkadaver"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltung der Tierschutzvorschriften"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Tierverkehrskontrolle"
+    }
+   ],
    "marginalie": [
     "Anwendung der Erlasse wie für den übrigen Tierverkehr"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Tierverkehrskontrolle"
+    },
+    {
+     "ebene": 2,
+     "label": "II.1. Aufgaben der bzw. des für den Sömmerungsbetrieb verantwortlichen Tierhalterin bzw. Tierhalters"
+    }
+   ],
    "marginalie": [
     "Bezeichnung und Aufgaben des Verantwortlichen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Tierverkehrskontrolle"
+    },
+    {
+     "ebene": 2,
+     "label": "II.1. Aufgaben der bzw. des für den Sömmerungsbetrieb verantwortlichen Tierhalterin bzw. Tierhalters"
+    }
+   ],
    "marginalie": [
     "Ende der Sömmerung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Tierverkehrskontrolle"
+    },
+    {
+     "ebene": 2,
+     "label": "II.2. Begleitdokument/Tierliste"
+    }
+   ],
    "marginalie": [
     "Begleitdokument"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Tierverkehrskontrolle"
+    },
+    {
+     "ebene": 2,
+     "label": "II.2. Begleitdokument/Tierliste"
+    }
+   ],
    "marginalie": [
     "Tierliste"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Tierverkehrskontrolle"
+    },
+    {
+     "ebene": 2,
+     "label": "II.3. Melden von Tierbewegungen von Tieren der Rindergattung an die Tierverkehrsdatenbank"
+    }
+   ],
    "marginalie": [
     "Meldung an die Tierverkehrsdatenbank"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Tiere der Rindergattung"
+    }
+   ],
    "marginalie": [
     "Rauschbrand"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Tiere der Rindergattung"
+    }
+   ],
    "marginalie": [
     "Dassellarven"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Tiere der Rindergattung"
+    }
+   ],
    "marginalie": [
     "Aborte"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Tiere der Rindergattung"
+    }
+   ],
    "marginalie": [
     "BVD"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Schafe"
+    }
+   ],
    "marginalie": [
     "Räude"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Schafe"
+    }
+   ],
    "marginalie": [
     "Moderhinke (Klauenfäule)"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Schafe"
+    }
+   ],
    "marginalie": [
     "Infektiöse Augenentzündung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Schafe"
+    }
+   ],
    "marginalie": [
     "Aborte"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ziegen"
+    }
+   ],
    "marginalie": [
     "Caprine Arthritis-Encephalitis (CAE)"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ziegen"
+    }
+   ],
    "marginalie": [
     "Abort"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.1. Massnahmen in der Schweiz vor Antritt der Sömmerung"
+    }
+   ],
    "marginalie": [
     "Amtstierärztliche Untersuchung und Gesundheitszeugnis"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.1. Massnahmen in der Schweiz vor Antritt der Sömmerung"
+    }
+   ],
    "marginalie": [
     "Inhalt des Gesundheitszeugnisses"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.1. Massnahmen in der Schweiz vor Antritt der Sömmerung"
+    }
+   ],
    "marginalie": [
     "Schriftliche Vereinbarung zwischen Tierhalter und dem kantonalen Veterinäramt Basel-Stadt"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.1. Massnahmen in der Schweiz vor Antritt der Sömmerung"
+    }
+   ],
    "marginalie": [
     "Meldung des Abganges der Tiere"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.1. Massnahmen in der Schweiz vor Antritt der Sömmerung"
+    }
+   ],
    "marginalie": [
     "Zolltechnische Kontrolle und Kontrollgebühren"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.1. Massnahmen in der Schweiz vor Antritt der Sömmerung"
+    }
+   ],
    "marginalie": [
     "Tagesweidegang"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.2. Massnahmen am Bestimmungsort im Ausland"
+    }
+   ],
    "marginalie": [
     "Vermeidung von Kontakt zu ausländischen Herden"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.2. Massnahmen am Bestimmungsort im Ausland"
+    }
+   ],
    "marginalie": [
     "Amtstierärztliche Untersuchung am Bestimmungsort"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.2. Massnahmen am Bestimmungsort im Ausland"
+    }
+   ],
    "marginalie": [
     "Aufnahme in die nationale Tierverkehrsdatenbank des Sömmerungslandes"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.2. Massnahmen am Bestimmungsort im Ausland"
+    }
+   ],
    "marginalie": [
     "Gesundheitsbescheinigung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.2. Massnahmen am Bestimmungsort im Ausland"
+    }
+   ],
    "marginalie": [
     "Meldung der Rückkehr der Tiere"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.2. Massnahmen am Bestimmungsort im Ausland"
+    }
+   ],
    "marginalie": [
     "Tagesweidegang"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.3. Massnahmen in der Schweiz nach Rückkehr der Tiere"
+    }
+   ],
    "marginalie": [
     "Kontrolle der ausländischen Gesundheitsbescheinigung"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.3. Massnahmen in der Schweiz nach Rückkehr der Tiere"
+    }
+   ],
    "marginalie": [
     "Zugang von Tieren"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.3. Massnahmen in der Schweiz nach Rückkehr der Tiere"
+    }
+   ],
    "marginalie": [
     "Keine amtstierärztliche Überwachung nach der Rückkehr von der Sömmerung"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sömmerungsvorschriften für den Grenzweidegang"
+    },
+    {
+     "ebene": 2,
+     "label": "V.I.4. Begleitdokument nach Art. 12 TSV"
+    }
+   ],
    "marginalie": [
     "Geltung des amtstierärztlichen Gesundheitszeugnisses als Begleitdokument"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Strafbestimmungen"
+    }
+   ],
    "marginalie": [
     "Haft oder Busse"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Publikation und Wirksamkeit"
    ]

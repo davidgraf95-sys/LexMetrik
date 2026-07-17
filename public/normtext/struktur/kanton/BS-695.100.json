@@ -1,212 +1,420 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gebäudeversicherung des Kantons Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Rechtsstellung"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gebäudeversicherung des Kantons Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Organisation"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Versicherungspflicht"
+    }
+   ],
    "marginalie": [
     "Versicherungspflicht"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Versicherungspflicht"
+    }
+   ],
    "marginalie": [
     "Beginn und Erlöschen der Versicherung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
    "marginalie": [
     "Ausnahme"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
    "marginalie": [
     "Ermittlung der Versicherungswerte"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
    "marginalie": [
     "Änderungen der Baukosten"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Prämien"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung"
+    }
+   ],
    "marginalie": [
     "Teilprämie"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung"
+    }
+   ],
    "marginalie": [
     "Ausschluss"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung"
+    }
+   ],
    "marginalie": [
     "Gefahrenänderung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung"
+    }
+   ],
    "marginalie": [
     "Leistung und Sicherung der Prämien"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung"
+    }
+   ],
    "marginalie": [
     "Rechtsöffnung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rückversicherung und Reservefonds"
+    }
+   ],
    "marginalie": [
     "Rückversicherung"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rückversicherung und Reservefonds"
+    }
+   ],
    "marginalie": [
     "Reservefonds"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherte Gefahren"
+    }
+   ],
    "marginalie": [
     "Feuerversicherung"
    ]
   },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherte Gefahren"
+    }
+   ],
+   "marginalie": [
+    "Elementarschadenversicherung"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherte Gefahren"
+    }
+   ],
+   "marginalie": [
+    "Ausschlüsse"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Bemessung der Leistungen"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Unvollendete Gebäude"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Abbruchobjekte"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Nebenleistungen"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Nichtwiederherstellung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Verwirkung oder Kürzung der Entschädigung"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Rückgriff"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Verfahren im Schadenfall"
+    }
+   ],
    "marginalie": [
     "Schadenmeldung und Verwirkung"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Verfahren im Schadenfall"
+    }
+   ],
    "marginalie": [
     "Rettungspflicht"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Verfahren im Schadenfall"
+    }
+   ],
    "marginalie": [
     "Einsichtnahme in Untersuchungsakten"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Verfahren im Schadenfall"
+    }
+   ],
    "marginalie": [
     "Schadenermittlung"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Verfahren im Schadenfall"
+    }
+   ],
    "marginalie": [
     "Ablehnungsgründe"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Recht der Grundpfandgläubiger"
+    }
+   ],
    "marginalie": [
     "Recht der Grundpfandgläubiger"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Schadenverhütung und Schadenbekämpfung"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Rechtsmittel"
+    }
+   ],
    "marginalie": [
     "Rekurse *"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XII. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Verhältnis zum bisherigen Recht"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XII. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung des Gesetzes betreffend Organisation und Geschäftsordnung des Regierungsrates des Kantons Basel-Stadt [2]"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XII. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung des bisherigen Rechts"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XII. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]

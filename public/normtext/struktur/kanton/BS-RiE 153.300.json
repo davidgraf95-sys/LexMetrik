@@ -1,128 +1,233 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Gegenstand"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zweck der Informationssicherheit"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Umgang mit Informationen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Umgang mit Informatiksystemen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Gemeinderat"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Verwaltungsleiterin oder Verwaltungsleiter"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Generalsekretariat, Abteilungen, Fachbereiche"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Leitung Informatikbetrieb"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Informationssicherheitsbeauftragte oder Informationssicherheitsbeauftragter"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Eignerinnen und Eigner, Anwendungsverantwortliche"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sicherheitsprozesse"
+    }
+   ],
    "marginalie": [
     "Schutzkatalog und Schutzbedarfsanalyse"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sicherheitsprozesse"
+    }
+   ],
    "marginalie": [
     "Schutzobjektinventar"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sicherheitsprozesse"
+    }
+   ],
    "marginalie": [
     "Risikoregister Informationssicherheit"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sicherheitsprozesse"
+    }
+   ],
    "marginalie": [
     "Massnahmenpläne"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sicherheitsprozesse"
+    }
+   ],
    "marginalie": [
     "Zugriffs-, Berechtigungs-, Aufbewahrungs- und Löschkonzept"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sicherheitsprozesse"
+    }
+   ],
    "marginalie": [
     "Nichteinhalten von Sicherheitsmassnahmen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sicherheitsprozesse"
+    }
+   ],
    "marginalie": [
     "Sicherheitsvorfälle"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherstellung des Geschäftsbetriebs und Berichterstattung"
+    }
+   ],
    "marginalie": [
     "Notfallkonzepte"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sicherstellung des Geschäftsbetriebs und Berichterstattung"
+    }
+   ],
    "marginalie": [
     "Berichterstattung zur Informationssicherheit"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

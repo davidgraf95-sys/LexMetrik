@@ -1,230 +1,535 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Anwendbares Recht"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Planung und Umsetzung (Art. 31 GeoIG und Art. 3 VAV)"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Grundbuch- und Vermessungsamt (Art. 42 Abs. 1, Art. 43, Art. 44 VAV und § 20 KGeoIG)"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Abgeltungen durch den Bund (Art. 48 Abs. 2 VAV)"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Plan für das Grundbuch und offizieller Stadtplan"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Anzeige von Vermessungsarbeiten (Art. 20 und 21 GeoIG)"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Kantonale Mehranforderungen und Ergänzungen (Art. 7 Abs. 3 und Art. 10 VAV)"
+    }
+   ],
    "marginalie": [
     "Kantonale Ergänzungen der amtlichen Vermessung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Kantonale Mehranforderungen und Ergänzungen (Art. 7 Abs. 3 und Art. 10 VAV)"
+    }
+   ],
    "marginalie": [
     "Verzicht auf die Höhenbestimmung der Vermessungsfixpunkte (Art. 10 VAV)"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Kantonale Mehranforderungen und Ergänzungen (Art. 7 Abs. 3 und Art. 10 VAV)"
+    }
+   ],
    "marginalie": [
     "Material der Vermessungsfixpunkte"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Kantonale Mehranforderungen und Ergänzungen (Art. 7 Abs. 3 und Art. 10 VAV)"
+    }
+   ],
    "marginalie": [
     "Weitere Vermessungsaufgaben (Art. 20 KGeoIG)"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Kantonale Mehranforderungen und Ergänzungen (Art. 7 Abs. 3 und Art. 10 VAV)"
+    }
+   ],
    "marginalie": [
     "Genauigkeitsanforderungen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Grenzfeststellung"
+    }
+   ],
    "marginalie": [
     "Verfahren (Art. 13 VAV)"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Grenzfeststellung"
+    }
+   ],
    "marginalie": [
     "Verlegung von Kantons- und Gemeindegrenzen"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Anbringen von Grenzzeichen"
+    }
+   ],
    "marginalie": [
     "Lage der Grenzzeichen (Art. 12 VAV und § 20 KGeoIG)"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Anbringen von Grenzzeichen"
+    }
+   ],
    "marginalie": [
     "Material der Grenzzeichen (Art. 12 VAV)"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Anbringen von Grenzzeichen"
+    }
+   ],
    "marginalie": [
     "Verzicht auf Grenzzeichen (Art. 17 Abs. 2 VAV)"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Anbringen von Grenzzeichen"
+    }
+   ],
    "marginalie": [
     "Vorübergehender Verzicht auf Grenzzeichen (Art. 16 Abs. 2 VAV)"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Anbringen von Grenzzeichen"
+    }
+   ],
    "marginalie": [
     "Mitwirkung der Behörden bei der Bereinigung von Hoheitsgrenzen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "V. Vermarkungskosten"
+    }
+   ],
    "marginalie": [
     "Anteilsmässige Kostenpflicht"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Vermarkung"
+    },
+    {
+     "ebene": 2,
+     "label": "V. Vermarkungskosten"
+    }
+   ],
    "marginalie": [
     "Kostenübernahme bei Staatsliegenschaften und Allmend"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Erneuerung"
+    },
+    {
+     "ebene": 2,
+     "label": "VI. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufgaben des Grundbuch- und Vermessungsamtes"
    ]
   },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Erneuerung"
+    },
+    {
+     "ebene": 2,
+     "label": "VII. Flächenmasse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Erneuerung"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII. Öffentliche Auflage"
+    }
+   ],
    "marginalie": [
     "Auflageverfahren (Art. 28 VAV)"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Erneuerung"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. Genehmigung Vermessungswerke"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit, Akten (Art. 29 Abs. 1 VAV)"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Erneuerung"
+    },
+    {
+     "ebene": 2,
+     "label": "X. Gebiete mit dauernden Bodenverschiebungen"
+    }
+   ],
    "marginalie": [
     "Feststellungsverfügung, Anmerkung im Grundbuch, Verfahren (Art. 660a und 660b ZGB, § 180a EG ZGB)"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Nachführung"
+    }
+   ],
    "marginalie": [
     "Auftrag des Grundbuch- und Vermessungsamts (Art. 22 bis 24 VAV)"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Nachführung"
+    }
+   ],
    "marginalie": [
     "Meldewesen für die laufende Nachführung (Art. 23 Abs. 2 VAV)"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Nachführung"
+    }
+   ],
    "marginalie": [
     "Fristen für die Nachführung (Art. 23 und 24 VAV)"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Nachführung"
+    }
+   ],
    "marginalie": [
     "Nachführung und Grundbuch (Art. 25 VAV)"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Unterhalt (Art. 31 Abs. 1 VAV)"
+    }
+   ],
    "marginalie": [
     "Bestand der Vermessung und Strafbestimmungen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Unterhalt (Art. 31 Abs. 1 VAV)"
+    }
+   ],
    "marginalie": [
     "Lage- und Höhenfixpunkte, Hoheitsgrenzen (Art. 86 TVAV)"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Unterhalt (Art. 31 Abs. 1 VAV)"
+    }
+   ],
    "marginalie": [
     "Grenzzeichen (§ 52 VO EG ZGB)"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Unterhalt (Art. 31 Abs. 1 VAV)"
+    }
+   ],
    "marginalie": [
     "Bauarbeiten"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Unterhalt (Art. 31 Abs. 1 VAV)"
+    }
+   ],
    "marginalie": [
     "Daten, Akten und Verzeichnisse (Art. 85 und 87 TVAV)"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Unterhalt (Art. 31 Abs. 1 VAV)"
+    }
+   ],
    "marginalie": [
     "Archivierung (Art. 88 TVAV)"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Kantonale Nomenklaturkommission"
+    }
+   ],
    "marginalie": [
     "Mitglieder"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Kantonale Nomenklaturkommission"
+    }
+   ],
    "marginalie": [
     "Sekretariat"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Kantonale Nomenklaturkommission"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]

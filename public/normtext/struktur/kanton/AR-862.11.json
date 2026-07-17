@@ -1,0 +1,586 @@
+{
+ "erzeugt": "2026-07-17",
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Verwaltungsrat"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Direktion"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Revisionsstelle"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Versicherte Gefahren"
+    }
+   ],
+   "marginalie": [
+    "Elementarschadenversicherung"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Versicherte Gefahren"
+    }
+   ],
+   "marginalie": [
+    "Haftungsbeschränkung"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Umfang der Versicherung"
+    }
+   ],
+   "marginalie": [
+    "Abgrenzung"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Umfang der Versicherung"
+    }
+   ],
+   "marginalie": [
+    "Nichtversicherte Objekte"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Umfang der Versicherung"
+    }
+   ],
+   "marginalie": [
+    "Freiwillige Versicherung"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Umfang der Versicherung"
+    }
+   ],
+   "marginalie": [
+    "Ausschluss aus der Versicherung"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Grundsatz"
+    }
+   ],
+   "marginalie": [
+    "Beginn der Versicherung"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Grundsatz"
+    }
+   ],
+   "marginalie": [
+    "Bauzeitversicherung"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Grundsatz"
+    }
+   ],
+   "marginalie": [
+    "Neuwertversicherung"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Grundsatz"
+    }
+   ],
+   "marginalie": [
+    "Zeitwertversicherung"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Grundsatz"
+    }
+   ],
+   "marginalie": [
+    "Feste Versicherungssumme"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Grundsatz"
+    }
+   ],
+   "marginalie": [
+    "Abbruchwert"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Ermittlung der Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Schätzung"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Ermittlung der Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Vereinfachtes Schätzungsverfahren"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Ermittlung der Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Auskunftspflicht"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Ermittlung der Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Anpassung der Versicherungswerte"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Ermittlung der Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Kosten"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Versicherungsverhältnis"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Ermittlung der Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Selbstbehalte"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Prämien"
+    }
+   ],
+   "marginalie": [
+    "Grundsätze des Prämientarifs"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Prämien"
+    }
+   ],
+   "marginalie": [
+    "Teilprämien"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Prämien"
+    }
+   ],
+   "marginalie": [
+    "Haftung für Prämien bei Handänderung"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Prämien"
+    }
+   ],
+   "marginalie": [
+    "Prämienrechnung"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Prämien"
+    }
+   ],
+   "marginalie": [
+    "Verjährung"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Prävention vor Elementarschadengefahren"
+    }
+   ],
+   "marginalie": [
+    "Beiträge"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Reserven und Rückversicherung"
+    }
+   ],
+   "marginalie": [
+    "Verhältnis zwischen Reserven und Rückversicherung"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Schadenfall"
+    },
+    {
+     "ebene": 2,
+     "label": "8.1 Schadenermittlung"
+    }
+   ],
+   "marginalie": [
+    "Sicherheitsvorkehren"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Schadenfall"
+    },
+    {
+     "ebene": 2,
+     "label": "8.1 Schadenermittlung"
+    }
+   ],
+   "marginalie": [
+    "Schätzung"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Schadenfall"
+    },
+    {
+     "ebene": 2,
+     "label": "8.2 Entschädigung"
+    }
+   ],
+   "marginalie": [
+    "Totalschaden"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Schadenfall"
+    },
+    {
+     "ebene": 2,
+     "label": "8.2 Entschädigung"
+    }
+   ],
+   "marginalie": [
+    "Teilschaden"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Schadenfall"
+    },
+    {
+     "ebene": 2,
+     "label": "8.2 Entschädigung"
+    }
+   ],
+   "marginalie": [
+    "Schäden an unvollendeten Gebäuden"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Schadenfall"
+    },
+    {
+     "ebene": 2,
+     "label": "8.2 Entschädigung"
+    }
+   ],
+   "marginalie": [
+    "Abbruchobjekte"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Schadenfall"
+    },
+    {
+     "ebene": 2,
+     "label": "8.2 Entschädigung"
+    }
+   ],
+   "marginalie": [
+    "Nebenleistungen"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Schadenfall"
+    },
+    {
+     "ebene": 2,
+     "label": "8.2 Entschädigung"
+    }
+   ],
+   "marginalie": [
+    "Auszahlung"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Grundstückversicherung"
+    },
+    {
+     "ebene": 2,
+     "label": "9.1 Gegenstand und Umfang"
+    }
+   ],
+   "marginalie": [
+    "Ausgeschlossene Objekte"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Grundstückversicherung"
+    },
+    {
+     "ebene": 2,
+     "label": "9.2 Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Prämien"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Grundstückversicherung"
+    },
+    {
+     "ebene": 2,
+     "label": "9.2 Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Eigene Rechnung und Reserven"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Grundstückversicherung"
+    },
+    {
+     "ebene": 2,
+     "label": "9.3 Schadenermittlung"
+    }
+   ],
+   "marginalie": [
+    "Anmeldung"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Grundstückversicherung"
+    },
+    {
+     "ebene": 2,
+     "label": "9.3 Schadenermittlung"
+    }
+   ],
+   "marginalie": [
+    "Schätzung"
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Grundstückversicherung"
+    },
+    {
+     "ebene": 2,
+     "label": "9.4 Entschädigung"
+    }
+   ],
+   "marginalie": [
+    "Kosten der Wiederherstellung"
+   ]
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Grundstückversicherung"
+    },
+    {
+     "ebene": 2,
+     "label": "9.4 Entschädigung"
+    }
+   ],
+   "marginalie": [
+    "Ausschluss der Ersatzleistung"
+   ]
+  }
+ }
+}

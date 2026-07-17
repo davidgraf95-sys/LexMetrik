@@ -1,118 +1,257 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendungsbereich"
    ]
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Beschwerde, Moderation"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Sicherstellung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zahlungspflicht"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebührenberechnung 1. Allgemeines"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "2. Mehrere Rechtsgeschäfte"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "3. Ohne Gebührenposition, Gebührenrahmen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "4. Ohne Beurkundung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "5. Herabsetzung, Erlass"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "Beglaubigungen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "Beurkundungen 1. Personenrecht"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "2. Familienrecht"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "3. Erbrecht"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "4. Sachenrecht a) Bemessungsgrundlage"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "b) Errichten einer Urkunde"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "c) Beurkundung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "5. Aktienrecht"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "6. GmbH-Recht"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
    "marginalie": [
     "9. Übriges Obligationenrecht *"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "In-Kraft-Treten"
+   ]
+  },
+  "18_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
+   "marginalie": [
+    "7. Fusionsrecht"
+   ]
+  },
+  "18_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
+   "marginalie": [
+    "8. Genossenschaftsrecht"
+   ]
+  },
+  "19_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührentarif"
+    }
+   ],
+   "marginalie": [
+    "10. Vollstreckbare öffentliche Urkunde *"
    ]
   }
  }

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
    "gliederung": [
@@ -166,6 +166,17 @@
     "Ratsdienst *"
    ]
   },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Protokoll"
+   ]
+  },
   "17": {
    "gliederung": [
     {
@@ -194,6 +205,21 @@
    ],
    "marginalie": [
     "Beratung"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Geschäftsablauf"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)A. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Berichterstattung"
    ]
   },
   "20": {
@@ -301,6 +327,21 @@
     "Detailberatung"
    ]
   },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Geschäftsablauf"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Ablauf der Sitzung"
+    }
+   ],
+   "marginalie": [
+    "Zweite Lesung"
+   ]
+  },
   "28": {
    "gliederung": [
     {
@@ -351,6 +392,17 @@
    ],
    "marginalie": [
     "Stimmabgabe"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Abstimmungen"
+    }
+   ],
+   "marginalie": [
+    "Mehr"
    ]
   },
   "33": {
@@ -419,6 +471,17 @@
     "Planungsauftrag *"
    ]
   },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Parlamentarische Vorstösse"
+    }
+   ],
+   "marginalie": [
+    "Interpellation"
+   ]
+  },
   "40": {
    "gliederung": [
     {
@@ -484,6 +547,21 @@
    ],
    "marginalie": [
     "Wahlprüfungskommission"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)A. In der Gemeindeordnung namentlich genannte Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Kommission für Volksanregungen und Petitionen"
    ]
   },
   "46": {
@@ -606,6 +684,21 @@
     "Präsidium und Protokoll"
    ]
   },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)D. Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vertraulichkeit *"
+   ]
+  },
   "55": {
    "gliederung": [
     {
@@ -636,6 +729,21 @@
     "Berichterstattung an den Einwohnerrat"
    ]
   },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)D. Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Geltung der allgemeinen Bestimmungen über den Einwohnerrat"
+   ]
+  },
   "58": {
    "gliederung": [
     {
@@ -653,6 +761,107 @@
     }
    ],
    "marginalie": []
+  },
+  "43_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)A. In der Gemeindeordnung namentlich genannte Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Finanzkommission *"
+   ]
+  },
+  "43_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)A. In der Gemeindeordnung namentlich genannte Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Präsidien der Geschäftsprüfungskommission und der Finanzkommission"
+   ]
+  },
+  "43_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)A. In der Gemeindeordnung namentlich genannte Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben- und Finanzplan sowie Jahresbericht"
+   ]
+  },
+  "49_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)C. Spezialkommissionen"
+    }
+   ],
+   "marginalie": [
+    "Parlamentarische Untersuchungskommission"
+   ]
+  },
+  "54_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)D. Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Geheimhaltung"
+   ]
+  },
+  "54_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Kommissionen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.)D. Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Verletzung der Vertraulichkeit oder Geheimhaltung"
+   ]
+  },
+  "58_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen zur Änderung vom 15. Dezember 2021"
+   ]
   }
  }
 }

@@ -1,166 +1,544 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation und Zuständigkeit"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Brandschutzvorschriften"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Brandschutzvorschriften"
+    }
+   ],
    "marginalie": [
     "Verantwortung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Vorbeugender Brandschutz"
+    }
+   ],
    "marginalie": [
     "Normalfall und Abweichungen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Vorbeugender Brandschutz"
+    }
+   ],
    "marginalie": [
     "Brandrisikobewertung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Sicherheitsbeauftragte, Sicherheitsbeauftragter"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Zugang für Feuerwehr"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Türen"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Fluchtwegkonzept, Rettungswegkennzeichnungen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Anpassung bestehender Gebäude, Anlagen und Einrichtungen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Wartung von Feuerungs- und Abgasanlagen"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Wartung von Feuerungs- und Abgasanlagen"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kontrollen"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kontrollen"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kontrollen"
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kontrollen"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kontrollen"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Offene Feuer"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Offene Feuer"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Offene Feuer"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Umgang mit feuer- und explosionsgefährlichen Stoffen und Waren (nachfolgend als Stoffe bezeichnet)"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Umgang mit feuer- und explosionsgefährlichen Stoffen und Waren (nachfolgend als Stoffe bezeichnet)"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Umgang mit feuer- und explosionsgefährlichen Stoffen und Waren (nachfolgend als Stoffe bezeichnet)"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Umgang mit feuer- und explosionsgefährlichen Stoffen und Waren (nachfolgend als Stoffe bezeichnet)"
+    }
+   ],
    "marginalie": []
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Umgang mit feuer- und explosionsgefährlichen Stoffen und Waren (nachfolgend als Stoffe bezeichnet)"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Sicherheit auf Baustellen"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Sicherheit auf Baustellen"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Sicherheit auf Baustellen"
+    }
+   ],
    "marginalie": []
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Sicherheit auf Baustellen"
+    }
+   ],
    "marginalie": []
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Sicherheit auf Baustellen"
+    }
+   ],
    "marginalie": [
     "Ex-Schutz"
    ]
   },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Blitzschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Blitzschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Blitzschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Blitzschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Blitzschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Blitzschutz"
+    }
+   ],
+   "marginalie": []
+  },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Aus-, Weiter- und Fortbildung, Instruktion"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Aus-, Weiter- und Fortbildung, Instruktion"
+    }
+   ],
    "marginalie": []
   },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Betriebliche Sicherheitsmassnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Aus-, Weiter- und Fortbildung, Instruktion"
+    }
+   ],
+   "marginalie": [
+    "Gebühren"
+   ]
+  },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rechtsmittel"
+    }
+   ],
    "marginalie": []
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmung"
+    }
+   ],
    "marginalie": []
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufgehobener Erlass"
+   ]
+  },
+  "41_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V.bis Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Strafbestimmungen"
    ]
   }
  }

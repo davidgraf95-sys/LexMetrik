@@ -1,172 +1,453 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Subsidiäres Recht"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Unterstellung"
+   ]
+  },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Höhe der Familienzulagen; Anpassung der Ansätze"
+    }
+   ],
    "marginalie": [
     "Höhe der Familienzulagen, Anpassung der Ansätze"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Familienzulagen für Erwerbstätige"
+    }
+   ],
+   "marginalie": []
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Familienzulagen für Erwerbstätige"
+    }
+   ],
+   "marginalie": [
+    "Anspruchskonkurrenz"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Familienzulagen für Erwerbstätige"
+    }
+   ],
+   "marginalie": [
+    "Beginn und Ende der Anspruchsberechtigung Selbstständigerwerbender"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Familienzulagen für Erwerbstätige"
+    }
+   ],
+   "marginalie": [
+    "Nachforderung und Rückerstattung von Familienzulagen Selbstständigerwerbender"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Familienzulagen für Erwerbstätige"
+    }
+   ],
+   "marginalie": [
+    "Pflichten der Familienausgleichskassen"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Familienzulagen für Erwerbstätige"
+    }
+   ],
+   "marginalie": [
+    "Pflichten der unterstellten Personen"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Familienzulagen für Erwerbstätige"
+    }
+   ],
    "marginalie": [
     "Pflichten der anspruchsberechtigten Personen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Familienzulagen für Nichterwerbstätige"
+    }
+   ],
    "marginalie": [
     "Anspruch auf Familienzulagen für Nichterwerbstätige"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Familienzulagen für Nichterwerbstätige"
+    }
+   ],
    "marginalie": [
     "Pflichten der anspruchsberechtigten Personen"
    ]
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Familienzulagen für Nichterwerbstätige"
+    }
+   ],
+   "marginalie": [
+    "Anspruchskonkurrenz unter Nichterwerbstätigen"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Zugelassene Familienausgleichskassen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Anerkennung beruflicher und zwischenberuflicher Familienausgleichskassen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "AHV-Ausgleichskassen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Aufgaben der Familienausgleichskassen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Familienausgleichskasse Basel-Stadt"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Aufgaben der Familienausgleichskasse Basel-Stadt"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Kassenzugehörigkeit Erwerbstätiger"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Mitgliederwechsel"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Berichterstattung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Revision und Arbeitgeberkontrolle"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Finanzierung und Lastenausgleich"
+    }
+   ],
    "marginalie": [
     "Finanzierung von Familienzulagen für Erwerbstätige"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Finanzierung und Lastenausgleich"
+    }
+   ],
    "marginalie": [
     "Finanzierung von Familienzulagen für Nichterwerbstätige"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Finanzierung und Lastenausgleich"
+    }
+   ],
    "marginalie": [
     "Steuerbefreiung"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Vollzug, Haftung, Strafbestimmungen, Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Vollzug"
    ]
   },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Vollzug, Haftung, Strafbestimmungen, Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "Haftung"
+   ]
+  },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Vollzug, Haftung, Strafbestimmungen, Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Strafbestimmungen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Vollzug, Haftung, Strafbestimmungen, Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Schadenshaftung der Familienausgleichskassen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Vollzug, Haftung, Strafbestimmungen, Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Rechtspflege"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Beitritt und Anschluss"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Anerkannte Familienausgleichskassen"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung und Aufhebung anderer Erlasse"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Schlussbestimmung"
+   ]
+  },
+  "27_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Finanzierung und Lastenausgleich"
+    }
+   ],
+   "marginalie": [
+    "Lastenausgleich"
+   ]
+  },
+  "27_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Finanzierung und Lastenausgleich"
+    }
+   ],
+   "marginalie": [
+    "Ausgleichsbeitrag"
+   ]
+  },
+  "27_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Finanzierung und Lastenausgleich"
+    }
+   ],
+   "marginalie": [
+    "Ausgleichsabgabe"
+   ]
+  },
+  "27_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Finanzierung und Lastenausgleich"
+    }
+   ],
+   "marginalie": [
+    "Vollzug"
    ]
   }
  }

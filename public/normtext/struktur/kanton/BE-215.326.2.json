@@ -1,130 +1,468 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines und gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines und gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Steuerpflicht"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines und gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verjährung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Begriffsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundstücke"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Begriffsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Handänderungen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Bemessungsgrundlagen 1. Grundsatz"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "2. Wiederkehrende Leistungen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "3. Tausch"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "4. Realteilung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Gesamteigentum"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuersatz"
    ]
   },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen von der Steuerpflicht *"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "Veranlagungsbehörde"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "Veranlagung bei Grundbuchanmeldung, Stundung bei nachträglicher Steuerbefreiung"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Veranlagung"
+    }
+   ],
    "marginalie": [
     "Veranlagung ohne Grundbuchanmeldung"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Veranlagung"
+    }
+   ],
    "marginalie": [
     "Nachveranlagung"
    ]
   },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Bezug, Erlass und Stundung"
+    }
+   ],
+   "marginalie": [
+    "Bezug 1. Grundsatz"
+   ]
+  },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Bezug, Erlass und Stundung"
+    }
+   ],
    "marginalie": [
     "2. Verzinsung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Bezug, Erlass und Stundung"
+    }
+   ],
    "marginalie": [
     "3. Sicherung"
    ]
   },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Bezug, Erlass und Stundung"
+    }
+   ],
+   "marginalie": [
+    "Erlass und Stundung 1. Durch die Direktion für Inneres und Justiz *"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Bezug, Erlass und Stundung"
+    }
+   ],
+   "marginalie": [
+    "2. Durch den Regierungsrat"
+   ]
+  },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Bezug, Erlass und Stundung"
+    }
+   ],
    "marginalie": [
     "4. Gemeinsame Bestimmungen *"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Verfahren"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Rechtsweg"
    ]
   },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7 Widerhandlungen und Nachsteuer"
+    }
+   ],
+   "marginalie": []
+  },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Vollzug"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung von Erlassen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung eines Erlasses"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "11_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "Nachträgliche Steuerbefreiung 1. Gesuch, Stundung"
+   ]
+  },
+  "11_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "2. Voraussetzungen"
+   ]
+  },
+  "16_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "Bearbeitung von Daten aus zentralen Personendatensammlungen"
+   ]
+  },
+  "17_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "Nachträgliche Steuerbefreiung gemäss Artikel 11a 1. Verfahren"
+   ]
+  },
+  "17_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "2. Bezug der gestundeten Steuer"
+   ]
+  },
+  "18_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Veranlagung"
+    }
+   ],
+   "marginalie": [
+    "Veranlagung nach Ermessen"
+   ]
+  },
+  "24_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Bezug, Erlass und Stundung"
+    }
+   ],
+   "marginalie": [
+    "3. Durch die Wirtschafts-, Energie- und Umweltdirektion *"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Die Handänderungssteuer"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bemessung der Steuer und Ausnahmen von der Steuerpflicht"
+    }
+   ],
+   "marginalie": [
+    "1a. Schlüsselfertige Baute oder Stockwerkeinheit, Verbindung von Kauf- und Werkvertrag *"
    ]
   }
  }

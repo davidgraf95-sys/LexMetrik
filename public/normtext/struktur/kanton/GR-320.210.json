@@ -1,116 +1,279 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Verfahren vor Schlichtungsbehörden"
+    }
+   ],
    "marginalie": [
     "Schlichtungsverfahren"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Verfahren vor Regionalgericht"
+    }
+   ],
    "marginalie": [
     "Ordentliches Verfahren"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Verfahren vor Regionalgericht"
+    }
+   ],
    "marginalie": [
     "Vereinfachtes Verfahren"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Verfahren vor Regionalgericht"
+    }
+   ],
    "marginalie": [
     "Summarisches Verfahren"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Verfahren vor Regionalgericht"
+    }
+   ],
    "marginalie": [
     "Besondere Verfahren"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Verfahren vor Regionalgericht"
+    }
+   ],
    "marginalie": [
     "Verfahren ohne Sachentscheid oder Entscheidbegründung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Verfahren vor Regionalgericht"
+    }
+   ],
    "marginalie": [
     "Erledigung in eindeutigen Fällen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Verfahren vor Regionalgericht"
+    }
+   ],
    "marginalie": [
     "Besondere Entscheide in laufenden Verfahren"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Verfahren vor Obergericht"
+    }
+   ],
    "marginalie": [
     "Als einzige kantonale Instanz"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Verfahren vor Obergericht"
+    }
+   ],
    "marginalie": [
     "Als Berufungsinstanz"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Verfahren vor Obergericht"
+    }
+   ],
    "marginalie": [
     "Als Beschwerdeinstanz"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Verfahren vor Obergericht"
+    }
+   ],
    "marginalie": [
     "Verfahren mit besonders grossem Aufwand"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Verfahren vor Obergericht"
+    }
+   ],
    "marginalie": [
     "Verfahren ohne Sachentscheid oder Entscheidbegründung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Verfahren vor Obergericht"
+    }
+   ],
    "marginalie": [
     "Erledigung in eindeutigen Fällen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Verfahren vor Obergericht"
+    }
+   ],
    "marginalie": [
     "Besondere Entscheide in laufenden Verfahren"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.4. Revisionsverfahren sowie Erläuterung und Berichtigung"
+    }
+   ],
    "marginalie": [
     "Revision"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gerichtskosten"
+    },
+    {
+     "ebene": 2,
+     "label": "1.4. Revisionsverfahren sowie Erläuterung und Berichtigung"
+    }
+   ],
    "marginalie": [
     "Erläuterung und Berichtigung"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung für Zeugnis und schriftliche Auskunft"
+    }
+   ],
    "marginalie": [
     "Entschädigung und Spesen"
    ]

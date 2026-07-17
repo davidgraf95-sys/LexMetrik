@@ -1,262 +1,1282 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Zuständige Verwaltungsabteilung"
+    }
+   ],
+   "marginalie": [
+    "Gesamtverantwortung"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "1bis. …"
+    }
+   ],
    "marginalie": [
     "Festlegung und Veränderung der Anzahl Unterrichtslektionen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "1bis. …"
+    }
+   ],
    "marginalie": [
     "Organisation der Schule"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "1bis. …"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "1bis. …"
+    }
+   ],
    "marginalie": [
     "Personalverantwortung *"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "1bis. …"
+    }
+   ],
    "marginalie": [
     "Weitere Aufgaben"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Schulleitungen"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Schulleitungen"
+    }
+   ],
    "marginalie": [
     "Personalverantwortung Schulleitungen"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Schulleitungen"
+    }
+   ],
+   "marginalie": [
+    "Schulsitzungen und Präsenzzeiten"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulräte"
+    }
+   ],
    "marginalie": [
     "Zusammensetzung der Schulräte, Amtsdauer"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulräte"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulräte"
+    }
+   ],
    "marginalie": [
     "Amtsenthebung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Betrieb der Gemeindeschulen"
+    }
+   ],
    "marginalie": [
     "Schulgeld für auswärtige Schülerinnen und Schüler"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Betrieb der Gemeindeschulen"
+    }
+   ],
    "marginalie": [
     "Unterrichts- und Öffnungszeiten der Kindergärten"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Betrieb der Gemeindeschulen"
+    }
+   ],
    "marginalie": [
     "Öffnungszeiten der Primarschule"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Betrieb der Gemeindeschulen"
+    }
+   ],
    "marginalie": [
     "Dispensation und Urlaub der Schülerinnen und Schüler"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Betrieb der Gemeindeschulen"
+    }
+   ],
    "marginalie": [
     "Schulausflüge, Lager und Wintersportveranstaltungen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Personalrechtliche Regelungen"
+    }
+   ],
    "marginalie": [
     "Anstellungsinstanzen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Personalrechtliche Regelungen"
+    }
+   ],
    "marginalie": [
     "Ferien *"
    ]
   },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Personalrechtliche Regelungen"
+    }
+   ],
+   "marginalie": [
+    "Kompensation"
+   ]
+  },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
    "marginalie": [
     "Befristete Arbeitsverhältnisse *"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
    "marginalie": [
     "Einzellektionen- und Kompensationskonten *"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
    "marginalie": [
     "Teilpensen"
    ]
   },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
    "marginalie": [
     "Bezug des Urlaubskontos *"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
    "marginalie": [
     "Weiterbildung"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
    "marginalie": [
     "Ausserordentliche Entlastung"
    ]
   },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Besondere lohnrechtliche Regelungen"
+    }
+   ],
    "marginalie": [
     "Entschädigung von Stellvertretungen *"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Besondere lohnrechtliche Regelungen"
+    }
+   ],
    "marginalie": [
     "Entschädigung von Aushilfen"
    ]
   },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Besondere lohnrechtliche Regelungen"
+    }
+   ],
+   "marginalie": [
+    "Entschädigung für Arbeitseinsätze in der Tagesstruktur *"
+   ]
+  },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Besondere lohnrechtliche Regelungen"
+    }
+   ],
    "marginalie": [
     "Entschädigung für Aufgaben ausserhalb des Berufsauftrags *"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Besondere lohnrechtliche Regelungen"
+    }
+   ],
    "marginalie": [
     "Lohnzahlung bei einer ausserordentlichen Entlastung oder Altersentlastung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Besondere lohnrechtliche Regelungen"
+    }
+   ],
    "marginalie": [
     "Spesenvergütung bei Schulanlässen"
    ]
   },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Verschiedene Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)1. Bearbeitung von Personendaten"
+    }
+   ],
+   "marginalie": [
+    "Personal der Gemeindeschulen"
+   ]
+  },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Verschiedene Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)1. Bearbeitung von Personendaten"
+    }
+   ],
    "marginalie": [
     "Schülerinnen, Schüler und Eltern"
    ]
   },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Verschiedene Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)1. Bearbeitung von Personendaten"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Verschiedene Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Akteneinsicht"
+    }
+   ],
    "marginalie": [
     "Betroffene Personen"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Verschiedene Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Akteneinsicht"
+    }
+   ],
    "marginalie": [
     "Akteneinsicht im Rahmen der Aufgabenerfüllung *"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rekursverfahren der Schulrekurskommission"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rekursverfahren der Schulrekurskommission"
+    }
+   ],
    "marginalie": [
     "Verfahren"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rekursverfahren der Schulrekurskommission"
+    }
+   ],
    "marginalie": [
     "Beratung und Entscheid der Schulrekurskommission"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rekursverfahren der Schulrekurskommission"
+    }
+   ],
    "marginalie": [
     "Datenschutz"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rekursverfahren der Schulrekurskommission"
+    }
+   ],
    "marginalie": [
     "Akteneinsicht"
    ]
   },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
    "marginalie": [
     "Schulräte"
    ]
   },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
+   "marginalie": [
+    "Frei- und Feiertagsregelung"
+   ]
+  },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
    "marginalie": [
     "Erstmalige Einreihung der nach kantonalem Recht entlöhnten Lehrpersonen"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
    "marginalie": [
     "Besitzstand Dienstaltersjahre der nach kantonalem Recht entlöhnten Lehrpersonen"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
    "marginalie": [
     "Besitzstand Dienstaltersjahre der Lehrpersonen der Kindergärten der Gemeinden Bettingen und Riehen"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
    "marginalie": [
     "Besitzstand Altersentlastung der Lehrpersonen der Kindergärten der Gemeinde Bettingen und Riehen"
    ]
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)1. Kommunalisierung der Primarschule"
+    }
+   ],
    "marginalie": [
     "Besitzstand von unbefristeten Arbeitsverhältnissen von Lehrpersonen"
    ]
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung bisherigen Rechts"
    ]
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
+   ]
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulräte"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "10_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulräte"
+    }
+   ],
+   "marginalie": [
+    "Treffen der Präsidien und der Schulratsmitglieder"
+   ]
+  },
+  "10_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Schulräte"
+    }
+   ],
+   "marginalie": [
+    "Weisung zu den Aufgaben der Schulräte *"
+   ]
+  },
+  "1_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "1bis. …"
+    }
+   ],
+   "marginalie": [
+    "Übergeordnete Strategien"
+   ]
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
+   "marginalie": [
+    "Lektionenzuteilung und Mehrleistungen"
+   ]
+  },
+  "23_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
+   "marginalie": [
+    "Krankheit und Unfall in den Schulferien"
+   ]
+  },
+  "25_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
+   "marginalie": [
+    "Unbezahlter Urlaub"
+   ]
+  },
+  "28_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "31_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Besondere lohnrechtliche Regelungen"
+    }
+   ],
+   "marginalie": [
+    "Entschädigung für Stellvertretungen und Aushilfen in der Tagesstruktur *"
+   ]
+  },
+  "34_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)4. Besondere personal- und lohnrechtliche Regelungen für Fachpersonen Logopädie und Psychomotorik"
+    }
+   ],
+   "marginalie": [
+    "Anstellungsbedingungen *"
+   ]
+  },
+  "34_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Besondere Bestimmungen zum Arbeitsverhältnis im Schulbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)4. Besondere personal- und lohnrechtliche Regelungen für Fachpersonen Logopädie und Psychomotorik"
+    }
+   ],
+   "marginalie": [
+    "Entschädigung für Stellvertretung, Aushilfe, Teilnahme in Arbeitsgruppen und für Arbeitseinsätze in Schulen mit Tagesstrukturen"
+   ]
+  },
+  "55_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)2. Schulharmonisierung"
+    }
+   ],
+   "marginalie": [
+    "Lektionenkonto, Guthaben von Mehrleistungen und Ferien"
+   ]
+  },
+  "55_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)2. Schulharmonisierung"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand Dienstaltersjahr"
+   ]
+  },
+  "55_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)2. Schulharmonisierung"
+    }
+   ],
+   "marginalie": [
+    "Beim Kanton befristet angestellte Lehrpersonen"
+   ]
+  },
+  "55_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)3. Übernahme von Fachpersonen Logopädie"
+    }
+   ],
+   "marginalie": [
+    "Erstmalige Einreihung der Fachpersonen Logopädie"
+   ]
+  },
+  "55_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)3. Übernahme von Fachpersonen Logopädie"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand und Lohnentwicklung bei einer Positionierung unter der Lohnkurve C"
+   ]
+  },
+  "55_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)3. Übernahme von Fachpersonen Logopädie"
+    }
+   ],
+   "marginalie": [
+    "Arbeitsverhältnis"
+   ]
+  },
+  "55_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)3. Übernahme von Fachpersonen Logopädie"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand Beschäftigungsgrad"
+   ]
+  },
+  "55_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)3. Übernahme von Fachpersonen Logopädie"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand auf Guthaben aus Mehrleistungen, Ferien, Dienstaltersjahre und altrechtlichem Dienstaltersgeschenk des Kantons Basel-Stadt"
+   ]
+  },
+  "55_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    }
+   ],
+   "marginalie": [
+    "Erstmalige Einreihung der Lehrpersonen Musik und Bewegung"
+   ]
+  },
+  "55_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand"
+   ]
+  },
+  "55_k": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    }
+   ],
+   "marginalie": [
+    "Positionierung unter der speziellen Lohnkurve"
+   ]
+  },
+  "55_l": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    }
+   ],
+   "marginalie": [
+    "Arbeitsverhältnis"
+   ]
+  },
+  "55_m": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand Beschäftigungsgrad"
+   ]
+  },
+  "55_n": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    },
+    {
+     "ebene": 3,
+     "label": "(VI.) 5. Weitere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Urlaubskonto"
+   ]
+  },
+  "55o.": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    },
+    {
+     "ebene": 3,
+     "label": "(VI.) 5. Weitere Bestimmungen"
+    },
+    {
+     "ebene": 4,
+     "label": "6. Übernahme des Schulhauswartungspersonals"
+    }
+   ],
+   "marginalie": [
+    "Erstmalige Einreihung des Schulhauswartungspersonals"
+   ]
+  },
+  "55p.": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    },
+    {
+     "ebene": 3,
+     "label": "(VI.) 5. Weitere Bestimmungen"
+    },
+    {
+     "ebene": 4,
+     "label": "6. Übernahme des Schulhauswartungspersonals"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand und Lohnentwicklung bei einer Positionierung unter der Lohnkurve C"
+   ]
+  },
+  "55q.": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    },
+    {
+     "ebene": 3,
+     "label": "(VI.) 5. Weitere Bestimmungen"
+    },
+    {
+     "ebene": 4,
+     "label": "6. Übernahme des Schulhauswartungspersonals"
+    }
+   ],
+   "marginalie": [
+    "Arbeitsvertrag"
+   ]
+  },
+  "55r.": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.)4. Übernahme der Lehrpersonen Musik und Bewegung"
+    },
+    {
+     "ebene": 3,
+     "label": "(VI.) 5. Weitere Bestimmungen"
+    },
+    {
+     "ebene": 4,
+     "label": "6. Übernahme des Schulhauswartungspersonals"
+    }
+   ],
+   "marginalie": [
+    "Besitzstand Dienstaltersgeschenk"
    ]
   }
  }

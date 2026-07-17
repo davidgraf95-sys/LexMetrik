@@ -1,76 +1,386 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Vorschüsse"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Vorschüsse"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Vorschüsse"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Rechnungstellung und Einzug"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Rechnungstellung und Einzug"
+    }
+   ],
    "marginalie": []
   },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Rechnungstellung und Einzug"
+    }
+   ],
+   "marginalie": []
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
+   "marginalie": [
+    "*"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
+   "marginalie": [
+    "*"
+   ]
+  },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Zivilrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
    "marginalie": []
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Strafrechtspflege"
+    }
+   ],
    "marginalie": []
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Auslagen"
+    }
+   ],
    "marginalie": []
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Auslagen"
+    }
+   ],
    "marginalie": []
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "42_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

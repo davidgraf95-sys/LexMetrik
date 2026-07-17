@@ -1,154 +1,442 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vorbereitung der Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Publikation"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vorbereitung der Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Behandlung der Wahlvorschläge"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vorbereitung der Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Stimmrechtsausweis"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vorbereitung der Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Beanstandungen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vorbereitung der Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Stimmregister"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Stimmrecht und Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Stimmrecht"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Stimmrecht und Stimmabgabe"
+    }
+   ],
+   "marginalie": [
+    "Persönliche Stimmabgabe"
+   ]
+  },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Stimmrecht und Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Briefliche Stimmabgabe"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Wahllokale"
+    }
+   ],
+   "marginalie": [
+    "Wahllokale"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Wahllokale"
+    }
+   ],
+   "marginalie": [
+    "Sammlung der brieflich abgegebenen Stimmen"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Wahlbüro"
+    }
+   ],
+   "marginalie": [
+    "Organisation"
+   ]
+  },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Wahlbüro"
+    }
+   ],
    "marginalie": [
     "Wahl- und Abstimmungshandlung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Wahlbüro"
+    }
+   ],
    "marginalie": [
     "Zweifelsfälle"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ermittlung der Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Öffnung der Urnen"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ermittlung der Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Auszählung der Stimmen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ermittlung der Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Teilergebnis *"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ermittlung der Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Inhalt des Protokolls"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ermittlung der Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Ergebnis der brieflichen Stimmabgabe"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ermittlung der Ergebnisse"
+    }
+   ],
+   "marginalie": [
+    "Ergebnis der persönlichen Stimmabgabe"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ermittlung der Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Endergebnis *"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ermittlung der Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Schlussprotokolle"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Sicherung der Abstimmungsunterlagen"
+    }
+   ],
    "marginalie": [
     "Urnen"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Sicherung der Abstimmungsunterlagen"
+    }
+   ],
    "marginalie": [
     "Kontrollstempel"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Sicherung der Abstimmungsunterlagen"
+    }
+   ],
    "marginalie": [
     "Räumlichkeiten"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Sicherung der Abstimmungsunterlagen"
+    }
+   ],
    "marginalie": [
     "Aufbewahrung der Wahl- und Abstimmungsunterlagen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Entschädigungen"
+    }
+   ],
    "marginalie": [
     "Beauftragte des Regierungsrates sowie Expertinnen und Experten *"
    ]
   },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Entschädigungen"
+    }
+   ],
+   "marginalie": [
+    "Mitglieder der Wahlbüros und Personal der Wahllokale"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Entschädigungen"
+    }
+   ],
+   "marginalie": [
+    "Anpassung, Sozialabgaben und Mehrwertsteuer"
+   ]
+  },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Ordnungsvorschriften"
+    }
+   ],
    "marginalie": [
     "Schweigepflicht"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Ordnungsvorschriften"
+    }
+   ],
    "marginalie": [
     "Zutrittsverbot"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Ergänzende Weisungen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ]
+  },
+  "13_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IVbis. Zentralwahlbüro"
+    }
+   ],
+   "marginalie": [
+    "Organisation"
+   ]
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Beobachtung der Urnengänge"
+    }
+   ],
+   "marginalie": [
+    "Beauftragte des Regierungsrates *"
+   ]
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vorbereitung der Wahlen und Abstimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vergabe von Ordnungsnummern"
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Unterstützung öffentlicher Organe bei Wahlen und Abstimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vorbereitung der Wahlen und Abstimmungen"
+    }
+   ],
+   "marginalie": [
+    "Stellungnahme des Initiativ- oder Referendumskomitees"
+   ]
+  },
+  "3_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vorbereitung der Wahlen und Abstimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ausgestaltung der Stimm- und Wahlunterlagen"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Stimmrecht und Stimmabgabe"
+    }
+   ],
+   "marginalie": [
+    "Stimmabgabe durch Dritte"
+   ]
+  },
+  "8_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Stimmrecht und Stimmabgabe"
+    }
+   ],
+   "marginalie": [
+    "Elektronische Stimmabgabe"
    ]
   }
  }

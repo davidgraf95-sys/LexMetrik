@@ -1,208 +1,400 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zusammensetzung der Kosten"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bemessung der Gebühr"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Erhöhung der Gebühr"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Herabsetzung der Gebühr und Verzicht"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebühren für nicht ausdrücklich erwähnte Verrichtungen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufführung der Kosten im Entscheid"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Einzug der Kosten"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Gerichtskosten"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Schlichtungsverfahren"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Ordentliches und vereinfachtes Verfahren"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Summarisches Verfahren"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Familienrechtliche Verfahren *"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Besondere Entscheide im laufenden Verfahren"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Rechtsmittelverfahren"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Erläuterungsverfahren"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Rechtshilfeverfahren"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Schiedsgerichtsbarkeit"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kosten in Zivilverfahren"
+    }
+   ],
    "marginalie": [
     "Nichtstreitige Rechtssachen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kosten in Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Verfahrenskosten"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kosten in Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Vorverfahren"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kosten in Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Strafbefehlsverfahren"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kosten in Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Erstinstanzliches Hauptverfahren"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kosten in Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Rechtsmittelverfahren"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kosten in Strafverfahren"
+    }
+   ],
    "marginalie": [
     "Besondere Verfahren"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kosten in Verwaltungssachen"
+    }
+   ],
    "marginalie": [
     "Kosten für Amtshandlungen nach EG BGFA"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kosten in Verwaltungssachen"
+    }
+   ],
    "marginalie": [
     "Kosten in übrigen Verwaltungssachen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kosten für Zeuginnen und Zeugen, Auskunftspersonen, sachverständige Personen, Übersetzerinnen und Übersetzer sowie Drittpersonen"
+    }
+   ],
    "marginalie": [
     "Zeuginnen und Zeugen"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kosten für Zeuginnen und Zeugen, Auskunftspersonen, sachverständige Personen, Übersetzerinnen und Übersetzer sowie Drittpersonen"
+    }
+   ],
    "marginalie": [
     "Auskunftspersonen"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kosten für Zeuginnen und Zeugen, Auskunftspersonen, sachverständige Personen, Übersetzerinnen und Übersetzer sowie Drittpersonen"
+    }
+   ],
    "marginalie": [
     "Sachverständige Personen sowie Übersetzerinnen und Übersetzer *"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kosten für Zeuginnen und Zeugen, Auskunftspersonen, sachverständige Personen, Übersetzerinnen und Übersetzer sowie Drittpersonen"
+    }
+   ],
    "marginalie": [
     "Drittpersonen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Kanzleigebühren"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten und Übergangsbestimmung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ]
+  },
+  "21_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kosten in Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "Zwangsmassnahmengericht"
+   ]
+  },
+  "26_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kosten in Verwaltungssachen"
+    }
+   ],
+   "marginalie": [
+    "Kosten für Amtshandlungen nach E-EÖBV"
    ]
   }
  }

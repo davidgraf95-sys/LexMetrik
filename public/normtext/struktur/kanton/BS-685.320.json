@@ -1,82 +1,246 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Geltungsbereich"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Erklärung verwendeter Ausdrücke"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Erleichterungen bei bestehenden baulichen Einrichtungen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Allgemeines *"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
+   "marginalie": [
+    "Überschreitung der Baulinie"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Bauten im Inneren des Areals"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Überschreitung der Parzellengrenzen"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
+   "marginalie": [
+    "Bauten an den Geleisezufahrten"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Öffnung in den Gebäudewänden"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Scheidemauern"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Bauhöhe"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Überschreiten der Bauhöhe"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Firsthöhe und Dachneigung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Abstand von der Nachbarparzelle"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Abstand zwischen Gebäuden"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
    "marginalie": [
     "Wände mit Öffnungen"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
+   "marginalie": [
+    "Bauten an Zufahrtsstrassen und Geleisezufahrten"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
+   "marginalie": [
+    "Bauart und Brandschutz"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
+   "marginalie": [
+    "Parkplätze mit Güterumschlag"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
+   "marginalie": [
+    "Genehmigung des Bauvorhabens durch die Dreispitzverwaltung"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
+   "marginalie": [
+    "Betriebsbewilligung"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zonen- und Bauvorschriften"
+    }
+   ],
+   "marginalie": [
+    "…"
    ]
   }
  }

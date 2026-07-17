@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
    "gliederung": [
@@ -342,6 +342,17 @@
     "Datenschutz 1 gemäss Art. 20 Datenschutzgesetz"
    ]
   },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Sonstige Gebühren"
+    }
+   ],
+   "marginalie": [
+    "2 gemäss Art. 21 Datenschutzgesetz"
+   ]
+  },
   "33": {
    "gliederung": [
     {
@@ -418,6 +429,104 @@
    "marginalie": [
     "Inkrafttreten"
    ]
+  },
+  "13_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Erhebung von Verzugszinsen"
+   ]
+  },
+  "18_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebühren im Verwaltungsverfahren"
+    }
+   ],
+   "marginalie": [
+    "Leitverfahren nach Koordinationsgesetz und Baubewilligungen"
+   ]
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Kostendeckung"
+   ]
+  },
+  "9_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebührenreduktion bei gleichartigen Dienstleistungen"
+   ]
+  },
+  "t1-1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "T1 Übergangsbestimmung der Änderung vom 18.10.1995"
+    }
+   ],
+   "marginalie": []
+  },
+  "t2-1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "T2 Übergangsbestimmung der Änderung vom 24.06.1998"
+    }
+   ],
+   "marginalie": []
+  },
+  "t3-1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "T3 Übergangsbestimmungen der Änderung vom 24.10.2001"
+    }
+   ],
+   "marginalie": []
+  },
+  "t4-1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "T4 Übergangsbestimmung der Änderung vom 24.08.2005"
+    }
+   ],
+   "marginalie": []
+  },
+  "t5-1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "T5 Übergangsbestimmung der Änderung vom 20.06.2007"
+    }
+   ],
+   "marginalie": []
+  },
+  "t6-1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "T6 Übergangsbestimmungen der Änderung vom 09.11.2011"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

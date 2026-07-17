@@ -1,166 +1,345 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gegenstand"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geobasisdaten und andere Geodaten"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bezugsrahmen und Bezugssystem"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geodatenmodelle"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Darstellungsmodelle"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geometadaten"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geodienste"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Nachführung und Historisierung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Archivierung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Datenlieferungspflicht"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Weiterführende Vorschriften"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zugang"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zugang"
+    }
+   ],
    "marginalie": [
     "Zugangsberechtigungsstufen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zugang"
+    }
+   ],
    "marginalie": [
     "Zugangsberechtigungsstufe A"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Zugang"
+    }
+   ],
    "marginalie": [
     "Zugangsberechtigungsstufe B"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nutzung"
+    }
+   ],
    "marginalie": [
     "Einwilligung zur Nutzung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nutzung"
+    }
+   ],
    "marginalie": [
     "Verfahren"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nutzung"
+    }
+   ],
    "marginalie": [
     "Datenabgabe"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nutzung"
+    }
+   ],
    "marginalie": [
     "Quellenangabe"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nutzung"
+    }
+   ],
    "marginalie": [
     "Datenaustausch unter Behörden"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebühren"
+    }
+   ],
    "marginalie": [
     "Bereitstellungsgebühr für öffentliche Geodaten"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebühren"
+    }
+   ],
    "marginalie": [
     "Bereitstellungsgebühr für beschränkt öffentliche Geodaten *"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Gebühren"
+    }
+   ],
    "marginalie": [
     "Weitere Gebührenbestimmungen"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Organisation"
+    }
+   ],
    "marginalie": [
     "Zuständige Fachstellen"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Organisation"
+    }
+   ],
    "marginalie": [
     "Fachstelle für Geoinformation"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Organisation"
+    }
+   ],
    "marginalie": [
     "GIS-Koordination"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Organisation"
+    }
+   ],
    "marginalie": [
     "Meldung von Luftaufnahmen"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Umgang mit nicht mehr benötigten Informationen"
+   ]
+  },
+  "27_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Übertragung der Bearbeitung auf Dritte"
+   ]
+  },
+  "27_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Auflösung der Geodateninfrastruktur"
    ]
   }
  }

@@ -1,42 +1,77 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Aufnahmegeräte"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Grundsätze für die Aufnahme von Telephongesprächen"
+    }
+   ],
    "marginalie": [
     "Allgemeine Voraussetzungen für die Aufnahme von Telephongesprächen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Grundsätze für die Aufnahme von Telephongesprächen"
+    }
+   ],
    "marginalie": [
     "Ausnahmen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Grundsätze für die Aufnahme von Telephongesprächen"
+    }
+   ],
    "marginalie": [
     "Löschung der Aufnahmen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Vorbehaltenes Recht"
+    }
+   ],
    "marginalie": [
     "Datenschutz"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Vorbehaltenes Recht"
+    }
+   ],
    "marginalie": [
     "Wahrung des Amtsgeheimnisses"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Schlussbestimmung"
+    }
+   ],
    "marginalie": []
   }
  }

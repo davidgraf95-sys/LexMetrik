@@ -1,202 +1,663 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ort der Verhandlungen; Öffentlichkeit"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Leitung der Verhandlungen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufgaben und Befugnisse des Präsidenten/der Präsidentin"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Protokoll"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Publikationen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Fraktionen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
-    "Entschädigung *"
+    "Sitzungsgeld *"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rücktritt"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Persönliche Erklärung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Beschlussfähigkeit; Namensaufruf"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Tagesordnung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Rückzug von Vorlagen"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Budget"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Rechnung"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Verwaltungsbericht"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Vorgehen; Wiedererwägung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Stimmenmehr"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Namentliche Abstimmung"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abstimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Wahlen"
+    }
+   ],
    "marginalie": [
     "Vorgehen"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Wahlen"
+    }
+   ],
    "marginalie": [
     "Wahlgänge; absolutes und relatives Mehr"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Wahlen"
+    }
+   ],
    "marginalie": [
     "Einzelwahl"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Wahlen"
+    }
+   ],
    "marginalie": [
     "Listenwahl"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Wahlen"
+    }
+   ],
    "marginalie": [
-    "Wahl der Präsidentin oder des Präsidenten, der Statthalterin oder des Statthalters und der Protokollführerin oder des Protokollführers *"
+    "Wahl der Präsidentin oder des Präsidenten und der Statthalterin oder des Statthalters *"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Wahlen"
+    }
+   ],
    "marginalie": [
     "Wahl des Büros"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Wahlen"
+    }
+   ],
    "marginalie": [
     "Ersatzwahlen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Interpellation"
    ]
   },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
+   "marginalie": [
+    "Auftrag"
+   ]
+  },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Kleine Anfrage"
    ]
   },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
+   "marginalie": [
+    "Antragsrecht"
+   ]
+  },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Resolution"
    ]
   },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Petition"
    ]
   },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Ständige Kommissionen"
+   ]
+  },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Wahlprüfungskommission"
    ]
   },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Spezialkommissionen"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Wahl der Kommissionen"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Behandlung der Geschäfte"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Vertraulichkeit und Geheimhaltung *"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Ausführungsbestimmungen"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ]
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Offenlegung von Interessenbindungen"
+   ]
+  },
+  "10_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Ausstand"
+   ]
+  },
+  "1_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "39_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Fraktionsanspruch"
+   ]
+  },
+  "39_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Stellvertretung"
+   ]
+  },
+  "41_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Beiräte"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "41_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Verwaltungsrat der Sozialhilfe der Stadt Basel"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "41_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Beratungsausschuss der Sozialhilfe der Stadt Basel"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "41_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Beratungsausschuss der Sozialhilfe der Stadt Basel"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "43_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
    ]
   }
  }

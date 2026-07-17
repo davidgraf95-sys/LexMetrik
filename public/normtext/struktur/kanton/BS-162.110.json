@@ -1,146 +1,420 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gegenstand und Geltungsbereich"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die Anstellung"
+    }
+   ],
    "marginalie": [
     "Anstellungsbehörden"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die Anstellung"
+    }
+   ],
    "marginalie": [
     "Schweizer Bürgerrecht"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nebenämter"
+    }
+   ],
    "marginalie": [
     "Ausschreibung und Wahl"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nebenämter"
+    }
+   ],
    "marginalie": [
     "Rücktritt und Altersgrenze"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nebenämter"
+    }
+   ],
    "marginalie": [
     "Entlassung durch den Kanton"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Nebenämter"
+    }
+   ],
    "marginalie": [
     "Ansprüche bei Ausscheiden aus dem Nebenamt"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Massnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeine Vorschriften"
+    }
+   ],
+   "marginalie": [
+    "Geltungsbereich"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Massnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Rechtliches Gehör"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Massnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": [
     "Formvorschriften"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Massnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Massnahmen gemäss § 24 des Personalgesetzes"
+    }
+   ],
    "marginalie": [
     "Frist bei Kürzung des Lohnanspruches"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Massnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Vorsorgliche Massnahmen gemäss § 25 des Personalgesetzes"
+    }
+   ],
    "marginalie": [
     "Vorsorgliche Massnahmen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Bewährungsfrist"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit und Formvorschrift"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Bewährungsfrist"
+    }
+   ],
    "marginalie": [
     "Anfechtbarkeit der Bewährungsfrist"
    ]
   },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Abfindung"
+    }
+   ],
+   "marginalie": []
+  },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Zusammensetzung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Einleitung des Verfahrens"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Verhandlung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Zirkulationsverfahren"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Entzug oder Wiederherstellung der aufschiebenden Wirkung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Prozessvertretung bei Streitigkeiten über Diskriminierungen im Erwerbsleben"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Beschwerdeverfahren wegen sexueller Belästigung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Personalrekurskommission"
+    }
+   ],
    "marginalie": [
     "Geschäftsordnung für die Personalrekurskommission"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Fortbestand der Arbeitsverhältnisse"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Arbeitsverträge"
+   ]
+  },
+  "13_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Massnahmen"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Versetzung nach § 12 Abs. 3 des Personalgesetzes"
+    }
+   ],
+   "marginalie": [
+    "Betriebliches Erfordernis"
+   ]
+  },
+  "15_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Ebis. Kündigung"
+    }
+   ],
+   "marginalie": [
+    "Keine aufschiebende Wirkung"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die Anstellung"
+    }
+   ],
+   "marginalie": [
+    "Probezeit bei verwaltungsinternem Stellenwechsel"
+   ]
+  },
+  "4_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die Anstellung"
+    }
+   ],
+   "marginalie": [
+    "Probezeit nach Eingliederungsmassnahmen"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Cbis Rechte und Pflichten aus dem Arbeitsverhältnis"
+    }
+   ],
+   "marginalie": [
+    "Reduktion des Beschäftigungsgrads nach Geburt oder Adoption eines Kindes"
+   ]
+  },
+  "8_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Cbis Rechte und Pflichten aus dem Arbeitsverhältnis"
+    }
+   ],
+   "marginalie": [
+    "Arbeitskleidung"
+   ]
+  },
+  "8_b_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Cbis Rechte und Pflichten aus dem Arbeitsverhältnis"
+    }
+   ],
+   "marginalie": [
+    "Umkleidezeit, Anrechnung von Arbeitszeit"
+   ]
+  },
+  "8_b_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Cbis Rechte und Pflichten aus dem Arbeitsverhältnis"
+    }
+   ],
+   "marginalie": [
+    "Umkleidezeit, Geldpauschale"
+   ]
+  },
+  "8_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Cbis Rechte und Pflichten aus dem Arbeitsverhältnis"
+    }
+   ],
+   "marginalie": [
+    "Kostenvorschuss für Anwaltskosten"
    ]
   }
  }

@@ -1,124 +1,312 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation"
+    }
+   ],
    "marginalie": [
     "Regierungsrat"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation"
+    }
+   ],
    "marginalie": [
     "Verwaltungskommission"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation"
+    }
+   ],
    "marginalie": [
     "Direktion"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Organisation"
+    }
+   ],
    "marginalie": [
     "Kontrollstelle"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Versicherungspflicht"
+    }
+   ],
    "marginalie": [
     "Gebäudebegriff"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Versicherungspflicht"
+    }
+   ],
    "marginalie": [
     "Ausschluss von der Versicherung"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Versicherungspflicht"
+    }
+   ],
+   "marginalie": [
+    "Bauversicherung"
+   ]
+  },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Versicherungspflicht"
+    }
+   ],
    "marginalie": [
     "Anmeldung zur Versicherung"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Neuwert"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
    "marginalie": [
     "Zeitwert"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Kunst-, Historischer, Liebhaberwert"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Ermittlung der Versicherungswerte"
+   ]
+  },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
    "marginalie": [
     "Überprüfung des Versicherungswertes"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
    "marginalie": [
     "Sonstige Gebühren"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
    "marginalie": [
     "Anpassung der Versicherungswerte"
    ]
   },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Prämienbezug"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Prämienzahlung"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Reservefonds"
+    }
+   ],
    "marginalie": [
     "Reservefonds"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Begriff der Wiederherstellung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Versicherungsleistungen"
+    }
+   ],
    "marginalie": [
     "Entschädigungsgrundsätze"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verfahren im Schadenfall"
+    }
+   ],
    "marginalie": [
     "Auszahlung der Entschädigung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Schadenverhütung und Schadenbekämpfung"
+    }
+   ],
    "marginalie": [
     "Weitere Aufgaben der Gebäudeversicherung"
    ]
   },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Schadenverhütung und Schadenbekämpfung"
+    }
+   ],
+   "marginalie": [
+    "Aufwendungen – Feuerschutzfonds"
+   ]
+  },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übertragung besonderer Aufgaben"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung des bisherigen Rechts"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "9_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Versicherungswerte"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen von der Neuwertversicherung"
    ]
   }
  }

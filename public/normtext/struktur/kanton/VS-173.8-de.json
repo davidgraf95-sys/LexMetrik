@@ -1,282 +1,709 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gleichstellung von Mann und Frau"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Anwendbare Sonderbestimmungen in Fällen des öffentlichen Rechts und des Sozialversicherungsrechts"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Anwendbare Sonderbestimmungen in Fällen des öffentlichen Rechts und des Sozialversicherungsrechts"
+    }
+   ],
    "marginalie": [
     "Parteientschädigung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Anwendbare Sonderbestimmungen in Fällen des öffentlichen Rechts und des Sozialversicherungsrechts"
+    }
+   ],
    "marginalie": [
     "Entscheid über die Kosten und Parteientschädigung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Anwendbare Sonderbestimmungen in Fällen des öffentlichen Rechts und des Sozialversicherungsrechts"
+    }
+   ],
    "marginalie": [
     "Öffentlich-rechtliche Beschwerden"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Auslagen der Behörde"
+    }
+   ],
    "marginalie": [
     "Sachverständige, Dolmetscher und Übersetzer"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Auslagen der Behörde"
+    }
+   ],
    "marginalie": [
     "Zeugen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Auslagen der Behörde"
+    }
+   ],
    "marginalie": [
     "Reiseentschädigung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Auslagen der Behörde"
+    }
+   ],
    "marginalie": [
     "Polizeibeamte und Gerichtsweibel"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Auslagen der Behörde"
+    }
+   ],
    "marginalie": [
     "Andere Auslagen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Auslagen der Behörde"
+    }
+   ],
    "marginalie": [
     "Herabsetzung oder Verzicht"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Ermessenskriterien"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Herabsetzung oder Verzicht"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 Zivilrecht"
+    }
+   ],
    "marginalie": [
     "Verfahren vor dem Gemeinderichter"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 Zivilrecht"
+    }
+   ],
    "marginalie": [
     "Andere geldwerte Streitigkeiten des Zivilrechts"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 Zivilrecht"
+    }
+   ],
    "marginalie": [
     "Andere nicht geldwerte Streitigkeiten"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 Zivilrecht"
+    }
+   ],
    "marginalie": [
     "Andere Verfahren"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 Zivilrecht"
+    }
+   ],
    "marginalie": [
     "Berufung und Beschwerde an das Kantonsgericht"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.3 Im Strafrecht"
+    }
+   ],
    "marginalie": [
     "Verfahren vor dem Polizeigericht"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.3 Im Strafrecht"
+    }
+   ],
    "marginalie": [
     "Verfahren vor dem Richter und dem Jugendgericht"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.3 Im Strafrecht"
+    }
+   ],
    "marginalie": [
     "Andere Verfahren"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.4 Im öffentlichen Recht und Sozialversicherungsrecht"
+    }
+   ],
    "marginalie": [
     "Verfahren vor den Verwaltungsbehörden"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.4 Im öffentlichen Recht und Sozialversicherungsrecht"
+    }
+   ],
    "marginalie": [
     "Verfahren durch Klageeinreichung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.4 Im öffentlichen Recht und Sozialversicherungsrecht"
+    }
+   ],
    "marginalie": [
     "Beschwerdeverfahren"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Kosten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Gebühren"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.4 Im öffentlichen Recht und Sozialversicherungsrecht"
+    }
+   ],
    "marginalie": [
     "Sozialversicherungen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Honorar des Rechtsbeistands - Bestimmungskriterien"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Streitwert"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Honorar des Rechtsbeistands - Sonderfälle"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Unentgeltlicher Rechtsbeistand"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honorar des Rechtsbeistands in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Verfahren vor dem Gemeinderichter"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honorar des Rechtsbeistands in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Andere Streitigkeiten und Zivilsachen geldwerter Natur"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honorar des Rechtsbeistands in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Verfahren in Betreibungs- und Konkurssachen"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honorar des Rechtsbeistands in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Andere Streitigkeiten und Zivilsachen"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honorar des Rechtsbeistands in Zivilsachen"
+    }
+   ],
    "marginalie": [
     "Berufung, Beschwerde, Revision, Erläuterungen und Berichtigungen,"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Honorar des Rechtsbeistands bei Strafsachen"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Honorar des Rechtsbeistands im Bereich des öffentlichen Rechts und im Sozialversicherungsrecht"
+    }
+   ],
    "marginalie": [
     "Verfahren vor den Verwaltungsbehörden"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Honorar des Rechtsbeistands im Bereich des öffentlichen Rechts und im Sozialversicherungsrecht"
+    }
+   ],
    "marginalie": [
     "Verfahren durch Klageeinreichung"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Honorar des Rechtsbeistands im Bereich des öffentlichen Rechts und im Sozialversicherungsrecht"
+    }
+   ],
    "marginalie": [
     "Beschwerdeverfahren"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Entschädigungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Honorar des Rechtsbeistands im Bereich des öffentlichen Rechts und im Sozialversicherungsrecht"
+    }
+   ],
    "marginalie": [
     "Sozialversicherungen"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Verschiedene Bestimmungen, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkassomodalitäten"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Verschiedene Bestimmungen, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Stempelgebühren"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Verschiedene Bestimmungen, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Teuerung"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Verschiedene Bestimmungen, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Verschiedene Bestimmungen, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung des bestehenden Rechts"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Verschiedene Bestimmungen, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsrecht"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Verschiedene Bestimmungen, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]

@@ -1,220 +1,712 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.A. Arten der Initiative"
+    }
+   ],
    "marginalie": [
     "Formulierte Initiativen"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.A. Arten der Initiative"
+    }
+   ],
    "marginalie": [
     "Unformulierte Initiativen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Unterschriftenliste"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Vorprüfung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Unterschrift"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Einreichung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Stimmrechtsbescheinigung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Verweigerung der Stimmrechtsbescheinigung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Prüfung des Zustandekommens"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
+   "marginalie": [
+    "Verfügung"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Rekurs"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
    "marginalie": [
     "Rückzug"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.C. Rechtliche Überprüfung"
+    }
+   ],
+   "marginalie": [
+    "Antrag des Regierungsrates"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.C. Rechtliche Überprüfung"
+    }
+   ],
    "marginalie": [
     "Zulässigkeit der Initiative"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.C. Rechtliche Überprüfung"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit des Grossen Rates"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.C. Rechtliche Überprüfung"
+    }
+   ],
    "marginalie": [
     "Beschwerde an das Verfassungsgericht"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.C. Rechtliche Überprüfung"
+    }
+   ],
    "marginalie": [
     "Beschwerdeverfahren"
    ]
   },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
+   "marginalie": [
+    "Verfahrensentscheid des Grossen Rates"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
+   "marginalie": [
+    "Berichterstattung des Regierungsrates oder der Grossratskommission"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
    "marginalie": [
     "Behandlung formulierter Initiativen"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
    "marginalie": [
     "Behandlung unformulierter Initiativen"
    ]
   },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
+   "marginalie": [
+    "Annahme einer unformulierten Vorlage in der Volksabstimmung"
+   ]
+  },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
    "marginalie": [
     "Erlassstufe bei unformulierten Initiativen"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
    "marginalie": [
     "Initiative auf Totalrevision der Kantonsverfassung"
    ]
   },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
+   "marginalie": [
+    "Wahrung der Fristen"
+   ]
+  },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
    "marginalie": [
     "Verfahren bei mehreren Initiativen zum gleichen Gegenstand"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.E. Volksabstimmung"
+    }
+   ],
    "marginalie": [
     "Festlegung des Termins"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.E. Volksabstimmung"
+    }
+   ],
    "marginalie": [
     "Abstimmung bei Initiative und Gegenvorschlag"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.A. Bei der Totalrevision der Verfassung"
+    }
+   ],
    "marginalie": [
     "Abstimmungsarten"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.A. Bei der Totalrevision der Verfassung"
+    }
+   ],
    "marginalie": [
     "Abstimmung über mehrere Verfassungsteile"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.A. Bei der Totalrevision der Verfassung"
+    }
+   ],
    "marginalie": [
     "Zeitlich gestaffelte Abstimmungen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fakultatives Referendum"
+    }
+   ],
    "marginalie": [
     "Veröffentlichung, Frist"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fakultatives Referendum"
+    }
+   ],
    "marginalie": [
     "Unterschriftenliste"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fakultatives Referendum"
+    }
+   ],
    "marginalie": [
     "Zusätzliche Bestimmungen"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fakultatives Referendum"
+    }
+   ],
    "marginalie": [
     "Einreichung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fakultatives Referendum"
+    }
+   ],
    "marginalie": [
     "Prüfung des Zustandekommens"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fakultatives Referendum"
+    }
+   ],
    "marginalie": [
     "Verfügung, Rekurs"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fakultatives Referendum"
+    }
+   ],
    "marginalie": [
     "Rückzug"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Referendum"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Volksabstimmung"
+    }
+   ],
    "marginalie": [
     "Festlegung des Termins"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Änderung bisherigen Rechts, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung und Aufhebung bisherigen Rechts"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Änderung bisherigen Rechts, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Änderung bisherigen Rechts, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Schlussbestimmung"
+   ]
+  },
+  "17_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.C. Rechtliche Überprüfung"
+    }
+   ],
+   "marginalie": [
+    "Vorlage an das Verfassungsgericht"
+   ]
+  },
+  "22_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
+   "marginalie": [
+    "Beschwerde an das Verfassungsgericht wegen Missachtung der Anliegen der Initiative"
+   ]
+  },
+  "24_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.D. Behandlung"
+    }
+   ],
+   "marginalie": [
+    "Fristen"
+   ]
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.A.bis Volksinitiative und Gemeindeinitiative"
+    }
+   ],
+   "marginalie": [
+    "Volksinitiativen"
+   ]
+  },
+  "2_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.A.bis Volksinitiative und Gemeindeinitiative"
+    }
+   ],
+   "marginalie": [
+    "Gemeindeinitiativen"
+   ]
+  },
+  "5_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "I.B. Vorprüfung, Einreichung, Rückzug"
+    }
+   ],
+   "marginalie": [
+    "Elektronische Unterzeichnung von Initiativen und Referenden"
    ]
   }
  }

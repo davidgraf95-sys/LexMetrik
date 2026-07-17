@@ -1,73 +1,354 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
-  "4": {
-   "gliederung": [],
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) I. Anerkannte Ausgaben und anrechenbare Einnahmen"
+    }
+   ],
    "marginalie": []
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)II. Beträge für den allgemeinen Lebensbedarf"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)III. Mietzins/Nebenkosten"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)IV. Spitaltaxen"
+    }
+   ],
+   "marginalie": []
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)V. Heimtaxen"
+    }
+   ],
+   "marginalie": []
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)V. Heimtaxen"
+    }
+   ],
+   "marginalie": [
+    "Auswärtiger Heimaufenthalt"
+   ]
+  },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)V. Heimtaxen"
+    }
+   ],
    "marginalie": [
     "Urlaub und Spitalaufenthalt"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)V. Heimtaxen"
+    }
+   ],
    "marginalie": [
     "Nichtvertragsheime *"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)V. Heimtaxen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)VI. Persönliche Auslagen"
+    }
+   ],
    "marginalie": []
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)VII. Taxe für ambulante Pflege"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)VIII. Beträge für den allgemeinen Lebensbedarf für kantonale Beihilfe an zu Hause Wohnende"
+    }
+   ],
    "marginalie": []
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)IX. Pflegebeihilfe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)X. Mietzinsbeihilfe"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)I. Zuständiges Amt"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)I. Zuständiges Amt"
+    }
+   ],
    "marginalie": [
     "Aufsicht"
    ]
   },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)I. Zuständiges Amt"
+    }
+   ],
+   "marginalie": [
+    "Pflegeberatung *"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)II. Verfahren"
+    }
+   ],
    "marginalie": [
     "Anmeldung"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)II. Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)II. Verfahren"
+    }
+   ],
    "marginalie": [
     "Akten"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)II. Verfahren"
+    }
+   ],
    "marginalie": [
     "Überprüfung der Anspruchsberechtigung"
    ]
   },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation und Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)III. Revision"
+    }
+   ],
+   "marginalie": []
+  },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Publikation und Wirksamkeit"
    ]
+  },
+  "14_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Berechnungsgrundlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)XI. Beiträge an die Kosten des Umweltschutzabonnementes"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

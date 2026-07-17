@@ -1,22 +1,137 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Zusammensetzung der Begutachtungskommission"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Auftrag"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Aufgaben und Kompetenzen"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": []
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": []
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    }
+   ],
    "marginalie": [
     "Verhandlungsfähigkeit"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Entscheidungsgrundlagen"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    }
+   ],
+   "marginalie": []
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    }
+   ],
    "marginalie": [
     "Protokoll und Erwägungen"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Sekretariat"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "5_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Vizepräsidium"
    ]
   }
  }

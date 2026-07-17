@@ -1,272 +1,634 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Geltungsbereich und Grundsätze"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Geltungsbereich und Grundsätze"
+    }
+   ],
    "marginalie": [
     "Grundsätze der Haushaltsführung"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Geltungsbereich und Grundsätze"
+    }
+   ],
    "marginalie": [
     "Grundsätze der Rechnungsführung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Geltungsbereich und Grundsätze"
+    }
+   ],
    "marginalie": [
     "Grundsätze der Rechnungslegung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Geltungsbereich und Grundsätze"
+    }
+   ],
    "marginalie": [
     "Aufbewahrungsfristen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Geltungsbereich und Grundsätze"
+    }
+   ],
    "marginalie": [
     "Internes Kontrollsystem (IKS)"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Gliederung der Rechnungslegung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Kontenrahmen und Finanzhandbuch"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bilanz"
+    }
+   ],
    "marginalie": [
     "Bilanz"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bilanz"
+    }
+   ],
    "marginalie": [
     "Rückstellungen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bilanz"
+    }
+   ],
    "marginalie": [
     "Rechnungsabgrenzung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Bilanz"
+    }
+   ],
    "marginalie": [
     "Eigenkapitalnachweis"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Bilanzierung und Bewertung"
+    }
+   ],
    "marginalie": [
     "Bilanzierungsgrundsätze"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Bilanzierung und Bewertung"
+    }
+   ],
    "marginalie": [
     "Bewertungsgrundsätze"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Bilanzierung und Bewertung"
+    }
+   ],
    "marginalie": [
     "Abschreibungen und Wertminderungen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Anhang"
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Erfolgsrechnung"
+    }
+   ],
    "marginalie": [
     "Erfolgsrechnung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Erfolgsrechnung"
+    }
+   ],
    "marginalie": [
     "Abtragung des Bilanzfehlbetrages"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Erfolgsrechnung"
+    }
+   ],
    "marginalie": [
     "Interne Verrechnung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Erfolgsrechnung"
+    }
+   ],
    "marginalie": [
     "Verzinsung interner Schulden"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.6 Investitionsrechnung"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.7 Geldflussrechnung"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.8 Zweckfinanzierung"
+    }
+   ],
    "marginalie": [
     "Spezialfinanzierung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.8 Zweckfinanzierung"
+    }
+   ],
    "marginalie": [
     "Fonds"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.8 Zweckfinanzierung"
+    }
+   ],
    "marginalie": [
     "Privatrechtliche Zweckbindungen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.8 Zweckfinanzierung"
+    }
+   ],
    "marginalie": [
     "Vorfinanzierung"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Aufbau des Rechnungswesens"
+    },
+    {
+     "ebene": 2,
+     "label": "2.9 Aufgaben- und Finanzplan"
+    }
+   ],
    "marginalie": [
     "Aufgaben und Finanzplan"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kreditarten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Budgetkredite"
+    }
+   ],
    "marginalie": [
     "Begriff und Inhalt"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kreditarten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Budgetkredite"
+    }
+   ],
    "marginalie": [
     "Nachtragskredit"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kreditarten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Budgetkredite"
+    }
+   ],
    "marginalie": [
     "Nicht beanspruchte Budgetkredite"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kreditarten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Verpflichtungskredite"
+    }
+   ],
    "marginalie": [
     "Begriff und Inhalt"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kreditarten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Verpflichtungskredite"
+    }
+   ],
    "marginalie": [
     "Zusatzkredite"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kreditarten"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Verpflichtungskredite"
+    }
+   ],
    "marginalie": [
     "Abrechnung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Budget"
+    }
+   ],
    "marginalie": [
     "Inhalt des Budgets"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Budget"
+    }
+   ],
    "marginalie": [
     "Umfang"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Budget"
+    }
+   ],
    "marginalie": [
     "Gesunde Finanzverwaltung"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Budget"
+    }
+   ],
    "marginalie": [
     "Entwurf des Budgets"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Aufbau und Fristen"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Vorlage"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Gemeindebehörde"
+    }
+   ],
    "marginalie": [
     "Aufsicht"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "6.2 Finanzverwaltung"
+    }
+   ],
    "marginalie": [
     "Aufgabe"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "6.2 Finanzverwaltung"
+    }
+   ],
    "marginalie": [
     "Verwaltung der Gelder"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "6.3 Rechnungsprüfungskommission"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "6.3 Rechnungsprüfungskommission"
+    }
+   ],
    "marginalie": [
     "Umfang der Kontrolltätigkeit"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "6.3 Rechnungsprüfungskommission"
+    }
+   ],
    "marginalie": [
     "Anzeige"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Umsetzung des neuen Rechts"
    ]

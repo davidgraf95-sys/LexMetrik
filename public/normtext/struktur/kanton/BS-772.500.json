@@ -1,422 +1,783 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gegenstand"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Begriffe"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Schutz der Anlagen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verhalten bei Störungen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ersatzvornahme"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Inanspruchnahme von Privatareal"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Allgemeines Zutritts- und Zugangsrecht"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Auskünfte"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Reklamationen"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Versorgungsnetz"
+    }
+   ],
    "marginalie": [
     "Umschreibung"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Versorgungsnetz"
+    }
+   ],
    "marginalie": [
     "Arbeiten am Versorgungsnetz"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Versorgungsnetz"
+    }
+   ],
    "marginalie": [
     "Änderung des Versorgungsnetzes"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Versorgungsnetz"
+    }
+   ],
    "marginalie": [
     "Beachtung von Sperrfristen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Versorgungsnetz"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Versorgungsnetz"
+    }
+   ],
    "marginalie": [
     "Unterhalt"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kundenseitige Druckregelanlage"
+    }
+   ],
    "marginalie": [
     "Umschreibung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kundenseitige Druckregelanlage"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kundenseitige Druckregelanlage"
+    }
+   ],
    "marginalie": [
     "Arbeiten an Druckregelanlagen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kundenseitige Druckregelanlage"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Umschreibung"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Arbeiten an Anschlussleitungen"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Netzanschlüsse *"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Abbruch von Gebäuden"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Beanspruchung von Grund und Boden"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Anschlussgebühr"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Gemeinsame Anschlussleitungen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Rechnungsstellung"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Änderungen der Anschlussleitung auf Wunsch der Kundin oder des Kunden"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Besondere Verhältnisse"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Anschlussleitungen"
+    }
+   ],
    "marginalie": [
     "Reparaturen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Umschreibung"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Arbeiten an Hausinstallationen"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Erteilung einer Installationsbewilligung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Erlöschen der Installationsbewilligung"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Entzug der Installationsbewilligung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Ausführungsbewilligung"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Spezialbewilligungen"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Kontrolle"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Verweigerung oder Sperrung des Anschlusses"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Periodische Sicherheitskontrolle"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Hausinstallationen"
+    }
+   ],
    "marginalie": [
     "Anpassungen der Gasqualität"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Umschreibung"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Art der Messeinrichtung, intelligente Messsysteme"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Arbeiten an Messeinrichtungen"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Standort und Raumbeanspruchung"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Unterhalt"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Zugänglichkeit"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Schutz der Messeinrichtungen"
    ]
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Messeinrichtungen"
+    }
+   ],
    "marginalie": [
     "Private Messeinrichtungen"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Messwertermittlung"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Messwertermittlung"
+    }
+   ],
    "marginalie": [
     "Messgenauigkeit"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Messwertermittlung"
+    }
+   ],
    "marginalie": [
     "Nachprüfung auf Verlangen der Kundin oder des Kunden"
    ]
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Messwertermittlung"
+    }
+   ],
    "marginalie": [
     "Ablesung"
    ]
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Messwertermittlung"
+    }
+   ],
    "marginalie": [
     "Fehlmessungen"
    ]
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Lieferbedingungen und Benützungsverhältnisse"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Lieferbedingungen und Benützungsverhältnisse"
+    }
+   ],
    "marginalie": [
     "Beginn und Ende des Benützungsverhältnisses, Haftung"
    ]
   },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Lieferbedingungen und Benützungsverhältnisse"
+    }
+   ],
    "marginalie": [
     "Verwendung des Gases"
    ]
   },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Lieferbedingungen und Benützungsverhältnisse"
+    }
+   ],
    "marginalie": [
     "Einschränkung der Lieferung von Gas"
    ]
   },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Lieferbedingungen und Benützungsverhältnisse"
+    }
+   ],
    "marginalie": [
     "Verweigerung der Lieferung von Gas"
    ]
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Lieferbedingungen und Benützungsverhältnisse"
+    }
+   ],
    "marginalie": [
     "Haftungsausschluss"
    ]
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Rechnungsstellung"
+    }
+   ],
    "marginalie": [
     "Tarife"
    ]
   },
   "64": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Rechnungsstellung"
+    }
+   ],
    "marginalie": [
     "Ausstellen der Rechnung"
    ]
   },
   "65": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Rechnungsstellung"
+    }
+   ],
    "marginalie": [
     "Rechnungsstellung an Dritte"
    ]
   },
   "66": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Rechnungsstellung"
+    }
+   ],
    "marginalie": [
     "Einsprache und Rekurs"
    ]
   },
   "67": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Rechnungsstellung"
+    }
+   ],
    "marginalie": [
     "Zahlungsverzug"
    ]
   },
   "68": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Rechnungsstellung"
+    }
+   ],
    "marginalie": [
     "Rechnungsstellung für Anschlussgebühren"
    ]
   },
   "69": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "11. Besondere Vereinbarungen und ergänzende Vorschriften"
+    }
+   ],
    "marginalie": [
     "Besondere Bedingungen und Vereinbarungen"
    ]
   },
   "70": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "11. Besondere Vereinbarungen und ergänzende Vorschriften"
+    }
+   ],
    "marginalie": [
     "Ergänzende Vorschriften"
+   ]
+  },
+  "2_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Stilllegung des Gasnetzes auf dem Gebiet des Kantons Basel-Stadt"
    ]
   }
  }

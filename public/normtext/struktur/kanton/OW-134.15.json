@@ -1,112 +1,642 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bundesrecht"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Erhöhung der Gebühr"
+   ]
+  },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Herabsetzung der Gebühr"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Augenschein und Zeugeneinvernahmen"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Gebühren im Schlichtungs- und Zivilgerichtsverfahren"
+    }
+   ],
+   "marginalie": [
+    "Schlichtungsbehörde"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Gebühren im Schlichtungs- und Zivilgerichtsverfahren"
+    }
+   ],
+   "marginalie": [
+    "Kantonsgerichtspräsidium"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Gebühren im Schlichtungs- und Zivilgerichtsverfahren"
+    }
+   ],
+   "marginalie": [
+    "Kantonsgericht"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Gebühren im Schlichtungs- und Zivilgerichtsverfahren"
+    }
+   ],
+   "marginalie": [
+    "Obergericht"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Gebühren im Strafrechtsverfahren und im Verfahren betreffend Administrativmassnahmen im Strassenverkehr"
+    }
+   ],
+   "marginalie": [
+    "Staatsanwaltschaft und Jugendanwaltschaft *"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Gebühren im Strafrechtsverfahren und im Verfahren betreffend Administrativmassnahmen im Strassenverkehr"
+    }
+   ],
+   "marginalie": [
+    "Kantonsgerichtspräsidium"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Gebühren im Strafrechtsverfahren und im Verfahren betreffend Administrativmassnahmen im Strassenverkehr"
+    }
+   ],
+   "marginalie": [
+    "Kantonsgericht"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Gebühren im Strafrechtsverfahren und im Verfahren betreffend Administrativmassnahmen im Strassenverkehr"
+    }
+   ],
+   "marginalie": [
+    "Obergericht"
+   ]
+  },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Gebühren im Strafrechtsverfahren und im Verfahren betreffend Administrativmassnahmen im Strassenverkehr"
+    }
+   ],
    "marginalie": [
     "Kostenübertragungen"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3. Gebühren im Strafrechtsverfahren und im Verfahren betreffend Administrativmassnahmen im Strassenverkehr"
+    }
+   ],
    "marginalie": [
     "Akteneinsicht"
    ]
   },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.4. Gebühren im Verfahren vor dem Verwaltungsgericht"
+    }
+   ],
+   "marginalie": [
+    "Verwaltungsgericht"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.4. Gebühren im Verfahren vor dem Verwaltungsgericht"
+    }
+   ],
+   "marginalie": [
+    "Verwaltungsgerichtspräsidium"
+   ]
+  },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1.4a. Weitere Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "1.5. Schreibgebühren und Auslagen"
+    }
+   ],
    "marginalie": [
     "Schreibgebühren"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1.4a. Weitere Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "1.5. Schreibgebühren und Auslagen"
+    }
+   ],
    "marginalie": [
     "Auslagen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung von Zeugen, Sachverständigen, Drittpersonen und Parteien"
+    }
+   ],
    "marginalie": [
     "Zeugen"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung von Zeugen, Sachverständigen, Drittpersonen und Parteien"
+    }
+   ],
    "marginalie": [
     "Sachverständige und Übersetzer *"
    ]
   },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung von Zeugen, Sachverständigen, Drittpersonen und Parteien"
+    }
+   ],
+   "marginalie": [
+    "Drittpersonen"
+   ]
+  },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
    "marginalie": [
     "Anwaltskosten"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
    "marginalie": [
     "Massgebende Gesichtspunkte"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
    "marginalie": [
     "Kostenfestsetzung und Moderation"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
    "marginalie": [
     "Vorzeitige Beendigung des Mandates"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
    "marginalie": [
     "Im Zivilprozess a. Erste Instanz *"
    ]
   },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
+   "marginalie": [
+    "c. Im Rechtsmittelverfahren"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
+   "marginalie": [
+    "Im Strafverfahren"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
+   "marginalie": [
+    "Verwaltungsgerichtliche Streitigkeiten"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
+   "marginalie": [
+    "Verfahren vor dem Verwaltungsgerichtspräsidium"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
+   "marginalie": [
+    "Zuschläge"
+   ]
+  },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
    "marginalie": [
     "Auslagen"
    ]
   },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
+   "marginalie": [
+    "Unentgeltliche Rechtspflege und amtliche Verteidigung"
+   ]
+  },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsrecht"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ]
+  },
+  "25_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1.4a. Weitere Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Obergericht als Aufsichtsbehörde"
+   ]
+  },
+  "25_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1.4a. Weitere Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Rechtshilfe"
+   ]
+  },
+  "25_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1.4a. Weitere Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Sonstige Verfahren"
+   ]
+  },
+  "25_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1.4a. Weitere Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Dienstleistungen ausserhalb eines Verfahrens"
+   ]
+  },
+  "25_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1.4a. Weitere Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Anwaltskommission *"
+   ]
+  },
+  "25_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1.4a. Weitere Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Schiedsgericht in Versicherungsstreitigkeiten"
+   ]
+  },
+  "29_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung von Zeugen, Sachverständigen, Drittpersonen und Parteien"
+    }
+   ],
+   "marginalie": [
+    "Prozessbeistand"
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung von Zeugen, Sachverständigen, Drittpersonen und Parteien"
+    }
+   ],
+   "marginalie": [
+    "Parteien"
+   ]
+  },
+  "30_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Entschädigung von Zeugen, Sachverständigen, Drittpersonen und Parteien"
+    }
+   ],
+   "marginalie": [
+    "Mediation"
+   ]
+  },
+  "35_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Entschädigung der Anwälte"
+    }
+   ],
+   "marginalie": [
+    "b. Im summarischen Verfahren"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Massgebende Gesichtspunkte"
+   ]
+  },
+  "5_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Stundung , Erlass und Abschreibung der Kosten"
+   ]
+  },
+  "5_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Amtliche Kosten der Behörden"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Gebühren im Schlichtungs- und Zivilgerichtsverfahren"
+    }
+   ],
+   "marginalie": [
+    "Begriffe"
    ]
   }
  }

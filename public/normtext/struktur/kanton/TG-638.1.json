@@ -1,58 +1,180 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Grundsätze"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Ausnahmen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Verfahrensgebühr"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Barauslagen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Erlass, Stundung"
    ]
   },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verfahrensgebühr"
+    }
+   ],
+   "marginalie": [
+    "Strafverfolgungsbehörden"
+   ]
+  },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verfahrensgebühr"
+    }
+   ],
    "marginalie": [
     "Friedensrichter"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verfahrensgebühr"
+    }
+   ],
+   "marginalie": [
+    "Einzelrichter der Bezirksgerichte"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verfahrensgebühr"
+    }
+   ],
+   "marginalie": [
+    "Kindes- und Erwachsenenschutzbehörden"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verfahrensgebühr"
+    }
+   ],
    "marginalie": [
     "Bezirksgerichte *"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verfahrensgebühr"
+    }
+   ],
    "marginalie": [
     "Obergericht, Obergerichtspräsident"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verfahrensgebühr"
+    }
+   ],
    "marginalie": [
     "Externe Verwaltungsrechtspflege"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Hängige Verfahren"
+   ]
+  },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Mehrere Beteiligte"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Verfahrensgebühr"
+    }
+   ],
+   "marginalie": [
+    "Zwangsmassnahmengericht"
    ]
   }
  }

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
    "gliederung": [],
@@ -8,662 +8,4665 @@
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Baureife"
+    },
+    {
+     "ebene": 3,
+     "label": "1.1.1. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Baureife"
+    },
+    {
+     "ebene": 3,
+     "label": "1.1.2. Erschliessung"
+    },
+    {
+     "ebene": 4,
+     "label": "1.1.2.a) Anforderungen"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Baureife"
+    },
+    {
+     "ebene": 3,
+     "label": "1.1.2. Erschliessung"
+    },
+    {
+     "ebene": 4,
+     "label": "1.1.2.b) Zufahrten"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "A. Mass der baulichen Nutzung"
+    },
+    {
+     "ebene": 5,
+     "label": "A.I. Berechnungsarten"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "A. Mass der baulichen Nutzung"
+    },
+    {
+     "ebene": 5,
+     "label": "A.II. Berechnung mit Vergleichsprojekt"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "A. Mass der baulichen Nutzung"
+    },
+    {
+     "ebene": 5,
+     "label": "A.III. Ausnutzungsziffern"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "A. Mass der baulichen Nutzung"
+    },
+    {
+     "ebene": 5,
+     "label": "A.IV. Bruttogeschossfläche"
+    }
+   ],
    "marginalie": [
     "*"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "1. Spielraum"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "a) Vollgeschosse"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "b) Dachgeschosse"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "c) Untergeschosse"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.1. Definition"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.2.a) Höchstmass"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.2.b) Beschränkungen"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.2.c) Mindestmass"
+    }
+   ],
+   "marginalie": []
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "aa) im Allgemeinen"
+    }
+   ],
+   "marginalie": []
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "bb) vor Strassenlinien"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.3.b) Hofseite"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.3.c) Beschränkungen"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.3.d) Abweichende Vereinbarungen"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "4.a)aa) Höchsthöhe"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "4.a)bb) Beschränkung durch Lichteinfallswinkel"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "4.a)cc) Messung"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "4.b)aa) Definition"
+    }
+   ],
    "marginalie": []
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "4.b)bb) Firsthöhe"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.5. Dachgestaltung"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "II.6. Beschränkungen des Projektierungsspielraumes"
+    }
+   ],
+   "marginalie": []
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "B.III. Andere Bebauungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "B.IV.1. Allgemeine Regeln"
+    }
+   ],
+   "marginalie": []
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "B.IV.2. Einschränkungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "B.IV.3 Erleichterungen"
+    }
+   ],
    "marginalie": []
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zonen 5a, 4, 3, 2 und 2a"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Anordnung"
+    },
+    {
+     "ebene": 5,
+     "label": "B.V. Unbeachtliche Bauteile"
+    }
+   ],
    "marginalie": []
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.I. Industrie- und Gewerbezone (Zone 7)"
+    },
+    {
+     "ebene": 5,
+     "label": "2.I.1. Nutzungsart"
+    }
+   ],
    "marginalie": []
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.I. Industrie- und Gewerbezone (Zone 7)"
+    },
+    {
+     "ebene": 5,
+     "label": "2.I.2. Nutzungsmass"
+    }
+   ],
    "marginalie": []
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.II. Zonen 6 und 5"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.III. Stadt- und Dorfbild-Schutzzone"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.IV. Stadt- und Dorfbild-Schonzone"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.V. Zone für Nutzungen im öffentlichen Interesse"
+    }
+   ],
    "marginalie": []
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.VI. Zonen für Freiraumnutzungen"
+    },
+    {
+     "ebene": 5,
+     "label": "2.VI.1. Grünzonen und Grünanlagenzonen"
+    }
+   ],
    "marginalie": [
     "a) Allgemeine Bestimmungen *"
    ]
   },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.VI. Zonen für Freiraumnutzungen"
+    },
+    {
+     "ebene": 5,
+     "label": "2.VI.2. Landwirtschaftszonen"
+    }
+   ],
+   "marginalie": []
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.VI. Zonen für Freiraumnutzungen"
+    },
+    {
+     "ebene": 5,
+     "label": "2.VI.3. Zonen des Natur- und Landschaftsschutzes"
+    }
+   ],
+   "marginalie": []
+  },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Keiner Zone zugewiesene Gebiete"
+    }
+   ],
+   "marginalie": []
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Besondere Verhältnisse"
+    },
+    {
+     "ebene": 4,
+     "label": "4.1. Zonengrenzen"
+    }
+   ],
    "marginalie": []
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Besondere Verhältnisse"
+    },
+    {
+     "ebene": 4,
+     "label": "4.2. Gewässer"
+    }
+   ],
    "marginalie": [
     "*"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Besondere Verhältnisse"
+    },
+    {
+     "ebene": 4,
+     "label": "4.3. Politische Grenzen"
+    }
+   ],
    "marginalie": []
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Benutzung von Nachbargrundstücken"
+    },
+    {
+     "ebene": 4,
+     "label": "5.I. Durch Bauten"
+    },
+    {
+     "ebene": 5,
+     "label": "5.I.1. Bedingungen"
+    }
+   ],
    "marginalie": []
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Benutzung von Nachbargrundstücken"
+    },
+    {
+     "ebene": 4,
+     "label": "5.I. Durch Bauten"
+    },
+    {
+     "ebene": 5,
+     "label": "5.I.2. Kostenaufteilung"
+    }
+   ],
    "marginalie": []
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Benutzung von Nachbargrundstücken"
+    },
+    {
+     "ebene": 4,
+     "label": "5.I. Durch Bauten"
+    },
+    {
+     "ebene": 5,
+     "label": "5.I.3. Grenzänderungen"
+    }
+   ],
    "marginalie": []
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Benutzung von Nachbargrundstücken"
+    },
+    {
+     "ebene": 4,
+     "label": "5.II. Vorübergehende Benutzung"
+    }
+   ],
    "marginalie": []
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Benutzung von Nachbargrundstücken"
+    },
+    {
+     "ebene": 4,
+     "label": "5.II. Vorübergehende Benutzung"
+    },
+    {
+     "ebene": 5,
+     "label": "5.III. Streitigkeiten"
+    }
+   ],
    "marginalie": []
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "6. Abschnitt: Nutzung der Freiflächen"
+    },
+    {
+     "ebene": 4,
+     "label": "6.1. Hinter der Baulinie"
+    },
+    {
+     "ebene": 5,
+     "label": "6.1.a) Gärten und Grünflächen"
+    }
+   ],
    "marginalie": []
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "6. Abschnitt: Nutzung der Freiflächen"
+    },
+    {
+     "ebene": 4,
+     "label": "6.1. Hinter der Baulinie"
+    },
+    {
+     "ebene": 5,
+     "label": "6.1.b) Lager- und Abstellplätze"
+    }
+   ],
    "marginalie": []
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "6. Abschnitt: Nutzung der Freiflächen"
+    },
+    {
+     "ebene": 4,
+     "label": "6.1. Hinter der Baulinie"
+    },
+    {
+     "ebene": 5,
+     "label": "6.1.c) Unterirdische Bauten"
+    }
+   ],
+   "marginalie": []
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "6. Abschnitt: Nutzung der Freiflächen"
+    },
+    {
+     "ebene": 4,
+     "label": "6.2. Vorgärten"
+    }
+   ],
    "marginalie": []
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "6. Abschnitt: Nutzung der Freiflächen"
+    },
+    {
+     "ebene": 4,
+     "label": "6.3. Vor Strassen- und Weglinien"
+    }
+   ],
    "marginalie": []
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "6. Abschnitt: Nutzung der Freiflächen"
+    },
+    {
+     "ebene": 4,
+     "label": "6.4. Einfriedungen"
+    }
+   ],
    "marginalie": []
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "7. Abschnitt: Gestaltung von Bauten und Anlagen"
+    }
+   ],
    "marginalie": []
   },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.I. Sicherheit"
+    },
+    {
+     "ebene": 4,
+     "label": "3.I.1. Grundsätze"
+    }
+   ],
    "marginalie": []
   },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.I. Sicherheit"
+    },
+    {
+     "ebene": 4,
+     "label": "3.I.2. Sanierungen"
+    }
+   ],
    "marginalie": []
   },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.II. Vermeidung von Störungen"
+    }
+   ],
    "marginalie": []
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.III. Behindertengerechtes Bauen"
+    }
+   ],
    "marginalie": []
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.IV. Belichtung und Lüftung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.IV.1. Fenster"
+    },
+    {
+     "ebene": 5,
+     "label": "IV.1.a) Mindestgrösse"
+    }
+   ],
    "marginalie": []
   },
   "64": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.IV. Belichtung und Lüftung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.IV.1. Fenster"
+    },
+    {
+     "ebene": 5,
+     "label": "IV.1b) Anrechenbare Flächen"
+    }
+   ],
    "marginalie": []
   },
   "65": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.IV. Belichtung und Lüftung"
+    },
+    {
+     "ebene": 4,
+     "label": "IV.2. Lüftung"
+    }
+   ],
+   "marginalie": []
+  },
+  "66": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.IV. Belichtung und Lüftung"
+    },
+    {
+     "ebene": 4,
+     "label": "IV.3. Raumhöhe"
+    }
+   ],
    "marginalie": []
   },
   "67": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.V. Dämmung und Abdichtung"
+    }
+   ],
    "marginalie": []
   },
   "68": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.1. Sanitäre Einrichtungen"
+    }
+   ],
    "marginalie": []
   },
   "69": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.2. Kochbereich"
+    }
+   ],
    "marginalie": []
   },
   "70": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.3. Abstellraum"
+    }
+   ],
    "marginalie": []
   },
   "71": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.4. Spiel- und Aufenthaltsflächen im Freien"
+    }
+   ],
    "marginalie": []
   },
   "72": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.5. Dachflächen"
+    }
+   ],
+   "marginalie": []
+  },
+  "73": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.6. Abstellplätze für Fahrzeuge"
+    },
+    {
+     "ebene": 5,
+     "label": "VI.6.a) Velos, Mofas, Kinderwagen und Kinderfahrzeuge"
+    }
+   ],
    "marginalie": []
   },
   "74": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.6. Abstellplätze für Fahrzeuge"
+    },
+    {
+     "ebene": 5,
+     "label": "3.VI.6.b) Autos"
+    }
+   ],
    "marginalie": [
     "*"
    ]
   },
+  "75": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.6. Abstellplätze für Fahrzeuge"
+    },
+    {
+     "ebene": 5,
+     "label": "3.VI.6.c) Lage"
+    }
+   ],
+   "marginalie": []
+  },
   "76": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VII. Kennzeichnung der Gebäude"
+    }
+   ],
    "marginalie": []
   },
   "77": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.I. Bestandesschutz"
+    },
+    {
+     "ebene": 4,
+     "label": "4.I.1. Grundsatz"
+    }
+   ],
+   "marginalie": []
+  },
+  "78": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.I. Bestandesschutz"
+    },
+    {
+     "ebene": 4,
+     "label": "4.I.2. Zusätzliche Dämmung"
+    }
+   ],
    "marginalie": []
   },
   "79": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.I. Bestandesschutz"
+    },
+    {
+     "ebene": 4,
+     "label": "4.I.3. Beschränkungen"
+    }
+   ],
    "marginalie": []
   },
   "80": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.II. Ausnahmen"
+    },
+    {
+     "ebene": 4,
+     "label": "4.II.1. Ausnahmebewilligungen"
+    },
+    {
+     "ebene": 5,
+     "label": "4.II.1.a) Grundsatz"
+    }
+   ],
+   "marginalie": []
+  },
+  "81": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.II. Ausnahmen"
+    },
+    {
+     "ebene": 4,
+     "label": "4.II.1. Ausnahmebewilligungen"
+    },
+    {
+     "ebene": 5,
+     "label": "4.II.1b) Einschränkungen"
+    }
+   ],
    "marginalie": []
   },
   "82": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.II. Ausnahmen"
+    },
+    {
+     "ebene": 4,
+     "label": "4.II.1. Ausnahmebewilligungen"
+    },
+    {
+     "ebene": 5,
+     "label": "4.II.1.c) Nebenbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "83": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Abweichungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.II. Ausnahmen"
+    },
+    {
+     "ebene": 4,
+     "label": "4.II.2. Ausnahmeverbote"
+    }
+   ],
    "marginalie": []
   },
   "84": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.I. Zuständigkeit"
+    }
+   ],
    "marginalie": []
   },
   "85": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.II. Art und Umfang"
+    }
+   ],
    "marginalie": []
   },
   "86": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.III. Koordination"
+    }
+   ],
    "marginalie": []
   },
   "87": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.IV. Behandlungsdauer"
+    }
+   ],
    "marginalie": []
   },
   "88": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.V. Befugnisse der Vollzugsorgane"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Kapitel.V.1. Kontrollen"
+    }
+   ],
    "marginalie": []
   },
   "89": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.V. Befugnisse der Vollzugsorgane"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Kapitel.V.2. Abwehrmassnahmen"
+    }
+   ],
    "marginalie": []
   },
   "90": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.V. Befugnisse der Vollzugsorgane"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Kapitel.V.3. Ersatzvornahme"
+    }
+   ],
    "marginalie": []
   },
   "91": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.VI. Rechtspflege"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Kapitel.VI.1. Baueinsprache"
+    }
+   ],
    "marginalie": []
   },
   "92": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.VI. Rechtspflege"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Kapitel.VI.2. Baurekurs"
+    }
+   ],
    "marginalie": []
   },
   "93": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.1. Abschnitt: Grundsätze"
+    }
+   ],
    "marginalie": []
   },
   "94": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.2. Abschnitt: Richtplanung"
+    }
+   ],
    "marginalie": []
   },
   "95": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.A. Pläne"
+    },
+    {
+     "ebene": 5,
+     "label": "3.A.I. Zonenpläne"
+    }
+   ],
    "marginalie": []
   },
   "96": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.A. Pläne"
+    },
+    {
+     "ebene": 5,
+     "label": "A.II.1.a) Definitionen"
+    }
+   ],
+   "marginalie": []
+  },
+  "97": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.A. Pläne"
+    },
+    {
+     "ebene": 5,
+     "label": "A.II.1.b) Erschliessungsplan"
+    }
+   ],
    "marginalie": []
   },
   "98": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.A. Pläne"
+    },
+    {
+     "ebene": 5,
+     "label": "A.II.1.c) Projektierungsvorschriften"
+    }
+   ],
    "marginalie": []
   },
+  "99": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.A. Pläne"
+    },
+    {
+     "ebene": 5,
+     "label": "3.A.II.2. Baugrenzen"
+    }
+   ],
+   "marginalie": []
+  },
+  "100": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.A. Pläne"
+    },
+    {
+     "ebene": 5,
+     "label": "3.A.III. Leitungspläne"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "101": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.A. Pläne"
+    },
+    {
+     "ebene": 5,
+     "label": "3.A.IV. Bebauungspläne"
+    }
+   ],
    "marginalie": [
     "*"
    ]
   },
   "102": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.A. Pläne"
+    },
+    {
+     "ebene": 5,
+     "label": "3.A.V. Nutzungsüberlagerungen"
+    }
+   ],
    "marginalie": []
   },
   "103": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.B. Zuständigkeiten"
+    },
+    {
+     "ebene": 5,
+     "label": "3.B.1. Gemeinden"
+    }
+   ],
    "marginalie": []
   },
   "104": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.B.2. Kanton"
+    }
+   ],
    "marginalie": []
   },
   "105": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.B.2. Kanton"
+    },
+    {
+     "ebene": 5,
+     "label": "3.B.3. Legislative"
+    }
+   ],
+   "marginalie": []
+  },
+  "106": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.B.2. Kanton"
+    },
+    {
+     "ebene": 5,
+     "label": "3.B.4. Exekutive"
+    }
+   ],
    "marginalie": []
   },
   "107": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.B.2. Kanton"
+    },
+    {
+     "ebene": 5,
+     "label": "3.B.5. Planungskoordination"
+    }
+   ],
    "marginalie": []
   },
   "108": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.C. Planungsverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "6.C.I. Vorprüfung"
+    }
+   ],
    "marginalie": []
   },
   "109": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.C. Planungsverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "6.C.II. Planauflage"
+    }
+   ],
    "marginalie": []
   },
   "110": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.C. Planungsverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "C.III.1. Legitimation"
+    }
+   ],
    "marginalie": []
   },
   "111": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.C. Planungsverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "C.II.2. Behandlung"
+    }
+   ],
    "marginalie": []
   },
   "112": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.C. Planungsverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "C.IV. Eröffnung"
+    }
+   ],
    "marginalie": []
   },
   "113": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.C. Planungsverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "C.V. Rekurs"
+    }
+   ],
+   "marginalie": []
+  },
+  "114": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.C. Planungsverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "VI.1. Zuständigkeit"
+    }
+   ],
    "marginalie": []
   },
   "115": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.C. Planungsverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "VI.2. Bekanntgabe"
+    }
+   ],
    "marginalie": []
   },
   "116": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.D. Planungszonen"
+    },
+    {
+     "ebene": 5,
+     "label": "D.1. Voraussetzungen"
+    }
+   ],
    "marginalie": []
   },
   "117": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.D. Planungszonen"
+    },
+    {
+     "ebene": 5,
+     "label": "D.2. Geltungsdauer"
+    }
+   ],
    "marginalie": []
   },
   "118": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.3. Abschnitt: Nutzungsplanung"
+    },
+    {
+     "ebene": 4,
+     "label": "6.D. Planungszonen"
+    },
+    {
+     "ebene": 5,
+     "label": "D.3. Verfahren"
+    }
+   ],
    "marginalie": []
   },
   "119": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.4. Abschnitt: Öffentlichkeit der Pläne"
+    }
+   ],
    "marginalie": []
   },
   "120": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.a) Zweck"
+    }
+   ],
    "marginalie": []
   },
   "121": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.b) Höhe"
+    }
+   ],
    "marginalie": []
   },
   "122": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.c) Erhebung"
+    }
+   ],
    "marginalie": []
   },
   "123": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.d) Haftung der Grundstücke"
+    }
+   ],
    "marginalie": []
   },
   "124": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.e) Befreiung"
+    }
+   ],
    "marginalie": []
   },
   "125": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5. Abschnitt: 2. Minderwertentschädigung"
+    },
+    {
+     "ebene": 5,
+     "label": "2. a) Forderungsanmeldung"
+    }
+   ],
    "marginalie": []
   },
   "126": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5. Abschnitt: 2. Minderwertentschädigung"
+    },
+    {
+     "ebene": 5,
+     "label": "2. b) Festsetzung"
+    }
+   ],
    "marginalie": []
   },
   "127": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5. Abschnitt: 3. Heimschlag"
+    }
+   ],
    "marginalie": []
   },
   "128": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.I. Zweck"
+    }
+   ],
    "marginalie": []
   },
   "129": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.II. Einleitung"
+    }
+   ],
    "marginalie": []
   },
   "130": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.III. Gebietsabgrenzungsplan"
+    },
+    {
+     "ebene": 5,
+     "label": "III.1. Festsetzung"
+    }
+   ],
    "marginalie": []
   },
   "131": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.III. Gebietsabgrenzungsplan"
+    },
+    {
+     "ebene": 5,
+     "label": "2.a) Umlegungsbann"
+    }
+   ],
    "marginalie": []
   },
   "132": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.III. Gebietsabgrenzungsplan"
+    },
+    {
+     "ebene": 5,
+     "label": "2.b) Umlegungsgenossenschaft"
+    }
+   ],
    "marginalie": []
   },
   "133": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.IV. Zuteilungsplan"
+    }
+   ],
    "marginalie": []
   },
   "134": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.V. Zuteilungsgrundsätze"
+    },
+    {
+     "ebene": 5,
+     "label": "V.1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "135": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.V. Zuteilungsgrundsätze"
+    },
+    {
+     "ebene": 5,
+     "label": "V.2. Bauten"
+    }
+   ],
    "marginalie": []
   },
   "136": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.V. Zuteilungsgrundsätze"
+    },
+    {
+     "ebene": 5,
+     "label": "V.3. Lastenbereinigung"
+    }
+   ],
    "marginalie": []
   },
   "137": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.V. Zuteilungsgrundsätze"
+    },
+    {
+     "ebene": 5,
+     "label": "V.4. Massgebliche Werte"
+    }
+   ],
+   "marginalie": []
+  },
+  "138": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.VI. Zurechnung von Allmend"
+    },
+    {
+     "ebene": 5,
+     "label": "1.a) Bei Zuteilung nach Flächen"
+    }
+   ],
    "marginalie": []
   },
   "139": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.VI. Zurechnung von Allmend"
+    },
+    {
+     "ebene": 5,
+     "label": "1.b) Bei Zuteilung nach Werten"
+    }
+   ],
    "marginalie": []
   },
   "140": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "7.A.VI. Zurechnung von Allmend"
+    },
+    {
+     "ebene": 5,
+     "label": "A.VI.2. Zugeteilte Allmendflächen"
+    }
+   ],
    "marginalie": []
   },
   "141": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.VII. Ausschlagung der Zuteilung"
+    }
+   ],
    "marginalie": []
   },
   "142": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.VIII. Planauflage"
+    }
+   ],
    "marginalie": []
   },
   "143": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.IX. Anfechtung des Zuteilungsplanes"
+    }
+   ],
    "marginalie": []
   },
   "144": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.X. Umlegungsbeschluss"
+    }
+   ],
    "marginalie": []
   },
   "145": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.XI. Nutzungspflicht"
+    }
+   ],
    "marginalie": []
   },
   "146": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.XII. Kosten"
+    },
+    {
+     "ebene": 5,
+     "label": "XII.1. Verteiler"
+    }
+   ],
    "marginalie": []
   },
   "147": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.XII. Kosten"
+    },
+    {
+     "ebene": 5,
+     "label": "XII.2. Vorschüsse"
+    }
+   ],
    "marginalie": []
   },
   "148": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.XII. Kosten"
+    },
+    {
+     "ebene": 5,
+     "label": "XII.3. Kosten von Streitigkeiten"
+    }
+   ],
    "marginalie": []
   },
   "149": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.A. Landumlegung"
+    },
+    {
+     "ebene": 4,
+     "label": "A.XII. Kosten"
+    },
+    {
+     "ebene": 5,
+     "label": "XII.4. Grundstückshaftung"
+    }
+   ],
    "marginalie": []
   },
   "150": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B. Grenzregulierung"
+    },
+    {
+     "ebene": 4,
+     "label": "B.1. Voraussetzungen und Verfahren"
+    }
+   ],
    "marginalie": []
   },
   "151": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B. Grenzregulierung"
+    },
+    {
+     "ebene": 4,
+     "label": "B.2. Kosten"
+    }
+   ],
+   "marginalie": []
+  },
+  "152": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Bodenordnung"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C. Veränderungsverbot"
+    }
+   ],
    "marginalie": []
   },
   "153": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.1. Umfang"
+    },
+    {
+     "ebene": 5,
+     "label": "1.1.a) Gemeinden"
+    }
+   ],
    "marginalie": []
   },
   "154": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.1. Umfang"
+    },
+    {
+     "ebene": 5,
+     "label": "1.1.b) Kanton"
+    }
+   ],
    "marginalie": []
   },
   "155": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.2. Zeitpunkt"
+    }
+   ],
    "marginalie": []
   },
   "156": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3. Verfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "3.a) Baubeschluss"
+    }
+   ],
    "marginalie": []
   },
   "157": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3. Verfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "3.b) Zustellung und Anfechtung"
+    }
+   ],
    "marginalie": []
   },
   "158": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3. Verfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "3.c) Rechtserwerb"
+    }
+   ],
    "marginalie": []
   },
   "159": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.3. Verfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "3.d) Rückerstattung von Kostenvorschüssen"
+    }
+   ],
    "marginalie": []
   },
   "160": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.4. Besonderheiten"
+    },
+    {
+     "ebene": 5,
+     "label": "4.a) Duldungspflicht"
+    }
+   ],
    "marginalie": []
   },
   "161": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.4. Besonderheiten"
+    },
+    {
+     "ebene": 5,
+     "label": "4.b) Strassenunterhalt"
+    }
+   ],
    "marginalie": []
   },
   "162": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.4. Besonderheiten"
+    },
+    {
+     "ebene": 5,
+     "label": "c).aa) Erstellung und Beseitigung"
+    }
+   ],
    "marginalie": []
   },
   "163": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.1. Abschnitt: Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "1.4. Besonderheiten"
+    },
+    {
+     "ebene": 5,
+     "label": "c).bb) Unterhalt und Erneuerung"
+    }
+   ],
    "marginalie": []
   },
   "164": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.A. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "165": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.I. Beitragspflicht"
+    }
+   ],
    "marginalie": []
   },
   "166": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.II.1. Strassenbeiträge"
+    }
+   ],
    "marginalie": []
   },
   "167": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.II.2. Kanalisationsbeiträge"
+    }
+   ],
    "marginalie": []
   },
   "168": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.II.3.a) Grundstücksfläche"
+    }
+   ],
    "marginalie": []
   },
   "169": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.II.3.b) Geschossfläche"
+    }
+   ],
    "marginalie": []
   },
   "170": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.III. Verfahren"
+    }
+   ],
    "marginalie": []
   },
   "171": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.IV. Zahlungstermine"
+    }
+   ],
    "marginalie": []
   },
   "172": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.V. Zinsausgleich"
+    }
+   ],
    "marginalie": []
   },
   "173": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.B. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 5,
+     "label": "8.B.VI. Haftung der Grundstücke"
+    }
+   ],
    "marginalie": []
   },
   "174": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.C. Abwassergebühr"
+    },
+    {
+     "ebene": 5,
+     "label": "C.1. Berechnung"
+    }
+   ],
    "marginalie": []
   },
   "175": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.C. Abwassergebühr"
+    },
+    {
+     "ebene": 5,
+     "label": "C.2. Verfahren"
+    }
+   ],
    "marginalie": []
   },
   "176": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Erschliessung"
+    },
+    {
+     "ebene": 3,
+     "label": "8.2. Abschnitt: Finanzierung"
+    },
+    {
+     "ebene": 4,
+     "label": "8.D. Kantonsbeiträge"
+    }
+   ],
    "marginalie": []
   },
   "177": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.1. Änderung altrechtlicher Vorschriften und Pläne"
+    }
+   ],
+   "marginalie": []
+  },
+  "178": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.2. Hängige Verfahren"
+    }
+   ],
    "marginalie": []
   },
   "179": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.3. Weitergeltung von Zonenvorschriften"
+    }
+   ],
    "marginalie": []
   },
   "180": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.4. Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "I.4.a) Provisorisch angelegte Strassen"
+    }
+   ],
    "marginalie": []
   },
   "181": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.4. Erschliessungspflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "I.4.b) Leistungen an die Landgemeinden"
+    }
+   ],
    "marginalie": []
   },
   "182": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.5. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 4,
+     "label": "I.5.a) Strassenbeiträge"
+    }
+   ],
    "marginalie": []
   },
   "183": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.5. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 4,
+     "label": "I.5.b) Kanalisationsbeiträge"
+    }
+   ],
    "marginalie": []
   },
   "184": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.5. Erschliessungsbeiträge"
+    },
+    {
+     "ebene": 4,
+     "label": "I.5.c) Übergangsfrist für die Landgemeinden"
+    }
+   ],
    "marginalie": []
   },
   "185": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "I.6. Mehrwertabgaben"
+    }
+   ],
    "marginalie": []
   },
   "186": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Übergangs- und Schlussvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Aufgehobene Erlasse"
+    }
+   ],
    "marginalie": []
+  },
+  "120_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.abis) Ausgangswert für die Berechnung"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
+  "120_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.abis) Ausgangswert für die Berechnung"
+    }
+   ],
+   "marginalie": [
+    "Industrie- und Gewerbezone (Zone 7)"
+   ]
+  },
+  "120_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.abis) Ausgangswert für die Berechnung"
+    }
+   ],
+   "marginalie": [
+    "Bahnareale und Zone für Nutzungen im öffentlichen Interesse"
+   ]
+  },
+  "120_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.abis) Ausgangswert für die Berechnung"
+    }
+   ],
+   "marginalie": [
+    "Stadt- und Dorfbild-Schutzzone"
+   ]
+  },
+  "120_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.abis) Ausgangswert für die Berechnung"
+    }
+   ],
+   "marginalie": [
+    "Erleichterungen für Industrie- und Gewerbebauten (§ 95 Abs. 1 Ziff. 5)"
+   ]
+  },
+  "121_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.5. Abschnitt: Ausgleich, Entschädigung, Heimschlag"
+    },
+    {
+     "ebene": 4,
+     "label": "5.Abschnitt: 1. Mehrwertabgaben"
+    },
+    {
+     "ebene": 5,
+     "label": "3.5.1.bbis Mehrwertabgabe bei dauerhaft gemeinnütziger Vermietung"
+    }
+   ],
+   "marginalie": []
+  },
+  "40_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.VI. Zonen für Freiraumnutzungen"
+    },
+    {
+     "ebene": 5,
+     "label": "2.VI.1. Grünzonen und Grünanlagenzonen"
+    }
+   ],
+   "marginalie": [
+    "b) Grünzonen"
+   ]
+  },
+  "40_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.VI. Zonen für Freiraumnutzungen"
+    },
+    {
+     "ebene": 5,
+     "label": "2.VI.1. Grünzonen und Grünanlagenzonen"
+    }
+   ],
+   "marginalie": [
+    "c) Grünanlagenzonen"
+   ]
+  },
+  "40_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Andere Zonen"
+    },
+    {
+     "ebene": 4,
+     "label": "2.VI. Zonen für Freiraumnutzungen"
+    },
+    {
+     "ebene": 5,
+     "label": "2.VI.1. Grünzonen und Grünanlagenzonen"
+    }
+   ],
+   "marginalie": [
+    "d) Spezielle Nutzungsvorschriften"
+   ]
+  },
+  "46_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Bebauung"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Besondere Verhältnisse"
+    },
+    {
+     "ebene": 4,
+     "label": "4.3. Politische Grenzen"
+    }
+   ],
+   "marginalie": [
+    "Dokumentation unterirdischer Anlagen"
+   ]
+  },
+  "62_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.III. Behindertengerechtes Bauen"
+    }
+   ],
+   "marginalie": []
+  },
+  "75 a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.7. Fahrtenmodell"
+    },
+    {
+     "ebene": 5,
+     "label": "3.VI.7a) Festlegung einer Jahresfahrtenzahl bei verkehrsintensiven Einrichtungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "75 b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.7. Fahrtenmodell"
+    },
+    {
+     "ebene": 5,
+     "label": "3.VI.7b) Berichterstattung"
+    }
+   ],
+   "marginalie": []
+  },
+  "75 c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Bauweise und Ausstattung"
+    },
+    {
+     "ebene": 3,
+     "label": "3.VI. Ausstattung"
+    },
+    {
+     "ebene": 4,
+     "label": "3.VI.7. Fahrtenmodell"
+    },
+    {
+     "ebene": 5,
+     "label": "3.VI.7c) Überschreitung der Jahresfahrtenzahl"
+    }
+   ],
+   "marginalie": []
+  },
+  "92_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Bauvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Vollzug"
+    },
+    {
+     "ebene": 3,
+     "label": "5.Kapitel.VII. Strafbestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "93_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Planung, Bodenordnung, Erschliessung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Planung"
+    },
+    {
+     "ebene": 3,
+     "label": "6.1. Abschnitt: Grundsätze"
+    }
+   ],
+   "marginalie": [
+    "Agglomerationsprogramm"
+   ]
   }
  }
 }

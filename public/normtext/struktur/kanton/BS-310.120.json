@@ -1,261 +1,897 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "II.1. Aufsicht und Vollzug"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "II.2. Gesundheitspolizeiliche Massnahmen"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "II.3. Bewilligungsbehörden"
+    }
+   ],
    "marginalie": [
     "Medizinische Dienste *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "II.3. Bewilligungsbehörden"
+    }
+   ],
    "marginalie": [
     "Kantonales Veterinäramt *"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "II.3. Bewilligungsbehörden"
+    }
+   ],
    "marginalie": [
     "Gesundheitsversorgung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bewilligungs- und Meldepflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "III.1. Bewilligungspflicht"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bewilligungs- und Meldepflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "III.2. Bewilligung zur eingeschränkten Berufsausübung"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bewilligungs- und Meldepflichten"
+    },
+    {
+     "ebene": 2,
+     "label": "III.3. Meldepflicht gemäss Art. 35 MedBG und Art. 23 PsyG"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.1. Bewilligungsgesuch"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.2. Urkunden und Angaben"
+    }
+   ],
    "marginalie": [
     "Allgemeine Urkunden"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.2. Urkunden und Angaben"
+    }
+   ],
    "marginalie": [
     "Zusätzliche Urkunden für die Betriebsbewilligung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.2. Urkunden und Angaben"
+    }
+   ],
    "marginalie": [
     "Weitere Urkunden"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.2. Urkunden und Angaben"
+    }
+   ],
    "marginalie": [
     "Angaben"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.3. Bewilligungserteilung und Publikation"
+    }
+   ],
    "marginalie": [
     "Bewilligungserteilung"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.3. Bewilligungserteilung und Publikation"
+    }
+   ],
    "marginalie": [
     "Publikation"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.4. Einfaches, rasches und kostenloses Verfahren"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.5. Erlöschen und Entzug der Bewilligung"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bewilligungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.6. Gebühren und Kosten"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Änderung der Verhältnisse und Überprüfung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.1. Änderung der Verhältnisse"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Änderung der Verhältnisse und Überprüfung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.2. Überprüfung der Bewilligungsvoraussetzungen und der Berufspflichten"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Pflichten der Fachpersonen und Betriebe"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.1. Anwesenheitspflicht"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Pflichten der Fachpersonen und Betriebe"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.2. Berufsausübung"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Pflichten der Fachpersonen und Betriebe"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.3. Beizug anderer Fachpersonen"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Pflichten der Fachpersonen und Betriebe"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.4. Räumlichkeiten, Einrichtungen und Ausrüstungen"
+    }
+   ],
    "marginalie": []
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Pflichten der Fachpersonen und Betriebe"
+    },
+    {
+     "ebene": 2,
+     "label": "VI.5. Qualitätssicherung"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.2. Stellvertretung"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.2. Stellvertretung"
+    }
+   ],
    "marginalie": [
     "Stellvertretung in den Gebieten der universitären Medizinalberufe, Psychotherapie und Drogerie *"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.3. Assistenz"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.3. Assistenz"
+    }
+   ],
    "marginalie": [
     "Assistenz in den Gebieten der universitären Medizinalberufe"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.4. Praktikum"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.4. Praktikum"
+    }
+   ],
    "marginalie": [
     "Praktikum im Gebiet der universitären Medizinalberufe"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Anforderungen an die Aus- und Weiterbildung und an die praktische Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.1. Zertifikate der absolvierten Aus- und Weiterbildungen"
+    }
+   ],
    "marginalie": []
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Anforderungen an die Aus- und Weiterbildung und an die praktische Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.2. Nachweis der praktischen Weiterbildung und Tätigkeit"
+    }
+   ],
    "marginalie": []
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Bestimmungen zu den Betrieben"
+    },
+    {
+     "ebene": 2,
+     "label": "IX.1. Medizinische oder fachliche Leitung"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Bestimmungen zu den Betrieben"
+    },
+    {
+     "ebene": 2,
+     "label": "IX.2. Betriebskonzept und Stellenplan"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Bestimmungen zu den Betrieben"
+    },
+    {
+     "ebene": 2,
+     "label": "IX.3. Spitäler und Pflegeheime"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.1. Universitäre Medizinalberufe gemäss Art. 2 MedBG"
+    }
+   ],
    "marginalie": [
     "Bewilligungsvoraussetzungen"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.1. Universitäre Medizinalberufe gemäss Art. 2 MedBG"
+    }
+   ],
    "marginalie": [
     "Apotheke"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.2. Augenoptik"
+    }
+   ],
    "marginalie": [
     "Bewilligungspflichtige Tätigkeit"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.2. Augenoptik"
+    }
+   ],
    "marginalie": [
     "Meldepflicht"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.3. Drogerie"
+    }
+   ],
    "marginalie": []
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.4. Logopädie"
+    }
+   ],
    "marginalie": []
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.5. Medizinische Massage"
+    }
+   ],
    "marginalie": [
     "Praktische Tätigkeit *"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.5. Medizinische Massage"
+    }
+   ],
    "marginalie": [
     "Supervision"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.6. Psychotherapie"
+    }
+   ],
    "marginalie": []
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.7. Führen eines medizinischen Laboratoriums"
+    }
+   ],
    "marginalie": []
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.8. Nicht ärztliche alternativ- und komplementärmedizinische Berufe und Tätigkeiten"
+    }
+   ],
    "marginalie": [
     "Bewilligungspflichtige Berufe und Tätigkeiten"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.8. Nicht ärztliche alternativ- und komplementärmedizinische Berufe und Tätigkeiten"
+    }
+   ],
    "marginalie": [
     "Meldepflichtige Berufe und Tätigkeiten"
    ]
   },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.8. Nicht ärztliche alternativ- und komplementärmedizinische Berufe und Tätigkeiten"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.8. Nicht ärztliche alternativ- und komplementärmedizinische Berufe und Tätigkeiten"
+    }
+   ],
    "marginalie": [
     "Zertifikat und Fähigkeitsnachweise"
    ]
   },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.8. Nicht ärztliche alternativ- und komplementärmedizinische Berufe und Tätigkeiten"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.1. Gebühren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.2. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "56": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.3. Psychotherapie"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.3. Psychotherapie"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "58": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.3. Psychotherapie"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "59": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.3. Psychotherapie"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI.4. Änderung und Aufhebung bisheriger Erlasse"
+    }
+   ],
    "marginalie": []
+  },
+  "61": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI.5. Übergangsbestimmung zur Änderung vom 22.12.2015"
+    }
+   ],
+   "marginalie": [
+    "Nicht ärztliche Alternativ- und Komplementärmedizin"
+   ]
+  },
+  "29_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.2. Stellvertretung"
+    }
+   ],
+   "marginalie": [
+    "Eingeschränkte Stellvertretung in Apotheken"
+   ]
+  },
+  "29_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Stellvertretung, Assistenz, Praktikum und privatwirtschaftlich unter fachlicher Aufsicht ausgeübte oder unselbstständige Tätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.2. Stellvertretung"
+    }
+   ],
+   "marginalie": [
+    "Eingeschränkte Stellvertretung in Drogerien"
+   ]
+  },
+  "53_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Weitere Bestimmungen zu einzelnen Berufen und Tätigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "X.9. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   }
  }
 }

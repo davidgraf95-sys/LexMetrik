@@ -1,138 +1,301 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gegenstand"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Organisation und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Organisation und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Organisationsstruktur"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Organisation und Aufgaben"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Ausbildung und Einsatz"
+    }
+   ],
    "marginalie": [
     "Aufgebot"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Ausbildung und Einsatz"
+    }
+   ],
    "marginalie": [
     "Ausbildung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Schutzbauten"
+    }
+   ],
    "marginalie": [
     "Ersatzbeiträge für nicht erstellte Schutzplätze"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Schutzbauten"
+    }
+   ],
    "marginalie": [
     "Baugesuche"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Zivilschutzfremde Nutzungen"
+    }
+   ],
    "marginalie": [
     "Nutzung von Schutzbauten"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Zivilschutzfremde Nutzungen"
+    }
+   ],
    "marginalie": [
     "Nutzung von Material"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Finanzierung und vermögensrechtliche Ansprüche"
+    }
+   ],
    "marginalie": [
     "Kostentragung des Kantons"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Finanzierung und vermögensrechtliche Ansprüche"
+    }
+   ],
    "marginalie": [
     "Kostentragung für Einsätze"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilschutz"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Finanzierung und vermögensrechtliche Ansprüche"
+    }
+   ],
    "marginalie": [
     "Verfahren für vermögensrechtliche Ansprüche"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kulturgüterschutz"
+    }
+   ],
    "marginalie": [
     "Zuständigkeiten"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kulturgüterschutz"
+    }
+   ],
    "marginalie": [
     "Inventarisierung von Kulturgütern"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kulturgüterschutz"
+    }
+   ],
    "marginalie": [
     "Verzeichnis von inventarisierten Kulturgütern"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kulturgüterschutz"
+    }
+   ],
    "marginalie": [
     "Schutzmassnahmen für inventarisierte Kulturgüter"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kulturgüterschutz"
+    }
+   ],
    "marginalie": [
     "Kulturgüterschutzräume"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kulturgüterschutz"
+    }
+   ],
    "marginalie": [
     "Meldepflichten bei inventarisierten Kulturgütern"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebühren"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rechtsmittel"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ausführungsbestimmungen"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]

@@ -1,106 +1,323 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Steuerhoheit, Steuerobjekt und Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuerhoheit"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Steuerhoheit, Steuerobjekt und Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuerbegründende Handänderungen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Steuerhoheit, Steuerobjekt und Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuerfreie Handänderungen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Steuerhoheit, Steuerobjekt und Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuerpflicht"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Steuerhoheit, Steuerobjekt und Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Ausnahmen von der Steuerpflicht"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Steuerberechnung"
+    }
+   ],
    "marginalie": [
     "Steuermass"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Steuerberechnung"
+    }
+   ],
    "marginalie": [
     "Handänderungswert"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Steuerberechnung"
+    }
+   ],
    "marginalie": [
     "Tauschverträge"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Steuerberechnung"
+    }
+   ],
    "marginalie": [
     "Sonderfälle"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Steuerveranlagung"
+    }
+   ],
+   "marginalie": [
+    "Veranlagung und Delegation"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Steuerveranlagung"
+    }
+   ],
    "marginalie": [
     "Melde- und Mitwirkungspflichten"
    ]
   },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Steuerveranlagung"
+    }
+   ],
+   "marginalie": [
+    "Revision"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Steuerveranlagung"
+    }
+   ],
+   "marginalie": [
+    "Veranlagungsverjährung"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Steuerstrafrecht"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Rechtsmittel"
+    }
+   ],
    "marginalie": [
     "Einsprache und Verwaltungsgerichtsbeschwerde"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Fälligkeit und Verzinsung"
    ]
   },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "Verjährung"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "Zahlungserleichterungen und Erlass"
+   ]
+  },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7 Aufteilung des Steuerertrags"
+    }
+   ],
    "marginalie": [
     "Anteile am Steuerertrag"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7 Aufteilung des Steuerertrags"
+    }
+   ],
    "marginalie": [
     "Verantwortung der Gemeinden"
    ]
   },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7 Aufteilung des Steuerertrags"
+    }
+   ],
+   "marginalie": [
+    "Abrechnung"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8 Aufsicht"
+    }
+   ],
+   "marginalie": [
+    "Aufsicht über den Vollzug"
+   ]
+  },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendbares Recht"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bestehenden Rechts"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Steuerveranlagung"
+    }
+   ],
+   "marginalie": [
+    "Berichtigung von Rechnungsfehlern und Schreibversehen"
+   ]
+  },
+  "12_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Steuerveranlagung"
+    }
+   ],
+   "marginalie": [
+    "Nachsteuer"
+   ]
+  },
+  "19_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "Pfandrecht"
+   ]
+  },
+  "29_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9 Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen der Änderung vom 22. November 1999"
    ]
   }
  }

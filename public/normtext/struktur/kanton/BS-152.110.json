@@ -1,310 +1,730 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Sitzungsort"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Sitzordnung"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Sessionsdaten *"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Sitzungszeiten"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Präsenz"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Einladung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Geschäftsverzeichnis"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Protokoll"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Aufzeichnung der Ratsverhandlung und Votenprotokoll"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Verhandlungssprache"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
+   "marginalie": [
+    "Entschädigungen"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
+   "marginalie": [
+    "Besondere Entschädigungen"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
+   "marginalie": [
+    "Verlust des Sitzungsgeldes"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
+   "marginalie": [
+    "Fraktionsentschädigungen"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Offenlegung der Interessenbindungen, Umfang"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Ordnung im Ratssaal"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Ausserordentliche Vertretung des Präsidiums"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Medien"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
    "marginalie": [
     "Zutritt"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Zugang zu den Geschäftsunterlagen *"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Beratung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Zweite Lesung; Schlussabstimmung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Wortbegehren"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Ordnungsantrag"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Anträge zu Geschäften"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Redezeit"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Schliessung der Redeliste *"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Voten der Mitglieder des Regierungsrates und der Gerichte *"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Zwischenfrage"
    ]
   },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
+   "marginalie": [
+    "Stimmabgabe"
+   ]
+  },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Wahlen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Überprüfung der Wahlzettel"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Einsprachen"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Petitionen"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
    "marginalie": [
     "Begehren betreffend kantonale Anerkennung von Kirchen und Religionsgemeinschaften"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Motion"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Anzug"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Planungsanzug, Budgetpostulat, Vorgezogenes Budgetpostulat"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Interpellation"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Dringliche Interpellation"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Schriftliche Anfrage"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
    "marginalie": [
     "Resolution"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Sachkommissionen"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Einberufung"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Abstimmungen"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Teilnahme von Mitgliedern des Regierungsrates und der Gerichte *"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Zuziehung Aussenstehender"
    ]
   },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Studienreisen"
+   ]
+  },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Protokoll"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Einsichtnahme in die Protokolle"
    ]
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Geheimhaltung von Protokollen"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Zwischenberichte"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Anträge an den Grossen Rat; Berichterstattung"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Minderheitsbericht"
    ]
   },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Orientierung der Öffentlichkeit"
+   ]
+  },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Kommissionsakten"
    ]
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderungen der Ausführungsbestimmungen"
    ]
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Abweichungen in Einzelfällen und befristete Abweichungen"
+   ]
+  },
+  "11_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeiten berufliche Vorsorge"
+   ]
+  },
+  "11_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen und Organisation"
+    }
+   ],
+   "marginalie": [
+    "Vorsorgebeitrag"
+   ]
+  },
+  "22_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
+   "marginalie": [
+    "Verfahren zur Zweiten Lesung"
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen von der elektronischen Stimmabgabe"
+   ]
+  },
+  "30_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Behandlung der Geschäfte"
+    }
+   ],
+   "marginalie": [
+    "Abstimmungen in Abwesenheit"
+   ]
+  },
+  "42_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Instrumentarium"
+    }
+   ],
+   "marginalie": [
+    "Parlamentarische Erklärung"
+   ]
+  },
+  "43_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Globalverteilung der Sitze"
+   ]
+  },
+  "46_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Kommissionsmittel *"
    ]
   }
  }

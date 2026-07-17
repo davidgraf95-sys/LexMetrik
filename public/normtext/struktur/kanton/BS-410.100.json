@@ -1,193 +1,3232 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    }
+   ],
+   "marginalie": []
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    }
+   ],
+   "marginalie": []
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    }
+   ],
+   "marginalie": []
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) A. Die Schulen der Primarstufe"
+    }
+   ],
+   "marginalie": [
+    "Ziel"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) A. Die Schulen der Primarstufe"
+    }
+   ],
+   "marginalie": [
+    "Angebot und Dauer"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) A. Die Schulen der Primarstufe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) A. Die Schulen der Primarstufe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) A. Die Schulen der Primarstufe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) A. Die Schulen der Primarstufe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) A. Die Schulen der Primarstufe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) B. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) B. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) B. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) B. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) B. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) C. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) C. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) C. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) C. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) C. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) C. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) C. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) D. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) D. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) D. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) D. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) D. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) D. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) E. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) E. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) F. Die Sekundarschule"
+    }
+   ],
+   "marginalie": [
+    "Ziel"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) F. Die Sekundarschule"
+    }
+   ],
+   "marginalie": [
+    "Angebot und Dauer"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) F. Die Sekundarschule"
+    }
+   ],
+   "marginalie": []
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) G. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) G. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) G. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) H. Das Gymnasium"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) H. Das Gymnasium"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) H. Das Gymnasium"
+    }
+   ],
    "marginalie": []
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) H. Das Gymnasium"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) I. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) J. Die Fachmaturitätsschule"
+    }
+   ],
    "marginalie": []
   },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) J. Die Fachmaturitätsschule"
+    }
+   ],
+   "marginalie": []
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 2. Die Schulen der beruflichen Vor- und Grundbildung und der höheren Berufsbildung"
+    }
+   ],
+   "marginalie": []
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 3. Die Universität"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 4. Angebote für allgemeine und berufliche Weiterbildung"
+    }
+   ],
+   "marginalie": []
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Schulpflicht"
+   ]
+  },
+  "56": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": []
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Überspringen eines Schuljahres"
+   ]
+  },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Aufnahme von Schülerinnen und Schülern mit Aufenthalt im Kanton *"
    ]
   },
+  "59": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Dispens vom Besuch der Volksschulen"
+   ]
+  },
+  "60": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": []
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Aufnahme von Schülerinnen und Schülern ohne Aufenthalt im Kanton"
    ]
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Vorzeitige Schulentlassung"
    ]
   },
   "64": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Verstärkte Massnahmen (Sonderschulung) *"
    ]
   },
+  "65": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Schulbesuch"
+   ]
+  },
   "66": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": []
   },
+  "67": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Schuljahr"
+   ]
+  },
   "68": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Lehrpläne *"
    ]
   },
+  "69": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Erfahrungsschulen"
+   ]
+  },
+  "70": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Schulbesuchstage"
+   ]
+  },
+  "71": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Ferien *"
+   ]
+  },
+  "72": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "73": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Unterrichtszeit der Volksschule *"
+   ]
+  },
   "74": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Verordnungen *"
    ]
   },
   "75": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Kosten des Schulwesens"
    ]
   },
   "76": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": []
   },
+  "77": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Von den öffentlichrechtlich und kantonal anerkannten Kirchen und Religionsgemeinschaften verantworteter Religionsunterricht"
+   ]
+  },
   "78": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
    "marginalie": [
     "Aufsicht über das Schulwesen"
    ]
   },
   "79": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
    "marginalie": [
     "Erziehungsrat"
    ]
   },
+  "80": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Schulkommissionen *"
+   ]
+  },
+  "81": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": []
+  },
+  "82": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Zusammensetzung der Schulkommissionen"
+   ]
+  },
   "83": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
    "marginalie": []
   },
   "84": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
    "marginalie": []
   },
   "85": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
    "marginalie": []
   },
+  "86": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben der Schulkommissionen *"
+   ]
+  },
+  "87": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "88": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
    "marginalie": [
     "Schulleitungen für die Schulstandorte der Mittelschulen, der Wirtschaftsmittelschule und des Zentrums für Brückenangebote *"
    ]
   },
+  "89": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "90": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "91": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
    "marginalie": [
     "Erziehungsberechtigte"
    ]
   },
-  "94": {
-   "gliederung": [],
+  "92": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
+  "93": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Lehrpersonen"
+    }
+   ],
+   "marginalie": []
+  },
+  "94": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Lehrpersonen"
+    }
+   ],
+   "marginalie": []
+  },
+  "95": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Lehrpersonen"
+    }
+   ],
+   "marginalie": []
+  },
+  "96": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. …"
+    }
+   ],
+   "marginalie": []
+  },
+  "97": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "98": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Schulleitungen für die Schulstandorte der Mittelschulen, der Wirtschaftsmittelschule und des Zentrums für Brückenangebote"
+    }
+   ],
+   "marginalie": [
+    "Rektorinnen und Rektoren *"
+   ]
+  },
+  "99": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "Konrektorinnen und Konrektoren *"
+   ]
+  },
+  "100": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "Jahresarbeitszeit"
+   ]
+  },
+  "101": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "Pflichtlektionen"
+   ]
+  },
   "102": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "103": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "104": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "105": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "106": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "107": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "108": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "109": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "110": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "111": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
    "marginalie": [
     "Reiseentschädigung, Studienbeiträge *"
    ]
   },
   "112": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. …"
+    }
+   ],
    "marginalie": [
     "Urlaub *"
    ]
   },
+  "113": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
+   "marginalie": [
+    "Art der Konferenzen"
+   ]
+  },
+  "114": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
+   "marginalie": [
+    "Aufgabe der Konferenzen"
+   ]
+  },
+  "115": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "116": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "117": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
    "marginalie": [
     "Schulkonferenzen *"
    ]
   },
   "118": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
    "marginalie": [
     "Versammlung *"
    ]
   },
-  "128": {
-   "gliederung": [],
+  "119": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "120": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
+   "marginalie": [
+    "Fachgruppen"
+   ]
+  },
+  "121": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Konferenzen"
+    }
+   ],
+   "marginalie": [
+    "Kantonale Fachkonferenzen"
+   ]
+  },
+  "122": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Schulkonferenz"
+    }
+   ],
    "marginalie": []
   },
+  "123": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Schulkonferenz"
+    }
+   ],
+   "marginalie": []
+  },
+  "124": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Schulkonferenz"
+    }
+   ],
+   "marginalie": [
+    "Leitender Ausschuss"
+   ]
+  },
+  "125": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Schulkonferenz"
+    }
+   ],
+   "marginalie": [
+    "Vorstand"
+   ]
+  },
+  "126": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Schulkonferenz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "127": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Schulkonferenz"
+    }
+   ],
+   "marginalie": [
+    "Gesamtkonferenzen"
+   ]
+  },
+  "128": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Schulkonferenz"
+    }
+   ],
+   "marginalie": []
+  },
+  "129": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Kantonale Schulkonferenz"
+    }
+   ],
+   "marginalie": [
+    "Geschäftsordnung"
+   ]
+  },
+  "130": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Bewilligung von Privatschulen"
+   ]
+  },
+  "131": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Voraussetzungen für die Bewilligung"
+   ]
+  },
+  "132": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Aufsichts- und Kontaktperson"
+   ]
+  },
+  "133": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Pflichten der bewilligten Privatschulen"
+   ]
+  },
+  "134": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Zutritt zu staatlichen Museen, Sportstätten und Theatern"
+   ]
+  },
+  "135": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIIter. Privatunterricht"
+    }
+   ],
+   "marginalie": []
+  },
+  "136": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Verwaltung"
+    }
+   ],
+   "marginalie": [
+    "Verwaltung"
+   ]
+  },
+  "137": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Verwaltung"
+    }
+   ],
+   "marginalie": [
+    "Schulhauswartinnen und Schulhauswarte"
+   ]
+  },
   "138": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Verwaltung"
+    }
+   ],
    "marginalie": [
     "Lokalbenützung"
    ]
   },
   "139": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Gesundheit der Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Körperübung, Schulausflüge"
    ]
   },
   "140": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Gesundheit der Schülerinnen und Schüler"
+    }
+   ],
    "marginalie": [
     "Kinder- und Jugendgesundheitsdienst [9] *"
    ]
   },
-  "149": {
-   "gliederung": [],
+  "141": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Unterstützung der Schülerinnen und Schüler und ihrer Erziehungsberechtigten"
+    }
+   ],
+   "marginalie": [
+    "Schulpsychologie"
+   ]
+  },
+  "142": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Unterstützung der Schülerinnen und Schüler und ihrer Erziehungsberechtigten"
+    }
+   ],
+   "marginalie": [
+    "Krisensituationen in den Volksschulen"
+   ]
+  },
+  "143": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Unterstützung der Schülerinnen und Schüler und ihrer Erziehungsberechtigten"
+    }
+   ],
+   "marginalie": [
+    "Abschlussgefährdete Jugendliche"
+   ]
+  },
+  "144": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Unterstützung der Schülerinnen und Schüler und ihrer Erziehungsberechtigten"
+    }
+   ],
+   "marginalie": [
+    "Schulsozialarbeit"
+   ]
+  },
+  "145": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Unterstützung der Schülerinnen und Schüler und ihrer Erziehungsberechtigten"
+    }
+   ],
+   "marginalie": [
+    "Weitere Unterstützungsangebote"
+   ]
+  },
+  "146": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Unterstützung der Schülerinnen und Schüler und ihrer Erziehungsberechtigten"
+    }
+   ],
+   "marginalie": [
+    "Anzeigepflicht"
+   ]
+  },
+  "147": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXter. Unterstützungsangebote für die Lehr- und Fachpersonen sowie die Schulleitungen"
+    }
+   ],
    "marginalie": []
   },
+  "148": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXquater. Versicherungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "149": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
+    }
+   ],
+   "marginalie": []
+  },
+  "150": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "151": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
+    },
+    {
+     "ebene": 2,
+     "label": "XI. Einführungs- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "152": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
+    },
+    {
+     "ebene": 2,
+     "label": "XI. Einführungs- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "153": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
+    },
+    {
+     "ebene": 2,
+     "label": "XI. Einführungs- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "154": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
+    },
+    {
+     "ebene": 2,
+     "label": "XI. Einführungs- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "155": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
+    },
+    {
+     "ebene": 2,
+     "label": "XI. Einführungs- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Gültigkeit der bisherigen Privatschulbewilligungen und Gültigkeit der Bewilligungen und Anerkennungen für Sonderschulen mit kantonalem Auftrag"
    ]
+  },
+  "156": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
+    },
+    {
+     "ebene": 2,
+     "label": "XI. Einführungs- und Übergangsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Nachqualifikation für Kindergartenlehrpersonen"
+   ]
+  },
+  "131_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Bewilligungsverfahren"
+   ]
+  },
+  "131_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung und Entzug von Bewilligungen"
+   ]
+  },
+  "133_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Sonderpädagogisches Angebot für Schülerinnen und Schüler von Privatschulen"
+   ]
+  },
+  "134_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Privatschulen"
+    }
+   ],
+   "marginalie": [
+    "Anerkennung von Privatschulen"
+   ]
+  },
+  "134_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIIbis. Unterricht in heimatlicher Sprache und Kultur (HSK)"
+    }
+   ],
+   "marginalie": []
+  },
+  "139_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Gesundheit der Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Gesundheitspflege"
+   ]
+  },
+  "140_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Gesundheit der Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Schulzahnpflege"
+   ]
+  },
+  "145_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Unterstützung der Schülerinnen und Schüler und ihrer Erziehungsberechtigten"
+    }
+   ],
+   "marginalie": [
+    "Anmeldung zu Abklärungen, Beratungen und Behandlungen"
+   ]
+  },
+  "147_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXquater. Versicherungen"
+    }
+   ],
+   "marginalie": [
+    "Haftpflichtversicherung"
+   ]
+  },
+  "147_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXquater. Versicherungen"
+    }
+   ],
+   "marginalie": [
+    "Schulunfallversicherung"
+   ]
+  },
+  "16_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) C. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "28_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) D. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    }
+   ],
+   "marginalie": []
+  },
+  "2_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    }
+   ],
+   "marginalie": [
+    "Schulen mit kantonalem Auftrag"
+   ]
+  },
+  "2_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    }
+   ],
+   "marginalie": [
+    "Schulen in den kantonalen Schulheimen"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    }
+   ],
+   "marginalie": []
+  },
+  "3_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    }
+   ],
+   "marginalie": []
+  },
+  "43_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) K. Die Maturitätskurse für Berufstätige"
+    }
+   ],
+   "marginalie": []
+  },
+  "43_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": []
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) A. Die Schulen der Primarstufe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "51_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "51_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "51_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "51_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 1. Die Volksschulen und die Mittelschulen"
+    },
+    {
+     "ebene": 4,
+     "label": "(I.1.) L. Der Passerelle-Lehrgang"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "52_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 2. Die Schulen der beruflichen Vor- und Grundbildung und der höheren Berufsbildung"
+    }
+   ],
+   "marginalie": [
+    "Zulassungsbeschränkungen"
+   ]
+  },
+  "52_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 2. Die Schulen der beruflichen Vor- und Grundbildung und der höheren Berufsbildung"
+    }
+   ],
+   "marginalie": [
+    "Die Wirtschaftsmittelschule"
+   ]
+  },
+  "52_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Schulorganisation"
+    },
+    {
+     "ebene": 2,
+     "label": "Einteilung"
+    },
+    {
+     "ebene": 3,
+     "label": "(I.) 2. Die Schulen der beruflichen Vor- und Grundbildung und der höheren Berufsbildung"
+    }
+   ],
+   "marginalie": [
+    "Das Zentrum für Brückenangebote"
+   ]
+  },
+  "56_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "57_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Wiederholen eines Schuljahres"
+   ]
+  },
+  "57_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Übertrittsentscheide"
+   ]
+  },
+  "57_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Leistungstests"
+   ]
+  },
+  "57_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Volksschulabschluss"
+   ]
+  },
+  "63_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Unterricht"
+   ]
+  },
+  "63_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Förderangebote"
+   ]
+  },
+  "64_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Fördermassnahmen vor der Einschulung"
+   ]
+  },
+  "64_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": []
+  },
+  "67_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Unterrichtslektionen der vom Kanton geführten Schulen *"
+   ]
+  },
+  "67_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Klassengrössen"
+   ]
+  },
+  "68_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": []
+  },
+  "68_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": []
+  },
+  "74_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "Schulstandorte und Angebotsprofile"
+   ]
+  },
+  "77_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "77_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Tagesstrukturen"
+   ]
+  },
+  "77_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Ferienangebote"
+   ]
+  },
+  "77_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Anforderungen"
+   ]
+  },
+  "77_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Verantwortung"
+   ]
+  },
+  "77_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Private Anbieterinnen und Anbieter"
+   ]
+  },
+  "77_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Qualitätssicherung und Weiterentwicklung"
+   ]
+  },
+  "77_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Zusammenarbeit"
+   ]
+  },
+  "77_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Datenbearbeitung"
+   ]
+  },
+  "77_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis. Tagesstrukturen und Ferienangebote"
+    }
+   ],
+   "marginalie": [
+    "Kostenbeteiligung"
+   ]
+  },
+  "79_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Schulräte"
+   ]
+  },
+  "79_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Zusammensetzung der Schulräte"
+   ]
+  },
+  "79_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben der Schulräte"
+   ]
+  },
+  "87_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Volksschulleitung"
+   ]
+  },
+  "87_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Leitung Mittelschulen und Berufsbildung *"
+   ]
+  },
+  "87_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Schulleitungen für die Schulstandorte der Volksschule *"
+   ]
+  },
+  "88_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Rechtsmittel"
+   ]
+  },
+  "88_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Lehrpersonen"
+   ]
+  },
+  "88_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Fachpersonen"
+   ]
+  },
+  "91_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Elterndelegierte, Elternräte"
+   ]
+  },
+  "91_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schulbehörden, Schulaufsicht"
+    }
+   ],
+   "marginalie": [
+    "Schülerinnen und Schüler"
+   ]
+  },
+  "97_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Volksschulleitung und Leitung Mittelschulen und Berufsbildung"
+    }
+   ],
+   "marginalie": []
+  },
+  "97_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Schulleitungen für die Schulstandorte der Volksschule"
+    }
+   ],
+   "marginalie": []
+  },
+  "97_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Volksschulleitung, Leitung Mittelschulen und Berufsbildung, Schulleitungen und Lehr- und Fachpersonen"
+    },
+    {
+     "ebene": 2,
+     "label": "3a. Fachpersonen"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

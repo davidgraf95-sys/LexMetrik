@@ -1,54 +1,134 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geschützte Bäume"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Allgemein"
+    }
+   ],
    "marginalie": [
     "Zuständigkeiten"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Bei Fällgesuchen für öffentliche Bäume"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Bei Fällgesuchen für öffentliche Bäume"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Bei Fällgesuchen für Bäume im Zusammenhang mit Bauvorhaben"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeiten"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Bei Fällgesuchen für sonstige Bäume"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Publikation"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Einsprache und Rechtsmittel"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Beiträge"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Beiträge"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Baumschutzkommission"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmung"
+    }
+   ],
    "marginalie": []
   }
  }
