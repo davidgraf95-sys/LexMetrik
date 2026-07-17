@@ -23,7 +23,13 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
     // z-16 / Sektions-Kontextkopf z-15), damit das A26-«Ansicht»-Dropdown-Panel
     // beim Aufklappen über sie legt statt dahinter zu verschwinden; die Leiste
     // selbst überlappt sie nicht (sie sitzt 36 px höher), das z ist rein fürs Panel.
-    <div className="sticky top-16 z-30 border-b border-line bg-paper">
+    // A41 (David 16.7.2026, Overlay-Bug): z BEWUSST UNTER dem Topbar-Stapelkontext
+    // (Topbar sticky z-20). Vorher z-30 > 20 → dieser Kopf legte sich über das
+    // GANZE Topbar-Fenster inkl. des Header-Such-Dropdowns (dessen z-30 IM z-20-
+    // Topbar-Kontext gefangen ist) → «kopfzeile bei gesetzen verdeckt suchresultate
+    // aus dem header». z-[19] hält den Kopf weiter über den Reader-Sticky-Leisten
+    // (z-16/z-15 → A26-Panel bleibt oben), lässt aber das Header-Dropdown darüber.
+    <div className="sticky top-16 z-[19] border-b border-line bg-paper">
       <div className={`${breiteKlasse} mx-auto px-5 sm:px-6 h-9 grid grid-cols-[1fr_auto_1fr] items-center gap-2`}>
         <nav aria-label="Brotkrümel" className="flex min-w-0 items-center gap-1 text-xs text-ink-500">
           {daten.breadcrumb.map((b, i) => (
