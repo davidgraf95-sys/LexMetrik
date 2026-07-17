@@ -1,12 +1,10 @@
 {
-  "hash": "f100778f516fd03090817c9a3b2503f9285ca581009cfd6f8757bed3a3d7a50d",
+  "hash": "5560cf93615d6df88132f5da6dcdbf07cd3300d2726259160d880857d4a42f5d",
   "verdikt": "bestanden",
-  "quellePin": "bger.ch clir 20260713",
-  "datum": "2026-07-13",
+  "quellePin": "fedlex consultationStatus SPARQL 20260716",
+  "datum": "2026-07-16",
   "dateien": [
     "daten-manifest.json",
-    "scripts/normtext-entscheide.ts",
-    "scripts/normtext/adapter-entscheide.ts",
-    "scripts/normtext/clir-regeste.ts"
+    "public/materialien/register.json"
   ]
 }
