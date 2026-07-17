@@ -6,6 +6,7 @@ import { trenneAenderungshistorie, absatzMarke, gruppiereTausender, gruppiereBet
 import { NormText, type InternRefs } from '../NormText';
 import { BildFigur, BildKacheln, type BildDaten, type BildKachel } from './BildElemente';
 import { zitatMitAusweis, heuteIso } from '../../lib/format';
+import { WJ } from './wortverbinder';
 
 // Bild-/Kachel-Felder eines Blocks (bild/bildKacheln) sind neu im Snapshot-Daten-
 // format; die Render-Schicht liest sie über diese lokale Erweiterung des
@@ -564,9 +565,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                   : verlinkt(gruppiereBetraege(anzeige));
               })()}
               {/* Fussnoten-Marker dieses Absatzes (klickbar → Fuss-Eintrag), damit
-                  klar ist, worauf sich die Fussnote bezieht. */}
+                  klar ist, worauf sich die Fussnote bezieht. A31 (David 16.7.2026):
+                  Marker klebt via Wort-Verbinder (WJ) DIREKT an den Absatztext (kein
+                  ml-0.5-Abstand, kein Umbruch auf eine eigene Zeile) — wie auf Fedlex. */}
               {zk && fnProAbsatz?.[i]?.map((nr) => (
-                <FnRef key={nr} artikel={artikel} nr={nr} klasse="ml-0.5" />
+                <React.Fragment key={nr}>{WJ}<FnRef artikel={artikel} nr={nr} /></React.Fragment>
               ))}
             </p>
             {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
@@ -667,9 +670,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                               if (!sz) return verlinkeItem(gruppiereBetraege(it.text));
                               return <StaffelTabelle zeilen={staffelZeilen(normalisiereTarifText(it.text)) ?? sz} />;
                             })()}
-                        {/* Fussnoten-Marker dieses lit/Ziff-Items (klickbar → Fuss). */}
+                        {/* Fussnoten-Marker dieses lit/Ziff-Items (klickbar → Fuss).
+                            A31: Marker klebt via WJ direkt an den Item-Text (kein
+                            Abstand, kein Umbruch auf eine eigene Zeile). */}
                         {zk && fnProItem?.[`${i}|${it.marke}`]?.map((nr) => (
-                          <FnRef key={nr} artikel={artikel} nr={nr} klasse="ml-0.5" />
+                          <React.Fragment key={nr}>{WJ}<FnRef artikel={artikel} nr={nr} /></React.Fragment>
                         ))}
                       </span>
                     </li>

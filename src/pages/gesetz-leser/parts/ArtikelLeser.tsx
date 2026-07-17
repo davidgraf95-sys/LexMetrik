@@ -1,5 +1,6 @@
 import { useState, memo } from 'react';
 import { ArtikelBody, FnRef } from '../../../components/normtext/ArtikelBody';
+import { WJ } from '../../../components/normtext/wortverbinder';
 import { type InternRefs } from '../../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../../lib/normtext/darstellung';
 import type { Fussnote } from '../../../lib/normtext/browse';
@@ -14,7 +15,7 @@ import {
 } from '../../../lib/verzahnung/artikel-revisionen';
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../../lib/normtext/typen';
-import { margStufeStil, fnTextMitLinks, baueZitat } from '../helpers';
+import { margStufeStil, fnTextMitLinks, baueZitat, margLabel } from '../helpers';
 import { zitatMitAusweis, heuteIso } from '../../../lib/format';
 import { schaetzeArtikelHoehe } from '../berechnungen';
 import { setzeZeitraum, useLeitfallZeitraum } from '../leserOptionen';
@@ -213,8 +214,12 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // amtliche Substanz bleibt im DOM (R9/§8, Ctrl+F/Print/Screenreader). Die
   // Prominenz steuert allein der data-fussnoten-CSS-Toggle (index.css): «AUS»
   // DÄMPFT, versteckt nie. So gibt es EINE Fussnoten-Bedienung statt zweier.
+  // A31 (David 16.7.2026): der Fussnoten-Marker klebt auf Fedlex DIREKT an der
+  // Artikelnummer (kein Abstand). Darum KEIN `ml-0.5` mehr und der Marker sitzt im
+  // selben Inline-Kontext wie das «Art. N»-Label (unten in whitespace-nowrap
+  // gewickelt), nicht als eigenes flex-Kind mit gap-x-2.
   const fnMarker = artOffen && fnArtikelEbene.length > 0
-    ? <span className="ml-0.5" data-fn-marker>{fnArtikelEbene.map((nr, i) => (
+    ? <span data-fn-marker>{fnArtikelEbene.map((nr, i) => (
         <span key={nr}>{i > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
       ))}</span>
     : null;
@@ -285,12 +290,15 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             <div className="mb-1 space-y-0.5 font-serif leading-snug">
               {marg.map((m, i) => (
                 <div key={i} className={margStufeStil((margBasis ?? 0) + i, i === marg.length - 1)}>
-                  {m}
+                  {/* A30: bis/ter-Suffix des Enumerators hochgestellt (margLabel). */}
+                  {margLabel(m)}
                   {/* G11: section-heading-Fussnoten-Marker an der passenden Randtitel-
                       Zeile (blatt im Volltext, ganze Kette in der Suchsicht). G2b:
-                      immer (an artOffen gebunden), Prominenz via data-fussnoten-CSS. */}
+                      immer (an artOffen gebunden), Prominenz via data-fussnoten-CSS.
+                      A31: Wort-Verbinder (U+2060) klebt den Marker DIREKT an die
+                      Marginalie (kein Abstand, kein Umbruch auf eine eigene Zeile). */}
                   {artOffen && fnProSektion[m]?.map((nr, j) => (
-                    <span key={nr} data-fn-marker>{j > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
+                    <span key={nr} data-fn-marker>{WJ}{j > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
                   ))}
                 </div>
               ))}
@@ -317,6 +325,10 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             {/* Anhang/Protokoll (③/⑤): «Anhang N»/«Protokoll N …» als Struktur-
                 Überschrift (font-display, Titel-Grösse) statt als Artikelnummer
                 (num/bold) — es ist ein Block-Titel, keine zitierbare Bestimmung. */}
+            {/* A31: «Art. N» + Fussnoten-Marker als EIN Inline-/flex-Kind (whitespace-
+                nowrap) — der Marker klebt direkt an der Nummer (kein gap-x-2, kein
+                Umbruch auf eine eigene Zeile), genau wie auf Fedlex. */}
+            <span className="whitespace-nowrap">
             {imTreffer && onSpringe ? (
               <button type="button" onClick={() => onSpringe(e.artikel)}
                 title="Im Volltext zu diesem Artikel springen"
@@ -328,6 +340,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
                 ? 'font-display text-h3 font-semibold text-ink-900 hover:text-brass-700 no-underline'
                 : `num text-base font-bold tracking-wide hover:text-brass-700 no-underline ${ganzAufgehoben ? 'text-ink-500 font-normal' : 'text-ink-900'}`}>{label}</a>
             )}{fnMarker}
+            </span>
             {/* aufgehoben gedämpft, aber ink-500 (WCAG 4.5:1 hell+dunkel) statt
                 ink-400 (3.2–3.6:1) — essentieller Link-Text, kein incidental. */}
             {ganzAufgehoben && <span className="text-xs italic text-ink-500">· aufgehoben</span>}

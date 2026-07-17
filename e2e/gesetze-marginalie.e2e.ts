@@ -51,3 +51,32 @@ test('Höchstens drei definierte Randtitel-Stil-Stufen (kein Wildwuchs)', async 
   // 14/500, Vorfahr-tiefer 14/400 → höchstens drei distinkte (size,weight)-Paare.
   expect(stile.size, `gefundene Stile: ${[...stile].join(', ')}`).toBeLessThanOrEqual(3)
 })
+
+// A30/A31 (David 16.7.2026, E2): Marginalien-Suffix hochgestellt + Fussnoten-
+// Marker klebt an Artikelnummer/Marginalie (Fedlex-treu, empirisch am Filestore-
+// HTML verifiziert: «III<sup>bis</sup>.», Marker als <sup> DIREKT am Bezugswort).
+test('A30: Marginalien-Ordnungssuffix (bis/ter) wird hochgestellt', async ({ page }) => {
+  await page.goto('/gesetze/bund/ZGB')
+  await expect(page.locator('a[href="#art-19_d"]').first()).toBeVisible()
+  // Der Randtitel «IIIbis. …» rendert «bis» als eigenes <sup> (nicht flach im
+  // Text); ein <sup> mit exakt «bis» ist ausschliesslich der Marginalien-Suffix
+  // (Absatznummern stehen als «1bis» ganz im <sup>, Fussnoten sind <button>).
+  const hatSuffixSup = await page.evaluate(() =>
+    [...document.querySelectorAll('sup')].some((s) => s.textContent?.trim() === 'bis'),
+  )
+  expect(hatSuffixSup, 'Randtitel-Suffix «bis» ist hochgestellt').toBe(true)
+})
+
+test('A31: Fussnoten-Marker klebt ohne Abstand an der Artikelnummer', async ({ page }) => {
+  await page.goto('/gesetze/bund/ZGB#art-276')
+  await expect(page.locator('a[href="#art-276"]').first()).toBeVisible()
+  const geklebt = await page.evaluate(() => {
+    const a = document.querySelector('a[href="#art-276"]')
+    const wrap = a?.parentElement
+    if (!wrap || getComputedStyle(wrap).whiteSpace !== 'nowrap') return false
+    // Der Artikel-Fussnoten-Marker (353) liegt IM selben nowrap-Wrapper wie das
+    // «Art. N»-Label → kein gap-x-2/ml-Abstand, kein Umbruch auf eine eigene Zeile.
+    return !!wrap.querySelector('button[aria-label^="Fussnote"]')
+  })
+  expect(geklebt, '«Art. 276» + Marker sind EIN nowrap-Inline-Element').toBe(true)
+})
