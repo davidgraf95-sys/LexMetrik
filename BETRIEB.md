@@ -32,6 +32,7 @@ NICHT erledigt, offener Punkt.
 
 | Rhythmus | Aufgabe | Werkzeug |
 |---|---|---|
+| alle 6 h (automatisch) | Prod-Smoke: Kernrouten 200+Inhalt, Edge-Suche JSON-503/200, Sitemap, Assets, CSP | GitHub Action `prod-smoke.yml` (`npm run smoke:prod` lokal); rot → **Rollback**: `docs/betrieb/rollback-runbook.md` |
 | wöchentlich (automatisch) | Normen-Monitor: Caches + Zitate + neue Konsolidierungen | GitHub Action `normen-monitor.yml`; rot → §7-Verifikation fällig |
 | monatlich | LIK-Reihe nach BFS-Publikation | `scripts/lik-reihe-generieren.py` (Anleitung im Skript-Kopf) |
 | quartalsweise | Hypothekarischer Referenzzins | referenzzinssatz.admin.ch → `mietvertrag.ts` (`MV_PARAMETER`) |
@@ -64,6 +65,10 @@ Person) — Erweiterung des Kreises ist §14-Entwurf in STRATEGIE F5.
 
 ## Notfall
 
+- **Rückweg für kaputte Prod-Stände:** `docs/betrieb/rollback-runbook.md`
+  (`vercel rollback` / Dashboard-Promote / git-revert). Laufzeit-Env-Vars:
+  `docs/betrieb/env-inventar.md`. Externe Uptime-Sonde (optional G6):
+  `docs/betrieb/externe-sonde.md`.
 - **App offline nehmen:** Vercel-Dashboard → Projekt `lexmetrik` →
   Deployment löschen/überschreiben, oder `npx vercel rollback`.
 - **Fachlicher Fehler in einer «geprüft»-Engine:** Status sofort zurück auf
