@@ -1,34 +1,277 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Ziele"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Massnahmen zur Zielerreichung"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Kommunikation"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Programme zur Stärkung der Standortattraktivität *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
    "marginalie": [
     "Standortförderungsfonds *"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Ia. Übergangsbestimmung zur Änderung vom 14. November 2012"
+    }
+   ],
+   "marginalie": []
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Administrative Entlastung der Wirtschaft"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Zusammenarbeit mit Dritten"
+   ]
+  },
+  "5_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Gründung von und Beteiligung an Instituten, Organisationen und Gesellschaften zu Standortförderungszwecken:"
+   ]
+  },
+  "5_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Gewährung von Bürgschaften"
+   ]
+  },
+  "5_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Stadtbelebung"
+   ]
+  },
+  "5_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Massnahmen in den Bereichen Innovation, Gesellschaft und Umwelt"
+   ]
+  },
+  "5_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Bereich Innovation"
+   ]
+  },
+  "5_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Bereich Gesellschaft"
+   ]
+  },
+  "5_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Bereich Umwelt"
+   ]
+  },
+  "5_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Modalitäten der Beiträge für Massnahmen in den Bereichen Innovation, Gesellschaft und Umwelt"
+   ]
+  },
+  "5_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Form der Beiträge"
+   ]
+  },
+  "5_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Förderung von Forschungskooperationen im Bereich der Life Sciences"
+   ]
+  },
+  "5_k": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Fonds für Innovation und Fonds für Gesellschaft und Umwelt"
+   ]
+  },
+  "5_l": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Ansprüche"
+   ]
+  },
+  "5_m": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Ausführungsbestimmungen"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Datenaustausch"
+   ]
+  },
+  "6_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Rückforderung"
+   ]
+  },
+  "6_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I."
+    }
+   ],
+   "marginalie": [
+    "Rechtsmittel"
    ]
   }
  }

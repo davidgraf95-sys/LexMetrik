@@ -1,81 +1,223 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich *"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bestandesgarantie und Lagerung *"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Kultur- und Bildungsauftrag *"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zusammenarbeit mit der Universität *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Universitätsgut, Sammlungen der Museen *"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
    "marginalie": [
     "Rechtsform und Organisation *"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
    "marginalie": [
     "Museumskommissionen *"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
    "marginalie": [
     "Museumsdirektorenkonferenz *"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Globalkredit *"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
    "marginalie": [
     "Nachtragskredite *"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
    "marginalie": [
     "Kreditübertragung, Rücklagen *"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
    "marginalie": [
     "Gebühren *"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Partnerschaft"
+    }
+   ],
    "marginalie": [
     "Kooperation *"
    ]
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Partnerschaft"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Mehrjährige Globalkredite"
+   ]
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Schulklassen"
+   ]
+  },
+  "12_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Drittmittel"
+   ]
+  },
+  "14_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ausführungsbestimmungen"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Finanzierung"
+    }
+   ],
+   "marginalie": [
+    "Steuerung und Aufsicht"
+   ]
   }
  }
 }

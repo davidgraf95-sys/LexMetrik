@@ -1,282 +1,709 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Dispositions générales"
+    }
+   ],
    "marginalie": [
     "Champ d'application"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Dispositions générales"
+    }
+   ],
    "marginalie": [
     "Egalité entre hommes et femmes"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Dispositions spéciales applicables aux causes de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Frais"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Dispositions spéciales applicables aux causes de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Dépens"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Dispositions spéciales applicables aux causes de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Décision sur les frais et dépens"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Dispositions spéciales applicables aux causes de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Recours en matière de droit public"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Débours de l'autorité"
+    }
+   ],
    "marginalie": [
     "Experts, interprètes et traducteurs"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Débours de l'autorité"
+    }
+   ],
    "marginalie": [
     "Témoins"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Débours de l'autorité"
+    }
+   ],
    "marginalie": [
     "Frais de déplacement"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Débours de l'autorité"
+    }
+   ],
    "marginalie": [
     "Fonctionnaires de police et huissiers judiciaires"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Débours de l'autorité"
+    }
+   ],
    "marginalie": [
     "Autres débours"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Débours de l'autorité"
+    }
+   ],
    "marginalie": [
     "Réduction ou renonciation"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.1 Généralités"
+    }
+   ],
    "marginalie": [
     "Critères d'appréciation"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.1 Généralités"
+    }
+   ],
    "marginalie": [
     "Réduction ou renonciation"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 En matière civile"
+    }
+   ],
    "marginalie": [
     "Procédure devant le juge de commune"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 En matière civile"
+    }
+   ],
    "marginalie": [
     "Autres contestations civiles de nature pécuniaire"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 En matière civile"
+    }
+   ],
    "marginalie": [
     "Autres contestations non pécuniaires"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 En matière civile"
+    }
+   ],
    "marginalie": [
     "Autres procédures"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.2 En matière civile"
+    }
+   ],
    "marginalie": [
     "Appel ou recours au Tribunal cantonal"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.3 En matière pénale"
+    }
+   ],
    "marginalie": [
     "Procédures devant le tribunal de police"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.3 En matière pénale"
+    }
+   ],
    "marginalie": [
     "Procédures devant le juge ou le tribunal des mineurs"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.3 En matière pénale"
+    }
+   ],
    "marginalie": [
     "Autres procédures"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.4 En matière de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Procédures devant les autorités administratives"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.4 En matière de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Procédures par voie d'action"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.4 En matière de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Procédures de recours"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Frais"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Emolument"
+    },
+    {
+     "ebene": 3,
+     "label": "3.2.4 En matière de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Assurances sociales"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Généralités"
+    }
+   ],
    "marginalie": [
     "Honoraires du conseil juridique - critères de détermination"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Généralités"
+    }
+   ],
    "marginalie": [
     "Valeur litigieuse"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Généralités"
+    }
+   ],
    "marginalie": [
     "Honoraires du conseil juridique - Cas spéciaux"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Généralités"
+    }
+   ],
    "marginalie": [
     "Conseil juridique commis d'office"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honoraires du conseil juridique en matière civile"
+    }
+   ],
    "marginalie": [
     "Procédures devant le juge de commune"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honoraires du conseil juridique en matière civile"
+    }
+   ],
    "marginalie": [
     "Autres contestations et affaires civiles de nature pécuniaire"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honoraires du conseil juridique en matière civile"
+    }
+   ],
    "marginalie": [
     "Procédures en matière de poursuite et de faillite"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honoraires du conseil juridique en matière civile"
+    }
+   ],
    "marginalie": [
     "Autres contestations et affaires civiles"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Honoraires du conseil juridique en matière civile"
+    }
+   ],
    "marginalie": [
     "Appel, recours, révision, interprétation et rectification"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Honoraires du conseil juridique en matière pénale"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Honoraires du conseil juridique en matière de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Procédures devant les autorités administratives"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Honoraires du conseil juridique en matière de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Procédures par voie d'action"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Honoraires du conseil juridique en matière de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Procédures de recours"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Dépens"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Honoraires du conseil juridique en matière de droit public et des assurances sociales"
+    }
+   ],
    "marginalie": [
     "Assurances sociales"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Dispositions diverses, transitoires et finales"
+    }
+   ],
    "marginalie": [
     "Modalités d'encaissement"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Dispositions diverses, transitoires et finales"
+    }
+   ],
    "marginalie": [
     "Droits de timbre"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Dispositions diverses, transitoires et finales"
+    }
+   ],
    "marginalie": [
     "Renchérissement"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Dispositions diverses, transitoires et finales"
+    }
+   ],
    "marginalie": [
     "Abrogation"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Dispositions diverses, transitoires et finales"
+    }
+   ],
    "marginalie": [
     "Modifications du droit en vigueur"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Dispositions diverses, transitoires et finales"
+    }
+   ],
    "marginalie": [
     "Droit transitoire"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Dispositions diverses, transitoires et finales"
+    }
+   ],
    "marginalie": [
     "Entrée en vigueur"
    ]

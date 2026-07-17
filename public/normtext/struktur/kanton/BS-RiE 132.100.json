@@ -1,600 +1,1712 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1. Gegenstand"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Das Stimmrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1. Stimmberechtigung"
+    }
+   ],
    "marginalie": [
     "Inhalt des Stimmrechts"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Das Stimmrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.1. Stimmberechtigung"
+    }
+   ],
    "marginalie": [
     "Voraussetzungen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Das Stimmrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2. Stimmregister"
+    }
+   ],
    "marginalie": [
     "Führung des Verzeichnisses"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Das Stimmrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2. Stimmregister"
+    }
+   ],
    "marginalie": [
     "Einsicht"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2. Das Stimmrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "1.2.2. Stimmregister"
+    }
+   ],
    "marginalie": [
     "Eintragung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1. Begriffe"
+    }
+   ],
    "marginalie": [
     "Initiativbegehren"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1. Begriffe"
+    }
+   ],
    "marginalie": [
     "Formulierte Initiative"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1. Begriffe"
+    }
+   ],
    "marginalie": [
     "Unformulierte Initiative"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Formelle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Unterschriftenliste"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Formelle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Vorprüfung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Formelle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Unterzeichnung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Formelle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Einreichung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Formelle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Prüfung des Zustandekommens"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Formelle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Rekurs"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Formelle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Rückzug der Initiative"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Materielle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Voraussetzungen der rechtlichen Zulässigkeit"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Materielle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Antrag des Gemeinderats"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Materielle Erfordernisse der Initiative"
+    }
+   ],
    "marginalie": [
     "Entscheid über die rechtliche Zulässigkeit"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Behandlung der Initiative im Einwohnerrat"
+    },
+    {
+     "ebene": 3,
+     "label": "2.4.1. Erstbehandlung"
+    }
+   ],
    "marginalie": [
     "Verfahrensentscheid"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Behandlung der Initiative im Einwohnerrat"
+    },
+    {
+     "ebene": 3,
+     "label": "2.4.1. Erstbehandlung"
+    }
+   ],
    "marginalie": [
     "Unmittelbare Volksabstimmung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Behandlung der Initiative im Einwohnerrat"
+    },
+    {
+     "ebene": 3,
+     "label": "2.4.1. Erstbehandlung"
+    }
+   ],
    "marginalie": [
     "Berichterstattung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Behandlung der Initiative im Einwohnerrat"
+    },
+    {
+     "ebene": 3,
+     "label": "2.4.2. Weiterbehandlung einer formulierten Initiative"
+    }
+   ],
    "marginalie": [
     "Entscheid über zweite Berichterstattung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Behandlung der Initiative im Einwohnerrat"
+    },
+    {
+     "ebene": 3,
+     "label": "2.4.2. Weiterbehandlung einer formulierten Initiative"
+    }
+   ],
    "marginalie": [
     "Volksabstimmung zur formulierten Initiative"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Behandlung der Initiative im Einwohnerrat"
+    },
+    {
+     "ebene": 3,
+     "label": "2.4.3. Weiterbehandlung einer unformulierten Initiative"
+    }
+   ],
    "marginalie": [
     "Entscheid über zweite Berichterstattung"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Initiative"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Behandlung der Initiative im Einwohnerrat"
+    },
+    {
+     "ebene": 3,
+     "label": "2.4.3. Weiterbehandlung einer unformulierten Initiative"
+    }
+   ],
    "marginalie": [
     "Volksabstimmung zur unformulierten Initiative"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Referendum"
+    }
+   ],
    "marginalie": [
     "Publikation und Referendumsfrist"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Referendum"
+    }
+   ],
    "marginalie": [
     "Unterschriftenliste und Unterschriften"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Referendum"
+    }
+   ],
    "marginalie": [
     "Einreichung"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Referendum"
+    }
+   ],
    "marginalie": [
     "Zustandekommen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Referendum"
+    }
+   ],
    "marginalie": [
     "Verfügung und Rekurs"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Referendum"
+    }
+   ],
    "marginalie": [
     "Rückzug"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Referendum"
+    }
+   ],
    "marginalie": [
     "Volksabstimmung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.1. Vorbereitung"
+    }
+   ],
    "marginalie": [
     "Festlegung des Termins"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.1. Vorbereitung"
+    }
+   ],
    "marginalie": [
     "Zustellung Stimmrechtsausweise sowie Wahl- und Stimmzettel"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.2. Wahl- und Stimmlokal"
+    }
+   ],
    "marginalie": [
     "Begriff"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.3. Wahl- und Abstimmungsbüro"
+    }
+   ],
    "marginalie": [
     "Bestellung und Organisation"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.3. Wahl- und Abstimmungsbüro"
+    }
+   ],
    "marginalie": [
     "Verantwortung"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.3. Wahl- und Abstimmungsbüro"
+    }
+   ],
    "marginalie": [
     "Aufgaben und Befugnisse"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.3. Wahl- und Abstimmungsbüro"
+    }
+   ],
    "marginalie": [
     "Technische Hilfsmittel"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.3. Wahl- und Abstimmungsbüro"
+    }
+   ],
    "marginalie": [
     "Berichterstattung"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.3. Wahl- und Abstimmungsbüro"
+    }
+   ],
    "marginalie": [
     "Entschädigung"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Wahlkreis"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Briefliche Stimmabgabe"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Persönliche Stimmabgabe"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Elektronische Stimmabgabe"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Stimmabgabe durch Dritte"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Ungültige Wahl- und Stimmzettel"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Ungültige Stimmen"
    ]
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Leere Wahl- und Stimmzettel"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.4. Ausübung des Wahl- und Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Leere Stimmen auf Stimmzetteln"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.5. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Ermittlung der Ergebnisse"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.5. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Protokolle"
    ]
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.5. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Anordnung einer Nachzählung von Amtes wegen"
    ]
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.5. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Publikation"
    ]
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Gemeinsame Bestimmungen zur Durchführung von Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.1.5. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Validierung"
    ]
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2. Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Amtliche Erläuterungen"
    ]
   },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2. Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Amtliche Stimmzettel"
    ]
   },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2. Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Annahme"
    ]
   },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Wahlarten"
    ]
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zeitpunkt der Gesamterneuerungswahlen"
    ]
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Stille Wahl"
    ]
   },
   "64": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ersatzwahl während der Legislaturperiode"
    ]
   },
   "65": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Wählbarkeit"
    ]
   },
   "66": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Unterzeichnung der Wahlvorschläge"
    ]
   },
   "67": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Inhaltliche Erfordernisse der Wahlvorschläge"
    ]
   },
   "68": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Einreichung und Prüfung der Wahlvorschläge"
    ]
   },
   "69": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Listen"
    ]
   },
   "70": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Listenverbindungen"
    ]
   },
   "71": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Publikation und Zustellung"
    ]
   },
   "72": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Stimmabgabe"
    ]
   },
   "73": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Zuteilung der Stimmen zu den Listen"
    ]
   },
   "74": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Grundsatz der Zuteilung der Einwohnerratssitze"
    ]
   },
   "75": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Erste Verteilung der Einwohnerratssitze"
    ]
   },
   "76": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Weitere Verteilungen der Einwohnerratssitze"
    ]
   },
   "77": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Gewählte Personen und Nachrückende"
    ]
   },
   "78": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Nachrücken"
    ]
   },
   "79": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.2. Wahl des Einwohnerrats"
+    }
+   ],
    "marginalie": [
     "Listenergänzung und Ersatzwahl"
    ]
   },
   "80": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Wählbarkeit"
    ]
   },
   "81": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Unterzeichnung der Wahlvorschläge"
    ]
   },
   "82": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Inhaltliche Erfordernisse der Wahlvorschläge"
    ]
   },
   "83": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Einreichung der Wahlvorschläge"
    ]
   },
   "84": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Publikation"
    ]
   },
   "85": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Amtliche Wahlzettel"
    ]
   },
   "86": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Stimmabgabe"
    ]
   },
   "87": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Gewählte Personen"
    ]
   },
   "88": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Vorgehen bei Stimmengleichheit"
    ]
   },
   "89": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Zweiter Wahlgang"
    ]
   },
   "90": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Stimmrechtsausweis für den zweiten Wahlgang"
    ]
   },
   "91": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Relatives Mehr"
    ]
   },
   "92": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3. Wahlen"
+    },
+    {
+     "ebene": 3,
+     "label": "4.3.3. Wahl der Gemeindepräsidentin oder des Gemeindepräsidenten und der weiteren Gemeinderatsmitglieder"
+    }
+   ],
    "marginalie": [
     "Ersatzwahl"
    ]
   },
   "93": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Stimmrechtsbeschwerde sowie Wahl- und Abstimmungsbeschwerde"
    ]
   },
   "94": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Rechtsmittelfrist"
    ]
   },
   "95": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Aufschiebende Wirkung"
    ]
   },
   "96": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Entscheid"
    ]
   },
   "97": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Ungültigkeit von Amtes wegen"
    ]
   },
   "98": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Wiederholung der Wahl oder Abstimmung"
    ]
   },
   "99": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Rechtspflege"
+    }
+   ],
    "marginalie": [
     "Ausübung des Mandates"
    ]
   },
   "100": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Ausführungsbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

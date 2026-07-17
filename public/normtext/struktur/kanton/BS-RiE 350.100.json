@@ -1,58 +1,114 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Beiträge"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundsätze"
+    }
+   ],
    "marginalie": [
     "Organisationen mit Sitz in Riehen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundsätze"
+    }
+   ],
    "marginalie": [
     "Organisationen mit Sitz in Basel oder anderen Kantonen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundsätze"
+    }
+   ],
    "marginalie": [
     "Beitragsarten und weitere Leistungen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Zuständigkeit und Verfahren"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Zuständigkeit und Verfahren"
+    }
+   ],
    "marginalie": [
     "Aufgaben der Koordinationsgruppe"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Zuständigkeit und Verfahren"
+    }
+   ],
    "marginalie": [
     "Verfahren"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Grundsätze"
+    }
+   ],
+   "marginalie": [
+    "Antragsberechtigung"
    ]
   }
  }

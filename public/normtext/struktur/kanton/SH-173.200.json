@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
    "gliederung": [
@@ -87,6 +87,21 @@
    ],
    "marginalie": [
     "Amtssitz"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Schlichtungsbehörden in Zivilsachen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Friedensrichteramt"
+    }
+   ],
+   "marginalie": [
+    "Friedensrichteramt"
    ]
   },
   "10": {
@@ -945,7 +960,7 @@
     },
     {
      "ebene": 2,
-     "label": "6.2 Kommission für Enteignungen, Gebäudeversicherung und Brandschutz *"
+     "label": "6.2 Kommission für Enteignungen, Gebäudeversicherung und Brandschutz"
     }
    ],
    "marginalie": [
@@ -960,7 +975,7 @@
     },
     {
      "ebene": 2,
-     "label": "6.3 Schätzungskommission für Wildschäden *"
+     "label": "6.3 Schätzungskommission für Wildschäden"
     }
    ],
    "marginalie": [
@@ -975,7 +990,7 @@
     },
     {
      "ebene": 2,
-     "label": "6.4 Aufsichtsbehörde über das Anwaltswesen *"
+     "label": "6.4 Aufsichtsbehörde über das Anwaltswesen"
     }
    ],
    "marginalie": [
@@ -990,7 +1005,7 @@
     },
     {
      "ebene": 2,
-     "label": "6.5 Landwirtschaftliches Schiedsgericht *"
+     "label": "6.5 Landwirtschaftliches Schiedsgericht"
     }
    ],
    "marginalie": [
@@ -1470,6 +1485,44 @@
     "Bemessungsgrundlage"
    ]
   },
+  "89": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7.2 Besondere Bestimmungen für die Zivilrechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "7.4 Kosten und Entschädigung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.4.2 Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "Gebühren für das Vor-, Haupt- und Berufungsverfahren"
+   ]
+  },
+  "90": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7.2 Besondere Bestimmungen für die Zivilrechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "7.4 Kosten und Entschädigung"
+    },
+    {
+     "ebene": 3,
+     "label": "7.4.2 Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "Gebühren für andere Entscheide"
+   ]
+  },
   "91": {
    "gliederung": [
     {
@@ -1752,6 +1805,152 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "110_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10 Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung"
+   ]
+  },
+  "54_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Gerichte"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Elektronische Signierung"
+   ]
+  },
+  "57_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Weitere Rechtspflegebehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Kindes- und Erwachsenenschutzbehörde"
+    }
+   ],
+   "marginalie": [
+    "Sitz, Aufgaben und Zusammensetzung"
+   ]
+  },
+  "57_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Weitere Rechtspflegebehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Kindes- und Erwachsenenschutzbehörde"
+    }
+   ],
+   "marginalie": [
+    "Konstituierung"
+   ]
+  },
+  "57_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Weitere Rechtspflegebehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Kindes- und Erwachsenenschutzbehörde"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeit der Kammer"
+   ]
+  },
+  "57_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Weitere Rechtspflegebehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Kindes- und Erwachsenenschutzbehörde"
+    }
+   ],
+   "marginalie": [
+    "Einzelzuständigkeit"
+   ]
+  },
+  "57_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6 Weitere Rechtspflegebehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Kindes- und Erwachsenenschutzbehörde"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ]
+  },
+  "66_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7 Verfahrensbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "7.1 Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Aktenführung"
+   ]
+  },
+  "66_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7 Verfahrensbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "7.1 Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Digitalisierung von physischen Dokumenten"
+   ]
+  },
+  "95_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8 Weitere Bestimmungen mit Bezug zum Strafrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "8.1 Haft-, Straf- und Massnahmenvollzug"
+    }
+   ],
+   "marginalie": [
+    "Sicherheitshaft"
    ]
   }
  }

@@ -1,517 +1,6120 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Einleitung"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Veröffentlichungen"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Einleitung"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Gerichtliche Zuständigkeit und gerichtliches Verfahren"
+    }
+   ],
    "marginalie": [
     "Rechtsmittel gegen Verfügungen des Erbschaftsamtes *"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.I. Ehrenfähigkeit"
+    }
+   ],
    "marginalie": []
   },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.II. Mündigerkärung (ZGB 15, 422 Ziff. 6, 431)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.III. Namensrecht"
+    }
+   ],
+   "marginalie": [
+    "1. Namensschutz (ZGB 29)"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.III. Namensrecht"
+    }
+   ],
    "marginalie": [
     "2. Namensänderung (ZGB 30 Abs. 1 und 2)"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.III. Namensrecht"
+    }
+   ],
+   "marginalie": [
+    "3. Anfechtung der Namensänderung (ZGB 30 Abs. 3)"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.IV. Verschollenheit (ZGB 35-38)"
+    }
+   ],
+   "marginalie": []
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.V. Organisation des Zivilstandswesens"
+    }
+   ],
+   "marginalie": [
+    "1. Zivilstandsamt (ZGB 49)"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.V. Organisation des Zivilstandswesens"
+    }
+   ],
+   "marginalie": [
+    "2. Kantonale Aufsichtsbehörde (ZGB 45, 47)"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.VI. Bereinigungen (ZGB 42, 43)"
+    }
+   ],
+   "marginalie": []
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.VII. Findelkind"
+    }
+   ],
+   "marginalie": []
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.VIII. Leichenfund"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.IX. Gerichtliche Feststellung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1.Titel: Die natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "1.X. Kantonale Zivilstandsverordnung (ZGB 49, 103)"
+    }
+   ],
+   "marginalie": []
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Titel: Die juristischen Personen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Titel: Die juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.II. Aufsicht über die Stiftungen (ZGB 84)"
+    }
+   ],
+   "marginalie": [
+    "1. Die Aufsichtsbehörde"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Titel: Die juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.II. Aufsicht über die Stiftungen (ZGB 84)"
+    }
+   ],
    "marginalie": [
     "2. Die Ausübung der Aufsicht"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Titel: Die juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.III. Rechtsweg"
+    }
+   ],
+   "marginalie": []
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Titel: Die juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.IV. Aufhebung der Stiftungen (ZGB 88 Abs. 1)"
+    }
+   ],
+   "marginalie": []
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Titel: Die Eheschliessung und die eingetragene Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3.I. Verweigerung der Zustimmung des gesetzlichen Vertreters (ZGB 94 Abs. 2; PartG 3 Abs. 2)"
+    }
+   ],
+   "marginalie": []
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Titel: Die Eheschliessung und die eingetragene Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3.II. Ehe eines verschollenen, Auflösung; Wartefristen, Abkürzung; zuständiger Richter und Verfahren (ZGB 102–104)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Titel: Die Eheschliessung und die eingetragene Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3.III. Eheeinspruch, zuständiger Einsprecher bei Nichtigkeitsgrund (ZGB 109)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Titel: Die Eheschliessung und die eingetragene Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3.IV. Trauungsbewilligung und Befreiung vom Ehefähigkeitszeugnis für Ausländer (ZGB SchlT 59 (NAG 7e)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Titel: Die Eheschliessung und die eingetragene Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3.V. Ungültigkeit einer Ehe oder eingetragenen Partnerschaft"
+    }
+   ],
+   "marginalie": [
+    "1. Zuständiger Kläger bei unbefristeter Ungültigkeit (ZGB 106 Abs. 1; PartG 9 Abs. 2)"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.I. Zuständigkeit zur Aussprechung der Scheidung, Trennung und Auflösung einer eingetragenen Partnerschaft auf gemeinsames Begehren und auf Klage (ZGB 111–116; PartG 29–34)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.II. Vorsorgliche Massnahmen bei Trennung, Scheidung, Ungültigerklärung der Ehe und Trennung oder Auflösung der eingetragenen Partnerschaft (ZGB 137; vgl. ZGB 110; PartG 17 Abs. 2 und 4)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.III. Rechte der Eltern und der Kinder"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.IV. Prozessverfahren (ZGB 135–149)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Titel: Die Wirkungen der Ehe im Allgemeinen"
+    },
+    {
+     "ebene": 3,
+     "label": "5.I. Ausgleich für ausserordentliche Beiträge eines Ehegatten (ZGB 165)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Titel: Die Wirkungen der Ehe im Allgemeinen"
+    },
+    {
+     "ebene": 3,
+     "label": "5.II. Allgemeine richterliche Massnahmen, Massnahmen zum Schutze der ehelichen Gemeinschaft oder der Gemeinschaft der eingetragenen Partnerschaft"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Titel: Die Wirkungen der Ehe im Allgemeinen"
+    },
+    {
+     "ebene": 3,
+     "label": "5.II. Allgemeine richterliche Massnahmen, Massnahmen zum Schutze der ehelichen Gemeinschaft oder der Gemeinschaft der eingetragenen Partnerschaft"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Titel: Das Güterrecht der Ehegatten"
+    },
+    {
+     "ebene": 3,
+     "label": "6.I. Allgemeine Vorschriften"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Titel: Das Güterrecht der Ehegatten"
+    },
+    {
+     "ebene": 3,
+     "label": "6.I. Allgemeine Vorschriften"
+    }
+   ],
+   "marginalie": [
+    "2. Auseinandersetzung bei Eintritt der Gütertrennung (ZGB 192)"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Titel: Das Güterrecht der Ehegatten"
+    },
+    {
+     "ebene": 3,
+     "label": "6.I. Allgemeine Vorschriften"
+    }
+   ],
+   "marginalie": [
+    "3. Inventarerrichtung: Zuständigkeit (ZGB 195a, Art. 20 PartG)"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Titel: Das Güterrecht der Ehegatten"
+    },
+    {
+     "ebene": 3,
+     "label": "6.I. Allgemeine Vorschriften"
+    }
+   ],
+   "marginalie": [
+    "4. Streitigkeiten über die güterrechtliche Auseinandersetzung: Zuständigkeit (ZGB 194 )"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Titel: Das Güterrecht der Ehegatten"
+    },
+    {
+     "ebene": 3,
+     "label": "6.II. Errungenschaftsbeteiligung, Klage gegen Dritte (ZGB 208, 220)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Titel: Das Güterrecht der Ehegatten"
+    },
+    {
+     "ebene": 3,
+     "label": "6.III. Gütergemeinschaft, Ausschlagung und Annahme der Erbschaft (ZGB 230)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Titel: Das Güterrecht der Ehegatten"
+    },
+    {
+     "ebene": 3,
+     "label": "6.IV. Gütertrennung, Zuweisung von Miteigentum (ZGB 251)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Titel: Das Güterrecht der Ehegatten"
+    },
+    {
+     "ebene": 3,
+     "label": "6.V. Güterrechtsregisterführung (ZGBSchlT 9e, 10b, 10e)"
+    }
+   ],
+   "marginalie": []
+  },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Titel: Die Entstehung des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "7.I. Die Vaterschaft des Ehemannes"
+    }
+   ],
    "marginalie": [
     "Anfechtung der Vaterschaft des Ehemannes an einem vor Abschluss der Ehe erzeugten Kinde: Anfechtungsberechtigte Behörde (ZGB 259)"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Titel: Die Entstehung des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "7.II. Anerkennung und Vaterschaftsurteil"
+    }
+   ],
    "marginalie": [
     "Klagerecht (ZGB 260a, 261)"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Titel: Die Entstehung des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "7.III. Adoption"
+    },
+    {
+     "ebene": 4,
+     "label": "7.III.1."
+    }
+   ],
    "marginalie": [
     "1. Zuständige Behörde (ZGB 264–268b, 422 Ziff. 1)"
    ]
   },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Titel: Die Entstehung des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "7.III. Adoption"
+    },
+    {
+     "ebene": 4,
+     "label": "7.III.1."
+    }
+   ],
+   "marginalie": [
+    "2. Adoptivkindervermittlung (ZGB 269c)"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.I. Die Unterhaltspflicht der Eltern"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.I. Die Unterhaltspflicht der Eltern"
+    }
+   ],
+   "marginalie": [
+    "2. Vorsorgliche Massregeln (ZGB 281-284)"
+   ]
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.I. Die Unterhaltspflicht der Eltern"
+    }
+   ],
+   "marginalie": [
+    "Inkassohilfe und Vorschüsse (ZGB 290, 131) *"
+   ]
+  },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.I. Die Unterhaltspflicht der Eltern"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.I. Die Unterhaltspflicht der Eltern"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.II. Die elterliche Sorge"
+    },
+    {
+     "ebene": 4,
+     "label": "8.II.1. Unterstützung und behördliches Einschreiten (ZGB 307–310, 313)"
+    }
+   ],
+   "marginalie": []
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.II. Die elterliche Sorge"
+    },
+    {
+     "ebene": 4,
+     "label": "8.II.2. Entziehung der elterlichen Sorge"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.II. Die elterliche Sorge"
+    },
+    {
+     "ebene": 4,
+     "label": "8.II.2. Entziehung der elterlichen Sorge"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.II. Die elterliche Sorge"
+    },
+    {
+     "ebene": 4,
+     "label": "8.II.2. Entziehung der elterlichen Sorge"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.II. Die elterliche Sorge"
+    },
+    {
+     "ebene": 4,
+     "label": "8.II.2. Entziehung der elterlichen Sorge"
+    }
+   ],
+   "marginalie": [
+    "3. Aufsicht über Pflegekinder und Hüteplätze (ZGB 316)"
+   ]
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    }
+   ],
    "marginalie": [
     "2. Anzeigepflicht der Gerichte und Behörden"
    ]
   },
-  "72": {
-   "gliederung": [],
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    }
+   ],
+   "marginalie": [
+    "3. Pflicht zur Inventur des Kindesvermögens"
+   ]
+  },
+  "58": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    }
+   ],
+   "marginalie": [
+    "4. Inventar"
+   ]
+  },
+  "59": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "5. Ordnungsbusse"
+   ]
+  },
+  "60": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "61": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "62": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "63": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "64": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "65": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "66": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "67": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "68": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.III. Das Kindesvermögen"
+    },
+    {
+     "ebene": 4,
+     "label": "8.III.5. Ordnungsbusse"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "69": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "9. Titel: Die Familiengemeinschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "9.I. Unterstützungspflicht"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "70": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "9. Titel: Die Familiengemeinschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "9.I. Unterstützungspflicht"
+    }
+   ],
+   "marginalie": [
+    "2. Unterhalt von Findelkindern (ZGB 330)"
+   ]
+  },
+  "71": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "9. Titel: Die Familiengemeinschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "9.II. Hausgewalt. Verantwortlichkeit für Geisteskranke (ZGB 333)"
+    }
+   ],
    "marginalie": []
   },
+  "72": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "9. Titel: Die Familiengemeinschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "9.III. Das Familienvermögen. Familienheimstätten (ZGB 349)"
+    }
+   ],
+   "marginalie": []
+  },
+  "73": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "74": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "75": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "76": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "77": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "78": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "79": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "80": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "81": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "82": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    },
+    {
+     "ebene": 4,
+     "label": "10.1.II. Vormund und Beistand"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "83": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt (10. Titel): Die Bevormundungsfälle"
+    },
+    {
+     "ebene": 4,
+     "label": "10.2.I. Entmündigung, Zuständigkeit und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "84": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt (10. Titel): Die Bevormundungsfälle"
+    },
+    {
+     "ebene": 4,
+     "label": "10.2.I. Entmündigung, Zuständigkeit und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "85": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt (10. Titel): Die Bevormundungsfälle"
+    },
+    {
+     "ebene": 4,
+     "label": "10.2.I. Entmündigung, Zuständigkeit und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "86": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt (10. Titel): Die Bevormundungsfälle"
+    },
+    {
+     "ebene": 4,
+     "label": "10.2.II. Veröffentlichung und Kosten der Entmündigung (ZGB 375)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "87": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt (10. Titel): Die Zuständigkeit"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "88": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt (10. Titel): Die Bestellung des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "10.4.I. Anstalts- und Amtsvormund (ZGB 380, 381)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "89": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt (10. Titel): Die Bestellung des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "10.4.II. Vorläufige Entziehung der Handlungsfähigkeit (ZGB 386)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "90": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt (10. Titel): Die Bestellung des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "10.4.III. Mitteilung der Ernennung zum Vormund (ZGB 387)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "91": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt (10. Titel): Die Bestellung des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "10.4.IV. Ablehnung und Anfechtung (ZGB 388, 390)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "92": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt (10. Titel): Die Bestellung des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "10.4.V. Übergabe des Amtes (ZGB 391)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "93": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt (10. Titel): Die Beistandschaft"
+    },
+    {
+     "ebene": 4,
+     "label": "10.5.I. Beistandschaft behufs Vermögensfürsorge (ZGB 393)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "94": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt (10. Titel): Die Beistandschaft"
+    },
+    {
+     "ebene": 4,
+     "label": "10.5.II. Beschränkung der Handlungsfähigkeit; Beirat (ZGB 395)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "95": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.I. Übernahme des Amtes"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "96": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.I. Übernahme des Amtes"
+    },
+    {
+     "ebene": 5,
+     "label": "11.1.I.2. Verwahrung von Wertsachen (ZGB 399, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "97": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.I. Übernahme des Amtes"
+    },
+    {
+     "ebene": 5,
+     "label": "11.1.I.2. Verwahrung von Wertsachen (ZGB 399, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "98": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.I. Übernahme des Amtes"
+    },
+    {
+     "ebene": 5,
+     "label": "11.1.I.2. Verwahrung von Wertsachen (ZGB 399, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "99": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.I.3. Versteigerungen von beweglichen Sachen und Grundstücken (ZGB 400, 404)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "100": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.I.3. Versteigerungen von beweglichen Sachen und Grundstücken (ZGB 400, 404)"
+    },
+    {
+     "ebene": 5,
+     "label": "11.1.I.4. Anlage von Barschaft (ZGB 401, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "101": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.I.3. Versteigerungen von beweglichen Sachen und Grundstücken (ZGB 400, 404)"
+    },
+    {
+     "ebene": 5,
+     "label": "11.1.I.4. Anlage von Barschaft (ZGB 401, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "102": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.II. Eigenes Handeln des Bevormundeten (ZGB 410)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "103": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.III. Jahresbericht und Jahresrechnung (ZGB 413, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "104": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.III. Jahresbericht und Jahresrechnung (ZGB 413, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "105": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.III. Jahresbericht und Jahresrechnung (ZGB 413, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "106": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.III. Jahresbericht und Jahresrechnung (ZGB 413, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "107": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.IV. Amtsdauer (ZGB 415)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "108": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (11. Titel): Das Amt des Vormunds"
+    },
+    {
+     "ebene": 4,
+     "label": "11.1.V. Entschädigung der Amts- und Anstaltsvormünder (ZGB 416)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "109": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt (11. Titel): Die Mitwirkung der vormundschaftlichen Behörden"
+    },
+    {
+     "ebene": 4,
+     "label": "11.3.I. Beschwerden und Zustimmungsgesuch (ZGB 420–422, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "110": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt (11. Titel): Die Mitwirkung der vormundschaftlichen Behörden"
+    },
+    {
+     "ebene": 4,
+     "label": "11.3.II. Prüfung von Bericht und Rechnung (ZGB 423, 425)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "111": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt (11. Titel): Die Mitwirkung der vormundschaftlichen Behörden"
+    },
+    {
+     "ebene": 4,
+     "label": "11.3.III. Verwaltungsvorschriften und Gebühren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "112": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Titel: Die Führung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt (11. Titel): Die Verantwortlichkeit der vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "113": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.I. Das Ende der Bevormundung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "114": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.I. Das Ende der Bevormundung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "115": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.I. Das Ende der Bevormundung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "116": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.I. Das Ende der Bevormundung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "117": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.I. Das Ende der Bevormundung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "118": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.I. Das Ende der Bevormundung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "119": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.II. Das Ende des Vormundschaftlichen Amtes"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "120": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.II. Das Ende des Vormundschaftlichen Amtes"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "121": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.III. Die Folgen der Beendigung"
+    },
+    {
+     "ebene": 4,
+     "label": "12.III.1. Schlussbericht und -rechnung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "122": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.III. Die Folgen der Beendigung"
+    },
+    {
+     "ebene": 4,
+     "label": "12.III.1. Schlussbericht und -rechnung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "123": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Titel: Das Ende der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "12.III. Die Folgen der Beendigung"
+    },
+    {
+     "ebene": 4,
+     "label": "12.III.1. Schlussbericht und -rechnung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "124": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "13. Titel: Die gesetzlichen Erben"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "125": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "14. Titel: Die Verfügungen von Todes wegen"
+    },
+    {
+     "ebene": 3,
+     "label": "14.I. Pflichtteil der Geschwister (ZGB 470–472, SchlT 61 Abs. 2)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "126": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "14. Titel: Die Verfügungen von Todes wegen"
+    },
+    {
+     "ebene": 3,
+     "label": "14.II. Sicherungsmittel bei Nacherbenfolge (ZGB 490)"
+    }
+   ],
    "marginalie": []
   },
   "127": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "14. Titel: Die Verfügungen von Todes wegen"
+    },
+    {
+     "ebene": 3,
+     "label": "14.III. Verfügungsformen"
+    }
+   ],
    "marginalie": [
     "1. Urkundsperson und Aufbewahrung öffentlicher letztwilliger Verfügungen (ZGB 499, 504)"
    ]
   },
   "128": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "14. Titel: Die Verfügungen von Todes wegen"
+    },
+    {
+     "ebene": 3,
+     "label": "14.III. Verfügungsformen"
+    }
+   ],
    "marginalie": [
     "2. Aufbewahrung eigenhändiger letztwilliger Verfügungen (ZGB 505)"
    ]
   },
+  "129": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "14. Titel: Die Verfügungen von Todes wegen"
+    },
+    {
+     "ebene": 3,
+     "label": "14.III. Verfügungsformen"
+    }
+   ],
+   "marginalie": [
+    "3. Mündliche letztwillige Verfügungen, Beurkundung (ZGB 507)"
+   ]
+  },
   "130": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "14. Titel: Die Verfügungen von Todes wegen"
+    },
+    {
+     "ebene": 3,
+     "label": "14.III. Verfügungsformen"
+    },
+    {
+     "ebene": 4,
+     "label": "14.III.4. Erbverträge, Urkundspersonen"
+    }
+   ],
    "marginalie": [
     "4. Erbverträge, Urkundspersonen (ZGB 512)"
    ]
   },
   "131": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "14. Titel: Die Verfügungen von Todes wegen"
+    },
+    {
+     "ebene": 3,
+     "label": "14.IV. Inventarisierung bei Ausrichtung des Vermögens zu Lebzeiten des Erblassers aus Erbvertrag (ZGB 534)"
+    }
+   ],
+   "marginalie": []
+  },
+  "132": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "15. Titel: Die Eröffnung des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "15.I. Auslieferung der Erbschaft eines Verschollenen gegen Sicherheitsleistung. Erbrecht des Verschollenen (ZGB 546, 548)"
+    }
+   ],
    "marginalie": []
   },
   "133": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "15. Titel: Die Eröffnung des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "15.II. Verschollenerklärung von Amts wegen, antragsberechtigte Behörde (ZGB 550)"
+    }
+   ],
    "marginalie": []
   },
   "134": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.I. Sicherungsmassregeln"
+    },
+    {
+     "ebene": 4,
+     "label": "16.I.1. Zuständige Behörde (ZGB 551)"
+    }
+   ],
    "marginalie": []
   },
   "135": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.I. Sicherungsmassregeln"
+    },
+    {
+     "ebene": 4,
+     "label": "16.I.2. Sieglung (ZGB 552)"
+    }
+   ],
    "marginalie": []
   },
   "136": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.I. Sicherungsmassregeln"
+    },
+    {
+     "ebene": 4,
+     "label": "16.I.3. Inventur (ZGB 553)"
+    }
+   ],
    "marginalie": [
     "A. Die Fälle und die zuständige Behörde"
    ]
   },
   "137": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.I. Sicherungsmassregeln"
+    },
+    {
+     "ebene": 4,
+     "label": "16.I.3. Inventur (ZGB 553)"
+    }
+   ],
    "marginalie": [
     "B. Aufschlusspflicht"
    ]
   },
   "138": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.I. Sicherungsmassregeln"
+    },
+    {
+     "ebene": 4,
+     "label": "16.I.3. Inventur (ZGB 553)"
+    }
+   ],
    "marginalie": [
     "C. Inhalt des Inventars"
    ]
   },
   "139": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.I. Sicherungsmassregeln"
+    },
+    {
+     "ebene": 4,
+     "label": "16.I.4. Erbschaftsverwaltung (ZGB 554, 555)"
+    }
+   ],
    "marginalie": []
   },
   "140": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.I. Sicherungsmassregeln"
+    },
+    {
+     "ebene": 4,
+     "label": "16.I.5. Eröffnung letztwilliger Verfügungen (ZGB 556–558)"
+    }
+   ],
    "marginalie": []
   },
   "141": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.II. Erwerb der Erbschaft"
+    }
+   ],
    "marginalie": [
     "1. Ausschlagung (ZGB 570)"
    ]
   },
   "142": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.II. Erwerb der Erbschaft"
+    }
+   ],
    "marginalie": [
     "2. Fristverlängerung und Restitution gegen Fristversäumnisse (ZGB 576)"
    ]
   },
   "143": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.III. Das öffentliche Inventar"
+    }
+   ],
    "marginalie": [
     "1. Zuständige Behörde, Rechnungsruf (ZGB 580, 582, 592)"
    ]
   },
+  "144": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.III. Das öffentliche Inventar"
+    }
+   ],
+   "marginalie": [
+    "2. Sicherstellungsbegehren (ZGB 585)"
+   ]
+  },
   "145": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.III. Das öffentliche Inventar"
+    }
+   ],
    "marginalie": [
     "3. Erklärungsfristen (ZGB 587)"
    ]
   },
+  "146": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.IV. Die amtliche Liquidation"
+    }
+   ],
+   "marginalie": [
+    "1. Begehren der Gläubiger des Erblassers (ZGB 594)"
+   ]
+  },
   "147": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.IV. Die amtliche Liquidation"
+    }
+   ],
    "marginalie": [
     "2. Liquidationsbehörde (ZGB 595)"
    ]
   },
+  "148": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "16. Titel: Die Wirkungen des Erbgangs"
+    },
+    {
+     "ebene": 3,
+     "label": "16.V. Erbschaftsklage"
+    }
+   ],
+   "marginalie": [
+    "Sicherstellungsmassregeln (ZGB 598 Abs. 2)"
+   ]
+  },
   "149": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "17. Titel: Die Teilung der Erbschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "17.I. Die Gemeinschaft vor der Teilung"
+    }
+   ],
    "marginalie": [
     "1. Vertretung der Erbengemeinschaft (ZGB 602)"
    ]
   },
+  "150": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "17. Titel: Die Teilung der Erbschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "17.I. Die Gemeinschaft vor der Teilung"
+    }
+   ],
+   "marginalie": [
+    "2. Teilungsanspruch (ZGB 604)"
+   ]
+  },
   "151": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "17. Titel: Die Teilung der Erbschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "17.II. Die Teilungsart"
+    }
+   ],
    "marginalie": [
     "1. Mitwirkung der Behörde bei der Ordnung der Teilung (ZGB 609)"
    ]
   },
+  "152": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "17. Titel: Die Teilung der Erbschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "17.II. Die Teilungsart"
+    }
+   ],
+   "marginalie": [
+    "2. Losbildung; Verkauf einzelner Sachen usw. (ZGB 611–613)"
+   ]
+  },
+  "153": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Teil: Das Erbrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "17. Titel: Die Teilung der Erbschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "17.II. Die Teilungsart"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "154": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "18. Titel: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "155": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.I. Aneignung derelinquierter Grundstücke (ZGB 658)"
+    }
+   ],
    "marginalie": []
   },
   "156": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.II. Ausserordentliche Ersitzung (ZGB 662)"
+    }
+   ],
    "marginalie": []
   },
   "157": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.III. Herrenlose und Öffentliche Sachen (ZGB 664)"
+    }
+   ],
    "marginalie": []
   },
   "158": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.IV. Beschränkungen des Grundeigentums durch das Bergbauregal (ZGB 667)"
+    }
+   ],
    "marginalie": []
   },
   "159": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    }
+   ],
    "marginalie": [
     "1. Gruben, Stützmauern, allgemeine Bauvorschriften (ZGB 686)"
    ]
   },
   "160": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    }
+   ],
    "marginalie": [
     "2. Öffnungen in Scheidemauern"
    ]
   },
   "161": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    }
+   ],
    "marginalie": [
     "3. Öffnungen in Hinterfassaden"
    ]
   },
+  "162": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "163": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "164": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
+    },
+    {
+     "ebene": 5,
+     "label": "19.V.4.C. Umbau von Scheidemauern"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "165": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
+    },
+    {
+     "ebene": 5,
+     "label": "19.V.4.D. Halbe Hofstatt, Eigentum und Benützung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "166": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
+    },
+    {
+     "ebene": 5,
+     "label": "19.V.4.E. Nichtbenützung des Rechts der halben Hofstatt"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "167": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
+    },
+    {
+     "ebene": 5,
+     "label": "19.V.4.F. Abscheidungsmauern"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "168": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.5. Pflanzen (ZGB 688)"
+    }
+   ],
    "marginalie": []
   },
+  "169": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.6. Durchleitungen (ZGB 691–693)"
+    }
+   ],
+   "marginalie": []
+  },
+  "170": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.7. Wegrechte"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "171": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.7. Wegrechte"
+    }
+   ],
    "marginalie": [
     "B. Streck- oder Tretrecht (ZGB 695)"
    ]
   },
+  "172": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.7. Wegrechte"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "173": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.8. Einfriedigungen (ZGB 697)"
+    }
+   ],
+   "marginalie": []
+  },
+  "174": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VI. Zutritt Jagd- und Fischereiberechtigter (ZGB 699)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "175": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
+    }
+   ],
+   "marginalie": [
+    "1. Allgemeine Vorbehalte des kantonalen Rechts. Lage der Parzellen an öffentlichen Fahrwegen. Bauten an der Kantonsgrenze und an den Gemeindegrenzen [11]"
+   ]
+  },
+  "176": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "177": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "178": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
+    },
+    {
+     "ebene": 4,
+     "label": "A. Anlage von Feldwegen"
+    }
+   ],
+   "marginalie": []
+  },
+  "179": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Zusammenlegungen"
+    }
+   ],
+   "marginalie": [
+    "a) Wald und landwirtschaftliche Grundstücke"
+   ]
+  },
   "180": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Zusammenlegungen"
+    }
+   ],
    "marginalie": [
     "b) Baugebiet *"
    ]
   },
+  "181": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VIII. Quellen und Brunnen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "182": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VIII. Quellen und Brunnen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "183": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VIII. Quellen und Brunnen"
+    }
+   ],
    "marginalie": [
     "3. Pflicht zur Abtretung von Wasser und Boden für Trinkwasserversorgung (ZGB 711, 712)"
    ]
   },
   "184": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "20. Titel: Das Fahrniseigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "20.I. Eigentumsvorbehalt (ZGB 715)"
+    }
+   ],
    "marginalie": []
   },
+  "185": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "20. Titel: Das Fahrniseigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "20.II. Fund (ZGB 720-722, 725)"
+    }
+   ],
+   "marginalie": []
+  },
+  "186": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "21. Titel: Die Dienstbarkeiten und Grundlasten"
+    },
+    {
+     "ebene": 3,
+     "label": "21.I. Sicherstellung des Eigentümers durch den Nutzniesser (ZGB 760-762)"
+    }
+   ],
+   "marginalie": []
+  },
+  "187": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "21. Titel: Die Dienstbarkeiten und Grundlasten"
+    },
+    {
+     "ebene": 3,
+     "label": "21.II. Öffentlich-rechtliche Grundlasten (ZGB 784)"
+    }
+   ],
+   "marginalie": []
+  },
+  "188": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "21. Titel: Die Dienstbarkeiten und Grundlasten"
+    },
+    {
+     "ebene": 3,
+     "label": "21.II. Öffentlich-rechtliche Grundlasten (ZGB 784)"
+    }
+   ],
+   "marginalie": []
+  },
+  "189": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "21. Titel: Die Dienstbarkeiten und Grundlasten"
+    },
+    {
+     "ebene": 3,
+     "label": "21.II. Öffentlich-rechtliche Grundlasten (ZGB 784)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "190": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.I. Unverpfändbare Grundstücke (ZGB 796)"
+    }
+   ],
+   "marginalie": []
+  },
+  "191": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.II. Massregeln bei Wertverminderung des Grundpfandes"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "192": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.II. Massregeln bei Wertverminderung des Grundpfandes"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "193": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.II. Massregeln bei Wertverminderung des Grundpfandes"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "194": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.III. Einseitige Ablösung von Grundpfandverschreibungen (ZGB 828-830)"
+    }
+   ],
+   "marginalie": []
+  },
+  "195": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.IV. Amtliche Schätzung (ZGB 843 Abs. 1, 848)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "196": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.V. Ausfertigung von Schuldbrief und Gült (ZGB 857)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "197": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.VI. Stellvertretung der Gläubigerschaft bei Schuldbriefen (ZGB 850 Abs. 3)"
+    }
+   ],
    "marginalie": []
   },
   "198": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.VII. Zahlungsort (ZGB 861)"
+    }
+   ],
    "marginalie": []
+  },
+  "199": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.VIII. Kraftloserklärung von Titeln und Coupons bei Gült und Schuldbrief (ZGB 870, 871)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "200": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Titel: Das Grundpfand"
+    },
+    {
+     "ebene": 3,
+     "label": "22.IX. Überwachung der Auslosung und Tilgung bei Anleihensobligationen mit Gültsicherung und bei Seriengülten (ZGB 882)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   },
   "201": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "23. Titel: Das Fahrnispfand"
+    },
+    {
+     "ebene": 3,
+     "label": "23.I. Viehverpfändung (ZGB 885)"
+    }
+   ],
    "marginalie": []
+  },
+  "202": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "23. Titel: Das Fahrnispfand"
+    },
+    {
+     "ebene": 3,
+     "label": "23.II. Versatzanstalten (ZGB 907-915)"
+    }
+   ],
+   "marginalie": []
+  },
+  "203": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "23. Titel: Das Fahrnispfand"
+    },
+    {
+     "ebene": 3,
+     "label": "23.III. Pfandbriefe (ZGB 916-918)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   },
   "204": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.I. Gegenstand der Aufnahme im Grundbuch (ZGB 944, 949)"
+    }
+   ],
    "marginalie": []
   },
+  "205": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.II. Grundbuchorganisation"
+    }
+   ],
+   "marginalie": [
+    "1. Grundbuchkreis (ZGB 951)"
+   ]
+  },
+  "206": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.II. Grundbuchorganisation"
+    }
+   ],
+   "marginalie": [
+    "2. Grundbuchverwaltung und Aufsicht (ZGB 953–957)"
+   ]
+  },
+  "207": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.III. Vorläufige Eintragung auf richterlichen Befehl (ZGB 961, 966)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "208": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.IV. Anmerkung öffentlich-rechtlicher Beschränkungen (ZGB 962)"
+    }
+   ],
+   "marginalie": []
+  },
+  "209": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.V. Anmeldungen (ZGB 963; Grundbuchverordnung Art. 20)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "210": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.VI. Gerichtliche Anfechtung versehentlicher Grundbucheinträge (ZGB 977, Grundbuchverordnung Art. 98 Abs. 4)"
+    }
+   ],
+   "marginalie": []
+  },
+  "211": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (V. Teil) Wildschaden (OR 56 Abs. 3)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "212": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (V. Teil) Verjährung (OR 127f.)"
+    }
+   ],
    "marginalie": []
   },
   "213": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. (V. Teil) Kauf geistiger Getränke (OR 186)"
+    }
+   ],
    "marginalie": []
   },
   "214": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. (V. Teil) Miete und Pacht"
+    }
+   ],
    "marginalie": [
     "1. Kündigung, ortsüblicher Termin (OR 266b–d, 296 Abs. 2) *"
    ]
   },
   "215": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "V. (V. Teil) Normalarbeitsvertrag, Warenpapiere (OR 324, 482)"
+    }
+   ],
    "marginalie": []
   },
   "216": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "VI. (V. Teil) Pfrundanstalten (OR 522, 524 Abs. 3)"
+    }
+   ],
    "marginalie": []
   },
+  "217": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII. (V. Teil) Handelsregister (OR 927f.)"
+    }
+   ],
+   "marginalie": []
+  },
+  "218": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "219": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
+    }
+   ],
+   "marginalie": [
+    "2. Bürgerrecht (ZGBSchlT 8b)"
+   ]
+  },
+  "220": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "221": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "222": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "223": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.II. Eltern- und Kindesrecht"
+    }
+   ],
    "marginalie": [
     "1. Allgemeines (ZGBSchlT 12 Abs. 3)"
    ]
   },
   "224": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.III. Vormundschaft (ZGBschlT 14 Abs. 2 und 3)"
+    }
+   ],
    "marginalie": []
   },
   "225": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.IV. Erbrecht (ZGBSchlT 15, 16)"
+    }
+   ],
    "marginalie": []
   },
   "226": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.V. Grundpfandrechte"
+    }
+   ],
    "marginalie": [
     "1. Anerkennung der bestehenden Pfandtitel (ZGBSchlT 22 Abs. 2)"
    ]
   },
   "227": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.V. Grundpfandrechte"
+    }
+   ],
    "marginalie": [
     "2. Gleichstellung bisheriger Pfandrechte mit solchen des neuen Rechts (ZGBSchlT 33)"
    ]
   },
   "228": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VI. Einführung des Grundbuchs (ZGBSchlT 38, 46)"
+    }
+   ],
    "marginalie": []
   },
   "229": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VII. Grundbüchliche Behandlung aufgehobener Rechte (ZGBSchlT 45)"
+    }
+   ],
    "marginalie": []
   },
   "230": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
    "marginalie": [
     "1. Zuständige Stelle"
    ]
   },
+  "231": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "232": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "233": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "234": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "235": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "236": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "237": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "238": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "239": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "240": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.IX. Sicherung der Sparkasseneinlagen (ZGBSchlT 57)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "241": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.IX. Sicherung der Sparkasseneinlagen (ZGBSchlT 57)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "242": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.X. Verkündungs- und Trauungserlaubnis an Ausländer (ZGBSchlT 59 Ziff. 7e)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "243": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.1. Allgemeines. Gänzliche Aufhebung kantonaler Erlasse"
+    }
+   ],
    "marginalie": []
   },
   "244": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "245": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "246": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "247": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "248": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "249": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "250": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "251": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "252": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "253": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "254": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "255": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "256": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "257": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "258": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "259": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "260": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "261": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "262": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "263": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "264": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "265": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "266": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "267": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "268": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "269": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "270": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "271": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "272": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "273": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "274": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "275": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "276": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. (Schlusstitel) Aufhebung und Änderung kantonalen Rechts"
+    },
+    {
+     "ebene": 3,
+     "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
+    }
+   ],
    "marginalie": [
     "…"
    ]
   },
   "277": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Neue kantonale Gesetze"
+    }
+   ],
+   "marginalie": []
+  },
+  "278": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Neue kantonale Gesetze"
+    }
+   ],
    "marginalie": []
   },
   "279": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Inkrafttreten dieses Gesetzes"
+    }
+   ],
    "marginalie": []
   },
   "280": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Inkrafttreten dieses Gesetzes"
+    }
+   ],
    "marginalie": []
+  },
+  "164_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
+    },
+    {
+     "ebene": 5,
+     "label": "19.V.4.C. Umbau von Scheidemauern"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "164_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.V. Nachbarrecht"
+    },
+    {
+     "ebene": 4,
+     "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
+    },
+    {
+     "ebene": 5,
+     "label": "19.V.4.C. Umbau von Scheidemauern"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "16_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Titel: Die juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.I. Auflösung von Vereinen durch Gerichtsurteil (ZGB 78)"
+    }
+   ],
+   "marginalie": []
+  },
+  "180_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung (IV. Teil): Das Eigentum"
+    },
+    {
+     "ebene": 2,
+     "label": "19. Titel: Das Grundeigentum"
+    },
+    {
+     "ebene": 3,
+     "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
+    },
+    {
+     "ebene": 4,
+     "label": "B. Zusammenlegungen"
+    }
+   ],
+   "marginalie": [
+    "c) Rutschungsgebiet"
+   ]
+  },
+  "189_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abteilung (IV. Teil): Die beschränkten dinglichen Rechte"
+    },
+    {
+     "ebene": 2,
+     "label": "21. Titel: Die Dienstbarkeiten und Grundlasten"
+    },
+    {
+     "ebene": 3,
+     "label": "21.II. Öffentlich-rechtliche Grundlasten (ZGB 784)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "18_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Das Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Titel: Die juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.II. Aufsicht über die Stiftungen (ZGB 84)"
+    }
+   ],
+   "marginalie": []
+  },
+  "206_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.II. Grundbuchorganisation"
+    }
+   ],
+   "marginalie": []
+  },
+  "206_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.II. Grundbuchorganisation"
+    }
+   ],
+   "marginalie": []
+  },
+  "209_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.Va. Aufhebung und Veränderung der Einträge (ZGB 975, 976, 976a-c)"
+    }
+   ],
+   "marginalie": []
+  },
+  "209_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung (IV. Teil) Besitz und Grundbuch"
+    },
+    {
+     "ebene": 2,
+     "label": "25. Titel: Das Grundbuch"
+    },
+    {
+     "ebene": 3,
+     "label": "25.Va. Aufhebung und Veränderung der Einträge (ZGB 975, 976, 976a-c)"
+    }
+   ],
+   "marginalie": []
+  },
+  "213_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IIIbis. (V. Teil) Trödelgewerbe"
+    }
+   ],
+   "marginalie": []
+  },
+  "214_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. (V. Teil) Miete und Pacht"
+    }
+   ],
+   "marginalie": [
+    "2. Schlichtungsbehörde und Hinterlegungsstelle (OR 274a, 259g) *"
+   ]
+  },
+  "214_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. (V. Teil) Miete und Pacht"
+    }
+   ],
+   "marginalie": [
+    "3. Formulare (OR 266l Abs. 2, 269d Abs. 1, 270 Abs. 2, 298) *"
+   ]
+  },
+  "215_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "Vbis. (V. Teil) Ehe- und Partnerschaftsvermittlung (OR 406c Abs. 1)"
+    }
+   ],
+   "marginalie": []
+  },
+  "216_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "VII. (V. Teil) Depositenstellen (OR 633, 764)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "217_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. (V. Teil) Gerichtszuständigkeit"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "217_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. (V. Teil) Gerichtszuständigkeit"
+    },
+    {
+     "ebene": 3,
+     "label": "IX.2. Ausnahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "217_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. (V. Teil) Gerichtszuständigkeit"
+    },
+    {
+     "ebene": 3,
+     "label": "IX.2. Ausnahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "217_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Teil: Das Obligationenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. (V. Teil) Gerichtszuständigkeit"
+    },
+    {
+     "ebene": 3,
+     "label": "IX.2. Ausnahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "223_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.II. Eltern- und Kindesrecht"
+    }
+   ],
+   "marginalie": [
+    "2. Altrechtliche Kindesannahmen (ZGBSchlT 12a)"
+   ]
+  },
+  "223_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.II. Eltern- und Kindesrecht"
+    }
+   ],
+   "marginalie": [
+    "3. Unterstellung unter das neue Adoptionsrecht (ZGBSchlT 12b)"
+   ]
+  },
+  "223_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.II. Eltern- und Kindesrecht"
+    }
+   ],
+   "marginalie": [
+    "4. Adoption mündiger oder entmündigter Personen (ZGBSchlT 12c)"
+   ]
+  },
+  "230_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Schlusstitel des ZGB"
+    },
+    {
+     "ebene": 2,
+     "label": "I. (Schlusstitel) Anwendungs- und Einführungsbestimmungen des ZGB"
+    },
+    {
+     "ebene": 3,
+     "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
+    }
+   ],
+   "marginalie": [
+    "1a. Elektronische Ausführung und Beglaubigung"
+   ]
+  },
+  "25_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Titel: Die Eheschliessung und die eingetragene Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "3.V. Ungültigkeit einer Ehe oder eingetragenen Partnerschaft"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "28_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.III. Rechte der Eltern und der Kinder"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "28_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.III. Rechte der Eltern und der Kinder"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "28_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.III. Rechte der Eltern und der Kinder"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "28_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.III. Rechte der Eltern und der Kinder"
+    }
+   ],
+   "marginalie": [
+    "5. Ausbildung der mit der Kindesanhörung und Kindesvertretung beauftragten Personen"
+   ]
+  },
+  "29_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.V. Urteilsänderung, Vollstreckung"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "29_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abteilung: Das Eherecht und das Recht der eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Titel: Die Ehescheidung und die Auflösung einer eingetragenen Partnerschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "4.V. Urteilsänderung, Vollstreckung"
+    }
+   ],
+   "marginalie": [
+    "… *"
+   ]
+  },
+  "47_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.I. Die Unterhaltspflicht der Eltern"
+    }
+   ],
+   "marginalie": [
+    "Ausrichtung von Vorschüssen"
+   ]
+  },
+  "47_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.I. Die Unterhaltspflicht der Eltern"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeiten"
+   ]
+  },
+  "47_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweite Abteilung: Die Verwandtschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Titel: Die Wirkungen des Kindesverhältnisses"
+    },
+    {
+     "ebene": 3,
+     "label": "8.I. Die Unterhaltspflicht der Eltern"
+    }
+   ],
+   "marginalie": [
+    "Ausführungsbestimmungen"
+   ]
+  },
+  "81_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "94_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abteilung: Die Vormundschaft"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Titel: Die allgemeine Ordnung der Vormundschaft"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt (10. Titel): Die Beistandschaft"
+    },
+    {
+     "ebene": 4,
+     "label": "10.5.III. Beistandbestellung (ZGB 397)"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   }
  }
 }

@@ -1,112 +1,301 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bemessung"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Kostenvorschuss"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Kostenspruch"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Fälligkeit"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verzugszins"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schlichtungsbehörden"
+    }
+   ],
    "marginalie": [
     "Vermittler und Schlichtungsstellen *"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
    "marginalie": [
     "Entscheidgebühr"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
    "marginalie": [
     "Bezirksgerichtspräsident oder Einzelrichter *"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Bezirksgericht als Kollegialgericht in Zivilsachen *"
+   ]
+  },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
    "marginalie": [
     "Kantonsgerichtspräsident oder Einzelrichter *"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Kantonsgericht als Kollegialgericht in Zivilsachen *"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Gebührenerhöhung"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Kostenermässigung"
+   ]
+  },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
    "marginalie": [
     "Ausnahmen bei kostenlosen Verfahren"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Zusätzliche Gerichtskosten"
+    }
+   ],
    "marginalie": [
     "Beweiserhebung"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Zusätzliche Gerichtskosten"
+    }
+   ],
    "marginalie": [
     "a. Zeugen und Auskunftspersonen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Zusätzliche Gerichtskosten"
+    }
+   ],
    "marginalie": [
     "b. Sachverständige sowie Übersetzer *"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Zusätzliche Gerichtskosten"
+    }
+   ],
    "marginalie": [
     "c. Übrige *"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Zusätzliche Gerichtskosten"
+    }
+   ],
    "marginalie": [
     "Amtliche Veröffentlichung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Kanzleigebühren"
+    }
+   ],
+   "marginalie": [
+    "Gebührenpflichtige Verrichtungen"
+   ]
+  },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmung"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "11_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Bezirksgericht als Kollegialgericht in Strafsachen"
+   ]
+  },
+  "13_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Kantonsgericht als Kollegialgericht in Strafsachen"
+   ]
+  },
+  "13_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entscheidgebühren der Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Kantonsgericht als Kollegialgericht in Verwaltungssachen"
+   ]
+  },
+  "27_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmung"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen"
    ]
   }
  }

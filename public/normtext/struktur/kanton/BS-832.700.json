@@ -1,96 +1,341 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Zweck"
+    }
+   ],
    "marginalie": []
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
+   "marginalie": [
+    "Allgemeines *"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
    "marginalie": [
     "Anrechenbare Taxen in Heimen und Spitälern *"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
+   "marginalie": [
+    "Vermögensverzehr *"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
+   "marginalie": [
+    "Krankheits- und Behinderungskosten"
+   ]
+  },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
    "marginalie": [
     "Rückerstattung und Erlass"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
+   "marginalie": [
+    "Organisation und Verfahren"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
    "marginalie": [
     "Auskunfts- und Schweigepflicht"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
+   "marginalie": [
+    "Meldepflicht"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
    "marginalie": [
     "Finanzierung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
    "marginalie": [
     "Einsprache *"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": [
     "Anspruch"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": [
     "Wohnsitzvoraussetzung"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": [
     "Wiedererlangung des Wohnsitzes"
    ]
   },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": [
     "Maximale Höhe der Beihilfe an zu Hause Wohnende *"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": [
     "Beginn und Erlöschen der Anspruchsberechtigungen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": [
     "Nichtzustellbarkeit"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": [
     "Rückerstattung und Erlass"
    ]
   },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
+   "marginalie": [
+    "Einsprache"
+   ]
+  },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
    "marginalie": [
     "Anwendung eidgenössischen Rechts"
    ]
   },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Beiträge an die Kosten des Umweltschutzabonnementes"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Beiträge an die Kosten des Umweltschutzabonnementes"
+    }
+   ],
    "marginalie": [
     "Schlussbestimmung"
+   ]
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Ergänzungsleistungen"
+    }
+   ],
+   "marginalie": [
+    "Kantonale Rechtsmittel"
+   ]
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
+   "marginalie": [
+    "Ableben der anspruchsberechtigten Person"
+   ]
+  },
+  "22_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "24_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Kantonale Beihilfen"
+    }
+   ],
+   "marginalie": [
+    "Kantonale Rechtsmittel *"
+   ]
+  },
+  "25_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Beiträge an die Kosten des Umweltschutzabonnementes"
+    }
+   ],
+   "marginalie": [
+    "Anspruch und Höhe der Beiträge"
    ]
   }
  }

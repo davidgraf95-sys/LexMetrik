@@ -1,430 +1,1725 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.I. Stimmrecht"
+    }
+   ],
    "marginalie": [
     "Politischer Wohnsitz"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.I. Stimmrecht"
+    }
+   ],
+   "marginalie": [
+    "Stimmberechtigung"
+   ]
+  },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.I. Stimmrecht"
+    }
+   ],
    "marginalie": [
     "Stimmregister"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.I. Stimmrecht"
+    }
+   ],
    "marginalie": [
     "Stimmrechtsausweis"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.II. Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.II. Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Persönliche Stimmabgabe"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.II. Stimmabgabe"
+    }
+   ],
+   "marginalie": [
+    "Briefliche Stimmabgabe"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.II. Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Stimmabgabe durch Dritte"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.B. Organisation"
+    }
+   ],
    "marginalie": [
     "Wahllokale"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.B. Organisation"
+    }
+   ],
    "marginalie": [
     "Wahlbüro"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.B. Organisation"
+    }
+   ],
    "marginalie": [
     "Zentralwahlbüro"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.B. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Beauftragte des Regierungsrates"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.B. Organisation"
+    }
+   ],
    "marginalie": [
     "Entschädigung"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.B. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Unterstützung der Bürgergemeinde"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.A. Anordnung der Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Festlegung des Termins"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.A. Anordnung der Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Wahl- und Abstimmungsunterlagen"
    ]
   },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.B. Fehlerhafte Stimmabgabe"
+    }
+   ],
+   "marginalie": [
+    "Ungültige Wahl- und Stimmzettel"
+   ]
+  },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.B. Fehlerhafte Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Ungültige Stimmen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.B. Fehlerhafte Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Leere Wahl- und Stimmzettel"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.B. Fehlerhafte Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Leere Stimmen"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.C. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Ermittlung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.C. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Protokolle"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.C. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Publikation"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Gemeinsame Bestimmungen für Wahlen und Abstimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2.C. Ergebnisse"
+    }
+   ],
    "marginalie": [
     "Validierung"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendbare Bestimmungen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Amtliche Erläuterung"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Bedingte Eventualabstimmung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Annahme"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.I. Wahlverfahren"
+    }
+   ],
    "marginalie": [
     "Proporzsystem"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.I. Wahlverfahren"
+    }
+   ],
    "marginalie": [
     "Majorzsystem"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.I. Wahlverfahren"
+    }
+   ],
    "marginalie": [
     "Stille Wahl"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.II. Wahlperiode"
+    }
+   ],
    "marginalie": [
     "Grosser Rat"
    ]
   },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.II. Wahlperiode"
+    }
+   ],
+   "marginalie": [
+    "Regierungsrat und Regierungspräsidium"
+   ]
+  },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.III.I. Wahlvorschläge"
+    }
+   ],
    "marginalie": [
     "Einreichung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.III.I. Wahlvorschläge"
+    }
+   ],
    "marginalie": [
     "Unterzeichnung"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.III.I. Wahlvorschläge"
+    }
+   ],
    "marginalie": [
     "Inhaltliche Erfordernisse"
    ]
   },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.III.I. Wahlvorschläge"
+    }
+   ],
+   "marginalie": [
+    "Prüfung"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.III.I. Wahlvorschläge"
+    }
+   ],
+   "marginalie": [
+    "Doppelkandidatur"
+   ]
+  },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.III.I. Wahlvorschläge"
+    }
+   ],
    "marginalie": [
     "Ersatzvorschläge"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.A. Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "4.A.III.II. Bereinigung"
+    }
+   ],
    "marginalie": [
     "Abschluss der Bereinigung"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.I. Wahlkreise"
+    }
+   ],
    "marginalie": [
     "Einteilung"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.II. Bereinigte Wahlvorschläge"
+    }
+   ],
    "marginalie": [
     "Listen"
    ]
   },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.II. Bereinigte Wahlvorschläge"
+    }
+   ],
+   "marginalie": [
+    "Listenverbindung"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.II. Bereinigte Wahlvorschläge"
+    }
+   ],
+   "marginalie": [
+    "Publikation"
+   ]
+  },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.II. Bereinigte Wahlvorschläge"
+    }
+   ],
    "marginalie": [
     "Amtliche Wahlzettel"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.III. Wahlhandlung"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.III. Wahlhandlung"
+    }
+   ],
    "marginalie": [
     "Ausfüllen der Wahlzettel"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.IV. Auszählung"
+    }
+   ],
    "marginalie": [
     "Listenstimmen"
    ]
   },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.V. Wahlkreise mit mehreren Sitzen"
+    }
+   ],
+   "marginalie": [
+    "Zuteilung der Sitze"
+   ]
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.V. Wahlkreise mit mehreren Sitzen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.V. Wahlkreise mit mehreren Sitzen"
+    }
+   ],
    "marginalie": [
     "Erste Verteilung"
    ]
   },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.V. Wahlkreise mit mehreren Sitzen"
+    }
+   ],
+   "marginalie": [
+    "Weitere Verteilungen"
+   ]
+  },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.V. Wahlkreise mit mehreren Sitzen"
+    }
+   ],
    "marginalie": [
     "Gleichheit der Quotienten"
    ]
   },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.V. Wahlkreise mit mehreren Sitzen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.V. Wahlkreise mit mehreren Sitzen"
+    }
+   ],
    "marginalie": [
     "Ermittlung der Gewählten"
    ]
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.V. Wahlkreise mit mehreren Sitzen"
+    }
+   ],
    "marginalie": [
     "Überzählige Sitze"
    ]
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.VI. Einerwahlkreis"
+    }
+   ],
    "marginalie": [
     "Verfahren"
    ]
   },
+  "59": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.VII. Nachrücken und Ergänzungswahl"
+    }
+   ],
+   "marginalie": [
+    "Nachrücken"
+   ]
+  },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.VII. Nachrücken und Ergänzungswahl"
+    }
+   ],
    "marginalie": [
     "Ergänzungswahl"
    ]
   },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.VII. Nachrücken und Ergänzungswahl"
+    }
+   ],
    "marginalie": [
     "Ausnahmen"
    ]
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.II. Wahl des Verfassungsrates"
+    }
+   ],
    "marginalie": [
     "Wahlverfahren"
    ]
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.I. Wahlkreis und Wählbarkeit"
+    }
+   ],
    "marginalie": [
     "Wahlkreis"
    ]
   },
   "64": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.I. Wahlkreis und Wählbarkeit"
+    }
+   ],
    "marginalie": [
     "Wählbarkeit"
    ]
   },
   "65": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.II. Bereinigte Wahlvorschläge"
+    }
+   ],
    "marginalie": [
     "Publikation"
    ]
   },
+  "66": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.II. Bereinigte Wahlvorschläge"
+    }
+   ],
+   "marginalie": [
+    "Amtliche Wahlzettel"
+   ]
+  },
   "67": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.III. Wahlhandlung"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
+  "68": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.III. Wahlhandlung"
+    }
+   ],
+   "marginalie": [
+    "Ausfüllen der Wahlzettel"
+   ]
+  },
   "69": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.IV. Auszählung"
+    }
+   ],
    "marginalie": [
     "Erster Wahlgang"
    ]
   },
   "70": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.IV. Auszählung"
+    }
+   ],
    "marginalie": [
     "Absolutes Mehr"
    ]
   },
   "71": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.V. Zweiter Wahlgang"
+    }
+   ],
    "marginalie": [
     "Durchführung"
    ]
   },
   "72": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.V. Zweiter Wahlgang"
+    }
+   ],
    "marginalie": [
     "Wahlvorschläge"
    ]
   },
   "73": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.V. Zweiter Wahlgang"
+    }
+   ],
    "marginalie": [
     "Neuer Stimmrechtsausweis"
    ]
   },
   "74": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.V. Zweiter Wahlgang"
+    }
+   ],
    "marginalie": [
     "Wahlhandlung"
    ]
   },
   "75": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.I.V. Zweiter Wahlgang"
+    }
+   ],
    "marginalie": [
     "Relatives Mehr"
    ]
   },
+  "76": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.II.I. Wahl des Regierungsrates und des Regierungspräsidiums"
+    }
+   ],
+   "marginalie": [
+    "Zeitpunkt"
+   ]
+  },
   "77": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.II.II. Wahl in den Ständerat"
+    }
+   ],
    "marginalie": [
     "Amtsdauer und Zeitpunkt"
    ]
   },
   "78": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.II.III. Wahlen in die Gerichte"
+    }
+   ],
    "marginalie": [
     "Anwendbare Vorschriften"
    ]
   },
   "79": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Nachzählung"
+    }
+   ],
    "marginalie": [
     "Amtliche Anordnung"
    ]
   },
   "80": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "6.A. Eidgenössische Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendbare Vorschriften"
    ]
   },
   "81": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "6.B. Kantonale Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Beschwerden"
    ]
   },
+  "82": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "6.B. Kantonale Wahlen und Abstimmungen"
+    }
+   ],
+   "marginalie": [
+    "Aufschiebende Wirkung"
+   ]
+  },
   "83": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "6.B. Kantonale Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Entscheid"
    ]
   },
+  "84": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "6.B. Kantonale Wahlen und Abstimmungen"
+    }
+   ],
+   "marginalie": [
+    "Beschwerde an das Verwaltungsgericht"
+   ]
+  },
   "85": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "6.B. Kantonale Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Publikation der Entscheide und der Validierung"
    ]
   },
   "86": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "6.C. Neuer Wahlgang"
+    }
+   ],
    "marginalie": [
     "Termin"
    ]
   },
   "87": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "6.C. Neuer Wahlgang"
+    }
+   ],
    "marginalie": [
     "Ausübung des Mandates"
    ]
   },
   "88": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung des bisherigen Rechts"
    ]
   },
   "89": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung des bisherigen Rechts"
    ]
   },
   "90": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Vollzug"
    ]
   },
   "91": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.B. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Technische Hilfsmittel"
+   ]
+  },
+  "12_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.B. Organisation"
+    }
+   ],
+   "marginalie": [
+    "Ausgestaltung der Wahlunterlagen"
+   ]
+  },
+  "28_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Abstimmungen"
+    }
+   ],
+   "marginalie": [
+    "Amtliche Stimmzettel"
+   ]
+  },
+  "46_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.II.bis Unvereinbarkeit"
+    }
+   ],
+   "marginalie": []
+  },
+  "58_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.B. Proporzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.B.I.VI.bis Unvereinbarkeitsentscheid"
+    }
+   ],
+   "marginalie": []
+  },
+  "76_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.II.I.bis …"
+    }
+   ],
+   "marginalie": [
+    "Zeitpunkt der Wahlvorschläge"
+   ]
+  },
+  "76_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.II.I.bis …"
+    }
+   ],
+   "marginalie": [
+    "Relatives Mehr"
+   ]
+  },
+  "76_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.II.I.bis …"
+    }
+   ],
+   "marginalie": [
+    "Ersatzwahl des Regierungspräsidiums"
+   ]
+  },
+  "77_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Wahlen"
+    },
+    {
+     "ebene": 2,
+     "label": "4.C. Majorzwahlverfahren"
+    },
+    {
+     "ebene": 3,
+     "label": "4.C.II.II. Wahl in den Ständerat"
+    }
+   ],
+   "marginalie": []
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.A. Stimmrecht und Stimmabgabe"
+    },
+    {
+     "ebene": 3,
+     "label": "1.A.II. Stimmabgabe"
+    }
+   ],
+   "marginalie": [
+    "Elektronische Stimmabgabe"
    ]
   }
  }

@@ -1,30 +1,175 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebührenbemessung"
+    }
+   ],
    "marginalie": [
     "a) Kostendeckungsprinzip"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gebührenbemessung"
+    }
+   ],
    "marginalie": [
     "b) Äquivalenz- und Interessenprinzip"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebührenverordnungen"
+    }
+   ],
    "marginalie": [
     "Gebührenrahmen oder Tarife"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kanzlei-, Schreib- und Kopiergebühren"
+    }
+   ],
+   "marginalie": []
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Parteientschädigung im Verwaltungsrekursverfahren"
+    }
+   ],
+   "marginalie": [
+    "a) Grundsatz"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Parteientschädigung im Verwaltungsrekursverfahren"
+    }
+   ],
+   "marginalie": [
+    "b) Parteientschädigung"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Parteientschädigung im Verwaltungsrekursverfahren"
+    }
+   ],
+   "marginalie": [
+    "c) Ansatz"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Zuschlag zur ordentlichen Gebühr"
+    }
+   ],
+   "marginalie": []
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Gebührenerlass, unentgeltliche Rechtspflege, Rückerstattung"
+    }
+   ],
+   "marginalie": [
+    "a) Gebührenerlass"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Gebührenerlass, unentgeltliche Rechtspflege, Rückerstattung"
+    }
+   ],
+   "marginalie": [
+    "b) Unentgeltliche Rechtspflege"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Gebührenerlass, unentgeltliche Rechtspflege, Rückerstattung"
+    }
+   ],
+   "marginalie": [
+    "c) Rückerstattung"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Gebührenfreiheit"
+    }
+   ],
+   "marginalie": []
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Gebührenschuldner"
+    }
+   ],
+   "marginalie": []
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Fälligkeit"
+    }
+   ],
+   "marginalie": []
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Rechtsmittel"
+    }
+   ],
+   "marginalie": []
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XII. Schluss- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

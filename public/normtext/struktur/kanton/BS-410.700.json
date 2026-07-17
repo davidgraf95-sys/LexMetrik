@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
    "gliederung": [
@@ -441,6 +441,21 @@
     "Beurteilung der Sachkompetenz in den Fachbereichen oder Fächern"
    ]
   },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Beurteilung"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Zeugnis"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "32": {
    "gliederung": [
     {
@@ -760,7 +775,7 @@
     },
     {
      "ebene": 2,
-     "label": "12. Überspringen in den Volksschulen, Gymnasien und der FMS *"
+     "label": "12. Überspringen in den Volksschulen, Gymnasien und der FMS"
     }
    ],
    "marginalie": [
@@ -826,7 +841,7 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule *"
+     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
     }
    ],
    "marginalie": [
@@ -837,22 +852,55 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule *"
+     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
     }
    ],
    "marginalie": [
     "Wechsel in einen Leistungszug mit höheren Anforderungen *"
    ]
   },
+  "61": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "62": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "63": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule *"
+     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
     }
    ],
    "marginalie": [
     "Wechsel in einen Leistungszug mit tieferen Anforderungen *"
+   ]
+  },
+  "64": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
+    }
+   ],
+   "marginalie": [
+    "…"
    ]
   },
   "65": {
@@ -925,7 +973,7 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "VIII. Schülerinnen und Schüler mit individuellen Lernzielen in der Volksschule *"
+     "label": "VIII. Schülerinnen und Schüler mit individuellen Lernzielen in der Volksschule"
     }
    ],
    "marginalie": [
@@ -936,7 +984,7 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "VIII. Schülerinnen und Schüler mit individuellen Lernzielen in der Volksschule *"
+     "label": "VIII. Schülerinnen und Schüler mit individuellen Lernzielen in der Volksschule"
     }
    ],
    "marginalie": [
@@ -1316,6 +1364,99 @@
    ],
    "marginalie": [
     "Aufhebung von Erlassen"
+   ]
+  },
+  "100": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsregelung zur Einführung der Jahrespromotion an der FMS auf Beginn des Schuljahres 2024/25"
+   ]
+  },
+  "41_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beförderung und Nichtbeförderung, Wiederholen und Überspringen"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Beförderung und Wiederholung in der Volksschule"
+    }
+   ],
+   "marginalie": [
+    "Ausserordentlicher Übertritt in die Sekundarschule, ausserordentlicher Wechsel und Verbleib in der Sekundarschule"
+   ]
+  },
+  "42_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beförderung und Nichtbeförderung, Wiederholen und Überspringen"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Beförderung, Nichtbeförderung und Wiederholung in den weiterführenden Schulen"
+    }
+   ],
+   "marginalie": [
+    "Beförderung in den Brückenangeboten"
+   ]
+  },
+  "46_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beförderung und Nichtbeförderung, Wiederholen und Überspringen"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Beförderung, Nichtbeförderung und Wiederholung in den weiterführenden Schulen"
+    }
+   ],
+   "marginalie": [
+    "Beförderung in der FMS"
+   ]
+  },
+  "48_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beförderung und Nichtbeförderung, Wiederholen und Überspringen"
+    },
+    {
+     "ebene": 2,
+     "label": "11. Beförderung, Nichtbeförderung und Wiederholung in den weiterführenden Schulen"
+    }
+   ],
+   "marginalie": [
+    "Nichtbeförderung in der FMS am Ende des 12. – 14. Schuljahres"
+   ]
+  },
+  "68_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Übertritt von der Sekundarschule in die weiterführenden Schulen"
+    }
+   ],
+   "marginalie": [
+    "Verfahren in nachobligatorischen berufsvorbereitenden Angeboten für den Übertritt in die FMS, IMS, WMS und BM"
+   ]
+  },
+  "70_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Schülerinnen und Schüler mit individuellen Lernzielen in der Volksschule"
+    }
+   ],
+   "marginalie": [
+    "Festlegung von individuellen Lernzielen in der Volksschule"
    ]
   }
  }

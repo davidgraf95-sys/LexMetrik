@@ -1,316 +1,883 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
    "marginalie": [
     "Stellung"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
    "marginalie": [
     "Funktionen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
    "marginalie": [
     "Regierungstätigkeit"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
    "marginalie": [
     "Leitung der Öffentlichen Dienste"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
    "marginalie": [
     "Mitwirkung an der Rechtssetzung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
    "marginalie": [
     "Verwaltungshandlungen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
    "marginalie": [
     "Verwaltungsrechtspflege"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
+   "marginalie": [
+    "Öffentlichkeitsarbeit"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)B. Regierungsdelegationen und Regierungspräsident"
+    }
+   ],
    "marginalie": [
     "Delegationen"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)B. Regierungsdelegationen und Regierungspräsident"
+    }
+   ],
    "marginalie": [
     "Regierungspräsidentin / Regierungspräsident *"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)B. Regierungsdelegationen und Regierungspräsident"
+    }
+   ],
    "marginalie": [
     "Aufgaben des Regierungspräsidenten im einzelnen"
    ]
   },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)B. Regierungsdelegationen und Regierungspräsident"
+    }
+   ],
+   "marginalie": [
+    "Stellvertretung der Regierungspräsidentin oder des Regierungspräsidenten"
+   ]
+  },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)B. Regierungsdelegationen und Regierungspräsident"
+    }
+   ],
    "marginalie": [
     "Präsidialverfügung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Sitzungen, Einberufung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Vorbereitung und Leitung der Sitzungen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Andere Teilnehmer der Sitzungen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Beschlussfähigkeit"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Stimmabgabe"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Mehrheit"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Protokoll"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Unterzeichnung und Veröffentlichung der Beschlüsse"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)C. Geschäftsgang"
+    }
+   ],
    "marginalie": [
     "Geschäftsordnung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)D. Verschiedene Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zugehörigkeit zu den eidgenössischen Räten"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)D. Verschiedene Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Ausstand"
    ]
   },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)D. Verschiedene Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Entlöhnung"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)A. Departemente"
+    }
+   ],
+   "marginalie": [
+    "Grundsätze der Einteilung"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)A. Departemente"
+    }
+   ],
+   "marginalie": [
+    "Zuteilung der Departemente"
+   ]
+  },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)A. Departemente"
+    }
+   ],
    "marginalie": [
     "Bekanntmachungen"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)B. Organisation innerhalb der Departemente"
+    }
+   ],
    "marginalie": [
     "Gliederung der einzelnen Departemente, Zuteilung der Mitarbeiter"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)B. Organisation innerhalb der Departemente"
+    }
+   ],
    "marginalie": [
     "Departementsleitung"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)B. Organisation innerhalb der Departemente"
+    }
+   ],
    "marginalie": [
     "Leitungsaufgaben im Einzelnen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)B. Organisation innerhalb der Departemente"
+    }
+   ],
    "marginalie": [
     "Linienorganisation *"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)B. Organisation innerhalb der Departemente"
+    }
+   ],
    "marginalie": [
     "Stabsstellen"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Verwaltungseinheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(2.)B. Organisation innerhalb der Departemente"
+    }
+   ],
    "marginalie": [
     "Kommissionen [2]"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Zusammenarbeit innerhalb der Öffentlichen Dienste"
+    }
+   ],
    "marginalie": [
     "Grundsatz der Selbstkoordination"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Zusammenarbeit innerhalb der Öffentlichen Dienste"
+    }
+   ],
    "marginalie": [
     "Koordinierende Stellen"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Zusammenarbeit innerhalb der Öffentlichen Dienste"
+    }
+   ],
    "marginalie": [
     "Förderung der interdepartementalen Koordination durch den Regierungspräsidenten"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)A. Verfügungen allgemein"
+    }
+   ],
    "marginalie": [
     "Verfügungsbefugnis und Verfahren"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)A. Verfügungen allgemein"
+    }
+   ],
    "marginalie": [
     "Form und Inhalt von Verfügungen"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)A. Verfügungen allgemein"
+    }
+   ],
    "marginalie": [
     "Vollstreckbarkeit"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)B. Anfechtung von Verfügungen"
+    }
+   ],
    "marginalie": [
     "Grundsatz der Anfechtbarkeit, Rekursinstanzen"
    ]
   },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)B. Anfechtung von Verfügungen"
+    }
+   ],
+   "marginalie": [
+    "Überweisung an das Verwaltungsgericht"
+   ]
+  },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)C. Verwaltungsinternes Rekursverfahren"
+    }
+   ],
    "marginalie": [
     "Vorbehalt des Gesetzes über die Verwaltungsrechtspflege"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)C. Verwaltungsinternes Rekursverfahren"
+    }
+   ],
    "marginalie": [
     "Legitimation"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)C. Verwaltungsinternes Rekursverfahren"
+    }
+   ],
    "marginalie": [
     "Rekursgründe"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)C. Verwaltungsinternes Rekursverfahren"
+    }
+   ],
    "marginalie": [
     "Frist und Inhalt des Rekurses"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)C. Verwaltungsinternes Rekursverfahren"
+    }
+   ],
    "marginalie": [
     "Aufschiebende Wirkung"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)C. Verwaltungsinternes Rekursverfahren"
+    }
+   ],
    "marginalie": [
     "Verfahren"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)C. Verwaltungsinternes Rekursverfahren"
+    }
+   ],
    "marginalie": [
     "Rekursentscheid"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)D. Verschiedene Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rekurs wegen Rechtsverweigerung oder Rechtsverzögerung"
    ]
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)D. Verschiedene Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufsichtsrechtliche Anzeige"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)D. Verschiedene Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Fristwahrung bei Eingaben an kantonale Verwaltungsbehörden"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Abänderung anderer Gesetze, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung anderer Gesetze [4]"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Abänderung anderer Gesetze, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Anpassung weiterer Gesetzesvorschriften"
    ]
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Abänderung anderer Gesetze, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung des bisherigen Rechts"
    ]
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Abänderung anderer Gesetze, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Organisationsrechtliche Befugnisse des Regierungsrates und bestehende Gesetze"
    ]
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Abänderung anderer Gesetze, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Hängige Verwaltungs- und Rekursverfahren"
    ]
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Abänderung anderer Gesetze, Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "38_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)A. Verfügungen allgemein"
+    }
+   ],
+   "marginalie": [
+    "Verfügung über Realakte"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Regierungsrat"
+    },
+    {
+     "ebene": 2,
+     "label": "(1.)A. Stellung, Aufgaben und Kompetenzen"
+    }
+   ],
+   "marginalie": [
+    "Bericht zur strategischen Planung des Regierungsrates *"
+   ]
+  },
+  "52_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Verfügung und Rekurs"
+    },
+    {
+     "ebene": 2,
+     "label": "(4.)D. Verschiedene Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Barrierefreie Kommunikation"
    ]
   }
  }

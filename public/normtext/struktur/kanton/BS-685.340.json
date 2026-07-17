@@ -1,276 +1,739 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zweck der öffentlichen Materiallagerplätze"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Erklärung verwendeter Begriffe"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 1. Organisation"
+    }
+   ],
    "marginalie": [
     "Verwaltung des Dreispitzareals"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 1. Organisation"
+    }
+   ],
    "marginalie": [
     "Öffnungszeiten [3] und Wachtdienst"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 1. Organisation"
+    }
+   ],
    "marginalie": [
     "Aufteilung des Dreispitzareals"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 2. Die allgemeinen Anlagen"
+    }
+   ],
    "marginalie": [
     "Einfriedigung des Areals"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 2. Die allgemeinen Anlagen"
+    }
+   ],
    "marginalie": [
     "Bau und Unterhalt der Zufahrtsstrassen und Geleise"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 2. Die allgemeinen Anlagen"
+    }
+   ],
    "marginalie": [
     "Anschlüsse an das Stromversorgungsnetz"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 2. Die allgemeinen Anlagen"
+    }
+   ],
    "marginalie": [
     "Wasser- und Gasanschlüsse"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 2. Die allgemeinen Anlagen"
+    }
+   ],
    "marginalie": [
     "Kanalisationsanschlüsse"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 3. Parzellen"
+    }
+   ],
    "marginalie": [
     "Nutzung der Parzellen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 3. Parzellen"
+    }
+   ],
    "marginalie": [
     "Anschriften"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 3. Parzellen"
+    }
+   ],
    "marginalie": [
     "Schutt- und Kehrichtabfuhr und Schneeräumung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 4. Feuerpolizeiliche Vorschriften"
+    }
+   ],
    "marginalie": [
     "Hantieren mit offenem Feuer und Rauchen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 4. Feuerpolizeiliche Vorschriften"
+    }
+   ],
    "marginalie": [
     "Verbrennen von Abfällen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Verwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. 5. Anschlussgeleise an die Dreispitzanlagen"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Niederlassungsbedingungen"
+    }
+   ],
    "marginalie": [
     "Allgemeine Niederlassungsbedingungen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Niederlassungsbedingungen"
+    }
+   ],
    "marginalie": [
     "Niederlassungsverträge"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Überfuhr zwischen Basel SBB GB und Dreispitz"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rangierdienst"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Vortrittsrecht des Rangierdienstes"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Frachtrechtliche Ordnung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Erklärung für die Wagenzufuhr"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Wagenbehandlungsfristen für Niederlassungen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Wagenbehandlungsfristen für Anschliesser"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Standgeld der Dreispitzverwaltung"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Benützung der Abstellgeleise"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zu- und Abfuhr von Eisenbahnwagen für Dritte"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. B. Versandverkehr"
+    }
+   ],
    "marginalie": [
     "Bestellung von Wagen und Wagenausrüstungsgegenständen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. B. Versandverkehr"
+    }
+   ],
    "marginalie": [
     "Übergabe der Papiere und Abfuhr der Wagen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. C. Empfangsverkehr"
+    }
+   ],
    "marginalie": [
     "Wagenzustellung"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. C. Empfangsverkehr"
+    }
+   ],
    "marginalie": [
     "Reinigung und Rückgabe der Wagen und Wagenausrüstungsgegenstände"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. D. Stückgutverkehr"
+    }
+   ],
    "marginalie": []
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. E. Haftung"
+    }
+   ],
    "marginalie": [
     "Umschreibung der Haftung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. E. Haftung"
+    }
+   ],
    "marginalie": [
     "Frachtrechtliche Haftung"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. E. Haftung"
+    }
+   ],
    "marginalie": [
     "Haftpflichtverhältnisse auf dem Dreispitzareal"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 1. Eisenbahnbetrieb und -verkehr"
+    },
+    {
+     "ebene": 3,
+     "label": "4. 1. E. Haftung"
+    }
+   ],
    "marginalie": [
     "Haftung der Niederlassungen und Dritter"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 2. Strassenverkehr"
+    }
+   ],
    "marginalie": [
     "Rechtsstellung der Zufahrtsstrassen"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 2. Strassenverkehr"
+    }
+   ],
    "marginalie": [
     "Benützung der Zufahrtsstrassen"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 2. Strassenverkehr"
+    }
+   ],
    "marginalie": [
     "Vorgehen bei Unfällen"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 3. Öffentliche Waagen"
+    }
+   ],
    "marginalie": [
     "Waagverkehr"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Betriebsführung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. 3. Öffentliche Waagen"
+    }
+   ],
    "marginalie": [
     "Abwägung von Eisenbahnwagen"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Strafbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Teil: Gebührentarif"
+    }
+   ],
    "marginalie": []
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Teil: Gebührentarif"
+    }
+   ],
    "marginalie": [
     "Gebührentarif [5]"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Teil: Schlussbestimmung"
+    }
+   ],
    "marginalie": []
   }
  }

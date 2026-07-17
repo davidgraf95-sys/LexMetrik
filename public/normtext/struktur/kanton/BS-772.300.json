@@ -1,192 +1,638 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsstellung und Aufgaben der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 1. Rechtsperson"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsstellung und Aufgaben der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 2. Zweck und Aufgaben der IWB"
+    }
+   ],
    "marginalie": [
     "a) Sicherstellung der Versorgung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsstellung und Aufgaben der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 2. Zweck und Aufgaben der IWB"
+    }
+   ],
    "marginalie": [
     "b) Versorgungsnetze"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsstellung und Aufgaben der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 2. Zweck und Aufgaben der IWB"
+    }
+   ],
    "marginalie": [
     "c) Erfüllung von zusätzlichen öffentlichen Aufgaben"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsstellung und Aufgaben der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 2. Zweck und Aufgaben der IWB"
+    }
+   ],
    "marginalie": [
     "d) Gewerbliche Leistungen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsstellung und Aufgaben der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 3. Grundsätze der Versorgung"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 1. Organe"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 2. Wahl des Verwaltungsrates"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 3. Aufgaben des Verwaltungsrates"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 4. Geschäftsleitung"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 5. Revisionsstelle"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 6. Personal, Anstellungsverhältnis"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 7. Berufliche Vorsorge"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 8. Verantwortlichkeiten"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 9. Rechnungslegung"
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation der IWB"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 10. Steuern"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung und Beteiligungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Betriebsmittel"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung und Beteiligungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 2. Gewinn"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung und Beteiligungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 3. Finanzierung"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzierung und Beteiligungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 4. Kooperationen, Beteiligungen und Veräusserungen"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Marktpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "V. 1. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Marktpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "V. 2. Gebühren für Leistungen gemäss öffentlichem Auftrag"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Marktpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "V. 3. Grundsätze der Gebührentarife"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Marktpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "V. 4. Gebührenelemente"
+    }
+   ],
    "marginalie": []
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Marktpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "V. 5. Preise"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Verhältnis zum Kanton"
+    },
+    {
+     "ebene": 2,
+     "label": "VI. 1. Leistungsauftrag und Bewilligung von Einzelinvestitionen"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Verhältnis zum Kanton"
+    },
+    {
+     "ebene": 2,
+     "label": "VI. 2. Aufsicht und Genehmigung von Gebührentarifen"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Verhältnis zum Kanton"
+    },
+    {
+     "ebene": 2,
+     "label": "VI. 3. Genehmigung der Jahresrechnung und Gewinnverwendung, Entlastung des Verwaltungsrats"
+    }
+   ],
    "marginalie": []
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Verhältnis zum Kanton"
+    },
+    {
+     "ebene": 2,
+     "label": "VI. 4. Konzession zur Nutzung von Allmend und Wasserentnahmen aus öffentlichen Gewässern"
+    }
+   ],
    "marginalie": []
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Verhältnis zum Kanton"
+    },
+    {
+     "ebene": 2,
+     "label": "VI. 5. Koordination"
+    }
+   ],
    "marginalie": []
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verhältnis zu Dritten"
+    },
+    {
+     "ebene": 2,
+     "label": "VII. 1. Enteignungsrecht und Duldungspflichten"
+    }
+   ],
    "marginalie": []
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verhältnis zu Dritten"
+    },
+    {
+     "ebene": 2,
+     "label": "VII. 1. Enteignungsrecht und Duldungspflichten"
+    }
+   ],
    "marginalie": []
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verhältnis zu Dritten"
+    },
+    {
+     "ebene": 2,
+     "label": "VII. 2. Haftung der IWB gegenüber Grundeigentümerinnen und Grundeigentümern"
+    }
+   ],
    "marginalie": []
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verhältnis zu Dritten"
+    },
+    {
+     "ebene": 2,
+     "label": "VII. 3. Videoüberwachung und Einsatz von intelligenten, fernauslesbaren Messeinrichtungen"
+    }
+   ],
    "marginalie": []
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Haftung und Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII. 1. Haftung"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Haftung und Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII. 2. Rechtspflege"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. 1. Errichtung der IWB"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. 2. Eigentumsverhältnisse"
+    }
+   ],
    "marginalie": []
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. 3. Eröffnungsbilanz"
+    }
+   ],
    "marginalie": []
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. 4. Übergang der Arbeitsverhältnisse"
+    }
+   ],
    "marginalie": []
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. 5. Änderung und Aufhebung bisherigen Rechts"
+    }
+   ],
    "marginalie": [
     "Änderung bisherigen Rechts [2]"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. 5. Änderung und Aufhebung bisherigen Rechts"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. 6. Ergänzende Vorschriften"
+    }
+   ],
+   "marginalie": []
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "IX. 6. Ergänzende Vorschriften"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung betr. § 9 Abs. 1 und Abs. 3 bis [5]"
+   ]
+  },
+  "28_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Verhältnis zum Kanton"
+    },
+    {
+     "ebene": 2,
+     "label": "VI. 2. Aufsicht und Genehmigung von Gebührentarifen"
+    }
+   ],
+   "marginalie": []
+  },
+  "35_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verhältnis zu Dritten"
+    },
+    {
+     "ebene": 2,
+     "label": "VII. 3. Videoüberwachung und Einsatz von intelligenten, fernauslesbaren Messeinrichtungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "37_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Haftung und Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII. 3. Strafbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

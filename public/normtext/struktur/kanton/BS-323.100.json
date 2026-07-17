@@ -1,198 +1,526 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich und Zweck"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Behandlungsinstitutionen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Rechtsmedizinischer Dienst"
    ]
   },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Freiwilliger Eintritt in eine Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Aufnahme auf eigenes Begehren"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einweisung in eine Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Einweisungsgründe"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einweisung in eine Behandlungsinstitution"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeit"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einweisung in eine Behandlungsinstitution"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einweisung in eine Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Notaufnahme"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einweisung in eine Behandlungsinstitution"
+    }
+   ],
+   "marginalie": [
+    "Befreiung von der Geheimhaltungs- und Schweigepflicht"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Allgemeine Rechte der Patientinnen und Patienten (mit Geltung im ambulanten und stationären Bereich)"
+    }
+   ],
    "marginalie": [
     "Behandlung, Pflege, Fürsorge"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Allgemeine Rechte der Patientinnen und Patienten (mit Geltung im ambulanten und stationären Bereich)"
+    }
+   ],
    "marginalie": [
     "Aufklärung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Allgemeine Rechte der Patientinnen und Patienten (mit Geltung im ambulanten und stationären Bereich)"
+    }
+   ],
    "marginalie": [
     "Einwilligung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Allgemeine Rechte der Patientinnen und Patienten (mit Geltung im ambulanten und stationären Bereich)"
+    }
+   ],
    "marginalie": [
     "Besondere Therapien"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Allgemeine Rechte der Patientinnen und Patienten (mit Geltung im ambulanten und stationären Bereich)"
+    }
+   ],
    "marginalie": [
     "Einsicht"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Allgemeine Rechte der Patientinnen und Patienten (mit Geltung im ambulanten und stationären Bereich)"
+    }
+   ],
    "marginalie": [
     "Lehre und Forschung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Eintritt"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Therapieplan"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Aufenthalt in einer Behandlungsinstitution"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Kontakte zur Aussenwelt"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Physischer Zwang, Isolation"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Widerstand gegen Behandlung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Geheimhaltung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Anlaufstelle"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Rechtsschutz"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechte und Pflichten in der Behandlungsinstitution"
+    }
+   ],
    "marginalie": [
     "Aufsicht"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Austritt und Verlegung"
+    }
+   ],
    "marginalie": [
     "Austritt"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Austritt und Verlegung"
+    }
+   ],
    "marginalie": [
     "Zurückbehaltung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Austritt und Verlegung"
+    }
+   ],
    "marginalie": [
     "Freiwilliges Verbleiben"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Austritt und Verlegung"
+    }
+   ],
    "marginalie": [
     "Verlegung"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
    "marginalie": [
     "Rekurse"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
    "marginalie": [
     "Andere Verfahren"
    ]
   },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Rechtsmittel, Organisation und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Schadenersatz"
+    }
+   ],
+   "marginalie": []
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Anwendbares Recht"
+    }
+   ],
    "marginalie": []
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "J. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Vollzug"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "J. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "J. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "J. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Schlussbestimmungen"
    ]

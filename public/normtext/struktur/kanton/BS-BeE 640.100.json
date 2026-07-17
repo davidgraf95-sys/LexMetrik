@@ -1,82 +1,189 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Abschnitt: Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Abschnitt: Allgemeines"
+    }
+   ],
    "marginalie": [
     "Anwendbares Recht"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Abschnitt: Allgemeines"
+    }
+   ],
    "marginalie": [
     "Steuerarten"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Abschnitt: Die Einkommenssteuer, die Vermögenssteuer und die Grundstückgewinnsteuer der natürlichen Personen"
+    }
+   ],
    "marginalie": [
     "Steuerpflicht und Bemessungsgrundlagen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Abschnitt: Die Einkommenssteuer, die Vermögenssteuer und die Grundstückgewinnsteuer der natürlichen Personen"
+    }
+   ],
    "marginalie": [
     "Steuergrundlage und Steuerfuss *"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Behörden"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Steuererhebung"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Fälligkeit"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Zinsausgleich"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Einsprache"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Rekurs *"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkraftsetzung"
+   ]
+  },
+  "13_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung vom 11. Dezember 2018"
    ]
   }
  }

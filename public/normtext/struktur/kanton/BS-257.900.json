@@ -1,12 +1,31 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Beratungsstelle (Art. 9 OHG)"
+    }
+   ],
+   "marginalie": []
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Schutz und Rechte des Opfers im Strafverfahren (Art. 34–44 OHG)"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Entschädigung und Genugtuung (Art. 19–29 OHG)"
+    }
+   ],
    "marginalie": []
   }
  }

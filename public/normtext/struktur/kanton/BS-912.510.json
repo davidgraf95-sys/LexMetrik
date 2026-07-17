@@ -1,166 +1,367 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Aufsichtsorgane"
+    }
+   ],
    "marginalie": [
     "Aufsichts- und Vollzugsbehörde"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Aufsichtsorgane"
+    }
+   ],
    "marginalie": [
     "Kantonale Fischereiverwaltung und Kantonale Fischereiaufsicht"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Aufsichtsorgane"
+    }
+   ],
    "marginalie": [
     "Beizug der Fischereiberechtigten"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Fischereirechte"
+    }
+   ],
    "marginalie": [
     "Vergabe von Fischereirechten"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Fischereirechte"
+    }
+   ],
    "marginalie": [
     "Patent- und Pachtsystem / Fischereikarten"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Fischereirechte"
+    }
+   ],
    "marginalie": [
     "Sachkundenachweis"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Fischereirechte"
+    }
+   ],
    "marginalie": [
     "Ausstellen der Fischereikarten"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Fischereirechte"
+    }
+   ],
    "marginalie": [
     "Kategorien"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Fischerei in Wiese und Birs"
+    }
+   ],
    "marginalie": [
     "Verpachtung"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Fischerei in Wiese und Birs"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Ausweispflicht"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Fanggeräte *"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Einschränkungen der Fischerei und Massnahmen zum Schutz der aquatischen Fauna *"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Galgenfischerei im Rhein"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Fanglimite für Fische"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Sonderfänge"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Köderfische / Fischnährtiere"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Meldepflicht der Fänge"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Fischbesatz *"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
    "marginalie": [
     "Fischereiverbote *"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Kostentragung bei Notabfischungen"
+    }
+   ],
    "marginalie": [
     "Gebühren *"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Kostentragung bei Notabfischungen"
+    }
+   ],
    "marginalie": [
     "Notabfischungen"
    ]
   },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Kostentragung bei Notabfischungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Kostentragung bei Notabfischungen"
+    }
+   ],
    "marginalie": [
     "Fischereiveranstaltungen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bewilligung für technische Eingriffe *"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Meldepflicht kleiner Unterhaltsmassnahmen *"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verbot der Fischereiausübung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rechtsschutz"
+   ]
+  },
+  "13_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
+   "marginalie": [
+    "Verbotene Handlungen und Fangarten"
+   ]
+  },
+  "13_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausübung der Fischerei"
+    }
+   ],
+   "marginalie": [
+    "Fangmindestmasse, Schonzeiten und geschützte Arten"
+   ]
+  },
+  "29_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIbis. Übergangsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung von § 9 Abs. 1 und 2 vom 14. Oktober 2025"
+   ]
+  },
+  "29_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIbis. Übergangsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung von § 13 Abs. 4 vom 14. Oktober 2025"
    ]
   }
  }

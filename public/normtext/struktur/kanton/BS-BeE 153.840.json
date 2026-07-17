@@ -1,40 +1,81 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Definition und Höhe der Gebühren"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Gebührenerlass"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Gebühren"
+    }
+   ],
    "marginalie": [
     "Kanzleigebühren"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Gebühren"
+    }
+   ],
    "marginalie": [
     "Zahlungsfristen und Mahngebühren"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Gebühren"
+    }
+   ],
    "marginalie": [
     "Besondere Gebühren der Gemeindeverwaltung"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Gebühren"
+    }
+   ],
+   "marginalie": [
+    "Gebührenzuschlag"
    ]
   }
  }

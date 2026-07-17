@@ -1,140 +1,288 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Gegenstand und Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Spartenrechnung Immobilien"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Liegenschaftsverzeichnis"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Umsetzungsplanung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Beurteilung der Projektorganisation und Einsatz einer Bautreuhandstelle"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Ausschreibung von Aufträgen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Einmietung in Liegenschaften eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Mietmodell"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Einmietung in Liegenschaften eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Objektspezifische Regelungen"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Einmietung in Liegenschaften eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Mietabgeltung"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Grund- und Mietausbau in Liegenschaften eines Vertragskantons"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Grund- und Mietausbau in Liegenschaften eines Vertragskantons"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Grund- und Mietausbau in Liegenschaften eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Mehrkosten infolge Bauherrenaltlasten, Altlasten oder verdeckten Mängeln *"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Grund- und Mietausbau in Liegenschaften eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Fonds für Instandhaltung und Instandsetzung *"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Investitionen in Liegenschaften eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Finanzierung"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Investitionen in Liegenschaften eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Projektorganisation und Planung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Neuinvestitionen durch die Universität"
+    }
+   ],
    "marginalie": [
     "Finanzierung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Neuinvestitionen durch die Universität"
+    }
+   ],
    "marginalie": [
     "Projektorganisation und -planung"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Einmietung der Universität in Drittliegenschaften und Investitions-objekten eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Abschluss von Mietverträgen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Einmietung der Universität in Drittliegenschaften und Investitions-objekten eines Vertragskantons"
+    }
+   ],
    "marginalie": [
     "Mietausbauten"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Immobiliengremium"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Immobiliengremium"
+    }
+   ],
    "marginalie": [
     "Pflichtenheft"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung Ausbaufonds *"
    ]
   },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Kündigung"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Regelmässige Überprüfung"
    ]

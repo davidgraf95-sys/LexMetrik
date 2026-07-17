@@ -1,0 +1,472 @@
+{
+ "erzeugt": "2026-07-17",
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Geltungsbereich"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Datenqualität"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Organisation"
+    }
+   ],
+   "marginalie": [
+    "GIS-Ausschuss"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Organisation"
+    }
+   ],
+   "marginalie": [
+    "GIS-Fachstelle"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Inhalt und Qualität"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Anforderungen an die Geobasisdatenkataloge"
+    }
+   ],
+   "marginalie": []
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Inhalt und Qualität"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Geodatenmodelle"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Inhalt und Qualität"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Geodatenmodelle"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeit für die Modellierung"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Inhalt und Qualität"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Geodatenmodelle"
+    }
+   ],
+   "marginalie": [
+    "Datenbeschreibungssprache und Datentransfermethode"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Inhalt und Qualität"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Darstellungsmodelle"
+    }
+   ],
+   "marginalie": []
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Nachführung, Verfügbarkeit, Datentransfer"
+    }
+   ],
+   "marginalie": [
+    "Nachführung"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Nachführung, Verfügbarkeit, Datentransfer"
+    }
+   ],
+   "marginalie": [
+    "Historisierung"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Nachführung, Verfügbarkeit, Datentransfer"
+    }
+   ],
+   "marginalie": [
+    "Nachhaltige Verfügbarkeit"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Nachführung, Verfügbarkeit, Datentransfer"
+    }
+   ],
+   "marginalie": [
+    "Archivierung"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Nachführung, Verfügbarkeit, Datentransfer"
+    }
+   ],
+   "marginalie": [
+    "Datentransfer"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Geometadaten"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Geometadaten"
+    }
+   ],
+   "marginalie": [
+    "Zugang"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Geometadaten"
+    }
+   ],
+   "marginalie": [
+    "Erhebung, Nachführung, Archivierung"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Zugangsberechtigungsstufen"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Einwilligung zur Nutzung"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Verweigerung der Einwilligung"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Nachträgliche Einwilligung"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Nutzungsvorschriften"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Weitergabe an Dritte"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Vertragliche Regelungen"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Vernichtung widerrechtlich genutzter Daten"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Geodienste"
+    }
+   ],
+   "marginalie": [
+    "Dienste für Geobasisdaten und Geometadaten"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Geodienste"
+    }
+   ],
+   "marginalie": [
+    "Sachbereichsübergreifende Geodienste"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Geodienste"
+    }
+   ],
+   "marginalie": [
+    "Verknüpfung mit anderen Informatiksystemen"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Geodienste"
+    }
+   ],
+   "marginalie": [
+    "Rechtswirkungen des GIS"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Datenaustausch unter Behörden"
+    }
+   ],
+   "marginalie": [
+    "Gewährung des Zugangs"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Datenaustausch unter Behörden"
+    }
+   ],
+   "marginalie": [
+    "Verweigerungen des Zugangs"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Datenaustausch unter Behörden"
+    }
+   ],
+   "marginalie": [
+    "Datenschutz, Geheimhaltung"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Datenaustausch unter Behörden"
+    }
+   ],
+   "marginalie": [
+    "Weitergabe an Dritte"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Datenaustausch unter Behörden"
+    }
+   ],
+   "marginalie": [
+    "Pauschale Abgeltung"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Digitaler Leitungskataster"
+    }
+   ],
+   "marginalie": [
+    "Datenverwaltungsstelle"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Digitaler Leitungskataster"
+    }
+   ],
+   "marginalie": [
+    "Werkeigentümer"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Digitaler Leitungskataster"
+    }
+   ],
+   "marginalie": [
+    "Inhalt und Anforderungen"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Abschnitt: Gebühren"
+    }
+   ],
+   "marginalie": [
+    "Gebühren nach Zeitaufwand"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Abschnitt: Gebühren"
+    }
+   ],
+   "marginalie": [
+    "Gebührenbefreite Leistungen"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Abschnitt: Gebühren"
+    }
+   ],
+   "marginalie": [
+    "Pauschalgebühren"
+   ]
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Zugang und Nutzung"
+    }
+   ],
+   "marginalie": [
+    "Nutzung offener Verwaltungsdaten"
+   ]
+  }
+ }
+}

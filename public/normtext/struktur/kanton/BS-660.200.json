@@ -1,20 +1,76 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Behörden"
+    }
+   ],
+   "marginalie": []
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Behörden"
+    }
+   ],
+   "marginalie": []
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerrückerstattung"
+    }
+   ],
+   "marginalie": []
+  },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerrückerstattung"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerrückerstattung"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerrückerstattung"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerrückerstattung"
+    }
+   ],
+   "marginalie": []
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Rückforderung zurückerstatteter Verrechnungssteuern"
+    }
+   ],
    "marginalie": []
   }
  }

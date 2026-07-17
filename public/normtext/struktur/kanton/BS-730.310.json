@@ -1,70 +1,382 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zweck und Anwendungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Begriff des Parkplatzes"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Verfahren"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)1. Dienstleistungs-, Büro-, Gewerbe- und Fabrikationsbetriebe"
+    }
+   ],
    "marginalie": [
     "Ermittlung der Zahl der Arbeitsplätze"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)1. Dienstleistungs-, Büro-, Gewerbe- und Fabrikationsbetriebe"
+    }
+   ],
    "marginalie": [
     "Zahl der Parkplätze"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)2. Verkaufsgeschäfte"
+    }
+   ],
    "marginalie": [
     "Ausgangszahl für Parkplätze *"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)2. Verkaufsgeschäfte"
+    }
+   ],
    "marginalie": [
     "Zahl der Parkplätze"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)3. Wohnungen"
+    }
+   ],
    "marginalie": [
     "Zahl der Parkplätze *"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)4. Weitere Nutzungen"
+    }
+   ],
    "marginalie": [
     "Spezielle Nutzungen *"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)4. Weitere Nutzungen"
+    }
+   ],
    "marginalie": [
     "Zusätzliche Parkplätze *"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)5. Parkplätze auf anderen Grundstücken, Quartierparkings und Monitoring"
+    }
+   ],
    "marginalie": [
     "Parkplätze auf anderen Grundstücken *"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Berechnung der Anzahl Fahrten"
+    }
+   ],
+   "marginalie": [
+    "Berechnungsmodus"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Berechnung der Anzahl Fahrten"
+    }
+   ],
+   "marginalie": [
+    "Verkehrspotenzial"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Berechnung der Anzahl Fahrten"
+    }
+   ],
+   "marginalie": []
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Berechnung der Anzahl Fahrten"
+    }
+   ],
+   "marginalie": []
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Berechnung der Anzahl Fahrten"
+    }
+   ],
+   "marginalie": [
+    "Betriebstage"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Berechnung der Anzahl Fahrten"
+    }
+   ],
+   "marginalie": []
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)1. Berechnung der Anzahl Fahrten"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)2. Ergänzende Festlegung der Anzahl Parkplätze"
+    }
+   ],
+   "marginalie": []
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Kontrolle"
+    }
+   ],
+   "marginalie": []
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)3. Kontrolle"
+    }
+   ],
+   "marginalie": []
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrtenmodell"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)4. Abgabe"
+    }
+   ],
+   "marginalie": []
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausstattung und Verwendung der Parkplätze"
+    }
+   ],
+   "marginalie": [
+    "Behindertengerechte Parkplätze"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausstattung und Verwendung der Parkplätze"
+    }
+   ],
+   "marginalie": [
+    "Ausrüstung mit Ladestationen für Elektrofahrzeuge"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ausstattung und Verwendung der Parkplätze"
+    }
+   ],
+   "marginalie": [
+    "Nutzung der Parkplätze"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen zur Revision vom 5. Juli 2022"
+   ]
+  },
+  "11_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)5. Parkplätze auf anderen Grundstücken, Quartierparkings und Monitoring"
+    }
+   ],
+   "marginalie": [
+    "Quartierparking"
+   ]
+  },
+  "11_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung der Anzahl Parkplätze"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)5. Parkplätze auf anderen Grundstücken, Quartierparkings und Monitoring"
+    }
+   ],
+   "marginalie": [
+    "Parkplatzmonitoring"
    ]
   }
  }

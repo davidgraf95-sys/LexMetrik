@@ -1,45 +1,146 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Arbeitnehmerschutz"
+    }
+   ],
+   "marginalie": [
+    "Überzeit, Nacht- und Sonntagsarbeit, Verschiebung der Grenzen der Tagesarbeit, zwei- oder mehrschichtiger Betrieb"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Arbeitnehmerschutz"
+    }
+   ],
    "marginalie": [
     "Beschäftigung von noch nicht 15 Jahre alten Jugendlichen (§ 10 EG-ArG)"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Arbeitnehmerschutz"
+    }
+   ],
    "marginalie": [
     "Errichtung und Umgestaltung eines industriellen Betriebes (Plangenehmigung gemäss Art. 7 Abs. 1 und 2 ArG)"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Arbeitnehmerschutz"
+    }
+   ],
    "marginalie": [
     "Betriebseröffnung (Betriebsbewilligungen gemäss Art. 7 Abs. 3 ArG)"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Arbeitnehmerschutz"
+    }
+   ],
    "marginalie": [
     "Planbegutachtung (gemäss § 5 des EG-ArG)"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Ruhetags- und Ladenschlussgesetzgebung"
+    }
+   ],
    "marginalie": [
     "Ausnahmebewilligungen für Ruhetage und Werktage"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Ruhetags- und Ladenschlussgesetzgebung"
+    }
+   ],
    "marginalie": [
     "Offene Verkaufsstellen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Zuständigkeit"
+    }
+   ],
    "marginalie": []
+  },
+  "5 a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Arbeitnehmerschutz"
+    }
+   ],
+   "marginalie": [
+    "Begutachtung von technischen Einrichtungen und Geräten (gemäss § 3 Verordnung zum UVG)"
+   ]
+  },
+  "7 a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Ruhetags- und Ladenschlussgesetzgebung"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmebewilligungen für Familienbetriebe"
+   ]
+  },
+  "7 b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Ruhetags- und Ladenschlussgesetzgebung"
+    }
+   ],
+   "marginalie": [
+    "Bewilligungen für Betriebe an ausserordentlichen örtlichen Verhältnissen"
+   ]
+  },
+  "7 c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Konsumkreditgesetzgebung"
+    }
+   ],
+   "marginalie": [
+    "Bewilligung zur Gewährung und Vermittlung von Konsumkrediten"
+   ]
+  },
+  "7 d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III.bis Messgesetzgebung"
+    }
+   ],
+   "marginalie": [
+    "Gebühren für Verfügungen"
+   ]
   }
  }
 }

@@ -1,54 +1,99 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufsicht"
+    }
+   ],
    "marginalie": [
     "Übernahme der Aufsicht"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufsicht"
+    }
+   ],
    "marginalie": [
     "Aufgaben der BSABB"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufsicht"
+    }
+   ],
    "marginalie": [
     "Aufsichtsmittel"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufsicht"
+    }
+   ],
    "marginalie": [
     "Zusammenarbeit mit der kantonalen Steuerverwaltung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Aufgaben des obersten Organs"
+    }
+   ],
    "marginalie": [
     "Rechnungsablage"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Aufgaben des obersten Organs"
+    }
+   ],
    "marginalie": [
     "Urkundenänderungen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Aufgaben des obersten Organs"
+    }
+   ],
    "marginalie": [
     "Mitteilungspflichten"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gebühren"
+    }
+   ],
    "marginalie": []
   }
  }

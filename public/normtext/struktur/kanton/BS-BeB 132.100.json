@@ -1,152 +1,336 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geltungsbereich der Ordnung"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Stimmberechtigung"
+    }
+   ],
    "marginalie": [
     "Inhalt des Stimmrechts"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Stimmberechtigung"
+    }
+   ],
    "marginalie": [
     "Voraussetzungen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Stimmregister"
+    }
+   ],
    "marginalie": [
     "Führung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Stimmregister"
+    }
+   ],
    "marginalie": [
     "Eintragung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Stimmregister"
+    }
+   ],
    "marginalie": [
     "Stimmrechtsausweise"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Ausübung des Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Ausübung des Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Persönliche Stimmabgabe"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Ausübung des Stimmrechts"
+    }
+   ],
    "marginalie": [
     "Stimmabgabe durch Dritte"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Fehlerhafte Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Ungültige Wahl- und Stimmzettel"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Fehlerhafte Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Ungültige Stimmen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "D. Fehlerhafte Stimmabgabe"
+    }
+   ],
    "marginalie": [
     "Leere Wahl- und Stimmzettel"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Das Verfahren bei Wahlen und Abstimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendbare Bestimmungen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Validierung"
+    }
+   ],
    "marginalie": [
     "Bekanntmachung der Ergebnisse"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Validierung"
+    }
+   ],
    "marginalie": [
     "Aufbewahrung der Stimm- und Wahlzettel"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Validierung"
+    }
+   ],
    "marginalie": [
     "Wahlen und Abstimmungen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Validierung"
+    }
+   ],
    "marginalie": [
     "Anordnung einer Nachzählung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Validierung"
+    }
+   ],
    "marginalie": [
     "Ungültigkeit"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Validierung"
+    }
+   ],
    "marginalie": [
     "Wiederholung der Wahl oder Abstimmung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Validierung"
+    }
+   ],
    "marginalie": [
     "Ausübung des Mandates"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rechtsmittel"
+    }
+   ],
    "marginalie": [
     "Beschwerden"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rechtsmittel"
+    }
+   ],
    "marginalie": [
     "Begründung, Wirkung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rechtsmittel"
+    }
+   ],
    "marginalie": [
     "Entscheid"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung des bisherigen Rechts"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Das Stimmrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "C. Ausübung des Stimmrechts"
+    }
+   ],
+   "marginalie": [
+    "Briefliche Stimmabgabe"
    ]
   }
  }

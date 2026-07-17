@@ -1,61 +1,959 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Zweck"
+    }
+   ],
+   "marginalie": []
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.I. Versicherungspflicht"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.I. Versicherungspflicht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.I. Versicherungspflicht"
+    }
+   ],
+   "marginalie": [
+    "Prüfung der Versicherungspflicht und Zuweisung von Amtes wegen"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II."
+    }
+   ],
+   "marginalie": [
+    "Zusammenarbeit mit den Versicherern"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Versicherungsobligatorium"
+    },
+    {
+     "ebene": 2,
+     "label": "B.II."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.I."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.I."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.II."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.II."
+    }
+   ],
+   "marginalie": []
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.II."
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III."
+    },
+    {
+     "ebene": 3,
+     "label": "C.III.1."
+    }
+   ],
    "marginalie": [
     "Allgemeines *"
    ]
   },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III."
+    },
+    {
+     "ebene": 3,
+     "label": "C.III.1."
+    }
+   ],
+   "marginalie": [
+    "Anrechenbares Einkommen"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III."
+    },
+    {
+     "ebene": 3,
+     "label": "C.III.1."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III."
+    },
+    {
+     "ebene": 3,
+     "label": "C.III.1."
+    }
+   ],
    "marginalie": [
     "Beitragsanspruch"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III."
+    },
+    {
+     "ebene": 3,
+     "label": "C.III.1."
+    }
+   ],
    "marginalie": [
     "Beginn des Anspruches"
    ]
   },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III."
+    },
+    {
+     "ebene": 3,
+     "label": "C.III.1."
+    }
+   ],
+   "marginalie": [
+    "Ende des Anspruches"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III."
+    },
+    {
+     "ebene": 3,
+     "label": "C.III.1."
+    }
+   ],
+   "marginalie": [
+    "Verrechnung"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III.2. Beiträge für Mehraufwendungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III.2. Beiträge für Mehraufwendungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.III.2. Beiträge für Mehraufwendungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Einkommensabhängige Prämienbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "C.IV."
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "..."
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "Sozialversicherungsgericht des Kantons Basel-Stadt und Schiedsgericht in Sozialversicherungssachen"
+   ]
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "Einsprache"
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "Kantonale Rechtsmittel"
+   ]
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Rechtspflege"
+    }
+   ],
+   "marginalie": [
+    "Streitigkeiten aus Staatsbeitragsverhältnissen"
+   ]
+  },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "F.I. Ausführungsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "F.II. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Bisherige Obligatoriumskassen"
    ]
   },
+  "58": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "F.II. Übergangsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Anpassung bestehender Kollektivverträge"
+   ]
+  },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "F.II. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Öffentliche Krankenkasse des Kantons Basel-Stadt [7]"
    ]
   },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "F.II. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Reserveäufnung"
    ]
   },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "F.III. Änderung bisherigen Rechts"
+    }
+   ],
    "marginalie": []
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "F.IV. Aufhebung bisherigen Rechts"
+    }
+   ],
    "marginalie": []
   },
   "63": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "F.V. Rechtskraft und Wirksamkeit"
+    }
+   ],
    "marginalie": []
+  },
+  "51_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Öffentliche Krankenkasse Basel"
+    },
+    {
+     "ebene": 2,
+     "label": "Dbis. Spruchgebühr"
+    }
+   ],
+   "marginalie": [
+    "Tariffestsetzungsverfahren"
+   ]
   }
  }
 }

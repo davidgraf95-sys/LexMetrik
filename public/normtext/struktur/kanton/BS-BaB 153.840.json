@@ -1,52 +1,125 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gebühren"
+    }
+   ],
    "marginalie": [
     "Ordentliche Einbürgerung"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gebühren"
+    }
+   ],
    "marginalie": [
     "Entlassung aus dem Bürgerrecht"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gebühren"
+    }
+   ],
    "marginalie": [
     "fide-Test *"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gebühren"
+    }
+   ],
    "marginalie": [
     "Vorauszahlungspflicht"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gebühren"
+    }
+   ],
    "marginalie": [
     "Weitere Gebühren"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Berechnung"
+    }
+   ],
    "marginalie": [
     "Gebühren für Ehepaare und Elternteile mit/ohne Kinder"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebührenrückerstattung"
+    }
+   ],
    "marginalie": [
     "Gebührenrückerstattung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung vom 12. November 2019"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung vom 31. Oktober 2023"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Gebühren"
+    }
+   ],
+   "marginalie": [
+    "Kurse"
    ]
   }
  }

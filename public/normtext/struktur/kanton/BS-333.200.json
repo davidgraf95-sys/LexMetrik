@@ -1,152 +1,341 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Parteien und Regelungsgegenstand"
+    }
+   ],
    "marginalie": [
     "Vertragsparteien"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Parteien und Regelungsgegenstand"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Parteien und Regelungsgegenstand"
+    }
+   ],
    "marginalie": [
     "Gegenstand der gemeinsamen Planung, Regulation und Aufsicht"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Koordination und Durchführung"
+    }
+   ],
    "marginalie": [
     "Koordination der Planung, Regulation und Aufsicht"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Koordination und Durchführung"
+    }
+   ],
    "marginalie": [
     "Informationserhebung und Informationsaustausch"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Koordination und Durchführung"
+    }
+   ],
    "marginalie": [
     "Durchführung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Berichterstattung"
+    }
+   ],
    "marginalie": [
     "Versorgungsplanungsbericht"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Fachkommission"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Fachkommission"
+    }
+   ],
    "marginalie": [
     "Wahl und Zusammensetzung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Fachkommission"
+    }
+   ],
    "marginalie": [
     "Einberufung und Geschäftsreglement"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Fachkommission"
+    }
+   ],
    "marginalie": [
     "Datenbearbeitung und Informationszugang"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Allgemeine Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "Verfahren für planerische Massnahmen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Allgemeine Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "Verfahren bei Uneinigkeit"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Verfahren zum Erlass der Spitallisten"
+    }
+   ],
    "marginalie": [
     "Vorgaben für gleichlautende Spitallisten"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Verfahren zum Erlass der Spitallisten"
+    }
+   ],
    "marginalie": [
     "Evaluation und Erlass der Spitallisten"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Organisation und Verfahren der interkantonalen Planung"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Verfahren zum Erlass der Spitallisten"
+    }
+   ],
    "marginalie": [
     "Periodizität der Spitallisten"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Weitere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Finanzierung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Weitere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zugang zu Informationen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Weitere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anpassungen der Vereinbarung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Weitere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Streitigkeiten und Schiedsgericht"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltung der bisherigen Spitallisten"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten der gleichlautenden Spitallisten"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Beitritt und Förderung der Zusammenarbeit"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Vertragsdauer und Kündigung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]

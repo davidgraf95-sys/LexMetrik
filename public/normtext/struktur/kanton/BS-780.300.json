@@ -1,124 +1,235 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zweck des Mobilitätsfonds"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Kein Rechtsanspruch auf Beitragsvergabe"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Projekte Dritter"
+    }
+   ],
    "marginalie": [
     "Definition"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Projekte Dritter"
+    }
+   ],
    "marginalie": [
     "Beitragsfähige Projekte Dritter"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Projekte Dritter"
+    }
+   ],
    "marginalie": [
     "Von der Beitragsvergabe ausgeschlossene Projekte Dritter"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Projekte Dritter"
+    }
+   ],
    "marginalie": [
     "Höhe der Beiträge"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Projekte Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Definition"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Projekte Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Beitragsfähige Projekte Basel-Stadt"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Projekte Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Von der Beitragsvergabe ausgeschlossene Projekte Basel-Stadt"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Projekte Basel-Stadt"
+    }
+   ],
    "marginalie": [
     "Höhe der Beiträge"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Projektentwicklung"
+    }
+   ],
    "marginalie": [
     "Definition"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Projektentwicklung"
+    }
+   ],
    "marginalie": [
     "Beitragsfähige Projektideen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Projektentwicklung"
+    }
+   ],
    "marginalie": [
     "Höhe der Beiträge"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Verwaltung des Mobilitätsfonds"
+    }
+   ],
    "marginalie": [
     "Zuständiges Departement und Berichterstattung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Verwaltung des Mobilitätsfonds"
+    }
+   ],
    "marginalie": [
     "Geschäftsstelle"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Verwaltung des Mobilitätsfonds"
+    }
+   ],
    "marginalie": [
     "Mobilitätsfondsrat"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Verwaltung des Mobilitätsfonds"
+    }
+   ],
    "marginalie": [
     "Entscheidung über die Beitragsvergabe"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Verwaltung des Mobilitätsfonds"
+    }
+   ],
    "marginalie": [
     "Auszahlungsmodalitäten"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Verwaltung des Mobilitätsfonds"
+    }
+   ],
    "marginalie": [
     "Umsetzungskontrolle"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Verwaltung des Mobilitätsfonds"
+    }
+   ],
    "marginalie": [
     "Verfallene, eingestellte und rückgeforderte Beiträge"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Projekte Dritter"
+    }
+   ],
+   "marginalie": [
+    "Höhe der Beiträge an Anwohnendenparkplätze in Quartierparkings"
    ]
   }
  }

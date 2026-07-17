@@ -1,202 +1,949 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebührenpflicht"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebühr 1. Gegenstand"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Bemessung 1. Allgemein"
+   ]
+  },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Vorvertrag"
    ]
   },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Verlängerung eines zeitlich befristeten Vertrages"
+   ]
+  },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Mehrere Rechtsgeschäfte"
    ]
   },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Auslagen"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Festsetzung 1. Grundsatz"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "2. Rechtsschutz"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gebührenerlass"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bezug"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Vollstreckbarkeit"
    ]
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
+   "marginalie": [
+    "Stiftung"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
+   "marginalie": [
+    "Ehevertrag- und Vermögensvertrag"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
+   "marginalie": [
+    "Inventar"
+   ]
+  },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Gemeinderschaftsvertrag"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Letztwillige Verfügung, Erbvertrag"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
+   "marginalie": [
+    "Ausschluss der Aufhebung von Miteigentum"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Übertragungen von Grundeigentum"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Eigentumsbeschränkung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Gesetzliche Vorkaufsrechte"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Stockwerkeigentum, selbständiges Miteigentum"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Nutzniessung"
    ]
   },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
+   "marginalie": [
+    "Wohnrecht"
+   ]
+  },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Baurecht"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Grundlast"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
    "marginalie": [
     "Grundpfand"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Ersatz der Unterschrift"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Erklärung nach Art. 90 OR"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Vorkaufs-, Kaufs- und Rückkaufsrecht"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Schenkung dinglicher Rechte an Grundstücken"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Schenkung auf den Todesfall"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Bürgschaft"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Verpfründung"
    ]
   },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
+   "marginalie": [
+    "Aktiengesellschaft und Kommanditaktiengesellschaft1. Gründung"
+   ]
+  },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "2. Aktienkapitalerhöhung"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "3. Aktienkapitalherabsetzung"
    ]
   },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
+   "marginalie": [
+    "5. andere Beschlüsse"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
+   "marginalie": [
+    "Gesellschaft mit beschränkter Haftung"
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
+   "marginalie": [
+    "Gesellschaftsrechtliche Feststellung"
+   ]
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
+   "marginalie": [
+    "Wechsel und Check"
+   ]
+  },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.2 Nach Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Anleihensgläubigerbeschlüsse"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sonstige Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Ziehungen"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sonstige Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Eidesabnahme, Erklärung an Eidesstatt"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sonstige Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Andere Beurkundungen"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sonstige Beurkundungen"
+    }
+   ],
    "marginalie": [
     "Nicht beurkundungsbedürftige Geschäfte"
    ]
   },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Beglaubigungen"
+    }
+   ],
+   "marginalie": [
+    "Unterschrift, Handzeichen"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Beglaubigungen"
+    }
+   ],
+   "marginalie": [
+    "Von Dritten hergestellte Kopien und Auszüge"
+   ]
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Beglaubigungen"
+    }
+   ],
+   "marginalie": [
+    "Übersetzung"
+   ]
+  },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Rechtskraft"
+   ]
+  },
+  "17_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
+   "marginalie": [
+    "Vorsorgeauftrag"
+   ]
+  },
+  "26_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Beurkundungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2.1.1 Nach Zivilgesetzbuch"
+    }
+   ],
+   "marginalie": [
+    "Andere Dienstbarkeiten"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "2. Ausnahmen"
+   ]
+  },
+  "44_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Nach Fusionsgesetz,"
+    }
+   ],
+   "marginalie": [
+    "Fusion, Spaltung, Umwandlung, Vermögensübertragung"
+   ]
+  },
+  "44_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Nach Fusionsgesetz,"
+    }
+   ],
+   "marginalie": [
+    "Festlegung der Übertragung eines Grundstücks"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "2. Erhöhung"
+   ]
+  },
+  "4_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "3. Herabsetzung"
+   ]
+  },
+  "50_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Gebührentarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Beglaubigungen"
+    }
+   ],
+   "marginalie": [
+    "Von der Urkundsperson hergestellte Kopien und Auszüge"
    ]
   }
  }

@@ -1,178 +1,444 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Verbindlichkeit"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Abweichungen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Honorarnote"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Begründungspflicht"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Honorar nach Ermessen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rechtliches Gehör"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.1. Honorar nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.1. Honorar nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Mittleres Honorar a) im Allgemeinen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.1. Honorar nach Streitwert"
+    }
+   ],
    "marginalie": [
     "b) summarisches Verfahren"
    ]
   },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.1. Honorar nach Streitwert"
+    }
+   ],
+   "marginalie": [
+    "c) Verfahren vor Kantonsgericht"
+   ]
+  },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.1. Honorar nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Grundhonorar"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.1. Honorar nach Streitwert"
+    }
+   ],
    "marginalie": [
     "Zuschläge"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.2. Honorarpauschale"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.2. Honorarpauschale"
+    }
+   ],
    "marginalie": [
     "Familienrecht *"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.2. Honorarpauschale"
+    }
+   ],
    "marginalie": [
     "Strafprozess"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.2. Honorarpauschale"
+    }
+   ],
    "marginalie": [
     "Verwaltungsgerichtsverfahren"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.3. Honorar nach Zeitaufwand"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.3. Honorar nach Zeitaufwand"
+    }
+   ],
    "marginalie": [
     "Stundenansatz"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.4. Unentgeltliche Rechtspflege oder amtliche Verteidigung"
+    }
+   ],
    "marginalie": [
     "Allgemeiner Grundsatz *"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.4. Unentgeltliche Rechtspflege oder amtliche Verteidigung"
+    }
+   ],
    "marginalie": [
     "Honorarpauschale"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.4. Unentgeltliche Rechtspflege oder amtliche Verteidigung"
+    }
+   ],
    "marginalie": [
     "Honorar des unentgeltlichen Vertreters bei Obsiegen"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.4. Unentgeltliche Rechtspflege oder amtliche Verteidigung"
+    }
+   ],
    "marginalie": [
     "Anspruch gegenüber dem Mandanten"
    ]
   },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.5. Besondere Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Umfang"
+   ]
+  },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.5. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rechtsmittelverfahren"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.5. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Unvollständiger Prozess"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.5. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Barauslagen a) effektiv"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.5. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "b) pauschal"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Honorarbemessung"
+    },
+    {
+     "ebene": 2,
+     "label": "B.5. Besondere Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Mehrwertsteuer"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "32_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Revision vom 23. Oktober 2023"
    ]
   }
  }

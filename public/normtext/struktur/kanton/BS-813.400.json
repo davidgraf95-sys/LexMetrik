@@ -1,102 +1,231 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kontrollverfahren"
+    }
+   ],
    "marginalie": [
     "1. Das Einigungsamt als Kontrollinstanz"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kontrollverfahren"
+    }
+   ],
    "marginalie": [
     "2. Durchführung des Kontrollverfahrens"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kontrollverfahren"
+    }
+   ],
    "marginalie": [
     "3. Abschluss des Kontrollverfahrens"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kontrollverfahren"
+    }
+   ],
    "marginalie": [
     "4. Erledigung ohne oder mit Schiedsgerichtsverfahren"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schiedsrichter und Parteivertreter"
+    }
+   ],
    "marginalie": [
     "1. Ablehnung von Schiedsrichtern"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schiedsrichter und Parteivertreter"
+    }
+   ],
    "marginalie": [
     "2. Parteivertreter ausserhalb des Schiedsgerichts"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vorladung"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Eröffnung des Schiedsgerichtsverfahrens; Kontumazialverfahren"
+    }
+   ],
    "marginalie": [
     "1. Eröffnung der Schiedsgerichtsverhandlungen"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Eröffnung des Schiedsgerichtsverfahrens; Kontumazialverfahren"
+    }
+   ],
    "marginalie": [
     "2. Kontumazialverfahren"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Durchführung des Schiedsgerichtsverfahrens"
+    }
+   ],
+   "marginalie": [
+    "1. Bericht über das Kontrollverfahren"
+   ]
+  },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Durchführung des Schiedsgerichtsverfahrens"
+    }
+   ],
    "marginalie": [
     "2. Vernehmung der kontrollierten Firma"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Durchführung des Schiedsgerichtsverfahrens"
+    }
+   ],
    "marginalie": [
     "3. Vernehmung der Zeugen und Sachverständigen"
    ]
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Durchführung des Schiedsgerichtsverfahrens"
+    }
+   ],
+   "marginalie": [
+    "4. Ergänzungsfragen"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Durchführung des Schiedsgerichtsverfahrens"
+    }
+   ],
+   "marginalie": [
+    "5. Ergänzung der Beweisaufnahme"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Durchführung des Schiedsgerichtsverfahrens"
+    }
+   ],
    "marginalie": [
     "6. Schluss der Beweisaufnahme; Verzicht auf einzelne Beweisaufnahmen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Durchführung des Schiedsgerichtsverfahrens"
+    }
+   ],
    "marginalie": [
     "7. Parteivorträge"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Das Schiedsgerichtsurteil"
+    }
+   ],
    "marginalie": [
     "1. Beratung"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Das Schiedsgerichtsurteil"
+    }
+   ],
    "marginalie": [
     "2. Schriftliche Urteilsbegründung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Das Beschwerdeverfahren"
+    }
+   ],
    "marginalie": [
     "1. Hinweis auf das Beschwerderecht"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Das Beschwerdeverfahren"
+    }
+   ],
+   "marginalie": [
+    "2. Durchführung des Beschwerdeverfahrens"
    ]
   }
  }

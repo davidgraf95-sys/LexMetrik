@@ -1,136 +1,324 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Grundsätze"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Kompostierung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Benützungspflicht"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Beseitigungsverbote"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bediente Liegenschaften"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bereitstellung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gepresste Abfälle"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Abfuhrtage und weitere Bestimmungen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kehricht und organische Abfälle"
+    }
+   ],
    "marginalie": [
     "Zugelassene Abfälle"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kehricht und organische Abfälle"
+    }
+   ],
    "marginalie": [
     "Von der Abfuhr ausgeschlossene Abfälle"
    ]
   },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kehricht und organische Abfälle"
+    }
+   ],
+   "marginalie": [
+    "Zugelassene Gebinde und Behälter"
+   ]
+  },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Sperrgutabfuhr"
+    }
+   ],
    "marginalie": [
     "Zugelassene Abfälle"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Sperrgutabfuhr"
+    }
+   ],
    "marginalie": [
     "Bereitstellung"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Abfuhren"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Separatabfuhren"
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sammelstellen"
+    }
+   ],
    "marginalie": [
     "Unterhalt"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sammelstellen"
+    }
+   ],
    "marginalie": [
     "Abgabe der bezeichneten Abfälle"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Sammelstellen"
+    }
+   ],
+   "marginalie": [
+    "Orte und Abgabezeiten"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sonderabfälle"
+    }
+   ],
    "marginalie": [
     "Begriffe"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sonderabfälle"
+    }
+   ],
    "marginalie": [
     "Rückgabe- und Rücknahmepflicht"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sonderabfälle"
+    }
+   ],
    "marginalie": [
     "Annahmestelle der Gemeinde"
    ]
   },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren und Ausführungsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebühren"
+   ]
+  },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Aufsicht"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übertretungen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts; Inkrafttreten"
    ]

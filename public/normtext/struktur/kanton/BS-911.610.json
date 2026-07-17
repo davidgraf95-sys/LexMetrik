@@ -1,228 +1,418 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Zuständigkeit"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Rodung und Waldfeststellung (Art. 4 - 10 WaG)"
+    }
+   ],
    "marginalie": [
     "Rodungsbewilligung (Art. 6 Abs. 1 WaG)"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Rodung und Waldfeststellung (Art. 4 - 10 WaG)"
+    }
+   ],
    "marginalie": [
     "Rodungsgesuch (Art. 5 Abs. 1 WaV)"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Rodung und Waldfeststellung (Art. 4 - 10 WaG)"
+    }
+   ],
    "marginalie": [
     "Rodungsverfahren (Art. 5 Abs. 2 WaV, § 4 Abs. 3 WaG BS)"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Rodung und Waldfeststellung (Art. 4 - 10 WaG)"
+    }
+   ],
    "marginalie": [
     "Sicherheitsleistung (§ 4 Abs. 1 WaG BS)"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Rodung und Waldfeststellung (Art. 4 - 10 WaG)"
+    }
+   ],
    "marginalie": [
     "Vorteilsausgleich (§ 4 Abs. 2 WaG BS)"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Rodung und Waldfeststellung (Art. 4 - 10 WaG)"
+    }
+   ],
    "marginalie": [
     "Waldfeststellung (Art. 10 Abs. 1 WaG)"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Rodung und Waldfeststellung (Art. 4 - 10 WaG)"
+    }
+   ],
    "marginalie": [
     "Waldrandlinie"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Abgrenzung von Wald und Bauzonen (Waldgrenzenkarten)"
+    }
+   ],
    "marginalie": [
     "Grundsätze (§ 5 WaG BS)"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Abgrenzung von Wald und Bauzonen (Waldgrenzenkarten)"
+    }
+   ],
    "marginalie": [
     "Verfahren (§ 5 Abs. 3 WaG BS)"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Abgrenzung von Wald und Bauzonen (Waldgrenzenkarten)"
+    }
+   ],
    "marginalie": [
     "Orientierungspflicht"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Bauen im Wald"
+    }
+   ],
    "marginalie": [
     "Bewilligungspflicht (Art. 14 WaV)"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Bauen im Wald"
+    }
+   ],
    "marginalie": [
     "Nicht-forstliche Kleinbauten und Kleinanlagen (Art. 14 Abs. 2 WaV)"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Begehen und Befahren des Waldes"
+    }
+   ],
    "marginalie": [
     "Einzäunungsbewilligung (§ 8 Abs. 2 und 3 WaG BS)"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Begehen und Befahren des Waldes"
+    }
+   ],
    "marginalie": [
     "Veranstaltungsbewilligung (§ 9 Abs. 4 WaG BS)"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Begehen und Befahren des Waldes"
+    }
+   ],
    "marginalie": [
     "Ausnahmen von der Bewilligungspflicht (§ 9 Abs. 4 WaG BS)"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Begehen und Befahren des Waldes"
+    }
+   ],
    "marginalie": [
     "Motorfahrzeugverkehr (§ 10 Abs. 2 WaG BS)"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Begehen und Befahren des Waldes"
+    }
+   ],
    "marginalie": [
     "Radfahren und Reiten (§ 11 Abs. 2 WaG BS)"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Begehen und Befahren des Waldes"
+    }
+   ],
    "marginalie": [
     "Leseholz (§ 13 WaG BS)"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schutz vor Beeinträchtigungen"
+    }
+   ],
    "marginalie": [
     "Veräusserung und Teilung von Wald (Art. 25 WaG)"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schutz vor Beeinträchtigungen"
+    }
+   ],
    "marginalie": [
     "Schutzmassnahmen (§ 18 Abs. 1 und 2 WaG BS)"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "F. Schutz vor Beeinträchtigungen"
+    }
+   ],
    "marginalie": [
     "Umweltgefährdende Stoffe (Art. 18 WaG, Art. 25 WaV)"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Forstliche Planung (§ 21 WaG BS)"
+    }
+   ],
    "marginalie": [
     "Planungsgrundlagen (Art. 18 Abs. 1 lit. d WaV)"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Forstliche Planung (§ 21 WaG BS)"
+    }
+   ],
    "marginalie": [
     "Waldentwicklungsplan (§ 21 WaG BS)"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Forstliche Planung (§ 21 WaG BS)"
+    }
+   ],
    "marginalie": [
     "Auflage"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Forstliche Planung (§ 21 WaG BS)"
+    }
+   ],
    "marginalie": [
     "Benützung und Einsicht"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Forstliche Planung (§ 21 WaG BS)"
+    }
+   ],
    "marginalie": [
     "Betriebsplan (§ 23 WaG BS)"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "G. Forstliche Planung (§ 21 WaG BS)"
+    }
+   ],
    "marginalie": [
     "Programme (§ 23 Abs. 5 WaG BS)"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "H. Ausbildung (§§ 27 und 28 WaG BS)"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit und Inhalte"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Beiträge, Vergütungen und Gebühren"
+    }
+   ],
    "marginalie": [
     "Kantonsbeiträge (§ 29 WaG BS)"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Beiträge, Vergütungen und Gebühren"
+    }
+   ],
    "marginalie": [
     "Beitragsplanung"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Beiträge, Vergütungen und Gebühren"
+    }
+   ],
    "marginalie": [
     "Vergütungen an das Forstrevier Riehen-Bettingen (§ 30 Abs. 2 WaG BS)"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Beiträge, Vergütungen und Gebühren"
+    }
+   ],
    "marginalie": [
     "Gebühren"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "K. Betriebliche Forstorganisation"
+    }
+   ],
    "marginalie": [
     "Genehmigung (§ 34 WaG BS)"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "K. Betriebliche Forstorganisation"
+    }
+   ],
    "marginalie": [
     "Berichterstattungspflicht"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "L. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Beschwerderecht des Kantons (Art. 46 Abs. 3 WaG)"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "L. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsrecht"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "L. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]

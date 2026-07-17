@@ -1,60 +1,199 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Auswertung der Grundstückpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 1. Funktion des Vermessungsamtes"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Auswertung der Grundstückpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 2. Auskunftserteilung"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Auswertung der Grundstückpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 2. Auskunftserteilung"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Teil: Auswertung der Grundstückpreise"
+    },
+    {
+     "ebene": 2,
+     "label": "I. 2. Auskunftserteilung"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 1. Antragsrecht"
+    }
+   ],
+   "marginalie": []
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 2. Bewertungskommission"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 2. Bewertungskommission"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 2. Bewertungskommission"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 3. Anhörung der Eigentümer, Auskunftspflicht"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 3. Anhörung der Eigentümer, Auskunftspflicht"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 4. Augenschein"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 5. Verkehrswert"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 6. Vollzug"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 7. Änderung anderer Gesetze"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Teil: Amtliche Ermittlung des Verkehrswertes"
+    },
+    {
+     "ebene": 2,
+     "label": "II. 7. Änderung anderer Gesetze"
+    }
+   ],
    "marginalie": []
   }
  }

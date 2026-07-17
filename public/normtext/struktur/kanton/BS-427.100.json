@@ -1,104 +1,420 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Studiengänge"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Studiengänge"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Studiengänge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Praktika"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Studiengänge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Qualikationsverfahren"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Schulkommission"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Schulkommission"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Schulleitung"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Direktorin bzw. Direktor"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Direktorin bzw. Direktor"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Stellvertretung"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Abteilungsleiterinnen und Abteilungsleiter"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "9. Lehrpersonen und Lehrbeauftragte"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "10. Schulkonferenz"
+    }
+   ],
    "marginalie": []
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "11. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Studierende"
+    },
+    {
+     "ebene": 2,
+     "label": "12. Zulassung"
+    }
+   ],
    "marginalie": []
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Studierende"
+    },
+    {
+     "ebene": 2,
+     "label": "13. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Studierende"
+    },
+    {
+     "ebene": 2,
+     "label": "14. Ausbildungsvertrag"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Studierende"
+    },
+    {
+     "ebene": 2,
+     "label": "15. Auflösung des Ausbildungsverhältnisses"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Studierende"
+    },
+    {
+     "ebene": 2,
+     "label": "16. …"
+    }
+   ],
    "marginalie": []
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Studierende"
+    },
+    {
+     "ebene": 2,
+     "label": "17. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Studierende"
+    },
+    {
+     "ebene": 2,
+     "label": "17. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "18. …"
+    }
+   ],
    "marginalie": []
   },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "19. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "20. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "21. …"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "22. Bearbeitungsgebühren"
+    }
+   ],
    "marginalie": []
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Rechtsmittel"
+    },
+    {
+     "ebene": 2,
+     "label": "23. Rekurs"
+    }
+   ],
    "marginalie": []
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "15_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organe und Angestellte"
+    },
+    {
+     "ebene": 2,
+     "label": "9. Lehrpersonen und Lehrbeauftragte"
+    }
+   ],
    "marginalie": []
   }
  }

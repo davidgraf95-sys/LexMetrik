@@ -1,52 +1,136 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Einladung; Tagesordnung"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Präsenz"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Versand der Berichte"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Zuziehung Aussenstehender"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Protokoll"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Entschädigung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Behandlung der Geschäfte"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Protokoll"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "Entschädigung"
+   ]
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Kommissionen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bürgerrat"
+    }
+   ],
+   "marginalie": [
+    "Offenlegung der Interessenbindungen, Umfang"
    ]
   }
  }

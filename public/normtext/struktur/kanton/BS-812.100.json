@@ -1,52 +1,218 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Vollzugsbehörden"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Betriebsverzeichnisse"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Industrielle Betriebe"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gesundheitsvorsorge"
+    }
+   ],
+   "marginalie": [
+    "Allgemeines"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gesundheitsvorsorge"
+    }
+   ],
+   "marginalie": [
+    "Planbegutachtung, Plangenehmigung und Betriebsbewilligung *"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gesundheitsvorsorge"
+    }
+   ],
    "marginalie": [
     "Beseitigung nachträglich erkannter Übelstände"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit"
+    }
+   ],
+   "marginalie": [
+    "Arbeitszeitbewilligungen"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Arbeits- und Ruhezeit"
+    }
+   ],
+   "marginalie": [
+    "Feiertage"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Sonderschutz der jugendlichen Arbeitnehmer"
+    }
+   ],
    "marginalie": [
     "Jugendliche unter 15 Jahren"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Sonderschutz der jugendlichen Arbeitnehmer"
+    }
+   ],
+   "marginalie": [
+    "Vorbehalt weiterer Vorschriften"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Betriebsordnung"
+    }
+   ],
+   "marginalie": [
+    "Kontrolle der Betriebsordnung *"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verfahren und Rechtsmittel"
+    }
+   ],
+   "marginalie": [
+    "Verfügungen"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verfahren und Rechtsmittel"
+    }
+   ],
+   "marginalie": [
+    "Anzeigen"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Verfahren und Rechtsmittel"
+    }
+   ],
    "marginalie": [
     "Beschwerden"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Gebühren"
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Verzeigungen"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung kantonaler Vorschriften"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Abänderung kantonaler Vorschriften"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]

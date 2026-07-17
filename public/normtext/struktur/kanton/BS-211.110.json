@@ -1,37 +1,774 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
+   "marginalie": []
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zivilstandswesen"
+    }
+   ],
+   "marginalie": []
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 1. Rechtshilfe"
+    }
+   ],
+   "marginalie": []
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 2. Vermögensverwaltung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. 2. A. Verwahrung von Wertsachen bei der Vormundschaftsbehörde (EG § 96)"
+    }
+   ],
+   "marginalie": []
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 2. Vermögensverwaltung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. 2. B. Verwahrung in Dritthand (EG § 97)"
+    }
+   ],
+   "marginalie": []
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 2. Vermögensverwaltung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. 2. C. Verwendung der Eingänge (ZGB Art. 401, EG § 97)"
+    }
+   ],
+   "marginalie": []
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 2. Vermögensverwaltung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. 2. D. Verabfolgung der Zinsscheine"
+    }
+   ],
+   "marginalie": []
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 2. Vermögensverwaltung"
+    },
+    {
+     "ebene": 3,
+     "label": "III. 2. E. Kontokorrent-, Checkguthaben, Depositen- und Sparbücher"
+    }
+   ],
+   "marginalie": []
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 3. Buch- und Rechnungsführung (EG § 111)"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 3. Buch- und Rechnungsführung (EG § 111)"
+    }
+   ],
    "marginalie": []
   },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Heimatschutz (EG § 176)"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 1. A. Pflanzenschutz"
+    }
+   ],
+   "marginalie": [
+    "a) Blumen und Sträucher"
+   ]
+  },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Heimatschutz (EG § 176)"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 1. A. Pflanzenschutz"
+    }
+   ],
    "marginalie": [
     "b) Rechtes Rheinufer zwischen Verbindungsbrücke und Grenzacherhorn"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Heimatschutz (EG § 176)"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 1. A. Pflanzenschutz"
+    }
+   ],
    "marginalie": [
     "c) Bäume"
    ]
   },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Heimatschutz (EG § 176)"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 1. B. Stadtbildpflege und Denkmalschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Heimatschutz (EG § 176)"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 1. B. Stadtbildpflege und Denkmalschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Heimatschutz (EG § 176)"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 1. B. Stadtbildpflege und Denkmalschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Heimatschutz (EG § 176)"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 1. B. Stadtbildpflege und Denkmalschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1. Heimatschutz (EG § 176)"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 1. B. Stadtbildpflege und Denkmalschutz"
+    }
+   ],
+   "marginalie": []
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 1a. Überwachung (EG § 200)"
+    }
+   ],
+   "marginalie": []
+  },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 2. Grundbuchrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 2. A. Veröffentlichung von Eigentumseintragungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 2. Grundbuchrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 2. B. Anmeldepflicht von Eigentumsübergängen"
+    }
+   ],
    "marginalie": []
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 2. Grundbuchrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 2. C. Aufsicht über das Grundbuch- und Vermessungsamt"
+    }
+   ],
    "marginalie": []
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 2. Grundbuchrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 2. D. Grundbuchgebühren"
+    }
+   ],
    "marginalie": []
+  },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 2. Grundbuchrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 2. E. Vermessungsgebühren"
+    }
+   ],
+   "marginalie": []
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Obligationenrecht"
+    }
+   ],
+   "marginalie": [
+    "Viehwährschaft, Verordnung betreffend das Verfahren bei der Gewährleistung im Viehhandel vom 14. November 1911, 5–15"
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlusstitel des ZGB"
+    }
+   ],
+   "marginalie": [
+    "Gebühren für Beglaubigungen (EG 230)"
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IIbis Familienrecht"
+    }
+   ],
+   "marginalie": [
+    "Schutzmassregel"
+   ]
+  },
+  "31_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 1. Rechtshilfe"
+    },
+    {
+     "ebene": 3,
+     "label": "III. 1a. Zuständigkeiten"
+    },
+    {
+     "ebene": 4,
+     "label": "III. 1a. A. Entmündigung (EG § 85)"
+    }
+   ],
+   "marginalie": []
+  },
+  "31_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 1. Rechtshilfe"
+    },
+    {
+     "ebene": 3,
+     "label": "III. 1a. Zuständigkeiten"
+    },
+    {
+     "ebene": 4,
+     "label": "III. 1a. B. Vorläufige Entziehung der Handlungsfähigkeit (EG § 89)"
+    }
+   ],
+   "marginalie": []
+  },
+  "31_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Gebühren aus dem Bereich des übrigen Familienrechts und aus dem Personenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "III. 1. Rechtshilfe"
+    },
+    {
+     "ebene": 3,
+     "label": "III. 1a. Zuständigkeiten"
+    },
+    {
+     "ebene": 4,
+     "label": "III. 1a. C. Verbeiständung (EG § 94a)"
+    }
+   ],
+   "marginalie": []
+  },
+  "51_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Sachenrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. 2. Grundbuchrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "IV. 2. D. Grundbuchgebühren"
+    }
+   ],
+   "marginalie": []
+  },
+  "53_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Obligationenrecht"
+    }
+   ],
+   "marginalie": [
+    "Zuständige Behörde für die Bewilligung berufsmässiger Ehe- oder Partnerschaftsvermittlung gemäss Art. 406c Abs. 1 OR (EG § 215a)"
+   ]
+  },
+  "53_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Obligationenrecht"
+    }
+   ],
+   "marginalie": [
+    "Handelsregister (EG § 217)"
+   ]
   }
  }
 }

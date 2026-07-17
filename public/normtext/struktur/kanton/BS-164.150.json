@@ -1,97 +1,243 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einreihung von Stellen, Grundsatz *"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Stellenbewertungsverfahren *"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Antrag"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Stellungnahme der dezentralen Personalstelle"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Bewertungsgruppen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einreihungsantrag durch die Leitung der Bewertungsgruppe *"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einreihungsentscheid"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Rechtsmittel bei Stelleneinreihungen *"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einstufung bei Eintritt in den Staatsdienst"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einstufung nach Lebensalter bei Stellen ohne Ausbildungsvoraussetzungen *"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Stellen mit Ausbildungsvoraussetzungen *"
    ]
   },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Anrechnung von berufsförderlicher Erfahrung bei der Einstufung"
+   ]
+  },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": []
   },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Einstell-Lohn"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einstufung bei der Übernahme einer neuen Stelle *"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einstufung bei Beförderung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Dritter Abschnitt"
+    }
+   ],
    "marginalie": [
     "Schlussbestimmungen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Dritter Abschnitt"
+    }
+   ],
    "marginalie": []
+  },
+  "16_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Einstufung bei Neubewertung einer Stelle"
+   ]
+  },
+  "16_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Frankenbesitzstand"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Verfahrensablauf"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung der Stellenbeschreibung"
+   ]
   }
  }
 }

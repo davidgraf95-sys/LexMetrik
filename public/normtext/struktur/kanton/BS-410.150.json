@@ -1,40 +1,106 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Einführung der neuen Bildungsgänge"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Wiederholen eines Schuljahres"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Wiederholen eines Schuljahres"
+    }
+   ],
    "marginalie": [
     "Wiederholen eines Schuljahres in der letzten Schullaufbahn nach bisherigem Recht"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Wiederholen eines Schuljahres"
+    }
+   ],
    "marginalie": [
     "Wiederholen der normalen oder beschleunigten Züge im Gymnasium"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Wiederholen eines Schuljahres"
+    }
+   ],
    "marginalie": [
     "Wiederholen der Maturität des Jahres 2016"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Überspringen eines Schuljahres"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Änderung anderer Erlasse"
+    }
+   ],
+   "marginalie": []
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3a. Übertritt von der Primarschule in die Sekundarschule in den Schuljahren 2015/16 und 2016/17"
+    }
+   ],
+   "marginalie": [
+    "Berechtigung für den Übertritt in den E-Zug"
+   ]
+  },
+  "6_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3a. Übertritt von der Primarschule in die Sekundarschule in den Schuljahren 2015/16 und 2016/17"
+    }
+   ],
+   "marginalie": [
+    "Berechtigung für den Übertritt in den P-Zug"
+   ]
+  },
+  "6_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3b. Übertritt von der Übergangs- in die Regelklassen der Gymnasien im Schuljahr 2018/19"
+    }
+   ],
    "marginalie": []
   }
  }

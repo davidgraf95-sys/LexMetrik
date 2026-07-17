@@ -1,80 +1,216 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Prüfung von Wassernutzungsgesuchen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Prüfung von Wassernutzungsgesuchen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Inhalt der Gesuche"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Prüfung von Wassernutzungsgesuchen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Mitwirkende Behörden"
+    }
+   ],
    "marginalie": [
     "a) Amt für Umwelt und Energie"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Prüfung von Wassernutzungsgesuchen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Mitwirkende Behörden"
+    }
+   ],
    "marginalie": [
     "b) Gemeinden Bettingen und Riehen *"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Prüfung von Wassernutzungsgesuchen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Vorentscheid"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Prüfung von Wassernutzungsgesuchen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Beginn der Wassernutzung"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Überwachung"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Prüfungsgebühren"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)2. Grund- und Nutzungsgebühren"
+    }
+   ],
    "marginalie": [
     "a) Grundwasser"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)2. Grund- und Nutzungsgebühren"
+    }
+   ],
    "marginalie": [
     "b) Flusswasser"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)3. Beginn der Gebührenpflicht"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)4. Ermittlung der Wassermenge"
+    }
+   ],
    "marginalie": [
     "a) Im Allgemeinen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)4. Ermittlung der Wassermenge"
+    }
+   ],
    "marginalie": [
     "b) Bei Versäumnissen und Störungen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)5. Festsetzung und Bezug"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Gebühren"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)6. Gebührenbefreiung"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Rekurs"
+    }
+   ],
    "marginalie": []
   }
  }

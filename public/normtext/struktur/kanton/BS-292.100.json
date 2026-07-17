@@ -1,331 +1,865 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.A. Zuständigkeiten der Notarinnen und Notare"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fähigkeitsausweis"
+    }
+   ],
    "marginalie": [
     "1. Erfordernis der bestandenen Prüfung"
    ]
   },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fähigkeitsausweis"
+    }
+   ],
+   "marginalie": [
+    "2. Zulassung zur Notariatsprüfung"
+   ]
+  },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fähigkeitsausweis"
+    }
+   ],
    "marginalie": [
     "3. Prüfungsbehörde und Prüfung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Beurkundungsbefugnis"
+    }
+   ],
    "marginalie": [
     "1. Inhalt"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Beurkundungsbefugnis"
+    }
+   ],
    "marginalie": [
     "2. Voraussetzungen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Beurkundungsbefugnis"
+    }
+   ],
    "marginalie": [
     "3. Verleihung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Beurkundungsbefugnis"
+    }
+   ],
    "marginalie": [
     "4. Administrative Suspendierung und Entzug"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Beurkundungsbefugnis"
+    }
+   ],
    "marginalie": [
     "5. Erlöschen"
    ]
   },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Beurkundungsbefugnis"
+    }
+   ],
+   "marginalie": [
+    "6. Übertragung von Geschäften und Akten"
+   ]
+  },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Beurkundungsbefugnis"
+    }
+   ],
    "marginalie": [
     "7. Publikation"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.C. Beurkundungsbefugnis"
+    }
+   ],
    "marginalie": [
     "8. Notarielle Unterschrift und Siegel"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.D. Aufsicht"
+    }
+   ],
    "marginalie": [
     "1. Durch das zuständige Departement *"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.D. Aufsicht"
+    }
+   ],
    "marginalie": [
     "2. Anzeigen durch Behörden und Dritte"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Berufspflichten der Notarinnen und Notare"
+    }
+   ],
    "marginalie": [
     "1. Wahrheitspflicht"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Berufspflichten der Notarinnen und Notare"
+    }
+   ],
    "marginalie": [
     "2. Interessewahrungspflicht"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Berufspflichten der Notarinnen und Notare"
+    }
+   ],
    "marginalie": [
     "3. Unparteilichkeitspflicht"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Berufspflichten der Notarinnen und Notare"
+    }
+   ],
    "marginalie": [
     "4. Pflicht zur Wahrung staatlicher Fiskalinteressen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Berufspflichten der Notarinnen und Notare"
+    }
+   ],
    "marginalie": [
     "5. Pflicht zur Ablehnung missbräuchlicher Beurkundungen"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Berufspflichten der Notarinnen und Notare"
+    }
+   ],
    "marginalie": [
     "6. Geheimhaltungspflicht"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Berufspflichten der Notarinnen und Notare"
+    }
+   ],
    "marginalie": [
     "7. Pflichten beim Umgang mit Klientenvermögen"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.A.1. Ausstand"
+    },
+    {
+     "ebene": 3,
+     "label": "a. Notarin und Notar"
+    }
+   ],
    "marginalie": [
     "aa. Grundsatz"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.A.1. Ausstand"
+    },
+    {
+     "ebene": 3,
+     "label": "a. Notarin und Notar"
+    }
+   ],
    "marginalie": [
     "bb. Angelegenheit einer Person"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.A.1. Ausstand"
+    },
+    {
+     "ebene": 3,
+     "label": "a. Notarin und Notar"
+    }
+   ],
    "marginalie": [
     "cc. Nahestehende Person"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.A.1. Ausstand"
+    },
+    {
+     "ebene": 3,
+     "label": "b. Zeuginnen und Zeugen der Beurkundung"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.A.1. Ausstand"
+    },
+    {
+     "ebene": 3,
+     "label": "c. Beizug einer zweiten Notarin oder eines zweiten Notars"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.A.2. Anmeldung eintragungsbedürftiger Akte"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.A.3. Aufbewahrung von Testamenten und Erbverträgen"
+    }
+   ],
    "marginalie": []
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.B.1. Vorbereitung"
+    }
+   ],
    "marginalie": []
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.B.2. Beratung"
+    }
+   ],
    "marginalie": []
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.B.3. Belehrung"
+    }
+   ],
    "marginalie": []
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.B.4. Beurkundungsvorgang und Siegelung"
+    }
+   ],
    "marginalie": []
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.B.4. Beurkundungsvorgang und Siegelung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Besondere Verfahren"
+    }
+   ],
    "marginalie": [
     "a. Sukzessivbeurkundung von Verträgen"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.B.4. Beurkundungsvorgang und Siegelung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Besondere Verfahren"
+    }
+   ],
    "marginalie": [
     "b. Fremdsprachige Beteiligte"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.B.4. Beurkundungsvorgang und Siegelung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Besondere Verfahren"
+    }
+   ],
    "marginalie": [
     "c. Seh- und schreibbehinderte Beteiligte"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.B.4. Beurkundungsvorgang und Siegelung"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Besondere Verfahren"
+    }
+   ],
    "marginalie": [
     "d. Verfahren gemäss Art. 14 und 15 OR"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C.1. Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C. 2. Beurkundung von Vorgängen"
+    }
+   ],
    "marginalie": [
     "Beurkundungsbedürftige Versammlungen"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C. 2. Beurkundung von Vorgängen"
+    }
+   ],
    "marginalie": [
     "Andere Veranstaltungen"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C. 2. Beurkundung von Vorgängen"
+    }
+   ],
    "marginalie": [
     "Wechselprotest"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C.3. Beurkundung bestehender Tatsachen"
+    }
+   ],
    "marginalie": []
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C.4. Beglaubigungen und andere Vermerkbeurkundungen"
+    }
+   ],
    "marginalie": [
     "a. Unterschriftsbeglaubigung"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C.4. Beglaubigungen und andere Vermerkbeurkundungen"
+    }
+   ],
    "marginalie": [
     "b. Kopienbeglaubigung"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C.4. Beglaubigungen und andere Vermerkbeurkundungen"
+    }
+   ],
    "marginalie": [
     "c. Beglaubigter Auszug"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.D. Wissenserklärungen (eidesstattliche Erklärungen, Affidavits)"
+    }
+   ],
    "marginalie": []
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
    "marginalie": [
     "Notwendiger Inhalt"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
    "marginalie": [
     "Textgestaltung"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
    "marginalie": [
     "Äussere Gestalt"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
    "marginalie": [
     "Beilagen"
    ]
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
    "marginalie": [
     "Korrekturen"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
    "marginalie": [
     "Ein einziges Original"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
    "marginalie": [
     "Unterschriftsbeglaubigung"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
    "marginalie": [
     "Vermerkbeurkundung von Erbgängen auf Wertpapieren"
    ]
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Mängel der Urkunde"
+    }
+   ],
    "marginalie": []
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Registrierung und Aufbewahrung der Urkunden"
+    }
+   ],
    "marginalie": []
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Honorar für die notariellen Verrichtungen"
+    }
+   ],
    "marginalie": []
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vermögensrechtliche Verantwortlichkeit und Disziplinarwesen"
+    }
+   ],
    "marginalie": [
     "Vermögensrechtliche Verantwortlichkeit"
    ]
   },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vermögensrechtliche Verantwortlichkeit und Disziplinarwesen"
+    }
+   ],
    "marginalie": [
     "Disziplinarwesen"
    ]
   },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Übergangsbestimmung zu § 8"
+    }
+   ],
    "marginalie": []
   },
   "61": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "1. Änderung und Aufhebung bisherigen Rechts"
    ]
   },
   "62": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "2. Publikation, Genehmigung, Wirksamkeit"
    ]
+  },
+  "59_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IXbis. Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Strafbestimmungen"
+   ]
+  },
+  "5_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "II.B. Fähigkeitsausweis"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

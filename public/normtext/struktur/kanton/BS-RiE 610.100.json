@@ -1,290 +1,666 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Grundsätzliche Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gegenstand"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Grundsätzliche Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Planung"
+    }
+   ],
    "marginalie": [
     "Aufgaben- und Finanzplan"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Planung"
+    }
+   ],
    "marginalie": [
     "Budget"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Planung"
+    }
+   ],
    "marginalie": [
     "Budgetkredite"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Steuerung der Umsetzung"
+    }
+   ],
    "marginalie": [
     "Verwendung der Budgetmittel"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Steuerung der Umsetzung"
+    }
+   ],
    "marginalie": [
     "Kreditüberschreitung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Steuerung der Umsetzung"
+    }
+   ],
    "marginalie": [
     "Nachtragskredit"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Steuerung der Umsetzung"
+    }
+   ],
    "marginalie": [
     "Kreditübertragungen"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Steuerung der Umsetzung"
+    }
+   ],
    "marginalie": [
     "Erwartungsrechnung"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Berichterstattung"
+    }
+   ],
    "marginalie": [
     "Jahresbericht"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Entwicklung der Aufgabenerfüllung"
+    }
+   ],
    "marginalie": [
     "Monitoring der Entwicklung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Entwicklung der Aufgabenerfüllung"
+    }
+   ],
    "marginalie": [
     "Aufgabenüberprüfung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Steuerung auf Verwaltungsebene"
+    }
+   ],
    "marginalie": [
     "Controlling"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Steuerung auf Verwaltungsebene"
+    }
+   ],
    "marginalie": [
     "Risikomanagement"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Steuerung auf Verwaltungsebene"
+    }
+   ],
    "marginalie": [
     "Internes Kontrollsystem"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Steuerung auf Verwaltungsebene"
+    }
+   ],
    "marginalie": [
     "Kosten- und Leistungsrechnung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Steuerung auf Verwaltungsebene"
+    }
+   ],
    "marginalie": [
     "Gewerbliche Leistungen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Begriff"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Einnahmenverzicht"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Voraussetzungen für Ausgaben"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Neue und gebundene Ausgaben"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Nettoprinzip, Projektierungskosten"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Zuständigkeiten"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Höhe der Ausgabe"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Rahmenausgabenbewilligung"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Erhöhung der Ausgabenbewilligung"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausgaben und ihre Bewilligung"
+    }
+   ],
    "marginalie": [
     "Abrechnung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Rechnungslegungsgrundsätze"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Buchführungsgrundsätze"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendbare Normen"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Elemente der Jahresrechnung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Erfolgsrechnung"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Investitionsrechnung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Bilanz"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Geldflussrechnung"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Anhang"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Bilanzierung und Bewertung"
+    }
+   ],
    "marginalie": [
     "Bilanzierungsgrundsätze"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Bilanzierung und Bewertung"
+    }
+   ],
    "marginalie": [
     "Bewertungsgrundsätze"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Bilanzierung und Bewertung"
+    }
+   ],
    "marginalie": [
     "Abschreibungen"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Zweckbestimmtes Vermögen"
+    }
+   ],
    "marginalie": [
     "Fonds"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Zweckbestimmtes Vermögen"
+    }
+   ],
    "marginalie": [
     "Spezialfinanzierungen"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Zweckbestimmtes Vermögen"
+    }
+   ],
    "marginalie": [
     "Legate und unselbständige Stiftungen"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.5 Rechnungsrevision"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.5 Rechnungsrevision"
+    }
+   ],
    "marginalie": [
     "Berichterstattung"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Ausführungs- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Ausführungsbestimmungen"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Ausführungs- und Übergangsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]

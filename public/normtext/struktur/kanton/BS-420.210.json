@@ -1,203 +1,493 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "II.1. Departement und Abteilungen"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "II.1. Departement und Abteilungen"
+    }
+   ],
    "marginalie": [
     "Wahl und Organisation der Kommissionen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "II.1. Departement und Abteilungen"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "II.2. Fachkommissionen"
+    }
+   ],
    "marginalie": [
     "Wahl der Mitglieder und Zusammensetzung der Kommissionen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "II.2. Fachkommissionen"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Berufs- und Laufbahnberatung"
+    }
+   ],
    "marginalie": [
     "Allgemeine Bestimmungen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Vollzugsbehörden"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Berufs- und Laufbahnberatung"
+    }
+   ],
    "marginalie": [
     "Besondere Aufgaben"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Vorbereitung auf die berufliche Grundbildung"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufsichtsbefugnisse"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Stellvertretung der Berufsbildnerin oder des Berufsbildners"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bildung und Weiterbildung der Berufsbildnerinnen und Berufsbildner"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Bildungsbewilligung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Lehrmittel"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Kinder- und Jugendgesundheitsdienst [22]"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.2. Bildung in beruflicher Praxis"
+    }
+   ],
    "marginalie": [
     "Berufliche Grundbildung von Behinderten"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.3. Schulische Bildung"
+    }
+   ],
    "marginalie": [
     "Berufsfachschulen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.3. Schulische Bildung"
+    }
+   ],
    "marginalie": [
     "Berufsmaturität, Freikurse, Stützkurse"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.3. Schulische Bildung"
+    }
+   ],
    "marginalie": [
     "Auswärtige Fachklassen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Wahl der Prüfungsexpertinnen und Prüfungsexperten"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Beiträge an Organisationen der Arbeitswelt"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Bericht"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Zeitpunkt der Prüfungen"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Prüfungswegleitungen"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Zutritt zu den Prüfungen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Prüfungswiederholungen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Prüfungen und andere Qualifikationsverfahren"
+    }
+   ],
    "marginalie": [
     "Unentschuldigte Prüfungsabsenzen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Berufliche Grundbildung"
+    },
+    {
+     "ebene": 2,
+     "label": "V.5. Grundbildung mit Berufsattest"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Nachholbildung, berufsorientierte Weiterbildung und höhere Berufsbildung"
+    }
+   ],
    "marginalie": []
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Entwicklung der Berufsbildung"
+    }
+   ],
    "marginalie": []
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Beiträge und Subventionen"
+    }
+   ],
    "marginalie": [
     "Grundsatz und allgemeine Voraussetzungen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Beiträge und Subventionen"
+    }
+   ],
    "marginalie": [
     "Höhe der Beiträge"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Beiträge und Subventionen"
+    }
+   ],
    "marginalie": [
     "Entzug des Kantonsbeitrags"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Beiträge und Subventionen"
+    }
+   ],
    "marginalie": [
     "Ferienlager und Freizeitsport für Lernende"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Wirksamkeit"
+    }
+   ],
    "marginalie": []
+  },
+  "29_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Nachholbildung, berufsorientierte Weiterbildung und höhere Berufsbildung"
+    }
+   ],
+   "marginalie": [
+    "Höhere Fachschulen"
+   ]
   }
  }
 }

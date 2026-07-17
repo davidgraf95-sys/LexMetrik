@@ -1,56 +1,157 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Zweck"
+    }
+   ],
    "marginalie": []
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Zweck"
+    }
+   ],
+   "marginalie": [
+    "..."
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Zweck"
+    }
+   ],
+   "marginalie": [
+    "..."
+   ]
+  },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schutzzonenvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Vorschriften"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schutzzonenvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besondere Vorschriften"
+    }
+   ],
    "marginalie": [
     "Weitere Schutzzone (S 3)"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schutzzonenvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besondere Vorschriften"
+    }
+   ],
    "marginalie": [
     "Engere Schutzzone, innerhalb der Bauzone (S 2b)"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schutzzonenvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besondere Vorschriften"
+    }
+   ],
    "marginalie": [
     "Engere Schutzzone, ausserhalb der Bauzone (S 2a)"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schutzzonenvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besondere Vorschriften"
+    }
+   ],
    "marginalie": [
     "Fassungs- und Anreicherungsbereich (S 1)"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Schutzzonenvorschriften"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Weitergehende Vorsichts- und Schutzmassnahmen"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Übergangsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Kosten"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

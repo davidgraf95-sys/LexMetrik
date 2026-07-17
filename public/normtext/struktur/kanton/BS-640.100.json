@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,6 +18,23 @@
    ],
    "marginalie": []
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Kommunale Steuern und Kirchensteuern"
+    }
+   ],
+   "marginalie": []
+  },
   "3": {
    "gliederung": [
     {
@@ -30,7 +47,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -55,7 +72,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -82,7 +99,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -109,7 +126,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -134,7 +151,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -159,7 +176,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -180,7 +197,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -188,7 +205,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/2. Abschn./A./III.) 1. Ehegatten und eingetragene Partnerinnen und Partner *"
+     "label": "(1. Teil/2. Abschn./A./III.) 1. Ehegatten und eingetragene Partnerinnen und Partner"
     }
    ],
    "marginalie": []
@@ -205,7 +222,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -230,7 +247,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -255,7 +272,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -263,7 +280,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/2. Abschn./A./III.) 4. Gesellschaften und kollektive Kapitalanlagen *"
+     "label": "(1. Teil/2. Abschn./A./III.) 4. Gesellschaften und kollektive Kapitalanlagen"
     }
    ],
    "marginalie": []
@@ -280,7 +297,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -288,10 +305,33 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/2. Abschn./A./III.) 5. Mithaftung für die Steuer *"
+     "label": "(1. Teil/2. Abschn./A./III.) 5. Mithaftung für die Steuer"
     }
    ],
    "marginalie": []
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./A.) IV. Besteuerung nach dem Aufwand"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   },
   "15": {
    "gliederung": [
@@ -305,7 +345,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -326,7 +366,7 @@
     },
     {
      "ebene": 3,
-     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht [1]"
+     "label": "(1. Teil/2. Abschn.) A. Steuerpflicht"
     },
     {
      "ebene": 4,
@@ -865,7 +905,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/2. Abschn./B./V.) 3. Ausgleich der kalten Progression *"
+     "label": "(1. Teil/2. Abschn./B./V.) 3. Ausgleich der kalten Progression"
     }
    ],
    "marginalie": []
@@ -890,7 +930,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/2. Abschn./B./V.) 4. Sonderfälle *"
+     "label": "(1. Teil/2. Abschn./B./V.) 4. Sonderfälle"
     }
    ],
    "marginalie": [
@@ -917,7 +957,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/2. Abschn./B./V.) 4. Sonderfälle *"
+     "label": "(1. Teil/2. Abschn./B./V.) 4. Sonderfälle"
     }
    ],
    "marginalie": [
@@ -1130,6 +1170,31 @@
    ],
    "marginalie": []
   },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) C. Die Vermögenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./C.) I. Steuerobjekt"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./C./I.) 4. Steuerfreies Vermögen"
+    }
+   ],
+   "marginalie": []
+  },
   "49": {
    "gliederung": [
     {
@@ -1336,6 +1401,33 @@
    ],
    "marginalie": [
     "b) Begründung und Auflösung der Ehe"
+   ]
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) C. Die Vermögenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./C.) III. Zeitliche Grundlagen"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./C./III.) 3. Besondere Verhältnisse"
+    }
+   ],
+   "marginalie": [
+    "c) Erbgang, Konkurs"
    ]
   },
   "58": {
@@ -1678,6 +1770,33 @@
     "Erfolgsneutrale Vorgänge *"
    ]
   },
+  "72": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) I. Steuerobjekt"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./I.) 2. Berechnung des Reingewinns"
+    }
+   ],
+   "marginalie": [
+    "Unternehmensumstrukturierungen *"
+   ]
+  },
   "73": {
    "gliederung": [
     {
@@ -1779,7 +1898,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/3. Abschn./B./II.) 1. Juristische Personen *"
+     "label": "(1. Teil/3. Abschn./B./II.) 1. Juristische Personen"
     }
    ],
    "marginalie": []
@@ -1804,11 +1923,119 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/3. Abschn./B./II.) 2. Gesellschaften mit Beteiligungen *"
+     "label": "(1. Teil/3. Abschn./B./II.) 2. Gesellschaften mit Beteiligungen"
     }
    ],
    "marginalie": [
     "a) Beteiligungsabzug *"
+   ]
+  },
+  "78": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) II. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./II.) 2. Gesellschaften mit Beteiligungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "79": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) II. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./II.) 2. Gesellschaften mit Beteiligungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "80": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) II. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./II.) 2. Gesellschaften mit Beteiligungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "81": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) II. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./II.) 3. …"
+    }
+   ],
+   "marginalie": [
+    "…"
    ]
   },
   "82": {
@@ -1931,7 +2158,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/3. Abschn./C./I.) 3. Vereine, Stiftungen, kollektive Kapitalanlagen und übrige juristische Personen *"
+     "label": "(1. Teil/3. Abschn./C./I.) 3. Vereine, Stiftungen, kollektive Kapitalanlagen und übrige juristische Personen"
     }
    ],
    "marginalie": []
@@ -2027,7 +2254,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/4. Abschn./I.) 1. Der Quellensteuer unterworfene Arbeitnehmerinnen und Arbeitnehmer *"
+     "label": "(1. Teil/4. Abschn./I.) 1. Der Quellensteuer unterworfene Arbeitnehmerinnen und Arbeitnehmer"
     }
    ],
    "marginalie": []
@@ -2077,7 +2304,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/4. Abschn./I.) 3. Quellensteuerabzug *"
+     "label": "(1. Teil/4. Abschn./I.) 3. Quellensteuerabzug"
     }
    ],
    "marginalie": []
@@ -2127,7 +2354,7 @@
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/4. Abschn./I.) 5. Obligatorische nachträgliche ordentliche Veranlagung *"
+     "label": "(1. Teil/4. Abschn./I.) 5. Obligatorische nachträgliche ordentliche Veranlagung"
     }
    ],
    "marginalie": []
@@ -2148,11 +2375,11 @@
     },
     {
      "ebene": 4,
-     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/4. Abschn./II.) 1. Der Quellensteuer unterworfene Arbeitnehmerinnen und Arbeitnehmer *"
+     "label": "(1. Teil/4. Abschn./II.) 1. Der Quellensteuer unterworfene Arbeitnehmerinnen und Arbeitnehmer"
     }
    ],
    "marginalie": []
@@ -2173,11 +2400,11 @@
     },
     {
      "ebene": 4,
-     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     },
     {
      "ebene": 5,
-     "label": "(1. Teil/4. Abschn./II.) 2. (1. Teil/4. Abschn./II.) 2. … *"
+     "label": "(1. Teil/4. Abschn./II.) 2. …"
     }
    ],
    "marginalie": []
@@ -2198,7 +2425,7 @@
     },
     {
      "ebene": 4,
-     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     },
     {
      "ebene": 5,
@@ -2223,7 +2450,7 @@
     },
     {
      "ebene": 4,
-     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     },
     {
      "ebene": 5,
@@ -2248,7 +2475,7 @@
     },
     {
      "ebene": 4,
-     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     },
     {
      "ebene": 5,
@@ -2273,7 +2500,7 @@
     },
     {
      "ebene": 4,
-     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "(1. Teil/4. Abschn.) II. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     },
     {
      "ebene": 5,
@@ -2298,7 +2525,7 @@
     },
     {
      "ebene": 4,
-     "label": "(1. Teil/4. Abschn./II.) 6 bis . Empfänger und Empfängerinnen von Mitarbeiterbeteiligungen *"
+     "label": "(1. Teil/4. Abschn./II.) 6bis. Empfänger und Empfängerinnen von Mitarbeiterbeteiligungen"
     },
     {
      "ebene": 5,
@@ -2597,6 +2824,31 @@
     {
      "ebene": 5,
      "label": "(1. Teil/6. Abschn./II.) 2. Steuerbefreiung"
+    }
+   ],
+   "marginalie": []
+  },
+  "114": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil) 6. Abschnitt: Die Grundstücksteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/6. Abschn.) III. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/6. Abschn./III.) 1. Steuersatz"
     }
    ],
    "marginalie": []
@@ -2955,6 +3207,31 @@
    ],
    "marginalie": []
   },
+  "129": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil) 7. Abschnitt: Die Erbschafts- und Schenkungssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/7. Abschn.) IV. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/7. Abschn./IV.) 1. Steuerfreibeträge"
+    }
+   ],
+   "marginalie": []
+  },
   "130": {
    "gliederung": [
     {
@@ -3159,7 +3436,7 @@
     },
     {
      "ebene": 5,
-     "label": "(2. Teil/2. Abschn./A./I.) 2. Amtsgeheimnis, Amtshilfe, Datenschutz *"
+     "label": "(2. Teil/2. Abschn./A./I.) 2. Amtsgeheimnis, Amtshilfe, Datenschutz"
     }
    ],
    "marginalie": [
@@ -3186,7 +3463,7 @@
     },
     {
      "ebene": 5,
-     "label": "(2. Teil/2. Abschn./A./I.) 2. Amtsgeheimnis, Amtshilfe, Datenschutz *"
+     "label": "(2. Teil/2. Abschn./A./I.) 2. Amtsgeheimnis, Amtshilfe, Datenschutz"
     }
    ],
    "marginalie": [
@@ -3213,11 +3490,38 @@
     },
     {
      "ebene": 5,
-     "label": "(2. Teil/2. Abschn./A./I.) 2. Amtsgeheimnis, Amtshilfe, Datenschutz *"
+     "label": "(2. Teil/2. Abschn./A./I.) 2. Amtsgeheimnis, Amtshilfe, Datenschutz"
     }
    ],
    "marginalie": [
     "c) Amtshilfe von anderen Behörden"
+   ]
+  },
+  "141": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) A. Allgemeine Verfahrensgrundsätze"
+    },
+    {
+     "ebene": 5,
+     "label": "(2. Teil/2. Abschn./A./I.) 2. Amtsgeheimnis, Amtshilfe, Datenschutz"
+    }
+   ],
+   "marginalie": [
+    "d) Amtshilfe an andere Behörden"
    ]
   },
   "142": {
@@ -3793,6 +4097,33 @@
    ],
    "marginalie": []
   },
+  "165": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) D. Rekursverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "(2. Teil/2. Abschn./D./I.) 2. Verfahren"
+    }
+   ],
+   "marginalie": [
+    "a) Grundsatz"
+   ]
+  },
   "166": {
    "gliederung": [
     {
@@ -3953,6 +4284,31 @@
    ],
    "marginalie": []
   },
+  "172": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) D. Rekursverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "(2. Teil/2. Abschn./D.) III. Beschwerde an das Bundesgericht"
+    }
+   ],
+   "marginalie": []
+  },
   "173": {
    "gliederung": [
     {
@@ -4073,7 +4429,7 @@
     },
     {
      "ebene": 5,
-     "label": "(2. Teil/2. Abschn./E./III.) 1. Ordentliche Nachsteuer *"
+     "label": "(2. Teil/2. Abschn./E./III.) 1. Ordentliche Nachsteuer"
     }
    ],
    "marginalie": []
@@ -4637,6 +4993,29 @@
    ],
    "marginalie": []
   },
+  "201": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 3. Abschnitt: Bezug und Sicherung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/3. Abschn.) 8. Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "a) Voraussetzungen *"
+   ]
+  },
   "202": {
    "gliederung": [
     {
@@ -4879,6 +5258,85 @@
     }
    ],
    "marginalie": []
+  },
+  "213": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Steuerstrafrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "(3. Teil) A. Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3. Teil/A.) I. Verletzung von Verfahrenspflichten"
+    },
+    {
+     "ebene": 4,
+     "label": "(3. Teil/A.) II. Steuerhinterziehung"
+    },
+    {
+     "ebene": 5,
+     "label": "(3. Teil/A./II.) 5. Erben und Erbinnen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "214": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Steuerstrafrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "(3. Teil) A. Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3. Teil/A.) I. Verletzung von Verfahrenspflichten"
+    },
+    {
+     "ebene": 4,
+     "label": "(3. Teil/A.) II. Steuerhinterziehung"
+    },
+    {
+     "ebene": 5,
+     "label": "(3. Teil/A./II.) 6. Steuerhinterziehung von Ehegatten"
+    }
+   ],
+   "marginalie": []
+  },
+  "215": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Steuerstrafrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "(3. Teil) A. Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3. Teil/A.) I. Verletzung von Verfahrenspflichten"
+    },
+    {
+     "ebene": 4,
+     "label": "(3. Teil/A.) II. Steuerhinterziehung"
+    },
+    {
+     "ebene": 5,
+     "label": "(3. Teil/A./II.) 7. Juristische Personen"
+    }
+   ],
+   "marginalie": [
+    "a) Allgemeines"
+   ]
   },
   "216": {
    "gliederung": [
@@ -5164,14 +5622,29 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Teil: Verhältnis zu den Einwohnergemeinden sowie den öffentlich-rechtlich anerkannten Kirchen und Religionsgemeinschaften, Abgrenzung der Steuerhoheiten *"
+     "label": "4. Teil: Verhältnis zu den Einwohnergemeinden sowie den öffentlich-rechtlich anerkannten Kirchen und Religionsgemeinschaften, Abgrenzung der Steuerhoheiten"
     },
     {
      "ebene": 2,
-     "label": "(4. Teil) 1. Einkommens- und Vermögenssteuer der natürlichen Personen *"
+     "label": "(4. Teil) 1. Einkommens- und Vermögenssteuer der natürlichen Personen"
     }
    ],
    "marginalie": []
+  },
+  "229": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Verhältnis zu den Einwohnergemeinden sowie den öffentlich-rechtlich anerkannten Kirchen und Religionsgemeinschaften, Abgrenzung der Steuerhoheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(4. Teil) 3. Grundstückgewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   },
   "230": {
    "gliederung": [
@@ -5249,7 +5722,7 @@
     },
     {
      "ebene": 3,
-     "label": "(5. Teil/III.) 2. Erstmalige Anwendung des neuen Rechts *"
+     "label": "(5. Teil/III.) 2. Erstmalige Anwendung des neuen Rechts"
     }
    ],
    "marginalie": []
@@ -5266,7 +5739,7 @@
     },
     {
      "ebene": 3,
-     "label": "(5. Teil/III.) 3. Kapitalversicherungen mit Einmalprämie *"
+     "label": "(5. Teil/III.) 3. Kapitalversicherungen mit Einmalprämie"
     }
    ],
    "marginalie": []
@@ -5283,7 +5756,7 @@
     },
     {
      "ebene": 3,
-     "label": "(5. Teil/III.) 4. Kantonale Alters- und Hinterlassenenversicherung *"
+     "label": "(5. Teil/III.) 4. Kantonale Alters- und Hinterlassenenversicherung"
     }
    ],
    "marginalie": []
@@ -5300,7 +5773,7 @@
     },
     {
      "ebene": 3,
-     "label": "(5. Teil/III.) 5. Berufliche Vorsorge *"
+     "label": "(5. Teil/III.) 5. Berufliche Vorsorge"
     }
    ],
    "marginalie": [
@@ -5319,7 +5792,7 @@
     },
     {
      "ebene": 3,
-     "label": "(5. Teil/III.) 5. Berufliche Vorsorge *"
+     "label": "(5. Teil/III.) 5. Berufliche Vorsorge"
     }
    ],
    "marginalie": [
@@ -5338,7 +5811,7 @@
     },
     {
      "ebene": 3,
-     "label": "(5. Teil/III.) 5. Berufliche Vorsorge *"
+     "label": "(5. Teil/III.) 5. Berufliche Vorsorge"
     }
    ],
    "marginalie": [
@@ -5409,6 +5882,1111 @@
     {
      "ebene": 2,
      "label": "(5. Teil) IV. Inkraftsetzung"
+    }
+   ],
+   "marginalie": []
+  },
+  "100_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil) 4. Abschnitt: Die Quellensteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/4. Abschn./II.) 6bis. Empfänger und Empfängerinnen von Mitarbeiterbeteiligungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "101_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil) 4. Abschnitt: Die Quellensteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/4. Abschn./II.) 6bis. Empfänger und Empfängerinnen von Mitarbeiterbeteiligungen"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/4. Abschn./II) 8. Nachträgliche ordentliche Veranlagung"
+    }
+   ],
+   "marginalie": []
+  },
+  "101_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil) 4. Abschnitt: Die Quellensteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/4. Abschn./II.) 6bis. Empfänger und Empfängerinnen von Mitarbeiterbeteiligungen"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/4. Abschn./II) 8. Nachträgliche ordentliche Veranlagung"
+    }
+   ],
+   "marginalie": []
+  },
+  "134_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil) 8. Abschnitt: Die Kapitaltaxe von Unternehmen im Schweizer Sektor des Flughafens Basel-Mulhouse"
+    }
+   ],
+   "marginalie": []
+  },
+  "141_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn./A./I.) 3. Datenbearbeitung"
+    }
+   ],
+   "marginalie": []
+  },
+  "159_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) B. Veranlagung im ordentlichen Verfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "(2.Teil/2. Abschn./B./III.) 3. Elektronischer Datenaustausch"
+    }
+   ],
+   "marginalie": []
+  },
+  "165_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) D. Rekursverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "(2. Teil/2. Abschn./D./I.) 2. Verfahren"
+    }
+   ],
+   "marginalie": []
+  },
+  "168_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) D. Rekursverfahren"
+    },
+    {
+     "ebene": 5,
+     "label": "(2. Teil/2. Abschn./D./I.) 2. Verfahren"
+    }
+   ],
+   "marginalie": [
+    "e) Zuständigkeiten"
+   ]
+  },
+  "179_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) E. Änderung rechtskräftiger Verfügungen und Entscheide"
+    },
+    {
+     "ebene": 5,
+     "label": "(2. Teil/2. Abschn./E./III.) 4. Vereinfachte Nachbesteuerung von Erben und Erbinnen"
+    }
+   ],
+   "marginalie": []
+  },
+  "18_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) I. Steuerbare Einkünfte"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./I.) 2. Unselbständige Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "b) Mitarbeiterbeteiligungen"
+   ]
+  },
+  "18_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) I. Steuerbare Einkünfte"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./I.) 2. Unselbständige Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "c) Einkünfte aus echten Mitarbeiterbeteiligungen"
+   ]
+  },
+  "18_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) I. Steuerbare Einkünfte"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./I.) 2. Unselbständige Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "d) Einkünfte aus unechten Mitarbeiterbeteiligungen"
+   ]
+  },
+  "18_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) I. Steuerbare Einkünfte"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./I.) 2. Unselbständige Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "e) Anteilsmässige Besteuerung"
+   ]
+  },
+  "190_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) G. Besondere Bestimmungen zum Verfahren bei der Quellensteuer"
+    },
+    {
+     "ebene": 5,
+     "label": "(2. Teil/2. Abschn./G.) 2. Pflichten der steuerpflichtigen Person"
+    }
+   ],
+   "marginalie": []
+  },
+  "191_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 2. Abschnitt: Veranlagung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/2. Abschn.) G. Besondere Bestimmungen zum Verfahren bei der Quellensteuer"
+    },
+    {
+     "ebene": 5,
+     "label": "(2. Teil/2. Abschn./G.) 3. Verfügung und Rechtsmittel"
+    }
+   ],
+   "marginalie": []
+  },
+  "197_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 3. Abschnitt: Bezug und Sicherung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/3. Abschn.) 4a. Provisorische Veranlagung"
+    }
+   ],
+   "marginalie": []
+  },
+  "19_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) I. Steuerbare Einkünfte"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./I.) 3. Selbständige Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "b) Aufschubtatbestände"
+   ]
+  },
+  "19_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) I. Steuerbare Einkünfte"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./I.) 3. Selbständige Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "c) Teilbesteuerung der Einkünfte aus Beteiligungen des Geschäftsvermögens"
+   ]
+  },
+  "201_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 3. Abschnitt: Bezug und Sicherung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/3. Abschn.) 8. Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "b) Ausschlussgründe"
+   ]
+  },
+  "201_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Teil: Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(2. Teil)1. Abschnitt: Steuerbehörden"
+    },
+    {
+     "ebene": 3,
+     "label": "(2. Teil) 3. Abschnitt: Bezug und Sicherung der Steuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(2. Teil/3. Abschn.) 8. Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "c) Verfahren"
+   ]
+  },
+  "20_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) I. Steuerbare Einkünfte"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./I.) 3. Selbständige Erwerbstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "Einkommen aus Patenten und vergleichbaren Rechten (Patentbox)"
+   ]
+  },
+  "215_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Teil: Steuerstrafrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "(3. Teil) A. Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    },
+    {
+     "ebene": 3,
+     "label": "(3. Teil/A.) I. Verletzung von Verfahrenspflichten"
+    },
+    {
+     "ebene": 4,
+     "label": "(3. Teil/A.) II. Steuerhinterziehung"
+    },
+    {
+     "ebene": 5,
+     "label": "(3. Teil/A./II.) 7. Juristische Personen"
+    }
+   ],
+   "marginalie": [
+    "b) Selbstanzeige"
+   ]
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) I. Steuerbare Einkünfte"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./I.) 4. Bewegliches Vermögen"
+    }
+   ],
+   "marginalie": [
+    "b) Indirekte Teilliquidation und Transponierung"
+   ]
+  },
+  "228_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Verhältnis zu den Einwohnergemeinden sowie den öffentlich-rechtlich anerkannten Kirchen und Religionsgemeinschaften, Abgrenzung der Steuerhoheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(4. Teil) 2. Gewinn-, Kapital- und Grundstücksteuer der juristischen Personen"
+    }
+   ],
+   "marginalie": []
+  },
+  "228_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Verhältnis zu den Einwohnergemeinden sowie den öffentlich-rechtlich anerkannten Kirchen und Religionsgemeinschaften, Abgrenzung der Steuerhoheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(4. Teil) 3. Grundstückgewinnsteuer"
+    }
+   ],
+   "marginalie": []
+  },
+  "229_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Verhältnis zu den Einwohnergemeinden sowie den öffentlich-rechtlich anerkannten Kirchen und Religionsgemeinschaften, Abgrenzung der Steuerhoheiten"
+    },
+    {
+     "ebene": 2,
+     "label": "(4. Teil) 4. Übertragung von Befugnissen"
+    }
+   ],
+   "marginalie": []
+  },
+  "233_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 1. Wohnsitzwechsel im Verhältnis zu Praenumerandokantonen"
+    }
+   ],
+   "marginalie": []
+  },
+  "239_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 6. Steuerfuss"
+    }
+   ],
+   "marginalie": []
+  },
+  "239_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 6a. Einkommenssteuersatz"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "239_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5.Teil/III.) 6b. Ausgleich der kalten Progression"
+    }
+   ],
+   "marginalie": []
+  },
+  "241_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 7a. Rentenversicherungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "241_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 8. Gewinnsteuersatz"
+    }
+   ],
+   "marginalie": []
+  },
+  "241_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 7. Steuerermässigungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "242_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 10. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "242_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 10. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "242_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 9. Gemischte Beteiligungsgesellschaften"
+    }
+   ],
+   "marginalie": []
+  },
+  "242_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/IV.) 11. Zeitlich befristeter Gewinnsteuersatz"
+    }
+   ],
+   "marginalie": []
+  },
+  "242_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Teil: Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(5. Teil) III. Übergangsbestimmungen"
+    },
+    {
+     "ebene": 3,
+     "label": "(5. Teil/III.) 9. Gemischte Beteiligungsgesellschaften"
+    }
+   ],
+   "marginalie": []
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Allgemeines"
+    },
+    {
+     "ebene": 3,
+     "label": "II. Kommunale Steuern und Kirchensteuern"
+    }
+   ],
+   "marginalie": []
+  },
+  "36_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) V. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./V.) 2. Steuerfuss"
+    }
+   ],
+   "marginalie": []
+  },
+  "38_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) V. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./V.) 4. Sonderfälle"
+    }
+   ],
+   "marginalie": [
+    "b) Vereinfachtes Abrechnungsverfahren für kleine Arbeitsentgelte"
+   ]
+  },
+  "38_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Die Einkommens- und die Vermögenssteuer der natürlichen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/2. Abschn.) B. Die Einkommenssteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/2. Abschn./B.) V. Steuerberechnung"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/2. Abschn./B./V.) 4. Sonderfälle"
+    }
+   ],
+   "marginalie": [
+    "c) Liquidationsgewinne"
+   ]
+  },
+  "69_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) I. Steuerobjekt"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./I.) 2. Berechnung des Reingewinns"
+    }
+   ],
+   "marginalie": [
+    "Patente und vergleichbare Rechte: Begriffe"
+   ]
+  },
+  "69_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) I. Steuerobjekt"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./I.) 2. Berechnung des Reingewinns"
+    }
+   ],
+   "marginalie": [
+    "Patente und vergleichbare Rechte: Besteuerung"
+   ]
+  },
+  "70_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) I. Steuerobjekt"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./I.) 2. Berechnung des Reingewinns"
+    }
+   ],
+   "marginalie": [
+    "Entlastungsbegrenzung"
+   ]
+  },
+  "73_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) I. Steuerobjekt"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./I.) 2. Berechnung des Reingewinns"
+    }
+   ],
+   "marginalie": [
+    "Aufdeckung stiller Reserven bei Beginn der Steuerpflicht"
+   ]
+  },
+  "73_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) I. Steuerobjekt"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./I.) 2. Berechnung des Reingewinns"
+    }
+   ],
+   "marginalie": [
+    "Besteuerung stiller Reserven am Ende der Steuerpflicht"
+   ]
+  },
+  "74_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil/3. Abschn.) B. Die Gewinnsteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/3. Abschn./B.) I. Steuerobjekt"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/3. Abschn./B./I.) 2. Berechnung des Reingewinns"
+    }
+   ],
+   "marginalie": [
+    "Gewinne von juristischen Personen mit ideellen Zwecken *"
+   ]
+  },
+  "94_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "(1. Teil) 3. Abschnitt: Die Gewinn- und die Kapitalsteuer der juristischen Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "(1. Teil) 4. Abschnitt: Die Quellensteuer"
+    },
+    {
+     "ebene": 4,
+     "label": "(1. Teil/4. Abschn.) I. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    },
+    {
+     "ebene": 5,
+     "label": "(1. Teil/4. Abschn./I) 6. Nachträgliche ordentliche Veranlagung auf Antrag"
     }
    ],
    "marginalie": []

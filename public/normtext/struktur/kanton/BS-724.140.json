@@ -1,113 +1,865 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 1. Bewilligungspflichtige Allmendnutzung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 1. Bewilligungspflichtige Allmendnutzung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 1. Bewilligungspflichtige Allmendnutzung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 2. Nicht bewilligungspflichtige Allmendnutzung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 3. Beschränkung der Bewilligung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 3. Beschränkung der Bewilligung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Verfahrensarten"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Ordentliches Bewilligungsverfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Verfahrensarten"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Vereinfachtes Bewilligungsverfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Verfahrensarten"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 3. Reservationen für Grossanlässe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Zuständigkeit und Koordination"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 1. Tiefbauamt"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Zuständigkeit und Koordination"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Koordinationspflicht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Zuständigkeit und Koordination"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Koordinationspflicht"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 1. Allmendnutzungsbegehren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Beurteilung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Beurteilung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Beurteilung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Beurteilung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Beurteilung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 3. Auflage- und Einspracheverfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 3. Auflage- und Einspracheverfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Ablauf des Bewilligungsverfahrens"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 3. Auflage- und Einspracheverfahren"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Entscheid"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.) 1. Form, Inhalt und Bearbeitungsfrist"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Entscheid"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.) 2. Einsprachebeantwortung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Entscheid"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.) 3. Rekurs"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Umsetzung des Entscheides"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.) 1. Verantwortliche Person"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Umsetzung des Entscheides"
+    },
+    {
+     "ebene": 2,
+     "label": "(VI.) 2. Anzeigen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Abnahme und Freigabe von Bauten und Anlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.) 1. Abnahmeanforderung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Abnahme und Freigabe von Bauten und Anlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.) 2. Abnahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Abnahme und Freigabe von Bauten und Anlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.) 2. Abnahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Abnahme und Freigabe von Bauten und Anlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.) 3. Fristen und Mängelbehebung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Abnahme und Freigabe von Bauten und Anlagen"
+    },
+    {
+     "ebene": 2,
+     "label": "(VII.) 4. Freigabe"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Abwehr- und Vollstreckungsmassahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Abwehr- und Vollstreckungsmassahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 1. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 2. Kostenverteilung bei Beschädigungen, Verlegungen und Sicherung von Leitungen, Geleisen und Vermessungsfixpunkten"
+    }
+   ],
    "marginalie": []
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 2. Kostenverteilung bei Beschädigungen, Verlegungen und Sicherung von Leitungen, Geleisen und Vermessungsfixpunkten"
+    }
+   ],
    "marginalie": []
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 2. Kostenverteilung bei Beschädigungen, Verlegungen und Sicherung von Leitungen, Geleisen und Vermessungsfixpunkten"
+    }
+   ],
    "marginalie": []
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 3. Massnahmen zur Vermeidung des Aufbruches neuer Strassenbeläge"
+    }
+   ],
    "marginalie": []
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 3. Massnahmen zur Vermeidung des Aufbruches neuer Strassenbeläge"
+    }
+   ],
    "marginalie": []
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 3. Massnahmen zur Vermeidung des Aufbruches neuer Strassenbeläge"
+    }
+   ],
    "marginalie": []
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 3. Massnahmen zur Vermeidung des Aufbruches neuer Strassenbeläge"
+    }
+   ],
    "marginalie": []
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 4. Leitungstunnels"
+    }
+   ],
    "marginalie": []
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 4. Leitungstunnels"
+    }
+   ],
    "marginalie": []
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 4. Leitungstunnels"
+    }
+   ],
    "marginalie": []
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 4. Leitungstunnels"
+    }
+   ],
    "marginalie": []
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 4. Leitungstunnels"
+    }
+   ],
    "marginalie": []
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 4. Leitungstunnels"
+    }
+   ],
    "marginalie": []
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 4. Leitungstunnels"
+    }
+   ],
    "marginalie": []
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 5. Haftungsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 5. Haftungsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "59": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Vorschriften über Arbeiten in der Allmend"
+    },
+    {
+     "ebene": 2,
+     "label": "(IX.) 5. Haftungsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "60": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bewilligungspflicht"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 1. Bewilligungspflichtige Allmendnutzung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "33_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Abwehr- und Vollstreckungsmassahmen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   }
  }
 }

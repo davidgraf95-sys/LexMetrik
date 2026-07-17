@@ -1,154 +1,1076 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Bestand"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Aufgaben"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 1. Die Stimmberechtigten"
+    }
+   ],
    "marginalie": [
     "Oberstes Organ"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 1. Die Stimmberechtigten"
+    }
+   ],
    "marginalie": [
     "Wahl- und Stimmrecht"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 1. Die Stimmberechtigten"
+    }
+   ],
    "marginalie": [
     "Wahl des Gemeindeparlamentes"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 1. Die Stimmberechtigten"
+    }
+   ],
    "marginalie": [
     "Referendum und Initiative"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 1. Die Stimmberechtigten"
+    }
+   ],
    "marginalie": [
     "Petition"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Der Bürgergemeinderat"
+    }
+   ],
    "marginalie": [
     "Stellung, Grösse und Wahl"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Der Bürgergemeinderat"
+    }
+   ],
    "marginalie": [
     "Amtsdauer und Amtsjahr"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Der Bürgergemeinderat"
+    }
+   ],
    "marginalie": [
     "Einberufung"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Der Bürgergemeinderat"
+    }
+   ],
    "marginalie": [
     "Aufgaben und Befugnisse"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Der Bürgergemeinderat"
+    }
+   ],
    "marginalie": [
     "Fakultatives Referendum und Genehmigungsvorbehalt"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 3. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Grösse, Wahl und Amtsdauer"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 3. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Aufgaben und Befugnisse"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 3. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Verwaltungsvermögen *"
    ]
   },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 4. Einbürgerungskommission"
+    }
+   ],
+   "marginalie": []
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 4. Einbürgerungskommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 4. Einbürgerungskommission"
+    }
+   ],
    "marginalie": [
     "Zusammensetzung"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 4. Einbürgerungskommission"
+    }
+   ],
+   "marginalie": [
+    "Wahl"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 4. Einbürgerungskommission"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben und Befugnisse"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 4. Einbürgerungskommission"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.) 4a Interessenbindungen und Ausstand"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gemeindeverwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)1. Zentralverwaltung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gemeindeverwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)2. Bürgerspital"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gemeindeverwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)3. Sozialhilfe der Stadt Basel"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gemeindeverwaltung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)4. Bürgerliches Waisenhaus"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Stiftungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Christoph Merian Stiftung"
+    }
+   ],
    "marginalie": [
     "Aufsicht und Kommission"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Stiftungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Christoph Merian Stiftung"
+    }
+   ],
    "marginalie": [
     "Amtsdauer"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Stiftungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Christoph Merian Stiftung"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Stiftungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)1. Christoph Merian Stiftung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Stiftungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(V.)2. Andere selbständige Stiftungen"
+    }
+   ],
    "marginalie": []
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Korporationen"
+    }
+   ],
    "marginalie": [
     "Bestand und Aufsicht"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Korporationen"
+    }
+   ],
    "marginalie": [
     "Organisation"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Korporationen"
+    }
+   ],
    "marginalie": [
     "Vermögensverwaltung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Korporationen"
+    }
+   ],
    "marginalie": [
     "Reglement"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ]
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Der Bürgergemeinderat"
+    }
+   ],
+   "marginalie": [
+    "Einflussnahme des Bürgergemeinderats auf beschlossene Produktegruppen"
+   ]
+  },
+  "12_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Der Bürgergemeinderat"
+    }
+   ],
+   "marginalie": [
+    "Vereinbarungen mit langer Dauer"
+   ]
+  },
+  "12_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2a. Die Kommissionen des Bürgergemeinderats"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.2a.) a) Die Aufsichtskommission"
+    }
+   ],
+   "marginalie": [
+    "Bestand"
+   ]
+  },
+  "12_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2a. Die Kommissionen des Bürgergemeinderats"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.2a.) a) Die Aufsichtskommission"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeiten"
+   ]
+  },
+  "12_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2a. Die Kommissionen des Bürgergemeinderats"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.2a) b) Die Sachkommissionen"
+    }
+   ],
+   "marginalie": [
+    "Bestand"
+   ]
+  },
+  "12_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2a. Die Kommissionen des Bürgergemeinderats"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.2a) b) Die Sachkommissionen"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeiten"
+   ]
+  },
+  "12_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2a. Die Kommissionen des Bürgergemeinderats"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.2a) b) Die Sachkommissionen"
+    }
+   ],
+   "marginalie": [
+    "Arbeitsweise"
+   ]
+  },
+  "14_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 3. Der Bürgerrat"
+    }
+   ],
+   "marginalie": [
+    "Finanz- und Verwaltungsvermögen"
+   ]
+  },
+  "14_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 3. Der Bürgerrat"
+    }
+   ],
+   "marginalie": [
+    "Finanzvermögen"
+   ]
+  },
+  "20_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 4. Einbürgerungskommission"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.) 4a Interessenbindungen und Ausstand"
+    }
+   ],
+   "marginalie": [
+    "Offenlegung von Interessenbindungen"
+   ]
+  },
+  "20_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 4. Einbürgerungskommission"
+    },
+    {
+     "ebene": 3,
+     "label": "(III.) 4a Interessenbindungen und Ausstand"
+    }
+   ],
+   "marginalie": [
+    "Ausstand"
+   ]
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 5. Die Departemente"
+    }
+   ],
+   "marginalie": [
+    "Bestand"
+   ]
+  },
+  "21_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 5. Die Departemente"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeiten"
+   ]
+  },
+  "21_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)5A. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "21_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)5B. Die Leitungsausschüsse"
+    }
+   ],
+   "marginalie": [
+    "Bestand"
+   ]
+  },
+  "21_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)5B. Die Leitungsausschüsse"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeiten"
+   ]
+  },
+  "21_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)5C. Die Direktionen"
+    }
+   ],
+   "marginalie": [
+    "Bestand"
+   ]
+  },
+  "21_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)5C. Die Direktionen"
+    }
+   ],
+   "marginalie": [
+    "Zuständigkeiten"
+   ]
+  },
+  "21_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)6. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "21_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)6. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "21_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)6. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "21_k": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)6. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "21_l": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation und Zuständigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)6. …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "2_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "2_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Produktegruppe"
+   ]
+  },
+  "2_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Globalkredite"
+   ]
+  },
+  "2_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Leistungsaufträge"
+   ]
+  },
+  "2_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Geltungsdauer der Leistungsaufträge"
+   ]
+  },
+  "2_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Finanzierungsvorbehalt"
+   ]
+  },
+  "2_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Kreditübertragung"
+   ]
+  },
+  "2_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Produktesummenbudget"
+   ]
+  },
+  "2_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Jahresbericht"
+   ]
+  },
+  "2_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Produktesummenrechnung"
+   ]
+  },
+  "2_k": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Produkte mit Produktekrediten"
+   ]
+  },
+  "2_l": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Aufgaben und Führungsinstrumente"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Führungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Controlling"
+   ]
+  },
+  "36_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
    ]
   }
  }

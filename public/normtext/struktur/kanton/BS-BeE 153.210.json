@@ -1,200 +1,457 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Bereiche"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Schweigepflicht und Information"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Rücktritt"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Zuständigkeiten"
+    }
+   ],
    "marginalie": [
     "Gemeinderat"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Zuständigkeiten"
+    }
+   ],
    "marginalie": [
     "Gemeindepräsidium"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Zuständigkeiten"
+    }
+   ],
    "marginalie": [
     "Mitglieder des Gemeinderates"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Einberufung der Sitzungen und Verfahren"
+    }
+   ],
    "marginalie": [
     "Einberufung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Einberufung der Sitzungen und Verfahren"
+    }
+   ],
    "marginalie": [
     "Teilnahme weiterer Personen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Einberufung der Sitzungen und Verfahren"
+    }
+   ],
    "marginalie": [
     "Traktandenliste"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Einberufung der Sitzungen und Verfahren"
+    }
+   ],
    "marginalie": [
     "Sitzungsleitung und Beschlussfassung"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Einberufung der Sitzungen und Verfahren"
+    }
+   ],
    "marginalie": [
     "Wiedererwägung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Einberufung der Sitzungen und Verfahren"
+    }
+   ],
    "marginalie": [
     "Wahlen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Einberufung der Sitzungen und Verfahren"
+    }
+   ],
    "marginalie": [
     "Protokoll"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Gemeinderat"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Einberufung der Sitzungen und Verfahren"
+    }
+   ],
    "marginalie": [
     "Ausserordentliche Beschlussfassung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Information des Gemeinderates und der Gemeindeverwaltung"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kommissionen"
+    }
+   ],
    "marginalie": [
     "Entschädigung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Verwaltungsorganisation"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Verwaltungsorganisation"
+    }
+   ],
    "marginalie": [
     "Verantwortung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Verwaltungsorganisation"
+    }
+   ],
    "marginalie": [
     "Stellen und Anstellungen"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Information"
+    }
+   ],
    "marginalie": [
     "Information der Bevölkerung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Information"
+    }
+   ],
    "marginalie": [
     "Veröffentlichungen des Gemeinderates"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Führungsinstrumente"
+    }
+   ],
    "marginalie": [
     "Personalgespräch"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Führungsinstrumente"
+    }
+   ],
    "marginalie": [
     "Leistungsvereinbarung mit Dritten"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Vertretung nach aussen und Erlass von Verfügungen"
+    }
+   ],
    "marginalie": [
     "Vertretung der Gemeinde und Unterschriften"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Vertretung nach aussen und Erlass von Verfügungen"
+    }
+   ],
    "marginalie": [
     "Erlass von Verfügungen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.2 Kredite"
+    }
+   ],
    "marginalie": [
     "Ausweis der Folgekosten"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.2 Kredite"
+    }
+   ],
    "marginalie": [
     "Verwendung beschlossener Kredite"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.2 Kredite"
+    }
+   ],
    "marginalie": [
     "Kreditkontrolle"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.3 Zahlungsverkehr"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.3 Zahlungsverkehr"
+    }
+   ],
    "marginalie": [
     "Visum eingehender Rechnungen"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.3 Zahlungsverkehr"
+    }
+   ],
    "marginalie": [
     "Anweisung zur Zahlung"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Zuständigkeiten im Geschäftsverkehr und Finanzhaushalt"
+    },
+    {
+     "ebene": 2,
+     "label": "6.3 Zahlungsverkehr"
+    }
+   ],
    "marginalie": [
     "Zahlung"
    ]

@@ -1,166 +1,510 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einreihungsplan und Richtpositionen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Klassen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Stufen und Anlaufstufen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einreihung der Stellen nach den Grundsätzen der Arbeitsbewertung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Einreihungskompetenz"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Neueinreihung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Stufenfestsetzung und Einstell-Lohn"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Ausserordentliche Einreihung und Einstufung ad personam"
+   ]
+  },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Abweichung beim Stufenaufstieg"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Anerkennungsprämie"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Übernahme neuer Aufgaben *"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Überzeitarbeit und Stellvertretung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Von der Norm abweichende Einteilung der Arbeitszeit"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Arbeitsmarktzulage"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Kinderzulagen"
+   ]
+  },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Unterhaltszulage"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Dienstwohnung"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Unterkunft und Verpflegung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Nebeneinkünfte"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Auszahlung des Lohnes"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Anpassung an die Teuerung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Dienstaltersgeschenke"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
    "marginalie": [
     "Weiterzahlung des Lohnes im Todesfall"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4a. Abschnitt: Personalvorsorge"
+    }
+   ],
    "marginalie": [
     "Ausführungsbestimmungen"
    ]
   },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Befristete Sanierungsmassnahmen: Änderung der Teuerungsausgleichsregelung *"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Zulagen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Dienstaltersgeschenk"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung anderer Gesetze"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Rechtskraft und Wirksamkeit"
+   ]
+  },
+  "15_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Weitere Zulagen"
+   ]
+  },
+  "17_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Lohnnebenleistungen"
+   ]
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt"
+    }
+   ],
+   "marginalie": [
+    "Ferienlohn"
+   ]
+  },
+  "24_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4a. Abschnitt: Personalvorsorge"
+    }
+   ],
+   "marginalie": [
+    "Versicherter Jahreslohn *"
+   ]
+  },
+  "24_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4a. Abschnitt: Personalvorsorge"
+    }
+   ],
+   "marginalie": [
+    "Primat, Leistungsplan und Beiträge"
+   ]
+  },
+  "24_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4a. Abschnitt: Personalvorsorge"
+    }
+   ],
+   "marginalie": [
+    "Magistratspersonen"
+   ]
+  },
+  "24_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4a. Abschnitt: Personalvorsorge"
+    }
+   ],
+   "marginalie": [
+    "Ruhegehalt für Magistratspersonen"
+   ]
+  },
+  "24_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4a. Abschnitt: Personalvorsorge"
+    }
+   ],
+   "marginalie": [
+    "Versicherung der Magistratspersonen bei der Pensionskasse des Kantons Basel-Stadt"
+   ]
+  },
+  "24_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4a. Abschnitt: Personalvorsorge"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung für ehemalige Magistratspersonen"
+   ]
+  },
+  "27_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "27_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt : Übergangsordnung, Abänderung anderer Gesetze, Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
    ]
   }
  }

@@ -1,307 +1,870 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.1 Gegenstand und Zweck der Ausführungsbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.2 Begriffe"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Verteilnetz"
+    }
+   ],
    "marginalie": [
     "Netzgebiet und Anschlussgarantie"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Verteilnetz"
+    }
+   ],
    "marginalie": [
     "Nutzung von Allmend, Inanspruchnahme von Privatareal, Zutrittsrecht"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Verteilnetz"
+    }
+   ],
    "marginalie": [
     "Sorgfaltspflichten und Obliegenheiten der Kundinnen und Kunden, Rechte von IWB"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Verteilnetz"
+    }
+   ],
    "marginalie": [
     "Arbeiten am Verteilnetz"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1.3 Verteilnetz"
+    }
+   ],
    "marginalie": [
     "Gebühren und Tarife"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Anschlussvarianten, Anschlussebene"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Anschlussverfahren"
+    }
+   ],
    "marginalie": [
     "Anschlussgesuch"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Anschlussverfahren"
+    }
+   ],
    "marginalie": [
     "Netztechnische Vorabklärung, Koordinationssitzung"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Anschlussverfahren"
+    }
+   ],
    "marginalie": [
     "Anschlussvertrag"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Anschlussverfahren"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erstellung, Eigentum und Schutz des Netzanschlusses"
+    }
+   ],
    "marginalie": [
     "Erstellung"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erstellung, Eigentum und Schutz des Netzanschlusses"
+    }
+   ],
    "marginalie": [
     "Eigentum und Durchleitungsrecht"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erstellung, Eigentum und Schutz des Netzanschlusses"
+    }
+   ],
    "marginalie": [
     "Schutz des Netzanschlusses"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erstellung, Eigentum und Schutz des Netzanschlusses"
+    }
+   ],
    "marginalie": [
     "Zutrittsrecht von IWB"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erstellung, Eigentum und Schutz des Netzanschlusses"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Transformatorenstationen"
+    }
+   ],
    "marginalie": [
     "Erstellung, Betrieb und Eigentum"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Transformatorenstationen"
+    }
+   ],
    "marginalie": [
     "Standort"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Transformatorenstationen"
+    }
+   ],
    "marginalie": [
     "Kosten"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Transformatorenstationen"
+    }
+   ],
    "marginalie": [
     "Private Transformatoren- und Umspannstationen"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Vereinfachtes Anschlussverfahren für temporäre Netzanschlüsse"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.6 Änderungen und Erneuerung von Netzanschlüssen"
+    }
+   ],
    "marginalie": [
     "Änderungen durch IWB"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.6 Änderungen und Erneuerung von Netzanschlüssen"
+    }
+   ],
    "marginalie": [
     "Änderungen auf Wunsch der Kundinnen und Kunden"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.6 Änderungen und Erneuerung von Netzanschlüssen"
+    }
+   ],
    "marginalie": [
     "Erneuerung"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.7 Unterbrechung von Netzanschlüssen (Liefersperre)"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.8 Ausserbetriebnahme von Netzanschlüssen und Transformatorenstationen"
+    }
+   ],
    "marginalie": []
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Netzanschluss"
+    },
+    {
+     "ebene": 2,
+     "label": "2.9 Hausinstallationen"
+    }
+   ],
    "marginalie": []
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Allgemeine Grundsätze"
+    }
+   ],
    "marginalie": [
     "Netzbetrieb, Energielieferung und Energieverwendung"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.1 Allgemeine Grundsätze"
+    }
+   ],
    "marginalie": [
     "Regelmässigkeit der Energielieferung, Einschränkungen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.2 Grundversorgung"
+    }
+   ],
    "marginalie": []
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3 Energielieferung ausserhalb der Grundversorgung"
+    }
+   ],
    "marginalie": [
     "Energielieferung an Kundinnen und Kunden im freien Markt *"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3bis Netznutzung und Ersatzversorgung"
+    }
+   ],
    "marginalie": [
     "Ersatzversorgung für Kundinnen und Kunden im freien Markt *"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3bis Netznutzung und Ersatzversorgung"
+    }
+   ],
    "marginalie": [
     "Beziehung zu Lieferantinnen und Lieferanten"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Energielieferung in Arealnetzen"
+    }
+   ],
    "marginalie": [
     "Begriff"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Energielieferung in Arealnetzen"
+    }
+   ],
    "marginalie": [
     "Nutzung bestehender Arealnetze"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Energielieferung in Arealnetzen"
+    }
+   ],
    "marginalie": [
     "(Teil-)Auflösung bestehender Arealnetze / Ausschluss neuer Arealnetze *"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Energielieferung in Arealnetzen"
+    }
+   ],
    "marginalie": [
     "Eigenverbrauch und Zusammenschluss zum Eigenverbrauch (ZEV)"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.1 Verantwortlichkeit für das Messwesen"
+    }
+   ],
    "marginalie": []
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Messmittel"
+    }
+   ],
    "marginalie": [
     "Bereitstellung von Messmitteln *"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Messmittel"
+    }
+   ],
    "marginalie": [
     "Standort des Messmittels"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.3 Instandhaltung des Messmittels"
+    }
+   ],
    "marginalie": []
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.4 Manipulationen am Messmittel"
+    }
+   ],
    "marginalie": []
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.5 Kosten"
+    }
+   ],
    "marginalie": []
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.6 Messdaten"
+    }
+   ],
    "marginalie": [
     "Auslesung der Messdaten"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.6 Messdaten"
+    }
+   ],
    "marginalie": [
     "Richtigkeit der Messdaten"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.6 Messdaten"
+    }
+   ],
    "marginalie": [
     "Fehlmessungen"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Haftung"
+    }
+   ],
    "marginalie": []
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechnungsstellung, Zahlung und Sicherheitsleistung"
+    },
+    {
+     "ebene": 2,
+     "label": "6.1 Gebühren und Preise"
+    }
+   ],
    "marginalie": []
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechnungsstellung, Zahlung und Sicherheitsleistung"
+    },
+    {
+     "ebene": 2,
+     "label": "6.2 Rechnungsstellung"
+    }
+   ],
    "marginalie": []
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechnungsstellung, Zahlung und Sicherheitsleistung"
+    },
+    {
+     "ebene": 2,
+     "label": "6.3 Zahlungsmodalitäten"
+    }
+   ],
    "marginalie": []
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechnungsstellung, Zahlung und Sicherheitsleistung"
+    },
+    {
+     "ebene": 2,
+     "label": "6.4 Zahlungsverzug"
+    }
+   ],
    "marginalie": []
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechnungsstellung, Zahlung und Sicherheitsleistung"
+    },
+    {
+     "ebene": 2,
+     "label": "6.5 Vorauszahlungen und Sicherheitsleistungen"
+    }
+   ],
    "marginalie": []
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Rechnungsstellung, Zahlung und Sicherheitsleistung"
+    },
+    {
+     "ebene": 2,
+     "label": "6.6 Rechtsmittel gegen Gebührenrechnungen und Verfügungen von IWB"
+    }
+   ],
    "marginalie": []
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Öffentliche Beleuchtung und öffentliche Uhren"
+    },
+    {
+     "ebene": 2,
+     "label": "7.1 Leistungsauftrag von IWB"
+    }
+   ],
    "marginalie": []
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Öffentliche Beleuchtung und öffentliche Uhren"
+    },
+    {
+     "ebene": 2,
+     "label": "7.2 Öffentliche Beleuchtung"
+    }
+   ],
    "marginalie": []
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Öffentliche Beleuchtung und öffentliche Uhren"
+    },
+    {
+     "ebene": 2,
+     "label": "7.3 Öffentliche Uhren"
+    }
+   ],
    "marginalie": []
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Öffentliche Beleuchtung und öffentliche Uhren"
+    },
+    {
+     "ebene": 2,
+     "label": "7.4 Zuschlag für die Aufwendungen der öffentlichen Beleuchtung und der öffentlichen Uhren"
+    }
+   ],
    "marginalie": []
+  },
+  "32_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3 Energielieferung ausserhalb der Grundversorgung"
+    }
+   ],
+   "marginalie": [
+    "Energielieferung an Teilnehmerinnen und Teilnehmer von lokalen Elektrizitätsgemeinschaften (LEG) gemäss Art. 17d StromVG"
+   ]
+  },
+  "32_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Netzbetrieb und Energielieferung"
+    },
+    {
+     "ebene": 2,
+     "label": "3.3bis Netznutzung und Ersatzversorgung"
+    }
+   ],
+   "marginalie": [
+    "Netznutzung"
+   ]
+  },
+  "40_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Messung und Messdatenbereitstellung"
+    },
+    {
+     "ebene": 2,
+     "label": "4.2 Messmittel"
+    }
+   ],
+   "marginalie": [
+    "Art des Messmittels"
+   ]
   }
  }
 }

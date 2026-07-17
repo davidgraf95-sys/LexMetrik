@@ -1,352 +1,809 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gegenstand der Verordnung"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Steuerungsgrössen"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Vorprüfung von Vorlagen auf finanzielle Auswirkungen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Handbuch für Steuerung und Ausgaben"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Abschnitt: Finanzplan und Budget"
+    }
+   ],
    "marginalie": [
     "Grundsätze"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Abschnitt: Finanzplan und Budget"
+    }
+   ],
    "marginalie": [
     "Budgetentwurf des Regierungsrates"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Abschnitt: Finanzplan und Budget"
+    }
+   ],
    "marginalie": [
     "Budgetnachtrag des Regierungsrates"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Abschnitt: Finanzplan und Budget"
+    }
+   ],
    "marginalie": [
     "Definitives Budget"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Abschnitt: Finanzplan und Budget"
+    }
+   ],
    "marginalie": [
     "Fehlender Budgetbeschluss"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Abschnitt: Kreditsteuerung"
+    }
+   ],
    "marginalie": [
     "Verwaltungsinterne Kreditsteuerung: Erfolgsrechnung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Abschnitt: Kreditsteuerung"
+    }
+   ],
    "marginalie": [
     "Verwaltungsinterne Kreditsteuerung: Investitionsrechnung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Abschnitt: Kreditsteuerung"
+    }
+   ],
    "marginalie": [
     "Budgetabweichungen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Abschnitt: Kreditsteuerung"
+    }
+   ],
    "marginalie": [
     "Kreditüberschreitung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Abschnitt: Kreditsteuerung"
+    }
+   ],
    "marginalie": [
     "Nachtragskredit"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 3. Abschnitt: Kreditübertragungen und Rücklagen"
+    }
+   ],
    "marginalie": [
     "Kreditübertragungen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 3. Abschnitt: Kreditübertragungen und Rücklagen"
+    }
+   ],
    "marginalie": [
     "Rücklagen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 4. Abschnitt: Betriebliche Steuerung"
+    }
+   ],
    "marginalie": [
     "Interne Verrechnungen"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 4. Abschnitt: Betriebliche Steuerung"
+    }
+   ],
    "marginalie": [
     "Kosten- und Leistungsrechnung"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 4. Abschnitt: Betriebliche Steuerung"
+    }
+   ],
    "marginalie": [
     "Risikomanagement"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 4. Abschnitt: Betriebliche Steuerung"
+    }
+   ],
    "marginalie": [
     "Versicherungsverträge"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerung des Finanzhaushalts"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 4. Abschnitt: Betriebliche Steuerung"
+    }
+   ],
    "marginalie": [
     "Internes Kontrollsystem (IKS)"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausgaben"
+    }
+   ],
    "marginalie": [
     "Ausgabenbewilligung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausgaben"
+    }
+   ],
    "marginalie": [
     "Ausgaben für Leasings"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausgaben"
+    }
+   ],
    "marginalie": [
     "Delegation der Ausgabenkompetenzen"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausgaben"
+    }
+   ],
    "marginalie": [
     "Formen der Ausgabenbewilligungen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausgaben"
+    }
+   ],
    "marginalie": [
     "Erläuterungen zu Ausgabenbewilligungen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausgaben"
+    }
+   ],
    "marginalie": [
     "Nicht oder teilweise genutzte Ausgabenbewilligung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausgaben"
+    }
+   ],
    "marginalie": [
     "Erhöhung von Ausgabenbewilligungen"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ausgaben"
+    }
+   ],
    "marginalie": [
     "Kontrolle und Abrechnung"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 1. Abschnitt: Anwendbare Normen"
+    }
+   ],
    "marginalie": [
     "Regelwerk"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 1. Abschnitt: Anwendbare Normen"
+    }
+   ],
    "marginalie": [
     "Abweichungen vom Regelwerk"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 1. Abschnitt: Anwendbare Normen"
+    }
+   ],
    "marginalie": [
     "Handbuch für Rechnungslegung"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Steuerertrag"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Investitionsrechnung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Geldflussrechnung"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Aktivierungsgrenzen"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Gegebene Investitionsbeiträge"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Erhaltene Investitionsbeiträge"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Immobilien im Finanzvermögen"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Rückstellungen"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Eventualforderungen und -verbindlichkeiten"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Anhang der Jahresrechnung"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 2. Abschnitt: Jahresrechnung"
+    }
+   ],
    "marginalie": [
     "Treuhänderisch verwaltete Fonds"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 3. Abschnitt: Konsolidierte Rechnung"
+    }
+   ],
    "marginalie": [
     "Konsolidierungskreis"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 3. Abschnitt: Konsolidierte Rechnung"
+    }
+   ],
    "marginalie": [
     "Vorgaben für konsolidierte Organisationen"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 3. Abschnitt: Konsolidierte Rechnung"
+    }
+   ],
    "marginalie": [
     "Anhang der konsolidierten Rechnung"
    ]
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 3. Abschnitt: Konsolidierte Rechnung"
+    }
+   ],
    "marginalie": [
     "Konsolidierungsmethode und Bewertung der Beteiligungen"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 4. Abschnitt: Rechnungsführung"
+    }
+   ],
    "marginalie": [
     "Buchführungsgrundsätze"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 4. Abschnitt: Rechnungsführung"
+    }
+   ],
    "marginalie": [
     "Kontenrahmen"
    ]
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 4. Abschnitt: Rechnungsführung"
+    }
+   ],
    "marginalie": [
     "Organisation"
    ]
   },
   "52": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechnungslegung"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.) 4. Abschnitt: Rechnungsführung"
+    }
+   ],
    "marginalie": [
     "Inventarführung"
    ]
   },
   "53": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zuständigkeiten"
+    }
+   ],
    "marginalie": [
     "Finanzdepartement"
    ]
   },
   "54": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zuständigkeiten"
+    }
+   ],
    "marginalie": [
     "Immobilien Basel-Stadt"
    ]
   },
   "55": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zuständigkeiten"
+    }
+   ],
    "marginalie": [
     "Finanzverwaltung"
    ]
   },
   "56": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Zuständigkeiten"
+    }
+   ],
    "marginalie": [
     "Geld- und Kapitalmarktgeschäfte"
    ]
   },
   "57": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]
   },
   "58": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ]
+  },
+  "57_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zu § 28"
    ]
   }
  }

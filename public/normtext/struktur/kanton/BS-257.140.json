@@ -1,94 +1,180 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Zweck des Informatiksystems"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gespeicherte Daten"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gespeicherte Daten"
+    }
+   ],
    "marginalie": [
     "Grunddaten"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gespeicherte Daten"
+    }
+   ],
    "marginalie": [
     "Falldaten"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Gespeicherte Daten"
+    }
+   ],
    "marginalie": [
     "Verfahrensdaten"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Datenbearbeitung"
+    }
+   ],
    "marginalie": [
     "Verantwortung *"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Datenbearbeitung"
+    }
+   ],
    "marginalie": [
     "Berechtigung zur Bearbeitung von Informationen *"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechte der betroffenen Personen"
+    }
+   ],
    "marginalie": [
     "Auskunfts-, Einsichts- und Berichtigungsrecht"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Rechte der betroffenen Personen"
+    }
+   ],
    "marginalie": [
     "Zuständigkeit"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Aufbewahrung und Löschung von Daten"
+    }
+   ],
    "marginalie": [
     "Aufbewahrung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Aufbewahrung und Löschung von Daten"
+    }
+   ],
    "marginalie": [
     "Löschung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Aufbewahrung und Löschung von Daten"
+    }
+   ],
    "marginalie": [
     "Personen nach rechtskräftigem Abschluss von Verfahren *"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Aufbewahrung und Löschung von Daten"
+    }
+   ],
    "marginalie": [
     "Personen mit erkennungsdienstlicher Behandlung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Aufbewahrung und Löschung von Daten"
+    }
+   ],
    "marginalie": [
     "Weitere Personenkategorien"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Datenbearbeitung"
+    }
+   ],
+   "marginalie": [
+    "Datenaustausch mit dem Strafgericht und dem Appellationsgericht"
    ]
   }
  }

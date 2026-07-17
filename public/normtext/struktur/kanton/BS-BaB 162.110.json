@@ -1,172 +1,544 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Geltungsbereich (§ 1 AO)"
+    }
+   ],
    "marginalie": [
     "Besondere Kategorien von Beschäftigten *"
    ]
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Mitwirkung (§ 2a AO)"
+    }
+   ],
+   "marginalie": [
+    "Sozialpartnerschaftliche Begutachtungskommission"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Mitwirkung (§ 2a AO)"
+    }
+   ],
    "marginalie": [
     "Personalausschüsse"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Mitwirkung (§ 2a AO)"
+    }
+   ],
    "marginalie": [
     "Zusammenarbeit mit Personalverbänden"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Personalpolitik (§ 3 AO)"
+    }
+   ],
    "marginalie": [
     "Grundsätzliches zu Aus-, Fort- und Weiterbildungen"
    ]
   },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Personalpolitik (§ 3 AO)"
+    }
+   ],
+   "marginalie": [
+    "Interessenlage"
+   ]
+  },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Personalpolitik (§ 3 AO)"
+    }
+   ],
    "marginalie": [
     "Gewährung von Bildungsurlaub *"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Personalpolitik (§ 3 AO)"
+    }
+   ],
    "marginalie": [
     "Beteiligung an den Aufwendungen"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Personalpolitik (§ 3 AO)"
+    }
+   ],
+   "marginalie": [
+    "Rückzahlungsverpflichtung"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Personalpolitik (§ 3 AO)"
+    }
+   ],
+   "marginalie": [
+    "Rückerstattung der Aufwendungen"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Begründung des Anstellungsverhältnisses (§ 6 AO)"
+    }
+   ],
    "marginalie": [
     "Arbeitsvertragliche Kompetenzen"
    ]
   },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Probezeit (§ 7 AO)"
+    }
+   ],
+   "marginalie": [
+    "Dauer"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kündigung (§ 9ff. AO)"
+    }
+   ],
+   "marginalie": [
+    "Form der Kündigung"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kündigung (§ 9ff. AO)"
+    },
+    {
+     "ebene": 2,
+     "label": "7. 1. Verfahren bei Kündigung durch die Arbeitgeberin"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ]
+  },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Dahinfallen des Arbeitsverhältnisses (§ 13 AO)"
+    }
+   ],
    "marginalie": [
     "Erreichen der ordentlichen Altersgrenze"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Dahinfallen des Arbeitsverhältnisses (§ 13 AO)"
+    }
+   ],
    "marginalie": [
     "Fortsetzung des Arbeitsverhältnisses über die ordentliche Altersgrenze hinaus"
    ]
   },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Dahinfallen des Arbeitsverhältnisses (§ 13 AO)"
+    }
+   ],
+   "marginalie": [
+    "Fortsetzung des Arbeitsverhältnisses über das AHV-Alter hinaus"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Dahinfallen des Arbeitsverhältnisses (§ 13 AO)"
+    }
+   ],
    "marginalie": [
     "Invalidität"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Dahinfallen des Arbeitsverhältnisses (§ 13 AO)"
+    }
+   ],
+   "marginalie": [
+    "Befristung"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Arbeitszeit (§ 15 AO)"
+    }
+   ],
    "marginalie": [
     "Durchschnittliche, wöchentliche Arbeitszeit"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Arbeitszeit (§ 15 AO)"
+    }
+   ],
    "marginalie": [
     "Mehrarbeit, Überzeitarbeit und verschobene Arbeitszeit"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Arbeitszeit (§ 15 AO)"
+    }
+   ],
    "marginalie": [
     "Anordnung und Leistung von Überzeitarbeit"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Arbeitszeit (§ 15 AO)"
+    }
+   ],
    "marginalie": [
     "Kompensation oder Auszahlung der Mehrarbeit *"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Arbeitszeit (§ 15 AO)"
+    }
+   ],
    "marginalie": [
     "Zuschläge für Überzeitarbeit"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Ferien (§ 16 AO)"
+    }
+   ],
    "marginalie": [
     "Anspruch und Bezug"
    ]
   },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Ferien (§ 16 AO)"
+    }
+   ],
+   "marginalie": [
+    "Kürzung bei langer Abwesenheit *"
+   ]
+  },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "11. Schwangerschafts- und Mutterschaftsurlaub, Betreuungsurlaub (§§ 17 und § 17a AO)"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "11. Schwangerschafts- und Mutterschaftsurlaub, Betreuungsurlaub (§§ 17 und § 17a AO)"
+    }
+   ],
    "marginalie": [
     "Bezahlter Urlaub"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "11. Schwangerschafts- und Mutterschaftsurlaub, Betreuungsurlaub (§§ 17 und § 17a AO)"
+    }
+   ],
    "marginalie": [
     "Lohnanspruch"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "11. Schwangerschafts- und Mutterschaftsurlaub, Betreuungsurlaub (§§ 17 und § 17a AO)"
+    }
+   ],
    "marginalie": [
     "Unbezahlter Urlaub und Unterbruch des Arbeitsverhältnisses"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "12. Bezahlte Absenzen (§ 18 AO)"
+    }
+   ],
    "marginalie": [
     "Gründe und Dauer *"
    ]
   },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "13. Unbezahlter Urlaub (§ 19 AO)"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "13. Unbezahlter Urlaub (§ 19 AO)"
+    }
+   ],
    "marginalie": [
     "Auswirkungen"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "13. Unbezahlter Urlaub (§ 19 AO)"
+    }
+   ],
    "marginalie": [
     "Versicherungsschutz"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "14. Lohnfortzahlung bei öffentlichen Dienstleistungen (§ 20 AO)"
+    }
+   ],
    "marginalie": [
     "Nicht obligatorische Beförderungsdienste"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "15. Alters- und Hinterlassenenvorsorge sowie andere Versicherungen (§ 22 AO)"
+    }
+   ],
    "marginalie": [
     "Leistung und Prämie bei den Personalversicherungen *"
    ]
   },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "16. Nebenbeschäftigung (§ 23 AO)"
+    }
+   ],
+   "marginalie": [
+    "Öffentliches Amt *"
+   ]
+  },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "17. Geschenke (§ 25 AO)"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "17. Geschenke (§ 25 AO)"
+    }
+   ],
    "marginalie": [
     "Betriebsinterne Regelung bei der Entgegennahme von Geschenken"
    ]
   },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "18. Haftbarkeit des Personals (§ 26 AO)"
+    }
+   ],
+   "marginalie": [
+    "Haftbarkeit des Personals"
+   ]
+  },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "19. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
+   ]
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Rechtsformen für die Arbeitsleistung (§ 4 AO)"
+    }
+   ],
+   "marginalie": [
+    "Privatrechtliche Anstellungsverhältnisse"
+   ]
+  },
+  "13_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kündigung (§ 9ff. AO)"
+    },
+    {
+     "ebene": 2,
+     "label": "7. 1. Verfahren bei Kündigung durch die Arbeitgeberin"
+    }
+   ],
+   "marginalie": [
+    "Massnahme vor Aussprechen einer Kündigung *"
+   ]
+  },
+  "13_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kündigung (§ 9ff. AO)"
+    },
+    {
+     "ebene": 2,
+     "label": "7. 1. Verfahren bei Kündigung durch die Arbeitgeberin"
+    }
+   ],
+   "marginalie": [
+    "Rechtliches Gehör und Anhörung *"
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "11. Schwangerschafts- und Mutterschaftsurlaub, Betreuungsurlaub (§§ 17 und § 17a AO)"
+    }
+   ],
+   "marginalie": [
+    "Betreuungsurlaub"
+   ]
+  },
+  "36_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "16. Nebenbeschäftigung (§ 23 AO)"
+    }
+   ],
+   "marginalie": [
+    "Meldepflicht"
+   ]
+  },
+  "36_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "16. Nebenbeschäftigung (§ 23 AO)"
+    }
+   ],
+   "marginalie": [
+    "Bewilligungspflicht"
+   ]
+  },
+  "36_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "16. Nebenbeschäftigung (§ 23 AO)"
+    }
+   ],
+   "marginalie": [
+    "Bewilligungsinstanzen"
    ]
   }
  }

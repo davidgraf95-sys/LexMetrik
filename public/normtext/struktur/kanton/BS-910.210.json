@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
    "gliederung": [
@@ -371,7 +371,7 @@
     },
     {
      "ebene": 3,
-     "label": "3.4.1 Geförderte Massnahmen zur Reduktion der direkten Treibhausgasemissionen oder zur Steigerung der Energieeffizienz *"
+     "label": "3.4.1 Geförderte Massnahmen zur Reduktion der direkten Treibhausgasemissionen oder zur Steigerung der Energieeffizienz"
     }
    ],
    "marginalie": [
@@ -390,11 +390,49 @@
     },
     {
      "ebene": 3,
-     "label": "3.4.1 Geförderte Massnahmen zur Reduktion der direkten Treibhausgasemissionen oder zur Steigerung der Energieeffizienz *"
+     "label": "3.4.1 Geförderte Massnahmen zur Reduktion der direkten Treibhausgasemissionen oder zur Steigerung der Energieeffizienz"
     }
    ],
    "marginalie": [
     "Fördersätze"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Förderung im Bereich Umwelt"
+    },
+    {
+     "ebene": 3,
+     "label": "3.4.2 …"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Förderung im Bereich Umwelt"
+    },
+    {
+     "ebene": 3,
+     "label": "3.4.2 …"
+    }
+   ],
+   "marginalie": [
+    "…"
    ]
   },
   "27": {
@@ -409,7 +447,7 @@
     },
     {
      "ebene": 3,
-     "label": "3.4.3 Geförderte Reduktion der Emissionsintensität direkter Treibhausgasemissionen *"
+     "label": "3.4.3 Geförderte Reduktion der Emissionsintensität direkter Treibhausgasemissionen"
     }
    ],
    "marginalie": [
@@ -428,7 +466,7 @@
     },
     {
      "ebene": 3,
-     "label": "3.4.3 Geförderte Reduktion der Emissionsintensität direkter Treibhausgasemissionen *"
+     "label": "3.4.3 Geförderte Reduktion der Emissionsintensität direkter Treibhausgasemissionen"
     }
    ],
    "marginalie": [
@@ -447,7 +485,7 @@
     },
     {
      "ebene": 3,
-     "label": "3.4.4 Dokumentation *"
+     "label": "3.4.4 Dokumentation"
     }
    ],
    "marginalie": [
@@ -466,7 +504,7 @@
     },
     {
      "ebene": 3,
-     "label": "3.4.4 Dokumentation *"
+     "label": "3.4.4 Dokumentation"
     }
    ],
    "marginalie": [
@@ -485,7 +523,7 @@
     },
     {
      "ebene": 3,
-     "label": "3.4.5 Gemeinsame Bestimmungen im Bereich Umwelt *"
+     "label": "3.4.5 Gemeinsame Bestimmungen im Bereich Umwelt"
     }
    ],
    "marginalie": [
@@ -654,7 +692,7 @@
     },
     {
      "ebene": 3,
-     "label": "3.6.1 Allgemeine Bestimmungen *"
+     "label": "3.6.1 Allgemeine Bestimmungen"
     }
    ],
    "marginalie": [
@@ -689,6 +727,424 @@
    ],
    "marginalie": [
     "Mittelentnahme"
+   ]
+  },
+  "24_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Förderung im Bereich Umwelt"
+    },
+    {
+     "ebene": 3,
+     "label": "3.4.1 Geförderte Massnahmen zur Reduktion der direkten Treibhausgasemissionen oder zur Steigerung der Energieeffizienz"
+    }
+   ],
+   "marginalie": [
+    "Zu- und Abschläge"
+   ]
+  },
+  "31_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.4 Förderung im Bereich Umwelt"
+    },
+    {
+     "ebene": 3,
+     "label": "3.4.5 Gemeinsame Bestimmungen im Bereich Umwelt"
+    }
+   ],
+   "marginalie": [
+    "Betriebsanalysen"
+   ]
+  },
+  "42_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ausschluss der Förderung"
+   ]
+  },
+  "42_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Verhältnis zu anderen Förderungen"
+   ]
+  },
+  "42_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ausführungsbestimmungen"
+   ]
+  },
+  "42_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.2 Forschungsbeirat"
+    }
+   ],
+   "marginalie": [
+    "Organisation"
+   ]
+  },
+  "42_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.2 Forschungsbeirat"
+    }
+   ],
+   "marginalie": [
+    "Zusammensetzung"
+   ]
+  },
+  "42_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.2 Forschungsbeirat"
+    }
+   ],
+   "marginalie": [
+    "Wahl"
+   ]
+  },
+  "42_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.2 Forschungsbeirat"
+    }
+   ],
+   "marginalie": [
+    "Organisationsreglement und Entschädigung"
+   ]
+  },
+  "42_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.2 Forschungsbeirat"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben"
+   ]
+  },
+  "42_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.3 Voraussetzungen der Förderung"
+    }
+   ],
+   "marginalie": [
+    "Globaler gesellschaftlicher Nutzen"
+   ]
+  },
+  "42_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.3 Voraussetzungen der Förderung"
+    }
+   ],
+   "marginalie": [
+    "Neuartige Forschungskooperationen"
+   ]
+  },
+  "42_k": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.3 Voraussetzungen der Förderung"
+    }
+   ],
+   "marginalie": [
+    "Förderberechtigte Forschungspartner"
+   ]
+  },
+  "42_l": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.3 Voraussetzungen der Förderung"
+    }
+   ],
+   "marginalie": [
+    "Förderfähige Kooperationsprojekte"
+   ]
+  },
+  "42_m": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.3 Voraussetzungen der Förderung"
+    }
+   ],
+   "marginalie": [
+    "Verwendung der Förderbeiträge"
+   ]
+  },
+  "42_n": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.4 Verfahren und Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Gesuche"
+   ]
+  },
+  "42_o": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.4 Verfahren und Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Auswahlverfahren"
+   ]
+  },
+  "42_p": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.4 Verfahren und Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Entscheid"
+   ]
+  },
+  "42_q": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.4 Verfahren und Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Vertrag"
+   ]
+  },
+  "42_r": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.4 Verfahren und Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Auszahlung der Förderbeiträge"
+   ]
+  },
+  "42_s": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.4 Verfahren und Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Berichterstattung"
+   ]
+  },
+  "42_t": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Förderung in den Bereichen Innovation, Gesellschaft und Umwelt"
+    },
+    {
+     "ebene": 2,
+     "label": "3.6 Forschungskooperationen"
+    },
+    {
+     "ebene": 3,
+     "label": "3.6.4 Verfahren und Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Auskunfts- und Evaluationspflicht"
    ]
   }
  }

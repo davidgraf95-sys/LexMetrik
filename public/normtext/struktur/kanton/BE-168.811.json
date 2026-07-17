@@ -1,107 +1,234 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gegenstand"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Parteikostenersatz"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ermittlung des Streitwerts"
+   ]
+  },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anpassung an die Teuerung"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif in Zivilrechtssachen"
+    }
+   ],
    "marginalie": [
     "Erstinstanzliche Verfahren *"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif in Zivilrechtssachen"
+    }
+   ],
    "marginalie": [
     "Vorsorgliche Beweisführung"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif in Zivilrechtssachen"
+    }
+   ],
+   "marginalie": [
+    "Rechtsmittelverfahren"
+   ]
+  },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif in Zivilrechtssachen"
+    }
+   ],
    "marginalie": [
     "Erledigung ohne Urteil"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif in Zivilrechtssachen"
+    }
+   ],
    "marginalie": [
     "Zuschlag"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif in Zivilrechtssachen"
+    }
+   ],
    "marginalie": [
     "Reisezuschlag"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Tarif in Verwaltungsrechtssachen"
+    }
+   ],
    "marginalie": [
     "Beschwerdeverfahren"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Tarif in Verwaltungsrechtssachen"
+    }
+   ],
    "marginalie": [
     "Klageverfahren"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Tarif in Verwaltungsrechtssachen"
+    }
+   ],
    "marginalie": [
     "Sozialversicherungsrechtliche Verfahren"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Tarif in Verwaltungsrechtssachen"
+    }
+   ],
    "marginalie": [
     "Vorsorgliche Beweisführung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Tarif in Verwaltungsrechtssachen"
+    }
+   ],
    "marginalie": [
     "Erledigung ohne Urteil"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Tarif in Verwaltungsrechtssachen"
+    }
+   ],
    "marginalie": [
     "Zuschläge"
    ]
   },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Tarif in Strafrechtssachen"
+    }
+   ],
+   "marginalie": [
+    "Honorar"
+   ]
+  },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4 Tarif in Strafrechtssachen"
+    }
+   ],
    "marginalie": [
     "Zuschläge"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsrecht"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5 Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]
+  },
+  "t1-1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "T1 Übergangsbestimmungen zur Änderung vom 26.10.2011"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

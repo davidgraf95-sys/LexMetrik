@@ -1,240 +1,639 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Geltungsbereich"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Sollarbeitszeit"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Sollarbeitszeit"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Sollarbeitszeit"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Sollarbeitszeit"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Sollarbeitszeit"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
    "marginalie": [
     "Fixzeitenmodell"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
    "marginalie": [
     "Gleitzeitmodell"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
    "marginalie": [
     "Jahresarbeitszeitmodell"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
+   "marginalie": []
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Pausen"
+    }
+   ],
    "marginalie": [
     "Unbezahlte Verpflegungspause"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Absenzen"
+    }
+   ],
    "marginalie": [
     "Absenzen infolge Krankheit oder Unfall"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Absenzen"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Absenzen"
+    }
+   ],
    "marginalie": [
     "Ärztliche und zahnärztliche Konsultationen sowie Therapien"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Absenzen"
+    }
+   ],
    "marginalie": [
     "Betriebliche Abwesenheiten"
    ]
   },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Frei- und Feiertage"
+    }
+   ],
+   "marginalie": [
+    "Arbeitsfreie Tage und Halbtage"
+   ]
+  },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Frei- und Feiertage"
+    }
+   ],
    "marginalie": [
     "Arbeitsfreie Tage während der Ferien"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Frei- und Feiertage"
+    }
+   ],
    "marginalie": [
     "Arbeitsfreie Tage während Abwesenheit aus anderen Gründen"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": [
     "Nachtarbeit und Nachtbereitschaft"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": []
   },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": [
     "Sonn- und Feiertagsarbeit"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": [
     "*"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": [
     "Pikett"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": [
     "*"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": [
     "*"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": []
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "A. Geldzulagen"
+    }
+   ],
    "marginalie": []
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Zeitzulagen"
+    }
+   ],
    "marginalie": [
     "Schichtbonus"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Zeitzulagen"
+    }
+   ],
    "marginalie": []
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Zeitzulagen"
+    }
+   ],
    "marginalie": []
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Zulagen für von der Norm abweichende Arbeitszeit"
+    },
+    {
+     "ebene": 2,
+     "label": "B. Zeitzulagen"
+    }
+   ],
    "marginalie": []
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Weitere Zulagen gemäss § 15a Lohngesetz"
+    }
+   ],
+   "marginalie": []
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausrichtung von Zulagen bei Krankheit, Berufs- und Nichtberufsunfall"
+    }
+   ],
    "marginalie": []
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": [
     "Definition"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": [
     "Höchstdauer"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": [
     "Anordnung von Überstundenarbeit"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": [
     "Durchführung"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": [
     "Zeitkompensation und finanzielle Abgeltung *"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": [
     "Mehrarbeit bei Teilzeitarbeitsverhältnissen *"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": []
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": []
   },
   "48": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": [
     "Mitarbeitende der Lohnklassen 16–28"
    ]
   },
   "49": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
    "marginalie": [
     "Abweichende Regelungen"
    ]
   },
   "50": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "51": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "14_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
+   "marginalie": [
+    "Telearbeit"
+   ]
+  },
+  "14_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
+   "marginalie": [
+    "Vertrauensarbeitszeitmodell"
+   ]
+  },
+  "14_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Arbeitszeitmodelle"
+    }
+   ],
+   "marginalie": []
+  },
+  "39_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Ausrichtung von Zulagen bei Krankheit, Berufs- und Nichtberufsunfall"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Ausrichtung von Geldzulagen während Ferien, Schwangerschafts- und Mutterschaftsurlaub und obligatorischen Dienstleistungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "45_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Überstunden"
+    }
+   ],
+   "marginalie": [
+    "Minderarbeit"
+   ]
+  },
+  "49_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
   }
  }

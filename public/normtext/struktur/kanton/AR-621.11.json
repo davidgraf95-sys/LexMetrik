@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
    "gliederung": [
@@ -367,6 +367,25 @@
    ],
    "marginalie": [
     "3. Selbständige Erwerbstätigkeit a) Grundsatz"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "b) Umstrukturierungen"
    ]
   },
   "23": {
@@ -766,6 +785,25 @@
    ],
    "marginalie": [
     "II. Bewertung 1. Grundsatz"
+   ]
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "2. Immaterielle Güter und bewegliches Vermögen im Geschäftsvermögen"
    ]
   },
   "45": {
@@ -1357,6 +1395,25 @@
     "8. Gewinne von Vereinen, Stiftungen und kollektiven Kapitalanlagen *"
    ]
   },
+  "77": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "III. Steuerberechnung 1. Kapitalgesellschaften und Genossenschaften"
+   ]
+  },
   "78": {
    "gliederung": [
     {
@@ -1431,6 +1488,25 @@
    ],
    "marginalie": [
     "7. Kollektive Kapitalanlagen *"
+   ]
+  },
+  "85": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "IV. Verteilung"
    ]
   },
   "86": {
@@ -1526,6 +1602,25 @@
    ],
    "marginalie": [
     "II. Steuerberechnung"
+   ]
+  },
+  "91": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Kapitalsteuer"
+    }
+   ],
+   "marginalie": [
+    "III. Verteilung"
    ]
   },
   "92": {
@@ -1756,6 +1851,25 @@
     "2. Auf Antrag *"
    ]
   },
+  "105": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "A. Natürliche Personen mit steuerrechtlichem Wohnsitz oder Aufenthalt im Kanton"
+    }
+   ],
+   "marginalie": [
+    "VII. Wechsel zwischen Quellensteuerabzug und ordentlicher Veranlagung"
+   ]
+  },
   "106": {
    "gliederung": [
     {
@@ -1787,7 +1901,7 @@
     },
     {
      "ebene": 3,
-     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     }
    ],
    "marginalie": [
@@ -1806,7 +1920,7 @@
     },
     {
      "ebene": 3,
-     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     }
    ],
    "marginalie": [
@@ -1825,7 +1939,7 @@
     },
     {
      "ebene": 3,
-     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     }
    ],
    "marginalie": [
@@ -1844,7 +1958,7 @@
     },
     {
      "ebene": 3,
-     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     }
    ],
    "marginalie": [
@@ -1863,7 +1977,7 @@
     },
     {
      "ebene": 3,
-     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     }
    ],
    "marginalie": [
@@ -1882,7 +1996,7 @@
     },
     {
      "ebene": 3,
-     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     }
    ],
    "marginalie": [
@@ -1901,7 +2015,7 @@
     },
     {
      "ebene": 3,
-     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz *"
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
     }
    ],
    "marginalie": [
@@ -3696,6 +3810,25 @@
     "XII. Ausführungsbestimmungen"
    ]
   },
+  "217": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Steuerbezug, Steuersicherung und Steuererlass"
+    },
+    {
+     "ebene": 3,
+     "label": "A. Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "XIII. Einsprache und Beschwerde"
+   ]
+  },
   "218": {
    "gliederung": [
     {
@@ -3732,6 +3865,25 @@
    ],
    "marginalie": [
     "Sicherstellung"
+   ]
+  },
+  "220": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Steuerbezug, Steuersicherung und Steuererlass"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Steuersicherung"
+    }
+   ],
+   "marginalie": [
+    "Arrest"
    ]
   },
   "221": {
@@ -3789,6 +3941,25 @@
    ],
    "marginalie": [
     "II. Verfahren 1. Inhalt des Erlassgesuchs *"
+   ]
+  },
+  "224": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Steuerbezug, Steuersicherung und Steuererlass"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "2. Einsprache und Beschwerde *"
    ]
   },
   "225": {
@@ -4164,6 +4335,21 @@
    ],
    "marginalie": [
     "I. Verfahren vor den Steuerbehörden 1. Zuständigkeit"
+   ]
+  },
+  "251": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Steuerstrafrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Strafverfahren"
+    }
+   ],
+   "marginalie": [
+    "2. Bussenverfügung"
    ]
   },
   "252": {
@@ -4644,6 +4830,767 @@
    ],
    "marginalie": [
     "V. Inkrafttreten"
+   ]
+  },
+  "111_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
+   "marginalie": [
+    "Empfänger von Mitarbeiterbeteiligungen"
+   ]
+  },
+  "114_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
+   "marginalie": [
+    "Nachträgliche ordentliche Veranlagung auf Antrag"
+   ]
+  },
+  "114_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Quellensteuern für natürliche und juristische Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz sowie juristische Personen ohne Sitz oder tatsächliche Verwaltung in der Schweiz"
+    }
+   ],
+   "marginalie": [
+    "Nachträgliche ordentliche Veranlagung von Amtes wegen"
+   ]
+  },
+  "147_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Erbschafts- und Schenkungssteuer"
+    }
+   ],
+   "marginalie": [
+    "3. Ermässigung bei Unternehmensnachfolge"
+   ]
+  },
+  "147_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Erbschafts- und Schenkungssteuer"
+    }
+   ],
+   "marginalie": [
+    "4. Wegfall der Ermässigung"
+   ]
+  },
+  "155_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Verfahrensrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
+   "marginalie": [
+    "Versichertennummer der AHV"
+   ]
+  },
+  "160_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Verfahrensrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Allgemeine Verfahrensgrundsätze"
+    }
+   ],
+   "marginalie": [
+    "Elektronisches Verfahren"
+   ]
+  },
+  "176_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Verfahrensrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "D. Besondere Verfahrens- und Organisationsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "2a. Notwendige Vertretung"
+   ]
+  },
+  "184_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Verfahrensrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "D. Besondere Verfahrens- und Organisationsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "3a. Verfahrenspflichten bei Wegfall der Ermässigung der Erbschafts- oder Schenkungssteuer bei der Unternehmensnachfolge"
+   ]
+  },
+  "188_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Verfahrensrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "E. Beschwerdeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Bundesgericht"
+   ]
+  },
+  "193_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Verfahrensrecht"
+    },
+    {
+     "ebene": 3,
+     "label": "F. Änderung rechtskräftiger Entscheide"
+    }
+   ],
+   "marginalie": [
+    "1a. Vereinfachte Nachbesteuerung von Erben"
+   ]
+  },
+  "208_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Steuerbezug, Steuersicherung und Steuererlass"
+    },
+    {
+     "ebene": 3,
+     "label": "A. Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "Zahlungserleichterungen"
+   ]
+  },
+  "20_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Mitarbeiterbeteiligungen"
+   ]
+  },
+  "20_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Einkünfte aus echten Mitarbeiterbeteiligungen"
+   ]
+  },
+  "20_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Einkünfte aus unechten Mitarbeiterbeteiligungen"
+   ]
+  },
+  "20_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Anteilsmässige Besteuerung"
+   ]
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Aufschubtatbestände"
+   ]
+  },
+  "21_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Teilbesteuerung der Einkünfte aus Beteiligungen im Geschäftsvermögen"
+   ]
+  },
+  "21_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Einkommen aus Patenten und vergleichbaren Rechten"
+   ]
+  },
+  "222_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Steuerbezug, Steuersicherung und Steuererlass"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "Ablehnungsgründe"
+   ]
+  },
+  "223_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Steuerbezug, Steuersicherung und Steuererlass"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "2. Verfahrensrechte und Verfahrenspflichten der gesuchstellenden Person"
+   ]
+  },
+  "223_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Steuerbezug, Steuersicherung und Steuererlass"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "3. Untersuchungsmittel"
+   ]
+  },
+  "223_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Steuerbezug, Steuersicherung und Steuererlass"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Steuererlass"
+    }
+   ],
+   "marginalie": [
+    "4. Entscheid"
+   ]
+  },
+  "23_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Besondere Fälle"
+   ]
+  },
+  "23_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Kapitaleinlageprinzip"
+   ]
+  },
+  "249_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Steuerstrafrecht"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Verletzung von Verfahrenspflichten und Steuerhinterziehung"
+    }
+   ],
+   "marginalie": [
+    "2. Selbstanzeige juristischer Personen"
+   ]
+  },
+  "285_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "9. Gewinnsteuer, Steuerberechnung bei Kapitalgesellschaften und Genossenschaften"
+   ]
+  },
+  "285_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "10. Vereinfachung der Nachbesteuerung in Erbfällen"
+   ]
+  },
+  "285_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "11. Gratisaktien, Gratisnennwerterhöhungen und dergleichen"
+   ]
+  },
+  "285_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "12. Anpassung an die Allgemeinen Bestimmungen des StGB [69]"
+   ]
+  },
+  "285_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Teil: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "13. Sondersteuer auf aufgedeckten stillen Reserven"
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Abzug von Forschungs- und Entwicklungsaufwand"
+   ]
+  },
+  "39_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "1a. Ausgleich der Folgen der kalten Progression *"
+   ]
+  },
+  "39_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "1b. Vereinfachtes Abrechnungsverfahren"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Eingetragene Partnerschaften"
+   ]
+  },
+  "41_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Einkommenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Liquidationsgewinne mit Vorsorgecharakter"
+   ]
+  },
+  "46_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Besteuerung natürlicher Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "C. Vermögenssteuer"
+    }
+   ],
+   "marginalie": [
+    "Bewertung von Mitarbeiterbeteiligungen"
+   ]
+  },
+  "69_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "Patente und vergleichbare Rechte"
+   ]
+  },
+  "70_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
+   ]
+  },
+  "70_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "Entlastungsbegrenzung"
+   ]
+  },
+  "72_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "Aufdeckung stiller Reserven bei Beginn der Steuerpflicht"
+   ]
+  },
+  "72_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "Besteuerung stiller Reserven am Ende der Steuerpflicht"
+   ]
+  },
+  "83_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Teil: Staatssteuern"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Besteuerung juristischer Personen"
+    },
+    {
+     "ebene": 3,
+     "label": "B. Gewinnsteuer"
+    }
+   ],
+   "marginalie": [
+    "6a. Gewinne von juristischen Personen mit ideellen Zwecken"
    ]
   }
  }

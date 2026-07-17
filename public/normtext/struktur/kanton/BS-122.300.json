@@ -1,98 +1,218 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Behörden"
+    }
+   ],
    "marginalie": [
     "Migrationsbehörde"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Behörden"
+    }
+   ],
    "marginalie": [
     "Richterliche Behörde"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Rechtsbeistand"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Verfahrenskosten"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Vorbereitungshaft, Ausschaffungshaft, Durchsetzungshaft und kurzfristige Festhaltung"
+    }
+   ],
    "marginalie": [
     "Verfahren bei der Migrationsbehörde"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Vorbereitungshaft, Ausschaffungshaft, Durchsetzungshaft und kurzfristige Festhaltung"
+    }
+   ],
    "marginalie": [
     "Verfahren vor der richterlichen Behörde"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Vorbereitungshaft, Ausschaffungshaft, Durchsetzungshaft und kurzfristige Festhaltung"
+    }
+   ],
    "marginalie": [
     "Beschleunigungsgebot"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Vorbereitungshaft, Ausschaffungshaft, Durchsetzungshaft und kurzfristige Festhaltung"
+    }
+   ],
    "marginalie": [
     "Haftanordnung bei Jugendlichen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Vorbereitungshaft, Ausschaffungshaft, Durchsetzungshaft und kurzfristige Festhaltung"
+    }
+   ],
    "marginalie": [
     "Haftverlängerung und Haftumwandlung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "III. Haftentlassungsgesuch"
+    }
+   ],
    "marginalie": [
     "Haftentlassungsgesuch"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Eingrenzung und Ausgrenzung"
+    }
+   ],
    "marginalie": [
     "Anordnung der Eingrenzung und der Ausgrenzung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Verfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV. Eingrenzung und Ausgrenzung"
+    }
+   ],
    "marginalie": [
     "Rekurs an die richterliche Behörde"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Vollzug"
+    }
+   ],
    "marginalie": [
     "Haftbedingungen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Vollzug"
+    }
+   ],
    "marginalie": [
     "Vollzug der Haft Jugendlicher"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Vollzug"
+    }
+   ],
    "marginalie": [
     "Rechtsschutz"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Schlussbestimmung"
+    }
+   ],
    "marginalie": [
     "Rechtskraft und Wirksamkeit"
    ]

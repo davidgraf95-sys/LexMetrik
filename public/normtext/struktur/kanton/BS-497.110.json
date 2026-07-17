@@ -1,284 +1,575 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Allgemeine Zuständigkeit"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Spezielle Zuständigkeit in der Schonzone"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Einbezug der Kantonalen Denkmalpflege beim Erlass von Bebauungsplänen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Denkmalrat"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Abgrenzung zur kantonalen Archäologie"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Eintragung durch öffentlich-rechtlichen Vertrag"
+    }
+   ],
    "marginalie": [
     "Verhandlung und Abschluss"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Eintragung durch öffentlich-rechtlichen Vertrag"
+    }
+   ],
    "marginalie": [
     "Genehmigung durch den Regierungsrat"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Eintragung durch öffentlich-rechtlichen Vertrag"
+    }
+   ],
    "marginalie": [
     "Publikation"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Eintragung durch öffentlich-rechtlichen Vertrag"
+    }
+   ],
    "marginalie": [
     "Akteneinsicht während der Rekursfrist"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Eintragung durch Bebauungsplan"
+    }
+   ],
    "marginalie": [
     "Erlass eines Bebauungsplans auf Antrag der Kantonalen Denkmalpflege"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Eintragung durch Verfügung"
+    }
+   ],
    "marginalie": [
     "Antrag des Denkmalrates"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Eintragung durch Verfügung"
+    }
+   ],
    "marginalie": [
     "Einholung der Stellungnahme der Eigentümerschaft"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Eintragung durch Verfügung"
+    }
+   ],
    "marginalie": [
     "Einholung weiterer Stellungnahmen"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Eintragung durch Verfügung"
+    }
+   ],
    "marginalie": [
     "Beschluss über die Eintragung"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Eintragung durch Verfügung"
+    }
+   ],
    "marginalie": [
     "Mitteilung des Beschlusses und Publikation"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Eintragung durch Verfügung"
+    }
+   ],
    "marginalie": [
     "Akteneinsicht während der Rekursfrist"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Eintragung durch Verfügung"
+    }
+   ],
    "marginalie": [
     "Verfahren nach Erlass einer vorsorglichen Massnahme"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundbuch- und ÖREB-Katastereintragungen *"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Eintragung ins Denkmalverzeichnis"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Gemeinsame Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Öffentlichkeit des Denkmalverzeichnisses"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Veränderungen an eingetragenen Denkmälern"
+    }
+   ],
    "marginalie": [
     "Bewilligungspflicht"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Veränderungen an eingetragenen Denkmälern"
+    }
+   ],
    "marginalie": [
     "Vorgängige Information und Beratung"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Veränderungen an eingetragenen Denkmälern"
+    }
+   ],
    "marginalie": [
     "Zulässigkeit"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Inventar"
+    }
+   ],
    "marginalie": [
     "Erstellung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Inventar"
+    }
+   ],
    "marginalie": [
     "Erhalt der Inventarobjekte"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Inventar"
+    }
+   ],
    "marginalie": [
     "Aufhebung oder Abänderung der Eintragung"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Inventar"
+    }
+   ],
    "marginalie": [
     "Öffentlichkeit des Inventars"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Funde"
+    }
+   ],
    "marginalie": [
     "Verhältnis zu anderen Erlassen"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Funde"
+    }
+   ],
    "marginalie": [
     "Meldepflicht"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Funde"
+    }
+   ],
    "marginalie": [
     "Information der Eigentümerschaft"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Funde"
+    }
+   ],
    "marginalie": [
     "Belassung"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Funde"
+    }
+   ],
    "marginalie": [
     "Untersuchung"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Funde"
+    }
+   ],
    "marginalie": [
     "Prüfung und Massnahmen"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Gewährung von Finanzhilfen"
+    }
+   ],
    "marginalie": [
     "Verhältnis zu anderen Erlassen"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Gewährung von Finanzhilfen"
+    }
+   ],
    "marginalie": [
     "Beitragsfähige Objekte"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Gewährung von Finanzhilfen"
+    }
+   ],
    "marginalie": [
     "Beitragsfähige Arbeiten"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Gewährung von Finanzhilfen"
+    }
+   ],
    "marginalie": [
     "Einreichung des Gesuches"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Gewährung von Finanzhilfen"
+    }
+   ],
    "marginalie": [
     "Prüfung und Behandlung der Gesuche"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Gewährung von Finanzhilfen"
+    }
+   ],
    "marginalie": [
     "Finanzielle Beteiligung der Gemeinden"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Vollzug und Abwehrmassnahmen"
+    }
+   ],
    "marginalie": [
     "Beratung und Aufsicht"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Vollzug und Abwehrmassnahmen"
+    }
+   ],
    "marginalie": [
     "Öffentlichkeitsarbeit"
    ]
   },
   "42": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Vollzug und Abwehrmassnahmen"
+    }
+   ],
    "marginalie": [
     "Merkblätter"
    ]
   },
   "43": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Vollzug und Abwehrmassnahmen"
+    }
+   ],
    "marginalie": [
     "Vorsorgliche Massnahmen"
    ]
   },
   "44": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Vollzug und Abwehrmassnahmen"
+    }
+   ],
    "marginalie": [
     "Ersatzvornahme"
    ]
   },
   "45": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Vollzug und Abwehrmassnahmen"
+    }
+   ],
    "marginalie": [
     "Einleitung eines Strafverfahrens"
    ]
   },
   "46": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Rekursberechtigte Organisationen"
+    }
+   ],
    "marginalie": [
     "Liste der rekursberechtigten Organisationen"
    ]
   },
   "47": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]

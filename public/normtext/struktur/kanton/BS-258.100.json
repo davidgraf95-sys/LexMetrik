@@ -1,50 +1,143 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Begnadigungsinstanzen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 1. Begnadigungskommission des Grossen Rates"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Begnadigungsinstanzen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.) 2. Die Begnadigungskommission insbesondere"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Begnadigungsverfahren im Allgemeinen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Vor der Begnadigungskommission"
+    }
+   ],
    "marginalie": [
     "a) Einleitung und Vorbereitung"
    ]
   },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Begnadigungsverfahren im Allgemeinen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Vor der Begnadigungskommission"
+    }
+   ],
+   "marginalie": [
+    "b) Zulässigkeit des Gesuches"
+   ]
+  },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Begnadigungsverfahren im Allgemeinen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 1. Vor der Begnadigungskommission"
+    }
+   ],
    "marginalie": [
     "c) Begnadigungsentscheid"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Begnadigungsverfahren im Allgemeinen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.) 2. Vor dem Grossen Rat"
+    }
+   ],
    "marginalie": []
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verfahren bei politischen Straftaten"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 1. Begnadigungsgesuche"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Verfahren bei politischen Straftaten"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.) 2. Begnadigungsanträge des Regierungsrates"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Widerruf"
+    }
+   ],
    "marginalie": []
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung bisherigen Rechts"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmung"
    ]

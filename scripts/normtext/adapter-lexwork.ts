@@ -31,6 +31,7 @@
 
 import { dekodiereEntities } from './html-entities.ts';
 import { reichereMehrspaltig } from './mehrspaltige-tabelle.ts';
+import { normalisiereArtikelToken } from './lexwork-token.ts';
 
 /**
  * Soft-404 / Angular-Shell des LexWork-`/api/`-Endpunkts.
@@ -102,8 +103,15 @@ export interface LexWorkErgebnis {
 }
 
 /** Strippt HTML-Tags, dekodiert die in LexWork vorkommenden Entities und
- *  normalisiert Whitespace zu einfachen Leerzeichen. */
-function bereinige(roh: string): string {
+ *  normalisiert Whitespace zu einfachen Leerzeichen. Entfernt zuvor Fussnoten-
+ *  Anker und den LexWork-Änderungsmarker «<strong>*</strong>».
+ *
+ *  Exportiert, weil der Struktur-Extraktor (struktur-lexwork.ts) die
+ *  Artikel-Nummer mit DERSELBEN Reinigung zum Token verarbeiten muss (§5 SSoT):
+ *  Novellen-/geänderte Artikel tragen die Nummer als «2a&nbsp;<strong>*</strong>»
+ *  — ohne diesen Marker-/Fussnoten-Strip bliebe «2a *» stehen, der Runner-Filter
+ *  (struktur-kanton-run.ts, a.tokens.has) verwürfe den Artikel (Wurzel von F-2). */
+export function bereinige(roh: string): string {
   // Fussnoten-Anker «<a class="footnote" …>[8]</a>» (bzw. «8») sind redaktionelle
   // Verweis-Marker, KEIN Normtext → komplett (inkl. Inhalt) entfernen, BEVOR der
   // generische Tag-Strip läuft (analog zur <sup><a>-Fussnoten-Behandlung im
@@ -168,11 +176,8 @@ export function extrahiereAlleLexWorkArtikel(xhtml: string): {
     const nummer = leseArtikelNummer(segment);
     if (nummer === null) continue;
     // Token kongruent zum Inventar/Fedlex-Anker: «1a» → «1_a», «335bis» → «335_bis».
-    const token = nummer
-      .toLowerCase()
-      .replace(/^(\d+)([a-z])?(bis|ter|quater|quinquies)?$/i, (_, n, b, suf) =>
-        [n, b, suf].filter(Boolean).join('_'),
-      );
+    // SSoT: dieselbe Normalisierung nutzt der Struktur-Extraktor (§5, F-2).
+    const token = normalisiereArtikelToken(nummer);
     if (token in artikel) continue; // erster Treffer gewinnt (stabil)
     const parsed = parseSegment(segment);
     // S1 (BS-Audit 23.6.2026) — aufgehobene, aber UMNUMMERIERTE Artikel haben einen

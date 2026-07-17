@@ -1,152 +1,478 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)A. Stellung und Bestand"
+    }
+   ],
    "marginalie": [
     "Stellung"
    ]
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)A. Stellung und Bestand"
+    }
+   ],
+   "marginalie": [
+    "Bestand"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)B. Aufgaben"
+    }
+   ],
    "marginalie": [
     "Aufgaben und Befugnisse"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(I.)C. Organisation"
+    }
+   ],
    "marginalie": [
     "Organisationsform und Organe"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)A. Stimmberechtigung und Art der Willensäusserung"
+    }
+   ],
+   "marginalie": [
+    "Stimmberechtigung"
+   ]
+  },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)A. Stimmberechtigung und Art der Willensäusserung"
+    }
+   ],
    "marginalie": [
     "Art der Willensäusserung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II.)B. Befugnisse der Stimmberechtigten"
+    }
+   ],
    "marginalie": [
     "Bürgerversammlung"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)A. Die Bürgerversammlung"
+    }
+   ],
    "marginalie": [
     "Stellung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)A. Die Bürgerversammlung"
+    }
+   ],
    "marginalie": [
     "Einberufung"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)A. Die Bürgerversammlung"
+    }
+   ],
    "marginalie": [
     "Geschäftsordnung"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)A. Die Bürgerversammlung"
+    }
+   ],
    "marginalie": [
     "Aufgaben und Befugnisse"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)A. Die Bürgerversammlung"
+    }
+   ],
    "marginalie": [
     "Protokoll"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)A. Die Bürgerversammlung"
+    }
+   ],
    "marginalie": [
     "Publikation von Beschlüssen und Wahlen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Stellung"
    ]
   },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
+   "marginalie": [
+    "Mitgliederzahl, Wählbarkeit und Amtsdauer"
+   ]
+  },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Ersatzwahlen"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Aufgaben und Befugnisse"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Beschlüsse"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Unvereinbarkeit"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Verhandlung"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Schweigepflicht und Ausstandspflicht"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Bürgerratspräsidium *"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Finanzkompetenzen des Bürgerrates"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)B. Der Bürgerrat"
+    }
+   ],
    "marginalie": [
     "Bürgerratskanzlei *"
    ]
   },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)C. Revisionsstelle"
+    }
+   ],
+   "marginalie": [
+    "Bestand"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)C. Revisionsstelle"
+    }
+   ],
+   "marginalie": [
+    "Aufgaben"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)D. Fürsorgekommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Die Organe der Bürgergemeinde"
+    },
+    {
+     "ebene": 2,
+     "label": "(III.)D. Fürsorgekommission"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzhaushalt und Rechnungswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)A. Mittelbeschaffung und Mittelverwendung"
+    }
+   ],
    "marginalie": [
     "Mittelbeschaffung (Gebühren)"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzhaushalt und Rechnungswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)A. Mittelbeschaffung und Mittelverwendung"
+    }
+   ],
    "marginalie": [
     "Mittelverwendung"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Finanzhaushalt und Rechnungswesen"
+    },
+    {
+     "ebene": 2,
+     "label": "(IV.)B. Rechnungswesen"
+    }
+   ],
    "marginalie": [
     "Jahresrechnung"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Schlussbestimmung"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
    ]

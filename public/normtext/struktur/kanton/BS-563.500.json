@@ -1,45 +1,177 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Bewilligungspflicht"
+   ]
+  },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Regelmässige und gewerbsmässige Personenbeförderung auf dem Rhein"
    ]
   },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeit und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Vollzugsbehörden"
+   ]
+  },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeit und Verfahren"
+    }
+   ],
    "marginalie": [
     "Bewilligungsgesuche"
    ]
   },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeit und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Vernehmlassungsverfahren"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeit und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Meldepflicht"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Zuständigkeit und Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Verzicht"
+   ]
+  },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrbetrieb und technische Vorschriften"
+    }
+   ],
    "marginalie": [
     "Fahrbetrieb"
    ]
   },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Fahrbetrieb und technische Vorschriften"
+    }
+   ],
+   "marginalie": [
+    "Technische Vorschriften"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gebühren"
+    }
+   ],
+   "marginalie": [
+    "Grundgebühr"
+   ]
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gebühren"
+    }
+   ],
    "marginalie": [
     "Regalgebühr"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gebühren"
+    }
+   ],
    "marginalie": [
     "Sonderregelungen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Gebühren"
+    }
+   ],
    "marginalie": [
     "Gebühreninkasso"
    ]
   },
-  "15": {
-   "gliederung": [],
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Rechtspflege, Strafverfolgung und Verwaltungsmassnahmen"
+    }
+   ],
    "marginalie": []
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Rechtsmittel"
+    }
+   ],
+   "marginalie": []
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Übergangsbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
   }
  }
 }

@@ -1,132 +1,373 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": []
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rechtsform"
+    }
+   ],
    "marginalie": []
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Aufgaben"
+    }
+   ],
    "marginalie": []
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Kooperationen, Beteiligungen und Veräusserungen"
+    }
+   ],
    "marginalie": []
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "V.1. Organe"
+    }
+   ],
    "marginalie": []
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "V.2. Verwaltungsrat"
+    }
+   ],
    "marginalie": [
     "Zusammensetzung, Wahl und Abberufung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "V.2. Verwaltungsrat"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "V.3. Spitalleitung"
+    }
+   ],
    "marginalie": [
     "Zusammensetzung"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "V.3. Spitalleitung"
+    }
+   ],
    "marginalie": [
     "Aufgaben"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    },
+    {
+     "ebene": 2,
+     "label": "V.4. Revisionsstelle"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Aufsicht"
+    }
+   ],
    "marginalie": []
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Personal"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.1. Anstellungsverhältnis"
+    }
+   ],
    "marginalie": []
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Personal"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.2. Privatärztliche Tätigkeit"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Personal"
+    },
+    {
+     "ebene": 2,
+     "label": "VII.3. Berufliche Vorsorge"
+    }
+   ],
    "marginalie": []
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Finanzen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.1. Dotationskapital"
+    }
+   ],
    "marginalie": []
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Finanzen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.2. Fremdkapital"
+    }
+   ],
    "marginalie": []
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Finanzen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.3. Vermögen"
+    }
+   ],
    "marginalie": []
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Finanzen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.4. Rechnungslegung"
+    }
+   ],
    "marginalie": []
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VIII. Finanzen"
+    },
+    {
+     "ebene": 2,
+     "label": "VIII.5. Steuern"
+    }
+   ],
    "marginalie": []
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Haftung und Verantwortlichkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "IX.1. Haftung"
+    }
+   ],
    "marginalie": []
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IX. Haftung und Verantwortlichkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "IX.2. Verantwortlichkeit"
+    }
+   ],
    "marginalie": []
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Benutzungsverhältnis und Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "X.1. Benutzungsverhältnis"
+    }
+   ],
    "marginalie": []
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "X. Benutzungsverhältnis und Rechtspflege"
+    },
+    {
+     "ebene": 2,
+     "label": "X.2. Rechtspflege"
+    }
+   ],
    "marginalie": []
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.1. Errichtung"
+    }
+   ],
    "marginalie": []
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.2. Rechtsübergang und Eigentumsverhältnisse"
+    }
+   ],
    "marginalie": []
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.3. Eröffnungsbilanz"
+    }
+   ],
    "marginalie": []
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.4. Übergangs- und Ausführungsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.4. Übergangs- und Ausführungsbestimmungen"
+    }
+   ],
    "marginalie": [
     "Personal"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "XI. Übergangs- und Schlussbestimmungen"
+    },
+    {
+     "ebene": 2,
+     "label": "XI.5. Änderung und Aufhebung bisherigen Rechts"
+    }
+   ],
    "marginalie": [
     "Pensionskassengesetz"
    ]

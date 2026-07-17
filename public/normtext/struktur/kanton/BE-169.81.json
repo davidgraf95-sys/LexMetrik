@@ -1,191 +1,525 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Anwendungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Bemessung und Verbindlichkeit *"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Gebühr nach gestaffeltem Rahmentarif *"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Besondere Fälle"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Orientierung der Klientschaft"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
    "marginalie": [
     "Grundsätze für Rechnungsstellung *"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1 Personenrecht"
+    }
+   ],
    "marginalie": []
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Familienrecht"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erbrecht"
+    }
+   ],
    "marginalie": [
     "Verfügungen von Todes wegen"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erbrecht"
+    }
+   ],
    "marginalie": [
     "Inventar"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erbrecht"
+    }
+   ],
    "marginalie": [
     "Eröffnung einer Verfügung von Todes wegen"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3 Erbrecht"
+    }
+   ],
    "marginalie": [
     "Erbenschein"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sachenrecht"
+    }
+   ],
    "marginalie": [
     "Grundstücke"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sachenrecht"
+    }
+   ],
    "marginalie": [
     "Planänderung"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sachenrecht"
+    }
+   ],
    "marginalie": [
     "Beurkundung im vereinfachten Verfahren"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sachenrecht"
+    }
+   ],
    "marginalie": [
     "Stockwerkeigentum"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sachenrecht"
+    }
+   ],
    "marginalie": [
     "Dienstbarkeit, Grundlast, Aufhebung und Änderung einer Eigentumsbeschränkung"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sachenrecht"
+    }
+   ],
    "marginalie": [
     "Grundpfandrechte"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Bürgschaft"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Verpfründung"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Gesellschaften"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Abtretung eines Gesellschaftsanteils"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5 Obligationenrecht"
+    }
+   ],
    "marginalie": [
     "Wechselprotest"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.6 Fusionen"
+    }
+   ],
    "marginalie": [
     "Fusion, Spaltung, Umwandlung, Vermögensübertragung"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.6 Fusionen"
+    }
+   ],
    "marginalie": [
     "Grundstücke"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.7 Verschiedene Beurkundungen und Leistungen"
+    }
+   ],
    "marginalie": [
     "Übrige Feststellungsurkunden"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.7 Verschiedene Beurkundungen und Leistungen"
+    }
+   ],
    "marginalie": [
     "Beglaubigungen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.7 Verschiedene Beurkundungen und Leistungen"
+    }
+   ],
    "marginalie": [
     "Eidesstattliche Erklärung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.7 Verschiedene Beurkundungen und Leistungen"
+    }
+   ],
    "marginalie": [
     "Weitere und neue Ausfertigungen *"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.7 Verschiedene Beurkundungen und Leistungen"
+    }
+   ],
    "marginalie": [
     "Weitere öffentliche Beurkundungen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.7 Verschiedene Beurkundungen und Leistungen"
+    }
+   ],
    "marginalie": [
     "Erfüllung weiterer gesetzlicher Verpflichtungen *"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3 Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
+  },
+  "15_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4 Sachenrecht"
+    }
+   ],
+   "marginalie": [
+    "Miteigentum und Gesamteigentum"
+   ]
+  },
+  "1_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Gebührenarten"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Gebühr nach gebotenem Zeitaufwand"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Bedürftige oder gemeinnützige Klientschaft"
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1 Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Begründungspflicht bei Rechnungsstellung"
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2 Tarif"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2 Familienrecht"
+    }
+   ],
+   "marginalie": [
+    "Vorsorgeauftrag"
+   ]
   }
  }
 }

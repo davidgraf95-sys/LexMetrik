@@ -1,242 +1,537 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "Abklärung der Anspruchsberechtigung"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "Amtliche Erkundigung bei den Steuerbehörden"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "Periodisierung und Art der Auszahlung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "Schweigepflicht"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Verfahrensbestimmungen"
+    }
+   ],
    "marginalie": [
     "Änderung der Berechnungsgrundlagen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Beitragsberechtigung"
+    }
+   ],
    "marginalie": [
     "Dauer der Beitragsberechtigung"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Beitragsberechtigung"
+    }
+   ],
    "marginalie": [
     "Beitragsberechtigte Personen"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Beitragsberechtigung"
+    }
+   ],
    "marginalie": [
     "Beitragsberechtigte Ausbildungen"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Beitragsberechtigung"
+    }
+   ],
    "marginalie": [
     "Anerkannte Ausbildungsstätten"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Grundlagen"
+    }
+   ],
    "marginalie": [
     "Bemessungsgrundsatz"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Grundlagen"
+    }
+   ],
    "marginalie": [
     "Änderung der massgeblichen Verhältnisse"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Grundlagen"
+    }
+   ],
    "marginalie": [
     "Stipendienrahmen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Allgemeines"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Einkünfte"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Vermögen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Anerkannte Lebenshaltungskosten"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Grundbedarf"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Wohnkosten"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Medizinische Grundversorgung *"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Steuern und Berufskosten"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Anrechnung eines Einnahmenüberschusses"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Familienbudget"
+    }
+   ],
    "marginalie": [
     "Anrechnung eines Fehlbetrages"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Budget der Person in Ausbildung"
+    }
+   ],
    "marginalie": [
     "Budget der Person in Ausbildung"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Budget der Person in Ausbildung"
+    }
+   ],
    "marginalie": [
     "Einkünfte"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Budget der Person in Ausbildung"
+    }
+   ],
    "marginalie": [
     "Anrechnung des Vermögens"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Budget der Person in Ausbildung"
+    }
+   ],
    "marginalie": [
     "Ausbildungskosten"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Budget der Person in Ausbildung"
+    }
+   ],
    "marginalie": [
     "Anrechenbare Lebenshaltungskosten im Haushalt der Eltern"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Budget der Person in Ausbildung"
+    }
+   ],
    "marginalie": [
     "Eigener Haushalt"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Budget der Person in Ausbildung"
+    }
+   ],
    "marginalie": [
     "Anerkannte Lebenshaltungskosten im eigenen Haushalt"
    ]
   },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Bemessung der Ausbildungsbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Budget der Person in Ausbildung"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Darlehen"
+    }
+   ],
    "marginalie": [
     "Darlehen in Verbindung mit Stipendien"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Darlehen"
+    }
+   ],
    "marginalie": [
     "Darlehen für Weiterbildungen, Zweitausbildungen und Umschulungen"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Darlehen"
+    }
+   ],
    "marginalie": [
     "Darlehen ohne Stipendienanspruch"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Darlehen"
+    }
+   ],
    "marginalie": [
     "Rückzahlung"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Darlehen"
+    }
+   ],
    "marginalie": [
     "Verzinsung"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Darlehen"
+    }
+   ],
    "marginalie": [
     "Erlass der Rückzahlung und Fristerstreckung in Härtefällen"
    ]
   },
   "37": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Kommission für Ausbildungsbeiträge"
    ]
   },
   "38": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Leiterin oder Leiter des Amtes für Ausbildungsbeiträge"
    ]
   },
   "39": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Kompetenzen Amt-Kommission"
    ]
   },
   "40": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Organisation"
+    }
+   ],
    "marginalie": [
     "Bundesbeiträge"
    ]
   },
   "41": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Härtefallregelung"
    ]

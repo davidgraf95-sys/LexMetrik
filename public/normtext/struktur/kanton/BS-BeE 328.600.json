@@ -1,20 +1,111 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
-  "2": {
-   "gliederung": [],
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundsatz"
+    }
+   ],
    "marginalie": []
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Umfang der Schulzahnpflege"
+    }
+   ],
+   "marginalie": []
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Umfang der Schulzahnpflege"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation"
+    }
+   ],
+   "marginalie": [
+    "*"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Organisation"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Tarifgestaltung"
+    }
+   ],
+   "marginalie": []
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Tarifgestaltung"
+    }
+   ],
    "marginalie": []
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Tarifgestaltung"
+    }
+   ],
+   "marginalie": []
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ausführungsbestimmung"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Inkrafttreten"
+    }
+   ],
    "marginalie": [
     "*"
    ]

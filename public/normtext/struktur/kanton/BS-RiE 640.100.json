@@ -1,162 +1,539 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Gegenstand"
    ]
   },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Steuerarten"
+   ]
+  },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "A. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Anwendung kantonalen Rechts"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Die Einkommens- und Vermögenssteuer"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Die Einkommens- und Vermögenssteuer"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Besteuerung nach dem Aufwand und Steuerbefreiung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Die Einkommens- und Vermögenssteuer"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Steuerpflicht"
+    }
+   ],
    "marginalie": [
     "Steuererleichterungen"
    ]
   },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Die Einkommens- und Vermögenssteuer"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Steuerbare Einkünfte"
+    }
+   ],
+   "marginalie": []
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Die Einkommens- und Vermögenssteuer"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Steuerberechnung"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Die Einkommens- und Vermögenssteuer"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Steuerberechnung"
+    }
+   ],
    "marginalie": [
     "Steuerfuss"
    ]
   },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "I. Die Einkommens- und Vermögenssteuer"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Zeitliche Grundlagen"
+    }
+   ],
+   "marginalie": []
+  },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Die Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "B. Die einzelnen Steuern"
+    },
+    {
+     "ebene": 2,
+     "label": "II. Die Grundstückgewinnsteuer"
+    }
+   ],
    "marginalie": [
     "Steuersatz"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    }
+   ],
    "marginalie": []
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)2. Veranlagung der Steuer"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)2. Veranlagung der Steuer"
+    }
+   ],
    "marginalie": [
     "Einspracheverfahren"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)2. Veranlagung der Steuer"
+    }
+   ],
    "marginalie": [
     "Rekursverfahren"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)2. Veranlagung der Steuer"
+    }
+   ],
    "marginalie": [
     "Änderungen rechtskräftiger Verfügungen und Entscheide"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)2. Veranlagung der Steuer"
+    }
+   ],
    "marginalie": [
     "Erhebung von Nachsteuern"
    ]
   },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Dateneinsicht durch die Gemeindeverwaltung"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Fälligkeit der Steuern"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Zinsausgleich"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Zinssätze"
    ]
   },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
+   "marginalie": [
+    "Vorauszahlungen"
+   ]
+  },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Stundung und Erlass"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Steuerrückerstattung"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Organisation, Verfahren und Steuerbezug"
+    },
+    {
+     "ebene": 2,
+     "label": "(C.)1. Steuererhebung"
+    },
+    {
+     "ebene": 3,
+     "label": "(C.)3. Steuerbezug"
+    }
+   ],
    "marginalie": [
     "Übrige Verfahrensbestimmungen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Steuerstrafrecht"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "D. Steuerstrafrecht"
+    }
+   ],
    "marginalie": [
     "Verfahren und Bezug"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Ausführungsbestimmungen"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "E. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Wirksamkeit"
    ]

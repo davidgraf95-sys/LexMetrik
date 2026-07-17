@@ -1,220 +1,422 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines und Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Frankenbeträge"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines und Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Stundenansatz (Art. 5 Abs 2 GebV)"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines und Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Schwellenwert für Verzicht auf Erhebung (Art. 8 Abs. 2 GebV)"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines und Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Mahngebühren (Art. 10 GebV)"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines und Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Bescheinigungen"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines und Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Beglaubigungen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeines und Kanzleigebühren"
+    }
+   ],
    "marginalie": [
     "Kopien"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilrechtliche Angelegenheiten"
+    }
+   ],
    "marginalie": [
     "Personen und Familienrecht"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilrechtliche Angelegenheiten"
+    }
+   ],
    "marginalie": [
     "Kindes- und Erwachsenenschutz"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilrechtliche Angelegenheiten"
+    }
+   ],
    "marginalie": [
     "Erbschaftswesen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilrechtliche Angelegenheiten"
+    }
+   ],
    "marginalie": [
     "Grundbuch"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilrechtliche Angelegenheiten"
+    }
+   ],
    "marginalie": [
     "Bewilligungsgesetz"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilrechtliche Angelegenheiten"
+    }
+   ],
    "marginalie": [
     "Handelsregisterwesen"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Zivilrechtliche Angelegenheiten"
+    }
+   ],
    "marginalie": [
     "Beurkundungen"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Polizei, Strafverfolgung und Strafvollzug"
+    }
+   ],
    "marginalie": [
     "Polizei"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Polizei, Strafverfolgung und Strafvollzug"
+    }
+   ],
    "marginalie": [
     "Staatsanwaltschaft"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Polizei, Strafverfolgung und Strafvollzug"
+    }
+   ],
    "marginalie": [
     "Strafvollzug"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Einwohnerkontrolle, Aufenthalt und Arbeit von ausländischen Personen"
+    }
+   ],
    "marginalie": [
     "Einwohnerkontrolle"
    ]
   },
   "19": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Einwohnerkontrolle, Aufenthalt und Arbeit von ausländischen Personen"
+    }
+   ],
    "marginalie": [
     "Aufenthalt von ausländischen Personen"
    ]
   },
   "20": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Einwohnerkontrolle, Aufenthalt und Arbeit von ausländischen Personen"
+    }
+   ],
    "marginalie": [
     "Arbeit von ausländischen Personen"
    ]
   },
   "21": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Grundstückschätzung"
    ]
   },
   "22": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Schulwesen"
    ]
   },
   "23": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Zivilschutz"
    ]
   },
   "24": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Bau"
    ]
   },
   "25": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Öffentlicher Verkehr"
    ]
   },
   "26": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Signalisationen"
    ]
   },
   "27": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Gesundheitswesen"
    ]
   },
   "28": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Arbeitsgesetzgebung"
    ]
   },
   "29": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Landwirtschaft und bäuerliches Bodenrecht"
    ]
   },
   "30": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Alpgesetz"
    ]
   },
   "31": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Forstwirtschaft"
    ]
   },
   "32": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Jagd"
    ]
   },
   "33": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Fischerei"
    ]
   },
   "34": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Lotterien"
    ]
   },
   "35": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Eichwesen (Verordnung über das Eichwesen)"
    ]
   },
   "36": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
    "marginalie": [
     "Inkrafttreten"
+   ]
+  },
+  "18_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Einwohnerkontrolle, Aufenthalt und Arbeit von ausländischen Personen"
+    }
+   ],
+   "marginalie": [
+    "Ausländerrechtliche Gebühren bei Höchstbeträgen des Bundesrechts"
+   ]
+  },
+  "24_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Weitere verwaltungsrechtliche Geschäfte"
+    }
+   ],
+   "marginalie": [
+    "Feuerungskontrolle"
    ]
   }
  }

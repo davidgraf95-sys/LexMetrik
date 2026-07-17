@@ -1,89 +1,179 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Spesen"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeine Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Grundsatz der Spesenrückerstattung"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Fahrtkosten"
+    }
+   ],
    "marginalie": [
     "Ersatz der Kosten für die öffentlichen Verkehrsmittel"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Fahrtkosten"
+    }
+   ],
    "marginalie": [
     "Ersatz der Kosten für Privatfahrzeuge"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Kosten für Verpflegung und Unterkunft"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Kosten für Verpflegung und Unterkunft"
+    }
+   ],
    "marginalie": [
     "Verpflegungskosten"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Kosten für Verpflegung und Unterkunft"
+    }
+   ],
    "marginalie": [
     "Übernachtungskosten"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Übrige Kosten"
+    }
+   ],
    "marginalie": [
     "Delegationen"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Übrige Kosten"
+    }
+   ],
    "marginalie": [
     "Repräsentationsauslagen"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Administrative Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Vorgängige Zustimmung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Administrative Bestimmungen"
+    }
+   ],
    "marginalie": [
     "Spesenabrechnung"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Publikation und Wirksamkeit"
    ]
+  },
+  "10_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Übrige Kosten"
+    }
+   ],
+   "marginalie": [
+    "…"
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Fahrtkosten"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

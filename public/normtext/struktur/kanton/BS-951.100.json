@@ -1,112 +1,224 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundlagen"
+    }
+   ],
    "marginalie": [
     "Geltungsbereich"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundlagen"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Grundlagen"
+    }
+   ],
    "marginalie": [
     "Angebotsziele"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerungsinstrumente"
+    }
+   ],
    "marginalie": [
     "Programm des öffentlichen Verkehrs"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerungsinstrumente"
+    }
+   ],
    "marginalie": [
     "Leistungsbestellung"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerungsinstrumente"
+    }
+   ],
    "marginalie": [
     "Beteiligung an Unternehmungen sowie Tarif- und Verkehrsverbünden"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerungsinstrumente"
+    }
+   ],
    "marginalie": [
     "Erstellung, Unterhalt und Betrieb der kantonseigenen Verkehrsinfrastruktur"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Förderungsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Förderungsgrundsätze"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Förderungsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Verkehrsbeiträge"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Förderungsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Tarifmassnahmen und Marketing"
    ]
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Förderungsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Investitionsbeiträge"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Förderungsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Bestellung von festen Anlagen und Fahrzeugen"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Förderungsmassnahmen"
+    }
+   ],
    "marginalie": [
     "Zugänglichkeit des öffentlichen Verkehrs"
    ]
   },
   "14": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Finanzierung"
+    }
+   ],
    "marginalie": [
     "Globalbudget"
    ]
   },
   "15": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Finanzierung"
+    }
+   ],
    "marginalie": [
     "Finanzierung von Investitionen und Investitionsbeiträgen"
    ]
   },
   "16": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Organisation"
+    }
+   ],
    "marginalie": [
     "Grosser Rat und Regierungsrat"
    ]
   },
   "17": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Übergangsbestimmungen"
    ]
   },
   "18": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Übergangs- und Schlussbestimmungen"
+    }
+   ],
    "marginalie": [
     "Schlussbestimmungen"
+   ]
+  },
+  "13_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Bedienung von Grossveranstaltungen mit dem öffentlichen Verkehr"
+    }
+   ],
+   "marginalie": [
+    "Verpflichtung der Veranstalterinnen und Veranstalter"
+   ]
+  },
+  "4.bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Steuerungsinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Ausbauplan Tramstrecken"
    ]
   }
  }

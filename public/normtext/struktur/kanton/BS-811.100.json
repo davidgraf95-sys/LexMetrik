@@ -1,79 +1,155 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-17",
  "artikel": {
   "1": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "I. Allgemeines"
+    }
+   ],
    "marginalie": [
     "Zweck"
    ]
   },
   "2": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rahmenbedingungen für die öffentlichen Ruhetage"
+    }
+   ],
    "marginalie": [
     "Ruhetage"
    ]
   },
   "3": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rahmenbedingungen für die öffentlichen Ruhetage"
+    }
+   ],
    "marginalie": [
     "Ruhegebot"
    ]
   },
   "4": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rahmenbedingungen für die öffentlichen Ruhetage"
+    }
+   ],
    "marginalie": [
     "Ausnahmen"
    ]
   },
   "5": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ladenöffnungszeiten an Werktagen"
+    }
+   ],
    "marginalie": [
     "Grundsatz"
    ]
   },
   "6": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "III. Ladenöffnungszeiten an Werktagen"
+    }
+   ],
    "marginalie": [
     "Ausnahmebewilligungen"
    ]
   },
   "7": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Besondere Regelungen"
+    }
+   ],
    "marginalie": [
     "Familienbetriebe"
    ]
   },
   "8": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Besondere Regelungen"
+    }
+   ],
    "marginalie": [
     "Bahnhöfe"
    ]
   },
   "9": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Besondere Regelungen"
+    }
+   ],
    "marginalie": [
     "Messe Schweiz"
    ]
   },
   "10": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Ausführungsgestimmungen"
+    }
+   ],
    "marginalie": []
   },
   "11": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sanktionen"
+    }
+   ],
    "marginalie": [
     "Entzug der Bewilligung"
    ]
   },
   "12": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Sanktionen"
+    }
+   ],
    "marginalie": [
     "Strafbestimmungen *"
    ]
   },
   "13": {
-   "gliederung": [],
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VII. Schlussbestimmungen"
+    }
+   ],
    "marginalie": []
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Rahmenbedingungen für die öffentlichen Ruhetage"
+    }
+   ],
+   "marginalie": [
+    "Weitere Ausnahmen: Bewilligungsfreie verkaufsoffene Sonntage"
+   ]
   }
  }
 }
