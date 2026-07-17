@@ -127,6 +127,42 @@ const GLIED_KOPF = new RegExp(
   'i',
 );
 
+// F2-Fix (Phantom-Ketten, 17.7.2026) — Absatz-/Ziffer-Aufzählung ≠ Artikel-
+// Aufzählung. Die Ketten-Zerlegung unterschied bislang NICHT zwischen einer
+// Artikel-Aufzählung («Art. 95 und 96 BGG» = zwei Artikel) und einer Absatz-/
+// Ziffer-Aufzählung («Art. 100 Abs. 1 und 2 BGG» = NUR Art. 100 — «2» ist Abs. 2,
+// kein Artikel). Ein nacktes Fortsetzungsglied («… und 2»), das SELBST keinen
+// eigenen Absatz-Marker trägt und einem Glied MIT Absatz-/Sub-Marker folgt, setzt
+// dessen Absatz-/Ziffer-Aufzählung fort und darf NICHT als eigener Artikel gelesen
+// werden — sonst entstehen Phantom-Norm-Keys (ART.2.BGG), die im Verzahnungs-Index
+// falsche Pro-Artikel-Verknüpfungen stiften. Reine Artikel-Aufzählungen tragen im
+// Vorglied keinen Absatz-/Sub-Marker und bleiben unberührt.
+//
+// Zwei bewusste Asymmetrien (Gegenprüfung 17.7.):
+//  1) Der «hat-Vorglied-Marker?»-Prüfer erfasst Absatz ODER Sub, KLAMMERT aber den
+//     FOLGE_MARKER (ff/ss/segg) AUS — «Art. 39 ss. et 45 CO» ist eine Artikel-, keine
+//     Absatz-Kette. Kritisch: der Sub-Prüfer verlangt zwischen Marker und Token einen
+//     echten Trenner (`.` oder Whitespace), sonst frässe der Ein-Buchstaben-Marker «S»
+//     (Satz) case-insensitiv das «ss» von FOLGE (39 s|s) und kippte «45» fälschlich.
+//  2) Die Ausnahme «Fortsetzung ist doch ein eigener Artikel» greift NUR bei einem
+//     eigenen ABSATZ-Marker der Fortsetzung («… und 106 Abs. 2 BGG» = Art. 106). Ein
+//     blosser Sub-Marker der Fortsetzung («… und 3 lit. c EMRK») zählt NICHT — er ist
+//     Unter-Gliederung, kein neuer Artikel; sonst bliebe das Phantom ART.3.EMRK.
+const GLIED_ABSATZ_MARKER = new RegExp(`${ABSATZ_MARKER}\\s*${ABSATZ_TOKEN}`, 'i');
+// Sub-Marker MIT Pflicht-Trenner (`.`/Whitespace) — schliesst die FOLGE-«ss»-Falle.
+const GLIED_SUB_MARKER = new RegExp(
+  `(?:${SUB_MARKER})(?:\\.\\s*|\\s+)${SUB_TOKEN}(?![A-Za-z0-9])`,
+  'i',
+);
+/** Trägt ein Glied einen eigenen Absatz-Marker? (Signal «eigener Artikel»). */
+function gliedTraegtAbsatz(stueck: string): boolean {
+  return GLIED_ABSATZ_MARKER.test(stueck);
+}
+/** Trägt ein Glied einen Absatz- ODER Sub-Marker? (Signal «Aufzählung offen»). */
+function gliedTraegtUnterMarker(stueck: string): boolean {
+  return GLIED_ABSATZ_MARKER.test(stueck) || GLIED_SUB_MARKER.test(stueck);
+}
+
 // Abteilung: römische Zahl I–VI (nie höher → kein L/C/D/M) plus optionaler
 // Kleinbuchstabe für die historischen Abteilungen «Ia»/«Ib»/«Va» (Bug-Check E2/E3).
 // F2-V1: optionaler Erwägungs-/Konsiderations-Pinpoint hinter dem `\b`-gesicherten
@@ -304,12 +340,26 @@ export function extrahiereStatutRefs(text: string): StatutRef[] {
 
     // Trefferliste in einzelne Artikel-Glieder zerlegen (F2-V6/V8: Mehrfach-Zitat
     // mit gemeinsamem Code) — jedes Glied trägt dieselbe Gesetzes-Abkürzung.
-    for (const stueck of (g.liste ?? '').split(KETTEN_TRENNER)) {
+    // F2-Fix: `vorgliedTraegtMarker` merkt, ob das jeweils zuletzt als Artikel
+    // gelesene (oder übersprungene) Glied einen Abs./Sub-Marker trug — nur dann wird
+    // ein nacktes Folgeglied als Absatz-/Ziffer-Fortsetzung verworfen.
+    let vorgliedTraegtMarker = false;
+    const stuecke = (g.liste ?? '').split(KETTEN_TRENNER);
+    for (let i = 0; i < stuecke.length; i++) {
+      const stueck = stuecke[i];
       const km = GLIED_KOPF.exec(stueck);
       if (!km?.groups) continue;
       const kg = km.groups;
       const artikel = (kg.article ?? '').toLowerCase().replace(/\s+/g, '');
       if (!artikel) continue;
+      // Phantom-Ketten-Schutz: ein Fortsetzungsglied nach einem markierten Vorglied
+      // gehört zur Absatz-/Ziffer-Aufzählung (kein eigener Artikel) → verwerfen,
+      // AUSSER es trägt einen eigenen Absatz-Marker («… und 106 Abs. 2» = Art. 106).
+      // Ein blosser Sub-Marker der Fortsetzung rettet sie NICHT (Unter-Gliederung).
+      if (i > 0 && vorgliedTraegtMarker && !gliedTraegtAbsatz(stueck)) continue;
+      // Für das nächste Glied merken, ob DIESES einen Abs.-/Sub-Marker trug (nur
+      // dann ist die Aufzählung «offen» — «Abs. 1, 2 und 3» verwirft auch 2 u. 3).
+      vorgliedTraegtMarker = gliedTraegtUnterMarker(stueck);
       const absatz = kg.paragraph ? kg.paragraph.toLowerCase().replace(/\s+/g, '') : null;
       // Bereichs-Endpunkt (F2-V10) nur bei Monotonie bewahren: ein Rechtsartikel-
       // Bereich steigt nie ab → verwirft die FR-Binnen-Bindestrich-Falle

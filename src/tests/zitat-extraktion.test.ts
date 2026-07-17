@@ -309,6 +309,71 @@ describe('F2-Nachtrag lett — ital. «lett.» (lettera) als Sub-Marker', () => 
   });
 });
 
+// ─── F2-Fix — Absatz-/Ziffer-Aufzählung ≠ Artikel-Aufzählung (Phantom-Ketten) ─
+// Repro (Bug-Check 17.7.2026): die Ketten-Zerlegung las ein nacktes Fortsetzungs-
+// glied («… und 2») nach einem Abs./Sub-markierten Vorglied als EIGENEN Artikel und
+// erzeugte Phantom-Norm-Keys (ART.2.BGG …), die im Verzahnungs-Index falsche Pro-
+// Artikel-Verknüpfungen stifteten. Alle Fälle sind Negativfälle: das Phantom-Glied
+// darf NICHT als Norm erscheinen. Die reinen Artikel-Aufzählungen (F2-V6/V8 oben)
+// bleiben das Gegenstück — dort trägt das Vorglied keinen Marker.
+describe('F2-Fix — Absatz-/Ziffer-Aufzählung erzeugt keine Phantom-Artikel', () => {
+  it('Repro 1 — «Art. 100 Abs. 1 und 2 BGG» → nur Art. 100 (kein ART.2.BGG)', () => {
+    expect(normen('Art. 100 Abs. 1 und 2 BGG')).toEqual(['ART.100.ABS.1.BGG']);
+  });
+  it('Repro 2 — «Art. 8 Abs. 1, 2 und 3 DSG» → nur Art. 8 (kein ART.2/3.DSG)', () => {
+    expect(normen('Art. 8 Abs. 1, 2 und 3 DSG')).toEqual(['ART.8.ABS.1.DSG']);
+  });
+  it('Repro 3 — «Art. 6 Ziff. 1 und 3 EMRK» → nur Art. 6 (kein ART.3.EMRK)', () => {
+    expect(normen('Art. 6 Ziff. 1 und 3 EMRK')).toEqual(['ART.6.EMRK']);
+  });
+  it('Repro 4 (lit.-Kette) — «Art. 8 lit. 1 und 2 DSG» → nur Art. 8 (kein ART.2.DSG)', () => {
+    expect(normen('Art. 8 lit. 1 und 2 DSG')).toEqual(['ART.8.DSG']);
+  });
+  it('Variante «Abs. 1bis und 2» — Ordinal-Absatz zieht die Fortsetzung mit', () => {
+    expect(normen('Art. 12 Abs. 1bis und 2 OR')).toEqual(['ART.12.ABS.1bis.OR']);
+  });
+  it('Variante FR «al. 1 et 2» — Fortsetzung nach al. ist Absatz, kein Artikel', () => {
+    expect(normen('Art. 8 al. 1 et 2 CEDH')).toEqual(['ART.8.ABS.1.CEDH']);
+  });
+  it('Nicht-Über-Verwerfung: Fortsetzung MIT eigenem Absatz bleibt eigener Artikel', () => {
+    // «Art. 100 Abs. 1 und 106 Abs. 2 BGG» — das zweite Glied trägt selbst «Abs. 2»
+    // → echter zweiter Artikel, darf NICHT als Fortsetzung verworfen werden.
+    expect(normen('Art. 100 Abs. 1 und 106 Abs. 2 BGG')).toEqual([
+      'ART.100.ABS.1.BGG',
+      'ART.106.ABS.2.BGG',
+    ]);
+  });
+  it('Sub-Marker der Fortsetzung rettet NICHT (Gegenprüfung: kein Phantom via lit.)', () => {
+    // «und 3 lit. c» ist Unter-Gliederung, kein eigener Artikel → kein ART.3.EMRK.
+    expect(normen('Art. 6 Ziff. 1 und 3 lit. c EMRK')).toEqual(['ART.6.EMRK']);
+    expect(normen('Art. 8 Ziff. 1 und 2 lit. a DSG')).toEqual(['ART.8.DSG']);
+  });
+  it('FOLGE-Kette (ss/ff) ist Artikel-, keine Absatz-Aufzählung (Gegenprüfung ss-Leck)', () => {
+    // Der Ein-Buchstaben-Sub-Marker «S» (Satz) darf das «ss» von FOLGE nicht fressen —
+    // sonst kippte «45» fälschlich als Absatz-Fortsetzung. FR/IT «ss» = dt. «ff.».
+    expect(normen('art. 39 ss et 45 CO')).toEqual(['ART.39.CO', 'ART.45.CO']);
+    expect(normen('art. 39 ss. et 82 CO')).toEqual(['ART.39.CO', 'ART.82.CO']);
+    expect(normen('art. 39 ss., 82 ss. et 90 ss. CPC')).toEqual([
+      'ART.39.CPC',
+      'ART.82.CPC',
+      'ART.90.CPC',
+    ]);
+  });
+  it('nacktes Glied VOR markiertem bleibt eigener Artikel (kein Rückwärts-Sog)', () => {
+    expect(normen('Art. 5 und 6 Abs. 2 OR')).toEqual(['ART.5.OR', 'ART.6.ABS.2.OR']);
+    expect(normen('Art. 9 und 29 Abs. 2 BV')).toEqual(['ART.9.BV', 'ART.29.ABS.2.BV']);
+  });
+  it('Regressions-Schloss: reine Artikel-Aufzählung (kein Marker im Vorglied) bleibt', () => {
+    expect(normen('Art. 95 und 96 BGG')).toEqual(['ART.95.BGG', 'ART.96.BGG']);
+    expect(normen('Art. 39 ff., 82 ff. und 90 ff. ATSG')).toEqual([
+      'ART.39.ATSG',
+      'ART.82.ATSG',
+      'ART.90.ATSG',
+    ]);
+    expect(normen('art. 34 et 2 CP')).toEqual(['ART.34.CP', 'ART.2.CP']);
+  });
+});
+
 describe('Normalisierungs-Helfer', () => {
   it('normalisiereStatut mit/ohne Absatz', () => {
     expect(normalisiereStatut('34', '2', 'bv')).toBe('ART.34.ABS.2.BV');
