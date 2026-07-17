@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das zentrale Forderungsinkasso",
+  "erlassdatum": "Vom 27. November 2012 (Stand 1. Januar 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 55 des Gesetzes über den kantonalen Finanzhaushalt (Finanzhaushaltsgesetz) vom 14. März 2012,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 610.100.",
+    "links": [
+     {
+      "label": "610.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/610.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-610.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

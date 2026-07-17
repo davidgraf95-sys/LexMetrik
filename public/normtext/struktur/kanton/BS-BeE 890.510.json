@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Sozialhilfeordnung",
+  "erlassdatum": "Vom 24. April 2007 (Stand 1. Mai 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Einwohnergemeinde Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 24 sowie 27 Abs. 2 des Sozialhilfegesetzes vom 29. Juni 2000 sowie § 12 Abs. 1 Ziff. 2 der Gemeindeordnung der Einwohnergemeinde Bettingen vom 26. April 2016,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 890.100",
+    "links": [
+     {
+      "label": "890.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/890.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-890.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BeE 111.100",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +73,15 @@
    ],
    "marginalie": [
     "Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BeE 890.500 / RiE 890.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {

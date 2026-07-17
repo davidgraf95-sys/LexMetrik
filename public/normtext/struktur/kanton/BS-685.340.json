@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Betriebsreglement für die öffentlichen Materiallagerplätze Basel-Dreispitz (Dreispitz-Verwaltung)",
+  "erlassdatum": "Vom 26. September 1955 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 7 des kantonalen Gesetzes betreffend den Betrieb der öffentlichen Materiallagerplätze auf dem Dreispitz vom 10. Januar 1901,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Dieses Gesetz ist aufgehoben worden durch § 55 Ziff. 11 des Organisationsgesetzes vom 22. 4. 1976. Das in diesem Reglement in den §§ 17, 25, 26 und 37 zitierte Bundesgesetz vom 19. 12. 1874 über die Rechtsverhältnisse der Verbindungsgeleise ist aufgehoben; massgebend ist jetzt das Bundesgesetz über die Anschlussgeleise vom 5. 10. 1990 (SR 742.141.5).",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -61,7 +91,16 @@
     }
    ],
    "marginalie": [
-    "Öffnungszeiten [3] und Wachtdienst"
+    "Öffnungszeiten und Wachtdienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 5: Die tatsächlichen Öffnungszeiten entsprechen teilweise nicht mehr der Verordnung.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "6": {
@@ -705,7 +744,16 @@
      "label": "5. Teil: Strafbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Jetzt: Kantonales Übertretungsstrafgesetz vom 15. 6. 1978.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "45": {
    "gliederung": [
@@ -724,7 +772,16 @@
     }
    ],
    "marginalie": [
-    "Gebührentarif [5]"
+    "Gebührentarif"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 46: Für den Gebührentarif siehe Anhang.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "47": {

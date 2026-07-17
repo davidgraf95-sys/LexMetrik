@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement für die Maturaarbeit an den Gymnasien im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 11. Juli 2008 (Stand 12. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Erziehungsdepartement des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 17 Abs. 6 der Verordnung betreffend die Maturitätsprüfungen im Kanton Basel-Stadt (Maturitätsprüfungsverordnung, MPV) vom 28. März 2000, nach Anhörung des Erziehungsrats,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 413.820.",
+    "links": [
+     {
+      "label": "413.820",
+      "url": "https://www.gesetzessammlung.bs.ch/data/413.820/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-413.820"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -56,7 +95,7 @@
   "11": {
    "gliederung": [],
    "marginalie": [
-    "Präsentation und Fachgespräch *"
+    "Präsentation und Fachgespräch"
    ]
   },
   "12": {

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Pflegefinanzierung",
+  "erlassdatum": "vom 20.12.2016 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Pflegefinanzierung vom 13. Juni 2016 und das Gesundheitsgesetz vom 25. November 2007,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "PFG (bGS 833.15 )",
+    "links": [
+     {
+      "label": "833.15",
+      "url": "https://ar.clex.ch/data/833.15/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-833.15"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 811.1",
+    "links": [
+     {
+      "label": "811.1",
+      "url": "https://ar.clex.ch/data/811.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -76,6 +132,24 @@
    ],
    "marginalie": [
     "Rechnungsstellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "KLV (SR 832.112.31 )",
+     "links": [
+      {
+       "label": "832.112.31",
+       "url": "https://db.clex.ch/link/Bund/832.112.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KLV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -175,6 +249,24 @@
    ],
    "marginalie": [
     "Rechnungsstellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "KLV (SR 832.112.31 )",
+     "links": [
+      {
+       "label": "832.112.31",
+       "url": "https://db.clex.ch/link/Bund/832.112.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KLV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "17": {

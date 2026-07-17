@@ -1,9 +1,41 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz vom 4. Oktober 1930 über die Handelsreisenden sowie über die dazugehörende Vollziehungsverordnung vom 5. Juni 1931",
+  "erlassdatum": "vom 05.03.1932 (Stand 01.01.2007)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh."
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Heute: BG über das Gewerbe der Reisenden (SR 943.1 ) und V über das Gewerbe der Reisenden (SR 943.11 )",
+     "links": [
+      {
+       "label": "943.1",
+       "url": "https://db.clex.ch/link/Bund/943.1/de"
+      },
+      {
+       "label": "943.11",
+       "url": "https://db.clex.ch/link/Bund/943.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [],
@@ -27,7 +59,16 @@
   },
   "10": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "5. März 1932",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

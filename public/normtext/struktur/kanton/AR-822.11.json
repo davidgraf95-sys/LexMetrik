@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+  "erlassdatum": "vom 21.02.1966 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 41 des Arbeitsgesetzes vom 13. März 1964 sowie auf Art. 48 Ziff. 4 der Kantonsverfassung vom 26. April 1908,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 822.11",
+    "links": [
+     {
+      "label": "822.11",
+      "url": "https://db.clex.ch/link/Bund/822.11/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ARG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "aGS I/1 (heute: KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -98,6 +154,36 @@
    ],
    "marginalie": [
     "Rechtsmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. Art. 56 Arbeitsgesetz (SR 822.11 )",
+     "links": [
+      {
+       "label": "822.11",
+       "url": "https://db.clex.ch/link/Bund/822.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ARG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "vgl. Art. 9 Abs. 1 lit. a und b G vom 25. April 1993 über die Verwaltungsgerichtsbarkeit(bGS 143.6 )",
+     "links": [
+      {
+       "label": "143.6",
+       "url": "https://ar.clex.ch/data/143.6/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -107,7 +193,25 @@
      "label": "VI. Gebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Gebührentarif zum Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) (bGS 822.111 )",
+     "links": [
+      {
+       "label": "822.111",
+       "url": "https://ar.clex.ch/data/822.111/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-822.111"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "11": {
    "gliederung": [
@@ -118,6 +222,73 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "1. Februar 1966",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Die zu dieser Ausscheidung gemäss Art. 73 Abs. 4 des Arbeitsgesetzes erforderliche Genehmigung wurde vom Bundesrat am 29. März 1966 erteilt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "aGS II/139 mit Teilrevision vom 2. August 1960 (aGS III/336)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "aGS II/143",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "aGS II/142",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "aGS II/144",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "aGS I/61",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "bGS 712.1",
+     "links": [
+      {
+       "label": "712.1",
+       "url": "https://ar.clex.ch/data/712.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-712.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

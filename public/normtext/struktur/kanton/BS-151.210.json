@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über Publikationen im Kantonsblatt und über die Gesetzessammlung des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 11. Dezember 2018 (Stand 15. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 13 des Gesetzes über Publikationen im Kantonsblatt und über die Gesetzessammlung des Kantons Basel-Stadt (Publikationsgesetz) vom 19. Oktober 2016, unter Verweis auf seine Erläuterungen P181699,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 151.200",
+    "links": [
+     {
+      "label": "151.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/151.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-151.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

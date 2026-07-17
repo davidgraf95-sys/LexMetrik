@@ -1,16 +1,83 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung zur Verwendung der Mehrwertabgabe",
+  "erlassdatum": "Vom 28. September 2017 (Stand 12. März 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat der Einwohnergemeinde Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Gemeinderats und der Sachkommission Siedlung und Landschaft (SSL) und Publikumsdienste, Behörden und Finanzen (SPBF), gestützt auf § 21 der Finanzhaushaltordnung der Einwohnergemeinde Riehen vom 28. November 2002,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 610.100",
+    "links": [
+     {
+      "label": "RiE 610.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20610.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Verwendung der Mehrwertabgabe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 730.100",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
     "Errichtung des Fonds"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "RiE 111.100",
+     "links": [
+      {
+       "label": "RiE 111.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {

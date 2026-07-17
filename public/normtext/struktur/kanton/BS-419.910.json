@@ -1,5 +1,91 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung des Bundesrates / Reglement der EDK über die Anerkennung von gymnasialen Maturitätsausweisen",
+  "erlassdatum": "Vom 16. Januar 1995 (Stand 1. August 2007)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Schweizerische Bundesrat, gestützt auf Artikel 39 Absatz 2 des ETH-Gesetzes vom 4. Oktober 1991 sowie Artikel 6 litera b des Bundesgesetzes vom 19. Dezember 1877 betreffend die Freizügigkeit des Medizinalpersonals in der Schweizerischen Eidgenossenschaft, Die Schweizerische Konferenz der kantonalen Erziehungsdirektoren (EDK), gestützt auf Art. 3, 4 und 5 des Konkordats vom 29. Oktober 1970 über die Schulkoordination; gestützt auf Art. 3, 4 und 6 der Interkantonalen Vereinbarung vom 18. Februar 1993 über die Anerkennung von Ausbildungsabschlüssen; im Hinblick auf die Verwaltungsvereinbarung vom 16. Januar/15. Februar 1995 zwischen dem Schweizerischen Bundesrat und der Schweizerischen Konferenz der kantonalen Erziehungsdirektoren,",
+    "fnNrs": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 414.110.",
+    "links": [
+     {
+      "label": "414.110",
+      "url": "https://db.clex.ch/link/Bund/414.110/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 811.11. Heute: Bundesgesetz über die universitären Medizinalberufe (Medizinalberufegesetz, MedBG) vom 26. 6. 2006.",
+    "links": [
+     {
+      "label": "811.11",
+      "url": "https://db.clex.ch/link/Bund/811.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 410.180.",
+    "links": [
+     {
+      "label": "410.180",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.180/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.180"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SG 419.900.",
+    "links": [
+     {
+      "label": "419.900",
+      "url": "https://www.gesetzessammlung.bs.ch/data/419.900/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-419.900"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "BBl. 1995 II 318. Gestützt auf die Verwaltungsvereinbarung vom 16. 1./ 15. 2. 1995 (BBl. 1995 II 318) haben die EDK und der Schweizerische Bundesrat je separate, aber aufeinander abgestimmte Erlasse für ihren Zuständigkeitsbereich beschlossen. Die entsprechende Verordnung des Bundesrates ist in AS 1995 1001 publiziert worden. Zu Gebrauchszwecken ist eine gemeinsame Ausgabe der beiden Erlasse erstellt worden (Verwaltungsvereinbarung Bundesrat/EDK Artikel 1 Absatz 3).",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +107,43 @@
    ],
    "marginalie": [
     "Wirkung der Anerkennung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Dieser Erlass wurde am 26. 11. 2008 aufgehoben durch die Verordnung über die eidgenössischen Prüfungen der universitären Medizinalberufe (Prüfungsverordnung MedBG), SR 811.113.3.",
+     "links": [
+      {
+       "label": "811.113.3",
+       "url": "https://db.clex.ch/link/Bund/811.113.3/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SR 817.0.",
+     "links": [
+      {
+       "label": "817.0",
+       "url": "https://db.clex.ch/link/Bund/817.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LMG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Interkantonale Regelungen: Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen vom 18. Februar 1993, Interkantonale Universitätsvereinbarung vom 20. Februar 1997.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -208,6 +331,15 @@
    ],
    "marginalie": [
     "Schulversuche"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Ab 1. Januar 2013: Eidgenössisches Departement für Wirtschaft, Bildung und Forschung (WBF).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -239,6 +371,15 @@
    ],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Ab 1. Januar 2013: Eidgenössisches Departement für Wirtschaft, Bildung und Forschung (WBF).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -250,6 +391,22 @@
    ],
    "marginalie": [
     "Rechtsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Ab 1. Januar 2013: Eidgenössisches Departement für Wirtschaft, Bildung und Forschung (WBF).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Bundesgesetz über das Bundesgericht vom 17. Juni 2005 (Bundesgerichtsgesetz, BGG); SR 173.110.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "24": {

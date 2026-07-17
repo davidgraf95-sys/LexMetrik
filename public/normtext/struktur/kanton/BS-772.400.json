@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität",
+  "erlassdatum": "Vom 14. Dezember 2023 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Verwaltungsrat von IWB Industrielle Werke Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 10 Abs. 2 lit. h und 23 Abs. 1 lit. a, b und d des Gesetzes über die Industriellen Werke Basel (IWB-Gesetz) vom 11. Februar 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 772.300.",
+    "links": [
+     {
+      "label": "772.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/772.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-772.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -40,6 +79,32 @@
    ],
    "marginalie": [
     "Netzgebiet und Anschlussgarantie"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 734.7",
+     "links": [
+      {
+       "label": "734.7",
+       "url": "https://db.clex.ch/link/Bund/734.7/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SR 734.0",
+     "links": [
+      {
+       "label": "734.0",
+       "url": "https://db.clex.ch/link/Bund/734.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -351,6 +416,20 @@
    ],
    "marginalie": [
     "Änderungen auf Wunsch der Kundinnen und Kunden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 734.71",
+     "links": [
+      {
+       "label": "734.71",
+       "url": "https://db.clex.ch/link/Bund/734.71/de"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -405,7 +484,21 @@
      "label": "2.9 Hausinstallationen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 734.27",
+     "links": [
+      {
+       "label": "734.27",
+       "url": "https://db.clex.ch/link/Bund/734.27/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "29": {
    "gliederung": [
@@ -462,7 +555,7 @@
     }
    ],
    "marginalie": [
-    "Energielieferung an Kundinnen und Kunden im freien Markt *"
+    "Energielieferung an Kundinnen und Kunden im freien Markt"
    ]
   },
   "33": {
@@ -477,7 +570,7 @@
     }
    ],
    "marginalie": [
-    "Ersatzversorgung für Kundinnen und Kunden im freien Markt *"
+    "Ersatzversorgung für Kundinnen und Kunden im freien Markt"
    ]
   },
   "34": {
@@ -537,7 +630,7 @@
     }
    ],
    "marginalie": [
-    "(Teil-)Auflösung bestehender Arealnetze / Ausschluss neuer Arealnetze *"
+    "(Teil-)Auflösung bestehender Arealnetze / Ausschluss neuer Arealnetze"
    ]
   },
   "38": {
@@ -580,7 +673,7 @@
     }
    ],
    "marginalie": [
-    "Bereitstellung von Messmitteln *"
+    "Bereitstellung von Messmitteln"
    ]
   },
   "41": {
@@ -609,7 +702,21 @@
      "label": "4.3 Instandhaltung des Messmittels"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 941.210",
+     "links": [
+      {
+       "label": "941.210",
+       "url": "https://db.clex.ch/link/Bund/941.210/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "43": {
    "gliederung": [

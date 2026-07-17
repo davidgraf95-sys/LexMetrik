@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über das Universitäre Zentrum für Zahnmedizin Basel",
+  "erlassdatum": "Vom 17. September 2014 (Stand 1. Januar 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 13.0391.01 vom 26. November 2013 sowie in den Bericht der Gesundheits- und Sozialkommission Nr. 13.0931.02 vom 19. Juni 2014,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -299,6 +317,22 @@
    ],
    "marginalie": [
     "Überführung und Sanierung Pensionskasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Angenommen in der Volksabstimmung vom 8. 3. 2015.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 1. 2016.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

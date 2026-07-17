@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Basler Herbstmesse",
+  "erlassdatum": "Vom 14. März 2012 (Stand 1. Januar 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausformulierung der unformulierten Initiative «Zum Schutz der Basler Herbstmesse», nach Einsichtnahme in den Bericht und Ratschlag des Regierungsrates Nr. 07.0720.04/11.1003.01 vom 28. Juni 2011 sowie in den Bericht der Wirtschafts- und Abgabekommission Nr. 07.0720.05/11.1003.02 vom 12. Januar 2012"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -47,6 +65,15 @@
    "gliederung": [],
    "marginalie": [
     "Rechtspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 30. 5. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

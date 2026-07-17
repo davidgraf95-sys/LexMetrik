@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz über das Messwesen",
+  "erlassdatum": "Vom 12. Januar 2021 (Stand 1. Februar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 16 Abs. 1, Art. 17 und Art. 24 Abs. 1 des Bundesgesetzes über das Messwesen (Messgesetz, MessG) vom 17. Juni 2011, Art. 2 Abs. 1 und 2 der Verordnung über die Zuständigkeiten im Messwesen (ZMessV) vom 7. Dezember 2012 sowie unter Verweis auf seine Erläuterungen Nr. P201808 / P201812,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst,"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 941.20",
+    "links": [
+     {
+      "label": "941.20",
+      "url": "https://db.clex.ch/link/Bund/941.20/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 941.206",
+    "links": [
+     {
+      "label": "941.206",
+      "url": "https://db.clex.ch/link/Bund/941.206/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

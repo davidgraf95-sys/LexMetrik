@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über zugelassene Rebsorten",
+  "erlassdatum": "vom 19.02.2013 (Stand 01.03.2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 7, 9 und 13 der kantonalen Weinverordnung vom 11. Februar 2013,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "kWeinV (bGS 920.16 )",
+    "links": [
+     {
+      "label": "920.16",
+      "url": "https://ar.clex.ch/data/920.16/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-920.16"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,12 +50,40 @@
    "gliederung": [],
    "marginalie": [
     "Natürlicher Mindestzuckergehalt und Höchstertrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Weinverordnung (SR 916.140 )",
+     "links": [
+      {
+       "label": "916.140",
+       "url": "https://db.clex.ch/link/Bund/916.140/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
     "Weinspezifische Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Weinverordnung (SR 916.140 )",
+     "links": [
+      {
+       "label": "916.140",
+       "url": "https://db.clex.ch/link/Bund/916.140/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

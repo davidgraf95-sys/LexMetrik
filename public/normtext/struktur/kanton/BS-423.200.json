@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Lehrgang «Frühe sprachliche Förderung – Schwerpunkt Deutsch»",
+  "erlassdatum": "Vom 22. Juni 2010 (Stand 10. August 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 14 des Gesetzes betreffend die Berufsfachschule Basel (BFS Basel) vom 27. Juni 1963 und § 74 Abs. 1 des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrats,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 423.100.",
+    "links": [
+     {
+      "label": "423.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/423.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-423.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -277,7 +333,16 @@
      "label": "V. Schlussbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 26. 6. 2010.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

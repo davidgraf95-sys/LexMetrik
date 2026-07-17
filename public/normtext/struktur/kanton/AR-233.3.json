@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Rechtskosten und Entschädigungen in der Zivil- und Strafrechtspflege",
+  "erlassdatum": "vom 15.06.1981 (Stand 01.12.2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 70 der Kantonsverfassung, Art. 77 Abs. 2 der Zivilprozessordnung vom 27. April 1980 und Art. 2 der Strafprozessordnung vom 30. April 1978,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "ZPO (bGS 231.1 )",
+    "links": [
+     {
+      "label": "231.1",
+      "url": "https://ar.clex.ch/data/231.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "StPO (bGS 321.1 )",
+    "links": [
+     {
+      "label": "321.1",
+      "url": "https://ar.clex.ch/data/321.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -172,9 +220,7 @@
      "label": "I. Zivilrechtspflege"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -187,9 +233,7 @@
      "label": "I. Zivilrechtspflege"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -354,7 +398,21 @@
      "label": "6. Abschnitt: Auslagen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 142.251",
+     "links": [
+      {
+       "label": "142.251",
+       "url": "https://ar.clex.ch/data/142.251/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "35": {
    "gliederung": [
@@ -372,7 +430,16 @@
      "label": "8. Abschnitt: Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "bGS 233.3 (aGS V/657)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "42_bis": {
    "gliederung": [

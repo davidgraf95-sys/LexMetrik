@@ -1,5 +1,43 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesamtschweizerisches Geldspielkonkordat",
+  "erlassdatum": "Vom 24. Juni 2020 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 48, Art. 106 sowie Art. 191b Abs. 2 der Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999 (BV) und auf das Bundesgesetz vom 29. September 2017 über Geldspiele (Geldspielgesetz, BGS),",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 101",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 935.51",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +48,22 @@
    ],
    "marginalie": [
     "Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -1075,6 +1129,22 @@
    ],
    "marginalie": [
     "Verhältnis zu regional beschränkten Konkordaten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Interkantonale Vereinbarung betreffend die gemeinsame Durchführung von Lotterien vom 26. Mai 1937 (welchem die Deutschschweizerkantone und der Kanton Tessin beigetreten sind).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "9ème Convention relative à la Loterie Romande vom 18. November 2005 (welcher die Westschweizerkantone beigetreten sind).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "73": {

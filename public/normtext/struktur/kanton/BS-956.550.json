@@ -1,5 +1,83 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Fluglärmkommission und die Ombudsstelle für Fluglärmklagen",
+  "erlassdatum": "Vom 29. Mai 2001 (Stand 1. Juli 2011)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt, gestützt auf den Grossratsbeschluss vom 22. April 1976 betreffend Verlängerung der Hauptpiste des Flughafens Basel-Mülhausen sowie Richtlinien über Massnahmen betreffend den Fluglärm aus dem Betrieb des Flughafens Basel-Mülhausen und auf § 34 des Organisationsgesetzes vom 22. April 1976, und der Regierungsrat des Kantons Basel-Landschaft, gestützt auf § 77 Abs. 1 Buchstabe b der Kantonsverfassung vom 17. Mai 1984 in Verbindung mit § 36 des Verwaltungsorganisationsgesetzes vom 6. Juni 1983,",
+    "fnNrs": [
+     "2",
+     "3",
+     "4",
+     "5"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 956.520.",
+    "links": [
+     {
+      "label": "956.520",
+      "url": "https://www.gesetzessammlung.bs.ch/data/956.520/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-956.520"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "GS 29.276, SGS 100.",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "GS 28.436, SGS 140.",
+    "links": [
+     {
+      "label": "140",
+      "url": "https://db.clex.ch/link/BL/140/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

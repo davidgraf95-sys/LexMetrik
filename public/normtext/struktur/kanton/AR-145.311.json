@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Beschluss über die Zahl der Vizepräsidenten oder Vizepräsidentinnen des Kantonsgerichts",
+  "erlassdatum": "vom 06.05.2024 (Stand 01.11.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 9 Abs. 1 des Justizgesetzes vom 13. September 2010,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "145.31",
+    "links": [
+     {
+      "label": "145.31",
+      "url": "https://ar.clex.ch/data/145.31/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-145.31"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

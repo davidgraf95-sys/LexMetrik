@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Grabmalverordnung",
+  "erlassdatum": "Vom 2. März 2021 (Stand 1. April 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 38 des Bestattungsgesetzes (BestG) vom 11. März 2020, unter Verweis auf seine Erläuterungen Nr. P210087,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst,"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 390.100",
+    "links": [
+     {
+      "label": "390.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/390.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-390.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Personalgesetz",
+  "erlassdatum": "vom 24.10.2005 (Stand 01.07.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 69 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -103,7 +142,7 @@
     }
    ],
    "marginalie": [
-    "Rechte und Pflichten des Arbeitgebers *"
+    "Rechte und Pflichten des Arbeitgebers"
    ]
   },
   "9": {
@@ -118,7 +157,25 @@
     }
    ],
    "marginalie": [
-    "Anstellungsbehörden *"
+    "Anstellungsbehörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Im Sinne von Art. 27 Organisationsgesetz (OrG; bGS 142.12 )",
+     "links": [
+      {
+       "label": "142.12",
+       "url": "https://ar.clex.ch/data/142.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.12"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -254,6 +311,24 @@
    ],
    "marginalie": [
     "Ordentliche Pensionierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -374,6 +449,24 @@
    ],
    "marginalie": [
     "Missbräuchliche Kündigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "GlG (SR 151.1 )",
+     "links": [
+      {
+       "label": "151.1",
+       "url": "https://db.clex.ch/link/Bund/151.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GLG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -477,6 +570,24 @@
    ],
    "marginalie": [
     "Anpassung des Lohnes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "BVO (bGS 142.211 )",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "36": {
@@ -492,6 +603,24 @@
    ],
    "marginalie": [
     "Zulagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "BVO (bGS 142.211 )",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "37": {
@@ -507,6 +636,24 @@
    ],
    "marginalie": [
     "Spesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "BVO (bGS 142.211 )",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -552,6 +699,24 @@
    ],
    "marginalie": [
     "Lohnfortzahlung bei Unfall"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "UVG (SR 832.20 )",
+     "links": [
+      {
+       "label": "832.20",
+       "url": "https://db.clex.ch/link/Bund/832.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "UVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "42": {
@@ -567,6 +732,24 @@
    ],
    "marginalie": [
     "Lohnfortzahlung bei Mutterschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "EOG (SR 834.1 )",
+     "links": [
+      {
+       "label": "834.1",
+       "url": "https://db.clex.ch/link/Bund/834.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EOG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "43": {
@@ -582,6 +765,24 @@
    ],
    "marginalie": [
     "Lohnfortzahlung bei militärischen und ähnlichen Dienstleistungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "EOG (SR 834.1 )",
+     "links": [
+      {
+       "label": "834.1",
+       "url": "https://db.clex.ch/link/Bund/834.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EOG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "44": {
@@ -627,6 +828,24 @@
    ],
    "marginalie": [
     "Anerkennungsprämie"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "BVO (bGS 142.211 )",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "47": {
@@ -642,6 +861,24 @@
    ],
    "marginalie": [
     "Dienstaltersgeschenk"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "BVO (bGS 142.211 )",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "48": {
@@ -657,6 +894,24 @@
    ],
    "marginalie": [
     "Leistungen im Todesfall"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "FamZG (SR 836.2 )",
+     "links": [
+      {
+       "label": "836.2",
+       "url": "https://db.clex.ch/link/Bund/836.2/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FAMZG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "49": {
@@ -747,6 +1002,24 @@
    ],
    "marginalie": [
     "Urlaub – im Besonderen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "EOG (SR 834.1 )",
+     "links": [
+      {
+       "label": "834.1",
+       "url": "https://db.clex.ch/link/Bund/834.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EOG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "55": {
@@ -944,7 +1217,7 @@
     }
    ],
    "marginalie": [
-    "Datenschutz und Datenbearbeitung *"
+    "Datenschutz und Datenbearbeitung"
    ]
   },
   "69": {
@@ -967,8 +1240,24 @@
      "label": "5. Abschnitt: Rechtsschutz"
     }
    ],
-   "marginalie": [
-    "*"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "73": {
@@ -980,6 +1269,24 @@
    ],
    "marginalie": [
     "Ausführungsvorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "BVO (bGS 142.211 )",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "74": {
@@ -991,6 +1298,187 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "bGS 142.211 (lf. Nr. 749)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "bGS 413.12 (lf. Nr. 764)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "bGS 812.111.1 (lf. Nr. 654)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "bGS 713.1 (lf. Nr. 355)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "Die Änderungen wurden in den betroffenen Erlassen eingefügt.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "bGS 411.0",
+     "links": [
+      {
+       "label": "411.0",
+       "url": "https://ar.clex.ch/data/411.0/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "bGS 812.11",
+     "links": [
+      {
+       "label": "812.11",
+       "url": "https://ar.clex.ch/data/812.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-812.11"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "bGS 521.1",
+     "links": [
+      {
+       "label": "521.1",
+       "url": "https://ar.clex.ch/data/521.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "bGS 521.11",
+     "links": [
+      {
+       "label": "521.11",
+       "url": "https://ar.clex.ch/data/521.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.11"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "bGS 142.13",
+     "links": [
+      {
+       "label": "142.13",
+       "url": "https://ar.clex.ch/data/142.13/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.13"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "30",
+     "text": "bGS 412.21",
+     "links": [
+      {
+       "label": "412.21",
+       "url": "https://ar.clex.ch/data/412.21/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "bGS 812.111",
+     "links": [
+      {
+       "label": "812.111",
+       "url": "https://ar.clex.ch/data/812.111/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "bGS 862.11",
+     "links": [
+      {
+       "label": "862.11",
+       "url": "https://ar.clex.ch/data/862.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-862.11"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "bGS 831.1",
+     "links": [
+      {
+       "label": "831.1",
+       "url": "https://ar.clex.ch/data/831.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-831.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "bGS 832.21",
+     "links": [
+      {
+       "label": "832.21",
+       "url": "https://ar.clex.ch/data/832.21/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "75": {
@@ -1013,6 +1501,24 @@
    ],
    "marginalie": [
     "Übergangsbestimmung betreffend Besoldung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "BVO (bGS 142.211 )",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "77": {
@@ -1024,6 +1530,24 @@
    ],
    "marginalie": [
     "Übergangsbestimmung betreffend ordentliche und vorzeitige Pensionierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "36",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "78": {
@@ -1035,6 +1559,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "Die Referendumsfrist ist am 27. Dezember 2005 ungenützt abgelaufen (RRB vom 3. Januar 2006; Abl. 2006, S. 5).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "1. Januar 2008 (RRB vom 20. November 2007; Abl. 2007, S. 1207)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "54_a": {
@@ -1049,7 +1589,25 @@
     }
    ],
    "marginalie": [
-    "Elternschaftsurlaub *"
+    "Elternschaftsurlaub"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "54_b": {
@@ -1065,6 +1623,24 @@
    ],
    "marginalie": [
     "Adoptionsurlaub"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "54_c": {
@@ -1080,6 +1656,24 @@
    ],
    "marginalie": [
     "Betreuungsurlaub"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SR 834.1",
+     "links": [
+      {
+       "label": "834.1",
+       "url": "https://db.clex.ch/link/Bund/834.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EOG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "64_a": {

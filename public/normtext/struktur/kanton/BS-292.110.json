@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Notariatsgesetz des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 18. Dezember 2007 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5a Abs. 2, § 13 Abs. 2, § 14, § 38 Abs. 2, § 56 Abs. 3 und § 57 Abs. 1 des Notariatsgesetzes des Kantons Basel-Stadt vom 18. Januar 2006 und auf Antrag der Justizkommission,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 292.100",
+    "links": [
+     {
+      "label": "292.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/292.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-292.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +93,15 @@
    ],
    "marginalie": [
     "Prüfungsgebühr"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 5 Abs. 4: Datum redaktionell berichtigt.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -140,6 +188,15 @@
    ],
    "marginalie": [
     "Elektronische Beglaubigungen und andere Vermerkbeurkundungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -177,6 +234,24 @@
    ],
    "marginalie": [
     "Registrierung der notariellen Akte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 16 Abs. 1: Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ) vom 30. 10. 2007 (SR 0.275.12 ).",
+     "links": [
+      {
+       "label": "0.275.12",
+       "url": "https://db.clex.ch/link/Bund/0.275.12/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LUGUE"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -220,7 +295,7 @@
     }
    ],
    "marginalie": [
-    "Notariatsarchiv (§ 11, § 14 Abs. 2 und § 56 Notariatsgesetz) *"
+    "Notariatsarchiv (§ 11, § 14 Abs. 2 und § 56 Notariatsgesetz)"
    ]
   },
   "21": {
@@ -231,7 +306,7 @@
     }
    ],
    "marginalie": [
-    "Benützung im Notariatsarchiv aufbewahrten Archivguts *"
+    "Benützung im Notariatsarchiv aufbewahrten Archivguts"
    ]
   },
   "22": {

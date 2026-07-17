@@ -1,5 +1,46 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Interstaatliche Maturitätsschule für Erwachsene St.Gallen/Sargans",
+  "erlassdatum": "vom 29.03.1993 (Stand 01.01.1994)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone Appenzell A.Rh., Appenzell I.Rh., St.Gallen und Graubünden sowie das Fürstentum Liechtenstein",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden hat den Beitritt zur Vereinbarung am 22. Februar 1993 beschlossen (Abl. 1993, S. 148)",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "vgl. Art. 4 Abs. 2 MSG (sGS 215.1 )",
+    "links": [
+     {
+      "label": "215.1",
+      "url": "https://db.clex.ch/link/SG/215.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -219,6 +260,20 @@
    ],
    "marginalie": [
     "Aufhebung der bisherigen Vereinbarung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 411.6",
+     "links": [
+      {
+       "label": "411.6",
+       "url": "https://ar.clex.ch/data/411.6/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -230,6 +285,15 @@
    ],
    "marginalie": [
     "Verbindlichkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Fussnote zum Ingress dieser Vereinbarung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

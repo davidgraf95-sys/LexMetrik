@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kanzleigebührenverordnung",
+  "erlassdatum": "vom 17.12.2002 (Stand 01.01.2003)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 13 des Gesetzes vom 25. April 1982 über die Gebühren in Verwaltungssachen,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 233.2",
+    "links": [
+     {
+      "label": "233.2",
+      "url": "https://ar.clex.ch/data/233.2/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-233.2"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

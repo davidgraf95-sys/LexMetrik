@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung betreffend die Benutzung der Pädagogischen Dokumentationsstelle des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 16. April 2007 (Stand 1. August 2008)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Erziehungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 79 des Schulgesetzes vom 4. April 1929, folgende Ordnung:",
+    "fnNrs": [
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "3",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -107,6 +142,15 @@
    "gliederung": [],
    "marginalie": [
     "Rekurs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 1. 7. 2007.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

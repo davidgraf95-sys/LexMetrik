@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum kantonalen Geldspielgesetz",
+  "erlassdatum": "vom 30.11.2021 (Stand 01.02.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 2 des kantonalen Geldspielgesetzes,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KGS (bGS 955.31 )",
+    "links": [
+     {
+      "label": "955.31",
+      "url": "https://ar.clex.ch/data/955.31/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-955.31"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -35,6 +74,24 @@
    "gliederung": [],
    "marginalie": [
     "Übrige Kleinlotterien a) Gesuch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 4 der Interkantonalen Vereinbarung betreffend die gemeinsame Durchführung von Geldspielen (bGS 955.32 )",
+     "links": [
+      {
+       "label": "955.32",
+       "url": "https://ar.clex.ch/data/955.32/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-955.32"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {

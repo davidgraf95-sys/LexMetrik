@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Trödel- und Pfandleihgewerbe",
+  "erlassdatum": "Vom 21. Juni 2011 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 202 und 213a des Gesetzes betreffend die Einführung des Schweizerischen Zivilgesetzbuches vom 27. April 1911,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 211.100.",
+    "links": [
+     {
+      "label": "211.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

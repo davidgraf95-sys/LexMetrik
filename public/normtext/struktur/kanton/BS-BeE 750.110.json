@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend die Strassen- und Kanalisationsbeiträge sowie Gebühren für die Ableitung von Abwasser in Bettingen",
+  "erlassdatum": "Vom 15. Juni 2015 (Stand 1. Oktober 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Ordnung betreffend Strassen- und Kanalisationsbeiträge sowie Gebühren für die Ableitung von Abwasser (Strassen- und Kanalisationsordnung) vom 30. September 2014,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BeE 750.100",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -224,7 +254,16 @@
      "label": "VII. Rechtsmittel"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 24. 6. 2015.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   }
  }
 }

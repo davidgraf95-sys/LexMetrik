@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonales Geldspielgesetz",
+  "erlassdatum": "vom 01.11.2021 (Stand 14.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 32 Abs. 1, Art. 34 Abs. 4, Art. 41 Abs. 1, Art. 81 Abs. 3, Art. 85 Abs. 1 und Art. 127 Abs. 1 des Bundesgesetzes über Geldspiele vom 29. September 2017 sowie Art. 74 Abs. 2 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Geldspielgesetz (BGS; SR 935.51 )",
+    "links": [
+     {
+      "label": "935.51",
+      "url": "https://db.clex.ch/link/Bund/935.51/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 111.1",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -163,7 +215,25 @@
      "label": "III. Gebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 233.2",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "13": {
    "gliederung": [

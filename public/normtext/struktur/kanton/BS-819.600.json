@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Meldepflicht der Arbeitgeber bei bevorstehenden Entlassungen",
+  "erlassdatum": "Vom 13. Februar 1979 (Stand 1. April 1979)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 6 und § 16 des Einführungsgesetzes vom 22. November 1951 zum Bundesgesetz über die Arbeitsvermittlung vom 22. Juni 1951,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Dieses Bundesgesetz ist aufgehoben. Massgebend ist jetzt das Bundesgesetz über die Arbeitsvermittlung und den Personalverleih (Arbeitsvermittlungsgesetz, AVG) vom 6. 10. 1989 (SR 823.11 ) und die Verordnung dazu (SR 823.111 ). Die kant. Erlasse über die Arbeitsvermittlung werden zurzeit revidiert.",
+    "links": [
+     {
+      "label": "823.11",
+      "url": "https://db.clex.ch/link/Bund/823.11/de"
+     },
+     {
+      "label": "823.111",
+      "url": "https://db.clex.ch/link/Bund/823.111/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Staatsvertrag zwischen den Kantonen Basel-Stadt und Basel-Landschaft betreffend Planung, Regulation und Aufsicht in der Gesundheitsversorgung",
+  "erlassdatum": "Vom 6. Februar 2018 (Stand 1. Juli 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Regierungen der Kantone Basel-Stadt und Basel-Landschaft schliessen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 3 sowie § 27 der Verfassung des Kantons Basel-Stadt vom 23. März 2005 und § 64 Abs. 1 lit. a sowie Abs. 2, § 80 Abs. 3, § 110 Abs. 3 und § 111 Abs. 2 und 4 der Verfassung des Kantons Basel-Landschaft vom 17. Mai 1984,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "folgenden Vertrag:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SGS 100",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -59,6 +111,15 @@
    ],
    "marginalie": [
     "Koordination der Planung, Regulation und Aufsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 832.10",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -164,6 +225,22 @@
    ],
    "marginalie": [
     "Datenbearbeitung und Informationszugang"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 153.260",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Basel-Stadt: SG 153.260, Basel-Landschaft: SGS 162",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -261,6 +338,15 @@
    ],
    "marginalie": [
     "Zugang zu Informationen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Basel-Stadt: SG 153.260, Basel-Landschaft: SGS 162",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -283,6 +369,15 @@
    ],
    "marginalie": [
     "Streitigkeiten und Schiedsgericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 272",
+     "links": [],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "21": {

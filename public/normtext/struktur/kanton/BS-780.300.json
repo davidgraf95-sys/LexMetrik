@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Mobilitätsfonds",
+  "erlassdatum": "Vom 27. Juni 2023 (Stand 1. November 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 19 ter des Umweltschutzgesetzes Basel-Stadt (USG BS) vom 13. März 1991, unter Verweis auf seine Erläuterungen Nr. P230001.",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 780.100",
+    "links": [
+     {
+      "label": "780.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/780.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-780.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,15 @@
    ],
    "marginalie": [
     "Zweck des Mobilitätsfonds"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 2 Abs. 1: Gemäss Definition der Trägerschaft des Agglomerationsprogramms Basel",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -219,6 +267,15 @@
    ],
    "marginalie": [
     "Verfallene, eingestellte und rückgeforderte Beiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "In Kraft getreten am 6. Juli 2023.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "6_a": {

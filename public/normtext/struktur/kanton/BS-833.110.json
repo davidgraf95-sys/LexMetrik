@@ -1,5 +1,65 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die berufliche Vorsorge",
+  "erlassdatum": "Vom 23. Januar 2012 (Stand 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Verwaltungsrat der BSABB (BVG- und Stiftungsaufsicht beider Basel),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 6 lit. j und k des BVG- und Stiftungsaufsichtsvertrags vom 8./14. Juni 2011 i.V.m. Art. 97 Abs. 2 des Bundesgesetzes über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) vom 25. Juni 1982,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG BS 833.100; SGS BL 211.2.",
+    "links": [
+     {
+      "label": "833.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/833.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-833.100"
+      }
+     },
+     {
+      "label": "211.2",
+      "url": "https://db.clex.ch/link/BL/211.2/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 831.40.",
+    "links": [
+     {
+      "label": "831.40",
+      "url": "https://db.clex.ch/link/Bund/831.40/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +68,16 @@
      "label": "I. Geltungsbereich"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 1 Abs. 1: Verweis geändert durch VR-Beschluss vom 2. 10. 2014 (wirksam seit 1. 1. 2015).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -19,6 +88,20 @@
    ],
    "marginalie": [
     "Übernahme der Aufsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 831.435.1.",
+     "links": [
+      {
+       "label": "831.435.1",
+       "url": "https://db.clex.ch/link/Bund/831.435.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -30,6 +113,15 @@
    ],
    "marginalie": [
     "Aufgaben der BSABB"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 3 Abs. 1 lit a: Verweis geändert durch VR-Beschluss vom 2. 10. 2014 (wirksam seit 1. 1. 2015).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -85,6 +177,24 @@
    ],
    "marginalie": [
     "Mitteilungspflichten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 831.441.1.",
+     "links": [
+      {
+       "label": "831.441.1",
+       "url": "https://db.clex.ch/link/Bund/831.441.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVV_2"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "9": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe",
+  "erlassdatum": "Vom 26. Mai 2009 (Stand 1. Juni 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 6 und 8 des Gesetzes über Wahlen und Abstimmungen vom 21. April 1994,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 132.100.",
+    "links": [
+     {
+      "label": "132.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/132.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-132.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -20,7 +59,7 @@
     }
    ],
    "marginalie": [
-    "Zur elektronischen Stimmabgabe zugelassene Stimmberechtigte *"
+    "Zur elektronischen Stimmabgabe zugelassene Stimmberechtigte"
    ]
   },
   "3": {
@@ -42,7 +81,7 @@
     }
    ],
    "marginalie": [
-    "System zur elektronischen Stimmabgabe *"
+    "System zur elektronischen Stimmabgabe"
    ]
   },
   "5": {
@@ -52,9 +91,7 @@
      "label": "I. Anwendungsbereich und Organisation"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "6": {
    "gliederung": [
@@ -140,9 +177,7 @@
      "label": "IV. Sicherheit und Datenschutz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -151,9 +186,7 @@
      "label": "IV. Sicherheit und Datenschutz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -208,6 +241,15 @@
    ],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 21. 6. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8_a": {

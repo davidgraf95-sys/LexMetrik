@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gemeindeordnung der Bürgergemeinde Bettingen",
+  "erlassdatum": "Vom 18. April 1985 (Stand 25. Februar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Versammlung der Bürgergemeinde Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 des Gemeindegesetzes vom 17. Oktober 1984,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst folgende Gemeindeordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -520,9 +559,7 @@
      "label": "(III.)C. Fürsorgekommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -535,9 +572,7 @@
      "label": "(III.)C. Fürsorgekommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -674,7 +709,7 @@
     }
    ],
    "marginalie": [
-    "Gebühren *"
+    "Gebühren"
    ]
   },
   "47": {
@@ -753,7 +788,16 @@
      "label": "IX. Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vom Regierungsrat genehmigt am 20. 8. 1985.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

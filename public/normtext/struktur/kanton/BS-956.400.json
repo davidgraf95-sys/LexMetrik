@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung zwischen der Schweizerischen Eidgenossenschaft vertreten durch den Schweizerischen Bundesrat und den Kantonen Basel-Stadt und Basel-Landschaft, jeweils vertreten durch den Regierungsrat betreffend Zusammenarbeit bei der Wahrung der schweizerischen Interessen auf dem binationalen Flughafen Basel-Mülhausen",
+  "erlassdatum": "Vom 25. November 1997 (Stand 26. Juli 1998)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 1 Abs. 4 des französisch-schweizerischen Staatsvertrages vom 4. Juli 1949 über den Bau und Betrieb des Flughafens Basel-Mülhausen in Blotzheim, in Erwägung, dass – es sich beim Flughafen Basel-Mülhausen um einen der drei Landesflughäfen handelt, – die Aufsicht über die Flughäfen den Bundesbehörden obliegt, – der Kanton Basel-Stadt für den bisherigen Ausbau des Flughafens den überwiegenden Teil der öffentlichen Finanzmittel bereitgestellt hat, – die gesamtschweizerischen Interessen am Flughafen verstärkt gewahrt werden sollen,",
+    "fnNrs": [
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "wird folgendes vereinbart:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "3",
+    "text": "SG 956.200.",
+    "links": [
+     {
+      "label": "956.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/956.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-956.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,7 +46,16 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 3: Jetzt Eidg. Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [],
@@ -27,7 +71,16 @@
   },
   "7": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "8": {
    "gliederung": [],
@@ -59,7 +112,16 @@
   },
   "15": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Heute: Departement für Wirtschaft, Soziales und Umwelt (WSU).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "16": {
    "gliederung": [],

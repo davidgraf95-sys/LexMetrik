@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Bevölkerungsschutzgesetz",
+  "erlassdatum": "vom 13.09.2004 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 4. Oktober 2002 über den Bevölkerungsschutz und den Zivilschutz,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Bevölkerungs- und Zivilschutzgesetz (BZG; SR 520.1 )",
+    "links": [
+     {
+      "label": "520.1",
+      "url": "https://db.clex.ch/link/Bund/520.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +56,15 @@
    ],
    "marginalie": [
     "Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Im Bereich Bevölkerungsschutz und wirtschaftliche Landesversorgung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -43,6 +87,24 @@
    ],
    "marginalie": [
     "Regierungsrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. Art. 90 Kantonsverfassung (KV; bGS 111.1 )",
+     "links": [
+      {
+       "label": "111.1",
+       "url": "https://ar.clex.ch/data/111.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-111.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -53,7 +115,7 @@
     }
    ],
    "marginalie": [
-    "Departement Inneres und Sicherheit *"
+    "Departement Inneres und Sicherheit"
    ]
   },
   "6": {
@@ -65,6 +127,24 @@
    ],
    "marginalie": [
     "Gemeinden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 20 Gemeindegesetz (bGS 151.11 )",
+     "links": [
+      {
+       "label": "151.11",
+       "url": "https://ar.clex.ch/data/151.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-151.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -142,6 +222,32 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Polizeigesetz (bGS 521.1 ); Feuerschutzgesetz (bGS 861.0 )",
+     "links": [
+      {
+       "label": "521.1",
+       "url": "https://ar.clex.ch/data/521.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.1"
+       }
+      },
+      {
+       "label": "861.0",
+       "url": "https://ar.clex.ch/data/861.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-861.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -153,6 +259,40 @@
    ],
    "marginalie": [
     "Technische Werke"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 30 ff. Gemeindegesetz (bGS 151.11 )",
+     "links": [
+      {
+       "label": "151.11",
+       "url": "https://ar.clex.ch/data/151.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-151.11"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Vgl. Art. 30 Gemeindegesetz (bGS 151.11 )",
+     "links": [
+      {
+       "label": "151.11",
+       "url": "https://ar.clex.ch/data/151.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-151.11"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -175,6 +315,15 @@
    ],
    "marginalie": [
     "Aufgebot und Einsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Schweizerischer Feuerwehrverband, Führung von Grossereignissen, Teil A, Ausbildungsbehelf, Ziff. 1.3 und Ziff. 6.2 des Konzeptes Bevölkerungsschutz AR 2004",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -197,6 +346,24 @@
    ],
    "marginalie": [
     "Gemeinden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 28 ff. Gemeindegesetz (bGS 151.11 )",
+     "links": [
+      {
+       "label": "151.11",
+       "url": "https://ar.clex.ch/data/151.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-151.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -230,6 +397,20 @@
    ],
    "marginalie": [
     "Pflicht zur Hilfeleistung und Requisition"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Verordnung über die Requisition (SR 519.7 )",
+     "links": [
+      {
+       "label": "519.7",
+       "url": "https://db.clex.ch/link/Bund/519.7/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -285,6 +466,40 @@
    ],
    "marginalie": [
     "Partnerorganisationen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Polizeigesetz (bGS 521.1 ); Feuerschutzgesetz (bGS 861.0 ); Zivilschutzgesetz (bGS 511.2 )",
+     "links": [
+      {
+       "label": "521.1",
+       "url": "https://ar.clex.ch/data/521.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.1"
+       }
+      },
+      {
+       "label": "861.0",
+       "url": "https://ar.clex.ch/data/861.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-861.0"
+       }
+      },
+      {
+       "label": "511.2",
+       "url": "https://ar.clex.ch/data/511.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-511.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -351,6 +566,22 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "bGS 511.1 (lf. Nr. 114)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "bGS 511.0 (lf. Nr. 857)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -362,6 +593,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Die Referendumsfrist ist am 16. November 2004 unbenutzt abgelaufen (Abl. 2004, S. 979).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "1. Januar 2005 (RRB vom 23. November 2004; Abl. 2004, S. 979)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

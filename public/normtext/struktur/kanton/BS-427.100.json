@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Bildungszentrum Gesundheit Basel-Stadt",
+  "erlassdatum": "Vom 15. Juni 2010 (Stand 4. April 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 52 Abs. 2 und § 74 Abs. 1 des Schulgesetzes vom 4. April 1929, auf §§ 2 lit. a und 3 Abs. 1 lit. m des Kantonalen Gesetzes über die Berufsbildung vom 12. September 2007 sowie auf die Verordnung des Eidgenössischen Volkswirtschaftsdepartements (EVD) über Mindestvorschriften für die Anerkennung von Bildungsgängen und Nachdiplomstudien der höheren Fachschulen vom 11. März 2005, auf Antrag des Erziehungsrates,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 420.200.",
+    "links": [
+     {
+      "label": "420.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/420.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-420.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 412.101.61.",
+    "links": [
+     {
+      "label": "412.101.61",
+      "url": "https://db.clex.ch/link/Bund/412.101.61/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -212,9 +281,7 @@
      "label": "11. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -240,9 +307,7 @@
      "label": "13. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -294,9 +359,7 @@
      "label": "17. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -309,9 +372,7 @@
      "label": "17. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [
@@ -337,9 +398,7 @@
      "label": "19. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -352,9 +411,7 @@
      "label": "20. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [

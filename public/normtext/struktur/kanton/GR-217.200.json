@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren der Grundbuchämter",
+  "erlassdatum": "Vom 05.12.2000 (Stand 01.01.2025)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 954 des Schweizerischen Zivilgesetzbuches und auf Art. 140 des kantonalen Einführungsgesetzes hierzu",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "von der Regierung erlassen am 5. Dezember 2000"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 210",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BR 210.100",
+    "links": [
+     {
+      "label": "210.100",
+      "url": "https://www.gr-lex.gr.ch/data/210.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +58,24 @@
    ],
    "marginalie": [
     "Anwendungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BR 210.370",
+     "links": [
+      {
+       "label": "210.370",
+       "url": "https://www.gr-lex.gr.ch/data/210.370/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "GR-210.370"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -142,6 +208,24 @@
    ],
    "marginalie": [
     "Eintragung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 221.301",
+     "links": [
+      {
+       "label": "221.301",
+       "url": "https://db.clex.ch/link/Bund/221.301/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FUSG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -208,6 +292,15 @@
    ],
    "marginalie": [
     "In-Kraft-Treten, Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "AGS 1984, 1282",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

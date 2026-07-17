@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Strassenmusik und Strassenkunst",
+  "erlassdatum": "Vom 10. Januar 2012 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 5 und 11 des Übertretungsstrafgesetzes (ÜStG) vom 13. Februar 2019 sowie auf § 17 der Verordnung über den Strassenverkehr (Strassenverkehrsverordnung, StVO) vom 17. Mai 2011,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 253.100",
+    "links": [
+     {
+      "label": "253.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/253.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-253.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 952.200",
+    "links": [
+     {
+      "label": "952.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/952.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-952.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

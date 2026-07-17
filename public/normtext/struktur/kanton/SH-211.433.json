@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Grundbuchgebührenverordnung",
+  "erlassdatum": "Vom 13.06.2000 (Stand 01.01.2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Schaffhausen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 136 des Gesetzes über die Einführung des Schweizerischen Zivilgesetzbuches sowie die entsprechenden bundesrechtlichen Bestimmungen,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -226,7 +244,16 @@
      "label": "5 Schluss- und Übergangsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Amtsblatt 2000, S. 853.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

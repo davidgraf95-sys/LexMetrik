@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Einführung des Schweizerischen Zivilgesetzbuches",
+  "erlassdatum": "Vom 27. April 1911 (Stand 1. April 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "hat zur Einführung des Schweizerischen Zivilgesetzbuches vom 10. Dezember 1907 unter Anschluss an dessen Anordnung und Reihenfolge",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschlossen was folgt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 210.",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,7 +65,16 @@
     }
    ],
    "marginalie": [
-    "Rechtsmittel gegen Verfügungen des Erbschaftsamtes *"
+    "Rechtsmittel gegen Verfügungen des Erbschaftsamtes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -61,9 +109,7 @@
      "label": "1.II. Mündigerkärung (ZGB 15, 422 Ziff. 6, 431)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -226,9 +272,7 @@
      "label": "1.VIII. Leichenfund"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -245,9 +289,7 @@
      "label": "1.IX. Gerichtliche Feststellung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -277,9 +319,7 @@
      "label": "2. Titel: Die juristischen Personen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -351,7 +391,21 @@
      "label": "2.IV. Aufhebung der Stiftungen (ZGB 88 Abs. 1)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Untertitel I. in der Fassung des GRB vom 18. 10. 2006 (wirksam seit 1. 1. 2007; Ratschlag Nr. 05.1156.01 ).",
+     "links": [
+      {
+       "label": "Nr. 05.1156.01",
+       "url": "http://www.grosserrat.bs.ch/dokumente/000319/000000319709.pdf"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "21": {
    "gliederung": [
@@ -385,9 +439,7 @@
      "label": "3.II. Ehe eines verschollenen, Auflösung; Wartefristen, Abkürzung; zuständiger Richter und Verfahren (ZGB 102–104)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "23": {
    "gliederung": [
@@ -404,9 +456,7 @@
      "label": "3.III. Eheeinspruch, zuständiger Einsprecher bei Nichtigkeitsgrund (ZGB 109)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -423,9 +473,7 @@
      "label": "3.IV. Trauungsbewilligung und Befreiung vom Ehefähigkeitszeugnis für Ausländer (ZGB SchlT 59 (NAG 7e)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [
@@ -461,9 +509,7 @@
      "label": "4.I. Zuständigkeit zur Aussprechung der Scheidung, Trennung und Auflösung einer eingetragenen Partnerschaft auf gemeinsames Begehren und auf Klage (ZGB 111–116; PartG 29–34)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -480,9 +526,7 @@
      "label": "4.II. Vorsorgliche Massnahmen bei Trennung, Scheidung, Ungültigerklärung der Ehe und Trennung oder Auflösung der eingetragenen Partnerschaft (ZGB 137; vgl. ZGB 110; PartG 17 Abs. 2 und 4)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [
@@ -499,9 +543,7 @@
      "label": "4.III. Rechte der Eltern und der Kinder"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -518,9 +560,7 @@
      "label": "4.IV. Prozessverfahren (ZGB 135–149)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -537,9 +577,7 @@
      "label": "5.I. Ausgleich für ausserordentliche Beiträge eines Ehegatten (ZGB 165)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -556,9 +594,7 @@
      "label": "5.II. Allgemeine richterliche Massnahmen, Massnahmen zum Schutze der ehelichen Gemeinschaft oder der Gemeinschaft der eingetragenen Partnerschaft"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -575,8 +611,15 @@
      "label": "5.II. Allgemeine richterliche Massnahmen, Massnahmen zum Schutze der ehelichen Gemeinschaft oder der Gemeinschaft der eingetragenen Partnerschaft"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Sechster Titel in der Fassung des GRB vom 21. 10. 1987 (wirksam seit 1. 1. 1988).",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "33": {
@@ -594,9 +637,7 @@
      "label": "6.I. Allgemeine Vorschriften"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "34": {
    "gliederung": [
@@ -670,9 +711,7 @@
      "label": "6.II. Errungenschaftsbeteiligung, Klage gegen Dritte (ZGB 208, 220)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -689,9 +728,7 @@
      "label": "6.III. Gütergemeinschaft, Ausschlagung und Annahme der Erbschaft (ZGB 230)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [
@@ -708,9 +745,7 @@
      "label": "6.IV. Gütertrennung, Zuweisung von Miteigentum (ZGB 251)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -828,9 +863,7 @@
      "label": "8.I. Die Unterhaltspflicht der Eltern"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "46": {
    "gliederung": [
@@ -867,7 +900,7 @@
     }
    ],
    "marginalie": [
-    "Inkassohilfe und Vorschüsse (ZGB 290, 131) *"
+    "Inkassohilfe und Vorschüsse (ZGB 290, 131)"
    ]
   },
   "48": {
@@ -885,9 +918,7 @@
      "label": "8.I. Die Unterhaltspflicht der Eltern"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "49": {
    "gliederung": [
@@ -904,8 +935,15 @@
      "label": "8.I. Die Unterhaltspflicht der Eltern"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Untertitel II. in der Fassung des GRB vom 8. 12. 1999 (wirksam seit 1. 1. 2000).",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "50": {
@@ -948,9 +986,7 @@
      "label": "8.II.2. Entziehung der elterlichen Sorge"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "52": {
    "gliederung": [
@@ -971,9 +1007,7 @@
      "label": "8.II.2. Entziehung der elterlichen Sorge"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "53": {
    "gliederung": [
@@ -994,9 +1028,7 @@
      "label": "8.II.2. Entziehung der elterlichen Sorge"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "54": {
    "gliederung": [
@@ -1036,9 +1068,7 @@
      "label": "8.III. Das Kindesvermögen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "56": {
    "gliederung": [
@@ -1139,9 +1169,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "61": {
    "gliederung": [
@@ -1162,9 +1190,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "62": {
    "gliederung": [
@@ -1185,9 +1211,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "63": {
    "gliederung": [
@@ -1208,9 +1232,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "64": {
    "gliederung": [
@@ -1231,9 +1253,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "65": {
    "gliederung": [
@@ -1254,9 +1274,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "66": {
    "gliederung": [
@@ -1277,9 +1295,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "67": {
    "gliederung": [
@@ -1300,9 +1316,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "68": {
    "gliederung": [
@@ -1323,9 +1337,7 @@
      "label": "8.III.5. Ordnungsbusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "69": {
    "gliederung": [
@@ -1342,9 +1354,7 @@
      "label": "9.I. Unterstützungspflicht"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "70": {
    "gliederung": [
@@ -1414,9 +1424,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "74": {
    "gliederung": [
@@ -1433,9 +1441,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "75": {
    "gliederung": [
@@ -1452,9 +1458,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "76": {
    "gliederung": [
@@ -1471,9 +1475,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "77": {
    "gliederung": [
@@ -1490,9 +1492,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "78": {
    "gliederung": [
@@ -1509,9 +1509,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "79": {
    "gliederung": [
@@ -1528,9 +1526,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "80": {
    "gliederung": [
@@ -1547,9 +1543,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "81": {
    "gliederung": [
@@ -1566,9 +1560,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "82": {
    "gliederung": [
@@ -1589,9 +1581,7 @@
      "label": "10.1.II. Vormund und Beistand"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "83": {
    "gliederung": [
@@ -1612,9 +1602,7 @@
      "label": "10.2.I. Entmündigung, Zuständigkeit und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "84": {
    "gliederung": [
@@ -1635,9 +1623,7 @@
      "label": "10.2.I. Entmündigung, Zuständigkeit und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "85": {
    "gliederung": [
@@ -1658,9 +1644,7 @@
      "label": "10.2.I. Entmündigung, Zuständigkeit und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "86": {
    "gliederung": [
@@ -1681,9 +1665,7 @@
      "label": "10.2.II. Veröffentlichung und Kosten der Entmündigung (ZGB 375)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "87": {
    "gliederung": [
@@ -1700,9 +1682,7 @@
      "label": "3. Abschnitt (10. Titel): Die Zuständigkeit"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "88": {
    "gliederung": [
@@ -1723,9 +1703,7 @@
      "label": "10.4.I. Anstalts- und Amtsvormund (ZGB 380, 381)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "89": {
    "gliederung": [
@@ -1746,9 +1724,7 @@
      "label": "10.4.II. Vorläufige Entziehung der Handlungsfähigkeit (ZGB 386)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "90": {
    "gliederung": [
@@ -1769,9 +1745,7 @@
      "label": "10.4.III. Mitteilung der Ernennung zum Vormund (ZGB 387)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "91": {
    "gliederung": [
@@ -1792,9 +1766,7 @@
      "label": "10.4.IV. Ablehnung und Anfechtung (ZGB 388, 390)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "92": {
    "gliederung": [
@@ -1815,9 +1787,7 @@
      "label": "10.4.V. Übergabe des Amtes (ZGB 391)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "93": {
    "gliederung": [
@@ -1838,9 +1808,7 @@
      "label": "10.5.I. Beistandschaft behufs Vermögensfürsorge (ZGB 393)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "94": {
    "gliederung": [
@@ -1861,9 +1829,7 @@
      "label": "10.5.II. Beschränkung der Handlungsfähigkeit; Beirat (ZGB 395)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "95": {
    "gliederung": [
@@ -1884,9 +1850,7 @@
      "label": "11.1.I. Übernahme des Amtes"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "96": {
    "gliederung": [
@@ -1911,9 +1875,7 @@
      "label": "11.1.I.2. Verwahrung von Wertsachen (ZGB 399, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "97": {
    "gliederung": [
@@ -1938,9 +1900,7 @@
      "label": "11.1.I.2. Verwahrung von Wertsachen (ZGB 399, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "98": {
    "gliederung": [
@@ -1965,9 +1925,7 @@
      "label": "11.1.I.2. Verwahrung von Wertsachen (ZGB 399, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "99": {
    "gliederung": [
@@ -1988,9 +1946,7 @@
      "label": "11.1.I.3. Versteigerungen von beweglichen Sachen und Grundstücken (ZGB 400, 404)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "100": {
    "gliederung": [
@@ -2015,9 +1971,7 @@
      "label": "11.1.I.4. Anlage von Barschaft (ZGB 401, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "101": {
    "gliederung": [
@@ -2042,9 +1996,7 @@
      "label": "11.1.I.4. Anlage von Barschaft (ZGB 401, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "102": {
    "gliederung": [
@@ -2065,9 +2017,7 @@
      "label": "11.1.II. Eigenes Handeln des Bevormundeten (ZGB 410)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "103": {
    "gliederung": [
@@ -2088,9 +2038,7 @@
      "label": "11.1.III. Jahresbericht und Jahresrechnung (ZGB 413, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "104": {
    "gliederung": [
@@ -2111,9 +2059,7 @@
      "label": "11.1.III. Jahresbericht und Jahresrechnung (ZGB 413, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "105": {
    "gliederung": [
@@ -2134,9 +2080,7 @@
      "label": "11.1.III. Jahresbericht und Jahresrechnung (ZGB 413, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "106": {
    "gliederung": [
@@ -2157,9 +2101,7 @@
      "label": "11.1.III. Jahresbericht und Jahresrechnung (ZGB 413, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "107": {
    "gliederung": [
@@ -2180,9 +2122,7 @@
      "label": "11.1.IV. Amtsdauer (ZGB 415)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "108": {
    "gliederung": [
@@ -2203,8 +2143,15 @@
      "label": "11.1.V. Entschädigung der Amts- und Anstaltsvormünder (ZGB 416)"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Das EG enthält zu ZGB 417–419 keine Bestimmungen.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "109": {
@@ -2226,9 +2173,7 @@
      "label": "11.3.I. Beschwerden und Zustimmungsgesuch (ZGB 420–422, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "110": {
    "gliederung": [
@@ -2249,9 +2194,7 @@
      "label": "11.3.II. Prüfung von Bericht und Rechnung (ZGB 423, 425)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "111": {
    "gliederung": [
@@ -2272,9 +2215,7 @@
      "label": "11.3.III. Verwaltungsvorschriften und Gebühren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "112": {
    "gliederung": [
@@ -2291,9 +2232,7 @@
      "label": "4. Abschnitt (11. Titel): Die Verantwortlichkeit der vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "113": {
    "gliederung": [
@@ -2310,9 +2249,7 @@
      "label": "12.I. Das Ende der Bevormundung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "114": {
    "gliederung": [
@@ -2329,9 +2266,7 @@
      "label": "12.I. Das Ende der Bevormundung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "115": {
    "gliederung": [
@@ -2348,9 +2283,7 @@
      "label": "12.I. Das Ende der Bevormundung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "116": {
    "gliederung": [
@@ -2367,9 +2300,7 @@
      "label": "12.I. Das Ende der Bevormundung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "117": {
    "gliederung": [
@@ -2386,9 +2317,7 @@
      "label": "12.I. Das Ende der Bevormundung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "118": {
    "gliederung": [
@@ -2405,9 +2334,7 @@
      "label": "12.I. Das Ende der Bevormundung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "119": {
    "gliederung": [
@@ -2424,9 +2351,7 @@
      "label": "12.II. Das Ende des Vormundschaftlichen Amtes"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "120": {
    "gliederung": [
@@ -2443,9 +2368,7 @@
      "label": "12.II. Das Ende des Vormundschaftlichen Amtes"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "121": {
    "gliederung": [
@@ -2466,9 +2389,7 @@
      "label": "12.III.1. Schlussbericht und -rechnung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "122": {
    "gliederung": [
@@ -2489,9 +2410,7 @@
      "label": "12.III.1. Schlussbericht und -rechnung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "123": {
    "gliederung": [
@@ -2512,9 +2431,7 @@
      "label": "12.III.1. Schlussbericht und -rechnung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "124": {
    "gliederung": [
@@ -2527,9 +2444,7 @@
      "label": "13. Titel: Die gesetzlichen Erben"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "125": {
    "gliederung": [
@@ -2546,9 +2461,7 @@
      "label": "14.I. Pflichtteil der Geschwister (ZGB 470–472, SchlT 61 Abs. 2)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "126": {
    "gliederung": [
@@ -3094,9 +3007,7 @@
      "label": "17.II. Die Teilungsart"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "154": {
    "gliederung": [
@@ -3109,9 +3020,7 @@
      "label": "18. Titel: Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "155": {
    "gliederung": [
@@ -3217,6 +3126,15 @@
    ],
    "marginalie": [
     "2. Öffnungen in Scheidemauern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 160: Dieses G ist aufgehoben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "161": {
@@ -3236,6 +3154,15 @@
    ],
    "marginalie": [
     "3. Öffnungen in Hinterfassaden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "§ 161: G vom 4. 4. 1864.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "162": {
@@ -3257,9 +3184,7 @@
      "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "163": {
    "gliederung": [
@@ -3280,9 +3205,7 @@
      "label": "19.V.4. Recht der halben Hofstatt (ZGB 686)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "164": {
    "gliederung": [
@@ -3307,9 +3230,7 @@
      "label": "19.V.4.C. Umbau von Scheidemauern"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "165": {
    "gliederung": [
@@ -3334,9 +3255,7 @@
      "label": "19.V.4.D. Halbe Hofstatt, Eigentum und Benützung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "166": {
    "gliederung": [
@@ -3361,9 +3280,7 @@
      "label": "19.V.4.E. Nichtbenützung des Rechts der halben Hofstatt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "167": {
    "gliederung": [
@@ -3388,9 +3305,7 @@
      "label": "19.V.4.F. Abscheidungsmauern"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "168": {
    "gliederung": [
@@ -3453,9 +3368,7 @@
      "label": "19.V.7. Wegrechte"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "171": {
    "gliederung": [
@@ -3499,9 +3412,7 @@
      "label": "19.V.7. Wegrechte"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "173": {
    "gliederung": [
@@ -3539,9 +3450,7 @@
      "label": "19.VI. Zutritt Jagd- und Fischereiberechtigter (ZGB 699)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "175": {
    "gliederung": [
@@ -3559,7 +3468,16 @@
     }
    ],
    "marginalie": [
-    "1. Allgemeine Vorbehalte des kantonalen Rechts. Lage der Parzellen an öffentlichen Fahrwegen. Bauten an der Kantonsgrenze und an den Gemeindegrenzen [11]"
+    "1. Allgemeine Vorbehalte des kantonalen Rechts. Lage der Parzellen an öffentlichen Fahrwegen. Bauten an der Kantonsgrenze und an den Gemeindegrenzen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Titel ergänzt durch G vom 11. 2. 1954.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "176": {
@@ -3577,9 +3495,7 @@
      "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "177": {
    "gliederung": [
@@ -3596,9 +3512,7 @@
      "label": "19.VII. Öffentlich-Rechtliche Beschränkungen (ZGB 702)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "178": {
    "gliederung": [
@@ -3664,7 +3578,7 @@
     }
    ],
    "marginalie": [
-    "b) Baugebiet *"
+    "b) Baugebiet"
    ]
   },
   "181": {
@@ -3682,9 +3596,7 @@
      "label": "19.VIII. Quellen und Brunnen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "182": {
    "gliederung": [
@@ -3701,9 +3613,7 @@
      "label": "19.VIII. Quellen und Brunnen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "183": {
    "gliederung": [
@@ -3824,9 +3734,7 @@
      "label": "21.II. Öffentlich-rechtliche Grundlasten (ZGB 784)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "190": {
    "gliederung": [
@@ -3860,9 +3768,7 @@
      "label": "22.II. Massregeln bei Wertverminderung des Grundpfandes"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "192": {
    "gliederung": [
@@ -3879,9 +3785,7 @@
      "label": "22.II. Massregeln bei Wertverminderung des Grundpfandes"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "193": {
    "gliederung": [
@@ -3898,9 +3802,7 @@
      "label": "22.II. Massregeln bei Wertverminderung des Grundpfandes"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "194": {
    "gliederung": [
@@ -3934,9 +3836,7 @@
      "label": "22.IV. Amtliche Schätzung (ZGB 843 Abs. 1, 848)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "196": {
    "gliederung": [
@@ -3953,9 +3853,7 @@
      "label": "22.V. Ausfertigung von Schuldbrief und Gült (ZGB 857)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "197": {
    "gliederung": [
@@ -4006,9 +3904,7 @@
      "label": "22.VIII. Kraftloserklärung von Titeln und Coupons bei Gült und Schuldbrief (ZGB 870, 871)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "200": {
    "gliederung": [
@@ -4025,9 +3921,7 @@
      "label": "22.IX. Überwachung der Auslosung und Tilgung bei Anleihensobligationen mit Gültsicherung und bei Seriengülten (ZGB 882)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "201": {
    "gliederung": [
@@ -4078,9 +3972,7 @@
      "label": "23.III. Pfandbriefe (ZGB 916-918)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "204": {
    "gliederung": [
@@ -4152,9 +4044,7 @@
      "label": "25.III. Vorläufige Eintragung auf richterlichen Befehl (ZGB 961, 966)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "208": {
    "gliederung": [
@@ -4188,9 +4078,7 @@
      "label": "25.V. Anmeldungen (ZGB 963; Grundbuchverordnung Art. 20)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "210": {
    "gliederung": [
@@ -4220,9 +4108,7 @@
      "label": "I. (V. Teil) Wildschaden (OR 56 Abs. 3)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "212": {
    "gliederung": [
@@ -4262,7 +4148,7 @@
     }
    ],
    "marginalie": [
-    "1. Kündigung, ortsüblicher Termin (OR 266b–d, 296 Abs. 2) *"
+    "1. Kündigung, ortsüblicher Termin (OR 266b–d, 296 Abs. 2)"
    ]
   },
   "215": {
@@ -4319,9 +4205,7 @@
      "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "219": {
    "gliederung": [
@@ -4357,9 +4241,7 @@
      "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "221": {
    "gliederung": [
@@ -4376,9 +4258,7 @@
      "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "222": {
    "gliederung": [
@@ -4395,9 +4275,7 @@
      "label": "I.I. Eheliches Güterrecht, Übergangsbestimmungen und Bürgerrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "223": {
    "gliederung": [
@@ -4558,9 +4436,7 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "232": {
    "gliederung": [
@@ -4577,9 +4453,7 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "233": {
    "gliederung": [
@@ -4596,9 +4470,7 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "234": {
    "gliederung": [
@@ -4615,9 +4487,7 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "235": {
    "gliederung": [
@@ -4634,9 +4504,7 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "236": {
    "gliederung": [
@@ -4653,9 +4521,7 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "237": {
    "gliederung": [
@@ -4672,9 +4538,7 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "238": {
    "gliederung": [
@@ -4691,9 +4555,7 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "239": {
    "gliederung": [
@@ -4710,8 +4572,15 @@
      "label": "I.VIII. Öffentliche Beurkundung und Beglaubigung (ZGBSchlT 55, 55a)"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "ZGBSchlT 57 aufgehoben durch BG vom 8. 11. 1934.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "240": {
@@ -4729,9 +4598,7 @@
      "label": "I.IX. Sicherung der Sparkasseneinlagen (ZGBSchlT 57)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "241": {
    "gliederung": [
@@ -4748,9 +4615,7 @@
      "label": "I.IX. Sicherung der Sparkasseneinlagen (ZGBSchlT 57)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "242": {
    "gliederung": [
@@ -4767,9 +4632,7 @@
      "label": "I.X. Verkündungs- und Trauungserlaubnis an Ausländer (ZGBSchlT 59 Ziff. 7e)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "243": {
    "gliederung": [
@@ -4786,7 +4649,16 @@
      "label": "II.1. Allgemeines. Gänzliche Aufhebung kantonaler Erlasse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "§ 243: Die Liste der durch § 243 aufgehobenen Erlasse wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "244": {
    "gliederung": [
@@ -4803,9 +4675,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "245": {
    "gliederung": [
@@ -4822,9 +4692,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "246": {
    "gliederung": [
@@ -4841,9 +4709,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "247": {
    "gliederung": [
@@ -4860,9 +4726,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "248": {
    "gliederung": [
@@ -4879,9 +4743,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "249": {
    "gliederung": [
@@ -4898,9 +4760,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "250": {
    "gliederung": [
@@ -4917,9 +4777,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "251": {
    "gliederung": [
@@ -4936,9 +4794,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "252": {
    "gliederung": [
@@ -4955,9 +4811,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "253": {
    "gliederung": [
@@ -4974,9 +4828,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "254": {
    "gliederung": [
@@ -4993,9 +4845,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "255": {
    "gliederung": [
@@ -5012,9 +4862,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "256": {
    "gliederung": [
@@ -5031,9 +4879,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "257": {
    "gliederung": [
@@ -5050,9 +4896,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "258": {
    "gliederung": [
@@ -5069,9 +4913,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "259": {
    "gliederung": [
@@ -5088,9 +4930,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "260": {
    "gliederung": [
@@ -5107,9 +4947,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "261": {
    "gliederung": [
@@ -5126,9 +4964,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "262": {
    "gliederung": [
@@ -5145,9 +4981,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "263": {
    "gliederung": [
@@ -5164,9 +4998,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "264": {
    "gliederung": [
@@ -5183,9 +5015,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "265": {
    "gliederung": [
@@ -5202,9 +5032,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "266": {
    "gliederung": [
@@ -5221,9 +5049,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "267": {
    "gliederung": [
@@ -5240,9 +5066,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "268": {
    "gliederung": [
@@ -5259,9 +5083,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "269": {
    "gliederung": [
@@ -5278,9 +5100,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "270": {
    "gliederung": [
@@ -5297,9 +5117,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "271": {
    "gliederung": [
@@ -5316,9 +5134,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "272": {
    "gliederung": [
@@ -5335,9 +5151,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "273": {
    "gliederung": [
@@ -5354,9 +5168,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "274": {
    "gliederung": [
@@ -5373,9 +5185,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "275": {
    "gliederung": [
@@ -5392,9 +5202,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "276": {
    "gliederung": [
@@ -5411,9 +5219,7 @@
      "label": "II.2. Teilweise Aufhebung und Änderung kantonaler Erlasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "277": {
    "gliederung": [
@@ -5465,7 +5271,16 @@
      "label": "IV. Inkrafttreten dieses Gesetzes"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Vom Bundesrat genehmigt am 26. 5. 1911.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "164_a": {
    "gliederung": [
@@ -5490,9 +5305,7 @@
      "label": "19.V.4.C. Umbau von Scheidemauern"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "164_b": {
    "gliederung": [
@@ -5517,9 +5330,7 @@
      "label": "19.V.4.C. Umbau von Scheidemauern"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16_a": {
    "gliederung": [
@@ -5536,7 +5347,25 @@
      "label": "2.I. Auflösung von Vereinen durch Gerichtsurteil (ZGB 78)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Abschn. II: Betr. Aufsicht über Personalvorsorgestiftungen: Siehe Vertrag zwischen den Kantonen Basel-Stadt und Basel-Landschaft über die BVB- und Stiftungsaufsicht beider Basel (BVG- und Stiftungsaufsichtsvertrag) vom 14. 6. 2011 (SG 833.100 ).",
+     "links": [
+      {
+       "label": "833.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/833.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-833.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "180_a": {
    "gliederung": [
@@ -5576,9 +5405,7 @@
      "label": "21.II. Öffentlich-rechtliche Grundlasten (ZGB 784)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18_a": {
    "gliederung": [
@@ -5690,7 +5517,7 @@
     }
    ],
    "marginalie": [
-    "2. Schlichtungsbehörde und Hinterlegungsstelle (OR 274a, 259g) *"
+    "2. Schlichtungsbehörde und Hinterlegungsstelle (OR 274a, 259g)"
    ]
   },
   "214_b": {
@@ -5705,7 +5532,7 @@
     }
    ],
    "marginalie": [
-    "3. Formulare (OR 266l Abs. 2, 269d Abs. 1, 270 Abs. 2, 298) *"
+    "3. Formulare (OR 266l Abs. 2, 269d Abs. 1, 270 Abs. 2, 298)"
    ]
   },
   "215_a": {
@@ -5732,9 +5559,7 @@
      "label": "VII. (V. Teil) Depositenstellen (OR 633, 764)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "217_a": {
    "gliederung": [
@@ -5747,9 +5572,7 @@
      "label": "IX. (V. Teil) Gerichtszuständigkeit"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "217_b": {
    "gliederung": [
@@ -5766,9 +5589,7 @@
      "label": "IX.2. Ausnahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "217_c": {
    "gliederung": [
@@ -5785,9 +5606,7 @@
      "label": "IX.2. Ausnahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "217_d": {
    "gliederung": [
@@ -5804,9 +5623,7 @@
      "label": "IX.2. Ausnahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "223_a": {
    "gliederung": [
@@ -5825,6 +5642,22 @@
    ],
    "marginalie": [
     "2. Altrechtliche Kindesannahmen (ZGBSchlT 12a)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "§ 223a Abs. 1: § 43 in der Fassung vom 13. 4. 1944: Siehe Anhang 1 Ziff. 1.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "§ 223a Abs. 1: § 44 in der Fassung vom 27. 4. 1911: Siehe Anhang 1 Ziff. 2.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "223_b": {
@@ -5899,9 +5732,7 @@
      "label": "3.V. Ungültigkeit einer Ehe oder eingetragenen Partnerschaft"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "28_a": {
    "gliederung": [
@@ -5918,9 +5749,7 @@
      "label": "4.III. Rechte der Eltern und der Kinder"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "28_b": {
    "gliederung": [
@@ -5937,9 +5766,7 @@
      "label": "4.III. Rechte der Eltern und der Kinder"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "28_c": {
    "gliederung": [
@@ -5956,9 +5783,7 @@
      "label": "4.III. Rechte der Eltern und der Kinder"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "28_d": {
    "gliederung": [
@@ -5994,9 +5819,7 @@
      "label": "4.V. Urteilsänderung, Vollstreckung"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "29_b": {
    "gliederung": [
@@ -6013,9 +5836,7 @@
      "label": "4.V. Urteilsänderung, Vollstreckung"
     }
    ],
-   "marginalie": [
-    "… *"
-   ]
+   "marginalie": []
   },
   "47_a": {
    "gliederung": [
@@ -6089,9 +5910,7 @@
      "label": "1. Abschnitt (10. Titel): Die vormundschaftlichen Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "94_a": {
    "gliederung": [
@@ -6112,9 +5931,7 @@
      "label": "10.5.III. Beistandbestellung (ZGB 397)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

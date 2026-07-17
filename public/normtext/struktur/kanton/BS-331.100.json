@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die öffentlichen Spitäler des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 16. Februar 2011 (Stand 1. Januar 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 27 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 10.0228.01 vom 24. August 2010 sowie in die Berichte der Gesundheits- und Sozialkommission und dem Mitbericht der Finanzkommission Nr. 10.0228.02 vom 12. Januar 2011,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -35,7 +74,16 @@
      "label": "IV. Kooperationen, Beteiligungen und Veräusserungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [
@@ -370,6 +418,36 @@
    ],
    "marginalie": [
     "Pensionskassengesetz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 166.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 29: Die Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Angenommen in der Volksabstimmung vom 15. 5. 2011",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Wirksam seit 1. 1. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

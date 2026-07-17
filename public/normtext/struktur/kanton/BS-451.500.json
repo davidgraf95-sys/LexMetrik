@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend das Museum Kleines Klingental",
+  "erlassdatum": "Vom 27. August 2013 (Stand 1. September 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz, OG) vom 22. April 1976und das Gesetz über die Verwaltungsgebühren vom 9. März 1972,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +77,15 @@
    ],
    "marginalie": [
     "Raumnutzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 2: Der Plan wird hier nicht abgedruckt. Er kann im Museum Kleines Klingental eingesehen werden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -109,6 +174,15 @@
    ],
    "marginalie": [
     "Tarife"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 1. 9. 2013.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

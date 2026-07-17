@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Benützungsreglement für das Staatsarchiv",
+  "erlassdatum": "vom 23.11.2010 (Stand 01.01.2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 17 des Archivgesetzes vom 22. März 2010,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 421.10",
+    "links": [
+     {
+      "label": "421.10",
+      "url": "https://ar.clex.ch/data/421.10/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-421.10"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über das Archivwesen",
+  "erlassdatum": "Vom 11. September 1996 (Stand 1. Januar 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -163,6 +181,15 @@
    ],
    "marginalie": [
     "Benützung durch öffentliche Organe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 12 Abs. 3: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Informations- und Datenschutzgesetz (IDG) vom 9. 6. 2010 (SG 153.260).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -248,6 +275,15 @@
    ],
    "marginalie": [
     "Rechtsmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 11. 1998.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif zum Strassengesetz",
+  "erlassdatum": "vom 19.01.2010 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 87 des Strassengesetzes vom 26. Oktober 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "StrG (bGS 731.11 )",
+    "links": [
+     {
+      "label": "731.11",
+      "url": "https://ar.clex.ch/data/731.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-731.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zur Arbeitszeit der Mitarbeiterinnen und Mitarbeiter des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 6. Juli 2004 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +22,16 @@
      "label": "I. Geltungsbereich"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 1 Abs. 1: Vgl. hiezu 1. RRB vom 24.8.2004 i. S. Lenkzeitgutschrift für BVB-Tramführerinnen und -führer sowie Bus- und Trolleybuschauffeusen und -chauffeure; 2. RRB vom 20.3.2012 i. S. Arbeitszeitreglement Schichtdienst Berufsfeuerwehr (mit Änderungen gemäss RRB vom 28.6.2016, in Kraft seit 1.8.2016 (KB 2.7.2016) und RRB vom 10.12.2019 in Kraft seit 1.1.2020 (KB 14.12.2019); 3. RBB vom 10.9.2019 i.S. Arbeitszeitreglement Schichtdienst Justiz- und Sicherheitsdepartement, in Kraft seit 15.9.2019 (KB 18.9.2019); 4. RRB vom 8.11.2022 i. S. Arbeitszeitreglement Schichtdienst Sanität (AZRS) in Kraft seit 1.12.2022 (KB 14.1.2023); 5. RRB vom 4.7.2023 i. S. Arbeitszeitreglement in der Abteilung «LIV - Leben in Vielfalt» (Arbeitszeitreglement LIV) in Kraft seit 1.7.2023 (KB 22. 7.2023)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -271,9 +294,7 @@
      "label": "A. Geldzulagen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -301,9 +322,7 @@
      "label": "A. Geldzulagen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -331,9 +350,7 @@
      "label": "A. Geldzulagen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -346,9 +363,7 @@
      "label": "A. Geldzulagen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -500,7 +515,7 @@
     }
    ],
    "marginalie": [
-    "Zeitkompensation und finanzielle Abgeltung *"
+    "Zeitkompensation und finanzielle Abgeltung"
    ]
   },
   "45": {
@@ -511,7 +526,7 @@
     }
    ],
    "marginalie": [
-    "Mehrarbeit bei Teilzeitarbeitsverhältnissen *"
+    "Mehrarbeit bei Teilzeitarbeitsverhältnissen"
    ]
   },
   "46": {
@@ -581,6 +596,15 @@
    ],
    "marginalie": [
     "Telearbeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "14_bis": {

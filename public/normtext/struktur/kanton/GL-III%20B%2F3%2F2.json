@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif",
+  "erlassdatum": "Vom 26.11.2008 (Stand 01.01.2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Landrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 33 des Gesetzes über Beurkundung und Beglaubigung (Beurkundungsgesetz),",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "GS III B/3/1",
+    "links": [
+     {
+      "label": "III B/3/1",
+      "url": "https://gesetze.gl.ch/data/III-B.3.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

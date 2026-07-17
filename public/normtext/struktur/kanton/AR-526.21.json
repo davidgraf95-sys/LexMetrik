@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über Jagd, Wild- und Vogelschutz",
+  "erlassdatum": "vom 23.04.2003 (Stand 01.04.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 24 Abs. 1 des Gesetzes vom 17. Februar 2003 über Jagd, Wild- und Vogelschutz,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Jagdgesetz (bGS 526.2 )",
+    "links": [
+     {
+      "label": "526.2",
+      "url": "https://ar.clex.ch/data/526.2/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-526.2"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -98,6 +137,15 @@
    ],
    "marginalie": [
     "Patententzug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. Art. 16 Jagdgesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -120,6 +168,20 @@
    ],
    "marginalie": [
     "Jagdzeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 5 eidg. Jagdgesetz (SR 922.0 )",
+     "links": [
+      {
+       "label": "922.0",
+       "url": "https://db.clex.ch/link/Bund/922.0/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -153,6 +215,20 @@
    ],
    "marginalie": [
     "Jagdbare Wild- und Vogelarten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 5 eidg. Jagdgesetz (SR 922.0 )",
+     "links": [
+      {
+       "label": "922.0",
+       "url": "https://db.clex.ch/link/Bund/922.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -240,7 +316,7 @@
     }
    ],
    "marginalie": [
-    "e) Jagd- und Schweisshunde *"
+    "e) Jagd- und Schweisshunde"
    ]
   },
   "23": {
@@ -251,7 +327,7 @@
     }
    ],
    "marginalie": [
-    "f) Motorfahrzeuge, Fallen *"
+    "f) Motorfahrzeuge, Fallen"
    ]
   },
   "24": {
@@ -262,7 +338,7 @@
     }
    ],
    "marginalie": [
-    "g) Ausgraben von Wild und Hunden *"
+    "g) Ausgraben von Wild und Hunden"
    ]
   },
   "25": {
@@ -273,7 +349,7 @@
     }
    ],
    "marginalie": [
-    "h) Mithilfe Dritter, Personen in Jagdausbildung *"
+    "h) Mithilfe Dritter, Personen in Jagdausbildung"
    ]
   },
   "26": {
@@ -284,7 +360,7 @@
     }
    ],
    "marginalie": [
-    "i) Eigentum an erlegtem Wild *"
+    "i) Eigentum an erlegtem Wild"
    ]
   },
   "27": {
@@ -295,7 +371,7 @@
     }
    ],
    "marginalie": [
-    "j) Schadenersatz *"
+    "j) Schadenersatz"
    ]
   },
   "28": {
@@ -307,6 +383,32 @@
    ],
    "marginalie": [
     "Jagdpolizeiorgane"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "bGS 321.1",
+     "links": [
+      {
+       "label": "321.1",
+       "url": "https://ar.clex.ch/data/321.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Vgl. Art. 1 eidg. Jagdverordnung (SR 922.01 )",
+     "links": [
+      {
+       "label": "922.01",
+       "url": "https://db.clex.ch/link/Bund/922.01/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -340,6 +442,20 @@
    ],
    "marginalie": [
     "Kantonale Jagdbanngebiete und Vogelreservate"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 11 eidg. Jagdgesetz (SR 922.0 )",
+     "links": [
+      {
+       "label": "922.0",
+       "url": "https://db.clex.ch/link/Bund/922.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -373,6 +489,24 @@
    ],
    "marginalie": [
     "Halten von wildlebenden Tieren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 10 Tierschutzverordnung (bGS 422.2 )",
+     "links": [
+      {
+       "label": "422.2",
+       "url": "https://ar.clex.ch/data/422.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-422.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -395,6 +529,24 @@
    ],
    "marginalie": [
     "Störungen des Lebensraumes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "(bGS 931.11 )",
+     "links": [
+      {
+       "label": "931.11",
+       "url": "https://ar.clex.ch/data/931.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-931.11"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "37": {
@@ -417,6 +569,24 @@
    ],
    "marginalie": [
     "Wildgerechte Waldbewirtschaftung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "bGS 931.1",
+     "links": [
+      {
+       "label": "931.1",
+       "url": "https://ar.clex.ch/data/931.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-931.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -450,6 +620,20 @@
    ],
    "marginalie": [
     "Erlaubte Selbsthilfe a) Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Vgl. Art. 5 eidg. Jagdgesetz (SR 922.0 )",
+     "links": [
+      {
+       "label": "922.0",
+       "url": "https://db.clex.ch/link/Bund/922.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "42": {
@@ -472,6 +656,20 @@
    ],
    "marginalie": [
     "c) Mittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 2 eidg. Jagdverordnung (SR 922.01 )",
+     "links": [
+      {
+       "label": "922.01",
+       "url": "https://db.clex.ch/link/Bund/922.01/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "44": {
@@ -505,6 +703,24 @@
    ],
    "marginalie": [
     "Jagdprüfungskommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Vgl. Art. 8 G über die Verwaltungsrechtspflege (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "47": {
@@ -637,6 +853,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "bGS 526.212 (lf. Nr. 476)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "21_a": {
@@ -658,7 +883,7 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmung zur Teilrevision vom 25. Januar 2022 *"
+    "Übergangsbestimmung zur Teilrevision vom 25. Januar 2022"
    ]
   },
   "8_a": {

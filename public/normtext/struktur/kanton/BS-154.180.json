@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Organisationsreglement des Strafgerichts",
+  "erlassdatum": "Vom 16. Dezember 2016 (Stand 16. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Gesamtgericht des Strafgerichts Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 10 ff. des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 154.100.",
+    "links": [
+     {
+      "label": "154.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/154.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-154.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

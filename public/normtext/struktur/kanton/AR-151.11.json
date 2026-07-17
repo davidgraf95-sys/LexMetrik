@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gemeindegesetz",
+  "erlassdatum": "vom 07.06.1998 (Stand 01.11.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Stimmberechtigten des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 107 der Kantonsverfassung vom 30. April 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 111.1",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +60,15 @@
    ],
    "marginalie": [
     "Einwohnergemeinde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 100 der Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -32,6 +80,15 @@
    ],
    "marginalie": [
     "Gemeindeautonomie"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. Art. 101 der Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -43,6 +100,15 @@
    ],
    "marginalie": [
     "Gemeindeordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 102 der Kantonsverfassung",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -87,6 +153,20 @@
    ],
    "marginalie": [
     "Ausstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. Art. 4 des Gesetzes vom 28. April 1985 über das Verwaltungsverfahren (bGS 143.5 )",
+     "links": [
+      {
+       "label": "143.5",
+       "url": "https://ar.clex.ch/data/143.5/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -120,6 +200,24 @@
    ],
    "marginalie": [
     "Information und Akteneinsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Gesetz vom 28. April 1996 über Information und Akteneinsicht (bGS 133.1 )",
+     "links": [
+      {
+       "label": "133.1",
+       "url": "https://ar.clex.ch/data/133.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-133.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -186,6 +284,31 @@
    ],
    "marginalie": [
     "Obligatorisches und fakultatives Referendum"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vgl. Art. 98 Abs. 2 der Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 47 des Gesetzes vom 24. April 1988 über die politischen Rechte (bGS 131.12 )",
+     "links": [
+      {
+       "label": "131.12",
+       "url": "https://ar.clex.ch/data/131.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-131.12"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -230,6 +353,32 @@
    ],
    "marginalie": [
     "Gemeindepräsident oder Gemeindepräsidentin"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Vgl. beispielsweise Art. 6 Abs. 1 und 23 Abs. 2 des Gesetzes vom 28. April 1985 über das Verwaltungsverfahren (bGS 143.5 )",
+     "links": [
+      {
+       "label": "143.5",
+       "url": "https://ar.clex.ch/data/143.5/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Vgl. beispielsweise Art. 2 des Einführungsgesetzes vom 27. April 1969 zum Schweizerischen Zivilgesetzbuch (bGS 211 )",
+     "links": [
+      {
+       "label": "211",
+       "url": "https://ar.clex.ch/data/211/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -252,6 +401,24 @@
    ],
    "marginalie": [
     "Geschäftsprüfungskommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Vgl. Art. 44 des Finanzhaushaltsgesetzes vom 30. April 1995 (bGS 612.0 )",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -285,6 +452,24 @@
    ],
    "marginalie": [
     "Öffentlichrechtliche Unternehmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Finanzhaushaltsgesetz vom 30. April 1995 (bGS 612.0 )",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -307,6 +492,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Art. 103 Abs. 1 der Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -318,6 +512,15 @@
    ],
    "marginalie": [
     "Pflicht zur Zusammenarbeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 103 Abs. 3 der Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -351,6 +554,24 @@
    ],
    "marginalie": [
     "b) Entstehung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Art.103 Abs. 2 der Kantonsverfassung; vgl. auch Art. 10 Abs. 2 und 3 des Gesetzes vom 24. April 1994 über die Einführung der Bundesgesetzeüber den Umweltschutz und über den Schutz der Gewässer (bGS 814.0 )",
+     "links": [
+      {
+       "label": "814.0",
+       "url": "https://ar.clex.ch/data/814.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-814.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -406,6 +627,24 @@
    ],
    "marginalie": [
     "g) Finanzhaushalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Vgl. Art. 1 Abs. 2 des Finanzhaushaltsgesetzes vom 30. April 1995 (bGS 612.0 )",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -428,6 +667,24 @@
    ],
    "marginalie": [
     "Finanzhaushalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Finanzhaushaltsgesetz vom 30. April 1995 (bGS 612.0 )",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "41": {
@@ -439,6 +696,15 @@
    ],
    "marginalie": [
     "Aufsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Vgl. Art. 82 Abs. 2 der Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "42": {
@@ -483,6 +749,43 @@
    ],
    "marginalie": [
     "Rechtsmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "Vgl. beispielsweise Art. 109 f. der Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Gesetz vom 28. April 1985 über das Verwaltungsverfahren (bGS 143.5 )",
+     "links": [
+      {
+       "label": "143.5",
+       "url": "https://ar.clex.ch/data/143.5/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Vgl. Art. 62 ff. des Gesetzes vom 24. April 1988 über die politischen Rechte (bGS 131.12 )",
+     "links": [
+      {
+       "label": "131.12",
+       "url": "https://ar.clex.ch/data/131.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-131.12"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "46": {
@@ -516,6 +819,15 @@
    ],
    "marginalie": [
     "Bürgergemeinden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Vgl. Art. 115 Abs. 1 der Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "49": {
@@ -538,6 +850,31 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "VbGS 153.1 (aGS I/9)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "bGS 131.12; die Änderung wurde im betreffenden Erlass eingefügt.",
+     "links": [
+      {
+       "label": "131.12",
+       "url": "https://ar.clex.ch/data/131.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-131.12"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "51": {
@@ -549,6 +886,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "7. Juni 1998",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5_a": {

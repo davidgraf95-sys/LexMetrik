@@ -1,10 +1,54 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag über die Aufnahme von Schülerinnen und Schülern des Kantons Aargau an Basler Gymnasien",
+  "erlassdatum": "Vom 20. Dezember 2023 (Stand 1. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "zwischen den Kantonen Aargau und Basel-Stadt, vertreten durch ihre Regierungsräte,"
+   },
+   {
+    "rolle": "verb",
+    "text": "wird folgende Vereinbarung getroffen:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zugang an Basler Gymnasien"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SAR 400.300",
+     "links": [
+      {
+       "label": "400.300",
+       "url": "https://db.clex.ch/link/AG/400.300/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SG 419.720",
+     "links": [
+      {
+       "label": "419.720",
+       "url": "https://www.gesetzessammlung.bs.ch/data/419.720/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-419.720"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "2": {

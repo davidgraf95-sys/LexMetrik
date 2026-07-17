@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Entschädigung der Expropriationskommission",
+  "erlassdatum": "Vom 23. Dezember 1974 (Stand 1. September 1991)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 64 und § 68 des Gesetzes vom 26. Juni 1974 über Enteignung und Impropriation, folgende Verordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 740.100.",
+    "links": [
+     {
+      "label": "740.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/740.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-740.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,9 +46,7 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [],
@@ -21,7 +54,32 @@
   },
   "5": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Diese Ordnung ist aufgehoben. Massgebend ist die ZPO vom 19. 12. 2008 (SR 272 ).",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Wirksam seit 2. 4. 1975",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

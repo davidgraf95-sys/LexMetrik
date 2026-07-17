@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung zwischen dem Kanton Basel-Stadt und dem Kanton Basel-Landschaft über das Krebsregister beider Basel",
+  "erlassdatum": "Vom 28. Juni 2019 (Stand 1. Januar 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Regierungsräte der diese Vereinbarung unterzeichnenden Kantone beschliessen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über die Registrierung von Krebserkrankungen (Krebsregistrierungsgesetz, KRG) vom 18. März 2016,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "das Folgende:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 818.33",
+    "links": [
+     {
+      "label": "818.33",
+      "url": "https://db.clex.ch/link/Bund/818.33/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

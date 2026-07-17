@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung der Bundesgesetze über den Umweltschutz und über den Schutz der Gewässer",
+  "erlassdatum": "vom 16.02.2004 (Stand 01.10.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 36 und 65 Abs. 1 des Bundesgesetzes vom 7. Oktober 1983 über den Umweltschutz und Art. 45 des Bundesgesetzes vom 24. Januar 1991 über den Schutz der Gewässer,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Umweltschutzgesetz (USG; SR 814.01 )",
+    "links": [
+     {
+      "label": "814.01",
+      "url": "https://db.clex.ch/link/Bund/814.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "USG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Gewässerschutzgesetz (GSchG; SR 814.20 )",
+    "links": [
+     {
+      "label": "814.20",
+      "url": "https://db.clex.ch/link/Bund/814.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "GSCHG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -74,6 +130,15 @@
    ],
    "marginalie": [
     "Regierungsrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 13 und 14 sowie 18 und 19",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -88,7 +153,7 @@
     }
    ],
    "marginalie": [
-    "Departement Bau und Volkswirtschaft *"
+    "Departement Bau und Volkswirtschaft"
    ]
   },
   "7": {
@@ -104,6 +169,24 @@
    ],
    "marginalie": [
     "Amt für Umwelt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "UVPV (SR 814.011 )",
+     "links": [
+      {
+       "label": "814.011",
+       "url": "https://db.clex.ch/link/Bund/814.011/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "UVPV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -134,6 +217,24 @@
    ],
    "marginalie": [
     "Übertragung von Vollzugsaufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 8 des Gesetzes über die Verwaltungsrechtspflege (VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -179,6 +280,24 @@
    ],
    "marginalie": [
     "Auskunftspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 46 Abs. 1 USG (SR 814.01 )",
+     "links": [
+      {
+       "label": "814.01",
+       "url": "https://db.clex.ch/link/Bund/814.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "USG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -239,6 +358,24 @@
    ],
    "marginalie": [
     "Spezialfinanzierungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 17 Finanzhaushaltsgesetz (bGS 612.0 )",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -314,6 +451,24 @@
    ],
    "marginalie": [
     "Bewilligungs- und Meldepflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 7 Abs. 1 USG (SR 814.01 )",
+     "links": [
+      {
+       "label": "814.01",
+       "url": "https://db.clex.ch/link/Bund/814.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "USG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -329,6 +484,24 @@
    ],
    "marginalie": [
     "Koordinationspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 99 f. Gesetz über die Raumplanung und das Baurecht (Baugesetz; bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -374,6 +547,20 @@
    ],
    "marginalie": [
     "Ereignisdienste"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 14 StFV (SR 814.012 )",
+     "links": [
+      {
+       "label": "814.012",
+       "url": "https://db.clex.ch/link/Bund/814.012/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -389,6 +576,24 @@
    ],
    "marginalie": [
     "Luftreinhaltung a) Stationäre Anlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "LRV (SR 814.318.142.1 )",
+     "links": [
+      {
+       "label": "814.318.142.1",
+       "url": "https://db.clex.ch/link/Bund/814.318.142.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LRV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -404,6 +609,15 @@
    ],
    "marginalie": [
     "b) Massnahmenpläne"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 31 LRV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -449,6 +663,24 @@
    ],
    "marginalie": [
     "b) Emissionskontrolle bei Fahrzeugen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Art. 3 Lärmschutzverordnung (LSV; SR 814.41 )",
+     "links": [
+      {
+       "label": "814.41",
+       "url": "https://db.clex.ch/link/Bund/814.41/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LSV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -464,6 +696,66 @@
    ],
    "marginalie": [
     "c) Vollzug Lärmschutz durch die Gemeinden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 4 Abs. 2 LSV (SR 814.41 )",
+     "links": [
+      {
+       "label": "814.41",
+       "url": "https://db.clex.ch/link/Bund/814.41/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LSV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Art. 7 ff. LSV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "Art. 13 ff. LSV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "Art. 24 ff. LSV",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "Art. 29 f. LSV",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "Art. 31 LSV",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Art. 32 ff. LSV",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -494,6 +786,20 @@
    ],
    "marginalie": [
     "e) Schall und Laser"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "Verordnung über den Schutz des Publikums von Veranstaltungen vor gesundheitsgefährdenden Schalleinwirkungen und Laserstrahlen (SR 814.49 )",
+     "links": [
+      {
+       "label": "814.49",
+       "url": "https://db.clex.ch/link/Bund/814.49/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -689,6 +995,15 @@
    ],
    "marginalie": [
     "Abfallanlagen a) Festlegung von Einzugsgebieten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Art. 31b USG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "47": {
@@ -749,6 +1064,31 @@
    ],
    "marginalie": [
     "Belastete Standorte a) Sanierung von belasteten Standorten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "Art. 18 Abs. 4 lit. g",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "SR 814.01",
+     "links": [
+      {
+       "label": "814.01",
+       "url": "https://db.clex.ch/link/Bund/814.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "USG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "51": {
@@ -807,7 +1147,25 @@
      "label": "V. Umweltgefährdende Stoffe: Pflanzenschutzmittel in der Landwirtschaft"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "Anhang 2.5 Chemikalien-Risikoreduktions-Verordnung (ChemRRV; SR 814.81 )",
+     "links": [
+      {
+       "label": "814.81",
+       "url": "https://db.clex.ch/link/Bund/814.81/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "CHEMRRV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "55": {
    "gliederung": [
@@ -820,7 +1178,21 @@
      "label": "VI. Gefährliche Güter: Beförderung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "Gefahrengutbeauftragtenverordnung (GGBV; SR 741.622 )",
+     "links": [
+      {
+       "label": "741.622",
+       "url": "https://db.clex.ch/link/Bund/741.622/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "56": {
    "gliederung": [
@@ -833,7 +1205,16 @@
      "label": "VII. Umweltverträglichkeitsprüfung: Verfahren und Prüfbehörde"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "Art. 29 ff. USG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "57": {
    "gliederung": [
@@ -847,7 +1228,16 @@
     }
    ],
    "marginalie": [
-    "Begriffe [29]"
+    "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "Vgl. Art. 4 GSchG",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "58": {
@@ -922,7 +1312,23 @@
     }
    ],
    "marginalie": [
-    "Düngen in der Land- und Forstwirtschaft *"
+    "Düngen in der Land- und Forstwirtschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "Art. 51 GSchG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "Art. 14 Abs. 1 GSchG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "64": {
@@ -1103,6 +1509,24 @@
    ],
    "marginalie": [
     "Provisorische Grundwasserschutzzonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "Art. 54 f. (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "76": {
@@ -1133,6 +1557,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "Art. 17 f. GSchG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "80": {
@@ -1163,6 +1596,15 @@
    ],
    "marginalie": [
     "Versickerung von nicht verschmutztem Abwasser"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "Vgl. die Definition des Begriffs «verschmutztes Abwasser» in Art. 56 dieses Gesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "82": {
@@ -1174,6 +1616,40 @@
    ],
    "marginalie": [
     "Rechtsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "Art. 98 f. (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "83": {
@@ -1207,6 +1683,56 @@
    ],
    "marginalie": [
     "Strafbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "SR 814.01",
+     "links": [
+      {
+       "label": "814.01",
+       "url": "https://db.clex.ch/link/Bund/814.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "USG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "SR 814.20",
+     "links": [
+      {
+       "label": "814.20",
+       "url": "https://db.clex.ch/link/Bund/814.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "39",
+     "text": "SR 313.0",
+     "links": [
+      {
+       "label": "313.0",
+       "url": "https://db.clex.ch/link/Bund/313.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VSTRR"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "86": {
@@ -1229,6 +1755,15 @@
    ],
    "marginalie": [
     "Anpassung an das neue Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "Insbesondere: Gesetz vom 24. April 1994 über die Einführung des Bundesgesetzes über den Umweltschutz und über den Schutz der Gewässer (lf. Nr. 499)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "88": {
@@ -1251,6 +1786,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "Die Referendumsfrist ist am 20. April 2004 unbenutzt abgelaufen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "1. Oktober 2005 (ausgenommen Art. 77 und 78; vgl. RRB vom 16. August 2005).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "50_a": {
@@ -1265,7 +1816,16 @@
     }
    ],
    "marginalie": [
-    "Sanierung von Schiessanlagen [25]"
+    "Sanierung von Schiessanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "Art. 18 Abs. 4 lit. h",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "56_a": {

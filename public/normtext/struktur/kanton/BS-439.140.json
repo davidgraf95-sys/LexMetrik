@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Entschädigungen für die Mitwirkung an Aufnahme- und Abschlussprüfungen",
+  "erlassdatum": "Vom 19. Februar 2008 (Stand 13. Juli 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 1 Abs. 2 des Lohngesetzes vom 18. Januar 1995, auf Antrag des Erziehungsrates,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 164.100.",
+    "links": [
+     {
+      "label": "164.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/164.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-164.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -14,14 +53,12 @@
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Abschlussprüfungen *"
+    "Abschlussprüfungen"
    ]
   },
   "4": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [],
@@ -29,14 +66,21 @@
   },
   "6": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 24. 2. 2008.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gemeindeordnung der Einwohnergemeinde Riehen",
+  "erlassdatum": "Vom 27. Februar 2002 (Stand 1. Januar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat der Einwohnergemeinde Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "beschliesst, gestützt auf § 9 des Gemeindegesetzes vom 17. Oktober 1984 und im Bestreben, – zu sinnerfüllter Existenz, hoher Lebensqualität und kultureller Vielfalt beizutragen, – die natürlichen Ressourcen und die Umwelt für gegenwärtige und künftige Generationen zu erhalten, – aus sozialer Verantwortung gerecht zu handeln, – die öffentlichen Aufgaben vorbildlich, vernünftig und unter Achtung der Würde, der Persönlichkeit und der Selbstbestimmung des Einzelnen zu erfüllen, – die Wirtschaft, besonders Handel und Gewerbe, zu fördern, – die geschichtlich gewachsene Eigenständigkeit als lebendige und solidarische, für Neues offene und in der Region verankerte Gemeinde zu stärken sowie – eine moderne, aufgabenorientierte und bevölkerungsnahe Gemeindeorganisation zu gewährleisten, folgende Gemeindeordnung:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -327,9 +362,7 @@
      "label": "V. Führungsinstrumente und Gemeindehaushalt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -338,9 +371,7 @@
      "label": "V. Führungsinstrumente und Gemeindehaushalt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -349,9 +380,7 @@
      "label": "V. Führungsinstrumente und Gemeindehaushalt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -382,9 +411,7 @@
      "label": "V. Führungsinstrumente und Gemeindehaushalt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -394,7 +421,7 @@
     }
    ],
    "marginalie": [
-    "Bewilligung von Ausgaben *"
+    "Bewilligung von Ausgaben"
    ]
   },
   "37": {
@@ -404,9 +431,7 @@
      "label": "V. Führungsinstrumente und Gemeindehaushalt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -415,9 +440,7 @@
      "label": "V. Führungsinstrumente und Gemeindehaushalt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [
@@ -426,9 +449,7 @@
      "label": "V. Führungsinstrumente und Gemeindehaushalt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -461,6 +482,15 @@
    ],
    "marginalie": [
     "Wirksamkeit und Übergangsrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§§ 23, 24 sowie 27–29 wirksam seit 7. 5. 2002",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "43": {

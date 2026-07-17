@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den öffentlichen Verkehr",
+  "erlassdatum": "Vom 10. März 2004 (Stand 9. Juli 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -197,6 +215,22 @@
    ],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Angenommen in der Volksabstimmung vom 27. 2. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 1. 2006.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13_a": {

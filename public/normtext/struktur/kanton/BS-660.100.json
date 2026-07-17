@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Vollzug der direkten Bundessteuer",
+  "erlassdatum": "Vom 20. Dezember 1994 (Stand 1. Mai 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des Bundesgesetzes über die direkte Bundessteuer (DBG) vom 14. Dezember 1990,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet was folgt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 642.11.",
+    "links": [
+     {
+      "label": "642.11",
+      "url": "https://db.clex.ch/link/Bund/642.11/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "DBG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

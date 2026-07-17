@@ -1,16 +1,96 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Ausführungsverordnung zur Inkassohilfe",
+  "erlassdatum": "vom 26.04.2022 (Stand 26.04.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Verordnung über die Inkassohilfe bei familienrechtlichen Unterhaltsansprüchen vom 6. Dezember 2019 sowie das Gesetz über Inkassohilfe und Bevorschussung von Unterhaltsbeiträgen für Kinder vom 27. April 1980,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Inkassohilfeverordnung SR 211.214.32",
+    "links": [
+     {
+      "label": "211.214.32",
+      "url": "https://db.clex.ch/link/Bund/211.214.32/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 212.33",
+    "links": [
+     {
+      "label": "212.33",
+      "url": "https://ar.clex.ch/data/212.33/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-212.33"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 211.214.32",
+     "links": [
+      {
+       "label": "211.214.32",
+       "url": "https://db.clex.ch/link/Bund/211.214.32/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
     "Umfang der Inkassohilfe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 211.214.32",
+     "links": [
+      {
+       "label": "211.214.32",
+       "url": "https://db.clex.ch/link/Bund/211.214.32/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {

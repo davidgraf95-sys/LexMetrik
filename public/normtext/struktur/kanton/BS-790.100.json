@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Baurekurskommission",
+  "erlassdatum": "Vom 7. Juni 2000 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,7 +29,21 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 3 Abs. 3: Siehe Geschäftsordnung der Baurekurskommission vom 26. 6. 2007, die unter http://www.baurekurskommission.bs.ch/brk-geschaeftsordnung.htm einsehbar ist.",
+     "links": [
+      {
+       "label": "http://www.baurekurskommission.bs.ch/brk-geschaeftsordnung.htm",
+       "url": "http://www.baurekurskommission.bs.ch/brk-geschaeftsordnung.htm"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [],
@@ -19,7 +51,16 @@
   },
   "5": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 5 Abs. 4: Jetziger Titel: Gesetz über die Verfassungs- und Verwaltungsrechtspflege (VRPG).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [],
@@ -27,12 +68,30 @@
   },
   "7": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 7: Die unter Ziff. 2.–6. zu findenden Änderungen anderer Erlasse werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "8": {
    "gliederung": [],
    "marginalie": [
     "Übergangs- und Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 1. 7. 2001.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend Massnahmen gegen den Alkohol- und Medikamentenmissbrauch sowie gegen den Drogenkonsum und betreffend Einführung des revidierten Bundesgesetzes über die Betäubungsmittel vom 20. März 1975",
+  "erlassdatum": "Vom 19. Februar 1976 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -17,7 +35,16 @@
      "label": "1. Abschnitt: Ziel und Grundlagen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Titel: Namensänderung von «Koordinations- und Beratungsstelle für Alkohol- und Drogenfragen», kurz «Koordinationsstelle», in «Fachstelle für Alkohol- und Drogenfragen» gemäss RRB vom 3. 8. 1988. Heutige Bezeichnung: Alkohol- und Suchtberatung.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [
@@ -30,7 +57,16 @@
      "label": "1. Koordinationsstelle, Kommission für Alkohol- und Drogenfragen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 3 Abs. 2: Namensänderung von «Koordinations- und Beratungsstelle für Alkohol- und Drogenfragen», kurz «Koordinationsstelle», in «Fachstelle für Alkohol- und Drogenfragen» gemäss RRB vom 3. 8. 1988. Heutige Bezeichnung: Alkohol- und Suchtberatung.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -43,7 +79,16 @@
      "label": "1. Koordinationsstelle, Kommission für Alkohol- und Drogenfragen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 4 Abs. 1: Namensänderung von «Koordinations- und Beratungsstelle für Alkohol- und Drogenfragen», kurz «Koordinationsstelle», in «Fachstelle für Alkohol- und Drogenfragen» gemäss RRB vom 3. 8. 1988. Heutige Bezeichnung: Alkohol- und Suchtberatung.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [
@@ -69,9 +114,7 @@
      "label": "2. Gesetzliche Anordnungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -149,9 +192,7 @@
      "label": "3. Massnahmen und Weisungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [
@@ -164,9 +205,7 @@
      "label": "3. Massnahmen und Weisungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -179,9 +218,7 @@
      "label": "3. Massnahmen und Weisungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -190,9 +227,7 @@
      "label": "3. Abschnitt: Verfahren und Vollzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [
@@ -201,9 +236,7 @@
      "label": "3. Abschnitt: Verfahren und Vollzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -212,9 +245,7 @@
      "label": "3. Abschnitt: Verfahren und Vollzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -223,9 +254,7 @@
      "label": "3. Abschnitt: Verfahren und Vollzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19": {
    "gliederung": [
@@ -234,9 +263,7 @@
      "label": "3. Abschnitt: Verfahren und Vollzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -245,9 +272,7 @@
      "label": "3. Abschnitt: Verfahren und Vollzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -256,9 +281,7 @@
      "label": "3. Abschnitt: Verfahren und Vollzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [
@@ -267,9 +290,7 @@
      "label": "3. Abschnitt: Verfahren und Vollzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "23": {
    "gliederung": [

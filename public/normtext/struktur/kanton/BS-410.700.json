@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Beurteilung und die Schullaufbahnentscheide der Schülerinnen und Schüler der Volksschule und der weiterführenden Schulen",
+  "erlassdatum": "Vom 11. September 2012 (Stand 11. August 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 74 Abs. 2 lit. a und b des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrates,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100.",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100./de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -80,7 +115,7 @@
     }
    ],
    "marginalie": [
-    "Anmeldung für die weiterführenden Schulen und die Brückenangebote *"
+    "Anmeldung für die weiterführenden Schulen und die Brückenangebote"
    ]
   },
   "7": {
@@ -185,7 +220,7 @@
     }
    ],
    "marginalie": [
-    "Aufnahme in die BM *"
+    "Aufnahme in die BM"
    ]
   },
   "14": {
@@ -200,7 +235,7 @@
     }
    ],
    "marginalie": [
-    "Aufnahme in die Brückenangebote *"
+    "Aufnahme in die Brückenangebote"
    ]
   },
   "15": {
@@ -408,7 +443,7 @@
     }
    ],
    "marginalie": [
-    "Pflichtfächer, Wahlpflichtfächer und Freifächer *"
+    "Pflichtfächer, Wahlpflichtfächer und Freifächer"
    ]
   },
   "29": {
@@ -423,7 +458,7 @@
     }
    ],
    "marginalie": [
-    "Individuelle Lernziele im Zeugnis der Volksschule *"
+    "Individuelle Lernziele im Zeugnis der Volksschule"
    ]
   },
   "30": {
@@ -452,9 +487,7 @@
      "label": "6. Zeugnis"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -468,7 +501,7 @@
     }
    ],
    "marginalie": [
-    "Prädikate für die Beurteilung der Sachkompetenz und die Bestätigung der Teilnahme an Angeboten *"
+    "Prädikate für die Beurteilung der Sachkompetenz und die Bestätigung der Teilnahme an Angeboten"
    ]
   },
   "33": {
@@ -528,7 +561,7 @@
     }
    ],
    "marginalie": [
-    "Einschätzung der Selbst- und Sozialkompetenz in den Volksschulen *"
+    "Einschätzung der Selbst- und Sozialkompetenz in den Volksschulen"
    ]
   },
   "37": {
@@ -674,7 +707,7 @@
     }
    ],
    "marginalie": [
-    "Beförderung in der IMS, WMS und BM *"
+    "Beförderung in der IMS, WMS und BM"
    ]
   },
   "47": {
@@ -704,7 +737,7 @@
     }
    ],
    "marginalie": [
-    "Nichtbeförderung in und Austritt aus der FMS von provisorisch übergetretenen Schülerinnen und Schülern nach dem ersten Semester des 12. Schuljahres *"
+    "Nichtbeförderung in und Austritt aus der FMS von provisorisch übergetretenen Schülerinnen und Schülern nach dem ersten Semester des 12. Schuljahres"
    ]
   },
   "49": {
@@ -719,7 +752,7 @@
     }
    ],
    "marginalie": [
-    "Nichtbeförderung in der IMS, WMS und BM (BM 1) vom 12. – 15. Schuljahr *"
+    "Nichtbeförderung in der IMS, WMS und BM (BM 1) vom 12. – 15. Schuljahr"
    ]
   },
   "50": {
@@ -734,7 +767,7 @@
     }
    ],
    "marginalie": [
-    "Nichtbeförderung in der BM (BM 2) *"
+    "Nichtbeförderung in der BM (BM 2)"
    ]
   },
   "51": {
@@ -749,7 +782,7 @@
     }
    ],
    "marginalie": [
-    "Wiederholung eines Unterrichtsjahres im Gymnasium, der FMS, IMS und WMS *"
+    "Wiederholung eines Unterrichtsjahres im Gymnasium, der FMS, IMS und WMS"
    ]
   },
   "52": {
@@ -856,7 +889,7 @@
     }
    ],
    "marginalie": [
-    "Wechsel in einen Leistungszug mit höheren Anforderungen *"
+    "Wechsel in einen Leistungszug mit höheren Anforderungen"
    ]
   },
   "61": {
@@ -866,9 +899,7 @@
      "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "62": {
    "gliederung": [
@@ -877,9 +908,7 @@
      "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "63": {
    "gliederung": [
@@ -889,7 +918,7 @@
     }
    ],
    "marginalie": [
-    "Wechsel in einen Leistungszug mit tieferen Anforderungen *"
+    "Wechsel in einen Leistungszug mit tieferen Anforderungen"
    ]
   },
   "64": {
@@ -899,9 +928,7 @@
      "label": "VI. Wechsel der Leistungszüge und zusätzliche individuelle Förderung im Leistungszug in der Sekundarschule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "65": {
    "gliederung": [
@@ -933,7 +960,7 @@
     }
    ],
    "marginalie": [
-    "Verfahren im 11. Schuljahr für den Übertritt in das Gymnasium und die FMS *"
+    "Verfahren im 11. Schuljahr für den Übertritt in das Gymnasium und die FMS"
    ]
   },
   "68": {
@@ -944,7 +971,7 @@
     }
    ],
    "marginalie": [
-    "Verfahren im 11. Schuljahr für den Übertritt in die IMS, WMS und BM *"
+    "Verfahren im 11. Schuljahr für den Übertritt in die IMS, WMS und BM"
    ]
   },
   "69": {
@@ -966,7 +993,7 @@
     }
    ],
    "marginalie": [
-    "Berechtigung für den Übertritt in die FMS, IMS, WMS und BM *"
+    "Berechtigung für den Übertritt in die FMS, IMS, WMS und BM"
    ]
   },
   "71": {
@@ -988,7 +1015,7 @@
     }
    ],
    "marginalie": [
-    "Übertritt und Leistungszugwechsel *"
+    "Übertritt und Leistungszugwechsel"
    ]
   },
   "73": {
@@ -1108,7 +1135,7 @@
     }
    ],
    "marginalie": [
-    "Berufsmaturität (BM) *"
+    "Berufsmaturität (BM)"
    ]
   },
   "81": {
@@ -1198,7 +1225,7 @@
     }
    ],
    "marginalie": [
-    "Kenntnisnahme der Zeugnisse und Zwischenzeugnisse in den Volksschulen, Gymnasien und der FMS *"
+    "Kenntnisnahme der Zeugnisse und Zwischenzeugnisse in den Volksschulen, Gymnasien und der FMS"
    ]
   },
   "87": {
@@ -1213,7 +1240,7 @@
     }
    ],
    "marginalie": [
-    "Aufbewahrung der Zeugnisse in der Volksschule *"
+    "Aufbewahrung der Zeugnisse in der Volksschule"
    ]
   },
   "88": {
@@ -1254,7 +1281,21 @@
     }
    ],
    "marginalie": [
-    "Durchführung der freiwilligen und angeordneten Aufnahmeprüfungen *"
+    "Durchführung der freiwilligen und angeordneten Aufnahmeprüfungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Richtlinien können beim Erziehungsdepartement oder auf der Webseite des Erziehungsdepartements eingesehen werden.",
+     "links": [
+      {
+       "label": "Erziehungsdepartements",
+       "url": "http://www.ed.bs.ch"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "91": {
@@ -1353,6 +1394,36 @@
    ],
    "marginalie": [
     "Änderung anderer Erlasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 424.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Wirksam seit 16. 9. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SG 424.100.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "99": {
@@ -1364,6 +1435,127 @@
    ],
    "marginalie": [
     "Aufhebung von Erlassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SG 410.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SG 412.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SG 413.770.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "SG 413.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SG 413.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "SG 413.310.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SG 413.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SG 413.800.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "SG 413.610.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SG 413.730.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "SG 413.700.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "SG 413.410.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "SG 413.760.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "SG 413.620.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "SG 413.810.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "SG 413.715.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "SG 413.740.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "100": {
@@ -1375,6 +1567,15 @@
    ],
    "marginalie": [
     "Übergangsregelung zur Einführung der Jahrespromotion an der FMS auf Beginn des Schuljahres 2024/25"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "Schlussbestimmung: lit. a geändert durch RRB vom 8. 7. 2014 (wirksam seit 13. 7. 2014).",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "41_a": {

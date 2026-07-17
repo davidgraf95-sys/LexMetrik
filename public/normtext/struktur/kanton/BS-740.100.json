@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Enteignung und Impropriation",
+  "erlassdatum": "Vom 26. Juni 1974 (Stand 1. Januar 2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag seiner Kommission folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +22,16 @@
      "label": "1. Abschnitt: Geltungsbereich, Verhältnis zum Bundesrecht"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -422,7 +445,16 @@
      "label": "5. I. Die Expropriationskommission"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 31 Abs. 4: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Personalgesetz vom 17. 11. 1999 (wirksam seit 1. 7. 2000, SG 162.100).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "32": {
    "gliederung": [
@@ -770,6 +802,15 @@
    ],
    "marginalie": [
     "5. Lastenbereinigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 57: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "58": {
@@ -908,7 +949,16 @@
      "label": "10. I. Aufgehobene und abgeänderte Erlasse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 67 Ziff. 2–9 enthalten hier nicht abgedruckte, sondern an Ort und Stelle berücksichtigte Änderungen anderer Gesetze.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "68": {
    "gliederung": [
@@ -934,7 +984,16 @@
      "label": "10. III. Übergangsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Mit RRB vom 2. 4. 1975 in Wirksamkeit erklärt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

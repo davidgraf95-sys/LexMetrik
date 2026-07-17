@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gleichstellungsverordnung",
+  "erlassdatum": "Vom 10. Juni 2025 (Stand 15. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 6 und 23 des Kantonalen Gleichstellungsgesetzes zu Geschlecht und sexueller Orientierung (Kantonales Gleichstellungsgesetz, KGlG) vom 10. Januar 2024, in Ausführung des Staatsbeitragsgesetzes (StBG) vom 11. Dezember 2013, unter Verweis auf seine Erläuterungen Nr. P250532,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 140.100",
+    "links": [
+     {
+      "label": "140.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/140.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-140.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 610.500",
+    "links": [
+     {
+      "label": "610.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/610.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-610.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -94,6 +150,24 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 140.100",
+     "links": [
+      {
+       "label": "140.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/140.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-140.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {

@@ -1,5 +1,91 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Niederlassung und Aufenthalt",
+  "erlassdatum": "Vom 11. Januar 2017 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3 und 24 der Schweizerischen Bundesverfassung (BV) vom 18. April 1999, Art. 21 des Bundesgesetzes über die Harmonisierung der Einwohnerregister und anderer amtlicher Personenregister (Registerharmonisierungsgesetz; RHG) vom 23. Juni 2006, Art. 124 Abs. 2 des Bundesgesetzes über die Ausländerinnen und Ausländer (Ausländergesetz; AuG) vom 16. Dezember 2005 und Art. 88 Abs. 1 der Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE) vom 24. Oktober 2007, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 16.0775.01 vom 24. Mai 2016 und in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 16.0775.02 vom 7. Dezember 2016,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 101.",
+    "links": [
+     {
+      "label": "101",
+      "url": "https://db.clex.ch/link/Bund/101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 431.02.",
+    "links": [
+     {
+      "label": "431.02",
+      "url": "https://db.clex.ch/link/Bund/431.02/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 142.20.",
+    "links": [
+     {
+      "label": "142.20",
+      "url": "https://db.clex.ch/link/Bund/142.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "AIG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 142.201.",
+    "links": [
+     {
+      "label": "142.201",
+      "url": "https://db.clex.ch/link/Bund/142.201/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "VZAE"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung betreffend die Zahnpflege bei Kindern",
+  "erlassdatum": "Vom 26. Oktober 1994 (Stand 1. Juni 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat der Einwohnergemeinde Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 25 Abs. 1 Ziff. 6 der Gemeindeordnung der Einwohnergemeinde Riehen vom 23. Oktober 1985 und gestützt auf § 3 Abs. 2 des Gesetzes betreffend die öffentliche Zahnpflege vom 8. Dezember 1993, auf Antrag des Gemeinderates, beschliesst folgende Ordnung, wobei Personen- und Funktionsbezeichnungen soweit erforderlich beide Geschlechter einschliessen:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Die Gemeindeordnung vom 23. 10. 1985 ist aufgehoben. Massgebend ist jetzt § 21 Abs. 3 lit. b der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. 2. 2002 (wirksam seit 1. 7. 2002, RiE 111.100 ).",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 328.200.",
+    "links": [
+     {
+      "label": "328.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/328.200/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -15,19 +59,41 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 5 Abs. 1: Siehe hiezu Leistungsvereinbarung (Vertrag) zwischenn AAA Dent AG und der Einwohnergemeinde Bettingen sowie der Einwohnergemeinde Riehen betreffend Schulzahnpflege Bettingen und Riehen vom 29./28. 1. 2013, einzusehen bei den Gemeindeverwaltungen Bettingen und Riehen oder unter http://www.riehen.ch, Stichwort \"Schulzahnpflege\".",
+     "links": [
+      {
+       "label": "http://www.riehen.ch",
+       "url": "http://www.riehen.ch"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 5 Abs. 2: Siehe hiezu Vertrag (Leistungsvereinbarung) zwischen dem Kanton Basel-Stadt und der Einwohnergemeinde Bettingen sowie der Einwohnergemeinde Riehen betreffend Schulzahnpflege Bettingen und Riehen vom 29./28./22. 1. 2013, einzusehen bei den Gemeindeverwaltungen Bettingen und Riehen oder unter http://www.riehen.ch, Stichwort \"Schulzahnpflege\".",
+     "links": [
+      {
+       "label": "http://www.riehen.ch",
+       "url": "http://www.riehen.ch"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [],
@@ -57,6 +123,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Wirksam seit 6. 12. 1994.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

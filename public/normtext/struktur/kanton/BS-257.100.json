@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung der Schweizerischen Strafprozessordnung",
+  "erlassdatum": "Vom 13. Oktober 2010 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 339 des Schweizerischen Strafgesetzbuches vom 21. Dezember 1937 und auf Art. 445 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007 und nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 09.1110.01 vom 4. August 2009 und in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 09.1110.02 vom 8. September 2010,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 311.0.",
+    "links": [
+     {
+      "label": "311.0",
+      "url": "https://db.clex.ch/link/Bund/311.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 312.0.",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -81,33 +137,23 @@
   },
   "14": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19": {
    "gliederung": [],
@@ -123,15 +169,11 @@
   },
   "21": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "23": {
    "gliederung": [],
@@ -141,9 +183,7 @@
   },
   "24": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [],
@@ -159,9 +199,7 @@
   },
   "27": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [],
@@ -219,9 +257,7 @@
   },
   "37": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [],
@@ -232,7 +268,7 @@
   "39": {
    "gliederung": [],
    "marginalie": [
-    "Justizvollzugsverordnung (Art. 439 Abs. 1 StPO) *"
+    "Justizvollzugsverordnung (Art. 439 Abs. 1 StPO)"
    ]
   },
   "40": {
@@ -243,9 +279,7 @@
   },
   "41": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "42": {
    "gliederung": [],
@@ -275,6 +309,15 @@
    "gliederung": [],
    "marginalie": [
     "Aufhebung bisherigen Rechts (Art. 445 StPO)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "47": {
@@ -284,9 +327,7 @@
      "label": ". Änderung bisherigen Rechts"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "48": {
    "gliederung": [
@@ -295,7 +336,16 @@
      "label": ". Änderung bisherigen Rechts"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 258.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend die Erhebung von Gebühren der Einwohnerdienste der Gemeinde Riehen",
+  "erlassdatum": "Vom 15. Oktober 2024 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 1 Abs. 1 des Gesetzes über die Verwaltungsgebühren vom 9. März 1972, § 15 Abs. 3 des Gesetzes über Niederlassung und Aufenthalt (NAG) vom 11. Januar 2017 und § 24 Abs. 3 lit. e der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.800",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 122.200",
+    "links": [
+     {
+      "label": "122.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/122.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-122.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "RiE 111.100",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

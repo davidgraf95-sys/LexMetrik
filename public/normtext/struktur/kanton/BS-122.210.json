@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Niederlassung und Aufenthalt",
+  "erlassdatum": "Vom 27. Juni 2017 (Stand 1. Juli 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 17 des Gesetzes über Niederlassung und Aufenthalt (NAG) vom 11. Januar 2017, unter Verweis auf seine Erläuterungen Nr. P170981,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 122.200.",
+    "links": [
+     {
+      "label": "122.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/122.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-122.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

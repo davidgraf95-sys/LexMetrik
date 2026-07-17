@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zur Förderung der Kulturvermittlung im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 27. Oktober 2020 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 12 Abs. 1 des Kulturfördergesetzes vom 21. Oktober 2009, unter Verweis auf seine Erläuterungen Nr. P201087,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 494.300.",
+    "links": [
+     {
+      "label": "494.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/494.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-494.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

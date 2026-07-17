@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zum Bundesgesetz über die Berufsbildung",
+  "erlassdatum": "vom 24.09.2007 (Stand 01.08.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 38 und 74 Abs. 2 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995 und das Bundesgesetz vom 13. Dezember 2002 über die Berufsbildung,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBG (SR 412.10 )",
+    "links": [
+     {
+      "label": "412.10",
+      "url": "https://db.clex.ch/link/Bund/412.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BBG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -43,6 +99,15 @@
    ],
    "marginalie": [
     "Private Träger"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 33 ff. BBG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -64,7 +129,7 @@
     }
    ],
    "marginalie": [
-    "Departement Bildung und Kultur *"
+    "Departement Bildung und Kultur"
    ]
   },
   "8": {
@@ -76,6 +141,15 @@
    ],
    "marginalie": [
     "Prüfungskommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 16 Abs. 1 lit. a und b BBG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -153,6 +227,15 @@
    ],
    "marginalie": [
     "Fachkundige individuelle Begleitung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 17 Abs. 2 BBG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -219,6 +302,22 @@
    ],
    "marginalie": [
     "Überbetriebliche Kurse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 1 Abs. 1 BBG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 23 Abs. 2 BBG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -371,6 +470,24 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "bGS 143.1",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "36": {
@@ -393,6 +510,15 @@
    ],
    "marginalie": [
     "Meldepflicht für Strafurteile"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 62 und 63 BBG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -404,6 +530,55 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Die Änderungen wurden in den betroffenen Erlassen eingefügt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Schulgesetz (bGS 411.0 )",
+     "links": [
+      {
+       "label": "411.0",
+       "url": "https://ar.clex.ch/data/411.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "bGS 920.1",
+     "links": [
+      {
+       "label": "920.1",
+       "url": "https://ar.clex.ch/data/920.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-920.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Schulverordnung (bGS 411.1 )",
+     "links": [
+      {
+       "label": "411.1",
+       "url": "https://ar.clex.ch/data/411.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -415,6 +590,43 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "bGS 414.11 (lf. Nr. 250)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "bGS 414.111 (lf. Nr. 281)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "bGS 414.112 (aGS V/704)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "bGS 414.23 (lf. Nr. 431)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "bGS 924.1 (lf. Nr. 566)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "40": {
@@ -437,6 +649,22 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "Die Referendumsfrist ist am 27. November 2007 unbenutzt abgelaufen (Abl. 2007, S. 1304).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "1. Januar 2008 (Abl. 2007, S. 1335)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "14_a": {
@@ -448,6 +676,24 @@
    ],
    "marginalie": [
     "Anerkennung von Ausbildungsgängen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "MHG (bGS 413.1 )",
+     "links": [
+      {
+       "label": "413.1",
+       "url": "https://ar.clex.ch/data/413.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-413.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4_a": {
@@ -457,7 +703,25 @@
      "label": "II.a Lehrende"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "MHG (bGS 413.1 )",
+     "links": [
+      {
+       "label": "413.1",
+       "url": "https://ar.clex.ch/data/413.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-413.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

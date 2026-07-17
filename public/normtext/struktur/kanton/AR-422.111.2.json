@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Regierungsratsbeschluss über die geschützten Pflanzen im Kanton Appenzell A.Rh.",
+  "erlassdatum": "vom 07.07.1959 (Stand 01.01.1995)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Art. 2 Abs. 3 und Art. 8 Abs. 1 der Verordnung vom 8. Juni 1959 über den Naturschutz,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "bGS 422.111",
+    "links": [
+     {
+      "label": "422.111",
+      "url": "https://ar.clex.ch/data/422.111/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-422.111"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1.": {
    "gliederung": [],

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Schulkommissionen der weiterführenden Schulen",
+  "erlassdatum": "Vom 9. Mai 2017 (Stand 14. August 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 74 Abs. 2 lit. m und § 80 Abs. 3 des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrats, unter Verweis auf seine Erläuterungen Nr. P170706,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

@@ -1,5 +1,91 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Zuweisung und Verwendung der Reingewinne aus Grossspielen",
+  "erlassdatum": "vom 11.01.2022 (Stand 01.02.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 127 des Bundesgesetzes über Geldspiele, die Interkantonale Vereinbarung betreffend die gemeinsame Durchführung von Geldspielen, das Gesamtschweizerische Geldspielkonkordat sowie Art. 87 Abs. 5 der Verfassung des Kantons Appenzell A.Rh,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Geldspielgesetz (BGS; SR 935.51 )",
+    "links": [
+     {
+      "label": "935.51",
+      "url": "https://db.clex.ch/link/Bund/935.51/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "IKV 2020 (bGS 955.32 )",
+    "links": [
+     {
+      "label": "955.32",
+      "url": "https://ar.clex.ch/data/955.32/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-955.32"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "GSK (bGS 955.35 )",
+    "links": [
+     {
+      "label": "955.35",
+      "url": "https://ar.clex.ch/data/955.35/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-955.35"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "bGS 111.1",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

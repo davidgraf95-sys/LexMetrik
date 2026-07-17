@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Abschlussprüfungen der Maturitätskurse für Berufstätige",
+  "erlassdatum": "Vom 11. Dezember 2007 (Stand 1. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 54 Abs. 2 des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrates,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

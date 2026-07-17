@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Vollzugseinrichtungen",
+  "erlassdatum": "vom 16.12.2014 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 4 des Gesetzes über den Justizvollzug vom 22. September 2014,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "JVG (bGS 341.1 )",
+    "links": [
+     {
+      "label": "341.1",
+      "url": "https://ar.clex.ch/data/341.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-341.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -29,6 +68,20 @@
    ],
    "marginalie": [
     "Richtlinien"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Ostschweizer Strafvollzugskonkordat (bGS 341.2 )",
+     "links": [
+      {
+       "label": "341.2",
+       "url": "https://ar.clex.ch/data/341.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -284,6 +337,20 @@
    ],
    "marginalie": [
     "Aufnahme"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. insbesondere Art. 9 Ostschweizer Strafvollzugskonkordat (bGS 341.2 )",
+     "links": [
+      {
+       "label": "341.2",
+       "url": "https://ar.clex.ch/data/341.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -625,7 +692,25 @@
      "label": "I. Organisation und Zuständigkeiten"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 2 Abs. 2 der Verordnung zur Bundesgesetzgebung über die Ausländerinnen und die Ausländer (bGS 122.21 )",
+     "links": [
+      {
+       "label": "122.21",
+       "url": "https://ar.clex.ch/data/122.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-122.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "43": {
    "gliederung": [

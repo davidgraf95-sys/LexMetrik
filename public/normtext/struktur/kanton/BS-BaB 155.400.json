@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Organisation der Bürgerkorporation Kleinhüningen",
+  "erlassdatum": "Vom 20. Februar 1990 (Stand 1. Januar 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat der Stadt Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Ziff. 2 der Vereinbarung über die Verschmelzung der Bürgergemeinden Basel und Kleinhüningen vom 15. Oktober 1906, § 21 Abs. 1 lit. c des Gemeindegesetzes vom 17. Oktober 1984 und § 34 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement über die Organisation der Bürgerkorporation Kleinhüningen (Korporationsordnung):"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 171.300.",
+    "links": [
+     {
+      "label": "BaB 171.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20171.300/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -19,6 +84,15 @@
    ],
    "marginalie": [
     "Aufnahme"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 2 Abs. 3: Dieser Plan wird hier nicht abgedruckt; er kann beim Bürgerratsschreiber (Stadthaus) eingesehen werden (Fussnote ist Bestandteil des Erlasses).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -172,7 +246,7 @@
     }
    ],
    "marginalie": [
-    "Rücktritt einer Vorgesetzen oder eines Vorgesetzten *"
+    "Rücktritt einer Vorgesetzen oder eines Vorgesetzten"
    ]
   },
   "17": {
@@ -206,6 +280,15 @@
    ],
    "marginalie": [
     "Rekurs an den Bürgerrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 153.100.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {

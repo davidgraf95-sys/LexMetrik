@@ -1,5 +1,58 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Gemeinde- und Kirchensteuern",
+  "erlassdatum": "Vom 31.08.2006 (Stand 01.01.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Graubünden,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 31 und Art. 94 der Kantonsverfassung, nach Einsicht in die Botschaft der Regierung vom 16. Mai 2006,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "GRP 2006/2007, 188",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BR 110.100",
+    "links": [
+     {
+      "label": "110.100",
+      "url": "https://www.gr-lex.gr.ch/data/110.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Seite 181",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -47,6 +100,20 @@
    ],
    "marginalie": [
     "Einkommens- und Vermögenssteuern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "BR 720.000",
+     "links": [
+      {
+       "label": "720.000",
+       "url": "https://www.gr-lex.gr.ch/data/720.000/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -77,6 +144,20 @@
    ],
    "marginalie": [
     "Grundstückgewinnsteuer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "BR 720.000",
+     "links": [
+      {
+       "label": "720.000",
+       "url": "https://www.gr-lex.gr.ch/data/720.000/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -152,6 +233,20 @@
    ],
    "marginalie": [
     "5. Subjektive Steuerbefreiung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "BR 720.000",
+     "links": [
+      {
+       "label": "720.000",
+       "url": "https://www.gr-lex.gr.ch/data/720.000/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -212,6 +307,20 @@
    ],
    "marginalie": [
     "9. Sicherstellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "BR 210.100",
+     "links": [
+      {
+       "label": "210.100",
+       "url": "https://www.gr-lex.gr.ch/data/210.100/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -287,6 +396,20 @@
    ],
    "marginalie": [
     "5. Sicherstellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "BR 210.100",
+     "links": [
+      {
+       "label": "210.100",
+       "url": "https://www.gr-lex.gr.ch/data/210.100/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -302,6 +425,20 @@
    ],
    "marginalie": [
     "Erbschafts- und Schenkungssteuer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Artikel 107 des kantonalen Steuergesetzes (BR 720.000 )",
+     "links": [
+      {
+       "label": "720.000",
+       "url": "https://www.gr-lex.gr.ch/data/720.000/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -316,7 +453,7 @@
     }
    ],
    "marginalie": [
-    "Gästetaxe *"
+    "Gästetaxe"
    ]
   },
   "23": {
@@ -343,6 +480,20 @@
    ],
    "marginalie": [
     "Kirchensteuern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "BR 720.000",
+     "links": [
+      {
+       "label": "720.000",
+       "url": "https://www.gr-lex.gr.ch/data/720.000/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -354,6 +505,20 @@
    ],
    "marginalie": [
     "Nachsteuern und Bussen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "BR 720.000",
+     "links": [
+      {
+       "label": "720.000",
+       "url": "https://www.gr-lex.gr.ch/data/720.000/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -442,6 +607,15 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Die Referendumsfrist ist am 13. Dezember 2006 unbenutzt abgelaufen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22_a": {

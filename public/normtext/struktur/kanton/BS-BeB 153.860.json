@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die Entschädigung für den Bürgerratspräsidenten, die Mitglieder des Bürgerrates, den Schreiber und den Kassier",
+  "erlassdatum": "Vom 4. Mai 1995 (Stand 1. Juli 1995)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Versammlung der Bürgergemeinde Bettingen"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,7 +21,16 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Publiziert am 29. 7. 1995.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

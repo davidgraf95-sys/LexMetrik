@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zu den Kosten im Zivil- und Strafprozess",
+  "erlassdatum": "Vom 22.12.2010 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Landrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 424 der Schweizerischen Strafprozessordnung (StPO), Artikel 3 der Schweizerischen Jugendstrafprozessordnung (JStPO), Artikel 95 der Schweizerischen Zivilprozessordnung (ZPO) und Artikel 74 des Gerichtsorganisationsgesetzes des Kantons Glarus (GOG),",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "GS III A/2",
+    "links": [
+     {
+      "label": "III A/2",
+      "url": "https://gesetze.gl.ch/data/III-A.2/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -109,6 +144,20 @@
    ],
    "marginalie": [
     "Parteientschädigung und unentgeltliche Rechtspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "GS III C/1",
+     "links": [
+      {
+       "label": "III C/1",
+       "url": "https://gesetze.gl.ch/data/III-C.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -131,6 +180,20 @@
    ],
    "marginalie": [
     "Inkasso"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "GS III F/1",
+     "links": [
+      {
+       "label": "III F/1",
+       "url": "https://gesetze.gl.ch/data/III-F.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "13": {

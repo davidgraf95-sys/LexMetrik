@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Förderung der Biodiversität und Landschaftsqualität im Landwirtschaftsgebiet",
+  "erlassdatum": "Vom 24. März 2015 (Stand 1. April 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -76,6 +86,15 @@
    ],
    "marginalie": [
     "Extensiv genutzte Wiesen, wenig intensiv genutzte Wiesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§7 Abs. 3: Die Qualitätsstufe III wird 2017 vom Bund eingeführt.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8": {

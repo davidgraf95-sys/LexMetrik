@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend Ausbildungsbeiträge",
+  "erlassdatum": "Vom 12. Oktober 1967 (Stand 26. Januar 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf den Antrag seiner Kommission, beschliesst in Ausführung der §§ 11 und 12 der Kantonsverfassung vom 2. Dezember 1889 was folgt:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Diese Verfassung ist aufgehoben. Massgebend ist jetzt die Verfassung vom 23. 3. 2005 (SG 111.100 ).",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +67,24 @@
    ],
    "marginalie": [
     "Darlehen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 3: Der Zinsfuss der zurückzuzahlenden Darlehen beträgt 4%. Siehe dazu § 35 Abs. 1 der Vollzugsverordnung zum Gesetz betreffend Ausbildungsbeiträge vom 8. 11. 2011 (wirksam seit 26. 2. 2012, SG 491.110 ).",
+     "links": [
+      {
+       "label": "491.110",
+       "url": "https://www.gesetzessammlung.bs.ch/data/491.110/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-491.110"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -43,6 +96,15 @@
    ],
    "marginalie": [
     "Schweizer Bürgerinnen und Bürger"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -272,6 +334,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vom Regierungsrat am 11. 12. 1967 in Kraft und auf den 1. 1. 1968 in Wirksamkeit erklärt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "24_a": {
@@ -292,9 +363,7 @@
      "label": "II. A. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

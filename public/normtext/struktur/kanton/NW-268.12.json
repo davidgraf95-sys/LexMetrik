@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Beurkundungsgebühren",
+  "erlassdatum": "vom 19.04.1994 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Landrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 60 der Kantonsverfassung, in Ausführung von Art. 5 des Gesetzes vom 27. April 1969 über die öffentliche Beurkundung (Beurkundungsgesetz),",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "NG 268.1",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -87,6 +117,15 @@
    ],
    "marginalie": [
     "Auslagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "NG 265.5",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -131,6 +170,15 @@
    ],
    "marginalie": [
     "Bezug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "NG 161.2",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -142,6 +190,22 @@
    ],
    "marginalie": [
     "Vollstreckbarkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 281.2",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -161,6 +225,15 @@
    ],
    "marginalie": [
     "Stiftung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -180,6 +253,29 @@
    ],
    "marginalie": [
     "Ehevertrag- und Vermögensvertrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SR 211.231",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -199,6 +295,15 @@
    ],
    "marginalie": [
     "Inventar"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -218,6 +323,15 @@
    ],
    "marginalie": [
     "Gemeinderschaftsvertrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -237,6 +351,22 @@
    ],
    "marginalie": [
     "Letztwillige Verfügung, Erbvertrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -256,6 +386,15 @@
    ],
    "marginalie": [
     "Ausschluss der Aufhebung von Miteigentum"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -275,6 +414,15 @@
    ],
    "marginalie": [
     "Übertragungen von Grundeigentum"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -294,6 +442,15 @@
    ],
    "marginalie": [
     "Eigentumsbeschränkung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -313,6 +470,15 @@
    ],
    "marginalie": [
     "Gesetzliche Vorkaufsrechte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -332,6 +498,22 @@
    ],
    "marginalie": [
     "Stockwerkeigentum, selbständiges Miteigentum"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -351,6 +533,22 @@
    ],
    "marginalie": [
     "Nutzniessung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -370,6 +568,15 @@
    ],
    "marginalie": [
     "Wohnrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -389,6 +596,15 @@
    ],
    "marginalie": [
     "Baurecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -408,6 +624,15 @@
    ],
    "marginalie": [
     "Grundlast"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -427,6 +652,22 @@
    ],
    "marginalie": [
     "Grundpfand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -446,6 +687,15 @@
    ],
    "marginalie": [
     "Ersatz der Unterschrift"
+   ],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -465,6 +715,15 @@
    ],
    "marginalie": [
     "Erklärung nach Art. 90 OR"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -484,6 +743,15 @@
    ],
    "marginalie": [
     "Vorkaufs-, Kaufs- und Rückkaufsrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -503,6 +771,15 @@
    ],
    "marginalie": [
     "Schenkung dinglicher Rechte an Grundstücken"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -522,6 +799,15 @@
    ],
    "marginalie": [
     "Schenkung auf den Todesfall"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -541,6 +827,15 @@
    ],
    "marginalie": [
     "Bürgschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -560,6 +855,15 @@
    ],
    "marginalie": [
     "Verpfründung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "36": {
@@ -579,6 +883,15 @@
    ],
    "marginalie": [
     "Aktiengesellschaft und Kommanditaktiengesellschaft1. Gründung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "37": {
@@ -598,6 +911,15 @@
    ],
    "marginalie": [
     "2. Aktienkapitalerhöhung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "36",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -617,6 +939,15 @@
    ],
    "marginalie": [
     "3. Aktienkapitalherabsetzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "40": {
@@ -655,6 +986,15 @@
    ],
    "marginalie": [
     "Gesellschaft mit beschränkter Haftung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "42": {
@@ -674,6 +1014,15 @@
    ],
    "marginalie": [
     "Gesellschaftsrechtliche Feststellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "43": {
@@ -693,6 +1042,15 @@
    ],
    "marginalie": [
     "Wechsel und Check"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "44": {
@@ -712,6 +1070,22 @@
    ],
    "marginalie": [
     "Anleihensgläubigerbeschlüsse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "SR 221.522.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "SR 221.301",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -828,6 +1202,15 @@
    ],
    "marginalie": [
     "Rechtskraft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "45",
+     "text": "Organisationsgesetz heute aufgehoben",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "17_a": {
@@ -847,6 +1230,15 @@
    ],
    "marginalie": [
     "Vorsorgeauftrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26_a": {
@@ -892,6 +1284,15 @@
    ],
    "marginalie": [
     "Fusion, Spaltung, Umwandlung, Vermögensübertragung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "43",
+     "text": "SR 221.301",
+     "links": [],
+     "absatz": "7",
+     "item": null
+    }
    ]
   },
   "44_b": {
@@ -907,6 +1308,15 @@
    ],
    "marginalie": [
     "Festlegung der Übertragung eines Grundstücks"
+   ],
+   "fussnoten": [
+    {
+     "nr": "44",
+     "text": "SR 221.301",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4_a": {

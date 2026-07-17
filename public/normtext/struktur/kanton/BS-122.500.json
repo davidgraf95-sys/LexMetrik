@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Integration der Migrationsbevölkerung",
+  "erlassdatum": "Vom 18. April 2007 (Stand 1. Dezember 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 04.1309.01/00.6638.04 vom 21. Juni 2005 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 04.1309.04 vom 23. März 2007,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -71,6 +89,15 @@
    "gliederung": [],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 1. 1. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7_a": {

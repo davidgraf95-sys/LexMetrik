@@ -1,5 +1,95 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Abfallverordnung",
+  "erlassdatum": "Vom 4. November 2025 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über den Umweltschutz (USG) vom 7. Oktober 1983, die Verordnung über die Vermeidung und Verwertung von Abfällen (VVEA) vom 4. Dezember 2015, die Verordnung über den Verkehr mit Abfällen (VeVA) vom 22. Juni 2005, das Umweltschutzgesetz Basel-Stadt (USG BS) vom 13. März 1991, unter Verweis auf seine Erläuterungen Nr. 251678,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 814.01",
+    "links": [
+     {
+      "label": "814.01",
+      "url": "https://db.clex.ch/link/Bund/814.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "USG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 814.600",
+    "links": [
+     {
+      "label": "814.600",
+      "url": "https://db.clex.ch/link/Bund/814.600/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "VVEA"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 814.610",
+    "links": [
+     {
+      "label": "814.610",
+      "url": "https://db.clex.ch/link/Bund/814.610/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "VEVA"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 780.100",
+    "links": [
+     {
+      "label": "780.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/780.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-780.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -71,6 +161,15 @@
    "gliederung": [],
    "marginalie": [
     "Abgeber"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "am 2. Dezember 2025 genehmigt",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

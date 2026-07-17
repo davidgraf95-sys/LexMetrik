@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit",
+  "erlassdatum": "Vom 21. September 2010 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 6, 11, 12, 13, 16 und 19ff. des Bundesgesetzes über Massnahmen zur Wahrung der inneren Sicherheit (BWIS) vom 21. März 1997 sowie gestützt auf die Verordnung über den Nachrichtendienst des Bundes (V-NDB) vom 4. Dezember 2009,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 120.",
+    "links": [
+     {
+      "label": "120",
+      "url": "https://db.clex.ch/link/Bund/120/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 121.1.",
+    "links": [
+     {
+      "label": "121.1",
+      "url": "https://db.clex.ch/link/Bund/121.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

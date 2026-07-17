@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Meldung von Missständen",
+  "erlassdatum": "Vom 24. September 2013 (Stand 13. September 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 19a des Personalgesetzes vom 17. November 1999,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 162.100.",
+    "links": [
+     {
+      "label": "162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-162.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +68,15 @@
    "gliederung": [],
    "marginalie": [
     "Keine Benachteiligung im Anstellungsverhältnis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   }
  }

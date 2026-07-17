@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Lärmschutzverordnung Basel-Stadt",
+  "erlassdatum": "Vom 29. Januar 2002 (Stand 22. April 2007)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 36 des Bundesgesetzes über den Umweltschutz (Umweltschutzgesetz, USG) vom 7. Oktober 1983 und § 61 Abs. 5 des Bau- und Planungsgesetzes vom 17. November 1999,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt nachstehende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 814.01",
+    "links": [
+     {
+      "label": "814.01",
+      "url": "https://db.clex.ch/link/Bund/814.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "USG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -206,6 +262,15 @@
    ],
    "marginalie": [
     "4. Zuordnung der Empfindlichkeitsstufen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "umbenannt in: Abteilung Städtebau und Architektur",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -217,6 +282,15 @@
    ],
    "marginalie": [
     "1. Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "umbenannt in: Abteilung Städtebau und Architektur",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -228,6 +302,15 @@
    ],
    "marginalie": [
     "2. Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Wirksam seit 3. 2. 2002.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

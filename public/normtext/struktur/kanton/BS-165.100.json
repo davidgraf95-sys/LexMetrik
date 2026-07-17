@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Versicherung der Mitarbeiterinnen und Mitarbeiter des Kantons Basel-Stadt bei Unfall und Krankheit",
+  "erlassdatum": "Vom 29. April 1992 (Stand 1. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -17,7 +35,16 @@
      "label": "II. Taggeld"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [
@@ -134,9 +161,7 @@
      "label": "III.2. Die Ergänzungs- und Zusatzversicherungen der Unfallversicherungskasse des Basler Staatspersonals (UVK)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -149,9 +174,7 @@
      "label": "III.2. Die Ergänzungs- und Zusatzversicherungen der Unfallversicherungskasse des Basler Staatspersonals (UVK)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [
@@ -203,9 +226,7 @@
      "label": "III.2. Die Ergänzungs- und Zusatzversicherungen der Unfallversicherungskasse des Basler Staatspersonals (UVK)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -231,7 +252,37 @@
      "label": "IV.2. Änderung des bisherigen Rechts"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 18: Die Änderungen der nachfolgend genannten Gesetze werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Diese Ordnung ist aufgehoben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 410.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 440.100. Dieses Gesetz ist aufgehoben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "19": {
    "gliederung": [
@@ -257,7 +308,16 @@
      "label": "IV.3. Rechtskraft und Wirksamkeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 1. 1. 1993.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

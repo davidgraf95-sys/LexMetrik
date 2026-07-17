@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührenverordnung zum Gastgewerbegesetz",
+  "erlassdatum": "Vom 15. Oktober 2024 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 39 des Gesetzes über das Gastgewerbe (Gastgewerbegesetz) vom 15. September 2004, unter Verweis auf seine Erläuterungen Nr. P231526,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 563.100",
+    "links": [
+     {
+      "label": "563.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/563.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-563.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Vollzug der Zwangsmassnahmen im Ausländerrecht",
+  "erlassdatum": "Vom 17. März 2010 (Stand 2. Mai 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 124 Abs. 2 des Bundesgesetzes über die Ausländerinnen und Ausländer (AuG) vom 16. Dezember 2005 und Art. 88 Abs. 1 der Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE) vom 24. Oktober 2007, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 09.1538.01 vom 20. Oktober 2009 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 09.1538.02 vom 10. Februar 2010,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 142.20.",
+    "links": [
+     {
+      "label": "142.20",
+      "url": "https://db.clex.ch/link/Bund/142.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "AIG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 142.201.",
+    "links": [
+     {
+      "label": "142.201",
+      "url": "https://db.clex.ch/link/Bund/142.201/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "VZAE"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -111,6 +167,15 @@
    ],
    "marginalie": [
     "Haftanordnung bei Jugendlichen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -215,6 +280,15 @@
    ],
    "marginalie": [
     "Rechtskraft und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 2. 5. 2010.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

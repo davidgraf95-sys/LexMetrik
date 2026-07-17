@@ -1,16 +1,69 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührenordnung für den kleinen Grenzverkehr",
+  "erlassdatum": "Vom 28. März 1995 (Stand 2. April 1995)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 4 des Gesetzes über die Verwaltungsgebühren vom 9. März 1972, erlässt für den kleinen Grenzverkehr zwischen der Schweiz und der Bundesrepublik Deutschland und Frankreich folgende Gebührenordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "i": {
    "gliederung": [],
    "marginalie": [
-    "Verkehr zwischen der Schweiz und der Bundesrepublik Deutschland [2]"
+    "Verkehr zwischen der Schweiz und der Bundesrepublik Deutschland"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "ii": {
    "gliederung": [],
    "marginalie": [
     "Verkehr zwischen der Schweiz und Frankreich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 2. 4. 1995.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Inanspruchnahme der Allmend",
+  "erlassdatum": "Vom 4. August 2009 (Stand 26. Februar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Inanspruchnahme der Allmend durch die Verwaltung und durch Private vom 24. März 1927 und auf das Bau- und Planungsgesetz (BPG) vom 17. November 1999,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 724.100.",
+    "links": [
+     {
+      "label": "724.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,9 +68,7 @@
      "label": "(I.) 1. Bewilligungspflichtige Allmendnutzung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "2": {
    "gliederung": [
@@ -27,9 +81,7 @@
      "label": "(I.) 1. Bewilligungspflichtige Allmendnutzung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "3": {
    "gliederung": [
@@ -42,9 +94,7 @@
      "label": "(I.) 1. Bewilligungspflichtige Allmendnutzung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -57,9 +107,7 @@
      "label": "(I.) 2. Nicht bewilligungspflichtige Allmendnutzung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -72,9 +120,7 @@
      "label": "(I.) 3. Beschränkung der Bewilligung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "6": {
    "gliederung": [
@@ -87,9 +133,7 @@
      "label": "(I.) 3. Beschränkung der Bewilligung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -102,9 +146,7 @@
      "label": "(II.) 1. Ordentliches Bewilligungsverfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [
@@ -117,9 +159,7 @@
      "label": "(II.) 2. Vereinfachtes Bewilligungsverfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -132,9 +172,7 @@
      "label": "(II.) 3. Reservationen für Grossanlässe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -147,9 +185,7 @@
      "label": "(III.) 1. Tiefbauamt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "11": {
    "gliederung": [
@@ -162,9 +198,7 @@
      "label": "(III.) 2. Koordinationspflicht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -177,9 +211,7 @@
      "label": "(III.) 2. Koordinationspflicht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [
@@ -192,9 +224,7 @@
      "label": "(IV.) 1. Allmendnutzungsbegehren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -207,9 +237,7 @@
      "label": "(IV.) 2. Beurteilung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -222,9 +250,7 @@
      "label": "(IV.) 2. Beurteilung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [
@@ -237,9 +263,7 @@
      "label": "(IV.) 2. Beurteilung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -252,9 +276,7 @@
      "label": "(IV.) 2. Beurteilung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -267,9 +289,7 @@
      "label": "(IV.) 2. Beurteilung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19": {
    "gliederung": [
@@ -282,9 +302,7 @@
      "label": "(IV.) 3. Auflage- und Einspracheverfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -297,9 +315,7 @@
      "label": "(IV.) 3. Auflage- und Einspracheverfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -312,9 +328,7 @@
      "label": "(IV.) 3. Auflage- und Einspracheverfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [
@@ -327,9 +341,7 @@
      "label": "(V.) 1. Form, Inhalt und Bearbeitungsfrist"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "23": {
    "gliederung": [
@@ -342,9 +354,7 @@
      "label": "(V.) 2. Einsprachebeantwortung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -357,9 +367,7 @@
      "label": "(V.) 3. Rekurs"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [
@@ -372,9 +380,7 @@
      "label": "(VI.) 1. Verantwortliche Person"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26": {
    "gliederung": [
@@ -387,9 +393,7 @@
      "label": "(VI.) 2. Anzeigen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -402,9 +406,7 @@
      "label": "(VII.) 1. Abnahmeanforderung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [
@@ -417,9 +419,7 @@
      "label": "(VII.) 2. Abnahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -432,9 +432,7 @@
      "label": "(VII.) 2. Abnahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -447,9 +445,7 @@
      "label": "(VII.) 3. Fristen und Mängelbehebung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -462,9 +458,7 @@
      "label": "(VII.) 4. Freigabe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -473,9 +467,7 @@
      "label": "VIII. Abwehr- und Vollstreckungsmassahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -484,9 +476,7 @@
      "label": "VIII. Abwehr- und Vollstreckungsmassahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "34": {
    "gliederung": [
@@ -846,9 +836,7 @@
      "label": "(I.) 1. Bewilligungspflichtige Allmendnutzung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33_a": {
    "gliederung": [
@@ -857,9 +845,7 @@
      "label": "VIII. Abwehr- und Vollstreckungsmassahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

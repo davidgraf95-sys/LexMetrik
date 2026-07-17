@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung der Schweizerischen Jugendstrafprozessordnung",
+  "erlassdatum": "Vom 13. Oktober 2010 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 339 des Schweizerischen Strafgesetzbuches (StGB) vom 21. Dezember 1937 und auf Art. 3 der Schweizerischen Jugendstrafprozessordnung (JStPO) vom 20. März 2009 resp. Art. 445 der Schweizerischen Strafprozessordnung (StPO) vom 5. Oktober 2007 und nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 10.0466.01 vom 30. März 2010 Geschäftsnr. 10.0466 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 10.0466.02 vom 8. September 2010 Geschäftsnr. 10.0466,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 311.0.",
+    "links": [
+     {
+      "label": "311.0",
+      "url": "https://db.clex.ch/link/Bund/311.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 311.1.",
+    "links": [
+     {
+      "label": "311.1",
+      "url": "https://db.clex.ch/link/Bund/311.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "JSTG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 312.0.",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +102,15 @@
    "gliederung": [],
    "marginalie": [
     "Wahl, Zusammensetzung, Organisation und Aufsicht über die Jugendstrafbehörden (Art. 8 JStPO)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -107,6 +189,22 @@
    "gliederung": [],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 154.800.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

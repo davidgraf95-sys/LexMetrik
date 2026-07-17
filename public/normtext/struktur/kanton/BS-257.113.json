@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Zuständigkeiten zur Erhebung von bundesrechtlichen Ordnungsbussen",
+  "erlassdatum": "Vom 17. Dezember 2019 (Stand 1. Januar 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 2 Abs. 1 des Ordnungsbussengesetzes (OBG) vom 18. März 2016, unter Verweis auf seine Erläuterungen Nr. 191834,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 741.03",
+    "links": [
+     {
+      "label": "741.03",
+      "url": "https://www.lexfind.ch/fe/de/tol/25411/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

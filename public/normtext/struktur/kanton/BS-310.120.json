@@ -1,5 +1,83 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Fachpersonen und Betriebe im Gesundheitswesen",
+  "erlassdatum": "Vom 6. Dezember 2011 (Stand 22. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 21 bis 49 und § 65 des Gesundheitsgesetzes (GesG) vom 21. September 2011 und Art. 33a ff. des Bundesgesetzes über die universitären Medizinalberufe (Medizinalberufegesetz, MedBG) vom 23. Juni 2006 und Art. 22 ff. Bundesgesetz über die Psychologieberufe (Psychologieberufegesetz, PsyG) vom 18. März 2011 und Art. 11 ff. des Bundesgesetzes über die Gesundheitsberufe (Gesundheitsberufegesetz, GesBG) vom 30. September 2016,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 300.100.",
+    "links": [
+     {
+      "label": "300.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/300.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-300.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 811.11.",
+    "links": [
+     {
+      "label": "811.11",
+      "url": "https://db.clex.ch/link/Bund/811.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 935.81.",
+    "links": [
+     {
+      "label": "935.81",
+      "url": "https://db.clex.ch/link/Bund/935.81/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 811.21.",
+    "links": [
+     {
+      "label": "811.21",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2020/16/de#art_11"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -48,7 +126,7 @@
     }
    ],
    "marginalie": [
-    "Medizinische Dienste *"
+    "Medizinische Dienste"
    ]
   },
   "5": {
@@ -63,7 +141,7 @@
     }
    ],
    "marginalie": [
-    "Kantonales Veterinäramt *"
+    "Kantonales Veterinäramt"
    ]
   },
   "6": {
@@ -393,7 +471,7 @@
     }
    ],
    "marginalie": [
-    "Stellvertretung in den Gebieten der universitären Medizinalberufe, Psychotherapie und Drogerie *"
+    "Stellvertretung in den Gebieten der universitären Medizinalberufe, Psychotherapie und Drogerie"
    ]
   },
   "30": {
@@ -619,7 +697,7 @@
     }
    ],
    "marginalie": [
-    "Praktische Tätigkeit *"
+    "Praktische Tätigkeit"
    ]
   },
   "46": {
@@ -704,9 +782,7 @@
      "label": "X.8. Nicht ärztliche alternativ- und komplementärmedizinische Berufe und Tätigkeiten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "52": {
    "gliederung": [
@@ -734,9 +810,7 @@
      "label": "X.8. Nicht ärztliche alternativ- und komplementärmedizinische Berufe und Tätigkeiten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "54": {
    "gliederung": [
@@ -749,9 +823,7 @@
      "label": "XI.1. Gebühren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "55": {
    "gliederung": [
@@ -764,9 +836,7 @@
      "label": "XI.2. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "56": {
    "gliederung": [
@@ -779,9 +849,7 @@
      "label": "XI.3. Psychotherapie"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "57": {
    "gliederung": [
@@ -794,9 +862,7 @@
      "label": "XI.3. Psychotherapie"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "58": {
    "gliederung": [
@@ -809,9 +875,7 @@
      "label": "XI.3. Psychotherapie"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "59": {
    "gliederung": [
@@ -824,9 +888,7 @@
      "label": "XI.3. Psychotherapie"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "60": {
    "gliederung": [
@@ -835,7 +897,32 @@
      "label": "XI.4. Änderung und Aufhebung bisheriger Erlasse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 329.110.",
+     "links": [
+      {
+       "label": "329.110",
+       "url": "https://www.gesetzessammlung.bs.ch/data/329.110/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-329.110"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Erlassdatum redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "61": {
    "gliederung": [
@@ -889,9 +976,7 @@
      "label": "X.9. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

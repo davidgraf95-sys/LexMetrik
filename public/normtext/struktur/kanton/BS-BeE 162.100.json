@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die Arbeitsverhältnisse und die Entlöhnung der Mitarbeiterinnen und Mitarbeiter der Gemeinde Bettingen",
+  "erlassdatum": "Vom 19. November 1985 (Stand 1. Mai 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gemeindeversammlung der Einwohnergemeinde Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 des Gemeindegesetzes vom 17. Oktober 1984 sowie auf § 1 des Personalgesetzes des Kantons Basel-Stadt vom 17. November 1999, auf Antrag des Gemeinderates,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst folgende Personalordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 162.100.",
+    "links": [
+     {
+      "label": "162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-162.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -16,13 +72,13 @@
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Anstellungs- und Einreihungskompetenz *"
+    "Anstellungs- und Einreihungskompetenz"
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
-    "Beschwerden betreffend das Arbeitsverhältnis *"
+    "Beschwerden betreffend das Arbeitsverhältnis"
    ]
   },
   "5": {
@@ -34,19 +90,28 @@
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Massnahmen und vorsorgliche Massnahmen während des Arbeitsverhältnisses *"
+    "Massnahmen und vorsorgliche Massnahmen während des Arbeitsverhältnisses"
    ]
   },
   "7": {
    "gliederung": [],
    "marginalie": [
-    "Beendigung des Arbeitsverhältnisses *"
+    "Beendigung des Arbeitsverhältnisses"
    ]
   },
   "8": {
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten, Publikation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 31. 5. 1986.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

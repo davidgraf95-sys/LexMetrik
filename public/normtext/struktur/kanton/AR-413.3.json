@@ -1,5 +1,31 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Ost – Ostschweizer Fachhochschule",
+  "erlassdatum": "vom 15.02.2019 (Stand 01.01.2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone St.Gallen, Schwyz, Glarus, Appenzell Ausserrhoden, Appenzell Innerrhoden und Thurgau sowie das Fürstentum Liechtenstein"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Beitritt des Kantons Appenzell Ausserrhoden mit Kantonsratsbeschluss vom 17. Juni 2019",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -109,6 +135,20 @@
    ],
    "marginalie": [
     "Innerkantonale oder innerstaatliche Kompetenzordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Interkantonale Fachhochschulvereinbarung (FHV) ab 2005 vom 12. Juni 2003, bGS 411.9",
+     "links": [
+      {
+       "label": "411.9",
+       "url": "https://ar.clex.ch/data/411.9/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -208,6 +248,24 @@
    ],
    "marginalie": [
     "b) Stellung und Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 831.40",
+     "links": [
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -241,6 +299,20 @@
    ],
    "marginalie": [
     "Amtsdauer und Amtszeitbeschränkung für den Hochschulrat und die Standortbeiräte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 1 Abs. 2 Bst. c des Gesetzes über die Amtsdauer (ADG; sGS 117.1 )",
+     "links": [
+      {
+       "label": "117.1",
+       "url": "https://db.clex.ch/link/SG/117.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -318,6 +390,32 @@
    ],
    "marginalie": [
     "b) Höchstbeträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "bGS 411.9",
+     "links": [
+      {
+       "label": "411.9",
+       "url": "https://ar.clex.ch/data/411.9/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "bGS 411.9",
+     "links": [
+      {
+       "label": "411.9",
+       "url": "https://ar.clex.ch/data/411.9/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -501,6 +599,20 @@
    ],
    "marginalie": [
     "Haftung und Verantwortlichkeit der Organe und des Personals"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "sGS 161.1",
+     "links": [
+      {
+       "label": "161.1",
+       "url": "https://db.clex.ch/link/SG/161.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "43": {
@@ -564,6 +676,20 @@
    ],
    "marginalie": [
     "Anwendbares Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "sGS 951.1",
+     "links": [
+      {
+       "label": "951.1",
+       "url": "https://db.clex.ch/link/SG/951.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "48": {
@@ -657,6 +783,44 @@
    ],
    "marginalie": [
     "Bisherige Trägervereinbarungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "bGS 415.16",
+     "links": [
+      {
+       "label": "415.16",
+       "url": "https://ar.clex.ch/data/415.16/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "sGS 234.211",
+     "links": [
+      {
+       "label": "234.211",
+       "url": "https://db.clex.ch/link/SG/234.211/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "sGS 234.111",
+     "links": [
+      {
+       "label": "234.111",
+       "url": "https://db.clex.ch/link/SG/234.111/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "55": {

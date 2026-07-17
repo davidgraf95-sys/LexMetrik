@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Personalverordnung",
+  "erlassdatum": "vom 20.11.2007 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 73 des Personalgesetzes vom 24. Oktober 2005,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "PG (bGS 142.21 )",
+    "links": [
+     {
+      "label": "142.21",
+      "url": "https://ar.clex.ch/data/142.21/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-142.21"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -20,7 +59,7 @@
     }
    ],
    "marginalie": [
-    "Gesamtarbeitsvertrag *"
+    "Gesamtarbeitsvertrag"
    ]
   },
   "4": {
@@ -31,7 +70,7 @@
     }
    ],
    "marginalie": [
-    "Leitbild *"
+    "Leitbild"
    ]
   },
   "5": {
@@ -42,7 +81,7 @@
     }
    ],
    "marginalie": [
-    "Sozialpartnerkonferenz a) Zusammensetzung *"
+    "Sozialpartnerkonferenz a) Zusammensetzung"
    ]
   },
   "6": {
@@ -64,7 +103,7 @@
     }
    ],
    "marginalie": [
-    "Anstellungsbehörden *"
+    "Anstellungsbehörden"
    ]
   },
   "8": {
@@ -75,7 +114,21 @@
     }
    ],
    "marginalie": [
-    "Vorgesetzte Stelle *"
+    "Vorgesetzte Stelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "BVO ( bGS 142.211 )",
+     "links": [
+      {
+       "label": "bGS 142.211",
+       "url": "https://ar.clex.ch/data/bGS%20142.211/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -86,7 +139,7 @@
     }
    ],
    "marginalie": [
-    "Personalamt *"
+    "Personalamt"
    ]
   },
   "12": {
@@ -108,7 +161,7 @@
     }
    ],
    "marginalie": [
-    "Ausschreibung einer Stelle *"
+    "Ausschreibung einer Stelle"
    ]
   },
   "14": {
@@ -119,7 +172,7 @@
     }
    ],
    "marginalie": [
-    "Auswahl der Angestellten *"
+    "Auswahl der Angestellten"
    ]
   },
   "15": {
@@ -150,7 +203,7 @@
     }
    ],
    "marginalie": [
-    "Ferien *"
+    "Ferien"
    ]
   },
   "18": {
@@ -161,7 +214,7 @@
     }
    ],
    "marginalie": [
-    "Feiertage und Freitage *"
+    "Feiertage und Freitage"
    ]
   },
   "19": {
@@ -172,7 +225,7 @@
     }
    ],
    "marginalie": [
-    "Mutterschaftsurlaub *"
+    "Mutterschaftsurlaub"
    ]
   },
   "20": {
@@ -183,7 +236,7 @@
     }
    ],
    "marginalie": [
-    "Unbezahlter Urlaub *"
+    "Unbezahlter Urlaub"
    ]
   },
   "21": {
@@ -194,7 +247,7 @@
     }
    ],
    "marginalie": [
-    "Mitarbeitendengespräch *"
+    "Mitarbeitendengespräch"
    ]
   },
   "22": {
@@ -205,7 +258,7 @@
     }
    ],
    "marginalie": [
-    "Förderung der Angestellten a) Im Allgemeinen *"
+    "Förderung der Angestellten a) Im Allgemeinen"
    ]
   },
   "23": {
@@ -227,7 +280,7 @@
     }
    ],
    "marginalie": [
-    "Arbeitszeugnis und Arbeitsbestätigung *"
+    "Arbeitszeugnis und Arbeitsbestätigung"
    ]
   },
   "27": {
@@ -238,7 +291,7 @@
     }
    ],
    "marginalie": [
-    "Arbeitszeit a) Begriff *"
+    "Arbeitszeit a) Begriff"
    ]
   },
   "29": {
@@ -271,7 +324,7 @@
     }
    ],
    "marginalie": [
-    "e) Vertrauensarbeitszeit *"
+    "e) Vertrauensarbeitszeit"
    ]
   },
   "32": {
@@ -282,7 +335,7 @@
     }
    ],
    "marginalie": [
-    "Meldepflichten *"
+    "Meldepflichten"
    ]
   },
   "33": {
@@ -293,7 +346,7 @@
     }
    ],
    "marginalie": [
-    "Vertrauensärztliche Untersuchung *"
+    "Vertrauensärztliche Untersuchung"
    ]
   },
   "34": {
@@ -304,7 +357,7 @@
     }
    ],
    "marginalie": [
-    "Öffentliche Ämter und Nebentätigkeiten *"
+    "Öffentliche Ämter und Nebentätigkeiten"
    ]
   },
   "35": {
@@ -315,7 +368,7 @@
     }
    ],
    "marginalie": [
-    "Besondere Verpflichtungen *"
+    "Besondere Verpflichtungen"
    ]
   },
   "36": {
@@ -326,7 +379,7 @@
     }
    ],
    "marginalie": [
-    "Einschränkung des Streikrechts *"
+    "Einschränkung des Streikrechts"
    ]
   },
   "37": {
@@ -337,7 +390,7 @@
     }
    ],
    "marginalie": [
-    "Personalinformationssystem *"
+    "Personalinformationssystem"
    ]
   },
   "38": {
@@ -368,7 +421,7 @@
     }
    ],
    "marginalie": [
-    "Kündigung durch die Anstellungsbehörde *"
+    "Kündigung durch die Anstellungsbehörde"
    ]
   },
   "44": {
@@ -379,7 +432,7 @@
     }
    ],
    "marginalie": [
-    "Kündigungstermin für kantonale Lehr- und Fachpersonen *"
+    "Kündigungstermin für kantonale Lehr- und Fachpersonen"
    ]
   },
   "45": {
@@ -390,7 +443,7 @@
     }
    ],
    "marginalie": [
-    "Sozialplan *"
+    "Sozialplan"
    ]
   },
   "46": {
@@ -401,7 +454,7 @@
     }
    ],
    "marginalie": [
-    "Grundloses Nichtantreten oder Verlassen des Arbeitsplatzes *"
+    "Grundloses Nichtantreten oder Verlassen des Arbeitsplatzes"
    ]
   },
   "47": {
@@ -412,7 +465,7 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmung betreffend ordentlicher und vorzeitiger Pensionierung *"
+    "Übergangsbestimmung betreffend ordentlicher und vorzeitiger Pensionierung"
    ]
   },
   "48": {
@@ -422,7 +475,16 @@
      "label": "XI. Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "1. Januar 2008 (RRB vom 20. November 2007; Abl. 2007, S. 1207)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "19_a": {
    "gliederung": [
@@ -432,7 +494,7 @@
     }
    ],
    "marginalie": [
-    "Elternschafts- und Adoptionsurlaub *"
+    "Elternschafts- und Adoptionsurlaub"
    ]
   },
   "19_b": {

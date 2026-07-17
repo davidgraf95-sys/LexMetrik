@@ -1,15 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Strassenprostitution",
+  "erlassdatum": "Vom 19. Dezember 2006 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 10 Abs. 1 des Übertretungsstrafgesetzes (ÜStG) vom 13. Februar 2019,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 253.100",
+    "links": [
+     {
+      "label": "253.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/253.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-253.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 24. 12. 2006.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

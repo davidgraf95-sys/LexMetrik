@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung für das Gesundheitszentrum Riehen",
+  "erlassdatum": "Vom 17. Juni 2009 (Stand 1. Januar 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag des Gemeinderats sowie der Sachkommission für Gesundheit und Finanzfragen (GEF) folgende Ordnung für das Gesundheitszentrum Riehen:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +43,29 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 1. 1. 2010.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "RiE 332.400. (Titel und Datum redaktionell berichtigt.)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Angenommen in der Gemeindeabstimmung vom 6. 9. 2009.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

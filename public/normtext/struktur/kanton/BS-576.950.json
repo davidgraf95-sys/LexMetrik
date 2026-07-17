@@ -1,5 +1,32 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung zwischen dem Präfekten des Departements Haut-Rhin und dem Kanton Basel-Stadt über die gegenseitige Information über Gefahren und Schäden, die sich auf das Hoheitsgebiet des Nachbarstaates auswirken können",
+  "erlassdatum": "Vom 25. November 1987 (Stand 24. Dezember 1987)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Auf der Grundlage von Art. 3 und 4 des Abkommens vom 14. Januar 1987 zwischen der Regierung der Republik Frankreich und dem Schweizerischen Bundesrat über die gegenseitige Hilfeleistung bei Katastrophen und schweren Unglücksfällen wird folgendes vereinbart:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 0.131.334.9.",
+    "links": [
+     {
+      "label": "0.131.334.9",
+      "url": "https://db.clex.ch/link/Bund/0.131.334.9/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,7 +50,16 @@
   },
   "6": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben und -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "7": {
    "gliederung": [],
@@ -39,7 +75,16 @@
   },
   "10": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Diese Beilage wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

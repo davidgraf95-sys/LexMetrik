@@ -1,5 +1,91 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zur Bundesgesetzgebung über die in die Schweiz entsandten Arbeitnehmerinnen und Arbeitnehmer und flankierende Massnahmen",
+  "erlassdatum": "vom 11.05.2004 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 7 Abs. 1 und 5 des Bundesgesetzes vom 8. Oktober 1999 über die minimalen Arbeits- und Lohnbedingungen für in die Schweiz entsandte Arbeitnehmerinnen und Arbeitnehmer und flankierende Massnahmen, Art. 360b Abs. 1 des Schweizerischen Obligationenrechts vom 30. März 1911, Art. 6 Abs. 7 und Art. 9 der Verordnung vom 21. Mai 2003 über die in die Schweiz entsandten Arbeitnehmerinnen und Arbeitnehmer sowie Art. 87 Abs. 3 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EntsG (SR 823.20 )",
+    "links": [
+     {
+      "label": "823.20",
+      "url": "https://db.clex.ch/link/Bund/823.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ENTSG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "OR (SR 220 )",
+    "links": [
+     {
+      "label": "220",
+      "url": "https://db.clex.ch/link/Bund/220/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "OR"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "EntsV (SR 823.201 )",
+    "links": [
+     {
+      "label": "823.201",
+      "url": "https://db.clex.ch/link/Bund/823.201/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +103,36 @@
    "gliederung": [],
    "marginalie": [
     "Tripartite Kommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. Art. 12 der V über die Arbeitsvermittlung und die Arbeitslosenversicherung (bGS 824.11 )",
+     "links": [
+      {
+       "label": "824.11",
+       "url": "https://ar.clex.ch/data/824.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-824.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "AVEG (SR 221.215.311 )",
+     "links": [
+      {
+       "label": "221.215.311",
+       "url": "https://db.clex.ch/link/Bund/221.215.311/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {

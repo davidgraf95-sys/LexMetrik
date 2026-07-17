@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser",
+  "erlassdatum": "Vom 15. Dezember 1983 (Stand 29. Januar 1984)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag des Regierungsrates folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +67,15 @@
    "gliederung": [],
    "marginalie": [
     "Anpassung anderer Gesetze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 29. 1. 1984.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

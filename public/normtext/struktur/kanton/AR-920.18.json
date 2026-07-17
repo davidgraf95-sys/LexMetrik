@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Vernetzungsbeiträge",
+  "erlassdatum": "vom 06.12.2016 (Stand 09.12.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 73 des Bundesgesetzes über die Landwirtschaft vom 29. April 1998, Art. 61 und 62 der Verordnung über die Direktzahlungen an die Landwirtschaft vom 23. Oktober 2013 und auf Art. 15 Abs. 3 des Gesetzes über die Landwirtschaft vom 7. Juni 1998,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Landwirtschaftsgesetz (LwG; SR 910.1 )",
+    "links": [
+     {
+      "label": "910.1",
+      "url": "https://db.clex.ch/link/Bund/910.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Direktzahlungsverordnung (DZV; SR 910.13 )",
+    "links": [
+     {
+      "label": "910.13",
+      "url": "https://db.clex.ch/link/Bund/910.13/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Landwirtschaftsgesetz (bGS 920.1 )",
+    "links": [
+     {
+      "label": "920.1",
+      "url": "https://ar.clex.ch/data/920.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-920.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

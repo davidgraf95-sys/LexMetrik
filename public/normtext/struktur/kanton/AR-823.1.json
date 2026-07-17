@@ -1,5 +1,48 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das kantonale Einigungsamt",
+  "erlassdatum": "vom 05.09.1941 (Stand 02.09.1949)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Art. 30 und 35 des Bundesgesetzes vom 18. Juni 1914 betreffend die Arbeit in den Fabriken sowie auf Art. 37 der Kantonsverfassung vom 26. April 1908,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 821.41",
+    "links": [
+     {
+      "label": "821.41",
+      "url": "https://db.clex.ch/link/Bund/821.41/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "aGS I/1",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +51,25 @@
      "label": "I. Zuständigkeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Heute Arbeitsgesetz (SR 822.11 )",
+     "links": [
+      {
+       "label": "822.11",
+       "url": "https://db.clex.ch/link/Bund/822.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ARG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -35,7 +96,25 @@
      "label": "I. Zuständigkeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "lit. a, b und c sind durch die Einführung des BG über die eidgenössische Einigungsstelle zur Beilegung von kollektiven Arbeitsstreitigkeiten (SR 821.42 ) und der dazugehörenden VV (SR 821.421 ) gegenstandslos geworden, da diese bundesrechtlichen Bestimmungen auch kollektive Arbeitsstreitigkeiten in nichtindustriellen Wirtschaftszweigen regeln",
+     "links": [
+      {
+       "label": "821.42",
+       "url": "https://db.clex.ch/link/Bund/821.42/de"
+      },
+      {
+       "label": "821.421",
+       "url": "https://db.clex.ch/link/Bund/821.421/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [
@@ -44,7 +123,25 @@
      "label": "I. Zuständigkeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Heute Art. 342 OR (SR 220 )",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [
@@ -116,7 +213,21 @@
      "label": "II. Organisation"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 231.1",
+     "links": [
+      {
+       "label": "231.1",
+       "url": "https://ar.clex.ch/data/231.1/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "14": {
    "gliederung": [
@@ -125,7 +236,21 @@
      "label": "II. Organisation"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vgl. Sportelntarif für Behörden und Beamte (bGS 142.251 )",
+     "links": [
+      {
+       "label": "142.251",
+       "url": "https://ar.clex.ch/data/142.251/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "15": {
    "gliederung": [
@@ -251,7 +376,33 @@
      "label": "III. Verfahren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 292 StGB (SR 311.0 ) sowie Art. 33 EG zum StGB (bGS 311 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      },
+      {
+       "label": "311",
+       "url": "https://ar.clex.ch/data/311/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-311"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "29": {
    "gliederung": [
@@ -305,7 +456,33 @@
      "label": "IV. Strafbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Gegenstandslos geworden, da nach Art. 49 Ziff. 3 StGB (SR 311.0 ) nur der Richter eine Geldbusse in Haft umwandeln darf; vgl. auch Art. 21 Abs. 1 EG zum StGB (bGS 311 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      },
+      {
+       "label": "311",
+       "url": "https://ar.clex.ch/data/311/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-311"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "35": {
    "gliederung": [
@@ -323,7 +500,16 @@
      "label": "IV. Strafbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "6. Oktober 1941",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

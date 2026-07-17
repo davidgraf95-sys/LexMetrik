@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Berufsmaturität",
+  "erlassdatum": "Vom 26. Juni 2018 (Stand 13. August 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 2 lit. a des Kantonalen Gesetzes über die Berufsbildung vom 12. September 2007, und in Ausführung der Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV) vom 24. Juni 2009, unter Verweis auf seine Erläuterungen Nr. P180797, auf Antrag des Erziehungsrats,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 420.200.",
+    "links": [
+     {
+      "label": "420.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/420.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-420.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 412.103.1.",
+    "links": [
+     {
+      "label": "412.103.1",
+      "url": "https://db.clex.ch/link/Bund/412.103.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BMV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

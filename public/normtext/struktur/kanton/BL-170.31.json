@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren der Gerichte",
+  "erlassdatum": "Vom 15.11.2010 (Stand 01.01.2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gerichtskonferenz des Kantons Basel-Landschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 11 Abs. 2 Bst. a des Gerichtsorganisationsgesetzes vom 22. Februar 2001,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SGS 170",
+    "links": [
+     {
+      "label": "SGS 170",
+      "url": "https://bl.clex.ch/data/170/de/art11"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +67,20 @@
    ],
    "marginalie": [
     "Grundsätze der Gebührenbemessung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SGS 170",
+     "links": [
+      {
+       "label": "SGS 170",
+       "url": "https://bl.clex.ch/data/170/de/art52"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -86,7 +135,7 @@
     }
    ],
    "marginalie": [
-    "Zivilkreisgerichte *"
+    "Zivilkreisgerichte"
    ]
   },
   "9": {
@@ -219,6 +268,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "GS 35.155, SGS 170.31",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -240,7 +298,41 @@
     }
    ],
    "marginalie": [
-    "Schiedsverfahren nach Art. 89 KVG [3] und Art. 57 UVG [4]"
+    "Schiedsverfahren nach Art. 89 KVG und Art. 57 UVG"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SR 832.20",
+     "links": [
+      {
+       "label": "SR 832.20",
+       "url": "https://db.clex.ch/link/Bund/832.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "UVG"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "6_a": {

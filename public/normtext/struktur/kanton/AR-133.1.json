@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Information und Akteneinsicht",
+  "erlassdatum": "vom 28.04.1996 (Stand 01.06.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art.12 Abs. 3 und Art. 67 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,22 @@
    ],
    "marginalie": [
     "Zweck, Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "vgl. Art. 67 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "vgl. Art. 12 Abs. 3 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -54,6 +109,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "vgl. Art. 67 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -142,6 +206,28 @@
    ],
    "marginalie": [
     "Kosten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. G über die Gebühren in Verwaltungssachen (bGS 233.2 ) und Gebührentarif für die Gemeinden (bGS 153.2 )",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      },
+      {
+       "label": "153.2",
+       "url": "https://ar.clex.ch/data/153.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {

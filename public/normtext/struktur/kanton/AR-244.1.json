@@ -1,9 +1,62 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Aufhebung der Sicherungsbeschlagnahme von Luftfahrzeugen",
+  "erlassdatum": "vom 13.02.1951 (Stand 13.02.1951)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 83 Abs. 2 des Bundesgesetzes vom 21. Dezember 1948 über die Luftfahrt,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 748.0",
+    "links": [
+     {
+      "label": "748.0",
+      "url": "https://db.clex.ch/link/Bund/748.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "LFG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Heute Kantonsgerichtspräsident (vgl. die Art. 5 und 6 der V vom 18. Februar 1974 über die Zuständigkeit und die Organisation der kantonalen Gerichte; bGS 145.33 )",
+     "links": [
+      {
+       "label": "145.33",
+       "url": "https://ar.clex.ch/data/145.33/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [],

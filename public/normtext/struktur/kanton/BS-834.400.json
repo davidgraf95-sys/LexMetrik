@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Krankenversicherung im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 15. November 1989 (Stand 26. Januar 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 17 der Verfassung des Kantons Basel-Stadt vom 2. Dezember 1889, das Bundesgesetz über die Krankenversicherung (KVG) vom 18. März 1994 sowie das Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) vom 6. Oktober 2000 auf Antrag des Regierungsrates, in Erfüllung der Initiative für eine gesunde und soziale ÖKK sowie der Initiative betreffend rechtliche Gleichstellung aller vom Bund anerkannten, in Basel tätigen Krankenkassen,",
+    "fnNrs": [
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Dieses Verfassung ist aufgehoben. Massegebend ist jetzt die Verfassung des Kantons Basel-Stadt vom 23. März 2005 SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 832.10.",
+    "links": [
+     {
+      "label": "832.10",
+      "url": "https://db.clex.ch/link/Bund/832.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "KVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 830.1.",
+    "links": [
+     {
+      "label": "830.1",
+      "url": "https://db.clex.ch/link/Bund/830.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ATSG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +81,16 @@
      "label": "A. Zweck"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -36,9 +118,7 @@
      "label": "B.I. Versicherungspflicht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -81,9 +161,7 @@
      "label": "B.II."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -96,9 +174,7 @@
      "label": "B.II."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [
@@ -111,9 +187,7 @@
      "label": "B.II."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -126,9 +200,7 @@
      "label": "B.II."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -141,9 +213,7 @@
      "label": "B.II."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "11": {
    "gliederung": [
@@ -156,9 +226,7 @@
      "label": "B.II."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -171,9 +239,7 @@
      "label": "C.I."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [
@@ -186,9 +252,7 @@
      "label": "C.I."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -201,9 +265,7 @@
      "label": "C.II."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -247,7 +309,7 @@
     }
    ],
    "marginalie": [
-    "Allgemeines *"
+    "Allgemeines"
    ]
   },
   "18": {
@@ -284,9 +346,7 @@
      "label": "C.III.1."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -362,6 +422,15 @@
    ],
    "marginalie": [
     "Verrechnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "2. Zwischentitel: Infolge Aufhebung des 2. Zwischentitels durch GRB vom 12. 3. 1997 (wirksam seit 1. 1. 1997, publiziert am 15. 3. 1997) erhielt der bisherige 3. Zwischentitel die Ziff. 2.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -375,9 +444,7 @@
      "label": "C.III.2. Beiträge für Mehraufwendungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [
@@ -390,9 +457,7 @@
      "label": "C.III.2. Beiträge für Mehraufwendungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26": {
    "gliederung": [
@@ -405,9 +470,7 @@
      "label": "C.III.2. Beiträge für Mehraufwendungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -420,9 +483,7 @@
      "label": "C.IV."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [
@@ -435,9 +496,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "..."
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -450,9 +509,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -465,9 +522,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -480,9 +535,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -495,9 +548,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -510,9 +561,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "34": {
    "gliederung": [
@@ -525,9 +574,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [
@@ -540,9 +587,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -555,9 +600,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -570,9 +613,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -585,9 +626,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [
@@ -600,9 +639,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -615,9 +652,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "41": {
    "gliederung": [
@@ -630,9 +665,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "42": {
    "gliederung": [
@@ -645,9 +678,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "43": {
    "gliederung": [
@@ -660,9 +691,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "44": {
    "gliederung": [
@@ -675,9 +704,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "45": {
    "gliederung": [
@@ -690,9 +717,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "46": {
    "gliederung": [
@@ -705,9 +730,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "47": {
    "gliederung": [
@@ -720,9 +743,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "48": {
    "gliederung": [
@@ -735,9 +756,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "49": {
    "gliederung": [
@@ -750,9 +769,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "50": {
    "gliederung": [
@@ -765,9 +782,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "51": {
    "gliederung": [
@@ -780,9 +795,7 @@
      "label": "D.I. Rechtsstellung, Aufgabe, Sitz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "52": {
    "gliederung": [
@@ -883,7 +896,16 @@
     }
    ],
    "marginalie": [
-    "Öffentliche Krankenkasse des Kantons Basel-Stadt [7]"
+    "Öffentliche Krankenkasse des Kantons Basel-Stadt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "§ 59: Name seit Umwandlung in eine selbständige öffentlich-rechtliche Anstalt per 31. 12. 2008 «Vivao Sympany AG».",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "60": {
@@ -912,7 +934,16 @@
      "label": "F.III. Änderung bisherigen Rechts"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "§ 61: Diese Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "62": {
    "gliederung": [
@@ -938,7 +969,16 @@
      "label": "F.V. Rechtskraft und Wirksamkeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Wirksam seit 1. 1. 1991.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "51_a": {
    "gliederung": [

@@ -1,5 +1,125 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über den Natur- und Landschaftsschutz und die Förderung der Biodiversität und Landschaftsqualität",
+  "erlassdatum": "Vom 5. Dezember 2006 (Stand 18. Dezember 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gemeindeversammlung der Einwohnergemeinde Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 Ziff. 6 des Gemeindegesetzes vom 17. Oktober 1984, das kantonale Bau- und Planungsgesetz (BPG) vom 17. November 1999, das kantonale Gesetz über den Natur- und Landschaftsschutz vom 25. Januar 1995, die kantonale Verordnung über den Natur- und Landschaftsschutz vom 8. September 1998, die kantonale Verordnung über die Förderung der Biodiversität und Landschaftsqualität im Landwirtschaftsgebiet vom 24. März 2015 und § 12 Ziff. 2 der Gemeindeordnung der Einwohnergemeinde Bettingen vom 26. April 2016, auf Antrag des Gemeinderates,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 789.100.",
+    "links": [
+     {
+      "label": "789.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/789.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-789.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 789.110.",
+    "links": [
+     {
+      "label": "789.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/789.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-789.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SG 789.600.",
+    "links": [
+     {
+      "label": "789.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/789.600/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-789.600"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "BeE 111.100.",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -34,7 +154,7 @@
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Bettinger Naturschutzkonzept und Erfolgskontrolle *"
+    "Bettinger Naturschutzkonzept und Erfolgskontrolle"
    ]
   },
   "7": {
@@ -52,7 +172,7 @@
   "9": {
    "gliederung": [],
    "marginalie": [
-    "Biodiversität und Biotopverbund *"
+    "Biodiversität und Biotopverbund"
    ]
   },
   "10": {
@@ -76,7 +196,7 @@
   "13": {
    "gliederung": [],
    "marginalie": [
-    "Beitragsempfangende *"
+    "Beitragsempfangende"
    ]
   },
   "14": {
@@ -137,6 +257,15 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Publiziert am 7. 3. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22_a": {

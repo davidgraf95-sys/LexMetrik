@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung des Bundesgesetzes über die Krankenversicherung",
+  "erlassdatum": "vom 14.09.2009 (Stand 01.01.2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 18. März 1994 über die Krankenversicherung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KVG (SR 832.10 )",
+    "links": [
+     {
+      "label": "832.10",
+      "url": "https://db.clex.ch/link/Bund/832.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "KVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +48,7 @@
     }
    ],
    "marginalie": [
-    "Gegenstand *"
+    "Gegenstand"
    ]
   },
   "2": {
@@ -21,6 +60,72 @@
    ],
    "marginalie": [
     "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 28 und 38 des Steuergesetzes (bGS 621.11 )",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "ELG (SR 831.30 )",
+     "links": [
+      {
+       "label": "831.30",
+       "url": "https://db.clex.ch/link/Bund/831.30/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ELG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Art. 49 bis AHVV (SR 831.101 )",
+     "links": [
+      {
+       "label": "831.101",
+       "url": "https://db.clex.ch/link/Bund/831.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Art. 3 Abs. 1 lit. b FamZG (SR 836.2 )",
+     "links": [
+      {
+       "label": "836.2",
+       "url": "https://db.clex.ch/link/Bund/836.2/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FAMZG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -64,7 +169,7 @@
     }
    ],
    "marginalie": [
-    "d) Ausgleichskasse Appenzell Ausserrhoden *"
+    "d) Ausgleichskasse Appenzell Ausserrhoden"
    ]
   },
   "7": {
@@ -97,7 +202,7 @@
     }
    ],
    "marginalie": [
-    "Nichtbezahlung von Prämien und Kostenbeteiligungen *"
+    "Nichtbezahlung von Prämien und Kostenbeteiligungen"
    ]
   },
   "11": {
@@ -174,7 +279,33 @@
     }
    ],
    "marginalie": [
-    "Versicherte mit Wohnsitz in der Europäischen Union, Island oder Norwegen *"
+    "Versicherte mit Wohnsitz in der Europäischen Union, Island oder Norwegen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "V des EDI über die Durchschnittsprämie der Krankenpflegeversicherung für die Berechnung der Ergänzungsleistungen (SR 831.309.1 )",
+     "links": [
+      {
+       "label": "831.309.1",
+       "url": "https://db.clex.ch/link/Bund/831.309.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "V des EDI über die Preisniveauindizes und die Durchschnittsprämien für den Anspruch auf Prämienverbilligung in der Europäischen Union, in Island und in Norwegen (SR 832.112.51 )",
+     "links": [
+      {
+       "label": "832.112.51",
+       "url": "https://db.clex.ch/link/Bund/832.112.51/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -186,6 +317,52 @@
    ],
    "marginalie": [
     "Massgebendes Einkommen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "BVG (SR 831.40 )",
+     "links": [
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "BGSA (SR 822.41 )",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "bGS 621.11",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -230,6 +407,15 @@
    ],
    "marginalie": [
     "Finanzierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 66 KVG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -251,7 +437,25 @@
     }
    ],
    "marginalie": [
-    "Rekurs und Beschwerde *"
+    "Rekurs und Beschwerde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "ATSG (SR 830.1 )",
+     "links": [
+      {
+       "label": "830.1",
+       "url": "https://db.clex.ch/link/Bund/830.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ATSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -274,6 +478,20 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "bGS 234.3",
+     "links": [
+      {
+       "label": "234.3",
+       "url": "https://ar.clex.ch/data/234.3/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -296,6 +514,22 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "bGS 833.14 (lf. Nr. 591)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "bGS 833.112 (lf. Nr. 1066)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -307,6 +541,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Die Referendumsfrist ist am 17. November 2009 unbenützt abgelaufen (Abl. 2009, S. 1667)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "1. Januar 2010 (RRB vom 15. Dezember 2009, Abl. 2009; S. 1667)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

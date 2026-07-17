@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung zwischen dem Bund und den Kantonen über die Harmonisierung und die gemeinsame Bereitstellung der Polizeitechnik und -informatik in der Schweiz",
+  "erlassdatum": "vom 14.11.2019 (Stand 01.01.2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone, handelnd durch ihre Justiz- und Polizeidirektorinnen beziehungsweise -direktoren, und der Bund, handelnd durch die Vorsteherin des Eidgenössischen Justiz- und Polizeidepartements (EJPD),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "mit dem Ziel, die Polizeitechnik und -informatik (PTI) zu harmonisieren, mit der Absicht, im Rahmen eines Programms PTI Neues gemeinsam zu realisieren und Bestehendes schrittweise anzugleichen, mit dem Bestreben, polizeiliche Fachanwendungen und Systeme sowie deren Schnittstellen zu Dritten gemeinsam und aufeinander abgestimmt zu planen, zu beschaffen, zu implementieren, weiterzuentwickeln und zu betreiben, mit der Absicht, dabei den Datenschutz und den Informationsschutz sicherzustellen,"
+   },
+   {
+    "rolle": "verb",
+    "text": "schliessen folgende Vereinbarung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Vom Kantonsrat genehmigt am 14. Juni 2021 (siehe Amtsblatt vom 18. Juni 2021); Referendumsfrist am 17. August 2021 unbenutzt abgelaufen; Beitritt des Kantons Appenzell Ausserrhoden per 1. Oktober 2021 beschlossen durch Regierungsrat am 28. September 2021 (siehe Amtsblatt vom 1. Oktober 2021)",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -120,6 +150,24 @@
    ],
    "marginalie": [
     "Revisionsstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -261,6 +309,24 @@
    ],
    "marginalie": [
     "Buchführung und Rechnungslegung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -270,7 +336,21 @@
      "label": "6. Abschnitt: Anwendbares Recht"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "BGS 153.01",
+     "links": [
+      {
+       "label": "153.01",
+       "url": "https://db.clex.ch/link/BE/153.01/de"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
   },
   "26": {
    "gliederung": [
@@ -391,6 +471,24 @@
    ],
    "marginalie": [
     "Streitbeilegung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 101",
+     "links": [
+      {
+       "label": "101",
+       "url": "https://db.clex.ch/link/Bund/101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

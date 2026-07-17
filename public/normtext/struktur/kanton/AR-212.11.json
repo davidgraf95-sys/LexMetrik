@@ -1,5 +1,91 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Zivilstandswesen",
+  "erlassdatum": "vom 20.05.2003 (Stand 01.09.2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 49 und 103 des Schweizerischen Zivilgesetzbuches, Art. 52 Abs. 2 Schlusstitel des Schweizerischen Zivilgesetzbuches, der eidgenössischen Zivilstandsverordnung vom 28. April 2004, sowie Art. 18 Abs. 4 des Gesetzes vom 27. April 1969 über die Einführung des Schweizerischen Zivilgesetzbuches,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "ZGB (SR 210 )",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SchlT ZGB (SR 210 )",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "ZStV (SR 211.112.1 )",
+    "links": [
+     {
+      "label": "211.112.1",
+      "url": "https://db.clex.ch/link/Bund/211.112.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "EG zum ZGB (bGS 211.1 )",
+    "links": [
+     {
+      "label": "211.1",
+      "url": "https://ar.clex.ch/data/211.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-211.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +96,15 @@
    ],
    "marginalie": [
     "Aufsichtsbehörde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 45 Abs. 1 ZGB",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -32,6 +127,15 @@
    ],
    "marginalie": [
     "Zivilstandsämter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 45a ZGB und Art. 77 ZStV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -64,7 +168,16 @@
     }
    ],
    "marginalie": [
-    "Aktenprüfung *"
+    "Aktenprüfung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 15a Abs. 2 und Art. 16 Abs. 6 ZStV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -76,6 +189,15 @@
    ],
    "marginalie": [
     "Anzeige eines Todesfalls bei der Wohngemeinde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 78 Abs. 1 und Art. 79 Abs. 2 ZStV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -87,6 +209,31 @@
    ],
    "marginalie": [
     "Bestattungswesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Art. 86 Abs. 2 ZStV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "bGS 123.1 (vgl. heute Ausweisverordnung; bGS 123.1 )",
+     "links": [
+      {
+       "label": "123.1",
+       "url": "https://ar.clex.ch/data/123.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-123.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -98,6 +245,15 @@
    ],
    "marginalie": [
     "Findelkind"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Art. 2 Ziff. 1 EG zum ZGB",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -131,6 +287,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "lf. Nr. 259",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -142,6 +307,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts; Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "bGS 212.11 (lf. Nr. 259)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7_a": {
@@ -164,6 +338,43 @@
    ],
    "marginalie": [
     "Beurkundungen betreffend den Personenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 2 Abs. 3 ZStV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 23 Abs. 4 ZStV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Art. 22 Abs. 4 ZStV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Art. 22 Abs. 4 ZStV",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Art. 260 Abs. 3 ZGB",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "9_a": {
@@ -175,6 +386,15 @@
    ],
    "marginalie": [
     "Tod einer unbekannten Person"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Art. 34 ZStV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

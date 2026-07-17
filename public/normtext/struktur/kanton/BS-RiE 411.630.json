@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend die Ermässigung der Elterntarife für den ausserschulischen Musikunterricht in Riehen",
+  "erlassdatum": "Vom 12. Dezember 2023 (Stand 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 18b des Gemeindegesetzes vom 17. Oktober 1984 und § 24 der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 111.100",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

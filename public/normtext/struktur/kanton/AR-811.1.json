@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesundheitsgesetz",
+  "erlassdatum": "vom 25.11.2007 (Stand 14.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Stimmberechtigten von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 48 und Art. 74 Abs. 2 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,24 @@
    ],
    "marginalie": [
     "Zweck und Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 39 BG über die Krankenversicherung (KVG; SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "2 bis",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +78,15 @@
    ],
    "marginalie": [
     "Selbstverantwortung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. Art. 48 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -76,6 +142,31 @@
    ],
    "marginalie": [
     "Regierungsrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 87 Abs. 3 und 2 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -87,6 +178,40 @@
    ],
    "marginalie": [
     "Departement Gesundheit und Soziales"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 119 des Schweizerischen Strafgesetzbuches (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -108,7 +233,7 @@
     }
    ],
    "marginalie": [
-    "Ethikrat *"
+    "Ethikrat"
    ]
   },
   "12": {
@@ -240,7 +365,41 @@
     }
    ],
    "marginalie": [
-    "Information und Datenschutz *"
+    "Information und Datenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "bGS 146.1",
+     "links": [
+      {
+       "label": "146.1",
+       "url": "https://ar.clex.ch/data/146.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-146.1"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "DSG (SR 235.1 )",
+     "links": [
+      {
+       "label": "235.1",
+       "url": "https://db.clex.ch/link/Bund/235.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "DSG"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -307,6 +466,24 @@
    ],
    "marginalie": [
     "Obduktion"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Strafprozessordnung (StPO; SR 312.0 )",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -318,6 +495,40 @@
    ],
    "marginalie": [
     "Entnahme von Organen, Geweben oder Zellen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SR 810.21",
+     "links": [
+      {
+       "label": "810.21",
+       "url": "https://db.clex.ch/link/Bund/810.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "TXG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Art. 13 Abs. 2 lit. i Transplantationsgesetz (SR 810.21 )",
+     "links": [
+      {
+       "label": "810.21",
+       "url": "https://db.clex.ch/link/Bund/810.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "TXG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -406,6 +617,24 @@
    ],
    "marginalie": [
     "Schweigepflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "42": {
@@ -416,7 +645,7 @@
     }
    ],
    "marginalie": [
-    "Ambulanter Notfalldienst a) Mitwirkungspflicht und Organisation *"
+    "Ambulanter Notfalldienst a) Mitwirkungspflicht und Organisation"
    ]
   },
   "43": {
@@ -494,6 +723,15 @@
    ],
    "marginalie": [
     "Bewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Vgl. Art. 46 Abs. 2",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "50": {
@@ -515,7 +753,7 @@
     }
    ],
    "marginalie": [
-    "Aufnahmepflichten *"
+    "Aufnahmepflichten"
    ]
   },
   "53": {
@@ -527,6 +765,24 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "HMG (SR 812.21 )",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "54": {
@@ -538,6 +794,40 @@
    ],
    "marginalie": [
     "Bewilligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SR 812.21 )",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "HMG (SR 812.21 )",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "55": {
@@ -549,6 +839,24 @@
    ],
    "marginalie": [
     "Marktüberwachung und Inspektion"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "SR 812.21",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "56": {
@@ -560,6 +868,24 @@
    ],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "bGS 233.2 )",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "57": {
@@ -571,6 +897,24 @@
    ],
    "marginalie": [
     "Verwaltungsmassnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "SR 812.21",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "58": {
@@ -593,6 +937,84 @@
    ],
    "marginalie": [
     "Regierungsrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Vgl. Epidemiengesetz (EpG; SR 818.101 )",
+     "links": [
+      {
+       "label": "818.101",
+       "url": "https://db.clex.ch/link/Bund/818.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EPG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "Vgl. Betäubungsmittelgesetz (BetmG; SR 812.121 )",
+     "links": [
+      {
+       "label": "812.121",
+       "url": "https://db.clex.ch/link/Bund/812.121/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BETMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "Vgl. Lebensmittelgesetz (LMG; SR 817.0 )",
+     "links": [
+      {
+       "label": "817.0",
+       "url": "https://db.clex.ch/link/Bund/817.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "Vgl. Tierseuchengesetz (TSG; SR 916.40 )",
+     "links": [
+      {
+       "label": "916.40",
+       "url": "https://db.clex.ch/link/Bund/916.40/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "Vgl. Heilmittelgesetz (HMG; SR 812.21 )",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "60": {
@@ -604,6 +1026,63 @@
    ],
    "marginalie": [
     "Katastrophen und andere besondere Vorkommnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "Art. 90 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "bGS 511.1",
+     "links": [
+      {
+       "label": "511.1",
+       "url": "https://ar.clex.ch/data/511.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-511.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "bGS 511.2",
+     "links": [
+      {
+       "label": "511.2",
+       "url": "https://ar.clex.ch/data/511.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-511.2"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "30",
+     "text": "Art. 23 Epidemiengesetz (EpG; SR 818.101 )",
+     "links": [
+      {
+       "label": "818.101",
+       "url": "https://db.clex.ch/link/Bund/818.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EPG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "61": {
@@ -701,6 +1180,96 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "bGS 811.1 (lf. Nr. 222)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "bGS 811.11 (lf. Nr. 237)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "bGS 811.11.2 (lf. Nr. 449)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "bGS 811.113 (lf. Nr. 606)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "bGS 812.11 (lf. Nr. 727)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "37",
+     "text": "bGS 812.112 (lf. Nr. 470)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "bGS 812.113 (lf. Nr. 471)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "39",
+     "text": "bGS 813.12 aGS III/434",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "40",
+     "text": "bGS 813.21",
+     "links": [
+      {
+       "label": "813.21",
+       "url": "https://ar.clex.ch/data/813.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-813.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "bGS 816.31",
+     "links": [
+      {
+       "label": "816.31",
+       "url": "https://ar.clex.ch/data/816.31/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-816.31"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "70": {
@@ -712,6 +1281,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "42",
+     "text": "Von den Stimmberechtigten am 25. November 2007 angenommen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "1. Januar 2008.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10_a": {
@@ -844,6 +1429,24 @@
    ],
    "marginalie": [
     "Finanzielles a) Finanzierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "52_k": {
@@ -888,6 +1491,24 @@
    ],
    "marginalie": [
     "Rechtsschutz der Gesundheitsfachpersonen, der Institutionen des Gesundheitswesens oder Dritter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "66_c": {

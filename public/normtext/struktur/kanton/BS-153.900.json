@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Konferenz der Kantonsregierungen",
+  "erlassdatum": "Vom 8. Oktober 1993 (Stand 24. März 2006)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Regierungen der Kantone Zürich, Bern, Luzern, Uri, Schwyz, Obwalden, Nidwalden, Glarus, Zug, Freiburg, Solothurn, Basel-Stadt, Basel-Landschaft, Schaffhausen, Appenzell A.Rh., Appenzell I.Rh., St. Gallen, Graubünden, Aargau, Thurgau, Tessin, Waadt, Wallis, Neuenburg, Genf und Jura"
+   },
+   {
+    "rolle": "verb",
+    "text": "schliessen folgende Vereinbarung ab:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -137,6 +151,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 15: Der Vereinbarung gehören alle Kantone an.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {

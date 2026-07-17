@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zur Lenkungsabgabe und zum Strompreis-Bonus",
+  "erlassdatum": "Vom 11. Mai 1999 (Stand 1. Oktober 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Energiegesetz (EnG) vom 9. September 1998,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 772.100.",
+    "links": [
+     {
+      "label": "772.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/772.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-772.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -87,7 +126,16 @@
   },
   "17": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 22. 5. 1999.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

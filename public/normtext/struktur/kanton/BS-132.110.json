@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über Wahlen und Abstimmungen",
+  "erlassdatum": "Vom 3. Januar 1995 (Stand 11. August 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 90 des Gesetzes über Wahlen und Abstimmungen vom 21. April 1994,",
+    "fnNrs": [
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "4",
+    "text": "SG 132.100.",
+    "links": [
+     {
+      "label": "132.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/132.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-132.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -98,6 +137,15 @@
    ],
    "marginalie": [
     "Wahllokale"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -174,7 +222,7 @@
     }
    ],
    "marginalie": [
-    "Teilergebnis *"
+    "Teilergebnis"
    ]
   },
   "17": {
@@ -218,7 +266,7 @@
     }
    ],
    "marginalie": [
-    "Endergebnis *"
+    "Endergebnis"
    ]
   },
   "21": {
@@ -284,7 +332,7 @@
     }
    ],
    "marginalie": [
-    "Beauftragte des Regierungsrates sowie Expertinnen und Experten *"
+    "Beauftragte des Regierungsrates sowie Expertinnen und Experten"
    ]
   },
   "27": {
@@ -351,6 +399,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Publiziert am 7. 1. 1995.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13_a": {
@@ -372,7 +429,7 @@
     }
    ],
    "marginalie": [
-    "Beauftragte des Regierungsrates *"
+    "Beauftragte des Regierungsrates"
    ]
   },
   "2_a": {

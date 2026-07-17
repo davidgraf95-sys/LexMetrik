@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die Gewährung von Beiträgen zur Erhaltung wertvoller Bausubstanz",
+  "erlassdatum": "Vom 25. September 1996 (Stand 26. November 1996)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag des Gemeinderates und gestützt auf § 25 Abs. 1 Ziff. 6 der Gemeindeordnung der Einwohnergemeinde Riehen vom 23. Oktober 1985 nachstehende Ordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Die Gemeindeordnung vom 23. 10. 1985 ist aufgehoben. Massgebend ist jetzt § 21 Abs. 3 lit. b der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. 2. 2002 (wirksam seit 1. 1. 2003, RiE 111.100 ).",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -83,6 +114,15 @@
    "gliederung": [],
    "marginalie": [
     "Veröffentlichung und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 26. 11. 1996.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

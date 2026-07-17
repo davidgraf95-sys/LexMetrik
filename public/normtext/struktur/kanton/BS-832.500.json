@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zum Bundesgesetz über die Invalidenversicherung für eine IV-Stelle Basel-Stadt",
+  "erlassdatum": "Vom 19. Januar 1994 (Stand 1. Januar 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über die Invalidenversicherung (IVG) vom 19. Juni 1959, auf Antrag des Regierungsrates,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 831.20",
+    "links": [
+     {
+      "label": "831.20",
+      "url": "https://db.clex.ch/link/Bund/831.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "IVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -34,7 +73,7 @@
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Pflicht zu Verschwiegenheit und Akteneinsicht *"
+    "Pflicht zu Verschwiegenheit und Akteneinsicht"
    ]
   },
   "7": {
@@ -77,6 +116,15 @@
    "gliederung": [],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 30. 7. 1994.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

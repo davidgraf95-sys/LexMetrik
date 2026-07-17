@@ -1,5 +1,87 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung zwischen den Kantonen Basel-Landschaft und Basel-Stadt über die gemeinsame Ausgabe von Gewerbeparkkarten",
+  "erlassdatum": "Vom 16. Dezember 2014 (Stand 1. Januar 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Landschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 64 Absatz 1 Buchstabe b der Verfassung des Kantons Basel-Landschaft vom 17. Mai 1984 und § 37i des Strassengesetzes vom 24. März 1986, sowie der Regierungsrat des Kantons Basel-Stadt, gestützt auf § 16 der Verordnung vom 19. August 2014 über die Parkraumbewirtschaftung sowie der Verordnung vom 24. August 2014 über die ausnahmsweise Zufahrt in die Innenstadt,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "schliessen folgende Vereinbarung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "GS 29.276, SGS 100.",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "GS 29.252, SGS 430.",
+    "links": [
+     {
+      "label": "430",
+      "url": "https://db.clex.ch/link/BL/430/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 952.560.",
+    "links": [
+     {
+      "label": "952.560",
+      "url": "https://www.gesetzessammlung.bs.ch/data/952.560/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-952.560"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 952.300.",
+    "links": [
+     {
+      "label": "952.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/952.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-952.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

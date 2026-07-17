@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Kantonsbibliothek",
+  "erlassdatum": "vom 07.04.2009 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3 Abs. 1 lit. b und Abs. 2 des Kulturförderungsgesetzes vom 28. November 2005 sowie den Vertrag vom 16./20. August 1896 betreffend Überlassung der Gemeindebibliothek in Trogen an den Kanton zum Zwecke der Gründung einer Kantonsbibliothek,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 420.1",
+    "links": [
+     {
+      "label": "420.1",
+      "url": "https://ar.clex.ch/data/420.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-420.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 421.14",
+    "links": [
+     {
+      "label": "421.14",
+      "url": "https://ar.clex.ch/data/421.14/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,12 +75,39 @@
    "gliederung": [],
    "marginalie": [
     "Benützung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 133.1",
+     "links": [
+      {
+       "label": "133.1",
+       "url": "https://ar.clex.ch/data/133.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-133.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
    "gliederung": [],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "bGS 421.15 (aGS II/191)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

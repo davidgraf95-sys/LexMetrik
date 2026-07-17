@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement zur Lohnordnung",
+  "erlassdatum": "Vom 16. Februar 1999 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von § 19 der Ordnung betreffend Entlöhnung der Mitarbeiterinnen und Mitarbeiter der Bürgergemeinde der Stadt Basel (Lohnordnung, LO) vom 2. April1996 folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 164.100.",
+    "links": [
+     {
+      "label": "BaB 164.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20164.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -20,7 +51,7 @@
     }
    ],
    "marginalie": [
-    "Stelleneinreihung *"
+    "Stelleneinreihung"
    ]
   },
   "3": {
@@ -31,7 +62,7 @@
     }
    ],
    "marginalie": [
-    "Änderung oder Schaffung einer Musterfunktion *"
+    "Änderung oder Schaffung einer Musterfunktion"
    ]
   },
   "4": {
@@ -41,9 +72,7 @@
      "label": "2. Zuweisung der Stellen (§ 3 LO)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -54,6 +83,15 @@
    ],
    "marginalie": [
     "Musterfunktion und Festlegung des Lohnbereichs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 5 Abs. 1: Einleitungssatz redaktionell eingefügt.",
+     "links": [],
+     "absatz": "1 bis",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -65,6 +103,15 @@
    ],
    "marginalie": [
     "Einreihungsschema und Verzeichnis der Musterfunktionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 6 Abs. 2: Das Verzeichnis der Musterfunktionen und das Einreihungsschema werden hier nicht abgedruckt; sie können beim Bürgerratsschreiber (Stadthaus) eingesehen werden (Fussnote ist Bestandteil dieses Erlasses).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -204,9 +251,7 @@
      "label": "4. 2. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -279,7 +324,7 @@
     }
    ],
    "marginalie": [
-    "Verfahren für die Ausrichtung von Spontanprämien *"
+    "Verfahren für die Ausrichtung von Spontanprämien"
    ]
   },
   "24": {
@@ -528,7 +573,7 @@
     }
    ],
    "marginalie": [
-    "Verhältnis der Zulagen untereinander *"
+    "Verhältnis der Zulagen untereinander"
    ]
   },
   "43": {
@@ -542,9 +587,7 @@
      "label": "9. 3. Gemeinsame Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "44": {
    "gliederung": [
@@ -554,7 +597,7 @@
     }
    ],
    "marginalie": [
-    "Stellvertretungen *"
+    "Stellvertretungen"
    ]
   },
   "45": {
@@ -565,7 +608,7 @@
     }
    ],
    "marginalie": [
-    "Versicherung der Stellvertretungszulage *"
+    "Versicherung der Stellvertretungszulage"
    ]
   },
   "46": {
@@ -636,7 +679,7 @@
     }
    ],
    "marginalie": [
-    "Geschäftsfahrten mit Privatfahrzeugen *"
+    "Geschäftsfahrten mit Privatfahrzeugen"
    ]
   },
   "51": {
@@ -666,7 +709,7 @@
     }
    ],
    "marginalie": [
-    "Verpflegungs- und Übernachtungsspesen *"
+    "Verpflegungs- und Übernachtungsspesen"
    ]
   },
   "53": {
@@ -770,7 +813,7 @@
     }
    ],
    "marginalie": [
-    "Umrechnung 13. Monatslohn in Ferien (§ 16 LO) *"
+    "Umrechnung 13. Monatslohn in Ferien (§ 16 LO)"
    ]
   },
   "61": {

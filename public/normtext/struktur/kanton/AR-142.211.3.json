@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Weisungen über die Kriterien zur individuellen Lohnbestimmung für Lehrende an kantonalen Schulen",
+  "erlassdatum": "vom 26.05.2010 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 18 Abs. 5 der Besoldungsverordnung vom 30. Oktober 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BVO (bGS 142.211 )",
+    "links": [
+     {
+      "label": "142.211",
+      "url": "https://ar.clex.ch/data/142.211/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-142.211"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,20 @@
    ],
    "marginalie": [
     "Gegenstand und Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 1 Abs. 2 Anstellungsverordnung Volksschule (bGS 412.21 )",
+     "links": [
+      {
+       "label": "412.21",
+       "url": "https://ar.clex.ch/data/412.21/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -43,6 +96,32 @@
    ],
    "marginalie": [
     "Mitarbeitendengespräch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 55 Personalgesetz (PG; bGS 142.21 ), Art. 21 Personalverordnung (PGV; bGS 142.212 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      },
+      {
+       "label": "142.212",
+       "url": "https://ar.clex.ch/data/142.212/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.212"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -120,6 +199,15 @@
    ],
    "marginalie": [
     "Eröffnung der Entscheide aus der Laufbahnqualifikation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 7 Abs. 1 BVO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -131,6 +219,56 @@
    ],
    "marginalie": [
     "Einsprache und Verfügung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 70 Abs. 1 Personalgesetz (PG; bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "insb. Art. 70 Abs. 4 und 5 Personalgesetz (PG; bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -142,6 +280,24 @@
    ],
    "marginalie": [
     "Folgen bei Ausbleiben von guten Leistungen oder Nichtbestehen der Laufbahnqualifikation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 69 Personalgesetz (PG; bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -153,6 +309,31 @@
    ],
    "marginalie": [
     "Laufbahnstufen und Besoldungshöhe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 18 Abs. 1 und 2 BVO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "bGS 142.211",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -173,7 +354,16 @@
      "label": "IV. Inkrafttreten"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 24 Abs. 2 BVO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

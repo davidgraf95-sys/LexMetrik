@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Entschädigung für Lehraufträge am Kantonalen Lehrerseminar",
+  "erlassdatum": "Vom 19. April 1971 (Stand 1. Januar 1974)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 1 Abs. 2 des Lohngesetzes vom 12. November 1970, folgende Verordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Lohngesetz vom 18. 1. 1995 (SG 164.100 ).",
+    "links": [
+     {
+      "label": "164.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/164.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-164.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,7 +42,16 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 2 lit. b: Kindergärtnerinnenkurs.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [],
@@ -15,7 +59,16 @@
   },
   "4": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [],

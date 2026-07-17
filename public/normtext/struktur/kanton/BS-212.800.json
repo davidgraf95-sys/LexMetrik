@@ -1,22 +1,101 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zur Einführung des Bundesgesetzes zum Haager Adoptionsübereinkommen",
+  "erlassdatum": "Vom 11. Februar 2003 (Stand 1. Januar 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des Bundesgesetzes zum Haager Adoptionsübereinkommens und über Massnahmen zum Schutze des Kindes bei internationalen Adoptionen (BG-HAÜ) vom 22. Juni 2001 und gestützt auf Art. 52 Abs. 2 Schlusstitel (SchlT) ZGB,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 211.221.31.",
+    "links": [
+     {
+      "label": "211.221.31",
+      "url": "https://db.clex.ch/link/Bund/211.221.31/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 210.",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zentrale Behörde BG-HAÜ Art. 3, ZGB Art. 316 1 bis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 1 Abs. 2: Massgebend seit 1. 1. 2012 ist die Verordnung über die Adoption (Adoptionsverordnung, AdoV; SR 211.221.36 ).",
+     "links": [
+      {
+       "label": "211.221.36",
+       "url": "https://db.clex.ch/link/Bund/211.221.36/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ADOV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
-    "Kenntnis der Abstammung ZGB Art. 268d *"
+    "Kenntnis der Abstammung ZGB Art. 268d"
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 20. 2. 2003.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

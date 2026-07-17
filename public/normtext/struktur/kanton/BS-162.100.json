@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Personalgesetz",
+  "erlassdatum": "Vom 17. November 1999 (Stand 15. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -173,6 +191,24 @@
    ],
    "marginalie": [
     "Beschwerden betreffend das Arbeitsverhältnis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SG 140.100",
+     "links": [
+      {
+       "label": "140.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/140.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-140.100"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -370,7 +406,21 @@
     }
    ],
    "marginalie": [
-    "Beendigung des Arbeitsverhältnisses infolge Invalidität oder länger dauernder Arbeitsverhinderung *"
+    "Beendigung des Arbeitsverhältnisses infolge Invalidität oder länger dauernder Arbeitsverhinderung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 34 Abs. 1: Mit Urteil vom 7. August 2017 hat das Bundesgericht festgestellt, dass die automatische Beendigung des Arbeitsverhältnisses ohne Kündigung ausschliesslich dann eintritt, wenn ein Anspruch auf Rentenzahlungen der Invalidenversicherung besteht. Damit entfällt die automatische Beendigung des Arbeitsverhältnisses nach blossem Ablauf von 16 Monaten (Urteil 8C_46/2017 ).",
+     "links": [
+      {
+       "label": "8C_46/2017",
+       "url": "https://www.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?highlight_docid=aza%3A%2F%2Faza://07-08-2017-8C_46-2017&amp;lang=de&amp;zoom=&amp;type=show_document"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -479,6 +529,15 @@
    ],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 44 lit. b–p enthält hier nicht abgedruckte, sondern an Ort und Stelle berücksichtigte Änderungen und Ergänzungen anderer Erlasse.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -512,6 +571,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 1. 7. 2000.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "16_a": {

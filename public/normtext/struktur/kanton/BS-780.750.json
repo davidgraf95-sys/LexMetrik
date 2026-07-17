@@ -1,5 +1,112 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren des Amtes für Umwelt und Energie",
+  "erlassdatum": "Vom 16. Dezember 2025 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 48 Abs. 2 des Bundesgesetzes über den Umweltschutz (Umweltschutzgesetz, USG) vom 7. Oktober 1983, § 46 des Umweltschutzgesetzes Basel-Stadt (USG BS) vom 13. März 1991, § 3 des Gesetzes über die Fischerei im Kanton Basel-Stadt vom 13. Dezember 1978, das Gesetz über die Verwaltungsgebühren vom 9. März 1972 sowie die Verordnung zum Gesetz über die Verwaltungsgebühren vom 20. Juni 1972, unter Verweis auf seine Erläuterungen Nr. P251951,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 814.01",
+    "links": [
+     {
+      "label": "814.01",
+      "url": "https://db.clex.ch/link/Bund/814.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "USG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 780.100",
+    "links": [
+     {
+      "label": "780.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/780.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-780.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 912.500",
+    "links": [
+     {
+      "label": "912.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/912.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-912.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 153.800",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SG 153.810",
+    "links": [
+     {
+      "label": "153.810",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.810/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.810"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +160,40 @@
    "gliederung": [],
    "marginalie": [
     "Fälligkeit, Verzugszins, Mahngebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 153.800",
+     "links": [
+      {
+       "label": "153.800",
+       "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-153.800"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SG 153.810",
+     "links": [
+      {
+       "label": "153.810",
+       "url": "https://www.gesetzessammlung.bs.ch/data/153.810/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-153.810"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

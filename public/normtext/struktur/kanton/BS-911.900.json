@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Freizeitgärten",
+  "erlassdatum": "Vom 19. Dezember 2012 (Stand 1. Juni 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 12.1036.01 vom 3. Juli 2012 sowie in den Bericht der Bau- und Raumplanungskommission Nr. 12.1036.02 vom 20. November 2012,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -211,6 +229,15 @@
    ],
    "marginalie": [
     "Ausführungsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 1. 6. 2013.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

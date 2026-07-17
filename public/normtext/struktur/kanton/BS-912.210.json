@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Wildtier- und Jagdverordnung",
+  "erlassdatum": "Vom 12. März 2024 (Stand 1. April 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über Wildtiere und Jagd (WJG) vom 27. Oktober 2021 unter Verweis auf seine Erläuterungen Nr. P231057,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 912.200",
+    "links": [
+     {
+      "label": "912.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/912.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-912.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -439,6 +478,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Genehmigung bzgl. §§ 6-10, § 11, § 12, §§ 34 und 35 dieser Verordnung ist am 8. Mai 2024 erfolgt (KB vom 15.5.2024).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

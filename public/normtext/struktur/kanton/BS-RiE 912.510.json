@@ -1,10 +1,49 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Fischerei in der Gemeinde Riehen",
+  "erlassdatum": "Vom 29. März 1994 (Stand 7. März 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die kantonale Verordnung über die Fischerei im Kanton Basel-Stadt vom 8. Februar 2011,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 912.510",
+    "links": [
+     {
+      "label": "912.510",
+      "url": "https://www.gesetzessammlung.bs.ch/data/912.510/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-912.510"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
-    "Ausübung der Fischerei und Aufsicht *"
+    "Ausübung der Fischerei und Aufsicht"
    ]
   },
   "2": {
@@ -21,20 +60,34 @@
   },
   "4": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben und -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
    "gliederung": [],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 17. 4. 1994.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

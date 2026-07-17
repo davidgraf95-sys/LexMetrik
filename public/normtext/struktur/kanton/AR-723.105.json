@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Verordnung über die amtliche Vermessung",
+  "erlassdatum": "vom 23.10.2012 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Verordnung über die amtliche Vermessung vom 18. November 1992, die Verordnung über die geografischen Namen vom 21. Mai 2008 und das kantonale Geoinformationsgesetz vom 26. März 2012,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "VAV (SR 211.432.2 )",
+    "links": [
+     {
+      "label": "211.432.2",
+      "url": "https://db.clex.ch/link/Bund/211.432.2/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "GeoNV (SR 510.625 )",
+    "links": [
+     {
+      "label": "510.625",
+      "url": "https://db.clex.ch/link/Bund/510.625/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "kGeoIG (bGS 723.1 )",
+    "links": [
+     {
+      "label": "723.1",
+      "url": "https://ar.clex.ch/data/723.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-723.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +86,24 @@
    ],
    "marginalie": [
     "Verhältnis zum allgemeinen Geoinformationsrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "kGeoIG (bGS 723.101 )",
+     "links": [
+      {
+       "label": "723.101",
+       "url": "https://ar.clex.ch/data/723.101/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-723.101"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -302,6 +385,15 @@
    ],
    "marginalie": [
     "Laufende Nachführung a) Meldewesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 6 Abs. 2 VAV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -375,7 +467,25 @@
      "label": "VI. Verwaltung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 421.10",
+     "links": [
+      {
+       "label": "421.10",
+       "url": "https://ar.clex.ch/data/421.10/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-421.10"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "27": {
    "gliederung": [
@@ -506,6 +616,15 @@
    ],
    "marginalie": [
     "Meldepflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 26 GeoNV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "38": {

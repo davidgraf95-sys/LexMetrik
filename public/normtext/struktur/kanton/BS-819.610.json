@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Kontrolle und Finanzierung der Stellenmeldepflicht",
+  "erlassdatum": "Vom 3. Februar 2026 (Stand 1. März 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG) vom 16. Dezember 2005, unter Verweis auf seine Erläuterungen Nr. P-Nr. 260042,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 142.20.",
+    "links": [
+     {
+      "label": "142.20",
+      "url": "https://db.clex.ch/link/Bund/142.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "AIG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

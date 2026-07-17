@@ -1,10 +1,67 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Einführungsgesetz vom 24. April 1983 zum Bundesgesetz vom 19. Dezember 1958 über den Strassenverkehr (EG SVG)",
+  "erlassdatum": "vom 14.11.1983 (Stand 12.06.2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 8 des Einführungsgesetzes vom 24. April 1983 zum Bundesgesetz vom 19. Dezember 1958 über den Strassenverkehr,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG SVG (bGS 761.11 )",
+    "links": [
+     {
+      "label": "761.11",
+      "url": "https://ar.clex.ch/data/761.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-761.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
-    "Zuständigkeit *"
+    "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SVG (SR 741.01 )",
+     "links": [
+      {
+       "label": "741.01",
+       "url": "https://db.clex.ch/link/Bund/741.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {

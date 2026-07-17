@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Informatiksystem der Staatsanwaltschaft",
+  "erlassdatum": "Vom 2. November 2010 (Stand 1. Mai 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 6, 95 bis 99, 306f und 308 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007 sowie auf § 57 Abs. 4 des Gesetzes betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeigesetzes, PolG) vom 13. November 1996,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 312.0.",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 510.100.",
+    "links": [
+     {
+      "label": "510.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/510.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-510.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -75,7 +131,16 @@
     }
    ],
    "marginalie": [
-    "Verantwortung *"
+    "Verantwortung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 153.260",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -86,7 +151,7 @@
     }
    ],
    "marginalie": [
-    "Berechtigung zur Bearbeitung von Informationen *"
+    "Berechtigung zur Bearbeitung von Informationen"
    ]
   },
   "9": {
@@ -141,7 +206,7 @@
     }
    ],
    "marginalie": [
-    "Personen nach rechtskräftigem Abschluss von Verfahren *"
+    "Personen nach rechtskräftigem Abschluss von Verfahren"
    ]
   },
   "14": {
@@ -164,6 +229,15 @@
    ],
    "marginalie": [
     "Weitere Personenkategorien"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8_a": {

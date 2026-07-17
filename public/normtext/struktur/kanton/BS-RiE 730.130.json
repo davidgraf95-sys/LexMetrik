@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Zonenordnung Riehen",
+  "erlassdatum": "Vom 24. September 2015 (Stand 1. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag des Gemeinderats und der Sachkommission Siedlung und Landschaft (SSL) sowie gestützt auf §§ 95, 103 und 105 des Bau- und Planungsgesetzes (BPG) vom 17. November 1999 folgende Ordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -35,6 +70,22 @@
    "gliederung": [],
    "marginalie": [
     "Aufhebungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vom Bau- und Verkehrsdepartement des Kantons Basel-Stadt genehmigt am 7. 12. 2016.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Vom Gemeinderat Riehen am 13. 12. 2016 auf den 1. 1. 2017 für wirksam erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

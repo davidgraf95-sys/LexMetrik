@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement für den Personalausschuss Bürgerspital Basel",
+  "erlassdatum": "Vom 13. Februar 2012 (Stand 19. Juli 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Leitungsausschuss des Bürgerspitals,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 3 des Reglements zur Anstellungsordnung vom 12. Januar 1999 der Bürgergemeinde der Stadt Basel,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "BaB 162.110.",
+    "links": [
+     {
+      "label": "BaB 162.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20162.110/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -107,6 +142,15 @@
    "gliederung": [],
    "marginalie": [
     "Veröffentlichung und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 22. 4. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

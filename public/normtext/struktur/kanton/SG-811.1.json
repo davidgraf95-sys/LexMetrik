@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Steuergesetz",
+  "erlassdatum": "vom 09.04.1998 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons St.Gallen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "hat von der Botschaft der Regierung vom 13. Mai 1997 sowie von der Nachtragsbotschaft vom 24. Juni 1997 und von der 2. Nachtragsbotschaft vom 16. Dezember 1997 Kenntnis genommen und erlässt",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "als Gesetz:",
+    "fnNrs": [
+     "4"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "ABl 1997, 937.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "ABl 1997, 1405.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "ABl 1998, 87.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Abgekürzt StG. nGS 33–116; nGS 36–91; nGS 42–73; nGS 44–121. Vom Grossen Rat erlassen am 18. Februar 1998; nach unbenützter Referendumsfrist rechtsgültig geworden am 9. April 1998; in Vollzug ab 1. Januar 1999.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -31,7 +87,7 @@
     }
    ],
    "marginalie": [
-    "c) als öffentlich-rechtliche Körperschaft anerkannte Religionsgemeinschaften *"
+    "c) als öffentlich-rechtliche Körperschaft anerkannte Religionsgemeinschaften"
    ]
   },
   "4": {
@@ -234,6 +290,24 @@
    ],
    "marginalie": [
     "Beginn und Ende der Steuerpflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "BG über die Harmonisierung der direkten Steuern der Kantone und Gemeinden vom 14. Dezember 1990, SR 642.14.",
+     "links": [
+      {
+       "label": "642.14",
+       "url": "https://db.clex.ch/link/Bund/642.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STHG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -329,6 +403,24 @@
    ],
    "marginalie": [
     "Steuernachfolge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 211.231.",
+     "links": [
+      {
+       "label": "211.231",
+       "url": "https://db.clex.ch/link/Bund/211.231/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PARTG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -405,6 +497,20 @@
    ],
    "marginalie": [
     "Steuerliche Vorrechte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "BG über die von der Schweiz als Gaststaat gewährten Vorrechte, Immunitäten und Erleichterungen sowie finanziellen Beiträge vom 22. Juni 2007, SR 192.12.",
+     "links": [
+      {
+       "label": "192.12",
+       "url": "https://db.clex.ch/link/Bund/192.12/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -500,6 +606,47 @@
    ],
    "marginalie": [
     "d) Bewegliches Vermögen 1. Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SR 642.21.",
+     "links": [
+      {
+       "label": "642.21",
+       "url": "https://db.clex.ch/link/Bund/642.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VSTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SR 642.21.",
+     "links": [
+      {
+       "label": "642.21",
+       "url": "https://db.clex.ch/link/Bund/642.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VSTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "BG betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht) vom 30. März 1911, SR 220.",
+     "links": [],
+     "absatz": "8",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -538,6 +685,88 @@
    ],
    "marginalie": [
     "f) Einkünfte aus Vorsorge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "SR 221.229.1.",
+     "links": [
+      {
+       "label": "221.229.1",
+       "url": "https://db.clex.ch/link/Bund/221.229.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VVG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SR 961.01.",
+     "links": [
+      {
+       "label": "961.01",
+       "url": "https://db.clex.ch/link/Bund/961.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VAG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "SR 642.14 (in der Fassung des Bundesgesetzes über die Besteuerung von Leibrenten und ähnlichen Vorsorgeformen vom 17. Juni 2022, BBl 2022, 1556).",
+     "links": [
+      {
+       "label": "642.14",
+       "url": "https://db.clex.ch/link/Bund/642.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STHG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SR 221.229.1.",
+     "links": [
+      {
+       "label": "221.229.1",
+       "url": "https://db.clex.ch/link/Bund/221.229.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VVG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "SR 642.14 (in der Fassung des Bundesgesetzes über die Besteuerung von Leibrenten und ähnlichen Vorsorgeformen vom 17. Juni 2022, BBl 2022, 1556).",
+     "links": [
+      {
+       "label": "642.14",
+       "url": "https://db.clex.ch/link/Bund/642.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STHG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "36": {
@@ -576,6 +805,80 @@
    ],
    "marginalie": [
     "h) Steuerfreie Einkünfte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "SR 935.51.",
+     "links": [
+      {
+       "label": "935.51",
+       "url": "https://db.clex.ch/link/Bund/935.51/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "SR 935.51.",
+     "links": [
+      {
+       "label": "935.51",
+       "url": "https://db.clex.ch/link/Bund/935.51/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "SR 935.51.",
+     "links": [
+      {
+       "label": "935.51",
+       "url": "https://db.clex.ch/link/Bund/935.51/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "SR 935.51.",
+     "links": [
+      {
+       "label": "935.51",
+       "url": "https://db.clex.ch/link/Bund/935.51/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "SR 935.51.",
+     "links": [
+      {
+       "label": "935.51",
+       "url": "https://db.clex.ch/link/Bund/935.51/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "SR 837.2.",
+     "links": [
+      {
+       "label": "837.2",
+       "url": "https://db.clex.ch/link/Bund/837.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -728,6 +1031,24 @@
    ],
    "marginalie": [
     "Allgemeine Abzüge 1. Von der Höhe des Einkommens unabhängige Abzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "SR 161.1.",
+     "links": [
+      {
+       "label": "161.1",
+       "url": "https://db.clex.ch/link/Bund/161.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BPR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "46": {
@@ -747,6 +1068,20 @@
    ],
    "marginalie": [
     "2. Von der Höhe des Einkommens abhängige Abzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "SR 151.3.",
+     "links": [
+      {
+       "label": "151.3",
+       "url": "https://db.clex.ch/link/Bund/151.3/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "47": {
@@ -1127,6 +1462,40 @@
    ],
    "marginalie": [
     "Steuersubjekt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "SR 951.31.",
+     "links": [
+      {
+       "label": "951.31",
+       "url": "https://db.clex.ch/link/Bund/951.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KAG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "SR 951.31.",
+     "links": [
+      {
+       "label": "951.31",
+       "url": "https://db.clex.ch/link/Bund/951.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KAG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "71": {
@@ -1222,6 +1591,24 @@
    ],
    "marginalie": [
     "Beginn und Ende der Steuerpflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "BG über die Harmonisierung der direkten Steuern der Kantone und Gemeinden vom 14. Dezember 1990, SR 642.14.",
+     "links": [
+      {
+       "label": "642.14",
+       "url": "https://db.clex.ch/link/Bund/642.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STHG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "78": {
@@ -1279,6 +1666,20 @@
    ],
    "marginalie": [
     "Ausnahmen von der Steuerpflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "SR 192.12.",
+     "links": [
+      {
+       "label": "192.12",
+       "url": "https://db.clex.ch/link/Bund/192.12/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "81": {
@@ -1449,7 +1850,7 @@
     }
    ],
    "marginalie": [
-    "Steuerberechnung a) Steuersatz *"
+    "Steuerberechnung a) Steuersatz"
    ]
   },
   "90": {
@@ -1468,7 +1869,25 @@
     }
    ],
    "marginalie": [
-    "b) Gemischte Beteiligungsgesellschaften 1. Grundsatz *"
+    "b) Gemischte Beteiligungsgesellschaften 1. Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "SR 952.0; abgekürzt BankG.",
+     "links": [
+      {
+       "label": "952.0",
+       "url": "https://db.clex.ch/link/Bund/952.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BANKG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "91": {
@@ -1487,7 +1906,57 @@
     }
    ],
    "marginalie": [
-    "2. Kapitalgewinne auf Beteiligungen *"
+    "2. Kapitalgewinne auf Beteiligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "BG betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht) vom 30. März 1911, SR 220.",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "BG betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht) vom 30. März 1911, SR 220.",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "BG betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht) vom 30. März 1911, SR 220.",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "96": {
@@ -1659,6 +2128,24 @@
    ],
    "marginalie": [
     "Steuerbare Leistungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "43",
+     "text": "SR 831.10.",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "107": {
@@ -1734,7 +2221,7 @@
     }
    ],
    "marginalie": [
-    "Wechsel zwischen Quellensteuerabzug und ordentlicher Veranlagung *"
+    "Wechsel zwischen Quellensteuerabzug und ordentlicher Veranlagung"
    ]
   },
   "114": {
@@ -1753,7 +2240,21 @@
     }
    ],
    "marginalie": [
-    "Vergütungen aus dem Ausland *"
+    "Vergütungen aus dem Ausland"
+   ],
+   "fussnoten": [
+    {
+     "nr": "45",
+     "text": "SR 823.11.",
+     "links": [
+      {
+       "label": "823.11",
+       "url": "https://db.clex.ch/link/Bund/823.11/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "115": {
@@ -1773,6 +2274,24 @@
    ],
    "marginalie": [
     "Arbeitnehmer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "SR 831.10.",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1 ter",
+     "item": null
+    }
    ]
   },
   "116": {
@@ -1925,6 +2444,44 @@
    ],
    "marginalie": [
     "Bezugsprovision"
+   ],
+   "fussnoten": [
+    {
+     "nr": "48",
+     "text": "BG gegen die Schwarzarbeit vom 17. Juni 2005, SR 822.41.",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "BG gegen die Schwarzarbeit vom 17. Juni 2005, SR 822.41.",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "50",
+     "text": "Art. 1 Abs. 5 der Verordnung über Massnahmen zur Bekämpfung der Schwarzarbeit, SR 822.411.",
+     "links": [
+      {
+       "label": "822.411",
+       "url": "https://db.clex.ch/link/Bund/822.411/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "125": {
@@ -1982,6 +2539,20 @@
    ],
    "marginalie": [
     "Gemeindeanteile"
+   ],
+   "fussnoten": [
+    {
+     "nr": "53",
+     "text": "BG gegen die Schwarzarbeit vom 17. Juni 2005, SR 822.41.",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "130": {
@@ -2027,6 +2598,24 @@
    ],
    "marginalie": [
     "b) Steueraufschiebende Veräusserungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "54",
+     "text": "Schweizerisches Zivilgesetzbuch vom 10. Dezember 1907, SR 210.",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "133": {
@@ -2102,6 +2691,20 @@
    ],
    "marginalie": [
     "2. Aufwendungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "55",
+     "text": "sGS 731.1.",
+     "links": [
+      {
+       "label": "731.1",
+       "url": "https://www.gesetzessammlung.sg.ch/data/731.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "138": {
@@ -2327,6 +2930,40 @@
    ],
    "marginalie": [
     "b) Abzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "56",
+     "text": "Schweizerisches Zivilgesetzbuch vom 10. Dezember 1907, SR 210.",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "57",
+     "text": "Schweizerisches Zivilgesetzbuch vom 10. Dezember 1907, SR 210.",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "153": {
@@ -2459,6 +3096,20 @@
    ],
    "marginalie": [
     "Massgebendes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "58",
+     "text": "sGS 951.1.",
+     "links": [
+      {
+       "label": "951.1",
+       "url": "https://www.gesetzessammlung.sg.ch/data/951.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "162": {
@@ -2611,6 +3262,24 @@
    ],
    "marginalie": [
     "b) Beilagen zur Steuererklärung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "59",
+     "text": "BG betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht) vom 30. März 1911, SR 220.",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "170": {
@@ -2649,6 +3318,24 @@
    ],
    "marginalie": [
     "d) Aufbewahrungspflichten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "BG betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht) vom 30. März 1911, SR 220.",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "172": {
@@ -2668,6 +3355,24 @@
    ],
    "marginalie": [
     "Verfahrenspflichten Dritter a) Bescheinigungspflicht Dritter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "61",
+     "text": "SR 221.229.1.",
+     "links": [
+      {
+       "label": "221.229.1",
+       "url": "https://db.clex.ch/link/Bund/221.229.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "173": {
@@ -2877,6 +3582,20 @@
    ],
    "marginalie": [
     "a) für Quellensteuer 1. Pflichten des Schuldners der steuerbaren Leistung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "62",
+     "text": "BG gegen die Schwarzarbeit vom 17. Juni 2005, SR 822.41.",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "185": {
@@ -3124,6 +3843,20 @@
    ],
    "marginalie": [
     "Revision"
+   ],
+   "fussnoten": [
+    {
+     "nr": "64",
+     "text": "sGS 951.1.",
+     "links": [
+      {
+       "label": "951.1",
+       "url": "https://www.gesetzessammlung.sg.ch/data/951.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "198": {
@@ -3485,6 +4218,24 @@
    ],
    "marginalie": [
     "Betreibung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "65",
+     "text": "BG über Schuldbetreibung und Konkurs vom 11. April 1889, SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "217": {
@@ -3637,6 +4388,24 @@
    ],
    "marginalie": [
     "Stundung und Erlass"
+   ],
+   "fussnoten": [
+    {
+     "nr": "66",
+     "text": "SR 642.11.",
+     "links": [
+      {
+       "label": "642.11",
+       "url": "https://db.clex.ch/link/Bund/642.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "DBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "225": {
@@ -3656,6 +4425,24 @@
    ],
    "marginalie": [
     "Sicherstellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "67",
+     "text": "BG über Schuldbetreibung und Konkurs vom 11. April 1889, SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "226": {
@@ -3675,6 +4462,40 @@
    ],
    "marginalie": [
     "Arrest"
+   ],
+   "fussnoten": [
+    {
+     "nr": "68",
+     "text": "BG über Schuldbetreibung und Konkurs vom 11. April 1889, SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "69",
+     "text": "BG über Schuldbetreibung und Konkurs vom 11. April 1889, SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "227": {
@@ -3784,6 +4605,24 @@
    ],
    "marginalie": [
     "Abgrenzung zwischen Gemeinden a) Wechsel der Steuerpflicht innerhalb des Kantons"
+   ],
+   "fussnoten": [
+    {
+     "nr": "70",
+     "text": "BG über die Harmonisierung der direkten Steuern der Kantone und Gemeinden vom 14. Dezember 1990, SR 642.14.",
+     "links": [
+      {
+       "label": "642.14",
+       "url": "https://db.clex.ch/link/Bund/642.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STHG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "234": {
@@ -3829,6 +4668,20 @@
    ],
    "marginalie": [
     "Steuerbezug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "71",
+     "text": "sGS 171.0.",
+     "links": [
+      {
+       "label": "171.0",
+       "url": "https://www.gesetzessammlung.sg.ch/data/171.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "237": {
@@ -4154,6 +5007,15 @@
    ],
    "marginalie": [
     "c) Untersuchung und Strafbefehl 1. Eröffnung der Untersuchung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "74",
+     "text": "Der unveränderte Abs. 2 wurde im Rahmen der Änderung durch das EG-StPO irrtümlicherweise nicht mitgeführt. Der Fehler wird bei der nächsten Änderung des StG im ordentlichen Verfahren berichtigt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "258": {
@@ -4211,6 +5073,24 @@
    ],
    "marginalie": [
     "4. Zeugeneinvernahme"
+   ],
+   "fussnoten": [
+    {
+     "nr": "75",
+     "text": "Schweizerische Strafprozessordnung vom 5. Oktober 2007 (SR 312.0; abgekürzt StPO).",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "261": {
@@ -4465,6 +5345,24 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "76",
+     "text": "Schweizerische Strafprozessordnung vom 5. Oktober 2007 (SR 312.0; abgekürzt StPO).",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "275": {
@@ -4491,6 +5389,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "80",
+     "text": "nGS 29–70.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "280": {
@@ -4502,6 +5409,40 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen a) Leistungen aus beruflicher Vorsorge und aus obligatorischer Unfallversicherung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "81",
+     "text": "Vgl. Art. 83 des BG über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge vom 25. Juni 1982, SR 831.40.",
+     "links": [
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "82",
+     "text": "Vgl. BG über die Unfallversicherung vom 20. März 1981, SR 832.20.",
+     "links": [
+      {
+       "label": "832.20",
+       "url": "https://db.clex.ch/link/Bund/832.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "UVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "281": {
@@ -4545,7 +5486,7 @@
     }
    ],
    "marginalie": [
-    "Ausgleich der Folgen der kalten Progression *"
+    "Ausgleich der Folgen der kalten Progression"
    ]
   },
   "318": {
@@ -4578,7 +5519,21 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmung des X. Nachtrags vom 5. August 2014 [85]"
+    "Übergangsbestimmung des X. Nachtrags vom 5. August 2014"
+   ],
+   "fussnoten": [
+    {
+     "nr": "85",
+     "text": "nGS 2014-074.",
+     "links": [
+      {
+       "label": "2014-074",
+       "url": "https://www.gesetzessammlung.sg.ch/data/2014-074/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "321": {
@@ -4589,7 +5544,16 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmung des XII. Nachtrags vom 4. August 2015 [86]"
+    "Übergangsbestimmung des XII. Nachtrags vom 4. August 2015"
+   ],
+   "fussnoten": [
+    {
+     "nr": "86",
+     "text": "nGS 2015-089.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "322": {
@@ -4611,7 +5575,37 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmung des XV. Nachtrags vom 24. April 2019 [87]"
+    "Übergangsbestimmung des XV. Nachtrags vom 24. April 2019"
+   ],
+   "fussnoten": [
+    {
+     "nr": "87",
+     "text": "nGS 2019-042.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "88",
+     "text": "nGS 43–159.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "89",
+     "text": "nGS 44–119.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "90",
+     "text": "nGS 47–24.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "109_bis": {
@@ -4631,6 +5625,24 @@
    ],
    "marginalie": [
     "Steuerabzug auf rückvergüteten AHV-Beiträgen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "44",
+     "text": "SR 831.10.",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "112_bis": {
@@ -4745,6 +5757,20 @@
    ],
    "marginalie": [
     "Der Quellensteuerpflicht unterliegende Personen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "47",
+     "text": "SR 822.41.",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "122_quater": {
@@ -4802,6 +5828,24 @@
    ],
    "marginalie": [
     "Interkantonale Verhältnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "SR 642.11.",
+     "links": [
+      {
+       "label": "642.11",
+       "url": "https://db.clex.ch/link/Bund/642.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "DBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "128_ter": {
@@ -4821,6 +5865,24 @@
    ],
    "marginalie": [
     "Interkommunale Verhältnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "52",
+     "text": "SR 642.11.",
+     "links": [
+      {
+       "label": "642.11",
+       "url": "https://db.clex.ch/link/Bund/642.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "DBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12_bis": {
@@ -4832,6 +5894,24 @@
    ],
    "marginalie": [
     "Eingetragene Partnerschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Eidg. Partnerschaftsgesetz vom 18. Juni 2004, SR 211.231.",
+     "links": [
+      {
+       "label": "211.231",
+       "url": "https://db.clex.ch/link/Bund/211.231/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PARTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "163_bis": {
@@ -4926,7 +6006,21 @@
     }
    ],
    "marginalie": [
-    "1bis. Pflichten der AHV-Ausgleichskasse bei Quellensteuern auf kleinen Arbeitsentgelten aus unselbständiger Erwerbstätigkeit [63]"
+    "1bis. Pflichten der AHV-Ausgleichskasse bei Quellensteuern auf kleinen Arbeitsentgelten aus unselbständiger Erwerbstätigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "63",
+     "text": "BG gegen die Schwarzarbeit vom 17. Juni 2005, SR 822.41.",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "203_bis": {
@@ -4965,6 +6059,24 @@
    ],
    "marginalie": [
     "c) Kollektive Kapitalanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 951.31.",
+     "links": [
+      {
+       "label": "951.31",
+       "url": "https://db.clex.ch/link/Bund/951.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "248_bis": {
@@ -5022,6 +6134,40 @@
    ],
    "marginalie": [
     "b) Straflose Selbstanzeige"
+   ],
+   "fussnoten": [
+    {
+     "nr": "72",
+     "text": "SR 221.301.",
+     "links": [
+      {
+       "label": "221.301",
+       "url": "https://db.clex.ch/link/Bund/221.301/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FUSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "73",
+     "text": "SR 221.301.",
+     "links": [
+      {
+       "label": "221.301",
+       "url": "https://db.clex.ch/link/Bund/221.301/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FUSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "283_bis": {
@@ -5082,6 +6228,22 @@
    ],
    "marginalie": [
     "Rückwirkung neuen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "83",
+     "text": "nGS 41–85 (sGS 811.1).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "84",
+     "text": "nGS 41–18 (sGS 811.110).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31_bis": {
@@ -5100,7 +6262,7 @@
     }
    ],
    "marginalie": [
-    "1 bis . Teilbesteuerung der Einkünfte aus Beteiligungen im Geschäftsvermögen"
+    "1 bis. Teilbesteuerung der Einkünfte aus Beteiligungen im Geschäftsvermögen"
    ]
   },
   "31_ter": {
@@ -5119,7 +6281,7 @@
     }
    ],
    "marginalie": [
-    "1 ter . Einkommen aus Patenten und vergleichbaren Rechten"
+    "1 ter. Einkommen aus Patenten und vergleichbaren Rechten"
    ]
   },
   "32_bis": {
@@ -5176,7 +6338,7 @@
     }
    ],
    "marginalie": [
-    "2 bis . Abzug von Forschungs- und Entwicklungsaufwand bei selbständiger Erwerbstätigkeit"
+    "2 bis. Abzug von Forschungs- und Entwicklungsaufwand bei selbständiger Erwerbstätigkeit"
    ]
   },
   "52_bis": {
@@ -5214,7 +6376,109 @@
     }
    ],
    "marginalie": [
-    "2 bis . Patente und vergleichbare Rechte: Begriffe"
+    "2 bis. Patente und vergleichbare Rechte: Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "SR 0.232.142.2.",
+     "links": [
+      {
+       "label": "0.232.142.2",
+       "url": "https://db.clex.ch/link/Bund/0.232.142.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "SR 232.14.",
+     "links": [
+      {
+       "label": "232.14",
+       "url": "https://db.clex.ch/link/Bund/232.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PATG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "SR 232.14.",
+     "links": [
+      {
+       "label": "232.14",
+       "url": "https://db.clex.ch/link/Bund/232.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PATG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "SR 231.2.",
+     "links": [
+      {
+       "label": "231.2",
+       "url": "https://db.clex.ch/link/Bund/231.2/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "SR 232.16.",
+     "links": [
+      {
+       "label": "232.16",
+       "url": "https://db.clex.ch/link/Bund/232.16/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SORTG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "SR 812.21.",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "SR 910.1.",
+     "links": [
+      {
+       "label": "910.1",
+       "url": "https://db.clex.ch/link/Bund/910.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "83_quater": {
@@ -5233,7 +6497,7 @@
     }
    ],
    "marginalie": [
-    "2 quater . Aufdeckung stiller Reserven bei Beginn der Steuerpflicht"
+    "2 quater. Aufdeckung stiller Reserven bei Beginn der Steuerpflicht"
    ]
   },
   "83_quinquies": {
@@ -5252,7 +6516,7 @@
     }
    ],
    "marginalie": [
-    "2 quinquies . Besteuerung stiller Reserven am Ende der Steuerpflicht"
+    "2 quinquies. Besteuerung stiller Reserven am Ende der Steuerpflicht"
    ]
   },
   "83_ter": {
@@ -5271,7 +6535,25 @@
     }
    ],
    "marginalie": [
-    "2 ter . Patente und vergleichbare Rechte: Besteuerung"
+    "2 ter. Patente und vergleichbare Rechte: Besteuerung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "SR 642.14.",
+     "links": [
+      {
+       "label": "642.14",
+       "url": "https://db.clex.ch/link/Bund/642.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STHG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "85_bis": {
@@ -5290,7 +6572,21 @@
     }
    ],
    "marginalie": [
-    "4 bis . Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
+    "4 bis. Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "SR 420.1.",
+     "links": [
+      {
+       "label": "420.1",
+       "url": "https://db.clex.ch/link/Bund/420.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "85_ter": {
@@ -5309,7 +6605,7 @@
     }
    ],
    "marginalie": [
-    "4 ter . Entlastungsbegrenzung"
+    "4 ter. Entlastungsbegrenzung"
    ]
   },
   "95_bis": {

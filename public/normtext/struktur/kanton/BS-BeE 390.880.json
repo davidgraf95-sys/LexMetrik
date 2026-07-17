@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die Bestattungen in der Gemeinde Bettingen",
+  "erlassdatum": "Vom 13. Dezember 2022 (Stand 20. Februar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gemeindeversammlung der Einwohnergemeinde Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 8 Abs. 2 des Bestattungsgesetzes (BestG) vom 11. März 2020 und den Vertrag zwischen dem Kanton Basel-Stadt einerseits und der Einwohnergemeinde Bettingen anderseits betreffend den Gottesacker Bettingen vom 1./13. Februar 2012,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 390.100.",
+    "links": [
+     {
+      "label": "390.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/390.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-390.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BeE 390.860.",
+    "links": [
+     {
+      "label": "BeE 390.860",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20390.860/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +81,15 @@
    "gliederung": [],
    "marginalie": [
     "Entgeltliche Bestattung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vom Regierungsrat genehmigt am: 24. Januar 2023.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

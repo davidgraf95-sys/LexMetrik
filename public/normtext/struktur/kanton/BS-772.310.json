@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Organisation der Energie- und Trinkwasserversorgung",
+  "erlassdatum": "Vom 19. September 1989 (Stand 1. Januar 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 53 des Gesetzes über die Versorgung des Kantons Basel-Stadt mit Energie und Trinkwasser durch die Industriellen Werke Basel (IWB-Gesetz) vom 21. April 1988,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,7 +44,16 @@
      "label": "3. Zuständigkeit des Kantonalen Laboratoriums"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SR 817.022.102",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [

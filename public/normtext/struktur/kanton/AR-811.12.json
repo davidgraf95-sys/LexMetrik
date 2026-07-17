@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die öffentlichen Bäder",
+  "erlassdatum": "vom 17.02.2003 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 11, 21, 22 und 24 des Bundesgesetzes vom 18. Dezember 1970 über die Bekämpfung übertragbarer Krankheiten der Menschen und Art. 33 des Gesetzes vom 25. April 1965 über das Gesundheitswesen,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Epidemiengesetz (SR 818.101 )",
+    "links": [
+     {
+      "label": "818.101",
+      "url": "https://db.clex.ch/link/Bund/818.101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "EPG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Gesundheitsgesetz (bGS 811.1 )",
+    "links": [
+     {
+      "label": "811.1",
+      "url": "https://ar.clex.ch/data/811.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +85,15 @@
    "gliederung": [],
    "marginalie": [
     "Technische, hygienische und betriebliche Vorschriften und Richtlinien"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SIA Norm 385 /1 des Schweizerischen Ingenieur- und Architekten-Vereins",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -59,6 +124,24 @@
    "gliederung": [],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "bGS 815.111.1",
+     "links": [
+      {
+       "label": "815.111.1",
+       "url": "https://ar.clex.ch/data/815.111.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-815.111.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Organisation des Strassenverkehrsamtes",
+  "erlassdatum": "vom 26.08.2025 (Stand 01.09.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 1 Abs. 2 des Regierungs- und Verwaltungsorganisationsgesetzes vom 29. November 2004 und Art. 7 Abs. 2 des Einführungsgesetzes vom 24. April 1983 zum Bundesgesetz vom 19. Dezember 1958 über den Strassenverkehr,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "OrG (bGS 142.12 )",
+    "links": [
+     {
+      "label": "142.12",
+      "url": "https://ar.clex.ch/data/142.12/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-142.12"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "EG SVG (bGS 761.11 )",
+    "links": [
+     {
+      "label": "761.11",
+      "url": "https://ar.clex.ch/data/761.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-761.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

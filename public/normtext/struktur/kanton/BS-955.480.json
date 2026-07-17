@@ -1,10 +1,62 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Abgabetarif der Schweizerischen Rheinhäfen",
+  "erlassdatum": "Vom 17. Dezember 2014 (Stand 1. Januar 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Schweizerischen Rheinhäfen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 30 des Staatsvertrags über die Zusammenlegung der Rheinschifffahrtsdirektion Basel und der Rheinhäfen des Kantons Basel-Landschaft zu einer Anstalt öffentlichen Rechts mit eigener Rechtspersönlichkeit unter dem Namen \"Schweizerische Rheinhäfen\",",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlassen folgenden Abgabetarif:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 955.400, SGS 421.1.",
+    "links": [
+     {
+      "label": "955.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/955.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-955.400"
+      }
+     },
+     {
+      "label": "421.1",
+      "url": "https://db.clex.ch/link/BL/421.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Grundsätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 31 Abs. 1 Staatsvertrag.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -23,6 +75,15 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 18. 3. 2015.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

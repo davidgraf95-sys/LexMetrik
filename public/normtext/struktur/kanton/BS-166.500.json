@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Zusammensetzung und die Wahl der Mitglieder der Vorsorgekommission des Kantons (Bereich Staat)",
+  "erlassdatum": "Vom 30. September 2014 (Stand 5. Oktober 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 12 des Gesetzes betreffend die Pensionskasse des Kantons Basel-Stadt (Pensionskassengesetz) vom 4. Juni 2014,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 166.100.",
+    "links": [
+     {
+      "label": "166.100.",
+      "url": "https://www.gesetzessammlung.bs.ch/data/166.100./de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -153,6 +188,15 @@
    ],
    "marginalie": [
     "Sitzungsgeld"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 5. 10. 2014.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Unveräusserlichkeit des Universitätsgutes",
+  "erlassdatum": "Vom 19. Dezember 2000 (Stand 24. Mai 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 4 und § 4a des Gesetzes über das Universitätsgut (Universitätsgutsgesetz) vom 16. Juni 1999 sowie auf § 4 des Gesetzes über die Museen des Kantons Basel-Stadt (Museumsgesetz) vom 16. Juni 1999,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 440.400",
+    "links": [
+     {
+      "label": "440.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/440.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-440.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 451.100",
+    "links": [
+     {
+      "label": "451.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/451.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-451.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

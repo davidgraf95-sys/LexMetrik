@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Hundeverordnung",
+  "erlassdatum": "vom 12.01.2016 (Stand 01.01.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 24 des Hundegesetzes vom 23. März 2015,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "HuG (bGS 525.1 )",
+    "links": [
+     {
+      "label": "525.1",
+      "url": "https://ar.clex.ch/data/525.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-525.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +60,20 @@
    ],
    "marginalie": [
     "Meldung von Vorfällen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "TSchV (SR 455.1 )",
+     "links": [
+      {
+       "label": "455.1",
+       "url": "https://db.clex.ch/link/Bund/455.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -87,6 +140,20 @@
    ],
    "marginalie": [
     "Melde- und Registrierungsstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "TSV (SR 916.401 )",
+     "links": [
+      {
+       "label": "916.401",
+       "url": "https://db.clex.ch/link/Bund/916.401/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {

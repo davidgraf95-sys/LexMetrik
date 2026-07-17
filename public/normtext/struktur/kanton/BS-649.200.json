@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Konkordat zwischen den Kantonen der Schweizerischen Eidgenossenschaft über den Ausschluss von Steuerabkommen",
+  "erlassdatum": "Vom 10. Dezember 1948 (Stand 6. Oktober 1949)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Regierungen der Kantone,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in der Absicht, die steuerrechtlichen Vorschriften auf alle im Kanton steuerpflichtigen Personen und Objekte gleichmässig und uneingeschränkt anzuwenden und, vorbehältlich der Bestimmungen des Konkordates, jede Gewährung von Steuervorteilen zu vermeiden,"
+   },
+   {
+    "rolle": "verb",
+    "text": "kommen überein:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

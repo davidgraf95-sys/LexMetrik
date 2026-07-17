@@ -1,5 +1,95 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Justizgesetz",
+  "erlassdatum": "vom 13.09.2010 (Stand 01.06.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Schweizerische Zivilprozessordnung vom 19. Dezember 2008, die Schweizerische Strafprozessordnung vom 5. Oktober 2007, die Schweizerische Jugendstrafprozessordnung vom 20. März 2009 und Art. 94 Abs. 2 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Zivilprozessordnung (ZPO; SR 272 )",
+    "links": [
+     {
+      "label": "272",
+      "url": "https://db.clex.ch/link/Bund/272/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Strafprozessordnung (StPO; SR 312.0 )",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Jugendstrafprozessordnung (JStPO; SR 312.1 )",
+    "links": [
+     {
+      "label": "312.1",
+      "url": "https://db.clex.ch/link/Bund/312.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "JSTPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +98,41 @@
      "label": "1. Kapitel: Zweck und Geltungsbereich"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "ATSG (SR 830.1 )",
+     "links": [
+      {
+       "label": "830.1",
+       "url": "https://db.clex.ch/link/Bund/830.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ATSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -103,6 +227,39 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 274a und 301 OR (SR 220 ), Art. 11 Gleichstellungsgesetz (GlG; SR 151.1 )",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      },
+      {
+       "label": "151.1",
+       "url": "https://db.clex.ch/link/Bund/151.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GLG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Art. 201 Abs. 2 ZPO",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -198,6 +355,24 @@
    ],
    "marginalie": [
     "c) Geschäftsleitung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "PG (bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -255,6 +430,61 @@
    ],
    "marginalie": [
     "b) Einzelrichter, Einzelrichterin"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 243 ff. ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Art. 111 ZGB (SR 210 )",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Art. 248 ff. ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Art. 335 ff. und Art. 347 ff. ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "IPRG (SR 291 )",
+     "links": [
+      {
+       "label": "291",
+       "url": "https://db.clex.ch/link/Bund/291/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "IPRG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -312,6 +542,31 @@
    ],
    "marginalie": [
     "c) Einzelrichter, Einzelrichterin"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "vgl. Art. 19 Abs. 2 lit. b StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -388,6 +643,24 @@
    ],
    "marginalie": [
     "d) Oberes Gericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "BGG (SR 173.110 )",
+     "links": [
+      {
+       "label": "173.110",
+       "url": "https://db.clex.ch/link/Bund/173.110/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BGG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -445,6 +718,57 @@
    ],
    "marginalie": [
     "Zivilrechtspflege a) Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Art. 5–8 ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "Art. 308 ff., Art. 319 ff. ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Art. 356 Abs. 1 lit. a ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "SR 282.11",
+     "links": [
+      {
+       "label": "282.11",
+       "url": "https://db.clex.ch/link/Bund/282.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -464,6 +788,22 @@
    ],
    "marginalie": [
     "b) Einzelrichter, Einzelrichterin"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "Art. 257 ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "Art. 356 Abs. 1 lit. b ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -483,6 +823,15 @@
    ],
    "marginalie": [
     "Strafrechtspflege a) Rechtsmittelinstanz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "Art. 393 ff. und Art. 398 ff. StPO, Art. 7 lit. c und d JStPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -521,6 +870,58 @@
    ],
    "marginalie": [
     "Verwaltungsrechtspflege a) Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "Art. 94 Abs. 1 lit. d KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "Art. 57 BG über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG; SR 830.1 ), Art. 73 BG über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG; SR 831.40 )",
+     "links": [
+      {
+       "label": "SR 830.1",
+       "url": "https://db.clex.ch/link/Bund/SR%20830.1/de"
+      },
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "Art. 7 ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -540,6 +941,24 @@
    ],
    "marginalie": [
     "b) Einzelrichter, Einzelrichterin"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "vgl. Art. 3 V zur Bundesgesetzgebung über Ausländerinnen und Ausländer (bGS 122.21 )",
+     "links": [
+      {
+       "label": "122.21",
+       "url": "https://ar.clex.ch/data/122.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-122.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -635,6 +1054,15 @@
    ],
    "marginalie": [
     "Strafverfolgung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "Art. 12 lit. a StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -692,6 +1120,22 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "Art. 16 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "Art. 6 Abs. 2 lit. b, Art. 33 Abs. 2 lit. b, Art. 42 Abs. 1 JStPO",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -749,6 +1193,29 @@
    ],
    "marginalie": [
     "Einlegung von Rechtsmitteln durch die Staatsanwälte und Staatsanwältinnen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "Art. 396 Abs. 1 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "Art. 399 Abs. 1 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "Art. 411 Abs. 1 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "41": {
@@ -834,6 +1301,24 @@
    ],
    "marginalie": [
     "Ausstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "vgl. Art. 45 ff. ZPO, Art. 56 ff. StPO, Art. 3 JStPO, Art. 8 G über die Verwaltungsrechtspflege (VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "48": {
@@ -900,6 +1385,24 @@
    ],
    "marginalie": [
     "Unzuständiges Gericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "Art. 59 i.V.m. Art. 2 VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "54": {
@@ -922,6 +1425,31 @@
    ],
    "marginalie": [
     "Öffentlichkeit der Verhandlungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "vgl. Art. 67 Abs. 3 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "40",
+     "text": "JStG (SR 311.1 )",
+     "links": [
+      {
+       "label": "311.1",
+       "url": "https://db.clex.ch/link/Bund/311.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "JSTG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "56": {
@@ -977,6 +1505,15 @@
    ],
    "marginalie": [
     "Veröffentlichungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "Art. 444 StPO",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "61": {
@@ -988,6 +1525,20 @@
    ],
    "marginalie": [
     "Öffentliche Bekanntmachungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "42",
+     "text": "Art. 141 Abs. 2 ZPO, Art. 88 Abs. 2 StPO; vgl. V über die Herausgabe des Amtsblattes (bGS 112.2 )",
+     "links": [
+      {
+       "label": "112.2",
+       "url": "https://ar.clex.ch/data/112.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "62": {
@@ -999,6 +1550,40 @@
    ],
    "marginalie": [
     "Unentgeltliche Rechtspflege, unentgeltliche Verbeiständung, amtliche Verteidigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "43",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "44",
+     "text": "ATSG (SR 830.1 )",
+     "links": [
+      {
+       "label": "830.1",
+       "url": "https://db.clex.ch/link/Bund/830.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ATSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "63": {
@@ -1010,6 +1595,15 @@
    ],
    "marginalie": [
     "Nachzahlungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "45",
+     "text": "Art. 123 ZPO, Art. 135 Abs. 4 StPO, Art. 25 Abs. 2 JStPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "64": {
@@ -1021,6 +1615,40 @@
    ],
    "marginalie": [
     "Prozesskosten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "Gebührenordnung (bGS 233.3 )",
+     "links": [
+      {
+       "label": "233.3",
+       "url": "https://ar.clex.ch/data/233.3/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.3"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "bGS 233.2",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "65": {
@@ -1032,6 +1660,15 @@
    ],
    "marginalie": [
     "Inkasso"
+   ],
+   "fussnoten": [
+    {
+     "nr": "48",
+     "text": "Art. 442 Abs. 3 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "66": {
@@ -1047,6 +1684,15 @@
    ],
    "marginalie": [
     "Unentgeltliche Mediation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "49",
+     "text": "Art. 218 Abs. 2 ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "67": {
@@ -1062,6 +1708,24 @@
    ],
    "marginalie": [
     "Rechtshilfe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "50",
+     "text": "IPRG (SR 291 )",
+     "links": [
+      {
+       "label": "291",
+       "url": "https://db.clex.ch/link/Bund/291/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "IPRG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "68": {
@@ -1077,6 +1741,22 @@
    ],
    "marginalie": [
     "Kantonalrechtliche Zedel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "Art. 870 ff. ZGB",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "52",
+     "text": "Art. 871 ZGB",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "69": {
@@ -1137,6 +1817,15 @@
    ],
    "marginalie": [
     "Mitteilung an andere Behörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "53",
+     "text": "Art. 75 Abs. 4 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "73": {
@@ -1152,6 +1841,22 @@
    ],
    "marginalie": [
     "Einvernahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "54",
+     "text": "Art. 142 Abs. 1 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "55",
+     "text": "Art. 142 Abs. 2 StPO",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "74": {
@@ -1167,6 +1872,15 @@
    ],
    "marginalie": [
     "Ausserprozessualer Personenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "56",
+     "text": "Art. 156 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "75": {
@@ -1182,6 +1896,15 @@
    ],
    "marginalie": [
     "Belohnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "57",
+     "text": "Art. 211 Abs. 2 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "76": {
@@ -1197,6 +1920,15 @@
    ],
    "marginalie": [
     "Vorläufige Festnahmen wegen Übertretungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "58",
+     "text": "Art. 219 Abs. 5 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "77": {
@@ -1272,6 +2004,15 @@
    ],
    "marginalie": [
     "Nachträgliche, nicht den Gerichten übertragene Entscheide"
+   ],
+   "fussnoten": [
+    {
+     "nr": "59",
+     "text": "Art. 363 Abs. 3 StPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "82": {
@@ -1287,6 +2028,20 @@
    ],
    "marginalie": [
     "Bundesrechtliche Ordnungsbussen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "Ordnungsbussengesetz (OBG; SR 314.1 )",
+     "links": [
+      {
+       "label": "314.1",
+       "url": "https://db.clex.ch/link/Bund/314.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "83": {
@@ -1302,6 +2057,24 @@
    ],
    "marginalie": [
     "Kantonalrechtliche Ordnungsbussen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "61",
+     "text": "Bussenkatalog für die Bussenerhebung auf der Stelle durch die Kantonspolizei (bGS 323.1 )",
+     "links": [
+      {
+       "label": "323.1",
+       "url": "https://ar.clex.ch/data/323.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-323.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "84": {
@@ -1424,6 +2197,24 @@
    ],
    "marginalie": [
     "b) Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "62",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "98": {
@@ -1446,6 +2237,22 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "63",
+     "text": "bGS 231.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "64",
+     "text": "bGS 321.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "100": {
@@ -1457,6 +2264,319 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "65",
+     "text": "Die Änderungen wurden in den betreffenden Erlassen eingefügt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "66",
+     "text": "bGS 131.12",
+     "links": [
+      {
+       "label": "131.12",
+       "url": "https://ar.clex.ch/data/131.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-131.12"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "67",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "68",
+     "text": "Anwaltsgesetz (bGS 145.52 )",
+     "links": [
+      {
+       "label": "145.52",
+       "url": "https://ar.clex.ch/data/145.52/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-145.52"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "69",
+     "text": "bGS 151.11",
+     "links": [
+      {
+       "label": "151.11",
+       "url": "https://ar.clex.ch/data/151.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-151.11"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "70",
+     "text": "EG zum ZGB (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "71",
+     "text": "EG zum BewG (bGS 213.121 )",
+     "links": [
+      {
+       "label": "213.121",
+       "url": "https://ar.clex.ch/data/213.121/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-213.121"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "72",
+     "text": "EG zum SchKG (bGS 241.1 )",
+     "links": [
+      {
+       "label": "241.1",
+       "url": "https://ar.clex.ch/data/241.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-241.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "73",
+     "text": "bGS 311",
+     "links": [
+      {
+       "label": "311",
+       "url": "https://ar.clex.ch/data/311/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-311"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "74",
+     "text": "bGS 521.1",
+     "links": [
+      {
+       "label": "521.1",
+       "url": "https://ar.clex.ch/data/521.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "75",
+     "text": "bGS 612.0",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "76",
+     "text": "bGS 621.11",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "77",
+     "text": "bGS 712.1",
+     "links": [
+      {
+       "label": "712.1",
+       "url": "https://ar.clex.ch/data/712.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-712.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "78",
+     "text": "Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "79",
+     "text": "Wasserbaugesetz (WbauG; bGS 741.1 )",
+     "links": [
+      {
+       "label": "741.1",
+       "url": "https://ar.clex.ch/data/741.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-741.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "80",
+     "text": "bGS 750.1",
+     "links": [
+      {
+       "label": "750.1",
+       "url": "https://ar.clex.ch/data/750.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-750.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "81",
+     "text": "bGS 811.1",
+     "links": [
+      {
+       "label": "811.1",
+       "url": "https://ar.clex.ch/data/811.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "82",
+     "text": "EG zum KVG (bGS 833.14 )",
+     "links": [
+      {
+       "label": "833.14",
+       "url": "https://ar.clex.ch/data/833.14/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-833.14"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "83",
+     "text": "Sozialhilfegesetz (SHG; bGS 851.1 )",
+     "links": [
+      {
+       "label": "851.1",
+       "url": "https://ar.clex.ch/data/851.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-851.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "84",
+     "text": "Feuerschutzgesetz (bGS 861.0 )",
+     "links": [
+      {
+       "label": "861.0",
+       "url": "https://ar.clex.ch/data/861.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-861.0"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "101": {
@@ -1468,6 +2588,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "85",
+     "text": "Die Referendumsfrist ist am 16. November 2010 unbenützt abgelaufen (RRB vom 26. November 2010; Abl. 2010, S. 1419)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "86",
+     "text": "1. Januar 2011; Art. 23 und Art. 45 Abs. 3 am 1. Juni 2011 (RRB vom 23. November 2010; Abl. 2010, S. 1419)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

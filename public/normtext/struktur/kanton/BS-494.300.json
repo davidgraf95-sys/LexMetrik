@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kulturfördergesetz",
+  "erlassdatum": "Vom 21. Oktober 2009 (Stand 30. Mai 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 09.0218.01 vom 17. März 2009 sowie in den Bericht der Bildungs- und Kulturkommission Nr. 09.0218.02 vom 11. Juni 2009, gestützt auf § 35 Abs. 1 der Verfassung des Kantons Basel-Stadt vom 23. März 2005,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,88 @@
    ],
    "marginalie": [
     "Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 153.600.",
+     "links": [
+      {
+       "label": "153.600",
+       "url": "https://www.gesetzessammlung.bs.ch/data/153.600/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-153.600"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SG 451.100.",
+     "links": [
+      {
+       "label": "451.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/451.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-451.100"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 440.400.",
+     "links": [
+      {
+       "label": "440.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/440.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-440.400"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 497.100.",
+     "links": [
+      {
+       "label": "497.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/497.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-497.100"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz betreffend öffentliche Filmvorführungen und Abgabe von elektronischen Trägermedien vom 9. 6. 2010 (SG 569.100 ).",
+     "links": [
+      {
+       "label": "569.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/569.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-569.100"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -142,6 +263,15 @@
    ],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Wirksam seit 1. 1. 2010.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12_a": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif der Schweizerischen Rheinhäfen",
+  "erlassdatum": "Vom 16. September 2016 (Stand 1. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Schweizerischen Rheinhäfen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 33 des Staatsvertrags über die Zusammenlegung der Rheinschifffahrtsdirektion Basel und der Rheinhäfen des Kantons Basel-Landschaft zu einer Anstalt öffentlichen Rechts mit eigener Rechtspersönlichkeit unter dem Namen \"Schweizerische Rheinhäfen\" (\"Ports Rhénans Suisses\", \"Swiss Rhine Ports\") (Rheinhafen-Vertrag) vom 20./13. Juni 2006,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlassen folgenden Gebührentarif:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 955.400",
+    "links": [
+     {
+      "label": "955.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/955.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-955.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +92,20 @@
    "gliederung": [],
    "marginalie": [
     "Allgemeine Dienstleistungen und diverse Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Gemäss interner Auflistung. Sie kann im Internet unter http://www.portof.ch/de/schifffahrt-behoerde/gebuehrenabgaben.php?navid=394547560598 eingesehen werden.",
+     "links": [
+      {
+       "label": "http://www.portof.ch/de/schifffahrt-behoerde/gebuehrenabgaben.php?navid=394547560598",
+       "url": "http://www.portof.ch/de/schifffahrt-behoerde/gebuehrenabgaben.php?navid=394547560598"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10": {

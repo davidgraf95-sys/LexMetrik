@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Bikantonale Geschäftsstelle Eventverkehr St. Jakob",
+  "erlassdatum": "Vom 14. Juni 2022 (Stand 14. Juni 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt und der Regierungsrat des Kantons Basel-Landschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 4 des Gesetzes betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz, OG) vom 22. April 1976 und gestützt auf § 77 Abs. 1 Bst. d der Verfassung des Kantons Basel-Landschaft vom 17. Mai 1984,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.100",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SGS 100",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -65,6 +117,15 @@
    "gliederung": [],
    "marginalie": [
     "Dauer und Auflösung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Genehmigt am 7. Dezember 2022 (KB 10.12.2022)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

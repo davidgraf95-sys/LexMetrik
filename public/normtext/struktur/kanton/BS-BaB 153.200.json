@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement für die Institutionen und die Zentralen Dienste",
+  "erlassdatum": "Vom 24. Mai 2005 (Stand 10. Februar 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von § 14 Abs. 2 Ziff. 8a und 9, § 21b Abs. 2 und § 21e Abs. 4 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985 für die Institutionen und die Zentralen Dienste der Bürgergemeinde der Stadt Basel folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -79,9 +110,7 @@
      "label": "IV. Organisation und Zuständigkeiten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -113,7 +142,7 @@
     }
    ],
    "marginalie": [
-    "Leistungsaufträge *"
+    "Leistungsaufträge"
    ]
   },
   "12": {
@@ -134,9 +163,7 @@
      "label": "V. Controlling"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -209,6 +236,15 @@
    ],
    "marginalie": [
     "Aufhebung von Reglementen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 20: Die Aufgaben der durch die Ziffern 5–8 aufgehobenen Ausschüsse werden künftig vom Leitungsausschuss der Zentralen Dienste wahrgenommen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {

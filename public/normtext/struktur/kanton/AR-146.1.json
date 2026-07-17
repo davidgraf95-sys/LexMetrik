@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Datenschutz",
+  "erlassdatum": "vom 18.06.2001 (Stand 01.01.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 15 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995 und im Sinne von Art. 13 der Bundesverfassung,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BV (SR 101 )",
+    "links": [
+     {
+      "label": "101",
+      "url": "https://db.clex.ch/link/Bund/101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -43,6 +99,24 @@
    ],
    "marginalie": [
     "Zulässigkeit der Bearbeitung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. namentlich das Archivgesetz (bGS 421.10 ).",
+     "links": [
+      {
+       "label": "421.10",
+       "url": "https://ar.clex.ch/data/421.10/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-421.10"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -75,7 +149,7 @@
     }
    ],
    "marginalie": [
-    "Informationspflicht *"
+    "Informationspflicht"
    ]
   },
   "8": {
@@ -186,6 +260,24 @@
    ],
    "marginalie": [
     "Archivierung und Vernichtung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Archivgesetz(bGS 421.10 )",
+     "links": [
+      {
+       "label": "421.10",
+       "url": "https://ar.clex.ch/data/421.10/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-421.10"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -274,6 +366,24 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -284,7 +394,7 @@
     }
    ],
    "marginalie": [
-    "Datenschutz-Kontrollorgan *"
+    "Datenschutz-Kontrollorgan"
    ]
   },
   "27": {
@@ -307,6 +417,43 @@
    ],
    "marginalie": [
     "Kostenpflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 11 und 21 bis 23 dieses Gesetzes.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Vgl. vor allem das G über die Gebühren in Verwaltungssachen (bGS 233.2 ), die V über die Rechtskosten und Entschädigungen in der Zivil- und Strafrechtspflege (bGS 233.3 ) und das G über die Gebühren der Gemeinden (bGS 153.2 ).",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      },
+      {
+       "label": "233.3",
+       "url": "https://ar.clex.ch/data/233.3/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.3"
+       }
+      },
+      {
+       "label": "153.2",
+       "url": "https://ar.clex.ch/data/153.2/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -318,6 +465,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Vgl. Art. 18 dieses Gesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -329,6 +485,34 @@
    ],
    "marginalie": [
     "Aufgehobenes Recht; Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "bGS 122.12",
+     "links": [
+      {
+       "label": "122.12",
+       "url": "https://ar.clex.ch/data/122.12/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Die Referendumsfrist ist am 21. August 2001 unbenützt abgelaufen (vgl. RRB vom 28. August 2001).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "1. Januar 2002 (RRB vom 28. August 2001)",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "13_a": {
@@ -373,6 +557,24 @@
    ],
    "marginalie": [
     "Abhilfemassnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 143.1",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "7_a": {

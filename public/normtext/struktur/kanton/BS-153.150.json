@@ -1,9 +1,49 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Organisation und Kompetenzen der Departemente und übrigen Verwaltungseinheiten",
+  "erlassdatum": "Vom 28. Juni 1977 (Stand 1. Juli 1977)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf das Organisationsgesetz vom 22. April 1976, folgende Verordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100.",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100./de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Heutige Bezeichnung: Justiz- und Sicherheitsdepartement.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [],

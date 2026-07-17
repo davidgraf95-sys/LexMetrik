@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Entschädigung der Mitglieder des Bürgerrats",
+  "erlassdatum": "Vom 20. Januar 2026 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Bürgerrat der Stadt Basel, gestützt auf § 6 Abs. 2 und Abs. 5 der Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel vom 9. September 1986,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 153.110",
+    "links": [
+     {
+      "label": "BaB 153.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20153.110/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über das Universitätsgut",
+  "erlassdatum": "Vom 16. Juni 1999 (Stand 26. April 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -33,7 +51,16 @@
   },
   "6": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 1. 1. 2001.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4_a": {
    "gliederung": [],

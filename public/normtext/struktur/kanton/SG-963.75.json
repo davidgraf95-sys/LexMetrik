@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Honorarordnung",
+  "erlassdatum": "vom 22.04.1994 (Stand 01.01.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Kantonsgericht des Kantons St.Gallen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von Art. 42 Abs. 1 lit. b des Anwaltsgesetzes vom 11. November 1993",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "als Reglement:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "sGS 963.70.",
+    "links": [
+     {
+      "label": "963.70",
+      "url": "https://www.gesetzessammlung.sg.ch/data/963.70/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Abgekürzt HonO. nGS 29–46; nGS 37–20. Vom Regierungsrat genehmigt am 25. Mai 1994; in Vollzug ab 1. Juli 1994.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,6 +59,15 @@
    ],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. Art. 30 AnwG.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -89,6 +143,15 @@
    ],
    "marginalie": [
     "Honorar nach Ermessen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 433 Abs. 2 StPO.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -133,7 +196,7 @@
     }
    ],
    "marginalie": [
-    "Honorar der unentgeltlichen Rechtsvertretung in Familien- und Strafsachen sowie der amtlichen Verteidigung *"
+    "Honorar der unentgeltlichen Rechtsvertretung in Familien- und Strafsachen sowie der amtlichen Verteidigung"
    ]
   },
   "12": {
@@ -149,6 +212,24 @@
    ],
    "marginalie": [
     "Kostenbeschwerde in der Verwaltungsrechtspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 88 ff. VRP, sGS 951.1.",
+     "links": [
+      {
+       "label": "88",
+       "url": "https://www.gesetzessammlung.sg.ch/data/951.1/de/art88."
+      },
+      {
+       "label": "951.1",
+       "url": "https://www.gesetzessammlung.sg.ch/data/951.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -164,6 +245,24 @@
    ],
    "marginalie": [
     "Begriff"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 91 bis 94 der Schweizerischen Zivilprozessordnung, SR 272.",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -178,7 +277,7 @@
     }
    ],
    "marginalie": [
-    "Mittleres Honorar a) Zivilprozess im Allgemeinen *"
+    "Mittleres Honorar a) Zivilprozess im Allgemeinen"
    ]
   },
   "15": {
@@ -268,7 +367,7 @@
     }
    ],
    "marginalie": [
-    "Familienrecht a) im Allgemeinen *"
+    "Familienrecht a) im Allgemeinen"
    ]
   },
   "21": {
@@ -284,6 +383,24 @@
    ],
    "marginalie": [
     "Strafprozess"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 105 StPO, SR 312.0.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -298,7 +415,21 @@
     }
    ],
    "marginalie": [
-    "Verwaltungsverfahren und Verwaltungsrechtspflege *"
+    "Verwaltungsverfahren und Verwaltungsrechtspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "sGS 951.1.",
+     "links": [
+      {
+       "label": "951.1",
+       "url": "https://www.gesetzessammlung.sg.ch/data/951.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -358,7 +489,7 @@
     }
    ],
    "marginalie": [
-    "Rechtsmittelverfahren in Zivil- und Strafsachen *"
+    "Rechtsmittelverfahren in Zivil- und Strafsachen"
    ]
   },
   "27": {
@@ -440,7 +571,7 @@
     }
    ],
    "marginalie": [
-    "Anspruch gegenüber der Mandantschaft *"
+    "Anspruch gegenüber der Mandantschaft"
    ]
   },
   "11_quater": {
@@ -470,7 +601,7 @@
     }
    ],
    "marginalie": [
-    "Kostenbeteiligung *"
+    "Kostenbeteiligung"
    ]
   },
   "20_bis": {

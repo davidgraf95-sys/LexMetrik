@@ -1,10 +1,100 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Handelsregister",
+  "erlassdatum": "vom 27.04.1998 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 927 ff. des Schweizerischen Obligationenrechts vom 30. März 1911 und Art. 74 Abs. 2 der Kantonsverfassung von Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "OR (SR 220 )",
+    "links": [
+     {
+      "label": "220",
+      "url": "https://db.clex.ch/link/Bund/220/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "OR"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 111.1",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Aufgabe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. Art. 2 Abs. 1 lit. d Beurkundungsgesetz (bGS 211.2 )",
+     "links": [
+      {
+       "label": "211.2",
+       "url": "https://ar.clex.ch/data/211.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.2"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 20 Beurkundungsgesetz (bGS 211.2 )",
+     "links": [
+      {
+       "label": "211.2",
+       "url": "https://ar.clex.ch/data/211.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.2"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -23,6 +113,24 @@
    "gliederung": [],
    "marginalie": [
     "Amtshilfe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. Art. 157 der Handelsregisterverordnung (HRegV, SR 221.411 )",
+     "links": [
+      {
+       "label": "221.411",
+       "url": "https://db.clex.ch/link/Bund/221.411/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HREGV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -35,6 +143,36 @@
    "gliederung": [],
    "marginalie": [
     "Gebühren und Ordnungsbussen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 221.411.1",
+     "links": [
+      {
+       "label": "221.411.1",
+       "url": "https://db.clex.ch/link/Bund/221.411.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GEBV_HREG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "bGS 153.2 (lf. Nr. 367). Vgl. heute Art. 12 Ziff. 5 des Gebührentarifs für die Gemeinden (bGS 153.2 ).",
+     "links": [
+      {
+       "label": "153.2",
+       "url": "https://ar.clex.ch/data/153.2/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -47,12 +185,53 @@
    "gliederung": [],
    "marginalie": [
     "Güterrechtsregister"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 9e Abs. 1, Art. 10b Abs. 1 und Art. 10e Schlusstitel zum ZGB (SR 210 )",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten; aufgehobenes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Vgl. Art. 1 Abs. 4 der Handelsregisterverordnung vom 7. Juni 1937 (BS 2 684)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Vom Eidg. Justiz- und Polizeidepartement genehmigt am 30. Juni 1998 (Abl. 1998, S. 576)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "aGS I/35",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Geschäftsordnung des Regierungsrates zum Gesetz über die Information und den Datenschutz",
+  "erlassdatum": "Vom 27. September 2011 (Stand 1. Januar 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 20 Abs. 4 des Gesetzes über die Information und den Datenschutz (Informations- und Datenschutzgesetz, IDG) vom 9. Juni 2010,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.260.",
+    "links": [
+     {
+      "label": "153.260",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.260/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.260"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -151,6 +190,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 1. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

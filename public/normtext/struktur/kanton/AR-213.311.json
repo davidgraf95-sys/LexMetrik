@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Einführung des Grundbuches in den Gemeinden",
+  "erlassdatum": "vom 26.04.1920 (Stand 15.02.1963)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 210 Abs. 1 des Einführungsgesetzes vom 30. April 1911 zum ZGB,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "aGS I/26, heute Art. 279 Abs. 1 EG zum ZGB vom 27. April 1969 (bGS 211.1 )",
+    "links": [
+     {
+      "label": "211.1",
+      "url": "https://ar.clex.ch/data/211.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-211.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +47,48 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. die Art. 942–977 ZGB",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SR 211.432.1",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Heute die Art. 247–254 EG zum ZGB vom 27. April 1969 (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [
@@ -26,7 +106,45 @@
      "label": "II. Grundeigentum"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Das Gesuch um Anordnung der Berichtigung unrichtiger Einträge im Grundbuch ist beim Kantonsgerichtspräsidenten einzureichen. (Vgl. Art. 252 Abs. 3 und 4 sowie die Art. 253 und 254 EG zum ZGB vom 27. April 1969 [bGS 211.1 ] in Verbindung mit Art. 11 ZPO vom 24. April 1955 [aGS I/36] und Art. 6 der V vom 18. Februar 1974 über die Zuständigkeit und die Organisation der kantonalen Gerichte [bGS 145.33 ])",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      },
+      {
+       "label": "145.33",
+       "url": "https://ar.clex.ch/data/145.33/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SR 211.432.1",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [
@@ -53,7 +171,25 @@
      "label": "II. Grundeigentum"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Heute Art. 280 EG zum ZGB vom 27. April 1969 (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "8": {
    "gliederung": [
@@ -62,7 +198,25 @@
      "label": "II. Grundeigentum"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SR 211.432.1",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [
@@ -152,7 +306,25 @@
      "label": "V. Verschiedene Bestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Abs. 1 gegenstandslos geworden durch Art. 250 Abs. 2 EG zum ZGB vom 27. April 1969 (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "19": {
    "gliederung": [
@@ -161,7 +333,33 @@
      "label": "V. Verschiedene Bestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Heute Gebührentarif für die Gemeinden vom 6. Dezember 1971 (bGS 153.2 )",
+     "links": [
+      {
+       "label": "153.2",
+       "url": "https://ar.clex.ch/data/153.2/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Heute Gebührentarif für die Gemeinden vom 6. Dezember 1971 (bGS 153.2 )",
+     "links": [
+      {
+       "label": "153.2",
+       "url": "https://ar.clex.ch/data/153.2/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "20": {
    "gliederung": [
@@ -170,7 +368,16 @@
      "label": "V. Verschiedene Bestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "4. Mai 1920",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

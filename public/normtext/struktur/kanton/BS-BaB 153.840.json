@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührenreglement der Zentralen Dienste",
+  "erlassdatum": "Vom 4. Februar 2014 (Stand 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat der Stadt Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 41 Abs. 2 des Bürgerrechtsgesetzes (BüRG) vom 29. April 1992 sowie §§ 1 und 4 des Gesetzes über die Verwaltungsgebühren vom 9. März 1972, in Anwendung von Art. 38 des Bundesgesetzes über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG) vom 29. September 1952,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 121.100.",
+    "links": [
+     {
+      "label": "121.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/121.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-121.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 141.0.",
+    "links": [
+     {
+      "label": "141.0",
+      "url": "https://db.clex.ch/link/Bund/141.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BUEG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -31,7 +104,7 @@
     }
    ],
    "marginalie": [
-    "fide-Test *"
+    "fide-Test"
    ]
   },
   "4": {
@@ -109,6 +182,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmung zur Änderung vom 31. Oktober 2023"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit dem 25. 4. 2014.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3_a": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Versteigerung von Kontrollschildern im Internet",
+  "erlassdatum": "Vom 7. Februar 2007 (Stand 1. Juli 2007)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantonspolizei Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 40 Buchstabe A Ziff. 14 lit. b der Verordnung über den Strassenverkehr vom 7. Dezember1964,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt zur Regelung der Versteigerung von Fahrzeug-Kontrollschildern folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Massgebend ist jetzt die Strassenverkehrsverordnung vom 17. Mai 2011 (SG 952.200 ) § 23 Abs. 1 Buchstabe A Ziff. 13b.",
+    "links": [
+     {
+      "label": "952.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/952.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-952.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Strassenverordnung",
+  "erlassdatum": "vom 19.01.2010 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 91 des Strassengesetzes vom 26. Oktober 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "StrG (bGS 731.11 )",
+    "links": [
+     {
+      "label": "731.11",
+      "url": "https://ar.clex.ch/data/731.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-731.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,29 @@
    ],
    "marginalie": [
     "Strassenklassen, Begriffe a) Kantonsstrassen (Art. 6 StrG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SN 640041",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SN 640042",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SN 640043",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +83,15 @@
    ],
    "marginalie": [
     "b) Sammelstrassen (Art. 7 Abs. 1 lit. a StrG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SN 640044",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -32,6 +103,15 @@
    ],
    "marginalie": [
     "c) Erschliessungsstrassen (Art. 7 Abs. 1 lit. b StrG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SN 640045",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -98,6 +178,56 @@
    ],
    "marginalie": [
     "Verfahren für den Erlass von Verkehrsbeschränkungen und -anordnungen (Art. 15 StrG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SVG (SR 741.01 )",
+     "links": [
+      {
+       "label": "741.01",
+       "url": "https://db.clex.ch/link/Bund/741.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Art. 107 Abs. 1 Signalisationsverordnung (SSV; SR 741.21 )",
+     "links": [
+      {
+       "label": "741.21",
+       "url": "https://db.clex.ch/link/Bund/741.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SSV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -197,6 +327,22 @@
    ],
    "marginalie": [
     "d) Strassenentwässerung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Richtlinie zur Versickerung, Retention und Ableitung von Niederschlagswasser in Siedlungsgebieten",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Wegleitung über den Gewässerschutz bei der Entwässerung von Verkehrswegen",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -406,6 +552,15 @@
    ],
    "marginalie": [
     "Anzeige"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 37 Abs. 4 StrG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -417,6 +572,24 @@
    ],
    "marginalie": [
     "Einsprache"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "40": {
@@ -450,6 +623,32 @@
    ],
    "marginalie": [
     "Gesetzliches Grundpfandrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 836 ZGB (SR 210 ), Art. 234 Abs. 1 G über die Einführung des Schweizerischen Zivilgesetzbuches (EG zum ZGB; bGS 211.1 )",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      },
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "43": {

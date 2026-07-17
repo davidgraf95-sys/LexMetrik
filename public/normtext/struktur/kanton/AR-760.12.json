@@ -1,22 +1,120 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsverordnung zur schweizerischen Automobilkonzessionsverordnung (AKV)",
+  "erlassdatum": "vom 19.05.1998 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 38 der Automobilkonzessionsverordnung vom 18. Dezember 1995 sowie auf Art. 87 Abs. 3 und 89 Abs. 1 der Kantonsverfassung,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Heute: Art. 36 der Verordnung vom 4. November 2009 über die Personenbeförderung",
+    "links": [
+     {
+      "label": "Art. 36",
+      "url": "https://db.clex.ch/link/Bund/745.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Heute: Art. 36 VPB",
+     "links": [
+      {
+       "label": "Art. 36 VPB",
+       "url": "https://db.clex.ch/link/Bund/745.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
     "Bewilligungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Heute: Art. 7 VPB",
+     "links": [
+      {
+       "label": "Art. 7 VPB",
+       "url": "https://db.clex.ch/link/Bund/745.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 233.2",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {

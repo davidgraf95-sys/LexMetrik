@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif",
+  "erlassdatum": "Vom 08.03.2016 (Stand 01.03.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Solothurn"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 131 Absatz 1 Buchstabe a der Verfassung des Kantons Solothurn (KV) vom 8. Juni 1986 und § 371 des Gesetzes über die Einführung des Schweizerischen Zivilgesetzbuches (EG ZGB) vom 4. April 1954 nach Kenntnisnahme von Botschaft und Entwurf des Regierungsrates vom 2. Februar 2016 (RRB Nr. 2016/167)",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BGS 111.1.",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://bgs.so.ch/data/111.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BGS 211.1.",
+    "links": [
+     {
+      "label": "211.1",
+      "url": "https://bgs.so.ch/data/211.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +102,52 @@
    ],
    "marginalie": [
     "Vorschuss"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BGS 124.11.",
+     "links": [
+      {
+       "label": "124.11",
+       "url": "https://bgs.so.ch/data/124.11/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SR 312.0.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SR 272.",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -98,6 +192,40 @@
    ],
    "marginalie": [
     "Verzugszins"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 312.0.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SR 272.",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -131,6 +259,24 @@
    ],
    "marginalie": [
     "Vollstreckung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -142,6 +288,24 @@
    ],
    "marginalie": [
     "Haftung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SR 272.",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -246,6 +410,32 @@
    ],
    "marginalie": [
     "Besonderer Aufwand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "BGS 114.1.",
+     "links": [
+      {
+       "label": "114.1",
+       "url": "https://bgs.so.ch/data/114.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "BGS 114.1.",
+     "links": [
+      {
+       "label": "114.1",
+       "url": "https://bgs.so.ch/data/114.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -360,6 +550,36 @@
    ],
    "marginalie": [
     "Verschiedene Verrichtungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "BGS 211.1.",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://bgs.so.ch/data/211.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SR 211.432.1.",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -397,7 +617,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigung des Erbschaftsverwalters *"
+    "Entschädigung des Erbschaftsverwalters"
    ]
   },
   "30": {
@@ -416,7 +636,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigung des Erbenvertreters *"
+    "Entschädigung des Erbenvertreters"
    ]
   },
   "31": {
@@ -455,6 +675,32 @@
    ],
    "marginalie": [
     "Volksschule"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "BGS 413.111.",
+     "links": [
+      {
+       "label": "413.111",
+       "url": "https://bgs.so.ch/data/413.111/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "BGS 413.111.",
+     "links": [
+      {
+       "label": "413.111",
+       "url": "https://bgs.so.ch/data/413.111/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -474,6 +720,24 @@
    ],
    "marginalie": [
     "Berufsbildung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "SR 412.101.",
+     "links": [
+      {
+       "label": "412.101",
+       "url": "https://db.clex.ch/link/Bund/412.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -568,7 +832,7 @@
     }
    ],
    "marginalie": [
-    "Berufsausübungsbewilligungen und weitere Bewilligungen im Zusammenhang mit der Berufsausübung *"
+    "Berufsausübungsbewilligungen und weitere Bewilligungen im Zusammenhang mit der Berufsausübung"
    ]
   },
   "41": {
@@ -587,7 +851,7 @@
     }
    ],
    "marginalie": [
-    "Betriebsbewilligungen, andere Bewilligungen sowie weitere Dienstleistungen *"
+    "Betriebsbewilligungen, andere Bewilligungen sowie weitere Dienstleistungen"
    ]
   },
   "43": {
@@ -606,7 +870,7 @@
     }
    ],
    "marginalie": [
-    "Kontrollen und Massnahmen *"
+    "Kontrollen und Massnahmen"
    ]
   },
   "44": {
@@ -625,7 +889,7 @@
     }
    ],
    "marginalie": [
-    "Aufsichts- und disziplinarrechtliche Massnahmen und Entzug von Bewilligungen *"
+    "Aufsichts- und disziplinarrechtliche Massnahmen und Entzug von Bewilligungen"
    ]
   },
   "45": {
@@ -683,6 +947,20 @@
    ],
    "marginalie": [
     "Bewilligung, Genehmigung, Einspracheentscheid"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "SR 221.213.2.",
+     "links": [
+      {
+       "label": "221.213.2",
+       "url": "https://db.clex.ch/link/Bund/221.213.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "48": {
@@ -740,6 +1018,20 @@
    ],
    "marginalie": [
     "Bewilligung zur Löschung von Anmerkungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "BGS 923.12.",
+     "links": [
+      {
+       "label": "923.12",
+       "url": "https://bgs.so.ch/data/923.12/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "51": {
@@ -835,6 +1127,20 @@
    ],
    "marginalie": [
     "Sprengstoffverordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "BGS 512.251.",
+     "links": [
+      {
+       "label": "512.251",
+       "url": "https://bgs.so.ch/data/512.251/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "56": {
@@ -892,6 +1198,20 @@
    ],
    "marginalie": [
     "Gewerbsmässige Tätigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "BGS 511.11.",
+     "links": [
+      {
+       "label": "511.11",
+       "url": "https://bgs.so.ch/data/511.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "59": {
@@ -1005,7 +1325,7 @@
     }
    ],
    "marginalie": [
-    "Verfügungen, Vorladungen und Vorführungen *"
+    "Verfügungen, Vorladungen und Vorführungen"
    ]
   },
   "65": {
@@ -1024,7 +1344,25 @@
     }
    ],
    "marginalie": [
-    "Motorfahrräder und Kleinmotorräder *"
+    "Motorfahrräder und Kleinmotorräder"
+   ],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "SR 741.41.",
+     "links": [
+      {
+       "label": "741.41",
+       "url": "https://db.clex.ch/link/Bund/741.41/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VTS"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "66": {
@@ -1062,7 +1400,7 @@
     }
    ],
    "marginalie": [
-    "Polizeiboote und unbemannte Luftfahrzeuge *"
+    "Polizeiboote und unbemannte Luftfahrzeuge"
    ]
   },
   "68": {
@@ -1120,6 +1458,20 @@
    ],
    "marginalie": [
     "Häusliche Gewalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "BGS 511.11.",
+     "links": [
+      {
+       "label": "511.11",
+       "url": "https://bgs.so.ch/data/511.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "71": {
@@ -1139,6 +1491,20 @@
    ],
    "marginalie": [
     "Verkehrserziehung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "BGS 125.12.",
+     "links": [
+      {
+       "label": "125.12",
+       "url": "https://bgs.so.ch/data/125.12/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "72": {
@@ -1157,7 +1523,33 @@
     }
    ],
    "marginalie": [
-    "Rayonverbot, Meldeauflage, Polizeigewahrsam und Mobilfunklokalisierung *"
+    "Rayonverbot, Meldeauflage, Polizeigewahrsam und Mobilfunklokalisierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "BGS 511.14.",
+     "links": [
+      {
+       "label": "511.14",
+       "url": "https://bgs.so.ch/data/511.14/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "SR 120.",
+     "links": [
+      {
+       "label": "120",
+       "url": "https://db.clex.ch/link/Bund/120/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "73": {
@@ -1177,6 +1569,20 @@
    ],
    "marginalie": [
     "Zu viel bezahlte Ordnungsbussen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "SR 741.031.",
+     "links": [
+      {
+       "label": "741.031",
+       "url": "https://db.clex.ch/link/Bund/741.031/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "74": {
@@ -1272,6 +1678,20 @@
    ],
    "marginalie": [
     "Verordnung über den Natur- und Heimatschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "BGS 435.141.",
+     "links": [
+      {
+       "label": "435.141",
+       "url": "https://bgs.so.ch/data/435.141/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "79": {
@@ -1348,6 +1768,20 @@
    ],
    "marginalie": [
     "Sterilisationsgesetz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "SR 211.111.1.",
+     "links": [
+      {
+       "label": "211.111.1",
+       "url": "https://db.clex.ch/link/Bund/211.111.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "83": {
@@ -1538,6 +1972,20 @@
    ],
    "marginalie": [
     "Substitution"
+   ],
+   "fussnoten": [
+    {
+     "nr": "36",
+     "text": "BGS 127.10.",
+     "links": [
+      {
+       "label": "127.10",
+       "url": "https://bgs.so.ch/data/127.10/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "94": {
@@ -1614,6 +2062,20 @@
    ],
    "marginalie": [
     "Medizinische Staatshaftung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "BGS 817.11.",
+     "links": [
+      {
+       "label": "817.11",
+       "url": "https://bgs.so.ch/data/817.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "98": {
@@ -1690,6 +2152,20 @@
    ],
    "marginalie": [
     "Gebühren für Kreisbauämter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "BGS 711.61.",
+     "links": [
+      {
+       "label": "711.61",
+       "url": "https://bgs.so.ch/data/711.61/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "102": {
@@ -1709,6 +2185,32 @@
    ],
    "marginalie": [
     "Wasser, Boden, Abfall"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "BGS 712.15.",
+     "links": [
+      {
+       "label": "712.15",
+       "url": "https://bgs.so.ch/data/712.15/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "40",
+     "text": "BGS 712.15.",
+     "links": [
+      {
+       "label": "712.15",
+       "url": "https://bgs.so.ch/data/712.15/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "103": {
@@ -1785,6 +2287,220 @@
    ],
    "marginalie": [
     "Umweltschutzgesetzgebung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "SR 814.011.",
+     "links": [
+      {
+       "label": "814.011",
+       "url": "https://db.clex.ch/link/Bund/814.011/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "UVPV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "SR 814.012.",
+     "links": [
+      {
+       "label": "814.012",
+       "url": "https://db.clex.ch/link/Bund/814.012/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "SR 814.318.142.1.",
+     "links": [
+      {
+       "label": "814.318.142.1",
+       "url": "https://db.clex.ch/link/Bund/814.318.142.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LRV"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "44",
+     "text": "SR 814.41.",
+     "links": [
+      {
+       "label": "814.41",
+       "url": "https://db.clex.ch/link/Bund/814.41/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LSV"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "45",
+     "text": "SR 814.49.",
+     "links": [
+      {
+       "label": "814.49",
+       "url": "https://db.clex.ch/link/Bund/814.49/de"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "46",
+     "text": "SR 814.600.",
+     "links": [
+      {
+       "label": "814.600",
+       "url": "https://db.clex.ch/link/Bund/814.600/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VVEA"
+       }
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "SR 814.610.",
+     "links": [
+      {
+       "label": "814.610",
+       "url": "https://db.clex.ch/link/Bund/814.610/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VEVA"
+       }
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    },
+    {
+     "nr": "48",
+     "text": "BGS 712.15.",
+     "links": [
+      {
+       "label": "712.15",
+       "url": "https://bgs.so.ch/data/712.15/de"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "SR 814.50.",
+     "links": [
+      {
+       "label": "814.50",
+       "url": "https://db.clex.ch/link/Bund/814.50/de"
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    },
+    {
+     "nr": "50",
+     "text": "SR 814.501.",
+     "links": [
+      {
+       "label": "814.501",
+       "url": "https://db.clex.ch/link/Bund/814.501/de"
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    },
+    {
+     "nr": "51",
+     "text": "SR 814.680.",
+     "links": [
+      {
+       "label": "814.680",
+       "url": "https://db.clex.ch/link/Bund/814.680/de"
+      }
+     ],
+     "absatz": "8",
+     "item": null
+    },
+    {
+     "nr": "52",
+     "text": "BGS 712.15.",
+     "links": [
+      {
+       "label": "712.15",
+       "url": "https://bgs.so.ch/data/712.15/de"
+      }
+     ],
+     "absatz": "8",
+     "item": null
+    },
+    {
+     "nr": "53",
+     "text": "SR 814.12.",
+     "links": [
+      {
+       "label": "814.12",
+       "url": "https://db.clex.ch/link/Bund/814.12/de"
+      }
+     ],
+     "absatz": "9",
+     "item": null
+    },
+    {
+     "nr": "54",
+     "text": "SR 814.912.",
+     "links": [
+      {
+       "label": "814.912",
+       "url": "https://db.clex.ch/link/Bund/814.912/de"
+      }
+     ],
+     "absatz": "10",
+     "item": null
+    },
+    {
+     "nr": "55",
+     "text": "SR 814.911.",
+     "links": [
+      {
+       "label": "814.911",
+       "url": "https://db.clex.ch/link/Bund/814.911/de"
+      }
+     ],
+     "absatz": "10",
+     "item": null
+    },
+    {
+     "nr": "56",
+     "text": "SR 814.710.",
+     "links": [
+      {
+       "label": "814.710",
+       "url": "https://db.clex.ch/link/Bund/814.710/de"
+      }
+     ],
+     "absatz": "11",
+     "item": null
+    }
    ]
   },
   "107": {
@@ -1861,6 +2577,20 @@
    ],
    "marginalie": [
     "Pflanzenschutzmittelverordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "57",
+     "text": "SR 916.161.",
+     "links": [
+      {
+       "label": "916.161",
+       "url": "https://db.clex.ch/link/Bund/916.161/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "111": {
@@ -1880,6 +2610,20 @@
    ],
    "marginalie": [
     "Dünger-Verordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "58",
+     "text": "SR 916.171.",
+     "links": [
+      {
+       "label": "916.171",
+       "url": "https://db.clex.ch/link/Bund/916.171/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "112": {
@@ -1899,6 +2643,20 @@
    ],
    "marginalie": [
     "Gefahrengutbeauftragtenverordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "59",
+     "text": "SR 741.622.",
+     "links": [
+      {
+       "label": "741.622",
+       "url": "https://db.clex.ch/link/Bund/741.622/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "113": {
@@ -1956,6 +2714,20 @@
    ],
    "marginalie": [
     "Hundehaltung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "BGS 614.71.",
+     "links": [
+      {
+       "label": "614.71",
+       "url": "https://bgs.so.ch/data/614.71/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "116": {
@@ -1975,6 +2747,20 @@
    ],
    "marginalie": [
     "Tierarzneimittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "61",
+     "text": "SR 812.212.27.",
+     "links": [
+      {
+       "label": "812.212.27",
+       "url": "https://db.clex.ch/link/Bund/812.212.27/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "117": {
@@ -2013,6 +2799,20 @@
    ],
    "marginalie": [
     "Tierseuchen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "62",
+     "text": "SR 916.441.22.",
+     "links": [
+      {
+       "label": "916.441.22",
+       "url": "https://db.clex.ch/link/Bund/916.441.22/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "119": {
@@ -2285,6 +3085,24 @@
    ],
    "marginalie": [
     "Arbeitsgesetz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "63",
+     "text": "SR 822.11.",
+     "links": [
+      {
+       "label": "822.11",
+       "url": "https://db.clex.ch/link/Bund/822.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ARG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "131": {
@@ -2361,6 +3179,24 @@
    ],
    "marginalie": [
     "Konsumkredit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "64",
+     "text": "SR 221.214.1.",
+     "links": [
+      {
+       "label": "221.214.1",
+       "url": "https://db.clex.ch/link/Bund/221.214.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "135": {
@@ -2418,6 +3254,20 @@
    ],
    "marginalie": [
     "Ausnahmebewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "69",
+     "text": "BGS 940.11.",
+     "links": [
+      {
+       "label": "940.11",
+       "url": "https://bgs.so.ch/data/940.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "138": {
@@ -2436,7 +3286,7 @@
     }
    ],
    "marginalie": [
-    "Kleinspiele *"
+    "Kleinspiele"
    ]
   },
   "139": {
@@ -2456,6 +3306,20 @@
    ],
    "marginalie": [
     "Ausnahmebewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "70",
+     "text": "BGS 512.41.",
+     "links": [
+      {
+       "label": "512.41",
+       "url": "https://bgs.so.ch/data/512.41/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "140": {
@@ -2580,6 +3444,20 @@
    ],
    "marginalie": [
     "Verwaltungsgericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "72",
+     "text": "BGS 125.12.",
+     "links": [
+      {
+       "label": "125.12",
+       "url": "https://bgs.so.ch/data/125.12/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "148": {
@@ -2625,6 +3503,36 @@
    ],
    "marginalie": [
     "Kantonales Steuergericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "73",
+     "text": "BGS 125.12.",
+     "links": [
+      {
+       "label": "125.12",
+       "url": "https://bgs.so.ch/data/125.12/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "74",
+     "text": "BGS 614.11.",
+     "links": [
+      {
+       "label": "614.11",
+       "url": "https://bgs.so.ch/data/614.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "SO-614.11"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "151": {
@@ -2745,6 +3653,24 @@
    ],
    "marginalie": [
     "Entschädigung Anwalt erster Stunde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "76",
+     "text": "SR 312.0.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "160": {
@@ -2828,6 +3754,56 @@
    ],
    "marginalie": [
     "Eichamt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "65",
+     "text": "SR 941.298.1.",
+     "links": [
+      {
+       "label": "941.298.1",
+       "url": "https://db.clex.ch/link/Bund/941.298.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "66",
+     "text": "SR 941.298.1.",
+     "links": [
+      {
+       "label": "941.298.1",
+       "url": "https://db.clex.ch/link/Bund/941.298.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "67",
+     "text": "SR 941.298.1.",
+     "links": [
+      {
+       "label": "941.298.1",
+       "url": "https://db.clex.ch/link/Bund/941.298.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "68",
+     "text": "SR 941.298.1.",
+     "links": [
+      {
+       "label": "941.298.1",
+       "url": "https://db.clex.ch/link/Bund/941.298.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "140_bis": {
@@ -2847,6 +3823,20 @@
    ],
    "marginalie": [
     "Submissionsrechtliche Sanktionen gegenüber Anbietern und Subunternehmern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "71",
+     "text": "BGS 721.532.",
+     "links": [
+      {
+       "label": "721.532",
+       "url": "https://bgs.so.ch/data/721.532/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "143_bis": {
@@ -2877,6 +3867,24 @@
    ],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "75",
+     "text": "SR 220.",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "32_bis": {
@@ -2953,6 +3961,40 @@
    ],
    "marginalie": [
     "Kindesschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "SR 210.",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "SR 211.231.",
+     "links": [
+      {
+       "label": "211.231",
+       "url": "https://db.clex.ch/link/Bund/211.231/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PARTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45_quinquies": {
@@ -2972,6 +4014,24 @@
    ],
    "marginalie": [
     "Erwachsenenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "SR 210.",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45_ter": {
@@ -2991,6 +4051,24 @@
    ],
    "marginalie": [
     "Gemeinsame Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SR 210.",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45sexies": {
@@ -3010,6 +4088,56 @@
    ],
    "marginalie": [
     "Internationaler Kindes- und Erwachsenenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "SR 0.211.231.011.",
+     "links": [
+      {
+       "label": "0.211.231.011",
+       "url": "https://db.clex.ch/link/Bund/0.211.231.011/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HKSUE96"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "SR 0.211.232.1.",
+     "links": [
+      {
+       "label": "0.211.232.1",
+       "url": "https://db.clex.ch/link/Bund/0.211.232.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HEUE"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "SR 0.211.221.311.",
+     "links": [
+      {
+       "label": "0.211.221.311",
+       "url": "https://db.clex.ch/link/Bund/0.211.221.311/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HAUE"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "69_bis": {

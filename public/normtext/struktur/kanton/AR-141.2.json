@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Geschäftsordnung des Kantonsrates",
+  "erlassdatum": "vom 24.09.2018 (Stand 01.04.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3 des Kantonsratsgesetzes vom 24. September 2018,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KRG (bGS 141.1 )",
+    "links": [
+     {
+      "label": "141.1",
+      "url": "https://ar.clex.ch/data/141.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-141.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -254,6 +293,24 @@
    ],
    "marginalie": [
     "Parlamentsdienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 8 Personalgesetz (bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -284,6 +341,40 @@
    ],
    "marginalie": [
     "Konstituierende Sitzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 44 Abs. 1 Gesetz über die politischen Rechte (bGS 131.12 )",
+     "links": [
+      {
+       "label": "131.12",
+       "url": "https://ar.clex.ch/data/131.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-131.12"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Art. 44 Abs. 2 Gesetz über die politischen Rechte (bGS 131.12 )",
+     "links": [
+      {
+       "label": "131.12",
+       "url": "https://ar.clex.ch/data/131.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-131.12"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -1109,6 +1200,24 @@
    ],
    "marginalie": [
     "Einreichung einer parlamentarischen Initiative"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 14 Organisationsverordnung (OrV; bGS 142.121 )",
+     "links": [
+      {
+       "label": "142.121",
+       "url": "https://ar.clex.ch/data/142.121/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.121"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "75": {
@@ -1139,6 +1248,24 @@
    ],
    "marginalie": [
     "Behandlung einer parlamentarischen Initiative"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 33 ff. Organisationsverordnung (OrV; bGS 142.121 )",
+     "links": [
+      {
+       "label": "142.121",
+       "url": "https://ar.clex.ch/data/142.121/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.121"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "77": {

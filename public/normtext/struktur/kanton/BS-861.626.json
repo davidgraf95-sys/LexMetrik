@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Richtlinien zur Mietzinsgestaltung der Stiftung für preisgünstigen Wohnraum Basel-Stadt",
+  "erlassdatum": "Vom 27. August 2025 (Stand 2. Oktober 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Stiftungsrat der Stiftung für preisgünstigen Wohnraum Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5 Abs. 1 lit. a des Gesetzes über die Stiftung für preisgünstigen Wohnraum Basel-Stadt (Wohnstiftungsgesetz, WSG) vom 13. Januar 2021,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 861.600",
+    "links": [
+     {
+      "label": "861.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/861.600/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-861.600"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -52,6 +91,40 @@
    ],
    "marginalie": [
     "Mietzinsanpassungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SR 221.213.11",
+     "links": [
+      {
+       "label": "221.213.11",
+       "url": "https://db.clex.ch/link/Bund/221.213.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VMWG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -88,7 +161,16 @@
      "label": "6. Kostenmiete"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "In Kraft seit 2. Oktober 2025",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

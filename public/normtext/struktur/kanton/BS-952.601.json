@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vorschriften über die Benutzung der Parkhäuser City, Elisabethen, Steinen und Storchen sowie St. Jakob mit Aussenparkfläche",
+  "erlassdatum": "Vom 10. Januar 2006 (Stand 21. Oktober 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Immobilien Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 2 der Verordnung über den Betrieb der Parkgaragen Elisabethen, Steinen, City, Storchen und St. Jakob sowie des Parkplatzes St. Jakob (Parkgaragenverordnung) vom 13. Oktober 1992,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 952.600.",
+    "links": [
+     {
+      "label": "952.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/952.600/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-952.600"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

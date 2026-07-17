@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Härtefallprogramm für Unternehmen im Zusammenhang mit der Covid-19-Pandemie",
+  "erlassdatum": "Vom 20. April 2021 (Stand 21. April 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 12 des Bundesgesetzes über die gesetzlichen Grundlagen für Verordnungen des Bun-desrates zur Bewältigung der Covid-19-Epidemie (Covid-19-Gesetz) vom 25. September 2020, die Verordnung über Härtefallmassnahmen für Unternehmen im Zusammenhang mit der Covid-19-Epidemie (Covid-19-Härtefallverordnung) vom 25. November 2020 und § 4 Abs. 1 lit. d und § 5 des Gesetzes betreffend den Fonds zur Bekämpfung der Arbeitslosigkeit vom 6. Dezember 1995, unter Verweis auf seine Erläuterungen Nr. P210482 / P210483,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 818.102",
+    "links": [
+     {
+      "label": "818.102",
+      "url": "https://db.clex.ch/link/Bund/818.102/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 951.262",
+    "links": [
+     {
+      "label": "951.262",
+      "url": "https://db.clex.ch/link/Bund/951.262/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 835.200",
+    "links": [
+     {
+      "label": "835.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/835.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-835.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

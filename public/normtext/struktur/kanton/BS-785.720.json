@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen dem Kanton Basel-Stadt, dem Kanton Basel-Landschaft, den Firmen Ciba-Geigy AG, in Basel, F. Hoffmann-La Roche & Co. AG, in Basel, Sandoz AG, in Basel, betreffend gemeinsame Durchführung von Gewässerschutzmassnahmen",
+  "erlassdatum": "Vom 16. Juni 1974 (Stand 26. Juni 1979)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kanton Basel-Stadt, vertreten durch den Regierungsrat, der Regierungsrat gleichzeitig handelnd für die Einwohnergemeinde der Stadt Basel, der Kanton Basel-Landschaft, vertreten durch den Regierungsrat, sowie die Firmen Ciba-Geigy AG, F. Hoffmann-La Roche & Co. AG und Sandoz AG, alle in Basel,"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren betreffend gemeinsame Durchführung von Gewässerschutzmassnahmen, was folgt:"
+   }
+  ]
+ },
  "artikel": {
   "1.1": {
    "gliederung": [
@@ -64,7 +78,7 @@
     }
    ],
    "marginalie": [
-    "Die gemeinschaftliche Schlammbehandlungsanlage *"
+    "Die gemeinschaftliche Schlammbehandlungsanlage"
    ]
   },
   "2.1.1": {
@@ -155,6 +169,15 @@
    ],
    "marginalie": [
     "Grundkapital"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2.2.3": {
@@ -245,6 +268,15 @@
    ],
    "marginalie": [
     "Projektierung und Erstellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Für die grafische Darstellung der technischen Aufgaben siehe Anhang.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2.3.3": {
@@ -345,6 +377,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Genehmigt: Vom Grossen Rat des Kantons Basel-Stadt durch das Gesetz über die Abwasserreinigung vom 25. 6. 1975, vom Landrat des Kantons Basel-Landschaft am 26. 5. 1975.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

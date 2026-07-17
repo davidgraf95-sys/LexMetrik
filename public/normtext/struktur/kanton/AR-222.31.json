@@ -1,9 +1,81 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz vom 10. Dezember 1941 über die Revision des XX. Titels des Obligationenrechts (Die Bürgschaft)",
+  "erlassdatum": "vom 03.12.1942 (Stand 01.01.1957)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 10. Dezember 1941 über die Revision des XX. Titels des Obligationenrechts (Die Bürgschaft) sowie auf Art. 48 Ziff. 4 der Kantonsverfassung,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "OR (SR 220 )",
+    "links": [
+     {
+      "label": "220",
+      "url": "https://db.clex.ch/link/Bund/220/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "OR"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "aGS I/1",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "aGS I/26 (heute Beurkundungsgesetz; BeurkG; bGS 211.2 )",
+     "links": [
+      {
+       "label": "211.2",
+       "url": "https://ar.clex.ch/data/211.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "bGS 153.1 (aufgehoben)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [],

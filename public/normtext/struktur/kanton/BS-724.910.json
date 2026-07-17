@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührenverordnung zum Gesetz über die Nutzung des öffentlichen Raumes",
+  "erlassdatum": "Vom 1. November 2022 (Stand 1. Januar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 50 des Gesetzes über die Nutzung des öffentlichen Raumes (NöRG) vom 16. Oktober 2013, unter Verweis auf seine Erläuterungen Nr. P211047,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 724.100",
+    "links": [
+     {
+      "label": "724.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

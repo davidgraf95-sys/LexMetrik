@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen",
+  "erlassdatum": "Vom 18. Februar 1993 (Stand 1. Januar 2017)"
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -16,7 +20,7 @@
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Zusammenarbeit mit dem Bund *"
+    "Zusammenarbeit mit dem Bund"
    ]
   },
   "4": {
@@ -58,7 +62,30 @@
   "10": {
    "gliederung": [],
    "marginalie": [
-    "Rechtsschutz *"
+    "Rechtsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Bundesgesetz über das Bundesgericht vom 17. Juni 2005 (Bundesgerichtsgesetz, BGG); SR 173.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Bundesgesetz über das Bundesverwaltungsgericht vom 17. Juni 2005 (Verwaltungsgerichtsgesetz, VGG); SR 173.32.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Bundesgesetz über das Bundesgericht vom 17. Juni 2005 (Bundesgerichtsgesetz, BGG); SR 173.110.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -70,7 +97,7 @@
   "12": {
    "gliederung": [],
    "marginalie": [
-    "Kosten und Gebühren *"
+    "Kosten und Gebühren"
    ]
   },
   "13": {
@@ -88,13 +115,29 @@
   "12_bis": {
    "gliederung": [],
    "marginalie": [
-    "Liste über Lehrpersonen ohne Unterrichtsberechtigung *"
+    "Liste über Lehrpersonen ohne Unterrichtsberechtigung"
    ]
   },
   "12_ter": {
    "gliederung": [],
    "marginalie": [
     "Register über Gesundheitsfachpersonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Bundesgesetz über die Meldepflicht und die Nachprüfung der Berufsqualifikationen von Dienstleistungserbringerinnen und -erbringern in reglementierten Berufen (BGMD).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 831.10.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   }
  }

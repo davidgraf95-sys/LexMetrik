@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Kantonale Krisenorganisation",
+  "erlassdatum": "Vom 24. März 2015 (Stand 1. April 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 6 Abs. 1 und 2 und Art. 9 Abs. 1 des Bundesgesetzes über den Bevölkerungs- und den Zivilschutz (Bevölkerungs- und Zivilschutzgesetz, BZG) vom 4. Oktober 2002, den § 24 Abs. 2 der Verfassung des Kantons Basel-Stadt und § 3 des Gesetzes betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeigesetz, PolG) vom 13. November 1996,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 520.1.",
+    "links": [
+     {
+      "label": "520.1",
+      "url": "https://db.clex.ch/link/Bund/520.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 510.100.",
+    "links": [
+     {
+      "label": "510.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/510.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-510.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -157,6 +226,15 @@
    ],
    "marginalie": [
     "Entschädigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 164.410.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {

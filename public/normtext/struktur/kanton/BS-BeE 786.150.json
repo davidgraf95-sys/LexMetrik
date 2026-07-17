@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührenreglement für die Entsorgung von Hauskehricht und Sperrgut",
+  "erlassdatum": "Vom 4. Mai 1993 (Stand 1. Juli 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 23 der Ordnung der Abfallbehandlung in der Gemeinde Bettingen (Abfallordnung) vom 8. Dezember 1992,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BeE 786.100.",
+    "links": [
+     {
+      "label": "BeE 786.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20786.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

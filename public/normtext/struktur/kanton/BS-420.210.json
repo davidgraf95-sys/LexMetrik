@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Vollzug des Kantonalen Gesetzes über die Berufsbildung",
+  "erlassdatum": "Vom 19. Februar 2008 (Stand 19. März 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 2 lit. a des Kantonalen Gesetzes über die Berufsbildung vom 12. September 2007,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 420.200.",
+    "links": [
+     {
+      "label": "420.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/420.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-420.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +47,16 @@
      "label": "I. Geltungsbereich"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -23,6 +71,22 @@
    ],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 2 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 2 Abs. 3: Umbenennung \"Abteilung Weiterführenden Schulen\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -38,6 +102,36 @@
    ],
    "marginalie": [
     "Wahl und Organisation der Kommissionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "§ 3 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "§ 3 Abs. 3: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "§ 3 Abs. 4: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -53,6 +147,15 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 4 Abs. 1 lit. a: Umbenennung \"der Vorsteherin bzw. dem Vorsteher der Abteilung Berufsberatung, Beurfs- und Erwachsenenbildung\" in \"der Leitung Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -68,6 +171,15 @@
    ],
    "marginalie": [
     "Wahl der Mitglieder und Zusammensetzung der Kommissionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "§ 5 Abs. 3: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -83,6 +195,22 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "§ 6 Abs. 1: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "§ 6 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -98,6 +226,15 @@
    ],
    "marginalie": [
     "Allgemeine Bestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "§ 7 Abs. 1: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -113,6 +250,15 @@
    ],
    "marginalie": [
     "Besondere Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "§ 8 Abs. 1: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -137,6 +283,15 @@
    ],
    "marginalie": [
     "Aufsichtsbefugnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "§ 10 Abs. 1: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -152,6 +307,22 @@
    ],
    "marginalie": [
     "Stellvertretung der Berufsbildnerin oder des Berufsbildners"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "§ 11 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "§ 11 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -167,6 +338,22 @@
    ],
    "marginalie": [
     "Bildung und Weiterbildung der Berufsbildnerinnen und Berufsbildner"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "§ 12 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "§ 12 Abs. 3: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -182,6 +369,15 @@
    ],
    "marginalie": [
     "Bildungsbewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "§ 13: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -197,6 +393,15 @@
    ],
    "marginalie": [
     "Lehrmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "§ 14 Abs. 4: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -211,7 +416,58 @@
     }
    ],
    "marginalie": [
-    "Kinder- und Jugendgesundheitsdienst [22]"
+    "Kinder- und Jugendgesundheitsdienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "§ 15 Abs. 4: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "§ 15 Abs. 5: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -227,6 +483,15 @@
    ],
    "marginalie": [
     "Berufliche Grundbildung von Behinderten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "§ 16: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -242,6 +507,22 @@
    ],
    "marginalie": [
     "Berufsfachschulen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "§ 17 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "§ 17 Abs. 2: Umbenennung \"Abteilung Schulen\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -257,6 +538,15 @@
    ],
    "marginalie": [
     "Berufsmaturität, Freikurse, Stützkurse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "§ 18 Abs. 1: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -272,6 +562,15 @@
    ],
    "marginalie": [
     "Auswärtige Fachklassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "§ 19 Abs. 1: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -287,6 +586,36 @@
    ],
    "marginalie": [
     "Wahl der Prüfungsexpertinnen und Prüfungsexperten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "§ 20 Abs. 1: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "§ 20 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "§ 20 Abs. 3: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "37",
+     "text": "§ 20 Abs. 4: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -302,6 +631,15 @@
    ],
    "marginalie": [
     "Beiträge an Organisationen der Arbeitswelt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "§ 21: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -317,6 +655,15 @@
    ],
    "marginalie": [
     "Bericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "§ 22: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -332,6 +679,22 @@
    ],
    "marginalie": [
     "Zeitpunkt der Prüfungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "§ 23 Abs. 1: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "§ 23 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -347,6 +710,15 @@
    ],
    "marginalie": [
     "Prüfungswegleitungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "42",
+     "text": "§ 24: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -362,6 +734,15 @@
    ],
    "marginalie": [
     "Zutritt zu den Prüfungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "43",
+     "text": "§ 25: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -434,6 +815,15 @@
    ],
    "marginalie": [
     "Grundsatz und allgemeine Voraussetzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "44",
+     "text": "§ 31 Abs. 3: Umbennennung \"zuständigen Ressorts des Erziehungsdepartements\" in \"Bereich Mitttelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -445,6 +835,15 @@
    ],
    "marginalie": [
     "Höhe der Beiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "45",
+     "text": "§ 32 Abs. 2: Umbenennung \"Abteilung Berufsberatung, Berufs- und Erwachsenenbildung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -456,6 +855,15 @@
    ],
    "marginalie": [
     "Entzug des Kantonsbeitrags"
+   ],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "§ 33: Umbenennung \"das Amt für Berufsbildung und Berufsberatung\" in \"Bereich Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -476,7 +884,16 @@
      "label": "IX. Wirksamkeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "47",
+     "text": "Wirksam seit 24. 2. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "29_a": {
    "gliederung": [

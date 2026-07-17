@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Verfahren vor dem Einigungsamt als vertraglichem Schiedsgericht",
+  "erlassdatum": "Vom 30. April 1940 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz betreffend das ständige staatliche Einigungsamt vom 9. November 1911,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung über das Verfahren vor dem Einigungsamt als vertraglichem Schiedsgericht:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 813.300.",
+    "links": [
+     {
+      "label": "813.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/813.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-813.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

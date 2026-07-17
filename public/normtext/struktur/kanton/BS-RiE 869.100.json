@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Statut des Landpfrundhauses Riehen/Bettingen",
+  "erlassdatum": "Vom 18. Dezember 2007 (Stand 1. Januar 2008)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bürgerräte Riehen und Bettingen sowie der Gemeinderat Riehen"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen für das «Landpfrundhaus Riehen/ Bettingen» folgendes Statut:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -190,6 +204,15 @@
    ],
    "marginalie": [
     "Wirksamkeit und Übergang zum neuen Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 16. 1. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die auswärtigen Schulanlässe der Schulen des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 1. Juli 2014 (Stand 18. August 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 66, 74 und 139 des Schulgesetzes vom 4. April 1929,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -272,6 +311,22 @@
    ],
    "marginalie": [
     "Änderung und Aufhebung anderer Erlasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 411.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen den Kantonen Basel-Stadt und Basel-Landschaft über die BVG- und Stiftungsaufsicht beider Basel",
+  "erlassdatum": "Vom 14. Juni 2011 (Stand 1. Januar 2012)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Die Regierungen der Kantone Basel-Stadt, vertreten durch das Justiz- und Sicherheitsdepartement, und Basel-Landschaft, vertreten durch die Sicherheitsdirektion,"
+   },
+   {
+    "rolle": "verb",
+    "text": "schliessen folgenden Vertrag ab:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -65,6 +79,27 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 6 lit. f: Geschäftsordnung vom 8. 5. 2012 (einzusehen unter https://www.bsabb.ch/fileadmin/bsabb/user_upload/dokumente/Gesetzliche_Grundlagen/geschaeftsordnung_vr_2012__stand_1._januar_2015.pdf ).",
+     "links": [
+      {
+       "label": "https://www.bsabb.ch/fileadmin/bsabb/user_upload/dokumente/Gesetzliche_Grundlagen/geschaeftsordnung_vr_2012__stand_1._januar_2015.pdf",
+       "url": "https://www.bsabb.ch/fileadmin/bsabb/user_upload/dokumente/Gesetzliche_Grundlagen/geschaeftsordnung_vr_2012__stand_1._januar_2015.pdf"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 6 lit. j: Ordnung über die Stiftungsaufsicht vom 23. 1. 2012 (SG 212.910) und Ordnung über die berufliche Vorsorge vom 23. 1. 2012 (SG 833.110).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -131,6 +166,15 @@
    ],
    "marginalie": [
     "Personal"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 12 Abs. 1: Mit Beschluss vom 18. 9. 2012 hat der Regierungrat des Kantons Basel-Stadt für Beschwerden betr. das Arbeitsverhältnis die §§ 16 Abs. 2 sowie 40 - 43 Personalgesetz (SG 162.100) gestützt auf § 1 Abs. 3 Personalgesetz für die BVG- und Stiftungsaufsicht beider Basel für anwendbar erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {

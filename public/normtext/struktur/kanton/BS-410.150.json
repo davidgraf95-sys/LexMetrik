@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Übergangsverordnung betreffend den Übergang von der bisherigen Schullaufbahn zur neuen harmonisierten Schullaufbahn",
+  "erlassdatum": "Vom 31. Januar 2012 (Stand 1. Januar 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Übergangsgsbestimmung zur Änderung des Schulgesetzes vom 19. Mai 2010,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100. Anhang Ziff. 10",
+    "links": [
+     {
+      "label": "410.100.",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100./de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +43,16 @@
      "label": "1. Einführung der neuen Bildungsgänge"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 1 Abs. 1 lit. bb: Gemeint ist hier § 8 der Lernbeurteilungsverordnung Gymnasien (SG 413.810).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -70,7 +114,37 @@
      "label": "4. Änderung anderer Erlasse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 7: Die Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 413.800.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 413.810.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Wirksam seit 5. 2. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "6_a": {
    "gliederung": [

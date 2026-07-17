@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Steuergesetz",
+  "erlassdatum": "vom 25.04.1999 (Stand 01.01.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell I. Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 9 und Art. 20 Abs. 1 der Kantonsverfassung vom 24. Wintermonat 1872,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +28,15 @@
    ],
    "marginalie": [
     "Steuerhoheiten, Steuerarten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Die Verwendung der männlichen Bezeichnungen gilt sinngemäss für beide Geschlechter.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -578,7 +605,7 @@
     }
    ],
    "marginalie": [
-    "hd. Kapitalleistungen aus Vorsorge *"
+    "hd. Kapitalleistungen aus Vorsorge"
    ]
   },
   "41": {
@@ -983,7 +1010,7 @@
     }
    ],
    "marginalie": [
-    "b. Gemischte Beteiligungsgesellschaften *"
+    "b. Gemischte Beteiligungsgesellschaften"
    ]
   },
   "71": {
@@ -998,7 +1025,7 @@
     }
    ],
    "marginalie": [
-    "e. Juristische Personen mit ideellen Zwecken *"
+    "e. Juristische Personen mit ideellen Zwecken"
    ]
   },
   "72": {
@@ -2274,7 +2301,7 @@
     }
    ],
    "marginalie": [
-    "2. Steuerhinterziehung aa. Vollendete Steuerhinterziehung *"
+    "2. Steuerhinterziehung aa. Vollendete Steuerhinterziehung"
    ]
   },
   "170": {
@@ -2349,7 +2376,7 @@
     }
    ],
    "marginalie": [
-    "3. Juristische Personen a. Strafbarkeit *"
+    "3. Juristische Personen a. Strafbarkeit"
    ]
   },
   "176": {
@@ -2969,7 +2996,7 @@
     }
    ],
    "marginalie": [
-    "cc bis . Abzug von Forschungs- und Entwicklungsaufwand bei selbständiger Erwerbstätigkeit"
+    "cc bis. Abzug von Forschungs- und Entwicklungsaufwand bei selbständiger Erwerbstätigkeit"
    ]
   },
   "39_bis": {
@@ -3010,7 +3037,7 @@
     }
    ],
    "marginalie": [
-    "a bis . Patente und vergleichbare Rechte: Begriffe"
+    "a bis. Patente und vergleichbare Rechte: Begriffe"
    ]
   },
   "60_ter": {
@@ -3025,7 +3052,7 @@
     }
    ],
    "marginalie": [
-    "a ter . Patente und vergleichbare Rechte: Besteuerung"
+    "a ter. Patente und vergleichbare Rechte: Besteuerung"
    ]
   },
   "63_bis": {
@@ -3040,7 +3067,7 @@
     }
    ],
    "marginalie": [
-    "d bis . Aufdeckung stiller Reserven bei Beginn der Steuerpflicht"
+    "d bis. Aufdeckung stiller Reserven bei Beginn der Steuerpflicht"
    ]
   },
   "63_ter": {
@@ -3055,7 +3082,7 @@
     }
    ],
    "marginalie": [
-    "d ter . Besteuerung stiller Reserven bei Ende der Steuerpflicht"
+    "d ter. Besteuerung stiller Reserven bei Ende der Steuerpflicht"
    ]
   },
   "65_bis": {
@@ -3070,7 +3097,7 @@
     }
    ],
    "marginalie": [
-    "f bis . Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
+    "f bis. Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
    ]
   },
   "65_ter": {
@@ -3085,7 +3112,7 @@
     }
    ],
    "marginalie": [
-    "f ter . Entlastungsbegrenzung"
+    "f ter. Entlastungsbegrenzung"
    ]
   },
   "68_bis": {

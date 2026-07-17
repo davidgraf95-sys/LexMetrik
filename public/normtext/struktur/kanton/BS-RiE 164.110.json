@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über das Gehalt der Mitarbeiterinnen und Mitarbeiter der Gemeinde Riehen",
+  "erlassdatum": "Vom 9. Dezember 2008 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Lohnordnung vom 24. September 2008,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RIE 164.100.",
+    "links": [
+     {
+      "label": "RIE 164.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RIE%20164.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -31,7 +66,7 @@
     }
    ],
    "marginalie": [
-    "Entscheid betreffend die Zuordnung der Stellen und die Lohnfestsetzung *"
+    "Entscheid betreffend die Zuordnung der Stellen und die Lohnfestsetzung"
    ]
   },
   "4": {
@@ -131,6 +166,15 @@
    ],
    "marginalie": [
     "Überprüfung des Lohnsystems"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Redaktionelle, softwarebedingte Einfügung von Gliederungszahlen und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -805,7 +849,23 @@
      "label": "VII. 2. Änderungen anderer Erlasse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "RiE 162.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "RiE 412.210.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "57": {
    "gliederung": [
@@ -855,9 +915,7 @@
      "label": "III. 1. Vergütungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13_b": {
    "gliederung": [
@@ -1012,6 +1070,15 @@
    ],
    "marginalie": [
     "Nachqualifikation für Kindergartenlehrpersonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Änderungen anderer Erlasse werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   }
  }

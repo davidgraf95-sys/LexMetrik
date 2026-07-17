@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonales Gesetz über die Berufsbildung",
+  "erlassdatum": "Vom 12. September 2007 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 07.0576.01 vom 24. April 2007 sowie in den Bericht der Bildungs- und Kulturkommission Nr. 07.0576.02 vom 15. August 2007, zur Durchführung des Bundesgesetzes über die Berufsbildung vom 13. Dezember 2002,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 412.10.",
+    "links": [
+     {
+      "label": "412.10",
+      "url": "https://db.clex.ch/link/Bund/412.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BBG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -306,6 +345,15 @@
    ],
    "marginalie": [
     "Änderung der Dauer der beruflichen Grundbildung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -320,7 +368,30 @@
     }
    ],
    "marginalie": [
-    "Kinder- und Jugendgesundheitsdienst [3]"
+    "Kinder- und Jugendgesundheitsdienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -615,7 +686,7 @@
     }
    ],
    "marginalie": [
-    "Staatsbeiträge *"
+    "Staatsbeiträge"
    ]
   },
   "46": {
@@ -681,7 +752,7 @@
     }
    ],
    "marginalie": [
-    "Strafbestimmungen *"
+    "Strafbestimmungen"
    ]
   },
   "52": {
@@ -726,6 +797,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 1. 2. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "40_a": {

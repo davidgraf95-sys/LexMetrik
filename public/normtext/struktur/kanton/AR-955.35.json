@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesamtschweizerisches Geldspielkonkordat",
+  "erlassdatum": "vom 20.05.2019 (Stand 01.01.2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf - Art. 48 und Art. 106 sowie Art. 191b Abs. 2 der Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999 (SR 101 ) - das Bundesgesetz vom 29. September 2017 über Geldspiele (Geldspielgesetz, BGS; SR 935.51 )"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Vom Kantonsrat genehmigt am 7. Dezember 2020 (Abl. Nr. 52 vom 11. Dezember 2020); Referendumsfrist unbenützt abgelaufen am 9. Februar 2021 (Abl. Nr. 8 vom 26. Februar 2021)",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -1075,6 +1105,22 @@
    ],
    "marginalie": [
     "Verhältnis zu regional beschränkten Konkordaten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Interkantonale Vereinbarung betreffend die gemeinsame Durchführung von Lotterien vom 26. Mai 1937 (welchem die Deutschschweizerkantone und der Kanton Tessin beigetreten sind)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "9ème Convention relative a la Loterie Romande vom 18. November 2005 (welcher die Westschweizerkantone beigetreten sind)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "73": {

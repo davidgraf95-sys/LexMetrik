@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die Inanspruchnahme der Allmend",
+  "erlassdatum": "Vom 17. Dezember 2003 (Stand 1. Mai 2004)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat der Einwohnergemeinde Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "beschliesst gestützt auf § 4 des Gesetzes über die Inanspruchnahme der Allmend durch die Verwaltung und durch Private (Allmendgesetz) vom 24. März 1927 und § 21 Abs. 3 lit. b der Gemeindeordnung vom 27. Februar 2002 folgende Ordnung:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 724.100.",
+    "links": [
+     {
+      "label": "724.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 111.100.",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -87,6 +135,15 @@
    ],
    "marginalie": [
     "Gegenstand und Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. § 16 Abs. 4 in Verbindung mit Abs. 1 des Allmendgesetzes.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -186,6 +243,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 1. 5. 2004",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

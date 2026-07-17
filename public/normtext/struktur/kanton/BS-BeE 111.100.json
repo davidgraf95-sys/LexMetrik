@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gemeindeordnung der Einwohnergemeinde Bettingen",
+  "erlassdatum": "Vom 26. April 2016 (Stand 1. April 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gemeindeversammlung der Einwohnergemeinde Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "im Bestreben, die Identität der Einwohnergemeinde Bettingen in der schweizerischen Eidgenossenschaft und im Kanton Basel-Stadt zu bewahren und zu stärken, getreu dem Grundsatz, dass der Wille des Volkes vorrangig in der Gemeindeversammlung zum Tragen kommt und dies die Grundlage der Dorfgemeinschaft bildet, in der Absicht, die Eigenverantwortung der Einwohnerinnen und Einwohner sowie deren Mitwirkung im Gemeinwesen zu erhalten und zu fördern, im Bewusstsein, dass für eine gute Zusammenarbeit zwischen Volk und Behörden Klarheit, Vertrauen und eine offene Kommunikation erforderlich sind, und mit dem Anliegen, den Dorfteil von Bettingen und die Siedlung auf St. Chrischona in der Umsetzung dieser Grundsätze gleichermassen zu berücksichtigen, gestützt auf § 9 des Gemeindegesetzes vom 17. Oktober 1984,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst folgende Gemeindeordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -452,7 +491,7 @@
     }
    ],
    "marginalie": [
-    "Geschäfts- und Rechnungsprüfungskommission *"
+    "Geschäfts- und Rechnungsprüfungskommission"
    ]
   },
   "35": {
@@ -660,6 +699,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen zur Revision von § 34 vom 13. Dezember 2022"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vom Regierungsrat des Kantons Basel-Stadt genehmigt am 16. August 2016.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

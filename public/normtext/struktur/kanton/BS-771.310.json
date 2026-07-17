@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz betreffend Einführung des Bundesgesetzes über Nutzbarmachung der Wasserkräfte",
+  "erlassdatum": "Vom 2. Februar 1918 (Stand 1. Oktober 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des Gesetzes vom 10. Januar 1918",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 771.300.",
+    "links": [
+     {
+      "label": "771.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/771.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-771.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +47,16 @@
      "label": "I. Erstellen von Wasserwerken an Privatgewässern und an den Gewerbeteichen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 1 Abs. 1: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [

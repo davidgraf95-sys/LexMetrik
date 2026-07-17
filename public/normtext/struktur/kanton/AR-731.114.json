@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Beitragsleistung an die Anpassung oder Aufhebung von Bahnübergängen",
+  "erlassdatum": "vom 04.12.2007 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 28a des Gesetzes vom 30. April 1972 über die Staatsstrassen,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 731.11 (heute Art. 86 Abs. 3 des Strassengesetzes; StrG; bGS 731.11 ))",
+    "links": [
+     {
+      "label": "731.11",
+      "url": "https://ar.clex.ch/data/731.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-731.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +56,24 @@
    "gliederung": [],
    "marginalie": [
     "Unterstützungsbeiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "EBG (SR 742.101 )",
+     "links": [
+      {
+       "label": "742.101",
+       "url": "https://db.clex.ch/link/Bund/742.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {

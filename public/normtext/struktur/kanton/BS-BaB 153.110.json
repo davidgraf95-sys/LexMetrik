@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel",
+  "erlassdatum": "Vom 9. September 1986 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgergemeinderat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von § 37 der Geschäftsordnung des Bürgerrates vom 9. September 1986 folgende Ausführungsbestimmungen:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 153.100.",
+    "links": [
+     {
+      "label": "BaB 153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20153.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -96,9 +127,7 @@
      "label": "II. Kommissionen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -118,8 +147,15 @@
      "label": "II. Kommissionen"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 11. 1986.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "6_a": {

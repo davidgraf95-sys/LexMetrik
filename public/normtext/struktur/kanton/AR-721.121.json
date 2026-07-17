@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die anrechenbaren Kosten bei Denkmalpflege- und Heimatschutzbeiträgen",
+  "erlassdatum": "vom 03.12.1991 (Stand 24.08.2004)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh."
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 41 der Verordnung vom 11. März 1991 über Beiträge an Denkmalpflege-, Natur- und Heimatschutzmassnahmen,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Beitragsverordnung (bGS 721.12 )",
+    "links": [
+     {
+      "label": "721.12",
+      "url": "https://ar.clex.ch/data/721.12/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-721.12"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,6 +62,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "3. Dezember 1991",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

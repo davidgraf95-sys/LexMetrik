@@ -1,5 +1,43 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Gerichtsgebühren",
+  "erlassdatum": "Vom 11. September 2017 (Stand 3. Juni 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gerichtsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 Abs. 2 Ziff. 7 des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015 und § 1 Abs. 1 des Gesetzes über die Gerichtsgebühren vom 16. Januar 1975,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 154.100",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 154.800",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -64,7 +102,7 @@
     }
    ],
    "marginalie": [
-    "Mietrechtliche Streitigkeiten *"
+    "Mietrechtliche Streitigkeiten"
    ]
   },
   "7": {

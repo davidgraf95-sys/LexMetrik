@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren für öffentliche Beurkundungen",
+  "erlassdatum": "Vom 21.12.2010 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Schaffhausen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 163a des Gesetzes über die Einführung des Schweizerischen Zivilgesetzbuches vom 27. Juni 1911,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -41,6 +59,15 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Amtsblatt 2010, S. 1891.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung",
+  "erlassdatum": "vom 11.12.2007 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 2 Abs. 1, Art. 5 Abs. 4 sowie Art. 8 Abs. 3 des Gesetzes vom 24. September 2007 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 832.31",
+    "links": [
+     {
+      "label": "832.31",
+      "url": "https://ar.clex.ch/data/832.31/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-832.31"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +47,25 @@
      "label": "1. Abschnitt: Leistungen (Aufenthalt in einem Heim oder Spital; Begrenzung der Tagestaxe)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -53,6 +110,24 @@
    ],
    "marginalie": [
     "Verhältnis zu Leistungen anderer Versicherungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "ELG (SR 831.30 )",
+     "links": [
+      {
+       "label": "831.30",
+       "url": "https://db.clex.ch/link/Bund/831.30/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ELG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -98,6 +173,24 @@
    ],
    "marginalie": [
     "Kostenbeteiligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -113,6 +206,24 @@
    ],
    "marginalie": [
     "Versicherung mit wählbaren Franchisen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "KVV (SR 832.102 )",
+     "links": [
+      {
+       "label": "832.102",
+       "url": "https://db.clex.ch/link/Bund/832.102/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -203,6 +314,24 @@
    ],
    "marginalie": [
     "Kosten für direkt angestelltes Pflegepersonal"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "KVV (SR 832.102 )",
+     "links": [
+      {
+       "label": "832.102",
+       "url": "https://db.clex.ch/link/Bund/832.102/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -232,7 +361,41 @@
     }
    ],
    "marginalie": [
-    "Kosten für Hilfe, Pflege und Betreuung in Tages- und Nachtstrukturen *"
+    "Kosten für Hilfe, Pflege und Betreuung in Tages- und Nachtstrukturen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "2 bis",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "ELG (SR 831.30 )",
+     "links": [
+      {
+       "label": "831.30",
+       "url": "https://db.clex.ch/link/Bund/831.30/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ELG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -263,6 +426,36 @@
    ],
    "marginalie": [
     "Anspruch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "ELG (SR 831.30 )",
+     "links": [
+      {
+       "label": "831.30",
+       "url": "https://db.clex.ch/link/Bund/831.30/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ELG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "HVA (SR 831.135.1 )",
+     "links": [
+      {
+       "label": "831.135.1",
+       "url": "https://db.clex.ch/link/Bund/831.135.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -278,6 +471,24 @@
    ],
    "marginalie": [
     "Abklärung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "ELG (SR 831.30 )",
+     "links": [
+      {
+       "label": "831.30",
+       "url": "https://db.clex.ch/link/Bund/831.30/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ELG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -322,7 +533,7 @@
     }
    ],
    "marginalie": [
-    "Aufgaben der AHV-Zweigstellen *"
+    "Aufgaben der AHV-Zweigstellen"
    ]
   },
   "23": {
@@ -352,7 +563,7 @@
     }
    ],
    "marginalie": [
-    "Verwaltungskosten und Revisionsstelle *"
+    "Verwaltungskosten und Revisionsstelle"
    ]
   },
   "25": {

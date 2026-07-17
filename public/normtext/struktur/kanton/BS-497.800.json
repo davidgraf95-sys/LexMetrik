@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag über die Römerstadt Augusta Raurica",
+  "erlassdatum": "Vom 1. Juli 2025 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Zwischen den Kantonen Basel-Stadt, Basel-Landschaft und Aargau sowie der Historischen und Antiquarischen Gesellschaft und der Stiftung Pro Augusta Raurica wird,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 3 Abs. 1 i. V. m. § 4 Abs. 1 Bst. b) des Kulturfördergesetzes des Kantons Basel-Stadt vom 21. Oktober 2009; § 17 des Gesetzes über die Kulturförderung des Kantons Basel-Landschaft (KFG BL) vom 4. Juni 2015 sowie § 3 Abs. 2 des Kulturgesetzes des Kantons Aargau (KG) vom 31. März 2009,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "folgender Vertrag abgeschlossen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 494.300",
+    "links": [
+     {
+      "label": "494.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/494.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-494.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SGS 600",
+    "links": [
+     {
+      "label": "600",
+      "url": "https://db.clex.ch/link/BL/600/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SAR 495.200",
+    "links": [
+     {
+      "label": "495.200",
+      "url": "https://db.clex.ch/link/AG/495.200/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -59,6 +124,15 @@
    "gliederung": [],
    "marginalie": [
     "Kündigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 17. Januar 2026.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

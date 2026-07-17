@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Sozialhilfereglement",
+  "erlassdatum": "Vom 14. Dezember 2004 (Stand 1. Januar 2005)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt gestützt auf § 10 der Sozialhilfeordnung vom 27. Oktober 2004 folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 890.100.",
+    "links": [
+     {
+      "label": "RiE 890.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20890.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

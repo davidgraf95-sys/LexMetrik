@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Tarifverordnung zum Taxigesetz",
+  "erlassdatum": "Vom 25. April 2017 (Stand 13. Juli 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 12 des Gesetzes betreffend das Erbringen von Taxidienstleistungen (Taxigesetz) vom 3. Juni 2015, unter Verweis auf seine Erläuterungen Nr. P170689,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 563.200",
+    "links": [
+     {
+      "label": "563.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/563.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-563.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Festlegung der Löhne von Lehrpersonen als Aushilfen sowie für Stellvertretungen",
+  "erlassdatum": "Vom 23. September 2003 (Stand 1. August 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 8 Abs. 3 des Lohngesetzes vom 18. Januar 1995, folgende Verordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 164.100.",
+    "links": [
+     {
+      "label": "164.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/164.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-164.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -51,7 +86,7 @@
     }
    ],
    "marginalie": [
-    "Löhne von an Volks- und Mittelschulen und in Schulheimen angestellten Aushilfen *"
+    "Löhne von an Volks- und Mittelschulen und in Schulheimen angestellten Aushilfen"
    ]
   },
   "6": {
@@ -62,7 +97,7 @@
     }
    ],
    "marginalie": [
-    "Löhne von an Berufsfachschulen für den allgemeinbildenden Unterricht angestellten Aushilfen *"
+    "Löhne von an Berufsfachschulen für den allgemeinbildenden Unterricht angestellten Aushilfen"
    ]
   },
   "7": {
@@ -141,7 +176,16 @@
      "label": "V. Aufhebung von Erlassen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 27. 9. 2003.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

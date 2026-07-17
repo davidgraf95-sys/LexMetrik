@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Verpflegung von Mitarbeiterinnen und Mitarbeitern des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 13. Januar 2009 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 19 Abs. 1 des Gesetzes über die Einreihung und Entlöhnung der Mitarbeiterinnen und Mitarbeiter des Kantons Basel-Stadt (Lohngesetz) vom 18. Januar 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 164.100.",
+    "links": [
+     {
+      "label": "164.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/164.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-164.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -35,7 +74,16 @@
      "label": "II. Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 17. 1. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

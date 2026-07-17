@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Natur- und Landschaftsschutz",
+  "erlassdatum": "Vom 8. September 1998 (Stand 1. Januar 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 28 des Gesetzes über den Natur- und Landschaftsschutz vom 25. Januar 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 789.100.",
+    "links": [
+     {
+      "label": "789.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/789.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-789.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +93,15 @@
    ],
    "marginalie": [
     "Mitteilung des Antragsbegehrens an betroffene Eigentümerschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 5 Abs. 2 in der Fassung von § 3 Ziff. 97 der ZuständigkeitsV vom 9. 12. 2008 (wirksam seit 1. 1. 2009, publiziert am 18. 3. 2009, SG 153.110).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -252,6 +300,22 @@
    ],
    "marginalie": [
     "Verfügende Behörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 23 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 23 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -262,7 +326,7 @@
     }
    ],
    "marginalie": [
-    "Führung im ÖREB-Kataster *"
+    "Führung im ÖREB-Kataster"
    ]
   },
   "25": {
@@ -274,6 +338,15 @@
    ],
    "marginalie": [
     "Provisorische Schutzmassnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 25 Abs. 3 in der Fassung von § 3 Ziff. 97 der ZuständigkeitsV vom 9. 12. 2008 (wirksam seit 1. 1. 2009, publiziert am 18. 3. 2009, SG 153.110).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -296,6 +369,15 @@
    ],
    "marginalie": [
     "Rekursverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 27 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -318,6 +400,22 @@
    ],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SG 211.110.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Wirksam seit 8. 11. 1998.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

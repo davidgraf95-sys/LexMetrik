@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über das Gehalt der Mitarbeiterinnen und Mitarbeiter der Gemeinde Riehen",
+  "erlassdatum": "Vom 24. September 2008 (Stand 1. August 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag des Gemeinderats und der einwohnerrätlichen Spezialkommission gestützt auf § 9 Abs. 1 Ziff. 6 des Gemeindegesetzes vom 17. Oktober 1985 sowie § 21 Abs. 3 lit. b der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002 folgende Ordnung:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 111.100.",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -75,7 +123,7 @@
     }
    ],
    "marginalie": [
-    "Lohnkurven für Funktionen mit Leistungslohnkomponente *"
+    "Lohnkurven für Funktionen mit Leistungslohnkomponente"
    ]
   },
   "8": {
@@ -86,7 +134,7 @@
     }
    ],
    "marginalie": [
-    "Lohnansätze und Lohntabellen *"
+    "Lohnansätze und Lohntabellen"
    ]
   },
   "9": {
@@ -397,6 +445,15 @@
    ],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -415,7 +472,7 @@
     }
    ],
    "marginalie": [
-    "Überführung ins neue Recht per 1.1.2009 *"
+    "Überführung ins neue Recht per 1.1.2009"
    ]
   },
   "36": {
@@ -568,6 +625,22 @@
    ],
    "marginalie": [
     "Änderung anderer Erlasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "RiE 162.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Die Änderungen werden hier nicht gedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "44": {
@@ -598,6 +671,15 @@
    ],
    "marginalie": [
     "Rechtskraft und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 1. 1. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "42_a": {

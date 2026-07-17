@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gemeindeordnung der Bürgergemeinde der Stadt Basel",
+  "erlassdatum": "Vom 22. Oktober 1985 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Weitere Bürgerrat der Stadt Basel erlässt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gemäss den §§ 9 und 10 des Gemeindegesetzes vom 17. Oktober 1984 für die Bürgergemeinde der Stadt Basel",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "folgende Gemeindeordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 170.000.",
+    "links": [
+     {
+      "label": "170.000",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.000/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +43,16 @@
      "label": "I. Bestand"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -215,7 +259,7 @@
     }
    ],
    "marginalie": [
-    "Verwaltungsvermögen *"
+    "Verwaltungsvermögen"
    ]
   },
   "16": {
@@ -242,9 +286,7 @@
      "label": "(III.) 4. Einbürgerungskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -306,9 +348,7 @@
      "label": "(III.) 4a Interessenbindungen und Ausstand"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [
@@ -321,9 +361,7 @@
      "label": "(IV.)1. Zentralverwaltung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "23": {
    "gliederung": [
@@ -336,9 +374,7 @@
      "label": "(IV.)2. Bürgerspital"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -351,9 +387,7 @@
      "label": "(IV.)3. Sozialhilfe der Stadt Basel"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [
@@ -366,9 +400,7 @@
      "label": "(IV.)4. Bürgerliches Waisenhaus"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26": {
    "gliederung": [
@@ -426,9 +458,7 @@
      "label": "(V.)1. Christoph Merian Stiftung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -743,9 +773,7 @@
      "label": "(III.)5A. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21_d": {
    "gliederung": [
@@ -818,9 +846,7 @@
      "label": "(III.)6. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21_i": {
    "gliederung": [
@@ -833,9 +859,7 @@
      "label": "(III.)6. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21_j": {
    "gliederung": [
@@ -848,9 +872,7 @@
      "label": "(III.)6. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21_k": {
    "gliederung": [
@@ -863,9 +885,7 @@
      "label": "(III.)6. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21_l": {
    "gliederung": [
@@ -878,9 +898,7 @@
      "label": "(III.)6. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "2_a": {
    "gliederung": [
@@ -893,9 +911,7 @@
      "label": "(II.) 2. Führungsinstrumente"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "2_b": {
    "gliederung": [
@@ -1069,8 +1085,15 @@
      "label": "VII. Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vom RR genehmigt am 12. 11. 1985. Diese Gemeindeordnung ist nicht wie das Gemeindegesetz am 1. 1. 1986, sondern erst am 18. 6. 1986 wirksam geworden, nachdem sie in der Volksabstimmung vom 6./8. 6. 1986 angenommen worden war (KtBl 1986 I 883).",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

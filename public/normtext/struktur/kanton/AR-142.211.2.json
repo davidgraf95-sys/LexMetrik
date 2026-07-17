@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Weisungen über die Entschädigung von Stellvertretungen und besonderen Aufgaben an kantonalen Schulen",
+  "erlassdatum": "vom 16.06.2009 (Stand 01.08.2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 18 Abs. 5 der Besoldungsverordnung vom 30. Oktober 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BVO (bGS 142.211 )",
+    "links": [
+     {
+      "label": "142.211",
+      "url": "https://ar.clex.ch/data/142.211/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-142.211"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

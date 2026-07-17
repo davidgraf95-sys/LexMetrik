@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührenreglement für die Abfuhr und Vernichtung von Hauskehricht und Sperrgut",
+  "erlassdatum": "Vom 27. April 1993 (Stand 1. Juli 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 23 der Ordnung der Abfallbehandlung in der Gemeinde Riehen (Abfallordnung) vom 27. Januar 1993,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 786.100.",
+    "links": [
+     {
+      "label": "RiE 786.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20786.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

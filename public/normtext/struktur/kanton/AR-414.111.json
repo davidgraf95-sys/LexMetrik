@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Einführungsgesetz zum Bundesgesetz über die Berufsbildung",
+  "erlassdatum": "vom 11.12.2007 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 5 des Einführungsgesetzes vom 24. September 2007 zum Berufsbildungsgesetz",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG zum BBG (bGS 414.11 )",
+    "links": [
+     {
+      "label": "414.11",
+      "url": "https://ar.clex.ch/data/414.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-414.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,7 +57,16 @@
     }
    ],
    "marginalie": [
-    "Departement Bildung und Kultur *"
+    "Departement Bildung und Kultur"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Nachfolgend Amt genannt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -29,7 +77,7 @@
     }
    ],
    "marginalie": [
-    "Schulreglement der Berufsfachschule und Lehrpläne *"
+    "Schulreglement der Berufsfachschule und Lehrpläne"
    ]
   },
   "4": {
@@ -52,6 +100,24 @@
    ],
    "marginalie": [
     "Zweck und Organisation der Brückenangebote"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 7 Abs. 3 BBV (SR 412.101 )",
+     "links": [
+      {
+       "label": "412.101",
+       "url": "https://db.clex.ch/link/Bund/412.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BBV"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -128,7 +194,37 @@
     }
    ],
    "marginalie": [
-    "Berufsmaturität *"
+    "Berufsmaturität"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "bGS 413.11",
+     "links": [
+      {
+       "label": "413.11",
+       "url": "https://ar.clex.ch/data/413.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-413.11"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "insb. Vereinbarung über die Leistung von Schulbeiträgen für Auszubildende an Schulen der Sekundarstufe II (bGS 411.7 )",
+     "links": [
+      {
+       "label": "411.7",
+       "url": "https://ar.clex.ch/data/411.7/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -239,6 +335,24 @@
    ],
    "marginalie": [
     "Ausbildungsverträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "6 Monate, Art. 15 Abs. 4 Berufsbildungsverordnung (BBV; SR 412.101 )",
+     "links": [
+      {
+       "label": "412.101",
+       "url": "https://db.clex.ch/link/Bund/412.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -294,6 +408,24 @@
    ],
    "marginalie": [
     "Abschlussprüfung nach Art. 32 BBV"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "BBV (SR 412.101 )",
+     "links": [
+      {
+       "label": "412.101",
+       "url": "https://db.clex.ch/link/Bund/412.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -316,6 +448,24 @@
    ],
    "marginalie": [
     "Andere anerkannte Qualifikationsverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 33 Berufsbildungsgesetz (BBG; SR 412.10 )",
+     "links": [
+      {
+       "label": "412.10",
+       "url": "https://db.clex.ch/link/Bund/412.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -360,6 +510,15 @@
    ],
    "marginalie": [
     "Betriebsbeiträge an Überbetriebliche Kurse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Insbesondere nach der Interkantonalen Berufsfachschulvereinbarung vom 22. Juni 2006 (Beitritt von Appenzell Ausserrhoden durch Regierungsratsbeschluss Nr. 540 vom 4. September 2007).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -371,6 +530,24 @@
    ],
    "marginalie": [
     "Beiträge an Kurse für Berufsbildnerinnen und Berufsbildner in Lehrbetrieben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 44 Berufsbildungsverordnung (BBV; SR 412.101 )",
+     "links": [
+      {
+       "label": "412.101",
+       "url": "https://db.clex.ch/link/Bund/412.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -382,6 +559,15 @@
    ],
    "marginalie": [
     "Betriebsbeiträge an die höhere Berufsbildung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Insbesondere nach der Interkantonalen Fachschulvereinbarung vom 27. August 1998 (Beitritt von Appenzell Ausserrhoden durch Kantonsratsbeschluss vom 16. November 1998).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "36": {
@@ -424,7 +610,16 @@
      "label": "VIII. Rechtspflege (Disziplinarmassnahmen)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 36 Abs. 2 EG zum BBG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "40": {
    "gliederung": [

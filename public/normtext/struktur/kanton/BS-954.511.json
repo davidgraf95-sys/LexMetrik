@@ -1,10 +1,50 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung betreffend das DB-Güterbahnhofareal in Basel zwischen dem Kanton Basel-Stadt, vertreten durch den Regierungsrat des Kantons Basel-Stadt, und der Bundesrepublik Deutschland, vertreten durch das Bundeseisenbahnvermögen",
+  "erlassdatum": "Vom 26. August 2003 (Stand 16. September 2003)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "In Anwendung von Art. 3 Abs. 1 des Vertrages zwischen der schweizerischen Eidgenossenschaft und dem Grossherzogtum Baden, betreffend die Weiterführung der badischen Eisenbahnen über schweizerisches Gebiet vom 27. Juli 1852 (im Folgenden «Staatsvertrag») vereinbaren die Vertragsparteien was folgt:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 954.510.",
+    "links": [
+     {
+      "label": "954.510",
+      "url": "https://www.gesetzessammlung.bs.ch/data/954.510/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-954.510"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Vertragszweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Dieser Anhang wird hier nicht abgedruckt. Er kann beim Baudepartement eingesehen werden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {

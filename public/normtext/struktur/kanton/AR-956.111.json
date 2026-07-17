@@ -1,10 +1,71 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Auslagentarif für Eicharbeiten",
+  "erlassdatum": "vom 02.12.2008 (Stand 02.12.2008)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 5 der Verordnung vom 27. Oktober 2008 zum Bundesgesetz über das Messwesen und Art. 6 der Eichgebührenverordnung vom 23. November 2005,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 956.11",
+    "links": [
+     {
+      "label": "956.11",
+      "url": "https://ar.clex.ch/data/956.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-956.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 941.298.1",
+    "links": [
+     {
+      "label": "941.298.1",
+      "url": "https://db.clex.ch/link/Bund/941.298.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Eichung von Waagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Bst. A Anhang zur Eichgebührenverordnung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -46,13 +107,38 @@
   "8": {
    "gliederung": [],
    "marginalie": [
-    "Nicht erfolgreiche Eichungen, Kontrollen oder Nachschauen [4]"
+    "Nicht erfolgreiche Eichungen, Kontrollen oder Nachschauen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 7 Eichgebührenverordnung",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Bst. A Anhang zur Eichgebührenverordnung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
    "gliederung": [],
    "marginalie": [
     "Justierarbeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Bst. A Anhang zur Eichgebührenverordnung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {

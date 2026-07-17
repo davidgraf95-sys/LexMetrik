@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Personalverordnung für die Mitarbeiterinnen und Mitarbeiter der Justizvollzugsanstalt Bostadel",
+  "erlassdatum": "Vom 28. November 2000 (Stand 1. Juni 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Regierungen der Kantone Basel-Stadt und Zug,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 15 des Vertrages zwischen den Kantonen Basel-Stadt und Zug zur Errichtung und zum Betrieb einer gemeinsamen Strafanstalt im Bostadel (Kanton Zug) vom 27. Februar / 19. März 1973,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 258.500.",
+    "links": [
+     {
+      "label": "258.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/258.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-258.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

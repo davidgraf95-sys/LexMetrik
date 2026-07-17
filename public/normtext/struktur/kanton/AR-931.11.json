@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum kantonalen Waldgesetz",
+  "erlassdatum": "vom 09.12.1996 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 33 Abs. 1 des Gesetzes vom 28. April 1996 über den Wald,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "kantonales Waldgesetz (kWaG; bGS 931.1 ), im folgenden kurz: Gesetz",
+    "links": [
+     {
+      "label": "931.1",
+      "url": "https://ar.clex.ch/data/931.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-931.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +48,16 @@
     }
    ],
    "marginalie": [
-    "Waldareal [2]"
+    "Waldareal"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "vgl. Art. 2 Abs. 3 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "2": {
@@ -20,7 +68,16 @@
     }
    ],
    "marginalie": [
-    "Forstreviere [3]"
+    "Forstreviere"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 4 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "3": {
@@ -31,7 +88,16 @@
     }
    ],
    "marginalie": [
-    "Forstämter [4]"
+    "Forstämter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 4 Abs. 3 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "4": {
@@ -42,7 +108,32 @@
     }
    ],
    "marginalie": [
-    "Rodungsbewilligungen a) Verfahren [5]"
+    "Rodungsbewilligungen a) Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "vgl. Art. 6 Abs. 3 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Vgl. Art. 5 Abs. 2 der V zum BG über den Wald (WaV; SR 921.01 ), im folgenden kurz: bundesrätliche Verordnung",
+     "links": [
+      {
+       "label": "921.01",
+       "url": "https://db.clex.ch/link/Bund/921.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -54,6 +145,31 @@
    ],
    "marginalie": [
     "b) kantonaler Entscheid"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 6 Abs. 1 des BG über den Wald (WaG; SR 921.0 ), im folgenden kurz: Bundesgesetz",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "vgl. Art. 11 Abs. 1 der bundesrätlichen Verordnung",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -64,7 +180,16 @@
     }
    ],
    "marginalie": [
-    "Waldfeststellungen [9] a) Im Einzelfall"
+    "Waldfeststellungen a) Im Einzelfall"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "vgl. Art. 9 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "7": {
@@ -75,7 +200,16 @@
     }
    ],
    "marginalie": [
-    "b) Bei Erlass und Revision von Nutzungsplänen [10]"
+    "b) Bei Erlass und Revision von Nutzungsplänen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "vgl. Art. 13 des Bundesgesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "8": {
@@ -86,7 +220,32 @@
     }
    ],
    "marginalie": [
-    "Veranstaltungen im Wald [11]"
+    "Veranstaltungen im Wald"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "vgl. Art. 11 Abs. 2 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -108,7 +267,16 @@
     }
    ],
    "marginalie": [
-    "Bauten und Anlagen im Wald [13] a) Allgemeines"
+    "Bauten und Anlagen im Wald a) Allgemeines"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "vgl. Art. 14 der bundesrätlichen Verordnung",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "11": {
@@ -163,7 +331,16 @@
     }
    ],
    "marginalie": [
-    "Nachteilige Nutzungen [14] a) Ablagerungen"
+    "Nachteilige Nutzungen a) Ablagerungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "vgl. Art. 14 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "16": {
@@ -185,7 +362,25 @@
     }
    ],
    "marginalie": [
-    "c) Kapprecht [15]"
+    "c) Kapprecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "vgl. Art. 143 EG zum ZGB (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "18": {
@@ -252,6 +447,15 @@
    ],
    "marginalie": [
     "Wald mit besonderer Schutzfunktion"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "vgl. Art. 19 des Bundesgesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -262,7 +466,16 @@
     }
    ],
    "marginalie": [
-    "Sicherung von Gefahrengebieten [17]"
+    "Sicherung von Gefahrengebieten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "vgl. Art. 17 der bundesrätlichen Verordnung",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "25": {
@@ -273,7 +486,16 @@
     }
    ],
    "marginalie": [
-    "Schützenswerte Lebensräume [18]"
+    "Schützenswerte Lebensräume"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "vgl. Art. 16 Abs. 2 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "26": {
@@ -284,7 +506,16 @@
     }
    ],
    "marginalie": [
-    "Planung a) kantonale Waldplanung [19] 1. Inhalt"
+    "Planung a) kantonale Waldplanung 1. Inhalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "vgl. Art. 18 der bundesrätlichen Verordnung und Art. 18 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "27": {
@@ -296,6 +527,15 @@
    ],
    "marginalie": [
     "2. Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "vgl. Art. 18 Abs. 2 des Gesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -307,6 +547,24 @@
    ],
    "marginalie": [
     "3. Umsetzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "gemäss Art. 12 EG zum RPG (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -317,7 +575,16 @@
     }
    ],
    "marginalie": [
-    "b) Betriebspläne [22] 1. Inhalt"
+    "b) Betriebspläne 1. Inhalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "vgl. Art. 18 der bundesrätlichen Verordnung und Art. 19 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "30": {
@@ -350,7 +617,16 @@
     }
    ],
    "marginalie": [
-    "Schlaganzeichnung, Schlagbewilligung [23]"
+    "Schlaganzeichnung, Schlagbewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "vgl. Art. 20 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "33": {
@@ -373,6 +649,15 @@
    ],
    "marginalie": [
     "Forstdepositen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "vgl. Art. 23 des Bundesgesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -405,7 +690,16 @@
     }
    ],
    "marginalie": [
-    "Pflanzennachzucht [25]"
+    "Pflanzennachzucht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "vgl. Art. 22 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "38": {
@@ -417,6 +711,38 @@
    ],
    "marginalie": [
     "Veräusserung und Teilung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "vgl. Art. 24 Abs. 1 des Gesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "BGBB (SR 211.412.11 )",
+     "links": [
+      {
+       "label": "211.412.11",
+       "url": "https://db.clex.ch/link/Bund/211.412.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BGBB"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "vgl. Art. 25 Abs. 2 des Bundesgesetzes",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -427,7 +753,16 @@
     }
    ],
    "marginalie": [
-    "Feuern im Wald und in Waldesnähe [29]"
+    "Feuern im Wald und in Waldesnähe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "vgl. Art. 25 Abs. 2 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "40": {
@@ -482,7 +817,23 @@
     }
    ],
    "marginalie": [
-    "Finanzierung [30] a) beitragsberechtigte Massnahmen"
+    "Finanzierung a) beitragsberechtigte Massnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "vgl. Art. 30 des Gesetzes",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "vgl. Art. 42–52 der bundesrätlichen Verordnung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -549,6 +900,15 @@
    ],
    "marginalie": [
     "Investitionskredite"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "vgl. Art. 60–64 der bundesrätlichen Verordnung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "51": {

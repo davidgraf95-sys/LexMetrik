@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Verfassungs- und Verwaltungsrechtspflege",
+  "erlassdatum": "Vom 14. Juni 1928 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -35,7 +49,25 @@
      "label": "A. Allgemeine Vorschriften"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 4: Diese Verfassung ist aufgehoben. Massgebend ist jetzt die Verfassung des Kantons Basel-Stadt vom 23. 3. 2005, §§ 77f. (SG 111.100 ).",
+     "links": [
+      {
+       "label": "111.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-111.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [
@@ -114,9 +146,7 @@
      "label": "B.I. Gerichtsbarkeit des Verwaltungsgerichts"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -376,9 +406,7 @@
      "label": "E.I. Geltung dieser Vorschriften und Ausschluss des Rekurses"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -391,9 +419,7 @@
      "label": "E.I. Geltung dieser Vorschriften und Ausschluss des Rekurses"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -406,9 +432,7 @@
      "label": "E.II. Parteien in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "34": {
    "gliederung": [
@@ -421,9 +445,7 @@
      "label": "E.II. Parteien in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [
@@ -436,9 +458,7 @@
      "label": "E.III. Rekurserhebung in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -451,9 +471,7 @@
      "label": "E.III. Rekurserhebung in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -466,9 +484,7 @@
      "label": "E.III. Rekurserhebung in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -481,9 +497,7 @@
      "label": "E.IV. Verfahren in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [
@@ -496,9 +510,7 @@
      "label": "E.IV. Verfahren in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -511,9 +523,7 @@
      "label": "E.IV. Verfahren in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "41": {
    "gliederung": [
@@ -526,9 +536,7 @@
      "label": "E.IV. Verfahren in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "42": {
    "gliederung": [
@@ -541,9 +549,7 @@
      "label": "E.IV. Verfahren in Versorgungssachen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "43": {
    "gliederung": [
@@ -563,6 +569,15 @@
    ],
    "marginalie": [
     "Einführungsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 44: Ziff. II–VII enthalten Änderungen anderer Erlasse und werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -793,7 +808,16 @@
      "label": "A. Allgemeine Vorschriften"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

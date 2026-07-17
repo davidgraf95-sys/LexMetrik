@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Behindertenhilfe",
+  "erlassdatum": "Vom 29. November 2016 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Behindertenhilfe (BHG) vom 14. September 2016, unter Verweis auf seine Erläuterungen Nr. P161800,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 869.700",
+    "links": [
+     {
+      "label": "869.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/869.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-869.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -437,9 +476,7 @@
      "label": "4.2. Ambulante Leistungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -456,9 +493,7 @@
      "label": "4.2. Ambulante Leistungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -623,6 +658,20 @@
    ],
    "marginalie": [
     "Anerkennung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Einsehbar unter: http://www.asb.bs.ch",
+     "links": [
+      {
+       "label": "http://www.asb.bs.ch",
+       "url": "http://www.asb.bs.ch/alter-behinderung/behindertenhilfe/formulare-merkblaetter.html#page_section3_section5"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "41": {

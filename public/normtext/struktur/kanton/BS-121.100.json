@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Bürgerrechtsgesetz",
+  "erlassdatum": "Vom 19. Oktober 2017 (Stand 1. Januar 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3 und 38 der Bundesverfassung der Schweizerischen Eidgenossenschaft (BV) vom 18. April 1999 sowie § 39 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 16.1642.02 vom 25. April 2017 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 16.1642.03 vom 13. September 2017,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 101",
+    "links": [
+     {
+      "label": "101",
+      "url": "https://db.clex.ch/link/Bund/101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 111.100",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

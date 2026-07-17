@@ -1,5 +1,52 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend das Erbringen von Taxidienstleistungen",
+  "erlassdatum": "Vom 3. Juni 2015 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3 des Bundesgesetzes über den Strassenverkehr (SVG) vom 19. Dezember 1958, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 12.0218.02 vom 25. März 2014 sowie in den Bericht der Wirtschafts- und Abgabekommission Nr. 12.0218.03 vom 6. Mai 2015,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 741.01.",
+    "links": [
+     {
+      "label": "741.01",
+      "url": "https://db.clex.ch/link/Bund/741.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "SVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Datum redaktionell berichtigt.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -131,6 +178,15 @@
    ],
    "marginalie": [
     "Tarifordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 12: Tarifverordnung zum Taxigesetz vom 25. 4. 2017 (SG 563.280).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -186,6 +242,22 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Angenommen in der Volksabstimmung vom 15. 11. 2015.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "In Kraft seit 1. 5. 2017 (publiziert am 29. 4. 2017).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "14_a": {

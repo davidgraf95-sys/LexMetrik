@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Tarif des émoluments fixes du registre foncier",
+  "erlassdatum": "du 08.10.2018 (version entrée en vigueur le 01.12.2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Le Conseil d'Etat du canton de Fribourg"
+   },
+   {
+    "rolle": "ingress",
+    "text": "Vu la loi du 28 février 1986 sur le registre foncier (LRF), notamment l'article 78; Sur la proposition de la Direction des finances,"
+   },
+   {
+    "rolle": "verb",
+    "text": "Arrête:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,6 +29,44 @@
    "gliederung": [],
    "marginalie": [
     "Emoluments fixes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "RSF 917.1",
+     "links": [
+      {
+       "label": "917.1",
+       "url": "https://bdlf.fr.ch/data/917.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "RSF 214.5.1",
+     "links": [
+      {
+       "label": "214.5.1",
+       "url": "https://bdlf.fr.ch/data/214.5.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "RSF 214.5.1",
+     "links": [
+      {
+       "label": "214.5.1",
+       "url": "https://bdlf.fr.ch/data/214.5.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {

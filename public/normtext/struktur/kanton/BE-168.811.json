@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Bemessung des Parteikostenersatzes",
+  "erlassdatum": "vom 17.05.2006 (Stand 01.01.2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Bern,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 41 des Kantonalen Anwaltsgesetzes vom 28. März 2006 (KAG), auf Antrag der Justiz-, Gemeinde- und Kirchendirektion,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BSG 168.11",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +62,15 @@
    ],
    "marginalie": [
     "Ermittlung des Streitwerts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 272; BBl 2009 21",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -53,7 +92,7 @@
     }
    ],
    "marginalie": [
-    "Erstinstanzliche Verfahren *"
+    "Erstinstanzliche Verfahren"
    ]
   },
   "6": {
@@ -186,6 +225,15 @@
    ],
    "marginalie": [
     "Honorar"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 312.0",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {

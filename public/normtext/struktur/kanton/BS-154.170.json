@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Organisationsreglement des Zivilgerichts",
+  "erlassdatum": "Vom 28. April 2017 (Stand 16. Juni 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Zivilgericht,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 10 und 34 Abs. 2 Ziff. 1 des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 154.100.",
+    "links": [
+     {
+      "label": "154.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/154.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-154.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -89,7 +128,16 @@
      "label": "B. Geschäftsverteilung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Richtlinie zur Verteilung der Geschäfte unter den Zivilgerichtspräsidien.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "11": {
    "gliederung": [
@@ -116,7 +164,16 @@
      "label": "C. Personal"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Reglement über die gleitende Arbeitszeit für die Mitarbeiterinnen und Mitarbeiter der Gerichte des Kantons Basel-Stadt (Gleitzeitreglement) vom 16. 5. 2014.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

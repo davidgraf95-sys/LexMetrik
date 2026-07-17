@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Verwendung von Geldern aus dem Swisslos-Fonds",
+  "erlassdatum": "Vom 19. August 2014 (Stand 22. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 2 des Einführungsgesetzes zum Bundesgesetz über Geldspiele (EG BGS) vom 24. Juni 2020 sowie auf Art. 2 der Interkantonalen Vereinbarung betreffend die gemeinsame Durchführung von Geldspielen (IKV 2020),",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 561.100",
+    "links": [
+     {
+      "label": "561.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/561.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-561.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 561.110",
+    "links": [
+     {
+      "label": "561.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/561.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-561.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -80,7 +136,16 @@
      "label": "VI. Buchführung und Rechnungslegung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit dem 24. 8. 2014.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

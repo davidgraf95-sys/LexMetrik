@@ -1,21 +1,978 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Zuständigkeiten",
+  "erlassdatum": "Vom 9. Dezember 2008 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 29 des Gesetzes betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz) vom 22. April 1976,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 2 Ziff. 8: Jetzt Departement für Wirtschaft, Soziales und Umwelt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Die Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 121.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SG 122.510.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SG 122.710.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SG 132.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SG 151.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "SG 153.180.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SG 153.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "SG 153.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SG 153.610.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SG 154.940.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "SG 162.890.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SG 163.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "SG 169.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "SG 170.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "SG 211.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "SG 212.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "SG 212.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "SG 212.600.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "SG 212.800.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "SG 212.900.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "SG 214.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "SG 214.310.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "SG 214.320.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "SG 214.600.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "SG 214.710.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "30",
+     "text": "SG 215.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "SG 215.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "SG 215.700.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "SG 257.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "SG 257.120.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "SG 258.800.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "SG 258.900.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "37",
+     "text": "SG 292.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "SG 328.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "39",
+     "text": "SG 328.610.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "40",
+     "text": "SG 329.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "SG 339.220.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "SG 361.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "SG 365.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "44",
+     "text": "SG 365.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "45",
+     "text": "SG 390.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "46",
+     "text": "SG 390.900.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "SG 413.750.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "48",
+     "text": "SG 415.150.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "SG 415.170.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "50",
+     "text": "SG 420.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "51",
+     "text": "SG 420.220.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "52",
+     "text": "SG 451.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "53",
+     "text": "SG 494.800.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "54",
+     "text": "SG 497.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "55",
+     "text": "SG 510.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "56",
+     "text": "SG 561.120.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "57",
+     "text": "SG 561.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "58",
+     "text": "SG 562.350.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "59",
+     "text": "SG 563.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "60",
+     "text": "SG 563.130.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "61",
+     "text": "SG 563.150.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "62",
+     "text": "SG 563.170.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "63",
+     "text": "SG 563.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "64",
+     "text": "SG 563.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "65",
+     "text": "SG 568.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "66",
+     "text": "SG 569.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "67",
+     "text": "SG 576.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "68",
+     "text": "SG 576.600.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "69",
+     "text": "SG 576.700.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "70",
+     "text": "SG 640.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "71",
+     "text": "SG 650.410.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "72",
+     "text": "SG 650.510.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "73",
+     "text": "SG 685.340.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "74",
+     "text": "SG 685.360.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "75",
+     "text": "SG 717.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "76",
+     "text": "SG 721.700.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "77",
+     "text": "SG 724.910.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "78",
+     "text": "SG 730.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "79",
+     "text": "SG 730.310.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "80",
+     "text": "SG 730.700.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "81",
+     "text": "SG 735.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "82",
+     "text": "SG 740.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "83",
+     "text": "SG 771.310.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "84",
+     "text": "SG 771.510.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "85",
+     "text": "SG 771.920.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "86",
+     "text": "SG 772.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "87",
+     "text": "SG 772.120.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "88",
+     "text": "SG 772.140.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "89",
+     "text": "SG 772.310.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "90",
+     "text": "SG 772.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "91",
+     "text": "SG 772.580.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "92",
+     "text": "SG 772.800.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "93",
+     "text": "SG 780.700.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "94",
+     "text": "SG 781.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "95",
+     "text": "SG 783.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "96",
+     "text": "SG 783.410.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "97",
+     "text": "SG 786.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "98",
+     "text": "SG 786.150.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "99",
+     "text": "SG 786.160.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "100",
+     "text": "SG 787.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "101",
+     "text": "SG 789.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "102",
+     "text": "SG 789.600.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "103",
+     "text": "SG 810.150.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "104",
+     "text": "SG 812.350.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "105",
+     "text": "SG 812.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "106",
+     "text": "SG 812.810.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "107",
+     "text": "SG 812.900.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "108",
+     "text": "SG 813.310.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "109",
+     "text": "SG 813.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "110",
+     "text": "SG 820.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "111",
+     "text": "SG 820.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "112",
+     "text": "SG 832.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "113",
+     "text": "SG 832.710.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "114",
+     "text": "SG 832.720.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "115",
+     "text": "SG 833.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "116",
+     "text": "SG 834.800.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "117",
+     "text": "SG 835.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "118",
+     "text": "SG 835.510.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "119",
+     "text": "SG 869.150.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "120",
+     "text": "SG 869.160.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "121",
+     "text": "SG 890.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "122",
+     "text": "SG 910.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "123",
+     "text": "SG 910.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "124",
+     "text": "SG 911.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "125",
+     "text": "SG 911.610.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "126",
+     "text": "SG 912.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "127",
+     "text": "SG 912.510.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "128",
+     "text": "SG 914.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "129",
+     "text": "SG 952.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "130",
+     "text": "SG 952.560.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "131",
+     "text": "Publiziert am 18. 3. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

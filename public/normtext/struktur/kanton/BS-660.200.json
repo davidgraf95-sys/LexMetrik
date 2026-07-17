@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Vollzug der Eidgenössischen Verrechnungssteuer im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 19. September 1966 (Stand 24. Juni 2001)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von Art. 73 Abs. 1 des Bundesgesetzes über die Verrechnungssteuer vom 13. Oktober 1965,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet was folgt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 642.21.",
+    "links": [
+     {
+      "label": "642.21",
+      "url": "https://db.clex.ch/link/Bund/642.21/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "VSTG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -71,7 +110,16 @@
      "label": "III. Rückforderung zurückerstatteter Verrechnungssteuern"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "In Kraft getreten am 8. 12. 1966.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

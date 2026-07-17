@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Ordnungsbussenverordnung",
+  "erlassdatum": "vom 21.09.2021 (Stand 01.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 83 des Justizgesetzes vom 13. September 2010,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 145.31",
+    "links": [
+     {
+      "label": "145.31",
+      "url": "https://ar.clex.ch/data/145.31/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-145.31"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,6 +50,20 @@
    "gliederung": [],
    "marginalie": [
     "Anwendbares Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "OBG (SR 314.1 )",
+     "links": [
+      {
+       "label": "314.1",
+       "url": "https://db.clex.ch/link/Bund/314.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

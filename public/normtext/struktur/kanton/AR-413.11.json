@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Mittel- und Hochschulen",
+  "erlassdatum": "vom 09.12.2014 (Stand 01.08.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 89 Abs. 2 lit. e der Verfassung des Kantons Appenzell A.Rh. und das Gesetz über die Mittel- und Hochschulen vom 24. März 2014",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "MHG (bGS 413.1 )",
+    "links": [
+     {
+      "label": "413.1",
+      "url": "https://ar.clex.ch/data/413.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-413.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +64,44 @@
      "label": "1. Abschnitt: Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Verordnung über die Anerkennung von gymnasialen Maturitätsausweisen (SR 413.11 ), zusammen mit dem Reglement der EDK über die Anerkennung von gymnasialen Maturitätsausweisen, (Rechtssammlung der EDK 4.2.1.1)",
+     "links": [
+      {
+       "label": "413.11",
+       "url": "https://db.clex.ch/link/Bund/413.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "EDK-Anerkennungsreglement FMS, Rechtssammlung der EDK 4.2.1.2.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "insbesondere nach der Verordnung über die eidgenössische Berufsmaturität (SR 412.103.1 )",
+     "links": [
+      {
+       "label": "412.103.1",
+       "url": "https://db.clex.ch/link/Bund/412.103.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BMV"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -54,6 +147,22 @@
    ],
    "marginalie": [
     "Leistungsangebot der kantonalen Mittelschule"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Gymnasium mit Maturität, vgl. Art. 10 Abs. 1 MHG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Art. 38 Abs. 1 MHG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -189,6 +298,24 @@
    ],
    "marginalie": [
     "Verhinderung von Lehrenden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "bGS 142.211.2 )",
+     "links": [
+      {
+       "label": "142.211.2",
+       "url": "https://ar.clex.ch/data/142.211.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211.2"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -354,6 +481,15 @@
    ],
    "marginalie": [
     "Vereinigungen der Lernenden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 21 Abs. 1 MHG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -384,6 +520,24 @@
    ],
    "marginalie": [
     "Verteilung der Netto-Gesamtarbeitszeit auf Berufsauftragsbereiche"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "vgl. Art. 60 Abs. 1 lit. b des Personalgesetzes (bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -515,6 +669,20 @@
    ],
    "marginalie": [
     "Anerkannte ausserkantonale Ausbildungsangebote"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Vereinbarung über die Leistung von Schulbeiträgen für Auszubildende an Schulen der Sekundarstufe II vom 1.3.2001 (bGS 411.7 )",
+     "links": [
+      {
+       "label": "411.7",
+       "url": "https://ar.clex.ch/data/411.7/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -548,6 +716,15 @@
    ],
    "marginalie": [
     "Umzug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "vgl. Art. 36 Abs. 3 MHG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "42": {
@@ -593,6 +770,20 @@
    ],
    "marginalie": [
     "Schulgeld für ausserkantonale Lernende"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Vereinbarung über die Leistung von Schulbeiträgen für Auszubildende an Schulen der Sekundarstufe II vom 1.3.2001 (bGS 411.7 )",
+     "links": [
+      {
+       "label": "411.7",
+       "url": "https://ar.clex.ch/data/411.7/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {

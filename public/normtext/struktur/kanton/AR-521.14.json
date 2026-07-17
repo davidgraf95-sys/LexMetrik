@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die privaten polizeiähnlichen Tätigkeiten",
+  "erlassdatum": "vom 08.06.2004 (Stand 01.07.2004)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 44 des Polizeigesetzes,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 521.1",
+    "links": [
+     {
+      "label": "521.1",
+      "url": "https://ar.clex.ch/data/521.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-521.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -59,6 +98,24 @@
    "gliederung": [],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 521.13, Art. 16 bis",
+     "links": [
+      {
+       "label": "521.13",
+       "url": "https://ar.clex.ch/data/521.13/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.13"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -89,6 +146,32 @@
    "gliederung": [],
    "marginalie": [
     "Bewaffnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. Waffengesetz (WG; SR 514.54 )",
+     "links": [
+      {
+       "label": "514.54",
+       "url": "https://db.clex.ch/link/Bund/514.54/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Vgl. Waffengesetz (WG; SR 514.54 )",
+     "links": [
+      {
+       "label": "514.54",
+       "url": "https://db.clex.ch/link/Bund/514.54/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -101,6 +184,31 @@
    "gliederung": [],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "bGS 521.13",
+     "links": [
+      {
+       "label": "521.13",
+       "url": "https://ar.clex.ch/data/521.13/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.13"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Die Änderungen wurden im betroffenen Erlass eingefügt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {

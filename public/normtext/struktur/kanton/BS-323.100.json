@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Behandlung und Einweisung psychisch kranker Personen",
+  "erlassdatum": "Vom 18. September 1996 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -41,9 +59,7 @@
      "label": "A. Allgemeines"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -85,9 +101,7 @@
      "label": "C. Einweisung in eine Behandlungsinstitution"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -360,9 +374,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "34": {
    "gliederung": [
@@ -371,9 +383,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [
@@ -382,9 +392,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -393,9 +401,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -404,9 +410,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -415,9 +419,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [
@@ -426,9 +428,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -437,9 +437,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "41": {
    "gliederung": [
@@ -448,9 +446,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "42": {
    "gliederung": [
@@ -459,9 +455,7 @@
      "label": "G. Rechtsmittel, Organisation und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "43": {
    "gliederung": [
@@ -501,6 +495,15 @@
    ],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SG 270.100.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "47": {
@@ -523,6 +526,15 @@
    ],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 5. 1997.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

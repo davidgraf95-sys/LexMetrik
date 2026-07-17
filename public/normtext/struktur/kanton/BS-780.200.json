@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Umweltverträglichkeitsprüfung im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 12. Februar 1991 (Stand 1. Januar 2001)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 36 des Bundesgesetzes vom 7. Oktober 1983 über den Umweltschutz,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 814.01.",
+    "links": [
+     {
+      "label": "814.01",
+      "url": "https://db.clex.ch/link/Bund/814.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "USG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,7 +65,23 @@
      "label": "3. Richtlinien"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 3: Dienststellenbezeichnung «Koordinationsstelle für Umweltschutz» geändert in «Koordinationsstelle Umweltschutz» durch RRB vom 22. 8. 2000 (wirksam seit 1. 1. 2001).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 3: UVPV = Eidgenössische Verordnung über die Umweltverträglichkeitsprüfung vom 19. 10. 1988 (SR 814.011).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -35,7 +90,30 @@
      "label": "4. Pflichtenheft"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 4 Abs. 1: UVPV = Eidgenössische Verordnung über die Umweltverträglichkeitsprüfung vom 19. 10. 1988 (SR 814.011).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "§ 4 Abs. 1: Dienststellenbezeichnung «Koordinationsstelle für Umweltschutz» geändert in «Koordinationsstelle Umweltschutz» durch RRB vom 22. 8. 2000 (wirksam seit 1. 1. 2001).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "§ 4 Abs. 2: Dienststellenbezeichnung «Koordinationsstelle für Umweltschutz» geändert in «Koordinationsstelle Umweltschutz» durch RRB vom 22. 8. 2000 (wirksam seit 1. 1. 2001).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [
@@ -53,7 +131,23 @@
      "label": "6. Beurteilung der Umweltverträglichkeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "§ 6: Dienststellenbezeichnung «Koordinationsstelle für Umweltschutz» geändert in «Koordinationsstelle Umweltschutz» durch RRB vom 22. 8. 2000 (wirksam seit 1. 1. 2001).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "§ 6 Abs. 2: UVPV = Eidgenössische Verordnung über die Umweltverträglichkeitsprüfung vom 19. 10. 1988 (SR 814.011).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "7": {
    "gliederung": [
@@ -95,6 +189,15 @@
    ],
    "marginalie": [
     "c) Übrige Anlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Gemäss Art. 4 der Verordnung des Bundesrates über die Genehmigung kantonaler Erlasse vom 30. 1. 1991 erfolgt in unbestrittenen Fällen die Genehmigung durch das zuständige Departement. Die vorliegende Verordnung wurde durch das Eidgenössische Departement des Innern am 21. 3. 1991 genehmigt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

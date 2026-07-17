@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührenreglement für das Kommunikationsnetz (K-Netz) der Gemeinde Bettingen",
+  "erlassdatum": "Vom 23. April 2002 (Stand 1. Oktober 2002)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Bettingen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 10 der Ordnung über das K-Netz der Gemeinde Bettingen vom 11. Dezember 2001, folgendes Gebührenregelement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BeE 970.120.",
+    "links": [
+     {
+      "label": "BeE 970.120",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20970.120/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,6 +42,15 @@
    "gliederung": [],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 10. 2002.",
+     "links": [],
+     "absatz": "7",
+     "item": null
+    }
    ]
   }
  }

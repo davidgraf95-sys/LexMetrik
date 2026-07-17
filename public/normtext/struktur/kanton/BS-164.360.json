@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Anwendbarkeit des Lohngesetzes auf nicht definitiv Beschäftigte oder nur nebenamtlich im Staatsdienst tätige Mitarbeiterinnen und Mitarbeiter",
+  "erlassdatum": "Vom 16. Mai 1995 (Stand 23. Juli 1995)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,7 +21,16 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 2: Umbenennung des Personalamtes gemäss RRB vom 17. 3. 1998 in «Zentraler Personaldienst».",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [],
@@ -19,7 +42,16 @@
   },
   "5": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 23. 7. 1995.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

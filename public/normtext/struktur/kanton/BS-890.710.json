@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Harmonisierung und Koordination von bedarfsabhängigen Sozialleistungen",
+  "erlassdatum": "Vom 25. November 2008 (Stand 1. Juli 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Harmonisierung und Koordination von bedarfsabhängigen Sozialleistungen (Harmonisierungsgesetz Sozialleistungen, SoHaG) vom 25. Juni 2008,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 890.700.",
+    "links": [
+     {
+      "label": "890.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/890.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-890.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -557,7 +596,7 @@
     }
    ],
    "marginalie": [
-    "Informationssicherheit *"
+    "Informationssicherheit"
    ]
   },
   "34": {
@@ -748,7 +787,7 @@
     }
    ],
    "marginalie": [
-    "Statistische Auswertungen und Entscheidungszuständigkeiten *"
+    "Statistische Auswertungen und Entscheidungszuständigkeiten"
    ]
   },
   "47": {
@@ -768,7 +807,16 @@
     }
    ],
    "marginalie": [
-    "Vorläufige teilweise Ausnahme der Ausbildungsbeiträge vom SoHaG [3]"
+    "Vorläufige teilweise Ausnahme der Ausbildungsbeiträge vom SoHaG"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 48: Mit Änderung vom 26. 2. 2012 des Harmonisierungsgesetzes Sozialleistungen (SG 890.700) sind die Ausbildungsbeiträge definitiv vom Gesetz ausgenommen worden. Damit ist § 48 hinfällig geworden.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "49": {

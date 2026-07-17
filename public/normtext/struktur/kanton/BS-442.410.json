@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über das Immobilienwesen der Universität Basel",
+  "erlassdatum": "Vom 25. Mai 2021 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Kanton Basel-Stadt und die Einwohnergemeinde der Stadt Basel, handelnd durch den Regierungsrat des Kantons Basel-Stadt, sowie der Kanton Basel-Landschaft, handelnd durch den Regierungsrat beschliessen:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -109,6 +119,20 @@
    ],
    "marginalie": [
     "Mietabgeltung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SR 414.201.1.",
+     "links": [
+      {
+       "label": "414.201.1",
+       "url": "https://db.clex.ch/link/Bund/414.201.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -118,9 +142,7 @@
      "label": "III. Grund- und Mietausbau in Liegenschaften eines Vertragskantons"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -129,9 +151,7 @@
      "label": "III. Grund- und Mietausbau in Liegenschaften eines Vertragskantons"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [
@@ -141,7 +161,7 @@
     }
    ],
    "marginalie": [
-    "Mehrkosten infolge Bauherrenaltlasten, Altlasten oder verdeckten Mängeln *"
+    "Mehrkosten infolge Bauherrenaltlasten, Altlasten oder verdeckten Mängeln"
    ]
   },
   "14": {
@@ -152,7 +172,7 @@
     }
    ],
    "marginalie": [
-    "Fonds für Instandhaltung und Instandsetzung *"
+    "Fonds für Instandhaltung und Instandsetzung"
    ]
   },
   "15": {
@@ -251,7 +271,7 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmung Ausbaufonds *"
+    "Übergangsbestimmung Ausbaufonds"
    ]
   },
   "24": {
@@ -261,9 +281,7 @@
      "label": "VIII. Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [

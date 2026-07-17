@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die eidpflichtigen Behördenmitglieder der Gemeinden",
+  "erlassdatum": "vom 12.03.2019 (Stand 01.06.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über den Eidschwur und auf Art. 44 Abs. 2 des Gesetzes über die politischen Rechte,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 111.3",
+    "links": [
+     {
+      "label": "111.3",
+      "url": "https://ar.clex.ch/data/111.3/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.3"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 131.12",
+    "links": [
+     {
+      "label": "131.12",
+      "url": "https://ar.clex.ch/data/131.12/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-131.12"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

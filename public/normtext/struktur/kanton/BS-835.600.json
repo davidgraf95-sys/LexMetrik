@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Beschluss des Regierungsrates betreffend Arbeitslosenfonds in Auflösung",
+  "erlassdatum": "Vom 19. Dezember 2023 (Stand 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf das Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung vom 25. Juni 1982 (Arbeitslosenversicherungsgesetz, AVIG) errichtete der Regierungsrat mit Beschluss vom 20. Dezember 1977 einen öffentlich-rechtlichen Arbeitslosenfonds. Der Zweck des Arbeitslosenfonds überschneidet sich fast vollständig mit demjenigen des Fonds zur Bekämpfung der Arbeitslosigkeit gemäss Gesetz betreffend den Fonds zur Bekämpfung der Arbeitslosigkeit vom 6. Dezember 1995. Der Arbeitslosenfonds wird daher als selbstständiger Fonds aufgelöst (Erläuterungen siehe P231780 ).",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 837.0.",
+    "links": [
+     {
+      "label": "837.0",
+      "url": "https://db.clex.ch/link/Bund/837.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "AVIG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "wirksam seit 1. Januar 1978",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 835.200.",
+    "links": [
+     {
+      "label": "835.200",
+      "url": "https://db.clex.ch/link/SG/835.200/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

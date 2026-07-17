@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Schulbesuch, die Absenzen, Dispensationen und Disziplinarmassnahmen",
+  "erlassdatum": "Vom 20. Mai 2014 (Stand 12. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 74 Abs. 2 lit. c und d des Schulgesetzes vom 4. April 1921 und auf § 29 Abs. 3 des Kantonalen Gesetzes über die Berufsbildung vom 12. September 2007, auf Antrag des Erziehungsrats,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 420.200.",
+    "links": [
+     {
+      "label": "420.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/420.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-420.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -62,7 +118,7 @@
     }
    ],
    "marginalie": [
-    "Unterrichts- und Betreuungszeiten *"
+    "Unterrichts- und Betreuungszeiten"
    ]
   },
   "7": {
@@ -151,6 +207,15 @@
    ],
    "marginalie": [
     "Zuständigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -261,6 +326,22 @@
    ],
    "marginalie": [
     "Termin- und Formvorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -272,6 +353,15 @@
    ],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "26": {

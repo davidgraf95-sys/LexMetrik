@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Prämienbestimmungen zum Gebäudeversicherungsgesetz",
+  "erlassdatum": "Vom 14. August 1973 (Stand 1. Januar 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 9 des Gebäudeversicherungsgesetzes vom 22. März 1973, folgende Bestimmungen:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 695.100.",
+    "links": [
+     {
+      "label": "695.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/695.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-695.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +52,15 @@
    "gliederung": [],
    "marginalie": [
     "Prämien"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 3 Abs. 3: Die hier erwähnten Richtlinien liegen bei der Gebäudeversicherung zur Einsicht auf.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend das Halten gefährlicher Tiere",
+  "erlassdatum": "Vom 6. Dezember 1993 (Stand 12. Dezember 1993)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Sanitätsdepartement,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 1 Abs. 4 der Verordnung betreffend den Tierschutz und das Halten gefährlicher Tiere (Tierschutzverordnung) vom 22. Dezember 1981, unter zustimmender Kenntnisnahme des Polizei- und Militärdepartementes,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Diese Verordnung ist aufgehoben. Massgebend ist jetzt die Tierschutzverordnung vom 7. 2. 2012 (SG 365.500 ).",
+    "links": [
+     {
+      "label": "365.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/365.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-365.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -43,11 +82,36 @@
   },
   "11": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Überweisung mit Antrag an die Staatsanwaltschaft.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "12": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Heutige Bezeichnung: Justiz- und Sicherheitsdepartement.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Zustimmung erteilt am 11. 11. 1993.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "13": {
    "gliederung": [],
@@ -55,7 +119,16 @@
   },
   "14": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Wirksam seit 12. 12. 1993.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

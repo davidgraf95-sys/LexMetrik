@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Standortförderungsgesetz",
+  "erlassdatum": "Vom 29. Juni 2006 (Stand 30. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von § 29 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 05.1980.01 vom 20. Dezember 2005 sowie in den Bericht der Wirtschafts- und Abgabekommission Nr. 05.1980.02 vom 31. Mai 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -42,7 +81,7 @@
     }
    ],
    "marginalie": [
-    "Programme zur Stärkung der Standortattraktivität *"
+    "Programme zur Stärkung der Standortattraktivität"
    ]
   },
   "5": {
@@ -53,7 +92,7 @@
     }
    ],
    "marginalie": [
-    "Standortförderungsfonds *"
+    "Standortförderungsfonds"
    ]
   },
   "6": {
@@ -63,9 +102,7 @@
      "label": "I."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -74,7 +111,30 @@
      "label": "Ia. Übergangsbestimmung zur Änderung vom 14. November 2012"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 835.200.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Diese Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Wirksam seit 1. 12. 2006",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "2_a": {
    "gliederung": [
@@ -140,6 +200,24 @@
    ],
    "marginalie": [
     "Massnahmen in den Bereichen Innovation, Gesellschaft und Umwelt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 640.100",
+     "links": [
+      {
+       "label": "640.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/640.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-640.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5_e": {
@@ -162,6 +240,24 @@
    ],
    "marginalie": [
     "Bereich Gesellschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 834.1",
+     "links": [
+      {
+       "label": "834.1",
+       "url": "https://db.clex.ch/link/Bund/834.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EOG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5_g": {
@@ -184,6 +280,24 @@
    ],
    "marginalie": [
     "Modalitäten der Beiträge für Massnahmen in den Bereichen Innovation, Gesellschaft und Umwelt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 610.200",
+     "links": [
+      {
+       "label": "610.200",
+       "url": "https://www.gesetzessammlung.bs.ch/data/610.200/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-610.200"
+       }
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    }
    ]
   },
   "5_i": {

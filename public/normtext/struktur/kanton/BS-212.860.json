@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Einführungsgesetz zum Bundesgesetz über internationale Kindesentführung und die Haager Übereinkommen zum Schutz von Kindern und Erwachsenen",
+  "erlassdatum": "Vom 26. Januar 2010 (Stand 1. Januar 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des Einführungsgesetzes zum Bundesgesetz über internationale Kindesentführung und die Haager Übereinkommen zum Schutz von Kindern und Erwachsenen (EG BG-KKE) vom 11. November 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 212.850.",
+    "links": [
+     {
+      "label": "212.850",
+      "url": "https://www.gesetzessammlung.bs.ch/data/212.850/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-212.850"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -74,7 +113,16 @@
      "label": "IV. Gebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 154.810.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "8": {
    "gliederung": [
@@ -92,7 +140,16 @@
      "label": "V. Übergangsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 30. 1. 2010.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

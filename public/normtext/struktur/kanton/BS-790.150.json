@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Sachverständigen der Baurekurskommission",
+  "erlassdatum": "Vom 14. Mai 1996 (Stand 28. Mai 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 1 Abs. 2 des Gesetzes betreffend die Baurekurskommission vom 22. April 1976",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz betreffend die Baurekurskommission vom 7. 6. 2000 (SG 790.100 ).",
+    "links": [
+     {
+      "label": "790.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/790.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-790.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,7 +46,16 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 23. 5. 1996.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,16 +1,51 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Tarifordnung betreffend die Parkhäuser Basel-Stadt",
+  "erlassdatum": "Vom 10. Januar 2006 (Stand 1. November 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 2 Abs. 3 der Verordnung über den Betrieb der Parkgaragen Elisabethen, Steinen, City, Storchen und St. Jakob sowie des Parkplatzes St. Jakob (Parkgaragenverordnung) vom 13. Oktober 1992, beschliesst: Die Tarife für die öffentlich zugänglichen Bereiche der Parkhäuser City, Elisabethen und Steinen (siehe Ziff. 1) sowie Storchen (siehe Ziff. 1a) und St. Jakob (siehe Ziff. 2) werden wie folgt festgesetzt. Wo nicht anders vermerkt, gelten die Tarife für die Nutzung eines Parkplatzes. Die Mehrwertsteuer ist immer inbegriffen.",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 952.600.",
+    "links": [
+     {
+      "label": "952.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/952.600/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-952.600"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
-    "Tarifierung für folgende Parkhäuser: *"
+    "Tarifierung für folgende Parkhäuser:"
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
-    "Tarifierung für Parkhaus St. Jakob (Brüglingerstrasse 17 / 4142 Münchenstein) *"
+    "Tarifierung für Parkhaus St. Jakob (Brüglingerstrasse 17 / 4142 Münchenstein)"
    ]
   },
   "1.1": {
@@ -22,13 +57,13 @@
   "1.2": {
    "gliederung": [],
    "marginalie": [
-    "Dauerberechtigungen *"
+    "Dauerberechtigungen"
    ]
   },
   "1.3": {
    "gliederung": [],
    "marginalie": [
-    "Weitere Konditionen *"
+    "Weitere Konditionen"
    ]
   },
   "1_a": {
@@ -58,7 +93,7 @@
   "2.2": {
    "gliederung": [],
    "marginalie": [
-    "Dauerberechtigungen *"
+    "Dauerberechtigungen"
    ]
   },
   "2.3": {
@@ -70,13 +105,13 @@
   "2.4": {
    "gliederung": [],
    "marginalie": [
-    "Weitere Konditionen *"
+    "Weitere Konditionen"
    ]
   },
   "2.5": {
    "gliederung": [],
    "marginalie": [
-    "Regelungen während Grossanlässen *"
+    "Regelungen während Grossanlässen"
    ]
   }
  }

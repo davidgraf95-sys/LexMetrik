@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Beteiligung des Kantons Appenzell A.Rh. am Ostschweizerischen Säuglings- und Kinderspital in St. Gallen",
+  "erlassdatum": "vom 29.04.1962 (Stand 29.04.1962)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 30 Ziff. 2 der Kantonsverfassung vom 26. April 1908,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "aGS I/1 (heute: KV; bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

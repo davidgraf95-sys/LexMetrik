@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Denkmalpflege",
+  "erlassdatum": "Vom 20. Dezember 2016 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 34 des Gesetzes über den Denkmalschutz vom 20. März 1980, unter Verweis auf seine Erläuterungen Nr. P161940,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 497.100",
+    "links": [
+     {
+      "label": "497.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/497.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-497.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -259,7 +298,7 @@
     }
    ],
    "marginalie": [
-    "Grundbuch- und ÖREB-Katastereintragungen *"
+    "Grundbuch- und ÖREB-Katastereintragungen"
    ]
   },
   "20": {
@@ -429,6 +468,15 @@
    ],
    "marginalie": [
     "Verhältnis zu anderen Erlassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Richtlinien der Kommission für Denkmalsubventionen sind bei der kantonalen Denkmalpflege einsehbar.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {

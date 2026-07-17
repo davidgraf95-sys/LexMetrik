@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zum Bundesgesetz über Geldspiele",
+  "erlassdatum": "Vom 24. Juni 2020 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über Geldspiele (Geldspielgesetz, BGS) vom 29. September 2017, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 19.1517.01 vom 5. November 2019 sowie in den Bericht der Finanzkommission Nr. 19.1517.02 vom 7. Mai 2020,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 935.51",
+    "links": [
+     {
+      "label": "935.51",
+      "url": "https://db.clex.ch/link/Bund/935.51/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

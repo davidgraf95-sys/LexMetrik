@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Heimaufsicht",
+  "erlassdatum": "vom 11.12.2007 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 39 Abs. 4 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995 sowie auf Art. 4 Abs. 1 lit. g, Art. 7 lit. b, Art. 8 Abs. 2 lit. e und Art. 48 des Gesundheitsgesetzes vom 25. November 2007,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 811.1",
+    "links": [
+     {
+      "label": "811.1",
+      "url": "https://ar.clex.ch/data/811.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +66,24 @@
    ],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "PAVO (SR 211.222.338 )",
+     "links": [
+      {
+       "label": "211.222.338",
+       "url": "https://db.clex.ch/link/Bund/211.222.338/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PAVO"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -20,7 +94,7 @@
     }
    ],
    "marginalie": [
-    "Organe a) Amt für Soziales *"
+    "Organe a) Amt für Soziales"
    ]
   },
   "4": {
@@ -65,6 +139,22 @@
    ],
    "marginalie": [
     "Rechtsstellung der Bewohnerinnen und Bewohner"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 10 Gesundheitsgesetz",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Art. 29 Gesundheitsgesetz",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -86,7 +176,16 @@
     }
    ],
    "marginalie": [
-    "Ferien- und Entlastungsplätze [6]"
+    "Ferien- und Entlastungsplätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Vgl. Art. 3 Abs.1 Gesundheitsgesetz",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "10": {

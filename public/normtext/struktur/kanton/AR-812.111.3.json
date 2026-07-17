@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Entschädigung der Mitglieder des Verwaltungsrates des Spitalverbundes Appenzell Ausserrhoden",
+  "erlassdatum": "vom 26.11.2013 (Stand 01.06.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 12 Abs. 1 lit. a des Gesetzes über den Spitalverbund Appenzell Ausserrhoden vom 19. September 2011,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SVARG, bGS 812.11",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -16,13 +46,29 @@
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Sitzungsgelder *"
+    "Sitzungsgelder"
    ]
   },
   "5": {
    "gliederung": [],
    "marginalie": [
     "Spesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "REIS; bGS 142.211.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "BVO; bGS 142.211",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Schulleitung in der Volksschule",
+  "erlassdatum": "vom 27.06.2023 (Stand 01.08.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 11 Abs. 2 und Art. 69 Abs. 1 des Gesetzes über die Volksschule vom 27. März 2023,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Volksschulgesetz (VSG; bGS 412.0 )",
+    "links": [
+     {
+      "label": "412.0",
+      "url": "https://ar.clex.ch/data/412.0/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +52,15 @@
    "gliederung": [],
    "marginalie": [
     "Fachliche Anforderungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Profil für Zusatzausbildungen Schulleitung vom 29. Oktober 2009 (Rechtssammlung EDK, Nr. 4.2.2.7.3)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -35,6 +79,24 @@
    "gliederung": [],
    "marginalie": [
     "Besoldung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BVO (bGS 142.211 )",
+     "links": [
+      {
+       "label": "142.211",
+       "url": "https://ar.clex.ch/data/142.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {

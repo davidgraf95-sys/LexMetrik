@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über Organisation und Aufgaben des Parlamentsdienstes",
+  "erlassdatum": "Vom 7. Juni 2023 (Stand 1. August 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 19 des Gesetzes über die Geschäftsordnung des Grossen Rates (GO) vom 29. Juni 2006, nach Einsichtnahme in den Bericht des Ratsbüros Nr. 23.5224.01 vom 17. April 2023,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 152.100",
+    "links": [
+     {
+      "label": "152.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/152.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-152.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

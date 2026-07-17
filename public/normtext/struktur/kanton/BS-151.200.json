@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Publikationen im Kantonsblatt und über die Gesetzessammlung des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 19. Oktober 2016 (Stand 1. Januar 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 83 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 16.0479.01 vom 26. April 2016 und in den Bericht Nr. 16.0479.02 vom 14. September 2016 seiner Justiz-, Sicherheits- und Sportkommission,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +92,22 @@
    "gliederung": [],
    "marginalie": [
     "Einsichtnahme"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Infolge Änderung des Bundesgesetzes jetzt Art. 18.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SR 170.512.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {

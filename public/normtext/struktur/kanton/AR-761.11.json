@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zum Bundesgesetz vom 19. Dezember 1958 über den Strassenverkehr",
+  "erlassdatum": "vom 24.04.1983 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3, Art. 105 Abs. 1 und Art. 106 Abs. 2 und 3 des Bundesgesetzes vom 19. Dezember 1958 über den Strassenverkehr,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SVG (SR 741.01 )",
+    "links": [
+     {
+      "label": "741.01",
+      "url": "https://db.clex.ch/link/Bund/741.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "SVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,15 @@
    ],
    "marginalie": [
     "Zuständige Behörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 106 Abs. 2 SVG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +69,24 @@
    ],
    "marginalie": [
     "Strassenverkehrssteuer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. Art. 77 der Verordnung vom 27. Oktober 1976 über die Zulassung von Personen und Fahrzeugen zum Strassenverkehr; VZV (SR 741.51 )",
+     "links": [
+      {
+       "label": "741.51",
+       "url": "https://db.clex.ch/link/Bund/741.51/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VZV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -54,6 +120,40 @@
    ],
    "marginalie": [
     "Steuerbemessung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 7 der eidg. V über die technischen Anforderungen der Strassenfahrzeuge (VTS; SR 741.41 )",
+     "links": [
+      {
+       "label": "741.41",
+       "url": "https://db.clex.ch/link/Bund/741.41/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VTS"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "bGS 761.111 (Art. 3)",
+     "links": [
+      {
+       "label": "761.111",
+       "url": "https://ar.clex.ch/data/761.111/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-761.111"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -76,6 +176,24 @@
    ],
    "marginalie": [
     "Strassenverkehrsgebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 761.32",
+     "links": [
+      {
+       "label": "761.32",
+       "url": "https://ar.clex.ch/data/761.32/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-761.32"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -87,6 +205,24 @@
    ],
    "marginalie": [
     "Vollziehungsverordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "bGS 761.111",
+     "links": [
+      {
+       "label": "761.111",
+       "url": "https://ar.clex.ch/data/761.111/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-761.111"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -98,6 +234,24 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "1. Januar 1984 (vgl. Art. 11 V zum EG SVG; bGS 761.111 )",
+     "links": [
+      {
+       "label": "761.111",
+       "url": "https://ar.clex.ch/data/761.111/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-761.111"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -109,6 +263,22 @@
    ],
    "marginalie": [
     "Aufgehobenes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "bGS 761.11 (aGS l/81)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "bGS 761.111 (aGS I/82)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6_a": {

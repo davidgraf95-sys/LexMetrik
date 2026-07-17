@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Geschäftsordnung des Bürgerrates der Stadt Basel",
+  "erlassdatum": "Vom 9. September 1986 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgergemeinderat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von § 11 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985 folgende Geschäftsordnung für den Bürgerrat der Stadt Basel:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "111.100.",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100./de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -131,7 +162,7 @@
     }
    ],
    "marginalie": [
-    "Geheimhaltung, Vertraulichkeit und Informationen *"
+    "Geheimhaltung, Vertraulichkeit und Informationen"
    ]
   },
   "12": {
@@ -190,9 +221,7 @@
      "label": "(II.)2. Abstimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [
@@ -310,9 +339,7 @@
      "label": "(III.)1. Allgemeines"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -445,9 +472,7 @@
      "label": "(VI.)1. Zentralverwaltung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -475,9 +500,7 @@
      "label": "(VI.)1. Zentralverwaltung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [
@@ -490,9 +513,7 @@
      "label": "(VI.)2. Institutionen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -538,9 +559,7 @@
      "label": "IV. Departementalsysstem"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31_b": {
    "gliederung": [
@@ -549,9 +568,7 @@
      "label": "IV. Departementalsysstem"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31_c": {
    "gliederung": [
@@ -560,9 +577,7 @@
      "label": "IV. Departementalsysstem"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31_d": {
    "gliederung": [
@@ -571,9 +586,7 @@
      "label": "V. Beratungsausschuss der Sozialhilfe der Stadt Basel"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31_e": {
    "gliederung": [
@@ -582,9 +595,7 @@
      "label": "V. Beratungsausschuss der Sozialhilfe der Stadt Basel"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31_f": {
    "gliederung": [
@@ -593,9 +604,7 @@
      "label": "V. Beratungsausschuss der Sozialhilfe der Stadt Basel"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38_a": {
    "gliederung": [
@@ -604,8 +613,15 @@
      "label": "VII. Schlussbestimmung"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 11. 1986.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "9_a": {

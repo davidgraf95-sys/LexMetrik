@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung der politischen Rechte in der Einwohnergemeinde Riehen",
+  "erlassdatum": "Vom 25. September 2024 (Stand 1. März 2025)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 Abs. 1 Ziff. 6 des Gemeindegesetzes vom 17. Oktober 1984 und § 10 Abs. 2 der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 111.100",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -31,6 +79,20 @@
    ],
    "marginalie": [
     "Inhalt des Stimmrechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "RiE 111.100",
+     "links": [
+      {
+       "label": "RiE 111.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -167,6 +229,24 @@
    ],
    "marginalie": [
     "Unterschriftenliste"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -340,6 +420,24 @@
    ],
    "marginalie": [
     "Unmittelbare Volksabstimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 151.200",
+     "links": [
+      {
+       "label": "151.200",
+       "url": "https://www.gesetzessammlung.bs.ch/data/151.200/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-151.200"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -1665,6 +1763,24 @@
    ],
    "marginalie": [
     "Entscheid"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 132.100",
+     "links": [
+      {
+       "label": "132.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/132.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-132.100"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "97": {

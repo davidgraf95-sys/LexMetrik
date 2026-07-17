@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausführungsbestimmungen von IWB Industrielle Werke Basel betreffend die Abgabe von Gas",
+  "erlassdatum": "Vom 1. September 2022 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Verwaltungsrat der IWB Industrielle Werke Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 10 Abs. 2 lit. h und § 23 Abs. 1 lit. a des Gesetzes über die Industriellen Werke Basel (IWB-Gesetz) vom 11. Februar 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 772.300",
+    "links": [
+     {
+      "label": "772.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/772.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-772.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -238,7 +277,7 @@
     }
    ],
    "marginalie": [
-    "Netzanschlüsse *"
+    "Netzanschlüsse"
    ]
   },
   "23": {

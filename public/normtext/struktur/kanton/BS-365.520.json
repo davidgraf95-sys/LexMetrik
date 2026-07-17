@@ -1,5 +1,58 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über eine gemeinsame Tierversuchskommission der Kantone Basel-Stadt, Basel-Landschaft und Aargau",
+  "erlassdatum": "Vom 29. Oktober 1997 (Stand 1. Januar 1998)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Sanitätsdepartement des Kantons Basel-Stadt, die Volkswirtschafts- und Sanitätsdirektion des Kantons Basel-Landschaft und das Gesundheitsdepartement des Kantons Aargau,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 18 Abs. 2 des eidgenössischen Tierschutzgesetzes vom 9. März 1978 (TSchG) sowie die einschlägigen kantonalen Verordnungen der Vertragskantone,",
+    "fnNrs": [
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Jetzt Gesundheitsdepartement.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Jetzt Volkswirtschafts- und Gesundheitsdirektion.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 455.",
+    "links": [
+     {
+      "label": "455",
+      "url": "https://db.clex.ch/link/Bund/455/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,12 +64,44 @@
    "gliederung": [],
    "marginalie": [
     "Zusammensetzung, Anzahl Mitglieder der Kommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Ziff. 2 Abs. 3: Jetzt Gesundheitsdepartement.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
     "Kommissionstätigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 365.500, §§ 11 ff.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Ziff. 3 Abs. 1: Jetzt Gesundheitsdepartement.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Ziff. 3 Abs. 1: Dieses Reglement ist aufgehoben. Massgebend ist jetzt das Reglement für die gemeinsame Kommission für Tierversuche der Kantone Basel-Stadt, Basel-Landschaft und Aargau (Reglement Tierversuchskommission) vom 19. Oktober 2012 (publiziert im KB 2012 II 1931). Dieses Reglement kann beim Gesundheitsdepartement des Kantons Basel-Stadt eingesehen werden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -29,6 +114,15 @@
    "gliederung": [],
    "marginalie": [
     "Kostenverteilung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Ziff. 5: Jetzt Gesundheitsdepartement.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

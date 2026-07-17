@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Übereinkunft betreffend die Herstellung einer Wiesenthaleisenbahn",
+  "erlassdatum": "Vom 26. Juni 1860 (Stand 31. Oktober 1860)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Im Hinblick auf die Art. 35 und 36 des zwischen dem Grossherzogtum Baden und der schweizerischen Eidgenossenschaft über Fortführung der Grossherzoglichen Rheinthalbahn durch schweizerische Gebietsteile abgeschlossenen Staatsvertrages vom 27. Juli und 11. August 1852 sind die unterzeichneten Bevollmächtigten des Grossherzogtums Baden und des Kantons Basel-Stadt behufs des Baues und Betriebes einer von der Grossherzoglichen Rheinthalbahn bei Basel in das Wiesenthal führenden Eisenbahn, soweit es das baslerische Gebiet betrifft, unter Vorbehalt höherer Genehmigung über folgende Bestimmungen übereingekommen."
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -19,7 +29,16 @@
   },
   "5": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Steuerbefreiung der Bahnangestellten besteht nicht mehr. Siehe hiezu Anmerkung zu Ziff. IV Abs. 3 der Übereinkunft betreffend Weiterführung der Rheinthalbahn vom 19. 2. 1853 (SG 954.520).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [],

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend Förder- und Hilfeleistungen für Kinder und Jugendliche",
+  "erlassdatum": "Vom 10. Dezember 2014 (Stand 1. März 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Übereinkommen über die Rechte des Kindes vom 20. November 1989 sowie auf § 11 Abs. 1 lit. f und § 17 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 14.0743.01 vom 24. Juni 2014 sowie in den Bericht der Bildungs- und Kulturkommission Nr. 14.0743.02 vom 20. Oktober 2014,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 0.107.",
+    "links": [
+     {
+      "label": "0.107",
+      "url": "https://db.clex.ch/link/Bund/0.107/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "KRK"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -185,7 +241,23 @@
     }
    ],
    "marginalie": [
-    "Kinder- und Jugendkommission [3]"
+    "Kinder- und Jugendkommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Umbenennung von «Kinder- und Jugendkommission» in «Kinder-, Jugend- und Familienkommission» per 1. Juli 2025.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Umbenennung von «Kinder- und Jugendkommission» in «Kinder-, Jugend- und Familienkommission» per 1. Juli 2025.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Einführung der Bundesgesetze über den Umweltschutz und über den Schutz der Gewässer",
+  "erlassdatum": "vom 16.08.2005 (Stand 01.02.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 86 des Gesetzes vom 16. Februar 2004 über die Einführung der Bundesgesetze über den Umweltschutz und über den Schutz der Gewässer (Umwelt- und Gewässerschutzgesetz),",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "UGsG (bGS 814.0 )",
+    "links": [
+     {
+      "label": "814.0",
+      "url": "https://ar.clex.ch/data/814.0/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-814.0"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +48,16 @@
     }
    ],
    "marginalie": [
-    "Einlagen in die Fonds [2]"
+    "Einlagen in die Fonds"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. Art. 18 und 19 UGsG",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "2": {
@@ -168,6 +216,24 @@
    ],
    "marginalie": [
     "Messungen und Kontrollen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "LRV (SR 814.318.142.1 )",
+     "links": [
+      {
+       "label": "814.318.142.1",
+       "url": "https://db.clex.ch/link/Bund/814.318.142.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LRV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -198,6 +264,22 @@
    ],
    "marginalie": [
     "Feuerungsanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 26 UGsG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Art. 20 ff. LRV und Anhang 4",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -213,6 +295,22 @@
    ],
    "marginalie": [
     "Abfallverbrennung in Kleinanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 26 Abs. 2 lit. a UGsG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "LRV, Anhang 2 Ziffer 718 und 728",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -228,6 +326,29 @@
    ],
    "marginalie": [
     "Übermässige Immissionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 2 Abs. 5 sowie Anhang 7 LRV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 26 UGsG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Art. 37 Abs. 2 UGsG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -243,6 +364,31 @@
    ],
    "marginalie": [
     "Sanierungsprogramme: Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 36 Abs. 1 Lärmschutz-Verordnung (LSV; SR 814.41 )",
+     "links": [
+      {
+       "label": "814.41",
+       "url": "https://db.clex.ch/link/Bund/814.41/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LSV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Art. 36 Abs. 1 LSV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -258,6 +404,15 @@
    ],
    "marginalie": [
     "Ausnahmen beim Vollzug Lärmschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Art. 30 und 31 LSV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -303,6 +458,24 @@
    ],
    "marginalie": [
     "c) Sonderabfälle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "VeVa (SR 814.610 )",
+     "links": [
+      {
+       "label": "814.610",
+       "url": "https://db.clex.ch/link/Bund/814.610/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VEVA"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -464,7 +637,25 @@
      "label": "II. Planerischer Schutz: Fassungen im öffentlichen Interesse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "GSchV (SR 814.201 )",
+     "links": [
+      {
+       "label": "814.201",
+       "url": "https://db.clex.ch/link/Bund/814.201/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "36": {
    "gliederung": [
@@ -487,7 +678,32 @@
     }
    ],
    "marginalie": [
-    "Zuständigkeiten der Gemeinden in den Gewässerschutzbereichen A und Z [16]"
+    "Zuständigkeiten der Gemeinden in den Gewässerschutzbereichen A und Z"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Vgl. Art. 80 Abs. 3 UGsG",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "Art. 19 GSchG (SR 814.20 ) und Art. 32 GSchV",
+     "links": [
+      {
+       "label": "814.20",
+       "url": "https://db.clex.ch/link/Bund/814.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -499,6 +715,24 @@
    ],
    "marginalie": [
     "Befreiung von der Bewilligungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Art. 37 TVA (SR 814.600 )",
+     "links": [
+      {
+       "label": "814.600",
+       "url": "https://db.clex.ch/link/Bund/814.600/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VVEA"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -532,6 +766,29 @@
    ],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "Die Änderungen wurden im betreffenden Erlass eingefügt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "bGS 814.01 (If. Nr. 503)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "bGS 814.13 (aGS V/692)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "42": {
@@ -543,6 +800,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "1. Oktober 2005 (RRB vom 16. August 2005)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,10 +1,67 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Versteigerung von Kontrollschildern",
+  "erlassdatum": "vom 16.02.2016 (Stand 01.02.2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 8a Abs. 2 der Verordnung zum Einführungsgesetz vom 24. April 1983 zum Bundesgesetz vom 19. Dezember 1958 über den Strassenverkehr (EG SVG) vom 14. November 1983,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 761.111",
+    "links": [
+     {
+      "label": "761.111",
+      "url": "https://ar.clex.ch/data/761.111/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-761.111"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Versteigerungsgegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 87 Abs. 5 Verkehrszulassungsverordnung (VZV; SR 741.51 )",
+     "links": [
+      {
+       "label": "741.51",
+       "url": "https://db.clex.ch/link/Bund/741.51/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VZV"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -41,6 +98,24 @@
    "gliederung": [],
    "marginalie": [
     "Aufgehobenes Recht; Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "In der Fassung vom 28. November 1995. Inzwischen überholt durch Fassung vom 12. April 2016 (bGS 761.32 )",
+     "links": [
+      {
+       "label": "761.32",
+       "url": "https://ar.clex.ch/data/761.32/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-761.32"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6_a": {

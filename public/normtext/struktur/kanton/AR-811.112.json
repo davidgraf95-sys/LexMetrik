@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gesundheitsvorsorge in Schulen und Heimen für Kinder und Jugendliche",
+  "erlassdatum": "vom 08.03.1994 (Stand 01.04.2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 32 des Schulgesetzes vom 26. April 1981 sowie auf Art. 12 der Verordnung vom 8. Dezember 1986 zum Gesundheitsgesetz,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Siehe heute Art. 42 Schulverordnung (bGS 411.1 )",
+    "links": [
+     {
+      "label": "411.1",
+      "url": "https://ar.clex.ch/data/411.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -98,6 +133,15 @@
    ],
    "marginalie": [
     "Tarif"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Gemäss Beschluss vom 14. Mai 2013 (Abl. 2013; S. 572) legt der Regierungsrat die Tarife, gültig ab 1. Januar 2013, für die Eintrittsuntersuchungen auf pauschal Fr. 50.- pro Kind und bei Austrittsuntersuchungen auf pauschal Fr. 30.- pro Kind fest.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -131,6 +175,15 @@
    ],
    "marginalie": [
     "Inkrafttreten; aufgehobenes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 411.4 (aGS IV/639)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

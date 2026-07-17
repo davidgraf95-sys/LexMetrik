@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Strassenverkehr",
+  "erlassdatum": "Vom 17. Mai 2011 (Stand 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Vollziehung des Strassenverkehrsgesetzes (SVG) vom 19. Dezember 1958 und gestützt auf § 11 des Übertretungsstrafgesetzes (ÜStG) vom 13. Februar 2019 sowie das Gesetz über die Verwaltungsgebühren vom 9. März 1972,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 741.01",
+    "links": [
+     {
+      "label": "741.01",
+      "url": "https://db.clex.ch/link/Bund/741.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "SVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 253.100",
+    "links": [
+     {
+      "label": "253.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/253.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-253.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 153.800",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -20,7 +93,7 @@
     }
    ],
    "marginalie": [
-    "Kantonspolizei *"
+    "Kantonspolizei"
    ]
   },
   "3": {
@@ -54,6 +127,24 @@
    ],
    "marginalie": [
     "Polizeiliche Anordnungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 741.21",
+     "links": [
+      {
+       "label": "741.21",
+       "url": "https://db.clex.ch/link/Bund/741.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SSV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -65,6 +156,24 @@
    ],
    "marginalie": [
     "Allmendbewilligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 724.100",
+     "links": [
+      {
+       "label": "724.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-724.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -87,6 +196,24 @@
    ],
    "marginalie": [
     "Rekurs an den Regierungsrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 153.100",
+     "links": [
+      {
+       "label": "153.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-153.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -109,6 +236,24 @@
    ],
    "marginalie": [
     "Parkieren in besonderen Fällen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 741.11",
+     "links": [
+      {
+       "label": "741.11",
+       "url": "https://db.clex.ch/link/Bund/741.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VRV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -130,7 +275,25 @@
     }
    ],
    "marginalie": [
-    "Polizeiliches Wegschaffen und Blockieren von Fahrzeugen, fahrzeugähnlichen Geräten und Gegenständen *"
+    "Polizeiliches Wegschaffen und Blockieren von Fahrzeugen, fahrzeugähnlichen Geräten und Gegenständen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SG 510.100",
+     "links": [
+      {
+       "label": "510.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/510.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-510.100"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -142,6 +305,24 @@
    ],
    "marginalie": [
     "Halterpflichten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SR 312.0",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -152,7 +333,7 @@
     }
    ],
    "marginalie": [
-    "Umzüge, Demonstrationen und Kundgebungen *"
+    "Umzüge, Demonstrationen und Kundgebungen"
    ]
   },
   "15": {
@@ -173,9 +354,7 @@
      "label": "II. Strassenverkehrsvorschriften"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -195,9 +374,7 @@
      "label": "II. Strassenverkehrsvorschriften"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19": {
    "gliederung": [
@@ -206,9 +383,7 @@
      "label": "III. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -217,9 +392,7 @@
      "label": "III. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -248,7 +421,28 @@
      "label": "IV. Gebühren des Justiz- und Sicherheitsdepartements"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SG 510.110 Verordnung betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeiverordnung, PolV)",
+     "links": [
+      {
+       "label": "510.110",
+       "url": "https://db.clex.ch/link/SG/510.110/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "§ 23 Bst. C Ziff. 4 lit. a: Redaktionell berichtigt.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "24": {
    "gliederung": [
@@ -281,6 +475,15 @@
    ],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Wirksam seit 26. 5. 2011.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12_a": {
@@ -291,7 +494,7 @@
     }
    ],
    "marginalie": [
-    "Aufbewahrung, Herausgabe, Verwertung und Vernichtung weggeschaffter Fahrräder, Fahrradanhänger, Motorfahrräder, Motorräder, Motorradanhänger und Handwagen *"
+    "Aufbewahrung, Herausgabe, Verwertung und Vernichtung weggeschaffter Fahrräder, Fahrradanhänger, Motorfahrräder, Motorräder, Motorradanhänger und Handwagen"
    ]
   },
   "7_a": {

@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Konkordat der Kantone der Nordwest- und Innerschweiz über den Vollzug von Strafen und Massnahmen",
+  "erlassdatum": "Vom 5. Mai 2006 (Stand 1. Januar 2008)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Die Kantone Uri, Schwyz, Obwalden, Nidwalden, Luzern, Zug, Bern, Solothurn, Basel-Stadt, Basel-Landschaft und Aargau schliessen sich, gestützt auf Art. 48 der Schweizerischen Bundesverfassung (BV) und Art. 372 und 377 bis 380 des Schweizerischen Strafgesetzbuches (StGB) sowie Art. 1 des Bundesgesetzes über das Jugendstrafrecht (JStG) mit dem Ziel, – Strafurteile verfassungs- und gesetzeskonform, einheitlich und kostengünstig zu vollziehen, – die bedarfsgerechte Anzahl Vollzugsplätze gemeinsam zu planen und die Aufgaben beim Bau und beim Betrieb der Vollzugseinrichtungen zu verteilen und zu koordinieren, zum Strafvollzugskonkordat der Nordwest- und Innerschweiz (im Folgenden Konkordat genannt) zusammen.",
+    "fnNrs": [
+     "2",
+     "3",
+     "4"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 101.",
+    "links": [
+     {
+      "label": "101",
+      "url": "https://db.clex.ch/link/Bund/101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 311.0.",
+    "links": [
+     {
+      "label": "311.0",
+      "url": "https://db.clex.ch/link/Bund/311.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 311.1.",
+    "links": [
+     {
+      "label": "311.1",
+      "url": "https://db.clex.ch/link/Bund/311.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "JSTG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +97,15 @@
    ],
    "marginalie": [
     "Konkordatskonferenz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -252,6 +326,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 1. 1. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {

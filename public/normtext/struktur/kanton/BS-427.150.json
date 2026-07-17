@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen den Kantonen Basel-Landschaft und Basel-Stadt über die Abgeltung der Kosten der nicht akademischen Berufsausbildungen im Gesundheitswesen auf Sekundarstufe II und auf Tertiärstufe",
+  "erlassdatum": "Vom 16. August 2005 (Stand 1. Januar 2005)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Regierungen der Kantone Basel-Landschaft und Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das neue Berufsbildungsgesetz (BBG) vom 13. Dezember 2002,",
+    "fnNrs": [
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "schliessen folgenden Vertrag:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "3",
+    "text": "SR 412.10.",
+    "links": [
+     {
+      "label": "412.10",
+      "url": "https://db.clex.ch/link/Bund/412.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BBG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +92,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten und Dauer des Vertrags"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 9 Abs. 1: Von den Regierungsräten BS und BL rückwirkend auf den 1. 1. 2005 für wirksam erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {

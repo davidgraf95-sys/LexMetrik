@@ -72,3 +72,39 @@ describe('G15 fnTextMitLinks — Hervorhebungen (fett/kursiv) als Rich-Text', ()
     expect(out).not.toContain('target="_blank"');
   });
 });
+
+describe('A42 fnTextMitLinks — kantonaler Ingress-/Fussnoten-Verweis (intern vs. amtlich)', () => {
+  it('vom Generator aufgelöster `intern`-Verweis linkt INTERN (Kanton)', () => {
+    const fn: Fussnote = {
+      nr: '1',
+      text: 'SG 111.100.',
+      links: [{ label: '111.100', url: 'https://www.gesetzessammlung.bs.ch/data/111.100/de', intern: { ebene: 'kanton', key: 'BS-111.100' } }],
+    };
+    const out = render(fn);
+    expect(out).toContain('href="/gesetze/kanton/BS-111.100"'); // intern
+    expect(out).not.toContain('target="_blank"');
+  });
+
+  it('`intern` auf Bund (clex-Verweis → gehaltener SR-Erlass) linkt INTERN', () => {
+    const fn: Fussnote = {
+      nr: '2',
+      text: 'SR 272',
+      links: [{ label: '272', url: 'https://db.clex.ch/link/Bund/272/de', intern: { ebene: 'bund', key: 'ZPO' } }],
+    };
+    const out = render(fn);
+    expect(out).toContain('href="/gesetze/bund/ZPO"');
+    expect(out).not.toContain('target="_blank"');
+  });
+
+  it('ohne `intern` (Erlass nicht gehalten) bleibt der amtliche Link extern (§8)', () => {
+    const fn: Fussnote = {
+      nr: '3',
+      text: 'SG 999.999',
+      links: [{ label: '999.999', url: 'https://www.gesetzessammlung.bs.ch/data/999.999/de' }],
+    };
+    const out = render(fn);
+    expect(out).toContain('href="https://www.gesetzessammlung.bs.ch/data/999.999/de"');
+    expect(out).toContain('target="_blank"');
+    expect(out).not.toContain('/gesetze/');
+  });
+});

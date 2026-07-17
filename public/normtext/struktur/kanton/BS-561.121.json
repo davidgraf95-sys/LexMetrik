@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Swisslos-Sportfonds-Kommission und die Verwendung der Mittel aus dem Swisslos-Sportfonds",
+  "erlassdatum": "Vom 6. November 2012 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 7 Abs. 4 und § 8 Abs. 3 des Sportgesetzes vom 18. Mai 2011, auf § 2 des Einführungsgesetzes zum Bundesgesetz über Geldspiele (EG BGS) vom 24. Juni 2020 sowie auf Art. 2 der Interkantonalen Vereinbarung betreffend die gemeinsame Durchführung von Geldspielen (IKV 2020),",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 371.100.",
+    "links": [
+     {
+      "label": "371.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/371.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-371.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 561.100",
+    "links": [
+     {
+      "label": "561.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/561.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-561.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 561.110",
+    "links": [
+     {
+      "label": "561.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/561.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-561.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -131,7 +204,16 @@
      "label": "V. Übergangsbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 11. 11. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

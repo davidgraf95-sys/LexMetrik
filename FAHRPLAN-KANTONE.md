@@ -83,6 +83,33 @@ Schwerste §1-Verstösse des Laufs, alle live belegt, alle ohne Slot/Fachzeit:
 | e | **F29 Fussnoten-Stern Display-Strip** (589 Randtitel/186 Erlasse): NUR trailing «␣*» in **Marginalien** strippen — NIE generell «*» im Normtext (amtlicher Fussnotenmarker, §1). Extraktorseitiger Nachzug → K-G3. | Fixture mit AG-291.150/BS-413.820-Marginalien |
 | f | **F5 A14-Relevanz fr/it** (`relevanz.ts:82-110`, 39 Latin-Erlasse + AG 0/4 ohne Kategorie): Muster um émolument(s)/tarif des frais/tariffa/legge tributaria/Anwaltstarif/Dekret erweitern. | Fixture-Test mit den 106 echten Dünn-Kanton-Titeln (`relevanz.test.ts`) |
 
+> **STATUS-NACHTRAG A42 (16.7.2026, Reader-Treue Ingress/Gliederung/Marginalien/Fussnoten — gebaut, ✅):**
+> Davids Referenzfall BS-154.100 «keine marginalen/keinen ingress/keine gliederung/keine fussnoten;
+> ingress soll analog PDF verlinkt sein». **Root-Cause = Extraktor-Drop, KEINE Manifestations-Lücke:**
+> die LexWork-API (`xhtml_tol`) enthält alle vier Ebenen. Fix in der richtigen Schicht (Struktur-Generator,
+> `struktur-lexwork.ts`/`struktur-kanton-run.ts`), Ausgabe-Schema deckungsgleich zum Bund-Sidecar →
+> Reader-Mechanik (ErlassKopfBlock/ArtikelBody-FnRef/baueGliederungsbaum) rendert Kanton wie Bund, 0 Renderer-Umbau.
+> Gelöst: (1) **Gliederung** — Klassen-Reihenfolge `level_N title` (BS) zusätzlich zu `title level_N` (BE);
+> (2) **Ingress/Kopf** — `extrahiereKopfLexWork` (Erlassformel autor/ingress/verb + Kopf-Fussnoten);
+> (3) **Fussnoten** — `<div class='footnotes'>`-Apparat + Marker→Absatz, je Artikel + am Kopf;
+> (4) **Ingress-/Fussnoten-Verlinkung** — `FnLink.intern` (Generator löst gehaltene Erlasse intern auf:
+> kantonal `<KT>-<nr>` bei gleichem Amts-Host, Bund `db.clex.ch/link/Bund/<SR>` via Register; sonst amtlicher
+> Fallback §8). **Nebenfixes (Gegenprüfungs-Befund):** `<strong>*</strong>`-Änderungsmarker + `&hellip;`-Platzhalter
+> werden aus Marginalie/Token verworfen (kein fabrizierter `…`/`*`-Randtitel; kein Token-Drop «103 *»≠«103»).
+> **Regeneriert (§3-Präsentation, bereits importierte Erlasse):** BS 850 + BE 5 Sidecars. **Residuen (Backlog, alle
+> vorbestehend + orthogonal, von der Gegenprüfung bestätigt — KEIN Regress dieses Fixes):**
+> (a) übrige LexWork-Kantone (AR 266 + ~22 kleine) = gegatete Folge-Tranche → **K-G3**;
+> (b) **Suffix-Token-Mismatch (eigene Bau-Einheit empfohlen):** der Struktur-Extraktor bildet «131a»/«2bis», der
+> Snapshot/Konsistenz-Tor erwartet die Unterstrich-Form «131_a»/«2_bis» → suffigierte Artikel werden gefiltert;
+> bei stark novellierten Erlassen ~30 % Deckungsverlust (BS-410.100: 156/221 Tokens). Fix = Token-Normalisierung
+> analog `adapter-lexwork` (identisch in HEAD~1, hier bewusst NICHT mitgezogen — §14.2 nicht über-bündeln);
+> (c) **FR/IT-Latenz:** `clean()` kollabiert Whitespace (schmales NBSP U+202F vor `; : ! ?`) — für die 855
+> deutschsprachigen BS/BE-Sidecars folgenlos, aber vor einem Romandie-Lauf (K-G3) zu härten (scraping-Skill:
+> NBSP/schmales NBSP verbatim);
+> (d) 9 `RiE`/`BeE`-Erlasse mit Leerzeichen im Key sind über die API nicht fetchbar (Discovery-/Import-Bug).
+> Beweis: Unit-Tests (real BS-Markup, beide Klassenfolgen, Platzhalter/Stern), `fnTextMitLinks`-intern-Test,
+> Screenshots vorher(Prod)/nachher Desktop+Mobil gegen amtliches PDF, adversariale Gegenprüfung Opus bestanden.
+
 ### K-2 · §8-Ehrlichkeit UI *(F26-UI · F37 · F44 · F27-Rest · F43-Hinweis · F36-Hinweis)* — Aufwand S/M, reine Anzeige
 
 - **a — F26-UI Currency-Chip zweistufig:** mit Beleg «geltend geprüft am …», ohne Beleg

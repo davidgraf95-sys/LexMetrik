@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Inkassohilfe und Bevorschussung von Unterhaltsbeiträgen für Kinder",
+  "erlassdatum": "vom 27.04.1980 (Stand 01.01.2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung der Art. 290 und 293 des Schweizerischen Zivilgesetzbuches,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 210",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

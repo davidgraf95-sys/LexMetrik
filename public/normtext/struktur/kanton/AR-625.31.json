@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz über die Wehrpflichtersatzabgabe",
+  "erlassdatum": "vom 06.04.2004 (Stand 01.07.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 22 Abs. 4 des Bundesgesetzes vom 12. Juni 1959 über die Wehrpflichtersatzabgabe und Art. 87 Abs. 3 der Verfassung des Kantons Appenzell A.Rh.,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "WPEG (SR 661 )",
+    "links": [
+     {
+      "label": "661",
+      "url": "https://db.clex.ch/link/Bund/661/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 111.1",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,12 +63,40 @@
    "gliederung": [],
    "marginalie": [
     "Kantonale Steuerverwaltung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 24 Abs. 2 WPEG (SR 661 )",
+     "links": [
+      {
+       "label": "661",
+       "url": "https://db.clex.ch/link/Bund/661/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
-    "Rekurskommission [4]"
+    "Rekurskommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 22 Abs. 3 WPEG (SR 661 )",
+     "links": [
+      {
+       "label": "661",
+       "url": "https://db.clex.ch/link/Bund/661/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "6": {

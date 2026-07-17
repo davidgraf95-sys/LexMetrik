@@ -1,16 +1,126 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Einsetzung der Ethikkommission Ostschweiz",
+  "erlassdatum": "vom 10.05.2016 (Stand 01.06.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kanton St.Gallen, der Kanton Thurgau und die Kantone Appenzell Ausserrhoden und Appenzell Innerrhoden erlassen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von Art. 54 Abs. 2 des eidgenössischen Humanforschungsgesetzes vom 30. September 2011 und Art. 11 des eidgenössischen Stammzellenforschungsgesetzes vom 19. Dezember 2003,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "als Vereinbarung:",
+    "fnNrs": [
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 810.30",
+    "links": [
+     {
+      "label": "810.30",
+      "url": "https://db.clex.ch/link/Bund/810.30/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 810.31",
+    "links": [
+     {
+      "label": "810.31",
+      "url": "https://db.clex.ch/link/Bund/810.31/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "vom Regierungsrat genehmigt am 3. Mai 2016",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Ethikkommission Ostschweiz a) Bezeichnung und Sitz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 810.30",
+     "links": [
+      {
+       "label": "810.30",
+       "url": "https://db.clex.ch/link/Bund/810.30/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
     "b) Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 810.30",
+     "links": [
+      {
+       "label": "810.30",
+       "url": "https://db.clex.ch/link/Bund/810.30/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 810.30",
+     "links": [
+      {
+       "label": "810.30",
+       "url": "https://db.clex.ch/link/Bund/810.30/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SR 810.31",
+     "links": [
+      {
+       "label": "810.31",
+       "url": "https://db.clex.ch/link/Bund/810.31/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -47,6 +157,20 @@
    "gliederung": [],
    "marginalie": [
     "Verfahren a) Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "sGS 951.1",
+     "links": [
+      {
+       "label": "951.1",
+       "url": "https://db.clex.ch/link/Bund/951.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {

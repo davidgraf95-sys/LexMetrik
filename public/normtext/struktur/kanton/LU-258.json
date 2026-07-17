@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Beurkundungsgebühren",
+  "erlassdatum": "vom 24.11.1973 (Stand 01.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Kantonsgericht des Kantons Luzern,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Vollziehung der §§ 52a Absatz 2, 52b Absatz 6, 53 Absatz 3 und 63 Absatz 1 des Gesetzes über die öffentlichen Beurkundungen vom 18. September 1973,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SRL Nr. 255",
+    "links": [
+     {
+      "label": "255",
+      "url": "https://srl.lu.ch/data/255/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -97,7 +132,7 @@
     }
    ],
    "marginalie": [
-    "Auslagen und Mehrwertsteuer *"
+    "Auslagen und Mehrwertsteuer"
    ]
   },
   "10": {
@@ -138,7 +173,7 @@
     }
    ],
    "marginalie": [
-    "Von Dritten hergestellte Kopien und dergleichen *"
+    "Von Dritten hergestellte Kopien und dergleichen"
    ]
   },
   "13": {
@@ -153,7 +188,7 @@
     }
    ],
    "marginalie": [
-    "Von der Urkundsperson hergestellte Kopien und dergleichen *"
+    "Von der Urkundsperson hergestellte Kopien und dergleichen"
    ]
   },
   "14": {
@@ -169,6 +204,24 @@
    ],
    "marginalie": [
     "Übersetzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -207,6 +260,24 @@
    ],
    "marginalie": [
     "Ehevertrag, Vermögensvertrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 211.231",
+     "links": [
+      {
+       "label": "211.231",
+       "url": "https://db.clex.ch/link/Bund/211.231/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PARTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -302,6 +373,20 @@
    ],
    "marginalie": [
     "Übertragung von Grundeigentum"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SRL Nr. 256",
+     "links": [
+      {
+       "label": "256",
+       "url": "https://srl.lu.ch/data/256/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -416,6 +501,24 @@
    ],
    "marginalie": [
     "Grundpfand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -701,6 +804,36 @@
    ],
    "marginalie": [
     "Anleihensgläubigerbeschlüsse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 221.522.1",
+     "links": [
+      {
+       "label": "221.522.1",
+       "url": "https://db.clex.ch/link/Bund/221.522.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SR 221.301",
+     "links": [
+      {
+       "label": "221.301",
+       "url": "https://db.clex.ch/link/Bund/221.301/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FUSG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "46": {
@@ -758,6 +891,20 @@
    ],
    "marginalie": [
     "Sachbeurkundungen des kantonalen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SRL Nr. 255",
+     "links": [
+      {
+       "label": "255",
+       "url": "https://srl.lu.ch/data/255/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "49": {
@@ -807,6 +954,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "V XVI 932. Änderungen: V XVII 336 und V XVIII 358.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "52": {

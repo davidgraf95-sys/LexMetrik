@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Beschluss über die Zahl der nebenamtlichen Richter am Obergericht",
+  "erlassdatum": "vom 23.09.2024 (Stand 01.06.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 18 Abs. 1 des Justizgesetzes,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 145.31",
+    "links": [
+     {
+      "label": "145.31",
+      "url": "https://ar.clex.ch/data/145.31/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-145.31"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

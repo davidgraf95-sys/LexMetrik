@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Verwaltungsgebühren",
+  "erlassdatum": "Vom 20. Juni 1972 (Stand 30. April 2006)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "aufgrund des Gesetzes über die Verwaltungsgebühren vom 9. März 1972,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -115,7 +154,16 @@
      "label": "9. Zuschlag zur ordentlichen Gebühr"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 12 Abs. 2: Erhöhung der Spruchgebühr durch RRB vom 9. 2. 1993 (wirksam seit 27. 6. 1993, publiziert am 14. 7. 1993).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "13": {
    "gliederung": [
@@ -193,7 +241,16 @@
      "label": "13. Verzugszins, Mahngebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Titel eingefügt durch RRB vom 9. 2. 1993 (wirksam seit 27. 6. 1993, publiziert am 14. 7. 1993).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   }
  }
 }

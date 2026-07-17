@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung des Schweizerischen Zivilgesetzbuches",
+  "erlassdatum": "vom 27.04.1969 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 52 des Schlusstitels zum Schweizerischen Zivilgesetzbuch vom 10. Dezember 1907,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "ZGB (SR 210 )",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,6 +53,24 @@
    ],
    "marginalie": [
     "Zuständigkeitsordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "heute Justizgesetz (bGS 145.31 )",
+     "links": [
+      {
+       "label": "145.31",
+       "url": "https://ar.clex.ch/data/145.31/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-145.31"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -29,6 +86,31 @@
    ],
    "marginalie": [
     "I. Der Gemeindehauptmann"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. heute Art. 38 der Zivilstandsverordnung (ZStV; SR 211.112.2 )",
+     "links": [
+      {
+       "label": "211.112.2",
+       "url": "https://db.clex.ch/link/Bund/211.112.2/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZSTV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Gegenstandslos geworden durch BG vom 19. Dezember 2008 (AS 2011, S. 725) und Teilrevision vom 20. Februar 2012",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -44,6 +126,106 @@
    ],
    "marginalie": [
     "II. Der Gemeinderat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "PartG (SR 211.231 )",
+     "links": [
+      {
+       "label": "211.231",
+       "url": "https://db.clex.ch/link/Bund/211.231/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PARTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Gegenstandslos geworden durch BG vom 26. Juni 1998 über die Änderung des ZGB (AS 1999, S. 1118)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "vgl. heute Art. 106 ZGB in der Fassung gemäss BG vom 26. Juni 1998 (AS 1999, S. 1118)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Gegenstandslos geworden durch BG vom 25. Juni 1976 über die Änderung des ZGB (AS 1977, S. 237)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Vgl. heute Art. 259 Abs. 2/3 ZGB in der Fassung gemäss BG vom 25. Juni 1976 (AS 1977, S. 237)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Vgl. heute Art. 260a ZGB in der Fassung gemäss BG vom 25. Juni 1976 (AS 1977, S. 237)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Art. 329 Abs. 3 wurde geändert durch das BG vom 25. Juni 1976 (AS 1977, S. 237)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Die Art. 621 und 625 wurden gemäss Art. 92 BGBB (SR 211.412.11 ) aufgehoben; vgl. heute Art. 7 der Verordnung zum BGBB (bGS 213.113 ) und Art. 11 und 21 BGBB",
+     "links": [
+      {
+       "label": "211.412.11",
+       "url": "https://db.clex.ch/link/Bund/211.412.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BGBB"
+       }
+      },
+      {
+       "label": "213.113",
+       "url": "https://ar.clex.ch/data/213.113/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-213.113"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "GBV (SR 211.432.1 )",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -59,6 +241,15 @@
    ],
    "marginalie": [
     "III. Gemeinderätliche Kommissionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "aGS I/1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -74,6 +265,38 @@
    ],
    "marginalie": [
     "V. Der Regierungsrat 1. Beschlüsse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "SR 211.435.1 (aufgehoben)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "SR 211.435.1 (aufgehoben)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -169,6 +392,15 @@
    ],
    "marginalie": [
     "Anwendbares Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "aGS I/1",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -188,6 +420,29 @@
    ],
    "marginalie": [
     "Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "Art. 45 ZGB",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "Art. 49 Abs. 2 und 3 sowie Art. 103 ZGB",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "1. Juli 2003 (RRB vom 17. Dezember 2002; Abl. 2002, S. 1222)",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -302,6 +557,31 @@
    ],
    "marginalie": [
     "6. Subsidiäres Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "Art. 60 ff. ZGB",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "Art. 828 ff. OR (SR 220 )",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -473,6 +753,15 @@
    ],
    "marginalie": [
     "9. Vorbehalt des Bodenverbesserungsrechtes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "Art. 167 ff.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -548,7 +837,7 @@
     }
    ],
    "marginalie": [
-    "Zuständigkeit *"
+    "Zuständigkeit"
    ]
   },
   "38": {
@@ -567,7 +856,16 @@
     }
    ],
    "marginalie": [
-    "Auskunft über die Personalien der leiblichen Eltern *"
+    "Auskunft über die Personalien der leiblichen Eltern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "Vgl. Art. 268c ZGB",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -586,7 +884,7 @@
     }
    ],
    "marginalie": [
-    "Kindes- und Erwachsenenschutzbehörde a) Organisation *"
+    "Kindes- und Erwachsenenschutzbehörde a) Organisation"
    ]
   },
   "40": {
@@ -605,7 +903,7 @@
     }
    ],
    "marginalie": [
-    "b) Zusammensetzung *"
+    "b) Zusammensetzung"
    ]
   },
   "41": {
@@ -624,7 +922,7 @@
     }
    ],
    "marginalie": [
-    "c) Örtliche Zuständigkeit, Wohnsitz nicht selbständiger Personen *"
+    "c) Örtliche Zuständigkeit, Wohnsitz nicht selbständiger Personen"
    ]
   },
   "42": {
@@ -643,7 +941,7 @@
     }
    ],
    "marginalie": [
-    "d) Aufsicht *"
+    "d) Aufsicht"
    ]
   },
   "44": {
@@ -662,7 +960,7 @@
     }
    ],
    "marginalie": [
-    "f) Besetzung und Beschlussfassung *"
+    "f) Besetzung und Beschlussfassung"
    ]
   },
   "45": {
@@ -681,7 +979,7 @@
     }
    ],
    "marginalie": [
-    "g) Verfahrensleitung *"
+    "g) Verfahrensleitung"
    ]
   },
   "46": {
@@ -700,7 +998,7 @@
     }
    ],
    "marginalie": [
-    "h) Mitwirkungspflichten *"
+    "h) Mitwirkungspflichten"
    ]
   },
   "47": {
@@ -719,7 +1017,41 @@
     }
    ],
    "marginalie": [
-    "i) Einzelzuständigkeiten *"
+    "i) Einzelzuständigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "ZPO (SR 272 )",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "48": {
@@ -738,7 +1070,7 @@
     }
    ],
    "marginalie": [
-    "Meldepflicht *"
+    "Meldepflicht"
    ]
   },
   "49": {
@@ -757,7 +1089,7 @@
     }
    ],
    "marginalie": [
-    "Unterstützende Dienste *"
+    "Unterstützende Dienste"
    ]
   },
   "50": {
@@ -776,7 +1108,7 @@
     }
    ],
    "marginalie": [
-    "Verfahrenskosten *"
+    "Verfahrenskosten"
    ]
   },
   "51": {
@@ -795,7 +1127,7 @@
     }
    ],
    "marginalie": [
-    "Zusammenarbeit im Kindesschutz *"
+    "Zusammenarbeit im Kindesschutz"
    ]
   },
   "52": {
@@ -814,7 +1146,25 @@
     }
    ],
    "marginalie": [
-    "Berufsbeistandschaften und private Beiständinnen und Beistände a) Organisation *"
+    "Berufsbeistandschaften und private Beiständinnen und Beistände a) Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "bGS 151.11",
+     "links": [
+      {
+       "label": "151.11",
+       "url": "https://ar.clex.ch/data/151.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-151.11"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "53": {
@@ -833,7 +1183,7 @@
     }
    ],
    "marginalie": [
-    "b) Zuständigkeit *"
+    "b) Zuständigkeit"
    ]
   },
   "54": {
@@ -852,7 +1202,7 @@
     }
    ],
    "marginalie": [
-    "c) Entschädigung und Spesen *"
+    "c) Entschädigung und Spesen"
    ]
   },
   "55": {
@@ -871,7 +1221,7 @@
     }
    ],
    "marginalie": [
-    "d) Aufsicht *"
+    "d) Aufsicht"
    ]
   },
   "56": {
@@ -890,7 +1240,7 @@
     }
    ],
    "marginalie": [
-    "Fürsorgerische Unterbringung a) Behördliche Unterbringung *"
+    "Fürsorgerische Unterbringung a) Behördliche Unterbringung"
    ]
   },
   "58": {
@@ -909,7 +1259,7 @@
     }
    ],
    "marginalie": [
-    "c) Ärztliche Unterbringung: Entlassung *"
+    "c) Ärztliche Unterbringung: Entlassung"
    ]
   },
   "59": {
@@ -928,7 +1278,7 @@
     }
    ],
    "marginalie": [
-    "d) Ärztliche Unterbringung: Weiterführung *"
+    "d) Ärztliche Unterbringung: Weiterführung"
    ]
   },
   "60": {
@@ -947,7 +1297,7 @@
     }
    ],
    "marginalie": [
-    "Nachbetreuung *"
+    "Nachbetreuung"
    ]
   },
   "61": {
@@ -966,7 +1316,7 @@
     }
    ],
    "marginalie": [
-    "Ambulante Massnahmen *"
+    "Ambulante Massnahmen"
    ]
   },
   "62": {
@@ -985,7 +1335,7 @@
     }
    ],
    "marginalie": [
-    "Hinterlegung von Vorsorgeaufträgen *"
+    "Hinterlegung von Vorsorgeaufträgen"
    ]
   },
   "63": {
@@ -1004,7 +1354,16 @@
     }
    ],
    "marginalie": [
-    "Rückgriff im Haftungsfall *"
+    "Rückgriff im Haftungsfall"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "Art. 262 ff.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "64": {
@@ -1023,7 +1382,25 @@
     }
    ],
    "marginalie": [
-    "Anwendbares Recht *"
+    "Anwendbares Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "65": {
@@ -1042,7 +1419,52 @@
     }
    ],
    "marginalie": [
-    "Internationale Abkommen *"
+    "Internationale Abkommen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "BG-KKE (SR 211.222.32 )",
+     "links": [
+      {
+       "label": "211.222.32",
+       "url": "https://db.clex.ch/link/Bund/211.222.32/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "BG-HAÜ (SR 211.211.31 )",
+     "links": [
+      {
+       "label": "211.211.31",
+       "url": "https://db.clex.ch/link/Bund/211.211.31/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "37",
+     "text": "Vgl. Art. 3 Abs. 1 BG-HAÜ, Art. 316 Abs. 1 bis ZGB",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "Haager Übereinkommen über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der internationalen Adoption (HAÜ; SR 0.211 )",
+     "links": [
+      {
+       "label": "0.211",
+       "url": "https://db.clex.ch/link/Bund/0.211/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "66": {
@@ -1061,7 +1483,7 @@
     }
    ],
    "marginalie": [
-    "Rechtsmittel *"
+    "Rechtsmittel"
    ]
   },
   "71": {
@@ -1100,6 +1522,15 @@
    ],
    "marginalie": [
     "1. Das Nottestament"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "Heute Kantonsgerichtspräsident",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "73": {
@@ -1423,6 +1854,20 @@
    ],
    "marginalie": [
     "2. Verfahren und Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "V über die Gebühren der Gemeinden (bGS 153.2) (heute Gebührentarif für die Gemeinden; bGS 153.2 )",
+     "links": [
+      {
+       "label": "153.2",
+       "url": "https://ar.clex.ch/data/153.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "90": {
@@ -1442,6 +1887,24 @@
    ],
    "marginalie": [
     "3. Beschränkung der Zerstückelung von Liegenschaften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "Vgl. Eidg. Bodenverbesserungsverordnung (SR 913.1 ) und kant. Bodenverbesserungsgesetz (bGS 922.2 )",
+     "links": [
+      {
+       "label": "913.1",
+       "url": "https://db.clex.ch/link/Bund/913.1/de"
+      },
+      {
+       "label": "922.2",
+       "url": "https://ar.clex.ch/data/922.2/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "91": {
@@ -1690,6 +2153,36 @@
    ],
    "marginalie": [
     "3. Öffentlich-rechtliche Grenzabstände"
+   ],
+   "fussnoten": [
+    {
+     "nr": "42",
+     "text": "bGS 731.11",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "SR 742",
+     "links": [
+      {
+       "label": "742",
+       "url": "https://db.clex.ch/link/Bund/742/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "143": {
@@ -2271,6 +2764,24 @@
    ],
    "marginalie": [
     "e) Expropriationsbefugnis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "44",
+     "text": "Enteignungsgesetz (bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "177": {
@@ -2442,6 +2953,24 @@
    ],
    "marginalie": [
     "6. Kostenbeiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "45",
+     "text": "GBV (SR 211.432.1 )",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "186": {
@@ -2461,6 +2990,60 @@
    ],
    "marginalie": [
     "7. Bestimmungen anderer Gesetze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "bGS 922.2",
+     "links": [
+      {
+       "label": "922.2",
+       "url": "https://ar.clex.ch/data/922.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "LwG (SR 910.1 )",
+     "links": [
+      {
+       "label": "910.1",
+       "url": "https://db.clex.ch/link/Bund/910.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "48",
+     "text": "SR 921.0 (heute Waldgesetz; WaG; SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "SR 721.10",
+     "links": [
+      {
+       "label": "721.10",
+       "url": "https://db.clex.ch/link/Bund/721.10/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "187": {
@@ -2537,6 +3120,40 @@
    ],
    "marginalie": [
     "Zutrittsrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "50",
+     "text": "Vgl. insbesondere: eidg. Jagdgesetz (JSG, SR 922.0 ), kant. Jagdgesetz (bGS 526.2 ); BG über die Fischerei (BFG, SR 923.0 ) und kant. Fischereiverordnung (bGS 527.2 )",
+     "links": [
+      {
+       "label": "922.0",
+       "url": "https://db.clex.ch/link/Bund/922.0/de"
+      },
+      {
+       "label": "526.2",
+       "url": "https://ar.clex.ch/data/526.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-526.2"
+       }
+      },
+      {
+       "label": "923.0",
+       "url": "https://db.clex.ch/link/Bund/923.0/de"
+      },
+      {
+       "label": "527.2",
+       "url": "https://ar.clex.ch/data/527.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-527.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "232": {
@@ -2556,6 +3173,20 @@
    ],
    "marginalie": [
     "2. Grundstücke des Verwaltungs- und Nutzungsvermögens"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "SR 282.11",
+     "links": [
+      {
+       "label": "282.11",
+       "url": "https://db.clex.ch/link/Bund/282.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "234": {
@@ -2575,6 +3206,15 @@
    ],
    "marginalie": [
     "4. Gesetzliche Pfandrechte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "52",
+     "text": "heute Assekuranz von Appenzell Ausserrhoden",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "240": {
@@ -2594,6 +3234,24 @@
    ],
    "marginalie": [
     "7. Belastungsgrenze für die Errichtung von Grundpfandrechten auf landwirtschaftlichen Gründstücken"
+   ],
+   "fussnoten": [
+    {
+     "nr": "53",
+     "text": "BGBB (SR 211.412.11 )",
+     "links": [
+      {
+       "label": "211.412.11",
+       "url": "https://db.clex.ch/link/Bund/211.412.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BGBB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "242": {
@@ -2659,6 +3317,36 @@
    ],
    "marginalie": [
     "2. Viehverschreibungsprotokoll"
+   ],
+   "fussnoten": [
+    {
+     "nr": "54",
+     "text": "V betreffend die Viehverpfändung (VPV; SR 211.423.1 )",
+     "links": [
+      {
+       "label": "211.423.1",
+       "url": "https://db.clex.ch/link/Bund/211.423.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "55",
+     "text": "Vgl. Art. 13 G über die Einführung des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs (bGS 241.1 )",
+     "links": [
+      {
+       "label": "241.1",
+       "url": "https://ar.clex.ch/data/241.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-241.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "246": {
@@ -2739,6 +3427,20 @@
    ],
    "marginalie": [
     "3. Kosten der Grundbuchführung und Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "56",
+     "text": "Gebührentarif für die Gemeinden (bGS 153.2 )",
+     "links": [
+      {
+       "label": "153.2",
+       "url": "https://ar.clex.ch/data/153.2/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "250": {
@@ -2795,7 +3497,7 @@
     }
    ],
    "marginalie": [
-    "6. Öffentliches Bereinigungsverfahren *"
+    "6. Öffentliches Bereinigungsverfahren"
    ]
   },
   "253": {
@@ -2814,7 +3516,7 @@
     }
    ],
    "marginalie": [
-    "7. Zugang zu Daten des Grundbuches *"
+    "7. Zugang zu Daten des Grundbuches"
    ]
   },
   "254": {
@@ -2833,7 +3535,7 @@
     }
    ],
    "marginalie": [
-    "8. Informatisierte Grundbuchführung und elektronischer Geschäftsverkehr *"
+    "8. Informatisierte Grundbuchführung und elektronischer Geschäftsverkehr"
    ]
   },
   "255": {
@@ -2948,6 +3650,40 @@
    ],
    "marginalie": [
     "5. Eidgenössisches Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "57",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "58",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "261": {
@@ -2967,6 +3703,24 @@
    ],
    "marginalie": [
     "Depositenstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "59",
+     "text": "BankG (SR 952.0 )",
+     "links": [
+      {
+       "label": "952.0",
+       "url": "https://db.clex.ch/link/Bund/952.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BANKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "262": {
@@ -3043,6 +3797,24 @@
    ],
    "marginalie": [
     "4. Herabsetzungsgründe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "266": {
@@ -3081,6 +3853,24 @@
    ],
    "marginalie": [
     "6. Eidgenössisches Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "61",
+     "text": "Verantwortlichkeitsgesetz (VG; SR 170.32 )",
+     "links": [
+      {
+       "label": "170.32",
+       "url": "https://db.clex.ch/link/Bund/170.32/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "268": {
@@ -3100,6 +3890,24 @@
    ],
    "marginalie": [
     "7. Durch rechtmässige Ausübung der Staatsgewalt verursachter Schaden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "62",
+     "text": "Enteignungsgesetz (bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "269": {
@@ -3144,7 +3952,21 @@
     }
    ],
    "marginalie": [
-    "2. Gleichstellung altrechtlicher Pfandarten *"
+    "2. Gleichstellung altrechtlicher Pfandarten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "64",
+     "text": "bGS 213.21",
+     "links": [
+      {
+       "label": "213.21",
+       "url": "https://ar.clex.ch/data/213.21/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "273": {
@@ -3175,6 +3997,24 @@
    ],
    "marginalie": [
     "1. Altrechtliche Formen und Tagebuch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "65",
+     "text": "GBV (SR 211.432.1 )",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "275": {
@@ -3205,6 +4045,28 @@
    ],
    "marginalie": [
     "e) Organisatorische Massnahmen und Aufsichtsbefugnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "66",
+     "text": "Vgl. insbesondere V über die Einführung des Grundbuches in den Gemeinden (bGS 213.311 ) sowie V über die Erstellung der Grundbuchtriangulation IV. Ordnung (bGS 231.321 )",
+     "links": [
+      {
+       "label": "213.311",
+       "url": "https://ar.clex.ch/data/213.311/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-213.311"
+       }
+      },
+      {
+       "label": "231.321",
+       "url": "https://ar.clex.ch/data/231.321/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "280": {
@@ -3233,7 +4095,79 @@
      "label": "E. Aufhebung kantonalen Rechtes"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "67",
+     "text": "a/GS I/26",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "68",
+     "text": "aGS I/33",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "69",
+     "text": "aGS II/196",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "70",
+     "text": "aGS II/208",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "71",
+     "text": "aGS III/414",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "72",
+     "text": "aGS III/399",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "73",
+     "text": "aGS III/400",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "74",
+     "text": "EG zum StGB (aGS I/38)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "75",
+     "text": "bGS 621.11",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "76",
+     "text": "aGS II/138",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "283": {
    "gliederung": [
@@ -3246,7 +4180,16 @@
      "label": "F. Schlussbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "77",
+     "text": "27. April 1969",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "235_a": {
    "gliederung": [
@@ -3303,6 +4246,24 @@
    ],
    "marginalie": [
     "Normalarbeitsvertrag für Arbeitnehmende im Hausdienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "63",
+     "text": "Art. 359 Abs. 2 OR (SR 220 )",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "281_a": {
@@ -3335,6 +4296,40 @@
    ],
    "marginalie": [
     "Aufsicht über Stiftungen und Vorsorgeeinrichtungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "BVG (SR 831.40 )",
+     "links": [
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "Vgl. V über das Handelsregister (bGS 223.1 )",
+     "links": [
+      {
+       "label": "223.1",
+       "url": "https://ar.clex.ch/data/223.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-223.1"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "57_a": {

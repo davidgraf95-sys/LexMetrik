@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Urkunde zur Sicherstellung des in die kantonale Verwaltung übergegangenen Vermögens der Stadtgemeinde Basel",
+  "erlassdatum": "Vom 26. Juni 1876 (Stand 26. Juni 1876)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des § 15 der Verfassung vom 10. Mai 1875 und nachdem durch Vertrag vom 6. Juni 1876 zwischen den Delegierten des Regierungs- und des Stadtrates von dem bisherigen städtischen Vermögen die der Bürgergemeinde zu Eigentum oder Verwaltung zufallenden Bürger-, Korporations- und Stiftungsgüter ausgeschieden worden sind,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erklärt:"
+   }
+  ]
+ },
  "artikel": {
   "i": {
    "gliederung": [],
@@ -11,7 +29,16 @@
   },
   "iii": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die interkantonale Zusammenarbeit und den Lastenausgleich im Bereich der Kultureinrichtungen von überregionaler Bedeutung",
+  "erlassdatum": "vom 24.11.2009 (Stand 01.01.2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone Appenzell Ausserrhoden, Appenzell Innerrhoden, St.Gallen und Thurgau"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -175,6 +189,15 @@
    ],
    "marginalie": [
     "Inkrafttreten und Vollzugsbeginn"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Beitritt von Appenzell Ausserrhoden nach Volksabstimmung vom 13. Februar 2011 (Abl. 2011, S. 156) und Erklärung des Regierungsrates vom 12. Juli 2011",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -208,6 +231,15 @@
    ],
    "marginalie": [
     "Anwendbares Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Rahmenvereinbarung (IRV; bGS 615.1)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

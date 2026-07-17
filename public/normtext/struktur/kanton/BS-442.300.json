@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen",
+  "erlassdatum": "Vom 27. Juni 2019 (Stand 1. Januar 2022)"
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -131,6 +135,24 @@
    ],
    "marginalie": [
     "Zahlungspflichtiger Kanton"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Schweizerisches Zivilgesetzbuch vom 10. Dezember 1907; SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -175,6 +197,15 @@
    ],
    "marginalie": [
     "Die Konferenz der Vereinbarungskantone"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Interkantonale Vereinbarung über den schweizerischen Hochschulbereich (Hochschulkonkordat) vom 20. Juni 2013; Sammlung der Rechtsgrundlagen der EDK, Ziffer 6.0",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -219,6 +250,31 @@
    ],
    "marginalie": [
     "Streitbeilegung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Rahmenvereinbarung vom 24. Juni 2005 für die interkantonale Zusammenarbeit mit Lastenausgleich (Rahmenvereinbarung, IRV)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Bundesgesetz vom 17. Juni 2005 über das Bundesgericht (Bundesgerichtsgesetz, BGG); SR 173.110",
+     "links": [
+      {
+       "label": "173.110",
+       "url": "https://db.clex.ch/link/Bund/173.110/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BGG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -241,6 +297,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Die EDK hat die Vereinbarung auf den 1. 1. 2022 in Kraft gesetzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -285,6 +350,20 @@
    ],
    "marginalie": [
     "Übergangsrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Bundesgesetz vom 30. September 2011 über die Förderung der Hochschulen und die Koordination im schweizerischen Hochschulbereich (Hochschulförderungs- und -koordinationsgesetz, HFKG); SR 414.20",
+     "links": [
+      {
+       "label": "414.20",
+       "url": "https://db.clex.ch/link/Bund/414.20/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Medien- und Informationsreglement der Gerichte",
+  "erlassdatum": "Vom 6. Juli 2016 (Stand 6. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gerichtsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 53 und 55 des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015, die §§ 20 – 23 und 33 des Gesetzes über die Information und den Datenschutz (Informations- und Datenschutzgesetz, IDG) vom 9. Juni 2010,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 154.100",
+    "links": [
+     {
+      "label": "154.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/154.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-154.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 153.260",
+    "links": [
+     {
+      "label": "153.260",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.260/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.260"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -43,6 +99,15 @@
    ],
    "marginalie": [
     "Information in hängigen Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 28 des Schweizerischen Zivilgesetzbuches (ZGB; SR 210)",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "5": {

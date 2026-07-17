@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung für die Schulen der Gemeinden Bettingen und Riehen",
+  "erlassdatum": "Vom 25. März 2009 (Stand 12. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, auf Antrag des Gemeinderats und der Sachkommission für Bildung, Soziales und Sport (BSS) sowie gestützt auf §§ 2, 4, 16, 23 und 64 des Schulgesetzes des Kantons Basel-Stadt vom 4. April 1929 und in Umsetzung des Vertrags betreffend die Zusammenarbeit der Gemeinden Bettingen und Riehen für den Betrieb und die Finanzierung ihrer Schulen (Schulvertrag) vom 6. Januar 2009 folgende Ordnung:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG RiE 410.600; massgeblich sind namentlich die Änderungen des Schulgesetzes vom 6. 6. 2007 und 20. 2. 2008, mit Wirksamkeit per 1. 8. 2009.",
+    "links": [
+     {
+      "label": "RiE 410.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20410.600/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 411.500 / BeE 411.500.",
+    "links": [
+     {
+      "label": "RiE 411.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20411.500/de"
+     },
+     {
+      "label": "BeE 411.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20411.500/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -75,7 +123,7 @@
     }
    ],
    "marginalie": [
-    "Aufgaben *"
+    "Aufgaben"
    ]
   },
   "8": {
@@ -131,6 +179,15 @@
    ],
    "marginalie": [
     "Aufgaben und Befugnisse der Schulräte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Konjunktion «und» wurde auf Anweisung der Gemeinde Riehen redaktionell ergänzt.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -186,6 +243,15 @@
    ],
    "marginalie": [
     "Zuteilungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -571,6 +637,36 @@
    ],
    "marginalie": [
     "Besitzstand Dienstaltersjahre"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 164.100.",
+     "links": [
+      {
+       "label": "164.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/164.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-164.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "BeE 162.100.",
+     "links": [
+      {
+       "label": "BeE 162.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20162.100/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -610,6 +706,29 @@
    ],
    "marginalie": [
     "Änderungen bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "RiE 412.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "§ 47 Abs. 1: Die Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "RiE 164.100.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "48": {
@@ -658,6 +777,20 @@
    ],
    "marginalie": [
     "Anstellung, Probezeit, Kündigungsfrist"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG RiE 162.100",
+     "links": [
+      {
+       "label": "RiE 162.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20162.100/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "28_a": {
@@ -709,6 +842,24 @@
    ],
    "marginalie": [
     "Besitzstand Entlöhnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Verordnung betreffend die Mischpensen vom 27. 5. 1997 (Mischpensenverordnung, SG 164.540 ).",
+     "links": [
+      {
+       "label": "164.540",
+       "url": "https://www.gesetzessammlung.bs.ch/data/164.540/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-164.540"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45_c": {

@@ -1,10 +1,67 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend den Vollzug des Bundesgesetzes über die Heimarbeit vom 20. März 1981",
+  "erlassdatum": "Vom 6. März 1984 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "beschliesst zur Durchführung des Bundesgesetzes über die Heimarbeit vom 20. März 1981 und der Verordnung über die Heimarbeit (HArG) vom 20. Dezember 1982",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "was folgt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 822.31.",
+    "links": [
+     {
+      "label": "822.31",
+      "url": "https://db.clex.ch/link/Bund/822.31/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 822.311.",
+    "links": [
+     {
+      "label": "822.311",
+      "url": "https://db.clex.ch/link/Bund/822.311/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit (Art. 15 HArG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 1: Heutige Bezeichnung «Amt für Wirtschaft und Arbeit (AWA)» eingeführt durch RRB vom 4. 11. 2003 (wirksam seit 1. 1. 2004). Ursprüngliche Bezeichnung «Amt für Gewerbe, Industrie und Berufsbildung». Dieser Name geändert durch RRB vom 13. 1. 1998 in «Kantonales Amt für Industrie, Gewerbe und Arbeit (KIGA)».",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -17,12 +74,30 @@
    "gliederung": [],
    "marginalie": [
     "Ausnahmebewilligungen (Art. 7 HArG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 3 Abs. 1: Heutige Bezeichnung «Amt für Wirtschaft und Arbeit (AWA)» eingeführt durch RRB vom 4. 11. 2003 (wirksam seit 1. 1. 2004). Ursprüngliche Bezeichnung «Amt für Gewerbe, Industrie und Berufsbildung». Dieser Name geändert durch RRB vom 13. 1. 1998 in «Kantonales Amt für Industrie, Gewerbe und Arbeit (KIGA)».",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
     "Arbeitgeberregister (Art. 10 HArG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 4 Abs. 1: Heutige Bezeichnung «Amt für Wirtschaft und Arbeit (AWA)» eingeführt durch RRB vom 4. 11. 2003 (wirksam seit 1. 1. 2004). Ursprüngliche Bezeichnung «Amt für Gewerbe, Industrie und Berufsbildung». Dieser Name geändert durch RRB vom 13. 1. 1998 in «Kantonales Amt für Industrie, Gewerbe und Arbeit (KIGA)».",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -47,6 +122,15 @@
    "gliederung": [],
    "marginalie": [
     "Zivilrechtliche Streitigkeiten (Art. 342 und Art. 343 OR)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 11. 3. 1984.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

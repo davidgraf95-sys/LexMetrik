@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen dem Kanton Basel-Stadt und dem Kanton Basel-Landschaft betreffend Verlegung der Kantonsgrenze zwischen Basel und Münchenstein im Gebiet der Reinacherstrasse (Dreispitzareal)",
+  "erlassdatum": "Vom 29. Mai 1961 (Stand 5. März 1962)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt und der Regierungsrat des Kantons Basel-Landschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in der Absicht, einen für die Überbauung günstigeren Verlauf der Kantonsgrenze bei der Liegenschaft Reinacherstrasse 271, im Dreispitzareal, herbeizuführen,"
+   },
+   {
+    "rolle": "verb",
+    "text": "treffen die folgende Vereinbarung:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -27,7 +45,16 @@
   },
   "7": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 7 Abs. 2: Ein Genehmigungsbeschluss des Bundesrates ist nicht feststellbar.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Verwendung des Kunstkredits",
+  "erlassdatum": "Vom 11. Juni 1991 (Stand 1. Januar 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -22,13 +36,22 @@
   "4": {
    "gliederung": [],
    "marginalie": [
-    "Kunstkreditprogramm *"
+    "Kunstkreditprogramm"
    ]
   },
   "5": {
    "gliederung": [],
    "marginalie": [
-    "Verwendung des Kunstkredits *"
+    "Verwendung des Kunstkredits"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 5 Abs. 1: Bei Anerkennungspreisen darf die Preissumme im Einzelfall die Höhe der Preissumme des Kulturpreises der Stadt Basel nicht überschreiten (Fussnote ist Bestandteil des Erlasses).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -40,7 +63,7 @@
   "7": {
    "gliederung": [],
    "marginalie": [
-    "Ausführung von Projekten an Bauten (Kunst am Bau) und im öffentlichen Raum *"
+    "Ausführung von Projekten an Bauten (Kunst am Bau) und im öffentlichen Raum"
    ]
   },
   "8": {

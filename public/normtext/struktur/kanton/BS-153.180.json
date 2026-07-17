@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Beschluss des Regierungsrates betreffend Neuordnung des Verwaltungs- und Rekursverfahrens",
+  "erlassdatum": "Vom 28. Juni 1977 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt beschliesst:"
+   },
+   {
+    "rolle": "ingress",
+    "text": "Im Zusammenhang mit der Neuordnung des Rekursverfahrens im Sinne von § 48 Abs. 1 des Organisationsgesetzes vom 22. April 1976 («Die Rekursinstanz darf mit der Behandlung des Rekurses keine Mitarbeiter der Vorinstanz beauftragen.») wird Folgendes festgelegt:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

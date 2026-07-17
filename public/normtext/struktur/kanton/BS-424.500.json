@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend den Passerelle-Lehrgang und die Ergänzungsprüfungen für die Zulassung von Inhabenden eines eidgenössischen Berufsmaturitätszeugnisses oder eines gesamtschweizerisch anerkannten Fachmaturitätszeugnisses zu den universitären Hochschulen",
+  "erlassdatum": "Vom 21. Juni 2011 (Stand 12. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Reglement über die Ergänzungsprüfung für die Zulassung von Inhaberinnen und Inhabern eines eidgenössischen Berufsmaturitätszeugnisses zu den universitären Hochschulen der Schweizerischen Konferenz der kantonalen Erziehungsdirektoren (EDK) vom 17. März 2011 und auf § 74 des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrats,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EDK Sammlung der Rechtsgrundlagen 4.2.1.3. ( http://www.edk.ch ).",
+    "links": [
+     {
+      "label": "http://www.edk.ch",
+      "url": "http://www.edk.ch"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -72,9 +124,7 @@
      "label": "II. Organe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [

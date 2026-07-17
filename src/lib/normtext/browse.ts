@@ -129,7 +129,15 @@ export function filtern(erlasse: BrowseErlass[], term: string): BrowseErlass[] {
 }
 
 // ── Amtliche Gliederung + Marginalien (Struktur-Sidecar, Rubrik V Richtung A) ──
-export interface FnLink { label: string; url: string }
+export interface FnLink {
+  label: string;
+  url: string;
+  /** A42: interner Reader-Verweis, wenn wir den zitierten Erlass im Volltext
+   *  halten (vom Kanton-Generator aufgelöst). Fehlt er, ist `url` der amtliche
+   *  Fallback (§8). Bund-Fussnoten tragen ihn nicht (dort löst der SR-Label-
+   *  Resolver zur Laufzeit auf) → Bund-Rendering unverändert. */
+  intern?: { ebene: 'bund' | 'kanton'; key: string };
+}
 export interface Fussnote {
   nr: string; text: string; links: FnLink[];
   absatz?: string | null; item?: string | null;

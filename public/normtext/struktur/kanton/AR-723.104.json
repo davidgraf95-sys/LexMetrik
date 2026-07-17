@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Verordnung über den Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen",
+  "erlassdatum": "vom 15.12.2020 (Stand 01.01.2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Verordnung über den Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen vom 2. September 2009 und Art. 21–24 des kantonalen Geoinformationsgesetzes vom 26. März 2012,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "ÖREBKV (SR 510.622.4 )",
+    "links": [
+     {
+      "label": "510.622.4",
+      "url": "https://db.clex.ch/link/Bund/510.622.4/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "kGeoIG (bGS 723.1 )",
+    "links": [
+     {
+      "label": "723.1",
+      "url": "https://ar.clex.ch/data/723.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-723.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +69,36 @@
    "gliederung": [],
    "marginalie": [
     "Inhalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Anhang 1 Geoinformationsverordnung (SR 510.620 )",
+     "links": [
+      {
+       "label": "510.620",
+       "url": "https://db.clex.ch/link/Bund/510.620/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "kGeoIV (bGS 723.101 )",
+     "links": [
+      {
+       "label": "723.101",
+       "url": "https://ar.clex.ch/data/723.101/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-723.101"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {

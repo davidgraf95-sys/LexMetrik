@@ -1,10 +1,76 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Schiffsführerausweise",
+  "erlassdatum": "vom 18.03.2025 (Stand 13.02.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 3. Oktober 1975 über die die Binnenschifffahrt und das Gesetz vom 25. April 1982 über die Gebühren in Verwaltungssachen,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BSG (SR 747.201 )",
+    "links": [
+     {
+      "label": "747.201",
+      "url": "https://db.clex.ch/link/Bund/747.201/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 233.2",
+    "links": [
+     {
+      "label": "233.2",
+      "url": "https://ar.clex.ch/data/233.2/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-233.2"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 747.201",
+     "links": [
+      {
+       "label": "747.201",
+       "url": "https://db.clex.ch/link/Bund/747.201/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -23,6 +89,24 @@
    "gliederung": [],
    "marginalie": [
     "Gebühren für weitere Amtshandlungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

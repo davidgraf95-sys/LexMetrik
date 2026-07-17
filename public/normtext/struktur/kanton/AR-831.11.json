@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Entschädigung der Mitglieder der Verwaltungskommission der Ausgleichskasse und der IV-Stelle Appenzell Ausserrhoden",
+  "erlassdatum": "vom 19.04.2016 (Stand 01.06.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 13 Abs. 2 lit. d) des Einführungsgesetzes zu den Bundesgesetzen über die Alters- und Hinterlassenenversicherung und über die Invalidenversicherung vom 21. September 2015",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG AHVG/IVG, (bGS 831.1)",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +59,22 @@
    "gliederung": [],
    "marginalie": [
     "Spesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "BVO, (bGS 142.211)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "REIS, (bGS 142.211.1)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

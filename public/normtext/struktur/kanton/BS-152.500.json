@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend Akkreditierung der Medienschaffenden und Zutritt zum Grossen Rat",
+  "erlassdatum": "Vom 21. Juni 2021 (Stand 1. September 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Büro des Grossen Rates,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 18 und 19 der Ausführungsbestimmungen zum Gesetz über die Geschäftsordnung des Grossen Rates (AB) vom 29. Juni 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 152.110.",
+    "links": [
+     {
+      "label": "152.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/152.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-152.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

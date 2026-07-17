@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Geschäftsordnung des Grossen Rates",
+  "erlassdatum": "Vom 29. Juni 2006 (Stand 1. November 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 99 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, nach Einsichtnahme in den Bericht der Spezialkommission für die Umsetzung der neuen Verfassung Nr. 06.5165.02 vom 23. Mai 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -133,7 +172,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigungen *"
+    "Entschädigungen"
    ]
   },
   "10": {
@@ -162,9 +201,7 @@
      "label": "(1.)II. Die Mitglieder des Grossen Rates"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -343,7 +380,7 @@
     }
    ],
    "marginalie": [
-    "Beschlussfähigkeit, Präsenzfeststellung *"
+    "Beschlussfähigkeit, Präsenzfeststellung"
    ]
   },
   "24": {
@@ -433,7 +470,7 @@
     }
    ],
    "marginalie": [
-    "Mehr *"
+    "Mehr"
    ]
   },
   "30": {
@@ -447,9 +484,7 @@
      "label": "(2.)II. Abstimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -717,9 +752,7 @@
      "label": "(3.)III. Planungsanzug"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "49": {
    "gliederung": [
@@ -1239,6 +1272,32 @@
    ],
    "marginalie": [
     "Beizug von Sachverständigen, Anhörung von Zeuginnen und Zeugen und Auskunftspersonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 80 Abs. 2: Diese Ordnung ist aufgehoben. Massgebend sind jetzt die StPO vom 5. 10. 2007 (SR 312.0 ) und das EG StPO vom 13. 10. 2010 (SG 257.100 ).",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      },
+      {
+       "label": "257.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/257.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-257.100"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "81": {
@@ -1354,7 +1413,16 @@
      "label": "(5.)II. Änderung und Aufhebung anderer Erlasse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 87: Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "88": {
    "gliederung": [
@@ -1367,9 +1435,7 @@
      "label": "(5.)III. Übergangs- und Schlussbestimmung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "89": {
    "gliederung": [
@@ -1397,9 +1463,7 @@
      "label": "(1.)I. Einberufung, Öffentlichkeit"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27_a": {
    "gliederung": [

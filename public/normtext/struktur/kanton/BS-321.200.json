@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vollziehungsverordnung zur eidgenössischen Epidemiengesetzgebung",
+  "erlassdatum": "Vom 22. Januar 2019 (Stand 31. Januar 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 75 des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) vom 28. September 2012 und Art. 102 Abs. 3 der Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV) vom 29. April 2015,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 818.101",
+    "links": [
+     {
+      "label": "818.101",
+      "url": "https://db.clex.ch/link/Bund/818.101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "EPG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 818.101.1",
+    "links": [
+     {
+      "label": "818.101.1",
+      "url": "https://db.clex.ch/link/Bund/818.101.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "EPV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

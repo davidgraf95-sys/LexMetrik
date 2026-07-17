@@ -1,5 +1,82 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Beiträge an Denkmalpflege-, Natur- und Heimatschutzmassnahmen",
+  "erlassdatum": "vom 11.03.1991 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 48 Ziff. 4 der Kantonsverfassung vom 26. April 1908, Art. 70 des Gesetzes vom 28. April 1985 über die Einführung des Bundesgesetzes über die Raumplanung, Art. 18c, 18d und 25 Abs. 2 des Bundesgesetzes vom 1. Juli 1966 über den Natur- und Heimatschutz sowie Art. 24 und 29 der Verordnung über Bewirtschaftungsbeiträge an die Landwirtschaft für erschwerte Produktionsbedingungen und ökologische Leistungen,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "aGS I/1",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "EG zum RPG (bGS 721.1 )",
+    "links": [
+     {
+      "label": "721.1",
+      "url": "https://ar.clex.ch/data/721.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-721.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "NHG (SR 451 )",
+    "links": [
+     {
+      "label": "451",
+      "url": "https://db.clex.ch/link/Bund/451/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "NHG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 910.21",
+    "links": [
+     {
+      "label": "910.21",
+      "url": "https://db.clex.ch/link/Bund/910.21/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -20,7 +97,16 @@
     }
    ],
    "marginalie": [
-    "Anmerkungen im Grundbuch [5]"
+    "Anmerkungen im Grundbuch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vom Eidg. Justiz- und Polizeidepartement genehmigt am 29. Mai 1991",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "3": {
@@ -246,6 +332,15 @@
    ],
    "marginalie": [
     "Zuständigkeiten bei der Beitragsgewährung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Zuständigkeiten gemäss Art. 12 ff. und Art. 37 EG zum RPG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -575,7 +670,7 @@
     }
    ],
    "marginalie": [
-    "Fachstelle für Natur und Landschaft *"
+    "Fachstelle für Natur und Landschaft"
    ]
   },
   "40": {
@@ -609,6 +704,38 @@
    ],
    "marginalie": [
     "Aufhebung bestehenden Rechtes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "bGS 722.17",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "bGS 722.171",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "bGS 422.111",
+     "links": [
+      {
+       "label": "422.111",
+       "url": "https://ar.clex.ch/data/422.111/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-422.111"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "43": {
@@ -620,6 +747,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Inkrafttreten: 6. Mai 1991 (Abl. 1991, S. 353); Genehmigung von Art. 2 durch Verfügung EJPD vom 29. Mai 1991",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

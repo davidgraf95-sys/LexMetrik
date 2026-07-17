@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Ausbildungsbeiträge",
+  "erlassdatum": "vom 13.02.2018 (Stand 13.02.2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 25 des Gesetzes über Ausbildungsbeiträge vom 20. März 2017,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Stipendiengesetz (bGS 415.21 )",
+    "links": [
+     {
+      "label": "415.21",
+      "url": "https://ar.clex.ch/data/415.21/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-415.21"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Organisation der Bekämpfung der Schwarzarbeit im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 11. Dezember 2007 (Stand 1. Januar 2008)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über Massnahmen zur Bekämpfung der Schwarzarbeit (BGSA) vom 17. Juni 2005 und die Verordnung über Massnahmen zur Bekämpfung der Schwarzarbeit (VOSA) vom 6. September 2006,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 822.41",
+    "links": [
+     {
+      "label": "822.41",
+      "url": "https://db.clex.ch/link/Bund/822.41/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 822.411",
+    "links": [
+     {
+      "label": "822.411",
+      "url": "https://db.clex.ch/link/Bund/822.411/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

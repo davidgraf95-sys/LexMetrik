@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den kantonalen Finanzhaushalt",
+  "erlassdatum": "Vom 14. März 2012 (Stand 12. März 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 11.1273.01 vom 20. September 2011 sowie in den Bericht der Finanzkommission Nr. 11.1273.02 vom 9. Februar 2012,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -605,7 +623,7 @@
     }
    ],
    "marginalie": [
-    "Kompetenzen betreffend die direkt dem Grossen Rat unterstellten oder zugeordneten Behörden und Abteilungen und der Gerichte *"
+    "Kompetenzen betreffend die direkt dem Grossen Rat unterstellten oder zugeordneten Behörden und Abteilungen und der Gerichte"
    ]
   },
   "50": {
@@ -704,7 +722,44 @@
     }
    ],
    "marginalie": [
-    "Änderung und Aufhebung bisherigen Rechts [1]"
+    "Änderung und Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 58: Die Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "SG 152.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SG 153.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 610.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 772.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "59": {

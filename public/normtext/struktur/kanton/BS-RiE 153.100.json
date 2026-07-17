@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Organisation des Gemeinderats und der Gemeindeverwaltung",
+  "erlassdatum": "Vom 29. März 2022 (Stand 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 23 und 24 Abs. 3 lit. e der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002 sowie §§ 24 Abs. 2 und 47 Abs. 1 der Finanzhaushaltordnung (FhO) vom 15. Dezember 2021,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 111.100",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 610.100",
+    "links": [
+     {
+      "label": "RiE 610.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20610.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

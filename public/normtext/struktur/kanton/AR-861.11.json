@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Feuerwehrkonzept",
+  "erlassdatum": "vom 10.11.2009 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 18 Abs. 1 der Verordnung vom 23. Oktober 1995 über den Feuerschutz,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Feuerschutzverordnung (bGS 861.1 )",
+    "links": [
+     {
+      "label": "861.1",
+      "url": "https://ar.clex.ch/data/861.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-861.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +47,16 @@
      "label": "1. Abschnitt: Konzeptgrundlage"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Von der Regierungskonferenz für die Koordination des Feuerwehrwesens verabschiedet am 12. Februar 1999",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -23,6 +71,15 @@
    ],
    "marginalie": [
     "Organisationseinheit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Verabschiedet von den Regierungen der Kantone Appenzell Ausserrhoden, St. Gallen und Appenzell Innerrhoden am 23. Oktober 2001",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -38,6 +95,15 @@
    ],
    "marginalie": [
     "Einordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Verabschiedet vom Schweizerischen Feuerwehrverband im Januar 2003",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {

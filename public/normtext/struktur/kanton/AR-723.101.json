@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Geoinformationsverordnung",
+  "erlassdatum": "vom 23.10.2012 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das kantonale Geoinformationsgesetz vom 26. März 2012,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "kGeoIG (bGS 723.1 )",
+    "links": [
+     {
+      "label": "723.1",
+      "url": "https://ar.clex.ch/data/723.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-723.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -43,6 +82,20 @@
    ],
    "marginalie": [
     "GIS-Fachstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "LVV (SR 510.626 )",
+     "links": [
+      {
+       "label": "510.626",
+       "url": "https://db.clex.ch/link/Bund/510.626/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -158,6 +211,24 @@
    ],
    "marginalie": [
     "Archivierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 421.10",
+     "links": [
+      {
+       "label": "421.10",
+       "url": "https://ar.clex.ch/data/421.10/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-421.10"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -213,6 +284,20 @@
    ],
    "marginalie": [
     "Zugangsberechtigungsstufen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "GeoIV (SR 510.620 )",
+     "links": [
+      {
+       "label": "510.620",
+       "url": "https://db.clex.ch/link/Bund/510.620/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -257,6 +342,24 @@
    ],
    "marginalie": [
     "Nutzungsvorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "URG (SR 231.1 )",
+     "links": [
+      {
+       "label": "231.1",
+       "url": "https://db.clex.ch/link/Bund/231.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "URG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -389,6 +492,20 @@
    ],
    "marginalie": [
     "Pauschale Abgeltung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "GeoIG (SR 510.62 )",
+     "links": [
+      {
+       "label": "510.62",
+       "url": "https://db.clex.ch/link/Bund/510.62/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -433,6 +550,24 @@
    ],
    "marginalie": [
     "Gebühren nach Zeitaufwand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 8 kGeoIG (bGS 723.1 )",
+     "links": [
+      {
+       "label": "723.1",
+       "url": "https://ar.clex.ch/data/723.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-723.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {

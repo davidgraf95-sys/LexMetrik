@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Organisationsgesetz der Basler Verkehrs-Betriebe",
+  "erlassdatum": "Vom 10. März 2004 (Stand 6. Juni 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -87,6 +105,15 @@
    ],
    "marginalie": [
     "Organe der BVB"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -173,9 +200,7 @@
      "label": "V. Finanzen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -185,7 +210,7 @@
     }
    ],
    "marginalie": [
-    "Investitionen und Betrieb *"
+    "Investitionen und Betrieb"
    ]
   },
   "18": {
@@ -217,9 +242,7 @@
      "label": "V. Finanzen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -252,6 +275,22 @@
    ],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Angenommen in der Volksabstimmung vom 27. 2. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Wirksam seit 1. 1. 2006.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12_a": {

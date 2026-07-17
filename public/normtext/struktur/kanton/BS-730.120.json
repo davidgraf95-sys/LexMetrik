@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren der Baubewilligungsbehörden",
+  "erlassdatum": "Vom 12. November 2002 (Stand 2. Mai 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 85 des Bau- und Planungsgesetzes vom 17. November 1999 und auf das Gesetz vom 9. März 1972 über die Verwaltungsgebühren,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +66,22 @@
    ],
    "marginalie": [
     "1. Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 1 Abs. 1: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 1 Abs. 4: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -20,7 +92,7 @@
     }
    ],
    "marginalie": [
-    "Bemessungsregeln *"
+    "Bemessungsregeln"
    ]
   },
   "3": {
@@ -122,9 +194,7 @@
      "label": "B. Prüfung der Baubegehren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -273,7 +343,16 @@
     }
    ],
    "marginalie": [
-    "Verzugszins, Kanzlei-, Schreib- und Mahngebühren *"
+    "Verzugszins, Kanzlei-, Schreib- und Mahngebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 19 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -289,6 +368,15 @@
    ],
    "marginalie": [
     "4. Ausleihe von Bauplänen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 20: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

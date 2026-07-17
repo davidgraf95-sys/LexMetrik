@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser",
+  "erlassdatum": "Vom 9. Februar 2018 (Stand 1. April 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Verwaltungsrat der IWB Industrielle Werke Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 10 Abs. 2 lit. h, § 23 Abs. 1 lit. b und § 23 Abs. 1 lit. c des Gesetzes über die Industriellen Werke Basel (IWB-Gesetz) vom 11. Februar 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 772.300.",
+    "links": [
+     {
+      "label": "772.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/772.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-772.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -41,6 +80,15 @@
    "gliederung": [],
    "marginalie": [
     "Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Redaktionell berichtigt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

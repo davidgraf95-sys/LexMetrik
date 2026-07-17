@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Kantonspolizei des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 3. Juni 1997 (Stand 19. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 63 Abs. 4, 67 Abs. 2, 71 Abs. 4 und 72 Abs. 1 des Gesetzes betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeigesetz, PolG) vom 13. November 1996,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 510.100",
+    "links": [
+     {
+      "label": "510.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/510.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-510.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +48,7 @@
     }
    ],
    "marginalie": [
-    "Einvernahmebefugnisse ziviler Mitarbeitender der Kantonspolizei *"
+    "Einvernahmebefugnisse ziviler Mitarbeitender der Kantonspolizei"
    ]
   },
   "2": {
@@ -52,9 +91,7 @@
      "label": "I. Organisation und Dienstrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "6": {
    "gliederung": [
@@ -85,9 +122,7 @@
      "label": "I. Organisation und Dienstrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -186,6 +221,15 @@
    ],
    "marginalie": [
     "Private Alarmanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -196,7 +240,7 @@
     }
    ],
    "marginalie": [
-    "Grundsätze der Gebühren und des Kostenersatzes *"
+    "Grundsätze der Gebühren und des Kostenersatzes"
    ]
   },
   "19": {
@@ -219,6 +263,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 20: § 9 infolge staatsrechtlicher Beschwerde gleichzeitig mit § 33 des Polizeigesetzes auf den 1. 7. 1999 wirksam erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10_a": {
@@ -338,9 +391,7 @@
      "label": "I. Organisation und Dienstrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "1_b": {
    "gliederung": [

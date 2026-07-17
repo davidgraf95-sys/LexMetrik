@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Zivilschutz und den Kulturgüterschutz",
+  "erlassdatum": "Vom 21. September 2022 (Stand 1. September 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 96 des Bundesgesetzes über den Bevölkerungsschutz und den Zivilschutz (Bevölkerungs- und Zivilschutzgesetz, BZG) vom 20. Dezember 2019 und Art. 21 Abs. 2 des Bundesgesetzes über den Schutz der Kulturgüter bei bewaffneten Konflikten, bei Katastrophen und in Notlagen (KGSG) vom 20. Juni 2014, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 20.1705.01 vom 19. Oktober 2021 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 20.1705.02 vom 13. Juli 2022,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 520.1",
+    "links": [
+     {
+      "label": "520.1",
+      "url": "https://db.clex.ch/link/Bund/520.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 520.3",
+    "links": [
+     {
+      "label": "520.3",
+      "url": "https://db.clex.ch/link/Bund/520.3/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -298,6 +346,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "In Kraft getreten am 1. September 2023 (KB: 26.08.2023).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

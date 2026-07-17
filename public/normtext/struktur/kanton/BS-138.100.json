@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend den Austritt in Behörden, die Beschränkung der Stimmgebung bei Wahlen und die Ausschliessung der Wählbarkeit von Verwandten zu Mitgliedern von Behörden",
+  "erlassdatum": "Vom 4. März 1872 (Stand 1. Januar 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "hat, um die gesetzlichen Bestimmungen über den Austritt in Behörden, über die Beschränkung der Stimmgebung bei Wahlen und über die Ausschliessung der Wählbarkeit von Verwandten zu Mitgliedern von Behörden zu vereinfachen und in Übereinstimmung zu bringen,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschlossen, was folgt:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -64,7 +82,16 @@
      "label": "E. Kein Austritt bei Staats- und Gemeindeangelegenheiten"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Im Abschnitt II dieses Textes sind die historischen Bezeichnungen sinngemäss durch die jetzt geltenden zu ersetzen, also: Grosser Stadtrat = Weiterer Bürgerrat, Kleiner Rat = Regierungsrat, Kleiner Stadtrat = Bürgerrat der Stadt Basel, Stadtschreiber = Bürgerratsschreiber.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [
@@ -73,7 +100,16 @@
      "label": "II. Beschränkung der Stimmgebung bei Wahlen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "In Abschn. III dieses Textes sind die historischen Bezeichnungen sinngemäss durch die jetzt geltenden zu ersetzen, also: Grosser Stadtrat = Weiterer Bürgerrat, Kleiner Rat = Regierungsrat, Kleiner Stadtrat = Bürgerrat der Stadt Basel, Stadtschreiber = Bürgerratsschreiber.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "7": {
    "gliederung": [
@@ -91,7 +127,16 @@
      "label": "III. Ausschliessung der Wählbarkeit zu Mitgliedern von Behörden"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Aufzählung der aufgehobenen Erlasse und Bestimmungen wird hier weggelassen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

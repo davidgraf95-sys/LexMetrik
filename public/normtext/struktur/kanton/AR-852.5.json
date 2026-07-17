@@ -1,5 +1,51 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Interkantonale Vereinbarung für soziale Einrichtungen",
+  "erlassdatum": "vom 13.12.2002 (Stand 01.06.2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Präambel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "In Anbetracht dessen, - dass soziale Einrichtungen Kindern, Jugendlichen und Erwachsenen mit Wohnsitz in einem anderen Kanton offen stehen sollen, - dass die hierfür nötige Angebotsoffenheit nur spielen kann, wenn die Kostenübernahme zwischen den Kantonen auf der Grundlage einheitlicher Berechnungsmethoden gesichert ist, - dass eine enge interkantonale Zusammenarbeit im Bereiche der sozialen Einrichtungen anzustreben ist,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen die Kantone, gestützt auf den Vorschlag der Konferenz der kantonalen Sozialdirektoren (SODK), im Einvernehmen mit der Konferenz der kantonalen Justiz- und Polizeidirektorinnen und -direktoren (KKJPD) und der Schweizerischen Konferenz der kantonalen Gesundheitsdirektorinnen und -direktoren (GDK), folgende Vereinbarung:",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Der Kantonsrat hat am 29. Oktober 2007 dem Beitritt zur IVSE vom 13. Dezember 2002 zugestimmt.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Der Regierungsrat hat am 20. November 2007 den Beitrittszeitpunkt des Kantons Appenzell Ausserrhoden auf den 1. Januar 2008 zu den Bereichen A, B, C und D bestimmt.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Der Kantonsrat hat am 28. Oktober 2019 der Änderung der IVSE vom 23. November 2018 zugestimmt.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -27,6 +73,36 @@
    ],
    "marginalie": [
     "Bereiche"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 311.1",
+     "links": [
+      {
+       "label": "311.1",
+       "url": "https://db.clex.ch/link/Bund/311.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "JSTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SR 831.26",
+     "links": [
+      {
+       "label": "831.26",
+       "url": "https://db.clex.ch/link/Bund/831.26/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -42,6 +118,24 @@
    ],
    "marginalie": [
     "Ausnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 831.20",
+     "links": [
+      {
+       "label": "831.20",
+       "url": "https://db.clex.ch/link/Bund/831.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "IVG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -248,6 +342,22 @@
    ],
    "marginalie": [
     "Sekretariat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Gemäss Statuten der Konferenz der kantonalen Sozialdirektorinnen und Sozialdirektoren vom 19. Juni 2009 nimmt diese Aufgabe das Generalsekretariat SODK wahr.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Aufgehoben am 14. September 2007",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -563,7 +673,7 @@
     }
    ],
    "marginalie": [
-    "Inkrafttreten der IVSE vom 13. Dezember 2002 *"
+    "Inkrafttreten der IVSE vom 13. Dezember 2002"
    ]
   },
   "40": {

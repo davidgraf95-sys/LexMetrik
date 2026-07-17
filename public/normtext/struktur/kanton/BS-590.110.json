@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz betreffend die Feuerwehr des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 27. November 2012 (Stand 21. Dezember 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 12 des Gesetzes betreffend die Feuerwehr des Kantons Basel-Stadt (Feuerwehrgesetz, FWG) vom 6. Juni 2012,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 590.100.",
+    "links": [
+     {
+      "label": "590.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/590.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-590.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -129,6 +168,15 @@
    ],
    "marginalie": [
     "Versicherungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Abgelöst durch Versicherung Angehörige der Feuerwehr (AdF) per 1. 1. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {

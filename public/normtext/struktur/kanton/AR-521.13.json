@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren der Kantonspolizei",
+  "erlassdatum": "vom 10.12.2002 (Stand 01.09.2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 46 Abs. 3 des Polizeigesetzes vom 13. Mai 2002,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 521.1",
+    "links": [
+     {
+      "label": "521.1",
+      "url": "https://ar.clex.ch/data/521.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-521.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +60,52 @@
    ],
    "marginalie": [
     "Kostenpflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 23 Ziff. 1 des Konkordats über die Rechtshilfe und die Interkantonale Zusammenarbeit in Strafsachen (SR 351.71 )",
+     "links": [
+      {
+       "label": "351.71",
+       "url": "https://db.clex.ch/link/Bund/351.71/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SR 741.03 und 741.031",
+     "links": [
+      {
+       "label": "741.03",
+       "url": "https://db.clex.ch/link/Bund/741.03/de"
+      },
+      {
+       "label": "741.031",
+       "url": "https://db.clex.ch/link/Bund/741.031/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "bGS 323.1",
+     "links": [
+      {
+       "label": "323.1",
+       "url": "https://ar.clex.ch/data/323.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-323.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -98,6 +183,20 @@
    ],
    "marginalie": [
     "Verkehrspolizei"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Chauffeurverordnung; SR 822.221",
+     "links": [
+      {
+       "label": "822.221",
+       "url": "https://db.clex.ch/link/Bund/822.221/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -108,7 +207,7 @@
     }
    ],
    "marginalie": [
-    "Kriminaltechnischer Dienst (KTD) *"
+    "Kriminaltechnischer Dienst (KTD)"
    ]
   },
   "11": {
@@ -119,7 +218,21 @@
     }
    ],
    "marginalie": [
-    "Kantonsgefängnis *"
+    "Kantonsgefängnis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 15 VVWA (SR 142.281 )",
+     "links": [
+      {
+       "label": "142.281",
+       "url": "https://db.clex.ch/link/Bund/142.281/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -131,6 +244,15 @@
    ],
    "marginalie": [
     "Transporte/Begleitungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Gemäss Rahmenvertrag betreffend interkantonaler Häftlingstransporte in der Schweiz vom 14. April 2000.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -229,7 +351,25 @@
     }
    ],
    "marginalie": [
-    "Private Sicherheitsdienste [8] *"
+    "Private Sicherheitsdienste"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. V über die privaten polizeiähnlichen Tätigkeiten (bGS 521.14 )",
+     "links": [
+      {
+       "label": "521.14",
+       "url": "https://ar.clex.ch/data/521.14/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.14"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "16_quater": {

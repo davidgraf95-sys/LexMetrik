@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen",
+  "erlassdatum": "Vom 25. März 2009 (Stand 1. Mai 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag der Spezialkommission und gestützt auf § 9 Abs. 1 Ziff. 6 des Gemeindegesetzes vom 17. Oktober 1985 sowie § 21 Abs. 3 lit. b der Gemeindeordnung vom 27. Februar 2002 folgende Ordnung:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 111.100.",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -15,9 +63,7 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [],
@@ -59,6 +105,15 @@
    "gliederung": [],
    "marginalie": [
     "Rechtskraft und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 1. 4. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2_bis": {

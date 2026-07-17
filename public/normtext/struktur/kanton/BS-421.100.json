@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Allgemeine Gewerbeschule Basel (AGS Basel) und die Schule für Gestaltung Basel (SfG Basel)",
+  "erlassdatum": "Vom 20. Dezember 1962 (Stand 1. Januar 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in der Absicht, das gewerbliche Bildungswesen zu entwickeln und zu fördern,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst was folgt:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,9 +26,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "2": {
    "gliederung": [
@@ -19,9 +35,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "3": {
    "gliederung": [
@@ -30,9 +44,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -41,9 +53,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -52,9 +62,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "6": {
    "gliederung": [
@@ -63,9 +71,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -74,9 +80,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [
@@ -85,9 +89,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -96,9 +98,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -107,9 +107,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "11": {
    "gliederung": [
@@ -118,9 +116,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -129,9 +125,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [
@@ -140,9 +134,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -151,9 +143,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -162,9 +152,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [
@@ -173,9 +161,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -193,9 +179,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19": {
    "gliederung": [
@@ -204,9 +188,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -215,9 +197,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -226,9 +206,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [
@@ -237,9 +215,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "23": {
    "gliederung": [
@@ -248,9 +224,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -277,9 +251,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -288,9 +260,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [
@@ -299,9 +269,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -310,9 +278,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -321,9 +287,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -332,9 +296,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -343,9 +305,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -354,9 +314,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "34": {
    "gliederung": [
@@ -365,9 +323,7 @@
      "label": "IV. Direktion, Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [
@@ -376,9 +332,7 @@
      "label": "IV. Direktion, Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -387,9 +341,7 @@
      "label": "IV. Direktion, Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -398,9 +350,7 @@
      "label": "IV. Direktion, Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -409,9 +359,7 @@
      "label": "IV. Direktion, Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [
@@ -420,9 +368,7 @@
      "label": "IV. Direktion, Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -431,9 +377,7 @@
      "label": "IV. Direktion, Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "41": {
    "gliederung": [
@@ -442,9 +386,7 @@
      "label": "V. Verwalter, Sekretär und das übrige Personal"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "42": {
    "gliederung": [
@@ -453,9 +395,7 @@
      "label": "V. Verwalter, Sekretär und das übrige Personal"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "43": {
    "gliederung": [
@@ -464,9 +404,7 @@
      "label": "VI. Strafbestimmung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "44": {
    "gliederung": [
@@ -475,7 +413,16 @@
      "label": "VII. Einführungsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Der RR hat dieses G am 5. 2. 1963 auf den 1. 4. 1963 in Wirksamkeit erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "45": {
    "gliederung": [

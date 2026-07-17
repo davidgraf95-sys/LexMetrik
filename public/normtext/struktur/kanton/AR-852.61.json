@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zur Finanzierung von Leistungsangeboten für Menschen mit Behinderung",
+  "erlassdatum": "vom 11.01.2022 (Stand 14.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 28 des Gesetzes zur Finanzierung von Leistungsangeboten für Menschen mit Behinderung vom 1. November 2021,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Behindertenfinanzierungsgesetz, BeFiG (bGS 852.6 )",
+    "links": [
+     {
+      "label": "852.6",
+      "url": "https://ar.clex.ch/data/852.6/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-852.6"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -29,6 +68,20 @@
    ],
    "marginalie": [
     "Anerkennungsverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. Verordnung über die beschwerdeberechtigten Organisationen im Bereich der Institutionen zur Förderung der Eingliederung von invaliden Personen (SR 831.261 )",
+     "links": [
+      {
+       "label": "831.261",
+       "url": "https://db.clex.ch/link/Bund/831.261/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -59,6 +112,24 @@
    ],
    "marginalie": [
     "Interkantonale Wirkung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "IVSE (bGS 852.5 )",
+     "links": [
+      {
+       "label": "852.5",
+       "url": "https://ar.clex.ch/data/852.5/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-852.5"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -119,6 +190,20 @@
    ],
    "marginalie": [
     "Anrechenbarer Nettoaufwand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 20 f. IVSE (bGS 852.5)",
+     "links": [
+      {
+       "label": "852.5)",
+       "url": "https://ar.clex.ch/data/852.5)/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -194,6 +279,20 @@
    ],
    "marginalie": [
     "Rechnungslegung und Kostenrechnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. Art. 21 Abs. 3 IVSE (bGS 852.5)",
+     "links": [
+      {
+       "label": "852.5)",
+       "url": "https://ar.clex.ch/data/852.5)/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -209,6 +308,40 @@
    ],
    "marginalie": [
     "Verpflegung, Betreuung über Mittag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "AHVV (SR 831.101 )",
+     "links": [
+      {
+       "label": "831.101",
+       "url": "https://db.clex.ch/link/Bund/831.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "bGS 832.311",
+     "links": [
+      {
+       "label": "832.311",
+       "url": "https://ar.clex.ch/data/832.311/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-832.311"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "15": {

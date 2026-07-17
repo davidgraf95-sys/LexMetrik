@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Prüfungsreglement für Heilpraktikerinnen und Heilpraktiker",
+  "erlassdatum": "vom 29.04.2008 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 7 lit. b des Gesundheitsgesetzes vom 25. November 2007,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 811.1",
+    "links": [
+     {
+      "label": "811.1",
+      "url": "https://ar.clex.ch/data/811.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -131,6 +170,24 @@
    ],
    "marginalie": [
     "Rechtsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -142,6 +199,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 811.111 (lf. Nr. 248)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {

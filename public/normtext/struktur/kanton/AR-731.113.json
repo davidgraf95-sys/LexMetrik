@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Parkieren auf Staatsarealen",
+  "erlassdatum": "vom 14.08.2018 (Stand 01.01.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 16 Abs. 4 des Strassengesetzes vom 26. Oktober 2009",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "StrG (bGS 731.11 )",
+    "links": [
+     {
+      "label": "731.11",
+      "url": "https://ar.clex.ch/data/731.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-731.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

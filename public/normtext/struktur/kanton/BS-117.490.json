@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Übereinkommen zwischen den Kantonen Basel-Stadt und Basel-Landschaft betreffend Änderung des Grenzverlaufs im Gebiet St. Jakobs-Strasse, Brüglingerstrasse und Münchensteinerstrasse",
+  "erlassdatum": "Vom 27. August 1974 (Stand 2. Februar 1975)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt und der Regierungsrat des Kantons Basel-Landschaft sowie der Gemeinderat von Münchenstein treffen in der Absicht, die Kantonsgrenze bei St. Jakob den neuen baulichen Anlagen (Korrektion der St. Jakobs-Strasse, Brüglingerstrasse, Tribüne im Sportbad St. Jakob, Mehrzwecksporthalle) anzupassen, folgende Vereinbarung:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,7 +33,16 @@
   },
   "6": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 6 Abs. 2: Ein Genehmigungsbeschluss des Bundesrates ist nicht feststellbar.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

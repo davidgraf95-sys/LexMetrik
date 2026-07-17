@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das kantonale Gebäude- und Wohnungsregister und das kantonale Gebäudemodell",
+  "erlassdatum": "Vom 24. August 2021 (Stand 2. September 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5 Abs. 3 des Gesetzes über die öffentliche Statistik (StatG) vom 21. Mai 2014, unter Verweis auf seine Erläuterungen Nr. P211082,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 453.200",
+    "links": [
+     {
+      "label": "453.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/453.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-453.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

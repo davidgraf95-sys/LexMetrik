@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Inkasso und die Bevorschussung von Unterhaltsbeiträgen",
+  "erlassdatum": "Vom 25. November 2008 (Stand 1. Januar 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 47 des Gesetzes betreffend die Einführung des Schweizerischen Zivilgesetzbuches (EG ZGB) vom 27. April 1911 und in Ausführung des Gesetzes über die Harmonisierung und Koordination von bedarfsabhängigen Sozialleistungen (Harmonisierungsgesetz Sozialleistungen, SoHaG) vom 25. Juni 2008 und der Bundesverordnung über die Inkassohilfe bei familienrechtlichen Unterhaltsansprüchen (Inkassohilfeverordnung, InkHV) vom 6. Dezember 2019,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 211.100",
+    "links": [
+     {
+      "label": "211.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 890.700",
+    "links": [
+     {
+      "label": "890.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/890.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-890.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 211.214.32",
+    "links": [
+     {
+      "label": "211.214.32",
+      "url": "https://db.clex.ch/link/Bund/211.214.32/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +123,15 @@
    ],
    "marginalie": [
     "Ermächtigungen und Erklärungen durch die gesuchstellende Person"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

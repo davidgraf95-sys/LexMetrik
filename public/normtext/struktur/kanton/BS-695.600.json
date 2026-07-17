@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Prämienermässigungsreglement der Gebäudeversicherung",
+  "erlassdatum": "Vom 17. Juni 1980 (Stand 1. Januar 1991)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gebäudeversicherung des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 4 der Prämienbestimmungen vom 14. August 1973,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Prämienermässigungsreglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 695.400.",
+    "links": [
+     {
+      "label": "695.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/695.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-695.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -44,7 +83,16 @@
      "label": "I."
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Genehmigt am 17. 6. 1980.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

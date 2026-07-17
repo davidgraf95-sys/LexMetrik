@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum kantonalen Kindes- und Erwachsenenschutzgesetz",
+  "erlassdatum": "Vom 16. April 2013 (Stand 1. September 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 25 des Kindes- und Erwachsenenschutzgesetzes (KESG) vom 12. September 2012,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 212.400.",
+    "links": [
+     {
+      "label": "212.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/212.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-212.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -184,9 +223,7 @@
      "label": "IV. Rekurskommission für fürsorgerische Unterbringungen (FU-Rekurskommission)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -195,9 +232,7 @@
      "label": "IV. Rekurskommission für fürsorgerische Unterbringungen (FU-Rekurskommission)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19": {
    "gliederung": [
@@ -206,9 +241,7 @@
      "label": "IV. Rekurskommission für fürsorgerische Unterbringungen (FU-Rekurskommission)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -217,9 +250,7 @@
      "label": "IV. Rekurskommission für fürsorgerische Unterbringungen (FU-Rekurskommission)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -228,9 +259,7 @@
      "label": "IV. Rekurskommission für fürsorgerische Unterbringungen (FU-Rekurskommission)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [
@@ -350,7 +379,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigung der vorsorgebeauftragten bzw. beauftragten Person *"
+    "Entschädigung der vorsorgebeauftragten bzw. beauftragten Person"
    ]
   },
   "33": {
@@ -437,7 +466,142 @@
      "label": "VIII. Aufhebung und Änderung bisherigen Rechts"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 40 Abs. 2: Die Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SG 153.110.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 211.110.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 212.100.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SG 212.250.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SG 212.470.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SG 212.500.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SG 212.600.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "SG 212.800.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SG 258.900.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "SG 292.400.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SG 321.900.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SG 323.110.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "SG 411.350.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SG 411.360.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "SG 419.300.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "SG 640.110.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "SG 815.110.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Publiziert am 20. 4. 2013.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

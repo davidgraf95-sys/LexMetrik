@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif zum EG SVG",
+  "erlassdatum": "vom 12.04.2016 (Stand 01.04.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 7 Abs. 2 des Einführungsgesetzes vom 24. April 1983 zum Bundesgesetz vom 19. Dezember 1958 über den Strassenverkehr,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG SVG (bGS 761.11)",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -126,6 +156,15 @@
    ],
    "marginalie": [
     "Ausweise und Kontrollschilder"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 741.31",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {

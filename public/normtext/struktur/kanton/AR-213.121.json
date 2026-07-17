@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung des Bundesgesetzes vom 16. Dezember 1983 über den Erwerb von Grundstücken durch Personen im Ausland",
+  "erlassdatum": "vom 26.04.1987 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 36 des Bundesgesetzes vom 16. Dezember 1983 über den Erwerb von Grundstücken durch Personen im Ausland",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BewG (SR 211.412.41 )",
+    "links": [
+     {
+      "label": "211.412.41",
+      "url": "https://db.clex.ch/link/Bund/211.412.41/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BEWG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -98,6 +137,15 @@
    ],
    "marginalie": [
     "Inkrafttreten; Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 213.121",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Schatzungs- und Abgrenzungsbestimmungen zum Gebäudeversicherungsgesetz",
+  "erlassdatum": "Vom 14. August 1973 (Stand 14. Dezember 2006)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 7 Abs. 3 des Gebäudeversicherungsgesetzes vom 22. März 1973, folgende Bestimmungen:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 695.100.",
+    "links": [
+     {
+      "label": "695.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/695.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-695.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -59,6 +94,15 @@
    ],
    "marginalie": [
     "Übergang von Bauversicherung zur definitiven Versicherung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 4 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Massnahmen zur Förderung des Wohnungsbaues",
+  "erlassdatum": "vom 24.04.1966 (Stand 06.12.1973)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 20 Abs. 2 des Bundesgesetzes vom 19. März 1965 über Massnahmen zur Förderung des Wohnungsbaues,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 842",
+    "links": [
+     {
+      "label": "842",
+      "url": "https://db.clex.ch/link/Bund/842/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -47,12 +82,39 @@
    "gliederung": [],
    "marginalie": [
     "Vollzug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 841.11",
+     "links": [
+      {
+       "label": "841.11",
+       "url": "https://ar.clex.ch/data/841.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-841.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "24. April 1966",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

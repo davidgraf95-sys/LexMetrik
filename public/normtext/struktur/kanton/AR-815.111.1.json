@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif für die Lebensmittelkontrolle",
+  "erlassdatum": "vom 10.12.1996 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 45 des Bundesgesetzes vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände, auf Art. 15 der Verordnung vom 1. März 1995 über die Gebühren für die Lebensmittelkontrolle und auf Art. 4 der kantonalen Verordnung vom 9. September 1996 über die Lebensmittelkontrolle,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "LMG (SR 817.0 )",
+    "links": [
+     {
+      "label": "817.0",
+      "url": "https://db.clex.ch/link/Bund/817.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "LMG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "VGLek (SR 817.51 )",
+    "links": [
+     {
+      "label": "817.51",
+      "url": "https://db.clex.ch/link/Bund/817.51/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "LKV (bGS 815.11 )",
+    "links": [
+     {
+      "label": "815.11",
+      "url": "https://ar.clex.ch/data/815.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-815.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

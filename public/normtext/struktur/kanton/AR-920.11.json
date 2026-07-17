@@ -1,58 +1,235 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Pflanzenschutzverordnung",
+  "erlassdatum": "vom 01.12.1998 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 178 des Bundesgesetzes vom 29. April 1998 über die Landwirtschaft, auf die Verordnung vom 5. März 1962 über Pflanzenschutz und auf Art. 17 des kantonalen Gesetzes vom 7. Juni 1998 über die Landwirtschaft,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "LwG (SR 910.1 )",
+    "links": [
+     {
+      "label": "910.1",
+      "url": "https://db.clex.ch/link/Bund/910.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Pflanzenschutzverordnung (PSV; SR 916.20 )",
+    "links": [
+     {
+      "label": "916.20",
+      "url": "https://db.clex.ch/link/Bund/916.20/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "bGS 920.1",
+    "links": [
+     {
+      "label": "920.1",
+      "url": "https://ar.clex.ch/data/920.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-920.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
-    "Organ des kantonalen Pflanzenschutzdienstes [4]"
+    "Organ des kantonalen Pflanzenschutzdienstes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 150 LwG; Art. 1 PSV, Art. 2 V über die Bekämpfung der San-José-Schildlaus, des Feuerbrandes und der gemeingefährlichen Obstvirosen (SR 916.22 ), im folgenden kurz Bekämpfungsverordnung",
+     "links": [
+      {
+       "label": "916.22",
+       "url": "https://db.clex.ch/link/Bund/916.22/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
-    "Fachstelle Pflanzenschutz *"
+    "Fachstelle Pflanzenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 4 PSV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Meldepflicht [6]"
+    "Meldepflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 7 PSV, Art. 2 Bekämpfungsverordnung",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Vgl. Anhang I der PSV sowie V über die Meldung von gemeingefährlichen Schädlingen und Krankheiten (SR 916.201 )",
+     "links": [
+      {
+       "label": "916.201",
+       "url": "https://db.clex.ch/link/Bund/916.201/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
     "Rodung von befallenen Pflanzen und von Wirtspflanzen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 36 PSV, Art. 14 Bekämpfungsverordnung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 17 Abs. 2 kantonales Landwirtschaftsgesetz",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Art. 8 Abs. 2 kantonales Landwirtschaftsgesetz",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "5": {
    "gliederung": [],
    "marginalie": [
-    "Pflanzverbot für Wirtspflanzen [11]"
+    "Pflanzverbot für Wirtspflanzen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 17 Abs. 2 kantonales Landwirtschaftsgesetz",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Massnahmen gegen die Verschleppung durch Bienen [12]"
+    "Massnahmen gegen die Verschleppung durch Bienen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 15a Bekämpfungsverordnung",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "7": {
    "gliederung": [],
    "marginalie": [
-    "Abfindungen [13]"
+    "Abfindungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Art. 156 LwG, Art. 32 PSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "8": {
    "gliederung": [],
    "marginalie": [
-    "Rechtsschutz [14]"
+    "Rechtsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 40 PSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "9": {
    "gliederung": [],
    "marginalie": [
     "Aufgehobene Erlasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "bGS 925.11",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {

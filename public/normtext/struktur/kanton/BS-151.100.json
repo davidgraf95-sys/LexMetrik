@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend Ausstattung der neuen Gesamtausgabe der Basler Gesetzessammlung mit negativer Rechtskraft",
+  "erlassdatum": "Vom 7. Juli 1960 (Stand 21. August 1960)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf den Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

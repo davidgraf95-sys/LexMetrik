@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Steuergesetz",
+  "erlassdatum": "vom 08.08.2000 (Stand 01.01.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 286 Abs. 1 des Steuergesetzes vom 21. Mai 2000,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "StG (bGS 621.11 )",
+    "links": [
+     {
+      "label": "621.11",
+      "url": "https://ar.clex.ch/data/621.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-621.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "5": {
    "gliederung": [
@@ -56,6 +95,24 @@
    ],
    "marginalie": [
     "Bewertung der Naturalbezüge (Art. 19 Abs. 2 StG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG, SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -549,7 +606,25 @@
     }
    ],
    "marginalie": [
-    "Tarifarten (Art. 99 Abs. 1, 101, 107 StG) *"
+    "Tarifarten (Art. 99 Abs. 1, 101, 107 StG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 831.10",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -587,7 +662,7 @@
     }
    ],
    "marginalie": [
-    "Obligatorische nachträgliche ordentliche Veranlagung (Art. 103 StG) *"
+    "Obligatorische nachträgliche ordentliche Veranlagung (Art. 103 StG)"
    ]
   },
   "49": {
@@ -1094,7 +1169,25 @@
     }
    ],
    "marginalie": [
-    "Vereinfachtes Abrechnungsverfahren (Art. 39b StG) *"
+    "Vereinfachtes Abrechnungsverfahren (Art. 39b StG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "AHVV (SR 831.101 )",
+     "links": [
+      {
+       "label": "831.101",
+       "url": "https://db.clex.ch/link/Bund/831.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVV"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "30_d": {
@@ -1132,7 +1225,7 @@
     }
    ],
    "marginalie": [
-    "Bewertung von Mitarbeiterbeteiligungen (Art. 46a StG) *"
+    "Bewertung von Mitarbeiterbeteiligungen (Art. 46a StG)"
    ]
   },
   "31_b": {
@@ -1356,7 +1449,7 @@
     }
    ],
    "marginalie": [
-    "Steuerauskünfte (Art. 153 StG) *"
+    "Steuerauskünfte (Art. 153 StG)"
    ]
   },
   "59_a": {
@@ -1376,6 +1469,24 @@
    ],
    "marginalie": [
     "Verfahrensgebühren (Art. 161 ff. StG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "KGV (bGS 233.21 )",
+     "links": [
+      {
+       "label": "233.21",
+       "url": "https://ar.clex.ch/data/233.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.21"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "60_a": {
@@ -1395,6 +1506,24 @@
    ],
    "marginalie": [
     "Kosten im Nachsteuerverfahren (Art. 195 Abs. 1 StG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "bGS 233.2",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "67_a": {
@@ -1413,7 +1542,37 @@
     }
    ],
    "marginalie": [
-    "Grundlagen (Art. 222 ff. StG) *"
+    "Grundlagen (Art. 222 ff. StG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "DBG (SR 642.11 )",
+     "links": [
+      {
+       "label": "642.11",
+       "url": "https://db.clex.ch/link/Bund/642.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "DBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Steuererlassverordnung (SR 642.121 )",
+     "links": [
+      {
+       "label": "642.121",
+       "url": "https://db.clex.ch/link/Bund/642.121/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "68_a": {

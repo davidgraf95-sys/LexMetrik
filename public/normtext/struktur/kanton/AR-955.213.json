@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Tourismusverordnung",
+  "erlassdatum": "vom 16.05.2017 (Stand 01.06.2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 21 des Tourismusgesetzes vom 13. Juni 2016,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "TG, bGS 955.21",
+    "links": [
+     {
+      "label": "955.21",
+      "url": "https://ar.clex.ch/data/955.21/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-955.21"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

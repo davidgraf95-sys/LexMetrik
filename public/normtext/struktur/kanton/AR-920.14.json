@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Tierzucht",
+  "erlassdatum": "vom 07.12.1999 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die eidgenössische Verordnung vom 7. Dezember 1998 über die Tierzucht, auf Art. 30 Abs. 1 des Gesetzes vom 7. Juni 1998 über die Landwirtschaft sowie auf Art. 74 Abs. 2 der Kantonsverfassung,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 916.310",
+    "links": [
+     {
+      "label": "916.310",
+      "url": "https://db.clex.ch/link/Bund/916.310/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 920.1",
+    "links": [
+     {
+      "label": "920.1",
+      "url": "https://ar.clex.ch/data/920.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-920.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +86,15 @@
    "gliederung": [],
    "marginalie": [
     "Viehschauen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 8 G über die Landwirtschaft",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -41,6 +119,15 @@
    "gliederung": [],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "bGS 925.211 (aGS lll/347)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {

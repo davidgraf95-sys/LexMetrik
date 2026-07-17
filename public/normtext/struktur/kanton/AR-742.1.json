@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Grundeigentümerbeiträge bei der Korrektion oder Verbauung öffentlicher Gewässer",
+  "erlassdatum": "vom 15.06.1981 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 225 des Einführungsgesetzes vom 27. April 1969 zum Zivilgesetzbuch,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG zum ZGB (bGS 211.1 )",
+    "links": [
+     {
+      "label": "211.1",
+      "url": "https://ar.clex.ch/data/211.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-211.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -252,6 +291,24 @@
    ],
    "marginalie": [
     "Pfandrecht, Rechtsöffnungstitel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SchKG (SR 281.1 )",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -340,6 +397,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "15. Juni 1981",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,83 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Anwaltstarif",
+  "erlassdatum": "Vom 3. Dezember 1996 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Obergericht des Kantons Zug,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 96 der Schweizerischen Zivilprozessordnung (Zivilprozessordnung, ZPO) vom 19. Dezember 2008, Art. 424 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007, § 10 Abs. 1 des Einführungsgesetzes zum Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (EG BGFA) vom 25. April 2002 und § 28 Abs. 2 des Gesetzes über die öffentliche Beurkundung und die Beglaubigung in Zivilsachen vom 3. Juni 1946,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 272",
+    "links": [
+     {
+      "label": "272",
+      "url": "https://db.clex.ch/link/Bund/272/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 312",
+    "links": [
+     {
+      "label": "312",
+      "url": "https://db.clex.ch/link/Bund/312/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BGS 163.1",
+    "links": [
+     {
+      "label": "163.1",
+      "url": "https://bgs.zg.ch/data/163.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BGS 223.1",
+    "links": [
+     {
+      "label": "223.1",
+      "url": "https://bgs.zg.ch/data/223.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -42,7 +120,7 @@
     }
    ],
    "marginalie": [
-    "Grundhonorar bei nicht vermögensrechtlichen Streitigkeiten und in familienrechtlichen Verfahren *"
+    "Grundhonorar bei nicht vermögensrechtlichen Streitigkeiten und in familienrechtlichen Verfahren"
    ]
   },
   "5": {
@@ -97,7 +175,7 @@
     }
    ],
    "marginalie": [
-    "Grundhonorar bei Beendigung des Verfahrens ohne Sachentscheid *"
+    "Grundhonorar bei Beendigung des Verfahrens ohne Sachentscheid"
    ]
   },
   "10": {
@@ -130,7 +208,7 @@
     }
    ],
    "marginalie": [
-    "Grundhonorar bei Vertretung mehrerer Parteien *"
+    "Grundhonorar bei Vertretung mehrerer Parteien"
    ]
   },
   "13": {
@@ -152,7 +230,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigung des unentgeltlichen Rechtsbeistands bzw. der unentgeltlichen Rechtsbeiständin *"
+    "Entschädigung des unentgeltlichen Rechtsbeistands bzw. der unentgeltlichen Rechtsbeiständin"
    ]
   },
   "15": {
@@ -305,7 +383,7 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmungen *"
+    "Übergangsbestimmungen"
    ]
   },
   "25_a": {

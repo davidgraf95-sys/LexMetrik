@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Wasserrechtskonzession für die Elektrizitätswerk Urnäsch AG",
+  "erlassdatum": "vom 15.12.1952 (Stand 12.08.1997)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 38 Abs. 1 des Bundesgesetzes vom 22. Dezember 1916 über die Nutzbarmachung der Wasserkräfte sowie insbesondere auf Art. 141 des Einführungsgesetzes vom 30. April 1911 zum ZGB, beschliesst, der Elektrizitätswerk Urnäsch AG die Konzession zur Ausbeutung der Wasserkräfte der Urnäsch vom bestehenden Wuhr in der Langfluh Kote 947,80 bis zur Wasserrückgabe im mittleren Rossfall Kote 867,36 zu erteilen.",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 721.80",
+    "links": [
+     {
+      "label": "721.80",
+      "url": "https://db.clex.ch/link/Bund/721.80/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "aGS I/26; heute Art. 209 Abs. 2 EG zum ZGB vom 27. April 1969 (bGS 211. 1 )",
+    "links": [
+     {
+      "label": "211. 1",
+      "url": "https://ar.clex.ch/data/211.%201/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -62,7 +106,16 @@
      "label": "Konzessionsbedingungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. insbes. Art. 49 des BG vom 22. Dezember 1916 über die Nutzbarmachung der Wasserkräfte",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [

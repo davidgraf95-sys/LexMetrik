@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend den Vollzug des Gesetzes über die Ermittlung von Grundstückwerten vom 20. Juni 1968 und über die zu erhebenden Gebühren",
+  "erlassdatum": "Vom 25. November 1968 (Stand 1. Juni 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 13 des Gesetzes über die Ermittlung von Grundstückwerten vom 20. Juni 1968,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt nachstehende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 717.100.",
+    "links": [
+     {
+      "label": "717.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/717.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-717.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -47,7 +86,16 @@
   },
   "12": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 30. 11. 1968.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

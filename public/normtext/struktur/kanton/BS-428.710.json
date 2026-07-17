@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Studien- und Prüfungsreglement für Schulische Heilpädagogik",
+  "erlassdatum": "Vom 10. Dezember 2002 (Stand 1. März 2003)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Rektorat der Universität Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 9 lit. o) des Universitätsstatuts vom 6. März 1996, in Berücksichtigung des Reglements über die Anerkennung der Lehrdiplome in Schulischer Heilpädagogik der EDK vom 27. August 1998 und unter Vorbehalt der Genehmigung durch den Universitätsrat, folgendes Reglement:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Dieses Statut ist aufgehoben. Massgebend ist jetzt das Universitätsstatut vom 3. 5. 2012 (SG 440.110 ).",
+    "links": [
+     {
+      "label": "440.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/440.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-440.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -241,6 +276,24 @@
    ],
    "marginalie": [
     "Verfügungen und Rekurse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 22: Dieses Gesetz wurde aufgehoben. Massgebend ist jetzt § 22 des Statuts der Universität Basel (SG 440.110 ).",
+     "links": [
+      {
+       "label": "440.110",
+       "url": "https://www.gesetzessammlung.bs.ch/data/440.110/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-440.110"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -263,6 +316,15 @@
    ],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 23. 8. 2003.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

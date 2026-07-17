@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Betreuung von Kindern in Kindertagesstätten und Tagesfamilien",
+  "erlassdatum": "Vom 24. August 2021 (Stand 1. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Verordnung über die Aufnahme von Pflegekindern (Pflegekinderverordnung, PAVO) vom 19. Oktober 1977, das Gesetz betreffend Tagesbetreuung von Kindern (Tagesbetreuungsgesetz, TBG) vom 8. Mai 2019 sowie auf das Gesetz betreffend Förder- und Hilfeleistungen für Kinder und Jugendliche (Kinder- und Jugendgesetz, KJG) vom 10. Dezember 2014, unter Verweis auf seine Erläuterungen Nr. P211103,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 211.222.338",
+    "links": [
+     {
+      "label": "211.222.338",
+      "url": "https://db.clex.ch/link/Bund/211.222.338/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "PAVO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 815.100",
+    "links": [
+     {
+      "label": "815.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/815.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-815.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 415.100",
+    "links": [
+     {
+      "label": "415.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/415.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-415.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -206,9 +279,7 @@
      "label": "3. Kindertagesstätten mit Betreuungsbeiträgen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [

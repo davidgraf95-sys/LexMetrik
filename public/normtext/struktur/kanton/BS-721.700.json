@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend den Vollzug des Bundesgesetzes über die Nationalstrassen vom 8. März 1960",
+  "erlassdatum": "Vom 28. Februar 1961 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 61 des Bundesgesetzes über die Nationalstrassen vom 8. März 1960,",
+    "fnNrs": [
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt nachstehende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "3",
+    "text": "SR 725.11.",
+    "links": [
+     {
+      "label": "725.11",
+      "url": "https://db.clex.ch/link/Bund/725.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +56,15 @@
    ],
    "marginalie": [
     "Nebenanlagen (BG Art. 7)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -64,6 +108,15 @@
    ],
    "marginalie": [
     "2. Behandlung von Baubegehren (BG Art. 16)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 5 Abs.1: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -79,6 +132,24 @@
    ],
    "marginalie": [
     "3. Wiederherstellung des rechtmässigen Zustandes (BG Art. 15 Abs. 2)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 6: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100 )",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -180,6 +251,22 @@
    ],
    "marginalie": [
     "Wirkung und Behandlung von Baubegehren (BG Art. 24)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "§ 13 Abs. 1 ergänzt durch RRB vom 11. 12. 1967.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "§ 13 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -195,6 +282,24 @@
    ],
    "marginalie": [
     "Wiederherstellung des rechtmässigen Zustandes (BG Art. 23 Abs. 2)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 14: Dieses G ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100 ).",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -240,6 +345,24 @@
    ],
    "marginalie": [
     "Erwerbsarten und Massnahmen im Interesse der Bodennutzung (BG Art. 32, 36, 39 und 40)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "§ 17 Abs. 1: Dieses G ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100 ).",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -285,6 +408,24 @@
    ],
    "marginalie": [
     "Künftige bauliche Massnahmen (BG Art. 44)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "§ 20: Dieses G ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100 ).",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -307,6 +448,24 @@
    ],
    "marginalie": [
     "Besondere Schutzmassnahmen (BG Art. 51 und 52)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "§ 22 Abs. 1: Dieses G ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100 ).",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -329,6 +488,15 @@
    ],
    "marginalie": [
     "Zuständigkeit (BG Art. 56ff.)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Wirksam seit 16. 3. 1961.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

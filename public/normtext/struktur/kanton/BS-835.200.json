@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend den Fonds zur Bekämpfung der Arbeitslosigkeit",
+  "erlassdatum": "Vom 6. Dezember 1995 (Stand 30. Dezember 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -47,6 +65,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 21. 1. 1996.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6_a": {

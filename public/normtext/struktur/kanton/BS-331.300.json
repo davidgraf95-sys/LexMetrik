@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Staatsvertrag zwischen den Kantonen Basel-Stadt und Basel-Landschaft über das Universitäts-Kinderspital beider Basel",
+  "erlassdatum": "Vom 22. Januar 2013 (Stand 1. Januar 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Regierungen der Kantone Basel-Stadt und Basel-Landschaft schliessen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 27 der Verfassung des Kantons Basel-Stadt vom 23. März 2005 und § 64 Abs. 1 1 lit. a sowie Abs. 2, § 80 Abs. 3, § 110 Abs. 3 und § 111 Abs. 2 und 4 der Verfassung des Kantons Basel-Landschaft vom 17. Mai 1984,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "folgenden Vertrag:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SGS 100.",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,6 +63,15 @@
    "gliederung": [],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 832.10.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -71,6 +132,15 @@
    "gliederung": [],
    "marginalie": [
     "Personal"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 220.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -119,6 +189,15 @@
    "gliederung": [],
    "marginalie": [
     "Haftung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 161.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -137,6 +216,22 @@
    "gliederung": [],
    "marginalie": [
     "Rechtspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SG 153.100.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SG 270.100.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -161,6 +256,22 @@
    "gliederung": [],
    "marginalie": [
     "Berufliche Vorsorge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SGS 834.2.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Gemeint ist hier das inzwischen aufgehobene Pensionskassengesetz vom 28. 6. 2007.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -173,6 +284,22 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Vom Landrat des Kantons Basel-Landschaft genehmigt am 19. 9. 2013.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Wirksam seit 1. 1. 2013, publiziert am 30. 11. 2013.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

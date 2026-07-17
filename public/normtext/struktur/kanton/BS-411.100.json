@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 11. November 1930 (Stand 20. Mai 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des § 129 des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrates und nach Anhörung des Synodalvorstandes,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -192,9 +231,7 @@
      "label": "I.III. Behandlung einzelner Geschäfte"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -207,9 +244,7 @@
      "label": "I.III. Behandlung einzelner Geschäfte"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -314,9 +349,7 @@
      "label": "II. Geschäftsordnung für den Synodalvorstand"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -413,9 +446,7 @@
      "label": "IV. Bestimmungen über das Verhältnis der Staatlichen Schulsynode zu den Behörden"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -425,7 +456,7 @@
     }
    ],
    "marginalie": [
-    "Ordentliche Kosten der Staatlichen Synode *"
+    "Ordentliche Kosten der Staatlichen Synode"
    ]
   },
   "34": {
@@ -435,9 +466,7 @@
      "label": "IV. Bestimmungen über das Verhältnis der Staatlichen Schulsynode zu den Behörden"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [

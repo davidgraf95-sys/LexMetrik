@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die vom Amt für Wirtschaft und Arbeit zu erhebenden Gebühren",
+  "erlassdatum": "Vom 13. Januar 1998 (Stand 1. Februar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Verwaltungsgebühren vom 9. März 1972, das Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) vom 29. Juni 1967, das Gesetz betreffend die öffentlichen Ruhetage sowie die Ladenschlusszeiten der Verkaufslokale an Werktagen (Ruhetags- und Ladenschlussgesetz) vom 13. Oktober 1993,",
+    "fnNrs": [
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 812.100.",
+    "links": [
+     {
+      "label": "812.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/812.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-812.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. 6. 2005 (SG 811.100 ).",
+    "links": [
+     {
+      "label": "811.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/811.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-811.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +105,15 @@
    ],
    "marginalie": [
     "Errichtung und Umgestaltung eines industriellen Betriebes (Plangenehmigung gemäss Art. 7 Abs. 1 und 2 ArG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -65,6 +147,15 @@
    ],
    "marginalie": [
     "Ausnahmebewilligungen für Ruhetage und Werktage"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 6 Abs. 1: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. 6. 2005 (SG 811.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -85,7 +176,30 @@
      "label": "IV. Zuständigkeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 8: Umbenennung «Kantonales Amt für Industrie, Gewerbe und Arbeit (KIGA)» in «Amt für Wirtschaft und Arbeit (AWA)» durch RRB vom 4. 11. 2003 (wirksam seit 1. 1. 2004).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "§ 8: Umbenennung «Kantonales Amt für Industrie, Gewerbe und Arbeit (KIGA)» in «Amt für Wirtschaft und Arbeit (AWA)» durch RRB vom 4. 11. 2003 (wirksam seit 1. 1. 2004).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Publiziert am 17. 1. 1998.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "5 a": {
    "gliederung": [
@@ -107,6 +221,15 @@
    ],
    "marginalie": [
     "Ausnahmebewilligungen für Familienbetriebe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "§ 7a: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. 6. 2005 (SG 811.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7 b": {
@@ -118,6 +241,15 @@
    ],
    "marginalie": [
     "Bewilligungen für Betriebe an ausserordentlichen örtlichen Verhältnissen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "§ 7b: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. 6. 2005 (SG 811.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7 c": {

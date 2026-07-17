@@ -1,10 +1,63 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vollziehungsverordnung zum Bundesgesetz über Tabakprodukte und elektronische Zigaretten",
+  "erlassdatum": "Vom 27. Mai 2025 (Stand 5. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 35 Abs. 3 und 43 Abs. 1 des Bundesgesetzes über Tabakprodukte und elektronische Zigaretten (Tabakproduktegesetz, TabPG) vom 1. Oktober 2021, unter Verweis auf seine Erläuterungen Nr. P250731,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 818.32.",
+    "links": [
+     {
+      "label": "818.32",
+      "url": "https://db.clex.ch/link/Bund/818.32/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zuständigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 569.500.",
+     "links": [
+      {
+       "label": "569.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/569.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-569.500"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -17,6 +70,15 @@
    "gliederung": [],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 3 Abs. 3: Dieser Tarif wird hier nicht abgedruckt. Er kann beim Kantonalen Laboratorium eingesehen werden.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

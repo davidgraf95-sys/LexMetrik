@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Loi sur les droits de mutation et les droits sur les gages immobiliers",
+  "erlassdatum": "du 01.05.1996 (version entrée en vigueur le 01.03.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Le Grand Conseil du canton de Fribourg"
+   },
+   {
+    "rolle": "ingress",
+    "text": "Vu l'article 15 al. 1 de la Constitution du canton de Fribourg du 7 mai 1857; Vu le message du Conseil d'Etat du 27 juin 1995; Sur la proposition de cette autorité,"
+   },
+   {
+    "rolle": "verb",
+    "text": "Décrète:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -65,6 +83,24 @@
    ],
    "marginalie": [
     "Immeubles"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "RS 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/fr",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -98,6 +134,51 @@
    ],
    "marginalie": [
     "Exonérations – Transferts immobiliers"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "RSF 631.1",
+     "links": [
+      {
+       "label": "631.1",
+       "url": "https://bdlf.fr.ch/data/631.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "RSF 631.1",
+     "links": [
+      {
+       "label": "631.1",
+       "url": "https://bdlf.fr.ch/data/631.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Actuellement: Grangeneuve ou Service des forêts et de la nature.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "RSF 214.7.1",
+     "links": [
+      {
+       "label": "214.7.1",
+       "url": "https://bdlf.fr.ch/data/214.7.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -263,6 +344,48 @@
    ],
    "marginalie": [
     "Autorités"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Actuellement: Direction des finances.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Actuellement: Service financier cantonal.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Actuellement: Service cantonal des contributions.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "RSF 631.1",
+     "links": [
+      {
+       "label": "631.1",
+       "url": "https://bdlf.fr.ch/data/631.1/fr"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Actuellement: Direction du développement territorial, des infrastructures, de la mobilité et de l'environnement.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -318,6 +441,20 @@
    ],
    "marginalie": [
     "Eléments – avec inscription au registre foncier"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "RSF 631.1",
+     "links": [
+      {
+       "label": "631.1",
+       "url": "https://bdlf.fr.ch/data/631.1/fr"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -450,6 +587,20 @@
    ],
    "marginalie": [
     "Révision"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "RSF 631.1",
+     "links": [
+      {
+       "label": "631.1",
+       "url": "https://bdlf.fr.ch/data/631.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "42": {
@@ -483,6 +634,20 @@
    ],
    "marginalie": [
     "Garanties"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "RSF 210.1",
+     "links": [
+      {
+       "label": "210.1",
+       "url": "https://bdlf.fr.ch/data/210.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -527,6 +692,24 @@
    ],
    "marginalie": [
     "Demande en restitution de l'indu – Conditions"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "RS 281.1",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/fr",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "49": {
@@ -637,6 +820,36 @@
    ],
    "marginalie": [
     "Délit – Autorité et règles applicables"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "RS 311.0",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/fr",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "RSF 130.1",
+     "links": [
+      {
+       "label": "130.1",
+       "url": "https://bdlf.fr.ch/data/130.1/fr"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "60": {
@@ -692,6 +905,20 @@
    ],
    "marginalie": [
     "Droits et centimes additionnels – Suspension et interruption de la prescription"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "RSF 631.1",
+     "links": [
+      {
+       "label": "631.1",
+       "url": "https://bdlf.fr.ch/data/631.1/fr"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "65": {
@@ -846,6 +1073,15 @@
    ],
    "marginalie": [
     "Entrée en vigueur"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Date d'entrée en vigueur: 1 er janvier 1997 (ACE 10.09.1996).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16_a": {

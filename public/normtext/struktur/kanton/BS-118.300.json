@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung zwischen den Kantonen Basel-Stadt und Basel-Landschaft über die Zusammenarbeit der Behörden",
+  "erlassdatum": "Vom 21. Juni 2011 (Stand 1. Januar 2012)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt, in Ausführung des § 3 Abs. 1 und § 4 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, und der Regierungsrat des Kantons Basel-Landschaft, in Ausführung des § 3 Abs. 2 der Verfassung des Kantons Basel-Landschaft vom 17. Mai 1984,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SGS 100.",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung für die Schulleitungen der Volksschulen",
+  "erlassdatum": "Vom 26. Juni 2012 (Stand 26. Dezember 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 74 Abs. 2 lit. o des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrats,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -152,7 +191,7 @@
     }
    ],
    "marginalie": [
-    "Mitarbeitendengespräche mit der Leitung Tagesstrukturen und den Lehr- und Fachpersonen *"
+    "Mitarbeitendengespräche mit der Leitung Tagesstrukturen und den Lehr- und Fachpersonen"
    ]
   },
   "15": {
@@ -163,7 +202,7 @@
     }
    ],
    "marginalie": [
-    "Bewährungsfrist bei der Leitung Tagesstrukturen und den Lehr- und Fachpersonen *"
+    "Bewährungsfrist bei der Leitung Tagesstrukturen und den Lehr- und Fachpersonen"
    ]
   },
   "16": {
@@ -183,7 +222,7 @@
     }
    ],
    "marginalie": [
-    "Anstellungsvoraussetzungen *"
+    "Anstellungsvoraussetzungen"
    ]
   },
   "18": {

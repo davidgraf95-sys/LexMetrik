@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Durchführung des Bundesgesetzes über die direkte Bundessteuer (DBG)",
+  "erlassdatum": "vom 26.09.2000 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 104 Abs. 4 des Bundesgesetzes vom 14. Dezember 1990 über die direkte Bundessteuer (DBG) und Art. 286 Abs. 3 des Steuergesetzes (StG) vom 21. Mai 2000,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 642.11",
+    "links": [
+     {
+      "label": "642.11",
+      "url": "https://db.clex.ch/link/Bund/642.11/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "DBG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 621.11",
+    "links": [
+     {
+      "label": "621.11",
+      "url": "https://ar.clex.ch/data/621.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-621.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +66,24 @@
    ],
    "marginalie": [
     "Organe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 642.11",
+     "links": [
+      {
+       "label": "642.11",
+       "url": "https://db.clex.ch/link/Bund/642.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "DBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +95,24 @@
    ],
    "marginalie": [
     "Die Kantonale Steuerverwaltung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 150 des Steuergesetzes (bGS 621.11 )",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -43,6 +135,20 @@
    ],
    "marginalie": [
     "Das Obergericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Gesetz über die Verwaltungsgerichtsbarkeit vom 25. April 1993 (bGS 143.6 )",
+     "links": [
+      {
+       "label": "143.6",
+       "url": "https://ar.clex.ch/data/143.6/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -53,7 +159,7 @@
     }
    ],
    "marginalie": [
-    "Organisation, Verfahren und Bezug *"
+    "Organisation, Verfahren und Bezug"
    ]
   },
   "6": {
@@ -120,6 +226,24 @@
    ],
    "marginalie": [
     "Kosten (Art. 144 Abs. 5 DBG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Gesetz über die Gebühren in Verwaltungssachen vom 25. April 1982 (bGS 233.2 )",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -131,6 +255,24 @@
    ],
    "marginalie": [
     "Veranlagungs- und Rechtsmittelverfahren (Art. 139 Abs. 2 DBG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 175 f. des Steuergesetzes (bGS 621.11 )",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -141,7 +283,7 @@
     }
    ],
    "marginalie": [
-    "Zeitpunkte (Art. 161 Abs. 1 DBG) *"
+    "Zeitpunkte (Art. 161 Abs. 1 DBG)"
    ]
   },
   "14": {
@@ -174,7 +316,25 @@
     }
    ],
    "marginalie": [
-    "Kantonale Kompetenz (Art. 167b Abs. 1 DBG) *"
+    "Kantonale Kompetenz (Art. 167b Abs. 1 DBG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 222 des Steuergesetzes (bGS 621.11 )",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -186,6 +346,24 @@
    ],
    "marginalie": [
     "Inventarisation (Art. 159 Abs. 1 DBG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 76 des Gesetzes über die Einführung des Schweizerischen Zivilgesetzbuches (EG zum ZGB) vom 27. April 1969 (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {

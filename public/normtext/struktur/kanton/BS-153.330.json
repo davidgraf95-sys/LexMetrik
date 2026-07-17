@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Weisung des Regierungsrates betreffend die Aufnahme von Telephongesprächen in der Verwaltung",
+  "erlassdatum": "Vom 17. September 1991 (Stand 3. Oktober 1991)"
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -52,6 +56,15 @@
    ],
    "marginalie": [
     "Datenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 5: Heute: Verordnung über die Information und den Datenschutz (Informations- und Datenschutzverordnung, IDV), SG 153.270.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -72,7 +85,16 @@
      "label": "IV. Schlussbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 3. 10. 1991.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

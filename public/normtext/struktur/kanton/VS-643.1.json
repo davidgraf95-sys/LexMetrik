@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Loi sur les droits de mutations",
+  "erlassdatum": "du 15.03.2012 (état 01.01.2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Le Grand Conseil du canton du Valais"
+   },
+   {
+    "rolle": "ingress",
+    "text": "vu les articles 23, 31 et 42 de la Constitution cantonale; sur la proposition du Conseil d’Etat,"
+   },
+   {
+    "rolle": "verb",
+    "text": "ordonne:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Dans la présente loi, toute désignation de personne, de statut ou de fonction vise indifféremment l'homme ou la femme.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

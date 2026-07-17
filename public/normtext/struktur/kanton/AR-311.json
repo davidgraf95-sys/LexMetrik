@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über das kantonale Strafrecht",
+  "erlassdatum": "vom 25.04.1982 (Stand 01.01.2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -20,7 +34,25 @@
     }
    ],
    "marginalie": [
-    "Anwendbarkeit des Schweizerischen Strafgesetzbuches [1]"
+    "Anwendbarkeit des Schweizerischen Strafgesetzbuches"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "StGB (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "3": {
@@ -65,6 +97,24 @@
    ],
    "marginalie": [
     "Befugnis der Gemeinden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Strafprozessordnung (StPO; SR 312.0 )",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -76,6 +126,24 @@
    ],
    "marginalie": [
     "Parlamentarische Immunität"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. Art. 347 Abs. 2 lit. a StGB (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -87,6 +155,24 @@
    ],
    "marginalie": [
     "Strafverfolgung gegen Mitglieder der obersten Behörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "vgl. Art. 347 Abs. 2 lit. b StGB (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -98,6 +184,24 @@
    ],
    "marginalie": [
     "Unterlassung der Nothilfe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "vgl. Art. 110 Abs. 3 StGB (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -251,7 +355,7 @@
     }
    ],
    "marginalie": [
-    "Unerlaubter Kontakt mit Personen in Untersuchungs- oder Ausschaffungshaft sowie im Straf- oder Massnahmenvollzug *"
+    "Unerlaubter Kontakt mit Personen in Untersuchungs- oder Ausschaffungshaft sowie im Straf- oder Massnahmenvollzug"
    ]
   },
   "26": {
@@ -263,6 +367,24 @@
    ],
    "marginalie": [
     "Diensterschwerung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 110 Abs. 3 StGB (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -285,6 +407,24 @@
    ],
    "marginalie": [
     "AmtspfIichtverletzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "vgl. Art. 110 Abs. 3 StGB (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -296,6 +436,24 @@
    ],
    "marginalie": [
     "Leistungsbetrug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Vgl. Art. 110 StGB (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -307,6 +465,243 @@
    ],
    "marginalie": [
     "Anpassung von Erlassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Die Änderungen wurden in den betroffenen Erlassen eingefügt",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "bGS 122.12",
+     "links": [
+      {
+       "label": "122.12",
+       "url": "https://ar.clex.ch/data/122.12/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "bGS 422.111",
+     "links": [
+      {
+       "label": "422.111",
+       "url": "https://ar.clex.ch/data/422.111/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-422.111"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "Hundegesetz (bGS 525.1 )",
+     "links": [
+      {
+       "label": "525.1",
+       "url": "https://ar.clex.ch/data/525.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-525.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Kantonale Fleischschauverordnung (bGS 815.13 ); aufgehoben am 18. November 1996",
+     "links": [
+      {
+       "label": "815.13",
+       "url": "https://ar.clex.ch/data/815.13/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-815.13"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "Assekuranzgesetz (bGS 862.1 ); aufgehoben am 1. Januar 1996",
+     "links": [
+      {
+       "label": "862.1",
+       "url": "https://ar.clex.ch/data/862.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-862.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "Wirtschaftsgesetz (bGS 955.11 ); aufgehoben am 30. April 1989",
+     "links": [
+      {
+       "label": "955.11",
+       "url": "https://ar.clex.ch/data/955.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-955.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "EG zum ZGB (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "Jagdgesetz (bGS 526.2 )",
+     "links": [
+      {
+       "label": "526.2",
+       "url": "https://ar.clex.ch/data/526.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-526.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "bGS 621.11",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "bGS 731.11",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "Gesundheitsgesetz (bGS 811.1 )",
+     "links": [
+      {
+       "label": "811.1",
+       "url": "https://ar.clex.ch/data/811.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "Kantonales Umweltschutzgesetz (bGS 814.0 ); in Kraft seit dem 1.10.2005",
+     "links": [
+      {
+       "label": "814.0",
+       "url": "https://ar.clex.ch/data/814.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-814.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "Spiel- und Lotteriegesetz (bGS 955.33 )",
+     "links": [
+      {
+       "label": "955.33",
+       "url": "https://ar.clex.ch/data/955.33/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "bGS 955.34",
+     "links": [
+      {
+       "label": "955.34",
+       "url": "https://ar.clex.ch/data/955.34/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "bGS 956.311",
+     "links": [
+      {
+       "label": "956.311",
+       "url": "https://ar.clex.ch/data/956.311/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-956.311"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -318,6 +713,22 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "25. April 1982",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "bGS 311 (aGS I/38)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

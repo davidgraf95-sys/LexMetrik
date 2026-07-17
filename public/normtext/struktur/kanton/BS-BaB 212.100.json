@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Stiftungsaufsicht des Bürgerrats über die der Bürgergemeinde der Stadt Basel zugeordneten selbständigen Stiftungen",
+  "erlassdatum": "Vom 17. Dezember 2013 (Stand 5. Januar 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt gestützt auf § 18a Abs. 1 des Gesetzes betreffend die Einführung des Schweizerischen Zivilgesetzbuches vom 27. April 1911 sowie §§ 2 Ziff. 6 und 14 Abs. 2 Ziff. 9 und 11 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985 folgendes Reglement:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 211.100.",
+    "links": [
+     {
+      "label": "211.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -131,6 +179,15 @@
    ],
    "marginalie": [
     "Gebührenkompetenz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 5. 1. 2014.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

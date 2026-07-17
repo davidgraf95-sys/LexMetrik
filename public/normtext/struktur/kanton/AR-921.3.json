@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz über die landwirtschaftliche Pacht",
+  "erlassdatum": "vom 27.10.1986 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des Bundesgesetzes vom 4. Oktober 1985 über die landwirtschaftliche Pacht und gestützt auf Art. 48 Ziff. 4 der Kantonsverfassung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "LPG (SR 221.213.2 )",
+    "links": [
+     {
+      "label": "221.213.2",
+      "url": "https://db.clex.ch/link/Bund/221.213.2/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,6 +58,15 @@
    "gliederung": [],
    "marginalie": [
     "Einspracheberechtigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Entfällt gemäss Genehmigungsbeschluss des Bundesrates vom 25. November 1986",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -35,12 +79,87 @@
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit der Gerichte und Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "ZPO (bGS 231.1 )",
+     "links": [
+      {
+       "label": "231.1",
+       "url": "https://ar.clex.ch/data/231.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "bGS 231.1",
+     "links": [
+      {
+       "label": "231.1",
+       "url": "https://ar.clex.ch/data/231.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "bGS 231.1",
+     "links": [
+      {
+       "label": "231.1",
+       "url": "https://ar.clex.ch/data/231.1/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "7": {
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 921.3",
+     "links": [
+      {
+       "label": "921.3",
+       "url": "https://ar.clex.ch/data/921.3/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-921.3"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "bGS 231.1",
+     "links": [
+      {
+       "label": "231.1",
+       "url": "https://ar.clex.ch/data/231.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Die Änderungen wurden im betreffenden Erlass eingefügt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

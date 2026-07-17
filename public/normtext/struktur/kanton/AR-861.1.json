@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Feuerschutz",
+  "erlassdatum": "vom 23.10.1995 (Stand 01.01.2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art.14 Abs.1 des Gesetzes vom 30. April 19951) über den Feuerschutz,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Feuerschutzgesetz (bGS 861.0 ), im folgenden kurz: Gesetz",
+    "links": [
+     {
+      "label": "861.0",
+      "url": "https://ar.clex.ch/data/861.0/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-861.0"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,6 +53,15 @@
    ],
    "marginalie": [
     "Allgemeine Sorgfaltspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 1 des Gesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -28,7 +76,28 @@
     }
    ],
    "marginalie": [
-    "Grundlagen [3]"
+    "Grundlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die in Abs. 1 und 2 erwähnten Unterlagen können beim Kantonalen Feuerschutzamt, 9102 Herisau, bezogen werden.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SR 946.513",
+     "links": [
+      {
+       "label": "946.513",
+       "url": "https://db.clex.ch/link/Bund/946.513/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -209,6 +278,15 @@
    ],
    "marginalie": [
     "Reinigungs- und Kontrollpflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "vgl. Art. 16",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -254,6 +332,24 @@
    ],
    "marginalie": [
     "Entschädigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 861.4",
+     "links": [
+      {
+       "label": "861.4",
+       "url": "https://ar.clex.ch/data/861.4/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-861.4"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -478,7 +574,39 @@
     }
    ],
    "marginalie": [
-    "Befreiungsgründe [7]"
+    "Befreiungsgründe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "vgl. Art. 6 Abs. 2 des Gesetzes (bGS 861.0 )",
+     "links": [
+      {
+       "label": "861.0",
+       "url": "https://ar.clex.ch/data/861.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-861.0"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "vgl. Art. 6 Abs. 2 lit. a bis c des Gesetzes",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "vgl. Art. 6 Abs. 2 lit. d des Gesetzes",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -536,6 +664,15 @@
    ],
    "marginalie": [
     "Feuerwehr a) im allgemeinen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 38 Abs. 3 und Art. 40 Abs. 3",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -691,6 +828,15 @@
    ],
    "marginalie": [
     "Feuerschutzkommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "vgl. Art. 7 Abs. 2 des Gesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "51": {
@@ -781,6 +927,24 @@
    ],
    "marginalie": [
     "Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "bGS 862.1",
+     "links": [
+      {
+       "label": "862.1",
+       "url": "https://ar.clex.ch/data/862.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-862.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "57": {
@@ -820,7 +984,23 @@
      "label": "VIII. Inkrafttreten"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "vgl. Art. 16 des Gesetzes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "bGS 861.1 = lfd. Nr. 381",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "41_bis": {
    "gliederung": [

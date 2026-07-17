@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement für den Betrieb einer Tierkörpersammelstelle (TKS)",
+  "erlassdatum": "Vom 8. Mai 2012 (Stand 17. Mai 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Gesundheitsdepartement,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Verordnung über die Entsorgung von tierischen Nebenprodukten (VTNP) vom 25. Mai 2011 und § 11 der Verordnung über die Bekämpfung von Tierseuchen vom 20. Dezember 2011,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 916.441.22.",
+    "links": [
+     {
+      "label": "916.441.22",
+      "url": "https://db.clex.ch/link/Bund/916.441.22/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 361.300.",
+    "links": [
+     {
+      "label": "361.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/361.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-361.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -59,6 +111,15 @@
    "gliederung": [],
    "marginalie": [
     "Strafbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 17. 5. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

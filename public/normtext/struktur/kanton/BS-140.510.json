@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Rechte von Menschen mit Behinderungen",
+  "erlassdatum": "Vom 23. Juni 2020 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Rechte von Menschen mit Behinderungen (Behindertenrechtegesetz, BRG) vom 18. September 2019, unter Verweis auf seine Erläuterungen Nr. P200905,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 140.500",
+    "links": [
+     {
+      "label": "140.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/140.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-140.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

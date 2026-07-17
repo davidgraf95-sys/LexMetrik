@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Verwendung von Tonaufzeichnungsgeräten durch die Zentralen Dienste",
+  "erlassdatum": "Vom 30. September 2014 (Stand 7. Februar 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat der Stadt Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 14 Abs. 2 Ziff. 9 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -31,7 +66,7 @@
     }
    ],
    "marginalie": [
-    "Information der Bürgerrechtsbewerbenden *"
+    "Information der Bürgerrechtsbewerbenden"
    ]
   },
   "4": {
@@ -98,6 +133,15 @@
    ],
    "marginalie": [
     "Auskunftsrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 26. 10. 2014.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

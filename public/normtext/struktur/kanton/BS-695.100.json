@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebäudeversicherungsgesetz",
+  "erlassdatum": "Vom 22. März 1973 (Stand 1. Januar 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -87,6 +105,15 @@
    ],
    "marginalie": [
     "Änderungen der Baukosten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 8: Für das Jahr 2023 beträgt der Baukostenindex 149,2 Punkte (KB 19. 10. 2022).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -372,7 +399,7 @@
     }
    ],
    "marginalie": [
-    "Rekurse *"
+    "Rekurse"
    ]
   },
   "35": {
@@ -394,7 +421,16 @@
     }
    ],
    "marginalie": [
-    "Änderung des Gesetzes betreffend Organisation und Geschäftsordnung des Regierungsrates des Kantons Basel-Stadt [2]"
+    "Änderung des Gesetzes betreffend Organisation und Geschäftsordnung des Regierungsrates des Kantons Basel-Stadt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 36 (Änderung des aufgehobenen Geschäftsordnungsgesetzes des Regierungsrates) wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "37": {
@@ -417,6 +453,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Mit RRB vom 14. 8. 1973 auf den 1. 1. 1974 in Wirksamkeit erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

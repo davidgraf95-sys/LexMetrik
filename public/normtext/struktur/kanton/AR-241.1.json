@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs",
+  "erlassdatum": "vom 27.04.1997 (Stand 01.01.2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 87 Abs. 4 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +71,24 @@
    ],
    "marginalie": [
     "Entschädigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Gebührenverordnung zum SchKG (GebV SchKG; SR 281.35 )",
+     "links": [
+      {
+       "label": "281.35",
+       "url": "https://db.clex.ch/link/Bund/281.35/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GEBV_SCHKG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -53,7 +110,21 @@
     }
    ],
    "marginalie": [
-    "Schuldbetreibung gegen öffentlich-rechtliche Körperschaften und Anstalten [4]"
+    "Schuldbetreibung gegen öffentlich-rechtliche Körperschaften und Anstalten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "BG über Schuldbetreibung gegen Gemeinden und andere Körperschaften des kantonalen öffentlichen Rechts (SR 282.11 )",
+     "links": [
+      {
+       "label": "282.11",
+       "url": "https://db.clex.ch/link/Bund/282.11/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "6": {
@@ -87,6 +158,24 @@
    ],
    "marginalie": [
     "Entschädigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "GebV SchKG (SR 281.35 )",
+     "links": [
+      {
+       "label": "281.35",
+       "url": "https://db.clex.ch/link/Bund/281.35/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GEBV_SCHKG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -131,6 +220,20 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "V über die Überwachung der Betreibungs- und Konkursämter (bGS 241.11 )",
+     "links": [
+      {
+       "label": "241.11",
+       "url": "https://ar.clex.ch/data/241.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -142,6 +245,40 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SchKG (SR 281.1 )",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -153,6 +290,20 @@
    ],
    "marginalie": [
     "Berichterstattung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 5 der V über die Rechtspflege (bGS 145.32 )",
+     "links": [
+      {
+       "label": "145.32",
+       "url": "https://ar.clex.ch/data/145.32/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -164,6 +315,24 @@
    ],
    "marginalie": [
     "Verfahren nach SchKG"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Zivilprozessordnung (ZPO; SR 272 )",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -175,6 +344,24 @@
    ],
    "marginalie": [
     "Banken"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "BankG (SR 952.0 )",
+     "links": [
+      {
+       "label": "952.0",
+       "url": "https://db.clex.ch/link/Bund/952.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BANKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -197,6 +384,40 @@
    ],
    "marginalie": [
     "Benachrichtigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 3 Ziff. 12 EG zum ZGB (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -230,6 +451,32 @@
    ],
    "marginalie": [
     "Archivierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "bGS 421.11 (heute: Archivgesetz; bGS 421.10)",
+     "links": [
+      {
+       "label": "421.11",
+       "url": "https://ar.clex.ch/data/421.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "V des Bundesgerichts über die Aufbewahrung der Betreibungs- und Konkursakten (SR 281.33 )",
+     "links": [
+      {
+       "label": "281.33",
+       "url": "https://db.clex.ch/link/Bund/281.33/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -241,6 +488,24 @@
    ],
    "marginalie": [
     "Rückgriff"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "EG zum ZGB (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -252,6 +517,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "27. April 1997",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -274,6 +548,24 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "bGS 211.1",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -285,6 +577,15 @@
    ],
    "marginalie": [
     "Aufgehobenes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "bGS 241.1; aGS I/52",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

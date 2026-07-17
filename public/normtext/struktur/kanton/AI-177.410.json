@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Honorare der Anwälte",
+  "erlassdatum": "vom 07.10.2002 (Stand 01.01.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Appenzell I. Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 9 Abs. 1 des Anwaltsgesetzes vom 28. April 2002 (AnwG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +28,15 @@
    ],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Die Verwendung der männlichen Bezeichnungen gilt sinngemäss für beide Geschlechter.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -195,7 +222,7 @@
     }
    ],
    "marginalie": [
-    "Familienrecht *"
+    "Familienrecht"
    ]
   },
   "17": {
@@ -270,7 +297,7 @@
     }
    ],
    "marginalie": [
-    "Allgemeiner Grundsatz *"
+    "Allgemeiner Grundsatz"
    ]
   },
   "22": {

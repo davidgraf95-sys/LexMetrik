@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend Einführung des Bundesgesetzes über Schuldbetreibung und Konkurs",
+  "erlassdatum": "Vom 22. Juni 1891 (Stand 13. Juni 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "hat zur Einführung des Bundesgesetzes über Schuldbetreibung und Konkurs vom 11. April 1889 beschlossen was folgt:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 281.1.",
+    "links": [
+     {
+      "label": "281.1",
+      "url": "https://db.clex.ch/link/Bund/281.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "SCHKG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,9 +61,7 @@
      "label": "I. Organisation der Behörden"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -100,9 +133,7 @@
      "label": "I. Organisation der Behörden"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -147,7 +178,16 @@
      "label": "II. Vorschriften betreffend das Verfahren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 16: Dieses Gesetz ist aufgehoben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "17": {
    "gliederung": [
@@ -192,7 +232,23 @@
      "label": "II. Vorschriften betreffend das Verfahren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 21: Ein ursprünglich erster Absatz aufgehoben durch § 255 des EG zum ZGB.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "22": {
    "gliederung": [
@@ -201,7 +257,16 @@
      "label": "II. Vorschriften betreffend das Verfahren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 22 Ziff. 4: Durch Änderung des SchKG vom 16. 12. 1994 wurde Art. 136bis aufgehoben und durch Art. 132a ersetzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "23": {
    "gliederung": [
@@ -219,7 +284,16 @@
      "label": "II. Vorschriften betreffend das Verfahren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 24 muss unter Umständen, nachdem das ZGB an die Stelle des früheren kantonalen Zivilrechts getreten ist, als hinfällig betrachtet werden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "25": {
    "gliederung": [
@@ -255,8 +329,15 @@
      "label": "III. Strafbestimmungen"
     }
    ],
-   "marginalie": [
-    "[7]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "§ 28 wird hier nicht abgedruckt (Änderung des aufgehobenen Polizeistrafgesetzes).",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "29": {
@@ -266,8 +347,15 @@
      "label": "III. Strafbestimmungen"
     }
    ],
-   "marginalie": [
-    "[8]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "§ 29 (vor Inkrafttreten des EG zum ZGB: § 33) enthält Änderungen zum inzwischen aufgehobenen kantonalen Strafgesetz.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "30": {
@@ -277,8 +365,15 @@
      "label": "III. Strafbestimmungen"
     }
    ],
-   "marginalie": [
-    "[9]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 30 (vor Inkrafttreten des EG zum ZGB: § 34) enthält Änderungen zum inzwischen aufgehobenen kantonalen Strafgesetz.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "31": {
@@ -288,8 +383,15 @@
      "label": "III. Strafbestimmungen"
     }
    ],
-   "marginalie": [
-    "[10]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "§ 31 wurde zu § 27 gemäss § 255 des EG zum ZGB. Er enthält Änderungen zum inzwischen aufgehobenen kantonalen Strafgesetz.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "32": {
@@ -299,8 +401,15 @@
      "label": "III. Strafbestimmungen"
     }
    ],
-   "marginalie": [
-    "[11]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "§ 32 wurde zu § 28 gemäss § 255 des EG zum ZGB. Er enthält Änderungen zum inzwischen aufgehobenen kantonalen Strafgesetz.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "33": {
@@ -310,8 +419,15 @@
      "label": "III. Strafbestimmungen"
     }
    ],
-   "marginalie": [
-    "[12]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "§ 33 enthält Änderungen zum inzwischen aufgehobenen kantonalen Strafgesetz.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "34": {
@@ -321,8 +437,15 @@
      "label": "III. Strafbestimmungen"
     }
    ],
-   "marginalie": [
-    "[13]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "§ 34 enthält Änderungen zum inzwischen aufgehobenen kantonalen Strafgesetz.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "35": {
@@ -395,8 +518,15 @@
      "label": "V. Übergangsbestimmungen"
     }
    ],
-   "marginalie": [
-    "[14]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "§ 42 ist als Übergangsbestimmung heute nicht mehr von Bedeutung.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "43": {
@@ -406,8 +536,15 @@
      "label": "V. Übergangsbestimmungen"
     }
    ],
-   "marginalie": [
-    "[15]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "§ 43 ist als Übergangsbestimmung heute nicht mehr von Bedeutung.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "44": {
@@ -417,8 +554,15 @@
      "label": "V. Übergangsbestimmungen"
     }
    ],
-   "marginalie": [
-    "[16]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "§ 44 ist als Übergangsbestimmung heute nicht mehr von Bedeutung.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "45": {
@@ -428,8 +572,15 @@
      "label": "V. Übergangsbestimmungen"
     }
    ],
-   "marginalie": [
-    "[17]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "§ 45 ist als Übergangsbestimmung heute nicht mehr von Bedeutung.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "46": {
@@ -448,7 +599,23 @@
      "label": "V. Übergangsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "§ 47: Durch Änderung des SchKG vom 16. 12. 1994 wurde Art. 318 zu Art. 351 und Art. 319, da eine gegenstandslose Übergangsbestimmung, aufgehoben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "Die Titel der aufgehobenen Erlasse werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "45_a": {
    "gliederung": [

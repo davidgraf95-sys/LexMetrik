@@ -1,40 +1,273 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz vom 13. Juni 1928 betreffend Massnahmen gegen die Tuberkulose",
+  "erlassdatum": "vom 28.05.1931 (Stand 01.01.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 19 des Bundesgesetzes vom 13. Juni 1928 betreffend Massnahmen gegen die Tuberkulose und Art. 48 Ziff. 4 der Kantonsverfassung vom 26. April 1908,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 818.102",
+    "links": [
+     {
+      "label": "818.102",
+      "url": "https://db.clex.ch/link/Bund/818.102/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "aGS I/1 (heute: KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Kantonaler Einführungserlass"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 818.102.1",
+     "links": [
+      {
+       "label": "818.102.1",
+       "url": "https://db.clex.ch/link/Bund/818.102.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Heute: bundesrätliche V vom 11. Januar 1955 (SR 818.161.3 )",
+     "links": [
+      {
+       "label": "818.161.3",
+       "url": "https://db.clex.ch/link/Bund/818.161.3/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
     "Kantonale Aufsichts- und Vollziehungsbehörde und deren Organe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Die Vollzugs- und Aufsichtsaufgaben werden in Wirklichkeit heute zum grössten Teil von der Stiftung für die Bekämpfung der Tuberkulose und von Lungenkrankheiten wahrgenommen; vgl. bGS 816.111. Der Kantonsarzt arbeitet mit dieser Organisation zusammen.",
+     "links": [
+      {
+       "label": "816.111",
+       "url": "https://ar.clex.ch/data/816.111/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Heute: Lungenliga Appenzell A.Rh. (vgl. V über die Stiftung \"Lungenliga Appenzell A.Rh.\"; bGS 816.111 )",
+     "links": [
+      {
+       "label": "bGS 816.111",
+       "url": "https://ar.clex.ch/data/bGS%20816.111/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Schul- und Fürsorgearzt [7]"
+    "Schul- und Fürsorgearzt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vgl. V über den ärztlichen Dienst in den Schulen und Heimen (bGS 411.4 ); ferner Art. 16 der V vom 16. Oktober 1967 über die Organe des Gesundheitswesens und über die medizinischen und pharmazeutischen Berufe (bGS 811.11 )",
+     "links": [
+      {
+       "label": "411.4",
+       "url": "https://ar.clex.ch/data/411.4/de"
+      },
+      {
+       "label": "811.11",
+       "url": "https://ar.clex.ch/data/811.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.11"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
     "Mitarbeit des Stiftungsrates für Tuberkulosenfürsorge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Heute: Stiftung für die Bekämpfung der Tuberkulose und von Lungenkrankheiten (vgl. aGS V/690)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Heute: Stiftung für die Bekämpfung der Tuberkulose und von Lungenkrankheiten (vgl. aGS V/690)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "bGS 816.111",
+     "links": [
+      {
+       "label": "816.111",
+       "url": "https://ar.clex.ch/data/816.111/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Die Wahl der Fürsorgestellen richtet sich heute nach § 7 der Statuten der App. A.Rh. Liga gegen Tuberkulose und Lungenkrankheiten vom 20. August 1976: «Die Inhaber der Tbc-Fürsorgestellen werden vom Gemeinderat bestimmt und vom Stiftungsrate bestätigt.»",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Die Wahl der Fürsorgestellen richtet sich heute nach §7 der Statuten der App. A.Rh. Liga gegen Tuberkulose und Lungenkrankheiten vom 20. August 1976: «Die Inhaber der Tbc-Fürsorgestellen werden vom Gemeinderat bestimmt und vom Stiftungsrat bestätigt.»",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "5": {
    "gliederung": [],
    "marginalie": [
     "Fürsorgestellen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Heute: den Fürsorgestellen und dem Sekretariat der Liga gegen Tuberkulose und Lungenkrankheiten",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "Heute: zuhanden des behandelnden Arztes",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Durch die Praxis auf Grund des eidg. Epidemiengesetzes (SR 818.101 ) überholt",
+     "links": [
+      {
+       "label": "818.101",
+       "url": "https://db.clex.ch/link/Bund/818.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EPG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "Durch die Praxis überholt",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
    "gliederung": [],
    "marginalie": [
     "Meldewesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Heute: Kantonsarzt; vgl. Art. 12 und 27 des eidg. Epidemiengesetzes (SR 818.101 ), sowie Art. 5 und Art. 10 Abs. 2 lit. g der V vom 15. März 1976 über die Organe des Gesundheitswesens und über die medizinischen und pharmazeutischen Berufe (bGS 811.11 )",
+     "links": [
+      {
+       "label": "818.101",
+       "url": "https://db.clex.ch/link/Bund/818.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EPG"
+       }
+      },
+      {
+       "label": "811.11",
+       "url": "https://ar.clex.ch/data/811.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -45,12 +278,54 @@
   },
   "8": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Heute: Bundesrätliche V vom 11. Januar 1955 (SR 818.161.3 )",
+     "links": [
+      {
+       "label": "818.161.3",
+       "url": "https://db.clex.ch/link/Bund/818.161.3/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [],
    "marginalie": [
     "Individuelle Massnahmen in den einzelnen gemeldeten Krankheitsfällen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "SR 818.102.1",
+     "links": [
+      {
+       "label": "818.102.1",
+       "url": "https://db.clex.ch/link/Bund/818.102.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Heute erfolgt die Registrierung durch das Sekretariat der Liga gegen Tuberkulose und Lungenkrankheiten",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Wird nicht mehr gehandhabt",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -63,12 +338,35 @@
    "gliederung": [],
    "marginalie": [
     "Spezielle Massnahmen in Schulen und Anstalten. Private Schulen und Anstalten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Vgl. V über den ärztlichen Dienst in Schulen und Heimen (bGS 411.4 )",
+     "links": [
+      {
+       "label": "411.4",
+       "url": "https://ar.clex.ch/data/411.4/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
    "gliederung": [],
    "marginalie": [
-    "Registrierung [23]"
+    "Registrierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "Heute werden die Impflisten vom Schularzt geführt und die Schirmbilder vom Sekretariat der Liga gegen Tuberkulose und Lungenkrankheiten geführt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "13": {
@@ -97,7 +395,21 @@
   },
   "17": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "bGS 412.22",
+     "links": [
+      {
+       "label": "412.22",
+       "url": "https://ar.clex.ch/data/412.22/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "19": {
    "gliederung": [],
@@ -108,7 +420,16 @@
   "20": {
    "gliederung": [],
    "marginalie": [
-    "Bakteriologische Untersuchungen [25]"
+    "Bakteriologische Untersuchungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "Heute werden die bakteriologischen Untersuchungen im bakteriologischen Institut des Kantonsspitals St. Gallen durchgeführt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "22": {
@@ -121,6 +442,15 @@
    "gliederung": [],
    "marginalie": [
     "Aufklärung über die Tuberkulose"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "Heute: Stiftung für die Bekämpfung der Tuberkulose und von Lungenkrankheiten (vgl. aGS V/690)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -133,6 +463,28 @@
    "gliederung": [],
    "marginalie": [
     "Rekursverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "aGS I/26. Heute gilt Art. 8 des EG zum ZGB vom 27. April 1969 (bGS 211.1 ) sowie das Fristenlaufgesetz vom 26. April 1970 (bGS 143.4 ).",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      },
+      {
+       "label": "143.4",
+       "url": "https://ar.clex.ch/data/143.4/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -145,11 +497,41 @@
    "gliederung": [],
    "marginalie": [
     "Strafbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "Heute: Kantonsgericht (vgl. Art. 2 der V vom 18. Februar 1974 über die Zuständigkeit und die Organisation der kantonalen Gerichte, bGS 145.33 )",
+     "links": [
+      {
+       "label": "145.33",
+       "url": "https://ar.clex.ch/data/145.33/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "28": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "28. Mai 1931",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "9. Juni 1931",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

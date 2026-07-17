@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Gerichtsgebühren",
+  "erlassdatum": "Vom 16. Januar 1975 (Stand 5. Juli 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf den Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,11 +29,38 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Das Gesetz ist spätestens mit dem Erlass der Verordnung über die Gerichtsgebühren vom 4. 3. 1975 (SG 154.810) in Wirksamkeit getreten.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2_a": {
    "gliederung": [],

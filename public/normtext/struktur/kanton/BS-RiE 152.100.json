@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Geschäftsordnung des Einwohnerrats der Einwohnergemeinde Riehen",
+  "erlassdatum": "Vom 24. Oktober 2002 (Stand 20. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat der Einwohnergemeinde Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag seiner Kommission und gestützt auf die §§ 21 Abs. 3 lit. b, 22 Abs. 3 der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002 folgende Geschäftsordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 111.100.",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +41,15 @@
    ],
    "marginalie": [
     "Sitzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -163,7 +203,7 @@
     }
    ],
    "marginalie": [
-    "Ratsdienst *"
+    "Ratsdienst"
    ]
   },
   "16": {
@@ -468,7 +508,7 @@
     }
    ],
    "marginalie": [
-    "Planungsauftrag *"
+    "Planungsauftrag"
    ]
   },
   "39": {
@@ -591,7 +631,7 @@
     }
    ],
    "marginalie": [
-    "Aufgaben *"
+    "Aufgaben"
    ]
   },
   "48": {
@@ -651,7 +691,7 @@
     }
    ],
    "marginalie": [
-    "Beschlussfähigkeit *"
+    "Beschlussfähigkeit"
    ]
   },
   "52": {
@@ -696,7 +736,7 @@
     }
    ],
    "marginalie": [
-    "Vertraulichkeit *"
+    "Vertraulichkeit"
    ]
   },
   "55": {
@@ -774,7 +814,7 @@
     }
    ],
    "marginalie": [
-    "Finanzkommission *"
+    "Finanzkommission"
    ]
   },
   "43_b": {

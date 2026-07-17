@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Geschäftsordnung der Bürgerversammlung Riehen",
+  "erlassdatum": "Vom 25. November 1985 (Stand 24. März 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bürgerversammlung der Bürgergemeinde Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von § 10 der Gemeindeordnung der Bürgergemeinde Riehen vom 10. Juni 1985 folgende Geschäftsordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiB 111.100.",
+    "links": [
+     {
+      "label": "RiB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -241,6 +272,15 @@
    ],
    "marginalie": [
     "Publikation und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 14. 6. 1986.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

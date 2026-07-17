@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz über das Messwesen",
+  "erlassdatum": "vom 27.10.2008 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 9. Juni 1977 über das Messwesen und die Verordnung vom 15. Februar 2006 über die Aufgaben und Befugnisse der Kantone im Messwesen,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 941.20",
+    "links": [
+     {
+      "label": "941.20",
+      "url": "https://db.clex.ch/link/Bund/941.20/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 941.292",
+    "links": [
+     {
+      "label": "941.292",
+      "url": "https://db.clex.ch/link/Bund/941.292/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,12 +101,30 @@
    "gliederung": [],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 956.11 (aGS I/77)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "1. Dezember 2008 (RRB vom 11. November 2008; Abl. 2008, S. 1135)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

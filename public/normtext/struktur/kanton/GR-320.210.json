@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gerichtsgebühren in Zivilverfahren",
+  "erlassdatum": "Vom 02.01.2025 (Stand 01.01.2025)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 51a Abs. 3 der Kantonsverfassung sowie Art. 15 Abs. 4 und Art. 16 Abs. 2 des Einführungsgesetzes zur Schweizerischen Zivilprozessordnung",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "vom Obergericht erlassen am 2. Januar 2025"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BR 110.100",
+    "links": [
+     {
+      "label": "110.100",
+      "url": "https://www.gr-lex.gr.ch/data/110.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BR 320.100",
+    "links": [
+     {
+      "label": "320.100",
+      "url": "https://www.gr-lex.gr.ch/data/320.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +54,32 @@
    ],
    "marginalie": [
     "Allgemeines"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BR 492.100",
+     "links": [
+      {
+       "label": "492.100",
+       "url": "https://www.gr-lex.gr.ch/data/492.100/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "BR 370.120",
+     "links": [
+      {
+       "label": "370.120",
+       "url": "https://www.gr-lex.gr.ch/data/370.120/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -25,6 +95,24 @@
    ],
    "marginalie": [
     "Schlichtungsverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 272",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -70,6 +158,24 @@
    ],
    "marginalie": [
     "Summarisches Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 281.35",
+     "links": [
+      {
+       "label": "281.35",
+       "url": "https://db.clex.ch/link/Bund/281.35/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GEBV_SCHKG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -115,6 +221,20 @@
    ],
    "marginalie": [
     "Erledigung in eindeutigen Fällen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "BR 173.000",
+     "links": [
+      {
+       "label": "173.000",
+       "url": "https://www.gr-lex.gr.ch/data/173.000/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -175,6 +295,24 @@
    ],
    "marginalie": [
     "Als Beschwerdeinstanz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 281.35",
+     "links": [
+      {
+       "label": "281.35",
+       "url": "https://db.clex.ch/link/Bund/281.35/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GEBV_SCHKG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -220,6 +358,20 @@
    ],
    "marginalie": [
     "Erledigung in eindeutigen Fällen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "BR 173.000",
+     "links": [
+      {
+       "label": "173.000",
+       "url": "https://www.gr-lex.gr.ch/data/173.000/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -276,6 +428,24 @@
    ],
    "marginalie": [
     "Entschädigung und Spesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SR 272",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

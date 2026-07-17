@@ -1,5 +1,95 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag betreffend die Zusammenarbeit der Gemeinden Bettingen und Riehen für den Betrieb und die Finanzierung ihrer Schulen",
+  "erlassdatum": "Vom 6. Januar 2009 (Stand 1. Januar 2022)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Die Einwohnergemeinde Bettingen, vertreten durch den Gemeinderat, nachstehend Bettingen genannt, handelnd unter dem Vorbehalt der Genehmigung durch die Gemeindeversammlung, und die Einwohnergemeinde Riehen, vertreten durch den Gemeinderat, nachstehend Riehen genannt, handelnd unter dem Vorbehalt der Genehmigung durch den Einwohnerrat, vereinbaren gestützt auf § 67 Abs. 2 der Kantonsverfassung vom 23. März 2005, § 3 des Gemeindegesetzes vom 17. Oktober 1984 und in Umsetzung des § 2a des Schulgesetzes vom 4. April 1929 und der Vereinbarung zwischen dem Kanton Basel-Stadt und den Gemeinden Bettingen und Riehen betreffend die kommunale Primarstufe (Schulvereinbarung) vom 23. Februar 2016 betreffend die Zusammenarbeit der beiden Gemeinden für den Betrieb und die Finanzierung der öffentlichen Schulen der Gemeinden Bettingen und Riehen was folgt:",
+    "fnNrs": [
+     "2",
+     "3",
+     "4",
+     "5"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 111.100",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 410.100; massgeblich sind namentlich die Änderungen des Schulgesetzes vom 6. 6. 2007 und vom 20. 2. 2008, mit Wirksamkeit per 1. 8. 2009.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SG 412.100 / BeE 412.100 / RiE 412.100.",
+    "links": [
+     {
+      "label": "412.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/412.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-412.100"
+      }
+     },
+     {
+      "label": "BeE 412.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20412.100/de"
+     },
+     {
+      "label": "RiE 412.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20412.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -68,8 +158,29 @@
      "label": "2.2.1. Gemeinderäte Bettingen und Riehen"
     }
    ],
-   "marginalie": [
-    "*"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 412.100 / BeE 412.100 / RiE 412.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "BeE 111.100.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "RiE 111.100.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -87,9 +198,7 @@
      "label": "2.2.2. Schulausschuss Bettingen / Riehen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -106,9 +215,7 @@
      "label": "2.2.3. Zuständige Verwaltungsabteilung der Gemeindeverwaltung Riehen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [
@@ -125,9 +232,7 @@
      "label": "2.2.4. ..."
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -144,9 +249,7 @@
      "label": "2.2.5. Gemeinsame Schulrekurskommission"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -253,6 +356,22 @@
    ],
    "marginalie": [
     "Schulrekurse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "BeE 111.100.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "RiE 111.100.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -262,7 +381,16 @@
      "label": "8. Beilegung von Streitigkeiten"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SR 272.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "20": {
    "gliederung": [

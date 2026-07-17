@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Registergesetz",
+  "erlassdatum": "vom 21.08.2019 (Stand 01.11.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 2, Art. 12 und Art. 13 des Registergesetzes vom 29. Oktober 2018,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 122.1",
+    "links": [
+     {
+      "label": "122.1",
+      "url": "https://ar.clex.ch/data/122.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-122.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +60,20 @@
    ],
    "marginalie": [
     "Koordinationsstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Registerharmonisierungsgesetz (RHG; SR 431.02 )",
+     "links": [
+      {
+       "label": "431.02",
+       "url": "https://db.clex.ch/link/Bund/431.02/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -76,6 +129,20 @@
    ],
    "marginalie": [
     "Auslandschweizerinnen und Auslandschweizer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Auslandschweizergesetz (ASG; SR 195.1 )",
+     "links": [
+      {
+       "label": "195.1",
+       "url": "https://db.clex.ch/link/Bund/195.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {

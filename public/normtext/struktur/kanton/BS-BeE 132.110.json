@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Öffnungszeiten der Wahllokale",
+  "erlassdatum": "Vom 22. Januar 2002 (Stand 2. September 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 14 Abs. 2 der Ordnung über Wahlen und Abstimmungen der Einwohnergemeinde Bettingen vom 3. Dezember 1996,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BeE 132.100.",
+    "links": [
+     {
+      "label": "BeE 132.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20132.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,7 +42,16 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 3. 3. 2002.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

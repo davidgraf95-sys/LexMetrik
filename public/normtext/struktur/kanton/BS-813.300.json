@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend das ständige staatliche Einigungsamt",
+  "erlassdatum": "Vom 9. November 1911 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -204,7 +214,16 @@
      "label": "(II.)D. Wahlvorschriften"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Siehe hiezu auch die Verordnung über das Verfahren vor dem Einigungsamt als vertraglichem Schiedsgericht vom 30. 4. 1940 (SG 813.400).",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
+   ]
   },
   "14": {
    "gliederung": [
@@ -608,7 +627,16 @@
      "label": "(V.)III. Beginn der Wirksamkeit des Gesetzes"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 3. 1912.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Einführung von weiteren Bewilligungsgründen für den Erwerb von Grundstücken durch Personen im Ausland",
+  "erlassdatum": "Vom 14. Januar 1988 (Stand 1. Oktober 1997)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3, 15 und 36 des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland (BewG) vom 16. Dezember 1983, auf Antrag des Regierungsrates,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 211.412.41.",
+    "links": [
+     {
+      "label": "211.412.41",
+      "url": "https://db.clex.ch/link/Bund/211.412.41/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BEWG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,7 +46,16 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 28. 2. 1988.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

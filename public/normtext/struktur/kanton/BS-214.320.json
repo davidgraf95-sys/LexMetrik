@@ -1,5 +1,211 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die amtliche Vermessung",
+  "erlassdatum": "Vom 7. August 2012 (Stand 1. Februar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über Geoinformation (GeoIG) vom 5. Oktober 2007, die Verordnung über Geoinformation (GeoIV) vom 21. Mai 2008, die Verordnung über die geografischen Namen (GeoNV) vom 21. Mai 2008, die Verordnung über die amtliche Vermessung (VAV) vom 18. November 1992, die Technische Verordnung des VBS über die amtliche Vermessung (TVAV) vom 10. Juni 1994, das Gesetz über die Einführung des Zivilgesetzbuches vom 27. April 1911 und die Verordnung zum Einführungsgesetz zum Schweizerischen Zivilgesetzbuch vom 9. Dezember 1911, das Geoinformationsgesetz (KGeoIG) vom 16. November 2011, die Verordnung über die Inanspruchnahme der Allmend (Allmendverordnung) vom 4. August 2009, das Bau- und Planungsgesetz (BPG) vom 17. November 1999, die Bau- und Planungsverordnung (BPV) vom 19. Dezember 2000 und Art. 660a und 660b des Schweizerische Zivilgesetzbuches (ZGB) vom 10. Dezember 1907,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 510.62.",
+    "links": [
+     {
+      "label": "510.62",
+      "url": "https://db.clex.ch/link/Bund/510.62/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 510.620.",
+    "links": [
+     {
+      "label": "510.620",
+      "url": "https://db.clex.ch/link/Bund/510.620/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 510.625.",
+    "links": [
+     {
+      "label": "510.625",
+      "url": "https://db.clex.ch/link/Bund/510.625/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 211.432.2.",
+    "links": [
+     {
+      "label": "211.432.2",
+      "url": "https://db.clex.ch/link/Bund/211.432.2/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR 211.432.21.",
+    "links": [
+     {
+      "label": "211.432.21",
+      "url": "https://db.clex.ch/link/Bund/211.432.21/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SG 211.100.",
+    "links": [
+     {
+      "label": "211.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "SG 211.110.",
+    "links": [
+     {
+      "label": "211.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "8",
+    "text": "SG 214.300.",
+    "links": [
+     {
+      "label": "214.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/214.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-214.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "9",
+    "text": "SG 724.140.",
+    "links": [
+     {
+      "label": "724.140",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.140/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.140"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "10",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "11",
+    "text": "SG 730.110.",
+    "links": [
+     {
+      "label": "730.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "12",
+    "text": "SR 210.",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -342,9 +548,7 @@
      "label": "VII. Flächenmasse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [

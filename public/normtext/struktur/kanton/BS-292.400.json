@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Notariatstarif",
+  "erlassdatum": "Vom 19. Juni 2001 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Anwendung von § 23 des Notariatsgesetzes vom 27. April 1911,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 292.100.",
+    "links": [
+     {
+      "label": "292.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/292.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-292.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

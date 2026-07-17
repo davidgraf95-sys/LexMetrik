@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Geoinformationsverordnung",
+  "erlassdatum": "Vom 7. August 2012 (Stand 12. Februar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Geoinformationsgesetz (KGeoIG) vom 16. November 2011,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 214.300.",
+    "links": [
+     {
+      "label": "214.300.",
+      "url": "https://www.gesetzessammlung.bs.ch/data/214.300./de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +56,20 @@
    ],
    "marginalie": [
     "Geobasisdaten und andere Geodaten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Geobasisdaten.ch",
+     "links": [
+      {
+       "label": "Geobasisdaten.ch",
+       "url": "https://geobasisdaten.ch/?lang=de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -240,7 +289,7 @@
     }
    ],
    "marginalie": [
-    "Bereitstellungsgebühr für beschränkt öffentliche Geodaten *"
+    "Bereitstellungsgebühr für beschränkt öffentliche Geodaten"
    ]
   },
   "23": {
@@ -305,9 +354,7 @@
      "label": "F. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27_a": {
    "gliederung": [

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Behindertenhilfe",
+  "erlassdatum": "Vom 14. September 2016 (Stand 1. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über die Institutionen zur Förderung der Eingliederung von invaliden Personen (IFEG) vom 6. Oktober 2006, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 14.1356.01 vom 23. Juni 2015 sowie in den Bericht der Gesundheits- und Sozialkommission Nr. 14.1356.02 vom 19. Mai 2016,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 831.26.",
+    "links": [
+     {
+      "label": "831.26",
+      "url": "https://db.clex.ch/link/Bund/831.26/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -482,6 +517,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Abschnitt A vom Eidgenössischen Departement des Innern genehmigt am 18. 2. 1988.",
+     "links": [],
+     "absatz": "8",
+     "item": null
+    }
    ]
   }
  }

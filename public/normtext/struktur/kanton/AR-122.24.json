@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung des Kantonsrates zum Asylwesen",
+  "erlassdatum": "vom 24.09.2007 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Asylgesetzgebung des Bundes und auf das Gesetz vom 24. September 2006 über die öffentliche Sozialhilfe,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 851.1",
+    "links": [
+     {
+      "label": "851.1",
+      "url": "https://ar.clex.ch/data/851.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-851.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +47,23 @@
      "label": "I. Zweck, Geltungsbereich"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Asylsuchende mit Ausweis N und Schutzbedürftige ohne Aufenthaltsbewilligung mit Ausweis S",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Ausweis F",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -40,7 +95,7 @@
     }
    ],
    "marginalie": [
-    "Betreuungsdienst und Amt für Inneres a) Allgemein *"
+    "Betreuungsdienst und Amt für Inneres a) Allgemein"
    ]
   },
   "5": {
@@ -62,7 +117,7 @@
     }
    ],
    "marginalie": [
-    "c) Amt für Inneres *"
+    "c) Amt für Inneres"
    ]
   },
   "7": {
@@ -74,6 +129,20 @@
    ],
    "marginalie": [
     "Gemeinden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Gesetz über Schule und Bildung (bGS 411.0 ); Vormundschaftsrecht",
+     "links": [
+      {
+       "label": "411.0",
+       "url": "https://ar.clex.ch/data/411.0/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -244,7 +313,16 @@
      "label": "VIII. Schlussbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "bGS 122.24 (lf. Nr. 413)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

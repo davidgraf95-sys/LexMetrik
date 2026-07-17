@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die zentrale elektronische Bewilligungsplattform",
+  "erlassdatum": "Vom 12. April 2011 (Stand 18. Dezember 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 4 des Gesetzes betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz, OG) vom 22. April 1976,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -142,6 +181,15 @@
    ],
    "marginalie": [
     "Aufgaben der Koordinationsstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 13 Abs. 2 lit. f redaktionell ergänzt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -164,6 +212,15 @@
    ],
    "marginalie": [
     "Zugang zu den eigenen Personendaten und Berichtigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 21. 4. 2011.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

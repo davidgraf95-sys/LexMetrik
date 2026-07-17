@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Pensionskasse AR",
+  "erlassdatum": "vom 10.06.2013 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 48 des Bundesgesetzes über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge und Art. 74 und 108 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BVG (SR 831.40 )",
+    "links": [
+     {
+      "label": "831.40",
+      "url": "https://db.clex.ch/link/Bund/831.40/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -53,7 +109,7 @@
     }
    ],
    "marginalie": [
-    "Beitragsplan der Standardversicherung *"
+    "Beitragsplan der Standardversicherung"
    ]
   },
   "6": {
@@ -65,6 +121,24 @@
    ],
    "marginalie": [
     "Bemessungsgrundlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -197,6 +271,24 @@
    ],
    "marginalie": [
     "Rechtsmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -229,7 +321,7 @@
     }
    ],
    "marginalie": [
-    "Teilrevision vom ..."
+    "Teilrevision vom..."
    ]
   },
   "7_a": {

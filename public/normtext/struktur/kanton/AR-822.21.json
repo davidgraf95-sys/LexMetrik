@@ -1,16 +1,115 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsverordnung zum Bundesgesetz vom 20. März 1981 über die Heimarbeit",
+  "erlassdatum": "vom 11.03.1985 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 15 des Bundesgesetzes vom 20. März 1981 über die Heimarbeit, Art. 11 der Verordnung vom 20. Dezember 1982 über die Heimarbeit sowie Art. 48 Ziffer 4 der Kantonsverfassung vom 26. April 1908,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Heimarbeitsgesetz (HArG; SR 822.31 )",
+    "links": [
+     {
+      "label": "822.31",
+      "url": "https://db.clex.ch/link/Bund/822.31/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Heimarbeitsverordnung (HArGV; SR 822.311 )",
+    "links": [
+     {
+      "label": "822.311",
+      "url": "https://db.clex.ch/link/Bund/822.311/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "aGS I/1 (heute: KV; bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Aufsichts- und Vollzugsbehörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "ArG (SR 822.11 )",
+     "links": [
+      {
+       "label": "822.11",
+       "url": "https://db.clex.ch/link/Bund/822.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ARG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "vgl. Art. 2 der V zum Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (bGS 822.11 )",
+     "links": [
+      {
+       "label": "822.11",
+       "url": "https://ar.clex.ch/data/822.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-822.11"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
-    "Departement Bau und Volkswirtschaft *"
+    "Departement Bau und Volkswirtschaft"
    ]
   },
   "3": {
@@ -23,6 +122,24 @@
    "gliederung": [],
    "marginalie": [
     "Gemeindestellen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "vgl. Art. 2 der V zum Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (bGS 822.11 )",
+     "links": [
+      {
+       "label": "822.11",
+       "url": "https://ar.clex.ch/data/822.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-822.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -35,12 +152,35 @@
    "gliederung": [],
    "marginalie": [
     "Strafverfolgung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "bGS 321.1",
+     "links": [
+      {
+       "label": "321.1",
+       "url": "https://ar.clex.ch/data/321.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
    "gliederung": [],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "bGS 822.21 (aGS II/147)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {

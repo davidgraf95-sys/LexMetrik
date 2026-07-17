@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Abgabe von Lehrmitteln und Verbrauchsmaterialien",
+  "erlassdatum": "Vom 25. März 1975 (Stand 10. August 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 75 Abs. 3 des Schulgesetzes vom 4. April 1929, auf den Antrag des Erziehungsrates,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -17,9 +56,7 @@
      "label": "I. Abgabe von Lehrmitteln und Verbrauchsmaterialien während der Dauer der Schulpflicht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "3": {
    "gliederung": [
@@ -37,9 +74,7 @@
      "label": "I. Abgabe von Lehrmitteln und Verbrauchsmaterialien während der Dauer der Schulpflicht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -66,9 +101,7 @@
      "label": "II. Abgabe von Lehrmitteln, Verbrauchs- und Unterrichtsmaterialien im 12.–14. Schuljahr"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [
@@ -95,7 +128,16 @@
      "label": "II. Abgabe von Lehrmitteln, Verbrauchs- und Unterrichtsmaterialien im 12.–14. Schuljahr"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 10 Abs. 2 geändert durch RRB vom 26. 5. 2009 (wirksam seit 10. 8. 2009).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "11": {
    "gliederung": [
@@ -104,9 +146,7 @@
      "label": "II. Abgabe von Lehrmitteln, Verbrauchs- und Unterrichtsmaterialien im 12.–14. Schuljahr"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [

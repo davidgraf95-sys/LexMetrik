@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Baumschutzgesetz",
+  "erlassdatum": "Vom 16. Oktober 1980 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner Kommission, tritt auf die «Baumschutzinitiative» ein und"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -173,9 +191,7 @@
      "label": "III. Beiträge und Finanzierung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -303,6 +319,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 28 Abs. 1: Das Gesetz wurde mit RRB vom 3. 3. 1981 (publiziert am 7. 3. 1981) in Wirksamkeit erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

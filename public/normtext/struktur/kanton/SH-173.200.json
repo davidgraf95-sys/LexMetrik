@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Justizgesetz",
+  "erlassdatum": "Vom 09.11.2009 (Stand 01.05.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat Schaffhausen,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +24,56 @@
    ],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SR 312.0.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "http://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "SR 312.1.",
+     "links": [
+      {
+       "label": "312.1",
+       "url": "http://db.clex.ch/link/Bund/312.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "JSTPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SR 272.",
+     "links": [
+      {
+       "label": "272",
+       "url": "http://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -132,6 +196,24 @@
    ],
    "marginalie": [
     "Schlichtungsstelle bei Diskriminierungen im Erwerbsleben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 200 Abs. 2 ZPO, SR 272.",
+     "links": [
+      {
+       "label": "272",
+       "url": "http://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -169,6 +251,24 @@
    ],
    "marginalie": [
     "Organisation und Aufsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 312.0.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "http://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -188,6 +288,20 @@
    ],
    "marginalie": [
     "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SHR 311.100.",
+     "links": [
+      {
+       "label": "311.100",
+       "url": "https://rechtsbuch.sh.ch/data/311.100/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -245,6 +359,20 @@
    ],
    "marginalie": [
     "Verkehrsabteilung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SHR 172.200.",
+     "links": [
+      {
+       "label": "172.200",
+       "url": "https://rechtsbuch.sh.ch/data/172.200/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -264,6 +392,24 @@
    ],
    "marginalie": [
     "Jugendanwaltschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 312.1.",
+     "links": [
+      {
+       "label": "312.1",
+       "url": "http://db.clex.ch/link/Bund/312.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "JSTPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -530,6 +676,40 @@
    ],
    "marginalie": [
     "Allgemeine Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SR 311.0.",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "http://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "SR 311.0.",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "http://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -568,6 +748,24 @@
    ],
    "marginalie": [
     "Zwangsmassnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SR 312.0.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "http://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "36": {
@@ -587,6 +785,24 @@
    ],
    "marginalie": [
     "Ausländerrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "SR 142.20.",
+     "links": [
+      {
+       "label": "142.20",
+       "url": "http://db.clex.ch/link/Bund/142.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AIG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "37": {
@@ -739,6 +955,24 @@
    ],
    "marginalie": [
     "Klagen und Rechtsmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "SR 312.5.",
+     "links": [
+      {
+       "label": "312.5",
+       "url": "http://db.clex.ch/link/Bund/312.5/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OHG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -815,6 +1049,20 @@
    ],
    "marginalie": [
     "Besetzung und Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "SHR 172.200.",
+     "links": [
+      {
+       "label": "172.200",
+       "url": "https://rechtsbuch.sh.ch/data/172.200/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "49": {
@@ -834,6 +1082,36 @@
    ],
    "marginalie": [
     "Schuldbetreibungs- und Konkurswesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "http://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SHR 172.200.",
+     "links": [
+      {
+       "label": "172.200",
+       "url": "https://rechtsbuch.sh.ch/data/172.200/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "50": {
@@ -950,6 +1228,20 @@
    ],
    "marginalie": [
     "Zuständigkeit und Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SHR 172.200.",
+     "links": [
+      {
+       "label": "172.200",
+       "url": "https://rechtsbuch.sh.ch/data/172.200/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "58": {
@@ -965,6 +1257,44 @@
    ],
    "marginalie": [
     "Zusammensetzung, Zuständigkeit und Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "SHR 711.100.",
+     "links": [
+      {
+       "label": "711.100",
+       "url": "https://rechtsbuch.sh.ch/data/711.100/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "SHR 172.200.",
+     "links": [
+      {
+       "label": "172.200",
+       "url": "https://rechtsbuch.sh.ch/data/172.200/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "SHR 711.100.",
+     "links": [
+      {
+       "label": "711.100",
+       "url": "https://rechtsbuch.sh.ch/data/711.100/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "59": {
@@ -980,6 +1310,32 @@
    ],
    "marginalie": [
     "Zusammensetzung, Zuständigkeit und Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "SHR 922.100.",
+     "links": [
+      {
+       "label": "922.100",
+       "url": "https://rechtsbuch.sh.ch/data/922.100/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "SHR 172.200.",
+     "links": [
+      {
+       "label": "172.200",
+       "url": "https://rechtsbuch.sh.ch/data/172.200/de"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "60": {
@@ -995,6 +1351,32 @@
    ],
    "marginalie": [
     "Zusammensetzung, Zuständigkeit und Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "SHR 173.800.",
+     "links": [
+      {
+       "label": "173.800",
+       "url": "https://rechtsbuch.sh.ch/data/173.800/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "SHR 172.200.",
+     "links": [
+      {
+       "label": "172.200",
+       "url": "https://rechtsbuch.sh.ch/data/172.200/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "61": {
@@ -1010,6 +1392,20 @@
    ],
    "marginalie": [
     "Zusammensetzung, Zuständigkeit und Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "SHR 910.100.",
+     "links": [
+      {
+       "label": "910.100",
+       "url": "https://rechtsbuch.sh.ch/data/910.100/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "62": {
@@ -1141,6 +1537,24 @@
    ],
    "marginalie": [
     "Pflicht zur Strafanzeige"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "SR 312.0.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "http://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "71": {
@@ -1179,6 +1593,24 @@
    ],
    "marginalie": [
     "Antragsrecht bei Vernachlässigung von Unterhaltspflichten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "SR 311.0.",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "http://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "73": {
@@ -1198,6 +1630,20 @@
    ],
    "marginalie": [
     "Ausnahmen vom Verfolgungszwang"
+   ],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "SHR 171.100.",
+     "links": [
+      {
+       "label": "171.100",
+       "url": "https://rechtsbuch.sh.ch/data/171.100/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "74": {
@@ -1426,6 +1872,40 @@
    ],
    "marginalie": [
     "Schiedssachen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "SR 291.",
+     "links": [
+      {
+       "label": "291",
+       "url": "http://db.clex.ch/link/Bund/291/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "IPRG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "30",
+     "text": "SR 0.277.12.",
+     "links": [
+      {
+       "label": "0.277.12",
+       "url": "http://db.clex.ch/link/Bund/0.277.12/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "NYUE"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "86": {
@@ -1642,6 +2122,24 @@
    ],
    "marginalie": [
     "Vollzugskosten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "SR 311.0.",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "http://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "98": {
@@ -1657,6 +2155,20 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "SHR 172.200.",
+     "links": [
+      {
+       "label": "172.200",
+       "url": "https://rechtsbuch.sh.ch/data/172.200/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "99": {
@@ -1761,6 +2273,36 @@
    ],
    "marginalie": [
     "Haftung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "http://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "SHR 170.300.",
+     "links": [
+      {
+       "label": "170.300",
+       "url": "https://rechtsbuch.sh.ch/data/170.300/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "107": {
@@ -1783,6 +2325,24 @@
    ],
    "marginalie": [
     "Depositenanstalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "SR 281.1.",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "http://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "110": {
@@ -1794,6 +2354,24 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "SR 272.",
+     "links": [
+      {
+       "label": "272",
+       "url": "http://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "111": {
@@ -1805,6 +2383,22 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "In Kraft getreten am 1. Januar 2011; mit Ausnahme von Art. 2, 3 und 16 Abs. 2 Satz 2, welche auf den 1. Mai 2010 in Kraft getreten sind (Amtsblatt 2010, S. 546).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "39",
+     "text": "Amtsblatt 2010, S. 549.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "110_a": {

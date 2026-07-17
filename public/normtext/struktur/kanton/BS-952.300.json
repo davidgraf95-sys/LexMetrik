@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die ausnahmsweise Zufahrt in die Innenstadt",
+  "erlassdatum": "Vom 13. August 2013 (Stand 1. Juli 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Vollziehung des Bundesgesetzes über den Strassenverkehr vom 19. Dezember 1958 und gestützt auf § 2 Abs. 2 und § 14 des Gesetzes über die Inanspruchnahme der Allmend durch die Verwaltung und durch Private vom 24. März 1927,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 741.01.",
+    "links": [
+     {
+      "label": "741.01",
+      "url": "https://db.clex.ch/link/Bund/741.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "SVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist des Gesetz über die Nutzung des öffentlichen Raumes (NöRG) vom 16. 10. 2013, (SG 724.100 ).",
+    "links": [
+     {
+      "label": "724.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -96,9 +152,7 @@
      "label": "IV. Anwohnerschaft"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [

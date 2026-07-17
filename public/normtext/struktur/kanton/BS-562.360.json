@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Stammbeschickung an der Basler Herbstmesse und am Weihnachtsmarkt",
+  "erlassdatum": "Vom 23. April 2010 (Stand 29. April 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Präsidialdepartement des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 6 Abs. 3 der Verordnung betreffend Messen und Märkte in der Stadt Basel vom 16. Juni 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 562.320.",
+    "links": [
+     {
+      "label": "562.320",
+      "url": "https://www.gesetzessammlung.bs.ch/data/562.320/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-562.320"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +56,15 @@
    "gliederung": [],
    "marginalie": [
     "Stammbeschickungsgebühr"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 562.350.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -29,6 +77,15 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 29. 4. 2010.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

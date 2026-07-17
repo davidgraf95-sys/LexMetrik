@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Jagd, Wild- und Vogelschutz",
+  "erlassdatum": "vom 17.02.2003 (Stand 01.06.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 25 des Bundesgesetzes vom 20. Juni 1986 über die Jagd und den Schutz wild lebender Säugetiere und Vögel und auf Art. 15 der eidgenössischen Verordnung vom 29. Februar 1988 über die Jagd und den Schutz wild lebender Säugetiere und Vögel,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Jagdgesetz (JSG; SR 922.0 )",
+    "links": [
+     {
+      "label": "922.0",
+      "url": "https://db.clex.ch/link/Bund/922.0/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Jagdverordnung (JSV; SR 922.01 )",
+    "links": [
+     {
+      "label": "922.01",
+      "url": "https://db.clex.ch/link/Bund/922.01/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -42,7 +90,7 @@
     }
    ],
    "marginalie": [
-    "Zuständiges Departement *"
+    "Zuständiges Departement"
    ]
   },
   "5": {
@@ -285,6 +333,36 @@
    ],
    "marginalie": [
     "Referendum, Inkrafttreten, Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Referendumsfrist ist unbenutzt abgelaufen (vgl. RRB vom 29. April 2003)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "1. Mai 2003 (vgl. RRB vom 29. April 2003)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Jagdgesetz (bGS 526.2; If. Nr. 335)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Jagdverordnung (bGS 526.21; If. Nr. 357)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

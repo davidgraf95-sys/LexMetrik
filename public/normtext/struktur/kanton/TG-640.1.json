@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Steuergesetz",
+  "erlassdatum": "vom 14.09.1992 (Stand 01.01.2025)"
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -202,7 +206,7 @@
     }
    ],
    "marginalie": [
-    "Ehegatten; eingetragene Partnerinnen oder Partner; Kinder unter elterlicher Sorge *"
+    "Ehegatten; eingetragene Partnerinnen oder Partner; Kinder unter elterlicher Sorge"
    ]
   },
   "13": {
@@ -221,7 +225,25 @@
     }
    ],
    "marginalie": [
-    "Erbengemeinschaften, Personengesellschaften, kollektive Kapitalanlagen *"
+    "Erbengemeinschaften, Personengesellschaften, kollektive Kapitalanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "951.31",
+       "url": "https://db.clex.ch/link/Bund/951.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KAG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -260,6 +282,24 @@
    ],
    "marginalie": [
     "Steuernachfolge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 211.231",
+     "links": [
+      {
+       "label": "211.231",
+       "url": "https://db.clex.ch/link/Bund/211.231/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PARTG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -412,7 +452,25 @@
     }
    ],
    "marginalie": [
-    "Einkünfte aus beweglichem Vermögen; Grundsatz *"
+    "Einkünfte aus beweglichem Vermögen; Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "8",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -505,6 +563,20 @@
    ],
    "marginalie": [
     "Steuerfreie Einkünfte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 935.51",
+     "links": [
+      {
+       "label": "935.51",
+       "url": "https://db.clex.ch/link/Bund/935.51/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -643,6 +715,36 @@
    ],
    "marginalie": [
     "Allgemeine Abzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 151.3",
+     "links": [
+      {
+       "label": "151.3",
+       "url": "https://db.clex.ch/link/Bund/151.3/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 161.1",
+     "links": [
+      {
+       "label": "161.1",
+       "url": "https://db.clex.ch/link/Bund/161.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BPR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -688,7 +790,21 @@
     }
    ],
    "marginalie": [
-    "Sozialabzüge [7] *"
+    "Sozialabzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Die Beträge wurden gemäss § 40 Abs. 2 StG und § 1 der Verordnung über den Ausgleich der kalten Progression (VAKP; RB 640.13 ) an die Teuerung angepasst. Abgedruckt sind die angepassten Beträge, letzte Anpassung per 1. Januar 2025.",
+     "links": [
+      {
+       "label": "640.13",
+       "url": "https://www.rechtsbuch.tg.ch/data/640.13/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "37": {
@@ -711,7 +827,21 @@
     }
    ],
    "marginalie": [
-    "Tarif [8] *"
+    "Tarif"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Die Beträge wurden gemäss § 40 Abs. 2 StG und § 1 der Verordnung über den Ausgleich der kalten Progression (VAKP; RB 640.13 ) an die Teuerung angepasst. Abgedruckt sind die angepassten Beträge, letzte Anpassung per 1. Januar 2025.",
+     "links": [
+      {
+       "label": "640.13",
+       "url": "https://www.rechtsbuch.tg.ch/data/640.13/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "38": {
@@ -1168,6 +1298,24 @@
    ],
    "marginalie": [
     "Steuersubjekte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "951.31",
+       "url": "https://db.clex.ch/link/Bund/951.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "68": {
@@ -1905,6 +2053,24 @@
    ],
    "marginalie": [
     "Steuerobjekt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SR 831.10",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "111": {
@@ -1961,7 +2127,7 @@
     }
    ],
    "marginalie": [
-    "Obligatorische nachträgliche ordentliche Veranlagung *"
+    "Obligatorische nachträgliche ordentliche Veranlagung"
    ]
   },
   "114": {
@@ -2133,6 +2299,24 @@
    ],
    "marginalie": [
     "Steuerobjekt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "124": {
@@ -2398,7 +2582,7 @@
     }
    ],
    "marginalie": [
-    "Steuerbefreiung und Nachbesteuerung *"
+    "Steuerbefreiung und Nachbesteuerung"
    ]
   },
   "139": {
@@ -2725,6 +2909,24 @@
    ],
    "marginalie": [
     "Weitere Mitwirkung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "158": {
@@ -2985,7 +3187,7 @@
     }
    ],
    "marginalie": [
-    "Verfügung über Bestand und Umfang der Steuerpflicht *"
+    "Verfügung über Bestand und Umfang der Steuerpflicht"
    ]
   },
   "173": {
@@ -3054,6 +3256,20 @@
    ],
    "marginalie": [
     "Beschwerde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "RB 170.1",
+     "links": [
+      {
+       "label": "170.1",
+       "url": "https://www.rechtsbuch.tg.ch/data/170.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "177": {
@@ -3311,6 +3527,24 @@
    ],
    "marginalie": [
     "Zwangsvollstreckung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "193": {
@@ -3387,6 +3621,24 @@
    ],
    "marginalie": [
     "Sicherstellung, Arrest"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "197": {
@@ -3425,6 +3677,20 @@
    ],
    "marginalie": [
     "Gesetzliches Pfandrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "RB 210.1",
+     "links": [
+      {
+       "label": "210.1",
+       "url": "https://www.rechtsbuch.tg.ch/data/210.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "199": {
@@ -3481,7 +3747,7 @@
     }
    ],
    "marginalie": [
-    "Mitwirkungs- und Veranlagungsentschädigung *"
+    "Mitwirkungs- und Veranlagungsentschädigung"
    ]
   },
   "202": {
@@ -3538,7 +3804,7 @@
     }
    ],
    "marginalie": [
-    "Voraussetzungen für ordentliche Nachsteuer *"
+    "Voraussetzungen für ordentliche Nachsteuer"
    ]
   },
   "205": {
@@ -3737,7 +4003,7 @@
     }
    ],
    "marginalie": [
-    "Steuerhinterziehung von juristischen Personen *"
+    "Steuerhinterziehung von juristischen Personen"
    ]
   },
   "215": {
@@ -3806,7 +4072,7 @@
     }
    ],
    "marginalie": [
-    "Zuständigkeit, Eröffnung des Strafverfahrens wegen Steuerhinterziehung *"
+    "Zuständigkeit, Eröffnung des Strafverfahrens wegen Steuerhinterziehung"
    ]
   },
   "218": {
@@ -3852,7 +4118,7 @@
     }
    ],
    "marginalie": [
-    "Verjährung bei Verletzung von Verfahrenspflichten, Steuerhinterziehung *"
+    "Verjährung bei Verletzung von Verfahrenspflichten, Steuerhinterziehung"
    ]
   },
   "220": {
@@ -3875,7 +4141,7 @@
     }
    ],
    "marginalie": [
-    "Verjährung der Steuervergehen *"
+    "Verjährung der Steuervergehen"
    ]
   },
   "221": {
@@ -3976,6 +4242,22 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "In Kraft gesetzt auf den 1. Januar 1993.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "In Kraft gesetzt auf den 1. Januar 1997, RB 640.11, § 64 Abs. 3.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "230": {
@@ -4314,7 +4596,16 @@
     }
    ],
    "marginalie": [
-    "Steuersoftware [19]"
+    "Steuersoftware"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "Mit Übergangsbestimmung in § 247.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "147_a": {
@@ -4371,7 +4662,7 @@
     }
    ],
    "marginalie": [
-    "Elektronisches Verfahren *"
+    "Elektronisches Verfahren"
    ]
   },
   "153_b": {
@@ -4810,6 +5101,24 @@
    ],
    "marginalie": [
     "Selbstanzeige"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "SR 221.301",
+     "links": [
+      {
+       "label": "221.301",
+       "url": "https://db.clex.ch/link/Bund/221.301/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FUSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "214_b": {
@@ -4969,7 +5278,7 @@
     }
    ],
    "marginalie": [
-    "Höherbesteuerung *"
+    "Höherbesteuerung"
    ]
   },
   "76_a": {
@@ -4993,6 +5302,92 @@
    ],
    "marginalie": [
     "Patente und vergleichbare Rechte: Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SR 0.232.142.2",
+     "links": [
+      {
+       "label": "0.232.142.2",
+       "url": "https://db.clex.ch/link/Bund/0.232.142.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SR 232.14",
+     "links": [
+      {
+       "label": "232.14",
+       "url": "https://db.clex.ch/link/Bund/232.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PATG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "SR 231.2",
+     "links": [
+      {
+       "label": "231.2",
+       "url": "https://db.clex.ch/link/Bund/231.2/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SR 232.16",
+     "links": [
+      {
+       "label": "232.16",
+       "url": "https://db.clex.ch/link/Bund/232.16/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SORTG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SR 812.21",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "SR 910.1",
+     "links": [
+      {
+       "label": "910.1",
+       "url": "https://db.clex.ch/link/Bund/910.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "76_b": {
@@ -5085,6 +5480,20 @@
    ],
    "marginalie": [
     "Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "SR 420.1",
+     "links": [
+      {
+       "label": "420.1",
+       "url": "https://db.clex.ch/link/Bund/420.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "86_a": {

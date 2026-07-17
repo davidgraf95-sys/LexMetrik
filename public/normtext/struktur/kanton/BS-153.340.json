@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Einbindung des Authentifizierungsdienstes der Schweizer Behörden AGOV in das zentrale elektronische Behördenportal",
+  "erlassdatum": "Vom 28. Mai 2024 (Stand 15. Juni 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 8 Abs. 3 des Gesetzes über ein zentrales elektronisches Behördenportal (Behördenportalgesetz) vom 11. Januar 2017, unter Verweis auf seine Erläuterungen Nr. P240743,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.300",
+    "links": [
+     {
+      "label": "153.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

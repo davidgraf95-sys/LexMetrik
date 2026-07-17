@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung zum Energiesparfonds für Gemeindeliegenschaften",
+  "erlassdatum": "Vom 26. Februar 2014 (Stand 1. Januar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag des Gemeinderats und der Sachkommission Publikumsdienste, Behörden und Finanzen (SPBF), gestützt auf § 21 der Finanzhaushaltordnung der Einwohnergemeinde Riehen vom 28. November 2002, folgende Ordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 610.100; heute: § 42 Abs. 1 der Finanzhaushaltordnung der Einwohnergemeinde Riehen (Finanzhaushaltordnung; FhO) vom 15. Dezember 2021, in Kraft seit 1. Januar 2023 (KB 18.12.2021).",
+    "links": [
+     {
+      "label": "RiE 610.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20610.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +60,15 @@
    "gliederung": [],
    "marginalie": [
     "Rechenschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 4. 4. 2014.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

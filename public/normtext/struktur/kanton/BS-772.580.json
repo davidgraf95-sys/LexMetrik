@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Ausführung des Bundesgesetzes über Rohrleitungsanlagen",
+  "erlassdatum": "Vom 18. Januar 2005 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 52 Abs. 3 des Bundesgesetzes über Rohrleitungsanlagen zur Beförderung flüssiger oder gasförmiger Brenn- oder Treibstoffe (Rohrleitungsgesetz, RLG) vom 4. Oktober 1963,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 746.1.",
+    "links": [
+     {
+      "label": "746.1",
+      "url": "https://db.clex.ch/link/Bund/746.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -98,7 +133,16 @@
      "label": "II. Bau und Betrieb von Rohrleitungsanlagen unter der Aufsicht des Kantons"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 23. 1. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

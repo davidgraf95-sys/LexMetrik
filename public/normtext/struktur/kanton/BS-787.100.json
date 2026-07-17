@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Bodenschutzverordnung Basel-Stadt",
+  "erlassdatum": "Vom 5. Juli 2005 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 36 des Bundesgesetzes über den Umweltschutz (Umweltschutzgesetz, USG) vom 7. Oktober 1983, Art. 45 des Bundesgesetzes über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG) vom 24. Januar 1991 sowie § 35 und § 42 des Umweltschutzgesetzes Basel-Stadt (USG BS) vom 13. März 1991,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 814.01.",
+    "links": [
+     {
+      "label": "814.01",
+      "url": "https://db.clex.ch/link/Bund/814.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "USG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 814.20.",
+    "links": [
+     {
+      "label": "814.20",
+      "url": "https://db.clex.ch/link/Bund/814.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "GSCHG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 780.100.",
+    "links": [
+     {
+      "label": "780.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/780.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-780.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -35,6 +108,15 @@
    "gliederung": [],
    "marginalie": [
     "Aufhebung bisherigen Rechts und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 10. 7. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

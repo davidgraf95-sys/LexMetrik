@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Rohrleitungsverordnung",
+  "erlassdatum": "vom 24.03.2020 (Stand 01.04.2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 52 Abs. 3 des Rohrleitungsgesetzes vom 4. Oktober 1963 und gestützt auf Art. 87 Abs. 5 der Verfassung des Kantons Appenzell A.Rh.,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RLG (SR 746.1 )",
+    "links": [
+     {
+      "label": "746.1",
+      "url": "https://db.clex.ch/link/Bund/746.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 111.1",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,12 +63,44 @@
    "gliederung": [],
    "marginalie": [
     "Zuständigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "RLV (SR 746.11 )",
+     "links": [
+      {
+       "label": "746.11",
+       "url": "https://db.clex.ch/link/Bund/746.11/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
     "Bau"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -35,6 +119,20 @@
    "gliederung": [],
    "marginalie": [
     "Bauvorhaben Dritter im Bereich von Rohrleitungsanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "RLV (SR 746.11 )",
+     "links": [
+      {
+       "label": "746.11",
+       "url": "https://db.clex.ch/link/Bund/746.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

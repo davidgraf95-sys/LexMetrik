@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Behandlung von Fundsachen",
+  "erlassdatum": "Vom 2. Juli 2007 (Stand 30. Oktober 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Art. 720–722 des Schweizerischen Zivilgesetzbuches vom 10. Dezember 1907 und auf § 185 des Einführungsgesetzes zum Schweizerischen Zivilgesetzbuch,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 210.",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 211.100.",
+    "links": [
+     {
+      "label": "211.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -41,9 +97,7 @@
      "label": "III. Aufbewahrung von Fundgegenständen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -129,9 +183,7 @@
      "label": "V. Verwertung von Fundgegenständen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [
@@ -197,6 +249,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 8. 7. 2007.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

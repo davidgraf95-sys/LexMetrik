@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz",
+  "erlassdatum": "Vom 20. Mai 1999 (Stand 1. Juli 1999)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 4 Abs. 2, Art. 5 Abs. 3, Art. 6 und Art. 10 der Interkantonalen Vereinbarung über die Anerkennung von Ausbildungsabschlüssen vom 18. Februar 1993 (KK 93) beschliesst die Schweizerische Sanitätsdirektorenkonferenz:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 419.900.",
+    "links": [
+     {
+      "label": "419.900",
+      "url": "https://www.gesetzessammlung.bs.ch/data/419.900/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-419.900"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

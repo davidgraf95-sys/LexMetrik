@@ -1,5 +1,52 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kanalisationsreglement für die Dreispitzverwaltung Basel",
+  "erlassdatum": "Vom 11. September 1956 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 7 des kantonalen Gesetzes betreffend den Betrieb der öffentlichen Materiallagerplätze auf dem Dreispitz vom 10. Januar 1901 und § 11 Abs. 3 des Betriebsreglementes vom 26. September 1955,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Dieses Gesetz ist aufgehoben worden durch § 55 Ziff. 11 des Organisationsgesetzes vom 22. 4. 1976.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 685.340.",
+    "links": [
+     {
+      "label": "685.340",
+      "url": "https://www.gesetzessammlung.bs.ch/data/685.340/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-685.340"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

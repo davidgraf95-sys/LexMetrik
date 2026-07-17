@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen den Kantonen Basel-Landschaft und Basel-Stadt über die gemeinsame Trägerschaft des Schweizerischen Tropen- und Public Health-Instituts",
+  "erlassdatum": "Vom 10. November 2015 (Stand 1. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone Basel-Landschaft und Basel-Stadt, beide vertreten durch den Regierungsrat,"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -362,6 +376,15 @@
    ],
    "marginalie": [
     "Vertragsbeginn und -ende"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 1. 2017.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

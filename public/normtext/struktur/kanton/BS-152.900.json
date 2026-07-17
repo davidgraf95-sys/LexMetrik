@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Beauftragte/den Beauftragten für das Beschwerdewesen (Ombudsfrau / Ombudsmann) des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 13. März 1986 (Stand 1. April 2017)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Aufgrund des Initiativbegehrens betreffend Verbesserung des Schutzes der verfassungsmässigen Rechte der Bürger und zur Verstärkung der parlamentarischen Kontrolle beschliesst der Grosse Rat des Kantons Basel-Stadt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,7 +36,16 @@
      "label": "I. Aufgaben und Organisation"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 3 Abs. 4: Umbenennung des Zentralen Personaldienstes gemäss RRB vom 16. 10. 2018 in «HR Basel-Stadt».",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -107,7 +126,23 @@
      "label": "VI. Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 12: Diese Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Wirksam seit 29. 9. 1986.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2_bis": {
    "gliederung": [

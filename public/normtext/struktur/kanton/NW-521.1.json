@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Steuern des Kantons und der Gemeinden",
+  "erlassdatum": "vom 22.03.2000 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Landrat von Nidwalden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 32 und 60 der Kantonsverfassung,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -165,6 +183,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SR 642.15",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -203,6 +230,15 @@
    ],
    "marginalie": [
     "Erbengemeinschaften und kollektive Kapitalanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 951.31",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -241,6 +277,15 @@
    ],
    "marginalie": [
     "Steuernachfolge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 211.231",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -317,6 +362,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 192.12",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -412,6 +466,15 @@
    ],
    "marginalie": [
     "Bewegliches Vermögen 1. Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 642.21",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -488,6 +551,15 @@
    ],
    "marginalie": [
     "Allgemeines"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 935.51",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -640,6 +712,15 @@
    ],
    "marginalie": [
     "Allgemeine Abzüge 1. von der Höhe des Einkommens unabhängige Abzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 642.11",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "36": {
@@ -678,6 +759,22 @@
    ],
    "marginalie": [
     "3. von der Höhe des Einkommens abhängige Abzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 151.3",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SR 161.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -924,7 +1021,7 @@
     }
    ],
    "marginalie": [
-    "2. Bewertungsgrundsätze a) Grundstücke innerhalb der Bauzone *"
+    "2. Bewertungsgrundsätze a) Grundstücke innerhalb der Bauzone"
    ]
   },
   "51": {
@@ -1178,6 +1275,29 @@
    ],
    "marginalie": [
     "Allgemeines"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "NG 211.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SR 951.31",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SR 951.31",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "66": {
@@ -1349,6 +1469,22 @@
    ],
    "marginalie": [
     "Steuerbefreiung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "NG 171.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SR 192.12",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "75": {
@@ -1596,6 +1732,15 @@
    ],
    "marginalie": [
     "2. Nettoertrag aus Beteiligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "SR 952.0",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "90": {
@@ -1909,6 +2054,15 @@
    ],
    "marginalie": [
     "Steuerbare Einkünfte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "SR 831.10",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "113": {
@@ -1924,6 +2078,15 @@
    ],
    "marginalie": [
     "Quellensteuerabzug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "SR 831.10",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "116": {
@@ -2164,6 +2327,15 @@
    ],
    "marginalie": [
     "Interkantonale Verhältnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "SR 642.14",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "134": {
@@ -2239,6 +2411,15 @@
    ],
    "marginalie": [
     "Steuerobjekt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "SR 211.412.11",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "139": {
@@ -2359,6 +2540,22 @@
    ],
    "marginalie": [
     "2. Steuerbefreiung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "SR 192.12",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "SR 192.12",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "147": {
@@ -2389,6 +2586,15 @@
    ],
    "marginalie": [
     "4. Aufwendungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "SR 700",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "149": {
@@ -2570,6 +2776,22 @@
    ],
    "marginalie": [
     "3. Abzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "164": {
@@ -2637,6 +2859,22 @@
    ],
    "marginalie": [
     "Kantonales Steueramt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "NG 211.1",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "30",
+     "text": "NG 831.1",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "173": {
@@ -2701,6 +2939,22 @@
    ],
    "marginalie": [
     "Massgebendes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "NG 161.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "NG 265.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "177": {
@@ -2853,6 +3107,15 @@
    ],
    "marginalie": [
     "Vertragliche Vertretung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "NG 261.1",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "186": {
@@ -3005,6 +3268,15 @@
    ],
    "marginalie": [
     "2. Beilagen zur Steuererklärung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "194": {
@@ -3043,6 +3315,15 @@
    ],
    "marginalie": [
     "4. Aufbewahrungspflichten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "36",
+     "text": "SR 220",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "196": {
@@ -3437,7 +3718,7 @@
     }
    ],
    "marginalie": [
-    "Stichtag *"
+    "Stichtag"
    ]
   },
   "218": {
@@ -3452,7 +3733,7 @@
     }
    ],
    "marginalie": [
-    "Neuermittlung des Grundstückwertes *"
+    "Neuermittlung des Grundstückwertes"
    ]
   },
   "219": {
@@ -3512,7 +3793,7 @@
     }
    ],
    "marginalie": [
-    "Gebühren *"
+    "Gebühren"
    ]
   },
   "223": {
@@ -3715,7 +3996,7 @@
     }
    ],
    "marginalie": [
-    "Schlussrechnung *"
+    "Schlussrechnung"
    ]
   },
   "237": {
@@ -3773,6 +4054,15 @@
    ],
    "marginalie": [
     "Zwangsvollstreckung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "SR 281.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "240": {
@@ -3811,6 +4101,15 @@
    ],
    "marginalie": [
     "Voraussetzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "SR 281.1",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "242": {
@@ -3887,6 +4186,15 @@
    ],
    "marginalie": [
     "Sicherstellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "SR 281.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "246": {
@@ -3906,6 +4214,22 @@
    ],
    "marginalie": [
     "Arrest"
+   ],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "SR 281.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "SR 281.1",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "247": {
@@ -4064,6 +4388,15 @@
    ],
    "marginalie": [
     "Verteidigung und Vertretung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "44",
+     "text": "SR 312.0",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "257": {
@@ -4102,6 +4435,15 @@
    ],
    "marginalie": [
     "Zeugeneinvernahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "45",
+     "text": "SR 312.0",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "259": {
@@ -4121,6 +4463,15 @@
    ],
    "marginalie": [
     "Abschluss der Untersuchung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "SR 311.0",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "260": {
@@ -4242,6 +4593,22 @@
    ],
    "marginalie": [
     "Anwendbares Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "47",
+     "text": "SR 311.0",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "48",
+     "text": "SR 312.0",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "273": {
@@ -4268,6 +4635,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "49",
+     "text": "AS 2008 4453",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "275": {
@@ -4334,6 +4710,15 @@
    ],
    "marginalie": [
     "Änderung des Gerichtsgesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "NG 261.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "283": {
@@ -4345,6 +4730,15 @@
    ],
    "marginalie": [
     "Änderung des Stipendiengesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "52",
+     "text": "NG 311.4",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "284": {
@@ -4356,6 +4750,36 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "53",
+     "text": "A 1982, 907",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "54",
+     "text": "A 1982, 1587",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "55",
+     "text": "A 1993, 1977",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "56",
+     "text": "NG 311.41",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "107_a": {
@@ -4487,6 +4911,15 @@
    ],
    "marginalie": [
     "Datenbearbeitung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "SR 831.1",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "195_a": {
@@ -4726,6 +5159,15 @@
    ],
    "marginalie": [
     "Verrechnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "NG 532.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "237_a": {
@@ -4855,6 +5297,15 @@
    ],
    "marginalie": [
     "2. Selbstanzeige"
+   ],
+   "fussnoten": [
+    {
+     "nr": "43",
+     "text": "SR 221.301",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "274_a": {
@@ -4866,6 +5317,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmung zur Änderung vom 26. Juni 2013"
+   ],
+   "fussnoten": [
+    {
+     "nr": "50",
+     "text": "SR 642.11",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "280_a": {
@@ -4948,6 +5408,22 @@
    ],
    "marginalie": [
     "3. vereinfachtes Abrechnungsverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SR 822.41",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SR 642.11",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "42_b": {
@@ -4986,6 +5462,15 @@
    ],
    "marginalie": [
     "Erfolg aus Patenten und vergleichbaren Rechten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SR 642.14",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "77_b": {
@@ -5043,6 +5528,15 @@
    ],
    "marginalie": [
     "Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "SR 420.1",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "78_b": {

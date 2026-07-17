@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Energiegesetz",
+  "erlassdatum": "Vom 16. November 2016 (Stand 1. Juli 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "im Sinne eines Gegenvorschlags zur formulierten Volksinitiative \"Basel erneuerbar - Für eine sichere, saubere und günstige Energieversorgung\" und nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 15.2004.01 vom 12. Januar 2016 sowie in den Bericht der Umwelt-, Verkehrs- und Energiekommission Nr. 15.2004.02 vom 21 September 2016,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Ingress redaktionell beigefügt.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -474,7 +504,16 @@
      "label": "X. Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "In Kraft seit 1. 10. 2017.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "37_a": {
    "gliederung": [

@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Interkantonale Vereinbarung über das öffentliche Beschaffungswesen",
+  "erlassdatum": "Vom 15. November 2019 (Stand 1. Februar 2024)"
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +36,47 @@
    ],
    "marginalie": [
     "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Im Interesse der besseren Lesbarkeit wird in dieser Vereinbarung nur die männliche Form verwendet.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SR 822.11",
+     "links": [
+      {
+       "label": "822.11",
+       "url": "https://db.clex.ch/link/Bund/822.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ARG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -131,6 +176,20 @@
    ],
    "marginalie": [
     "Einhaltung der Arbeitsschutzbestimmungen, der Arbeitsbedingungen, der Lohngleichheit und des Umweltrechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 822.41",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -384,6 +443,22 @@
    ],
    "marginalie": [
     "Inhalt der Ausschreibung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "CPV = «Common Procurement Vocabulary» (Gemeinsames Vokabular für öffentliche Aufträge der Europäischen Union).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "CPC = «Central Product Classification» (Zentrale Gütersystematik der Vereinten Nationen).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "36": {
@@ -483,6 +558,36 @@
    ],
    "marginalie": [
     "Ausschluss vom Verfahren und Widerruf des Zuschlags"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 822.41",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SR 241",
+     "links": [
+      {
+       "label": "241",
+       "url": "https://db.clex.ch/link/Bund/241/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "UWG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "45": {

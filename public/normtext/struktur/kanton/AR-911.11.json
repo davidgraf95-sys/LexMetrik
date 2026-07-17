@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Wirtschaftsförderung",
+  "erlassdatum": "vom 13.12.2005 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 8 des Gesetzes vom 23. Mai 2005 über die Wirtschaftsförderung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 911.1",
+    "links": [
+     {
+      "label": "911.1",
+      "url": "https://ar.clex.ch/data/911.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-911.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +92,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "1. Januar 2006 (RRB vom 13. Dezember 2005)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8_a": {

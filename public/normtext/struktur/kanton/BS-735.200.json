@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Brandschutz",
+  "erlassdatum": "Vom 21. Dezember 2004 (Stand 26. Dezember 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gebäudeversicherungsgesetz vom 22. März 1973, die §§ 59 und 88 des Bau- und Planungsgesetzes (BPG) vom 17. November 1999 und auf die geltenden Schweizerischen Brandschutzvorschriften der Vereinigung Kantonaler Feuerversicherungen (VKF),",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 695.100.",
+    "links": [
+     {
+      "label": "695.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/695.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-695.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +66,15 @@
    ],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Definitionen gemäss den Schweizerischen Brandschutzvorschriften VKF",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -94,9 +159,7 @@
      "label": "IV. Betriebliche Sicherheitsmassnahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -118,6 +181,15 @@
    ],
    "marginalie": [
     "Anpassung bestehender Gebäude, Anlagen und Einrichtungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {

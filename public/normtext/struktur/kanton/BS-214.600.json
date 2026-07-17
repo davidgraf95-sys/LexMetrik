@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Verordnung betreffend die Bewilligungspflicht für den Erwerb von Grundstücken durch Personen im Ausland",
+  "erlassdatum": "Vom 18. Dezember 1984 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von Art. 15 und 36 des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland vom 16. Dezember 1983 und von Art. 11 der Verordnung über den Erwerb von Grundstücken durch Personen im Ausland vom 1. Oktober 1984,",
+    "fnNrs": [
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "3",
+    "text": "SR 211.412.41.",
+    "links": [
+     {
+      "label": "211.412.41",
+      "url": "https://db.clex.ch/link/Bund/211.412.41/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BEWG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 211.412.411.",
+    "links": [
+     {
+      "label": "211.412.411",
+      "url": "https://db.clex.ch/link/Bund/211.412.411/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BEWV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,15 +67,11 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [],
@@ -39,7 +91,23 @@
   },
   "9": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Publiziert am 26. 1. 1985. Vorausgehende Schlussbestimmung teilweise gestrichen durch RRB vom 22. 12. 1987 (wirksam seit 1. 1. 1988, publiziert am 6. 1. 1988).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Vom Bundesrat genehmigt am 11. 2. 1985.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

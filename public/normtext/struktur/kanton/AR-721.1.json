@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Raumplanung und das Baurecht",
+  "erlassdatum": "vom 12.05.2003 (Stand 01.10.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Stimmberechtigten des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 36 des Bundesgesetzes vom 22. Juni 1979 über die Raumplanung sowie Art. 31 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RPG (SR 700 )",
+    "links": [
+     {
+      "label": "700",
+      "url": "https://db.clex.ch/link/Bund/700/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "RPG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +88,24 @@
    ],
    "marginalie": [
     "Generelle Zuständigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 41 und 43 des Gemeindegesetzes (bGS 151.11 )",
+     "links": [
+      {
+       "label": "151.11",
+       "url": "https://ar.clex.ch/data/151.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-151.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -43,6 +117,24 @@
    ],
    "marginalie": [
     "Delegation und Übertragung hoheitlicher Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 8 des Gesetzes über die Verwaltungsrechtspflege (VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -58,6 +150,15 @@
    ],
    "marginalie": [
     "Grundsätze der Planung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 1 und 3 RPG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -130,6 +231,24 @@
    ],
    "marginalie": [
     "Inhalt und Wirkung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Insbesondere Art. 6 ff. RPG und Art. 4 ff. der Raumplanungsverordnung (RPV; SR 700.1 )",
+     "links": [
+      {
+       "label": "700.1",
+       "url": "https://db.clex.ch/link/Bund/700.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "RPV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -167,7 +286,25 @@
     }
    ],
    "marginalie": [
-    "Kantonale Nutzungszonen *"
+    "Kantonale Nutzungszonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "VVEA (SR 814.600 )",
+     "links": [
+      {
+       "label": "814.600",
+       "url": "https://db.clex.ch/link/Bund/814.600/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VVEA"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -224,7 +361,7 @@
     }
    ],
    "marginalie": [
-    "Erlass und Änderung kantonaler Nutzungspläne a) Erlass und öffentliche Auflage *"
+    "Erlass und Änderung kantonaler Nutzungspläne a) Erlass und öffentliche Auflage"
    ]
   },
   "15": {
@@ -244,6 +381,15 @@
    ],
    "marginalie": [
     "Zweck und Inhalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 1 und 3 RPG; Art. 1 Baugesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -280,7 +426,25 @@
      "label": "II. Richtplanung der Gemeinden"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "bGS 731.31",
+     "links": [
+      {
+       "label": "731.31",
+       "url": "https://ar.clex.ch/data/731.31/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.31"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "18": {
    "gliederung": [
@@ -527,6 +691,15 @@
    ],
    "marginalie": [
     "Landwirtschaftszonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 16a und Art. 24 ff. RPG",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -602,7 +775,7 @@
     }
    ],
    "marginalie": [
-    "Zonen mit Sondernutzungsplanpflicht *"
+    "Zonen mit Sondernutzungsplanpflicht"
    ]
   },
   "36": {
@@ -659,7 +832,7 @@
     }
    ],
    "marginalie": [
-    "Baulinienplan *"
+    "Baulinienplan"
    ]
   },
   "39": {
@@ -678,7 +851,7 @@
     }
    ],
    "marginalie": [
-    "Überbauungsplan *"
+    "Überbauungsplan"
    ]
   },
   "40": {
@@ -697,7 +870,7 @@
     }
    ],
    "marginalie": [
-    "Erneuerungsplan *"
+    "Erneuerungsplan"
    ]
   },
   "41": {
@@ -716,7 +889,7 @@
     }
    ],
    "marginalie": [
-    "Verhältnis der Sonderbauvorschriften zu den in der jeweiligen Zone geltenden Vorschriften *"
+    "Verhältnis der Sonderbauvorschriften zu den in der jeweiligen Zone geltenden Vorschriften"
    ]
   },
   "42": {
@@ -939,7 +1112,25 @@
      "label": "4. Abschnitt: Regionale Zusammenarbeit"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "bGS 151.11",
+     "links": [
+      {
+       "label": "151.11",
+       "url": "https://ar.clex.ch/data/151.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-151.11"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "54": {
    "gliederung": [
@@ -1131,7 +1322,7 @@
     }
    ],
    "marginalie": [
-    "Benützung bestehender Erschliessungsanlagen *"
+    "Benützung bestehender Erschliessungsanlagen"
    ]
   },
   "67": {
@@ -1241,6 +1432,24 @@
    ],
    "marginalie": [
     "Enteignungsbefugnis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Enteignungsgesetz (bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "74": {
@@ -1260,6 +1469,40 @@
    ],
    "marginalie": [
     "Ansprüche der Grundeigentümerinnen und Grundeigentümer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Enteignungsgesetz (bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "Enteignungsgesetz (bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "75": {
@@ -1317,6 +1560,24 @@
    ],
    "marginalie": [
     "Entschädigungspflichtige"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "Gewässerschutzgesetz (GSchG; SR 814.20 )",
+     "links": [
+      {
+       "label": "814.20",
+       "url": "https://db.clex.ch/link/Bund/814.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "78": {
@@ -1501,6 +1762,24 @@
    ],
    "marginalie": [
     "Ausführungsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "NHV (SR 451.1 )",
+     "links": [
+      {
+       "label": "451.1",
+       "url": "https://db.clex.ch/link/Bund/451.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "NHV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "90": {
@@ -1531,6 +1810,32 @@
    ],
    "marginalie": [
     "Beiträge an Denkmalpflege-, Natur- und Heimatschutzmassnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "Direktzahlungsverordnung (DZV; SR 910.13 )",
+     "links": [
+      {
+       "label": "910.13",
+       "url": "https://db.clex.ch/link/Bund/910.13/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "ÖQV (SR 910.14 )",
+     "links": [
+      {
+       "label": "910.14",
+       "url": "https://db.clex.ch/link/Bund/910.14/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "93": {
@@ -1576,6 +1881,24 @@
    ],
    "marginalie": [
     "Baureife"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "Heute: Strassengesetz (StrG; bGS 731.11 )",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "96": {
@@ -1590,7 +1913,7 @@
     }
    ],
    "marginalie": [
-    "Sondernutzungsplanpflicht *"
+    "Sondernutzungsplanpflicht"
    ]
   },
   "97": {
@@ -1819,6 +2142,24 @@
    ],
    "marginalie": [
     "Entfernung vorschriftswidriger Bauten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "ZGB (SR 210 )",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "109": {
@@ -1855,6 +2196,20 @@
    ],
    "marginalie": [
     "Rechtsmittelinstanzen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "Art. 7 G über die Verwaltungsrechtspflege (VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "bGS 143.1",
+       "url": "https://ar.clex.ch/data/bGS%C2%A0143.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "111": {
@@ -1930,7 +2285,7 @@
     }
    ],
    "marginalie": [
-    "Gewässerabstand *"
+    "Gewässerabstand"
    ]
   },
   "115": {
@@ -2035,6 +2390,24 @@
    ],
    "marginalie": [
     "Widerhandlungen gegen die Vorschriften dieses Gesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "Strafprozessordnung (StPO; SR 312.0 )",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "123": {
@@ -2068,6 +2441,38 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "bGS 721.1 (lf. Nr. 176)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "bGS 721.1 (lf. Nr. 206)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "bGS 211.1",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "127": {
@@ -2079,6 +2484,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "Angenommen in der Volksabstimmung vom 19. Oktober 2003",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "1. Januar 2004 (RRB vom 2. Dezember 2003; Abl. 2003, S. 1249)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10_a": {
@@ -2098,6 +2519,20 @@
    ],
    "marginalie": [
     "Verkehrsinfrastrukturen in Agglomerationen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "MinVG (SR 725.116.2 )",
+     "links": [
+      {
+       "label": "725.116.2",
+       "url": "https://db.clex.ch/link/Bund/725.116.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "115_a": {
@@ -2155,6 +2590,24 @@
    ],
    "marginalie": [
     "Gewässerraum"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "vgl. Art. 41c Gewässerschutzverordnung (GSchV; SR 814.201 )",
+     "links": [
+      {
+       "label": "814.201",
+       "url": "https://db.clex.ch/link/Bund/814.201/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHV"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "122_a": {
@@ -2223,6 +2676,24 @@
    ],
    "marginalie": [
     "Weilerzonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Art. 33 der Raumplanungsverordnung (RPV; SR 700.1 )",
+     "links": [
+      {
+       "label": "700.1",
+       "url": "https://db.clex.ch/link/Bund/700.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "RPV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "56_a": {
@@ -2313,6 +2784,24 @@
    ],
    "marginalie": [
     "Festsetzung der Abgabe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "ZGB (SR 210 )",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "56_g": {

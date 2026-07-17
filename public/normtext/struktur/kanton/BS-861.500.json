@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Wohnraumförderung",
+  "erlassdatum": "Vom 5. Juni 2013 (Stand 17. Februar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "im Sinne eines Gegenvorschlages zur formulierten Volksinitiative «Bezahlbares und sicheres Wohnen für alle!» und nach Einsichtnahme in den Ratschlag und Bericht des Regierungsrates Nr. 12.1202.01 vom 20. August 2012 sowie in den Bericht der Wirtschafts- und Abgabekommission Nr. 12.1202.02 vom 28. Januar 2013 und den Mitbericht der Bau- und Raumplanungskommission Nr. 12.1202.02 vom 30. April 2013,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -102,7 +120,7 @@
     }
    ],
    "marginalie": [
-    "Zweckentfremdung und Umwandlung in Stockwerkeigentum *"
+    "Zweckentfremdung und Umwandlung in Stockwerkeigentum"
    ]
   },
   "9": {
@@ -223,6 +241,24 @@
    ],
    "marginalie": [
     "Bereitstellung von günstigem Mietwohnraum für besonders benachteiligte Personen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 16 Abs 2: Infolge des neuen Gesetzes über die Ausrichtung von Mietbeiträgen (Mietbeitragsgesetz, MBG) vom 12. Februar 2025 (SG 890.500 ) wird der Begriff \"Familienmietzinsbeiträge\" durch \"Mietbeiträge\" ersetzt.",
+     "links": [
+      {
+       "label": "890.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/890.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-890.500"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -277,7 +313,7 @@
     }
    ],
    "marginalie": [
-    "Besondere Bestimmungen *"
+    "Besondere Bestimmungen"
    ]
   },
   "22": {
@@ -311,6 +347,43 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Diese Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 640.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 650.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SG 253.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Wirksam seit 1. 7. 2014.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16_a": {
@@ -325,7 +398,7 @@
     }
    ],
    "marginalie": [
-    "Bedürfnisse von älteren und langjährigen Mietparteien *"
+    "Bedürfnisse von älteren und langjährigen Mietparteien"
    ]
   },
   "16_b": {
@@ -464,6 +537,20 @@
    ],
    "marginalie": [
     "Sanierung, Renovation und Umbau in Zeiten der Wohnungsnot"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 8a Abs. 3 lit. a wurde gemäss Urteil des Bundesgerichts vom 19. Dezember 2022 (1C 759/2021) aufgehoben.",
+     "links": [
+      {
+       "label": "(1C 759/2021)",
+       "url": "https://www.bger.ch/ext/eurospider/live/fr/php/aza/http/index.php?highlight_docid=aza%3A%2F%2Faza://19-12-2022-1C_759-2021&amp;lang=de&amp;zoom=&amp;type=show_document"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8_b": {

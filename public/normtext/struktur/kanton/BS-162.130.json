@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend den Wohnsitz von Beamten und Angestellten",
+  "erlassdatum": "Vom 4. Februar 1969 (Stand 4. Februar 1969)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 14 des Gesetzes betreffend die Dienstverhältnisse der Beamten und Angestellten des Kantons Basel-Stadt sowie betreffend die Haftbarkeit von Behörden und Staat (Beamtengesetz) vom 25. April 1968",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst wie folgt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Ingress: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt § 17 des Personalgesetzes vom 17. 11. 1999 (SG 162.100 ).",
+    "links": [
+     {
+      "label": "162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-162.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

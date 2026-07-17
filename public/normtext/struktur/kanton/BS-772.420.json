@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität",
+  "erlassdatum": "Vom 3. Juli 2025 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Verwaltungsrat der IWB Industrielle Werke Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 10 Abs. 2 lit. h und § 23 Abs. 1 lit. d des Gesetzes über die Industriellen Werke Basel (IWB-Gesetz) vom 11. Februar 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 772.300",
+    "links": [
+     {
+      "label": "772.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/772.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-772.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -23,6 +62,20 @@
    ],
    "marginalie": [
     "Definition"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 772.400",
+     "links": [
+      {
+       "label": "772.400",
+       "url": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.400"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -98,6 +151,20 @@
    ],
    "marginalie": [
     "Baustromanschlüsse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 772.400",
+     "links": [
+      {
+       "label": "772.400",
+       "url": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.400"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -109,6 +176,20 @@
    ],
    "marginalie": [
     "Definition"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 724.300",
+     "links": [
+      {
+       "label": "724.300",
+       "url": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/724.300"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -153,6 +234,48 @@
    ],
    "marginalie": [
     "Grundsätze der Tarifgestaltung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 734.7",
+     "links": [
+      {
+       "label": "734.7",
+       "url": "https://db.clex.ch/link/Bund/734.7/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 734.71",
+     "links": [
+      {
+       "label": "734.71",
+       "url": "https://db.clex.ch/link/Bund/734.71/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SG 772.400",
+     "links": [
+      {
+       "label": "772.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/772.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-772.400"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -168,6 +291,24 @@
    ],
    "marginalie": [
     "Netznutzungsentgelt Netzebene 7 – Einfachtarif für Netzanschlüsse mit einer Bezügersicherung kleiner 100 A"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SG 772.400",
+     "links": [
+      {
+       "label": "772.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/772.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-772.400"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -346,6 +487,32 @@
    ],
    "marginalie": [
     "Lokale Elektrizitätsgemeinschaft (LEG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SR 734.7",
+     "links": [
+      {
+       "label": "734.7",
+       "url": "https://db.clex.ch/link/Bund/734.7/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "SR 734.71",
+     "links": [
+      {
+       "label": "734.71",
+       "url": "https://db.clex.ch/link/Bund/734.71/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -361,6 +528,32 @@
    ],
    "marginalie": [
     "Rückerstattung der Netzentgelte für Speicher mit Endverbrauch und Anlagen zur Umwandlung von Elektrizität"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SR 734.7",
+     "links": [
+      {
+       "label": "734.7",
+       "url": "https://db.clex.ch/link/Bund/734.7/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "SR 734.71",
+     "links": [
+      {
+       "label": "734.71",
+       "url": "https://db.clex.ch/link/Bund/734.71/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -392,6 +585,48 @@
    ],
    "marginalie": [
     "Öffentliche Leistungen und Systemdienstleistungen, Zuschläge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "SG 772.100",
+     "links": [
+      {
+       "label": "772.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/772.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-772.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SG 734.722",
+     "links": [
+      {
+       "label": "734.722",
+       "url": "https://www.gesetzessammlung.bs.ch/data/734.722/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "SR 734.7",
+     "links": [
+      {
+       "label": "734.7",
+       "url": "https://db.clex.ch/link/Bund/734.7/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -403,6 +638,40 @@
    ],
    "marginalie": [
     "Steuern und weitere Abgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "SG 772.300",
+     "links": [
+      {
+       "label": "772.300",
+       "url": "https://www.gesetzessammlung.bs.ch/data/772.300/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-772.300"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "SR 730.0",
+     "links": [
+      {
+       "label": "730.0",
+       "url": "https://db.clex.ch/link/Bund/730.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ENG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -412,7 +681,16 @@
      "label": "7. Übergangsbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Vom Regierungsrat genehmigt am 26. 8. 2025.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

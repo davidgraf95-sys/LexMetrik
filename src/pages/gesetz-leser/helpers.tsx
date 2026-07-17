@@ -227,11 +227,23 @@ export function erlassVorschlaege<T extends Pick<BrowseErlass, 'key' | 'kuerzel'
 }
 export function fnTextMitLinks(fn: Fussnote): ReactNode {
   if (!fn.links.length) return richText(fn.text, 'fn');
-  const map = new Map(fn.links.map((l) => [l.label, l.url]));
+  const map = new Map(fn.links.map((l) => [l.label, l]));
   const re = new RegExp(`(${[...map.keys()].sort((a, b) => b.length - a.length).map(escRe).join('|')})`, 'g');
   return fn.text.split(re).map((t, i) => {
-    const url = map.get(t);
-    if (url === undefined) return <Fragment key={i}>{richText(t, `fn${i}`)}</Fragment>;
+    const link = map.get(t);
+    if (link === undefined) return <Fragment key={i}>{richText(t, `fn${i}`)}</Fragment>;
+    const url = link.url;
+    // A42 (Kanton): der Generator hat den zitierten Erlass bereits als internen
+    // Reader-Verweis aufgelöst (wo gehalten) — direkt intern verlinken, sonst
+    // amtlicher Fallback (§8). Bund-Fussnoten tragen kein `intern` → sie laufen
+    // durch die SR-Label-Auflösung unten (unverändert, golden-stabil).
+    if (link.intern) {
+      return (
+        <Link key={i} to={`/gesetze/${link.intern.ebene}/${encodeURIComponent(link.intern.key)}`}
+          title="Intern öffnen"
+          className="text-brass-700/90 hover:text-brass-700 hover:underline decoration-dotted underline-offset-2">{richText(t, `fn${i}`)}</Link>
+      );
+    }
     // SR-Erkennung (M11) auf dem TAG-FREIEN Label — Hervorhebungen («SR <b>220</b>»)
     // dürfen den Treffer nicht verhindern.
     const plano = t.replace(/<[^>]+>/g, '');

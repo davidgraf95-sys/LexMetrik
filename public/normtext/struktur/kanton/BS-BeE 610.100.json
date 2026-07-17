@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Finanzreglement über das Rechnungswesen der Einwohnergemeinde Bettingen",
+  "erlassdatum": "Vom 12. November 2018 (Stand 1. Januar 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 30 der Gemeindeordnung der Einwohnergemeinde Bettingen vom 26. April 2016,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BeE 111.100",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

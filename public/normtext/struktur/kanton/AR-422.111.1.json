@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Regierungsratsbeschluss über die Pflanzenreservate im Kanton Appenzell A.Rh.",
+  "erlassdatum": "vom 20.06.1960 (Stand 31.03.1969)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Art. 3 und Art. 8 Abs. 1 der Verordnung vom 8. Juni 1959 über den Naturschutz, werden mit sofortiger Wirkung nachstehende Gebiete dem totalen Pflanzenschutz",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "unterstellt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 422.111",
+    "links": [
+     {
+      "label": "422.111",
+      "url": "https://ar.clex.ch/data/422.111/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-422.111"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

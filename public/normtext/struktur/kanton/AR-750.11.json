@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Energiegesetz",
+  "erlassdatum": "vom 18.12.2001 (Stand 01.01.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 24 des Energiegesetzes vom 24. September 2001,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "kEnG (bGS 750.1 )",
+    "links": [
+     {
+      "label": "750.1",
+      "url": "https://ar.clex.ch/data/750.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-750.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +60,20 @@
    ],
    "marginalie": [
     "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "EnV (SR 730.01 )",
+     "links": [
+      {
+       "label": "730.01",
+       "url": "https://db.clex.ch/link/Bund/730.01/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -46,7 +99,7 @@
     }
    ],
    "marginalie": [
-    "Winterlicher Wärmeschutz *"
+    "Winterlicher Wärmeschutz"
    ]
   },
   "11": {
@@ -61,7 +114,7 @@
     }
    ],
    "marginalie": [
-    "Erleichterungen und Befreiung von den Anforderungen *"
+    "Erleichterungen und Befreiung von den Anforderungen"
    ]
   },
   "12": {
@@ -76,7 +129,7 @@
     }
    ],
    "marginalie": [
-    "Kühlräume *"
+    "Kühlräume"
    ]
   },
   "13": {
@@ -91,7 +144,7 @@
     }
    ],
    "marginalie": [
-    "Gewächshäuser und beheizte Traglufthallen *"
+    "Gewächshäuser und beheizte Traglufthallen"
    ]
   },
   "14": {
@@ -106,7 +159,7 @@
     }
    ],
    "marginalie": [
-    "Wärmeerzeugung und –speicherung a) Wassererwärmer und Wärmespeicher *"
+    "Wärmeerzeugung und –speicherung a) Wassererwärmer und Wärmespeicher"
    ]
   },
   "15": {
@@ -121,7 +174,7 @@
     }
    ],
    "marginalie": [
-    "Wärmeverteilung und -abgabe *"
+    "Wärmeverteilung und -abgabe"
    ]
   },
   "16": {
@@ -136,7 +189,7 @@
     }
    ],
    "marginalie": [
-    "Abwärmenutzung *"
+    "Abwärmenutzung"
    ]
   },
   "17": {
@@ -151,7 +204,21 @@
     }
    ],
    "marginalie": [
-    "Lüftung und Klimatisierung a) Lüftungstechnische Anlagen *"
+    "Lüftung und Klimatisierung a) Lüftungstechnische Anlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "EnEV (SR 730.02 )",
+     "links": [
+      {
+       "label": "730.02",
+       "url": "https://db.clex.ch/link/Bund/730.02/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -166,7 +233,7 @@
     }
    ],
    "marginalie": [
-    "Berechnungsregeln *"
+    "Berechnungsregeln"
    ]
   },
   "19": {
@@ -181,7 +248,7 @@
     }
    ],
    "marginalie": [
-    "Nachweis mittels Standardlösungskombinationen *"
+    "Nachweis mittels Standardlösungskombinationen"
    ]
   },
   "20": {
@@ -192,7 +259,7 @@
     }
    ],
    "marginalie": [
-    "Wärmedämmung bei Flächenheizungen *"
+    "Wärmedämmung bei Flächenheizungen"
    ]
   },
   "21": {
@@ -203,7 +270,7 @@
     }
    ],
    "marginalie": [
-    "Anforderungen *"
+    "Anforderungen"
    ]
   },
   "22": {
@@ -214,7 +281,7 @@
     }
    ],
    "marginalie": [
-    "Befreiung bei wesentlichen Erneuerungen *"
+    "Befreiung bei wesentlichen Erneuerungen"
    ]
   },
   "25": {
@@ -292,6 +359,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "1. Januar 2002 (RRB vom 18. Dezember 2001)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10_a": {
@@ -501,7 +577,7 @@
     }
    ],
    "marginalie": [
-    "Grenzwerte für den Elektrizitätsbedarf für die Beleuchtung *"
+    "Grenzwerte für den Elektrizitätsbedarf für die Beleuchtung"
    ]
   },
   "24_a": {
@@ -577,6 +653,92 @@
    ],
    "marginalie": [
     "c) Befreiung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 12a Abs. 1 lit. b, Art. 12c und Art. 22a kEnG; Art. 14b kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Art. 14 und 14a kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Art. 15 kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Art. 16 kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 17 und 17a kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Art. 17b kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Art. 10 kEnG; Art. 17c, 18, 19, 19b und Anhang 4 kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Art. 10a kEnG; Art. 19a bis kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Art. 12a Abs. 1 lit. a und Art. 12b kEnG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "Art. 19b kEnV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Art. 12a Abs. 1 lit. c und Art. 12d kEnG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "Art. 12a Abs. 1 lit. d und Art. 12e kEnG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24_f": {
@@ -655,6 +817,15 @@
    ],
    "marginalie": [
     "Nachweis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 6 Abs. 3 kEnG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

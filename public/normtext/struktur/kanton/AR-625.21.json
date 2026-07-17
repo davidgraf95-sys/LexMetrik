@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz vom 13. Oktober 1965 über die Verrechnungssteuer",
+  "erlassdatum": "vom 19.12.2000 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 35 des Bundesgesetzes vom 13. Oktober 1965 über die Verrechnungssteuer sowie Art. 286 Abs. 3 des Steuergesetzes vom 21. Mai 2000,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "VStG (SR 642.21 )",
+    "links": [
+     {
+      "label": "642.21",
+      "url": "https://db.clex.ch/link/Bund/642.21/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "VSTG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "StG (bGS 621.11 )",
+    "links": [
+     {
+      "label": "621.11",
+      "url": "https://ar.clex.ch/data/621.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-621.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -163,6 +219,24 @@
    ],
    "marginalie": [
     "Rechtsmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Heute: Gesetz über die Verwaltungsrechtspflege (VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13": {

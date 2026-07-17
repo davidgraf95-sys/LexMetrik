@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Schutz vor sexueller Belästigung am Arbeitsplatz",
+  "erlassdatum": "Vom 10. Juni 1997 (Stand 1. Juli 2000)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 16 des Personalgesetzes vom 17. November 1999 sowie Art. 4 des Bundesgesetzes über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG) vom 24. März 1995,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 162.100.",
+    "links": [
+     {
+      "label": "162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-162.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 151.1.",
+    "links": [
+     {
+      "label": "151.1",
+      "url": "https://db.clex.ch/link/Bund/151.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "GLG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -117,7 +173,7 @@
     }
    ],
    "marginalie": [
-    "Gegenüberstellung *"
+    "Gegenüberstellung"
    ]
   },
   "12": {
@@ -182,7 +238,16 @@
      "label": "VI. Schlussbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 22. 6. 1997.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }
