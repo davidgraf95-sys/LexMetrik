@@ -44,9 +44,14 @@ function KarteInhalt({ e }: { e: BrowseErlass }) {
     <>
       <div className="flex items-baseline justify-between gap-3">
         <span className="font-display text-h3 font-semibold text-ink-900 leading-none">{e.kuerzel}</span>
-        {e.sprache !== 'de' && (
-          <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>
-        )}
+        <span className="flex items-baseline gap-2 shrink-0">
+          {/* §8: ganz aufgehobener Erlass bleibt auffindbar, ist aber sichtbar
+              markiert (Design-Token danger, §13). */}
+          {e.aufgehoben && <span className="lc-badge lc-badge-danger">Aufgehoben</span>}
+          {e.sprache !== 'de' && (
+            <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>
+          )}
+        </span>
       </div>
       <p className="mt-1.5 text-body-s text-ink-600 leading-snug line-clamp-2">{e.titel}</p>
       <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
@@ -74,6 +79,8 @@ export function ErlassZeile({ e }: { e: BrowseErlass }) {
   const inhalt = (
     <>
       <span className="font-medium text-ink-700 shrink-0">{e.kuerzel}</span>
+      {/* §8: aufgehobener Erlass sichtbar markiert, bleibt aber verlinkt/lesbar. */}
+      {e.aufgehoben && <span className="lc-badge lc-badge-danger shrink-0">aufgehoben</span>}
       <span className="text-ink-500 truncate">{e.titel}</span>
       {e.sr && <span className="num text-xs text-ink-500 shrink-0 ml-auto">SR {e.sr}</span>}
       {e.status === 'nur-live-link' && <span aria-hidden className="text-xs text-brass-700 shrink-0">↗</span>}
