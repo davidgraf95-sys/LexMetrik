@@ -342,7 +342,12 @@ EINTRAEGE=(
   "fdv|cc/2007/166|20260701|0|art_1|784.101.1"
   "fav|cc/2016/24|20240815|10|art_1|784.101.2"
   "uvpv|cc/1988/1931_1931_1931|20250101|1|art_1|814.011"
-  "chemrrv|cc/2005/478|20260101|26|art_1|814.81"
+  # Re-Pin 20260101→20260716 (§7-Nachverifikation 18.7.2026): Fedlex publizierte
+  # am 16.7.2026 die neue ChemRRV-Konsolidierung (check:fedlex-versionen-Arbiter,
+  # dateApplicability ≤ heute). Kanonisch html-0 (SUFFIXLOS, isExemplifiedBy:
+  # …-20260716-de-html.html) — die alte 20260101-Fassung war html-26. Filestore-
+  # Sonde: 933 kB, srnummer 814.81, art_1 vorhanden (kein Casemates-Shell).
+  "chemrrv|cc/2005/478|20260716|0|art_1|814.81"
   "veva|cc/2005/551|20250801|0|art_1|814.610"
   "vgvp|cc/2000/299|20220101|10|art_1|814.621"
   # ── International: Staatsverträge SR 0.* als Volltext (Auftrag David 25.6.2026) ──

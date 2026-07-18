@@ -45,10 +45,17 @@ export type WiedervorlageEintrag = {
 };
 export type CurrencyEintrag = { geprueftAm: string; naechsteFassungAb?: string };
 export type UeberholtEintrag = { key: string; gepinnt: string; geltend: string };
+// G-AUFH-Follow-up (#259): ganz aufgehobener Erlass (jolux:dateNoLongerInForce
+// auf der ConsolidationAbstract). `aufgehobenSeit` = amtliches Aufhebungsdatum
+// (ISO); `kuenftig` = Aufhebung erst nach dem Laufdatum angekündigt.
+export type AufhebungEintrag = {
+  key: string; sr: string; kuerzel: string; gepinnt: string; aufgehobenSeit: string; kuenftig: boolean;
+};
 export type Erhebung = {
   wiedervorlage: WiedervorlageEintrag[];
   currency: Record<string, CurrencyEintrag>;
   ueberholt: UeberholtEintrag[];
+  aufhebungen: AufhebungEintrag[];
   ohneDaten: string[];
 };
 
@@ -87,32 +94,60 @@ export async function erhebe(
     werte.push(`<https://fedlex.data.admin.ch/eli/${eli}>`);
   }
 
+  // G-AUFH-Follow-up (#259): dateNoLongerInForce (Ganz-Aufhebung) additiv per
+  // OPTIONAL abfragen — sie liegt auf der ConsolidationAbstract (?abstract),
+  // nicht auf der Consolidation (?c). Ein aufgehobener Erlass darf NIE als
+  // «geltend geprüft» durchgehen (§8) — er wird zum Aufhebungs-Posten.
   const baueQuery = (values: string) => `
 PREFIX jolux: <http://data.legilux.public.lu/resource/ontology/jolux#>
-SELECT ?abstract ?date WHERE {
+SELECT ?abstract ?date ?noLonger WHERE {
   VALUES ?abstract { ${values} }
   ?c jolux:isMemberOf ?abstract ; jolux:dateApplicability ?date .
+  OPTIONAL { ?abstract jolux:dateNoLongerInForce ?noLonger }
 }`;
   const bindings = await sparqlBatch(werte, baueQuery, { fetchImpl });
 
   const datenProEli = new Map<string, string[]>();
+  // dateNoLongerInForce steht auf jeder date-Zeile eines aufgehobenen Abstracts;
+  // wir halten das früheste Datum (defensiv — je Abstract sollte es eindeutig sein).
+  const noLongerProEli = new Map<string, string>();
   for (const b of bindings) {
     if (!b.abstract || !b.date) continue;
     const eli = b.abstract.value.replace('https://fedlex.data.admin.ch/eli/', '');
     const liste = datenProEli.get(eli) ?? [];
     liste.push(b.date.value.slice(0, 10));
     datenProEli.set(eli, liste);
+    const nl = (b as { noLonger?: { value: string } }).noLonger?.value;
+    if (nl) {
+      const kurz = nl.slice(0, 10);
+      const bisher = noLongerProEli.get(eli);
+      if (bisher === undefined || kurz < bisher) noLongerProEli.set(eli, kurz);
+    }
   }
 
   const wiedervorlage: WiedervorlageEintrag[] = [];
   const currency: Record<string, CurrencyEintrag> = {};
   const ueberholt: UeberholtEintrag[] = [];
+  const aufhebungen: AufhebungEintrag[] = [];
   const ohneDaten: string[] = [];
 
   for (const [eli, e] of perEli) {
     const daten = [...(datenProEli.get(eli) ?? [])].sort();
-    if (daten.length === 0) { ohneDaten.push(e.key); continue; }
     const gepinnt = isoAusToken(e.fassungsToken);
+    // G-AUFH-Follow-up: Ganz-Aufhebung hat VORRANG — der Erlass wird als
+    // Aufhebungs-Posten geführt, nicht als Frische-Wiedervorlage, und erhält
+    // KEINEN geprüft-Chip (§8). «Roh» gemeldet: ohne SSoT-Filter aus
+    // src/lib/normtext/aufhebungen.ts (liegt erst nach #287-Merge auf main —
+    // 1-Zeilen-Anschluss im PR-Body).
+    const noLonger = noLongerProEli.get(eli) ?? null;
+    if (noLonger) {
+      aufhebungen.push({
+        key: e.key, sr: e.sr!, kuerzel: e.kuerzel, gepinnt,
+        aufgehobenSeit: noLonger, kuenftig: noLonger > datum,
+      });
+      continue;
+    }
+    if (daten.length === 0) { ohneDaten.push(e.key); continue; }
     const geltendListe = daten.filter((d) => d <= datum);
     const geltend = geltendListe[geltendListe.length - 1];
     const naechste = daten.find((d) => d > datum); // sortiert asc → früheste künftige
@@ -127,16 +162,42 @@ SELECT ?abstract ?date WHERE {
   }
 
   wiedervorlage.sort((a, b) => a.naechste.localeCompare(b.naechste) || a.sr.localeCompare(b.sr));
-  return { wiedervorlage, currency, ueberholt, ohneDaten };
+  aufhebungen.sort((a, b) => a.aufgehobenSeit.localeCompare(b.aufgehobenSeit) || a.sr.localeCompare(b.sr));
+  return { wiedervorlage, currency, ueberholt, aufhebungen, ohneDaten };
 }
 
 // ─── Schreiben ───────────────────────────────────────────────────────────────
 
-/** Baut den markierten AUTO-Block (inkl. Marken) aus den Wiedervorlage-Einträgen. */
-export function baueAutoBlock(eintraege: WiedervorlageEintrag[], datum: string): string {
+/** Baut den markierten AUTO-Block (inkl. Marken) aus Wiedervorlage- und
+ *  (G-AUFH-Follow-up #259) Aufhebungs-Einträgen. */
+export function baueAutoBlock(
+  eintraege: WiedervorlageEintrag[], datum: string, aufhebungen: AufhebungEintrag[] = [],
+): string {
   const zeilen = eintraege.map((e) =>
     `| Künftige Fassung ${e.kuerzel} (SR ${e.sr}) | \`scripts/fedlex-cache.sh\` (${e.key}) | gepinnt ${deDatum(e.gepinnt)} | einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7) | ${deDatum(e.naechste)} |`,
   );
+  // Aufhebungs-Sektion: eine bereits erfolgte Aufhebung trägt in der letzten
+  // Spalte KEIN Datum (→ verfall-parse: manueller Eintrag, nie «verfallen» —
+  // die Massnahme ist Snapshot-Ersatz, nicht eine terminierte Frische-Prüfung);
+  // eine künftig angekündigte Aufhebung trägt ihr Datum (→ terminierte Vorwarnung).
+  const aufhebungsZeilen = aufhebungen.map((a) =>
+    `| Aufgehoben: ${a.kuerzel} (SR ${a.sr}) | \`scripts/fedlex-cache.sh\` (${a.key}) | aufgehoben seit ${deDatum(a.aufgehobenSeit)} | einmalig — Snapshot ersetzen/entfernen (§7/§8), Nachfolge prüfen | ${a.kuenftig ? `Aufhebung angekündigt ab ${deDatum(a.aufgehobenSeit)}` : 'Aufhebung erfolgt — Massnahme nötig'} |`,
+  );
+  const aufhebungsSektion = aufhebungen.length === 0 ? [] : [
+    '',
+    '### Ganz aufgehobene Erlasse (Aufhebungs-Posten, G-AUFH-Follow-up #259)',
+    '',
+    'Aus dem amtlichen Fedlex-SPARQL-Graphen (`jolux:dateNoLongerInForce` auf der',
+    'ConsolidationAbstract) geerntet. Diese Erlasse sind GANZ aufgehoben — der',
+    'Snapshot bleibt allenfalls als historische Fassung nutzbar, darf aber nie mehr',
+    'als geltend dargestellt werden (§8). Massnahme: Snapshot ersetzen/entfernen,',
+    'Nachfolge-Erlass prüfen. Roh gemeldet (ohne SSoT-Filter aus',
+    '`src/lib/normtext/aufhebungen.ts` — folgt mit #287).',
+    '',
+    '| Erlass (aufgehoben) | Fundstelle | Aufhebungsdatum | Rhythmus | Nächste Prüfung |',
+    '|---|---|---|---|---|',
+    ...aufhebungsZeilen,
+  ];
   return [
     MARKE_START,
     '',
@@ -152,6 +213,7 @@ export function baueAutoBlock(eintraege: WiedervorlageEintrag[], datum: string):
     '| Erlass (künftige Fassung) | Fundstelle | Aktuell gepinnt | Rhythmus | Nächste Prüfung |',
     '|---|---|---|---|---|',
     ...zeilen,
+    ...aufhebungsSektion,
     '',
     MARKE_ENDE,
   ].join('\n');
@@ -203,16 +265,22 @@ async function main() {
     return;
   }
 
-  const { wiedervorlage, currency, ueberholt, ohneDaten } = erhebung;
+  const { wiedervorlage, currency, ueberholt, aufhebungen, ohneDaten } = erhebung;
 
   const md = readFileSync(VERFALL_MD, 'utf8');
-  writeFileSync(VERFALL_MD, schreibeVerfallMd(md, baueAutoBlock(wiedervorlage, datum)), 'utf8');
+  writeFileSync(VERFALL_MD, schreibeVerfallMd(md, baueAutoBlock(wiedervorlage, datum, aufhebungen)), 'utf8');
   writeFileSync(CURRENCY_JSON, currencyJson(currency), 'utf8');
 
   console.log(`gen:fedlex-wiedervorlage (Laufdatum ${datum}):`);
   console.log(`  ${wiedervorlage.length} künftige Fassungen → AUTO-Block in parameter-verfall.md`);
   console.log(`  ${Object.keys(currency).length} Erlasse mit geprüft-Chip → public/normtext/currency.json`);
   console.log(`  davon ${Object.values(currency).filter((c) => c.naechsteFassungAb).length} mit naechsteFassungAb`);
+  if (aufhebungen.length > 0) {
+    console.log(`  ⚠ ${aufhebungen.length} GANZ AUFGEHOBEN (Aufhebungs-Posten, kein geprüft-Chip; §8):`);
+    for (const a of aufhebungen) {
+      console.log(`      ${a.key}: aufgehoben ${a.kuenftig ? 'ab' : 'seit'} ${a.aufgehobenSeit} (SR ${a.sr})`);
+    }
+  }
   if (ueberholt.length > 0) {
     console.log(`  ⚠ ${ueberholt.length} ÜBERHOLT (kein geprüft-Chip; P1-a-Rückstand, check:fedlex-versionen rot):`);
     for (const u of ueberholt) console.log(`      ${u.key}: gepinnt ${u.gepinnt} < geltend ${u.geltend}`);
