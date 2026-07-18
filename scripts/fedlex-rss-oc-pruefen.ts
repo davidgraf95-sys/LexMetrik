@@ -291,12 +291,11 @@ export async function erhebe(
   // Nur Konsolidierungen der cc-Erlasse abfragen, die (a) von einem in Kraft
   // stehenden AS-Akt getroffen werden UND (b) überhaupt gepinnt sind.
   const relevanteCc = new Set<string>();
-  let getroffenePins = 0;
   for (const a of posten) {
     if (!a.inkraft || a.inkraft > heute) continue;
     for (const cc of a.ccs) if (gepinnteCc.has(cc)) relevanteCc.add(cc);
   }
-  getroffenePins = relevanteCc.size;
+  const getroffenePins = relevanteCc.size;
 
   const konsProCc = await holeKonsolidierungen([...relevanteCc], fetchImpl);
   const befunde = bewerteStalePending(posten, pins, konsProCc, heute);
