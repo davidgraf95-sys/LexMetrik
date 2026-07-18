@@ -9,7 +9,7 @@
 //   Klick-Ruhe — ein TOC-Eintrag lässt sich anklicken und springt sauber ans Ziel.
 //   A9-DoD — Lese-Scroll unter 4× CPU-Drossel: CLS 0, keine Konsolenfehler.
 import { test, expect, type Page } from '@playwright/test'
-import { clsBeobachtenInstallieren, clsAuslesen } from './helpers/cls'
+import { clsBeobachtenInstallieren, clsAuslesen, clsHoehenSamplerVorabInstallieren } from './helpers/cls'
 
 function fehlerSammeln(page: Page): string[] {
   const fehler: string[] = []
@@ -172,11 +172,16 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
     test.slow()
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 820 })
+    // Wachser-Diagnose (19.7.): den Über-Grid-Höhen-Sampler schon AB Navigation
+    // starten (vor goto), damit der problematische ~2.7-s-Lade-Shift (vom buffered-
+    // Observer nachgezogen) im Fehler-Bericht seinen WACHSER trägt — das Element
+    // oberhalb des Grids, dessen Höhe deterministisch einwächst. Reine Diagnose (§6.3).
+    await clsHoehenSamplerVorabInstallieren(page)
     await page.goto('/gesetze/bund/OR')
     await expect(page.locator('article[id^="art-"]').first()).toBeVisible({ timeout: 20000 })
     await expect(page.locator('[data-toc]')).toBeVisible({ timeout: 10000 })
     // Beobachter mit Quellen-Erfassung (buffered wie bisher): bei Überschreitung
-    // nennt die expect-Meldung die Top-shiftenden Elemente im Klartext.
+    // nennt die expect-Meldung die Top-shiftenden Elemente im Klartext + Wachser.
     await clsBeobachtenInstallieren(page, true)
     const client = await page.context().newCDPSession(page)
     await client.send('Emulation.setCPUThrottlingRate', { rate: 4 })
