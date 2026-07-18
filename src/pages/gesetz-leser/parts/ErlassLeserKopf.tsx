@@ -52,11 +52,15 @@ export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, bestimmungsWo
             <span>in Kraft seit <span className="num">{formatiereDatum(erlass.inkraftSeit)}</span></span>
           </>
         )}
-        {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
+        {/* §8: bei GANZ aufgehobenem Erlass NIE «geltende Fassung» verlinken (der
+            Link führte auf die aufgehobene Konsolidierung) — der amtliche Link
+            liegt ehrlich beschriftet im Aufhebungs-Banner unten. */}
+        {erlass.quelleUrl && !erlass.aufgehoben && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
         {/* P1-d Currency-Chips (Moat-Hebel 3): maschineller Freshness-Beweis + angekündigte
             Fassung. Prerender-stabil (Sidecar zur Bauzeit erhoben, keine Client-Datums-Logik,
-            §15/2 CLS=0). Wortfeld «geltend geprüft am … (maschinell)» ist die zugelassene Formel. */}
-        {currency?.geprueftAm && (
+            §15/2 CLS=0). Wortfeld «geltend geprüft am … (maschinell)» ist die zugelassene Formel.
+            §8: bei aufgehobenem Erlass unterdrückt — «geltend geprüft» wäre irreführend. */}
+        {currency?.geprueftAm && !erlass.aufgehoben && (
           <span className="lc-chip lc-chip-geltend whitespace-nowrap" title="Maschinell gegen den amtlichen Fedlex-Konsolidierungsgraphen (dateApplicability) geprüft; massgeblich bleibt stets die amtliche Quelle.">
             {`geltend geprüft am ${formatiereDatum(currency.geprueftAm)} (maschinell)`}
           </span>
@@ -69,6 +73,36 @@ export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, bestimmungsWo
         {aktionen}
         <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">{hinweis}</span>
       </div>
+      {/* §8-Ehrlichkeit: GANZ aufgehobener Erlass (jolux:dateNoLongerInForce). Der
+          Snapshot bleibt als historische Fassung lesbar, wird aber unmissverständlich
+          als aufgehoben ausgewiesen — Status-Banner (Design-Token danger, §13, kein
+          Ad-hoc-Rot) mit amtlichem Live-Link + Nachfolger-Link. */}
+      {erlass.aufgehoben && (
+        <div role="status" className="lc-notice-danger text-body-s leading-snug space-y-1.5">
+          <p>
+            <strong className="font-semibold">Aufgehoben per {formatiereDatum(erlass.aufgehoben.seit)}.</strong>{' '}
+            Dieser Erlass ist nicht mehr in Kraft. Der Text bleibt als historische Fassung
+            (Stand {formatiereDatum(erlass.stand)}) abrufbar — massgeblich ist die amtliche Quelle.
+          </p>
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            {erlass.aufgehoben.nachfolger && (
+              <a
+                href={`https://www.fedlex.admin.ch/eli/${erlass.aufgehoben.nachfolger.eli}/de`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:no-underline"
+              >
+                ↗ Nachfolge-Erlass: SR <span className="num">{erlass.aufgehoben.nachfolger.sr}</span> (in Kraft seit {formatiereDatum(erlass.aufgehoben.seit)})
+              </a>
+            )}
+            {erlass.quelleUrl && (
+              <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">
+                ↗ amtliche (aufgehobene) Fassung
+              </a>
+            )}
+          </p>
+        </div>
+      )}
     </header>
   );
 }

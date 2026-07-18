@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { bewerte, parseKonsolidierungen } from '../../scripts/fedlex-versionen-pruefen';
 import type { Pin } from '../../scripts/fedlex-pins';
+import { ANERKANNTE_AUFHEBUNGEN } from '../lib/normtext/aufhebungen';
 
 // ─── G-AUFH: Aufhebungs-Blindheit der Currency-Prüfung ───────────────────────
 // Vor dem Fix fragte check:fedlex-versionen jolux:dateNoLongerInForce NIRGENDS
@@ -40,6 +41,51 @@ describe('bewerte — Aufhebungs-Zweige (G-AUFH)', () => {
   it('Grenzfall: Aufhebung GENAU heute ⇒ AUFGEHOBEN (≤ heute ist inklusiv)', () => {
     const v = bewerte(pin(), ['2020-01-01'], HEUTE, HEUTE);
     expect(v.art).toBe('AUFGEHOBEN');
+  });
+});
+
+// ─── G-AUFH · Anerkannte Aufhebung (§8-ehrlich, PR #287) ─────────────────────
+// Ein in aufhebungen.ts DEKLARIERTER Repeal wird von bewerte() gegen das amtliche
+// dateNoLongerInForce verifiziert: stimmt Datum ⇒ ehrliches OK «bewusst
+// historisch»; sonst ROT (AUFGEHOBEN). Fixtures docken an der echten SSoT-Zeile
+// (BMV) an, damit der Test mit der Deklaration mitwandert. Ein UNDEKLARIERTER
+// Repeal bleibt über die Blindheitsprüfung ROT (Tests oben, eli cc/2000/1).
+describe('bewerte — anerkannte Aufhebung (§8: OK statt Dauer-Rot)', () => {
+  const anerkannt = ANERKANNTE_AUFHEBUNGEN[0]; // BMV: eli cc/2009/423, seit 2026-03-01
+  const apin = (p: Partial<Pin> = {}): Pin =>
+    pin({ name: 'bmv', eli: anerkannt.eli, ...p });
+
+  it('anerkannt + Fedlex bestätigt Aufhebung (Datum == Deklaration) ⇒ ehrliches OK', () => {
+    const v = bewerte(apin(), ['2020-01-01'], anerkannt.seit, HEUTE);
+    expect(v.art).toBe('OK');
+    expect(v.text).toContain('OK (aufgehoben)');
+    expect(v.text).toContain(`amtlich aufgehoben per ${anerkannt.seit}`);
+    expect(v.text).toContain('bewusst als historische Fassung geführt');
+  });
+
+  it('anerkannt hat VORRANG vor ÜBERHOLT (aufgehobener, deklarierter Erlass ⇒ OK)', () => {
+    // dateApplicability 2026-06-01 > gepinnt ⇒ für sich «überholt», aber tot+anerkannt.
+    const v = bewerte(apin({ kons: '2020-01-01' }), ['2026-06-01'], anerkannt.seit, HEUTE);
+    expect(v.art).toBe('OK');
+  });
+
+  it('anerkannt, aber Fedlex-Datum weicht von der Deklaration ab ⇒ ROT (nachführen)', () => {
+    const v = bewerte(apin(), ['2020-01-01'], '2025-01-01', HEUTE);
+    expect(v.art).toBe('AUFGEHOBEN');
+    expect(v.text).toContain(`Deklaration seit=${anerkannt.seit}`);
+    expect(v.text).toContain('nachführen');
+  });
+
+  it('anerkannt, aber Fedlex meldet KEINE Aufhebung (kein noLonger) ⇒ ROT (Deklaration falsch)', () => {
+    const v = bewerte(apin(), ['2020-01-01'], null, HEUTE);
+    expect(v.art).toBe('AUFGEHOBEN');
+    expect(v.text).toContain('KEINE geltende Aufhebung');
+  });
+
+  it('anerkannt, aber Fedlex meldet nur KÜNFTIGE Aufhebung (> heute) ⇒ ROT (noch geltend)', () => {
+    const v = bewerte(apin(), ['2020-01-01'], '2027-01-01', HEUTE);
+    expect(v.art).toBe('AUFGEHOBEN');
+    expect(v.text).toContain('KEINE geltende Aufhebung');
   });
 });
 

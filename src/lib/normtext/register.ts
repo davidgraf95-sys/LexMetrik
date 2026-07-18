@@ -12,6 +12,7 @@
 // sondern wird vom Generator aus den Snapshots gezogen (sonst Drift).
 
 import { FEDLEX, type FedlexGesetz } from '../fedlex';
+import { aufhebungFuerRegister } from './aufhebungen';
 import { BUND_STUBS } from './bund-stubs.generated';
 import { GRUNDART_SEED } from './grundart.generated';
 import { INTERNATIONAL_EXTERN } from './international-extern';
@@ -60,6 +61,15 @@ function mitGrundart(e: ErlassRegistereintrag): ErlassRegistereintrag {
     ...(seed.bestimmungsEtikett ? { bestimmungsEtikett: seed.bestimmungsEtikett } : {}),
     ...(seed.bestimmungsEtikettStatus ? { bestimmungsEtikettStatus: seed.bestimmungsEtikettStatus } : {}),
   };
+}
+
+// §8-Ehrlichkeit: merged den anerkannten Aufhebungs-Vermerk (seit + nachfolger)
+// aus der SSoT aufhebungen.ts per key. Reine Daten-Projektion (§3/§5) — anders
+// als mitGrundart LIEST der Generator dieses Feld und projiziert es nach
+// register.json (Reader-Banner + Katalog-Badge). Absenz = geltend.
+function mitAufhebung(e: ErlassRegistereintrag): ErlassRegistereintrag {
+  const auf = aufhebungFuerRegister(e.key);
+  return auf ? { ...e, aufgehoben: auf } : e;
 }
 
 // ── Bundesgesetze (27) — Schlüssel == Snapshot-Datei (UPPERCASE). SR/Titel
@@ -343,7 +353,7 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = ([
   // ── pdf-embed: amtliches PDF in-app (kein extrahierbarer Volltext-HTML),
   //    z.B. EMRK, New Yorker Schiedsspruch-Übk. (§7/§8). ──
   ...PDF_EMBED,
-] as ErlassRegistereintrag[]).map(mitGrundart);
+] as ErlassRegistereintrag[]).map(mitGrundart).map(mitAufhebung);
 
 // Bund-Eintrag mit Default-Sprache de + status 'snapshot'. fedlexKey default ==
 // key, wenn der FEDLEX-Schlüssel identisch ist (sonst explizit übergeben).
