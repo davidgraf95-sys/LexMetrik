@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend Strassen- und Kanalisationsbeiträge sowie Gebühren für die Ableitung von Abwasser",
+  "erlassdatum": "Vom 17. Februar 2009 (Stand 12. März 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf die Ordnung betreffend Strassen- und Kanalisationsbeiträge sowie Gebühren für die Ableitung von Abwasser (Strassen- und Kanalisationsordnung) vom 30. Oktober 2008, folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 750.100.",
+    "links": [
+     {
+      "label": "RiE 750.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20750.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -239,7 +270,16 @@
     }
    ],
    "marginalie": [
-    "Wirksamkeit *"
+    "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 25. 2. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10_bis": {

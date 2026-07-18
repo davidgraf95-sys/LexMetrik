@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Bemessung des Honorars der Rechtsanwältinnen und Rechtsanwälte",
+  "erlassdatum": "Vom 17.03.2009 (Stand 01.01.2011)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 45 der Kantonsverfassung und Art. 19 des Anwaltsgesetzes",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "von der Regierung erlassen am 17. März 2009"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BR 110.100",
+    "links": [
+     {
+      "label": "110.100",
+      "url": "https://www.gr-lex.gr.ch/data/110.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BR 310.100",
+    "links": [
+     {
+      "label": "310.100",
+      "url": "https://www.gr-lex.gr.ch/data/310.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,6 +67,24 @@
    "gliederung": [],
    "marginalie": [
     "3. Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. Art. 15 BGFA, SR 935.61",
+     "links": [
+      {
+       "label": "935.61",
+       "url": "https://db.clex.ch/link/Bund/935.61/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BGFA"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -47,6 +109,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Mit RB vom 17. März 2009 auf den 1. April 2009 in Kraft gesetzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

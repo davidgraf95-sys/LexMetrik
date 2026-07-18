@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Geschäftsordnung der Gemeindeversammlung der Einwohnergemeinde Bettingen",
+  "erlassdatum": "Vom 19. November 1985 (Stand 1. Mai 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gemeindeversammlung der Einwohnergemeinde Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 des Gemeindegesetzes vom 17. Oktober 1984 und auf § 12 der Gemeindeordnung der Einwohnergemeinde Bettingen vom 26. April 2016, auf Antrag des Gemeinderates,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BeE 111.100.",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -10,7 +62,7 @@
   "2": {
    "gliederung": [],
    "marginalie": [
-    "Stimmenzählende *"
+    "Stimmenzählende"
    ]
   },
   "3": {
@@ -93,14 +145,21 @@
   },
   "16": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten, Publikation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 31. 5. 1986.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

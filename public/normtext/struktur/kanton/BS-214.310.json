@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Grundbuch",
+  "erlassdatum": "Vom 16. Dezember 2003 (Stand 28. Mai 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von § 204, § 206 und § 228 des Gesetzes betreffend die Einführung des Schweizerischen Zivilgesetzbuches vom 27. April 1911,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 211.100.",
+    "links": [
+     {
+      "label": "211.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -224,6 +263,15 @@
    ],
    "marginalie": [
     "Auswertungen aus dem Datenbestand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -280,7 +328,7 @@
     }
    ],
    "marginalie": [
-    "Erweiterter Zugang *"
+    "Erweiterter Zugang"
    ]
   },
   "19": {
@@ -438,6 +486,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 15. 4. 2004.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10_a": {

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zum Bundesgesetz über die Familienzulagen",
+  "erlassdatum": "vom 01.12.2008 (Stand 01.04.2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 24. März 2006 über die Familienzulagen und Art. 74 Abs. 2 der Verfassung des Kantons Appenzell Ausserrhoden vom 30. April 1995,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Familienzulagengesetz (FamZG; SR 836.2 )",
+    "links": [
+     {
+      "label": "836.2",
+      "url": "https://db.clex.ch/link/Bund/836.2/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "FAMZG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +77,24 @@
    ],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -76,6 +150,15 @@
    ],
    "marginalie": [
     "Zulagen für Arbeitnehmende nicht beitragspflichtiger Arbeitgebender"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 12 Abs. 3 FamZG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -87,6 +170,24 @@
    ],
    "marginalie": [
     "Zulagen für Nichterwerbstätige"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -186,6 +287,24 @@
    ],
    "marginalie": [
     "Anschluss an die kantonale Familienausgleichskasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -241,6 +360,24 @@
    ],
    "marginalie": [
     "Ergänzendes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -296,6 +433,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "bGS 822.41 (lf. Nr. 820)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -307,6 +453,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Die Referendumsfrist ist am 3. Februar 2009 unbenützt abgelaufen (Abl. 2009, S. 179)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "1. Januar 2009 unter Vorbehalt des unbenützten Ablaufs der Referendumsfrist (RRB vom 16. Dezember 2008, Abl. 2008, S. 1288).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

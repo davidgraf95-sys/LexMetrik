@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Gebühren im Bestattungswesen",
+  "erlassdatum": "Vom 14. Dezember 2004 (Stand 1. April 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz betreffend die Bestattungen vom 9. Juli 1931 und auf das Gesetz über die Verwaltungsgebühren vom 9. März 1972,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 390.100.",
+    "links": [
+     {
+      "label": "390.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/390.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-390.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +64,16 @@
      "label": "1. Geltungsbereich"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 1: Umbenennung «Gesundheitsdienste» in «Medizinische Dienste» gemäss RRB vom 22. 12. 2015.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -18,7 +83,7 @@
     }
    ],
    "marginalie": [
-    "Im Allgemeinen *"
+    "Im Allgemeinen"
    ]
   },
   "3": {
@@ -29,7 +94,7 @@
     }
    ],
    "marginalie": [
-    "Gebühren für Leistungen Dritter *"
+    "Gebühren für Leistungen Dritter"
    ]
   },
   "4": {
@@ -57,7 +122,16 @@
      "label": "5. Fälligkeit, Verzugszins, Mahngebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 19. 12. 2004.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "1_a": {
    "gliederung": [
@@ -66,9 +140,7 @@
      "label": "1a. Unentgeltliche Bestattung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "1_b": {
    "gliederung": [
@@ -77,9 +149,7 @@
      "label": "1a. Unentgeltliche Bestattung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "1_c": {
    "gliederung": [
@@ -88,9 +158,7 @@
      "label": "1a. Unentgeltliche Bestattung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "1_d": {
    "gliederung": [

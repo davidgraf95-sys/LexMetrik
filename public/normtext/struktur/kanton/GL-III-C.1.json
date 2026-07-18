@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung",
+  "erlassdatum": "Vom 02.05.2010 (Stand 01.07.2022)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "(Erlassen von der Landsgemeinde am 2. Mai 2010)"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +20,20 @@
    ],
    "marginalie": [
     "Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "GS III A/2",
+     "links": [
+      {
+       "label": "III A/2",
+       "url": "https://gesetze.gl.ch/data/III-A.2/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -30,9 +54,7 @@
      "label": "1. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -41,9 +63,7 @@
      "label": "2. Besondere Zuständigkeiten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -105,7 +125,7 @@
     }
    ],
    "marginalie": [
-    "Inhalt *"
+    "Inhalt"
    ]
   },
   "17": {
@@ -135,7 +155,7 @@
     }
    ],
    "marginalie": [
-    "Kosten und Verfahren *"
+    "Kosten und Verfahren"
    ]
   },
   "19": {
@@ -149,9 +169,7 @@
      "label": "4.3. Kosten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -212,9 +230,7 @@
      "label": "4.1. Allgemeines"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19_a": {
    "gliederung": [
@@ -238,9 +254,7 @@
      "label": "3. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

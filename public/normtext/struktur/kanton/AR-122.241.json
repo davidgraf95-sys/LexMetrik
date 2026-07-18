@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung des Regierungsrates zum Asylwesen",
+  "erlassdatum": "vom 11.12.2007 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Verordnung des Kantonsrates vom 24. September 2007 zum Asylwesen,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KR AsylVO (bGS 122.24 )",
+    "links": [
+     {
+      "label": "122.24",
+      "url": "https://ar.clex.ch/data/122.24/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-122.24"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

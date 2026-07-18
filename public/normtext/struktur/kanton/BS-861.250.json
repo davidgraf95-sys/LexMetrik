@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend den Wohnflächenanteil",
+  "erlassdatum": "Vom 20. Juni 1995 (Stand 1. Januar 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 179 Abs. 1 des Bau- und Planungsgesetzes vom 17. November 1999,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,7 +65,16 @@
      "label": "III. Wohnflächenanteil"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "umbenannt in: Abteilung Städtebau und Architektur",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -44,7 +92,16 @@
      "label": "V. Vollzug"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "umbenannt in: Abteilung Städtebau und Architektur",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [
@@ -53,7 +110,23 @@
      "label": "VI. Öffentlichkeit des Wohnanteilplans"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "umbenannt in: Abteilung Städtebau und Architektur",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Wirksam seit 29. 6. 1995.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

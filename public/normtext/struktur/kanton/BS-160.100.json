@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Personaldienste des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 25. Januar 2005 (Stand 1. Mai 2008)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5 des Personalgesetzes vom 17. November 1999,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 162.100.",
+    "links": [
+     {
+      "label": "162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-162.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -17,7 +56,23 @@
      "label": "B. Organisation"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [
@@ -30,7 +85,16 @@
      "label": "(B.)1. HR Basel-Stadt (HR BS)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -43,9 +107,7 @@
      "label": "(B.)1. HR Basel-Stadt (HR BS)"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -58,7 +120,16 @@
      "label": "(B.)1. HR Basel-Stadt (HR BS)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [
@@ -84,7 +155,16 @@
      "label": "(B.)2. Die Dezentralen Personaldienste (DPD)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "8": {
    "gliederung": [
@@ -97,7 +177,37 @@
      "label": "(C.)1. HR BS"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [
@@ -110,7 +220,16 @@
      "label": "(C.)1. HR BS"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "10": {
    "gliederung": [
@@ -123,7 +242,44 @@
      "label": "(C.)1. HR BS"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "11": {
    "gliederung": [
@@ -149,7 +305,16 @@
      "label": "(C.)2. Die DPD"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "13": {
    "gliederung": [
@@ -158,7 +323,37 @@
      "label": "D. Zusammenarbeit HR BS-DPD"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Publiziert am 9. 2. 2005.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

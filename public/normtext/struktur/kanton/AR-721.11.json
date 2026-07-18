@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Bauverordnung",
+  "erlassdatum": "vom 02.12.2003 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz vom 12. Mai 2003 über die Raumplanung und das Baurecht,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Baugesetz (bGS 721.1 )",
+    "links": [
+     {
+      "label": "721.1",
+      "url": "https://ar.clex.ch/data/721.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-721.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -224,6 +263,15 @@
    ],
    "marginalie": [
     "Provisorische Bauten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "vgl. Art. 107 Baugesetz",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -306,6 +354,15 @@
    ],
    "marginalie": [
     "Vollzugsorgan"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 30",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -361,6 +418,24 @@
    ],
    "marginalie": [
     "Bereinigung der Rechte und Lasten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 802 ff. des Schweizerischen Zivilgesetzbuches (SR 210 ).",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -394,6 +469,20 @@
    ],
    "marginalie": [
     "Ausgleichszahlungen und Umlegungskosten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://ar.clex.ch/data/210/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -478,7 +567,25 @@
      "label": "2. Abschnitt: Biotopschutz: Feststellungsverfahren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 14 der V über den Natur- und Heimatschutz (NHV; SR 451.1 )",
+     "links": [
+      {
+       "label": "451.1",
+       "url": "https://db.clex.ch/link/Bund/451.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "NHV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "36": {
    "gliederung": [
@@ -493,6 +600,15 @@
    ],
    "marginalie": [
     "Fachstellen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 26 Abs. 1 NHV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "37": {
@@ -523,6 +639,15 @@
    ],
    "marginalie": [
     "Bewilligungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 85 Baugesetz",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -553,6 +678,24 @@
    ],
    "marginalie": [
     "Bewilligungsfreie Bauplatzinstallationen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "heute: Strassengesetz (StrG; bGS 731.11 )",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "41": {
@@ -737,6 +880,24 @@
    ],
    "marginalie": [
     "Durchführung der Koordination"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "RPG (SR 700 )",
+     "links": [
+      {
+       "label": "700",
+       "url": "https://db.clex.ch/link/Bund/700/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "RPG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "51": {
@@ -851,6 +1012,15 @@
    ],
    "marginalie": [
     "Durchführung des vereinfachten Verfahrens"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 47 ff.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "57": {
@@ -945,7 +1115,7 @@
     }
    ],
    "marginalie": [
-    "Eröffnung durch den Baukoordinationsdienst *"
+    "Eröffnung durch den Baukoordinationsdienst"
    ]
   },
   "62": {
@@ -995,6 +1165,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "bGS 721.11 (If. Nr. 206)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "65": {
@@ -1006,6 +1185,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "1. Januar 2004",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19_a": {
@@ -1021,6 +1209,24 @@
    ],
    "marginalie": [
     "Bestehende Bruttogeschossfläche"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 42 der Raumplanungsverordnung (RPV; SR 700.1 )",
+     "links": [
+      {
+       "label": "700.1",
+       "url": "https://db.clex.ch/link/Bund/700.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "RPV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "40_a": {
@@ -1036,6 +1242,24 @@
    ],
    "marginalie": [
     "Solaranlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "RPG (SR 700 )",
+     "links": [
+      {
+       "label": "700",
+       "url": "https://db.clex.ch/link/Bund/700/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "RPG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "45_a": {
@@ -1074,6 +1298,24 @@
    ],
    "marginalie": [
     "Elektronische Auflage"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 103 Abs. 1 Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "60_a": {
@@ -1093,6 +1335,20 @@
    ],
    "marginalie": [
     "Elektronische Eröffnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Vgl. Bundesgesetz über die elektronische Signatur (ZertES; 943.03 )",
+     "links": [
+      {
+       "label": "943.03",
+       "url": "https://db.clex.ch/link/Bund/943.03/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,66 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Verordnung über die Förderung der Ausbildung im Bereich der Pflege",
+  "erlassdatum": "Vom 25. Juni 2024 (Stand 1. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 60a und 60b des Gesundheitsgesetzes (GesG) vom 21. September 2011 sowie in Ausführung des Bundesgesetzes über die Förderung der Ausbildung im Bereich der Pflege (Ausbildungsfördergesetz Pflege) vom 16. Dezember 2022 und der Verordnung des Bundesrates über die Förderung der Ausbildung im Bereich der Pflege (Ausbildungsförderverordnung Pflege) vom 8. Mai 2024,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 300.100",
+    "links": [
+     {
+      "label": "300.100",
+      "url": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/300.100"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 811.22",
+    "links": [
+     {
+      "label": "811.22",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2024/212/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 811.225",
+    "links": [
+     {
+      "label": "811.225",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2024/219/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

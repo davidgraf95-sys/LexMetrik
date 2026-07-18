@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Ausübung des Anwaltsberufes",
+  "erlassdatum": "vom 11.04.2005 (Stand 01.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von Art. 34 des Bundesgesetzes vom 23. Juni 2000 über die Freizügigkeit der Anwältinnen und Anwälte und gestützt auf Art. 66 der Zivilprozessordnung für den Kanton Appenzell A.Rh. vom 27. April 1980",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BGFA (SR 935.61",
+    "links": [
+     {
+      "label": "935.61",
+      "url": "https://db.clex.ch/link/Bund/935.61/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BGFA"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "ZPO (bGS 231.1 )",
+    "links": [
+     {
+      "label": "231.1",
+      "url": "https://ar.clex.ch/data/231.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -43,6 +95,24 @@
    ],
    "marginalie": [
     "Prüfungskommission a) Wahl"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 8 VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -65,6 +135,15 @@
    ],
    "marginalie": [
     "Aufsichtskommission a) Allgemeines"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "vgl. Art. 31 und 32",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -76,6 +155,24 @@
    ],
    "marginalie": [
     "b) Wahl"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 8 VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -87,6 +184,15 @@
    ],
    "marginalie": [
     "c) Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "vgl. Art. 19, 29 ff.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -120,6 +226,24 @@
    ],
    "marginalie": [
     "Zulassungsverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "bGS 145.521",
+     "links": [
+      {
+       "label": "145.521",
+       "url": "https://ar.clex.ch/data/145.521/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-145.521"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -175,6 +299,15 @@
    ],
    "marginalie": [
     "Eintragung im Anwaltsregister"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 12 lit. j BGFA",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -197,6 +330,24 @@
    ],
    "marginalie": [
     "Anwendungsbereich der Honorarordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "V über den Anwaltstarif (bGS 145.53 )",
+     "links": [
+      {
+       "label": "145.53",
+       "url": "https://ar.clex.ch/data/145.53/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-145.53"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -208,6 +359,15 @@
    ],
    "marginalie": [
     "Überprüfung der Honorare"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 22 Abs. 2 Ziff. 2 ZPO",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -262,7 +422,16 @@
     }
    ],
    "marginalie": [
-    "Disziplinaraufsicht und -massnahmen [11]"
+    "Disziplinaraufsicht und -massnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 17 BGFA",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "25": {
@@ -296,6 +465,24 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "bGS 143.1",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -329,6 +516,32 @@
    ],
    "marginalie": [
     "Vollzugsvorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "vgl. die V über die Anwaltsprüfung (bGS 145.521 ) und die V über den Anwaltstarif (bGS 145.53 )",
+     "links": [
+      {
+       "label": "145.521",
+       "url": "https://ar.clex.ch/data/145.521/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-145.521"
+       }
+      },
+      {
+       "label": "145.53",
+       "url": "https://ar.clex.ch/data/145.53/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-145.53"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -351,6 +564,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "bGS 145.52 (aGS III/284)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -362,6 +584,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Die Referendumsfrist ist am 14. Juni 2005 unbenutzt abgelaufen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "1. Juli 2005",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8_a": {

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Einführung des Bundesgesetzes über Voraussetzungen und Verfahren bei Sterilisationen",
+  "erlassdatum": "Vom 8. Januar 2008 (Stand 1. Januar 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über Voraussetzungen und Verfahren bei Sterilisationen (Sterilisationsgesetz) vom 17. Dezember 2004,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 211.111.1.",
+    "links": [
+     {
+      "label": "211.111.1",
+      "url": "https://db.clex.ch/link/Bund/211.111.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -9,26 +44,31 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Meldestelle *"
+    "Meldestelle"
    ]
   },
   "4": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 13. 1. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

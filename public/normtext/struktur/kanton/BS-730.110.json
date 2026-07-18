@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Bau- und Planungsverordnung",
+  "erlassdatum": "Vom 19. Dezember 2000 (Stand 5. Februar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bau- und Planungsgesetz (BPG) vom 17. November 1999,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -113,7 +152,16 @@
      "label": "II. Vorragende Bauteile (§ 17 BPG)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "7": {
    "gliederung": [
@@ -872,9 +920,7 @@
      "label": "(A.V.)3. Ausfertigungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -949,9 +995,7 @@
      "label": "(A.V.4.)c) Bearbeitungsfristen"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "43": {
    "gliederung": [
@@ -1076,9 +1120,7 @@
      "label": "(A.V.5.)c) Einsichtnahme"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "48": {
    "gliederung": [
@@ -1591,7 +1633,41 @@
      "label": "(5.D.)1. Anmerkungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 730.100",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SR 700.1 (Raumplanungsverordnung, RPV, vom 28. Juni 2000)",
+     "links": [
+      {
+       "label": "700.1",
+       "url": "https://db.clex.ch/link/Bund/700.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "RPV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "69": {
    "gliederung": [
@@ -1638,7 +1714,7 @@
     }
    ],
    "marginalie": [
-    "Zweck, Form und Inhalt des kantonalen Richtplans *"
+    "Zweck, Form und Inhalt des kantonalen Richtplans"
    ]
   },
   "71": {
@@ -1665,7 +1741,7 @@
     }
    ],
    "marginalie": [
-    "Zuständigkeiten *"
+    "Zuständigkeiten"
    ]
   },
   "72": {
@@ -1692,7 +1768,7 @@
     }
    ],
    "marginalie": [
-    "Begehren um Anpassung *"
+    "Begehren um Anpassung"
    ]
   },
   "73": {
@@ -1718,9 +1794,7 @@
      "label": "(2.A.I.3.)b) …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "74": {
    "gliederung": [
@@ -1746,7 +1820,7 @@
     }
    ],
    "marginalie": [
-    "Information und Mitwirkung der Bevölkerung *"
+    "Information und Mitwirkung der Bevölkerung"
    ]
   },
   "75": {
@@ -1772,9 +1846,7 @@
      "label": "(2.A.I.)5. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "76": {
    "gliederung": [
@@ -1799,9 +1871,7 @@
      "label": "(2.A.I.)6. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "77": {
    "gliederung": [
@@ -1826,9 +1896,7 @@
      "label": "(2.A.I.)7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "78": {
    "gliederung": [
@@ -1891,7 +1959,25 @@
      "label": "(2.B.)2. Vorprüfung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 700.1",
+     "links": [
+      {
+       "label": "700.1",
+       "url": "https://db.clex.ch/link/Bund/700.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "RPV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "81": {
    "gliederung": [

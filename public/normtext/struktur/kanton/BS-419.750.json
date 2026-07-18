@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten in der beruflichen Grundbildung",
+  "erlassdatum": "Vom 22. Juni 2006 (Stand 1. August 2022)"
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +25,24 @@
    ],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 412.10.",
+     "links": [
+      {
+       "label": "412.10",
+       "url": "https://db.clex.ch/link/Bund/412.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -98,6 +120,15 @@
    ],
    "marginalie": [
     "Schiedsinstanz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 279.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -109,6 +140,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Der Vereinbarung sind 21 Kantone beigetreten (Stand 18. 9. 2007). Somit ist die Vereinbarung seit 1. 8. 2007 wirksam.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {

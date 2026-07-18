@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Einführung des Bundesgesetzes über das Gewerbe der Reisenden",
+  "erlassdatum": "Vom 11. Januar 2011 (Stand 16. Januar 2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 2 Abs. 2 des Bundesgesetzes vom 23. März 2001 über das Gewerbe der Reisenden, auf Art. 26 Abs. 2 der Verordnung vom 4. September 2002 über das Gewerbe der Reisenden und § 10 des Gesetzes über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. Juni 2005,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 943.1.",
+    "links": [
+     {
+      "label": "943.1",
+      "url": "https://db.clex.ch/link/Bund/943.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 943.11.",
+    "links": [
+     {
+      "label": "943.11",
+      "url": "https://db.clex.ch/link/Bund/943.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 811.100.",
+    "links": [
+     {
+      "label": "811.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/811.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-811.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +82,15 @@
    "gliederung": [],
    "marginalie": [
     "Örtliche Beschränkung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 16. 1. 2011.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

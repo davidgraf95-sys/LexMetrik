@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend das Vorschlagswesen in der Bürgergemeinde der Stadt Basel",
+  "erlassdatum": "Vom 1. Dezember 1992 (Stand 20. Dezember 1992)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 14 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985, folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -161,7 +192,16 @@
      "label": "VIII. Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 20. 12. 1992.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

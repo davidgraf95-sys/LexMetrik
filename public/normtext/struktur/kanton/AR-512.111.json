@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die kantonale Militärverwaltung",
+  "erlassdatum": "vom 01.12.2009 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 118 ff. des Bundesgesetzes vom 3. Februar 1995 über die Armee und Militärverwaltung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Militärgesetz (MG; SR 510.10 )",
+    "links": [
+     {
+      "label": "510.10",
+      "url": "https://db.clex.ch/link/Bund/510.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "MG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -16,7 +55,7 @@
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Gemeinden *"
+    "Gemeinden"
    ]
   },
   "4": {
@@ -29,6 +68,24 @@
    "gliederung": [],
    "marginalie": [
     "Disziplinarbeschwerden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "MStG (SR 321.0 )",
+     "links": [
+      {
+       "label": "321.0",
+       "url": "https://db.clex.ch/link/Bund/321.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "MSTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

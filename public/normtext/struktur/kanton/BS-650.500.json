@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Besteuerung der Motorfahrzeuge",
+  "erlassdatum": "Vom 17. November 1966 (Stand 1. Januar 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf den Antrag des Regierungsrates und gestützt auf Art. 105 des Bundesgesetzes über den Strassenverkehr vom 19. Dezember 1958,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Titel jetzt: Strassenverkehrsgesetz (SVG), SR 741.01.",
+    "links": [
+     {
+      "label": "741.01",
+      "url": "https://db.clex.ch/link/Bund/741.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "SVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,7 +46,16 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 2: Für die Werte der jährlichen Steuer siehe Anhang.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [],

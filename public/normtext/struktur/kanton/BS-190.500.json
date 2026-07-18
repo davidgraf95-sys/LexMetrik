@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Convention conclue relativement à la Réorganisation et nouvelle circonscription de l’Evêché de Bâle",
+  "erlassdatum": "Vom 26. März 1828 (Stand 19. Juli 1978)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "La Convention conclue le 12 Mars 1827 relativement à la réorganisation et nouvelle circonscription de l’Evêché de Bâle, n’ayant pas reçu la ratification de tous les Cantons, au nom desquels elle avait été stipulée, les Hauts Etats de Lucerne, Berne, Soleure et Zoug, reconnaissant l’urgente nécessité de mettre un terme à l’état provisoire, où se trouvent les affaires diocésaines, se sont décidés à donner suite, en ce qui les concerne, à la susdite Convention avec les modifications devenues nécessaires par le changement des circonstances. Dans ce but ils ont fait renouveler les négociations entre Monsieur Pascal Gizzi, Internonce apostolique près la Confédération Suisse, au nom de Sa Sainteté le Pape Léon XII chargé de cette négociation, et Son Excellence Monsieur Joseph Charles Amrhyn, Avoyer de la Ville et République de Luzerne, et Monsieur Louis de Roll, Conseiller d’Etat de la République de Soleure, autorisés par les Cantons en qualité de Commissaires, qui, en vertu de leurs pouvoirs antérieurs échangés en son tems, ont convenu, sauf la ratification de leurs hauts Commettans, des bases ciaprès énoncées, savoir:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Dem Bistumskonkordat mit dem Heiligen Stuhl sind später beigetreten die Kantone: Aargau am 2. 12. 1828, Thurgau am 11. 4. 1829, Basel am 6. 10. 1829 für die katholischen Gemeinden des Bezirks Birseck, Bern am 11. 6. 1864 für den alten Kantonsteil, Basel-Stadt, Basel-Landschaft (für den ganzen Kanton) und Schaffhausen am 2. 5. 1978, Jura am 13. 5. 1981 (Notenaustausch zwischen Bundesrat und Heiligem Stuhl vom 13. 5. 1981). Über den Beitritt der Kantone Basel-Stadt, Basel-Landschaft und Schaffhausen hat der Bundesrat am 2. 5. 1978 eine Zusatzvereinbarung mit dem Heiligen Stuhl abgeschlossen (siehe Anhang 2). Am 28. 3. 1828 haben die damaligen Diözesanstände ausserdem unter sich, d. h. ohne Mitwirkung des Heiligen Stuhls, den sogenannten Langenthal-Luzerner Gesamtvertrag (abgedruckt in SG 190.510 ) vereinbart. Die kirchlichen Ausführungsvorschriften zum Bistumskonkordat sind in der Bulle Leo XII. «Inter praecipua» vom 7. 5. 1828 enthalten (hier nicht abgedruckt).",
+    "links": [
+     {
+      "label": "190.510",
+      "url": "https://www.gesetzessammlung.bs.ch/data/190.510/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-190.510"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -55,7 +86,16 @@
   },
   "14": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Fassung gemäss Art. 4 der Convention additionnelle vom 2. 5. 1978. Es handelt sich nicht mehr um einen Eid, sondern um eine feierliche Erklärung (déclaration solennelle).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "15": {
    "gliederung": [],

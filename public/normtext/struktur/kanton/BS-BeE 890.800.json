@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen dem Kanton Basel-Stadt und den Gemeinden Bettingen und Riehen betreffend die Aufgabenteilung im Bereich Asyl",
+  "erlassdatum": "Vom 22. August 2023 (Stand 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "In Bezug auf die Aufgabenteilung im Asylbereich zwischen dem Kanton Basel-Stadt und den Gemeinden Bettingen und Riehen vereinbaren 1. der Kanton Basel-Stadt, nachstehend Kanton genannt, vertreten durch den Regierungsrat, und 2. die Einwohnergemeinde Bettingen und die Einwohnergemeinde Riehen, nachstehend Gemeinden genannt, beide vertreten durch den Gemeinderat, handelnd unter dem Vorbehalt der Genehmigung durch die Gemeindeversammlung Bettingen bzw. durch den Einwohnerrat Riehen, gestützt auf § 22 Sozialhilfegesetz vom 29. Juni 2000, § 21 Abs. 3 lit. i Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002 und § 12 Abs. 1 Ziff. 5 Gemeindeordnung der Einwohnergemeinde Bettingen vom 26. April 2016 was folgt:",
+    "fnNrs": [
+     "2",
+     "3",
+     "4"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 890.100",
+    "links": [
+     {
+      "label": "890.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/890.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-890.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "RiE 111.100",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BeE 111.100",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +67,40 @@
    ],
    "marginalie": [
     "Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 142.31.",
+     "links": [
+      {
+       "label": "142.31",
+       "url": "https://db.clex.ch/link/Bund/142.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ASYLG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 142.20.",
+     "links": [
+      {
+       "label": "142.20",
+       "url": "https://db.clex.ch/link/Bund/142.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AIG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {

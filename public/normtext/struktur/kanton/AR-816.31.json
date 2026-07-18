@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das Bestattungswesen",
+  "erlassdatum": "vom 19.06.1995 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 33 des Gesundheitsgesetzes,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 811.1",
+    "links": [
+     {
+      "label": "811.1",
+      "url": "https://ar.clex.ch/data/811.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -76,6 +115,20 @@
    ],
    "marginalie": [
     "Leichenpass"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 16 Abs. 3 V über Transport und Beisetzung ansteckungsgefährlicher Leichen sowie Transport von Leichen vom und ins Ausland (SR 818.61 )",
+     "links": [
+      {
+       "label": "818.61",
+       "url": "https://db.clex.ch/link/Bund/818.61/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -87,6 +140,22 @@
    ],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "19. Juni 1995",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "bGS 816.31 (aGS II/279)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

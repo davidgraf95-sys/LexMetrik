@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement zur Ordnung über den Natur- und Landschaftsschutz und die Förderung der Biodiversität und Landschaftsqualität",
+  "erlassdatum": "Vom 21. November 2006 (Stand 1. Mai 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die kantonale Verordnung über die Förderung der Biodiversität und Landschaftsqualität im Landwirtschaftsgebiet vom 24. März 2015 und auf die Ordnung über den Natur- und Landschaftsschutz und die Förderung der Biodiversität und Landschaftsqualität vom 5. Dezember 2006,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 789.600",
+    "links": [
+     {
+      "label": "789.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/789.600/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-789.600"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BeE 789.300",
+    "links": [
+     {
+      "label": "BeE 789.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20789.300/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -34,25 +86,25 @@
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Beiträge an extensiv genutzte Wiesen, wenig intensiv genutzte Wiesen, Ackerschonstreifen, Bunt- und Rotationsbrachen, Hecken, pestizidfreies Ackerland sowie Spezialstandorte *"
+    "Beiträge an extensiv genutzte Wiesen, wenig intensiv genutzte Wiesen, Ackerschonstreifen, Bunt- und Rotationsbrachen, Hecken, pestizidfreies Ackerland sowie Spezialstandorte"
    ]
   },
   "7": {
    "gliederung": [],
    "marginalie": [
-    "Beiträge an Neuanlagen oder Aufwertung von Biodiversitätsförderflächen *"
+    "Beiträge an Neuanlagen oder Aufwertung von Biodiversitätsförderflächen"
    ]
   },
   "8": {
    "gliederung": [],
    "marginalie": [
-    "Beiträge an einheimische, standortgerechte Einzelbäume *"
+    "Beiträge an einheimische, standortgerechte Einzelbäume"
    ]
   },
   "9": {
    "gliederung": [],
    "marginalie": [
-    "Beiträge an Hochstammobstbäume und Jungbäume *"
+    "Beiträge an Hochstammobstbäume und Jungbäume"
    ]
   },
   "10": {
@@ -64,7 +116,7 @@
   "11": {
    "gliederung": [],
    "marginalie": [
-    "Rechtsmittel *"
+    "Rechtsmittel"
    ]
   },
   "12": {
@@ -75,7 +127,16 @@
   },
   "13": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 20. 1. 2007.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "9_a": {
    "gliederung": [],

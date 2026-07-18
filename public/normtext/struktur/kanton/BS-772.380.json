@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausführungsbestimmungen von IWB Industrielle Werke Basel zur Datenbearbeitung mittels intelligenter Messsysteme",
+  "erlassdatum": "Vom 1. Dezember 2020 (Stand 1. Juni 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Verwaltungsrat von IWB Industrielle Werke Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 35a Abs. 3 des Gesetzes über die Industriellen Werke Basel (IWB-Gesetz) vom 11. Februar 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 772.300.",
+    "links": [
+     {
+      "label": "772.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/772.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-772.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -76,6 +115,15 @@
    ],
    "marginalie": [
     "Datensicherheit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vom Regierungsrat genehmigt am 11. Mai 2021.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsverordnung zur Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen",
+  "erlassdatum": "Vom 12. Dezember 2023 (Stand 1. Februar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5 des Einführungsgesetzes zur Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen (EG IVöB) vom 23. Juni 2023, unter Verweis auf seine Erläuterungen P231611,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 914.200",
+    "links": [
+     {
+      "label": "914.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/914.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-914.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

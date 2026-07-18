@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen den Kantonen Basel-Landschaft und Basel-Stadt über die gemeinsame Trägerschaft der Universität Basel",
+  "erlassdatum": "Vom 27. Juni 2006 (Stand 1. Januar 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone Basel-Landschaft und Basel-Stadt"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -274,6 +288,15 @@
    ],
    "marginalie": [
     "Aufgaben des Universitätsrates"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Sofwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -438,7 +461,7 @@
     }
    ],
    "marginalie": [
-    "Mittelverwendung *"
+    "Mittelverwendung"
    ]
   },
   "41": {
@@ -516,6 +539,22 @@
    ],
    "marginalie": [
     "Vertragsbeginn und Ende"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Von den Regierungen auf den 1. Januar 2007 wirksam erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Die Teilrevision vom 25. Mai 2021 wurde vom Landrat des Kantons Basel-Landschaft am 21. Oktober 2021 genehmigt und vom Grossen Rat des Kantons Basel-Stadt am 27. Oktober 2021 genehmigt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "40_a": {

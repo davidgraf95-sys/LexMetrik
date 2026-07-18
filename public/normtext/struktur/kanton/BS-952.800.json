@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung betreffend die Motorfahrzeugprüfstation beider Basel",
+  "erlassdatum": "Vom 3. Dezember 1974 (Stand 9. Januar 1979)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Zwischen dem Regierungsrat des Kantons Basel-Stadt und dem Regierungsrat des Kantons Basel-Landschaft wird betreffend Betrieb und Organisation der gemeinsamen Motorfahrzeugprüfstation vereinbart, was folgt:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -91,7 +101,16 @@
   },
   "16": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Nach Auffassung der Paritätischen Betriebskommission haben folgende – unter 952.801 abgedruckte – Bestimmungen der Vereinbarung von 1964 als nicht aufgehoben zu gelten: Ziff. I mit Ausnahme des letzten Halbsatzes, Ziff. II und III.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "17": {
    "gliederung": [],
@@ -103,6 +122,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "In Kraft gesetzt auf den 9. 1. 1979.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

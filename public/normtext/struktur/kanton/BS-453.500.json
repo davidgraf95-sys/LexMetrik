@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Erhebung von Gebühren der zentralen Statistikstelle",
+  "erlassdatum": "Vom 12. Mai 2015 (Stand 1. Juli 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 18 des Gesetzes über die öffentliche Statistik (StatG) vom 21. Mai 2014",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 453.200.",
+    "links": [
+     {
+      "label": "453.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/453.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-453.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

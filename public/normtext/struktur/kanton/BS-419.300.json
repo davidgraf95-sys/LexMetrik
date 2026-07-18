@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Studien-, Kurs- und Verwaltungsgebühren in der kantonalen Berufsbildung",
+  "erlassdatum": "Vom 8. Mai 2018 (Stand 1. August 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 4 des Gesetzes über die Verwaltungsgebühren vom 9. März 1972, § 20 Abs. 3 des Gesetzes betreffend die Berufsfachschule Basel (BFS Basel) vom 27. Juni 1963 und § 28 Abs. 3 des Gesetzes betreffend die Allgemeine Gewerbeschule Basel (AGS Basel) und die Schule für Gestaltung Basel (SfG Basel) vom 20. Dezember 1962, unter Verweis auf seine Erläuterungen Nr. P180545,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.800",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 423.100",
+    "links": [
+     {
+      "label": "423.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/423.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-423.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 421.100",
+    "links": [
+     {
+      "label": "421.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/421.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-421.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 22. April 1976 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -148,7 +166,7 @@
     }
    ],
    "marginalie": [
-    "Regierungspräsidentin / Regierungspräsident *"
+    "Regierungspräsidentin / Regierungspräsident"
    ]
   },
   "11": {
@@ -478,7 +496,7 @@
     }
    ],
    "marginalie": [
-    "Linienorganisation *"
+    "Linienorganisation"
    ]
   },
   "33": {
@@ -508,7 +526,16 @@
     }
    ],
    "marginalie": [
-    "Kommissionen [2]"
+    "Kommissionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 34: Bezüglich der Ausrichtung von Sitzungsgeldern vgl. Weisung betreffend Ausrichtung von Sitzungsgeldern vom 5. 2. 2002 (SG 153.115).",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "35": {
@@ -632,6 +659,15 @@
    ],
    "marginalie": [
     "Vorbehalt des Gesetzes über die Verwaltungsrechtspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 43: Jetziger Titel: Gesetz über die Verfassungs- und Verwaltungsrechtspflege (VRPG).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "44": {
@@ -777,7 +813,16 @@
     }
    ],
    "marginalie": [
-    "Änderung anderer Gesetze [4]"
+    "Änderung anderer Gesetze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Die einzelnen Gesetzesänderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "54": {
@@ -800,6 +845,15 @@
    ],
    "marginalie": [
     "Aufhebung des bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 55: Die nachfolgend aufgeführten Erlasse sind auf Gesetzesstufe aufgehoben; vgl. dazu aber § 2 der V betreffend Organisation und Kompetenzen der Departemente und der übrigen Verwaltungseinheiten vom 28. 6. 1977 (SG 153.150).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "56": {
@@ -833,6 +887,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Der RR hat mit Beschluss vom 28. 6. 1977 das Organisationsgesetz auf den 1. 7. 1977 in Kraft gesetzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38_a": {
@@ -862,7 +925,7 @@
     }
    ],
    "marginalie": [
-    "Bericht zur strategischen Planung des Regierungsrates *"
+    "Bericht zur strategischen Planung des Regierungsrates"
    ]
   },
   "52_a": {

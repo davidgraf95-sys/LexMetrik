@@ -1,5 +1,51 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Weinverordnung",
+  "erlassdatum": "vom 11.02.2013 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 63 Abs. 3 und Art. 178 des Bundesgesetzes über die Landwirtschaft vom 29. April 1998, auf die Verordnung über Rebbau und die Einfuhr von Wein vom 14. November 2007 sowie Art. 16 Abs. 2 und Art. 30 Abs. 1 des Gesetzes über die Landwirtschaft vom 7. Juni 1998,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 910.1",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Weinverordnung (SR 916.140)",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "bGS 920.1",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -19,6 +65,15 @@
    ],
    "marginalie": [
     "Neuanpflanzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 2 Abs. 4 der Verordnung über Rebbau und die Einfuhr von Wein",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -63,6 +118,15 @@
    ],
    "marginalie": [
     "Abgrenzung des geografischen Gebiets"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 817.022.110",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {

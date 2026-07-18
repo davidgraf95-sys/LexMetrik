@@ -1,5 +1,108 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Enteignungsgesetz",
+  "erlassdatum": "Vom 23. Dezember 1974 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 26, § 64, § 67 Ziff. 10 und § 68 des Gesetzes vom 26. Juni 1974 über Enteignung und Impropriation, § 197 des Hochbautengesetzes vom 11. Mai 1939, das Gesetz vom 14. Januar 1937 über Anlegung und Korrektion von Strassen, § 4 des Gesetzes vom 9. März 1972 über die Verwaltungsgebühren und Art. 61 Abs. 2 des Bundesgesetzes vom 8. März1960 über die Nationalstrassen,",
+    "fnNrs": [
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "3",
+    "text": "SG 740.100.",
+    "links": [
+     {
+      "label": "740.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/740.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-740.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100 ).",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100 ).",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "SR 725.11.",
+    "links": [
+     {
+      "label": "725.11",
+      "url": "https://db.clex.ch/link/Bund/725.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +124,22 @@
    ],
    "marginalie": [
     "2. Bauverbote"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Bau- und Planungsgesetz vom 17. 11. 1999 (SG 730.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -164,6 +283,15 @@
    ],
    "marginalie": [
     "2. Gebühren des Bau- und Verkehrsdepartements"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -206,7 +334,16 @@
      "label": "V. Aufgehobene und geänderte Erlasse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Wirksam seit 2. 4. 1975.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "13_a": {
    "gliederung": [

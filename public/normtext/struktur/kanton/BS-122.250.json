@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Zusammenarbeit der Kantone Basel-Stadt und Basel-Landschaft bei der Erfassung von biometrischen Daten für Schweizerpässe",
+  "erlassdatum": "Vom 12. Mai 2020 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Regierungsräte der Kantone Basel-Stadt und Basel-Landschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 44 und 48 der Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999 sowie § 106 der Verfassung des Kantons Basel-Stadt vom 23. März 2005 und § 77 der Verfassung des Kantons Basel-Landschaft vom 17. Mai 1984,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 101",
+    "links": [
+     {
+      "label": "101",
+      "url": "https://db.clex.ch/link/Bund/101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 111.100",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SGS 100",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -131,6 +200,15 @@
    ],
    "marginalie": [
     "Streiterledigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 670.100, SGS 149.91.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

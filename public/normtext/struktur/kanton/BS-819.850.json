@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend Gewährung von Bürgschaften",
+  "erlassdatum": "Vom 2. März 1976 (Stand 2. März 1976)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des Grossratsbeschlusses vom 19. November 1975 betreffend Gewährung von Bürgschaften im Interesse der Schaffung oder Erhaltung produktiver, die Wohnlichkeit nicht beeinträchtigender Arbeitsplätze in Basel,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 819.800.",
+    "links": [
+     {
+      "label": "819.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/819.800/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,7 +42,16 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Ziff. 2: Telephonnummer redaktionell geändert.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [],

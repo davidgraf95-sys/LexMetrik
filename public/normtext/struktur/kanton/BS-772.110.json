@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Energiegesetz",
+  "erlassdatum": "Vom 29. August 2017 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Energiegesetz (EnG) vom 16. November 2016, unter Verweis auf seine Erläuterungen Nr. P171264,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 772.100.",
+    "links": [
+     {
+      "label": "772.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/772.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-772.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

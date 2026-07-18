@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Personalreglement",
+  "erlassdatum": "Vom 16. Juli 2002 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt gestützt auf § 49 der Personalordnung vom 24. April 2002 folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 162.100.",
+    "links": [
+     {
+      "label": "RiE 162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20162.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -42,7 +73,7 @@
     }
    ],
    "marginalie": [
-    "Vertragsänderungen *"
+    "Vertragsänderungen"
    ]
   },
   "5": {
@@ -97,7 +128,7 @@
     }
    ],
    "marginalie": [
-    "Strafregisterauszüge *"
+    "Strafregisterauszüge"
    ]
   },
   "10": {
@@ -107,9 +138,7 @@
      "label": "II. Anstellung, Stellenwechsel und Beförderung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "11": {
    "gliederung": [
@@ -130,7 +159,7 @@
     }
    ],
    "marginalie": [
-    "Interner Stellenwechsel *"
+    "Interner Stellenwechsel"
    ]
   },
   "13": {
@@ -140,9 +169,7 @@
      "label": "II. Anstellung, Stellenwechsel und Beförderung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -152,7 +179,21 @@
     }
    ],
    "marginalie": [
-    "Beschäftigung von Mitarbeitenden nach Erreichen der ordentlichen Altersgrenze *"
+    "Beschäftigung von Mitarbeitenden nach Erreichen der ordentlichen Altersgrenze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG RiE 162.100",
+     "links": [
+      {
+       "label": "RiE 162.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20162.100/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -185,7 +226,7 @@
     }
    ],
    "marginalie": [
-    "Zeiterfassung und Absenzen *"
+    "Zeiterfassung und Absenzen"
    ]
   },
   "18": {
@@ -196,7 +237,7 @@
     }
    ],
    "marginalie": [
-    "Bezahlte Abwesenheit *"
+    "Bezahlte Abwesenheit"
    ]
   },
   "19": {
@@ -272,9 +313,7 @@
      "label": "III. Arbeitszeit"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26": {
    "gliederung": [
@@ -362,6 +401,15 @@
    ],
    "marginalie": [
     "Öffentliches Amt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 33 Abs. 2 in der Fassung von § 56 Abs. 1 des GB vom 9. 12. 2008 (wirksam seit 1. 1. 2009).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -394,7 +442,7 @@
     }
    ],
    "marginalie": [
-    "Persönliche Angelegenheiten *"
+    "Persönliche Angelegenheiten"
    ]
   },
   "37": {
@@ -460,7 +508,7 @@
     }
    ],
    "marginalie": [
-    "Dauer des Mutterschaftsurlaubs *"
+    "Dauer des Mutterschaftsurlaubs"
    ]
   },
   "43": {
@@ -504,7 +552,7 @@
     }
    ],
    "marginalie": [
-    "Bezahlter Adoptionsurlaub *"
+    "Bezahlter Adoptionsurlaub"
    ]
   },
   "47": {
@@ -625,7 +673,7 @@
     }
    ],
    "marginalie": [
-    "Leitung Personal *"
+    "Leitung Personal"
    ]
   },
   "58": {
@@ -636,7 +684,7 @@
     }
    ],
    "marginalie": [
-    "Beratungsangebote *"
+    "Beratungsangebote"
    ]
   },
   "59": {
@@ -724,7 +772,7 @@
     }
    ],
    "marginalie": [
-    "Ergänzende Richtlinien und Weisungen *"
+    "Ergänzende Richtlinien und Weisungen"
    ]
   },
   "67": {
@@ -734,9 +782,7 @@
      "label": "XI. Ausführungs-, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "68": {
    "gliederung": [
@@ -745,9 +791,7 @@
      "label": "XI. Ausführungs-, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "69": {
    "gliederung": [
@@ -756,9 +800,7 @@
      "label": "XI. Ausführungs-, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "70": {
    "gliederung": [
@@ -776,9 +818,7 @@
      "label": "XI. Ausführungs-, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "72": {
    "gliederung": [
@@ -787,9 +827,7 @@
      "label": "XI. Ausführungs-, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "73": {
    "gliederung": [
@@ -798,9 +836,7 @@
      "label": "XI. Ausführungs-, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "74": {
    "gliederung": [
@@ -822,6 +858,15 @@
    ],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Publiziert am 24. 7. 2002.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15_a": {
@@ -1008,7 +1053,7 @@
     }
    ],
    "marginalie": [
-    "Arbeitszeit und Stillzeit bei Schwangerschaft und Mutterschaft *"
+    "Arbeitszeit und Stillzeit bei Schwangerschaft und Mutterschaft"
    ]
   },
   "46_a": {
@@ -1019,7 +1064,7 @@
     }
    ],
    "marginalie": [
-    "Bezahlter Vaterschaftsurlaub *"
+    "Bezahlter Vaterschaftsurlaub"
    ]
   },
   "46_b": {
@@ -1161,9 +1206,7 @@
      "label": "XI. Ausführungs-, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "73_a": {
    "gliederung": [
@@ -1173,7 +1216,16 @@
     }
    ],
    "marginalie": [
-    "Fakultative Vertrauensarbeitszeit [4]"
+    "Fakultative Vertrauensarbeitszeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "befristet bis 31. Dezember 2026 (KB 18.11.2024)",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

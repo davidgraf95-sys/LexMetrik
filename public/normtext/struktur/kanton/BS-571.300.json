@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Disziplinarstrafgewalt in der Militärverwaltung",
+  "erlassdatum": "Vom 28. Januar 2025 (Stand 6. Februar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 189, 192 Abs. 1, 195 Abs. 4, 198 Abs. 2 und 206 Abs. 2 lit. d des Militärstrafgesetzes (MStG) vom 13. Juni 1927, unter Verweis auf seine Erläuterungen Nr. P250066,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 321.0.",
+    "links": [
+     {
+      "label": "321.0",
+      "url": "https://db.clex.ch/link/Bund/321.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "MSTG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

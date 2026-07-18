@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verfassung des Kantons Appenzell A.Rh.",
+  "erlassdatum": "vom 30.04.1995 (Stand 26.11.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Von der Landsgemeinde erlassen am 30. April 1995"
+   },
+   {
+    "rolle": "ingress",
+    "text": "Im Vertrauen auf Gott wollen wir, Frauen und Männer von Appenzell Ausserrhoden, die Schöpfung in ihrer Vielfalt achten. Wir wollen, über Grenzen hinweg, eine freiheitliche, friedliche und gerechte Lebensordnung mitgestalten. Im Bewusstsein, dass das Wohl der Gemeinschaft und das Wohl der Einzelnen untrennbar miteinander verbunden sind, geben wir uns folgende Verfassung:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -754,7 +768,7 @@
     }
    ],
    "marginalie": [
-    "Obligatorisches Referendum und Wahlen *"
+    "Obligatorisches Referendum und Wahlen"
    ]
   },
   "61": {
@@ -1009,7 +1023,7 @@
     }
    ],
    "marginalie": [
-    "Organisation a) Grundsätze *"
+    "Organisation a) Grundsätze"
    ]
   },
   "79": {
@@ -1024,7 +1038,7 @@
     }
    ],
    "marginalie": [
-    "b) Kommissionen *"
+    "b) Kommissionen"
    ]
   },
   "80": {
@@ -1039,7 +1053,7 @@
     }
    ],
    "marginalie": [
-    "c) Stellung des Regierungsrates *"
+    "c) Stellung des Regierungsrates"
    ]
   },
   "81": {
@@ -1054,7 +1068,7 @@
     }
    ],
    "marginalie": [
-    "d) Immunität, Instruktionsverbot *"
+    "d) Immunität, Instruktionsverbot"
    ]
   },
   "82": {
@@ -1084,7 +1098,7 @@
     }
    ],
    "marginalie": [
-    "Sitzzahl, Vollamt, Wiederwahl *"
+    "Sitzzahl, Vollamt, Wiederwahl"
    ]
   },
   "84": {

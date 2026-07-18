@@ -1,5 +1,48 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die Stiftungsaufsicht",
+  "erlassdatum": "Vom 23. Januar 2012 (Stand 1. Januar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Verwaltungsrat der BSABB (BVG- und Stiftungsaufsicht beider Basel),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 6 lit. j und l des BVG- und Stiftungsaufsichtsvertrags vom 8./14. Juni 2011,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG BS 833.100; SGS BL 211.2.",
+    "links": [
+     {
+      "label": "833.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/833.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-833.100"
+      }
+     },
+     {
+      "label": "211.2",
+      "url": "https://db.clex.ch/link/BL/211.2/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -41,6 +84,15 @@
    ],
    "marginalie": [
     "Prüfung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 4 Abs. 1 lit. a: Verweis geändert durch VR-Beschluss vom 2. 10. 2014 (wirksam seit 1. 1. 2015).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -96,6 +148,20 @@
    ],
    "marginalie": [
     "Revisionsstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 211.121.3.",
+     "links": [
+      {
+       "label": "211.121.3",
+       "url": "https://db.clex.ch/link/Bund/211.121.3/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -127,7 +193,16 @@
      "label": "IV. Gebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 28. 1. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

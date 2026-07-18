@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren der Gerichte",
+  "erlassdatum": "vom 01.10.2001 (Stand 01.01.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Appenzell I.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 45 Abs. 4 des Gerichtsorganisationsgesetzes vom 25. April 2010 (GOG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -75,7 +93,7 @@
     }
    ],
    "marginalie": [
-    "Vermittler und Schlichtungsstellen *"
+    "Vermittler und Schlichtungsstellen"
    ]
   },
   "9": {
@@ -97,7 +115,7 @@
     }
    ],
    "marginalie": [
-    "Bezirksgerichtspräsident oder Einzelrichter *"
+    "Bezirksgerichtspräsident oder Einzelrichter"
    ]
   },
   "11": {
@@ -108,7 +126,7 @@
     }
    ],
    "marginalie": [
-    "Bezirksgericht als Kollegialgericht in Zivilsachen *"
+    "Bezirksgericht als Kollegialgericht in Zivilsachen"
    ]
   },
   "12": {
@@ -119,7 +137,7 @@
     }
    ],
    "marginalie": [
-    "Kantonsgerichtspräsident oder Einzelrichter *"
+    "Kantonsgerichtspräsident oder Einzelrichter"
    ]
   },
   "13": {
@@ -130,7 +148,7 @@
     }
    ],
    "marginalie": [
-    "Kantonsgericht als Kollegialgericht in Zivilsachen *"
+    "Kantonsgericht als Kollegialgericht in Zivilsachen"
    ]
   },
   "15": {
@@ -196,7 +214,7 @@
     }
    ],
    "marginalie": [
-    "b. Sachverständige sowie Übersetzer *"
+    "b. Sachverständige sowie Übersetzer"
    ]
   },
   "22": {
@@ -207,7 +225,7 @@
     }
    ],
    "marginalie": [
-    "c. Übrige *"
+    "c. Übrige"
    ]
   },
   "24": {

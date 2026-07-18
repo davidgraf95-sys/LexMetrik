@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend die Verwendung des Ertrages aus Mehrwertabgaben",
+  "erlassdatum": "Vom 11. April 2006 (Stand 1. Mai 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 120 ff. des Bau- und Planungsgesetzes (BPG) vom 17. November 1999, §§ 81 ff. der Bau- und Planungsverordnung (BPV) vom 19. Dezember 2000 sowie §§ 53 – 55 und § 59 der Gemeindeordnung der Einwohnergemeinde Bettingen vom 12. November 1985,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 730.100.",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 730.110.",
+    "links": [
+     {
+      "label": "730.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BeE 111.100.",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -65,6 +134,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 11. 11. 2006.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung des Bundesgesetzes vom 13. Juni 1911 über die Kranken- und Unfallversicherung (KUVG)",
+  "erlassdatum": "vom 30.04.1967 (Stand 28.04.1996)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 13. Juni 1911 über die Kranken- und Unfallversicherung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KUVG (SR 832.01); Heute BG über die Unfallversicherung (SR 832.20 )",
+    "links": [
+     {
+      "label": "832.20",
+      "url": "https://db.clex.ch/link/Bund/832.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "UVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "17": {
    "gliederung": [

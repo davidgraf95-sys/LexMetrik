@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement für die Museen im Wettsteinhaus der Gemeinde Riehen",
+  "erlassdatum": "Vom 26. September 1995 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 24 Abs. 3 lit. e und § 26 der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 111.100",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -10,7 +45,7 @@
   "2": {
    "gliederung": [],
    "marginalie": [
-    "Museumsbetrieb *"
+    "Museumsbetrieb"
    ]
   },
   "3": {
@@ -28,18 +63,27 @@
   "5": {
    "gliederung": [],
    "marginalie": [
-    "Zusammensetzung *"
+    "Zusammensetzung"
    ]
   },
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Organisation und Beschlussfähigkeit *"
+    "Organisation und Beschlussfähigkeit"
    ]
   },
   "7": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 15. 10. 1995.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Wässerungsverhältnisse am Riehenteich",
+  "erlassdatum": "Vom 30. April 1895 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des Grossratsbeschlusses vom 14. Februar 1895 betreffend die Genehmigung der Vereinbarung zwischen Basel-Stadt und der Grossherzoglich-Badischen Regierung über die Wässerungsverhältnisse am Wiesenflusse, verordnet zur Regelung der Wässerungsverhältnisse am Riehenteiche was folgt:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -7,17 +21,42 @@
   },
   "2": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Diese Vereinbarung ist formell nie aufgehoben worden, dürfte aber heute kaum mehr von Bedeutung sein.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [],
-   "marginalie": [
-    "... [3]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 3: Diese Verordnung ist nur noch soweit in Kraft, als sie nicht im Widerspruch steht zur Vereinbarung vom 30. 4. / 12. 6. 1909 betreffend Änderung der Vollzugsbestimmungen zum Staatsvertrag von 1756 mit Baden über Wasserbenützung aus der Wiese. Zu berücksichtigen ist ferner, dass die im Text erwähnte Teichkorporation nicht mehr besteht und die Aufsicht über die Teichbenützung heute durch die Industriellen Werke Basel ausgeübt wird. Dadurch sind insbesondere § 3 und § 4 Abs. 2 und 3 hinfällig geworden und müssen andere Bestimmungen, in denen von der Teichkorporation und deren Organen die Rede ist, entsprechend modifiziert werden.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Zwei nachfolgende Absätze sind hinfällig; vgl. hiezu: Diese Verordnung ist nur noch soweit in Kraft, als sie nicht im Widerspruch steht zur Vereinbarung vom 30. 4. / 12. 6. 1909 betreffend Änderung der Vollzugsbestimmungen zum Staatsvertrag von 1756 mit Baden über Wasserbenützung aus der Wiese. Zu berücksichtigen ist ferner, dass die im Text erwähnte Teichkorporationnicht mehr besteht und die Aufsicht über die Teichbenützung heute durch die Industriellen Werke Basel ausgeübt wird. Dadurch sind insbesondere § 3 und § 4 Abs. 2 und 3 hinfällig geworden und müssen andere Bestimmungen, in denen von der Teichkorporation und deren Organen die Rede ist, entsprechend modifiziert werden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [],
@@ -29,7 +68,16 @@
   },
   "7": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 7: Die Gemeinde Riehen hat am 23. 10. 1904 eine Wässerungsordnung betreffend den Mühleteich erlassen, die aber heute hinfällig ist, da die Bewässerung der Matten und die Reinigung des Teichbettes von den Industriellen Werken Basel besorgt wird.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "8": {
    "gliederung": [],

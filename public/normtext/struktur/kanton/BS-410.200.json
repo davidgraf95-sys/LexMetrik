@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung für die Festlegung und Veränderung der Anzahl Unterrichtslektionen für die vom Kanton geführten Schulen",
+  "erlassdatum": "Vom 20. Februar 2006 (Stand 10. August 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Erziehungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 79 und § 67a Abs. 4 des Schulgesetzes vom 4. April 1929, folgende Ordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -75,7 +110,16 @@
      "label": "II. Der Faktor «Unterrichtslektionen pro Schülerin oder Schüler»"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 8: Umbenennung \"Leitung der Weiterführenden Schulen\" in \"Leitung Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [
@@ -84,7 +128,16 @@
      "label": "III. Überprüfung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 9: Umbenennung \"Leitung der Weiterführenden Schulen\" in \"Leitung Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "10": {
    "gliederung": [
@@ -111,7 +164,16 @@
      "label": "IV. Modifikation"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 2. 4. 2006.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

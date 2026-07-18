@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz gegen den Bau von öffentlichen Autoparkgaragen in der Innerstadt",
+  "erlassdatum": "Vom 21. März 1990 (Stand 25. Juni 1990)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,6 +41,22 @@
    "gliederung": [],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Angenommen in der Volksabstimmung vom 22. / 24. 6. 1990.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "Wirksam seit 25. 6. 1990.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

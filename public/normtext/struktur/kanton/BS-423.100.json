@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel)",
+  "erlassdatum": "Vom 27. Juni 1963 (Stand 1. Januar 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in der Absicht, gemäss §§ 11 und 12 der Verfassung vom 2. Dezember 1889, die Ausbildung für Hauswirtschaft und vorwiegend weibliche Berufe zu fördern,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst was folgt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Diese Verfassung ist aufgehoben. Massgebend ist jetzt die Verfassung des Kantons Basel-Stadt vom 23. März 2005 (SG 111.100 ).",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,9 +47,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "2": {
    "gliederung": [
@@ -20,7 +57,7 @@
     }
    ],
    "marginalie": [
-    "Zweck der Schule *"
+    "Zweck der Schule"
    ]
   },
   "3": {
@@ -31,7 +68,7 @@
     }
    ],
    "marginalie": [
-    "Schulkommission *"
+    "Schulkommission"
    ]
   },
   "4": {
@@ -42,7 +79,7 @@
     }
    ],
    "marginalie": [
-    "Ausschüsse *"
+    "Ausschüsse"
    ]
   },
   "5": {
@@ -52,9 +89,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "6": {
    "gliederung": [
@@ -64,7 +99,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigungen *"
+    "Entschädigungen"
    ]
   },
   "7": {
@@ -75,7 +110,7 @@
     }
    ],
    "marginalie": [
-    "Bestreitung der Ausgaben *"
+    "Bestreitung der Ausgaben"
    ]
   },
   "8": {
@@ -86,7 +121,7 @@
     }
    ],
    "marginalie": [
-    "Gliederung der Schule *"
+    "Gliederung der Schule"
    ]
   },
   "9": {
@@ -97,7 +132,7 @@
     }
    ],
    "marginalie": [
-    "Einführung von neuen Bildungsangeboten *"
+    "Einführung von neuen Bildungsangeboten"
    ]
   },
   "10": {
@@ -108,7 +143,7 @@
     }
    ],
    "marginalie": [
-    "Lehrpläne, Schulordnung *"
+    "Lehrpläne, Schulordnung"
    ]
   },
   "11": {
@@ -118,9 +153,7 @@
      "label": "II. Einrichtung der Schule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -140,9 +173,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -152,7 +183,7 @@
     }
    ],
    "marginalie": [
-    "Aufnahme *"
+    "Aufnahme"
    ]
   },
   "15": {
@@ -162,9 +193,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [
@@ -173,9 +202,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -184,9 +211,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -196,7 +221,7 @@
     }
    ],
    "marginalie": [
-    "Anzahl der Lernenden pro Klasse *"
+    "Anzahl der Lernenden pro Klasse"
    ]
   },
   "19": {
@@ -206,9 +231,7 @@
      "label": "III. Lernende"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -218,7 +241,7 @@
     }
    ],
    "marginalie": [
-    "Kursgeld *"
+    "Kursgeld"
    ]
   },
   "21": {
@@ -229,7 +252,7 @@
     }
    ],
    "marginalie": [
-    "Erlass des Kursgeldes *"
+    "Erlass des Kursgeldes"
    ]
   },
   "22": {
@@ -240,7 +263,7 @@
     }
    ],
    "marginalie": [
-    "Unterrichtsmaterial *"
+    "Unterrichtsmaterial"
    ]
   },
   "23": {
@@ -251,7 +274,7 @@
     }
    ],
    "marginalie": [
-    "Pflichten der Lernenden *"
+    "Pflichten der Lernenden"
    ]
   },
   "24": {
@@ -262,7 +285,16 @@
     }
    ],
    "marginalie": [
-    "Ausschluss *"
+    "Ausschluss"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Bezeichnung redaktionell berichtigt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -273,7 +305,7 @@
     }
    ],
    "marginalie": [
-    "Zeugnisse *"
+    "Zeugnisse"
    ]
   },
   "26": {
@@ -288,7 +320,7 @@
     }
    ],
    "marginalie": [
-    "Leitung und Verwaltung der Schule *"
+    "Leitung und Verwaltung der Schule"
    ]
   },
   "27": {
@@ -303,7 +335,7 @@
     }
    ],
    "marginalie": [
-    "Lehrtätigkeit *"
+    "Lehrtätigkeit"
    ]
   },
   "28": {
@@ -318,7 +350,7 @@
     }
    ],
    "marginalie": [
-    "Anstellung und Bestätigung *"
+    "Anstellung und Bestätigung"
    ]
   },
   "29": {
@@ -332,9 +364,7 @@
      "label": "a) Leitung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -348,7 +378,7 @@
     }
    ],
    "marginalie": [
-    "Stellvertretung *"
+    "Stellvertretung"
    ]
   },
   "31": {
@@ -363,7 +393,7 @@
     }
    ],
    "marginalie": [
-    "Anstellung und Bestätigung *"
+    "Anstellung und Bestätigung"
    ]
   },
   "32": {
@@ -378,7 +408,7 @@
     }
    ],
    "marginalie": [
-    "Amtsordnung *"
+    "Amtsordnung"
    ]
   },
   "33": {
@@ -393,7 +423,7 @@
     }
    ],
    "marginalie": [
-    "Abteilungsvorsteherinnen und Abteilungsvorsteher *"
+    "Abteilungsvorsteherinnen und Abteilungsvorsteher"
    ]
   },
   "34": {
@@ -407,9 +437,7 @@
      "label": "b) Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [
@@ -423,7 +451,7 @@
     }
    ],
    "marginalie": [
-    "Schulkonferenz *"
+    "Schulkonferenz"
    ]
   },
   "36": {
@@ -433,9 +461,7 @@
      "label": "V. Sekretariats- und Verwaltungsangestellte"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -444,9 +470,7 @@
      "label": "VI. Übriges Personal"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -455,9 +479,7 @@
      "label": "VII. Strafbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [
@@ -466,9 +488,7 @@
      "label": "VIII. Einführungsbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -477,9 +497,7 @@
      "label": "VIII. Einführungsbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

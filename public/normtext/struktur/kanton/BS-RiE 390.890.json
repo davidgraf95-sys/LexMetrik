@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Bestattungen in der Gemeinde Riehen",
+  "erlassdatum": "Vom 6. Juli 2021 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 8 und 33 des Bestattungsgesetzes (BestG) vom 11. März 2020 und § 24 Abs. 3 lit. e der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 390.100",
+    "links": [
+     {
+      "label": "390.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/390.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-390.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 111.100",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -90,7 +142,7 @@
     }
    ],
    "marginalie": [
-    "Ruhezeit der Reihengräber *"
+    "Ruhezeit der Reihengräber"
    ]
   },
   "9": {
@@ -176,7 +228,7 @@
     }
    ],
    "marginalie": [
-    "Gebühren *"
+    "Gebühren"
    ]
   },
   "15": {

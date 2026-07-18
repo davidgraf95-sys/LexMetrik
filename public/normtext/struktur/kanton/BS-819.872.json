@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung 2 betreffend Gewährung von kantonalen Start-up-Bürgschaften infolge COVID-19-Pandemie",
+  "erlassdatum": "Vom 1. Dezember 2020 (Stand 1. Dezember 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5b des Standortförderungsgesetzes vom 29. Juni 2006, unter Verweis auf seine Erläuterungen Nr. P201592,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 910.200",
+    "links": [
+     {
+      "label": "910.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/910.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-910.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

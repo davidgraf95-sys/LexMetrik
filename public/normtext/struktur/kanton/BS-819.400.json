@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Gewährung von Steuervergütungen auf Arbeitsbeschaffungsreserven",
+  "erlassdatum": "Vom 29. Mai 1952 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf den Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +26,16 @@
      "label": "I. Grundsatz"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 1 Abs. 1: Gemeint ist das Bundesgesetz über die Bildung von Arbeitsbeschaffungsreserven der privaten Wirtschaft vom 3. 10. 1951. Dieser Erlass wurde am 1. 1. 2009 aufgehoben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -28,6 +55,15 @@
    ],
    "marginalie": [
     "1. Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 3: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Steuergesetz vom 12. 4. 2000 (wirksam seit 1. 1. 2001, SG 640.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -97,7 +133,16 @@
      "label": "VII. Rückforderung zu Unrecht ausbezahlter Vergütungen; Strafbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 10 Abs. 2: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Steuergesetz vom 12. 4. 2000, § 223 (wirksam seit 1. 1. 2001, SG 640.100).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "11": {
    "gliederung": [

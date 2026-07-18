@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Wildtier- und Jagdgesetz",
+  "erlassdatum": "Vom 27. Oktober 2021 (Stand 1. April 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3 und 25 des Bundesgesetzes über die Jagd und den Schutz wildlebender Säugetiere und Vögel (Jagdgesetz, JSG) vom 20. Juni 1986 sowie nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 20.0935.01 vom 8. Dezember 2020 und in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 20.0935.02 vom 8. September 2021,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 922.0",
+    "links": [
+     {
+      "label": "922.0",
+      "url": "https://db.clex.ch/link/Bund/922.0/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

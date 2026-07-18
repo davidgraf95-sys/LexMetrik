@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend kantonale Arbeitslosenhilfe",
+  "erlassdatum": "Vom 24. Juni 2004 (Stand 1. Januar 2005)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag der Gesundheits- und Sozialkommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -186,6 +204,15 @@
    ],
    "marginalie": [
     "Zeitpunkt der Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 1. 1. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

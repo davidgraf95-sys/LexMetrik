@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Archäologieverordnung",
+  "erlassdatum": "Vom 16. Dezember 2025 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über den Denkmalschutz vom 20. März 1980, unter Verweis auf seine Erläuterungen Nr. P251662,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 497.100",
+    "links": [
+     {
+      "label": "497.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/497.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-497.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +93,24 @@
    ],
    "marginalie": [
     "Kostentragung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 724.100",
+     "links": [
+      {
+       "label": "724.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-724.100"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -65,6 +122,24 @@
    ],
    "marginalie": [
     "Aufgaben der Archäologischen Bodenforschung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 730.100",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kulturförderungsverordnung",
+  "erlassdatum": "vom 04.07.2006 (Stand 01.01.2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 10 des Kulturförderungsgesetzes vom 28. November 2005,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KFG (bGS 420.1 )",
+    "links": [
+     {
+      "label": "420.1",
+      "url": "https://ar.clex.ch/data/420.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-420.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -101,6 +140,15 @@
    "gliederung": [],
    "marginalie": [
     "Kulturrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 92 KV, Art. 25 OrG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2_a": {

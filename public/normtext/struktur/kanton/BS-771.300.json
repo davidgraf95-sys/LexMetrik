@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend Einführung des Bundesgesetzes über Nutzbarmachung der Wasserkräfte",
+  "erlassdatum": "Vom 10. Januar 1918 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf den Antrag des Regierungsrates, erlässt zur Einführung des Bundesgesetzes über die Nutzbarmachung der Wasserkräfte vom 22. Dezember 1916 folgendes Gesetz:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 721.80.",
+    "links": [
+     {
+      "label": "721.80",
+      "url": "https://db.clex.ch/link/Bund/721.80/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -19,9 +50,7 @@
   },
   "5": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

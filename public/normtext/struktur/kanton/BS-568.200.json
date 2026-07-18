@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Vollzug der eidgenössischen Waffengesetzgebung",
+  "erlassdatum": "Vom 22. Dezember 1998 (Stand 1. Januar 1999)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 38 des Bundesgesetzes über Waffen, Waffenzubehör und Munition vom 20. Juni 1997,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 514.54.",
+    "links": [
+     {
+      "label": "514.54",
+      "url": "https://db.clex.ch/link/Bund/514.54/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +67,15 @@
    ],
    "marginalie": [
     "Rechtskraft und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 6. 3. 1999.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

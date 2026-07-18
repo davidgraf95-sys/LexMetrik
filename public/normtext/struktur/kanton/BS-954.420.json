@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen dem Deutschen Reich (Eisenbahnfiskus), vertreten durch die Reichsbahndirektion in Karlsruhe, einerseits, dem Kanton Basel-Stadt, vertreten durch den Regierungsrat, und den Schweizerischen Bundesbahnen, vertreten durch die Generaldirektion in Bern, anderseits, betreffend a) den Anschluss der Hafenbahn an den Basel Badischen Verschubbahnhof, b) den Betrieb der Hafenbahn durch die Schweizerischen Bundesbahnen zwischen dem baselstädtischen Rheinhafen Kleinhüningen und dem Basel Badischen Verschubbahnhof",
+  "erlassdatum": "Vom 16. Dezember 1922 (Stand 12. März 1925)"
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,8 +30,15 @@
      "label": "II. Verfahren bei künftigen Erweiterungs- und Umbauten"
     }
    ],
-   "marginalie": [
-    "[2]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -Buchstaben.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "4": {

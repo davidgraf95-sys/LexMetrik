@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Erhebung von Gebühren im Einbürgerungsverfahren",
+  "erlassdatum": "Vom 14. Dezember 2007 (Stand 1. Juli 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 41 Abs. 2 des Bürgerrechtsgesetzes vom 29. April 1992,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gebührenreglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 121.150.",
+    "links": [
+     {
+      "label": "121.150",
+      "url": "https://www.gesetzessammlung.bs.ch/data/121.150/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -39,7 +74,16 @@
      "label": "II. Berechnung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 23. 2. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die direkten Steuern",
+  "erlassdatum": "Vom 14. November 2000 (Stand 1. September 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des Gesetzes über die direkten Steuern (StG) vom 12. April 2000,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 640.100.",
+    "links": [
+     {
+      "label": "640.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/640.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-640.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -163,9 +202,7 @@
      "label": "B.I.1. Einkünfte aus unselbständiger Erwerbstätigkeit"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -186,9 +223,7 @@
      "label": "B.I.1. Einkünfte aus unselbständiger Erwerbstätigkeit"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -544,9 +579,7 @@
      "label": "B.II.1. Berufskosten bei unselbständiger Erwerbstätigkeit"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26": {
    "gliederung": [
@@ -614,7 +647,16 @@
     }
    ],
    "marginalie": [
-    "j) Andere Berufskosten [3]"
+    "j) Andere Berufskosten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Titel j in der Fassung des RRB vom 22. 3. 2011 (wirksam seit 27. 3. 2011).",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "29": {
@@ -797,6 +839,24 @@
    ],
    "marginalie": [
     "d) Massnahmen für das Energiesparen und für den Umwelt- und Denkmalschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 36 lit. a: Art. 1 der Verordnung des Schweizerischen Bundesrates vom 9. März 2018 über den Abzug der Kosten von Liegenschaften des Privatvermögens, SR 642.116; Verordnung des Eidgenössischen Finanzdepartementes vom 24. August 1992 über die Massnahmen zur rationellen Energieverwendung und zur Nutzung erneuerbarer Energien, SR 642.116.1.",
+     "links": [
+      {
+       "label": "642.116",
+       "url": "https://db.clex.ch/link/Bund/642.116/de"
+      },
+      {
+       "label": "642.116.1",
+       "url": "https://db.clex.ch/link/Bund/642.116.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "37": {
@@ -819,7 +879,7 @@
     }
    ],
    "marginalie": [
-    "h) Liegenschaftskostenpauschale *"
+    "h) Liegenschaftskostenpauschale"
    ]
   },
   "38": {
@@ -1105,6 +1165,15 @@
    ],
    "marginalie": [
     "a) Vermietete und verpachtete Grundstücke"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 50 Abs. 4: Kapitalisierungssätze: Siehe Anhang Ziff. 1.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "51": {
@@ -1173,7 +1242,7 @@
     }
    ],
    "marginalie": [
-    "e) Ungenutzte Grundstücke *"
+    "e) Ungenutzte Grundstücke"
    ]
   },
   "54": {
@@ -1196,7 +1265,7 @@
     }
    ],
    "marginalie": [
-    "f) Auswärtige Grundstücke *"
+    "f) Auswärtige Grundstücke"
    ]
   },
   "55": {
@@ -1219,7 +1288,7 @@
     }
    ],
    "marginalie": [
-    "g) Zeitpunkt der Bewertung von Grundstücken *"
+    "g) Zeitpunkt der Bewertung von Grundstücken"
    ]
   },
   "56": {
@@ -1288,9 +1357,7 @@
      "label": "2.I.2. Steuerausscheidung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "60": {
    "gliederung": [
@@ -1508,9 +1575,7 @@
      "label": "2.III.1. Tätigkeit"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "72": {
    "gliederung": [
@@ -1527,9 +1592,7 @@
      "label": "2.III.2. Mindestquoten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "73": {
    "gliederung": [
@@ -1546,9 +1609,7 @@
      "label": "2.III.3. Besteuerung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "74": {
    "gliederung": [
@@ -1565,9 +1626,7 @@
      "label": "2.IV.1. Verwaltungsgesellschaften"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "75": {
    "gliederung": [
@@ -1584,9 +1643,7 @@
      "label": "2.IV.2. Gemischte Gesellschaften"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "76": {
    "gliederung": [
@@ -1603,9 +1660,7 @@
      "label": "2.IV.3. Besteuerung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "77": {
    "gliederung": [
@@ -1622,9 +1677,7 @@
      "label": "2.IV.4. Steuersatz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "78": {
    "gliederung": [
@@ -1675,9 +1728,7 @@
      "label": "3.I.3. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "81": {
    "gliederung": [
@@ -1694,9 +1745,7 @@
      "label": "3.I.4. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "82": {
    "gliederung": [
@@ -1713,9 +1762,7 @@
      "label": "3.I.5. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "83": {
    "gliederung": [
@@ -2332,9 +2379,7 @@
      "label": "5.IV.7. Erhebung der Quellensteuer im interkantonalen Verhältnis"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "118": {
    "gliederung": [
@@ -2351,9 +2396,7 @@
      "label": "5.IV.7. Erhebung der Quellensteuer im interkantonalen Verhältnis"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "119": {
    "gliederung": [
@@ -2370,9 +2413,7 @@
      "label": "5.IV.7. Erhebung der Quellensteuer im interkantonalen Verhältnis"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "120": {
    "gliederung": [
@@ -2390,7 +2431,7 @@
     }
    ],
    "marginalie": [
-    "Im Ausland wohnhafte Empfängerinnen und Empfänger von Renten aus Vorsorge *"
+    "Im Ausland wohnhafte Empfängerinnen und Empfänger von Renten aus Vorsorge"
    ]
   },
   "121": {
@@ -2409,7 +2450,7 @@
     }
    ],
    "marginalie": [
-    "Ordentliche Veranlagung bei Vergütungen aus dem Ausland *"
+    "Ordentliche Veranlagung bei Vergütungen aus dem Ausland"
    ]
   },
   "122": {
@@ -2444,9 +2485,7 @@
      "label": "5.V.2. Verfahren bei Holding- und Domizilgesellschaften"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "124": {
    "gliederung": [
@@ -2708,7 +2747,16 @@
      "label": "6.I.1. Allgemeines"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "§ 137 Abs. 1: Sätze für den Zinsausgleich: Siehe Anhang Ziff. 2.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "138": {
    "gliederung": [
@@ -2828,7 +2876,7 @@
     }
    ],
    "marginalie": [
-    "a) Mahn- und Inkassogebühren *"
+    "a) Mahn- und Inkassogebühren"
    ]
   },
   "145": {
@@ -2882,9 +2930,7 @@
      "label": "6.III.2. Form und Inhalt von Erlassgesuchen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "148": {
    "gliederung": [
@@ -3266,7 +3312,16 @@
     }
    ],
    "marginalie": [
-    "d) Land- und forstwirtschaftlich genutzte Grundstücke [6]"
+    "d) Land- und forstwirtschaftlich genutzte Grundstücke"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Titel d eingefügt durch RRB vom 11. 11. 2003 (wirksam seit 31. 12. 2003); dadurch wurden die Titel d, e und f zu Titel e, f und g.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "67_a": {

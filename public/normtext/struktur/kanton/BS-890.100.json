@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Sozialhilfegesetz",
+  "erlassdatum": "Vom 29. Juni 2000 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 16 der Verfassung des Kantons Basel-Stadt vom 2. Dezember 1889,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt auf Antrag des Regierungsrates folgendes Gesetz:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Diese Verfassung ist aufgehoben. Massgebend ist jetzt die Verfassung des Kantons Basel-Stadt vom 23. 3. 2005 (SG 111.100).",
+    "links": [
+     {
+      "label": "111.100)",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100)/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -76,6 +111,20 @@
    ],
    "marginalie": [
     "Umfang"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 7 Abs. 3: Die vom Departement für Wirtschaft, Soziales und Umwelt (WSU) erlassenen Unterstützungsrichtlinien können bei der Sozialhilfe, Klybeckstrasse 15, beim Rechtsdienst des WSU, Rheinsprung 16/18, oder im Internet unter: http://www.wsu.bs.ch/ueber-uns/dienststellen/sozialhilfe.html eingesehen werden.",
+     "links": [
+      {
+       "label": "http://www.wsu.bs.ch/ueber-uns/dienststellen/sozialhilfe.html",
+       "url": "http://www.wsu.bs.ch/ueber-uns/dienststellen/sozialhilfe.html"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -340,6 +389,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 1. 7. 2001.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2_a": {

@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen den Kantonen Basel-Stadt und Zug zur Errichtung und zum Betrieb einer gemeinsamen Strafanstalt im Bostadel (Kanton Zug)",
+  "erlassdatum": "Vom 27. Februar 1973 (Stand 1. Dezember 1990)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf die Art. 382 und 383 Abs. 2 des Schweizerischen Strafgesetzbuches und im Einverständnis mit der aufgrund des Konkordates über den Vollzug von Strafen und Massnahmen nach dem Schweizerischen Strafgesetzbuch und dem Recht der Kantone der Nordwest- und Innerschweiz vom 4. März 1959 gebildeten Konferenz über die Planung im Strafvollzugswesen der Nordwest- und Innerschweiz, treffen die Kantone Basel-Stadt und Zug folgende Vereinbarung:",
+    "fnNrs": [
+     "5",
+     "6"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "5",
+    "text": "SR 311.0.",
+    "links": [
+     {
+      "label": "311.0",
+      "url": "https://db.clex.ch/link/Bund/311.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "Dieses Konkordat ist aufgehoben. Massgebend ist jetzt das Konkordat der Kantone der Nordwest- und Innerschweiz über den Vollzug von Strafen und Massnahmen vom 5. 5. 2006 (SG 258.300 ).",
+    "links": [
+     {
+      "label": "258.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/258.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-258.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -109,6 +157,15 @@
    ],
    "marginalie": [
     "Gliederung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {

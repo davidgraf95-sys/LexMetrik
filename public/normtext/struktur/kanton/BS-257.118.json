@@ -1,10 +1,66 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Betteln an neuralgischen und besonders sensiblen Örtlichkeiten",
+  "erlassdatum": "Vom 12. November 2024 (Stand 21. November 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 des Übertretungsstrafgesetzes (ÜStG) vom 13. Februar 2019, unter Verweis auf seine Erläuterungen P241583,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 253.100",
+    "links": [
+     {
+      "label": "253.100",
+      "url": "https://db.clex.ch/link/SG/253.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Widerhandlungen gegen § 9 Abs. 2 lit. b - g ÜStG"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 257.115",
+     "links": [
+      {
+       "label": "257.115",
+       "url": "https://db.clex.ch/link/SG/257.115/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "In Kraft getreten am 21. November 2024",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

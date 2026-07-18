@@ -1,10 +1,112 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Vollzug der Bundesgesetzgebung über Waffen, Waffenzubehör und Munition",
+  "erlassdatum": "vom 05.01.1999 (Stand 01.01.2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 38 des Bundesgesetzes vom 20. Juni 1997 über Waffen, Waffenzubehör und Munition und Art. 87 Abs. 3 der Verfassung des Kantons Appenzell A.Rh.,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Waffengesetz (WG; SR 514.54 )",
+    "links": [
+     {
+      "label": "514.54",
+      "url": "https://db.clex.ch/link/Bund/514.54/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Waffenverordnung (WV; SR 514.541 )",
+     "links": [
+      {
+       "label": "514.541",
+       "url": "https://db.clex.ch/link/Bund/514.541/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SR 514.544.1",
+     "links": [
+      {
+       "label": "514.544.1",
+       "url": "https://db.clex.ch/link/Bund/514.544.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SR 514.544.2",
+     "links": [
+      {
+       "label": "514.544.2",
+       "url": "https://db.clex.ch/link/Bund/514.544.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 514.546.1",
+     "links": [
+      {
+       "label": "514.546.1",
+       "url": "https://db.clex.ch/link/Bund/514.546.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -17,12 +119,55 @@
    "gliederung": [],
    "marginalie": [
     "Verwaltungsrechtspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "bGS 143.5 (heute Gesetz über die Verwaltungsrechtspflege; VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "bGS 143.6 (heute Gesetz über die Verwaltungsrechtspflege; VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
     "Aufhebung geltenden Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "bGS 524.11 (aGS V/770) mit Änderungen vom 12. Mai 1987 (lf. Nr. 253), 4. April 1989 (lf. Nr. 304) und 25. Februar 1997 (lf. Nr. 632)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {

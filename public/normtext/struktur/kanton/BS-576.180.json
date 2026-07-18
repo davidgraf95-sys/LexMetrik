@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Kulturgüterschutz",
+  "erlassdatum": "Vom 22. August 2023 (Stand 1. September 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 14 ff. des Gesetzes über den Zivilschutz und Kulturgüterschutz (ZKG) vom 21. September 2022, unter Verweis auf seine Erläuterungen Nr. P231168,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 576.100",
+    "links": [
+     {
+      "label": "576.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/576.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-576.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

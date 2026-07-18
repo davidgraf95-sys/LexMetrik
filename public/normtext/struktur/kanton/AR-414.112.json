@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Entschädigung von Mitwirkenden bei betrieblichen Qualifikationsverfahren und bei Betriebsexpertisen in der Berufsbildung",
+  "erlassdatum": "vom 24.03.2009 (Stand 01.04.2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 5 und Art. 22 Abs. 4 des Einführungsgesetzes vom 24. September 2007 zum Bundesgesetz über die Berufsbildung",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG zum BBG (bGS 414.11 )",
+    "links": [
+     {
+      "label": "414.11",
+      "url": "https://ar.clex.ch/data/414.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-414.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -47,6 +86,24 @@
    "gliederung": [],
    "marginalie": [
     "Spesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "REIS (bGS 142.211.1 ), insbesondere Art. 6 ff.",
+     "links": [
+      {
+       "label": "142.211.1",
+       "url": "https://ar.clex.ch/data/142.211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend kantonale Arbeitslosenhilfe",
+  "erlassdatum": "Vom 21. Dezember 2004 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 15 des Gesetzes betreffend kantonale Arbeitslosenhilfe (ALHG) vom 24. Juni 2004,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 835.500.",
+    "links": [
+     {
+      "label": "835.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/835.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-835.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

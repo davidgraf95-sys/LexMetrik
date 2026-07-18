@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über das Honorar und die Entschädigung der berufsmässigen Vertretung im Gerichtsverfahren",
+  "erlassdatum": "Vom 16. Juni 2020 (Stand 23. Mai 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gerichtsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 Abs. 2 Ziff. 7 des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015 sowie § 16 Abs. 1 des Advokaturgesetzes vom 15. Mai 2002,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 154.100",
+    "links": [
+     {
+      "label": "154.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/154.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-154.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 291.100",
+    "links": [
+     {
+      "label": "291.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/291.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-291.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

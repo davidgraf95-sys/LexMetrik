@@ -1,5 +1,43 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zu den Bundesgesetzen über die Alters- und Hinterlassenenversicherung und über die Invalidenversicherung",
+  "erlassdatum": "vom 21.09.2015 (Stand 01.06.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 61 des Bundesgesetzes über die Alters- und Hinterlassenenversicherung (AHVG) vom 20. Dezember 1946 und Art. 54 des Bundesgesetzes über die Invalidenversicherung (IVG) vom 19. Juni 1959,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 831.10",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 831.20",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -87,6 +125,15 @@
    ],
    "marginalie": [
     "Erlass des Mindestbeitrages"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 11 Abs. 2 AHVG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -164,6 +211,15 @@
    ],
    "marginalie": [
     "Revision und Arbeitgeberkontrollen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 68 AHVG und Art. 59b IVG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -175,6 +231,29 @@
    ],
    "marginalie": [
     "Haftung und Rückgriff"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 70 Abs. 1 AHVG und Art. 78 Abs. 1 ATSG (SR 830.10)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Art. 66 IVG i.V.m. Art. 78 Abs. 1 ATSG (SR 830.1) und Art. 70 Abs. 1 AHVG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Art. 70 Abs. 1 AHVG und Art. 78 Abs. 1 ATSG (SR 830.1)",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -186,6 +265,22 @@
    ],
    "marginalie": [
     "Kantonale Beschwerdeinstanz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "VRPG (bGS 143.1)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "bGS 145.31",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -197,6 +292,15 @@
    ],
    "marginalie": [
     "Kantonales Schiedsgericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 57 ff. VRPG (bGS 143.1)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

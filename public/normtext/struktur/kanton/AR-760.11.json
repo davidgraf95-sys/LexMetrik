@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Förderung des öffentlichen Verkehrs",
+  "erlassdatum": "vom 12.12.1991 (Stand 01.07.2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 17 Abs. 1 des Gesetzes vom 28. April 1991 über die Förderung des öffentlichen Verkehrs,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 760.1",
+    "links": [
+     {
+      "label": "760.1",
+      "url": "https://ar.clex.ch/data/760.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-760.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -58,7 +97,7 @@
   "10": {
    "gliederung": [],
    "marginalie": [
-    "Verteilung des Gemeindebeitrages a) Grundsatz *"
+    "Verteilung des Gemeindebeitrages a) Grundsatz"
    ]
   },
   "11": {

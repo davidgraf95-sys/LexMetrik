@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend den Vollzug des eidgenössischen Enteignungsrechts",
+  "erlassdatum": "Vom 23. Dezember 1974 (Stand 2. April 1975)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt gestützt auf Art. 15 Abs. 2 und Art. 95 Abs. 2 des Bundesgesetzes vom 20. Juni 1930 über die Enteignung (EntG) und Art. 44 Abs. 2 des Bundesgesetzes vom 24. Juni 1902 betreffend die elektrischen Schwach- und Starkstromanlagen (Elektrizitätsgesesetz, EleG) folgende Verordnung:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 711.",
+    "links": [
+     {
+      "label": "711",
+      "url": "https://db.clex.ch/link/Bund/711/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ENTG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 734.0.",
+    "links": [
+     {
+      "label": "734.0",
+      "url": "https://db.clex.ch/link/Bund/734.0/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,7 +59,16 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 2. 4. 1975.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

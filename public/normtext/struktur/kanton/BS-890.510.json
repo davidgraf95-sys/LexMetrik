@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Ausrichtung von Mietbeiträgen",
+  "erlassdatum": "Vom 24. Juni 2025 (Stand 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Ausrichtung von Mietbeiträgen (Mietbeitragsgesetz, MBG) vom 12. Februar 2025, unter Verweis auf seine Erläuterungen Nr. P250895,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 890.500",
+    "links": [
+     {
+      "label": "890.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/890.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-890.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,24 @@
    ],
    "marginalie": [
     "Höhe des Mietbeitrags und Auszahlung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 890.700",
+     "links": [
+      {
+       "label": "890.700",
+       "url": "https://www.gesetzessammlung.bs.ch/data/890.700/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-890.700"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -109,6 +166,24 @@
    ],
    "marginalie": [
     "Verhältnis zu Sozialhilfe-, Ergänzungs- und Überbrückungsleistungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 890.710",
+     "links": [
+      {
+       "label": "890.710",
+       "url": "https://www.gesetzessammlung.bs.ch/data/890.710/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-890.710"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {

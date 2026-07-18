@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement des SRK über die Anerkennung von ausländischen Ausbildungsabschlüssen",
+  "erlassdatum": "Vom 12. November 1997 (Stand 1. Januar 1998)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 5 Abs. 3 und 4 der Verordnung der Schweizerischen Sanitätsdirektorenkonferenz (SDK) über die Anerkennung von ausländischen Ausbildungsabschlüssen vom 20. November 1997 (VO) beschliesst das Zentralkomitee des Schweizerischen Roten Kreuzes (SRK) unter Genehmigungsvorbehalt der SDK:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Heute: Schweizerische Gesundheitsdirektorenkonferenz (GDK).",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 419.903.",
+    "links": [
+     {
+      "label": "419.903",
+      "url": "https://www.gesetzessammlung.bs.ch/data/419.903/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-419.903"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +47,16 @@
      "label": "I. Gegenstand und Zweck"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Sämtliche Bezeichnungen gelten sinngemäss für beide Geschlechter.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -30,6 +78,29 @@
    ],
    "marginalie": [
     "Besondere Anerkennungsvoraussetzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Bei einer Tätigkeit in Teilzeit erhöht sich die Dauer verhältnismässig.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Bei einer Tätigkeit in Teilzeit erhöht sich die Dauer verhältnismässig.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Bei einer Tätigkeit in Teilzeit erhöht sich die Dauer verhältnismässig.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -41,6 +112,22 @@
    ],
    "marginalie": [
     "Anerkennungsprüfung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Fassung gemäss Beschluss des Zentralkomitees vom 29. April 1999, genehmigt von der Schweizerischen Sanitätsdirektorenkonferenz am 20. Mai 1999.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Bei einer Tätigkeit in Teilzeit erhöht sich die Dauer verhältnismässig.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -96,6 +183,15 @@
    ],
    "marginalie": [
     "Rechtliches Gehör"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Fassung gemäss Beschluss des Zentralkomitees vom 29. April 1999, genehmigt von der Schweizerischen Sanitätsdirektorenkonferenz am 20. Mai 1999.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -107,6 +203,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Fassung gemäss Beschluss des Zentralkomitees vom 29. April 1999, genehmigt von der Schweizerischen Sanitätsdirektorenkonferenz am 20. Mai 1999.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "11": {

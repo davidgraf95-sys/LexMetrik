@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend Initiative und Referendum",
+  "erlassdatum": "Vom 16. Januar 1991 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 41 lit. c, die §§ 47–52, § 66 Abs. 1, § 91 Abs. 1 lit. g und § 116 Abs. 1 lit. b und c der Verfassung des Kantons Basel-Stadt vom 23. März 2005, auf Antrag des Regierungsrates",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -595,6 +634,29 @@
    ],
    "marginalie": [
     "Änderung und Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 154.100. Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 152.100. Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 170.100. Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "41": {
@@ -617,6 +679,15 @@
    ],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Die hier erwähnte Änderung der Verfassung ist wirksam seit 3. 6. 1991. Das vorliegende Gesetz wurde am 8. 6. 1991, mit Referendumsfrist bis 20. 7. 1991, publiziert.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17_a": {

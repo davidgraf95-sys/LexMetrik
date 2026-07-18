@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Schutz von Wohnraum",
+  "erlassdatum": "Vom 26. April 2022 (Stand 1. November 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Wohnraumförderung (Wohnraumfördergesetz; WRFG) vom 5. Juni 2013, unter Verweis auf seine Erläuterungen Nr. P220025,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 861.500.",
+    "links": [
+     {
+      "label": "861.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-861.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +60,24 @@
    ],
    "marginalie": [
     "Vollzugs- und Bewilligungsbehörden gemäss §§ 7 - 8g WRFG"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -53,7 +110,25 @@
     }
    ],
    "marginalie": [
-    "Beurteilung der überwiegenden Bedürfnisse der Wohnbevölkerung und des Kategorienverbleibs *"
+    "Beurteilung der überwiegenden Bedürfnisse der Wohnbevölkerung und des Kategorienverbleibs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -161,6 +236,24 @@
    ],
    "marginalie": [
     "Organisation der Wohnschutzkommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -175,7 +268,7 @@
     }
    ],
    "marginalie": [
-    "Aufgaben und Kompetenzbereich der Wohnschutzkommission *"
+    "Aufgaben und Kompetenzbereich der Wohnschutzkommission"
    ]
   },
   "16": {
@@ -251,6 +344,40 @@
    ],
    "marginalie": [
     "Einfacher ordentlicher Unterhalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SR 221.213.11",
+     "links": [
+      {
+       "label": "221.213.11",
+       "url": "https://db.clex.ch/link/Bund/221.213.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VMWG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -264,9 +391,7 @@
      "label": "3.4. Verfahren der Wohnschutzkommission bei Umbau, Renovation und Sanierung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [
@@ -280,7 +405,89 @@
     }
    ],
    "marginalie": [
-    "Ermittlung des maximalen monatlichen Mietzinsaufschlags *"
+    "Ermittlung des maximalen monatlichen Mietzinsaufschlags"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SR 221.213.11",
+     "links": [
+      {
+       "label": "221.213.11",
+       "url": "https://db.clex.ch/link/Bund/221.213.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VMWG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "SG 730.100",
+     "links": [
+      {
+       "label": "730.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-730.100"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SG 783.200",
+     "links": [
+      {
+       "label": "783.200",
+       "url": "https://www.gesetzessammlung.bs.ch/data/783.200/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-783.200"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -295,7 +502,41 @@
     }
    ],
    "marginalie": [
-    "Besondere Verfahrensbestimmungen bei Umbau, Renovation und Sanierung *"
+    "Besondere Verfahrensbestimmungen bei Umbau, Renovation und Sanierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "SG 783.200",
+     "links": [
+      {
+       "label": "783.200",
+       "url": "https://www.gesetzessammlung.bs.ch/data/783.200/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-783.200"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -326,6 +567,15 @@
    ],
    "marginalie": [
     "Umfassendes Bewilligungsverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "gemäss Erläuterungen ist hier § 5 WRSchV gemeint.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -341,6 +591,24 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -356,6 +624,24 @@
    ],
    "marginalie": [
     "Änderungen der maximalen Mietzinsaufschläge oder Netto-Mietzinse und Ende der Wohnungsnot während der Kontrollfrist"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -412,6 +698,24 @@
    ],
    "marginalie": [
     "Augenschein"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20_a": {
@@ -427,6 +731,24 @@
    ],
    "marginalie": [
     "Photovoltaik-Anlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SG 861.500",
+     "links": [
+      {
+       "label": "861.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-861.500"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20_b": {

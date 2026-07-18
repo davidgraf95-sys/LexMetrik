@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebäude- und Grundstückversicherung",
+  "erlassdatum": "vom 17.12.2019 (Stand 01.01.2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 40 Abs. 1 des Gesetzes vom 30. April 1995 über die Gebäude- und Grundstückversicherung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Assekuranzgesetz (bGS 862.1 )",
+    "links": [
+     {
+      "label": "862.1",
+      "url": "https://ar.clex.ch/data/862.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-862.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

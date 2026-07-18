@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Beitragsreglement der Gebäudeversicherung",
+  "erlassdatum": "Vom 17. Juni 1980 (Stand 15. Juni 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gebäudeversicherung des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 23 der Verordnung vom 14. August 1973 zum Gebäudeversicherungsgesetz,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Beitragsreglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 695.110.",
+    "links": [
+     {
+      "label": "695.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/695.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-695.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -89,7 +128,16 @@
      "label": "I."
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Genehmigt am 16. 9. 1980.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die frühe Deutschförderung",
+  "erlassdatum": "Vom 27. Februar 2024 (Stand 1. März 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 18 Abs. 2 und in Ausführung von § 9a des Gesetzes betreffend Förder- und Hilfeleistungen für Kinder und Jugendliche (Kinder- und Jugendgesetz, KJG) vom 10. Dezember 2014, unter Verweis auf seine Erläuterungen Nr. P240187,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 415.100",
+    "links": [
+     {
+      "label": "415.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/415.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-415.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

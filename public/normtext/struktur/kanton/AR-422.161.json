@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Verwaltung der Stiftung Pro Appenzell",
+  "erlassdatum": "vom 01.06.1963 (Stand 01.06.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 5 Abs. 2 des Gesetzes vom 28. April 1963 über die Errichtung der Stiftung Pro Appenzell,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 422.16",
+    "links": [
+     {
+      "label": "422.16",
+      "url": "https://ar.clex.ch/data/422.16/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-422.16"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -35,11 +74,29 @@
   },
   "9": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 142.211.1",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "10": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "5. Juni 1963 (vgl. Amtsblatt 1963, S. 364)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

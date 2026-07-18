@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Zwangsabtretung",
+  "erlassdatum": "vom 27.04.1902 (Stand 01.01.1995)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh."
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -17,7 +31,57 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Vgl. die Bestimmungen über die Enteignung in den Art. 43 ff. des Strassengesetzes (StrG; bGS 731.11 )",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "Vgl. die Art. 221–226 EG zum ZGB vom 27. April 1969 (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Vgl. die Bestimmungen über die Enteignung in den Art. 43 ff. des Strassengesetzes (StrG; bGS 731.11 )",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [
@@ -26,7 +90,33 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 3 des Eisenbahngesetzes vom 20. Dezember 1957 (SR 742.101 ) sowie das BG vom 20. Juni 1930 über die Enteignung (SR 711 )",
+     "links": [
+      {
+       "label": "742.101",
+       "url": "https://db.clex.ch/link/Bund/742.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EBG"
+       }
+      },
+      {
+       "label": "711",
+       "url": "https://db.clex.ch/link/Bund/711/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ENTG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -89,7 +179,16 @@
      "label": "II. Die Abtretung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. Art. 15 Ziff. 2 ZPO vom 24. April 1955 (aGS I/36)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "11": {
    "gliederung": [
@@ -134,7 +233,25 @@
      "label": "III. Die Entschädigung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Eingeschränkt durch Art. 21, insbes. durch Art. 53 Abs. 2 und Art. 59 Abs. 2 des G vom 30. April 1972 über die Staatsstrassen (bGS 731.11 )",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "16": {
    "gliederung": [
@@ -143,7 +260,41 @@
      "label": "IV. Das Verfahren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vgl. auch Art. 36 ff. des Strassengesetzes (bGS 731.11 ).",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Vgl. auch Art. 36 ff. des Strassengesetzes (bGS 731.11 ).",
+     "links": [
+      {
+       "label": "731.11",
+       "url": "https://ar.clex.ch/data/731.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.11"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "17": {
    "gliederung": [
@@ -242,7 +393,16 @@
      "label": "V. Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "27. April 1902",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

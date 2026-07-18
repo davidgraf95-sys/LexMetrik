@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Natur- und Landschaftsschutz",
+  "erlassdatum": "Vom 25. Januar 1995 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "im Sinne eines Gegenvorschlages zum «Initiativbegehren für einen wirksamen Naturschutz», gestützt auf Art. 24sexies Abs. 1 der Bundesverfassung vom 29. Mai 1874,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Diese Bundesverfassung ist aufgehoben. Massgebend ist jetzt die Bundesverfassung vom 18. April 1999 (SR 101 ).",
+    "links": [
+     {
+      "label": "101",
+      "url": "https://db.clex.ch/link/Bund/101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -268,7 +307,7 @@
     }
    ],
    "marginalie": [
-    "Führung im ÖREB-Kataster *"
+    "Führung im ÖREB-Kataster"
    ]
   },
   "19": {
@@ -434,6 +473,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vom Regierungsrat am 25. 7. 1995 auf den 1. 7. 1995 wirksam erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

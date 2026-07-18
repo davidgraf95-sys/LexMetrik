@@ -1,5 +1,83 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Strukturverbesserungen in der Landwirtschaft",
+  "erlassdatum": "vom 07.12.1999 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 87 ff. und Art. 178 des Bundesgesetzes vom 29. April 1998 über die Landwirtschaft, auf die Verordnung des Bundes vom 7. Dezember 1998 über die Strukturverbesserungen in der Landwirtschaft, auf die Verordnung des Bundes vom 7. Dezember 1998 über die Betriebshilfe als soziale Begleitmassnahme in der Landwirtschaft sowie auf Art. 11 ff. des kantonalen Gesetzes vom 7. Juni 1998 über die Landwirtschaft,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "LwG (SR 910.1 )",
+    "links": [
+     {
+      "label": "910.1",
+      "url": "https://db.clex.ch/link/Bund/910.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SVV (SR 913.1 )",
+    "links": [
+     {
+      "label": "913.1",
+      "url": "https://db.clex.ch/link/Bund/913.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BHV (SR 914.11 )",
+    "links": [
+     {
+      "label": "914.11",
+      "url": "https://db.clex.ch/link/Bund/914.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "bGS 920.1",
+    "links": [
+     {
+      "label": "920.1",
+      "url": "https://ar.clex.ch/data/920.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-920.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -19,6 +97,22 @@
    ],
    "marginalie": [
     "Regierungsrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 12 Abs. 2 kant. Landwirtschaftsgesetz, Art. 11 BHV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Art. 13 Abs. 1 kant. Landwirtschaftsgesetz",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -29,7 +123,16 @@
     }
    ],
    "marginalie": [
-    "Departement Bau und Volkswirtschaft *"
+    "Departement Bau und Volkswirtschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 22 SVV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -41,6 +144,22 @@
    ],
    "marginalie": [
     "Landwirtschaftsamt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 103 Abs. 1 LwG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 102 und 104 Abs. 1 und 2 LwG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -52,6 +171,15 @@
    ],
    "marginalie": [
     "Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 7 kant. Landwirtschaftsgesetz",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -74,6 +202,24 @@
    ],
    "marginalie": [
     "Geschäftsbericht, Revision"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 42 und 43 Finanzhaushaltsgesetz (bGS 612.0 )",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -85,6 +231,15 @@
    ],
    "marginalie": [
     "Auslösung von Bundesbeiträgen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 20 Abs. 1 SVV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -96,6 +251,15 @@
    ],
    "marginalie": [
     "Kantonale Beiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Art. 11 Abs. 2 kant. Landwirtschaftsgesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -107,6 +271,15 @@
    ],
    "marginalie": [
     "Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 13 Abs. 2 kant. Landwirtschaftsgesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -118,6 +291,28 @@
    ],
    "marginalie": [
     "Einsprache, Rekurs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "bGS 143.5 (heute: G über die Verwaltungsrechtspflege; VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.5",
+       "url": "https://ar.clex.ch/data/143.5/de"
+      },
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -129,6 +324,15 @@
    ],
    "marginalie": [
     "Aufgehobenes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "bGS 923.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {

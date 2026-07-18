@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Ausstellung von Ausweisen für Schweizer Staatsangehörige und von Reisedokumenten für Ausländer",
+  "erlassdatum": "vom 12.01.2010 (Stand 01.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 22. Juni 2001 über die Ausweise für Schweizer Staatsangehörige sowie die Verordnung vom 20. September 2002 über die Ausweise für Schweizer Staatsangehörige,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Ausweisgesetz (AwG; SR 143.1 )",
+    "links": [
+     {
+      "label": "143.1",
+      "url": "https://db.clex.ch/link/Bund/143.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Ausweisverordnung (VAwG; SR 143.11 )",
+    "links": [
+     {
+      "label": "143.11",
+      "url": "https://db.clex.ch/link/Bund/143.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -40,13 +88,22 @@
   "7": {
    "gliederung": [],
    "marginalie": [
-    "Ausstellung von Identitätskarten *"
+    "Ausstellung von Identitätskarten"
    ]
   },
   "8": {
    "gliederung": [],
    "marginalie": [
     "Aufhebung bisherigen Rechts und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 123.1 (lf. Nr. 814, 932)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

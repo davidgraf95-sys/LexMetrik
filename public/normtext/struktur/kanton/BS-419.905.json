@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement der GDK für die interkantonale Prüfung von Osteopathinnen und Osteopathen in der Schweiz",
+  "erlassdatum": "Vom 23. November 2006 (Stand 14. Juni 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die GDK,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 2, 4 und 5 Abs. 3 der Interkantonalen Vereinbarung über die Anerkennung von Ausbildungsabschlüssen vom 18. Februar 1993 und auf Art. 4 der Verordnung der GDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz vom 20. Mai 1999 (AVO Inland) sowie die GDK Statuten vom 13. Dezember 2003 und den Grundsatzbeschluss der GDK vom 21. November 2002,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 419.900.",
+    "links": [
+     {
+      "label": "419.900",
+      "url": "https://www.gesetzessammlung.bs.ch/data/419.900/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-419.900"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 419.901.",
+    "links": [
+     {
+      "label": "419.901",
+      "url": "https://www.gesetzessammlung.bs.ch/data/419.901/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-419.901"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -263,6 +319,15 @@
    ],
    "marginalie": [
     "Beschwerde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 173.32.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -274,6 +339,22 @@
    ],
    "marginalie": [
     "Praktizierende Osteopathinnen und Osteopathen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wortlaut gemäss Urteil des Bundesgerichts vom 6. November 2008 (2C_561/ 2007).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Art. 25 Abs. 4 aufgehoben durch Urteil des Bundesgerichts vom 6. November 2008 (2C_561/2007).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -283,9 +364,7 @@
      "label": "VIII. Abschnitt: Schluss- und Übergangsbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [

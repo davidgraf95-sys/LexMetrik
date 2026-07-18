@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung für den Religionsunterricht",
+  "erlassdatum": "Vom 24. August 2009 (Stand 13. August 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Erziehungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 77 des Schulgesetzes vom 4. April 1929, im Einvernehmen mit der Evangelisch-reformierten, der Römisch-katholischen und der Christkatholischen Kirche von Basel-Stadt, nachstehend «Kirchen» genannt,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -59,6 +98,15 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 26. 9. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

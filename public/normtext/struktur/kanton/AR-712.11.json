@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über das öffentliche Beschaffungswesen",
+  "erlassdatum": "vom 13.09.2004 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 7 Abs. 2 des Gesetzes vom 24. September 2000 über das öffentliche Beschaffungswesen,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 712.1",
+    "links": [
+     {
+      "label": "712.1",
+      "url": "https://ar.clex.ch/data/712.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-712.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +60,24 @@
    ],
    "marginalie": [
     "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Übereinkommen vom 8. Dezember 1994 über das öffentliche Beschaffungswesen (SR 0.632.231.422 ); Abkommen vom 21. Juni 1999 zwischen der europäischen Gemeinschaft und der Schweizerischen Eidgenossenschaft über bestimmte Aspekte des öff. Beschaffungswesens (SR 0.172.052.68 )",
+     "links": [
+      {
+       "label": "0.632.231.422",
+       "url": "https://db.clex.ch/link/Bund/0.632.231.422/de"
+      },
+      {
+       "label": "0.172.052.68",
+       "url": "https://db.clex.ch/link/Bund/0.172.052.68/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -32,6 +89,24 @@
    ],
    "marginalie": [
     "Gleichbehandlung und Nichtdiskriminierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BGBM (SR 943.02 )",
+     "links": [
+      {
+       "label": "943.02",
+       "url": "https://db.clex.ch/link/Bund/943.02/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BGBM"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -230,6 +305,24 @@
    ],
    "marginalie": [
     "Fristen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Übereinkommen vom 8. Dezember 1994 über das öffentliche Beschaffungswesen (SR 0.632.231.422 ); Abkommen vom 21. Juni 1999 zwischen der europäischen Gemeinschaft und der Schweizerischen Eidgenossenschaft über bestimmte Aspekte des öff. Beschaffungswesen (SR 0.172.052.68 )",
+     "links": [
+      {
+       "label": "0.632.231.422",
+       "url": "https://db.clex.ch/link/Bund/0.632.231.422/de"
+      },
+      {
+       "label": "0.172.052.68",
+       "url": "https://db.clex.ch/link/Bund/0.172.052.68/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -373,6 +466,20 @@
    ],
    "marginalie": [
     "Eröffnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "IVöB (bGS 712.2 )",
+     "links": [
+      {
+       "label": "712.2",
+       "url": "https://ar.clex.ch/data/712.2/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -472,6 +579,22 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "If. Nr. 741",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "1. Januar 2005 (RRB vom 14. September 2004; Abl. 2004, S. 825)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

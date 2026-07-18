@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den kantonalen Mindestlohn",
+  "erlassdatum": "Vom 13. Januar 2021 (Stand 1. Juli 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "im Sinne eines Gegenvorschlages zur formulierten Volksinitiative «Kein Lohn unter 23.-», gestützt auf § 14 Abs. 1 lit. c der Verfassung des Kantons Basel-Stadt vom 23. März 2005 und nach Einsichtnahme in den Ratschlag und Bericht des Regierungsrates Nr. 19.0471.02 vom 17. Dezember 2019 sowie in den Bericht der Wirtschafts- und Abgabekommission Nr. 19.0471.04 vom 7. Dezember 2020,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 111.100",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +92,15 @@
    "gliederung": [],
    "marginalie": [
     "Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "In Kraft seit 01.07.2022",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

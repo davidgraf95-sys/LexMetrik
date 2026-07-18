@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Pilotversuchsverordnung über die Qualitätssicherung des kantonalen Bedrohungsmanagements",
+  "erlassdatum": "Vom 15. August 2023 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "unter Verweis auf seine Erläuterungen Nr. P231075,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -34,13 +52,31 @@
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Dauer des Pilotversuchs [1]"
+    "Dauer des Pilotversuchs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Die §§ 6 und 7 ersetzen die ursprünglich publizierten (KB 19.08.2023) §§ 8 und 9 identischen Inhalts.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "7": {
    "gliederung": [],
    "marginalie": [
-    "Evaluation Dauer des Pilotversuchs [2]"
+    "Evaluation Dauer des Pilotversuchs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die §§ 6 und 7 ersetzen die ursprünglich publizierten (KB 19.08.2023) §§ 8 und 9 identischen Inhalts.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

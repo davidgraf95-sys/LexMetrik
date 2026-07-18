@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Waldgesetz Basel-Stadt",
+  "erlassdatum": "Vom 16. Februar 2000 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über den Wald (Waldgesetz, WaG) vom 4. Oktober 1991 und die Verordnung über den Wald (Waldverordnung, WaV) vom 30. November 1992,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 921.0.",
+    "links": [
+     {
+      "label": "921.0",
+      "url": "https://db.clex.ch/link/Bund/921.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "WAG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 921.01.",
+    "links": [
+     {
+      "label": "921.01",
+      "url": "https://db.clex.ch/link/Bund/921.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "WAV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -450,6 +506,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 1. 1. 2002.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

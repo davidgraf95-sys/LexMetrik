@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Justizreglement",
+  "erlassdatum": "vom 30.11.2010 (Fassung in Kraft getreten am 01.12.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Staatsrat des Kantons Freiburg"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Schweizerische Zivilprozessordnung vom 19. Dezember 2008 (Zivilprozessordnung, ZPO); gestützt auf die Schweizerische Strafprozessordnung vom 5. Oktober 2007 (Strafprozessordnung, StPO); gestützt auf das Justizgesetz vom 31. Mai 2010 (JG); gestützt auf das Gesetz vom 23. November 1949 über die Organisation des Vormundschaftswesens; gestützt auf das Gesetz vom 25. November 1994 über den Datenschutz (DSchG); gestützt auf das Ausführungsgesetz vom 8. Oktober 1992 zur Bundesgesetzgebung über die Hilfe an Opfer von Straftaten (AGOHG); gestützt auf das Gesetz vom 12. Dezember 2002 über den Anwaltsberuf (AnwG); auf Antrag der Sicherheits- und Justizdirektion,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -1326,6 +1344,15 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Anhang mit den Änderungen in der SGF nicht wiedergegeben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "83": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend das Halten von Hunden",
+  "erlassdatum": "Vom 10. Juli 2007 (Stand 1. April 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 22 des Gesetzes betreffend das Halten von Hunden (Hundegesetz) vom 14. Dezember 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 365.100.",
+    "links": [
+     {
+      "label": "365.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/365.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-365.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,15 @@
    ],
    "marginalie": [
     "Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 1 Abs. 2: Umbenennung «Bereich Gesundheitsschutz» in «Kantonales Veterinäramt» gemäss RRB vom 22. 12. 2015.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -64,7 +112,7 @@
     }
    ],
    "marginalie": [
-    "Kennzeichnung mit Mikrochip *"
+    "Kennzeichnung mit Mikrochip"
    ]
   },
   "7": {
@@ -338,9 +386,7 @@
      "label": "V. Verschiedene Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -362,6 +408,15 @@
    ],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -373,6 +428,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 18. 7. 2007.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5_a": {

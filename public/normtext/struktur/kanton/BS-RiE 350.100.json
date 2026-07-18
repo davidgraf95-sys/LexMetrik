@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend die Vergabe von Beiträgen im Bereich Gesundheit und Soziales",
+  "erlassdatum": "Vom 20. November 2012 (Stand 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 24 Abs. 3 Bst. e) der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 111.100.",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -43,6 +78,15 @@
    ],
    "marginalie": [
     "Organisationen mit Sitz in Riehen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 4: Paragraphennummerierung redaktionell berichtigt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -54,6 +98,15 @@
    ],
    "marginalie": [
     "Organisationen mit Sitz in Basel oder anderen Kantonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 5 Abs. 1: Paragraphennummerierung redaktionell berichtigt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über den öffentlichen Verkehr",
+  "erlassdatum": "Vom 21. Juni 2011 (Stand 1. Juli 2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 13a des Gesetzes über den öffentlichen Verkehr vom 10. März 2004,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 951.100.",
+    "links": [
+     {
+      "label": "951.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/951.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-951.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

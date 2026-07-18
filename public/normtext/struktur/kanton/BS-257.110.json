@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Durchführung des polizeilichen Ermittlungsverfahrens bei Vergehen und Übertretungen",
+  "erlassdatum": "Vom 21. Dezember 2010 (Stand 18. Dezember 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 14 Abs. 4 und Art. 17 Abs. 1 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007 sowie §§ 7, 12, 19 und 28 des Gesetzes über die Einführung der Schweizerischen Strafprozessordnung (EG StPO) vom 13. Oktober 2010,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 312.0.",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 257.100.",
+    "links": [
+     {
+      "label": "257.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/257.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-257.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,6 +67,20 @@
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit zur Durchführung des polizeilichen Ermittlungsverfahrens bei Übertretungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Justiz- und Sicherheitsdepartement: Weisung über die Zuständigkeit betreffend die Ermittlungsverfahren bei Übertretungen (Reglement) vom 1. 10. 2021. Diese Weisung kann eingesehen werden unter: https://media.bs.ch/original_file/27d2ff2b96ef5d25a5d7764ef827602388e210e2/20211001-weisungen-jsd-zustaendigkeit-ermittlungsverfahren.pdf",
+     "links": [
+      {
+       "label": "https://media.bs.ch/original_file/27d2ff2b96ef5d25a5d7764ef827602388e210e2/20211001-weisungen-jsd-zustaendigkeit-ermittlungsverfahren.pdf",
+       "url": "https://media.bs.ch/original_file/27d2ff2b96ef5d25a5d7764ef827602388e210e2/20211001-weisungen-jsd-zustaendigkeit-ermittlungsverfahren.pdf"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {

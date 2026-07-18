@@ -1,5 +1,48 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über Strassenreinigungsbeiträge",
+  "erlassdatum": "Vom 18. Dezember 1973 (Stand 1. Januar 1994)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf das Gesetz über Strassenreinigungsbeiträge vom 8. November 1973 folgende Verordnung:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Ingress: Titel des Gesetzes geändert durch GRB vom 16. 12. 1993 (wirksam seit 1. 1. 1994",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 727.500.",
+    "links": [
+     {
+      "label": "727.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/727.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-727.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

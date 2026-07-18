@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Zivilschutz",
+  "erlassdatum": "Vom 22. August 2023 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 3 Abs. 2, 4 Abs. 2, 5 Abs. 1, 6 Abs. 1, 7 Abs. 1 und 22 Abs. 1 des Gesetzes über den Zivilschutz und den Kulturgüterschutz (Zivil- und Kulturgüterschutzgesetz, ZKG) vom 21. September 2022, unter Verweis auf seine Erläuterungen Nr. P230497,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 576.100",
+    "links": [
+     {
+      "label": "576.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/576.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-576.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

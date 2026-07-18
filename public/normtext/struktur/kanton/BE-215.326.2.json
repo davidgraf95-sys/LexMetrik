@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Handänderungssteuergesetz",
+  "erlassdatum": "vom 18.03.1992 (Stand 01.04.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Bern,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -166,7 +184,16 @@
     }
    ],
    "marginalie": [
-    "Ausnahmen von der Steuerpflicht *"
+    "Ausnahmen von der Steuerpflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "BSG 170.11",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -244,6 +271,15 @@
    ],
    "marginalie": [
     "3. Sicherung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BSG 211.1",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -254,7 +290,7 @@
     }
    ],
    "marginalie": [
-    "Erlass und Stundung 1. Durch die Direktion für Inneres und Justiz *"
+    "Erlass und Stundung 1. Durch die Direktion für Inneres und Justiz"
    ]
   },
   "24": {
@@ -276,7 +312,7 @@
     }
    ],
    "marginalie": [
-    "4. Gemeinsame Bestimmungen *"
+    "4. Gemeinsame Bestimmungen"
    ]
   },
   "26": {
@@ -288,6 +324,20 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "BSG 155.21",
+     "links": [
+      {
+       "label": "155.21",
+       "url": "https://www.belex.sites.be.ch/data/155.21/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -308,7 +358,21 @@
      "label": "7 Widerhandlungen und Nachsteuer"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "BSG 661.11",
+     "links": [
+      {
+       "label": "661.11",
+       "url": "https://www.belex.sites.be.ch/data/661.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "29": {
    "gliederung": [
@@ -341,6 +405,22 @@
    ],
    "marginalie": [
     "Änderung von Erlassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "BSG 728.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Aufgehoben durch BAG 03–119 Änderung des D über die Wohnbau- und Eigentumsförderung, BSG 854.17",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -404,6 +484,20 @@
    ],
    "marginalie": [
     "Bearbeitung von Daten aus zentralen Personendatensammlungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "BSG 152.05",
+     "links": [
+      {
+       "label": "152.05",
+       "url": "https://www.belex.sites.be.ch/data/152.05/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17_a": {
@@ -447,7 +541,7 @@
     }
    ],
    "marginalie": [
-    "3. Durch die Wirtschafts-, Energie- und Umweltdirektion *"
+    "3. Durch die Wirtschafts-, Energie- und Umweltdirektion"
    ]
   },
   "6_a": {
@@ -462,7 +556,7 @@
     }
    ],
    "marginalie": [
-    "1a. Schlüsselfertige Baute oder Stockwerkeinheit, Verbindung von Kauf- und Werkvertrag *"
+    "1a. Schlüsselfertige Baute oder Stockwerkeinheit, Verbindung von Kauf- und Werkvertrag"
    ]
   }
  }

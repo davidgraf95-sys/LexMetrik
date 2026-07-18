@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Zivilstandsverordnung",
+  "erlassdatum": "Vom 5. Dezember 2017 (Stand 8. September 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die eidgenössische Zivilstandsverordnung (ZStV) vom 28. April 2004 sowie auf §§ 6 Abs. 1, 10 und 15 des Gesetzes betreffend die Einführung des Schweizerischen Zivilgesetzbuches vom 27. April 1911, unter Verweis auf seine Erläuterungen Nr. P171866,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 211.112.2.",
+    "links": [
+     {
+      "label": "211.112.2",
+      "url": "https://db.clex.ch/link/Bund/211.112.2/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZSTV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 211.100.",
+    "links": [
+     {
+      "label": "211.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Verordnung über den Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen",
+  "erlassdatum": "Vom 22. Mai 2018 (Stand 12. Februar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 17 der Verordnung über den Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen (ÖREBKV) vom 2. September 2009 und § 17 des Geoinformationsgesetzes (KGeoIG) vom 16. November 2011, unter Verweis auf seine Erläuterungen Nr. P161534,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 510.622.4",
+    "links": [
+     {
+      "label": "510.622.4",
+      "url": "https://db.clex.ch/link/Bund/510.622.4/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 214.300",
+    "links": [
+     {
+      "label": "214.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/214.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-214.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,12 +75,35 @@
    "gliederung": [],
    "marginalie": [
     "Katasterverantwortliche Stelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Diese Weisung kann auf der Website des Grundbuch- und Vermessungsamts eingesehen werden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
    "gliederung": [],
    "marginalie": [
     "Zuständige Fachstelle und Katasterbearbeitung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 510.62",
+     "links": [
+      {
+       "label": "510.62",
+       "url": "https://db.clex.ch/link/Bund/510.62/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

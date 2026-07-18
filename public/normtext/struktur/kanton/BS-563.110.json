@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gastgewerbegesetz",
+  "erlassdatum": "Vom 12. Juli 2005 (Stand 6. Februar 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 44 des Gastgewerbegesetzes vom 15. September 2004",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 563.100.",
+    "links": [
+     {
+      "label": "563.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/563.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-563.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -96,9 +135,7 @@
      "label": "II. Betriebsarten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -152,7 +189,7 @@
     }
    ],
    "marginalie": [
-    "Anerkennung anderer Fähigkeitsausweise und gleichwertiger Fähigkeitsnachweise *"
+    "Anerkennung anderer Fähigkeitsausweise und gleichwertiger Fähigkeitsnachweise"
    ]
   },
   "15": {
@@ -230,6 +267,31 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 782.100",
+     "links": [
+      {
+       "label": "782.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/782.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-782.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 21: Die Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -241,6 +303,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Wirksam seit 17. 7. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

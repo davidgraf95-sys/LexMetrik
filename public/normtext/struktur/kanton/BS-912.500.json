@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Fischerei im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 13. Dezember 1978 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag des Regierungsrates folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +31,15 @@
    "gliederung": [],
    "marginalie": [
     "Erlass weiterer Vorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 3: Der grenzüberschreitenden Fischerei in der Birs auf dem Abschnitt Häfeliwuhr bis Birsmündung mit RRB vom 16. 10. 2001 (wirksam seit 1. 1. 2002) zugestimmt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -35,6 +58,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Genehmigt am 5. 3. 1979.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

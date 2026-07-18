@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Weisung betreffend Ausrichtung von Sitzungsgeldern",
+  "erlassdatum": "Vom 5. Februar 2002 (Stand 11. Juli 2004)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Würdigung und Anerkennung der von den Mitgliedern der regierungsrätlichen Kommissionen geleisteten Beiträge zur Entwicklung von Staat und Gesellschaft, im Bewusstsein, dass die Mitarbeit in Kommissionen auf dem Prinzip der Ehrenamtlichkeit beruht, im Bestreben, allfällige in der Kommissionsarbeit begründete finanzielle Opfer der Kommissionsmitglieder zu minimieren,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Weisung:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +47,15 @@
    "gliederung": [],
    "marginalie": [
     "Grundansätze für Sitzungsgelder"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Softwarebedingte redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -87,6 +114,15 @@
    "gliederung": [],
    "marginalie": [
     "Übergangs- und Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 16. 2. 2002.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

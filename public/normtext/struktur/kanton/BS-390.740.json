@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag betreffend die Kremation von Leichen aus der Gemeinde Dornach im Krematorium der Stadt Basel zwischen dem Kanton Basel-Stadt, vertreten durch das Sanitätsdepartement, und der Gemeinde Dornach (Kanton Solothurn), vertreten durch ihren Gemeinderat",
+  "erlassdatum": "Vom 29. Juli 1974 (Stand 1. April 1992)"
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,11 +27,29 @@
   },
   "6": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Mit RRB vom 8. 2. 1994 ist die Zuständigkeit im Bereich Friedhof- und Bestattungswesen vom Sanitäts- aufs Baudepartement übertragen worden.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "7": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 390.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "8": {
    "gliederung": [],
@@ -35,7 +57,23 @@
   },
   "9": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 390.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SG 390.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "10": {
    "gliederung": [],
@@ -43,7 +81,16 @@
   },
   "11": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Mit RRB vom 8. 2. 1994 ist die Zuständigkeit im Bereich Friedhof- und Bestattungswesen vom Sanitäts- aufs Baudepartement übertragen worden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

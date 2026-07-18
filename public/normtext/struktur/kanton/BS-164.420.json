@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Ausrichtung von Spesen und Entschädigungen an die Mitarbeitenden des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 27. Juni 1995 (Stand 26. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +46,15 @@
    ],
    "marginalie": [
     "Gliederung der Spesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Softwarebedingte, redaktionelle Einfügungen von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -46,7 +69,7 @@
     }
    ],
    "marginalie": [
-    "Verkehrsmittel *"
+    "Verkehrsmittel"
    ]
   },
   "5": {
@@ -61,7 +84,7 @@
     }
    ],
    "marginalie": [
-    "Autoentschädigung *"
+    "Autoentschädigung"
    ]
   },
   "6": {
@@ -75,7 +98,16 @@
      "label": "A. Reise- und Transportspesen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "7": {
    "gliederung": [
@@ -115,7 +147,7 @@
     }
    ],
    "marginalie": [
-    "Dienstfahrten mit Motorrad-, Moped- und Fahrrad *"
+    "Dienstfahrten mit Motorrad-, Moped- und Fahrrad"
    ]
   },
   "10": {
@@ -129,9 +161,7 @@
      "label": "A. Reise- und Transportspesen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "11": {
    "gliederung": [
@@ -145,7 +175,7 @@
     }
    ],
    "marginalie": [
-    "Bahnspesen *"
+    "Bahnspesen"
    ]
   },
   "12": {
@@ -173,7 +203,7 @@
     }
    ],
    "marginalie": [
-    "Dienstfahrten mit Tram und Bus *"
+    "Dienstfahrten mit Tram und Bus"
    ]
   },
   "14": {
@@ -202,9 +232,7 @@
      "label": "C. Übrige Spesen und Kostenbeiträge"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [
@@ -234,6 +262,15 @@
    ],
    "marginalie": [
     "Kostenbeiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {

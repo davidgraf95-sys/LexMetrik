@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Volksschule",
+  "erlassdatum": "vom 27.06.2023 (Stand 01.08.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 69 Abs. 1 des Gesetzes über die Volksschule vom 27. März 2023,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Volksschulgesetz (VSG; bGS 412.0 )",
+    "links": [
+     {
+      "label": "412.0",
+      "url": "https://ar.clex.ch/data/412.0/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -59,6 +94,32 @@
    ],
    "marginalie": [
     "Kantonaler Schulkostenbeitrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. Art. 23 und 24 VSG (bGS 412.0 )",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Vgl. Art. 25 Abs. 3 VSG (bGS 412.0 )",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -119,6 +180,20 @@
    ],
    "marginalie": [
     "Schulferien und unterrichtsfreie Halbtage"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 19 VSG (bGS 412.0 )",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -194,6 +269,20 @@
    ],
    "marginalie": [
     "Förderung besonderer Begabungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. Interkantonale Vereinbarung für Schulen mit spezifisch-strukturierten Angeboten für Hochbegabte (bGS 411.10 )",
+     "links": [
+      {
+       "label": "411.10",
+       "url": "https://ar.clex.ch/data/411.10/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -284,6 +373,20 @@
    ],
    "marginalie": [
     "Disziplinarische Massnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 412.0",
+     "links": [
+      {
+       "label": "bGS 412.0",
+       "url": "https://ar.clex.ch/data/bGS%20412.0/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -299,6 +402,20 @@
    ],
    "marginalie": [
     "Mitwirkung der Erziehungsberechtigten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vgl. Art. 2 VSG (bGS 412.0 )",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -314,6 +431,20 @@
    ],
    "marginalie": [
     "Sanktionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "bGS 412.0",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -359,6 +490,20 @@
    ],
    "marginalie": [
     "Aufteilung der Arbeitszeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Vgl. Art. 45 Abs. 1 VSG (bGS 412.0 )",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -569,6 +714,20 @@
    ],
    "marginalie": [
     "Betriebsbewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Vgl. Art. 18 Abs. 1 VSG (bGS 412.0 )",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -629,6 +788,20 @@
    ],
    "marginalie": [
     "Bewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Vgl. Art. 18 Abs. 1 VSG (bGS 412.0 )",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "43": {
@@ -674,6 +847,20 @@
    ],
    "marginalie": [
     "Zusätzliche Förderung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "bGS 412.0",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "46": {
@@ -713,6 +900,20 @@
    ],
    "marginalie": [
     "Frühe Bildung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Vgl. Art. 2 VSG (bGS 412.0 )",
+     "links": [
+      {
+       "label": "412.0",
+       "url": "https://ar.clex.ch/data/412.0/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "49": {

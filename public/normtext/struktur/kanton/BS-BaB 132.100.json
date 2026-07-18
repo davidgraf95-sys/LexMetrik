@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel",
+  "erlassdatum": "Vom 8. Dezember 1992 (Stand 1. Oktober 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgergemeinderat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt gemäss § 9 Ziff. 6 in Verbindung mit Ziff. 8, § 10 und § 11 des Gemeindegesetzes vom 17. Oktober 1984 folgende Ordnung über die politischen Rechte in der Bürgergemeinde der Stadt Basel:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -57,9 +92,7 @@
      "label": "1.II. Wahl- und Stimmrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -463,7 +496,7 @@
     }
    ],
    "marginalie": [
-    "Inhaltliche Erfordernisse und Unterzeichnung der Wahlvorschläge *"
+    "Inhaltliche Erfordernisse und Unterzeichnung der Wahlvorschläge"
    ]
   },
   "32": {
@@ -508,7 +541,7 @@
     }
    ],
    "marginalie": [
-    "Vertretung der Wahlvorschläge *"
+    "Vertretung der Wahlvorschläge"
    ]
   },
   "35": {
@@ -848,7 +881,7 @@
     }
    ],
    "marginalie": [
-    "Validierung *"
+    "Validierung"
    ]
   },
   "59": {
@@ -859,7 +892,7 @@
     }
    ],
    "marginalie": [
-    "Beschwerden *"
+    "Beschwerden"
    ]
   },
   "60": {
@@ -881,7 +914,7 @@
     }
    ],
    "marginalie": [
-    "Ungültigkeit *"
+    "Ungültigkeit"
    ]
   },
   "62": {
@@ -892,7 +925,7 @@
     }
    ],
    "marginalie": [
-    "Publikation der Beschwerdeentscheide *"
+    "Publikation der Beschwerdeentscheide"
    ]
   },
   "63": {
@@ -1252,6 +1285,43 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "BaB 132.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "BaB 111.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "BaB 152.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "BaB 152.110.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "BaB 132.200.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "88": {
@@ -1263,6 +1333,15 @@
    ],
    "marginalie": [
     "Wirksamwerden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Wirksam seit 13. 2. 1993.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11_a": {

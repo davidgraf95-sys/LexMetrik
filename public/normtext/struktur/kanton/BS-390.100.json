@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Bestattungsgesetz",
+  "erlassdatum": "Vom 11. März 2020 (Stand 1. April 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrats Nr. 13.0953.01 vom 27. August 2019 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 13.0953.02 vom 12. Februar 2020,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

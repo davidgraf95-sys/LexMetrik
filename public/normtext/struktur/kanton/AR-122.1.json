@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Registergesetz",
+  "erlassdatum": "vom 29.10.2018 (Stand 01.11.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 74 Abs. 2 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 111.1",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,20 @@
    ],
    "marginalie": [
     "Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Registerharmonisierungsgesetz (RHG; SR 431.02 )",
+     "links": [
+      {
+       "label": "431.02",
+       "url": "https://db.clex.ch/link/Bund/431.02/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -35,7 +88,21 @@
     }
    ],
    "marginalie": [
-    "Hauptwohnsitz (Niederlassungsgemeinde) [3]"
+    "Hauptwohnsitz (Niederlassungsgemeinde)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 3 lit. b RHG",
+     "links": [
+      {
+       "label": "Art. 3 lit. b RHG",
+       "url": "https://db.clex.ch/link/Bund/431.02/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "4": {
@@ -50,7 +117,21 @@
     }
    ],
    "marginalie": [
-    "Nebenwohnsitz (Aufenthaltsgemeinde) [4]"
+    "Nebenwohnsitz (Aufenthaltsgemeinde)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 3 lit. c RHG",
+     "links": [
+      {
+       "label": "Art. 3 lit. c RHG",
+       "url": "https://db.clex.ch/link/Bund/431.02/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "5": {
@@ -171,6 +252,24 @@
    ],
    "marginalie": [
     "Stimmregister"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. Art. 5 des Gesetzes über die politischen Rechte (bGS 131.12 )",
+     "links": [
+      {
+       "label": "131.12",
+       "url": "https://ar.clex.ch/data/131.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-131.12"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -224,6 +323,40 @@
    ],
    "marginalie": [
     "Datenschutz und Archivierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 146.1",
+     "links": [
+      {
+       "label": "146.1",
+       "url": "https://ar.clex.ch/data/146.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-146.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Art. 50e ff. des Bundesgesetzes über die Alters- und Hinterlassenenversicherung (AHVG; SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {

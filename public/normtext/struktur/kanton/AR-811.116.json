@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Beruf der Hebamme",
+  "erlassdatum": "vom 08.03.1994 (Stand 08.03.1994)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 51 der Verordnung vom 8. Dezember 1986 zum Gesundheitsgesetz,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 811.11",
+    "links": [
+     {
+      "label": "811.11",
+      "url": "https://ar.clex.ch/data/811.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +92,22 @@
    "gliederung": [],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 811.116 (aGS II/249)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "bGS 811.116.1 (aGS IV/473)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

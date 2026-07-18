@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz über die in die Schweiz entsandten Arbeitnehmerinnen und Arbeitnehmer",
+  "erlassdatum": "Vom 2. Dezember 2003 (Stand 28. März 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "beschliesst gestützt auf das Bundesgesetz über die in die Schweiz entsandten Arbeitnehmerinnen und Arbeitnehmer vom 8. Oktober 1999, Art. 360a ff. Obligationenrecht vom 30. März 1911 und die Verordnung über die in die Schweiz entsandten Arbeitnehmerinnen und Arbeitnehmer (EntsV) vom 21. Mai 2003 folgende Verordnung:",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 823.20.",
+    "links": [
+     {
+      "label": "823.20",
+      "url": "https://db.clex.ch/link/Bund/823.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ENTSG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 220.",
+    "links": [
+     {
+      "label": "220",
+      "url": "https://db.clex.ch/link/Bund/220/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "OR"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 823.201.",
+    "links": [
+     {
+      "label": "823.201",
+      "url": "https://db.clex.ch/link/Bund/823.201/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -50,7 +115,16 @@
      "label": "I. Entsandte Arbeitnehmerinnen und Arbeitnehmer"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 5 Abs. 3: Jetziger Titel: Gesetz über die Verfassungs- und Verwaltungsrechtspflege (VPRG).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [
@@ -114,7 +188,23 @@
      "label": "III. Änderung bisherigen Rechts, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 11: Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Publiziert am 10. 12. 2003.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4 a": {
    "gliederung": [

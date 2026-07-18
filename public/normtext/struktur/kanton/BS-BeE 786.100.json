@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung der Abfallbehandlung in der Gemeinde Bettingen",
+  "erlassdatum": "Vom 8. Dezember 1992 (Stand 8. Juli 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gemeindeversammlung der Einwohnergemeinde Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 des Gemeindegesetzes des Kantons Basel-Stadt vom 17. Oktober 1984 und § 12 der Gemeindeordnung der Einwohnergemeinde Bettingen vom 26. April 2016,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 170.100",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BeE 111.100",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -52,9 +104,7 @@
      "label": "I. Allgemeines"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "6": {
    "gliederung": [
@@ -289,7 +339,7 @@
     }
    ],
    "marginalie": [
-    "Gebühren *"
+    "Gebühren"
    ]
   },
   "24": {
@@ -319,7 +369,16 @@
      "label": "VIII. Inkrafttreten, Genehmigungsvorbehalt, Publikation"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 1. 7. 1993.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "27": {
    "gliederung": [

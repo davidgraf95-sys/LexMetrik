@@ -1,10 +1,109 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Bau- und Planungsgesetz",
+  "erlassdatum": "Vom 17. November 1999 (Stand 1. November 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 22. Juni 1979 über die Raumplanung, das Wohnbau- und Eigentumsförderungsgesetz vom 4. Oktober 1974, das Bundesgesetz über den Umweltschutz vom 7. Oktober 1983 und ihre Ausführungserlasse, auf Antrag seiner Kommission für Raumplanungsfragen,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 700.",
+    "links": [
+     {
+      "label": "700",
+      "url": "https://db.clex.ch/link/Bund/700/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "RPG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 843.",
+    "links": [
+     {
+      "label": "843",
+      "url": "https://db.clex.ch/link/Bund/843/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 814.01.",
+    "links": [
+     {
+      "label": "814.01",
+      "url": "https://db.clex.ch/link/Bund/814.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "USG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Ratschlag und Entwurf zu einem Baugesetz und Bericht des RR zu 5 Anzügen und zur Initiative für betagten- und behindertenfreundliches Bauen vom 7. November 1995/BD Drucksache Nr. 8637, Bericht GRK dazu vom 1. Sept. 1999 Nr. 8940. Ratschlag Nr. 9230 zur Änderung des Bau- und Planungsetzes, beschlossen am 20.1.2005.",
+    "links": [
+     {
+      "label": "Nr. 8637",
+      "url": "https://dls.staatsarchiv.bs.ch/records/1388524/2399861/preview?context=%2Frecords%2F1388524"
+     },
+     {
+      "label": "Nr. 8940",
+      "url": "https://dls.staatsarchiv.bs.ch/records/1388831"
+     },
+     {
+      "label": "Nr. 9230",
+      "url": "https://grosserrat.bs.ch/dokumente/100125/000000125196.pdf"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -164,9 +263,7 @@
      "label": "A.IV. Bruttogeschossfläche"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -951,7 +1048,7 @@
     }
    ],
    "marginalie": [
-    "a) Allgemeine Bestimmungen *"
+    "a) Allgemeine Bestimmungen"
    ]
   },
   "41": {
@@ -1061,9 +1158,7 @@
      "label": "4.2. Gewässer"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "46": {
    "gliederung": [
@@ -1700,9 +1795,7 @@
      "label": "3.VI.6.b) Autos"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "75": {
    "gliederung": [
@@ -2260,9 +2353,7 @@
      "label": "3.A.III. Leitungspläne"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "101": {
    "gliederung": [
@@ -2287,9 +2378,7 @@
      "label": "3.A.IV. Bebauungspläne"
     }
    ],
-   "marginalie": [
-    "*"
-   ]
+   "marginalie": []
   },
   "102": {
    "gliederung": [
@@ -4105,7 +4194,23 @@
      "label": "I.1. Änderung altrechtlicher Vorschriften und Pläne"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 730.150, Nr. 82a.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SG 730.150, Nr. 69.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "178": {
    "gliederung": [
@@ -4274,7 +4379,16 @@
      "label": "II. Aufgehobene Erlasse"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Wirksam seit 1. 1. 2001.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "120_a": {
    "gliederung": [

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Basler Kantonalbank",
+  "erlassdatum": "Vom 9. Dezember 2015 (Stand 11. Juli 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 13.0287.01 vom 14. Oktober 2013 sowie in die Berichte der Finanzkommission Nr. 13.0287.02 vom 23. September 2015 und Nr. 13.0287.03 vom 10. November 2015,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -53,7 +71,7 @@
     }
    ],
    "marginalie": [
-    "Tochtergesellschaften, kontrollierte Unternehmen, Beteiligungen und Konzernführung *"
+    "Tochtergesellschaften, kontrollierte Unternehmen, Beteiligungen und Konzernführung"
    ]
   },
   "6": {
@@ -285,6 +303,29 @@
    ],
    "marginalie": [
     "Bankrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Die Änderung anderer Erlasse wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "Angenommen in der Volksabstimmung vom 5. 6. 2016.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Wirksam seit 6. 6. 2016.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14_a": {

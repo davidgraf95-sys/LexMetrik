@@ -1,5 +1,32 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Regionales Schulabkommen über die gegenseitige Aufnahme von Auszubildenden und Ausrichtung von Beiträgen",
+  "erlassdatum": "Vom 23. November 2007 (Stand 8. August 2010)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Zwischen den Kantonen Aargau, Basel-Landschaft, Basel-Stadt, Bern, Freiburg, Luzern, Solothurn, Wallis und Zürich, nachfolgend Abkommenskantone genannt, wird folgendes Abkommen getroffen:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Kanton Jura per Schuljahr 2010/2011 beigetreten. Dieser Beitritt vom Kanton Basel-Stadt genehmigt durch GRB vom 23. 6. 2010 (wirksam seit 8. 8. 2010; Geschäftsnr. 10.0707 ).",
+    "links": [
+     {
+      "label": "10.0707",
+      "url": "http://www.grosserrat.bs.ch/?gnr=10.0707"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -65,6 +92,20 @@
    ],
    "marginalie": [
     "Liste der beitragsberechtigten Schulen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 6. Abs. 1: Die jeweils aktuellen Listen zum Anhang II sind auf der Website des NW EDK unter http://nwedk.d-edk.ch/rsa-listen-1516-0 zu finden.",
+     "links": [
+      {
+       "label": "http://nwedk.d-edk.ch/rsa-listen-1516-0",
+       "url": "http://nwedk.d-edk.ch/rsa-listen-1516-0"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -186,6 +227,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 17 Abs. 1: Von der Konferenz auf den 1. 8. 2009 wirksam erklärt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {

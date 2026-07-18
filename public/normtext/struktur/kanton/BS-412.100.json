@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung zwischen dem Kanton Basel-Stadt und den Gemeinden Bettingen und Riehen betreffend die kommunale Primarstufe",
+  "erlassdatum": "Vom 23. Februar 2016 (Stand 1. August 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "In Bezug auf die kommunale Trägerschaft der kommunalen Primarstufe, nachstehend Gemeindeschulen genannt, vereinbaren der Kanton Basel-Stadt, nachstehend Kanton genannt, vertreten durch den Regierungsrat, und die Einwohnergemeinde Bettingen und die Einwohnergemeinde Riehen, nachstehend Gemeinden genannt, beide vertreten durch den Gemeinderat, handelnd mit Ermächtigung der Gemeindeversammlung Bettingen bzw. durch den Einwohnerrat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 2a Abs. 2, 62 Abs. 4 und 145a Abs. 2 des Schulgesetzes des Kantons Basel-Stadt vom 4. April 1929, was folgt:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -173,6 +208,15 @@
    ],
    "marginalie": [
     "Beilegung von Streitigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 272.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {

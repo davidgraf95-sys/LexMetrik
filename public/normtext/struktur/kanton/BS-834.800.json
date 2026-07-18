@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz über die Unfallversicherung (UVG)",
+  "erlassdatum": "Vom 31. Juli 1990 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 47, 57, 80, 84, 86 und 106f. des UVG vom 20. März 1981 sowie auf § 2 des Organisationsgesetzes vom 22. April 1976,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 832.20.",
+    "links": [
+     {
+      "label": "832.20",
+      "url": "https://db.clex.ch/link/Bund/832.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "UVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +73,15 @@
    "gliederung": [],
    "marginalie": [
     "Allgemeiner Vollzug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 3: Heutige Bezeichnung «Amt für Wirtschaft und Arbeit (AWA)» eingeführt durch RRB vom 4. 11. 2003 (wirksam seit 1. 1.2004). Ursprüngliche Bezeichnung: «Gewerbe-Inspektorat». Dieser Name geändert durch RRB vom 13. 1. 1998 in «Kantonales Amt für Industrie,Gewerbe und Arbeit (KIGA)».",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -53,6 +118,15 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 8. 8. 1990.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

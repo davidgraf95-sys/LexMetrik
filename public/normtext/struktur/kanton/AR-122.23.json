@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren bei der Zuteilung ausländischer Arbeitskräfte",
+  "erlassdatum": "vom 24.01.1995 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 2 Abs. 1 und 4 sowie Art. 12 Abs. 2 lit. 1 der Verordnung vom 20. Mai 1987 über die Gebühren zum Bundesgesetz über Aufenthalt und Niederlassung der Ausländer",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 142.241",
+    "links": [
+     {
+      "label": "142.241",
+      "url": "https://db.clex.ch/link/Bund/142.241/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,6 +58,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 122.23 (lf. Nr. 38)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

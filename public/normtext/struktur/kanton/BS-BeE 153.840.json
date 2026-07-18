@@ -1,5 +1,91 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend die Erhebung von Verwaltungsgebühren",
+  "erlassdatum": "Vom 15. Juni 2020 (Stand 26. Dezember 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Bettingen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Verfassung des Kantons Basel-Stadt vom 23. März 2005, § 1 Abs. 1 des Gesetzes über die Verwaltungsgebühren vom 9. März 1972, § 15 Abs. 3 des Gesetzes über Niederlassung und Aufenthalt (NAG) vom 11. Januar 2017 und die Gemeindeordnung der Einwohnergemeinde Bettingen vom 26. April 2016,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 153.800",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 122.200",
+    "links": [
+     {
+      "label": "122.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/122.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-122.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BeE 111.100",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -65,6 +151,24 @@
    ],
    "marginalie": [
     "Besondere Gebühren der Gemeindeverwaltung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 724.910",
+     "links": [
+      {
+       "label": "724.910",
+       "url": "https://www.gesetzessammlung.bs.ch/data/724.910/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-724.910"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -76,6 +180,24 @@
    ],
    "marginalie": [
     "Gebührenzuschlag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SG 519.400",
+     "links": [
+      {
+       "label": "519.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/519.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-519.400"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

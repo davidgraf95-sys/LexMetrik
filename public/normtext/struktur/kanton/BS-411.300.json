@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Volksschulleitung",
+  "erlassdatum": "Vom 26. Juni 2012 (Stand 11. August 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 74 Abs. 2 lit. n des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrats,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -31,7 +70,7 @@
     }
    ],
    "marginalie": [
-    "Leitung der Konferenzen der Volksschulleitung und der Gesamtkonferenz der Schulleitungen *"
+    "Leitung der Konferenzen der Volksschulleitung und der Gesamtkonferenz der Schulleitungen"
    ]
   },
   "4": {
@@ -171,9 +210,7 @@
      "label": "IV. Die Volksschulleitungsmitglieder mit Personalverantwortung für Schulleitungen und die zuständige Stelle der Gemeinden"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [

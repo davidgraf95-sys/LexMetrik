@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Tierschutz",
+  "erlassdatum": "Vom 7. Februar 2012 (Stand 1. April 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 42 des Tierschutzgesetzes (TSchG) vom 16. Dezember 2005 und § 19 des Übertretungsstrafgesetzes (ÜStG) vom 13. Februar 2019,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 455",
+    "links": [
+     {
+      "label": "455",
+      "url": "https://db.clex.ch/link/Bund/455/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 253.100",
+    "links": [
+     {
+      "label": "253.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/253.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-253.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +106,15 @@
    ],
    "marginalie": [
     "Tierversuchskommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 5 Abs. 4: Reglement für die gemeinsame Kommission für Tierversuche der Kantone Basel-Stadt, Basel-Landschaft und Aargau (Reglement Tierversuchskommission) vom 19. 10. 2012 ( KtBl: 2012 II 1931).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -131,6 +192,15 @@
    ],
    "marginalie": [
     "Meldepflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Wirksam seit 12. 2. 2012.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

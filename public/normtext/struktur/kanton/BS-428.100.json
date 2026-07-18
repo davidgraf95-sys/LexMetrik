@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen den Kantonen Aargau, Basel-Landschaft, Basel-Stadt und Solothurn über die Fachhochschule Nordwestschweiz (FHNW)",
+  "erlassdatum": "Vom 9. November 2004 (Stand 1. Januar 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kantone Aargau, Basel-Landschaft, Basel-Stadt und Solothurn"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +24,15 @@
    ],
    "marginalie": [
     "Fachhochschule Nordwestschweiz FHNW"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 419.900.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -361,7 +384,21 @@
     }
    ],
    "marginalie": [
-    "Beschwerdekommission [5]"
+    "Beschwerdekommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 33: Betreffend der Organisation der Beschwerdekommission siehe das Reglement über die Organisation der Beschwerdekommission der Fachhochschule Nordwestschweiz (FHNW) vom 25. 9. 2007, publiziert im Internet unter http://www.fhnw.ch.",
+     "links": [
+      {
+       "label": "http://www.fhnw.ch",
+       "url": "http://www.fhnw.ch"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "34": {
@@ -417,6 +454,15 @@
    ],
    "marginalie": [
     "Vertragsbeginn und Ende"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 1. 1. 2006.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

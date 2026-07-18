@@ -1,5 +1,27 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Staats- und Gemeindesteuern",
+  "erlassdatum": "Vom 07.02.1974 (Stand 01.01.2023)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Landrat des Kantons Basel-Landschaft beschliesst als Gesetz:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "In der Volksabstimmung vom 9. Juni 1974 angenommen.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -104,6 +126,24 @@
    ],
    "marginalie": [
     "3. Besteuerung von Personengemeinschaften und Vermögensmassen ohne juristische Persönlichkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "951.31",
+       "url": "https://db.clex.ch/link/Bund/951.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KAG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -239,6 +279,20 @@
    ],
    "marginalie": [
     "2. Von der Staats- und Gemeindesteuer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 192.12",
+     "links": [
+      {
+       "label": "192.12",
+       "url": "https://db.clex.ch/link/Bund/192.12/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -404,7 +458,7 @@
     }
    ],
    "marginalie": [
-    "5. Umstrukturierungen *"
+    "5. Umstrukturierungen"
    ]
   },
   "27": {
@@ -423,7 +477,7 @@
     }
    ],
    "marginalie": [
-    "6. Leibrenten und Einkünfte aus Verpfründung *"
+    "6. Leibrenten und Einkünfte aus Verpfründung"
    ]
   },
   "28": {
@@ -443,6 +497,32 @@
    ],
    "marginalie": [
     "II. Steuerfreie Einkünfte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 935.51",
+     "links": [
+      {
+       "label": "SR 935.51",
+       "url": "https://db.clex.ch/link/Bund/935.51/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 837.2",
+     "links": [
+      {
+       "label": "SR 837.2",
+       "url": "https://db.clex.ch/link/Bund/837.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -462,6 +542,52 @@
    ],
    "marginalie": [
     "III. Ermittlung des Reineinkommens – 1. Abzüge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 831.40",
+     "links": [
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SR 161.1",
+     "links": [
+      {
+       "label": "161.1",
+       "url": "https://db.clex.ch/link/Bund/161.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BPR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SR 151.3",
+     "links": [
+      {
+       "label": "151.3",
+       "url": "https://db.clex.ch/link/Bund/151.3/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -823,6 +949,24 @@
    ],
    "marginalie": [
     "I. Steuersubjekt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "951.31",
+       "url": "https://db.clex.ch/link/Bund/951.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KAG"
+       }
+      }
+     ],
+     "absatz": "2 bis",
+     "item": null
+    }
    ]
   },
   "53": {
@@ -1164,7 +1308,7 @@
     }
    ],
    "marginalie": [
-    "2. Steuerfreie Veräusserungen und Steueraufschub *"
+    "2. Steuerfreie Veräusserungen und Steueraufschub"
    ]
   },
   "74": {
@@ -1260,6 +1404,20 @@
    ],
    "marginalie": [
     "b. Aufwendungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "GS 2019.019, SGS 404",
+     "links": [
+      {
+       "label": "SGS 404",
+       "url": "https://bl.clex.ch/data/404/de/art3"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "79": {
@@ -1811,6 +1969,20 @@
    ],
    "marginalie": [
     "VI. Ausstandspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "GS 29.677, SGS 175",
+     "links": [
+      {
+       "label": "175",
+       "url": "https://bl.clex.ch/data/175/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "113": {
@@ -2115,6 +2287,20 @@
    ],
    "marginalie": [
     "V. Gesetz über die Verfassungs- und Verwaltungsprozessordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "GS 31.847, SGS 271",
+     "links": [
+      {
+       "label": "271",
+       "url": "https://bl.clex.ch/data/271/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "131": {
@@ -2303,6 +2489,24 @@
    ],
    "marginalie": [
     "XIV. Arrest"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "145": {
@@ -2378,6 +2582,24 @@
    ],
    "marginalie": [
     "II. Allgemeine Bestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "150": {
@@ -2393,6 +2615,24 @@
    ],
    "marginalie": [
     "III. Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "SR 312.0",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "151": {
@@ -2507,6 +2747,24 @@
    ],
    "marginalie": [
     "V. Besondere Fälle – 1. Bei juristischen Personen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "SR 221.301",
+     "links": [
+      {
+       "label": "221.301",
+       "url": "https://db.clex.ch/link/Bund/221.301/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FUSG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "158": {
@@ -2621,6 +2879,24 @@
    ],
    "marginalie": [
     "IV. Pflichten des Angeschuldigten und Dritter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "SR 312.0",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "165": {
@@ -2725,6 +3001,169 @@
    ],
    "marginalie": [
     "V. Aufhebung und Änderung bisherigen Rechtes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "GS 20.445",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "GS 20.552",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "GS 22.729",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "GS 21.131",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "GS 20.428",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "GS 17.541",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "37",
+     "text": "GS 17.17",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "GS 19.141",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "39",
+     "text": "GS 25.485",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "40",
+     "text": "GS 20.378",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "GS 25.485",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "GS 19.363",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "GS 25.486",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "44",
+     "text": "GS 19.427",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "45",
+     "text": "GS 25.486",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "46",
+     "text": "GS 20.700",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "GS 25.486",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "48",
+     "text": "GS 22.460",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "GS 25.486",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "50",
+     "text": "GS 19.722",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "51",
+     "text": "GS 25.486",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "52",
+     "text": "GS 20.609",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "53",
+     "text": "GS 25.487",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "194": {
@@ -2747,6 +3186,15 @@
    ],
    "marginalie": [
     "VII. Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "54",
+     "text": "In der Volksabstimmung vom 9. Juni 1974 angenommen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "196": {
@@ -2813,6 +3261,15 @@
    ],
    "marginalie": [
     "XIII. Aufhebung anderer Gesetzesbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "55",
+     "text": "GS 23.391, SGS 336.3",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "202": {
@@ -2824,6 +3281,46 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "56",
+     "text": "GS 27.704, SGS 761",
+     "links": [
+      {
+       "label": "761",
+       "url": "https://bl.clex.ch/data/761/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "57",
+     "text": "GS 34.46",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "58",
+     "text": "GS 20.131, SGS 191",
+     "links": [
+      {
+       "label": "191",
+       "url": "https://bl.clex.ch/data/191/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "59",
+     "text": "GS 34.46",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "203": {
@@ -2890,6 +3387,24 @@
    ],
    "marginalie": [
     "XIX. Anteil der Einwohnergemeinden an der direkten Bundessteuer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "SR 642.11",
+     "links": [
+      {
+       "label": "SR 642.11",
+       "url": "https://db.clex.ch/link/Bund/642.11/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "DBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "107_a": {
@@ -3286,7 +3801,25 @@
     }
    ],
    "marginalie": [
-    "7. Einkünfte aus beruflicher Vorsorge und gebundener Selbstvorsorge *"
+    "7. Einkünfte aus beruflicher Vorsorge und gebundener Selbstvorsorge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 831.40",
+     "links": [
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27_quater": {
@@ -3343,7 +3876,7 @@
     }
    ],
    "marginalie": [
-    "8. Mietwert selbst genutzter Liegenschaften (Eigenmietwert) *"
+    "8. Mietwert selbst genutzter Liegenschaften (Eigenmietwert)"
    ]
   },
   "31_bis": {
@@ -3401,6 +3934,20 @@
    ],
    "marginalie": [
     "5. Vereinfachtes Abrechnungsverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SR 822.41",
+     "links": [
+      {
+       "label": "822.41",
+       "url": "https://db.clex.ch/link/Bund/822.41/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "53_a": {
@@ -3420,6 +3967,124 @@
    ],
    "marginalie": [
     "1a. Erfolg aus Patenten und vergleichbaren Rechten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "SR 0.232.142.2",
+     "links": [
+      {
+       "label": "SR 0.232.142.2",
+       "url": "https://db.clex.ch/link/Bund/0.232.142.2/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SR 232.14",
+     "links": [
+      {
+       "label": "SR 232.14",
+       "url": "https://db.clex.ch/link/Bund/232.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PATG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SR 232.14",
+     "links": [
+      {
+       "label": "SR 232.14",
+       "url": "https://db.clex.ch/link/Bund/232.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PATG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "SR 231.2",
+     "links": [
+      {
+       "label": "SR 231.2",
+       "url": "https://db.clex.ch/link/Bund/231.2/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SR 232.16",
+     "links": [
+      {
+       "label": "SR 232.16",
+       "url": "https://db.clex.ch/link/Bund/232.16/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SORTG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "SR 812.21",
+     "links": [
+      {
+       "label": "SR 812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "SR 910.1",
+     "links": [
+      {
+       "label": "SR 910.1",
+       "url": "https://db.clex.ch/link/Bund/910.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "SR 642.14",
+     "links": [
+      {
+       "label": "SR 642.14",
+       "url": "https://db.clex.ch/link/Bund/642.14/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STHG"
+       }
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    }
    ]
   },
   "53_b": {
@@ -3477,6 +4142,20 @@
    ],
    "marginalie": [
     "2a. Zusätzlicher Abzug von Forschungs- und Entwicklungsaufwand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "SR 420.1",
+     "links": [
+      {
+       "label": "SR 420.1",
+       "url": "https://db.clex.ch/link/Bund/420.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "54_b": {
@@ -3534,6 +4213,24 @@
    ],
    "marginalie": [
     "2. Steuerbare Leistungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "SR 831.10",
+     "links": [
+      {
+       "label": "SR 831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "68_c": {
@@ -3647,7 +4344,7 @@
     }
    ],
    "marginalie": [
-    "8. Obligatorische nachträgliche ordentliche Veranlagung *"
+    "8. Obligatorische nachträgliche ordentliche Veranlagung"
    ]
   },
   "68_h_bis": {
@@ -3780,7 +4477,7 @@
     }
    ],
    "marginalie": [
-    "6a. Empfänger von Vorsorgeleistungen aus öffentlich-rechtlichem Arbeitsverhältnis *"
+    "6a. Empfänger von Vorsorgeleistungen aus öffentlich-rechtlichem Arbeitsverhältnis"
    ]
   },
   "68_o_bis": {
@@ -3817,7 +4514,25 @@
      "label": "1.2.5 Quellensteuer für natürliche und juristische Personen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "SR 831.10",
+     "links": [
+      {
+       "label": "SR 831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "68_p": {
    "gliederung": [

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über öffentliche Ruhetage und Ladenöffnung",
+  "erlassdatum": "Vom 29. Juni 2005 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 04.1474.01 vom 14. Dezember 2004 sowie in den Bericht der Wirtschafts- und Abgabekommission Nr. 04.1474.02 vom 23. Mai 2005,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -128,7 +146,33 @@
     }
    ],
    "marginalie": [
-    "Strafbestimmungen *"
+    "Strafbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 12 Abs. 2: Diese Ordnung ist aufgehoben. Massgebend sind jetzt die StPO vom 5. 10. 2007 (SR 312.0 ) und das EG StPO vom 13. 10. 2010 (SG 257.100 ).",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      },
+      {
+       "label": "257.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/257.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-257.100"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -138,7 +182,16 @@
      "label": "VII. Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 14. 8. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4_a": {
    "gliederung": [

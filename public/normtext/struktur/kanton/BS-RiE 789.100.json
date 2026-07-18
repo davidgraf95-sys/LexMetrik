@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement für die Naturschutzkommission des Gemeinderates Riehen",
+  "erlassdatum": "Vom 26. März 1991 (Stand 18. April 1991)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "wählt auf seine Amtsdauer eine Naturschutzkommission. Für sie gilt folgendes Reglement:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +43,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten und Publikation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 18. 4. 1991.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

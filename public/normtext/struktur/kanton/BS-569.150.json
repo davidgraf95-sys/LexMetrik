@@ -1,5 +1,87 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen dem Kanton Basel-Stadt, vertreten durch den Departementsvorsteher des Erziehungsdepartements, Regierungsrat Dr. Christoph Eymann, Leimenstrasse 1, 4001 Basel, und dem Kanton Basel-Landschaft, vertreten durch den Vorsteher der Sicherheitsdirektion, Regierungsrat Isaac Reber, Rathausstrasse 2, 4410 Liestal, betreffend gemeinsame Medienkommission beider Basel",
+  "erlassdatum": "Vom 18. Dezember 2012 (Stand 1. Januar 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 3 und 106 der Verfassung des Kantons Basel-Stadt vom 23. März 2005 und § 9 Abs. 4 des Gesetzes betreffend öffentliche Filmvorführung und die Abgabe von elektronischen Trägermedien (FTG) vom 9. Juni 2010, und der Regierungsrat des Kantons Basel-Landschaft, gestützt auf § 77 Abs. 1 Bst. d der Verfassung des Kantons Basel-Landschaft vom 17. Mai 1984 und § 9 Abs. 4 des Gesetzes betreffend öffentliche Filmvorführung und die Abgabe von elektronischen Trägermedien (FTG) vom 15. Oktober 2009,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 569.100.",
+    "links": [
+     {
+      "label": "569.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/569.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-569.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SGS 110",
+    "links": [
+     {
+      "label": "110",
+      "url": "https://db.clex.ch/link/BL/110/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SGS 545.",
+    "links": [
+     {
+      "label": "545",
+      "url": "https://db.clex.ch/link/BL/545/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,95 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Beiträge der Kinder, Jugendlichen und Eltern an die Kosten der Unterbringung von Kindern und Jugendlichen in Heimen und in Pflegefamilien",
+  "erlassdatum": "Vom 6. Dezember 2016 (Stand 1. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Interkantonale Vereinbarung für Soziale Einrichtungen (IVSE) vom 13. Dezember 2002, das Gesetz betreffend Förder- und Hilfeleistungen für Kinder und Jugendliche (Kinder- und Jugendgesetz, KJG) vom 10. Dezember 2014, das Gesetz über die Harmonisierung und Koordination von bedarfsabhängigen Sozialleistungen (Harmonisierungsgesetz Sozialleistungen, SoHaG) vom 25. Juni 2008 sowie das Gesetz über den Vollzug von jugendstrafrechtlichen Sanktionen (Jugendstrafvollzugsgesetz, JStVG) vom 13. Oktober 2010, unter Verweis auf seine Erläuterungen Nr. P161907,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 869.100",
+    "links": [
+     {
+      "label": "869.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/869.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-869.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 415.100",
+    "links": [
+     {
+      "label": "415.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/415.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-415.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 890.700",
+    "links": [
+     {
+      "label": "890.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/890.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-890.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 258.400",
+    "links": [
+     {
+      "label": "258.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/258.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-258.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -87,6 +177,20 @@
    ],
    "marginalie": [
     "Berechnung der Beiträge der Eltern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Sie können bei der Sozialhilfe, Klybeckstrasse 15, beim Rechtsdienst des WSU, Rheinsprung 16/18, oder im Internet unter: http://www.wsu.bs.ch/ueber-uns/dienststellen/sozialhilfe.html eingesehen werden",
+     "links": [
+      {
+       "label": "http://www.wsu.bs.ch/ueber-uns/dienststellen/sozialhilfe.html",
+       "url": "http://www.wsu.bs.ch/ueber-uns/dienststellen/sozialhilfe.html"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "9": {

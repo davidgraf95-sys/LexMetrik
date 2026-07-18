@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz vom 21. Juni 1932 über die gebrannten Wasser (Alkoholgesetz)",
+  "erlassdatum": "vom 20.11.1989 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 41a des Bundesgesetzes vom 21. Juni 1932 über die gebrannten Wasser und auf Art. 38 Abs. 4 des Gesetzes vom 30. April 1989 über das Gastgewerbe,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Alkoholgesetz (SR 680 )",
+    "links": [
+     {
+      "label": "680",
+      "url": "https://db.clex.ch/link/Bund/680/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 955.11",
+    "links": [
+     {
+      "label": "955.11",
+      "url": "https://ar.clex.ch/data/955.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-955.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,12 +69,30 @@
    "gliederung": [],
    "marginalie": [
     "Gastgewerbe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. Art. 5 ff. G über das Gastgewerbe",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
     "Abgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "vgl. Art. 41a Abs. 6 Alkoholgesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {

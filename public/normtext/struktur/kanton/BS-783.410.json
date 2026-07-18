@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Grundwasserschutzzonen und Gewässerschutzbereiche",
+  "erlassdatum": "Vom 19. Juni 1984 (Stand 1. Januar 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 5, 29, 30 und 31 des Bundesgesetzes vom 8. Oktober 1971 über den Schutz der Gewässer gegen Verunreinigung (Gewässerschutzgesetz) und das Gesetz vom 15. Dezember 1983 über Grundwasserschutzzonen,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Das Bundesgesetz vom 8. 10. 1971 ist aufgehoben. Massgebend ist jetzt das Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz) vom 24. 1. 1991 (SR 814.20 ).",
+    "links": [
+     {
+      "label": "814.20",
+      "url": "https://db.clex.ch/link/Bund/814.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "GSCHG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 783.400.",
+    "links": [
+     {
+      "label": "783.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/783.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-783.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +110,29 @@
    ],
    "marginalie": [
     "5. Öffentlichkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "umbenannt in: Amt für Umwelt und Energie gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "umbenannt in: Abteilung Städtebau und Architektur",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "umbenannt in: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -87,6 +166,36 @@
    ],
    "marginalie": [
     "1. Weitere Schutzzonen (S 3)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "§ 8 Abs. 9: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "9",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "§ 8 Abs. 9: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "9",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "§ 8 Abs. 9: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "9",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "§ 8 Abs. 13: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "13",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -98,6 +207,29 @@
    ],
    "marginalie": [
     "2. Engere Schutzzone innerhalb der Bauzone (S 2b)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "§ 9 Abs. 3: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "§ 9 Abs. 5: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "§ 9 Abs. 6: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -109,6 +241,22 @@
    ],
    "marginalie": [
     "3. Engere Schutzzone ausserhalb der Bauzone (S 2a)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "§ 10 Abs. 3: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "§ 10 Abs. 5: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -131,6 +279,22 @@
    ],
    "marginalie": [
     "1. Übergangsbestimmungen für die weitere Schutzzone (S 3)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "§ 12 Abs. 1: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "§ 12 Abs. 3: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -151,7 +315,37 @@
      "label": "IV. Kosten"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "§ 14 Abs. 1: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "§ 14 Abs. 3: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "§ 14 Abs.3: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "§ 14 Abs. 5: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
+   ]
   },
   "15": {
    "gliederung": [
@@ -160,9 +354,7 @@
      "label": "V. Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [
@@ -173,6 +365,15 @@
    ],
    "marginalie": [
     "2. Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Vom Bundesrat genehmigt am 30. 8. 1984.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

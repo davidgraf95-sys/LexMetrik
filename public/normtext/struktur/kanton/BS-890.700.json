@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Harmonisierung und Koordination von bedarfsabhängigen Sozialleistungen",
+  "erlassdatum": "Vom 25. Juni 2008 (Stand 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung der Verfassung des Kantons Basel-Stadt vom 23. März 2005, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 07.1592.01 vom 16. Oktober 2007 sowie in den Bericht der Gesundheits- und Sozialkommission Nr. 07.1592.02 vom 21. Mai 2008,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,72 @@
    ],
    "marginalie": [
     "Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Verordnung über das Inkasso und die Bevorschussung von Unterhaltsforderungen (Alimentenbevorschussungsverordnung, ABVV) vom 25. November 2008 (SG 212.200 ).",
+     "links": [
+      {
+       "label": "212.200",
+       "url": "https://www.gesetzessammlung.bs.ch/data/212.200/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-212.200"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Gesetz über die Krankenversicherung im Kanton Basel-Stadt vom 15. November 1989 (SG 834.400 ).",
+     "links": [
+      {
+       "label": "834.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/834.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-834.400"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Gesetz betreffend Tagesbetreuung von Kindern vom 8. Mai 2019 (SG 815.100 ).",
+     "links": [
+      {
+       "label": "815.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/815.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-815.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Verordnung über die Beiträge der Kinder, Jugendlichen und Eltern an die Kosten der Unterbringung von Kindern und Jugendlichen in Heimen und in Pflegefamilien (Kinderbetreuungsbeitragsverordnung, KBBV) vom 6. Dezember 2016 (SG 212.470 )",
+     "links": [
+      {
+       "label": "212.470",
+       "url": "https://www.gesetzessammlung.bs.ch/data/212.470/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-212.470"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -65,6 +170,87 @@
    ],
    "marginalie": [
     "Zusammensetzung des massgeblichen Einkommens"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 6: Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SG 491.100",
+     "links": [
+      {
+       "label": "491.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/491.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-491.100"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SR 831.30",
+     "links": [
+      {
+       "label": "831.30",
+       "url": "https://db.clex.ch/link/Bund/831.30/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ELG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SG 832.700",
+     "links": [
+      {
+       "label": "832.700",
+       "url": "https://www.gesetzessammlung.bs.ch/data/832.700/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-832.700"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "SR 843",
+     "links": [
+      {
+       "label": "843",
+       "url": "https://db.clex.ch/link/Bund/843/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SR 842",
+     "links": [
+      {
+       "label": "842",
+       "url": "https://db.clex.ch/link/Bund/842/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -109,6 +295,31 @@
    ],
    "marginalie": [
     "Inhalt der zentralen Datenbank"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "§ 10 Abs. 1 lit. a: Dieser Artikel ist aufgehoben. Massgeblich ist jetzt Art. 50c.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SR 831.10",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -241,6 +452,24 @@
    ],
    "marginalie": [
     "Bekanntgabe von Personendaten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "SG 153.260",
+     "links": [
+      {
+       "label": "153.260",
+       "url": "https://www.gesetzessammlung.bs.ch/data/153.260/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-153.260"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -251,7 +480,7 @@
     }
    ],
    "marginalie": [
-    "Rechte der betroffenen Personen *"
+    "Rechte der betroffenen Personen"
    ]
   },
   "24": {
@@ -274,6 +503,40 @@
    ],
    "marginalie": [
     "Bekanntgabe von Daten aus der zentralen Datenbank für statistische und weitere nicht personenbezogene Zwecke"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "SG 453.200",
+     "links": [
+      {
+       "label": "453.200",
+       "url": "https://www.gesetzessammlung.bs.ch/data/453.200/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-453.200"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "SG 153.260",
+     "links": [
+      {
+       "label": "153.260",
+       "url": "https://www.gesetzessammlung.bs.ch/data/153.260/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-153.260"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -283,9 +546,7 @@
      "label": "VI. Kapitel: Bekanntgabe von Daten für nicht personenbezogene Zwecke"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -318,6 +579,63 @@
    ],
    "marginalie": [
     "Änderung anderer Erlasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "§ 29: Die Änderungen anderer Erlasse werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "SG 890.500.",
+     "links": [
+      {
+       "label": "890.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/890.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-890.500"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "SG 834.400.",
+     "links": [
+      {
+       "label": "834.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/834.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-834.400"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "SG 815.100.",
+     "links": [
+      {
+       "label": "815.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/815.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-815.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -329,6 +647,22 @@
    ],
    "marginalie": [
     "Referendum und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "Wirksam seit 1. 1. 2009.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "§ 30 Abs 2: Mit der Gesetzesänderung vom 26. 2. 2012 sind die Ausbildungsbeiträge definitiv von diesem Gesetz ausgenommen worden. § 30 Abs. 2 ist damit inhaltlich hinfällig geworden.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

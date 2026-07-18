@@ -1,5 +1,86 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 25. November 2008 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Krankenversicherung im Kanton Basel-Stadt (GKV) vom 15. November 1989, auf § 8 des Spitalgesetzes vom 26. März 1981, auf das Gesetz über die Harmonisierung und Koordination von bedarfsabhängigen Sozialleistungen (Harmonisierungsgesetz Sozialleistungen, SoHaG) vom 25. Juni 2008 sowie das Bundesgesetz über die Krankenversicherung (KVG) vom 18. März 1994,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 834.400.",
+    "links": [
+     {
+      "label": "834.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/834.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-834.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Dieses Gesetz ist aufgehoben.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 890.700.",
+    "links": [
+     {
+      "label": "890.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/890.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-890.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 832.10.",
+    "links": [
+     {
+      "label": "832.10",
+      "url": "https://db.clex.ch/link/Bund/832.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "KVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -140,9 +221,7 @@
      "label": "V. Zusammenarbeit Krankenversicherer, Versicherungsobligatorium, Prämien- und Kostenausstände"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -273,6 +352,22 @@
    ],
    "marginalie": [
     "Leistungsgrenzen und Prämienbeiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "§ 22 Abs. 1: Die Tabelle findet sich aus technischen Gründen am Schluss dieser Verordnung (Anhang zu § 22 Abs. 1).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "§ 22 Abs. 2: Die Tabellen finden sich aus technischen Gründen am Schluss dieser Verordnung im Anhang 2 (Anhang zu § 22 Abs. 2).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -379,6 +474,22 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "SG 328.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Die Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -437,7 +548,16 @@
     }
    ],
    "marginalie": [
-    "Meldungen der Krankenversicherer [19]"
+    "Meldungen der Krankenversicherer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "§ 26a Titel in der Fassung des RRB vom 29. 4. 2014 (wirksam seit 1. 7. 2014).",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "30_a": {
@@ -471,6 +591,22 @@
    ],
    "marginalie": [
     "Kantonale Beiträge an die Spital- und Pflegeheimtaxen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Fassung vom 15. August 2017, in Kraft seit 1. Januar 2018 (KB 19.08.2017)",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8_b": {
@@ -504,6 +640,71 @@
    ],
    "marginalie": [
     "Restfinanzierung durch den Kanton in Anwendung von Art. 25a Abs. 5 KVG"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "aufgehoben am 24. August 2021, in Kraft seit 1. Oktober 2021 (KB 28.08.2021)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Fassung vom 12. Februar 2019, in Kraft seit 1. Januar 2019 (KB 16.02.2019)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Eingefügt am 12. März 2024, in Kraft seit 1. April 2024 (KB 16.03.2024)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Eingefügt am 12. März 2024, in Kraft seit 1. April 2024 (KB 16.03.2024)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Eingefügt am 22. Oktober 2024, in Kraft seit 1. Januar 2025 (KB 26.10.2024)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Fassung vom 15. August 2017, in Kraft seit 1. Januar 2018 (KB 19.08.2017)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Fassung vom 12. Februar 2019, in Kraft seit 1. Januar 2019 (KB 16.02.2019)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "§ 8d Abs. 2 Ziff. 3 in der Fassung des RRB vom 24. 1. 2012 (wirksam seit 1. 1. 2012, publiziert am 28. 1. 2012).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Fassung vom 24. August 2021, in Kraft seit 1. Oktober 2021 (KB 28.08.2021",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8_d_bis": {
@@ -526,6 +727,15 @@
    ],
    "marginalie": [
     "Zuständigkeit für die Restfinanzierung (Art. 25a Abs. 5 KVG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "§ 8e Abs. 3: Bettingen: Vertrag über die Zuständigkeit für die Ausrichtung der Restfinanzierung im Rahmen der Pflegefinanzierung vom 7. 5. / 24. 4. 2012; Riehen: Vertrag über die Zuständigkeit für die Ausrichtung der Restfinanzierung im Rahmen der Pflegefinanzierung vom 19. / 6. 3. 2012.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8_f": {

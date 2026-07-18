@@ -1,11 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend die Zahnpflege bei Kindern",
+  "erlassdatum": "Vom 6. Dezember 1994 (Stand 31. Oktober 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 9 und 10 der Ordnung betreffend die Zahnpflege bei Kindern vom 26. Oktober 1994, erlässt folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 328.600.",
+    "links": [
+     {
+      "label": "RiE 328.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20328.600/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "2": {
    "gliederung": [],
@@ -33,9 +62,7 @@
   },
   "6": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [],

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Ferien und Urlaub, die ausserordentliche Entlastung und die Stellvertretung von Lehrpersonen an den vom Kanton geführten Schulen",
+  "erlassdatum": "Vom 12. September 1967 (Stand 10. August 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf den Antrag des Erziehungsrates in Ausführung der §§ 110 und 112 des Schulgesetzes folgende Verordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,7 +61,23 @@
      "label": "I. Allgemeines"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 3 Abs. 8: ursprünglich Abs. 5.",
+     "links": [],
+     "absatz": "8",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "§ 3 Abs. 9: ursprünglich Abs. 6.",
+     "links": [],
+     "absatz": "9",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -61,9 +112,7 @@
      "label": "1. Aus gesundheitlichen Gründen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -76,9 +125,7 @@
      "label": "1. Aus gesundheitlichen Gründen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [
@@ -91,9 +138,7 @@
      "label": "1. Aus gesundheitlichen Gründen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -106,9 +151,7 @@
      "label": "2. Aus familiären Gründen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -247,7 +290,16 @@
      "label": "III. Ausserordentliche Entlastung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 20: Diese Verordnung ist aufgehoben. Massgebend ist jetzt die Verordnung betreffend die Pflichtlektionenzahl und die Lektionenzuteilung der Lehrpersonen vom 13. 1. 2004 (SG 411.500).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "21": {
    "gliederung": [
@@ -256,7 +308,16 @@
      "label": "III. Ausserordentliche Entlastung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 21 Abs. 1 lit. g: Das Lehrerseminar ist aufgehoben. Die Bestimmung betrifft jetzt die Fachhochschule Nordwestschweiz.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "22": {
    "gliederung": [

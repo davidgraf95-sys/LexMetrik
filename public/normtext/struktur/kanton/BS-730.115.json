@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausführungsbestimmungen zur Bau- und Planungsverordnung",
+  "erlassdatum": "Vom 29. März 2018 (Stand 1. Juni 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Bau- und Gastgewerbeinspektorat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 67 der Bau- und Planungsverordnung (BPV) vom 19. Dezember 2000,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 730.110",
+    "links": [
+     {
+      "label": "730.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -129,6 +168,15 @@
    ],
    "marginalie": [
     "Einspracheverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "www.bgi.bs.ch",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -227,7 +275,7 @@
     }
    ],
    "marginalie": [
-    "Elektronische Einreichung *"
+    "Elektronische Einreichung"
    ]
   },
   "20": {
@@ -237,9 +285,7 @@
      "label": "3.2. Verfahren der Baubewilligung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -249,7 +295,7 @@
     }
    ],
    "marginalie": [
-    "Verfahrensgegenstand *"
+    "Verfahrensgegenstand"
    ]
   },
   "22": {
@@ -270,9 +316,7 @@
      "label": "3.2. Verfahren der Baubewilligung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -282,7 +326,7 @@
     }
    ],
    "marginalie": [
-    "Einzeichnung projektiertes Bauvorhaben *"
+    "Einzeichnung projektiertes Bauvorhaben"
    ]
   },
   "25": {
@@ -414,7 +458,7 @@
     }
    ],
    "marginalie": [
-    "Erdbebensicherheit *"
+    "Erdbebensicherheit"
    ]
   },
   "37": {
@@ -491,7 +535,7 @@
     }
    ],
    "marginalie": [
-    "Akteneinsicht während der Publikationsfrist *"
+    "Akteneinsicht während der Publikationsfrist"
    ]
   },
   "44": {
@@ -502,7 +546,7 @@
     }
    ],
    "marginalie": [
-    "Akteneinsicht nach Ablauf der Publikationsfrist *"
+    "Akteneinsicht nach Ablauf der Publikationsfrist"
    ]
   },
   "45": {
@@ -623,7 +667,7 @@
     }
    ],
    "marginalie": [
-    "Provisorien *"
+    "Provisorien"
    ]
   },
   "56": {
@@ -800,6 +844,15 @@
    ],
    "marginalie": [
     "Stand der Technik und der Baukunde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "www.bgi.bs.ch",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "72": {

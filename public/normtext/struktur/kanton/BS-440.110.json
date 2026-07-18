@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Statut der Universität Basel",
+  "erlassdatum": "Vom 3. Mai 2012 (Stand 9. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Universitätsrat der Universität Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 25 lit. c des Vertrags zwischen den Kantonen Basel-Landschaft und Basel-Stadt über die gemeinsame Trägerschaft der Universität Basel vom 27. Juni 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 442.400.",
+    "links": [
+     {
+      "label": "442.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/442.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-442.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -102,6 +141,24 @@
    ],
    "marginalie": [
     "Universitätsrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 442.400",
+     "links": [
+      {
+       "label": "442.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/442.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-442.400"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -117,6 +174,24 @@
    ],
    "marginalie": [
     "Rektorat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 442.400",
+     "links": [
+      {
+       "label": "442.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/442.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-442.400"
+       }
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -207,6 +282,20 @@
    ],
    "marginalie": [
     "Fakultät"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 16 lit. d: Sämtliche Studien- und Prüfungsordnungen können beim Rechtsdienst der Universität Basel oder unter www.unibas.ch eingesehen werden.",
+     "links": [
+      {
+       "label": "www.unibas.ch",
+       "url": "http://www.unibas.ch"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -265,9 +354,7 @@
      "label": "II. Aufgaben und Kompetenzen der universitären Gliederungseinheiten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -281,7 +368,7 @@
     }
    ],
    "marginalie": [
-    "Studentische Körperschaft (skuba) *"
+    "Studentische Körperschaft (skuba)"
    ]
   },
   "22": {
@@ -325,9 +412,7 @@
      "label": "III. Die studentische Körperschaft, die Assistierendenvereinigung, die Dozierendenvereinigung und die Rekurskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [
@@ -338,6 +423,20 @@
    ],
    "marginalie": [
     "Berufungsverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 25 Abs. 2: Berufungsordnung der Universität Basel vom 25. 4. 2013, einzusehen unter http://www.unibs.ch, \"Dokumente\", \"Rechtserlasse\".",
+     "links": [
+      {
+       "label": "http://www.unibs.ch",
+       "url": "http://www.unibs.ch"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "26": {

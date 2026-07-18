@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Spesenreglement der Gemeindeverwaltung Riehen",
+  "erlassdatum": "Vom 4. Dezember 2007 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt gestützt auf § 49 Abs. 2 lit. k der Personalordnung vom 24. April 2002 folgendes Reglement:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "RiE 162.100.",
+    "links": [
+     {
+      "label": "RiE 162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20162.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -153,6 +184,15 @@
    ],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 16. 12. 2007.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10_a": {
@@ -162,9 +202,7 @@
      "label": "IV. Übrige Kosten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4_a": {
    "gliederung": [

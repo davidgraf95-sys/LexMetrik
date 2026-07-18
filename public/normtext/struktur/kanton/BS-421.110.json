@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Schulordnung für die Allgemeine Gewerbeschule Basel",
+  "erlassdatum": "Vom 19. Oktober 1965 (Stand 9. August 2004)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Erziehungsrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 15 des Gesetzes betreffend die Allgemeine Gewerbeschule Basel vom 20. Dezember 1962, auf den Antrag der Kommission der Allgemeinen Gewerbeschule,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst was folgt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 421.100.",
+    "links": [
+     {
+      "label": "421.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/421.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-421.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -53,7 +92,16 @@
      "label": "I. Allgemeines"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "7": {
    "gliederung": [
@@ -152,7 +200,16 @@
      "label": "III. Aufnahme, Einteilung und Entlassung der Schüler"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 17: Dieses Gesetz ist aufgehoben. Massgebend ist heute das kantonale Gesetz über die Berufsbildung vom 12. 9. 2007 (wirksam seit 1. 2. 2008, SG 420.200).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "18": {
    "gliederung": [
@@ -251,7 +308,23 @@
      "label": "IV. Schulbesuch"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 28 lit. c: Ausdruck «Amt für Gewerbe, Industrie und Berufsbildung» geändert in «Amt für Berufsbildung und Berufsberatung» durch RRB vom 13. 1. 1998 (wirksam seit 1. 1. 1998, publiziert am 17./24. 1. 1998).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Gemeint ist das aufgehobene Bundesgesetz über die Berufsbildung vom 20. 9. 1963.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "29": {
    "gliederung": [
@@ -260,7 +333,23 @@
      "label": "IV. Schulbesuch"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "§ 29 Abs. 1: Dieses Gesetz ist aufgehoben. Massgebend ist heute das kantonale Gesetz über die Berufsbildung vom 12. 9. 2007 (wirksam seit 1. 2. 2008, SG 420.200).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "§ 29 Abs. 1: Ausdruck «Amt für Gewerbe, Industrie und Berufsbildung» geändert in «Amt für Berufsbildung und Berufsberatung» durch RRB vom 13. 1. 1998 (wirksam seit 1. 1. 1998, publiziert am 17./24. 1. 1998).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "30": {
    "gliederung": [
@@ -296,7 +385,16 @@
      "label": "V. Unterrichtszeiten, Weisungen der Direktion, Sanktionen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 33 lit. d: Ausdruck «Amt für Gewerbe, Industrie und Berufsbildung» geändert in «Amt für Berufsbildung und Berufsberatung» durch RRB vom 13. 1. 1998 (wirksam seit 1. 1. 1998, pbuliziert am 17./24. 1. 1998).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "34": {
    "gliederung": [
@@ -314,7 +412,16 @@
      "label": "VI. Zeugnis, Stipendien, Prämien"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "§ 35 Abs. 3: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt der Vertrag zwischen den Kantonen Aargau, Basel-Landschaft, Basel-Stadt und Solothurn über die Fachhochschule Nordwestschweiz (FHNW) vom 27. 10. / 9. 11. 2004 (SG 428.100) und die darauf basierenden Erlasse.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "36": {
    "gliederung": [

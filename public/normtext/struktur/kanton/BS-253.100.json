@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Übertretungsstrafgesetz",
+  "erlassdatum": "Vom 13. Februar 2019 (Stand 1. September 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 335 des Schweizerischen Strafgesetzbuches vom 21. Dezember 1937, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 17.1336.01 vom 27. März 2018 und den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 17.1336.02 vom 19. Dezember 2018,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 311.0",
+    "links": [
+     {
+      "label": "311.0",
+      "url": "https://db.clex.ch/link/Bund/311.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -98,6 +137,20 @@
    ],
    "marginalie": [
     "Betteln"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Das Wort «Parks» wurde gemäss Urteil des Bundesgerichts vom 13. März 2023 ( 1C_537/2021 ) gestrichen.",
+     "links": [
+      {
+       "label": "1C_537/2021",
+       "url": "https://www.bger.ch/ext/eurospider/live/fr/php/aza/http/index.php?highlight_docid=aza%3A%2F%2Faza://13-03-2023-1C_537-2021&amp;lang=de&amp;zoom=&amp;type=show_document"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -351,6 +404,15 @@
    ],
    "marginalie": [
     "Ausführungsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "In Kraft seit 1. 7. 2020.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

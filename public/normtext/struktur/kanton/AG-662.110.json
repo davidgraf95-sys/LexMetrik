@@ -1,5 +1,100 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührendekret",
+  "erlassdatum": "Vom 19.09.2023 (Stand 01.07.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Aargau,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 96 der Schweizerischen Zivilprozessordnung (Zivilprozessordnung, ZPO) vom 19. Dezember 2008, Art. 424 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007, die §§ 78 Abs. 2 und 82 Abs. 1 lit. f der Kantonsverfassung, § 29 des Gesetzes über die Verwaltungsrechtspflege (Verwaltungsrechtspflegegesetz, VRPG) vom 4. Dezember 2007, die §§ 10 Abs. 1 und 11 Abs. 2 des Allgemeinen Gebührengesetzes (GebührG) vom 19. September 2023 sowie § 15 Abs. 2 des Gesetzes über die Geoinformation im Kanton Aargau (Kantonales Geoinformationsgesetz, KGeoIG) vom 24. Mai 2011,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 272",
+    "links": [
+     {
+      "label": "272",
+      "url": "https://db.clex.ch/link/Bund/272/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 312.0",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SAR 271.200",
+    "links": [
+     {
+      "label": "271.200",
+      "url": "https://gesetzessammlungen.ag.ch/data/271.200/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SAR 662.100",
+    "links": [
+     {
+      "label": "662.100",
+      "url": "https://gesetzessammlungen.ag.ch/data/662.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SAR 740.100",
+    "links": [
+     {
+      "label": "740.100",
+      "url": "https://gesetzessammlungen.ag.ch/data/740.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -421,6 +516,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "RRB 2024-000284 vom 13. März 2024",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

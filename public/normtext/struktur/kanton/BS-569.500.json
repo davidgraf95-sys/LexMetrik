@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Plakatverordnung",
+  "erlassdatum": "Vom 7. Februar 1933 (Stand 15. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 2 Abs. 2 des Gesetzes über die Inanspruchnahme der Allmend durch die Verwaltung und durch Private vom 24. März 1927 und auf das Allmendgebührengesetz vom 16. Dezember 1992,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 724.100.",
+    "links": [
+     {
+      "label": "724.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz über die Nutzung des öffentlichen Raumes (NöRG) vom 16. 10. 2013 (SG 724.100.)",
+    "links": [
+     {
+      "label": "724.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -30,7 +86,7 @@
   "6": {
    "gliederung": [],
    "marginalie": [
-    "IV. Bewilligungsverfahren *"
+    "IV. Bewilligungsverfahren"
    ]
   },
   "7": {
@@ -39,7 +95,23 @@
   },
   "8": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 8 Abs. 1 lit. d): Umbenennung «Bereich Gesundheitsschutz» in «Kantonales Laboratorium» gemäss RRB vom 22. 12. 2015.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 8 Abs. 1 lit. e): Umbenennung «Bereich Gesundheitsdienste» in «Medizinische Dienste» gemäss RRB vom 22. 12. 2015.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [],
@@ -48,7 +120,7 @@
   "10": {
    "gliederung": [],
    "marginalie": [
-    "V. Konzessionsgebühr *"
+    "V. Konzessionsgebühr"
    ]
   }
  }

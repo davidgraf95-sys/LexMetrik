@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Verwendung von Mehrweggeschirr",
+  "erlassdatum": "Vom 17. Oktober 2023 (Stand 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 20a Abs. 5 Umweltschutzgesetzes Basel-Stadt (USG BS) vom 13. März 1991 und auf § 24 Abs. 3 lit. e der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 780.100",
+    "links": [
+     {
+      "label": "SG 780.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/SG%20780.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "RiE 111.100",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -22,7 +70,16 @@
   "4": {
    "gliederung": [],
    "marginalie": [
-    "Abfalleimer vor Verkaufsstellen [3]"
+    "Abfalleimer vor Verkaufsstellen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Paragraphennummer redaktionell korrigiert",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

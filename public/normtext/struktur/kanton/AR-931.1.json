@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Wald",
+  "erlassdatum": "vom 28.04.1996 (Stand 01.10.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 44 Abs. 1 und 3 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995 und Art. 50 Abs. 1 des Bundesgesetzes vom 4. Oktober 1991 über den Wald,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Waldgesetz (WaG; SR 921.0 )",
+    "links": [
+     {
+      "label": "921.0",
+      "url": "https://db.clex.ch/link/Bund/921.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "WAG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +66,24 @@
    ],
    "marginalie": [
     "Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. Art. 44 Abs. 3 KV (bGS 111.1 )",
+     "links": [
+      {
+       "label": "111.1",
+       "url": "https://ar.clex.ch/data/111.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-111.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +95,48 @@
    ],
    "marginalie": [
     "Geltungsbereich, Waldbegriff"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "vgl. Art. 2 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "vgl. Art. 2 Abs. 4 WaG (SR 921.0 ) und Art. 1 Waldverordnung (WaV; SR 921.01 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      },
+      {
+       "label": "921.01",
+       "url": "https://db.clex.ch/link/Bund/921.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -76,6 +192,24 @@
    ],
    "marginalie": [
     "b) Ausgleichszahlungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "vgl. Art. 9 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -87,6 +221,24 @@
    ],
    "marginalie": [
     "c) Verwendung von Abgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 7 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -98,6 +250,40 @@
    ],
    "marginalie": [
     "Waldfeststellungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 10 Abs. 1 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "vgl. Art. 10 Abs. 2 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -108,7 +294,25 @@
     }
    ],
    "marginalie": [
-    "Bestockte Weiden [10]"
+    "Bestockte Weiden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "vgl. Art. 2 Abs. 2 lit. a WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "11": {
@@ -130,7 +334,25 @@
     }
    ],
    "marginalie": [
-    "Benützung von Motorfahrzeugen [11]"
+    "Benützung von Motorfahrzeugen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "vgl. Art. 15 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "13": {
@@ -152,7 +374,16 @@
     }
    ],
    "marginalie": [
-    "Nachteilige Nutzungen [12]"
+    "Nachteilige Nutzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "vom eidg. Departement des Innern genehmigt am 6. Juni 1996",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "15": {
@@ -163,7 +394,32 @@
     }
    ],
    "marginalie": [
-    "Waldabstand [13]"
+    "Waldabstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "vom eidg. Departement des Innern genehmigt am 6. Juni 1996",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -174,7 +430,39 @@
     }
    ],
    "marginalie": [
-    "Grundsätze [16]"
+    "Grundsätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "vom eidg. Departement des Innern genehmigt am 6. Juni 1996",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "vgl. auch Art. 20 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "vgl. Art. 18 und 19 dieses Gesetzes",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -185,7 +473,16 @@
     }
    ],
    "marginalie": [
-    "Vernachlässigung der Pflege [19]"
+    "Vernachlässigung der Pflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "vom eidg. Departement des Innern genehmigt am 6. Juni 1996",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "18": {
@@ -196,7 +493,16 @@
     }
    ],
    "marginalie": [
-    "Planung a) Kantonale Waldplanung [20]"
+    "Planung a) Kantonale Waldplanung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "vom eidg. Departement des Innern genehmigt am 6. Juni 1996",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "19": {
@@ -207,7 +513,16 @@
     }
    ],
    "marginalie": [
-    "b) Betriebspläne [21]"
+    "b) Betriebspläne"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "vom eidg. Departement des Innern genehmigt am 6. Juni 1996",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "20": {
@@ -241,6 +556,24 @@
    ],
    "marginalie": [
     "Anpflanzungen a) Saatgut und Pflanzen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "vgl. auch Art. 21 WaV (SR 921.01 )",
+     "links": [
+      {
+       "label": "921.01",
+       "url": "https://db.clex.ch/link/Bund/921.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -263,6 +596,24 @@
    ],
    "marginalie": [
     "Veräusserung und Teilung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "vgl. Art. 25 Abs. 1 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -274,6 +625,24 @@
    ],
    "marginalie": [
     "Verhütung und Behebung von Waldschäden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "vgl. Art. 27 Abs. 2 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -307,6 +676,31 @@
    ],
    "marginalie": [
     "Finanzierung a) Forstliche Massnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "vgl. dazu auch Art. 36 bis 38 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "Art. 16 ff. dieses Gesetzes",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -318,6 +712,24 @@
    ],
    "marginalie": [
     "b) Ausbildung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "vgl. dazu auch Art. 39 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -329,6 +741,24 @@
    ],
    "marginalie": [
     "c) Ausführungsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "vgl. Art. 40 WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -351,6 +781,24 @@
    ],
    "marginalie": [
     "Strafbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "vgl. Art. 42 ff. WaG (SR 921.0 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -373,6 +821,15 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "Lf. Nr. 176",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -384,6 +841,29 @@
    ],
    "marginalie": [
     "Inkrafttreten, aufgehobenes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "Verfügung des eidg. Departementes des Innern vom 6. Juni 1996",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "Lf. Nr. 117",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "Lf. Nr. 129",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15_a": {
@@ -417,6 +897,32 @@
    ],
    "marginalie": [
     "Massnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "vgl. Art. 19 WaG (SR 921.0 ), Art. 17 WaV (SR 921.01 )",
+     "links": [
+      {
+       "label": "921.0",
+       "url": "https://db.clex.ch/link/Bund/921.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAG"
+       }
+      },
+      {
+       "label": "921.01",
+       "url": "https://db.clex.ch/link/Bund/921.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "WAV"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

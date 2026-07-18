@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Museen des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 7. Januar 2025 (Stand 1. Februar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 14a des Gesetzes über die Museen des Kantons Basel-Stadt (Museumsgesetz) vom 16. Juni 1999, unter Verweis auf seine Erläuterungen Nr. P241890",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 451.100",
+    "links": [
+     {
+      "label": "451.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/451.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-451.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -172,7 +211,16 @@
     }
    ],
    "marginalie": [
-    "Leistungsauftrag [2]"
+    "Leistungsauftrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 12 tritt am 1. Januar 2026 in Kraft",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "13": {
@@ -228,6 +276,24 @@
    ],
    "marginalie": [
     "Vergütung der Leistungen an Schulklassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 451.100",
+     "links": [
+      {
+       "label": "451.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/451.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-451.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

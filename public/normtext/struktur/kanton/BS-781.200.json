@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Lufthygiene",
+  "erlassdatum": "Vom 22. Dezember 1992 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 42 der Kantonsverfassung und § 42 des Umweltschutzgesetzes Basel-Stadt (USG BS) vom 13. März 1991,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 780.100.",
+    "links": [
+     {
+      "label": "780.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/780.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-780.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -30,6 +86,20 @@
    ],
    "marginalie": [
     "2. Neue und geänderte Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 814.318.142.1",
+     "links": [
+      {
+       "label": "814.318.142.1",
+       "url": "https://db.clex.ch/link/Bund/%20814.318.142.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -39,7 +109,21 @@
      "label": "III. Feuerungskontrolle (§ 7 USG BS)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 781.110",
+     "links": [
+      {
+       "label": "781.110",
+       "url": "https://www.gesetzessammlung.bs.ch/data/%20781.110/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "5": {
    "gliederung": [

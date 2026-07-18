@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Entschädigung von Inkonvenienzen, Spesen, Pikettdienst und ausserordentliche Arbeitszeit",
+  "erlassdatum": "vom 06.12.2016 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 1 der Besoldungsverordnung vom 30. Oktober 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BVO (bGS 142.211 )",
+    "links": [
+     {
+      "label": "142.211",
+      "url": "https://ar.clex.ch/data/142.211/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-142.211"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

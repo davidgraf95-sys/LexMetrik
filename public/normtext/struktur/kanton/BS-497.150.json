@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Richtlinien der Kommission für Denkmalsubventionen",
+  "erlassdatum": "Vom 19. Dezember 1995 (Stand 15. November 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Kommission für Denkmalsubventionen"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +46,15 @@
    ],
    "marginalie": [
     "Akten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 3 Abs. 2 in der Fassung des Kommissionsbeschlusses vom 21. 2. 2006 (wirksam seit 1. 1. 2006, publiziert am 5. 5. 2007).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -274,6 +297,15 @@
    ],
    "marginalie": [
     "Weitere Verfahrensvorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Diese Geschäftsordnung ist aufgehoben. Massgebend ist jetzt die Geschäftsordnung des Grossen Rates vom 29. 6. 2006 (SG 152.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -296,6 +328,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 21. 3. 1996.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

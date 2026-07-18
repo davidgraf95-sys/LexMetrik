@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Anrechnung ausländischer Quellensteuern",
+  "erlassdatum": "vom 11.02.2020 (Stand 01.01.2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 286 Abs. 3 des Steuergesetzes vom 21. Mai 2000,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 621.11",
+    "links": [
+     {
+      "label": "621.11",
+      "url": "https://ar.clex.ch/data/621.11/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-621.11"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,12 +56,44 @@
    "gliederung": [],
    "marginalie": [
     "Abrechnung zwischen Kanton und Gemeinden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 672.201",
+     "links": [
+      {
+       "label": "672.201",
+       "url": "https://db.clex.ch/link/Bund/672.201/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
     "Organisation und Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 625.21",
+     "links": [
+      {
+       "label": "625.21",
+       "url": "https://ar.clex.ch/data/625.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-625.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

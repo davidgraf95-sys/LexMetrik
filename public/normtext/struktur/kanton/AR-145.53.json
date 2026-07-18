@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Anwaltstarif",
+  "erlassdatum": "vom 14.03.1995 (Stand 01.01.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 66 und 90 Abs. 3 der Zivilprozessordnung vom 27. April 1980,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "ZPO (bGS 231.1 )",
+    "links": [
+     {
+      "label": "231.1",
+      "url": "https://ar.clex.ch/data/231.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +56,15 @@
    ],
    "marginalie": [
     "Verbindlichkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 18 f.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -87,6 +131,20 @@
    ],
    "marginalie": [
     "Bemessung nach Streitwert a) Anwendungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. Art. 115 ZPO (bGS 231.1 )",
+     "links": [
+      {
+       "label": "231.1",
+       "url": "https://ar.clex.ch/data/231.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -109,6 +167,24 @@
    ],
    "marginalie": [
     "2. im summarischen Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 281.35",
+     "links": [
+      {
+       "label": "281.35",
+       "url": "https://db.clex.ch/link/Bund/281.35/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GEBV_SCHKG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -174,7 +250,7 @@
     }
    ],
    "marginalie": [
-    "d) Verfahren vor dem Obergericht in Verwaltungssachen *"
+    "d) Verfahren vor dem Obergericht in Verwaltungssachen"
    ]
   },
   "17": {
@@ -197,6 +273,24 @@
    ],
    "marginalie": [
     "Bemessung nach Zeitaufwand a) Anwendungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Vgl. Art. 18 und Art. 20 Strafprozessordnung (StPO; SR 312.0 )",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -208,6 +302,15 @@
    ],
    "marginalie": [
     "b) mittleres Honorar"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "vgl. Art. 11",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -250,6 +353,22 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "vgl. Art. 18",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "vgl. Art. 23",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -261,6 +380,15 @@
    ],
    "marginalie": [
     "Stundenansatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "vgl. Art. 8 bis 17",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -305,6 +433,22 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "bGS 145.53 = aGS III/297",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "bGS 145.54",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

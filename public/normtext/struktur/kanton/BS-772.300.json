@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Industriellen Werke Basel",
+  "erlassdatum": "Vom 11. Februar 2009 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 08.1344.01 vom 16. September 2008 sowie in den Bericht der Umwelt-, Verkehrs- und Energiekommission und den Mitbericht der Finanzkommission Nr. 08.1344.02 vom 17. Dezember 2008,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +26,16 @@
      "label": "I. Allgemeines"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Softwarebedingte redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -550,7 +577,30 @@
     }
    ],
    "marginalie": [
-    "Änderung bisherigen Rechts [2]"
+    "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 42: Diese Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SG 772.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 152.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "43": {
@@ -593,7 +643,23 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmung zur Änderung betr. § 9 Abs. 1 und Abs. 3 bis [5]"
+    "Übergangsbestimmung zur Änderung betr. § 9 Abs. 1 und Abs. 3 bis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Änderung vom 11. 1. 2017.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Wirksam seit 1. 1. 2010.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28_bis": {

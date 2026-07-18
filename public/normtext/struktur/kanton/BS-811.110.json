@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über öffentliche Ruhetage und Ladenöffnung",
+  "erlassdatum": "Vom 30. August 2005 (Stand 21. Dezember 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 10 des Gesetzes über öffentliche Ruhetage und Ladenöffnung vom 29. Juni 2005,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 811.100.",
+    "links": [
+     {
+      "label": "811.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/811.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-811.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -76,6 +115,15 @@
    ],
    "marginalie": [
     "Bahnhöfe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 3. 9. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

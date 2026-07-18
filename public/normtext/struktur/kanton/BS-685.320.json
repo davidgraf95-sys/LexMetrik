@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Bauten auf dem Dreispitz-Areal",
+  "erlassdatum": "Vom 19. Juni 1950 (Stand 21. Dezember 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf den Grossratsbeschluss vom 20. April 1950 betreffend die Ermächtigung des Regierungsrates zum Erlass einer Verordnung über die Bauten und die Lagerungen auf den öffentlichen Materiallagerplätzen Basel-Dreispitz,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "GRB: Der Grosse Rat des Kantons Basel-Stadt, auf den Antrag des Regierungsrates, ermächtigt den Regierungsrat zum Erlass einer Verordnung über die Bauten und die Lagerung auf den öffentlichen Materiallagerplätzen Basel-Dreispitz. Die Bestimmungen der zu erlassenden Verordnung können sowohl von denen des Hochbautengesetzes vom 11. Mai 1939 abweichen als auch diese ergänzen. Dieser Beschluss ist zu publizieren; er unterliegt dem Referendum.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +62,15 @@
    ],
    "marginalie": [
     "Erleichterungen bei bestehenden baulichen Einrichtungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 3: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -42,7 +81,7 @@
     }
    ],
    "marginalie": [
-    "Allgemeines *"
+    "Allgemeines"
    ]
   },
   "5": {
@@ -76,6 +115,15 @@
    ],
    "marginalie": [
     "Überschreitung der Parzellengrenzen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 7: Masszahl geändert durch RRB vom 20. 11. 1990 (wirksam seit 25. 11. 1990).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -87,6 +135,29 @@
    ],
    "marginalie": [
     "Bauten an den Geleisezufahrten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 8 Abs. 1: Masszahl geändert durch RRB vom 20. 11. 1990 (wirksam seit 25. 11. 1990).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "§ 8 Abs. 2: Verweisung ergänzt und geändert durch RRB vom 20. 11. 1990 (wirksam seit 25. 11. 1990).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "§ 8 Abs. 3: Verweisung ergänzt und geändert durch RRB vom 20. 11. 1990 (wirksam seit 25. 11. 1990).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -120,6 +191,15 @@
    ],
    "marginalie": [
     "Bauhöhe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -131,6 +211,15 @@
    ],
    "marginalie": [
     "Überschreiten der Bauhöhe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "§ 12: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -186,6 +275,15 @@
    ],
    "marginalie": [
     "Bauten an Zufahrtsstrassen und Geleisezufahrten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 17: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -197,6 +295,15 @@
    ],
    "marginalie": [
     "Bauart und Brandschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "§ 18 Abs. 1: Die angeführte Wegleitung der kantonalen Feuerversicherungen liegt beim Bauinspektorat zur Einsicht auf.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -208,6 +315,15 @@
    ],
    "marginalie": [
     "Parkplätze mit Güterumschlag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "§ 19 Abs. 4: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -219,6 +335,15 @@
    ],
    "marginalie": [
     "Genehmigung des Bauvorhabens durch die Dreispitzverwaltung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "§ 20 Abs. 1: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -230,6 +355,15 @@
    ],
    "marginalie": [
     "Betriebsbewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "§ 21 Abs. 3: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -239,9 +373,7 @@
      "label": "B. Zonen- und Bauvorschriften"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

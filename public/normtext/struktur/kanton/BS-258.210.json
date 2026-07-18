@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Justizvollzug",
+  "erlassdatum": "Vom 23. Juni 2020 (Stand 23. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 35 Abs. 1 des Gesetzes über den Justizvollzug (Justizvollzugsgesetz, JVG) vom 13. November 2019, unter Verweis auf seine Erläuterungen Nr. P200913,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschiesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 258.200",
+    "links": [
+     {
+      "label": "258.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/258.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-258.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -73,7 +112,7 @@
     }
    ],
    "marginalie": [
-    "Abteilung Bewährungsdienste *"
+    "Abteilung Bewährungsdienste"
    ]
   },
   "6": {

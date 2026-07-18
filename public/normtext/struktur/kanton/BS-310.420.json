@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Zulassung und Höchstzahlen von ambulanten Leistungserbringern",
+  "erlassdatum": "Vom 17. Juni 2025 (Stand 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 35 ff. und 55a des Bundesgesetzes über die Krankenversicherung (KVG) vom 18. März 1994 sowie auf §§ 2, 49a und 49b des Gesundheitsgesetzes (GesG) vom 21. September 2011, unter Verweis auf seine Erläuterungen Nr. P250851,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 832.10",
+    "links": [
+     {
+      "label": "832.10",
+      "url": "https://db.clex.ch/link/Bund/832.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "KVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 300.100",
+    "links": [
+     {
+      "label": "300.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/300.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-300.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

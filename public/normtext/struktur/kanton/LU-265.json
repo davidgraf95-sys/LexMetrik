@@ -1,5 +1,66 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Kosten in Zivil-, Straf- und verwaltungsgerichtlichen Verfahren",
+  "erlassdatum": "vom 26.03.2013 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Kantonsgericht des Kantons Luzern,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 94 Absatz 1 des Gesetzes über die Organisation der Gerichte und Behörden in Zivil-, Straf- und verwaltungsgerichtlichen Verfahren (Justizgesetz) vom 10. Mai 2010, § 194 Absatz 2 des Gesetzes über die Verwaltungsrechtspflege vom 3. Juli 1972 und § 13 Absatz 3 des Gebührengesetzes vom 14. September 1993,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SRL Nr. 260, in der Fassung vom 14. Mai 2012 (G 2012 189)",
+    "links": [
+     {
+      "label": "260",
+      "url": "https://srl.lu.ch/data/260/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SRL Nr. 40",
+    "links": [
+     {
+      "label": "40",
+      "url": "https://srl.lu.ch/data/40/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SRL Nr. 680",
+    "links": [
+     {
+      "label": "680",
+      "url": "https://srl.lu.ch/data/680/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,6 +75,52 @@
    ],
    "marginalie": [
     "Bemessung der amtlichen Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 272 (AS 2010 1739). Auf dieses Gesetz wird im Folgenden nicht mehr hingewiesen.",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SR 312.0 (AS 2010 1881). Auf dieses Gesetz wird im Folgenden nicht mehr hingewiesen.",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SRL Nr. 40. Auf dieses Gesetz wird im Folgenden nicht mehr hingewiesen.",
+     "links": [
+      {
+       "label": "40",
+       "url": "https://srl.lu.ch/data/40/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -511,7 +618,7 @@
     }
    ],
    "marginalie": [
-    "Zeuginnen, Zeugen und Auskunftspersonen *"
+    "Zeuginnen, Zeugen und Auskunftspersonen"
    ]
   },
   "24": {
@@ -627,6 +734,24 @@
    ],
    "marginalie": [
     "Mediatorinnen und Mediatoren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 312.1",
+     "links": [
+      {
+       "label": "312.1",
+       "url": "https://db.clex.ch/link/Bund/312.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "JSTPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "29": {
@@ -793,6 +918,22 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "G 2010 450 (SRL Nr. 265)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "G 1976 187 (SRL Nr. 46)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -804,6 +945,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "G 2003 334 (SRL Nr. 265)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "40": {
@@ -815,6 +965,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Nach Inkrafttreten des Gesetzes über die Schaffung des Kantonsgerichtes vom 14. Mai 2012 durch das Kantonsgericht bestätigt am 10. Juni 2013.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30_a": {

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Denkmalschutz",
+  "erlassdatum": "Vom 20. März 1980 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -216,6 +234,22 @@
    ],
    "marginalie": [
     "Baugesuche und sonstige Veränderungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 18 Abs. 3: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "§ 18 Abs. 3: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -231,6 +265,22 @@
    ],
    "marginalie": [
     "Einbezug der Umgebung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 19 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 19 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -259,9 +309,7 @@
      "label": "2. Eintragung in das Denkmalverzeichnis"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [
@@ -401,6 +449,15 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 33 Ziff. 1: Die Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -423,6 +480,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 20 vom Bundesrat genehmigt am 3. 7. 1980.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16_a": {

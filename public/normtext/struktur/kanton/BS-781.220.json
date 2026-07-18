@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Verschärfung von Emissionsbegrenzungen für stationäre Anlagen",
+  "erlassdatum": "Vom 14. August 1990 (Stand 1. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 35 der Luftreinhalte-Verordnung vom 16. Dezember 1985,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 814.318.142.1.",
+    "links": [
+     {
+      "label": "814.318.142.1",
+      "url": "https://db.clex.ch/link/Bund/814.318.142.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "LRV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -30,9 +69,7 @@
      "label": "A. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -41,9 +78,7 @@
      "label": "A. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "5": {
    "gliederung": [
@@ -74,9 +109,7 @@
      "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [
@@ -118,9 +151,7 @@
      "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -185,7 +216,7 @@
     }
    ],
    "marginalie": [
-    "Dieselbetriebene Maschinen und Geräte auf baustellenähnlichen Anlagen *"
+    "Dieselbetriebene Maschinen und Geräte auf baustellenähnlichen Anlagen"
    ]
   },
   "6_a": {
@@ -206,9 +237,7 @@
      "label": "C. Verschärfung von Emissionsbegrenzungen für besondere Anlagen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7_b": {
    "gliederung": [

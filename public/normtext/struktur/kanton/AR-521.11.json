@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Polizeigesetz",
+  "erlassdatum": "vom 10.12.2002 (Stand 01.07.2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 43 des Polizeigesetzes vom 13. Mai 2002,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 521.1",
+    "links": [
+     {
+      "label": "521.1",
+      "url": "https://ar.clex.ch/data/521.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-521.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -179,6 +218,24 @@
    ],
    "marginalie": [
     "Polizeiliche Datensammlungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 521.12",
+     "links": [
+      {
+       "label": "521.12",
+       "url": "https://ar.clex.ch/data/521.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.12"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -314,6 +371,24 @@
    ],
    "marginalie": [
     "Namensschild"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 9 (bGS 521.1 )",
+     "links": [
+      {
+       "label": "521.1",
+       "url": "https://ar.clex.ch/data/521.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -374,6 +449,24 @@
    ],
    "marginalie": [
     "Haftbarkeit bei Unfällen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "REIS (bGS 142.211.1 )",
+     "links": [
+      {
+       "label": "142.211.1",
+       "url": "https://ar.clex.ch/data/142.211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -569,6 +662,40 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Art. 36 Abs. 2 des Gesetzes über die Verwaltungsrechtspflege (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "51": {
@@ -582,7 +709,25 @@
      "label": "I. Gebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "bGS 521.13",
+     "links": [
+      {
+       "label": "521.13",
+       "url": "https://ar.clex.ch/data/521.13/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.13"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "52": {
    "gliederung": [
@@ -612,6 +757,36 @@
    ],
    "marginalie": [
     "Grossveranstaltungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SR 741.01",
+     "links": [
+      {
+       "label": "741.01",
+       "url": "https://db.clex.ch/link/Bund/741.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Vgl. Art. 37 Polizeigesetz (bGS 521.1)",
+     "links": [
+      {
+       "label": "521.1)",
+       "url": "https://ar.clex.ch/data/521.1)/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "54": {
@@ -737,6 +912,24 @@
    ],
    "marginalie": [
     "Datenschutzkontrollorgan"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 521.1",
+     "links": [
+      {
+       "label": "521.1",
+       "url": "https://ar.clex.ch/data/521.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-521.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23_a": {
@@ -752,6 +945,20 @@
    ],
    "marginalie": [
     "Erkennungsdienstliche Behandlung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 7 DNA-Profil-Gesetz (SR 363 )",
+     "links": [
+      {
+       "label": "363",
+       "url": "https://db.clex.ch/link/Bund/363/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "52_a": {

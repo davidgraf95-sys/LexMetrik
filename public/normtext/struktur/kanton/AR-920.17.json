@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Landschaftsqualitätsbeiträge",
+  "erlassdatum": "vom 16.06.2014 (Stand 01.07.2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 74 des Bundesgesetzes vom 29. April 1998 über die Landwirtschaft, Art. 63 und 64 der Verordnung vom 23. Oktober 2013 über die Direktzahlungen an die Landwirtschaft und Art. 30 Abs. 2 des Gesetzes vom 7. Juni 1998 über die Landwirtschaft,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Landwirtschaftsgesetz (LwG; SR 910.1 )",
+    "links": [
+     {
+      "label": "910.1",
+      "url": "https://db.clex.ch/link/Bund/910.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Direktzahlungsverordnung (DZV; SR 910.13 )",
+    "links": [
+     {
+      "label": "910.13",
+      "url": "https://db.clex.ch/link/Bund/910.13/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "bGS 920.1",
+    "links": [
+     {
+      "label": "920.1",
+      "url": "https://ar.clex.ch/data/920.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-920.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

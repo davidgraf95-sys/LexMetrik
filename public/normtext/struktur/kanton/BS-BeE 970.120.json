@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über das Kommunikationsnetz (K-Netz) der Gemeinde Bettingen",
+  "erlassdatum": "Vom 23. April 2002 (Stand 1. Oktober 2002)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Gemeindeversammlung der Einwohnergemeinde Bettingen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, auf Antrag des Gemeinderats, gestützt auf § 6 Ziff. 6 der Gemeindeordnung der Einwohnergemeinde Bettingen vom 12. November 1985, folgende Ordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BeE 111.100.",
+    "links": [
+     {
+      "label": "BeE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BeE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -77,6 +108,15 @@
    "gliederung": [],
    "marginalie": [
     "Kontrollrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 1. 10. 2002.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

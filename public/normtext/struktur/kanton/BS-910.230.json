@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Stadtbelebungsfonds",
+  "erlassdatum": "Vom 15. Dezember 2020 (Stand 31. August 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5c des Standortförderungsgesetztes vom 29. Juni 2006, unter Verweis auf seine Erläuterungen Nr. P201693,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 910.200",
+    "links": [
+     {
+      "label": "910.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/910.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-910.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,20 @@
    ],
    "marginalie": [
     "Zweck und Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "https://www.raumplanung-staedtebau-stadtraum.bs.ch/dam/jcr:2c80e742-2d38-464d-9857-9cffbf9bc7fd/Entwicklungsrichtplan_Innenstadt_Karte.pdf",
+     "links": [
+      {
+       "label": "https://www.raumplanung-staedtebau-stadtraum.bs.ch/dam/jcr:2c80e742-2d38-464d-9857-9cffbf9bc7fd/Entwicklungsrichtplan_Innenstadt_Karte.pdf",
+       "url": "https://www.raumplanung-staedtebau-stadtraum.bs.ch/dam/jcr:2c80e742-2d38-464d-9857-9cffbf9bc7fd/Entwicklungsrichtplan_Innenstadt_Karte.pdf"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -86,7 +139,16 @@
     }
    ],
    "marginalie": [
-    "Übergangsbestimmung [3]"
+    "Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Eingefügt am 22. August 2023, in Kraft seit 31. August 2023 (KB 26.08.2023); § 8 bezieht sich auf die §§ 1 Abs. 2, 6 Abs. 1 und 1 bis.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

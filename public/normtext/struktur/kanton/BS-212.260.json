@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Aufnahme, Betreuung und Förderung von Kindern und Jugendlichen in Familienpflege",
+  "erlassdatum": "Vom 6. Dezember 2016 (Stand 1. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Verordnung über die Aufnahme von Pflegekindern (Pflegekinderverordnung, PAVO) vom 19. Oktober 1977 sowie auf das Gesetz betreffend Förder- und Hilfeleistungen für Kinder und Jugendliche (Kinder- und Jugendgesetz, KJG) vom 10. Dezember 2014, unter Verweis auf seine Erläuterungen Nr. P161906,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 211.222.338",
+    "links": [
+     {
+      "label": "211.222.338",
+      "url": "https://db.clex.ch/link/Bund/211.222.338/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "PAVO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 415.100",
+    "links": [
+     {
+      "label": "415.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/415.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-415.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

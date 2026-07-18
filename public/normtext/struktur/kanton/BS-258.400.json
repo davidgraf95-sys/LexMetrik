@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Vollzug von jugendstrafrechtlichen Sanktionen",
+  "erlassdatum": "Vom 13. Oktober 2010 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 3 der Schweizerischen Jugendstrafprozessordnung (JStPO) vom 20. März 2009 resp. Art. 439 Abs. 1 der Schweizerischen Strafprozessordnung (StPO) vom 5. Oktober 2007 und nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 10.0466.01 vom 30. März 2010 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 10.0466.02 vom 8. September 2010,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 311.1.",
+    "links": [
+     {
+      "label": "311.1",
+      "url": "https://db.clex.ch/link/Bund/311.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "JSTG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 312.0.",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Registraturen und das Archivieren",
+  "erlassdatum": "Vom 13. Oktober 1998 (Stand 1. Januar 2012)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 18 des Archivgesetzes vom 11. September 1996,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 153.600.",
+    "links": [
+     {
+      "label": "153.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.600/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.600"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -547,9 +586,7 @@
      "label": "(V.)4. Rechte der betroffenen Person"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [

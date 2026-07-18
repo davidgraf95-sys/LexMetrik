@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Interparlamentarische Konferenz der Nordwestschweiz",
+  "erlassdatum": "Vom 14. Juni 2022 (Stand 25. Februar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Bern, der Kantonsrat des Kantons Solothurn, der Grosse Rat des Kantons Basel-Stadt, der Landrat des Kantons Basel-Landschaft, der Grosse Rat des Kantons Aargau und das Parlament des Kantons Jura"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -53,6 +67,44 @@
    "gliederung": [],
    "marginalie": [
     "Sprache"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "BE: Genehmigt durch den Grossen Rat am 5. September 2022, rechtskräftig am 5. September 2022; SO: genehmigt durch den Kantonsrat am 8. November 2022, publiziert im Amtsblatt am 25. November 2022, rechtskräftig am 24. Februar 2023; BS: genehmigt durch den Grossen Rat am 19. Oktober 2022, publiziert im Kantonsblatt am 22. Oktober 2022, rechtskräftig am 3. November 2022; BL: genehmigt durch den Landrat am 29. September 2022, rechtskräftig am 29. September 2022; AG: genehmigt durch den Grossen Rat am 15. November 2022, rechtskräftig am 15. November 2022; JU: genehmigt durch das Parlament am 23. November 2022, rechtskräftig am 1. Januar 2023.",
+     "links": [
+      {
+       "label": "5. September 2022",
+       "url": "https://www.gr.be.ch/de/start/geschaefte/geschaeftssuche/geschaeftsdetail.html?guid=13bfe6124e0c485789af76121f26cdae"
+      },
+      {
+       "label": "Amtsblatt am 25. November 2022",
+       "url": "https://so.ch/fileadmin/internet/staatskanzlei/stk-regierungsdienste/pdf/FakRef/2022/0097-2022_krb.pdf"
+      },
+      {
+       "label": "24. Februar 2023",
+       "url": "https://so.ch/staatskanzlei/politische-rechte/fakultative-referenden/archiv/archiv-2022/"
+      },
+      {
+       "label": "Kantonsblatt am 22. Oktober 2022",
+       "url": "https://www.kantonsblatt.ch/#!/search/publications/detail/fcec2313-498c-4293-a9dd-a011c57537f8"
+      },
+      {
+       "label": "29. September 2022",
+       "url": "https://baselland.talus.ch/de/dokumente/geschaeft/e2384783990141ccbe91ee3cc69ea044-332"
+      },
+      {
+       "label": "15. November 2022",
+       "url": "https://www.ag.ch/grossrat/grweb/de/195/Detail%20Gesch%C3%A4ft?ProzId=5620098"
+      },
+      {
+       "label": "23. November 2022",
+       "url": "https://ju.recapp.ch/viewer/default/?entryKey=6375d93cf9c506c34794a8ef"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   }
  }

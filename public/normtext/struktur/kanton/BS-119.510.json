@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die internationale Zusammenarbeit zwecks Armutsbekämpfung und Stärkung der nachhaltigen Entwicklung",
+  "erlassdatum": "Vom 5. Mai 2026 (Stand 14. Mai 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die internationale Zusammenarbeit zwecks Armutsbekämpfung und Stärkung der nachhaltigen Entwicklung (GIZA) vom 14. Mai 2025 und das Staatsbeitragsgesetz (StBG) vom 11. Dezember 2013, unter Verweis auf seine Erläuterungen Nr. P260525,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 119.500",
+    "links": [
+     {
+      "label": "119.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/119.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-119.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 610.500",
+    "links": [
+     {
+      "label": "610.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/610.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-610.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -206,6 +262,15 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "In Kraft seit 14. Mai 2026.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

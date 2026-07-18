@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Erstellung von Parkplätzen für Personenwagen",
+  "erlassdatum": "Vom 22. Dezember 1992 (Stand 1. August 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 74 und 75 des Bau- und Planungsgesetzes (BPG) vom 17. November 1999, sowie auf die §§ 13, 16 und 19 bis des Umweltschutzgesetzes Basel-Stadt (USG BS) vom 13. März 1991,",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 730.100",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 780.100",
+    "links": [
+     {
+      "label": "780.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/780.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-780.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +88,15 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -76,7 +141,7 @@
     }
    ],
    "marginalie": [
-    "Ausgangszahl für Parkplätze *"
+    "Ausgangszahl für Parkplätze"
    ]
   },
   "7": {
@@ -106,7 +171,7 @@
     }
    ],
    "marginalie": [
-    "Zahl der Parkplätze *"
+    "Zahl der Parkplätze"
    ]
   },
   "9": {
@@ -121,7 +186,7 @@
     }
    ],
    "marginalie": [
-    "Spezielle Nutzungen *"
+    "Spezielle Nutzungen"
    ]
   },
   "10": {
@@ -136,7 +201,7 @@
     }
    ],
    "marginalie": [
-    "Zusätzliche Parkplätze *"
+    "Zusätzliche Parkplätze"
    ]
   },
   "11": {
@@ -151,7 +216,7 @@
     }
    ],
    "marginalie": [
-    "Parkplätze auf anderen Grundstücken *"
+    "Parkplätze auf anderen Grundstücken"
    ]
   },
   "12": {
@@ -249,9 +314,7 @@
      "label": "(III.)1. Berechnung der Anzahl Fahrten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19": {
    "gliederung": [

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zur Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen",
+  "erlassdatum": "Vom 23. Juni 2022 (Stand 1. Februar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 83 und 85 der Verfassung des Kantons Basel-Stadt vom 23. März 2005 und Art. 63 der Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen (IVöB) vom 15. November 2019, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 20.1317.01 vom 2. Februar sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 20.1317.02 vom 17. Mai 2022,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -35,6 +74,15 @@
    "gliederung": [],
    "marginalie": [
     "Erklärungen, Änderungen, Rechtskraft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "In Kraft getreten am 1. Februar 2024",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   }
  }

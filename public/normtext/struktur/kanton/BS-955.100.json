@@ -1,10 +1,66 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt",
+  "erlassdatum": "Vom 26. August 2008 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "I. Der Regierungsrat des Kantons Basel-Stadt erlässt in Ausführung von Art. 58 des Bundesgesetzes über die Binnenschifffahrt (BSG) vom 3. Oktober 1975 und Art. 165 der Verordnung über die Schifffahrt auf schweizerischen Gewässern (Binnenschifffahrtsverordnung, BSV) vom 8. November 1978 folgende Verordnung:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 747.201.",
+    "links": [
+     {
+      "label": "747.201",
+      "url": "https://db.clex.ch/link/Bund/747.201/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 747.201.1.",
+    "links": [
+     {
+      "label": "747.201.1",
+      "url": "https://db.clex.ch/link/Bund/747.201.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Fassung vom 11. Juni 2019, in Kraft seit 20. Juni 2019 (KB 15.06.2019)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -17,6 +73,15 @@
    "gliederung": [],
    "marginalie": [
     "Wasserskifahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Fassung vom 11. Juni 2019, in Kraft seit 20. Juni 2019 (KB 15.06.2019)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -39,9 +104,7 @@
   },
   "7": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [],

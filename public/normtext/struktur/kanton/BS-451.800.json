@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Eintritts- und Verwaltungs-Ordnung des Anatomischen Museums Basel",
+  "erlassdatum": "Vom 12. Juli 1995 (Stand 1. Dezember 1995)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "In Ausführung von § 13 des Gesetzes über das Universitätsgut und die Sammlungen und Anstalten der Universität vom 16. Oktober 1919 erlässt das Erziehungsdepartement folgende Ordnung für Eintritt und Verwaltung des Anatomischen Museums Basel:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Das Universitätsgesetz ist aufgehoben. Massgebend ist jetzt das Universitätsstatut vom 3. 5. 2012 (SG 440.110 ).",
+    "links": [
+     {
+      "label": "440.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/440.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-440.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Dieses Gesetz ist aufgehoben.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -27,7 +66,16 @@
   },
   "7": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 30. 8. 1995.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

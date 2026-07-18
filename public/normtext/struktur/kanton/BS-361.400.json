@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Sömmerungsvorschriften des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 13. Mai 2008 (Stand 18. Mai 2008)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Gesundheitsdepartement des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 32 der eidgenössischen Tierseuchenverordnung (TSV) vom 27. Juni 1995 und gestützt auf § 1 Abs. 1 der kantonalen Verordnung betreffend die Bekämpfung von Tierseuchen vom 26. März 1980, erlässt folgende Vorschriften für die Sömmerung von Tieren der Rinder-, Schaf- und Schweinegattung aus dem oder im Kanton Basel-Stadt:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 916.401.",
+    "links": [
+     {
+      "label": "916.401",
+      "url": "https://db.clex.ch/link/Bund/916.401/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Diese Verordnung ist aufgehoben. Massgebend ist jetzt die Verordnung über die Bekämpfung von Tierseuchen vom 20. 12. 2011 (SG 361.300 ).",
+    "links": [
+     {
+      "label": "361.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/361.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-361.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -76,6 +124,15 @@
    ],
    "marginalie": [
     "Anwendung der Erlasse wie für den übrigen Tierverkehr"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -287,6 +344,20 @@
    ],
    "marginalie": [
     "Amtstierärztliche Untersuchung und Gesundheitszeugnis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Dieser Link funktioniert nicht mehr. Siehe jetzt unter Bundesamt für Veterinärwesen BVET http://www.bvet.admin.ch bei Hausschafe und Hausziegen aus der EU: Sömmerung Deutschland und Sömmerung Österreich.",
+     "links": [
+      {
+       "label": "http://www.bvet.admin.ch",
+       "url": "http://www.bvet.admin.ch"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -534,6 +605,15 @@
    ],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 18. 5. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

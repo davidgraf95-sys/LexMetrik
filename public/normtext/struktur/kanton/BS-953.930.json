@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Beitragsleistung an Fahrten von mobilitätseingeschränkten Personen",
+  "erlassdatum": "Vom 22. September 2015 (Stand 1. Januar 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kanton Basel-Landschaft und der Kanton Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "beide vertreten durch den Regierungsrat,"
+   },
+   {
+    "rolle": "verb",
+    "text": "vereinbaren:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -65,18 +83,45 @@
    "gliederung": [],
    "marginalie": [
     "Rechtspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Für Basel-Stadt werden Verfügungen durch die Koordinationsstelle gemäss § 5 Abs. 1 lit. e dieser Vereinbarung vorbereitet und formell durch das zuständige Amt erlassen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BL: SGS 480.11; GS 33.0620 / BS: SG 953.930.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vom Landrat des Kantons Basel-Landschaft genehmigt am 19. November 2015.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

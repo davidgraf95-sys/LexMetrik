@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Maturitätsprüfungen im Kanton Basel-Stadt",
+  "erlassdatum": "Vom 28. März 2000 (Stand 12. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf das Reglement über die Anerkennung von gymnasialen Maturitätsausweisen (Maturitäts-Anerkennungsreglement MAR) vom 16. Januar 1995 und gestützt auf § 74 des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrates, die nachstehende Verordnung:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 419.910.",
+    "links": [
+     {
+      "label": "419.910",
+      "url": "https://www.gesetzessammlung.bs.ch/data/419.910/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-419.910"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -42,7 +94,7 @@
     }
    ],
    "marginalie": [
-    "Oberaufsicht *"
+    "Oberaufsicht"
    ]
   },
   "5": {
@@ -53,7 +105,7 @@
     }
    ],
    "marginalie": [
-    "Anforderungen an Lehrpersonen des Maturitätslehrgangs *"
+    "Anforderungen an Lehrpersonen des Maturitätslehrgangs"
    ]
   },
   "6": {
@@ -150,7 +202,7 @@
     }
    ],
    "marginalie": [
-    "Expertinnen und Experten *"
+    "Expertinnen und Experten"
    ]
   },
   "13": {
@@ -180,7 +232,7 @@
     }
    ],
    "marginalie": [
-    "Prüfungsfächer *"
+    "Prüfungsfächer"
    ]
   },
   "15": {
@@ -225,7 +277,7 @@
     }
    ],
    "marginalie": [
-    "Maturitätsnote in der Maturaarbeit *"
+    "Maturitätsnote in der Maturaarbeit"
    ]
   },
   "18": {
@@ -353,9 +405,7 @@
      "label": "C. Maturitätskurse für Berufstätige"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -364,9 +414,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [
@@ -375,9 +423,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -386,9 +432,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -397,9 +441,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -408,9 +450,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "32": {
    "gliederung": [
@@ -419,9 +459,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -430,9 +468,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "34": {
    "gliederung": [
@@ -441,9 +477,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [
@@ -452,9 +486,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -463,9 +495,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -474,9 +504,7 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -485,8 +513,15 @@
      "label": "III. Ergänzungsprüfungen vor der Kantonalen Maturitätskommission"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Titelnummerierung redaktionell berichtigt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "39": {
@@ -505,7 +540,16 @@
      "label": "IV. Schluss- und Übergangsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 9. 8. 1999, publiziert am 1. 4. 2000.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
+   ]
   },
   "40_a": {
    "gliederung": [
@@ -545,7 +589,7 @@
     }
    ],
    "marginalie": [
-    "Ressortgruppen, Ressortleitende und Fachkonferenzen *"
+    "Ressortgruppen, Ressortleitende und Fachkonferenzen"
    ]
   }
  }

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Personalordnung",
+  "erlassdatum": "Vom 24. April 2002 (Stand 1. Januar 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, auf Antrag des Gemeinderats und gestützt auf § 9 Abs. 1 Ziff. 6 des Gemeindegesetzes vom 17. Oktober 1984, folgende Ordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -109,6 +144,15 @@
    ],
    "marginalie": [
     "Arbeitszeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 10 Abs. 3 in der Fassung von § 43 der Lohnordnung vom 24. 9. 2008 (wirksam seit 1. 1. 2009).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -197,6 +241,15 @@
    ],
    "marginalie": [
     "Ausstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 18 Abs. 1 in der Fassung von § 43 der Lohnordnung vom 24. 9. 2008 (wirksam seit 1. 1. 2009).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -558,9 +611,7 @@
      "label": "VI. Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "52": {
    "gliederung": [
@@ -569,9 +620,7 @@
      "label": "VI. Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "53": {
    "gliederung": [
@@ -593,6 +642,15 @@
    ],
    "marginalie": [
     "Publikation und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 1. 7. 2002.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "39_a": {

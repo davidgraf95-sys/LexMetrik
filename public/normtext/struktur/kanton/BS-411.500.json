@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Pflichtlektionenzahl und die Lektionenzuteilung der Lehrpersonen an den vom Kanton geführten Schulen",
+  "erlassdatum": "Vom 13. Januar 2004 (Stand 1. Januar 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Erziehungsrates, gestützt auf §§ 3 und 23 des Personalgesetzes vom 17. November 1999 sowie in Ausführung von § 101 des Schulgesetzes vom 4. April 1929,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 162.100.",
+    "links": [
+     {
+      "label": "162.100.",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.100./de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -54,7 +106,7 @@
   "10": {
    "gliederung": [],
    "marginalie": [
-    "Rechtsmittel *"
+    "Rechtsmittel"
    ]
   },
   "11": {
@@ -72,7 +124,7 @@
   "1_a": {
    "gliederung": [],
    "marginalie": [
-    "Pflichtlektionenzahl und Lektionenzuteilung *"
+    "Pflichtlektionenzahl und Lektionenzuteilung"
    ]
   }
  }

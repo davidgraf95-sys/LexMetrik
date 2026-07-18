@@ -1,16 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Besoldung und die berufliche Vorsorge der Mitglieder des Regierungsrates",
+  "erlassdatum": "vom 23.02.2015 (Stand 01.06.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 83 Abs. 3 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Jahresbesoldung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "PG (bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
     "Kollektiv-Versicherungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "PG (bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -29,6 +83,15 @@
    "gliederung": [],
    "marginalie": [
     "Berufliche Vorsorge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "vgl. Art. 3 Abs. 1 lit. a des Gesetzes über die Pensionskasse AR (bGS 142.22)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {

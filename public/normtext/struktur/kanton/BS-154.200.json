@@ -1,5 +1,350 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über das Sozialversicherungsgericht des Kantons Basel-Stadt und über das Schiedsgericht in Sozialversicherungssachen",
+  "erlassdatum": "Vom 9. Mai 2001 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das – Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) vom 6. Oktober 2000, – das Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) vom 20. Dezember 1946, – das Bundesgesetz über die Invalidenversicherung (IVG) vom 19. Juni 1959, – das Bundesgesetz über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG) vom 19. März 1965, – Art. 73 des Bundesgesetzes über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) vom 25. Juni 1982, – Art. 25 des Bundesgesetzes über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (FZG) vom 17. Dezember 1993, – Art. 106 des Bundesgesetzes über die Militärversicherung (MVG) vom 19. Juni 1992, – Art. 86, 87 und 89 des Bundesgesetzes über die Krankenversicherung (KVG) vom 18. März 1994, – Art. 57 und 106 des Bundesgesetzes über die Unfallversicherung (UVG) vom 20. März 1981, – das Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee und Zivilschutz (EOG) vom 25. September 1952, – das Bundesgesetz über die Familienzulage in der Landwirtschaft (FLG) vom 20. Juni 1952, – das Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz) (AVIG) vom 25. Juni 1982, – Art. 47 Abs. 2 und 3 des Bundesgesetzes betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz) (VAG) vom 23. Juni 1978 und – das Gesetz betreffend die Versicherung der Mitarbeiterinnen und Mitarbeiter des Kantons Basel-Stadt bei Unfall und Krankheit vom 29. April 1992, – § 61 des Gesetzes betreffend die Pensionskasse des Basler Staatspersonals (Pensionskassengesetz) (PKG) vom 20. März 1980, – die Übergangsordnung zum Pensionskassengesetz des Basler Staatspersonals (UeO) vom 20. November 1984, – das Gesetz über die Kinderzulagen für Arbeitnehmende (KZG) vom 12. April 1962, – das Gesetz betreffend kantonale Alters- und Hinterlassenenversicherung (Auslauf der Versicherung) vom 19. Dezember 1968, – das Gesetz über die Einführung des Bundesgesetzes über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung sowie über die Ausrichtung von kantonalen Beihilfen (EG/ ELG) vom 11. November 1989, – das Gesetz über die Krankenversicherung im Kanton Basel-Stadt (GKV) vom 15. November 1989 auf Antrag seiner Kommission,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 830.1.",
+    "links": [
+     {
+      "label": "830.1",
+      "url": "https://db.clex.ch/link/Bund/830.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ATSG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 831.10.",
+    "links": [
+     {
+      "label": "831.10",
+      "url": "https://db.clex.ch/link/Bund/831.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "AHVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 831.20.",
+    "links": [
+     {
+      "label": "831.20",
+      "url": "https://db.clex.ch/link/Bund/831.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "IVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 831.30.",
+    "links": [
+     {
+      "label": "831.30",
+      "url": "https://db.clex.ch/link/Bund/831.30/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ELG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR 831.40.",
+    "links": [
+     {
+      "label": "831.40",
+      "url": "https://db.clex.ch/link/Bund/831.40/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SR 831.42.",
+    "links": [
+     {
+      "label": "831.42",
+      "url": "https://db.clex.ch/link/Bund/831.42/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "FZG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "SR 833.1.",
+    "links": [
+     {
+      "label": "833.1",
+      "url": "https://db.clex.ch/link/Bund/833.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "MVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "8",
+    "text": "SR 832.10.",
+    "links": [
+     {
+      "label": "832.10",
+      "url": "https://db.clex.ch/link/Bund/832.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "KVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "9",
+    "text": "SR 832.20.",
+    "links": [
+     {
+      "label": "832.20",
+      "url": "https://db.clex.ch/link/Bund/832.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "UVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "10",
+    "text": "SR 834.1. Titel jetzt: BG über den Erwerbsersatz für Dienstleistende und bei Mutterschaft (Erwerbsersatzgesetz, EOG).",
+    "links": [
+     {
+      "label": "834.1",
+      "url": "https://db.clex.ch/link/Bund/834.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "EOG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "11",
+    "text": "SR 836.1.",
+    "links": [
+     {
+      "label": "836.1",
+      "url": "https://db.clex.ch/link/Bund/836.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "12",
+    "text": "SR 837.0.",
+    "links": [
+     {
+      "label": "837.0",
+      "url": "https://db.clex.ch/link/Bund/837.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "AVIG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "13",
+    "text": "Dieses BG ist aufgehoben. Massgebend ist jetzt das BG betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG) vom 17. 12. 2004, Art. 85 Abs. 2 und 3 (SR 961.01 ).",
+    "links": [
+     {
+      "label": "961.01",
+      "url": "https://db.clex.ch/link/Bund/961.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "VAG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "14",
+    "text": "SG 165.100.",
+    "links": [
+     {
+      "label": "165.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/165.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-165.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "15",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz betreffend die Pensionskasse Basel-Stadt (Pensionskassengesetz) vom 28. 6. 2007 (SG 166.100 ).",
+    "links": [
+     {
+      "label": "166.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/166.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-166.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "16",
+    "text": "Diese Ordnung ist aufgehoben",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "17",
+    "text": "Dieses Gesetz wurde aufgehoben und ersetzt durch das Familienzulagengesetz vom 4. 6. 2008 (SG 820.100 ).",
+    "links": [
+     {
+      "label": "820.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/820.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-820.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "18",
+    "text": "SG 832.100.",
+    "links": [
+     {
+      "label": "832.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/832.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "19",
+    "text": "SG 832.700.",
+    "links": [
+     {
+      "label": "832.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/832.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-832.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "20",
+    "text": "SG 834.400.",
+    "links": [
+     {
+      "label": "834.400",
+      "url": "https://www.gesetzessammlung.bs.ch/data/834.400/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-834.400"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,6 +359,15 @@
    ],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "§ 1 Abs. 2: Siehe Übergangsbestimmung in § 24.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -134,6 +488,15 @@
    ],
    "marginalie": [
     "Akteneinsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "§ 9: Siehe Übergangsbestimmung in § 24.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -224,6 +587,15 @@
    ],
    "marginalie": [
     "Wiedereinsetzung in den vorigen Stand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "§ 15 Abs. 1: Siehe Übergangsbestimmung in § 24.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -355,6 +727,92 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "Abschn. II.: Die unter diesem Abschnitt zu findenden Änderungen anderer Erlasse werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "SG 154.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "SG 165.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gesetz betreffend die Pensionskasse Basel-Stadt (Pensionskassengesetz) vom 28. 6. 2007 (wirksam seit 1. 1. 2008, SG 166.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "SG 820.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "SG 832.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "30",
+     "text": "SG 832.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "SG 832.500.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "SG 832.700.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "SG 834.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "SG 835.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "Wirksam seit 1. 4. 2002.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

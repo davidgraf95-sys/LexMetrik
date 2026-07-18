@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Wasserbauverordnung",
+  "erlassdatum": "vom 05.12.2006 (Stand 01.10.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 34 des Gesetzes vom 25. September 2006 über den Wasserbau und die Gewässernutzung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "WBauG (bGS 741.1 )",
+    "links": [
+     {
+      "label": "741.1",
+      "url": "https://ar.clex.ch/data/741.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-741.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -20,7 +59,7 @@
     }
    ],
    "marginalie": [
-    "Vorübergehende Nutzung privater Grundstücke *"
+    "Vorübergehende Nutzung privater Grundstücke"
    ]
   },
   "3": {
@@ -32,6 +71,24 @@
    ],
    "marginalie": [
     "Periodisch anfallende, kleinere Unterhaltsarbeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 28 Perimeterverordnung (bGS 742.1 )",
+     "links": [
+      {
+       "label": "742.1",
+       "url": "https://ar.clex.ch/data/742.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-742.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -87,6 +144,36 @@
    ],
    "marginalie": [
     "Enteignungsbefugnis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 46 Abs. 2 und 3 Wasserrechtsgesetz (WRG; SR 721.80 )",
+     "links": [
+      {
+       "label": "721.80",
+       "url": "https://db.clex.ch/link/Bund/721.80/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "EntG (SR 711 )",
+     "links": [
+      {
+       "label": "711",
+       "url": "https://db.clex.ch/link/Bund/711/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ENTG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -109,6 +196,24 @@
    ],
    "marginalie": [
     "Vorbehalt der Baubewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -130,7 +235,7 @@
     }
    ],
    "marginalie": [
-    "Bewilligungen der Fachstelle *"
+    "Bewilligungen der Fachstelle"
    ]
   },
   "13": {
@@ -140,7 +245,16 @@
      "label": "V. Inkrafttreten"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "1. Januar 2007",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "1_a": {
    "gliederung": [

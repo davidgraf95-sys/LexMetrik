@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Einführungsgesetz zum Bundesgesetz über die Familienzulagen",
+  "erlassdatum": "vom 16.12.2008 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Einführungsgesetz vom 1. Dezember 2008 zum Bundesgesetz über die Familienzulagen,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG zum FamZG (bGS 822.41 )",
+    "links": [
+     {
+      "label": "822.41",
+      "url": "https://ar.clex.ch/data/822.41/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-822.41"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -109,6 +148,24 @@
    ],
    "marginalie": [
     "Grundsatz (Art. 19 und 20 EG zum FamZG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -120,6 +177,15 @@
    ],
    "marginalie": [
     "Register"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 13 EG zum FamZG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -131,6 +197,24 @@
    ],
    "marginalie": [
     "Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "bGS 831.1",
+     "links": [
+      {
+       "label": "831.1",
+       "url": "https://ar.clex.ch/data/831.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-831.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -142,6 +226,24 @@
    ],
    "marginalie": [
     "Abrechnungsstellen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "AHVG (SR 831.10 )",
+     "links": [
+      {
+       "label": "831.10",
+       "url": "https://db.clex.ch/link/Bund/831.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -163,7 +265,7 @@
     }
    ],
    "marginalie": [
-    "Nichterwerbstätige (Art. 8 Abs. 1 und 3 EG zum FamZG) *"
+    "Nichterwerbstätige (Art. 8 Abs. 1 und 3 EG zum FamZG)"
    ]
   },
   "16": {
@@ -208,6 +310,24 @@
    ],
    "marginalie": [
     "Statistik"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 20 Familienzulagenverordnung (FamZV; SR 836.21 )",
+     "links": [
+      {
+       "label": "836.21",
+       "url": "https://db.clex.ch/link/Bund/836.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FAMZV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -219,6 +339,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "bGS 822.411 (lf. Nr. 689)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -230,6 +359,22 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Abl. 2008, S. 1230",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Die Referendumsfrist ist am 3. Februar 2009 unbenützt abgelaufen (Abl. 2009, S. 179).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

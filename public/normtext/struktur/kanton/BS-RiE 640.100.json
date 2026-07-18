@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Steuerordnung der Gemeinde Riehen",
+  "erlassdatum": "Vom 26. März 2003 (Stand 1. Januar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "beschliesst auf Antrag des Gemeinderats und gestützt auf § 2 Abs. 1 und 2 des Gesetzes über die direkten Steuern (Steuergesetz) vom 12. April 2000, § 9 Abs. 1 Ziff. 5 des Gemeindegesetzes vom 17. Oktober 1984 sowie § 21 Abs. 3 lit. b und § 34 Abs. 1 der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002 folgende Ordnung:",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 640.100.",
+    "links": [
+     {
+      "label": "640.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/640.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-640.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "RiE 111.100.",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -394,6 +459,15 @@
    ],
    "marginalie": [
     "Zinssätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Für die Zinssätze siehe Anhang, Ziff. 4.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -536,6 +610,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Publiziert am 10. 5. 2003.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Wohnraumförderung",
+  "erlassdatum": "Vom 17. Juni 2014 (Stand 2. Juli 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Wohnraumförderung (Wohnraumfördergesetz; WRFG) vom 5. Juni 2013,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 861.500.",
+    "links": [
+     {
+      "label": "861.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/861.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-861.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,20 @@
    ],
    "marginalie": [
     "Preisgünstige Wohnungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 842.4",
+     "links": [
+      {
+       "label": "842.4",
+       "url": "https://db.clex.ch/link/Bund/842.4/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -25,6 +78,24 @@
    ],
    "marginalie": [
     "Organisationen des gemeinnützigen Wohnungsbaus"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 641.10",
+     "links": [
+      {
+       "label": "641.10",
+       "url": "https://db.clex.ch/link/Bund/641.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -55,6 +126,24 @@
    ],
    "marginalie": [
     "Geschäftsbericht und Rechnungslegung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -145,6 +234,32 @@
    ],
    "marginalie": [
     "Auflagen für die Gewährung von Leistungen gemäss §§ 11 – 13 WRFG"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 842",
+     "links": [
+      {
+       "label": "842",
+       "url": "https://db.clex.ch/link/Bund/842/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 842.1",
+     "links": [
+      {
+       "label": "842.1",
+       "url": "https://db.clex.ch/link/Bund/842.1/de"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -370,6 +485,24 @@
    ],
    "marginalie": [
     "Berücksichtigung der Einkommens- und Vermögensverhältnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SG 834.410",
+     "links": [
+      {
+       "label": "834.410",
+       "url": "https://www.gesetzessammlung.bs.ch/data/834.410/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-834.410"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "26": {
@@ -385,6 +518,24 @@
    ],
    "marginalie": [
     "Verhältnis zu Ergänzungsleistungen und Sozialhilfe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SG 140.500",
+     "links": [
+      {
+       "label": "140.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/140.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-140.500"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -430,6 +581,24 @@
    ],
    "marginalie": [
     "Rechtsmittelverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SG 153.100",
+     "links": [
+      {
+       "label": "153.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-153.100"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20_a": {

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Einführung des Bundesgesetzes über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung sowie über die Ausrichtung von kantonalen Beihilfen",
+  "erlassdatum": "Vom 11. November 1987 (Stand 1. September 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner beratenden Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,7 +36,16 @@
     }
    ],
    "marginalie": [
-    "Allgemeines *"
+    "Allgemeines"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§2 Abs. 2 vom Eidgenössischen Departement des Inneren genehmigt am 18.Juni 2025.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -28,9 +55,7 @@
      "label": "A. Ergänzungsleistungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -40,7 +65,7 @@
     }
    ],
    "marginalie": [
-    "Anrechenbare Taxen in Heimen und Spitälern *"
+    "Anrechenbare Taxen in Heimen und Spitälern"
    ]
   },
   "5": {
@@ -51,7 +76,7 @@
     }
    ],
    "marginalie": [
-    "Vermögensverzehr *"
+    "Vermögensverzehr"
    ]
   },
   "6": {
@@ -128,7 +153,7 @@
     }
    ],
    "marginalie": [
-    "Einsprache *"
+    "Einsprache"
    ]
   },
   "13": {
@@ -138,9 +163,7 @@
      "label": "A. Ergänzungsleistungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -182,9 +205,7 @@
      "label": "B. Kantonale Beihilfen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -194,7 +215,7 @@
     }
    ],
    "marginalie": [
-    "Maximale Höhe der Beihilfe an zu Hause Wohnende *"
+    "Maximale Höhe der Beihilfe an zu Hause Wohnende"
    ]
   },
   "19": {
@@ -268,9 +289,7 @@
      "label": "C. Beiträge an die Kosten des Umweltschutzabonnementes"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -292,6 +311,15 @@
    ],
    "marginalie": [
     "Kantonale Rechtsmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 12a: Gesetzestitel redaktionell berichtigt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21_a": {
@@ -312,9 +340,7 @@
      "label": "B. Kantonale Beihilfen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24_a": {
    "gliederung": [
@@ -324,7 +350,7 @@
     }
    ],
    "marginalie": [
-    "Kantonale Rechtsmittel *"
+    "Kantonale Rechtsmittel"
    ]
   },
   "25_a": {

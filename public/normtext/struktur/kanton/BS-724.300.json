@@ -1,5 +1,48 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vorschriften des Baudepartementes für die Ausführung von Grabarbeiten in der Allmend",
+  "erlassdatum": "Vom 25. November 1974 (Stand 25. November 1974)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Baudepartement"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, in Ausführung von § 37 der Verordnung des Regierungsrates über die Inanspuchnahme der Allmend durch ortsfeste Anlagen (Allmendverordnung) vom 5. November 1974, folgende Vorschriften:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Ingress: Erlasstitel redaktionell berichtigt.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Ingress: Diese Verordnung wurde aufgehoben. Jetzt gilt die Verordnung über die Inanspruchnahme der Allmend (Allmendverordnung) vom 4. 8. 2009, § 34 (SG 724.140 ).",
+    "links": [
+     {
+      "label": "724.140",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.140/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.140"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +53,24 @@
    ],
    "marginalie": [
     "Rechtsgrundlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 1: Diese Verordnung wurde aufgehoben. Jetzt gilt die Verordnung über die Inanspruchnahme der Allmend (Allmendverordnung) vom 4. 8. 2009 (SG 724.140 ).",
+     "links": [
+      {
+       "label": "724.140",
+       "url": "https://www.gesetzessammlung.bs.ch/data/724.140/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-724.140"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -43,6 +104,22 @@
    ],
    "marginalie": [
     "Sicherung der Leitungen und Vermessungsfixpunkte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 4 Abs. 1: Jetzt Swisscom.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Art. 4 Abs. 1: Neue Dienststellenbezeichnung «Amt für Umwelt und Energie» gemäss RRB vom 21. 7. 1998 und 5. 12. 2000.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -98,6 +175,15 @@
    ],
    "marginalie": [
     "Signale und Beleuchtung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 9: Heute Verordnung vom 5. 9. 1979.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -175,6 +261,15 @@
    ],
    "marginalie": [
     "Verwendung von überschüssigem Material"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 16: Jetzt Bau- und Verkehrsdepartement.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -252,6 +347,15 @@
    ],
    "marginalie": [
     "Kontrolle und Abnahme der Arbeiten, Ersatzvornahme"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 23 Abs. 4: Jetzt Bau- und Verkehrsdepartement.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   }
  }

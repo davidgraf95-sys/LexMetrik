@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Erstellung von Abstellplätzen für Velos und Mofas",
+  "erlassdatum": "Vom 24. Januar 2017 (Stand 29. Januar 2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 73 und 75 des Bau- und Planungsgesetzes (BPG) vom 17. November 1999 sowie § 13 des Umweltschutzgesetzes Basel-Stadt (USG BS) vom 13. März 1991, unter Verweis auf seine Erläuterungen Nr. P160240,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 730.100",
+    "links": [
+     {
+      "label": "730.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 780.100",
+    "links": [
+     {
+      "label": "780.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/780.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-780.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,6 +79,15 @@
    "gliederung": [],
    "marginalie": [
     "Berechnung der erforderlichen Anzahl Abstellplätze für Velos und Mofas bei weiteren Nutzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die massgeblichen Normen der Schweizerischen Strassen- und Verkehrsfachleute (VSS) liegen bei der kantonalen Baubewilligungsbehörde zur Einsicht auf bzw. sind beim VSS kostenpflichtig erhältlich.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -41,6 +106,15 @@
    "gliederung": [],
    "marginalie": [
     "Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 29. 1. 2017.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

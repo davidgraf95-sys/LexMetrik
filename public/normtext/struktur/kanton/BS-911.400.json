@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend den kantonalen Pflanzenschutzdienst",
+  "erlassdatum": "Vom 8. September 1970 (Stand 3. Dezember 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über die Förderung der Landwirtschaft und die Erhaltung des Bauernstandes vom 3. Oktober 1951 (Landwirtschaftsgesetz) sowie auf die Verordnung des Bundesrates über Pflanzenschutz vom 5. März 1962,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Landwirtschaftsgesetz vom 29. 4. 1998 (SR 910.1 ).",
+    "links": [
+     {
+      "label": "910.1",
+      "url": "https://db.clex.ch/link/Bund/910.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Diese Verordnung ist aufgehoben. Massgebend ist jetzt die Pflanzenschutzverordnung vom 28. 2. 2001 (SR 916.20 ).",
+    "links": [
+     {
+      "label": "916.20",
+      "url": "https://db.clex.ch/link/Bund/916.20/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,7 +59,16 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 3: Heutige Bezeichnung: Gesundheitsdepartement.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [],

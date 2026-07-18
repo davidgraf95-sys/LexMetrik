@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung der Abfallbehandlung in der Gemeinde Riehen",
+  "erlassdatum": "Vom 27. Januar 1993 (Stand 12. November 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat der Einwohnergemeinde Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Gemeinderates und gestützt auf § 9 des Gemeindegesetzes vom 17. Oktober 1984 und §§ 21 Abs. 3 lit. b und 34 Abs. 2 der Gemeindeordnung der Einwohnergemeinde Riehen vom 27. Februar 2002, erlässt folgende Ordnung der Abfallbehandlung in der Gemeinde Riehen, wobei Personen- und Funktionsbezeichnungen, soweit erforderlich, beide Geschlechter einschliessen:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "RiE 111.100.",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -321,6 +369,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts; Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 1. 7. 1993.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

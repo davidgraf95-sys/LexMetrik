@@ -1,5 +1,52 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen",
+  "erlassdatum": "Vom 23. Dezember 2008 (Stand 12. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 79a des Schulgesetzes vom 4. April 1929,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "§ 79a eingefügt ins Schulgesetz durch GRB vom 20. 2. 2008, wirksam ab 10. 8. 2009.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -42,7 +89,7 @@
     }
    ],
    "marginalie": [
-    "Vermittlungsverfahren *"
+    "Vermittlungsverfahren"
    ]
   },
   "5": {
@@ -251,7 +298,7 @@
     }
    ],
    "marginalie": [
-    "Teilnahme an der Schulkonferenz *"
+    "Teilnahme an der Schulkonferenz"
    ]
   },
   "24": {

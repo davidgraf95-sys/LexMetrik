@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Kantonspolizei des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 13. November 1996 (Stand 1. März 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -207,7 +225,7 @@
     }
    ],
    "marginalie": [
-    "Personalrechtliche Bestimmungen *"
+    "Personalrechtliche Bestimmungen"
    ]
   },
   "20": {
@@ -218,7 +236,7 @@
     }
    ],
    "marginalie": [
-    "Angestelltenkategorien *"
+    "Angestelltenkategorien"
    ]
   },
   "21": {
@@ -305,9 +323,7 @@
      "label": "IV. Organisation und Dienstrecht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -417,6 +433,15 @@
    ],
    "marginalie": [
     "Zuführung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 38 Abs. 2: Begriff «elterliche Gewalt» ersetzt durch «elterliche Sorge» anlässlich der Änderung des ZGB vom 26. 6. 1998 (neues Scheidungsrecht).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "39": {
@@ -844,6 +869,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§§ 1–32, 34–37 und 38–75 wirksam seit 1. 7 1997, § 33 wirksam seit 1. 7. 1999.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13_a": {
@@ -898,7 +932,7 @@
     }
    ],
    "marginalie": [
-    "Häusliche Gewalt *"
+    "Häusliche Gewalt"
    ]
   },
   "37_b": {
@@ -909,7 +943,7 @@
     }
    ],
    "marginalie": [
-    "Anordnung von Schutzmassnahmen *"
+    "Anordnung von Schutzmassnahmen"
    ]
   },
   "37_c": {
@@ -920,7 +954,7 @@
     }
    ],
    "marginalie": [
-    "Mitteilung bei Schutzmassnahmen *"
+    "Mitteilung bei Schutzmassnahmen"
    ]
   },
   "37_d": {
@@ -931,7 +965,7 @@
     }
    ],
    "marginalie": [
-    "Informations- und Meldepflichten *"
+    "Informations- und Meldepflichten"
    ]
   },
   "37_e": {
@@ -942,7 +976,7 @@
     }
    ],
    "marginalie": [
-    "Verlängerung der Schutzmassnahmen *"
+    "Verlängerung der Schutzmassnahmen"
    ]
   },
   "37_f": {
@@ -1069,6 +1103,15 @@
    ],
    "marginalie": [
     "Massnahmen gegenüber der gefährdenden Person"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Heute: Gesetz über die Information und den Datenschutz (Informations- und Datenschutzgesetz, IDG) vom 9. Juni 2010",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "61_e": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die öffentliche Sozialhilfe",
+  "erlassdatum": "vom 16.12.2008 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 15 und 42 des Gesetzes vom 24. September 2007 über die öffentliche Sozialhilfe,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SHG (bGS 851.1 )",
+    "links": [
+     {
+      "label": "851.1",
+      "url": "https://ar.clex.ch/data/851.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-851.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -35,6 +74,20 @@
    "gliederung": [],
    "marginalie": [
     "Verkehr mit anderen Kantonen (Art. 32 SHG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 34 Zuständigkeitsgesetz (ZUG; SR 851.1 )",
+     "links": [
+      {
+       "label": "851.1",
+       "url": "https://db.clex.ch/link/Bund/851.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {

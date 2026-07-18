@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend die Staatsoberaufsicht über die öffentlich-rechtlichen Kirchen und die Israelitische Gemeinde sowie über die Verwendung von Staats- und Gemeindemitteln zu Kirchenzwecken",
+  "erlassdatum": "Vom 8. November 1973 (Stand 26. Januar 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von § 19 der Kantonsverfassung vom 2. Dezember 1889 (Partialrevision vom 3. Dezember 1972),",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Gesetz:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Diese Verfassung wurde aufgehoben. Massgebend ist jetzt die Verfassung des Kantons Basel-Stadt vom 23. 3. 2005, § 127 (SG 111.100 ).",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -26,7 +65,16 @@
      "label": "I. Die Staatsoberaufsicht über die öffentlich-rechtlichen Kirchen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 3: Begriff «elterliche Gewalt» ersetzt durch «elterliche Sorge» anlässlich der Änderung des ZGB vom 26. 6. 1998 (neues Scheidungsrecht).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -53,8 +101,24 @@
      "label": "I. Die Staatsoberaufsicht über die öffentlich-rechtlichen Kirchen"
     }
    ],
-   "marginalie": [
-    "[3]"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 6 teilweise in der Fassung von § 53 Ziff. 10 des Organisationsgesetzes vom 22. 4. 1976 (SG 153.100 ).",
+     "links": [
+      {
+       "label": "153.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-153.100"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "7": {

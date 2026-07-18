@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Umsetzungsvertrag zwischen den Kantonen Basel-Stadt und Basel-Landschaft über die Annahme von Abfällen in der Kehrichtverwertungsanlage Basel (KVA) und von Verbrennungsrückständen aus der KVA auf der Deponie Elbisgraben",
+  "erlassdatum": "Vom 24. September 2019 (Stand 1. Oktober 2019)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Ziffer 1.2 der Vereinbarung zwischen den Kantonen Basel-Stadt und Basel-Landschaft über die Annahme von Abfällen in der Kehrichtverwertungsanlage Basel und der Deponie Elbisgraben vom 5. Februar 2019 schliessen die Regierungen der Kantone Basel-Stadt und Basel-Landschaft zu deren Vollzug den nachfolgenden Umsetzungsvertrag ab:"
+   }
+  ]
+ },
  "artikel": {
   "1.1": {
    "gliederung": [
@@ -73,7 +83,16 @@
      "label": "2. Organisation der Plattform"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Das Amt für Industrielle Betriebe (AIB) ist eine Dienststelle des Kantons Basel-Landschaft.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2.3": {
    "gliederung": [
@@ -120,7 +139,23 @@
      "label": "3. Abfallbehandlung in der Kehrichtverwertungsanlage Basel"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Mit KELSAG, GAF und dem Landkreis Lörrach (= öffentlich-rechtliche Abfalllieferanten) bestehen separate Verträge mit folgenden garantierten Liefermengen und einer Toleranz von +/- 10%: (1) Kehrichtbeseitigung Laufental-Schwarzbubenland AG (KELSAG), 7'000 Tonnen / Jahr, davon 3'200 Tonnen Anteil Gemeinden Basel-Landschaft; (2) Gemeindeverband Abfallbewirtschaftung Unteres Fricktal (GAF), 6'000 Tonnen / Jahr, davon Anteil 800 Tonnen Anteil Gemeinden Basel-Landschaft; (3) Landkreis Lörrach, 40'500 Tonnen / Jahr.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Es gilt eine Toleranz von +/- 10%. Die Vollauslastung der KVA beträgt 225'000 Tonnen pro Jahr.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "3.1.2": {
    "gliederung": [
@@ -129,7 +164,16 @@
      "label": "3. Abfallbehandlung in der Kehrichtverwertungsanlage Basel"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Gebührentarif der IWB Industrielle Werke Basel betreffend die Entgegennahme von Abfällen zur Verbrennung in der Kehrichtverwertungsanlage (KVA), SG 786.170.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3.2": {
    "gliederung": [
@@ -245,7 +289,16 @@
      "label": "4. Abfallbehandlung in der Deponie Elbisgraben"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Die Berechnung basiert auf der Abfallmenge gemäss Ziff. 3.1.1 und der angenommenen Gewichtsreduktion von 83%.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4.2": {
    "gliederung": [
@@ -265,7 +318,16 @@
      "label": "4. Abfallbehandlung in der Deponie Elbisgraben"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA) vom 4. Dezember 2015, SR 814.600.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4.2.2": {
    "gliederung": [
@@ -274,7 +336,16 @@
      "label": "4. Abfallbehandlung in der Deponie Elbisgraben"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vgl. Fussnote 5.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4.2.3": {
    "gliederung": [
@@ -321,7 +392,16 @@
      "label": "5. Tarife"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Weisung 3/2018 der ElCom vom 10. 4. 2018 für WACC Produktion.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "6.1": {
    "gliederung": [

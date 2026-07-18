@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Einführung des Bundesgesetzes über die Krankenversicherung",
+  "erlassdatum": "vom 05.01.2010 (Stand 01.01.2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Einführungsgesetz vom 14. September 2009 zum Bundesgesetz über die Krankenversicherung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG zum KVG (bGS 833.14 )",
+    "links": [
+     {
+      "label": "833.14",
+      "url": "https://ar.clex.ch/data/833.14/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-833.14"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +48,25 @@
     }
    ],
    "marginalie": [
-    "Revisionsstelle *"
+    "Revisionsstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -20,7 +77,7 @@
     }
    ],
    "marginalie": [
-    "Nichtbezahlung von Prämien und Kostenbeteiligungen *"
+    "Nichtbezahlung von Prämien und Kostenbeteiligungen"
    ]
   },
   "3": {
@@ -31,7 +88,7 @@
     }
    ],
    "marginalie": [
-    "Meldepflicht des Versicherers *"
+    "Meldepflicht des Versicherers"
    ]
   },
   "4": {
@@ -43,6 +100,24 @@
    ],
    "marginalie": [
     "Ausstand des Leistungserbringers"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -54,6 +129,24 @@
    ],
    "marginalie": [
     "Massgebendes Einkommen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "BVG (SR 831.40 )",
+     "links": [
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -172,7 +265,7 @@
     }
    ],
    "marginalie": [
-    "Datenbekanntgabe *"
+    "Datenbekanntgabe"
    ]
   }
  }

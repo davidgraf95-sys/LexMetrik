@@ -1,5 +1,138 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Erhebung von Verwaltungskostenbeiträgen durch die Kantonale Ausgleichskasse/AHV",
+  "erlassdatum": "Vom 8. November 1983 (Stand 1. Januar 1984)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 69 des Bundesgesetzes über die Alters- und Hinterlassenenversicherung vom 20. Dezember 1946 und § 15 des kantonalen Einführungsgesetzes zum Bundesgesetz über die Alters- und Hinterlassenenversicherung vom 21. Oktober 1948, Art. 18 Abs. 2 des Bundesgesetzes über Familienzulagen in der Landwirtschaft (FLG) vom 20. Juni 1952, Art. 22 des Bundesgesetzes über die Erwerbsersatzordnung für Wehr- und Zivilschutzpflichtige vom 25. September 1952, Art. 66 des Bundesgesetzes über die Invalidenversicherung vom 19. Juni 1959 und § 2 des kantonalen Einführungsgesetzes zum Bundesgesetz über die Invalidenversicherung vom 11. Januar 1962, in Anwendung von Art. 1 der Verordnung des Eidgenössischen Departements des Innern über den Höchstansatz der Verwaltungskostenbeiträge in der AHV vom 11. Oktober 1972,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 831.10.",
+    "links": [
+     {
+      "label": "831.10",
+      "url": "https://db.clex.ch/link/Bund/831.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "AHVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 832.200. Jetzt: Gesetz vom 5. 6. 1991.",
+    "links": [
+     {
+      "label": "832.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/832.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-832.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 836.1.",
+    "links": [
+     {
+      "label": "836.1",
+      "url": "https://db.clex.ch/link/Bund/836.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR 834.1. Titel jetzt: Bundesgesetz über den Erwerbsersatz für Dienstleistende und bei Mutterschaft (Erwerbsersatzgesetz, EOG).",
+    "links": [
+     {
+      "label": "834.1",
+      "url": "https://db.clex.ch/link/Bund/834.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "EOG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR 831.20.",
+    "links": [
+     {
+      "label": "831.20",
+      "url": "https://db.clex.ch/link/Bund/831.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "IVG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SG 832.500.",
+    "links": [
+     {
+      "label": "832.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/832.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-832.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "SR 831.143.41.",
+    "links": [
+     {
+      "label": "831.143.41",
+      "url": "https://db.clex.ch/link/Bund/831.143.41/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -19,7 +152,16 @@
   },
   "5": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Die Verordnung vom 2. 11. 1948, mit Abänderung vom 21. 4. 1953, ist bereits durch RRB vom 14. 2. 1956 aufgehoben worden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

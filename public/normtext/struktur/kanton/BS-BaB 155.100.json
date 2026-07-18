@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Organisation der E. Zünfte der Stadt Basel",
+  "erlassdatum": "Vom 20. Februar 1990 (Stand 1. Januar 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat der Stadt Basel,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5 des Ausscheidungsvertrages vom 6. Juni 1876, § 21 Abs. 1 lit. c des Gemeindegesetzes vom 17. Oktober 1984 und § 34 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement über die Organisation der Zünfte der Stadt Basel (Zunftordnung):"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 172.200.",
+    "links": [
+     {
+      "label": "BaB 172.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20172.200/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -192,7 +257,7 @@
     }
    ],
    "marginalie": [
-    "Rücktritt von Vorgesetzten *"
+    "Rücktritt von Vorgesetzten"
    ]
   },
   "19": {
@@ -226,6 +291,15 @@
    ],
    "marginalie": [
     "Rekurs an den Bürgerrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 153.100.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "22": {

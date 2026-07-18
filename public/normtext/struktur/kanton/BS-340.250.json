@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung der nordwestschweizerischen Kantone über die Führung eines regionalen Heilmittelinspektorates",
+  "erlassdatum": "Vom 16. Juli 2003 (Stand 16. Juli 2003)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Die Regierungen der Kantone Bern, Luzern, Solothum, Basel-Stadt, Basel-Landschaft und Aargau schliessen in Ausführung von Art. 60 Abs. 3 des Bundesgesetzes über Arzneimittel und Medizinprodukte vom 15. Dezember 2000 (Heilmittelgesetz, HMG) folgende Vereinbarung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 812.21.",
+    "links": [
+     {
+      "label": "812.21",
+      "url": "https://db.clex.ch/link/Bund/812.21/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "HMG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +63,36 @@
    ],
    "marginalie": [
     "Organe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Jetzt: Gesundheitsdirektorenkonferenz der Nordwestschweiz (GDK NWCH).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -43,6 +104,43 @@
    ],
    "marginalie": [
     "Zuständigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -54,6 +152,15 @@
    ],
    "marginalie": [
     "Aufsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -109,6 +216,15 @@
    ],
    "marginalie": [
     "Beitritt zur Vereinbarung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -120,6 +236,15 @@
    ],
    "marginalie": [
     "Austritt aus der Vereinbarung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Jetzt: GDK NWCH.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {

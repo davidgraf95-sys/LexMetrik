@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren im Ausländerrecht",
+  "erlassdatum": "vom 09.11.2021 (Stand 01.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 5 der Verordnung vom 29. Oktober 2007 zur Bundesgesetzgebung über die Ausländerinnen und Ausländer,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 122.21",
+    "links": [
+     {
+      "label": "122.21",
+      "url": "https://ar.clex.ch/data/122.21/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-122.21"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,6 +50,20 @@
    "gliederung": [],
    "marginalie": [
     "Gebührenhöhe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. Art. 8 Gebührenverordnung AIG (SR 142.209 )",
+     "links": [
+      {
+       "label": "142.209",
+       "url": "https://db.clex.ch/link/Bund/142.209/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -29,6 +82,24 @@
    "gliederung": [],
    "marginalie": [
     "Ergänzendes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 233.2",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

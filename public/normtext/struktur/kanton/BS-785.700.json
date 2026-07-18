@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen dem Kanton Basel-Stadt und dem Kanton Basel-Landschaft betreffend die gemeinsame Durchführung von Gewässerschutzmassnahmen",
+  "erlassdatum": "Vom 13. August 1974 (Stand 2. September 1975)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Kanton Basel-Stadt, vertreten durch den Regierungsrat, und der Kanton Basel-Landschaft, vertreten durch den Regierungsrat, schliessen den folgenden Vertrag ab:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +20,15 @@
    ],
    "marginalie": [
     "Abwasserreinigungsanlage Basel (ARA Basel)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "In der Gesetzessammlung datiert vom 18./16. 6. 1974.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -208,6 +227,15 @@
    ],
    "marginalie": [
     "Streitigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 19: Zitiert ist hier das aufgehobene Bundesgesetz vom 8. 10. 1971. Massgebend ist jetzt das Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz) vom 24. 1. 1991 (SR 814.20).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -241,6 +269,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Genehmigt: Vom Grossen Rat des Kantons Basel-Stadt durch das Gesetz betreffend die Abwässerreinigung vom 25. 6. 1975, vom Landrat des Kantons Basel-Landschaft am 26. 5. 1975, vom Bundesrat am 2. 9. 1975.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10. 1": {
@@ -251,7 +288,16 @@
     }
    ],
    "marginalie": [
-    "ARA Birs II [4]"
+    "ARA Birs II"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "10.2": {
@@ -263,6 +309,15 @@
    ],
    "marginalie": [
     "ARA Basel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Redaktionelle Ergänzung: entspricht nun Art. 10.1 Abs. 1.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   }
  }

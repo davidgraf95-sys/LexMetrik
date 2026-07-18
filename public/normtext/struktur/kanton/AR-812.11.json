@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Spitalverbund Appenzell Ausserrhoden",
+  "erlassdatum": "vom 19.09.2011 (Stand 01.01.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 48 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +48,7 @@
     }
    ],
    "marginalie": [
-    "Rechtsform und Sitz *"
+    "Rechtsform und Sitz"
    ]
   },
   "2": {
@@ -126,6 +165,24 @@
    ],
    "marginalie": [
     "Personalkommission"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "PG (bGS 142.21 )",
+     "links": [
+      {
+       "label": "142.21",
+       "url": "https://ar.clex.ch/data/142.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -141,6 +198,24 @@
    ],
    "marginalie": [
     "Revisionsstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 612.0",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -185,7 +260,25 @@
     }
    ],
    "marginalie": [
-    "Departement Gesundheit und Soziales *"
+    "Departement Gesundheit und Soziales"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "bGS 811.1",
+     "links": [
+      {
+       "label": "811.1",
+       "url": "https://ar.clex.ch/data/811.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -208,6 +301,20 @@
    ],
    "marginalie": [
     "Berufliche Vorsorge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "V über die Pensionskasse von Appenzell Ausserrhoden (bGS 142.213 )",
+     "links": [
+      {
+       "label": "142.213",
+       "url": "https://ar.clex.ch/data/142.213/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -239,6 +346,15 @@
    ],
    "marginalie": [
     "Grundstücke, Bauten und Baurecht der Spitäler Heiden und Herisau"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 210",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -316,6 +432,24 @@
    ],
    "marginalie": [
     "Leistungsentschädigungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -327,6 +461,24 @@
    ],
    "marginalie": [
     "Rechnungsführung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "bGS 612.0",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "28": {
@@ -389,6 +541,31 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "bGS 811.1",
+     "links": [
+      {
+       "label": "811.1",
+       "url": "https://ar.clex.ch/data/811.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Die Änderungen wurden in den betreffenden Erlass eingefügt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -400,6 +577,22 @@
    ],
    "marginalie": [
     "Referendum und Inkfraftreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Die Referendumsfrist ist am 22. November 2011 unbenützt abgelaufen (RRB vom 13. Dezember 2011; Abl. 2011, S. 1451).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "1. Januar 2012 (RRB vom 13. Dezember 2011; Abl. 2011, S. 1451).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

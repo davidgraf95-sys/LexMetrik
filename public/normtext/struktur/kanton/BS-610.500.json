@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Staatsbeitragsgesetz",
+  "erlassdatum": "Vom 11. Dezember 2013 (Stand 18. Februar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 11.1792.01 vom 5. Februar 2013 sowie in den Bericht der Finanzkommission und den Mitberichten der Bildungs- und Kulturkommission und der Gesundheits- und Sozialkommission Nr. 11.1792.02 vom 31. Oktober 2013,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -295,7 +313,107 @@
     }
    ],
    "marginalie": [
-    "Änderung bisherigen Rechts [1]"
+    "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "§ 23: Diese Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "SG 190.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SG 410.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 420.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 491.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SG 494.300.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SG 497.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "SG 576.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SG 610.200.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "SG 772.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SG 780.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "SG 815.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "SG 832.700.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "SG 834.400.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -318,6 +436,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Wirksam seit 26. 1. 2014.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7_a": {

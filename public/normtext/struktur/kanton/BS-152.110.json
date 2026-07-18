@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausführungsbestimmungen zum Gesetz über die Geschäftsordnung des Grossen Rates",
+  "erlassdatum": "Vom 29. Juni 2006 (Stand 18. Dezember 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 86 des Gesetzes über die Geschäftsordnung des Grossen Rates (GO) vom 29. Juni 2006, nach Einsichtnahme in den Bericht der Spezialkommission für die Umsetzung der neuen Verfassung Nr. 06.5165.02, vom 23. Mai 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Ausführungsbestimmungen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 152.100.",
+    "links": [
+     {
+      "label": "152.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/152.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-152.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -31,7 +70,7 @@
     }
    ],
    "marginalie": [
-    "Sessionsdaten *"
+    "Sessionsdaten"
    ]
   },
   "4": {
@@ -218,7 +257,7 @@
     }
    ],
    "marginalie": [
-    "Zugang zu den Geschäftsunterlagen *"
+    "Zugang zu den Geschäftsunterlagen"
    ]
   },
   "21": {
@@ -295,7 +334,7 @@
     }
    ],
    "marginalie": [
-    "Schliessung der Redeliste *"
+    "Schliessung der Redeliste"
    ]
   },
   "28": {
@@ -306,7 +345,7 @@
     }
    ],
    "marginalie": [
-    "Voten der Mitglieder des Regierungsrates und der Gerichte *"
+    "Voten der Mitglieder des Regierungsrates und der Gerichte"
    ]
   },
   "29": {
@@ -504,7 +543,7 @@
     }
    ],
    "marginalie": [
-    "Teilnahme von Mitgliedern des Regierungsrates und der Gerichte *"
+    "Teilnahme von Mitgliedern des Regierungsrates und der Gerichte"
    ]
   },
   "47": {
@@ -724,7 +763,7 @@
     }
    ],
    "marginalie": [
-    "Kommissionsmittel *"
+    "Kommissionsmittel"
    ]
   }
  }

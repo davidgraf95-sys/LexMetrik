@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen",
+  "erlassdatum": "vom 10.12.2002 (Stand 01.01.2003)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 30 Abs. 2 des Polizeigesetzes vom 13. Mai 2002,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 521.1",
+    "links": [
+     {
+      "label": "521.1",
+      "url": "https://ar.clex.ch/data/521.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-521.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +93,15 @@
    ],
    "marginalie": [
     "c) Erkennungsdienstliche Daten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Siehe auch Art. 131 G über den Strafprozess (Strafprozessordnung; bGS 321.1)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -109,6 +157,15 @@
    ],
    "marginalie": [
     "Personenbezogene Daten a) Erkennungsdienstliche Daten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 321.1",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -142,6 +199,24 @@
    ],
    "marginalie": [
     "d) Anzeigedaten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -175,6 +250,24 @@
    ],
    "marginalie": [
     "Meldescheine"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 12 Gesetz über das Gastgewerbe (bGS 955.11 )",
+     "links": [
+      {
+       "label": "955.11",
+       "url": "https://ar.clex.ch/data/955.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-955.11"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -261,6 +354,24 @@
    ],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {

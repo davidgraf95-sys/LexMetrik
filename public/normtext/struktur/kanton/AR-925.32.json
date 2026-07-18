@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Tiergesundheit",
+  "erlassdatum": "vom 16.11.1998 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 59 des eidgenössischen Tierseuchengesetzes vom 1. Juli 1966, auf Art. 30 des Gesetzes über die Landwirtschaft vom 7. Juni 1998 sowie auf Art. 74 Abs. 2 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "TSG (SR 916.40 ); vgl. auch eidg. Tierseuchenverordnung vom 27. Juni 1995 (TSV; SR 916.401 )",
+    "links": [
+     {
+      "label": "916.40",
+      "url": "https://db.clex.ch/link/Bund/916.40/de"
+     },
+     {
+      "label": "916.401",
+      "url": "https://db.clex.ch/link/Bund/916.401/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 920.1",
+    "links": [
+     {
+      "label": "920.1",
+      "url": "https://ar.clex.ch/data/920.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-920.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +82,30 @@
     }
    ],
    "marginalie": [
-    "Veterinäramt [4]"
+    "Veterinäramt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 6 G über die Landwirtschaft",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Art. 3 Ziff. 1 TSG, Art. 300 f. TSV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Art. 3 Ziff. 1 TSG, Art. 302 f. TSV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -20,7 +116,16 @@
     }
    ],
    "marginalie": [
-    "Kontrolltierärzte [7]"
+    "Kontrolltierärzte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 304 TSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "3": {
@@ -31,7 +136,23 @@
     }
    ],
    "marginalie": [
-    "Nichtamtliche Tierärzte [8]"
+    "Nichtamtliche Tierärzte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 3 TSG",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 294 TSV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -42,7 +163,16 @@
     }
    ],
    "marginalie": [
-    "Viehinspektoren [10]"
+    "Viehinspektoren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 4 TSG, Art. 305 TSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "5": {
@@ -53,7 +183,30 @@
     }
    ],
    "marginalie": [
-    "Bieneninspektoren [11]"
+    "Bieneninspektoren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 5 TSG, Art. 308 ff. TSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Art. 310 TSV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Zu den einzelnen Bekämpfungsmassnahmen siehe insbesondere Art. 59 ff. TSV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -65,6 +218,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 9 TSG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -86,7 +248,16 @@
     }
    ],
    "marginalie": [
-    "Mitwirkungspflicht der Behörden [15]"
+    "Mitwirkungspflicht der Behörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Art. 295 TSV, Art. 8 G über die Landwirtschaft",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "9": {
@@ -97,7 +268,16 @@
     }
    ],
    "marginalie": [
-    "Amtliche Schätzung [16]"
+    "Amtliche Schätzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Art. 36 TSG, Art. 75 TSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "10": {
@@ -108,7 +288,16 @@
     }
    ],
    "marginalie": [
-    "Entschädigungen für Tierverluste [17]"
+    "Entschädigungen für Tierverluste"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Art. 32 ff. TSG, Art. 24 G über die Landwirtschaft",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "11": {
@@ -119,7 +308,16 @@
     }
    ],
    "marginalie": [
-    "Andere Entschädigungen [18]"
+    "Andere Entschädigungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Art. 24 G über die Landwirtschaft",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "12": {
@@ -130,7 +328,16 @@
     }
    ],
    "marginalie": [
-    "Beiträge der Tiergesundheitskasse [19]"
+    "Beiträge der Tiergesundheitskasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "Art. 24 Abs. 2 G über die Landwirtschaft",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "13": {
@@ -141,7 +348,16 @@
     }
    ],
    "marginalie": [
-    "Registrierung und Kennzeichnung [20]"
+    "Registrierung und Kennzeichnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "Art. 7 ff. TSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "14": {
@@ -153,6 +369,15 @@
    ],
    "marginalie": [
     "Beförderung von Tieren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "Art. 25 TSV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -163,7 +388,16 @@
     }
    ],
    "marginalie": [
-    "Viehmärkte und andere Veranstaltungen mit Tieren [22]"
+    "Viehmärkte und andere Veranstaltungen mit Tieren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Art. 18 TSG, Art. 27 ff. TSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "16": {
@@ -174,7 +408,32 @@
     }
    ],
    "marginalie": [
-    "Viehhandel [23]"
+    "Viehhandel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "Art. 34 ff. TSV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "Interkantonale Übereinkunft vom 13. September 1943 über den Viehhandel (bGS 925.51 )",
+     "links": [
+      {
+       "label": "925.51",
+       "url": "https://ar.clex.ch/data/925.51/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-925.51"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -185,7 +444,28 @@
     }
    ],
    "marginalie": [
-    "Entsorgungspflicht [25]"
+    "Entsorgungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "Art. 16 f. eidg. V über die Entsorgung tierischer Abfälle (VETA; SR 916.441.22 )",
+     "links": [
+      {
+       "label": "916.441.22",
+       "url": "https://db.clex.ch/link/Bund/916.441.22/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "Art. 27 G über die Landwirtschaft",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -196,7 +476,28 @@
     }
    ],
    "marginalie": [
-    "Tierkörpersammelstellen [27]"
+    "Tierkörpersammelstellen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "Art. 4 und 18 VETA (SR 916.441.22 ), Art. 26 G über die Landwirtschaft",
+     "links": [
+      {
+       "label": "916.441.22",
+       "url": "https://db.clex.ch/link/Bund/916.441.22/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "Art. 311 TSV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -207,7 +508,21 @@
     }
    ],
    "marginalie": [
-    "Wasenplätze [29]"
+    "Wasenplätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "Art. 8 VETA (SR 916.441.22 )",
+     "links": [
+      {
+       "label": "916.441.22",
+       "url": "https://db.clex.ch/link/Bund/916.441.22/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "20": {
@@ -230,6 +545,15 @@
    ],
    "marginalie": [
     "Ergänzende Bestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "Art. 17 G über die Landwirtschaft",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -252,6 +576,22 @@
    ],
    "marginalie": [
     "Aufgehobene Erlasse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "bGS 925.32 (lf. Nr. 123) mit Änderung vom 18. November 1996 (lf. Nr. 625)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "bGS 925.52 (lf. Nr. 101) mit Änderung vom 6. April 1982 (lf. Nr. 86)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "24": {

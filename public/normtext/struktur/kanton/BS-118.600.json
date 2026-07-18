@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Organisation und die Führung der Regionalplanung beider Basel",
+  "erlassdatum": "Vom 21. September 1993 (Stand 1. Juli 2004)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt, gestützt auf § 4 des Organisationsgesetzes vom 22. April 1976, und der Regierungsrat des Kantons Basel-Landschaft, gestützt auf § 6 des Dekrets zum Verwaltungsorganisationsgesetz vom 6. Juni 1983, vereinbaren:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SGS 140.1.",
+    "links": [
+     {
+      "label": "140.1",
+      "url": "https://db.clex.ch/link/BL/140.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +73,15 @@
    "gliederung": [],
    "marginalie": [
     "Regionalplanungsstelle beider Basel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "umbenannt von Hochbau- und Planungsamt in Abteilung Städtebau und Architektur",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -47,6 +100,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Aufhebung durch Beschlüsse des Grossen Rates des Kantons Basel-Stadt vom 8. 12. 1993 (wirksam seit 23. 1. 1994) und des Landrates des Kantons Basel-Landschaft vom 15. 12. 1993 (wirksam seit 18. 2. 1994).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

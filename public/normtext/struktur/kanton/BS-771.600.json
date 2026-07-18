@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Concession de la Confédération Suisse pour l’extension du remous du Rhin sur territoire suisse jusqu’à l’embouchure de la Birse en vue de la construction et de l’exploitation d’ouvrages sur le Rhin près de Kembs destinés à la production de force hydraulique et à la navigation",
+  "erlassdatum": "Vom 27. Januar 1925 (Stand 30. Juni 1963)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Le Conseil fédéral,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "vu l’art. 24bis de la Constitution fédérale, les art. 7 et 38 (al. 3) de la loi fédérale du 22 décembre 1916 sur l’utilisation des forces hydrauliques; vu les résolutions de la Commission centrale pour la navigation du Rhin des 16 décembre 1921 et 10 mai 1922 et l’Accord du 10 mai 1922 entre l’Allemagne, la France et la Suisse; vu la Convention entre la France et la Suisse du 27 août 1926 au sujet de certaines clauses du régime juridique de la future dérivation de Kembs; vu la concession donnée par la France à la Société ci-après designée; après avoir entendu les Gouvernements des Cantons de Bâle-Ville et de Bâle-Campagne,"
+   },
+   {
+    "rolle": "verb",
+    "text": "accorde sous les conditions suivantes à la Société des Forces motrices du Haut-Rhin S. A., dont le siège est à Mulhouse (société désignée ci-après sous le nom de société concessionnaire), en vue de la construction et de l’exploitation d’ouvrages sur le Rhin, près de Kembs, destinés à la production de force hydraulique et à la navigation, le droit d’étendre le remous du Rhin sur territoire suisse jusqu’à l’embouchure de la Birse.",
+    "fnNrs": [
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "3",
+    "text": "Der Bundesrat hat am 15. 8. 1928 diese Konzession auf die Aktiengesellschaft «Energie électrique du Rhin» und am 1. 10. 1978 auf die «Electricité de France, Service national», übertragen (Feuille fédérale 1949 I S. 291); vgl. hiezu Art. 39.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -468,6 +498,15 @@
    ],
    "marginalie": [
     "Transfert et rétrocession de la concession"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Der Bundesrat hat am 15. 8. 1928 diese Konzession auf die Aktiengesellschaft «Energie électrique du Rhin» und am 1. 10. 1978 auf die «Electricité de France, Service national», übertragen (Feuille fédérale 1949 I S. 291).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "40": {

@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Umgang mit invasiven gebietsfremden Organismen",
+  "erlassdatum": "vom 24.08.2010 (Stand 01.09.2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 52 Abs. 1 der Verordnung vom 10. September 2008 über den Umgang mit Organismen in der Umwelt sowie Art. 56a Abs. 2 des Gesetzes vom 16. Februar 2004 über die Einführung der Bundesgesetze über den Umweltschutz und über den Schutz der Gewässer,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Freisetzungsverordnung (FrSV; SR 814.911 )",
+    "links": [
+     {
+      "label": "814.911",
+      "url": "https://db.clex.ch/link/Bund/814.911/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Umwelt- und Gewässerschutz-Gesetz (UGsG; bGS 814.0 )",
+    "links": [
+     {
+      "label": "814.0",
+      "url": "https://ar.clex.ch/data/814.0/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-814.0"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

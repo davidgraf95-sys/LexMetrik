@@ -1,10 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Verwendung der kantonalen Sportfondsgelder",
+  "erlassdatum": "vom 28.06.1994 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "unter Bezugnahme auf Art. 26 der Interkantonalen Vereinbarung über die Aufsicht sowie die Bewilligung und Ertragsverwendung von interkantonal oder gesamtschweizerisch durchgeführten Lotterien und Wetten vom 24. April 2006",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "IVLW, bGS 955.35",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
-    "Verwendung der Sportfondsgelder *"
+    "Verwendung der Sportfondsgelder"
    ]
   },
   "2": {
@@ -53,6 +83,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkraftreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 612.3 (lf. Nr. 207)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5_a": {

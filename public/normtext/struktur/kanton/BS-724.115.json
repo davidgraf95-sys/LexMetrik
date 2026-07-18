@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausführungsbestimmungen zur Verordnung zum Gesetz über die Nutzung des öffentlichen Raumes",
+  "erlassdatum": "Vom 4. Dezember 2018 (Stand 10. Juni 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Bau- und Verkehrsdepartement des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 65 der Verordnung zum Gesetz über die Nutzung des öffentlichen Raumes (NöRV) vom 14. Februar 2017 sowie § 34 Abs. 2 und Abs. 6 in Verbindung mit § 67 der Bau- und Planungsverordnung (BPV) vom 19. Dezember 2000,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 724.110",
+    "links": [
+     {
+      "label": "724.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 730.110",
+    "links": [
+     {
+      "label": "730.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/730.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-730.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -76,6 +132,20 @@
    ],
    "marginalie": [
     "Meldeverfahren (§ 11 NöRV und § 27 BPV)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "unter Verweis auf die Erläuterungen des Tiefbauamtes",
+     "links": [
+      {
+       "label": "Erläuterungen des Tiefbauamtes",
+       "url": "https://www.tiefbauamt.bs.ch/dam/jcr:57896136-eed9-4a49-9936-d910be9f74a8/Erl%C3%A4uterungen%20revAN%C3%B6RV_final.pdf"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -175,6 +245,20 @@
    ],
    "marginalie": [
     "Formulare"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Formulare des Tiefbauamtes",
+     "links": [
+      {
+       "label": "Formulare des Tiefbauamtes",
+       "url": "https://www.tiefbauamt.bs.ch/oeffentlicher-raum/nutzung-des-oeffentlichen-raumes/formulare.html"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -241,6 +325,20 @@
    ],
    "marginalie": [
     "Einspracheverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Internetportal Kantonsblatt des Kantons Basel Stadt",
+     "links": [
+      {
+       "label": "Internetportal Kantonsblatt des Kantons Basel Stadt",
+       "url": "https://kantonsblatt.ch/#!/gazette"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -430,6 +528,20 @@
    ],
    "marginalie": [
     "Emissionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "unter Verweis auf die Erläuterungen des Tiefbauamtes",
+     "links": [
+      {
+       "label": "Erläuterungen des Tiefbauamtes",
+       "url": "https://www.tiefbauamt.bs.ch/dam/jcr:57896136-eed9-4a49-9936-d910be9f74a8/Erl%C3%A4uterungen%20revAN%C3%B6RV_final.pdf"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "40": {
@@ -505,6 +617,20 @@
    ],
    "marginalie": [
     "Andere eigenständige Verkaufsstände"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "unter Verweis auf die Erläuterungen des Tiefbauamtes",
+     "links": [
+      {
+       "label": "Erläuterungen des Tiefbauamtes",
+       "url": "https://www.tiefbauamt.bs.ch/dam/jcr:57896136-eed9-4a49-9936-d910be9f74a8/Erl%C3%A4uterungen%20revAN%C3%B6RV_final.pdf"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -719,6 +845,44 @@
    ],
    "marginalie": [
     "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "unter Verweis auf die Erläuterungen des Tiefbauamtes",
+     "links": [
+      {
+       "label": "Erläuterungen des Tiefbauamtes",
+       "url": "https://www.tiefbauamt.bs.ch/dam/jcr:57896136-eed9-4a49-9936-d910be9f74a8/Erl%C3%A4uterungen%20revAN%C3%B6RV_final.pdf"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "unter Verweis auf die Erläuterungen des Tiefbauamtes",
+     "links": [
+      {
+       "label": "Erläuterungen des Tiefbauamtes",
+       "url": "https://www.tiefbauamt.bs.ch/dam/jcr:57896136-eed9-4a49-9936-d910be9f74a8/Erl%C3%A4uterungen%20revAN%C3%B6RV_final.pdf"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "unter Verweis auf die Erläuterungen des Tiefbauamtes",
+     "links": [
+      {
+       "label": "Erläuterungen des Tiefbauamtes",
+       "url": "https://www.tiefbauamt.bs.ch/dam/jcr:57896136-eed9-4a49-9936-d910be9f74a8/Erl%C3%A4uterungen%20revAN%C3%B6RV_final.pdf"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "59": {

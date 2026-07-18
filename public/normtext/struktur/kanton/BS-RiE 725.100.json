@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung über die Parkraumbewirtschaftung",
+  "erlassdatum": "Vom 30. Januar 2013 (Stand 11. Juni 2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Einwohnerrat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt auf Antrag des Gemeinderats und der Sachkommission Mobilität und Versorgung sowie gestützt auf § 4 des Gesetzes über die Inanspruchnahme der Allmend durch die Verwaltung und durch Private vom 24. März 1927 und auf die Gemeindeordnung vom 27. Februar 2002",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "folgende Ordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 724.100.",
+    "links": [
+     {
+      "label": "724.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "RiE 111.100.",
+    "links": [
+     {
+      "label": "RiE 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +73,20 @@
    ],
    "marginalie": [
     "Parkierzonen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 2 Abs. 2: Dieser Anhang wird hier nicht abgedruckt; er kann auf der Internetseite der Gemeinde Riehen www.riehen.ch eingesehen werden.",
+     "links": [
+      {
+       "label": "www.riehen.ch",
+       "url": "http://www.riehen.ch"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -54,6 +120,15 @@
    ],
    "marginalie": [
     "Kantonale Parkkarten und Sonderbewilligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 5 Abs. 1: Die kantonalrechtlichen Grundlagen für die regionale Gewerbeparkkarte liegen derzeit noch nicht vor.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -175,6 +250,15 @@
    ],
    "marginalie": [
     "Rechtsmittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 18. 11. 2013.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

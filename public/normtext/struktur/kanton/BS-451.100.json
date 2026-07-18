@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Museen des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 16. Juni 1999 (Stand 1. Februar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +27,7 @@
     }
    ],
    "marginalie": [
-    "Geltungsbereich *"
+    "Geltungsbereich"
    ]
   },
   "2": {
@@ -20,7 +38,7 @@
     }
    ],
    "marginalie": [
-    "Bestandesgarantie und Lagerung *"
+    "Bestandesgarantie und Lagerung"
    ]
   },
   "3": {
@@ -31,7 +49,7 @@
     }
    ],
    "marginalie": [
-    "Kultur- und Bildungsauftrag *"
+    "Kultur- und Bildungsauftrag"
    ]
   },
   "4": {
@@ -42,7 +60,7 @@
     }
    ],
    "marginalie": [
-    "Zusammenarbeit mit der Universität *"
+    "Zusammenarbeit mit der Universität"
    ]
   },
   "5": {
@@ -53,7 +71,25 @@
     }
    ],
    "marginalie": [
-    "Universitätsgut, Sammlungen der Museen *"
+    "Universitätsgut, Sammlungen der Museen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SG 440.400",
+     "links": [
+      {
+       "label": "440.400",
+       "url": "https://www.gesetzessammlung.bs.ch/data/440.400/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-440.400"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -64,7 +100,7 @@
     }
    ],
    "marginalie": [
-    "Rechtsform und Organisation *"
+    "Rechtsform und Organisation"
    ]
   },
   "7": {
@@ -75,7 +111,25 @@
     }
    ],
    "marginalie": [
-    "Museumskommissionen *"
+    "Museumskommissionen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 162.100",
+     "links": [
+      {
+       "label": "162.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/162.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-162.100"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -86,7 +140,7 @@
     }
    ],
    "marginalie": [
-    "Museumsdirektorenkonferenz *"
+    "Museumsdirektorenkonferenz"
    ]
   },
   "9": {
@@ -97,7 +151,7 @@
     }
    ],
    "marginalie": [
-    "Globalkredit *"
+    "Globalkredit"
    ]
   },
   "10": {
@@ -108,7 +162,7 @@
     }
    ],
    "marginalie": [
-    "Nachtragskredite *"
+    "Nachtragskredite"
    ]
   },
   "11": {
@@ -119,7 +173,25 @@
     }
    ],
    "marginalie": [
-    "Kreditübertragung, Rücklagen *"
+    "Kreditübertragung, Rücklagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 610.100",
+     "links": [
+      {
+       "label": "610.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/610.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-610.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -130,7 +202,7 @@
     }
    ],
    "marginalie": [
-    "Gebühren *"
+    "Gebühren"
    ]
   },
   "13": {
@@ -141,7 +213,7 @@
     }
    ],
    "marginalie": [
-    "Kooperation *"
+    "Kooperation"
    ]
   },
   "14": {
@@ -151,9 +223,7 @@
      "label": "3. Teil: Partnerschaft"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -162,7 +232,16 @@
      "label": "4. Teil: Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Mit Ausnahme von § 7 Abs. 3 wirksam seit 1. 1. 2001, § 7 Abs. 3 wirksam seit 1. 7. 2001.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "10_a": {
    "gliederung": [
@@ -173,6 +252,24 @@
    ],
    "marginalie": [
     "Mehrjährige Globalkredite"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 164.100",
+     "links": [
+      {
+       "label": "164.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/164.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-164.100"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "12_a": {

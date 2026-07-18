@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über Grundwasserschutzzonen",
+  "erlassdatum": "Vom 15. Dezember 1983 (Stand 1. Januar 2001)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von Art. 5, 29, 30 und 31 des Bundesgesetzes vom 8. Oktober 1971 über den Schutz der Gewässer gegen Verunreinigung (Gewässerschutzgesetz) folgendes Gesetz:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Das Bundesgesetz vom 8. 10. 1971 ist aufgehoben. Massgebend ist jetzt das Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz) vom 24. 1. 1991 (SR 814.20 ).",
+    "links": [
+     {
+      "label": "814.20",
+      "url": "https://db.clex.ch/link/Bund/814.20/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "GSCHG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -17,9 +52,7 @@
      "label": "I. Zweck"
     }
    ],
-   "marginalie": [
-    "..."
-   ]
+   "marginalie": []
   },
   "3": {
    "gliederung": [
@@ -28,9 +61,7 @@
      "label": "I. Zweck"
     }
    ],
-   "marginalie": [
-    "..."
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -152,7 +183,16 @@
      "label": "VI. Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vom Bundesrat genehmigt am 6. 3. 1984.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Schulgeldverordnung",
+  "erlassdatum": "Vom 22. Dezember 2009 (Stand 1. Januar 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 75 des Schulgesetzes vom 4. April 1929,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -35,6 +74,15 @@
    "gliederung": [],
    "marginalie": [
     "Rückerstattung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 6: Umbenennung \"die Leiterin bzw. der Leiter Bildung\" in \"Leitung Volksschulen und Leitung Mittelschulen und Berufsbildung\" gemäss RRB vom 17. 12. 2013 (wirksam seit 1. 1. 2014).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

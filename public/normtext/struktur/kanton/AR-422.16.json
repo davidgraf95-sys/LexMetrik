@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Errichtung der Stiftung Pro Appenzell",
+  "erlassdatum": "vom 28.04.1963 (Stand 28.04.1963)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh."
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -23,18 +37,63 @@
    "gliederung": [],
    "marginalie": [
     "Finanzierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Vgl. die Art. 48 Abs. 12 und 52 Abs. 12 KV (heute Art. 76 Abs. 2 und Art. 88 Abs. 2 KV; bGS 111.1 )",
+     "links": [
+      {
+       "label": "111.1",
+       "url": "https://ar.clex.ch/data/111.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-111.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
    "gliederung": [],
    "marginalie": [
     "Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "V über die Verwaltung der Stiftung Pro Appenzell (bGS 422.161 )",
+     "links": [
+      {
+       "label": "422.161",
+       "url": "https://ar.clex.ch/data/422.161/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-422.161"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "6": {
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "28. April 1963",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

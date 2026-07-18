@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung des Grossen Rates über die Gebühren der Strafverfolgungs- und Gerichtsbehörden",
+  "erlassdatum": "vom 13.05.1992 (Stand 01.01.2022)"
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -54,6 +58,20 @@
    ],
    "marginalie": [
     "Erlass, Stundung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "RB 271.1",
+     "links": [
+      {
+       "label": "271.1",
+       "url": "https://www.rechtsbuch.tg.ch/data/271.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -108,7 +126,7 @@
     }
    ],
    "marginalie": [
-    "Bezirksgerichte *"
+    "Bezirksgerichte"
    ]
   },
   "13": {
@@ -153,6 +171,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "In Kraft gesetzt auf den 1. Juni 1992.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4_a": {

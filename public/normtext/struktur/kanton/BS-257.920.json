@@ -1,5 +1,113 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag über die Opferberatungsstellen beider Basel",
+  "erlassdatum": "Vom 13. April 1999 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt, gestützt auf die §§ 3 und 52 der Verfassung des Kantons Basel-Stadt vom 23. März 2005 sowie § 4 des Organisationsgesetzes vom 22. April 1976 und § 1 des baselstädtischen Einführungsgesetzes zum Bundesgesetz über die Hilfe an Opfer von Straftaten vom 22. April 1993, und der Regierungsrat des Kantons Basel-Landschaft, gestützt auf § 74 Abs. 2 der Verfassung des Kantons Basel-Landschaft vom 17. Mai 1984 und § 1 Abs. 2 der Verordnung zum Bundesgesetz über die Hilfe an Opfer von Straftaten vom 16. Februar 1993, beide gestützt auf Art. 9 des Bundesgesetzes über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG) vom 23. März 2007, vereinbaren:",
+    "fnNrs": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 153.100.",
+    "links": [
+     {
+      "label": "153.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 257.900.",
+    "links": [
+     {
+      "label": "257.900",
+      "url": "https://www.gesetzessammlung.bs.ch/data/257.900/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-257.900"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SGS 100.",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SGS 252.11.",
+    "links": [
+     {
+      "label": "252.11",
+      "url": "https://db.clex.ch/link/BL/252.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "SR 312.5.",
+    "links": [
+     {
+      "label": "312.5",
+      "url": "https://db.clex.ch/link/Bund/312.5/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "OHG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -65,6 +173,15 @@
    ],
    "marginalie": [
     "Verwaltungsgericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 6 Abs. 1: Verweis im Einleitungssatz heute korrekt: § 5 Abs. 1 lit. b.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -142,6 +259,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Publiziert am 27. 5. 1999.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über das Gastgewerbe",
+  "erlassdatum": "Vom 15. September 2004 (Stand 25. August 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 9222 vom 11. Februar 2003 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 9360 vom 28. Juli 2004,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -140,9 +158,7 @@
      "label": "II. Betriebsarten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -207,7 +223,7 @@
     }
    ],
    "marginalie": [
-    "Gleichwertige Fähigkeitsnachweise *"
+    "Gleichwertige Fähigkeitsnachweise"
    ]
   },
   "20": {
@@ -514,7 +530,25 @@
      "label": "Vollzugs-, Übergangs- und Schlussbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SG 253.100.",
+     "links": [
+      {
+       "label": "253.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/253.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-253.100"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "48": {
    "gliederung": [
@@ -525,6 +559,22 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Angenommen in der Volksabstimmung vom 27. 2. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Wirksam seit. 1. 6. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

@@ -1,10 +1,58 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Beschleunigung und die Verzögerung des Stufenaufstiegs gemäss § 10 des Lohngesetzes",
+  "erlassdatum": "Vom 1. September 2009 (Stand 20. September 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 10 des Gesetzes betreffend Einreihung und Entlöhnung der Mitarbeiterinnen und Mitarbeiter des Kantons Basel-Stadt (Lohngesetz) vom 18. Januar 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 164.100.",
+    "links": [
+     {
+      "label": "164.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/164.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-164.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 1 Abs. 1: In den selbständigen Anstalten (z.B. BVB, IWB) entscheidet die Geschäftsleitung. Bei den Gerichten entscheidet der/die jeweilige Vorsitzende Präsident/in (Fussnote ist Bestandteil des Erlasses).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -53,12 +101,30 @@
    "gliederung": [],
    "marginalie": [
     "Berichtswesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 20. 9. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

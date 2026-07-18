@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Verfahrenskosten, Entschädigungen und Spesen im Kindes- und Erwachsenenschutzrecht",
+  "erlassdatum": "vom 18.12.2012 (Stand 01.01.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 50 Abs. 2 und 54 Abs. 6 des Gesetzes über die Einführung des Schweizerischen Zivilgesetzbuches,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "EG zum ZGB (bGS 211.1)",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -16,7 +46,7 @@
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Entschädigung für Beiständinnen und Beistände a) Verfahren *"
+    "Entschädigung für Beiständinnen und Beistände a) Verfahren"
    ]
   },
   "4": {

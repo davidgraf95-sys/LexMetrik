@@ -1,5 +1,51 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonales Gleichstellungsgesetz zu Geschlecht und sexueller Orientierung",
+  "erlassdatum": "Vom 10. Januar 2024 (Stand 15. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 8 Abs. 1 – 3 und Art. 35 der Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999, § 8 Abs. 1 und 2 und § 9 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, das Bundesgesetz über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG) vom 24. März 1995, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 21.0829.01 vom 24. Mai 2022 und in den Bericht der Justiz-, Sicherheits- und Sportkommission vom 21. November 2023,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 101",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 111.100",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 151.1",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -138,6 +184,24 @@
    ],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 272",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -168,6 +232,24 @@
    ],
    "marginalie": [
     "Zusammensetzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 154.100",
+     "links": [
+      {
+       "label": "154.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/154.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-154.100"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "14": {

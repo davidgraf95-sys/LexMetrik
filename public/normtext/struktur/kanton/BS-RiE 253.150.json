@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement betreffend zusätzliche Schutzmassnahmen für Wildtiere",
+  "erlassdatum": "Vom 27. Februar 2024 (Stand 1. April 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 15 Abs. 1 Wildtier- und Jagdgesetz (WJG) vom 27. Oktober 2021,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 912.200",
+    "links": [
+     {
+      "label": "912.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/912.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-912.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

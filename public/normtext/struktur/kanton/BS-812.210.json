@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den kantonalen Mindestlohn",
+  "erlassdatum": "Vom 12. April 2022 (Stand 1. Juli 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 8 des Gesetzes über den kantonalen Mindestlohn (Mindestlohngesetz, MiLoG) vom 13. Januar 2021, unter Verweis auf seine Erläuterungen Nr. P211808,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

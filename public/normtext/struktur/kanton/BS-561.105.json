@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Einführungsgesetz zum Bundesgesetz über Geldspiele",
+  "erlassdatum": "Vom 8. Dezember 2020 (Stand 1. April 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Einführungsgesetz zum Bundesgesetz über Geldspiele (EG BGS) vom 24. Juni 2020, unter Verweis auf seine Erläuterungen Nr. P201673,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 561.100",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -141,7 +171,7 @@
     }
    ],
    "marginalie": [
-    "Gebühren des Gesundheitsdepartements *"
+    "Gebühren des Gesundheitsdepartements"
    ]
   }
  }

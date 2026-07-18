@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Umweltschutzgesetz Basel-Stadt",
+  "erlassdatum": "Vom 13. März 1991 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über den Umweltschutz vom 7. Oktober 1983, auf Antrag seiner Kommission,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 814.01.",
+    "links": [
+     {
+      "label": "814.01",
+      "url": "https://db.clex.ch/link/Bund/814.01/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "USG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -175,7 +214,7 @@
     }
    ],
    "marginalie": [
-    "Förderung umweltfreundlicher Verkehrsmittel und Fortbewegungsarten *"
+    "Förderung umweltfreundlicher Verkehrsmittel und Fortbewegungsarten"
    ]
   },
   "14": {
@@ -251,7 +290,7 @@
     }
    ],
    "marginalie": [
-    "Finanzielle Unterstützung von Parkierungsanlagen *"
+    "Finanzielle Unterstützung von Parkierungsanlagen"
    ]
   },
   "18": {
@@ -289,7 +328,7 @@
     }
    ],
    "marginalie": [
-    "Park-and-Ride- und Bike-and-Ride-Anlagen *"
+    "Park-and-Ride- und Bike-and-Ride-Anlagen"
    ]
   },
   "20": {
@@ -440,6 +479,15 @@
    ],
    "marginalie": [
     "Bewilligungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 29 Abs. 1: Der BR hat diese Bestimmung am 12. 9. 1991 unter dem Vorbehalt genehmigt, dass der Passus «Bedürfnis in der Region» so ausgelegt wird, dass ein solches Bedürfnis auch dann besteht, wenn die zu bewilligende Abfallanlage einem überregionalen oder gesamtschweizerischen Bedürfnis entspricht und der vorgesehene Standort geeignet ist (KtBl 1991 II 366).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -483,9 +531,7 @@
      "label": "D.III. Abfallanlagen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -672,9 +718,7 @@
      "label": "F. Organisation, Vollzug und Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "50": {
    "gliederung": [
@@ -707,6 +751,15 @@
    ],
    "marginalie": [
     "Strafbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 253.100. Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "53": {
@@ -718,6 +771,15 @@
    ],
    "marginalie": [
     "Hochbautengesetz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SG 730.100. Diese Änderungen werden hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "54": {
@@ -729,6 +791,15 @@
    ],
    "marginalie": [
     "Referendumsklausel, Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 54 Abs. 2: Vom BR genehmigt am 12. 9. 1991; siehe auch Fussnote 19 zu § 29 Abs. 1. Wirksam seit 1. 1. 1992.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13 a": {
@@ -746,9 +817,7 @@
      "label": "2. Monitoring"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13 b": {
    "gliederung": [
@@ -765,9 +834,7 @@
      "label": "3. Massnahmen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16_a": {
    "gliederung": [
@@ -990,6 +1057,15 @@
    ],
    "marginalie": [
     "Gesundheitsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern oder -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19_ter": {
@@ -1023,7 +1099,7 @@
     }
    ],
    "marginalie": [
-    "Sauberkeit und Abfallvermeidung *"
+    "Sauberkeit und Abfallvermeidung"
    ]
   },
   "33 a": {

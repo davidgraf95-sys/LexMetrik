@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verzeichnis der Kantonsstrassen",
+  "erlassdatum": "vom 31.05.2011 (Stand 01.06.2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 8 des Strassengesetzes vom 26. Oktober 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "StrG (bGS 731.111 )",
+    "links": [
+     {
+      "label": "731.111",
+      "url": "https://ar.clex.ch/data/731.111/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-731.111"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -56,7 +95,16 @@
      "label": "Lokalverbindungsstrassen (LVS)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "lf. Nr. 453/Abl. 1993, S. 669",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

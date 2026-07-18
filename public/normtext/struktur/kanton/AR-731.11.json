@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Strassengesetz",
+  "erlassdatum": "vom 26.10.2009 (Stand 01.06.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 32 Abs. 1 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,80 @@
    ],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "BG über Fuss- und Wanderwege (FWG; SR 704 ), V über die Einführung des Bundesgesetzes über Fuss- und Wanderwege (bGS 731.31 )",
+     "links": [
+      {
+       "label": "704",
+       "url": "https://db.clex.ch/link/Bund/704/de"
+      },
+      {
+       "label": "731.31",
+       "url": "https://ar.clex.ch/data/731.31/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.31"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Art. 167 ff. G über die Einführung des Schweizerischen Zivilgesetzbuches (EG zum ZGB; bGS 211.1 ), Kantonales Waldgesetz (bGS 931.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      },
+      {
+       "label": "931.1",
+       "url": "https://ar.clex.ch/data/931.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-931.1"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "EBV (SR 742.141.1 )",
+     "links": [
+      {
+       "label": "742.141.1",
+       "url": "https://db.clex.ch/link/Bund/742.141.1/de"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +134,63 @@
    ],
    "marginalie": [
     "Widmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "EG zum ZGB (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Art. 170 Abs. 2 und Art. 25 Abs. 1 EG zum ZGB",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 962 ZGB, Art. 80 Grundbuchverordnung (GBV; SR 211.432.1 )",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -54,6 +224,24 @@
    ],
    "marginalie": [
     "Strassenklassen a) Kantonsstrassennetz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 37 Signalisationsverordnung (SSV; SR 741.21 )",
+     "links": [
+      {
+       "label": "741.21",
+       "url": "https://db.clex.ch/link/Bund/741.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SSV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -109,6 +297,31 @@
    ],
    "marginalie": [
     "Hoheit und Eigentum"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 25 ff. G über die Einführung des Schweizerischen Zivilgesetzbuches (EG zum ZGB; bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Art. 167 ff. EG zum ZGB",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -142,6 +355,24 @@
    ],
    "marginalie": [
     "Verunreinigung und Beschädigung der Strassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "vgl. Art. 63 G über die Verwaltungsrechtspflege (VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -153,6 +384,40 @@
    ],
    "marginalie": [
     "Verkehrsbeschränkungen und -anordnungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 3 Abs. 2 und 4 Strassenverkehrsgesetz (SVG; SR 741.01 )",
+     "links": [
+      {
+       "label": "741.01",
+       "url": "https://db.clex.ch/link/Bund/741.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Art. 113 Abs. 1 Signalisationsverordnung (SSV; SR 741.21 )",
+     "links": [
+      {
+       "label": "741.21",
+       "url": "https://db.clex.ch/link/Bund/741.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SSV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -164,6 +429,24 @@
    ],
    "marginalie": [
     "Parkieren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "V über das Parkieren auf Staatsarealen (bGS 731.113 )",
+     "links": [
+      {
+       "label": "731.113",
+       "url": "https://ar.clex.ch/data/731.113/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.113"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -175,6 +458,24 @@
    ],
    "marginalie": [
     "Gesteigerter Gemeingebrauch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Art. 2 lit. b V zum Einführungsgesetz vom 24. April 1983 zum Bundesgesetz vom 19. Dezember 1958 über den Strassenverkehr (EG SVG) (bGS 761.111 )",
+     "links": [
+      {
+       "label": "761.111",
+       "url": "https://ar.clex.ch/data/761.111/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-761.111"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -245,6 +546,24 @@
    ],
    "marginalie": [
     "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Art. 1 Abs. 4 Signalisationsverordnung (SSV; SR 741.21 )",
+     "links": [
+      {
+       "label": "741.21",
+       "url": "https://db.clex.ch/link/Bund/741.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SSV"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -290,6 +609,24 @@
    ],
    "marginalie": [
     "b) Radrouten von nationalem und regionalem Interesse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "bGS 731.31",
+     "links": [
+      {
+       "label": "731.31",
+       "url": "https://ar.clex.ch/data/731.31/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.31"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -350,6 +687,40 @@
    ],
    "marginalie": [
     "Vorsorglicher Landerwerb"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "Art. 15 Abs. 3 Finanzhaushaltsgesetz (bGS 612.0 )",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Art. 4 Abs. 2 G über die Staatsstrassenrechnung und die leistungsabhängige Schwerverkehrsabgabe (bGS 612.2 )",
+     "links": [
+      {
+       "label": "612.2",
+       "url": "https://ar.clex.ch/data/612.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.2"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -365,6 +736,24 @@
    ],
    "marginalie": [
     "Projekterstellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Art. 57 Abs. 3 Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -410,6 +799,56 @@
    ],
    "marginalie": [
     "Beschluss a) Kantonsstrassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "Art. 4 G über die Staatsstrassenrechnung und die leistungsabhängige Schwerverkehrsabgabe (bGS 612.2 ), Art. 88 KV",
+     "links": [
+      {
+       "label": "612.2",
+       "url": "https://ar.clex.ch/data/612.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "Art. 4 Abs. 3 G über die Staatsstrassenrechnung und die leistungsabhängige Schwerverkehrsabgabe (bGS 612.2 )",
+     "links": [
+      {
+       "label": "612.2",
+       "url": "https://ar.clex.ch/data/612.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.2"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "USG (SR 814.01 )",
+     "links": [
+      {
+       "label": "814.01",
+       "url": "https://db.clex.ch/link/Bund/814.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "USG"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -440,6 +879,24 @@
    ],
    "marginalie": [
     "Grundsätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "37": {
@@ -485,6 +942,31 @@
    ],
    "marginalie": [
     "Einsprache"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "Art. 82 ff.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "40": {
@@ -500,6 +982,24 @@
    ],
    "marginalie": [
     "Einspracheverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "Art. 20 ff. Enteignungsgesetz (bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "41": {
@@ -530,6 +1030,40 @@
    ],
    "marginalie": [
     "Koordinationspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "V über die Umweltverträglichkeitsprüfung (UVPV; SR 814.011 )",
+     "links": [
+      {
+       "label": "814.011",
+       "url": "https://db.clex.ch/link/Bund/814.011/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "UVPV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "43": {
@@ -545,6 +1079,24 @@
    ],
    "marginalie": [
     "Enteignungsrecht, Übernahmepflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "bGS 711.1",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "44": {
@@ -560,6 +1112,40 @@
    ],
    "marginalie": [
     "Landerwerb"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "Art. 20 ff. Enteignungsgesetz (bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "Art. 68 ff. Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -656,6 +1242,24 @@
    ],
    "marginalie": [
     "Duldungspflichten der Anstösser"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "bGS 711.1",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "53": {
@@ -716,6 +1320,24 @@
    ],
    "marginalie": [
     "Beeinträchtigungen durch Strassenbau und -unterhalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "36",
+     "text": "Art. 262 G über die Einführung des Schweizerischen Zivilgesetzbuches (EG zum ZGB; bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "57": {
@@ -791,6 +1413,40 @@
    ],
    "marginalie": [
     "Ausnahmebewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "37",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "Art. 118 Abs. 1 Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "62": {
@@ -806,6 +1462,24 @@
    ],
    "marginalie": [
     "Bestandes- und Erweiterungsgarantie"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "63": {
@@ -821,6 +1495,31 @@
    ],
    "marginalie": [
     "Erlass"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "Art. 32",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "Art. 37 ff. und 45 ff. Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "64": {
@@ -836,6 +1535,56 @@
    ],
    "marginalie": [
     "Rechtswirkungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "42",
+     "text": "Art. 94 Abs. 1 Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "Art. 94 Abs. 2 Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "44",
+     "text": "bGS 711.1",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "65": {
@@ -851,6 +1600,32 @@
    ],
    "marginalie": [
     "Sichtfeld"
+   ],
+   "fussnoten": [
+    {
+     "nr": "45",
+     "text": "Art. 6 Strassenverkehrsgesetz (SVG; SR 741.01 ) und Art. 95 ff. Signalisationsverordnung (SSV; SR 741.21 )",
+     "links": [
+      {
+       "label": "741.01",
+       "url": "https://db.clex.ch/link/Bund/741.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SVG"
+       }
+      },
+      {
+       "label": "741.21",
+       "url": "https://db.clex.ch/link/Bund/741.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SSV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "66": {
@@ -911,6 +1686,24 @@
    ],
    "marginalie": [
     "Verbesserung, Beschränkungen und Aufhebung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "Art. 20 ff. Enteignungsgesetz (bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "70": {
@@ -941,6 +1734,24 @@
    ],
    "marginalie": [
     "Anschluss- und Benützungsgebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "47",
+     "text": "Art. 64 ff. Umwelt- und Gewässerschutzgesetz (UGsG; bGS 814.0 )",
+     "links": [
+      {
+       "label": "814.0",
+       "url": "https://ar.clex.ch/data/814.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-814.0"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "72": {
@@ -954,7 +1765,55 @@
      "label": "VII. Strassenreklamen und besondere Wegweiser, Verkehrsspiegel"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "48",
+     "text": "SVG (SR 741.01 )",
+     "links": [
+      {
+       "label": "741.01",
+       "url": "https://db.clex.ch/link/Bund/741.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "Art. 54 Abs. 4 Signalisationsverordnung (SSV; SR 741.21 )",
+     "links": [
+      {
+       "label": "741.21",
+       "url": "https://db.clex.ch/link/Bund/741.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SSV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "50",
+     "text": "Art. 54 Abs. 9 SSV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "51",
+     "text": "Art. 96–100 SSV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "73": {
    "gliederung": [
@@ -1044,6 +1903,24 @@
    ],
    "marginalie": [
     "Beiträge des Kantons"
+   ],
+   "fussnoten": [
+    {
+     "nr": "52",
+     "text": "bGS 612.2",
+     "links": [
+      {
+       "label": "612.2",
+       "url": "https://ar.clex.ch/data/612.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "79": {
@@ -1104,6 +1981,15 @@
    ],
    "marginalie": [
     "Durchführung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "53",
+     "text": "Art. 76",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "83": {
@@ -1119,6 +2005,24 @@
    ],
    "marginalie": [
     "Beitragspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "54",
+     "text": "Art. 62 Abs. 1 Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "84": {
@@ -1134,6 +2038,24 @@
    ],
    "marginalie": [
     "Grundsätze für die Kostenverteilung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "55",
+     "text": "Art. 62 Abs. 2 Baugesetz (bGS 721.1 )",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "85": {
@@ -1149,6 +2071,24 @@
    ],
    "marginalie": [
     "Kostentragung bei Bahnübergängen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "56",
+     "text": "Art. 26 Abs. 2 Eisenbahngesetz (EBG; SR 742.101 )",
+     "links": [
+      {
+       "label": "742.101",
+       "url": "https://db.clex.ch/link/Bund/742.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EBG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "86": {
@@ -1164,6 +2104,24 @@
    ],
    "marginalie": [
     "Beiträge des Kantons und der Gemeinden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "57",
+     "text": "V über die Beitragsleistung an die Anpassung oder Aufhebung von Bahnübergängen (bGS 731.114 )",
+     "links": [
+      {
+       "label": "731.114",
+       "url": "https://ar.clex.ch/data/731.114/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-731.114"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "87": {
@@ -1188,6 +2146,24 @@
    ],
    "marginalie": [
     "Rechtsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "58",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "89": {
@@ -1199,6 +2175,24 @@
    ],
    "marginalie": [
     "Ersatzvornahme"
+   ],
+   "fussnoten": [
+    {
+     "nr": "59",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "90": {
@@ -1210,6 +2204,20 @@
    ],
    "marginalie": [
     "Strafbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "bGS 321.1",
+     "links": [
+      {
+       "label": "321.1",
+       "url": "https://ar.clex.ch/data/321.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "91": {
@@ -1254,6 +2262,75 @@
    ],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "61",
+     "text": "bGS 731.11 (lf. Nr. 178, 442, 546, 737, 948, 988, 1017)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "62",
+     "text": "bGS 731.111 (aGS IV/622, lf. Nr. 889)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "63",
+     "text": "bGS 731.111.1 (aGS IV/633)",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "64",
+     "text": "bGS 731.112 (lf. Nr. 630)",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "65",
+     "text": "EG zum ZGB (bGS 211.1 )",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "66",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    },
+    {
+     "nr": "67",
+     "text": "Die Änderungen wurden im betreffenden Erlass eingefügt.",
+     "links": [],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "95": {
@@ -1309,6 +2386,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "68",
+     "text": "Die Referendumsfrist ist am 29. Dezember 2009 unbenützt abgelaufen (Abl. 2010, S. 59).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "69",
+     "text": "1. Februar 2010 (RRB vom 19. Januar 2010; Abl. 2010, S. 59).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

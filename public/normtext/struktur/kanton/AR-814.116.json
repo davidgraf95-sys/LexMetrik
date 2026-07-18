@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif zum Gesetz über die Einführung der Bundesgesetze über den Umweltschutz und über den Schutz der Gewässer",
+  "erlassdatum": "vom 16.08.2005 (Stand 01.10.2005)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 17 Abs. 2 des Gesetzes vom 16. Februar 2004 über die Einführung der Bundesgesetze über den Umweltschutz und über den Schutz der Gewässer,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Umwelt- und Gewässerschutzgesetz (UGsG; bGS 814.0 )",
+    "links": [
+     {
+      "label": "814.0",
+      "url": "https://ar.clex.ch/data/814.0/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-814.0"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -17,6 +56,40 @@
    "gliederung": [],
    "marginalie": [
     "Nicht gebührenpflichtige Tätigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "USG (SR 814.01 )",
+     "links": [
+      {
+       "label": "814.01",
+       "url": "https://db.clex.ch/link/Bund/814.01/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "USG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "GSchG (SR 814.20 )",
+     "links": [
+      {
+       "label": "814.20",
+       "url": "https://db.clex.ch/link/Bund/814.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -47,6 +120,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "bGS 814.116 (lf. Nr. 585)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

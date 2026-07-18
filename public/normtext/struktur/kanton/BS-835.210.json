@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz betreffend den Fonds zur Bekämpfung der Arbeitslosigkeit",
+  "erlassdatum": "Vom 23. Juli 1996 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 5 des Gesetzes betreffend den Fonds zur Bekämpfung der Arbeitslosigkeit vom 6. Dezember 1995,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 835.200.",
+    "links": [
+     {
+      "label": "835.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/835.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-835.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -71,7 +110,16 @@
      "label": "4. Inkrafttreten"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 27. 7. 1996.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

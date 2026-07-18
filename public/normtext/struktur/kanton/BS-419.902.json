@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement des Schweizerischen Roten Kreuzes (SRK) über die Anerkennung kantonaler Ausbildungsabschlüsse",
+  "erlassdatum": "Vom 9. Dezember 1998 (Stand 1. Juli 1999)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 9 Abs. 2 der Verordnung der Schweizerischen Sanitätsdirektorenkonferenz (SDK) über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz vom 20. Mai 1999, Anerkennungsverordnung Inland (AVO Inland), beschliesst das Zentralkomitee des Schweizerischen Roten Kreuzes (SRK) unter Genehmigungsvorbehalt der SDK:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Heute: Schweizerische Gesundheitsdirektorenkonferenz (GDK).",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 419.901.",
+    "links": [
+     {
+      "label": "419.901",
+      "url": "https://www.gesetzessammlung.bs.ch/data/419.901/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-419.901"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -85,6 +124,15 @@
    ],
    "marginalie": [
     "Anerkennungsentscheid"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Sämtliche Berufs- und Funktionsbezeichnungen gelten sinngemäss für beide Geschlechter.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "9": {

@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Schulgesetz",
+  "erlassdatum": "Vom 4. April 1929 (Stand 12. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "beschliesst in Ausführung der §§ 12 und 13 der Kantonsverfassung vom 2. Dezember 1889 was folgt:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Diese Verfassung ist aufgehoben. Massgebend ist jetzt die Verfassung des Kantons Basel-Stadt vom 23. 3. 2005 (SG 111.100 ).",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,7 +56,16 @@
      "label": "Einteilung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 2: Für die Schülerinnen und Schüler mit den Schullaufbahnen nach § 1 lit. a und b der Übergangsverordnung Schulharmonisierung vom 31. 1. 2012 bleiben die bisherigen Bestimmungen wirksam.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "3": {
    "gliederung": [
@@ -34,7 +78,16 @@
      "label": "Einteilung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -101,9 +154,7 @@
      "label": "(I.1.) A. Die Schulen der Primarstufe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -124,9 +175,7 @@
      "label": "(I.1.) A. Die Schulen der Primarstufe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "8": {
    "gliederung": [
@@ -147,9 +196,7 @@
      "label": "(I.1.) A. Die Schulen der Primarstufe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "9": {
    "gliederung": [
@@ -170,9 +217,7 @@
      "label": "(I.1.) A. Die Schulen der Primarstufe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10": {
    "gliederung": [
@@ -193,9 +238,7 @@
      "label": "(I.1.) A. Die Schulen der Primarstufe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "11": {
    "gliederung": [
@@ -216,9 +259,7 @@
      "label": "(I.1.) B. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -239,9 +280,7 @@
      "label": "(I.1.) B. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [
@@ -262,9 +301,7 @@
      "label": "(I.1.) B. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "14": {
    "gliederung": [
@@ -285,9 +322,7 @@
      "label": "(I.1.) B. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -308,9 +343,7 @@
      "label": "(I.1.) B. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "16": {
    "gliederung": [
@@ -331,9 +364,7 @@
      "label": "(I.1.) C. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "17": {
    "gliederung": [
@@ -354,9 +385,7 @@
      "label": "(I.1.) C. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "18": {
    "gliederung": [
@@ -377,9 +406,7 @@
      "label": "(I.1.) C. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "19": {
    "gliederung": [
@@ -400,9 +427,7 @@
      "label": "(I.1.) C. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -423,9 +448,7 @@
      "label": "(I.1.) C. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "21": {
    "gliederung": [
@@ -446,9 +469,7 @@
      "label": "(I.1.) C. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [
@@ -469,9 +490,7 @@
      "label": "(I.1.) C. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "23": {
    "gliederung": [
@@ -492,9 +511,7 @@
      "label": "(I.1.) D. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "24": {
    "gliederung": [
@@ -515,9 +532,7 @@
      "label": "(I.1.) D. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [
@@ -538,9 +553,7 @@
      "label": "(I.1.) D. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26": {
    "gliederung": [
@@ -561,9 +574,7 @@
      "label": "(I.1.) D. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -584,9 +595,7 @@
      "label": "(I.1.) D. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [
@@ -607,9 +616,7 @@
      "label": "(I.1.) D. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -630,9 +637,7 @@
      "label": "(I.1.) E. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "30": {
    "gliederung": [
@@ -653,9 +658,7 @@
      "label": "(I.1.) E. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -743,9 +746,7 @@
      "label": "(I.1.) G. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "35": {
    "gliederung": [
@@ -766,9 +767,7 @@
      "label": "(I.1.) G. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "36": {
    "gliederung": [
@@ -789,9 +788,7 @@
      "label": "(I.1.) G. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -875,9 +872,7 @@
      "label": "(I.1.) H. Das Gymnasium"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "41": {
    "gliederung": [
@@ -898,9 +893,7 @@
      "label": "(I.1.) I. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "42": {
    "gliederung": [
@@ -963,9 +956,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "45": {
    "gliederung": [
@@ -986,9 +977,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "46": {
    "gliederung": [
@@ -1009,9 +998,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "47": {
    "gliederung": [
@@ -1032,9 +1019,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "48": {
    "gliederung": [
@@ -1055,9 +1040,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "49": {
    "gliederung": [
@@ -1078,9 +1061,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "50": {
    "gliederung": [
@@ -1101,9 +1082,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "51": {
    "gliederung": [
@@ -1124,9 +1103,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "52": {
    "gliederung": [
@@ -1160,9 +1137,7 @@
      "label": "(I.) 3. Die Universität"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "54": {
    "gliederung": [
@@ -1220,7 +1195,7 @@
     }
    ],
    "marginalie": [
-    "Aufnahme von Schülerinnen und Schülern mit Aufenthalt im Kanton *"
+    "Aufnahme von Schülerinnen und Schülern mit Aufenthalt im Kanton"
    ]
   },
   "59": {
@@ -1241,9 +1216,7 @@
      "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "61": {
    "gliederung": [
@@ -1252,7 +1225,23 @@
      "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 61 Abs. 2: Wort \"Inspektion\" in \"Schulkommission\" geändert durch GRB vom 14. 1. 2009 (wirksam seit 10. 8. 2009; Ratschlag Nr. 08.1828.01).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "§ 61 Abs. 3: Wort \"Inspektion\" in \"Schulkommission\" geändert durch GRB vom 14. 1. 2009 (wirksam seit 10. 8. 2009; Ratschlag Nr. 08.1828.01).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "62": {
    "gliederung": [
@@ -1284,7 +1273,7 @@
     }
    ],
    "marginalie": [
-    "Verstärkte Massnahmen (Sonderschulung) *"
+    "Verstärkte Massnahmen (Sonderschulung)"
    ]
   },
   "65": {
@@ -1326,7 +1315,7 @@
     }
    ],
    "marginalie": [
-    "Lehrpläne *"
+    "Lehrpläne"
    ]
   },
   "69": {
@@ -1359,7 +1348,7 @@
     }
    ],
    "marginalie": [
-    "Ferien *"
+    "Ferien"
    ]
   },
   "72": {
@@ -1369,9 +1358,7 @@
      "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "73": {
    "gliederung": [
@@ -1381,7 +1368,7 @@
     }
    ],
    "marginalie": [
-    "Unterrichtszeit der Volksschule *"
+    "Unterrichtszeit der Volksschule"
    ]
   },
   "74": {
@@ -1392,7 +1379,7 @@
     }
    ],
    "marginalie": [
-    "Verordnungen *"
+    "Verordnungen"
    ]
   },
   "75": {
@@ -1456,7 +1443,7 @@
     }
    ],
    "marginalie": [
-    "Schulkommissionen *"
+    "Schulkommissionen"
    ]
   },
   "81": {
@@ -1514,7 +1501,7 @@
     }
    ],
    "marginalie": [
-    "Aufgaben der Schulkommissionen *"
+    "Aufgaben der Schulkommissionen"
    ]
   },
   "87": {
@@ -1524,9 +1511,7 @@
      "label": "III. Schulbehörden, Schulaufsicht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "88": {
    "gliederung": [
@@ -1536,7 +1521,7 @@
     }
    ],
    "marginalie": [
-    "Schulleitungen für die Schulstandorte der Mittelschulen, der Wirtschaftsmittelschule und des Zentrums für Brückenangebote *"
+    "Schulleitungen für die Schulstandorte der Mittelschulen, der Wirtschaftsmittelschule und des Zentrums für Brückenangebote"
    ]
   },
   "89": {
@@ -1546,9 +1531,7 @@
      "label": "III. Schulbehörden, Schulaufsicht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "90": {
    "gliederung": [
@@ -1557,9 +1540,7 @@
      "label": "III. Schulbehörden, Schulaufsicht"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "91": {
    "gliederung": [
@@ -1648,9 +1629,7 @@
      "label": "3. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "98": {
    "gliederung": [
@@ -1664,7 +1643,7 @@
     }
    ],
    "marginalie": [
-    "Rektorinnen und Rektoren *"
+    "Rektorinnen und Rektoren"
    ]
   },
   "99": {
@@ -1679,7 +1658,7 @@
     }
    ],
    "marginalie": [
-    "Konrektorinnen und Konrektoren *"
+    "Konrektorinnen und Konrektoren"
    ]
   },
   "100": {
@@ -1723,9 +1702,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "103": {
    "gliederung": [
@@ -1738,9 +1715,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "104": {
    "gliederung": [
@@ -1753,9 +1728,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "105": {
    "gliederung": [
@@ -1768,9 +1741,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "106": {
    "gliederung": [
@@ -1783,9 +1754,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "107": {
    "gliederung": [
@@ -1798,9 +1767,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "108": {
    "gliederung": [
@@ -1813,9 +1780,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "109": {
    "gliederung": [
@@ -1828,9 +1793,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "110": {
    "gliederung": [
@@ -1843,9 +1806,7 @@
      "label": "7. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "111": {
    "gliederung": [
@@ -1859,7 +1820,7 @@
     }
    ],
    "marginalie": [
-    "Reiseentschädigung, Studienbeiträge *"
+    "Reiseentschädigung, Studienbeiträge"
    ]
   },
   "112": {
@@ -1874,7 +1835,7 @@
     }
    ],
    "marginalie": [
-    "Urlaub *"
+    "Urlaub"
    ]
   },
   "113": {
@@ -1906,9 +1867,7 @@
      "label": "V. Konferenzen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "116": {
    "gliederung": [
@@ -1917,9 +1876,7 @@
      "label": "V. Konferenzen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "117": {
    "gliederung": [
@@ -1929,7 +1886,7 @@
     }
    ],
    "marginalie": [
-    "Schulkonferenzen *"
+    "Schulkonferenzen"
    ]
   },
   "118": {
@@ -1940,7 +1897,7 @@
     }
    ],
    "marginalie": [
-    "Versammlung *"
+    "Versammlung"
    ]
   },
   "119": {
@@ -1950,9 +1907,7 @@
      "label": "V. Konferenzen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "120": {
    "gliederung": [
@@ -2023,9 +1978,7 @@
      "label": "VI. Kantonale Schulkonferenz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "127": {
    "gliederung": [
@@ -2078,6 +2031,15 @@
    ],
    "marginalie": [
     "Voraussetzungen für die Bewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "132": {
@@ -2174,7 +2136,37 @@
     }
    ],
    "marginalie": [
-    "Kinder- und Jugendgesundheitsdienst [9] *"
+    "Kinder- und Jugendgesundheitsdienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "141": {
@@ -2259,9 +2251,7 @@
      "label": "IXquater. Versicherungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "149": {
    "gliederung": [
@@ -2279,9 +2269,7 @@
      "label": "X. Ausbildungsbeiträge und Schulstipendienfonds"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "151": {
    "gliederung": [
@@ -2294,7 +2282,16 @@
      "label": "XI. Einführungs- und Übergangsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "§ 151 Abs. 1: Seit 12. 10. 2005: Berufsfachschule Basel (BFS Basel).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "152": {
    "gliederung": [
@@ -2307,7 +2304,16 @@
      "label": "XI. Einführungs- und Übergangsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Wirksam seit 1. 10. 1929 bzw. 15. 4. 1930.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "153": {
    "gliederung": [
@@ -2427,6 +2433,15 @@
    ],
    "marginalie": [
     "Gesundheitspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "140_a": {
@@ -2449,6 +2464,15 @@
    ],
    "marginalie": [
     "Anmeldung zu Abklärungen, Beratungen und Behandlungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "147_a": {
@@ -2492,9 +2516,7 @@
      "label": "(I.1.) C. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28_a": {
    "gliederung": [
@@ -2515,9 +2537,7 @@
      "label": "(I.1.) D. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "2_a": {
    "gliederung": [
@@ -2657,9 +2677,7 @@
      "label": "(I.1.) A. Die Schulen der Primarstufe"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "51_a": {
    "gliederung": [
@@ -2680,9 +2698,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "51_b": {
    "gliederung": [
@@ -2703,9 +2719,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "51_c": {
    "gliederung": [
@@ -2726,9 +2740,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "51_d": {
    "gliederung": [
@@ -2749,9 +2761,7 @@
      "label": "(I.1.) L. Der Passerelle-Lehrgang"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "52_a": {
    "gliederung": [
@@ -2817,9 +2827,7 @@
      "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "57_a": {
    "gliederung": [
@@ -2905,7 +2913,16 @@
      "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Der im Kantonsblatt publizierte Begriff «hergestellt» wurde auf Anweisung des Parlamentsdienstes redaktionell berichtigt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "67_a": {
    "gliederung": [
@@ -2915,7 +2932,7 @@
     }
    ],
    "marginalie": [
-    "Unterrichtslektionen der vom Kanton geführten Schulen *"
+    "Unterrichtslektionen der vom Kanton geführten Schulen"
    ]
   },
   "67_b": {
@@ -2965,9 +2982,7 @@
      "label": "II. Allgemeine Bestimmungen. Schulpflicht und Schülerinnen und Schüler"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "77_b": {
    "gliederung": [
@@ -3120,7 +3135,7 @@
     }
    ],
    "marginalie": [
-    "Leitung Mittelschulen und Berufsbildung *"
+    "Leitung Mittelschulen und Berufsbildung"
    ]
   },
   "87_c": {
@@ -3131,7 +3146,7 @@
     }
    ],
    "marginalie": [
-    "Schulleitungen für die Schulstandorte der Volksschule *"
+    "Schulleitungen für die Schulstandorte der Volksschule"
    ]
   },
   "88_a": {

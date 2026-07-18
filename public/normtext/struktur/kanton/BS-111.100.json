@@ -1,5 +1,15 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verfassung des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 23. März 2005 (Stand 3. November 2025)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "In Verantwortung gegenüber der Schöpfung und im Wissen um die Grenzen menschlicher Macht, gibt sich das Volk des Kantons Basel-Stadt die folgende Verfassung:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +31,15 @@
    ],
    "marginalie": [
     "Stellung im Bund"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 2 Abs. 4 eidgenössische Gewährleistung ausstehend",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -372,7 +391,7 @@
     }
    ],
    "marginalie": [
-    "Raumplanung, Wohnschutz und Wohnumfeld *"
+    "Raumplanung, Wohnschutz und Wohnumfeld"
    ]
   },
   "35": {
@@ -417,6 +436,15 @@
    ],
    "marginalie": [
     "Öffentliche Sachen und Regale"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "39": {

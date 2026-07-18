@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Grundbuchgebühren",
+  "erlassdatum": "vom 28.10.2021 (Stand 01.01.2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Obwalden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von Artikel 954 des Schweizerischen Zivilgesetzbuches (ZGB) vom 10. Dezember 1907, gestützt auf Artikel 17 und 168k Absatz 1 des Gesetzes betreffend die Einführung des Schweizerischen Zivilgesetzbuches vom 30. April 1911,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 210",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "GDB 210.1",
+    "links": [
+     {
+      "label": "210.1",
+      "url": "http://gdb.ow.ch/data/210.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -107,6 +159,36 @@
    "gliederung": [],
    "marginalie": [
     "Gebührenfreiheit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 711",
+     "links": [
+      {
+       "label": "711",
+       "url": "https://db.clex.ch/link/Bund/711/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ENTG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "GDB 643.1",
+     "links": [
+      {
+       "label": "643.1",
+       "url": "http://gdb.ow.ch/data/643.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   }
  }

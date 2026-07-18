@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die öffentliche Sozialhilfe",
+  "erlassdatum": "vom 24.09.2007 (Stand 01.01.2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 74 Abs. 2 der Kantonsverfassung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995 (KV, bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +47,72 @@
      "label": "1. Abschnitt: Zweck und Geltungsbereich"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. Art. 39 KV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Bundesgesetz vom 21. März 1973 über Fürsorgeleistungen an Auslandschweizer (SR 852.1 )",
+     "links": [
+      {
+       "label": "852.1",
+       "url": "https://db.clex.ch/link/Bund/852.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Asylgesetz vom 26. Juni 1998 (SR 142.31 )",
+     "links": [
+      {
+       "label": "142.31",
+       "url": "https://db.clex.ch/link/Bund/142.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ASYLG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Bundesgesetz vom 16. Dezember 2005 über die Ausländerinnen und Ausländer (SR 142.20 )",
+     "links": [
+      {
+       "label": "142.20",
+       "url": "https://db.clex.ch/link/Bund/142.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AIG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Bundesbeschluss vom 27. April 1972 betreffend die Genehmigung des Übereinkommens über die Rechtsstellung der Staatenlosen (SR 855.1 )",
+     "links": [
+      {
+       "label": "855.1",
+       "url": "https://db.clex.ch/link/Bund/855.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -19,6 +123,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 39 Abs. 1 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -30,6 +143,20 @@
    ],
    "marginalie": [
     "Örtliche Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Bundesgesetz vom 24. Juni 1977 über die Zuständigkeit für die Unterstützung Bedürftiger (ZUG; SR 851.1 )",
+     "links": [
+      {
+       "label": "851.1",
+       "url": "https://db.clex.ch/link/Bund/851.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -63,6 +190,20 @@
    ],
    "marginalie": [
     "b) Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Vgl. Art. 29 des Bundesgesetzes vom 24. Juni 1977 über die Zuständigkeit für die Unterstützung Bedürftiger (ZUG, SR 851.1 )",
+     "links": [
+      {
+       "label": "851.1",
+       "url": "https://db.clex.ch/link/Bund/851.1/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -116,7 +257,37 @@
      "label": "3. Abschnitt: Grundprinzipien der Sozialhilfe"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Vgl. Art. 4 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Vgl. Art. 5 KV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Vgl. Art. 26 Abs. 1 KV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Vgl. Art. 39 Abs. 2 KV",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
+   ]
   },
   "12": {
    "gliederung": [
@@ -296,6 +467,24 @@
    ],
    "marginalie": [
     "Strafbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Strafprozessordnung (StPO; SR 312.0 )",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -311,6 +500,24 @@
    ],
    "marginalie": [
     "Verwandtenunterstützung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Vgl. Art. 328 ff. ZGB (SR 210 )",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -416,6 +623,40 @@
    ],
    "marginalie": [
     "Schweigepflicht, Amtshilfe, Datenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Vgl. Gesetz vom 18. Juni 2001 über den Datenschutz (bGS 146.1 )",
+     "links": [
+      {
+       "label": "146.1",
+       "url": "https://ar.clex.ch/data/146.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-146.1"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "Art. 320 StGB (SR 311.0 )",
+     "links": [
+      {
+       "label": "311.0",
+       "url": "https://db.clex.ch/link/Bund/311.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STGB"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -461,6 +702,24 @@
    ],
    "marginalie": [
     "Verfahrensbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Vgl. Gesetz vom 9. September 2002 über die Verwaltungsrechtspflege (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "35": {
@@ -569,6 +828,15 @@
    ],
    "marginalie": [
     "Aufgehobenes Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "bGS 851.1 (aGS V/656)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -580,6 +848,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "Die Referendumsfrist ist am 27. November 2007 unbenutzt abgelaufen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "1. Januar 2008",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

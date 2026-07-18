@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über das Finanz- und Rechnungswesen, das Inkasso- und das Nachzahlungsverfahren der Gerichte",
+  "erlassdatum": "Vom 23. Januar 2019 (Stand 26. April 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gerichtsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die § 9 Abs. 2 Ziff. 3 des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz) vom 3. Juni 2015 sowie auf § 2 des Gesetzes über den kantonalen Finanzhaushalt (Finanzhaushaltsgesetz) vom 14. März 2012,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 154.100.",
+    "links": [
+     {
+      "label": "154.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/154.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-154.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 610.100.",
+    "links": [
+     {
+      "label": "610.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/610.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-610.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Justizvollzug",
+  "erlassdatum": "vom 22.09.2014 (Stand 01.01.2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 74 ff. und Artikel 372 ff. des Schweizerischen Strafgesetzbuchs vom 21. Dezember 1937, Art. 234 f. der Schweizerischen Strafprozessordnung vom 5. Oktober 2007,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "StGB (SR 311.0 )",
+    "links": [
+     {
+      "label": "311.0",
+      "url": "https://db.clex.ch/link/Bund/311.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "StPO (SR 312.0 )",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -65,6 +121,24 @@
    ],
    "marginalie": [
     "Datenaustausch unter Behörden und Vollzugseinrichtungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 8 Abs. 2 Datenschutzgesetz (bGS 146.1 )",
+     "links": [
+      {
+       "label": "146.1",
+       "url": "https://ar.clex.ch/data/146.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-146.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "7": {

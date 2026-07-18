@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zur Förderung der familienergänzenden Kinderbetreuung",
+  "erlassdatum": "vom 02.05.2023 (Stand 01.06.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 13 des Gesetzes zur Förderung der familienergänzenden Kinderbetreuung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Kinderbetreuungsgesetz (KibeG; bGS 415.31 )",
+    "links": [
+     {
+      "label": "415.31",
+      "url": "https://ar.clex.ch/data/415.31/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-415.31"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,12 +50,48 @@
    "gliederung": [],
    "marginalie": [
     "Anerkannte Kindertagesstätten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "PAVO (SR 211.222.338 )",
+     "links": [
+      {
+       "label": "211.222.338",
+       "url": "https://db.clex.ch/link/Bund/211.222.338/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PAVO"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
     "Anerkannte Fachorganisationen für Tagesfamilien"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 415.31",
+     "links": [
+      {
+       "label": "415.31",
+       "url": "https://ar.clex.ch/data/415.31/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-415.31"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -41,6 +116,24 @@
    "gliederung": [],
    "marginalie": [
     "Selbstbehalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 5 KibeG (bGS 415.31 )",
+     "links": [
+      {
+       "label": "415.31",
+       "url": "https://ar.clex.ch/data/415.31/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-415.31"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {

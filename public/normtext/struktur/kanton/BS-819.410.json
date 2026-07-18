@@ -1,10 +1,42 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die steuerbegünstigten Arbeitsbeschaffungsreserven",
+  "erlassdatum": "Vom 9. Februar 1989 (Stand 29. Dezember 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "auf Antrag des Regierungsrates,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "1. Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SR 823.33.",
+     "links": [
+      {
+       "label": "823.33",
+       "url": "https://db.clex.ch/link/Bund/823.33/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -59,6 +91,15 @@
    "gliederung": [],
    "marginalie": [
     "10. Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 10: Diese Änderung wird hier nicht abgedruckt; siehe SG 819.400 § 1 Abs. 2.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -77,6 +118,15 @@
    "gliederung": [],
    "marginalie": [
     "12a. Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 11. 2. 1989.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

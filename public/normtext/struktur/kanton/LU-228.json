@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Grundbuchgebühren",
+  "erlassdatum": "vom 18.05.2015 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Kantonsgericht des Kantons Luzern,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 954 des Schweizerischen Zivilgesetzbuches vom 10. Dezember 1907 sowie § 93h Absatz 4 des Einführungsgesetzes zum Schweizerischen Zivilgesetzbuch vom 20. November 2000,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 210. Auf dieses Gesetz wird im Folgenden nicht mehr hingewiesen.",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SRL Nr. 200 (G 2015 1). Auf dieses Gesetz wird im Folgenden nicht mehr hingewiesen.",
+    "links": [
+     {
+      "label": "200",
+      "url": "https://srl.lu.ch/data/200/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,6 +63,36 @@
    "gliederung": [],
    "marginalie": [
     "Eigentum"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 211.231",
+     "links": [
+      {
+       "label": "211.231",
+       "url": "https://db.clex.ch/link/Bund/211.231/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "PARTG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SRL Nr. 620",
+     "links": [
+      {
+       "label": "620",
+       "url": "https://srl.lu.ch/data/620/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -29,6 +111,24 @@
    "gliederung": [],
    "marginalie": [
     "Wasserrechte und Bergwerke"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 211.432.1. Auf diese Verordnung wird im Folgenden nicht mehr hingewiesen.",
+     "links": [
+      {
+       "label": "211.432.1",
+       "url": "https://db.clex.ch/link/Bund/211.432.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GBV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -100,7 +200,7 @@
   "17": {
    "gliederung": [],
    "marginalie": [
-    "Grundstücke in mehreren Grundbuchkreisen *"
+    "Grundstücke in mehreren Grundbuchkreisen"
    ]
   },
   "18": {

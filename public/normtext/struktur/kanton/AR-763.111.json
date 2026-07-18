@@ -1,16 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührentarif für die Prüfung und Bewilligung der nicht eidgenössisch konzessionierten Seilbahnen, Skilifte und Schrägaufzüge",
+  "erlassdatum": "vom 12.04.1976 (Stand 12.04.1976)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 8 der Verordnung vom 3. November 1975 über die Luftseilbahnen mit Personenbeförderung ohne Bundeskonzession und die Skilifte,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 763.11",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Seilbahnen für Waren- und Personaltransport"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Konkordat vom 15. Oktober 1951 über die nicht eidgenössisch konzessionierten Seilbahnen und Skilifte. Beitritt des Kantons Appenzell A.Rh.: 3. November 1975 (bGS 763.1 )",
+     "links": [
+      {
+       "label": "763.1",
+       "url": "https://ar.clex.ch/data/763.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
     "Feste Skilifte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 233.2 (heute: G über die Gebühren in Verwaltungssachten; bGS 233.2 )",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {

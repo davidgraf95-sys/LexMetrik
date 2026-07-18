@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gebäudeversicherungsgesetz",
+  "erlassdatum": "Vom 14. August 1973 (Stand 1. Januar 2010)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf das Gebäudeversicherungsgesetz vom 22. März 1973, folgende Verordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 695.100.",
+    "links": [
+     {
+      "label": "695.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/695.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-695.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -272,9 +307,7 @@
      "label": "IX. Schluss- und Übergangsbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26": {
    "gliederung": [

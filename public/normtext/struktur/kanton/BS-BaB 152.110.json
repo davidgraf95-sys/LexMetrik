@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel",
+  "erlassdatum": "Vom 9. September 1986 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgergemeinderat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von § 42 seiner Geschäftsordnung vom 9. September 1986 folgende Ausführungsbestimmungen:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB152.100.",
+    "links": [
+     {
+      "label": "BaB152.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB152.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +41,15 @@
    ],
    "marginalie": [
     "Sitzordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -32,6 +72,15 @@
    ],
    "marginalie": [
     "Einladung; Tagesordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -65,6 +114,15 @@
    ],
    "marginalie": [
     "Amtssprache"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -153,6 +211,15 @@
    ],
    "marginalie": [
     "Wortbegehren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -164,6 +231,15 @@
    ],
    "marginalie": [
     "Anträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -208,6 +284,22 @@
    ],
    "marginalie": [
     "Stimmabgabe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "20": {
@@ -219,6 +311,22 @@
    ],
    "marginalie": [
     "Wahlen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -252,6 +360,15 @@
    ],
    "marginalie": [
     "Interpellation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -263,6 +380,15 @@
    ],
    "marginalie": [
     "Auftrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -285,6 +411,15 @@
    ],
    "marginalie": [
     "Antrag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -305,9 +440,7 @@
      "label": "III. Instrumentarium"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -318,6 +451,15 @@
    ],
    "marginalie": [
     "Petition"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -329,6 +471,15 @@
    ],
    "marginalie": [
     "Einberufung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -340,6 +491,15 @@
    ],
    "marginalie": [
     "Abstimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "32": {
@@ -362,6 +522,15 @@
    ],
    "marginalie": [
     "Zuziehung Aussenstehender"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -395,6 +564,15 @@
    ],
    "marginalie": [
     "Zwischenberichte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "37": {
@@ -406,6 +584,29 @@
    ],
    "marginalie": [
     "Anträge an den Bürgergemeinderat; Berichterstattung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Die Paarform wurde auf Anweisung der Bürgergemeinde der Stadt Basel redaktionell ergänzt.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -448,8 +649,15 @@
      "label": "V. Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Wirksam seit 12. 11. 1986.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "9_a": {

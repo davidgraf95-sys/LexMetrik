@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Integration der Migrationsbevölkerung",
+  "erlassdatum": "Vom 18. Dezember 2007 (Stand 15. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz über die Integration der Migrationsbevölkerung (Integrationsgesetz) vom 18. April 2007,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 122.500.",
+    "links": [
+     {
+      "label": "122.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/122.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-122.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,12 +50,39 @@
    "gliederung": [],
    "marginalie": [
     "Organisation und Zuständigkeiten (§ 8 Integrationsgesetz i. V. m. § 34ff. OG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 122.500",
+     "links": [
+      {
+       "label": "122.500",
+       "url": "https://www.gesetzessammlung.bs.ch/data/122.500/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-122.500"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
     "Schulung der kantonalen Mitarbeitenden (§ 4 Abs. 5 Integrationsgesetz)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -34,7 +100,7 @@
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Veröffentlichung und Qualitätskontrolle von Sprach- und Integrationskursen (§ 4 Integrationsgesetz) *"
+    "Veröffentlichung und Qualitätskontrolle von Sprach- und Integrationskursen (§ 4 Integrationsgesetz)"
    ]
   },
   "7": {

@@ -1,5 +1,32 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Interkantonale Vereinbarung zwischen den Kantonen Basel-Stadt, Basel-Landschaft und Aargau in Rheinschiffahrts- und Hafenangelegenheiten",
+  "erlassdatum": "Vom 24. Juni 1997 (Stand 1. Januar 1997)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "In Vollziehung des Bundesgesetzes vom 3. Oktober 1975 über die Binnenschiffahrt (BSG), insbesondere des Artikels 58, treffen die Regierungen der Kantone Basel-Stadt, Basel-Landschaft und Aargau folgende Vereinbarung:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 747.201.",
+    "links": [
+     {
+      "label": "747.201",
+      "url": "https://db.clex.ch/link/Bund/747.201/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -109,6 +136,15 @@
    ],
    "marginalie": [
     "Delegation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 814.012.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -175,6 +211,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 16. 5. 1998.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

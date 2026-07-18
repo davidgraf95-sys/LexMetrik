@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Besoldungsverordnung für die Lehrpersonen der Volksschule",
+  "erlassdatum": "vom 27.03.2023 (Stand 01.01.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 44 des Gesetzes über die Volksschule vom 27. März 2023,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -10,7 +28,16 @@
   "2": {
    "gliederung": [],
    "marginalie": [
-    "Jahreslohn [1]"
+    "Jahreslohn"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Siehe Anhang 1 für aktuelle Lohnwerte",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "3": {

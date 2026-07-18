@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Hafenordnung für die Rheinhäfen beider Basel",
+  "erlassdatum": "Vom 21. März 1977 (Stand 1. Januar 2011)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt und der Regierungsrat des Kantons Basel-Landschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Ziffer IV in der Fassung vom 9./30. April 1959 der Vereinbarung zwischen dem Kanton Basel-Stadt und dem Kanton Basel-Landschaft über die Zusammenarbeit in Rheinschiffahrts- und Hafenangelegenheiten vom 18./21. Juni 1946, auf die Interkantonale Vereinbarung zwischen den Kantonen Basel-Stadt, Basel-Landschaft und Aargau vom 20. Mai 1958 / 15. April / 3. Mai 1957über den gemeinsamen Vollzug der vom Bund erlassenen schiffahrtsrechtlichen Vorschriften für die Rheinstrecke zwischen Basel und Rheinfelden sowie auf die Bundesgesetzgebung über die Binnenschiffahrt, den Gewässerschutz, das Eisenbahnwesen und den Zoll,",
+    "fnNrs": [
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliessen im Einvernehmen mit den Schweizerischen Bundesbahnen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "3",
+    "text": "Diese Vereinbarung ist aufgehoben. Massgebend ist jetzt die Interkantonale Vereinbarung zwischen den Kantonen Basel-Stadt, Basel-Landschaft und Aargau in Rheinschiffahrts- und Hafenangelegenheiten vom 24. 6. / 6. 10. / 21. 11. 1997 (SG 955.700 ).",
+    "links": [
+     {
+      "label": "955.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/955.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-955.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Diese Vereinbarung ist aufgehoben. Massgebend ist jetzt die Interkantonale Vereinbarung vom 24. 6. / 6. 10. / 21. 11. 1997 (SG 955.700 ).",
+    "links": [
+     {
+      "label": "955.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/955.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-955.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -175,6 +231,15 @@
    ],
    "marginalie": [
     "Feuer- und Explosionsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 16 Abs. 2: Gemäss RRB vom 26. 7. 1994 sind sämtliche Aufgaben der Feuerpolizei ans Bau- und Verkehrsdepartement, Bauinspektorat, übertragen worden.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -395,6 +460,15 @@
    ],
    "marginalie": [
     "Besondere Vorschriften für den Umschlag"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 36 Abs. 3: Auf Tankschiffen der Typen II und III wird zur Kontrolle des Entleerungszustandes unmittelbar nach dem Löschen das kurzzeitige Öffnen einzelner Tankluken in Anwesenheit einer Aufsichtsperson der Umschlagsanlage gestattet, sofern sich das Fahrzeug in dem für das Löschen erforderlichen Sicherheitszustand befindet (Mitteilung der Rheinschiffahrtsdirektion KtBl 1981 II S. 263).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "37": {

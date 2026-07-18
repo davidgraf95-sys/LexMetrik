@@ -1,5 +1,32 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Anwaltstarif in Zivil- und Strafsachen",
+  "erlassdatum": "vom 11.12.2024 (Stand 01.01.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Erlassen vom Obergericht gestützt auf § 22 Abs. 1 des Anwaltsgesetzes (AnwG).",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RB 176.1",
+    "links": [
+     {
+      "label": "176.1",
+      "url": "https://www.rechtsbuch.tg.ch/data/176.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +37,40 @@
    ],
    "marginalie": [
     "Geltungsbereich und Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 935.61",
+     "links": [
+      {
+       "label": "935.61",
+       "url": "https://db.clex.ch/link/Bund/935.61/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BGFA"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "SR 272",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -32,6 +93,24 @@
    ],
    "marginalie": [
     "Honoraransätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 312.0",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ausgabenreglement für die Grossratskommissionen",
+  "erlassdatum": "Vom 8. September 2025 (Stand 8. September 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Büro des Grossen Rates,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 46a der Ausführungsbestimmungen zum Gesetz über die Geschäftsordnung des Grossen Rates (AB) vom 29. Juni 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 152.110",
+    "links": [
+     {
+      "label": "152.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/152.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-152.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,6 +68,24 @@
    "gliederung": [],
    "marginalie": [
     "Anpassung der Ansätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SG 152.100",
+     "links": [
+      {
+       "label": "152.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/152.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-152.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

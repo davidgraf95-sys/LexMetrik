@@ -1,10 +1,58 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend vorzeitige Pensionierung von Mitarbeiterinnen und Mitarbeitern des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 15. August 2006 (Stand 1. Januar 2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 35 Abs. 2 und 3 des Personalgesetzes vom 17. November 1999,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 162.100.",
+    "links": [
+     {
+      "label": "162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-162.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -16,13 +64,13 @@
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Vorzeitige Pensionierung in gegenseitigem Einvernehmen *"
+    "Vorzeitige Pensionierung in gegenseitigem Einvernehmen"
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
-    "Kriterien für eine vorzeitige Pensionierung in gegenseitigem Einvernehmen *"
+    "Kriterien für eine vorzeitige Pensionierung in gegenseitigem Einvernehmen"
    ]
   },
   "5": {
@@ -35,12 +83,30 @@
    "gliederung": [],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde gemäss § 7 Abs. 3 des Publikationsgesetzes vom 19. Oktober 2016 angepasst; RRB vom 16. 10. 2018.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
    "gliederung": [],
    "marginalie": [
     "Antrag an den Regierungsrat oder an die Departementsvorsteherin bzw. den Departementsvorsteher"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 19. 8. 2006.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3_a": {

@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Programm- und Strukturförderung Orchester",
+  "erlassdatum": "Vom 23. August 2022 (Stand 1. September 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 4 Abs. 1 lit. a und § 12 Abs. 1 Kulturfördergesetz vom 21. Oktober 2009, unter Verweis auf seine Erläuterungen Nr. P220064,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG. 494.300",
+    "links": [
+     {
+      "label": "494.300",
+      "url": "https://www.gesetzessammlung.bs.ch/data/494.300/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-494.300"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -151,7 +190,16 @@
      "label": "5. Ausführungsbestimmungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "In Kraft getreten am 1. September 2022.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

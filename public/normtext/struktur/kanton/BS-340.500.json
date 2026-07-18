@@ -1,9 +1,81 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Verordnung betreffend Betäubungsmittel",
+  "erlassdatum": "Vom 7. September 2004 (Stand 1. Juli 2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von Art. 34 des Bundesgesetzes über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG) vom 3. Oktober 1951 sowie der Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV) vom 29. Mai 1996,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 812.121.",
+    "links": [
+     {
+      "label": "812.121",
+      "url": "https://db.clex.ch/link/Bund/812.121/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BETMG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Diese Verordnung ist aufgehoben. Massgebend ist jetzt die Verordnung über die Beträubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV) vom 25. Mai 2011 (SR 812.121.1 ).",
+    "links": [
+     {
+      "label": "812.121.1",
+      "url": "https://db.clex.ch/link/Bund/812.121.1/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BETMKV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 1 lit. a: Umbenennung \"Sanitätsdepartement des Kantons Basel-Stadt\" in \"Gesundheitsdepartement des Kantons Basel-Stadt\" durch RRB vom 21. 6. 2005 (wirksam seit 1. 7. 2005).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "§ 1 Abs. 1 lit. b: Umbenennung «Gesundheitsdienste» in «Medizinische Dienste» gemäss RRB vom 22. 12. 2015.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [],
@@ -11,11 +83,36 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 3 Abs. 1: Umbenennung \"Sanitätsdepartement des Kantons Basel-Stadt\" in \"Gesundheitsdepartement des Kantons Basel-Stadt\" durch RRB vom 21. 6. 2005 (wirksam seit 1. 7. 2005).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "§ 3 Abs. 2: Umbenennung «Gesundheitsdienste» in «Medizinische Dienste» gemäss RRB vom 22. 12. 2015.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Wirksam seit 16. 9. 2004.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

@@ -1,5 +1,19 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die direkten Steuern",
+  "erlassdatum": "Vom 12. April 2000 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -329,9 +343,7 @@
      "label": "(1. Teil/2. Abschn./A.) IV. Besteuerung nach dem Aufwand"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [
@@ -424,7 +436,7 @@
     }
    ],
    "marginalie": [
-    "a) Grundsatz *"
+    "a) Grundsatz"
    ]
   },
   "19": {
@@ -478,7 +490,16 @@
     }
    ],
    "marginalie": [
-    "d) Unternehmensumstrukturierungen [2]"
+    "d) Unternehmensumstrukturierungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Titel d: Durch Einfügen der §§ 19a und 19b samt Titel b und c wurde der bisherige Titel b zu Titel d.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "21": {
@@ -505,7 +526,7 @@
     }
    ],
    "marginalie": [
-    "a) Allgemeines *"
+    "a) Allgemeines"
    ]
   },
   "22": {
@@ -556,7 +577,25 @@
      "label": "(1. Teil/2. Abschn./B./I.) 6. Vorsorge"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 221.229.1",
+     "links": [
+      {
+       "label": "221.229.1",
+       "url": "https://db.clex.ch/link/Bund/221.229.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VVG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "24": {
    "gliederung": [
@@ -858,7 +897,21 @@
      "label": "(1. Teil/2. Abschn./B.) IV. Sozialabzüge"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Korrigendum: Gemäss Bericht der Wirtschafts- und Abgabekommission (WAK) beträgt das Einkommen zur Deckung des nötigen Lebensbedarfs nicht CHF 18'000 sondern CHF 18'500.",
+     "links": [
+      {
+       "label": "Bericht der Wirtschafts- und Abgabekommission (WAK)",
+       "url": "https://grosserrat.bs.ch/dokumente/100397/000000397580.pdf"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "36": {
    "gliederung": [
@@ -961,7 +1014,7 @@
     }
    ],
    "marginalie": [
-    "d) Kapitalleistungen aus Vorsorge *"
+    "d) Kapitalleistungen aus Vorsorge"
    ]
   },
   "40": {
@@ -1713,7 +1766,7 @@
     }
    ],
    "marginalie": [
-    "Allgemeines *"
+    "Allgemeines"
    ]
   },
   "70": {
@@ -1740,7 +1793,7 @@
     }
    ],
    "marginalie": [
-    "Geschäftsmässig begründeter Aufwand *"
+    "Geschäftsmässig begründeter Aufwand"
    ]
   },
   "71": {
@@ -1767,7 +1820,7 @@
     }
    ],
    "marginalie": [
-    "Erfolgsneutrale Vorgänge *"
+    "Erfolgsneutrale Vorgänge"
    ]
   },
   "72": {
@@ -1794,7 +1847,7 @@
     }
    ],
    "marginalie": [
-    "Unternehmensumstrukturierungen *"
+    "Unternehmensumstrukturierungen"
    ]
   },
   "73": {
@@ -1821,7 +1874,7 @@
     }
    ],
    "marginalie": [
-    "Ersatzbeschaffungen *"
+    "Ersatzbeschaffungen"
    ]
   },
   "74": {
@@ -1848,7 +1901,7 @@
     }
    ],
    "marginalie": [
-    "Gewinne von Vereinen, Stiftungen und kollektiven Kapitalanlagen *"
+    "Gewinne von Vereinen, Stiftungen und kollektiven Kapitalanlagen"
    ]
   },
   "75": {
@@ -1875,7 +1928,7 @@
     }
    ],
    "marginalie": [
-    "Verluste *"
+    "Verluste"
    ]
   },
   "76": {
@@ -1927,7 +1980,7 @@
     }
    ],
    "marginalie": [
-    "a) Beteiligungsabzug *"
+    "a) Beteiligungsabzug"
    ]
   },
   "78": {
@@ -1953,9 +2006,7 @@
      "label": "(1. Teil/3. Abschn./B./II.) 2. Gesellschaften mit Beteiligungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "79": {
    "gliederung": [
@@ -1980,9 +2031,7 @@
      "label": "(1. Teil/3. Abschn./B./II.) 2. Gesellschaften mit Beteiligungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "80": {
    "gliederung": [
@@ -2007,9 +2056,7 @@
      "label": "(1. Teil/3. Abschn./B./II.) 2. Gesellschaften mit Beteiligungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "81": {
    "gliederung": [
@@ -2034,9 +2081,7 @@
      "label": "(1. Teil/3. Abschn./B./II.) 3. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "82": {
    "gliederung": [
@@ -2997,7 +3042,21 @@
      "label": "(1. Teil/7. Abschn./I.) 4. Steuerbefreiung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 120 Abs. 2: Kantonen und Staaten, mit welchen Gegenrechtsregelungen bestehen: Siehe Anhang 2. Die Gegenrechtsregelungen sind publiziert auf der Webseite der Steuerverwaltung ( www.steuerverwaltung.bs.ch ).",
+     "links": [
+      {
+       "label": "www.steuerverwaltung.bs.ch",
+       "url": "https://www.bs.ch/fd/steuerverwaltung"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "121": {
    "gliederung": [
@@ -4229,7 +4288,16 @@
     }
    ],
    "marginalie": [
-    "f) Entscheid und Eröffnung [8]"
+    "f) Entscheid und Eröffnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "§ 169 Titel: Gliederungsbuchstabe (f) redaktionell berichtigt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "170": {
@@ -4256,7 +4324,16 @@
     }
    ],
    "marginalie": [
-    "g) Kosten [9]"
+    "g) Kosten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "§ 170 Titel: Gliederungsbuchstabe (g) redaktionell berichtigt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "171": {
@@ -4928,7 +5005,16 @@
      "label": "(2. Teil/3. Abschn.) 4. Steuerzahlung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Titel 4a (Nummerierung redaktionell berichtigt).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "198": {
    "gliederung": [
@@ -5013,7 +5099,7 @@
     }
    ],
    "marginalie": [
-    "a) Voraussetzungen *"
+    "a) Voraussetzungen"
    ]
   },
   "202": {
@@ -5282,9 +5368,7 @@
      "label": "(3. Teil/A./II.) 5. Erben und Erbinnen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "214": {
    "gliederung": [
@@ -5642,9 +5726,7 @@
      "label": "(4. Teil) 3. Grundstückgewinnsteuer"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "230": {
    "gliederung": [
@@ -5691,7 +5773,16 @@
      "label": "(5. Teil/II.) 2. Änderung des kantonalen Übertretungsstrafgesetzes"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SG 253.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "233": {
    "gliederung": [
@@ -5708,7 +5799,16 @@
      "label": "(5. Teil/II.) 3. Änderung des Handänderungssteuergesetzes"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "SG 650.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "234": {
    "gliederung": [
@@ -5725,7 +5825,30 @@
      "label": "(5. Teil/III.) 2. Erstmalige Anwendung des neuen Rechts"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Datum redaktionell berichtigt.",
+     "links": [],
+     "absatz": "24",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "GRB I.",
+     "links": [],
+     "absatz": "26",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "GRB II.",
+     "links": [],
+     "absatz": "27",
+     "item": null
+    }
+   ]
   },
   "235": {
    "gliederung": [
@@ -5993,7 +6116,16 @@
      "label": "(2. Teil/2. Abschn./A./I.) 3. Datenbearbeitung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SG 910.200",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "159_a": {
    "gliederung": [
@@ -6455,6 +6587,15 @@
    ],
    "marginalie": [
     "b) Indirekte Teilliquidation und Transponierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Der angegebene § 19 Abs. 3 ist nicht korrekt. Richtig ist § 21 Abs. 3 - 8.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "228_a": {
@@ -6545,9 +6686,7 @@
      "label": "(5. Teil/III.) 6a. Einkommenssteuersatz"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "239_c": {
    "gliederung": [
@@ -6564,7 +6703,16 @@
      "label": "(5.Teil/III.) 6b. Ausgleich der kalten Progression"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "§ 239c: Für die Steuerperiode 2014 ist hinsichtlich der Einkommenssteuer der natürlichen Personen kein Ausgleich der kalten Progression vorgenommen worden (RRB vom 17. 12. 2013, KtBl 2013 2157).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "241_a": {
    "gliederung": [
@@ -6615,9 +6763,7 @@
      "label": "(5. Teil/III.) 7. Steuerermässigungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "242_a": {
    "gliederung": [
@@ -6634,9 +6780,7 @@
      "label": "(5. Teil/III.) 10. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "242_b": {
    "gliederung": [
@@ -6653,9 +6797,7 @@
      "label": "(5. Teil/III.) 10. …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "242_bis": {
    "gliederung": [
@@ -6723,7 +6865,16 @@
      "label": "II. Kommunale Steuern und Kirchensteuern"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Softwarebedingte, redaktionelle Einfügungen von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "36_a": {
    "gliederung": [
@@ -6963,7 +7114,7 @@
     }
    ],
    "marginalie": [
-    "Gewinne von juristischen Personen mit ideellen Zwecken *"
+    "Gewinne von juristischen Personen mit ideellen Zwecken"
    ]
   },
   "94_a": {

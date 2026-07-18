@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über den Wasserbau und die Gewässernutzung",
+  "erlassdatum": "vom 25.09.2006 (Stand 01.10.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 12 Abs. 2 des Bundesgesetzes vom 21. Juni 1991 über den Wasserbau sowie Art. 29 und 33 der Verfassung des Kantons Appenzell A.Rh. vom 30. April 1995",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "WBG (SR 721.100 )",
+    "links": [
+     {
+      "label": "721.100",
+      "url": "https://db.clex.ch/link/Bund/721.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "KV (bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +61,25 @@
     }
    ],
    "marginalie": [
-    "Gegenstand und Zweck *"
+    "Gegenstand und Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "WBG und Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG; SR 814.20 )",
+     "links": [
+      {
+       "label": "814.20",
+       "url": "https://db.clex.ch/link/Bund/814.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +91,40 @@
    ],
    "marginalie": [
     "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 57 ff. des Gesetzes über die Einführung der Bundesgesetze über den Umweltschutz und über den Schutz der Gewässer (Umwelt- und Gewässerschutzgesetz, UGsG; bGS 814.0 )",
+     "links": [
+      {
+       "label": "814.0",
+       "url": "https://ar.clex.ch/data/814.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-814.0"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG; SR 814.20 )",
+     "links": [
+      {
+       "label": "814.20",
+       "url": "https://db.clex.ch/link/Bund/814.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -43,6 +147,24 @@
    ],
    "marginalie": [
     "Gewässerhoheit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 704 Abs. 1 und 3 ZGB (SR 210 )",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -69,6 +191,40 @@
    ],
    "marginalie": [
     "Hochwasserschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Art. 3 WBG (SR 721.100 )",
+     "links": [
+      {
+       "label": "721.100",
+       "url": "https://db.clex.ch/link/Bund/721.100/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Art. 4 WBG (SR 721.100 ), Art. 37 GSchG (SR 814.20 )",
+     "links": [
+      {
+       "label": "721.100",
+       "url": "https://db.clex.ch/link/Bund/721.100/de"
+      },
+      {
+       "label": "814.20",
+       "url": "https://db.clex.ch/link/Bund/814.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHG"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -83,7 +239,7 @@
     }
    ],
    "marginalie": [
-    "Revitalisierungen *"
+    "Revitalisierungen"
    ]
   },
   "9": {
@@ -98,7 +254,25 @@
     }
    ],
    "marginalie": [
-    "Grundlagen und Planung *"
+    "Grundlagen und Planung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 41d Abs. 2 Gewässerschutzverordnung (GSchV; SR 814.201 )",
+     "links": [
+      {
+       "label": "814.201",
+       "url": "https://db.clex.ch/link/Bund/814.201/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "GSCHV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -113,7 +287,7 @@
     }
    ],
    "marginalie": [
-    "Gewässerunterhalt *"
+    "Gewässerunterhalt"
    ]
   },
   "11": {
@@ -128,7 +302,7 @@
     }
    ],
    "marginalie": [
-    "Wasserbauprojekte *"
+    "Wasserbauprojekte"
    ]
   },
   "12": {
@@ -143,7 +317,25 @@
     }
    ],
    "marginalie": [
-    "Projektbeschluss *"
+    "Projektbeschluss"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "vgl. Art. 17 Finanzhaushaltsgesetz (FHG; bGS 612.0 )",
+     "links": [
+      {
+       "label": "612.0",
+       "url": "https://ar.clex.ch/data/612.0/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-612.0"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -158,7 +350,7 @@
     }
    ],
    "marginalie": [
-    "Auflageverfahren *"
+    "Auflageverfahren"
    ]
   },
   "14": {
@@ -174,6 +366,40 @@
    ],
    "marginalie": [
     "Einspracheverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -219,6 +445,24 @@
    ],
    "marginalie": [
     "Perimeterverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Verordnung über die Grundeigentümerbeiträge bei der Korrektion oder Verbauung öffentlicher Gewässer (Perimeterverordnung; bGS 742.1 )",
+     "links": [
+      {
+       "label": "742.1",
+       "url": "https://ar.clex.ch/data/742.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-742.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -240,7 +484,25 @@
     }
    ],
    "marginalie": [
-    "Wasserbaupolizeiliche Bewilligung *"
+    "Wasserbaupolizeiliche Bewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "bGS 721.1",
+     "links": [
+      {
+       "label": "721.1",
+       "url": "https://ar.clex.ch/data/721.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-721.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -256,6 +518,15 @@
    ],
    "marginalie": [
     "Nutzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Art. 641 ZGB",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -271,6 +542,20 @@
    ],
    "marginalie": [
     "Wasserkraftnutzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Art. 17 des Bundesgesetzes über die Nutzbarmachung der Wasserkräfte (Wasserrechtsgesetz, WRG; SR 721.80 )",
+     "links": [
+      {
+       "label": "721.80",
+       "url": "https://db.clex.ch/link/Bund/721.80/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -331,6 +616,24 @@
    ],
    "marginalie": [
     "Weitere Nutzungen der Gewässer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Art. 3 des Gesetzes über die Zwangsabtretungen (Enteignungsgesetz; bGS 711.1 )",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -372,6 +675,36 @@
    ],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "VRPG (bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Bundesgesetz über die Nutzbarmachung der Wasserkräfte (Wasserrechtsgesetz, WRG; SR 721.80 )",
+     "links": [
+      {
+       "label": "721.80",
+       "url": "https://db.clex.ch/link/Bund/721.80/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -383,6 +716,24 @@
    ],
    "marginalie": [
     "Widerhandlungen gegen die Vorschriften dieses Gesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "21",
+     "text": "Strafprozessordnung (StPO; SR 312.0 )",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -416,6 +767,47 @@
    ],
    "marginalie": [
     "Aufhebung und Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "bGS 211.1",
+     "links": [
+      {
+       "label": "211.1",
+       "url": "https://ar.clex.ch/data/211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-211.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "bGS 741.1 (aGS II/207)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "bGS 742.1",
+     "links": [
+      {
+       "label": "742.1",
+       "url": "https://ar.clex.ch/data/742.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-742.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -438,6 +830,22 @@
    ],
    "marginalie": [
     "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "Die Referendumsfrist ist am 28. November 2006 unbenützt abgelaufen. (RRB vom 5. Dezember 2006)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "1. Januar 2007 (RRB vom 5. Dezember 2006)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "14_a": {
@@ -453,6 +861,24 @@
    ],
    "marginalie": [
     "Enteignungsrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "bGS 711.1",
+     "links": [
+      {
+       "label": "711.1",
+       "url": "https://ar.clex.ch/data/711.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-711.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "14_b": {

@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Zulagen gemäss § 15a Lohngesetz",
+  "erlassdatum": "Vom 3. Dezember 2013 (Stand 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 15a des Lohngesetzes vom 18. Januar 1995 sowie § 38 der Arbeitszeitverordnung vom 6. Juli 2004,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 164.100.",
+    "links": [
+     {
+      "label": "164.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/164.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-164.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 162.200.",
+    "links": [
+     {
+      "label": "162.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-162.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -130,7 +186,7 @@
     }
    ],
    "marginalie": [
-    "Zulagen für Vereinsdienst *"
+    "Zulagen für Vereinsdienst"
    ]
   },
   "13": {
@@ -153,6 +209,15 @@
    ],
    "marginalie": [
     "Zulage für die Verwaltung von Schulmaterial"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Umbenennung des Personalamtes gemäss RRB vom 17. 3. 1998 in «Zentraler Personaldienst» sowie gemäss RRB vom 16. 10. 2018 in «HR Basel-Stadt».",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   }
  }

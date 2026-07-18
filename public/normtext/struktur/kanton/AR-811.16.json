@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Förderung der Pflegeausbildung",
+  "erlassdatum": "vom 17.09.2024 (Stand 01.10.2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über die Förderung der Ausbildung im Bereich der Pflege vom 16. Dezember 2022 sowie auf Art. 4 Abs. 1 lit. i und Art. 7 lit. d des Gesundheitsgesetzes vom 25. November 2007,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 811.22",
+    "links": [
+     {
+      "label": "811.22",
+      "url": "https://db.clex.ch/link/Bund/811.22/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "bGS 811.1",
+    "links": [
+     {
+      "label": "811.1",
+      "url": "https://ar.clex.ch/data/811.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +73,20 @@
    ],
    "marginalie": [
     "Ausbildungsverpflichtung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Art. 49 Gesundheitsgesetz (bGS 811.1 )",
+     "links": [
+      {
+       "label": "811.1",
+       "url": "https://ar.clex.ch/data/%20811.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -54,6 +120,24 @@
    ],
    "marginalie": [
     "Beitrag pro Ausbildungsplatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "PFV (bGS 833.151 )",
+     "links": [
+      {
+       "label": "833.151",
+       "url": "https://ar.clex.ch/data/833.151/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-833.151"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -97,7 +181,29 @@
     }
    ],
    "marginalie": [
-    "Grenzgänger und Grenzgängerinnen [5]"
+    "Grenzgänger und Grenzgängerinnen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (SR 0.142.112.681 ) und Übereinkommen vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (SR 0.632.31 )",
+     "links": [
+      {
+       "label": "0.142.112.681",
+       "url": "https://db.clex.ch/link/Bund/0.142.112.681/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FZA"
+       }
+      },
+      {
+       "label": "0.632.31",
+       "url": "https://db.clex.ch/link/Bund/0.632.31/de"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "10": {
@@ -142,6 +248,40 @@
    ],
    "marginalie": [
     "Stipendienrechtliche Koordination"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "bGS 415.21",
+     "links": [
+      {
+       "label": "415.21",
+       "url": "https://ar.clex.ch/data/415.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-415.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Vgl. Art. 24-28 Stipendienverordnung (bGS 415.211 )",
+     "links": [
+      {
+       "label": "415.211",
+       "url": "https://ar.clex.ch/data/415.211/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-415.211"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -175,6 +315,20 @@
    ],
    "marginalie": [
     "Geltungsdauer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 811.22",
+     "links": [
+      {
+       "label": "811.22",
+       "url": "https://db.clex.ch/link/Bund/811.22/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

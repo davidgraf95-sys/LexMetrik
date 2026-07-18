@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement zum Schutz der persönlichen Integrität der Grossratsmitglieder des Kantons Basel-Stadt",
+  "erlassdatum": "Vom 11. November 2024 (Stand 1. Februar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Büro des Grossen Rates,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 18 Abs. 2 lit. l des Gesetzes über die Geschäftsordnung des Grossen Rates (GO) vom 29. Juni 2006,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 152.100",
+    "links": [
+     {
+      "label": "152.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/152.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-152.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

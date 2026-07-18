@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung zwischen den Kantonen Basel-Stadt, Basel-Landschaft und Aargau über die Durchführung der amtlichen Nachkontrollen von Fahrzeugen",
+  "erlassdatum": "Vom 24. Juni 1997 (Stand 1. Juli 1997)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Zwischen den Kantonen Basel-Stadt, Basel-Landschaft und Aargau wird gestützt auf Art. 7 BV und Art. 33 Abs. 1 der Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS) vom 19. Juni 1995 folgende Vereinbarung getroffen:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 101.",
+    "links": [
+     {
+      "label": "101",
+      "url": "https://db.clex.ch/link/Bund/101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 741.41.",
+    "links": [
+     {
+      "label": "741.41",
+      "url": "https://db.clex.ch/link/Bund/741.41/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "VTS"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -29,12 +77,39 @@
    "gliederung": [],
    "marginalie": [
     "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 741.51.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "6": {
    "gliederung": [],
    "marginalie": [
     "Anwendbares Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 235.1.",
+     "links": [
+      {
+       "label": "235.1",
+       "url": "https://db.clex.ch/link/Bund/235.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "DSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -71,6 +146,15 @@
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Publiziert am 2. 7. 1997.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

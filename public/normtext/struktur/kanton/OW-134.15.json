@@ -1,5 +1,87 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gebührenordnung für die Rechtspflege",
+  "erlassdatum": "vom 28.09.1973 (Stand 01.03.2015)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Obwalden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 72 Ziffer 3 der Kantonsverfassung vom 19. Mai 1968, Artikel 96 der Schweizerischen Zivilprozessordnung vom 19. Dezember 2008, Artikel 424 der Schweizerischen Strafprozessordnung vom 5. Oktober 2007 und Artikel 32 des Gesetzes über die Gerichtsorganisation vom 22. September 1996,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "GDB 101.0",
+    "links": [
+     {
+      "label": "101.0",
+      "url": "http://gdb.ow.ch/data/101.0/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 272",
+    "links": [
+     {
+      "label": "272",
+      "url": "https://db.clex.ch/link/Bund/272/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 312.0",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "GDB 134.1",
+    "links": [
+     {
+      "label": "134.1",
+      "url": "http://gdb.ow.ch/data/134.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -59,6 +141,52 @@
    ],
    "marginalie": [
     "Herabsetzung der Gebühr"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 312.0",
+     "links": [
+      {
+       "label": "312.0",
+       "url": "https://db.clex.ch/link/Bund/312.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "STPO"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 272",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "GDB 134.14",
+     "links": [
+      {
+       "label": "134.14",
+       "url": "http://gdb.ow.ch/data/134.14/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -148,7 +276,7 @@
     }
    ],
    "marginalie": [
-    "Staatsanwaltschaft und Jugendanwaltschaft *"
+    "Staatsanwaltschaft und Jugendanwaltschaft"
    ]
   },
   "18": {
@@ -239,6 +367,22 @@
    ],
    "marginalie": [
     "Verwaltungsgericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Gesetzgeberisches Versehen; der Verweis lautet korrekt Art. 9 Ziff. 2",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Gesetzgeberisches Versehen; der Verweis lautet korrekt Art. 12 Abs. 1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -305,7 +449,7 @@
     }
    ],
    "marginalie": [
-    "Sachverständige und Übersetzer *"
+    "Sachverständige und Übersetzer"
    ]
   },
   "30": {
@@ -371,7 +515,7 @@
     }
    ],
    "marginalie": [
-    "Im Zivilprozess a. Erste Instanz *"
+    "Im Zivilprozess a. Erste Instanz"
    ]
   },
   "36": {
@@ -460,6 +604,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Vom Regierungsrat auf den 1. Januar 1974 in Kraft gesetzt",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "45": {
@@ -482,6 +635,22 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "OGS 1958, 181",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "OGS 1966, 114",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25_a": {
@@ -536,7 +705,7 @@
     }
    ],
    "marginalie": [
-    "Anwaltskommission *"
+    "Anwaltskommission"
    ]
   },
   "25_f": {
@@ -621,7 +790,7 @@
     }
    ],
    "marginalie": [
-    "Stundung , Erlass und Abschreibung der Kosten"
+    "Stundung, Erlass und Abschreibung der Kosten"
    ]
   },
   "5_b": {
@@ -637,6 +806,24 @@
    ],
    "marginalie": [
     "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 272",
+     "links": [
+      {
+       "label": "272",
+       "url": "https://db.clex.ch/link/Bund/272/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZPO"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

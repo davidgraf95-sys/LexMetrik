@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Kantonale Verordnung über Fuss- und Wanderwege",
+  "erlassdatum": "Vom 2. Juli 2019 (Stand 11. Juli 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über Fuss- und Wanderwege (FWG) vom 4. Oktober 1985 und auf die Verordnung über Fuss- und Wanderwege (FWV) vom 26. November 1986, unter Verweis auf seine Erläuterungen Nr. P190977,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 704",
+    "links": [
+     {
+      "label": "704",
+      "url": "https://db.clex.ch/link/Bund/704/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 704.1",
+    "links": [
+     {
+      "label": "704.1",
+      "url": "https://db.clex.ch/link/Bund/704.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

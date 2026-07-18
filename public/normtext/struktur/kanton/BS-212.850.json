@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zum Bundesgesetz über internationale Kindesentführung und die Haager Übereinkommen zum Schutz von Kindern und Erwachsenen",
+  "erlassdatum": "Vom 11. November 2009 (Stand 29. Dezember 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz über internationale Kindesentführung und die Haager Übereinkommen zum Schutz von Kindern und Erwachsenen (BG-KKE) vom 21. Dezember 2007, nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 09.0713.01 vom 12. Mai 2009 und nach dem mündlichen Antrag der Justiz-, Sicherheits- und Sportkommission vom 11. November 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 211.222.32.",
+    "links": [
+     {
+      "label": "211.222.32",
+      "url": "https://db.clex.ch/link/Bund/211.222.32/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -35,7 +70,16 @@
      "label": "IV. Zuständige Behörden im Bereich des Schutzes des persönlichen Verkehrs (Art. 21 Haager Kindesentführungsübereinkommen, HKÜ; Art. 11 Europäisches Sorgerechtsübereinkommen, ESÜ; Art. 35 Haager Kindesschutzübereinkommen, HKsÜ)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 29. 12. 2009.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

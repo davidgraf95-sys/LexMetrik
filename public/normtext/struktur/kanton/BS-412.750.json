@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Schulung und Förderung von Schülerinnen und Schülern mit besonderem Bildungsbedarf sowie die Spitalschulung",
+  "erlassdatum": "Vom 21. Dezember 2010 (Stand 12. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 74 Abs. 2 lit. g und 130 Abs. 3 des Schulgesetzes vom 4. April 1929, in Ausführung der Interkantonalen Vereinbarung über die Zusammenarbeit im Bereich der Sonderpädagogik vom 25. Oktober 2007 und der Interkantonalen Vereinbarung für Soziale Einrichtungen (IVSE) vom 13. Dezember 2002, auf Antrag des Erziehungsrates,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 419.630.",
+    "links": [
+     {
+      "label": "419.630",
+      "url": "https://www.gesetzessammlung.bs.ch/data/419.630/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-419.630"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 869.100.",
+    "links": [
+     {
+      "label": "869.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/869.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-869.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -175,6 +248,15 @@
    ],
    "marginalie": [
     "Fahrten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Umbenennung von «Kinder- und Jugendgesundheitsdienst» in «Schulärztlicher Dienst» per 1. August 2023.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -293,7 +375,7 @@
     }
    ],
    "marginalie": [
-    "Stabsstelle Zusätzliche Unterstützung *"
+    "Stabsstelle Zusätzliche Unterstützung"
    ]
   },
   "28": {
@@ -357,7 +439,7 @@
     }
    ],
    "marginalie": [
-    "Integrative Schulung von Schülerinnen und Schülern einer Privatschule mit verstärkten Massnahmen *"
+    "Integrative Schulung von Schülerinnen und Schülern einer Privatschule mit verstärkten Massnahmen"
    ]
   },
   "21_a": {
@@ -367,9 +449,7 @@
      "label": "VIbis. Individuelle Lernziele"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26_a": {
    "gliederung": [
@@ -399,7 +479,7 @@
     }
    ],
    "marginalie": [
-    "Zugang der Schülerinnen und Schüler von Privatschulen zu den Förderangeboten Logopädie und Psychomotorik *"
+    "Zugang der Schülerinnen und Schüler von Privatschulen zu den Förderangeboten Logopädie und Psychomotorik"
    ]
   },
   "8_b": {

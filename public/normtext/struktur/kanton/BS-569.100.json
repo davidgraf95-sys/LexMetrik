@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend öffentliche Filmvorführungen und Abgabe von elektronischen Trägermedien",
+  "erlassdatum": "Vom 9. Juni 2010 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 05.1903.01 vom 21. Oktober 2008 sowie in den Bericht der Justiz-, Sicherheits- und Sportkommission Nr. 05.1903.02 vom 5. Mai 2010,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -153,6 +171,29 @@
    ],
    "marginalie": [
     "Änderung und Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "SG 253.100.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "2",
+     "text": "Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Wirksam seit 1. 1. 2013.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

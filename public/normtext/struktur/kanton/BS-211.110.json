@@ -1,5 +1,64 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Einführungsgesetz zum Schweizerischen Zivilgesetzbuch",
+  "erlassdatum": "Vom 9. Dezember 1911 (Stand 1. Mai 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "verordnet in Ausführung der §§ 10, 15, 24, 96, 97, 111, 138, 176, 205, 206, 208, 230 des Gesetzes vom 27. April 1911 betreffend Einführung des Schweizerischen Zivilgesetzbuches, was folgt:",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "§ 10 EG zum ZGB enthält keine Gesetzesdelegation mehr.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "§ 205 EG zum ZGB sind geändert worden und enthalten keine Gesetzesdelegation mehr. Die Delegation zur Regelung der Grundbuch- und Vermessungsgebühren ist nun im Gesetz betreffend Grundbuchverwaltung und Vermessungswesen vom 11. 4. 1929 enthalten.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "§ 206 EG zum ZGB sind geändert worden und enthalten keine Gesetzesdelegation mehr. Die Delegation zur Regelung der Grundbuch- und Vermessungsgebühren ist nun im Gesetz betreffend Grundbuchverwaltung und Vermessungswesen vom 11. 4. 1929 enthalten.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 211.100.",
+    "links": [
+     {
+      "label": "211.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/211.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-211.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -393,7 +452,16 @@
      "label": "III. 3. Buch- und Rechnungsführung (EG § 111)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 38 Abs. 1. II: Titel geändert durch § 3 Ziff. 15 der Zuständigkeitsverordnung vom 9. 12. 2008 (wirksam seit 1. 1. 2009, publiziert am 18. 3. 2009; SG 153.110).",
+     "links": [],
+     "absatz": "1. II",
+     "item": null
+    }
+   ]
   },
   "39": {
    "gliederung": [
@@ -633,7 +701,23 @@
      "label": "IV. 2. E. Vermessungsgebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "§ 52 Abs. 4 lit. aa) und ff: Erste Spalte: Gebäudeversicherungswert.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "§ 52 Abs. 4 lit. aa) und ff: Zweite Spalte: Gebühr.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "53": {
    "gliederung": [
@@ -666,6 +750,15 @@
    ],
    "marginalie": [
     "Schutzmassregel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31_a": {
@@ -757,6 +850,15 @@
    ],
    "marginalie": [
     "Zuständige Behörde für die Bewilligung berufsmässiger Ehe- oder Partnerschaftsvermittlung gemäss Art. 406c Abs. 1 OR (EG § 215a)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Umbenennung «Kantonales Amt für Industrie, Gewerbe und Arbeit (KIGA)» in «Amt für Wirtschaft und Arbeit (AWA)» durch RRB vom 4. 11. 2003 (wirksam seit 1. 1. 2004).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "53_b": {

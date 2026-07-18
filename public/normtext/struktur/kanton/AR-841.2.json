@@ -1,9 +1,65 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Massnahmen zur Sanierung der Wohnverhältnisse in den Berggebieten",
+  "erlassdatum": "vom 01.06.1953 (Stand 30.09.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 15 Abs. 2 des Bundesbeschlusses vom 3. Oktober 1951 über Massnahmen zur Sanierung der Wohnverhältnisse in Berggebieten sowie auf Art. 48 Ziff. 4 der Kantonsverfassung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Diesem Bundesbeschluss entspricht heute das BG vom 20. März 1970 über die Verbesserung der Wohnverhältnisse in Berggebieten (SR 844 )",
+    "links": [
+     {
+      "label": "844",
+      "url": "https://db.clex.ch/link/Bund/844/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Diesem Bundesbeschluss entspricht heute das BG vom 20. März 1970 über die Verbesserung der Wohnverhältnisse in Berggebieten (SR 844 )",
+     "links": [
+      {
+       "label": "844",
+       "url": "https://db.clex.ch/link/Bund/844/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Art. 48 Ziff. 12 Kantonsverfassung",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [],

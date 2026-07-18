@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Geschäftsordnung des Bürgergemeinderates der Stadt Basel",
+  "erlassdatum": "Vom 9. September 1986 (Stand 1. Juli 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgergemeinderat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Ausführung von § 11 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985 folgende Geschäftsordnung:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -75,7 +106,7 @@
     }
    ],
    "marginalie": [
-    "Sitzungsgeld *"
+    "Sitzungsgeld"
    ]
   },
   "8": {
@@ -246,9 +277,7 @@
      "label": "2. Abstimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "20": {
    "gliederung": [
@@ -322,7 +351,7 @@
     }
    ],
    "marginalie": [
-    "Wahl der Präsidentin oder des Präsidenten und der Statthalterin oder des Statthalters *"
+    "Wahl der Präsidentin oder des Präsidenten und der Statthalterin oder des Statthalters"
    ]
   },
   "25": {
@@ -417,9 +446,7 @@
      "label": "III. Instrumentarium"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "33": {
    "gliederung": [
@@ -461,9 +488,7 @@
      "label": "IV. Kommissionen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "37": {
    "gliederung": [
@@ -472,9 +497,7 @@
      "label": "IV. Kommissionen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -517,7 +540,7 @@
     }
    ],
    "marginalie": [
-    "Vertraulichkeit und Geheimhaltung *"
+    "Vertraulichkeit und Geheimhaltung"
    ]
   },
   "42": {
@@ -579,9 +602,7 @@
      "label": "I. Allgemeine Bestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39_a": {
    "gliederung": [
@@ -612,9 +633,7 @@
      "label": "V. Beiräte"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "41_b": {
    "gliederung": [
@@ -623,9 +642,7 @@
      "label": "VI. Verwaltungsrat der Sozialhilfe der Stadt Basel"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "41_c": {
    "gliederung": [
@@ -634,9 +651,7 @@
      "label": "VII. Beratungsausschuss der Sozialhilfe der Stadt Basel"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "41_d": {
    "gliederung": [
@@ -645,9 +660,7 @@
      "label": "VII. Beratungsausschuss der Sozialhilfe der Stadt Basel"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "43_a": {
    "gliederung": [
@@ -656,8 +669,15 @@
      "label": "VIII. Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Wirksam seit 12. 11. 1986.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

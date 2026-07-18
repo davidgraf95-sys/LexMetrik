@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Grossratsbeschluss betreffend Verlängerung der Hauptpiste des Flughafens Basel-Mülhausen sowie Richtlinien über Massnahmen betreffend den Fluglärm aus dem Betrieb des Flughafens Basel-Mülhausen",
+  "erlassdatum": "Vom 22. April 1976 (Stand 22. April 1976)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf den Notenwechsel zwischen der Schweizerischen Eidgenossenschaft und der Französischen Republik vom 25. Februar 1971 und auf die Vereinbarung zwischen der Schweizerischen Eidgenossenschaft und dem Kanton Basel-Stadt vom 4. Mai 1950, auf den Antrag seiner Kommission,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ]
+ },
  "artikel": {
   "a1": {
    "gliederung": [
@@ -8,7 +26,16 @@
      "label": "A."
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "a2": {
    "gliederung": [

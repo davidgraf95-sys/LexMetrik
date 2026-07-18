@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Ausbildung und Lehrabschlussprüfung für gelernte Matrosen und Matrosinnen der Binnenschifffahrt",
+  "erlassdatum": "Vom 13. Mai 2003 (Stand 1. August 2000)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Wirtschafts- und Sozialdepartement des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 12 Abs. 2 des Bundesgesetzes über die Berufsbildung (BBG) vom 19. April 1978 (in der Folge Bundesgesetz genannt) und § 3 des Kantonalen Gesetzes über die Berufsbildung vom 21. Februar 1985, erlässt nachstehendes Reglement über die Ausbildung und Lehrabschlussprüfung für gelernte Matrosen und Matrosinnen der Binnenschifffahrt:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 412.10.",
+    "links": [
+     {
+      "label": "412.10",
+      "url": "https://db.clex.ch/link/Bund/412.10/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BBG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Kantonale Gesetz über die Berufsbildung vom 12. 9. 2007 (SG 420.200 ).",
+    "links": [
+     {
+      "label": "420.200",
+      "url": "https://www.gesetzessammlung.bs.ch/data/420.200/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-420.200"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,6 +66,15 @@
    ],
    "marginalie": [
     "Berufsbezeichnung und Dauer der Lehre"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 1 Abs. 5: Der Text der Verordnung vom 28. November 1996 über die Erteilung von Patenten für den Rhein wird weder in der AS noch in der SR veröffentlicht. Separatdrucke sind bei der EDMZ, 3000 Bern, zu beziehen.",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -29,6 +90,15 @@
    ],
    "marginalie": [
     "Anforderungen an den Lehrbetrieb"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 2 Abs. 1: Der Text der Rheinschiffsuntersuchungsordnung vom 18. Mai 1994 wird weder in der AS noch in der SR veröffentlicht. Separatdrucke sind bei der EDMZ, 3000 Bern, zu beziehen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -74,6 +144,22 @@
    ],
    "marginalie": [
     "Fertigkeiten und Kenntnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 5 Abs. 3: SR 747.201 über die Binnenschifffahrt.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "§ 5 Abs. 3: Der Text der Verordnung über die Beförderung gefährlicher Güter auf dem Rhein vom 15. Februar 1994 wird weder in der AS noch in der SR veröffentlicht. Separatdrucke sind bei der EDMZ, 3000 Bern, zu beziehen.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -177,6 +263,22 @@
    ],
    "marginalie": [
     "Beurteilung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Verkehrslehre.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Schiffsbetriebslehre und -sicherheit.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -270,6 +372,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Publiziert am 23. 8. 2003.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

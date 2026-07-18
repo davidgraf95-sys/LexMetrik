@@ -1,5 +1,9 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen 1. Kanton Basel-Stadt vertreten durch den Regierungsrat, der Regierungsrat gleichzeitig handelnd für die Einwohnergemeinde der Stadt Basel 2. Kanton Basel-Landschaft vertreten durch den Regierungsrat 3. Einfacher Gesellschaft, bestehend aus a) BASF Schweiz AG, Basel b) F. Hoffmann-La Roche AG, Basel c) Huntsman Advanced Materials (Switzerland) GmbH, Basel d) Novartis Pharma AG, Basel e) Syngenta Crop Protection AG, Basel betreffend den gemeinsamen Betrieb von Abwasserreinigungsanlagen",
+  "erlassdatum": "Vom 26. Juni 1979 (Stand 1. Januar 2018)"
+ },
  "artikel": {
   "1.1": {
    "gliederung": [
@@ -42,7 +46,7 @@
     }
    ],
    "marginalie": [
-    "Die chemisch-pharmazeutischen Firmen *"
+    "Die chemisch-pharmazeutischen Firmen"
    ]
   },
   "1.1.4": {
@@ -54,6 +58,22 @@
    ],
    "marginalie": [
     "Die drei Parteien gemeinsam"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "In der Gesetzessammlung ist der sogenannte Konsortialvertrag datiert vom 18./16. 6. 1974 (SG 785.720).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "In der Gesetzessammlung ist der sogenannte Konsortialvertrag datiert vom 18./16. 6. 1974 (SG 785.720).",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "1.2": {
@@ -79,7 +99,7 @@
     }
    ],
    "marginalie": [
-    "Einfache Gesellschaft BASF Schweiz AG, Basel, F. Hoffmann-La Roche AG, Basel, Huntsman Advanced Materials (Switzerland) GmbH, Basel, Novartis Pharma AG, Basel und Syngenta Crop Protection AG, Basel *"
+    "Einfache Gesellschaft BASF Schweiz AG, Basel, F. Hoffmann-La Roche AG, Basel, Huntsman Advanced Materials (Switzerland) GmbH, Basel, Novartis Pharma AG, Basel und Syngenta Crop Protection AG, Basel"
    ]
   },
   "2.1.2": {
@@ -245,6 +265,15 @@
    ],
    "marginalie": [
     "Insbesondere das Personal"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "In der Fassung vom 26.6.1979: Pensions-, Witwen- und Waisenkasse des Basler Staatspersonals.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2.3.3": {
@@ -480,6 +509,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Genehmigt vom Grossen Rat des Kantons Basel-Stadt am 20. 12. 1979 und angenommen in der Volksabstimmung vom 8. 6. 1980, genehmigt vom Landrat des Kantons Basel-Landschaft am 1. 9. 1980.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

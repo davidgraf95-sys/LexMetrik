@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Bewilligung für die regelmässige und gewerbsmässige Personenbeförderung",
+  "erlassdatum": "Vom 21. Dezember 1999 (Stand 25. Mai 2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 36 der Verordnung über die Personenbeförderung (VPB) des Bundes vom 4. November 2009,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 745.11.",
+    "links": [
+     {
+      "label": "745.11",
+      "url": "https://db.clex.ch/link/Bund/745.11/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -43,6 +78,15 @@
    ],
    "marginalie": [
     "Bewilligungsgesuche"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 4 Abs. 2: Dieser Anhang wird hier nicht abgedruckt. Er kann beim Bau- und Verkehrsdepartement, Amt für Mobilität, eingesehen werden.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -169,9 +213,7 @@
      "label": "VII. Übergangsbestimmungen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   }
  }
 }

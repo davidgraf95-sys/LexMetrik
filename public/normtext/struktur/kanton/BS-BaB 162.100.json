@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung betreffend die Anstellungsverhältnisse bei der Bürgergemeinde der Stadt Basel",
+  "erlassdatum": "Vom 28. April 1998 (Stand 1. Januar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgergemeinderat der Stadt Basel erlässt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 Abs. 1 Ziff. 6 des Gemeindegesetzes vom 17. Oktober 1984 und § 11 Ziff. 7 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985, die folgende Ordnung:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -52,13 +100,13 @@
   "9": {
    "gliederung": [],
    "marginalie": [
-    "Ordentliche Kündigung *"
+    "Ordentliche Kündigung"
    ]
   },
   "10": {
    "gliederung": [],
    "marginalie": [
-    "Rechtswirkung der Kündigung; Rechtsschutz bei ungerechtfertigter Kündigung *"
+    "Rechtswirkung der Kündigung; Rechtsschutz bei ungerechtfertigter Kündigung"
    ]
   },
   "11": {
@@ -81,9 +129,7 @@
   },
   "14": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "15": {
    "gliederung": [],
@@ -100,13 +146,13 @@
   "17": {
    "gliederung": [],
    "marginalie": [
-    "Schwangerschafts- und Mutterschafts-/Vaterschaftsurlaub *"
+    "Schwangerschafts- und Mutterschafts-/Vaterschaftsurlaub"
    ]
   },
   "18": {
    "gliederung": [],
    "marginalie": [
-    "Bezahlte Absenzen *"
+    "Bezahlte Absenzen"
    ]
   },
   "19": {
@@ -130,20 +176,18 @@
   "22": {
    "gliederung": [],
    "marginalie": [
-    "Versicherungsschutz und Prämienfinanzierung *"
+    "Versicherungsschutz und Prämienfinanzierung"
    ]
   },
   "23": {
    "gliederung": [],
    "marginalie": [
-    "Nebenbeschäftigung *"
+    "Nebenbeschäftigung"
    ]
   },
   "24": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [],

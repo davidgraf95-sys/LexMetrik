@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesundheitsgesetz",
+  "erlassdatum": "vom 11.12.2007 (Stand 01.01.2017)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 7 lit. b des Gesundheitsgesetzes vom 25. November 2007,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 811.1",
+    "links": [
+     {
+      "label": "811.1",
+      "url": "https://ar.clex.ch/data/811.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +49,52 @@
    ],
    "marginalie": [
     "Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Art. 39 lit. c Organisationsgesetz (bGS 142.12 ) und Art. 44 Abs. 4 Organisationsverordnung (bGS 142.121 )",
+     "links": [
+      {
+       "label": "142.12",
+       "url": "https://ar.clex.ch/data/142.12/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.12"
+       }
+      },
+      {
+       "label": "142.121",
+       "url": "https://ar.clex.ch/data/142.121/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.121"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Insbesondere V über die Gesundheitsfachpersonen (bGS 811.13 ) und V über den Betrieb des Spitalverbundes AR (Betriebsverordnung; bGS 812.111 )",
+     "links": [
+      {
+       "label": "811.13",
+       "url": "https://ar.clex.ch/data/811.13/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.13"
+       }
+      },
+      {
+       "label": "812.111",
+       "url": "https://ar.clex.ch/data/812.111/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -20,7 +105,16 @@
     }
    ],
    "marginalie": [
-    "Gesundheitsrat [4]"
+    "Gesundheitsrat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 9 Gesundheitsgesetz",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "5": {
@@ -42,7 +136,25 @@
     }
    ],
    "marginalie": [
-    "Amt für Soziales *"
+    "Amt für Soziales"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "bGS 811.14",
+     "links": [
+      {
+       "label": "811.14",
+       "url": "https://ar.clex.ch/data/811.14/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.14"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -54,6 +166,56 @@
    ],
    "marginalie": [
     "Kantonsärztlicher Dienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "BetmG (SR 812.121 )",
+     "links": [
+      {
+       "label": "812.121",
+       "url": "https://db.clex.ch/link/Bund/812.121/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BETMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "EpG (SR 818.101 )",
+     "links": [
+      {
+       "label": "818.101",
+       "url": "https://db.clex.ch/link/Bund/818.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EPG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -65,6 +227,80 @@
    ],
    "marginalie": [
     "Veterinärdienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "LMG (SR 817.0 )",
+     "links": [
+      {
+       "label": "817.0",
+       "url": "https://db.clex.ch/link/Bund/817.0/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "LMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "LwG (SR 910.1 )",
+     "links": [
+      {
+       "label": "910.1",
+       "url": "https://db.clex.ch/link/Bund/910.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "HMG (SR 812.21 )",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Vgl. Tierarzneimittelverordnung (TAMV; SR 812.212.27 )",
+     "links": [
+      {
+       "label": "812.212.27",
+       "url": "https://db.clex.ch/link/Bund/812.212.27/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Vgl. Art. 16 V über die Gesundheitsfachpersonen (bGS 811.13 )",
+     "links": [
+      {
+       "label": "811.13",
+       "url": "https://ar.clex.ch/data/811.13/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.13"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -76,6 +312,68 @@
    ],
    "marginalie": [
     "Gesundheitsfachpersonen und Heilmittelkontrolle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "HMG (SR 812.21 )",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "bGS 811.13",
+     "links": [
+      {
+       "label": "811.13",
+       "url": "https://ar.clex.ch/data/811.13/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.13"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "bGS 811.11.1",
+     "links": [
+      {
+       "label": "811.11.1",
+       "url": "https://ar.clex.ch/data/811.11.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.11.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "MedBG (SR 811.11 )",
+     "links": [
+      {
+       "label": "811.11",
+       "url": "https://db.clex.ch/link/Bund/811.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -87,6 +385,24 @@
    ],
    "marginalie": [
     "Beratungsstelle für Suchtfragen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "bGS 813.21",
+     "links": [
+      {
+       "label": "813.21",
+       "url": "https://ar.clex.ch/data/813.21/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-813.21"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -109,6 +425,24 @@
    ],
    "marginalie": [
     "Heimaufsicht und -beratung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "bGS 811.14",
+     "links": [
+      {
+       "label": "811.14",
+       "url": "https://ar.clex.ch/data/811.14/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.14"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -118,7 +452,23 @@
      "label": "III. Leistungsvereinbarungen (Zuständigkeit und Inhalt)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "Vgl. Art. 7 lit. d Gesundheitsgesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Vgl. Art. 8 Abs. 3 Gesundheitsgesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "16": {
    "gliederung": [
@@ -128,7 +478,16 @@
     }
    ],
    "marginalie": [
-    "Bekämpfung des Suchtmittelmissbrauchs [22]"
+    "Bekämpfung des Suchtmittelmissbrauchs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Vgl. Art. 16 Abs. 2 Gesundheitsgesetz",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "17": {
@@ -139,7 +498,16 @@
     }
    ],
    "marginalie": [
-    "Schutz vor Passivrauchen [23]"
+    "Schutz vor Passivrauchen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "Vgl. Art. 17 Gesundheitsgesetz",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "18": {
@@ -182,7 +550,25 @@
      "label": "IVa. Vergütung ärztlicher Todesbescheinigungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

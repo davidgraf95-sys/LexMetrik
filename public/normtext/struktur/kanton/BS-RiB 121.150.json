@@ -1,10 +1,65 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über die Erhebung von Gebühren im Einbürgerungsverfahren",
+  "erlassdatum": "Vom 23. November 2018 (Stand 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgerrat Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 26 Abs. 2 des Bürgerrechtsgesetzes (BüRG) vom 19. Oktober 2017,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 121.100",
+    "links": [
+     {
+      "label": "121.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/121.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-121.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Stellung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "gilt bis zum 31. Dezember 2026",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Fassung vom 6. Mai 2022, in Kraft seit 1. Januar 2023 (KB 24.08.2021)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {

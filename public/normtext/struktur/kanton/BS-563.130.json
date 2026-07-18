@@ -1,5 +1,57 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Bundesgesetz über die gebrannten Wasser",
+  "erlassdatum": "Vom 12. Juli 2005 (Stand 19. Januar 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 41a des Bundesgesetzes über die gebrannten Wasser (Alkoholgesetz) vom 21. Juni 1932 und auf §§ 38, 39 und 43 des Gastgewerbegesetzes vom 15. September 2004,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 680.",
+    "links": [
+     {
+      "label": "680",
+      "url": "https://db.clex.ch/link/Bund/680/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 563.100.",
+    "links": [
+     {
+      "label": "563.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/563.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-563.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -47,6 +99,15 @@
    "gliederung": [],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Wirksam seit 17. 7. 2005.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

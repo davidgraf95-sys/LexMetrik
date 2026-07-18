@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Grossratsbeschluss betreffend Zahl der den Wahlkreisen der Stadt und den Gemeinden Bettingen und Riehen im Grossen Rat zustehende Sitze",
+  "erlassdatum": "Vom 15. Januar 2020 (Stand 25. Oktober 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 80 Abs. 2 der Verfassung des Kantons Basel-Stadt vom 23. März 2005 und § 42 Abs. 3 und 4 des Gesetzes betreffend Wahlen und Abstimmungen (Wahlgesetz) vom 21. April 1994 und nach Einsichtnahme in den Ratschlag des Regierungsrates Nr. 19.1837.01 vom 21. August 2019,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 111.100",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 132.100",
+    "links": [
+     {
+      "label": "132.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/132.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-132.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],

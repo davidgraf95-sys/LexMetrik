@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über explosionsgefährliche Stoffe",
+  "erlassdatum": "Vom 13. Oktober 1981 (Stand 1. Juli 2020)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung von Art. 42 des Bundesgesetzes vom 25. März 1977 über explosionsgefährliche Stoffe (Sprengstoffgesetz, SprstG) und der Verordnung vom 26. März 1980 über explosionsgefährliche Stoffe (Sprengstoffverordnung, SprstV),",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 941.41.",
+    "links": [
+     {
+      "label": "941.41",
+      "url": "https://db.clex.ch/link/Bund/941.41/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 941.411.",
+    "links": [
+     {
+      "label": "941.411",
+      "url": "https://db.clex.ch/link/Bund/941.411/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -22,7 +70,23 @@
   "4": {
    "gliederung": [],
    "marginalie": [
-    "Zuständigkeit des Amtes für Gewerbe, Industrie und Berufsbildung [4]"
+    "Zuständigkeit des Amtes für Gewerbe, Industrie und Berufsbildung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 4 Titel: Jetzt Amt für Wirtschaft und Arbeit (AWA).",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "§ 4: Jetzt Amt für Wirtschaft und Arbeit (AWA).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -53,12 +117,30 @@
    "gliederung": [],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "§ 9 ist hinfällig und wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
    "gliederung": [],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vom Bundesrat genehmigt am 10. 12. 1981.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

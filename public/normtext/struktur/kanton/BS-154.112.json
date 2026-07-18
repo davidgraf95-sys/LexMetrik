@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Personalreglement der Gerichte",
+  "erlassdatum": "Vom 15. Mai 2017 (Stand 18. September 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gerichtsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 Abs. 2 Ziff. 3 und § 62 Abs. 1 des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015 und § 3 Abs. 2 des Personalgesetzes vom 17. November 1999,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 154.100.",
+    "links": [
+     {
+      "label": "154.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/154.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-154.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 162.100.",
+    "links": [
+     {
+      "label": "162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/162.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-162.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +77,15 @@
    ],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 2: Umbenennung des Zentralen Personaldienstes gemäss RRB vom 16. 10. 2018 in «HR Basel-Stadt».",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -65,6 +130,15 @@
    ],
    "marginalie": [
     "Personaladministration"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 6 Abs. 1: Umbenennung des Zentralen Personaldienstes gemäss RRB vom 16. 10. 2018 in «HR Basel-Stadt».",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {

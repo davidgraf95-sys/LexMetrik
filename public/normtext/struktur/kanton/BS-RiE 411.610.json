@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement für die Schulen der Gemeinden Bettingen und Riehen",
+  "erlassdatum": "Vom 16. Juni 2009 (Stand 17. April 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Gemeinderat Riehen"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt gestützt auf die Ordnung für die Schulen der Gemeinden Bettingen und Riehen (Schulordnung) vom 25. März 2009 folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "RiE 411.600.",
+    "links": [
+     {
+      "label": "RiE 411.600",
+      "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20411.600/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -58,7 +89,7 @@
     }
    ],
    "marginalie": [
-    "Zuständigkeit *"
+    "Zuständigkeit"
    ]
   },
   "5": {
@@ -73,7 +104,7 @@
     }
    ],
    "marginalie": [
-    "Personalverantwortung *"
+    "Personalverantwortung"
    ]
   },
   "6": {
@@ -162,9 +193,7 @@
      "label": "3. Schulräte"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "12": {
    "gliederung": [
@@ -190,6 +219,15 @@
    ],
    "marginalie": [
     "Schulgeld für auswärtige Schülerinnen und Schüler"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Regionales Schulabkommen über die gegenseitige Aufnahme von Auszubildenden und Ausrichtung von Beiträgen (RSA 2009) vom 23. 11. 2007 (SG 419.700).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -234,6 +272,15 @@
    ],
    "marginalie": [
     "Schulausflüge, Lager und Wintersportveranstaltungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -263,7 +310,7 @@
     }
    ],
    "marginalie": [
-    "Ferien *"
+    "Ferien"
    ]
   },
   "20": {
@@ -293,7 +340,37 @@
     }
    ],
    "marginalie": [
-    "Befristete Arbeitsverhältnisse *"
+    "Befristete Arbeitsverhältnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG RiE 411.600",
+     "links": [
+      {
+       "label": "RiE 411.600",
+       "url": "https://www.gesetzessammlung.bs.ch/data/RiE%20411.600/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "SG 410.100",
+     "links": [
+      {
+       "label": "410.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-410.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -308,7 +385,7 @@
     }
    ],
    "marginalie": [
-    "Einzellektionen- und Kompensationskonten *"
+    "Einzellektionen- und Kompensationskonten"
    ]
   },
   "23": {
@@ -337,9 +414,7 @@
      "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "25": {
    "gliederung": [
@@ -353,7 +428,7 @@
     }
    ],
    "marginalie": [
-    "Bezug des Urlaubskontos *"
+    "Bezug des Urlaubskontos"
    ]
   },
   "26": {
@@ -397,9 +472,7 @@
      "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [
@@ -413,7 +486,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigung von Stellvertretungen *"
+    "Entschädigung von Stellvertretungen"
    ]
   },
   "30": {
@@ -443,7 +516,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigung für Arbeitseinsätze in der Tagesstruktur *"
+    "Entschädigung für Arbeitseinsätze in der Tagesstruktur"
    ]
   },
   "32": {
@@ -458,7 +531,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigung für Aufgaben ausserhalb des Berufsauftrags *"
+    "Entschädigung für Aufgaben ausserhalb des Berufsauftrags"
    ]
   },
   "33": {
@@ -532,9 +605,7 @@
      "label": "(IV.)1. Bearbeitung von Personendaten"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "38": {
    "gliederung": [
@@ -563,7 +634,7 @@
     }
    ],
    "marginalie": [
-    "Akteneinsicht im Rahmen der Aufgabenerfüllung *"
+    "Akteneinsicht im Rahmen der Aufgabenerfüllung"
    ]
   },
   "40": {
@@ -632,9 +703,7 @@
      "label": "(VI.)1. Kommunalisierung der Primarschule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "46": {
    "gliederung": [
@@ -647,9 +716,7 @@
      "label": "(VI.)1. Kommunalisierung der Primarschule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "47": {
    "gliederung": [
@@ -662,9 +729,7 @@
      "label": "(VI.)1. Kommunalisierung der Primarschule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "48": {
    "gliederung": [
@@ -692,9 +757,7 @@
      "label": "(VI.)1. Kommunalisierung der Primarschule"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "50": {
    "gliederung": [
@@ -795,6 +858,36 @@
    ],
    "marginalie": [
     "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "RiE 412.210.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "§ 56 Abs. 1: Die Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "RiE 162.100.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "§ 56 Abs. 2: Die Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "57": {
@@ -819,9 +912,7 @@
      "label": "3. Schulräte"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "10_b": {
    "gliederung": [
@@ -850,7 +941,7 @@
     }
    ],
    "marginalie": [
-    "Weisung zu den Aufgaben der Schulräte *"
+    "Weisung zu den Aufgaben der Schulräte"
    ]
   },
   "1_a": {
@@ -924,9 +1015,7 @@
      "label": "(III.)2. Besondere personalrechtliche Regelungen für die Lehrpersonen"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31_a": {
    "gliederung": [
@@ -940,7 +1029,7 @@
     }
    ],
    "marginalie": [
-    "Entschädigung für Stellvertretungen und Aushilfen in der Tagesstruktur *"
+    "Entschädigung für Stellvertretungen und Aushilfen in der Tagesstruktur"
    ]
   },
   "34_a": {
@@ -955,7 +1044,7 @@
     }
    ],
    "marginalie": [
-    "Anstellungsbedingungen *"
+    "Anstellungsbedingungen"
    ]
   },
   "34_b": {

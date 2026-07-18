@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement über das Bestattungs- und Friedhofwesen",
+  "erlassdatum": "Vom 31. März 2023 (Stand 17. April 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Stadtgärtnerei,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die §§ 15 Abs. 4, 21 Abs. 2 und 24 Abs. 1 Bestattungsverordnung (BestV) vom 2. März 2021 sowie §§ 2 Abs. 2 und 7 Abs. 5 Grabmalverordnung (GrabmV) vom 2. März 2021,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 390.110",
+    "links": [
+     {
+      "label": "390.110",
+      "url": "https://www.gesetzessammlung.bs.ch/data/390.110/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-390.110"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 390.170",
+    "links": [
+     {
+      "label": "390.170",
+      "url": "https://www.gesetzessammlung.bs.ch/data/390.170/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-390.170"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

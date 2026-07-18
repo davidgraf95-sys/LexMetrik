@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Regierungs- und Verwaltungsorganisationsgesetz",
+  "erlassdatum": "vom 31.05.2005 (Stand 01.07.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Regierungs- und Verwaltungsorganisationsgesetz vom 29. November 2004,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "OrG (bGS 142.12 )",
+    "links": [
+     {
+      "label": "142.12",
+      "url": "https://ar.clex.ch/data/142.12/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-142.12"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -28,7 +67,7 @@
     }
    ],
    "marginalie": [
-    "Planung und Berichterstattung *"
+    "Planung und Berichterstattung"
    ]
   },
   "3": {
@@ -359,6 +398,24 @@
    ],
    "marginalie": [
     "Eintreten und Detailberatung a) Allgemein"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "bGS 141.2",
+     "links": [
+      {
+       "label": "141.2",
+       "url": "https://ar.clex.ch/data/141.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-141.2"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -389,6 +446,24 @@
    ],
    "marginalie": [
     "c) Abstimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "bGS 141.2",
+     "links": [
+      {
+       "label": "141.2",
+       "url": "https://ar.clex.ch/data/141.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-141.2"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -463,7 +538,7 @@
     }
    ],
    "marginalie": [
-    "Information und Kommunikation *"
+    "Information und Kommunikation"
    ]
   },
   "32": {
@@ -544,7 +619,7 @@
     }
    ],
    "marginalie": [
-    "Form *"
+    "Form"
    ]
   },
   "39": {
@@ -577,7 +652,7 @@
     }
    ],
    "marginalie": [
-    "Zusammensetzung *"
+    "Zusammensetzung"
    ]
   },
   "43": {
@@ -599,7 +674,7 @@
     }
    ],
    "marginalie": [
-    "b) Aufgaben *"
+    "b) Aufgaben"
    ]
   },
   "46": {
@@ -611,6 +686,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "1. Juni 2005 (RRB vom 31. Mai 2005)",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27_a": {
@@ -652,6 +736,24 @@
    ],
    "marginalie": [
     "Taggelder und Spesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "REIS (bGS 142.211.1 )",
+     "links": [
+      {
+       "label": "142.211.1",
+       "url": "https://ar.clex.ch/data/142.211.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-142.211.1"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "42_a": {
@@ -839,6 +941,24 @@
    ],
    "marginalie": [
     "Durchführung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "bGS 143.1",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "45_d": {

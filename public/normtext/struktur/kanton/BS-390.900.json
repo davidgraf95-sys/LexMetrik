@@ -1,9 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Beschluss des Regierungsrates betreffend Bewilligung eines besonderen israelitischen Friedhofs",
+  "erlassdatum": "Vom 18. November 1947 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Anwendung des Grossratsbeschlusses vom 10. April 1902 betreffend die Bewilligung zur Anlegung eines Friedhofs durch die hiesige Israelitische Gemeinde sowie von § 6 Abs. 2 des Gesetzes betreffend die Bestattungen, erteilt hiermit der Israelitischen Gemeinde, Verein in Basel, folgende Bewilligung zur Erstellung und zum Betriebe einer Begräbnisstätte:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 390.100.",
+    "links": [
+     {
+      "label": "390.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/390.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-390.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Jetzt: Theodor Herzl-Strasse 90.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [],
@@ -39,7 +83,16 @@
   },
   "10": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Jetzt: Gesundheitsdepartement.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

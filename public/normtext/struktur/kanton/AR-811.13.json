@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gesundheitsfachpersonen",
+  "erlassdatum": "vom 11.12.2007 (Stand 01.06.2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 34 Abs. 3 des Gesundheitsgesetzes vom 25. November 2007,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "bGS 811.1",
+    "links": [
+     {
+      "label": "811.1",
+      "url": "https://ar.clex.ch/data/811.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-811.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -32,6 +71,15 @@
    ],
    "marginalie": [
     "Bewilligungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. Art. 35 Abs. 1 Gesundheitsgesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -43,6 +91,15 @@
    ],
    "marginalie": [
     "Voraussetzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Vgl. Art. 2 Abs. 2",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -53,7 +110,28 @@
     }
    ],
    "marginalie": [
-    "Anerkennung von Ausweisen [4]"
+    "Anerkennung von Ausweisen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 34 Abs. 3 Gesundheitsgesetz",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Vgl. z.B. Art. 15 und 21 Medizinalberufegesetz (MedBG; SR 811.11 )",
+     "links": [
+      {
+       "label": "811.11",
+       "url": "https://db.clex.ch/link/Bund/811.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -65,6 +143,24 @@
    ],
    "marginalie": [
     "Rechtsschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 30 G über die Verwaltungsrechtspflege (VRPG; bGS 143.1 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "7": {
@@ -76,6 +172,15 @@
    ],
    "marginalie": [
     "Berufsausübung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vgl. Art. 40 lit.b Gesundheitsgesetz",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -98,6 +203,15 @@
    ],
    "marginalie": [
     "Praxis- und Geschäftsräume"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 65 Abs. 1 Gesundheitsgesetz",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -108,7 +222,16 @@
     }
    ],
    "marginalie": [
-    "Notfalldienst [9]"
+    "Notfalldienst"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Vgl. Art. 42 Gesundheitsgesetz",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "11": {
@@ -120,6 +243,15 @@
    ],
    "marginalie": [
     "Vertretung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Vgl. Art. 39 Gesundheitsgesetz",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -164,6 +296,47 @@
    ],
    "marginalie": [
     "Heilpraktikerinnen und Heilpraktiker"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "bezüglich Besitzstand vgl. Art. 67 Gesundheitsgesetz",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "gemäss Art. 9 Abs. 2 Heilmittelgesetz (HMG; SR 812.21 )",
+     "links": [
+      {
+       "label": "812.21",
+       "url": "https://db.clex.ch/link/Bund/812.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "HMG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "bGS 811.11",
+     "links": [
+      {
+       "label": "811.11",
+       "url": "https://ar.clex.ch/data/811.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.11"
+       }
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -175,6 +348,20 @@
    ],
    "marginalie": [
     "Tierheilpraktikerinnen und Tierheilpraktiker"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "Art. 2 ff. Tierseuchenverordnung (TSV; SR 916.401 )",
+     "links": [
+      {
+       "label": "916.401",
+       "url": "https://db.clex.ch/link/Bund/916.401/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -186,6 +373,38 @@
    ],
    "marginalie": [
     "Drogerien"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "VAM (SR 812.212.21 )",
+     "links": [
+      {
+       "label": "812.212.21",
+       "url": "https://db.clex.ch/link/Bund/812.212.21/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "VAM"
+       }
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "Vgl. Art. 54 Abs. 2 Gesundheitsgesetz",
+     "links": [],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "Vgl. Art. 54 Abs. 2 lit. c Gesundheitsgesetz",
+     "links": [],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -207,7 +426,16 @@
     }
    ],
    "marginalie": [
-    "Privatapotheken [18]"
+    "Privatapotheken"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Vgl. Art. 58 Gesundheitsgesetz",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "20": {
@@ -217,7 +445,25 @@
      "label": "VI. Gebühren (Bewilligung)"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "bGS 233.2",
+     "links": [
+      {
+       "label": "233.2",
+       "url": "https://ar.clex.ch/data/233.2/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-233.2"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   },
   "21": {
    "gliederung": [

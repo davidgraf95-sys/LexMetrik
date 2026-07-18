@@ -1,5 +1,70 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Tierschutzverordnung",
+  "erlassdatum": "vom 13.06.1983 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 36 des eidg. Tierschutzgesetzes vom 9. März 1978 und auf die eidg. Tierschutzverordnung vom 27. Mai 1981 sowie Art. 48 Ziff. 4 der Verfassung für den Kanton Appenzell A.Rh. vom 26. April 1908,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "TSchG (SR 455 )",
+    "links": [
+     {
+      "label": "455",
+      "url": "https://db.clex.ch/link/Bund/455/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "TSchV (SR 455.1 )",
+    "links": [
+     {
+      "label": "455.1",
+      "url": "https://db.clex.ch/link/Bund/455.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "aGS I/1 (heute: bGS 111.1 )",
+    "links": [
+     {
+      "label": "111.1",
+      "url": "https://ar.clex.ch/data/111.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-111.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -31,7 +96,16 @@
     }
    ],
    "marginalie": [
-    "Departement Gesundheit und Soziales *"
+    "Departement Gesundheit und Soziales"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 7 TSchG, Art. 8, 9 TSchV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -53,7 +127,16 @@
     }
    ],
    "marginalie": [
-    "Überwachung von Tierversuchen [5]"
+    "Überwachung von Tierversuchen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Art. 58–64 TSchV",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "6": {
@@ -65,6 +148,22 @@
    ],
    "marginalie": [
     "Wildhüter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 33 Abs. 1 und 3 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Art. 33 Abs. 3 TSchV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -87,6 +186,15 @@
    ],
    "marginalie": [
     "Tierschutzorganisationen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Art. 38–44 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -98,6 +206,29 @@
    ],
    "marginalie": [
     "Wildtierhaltungen a) Bewilligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 41 Abs. 1 und 2 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Art. 44 Abs. 2 TSchV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Art. 44 Abs. 3 TSchV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -109,6 +240,29 @@
    ],
    "marginalie": [
     "b) Tierbestandeskontrollen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Art. 44 Abs. 1 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Art. 44 Abs. 1 TSchV",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "Art. 45–51 TSchV",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -120,6 +274,29 @@
    ],
    "marginalie": [
     "Bewilligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Art. 45 und 46 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "Art. 50 TSchV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "Art. 45, 46 und Art. 49 Abs. 1 TSchV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -131,6 +308,15 @@
    ],
    "marginalie": [
     "Kontrollen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Art. 49 Abs. 2 TSchV",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -142,6 +328,43 @@
    ],
    "marginalie": [
     "Meldepflicht; Bewilligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "Art. 60 Abs. 1 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Art. 60 Abs. 2 und Art. 61 Abs. 1 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Art. 62 Abs. 3 TSchV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "Art. 61 TSchV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "Art. 63 Abs. 3 TSchV",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -164,6 +387,50 @@
    ],
    "marginalie": [
     "b) Kontrollen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "Art. 63 Abs. 2 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "Art. 15 Abs. 3 TSchG und Art. 58 und 59 TSchV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "Art. 62 TSchV",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "Art. 15 Abs. 2 und Art. 16 Abs. 2 TSchG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "Art. 63 Abs. 1 TSchV und Art. 18 kant. Verordnung",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "Art. 17 TSchG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -175,6 +442,22 @@
    ],
    "marginalie": [
     "Tierbestandeskontrolle für Versuchstierhaltungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "Art. 63 Abs. 1 TSchV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "Art. 68 TSchV",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -208,6 +491,32 @@
    ],
    "marginalie": [
     "Rekurs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "Vgl. Art. 44 ff. G über die Verwaltungsrechtspflege (VRPG; bGS 143.1 ), Art. 28 f. Justizgesetz (bGS 145.31 )",
+     "links": [
+      {
+       "label": "143.1",
+       "url": "https://ar.clex.ch/data/143.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-143.1"
+       }
+      },
+      {
+       "label": "145.31",
+       "url": "https://ar.clex.ch/data/145.31/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-145.31"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -252,6 +561,15 @@
    ],
    "marginalie": [
     "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "Art. 73 Abs. 2 TSchV",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {
@@ -263,6 +581,22 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "6. September 1983",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "Abl. 1983, S. 629",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

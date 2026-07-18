@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Konkordat über Errichtung und Betrieb einer interkantonalen Polizeischule Hitzkirch",
+  "erlassdatum": "Vom 25. Juni 2003 (Stand 23. Januar 2005)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 48 der Bundesverfassung schliessen die Kantone Luzern, Zug, Uri, Schwyz, Obwalden, Nidwalden, Bern, Basel-Landschaft, Basel-Stadt, Aargau, Solothurn sowie die Stadt Luzern folgendes Konkordat:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 101.",
+    "links": [
+     {
+      "label": "101",
+      "url": "https://db.clex.ch/link/Bund/101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BV"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -112,6 +143,15 @@
    ],
    "marginalie": [
     "Zuständigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -511,6 +551,22 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Wirksam seit 8. 12. 2004.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Dem Bundesrat am 30. 5. 2005 zur Kenntnis gebracht.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "43": {

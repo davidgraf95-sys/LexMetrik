@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vollziehungsverordnung zum Gesetz betreffend Ausbildungsbeiträge",
+  "erlassdatum": "Vom 8. November 2011 (Stand 1. Juni 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung des § 22 des Gesetzes betreffend Ausbildungsbeiträge vom 12. Oktober 1967,",
+    "fnNrs": [
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 491.100.",
+    "links": [
+     {
+      "label": "491.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/491.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-491.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -247,7 +286,7 @@
     }
    ],
    "marginalie": [
-    "Medizinische Grundversorgung *"
+    "Medizinische Grundversorgung"
    ]
   },
   "20": {
@@ -411,9 +450,7 @@
      "label": "3. Budget der Person in Ausbildung"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "31": {
    "gliederung": [
@@ -534,6 +571,22 @@
    ],
    "marginalie": [
     "Härtefallregelung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Änderung vom 11. 1. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Wirksam seit 26. 2. 2012.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

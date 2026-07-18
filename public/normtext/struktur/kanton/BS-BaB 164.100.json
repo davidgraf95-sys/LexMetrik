@@ -1,5 +1,53 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Ordnung betreffend Entlöhnung der Mitarbeiterinnen und Mitarbeiter der Bürgergemeinde der Stadt Basel",
+  "erlassdatum": "Vom 2. April 1996 (Stand 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Bürgergemeinderat der Stadt Basel"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt, gestützt auf § 9 Abs. 1 Ziff. 6 des Gemeindegesetzes vom 17. Oktober 1984 und § 11 Abs. 1 Ziff. 7 der Gemeindeordnung der Bürgergemeinde der Stadt Basel vom 22. Oktober 1985, die folgende Ordnung:",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BaB 111.100.",
+    "links": [
+     {
+      "label": "BaB 111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20111.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -46,7 +94,7 @@
   "8": {
    "gliederung": [],
    "marginalie": [
-    "Familienzulagen *"
+    "Familienzulagen"
    ]
   },
   "9": {
@@ -64,14 +112,12 @@
   "11": {
    "gliederung": [],
    "marginalie": [
-    "Zulagen für Überzeitarbeit und Stellvertretung *"
+    "Zulagen für Überzeitarbeit und Stellvertretung"
    ]
   },
   "12": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "13": {
    "gliederung": [],
@@ -101,6 +147,15 @@
    "gliederung": [],
    "marginalie": [
     "Weiterzahlung des Lohnes im Todesfall"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 17 Abs. 1 in der Fassung des BGB vom 16. 9. 2008 (wirksam seit 1. 1. 2009).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -123,20 +178,36 @@
   },
   "21": {
    "gliederung": [],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "22": {
    "gliederung": [],
    "marginalie": [
     "Rechtskraft und Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Publiziert am 11. 4. 1996, angenommen in der Volksabstimmung vom 20./22. 9. 1996.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
    "gliederung": [],
    "marginalie": [
-    "Änderung bisherigen Rechts [5]"
+    "Änderung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 23: Diese Änderung wird hier nicht abgedruckt.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "13_a": {

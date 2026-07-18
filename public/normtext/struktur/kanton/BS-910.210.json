@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Standortförderungsgesetz",
+  "erlassdatum": "Vom 24. Juni 2025 (Stand 1. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf §§ 5 Abs. 5 und 5m des Standortförderungsgesetzes (StaföG) vom 29. Juni 2006, unter Verweis auf seine Erläuterungen Nr. P250862,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 910.200",
+    "links": [
+     {
+      "label": "910.200",
+      "url": "https://db.clex.ch/link/SG/910.200/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -342,6 +377,24 @@
    ],
    "marginalie": [
     "Umfang der Förderbeiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 834.1",
+     "links": [
+      {
+       "label": "834.1",
+       "url": "https://db.clex.ch/link/Bund/834.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EOG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "22": {
@@ -357,6 +410,24 @@
    ],
    "marginalie": [
     "Dokumentation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 640.100",
+     "links": [
+      {
+       "label": "640.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/640.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "BS-640.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -375,7 +446,7 @@
     }
    ],
    "marginalie": [
-    "Fördergegenstand *"
+    "Fördergegenstand"
    ]
   },
   "24": {
@@ -412,9 +483,7 @@
      "label": "3.4.2 …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "26": {
    "gliederung": [
@@ -431,9 +500,7 @@
      "label": "3.4.2 …"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "27": {
    "gliederung": [
@@ -489,7 +556,7 @@
     }
    ],
    "marginalie": [
-    "Dokumentation der umgesetzten Massnahmen *"
+    "Dokumentation der umgesetzten Massnahmen"
    ]
   },
   "30": {
@@ -508,7 +575,7 @@
     }
    ],
    "marginalie": [
-    "Dokumentation der Reduktion der Treibhausgasintensität *"
+    "Dokumentation der Reduktion der Treibhausgasintensität"
    ]
   },
   "31": {
@@ -527,7 +594,7 @@
     }
    ],
    "marginalie": [
-    "Mindest- und Maximalhöhe der Förderbeiträge *"
+    "Mindest- und Maximalhöhe der Förderbeiträge"
    ]
   },
   "32": {
@@ -696,7 +763,7 @@
     }
    ],
    "marginalie": [
-    "Fördergegenstand *"
+    "Fördergegenstand"
    ]
   },
   "43": {
@@ -727,6 +794,15 @@
    ],
    "marginalie": [
     "Mittelentnahme"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "In Kraft seit 30. Juni 2025",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24_a": {
@@ -765,6 +841,15 @@
    ],
    "marginalie": [
     "Betriebsanalysen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SG 772.100",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "42_a": {

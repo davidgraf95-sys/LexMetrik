@@ -1,52 +1,184 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die steuerbegünstigten Arbeitsbeschaffungsreserven",
+  "erlassdatum": "vom 24.04.1988 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 15 und Art. 22 Abs. 1 des Bundesgesetzes vom 20. Dezember 1985 über die Bildung von steuerbegünstigten Arbeitsbeschaffungsreserven sowie auf Art. 30 Ziff. 1 der Kantonsverfassung,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 823.33",
+    "links": [
+     {
+      "label": "823.33",
+      "url": "https://db.clex.ch/link/Bund/823.33/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. Art. 1 BG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [],
    "marginalie": [
     "Berechtigte Unternehmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Im Einvernehmen mit dem Bundesrat im Sinne von Art. 2 Abs. 2 des BG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
    "gliederung": [],
    "marginalie": [
-    "Jährliche Einlagen und Höchstbestand [4]"
+    "Jährliche Einlagen und Höchstbestand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Vgl. Art. 4 Abs. 1 und 2 BG",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Vgl. Art. 3 BG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
    "gliederung": [],
    "marginalie": [
-    "Freigabe und Verwendung der Reservevermögen [6]"
+    "Freigabe und Verwendung der Reservevermögen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Vgl. Art. 8–13 BG",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "5": {
    "gliederung": [],
    "marginalie": [
-    "Bemessung der Steuervergünstigung [7]"
+    "Bemessung der Steuervergünstigung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vgl. Art. 14 BG",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "6": {
    "gliederung": [],
    "marginalie": [
-    "Nachträgliche Besteuerung [8]"
+    "Nachträgliche Besteuerung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Vgl. Art. 16 BG",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "7": {
    "gliederung": [],
    "marginalie": [
-    "Verfahren [9]"
+    "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Vgl. Art. 69 ff. StG (bGS 621.11 )",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "8": {
    "gliederung": [],
    "marginalie": [
-    "Strafbestimmungen [10]"
+    "Strafbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Vgl. Art. 110 ff StG (bGS 621.11 )",
+     "links": [
+      {
+       "label": "621.11",
+       "url": "https://ar.clex.ch/data/621.11/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-621.11"
+       }
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "9": {

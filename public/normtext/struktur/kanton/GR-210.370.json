@@ -1,5 +1,36 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Notariatsgebühren",
+  "erlassdatum": "Vom 05.12.2000 (Stand 01.01.2024)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Gestützt auf Art. 49 des Notariatsgesetzes",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "von der Regierung erlassen am 5. Dezember 2000"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BR 210.300",
+    "links": [
+     {
+      "label": "210.300",
+      "url": "https://www.gr-lex.gr.ch/data/210.300/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +41,20 @@
    ],
    "marginalie": [
     "Anwendungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "BR 210.300",
+     "links": [
+      {
+       "label": "210.300",
+       "url": "https://www.gr-lex.gr.ch/data/210.300/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +66,20 @@
    ],
    "marginalie": [
     "Beschwerde, Moderation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "BR 370.100",
+     "links": [
+      {
+       "label": "370.100",
+       "url": "https://www.gr-lex.gr.ch/data/370.100/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -207,7 +266,7 @@
     }
    ],
    "marginalie": [
-    "9. Übriges Obligationenrecht *"
+    "9. Übriges Obligationenrecht"
    ]
   },
   "20": {
@@ -219,6 +278,22 @@
    ],
    "marginalie": [
     "In-Kraft-Treten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Im KA vom 14. Dezember 2000 publiziert",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "AGS 1982, 953 und AGS 1994, 3106",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "18_a": {
@@ -251,7 +326,7 @@
     }
    ],
    "marginalie": [
-    "10. Vollstreckbare öffentliche Urkunde *"
+    "10. Vollstreckbare öffentliche Urkunde"
    ]
   }
  }

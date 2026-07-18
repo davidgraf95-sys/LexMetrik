@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Einführungsgesetz zum Bundesgesetz über die Betäubungsmittel",
+  "erlassdatum": "vom 30.04.1989 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Ausführung der Art. 15a und 34 des Bundesgesetzes vom 3. Oktober 1951 über die Betäubungsmittel,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Betäubungsmittelgesetz (BetmG; SR 812.121 )",
+    "links": [
+     {
+      "label": "812.121",
+      "url": "https://db.clex.ch/link/Bund/812.121/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "BETMG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +48,23 @@
     }
    ],
    "marginalie": [
-    "Departement Gesundheit und Soziales *"
+    "Departement Gesundheit und Soziales"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. insbes. Art. 4, 9, 12, 14 BetmG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Art. 16–18 BetmG",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -21,6 +76,29 @@
    ],
    "marginalie": [
     "Kantonsarzt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Art. 15 BetmG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Art. 15a und 15b BetmG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Art. 15a Abs. 5 BetmG",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -31,7 +109,64 @@
     }
    ],
    "marginalie": [
-    "Bewilligungen [7] *"
+    "Bewilligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Vom Bundesrat nur teilweise genehmigt. Entgegen Abs. 2 können die den Medizinalpersonen gleichgestellten Personen nur individeull von der Bewilligungspflicht befreit werden (Art. 9 Abs. 2a BetmG). Aus dem gleichen Grund widersprächen allfällige Richtlinien des Departements Gesundheit und Soziales über die Anwendung von Betäubungsmitteln im Sinne von Abs. 3 dem Bundesrecht, welches nur eine Befreiung im Einzelfall für Inhalber eines Hochschuldiploms vorsieht.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Art. 2 des Gesundheitsgesetzes (bGS 811.1 )",
+     "links": [
+      {
+       "label": "811.1",
+       "url": "https://ar.clex.ch/data/811.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.1"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Art. 55 Abs. 1 lit. c der eidg. Betäubungsmittelverordnung (BetmV; SR 812.121.1 )",
+     "links": [
+      {
+       "label": "812.121.1",
+       "url": "https://db.clex.ch/link/Bund/812.121.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BETMKV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Art. 10 des Gesundheitsgesetzes (bGS 811.1 )",
+     "links": [
+      {
+       "label": "811.1",
+       "url": "https://ar.clex.ch/data/811.1/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-811.1"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -43,6 +178,20 @@
    ],
    "marginalie": [
     "Begriff"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Art. 1 BetmG sowie Verordnung über die Betäubungsmittel und andere Stoffe undPräparate (SR 812.121.2 )",
+     "links": [
+      {
+       "label": "812.121.2",
+       "url": "https://db.clex.ch/link/Bund/812.121.2/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "5": {
@@ -120,6 +269,29 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "18. Oktober 1989",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "bGS 813.21 (aGS II/240)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "bGS 813.23 (lfd. Nr. 157)",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   }
  }

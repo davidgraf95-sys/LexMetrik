@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über Beiträge an die Kosten der Beseitigung von Sprayereien an privaten Liegenschaften",
+  "erlassdatum": "Vom 6. September 1994 (Stand 14. Juli 2022)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 197 des Hochbautengesetzes vom 11. Mai 1939,"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -44,9 +62,7 @@
      "label": "V. Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "6": {
    "gliederung": [
@@ -55,9 +71,7 @@
      "label": "V. Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -66,8 +80,15 @@
      "label": "V. Verfahren"
     }
    ],
-   "marginalie": [
-    "…"
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "1",
+     "text": "Wirksam seit 11. 9. 1994.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "5_a": {

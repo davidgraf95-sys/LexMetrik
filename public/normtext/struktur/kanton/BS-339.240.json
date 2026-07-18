@@ -1,10 +1,68 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über Dienstleistungen der Sanität Basel auf dem Gebiet des Kantons Basel-Landschaft",
+  "erlassdatum": "Vom 13. Februar 2007 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Volkswirtschafts- und Gesundheitsdirektion des Kantons Basel-Landschaft und das Sicherheitsdepartement des Kantons Basel-Stadt",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "ingress",
+    "text": "vereinbaren gestützt auf die seit Jahren bestehenden Absprachen zwischen den beiden Kantonen über den Einsatz der Sanität Basel auf dem Gebiet des Kantons Basel-Landschaft und ausgehend von der bis Ende 2006 geltenden Vereinbarung vom 16. März 2001 und den gesammelten Erfahrungen der letzten Jahre, was folgt:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Per 1. Januar 2009: Justiz- und Sicherheitsdepartement.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "GS 34.0065.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Ingress in der Fassung des Nachtrags II vom 16. 12. 2008 (wirksam seit 1. 1. 2009).",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
    "marginalie": [
     "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "GS 33.1122, SGS 934.11.",
+     "links": [
+      {
+       "label": "934.11",
+       "url": "https://db.clex.ch/link/BL/934.11/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -47,6 +105,15 @@
    "gliederung": [],
    "marginalie": [
     "Unstimmigkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 8: Per 1. Januar 2009: Justiz- und Sicherheitsdepartement.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "9": {
@@ -59,6 +126,15 @@
    "gliederung": [],
    "marginalie": [
     "Schlussbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Publiziert am 21. 4. 2007.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "5_a": {

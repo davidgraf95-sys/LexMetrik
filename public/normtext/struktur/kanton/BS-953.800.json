@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vereinbarung über die Basler Verkehrs-Betriebe und die BLT Baselland Transport AG",
+  "erlassdatum": "Vom 26. Januar 1982 (Stand 1. Januar 1995)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt, gestützt auf § 42 der Verfassung des Kantons Basel-Stadt, und der Regierungsrat des Kantons Basel-Landschaft, gestützt auf § 23 Ziff. 2 der Staatsverfassung des Kantons Basel-Landschaft, vereinbaren:",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 111.100.",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SGS 100.",
+    "links": [
+     {
+      "label": "100",
+      "url": "https://db.clex.ch/link/BL/100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -30,9 +74,7 @@
      "label": "A. Allgemeines"
     }
    ],
-   "marginalie": [
-    "..."
-   ]
+   "marginalie": []
   },
   "4": {
    "gliederung": [
@@ -230,6 +272,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Der Genehmigungsbeschluss des Grossen Rates vom 16. 12. 1982 ist am 30. 1. 1983 wirksam geworden.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

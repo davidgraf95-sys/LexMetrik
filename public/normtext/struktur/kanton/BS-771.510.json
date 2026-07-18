@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser",
+  "erlassdatum": "Vom 24. Juni 2003 (Stand 1. Januar 2009)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz vom 15. Dezember 1983 über die Nutzung von öffentlichem Fluss- und Grundwasser (Wassernutzungsgesetz),",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 771.500.",
+    "links": [
+     {
+      "label": "771.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/771.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-771.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -40,6 +79,15 @@
    ],
    "marginalie": [
     "a) Amt für Umwelt und Energie"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "§ 3 Abs. 3: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -54,7 +102,7 @@
     }
    ],
    "marginalie": [
-    "b) Gemeinden Bettingen und Riehen *"
+    "b) Gemeinden Bettingen und Riehen"
    ]
   },
   "5": {
@@ -90,7 +138,16 @@
      "label": "B. Überwachung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "8": {
    "gliederung": [
@@ -103,7 +160,16 @@
      "label": "(C.)1. Prüfungsgebühren"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 8 Abs. 4: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [
@@ -211,7 +277,16 @@
      "label": "D. Rekurs"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Wirksam seit 29. 6. 2003.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   }
  }
 }

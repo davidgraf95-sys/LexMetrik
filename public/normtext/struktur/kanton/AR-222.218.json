@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über den Normalarbeitsvertrag für hauswirtschaftliche Arbeitnehmer und Arbeitnehmerinnen",
+  "erlassdatum": "vom 16.09.2025 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 359 Abs. 2 des Schweizerischen Obligationenrechts vom 30. März 1911 und Art. 268a des Gesetzes über die Einführung des Schweizerischen Zivilgesetzbuches,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "OR (SR 220 )",
+    "links": [
+     {
+      "label": "220",
+      "url": "https://db.clex.ch/link/Bund/220/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "OR"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "EG zum ZGB (bGS 211.1 )",
+    "links": [
+     {
+      "label": "211.1",
+      "url": "https://ar.clex.ch/data/211.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-211.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +77,52 @@
    ],
    "marginalie": [
     "Ausnahmen vom Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Verordnung über den Normalarbeitsvertrag für Betriebs- und Hausangestellte in der Landwirtschaft (bGS 222.216 )",
+     "links": [
+      {
+       "label": "222.216",
+       "url": "https://ar.clex.ch/data/222.216/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AR-222.216"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Verordnung des SBFI über die berufliche Grundbildung Fachfrau Hotellerie-Hauswirtschaft / Fachmann Hotellerie-Hauswirtschaft mit eidgenössischem Fähigkeitszeugnis (EFZ) (SR 412.101.222.41 )",
+     "links": [
+      {
+       "label": "412.101.222.41",
+       "url": "https://db.clex.ch/link/Bund/412.101.222.41/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "KLV (SR 832.112.31 )",
+     "links": [
+      {
+       "label": "832.112.31",
+       "url": "https://db.clex.ch/link/Bund/832.112.31/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KLV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -32,6 +134,40 @@
    ],
    "marginalie": [
     "Wirkung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Art. 361 f. OR (SR 220 )",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Art. 319 ff. OR (SR 220 )",
+     "links": [
+      {
+       "label": "220",
+       "url": "https://db.clex.ch/link/Bund/220/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "OR"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -120,6 +256,24 @@
    ],
    "marginalie": [
     "Urlaub"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Erwerbsersatzgesetz (EOG, SR 834.1 )",
+     "links": [
+      {
+       "label": "834.1",
+       "url": "https://db.clex.ch/link/Bund/834.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "EOG"
+       }
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -131,6 +285,24 @@
    ],
    "marginalie": [
     "Ersatz für Kost und Logis"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Art. 11 der Verordnung über die Alters- und Hinterlassenenversicherung (AHVV; SR 831.101 )",
+     "links": [
+      {
+       "label": "831.101",
+       "url": "https://db.clex.ch/link/Bund/831.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVV"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "13": {
@@ -153,6 +325,36 @@
    ],
    "marginalie": [
     "Lohn für Arbeitszeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Art. 5 ff. NAV Hauswirtschaft (SR 221.215.329.4 )",
+     "links": [
+      {
+       "label": "221.215.329.4",
+       "url": "https://db.clex.ch/link/Bund/221.215.329.4/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Art. 11 AHVV (SR 831.101 )",
+     "links": [
+      {
+       "label": "831.101",
+       "url": "https://db.clex.ch/link/Bund/831.101/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "AHVV"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -241,6 +443,24 @@
    ],
    "marginalie": [
     "Berufliche Vorsorge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "BVG (SR 831.40 )",
+     "links": [
+      {
+       "label": "831.40",
+       "url": "https://db.clex.ch/link/Bund/831.40/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "BVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "23": {
@@ -252,6 +472,24 @@
    ],
    "marginalie": [
     "Unfallversicherung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "UVG (SR 832.20 )",
+     "links": [
+      {
+       "label": "832.20",
+       "url": "https://db.clex.ch/link/Bund/832.20/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "UVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "24": {
@@ -263,6 +501,24 @@
    ],
    "marginalie": [
     "Krankenversicherung und Krankentaggeldversicherung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "14",
+     "text": "KVG (SR 832.10 )",
+     "links": [
+      {
+       "label": "832.10",
+       "url": "https://db.clex.ch/link/Bund/832.10/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "KVG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "25": {

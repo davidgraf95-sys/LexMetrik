@@ -1,5 +1,78 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Betreuungsbeiträge in Kindertagesstätten und Tagesfamilien und die Leistungen an Eltern",
+  "erlassdatum": "Vom 24. August 2021 (Stand 1. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Gesetz betreffend Tagesbetreuung von Kindern (Tagesbetreuungsgesetz, TBG) vom 8. Mai 2019, das Gesetz betreffend Förder- und Hilfeleistungen für Kinder und Jugendliche (Kinder- und Jugendgesetz, KJG) vom 10. Dezember 2014 sowie das Gesetz über die Harmonisierung und Koordination von bedarfsabhängigen Sozialleistungen (Harmonisierungsgesetz Sozialleistungen, SoHaG) vom 25. Juni 2008, unter Verweis auf seine Erläuterungen Nr. P211104,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 815.100",
+    "links": [
+     {
+      "label": "815.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/815.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-815.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 415.100",
+    "links": [
+     {
+      "label": "415.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/415.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-415.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 890.700",
+    "links": [
+     {
+      "label": "890.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/890.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-890.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

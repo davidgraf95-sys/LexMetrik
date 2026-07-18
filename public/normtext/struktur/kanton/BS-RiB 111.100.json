@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gemeindeordnung der Bürgergemeinde Riehen",
+  "erlassdatum": "Vom 10. Juni 1985 (Stand 8. August 2019)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bürgerversammlung der Bürgergemeinde Riehen,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 9 des Gemeindegesetzes vom 17. Oktober 1984, erlässt für die Bürgergemeinde Riehen folgende Gemeindeordnung:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SG 170.100.",
+    "links": [
+     {
+      "label": "170.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/170.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-170.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -328,7 +363,7 @@
     }
    ],
    "marginalie": [
-    "Bürgerratspräsidium *"
+    "Bürgerratspräsidium"
    ]
   },
   "23": {
@@ -358,7 +393,7 @@
     }
    ],
    "marginalie": [
-    "Bürgerratskanzlei *"
+    "Bürgerratskanzlei"
    ]
   },
   "25": {
@@ -402,9 +437,7 @@
      "label": "(III.)D. Fürsorgekommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "28": {
    "gliederung": [
@@ -417,9 +450,7 @@
      "label": "(III.)D. Fürsorgekommission"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "29": {
    "gliederung": [

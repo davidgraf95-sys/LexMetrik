@@ -1,5 +1,95 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Zusammensetzung, Organisation und Befugnisse der Staatsanwaltschaft",
+  "erlassdatum": "Vom 28. Juni 2016 (Stand 29. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 14 Abs. 2 und 5 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007, § 5 Abs. 2 des Gesetzes über die Einführung der Schweizerischen Strafprozessordnung (EG StPO) vom 13. Oktober 2010, § 3 Abs. 4 des Gesetzes über die Einführung der Jugendstrafprozessordnung (EG JStPO) vom 13. Oktober 2010, § 95 Abs. 5 des Gesetzes betreffend Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015, unter Verweis auf seine Erläuterungen Nr. P 161025,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 312.0",
+    "links": [
+     {
+      "label": "312.0",
+      "url": "https://db.clex.ch/link/Bund/312.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "STPO"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 257.100",
+    "links": [
+     {
+      "label": "257.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/257.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-257.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SG 257.500",
+    "links": [
+     {
+      "label": "257.500",
+      "url": "https://www.gesetzessammlung.bs.ch/data/257.500/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-257.500"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 154.100",
+    "links": [
+     {
+      "label": "154.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/154.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-154.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -138,7 +228,7 @@
     }
    ],
    "marginalie": [
-    "Innenfahndung *"
+    "Innenfahndung"
    ]
   },
   "15": {
@@ -149,7 +239,7 @@
     }
    ],
    "marginalie": [
-    "Forensik *"
+    "Forensik"
    ]
   },
   "16": {
@@ -357,7 +447,30 @@
      "label": "15. Rechtsschutz"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Publiziert am 2. 7. 2016.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "«Änderung der» redaktionell ergänzt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Für die Änderungen und Aufhebungen anderer Erlasse: siehe Kantonsblatt Nr. 50 vom 2. 7. 2016 oder Chronologische Gesetzessammlung (Publikation 02.07.2016 - 2016-062).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
   }
  }
 }

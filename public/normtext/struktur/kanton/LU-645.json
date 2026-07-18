@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Handänderungssteuer",
+  "erlassdatum": "vom 28.06.1983 (Stand 01.01.2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Luzern,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsicht in die Botschaft des Regierungsrates vom 15. Oktober 1982,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "GR 1982 905",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -21,6 +51,24 @@
    ],
    "marginalie": [
     "Steuerbegründende Handänderungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "3": {
@@ -32,6 +80,56 @@
    ],
    "marginalie": [
     "Steuerfreie Handänderungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SRL Nr. 735",
+     "links": [
+      {
+       "label": "735",
+       "url": "https://srl.lu.ch/data/735/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Aufgehoben durch das Kantonale Landwirtschaftsgesetz vom 12. September 1995 (SRL Nr. 902 ).",
+     "links": [
+      {
+       "label": "902",
+       "url": "https://srl.lu.ch/data/902/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Aufgehoben durch das Kantonale Landwirtschaftsgesetz vom 12. September 1995 (SRL Nr. 902 ).",
+     "links": [
+      {
+       "label": "902",
+       "url": "https://srl.lu.ch/data/902/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SRL Nr. 945",
+     "links": [
+      {
+       "label": "945",
+       "url": "https://srl.lu.ch/data/945/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "4": {
@@ -76,6 +174,24 @@
    ],
    "marginalie": [
     "Handänderungswert"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "8": {
@@ -109,6 +225,20 @@
    ],
    "marginalie": [
     "Veranlagung und Delegation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SRL Nr. 620. Auf dieses Gesetz wird im Folgenden nicht mehr hingewiesen.",
+     "links": [
+      {
+       "label": "620",
+       "url": "https://srl.lu.ch/data/620/de"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -164,6 +294,27 @@
    ],
    "marginalie": [
     "Einsprache und Verwaltungsgerichtsbeschwerde"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SRL Nr. 40",
+     "links": [
+      {
+       "label": "40",
+       "url": "https://srl.lu.ch/data/40/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Gemäss Gesetz über die Schaffung des Kantonsgerichtes vom 14. Mai 2012, in Kraft seit dem 1. Juni 2013 (G 2012 189), wurde die Bezeichnung «Verwaltungsgericht» durch «Kantonsgericht» ersetzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -241,6 +392,15 @@
    ],
    "marginalie": [
     "Aufsicht über den Vollzug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "Gemäss Änderung vom 16. März 2007 der Verordnung über die Aufgaben der Departemente und der Staatskanzlei sowie die Gliederung der Departemente in Dienststellen, in Kraft seit dem 1. Juli 2007 (G 2007 33), wurde die Bezeichnung «kantonale Steuerverwaltung» durch «Dienststelle Steuern des Kantons» ersetzt.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "27": {
@@ -263,6 +423,22 @@
    ],
    "marginalie": [
     "Aufhebung bestehenden Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "G VIII 22 und Z II 669",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "VII 397 und Z II 672",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "30": {
@@ -274,6 +450,15 @@
    ],
    "marginalie": [
     "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Dieses Gesetz wurde am 2. Juli 1983 im Kantonsblatt veröffentlicht (K 1983 836). Die Referendumsfrist lief am 31. August 1983 unbenützt ab.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12_a": {

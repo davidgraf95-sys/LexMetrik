@@ -1,5 +1,48 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren im Zivilrecht",
+  "erlassdatum": "Vom 09.02.2022 (Stand 01.01.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Landrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 954 des Schweizerischen Zivilgesetzbuches (ZGB), Artikel 92, Artikel 238 Absatz 2 und Artikel 240 des Einführungsgesetzes zum Zivilgesetzbuch (EG ZGB),",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 210",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "GS III B/1/1",
+    "links": [
+     {
+      "label": "III B/1/1",
+      "url": "https://gesetze.gl.ch/data/III-B.1.1/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -10,6 +53,32 @@
    ],
    "marginalie": [
     "Gegenstand und Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "GS III G/2",
+     "links": [
+      {
+       "label": "III G/2",
+       "url": "https://gesetze.gl.ch/data/III-G.2/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "GS II A/6/2",
+     "links": [
+      {
+       "label": "II A/6/2",
+       "url": "https://gesetze.gl.ch/data/II-A.6.2/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "2": {
@@ -54,6 +123,34 @@
    ],
    "marginalie": [
     "Zahlungsmodalitäten, Fälligkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "GS III G/1",
+     "links": [
+      {
+       "label": "III G/1",
+       "url": "https://gesetze.gl.ch/data/III-G.1/de"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 312.0",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SR 272",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "6": {
@@ -142,6 +239,15 @@
    ],
    "marginalie": [
     "Grundbuch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 221.301",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "14": {
@@ -152,7 +258,7 @@
     }
    ],
    "marginalie": [
-    "Beglaubigungen und Bescheinigungen *"
+    "Beglaubigungen und Bescheinigungen"
    ]
   }
  }

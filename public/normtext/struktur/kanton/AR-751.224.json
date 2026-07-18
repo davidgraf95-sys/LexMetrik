@@ -1,5 +1,65 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Wasserrechtskonzession für die St. Gallisch-Appenzellische Kraftwerke AG",
+  "erlassdatum": "vom 09.06.1969 (Stand 22.06.2021)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Kantonsrat des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bundesgesetz vom 22. Dezember 1916 über die Nutzbarmachung der Wasserkräfte (insbes. auf Art. 38 Abs. 1) sowie auf die Art.139–156 des Einführungsgesetzes vom 30. April 1911 zum ZGB und auf die Art. 203–220 (insbes. Art. 214) des Einführungsgesetzes vom 27. April 1969 zum ZGB, beschliesst, der St.Gallisch-Appenzellischen Kraftwerke AG die Konzession zur Ausnützung 1. der Wasserkraft der Urnäsch vom bestehenden Wehr bei der Hundwilertobelbrücke (Gemeinden Herisau und Hundwil) bis zum Zusammenfluss mit der Sitter, 2. des ausserrhodischen Anteils der Wasserkraft der Sitter vom bestehenden Wehr im List (Gemeinde Stein AR und Bezirk Haslen Al) bis zum Zusammenfluss mit der Urnäsch, in der bestehenden Wasserkraftanlage Kubel",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "zu erteilen."
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 721.80",
+    "links": [
+     {
+      "label": "721.80",
+      "url": "https://db.clex.ch/link/Bund/721.80/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "aGS I/26",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "bGS 211.1",
+    "links": [
+     {
+      "label": "211.1",
+      "url": "https://ar.clex.ch/data/211.1/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-211.1"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +68,28 @@
      "label": "Konzessionsbedingungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "aGS II/213 und 214",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "bGS 751.212",
+     "links": [
+      {
+       "label": "751.212",
+       "url": "https://ar.clex.ch/data/751.212/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -71,7 +152,21 @@
      "label": "Konzessionsbedingungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Vgl. insbes. Art. 49 des BG vom 22. Dezember 1916 über die Nutzbarmachung der Wasserkräfte (SR 721.80 )",
+     "links": [
+      {
+       "label": "721.80",
+       "url": "https://db.clex.ch/link/Bund/721.80/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [
@@ -134,7 +229,21 @@
      "label": "Konzessionsbedingungen"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "bGS 751.212",
+     "links": [
+      {
+       "label": "751.212",
+       "url": "https://ar.clex.ch/data/751.212/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "a1": {
    "gliederung": [

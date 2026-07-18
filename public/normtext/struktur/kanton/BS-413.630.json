@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Abschlüsse an der Fachmaturitätsschule Basel-Stadt",
+  "erlassdatum": "Vom 5. April 2005 (Stand 11. August 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 74 des Schulgesetzes vom 4. April 1929, auf Antrag des Erziehungsrates,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 410.100.",
+    "links": [
+     {
+      "label": "410.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/410.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-410.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +48,7 @@
     }
    ],
    "marginalie": [
-    "Gegenstand *"
+    "Gegenstand"
    ]
   },
   "2": {
@@ -152,7 +191,7 @@
     }
    ],
    "marginalie": [
-    "Zustandekommen der Noten der geprüften Fächer *"
+    "Zustandekommen der Noten der geprüften Fächer"
    ]
   },
   "15": {
@@ -174,7 +213,7 @@
     }
    ],
    "marginalie": [
-    "Zustandekommen der Noten der nicht geprüften Fächer *"
+    "Zustandekommen der Noten der nicht geprüften Fächer"
    ]
   },
   "17": {
@@ -218,7 +257,16 @@
     }
    ],
    "marginalie": [
-    "Bestehen des Fachmittelschulabschlusses *"
+    "Bestehen des Fachmittelschulabschlusses"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsziffern und -buchstaben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "21": {
@@ -229,7 +277,7 @@
     }
    ],
    "marginalie": [
-    "Bestehen der Fachmaturität *"
+    "Bestehen der Fachmaturität"
    ]
   },
   "22": {
@@ -240,7 +288,7 @@
     }
    ],
    "marginalie": [
-    "Abschlusskonferenz, Validierung der Noten *"
+    "Abschlusskonferenz, Validierung der Noten"
    ]
   },
   "23": {
@@ -251,7 +299,7 @@
     }
    ],
    "marginalie": [
-    "Fachmaturitätskonferenz, Validierung der Noten *"
+    "Fachmaturitätskonferenz, Validierung der Noten"
    ]
   },
   "24": {
@@ -284,7 +332,7 @@
     }
    ],
    "marginalie": [
-    "Wiederholung von Abschlusselementen zur Erlangung des Fachmittelschulausweises *"
+    "Wiederholung von Abschlusselementen zur Erlangung des Fachmittelschulausweises"
    ]
   },
   "27": {
@@ -295,7 +343,7 @@
     }
    ],
    "marginalie": [
-    "Wiederholung von Prüfungsleistungen zur Erlangung der Fachmaturität *"
+    "Wiederholung von Prüfungsleistungen zur Erlangung der Fachmaturität"
    ]
   },
   "28": {
@@ -353,7 +401,7 @@
     }
    ],
    "marginalie": [
-    "Zulassung *"
+    "Zulassung"
    ]
   }
  }

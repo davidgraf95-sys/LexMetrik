@@ -1,5 +1,65 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz über die Förderung des öffentlichen Verkehrs",
+  "erlassdatum": "vom 28.04.1991 (Stand 01.06.2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Landsgemeinde des Kantons Appenzell A.Rh.,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Eisenbahngesetz vom 20. Dezember 1957, das Bundesgesetz vom 4. Oktober 1985 über den Transport im öffentlichen Verkehr sowie Art. 30 Ziff. 1 der Kantonsverfassung vom 26. April 1908,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 742.101",
+    "links": [
+     {
+      "label": "742.101",
+      "url": "https://db.clex.ch/link/Bund/742.101/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "EBG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR 742.40",
+    "links": [
+     {
+      "label": "742.40",
+      "url": "https://db.clex.ch/link/Bund/742.40/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "aGS I/1",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -207,7 +267,7 @@
     }
    ],
    "marginalie": [
-    "Departement Bau und Volkswirtschaft *"
+    "Departement Bau und Volkswirtschaft"
    ]
   },
   "21": {
@@ -241,6 +301,15 @@
    ],
    "marginalie": [
     "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "bGS 762.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

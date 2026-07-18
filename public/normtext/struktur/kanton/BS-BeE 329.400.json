@@ -1,5 +1,27 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vertrag zwischen dem Kanton Basel-Stadt und der Einwohnergemeinde Riehen sowie der Einwohnergemeinde Bettingen betreffend Planung des Angebots an Pflegeheimplätzen und Pflegeberatung",
+  "erlassdatum": "Vom 15. Januar 2002 (Stand 1. Juli 2002)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Kanton Basel-Stadt, vertreten durch das Sanitätsdepartement, nachfolgend Kanton genannt, einerseits, und die Einwohnergemeinde Riehen sowie die Einwohnergemeinde Bettingen, beide vertreten durch die Gemeinderäte, nachfolgend Landgemeinden genannt, andererseits, vereinbaren hinsichtlich der Planung des Angebots an Pflegeheimplätzen und der Pflegeberatung Folgendes:",
+    "fnNrs": [
+     "2"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "Jetzt: Gesundheitsdepartement.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -41,6 +63,15 @@
    "gliederung": [],
    "marginalie": [
     "Kosten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 832.700.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {

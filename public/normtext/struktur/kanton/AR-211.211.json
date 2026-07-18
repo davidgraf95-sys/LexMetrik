@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Beurkundungsverordnung",
+  "erlassdatum": "vom 26.01.2010 (Stand 01.01.2016)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat von Appenzell Ausserrhoden,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 28 und Art. 14 Abs. 2 des Beurkundungsgesetzes vom 26. Oktober 2009,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BeurkG (bGS 211.2 )",
+    "links": [
+     {
+      "label": "211.2",
+      "url": "https://ar.clex.ch/data/211.2/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "AR-211.2"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -41,6 +80,24 @@
    "gliederung": [],
    "marginalie": [
     "Grundbuchsachen a) Begriff (Art. 2 Abs. 1 BeurkG)"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "FusG (SR 221.301 )",
+     "links": [
+      {
+       "label": "221.301",
+       "url": "https://db.clex.ch/link/Bund/221.301/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FUSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "8": {

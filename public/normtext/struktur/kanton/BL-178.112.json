@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Tarifordnung für die Anwältinnen und Anwälte",
+  "erlassdatum": "Vom 17.11.2003 (Stand 01.01.2014)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Geschäftsleitung des Kantonsgerichts des Kantons Basel-Landschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 16 Abs. 1 des Anwaltsgesetzes Basel-Landschaft vom 25. Oktober 2001 und auf Antrag der Anwaltsaufsichtskommission,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SGS 178",
+    "links": [
+     {
+      "label": "SGS 178",
+      "url": "https://bl.clex.ch/data/178/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -200,7 +235,16 @@
      "label": "7 Aufhebung bisherigen Rechts"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "GS 26.609",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "20": {
    "gliederung": [

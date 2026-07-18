@@ -1,5 +1,52 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Baumschutzverordnung",
+  "erlassdatum": "Vom 19. Dezember 2000 (Stand 31. Dezember 2000)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 24 des Gesetzes zum Schutz und zur Förderung des Baumbestandes im Kanton Basel-Stadt (Baumgesetz) vom 16. Oktober 1980,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgende Verordnung:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Ingress: Titel neu: Baumschutzgesetz (BSchG).",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SG 789.700.",
+    "links": [
+     {
+      "label": "789.700",
+      "url": "https://www.gesetzessammlung.bs.ch/data/789.700/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-789.700"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -8,7 +55,16 @@
      "label": "I. Geschützte Bäume"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 1 Abs. 1: Titel neu: Baumschutzgesetz (BSchG).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "2": {
    "gliederung": [
@@ -36,7 +92,30 @@
      "label": "B. Bei Fällgesuchen für öffentliche Bäume"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 3 Abs. 1: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "§ 3 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "§ 3 Abs. 3: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [
@@ -62,7 +141,30 @@
      "label": "C. Bei Fällgesuchen für Bäume im Zusammenhang mit Bauvorhaben"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "§ 5 Abs. 1: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "§ 5 Abs. 2: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "§ 5 Abs. 3: Jetzt: Bau- und Gastgewerbeinspektorat.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [
@@ -120,7 +222,16 @@
      "label": "VI. Baumschutzkommission"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "§ 11: Titel neu: Baumschutzgesetz (BSchG).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "12": {
    "gliederung": [
@@ -129,7 +240,16 @@
      "label": "VII. Schlussbestimmung"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Wirksam seit 31. 12. 2000.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   }
  }
 }

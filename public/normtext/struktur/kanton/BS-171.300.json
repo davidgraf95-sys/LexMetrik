@@ -1,5 +1,40 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Gesetz betreffend Verschmelzung der Gemeinde Kleinhüningen mit der Stadt Basel",
+  "erlassdatum": "Vom 10. Oktober 1907 (Stand 30. November 1907)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Basel-Stadt"
+   },
+   {
+    "rolle": "ingress",
+    "text": "erlässt in Anwendung des § 23 der Kantonsverfassung vom 2. Dezember 1889 folgendes Gesetz:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Diese Verfassung wurde aufgehoben. Siehe jetzt die Kantonsverfassung vom 23. 5. 2006 (wirksam seit 13. 7. 2006, SG 111.100 ).",
+    "links": [
+     {
+      "label": "111.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/111.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-111.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,7 +46,16 @@
   },
   "3": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Vgl. jetzt § 18 des Gemeindegesetzes vom 17. 10. 1984 (SG 170.100).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "4": {
    "gliederung": [],
@@ -19,7 +63,16 @@
   },
   "5": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "§ 5 Abs. 3: Dieses Gesetz ist aufgehoben. Massgebend ist jetzt das Gastgewerbegesetz vom 15. 9. 2004 (SG 563.100).",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
   },
   "6": {
    "gliederung": [],
@@ -31,7 +84,16 @@
   },
   "8": {
    "gliederung": [],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "§ 8 Ziff. 2–17 werden hier nicht abgedruckt. Die Änderungen sind, soweit sie nicht hinfällig geworden sind, bei den betreffenden Erlassen nachgetragen.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
   },
   "9": {
    "gliederung": [],

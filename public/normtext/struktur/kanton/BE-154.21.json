@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung über die Gebühren der Kantonsverwaltung",
+  "erlassdatum": "vom 22.02.1995 (Stand 01.05.2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Bern,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 36 bis 38 und 40 bis 42c des Gesetzes vom 10. November 1987 über den Finanzhaushalt (FHG), auf Antrag der Finanzdirektion,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Aufgehoben durch G vom 26. 3. 2002 über die Steuerung von Finanzen und Leistungen, BSG 620.0",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -120,6 +150,15 @@
    ],
    "marginalie": [
     "2 Besondere Dienstleistungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Aufgehoben durch G vom 26. 3. 2002 über die Steuerung von Finanzen und Leistungen, BSG 620.0",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "12": {
@@ -185,7 +224,16 @@
     }
    ],
    "marginalie": [
-    "Reglemente, Pläne *"
+    "Reglemente, Pläne"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "BSG 170.11",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "18": {
@@ -328,7 +376,21 @@
     }
    ],
    "marginalie": [
-    "Zugang zu Informationen *"
+    "Zugang zu Informationen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "BSG 107.1",
+     "links": [
+      {
+       "label": "107.1",
+       "url": "https://www.belex.sites.be.ch/data/107.1/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "31": {
@@ -351,6 +413,15 @@
    ],
    "marginalie": [
     "2 gemäss Art. 21 Datenschutzgesetz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "BSG 152.04",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -362,6 +433,15 @@
    ],
    "marginalie": [
     "3 gemäss Art. 23 f. Datenschutzgesetz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "BSG 152.04",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "34": {
@@ -406,6 +486,197 @@
    ],
    "marginalie": [
     "Änderung von Erlassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Aufgehoben durch Arbeitsmarktverordnung vom 29. 10. 2003, BSG 836.111",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Aufgehoben durch V vom 21. 10. 2009 über die Aufsicht über die Stiftungen und die Vorsorgeeinrichtungen, BSG 212.223.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Aufgehoben durch V vom 13. 4. 2005 über die deutschsprachige Pädagogische Hochschule; BSG 436.911",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Aufgehoben durch Änderung vom 28. 6. 2006 der V über die deutschsprachige Pädagogische Hochschule, BSG 436.911; BAG 06–77",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Aufgehoben durch V vom 13. 4. 2005 über die deutschsprachige Pädagogische Hochschule, BSG 436.911",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "Aufgehoben durch V vom 13. 4. 2005 über die deutschsprachige Pädagogische Hochschule, BSG 436.911",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "gültig bis 31. 12. 2003 BAG 00–52",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "16",
+     "text": "Aufgehoben; jetzt Verordnung vom 25. 6. 2003 über die Ausbildung und die Diplomierung in Erziehungsberatung-Schulpsychologie, BSG 431.51",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "17",
+     "text": "Aufgehoben; jetzt Mittelschulverordnung vom 7. 11. 2007, BSG 433.121",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "Aufgehoben per 31. 12. 2009; jetzt Dekret über das Baubewilligungsverfahren, BSG 725.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "19",
+     "text": "Aufgehoben per 1. 12. 2002 durch BAG 02–62",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "20",
+     "text": "Aufgehoben, jetzt Spitalversorgungsverordnung vom 23. 10. 2013; BSG 812.112",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Aufgehoben durch EinführungsV vom 20. 6. 2012 zur eidgenössischen Betäubungsmittelgesetzgebung, BSG 813.131",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "22",
+     "text": "Aufgehoben durch EinführungsV vom 24. 5. 2006 zur eidgenössischen Chemikaliengesetzgebung, BSG 813.151",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "Aufgehoben durch V vom 24. 1. 2007 über Handel und Gewerbe, BSG 930.11",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "Aufgehoben durch Änderung vom 23. 10. 2002 der Organisationsverordnung GEF, BSG 152.221.121, BAG 02–75",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "Aufgehoben durch V vom 14. 10. 2009 über die Umweltverträglichkeitsprüfung, BSG 820.111",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "Aufgehoben durch EinführungsV vom 24. 5. 2006 zur eidgenössischen Chemikaliengesetzgebung, BSG 813.151",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "Aufgehoben durch Kantonale Lärmschutzverordnung vom 14. 10. 2009, BSG 824.761",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "Aufgehoben durch Kantonale Tierschutzverordnung vom 21. 1. 2009; BSG 916.812",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "Aufgehoben durch Jagdverordnung vom 26. 2. 2003; BSG 922.111",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "30",
+     "text": "Aufgehoben durch Jagdverordnung vom 26. 2. 2003; BSG 922.111",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "Aufgehoben durch Jagdverordnung vom 26. 2. 2003; BSG 922.111",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "Aufgehoben durch V vom 24. 1. 2007 über Handel und Gewerbe, BSG 930.11",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "Aufgehoben durch BAG 03–121",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "Aufgehoben durch Änderung vom 26. 10. 2005 der V über die beruflichen Tätigkeiten im Gesundheitswesen, BSG 811.111; BAG 05–124",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "Aufgehoben, jetzt V vom 15. 12. 2004 über den Vollzug des eidg. Waffenrechts; BSG 943.511.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "38": {
@@ -450,6 +721,15 @@
    ],
    "marginalie": [
     "Leitverfahren nach Koordinationsgesetz und Baubewilligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "BSG 724.1",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "2_a": {
@@ -461,6 +741,15 @@
    ],
    "marginalie": [
     "Kostendeckung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "BSG 620.0",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "9_a": {

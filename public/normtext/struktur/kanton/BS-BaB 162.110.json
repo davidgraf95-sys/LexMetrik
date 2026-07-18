@@ -1,5 +1,32 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Reglement zur Anstellungsordnung",
+  "erlassdatum": "Vom 12. Januar 1999 (Stand 1. Juli 2023)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Der Bürgerrat der Stadt Basel erlässt in Ausführung von § 28 der Ordnung betreffend die Anstellungsverhältnisse bei der Bürgergemeinde der Stadt Basel (Anstellungsordnung, AO) vom 28. April 1998 folgendes Reglement:",
+    "fnNrs": [
+     "1"
+    ]
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "BaB 162.100.",
+    "links": [
+     {
+      "label": "BaB 162.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/BaB%20162.100/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -9,7 +36,7 @@
     }
    ],
    "marginalie": [
-    "Besondere Kategorien von Beschäftigten *"
+    "Besondere Kategorien von Beschäftigten"
    ]
   },
   "2": {
@@ -75,7 +102,7 @@
     }
    ],
    "marginalie": [
-    "Gewährung von Bildungsurlaub *"
+    "Gewährung von Bildungsurlaub"
    ]
   },
   "8": {
@@ -255,7 +282,7 @@
     }
    ],
    "marginalie": [
-    "Kompensation oder Auszahlung der Mehrarbeit *"
+    "Kompensation oder Auszahlung der Mehrarbeit"
    ]
   },
   "24": {
@@ -288,7 +315,7 @@
     }
    ],
    "marginalie": [
-    "Kürzung bei langer Abwesenheit *"
+    "Kürzung bei langer Abwesenheit"
    ]
   },
   "27": {
@@ -343,7 +370,7 @@
     }
    ],
    "marginalie": [
-    "Gründe und Dauer *"
+    "Gründe und Dauer"
    ]
   },
   "32": {
@@ -398,7 +425,7 @@
     }
    ],
    "marginalie": [
-    "Leistung und Prämie bei den Personalversicherungen *"
+    "Leistung und Prämie bei den Personalversicherungen"
    ]
   },
   "37": {
@@ -409,7 +436,7 @@
     }
    ],
    "marginalie": [
-    "Öffentliches Amt *"
+    "Öffentliches Amt"
    ]
   },
   "38": {
@@ -454,6 +481,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Publiziert am 17. 2. 1999.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "10_a": {
@@ -479,7 +515,7 @@
     }
    ],
    "marginalie": [
-    "Massnahme vor Aussprechen einer Kündigung *"
+    "Massnahme vor Aussprechen einer Kündigung"
    ]
   },
   "13_b": {
@@ -494,7 +530,7 @@
     }
    ],
    "marginalie": [
-    "Rechtliches Gehör und Anhörung *"
+    "Rechtliches Gehör und Anhörung"
    ]
   },
   "30_a": {

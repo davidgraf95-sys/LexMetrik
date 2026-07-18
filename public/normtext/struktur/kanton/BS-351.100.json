@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände",
+  "erlassdatum": "Vom 8. Juli 2008 (Stand 25. Oktober 2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 47 ff., 66 und 69 des Bundesgesetzes über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG) vom 20. Juni 2014, auf Art. 42 der eidgenössischen Verordnung über das Schlachten und die Fleischkontrolle (VSFK) vom 16. Dezember 2016 und gestützt auf die §§ 4 und 5 des Gesetzes über die Verwaltungsgebühren vom 9. März 1972,",
+    "fnNrs": [
+     "2",
+     "3",
+     "4"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "2",
+    "text": "SR 817.0.",
+    "links": [
+     {
+      "label": "817.0",
+      "url": "https://db.clex.ch/link/Bund/817.0/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "LMG"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR 817.190.",
+    "links": [
+     {
+      "label": "817.190",
+      "url": "https://db.clex.ch/link/Bund/817.190/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SG 153.800.",
+    "links": [
+     {
+      "label": "153.800",
+      "url": "https://www.gesetzessammlung.bs.ch/data/153.800/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-153.800"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -63,9 +132,7 @@
      "label": "II. Organisation"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "7": {
    "gliederung": [
@@ -109,6 +176,15 @@
    ],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "§ 10 Abs. 2: Dieser Tarif wird hier nicht abgedruckt. Er kann beim Kantonalen Laboratorium eingesehen werden (Fussnote ist Bestandteil des Erlasses).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -153,6 +229,15 @@
    ],
    "marginalie": [
     "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Wirksam seit 13. 7. 2008.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

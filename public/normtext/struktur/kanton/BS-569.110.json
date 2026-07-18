@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-23",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung zum Gesetz betreffend öffentliche Filmvorführungen und Abgabe von elektronischen Trägermedien",
+  "erlassdatum": "Vom 18. Dezember 2012 (Stand 1. Januar 2013)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 11 des Gesetzes betreffend öffentliche Filmvorführungen und Abgabe von elektronischen Trägermedien (FTG) vom 9. Juni 2010,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 569.100.",
+    "links": [
+     {
+      "label": "569.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/569.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-569.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -11,6 +50,15 @@
    "gliederung": [],
    "marginalie": [
     "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Publiziert am 9. 1. 2013.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   }
  }

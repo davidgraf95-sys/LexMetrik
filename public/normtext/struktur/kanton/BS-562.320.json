@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-07-17",
+ "erzeugt": "2026-07-18",
+ "kopf": {
+  "titel": "Verordnung betreffend Messen und Märkte in der Stadt Basel",
+  "erlassdatum": "Vom 16. Juni 2009 (Stand 5. Oktober 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Regierungsrat des Kantons Basel-Stadt,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf § 50 des Gesetzes über die Nutzung des öffentlichen Raumes (NöRG) vom 16. Oktober 2013,",
+    "fnNrs": [
+     "1"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SG 724.100",
+    "links": [
+     {
+      "label": "724.100",
+      "url": "https://www.gesetzessammlung.bs.ch/data/724.100/de",
+      "intern": {
+       "ebene": "kanton",
+       "key": "BS-724.100"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -167,7 +206,7 @@
     }
    ],
    "marginalie": [
-    "Allgemeines *"
+    "Allgemeines"
    ]
   },
   "16": {
@@ -227,7 +266,7 @@
     }
    ],
    "marginalie": [
-    "Allgemeines *"
+    "Allgemeines"
    ]
   },
   "20": {
@@ -302,7 +341,7 @@
     }
    ],
    "marginalie": [
-    "Allgemeines *"
+    "Allgemeines"
    ]
   },
   "25": {
@@ -347,7 +386,7 @@
     }
    ],
    "marginalie": [
-    "Bewilligungen *"
+    "Bewilligungen"
    ]
   },
   "28": {
@@ -407,7 +446,7 @@
     }
    ],
    "marginalie": [
-    "Bewilligungen *"
+    "Bewilligungen"
    ]
   },
   "32": {
@@ -422,7 +461,7 @@
     }
    ],
    "marginalie": [
-    "Allgemeines *"
+    "Allgemeines"
    ]
   },
   "33": {
@@ -467,7 +506,7 @@
     }
    ],
    "marginalie": [
-    "Bewilligungen *"
+    "Bewilligungen"
    ]
   },
   "36": {
@@ -511,9 +550,7 @@
      "label": "7. Abschnitt: Weihnachtsbaummarkt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "39": {
    "gliederung": [
@@ -526,9 +563,7 @@
      "label": "7. Abschnitt: Weihnachtsbaummarkt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "40": {
    "gliederung": [
@@ -541,9 +576,7 @@
      "label": "7. Abschnitt: Weihnachtsbaummarkt"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "41": {
    "gliederung": [
@@ -556,9 +589,7 @@
      "label": "8. Abschnitt: Zirkusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "42": {
    "gliederung": [
@@ -571,9 +602,7 @@
      "label": "8. Abschnitt: Zirkusse"
     }
    ],
-   "marginalie": [
-    "…"
-   ]
+   "marginalie": []
   },
   "43": {
    "gliederung": [
@@ -594,7 +623,7 @@
     }
    ],
    "marginalie": [
-    "Strafbestimmungen *"
+    "Strafbestimmungen"
    ]
   },
   "45": {
