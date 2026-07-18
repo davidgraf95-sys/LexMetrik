@@ -43,13 +43,20 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
   // fährt der A9-Test unten (echtes Tastatur-Scrollen unter 4× Drossel, Repo-Konvention
   // wie leser-position-u.e2e.ts). Hier zählt allein die TOC-Eigenbewegung + Highlight.
   test('F1 — Lese-Scroll: TOC-Eigenbewegung ≤ Nudge, Highlight folgt', async ({ page }) => {
-    // CI-Härtung 18.7.: explizit 120 s (statt test.slow() = 90 s). Dieser Test macht
-    // das schwerste REALE Lese-Scrollen aller Specs (mehrere mouse.wheel auf der
-    // 2000-Artikel-OR-Seite, je mit content-visibility- + Auto-Akkordeon-Reflow);
-    // auf dem 2-vCPU-Runner riss die Summe reihum das 90-s-Budget. Zusammen mit der
-    // Schritt-Reduktion unten (24 → 14) gibt das solide Marge. Kein Prüfschritt
-    // berührt — der Timeout greift nur bei Überschreitung.
-    test.setTimeout(120_000)
+    // CI-Härtung 18.7.: explizit 180 s (zuvor 120 s, davor test.slow() = 90 s). Dieser
+    // Test macht das schwerste REALE Lese-Scrollen aller Specs (14 mouse.wheel-Schritte
+    // auf der 2000-Artikel-OR-Seite, je mit content-visibility- + Auto-Akkordeon-
+    // Reflow). KEIN versteckter Hänger: F1 wartet nur auf `article`/`[data-toc]`
+    // (beide unabhängig von STANDARD_OFFEN_TIEFE) und misst danach über kurze
+    // page.evaluate-Reads; die Zeit geht rein in die Reflow-Kosten je Wheel. Unter
+    // 5-Worker-Contention lokal 60–72 s; der 2-vCPU-Runner ist nochmals langsamer und
+    // riss reihum auch das 120-s-Budget. Ich HEBE das Budget (statt die Schrittzahl
+    // weiter zu senken), weil die Prüfschärfe an den 14 Schritten hängt: die Highlight-
+    // Wanderung (≥ 3 distinkt) und der ½-Container-Sprung-Nachweis (289–315 px) brauchen
+    // reales Durchscrollen vieler TOC-Einträge — weniger Schritte verengten die Marge
+    // dieser Assertions. Der Timeout greift nur bei Überschreitung und verlangsamt
+    // grüne Läufe nicht (§6.3, kein Assertion-Change).
+    test.setTimeout(180_000)
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 820 })
     await page.goto('/gesetze/bund/OR')
