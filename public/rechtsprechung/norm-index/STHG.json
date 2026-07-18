@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-07-17",
+  "erzeugt": "2026-07-18",
   "erlass": "STHG",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -31,6 +31,18 @@
         "zitierung": "BGE 147 III 457",
         "regesteKurz": "Art. 276 Abs. 1 und 2, Art. 285 Abs. 1 ZGB; Unterhaltsberechnung; Berücksichtigung eines Steueranteils im Barbedarf des Kindes. Stehen genügend Mittel zur Verfügung, um bei der Unterhaltsberechnung über das betreibungsrechtliche Existenzmi…",
         "datum": "2021-06-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "4": [
+      {
+        "key": "bge_150_II_40",
+        "zitierung": "BGE 150 II 40",
+        "regesteKurz": "Art. 8 Abs. 3 lit. b und Art. 12 Abs. 4 lit. a StHG; Aufschub der Grundstückgewinnsteuer infolge Umstrukturierung eines Personenunternehmens; Immobilienverwaltung; Betriebsbegriff. Damit Liegenschaften einen Betrieb im Sinn von Art. 8 Abs.…",
+        "datum": "2023-11-13",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -127,6 +139,16 @@
     ],
     "12": [
       {
+        "key": "bge_151_II_818",
+        "zitierung": "BGE 151 II 818",
+        "regesteKurz": "Art. 12 Abs. 3 lit. a StHG; Art. 58 Abs. 3 und 4 des Gesetzes der Republik und des Kantons Neuenburg vom 21. März 2000 über die direkten Steuern (LCdir); Aufschub der Besteuerung von Grundstückgewinnen bei Übertragung der Liegenschaft als…",
+        "datum": "2025-03-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
         "key": "bge_148_II_378",
         "zitierung": "BGE 148 II 378",
         "regesteKurz": "Art. 16 Abs. 1, Abs. 3 und Art. 21 Abs. 1 DBG; Art. 12 Abs. 2 lit. c StHG; Steuerfolgen einer Entschädigung für die Eintragung einer Bauhöhenbeschränkung; Begriffe der \"wesentlichen Beeinträchtigung\" und des \"Aktiventauschs\". Wird ein Grun…",
@@ -177,6 +199,16 @@
         "gewicht": 0
       },
       {
+        "key": "bge_150_II_40",
+        "zitierung": "BGE 150 II 40",
+        "regesteKurz": "Art. 8 Abs. 3 lit. b und Art. 12 Abs. 4 lit. a StHG; Aufschub der Grundstückgewinnsteuer infolge Umstrukturierung eines Personenunternehmens; Immobilienverwaltung; Betriebsbegriff. Damit Liegenschaften einen Betrieb im Sinn von Art. 8 Abs.…",
+        "datum": "2023-11-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_148_II_259",
         "zitierung": "BGE 148 II 259",
         "regesteKurz": "Art. 24 Abs. 3 StHG; Art. 80 Abs. 4 BVG; Aufschub der Grundstückgewinnsteuer bei Übertragung des Immobilienbestands einer Pensionskasse auf eine Anlagestiftung im Austausch gegen Beteiligungsrechte am Immobilienportfolio dieser Anlagestift…",
@@ -188,6 +220,16 @@
       }
     ],
     "13": [
+      {
+        "key": "bge_151_II_262",
+        "zitierung": "BGE 151 II 262",
+        "regesteKurz": "Art. 9 BV; Art. 13 Abs. 2 StHG; Art. 76 Abs. 6 des Gesetzes des Kantons Genf vom 9. November 1887 über öffentliche Abgaben; steuerliche Zuordnung einer mit einem Wohnrecht belasteten Liegenschaft; Vermögenssteuer; ergänzende Genfer Immobil…",
+        "datum": "2024-10-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_148_I_210",
         "zitierung": "BGE 148 I 210",
@@ -218,13 +260,33 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 1
+        "gewicht": 2
+      },
+      {
+        "key": "bge_151_I_373",
+        "zitierung": "BGE 151 I 373",
+        "regesteKurz": "Art. 14 Abs. 1 StHG; Gesetz 13'030 des Kantons Genf über die steuerliche Bewertung bestimmter Grundstücke; abstrakte Normenkontrolle; Methode zur Bewertung bestimmter Grundstücke. In Anbetracht der Statistiken zum Genfer Immobilienmarkt un…",
+        "datum": "2025-02-28",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       },
       {
         "key": "bge_150_II_527",
         "zitierung": "BGE 150 II 527",
         "regesteKurz": "Art. 8 Abs. 1, Art. 127 Abs. 1 und 3 BV; Art. 14 Abs. 1 und 2 StHG; Rechtsgleichheitsgebot; Legalitätsprinzip; Schlechterstellungsverbot; interkantonale Steuerausscheidung; Bewertung von land- oder forstwirtschaftlich genutzten Grundstücke…",
         "datum": "2024-07-18",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_150_I_31",
+        "zitierung": "BGE 150 I 31",
+        "regesteKurz": "Art. 127 Abs. 3 BV; interkantonale Doppelbesteuerung bei der Erbschaftssteuer; Freiheit der Kantone, die Erbmasse nach ihren eigenen Bewertungsregeln zu bestimmen. Vorbehaltlich der Entwicklung der Rechtsprechung zur interkantonalen Auftei…",
+        "datum": "2023-11-02",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -299,6 +361,16 @@
     ],
     "23": [
       {
+        "key": "bge_147_II_454",
+        "zitierung": "BGE 147 II 454",
+        "regesteKurz": "Art. 23 Abs. 3 und Art. 53 StHG; Art. 91 des waadtländischen Gesetzes vom 4. Juli 2000 über die direkten kantonalen Steuern; vorübergehende Steuerbefreiung; Unternehmen; verwaltungsrechtlicher Vertrag; Sitzverlegung; Widerruf; Rückwirkung;…",
+        "datum": "2021-12-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
         "key": "bge_147_II_287",
         "zitierung": "BGE 147 II 287",
         "regesteKurz": "Art. 56 lit. g DBG; Art. 23 Abs. 1 lit. f StHG; direkte Steuer; Steuerbefreiung; juristische Person; öffentlicher oder gemeinnütziger Zweck; unternehmerischer Zweck; Stiftung; Holdinggesellschaft. Voraussetzungen der Steuerbefreiung einer…",
@@ -319,20 +391,30 @@
         "gewicht": 0
       },
       {
-        "key": "bge_148_II_259",
-        "zitierung": "BGE 148 II 259",
-        "regesteKurz": "Art. 24 Abs. 3 StHG; Art. 80 Abs. 4 BVG; Aufschub der Grundstückgewinnsteuer bei Übertragung des Immobilienbestands einer Pensionskasse auf eine Anlagestiftung im Austausch gegen Beteiligungsrechte am Immobilienportfolio dieser Anlagestift…",
-        "datum": "2022-02-28",
+        "key": "bge_150_II_478",
+        "zitierung": "BGE 150 II 478",
+        "regesteKurz": "Art. 23 Abs. 1 lit. f und Abs. 4 StHG; Art. 80 Abs. 2 BVG; Rechtsnatur der Grundstückgewinnsteuer im Sinne des StHG, die beim Verkauf eines Grundstücks durch eine steuerbefreite Vorsorgeeinrichtung erhoben wird. Darlegung der allgemeinen G…",
+        "datum": "2024-06-10",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
       },
       {
-        "key": "bge_147_II_454",
-        "zitierung": "BGE 147 II 454",
-        "regesteKurz": "Art. 23 Abs. 3 und Art. 53 StHG; Art. 91 des waadtländischen Gesetzes vom 4. Juli 2000 über die direkten kantonalen Steuern; vorübergehende Steuerbefreiung; Unternehmen; verwaltungsrechtlicher Vertrag; Sitzverlegung; Widerruf; Rückwirkung;…",
-        "datum": "2021-12-03",
+        "key": "bge_150_I_1",
+        "zitierung": "BGE 150 I 1",
+        "regesteKurz": "Art. 9 und 127 Abs. 1 BV; Vertrauensschutz; besondere Bedeutung des Legalitätsprinzips im Steuerrecht. Anders als in anderen Rechtsgebieten steht der Schutz des Vertrauens in eine behördliche Auskunft im Steuerrecht nicht unter der Vorauss…",
+        "datum": "2023-10-26",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_II_259",
+        "zitierung": "BGE 148 II 259",
+        "regesteKurz": "Art. 24 Abs. 3 StHG; Art. 80 Abs. 4 BVG; Aufschub der Grundstückgewinnsteuer bei Übertragung des Immobilienbestands einer Pensionskasse auf eine Anlagestiftung im Austausch gegen Beteiligungsrechte am Immobilienportfolio dieser Anlagestift…",
+        "datum": "2022-02-28",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",

@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-07-17",
+  "erzeugt": "2026-07-18",
   "erlass": "BGG",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -31,6 +31,18 @@
         "datum": "2026-06-15",
         "leitcharakter": "routine",
         "gericht": "bger",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "13": [
+      {
+        "key": "bge_151_I_93",
+        "zitierung": "BGE 151 I 93",
+        "regesteKurz": "Art. 29a und 30 Abs. 1 BV; Art. 86 Abs. 1 lit. d und Abs. 2 BGG; § 42 lit. c Ziff. 1 des Verwaltungsrechtspflegegesetzes des Kantons Zürich vom 24. Mai 1959; Anforderungen an die Vorinstanzen des Bundesgerichts im Bereich der Justizverwalt…",
+        "datum": "2024-08-22",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
       }
@@ -217,6 +229,18 @@
         "zitierung": "BGE 148 V 265",
         "regesteKurz": "Art. 2 Abs. 3 bis und 3 ter (\"Stand am 6. Juli 2020\"), Art. 7 Abs. 2 Covid-19-Verordnung Erwerbsausfall; Art. 59 ATSG und Art. 89 Abs. 1 BGG; Corona-Erwerbsersatz, Anmelde- und Beschwerdelegitimation der Arbeitgeberin. Die Anmelde- und Bes…",
         "datum": "2022-05-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "30": [
+      {
+        "key": "bge_151_I_93",
+        "zitierung": "BGE 151 I 93",
+        "regesteKurz": "Art. 29a und 30 Abs. 1 BV; Art. 86 Abs. 1 lit. d und Abs. 2 BGG; § 42 lit. c Ziff. 1 des Verwaltungsrechtspflegegesetzes des Kantons Zürich vom 24. Mai 1959; Anforderungen an die Vorinstanzen des Bundesgerichts im Bereich der Justizverwalt…",
+        "datum": "2024-08-22",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -801,6 +825,16 @@
         "zitierung": "BGE 152 IV 118",
         "regesteKurz": "Art. 399 Abs. 4 lit. b StPO (Berufungserklärung); Beschränkung der Berufung auf die Strafzumessung; Sachverhaltskognition des Berufungsgerichts. Wird die Berufung auf die Strafzumessung beschränkt, erwächst der nicht angefochtene erstinsta…",
         "datum": "2025-09-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_151_IV_322",
+        "zitierung": "BGE 151 IV 322",
+        "regesteKurz": "Art. 46 Abs. 1 lit. a, Art. 47 Abs. 1 und Art. 50 VStrR; Art. 248 Abs. 1 StPO; Edition und Siegelung elektronisch übermittelter Unterlagen. Werden Unterlagen gestützt auf ein Editionsbegehren elektronisch übermittelt, gehören sowohl die Üb…",
+        "datum": "2025-04-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1614,7 +1648,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 16
+        "gewicht": 19
       },
       {
         "key": "bge_148_II_392",
@@ -1637,20 +1671,20 @@
         "gewicht": 7
       },
       {
-        "key": "bge_149_II_462",
-        "zitierung": "BGE 149 II 462",
-        "regesteKurz": "Art. 132 Abs. 1 BV; Art. 83 lit. m, Art. 113 BGG; Art. 6 Abs. 1 lit. k, Art. 12 StG; Erlass der Emissionsabgabe bzw. emissionsabgaberechtlicher Freibetrag. Entscheide des Bundesverwaltungsgerichts betreffend den Erlass der Emissionsabgabe…",
-        "datum": "2023-09-07",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 6
-      },
-      {
         "key": "bge_148_V_366",
         "zitierung": "BGE 148 V 366",
         "regesteKurz": "Art. 57 Abs. 1 UVG; Zuständigkeit des Schiedsgerichts. Die sachliche Zuständigkeit des kantonalen Schiedsgerichts nach Art. 57 Abs. 1 UVG bestimmt sich unter anderem mit Blick auf die sich in Wirklichkeit gegenüberstehenden Parteien und di…",
         "datum": "2022-08-17",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 7
+      },
+      {
+        "key": "bge_149_II_462",
+        "zitierung": "BGE 149 II 462",
+        "regesteKurz": "Art. 132 Abs. 1 BV; Art. 83 lit. m, Art. 113 BGG; Art. 6 Abs. 1 lit. k, Art. 12 StG; Erlass der Emissionsabgabe bzw. emissionsabgaberechtlicher Freibetrag. Entscheide des Bundesverwaltungsgerichts betreffend den Erlass der Emissionsabgabe…",
+        "datum": "2023-09-07",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1696,7 +1730,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 11
+        "gewicht": 13
       },
       {
         "key": "bge_148_I_104",
@@ -1736,7 +1770,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 4
+        "gewicht": 5
       },
       {
         "key": "bge_150_II_346",
@@ -1821,6 +1855,16 @@
         "gewicht": 1
       },
       {
+        "key": "bge_150_II_202",
+        "zitierung": "BGE 150 II 202",
+        "regesteKurz": "a Art. 22 Abs. 1 DBG; Einkünfte aus Vorsorge. Steuerliche Einordnung von Renten (Beiträge wie Auszahlungen) aus einem ausländischen Vorsorgewerk in die Systematik von Art. 22 Abs. 1 DBG (E. 4). Regeste b Art. 204 DBG; Übergangslösung für A…",
+        "datum": "2023-12-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
         "key": "bge_149_II_27",
         "zitierung": "BGE 149 II 27",
         "regesteKurz": "Art. 32 Abs. 2 DBG; Unterhaltskosten für Liegenschaften; Abzug von Instandstellungskosten bei \"wirtschaftlichem Neubau\" (Praxisänderung). Zu den Unterhaltskosten gehören gemäss der am 1. Januar 2010 in Kraft getretenen Fassung von Art. 32…",
@@ -1835,16 +1879,6 @@
         "zitierung": "BGE 148 III 161",
         "regesteKurz": "Art. 125 ZGB; nachehelicher Unterhalt; Frage der Lebensprägung bei einer Kurzehe mit Kind. Für die Festlegung des gebührenden nachehelichen Unterhalts nimmt die Rechtsprechung zum Ausgangspunkt, ob eine Ehe lebensprägend war oder nicht (E.…",
         "datum": "2022-03-25",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 1
-      },
-      {
-        "key": "bge_146_II_150",
-        "zitierung": "BGE 146 II 150",
-        "regesteKurz": "a Art. 28 Abs. 1 DBA CH-FR; Ziff. XI Abs. 3 Bst. a Zusatzprotokoll DBA CH-FR; Art. 2 der Vereinbarung vom 25. Juni 2014 über die Änderung des Zusatzprotokolls zum revidierten DBA CH-FR; Art. 3 lit. c StAhiG; Unterscheidung zwischen Listene…",
-        "datum": "2019-07-26",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1967,6 +2001,16 @@
         "gewicht": 1
       },
       {
+        "key": "bge_150_II_123",
+        "zitierung": "BGE 150 II 123",
+        "regesteKurz": "Art. 89 Abs. 1 und Art. 111 Abs. 1 BGG; Art. 56 Abs. 4 BöB; Art. 56 Abs. 5 IVöB 2019; Art. 75 lit. a des Waadtländer Gesetzes über das Verwaltungsverfahren (LPA-VD); Zulässigkeitsvoraussetzungen einer egoistischen Verbandsbeschwerde gegen…",
+        "datum": "2024-02-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
         "key": "bge_149_I_146",
         "zitierung": "BGE 149 I 146",
         "regesteKurz": "Art. 29a BV; Rechtsweggarantie; Ermessenssubventionen. Dem Entscheid über die Ausrichtung von Beiträgen aus dem kommunalen Kurtaxenertrag, die nach dem kantonalen Recht Ermessenssubventionen darstellen, kommt kein vorwiegend politischer Ch…",
@@ -2001,16 +2045,6 @@
         "zitierung": "BGE 151 II 657",
         "regesteKurz": "Art. 127 Abs. 3 BV; Art. 86 Abs. 1 lit. d und Art. 92 f. BGG; Anfechtung von nicht letztinstanzlichen kantonalen Entscheiden in Doppelbesteuerungssachen; Wirkungen von formell rechtskräftigen Steuerdomizilentscheiden. Gegen nicht letztinst…",
         "datum": "2025-04-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
-        "key": "bge_151_I_187",
-        "zitierung": "BGE 151 I 187",
-        "regesteKurz": "Art. 86 Abs. 3 BGG; § 44 Abs. 1 lit. e VRG/ZH; Verbundangebot im öffentlichen Personenverkehr; Entscheide mit vorwiegend politischem Charakter; Ausschluss des Gerichtszugangs. Die Anordnungen des Verkehrsrats über die Ausgestaltung der Gru…",
-        "datum": "2024-10-11",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -2373,6 +2407,28 @@
         "gewicht": 0
       }
     ],
+    "120": [
+      {
+        "key": "bge_150_II_273",
+        "zitierung": "BGE 150 II 273",
+        "regesteKurz": "a Art. 120 Abs. 1 und 2 BGG; Art. 16 Abs. 1 und 5 SuG; Zulässigkeit der Beschwerde an das Bundesgericht gegen einen Entscheid betreffend eine öffentlich-rechtliche Streitigkeit zwischen einem Kanton und dem Bund. Zuständigkeit des Staatsse…",
+        "datum": "2023-12-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_151_II_68",
+        "zitierung": "BGE 151 II 68",
+        "regesteKurz": "Art. 120 Abs. 2 BGG; Art. 20 der Verordnung vom 22. August 1967 über die Anrechnung ausländischer Quellensteuern, vormals Verordnung über die pauschale Steueranrechnung; Art. 57 f. VStG; Zulässigkeit der Klage eines Kantons gegen den Bund…",
+        "datum": "2024-08-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "121": [
       {
         "key": "bge_150_I_99",
@@ -2427,6 +2483,16 @@
     ],
     "122": [
       {
+        "key": "bge_147_I_494",
+        "zitierung": "BGE 147 I 494",
+        "regesteKurz": "Art. 2 EMRK; Art. 117 StGB; Art. 7 Abs. 2 StPO; Art. 1 Abs. 2 OHG; Art. 99 Abs. 2 und Art. 122 BGG; Revision eines Urteils betreffend Suizid in Untersuchungshaft; Ermächtigung zur Strafverfolgung gegen Polizeibeamte wegen fahrlässiger Tötu…",
+        "datum": "2021-04-27",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
         "key": "bge_150_I_99",
         "zitierung": "BGE 150 I 99",
         "regesteKurz": "Art. 122 lit. c BGG; Notwendigkeit der Revision zur Beseitigung einer vom EGMR festgestellten Verletzung der EMRK. Erklärt sich die Schweizerische Eidgenossenschaft als Hohe Vertragspartei der EMRK bereit, den Barwert der Leistungen, die d…",
@@ -2437,10 +2503,10 @@
         "gewicht": 0
       },
       {
-        "key": "bge_147_I_494",
-        "zitierung": "BGE 147 I 494",
-        "regesteKurz": "Art. 2 EMRK; Art. 117 StGB; Art. 7 Abs. 2 StPO; Art. 1 Abs. 2 OHG; Art. 99 Abs. 2 und Art. 122 BGG; Revision eines Urteils betreffend Suizid in Untersuchungshaft; Ermächtigung zur Strafverfolgung gegen Polizeibeamte wegen fahrlässiger Tötu…",
-        "datum": "2021-04-27",
+        "key": "bge_150_IV_114",
+        "zitierung": "BGE 150 IV 114",
+        "regesteKurz": "Art. 41 EMRK; Art. 415 StPO; Art. 122 und 128 BGG. Die Revision eines bundesgerichtlichen Urteils wegen Verletzung der EMRK setzt unter anderem voraus, dass eine Entschädigung nicht geeignet ist, die Folgen der Verletzung auszugleichen (Ar…",
+        "datum": "2023-12-18",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -2579,6 +2645,16 @@
         "zitierung": "BGE 150 I 99",
         "regesteKurz": "Art. 122 lit. c BGG; Notwendigkeit der Revision zur Beseitigung einer vom EGMR festgestellten Verletzung der EMRK. Erklärt sich die Schweizerische Eidgenossenschaft als Hohe Vertragspartei der EMRK bereit, den Barwert der Leistungen, die d…",
         "datum": "2024-01-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_150_IV_114",
+        "zitierung": "BGE 150 IV 114",
+        "regesteKurz": "Art. 41 EMRK; Art. 415 StPO; Art. 122 und 128 BGG. Die Revision eines bundesgerichtlichen Urteils wegen Verletzung der EMRK setzt unter anderem voraus, dass eine Entschädigung nicht geeignet ist, die Folgen der Verletzung auszugleichen (Ar…",
+        "datum": "2023-12-18",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",

@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-07-17",
+  "erzeugt": "2026-07-18",
   "erlass": "AIG",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -87,10 +87,32 @@
     ],
     "44": [
       {
+        "key": "bge_151_II_737",
+        "zitierung": "BGE 151 II 737",
+        "regesteKurz": "Art. 50, Art. 126 Abs. 1 und Art. 126g AIG; Übergangsbestimmung in Bezug auf die Erweiterung der Härtefallregelung bei häuslicher Gewalt. Inhalt und Hintergrund der speziellen Übergangsbestimmung von Art. 126g AIG zur Änderung von Art. 50…",
+        "datum": "2025-03-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_149_II_1",
         "zitierung": "BGE 149 II 1",
         "regesteKurz": "Art. 43 Abs. 1 lit. c und e, Art. 44 Abs. 1 lit. c und e, Art. 63 Abs. 1 lit. c AIG; Rechtmässigkeit des Widerrufs einer Niederlassungsbewilligung, wenn Ergänzungsleistungen zur AHV/IV bezogen werden. Bezüglich der Frage, ob Sozialhilfeabh…",
         "datum": "2022-12-27",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "45": [
+      {
+        "key": "bge_151_II_737",
+        "zitierung": "BGE 151 II 737",
+        "regesteKurz": "Art. 50, Art. 126 Abs. 1 und Art. 126g AIG; Übergangsbestimmung in Bezug auf die Erweiterung der Härtefallregelung bei häuslicher Gewalt. Inhalt und Hintergrund der speziellen Übergangsbestimmung von Art. 126g AIG zur Änderung von Art. 50…",
+        "datum": "2025-03-19",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -134,6 +156,16 @@
       }
     ],
     "62": [
+      {
+        "key": "bge_151_IV_249",
+        "zitierung": "BGE 151 IV 249",
+        "regesteKurz": "Art. 47, 54 und 66a ff. StGB; Strafzumessung bei gleichzeitiger Landesverweisung. Die gleichzeitig ausgesprochene Landesverweisung ist bei der Strafzumessung nicht strafmindernd zu berücksichtigen (E. 5.3). Regeste Art. 47, 54 et 66a ss CP…",
+        "datum": "2025-05-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_151_II_237",
         "zitierung": "BGE 151 II 237",
@@ -181,6 +213,30 @@
         "zitierung": "BGE 146 II 1",
         "regesteKurz": "Art. 63 Abs. 3 AIG; Art. 66a Abs. 2 StGB; Rechtmässigkeit des Widerrufs einer Niederlassungsbewilligung, wenn der Strafrichter von einer Landesverweisung abgesehen hat. Art. 66a StGB findet nur auf Straftaten Anwendung, die nach dem 1. Okt…",
         "datum": "2019-11-18",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "70": [
+      {
+        "key": "bge_150_II_57",
+        "zitierung": "BGE 150 II 57",
+        "regesteKurz": "Art. 28 Dublin-III-Verordnung; Art. 76a und 80a AIG; Art. 6 und 19 ZAG; Polizeigesetz des Kantons Thurgau; Zulässigkeit von Polizeigewahrsam gestützt auf kantonales Recht und das ZAG zwecks Sicherstellung einer Rückführung im Anwendungsber…",
+        "datum": "2023-08-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "73": [
+      {
+        "key": "bge_150_II_57",
+        "zitierung": "BGE 150 II 57",
+        "regesteKurz": "Art. 28 Dublin-III-Verordnung; Art. 76a und 80a AIG; Art. 6 und 19 ZAG; Polizeigesetz des Kantons Thurgau; Zulässigkeit von Polizeigewahrsam gestützt auf kantonales Recht und das ZAG zwecks Sicherstellung einer Rückführung im Anwendungsber…",
+        "datum": "2023-08-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -293,12 +349,46 @@
         "gewicht": 1
       },
       {
+        "key": "bge_151_II_737",
+        "zitierung": "BGE 151 II 737",
+        "regesteKurz": "Art. 50, Art. 126 Abs. 1 und Art. 126g AIG; Übergangsbestimmung in Bezug auf die Erweiterung der Härtefallregelung bei häuslicher Gewalt. Inhalt und Hintergrund der speziellen Übergangsbestimmung von Art. 126g AIG zur Änderung von Art. 50…",
+        "datum": "2025-03-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bger_2C_12_2025",
         "zitierung": "BGer 2C_12/2025 vom 8. September 2025",
         "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung und Wegweisung",
         "datum": "2025-09-08",
         "leitcharakter": "routine",
         "gericht": "bger",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "124a": [
+      {
+        "key": "bge_150_IV_329",
+        "zitierung": "BGE 150 IV 329",
+        "regesteKurz": "Art. 291 Abs. 1 StGB; Art. 19a BetmG; Rückführungsrichtlinie 2008/115/EG; Art. 124a AIG; Verweisungsbruch; Strafart. Zusammenfassung der Rechtsprechung zur Rückführungsrichtlinie und zum Tatbestand des Verweisungsbruchs (E. 1.2). Art. 124a…",
+        "datum": "2024-06-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "126g": [
+      {
+        "key": "bge_151_II_737",
+        "zitierung": "BGE 151 II 737",
+        "regesteKurz": "Art. 50, Art. 126 Abs. 1 und Art. 126g AIG; Übergangsbestimmung in Bezug auf die Erweiterung der Härtefallregelung bei häuslicher Gewalt. Inhalt und Hintergrund der speziellen Übergangsbestimmung von Art. 126g AIG zur Änderung von Art. 50…",
+        "datum": "2025-03-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
       }
@@ -345,6 +435,16 @@
         "zitierung": "BGE 148 II 169",
         "regesteKurz": "Art. 28 Dublin-III-Verordnung; Art. 76a Abs. 4 AIG; Vereinbarkeit der Dublin-Renitenzhaft mit dem einschlägigen Dublinrecht. Übersicht über die Haftbestimmungen in der Dublin-III-Verordnung (E. 2) und über deren Umsetzung im schweizerische…",
         "datum": "2022-03-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_150_II_57",
+        "zitierung": "BGE 150 II 57",
+        "regesteKurz": "Art. 28 Dublin-III-Verordnung; Art. 76a und 80a AIG; Art. 6 und 19 ZAG; Polizeigesetz des Kantons Thurgau; Zulässigkeit von Polizeigewahrsam gestützt auf kantonales Recht und das ZAG zwecks Sicherstellung einer Rückführung im Anwendungsber…",
+        "datum": "2023-08-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",

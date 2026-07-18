@@ -1,0 +1,217 @@
+{
+  "erzeugt": "2026-07-18",
+  "eintraege": [
+    {
+      "id": "bund/bge/151_V_368",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "V",
+      "nummer": "151 V 368",
+      "bgeReferenz": "151 V 368",
+      "zitierung": "BGE 151 V 368",
+      "datum": "2025-06-18",
+      "sprache": "it",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "legalArea": "social_insurance",
+      "rubrum": {
+        "besetzung": null,
+        "parteien": null,
+        "gegenstand": "Assicurazione contro la disoccupazione (indennità per lavoro ridotto; restituzione)",
+        "vorinstanz": "Tribunale amministrativo federale del 30 dicembre 2024 (B-5800/2022)"
+      },
+      "regeste": {
+        "text": "Art. 31 Abs. 1 AVIG; Art. 46 AVIV; Kurzarbeitsentschädigung; normale Arbeitszeit und flexibles Arbeitszeitsystem; Auslegung eines Arbeitsvertrags. Zusammenfassung der Rechtsprechung zur Gleitzeitarbeit (E. 5.2). Die Auslegung des Arbeitsvertrags lässt im vorliegenden Fall nicht auf die Vereinbarung eines flexiblen Arbeitszeitsystems schliessen (E. 5.3).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 31 Abs. 1 AVIG; Art. 46 AVIV; Kurzarbeitsentschädigung; normale Arbeitszeit und flexibles Arbeitszeitsystem; Auslegung eines Arbeitsvertrags.",
+            "absaetze": [
+              "Zusammenfassung der Rechtsprechung zur Gleitzeitarbeit (E. 5.2). Die Auslegung des Arbeitsvertrags lässt im vorliegenden Fall nicht auf die Vereinbarung eines flexiblen Arbeitszeitsystems schliessen (E. 5.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-V-368%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 31 al. 1 LACI; art. 46 OACI; indemnité en cas de réduction de l'horaire de travail; durée de travail normale et système de travail flexible; interprétation d'un contrat de travail.",
+            "absaetze": [
+              "Rappel des principes jurisprudentiels en matière d'horaire de travail flexible (consid. 5.2). Interprétation du contrat de travail dans le cas d'espèce, dont il ressort qu'aucun système de travail flexible n'a été convenu (consid. 5.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-V-368%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 31 cpv. 1 LADI; art. 46 OADI; indennità per lavoro ridotto; tempo di lavoro normale e sistema del lavoro flessibile; interpretazione di un contratto di lavoro.",
+            "absaetze": [
+              "Richiamo dei principi giurisprudenziali in materia di orario di lavoro flessibile (consid. 5.2). Interpretazione del contratto di lavoro nella fattispecie, da cui emerge che non è stato stipulato un sistema del lavoro flessibile (consid. 5.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-V-368%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": false,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A seguito del controllo effettuato in data 14 luglio 2022 da B.________ SA per conto della Segreteria di Stato dell'economia (SECO) presso A.________ SA, atto a verificare la legittimità del suo diritto alle indennità per lavoro ridotto (ILR) percepite da marzo 2020 a giugno 2021 nel corso della crisi pandemica di COVID-19, con decisione del 18 agosto 2022, confermata su opposizione il 14 novembre 2022, la SECO ha ordinato a A.________ SA il rimborso delle prestazioni versate nel periodo di contribuzione indicato per un totale di fr. 328'246.05 in favore della rispettiva cassa di disoccupazione. In particolare, oltre ad aver modificato la somma totale delle ore di lavoro che gli operai avrebbero dovuto prestare basandosi su un tempo normale di lavoro pari a 8 ore al giorno in base alle indicazioni nel contratto di lavoro, la SECO ha rilevato che il sistema di registrazione dell'orario di lavoro dei dipendenti in telelavoro non soddisfacesse i requisiti di legge relativi alla sufficiente controllabilità del tempo di lavoro e non fosse nemmeno affidabile."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Con sentenza del 30 dicembre 2024, il Tribunale amministrativo federale ha respinto il ricorso del 15 dicembre 2022 interposto dall'azienda contro la decisione su opposizione del 14 novembre 2022."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A.________ SA presenta un ricorso in materia di diritto pubblico al Tribunale federale. Previo conferimento dell'effetto sospensivo, chiede in via principale la riforma della sentenza impugnata nel senso che il ricorso del 15 dicembre 2022 sia accolto. In via subordinata, ne chiede l'annullamento e il rinvio all'autorità inferiore per nuova decisione. Chiamati a pronunciarsi, la SECO postula la reiezione del ricorso e si oppone al conferimento dell'effetto sospensivo, mentre il Tribunale amministrativo federale rinuncia a pronunciarsi. La ricorrente ha ancora replicato spontaneamente."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "La ricorrente invoca la tutela della propria buona fede in virtù dell' art. 9 Cost. in relazione ad una comunicazione errata da parte dell'autorità."
+            },
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Il Tribunale amministrativo federale ha ricordato che un'informazione data per telefono, non comprovata per iscritto, non è idonea ad assumere un valore probatorio e tantomeno sufficiente per appellarsi con successo al principio dell'affidamento. Inoltre, nella fattispecie, né la ricorrente né la persona da lei incaricata per ottenere i chiarimenti avevano indicato, nelle rispettive comparse e nella dichiarazione allegata al ricorso, il nome del collaboratore o della collaboratrice della cassa di disoccupazione competente che avrebbe dato l'informazione (erronea) e nemmeno la data precisa della presunta telefonata. Considerato anche che la presunta richiesta di informazioni risalirebbe a tre-quattro anni prima, non si poteva ragionevolmente attendere alcun nuovo elemento dalla domanda di interrogatorio delle parti, nonché di audizione di diversi testimoni, potendo così rinunciare ad assumere le ulteriori prove richieste sulla base di un apprezzamento anticipato delle prove."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "La ricorrente contesta tale conclusione affermando che il principio della buona fede si applicherebbe anche qualora l'informazione ricevuta non sarebbe stata formalizzata per iscritto, a condizione che vi siano elementi indiziari idonei a verificarne la veridicità. Nel caso concreto, la ricorrente avrebbe offerto delle prove in tal senso, tra cui la dichiarazione della consulente esterna incaricata di ottenere tali informazioni, la possibilità di interrogare i titolari dell'azienda e la documentazione contabile coerente con l'interpretazione seguita. La sentenza impugnata sarebbe pertanto arbitraria nella misura in cui applicherebbe in modo errato il principio della buona fede, imponendo alla ricorrente un onere probatorio eccessivo e non previsto dalla legge."
+            },
+            {
+              "marke": "E. 7.3",
+              "tiefe": 2,
+              "text": "Come rettamente sottolineato dai primi giudici, la giurisprudenza ha riconosciuto che la semplice allegazione non comprovata di aver ricevuto informazioni o conferme per telefono non è sufficiente a fondare un diritto derivante dal principio della tutela della buona fede. Secondo la prassi, un semplice scambio avvenuto per telefono - che può essere viziato da equivoci, imprecisioni o omissioni (cfr. sentenza 8C_73/2022 del 26 gennaio 2023 consid. 5.4) - non comprovato da alcun documento scritto non è di per sé idoneo a fondare un legittimo affidamento (DTF 143 V 341 consid. 5.3.1; sentenze 2C_879/2021 dell'8 luglio 2022 consid. 8.3; 8C_545/2021 del 4 maggio 2022 consid. 6, in SVR 2022 ALV n° 27 pag. 97). Nemmeno costituisce un formalismo eccessivo richiedere una conferma per iscritto di tali informazioni ottenute da un assicuratore a riguardo di prestazioni o che sono in contraddizione con delle indicazioni scritte (già citata sentenza 8C_73/2022 del 26 gennaio 2023 consid. 5.4 con rinvii).\n\nNella fattispecie, l'autorità inferiore non si è limitata a constatare l'assenza di conferma scritta e non ha considerato che tale conferma fosse assolutamente necessaria, contrariamente a quanto addotto nel ricorso. Il Tribunale amministrativo federale ha piuttosto ritenuto che i mezzi di prova proposti fossero insufficienti, in base ad una valutazione anticipata degli stessi, per dimostrare le allegazioni della ricorrente. Ora, tenuto pure conto dell'onere di motivazione accresciuto in ragione della censura di ordine costituzionale (DTF 147 I 73 consid. 2.2 in fine), la semplice allusione all'esistenza di indizi, come del resto l'offerta di prove (ri) presentata in questa sede (di cui occorrerebbe soppesare la possibile oggettività, visti gli stretti legami con la ricorrente già individuabili di primo acchito), non permettono di ritenere né una violazione del principio della buona fede, né l'arbitrio nell'operato dei primi giudici, che pertanto resiste alle critiche."
+            },
+            {
+              "marke": "E. 8",
+              "tiefe": 1,
+              "text": "La ricorrente censura infine la violazione dell'art. 25 cpv. 1 seconda frase LPGA, lamentando la mancata analisi dei presupposti della buona fede e delle gravi difficoltà finanziarie. Tuttavia, seppur patrocinata dai propri avvocati, la ricorrente sembra scordare che tale esame è pertinente al condono della richiesta di restituzione, che ha luogo successivamente alla crescita in giudicato di quest'ultima (art. 4 cpv. 4 OPGA [RS 830.11]; sentenze 9C_294/2023 del 20 dicembre 2023 consid. 4.3; 9C_678/2011 del 4 gennaio 2012 consid. 5.2, in SVR 2012 IV n. 35 pag. 136) e non può essere invocato direttamente dinanzi al Tribunale federale senza rispettare il principio dell'esaurimento delle istanze (art. 86 LTF; cfr. art. 95 cpv. 3 LADI e 119 cpv. 3 OADI). La richiesta, prematura, è dunque inammissibile."
+            },
+            {
+              "marke": "E. 9",
+              "tiefe": 1,
+              "text": "Ne discende che il ricorso deve essere respinto. Le spese giudiziarie seguono la soccombenza (art. 66 cpv. 1 LTF). La richiesta di conferimento dell'effetto sospensivo diviene pertanto priva d'oggetto."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Nella misura in cui è ammissibile, il ricorso è respinto."
+            },
+            {
+              "marke": "2.",
+              "text": "Le spese giudiziarie di fr. 8'000.- sono poste a carico della ricorrente."
+            },
+            {
+              "marke": "3.",
+              "text": "Comunicazione alle parti, al Tribunale amministrativo federale, Corte II, e alla Cassa cantonale di assicurazione contro la disoccupazione del Cantone Ticino.\n\nLucerna, 18 giugno 2025\n\nIn nome della IV Corte di diritto pubblico\n\ndel Tribunale federale svizzero\n\nLa Presidente: Viscione\n\nIl Cancelliere: Colombi"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Nella misura in cui è ammissibile, il ricorso è respinto.",
+        "Le spese giudiziarie di fr. 8'000.- sono poste a carico della ricorrente.",
+        "Comunicazione alle parti, al Tribunale amministrativo federale, Corte II, e alla Cassa cantonale di assicurazione contro la disoccupazione del Cantone Ticino.\n\nLucerna, 18 giugno 2025"
+      ],
+      "zitierteNormen": [
+        "Art. 1 Abs. 1 CO",
+        "Art. 105 Abs. 1 LTF",
+        "Art. 18 Abs. 1 CO",
+        "Art. 18 CO",
+        "Art. 31 Abs. 1 AVIG",
+        "Art. 321 CO",
+        "Art. 46 Abs. 1 OADI",
+        "Art. 46 AVIV"
+      ],
+      "normKeys": [
+        "AVIG"
+      ],
+      "zitierteEntscheide": [
+        "2C_879/2021",
+        "4A_227/2016",
+        "4A_518/2020",
+        "4A_611/2012",
+        "4C.365/1996",
+        "8C_107/2025",
+        "8C_108/2024",
+        "8C_228/2023",
+        "8C_545/2021",
+        "8C_65/2024",
+        "8C_728/2023",
+        "8C_73/2022",
+        "9C_294/2023",
+        "9C_678/2011",
+        "B-5800/2022",
+        "BGE 123 III 469",
+        "BGE 130 V 309",
+        "BGE 140 III 456",
+        "BGE 142 I 135",
+        "BGE 143 V 341",
+        "BGE 146 IV 88",
+        "BGE 147 I 73",
+        "BGE 147 III 153",
+        "BGE 148 III 57",
+        "BGE 149 II 337",
+        "BGE 149 V 156",
+        "BGE 150 II 83",
+        "BGE 150 IV 360"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-V-368%3Ade&lang=de&zoom=&type=show_document",
+      "abgerufen": "2026-07-18",
+      "fassungsToken": "51f1ba14946e9baedd59a16db2a1397ca2fb7e1cb0f1fb9c486b648125e2418b",
+      "sha": "1674f0e2a7bbe1b2e1c9f0c8588d4c8e91275900345582dd3921b7f065cc0c2f",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A seguito del controllo effettuato in data 14 luglio 2022 da B. SA per conto della Segreteria di Stato dell'economia (SECO) presso A. SA, atto a verificare la legittimità del suo diritto alle indennità per lavoro ridotto (ILR) percepite da marzo 2020 a giugno 2021 nel corso della crisi pandemica di COVID-19, con decisione del 18 agosto 2022, confermata su opposizione il 14 novembre 2022, la SECO ha ordinato a A. SA il rimborso delle prestazioni versate nel periodo di contribuzione indicato per un totale di fr. 328'246.05 in favore della rispettiva cassa di disoccupazione. In particolare, oltre ad aver modificato la somma totale delle ore di lavoro che gli operai avrebbero dovuto prestare basandosi su un tempo normale di lavoro pari a 8 ore al giorno in base alle indicazioni nel contratto di lavoro, la SECO ha rilevato che il sistema di registrazione dell'orario di lavoro dei dipendenti in telelavoro non soddisfacesse i requisiti di legge relativi alla sufficiente controllabilità del tempo di lavoro e non fosse nemmeno affidabile."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Con sentenza del 30 dicembre 2024, il Tribunale amministrativo federale ha respinto il ricorso del 15 dicembre 2022 interposto dall'azienda contro la decisione su opposizione del 14 novembre 2022."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A. SA presenta un ricorso in materia di diritto pubblico al Tribunale federale. Previo conferimento dell'effetto sospensivo, chiede in via principale la riforma della sentenza impugnata nel senso che il ricorso del 15 dicembre 2022 sia accolto. In via subordinata, ne chiede l'annullamento e il rinvio all'autorità inferiore per nuova decisione. Chiamati a pronunciarsi, la SECO postula la reiezione del ricorso e si oppone al conferimento dell'effetto sospensivo, mentre il Tribunale amministrativo federale rinuncia a pronunciarsi. La ricorrente ha ancora replicato spontaneamente. Il Tribunale federale ha respinto il ricorso nella misura della sua ammissibilità."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "8C_107/2025",
+        "key": "bger_8C_107_2025",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=18.06.2025_8C_107/2025"
+      },
+      "ecli": "ECLI:CH:BGE:2025:151.V.368"
+    }
+  ]
+}

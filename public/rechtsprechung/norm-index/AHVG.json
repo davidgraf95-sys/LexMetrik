@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-07-17",
+  "erzeugt": "2026-07-18",
   "erlass": "AHVG",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -237,6 +237,16 @@
     ],
     "21": [
       {
+        "key": "bge_151_II_726",
+        "zitierung": "BGE 151 II 726",
+        "regesteKurz": "Art. 21 Abs. 1 lit. a und b sowie Art. 40 Abs. 1 Satz 2 AHVG (in der bis zum 31. Dezember 2023 geltenden Fassung); Art. 7 lit. c FZA und Art. 4 Abs. 1 und 2 Anhang I FZA; Art. 2 Abs. 1 lit. a der Verordnung (EWG) Nr. 1251/70 vom 29. Juni 1…",
+        "datum": "2025-04-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_151_III_143",
         "zitierung": "BGE 151 III 143",
         "regesteKurz": "a Art. 356 ff. OR; Art. 20 Abs. 3 AVG; Art. 48c AVV; Beitragspflicht des Personalverleihers für den flexiblen Altersrücktritt. Für die Beitragspflicht des Personalverleihers im Sinne von Art. 20 Abs. 3 AVG ist entscheidend, dass der betrof…",
@@ -311,6 +321,18 @@
         "gewicht": 0
       }
     ],
+    "29": [
+      {
+        "key": "bge_150_V_257",
+        "zitierung": "BGE 150 V 257",
+        "regesteKurz": "Art. 39 Abs. 1 AHVG; Art. 55 bis lit. b AHVV (je in der vom 1. Januar 1997 bis Ende 2023 geltenden Fassung); Aufschub der Altersrente, die eine Invalidenrente ablöst. Laut Art. 55 bis lit. b AHVV sind Altersrenten, die eine Invalidenrente…",
+        "datum": "2024-06-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "30": [
       {
         "key": "bge_146_V_313",
@@ -332,6 +354,50 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
+        "gewicht": 2
+      },
+      {
+        "key": "bge_150_V_73",
+        "zitierung": "BGE 150 V 73",
+        "regesteKurz": "Art. 39 AHVG; Art. 55 ter AHVV; Rentenaufschub. Die in Art. 55 ter Abs. 2 AHVV gestützt auf Art. 39 Abs. 3 AHVG für die Berechnung des Zuschlags beim Rentenaufschub statuierte, in Rz. 6301 ff. RWL konkretisierte Methode erweist sich als bu…",
+        "datum": "2023-12-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_150_V_257",
+        "zitierung": "BGE 150 V 257",
+        "regesteKurz": "Art. 39 Abs. 1 AHVG; Art. 55 bis lit. b AHVV (je in der vom 1. Januar 1997 bis Ende 2023 geltenden Fassung); Aufschub der Altersrente, die eine Invalidenrente ablöst. Laut Art. 55 bis lit. b AHVV sind Altersrenten, die eine Invalidenrente…",
+        "datum": "2024-06-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "40": [
+      {
+        "key": "bge_151_II_726",
+        "zitierung": "BGE 151 II 726",
+        "regesteKurz": "Art. 21 Abs. 1 lit. a und b sowie Art. 40 Abs. 1 Satz 2 AHVG (in der bis zum 31. Dezember 2023 geltenden Fassung); Art. 7 lit. c FZA und Art. 4 Abs. 1 und 2 Anhang I FZA; Art. 2 Abs. 1 lit. a der Verordnung (EWG) Nr. 1251/70 vom 29. Juni 1…",
+        "datum": "2025-04-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "153c": [
+      {
+        "key": "bge_150_I_80",
+        "zitierung": "BGE 150 I 80",
+        "regesteKurz": "Art. 141 Abs. 2 KV/FR; Art. 153c Abs. 1 lit. a AHVG; Autonomie der öffentlich-rechtlich anerkannten Kirchen; Zugang zu Personendaten; systematische Verwendung der AHV-Nummer durch die öffentlich-rechtlichen kirchlichen Körperschaften. Die…",
+        "datum": "2024-01-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
         "gewicht": 0
       }
     ],
@@ -348,6 +414,16 @@
       }
     ],
     "29bis": [
+      {
+        "key": "bge_150_V_257",
+        "zitierung": "BGE 150 V 257",
+        "regesteKurz": "Art. 39 Abs. 1 AHVG; Art. 55 bis lit. b AHVV (je in der vom 1. Januar 1997 bis Ende 2023 geltenden Fassung); Aufschub der Altersrente, die eine Invalidenrente ablöst. Laut Art. 55 bis lit. b AHVV sind Altersrenten, die eine Invalidenrente…",
+        "datum": "2024-06-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_147_V_133",
         "zitierung": "BGE 147 V 133",
@@ -375,6 +451,30 @@
         "zitierung": "BGE 146 V 104",
         "regesteKurz": "Art. 3 und Art. 90c Abs. 1 AVIG; Beitragspflicht bei nachträglicher Lohnzahlung. Die Bestimmung des Beitragssatzes einer Lohnnachzahlung (Art. 5 Abs. 1 AHVG) ist nicht oder nicht ausschliesslich auf der Ebene des Beitragsbezugs abzuhandeln…",
         "datum": "2020-04-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "33bis": [
+      {
+        "key": "bge_150_V_257",
+        "zitierung": "BGE 150 V 257",
+        "regesteKurz": "Art. 39 Abs. 1 AHVG; Art. 55 bis lit. b AHVV (je in der vom 1. Januar 1997 bis Ende 2023 geltenden Fassung); Aufschub der Altersrente, die eine Invalidenrente ablöst. Laut Art. 55 bis lit. b AHVV sind Altersrenten, die eine Invalidenrente…",
+        "datum": "2024-06-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "33ter": [
+      {
+        "key": "bge_150_V_73",
+        "zitierung": "BGE 150 V 73",
+        "regesteKurz": "Art. 39 AHVG; Art. 55 ter AHVV; Rentenaufschub. Die in Art. 55 ter Abs. 2 AHVV gestützt auf Art. 39 Abs. 3 AHVG für die Berechnung des Zuschlags beim Rentenaufschub statuierte, in Rz. 6301 ff. RWL konkretisierte Methode erweist sich als bu…",
+        "datum": "2023-12-20",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",

@@ -79,3 +79,45 @@ Ausbau band-weise (Datenmenge/Crawl-Risiko): **PR-A = 146+147 (404)**,
 
 Erstextraktion + unabhängige adversariale Gegenprüfung (2 Runden, Opus).
 Fachliche Inhalts-Abnahme bleibt David (Status-Marker «maschinell», §8).
+
+## 7 Fortschreibung — Bände 150/151 + BGFA-Fix (PR-C, 18.7.2026)
+
+Fortsetzung des Nachzugs über denselben Pfad (`--additiv --bge-baender=…`),
+band-weise committet (COMMIT-FIRST, Netz-Stör-Lektion).
+
+| Band | Jahrgang | enumeriert (de+fr+it) | vorher im Bestand | **neu erfasst** | Volltext/Auszug |
+|---|---|---|---|---|---|
+| 150 | 2024 | 199 | 96 | **103** | 103 / 0 |
+| 151 | 2025 | 226 | 143 | **83** | 83 / 0 |
+| **Σ** | | **425** | 239 | **186** | 186 / 0 |
+
+- **Teilband-Verteilung (Korpus nach Nachzug):** 150 = I 22 · II 46 · III 43 ·
+  IV 43 · V 45 (Σ 199); 151 = I 26 · II 65 · III 61 · IV 41 · V 33 (Σ 226).
+  Neu Band 151: I+11 II+22 III+21 IV+18 V+11.
+- **Vorbestand 150/151** stammt aus dem 2024+-Leitentscheid-Seed (`bge`,
+  `date_from=2024`) — Band 150/151 waren also nie «gar nicht importiert», nur
+  band-unvollständig. Der Nachzug schliesst die Lücken band-basiert (Q1-Quirk).
+- **Sprachverteilung neu (150+151):** de 289 · fr 125 · it 11; **425/425
+  dreisprachige clir-Regeste**, 0 Auszug-Quarantäne, 0 Degradation.
+- **BGFA-ABK_REGISTER-Fix (Kernauftrag, ANMERKUNGEN-DAVID-2026-07-16 §10):**
+  BGFA (SR 935.61, Anwaltsgesetz) war Register-Rubrik (`register.ts`), fehlte
+  aber im `ABK_REGISTER` (`scripts/normtext/entscheide-mapping.ts`) → BGE, die
+  BGFA zitieren, wurden im Norm-Index nicht mit der Gesetzesseite verzahnt.
+  `BGFA: 'BGFA'` ergänzt. Neuer Shard `norm-index/BGFA.json`:
+  `art 20 → 150 II 308` (Davids Referenzfall), `art 17 → 150 II 308 + 147 I 219`
+  u.a. **Residuum (vorbestehend, korpusweit):** `ABK_REGISTER` mappt nur
+  **deutsche** Abkürzungen — FR/IT-primäre Entscheide zitieren `LLCA`/`LDA`
+  (BGFA), `CO` (OR), `LTF` (BGG) etc., die (wie das ganze Register) unverlinkt
+  bleiben. 150 II 308 ist DE-primär und trägt die BGFA-Form → Davids Fall voll
+  geschlossen; die FR/IT-Abkürzungs-Verlinkung ist eigener Backlog.
+- **Determinismus:** Reload-Läufe byte-identisch (Fixpunkt bewiesen). Der
+  additive Lauf hängt neue BGE ans Ende → `norm-index.json`-proNorm-Key-
+  Reihenfolge war bau-pfad-abhängig; auf die kanonische Manifest-Reihenfolge
+  (datum-desc) normalisiert (0 Membership-Änderung).
+- **Gegenprüfung (Opus, 2 Linsen):** unabhängiger Sub-Agent zeichengenau gegen
+  bger.ch clir (5 Stichproben de/fr/it, mehrteilige Regeste a/b, Enumerations-
+  Grenzproben 150 II 566 / 150 III 423 / 151 II 934 amtlich abgesichert,
+  Negativfall) + struktureller Zweit-Pass (0 Shell/Leak/Dup/Degradation).
+  Verdikt `bestanden`.
+- **Budget-Hinweis:** `check:entscheide` 98,30 MB bei `BUDGET_MB=100` — nur
+  ~1,7 MB Reserve; ein Band-152-Nachzug erfordert Budget-Anhebung.
