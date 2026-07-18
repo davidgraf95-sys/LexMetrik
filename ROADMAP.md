@@ -832,6 +832,18 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Erfassungsgrad-Badges/SSoT `erfassungsgrad.ts` (Gegenprüfung) · IA-3 A–Z-Register · IA-4
   Scope-Chip · IA-5 Rechtsgebiet-Kanonisierung · IA-6 /international-Kanonik Stufe 1 · IA-7
   Sidebar-Badges. David-Fragen Y-A/Y-B/Y-C (§11.8). Trailer `Roadmap: W2·5d`.
+  **Fedlex-eId-Anker & Verifizier-Deep-Links (Intake, Live-Verifikation 17.7.2026; David-GO
+  17.7. = Aufnahme als Bau-Einheit) → Bau-Spec `FAHRPLAN-GESETZES-UX.md` §12.** Befund:
+  Fedlex-Fragmente = AKN-eIds (Container kumulativ `book_2/…/chap_4/lvl_D`, Artikel flach
+  `art_712_a`, sprach-invariant DE/FR/IT); zitierfähig NUR als ELI-Form `…/de#<eId>`, nie
+  Filestore-URL. Grundsatz: kumulative Pfade sind revisions-brüchig ⇒ eIds NUR als regenerierte
+  Outbound-Links, NIE als eigene Anker; `#art-` unangetastet (K2/R8). Einheiten: EID-1 Enabler
+  (Container-eIds im Struktur-Sidecar mitschneiden statt wegwerfen, `scripts/normtext`,
+  additiv/verhaltensneutral, `check:gegenpruefung`+Golden byte-gleich) · EID-2 Verifizier-Deep-Links
+  «amtliche Fassung an genau dieser Stelle» (ELI-Form; je Artikel sofort, je Sektion nach EID-1;
+  David-Gate Platzierung) · EID-3 Folge-Härtungen (Breadcrumb-eIds → teilbare Sektions-Deep-Links,
+  Linien-Tiefe aus eId-Pfadlänge; optional, David-Gate wegen A27/§11.7 SektionKontextKopf).
+  Bau-Go der Einheiten ausstehend (§12.5, David-Gates ans Ende). Trailer `Roadmap: W2·5d`.
 - [ ] **5e · UI-Nutzwert & Navigation (Ultracode-Synthese 11.7.)** *(`[OF]`, reine UI/Navigation)*:
   <!-- @meta id: W2·10-UI-NAV · status: ready · of: ja · blocker: null · dep: [W2·5d] · kollision: [src/components/suche, src/lib/suche, src/lib/universalSuche.ts, src/components/layout, src/components/rechtsprechung, src/pages/Rechtsprechung.tsx, src/pages/gesetz-leser, src/pages/GesetzLeser.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-NAVIGATION.md -->
   Priorisierter UI-Verbesserungs-Plan aus 60 empirischen Befunden + 3 Kritik-Linsen
