@@ -28,7 +28,10 @@ const PUB = join(ROOT, 'public', 'rechtsprechung');
 // de-Filter hätte 247 fr/it-BGE still fehlen lassen; je ~70 KB Volltext+Auszug) ⇒ Ist
 // nach Vollausbau ~78 MB. Deckel mit Reserve (fliessend, bremst Unfälle, Freigabe-Logik
 // David 26.6.2026).
-const BUDGET_MB = 100;
+// 18.7.2026: 100 → 200 MB — David-Entscheid 18.7.2026; Bände 148–151 = 98,3 MB, deckt
+// ~10+ weitere Jahrgänge; langfristig wandert der Korpus in die QS-DATA-DB-Auslieferung
+// (FAHRPLAN-DATENHALTUNG).
+const BUDGET_MB = 200;
 // Eigenes Budget für die eine Datei norm-index.json (W3): die neue Artikel-Ebene
 // (proNormArtikel, keyed 'LAW/ART') fächert breit auf — ein Deckel verhindert, dass
 // der Fan-out still ballooniert. Ist 2.7.2026 ≈ 0.53 MB (Erlass- + Artikel-Ebene);
