@@ -7,8 +7,9 @@ import {
 import { sammleTermine } from '../../scripts/verfall-parse';
 import { istRisikoPfad } from '../../scripts/gegenpruefung/kern';
 
-// Fedlex-SPARQL-Antwort nachbilden (nur die genutzten Felder).
-function fakeFetch(bindings: Array<{ eli: string; date: string }>): typeof fetch {
+// Fedlex-SPARQL-Antwort nachbilden (nur die genutzten Felder). `noLonger`
+// (jolux:dateNoLongerInForce, Ganz-Aufhebung) optional je Zeile.
+function fakeFetch(bindings: Array<{ eli: string; date: string; noLonger?: string }>): typeof fetch {
   return (async () => ({
     ok: true,
     json: async () => ({
@@ -16,6 +17,7 @@ function fakeFetch(bindings: Array<{ eli: string; date: string }>): typeof fetch
         bindings: bindings.map((b) => ({
           abstract: { value: `https://fedlex.data.admin.ch/eli/${b.eli}` },
           date: { value: `${b.date}T00:00:00` },
+          ...(b.noLonger ? { noLonger: { value: `${b.noLonger}T00:00:00` } } : {}),
         })),
       },
     }),
@@ -66,6 +68,51 @@ describe('erhebe()', () => {
     expect(r.wiedervorlage.find((w) => w.key === 'CCC')).toBeUndefined();
     // Kanton wird ignoriert (nur bund/snapshot)
     expect(r.currency.KAN).toBeUndefined();
+  });
+
+  it('G-AUFH (#259): ganz aufgehobener Erlass wird Aufhebungs-Posten, kein geprüft-Chip', async () => {
+    // BMV-Fall: latzte Konsolidierung == Pin (nicht überholt), aber ganz
+    // aufgehoben (dateNoLongerInForce ≤ Laufdatum). Darf NIE als geprüft gelten.
+    const erl: ErlassBasis[] = [
+      erlass({ key: 'BMV', sr: '412.103.1', kuerzel: 'BMV', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/2009/423/de', fassungsToken: '20160823' }),
+      erlass({ key: 'AAA', sr: '1', kuerzel: 'AAA', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/1/1/de', fassungsToken: '20260101' }),
+    ];
+    const f = fakeFetch([
+      { eli: 'cc/2009/423', date: '2016-08-23', noLonger: '2026-03-01' }, // BMV aufgehoben
+      { eli: 'cc/1/1', date: '2026-01-01' },                              // AAA lebt
+    ]);
+    const r = await erhebe(erl, '2026-07-18', f);
+    expect(r.aufhebungen).toEqual([
+      { key: 'BMV', sr: '412.103.1', kuerzel: 'BMV', gepinnt: '2016-08-23', aufgehobenSeit: '2026-03-01', kuenftig: false },
+    ]);
+    // §8: kein geprüft-Chip, nicht in Frische-Wiedervorlage, nicht als «überholt».
+    expect(r.currency.BMV).toBeUndefined();
+    expect(r.wiedervorlage.find((w) => w.key === 'BMV')).toBeUndefined();
+    expect(r.ueberholt.find((u) => u.key === 'BMV')).toBeUndefined();
+    // Nicht-aufgehobener Erlass bleibt unberührt.
+    expect(r.currency.AAA).toEqual({ geprueftAm: '2026-07-18' });
+
+    // AUTO-Block: Aufhebungs-Posten sichtbar; erfolgte Aufhebung landet in
+    // verfall-parse NICHT als «verfallen» (letzte Spalte ohne Datum → manuell).
+    const block = baueAutoBlock(r.wiedervorlage, '2026-07-18', r.aufhebungen);
+    expect(block).toContain('Aufgehoben: BMV (SR 412.103.1)');
+    expect(block).toContain('aufgehoben seit 1.3.2026');
+    const { termine, manuell } = sammleTermine(block);
+    expect(termine.some((t) => t.label.includes('BMV'))).toBe(false); // kein Termin
+    expect(manuell.some((m) => m.includes('BMV'))).toBe(true);        // manueller Eintrag
+  });
+
+  it('G-AUFH: künftig angekündigte Aufhebung trägt terminiertes Datum (Vorwarnung)', async () => {
+    const erl: ErlassBasis[] = [
+      erlass({ key: 'FUT', sr: '9', kuerzel: 'FUT', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/5/5/de', fassungsToken: '20260101' }),
+    ];
+    const f = fakeFetch([{ eli: 'cc/5/5', date: '2026-01-01', noLonger: '2027-09-01' }]);
+    const r = await erhebe(erl, '2026-07-18', f);
+    expect(r.aufhebungen[0]).toMatchObject({ key: 'FUT', kuenftig: true, aufgehobenSeit: '2027-09-01' });
+    expect(r.currency.FUT).toBeUndefined(); // §8: kein Chip trotz künftigem Repeal
+    const block = baueAutoBlock(r.wiedervorlage, '2026-07-18', r.aufhebungen);
+    const { termine } = sammleTermine(block);
+    expect(termine.find((t) => t.label.includes('FUT'))?.datum).toBe('2027-09-01');
   });
 
   it('sortiert Wiedervorlage nach Datum, dann SR', async () => {
