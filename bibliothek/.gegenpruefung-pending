@@ -1,9 +1,13 @@
 {
-  "hash": "3d2beac0f7a6ac1f7fa840205637539a9f0c8e66ff206ea3552a02f1003774e7",
+  "hash": "a7b6e630f8f77eaadd849abb1a5737d8030c925ab8a649a749dd5c36cffd7eb4",
   "verdikt": "bestanden",
-  "quellePin": "fedlex jolux:titleShort 20260716 (in-force) + bger/bvger/bstger/bpatger Urteile",
-  "datum": "2026-07-16",
+  "quellePin": "fedlex BankG(cc/51 20240101)/THG(cc/1996 20230901)/ASYLV2(cc/1999/360 20260714)",
+  "datum": "2026-07-19",
   "dateien": [
-    "scripts/normtext-entscheide.ts"
+    "daten-manifest.json",
+    "public/normtext/historie/BANKG.json",
+    "public/normtext/historie/THG.json",
+    "public/normtext/pdf-quellen.json",
+    "public/normtext/register.json"
   ]
 }
