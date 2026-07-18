@@ -4,6 +4,20 @@
 # ist auch der Golden-Vergleich ein Gate: Basis committet in
 # golden/lexmetrik-golden.json; Abweichung = fachliche Änderung, die mit
 # `npm run golden` + Begründung im selben Commit deklariert sein muss.
+#
+# ─── O-3.3 · e2e-Sharding gegen CI-Starvation (Forensik 17.7.) ───────────────
+# Früher lief ALLES (tsc → Tests → Lint → Build → Node-Checks → Browser-Smoke →
+# Perf) als EIN Job `tore`; die Playwright-e2e-Wand (39 Specs, `workers: 1`) war
+# darin die serielle Engstelle. Auf dem 2-Kern-Free-Runner rissen unter CPU-Last
+# reihum schwere Specs das Test-Timeout (a11y/leser-linien-kanon — lokal grün,
+# ~12–19 s), bei >3 parallelen PR-Läufen wurde es Roulette. Jetzt:
+#   1) `tore` baut dist EINMAL und legt es als Artefakt ab (kein 3× Bauen);
+#   2) `e2e` fährt Playwright `--shard=i/3` als Matrix (je eigener vite-preview,
+#      `E2E_PORT` bleibt env-konfigurierbar) → je Shard ~⅓ der Wand, weniger
+#      Contention, ohne die Parallelität in EINEN Runner zurückzuholen;
+#   3) `perf` misst §15-Budgets ERST, wenn Bau + alle e2e-Shards grün sind
+#      (`needs: [tore, e2e]`) — die «Tempo zählt nur bei grüner Treue»-Kopplung
+#      ist damit job-übergreifend härter als die frühere Schritt-Reihenfolge.
 name: CI
 
 on:
@@ -14,6 +28,11 @@ on:
   pull_request:
     paths-ignore:
       - '**.md'
+  # B-12-Vorbereitung: Damit die (noch NICHT aktivierte) GitHub Merge Queue die
+  # Tore fahren kann, muss CI auf `merge_group` reagieren. Der Trigger schadet
+  # OHNE Queue nicht (kein merge_group-Event ⇒ kein Lauf) und ist die einzige
+  # Workflow-Änderung, die die Aktivierung (David-Gate G7) voraussetzt.
+  merge_group:
   workflow_dispatch:
 
 concurrency:
@@ -60,6 +79,39 @@ jobs:
         run: npm run golden:vergleich
       - name: SSR-Smoke (alle Seiten)
         run: npm run check:smoke
+      # dist EINMAL bauen, an e2e-Shards + perf weitergeben (O-3.3): der teure
+      # Build-Schritt (gen:suchindex + tsc + vite build + prerender) läuft nur
+      # hier; die Folgejobs holen dist als Artefakt statt 3× zu bauen.
+      - name: dist-Artefakt hochladen (für e2e-Shards + perf)
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 1
+          include-hidden-files: true
+
+  e2e:
+    name: Browser-Smoke Shard ${{ matrix.shard }}/3 (Playwright)
+    needs: tore
+    runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Zurich
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: dist-Artefakt herunterladen (aus `tore`, nicht neu bauen)
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
       - name: Playwright-Browser-Cache
         uses: actions/cache@v4
         with:
@@ -67,14 +119,42 @@ jobs:
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Playwright-Browser (Chromium)
         run: npx playwright install --with-deps chromium
-      - name: Browser-Smoke (Playwright, e2e/ gegen dist)
-        run: npm run test:e2e
-      # ── QS-PERF-Tor (CLAUDE.md §15) ──────────────────────────────────────
-      # Läuft ABSICHTLICH als letzte Stufe: alle Treue-Tore (golden, smoke,
-      # struktur-konsistenz, e2e/Reader) sind hier bereits grün → die §15-
-      # Gegenkopplung «Tempo zählt nur, wenn die Treue grün bleibt» wird durch
-      # die Schritt-Reihenfolge erzwungen (Treue rot ⇒ Job bricht, bevor die
-      # Perf-Messung startet). Chromium ist durch den e2e-Schritt schon da.
+      # `npm run preview` serviert das heruntergeladene dist/ (kein Rebuild);
+      # jeder Shard fährt nur ~⅓ der Specs seriell (workers:1 bleibt, damit die
+      # Contention NICHT in EINEN Runner zurückkehrt) → e2e-Wand ~gedrittelt.
+      - name: Browser-Smoke (Playwright, e2e/ gegen dist — Shard ${{ matrix.shard }}/3)
+        run: npm run test:e2e -- --shard=${{ matrix.shard }}/3
+
+  perf:
+    name: Perf-Budget (§15 — nur bei grüner Treue)
+    # §15-Gegenkopplung «Tempo zählt nur, wenn die Treue grün bleibt»: perf läuft
+    # ERST, wenn Bau (tore) UND alle e2e-Shards grün sind. Früher erzwang die
+    # Schritt-Reihenfolge im Monojob dasselbe; mit `needs` ist es job-übergreifend
+    # explizit — ein rotes e2e-Shard hält die Perf-Messung zurück.
+    needs: [tore, e2e]
+    runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Zurich
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: dist-Artefakt herunterladen (aus `tore`, nicht neu bauen)
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - name: Playwright-Browser-Cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      # Lighthouse steuert Chromium — derselbe Browser wie e2e, hier eigener Job.
+      - name: Playwright-Browser (Chromium)
+        run: npx playwright install --with-deps chromium
       - name: Perf-Budget — Bundle-Topologie (Chrome-frei)
         run: npm run check:perf-budget
       - name: Perf-Budget — Lighthouse-Metriken (4× CPU + langsames 4G)

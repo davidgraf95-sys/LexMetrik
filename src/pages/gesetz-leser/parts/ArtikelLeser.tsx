@@ -420,7 +420,12 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             <div data-fn-apparat className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
                 <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="nt-anker text-xs leading-normal text-ink-500 target:bg-brass-100">
-                  {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
+                  {/* WCAG-AA (§13): Fussnoten-Nummer ist semantischer Text (kein aria-hidden),
+                      darum ink-500 statt ink-300 — ink-300 ist ein Deko-Token (~2.3:1, axe serious).
+                      ink-500 ≥4.8:1 hell / ≥5.2:1 dunkel auf allen Reader-Flächen, deckt den
+                      Farbwert der Zeile (die Zeile ist bereits ink-500). Latenter 17.6.-Defekt,
+                      sichtbar durch #255, Fix 18.7. */}
+                  {fn.nr && <span className="num mr-1 text-ink-500">{fn.nr}</span>}
                   {fnTextMitLinks(fn)}
                 </p>
               ))}
