@@ -31,6 +31,7 @@ import {
 } from './berechnungen';
 import { AmtlichesPdf } from './parts/AmtlichesPdf';
 import { GesetzFehlSeite } from './FehlSeite';
+import { setzeSuchHighlight } from './suchHighlight';
 
 // ═══ ABSCHNITT · Reine Rechenlogik ausgelagert (QS-TOK/P5, §6 Ziff. 6) ═══════
 // paneRoot/istAnhangToken/findeArt (Pane-Scoping, referenzstabil, KEIN React
@@ -886,6 +887,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     return { vorher: i > 0 ? g[i - 1] : null, nachher: i >= 0 && i < g.length - 1 ? g[i + 1] : null };
   }, [manifest, erlass]);
 
+  // A35 (David 16.7.2026): Suchtreffer im Text markieren. Wenn die Trefferliste
+  // steht, den Suchbegriff als reine Paint-Schicht (CSS Custom Highlight API,
+  // suchHighlight.ts) über die gerenderten Artikel legen — keine DOM-Mutation,
+  // kein Reflow (CLS 0), keine Berührung von Autolinks/Fussnoten/Zitat-Marken.
+  // rAF: erst NACH dem Treffer-Render (Artikel im DOM); Cleanup löscht die
+  // Highlight-Menge (Suche verlassen / Erlass wechseln). Ausser-Bestand-neutral,
+  // da `treffer===null` (kein Suchmodus) sofort löscht.
+  const trefferRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (!treffer) { setzeSuchHighlight(null, ''); return; }
+    const id = window.requestAnimationFrame(() => setzeSuchHighlight(trefferRef.current, sucheTrim));
+    return () => { window.cancelAnimationFrame(id); setzeSuchHighlight(null, ''); };
+  }, [treffer, sucheTrim]);
+
   if (fehler) {
     // W2·10-UI-NAV/N0b: hilfreiche Fehlseite (angefragter Key + Fuzzy-Vorschläge +
     // eingebettetes Erlass-Suchfeld) statt der nackten «nicht verfügbar»-Notiz.
@@ -1066,29 +1082,28 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   };
 
   // Geteilte Such-Steuerung (nur noch die Eingabe — der frühere Fussnoten-Schalter
-  // ist in die Options-Leiste unifiziert, G2b). Wird an ZWEI Orten gerendert: in der
-  // Gliederungs-Spalte (2-Spalten-Fall, oberhalb der TOC) ODER als volle Breite
-  // (kein Gliederungs-Spalt: keine Sektionen oder eingeklappt).
+  // ist in die Options-Leiste unifiziert, G2b).
+  // A35 (David 16.7.2026): das Suchfeld lebt jetzt AUSSCHLIESSLICH in der STICKY
+  // Kopfzeilen-Leiste (data-such-bar, direkt unter dem Ansicht-tragenden Inhalts-
+  // Kopf) — NICHT mehr «oberhalb der Gliederung» in der TOC-Spalte. EINE Quelle,
+  // in JEDER Breite dieselbe Stelle (§5, Auftrag David «in die kopfzeile wo sich
+  // auch ansicht usw. befindet»).
   const sucheEingabe = (
     <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
       placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
       className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
   );
-  // E3/A34: das «Ansicht»-Dropdown im SPLIT-VIEW (nur `imPane`). Es lebt in den
-  // pane-lokalen STICKY Leisten (Such-Bar bzw. 2-Spalten-TOC-Sub-Bar) statt im
+  // E3/A34 + E5/A35: das «Ansicht»-Dropdown im SPLIT-VIEW (nur `imPane`). Es lebt in
+  // der pane-lokalen STICKY Kopfzeilen-Such-Leiste (data-such-bar) statt im
   // wegscrollenden ErlassLeserKopf — so bleibt die Ansichtswahl beim Lesen im Pane
-  // dauerhaft erreichbar (A26-Ziel «immer sichtbar», jetzt auch für den Pane).
-  // In der Einzelansicht (!imPane) trägt der sticky Inhalts-Kopf das Menü (A26) →
-  // hier `null`, kein Doppel. Such-Bar (`!zweiSpalten`) und TOC-Sub-Bar
-  // (`zweiSpalten`) schliessen sich aus ⇒ nie zwei Menüs gleichzeitig.
+  // dauerhaft erreichbar (A26-Ziel «immer sichtbar», jetzt auch für den Pane). Seit
+  // A35 ist diese Such-Leiste in JEDER Breite präsent (die frühere 2-Spalten-TOC-Sub-
+  // Bar entfiel, weil die Suche dauerhaft im Kopf sitzt), darum trägt sie das Menü
+  // einheitlich an EINER Stelle — nie zwei Menüs gleichzeitig. In der Einzelansicht
+  // (!imPane) trägt der sticky Inhalts-Kopf das Menü (A26) → hier `null`, kein Doppel.
   const ansichtMenuPane = imPane
     ? <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} fussnotenAnzahl={fussnotenAnzahl} />
     : null;
-  // 2-Spalten aktiv ⇒ die Suche lebt in der Gliederungs-Spalte (oberhalb der TOC),
-  // NICHT als Vollbreite über dem Gesetzestext (Auftrag David).
-  // 2-Spalten-Layout ist NUR ab lg aktiv (istXl, R2: 1024px). Darunter immer
-  // einspaltig → Suche + Gliederungs-Zugang leben in der STICKY Vollbreiten-Leiste.
-  const zweiSpalten = sektionen.length > 0 && tocOffen && istXl;
 
   // Gliederungs-Baum EINMAL beschreiben (genutzt in der xl-Spalte UND im mobilen
   // Drawer, §5 — kein doppelter onSprung). `springeZuSektion`/`tocToggle` sind
@@ -1173,60 +1188,55 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           datum + Kopf-Fussnoten) — Fedlex-Fundiertheits-Floor (§2), bisher verworfen. */}
       {kopf && <ErlassKopfBlock kopf={kopf} intern={internRefs} />}
 
-      {/* Suche als Vollbreite NUR ohne 2-Spalten (keine Sektionen ODER Gliederung
-          eingeklappt) — dann trägt sie auch den «☰ Gliederung»-Wiedereinblender.
-          Sticky direkt unter dem 4rem-Header (der Reiter-Streifen entfiel; die
-          Reiter-Übersicht lebt jetzt in der Topbar). Im 2-Spalten-Fall
-          sitzt die Suche in der linken Spalte oberhalb der TOC (Auftrag David:
-          nicht über dem Gesetzestext). */}
-      {/* Sticky Kopfzeile UNTER dem Reiter-Streifen. Zwei Varianten (Auftrag David
-          25.6.2026): ab lg (eingeklappte Spalte) die volle Suchleiste + ☰-Knopf zum
-          Wiedereinblenden der Spalte; UNTER lg nur EIN kompakter Knopf, der Suche +
-          Gliederung als Overlay-Drawer auf Wunsch öffnet (analog Seitenleiste) —
-          so nimmt der Reader keine zweite volle Bar weg, die den Reiter-Streifen
-          eng macht/abschneidet. */}
-      {!zweiSpalten && (
-        <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
-          style={{ top: imPane ? '0.5rem' : 'calc(4rem + 2.25rem)' }}>
+      {/* A35 (David 16.7.2026): das Suchfeld sitzt IMMER in dieser STICKY Kopfzeilen-
+          Leiste (direkt unter dem Ansicht-tragenden Inhalts-Kopf) — nie mehr in der
+          TOC-Spalte «oberhalb der Gliederung». EINE Stelle in jeder Breite. Sticky
+          direkt unter dem 4rem-Header (der Reiter-Streifen entfiel; die Reiter-
+          Übersicht lebt in der Topbar). Links davor der ☰-Knopf: ab lg blendet er
+          die eingeklappte Gliederungsspalte wieder ein (nur wenn zu); darunter (mobil)
+          öffnet er die Gliederung als Overlay-Drawer (analog Seitenleiste). */}
+      <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
+        style={{ top: imPane ? '0.5rem' : 'calc(4rem + 2.25rem)' }}>
+        <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
           {istXl ? (
-            <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
-              {sektionen.length > 0 && (
-                <button type="button" aria-expanded={tocOffen} onClick={() => setTocOffen(true)}
-                  title="Gliederung einblenden" className="shrink-0 inline-flex items-center gap-1 rounded-md border border-line px-2 py-1 text-micro font-medium text-ink-600 hover:text-brass-700 hover:border-brass-300 transition-colors">
-                  <span aria-hidden>☰</span><span className="hidden sm:inline">Gliederung</span>
-                </button>
-              )}
-              {sucheEingabe}
-              {/* A34: Ansicht-Menü im Split-View in der sticky Such-Bar (rechts). */}
-              {ansichtMenuPane && <span className="shrink-0">{ansichtMenuPane}</span>}
-            </div>
-          ) : (
-            // A34: unter der 2-Spalten-Schwelle trägt die Bar den ☰-Knopf UND (im
-            // Split-View) das sticky Ansicht-Menü — nebeneinander in EINER Zeile.
-            <div className="flex items-center gap-2">
-              <button type="button" aria-expanded={tocAuf} onClick={() => setTocAuf((v) => !v)}
-                className="inline-flex items-center gap-1.5 rounded-md border border-line bg-paper px-3 py-1.5 text-body-s font-medium text-ink-600 shadow-sm hover:text-brass-700 hover:border-brass-300 transition-colors">
-                <span aria-hidden>☰</span>{sektionen.length > 0 ? 'Gliederung & Suche' : 'Im Gesetz suchen'}
+            // ab lg: ☰ nur wenn die Gliederungsspalte EINGEKLAPPT ist (sonst steht die
+            // Gliederung ohnehin links) — dann als Wiedereinblender.
+            sektionen.length > 0 && !tocOffen && (
+              <button type="button" aria-expanded={tocOffen} onClick={() => setTocOffen(true)}
+                title="Gliederung einblenden" className="shrink-0 inline-flex items-center gap-1 rounded-md border border-line px-2 py-1 text-micro font-medium text-ink-600 hover:text-brass-700 hover:border-brass-300 transition-colors">
+                <span aria-hidden>☰</span><span className="hidden sm:inline">Gliederung</span>
               </button>
-              {ansichtMenuPane && (
-                <span className="shrink-0 inline-flex rounded-md border border-line bg-paper px-2 py-1 shadow-sm">{ansichtMenuPane}</span>
-              )}
-            </div>
+            )
+          ) : (
+            // mobil: ☰ öffnet die Gliederung als Overlay-Drawer (nur wenn es eine gibt).
+            sektionen.length > 0 && (
+              <button type="button" aria-expanded={tocAuf} onClick={() => setTocAuf((v) => !v)}
+                title="Gliederung" className="shrink-0 inline-flex items-center gap-1 rounded-md border border-line px-2 py-1 text-micro font-medium text-ink-600 hover:text-brass-700 hover:border-brass-300 transition-colors">
+                <span aria-hidden>☰</span><span className="hidden sm:inline">Gliederung</span>
+              </button>
+            )
           )}
+          {sucheEingabe}
+          {/* E3/A34 im E5/A35-Layout: das Split-View-Ansicht-Menü (nur `imPane`) sitzt
+              in dieser dauerhaft sichtbaren Kopfzeilen-Such-Leiste — in JEDER Breite an
+              derselben Stelle (rechts nach der Suche), da die frühere 2-Spalten-TOC-Sub-
+              Bar mit A35 entfiel. Einzelansicht: `ansichtMenuPane === null` (Inhalts-Kopf
+              trägt es, A26) ⇒ kein Doppel. */}
+          {ansichtMenuPane && <span className="shrink-0">{ansichtMenuPane}</span>}
         </div>
-      )}
+      </div>
 
       {/* 2-Spalten (Gliederungs-Sidebar links, Inhalt rechts) ab lg (1024px, R2) —
           darunter (mobil / sehr schmale Fenster) bekommt der Normtext die volle
           Spaltenbreite, die Gliederung sitzt als einklappbarer Drawer (wie mobil).
           So frisst die feste 16rem-TOC-Spalte erst, wenn genug Breite da ist —
           deckungsgleich mit der App-Seitenleiste (lg). Reine Darstellung (§3). */}
-      {/* Unter xl: Suche + Gliederung als Overlay-Drawer (analog Seitenleiste),
-          NUR auf Wunsch über den sticky ☰-Knopf geöffnet (Auftrag David 25.6.2026)
-          — so liegt keine zweite Dauer-Bar unter dem Reiter-Streifen. Die Suche
-          steht oben, darunter (falls vorhanden) der Gliederungsbaum; Sektionswahl
-          schliesst den Drawer (springeZuSektion). */}
-      {!istXl && tocAuf && (() => {
+      {/* Unter xl: die GLIEDERUNG als Overlay-Drawer (analog Seitenleiste), NUR auf
+          Wunsch über den sticky ☰-Knopf geöffnet (Auftrag David 25.6.2026). A35: die
+          Suche ist NICHT mehr im Drawer — sie steht dauerhaft in der Kopfzeilen-Leiste
+          (oben). Der Drawer trägt jetzt allein den Gliederungsbaum; Sektionswahl
+          schliesst ihn (springeZuSektion). */}
+      {!istXl && tocAuf && sektionen.length > 0 && (() => {
         // Im Pane in die Overlay-Schicht portalieren + `absolute` (vom relative-
         // Wrapper eingefangen) → der Drawer bleibt IM Pane statt als `position:fixed`
         // über beide Panes zu quellen (container-type fängt fixed nicht). Ausserhalb
@@ -1237,21 +1247,20 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           <>
             <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'lg:hidden'}`}
               onClick={() => setTocAuf(false)} aria-hidden />
-            {/* Kompakt (Wunsch David): begrenzte Höhe, fixer Such-Kopf, NUR der
-                Gliederungsbaum scrollt darunter → verdeckt die Trefferliste nicht.
-                In der Einzelansicht beginnt er UNTER dem Inhalts-Kopf (Topbar 4rem
-                + Kopf 2.25rem); im Pane in der Overlay-Schicht ab dessen Oberkante. */}
-            <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal={inPane ? undefined : true} aria-label="Suche & Gliederung"
+            {/* Kompakt (Wunsch David): begrenzte Höhe, fixer Kopf, NUR der
+                Gliederungsbaum scrollt darunter. In der Einzelansicht beginnt er UNTER
+                dem Inhalts-Kopf (Topbar 4rem + Kopf 2.25rem); im Pane in der Overlay-
+                Schicht ab dessen Oberkante. */}
+            <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal={inPane ? undefined : true} aria-label="Gliederung"
               className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-[75%]' : `fixed inset-x-0 z-50 max-h-[60vh] ${imPane ? '' : 'lg:hidden'}`} flex flex-col bg-paper-raised border-b border-line shadow-lg`}
               style={inPane ? undefined : { top: 'calc(4rem + 2.25rem)' }}>
               <div className="shrink-0 border-b border-line bg-paper-raised">
-                <div className="flex items-center justify-between px-4 pt-2.5 pb-1.5">
-                  <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
+                <div className="flex items-center justify-between px-4 pt-2.5 pb-2.5">
+                  <p className="lc-overline">Gliederung</p>
                   <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
                 </div>
-                <div className="flex items-center gap-2 px-4 pb-2.5">{sucheEingabe}</div>
               </div>
-              {sektionen.length > 0 && <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-2 [scrollbar-width:thin]">{tocBaumEl}</div>}
+              <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-2 [scrollbar-width:thin]">{tocBaumEl}</div>
             </div>
           </>
         );
@@ -1263,27 +1272,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           (kein xl:-Prefix), damit ein BREITES Pane denselben Aufbau wie der
           Einzelbildschirm bekommt. */}
       <div className={istXl && sektionen.length > 0 && tocOffen ? 'grid grid-cols-[16rem_minmax(0,1fr)] gap-8' : ''}>
-        {/* TOC-Spalte (Suche + Gliederungsbaum, sticky). Nur wenn istXl; darunter
-            Overlay-Drawer (oben) über den sticky ☰-Knopf. Im schmalen Pane: Drawer. */}
+        {/* TOC-Spalte (nur der Gliederungsbaum, sticky). A35: das Suchfeld lebt nicht
+            mehr hier «oberhalb der Gliederung», sondern in der Kopfzeilen-Leiste (oben).
+            Nur wenn istXl; darunter Overlay-Drawer über den sticky ☰-Knopf. */}
         {istXl && sektionen.length > 0 && (
           <aside
+            // A35: die immer sichtbare Kopfzeilen-Suchleiste (data-such-bar, ~3.5rem
+            // inkl. mb-4) klebt full-width am Kopf; die Gliederungsspalte muss beim
+            // Scrollen UNTER ihr kleben (sonst deckt die z-16-Leiste die obersten
+            // TOC-Zeilen). Darum +3.5rem im sticky-Offset (und in der maxHeight).
             style={imPane
               // Im Pane: an die SICHTBARE Pane-Höhe binden (Topbar 4rem + PaneKopf
               // 2.25rem ab), nicht an die indefinite Grid-Zeile (calc(100%) löste
               // gegen content-Höhe → kein interner Scroll, sticky brach).
-              ? { top: '0.5rem', maxHeight: 'calc(100dvh - 4rem - 2.25rem - 1rem)' }
-              : { top: 'calc(4rem + 2.25rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 2.25rem - 1.5rem)' }}
+              ? { top: 'calc(0.5rem + 3.5rem)', maxHeight: 'calc(100dvh - 4rem - 2.25rem - 3.5rem - 1rem)' }
+              : { top: 'calc(4rem + 2.25rem + 3.5rem)', maxHeight: 'calc(100vh - 4rem - 2.25rem - 3.5rem - 1.5rem)' }}
             className={`mb-0 sticky flex-col ${tocOffen ? 'flex' : 'hidden'}`}>
-            {zweiSpalten && (
-              <div data-such-bar className="mb-3 shrink-0">
-                <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-2.5 py-1.5 shadow-sm">
-                  {sucheEingabe}
-                  {/* A34: im BREITEN Split-View-Pane (2-Spalten) trägt die sticky
-                      TOC-Sub-Bar das Ansicht-Menü — die Such-Bar oben entfällt hier. */}
-                  {ansichtMenuPane && <span className="shrink-0">{ansichtMenuPane}</span>}
-                </div>
-              </div>
-            )}
             <div className="mb-2 flex items-baseline justify-between shrink-0">
               <p className="lc-overline">Gliederung</p>
               <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-500 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
@@ -1309,7 +1313,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
               erhalten — sie steht (identisches baueZitat-Voll-Zitat) je Artikel in
               der Artikelnummer-Zeile (ArtikelLeser). §15 Funktions-Treue gewahrt. */}
           {treffer ? (
-            <div className="space-y-4">
+            <div ref={trefferRef} className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>
               {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
