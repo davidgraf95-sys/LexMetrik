@@ -216,6 +216,30 @@ ein neuer Verifikations-Kandidat, zwei benigne Notizen, drei Korrekturen.
 - **Abnahme-Status:** Zweitprüfung (17.7.2026) — **Verifikation ausstehend, erst
   VERIFIZIEREN, dann ggf. fixen.** Home: `FAHRPLAN-NORMTEXT-DARSTELLUNG.md` §Intake.
 
+> **G-TAB verifiziert 18.7.2026 — Verdikt A, kein Defekt.** Kein Garbling nachweisbar,
+> der fehlende Diskriminator ist für den heutigen Korpus folgenlos. **(1)** Wir
+> extrahieren aus der Fedlex-**HTML**-Manifestation, nicht aus dem XML — dort
+> **überlebt `fedlex:function="layout"` NICHT** (0 `function`-Tokens im HTML). Der
+> Diskriminator erscheint im HTML nur als An-/Abwesenheit von **`border="1"` = das
+> Daten-Signal** (VTS-HTML: 70 `<table>` = 46 `border="1"` + 24 ohne `border`; deckt
+> sich exakt mit dem XML 46 + 24 `function="layout"`). **(2)** Layout-Tabellen nur in
+> **VTS (24) + SSV (2)**; OR/ZGB/MWSTG/BVV2 = 0 → gegenstandslos. **(3)** Obwohl der
+> Extraktor den Diskriminator nicht kennt, verhindern **drei bestehende Mechanismen**
+> Garbling: **Bild-Splitting** (Bilder werden als eigene `bild`-Blöcke herausgelöst,
+> nie Gitter-Zellen; 18/24 VTS-Layout-Tabellen sind Bild+Text) · **Leerspalten-
+> Streichung T-A7** (`tabelle-normalisieren.ts`, entfernt leere Spacer-Spalten) ·
+> **defensiver Reader-Pfad** (`ArtikelBody.tsx`/`KanonischeTabelle` T-E5: 1-Spalten-
+> Tabelle → einzelne umrahmte Textzelle, aritätsverletzende Zeile → lineare
+> verlustfreie Darstellung statt verschobenem Gitter). Rest-Inhalt ist echt (genuine
+> Spaltendaten wie VTS art_135 Abmessungen / SSV-Signal-Masse, oder beschreibender
+> Fliesstext, oder Signal-Verweis-Captions). **Belegquelle:** committete Bestands-JSONs
+> `public/normtext/bund/VTS.json` + `SSV.json` (tatsächliche Extraktor-Ausgabe) +
+> Render-Komponente; deterministische Ausgabe + Render-Pfad sind dispositiv, kein
+> Screenshot nötig. Stichproben VTS/SSV **treu**. — **Rest-Beobachtung (kein Defekt,
+> Kosmetik-Backlog):** Illustrations-Legenden in 1-Zellen-Rahmen gewickelt, SSV-Signal-
+> Index als gepolstertes Gitter statt Liste — beides treu und lesbar, nur nicht ideal;
+> kein Garbling → kein Fix-Trigger (Stufe 2 nicht ausgelöst).
+
 **Notizen Linse 1 (NIEDRIG, kein Kandidat):**
 
 - **Emphasis-Schema fehlt:** kein Feld für `i`/`b`/`inline@name` → der **Inhalt

@@ -293,7 +293,7 @@
 - **Beweis (G1):** B25 `zustaendigkeit.test.ts` (766 Z.) unangepasst + e2e; B24 e2e-Suite (89)
   + golden (Reader-Fläche) + manuelle Sichtprüfung. **Aufwand M+M · Opus.**
 
-#### H-14 · engine-map-Nachführung *(B33)*
+#### H-14 · engine-map-Nachführung *(B33)* — ✅ erledigt via #272 (siehe Status-Log)
 - **Kern:** `bibliothek/register/engine-map.md` (stale seit 11.6.): je neue Modul-Familie
   seit 11.6. eine Zeile (Normtext-Pipeline/Gesetze-Rubrik · Rechtsprechungs-Korpus +
   entscheide-Adapter · `src/lib/materialien/` · Prozesskosten-Kriterien I4 · Botschaften/
@@ -607,7 +607,8 @@
   PRs **#240 (A34)** und **#267 (A33)** angefasst — ein paralleler §6.6-Split provozierte eine
   Konflikt-Kaskade (Kollisions-Precheck der H-13-Spezifikation). B24 läuft nach Merge beider
   PRs als eigene Einheit (Ziel < 800 Z., Deckel «keine Vollzerlegung» bleibt).
-- **17.7.2026: H-14 ✅** (Worktree `lm-h14`, Branch `chore/h14-engine-map`, gestapelt auf H-13).
+- **17.7.2026: H-14 ✅** (Worktree `lm-h14`, Branch `chore/h14-engine-map`, gestapelt auf H-13;
+  gemergt als **Squash #272**, der H-13+H-14 bündelte — engine-map.md + FAHRPLAN-Zeilen byte-identisch gelandet).
   engine-map-Nachführung (B33). `bibliothek/register/engine-map.md` war stale seit 11.6.: je
   neue Modul-Familie seit 11.6. eine **gesourcte** Zeile — Normtext-Pipeline · Rubrik-V-Gesetze ·
   Rechtsprechungs-Korpus + entscheide-Adapter · `lib/materialien/` (Botschaften/Vernehmlassungen) ·
