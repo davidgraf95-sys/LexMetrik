@@ -38,6 +38,15 @@ import { setzeSuchHighlight } from './suchHighlight';
 // Compiler → Modulfunktionen), sekPos/sektionMeta/sekLabelById-Ableitungen und
 // der Download-Text leben jetzt in ./berechnungen.ts. Ab hier NUR die
 // zustandsbehaftete Reader-Komponente (Hooks, Effekte, Rendering).
+
+// §15.2: Nachlauf-Fenster (in Pfadwechseln) fürs Auto-ZUklappen des TOC-Baums. Ein
+// automatisch geöffneter Zweig bleibt so lange offen, bis die Leseposition ihn um so
+// viele distinkte Pfadwechsel hinter sich gelassen hat — dann ist er sicher aus dem
+// sichtbaren TOC-Fenster gescrollt und sein Zuklappen erzeugt keinen sichtbaren Layout-
+// Shift (off-screen bzw. vom Scroll-Anchoring verschluckt). 6 ≈ mehrere TOC-Bildschirm-
+// höhen Vorlauf; deckt das Hin-und-Her (PageUp nach PageDown) verlässlich ab.
+const AUTO_ZU_NACHLAUF = 6;
+
 export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
   const basisPfad = `/gesetze/${ebene}/${encodeURIComponent(schluessel)}`;
   const navigate = useNavigate();
@@ -130,6 +139,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Zweig verlässt — manuell (Klick) geöffnete Zweige bleiben offen, weil sie
   // nicht in diesem Set stehen (tocToggle/springeZuSektion nehmen sie heraus).
   const autoOffenRef = useRef<Set<string>>(new Set());
+  // §15.2-Nachlauf (18.7.2026): Tick des letzten Aktiv-Vorkommens je Auto-Zweig +
+  // monotoner Pfadwechsel-Zähler. Der Spy klappt einen Auto-Zweig erst zu, wenn er
+  // AUTO_ZU_NACHLAUF Pfadwechsel aus dem aktiven Pfad heraus ist (dann off-screen →
+  // CLS-frei); verhindert das sichtbare Auf-/Zuklappen beim Hin-und-Her-Scrollen.
+  const autoTickRef = useRef<Map<string, number>>(new Map());
+  const autoTickNowRef = useRef(0);
   // Zweige, die der NUTZER selbst aufgeklappt hat (Klick/Sprung). Der Scroll-Spy
   // darf diese NIE ins Auto-Set adoptieren und NIE auto-zuklappen — auch dann
   // nicht, wenn die Leseposition durch sie hindurchscrollt (David: «nur was
@@ -149,7 +164,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const tocToggle = useCallback((id: string) => {
     setTocBaum((o) => {
       const offenJetzt = !o[id];
-      autoOffenRef.current.delete(id);
+      autoOffenRef.current.delete(id); autoTickRef.current.delete(id);
       if (offenJetzt) { manuellOffenRef.current.add(id); manuellZuRef.current.delete(id); }
       else { manuellOffenRef.current.delete(id); manuellZuRef.current.add(id); }
       return { ...o, [id]: offenJetzt };
@@ -330,6 +345,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     [eintraege, struktur],
   );
 
+
   // W2·5d U-LINIEN (A8): das Linien-Regelwerk «wann welche Linie» leitet der Reader
   // aus dem TATSÄCHLICHEN Aufbau des Erlasses ab (Struktur-Sidecar: Gliederungstiefe
   // + Artikel-Dichte je Ebene), NICHT mehr aus der grundart-Schublade (der frühere
@@ -499,7 +515,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // Sprung-Ziel als MANUELL behandeln (K): in manuellOffenRef aufnehmen und aus
     // dem Auto-Set nehmen, damit der Scroll-Spy den angesprungenen Zweig nicht
     // gleich wieder zuklappt.
-    for (const x of ids) { autoOffenRef.current.delete(x); manuellOffenRef.current.add(x); manuellZuRef.current.delete(x); }
+    for (const x of ids) { autoOffenRef.current.delete(x); autoTickRef.current.delete(x); manuellOffenRef.current.add(x); manuellZuRef.current.delete(x); }
     // §15.2: der Klick öffnet den TOC-Zweig — diese Höhenänderung SYNCHRON im
     // Klick-Task committen (flushSync), damit der Layout-Shift des einwachsenden
     // Gliederungs-Zweigs dem Input zugerechnet wird (hadRecentInput ⇒ CLS-frei).
@@ -745,16 +761,24 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         // Wertgleichen Pfad nicht neu setzen (pfadZu liefert stets ein neues Array):
         // sonst Re-Render + Mitscroll-Effekt bei jedem Artikel derselben Blatt-Sektion.
         setAktivIds((prev) => prev.length === ids.length && prev.every((v, i) => v === ids[i]) ? prev : ids);
-        // Auto-Set fortschreiben (Seiteneffekt ausserhalb des State-Updaters, der
-        // rein bleibt): zuklappen, was automatisch offen war und nicht mehr im
-        // aktiven Pfad liegt; aufklappen, was jetzt im Pfad liegt.
+        // Auto-Set fortschreiben (Seiteneffekt ausserhalb des State-Updaters, der rein
+        // bleibt): aufklappen, was jetzt im Pfad liegt; zuklappen NUR, was die Lese-
+        // position um AUTO_ZU_NACHLAUF Pfadwechsel hinter sich gelassen hat (§15.2: dann
+        // off-screen → Zuklapp-Reflow zählt nicht; verhindert das sichtbare Auf-/Zu-
+        // klappen beim Hin-und-Her-Scrollen, das auf 2-vCPU-CI das CLS-Budget riss).
         const auto = autoOffenRef.current;
-        const schliessen: string[] = [];
-        for (const id of [...auto]) if (!ids.includes(id)) { auto.delete(id); schliessen.push(id); }
+        const tick = ++autoTickNowRef.current;
         // Aktive Pfad-IDs auto-aufklappen — aber manuell geöffnete NICHT ins Auto-Set
         // adoptieren (die bleiben dauerhaft offen) und manuell ZUgeklappte (manuellZuRef)
         // gar nicht auto-aufklappen (explizites Einklappen des aktiven Zweigs gewinnt).
-        for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) auto.add(id);
+        // Jedes Aktiv-Vorkommen (inkl. Vorfahren aus pfadZu) frischt den Nachlauf-Tick.
+        for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) { auto.add(id); autoTickRef.current.set(id, tick); }
+        const schliessen: string[] = [];
+        for (const id of [...auto]) {
+          if (ids.includes(id)) continue; // im aktiven Pfad → offen halten
+          if (tick - (autoTickRef.current.get(id) ?? 0) <= AUTO_ZU_NACHLAUF) continue; // noch im Nachlauf-Fenster
+          auto.delete(id); autoTickRef.current.delete(id); schliessen.push(id);
+        }
         setTocBaum((o) => {
           let geaendert = false;
           const n = { ...o };
