@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "700",
   "titel": "Bundesgesetz über die Raumplanung",
@@ -46,7 +46,8 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404",
+      "rs": "101"
      }
     ],
     "absatz": null,
@@ -694,7 +695,8 @@
      "links": [
       {
        "label": "SR <b>730.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8495"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2017/762",
+       "rs": "730.0"
       }
      ],
      "absatz": "2",
@@ -770,7 +772,8 @@
      "links": [
       {
        "label": "SR <b>814.01</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122",
+       "rs": "814.01"
       }
      ],
      "absatz": "2",
@@ -782,7 +785,8 @@
      "links": [
       {
        "label": "SR <b>451</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7166"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1966/1637_1694_1679",
+       "rs": "451"
       }
      ],
      "absatz": "2",
@@ -984,7 +988,8 @@
      "links": [
       {
        "label": "SR <b>814.01</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122",
+       "rs": "814.01"
       }
      ],
      "absatz": "5",
@@ -2035,7 +2040,8 @@
      "links": [
       {
        "label": "SR <b>211.412.11</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1993/1410_1410_1410",
+       "rs": "211.412.11"
       }
      ],
      "absatz": "1",
@@ -2401,7 +2407,8 @@
      "links": [
       {
        "label": "SR <b>211.412.11</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1993/1410_1410_1410",
+       "rs": "211.412.11"
       }
      ],
      "absatz": "1",
@@ -3061,7 +3068,8 @@
      "links": [
       {
        "label": "SR <b>730.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8495"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2017/762",
+       "rs": "730.0"
       }
      ],
      "absatz": "4",

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "742.101",
   "titel": "Eisenbahngesetz",
@@ -46,7 +46,8 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404",
+      "rs": "101"
      }
     ],
     "absatz": null,
@@ -243,7 +244,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "1",
@@ -397,7 +399,8 @@
      "links": [
       {
        "label": "SR <b>172.056.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5197"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2020/126",
+       "rs": "172.056.1"
       }
      ],
      "absatz": "5",
@@ -521,7 +524,8 @@
      "links": [
       {
        "label": "SR <b>745.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8886"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2009/680",
+       "rs": "745.1"
       }
      ],
      "absatz": "2",
@@ -892,7 +896,8 @@
      "links": [
       {
        "label": "SR <b>152.3</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4937"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/355",
+       "rs": "152.3"
       }
      ],
      "absatz": "2",
@@ -1198,7 +1203,8 @@
      "links": [
       {
        "label": "SR <b>700</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8351"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573",
+       "rs": "700"
       }
      ],
      "absatz": "5",
@@ -1883,7 +1889,8 @@
      "links": [
       {
        "label": "SR <b>152.3</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4937"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/355",
+       "rs": "152.3"
       }
      ],
      "absatz": "3",
@@ -1895,7 +1902,8 @@
      "links": [
       {
        "label": "SR <b>742.140</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8742"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/107",
+       "rs": "742.140"
       }
      ],
      "absatz": "4",
@@ -1907,7 +1915,8 @@
      "links": [
       {
        "label": "SR <b>172.056.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5197"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2020/126",
+       "rs": "172.056.1"
       }
      ],
      "absatz": "7",
@@ -1919,7 +1928,8 @@
      "links": [
       {
        "label": "SR <b>235.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/491",
+       "rs": "235.1"
       }
      ],
      "absatz": "8",
@@ -3172,7 +3182,8 @@
      "links": [
       {
        "label": "SR <b>745.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8886"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2009/680",
+       "rs": "745.1"
       }
      ],
      "absatz": "1",
@@ -3609,7 +3620,8 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799",
+       "rs": "311.0"
       }
      ],
      "absatz": null,
@@ -3655,7 +3667,8 @@
      "links": [
       {
        "label": "SR <b>745.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8886"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2009/680",
+       "rs": "745.1"
       }
      ],
      "absatz": "3",
@@ -3727,7 +3740,8 @@
      "links": [
       {
        "label": "SR <b>745.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8886"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2009/680",
+       "rs": "745.1"
       }
      ],
      "absatz": "3",
@@ -3840,7 +3854,8 @@
      "links": [
       {
        "label": "SR <b>281.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529",
+       "rs": "281.1"
       }
      ],
      "absatz": "1",
@@ -3852,7 +3867,8 @@
      "links": [
       {
        "label": "SR <b>742.211</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8788"
+       "url": "https://fedlex.data.admin.ch/eli/cc/34/19_20_22",
+       "rs": "742.211"
       }
      ],
      "absatz": "1",
@@ -4044,7 +4060,8 @@
      "links": [
       {
        "label": "SR <b>744.21</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8875"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1951/665_663_685",
+       "rs": "744.21"
       }
      ],
      "absatz": "1",
@@ -4262,7 +4279,8 @@
      "links": [
       {
        "label": "SR <b>172.010</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022",
+       "rs": "172.010"
       }
      ],
      "absatz": "1",
@@ -4322,7 +4340,8 @@
      "links": [
       {
        "label": "SR <b>748.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9033"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1950/471_491_479",
+       "rs": "748.0"
       }
      ],
      "absatz": "4",
@@ -4419,7 +4438,8 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755",
+       "rs": "172.021"
       }
      ],
      "absatz": "3",
@@ -4525,7 +4545,8 @@
      "links": [
       {
        "label": "SR <b>235.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/491",
+       "rs": "235.1"
       }
      ],
      "absatz": "1",
@@ -4778,7 +4799,8 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755",
+       "rs": "172.021"
       }
      ],
      "absatz": "1",
@@ -4790,7 +4812,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "2",
@@ -4896,7 +4919,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "3",
@@ -5037,7 +5061,8 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755",
+       "rs": "172.021"
       }
      ],
      "absatz": "1",
@@ -5065,7 +5090,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "2",
@@ -5150,7 +5176,8 @@
      "links": [
       {
        "label": "SR <b>172.010</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022",
+       "rs": "172.010"
       }
      ],
      "absatz": null,
@@ -5326,7 +5353,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "1",
@@ -5571,7 +5599,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "2",
@@ -5763,7 +5792,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "2",
@@ -5904,7 +5934,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "3",
@@ -6590,7 +6621,8 @@
      "links": [
       {
        "label": "SR <b>930.11</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11020"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2010/347",
+       "rs": "930.11"
       }
      ],
      "absatz": "4",
@@ -6842,7 +6874,8 @@
      "links": [
       {
        "label": "SR <b>172.010</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022",
+       "rs": "172.010"
       }
      ],
      "absatz": "1",
@@ -6920,7 +6953,8 @@
      "links": [
       {
        "label": "SR <b>172.220.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5345"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2001/123",
+       "rs": "172.220.1"
       }
      ],
      "absatz": "3",
@@ -7047,7 +7081,8 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755",
+       "rs": "172.021"
       }
      ],
      "absatz": "1",
@@ -7059,7 +7094,8 @@
      "links": [
       {
        "label": "SR <b>173.32</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5621"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/352",
+       "rs": "173.32"
       }
      ],
      "absatz": "1",
@@ -7071,7 +7107,8 @@
      "links": [
       {
        "label": "SR <b>273</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6141"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1948/485_473_421",
+       "rs": "273"
       }
      ],
      "absatz": "3",
@@ -7214,7 +7251,8 @@
      "links": [
       {
        "label": "SR <b>251</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6127"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1996/546_546_546",
+       "rs": "251"
       }
      ],
      "absatz": "6",
@@ -7263,7 +7301,8 @@
      "links": [
       {
        "label": "SR <b>745.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8886"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2009/680",
+       "rs": "745.1"
       }
      ],
      "absatz": "2",
@@ -7291,7 +7330,8 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377",
+       "rs": "220"
       }
      ],
      "absatz": "2",
@@ -7303,7 +7343,8 @@
      "links": [
       {
        "label": "SR <b>742.41</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8823"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2016/328",
+       "rs": "742.41"
       }
      ],
      "absatz": "3",
@@ -7464,7 +7505,8 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377",
+       "rs": "220"
       }
      ],
      "absatz": null,
@@ -7657,7 +7699,8 @@
      "links": [
       {
        "label": "SR <b>742.140</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8742"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/107",
+       "rs": "742.140"
       }
      ],
      "absatz": "2",
@@ -8377,7 +8420,8 @@
      "links": [
       {
        "label": "SR <b>170.512.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4976"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/670",
+       "rs": "170.512.1"
       }
      ],
      "absatz": null,
@@ -8389,7 +8433,8 @@
      "links": [
       {
        "label": "SR <b>313.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857",
+       "rs": "313.0"
       }
      ],
      "absatz": "3",
@@ -8552,7 +8597,8 @@
      "links": [
       {
        "label": "SR <b>745.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8886"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2009/680",
+       "rs": "745.1"
       }
      ],
      "absatz": "4",
@@ -9091,7 +9137,8 @@
       },
       {
        "label": "SR <b>172.056.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5197"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2020/126",
+       "rs": "172.056.1"
       }
      ],
      "absatz": "4",
@@ -9103,7 +9150,8 @@
      "links": [
       {
        "label": "SR <b>152.3</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4937"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/355",
+       "rs": "152.3"
       }
      ],
      "absatz": "5",
@@ -9139,7 +9187,8 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377",
+       "rs": "220"
       }
      ],
      "absatz": "4",
@@ -9164,7 +9213,8 @@
      "links": [
       {
        "label": "SR <b>172.220.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5345"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2001/123",
+       "rs": "172.220.1"
       }
      ],
      "absatz": null,
@@ -9211,7 +9261,8 @@
      "links": [
       {
        "label": "SR <b>172.220.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5345"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2001/123",
+       "rs": "172.220.1"
       }
      ],
      "absatz": "1",
@@ -9247,7 +9298,8 @@
      "links": [
       {
        "label": "SR <b>172.220.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5345"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2001/123",
+       "rs": "172.220.1"
       }
      ],
      "absatz": "1",
@@ -9272,7 +9324,8 @@
      "links": [
       {
        "label": "SR <b>172.010</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022",
+       "rs": "172.010"
       }
      ],
      "absatz": "2",

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "642.118.1",
   "titel": "Verordnung des EFD über den Abzug der Berufskosten unselbstständig Erwerbstätiger bei der direkten Bundessteuer",
@@ -41,7 +41,8 @@
     "links": [
      {
       "label": "SR <b>642.11</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8175"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184",
+      "rs": "642.11"
      }
     ],
     "absatz": null,
@@ -53,7 +54,8 @@
     "links": [
      {
       "label": "SR <b>642.118</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8189"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1992/468_468_468",
+      "rs": "642.118"
      }
     ],
     "absatz": null,
