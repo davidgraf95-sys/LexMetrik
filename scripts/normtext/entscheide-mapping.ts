@@ -10,7 +10,7 @@ import type { Rechtsgebiet } from '../../src/lib/normtext/register';
 const ABK_REGISTER: Record<string, string> = {
   OR: 'OR', ZGB: 'ZGB', ZPO: 'ZPO', STGB: 'STGB', STPO: 'STPO', BGG: 'BGG',
   SCHKG: 'SCHKG', VVG: 'VVG', VMWG: 'VMWG', ARG: 'ARG', BV: 'BV', DBG: 'DBG',
-  DSG: 'DSG', AIG: 'AIG', STG: 'STG', HREGV: 'HREGV',
+  DSG: 'DSG', AIG: 'AIG', STG: 'STG', HREGV: 'HREGV', BGFA: 'BGFA',
   // Sozialversicherung / Abgaben (Audit: SG-Versicherungsfälle EL/IV/UV …)
   ATSG: 'ATSG', AHVG: 'AHVG', IVG: 'IVG', UVG: 'UVG', AVIG: 'AVIG', BVG: 'BVG',
   ELG: 'ELG', FAMZG: 'FAMZG', STHG: 'STHG',

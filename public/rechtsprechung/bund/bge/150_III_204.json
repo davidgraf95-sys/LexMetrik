@@ -1,0 +1,254 @@
+{
+  "erzeugt": "2026-07-18",
+  "eintraege": [
+    {
+      "id": "bund/bge/150_III_204",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "150 III 204",
+      "bgeReferenz": "150 III 204",
+      "zitierung": "BGE 150 III 204",
+      "datum": "2024-01-31",
+      "sprache": "fr",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": null,
+      "rubrum": {
+        "besetzung": "Mmes et M. les Juges fédéraux Jametti, Présidente, Hohl, Kiss, Rüedi et May Canellas. Greffier: M. Douzals",
+        "parteien": "A.________, représenté par Me Marie Franzetti, avocate, recourant, contre 1. B.________ SA, 2. C.________ SA, 3. D.________ SA, toutes trois agissant par E.________ SA, intimées",
+        "gegenstand": null,
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Art. 7 ZPO; sachliche Zuständigkeit bei Streitigkeiten aus Zusatzversicherungen zur sozialen Krankenversicherung. Voraussetzungen, die erfüllt sein müssen, damit eine Versicherung als Zusatzversicherung zur sozialen Krankenversicherung im Sinne von Art. 7 ZPO gilt (E. 4).\nRegeste\n Art. 7 CPC; compétence ratione materiae en cas de litige portant sur des assurances complémentaires à l'assurance-maladie sociale. Conditions requises pour qu'une assurance soit considérée comme complémentaire à l'assurance-maladie sociale au sens de l'art. 7 CPC (consid. 4).\nRegesto\n Art. 7 CPC; competenza ratione materiae in caso di una controversia derivante da assicurazioni complementari all'assicurazione sociale contro le malattie. Condizioni che devono essere adempiute affinché un'assicurazione sia considerata complementare all'assicurazione sociale contro le malattie nel senso dell'art. 7 CPC (consid. 4).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 7 ZPO; sachliche Zuständigkeit bei Streitigkeiten aus Zusatzversicherungen zur sozialen Krankenversicherung.",
+            "absaetze": [
+              "Voraussetzungen, die erfüllt sein müssen, damit eine Versicherung als Zusatzversicherung zur sozialen Krankenversicherung im Sinne von Art. 7 ZPO gilt (E. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-204%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 7 CPC; compétence ratione materiae en cas de litige portant sur des assurances complémentaires à l'assurance-maladie sociale.",
+            "absaetze": [
+              "Conditions requises pour qu'une assurance soit considérée comme complémentaire à l'assurance-maladie sociale au sens de l'art. 7 CPC (consid. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-204%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 7 CPC; competenza ratione materiae in caso di una controversia derivante da assicurazioni complementari all'assicurazione sociale contro le malattie.",
+            "absaetze": [
+              "Condizioni che devono essere adempiute affinché un'assicurazione sia considerata complementare all'assicurazione sociale contro le malattie nel senso dell'art. 7 CPC (consid. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-204%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.________ (ci-après: l'assuré, le demandeur ou le recourant) a souscrit auprès de B.________ SA (ci-après: la société d'assurance) une \" assurance d'un capital en cas d'invalidité ou décès par suite d'accident \" (ci-après: l'assurance), qui indique que le risque assuré est celui de l'accident (complètement selon l' art. 105 al. 2 LTF). L'assurance prévoit le versement d'un capital de 5'000 fr. en cas de décès et de 100'000 fr. en cas d'invalidité, ce montant-ci pouvant être augmenté en application des conditions particulières de l'assurance. Dans la nuit du 25 au 26 juillet 2020, l'assuré a subi un accident. Par décision du 12 février 2022, la Suva a octroyé à l'assuré une rente d'invalidité et, en application des art. 24 et 25 de la loi fédérale du 20 mars 1981 sur l'assurance-accidents (LAA; RS 832.20), une indemnité de 103'740 fr. pour atteinte à l'intégrité (complètement selon l' art. 105 al. 2 LTF)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Le 24 novembre 2022, l'assuré a ouvert une action en paiement auprès de la Cour des assurances sociales du Tribunal cantonal du canton du Valais à l'encontre de la société d'assurance, subsidiairement C.________ SA et, plus subsidiairement, D.________ SA, concluant au versement d'un montant de 350'000 fr., intérêts en sus. Par décision du 16 février 2023, la Cour des assurances sociales a déclaré l'action irrecevable. En substance, elle a retenu qu'elle n'était pas compétente ratione materiae."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Contre cette décision, qui lui avait été notifiée le 20 février 2023, le demandeur a formé un recours en matière civile auprès du Tribunal fédéral le 20 mars 2023. Il conclut à ce que la décision entreprise soit annulée et réformée, en ce sens que la compétence de la Cour des assurances sociales est admise et que la cause lui est renvoyée pour instruction et nouvelle décision, subsidiairement à ce que la cause soit renvoyée à la Cour des assurances sociales pour nouvelle décision dans le sens des considérants. Les intimées ont renoncé à se déterminer sur le recours et s'en sont remises à dire de justice. Invitée à se déterminer sur le recours, la cour cantonale n'a pas répondu."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "En tant qu'elle s'est déclarée incompétente ratione materiae, la cour cantonale a mis fin à la procédure devant elle. Contrairement à ce que soutient le recourant, il ne s'agit donc pas d'une décision incidente portant sur la compétence (art. 92 LTF), mais d'une décision finale (art. 90 LTF; cf. arrêt 4A_275/2021 du 11 janvier 2022 consid. 2.1, non publié in ATF 148 III 172). Dans la mesure où la Cour des assurances sociales du Tribunal cantonal du canton du Valais a rendu la décision attaquée en qualité d'instance cantonale unique au sens de l' art. 7 CPC (art. 5 al. 1 let. a de la loi du canton du Valais du 11 février 2009 d'application du code de procédure civile suisse [LACPC/VS; RS/VS 270.1]; cf. art. 75 al. 2 let. a LTF et ATF 138 III 799 consid. 1.1), le présent recours est ouvert sans égard à la valeur litigieuse (art. 74 al. 2 let. b LTF). Au surplus, interjeté dans le délai fixé par la loi (art. 100 al. 1 LTF) par le demandeur, qui a succombé dans ses conclusions (art. 76 al. 1 LTF), et dirigé contre une décision rendue par le tribunal supérieur du canton du Valais (art. 75 LTF), le recours en matière civile est en principe recevable."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Le Tribunal fédéral statue sur la base des faits établis par l'autorité précédente (art. 105 al. 1 LTF). Il ne peut s'en écarter que si ces faits ont été établis de façon manifestement inexacte - ce qui correspond à la notion d'arbitraire au sens de l' art. 9 Cst. (ATF 140 III 115 consid. 2; 137 I 58 consid. 4.1.2; 137 II 353 consid. 5.1) - ou en violation du droit au sens de l' art. 95 LTF (art. 105 al. 2 LTF), et si la correction du vice est susceptible d'influer sur le sort de la cause (art. 97 al. 1 LTF). Concernant l'appréciation des preuves, le Tribunal fédéral n'intervient, du chef de l' art. 9 Cst., que si le juge du fait n'a manifestement pas compris le sens et la portée d'un moyen de preuve, a omis sans raisons objectives de tenir compte des preuves pertinentes ou a effectué, sur la base des éléments recueillis, des déductions insoutenables (ATF 137 III 226 consid. 4.2; 136 III 552 consid. 4.2; 134 V 53 consid. 4.3; 133 II 249 consid. 1.4.3; 129 I 8 consid. 2.1). La critique de l'état de fait retenu est soumise au principe strict de l'allégation énoncé par l' art. 106 al. 2 LTF (ATF 140 III 264 consid. 2.3 et les références citées). La partie qui entend attaquer les faits constatés par l'autorité précédente doit expliquer clairement et de manière circonstanciée en quoi ces conditions seraient réalisées (ATF 140 III 16 consid. 1.3.1 et les références citées). Si elle souhaite obtenir un complètement de l'état de fait, elle doit aussi démontrer, par des renvois précis aux pièces du dossier, qu'elle a présenté aux autorités précédentes, en conformité avec les règles de la procédure, les faits juridiquement pertinents à cet égard et les moyens de preuve adéquats (ATF 140 III 86 consid. 2). Si la critique ne satisfait pas à ces exigences, les allégations relatives à un état de fait qui s'écarterait de celui de la décision attaquée ne pourront pas être prises en considération (ATF 140 III 16 consid. 1.3.1). Les critiques de nature appellatoire sont irrecevables (ATF 130 I 258 consid. 1.3)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Le Tribunal fédéral applique en principe d'office le droit (art. 106 al. 1 LTF) à l'état de fait constaté dans l'arrêt cantonal (ou à l'état de fait qu'il aura rectifié). Cela ne signifie pas que le Tribunal fédéral examine, comme le ferait un juge de première instance, toutes les questions juridiques qui pourraient se poser. Compte tenu de l'obligation de motiver imposée par l' art. 42 al. 2 LTF, il ne traite que les questions qui sont soulevées devant lui par les parties, à moins que la violation du droit ne soit manifeste (ATF 140 III 115 consid. 2, 86 consid. 2). Le recours en matière civile peut être formé pour violation du droit fédéral (art. 95 let. a LTF), y compris le droit constitutionnel (ATF 134 III 379 consid. 1.2; 133 III 446 consid. 4.1, 462 consid. 2.3). Il ne peut en revanche pas être interjeté pour violation du droit cantonal en tant que tel. Il est toutefois possible de faire valoir que la mauvaise application du droit cantonal constitue une violation du droit fédéral, en particulier qu'elle est arbitraire au sens de l' art. 9 Cst. ou contraire à d'autres droits constitutionnels (ATF 138 I 1 consid. 2.1; 134 III 379 consid. 1.2; 133 III 462 consid. 2.3). Le Tribunal fédéral n'est pas lié par l'argumentation juridique développée par les parties ou par l'autorité précédente; il peut admettre le recours, comme il peut le rejeter en procédant à une substitution de motifs (ATF 135 III 397 consid. 1.4)."
+            },
+            {
+              "marke": "E. 2.3",
+              "tiefe": 2,
+              "text": "Sur trois pages, le recourant a notamment \" rappel[é] [l]es faits de la cause \". Dans la mesure où il n'y soutient ni n'y établit que l'état de fait constaté par la cour cantonale serait arbitraire et où il ne sollicite pas valablement le complètement de l'état de fait, en établissant qu'il aurait allégué ces faits devant la cour cantonale (cf. supra consid. 2.1), il ne sera pas tenu compte de cet exposé."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "La cour cantonale a jugé que l'assurance litigieuse ne pouvait être qualifiée d'assurance complémentaire à l'assurance-maladie sociale au sens de l' art. 7 CPC, de sorte qu'elle n'était pas compétente ratione materiae. En substance, la cour cantonale a retenu que le capital assuré en cas d'invalidité, soit 100'000 fr., excédait les limites de l'art. 14 de l'ordonnance du 27 juin 1995 sur l'assurance-maladie (aOAMaL; RS 832.102) et que le versement d'un capital invalidité n'était plus prévu par l'art. 1 let. a de l'ordonnance du 18 novembre 2015 sur la surveillance de l'assurance-maladie sociale (OSAMal; RS 832.121). En outre, ledit capital servait à couvrir non pas une perte de salaire due à une incapacité de travail pour cause de maladie, à l'instar des indemnités journalières prévues par la loi fédérale du 2 avril 1908 sur le contrat d'assurance (LCA; RS 221.229.1) et qui sont complémentaires à l'assurance-maladie sociale, mais une incapacité de gain durable."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Le recourant considère au contraire que la Cour des assurances sociales du Tribunal cantonal du canton du Valais est compétente ratione materiae. En substance, il avance que l'assurance litigieuse devrait être considérée comme une assurance complémentaire à l'assurance-maladie sociale, dès lors que les prestations qui y sont prévues représenteraient un \" plus \" par rapport au catalogue de l'assurance-maladie sociale, ou, subsidiairement, comme une \" autre branche d'assurance \". Selon lui, un lien, même faible, avec l'assurance-maladie sociale serait suffisant pour que l' art. 7 CPC s'applique. Le recourant allègue que l'assurance litigieuse, s'agissant d'une assurance décès et invalidité suite à un accident, pourrait à tout le moins être qualifiée d'assurance complémentaire à la LAA, dans la mesure où elle complète également le catalogue de prestations de la LAA et que ses prestations pourraient être qualifiées de complément à l'indemnité pour atteinte à l'intégrité. Dans la mesure où la Cour des assurances sociales traite notamment des litiges relatifs à l'assurance-maladie, à l'assurance-accident et à l'assurance-invalidité, il considère qu'il serait en outre cohérent qu'elle se charge de ce type de litige."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "C'est à tort que la cour cantonale et le recourant ont fait référence aux \" autres branches d'assurance \" au sens de l'art. 14 aOAMal et de l' art. 1 let. a OSAMal, dans la mesure où ces dispositions se réfèrent à l'actuel art. 2 al. 2 de la loi fédérale du 26 septembre 2014 sur la surveillance de l'assurance-maladie sociale (LSAMal; RS 832.12), qui ne vise que les caisses-maladie. Ce faisant, ils perdent en effet de vue qu'une assurance complémentaire à l'assurance-maladie sociale peut être conclue tant avec une caisse-maladie qu'avec une entreprise d'assurance privée (cf. infra consid. 4.2)."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Est litigieuse la compétence ratione materiae de la cour cantonale au regard de l' art. 7 CPC pour connaître du litige portant sur l'assurance complémentaire d'un capital en cas d'invalidité ou décès par suite d'accident, soumise à la LCA."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Selon l' art. 7 CPC, les cantons peuvent instituer un tribunal qui statue en tant qu'instance cantonale unique sur les litiges portant sur les assurances complémentaires à l'assurance-maladie sociale selon la loi fédérale du 18 mars 1994 sur l'assurance-maladie (LAMal; RS 832.10). Cette disposition a été introduite sur proposition des Chambres fédérales pour permettre aux cantons de déroger au double degré de juridiction qu'impose l' art. 75 LTF (cf. art. 75 al. 2 let. a LTF) et de conserver l'instance cantonale unique à laquelle ils étaient habitués et à laquelle étaient soumis les litiges relatifs tant à l'assurance-maladie sociale elle-même que ceux relatifs aux assurances complémentaires à celle-ci. Comme les litiges en matière d'assurance-maladie sociale ne sont, de par la loi, pas soumis à l'exigence d'un double degré de juridiction, les cantons devaient pouvoir prévoir qu'un tribunal unique puisse examiner aussi les litiges relatifs à l'assurance complémentaire à l'assurance-maladie sociale. Cela devait permettre aussi au même tribunal de statuer sur ces deux types d'assurances (BO 2007 CE 500-501 et 644). L'initiative parlementaire 13.441 déposée le 21 juin 2013 par Mauro Poggia, qui visait à également soumettre à un tribunal unique les litiges relevant de l'assurance complémentaire à l'assurance-accidents obligatoire, a été classée. Ces litiges ne sont donc pas soumis à l' art. 7 CPC (PATRICIA DIETSCHY-MARTENET, in Petit commentaire, Code de procédure civile, 2021, no 7 ad art. 7 CPC). Selon la jurisprudence, si le canton a fait usage du choix que lui offre l' art. 7 CPC, il doit soumettre tous les litiges portant sur les assurances complémentaires à l'assurance-maladie sociale à un tribunal unique (ATF 138 III 558 consid. 3.1). Le tribunal unique appliquera la loi fédérale du 6 octobre 2000 sur la partie générale du droit des assurances sociales (LPGA; RS 830.1) à la partie assurance-maladie sociale et la LCA à la partie assurance complémentaire à l'assurance-maladie sociale. C'est le recours en matière civile au Tribunal qui est ouvert contre la partie assurance complémentaire, sans égard à la valeur litigieuse (ATF 138 III 799 consid. 1.1, 2 consid. 1.2.2)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Il découle du but visé par l' art. 7 CPC, à savoir de déroger au double degré de juridiction prévu par l' art. 75 LTF, que cette disposition doit être interprétée de manière restrictive. Pour satisfaire au critère de la complémentarité à l'assurance-maladie sociale que l' art. 7 CPC exige, il faut que l'assurance soit complémentaire à la LAMal par les risques couverts et par les prestations qu'elle offre. Autrement dit, il faut, premièrement, que l'assurance complémentaire litigieuse couvre des risques prévus par la LAMal, c'est-à-dire la maladie, l'accident ou la maternité (ces trois risques étant visés par l' art. 1a al. 2 LAMal) et, secondement, que les prestations litigieuses soient destinées à compléter, c'est-à-dire à améliorer, les prestations de base prévues par la LAMal, à l'exclusion des prestations prévues par d'autres lois sociales (dans ce sens, arrêt 4A_12/2016 du 23 mai 2017 consid. 1.2; KATHARINA ANNA ZIMMERMANN, Zusatzversicherungen zur sozialen Krankenversicherung, 2022, p. 48 n. 89; HANS-JAKOB MOSIMANN, in Schweizerische Zivilprozessordnung, Brunner et al. [édit.], vol. I, 2e éd. 2016, no 2 ad art. 7 CPC et les références citées; DIETSCHY-MARTENET, op. cit., no 4 ad art. 7 CPC et les références citées; HAAS/SCHLUMPF, in Kurzkommentar, Schweizerische Zivilprozessordnung, 3e éd. 2021, no 5 ad art. 7 CPC). N'est en revanche pas déterminante la question de savoir si l'assureur est une caisse-maladie ou une entreprise d'assurance privée (ATF 141 III 479 consid. 2.1; DIETSCHY-MARTENET, op. cit., no 3 ad art. 7 CPC; HAAS/SCHLUMPF, loc. cit.). Il en découle que si le risque assuré n'est pas l'un ou plusieurs des trois risques susmentionnés, l' art. 7 CPC n'est pas applicable. Cette disposition n'est pas non plus applicable si les prestations offertes ne complètent pas le catalogue de prestations de la LAMal, par exemple si les prestations sont destinées à améliorer les prestations de la LAA."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "En l'espèce, il faut donc examiner, dans une première étape, si le risque assuré par l'assurance litigieuse est l'un ou plusieurs des trois risques couverts par la LAMal, puis, si tel est le cas, déterminer, dans une seconde étape, si les prestations de l'assurance litigieuse viennent compléter celles de la LAMal ou d'une autre assurance. Il n'est pas contesté que l'assurance litigieuse couvre le risque d'accident, de sorte que la condition exigée dans la première étape est remplie. Il convient donc de déterminer si la prestation de l'assurance litigieuse, soit le versement d'un capital de 100'000 fr. en cas d'invalidité suite à un accident, vient compléter les prestations de la LAMal ou d'une autre assurance, par exemple la LAA. Comme l'admet lui-même le recourant, dite prestation peut être qualifiée de complément à l'indemnité pour atteinte à l'intégrité au sens des art. 24 et 25 LAA. En l'occurrence, elle viendrait s'ajouter au montant en capital déjà octroyé à ce titre au recourant par la Suva par décision du 12 février 2022 (cf. supra consid. A). Force est donc de constater que la prestation litigieuse vient compléter le catalogue de prestations de la LAA et, donc, qu'elle ne constitue pas une assurance complémentaire à l'assurance-maladie sociale au sens de l' art. 7 CPC (cf. ZIMMERMANN, op. cit., p. 113 n. 222). Dès lors, l' art. 7 CPC n'est pas applicable en l'espèce et c'est à bon droit que la cour cantonale s'est déclarée incompétente ratione materiae. Le grief doit donc être rejeté."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Le recourant considère que le Président de la Cour des assurances sociales du Tribunal cantonal du canton du Valais n'était pas habilité à juger seul de la compétence de la cour cantonale, dès lors que sa demande n'était pas manifestement irrecevable au sens de l'art. 20 al. 1 let. b de la loi du canton du Valais du 11 février 2009 sur l'organisation de la Justice (LOJ/VS; RS/VS 173.1). Il invoque une violation des art. 29 et 30 Cst. et de l' art. 6 CEDH et une application arbitraire de l'art. 20 al. 1 let. b LOJ/VS. La compétence du Président de la cour cantonale peut demeurer indécise. En effet, dans la mesure où le Tribunal fédéral applique le droit d'office (art. 106 al. 1 LTF) et où il a examiné avec une pleine cognition l'applicabilité de l' art. 7 CPC dans le cas d'espèce (cf. supra consid. 4), la situation juridique du recourant n'a en tout état de cause pas été prétéritée en l'espèce."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Au vu de ce qui précède, le recours doit être rejeté. Les frais judiciaires seront mis à la charge du recourant, qui succombe (art. 66 al. 1 LTF). Dans la mesure où les intimées ont renoncé à se déterminer sur le recours, il ne leur sera pas octroyé de dépens."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Le recours est rejeté."
+            },
+            {
+              "marke": "2.",
+              "text": "Les frais judiciaires, arrêtés à 5'000 fr., sont mis à la charge du recourant."
+            },
+            {
+              "marke": "3.",
+              "text": "Il n'est pas alloué de dépens."
+            },
+            {
+              "marke": "4.",
+              "text": "Le présent arrêt est communiqué aux parties, à la Cour des assurances sociales du Tribunal cantonal du canton du Valais et à l'Autorité fédérale de surveillance des marchés financiers FINMA."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, le 31 janvier 2024 Au nom de la Ire Cour de droit civil du Tribunal fédéral suisse La Présidente: Jametti Le Greffier: Douzals"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Le recours est rejeté.",
+        "Les frais judiciaires, arrêtés à 5'000 fr., sont mis à la charge du recourant.",
+        "Il n'est pas alloué de dépens.",
+        "Le présent arrêt est communiqué aux parties, à la Cour des assurances sociales du Tribunal cantonal du canton du Valais et à l'Autorité fédérale de surveillance des marchés financiers FINMA."
+      ],
+      "zitierteNormen": [
+        "Art. 1a Abs. 2 LAMAL",
+        "Art. 7 CPC",
+        "Art. 7 ZPO",
+        "Art. 75 Abs. 2 LTF",
+        "Art. 75 LTF"
+      ],
+      "normKeys": [
+        "ZPO"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=17&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=163&highlight_docid=atf%3A%2F%2F150-III-204%3Ade&number_of_ranks=177&azaclir=clir",
+      "abgerufen": "2026-07-18",
+      "fassungsToken": "25a4c3fa39ad531956517acae8dde6f59015fbf59566fa890f4e917013952e29",
+      "sha": "097f9f54d2d73fc284f2b921c79e6e23a46f69e9c1f31422ae89f154b22fc0f1",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A. (ci-après: l'assuré, le demandeur ou le recourant) a souscrit auprès de B. SA (ci-après: la société d'assurance) une \"assurance d'un capital en cas d'invalidité ou décès par suite d'accident\" (ci-après: l'assurance), qui indique que le risque assuré est celui de l'accident (...). L'assurance prévoit le versement d'un capital de 5'000 fr. en cas de décès et de 100'000 fr. en cas d'invalidité, ce montant-ci pouvant être augmenté en application des conditions particulières de l'assurance. Dans la nuit du 25 au 26 juillet 2020, l'assuré a subi un accident. Par décision du 12 février 2022, la Suva a octroyé à l'assuré une rente d'invalidité et, en application des art. 24 et 25 de la loi fédérale du 20 mars 1981 sur l'assurance-accidents (LAA; RS 832.20), une indemnité de 103'740 fr. pour atteinte à l'intégrité (...)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Le 24 novembre 2022, l'assuré a ouvert une action en paiement auprès de la Cour des assurances sociales du Tribunal cantonal du canton du Valais à l'encontre de la société d'assurance, subsidiairement C. SA et, plus subsidiairement, D. SA, concluant au versement d'un montant de 350'000 fr., intérêts en sus. Par décision du 16 février 2023, la Cour des assurances sociales a déclaré l'action irrecevable. En substance, elle a retenu qu'elle n'était pas compétente ratione materiae."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Contre cette décision, qui lui avait été notifiée le 20 février 2023, le demandeur a formé un recours en matière civile auprès du Tribunal fédéral le 20 mars 2023. (...) Le Tribunal fédéral a rejeté le recours. (extrait)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Est litigieuse la compétence ratione materiae de la cour cantonale au regard de l' art. 7 CPC pour connaître du litige portant sur l'assurance complémentaire d'un capital en cas d'invalidité ou décès par suite d'accident, soumise à la loi fédérale du 2 avril 1908 sur le contrat d'assurance (LCA; RS 221.229.1)."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Selon l' art. 7 CPC, les cantons peuvent instituer un tribunal qui statue en tant qu'instance cantonale unique sur les litiges portant sur les assurances complémentaires à l'assurance-maladie sociale selon la loi fédérale du 18 mars 1994 sur l'assurance-maladie (LAMal; RS 832.10). Cette disposition a été introduite sur proposition des Chambres fédérales pour permettre aux cantons de déroger au double degré de juridiction qu'impose l' art. 75 LTF (cf. art. 75 al. 2 let. a LTF) et de conserver l'instance cantonale unique à laquelle ils étaient habitués et à laquelle étaient soumis les litiges relatifs tant à l'assurance-maladie sociale elle-même que ceux relatifs aux assurances complémentaires à celle-ci. Comme les litiges en matière d'assurance-maladie sociale ne sont, de par la loi, pas soumis à l'exigence d'un double degré de juridiction, les cantons devaient pouvoir prévoir qu'un tribunal unique puisse examiner aussi les litiges relatifs à l'assurance complémentaire à l'assurance-maladie sociale. Cela devait permettre aussi au même tribunal de statuer sur ces deux types d'assurances (BO 2007 CE 500-501 et 644). BGE 150 III 204 S. 206 L'initiative parlementaire 13.441 déposée le 21 juin 2013 par Mauro Poggia, qui visait à également soumettre à un tribunal unique les litiges relevant de l'assurance complémentaire à l'assurance-accidents obligatoire, a été classée. Ces litiges ne sont donc pas soumis à l' art. 7 CPC (PATRICIA DIETSCHY-MARTENET, in CPC, Code de procédure civile commenté, 2021, n° 7 ad art. 7 CPC). Selon la jurisprudence, si le canton a fait usage du choix que lui offre l' art. 7 CPC, il doit soumettre tous les litiges portant sur les assurances complémentaires à l'assurance-maladie sociale à un tribunal unique (ATF 138 III 558 consid. 3.1). Le tribunal unique appliquera la loi fédérale du 6 octobre 2000 sur la partie générale du droit des assurances sociales (LPGA; RS 830.1) à la partie assurance-maladie sociale et la LCA à la partie assurance complémentaire à l'assurance-maladie sociale. C'est le recours en matière civile au Tribunal qui est ouvert contre la partie assurance complémentaire, sans égard à la valeur litigieuse (ATF 138 III 799 consid. 1.1, ATF 138 III 2 consid. 1.2.2)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Il découle du but visé par l' art. 7 CPC, à savoir de déroger au double degré de juridiction prévu par l' art. 75 LTF, que cette disposition doit être interprétée de manière restrictive. Pour satisfaire au critère de la complémentarité à l'assurance-maladie sociale que l' art. 7 CPC exige, il faut que l'assurance soit complémentaire à la LAMal par les risques couverts et par les prestations qu'elle offre. Autrement dit, il faut, premièrement, que l'assurance complémentaire litigieuse couvre des risques prévus par la LAMal, c'est-à-dire la maladie, l'accident ou la maternité (ces trois risques étant visés par l' art. 1a al. 2 LAMal) et, secondement, que les prestations litigieuses soient destinées à compléter, c'est-à-dire à améliorer, les prestations de base prévues par la LAMal, à l'exclusion des prestations prévues par d'autres lois sociales (dans ce sens, arrêt 4A_12/2016 du 23 mai 2017 consid. 1.2; KATHARINA ANNA ZIMMERMANN, Zusatzversicherungen zur sozialen Krankenversicherung, 2022, p. 48 n. 89; HANS-JAKOB MOSIMANN, in Schweizerische Zivilprozessordnung [ZPO], Brunner et al. [éd.], vol. I, 2 e éd. 2016, n° 2 ad art. 7 CPC et les références citées; DIETSCHY-MARTENET, op. cit., n° 4 ad art. 7 CPC et les références citées; HAAS/SCHLUMPF, in Schweizerische Zivilprozessordnung, Kurzkommentar, 3 e éd. 2021, n° 5 ad art. 7 CPC). N'est en revanche pas déterminante la question de savoir si l'assureur est une caisse-maladie ou une entreprise d'assurance privée BGE 150 III 204 S. 207 (ATF 141 III 479 consid. 2.1; DIETSCHY-MARTENET, op. cit., n° 3 ad art. 7 CPC; HAAS/SCHLUMPF, loc. cit.). Il en découle que si le risque assuré n'est pas l'un ou plusieurs des trois risques susmentionnés, l' art. 7 CPC n'est pas applicable. Cette disposition n'est pas non plus applicable si les prestations offertes ne complètent pas le catalogue de prestations de la LAMal, par exemple si les prestations sont destinées à améliorer les prestations de la LAA."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "En l'espèce, il faut donc examiner, dans une première étape, si le risque assuré par l'assurance litigieuse est l'un ou plusieurs des trois risques couverts par la LAMal, puis, si tel est le cas, déterminer, dans une seconde étape, si les prestations de l'assurance litigieuse viennent compléter celles de la LAMal ou d'une autre assurance. Il n'est pas contesté que l'assurance litigieuse couvre le risque d'accident, de sorte que la condition exigée dans la première étape est remplie. Il convient donc de déterminer si la prestation de l'assurance litigieuse, soit le versement d'un capital de 100'000 fr. en cas d'invalidité suite à un accident, vient compléter les prestations de la LAMal ou d'une autre assurance, par exemple la LAA. Comme l'admet lui-même le recourant, dite prestation peut être qualifiée de complément à l'indemnité pour atteinte à l'intégrité au sens des art. 24 et 25 LAA. En l'occurrence, elle viendrait s'ajouter au montant en capital déjà octroyé à ce titre au recourant par la Suva par décision du 12 février 2022 (cf. supra let. A). Force est donc de constater que la prestation litigieuse vient compléter le catalogue de prestations de la LAA et, donc, qu'elle ne constitue pas une assurance complémentaire à l'assurance-maladie sociale au sens de l' art. 7 CPC (cf. ZIMMERMANN, op. cit., p. 113 n. 222). Dès lors, l' art. 7 CPC n'est pas applicable en l'espèce et c'est à bon droit que la cour cantonale s'est déclarée incompétente ratione materiae. Le grief doit donc être rejeté."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "4A_169/2023",
+        "key": "bger_4A_169_2023",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=1&from_date=31.01.2024&to_date=31.01.2024&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=7&azaclir=aza&highlight_docid=aza%3A%2F%2F31-01-2024-4A_169-2023&number_of_ranks=22"
+      },
+      "ecli": "ECLI:CH:BGE:2024:150.III.204"
+    }
+  ]
+}

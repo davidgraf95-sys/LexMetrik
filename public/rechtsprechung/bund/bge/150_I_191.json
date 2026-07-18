@@ -1,0 +1,207 @@
+{
+  "erzeugt": "2026-07-18",
+  "eintraege": [
+    {
+      "id": "bund/bge/150_I_191",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "I",
+      "nummer": "150 I 191",
+      "bgeReferenz": "150 I 191",
+      "zitierung": "BGE 150 I 191",
+      "datum": "2024-03-28",
+      "sprache": "fr",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "oeffentlich",
+      "legalArea": "public",
+      "rubrum": {
+        "besetzung": "MM. les Juges fédéraux Kneubühler, Président, Chaix, Haag, Müller et Merz. Greffier: M. Kurz",
+        "parteien": "A.________, représenté par Me Alain Dubuis, avocat, recourant, contre Autorité de protection des données et de droit à l'information du canton de Vaud, rue Caroline 2, case postale 171, 1001 Lausanne",
+        "gegenstand": "Loi sur l'information, remise au juge civil de pièces détenues par des autorités administratives",
+        "vorinstanz": "Tribunal cantonal du canton de Vaud, Cour de droit administratif et public, du 21 septembre 2023"
+      },
+      "regeste": {
+        "text": "Art. 29a BV; Art. 156 ZPO; kantonale Datenschutzgesetzgebung; Übermittlung von Daten durch die Verwaltung an den Zivilrichter; Rechtsschutz. Das Fehlen eines Rechtsmittels gegen die Datenübermittlung durch die Verwaltung verstösst nicht gegen Art. 29a BV, da der Rechtsschutz durch den Zivilrichter gemäss Art. 156 ZPO ausreichend ist (E. 2).\nRegeste\n Art. 29a Cst.; art. 156 CPC; législation cantonale sur la protection des données; transmission de données de l'administration au juge civil; protection juridique. L'absence de recours contre l'acte de transmission des données par l'administration ne viole pas l'art. 29a Cst., dès lors que la protection juridique assurée par le juge civil en vertu de l'art. 156 CPC est suffisante (consid. 2).\nRegesto\n Art. 29a Cost.; art. 156 CPC; legislazione cantonale sulla protezione dei dati; trasmissione di dati dall'amministrazione al giudice civile; protezione giuridica. L'assenza di un ricorso contro l'atto di trasmissione dei dati da parte dall'amministrazione non viola l'art. 29a Cost., ritenuto che la protezione giuridica garantita dal giudice civile in virtù dell'art. 156 CPC è sufficiente (consid. 2).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 29a BV; Art. 156 ZPO; kantonale Datenschutzgesetzgebung; Übermittlung von Daten durch die Verwaltung an den Zivilrichter; Rechtsschutz.",
+            "absaetze": [
+              "Das Fehlen eines Rechtsmittels gegen die Datenübermittlung durch die Verwaltung verstösst nicht gegen Art. 29a BV, da der Rechtsschutz durch den Zivilrichter gemäss Art. 156 ZPO ausreichend ist (E. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-I-191%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 29a Cst.; art. 156 CPC; législation cantonale sur la protection des données; transmission de données de l'administration au juge civil; protection juridique.",
+            "absaetze": [
+              "L'absence de recours contre l'acte de transmission des données par l'administration ne viole pas l'art. 29a Cst., dès lors que la protection juridique assurée par le juge civil en vertu de l'art. 156 CPC est suffisante (consid. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-I-191%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 29a Cost.; art. 156 CPC; legislazione cantonale sulla protezione dei dati; trasmissione di dati dall'amministrazione al giudice civile; protezione giuridica.",
+            "absaetze": [
+              "L'assenza di un ricorso contro l'atto di trasmissione dei dati da parte dall'amministrazione non viola l'art. 29a Cost., ritenuto che la protezione giuridica garantita dal giudice civile in virtù dell'art. 156 CPC è sufficiente (consid. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-I-191%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Dans le cadre d'une procédure civile pendante devant le Tribunal d'arrondissement de la Côte entre B.________ SA et C.________, le juge instructeur a ordonné la production, par le Département de l'économie, de l'innovation, de l'emploi et du patrimoine du canton de Vaud et par la Direction générale de l'agriculture, de la viticulture et des affaires vétérinaires, de divers documents concernant A.________, époux de C.________. Les pièces ont été produites en novembre 2022."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "A.________ a saisi l'Autorité de protection des données et de droit à l'information du canton de Vaud (APDI) d'un recours contre ce qu'il qualifiait de décisions relatives à la transmission de documents. Par décision du 21 février 2023, l'APDI a déclaré le recours irrecevable. La loi cantonale sur la protection des données personnelles (LPrD, RS/VD 172.65) ne s'appliquait pas dans le cadre des procédures civiles et pénales. Le code de procédure civile (CPC, RS 272) permettait de prendre les mesures nécessaires à la protection des parties ou des tiers. La transmission n'était pas non plus intervenue en application de la loi cantonale sur l'information (LInfo, RS/VD 170.21), de sorte que l'APDI n'était pas compétente pour connaître du recours. Par arrêt du 21 septembre 2023, la Cour de droit administratif et public du Tribunal cantonal vaudois (CDAP), après avoir effectué une procédure de coordination, a confirmé cette décision. La LPrD ne s'appliquait pas à la production, par l'autorité administrative, de documents requis par un juge civil, même si la requête de production avait été initialement formée par une partie. L' art. 156 CPC permettait au tribunal d'ordonner les mesures nécessaires à la protection des intérêts des tiers à la procédure, après les avoir informés, et ceux-ci disposaient de voies de droit suffisantes. On ne se trouvait donc pas en présence d'un acte d'entraide administrative dont la légalité devait pouvoir être contrôlée. C. Agissant par la voie du recours en matière de droit public, A.________ demande au Tribunal fédéral de réformer l'arrêt cantonal en ce sens que son recours cantonal est admis, la cause étant renvoyée à l'APDI pour examen au fond. Il forme une demande d'effet suspensif et de mesures provisionnelles qui a été admise par ordonnance du 28 novembre 2023 en ce sens qu'interdiction a été faite au tribunal d'arrondissement de transmettre les documents litigieux aux parties. La CDAP renonce à se déterminer et se réfère à son arrêt. L'APDI renonce également à se déterminer et se réfère à sa décision."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Le recours en matière de droit public est dirigé contre une décision rendue dans une cause de droit public relative à la protection des données (art. 82 let. a LTF) par une autorité de dernière instance cantonale (art. 86 al. 1 let. d LTF). Le recourant a pris part à la procédure devant l'autorité précédente (art. 89 al. 1 let. a LTF) et est particulièrement touché par l'arrêt attaqué qui confirme l'irrecevabilité du recours dirigé contre la transmission de renseignements le concernant au juge civil. Il dispose ainsi d'un intérêt digne de protection à l'annulation ou à la modification de cette décision (art. 89 al. 1 let. b et c LTF). Du point de vue de la juridiction civile, la décision attaquée est incidente puisqu'elle porte sur une simple production de pièces, sans mettre un terme à la procédure. Du point de vue du recourant et des autorités administratives en revanche, les transmissions de pièces doivent être considérées comme finales au sens de l' art. 90 LTF. Dans la mesure où il porte sur la recevabilité d'une voie de droit à l'encontre de ces transmissions, le recours est quoi qu'il en soit recevable (ATF 143 I 344 consid. 1.2)."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Le recourant ne se plaint pas d'une application arbitraire des règles cantonales de forme ou de fond ayant conduit à déclarer son recours irrecevable. Il estime en revanche que la décision attaquée violerait la garantie de l'accès au juge découlant de l' art. 29a Cst. Il relève que les actes matériels de l'administration, telle la transmission d'informations, sont eux aussi soumis à cette garantie. Se référant à un arrêt du Tribunal administratif fédéral (ATAF 2014/19 du 5 juin 2014), il relève que l'autorité administrative n'est pas tenue de collaborer et doit procéder à une appréciation du cas pour décider de lever le secret de fonction ou le secret professionnel et de donner suite ou non à une demande de production. Un contrôle complet de la légalité de ces actes, conformément aux art. 21 LInfo et 31 al. 1 LPrD, serait nécessaire et le contrôle du juge civil ne serait pas suffisant à cet égard. En l'espèce, les pièces transmises contiennent des informations confidentielles concernant le recourant, celui-ci n'est pas partie à la procédure civile et il est en litige depuis de nombreuses années avec la société B.________ SA."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "L' art. 29a Cst. donne à toute personne le droit à ce que sa cause soit jugée par une autorité judiciaire jouissant d'un plein pouvoir d'examen en fait et en droit, la Confédération et les cantons pouvant, par la loi, exclure l'accès au juge dans des cas exceptionnels. Cette norme étend donc le contrôle judiciaire à toutes les matières, y compris aux actes de l'administration, en établissant une garantie générale de l'accès au juge plus large que celle qui découle de l' art. 6 CEDH (ATF 149 I 146 consid. 3.3.1 et les arrêts cités). Le droit au contrôle judiciaire garanti par l' art. 29a Cst. n'existe toutefois que dans le cadre des règles de procédure en vigueur, de sorte qu'il n'interdit pas de faire dépendre la question de l'entrée en matière sur un recours ou sur une action du respect des conditions habituelles de recevabilité (ATF 143 I 344 consid. 8.2; 141 I 172 consid. 4.4; 137 II 409 consid. 4.2)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Selon l' art. 156 CPC (\"Sauvegarde d'intérêts dignes de protection\"), le tribunal ordonne les mesures propres à éviter que l'administration des preuves ne porte atteinte à des intérêts dignes de protection des parties ou de tiers. Si la loi ne mentionne expressément que les secrets d'affaires, la jurisprudence reconnaît une portée plus large à la disposition, incluant en particulier les droits de la personnalité (ATF 148 III 84 consid. 3.2.1 et [non publié] 3.4.1; PHILIPPE SCHWEIZER, in Commentaire romand, Code de procédure civile, 2 e éd. 2019, n° 6 ad art. 156 CPC). Il ne s'agit pas d'une faculté, mais d'une obligation du tribunal. La partie ou le tiers qui requiert une mesure de protection est tenu de rendre vraisemblable une atteinte effective à ses intérêts dignes de protection, et ne peut se contenter d'une allégation théorique. Les mesures de protection peuvent notamment consister en une limitation de l'accès au dossier, un caviardage des documents ou une obligation de garder le secret éventuellement assortie d'une menace de sanction selon l' art. 292 CP (ATF 148 III 84 consid. 3.2). Ces mesures doivent être proportionnées et le juge doit tenir compte de l'ensemble des circonstances concrètes (ATF 148 III 84 consid. 3.2.3). Le tribunal dispose dans ce cadre d'un large pouvoir d'appréciation afin de tenir compte d'une part des intérêts compromis par l'administration de la preuve et, d'autre part, du droit d'être entendu, et notamment du droit à la preuve des parties à la procédure (PHILIPPE SCHWEIZER, op. cit., n° 15 ad art. 156 CPC). Par tribunal au sens de l' art. 156 CPC, il faut entendre le juge civil, soit en l'occurrence le Tribunal d'arrondissement de la Côte. Le tiers qui se plaint d'une prise en compte insuffisante de ses intérêts par la décision du juge civil dispose encore dans ce cadre des voies de droit prévues par le CPC (cf. art. 308 ss, 319 al. 1 CPC). S'agissant d'une décision incidente, la condition du préjudice irréparable (art. 319 let. b ch. 2 CPC) serait réalisée, en particulier si est invoquée une atteinte à un secret protégé (SCHWEIZER, op. cit., n° 15 ad art. 156 CPC; ISABELLE CHABLOT/CORINNE COPT, in Petit commentaire, Code de procédure civile, 2021, no 13 ad art. 156 CPC; CHRISTIAN LEU, in DIKE-Kommentar ZPO, 2 e éd. 2016, n° 29 ad art. 156 CPC; SAMUEL BAUMGARTNER, in Oberhammer et al., Kurzkommentar ZPO, 3 e éd. 2021, n° 7 ad art. 156 CPC)."
+            },
+            {
+              "marke": "E. 2.3",
+              "tiefe": 2,
+              "text": "En définitive, la protection juridique assurée devant le juge civil satisfait aux exigences de l' art. 29a Cst. Le recourant n'indique d'ailleurs pas quelles questions pourraient être traitées dans le cadre d'un recours contre l'acte de transmission des pièces, qui ne pourraient pas l'être par le tribunal civil."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Sur le vu de ce qui précède, le recours est rejeté. Conformément à l' art. 66 al. 1 LTF, les frais judiciaires sont mis à la charge du recourant qui succombe. Il n'est pas alloué de dépens (cf. art. 68 LTF)"
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Le recours est rejeté."
+            },
+            {
+              "marke": "2.",
+              "text": "Les frais judiciaires, arrêtés à 2'000 fr., sont mis à la charge du recourant."
+            },
+            {
+              "marke": "3.",
+              "text": "Le présent arrêt est communiqué au mandataire du recourant, à l'Autorité de protection des données et de droit à l'information du canton de Vaud, au Tribunal cantonal du canton de Vaud, Cour de droit administratif et public, ainsi que, pour information, à Me Isabelle Salomé Daïna et au Tribunal d'arrondissement de La Côte."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, le 28 mars 2024 Au nom de la Ire Cour de droit public du Tribunal fédéral suisse Le Président: Kneubühler Le Greffier: Kurz"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Le recours est rejeté.",
+        "Les frais judiciaires, arrêtés à 2'000 fr., sont mis à la charge du recourant.",
+        "Le présent arrêt est communiqué au mandataire du recourant, à l'Autorité de protection des données et de droit à l'information du canton de Vaud, au Tribunal cantonal du canton de Vaud, Cour de droit administratif et public, ainsi que, pour information, à Me Isabelle Salomé Daïna et au Tribunal d'arrondissement de La Côte."
+      ],
+      "zitierteNormen": [
+        "Art. 156 CPC",
+        "Art. 156 ZPO",
+        "Art. 21 LINFO",
+        "Art. 292 CP",
+        "Art. 29a BV",
+        "Art. 29a CST",
+        "Art. 6 CEDH"
+      ],
+      "normKeys": [
+        "ZPO",
+        "BV"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=13&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=121&highlight_docid=atf%3A%2F%2F150-I-191%3Ade&number_of_ranks=177&azaclir=clir",
+      "abgerufen": "2026-07-18",
+      "fassungsToken": "e3dd7478e8bb56def479f8f1eeba36508f559204391df1e9e5f3d2742812260e",
+      "sha": "b934a60cf4ccfc4581494efa0ca5cf894436ee41d7afb69bf21ba8cc52634364",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Dans le cadre d'une procédure civile pendante devant le Tribunal d'arrondissement de la Côte entre B. SA et C., le juge instructeur a ordonné la production, par l'administration cantonale, de divers documents concernant A., époux de C. Les pièces ont été produites en novembre 2022."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "A. a saisi l'Autorité de protection des données et de droit à l'information du canton de Vaud (APDI) d'un recours contre ce qu'il qualifiait de décisions relatives à la transmission de documents. Par décision du 21 février 2023, l'APDI a déclaré le recours irrecevable. La loi cantonale du 11 septembre 2007 sur la protection des données personnelles (LPrD; BLV 172.65) ne s'appliquait pas dans le cadre des procédures civiles et pénales. Le code de procédure civile (CPC; RS 272) permettait de prendre les mesures nécessaires à la protection des parties ou des tiers. La transmission n'était pas non plus intervenue en application de la loi du 24 septembre 2002 sur l'information (LInfo; BLV 170.21), de sorte que l'APDI n'était pas compétente pour connaître du recours. Par arrêt du 21 septembre 2023, la Cour de droit administratif et public du Tribunal cantonal vaudois (CDAP) a confirmé cette décision. La LPrD ne s'appliquait pas à la production, par l'autorité administrative, de documents requis par un juge civil, même si la requête de production avait été initialement formée par une partie. L' art. 156 CPC permettait au tribunal d'ordonner les mesures nécessaires à la protection des intérêts des tiers à la procédure, après les avoir informés, et ceux-ci disposaient de voies de droit suffisantes. On ne se trouvait donc pas en présence d'un acte d'entraide administrative dont la légalité devait pouvoir être contrôlée. C. Agissant par la voie du recours en matière de droit public, A. demande au Tribunal fédéral de réformer l'arrêt cantonal en ce sens que son recours cantonal est admis, la cause étant renvoyée à l'APDI pour examen au fond. Le Tribunal fédéral a rejeté le recours. (résumé)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Le recourant ne se plaint pas d'une application arbitraire des règles cantonales de forme ou de fond ayant conduit à déclarer son recours irrecevable. Il estime en revanche que la décision attaquée violerait la garantie de l'accès au juge découlant de l' art. 29a Cst. Il relève que les actes matériels de l'administration, telle la transmission d'informations, sont eux aussi soumis à cette garantie. Se référant à un arrêt du Tribunal administratif fédéral (ATAF 2014/19 du 5 juin 2014), il relève que l'autorité administrative n'est pas tenue de collaborer et doit procéder à une appréciation du cas pour décider de lever le secret de fonction ou le secret professionnel et de donner suite ou non à une demande de production. Un contrôle complet BGE 150 I 191 S. 193 de la légalité de ces actes, conformément aux art. 21 LInfo et 31 al. 1 LPrD, serait nécessaire et le contrôle du juge civil ne serait pas suffisant à cet égard. En l'espèce, les pièces transmises contiennent des informations confidentielles concernant le recourant, celui-ci n'est pas partie à la procédure civile et il est en litige depuis de nombreuses années avec la société B. SA."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "L' art. 29a Cst. donne à toute personne le droit à ce que sa cause soit jugée par une autorité judiciaire jouissant d'un plein pouvoir d'examen en fait et en droit, la Confédération et les cantons pouvant, par la loi, exclure l'accès au juge dans des cas exceptionnels. Cette norme étend donc le contrôle judiciaire à toutes les matières, y compris aux actes de l'administration, en établissant une garantie générale de l'accès au juge plus large que celle qui découle de l' art. 6 CEDH (ATF 149 I 146 consid. 3.3.1 et les arrêts cités). Le droit au contrôle judiciaire garanti par l' art. 29a Cst. n'existe toutefois que dans le cadre des règles de procédure en vigueur, de sorte qu'il n'interdit pas de faire dépendre la question de l'entrée en matière sur un recours ou sur une action du respect des conditions habituelles de recevabilité (ATF 143 I 344 consid. 8.2; ATF 141 I 172 consid. 4.4; ATF 137 II 409 consid. 4.2)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Selon l' art. 156 CPC (\"Sauvegarde d'intérêts dignes de protection\"), le tribunal ordonne les mesures propres à éviter que l'administration des preuves ne porte atteinte à des intérêts dignes de protection des parties ou de tiers. Si la loi ne mentionne expressément que les secrets d'affaires, la jurisprudence reconnaît une portée plus large à la disposition, incluant en particulier les droits de la personnalité (ATF 148 III 84 consid. 3.2.1 et [non publié] 3.4.1; PHILIPPE SCHWEIZER, in Commentaire romand, Code de procédure civile, 2 e éd. 2019, n° 6 ad art. 156 CPC). Il ne s'agit pas d'une faculté, mais d'une obligation du tribunal. La partie ou le tiers qui requiert une mesure de protection est tenu de rendre vraisemblable une atteinte effective à ses intérêts dignes de protection, et ne peut se contenter d'une allégation théorique. Les mesures de protection peuvent notamment consister en une limitation de l'accès au dossier, un caviardage des documents ou une obligation de garder le secret éventuellement assortie d'une menace de sanction selon l' art. 292 CP (ATF 148 III 84 consid. 3.2). Ces mesures doivent être proportionnées et le juge doit tenir compte de l'ensemble des circonstances concrètes (ATF 148 III 84 consid. 3.2.3). Le tribunal dispose dans ce cadre d'un large pouvoir d'appréciation afin de tenir compte d'une part des intérêts BGE 150 I 191 S. 194 compromis par l'administration de la preuve et, d'autre part, du droit d'être entendu, et notamment du droit à la preuve des parties à la procédure (SCHWEIZER, op. cit., n° 15 ad art. 156 CPC). Par tribunal au sens de l' art. 156 CPC, il faut entendre le juge civil, soit en l'occurrence le Tribunal d'arrondissement de la Côte. Le tiers qui se plaint d'une prise en compte insuffisante de ses intérêts par la décision du juge civil dispose encore dans ce cadre des voies de droit prévues par le CPC (cf. art. 308 ss, 319 al. 1 CPC). S'agissant d'une décision incidente, la condition du préjudice irréparable (art. 319 let. b ch. 2 CPC) serait réalisée, en particulier si est invoquée une atteinte à un secret protégé (SCHWEIZER, op. cit., n° 15 ad art. 156 CPC; CHABLOT/COPT, in Petit commentaire, Code de procédure civile, 2021, n° 13 ad art. 156 CPC; CHRISTIAN LEU, in Schweizerische Zivilprozessordnung [ZPO], Kommentar, 2 e éd. 2016, n° 29 ad art. 156 CPC; SAMUEL BAUMGARTNER, in ZPO, Oberhammer et al. [éd.], 3 e éd. 2021, n° 7 ad art. 156 CPC)."
+            },
+            {
+              "marke": "E. 2.3",
+              "tiefe": 2,
+              "text": "En définitive, la protection juridique assurée devant le juge civil satisfait aux exigences de l' art. 29a Cst. Le recourant n'indique d'ailleurs pas quelles questions pourraient être traitées dans le cadre d'un recours contre l'acte de transmission des pièces, qui ne pourraient pas l'être par le tribunal civil."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "1C_584/2023",
+        "key": "bger_1C_584_2023",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=28.03.2024&to_date=28.03.2024&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=19&azaclir=aza&highlight_docid=aza%3A%2F%2F28-03-2024-1C_584-2023&number_of_ranks=27"
+      },
+      "ecli": "ECLI:CH:BGE:2024:150.I.191"
+    }
+  ]
+}

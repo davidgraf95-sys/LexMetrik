@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-07-17",
+  "erzeugt": "2026-07-18",
   "erlass": "BVG",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -13,6 +13,16 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 1
+      },
+      {
+        "key": "bge_150_V_161",
+        "zitierung": "BGE 150 V 161",
+        "regesteKurz": "Art. 5 Abs. 2, Art. 6, Art. 113 BV; Art. 1 Abs. 1 BVG; Art. 2-4 FZG; Art. 16 Abs. 1 FZV; Art. 92 Abs. 1 Ziff. 10 und Art. 93 SchKG; § 5 Abs. 1, § 6 Abs. 3, § 7 Abs. 1, § 11, § 13a Abs. 1 des Gesetzes des Kantons Basel-Landschaft vom 21. Ju…",
+        "datum": "2024-02-01",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       },
       {
         "key": "bge_148_V_234",
@@ -111,6 +121,16 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
+      },
+      {
+        "key": "bge_150_V_89",
+        "zitierung": "BGE 150 V 89",
+        "regesteKurz": "Art. 35a Abs. 2 (in den Fassungen vor und ab 1. Januar 2021), Art. 6 BVG; Art. 135 OR analog; Rückforderung von Rentenleistungen; Kollisionsrecht; Verhältnis Gesetz - Reglement; Beginn der relativen Frist für die Rückforderung; Fristunterb…",
+        "datum": "2023-11-29",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       }
     ],
     "15": [
@@ -177,6 +197,18 @@
         "gewicht": 0
       }
     ],
+    "19": [
+      {
+        "key": "bge_151_V_333",
+        "zitierung": "BGE 151 V 333",
+        "regesteKurz": "Art. 19 BVG; Art. 20 BVV 2; Art. 15 Abs. 1 lit. b FZV; vorrangige Begünstigte hinsichtlich der Erhaltung des Vorsorgeschutzes im Todesfall; geschiedener Ehegatte. Geschiedene Ehegatten gehören gemäss Art. 19 BVG zum Kreis der überlebenden…",
+        "datum": "2025-07-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "22": [
       {
         "key": "bge_148_V_334",
@@ -190,6 +222,16 @@
       }
     ],
     "23": [
+      {
+        "key": "bge_150_V_410",
+        "zitierung": "BGE 150 V 410",
+        "regesteKurz": "Art. 16 ATSG; Art. 28a Abs. 1 IVG; Art. 26 Abs. 2, Art. 26 bis Abs. 3 und Art. 49 Abs. 1 bis IVV (in der Fassung vom 3. November 2021, in Kraft vom 1. Januar 2022 bis 31. Dezember 2023); Invalideneinkommen; Abzug vom Tabellenlohn. Die mit…",
+        "datum": "2024-07-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_147_V_322",
         "zitierung": "BGE 147 V 322",
@@ -275,12 +317,60 @@
         "gewicht": 0
       }
     ],
+    "48": [
+      {
+        "key": "bge_150_V_26",
+        "zitierung": "BGE 150 V 26",
+        "regesteKurz": "Art. 62 Abs. 1 und Art. 73 BVG; Zuständigkeiten im Streit betreffend die Sanierung einer Vorsorgeeinrichtung. Bestätigung der Rechtsprechung, wonach es keine Kompetenzattraktion des kantonalen Berufsvorsorgegerichts in Bezug auf rein aufsi…",
+        "datum": "2023-11-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "49": [
       {
         "key": "bge_146_V_28",
         "zitierung": "BGE 146 V 28",
         "regesteKurz": "Art. 53d Abs. 1 BVG; Art. 27h Abs. 1 BVV 2 in der vom 1. Januar 2005 bis 31. Mai 2009 geltenden Fassung; Teilliquidation; Anspruch auf Wertschwankungsreserven. Eine (anschluss-)vertragliche Regelung, die bei einer Teilliquidation (mit Stic…",
         "datum": "2020-01-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "61": [
+      {
+        "key": "bge_150_V_26",
+        "zitierung": "BGE 150 V 26",
+        "regesteKurz": "Art. 62 Abs. 1 und Art. 73 BVG; Zuständigkeiten im Streit betreffend die Sanierung einer Vorsorgeeinrichtung. Bestätigung der Rechtsprechung, wonach es keine Kompetenzattraktion des kantonalen Berufsvorsorgegerichts in Bezug auf rein aufsi…",
+        "datum": "2023-11-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "62": [
+      {
+        "key": "bge_150_V_26",
+        "zitierung": "BGE 150 V 26",
+        "regesteKurz": "Art. 62 Abs. 1 und Art. 73 BVG; Zuständigkeiten im Streit betreffend die Sanierung einer Vorsorgeeinrichtung. Bestätigung der Rechtsprechung, wonach es keine Kompetenzattraktion des kantonalen Berufsvorsorgegerichts in Bezug auf rein aufsi…",
+        "datum": "2023-11-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "73": [
+      {
+        "key": "bge_151_III_591",
+        "zitierung": "BGE 151 III 591",
+        "regesteKurz": "Art. 73 Abs. 1 lit. b BVG; sachliche Zuständigkeit des kantonalen Gerichts für Streitigkeiten im Bereich der beruflichen Vorsorge; Klage auf Rückerstattung von Prämien der gebundenen Selbstvorsorge. Die Klage auf Rückerstattung von Prämien…",
+        "datum": "2025-06-24",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -391,6 +481,16 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
+      },
+      {
+        "key": "bge_150_V_89",
+        "zitierung": "BGE 150 V 89",
+        "regesteKurz": "Art. 35a Abs. 2 (in den Fassungen vor und ab 1. Januar 2021), Art. 6 BVG; Art. 135 OR analog; Rückforderung von Rentenleistungen; Kollisionsrecht; Verhältnis Gesetz - Reglement; Beginn der relativen Frist für die Rückforderung; Fristunterb…",
+        "datum": "2023-11-29",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       }
     ],
     "53d": [
@@ -399,6 +499,30 @@
         "zitierung": "BGE 146 V 28",
         "regesteKurz": "Art. 53d Abs. 1 BVG; Art. 27h Abs. 1 BVV 2 in der vom 1. Januar 2005 bis 31. Mai 2009 geltenden Fassung; Teilliquidation; Anspruch auf Wertschwankungsreserven. Eine (anschluss-)vertragliche Regelung, die bei einer Teilliquidation (mit Stic…",
         "datum": "2020-01-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "65c": [
+      {
+        "key": "bge_150_V_26",
+        "zitierung": "BGE 150 V 26",
+        "regesteKurz": "Art. 62 Abs. 1 und Art. 73 BVG; Zuständigkeiten im Streit betreffend die Sanierung einer Vorsorgeeinrichtung. Bestätigung der Rechtsprechung, wonach es keine Kompetenzattraktion des kantonalen Berufsvorsorgegerichts in Bezug auf rein aufsi…",
+        "datum": "2023-11-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "65d": [
+      {
+        "key": "bge_150_V_26",
+        "zitierung": "BGE 150 V 26",
+        "regesteKurz": "Art. 62 Abs. 1 und Art. 73 BVG; Zuständigkeiten im Streit betreffend die Sanierung einer Vorsorgeeinrichtung. Bestätigung der Rechtsprechung, wonach es keine Kompetenzattraktion des kantonalen Berufsvorsorgegerichts in Bezug auf rein aufsi…",
+        "datum": "2023-11-09",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
