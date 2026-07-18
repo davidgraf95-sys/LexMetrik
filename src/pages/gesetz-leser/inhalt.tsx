@@ -926,10 +926,39 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     return () => { window.cancelAnimationFrame(id); setzeSuchHighlight(null, ''); };
   }, [treffer, sucheTrim]);
 
+  // §15.2 CLS-Lade-Reservierung: solange Snapshot/Struktur/Currency async laden,
+  // reserviert min-h-screen (Token, §13) die volle Lesehöhe. Kein Inhalt wird
+  // versteckt/gekürzt (§15/2) — es ist derselbe Spinner-Platzhalter für alle
+  // Lade-Pfade (Fehler ausgenommen), damit der einwachsende React-Baum keinen
+  // grossen Sprung erzeugt.
+  const ladeAnzeige = (
+    <div className="min-h-screen py-12 text-center space-y-3">
+      <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
+      <p className="text-body-s text-ink-500">Der Erlass wird abgerufen …</p>
+    </div>
+  );
+
   if (fehler) {
     // W2·10-UI-NAV/N0b: hilfreiche Fehlseite (angefragter Key + Fuzzy-Vorschläge +
     // eingebettetes Erlass-Suchfeld) statt der nackten «nicht verfügbar»-Notiz.
     return <GesetzFehlSeite schluessel={schluessel} manifest={manifest} />;
+  }
+  // ── A9 §15.2-Pin: Currency-Chips NICHT nachträglich einwachsen lassen ────────
+  // Die Kopf-Chips «geltend geprüft am … / nächste Fassung ab …» (ErlassLeserKopf)
+  // stehen im Prerender (erlassVolltextHtml projiziert currency.json build-time).
+  // Der Client lädt currency aber async (ladeCurrency, eigener Fetch). Rendert ein
+  // Kopf-Pfad die Kopfzeile schon VOR dem Currency-Fetch, wachsen die zwei
+  // whitespace-nowrap-Chips nachträglich in die flex-wrap-Meta-Zeile ein und
+  // schieben Ingress + 2-Spalten-Grid ~30 px nach unten (Lade-Shift, auf dem
+  // 2-vCPU-Runner voll gezählt: CLS ~0.10, lokal repro unter 6× Drossel + langsamem
+  // Netz = 0.086). Darum ALLE Kopf-tragenden Render-Pfade (pdf-embed / nur-live-link
+  // / Volltext) auf den AUFGELÖSTEN Currency-Stand pinnen (§15.2 «Client-Initialstate
+  // auf den Server-Zustand pinnen»): solange `currency === null`, bleibt der
+  // reservierte Lade-Platzhalter stehen — kein Inhalt versteckt (§15/2). `ladeCurrency`
+  // löst IMMER auf (Fetch-Fehler ⇒ {}), i. d. R. lange vor dem grossen eintraege-Fetch
+  // ⇒ kein LCP-Verlust, und die Kopfzeile kann den Reader nicht aufhängen.
+  if (erlass && currency === null) {
+    return ladeAnzeige;
   }
   // ── pdf-embed: amtliches PDF in-app (kein extrahierbarer Volltext-HTML) ──────
   // Auftrag David 25.6.2026: statt nacktem Live-Link das amtliche Fedlex-PDF in
@@ -1017,13 +1046,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // laden: ohne sie kollabiert das (bei Bund prerenderte) Volltext-Dokument auf
     // die kurze Spinner-Zeile und der einwachsende React-Baum erzeugt den grossen
     // CLS-Sprung. min-h-screen ist ein Token (§13), reserviert nur Platz, kürzt
-    // keinen Inhalt (§15/2).
-    return (
-      <div className="min-h-screen py-12 text-center space-y-3">
-        <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
-        <p className="text-body-s text-ink-500">Der Erlass wird abgerufen …</p>
-      </div>
-    );
+    // keinen Inhalt (§15/2). Derselbe `ladeAnzeige`-Platzhalter wie der Currency-Pin.
+    return ladeAnzeige;
   }
 
   const regRef = (id: string) => (el: HTMLElement | null) => {
