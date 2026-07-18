@@ -395,7 +395,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             Spalte hinausragen → sonst wurde Text rechts abgeschnitten (Befund David
             25.6.2026). Der Wortumbruch im Absatz (overflow-wrap:anywhere) bleibt. */}
         {artOffen && (
-        <div className="max-w-reading min-w-0 overflow-x-clip">
+        <div className="max-w-normtext min-w-0 overflow-x-clip">
           <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
             zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel, fassung: erlass.stand, permalinkBasis: `${basisPfad}#art-${e.artikel}` }}
             fnProAbsatz={fnProAbsatz} fnProItem={fnProItem}

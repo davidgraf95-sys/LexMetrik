@@ -43,7 +43,7 @@ export function ErlassKopfBlock({ kopf, intern }: { kopf: ErlassKopf; intern?: I
     return 'font-serif text-body-l leading-[1.65] text-ink-700';
   };
   return (
-    <section aria-label="Ingress" className="max-w-reading space-y-3 border-b border-rule-struktur pb-5">
+    <section aria-label="Ingress" className="max-w-normtext space-y-3 border-b border-rule-struktur pb-5">
       {kopf.erlassdatum && (
         <p className="font-serif text-body-s text-ink-500">{kopf.erlassdatum}</p>
       )}

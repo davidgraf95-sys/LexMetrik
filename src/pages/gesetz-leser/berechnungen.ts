@@ -131,8 +131,11 @@ export function berechneSekLabelById(sektionen: Sektion[]): Map<string, string> 
 // String-Builder `erlassVolltextHtml` emittiert kein `nt-art-cv` — die
 // content-visibility-Optimierung existiert nur im Client-Reader).
 //
-// Kalibrierung: Lesespalte `max-w-reading` (≈ 40rem ≈ 640px), Serif-Body ~18px ×
-// 1.65 ≈ 30px/Zeile, ~68 Zeichen je Lesezeile. Die Konstanten müssen nicht
+// Kalibrierung: Lesespalte `max-w-normtext` (≈ 42rem ≈ 672px, E6/A37), Serif-Body
+// ~18px × 1.65 ≈ 30px/Zeile, ~71 Zeichen je Lesezeile. Der Zeilen-Teiler unten (68)
+// bleibt bewusst knapper als die reale ~71-ch-Zeile → die Schätzung fällt eher etwas
+// zu HOCH aus (mehr angenommene Zeilen) = die gewünschte konservative Richtung
+// («echte Höhe ≤ Schätzung»). Die Konstanten müssen nicht
 // pixelgenau sein — für einen proportionalen Balken zählt das VERHÄLTNIS der
 // Artikel zueinander. Bewusst leicht grosszügig (echte Höhe ≤ Schätzung), damit
 // die Höhe beim Rendern eher schrumpft (Daumen kriecht hoch) als „wegläuft".
