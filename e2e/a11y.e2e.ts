@@ -190,6 +190,16 @@ test('Gesetze — Reader Bund (GebV-HReg, Tarif-Tabelle)', async ({ page }, test
 })
 
 test('Rechtsprechung — Übersicht', async ({ page }, testInfo) => {
+  // Budget 120 s statt 60 s (§6.3 INFRASTRUKTUR, kein Assertion-Change): die
+  // /rechtsprechung-Übersicht rendert den GESAMTEN Korpus ungeblättert (Liste,
+  // Rechtsprechung.tsx) — mit BGE 148–151 (register.json ~2,9 MB) wächst das DOM
+  // so, dass axe.analyze lokal ~25 s braucht (1 Worker, isoliert gemessen 18.7.).
+  // Auf dem 4×-gedrosselten CI-Runner (×2–3, Starvation-Forensik 17.7.) reisst das
+  // das 60-s-«schwer»-Budget. Scoping (axe include/exclude) hilft nicht, weil die
+  // grosse Entscheid-Liste GENAU der zu prüfende Hauptinhalt ist — Scoping würde
+  // nur Nav/Footer sparen (Bruchteil) und die Zeilen-Abdeckung schwächen. Darum
+  // gezielt nur DIESE Prüfung auf 120 s, alle übrigen Specs bleiben strikt bei 60 s.
+  testInfo.setTimeout(120_000)
   await oeffnen(page, '/rechtsprechung')
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await axePruefen(page, testInfo, 'rechtsprechung-uebersicht')
