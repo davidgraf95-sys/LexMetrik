@@ -178,9 +178,15 @@ test('Fundstelle B (Zitiert-Gruppe): ↳ E.-Sprung erreicht die zitierende Erwä
   await expect(kontext.getByText(/davon\s+\d+\s+im\s*Korpus/).first()).toBeVisible()
   await expect(kontext.getByText('im Korpus (noch) nicht erfasst', { exact: false }).first()).toBeVisible()
   // Aufgelöster Treffer als Link-Chip (BGE 150 II 346) — kein grauer Nicht-Link.
-  await expect(kontext.locator('a[href*="bge_150_II_346"]').first()).toBeVisible()
-  // In-Text-Sprung zur zitierenden Stelle.
-  const sprung = kontext.getByRole('button', { name: /zitierende.*springen/i }).first()
+  const chipZeile = kontext.locator('li', { has: page.locator('a[href*="bge_150_II_346"]') })
+  await expect(chipZeile).toBeVisible()
+  // In-Text-Sprung zur zitierenden Stelle: der ↳-Sprung-Button, der ZU DIESEM Chip
+  // gehört (dieselbe <li>-Zeile), landet an dessen erster Fundstelle (E. 1.1 = #e-1-1).
+  // NICHT `.first()` der ganzen Gruppe: seit O-4 (#263, de-Filter gehoben) lösen auch
+  // BGE 148 I 104 / 148 V 321 auf, deren erste Fundstelle (E. 4.3.3 / E. 3.2) VOR E. 1.1
+  // steht — `.first()` zeigte damit auf E. 4.3.3, nicht mehr auf die hier verifizierte
+  // Kante. Zeilen-scharf gebunden bleibt der Test robust gegen weiteres Kanten-Wachstum.
+  const sprung = chipZeile.getByRole('button', { name: /zitierende.*springen/i })
   await expect(sprung).toBeVisible()
   await sprung.click()
   await expect(page.locator('#e-1-1')).toBeInViewport({ timeout: 10_000 })
