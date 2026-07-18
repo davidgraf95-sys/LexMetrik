@@ -1,0 +1,2620 @@
+{
+ "erlass": "VZG",
+ "abdeckung": {
+  "fussnoten": 222,
+  "ereignis": 158,
+  "referenz": 63,
+  "unparsed": 1
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": "5"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": "6"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": "3"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": "4"
+    }
+   ]
+  },
+  "7": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "10": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": "1"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "11": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "13": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "16": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "20": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "24": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "29": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "30": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "32": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "34": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "37": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "38": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "39": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "42": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "43": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "45": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    }
+   ]
+  },
+  "46": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "49": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "50": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "51": {
+   "giltSeit": "1994-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1994-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1993 3183",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1993/3183_3183_3183"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "53": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "54": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "55": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "57": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "58": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "61": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "63": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "64": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "65": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "66": {
+   "giltSeit": "2012-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2012-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2011 4659",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/667"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "71": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "72": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "73": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "74": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "75": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "78": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "80": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "81": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "82": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "83": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "84": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "85": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "88": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "89": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "90": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "91": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "92": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1924-03-03",
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "93": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1924-03-03",
+     "wirkung": false,
+     "quellen": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "95": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "97": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "98": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "99": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "100": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "101": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "102": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "103": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "104": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "105": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "106": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "108": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "112": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "113": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "116": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "120": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "121": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "123": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "125": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "126": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "128": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "129": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "130": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "106_a": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164 2420",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "130_a": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "130_b": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "130_c": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "130_d": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "130_e": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "130_f": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "130_g": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "133_134": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "23_a": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "23_b": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "23_c": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "23_d": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "60_a": {
+   "giltSeit": "1994-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1994-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1993 3183",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1993/3183_3183_3183"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "73_a": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "73_b": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "73_c": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "73_d": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "73_e": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "73_f": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "73_g": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "73_h": {
+   "giltSeit": "1997-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1997-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "73_i": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "78_a": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "84_a": {
+   "giltSeit": "1976-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1976-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1976 164",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "disp_u1_art_135",
+   "nr": "222",
+   "roh": "Gegenstandslose UeB."
+  }
+ ]
+}

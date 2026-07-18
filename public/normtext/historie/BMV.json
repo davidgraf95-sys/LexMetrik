@@ -1,0 +1,97 @@
+{
+ "erlass": "BMV",
+ "abdeckung": {
+  "fussnoten": 9,
+  "ereignis": 5,
+  "referenz": 4,
+  "unparsed": 0
+ },
+ "artikel": {
+  "4": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "bezeichnung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2004 4937",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2016 2965",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/497"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "giltSeit": "2016-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2016 2645",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/423"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "33": {
+   "giltSeit": "2013-10-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2013-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 3093",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/599"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "36": {
+   "giltSeit": "2013-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2013-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2013 2315",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/484"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

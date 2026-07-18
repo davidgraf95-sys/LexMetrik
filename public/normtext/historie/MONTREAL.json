@@ -1,0 +1,87 @@
+{
+ "erlass": "MONTREAL",
+ "abdeckung": {
+  "fussnoten": 8,
+  "ereignis": 5,
+  "referenz": 3,
+  "unparsed": 0
+ },
+ "artikel": {
+  "21": {
+   "giltSeit": "2024-12-28",
+   "ereignisse": [
+    {
+     "typ": "betrag",
+     "datum": "2024-12-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2026 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "betrag",
+     "datum": "2024-12-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2026 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "giltSeit": "2024-12-28",
+   "ereignisse": [
+    {
+     "typ": "betrag",
+     "datum": "2024-12-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2026 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "betrag",
+     "datum": "2024-12-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2026 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "betrag",
+     "datum": "2024-12-28",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2026 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

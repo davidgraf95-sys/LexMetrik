@@ -1,0 +1,75 @@
+{
+ "erlass": "CMR",
+ "abdeckung": {
+  "fussnoten": 6,
+  "ereignis": 4,
+  "referenz": 1,
+  "unparsed": 1
+ },
+ "artikel": {
+  "23": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1983 1933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1983/1933_1933_1933"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1983 1933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1983/1933_1933_1933"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1983 1933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1983/1933_1933_1933"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1983 1933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1983/1933_1933_1933"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "31",
+   "nr": "7",
+   "roh": "Fassung für Österreich: «Ab- oder Zurückweisung»."
+  }
+ ]
+}

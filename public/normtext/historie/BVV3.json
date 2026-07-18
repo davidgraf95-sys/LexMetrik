@@ -1,0 +1,501 @@
+{
+ "erlass": "BVV3",
+ "abdeckung": {
+  "fussnoten": 37,
+  "ereignis": 30,
+  "referenz": 7,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1986 326",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/326_326_326"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2005-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2004 4643",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/712"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 4155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
+      }
+     ],
+     "absatz": "1",
+     "item": "1"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2006-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2005 4279",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2005/559"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2005 4279",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2005/559"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 506",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 3755",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/681"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 2399",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2399_2399_2399"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1989 1903",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1989/1903_1903_1903"
+      }
+     ],
+     "absatz": "3",
+     "item": "c"
+    },
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 2379",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2379_2379_2379"
+      }
+     ],
+     "absatz": "3",
+     "item": "c"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 2379",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2379_2379_2379"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 2379",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2379_2379_2379"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 4155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 2379",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2379_2379_2379"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "1995-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1994 2379",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2379_2379_2379"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1996 3455",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/3455_3455_3455"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 4155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": "2024-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2009-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2008 4651",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/650"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 73",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/73"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "7": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 622",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/622"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 4155",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2001 1068",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/162"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 506",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2001 1068",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/162"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2008-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2007 5177",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/725"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "8": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 622",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/622"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "2_a": {
+   "giltSeit": "2020-10-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2020-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 3755",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/681"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3_a": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 3755",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/681"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 506",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 506",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "7_a": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 622",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/622"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "7_b": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 622",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/622"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8_a": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 622",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/622"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

@@ -1,0 +1,201 @@
+{
+ "erlass": "FIDLEG",
+ "abdeckung": {
+  "fussnoten": 50,
+  "ereignis": 9,
+  "referenz": 40,
+  "unparsed": 1
+ },
+ "artikel": {
+  "3": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": "5"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    }
+   ]
+  },
+  "4": {
+   "giltSeit": "2024-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    },
+    {
+     "typ": "fassung",
+     "datum": "2024-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": "3",
+     "item": "e"
+    }
+   ]
+  },
+  "29": {
+   "giltSeit": "2021-02-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-02-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    }
+   ]
+  },
+  "35": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
+   ]
+  },
+  "50": {
+   "giltSeit": "2024-03-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2024-03-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "77": {
+   "giltSeit": "2021-02-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-02-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": [
+  {
+   "token": "96",
+   "nr": "52",
+   "roh": "V vom 6. Nov. 2019 über die abschliessende Inkraftsetzung des Finanzinstitutsgesetzes (AS 2019 4631)."
+  }
+ ]
+}

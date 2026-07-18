@@ -1,0 +1,696 @@
+{
+ "erlass": "BETMKV",
+ "abdeckung": {
+  "fussnoten": 62,
+  "ereignis": 41,
+  "referenz": 21,
+  "unparsed": 0
+ },
+ "artikel": {
+  "5": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "ausdruck",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "11": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1bis",
+     "item": "2"
+    }
+   ]
+  },
+  "13": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2022-08-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2022-08-01"
+  },
+  "15": {
+   "giltSeit": "2023-01-23",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2023-01-23",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 698",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    }
+   ]
+  },
+  "16": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    }
+   ]
+  },
+  "17": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "18": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "19": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "20": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "24": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "29": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "bezeichnung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 589",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/589"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
+   ]
+  },
+  "44": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "51": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "57": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    }
+   ]
+  },
+  "58": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "60": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "66": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "72": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "75": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "80": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "22_a": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "65_a": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6_a": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "79_a": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "88_a": {
+   "giltSeit": "2022-08-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2022-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2022 386",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

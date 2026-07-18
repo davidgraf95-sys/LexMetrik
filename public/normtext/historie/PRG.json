@@ -1,0 +1,30 @@
+{
+ "erlass": "PRG",
+ "abdeckung": {
+  "fussnoten": 5,
+  "ereignis": 1,
+  "referenz": 4,
+  "unparsed": 0
+ },
+ "artikel": {
+  "13": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 496",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/496"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

@@ -1,0 +1,66 @@
+{
+ "erlass": "VBB",
+ "abdeckung": {
+  "fussnoten": 5,
+  "ereignis": 3,
+  "referenz": 2,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 4007",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/671"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 4007",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/671"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2016-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2016-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2015 4007",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/671"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

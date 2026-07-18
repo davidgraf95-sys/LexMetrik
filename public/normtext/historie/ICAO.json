@@ -1,0 +1,188 @@
+{
+ "erlass": "ICAO",
+ "abdeckung": {
+  "fussnoten": 13,
+  "ereignis": 8,
+  "referenz": 5,
+  "unparsed": 0
+ },
+ "artikel": {
+  "45": {
+   "giltSeit": "1958-05-16",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1958-05-16",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1958 283",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1958/283_289_295"
+      },
+      {
+       "label": "BBl 1955 II 495",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "48": {
+   "giltSeit": "1975-09-11",
+   "ereignisse": [
+    {
+     "typ": "bereinigt",
+     "datum": "1975-09-11",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1957 202",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1957/202_206_216"
+      },
+      {
+       "label": "BBl 1955 II 495",
+       "url": ""
+      },
+      {
+       "label": "AS 1976 496",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/496_496_496"
+      },
+      {
+       "label": "BBl 1963 II 192",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    }
+   ]
+  },
+  "49": {
+   "giltSeit": "1956-12-12",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1956-12-12",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1957 202",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1957/202_206_216"
+      },
+      {
+       "label": "BBl 1955 II 495",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    }
+   ]
+  },
+  "50": {
+   "giltSeit": "2026-06-12",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2026-06-12",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2026 350",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/350"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    }
+   ]
+  },
+  "56": {
+   "giltSeit": "2026-06-12",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2026-06-12",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2026 349",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/349"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "61": {
+   "giltSeit": "1956-12-12",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "1956-12-12",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 1957 202",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1957/202_206_216"
+      },
+      {
+       "label": "BBl 1955 II 495",
+       "url": ""
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3_bis": {
+   "giltSeit": "1998-10-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1998-10-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2004 3999",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/580"
+      },
+      {
+       "label": "BBl 1985 II 185",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_185_187_174"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "83_bis": {
+   "giltSeit": "1997-06-20",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "1997-06-20",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2004 3999",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/580"
+      },
+      {
+       "label": "BBl 1984 I 665",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1984/1_665_666_498"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

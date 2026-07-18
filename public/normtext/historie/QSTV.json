@@ -1,0 +1,175 @@
+{
+ "erlass": "QSTV",
+ "abdeckung": {
+  "fussnoten": 19,
+  "ereignis": 11,
+  "referenz": 8,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "1",
+     "item": "n"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "1",
+     "item": "o"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "1",
+     "item": "p"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "1",
+     "item": "q"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "1",
+     "item": "r"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "giltSeit": "2024-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2024-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2023 398",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "5_a": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 586",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/586"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 8",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/8"
+      }
+     ],
+     "absatz": null,
+     "item": "f"
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

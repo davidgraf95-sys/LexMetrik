@@ -1,0 +1,84 @@
+{
+ "erlass": "FIDLEV",
+ "abdeckung": {
+  "fussnoten": 38,
+  "ereignis": 4,
+  "referenz": 34,
+  "unparsed": 0
+ },
+ "artikel": {
+  "47": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "48": {
+   "giltSeit": "2021-08-01",
+   "ereignisse": [
+    {
+     "typ": "ausdruck",
+     "datum": "2021-08-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "110": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 835",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/835"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "111": {
+   "giltSeit": "2022-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2022-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2021 835",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/835"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

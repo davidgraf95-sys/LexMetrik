@@ -1,0 +1,438 @@
+{
+ "erlass": "BGBM",
+ "abdeckung": {
+  "fussnoten": 26,
+  "ereignis": 21,
+  "referenz": 5,
+  "unparsed": 0
+ },
+ "artikel": {
+  "1": {
+   "giltSeit": "2006-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "giltSeit": "2025-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 376",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
+      },
+      {
+       "label": "BBl 2022 2651",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "giltSeit": "2006-07-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "giltSeit": "2006-07-01",
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2006-07-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "3bis",
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 641",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/126"
+      },
+      {
+       "label": "BBl 2017 1851",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/417"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "7": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2006-07-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2006-07-01"
+  },
+  "8": {
+   "giltSeit": "2006-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "9": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 641",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/126"
+      },
+      {
+       "label": "BBl 2017 1851",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/417"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 641",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/126"
+      },
+      {
+       "label": "BBl 2017 1851",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/417"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2197 1069",
+       "url": ""
+      },
+      {
+       "label": "BBl 2001 4202",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "10_a": {
+   "giltSeit": "2006-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8_a": {
+   "giltSeit": "2006-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8_b": {
+   "giltSeit": "2006-07-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8_c": {
+   "giltSeit": "2007-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2006-07-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 2363 2366",
+       "url": ""
+      },
+      {
+       "label": "BBl 2005 465",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2007-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2006 3459",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
+      },
+      {
+       "label": "BBl 1999 1979",
+       "url": ""
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

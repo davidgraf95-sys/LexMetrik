@@ -1,0 +1,223 @@
+{
+ "erlass": "DSG",
+ "abdeckung": {
+  "fussnoten": 26,
+  "ereignis": 10,
+  "referenz": 16,
+  "unparsed": 0
+ },
+ "artikel": {
+  "24": {
+   "giltSeit": "2025-04-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2025-04-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2024 257",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/257"
+      },
+      {
+       "label": "BBl 2023 84",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/84"
+      }
+     ],
+     "absatz": "5bis",
+     "item": null
+    }
+   ]
+  },
+  "43": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
+      },
+      {
+       "label": "BBl 2022 345",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
+      },
+      {
+       "label": "BBl 2022 345",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
+      }
+     ],
+     "absatz": "3bis",
+     "item": null
+    }
+   ]
+  },
+  "44": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "inkraft",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
+      },
+      {
+       "label": "BBl 2022 345",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "47": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
+      },
+      {
+       "label": "BBl 2022 345",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "57": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2025 444",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/444"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "72": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
+      },
+      {
+       "label": "BBl 2022 345",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "44_a": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
+      },
+      {
+       "label": "BBl 2022 345",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "47_a": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
+      },
+      {
+       "label": "BBl 2022 345",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "72_a": {
+   "giltSeit": "2023-09-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2023-09-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2023 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
+      },
+      {
+       "label": "BBl 2022 345",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

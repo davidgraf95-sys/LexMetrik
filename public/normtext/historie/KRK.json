@@ -1,0 +1,30 @@
+{
+ "erlass": "KRK",
+ "abdeckung": {
+  "fussnoten": 1,
+  "ereignis": 1,
+  "referenz": 0,
+  "unparsed": 0
+ },
+ "artikel": {
+  "43": {
+   "giltSeit": "2002-11-18",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2002-11-18",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2007 4095",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/544"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ },
+ "residuum": []
+}

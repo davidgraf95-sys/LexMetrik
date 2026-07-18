@@ -1,0 +1,357 @@
+{
+ "erlass": "KKV_FINMA",
+ "abdeckung": {
+  "fussnoten": 69,
+  "ereignis": 20,
+  "referenz": 47,
+  "unparsed": 2
+ },
+ "artikel": {
+  "66": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "67": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "72": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "81": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "86": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "107": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2021-01-01"
+  },
+  "110": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "111": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "112": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "114": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "typ": "fassung",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "118": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2021-01-01"
+  },
+  "116_a": {
+   "giltSeit": "2021-01-01",
+   "ereignisse": [
+    {
+     "typ": "eingefuegt",
+     "datum": "2021-01-01",
+     "wirkung": false,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "68_71": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2021-01-01"
+  },
+  "73_76": {
+   "giltSeit": null,
+   "ereignisse": [
+    {
+     "typ": "aufgehoben",
+     "datum": "2021-01-01",
+     "wirkung": true,
+     "quellen": [
+      {
+       "label": "AS 2020 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ],
+   "aufgehobenSeit": "2021-01-01"
+  }
+ },
+ "residuum": [
+  {
+   "token": "110",
+   "nr": "51",
+   "roh": "Finanzmarktaufsichtsgesetz vom 22. Juni 2007 (SR 956.1)"
+  },
+  {
+   "token": "112",
+   "nr": "57",
+   "roh": "Finanzmarktprüfverordnung vom 15. Okt. 2008 (SR 956.161)"
+  }
+ ]
+}
