@@ -82,7 +82,17 @@ export default {
       transitionDuration: { fast: 'var(--dur-fast)', base: 'var(--dur-base)', slow: 'var(--dur-slow)', stage: 'var(--dur-stage)' },
       transitionTimingFunction: { DEFAULT: 'var(--ease)' },
       boxShadow: { sm: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)' },
-      maxWidth: { content: '70rem', reading: '40rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)
+      // `reading` (40rem ≈ 66–71 ch) = die knappe Standard-Lesespalte site-weit
+      // (Verdikte, Leden). `normtext` (42rem ≈ 672px ≈ 70–72 ch) = die etwas
+      // grosszügigere Lesespalte NUR des Gesetzes-Readers (E6/A37, David 16.7.2026:
+      // «gib dem Gesetz mehr Platz … nutze den Platz der zur Verfügung steht»): die
+      // Norm gewinnt Breite, bleibt aber mit Reserve unter der Fedlex-tauglichen
+      // Lesbarkeits-Decke (≤ 75 ch, DESIGN-REGLEMENT-NORMTEXT §Typo-Skala /
+      // leser-lesemass.e2e — empirisch ~70–72 ch, ≥ 3 ch Luft) und verletzt §13/2
+      // nicht (Lesespalte, nie volle Fensterbreite). Beide zentriert (mx-auto),
+      // damit die Restbreite der 2-Spalten-Zelle ausbalanciert statt rechts als
+      // toter Steg liegt — dort trieb es zuvor den «Zitat»-Link weit nach rechts.
+      maxWidth: { content: '70rem', reading: '40rem', normtext: '42rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)
       // Einzug-Skala des Gesetzes-Readers (W2·5d G1 / DESIGN-REGLEMENT-NORMTEXT
       // §Weissraum-Rhythmus): EINE Stufe = 20px. Tiefe wird über Einzug getragen
       // (V2·L-1: gedeckelt bei 5 Stufen statt 3 — tiefe Kodifikationen ZGB/OR

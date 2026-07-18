@@ -165,7 +165,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // des Pane-Pfads → unter lg sind sowohl Seitenleiste als auch Gliederung Drawer
   // (kohärent, «nur bei echt-zu-klein in den Drawer»). Die Lesespalte bleibt nutzbar:
   // Inhaltsbreite ist auf max-w-content (70rem) gedeckelt, abzüglich 16rem TOC + gap-8
-  // läuft der Fliesstext (max-w-reading 40rem) nie unter ~26rem. SSR-Default false =
+  // läuft der Fliesstext (max-w-normtext 42rem, E6/A37) nie unter ~26rem. SSR-Default false =
   // mobil-Layout (byte-gleich). Ohne diese Erkennung behandelte der Code «tocOffen»
   // fälschlich als 2-Spalten-aktiv → der Gliederungs-Zugang verschwand beim Scrollen.
   // §15.2 «Client-Initialstate auf den Server-Zustand pinnen»: den WAHREN
@@ -1298,13 +1298,17 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           </aside>
         )}
 
-        {/* Lesespalte: hart auf die Lese-Token-Breite `max-w-reading` (40rem ≈
-            66–71 ch) begrenzt — die EINE Lesespalte gilt für alle Grundarten
-            (W2·5d G1 / DESIGN-REGLEMENT-NORMTEXT §Typo-Skala, R2: keine arbitrary
-            max-w mehr). Im 2-Spalten-Fall (istXl) trägt die innere ArtikelBody-
-            Spalte (parts.tsx, ebenfalls max-w-reading) die Begrenzung; darunter
-            zentriert die ganze Spalte auf max-w-reading. */}
-        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-reading') : 'mx-auto w-full max-w-reading'}`}>
+        {/* Lesespalte: auf die Reader-Lese-Token-Breite `max-w-normtext` (42rem ≈
+            70–72 ch) begrenzt und STETS zentriert (mx-auto) — E6/A37 (David 16.7.2026):
+            die Norm bekommt mehr Platz bis an die Fedlex-taugliche Lesbarkeits-Decke
+            (≤ 75 ch), und die Restbreite der 2-Spalten-Zelle (istXl) verteilt sich
+            symmetrisch statt rechts als toter Steg zu bleiben — der Steg trieb den
+            «Zitat»-Link weit nach rechts (A37-Befund). Das Zeilenmass bleibt gedeckelt
+            (§13/2 Lesespalte, nie volle Fensterbreite; R2: kein arbitrary max-w). Die
+            Artikel-Kopfzeile (Art. N · Zitat/Link) UND der Fliesstext (ArtikelBody /
+            Ingress) teilen sich dieselbe Breite `max-w-normtext` → «Zitat» fluchtet
+            bündig mit der rechten Textkante statt in den Leerraum zu wandern. */}
+        <div className="group/lese mx-auto w-full max-w-normtext">
           {/* A27 (David 12.7.2026): der Sticky Section-Kontextkopf «Titel › … ›
               Art. N › ⧉ Zitat» ist ENTFERNT. Seit A26 (#198) trägt der immer
               sichtbare Inhalts-Kopf (InhaltsKopf, Brotkrümel + Live-Artikel) die
