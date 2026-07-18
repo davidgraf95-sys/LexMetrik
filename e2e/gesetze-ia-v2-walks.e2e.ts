@@ -32,7 +32,13 @@ async function sprungWalk(page: Page, query: string): Promise<{ interaktionen: n
   await feld.fill(query)
   // Warten, bis der deterministische Sprung als oberster Treffer steht (kein
   // zusätzlicher Klick — das Warten ist keine Interaktion, nur Synchronisation).
-  await expect(listbox(page).getByText('Sprung', { exact: true })).toBeVisible()
+  // CI-Härtung 18.7.: 20-s-Timeout (statt Default 10 s) für den EINMAL-Load des
+  // ~4-MB-Artikel-Index. Auf dem 2-vCPU-Runner kann dessen Parse länger als 10 s
+  // brauchen, bis der «Sprung»-Treffer erscheint (Flaky-Quelle IA-1); die
+  // Schwester-Spec norm-sprung nutzt für denselben Index-Latch bereits 20 s. Reine
+  // Lade-Synchronisation, kein Prüfschritt — der Interaktions-Beweis (Enter → URL)
+  // bleibt eng gebunden und unverändert.
+  await expect(listbox(page).getByText('Sprung', { exact: true })).toBeVisible({ timeout: 20_000 })
   await feld.press('Enter')
   return { interaktionen: 1 } // Eingabe+Enter = 1
 }
