@@ -1,9 +1,19 @@
 {
-  "erzeugt": "2026-07-12",
+  "erzeugt": "2026-07-17",
   "erlass": "ZGB",
   "gewichtQuelle": "alt",
   "proArtikel": {
     "1": [
+      {
+        "key": "bge_149_II_462",
+        "zitierung": "BGE 149 II 462",
+        "regesteKurz": "Art. 132 Abs. 1 BV; Art. 83 lit. m, Art. 113 BGG; Art. 6 Abs. 1 lit. k, Art. 12 StG; Erlass der Emissionsabgabe bzw. emissionsabgaberechtlicher Freibetrag. Entscheide des Bundesverwaltungsgerichts betreffend den Erlass der Emissionsabgabe…",
+        "datum": "2023-09-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
       {
         "key": "bge_152_II_1",
         "zitierung": "BGE 152 II 1",
@@ -73,16 +83,6 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
-      },
-      {
-        "key": "bge_146_I_105",
-        "zitierung": "BGE 146 I 105",
-        "regesteKurz": "Art. 10 Abs. 2 Bst. a DBA CH-LU; Art. 31 f. VRK; Art. 8 und 9 BV; Verwaltungsverordnungen (Kreisschreiben etc.); Auslegung; Vertrauensschutz; Anforderungen an Praxisänderungen; Gleichbehandlung im Unrecht. Bedeutung von Verwaltungsverordnu…",
-        "datum": "2019-12-16",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
       }
     ],
     "2": [
@@ -117,6 +117,26 @@
         "gewicht": 0
       },
       {
+        "key": "bge_149_III_12",
+        "zitierung": "BGE 149 III 12",
+        "regesteKurz": "a Art. 519 ff. und 540 ZGB; Art. 71 und 206 Abs. 2 ZPO; Ungültigkeitsklage und Klage auf Feststellung der Erbunwürdigkeit; Schlichtungsverfahren. Klagen mehrere Kläger gegen mehrere Beklagte auf Ungültigkeit einer letztwilligen Verfügung o…",
+        "datum": "2022-11-02",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_126",
+        "zitierung": "BGE 148 III 126",
+        "regesteKurz": "Ziff. 1 Abs. 3 und Ziff. 22 Gesamtarbeitsvertrag 2019 der SBB (GAV) i.V.m. Art. 335b Abs. 3 OR; Verlängerung der Probezeit bei Krankheit. Bei krankheitsbedingtem Arbeitsausfall während der Probezeit verlängert sich diese um die Anzahl der…",
+        "datum": "2022-03-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_146_III_254",
         "zitierung": "BGE 146 III 254",
         "regesteKurz": "Voraussetzungen für die Zulässigkeit einer Beschwerde in Zivilsachen: Abgrenzung zwischen einem Teilentscheid (Art. 91 lit. a BGG) und einem Zwischenentscheid (Art. 93 BGG). Wie ist bei eventualgehäuften Rechtsbegehren der selbständig eröf…",
@@ -141,16 +161,6 @@
         "zitierung": "BGE 146 III 73",
         "regesteKurz": "Art. 122 f., 207 Abs. 1 und Art. 208 Abs. 1 Ziff. 2 ZGB; Art. 331 Abs. 3 OR; Ehescheidung; Vorsorgeausgleich und güterrechtliche Auseinandersetzung (Errungenschaftsbeteiligung); Berücksichtigung von Arbeitgeberbeitragsreserven. Bei Einleit…",
         "datum": "2019-12-11",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
-        "key": "bge_146_III_63",
-        "zitierung": "BGE 146 III 63",
-        "regesteKurz": "Art. 243 Abs. 2 lit. c ZPO; vereinfachtes Verfahren; Hinterlegung von Mietzinsen. Die \"Hinterlegung von Mietzinsen\" nach Art. 243 Abs. 2 lit. c ZPO umfasst streitwertunabhängig alle Mängelrechte nach Art. 259a Abs. 1 OR, welche der Mieter…",
-        "datum": "2019-11-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -231,12 +241,66 @@
         "gewicht": 0
       }
     ],
+    "5": [
+      {
+        "key": "bge_149_III_287",
+        "zitierung": "BGE 149 III 287",
+        "regesteKurz": "a Art. 74 Abs. 2 lit. a BGG; Art. 49 Abs. 1 BV; Beschwerde in Zivilsachen; Rechtsfrage von grundsätzlicher Bedeutung; Grundsatz des Vorrangs des Bundesrechts. Trotz Unterschreitens der gesetzlichen Streitwertgrenze verbleibt kein Raum für…",
+        "datum": "2023-04-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_149_III_400",
+        "zitierung": "BGE 149 III 400",
+        "regesteKurz": "Art. 738 ZGB; Auslegung eines gegenseitigen Näherbaurechts im Verhältnis zu Dritten, die an der Errichtung der Dienstbarkeit nicht beteiligt waren. Begriff des (gegenseitigen) Näherbaurechts (E. 3.5). Verhältnis des Erstbauenden zum Zweitb…",
+        "datum": "2023-05-26",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_I_25",
+        "zitierung": "BGE 149 I 25",
+        "regesteKurz": "Art. 49, 109 und 122 BV; § 34 KV/BS; § 8a Abs. 3 lit. a des Gesetzes des Kantons Basel-Stadt vom 5. Juni 2013 über die Wohnraumförderung (WRFG); abstrakte Normenkontrolle; Rückkehrrecht von Mietparteien nach einer Sanierung. Die streitige…",
+        "datum": "2022-12-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "6": [
+      {
+        "key": "bge_149_III_400",
+        "zitierung": "BGE 149 III 400",
+        "regesteKurz": "Art. 738 ZGB; Auslegung eines gegenseitigen Näherbaurechts im Verhältnis zu Dritten, die an der Errichtung der Dienstbarkeit nicht beteiligt waren. Begriff des (gegenseitigen) Näherbaurechts (E. 3.5). Verhältnis des Erstbauenden zum Zweitb…",
+        "datum": "2023-05-26",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "8": [
       {
         "key": "bge_151_II_237",
         "zitierung": "BGE 151 II 237",
         "regesteKurz": "Art. 42 Abs. 1, Art. 51 Abs. 1 lit. b und Art. 83 Abs. 2 AIG; Art. 97 Abs. 1 BGG; Gesuch um Wiedererwägung der Verweigerung des Familiennachzugs wegen des Vorliegens von Widerrufsgründen; Pflicht zur Ermittlung des entscheiderheblichen Sac…",
         "datum": "2024-09-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_148_III_105",
+        "zitierung": "BGE 148 III 105",
+        "regesteKurz": "Art. 8 ZGB; Art. 39 VVG; Beweis des Eintritts des Versicherungsfalls, Beweislast des Anspruchsberechtigten; Beweislastverteilung. Gemäss der auch im Bereich des Versicherungsvertrags geltenden Grundregel von Art. 8 ZGB hat der Anspruchsber…",
+        "datum": "2021-08-31",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -273,10 +337,30 @@
         "gewicht": 0
       },
       {
-        "key": "bge_147_III_73",
-        "zitierung": "BGE 147 III 73",
-        "regesteKurz": "Art. 8 ZGB; Krankentaggeldversicherung; Beweis des Erwerbsausfalls bei Arbeitslosigkeit; Vermutung der Erwerbstätigkeit. Die tatsächliche Vermutung, dass eine arbeitslose Person ohne Krankheit erwerbstätig wäre, gilt nur dann, wenn die Arb…",
-        "datum": "2021-01-19",
+        "key": "bge_149_III_478",
+        "zitierung": "BGE 149 III 478",
+        "regesteKurz": "Art. 5 Abs. 1 IPRG; Art. 958e Abs. 2 OR; anwendbares Recht bei der Auslegung einer Gerichtsstandsvereinbarung; Beweismass für den Nachweis der Gläubigerstellung. Enthält der Hauptvertrag sowohl eine Gerichtsstands- als auch eine Rechtswahl…",
+        "datum": "2023-08-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_III_218",
+        "zitierung": "BGE 149 III 218",
+        "regesteKurz": "Art. 74 Abs. 1 SchKG; Erhebung des Rechtsvorschlags per E-Mail. Die Erhebung des Rechtsvorschlags per E-Mail ist zulässig. Allerdings gilt bei E-Mail-Eingaben ein strenges Empfangsprinzip und es bestehen erhebliche Beweisrisiken. Beweislas…",
+        "datum": "2023-03-28",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_II_27",
+        "zitierung": "BGE 149 II 27",
+        "regesteKurz": "Art. 32 Abs. 2 DBG; Unterhaltskosten für Liegenschaften; Abzug von Instandstellungskosten bei \"wirtschaftlichem Neubau\" (Praxisänderung). Zu den Unterhaltskosten gehören gemäss der am 1. Januar 2010 in Kraft getretenen Fassung von Art. 32…",
+        "datum": "2023-02-23",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -307,6 +391,26 @@
     ],
     "23": [
       {
+        "key": "bge_148_V_209",
+        "zitierung": "BGE 148 V 209",
+        "regesteKurz": "Art. 65 der Verordnung (EG) Nr. 883/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 zur Koordinierung der Systeme der sozialen Sicherheit und Verordnung (EG) Nr. 987/2009 des Europäischen Parlaments und des Rates vom 16.…",
+        "datum": "2022-01-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_II_285",
+        "zitierung": "BGE 148 II 285",
+        "regesteKurz": "Art. 3 Abs. 1 und 2 sowie Art. 4b Abs. 1 StHG; Art. 127 Abs. 3 BV; § 8 Abs. 1 und 2 StG/LU; Wohnsitz bei einer Patchwork-Familie; leitender Angestellter; alternierender Wohnsitz. Grundsätze der Untersuchung, Mitwirkung und Beweislastvertei…",
+        "datum": "2021-12-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_147_V_156",
         "zitierung": "BGE 147 V 156",
         "regesteKurz": "Art. 25a Abs. 5 KVG; Restfinanzierung der Pflegekosten; Zuständigkeit. Bei im Zeitpunkt des Inkrafttretens der neuen Fassung von Art. 25a Abs. 5 KVG am 1. Januar 2019 bereits bestehendem Pflegeverhältnis mit Wohnsitzverlegung an den Stando…",
@@ -318,6 +422,16 @@
       }
     ],
     "24": [
+      {
+        "key": "bge_149_V_169",
+        "zitierung": "BGE 149 V 169",
+        "regesteKurz": "Art. 58 Abs. 1 und 3 ATSG; Art. 100 Abs. 5 BGG; örtliche Zuständigkeit der kantonalen Beschwerdeinstanz; formelle und materielle Rechtskraft eines negativen Zuständigkeitsentscheids. Ein Nichteintretensentscheid wegen örtlicher Unzuständig…",
+        "datum": "2023-10-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_147_V_156",
         "zitierung": "BGE 147 V 156",
@@ -375,6 +489,26 @@
         "gewicht": 0
       },
       {
+        "key": "bge_149_IV_213",
+        "zitierung": "BGE 149 IV 213",
+        "regesteKurz": "Art. 81 Abs. 1 BGG; Beschwerderecht im Ausstandsverfahren. Der Richter oder die Richterin kann den Entscheid, mit dem ein gegen ihn bzw. sie eingereichtes Ablehnungsbegehren gutgeheissen wurde, nicht mit Beschwerde in Strafsachen anfechten…",
+        "datum": "2023-04-06",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_I_2",
+        "zitierung": "BGE 149 I 2",
+        "regesteKurz": "Art. 10 und 13 EMRK; Art. 16, 29a, 35 und 93 Abs. 3 BV; Art. 2 lit. cbis, Art. 5a, 25 Abs. 3 lit. b, Art. 83 Abs. 1 lit. a und Art. 93 Abs. 1 und 95 Abs. 1 RTVG; Art. 28 ff. ZGB; Art. 1, 3, 5 Abs. 4 und Art. 18 der SRG-Konzession; Löschen…",
+        "datum": "2022-11-29",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_147_III_185",
         "zitierung": "BGE 147 III 185",
         "regesteKurz": "Art. 28 Abs. 1 und Art. 28a Abs. 1 Ziff. 3 ZGB; Persönlichkeitsverletzung durch Medieninhalte. Anforderungen an den Nachweis der weiterhin störenden Auswirkung in der Feststellungsklage nach Art. 28a Abs. 1 Ziff. 3 ZGB, speziell bei persön…",
@@ -397,12 +531,58 @@
         "gewicht": 0
       }
     ],
+    "55": [
+      {
+        "key": "bge_148_III_11",
+        "zitierung": "BGE 148 III 11",
+        "regesteKurz": "Art. 754 ff. OR; aktienrechtliche Verantwortlichkeit; Klagebefugnis. In der Konstellation, in der sowohl die Gesellschaft als auch der Gläubiger und/oder Aktionär unmittelbar bzw. direkt geschädigt sind, besteht, solange die Gesellschaft a…",
+        "datum": "2021-11-01",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "56": [
       {
         "key": "bge_147_I_325",
         "zitierung": "BGE 147 I 325",
         "regesteKurz": "Art. 127 Abs. 3 BV; Art. 20 Abs. 1 StHG; Art. 626 Ziff. 1 OR i.V.m. Art. 56 ZGB; Doppelbesteuerungsverbot; Hauptsteuerdomizil und Sitzwechsel. Verwirkung des doppelbesteuerungsrechtlichen Beschwerderechts des Steuerpflichtigen (E. 4.2). Üb…",
         "datum": "2020-08-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "104": [
+      {
+        "key": "bge_149_III_81",
+        "zitierung": "BGE 149 III 81",
+        "regesteKurz": "a Art. 98 BGG; Eheschutzentscheid als vorsorgliche Massnahme. Eheschutzentscheide sind vorsorgliche Massnahmen im Sinn von Art. 98 BGG (E. 1.3; Bestätigung der ständigen Rechtsprechung). Regeste b Art. 5 Abs. 2 und Art. 7 Abs. 1 HKsÜ; Art.…",
+        "datum": "2022-12-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "111": [
+      {
+        "key": "bge_149_III_81",
+        "zitierung": "BGE 149 III 81",
+        "regesteKurz": "a Art. 98 BGG; Eheschutzentscheid als vorsorgliche Massnahme. Eheschutzentscheide sind vorsorgliche Massnahmen im Sinn von Art. 98 BGG (E. 1.3; Bestätigung der ständigen Rechtsprechung). Regeste b Art. 5 Abs. 2 und Art. 7 Abs. 1 HKsÜ; Art.…",
+        "datum": "2022-12-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_21",
+        "zitierung": "BGE 148 III 21",
+        "regesteKurz": "Art. 159 Abs. 3 und Art. 163 ZGB; Art. 59 und 147 ZPO. Folgen der Nichtleistung des Prozesskostenvorschusses (provisio ad litem) durch den auf Scheidung klagenden Ehegatten. Begriff der Prozesshandlung und Folgen der versäumten Prozesshand…",
+        "datum": "2021-09-13",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -435,6 +615,18 @@
         "zitierung": "BGE 146 III 203",
         "regesteKurz": "a Art. 298 ZPO; Kindesanhörung und vorweggenommene (antizipierte) Beweiswürdigung. Voraussetzungen, unter denen das Gericht gestützt auf eine vorweggenommene Beweiswürdigung auf eine Kindesanhörung verzichten darf. Unterscheidung zwischen…",
         "datum": "2020-05-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "117": [
+      {
+        "key": "bge_149_III_81",
+        "zitierung": "BGE 149 III 81",
+        "regesteKurz": "a Art. 98 BGG; Eheschutzentscheid als vorsorgliche Massnahme. Eheschutzentscheide sind vorsorgliche Massnahmen im Sinn von Art. 98 BGG (E. 1.3; Bestätigung der ständigen Rechtsprechung). Regeste b Art. 5 Abs. 2 und Art. 7 Abs. 1 HKsÜ; Art.…",
+        "datum": "2022-12-12",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -556,6 +748,26 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
+        "gewicht": 3
+      },
+      {
+        "key": "bge_147_III_249",
+        "zitierung": "BGE 147 III 249",
+        "regesteKurz": "Art. 125 ZGB; nachehelicher Unterhalt; Frage der Lebensprägung. Prinzipien der Unterhaltsfestsetzung (E. 3.4). Begriff und Folgen der lebensprägenden Ehe nach bisheriger Rechtsprechung (E. 3.4.1). Die Frage der Lebensprägung darf keinen \"K…",
+        "datum": "2020-11-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 3
+      },
+      {
+        "key": "bge_147_III_293",
+        "zitierung": "BGE 147 III 293",
+        "regesteKurz": "Art. 125 ZGB; Berechnung des nachehelichen Unterhalts; Verbindlichkeit der zweistufigen Methode mit Überschussverteilung. Ein- und zweistufige Methode (E. 4.1). Bisheriger Methodenpluralismus (E. 4.2). Zusammenstellung der Rechtsprechung (…",
+        "datum": "2021-02-02",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
         "gewicht": 2
       },
       {
@@ -569,30 +781,20 @@
         "gewicht": 2
       },
       {
-        "key": "bge_147_III_249",
-        "zitierung": "BGE 147 III 249",
-        "regesteKurz": "Art. 125 ZGB; nachehelicher Unterhalt; Frage der Lebensprägung. Prinzipien der Unterhaltsfestsetzung (E. 3.4). Begriff und Folgen der lebensprägenden Ehe nach bisheriger Rechtsprechung (E. 3.4.1). Die Frage der Lebensprägung darf keinen \"K…",
-        "datum": "2020-11-03",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 2
-      },
-      {
-        "key": "bge_147_III_301",
-        "zitierung": "BGE 147 III 301",
-        "regesteKurz": "a Art. 58 Abs. 1, Art. 271 lit. a, Art. 277 Abs. 1 und Art. 296 Abs. 1 und 3 ZPO; Auswirkung der Prozessmaximen für den Kindesunterhalt auf den (nach-)ehelichen Unterhalt. Die kraft der uneingeschränkten Untersuchungsmaxime für den Kindesu…",
-        "datum": "2021-02-09",
+        "key": "bge_149_III_441",
+        "zitierung": "BGE 149 III 441",
+        "regesteKurz": "Art. 276 und 285 ZGB; Kindesunterhalt; Überschussverteilung bei Kindern nicht verheirateter Eltern. Zusammenfassung der Rechtsprechung zur zweistufig-konkreten Methode mit Überschussverteilung (E. 2.4-2.6). Ist nur der eine Elternteil unte…",
+        "datum": "2023-07-19",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 1
       },
       {
-        "key": "bge_147_III_293",
-        "zitierung": "BGE 147 III 293",
-        "regesteKurz": "Art. 125 ZGB; Berechnung des nachehelichen Unterhalts; Verbindlichkeit der zweistufigen Methode mit Überschussverteilung. Ein- und zweistufige Methode (E. 4.1). Bisheriger Methodenpluralismus (E. 4.2). Zusammenstellung der Rechtsprechung (…",
-        "datum": "2021-02-02",
+        "key": "bge_147_III_301",
+        "zitierung": "BGE 147 III 301",
+        "regesteKurz": "a Art. 58 Abs. 1, Art. 271 lit. a, Art. 277 Abs. 1 und Art. 296 Abs. 1 und 3 ZPO; Auswirkung der Prozessmaximen für den Kindesunterhalt auf den (nach-)ehelichen Unterhalt. Die kraft der uneingeschränkten Untersuchungsmaxime für den Kindesu…",
+        "datum": "2021-02-09",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -617,12 +819,14 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
-      },
+      }
+    ],
+    "126": [
       {
-        "key": "bge_147_III_393",
-        "zitierung": "BGE 147 III 393",
-        "regesteKurz": "Art. 176 Abs. 1 Ziff. 1 ZGB; Eheschutzmassnahmen; Ehegatten- und Kindesunterhalt; zumutbarer Vermögensverzehr. Zusammenfassung der bundesgerichtlichen Rechtsprechung zur Zumutbarkeit der Anzehrung von Vermögen, wenn die laufenden Einkünfte…",
-        "datum": "2021-07-01",
+        "key": "bge_148_III_270",
+        "zitierung": "BGE 148 III 270",
+        "regesteKurz": "Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; Passivlegitimation bei der Abänderungsklage für Kindesunterhalt im Bevorschussungsfall; Gegenstand der Subrogation; das bevorschussende Gemeinwesen ist aus materiellen Gründen nicht passivlegitimie…",
+        "datum": "2022-01-12",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -657,6 +861,18 @@
         "zitierung": "BGE 151 V 137",
         "regesteKurz": "Art. 20 ATSG; Art. 132 ZGB; Drittauszahlung sozialversicherungsrechtlicher Leistungen aufgrund einer Anweisung des Zivilgerichts. Eine vom Zivilgericht gestützt auf Art. 132 ZGB angeordnete Anweisung zur Drittauszahlung eines Teils der dem…",
         "datum": "2025-02-06",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "145": [
+      {
+        "key": "bge_148_III_21",
+        "zitierung": "BGE 148 III 21",
+        "regesteKurz": "Art. 159 Abs. 3 und Art. 163 ZGB; Art. 59 und 147 ZPO. Folgen der Nichtleistung des Prozesskostenvorschusses (provisio ad litem) durch den auf Scheidung klagenden Ehegatten. Begriff der Prozesshandlung und Folgen der versäumten Prozesshand…",
+        "datum": "2021-09-13",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -713,6 +929,26 @@
         "zitierung": "BGE 150 III 305",
         "regesteKurz": "Art. 125 Abs. 1 und 2 ZGB; zeitliche Begrenzung des nachehelichen Unterhalts. Auch eine lebensprägende Ehe schliesst eine angemessene zeitliche Begrenzung der nachehelichen Unterhaltspflicht nicht aus (Bestätigung der Rechtsprechung; E. 5.…",
         "datum": "2024-05-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_358",
+        "zitierung": "BGE 148 III 358",
+        "regesteKurz": "Art. 163 ZGB; zeitliche Dauer des ehelichen Unterhaltes. Im Unterschied zum Scheidungsunterhalt ist der eheliche Unterhalt nicht zeitlich begrenzt, sondern bis zum Zeitpunkt der Scheidung geschuldet, soweit der andere Ehegatte den gebühren…",
+        "datum": "2022-06-27",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_353",
+        "zitierung": "BGE 148 III 353",
+        "regesteKurz": "a Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; Aktivlegitimation des Kindes im Unterhaltsprozess bei Bezug von Leistungen der öffentlichen Hand. Die Rechtsprechung, wonach das Kind im Unterhaltsabänderungsverfahren trotz Bevorschussung der Un…",
+        "datum": "2022-04-20",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -783,7 +1019,49 @@
         "gewicht": 0
       }
     ],
+    "172": [
+      {
+        "key": "bge_149_III_81",
+        "zitierung": "BGE 149 III 81",
+        "regesteKurz": "a Art. 98 BGG; Eheschutzentscheid als vorsorgliche Massnahme. Eheschutzentscheide sind vorsorgliche Massnahmen im Sinn von Art. 98 BGG (E. 1.3; Bestätigung der ständigen Rechtsprechung). Regeste b Art. 5 Abs. 2 und Art. 7 Abs. 1 HKsÜ; Art.…",
+        "datum": "2022-12-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "176": [
+      {
+        "key": "bge_149_III_81",
+        "zitierung": "BGE 149 III 81",
+        "regesteKurz": "a Art. 98 BGG; Eheschutzentscheid als vorsorgliche Massnahme. Eheschutzentscheide sind vorsorgliche Massnahmen im Sinn von Art. 98 BGG (E. 1.3; Bestätigung der ständigen Rechtsprechung). Regeste b Art. 5 Abs. 2 und Art. 7 Abs. 1 HKsÜ; Art.…",
+        "datum": "2022-12-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_III_172",
+        "zitierung": "BGE 149 III 172",
+        "regesteKurz": "Art. 176 Abs. 1 Ziff. 1 und Abs. 3 i.V.m. Art. 285 Abs. 2 ZGB; Art. 58 Abs. 1 und Art. 314 Abs. 2 i.V.m. Art. 271 lit. a ZPO; Art. 9 BV; Schutz der ehelichen Gemeinschaft; Ehegattenunterhalt und Dispositionsgrundsatz im Berufungsverfahren.…",
+        "datum": "2022-12-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_95",
+        "zitierung": "BGE 148 III 95",
+        "regesteKurz": "Art. 9 BV; Art. 229, 276 und 317 ZPO; Art. 176 ZGB; Abgrenzung der Zuständigkeit zwischen dem Eheschutzgericht und dem Scheidungsgericht; Berücksichtigung von nach Rechtshängigkeit des Scheidungsverfahrens eingetretenen Tatsachen im Ehesch…",
+        "datum": "2021-12-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_147_III_393",
         "zitierung": "BGE 147 III 393",
@@ -811,6 +1089,18 @@
         "zitierung": "BGE 151 V 137",
         "regesteKurz": "Art. 20 ATSG; Art. 132 ZGB; Drittauszahlung sozialversicherungsrechtlicher Leistungen aufgrund einer Anweisung des Zivilgerichts. Eine vom Zivilgericht gestützt auf Art. 132 ZGB angeordnete Anweisung zur Drittauszahlung eines Teils der dem…",
         "datum": "2025-02-06",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "179": [
+      {
+        "key": "bge_148_III_95",
+        "zitierung": "BGE 148 III 95",
+        "regesteKurz": "Art. 9 BV; Art. 229, 276 und 317 ZPO; Art. 176 ZGB; Abgrenzung der Zuständigkeit zwischen dem Eheschutzgericht und dem Scheidungsgericht; Berücksichtigung von nach Rechtshängigkeit des Scheidungsverfahrens eingetretenen Tatsachen im Ehesch…",
+        "datum": "2021-12-07",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -853,22 +1143,84 @@
         "gewicht": 0
       }
     ],
-    "276": [
+    "252": [
       {
-        "key": "bge_147_V_441",
-        "zitierung": "BGE 147 V 441",
-        "regesteKurz": "Art. 9 Abs. 2 und Art. 10 Abs. 3 lit. e ELG; Berechnung der Ergänzungsleistung bei Personen, die eine Hilflosenentschädigung der IV beziehen. Eine gemeinsame EL-Berechnung im Sinne von Art. 9 Abs. 2 ELG findet bei Personen, die eine Hilflo…",
-        "datum": "2021-09-01",
+        "key": "bge_148_III_245",
+        "zitierung": "BGE 148 III 245",
+        "regesteKurz": "Art. 32, 68, 70 IPRG; Eintragung einer georgischen Geburtsurkunde in das Personenstandsregister im Fall von Leihmutterschaft. Bei einer in Georgien durchgeführten Leihmutterschaft entsteht die Elternschaft der Wunscheltern nach dortigem Re…",
+        "datum": "2022-02-07",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
+      }
+    ],
+    "276": [
+      {
+        "key": "bge_148_III_270",
+        "zitierung": "BGE 148 III 270",
+        "regesteKurz": "Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; Passivlegitimation bei der Abänderungsklage für Kindesunterhalt im Bevorschussungsfall; Gegenstand der Subrogation; das bevorschussende Gemeinwesen ist aus materiellen Gründen nicht passivlegitimie…",
+        "datum": "2022-01-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_148_III_296",
+        "zitierung": "BGE 148 III 296",
+        "regesteKurz": "Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; bei der Abänderungsklage für Kindesunterhalt ist das bevorschussende Gemeinwesen auch aus prozessualen Gründen nicht passivlegitimiert (Änderung der Rechtsprechung). Erwägungen des angefochtenen En…",
+        "datum": "2022-01-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
       },
       {
         "key": "bge_147_III_265",
         "zitierung": "BGE 147 III 265",
         "regesteKurz": "Art. 276, 276a, 285 und 286a ZGB; Berechnung des Kindesunterhaltes; Verbindlichkeit der zweistufigen Methode mit Überschussverteilung. Grundsätze des Kindesunterhaltes (E. 5). Das Kind hat Anspruch auf gebührenden Unterhalt (E. 5.1 und 5.2…",
         "datum": "2020-11-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_149_III_441",
+        "zitierung": "BGE 149 III 441",
+        "regesteKurz": "Art. 276 und 285 ZGB; Kindesunterhalt; Überschussverteilung bei Kindern nicht verheirateter Eltern. Zusammenfassung der Rechtsprechung zur zweistufig-konkreten Methode mit Überschussverteilung (E. 2.4-2.6). Ist nur der eine Elternteil unte…",
+        "datum": "2023-07-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_III_172",
+        "zitierung": "BGE 149 III 172",
+        "regesteKurz": "Art. 176 Abs. 1 Ziff. 1 und Abs. 3 i.V.m. Art. 285 Abs. 2 ZGB; Art. 58 Abs. 1 und Art. 314 Abs. 2 i.V.m. Art. 271 lit. a ZPO; Art. 9 BV; Schutz der ehelichen Gemeinschaft; Ehegattenunterhalt und Dispositionsgrundsatz im Berufungsverfahren.…",
+        "datum": "2022-12-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_V_385",
+        "zitierung": "BGE 148 V 385",
+        "regesteKurz": "Art. 5 Abs. 2 und 4 AHVG; Art. 6 Abs. 2 lit. f AHVV; AHV-Beitragspflicht; Ausnahme; Subvention einer Kindertagesstätte. Die Subvention des Arbeitgebers für die betriebseigene oder eine angeschlossene Kindertagesstätte gehört zum massgebend…",
+        "datum": "2022-10-17",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_147_V_441",
+        "zitierung": "BGE 147 V 441",
+        "regesteKurz": "Art. 9 Abs. 2 und Art. 10 Abs. 3 lit. e ELG; Berechnung der Ergänzungsleistung bei Personen, die eine Hilflosenentschädigung der IV beziehen. Eine gemeinsame EL-Berechnung im Sinne von Art. 9 Abs. 2 ELG findet bei Personen, die eine Hilflo…",
+        "datum": "2021-09-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -887,12 +1239,74 @@
         "gewicht": 0
       }
     ],
+    "279": [
+      {
+        "key": "bge_148_III_270",
+        "zitierung": "BGE 148 III 270",
+        "regesteKurz": "Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; Passivlegitimation bei der Abänderungsklage für Kindesunterhalt im Bevorschussungsfall; Gegenstand der Subrogation; das bevorschussende Gemeinwesen ist aus materiellen Gründen nicht passivlegitimie…",
+        "datum": "2022-01-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "285": [
+      {
+        "key": "bge_148_III_270",
+        "zitierung": "BGE 148 III 270",
+        "regesteKurz": "Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; Passivlegitimation bei der Abänderungsklage für Kindesunterhalt im Bevorschussungsfall; Gegenstand der Subrogation; das bevorschussende Gemeinwesen ist aus materiellen Gründen nicht passivlegitimie…",
+        "datum": "2022-01-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
       {
         "key": "bge_150_III_153",
         "zitierung": "BGE 150 III 153",
         "regesteKurz": "Art. 286 Abs. 2 ZGB; Betreuungsunterhalt; Neufestsetzung des Unterhaltsbeitrags zufolge Erhöhung des Einkommens des hauptbetreuenden Elternteils. Enthält der in einem ersten Entscheid zugesprochene Kindesunterhaltsbeitrag einen Anteil Betr…",
         "datum": "2024-02-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_III_441",
+        "zitierung": "BGE 149 III 441",
+        "regesteKurz": "Art. 276 und 285 ZGB; Kindesunterhalt; Überschussverteilung bei Kindern nicht verheirateter Eltern. Zusammenfassung der Rechtsprechung zur zweistufig-konkreten Methode mit Überschussverteilung (E. 2.4-2.6). Ist nur der eine Elternteil unte…",
+        "datum": "2023-07-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_III_297",
+        "zitierung": "BGE 149 III 297",
+        "regesteKurz": "Art. 285 Abs. 2 ZGB; Art. 9 ATSG; Art. 42 und 42 bis IVG; Hilflosenentschädigung und Betreuungsbeitrag. Die Hilflosenentschädigung des minderjährigen Kindes darf nicht vom Betreuungsunterhalt abgezogen werden, der im Rahmen des Unterhaltsb…",
+        "datum": "2023-03-15",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_149_III_172",
+        "zitierung": "BGE 149 III 172",
+        "regesteKurz": "Art. 176 Abs. 1 Ziff. 1 und Abs. 3 i.V.m. Art. 285 Abs. 2 ZGB; Art. 58 Abs. 1 und Art. 314 Abs. 2 i.V.m. Art. 271 lit. a ZPO; Art. 9 BV; Schutz der ehelichen Gemeinschaft; Ehegattenunterhalt und Dispositionsgrundsatz im Berufungsverfahren.…",
+        "datum": "2022-12-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_353",
+        "zitierung": "BGE 148 III 353",
+        "regesteKurz": "a Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; Aktivlegitimation des Kindes im Unterhaltsprozess bei Bezug von Leistungen der öffentlichen Hand. Die Rechtsprechung, wonach das Kind im Unterhaltsabänderungsverfahren trotz Bevorschussung der Un…",
+        "datum": "2022-04-20",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -919,9 +1333,49 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_296",
+        "zitierung": "BGE 148 III 296",
+        "regesteKurz": "Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; bei der Abänderungsklage für Kindesunterhalt ist das bevorschussende Gemeinwesen auch aus prozessualen Gründen nicht passivlegitimiert (Änderung der Rechtsprechung). Erwägungen des angefochtenen En…",
+        "datum": "2022-01-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
       }
     ],
     "289": [
+      {
+        "key": "bge_149_III_441",
+        "zitierung": "BGE 149 III 441",
+        "regesteKurz": "Art. 276 und 285 ZGB; Kindesunterhalt; Überschussverteilung bei Kindern nicht verheirateter Eltern. Zusammenfassung der Rechtsprechung zur zweistufig-konkreten Methode mit Überschussverteilung (E. 2.4-2.6). Ist nur der eine Elternteil unte…",
+        "datum": "2023-07-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_353",
+        "zitierung": "BGE 148 III 353",
+        "regesteKurz": "a Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; Aktivlegitimation des Kindes im Unterhaltsprozess bei Bezug von Leistungen der öffentlichen Hand. Die Rechtsprechung, wonach das Kind im Unterhaltsabänderungsverfahren trotz Bevorschussung der Un…",
+        "datum": "2022-04-20",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_148_III_296",
+        "zitierung": "BGE 148 III 296",
+        "regesteKurz": "Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; bei der Abänderungsklage für Kindesunterhalt ist das bevorschussende Gemeinwesen auch aus prozessualen Gründen nicht passivlegitimiert (Änderung der Rechtsprechung). Erwägungen des angefochtenen En…",
+        "datum": "2022-01-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_147_III_457",
         "zitierung": "BGE 147 III 457",
@@ -1171,6 +1625,16 @@
         "gewicht": 0
       },
       {
+        "key": "bge_148_III_1",
+        "zitierung": "BGE 148 III 1",
+        "regesteKurz": "Art. 439 Abs. 1 Ziff. 1 ZGB; Anrufung des Gerichts nach ärztlicher fürsorgerischer Unterbringung; bundesrechtliche Anforderungen an das Verfahren. Ordnet eine Ärztin oder ein Arzt die fürsorgerische Unterbringung wegen psychischer Störunge…",
+        "datum": "2021-10-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_146_III_377",
         "zitierung": "BGE 146 III 377",
         "regesteKurz": "Art. 439 Abs. 1 Ziff. 1 ZGB; Anrufung des Gerichts bei ärztlich angeordneter fürsorgerischer Unterbringung; interkantonale Zuständigkeit. Für die Beurteilung der Beschwerde gegen die ärztlich angeordnete fürsorgerische Unterbringung ist in…",
@@ -1182,6 +1646,16 @@
       }
     ],
     "428": [
+      {
+        "key": "bge_148_III_1",
+        "zitierung": "BGE 148 III 1",
+        "regesteKurz": "Art. 439 Abs. 1 Ziff. 1 ZGB; Anrufung des Gerichts nach ärztlicher fürsorgerischer Unterbringung; bundesrechtliche Anforderungen an das Verfahren. Ordnet eine Ärztin oder ein Arzt die fürsorgerische Unterbringung wegen psychischer Störunge…",
+        "datum": "2021-10-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_146_III_377",
         "zitierung": "BGE 146 III 377",
@@ -1195,10 +1669,32 @@
     ],
     "429": [
       {
+        "key": "bge_148_III_1",
+        "zitierung": "BGE 148 III 1",
+        "regesteKurz": "Art. 439 Abs. 1 Ziff. 1 ZGB; Anrufung des Gerichts nach ärztlicher fürsorgerischer Unterbringung; bundesrechtliche Anforderungen an das Verfahren. Ordnet eine Ärztin oder ein Arzt die fürsorgerische Unterbringung wegen psychischer Störunge…",
+        "datum": "2021-10-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_146_III_377",
         "zitierung": "BGE 146 III 377",
         "regesteKurz": "Art. 439 Abs. 1 Ziff. 1 ZGB; Anrufung des Gerichts bei ärztlich angeordneter fürsorgerischer Unterbringung; interkantonale Zuständigkeit. Für die Beurteilung der Beschwerde gegen die ärztlich angeordnete fürsorgerische Unterbringung ist in…",
         "datum": "2020-08-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "430": [
+      {
+        "key": "bge_148_III_1",
+        "zitierung": "BGE 148 III 1",
+        "regesteKurz": "Art. 439 Abs. 1 Ziff. 1 ZGB; Anrufung des Gerichts nach ärztlicher fürsorgerischer Unterbringung; bundesrechtliche Anforderungen an das Verfahren. Ordnet eine Ärztin oder ein Arzt die fürsorgerische Unterbringung wegen psychischer Störunge…",
+        "datum": "2021-10-13",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1395,6 +1891,18 @@
         "gewicht": 0
       }
     ],
+    "612": [
+      {
+        "key": "bge_149_III_165",
+        "zitierung": "BGE 149 III 165",
+        "regesteKurz": "Art. 651 Abs. 2 ZGB; Teilung des Miteigentums durch öffentliche Versteigerung; Zwangsversteigerung. Die öffentliche Versteigerung, die vom Gericht zur Teilung von Miteigentum nach Art. 651 Abs. 2 ZGB angeordnet wird, stellt keine Zwangsver…",
+        "datum": "2023-02-27",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "641": [
       {
         "key": "bge_152_II_33",
@@ -1435,6 +1943,18 @@
         "zitierung": "BGE 147 II 309",
         "regesteKurz": "Wiederherstellung des rechtmässigen Zustands bei illegalen Bauten ausserhalb der Bauzone; keine Verwirkung dieses Anspruchs bzw. dieser Pflicht nach 30 Jahren. Bundesgerichtliche Rechtsprechung zur Verwirkung des Anspruchs bzw. der Pflicht…",
         "datum": "2021-04-28",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "664": [
+      {
+        "key": "bge_149_III_49",
+        "zitierung": "BGE 149 III 49",
+        "regesteKurz": "Art. 664 Abs. 2 und Art. 704 Abs. 1 ZGB; Eigentum an Quelle; Abgrenzung zwischen privaten und öffentlichen Quellen. Voraussetzungen der Qualifikation als öffentliche Quelle (E. 3). Kriterien der Mächtigkeit und der Stetigkeit im Verhältnis…",
+        "datum": "2022-12-08",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1493,6 +2013,30 @@
         "zitierung": "BGE 151 III 377",
         "regesteKurz": "Art. 712m Abs. 1 Ziff. 2, Art. 712s Abs. 3, Art. 712t Abs. 2 ZGB; Durchsetzung der Einhaltung des Reglements der Stockwerkeigentümergemeinschaft. Zur Frage, ob die Versammlung der Stockwerkeigentümer gestützt auf einen entsprechenden Antra…",
         "datum": "2025-02-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "704": [
+      {
+        "key": "bge_149_III_49",
+        "zitierung": "BGE 149 III 49",
+        "regesteKurz": "Art. 664 Abs. 2 und Art. 704 Abs. 1 ZGB; Eigentum an Quelle; Abgrenzung zwischen privaten und öffentlichen Quellen. Voraussetzungen der Qualifikation als öffentliche Quelle (E. 3). Kriterien der Mächtigkeit und der Stetigkeit im Verhältnis…",
+        "datum": "2022-12-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "711": [
+      {
+        "key": "bge_149_III_49",
+        "zitierung": "BGE 149 III 49",
+        "regesteKurz": "Art. 664 Abs. 2 und Art. 704 Abs. 1 ZGB; Eigentum an Quelle; Abgrenzung zwischen privaten und öffentlichen Quellen. Voraussetzungen der Qualifikation als öffentliche Quelle (E. 3). Kriterien der Mächtigkeit und der Stetigkeit im Verhältnis…",
+        "datum": "2022-12-08",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1567,12 +2111,36 @@
         "gewicht": 0
       }
     ],
+    "837": [
+      {
+        "key": "bge_149_III_451",
+        "zitierung": "BGE 149 III 451",
+        "regesteKurz": "Art. 837 Abs. 1 Ziff. 3 ZGB; Arbeiten, die zur Eintragung eines Bauhandwerkerpfandrechts berechtigen. Abgrenzung der pfandgeschützten Arbeiten nach der per 1. Januar 2012 in Kraft getretenen Revision des Zivilgesetzbuches. Transportleistun…",
+        "datum": "2023-04-06",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "842": [
       {
         "key": "bge_151_III_402",
         "zitierung": "BGE 151 III 402",
         "regesteKurz": "Art. 842 ff. ZGB; Art. 82 SchKG; Schuldbrief zur Sicherung einer Steuerforderung; Betreibung auf Grundpfandverwertung; Rechtsöffnung. Eine Schuldbriefforderung nimmt keinen öffentlich-rechtlichen Charakter an, auch wenn sie eine öffentlich…",
         "datum": "2024-12-18",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "960": [
+      {
+        "key": "bge_148_III_109",
+        "zitierung": "BGE 148 III 109",
+        "regesteKurz": "Art. 960 Abs. 1 Ziff. 1 und Abs. 2 ZGB. Vormerkung einer vom Fiduzianten erwirkten Verfügungsbeschränkung; Wirkung der Vormerkung in der Zwangsvollstreckung, wenn das Eigentum am Grundstück vor der Versteigerung anerkannt wird. Ist eine Ve…",
+        "datum": "2022-02-02",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1619,6 +2187,18 @@
         "zitierung": "BGE 150 III 353",
         "regesteKurz": "Art. 124e Abs. 1 und Art. 247 ff. ZGB; Art. 30c BVG; Gütertrennung; Unmöglichkeit des Vorsorgeausgleichs aus Vorsorgemitteln; Entschädigung bei Vorbezug für Wohneigentum. Zur Frage, wie die angemessene Entschädigung (Art. 124e Abs. 1 ZGB)…",
         "datum": "2024-07-17",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "131a": [
+      {
+        "key": "bge_148_III_270",
+        "zitierung": "BGE 148 III 270",
+        "regesteKurz": "Art. 131a Abs. 2 und Art. 289 Abs. 2 ZGB; Passivlegitimation bei der Abänderungsklage für Kindesunterhalt im Bevorschussungsfall; Gegenstand der Subrogation; das bevorschussende Gemeinwesen ist aus materiellen Gründen nicht passivlegitimie…",
+        "datum": "2022-01-12",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1675,6 +2255,18 @@
         "zitierung": "BGE 146 IV 231",
         "regesteKurz": "Art. 429 Abs. 1 lit. c StPO; Anspruch auf Genugtuung bei ungerechtfertigtem Freiheitsentzug. Eine Anhaltung gefolgt von einer Festnahme, die sich auf eine Gesamtdauer von mehr als drei Stunden erstreckt, stellt einen Eingriff in die persön…",
         "datum": "2020-07-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
+    "28c": [
+      {
+        "key": "bge_149_III_193",
+        "zitierung": "BGE 149 III 193",
+        "regesteKurz": "Art. 28c ZGB; Modalitäten der zivilrechtlichen elektronischen Überwachung und Voraussetzungen, unter denen sie angeordnet werden kann. Die Anordnung einer elektronischen Überwachung gemäss Art. 28c ZGB setzt namentlich die Erfüllung der Vo…",
+        "datum": "2023-02-02",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -1763,6 +2355,18 @@
         "gewicht": 0
       }
     ],
+    "649b": [
+      {
+        "key": "bge_149_III_165",
+        "zitierung": "BGE 149 III 165",
+        "regesteKurz": "Art. 651 Abs. 2 ZGB; Teilung des Miteigentums durch öffentliche Versteigerung; Zwangsversteigerung. Die öffentliche Versteigerung, die vom Gericht zur Teilung von Miteigentum nach Art. 651 Abs. 2 ZGB angeordnet wird, stellt keine Zwangsver…",
+        "datum": "2023-02-27",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      }
+    ],
     "712a": [
       {
         "key": "bge_152_II_33",
@@ -1786,6 +2390,16 @@
       }
     ],
     "712g": [
+      {
+        "key": "bge_149_III_393",
+        "zitierung": "BGE 149 III 393",
+        "regesteKurz": "Art. 712g Abs. 3 ZGB; Stockwerkeigentum; Mehrheitserfordernis für die Änderung eines Reglements über die Verwaltung und Benutzung. Änderungen eines Reglements über die Verwaltung und Benutzung von Stockwerkeigentum können in gewissen Grenz…",
+        "datum": "2023-08-15",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
       {
         "key": "bge_151_III_377",
         "zitierung": "BGE 151 III 377",

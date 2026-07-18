@@ -1,0 +1,455 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/149_III_422",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "149 III 422",
+      "bgeReferenz": "149 III 422",
+      "zitierung": "BGE 149 III 422",
+      "datum": "2023-05-30",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": "civil",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Jametti, Präsidentin, Bundesrichterinnen Hohl, Kiss, Bundesrichter Rüedi, Bundesrichterin May Canellas, Gerichtsschreiber Brugger",
+        "parteien": null,
+        "gegenstand": "Verantwortlichkeits- und Rückerstattungsklage, Abtretung nach Art. 260 SchKG",
+        "vorinstanz": "Handelsgerichts des Kantons Zürich vom 13. September 2022 (HG200175-O)"
+      },
+      "regeste": {
+        "text": "Art. 260 SchKG; bedingte Abtretung. Prozessführungsbefugnis des Abtretungsgläubigers bei einer bedingten Abtretung (E. 3).\nRegeste\n Art. 260 LP; cession conditionnelle. Faculté du créancier cessionnaire de conduire le procès comme partie en cas de cession conditionnelle (consid. 3).\nRegesto\n Art. 260 LEF; cessione condizionale. Legittimazione del creditore cessionario a condurre il processo nel caso di una cessione condizionale (consid. 3).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 260 SchKG; bedingte Abtretung.",
+            "absaetze": [
+              "Prozessführungsbefugnis des Abtretungsgläubigers bei einer bedingten Abtretung (E. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-422%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 260 LP; cession conditionnelle.",
+            "absaetze": [
+              "Faculté du créancier cessionnaire de conduire le procès comme partie en cas de cession conditionnelle (consid. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-422%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 260 LEF; cessione condizionale.",
+            "absaetze": [
+              "Legittimazione del creditore cessionario a condurre il processo nel caso di una cessione condizionale (consid. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F149-III-422%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Am 23. September 2015 reichte die C.________ S.A. (Klägerin, Beschwerdegegnerin) bei der International Chamber of Commerce (ICC) einen Request for Arbitration gegen die E.________ AG ein. Mit Schiedsentscheid vom 5. September 2017 hiess das ICC Schiedsgericht die Klage teilweise gut und verurteilte die E.________ AG zur Zahlung von USD 4'756'629.-- zuzüglich Zinsen, während die Klägerin ihrerseits zur Zahlung von USD 192'812.-- samt Zinsen an die E.________ AG verpflichtet wurde. Nach Verrechnung der Forderungen bezifferte die Klägerin den ihr zustehenden Betrag auf umgerechnet Fr. 5'034.078.30. Für diesen Betrag zuzüglich Zins erteilte das Kantonsgericht Zug der Klägerin mit Entscheid vom 12. Februar 2018 die definitive Rechtsöffnung. Am 25. April 2018 wurde über die E.________ AG der Konkurs eröffnet. Die Klägerin meldete im Konkurs eine Forderung von Fr. 5'883'942.33 im dritten Rang zur Kollokation an. Mit Verfügung vom 10. Februar 2020 trat das Konkursamt F.________ die Verantwortlichkeitsansprüche gegen die Organe der E.________ AG und mit Verfügung vom 22. Juni 2020 die Rückforderungsansprüche gegen die Aktionäre der E.________ AG an die Klägerin ab."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Am 30. September 2020 reichte die Klägerin als Abtretungsgläubigerin der E.________ AG eine Klage am Handelsgericht des Kantons Zürich ein. Die Klage richtete sich gegen drei Beklagte: (1) Die A.________ AG (bis Ende 2016: E.________ Holding AG; Beklagte 1; Beschwerdeführerin 1), die Alleinaktionärin der E.________ AG, (2) B.________ (Beklagter 2; Beschwerdeführer 2), Verwaltungsratspräsident bzw. einziger Verwaltungsrat und Geschäftsführer der E.________ AG und gleichzeitig einziger Verwaltungsrat und Geschäftsführer der Beklagten 1, sowie (3) die D.________ AG (Beklagte 3; Beschwerdeführerin 3), die Revisionsstelle der E.________ AG. Die Klägerin stellte sich vor Handelsgericht zusammengefasst auf den Standpunkt, die E.________ AG habe verschiedene Geschäfte in den Geschäftsbüchern nicht korrekt abgebildet. Insbesondere habe sie (1) für die von der Klägerin bei der ICC eingereichte Schiedsklage zu wenig Rückstellungen gebildet, (2) den Kostenvorschuss für das Schiedsverfahren unzulässigerweise erfolgsneutral verbucht und (3) eine Forderung von USD 1'845'980.64 gegenüber G.________ Ltd., einer vermögenslosen Zweckgesellschaft, aktiviert, die keinerlei Erfolgsaussichten hatte. Vor diesem Hintergrund hätten der Beklagte 2 als Verwaltungsrat und die Beklagte 3 als Revisionsstelle der E.________ AG in den Geschäftsjahren 2015 und 2016 die Ausschüttung von Dividenden bzw. von zu hohen Dividenden ungerechtfertigt veranlasst und zugelassen. Den daraus entstandenen Schaden von Fr. 3'699'578.55 samt Zinsen wolle sie mittels Verantwortlichkeitsklage nach Art. 754 ff. OR gegen den Beklagten 2 (Verwaltungsrat) und die Beklagte 3 (Revisionsstelle) sowie mittels einer Rückerstattungsklage nach Art. 678 Abs. 1 OR von der Beklagten 1 (Aktionärin) erhältlich machen. Mit Urteil vom 13. September 2022 hiess das Handelsgericht die Klage teilweise gut. Es verpflichtete die Beklagten 1, 2 und 3 solidarisch, der Klägerin Fr. 1'805'495.45 samt Zinsen zu bezahlen (Dispositivziffer 1). Im Mehrbetrag wies es die Klage ab (Dispositivziffer 2), setzte die Gerichtsgebühr auf Fr. 57'800.-- fest (Dispositivziffer 3), auferlegte die Kosten je zur Hälfte der Klägerin und den Beklagten (Dispositivziffer 4) und schlug die Parteientschädigungen wett (Dispositivziffer 5). Das Handelsgericht kam zusammengefasst zum Schluss, die E.________ AG habe für das hängige Schiedsverfahren zu wenig Rückstellungen gebildet, sie habe den Kostenvorschuss an das ICC Schiedsgericht unzulässigerweise erfolgsneutral verbucht und sie hätte die Forderung gegenüber der G.________ Ltd. nicht aktivieren dürfen. Der Beklagte 2 und die Beklagte 3 hafteten dafür aus aktienrechtlicher Verantwortlichkeit im Sinne von Art. 754 Abs. 1 bzw. Art. 755 Abs. 1 OR. Ebenso seien die Voraussetzungen von Art. 678 OR erfüllt: Die an die Beklagte 1 für das Geschäftsjahr 2015 und 2016 ausgeschütteten Dividenden überschritten in Verletzung von Art. 675 Abs. 2 OR die Grenze des Zulässigen, und die Beklagte 1 habe die Dividenden ungerechtfertigt sowie im bösen Glauben bezogen."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "C.a. Dagegen erheben die Beschwerdeführerin 1 und der Beschwerdeführer 2 im Verfahren 4A_467/2022 Beschwerde in Zivilsachen an das Bundesgericht. Sie beantragen, die Dispositivziffer 1 des Urteils des Handelsgerichts sei aufzuheben und die Klage der Beschwerdegegnerin sei vollumfänglich abzuweisen. Die Dispositivziffern 4 und 5 seien aufzuheben, und die Kosten- und Entschädigungsfolgen seien der Beschwerdegegnerin aufzuerlegen. Eventualiter seien die Dispositivziffern 1, 4 und 5 aufzuheben und die Sache sei zur Neubeurteilung an die Vorinstanz zurückzuweisen. Subeventualiter seien die Beschwerdeführer 1, 2 und 3 solidarisch zu verpflichten, der Beschwerdegegnerin Fr. 1'086'568.45 zuzüglich Zinsen zu bezahlen, wobei die Klage im Mehrbetrag abzuweisen und die Kostenregelung der Vorinstanz entsprechend anzupassen sei. Die Beschwerdegegnerin beantragt die Abweisung der Beschwerde, soweit darauf einzutreten sei. Die Vorinstanz verzichtete auf Vernehmlassung. Die Beschwerdeführerin 3 beantragt, die Anträge der Beschwerdeführer 1 und 2 seien gutzuheissen, mit der Ausnahme des Subeventualantrags, welcher abzuweisen sei. Die Beschwerdeführer 1 und 2 replizierten und die Beschwerdegegnerin duplizierte. C.b. Im Verfahren 4A_465/2022 erhebt die Beschwerdeführerin 3 gegen das Urteil des Handelsgerichts Beschwerde in Zivilsachen an das Bundesgericht. Sie beantragt, die Dispositivziffer 1 des Urteils des Handelsgerichts sei aufzuheben und die Klage der Beschwerdegegnerin sei vollumfänglich abzuweisen, soweit darauf einzutreten sei. Die Dispositivziffern 4 und 5 seien aufzuheben, und die Kosten- und Entschädigungsfolgen seien der Beschwerdegegnerin aufzuerlegen. Eventualiter seien die Dispositivziffern 1, 4 und 5 aufzuheben und die Sache sei zur Neubeurteilung an die Vorinstanz zurückzuweisen. Die Beschwerdegegnerin beantragt, die Beschwerde der Beschwerdeführerin 3 sei abzuweisen, soweit darauf einzutreten sei. Die Vorinstanz verzichtete auf Vernehmlassung. Die Beschwerdeführer 1 und 2 schliessen sich den Ausführungen der Beschwerdeführerin 3 an, soweit diese die Beschwerdeführer 1 und 2 betreffen. Die Beschwerdeführerin 3 replizierte und die Beschwerdegegnerin duplizierte. C.c. Mit Verfügungen vom 12. Januar 2023 wurden die Gesuche um Erteilung der aufschiebenden Wirkung abgewiesen."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Die beiden Beschwerden richten sich gegen das gleiche Urteil des Handelsgerichts. Zudem sind die gleichen Parteien beteiligt. Es rechtfertigt sich daher, die beiden Verfahren 4A_465/2022 und 4A_467/2022 zu vereinigen und die Beschwerden in einem einzigen Entscheid zu behandeln. Die Sachurteilsvoraussetzungen für beide Beschwerden sind erfüllt und geben zu keinen Bemerkungen Anlass. Auf die Beschwerden ist daher unter Vorbehalt einer rechtsgenüglichen Begründung einzutreten (Art. 42 Abs. 2 und Art. 106 Abs. 2 BGG; vgl. Erwägung 2)."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Mit Beschwerde in Zivilsachen können Rechtsverletzungen nach Art. 95 und 96 BGG gerügt werden. Die Beschwerde ist hinreichend zu begründen, andernfalls wird darauf nicht eingetreten (BGE 134 II 244 E. 2.1). In der Beschwerdeschrift ist in gedrängter Form darzulegen, inwiefern der angefochtene Akt Recht verletzt (Art. 42 Abs. 2 BGG). Unerlässlich ist, dass die Beschwerde auf die Begründung des angefochtenen Entscheids eingeht und im Einzelnen aufzeigt, worin eine Verletzung von Bundesrecht liegt. Die beschwerdeführende Partei soll in der Beschwerdeschrift nicht bloss die Rechtsstandpunkte, die sie im kantonalen Verfahren eingenommen hat, erneut bekräftigen, sondern mit ihrer Kritik an den als rechtsfehlerhaft erachteten Erwägungen der Vorinstanz ansetzen (BGE 140 III 86 E. 2, 115 E. 2). Die Beschwerde ist innert der Beschwerdefrist vollständig begründet einzureichen (vgl. Art. 42 Abs. 1 BGG). Vor Bundesgericht findet in der Regel nur ein Schriftenwechsel statt (Art. 102 Abs. 3 BGG). Kommt es zu einem zweiten Schriftenwechsel, darf die beschwerdeführende Partei die Replik nicht dazu verwenden, ihre Beschwerde zu ergänzen oder zu verbessern (BGE 134 IV 156 E. 1.7; 132 I 42 E. 3.3.4). Mit Rügen, welche die beschwerdeführende Partei bereits in der Beschwerde hätte erheben können, ist sie nach Ablauf der Beschwerdefrist ausgeschlossen (BGE 135 I 19 E. 2.2; 134 IV 156 E. 1.7; 132 I 42 E. 3.3.4 mit Hinweisen). Die Replik ist nur zu Darlegungen zu verwenden, zu denen die Ausführungen in der Vernehmlassung eines anderen Verfahrensbeteiligten Anlass geben (vgl. BGE 135 I 19 E. 2.2). Soweit die Beschwerdeführer in ihrer Replik darüber hinausgehen, können sie nicht gehört werden."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG). Dazu gehören sowohl die Feststellungen über den streitgegenständlichen Lebenssachverhalt als auch jene über den Ablauf des vor- und erstinstanzlichen Verfahrens, also die Feststellungen über den Prozesssachverhalt (BGE 140 III 16 E. 1.3.1 mit Hinweisen). Es kann die Sachverhaltsfeststellung der Vorinstanz nur berichtigen oder ergänzen, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruht (Art. 105 Abs. 2 BGG). \"Offensichtlich unrichtig\" bedeutet dabei \"willkürlich\" (BGE 140 III 115 E. 2; 135 III 397 E. 1.5). Überdies muss die Behebung des Mangels für den Ausgang des Verfahrens entscheidend sein können (Art. 97 Abs. 1 BGG). Für eine Kritik am festgestellten Sachverhalt gilt das strenge Rügeprinzip von Art. 106 Abs. 2 BGG (BGE 140 III 264 E. 2.3 mit Hinweisen). Die Partei, welche die Sachverhaltsfeststellung der Vorinstanz anfechten will, muss klar und substanziiert aufzeigen, inwiefern diese Voraussetzungen erfüllt sein sollen (BGE 140 III 16 E. 1.3.1 mit Hinweisen). Wenn sie den Sachverhalt ergänzen will, hat sie zudem mit präzisen Aktenhinweisen darzulegen, dass sie entsprechende rechtsrelevante Tatsachen und taugliche Beweismittel bereits bei den Vorinstanzen prozesskonform eingebracht hat (BGE 140 III 86 E. 2). Genügt die Kritik diesen Anforderungen nicht, können Vorbringen mit Bezug auf einen Sachverhalt, der vom angefochtenen Entscheid abweicht, nicht berücksichtigt werden (BGE 140 III 16 E. 1.3.1)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Die Beschwerdegegnerin erhebt als Abtretungsgläubigerin nach Art. 260 SchKG Klage gegen die Beschwerdeführer. Diese stellen die Klagelegitimation der Beschwerdegegnerin in Frage, da deren Forderung im Urteilszeitpunkt im Konkurs der E.________ AG nur provisorisch kolloziert gewesen sei."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Unbestritten ist, dass die Konkursforderung der Beschwerdegegnerin im Konkurs der E.________ AG im Zeitpunkt des Urteils der Vorinstanz nicht definitiv kolloziert war. Die Gründe für die fehlende definitive Kollokation sind im angefochtenen Entscheid nicht festgestellt. Nicht bestritten ist ferner, dass das Konkursamt F.________ der Beschwerdegegnerin die Verantwortlichkeitsansprüche gegen die Organe der E.________ AG und die Rückforderungsansprüche gegen die Aktionäre der E.________ AG gemäss Art. 260 SchKG abtrat (Sachverhalt A). Die Abtretung erfolgte unbestrittenermassen unter einer Bedingung. Zu Recht wird nicht in Frage gestellt, dass das Konkursamt die Abtretungen nach Art. 260 SchKG mit einer Bedingung versehen durfte (dazu: Urteile 7B.206/2005 vom 2. Februar 2006 E. 4; 7B.94/2003 vom 24. Juni 2003 E. 5.1)."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "In einem solchen Fall kann es unter Umständen zweckmässig sein, den Abtretungsprozess zu sistieren, bis definitiv über die Kollokation entschieden ist (Art. 126 ZPO; vgl. auch BGE 128 III 291, E. 4c/aa; 50 III 19 E. 2 S. 21; 48 III 88 S. 90 f.; 43 III 73 E. 1c S. 76 f.). Insbesondere kann es für den bedingt zugelassenen Abtretungsgläubiger allenfalls vorteilhaft sein, eine Sistierung des Abtretungsprozesses zu beantragen, da er sonst Gefahr läuft, im Falle der definitiven Abweisung seiner Konkursforderung das Prozessrisiko getragen zu haben, ohne jedoch am Prozessgewinn beteiligt zu sein (BGE 128 III 291, E. 4c/aa; 50 III 19 E. 2 S. 21; Ralf C. Schlaepfer, Abtretung streitiger Rechtsansprüche im Konkurs, 1990, S. 88). Im vorliegenden Fall verlangten die beklagten Beschwerdeführer, nicht hingegen die klagende Beschwerdegegnerin (die Abtretungsgläubigerin), vor der Vorinstanz die Sistierung des Verfahrens bis zur definitiven Kollokation. Mit Zwischenverfügung vom 25. März 2021 lehnte die Vorinstanz die Sistierung des Verfahrens ab. In dieser Zwischenverfügung ging die Vorinstanz von auflösend bedingten Abtretungen nach Art. 260 SchKG aus, was die Beschwerdeführer vor Bundesgericht nicht in Frage stellen, zumindest nicht hinreichend (Erwägung 2.1). Die Vorinstanz kam in der Zwischenverfügung zum Schluss, es sei unbestritten, dass die Konkursforderung der Beschwerdegegnerin (noch) nicht definitiv kolloziert sei. Es lägen aber keine Anhaltspunkte vor, welche eine definitive Kollokation unwahrscheinlich erscheinen liessen. Das Prozessführungsrecht der klagenden Beschwerdegegnerin würde erst dann entfallen, wenn sie in einem den Konkurs der E.________ AG betreffenden Kollokationsverfahren/-plan (ganz oder teilweise) definitiv nicht zugelassen würde. Im Falle einer solchen späteren, definitiven Nichtkollokation der Forderung der Beschwerdegegnerin entstünden für die Beschwerdeführer keine relevanten Nachteile, die ohnehin nicht konkret geltend gemacht würden, da die Beschwerdegegnerin für die Prozesskosten hafte und einen allfälligen Prozessgewinn vollumfänglich an die Konkursmasse abzuliefern habe. Die Sistierung des Verfahrens erscheine daher nicht zweckmässig. Diese Zwischenverfügung wurde nicht angefochten, weshalb die Vorinstanz das Verfahren fortsetzte. Im angefochtenen Entscheid lehnte die Vorinstanz die Sistierung unter Verweis auf die Zwischenverfügung erneut ab und erwog, der Umstand, dass die Beschwerdegegnerin im Konkurs der E.________ AG mit ihrer Forderung (weiterhin) nicht definitiv kolloziert sei, stehe dem Eintreten auf die Klage nicht entgegen."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Vor Bundesgericht machen die Beschwerdeführer nicht mehr geltend, die Vorinstanz hätte das Verfahren sistieren müssen oder das bundesgerichtliche Verfahren sei zu sistieren, sodass diese Fragen nicht beurteilt zu werden brauchen. Vielmehr stellen sie sich vor Bundesgericht auf den Standpunkt, dass der Beschwerdegegnerin die Aktivlegitimation bzw. die Prozessführungsbefugnis fehle, weil ihre Konkursforderung nicht definitiv kolloziert sei. Werde, wie vorliegend, die Klage gutgeheissen, so seien die beklagten Beschwerdeführer zur Leistung an die Beschwerdegegnerin verpflichtet, die ihren Sitz in Polen habe. Würde nun nachträglich die Konkursforderung der Beschwerdegegnerin dahinfallen und wäre die Zahlung nach Polen bereits erfolgt, ginge die Konkursmasse leer aus, obwohl ein gutheissendes Urteil in Prozessstandschaft für die Konkursmasse vorliegen würde. Die Konkursmasse müsste also gegen die polnische Gesellschaft klagen, was aufgrund der aktuellen Lage in Polen \"aussichtslos\" sei. Dies sei nicht die Absicht des Gesetzgebers gewesen und widerspreche dem Sinn und Zweck von Art. 260 SchKG. Die Abtretung diene dazu, das zur Masse gehörende Vermögen im Interesse der Gesellschaftsgläubiger erhältlich zu machen. Mit diesem Zweck lasse es sich nicht vereinbaren, dass ein Dritter, dessen Kollokation nachträglich wegfallen könne, einen zur Masse gehörenden Vermögenswert erhalte. Hinzu komme das Interesse der Beschwerdeführer, das Risiko einer Doppelzahlung zu vermeiden. Sie könnten sich durch die Zahlung an die (nachträglich als Berechtigte weggefallene) Beschwerdegegnerin nicht gültig befreien."
+            },
+            {
+              "marke": "E. 3.4.1",
+              "tiefe": 3,
+              "text": "Bei der \"Abtretung\" nach Art. 260 SchKG handelt es sich um ein betreibungs- und prozessrechtliches Institut sui generis, mit dem die Prozessführungsbefugnis übertragen wird. Der Abtretungsgläubiger handelt im Prozess zwar im eigenen Namen, auf eigene Rechnung und auf eigenes Risiko, er wird aber durch die Abtretung nicht Träger des abgetretenen Anspruchs (BGE 146 III 441 E. 2.5.1; 145 III 101 E. 4.1.1; Urteil 5A_651/2020 vom 12. August 2021 E. 3.3.2). Der Prozess, der gestützt auf eine Abtretung im Sinne von Art. 260 SchKG geführt wird, dient dazu, der Konkursmasse zu Aktiven zu verhelfen, was nichts daran ändert, dass das Ergebnis bei der Verteilung in erster Linie demjenigen zugute kommt, der das Risiko des Prozesses eingeht (Art. 260 Abs. 2 SchKG; BGE 145 III 101 E. 4.1.1; 132 III 342 E. 2.2). Der Abtretungsgläubiger kann dabei Leistung direkt an sich selbst verlangen (BGE 146 III 441 E. 2.5.1; 139 III 391 E. 5.1; Urteile 4A_210/2010 vom 1. Oktober 2010 E. 7.2.2, nicht publ. in BGE 136 III 502; 4A_174/2007 vom 13. September 2007 E. 3.3)."
+            },
+            {
+              "marke": "E. 3.4.2",
+              "tiefe": 3,
+              "text": "Das Recht, die Abtretung eines Anspruches nach Art. 260 SchKG zu verlangen, ergibt sich von Gesetzes wegen (ex lege) aus der Stellung als kollozierter Gläubiger. Danach hat jeder im Kollokationsplan aufgeführte Gläubiger das Recht, die Abtretung eines Anspruches der Konkursmasse zu verlangen und zu erhalten, solange seine Forderung nicht rechtskräftig aus dem Kollokationsplan entfernt worden ist (BGE 145 III 101 E. 4.1.1; 138 III 628 E. 5.3.2; Eva Bachofner, in: Daniel Staehelin/Thomas Bauer/Franco Lorandi [Hrsg.], Basler Kommentar, Bundesgesetz über Schuldbetreibung und Konkurs, 3. Aufl. 2021, N. 39 zu Art. 260 SchKG). Das Recht, eine Abtretung nach Art. 260 SchKG zu verlangen, setzt somit nicht voraus, dass die Forderung bereits definitiv im Kollokationsplan zugelassen, sondern dass sie noch nicht endgültig aus dem Kollokationsplan entfernt worden ist. Andernfalls bestünde die Gefahr, dass der Anspruch bereits untergegangen ist, bevor über den Kollokationsstreit überhaupt rechtskräftig entschieden wurde, z.B. infolge kurzer Verjährungsfristen (vgl. BGE 48 III 88 S. 91; Schlaepfer, a.a.O., S. 88 f.)."
+            },
+            {
+              "marke": "E. 3.4.3",
+              "tiefe": 3,
+              "text": "In diesem Sinn hat das Bundesgericht bereits im Jahr 1922 entschieden, dass einem abgewiesenen Gläubiger eine bedingte Abtretung nach Art. 260 SchKG nicht verwehrt werden kann, wenn er den abschlägigen Kollokationsentscheid angefochten hat (BGE 48 III 88 S. 90 f. bestätigt in BGE 90 III 86 E. 1 S. 88 und 128 III 291 E. 4c/aa). Weiter wurde etwa festgehalten, dass ein Gläubiger, dessen Forderung im Zeitpunkt der Konkurseröffnung Gegenstand eines Prozesses war (Art. 63 Abs. 1 KOV) und deshalb im Kollokationsplan lediglich pro memoria vorgemerkt ist, gleich wie andere nicht definitiv zugelassene Gläubiger, eine bedingte Abtretung verlangen kann (BGE 128 III 291 E. 4c/aa; Kurt Amonn / Fridolin Walther, Grundriss des Schuldbetreibungs- und Konkursrechts, 9. Aufl. 2013, § 47 N. 48). Grundsätzlich kann somit jeder Gläubiger, der seine Forderung im Konkurs angemeldet hat, und dessen Forderung noch nicht definitiv abgewiesen wurde, die Abtretung der Forderung im Sinne von Art. 260 SchKG verlangen. Da die Forderung in diesen Fällen aber noch nicht rechtskräftig anerkannt ist, darf die Abtretung im Sinne von Art. 260 SchKG nicht unbedingt erfolgen. Vielmehr wird die Abtretung entsprechend der rechtlichen Situation unter einer Bedingung ausgestellt, nämlich unter einer resolutiven Bedingung (vgl. BGE 48 III 88 S. 90; Urteil 7B.206/2005 vom 2. Februar 2006 E. 4; Pierre-Robert Gilliéron, Commentaire de la loi fédérale sur la poursuite pour dettes et la faillite, 2001, N. 42 zu Art. 260 SchKG). Wird dem Gläubiger das Abtretungsrecht nach Art. 260 SchKG resolutiv bedingt eingeräumt, ist die Abtretung sofort (voll) wirksam. Sie verliert ihre Wirksamkeit im Zeitpunkt des Bedingungseintritts (vgl. Art. 154 Abs. 1 OR), d.h. vorliegend im Zeitpunkt der definitiven Nichtkollokation. Bis zum rechtskräftigen Entscheid über die Kollokation ist die resolutiv bedingte Abtretung nicht anders zu behandeln als eine unbedingte (Matthias Häuptli, in: Dominik Milani / Marc Wohlgemuth, Kommentar zur Verordnung über die Geschäftsführung der Konkursämter [KOV], 2016, N. 23 zu Art. 80 KOV)."
+            },
+            {
+              "marke": "E. 3.4.4",
+              "tiefe": 3,
+              "text": "Ein Gläubiger, der gestützt auf eine solche bedingte Abtretung nach Art. 260 SchKG als Prozessstandschafter im obigen Sinn prozessiert, tut dies auf eigenes Risiko (Urteil 7B.94/2003 vom 24. Juni 2003 E. 5.1): Wird die Konkursforderung des Abtretungsgläubigers im Kollokationsprozess rechtskräftig abgewiesen, entfällt nachträglich seine Prozessführungsbefugnis im Abtretungsprozess zur weiteren Verfolgung des abgetretenen Rechtsanspruchs (BGE 109 III 27 E. 1a; 55 II 63 E. 2 S. 65; Urteil 5A_769/2013 vom 13. März 2014 E. 3). Hat der rechtskräftig abgewiesene Gläubiger den Prozess bereits anhängig gemacht, so ergeht ihm gegenüber mangels Prozessführungsbefugnis ein Nichteintretensentscheid (BGE 145 III 101 E. 4.1.3; 144 III 552 E. 4.1.2; Bachofner, a.a.O., N. 41 zu Art. 260 SchKG). Ist bereits ein Urteil ergangen, bleibt dieses zwar gültig (Jean Flachsmann, Die Abtretung der Rechtsansprüche der Konkursmasse nach Art. 260 des schweizerischen Schuldbetreibungs- und Konkursgesetzes, 1927, S. 65), ein bereits erlangter Prozessgewinn fällt aber der Konkursmasse zu (Häuptli, a.a.O., N. 23 zu Art. 80 KOV; Schlaepfer, a.a.O., S. 88; Flachsmann, a.a.O., S. 65; Entscheid des Obergerichts des Kantons Thurgau vom 14. November 2012 [BR.2012.46], RBOG 2012 Nr. 18 S. 188 ff. E. 3b S. 190)."
+            },
+            {
+              "marke": "E. 3.5",
+              "tiefe": 2,
+              "text": "Nach dem Gesagten ist der Entscheid der Vorinstanz nicht zu beanstanden."
+            },
+            {
+              "marke": "E. 3.5.1",
+              "tiefe": 3,
+              "text": "Die Forderungen wurden auflösend bedingt an die Beschwerdegegnerin abgetreten (Erwägung 3.2). Diese \"Abtretung\" im Sinne von Art. 260 SchKG, d.h. die Prozessführungsbefugnis (Erwägung 3.4.1) und die damit verbundenen Rechte, werden sofort wirksam, solange die Bedingung der definitiven Nichtkollokation der Konkursforderung noch nicht eingetreten ist (Erwägung 3.4.3). Die Bedingung der definitiven Nichtkollokation ist in casu (noch) nicht eingetreten (Erwägung 3.1), weshalb die Beschwerdegegnerin zur Geltendmachung der Forderungen als Abtretungsgläubigerin nach Art. 260 SchKG befugt ist, auch wenn ihre Forderung im Konkurs der E.________ AG noch nicht definitiv kolloziert wurde."
+            },
+            {
+              "marke": "E. 3.5.2",
+              "tiefe": 3,
+              "text": "Die Beschwerdegegnerin kann damit den Anspruch als Prozessstandschafterin geltend machen und sie kann als Abtretungsgläubigerin Leistung direkt an sich selbst verlangen (Erwägung 3.4.1). Kann die Beschwerdegegnerin Leistung direkt an sich verlangen, haben die beklagten Beschwerdeführer als Schuldner im Umkehrschluss direkt an die Beschwerdegegnerin zu leisten. Dementsprechend wurden die beklagten Beschwerdeführer im Dispositiv des angefochtenen Entscheids auch verpflichtet, der klagenden Beschwerdegegnerin den Betrag von rund Fr. 1.8 Mio. zu leisten. Das stellen die Beschwerdeführer vor Bundesgericht denn auch nicht in Frage (Erwägung 2.1). Aufgrund dieser Rechtslage bei der Abtretung nach Art. 260 SchKG besteht die von den Beschwerdeführern geltend gemachte Gefahr einer Doppelzahlung nicht. Leisten sie aufgrund eines Gerichtsurteils an die Beschwerdegegnerin, haben sie sich gültig befreit."
+            },
+            {
+              "marke": "E. 3.5.3",
+              "tiefe": 3,
+              "text": "Für den Fall, dass die Konkursforderung der Beschwerdegegnerin (nachträglich) definitiv nicht kolloziert werden sollte, würde der Prozessgewinn, den die Beschwerdegegnerin durch ihre Klage im vorliegenden Abtretungsprozess erhältlich machen konnte, der Konkursmasse zufallen (Erwägung 3.4.3), wie auch die Vorinstanz in ihrer Zwischenverfügung zu Recht erwogen hat (Erwägung 3.2). Die Beschwerdegegnerin hätte in diesem Fall den Prozessgewinn an die Konkursmasse abzuliefern. Für den Fall, dass die Beschwerdegegnerin den Prozessgewinn entgegen ihrer Verpflichtung nicht an die Konkursmasse ablieferte, müsste diese gegen die Beschwerdegegnerin vorgehen. Ob und wie die Konkursmasse den ausbezahlten Prozessgewinn bei der in Polen domizilierten Beschwerdegegnerin erhältlich machen könnte, spielt im vorliegenden Abtretungsprozess keine Rolle, wie die Beschwerdegegnerin zu Recht vorbringt: Es betrifft einzig das Verhältnis zwischen der Konkursmasse und der Beschwerdegegnerin. Die im vorliegenden Abtretungsprozess beklagten Beschwerdeführer können aus allfälligen Inkassoschwierigkeiten der Konkursmasse nichts für sich ableiten, zumindest legen sie nicht dar, worin ihr diesbezügliches Rechtsschutzinteresse bestehen soll. Immerhin ist Folgendes zu bemerken: Die Abtretung nach Art. 260 SchKG ist eine besondere Verwertungsart bestrittener Rechtsansprüche. Sie setzt voraus, dass die Gesamtheit der Gläubiger auf die Geltendmachung des betreffenden Rechts durch die Masse verzichtet (Art. 260 Abs. 1 SchKG) und ein Gläubiger bereit ist, das Risiko einzugehen, das die Mehrheit für die Masse ablehnt (Amonn/Walter, a.a.O., § 47 N. 45). Die Konkursmasse bzw. die Gläubigergesamtheit hat damit eine Kosten/Nutzen-Abwägung für die Verwertung einer solchen bestrittenen Forderung vorzunehmen (Bachofner, a.a.O., N. 2 zu Art. 260 SchKG): Sie kann die Ansprüche selbst durchsetzen. Wenn sie das Risiko oder den Aufwand scheut, kann sie den Anspruch einem Gläubiger abtreten, der bereit ist, das Risiko auf sich zu nehmen. Eine solche Abwägung wurde im vorliegenden Fall vorgenommen und die Forderung wurde in Kenntnis der Umstände an die Beschwerdegegnerin mit Sitz in Polen abgetreten, obwohl deren Konkursforderung noch nicht definitiv kolloziert war. Die Konkursmasse bzw. die Gläubigergesamtheit hat damit auch das Risiko zu tragen, dass sie allenfalls eine Forderung gegen die Abtretungsgläubigerin im Ausland geltend machen müsste. Dieses Risiko ist im Übrigen kein Sonderproblem der bedingten Abtretung, sondern dem Institut der Abtretung von Art. 260 SchKG inhärent: Der Zweck der Abtretung besteht gerade darin, dass der Prozessgewinn in erster Linie dem Abtretungsgläubiger zukommt, der das Risiko der Prozessführung eingeht und nach ständiger Rechtsprechung Leistung an sich selbst verlangen kann (Erwägung 3.4.1). Die Masse erhält immerhin den Überschuss (Art. 260 Abs. 2 SchKG). Ist der Prozessgewinn grösser als die kollozierte Forderung, besteht immer die Gefahr, dass die Konkursmasse den Überschuss beim Abtretungsgläubiger einfordern muss, wenn dieser den Überschuss nicht an die Konkursmasse abliefert (so auch Urteil des Obergerichts Thurgau, a.a.O., E. 3b)."
+            },
+            {
+              "marke": "E. 3.5.4",
+              "tiefe": 3,
+              "text": "Die Vorinstanz hat damit zu Recht die Prozessführungsbefugnis der Beschwerdegegnerin bejaht, obschon deren Forderung im Urteilszeitpunkt im Konkurs der E.________ AG noch nicht definitiv kolloziert war."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Umstritten ist das Verhältnis zwischen der Rückerstattungsklage nach Art. 678 OR und der Verantwortlichkeitsklage gemäss Art. 754 ff. OR."
+            },
+            {
+              "marke": "E. 4.1.1",
+              "tiefe": 3,
+              "text": "Die Beschwerdeführerin 3 macht geltend, die Vorinstanz habe Bundesrecht verletzt, indem sie die Verantwortlichkeitsklage gegenüber der Rückerstattungsklage nicht als subsidiär behandelt habe. Das Bundesgericht habe sich zwar in BGE 140 III 533 zum Verhältnis der beiden Klagen geäussert. Es könne aber nicht sein, dass bei Verantwortlichkeitsansprüchen die Schadensminderungspflicht einfach ausser Acht gelassen werde."
+            },
+            {
+              "marke": "E. 4.1.2",
+              "tiefe": 3,
+              "text": "Das Bundesgericht hat sich in BGE 140 III 533 mit den von den Beschwerdeführern angeführten Literaturmeinungen, insbesondere derjenigen von Luterbacher, und dem Verhältnis zwischen der Rückerstattungs- und Verantwortlichkeitsklage auseinandergesetzt. Es kam zum Schluss, dass eine so grundsätzliche strukturelle Frage wie diejenige des Verhältnisses von Rückerstattungs- und Verantwortlichkeitsklage nicht über die Schadensminderungsobliegenheit gelöst werden könne. Dementsprechend sei die damalige Klägerin nicht gehalten gewesen, vor dem Verantwortlichkeitsprozess eine Rückerstattungsklage nach Art. 678 OR anzustrengen (BGE 140 III 533 E. 3.2). Dagegen wiederholt die Beschwerdeführerin 3 lediglich die gleichen Argumente, gestützt auf die gleichen Lehrmeinungen, die das Bundesgericht bereits in BGE 140 III 533 verworfen hat. Damit werden keine ernsthaften sachlichen Gründe vorgebracht, die eine Praxisänderung des im Jahre 2014 gefällten Leitentscheids rechtfertigen könnten (dazu: BGE 148 III 270 E. 7.1 mit Hinweisen). Soweit die Beschwerdeführerin 3 ihre weitere Argumentation auf die von dieser Rechtsprechung abweichende Lehre stützt, insbesondere im Zusammenhang mit der Schadensberechnung und Schadenersatzbemessung, entbehrt sie demnach der Grundlage und es ist darauf nicht einzugehen."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Die Beschwerdeführerin 3 beruft sich zusätzlich darauf, die Rechtsprechung von BGE 140 III 533 sei im vorliegenden Fall nicht anwendbar. Die Beschwerdegegnerin habe im Gegensatz zum Sachverhalt, der dem BGE 140 III 533 zugrunde lag, beide Ansprüche gleichzeitig geltend gemacht. In einer solchen Situation hätte die Vorinstanz die beiden Verfahren inhaltlich trennen und die Verantwortlichkeitsklage \"mindestens gedanklich sistieren\" müssen. Die Sistierung hätte aufgehoben werden müssen, sobald der von der Beschwerdeführerin 1 zurückzuerstattende Betrag rechtskräftig feststehe. Die Vorinstanz hätte somit primär die Rückerstattungsklage und subsidiär - für den Fall des Scheiterns der Rückerstattungsklage - die Verantwortlichkeitsklage prüfen müssen. Soweit eine Rückerstattungs- und eine Verantwortlichkeitsklage gleichzeitig anhängig gemacht würden, bestehe keine Anspruchskonkurrenz. Nachdem die Rückforderungsklage gegenüber der Beschwerdeführerin 1 von der Vorinstanz gutgeheissen worden sei, könne die Verantwortlichkeitsklage höchstens noch subsidiär und für einen allfällig ungedeckt gebliebenen Ausfall gutgeheissen werden. Da sich die Forderungen vorliegend in Höhe und Fundament deckten, sei die Verantwortlichkeitsklage abzuweisen."
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Zwischen dem Anspruch aus Verantwortlichkeit nach Art. 754 ff. OR und dem Rückforderungsanspruch von Art. 678 OR besteht Anspruchskonkurrenz (Peter Böckli, Schweizer Aktienrecht, 5. Aufl. 2022, § 14 N. 145; Hans Caspar von der Crone, Aktienrecht, 2. Aufl. 2020, Rz. 549; Hans-Ueli Vogt, in: Heinrich Honsell/Nedim Peter Vogt/Rolf Watter [Hrsg.], Basler Kommentar, Obligationenrecht II, 5. Aufl. 2016, N. 34b zu Art. 678 OR). Diese Konkurrenz hat zur Folge, dass zwischen den nach Art. 678 OR und den nach Art. 754 OR eingeklagten Personen eine unechte Solidarität besteht, wenn es sich, wie vorliegend, nicht um dieselben Personen handelt (Art. 51 Abs. 1 OR; Ramon Mabillard, Zürcher Kommentar, 2. Aufl. 2021, N. 121 zu Art. 678 OR). Bei der echten wie der unechten Solidarität kann der Geschädigte von jedem der Ersatzpflichtigen den Ersatz des gesamten Schadens verlangen (vgl. BGE 145 III 460 E. 4.3.5; 133 III 6 E. 5.3.2; 127 III 257 E. 5a; 112 II 138 E. 4a; je mit Hinweisen). Ein belangter Solidarschuldner kann dem Geschädigten grundsätzlich nicht entgegenhalten, es hafte für den gleichen Schaden auch noch ein anderer (dazu: BGE 145 III 460 E. 4.3.5; 130 III 591 E. 5.5.1; 127 III 257 E. 5a; 114 II 342 E. 2b; je mit Hinweisen). In casu besteht damit entgegen der Auffassung der Beschwerdeführerin 3 Anspruchskonkurrenz zwischen den Ansprüchen aus aktienrechtlicher Verantwortlichkeit gegenüber den Beschwerdeführern 2 und 3 und dem Rückforderungsanspruch gegenüber der Beschwerdeführerin 1. Entsprechend haftet Letztere solidarisch mit den Beschwerdeführern 2 und 3 für den Ersatz des gesamten, von der Beschwerdegegnerin geltend gemachten Schadens aufgrund der behaupteten unzulässigen Dividendenausschüttung der Jahre 2015 und 2016. Die Beschwerdeführerin 3 kann aus der Tatsache, dass neben ihr noch die Beschwerdeführer 1 und 2 haften, nichts zu ihren Gunsten ableiten, denn dies wäre mit dem Grundsatz nicht vereinbar, wonach jeder Schädiger für den gesamten Schaden einzustehen hat. Die Vorinstanz brauchte daher auch nicht primär die Rückerstattungsklage und erst sekundär (im Falle des Scheiterns der Rückerstattungsklage) die Verantwortlichkeitsklage zu prüfen oder das Verfahren \"gedanklich\" zu sistieren."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin 3 beanstandet im Zusammenhang mit der Verantwortlichkeitsklage die Erwägungen der Vorinstanz zum Schaden."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Unbestritten ist vor Bundesgericht der Schadensbegriff, wonach der Schaden einer ungewollten Verminderung des Reinvermögens entspricht, der in einer Verminderung der Aktiven, einer Vermehrung der Verbindlichkeiten oder in entgangenem Gewinn bestehen kann. Er entspricht der Differenz zwischen dem gegenwärtigen Vermögensstand und dem Stand, den das Vermögen ohne das schädigende Ereignis hätte (BGE 148 III 11 E. 3.2.3; 144 III 155 E. 2.2; je mit Hinweisen). Die Beschwerdegegnerin macht als Schaden den Betrag der in den Jahren 2015 und 2016 ihrer Meinung nach zu Unrecht ausgeschütteten Dividenden geltend. Die Dividenden seien der Beschwerdeführerin 1 durch Verrechnung mit den Kontokorrentforderungen der E.________ AG ausbezahlt worden. Die Beschwerdeführer bestritten diese Vorgänge vor der Vorinstanz nicht, wiesen aber darauf hin, dass die Verrechnung nicht zu einem die Liquidität verschlechternden Mittelabfluss geführt habe. Die Vorinstanz verwarf diesen Standpunkt: Die Auszahlung der Dividenden der Jahre 2015 und 2016 durch Verrechnung sei unbestritten und belegt. Auch wenn die Verrechnung der Dividenden mit Forderungen der E.________ AG nicht zu einem Liquiditätsabfluss geführt habe, seien die Aktiven der E.________ AG im Umfang der Verrechnung vermindert worden. Sollte sich die Dividendenausschüttung aufgrund von Pflichtverletzungen der Beschwerdeführer 2 und 3 als unzulässig erweisen, wäre somit ein Schaden in entsprechender Höhe erstellt."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Dagegen macht die Beschwerdeführerin 3 geltend, nur die Differenz des Gesellschaftsvermögens könne einen allfälligen Schaden darstellen, nicht aber die blosse Differenz im Haftungssubstrat, d.h. die isoliert betrachtete Abnahme der Aktiven. Die Verminderung der Kontokorrentforderung betreffe nur das Vollstreckungssubstrat der konkursiten Gesellschaft. Diese Rüge ist unbegründet: Es trifft zwar zu, dass das Bundesgericht in anderem Zusammenhang erwogen hat, die blosse Verminderung des Verwertungssubstrats infolge Bezahlung einer fälligen Schuld stelle keinen Vermögensschaden dar, weil Aktiven und Verbindlichkeiten im gleichen Umfang vermindert würden (BGE 142 III 23 E. 4.4; vgl. auch Böckli, a.a.O., § 16 N. 196). Im vorliegenden Fall geht es jedoch um etwas anderes: Die Beschwerdegegnerin macht als Schaden die ihrer Ansicht nach pflichtwidrig zu hohen Dividendenausschüttungen für die Jahre 2015 und 2016 geltend. Der Schaden besteht dabei in der Differenz zwischen der Dividende, die bei einer ordnungsgemässen Rechnungslegung ausgeschüttet worden wäre, und der tatsächlich ausgeschütteten Dividende. Wurden die Dividenden in casu pflichtwidrig zu hoch angesetzt, so hat die Beschwerdeführerin 1 gegenüber der E.________ AG einen zu hohen Anspruch auf Ausrichtung einer Dividende erlangt. Die Verrechnung der Kontokorrentforderungen mit dem (pflichtwidrig zu hohen) Dividendenanspruch führt zu einer ungewollten Verminderung der Aktiven der E.________ AG und damit zu einem Vermögensschaden."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin 3 beanstandet die Schadenersatzbemessung der Vorinstanz. Sie macht geltend, die Vorinstanz hätte eine Beweisverfügung erlassen und ein Beweisverfahren durchführen müssen und rügt eine Verletzung von Art. 154 ZPO, Art. 8 ZGB und ihres Anspruchs auf rechtliches Gehör. Sie stützt sich dafür aber einerseits auf den bereits verworfenen Standpunkt der Schadensminderungspflicht (Erwägung 4.1.2). Zum anderen verweist sie auf vorinstanzliche Rechtsschriften, was vor Bundesgericht unzulässig ist, denn die Begründung hat in der Beschwerdeschrift selbst zu erfolgen (BGE 144 V 173 E. 3.2.2; 140 III 115 E. 2). Im Übrigen legt die Beschwerdeführerin 3 nicht hinreichend dar (Erwägung 2.1), betreffend welche rechtserheblichen und strittigen Tatsachenbehauptungen die Vorinstanz eine Beweisverfügung hätte erlassen sollen."
+            },
+            {
+              "marke": "E. 5.4",
+              "tiefe": 2,
+              "text": "Es bleibt damit bei dem von der Vorinstanz festgestellten Schaden."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführer monieren, die Vorinstanz habe zu Unrecht das Vorliegen einer Pflichtverletzung bejaht."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Die Vorinstanz stellte fest, Gegenstand des ICC-Schiedsverfahrens seien gemäss dem \"Final Award\" Forderungen der Beschwerdegegnerin in der Höhe von insgesamt USD 7'792'000.-- gewesen. Für diese Forderungen habe die E.________ AG in der Jahresrechnung 2015 zunächst Rückstellungen von Fr. 2'711'714.50 sowie Rückstellungen für Anwaltskosten von Fr. 64'666.-- und Fr. 271'850.-- gebucht. Auf dieser Grundlage habe die Beschwerdeführerin 3 einen ersten Revisionsbericht zur Jahresrechnung der E.________ AG erstellt und habe diesen dem Beschwerdeführer 2 zugestellt. In der Folge habe die E.________ AG bei der Anwaltskanzlei H.________ LLP einen \"Legal Letter\" eingeholt. In der Einschätzung vom 19. Mai 2016 führe Rechtsanwältin I.________ aus, dass sie die Erfolgsaussichten der Beschwerdegegnerin, \"mit ihrem Anspruch in voller Höhe zu obsiegen, als sehr gering\" einschätze. Die Chance, die Vertragsstrafen unter Annex 4 des Flight Service Agreement (FSA) gänzlich abzuwehren, sehe sie bei \"leicht über 50%\". Betreffend den Anspruch auf Zahlung von USD 1'500'000 schätze sie die Erfolgsaussichten der Beschwerdegegnerin als gering ein. Nach einem E-Mailaustausch zwischen dem Beschwerdeführer 2 und J.________, dem zuständigen Revisor bei der Beschwerdeführerin 3, sei schliesslich ein Betrag von Fr. 1'475'000 für die Forderung der Beschwerdegegnerin zurückgestellt worden. Die Vorinstanz erwog, die E.________ AG habe somit Rückstellungen in der Höhe von knapp 20% des insgesamt eingeklagten Betrags gebildet. Die Forderung der Beschwerdegegnerin stütze sich zur Hauptsache darauf, dass die Kündigung des zwischen der E.________ AG und der Beschwerdegegnerin geschlossenen FSA durch die E.________ AG unter den gegebenen Umständen als \"Repudiatory Breach\" zu gelten habe und demnach gemäss Ziff. 7.3 FSA und Anhang 4 pauschalisierter Schadenersatz geschuldet sei. Im Legal Letter seien die Erfolgsaussichten der Beschwerdegegnerin, mit dem Anspruch in voller Höhe zu obsiegen, als sehr gering eingeschätzt worden, und die Chancen der E.________ AG, die Vertragsstrafe gänzlich abzuwehren, bei leicht über 50%. Entgegen der Ansicht der Beschwerdeführer 2 und 3 seien damit die Erfolgsaussichten der Beschwerdegegnerin nicht als sehr gering eingeschätzt worden, sondern nur als leicht unter 50%, wenn auch nicht in voller Höhe. Die E.________ AG habe mithin nicht mit einem weitgehenden Obsiegen rechnen können. Dem fachlichen Rat folgend hätte sie vielmehr eine anteilsmässige Rückstellung vornehmen müssen, die angesichts einer Unterliegenswahrscheinlichkeit von beinahe 50% auf die Höhe der unter diesem Anspruch eingeklagten Summe festzulegen gewesen wäre. Die Rückstellung hätte demnach USD 3'096'000.-- bzw. Fr. 3'092'870 betragen müssen. Die weiteren Ansprüche durften hingegen gestützt auf den eingeholten Legal Letter zufolge geringer Unterliegenswahrscheinlichkeit ausser Betracht bleiben. Mit der bewussten Reduktion der zunächst vorgenommenen Rückstellung und der Unterschreitung des Betrages, der aufgrund der Einschätzung einer Fachperson dem Risiko angemessen gewesen wäre, liege auf Seiten des Beschwerdeführers 2, der als Verwaltungsrat die Endverantwortung für die Buchführungstätigkeit trage, eine klare Pflichtverletzung vor. Gleiches gelte für die Beschwerdeführerin 3. Dabei sei insbesondere zu beachten, dass sich sowohl der Beschwerdeführer 2 als auch der bei der Beschwerdeführerin 3 für die Revision der E.________ AG zuständige Revisor persönlich mit der Frage der Höhe der Rückstellungen befasst hätten. Die massgeblichen Unterlagen seien ihnen bekannt gewesen, und sie hätten - nachdem bereits ein erster Revisionsbericht gestützt auf höhere Rückstellungen erstattet worden sei - nachträglich im gemeinsamen Zusammenwirken eine sich direkt auf das Ergebnis der Jahresrechnung 2015 auswirkende Korrektur in beträchtlicher Höhe vorgenommen."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführer wenden sich gegen die vorinstanzliche Interpretation des Legal Letters von Rechtsanwältin I.________ vom 19. Mai 2016."
+            },
+            {
+              "marke": "E. 6.2.1",
+              "tiefe": 3,
+              "text": "Sie rügen eine offensichtlich unrichtige Sachverhaltsfeststellung und monieren, die Vorinstanz habe den Legal Letter offensichtlich falsch ausgelegt und \"falsch bzw. willkürlich interpretiert\". Sie beanstanden damit die vorinstanzlichen Erwägungen bezüglich des Legal Letter unter dem Gesichtspunkt der Willkür. Dass die Vorinstanz auch gegen Bundesrecht verstossen hätte, machen sie nicht rechtsgenüglich geltend (Erwägung 2.1). Willkür liegt nicht schon dann vor, wenn eine andere Lösung ebenfalls in Betracht zu ziehen oder gar vorzuziehen wäre, sondern nur, wenn der angefochtene Entscheid offensichtlich unhaltbar ist, mit der tatsächlichen Situation in klarem Widerspruch steht, eine Norm oder einen unumstrittenen Rechtsgrundsatz krass verletzt oder in stossender Weise dem Gerechtigkeitsgedanken zuwiderläuft (BGE 140 III 16 E. 2.1; 139 III 334 E. 3.2.5). Inwiefern dies der Fall wäre, vermögen die Beschwerdeführer nicht rechtsgenüglich aufzuzeigen: Im Legal Letter von Rechtsanwältin I.________ heisst es im ersten Absatz der hier relevanten Prozesseinschätzung wie folgt: \" Wir schätzen die Erfolgsaussichten der Klägerin [=Beschwerdegegnerin], mit dem Anspruch in voller Höhe zu obsiegen, als sehr gering. Die Chance, die Vertragsstrafe unter Annex 4 FSA gänzlich abzuwehren, sehen wir bei leicht über 50%. Dies hat folgenden Hintergrund: (...) \". Die Vorinstanz stellte darauf ab und interpretierte die nachfolgenden Ausführungen (\" Dies hat folgenden Hintergrund\") somit als ergänzende Erläuterungen. Dagegen interpretieren die Beschwerdeführer die nachfolgenden Darlegungen als \" eine eindeutige Kaskadenanknüpfung der Entscheidalternativen des Schiedsgerichts \". Sie legen damit aber nicht hinreichend dar, inwiefern die Auslegung des Legal Letters durch die Vorinstanz, die keine solche Alternativen erkennen konnte, sondern auf die zuerst genannte Haupteinschätzung abstellte, geradezu offensichtlich unrichtig im oben genannten Sinn sein soll. Willkür liegt nur dann vor, wenn die vorinstanzliche Auffassung schlechterdings unhaltbar ist. Dass eine andere Lösung ebenfalls als vertretbar oder gar zutreffender erscheint, genügt nicht. Selbst wenn die Auffassung einer \"Kaskadenanküpfung\" vorzuziehen wäre, genügt dies also noch nicht, damit die Interpretation des Legal Letters durch die Vorinstanz offensichtlich unrichtig wäre."
+            },
+            {
+              "marke": "E. 6.2.2",
+              "tiefe": 3,
+              "text": "Die Beschwerdeführer kritisieren die Sachverhaltsfeststellung der Vorinstanz betreffend den ICC Final Award als willkürlich, ohne dass ihre Ausführungen den Begründungsanforderung genügten (Erwägung 2.2)."
+            },
+            {
+              "marke": "E. 6.2.3",
+              "tiefe": 3,
+              "text": "Die Beschwerdeführer 1 und 2 beanstanden, die Vorinstanz hätte Rechtsanwältin I.________ als Zeugin einvernehmen müssen. Indem die Vorinstanz dies unterlassen habe, sei ihr Anspruch auf rechtliches Gehör nach Art. 29 Abs. 2 BV und ihr Recht auf Beweis nach Art. 152 Abs. 1 ZPO verletzt worden. Die Beschwerdeführerin 3 macht in diesem Zusammenhang geltend, die Befragung der Zeugin sei unterblieben und die Vorinstanz habe das Urteil ohne Beweisverfügung und ohne Beweisverfahren gefällt. Die Vorinstanz kann in antizipierter Beweiswürdigung auf die Abnahme weiterer Beweismittel verzichten. Eine solche antizipierte Beweiswürdigung kann vor Bundesgericht nur in Frage gestellt werden, wenn unter Beachtung des strengen Rügeprinzips (Art. 106 Abs. 2 BGG) in genügender Art und Weise dargetan wird, dass die Vorinstanz damit in Willkür verfallen ist (BGE 146 III 73 E. 5.2.2 mit Hinweisen). Dass die Vorinstanz in Willkür verfallen wäre, wird von den Beschwerdeführern nicht geltend gemacht, zumindest offensichtlich nicht rechtsgenüglich (Erwägung 2.1). Soweit die Beschwerdeführer 1 und 2 dem Bundesgericht die Zeugenbefragung von Rechtsanwältin I.________ anbieten, ist darauf nicht einzutreten. Es ist nicht Aufgabe des Bundesgerichts, Beweise abzunehmen und Tatsachen festzustellen, über die sich das kantonale Gericht nicht ausgesprochen hat (Art. 105 Abs. 1 BGG; BGE 136 III 209 E. 6.1)."
+            },
+            {
+              "marke": "E. 6.2.4",
+              "tiefe": 3,
+              "text": "Die Beschwerdeführer 1 und 2 reichen in diesem Zusammenhang eine E-Mail von Rechtsanwältin I.________ vom 18. Oktober 2022 ein. Dabei handelt es sich um neue unzulässige Behauptungen, die nach dem angefochtenen Entscheid entstanden sind (Art. 99 Abs. 1 BGG)."
+            },
+            {
+              "marke": "E. 6.2.5",
+              "tiefe": 3,
+              "text": "Es bleibt somit bei der Auffassung der Vorinstanz, dass die Erfolgsaussichten der Beschwerdegegnerin im Schiedsverfahren im Legal Letter nicht als gering, sondern als \"leicht unter 50%\" eingeschätzt wurden. Soweit die Beschwerdeführer entgegen dieser Auffassung argumentieren, die Erfolgschancen der Beschwerdegegnerin seien \"sehr gering\" gewesen und ihre Rückstellungen daher angemessen, ist darauf nicht einzutreten."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin 3 rügt darüber hinaus eine Verletzung von Art. 960e Abs. 2 OR. Sie beruft sich darauf, die Angemessenheit der Rückstellungen sei im Einzelfall nach den Umständen zu prüfen. Es bestehe somit eine Pflicht zur Risikobeurteilung im sorgfältigen Ermessen. Die Beschwerdeführerin 3 macht damit einzig geltend, die von der Vorinstanz festgelegte Rückstellung von Fr. 3'092'870.-- sei nicht angemessen gewesen. Diesen Vorwurf begründet sie hauptsächlich mit ihrer abweichenden Interpretation des Legal Letters. Im Übrigen legt sie nicht dar, zumindest nicht hinreichend (Erwägung 2.1), inwiefern die Rückstellung unter den gegebenen Umständen unangemessen gewesen sein soll (vgl. Urteil 4A_277/2010 vom 2. September 2010 E. 2.1). Es hat damit sein Bewenden."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin 3 moniert, sie sei nicht verpflichtet gewesen, bezüglich der Rückstellungen eine Drittmeinung einzuholen, sondern sie habe sich auf die plausiblen Ausführungen des Verwaltungsrats verlassen können. Sie sei in dieser Angelegenheit \"viel weiter weg\" als der Verwaltungsrat gewesen. Es habe keine Anhaltspunkte dafür gegeben, dass die vom Verwaltungsrat gelieferten Erläuterungen unzutreffend gewesen seien. Auch diese Rüge ist unbegründet: Die Vorinstanz stellte unbestrittenermassen fest, dass die Beschwerdeführerin 3 sich persönlich mit der Frage der Höhe der Rückstellungen befasste, ihr die massgeblichen Unterlagen bekannt waren und sie nachträglich und im gemeinsamen Zusammenwirken mit dem Beschwerdeführer 2 eine beträchtliche Korrektur der Rückstellungen vorgenommen habe. Es kann damit keine Rede davon sein, dass die Beschwerdeführerin 3 bezüglich der hier strittigen Rückstellungen für das ICC-Verfahren \"viel weiter weg\" gewesen sei, als der Beschwerdeführer 2 als Verwaltungsrat, und sie keine Anhaltspunkte dafür gehabt habe, dass die vom Beschwerdeführer 2 gelieferten Informationen unzutreffend gewesen seien. Unter diesen Umständen schloss die Vorinstanz zu Recht, dass die nachträgliche Änderung der Jahresrechnung in Kenntnis der massgebenden Entscheidgrundlagen der Beschwerdeführerin 3 zum Vorwurf gereichen."
+            },
+            {
+              "marke": "E. 6.5",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführer beanstanden die von der Vorinstanz festgestellte Pflichtwidrigkeit bezüglich der Verbuchung des Kostenvorschusses an das ICC-Schiedsgericht im Geschäftsjahr 2016 und bezüglich der Aktivierung der Forderung gegenüber der G.________ Ltd. Sie verweisen dafür auf ihre Argumentation in den vorinstanzlichen Rechtsschriften, was vor Bundesgericht nicht zulässig ist (Erwägung 5.3), und stützen sich auf ihre eigene Interpretation des Legal Letters (Erwägung 6.2). Im Übrigen setzen sie sich weder hinreichend mit den Erwägungen der Vorinstanz auseinander, noch legen sie rechtsgenüglich dar (Erwägung 2.1), inwiefern der Vorinstanz eine Bundesrechtsverletzung vorzuwerfen wäre."
+            },
+            {
+              "marke": "E. 6.6",
+              "tiefe": 2,
+              "text": "Die Vorinstanz ist somit bei den Verantwortlichkeitsklagen zu Recht von Pflichtverletzungen der Beschwerdeführer 2 und 3 ausgegangen."
+            },
+            {
+              "marke": "E. 6.7",
+              "tiefe": 2,
+              "text": "Bezüglich des von der Vorinstanz bejahten Kausalzusammenhangs und Verschuldens bei der Verantwortlichkeitsklage beruft sich die Beschwerdeführerin 3 hauptsächlich auf die soeben verworfene Ansicht, sie habe sorgfältig gehandelt. Im Übrigen setzen sich die Beschwerdeführer weder hinreichend mit den Ausführungen der Vorinstanz auseinander, noch legen sie rechtsgenüglich dar, inwiefern der Vorinstanz eine Bundesrechtsverletzung vorzuwerfen wäre (Erwägung 2.1). Bezüglich der Solidarität beruht die Argumentation der Beschwerdeführerin 3 auf der oben verworfenen Prämisse, dass die Verantwortlichkeitsklage subsidiär zur Rückerstattungsklage sei (Erwägung 4). Im Übrigen legt sie auch hier nicht dar, inwiefern die Erwägungen der Vorinstanz bundesrechtswidrig wären."
+            },
+            {
+              "marke": "E. 6.8",
+              "tiefe": 2,
+              "text": "Die Vorinstanz ist somit zu Recht zum Schluss gekommen, dass die Voraussetzungen der Verantwortlichkeitsklage gegeben sind."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Das Vorliegen der Voraussetzungen der Rückerstattungsklage wird von den Beschwerdeführern nicht beanstandet, zumindest offensichtlich nicht hinreichend (Erwägung 2.1)."
+            },
+            {
+              "marke": "E. 8",
+              "tiefe": 1,
+              "text": "Nach dem Ausgeführten sind die Beschwerden abzuweisen, soweit darauf eingetreten werden kann. Entsprechend werden die Beschwerdeführer kosten- und entschädigungspflichtig, die Beschwerdeführer 1 und 2 unter solidarischer Haftbarkeit und intern je zur Hälfte (Art. 66 Abs. 1 und Art. 68 Abs. 2 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Verfahren 4A_465/2022 und 4A_467/2022 werden vereinigt."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Beschwerden werden abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Gerichtskosten von Fr. 17'000.-- im Verfahren 4A_465/2022 werden der Beschwerdeführerin 3, diejenigen von Fr. 17'000.-- im Verfahren 4A_467/2022 werden den Beschwerdeführern 1 und 2 (unter solidarischer Haftbarkeit und intern je zur Hälfte) auferlegt."
+            },
+            {
+              "marke": "4.",
+              "text": "Die Beschwerdeführerin 3 hat die Beschwerdegegnerin im Verfahren 4A_465/2022 mit Fr. 19'000.--, und die Beschwerdeführer 1 und 2 haben die Beschwerdegegnerin im Verfahren 4A_467/2022 mit Fr. 19'000.-- (unter solidarischer Haftbarkeit und intern je zur Hälfte) zu entschädigen."
+            },
+            {
+              "marke": "5.",
+              "text": "Dieses Urteil wird den Parteien und dem Handelsgericht des Kantons Zürich schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 30. Mai 2023 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Jametti Der Gerichtsschreiber: Brugger"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Verfahren 4A_465/2022 und 4A_467/2022 werden vereinigt.",
+        "Die Beschwerden werden abgewiesen, soweit darauf einzutreten ist.",
+        "Die Gerichtskosten von Fr. 17'000.-- im Verfahren 4A_465/2022 werden der Beschwerdeführerin 3, diejenigen von Fr. 17'000.-- im Verfahren 4A_467/2022 werden den Beschwerdeführern 1 und 2 (unter solidarischer Haftbarkeit und intern je zur Hälfte) auferlegt.",
+        "Die Beschwerdeführerin 3 hat die Beschwerdegegnerin im Verfahren 4A_465/2022 mit Fr. 19'000.--, und die Beschwerdeführer 1 und 2 haben die Beschwerdegegnerin im Verfahren 4A_467/2022 mit Fr. 19'000.-- (unter solidarischer Haftbarkeit und intern je zur Hälfte) zu entschädigen.",
+        "Dieses Urteil wird den Parteien und dem Handelsgericht des Kantons Zürich schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 126 ZPO",
+        "Art. 154 Abs. 1 OR",
+        "Art. 260 Abs. 1 SCHKG",
+        "Art. 260 Abs. 2 SCHKG",
+        "Art. 260 LEF",
+        "Art. 260 LP",
+        "Art. 260 SCHKG",
+        "Art. 675 Abs. 2 OR"
+      ],
+      "normKeys": [
+        "ZPO",
+        "OR",
+        "SCHKG",
+        "BGG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=10&from_date=&to_date=&from_year=2023&to_year=2023&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=97&highlight_docid=atf%3A%2F%2F149-III-422%3Ade&number_of_ranks=189&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "4b52e403ea1e39987dd4149e64201fd521daec417caefc7d4ddf99283f38a7c5",
+      "sha": "77508eeddfaf2179b723bccb142d6aa2101ad18194c0a85618f5870732ef14de",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Am 23. September 2015 reichte die C. S.A. (Klägerin, Beschwerdegegnerin) bei der International Chamber of Commerce (ICC) einen Request for Arbitration gegen die E. AG ein. Mit Schiedsentscheid vom 5. September 2017 hiess das ICC Schiedsgericht die Klage teilweise gut und verurteilte die E. AG zur Zahlung von USD 4'756'629.- zuzüglich Zinsen, während die Klägerin ihrerseits zur Zahlung von USD 192'812.- samt Zinsen an die E. AG verpflichtet wurde. Nach Verrechnung der Forderungen bezifferte die Klägerin den ihr zustehenden Betrag auf umgerechnet Fr. 5'034.078.30. Für diesen Betrag zuzüglich Zins erteilte das Kantonsgericht Zug der Klägerin mit Entscheid vom 12. Februar 2018 die definitive Rechtsöffnung. Am 25. April 2018 wurde über die E. AG der Konkurs eröffnet. Die Klägerin meldete im Konkurs eine Forderung von Fr. 5'883'942.33 im dritten Rang zur Kollokation an. Mit Verfügung vom 10. Februar 2020 trat das Konkursamt F. die Verantwortlichkeitsansprüche gegen die Organe der E. AG und mit Verfügung vom 22. Juni 2020 die Rückforderungsansprüche gegen die Aktionäre der E. AG an die Klägerin ab."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Am 30. September 2020 reichte die Klägerin als Abtretungsgläubigerin der E. AG eine Klage am Handelsgericht des Kantons Zürich ein. Die Klage richtete sich gegen drei Beklagte: (1) Die A. AG (bis Ende 2016: E. Holding AG; Beklagte 1; Beschwerdeführerin 1), die Alleinaktionärin der E. AG, (2) B. (Beklagter 2; Beschwerdeführer 2), Verwaltungsratspräsident bzw. einziger Verwaltungsrat und Geschäftsführer der E. AG und gleichzeitig einziger Verwaltungsrat und Geschäftsführer der Beklagten 1, sowie (3) die D. AG (Beklagte 3; Beschwerdeführerin 3), die Revisionsstelle der E. AG. Die Klägerin stellte sich vor Handelsgericht zusammengefasst auf den Standpunkt, die E. AG habe verschiedene Geschäfte in den Geschäftsbüchern nicht korrekt abgebildet. Insbesondere habe sie (1) für die von der Klägerin bei der ICC eingereichte Schiedsklage zu wenig Rückstellungen gebildet, (2) den Kostenvorschuss für das Schiedsverfahren unzulässigerweise erfolgsneutral verbucht und (3) eine Forderung von USD 1'845'980.64 gegenüber G. Ltd., einer vermögenslosen Zweckgesellschaft, aktiviert, die keinerlei Erfolgsaussichten hatte. Vor diesem Hintergrund hätten der Beklagte 2 als Verwaltungsrat und die Beklagte 3 als Revisionsstelle der E. AG in den Geschäftsjahren 2015 und 2016 die Ausschüttung von Dividenden bzw. von zu hohen Dividenden ungerechtfertigt veranlasst und zugelassen. Den daraus entstandenen Schaden von Fr. 3'699'578.55 samt Zinsen wolle sie mittels Verantwortlichkeitsklage nach Art. 754 ff. OR gegen den Beklagten 2 (Verwaltungsrat) und die Beklagte 3 (Revisionsstelle) sowie mittels einer Rückerstattungsklage nach Art. 678 Abs. 1 OR von der Beklagten 1 (Aktionärin) erhältlich machen. Mit Urteil vom 13. September 2022 hiess das Handelsgericht die Klage teilweise gut. Es verpflichtete die Beklagten 1, 2 und 3 solidarisch, der Klägerin Fr. 1'805'495.45 samt Zinsen zu bezahlen (Dispositivziffer 1). Im Mehrbetrag wies es die Klage ab (Dispositivziffer 2), setzte die Gerichtsgebühr auf Fr. 57'800.- fest (Dispositivziffer 3), auferlegte die Kosten je zur Hälfte der Klägerin und den Beklagten (Dispositivziffer 4) und schlug die Parteientschädigungen wett (Dispositivziffer 5). Das Handelsgericht kam zusammengefasst zum Schluss, die E. AG habe für das hängige Schiedsverfahren zu wenig Rückstellungen gebildet, sie habe den Kostenvorschuss an das ICC Schiedsgericht unzulässigerweise erfolgsneutral verbucht und sie hätte die Forderung gegenüber der G. Ltd. nicht aktivieren dürfen. Der Beklagte 2 und die Beklagte 3 hafteten dafür aus aktienrechtlicher Verantwortlichkeit im Sinne von Art. 754 Abs. 1 bzw. Art. 755 Abs. 1 OR. Ebenso seien die Voraussetzungen von Art. 678 OR erfüllt: Die an die Beklagte 1 für das Geschäftsjahr 2015 und 2016 ausgeschütteten Dividenden überschritten in Verletzung von Art. 675 Abs. 2 OR die Grenze des Zulässigen, und die Beklagte 1 habe die Dividenden ungerechtfertigt sowie im bösen Glauben bezogen."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Dagegen erheben die Beschwerdeführerin 1 und der Beschwerdeführer 2 (Verfahren 4A_467/2022) sowie die Beschwerdeführerin 3 (Verfahren 4A_465/2022) Beschwerde in Zivilsachen an das Bundesgericht. (Zusammenfassung)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Die Beschwerdegegnerin erhebt als Abtretungsgläubigerin nach Art. 260 SchKG Klage gegen die Beschwerdeführer. Diese stellen die Klagelegitimation der Beschwerdegegnerin in Frage, da deren Forderung im Urteilszeitpunkt im Konkurs der E. AG nur provisorisch kolloziert gewesen sei. BGE 149 III 422 S. 425"
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Unbestritten ist, dass die Konkursforderung der Beschwerdegegnerin im Konkurs der E. AG im Zeitpunkt des Urteils der Vorinstanz nicht definitiv kolloziert war. Die Gründe für die fehlende definitive Kollokation sind im angefochtenen Entscheid nicht festgestellt. Nicht bestritten ist ferner, dass das Konkursamt F. der Beschwerdegegnerin die Verantwortlichkeitsansprüche gegen die Organe der E. AG und die Rückforderungsansprüche gegen die Aktionäre der E. AG gemäss Art. 260 SchKG abtrat (Sachverhalt Bst. A). Die Abtretung erfolgte unbestrittenermassen unter einer Bedingung. Zu Recht wird nicht in Frage gestellt, dass das Konkursamt die Abtretungen nach Art. 260 SchKG mit einer Bedingung versehen durfte (dazu: Urteile 7B.206/2005 vom 2. Februar 2006 E. 4; 7B.94/2003 vom 24. Juni 2003 E. 5.1)."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "In einem solchen Fall kann es unter Umständen zweckmässig sein, den Abtretungsprozess zu sistieren, bis definitiv über die Kollokation entschieden ist (Art. 126 ZPO; vgl. auch BGE 128 III 291 E. 4c/aa; 50 III 19 E. 2 S. 21; 48 III 88 S. 90 f.; 43 III 73 E. 1c S. 76 f.). Insbesondere kann es für den bedingt zugelassenen Abtretungsgläubiger allenfalls vorteilhaft sein, eine Sistierung des Abtretungsprozesses zu beantragen, da er sonst Gefahr läuft, im Falle der definitiven Abweisung seiner Konkursforderung das Prozessrisiko getragen zu haben, ohne jedoch am Prozessgewinn beteiligt zu sein (BGE 128 III 291 E. 4c/aa; 50 III 19 E. 2 S. 21; RALF C. SCHLAEPFER, Abtretung streitiger Rechtsansprüche im Konkurs, 1990, S. 88). Im vorliegenden Fall verlangten die beklagten Beschwerdeführer, nicht hingegen die klagende Beschwerdegegnerin (die Abtretungsgläubigerin), vor der Vorinstanz die Sistierung des Verfahrens bis zur definitiven Kollokation. Mit Zwischenverfügung vom 25. März 2021 lehnte die Vorinstanz die Sistierung des Verfahrens ab. In dieser Zwischenverfügung ging die Vorinstanz von auflösend bedingten Abtretungen nach Art. 260 SchKG aus, was die Beschwerdeführer vor Bundesgericht nicht in Frage stellen, zumindest nicht hinreichend (nicht publ. E. 2.1). Die Vorinstanz kam in der Zwischenverfügung zum Schluss, es sei unbestritten, dass die Konkursforderung der Beschwerdegegnerin (noch) nicht definitiv kolloziert sei. Es lägen aber keine Anhaltspunkte vor, welche eine definitive Kollokation unwahrscheinlich erscheinen liessen. Das Prozessführungsrecht der klagenden Beschwerdegegnerin würde erst dann entfallen, wenn sie in einem den Konkurs BGE 149 III 422 S. 426 der E. AG betreffenden Kollokationsverfahren/-plan (ganz oder teilweise) definitiv nicht zugelassen würde. Im Falle einer solchen späteren, definitiven Nichtkollokation der Forderung der Beschwerdegegnerin entstünden für die Beschwerdeführer keine relevanten Nachteile, die ohnehin nicht konkret geltend gemacht würden, da die Beschwerdegegnerin für die Prozesskosten hafte und einen allfälligen Prozessgewinn vollumfänglich an die Konkursmasse abzuliefern habe. Die Sistierung des Verfahrens erscheine daher nicht zweckmässig. Diese Zwischenverfügung wurde nicht angefochten, weshalb die Vorinstanz das Verfahren fortsetzte. Im angefochtenen Entscheid lehnte die Vorinstanz die Sistierung unter Verweis auf die Zwischenverfügung erneut ab und erwog, der Umstand, dass die Beschwerdegegnerin im Konkurs der E. AG mit ihrer Forderung (weiterhin) nicht definitiv kolloziert sei, stehe dem Eintreten auf die Klage nicht entgegen."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Vor Bundesgericht machen die Beschwerdeführer nicht mehr geltend, die Vorinstanz hätte das Verfahren sistieren müssen oder das bundesgerichtliche Verfahren sei zu sistieren, sodass diese Fragen nicht beurteilt zu werden brauchen. Vielmehr stellen sie sich vor Bundesgericht auf den Standpunkt, dass der Beschwerdegegnerin die Aktivlegitimation bzw. die Prozessführungsbefugnis fehle, weil ihre Konkursforderung nicht definitiv kolloziert sei. Werde, wie vorliegend, die Klage gutgeheissen, so seien die beklagten Beschwerdeführer zur Leistung an die Beschwerdegegnerin verpflichtet, die ihren Sitz in Polen habe. Würde nun nachträglich die Konkursforderung der Beschwerdegegnerin dahinfallen und wäre die Zahlung nach Polen bereits erfolgt, ginge die Konkursmasse leer aus, obwohl ein gutheissendes Urteil in Prozessstandschaft für die Konkursmasse vorliegen würde. Die Konkursmasse müsste also gegen die polnische Gesellschaft klagen, was aufgrund der aktuellen Lage in Polen \"aussichtslos\" sei. Dies sei nicht die Absicht des Gesetzgebers gewesen und widerspreche dem Sinn und Zweck von Art. 260 SchKG. Die Abtretung diene dazu, das zur Masse gehörende Vermögen im Interesse der Gesellschaftsgläubiger erhältlich zu machen. Mit diesem Zweck lasse es sich nicht vereinbaren, dass ein Dritter, dessen Kollokation nachträglich wegfallen könne, einen zur Masse gehörenden Vermögenswert erhalte. Hinzu komme das Interesse der Beschwerdeführer, das Risiko einer Doppelzahlung zu vermeiden. Sie BGE 149 III 422 S. 427 könnten sich durch die Zahlung an die (nachträglich als Berechtigte weggefallene) Beschwerdegegnerin nicht gültig befreien."
+            },
+            {
+              "marke": "E. 3.4.1",
+              "tiefe": 3,
+              "text": "Bei der \"Abtretung\" nach Art. 260 SchKG handelt es sich um ein betreibungs- und prozessrechtliches Institut sui generis, mit dem die Prozessführungsbefugnis übertragen wird. Der Abtretungsgläubiger handelt im Prozess zwar im eigenen Namen, auf eigene Rechnung und auf eigenes Risiko, er wird aber durch die Abtretung nicht Träger des abgetretenen Anspruchs (BGE 146 III 441 E. 2.5.1; BGE 145 III 101 E. 4.1.1; Urteil 5A_651/2020 vom 12. August 2021 E. 3.3.2). Der Prozess, der gestützt auf eine Abtretung im Sinne von Art. 260 SchKG geführt wird, dient dazu, der Konkursmasse zu Aktiven zu verhelfen, was nichts daran ändert, dass das Ergebnis bei der Verteilung in erster Linie demjenigen zugute kommt, der das Risiko des Prozesses eingeht (Art. 260 Abs. 2 SchKG; BGE 145 III 101 E. 4.1.1; BGE 132 III 342 E. 2.2). Der Abtretungsgläubiger kann dabei Leistung direkt an sich selbst verlangen (BGE 146 III 441 E. 2.5.1; BGE 139 III 391 E. 5.1; Urteile 4A_210/2010 und andere vom 1. Oktober 2010 E. 7.2.2, nicht publ. in: BGE 136 III 502; 4A_174/2007 vom 13. September 2007 E. 3.3)."
+            },
+            {
+              "marke": "E. 3.4.2",
+              "tiefe": 3,
+              "text": "Das Recht, die Abtretung eines Anspruches nach Art. 260 SchKG zu verlangen, ergibt sich von Gesetzes wegen (ex lege) aus der Stellung als kollozierter Gläubiger. Danach hat jeder im Kollokationsplan aufgeführte Gläubiger das Recht, die Abtretung eines Anspruches der Konkursmasse zu verlangen und zu erhalten, solange seine Forderung nicht rechtskräftig aus dem Kollokationsplan entfernt worden ist (BGE 145 III 101 E. 4.1.1; BGE 138 III 628 E. 5.3.2; EVA BACHOFNER, in: Basler Kommentar, Bundesgesetz über Schuldbetreibung und Konkurs, Bd. II, 3. Aufl. 2021, N. 39 zu Art. 260 SchKG). Das Recht, eine Abtretung nach Art. 260 SchKG zu verlangen, setzt somit nicht voraus, dass die Forderung bereits definitiv im Kollokationsplan zugelassen, sondern dass sie noch nicht endgültig aus dem Kollokationsplan entfernt worden ist. Andernfalls bestünde die Gefahr, dass der Anspruch bereits untergegangen ist, bevor über den Kollokationsstreit überhaupt rechtskräftig entschieden wurde, z.B. infolge kurzer Verjährungsfristen (vgl. BGE 48 III 88 S. 91; SCHLAEPFER, a.a.O., S. 88 f.)."
+            },
+            {
+              "marke": "E. 3.4.3",
+              "tiefe": 3,
+              "text": "In diesem Sinn hat das Bundesgericht bereits im Jahr 1922 entschieden, dass einem abgewiesenen Gläubiger eine bedingte Abtretung nach Art. 260 SchKG nicht verwehrt werden kann, wenn er BGE 149 III 422 S. 428 den abschlägigen Kollokationsentscheid angefochten hat (BGE 48 III 88 S. 90 f. bestätigt in BGE 90 III 86 E. 1 S. 88 und BGE 128 III 291 E. 4c/aa). Weiter wurde etwa festgehalten, dass ein Gläubiger, dessen Forderung im Zeitpunkt der Konkurseröffnung Gegenstand eines Prozesses war (Art. 63 Abs. 1 der Verordnung vom 13. Juli 1911 über die Geschäftsführung der Konkursämter [KOV; SR 281.32]) und deshalb im Kollokationsplan lediglich pro memoria vorgemerkt ist, gleich wie andere nicht definitiv zugelassene Gläubiger, eine bedingte Abtretung verlangen kann (BGE 128 III 291 E. 4c/aa; AMONN/ WALTHER, Grundriss des Schuldbetreibungs- und Konkursrechts, 9. Aufl. 2013, § 47 Rz. 48). Grundsätzlich kann somit jeder Gläubiger, der seine Forderung im Konkurs angemeldet hat, und dessen Forderung noch nicht definitiv abgewiesen wurde, die Abtretung der Forderung im Sinne von Art. 260 SchKG verlangen. Da die Forderung in diesen Fällen aber noch nicht rechtskräftig anerkannt ist, darf die Abtretung im Sinne von Art. 260 SchKG nicht unbedingt erfolgen. Vielmehr wird die Abtretung entsprechend der rechtlichen Situation unter einer Bedingung ausgestellt, nämlich unter einer resolutiven Bedingung (vgl. BGE 48 III 88 S. 90; Urteil 7B.206/2005 vom 2. Februar 2006 E. 4; PIERRE-ROBERT GILLIÉRON, Commentaire de la loi fédérale sur la poursuite pour dettes et la faillite, 2001, N. 42 zu Art. 260 SchKG). Wird dem Gläubiger das Abtretungsrecht nach Art. 260 SchKG resolutiv bedingt eingeräumt, ist die Abtretung sofort (voll) wirksam. Sie verliert ihre Wirksamkeit im Zeitpunkt des Bedingungseintritts (vgl. Art. 154 Abs. 1 OR), d.h. vorliegend im Zeitpunkt der definitiven Nichtkollokation. Bis zum rechtskräftigen Entscheid über die Kollokation ist die resolutiv bedingte Abtretung nicht anders zu behandeln als eine unbedingte (MATTHIAS HÄUPTLI, in: Kommentar zur Verordnung über die Geschäftsführung der Konkursämter [KOV], Milani/Wohlgemuth [Hrsg.], 2016, N. 23 zu Art. 80 KOV)."
+            },
+            {
+              "marke": "E. 3.4.4",
+              "tiefe": 3,
+              "text": "Ein Gläubiger, der gestützt auf eine solche bedingte Abtretung nach Art. 260 SchKG als Prozessstandschafter im obigen Sinn prozessiert, tut dies auf eigenes Risiko (Urteil 7B.94/2003 vom 24. Juni 2003 E. 5.1): Wird die Konkursforderung des Abtretungsgläubigers im Kollokationsprozess rechtskräftig abgewiesen, entfällt nachträglich seine Prozessführungsbefugnis im Abtretungsprozess zur weiteren Verfolgung des abgetretenen Rechtsanspruchs (BGE 109 III 27 E. 1a; 55 II 63 E. 2 S. 65; Urteil 5A_769/2013 vom 13. März 2014 E. 3). Hat der rechtskräftig abgewiesene Gläubiger den Prozess BGE 149 III 422 S. 429 bereits anhängig gemacht, so ergeht ihm gegenüber mangels Prozessführungsbefugnis ein Nichteintretensentscheid (BGE 145 III 101 E. 4.1.3; BGE 144 III 552 E. 4.1.2; BACHOFNER, a.a.O., N. 41 zu Art. 260 SchKG). Ist bereits ein Urteil ergangen, bleibt dieses zwar gültig (JEAN FLACHSMANN, Die Abtretung der Rechtsansprüche der Konkursmasse nach Art. 260 des schweizer. Schuldbetreibungs- und Konkursgesetzes, 1927, S. 65), ein bereits erlangter Prozessgewinn fällt aber der Konkursmasse zu (HÄUPTLI, a.a.O., N. 23 zu Art. 80 KOV; SCHLAEPFER, a.a.O., S. 88; FLACHSMANN, a.a.O., S. 65; Entscheid des Obergerichts des Kantons Thurgau BR.2012.46 vom 14. November 2012 E. 3b, in: RBOG 2012 Nr. 18 S. 188 ff., S. 190)."
+            },
+            {
+              "marke": "E. 3.5",
+              "tiefe": 2,
+              "text": "Nach dem Gesagten ist der Entscheid der Vorinstanz nicht zu beanstanden."
+            },
+            {
+              "marke": "E. 3.5.1",
+              "tiefe": 3,
+              "text": "Die Forderungen wurden auflösend bedingt an die Beschwerdegegnerin abgetreten (E. 3.2). Diese \"Abtretung\" im Sinne von Art. 260 SchKG, d.h. die Prozessführungsbefugnis (E. 3.4.1) und die damit verbundenen Rechte, werden sofort wirksam, solange die Bedingung der definitiven Nichtkollokation der Konkursforderung noch nicht eingetreten ist (E. 3.4.3). Die Bedingung der definitiven Nichtkollokation ist in casu (noch) nicht eingetreten (E. 3.1), weshalb die Beschwerdegegnerin zur Geltendmachung der Forderungen als Abtretungsgläubigerin nach Art. 260 SchKG befugt ist, auch wenn ihre Forderung im Konkurs der E. AG noch nicht definitiv kolloziert wurde."
+            },
+            {
+              "marke": "E. 3.5.2",
+              "tiefe": 3,
+              "text": "Die Beschwerdegegnerin kann damit den Anspruch als Prozessstandschafterin geltend machen und sie kann als Abtretungsgläubigerin Leistung direkt an sich selbst verlangen (E. 3.4.1). Kann die Beschwerdegegnerin Leistung direkt an sich verlangen, haben die beklagten Beschwerdeführer als Schuldner im Umkehrschluss direkt an die Beschwerdegegnerin zu leisten. Dementsprechend wurden die beklagten Beschwerdeführer im Dispositiv des angefochtenen Entscheids auch verpflichtet, der klagenden Beschwerdegegnerin den Betrag von rund Fr. 1.8 Mio. zu leisten. Das stellen die Beschwerdeführer vor Bundesgericht denn auch nicht in Frage (nicht publ. E. 2.1). Aufgrund dieser Rechtslage bei der Abtretung nach Art. 260 SchKG besteht die von den Beschwerdeführern geltend gemachte Gefahr einer Doppelzahlung nicht. Leisten sie aufgrund eines Gerichtsurteils an die Beschwerdegegnerin, haben sie sich gültig befreit. BGE 149 III 422 S. 430"
+            },
+            {
+              "marke": "E. 3.5.3",
+              "tiefe": 3,
+              "text": "Für den Fall, dass die Konkursforderung der Beschwerdegegnerin (nachträglich) definitiv nicht kolloziert werden sollte, würde der Prozessgewinn, den die Beschwerdegegnerin durch ihre Klage im vorliegenden Abtretungsprozess erhältlich machen konnte, der Konkursmasse zufallen (E. 3.4.3), wie auch die Vorinstanz in ihrer Zwischenverfügung zu Recht erwogen hat (E. 3.2). Die Beschwerdegegnerin hätte in diesem Fall den Prozessgewinn an die Konkursmasse abzuliefern. Für den Fall, dass die Beschwerdegegnerin den Prozessgewinn entgegen ihrer Verpflichtung nicht an die Konkursmasse ablieferte, müsste diese gegen die Beschwerdegegnerin vorgehen. Ob und wie die Konkursmasse den ausbezahlten Prozessgewinn bei der in Polen domizilierten Beschwerdegegnerin erhältlich machen könnte, spielt im vorliegenden Abtretungsprozess keine Rolle, wie die Beschwerdegegnerin zu Recht vorbringt: Es betrifft einzig das Verhältnis zwischen der Konkursmasse und der Beschwerdegegnerin. Die im vorliegenden Abtretungsprozess beklagten Beschwerdeführer können aus allfälligen Inkassoschwierigkeiten der Konkursmasse nichts für sich ableiten, zumindest legen sie nicht dar, worin ihr diesbezügliches Rechtsschutzinteresse bestehen soll. Immerhin ist Folgendes zu bemerken: Die Abtretung nach Art. 260 SchKG ist eine besondere Verwertungsart bestrittener Rechtsansprüche. Sie setzt voraus, dass die Gesamtheit der Gläubiger auf die Geltendmachung des betreffenden Rechts durch die Masse verzichtet (Art. 260 Abs. 1 SchKG) und ein Gläubiger bereit ist, das Risiko einzugehen, das die Mehrheit für die Masse ablehnt (AMONN/WALTHER, a.a.O., § 47 Rz. 45). Die Konkursmasse bzw. die Gläubigergesamtheit hat damit eine Kosten/Nutzen-Abwägung für die Verwertung einer solchen bestrittenen Forderung vorzunehmen (BACHOFNER, a.a.O., N. 2 zu Art. 260 SchKG): Sie kann die Ansprüche selbst durchsetzen. Wenn sie das Risiko oder den Aufwand scheut, kann sie den Anspruch einem Gläubiger abtreten, der bereit ist, das Risiko auf sich zu nehmen. Eine solche Abwägung wurde im vorliegenden Fall vorgenommen und die Forderung wurde in Kenntnis der Umstände an die Beschwerdegegnerin mit Sitz in Polen abgetreten, obwohl deren Konkursforderung noch nicht definitiv kolloziert war. Die Konkursmasse bzw. die Gläubigergesamtheit hat damit auch das Risiko zu tragen, dass sie allenfalls eine Forderung gegen die Abtretungsgläubigerin im Ausland geltend machen müsste. Dieses Risiko ist im Übrigen kein Sonderproblem der bedingten Abtretung, sondern dem Institut der Abtretung von Art. 260 SchKG BGE 149 III 422 S. 431 inhärent: Der Zweck der Abtretung besteht gerade darin, dass der Prozessgewinn in erster Linie dem Abtretungsgläubiger zukommt, der das Risiko der Prozessführung eingeht und nach ständiger Rechtsprechung Leistung an sich selbst verlangen kann (E. 3.4.1). Die Masse erhält immerhin den Überschuss (Art. 260 Abs. 2 SchKG). Ist der Prozessgewinn grösser als die kollozierte Forderung, besteht immer die Gefahr, dass die Konkursmasse den Überschuss beim Abtretungsgläubiger einfordern muss, wenn dieser den Überschuss nicht an die Konkursmasse abliefert (so auch zit. Urteil des Obergerichts Thurgau BR.2012.46 E. 3b)."
+            },
+            {
+              "marke": "E. 3.5.4",
+              "tiefe": 3,
+              "text": "Die Vorinstanz hat damit zu Recht die Prozessführungsbefugnis der Beschwerdegegnerin bejaht, obschon deren Forderung im Urteilszeitpunkt im Konkurs der E. AG noch nicht definitiv kolloziert war."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "4A_465/2022",
+        "key": "bger_4A_465_2022",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=8&from_date=29.05.2023&to_date=01.06.2023&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=79&azaclir=aza&highlight_docid=aza%3A%2F%2F30-05-2023-4A_465-2022&number_of_ranks=89"
+      },
+      "ecli": "ECLI:CH:BGE:2023:149.III.422"
+    }
+  ]
+}

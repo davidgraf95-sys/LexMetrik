@@ -33,6 +33,30 @@ function aufAuszugZurueck(s: EntscheidSnapshot): void {
   s.azaUrteil = null;
 }
 
+/**
+ * Amtlich degradierte DE-clir-Regeste erkennen (Erzeuger-seitiger Spiegel des
+ * A29-Anti-Regressions-Tors in check-entscheide, ~Z.138): die flache OCL-Regeste
+ * ist mehrteilig (trägt einen «Regeste b»/«Regesto b»-Marker am Zeilenanfang), die
+ * amtliche DE-clir-Seite rendert für DIESEN BGE aber nur EINEN Regeste-Block (keine
+ * `weitereRegesten`). Eine solche DE-Fassung ist unvollständig und würde die
+ * trilinguale Struktur korrumpieren (A29-Tor rot) — sie darf NICHT angehängt werden.
+ * Die flache `regeste.text` trägt ALLE Teile treu weiter (§1), also bleibt die
+ * Regeste dieses BGE flach (ohne strukturierte Sprachfassungen), statt degradiert
+ * anzureichern. Erstbeobachtung BGE 149 IV 1 (6B_978/2020, 16.11.2022): bger.ch-DE-
+ * clir zeigt nur Teil a (Sterneintrag, Art. 3 Abs. 1 lit. u UWG); der zweite Teil
+ * (Strafantragslegitimation des Bundes, Art. 23 Abs. 2 i.V.m. Art. 10 Abs. 3 lit. b
+ * UWG) liegt nur auf der fr/it-clir-Seite + im OCL-Flachtext vor. Deterministisch (§2).
+ */
+function deClirDegradiert(
+  regesteText: string | null | undefined,
+  fassungen: { sprache: string; weitereRegesten?: unknown[] }[],
+): boolean {
+  const flatMehrteilig = /\n\s*Regest[eo]\s+[b-z]\s*\n/.test(regesteText ?? '');
+  if (!flatMehrteilig) return false;
+  const de = fassungen.find((x) => x.sprache === 'de');
+  return !de?.weitereRegesten || de.weitereRegesten.length < 2;
+}
+
 const arg = (name: string): string | null => {
   const p = process.argv.find((a) => a.startsWith(name + '='));
   return p ? p.slice(name.length + 1) : null;
@@ -227,6 +251,20 @@ async function main() {
     for (const id of alleIds) { const b = parseInt(idZuRef(id), 10); if (b) proBand[b] = (proBand[b] ?? 0) + 1; }
     console.log(`[bge-baender] enumeriert (band-basiert): ${alleIds.length} — ${Object.entries(proBand).sort((a, b) => +a[0] - +b[0]).map(([b, n]) => `${b}:${n}`).join(' ')}`);
     let neueIds = alleIds.filter((id) => !bestandIds.has(`bund/bge/${idZuRef(id).replace(/ /g, '_')}`));
+    // §8-Quarantäne (W2·6 PR-B): BGE, deren amtliche bger.ch-clir-DE-Seite die mehrteilige
+    // Regeste NICHT vollständig rendert. GELEERT (17.7.2026, GP-Befund): der Befund «DE-clir
+    // amtlich degradiert» bleibt dokumentiert (Erstfall BGE 149 IV 1 / 6B_978/2020: DE-Seite
+    // nur Teil a = Sterneintrag Art. 3 Abs. 1 lit. u UWG; Teil b = Strafantragslegitimation
+    // des Bundes Art. 23 Abs. 2 i.V.m. Art. 10 Abs. 3 lit. b UWG liegt nur auf fr/it-clir +
+    // im OCL-Flachtext), wird aber NICHT mehr zum Ausschluss genutzt: statt zu quarantänieren
+    // wird der BGE über den etablierten Weg aufgenommen. Die flache `regeste.text` trägt
+    // beide Teile treu; der Degradations-Guard (deClirDegradiert, unten) hängt die
+    // unvollständige DE-Sprachfassung nicht an (statt die trilinguale Struktur zu korrumpieren
+    // — A29-Tor bleibt grün). §8: aufnehmen ohne degradierte Anreicherung, nichts verloren.
+    const QUARANTAENE_BGE = new Set<string>([]);
+    const vorQuar = neueIds.length;
+    neueIds = neueIds.filter((id) => !QUARANTAENE_BGE.has(idZuRef(id)));
+    if (neueIds.length !== vorQuar) console.log(`[bge-baender] §8-Quarantäne: ${vorQuar - neueIds.length} BGE ausgeschlossen (bger.ch-DE-Regeste unvollständig): ${[...QUARANTAENE_BGE].join(', ')}`);
     console.log(`[bge-baender] davon neu (noch nicht im Bestand): ${neueIds.length}`);
     // Optionaler Deckel (Smoke-Test / gestaffelter Resume): die N ältesten neuen zuerst
     // (Enumeration ist date_desc → tail = älteste; deterministisch, §2).
@@ -274,7 +312,12 @@ async function main() {
     process.stdout.write('\n');
     let mitFassung = 0; const luecken: string[] = [];
     for (const { s, f } of fassungen) {
-      if (f.length && f.some((x) => x.sprache === 'de')) {
+      // Degradations-Guard (§1): eine amtlich unvollständige DE-clir-Fassung NICHT
+      // anhängen (sie würde die trilinguale Struktur korrumpieren, A29-Tor rot) — die
+      // flache regeste.text trägt alle Teile treu weiter. Siehe deClirDegradiert.
+      if (deClirDegradiert(s.regeste?.text, f)) {
+        luecken.push(`${s.bgeReferenz} [DE-clir degradiert (nur Teil a) — flache Regeste trägt alle Teile, §1]`);
+      } else if (f.length && f.some((x) => x.sprache === 'de')) {
         s.regeste = { ...s.regeste!, sprachfassungen: f };
         mitFassung++;
         if (f.length < 3) luecken.push(`${s.bgeReferenz} [${f.map((x) => x.sprache).join('/')}]`);
@@ -338,7 +381,12 @@ async function main() {
     process.stdout.write('\n');
     let mitFassung = 0, ohne = 0; const luecken: string[] = [];
     for (const { s, f } of fassungenAlle) {
-      if (f.length && f.some((x) => x.sprache === 'de')) {
+      // Degradations-Guard (§1, wie im Band-Nachzug): unvollständige DE-clir-Fassung
+      // nicht anhängen — flache regeste.text trägt alle Teile. Behält 149 IV 1 & Co.
+      // auch bei einem künftigen Vollrefresh flach statt sie zu re-degradieren.
+      if (deClirDegradiert(s.regeste?.text, f)) {
+        ohne++; luecken.push(`${s.bgeReferenz} [DE-clir degradiert (nur Teil a) — flache Regeste trägt alle Teile, §1]`);
+      } else if (f.length && f.some((x) => x.sprache === 'de')) {
         s.regeste = { ...s.regeste!, sprachfassungen: f };
         mitFassung++;
         if (f.length < 3) luecken.push(`${s.bgeReferenz} [${f.map((x) => x.sprache).join('/')}]`);

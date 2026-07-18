@@ -1,0 +1,425 @@
+{
+  "erzeugt": "2026-07-17",
+  "eintraege": [
+    {
+      "id": "bund/bge/148_V_385",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "V",
+      "nummer": "148 V 385",
+      "bgeReferenz": "148 V 385",
+      "zitierung": "BGE 148 V 385",
+      "datum": "2022-10-17",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "legalArea": "social_insurance",
+      "rubrum": {
+        "besetzung": "Bundesrichter Parrino, Präsident, Bundesrichter Stadelmann, Bundesrichterin Moser-Szeless, Bundesrichter Abrecht, nebenamtlicher Bundesrichter Kradolfer, Gerichtsschreiber Grünenfelder",
+        "parteien": "Bundesamt für Sozialversicherungen, Effingerstrasse 20, 3003 Bern, Beschwerdeführer, gegen Spital A.________, vertreten durch Andrea Beerli, Beschwerdegegner, Ausgleichskasse Arbeitgeber Basel, Viaduktstrasse 42, 4051 Basel",
+        "gegenstand": "Alters- und Hinterlassenenversicherung (Beitragspflicht)",
+        "vorinstanz": "Sozialversicherungsgerichts des Kantons Basel-Stadt vom 12. Juli 2021"
+      },
+      "regeste": {
+        "text": "Art. 5 Abs. 2 und 4 AHVG; Art. 6 Abs. 2 lit. f AHVV; AHV-Beitragspflicht; Ausnahme; Subvention einer Kindertagesstätte. Die Subvention des Arbeitgebers für die betriebseigene oder eine angeschlossene Kindertagesstätte gehört zum massgebenden Lohn. Eine Ausnahme im Sinne einer beitragsbefreiten Familienzulage liegt nicht vor (E. 4-9).\nRegeste\n Art. 5 al. 2 et 4 LAVS; art. 6 al. 2 let. f RAVS; obligation de cotiser en matière d'AVS; exception; subvention d'une structure d'accueil extra-familial pour enfants. La subvention de l'employeur pour une structure d'accueil extra-familial pour enfants interne à l'entreprise ou qui lui est affiliée fait partie du salaire déterminant. Il n'y a pas d'exception dans le sens qu'il s'agirait d'une allocation familiale exonérée des cotisations (consid. 4-9).\nRegesto\n Art. 5 cpv. 2 e 4 LAVS; art. 6 cpv. 2 lett. f OAVS; obbligo di versare i contributi AVS; eccezione; sovvenzione per la custodia di bambini in una struttura complementare alla famiglia. La sovvenzione del datore di lavoro per la custodia di bambini in una struttura interna all'azienda o affiliata fa parte del salario determinante. Non si tratta di un'eccezione come se fosse un assegno familiare esente da contributi (consid. 4-9).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 5 Abs. 2 und 4 AHVG; Art. 6 Abs. 2 lit. f AHVV; AHV-Beitragspflicht; Ausnahme; Subvention einer Kindertagesstätte.",
+            "absaetze": [
+              "Die Subvention des Arbeitgebers für die betriebseigene oder eine angeschlossene Kindertagesstätte gehört zum massgebenden Lohn. Eine Ausnahme im Sinne einer beitragsbefreiten Familienzulage liegt nicht vor (E. 4-9)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-V-385%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 5 al. 2 et 4 LAVS; art. 6 al. 2 let. f RAVS; obligation de cotiser en matière d'AVS; exception; subvention d'une structure d'accueil extra-familial pour enfants.",
+            "absaetze": [
+              "La subvention de l'employeur pour une structure d'accueil extra-familial pour enfants interne à l'entreprise ou qui lui est affiliée fait partie du salaire déterminant. Il n'y a pas d'exception dans le sens qu'il s'agirait d'une allocation familiale exonérée des cotisations (consid. 4-9)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-V-385%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 5 cpv. 2 e 4 LAVS; art. 6 cpv. 2 lett. f OAVS; obbligo di versare i contributi AVS; eccezione; sovvenzione per la custodia di bambini in una struttura complementare alla famiglia.",
+            "absaetze": [
+              "La sovvenzione del datore di lavoro per la custodia di bambini in una struttura interna all'azienda o affiliata fa parte del salario determinante. Non si tratta di un'eccezione come se fosse un assegno familiare esente da contributi (consid. 4-9)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F148-V-385%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. Das Spital A.________ betreibt die Kindertagesstätte \"B.________\". Für Spitalangestellte, welche dieses Betreuungsangebot oder dasjenige einer anderen angeschlossenen Kinderkrippe in Anspruch nehmen, besteht nach dem \"Reglement Kinderbetreuungsplätze/Subventionen des Spitals A.________\" (nachfolgend: Reglement) die Möglichkeit einer finanziellen Unterstützung für die Betreuungskosten (nachfolgend: KiTa-Subvention). A.b. Im Dezember 2019 führte die Ausgleichskasse Arbeitgeber Basel (nachfolgend: Ausgleichskasse) eine Arbeitgeberkontrolle durch. Dabei gelangte sie zum Schluss, dass bisher fälschlicherweise keine AHV-Beiträge auf die ausgerichteten KiTa-Subventionen erhoben worden seien (Revisionsbericht vom 6. April 2020). In der daraufhin vom Spital A.________ verlangten anfechtbaren Verfügung vom 12. August 2020 begründete die Ausgleichskasse ihre Auffassung insoweit näher, als die KiTa-Subventionen an die Elternbeiträge für die Kinderbetreuung massgebenden Lohn darstellten, weshalb sie der Beitragspflicht unterstünden. Die unter diesem Titel geflossenen Zahlungen müssten somit ab 1. Januar 2020 entsprechend erfasst werden. Daran hielt die Ausgleichskasse mit Einspracheentscheid vom 14. Oktober 2020 fest."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Die dagegen erhobene Beschwerde hiess das Sozialversicherungsgericht des Kantons Basel-Stadt mit Urteil vom 12. Juli 2021 gut, hob den Einspracheentscheid vom 14. Oktober 2020 auf und stellte fest, dass es sich bei den KiTa-Subventionen des Spitals A.________ nicht um massgebenden Lohn handle. Diese seien daher von der AHV-Beitragspflicht ausgenommen."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Das Bundesamt für Sozialversicherungen (BSV) führt Beschwerde in öffentlich-rechtlichen Angelegenheiten mit dem Rechtsbegehren, in Aufhebung des angefochtenen Urteils sei der Einspracheentscheid der Ausgleichskasse vom 14. Oktober 2020 zu bestätigen. Das Spital A.________ schliesst im Wesentlichen auf Abweisung der Beschwerde, soweit darauf eingetreten werde. Die Ausgleichskasse verzichtet auf eine Vernehmlassung."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Mit der Beschwerde in öffentlich-rechtlichen Angelegenheiten kann unter anderem die Verletzung von Bundesrecht gerügt werden (Art. 95 lit. a BGG). Die Feststellung des Sachverhalts kann nur gerügt werden, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Artikel 95 BGG beruht und wenn die Behebung des Mangels für den Ausgang des Verfahrens entscheidend sein kann (Art. 97 Abs. 1 BGG). Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG). Es kann deren Sachverhaltsfeststellung von Amtes wegen berichtigen oder ergänzen, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruht (Art. 105 Abs. 2 BGG)."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Vom Einkommen aus unselbständiger Erwerbstätigkeit (massgebender Lohn) werden paritätisch Arbeitnehmer- und Arbeitgeberbeiträge erhoben (Art. 5 und 12 ff. des Bundesgesetzes über die Alters- und Hinterlassenenversicherung vom 20. Dezember 1946 [AHVG; SR 831.10]). Als massgebender Lohn gilt grundsätzlich jedes Entgelt für in unselbständiger Stellung auf bestimmte oder unbestimmte Zeit geleistete Arbeit (Art. 5 Abs. 2 erster Satz AHVG)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Gemäss Art. 5 Abs. 2 AHVG entsteht eine Beitragsschuld grundsätzlich überall dort, wo Arbeit entgolten wird. Dergestalt bilden sämtliche Bezüge von Arbeitnehmern, die wirtschaftlich mit dem Arbeitsverhältnis zusammenhängen, beitragspflichtiges Einkommen. Unerheblich ist, ob das Arbeitsverhältnis andauert oder abgelaufen ist und ob die Leistungen geschuldet werden oder freiwillig erfolgen. Beitragspflichtiges Einkommen aus unselbständiger Erwerbstätigkeit ist nach der objektbezogenen Konzeption des Art. 5 Abs. 2 AHVG nicht nur unmittelbares Entgelt für geleistete Arbeit, sondern grundsätzlich jede Entschädigung oder Zuwendung, welche sonstwie aus dem Arbeitsverhältnis bezogen oder in diesem wirtschaftlich hinreichend begründet wird, soweit sie nicht kraft ausdrücklicher Vorschrift davon ausgenommen ist (statt vieler: BGE 146 V 104 E. 3.1; 137 V 321 E. 2.2.1; 133 V 556 E. 4 mit Hinweis; Urteil 9C_774/2018 vom 10. April 2019 E. 7.1; vgl. auch: HANSPETER KÄSER, Unterstellung und Beitragswesen in der obligatorischen AHV, 2. Aufl. 1996, S. 111 ff.; UELI KIESER, Rechtsprechung des Bundesgerichts zum AHVG, 4. Aufl. 2020, N. 135 f. zu Art. 5 AHVG; SCARTAZZINI/HÜRZELER, Bundessozialversicherungsrecht, 4. Aufl. 2012, S. 162 f.). Eine allfällige Beitragsfreiheit einer wirtschaftlich mit dem Arbeitsverhältnis zusammenhängenden Leistung bedarf angesichts der Generalklausel von Art. 5 Abs. 2 erster Satz AHVG einer besonderen Rechtsgrundlage (BGE 145 V 320 E. 5.2.2)."
+            },
+            {
+              "marke": "E. 2.3",
+              "tiefe": 2,
+              "text": "Gestützt auf Art. 5 Abs. 4 AHVG kann der Bundesrat Sozialleistungen sowie anlässlich besonderer Ereignisse erfolgende Zuwendungen eines Arbeitgebers an seine Arbeitnehmer vom Einbezug in den massgebenden Lohn ausnehmen. Der Bundesrat hat von dieser Befugnis in Art. 6 ff. der Verordnung über die Alters- und Hinterlassenenversicherung vom 31. Oktober 1947 (AHVV; SR 831.101) Gebrauch gemacht. Gemäss Art. 6 Abs. 2 lit. f AHVV (in Kraft seit 1. Januar 1984; AS 1983 38) gehören nicht zum Erwerbseinkommen: \"Familienzulagen, die als Kinder-, Ausbildungs-, Haushalts-, Heirats- und Geburtszulagen im orts- oder branchenüblichen Rahmen gewährt werden;\""
+            },
+            {
+              "marke": "E. 2.4",
+              "tiefe": 2,
+              "text": "Die beitragsrechtliche Qualifikation ist eine frei überprüfbare Rechtsfrage (Art. 95 lit. a in Verbindung mit Art. 106 Abs. 1 BGG), wohingegen die Sachverhaltselemente, welche der entsprechenden Schlussfolgerung zugrundeliegen, Tatfragen beschlagen (SVR 2020 AHV Nr. 12 S. 32, 9C_603/2019 E. 3.3.2)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Streitig und zu prüfen ist, ob die vorinstanzliche Qualifikation der KiTa-Subvention als Familienzulage im Sinne von Art. 6 Abs. 2 lit. f AHVV Bundesrecht verletzt."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht hat diesbezüglich erwogen, die KiTa-Subvention diene im Grunde dem gleichen Zweck wie die (beitragsfreien) Familien- und Haushaltszulagen. Dabei gehe es stets um die Minderung der Kosten, welche Erwerbstätigen durch die notwendige Fremdbetreuung ihrer Kinder anfallen. Abgegolten würden Mehrkosten, welche im Zusammenhang mit der Familie stünden. Ferner komme der KiTa-Subvention Sozialleistungscharakter zu. Diese bezwecke nebst der Entlastung von Personen mit Betreuungspflichten die Unterstützung des Spitals A.________ bei der Rekrutierung und Erhaltung von Arbeitskräften mit Erziehungspflichten, sei doch gerade die Tätigkeit im Spital mit speziellen Arbeitszeiten verbunden. Alsdann könne der KiTa-Subvention in Anbetracht des Verhältnisses zum Grundlohn der Charakter einer echten sozialen Zulage nicht abgesprochen werden, auch wenn diese nicht jedem Bezüger in gleicher Höhe zustehe. Die in der Verordnung vorgesehene Orts- und Branchenüblichkeit sei zu bejahen, nachdem andere ortsansässige (private) Arbeitgeber ebenfalls Kindertagesstätten führten, deren Tarife einkommensabhängig seien, wobei subventionierte Plätze angeboten würden. Da somit der soziale Charakter wie auch die Orts- und Branchenüblichkeit gegeben seien, müsse von beitragsbefreiten Familienzulagen im Sinne von Art. 6 Abs. 2 lit. f AHVV ausgegangen werden."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Das Beschwerde führende BSV hält dem im Wesentlichen entgegen, bei genauerem Hinsehen könnten die KiTa-Subventionen keiner der in Art. 6 Abs. 2 lit. f AHVV aufgeführten Zuschussarten zugewiesen werden. Die dort genannten periodischen Leistungen der Kinder- respektive Haushaltszulagen seien an ein Kindesverhältnis, an eine Kinderunterstützungsverpflichtung oder an einen Familienhaushalt gebunden. Demgegenüber bestehe der Zweck der KiTa-Subvention darin, die Fremdbetreuung in der subventionierten Betreuungseinrichtung zu sichern. Handelte es sich dabei um eine Familienzulage im Sinne von Art. 6 Abs. 2 lit. f AHVV, so müsste diese allen Mitarbeitern des Spitals A.________, welche für den Unterhalt eines Kindes aufzukommen hätten oder einen Familienhaushalt führten, in gleicher Höhe zukommen. Nicht anders zu behandeln wären diesfalls Beiträge des Arbeitgebers an eine Musik- oder Reitschule, wenn damit bezweckt werde, den Kindern Zugang zu erschwinglichem Musik- oder Reitsportunterricht zu gewähren. Letzteres hätte jedoch eine regelrechte Erosion des Beitragssubstrats zur Folge, was nicht der Intention des Verordnungsgebers entspreche. Im Übrigen lasse sich nicht nachvollziehen, wie hoch die Zuschüsse im Vergleich seien. Daher bleibe die in Art. 6 Abs. 2 lit. f AHVV erwähnte Orts- und Branchenüblichkeit ungeklärt."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Voraussetzung für die Anwendung der in Art. 6 ff. AHVV geregelten Ausnahmetatbestände bildet, dass die hier strittige KiTa-Subvention grundsätzlich als Lohn gemäss Art. 5 Abs. 2 AHVG gilt, was der Beschwerdegegner vernehmlassungsweise in Abrede stellt."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Nach verbindlicher (E. 1 hievor) Sachverhaltsfeststellung des kantonalen Gerichts unterstützt das Spital A.________ die Eltern gemäss Reglement bis zu einem Jahreshaushaltseinkommen von Fr. 146'000.- netto durch anteilsmässige finanzielle Beteiligung an den Kinderbetreuungskosten. Die auf dieser Grundlage ausgerichtete KiTa-Subvention ist einkommensabhängig und wird vom Elternbeitrag abgezogen, das heisst die effektiven Betreuungskosten reduzieren sich im Umfang der jeweiligen KiTa-Subvention (vgl. Ziff. 2.2 des Reglements vom 1. Mai 2014 und Ziff. 3.2 des Reglements vom 1. November 2016). Der Betrag wird somit nicht dem Elternteil des zu betreuenden Kindes, sondern direkt der Kindertagesstätte ausgerichtet."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Soweit in der Vernehmlassung geltend gemacht wird, die betreffenden Unterstützungsgelder könnten nicht als Lohn qualifiziert werden, weil sie nicht den Mitarbeitenden, sondern einem Dritten (der Kindertagesstätte) übermittelt würden, greift dies zu kurz. Vielmehr legt die bundesgerichtliche Praxis betreffend Schulgeldern den gegenteiligen Schluss nahe. Übernehmen demnach Arbeitgeber die Unterrichtskosten der Kinder von Arbeitnehmenden, so kann darin eine geldwerte Leistung an die betreffenden Personen erblickt werden, weil durch die Zahlung des Arbeitgebers auf Seiten der angestellten Person eine Ausgabeneinsparung erzielt wird (KÄSER, a.a.O., S. 153). Vor diesem Hintergrund gelten direkt an die Schule bezahlte Gelder des Arbeitgebers durchaus als massgebender Lohn, stehen sie doch offenkundig im wirtschaftlichen Zusammenhang mit dem Arbeitsverhältnis (Urteile H 52/02 vom 4. November 2002; H 174/93 vom 5. Mai 1995 E. 3; ferner: AHI 2001 S. 218, H 290/99 E. 5b/cc). Inwieweit es sich bei der KiTa-Subvention anders verhalten soll, ist weder ersichtlich noch vom Beschwerdegegner (substanziiert) dargetan. Dies gilt umso mehr, als es sich um keine im Voraus bezahlte Pauschalen handelt, welche den einzelnen Begünstigten nicht zugeordnet werden könnten (dazu: KÄSER, a.a.O., S. 156). Damit gehören die reglementarisch vorgesehenen KiTa-Subventionen zum massgebenden Lohn nach Art. 5 Abs. 2 AHVG, es sei denn, der hier einzig strittige Ausnahmetatbestand des Art. 6 Abs. 2 lit. f AHVV wäre einschlägig."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Ausgangspunkt jeder Auslegung bildet der Wortlaut der massgeblichen Norm. Ist der Text nicht ganz klar und sind verschiedene Interpretationen möglich, so muss nach der wahren Tragweite der Bestimmung gesucht werden, wobei alle Auslegungselemente zu berücksichtigen sind (Methodenpluralismus). Dabei kommt es auf den Zweck der Regelung, die dem Text zugrundeliegenden Wertungen sowie auf den Sinnzusammenhang an, in welchem die Norm steht. Die Entstehungsgeschichte ist zwar nicht unmittelbar entscheidend, dient aber als Hilfsmittel, um den Sinn der Norm zu erkennen. Namentlich zur Auslegung neuerer Texte, die noch auf wenig veränderte Umstände und ein kaum gewandeltes Rechtsverständnis treffen, kommt den Materialien eine besondere Bedeutung zu. Vom Wortlaut darf abgewichen werden, wenn triftige Gründe dafür bestehen, dass er nicht den wahren Sinn der Regelung wiedergibt. Sind mehrere Auslegungen möglich, ist jene zu wählen, die der Verfassung am besten entspricht. Allerdings findet auch eine verfassungskonforme Auslegung ihre Grenzen im klaren Wortlaut und dem Sinn einer Gesetzesbestimmung (BGE 141 V 221 E. 5.2.1; 140 V 449 E. 4.2; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Verwaltungsweisungen richten sich an die Behörden und sind für die Gerichte nicht verbindlich. Die Unterart der vollzugslenkenden Verwaltungsverordnungen kann namentlich dazu dienen, eine einheitliche Handhabung des Verwaltungsermessens sicherzustellen. Obschon für das Gericht nicht verbindlich, sind Verwaltungsweisungen aber zu berücksichtigen, sofern sie eine dem Einzelfall angepasste und gerecht werdende Auslegung der anwendbaren gesetzlichen Bestimmungen zulassen. Das Gericht weicht also nicht ohne triftigen Grund von Verwaltungsweisungen ab, wenn diese eine überzeugende Konkretisierung der rechtlichen Vorgaben darstellen. Insofern wird dem Bestreben der Verwaltung, durch interne Weisungen eine rechtsgleiche Gesetzesanwendung zu gewährleisten, Rechnung getragen (statt vieler: BGE 145 V 84 E. 6.1.1; 142 V 442 E. 5.1; 140 V 543 E. 3.2.2.1 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Der Begriff der Familienzulage im Sinne von Art. 6 Abs. 2 lit. f AHVV wird vorab in der Wegleitung über den massgebenden Lohn in der AHV, IV und EO (gültig ab 1. Januar 2019, Stand: 1. Januar 2020; nachfolgend: WML) erläutert."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Gemäss Rz. 2166 WML gelten als Familienzulagen insbesondere Haushaltszulagen, welche verheirateten oder in eingetragener Partnerschaft lebenden Arbeitnehmenden gewährt werden, die mit ihrer Partnerin oder ihrem Partner und/oder Kindern zusammenleben (dazu schon: BGE 110 V 229; 119 V 385). Als Haushaltszulagen gelten nur Leistungen, die zum Lohn hinzu gewährt werden; es ist nicht zulässig, einen Teil des Lohnes als Haushaltszulage zu bezeichnen, um ihn so von der Beitragserhebung auszunehmen. Insbesondere sieht die WML vor, dass Haushaltszulagen feste, von der Höhe des Lohnes unabhängige Leistungen darstellen, welche für alle anspruchsberechtigten Arbeitnehmenden eines Betriebes gleich hoch sein müssen (Rz. 2166 letzter Satz WML)."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Letzteres ist bei der KiTa-Subvention augenscheinlich nicht der Fall. Denn unterstützt werden - wie erwähnt (vgl. E. 4.1 hievor) - ausschliesslich diejenigen Mitarbeitenden, welche nicht mehr als das im Reglement festgeschriebene Nettohaushaltseinkommen (Fr. 146'000.-) jährlich verdienen (vgl. Ziff. 2.2 des Reglements vom 1. Mai 2014 und Ziff. 3.2 des Reglements vom 1. November 2016). Selbst die darunter liegenden Löhne werden nicht gleich, sondern umgekehrt proportional zum Einkommen subventioniert (Haushaltseinkommen weniger als Fr. 86'000.-; KiTa-Subvention: 60 %; Haushaltseinkommen zwischen Fr. 86'000.- und Fr. 95'999.-; KiTa-Subvention: 50 %; Haushaltseinkommen zwischen Fr. 96'000.- und Fr. 109'999.-; KiTa-Subvention: 40 %; Haushaltseinkommen ab Fr. 110'000.- bis Fr. 146'000.-; KiTa-Subvention: prozentual zum Einkommen). Folglich spricht die verwaltungsinterne Konkretisierung gegen die Sichtweise des kantonalen Gerichts, wonach die KiTa-Subvention als Haushaltszulage nach Art. 6 Abs. 2 lit. f AHVV gilt."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Vor dem Hintergrund der eingeschränkten Bedeutung von Verwaltungsweisungen (vgl. E. 5.2 hievor) bleibt zu klären, ob damit eine dem Einzelfall angepasste und gerecht werdende Auslegung der anwendbaren Bestimmung gewährleistet ist, was die Vorinstanz (implizit) verneint hat."
+            },
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Nach dem klaren und in allen drei Sprachfassungen übereinstimmenden Wortlaut des Art. 6 Abs. 2 lit. f AHVV (vgl. E. 2.3 hievor) sind vom AHV-pflichtigen Erwerbseinkommen ausgenommen \"Familienzulagen, die als Kinder-, Ausbildungs-, Haushalts-, Heirats- und Geburtszulagen im orts- oder branchenüblichen Rahmen gewährt werden\" (französisch: \"les allocations familiales qui sont accordées, conformément aux usages locaux ou professionnels, au titre d'allocation pour enfants et d'allocation de formation professionnelle, d'allocation de ménage ou d'allocation de mariage ou de naissance\"; italienisch: \"gli assegni familiari accordati come assegni per i figli, la formazione professionale, l'economia domestica, il matrimonio e la nascita, nell'ambito degli usi locali o professionali\"). Es liegt also ein Regel-/Ausnahmeverhältnis vor, wobei das AHV-beitragspflichtige Einkommen die Regel und die Familienzulagen die Ausnahme bilden. Der Begriff \"Familienzulagen\" ist aus grammatikalischer Sicht als Oberbegriff zu den anschliessend in Art. 6 Abs. 2 lit. f AHVV im Einzelnen aufgeführten Zulagen, worunter unter anderem die Haushaltszulagen fallen, zu verstehen. Vom Wortlaut in allen drei Sprachen unbestrittenermassen nicht mitumfasst ist die vorliegend strittige KiTa-Subvention. Was als Familienzulage anzusehen ist, wird seit 1. Januar 2009 im Bundesgesetz vom 24. März 2006 über die Familienzulagen (Familienzulagengesetz [FamZG; SR 836.2]) gesetzlich definiert. Danach sind Familienzulagen einmalige oder periodische Geldleistungen, die ausgerichtet werden, um die finanzielle Belastung durch ein oder mehrere Kinder teilweise auszugleichen (Art. 2 FamZG)."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "Damit bezweckt die Ausrichtung von Familienzulagen einen Ausgleich der finanziellen Lasten infolge des Kindes als \"soziales Risiko\". Anders gesagt sollen die Eltern im Rahmen ihrer gesetzlichen Unterhaltspflicht (Art. 276 ff. ZGB) entlastet werden (vgl. KIESER/REICHMUTH, Bundesgesetz über die Familienzulagen [FamZG], Praxiskommentar, 2010, N. 76 Einleitung und N. 10 f. zu Art. 2 FamZG; MATTHEY/MAHON, Les allocations familiales, in: Soziale Sicherheit, SBVR Bd. XIV, 3. Aufl. 2016, S. 1998 N. 5). Die Familienzulagen verfolgen mithin eine familien- und sozialpolitische Zielsetzung, indem berücksichtigt werden soll, dass die Eltern nach der Geburt ihres Kindes bzw. ihrer Kinder längerfristig Unterstützung benötigen. Deshalb beteiligt sich die Gesellschaft an den Kosten, welche in diesem Zusammenhang anfallen (vgl. dazu: Stellungnahme des Bundesrates vom 28. Juni 2000 zum Bericht vom 20. November 1998 der Kommission für soziale Sicherheit und Gesundheit des Nationalrates, BBl 2000 4787). Hat die KiTa-Subvention gleichfalls die finanzielle Entlastung der Eltern zum Ziel, indem sich der Arbeitgeber an der Fremdbetreuung der Kinder beteiligt, so ist aus teleologischer Warte eine gewisse Übereinstimmung mit den Familienzulagen nicht von der Hand zu weisen. In Betracht gezogen werden muss aber genauso, dass die KiTa-Subvention - wie der Beschwerdegegner selber einräumt - einen Anreiz bei der Personalrekrutierung und -erhaltung darstellt, was über den rein sozialen Zweck einer Familienzulage hinausgeht."
+            },
+            {
+              "marke": "E. 8.1",
+              "tiefe": 2,
+              "text": "Nicht jede Vergünstigung mit sozialem Charakter gilt als Familienzulage. Das Beschwerde führende BSV vertritt die Auffassung, dass die KiTa-Subvention insbesondere deshalb keine Familienzulage im Sinne von Art. 6 Abs. 2 lit. f AHVV darstellt, weil sie nicht allen Mitarbeitenden in gleicher Höhe zukommt."
+            },
+            {
+              "marke": "E. 8.2",
+              "tiefe": 2,
+              "text": "Das heutige FamZG basiert auf der am 13. März 1991 von Nationalrätin Angeline Fankhauser eingereichten parlamentarischen Initiative (91.411). Diese verlangte insbesondere, dass jedes in der Schweiz wohnhafte Kind Anspruch auf eine fixe Zulage von mindestens Fr. 200.- pro Monat hat. Nach dem Bericht der mit der Ausarbeitung einer entsprechenden Gesetzesvorlage betrauten Kommission für soziale Sicherheit und Gesundheit des Nationalrates vom 20. November 1998 war beabsichtigt, die Vielfalt der bis dahin geltenden Regelungen mit 26 verschiedenen kantonalen Familienzulagensystemen für Arbeitnehmer zu vereinheitlichen. Vor allem die Ungleichbehandlung, dass einige Bevölkerungsgruppen gänzlich vom Anspruch ausgeschlossen waren, wurde als störend empfunden. So erhielten unter damaligem Recht selbständigerwerbende Landwirte bundesrechtliche Familienzulagen nur dann, wenn ihr Einkommen unter einer gewissen Grenze lag (vgl. Bundesgesetz über die Familienzulagen in der Landwirtschaft vom 20. Juni 1952 [FLG; SR 836.1]); lediglich sechs Kantone kannten Zulagen ohne Einkommensgrenze. Nichtlandwirtschaftliche Selbständigerwerbende konnten nur in zehn Kantonen Familienzulagen beziehen; in sieben davon galt eine Einkommensgrenze. Ein Anspruch für Nichterwerbstätige war ausserdem nur in vier Kantonen vorgesehen. Das neue Familienzulagensystem sollte auf dem bereits in der Initiative Fankhauser enthaltenen Grundsatz \"ein Kind - eine Zulage\" beruhen. Danach wird die Zulage für jedes Kind ausgerichtet, und zwar \"unabhängig vom Beruf der Eltern und von der Ausübung einer Erwerbstätigkeit\" (zum Ganzen: BBl 1999 III 3224 f.; vgl. auch: KIESER/REICHMUTH, a.a.O., N. 21 Einleitung; MAJA JAGGI, Die Entstehung des Familienzulagengesetzes, in: Schaffhauser/Kieser [Hrsg.], Bundesgesetz über die Familienzulagen [FamZG], 2009, S. 55). Dieses Prinzip gilt zumindest im hier interessierenden Kontext der Unselbständigerwerbenden im nicht landwirtschaftlichen Bereich bis heute (Art. 5 Abs. 1 FamZG: \"Die Kinderzulage beträgt mindestens 200 Franken pro Monat.\"). Daraus erhellt, dass der Gesetzgeber sämtliche Beziehenden gleich behandeln wollte, indem pro Kind ein (relativ) fixer Betrag zur Auszahlung gelangt. Es sollte, wie in den meisten europäischen Ländern bereits vorgesehen, \"die Verknüpfung zwischen dem Grad der Erwerbstätigkeit und der Höhe der Zulage\" aufgegeben werden (BBl III 1999 3221). Eine einkommensabhängige Familienzulage, wie sie die KiTa-Subvention gemäss Reglement darstellt (vgl. E. 6.2 hievor), steht zu diesem Grundgedanken im Widerspruch."
+            },
+            {
+              "marke": "E. 8.3",
+              "tiefe": 2,
+              "text": "In systematischer Hinsicht handelt es sich beim FamZG um ein Rahmengesetz, wobei von Anfang an feststand, dass den Kantonen weiterhin eine erhebliche Kompetenz verbleibt (vgl. BBl III 1999 3221; 2000 4788). Dieser Grundsatz wurde beibehalten (vgl. BBl 2004 6900; AB 2005 N 265). Die Kantone haben in der Regel Einführungsgesetze erlassen, welche teilweise höhere und/oder andere Leistungen als das FamZG enthalten (vgl. dazu: URS-CHRISTOPH DIETERLE, Umsetzung auf kantonaler Ebene, in: Schaffhauser/Kieser [Hrsg.], Bundesgesetz über die Familienzulagen [FamZG], 2009, S. 75 ff.). Auf Letztere finden ebenfalls die Bestimmungen des FamZG Anwendung, wobei solche anderen Leistungen ausserhalb dieser Familienzulagenordnung geregelt und finanziert werden müssen (Art. 3 Abs. 2 FamZG). Im Kanton Basel-Stadt beträgt die Kinderzulage beispielsweise mindestens 275 Franken, die Ausbildungszulage mindestens 325 Franken pro Monat je anspruchsberechtigtes Kind (Einführungsgesetz zum Bundesgesetz über die Familienzulagen vom 4. Juni 2008 [Familienzulagengesetz; EG FamZG; SG 820.100]). Im Weiteren bestehen kantonale Vorschriften, welche ab einem bestimmten Alter des Kindes oder ab dem dritten Kind eine Erhöhung des Grundansatzes vorsehen (so etwa im Kanton Wallis; Art. 9 des Ausführungsgesetzes zum Bundesgesetz über die Familienzulagen vom 11. September 2008 [AG FamZG/VS; SGS 836.1]). Eine an das Haushaltseinkommen gebundene Familienzulage kennt hingegen kein einziger Kanton, sondern die Leistungen für Unselbständigerwerbende sind dadurch gekennzeichnet, dass sie unabhängig vom finanziellen Bedarf ausgerichtet werden (vgl. auch: KIESER/REICHMUTH, a.a.O., Einleitung N. 12). \"Ein Kind - eine Zulage\" heisst - von hier nicht interessierenden Ausnahmen abgesehen (vgl. betreffend Nichterwerbstätige: Art. 19 Abs. 2 FamZG) - somit richtig verstanden auch, dass im Unterschied zur KiTa-Subvention gerade nicht nach elterlichem Einkommen differenziert wird (\"Jedes Kind ist gleich viel wert.\"). Dies stützt das Resultat der historischen Auslegung."
+            },
+            {
+              "marke": "E. 8.4",
+              "tiefe": 2,
+              "text": "Im konkreten Fall kommt hinzu, dass das Reglement die KiTa-Subvention nicht nur von einer Einkommensgrenze abhängig macht (vgl. E. 6.2 hievor), sondern die betreffende Arbeitgeberzuwendung an eine Reihe weiterer Voraussetzungen knüpft. So besteht ein Anspruch auf einen Kinderbetreuungsplatz nur für Angestellte des Spitals A.________, ab dem Jahr 2016 sogar lediglich bis zum Eintritt des Kindes in die Primarschule (Ziff. 1.2 des Reglements vom 1. Mai 2014 und Ziff. 2.2 des Reglements vom 1. November 2016). Fällt das Arbeitsverhältnis dahin, so erlischt auch die Möglichkeit der KiTa-Subvention. Es besteht folglich neben der Einkommenskoppelung auch eine Bindung an das Arbeitsverhältnis sowie an das Alter des zu betreuenden Kindes. Die Eltern müssen sodann die betriebseigene oder eine angeschlossene Kindertagesstätte berücksichtigen. Abgesehen davon ist eine über das Arbeitspensum hinausgehende Betreuung zum Vornherein von der Subventionierung ausgeschlossen (Ziff. 2.2 des Reglements vom 1. Mai 2014 und Ziff. 3.2 des Reglements vom 1. November 2016). Mit anderen Worten kann längst nicht jeder Mitarbeitende von der Subvention profitieren, selbst wenn er oder sie über ein unter der reglementarischen Obergrenze liegendes Haushaltseinkommen verfügt. Im Gegenteil erfolgt gemäss Reglement explizit eine Bedürfnisabklärung im Einzelfall. Ebenso besteht nach dem Gesagten eine Verknüpfung mit dem Grad der Erwerbstätigkeit (Arbeitspensum), was der Gesetzgeber bei den Familienzulagen explizit als Missstand erkannt hatte und beheben wollte (vgl. E. 8.2 hievor). Diese zusätzlichen Faktoren sind mit dem Charakter einer Familienzulage unvereinbar. Obschon (auch) der KiTa-Subvention eine soziale Komponente nicht abgesprochen werden kann, ist sie mit Blick auf ihre reglementarische Ausgestaltung - wie das BSV zu Recht geltend macht - somit klar von einer Familienzulage zu unterscheiden. Daher besteht kein hinreichender Anhaltspunkt, dass sie beitragsrechtlich gleich zu behandeln wäre wie die gemäss Art. 6 Abs. 2 lit. f AHVV von der Beitragspflicht ausgenommenen Familienzulagen."
+            },
+            {
+              "marke": "E. 9.1",
+              "tiefe": 2,
+              "text": "Demzufolge hält die von der Vorinstanz vertretene Sichtweise, wonach die im Reglement vorgesehene KiTa-Subvention eine Familienzulage nach Art. 6 Abs. 2 lit. f AHVV darstellt, einer näheren Betrachtung unter Einbezug historischer und systematischer Gesichtspunkte nicht stand. Daran vermag das vom Beschwerdegegner angerufene Urteil H 120/94 vom 7. November 1994 (SVR 1995 AHV Nr. 50 S. 137), welches deutlich vor Erlass des FamZG erging, nichts zu ändern. Weiterungen zur Orts- und Branchenüblichkeit erübrigen sich."
+            },
+            {
+              "marke": "E. 9.2",
+              "tiefe": 2,
+              "text": "Bringt der Beschwerdegegner schliesslich im Eventualantrag vor, die KiTa-Subvention sei in Anbetracht der behördlichen Auskunft vom August 2014 nach Treu und Glauben von der AHV-Beitragspflicht ausgenommen, so ist dem kein Erfolg beschieden. Wohl hielt die Ausgleichskasse im August 2014 auf Nachfrage hin fest, da die Zahlungen direkt an die betreuenden Einrichtungen gingen, seien sie nicht AHV-pflichtig (vgl. E-Mail vom 20. August 2014). Indessen ist weder ersichtlich noch in der Vernehmlassung (substanziiert) dargetan, inwieweit der Beschwerdegegner gestützt darauf Dispositionen getroffen hätte, welche ohne die fragliche Angabe der Ausgleichskasse unterblieben wären und die zudem nicht ohne Nachteil wieder rückgängig gemacht werden könnten. Eine Berufung auf Art. 9 BV fällt deshalb ausser Betracht (zu den Voraussetzungen: BGE 143 V 95 E. 3.6.2; 141 V 530 E. 6.2). Was sodann den vom Beschwerdegegner nur sinngemäss geltend gemachten Anspruch auf Gleichbehandlung im Unrecht anbelangt, indem die KiTa-Subvention (auch) bei den kantonalen Stellen nach wie vor nicht als massgeblicher Lohn behandelt werde, bleibt dieser Umstand vernehmlassungsweise gänzlich unbelegt. Abgesehen davon zeigt der Beschwerdegegner auch hier nicht auf, weshalb die dafür nach der Rechtsprechung geltenden (strengen) Anforderungen ausnahmsweise erfüllt sein sollten (dazu etwa: Urteil 2C_807/2015 vom 18. Oktober 2016 E. 6.3 mit Hinweis auf BGE 139 II 49 E. 7.1). Damit verbietet sich eine Beitragsbefreiung auf diesem Weg."
+            },
+            {
+              "marke": "E. 10",
+              "tiefe": 1,
+              "text": "Nach dem Gesagten erweist sich die Beschwerde als begründet und ist gutzuheissen."
+            },
+            {
+              "marke": "E. 11",
+              "tiefe": 1,
+              "text": "Dem Verfahrensausgang entsprechend sind die Gerichtskosten dem unterliegenden Beschwerdegegner aufzuerlegen (Art. 66 Abs. 1 erster Satz BGG). Dem BSV steht keine Parteientschädigung zu (Art. 68 Abs. 3 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen. Das Urteil des Sozialversicherungsgerichts des Kantons Basel-Stadt vom 12. Juli 2021 wird aufgehoben und der Einspracheentscheid der Ausgleichskasse Arbeitgeber Basel v om 14. Oktober 2020 bestätigt."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 500.- werden dem Beschwerdegegner auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien, der Ausgleichskasse Arbeitgeber Basel und dem Sozialversicherungsgericht des Kantons Basel-Stadt schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 17. Oktober 2022 Im Namen der II. sozialrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Parrino Der Gerichtsschreiber: Grünenfelder"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen. Das Urteil des Sozialversicherungsgerichts des Kantons Basel-Stadt vom 12. Juli 2021 wird aufgehoben und der Einspracheentscheid der Ausgleichskasse Arbeitgeber Basel v om 14. Oktober 2020 bestätigt.",
+        "Die Gerichtskosten von Fr. 500.- werden dem Beschwerdegegner auferlegt.",
+        "Dieses Urteil wird den Parteien, der Ausgleichskasse Arbeitgeber Basel und dem Sozialversicherungsgericht des Kantons Basel-Stadt schriftlich mitgeteilt.\nLuzern, 17. Oktober 2022"
+      ],
+      "zitierteNormen": [
+        "Art. 106 Abs. 1 BGG",
+        "Art. 19 Abs. 2 FAMZG",
+        "Art. 2 FAMZG",
+        "Art. 276 ZGB",
+        "Art. 3 Abs. 2 FAMZG",
+        "Art. 5 Abs. 1 FAMZG",
+        "Art. 5 Abs. 2 AHVG",
+        "Art. 5 Abs. 4 AHVG"
+      ],
+      "normKeys": [
+        "BGG",
+        "FAMZG",
+        "ZGB",
+        "AHVG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=&to_date=&from_year=2022&to_year=2022&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=45&highlight_docid=atf%3A%2F%2F148-V-385%3Ade&number_of_ranks=195&azaclir=clir",
+      "abgerufen": "2026-07-17",
+      "fassungsToken": "59442fb3630e81e6bce2847207e3245856f3e70bf2b837da5deaad1c2ad4aaad",
+      "sha": "f9f62761610205ce404812c3ef9797e7196001c6a9ac1631be9fafefeedd37bb",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Das Spital A. betreibt die Kindertagesstätte \"B.\". Für Spitalangestellte, welche dieses Betreuungsangebot oder dasjenige einer anderen angeschlossenen Kinderkrippe in Anspruch nehmen, besteht nach dem \"Reglement Kinderbetreuungsplätze/Subventionen des Spitals A.\" (nachfolgend: Reglement) die Möglichkeit einer finanziellen Unterstützung für die Betreuungskosten (nachfolgend: KiTa-Subvention)."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Im Dezember 2019 führte die Ausgleichskasse Arbeitgeber Basel (nachfolgend: Ausgleichskasse) eine Arbeitgeberkontrolle durch. Dabei gelangte sie zum Schluss, dass bisher fälschlicherweise keine AHV-Beiträge auf die ausgerichteten KiTa-Subventionen erhoben worden seien. In der daraufhin vom Spital A. verlangten anfechtbaren Verfügung vom 12. August 2020 begründete die Ausgleichskasse ihre Auffassung insoweit näher, als die KiTa-Subventionen an die Elternbeiträge für die Kinderbetreuung massgebenden Lohn darstellten, weshalb sie der Beitragspflicht unterstünden. Die unter diesem Titel geflossenen Zahlungen müssten somit ab 1. Januar 2020 entsprechend erfasst werden. Daran hielt die Ausgleichskasse mit Einspracheentscheid vom 14. Oktober 2020 fest. B. Die dagegen erhobene Beschwerde hiess das Sozialversicherungsgericht des Kantons Basel-Stadt mit Urteil vom 12. Juli 2021 gut, hob den Einspracheentscheid vom 14. Oktober 2020 auf und stellte fest, dass es sich bei den KiTa-Subventionen des Spitals A. nicht um massgebenden Lohn handle. Diese seien daher von der AHV-Beitragspflicht ausgenommen. C. Das Bundesamt für Sozialversicherungen (BSV) führt Beschwerde in öffentlich-rechtlichen Angelegenheiten mit dem Rechtsbegehren, in Aufhebung des angefochtenen Urteils sei der Einspracheentscheid der Ausgleichskasse vom 14. Oktober 2020 zu bestätigen. Das Spital A. schliesst im Wesentlichen auf Abweisung der Beschwerde, soweit darauf eingetreten werde. Die Ausgleichskasse verzichtet auf eine Vernehmlassung. Das Bundesgericht heisst die Beschwerde gut."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Vom Einkommen aus unselbständiger Erwerbstätigkeit (massgebender Lohn) werden paritätisch Arbeitnehmer- und Arbeitgeberbeiträge erhoben (Art. 5 und 12 ff. des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung [AHVG; SR 831.10]). Als massgebender Lohn gilt grundsätzlich jedes Entgelt für in unselbständiger Stellung auf bestimmte oder unbestimmte Zeit geleistete Arbeit (Art. 5 Abs. 2 erster Satz AHVG)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Gemäss Art. 5 Abs. 2 AHVG entsteht eine Beitragsschuld grundsätzlich überall dort, wo Arbeit entgolten wird. Dergestalt bilden sämtliche Bezüge von Arbeitnehmern, die wirtschaftlich mit dem Arbeitsverhältnis zusammenhängen, beitragspflichtiges Einkommen. Unerheblich ist, ob das Arbeitsverhältnis andauert oder abgelaufen ist und ob die Leistungen geschuldet werden oder freiwillig erfolgen. Beitragspflichtiges Einkommen aus unselbständiger Erwerbstätigkeit ist nach der objektbezogenen Konzeption des Art. 5 Abs. 2 AHVG nicht nur unmittelbares Entgelt für geleistete Arbeit, sondern grundsätzlich jede Entschädigung oder Zuwendung, welche sonstwie aus dem Arbeitsverhältnis bezogen oder in diesem wirtschaftlich hinreichend begründet wird, soweit sie nicht kraft ausdrücklicher Vorschrift davon ausgenommen ist (statt vieler: BGE 146 V 104 E. 3.1; BGE 137 V 321 E. 2.2.1; BGE 133 V 556 E. 4 mit Hinweis; Urteil 9C_774/2018 vom 10. April 2019 E. 7.1; vgl. auch: HANSPETER KÄSER, Unterstellung und Beitragswesen in der obligatorischen AHV, 2. Aufl. 1996, S. 111 ff.; UELI KIESER, Rechtsprechung des Bundesgerichts zum AHVG, 4. Aufl. 2020, N. 135 f. zu Art. 5 AHVG; SCARTAZZINI/HÜRZELER, Bundessozialversicherungsrecht, 4. Aufl. 2012, S. 162 f.). Eine allfällige Beitragsfreiheit einer wirtschaftlich mit dem Arbeitsverhältnis zusammenhängenden Leistung bedarf angesichts der Generalklausel von Art. 5 Abs. 2 erster Satz AHVG einer besonderen Rechtsgrundlage (BGE 145 V 320 E. 5.2.2). BGE 148 V 385 S. 388"
+            },
+            {
+              "marke": "E. 2.3",
+              "tiefe": 2,
+              "text": "Gestützt auf Art. 5 Abs. 4 AHVG kann der Bundesrat Sozialleistungen sowie anlässlich besonderer Ereignisse erfolgende Zuwendungen eines Arbeitgebers an seine Arbeitnehmer vom Einbezug in den massgebenden Lohn ausnehmen. Der Bundesrat hat von dieser Befugnis in Art. 6 ff. der Verordnung vom 31. Oktober 1947 über die Alters- und Hinterlassenenversicherung (AHVV; SR 831.101) Gebrauch gemacht. Gemäss Art. 6 Abs. 2 lit. f AHVV (in Kraft seit 1. Januar 1984; AS 1983 38) gehören nicht zum Erwerbseinkommen: \"Familienzulagen, die als Kinder-, Ausbildungs-, Haushalts-, Heirats- und Geburtszulagen im orts- oder branchenüblichen Rahmen gewährt werden;\""
+            },
+            {
+              "marke": "E. 2.4",
+              "tiefe": 2,
+              "text": "Die beitragsrechtliche Qualifikation ist eine frei überprüfbare Rechtsfrage (Art. 95 lit. a in Verbindung mit Art. 106 Abs. 1 BGG), wohingegen die Sachverhaltselemente, welche der entsprechenden Schlussfolgerung zugrundeliegen, Tatfragen beschlagen (SVR 2020 AHV Nr. 12 S. 32, 9C_603/2019 E. 3.3.2)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Streitig und zu prüfen ist, ob die vorinstanzliche Qualifikation der KiTa-Subvention als Familienzulage im Sinne von Art. 6 Abs. 2 lit. f AHVV Bundesrecht verletzt."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Das kantonale Gericht hat diesbezüglich erwogen, die KiTa-Subvention diene im Grunde dem gleichen Zweck wie die (beitragsfreien) Familien- und Haushaltszulagen. Dabei gehe es stets um die Minderung der Kosten, welche Erwerbstätigen durch die notwendige Fremdbetreuung ihrer Kinder anfallen. Abgegolten würden Mehrkosten, welche im Zusammenhang mit der Familie stünden. Ferner komme der KiTa-Subvention Sozialleistungscharakter zu. Diese bezwecke nebst der Entlastung von Personen mit Betreuungspflichten die Unterstützung des Spitals A. bei der Rekrutierung und Erhaltung von Arbeitskräften mit Erziehungspflichten, sei doch gerade die Tätigkeit im Spital mit speziellen Arbeitszeiten verbunden. Alsdann könne der KiTa-Subvention in Anbetracht des Verhältnisses zum Grundlohn der Charakter einer echten sozialen Zulage nicht abgesprochen werden, auch wenn diese nicht jedem Bezüger in gleicher Höhe zustehe. Die in der Verordnung vorgesehene Orts- und Branchenüblichkeit sei zu bejahen, nachdem andere ortsansässige (private) Arbeitgeber ebenfalls Kindertagesstätten führten, deren Tarife einkommensabhängig seien, wobei subventionierte Plätze angeboten würden. Da somit der soziale Charakter wie auch die BGE 148 V 385 S. 389 Orts- und Branchenüblichkeit gegeben seien, müsse von beitragsbefreiten Familienzulagen im Sinne von Art. 6 Abs. 2 lit. f AHVV ausgegangen werden."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Das Beschwerde führende BSV hält dem im Wesentlichen entgegen, bei genauerem Hinsehen könnten die KiTa-Subventionen keiner der in Art. 6 Abs. 2 lit. f AHVV aufgeführten Zuschussarten zugewiesen werden. Die dort genannten periodischen Leistungen der Kinder- respektive Haushaltszulagen seien an ein Kindesverhältnis, an eine Kinderunterstützungsverpflichtung oder an einen Familienhaushalt gebunden. Demgegenüber bestehe der Zweck der KiTa-Subvention darin, die Fremdbetreuung in der subventionierten Betreuungseinrichtung zu sichern. Handelte es sich dabei um eine Familienzulage im Sinne von Art. 6 Abs. 2 lit. f AHVV, so müsste diese allen Mitarbeitern des Spitals A., welche für den Unterhalt eines Kindes aufzukommen hätten oder einen Familienhaushalt führten, in gleicher Höhe zukommen. Nicht anders zu behandeln wären diesfalls Beiträge des Arbeitgebers an eine Musik- oder Reitschule, wenn damit bezweckt werde, den Kindern Zugang zu erschwinglichem Musik- oder Reitsportunterricht zu gewähren. Letzteres hätte jedoch eine regelrechte Erosion des Beitragssubstrats zur Folge, was nicht der Intention des Verordnungsgebers entspreche. Im Übrigen lasse sich nicht nachvollziehen, wie hoch die Zuschüsse im Vergleich seien. Daher bleibe die in Art. 6 Abs. 2 lit. f AHVV erwähnte Orts- und Branchenüblichkeit ungeklärt."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Voraussetzung für die Anwendung der in Art. 6 ff. AHVV geregelten Ausnahmetatbestände bildet, dass die hier strittige KiTa-Subvention grundsätzlich als Lohn gemäss Art. 5 Abs. 2 AHVG gilt, was der Beschwerdegegner vernehmlassungsweise in Abrede stellt."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Nach verbindlicher (nicht publ. E. 1) Sachverhaltsfeststellung des kantonalen Gerichts unterstützt das Spital A. die Eltern gemäss Reglement bis zu einem Jahreshaushaltseinkommen von Fr. 146'000.- netto durch anteilsmässige finanzielle Beteiligung an den Kinderbetreuungskosten. Die auf dieser Grundlage ausgerichtete KiTa-Subvention ist einkommensabhängig und wird vom Elternbeitrag abgezogen, das heisst die effektiven Betreuungskosten reduzieren sich im Umfang der jeweiligen KiTa-Subvention (vgl. Ziff. 2.2 des Reglements vom 1. Mai 2014 und Ziff. 3.2 des Reglements vom 1. November 2016). Der Betrag wird somit nicht dem Elternteil des zu betreuenden Kindes, sondern direkt der Kindertagesstätte ausgerichtet. BGE 148 V 385 S. 390"
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Soweit in der Vernehmlassung geltend gemacht wird, die betreffenden Unterstützungsgelder könnten nicht als Lohn qualifiziert werden, weil sie nicht den Mitarbeitenden, sondern einem Dritten (der Kindertagesstätte) übermittelt würden, greift dies zu kurz. Vielmehr legt die bundesgerichtliche Praxis betreffend Schulgeldern den gegenteiligen Schluss nahe. Übernehmen demnach Arbeitgeber die Unterrichtskosten der Kinder von Arbeitnehmenden, so kann darin eine geldwerte Leistung an die betreffenden Personen erblickt werden, weil durch die Zahlung des Arbeitgebers auf Seiten der angestellten Person eine Ausgabeneinsparung erzielt wird (KÄSER, a.a.O., S. 153). Vor diesem Hintergrund gelten direkt an die Schule bezahlte Gelder des Arbeitgebers durchaus als massgebender Lohn, stehen sie doch offenkundig im wirtschaftlichen Zusammenhang mit dem Arbeitsverhältnis (Urteile H 52/02 vom 4. November 2002; H 174/93 vom 5. Mai 1995 E. 3; ferner: AHI 2001 S. 218, H 290/99 E. 5b/cc). Inwieweit es sich bei der KiTa-Subvention anders verhalten soll, ist weder ersichtlich noch vom Beschwerdegegner (substanziiert) dargetan. Dies gilt umso mehr, als es sich um keine im Voraus bezahlte Pauschalen handelt, welche den einzelnen Begünstigten nicht zugeordnet werden könnten (dazu: KÄSER, a.a.O., S. 156). Damit gehören die reglementarisch vorgesehenen KiTa-Subventionen zum massgebenden Lohn nach Art. 5 Abs. 2 AHVG, es sei denn, der hier einzig strittige Ausnahmetatbestand des Art. 6 Abs. 2 lit. f AHVV wäre einschlägig."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Ausgangspunkt jeder Auslegung bildet der Wortlaut der massgeblichen Norm. Ist der Text nicht ganz klar und sind verschiedene Interpretationen möglich, so muss nach der wahren Tragweite der Bestimmung gesucht werden, wobei alle Auslegungselemente zu berücksichtigen sind (Methodenpluralismus). Dabei kommt es auf den Zweck der Regelung, die dem Text zugrundeliegenden Wertungen sowie auf den Sinnzusammenhang an, in welchem die Norm steht. Die Entstehungsgeschichte ist zwar nicht unmittelbar entscheidend, dient aber als Hilfsmittel, um den Sinn der Norm zu erkennen. Namentlich zur Auslegung neuerer Texte, die noch auf wenig veränderte Umstände und ein kaum gewandeltes Rechtsverständnis treffen, kommt den Materialien eine besondere Bedeutung zu. Vom Wortlaut darf abgewichen werden, wenn triftige Gründe dafür bestehen, dass er nicht den wahren Sinn der Regelung wiedergibt. Sind mehrere Auslegungen möglich, ist jene zu wählen, die der BGE 148 V 385 S. 391 Verfassung am besten entspricht. Allerdings findet auch eine verfassungskonforme Auslegung ihre Grenzen im klaren Wortlaut und dem Sinn einer Gesetzesbestimmung (BGE 141 V 221 E. 5.2.1; BGE 140 V 449 E. 4.2; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Verwaltungsweisungen richten sich an die Behörden und sind für die Gerichte nicht verbindlich. Die Unterart der vollzugslenkenden Verwaltungsverordnungen kann namentlich dazu dienen, eine einheitliche Handhabung des Verwaltungsermessens sicherzustellen. Obschon für das Gericht nicht verbindlich, sind Verwaltungsweisungen aber zu berücksichtigen, sofern sie eine dem Einzelfall angepasste und gerecht werdende Auslegung der anwendbaren gesetzlichen Bestimmungen zulassen. Das Gericht weicht also nicht ohne triftigen Grund von Verwaltungsweisungen ab, wenn diese eine überzeugende Konkretisierung der rechtlichen Vorgaben darstellen. Insofern wird dem Bestreben der Verwaltung, durch interne Weisungen eine rechtsgleiche Gesetzesanwendung zu gewährleisten, Rechnung getragen (statt vieler: BGE 145 V 84 E. 6.1.1; BGE 142 V 442 E. 5.1; BGE 140 V 543 E. 3.2.2.1 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Der Begriff der Familienzulage im Sinne von Art. 6 Abs. 2 lit. f AHVV wird vorab in der Wegleitung des BSV über den massgebenden Lohn in der AHV, IV und EO (WML; gültig ab 1. Januar 2019, Stand 1. Januar 2020) erläutert."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Gemäss Rz. 2166 WML gelten als Familienzulagen insbesondere Haushaltszulagen, welche verheirateten oder in eingetragener Partnerschaft lebenden Arbeitnehmenden gewährt werden, die mit ihrer Partnerin oder ihrem Partner und/oder Kindern zusammenleben (dazu schon: BGE 110 V 229; BGE 119 V 385). Als Haushaltszulagen gelten nur Leistungen, die zum Lohn hinzu gewährt werden; es ist nicht zulässig, einen Teil des Lohnes als Haushaltszulage zu bezeichnen, um ihn so von der Beitragserhebung auszunehmen. Insbesondere sieht die WML vor, dass Haushaltszulagen feste, von der Höhe des Lohnes unabhängige Leistungen darstellen, welche für alle anspruchsberechtigten Arbeitnehmenden eines Betriebes gleich hoch sein müssen (Rz. 2166 letzter Satz WML)."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Letzteres ist bei der KiTa-Subvention augenscheinlich nicht der Fall. Denn unterstützt werden - wie erwähnt (vgl. E. 4.1 hiervor) - ausschliesslich diejenigen Mitarbeitenden, welche nicht mehr als das im Reglement festgeschriebene Nettohaushaltseinkommen (Fr. 146'000.-) jährlich verdienen (vgl. Ziff. 2.2 des Reglements BGE 148 V 385 S. 392 vom 1. Mai 2014 und Ziff. 3.2 des Reglements vom 1. November 2016). Selbst die darunter liegenden Löhne werden nicht gleich, sondern umgekehrt proportional zum Einkommen subventioniert (Haushaltseinkommen weniger als Fr. 86'000.-; KiTa-Subvention: 60 %; Haushaltseinkommen zwischen Fr. 86'000.- und Fr. 95'999.-; KiTa-Subvention: 50 %; Haushaltseinkommen zwischen Fr. 96'000.- und Fr. 109'999.-; KiTa-Subvention: 40 %; Haushaltseinkommen ab Fr. 110'000.- bis Fr. 146'000.-; KiTa-Subvention: prozentual zum Einkommen). Folglich spricht die verwaltungsinterne Konkretisierung gegen die Sichtweise des kantonalen Gerichts, wonach die KiTa-Subvention als Haushaltszulage nach Art. 6 Abs. 2 lit. f AHVV gilt."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Vor dem Hintergrund der eingeschränkten Bedeutung von Verwaltungsweisungen (vgl. E. 5.2 hiervor) bleibt zu klären, ob damit eine dem Einzelfall angepasste und gerecht werdende Auslegung der anwendbaren Bestimmung gewährleistet ist, was die Vorinstanz (implizit) verneint hat."
+            },
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Nach dem klaren und in allen drei Sprachfassungen übereinstimmenden Wortlaut des Art. 6 Abs. 2 lit. f AHVV (vgl. E. 2.3 hiervor) sind vom AHV-pflichtigen Erwerbseinkommen ausgenommen \"Familienzulagen, die als Kinder-, Ausbildungs-, Haushalts-, Heirats- und Geburtszulagen im orts- oder branchenüblichen Rahmen gewährt werden\" (französisch: \"les allocations familiales qui sont accordées, conformément aux usages locaux ou professionnels, au titre d'allocation pour enfants et d'allocation de formation professionnelle, d'allocation de ménage ou d'allocation de mariage ou de naissance\"; italienisch: \"gli assegni familiari accordati come assegni per i figli, la formazione professionale, l'economia domestica, il matrimonio e la nascita, nell'ambito degli usi locali o professionali\"). Es liegt also ein Regel-/Ausnahmeverhältnis vor, wobei das AHV-beitragspflichtige Einkommen die Regel und die Familienzulagen die Ausnahme bilden. Der Begriff \"Familienzulagen\" ist aus grammatikalischer Sicht als Oberbegriff zu den anschliessend in Art. 6 Abs. 2 lit. f AHVV im Einzelnen aufgeführten Zulagen, worunter unter anderem die Haushaltszulagen fallen, zu verstehen. Vom Wortlaut in allen drei Sprachen unbestrittenermassen nicht mitumfasst ist die vorliegend strittige KiTa-Subvention. Was als Familienzulage anzusehen ist, wird seit 1. Januar 2009 im Bundesgesetz vom 24. März 2006 über die Familienzulagen und Finanzhilfen an BGE 148 V 385 S. 393 Familienorganisationen (Familienzulagengesetz, FamZG; SR 836.2) gesetzlich definiert. Danach sind Familienzulagen einmalige oder periodische Geldleistungen, die ausgerichtet werden, um die finanzielle Belastung durch ein oder mehrere Kinder teilweise auszugleichen (Art. 2 FamZG)."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "Damit bezweckt die Ausrichtung von Familienzulagen einen Ausgleich der finanziellen Lasten infolge des Kindes als \"soziales Risiko\". Anders gesagt sollen die Eltern im Rahmen ihrer gesetzlichen Unterhaltspflicht (Art. 276 ff. ZGB) entlastet werden (vgl. KIESER/REICHMUTH, Bundesgesetz über die Familienzulagen [FamZG], Praxiskommentar, 2010, N. 76 Einleitung und N. 10 f. zu Art. 2 FamZG; MATTHEY/MAHON, Les allocations familiales, in: Soziale Sicherheit, SBVR Bd. XIV, 3. Aufl. 2016, S. 1998 Rz. 5). Die Familienzulagen verfolgen mithin eine familien- und sozialpolitische Zielsetzung, indem berücksichtigt werden soll, dass die Eltern nach der Geburt ihres Kindes bzw. ihrer Kinder längerfristig Unterstützung benötigen. Deshalb beteiligt sich die Gesellschaft an den Kosten, welche in diesem Zusammenhang anfallen (vgl. dazu: Stellungnahme des Bundesrates vom 28. Juni 2000 zum Bericht vom 20. November 1998 der Kommission für soziale Sicherheit und Gesundheit des Nationalrates, BBl 2000 4787). Hat die KiTa-Subvention gleichfalls die finanzielle Entlastung der Eltern zum Ziel, indem sich der Arbeitgeber an der Fremdbetreuung der Kinder beteiligt, so ist aus teleologischer Warte eine gewisse Übereinstimmung mit den Familienzulagen nicht von der Hand zu weisen. In Betracht gezogen werden muss aber genauso, dass die KiTa-Subvention - wie der Beschwerdegegner selber einräumt - einen Anreiz bei der Personalrekrutierung und -erhaltung darstellt, was über den rein sozialen Zweck einer Familienzulage hinausgeht."
+            },
+            {
+              "marke": "E. 8.1",
+              "tiefe": 2,
+              "text": "Nicht jede Vergünstigung mit sozialem Charakter gilt als Familienzulage. Das Beschwerde führende BSV vertritt die Auffassung, dass die KiTa-Subvention insbesondere deshalb keine Familienzulage im Sinne von Art. 6 Abs. 2 lit. f AHVV darstellt, weil sie nicht allen Mitarbeitenden in gleicher Höhe zukommt."
+            },
+            {
+              "marke": "E. 8.2",
+              "tiefe": 2,
+              "text": "Das heutige FamZG basiert auf der am 13. März 1991 von Nationalrätin Angeline Fankhauser eingereichten parlamentarischen Initiative (91.411). Diese verlangte insbesondere, dass jedes in der Schweiz wohnhafte Kind Anspruch auf eine fixe Zulage von BGE 148 V 385 S. 394 mindestens Fr. 200.- pro Monat hat. Nach dem Bericht der mit der Ausarbeitung einer entsprechenden Gesetzesvorlage betrauten Kommission für soziale Sicherheit und Gesundheit des Nationalrates vom 20. November 1998 war beabsichtigt, die Vielfalt der bis dahin geltenden Regelungen mit 26 verschiedenen kantonalen Familienzulagensystemen für Arbeitnehmer zu vereinheitlichen. Vor allem die Ungleichbehandlung, dass einige Bevölkerungsgruppen gänzlich vom Anspruch ausgeschlossen waren, wurde als störend empfunden. So erhielten unter damaligem Recht selbständigerwerbende Landwirte bundesrechtliche Familienzulagen nur dann, wenn ihr Einkommen unter einer gewissen Grenze lag (vgl. Bundesgesetz vom 20. Juni 1952 über die Familienzulagen in der Landwirtschaft [FLG; SR 836.1]); lediglich sechs Kantone kannten Zulagen ohne Einkommensgrenze. Nichtlandwirtschaftliche Selbständigerwerbende konnten nur in zehn Kantonen Familienzulagen beziehen; in sieben davon galt eine Einkommensgrenze. Ein Anspruch für Nichterwerbstätige war ausserdem nur in vier Kantonen vorgesehen. Das neue Familienzulagensystem sollte auf dem bereits in der Initiative Fankhauser enthaltenen Grundsatz \"ein Kind - eine Zulage\" beruhen. Danach wird die Zulage für jedes Kind ausgerichtet, und zwar \"unabhängig vom Beruf der Eltern und von der Ausübung einer Erwerbstätigkeit\" (zum Ganzen: BBl 1999 III 3224 f.; vgl. auch: KIESER/REICHMUTH, a.a.O., N. 21 Einleitung; MAJA JAGGI, Die Entstehung des Familienzulagengesetzes, in: Bundesgesetz über die Familienzulagen [FamZG], Schaffhauser/Kieser [Hrsg.], 2009, S. 55). Dieses Prinzip gilt zumindest im hier interessierenden Kontext der Unselbständigerwerbenden im nicht landwirtschaftlichen Bereich bis heute (Art. 5 Abs. 1 FamZG: \"Die Kinderzulage beträgt mindestens 200 Franken pro Monat.\"). Daraus erhellt, dass der Gesetzgeber sämtliche Beziehenden gleich behandeln wollte, indem pro Kind ein (relativ) fixer Betrag zur Auszahlung gelangt. Es sollte, wie in den meisten europäischen Ländern bereits vorgesehen, \"die Verknüpfung zwischen dem Grad der Erwerbstätigkeit und der Höhe der Zulage\" aufgegeben werden (BBl 1999 III 3221). Eine einkommensabhängige Familienzulage, wie sie die KiTa-Subvention gemäss Reglement darstellt (vgl. E. 6.2 hiervor), steht zu diesem Grundgedanken im Widerspruch."
+            },
+            {
+              "marke": "E. 8.3",
+              "tiefe": 2,
+              "text": "In systematischer Hinsicht handelt es sich beim FamZG um ein Rahmengesetz, wobei von Anfang an feststand, dass den Kantonen weiterhin eine erhebliche Kompetenz verbleibt (vgl. BBl 1999 III 3221; BGE 148 V 385 S. 395 2000 4788). Dieser Grundsatz wurde beibehalten (vgl. BBl 2004 6900; AB 2005 N 265). Die Kantone haben in der Regel Einführungsgesetze erlassen, welche teilweise höhere und/oder andere Leistungen als das FamZG enthalten (vgl. dazu: URS-CHRISTOPH DIETERLE, Umsetzung auf kantonaler Ebene, in: Bundesgesetz über die Familienzulagen [FamZG], Schaffhauser/Kieser [Hrsg.], 2009, S. 75 ff.). Auf Letztere finden ebenfalls die Bestimmungen des FamZG Anwendung, wobei solche anderen Leistungen ausserhalb dieser Familienzulagenordnung geregelt und finanziert werden müssen (Art. 3 Abs. 2 FamZG). Im Kanton Basel-Stadt beträgt die Kinderzulage beispielsweise mindestens 275 Franken, die Ausbildungszulage mindestens 325 Franken pro Monat je anspruchsberechtigtes Kind (Einführungsgesetz vom 4. Juni 2008 zum Bundesgesetz über die Familienzulagen [Familienzulagengesetz; EG FamZG; SG 820.100]). Im Weiteren bestehen kantonale Vorschriften, welche ab einem bestimmten Alter des Kindes oder ab dem dritten Kind eine Erhöhung des Grundansatzes vorsehen (so etwa im Kanton Wallis; Art. 9 des Ausführungsgesetzes vom 11. September 2008 zum Bundesgesetz über die Familienzulagen [AGFamZG; SGS 836.1]). Eine an das Haushaltseinkommen gebundene Familienzulage kennt hingegen kein einziger Kanton, sondern die Leistungen für Unselbständigerwerbende sind dadurch gekennzeichnet, dass sie unabhängig vom finanziellen Bedarf ausgerichtet werden (vgl. auch: KIESER/REICHMUTH, a.a.O., N. 12 Einleitung). \"Ein Kind - eine Zulage\" heisst - von hier nicht interessierenden Ausnahmen abgesehen (vgl. betreffend Nichterwerbstätige: Art. 19 Abs. 2 FamZG) - somit richtig verstanden auch, dass im Unterschied zur KiTa-Subvention gerade nicht nach elterlichem Einkommen differenziert wird (\"Jedes Kind ist gleich viel wert.\"). Dies stützt das Resultat der historischen Auslegung."
+            },
+            {
+              "marke": "E. 8.4",
+              "tiefe": 2,
+              "text": "Im konkreten Fall kommt hinzu, dass das Reglement die KiTa-Subvention nicht nur von einer Einkommensgrenze abhängig macht (vgl. E. 6.2 hiervor), sondern die betreffende Arbeitgeberzuwendung an eine Reihe weiterer Voraussetzungen knüpft. So besteht ein Anspruch auf einen Kinderbetreuungsplatz nur für Angestellte des Spitals A., ab dem Jahr 2016 sogar lediglich bis zum Eintritt des Kindes in die Primarschule (Ziff. 1.2 des Reglements vom 1. Mai 2014 und Ziff. 2.2 des Reglements vom 1. November 2016). Fällt das Arbeitsverhältnis dahin, so erlischt auch die Möglichkeit der KiTa-Subvention. Es besteht folglich neben der Einkommenskoppelung BGE 148 V 385 S. 396 auch eine Bindung an das Arbeitsverhältnis sowie an das Alter des zu betreuenden Kindes. Die Eltern müssen sodann die betriebseigene oder eine angeschlossene Kindertagesstätte berücksichtigen. Abgesehen davon ist eine über das Arbeitspensum hinausgehende Betreuung zum Vornherein von der Subventionierung ausgeschlossen (Ziff. 2.2 des Reglements vom 1. Mai 2014 und Ziff. 3.2 des Reglements vom 1. November 2016). Mit anderen Worten kann längst nicht jeder Mitarbeitende von der Subvention profitieren, selbst wenn er oder sie über ein unter der reglementarischen Obergrenze liegendes Haushaltseinkommen verfügt. Im Gegenteil erfolgt gemäss Reglement explizit eine Bedürfnisabklärung im Einzelfall. Ebenso besteht nach dem Gesagten eine Verknüpfung mit dem Grad der Erwerbstätigkeit (Arbeitspensum), was der Gesetzgeber bei den Familienzulagen explizit als Missstand erkannt hatte und beheben wollte (vgl. E. 8.2 hiervor). Diese zusätzlichen Faktoren sind mit dem Charakter einer Familienzulage unvereinbar. Obschon (auch) der KiTa-Subvention eine soziale Komponente nicht abgesprochen werden kann, ist sie mit Blick auf ihre reglementarische Ausgestaltung - wie das BSV zu Recht geltend macht - somit klar von einer Familienzulage zu unterscheiden. Daher besteht kein hinreichender Anhaltspunkt, dass sie beitragsrechtlich gleich zu behandeln wäre wie die gemäss Art. 6 Abs. 2 lit. f AHVV von der Beitragspflicht ausgenommenen Familienzulagen."
+            },
+            {
+              "marke": "E. 9.1",
+              "tiefe": 2,
+              "text": "Demzufolge hält die von der Vorinstanz vertretene Sichtweise, wonach die im Reglement vorgesehene KiTa-Subvention eine Familienzulage nach Art. 6 Abs. 2 lit. f AHVV darstellt, einer näheren Betrachtung unter Einbezug historischer und systematischer Gesichtspunkte nicht stand. Daran vermag das vom Beschwerdegegner angerufene Urteil H 120/94 vom 7. November 1994 (SVR 1995 AHV Nr. 50 S. 137), welches deutlich vor Erlass des FamZG erging, nichts zu ändern. Weiterungen zur Orts- und Branchenüblichkeit erübrigen sich."
+            },
+            {
+              "marke": "E. 9.2",
+              "tiefe": 2,
+              "text": "Bringt der Beschwerdegegner schliesslich im Eventualantrag vor, die KiTa-Subvention sei in Anbetracht der behördlichen Auskunft vom August 2014 nach Treu und Glauben von der AHV-Beitragspflicht ausgenommen, so ist dem kein Erfolg beschieden. Wohl hielt die Ausgleichskasse im August 2014 auf Nachfrage hin fest, da die Zahlungen direkt an die betreuenden Einrichtungen gingen, seien sie nicht AHV-pflichtig. Indessen ist weder ersichtlich noch in der BGE 148 V 385 S. 397 Vernehmlassung (substanziiert) dargetan, inwieweit der Beschwerdegegner gestützt darauf Dispositionen getroffen hätte, welche ohne die fragliche Angabe der Ausgleichskasse unterblieben wären und die zudem nicht ohne Nachteil wieder rückgängig gemacht werden könnten. Eine Berufung auf Art. 9 BV fällt deshalb ausser Betracht (zu den Voraussetzungen: BGE 143 V 95 E. 3.6.2; BGE 141 V 530 E. 6.2). Was sodann den vom Beschwerdegegner nur sinngemäss geltend gemachten Anspruch auf Gleichbehandlung im Unrecht anbelangt, indem die KiTa-Subvention (auch) bei den kantonalen Stellen nach wie vor nicht als massgeblicher Lohn behandelt werde, bleibt dieser Umstand vernehmlassungsweise gänzlich unbelegt. Abgesehen davon zeigt der Beschwerdegegner auch hier nicht auf, weshalb die dafür nach der Rechtsprechung geltenden (strengen) Anforderungen ausnahmsweise erfüllt sein sollten (dazu etwa: Urteil 2C_807/2015 vom 18. Oktober 2016 E. 6.3 mit Hinweis auf BGE 139 II 49 E. 7.1). Damit verbietet sich eine Beitragsbefreiung auf diesem Weg."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "9C_466/2021",
+        "key": "bger_9C_466_2021",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=16.10.2022&to_date=19.10.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=42&azaclir=aza&highlight_docid=aza%3A%2F%2F17-10-2022-9C_466-2021&number_of_ranks=49"
+      },
+      "ecli": "ECLI:CH:BGE:2022:148.V.385"
+    }
+  ]
+}
