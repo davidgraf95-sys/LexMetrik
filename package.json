@@ -48,6 +48,7 @@
     "check:caches": "bash scripts/fedlex-cache.sh",
     "check:zitate": "vite-node scripts/norm-zitate-pruefen.ts",
     "check:fedlex-versionen": "vite-node scripts/fedlex-versionen-pruefen.ts",
+    "check:rss-oc": "vite-node scripts/fedlex-rss-oc-pruefen.ts",
     "check:vollstaendigkeit": "vite-node scripts/normtext/check-vollstaendigkeit.ts",
     "check:struktur-konsistenz": "vite-node scripts/normtext/check-struktur-konsistenz.ts",
     "check:grundart": "vitest run src/tests/normtext-register.test.ts",
