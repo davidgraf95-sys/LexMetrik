@@ -284,3 +284,112 @@ bringt ein Quell-Wechsel HTML→XML das? Entschieden per Council (DMAD, 5 Opus-A
 Zitations-Graph-Kanten sind selbst **Haftung** (tote/aufgehobene ELI behandeln, wer verifiziert Kanten) ·
 **N2-Fehlerrate messen** vor jeder Migration · Outside-View: «Rewrite auf saubere Quelle» stallt bei
 Solo-Produkten meistens → **Phase 0 muss in EINER Session stehen**, sonst ist die Architektur-Wette zu gross.
+
+## Intake — Recherche «Informations-Nutzung der Gesetze» (David 17.7.2026)
+
+> **Herkunft:** Auftrag David 17.7.2026 «untersuche, ob wir wirklich alle
+> Informationen aus unseren Gesetzen verwenden» (2 Miner Quelle-vs-Pipeline,
+> empirisch am Korpus 227 Bund/1232 Kanton). **Detailquelle (§11):**
+> `bibliothek/normen/informations-nutzung-gesetze-2026-07-17.md`.
+> **Verdikt:** der Normtext-KÖRPER ist nahezu erschöpfend genutzt; die
+> systematischen Lücken sind **relationale + temporale Metadaten**. Diese zwei
+> Lücken sind **Extraktions-Risikopfad** und werden hier verortet — der
+> **Suchindex** (G-SUCH, kein Risikopfad) liegt getrennt in
+> `FAHRPLAN-UI-NAVIGATION.md`, **G-PRERENDER** (SEO/§15) getrennt in
+> `FAHRPLAN-SEO-A11Y-GOVERNANCE.md` (§14 Ziff. 2, nicht über-bündeln).
+
+> **Nachtrag Zweitprüfung 17.7.2026 (Kanten-Analyse):** die alte
+> «**Kanten-Regen nach #254**»-Erwartung (norm-index/Zitat-Kanten additiv
+> nachziehen) ist **erledigt/gegenstandslos** — der Produktions-Feed ist bereits
+> **F2-konform** (F2-Delta = 0, Beweis 17.7.2026). Der verbleibende Hebel liegt
+> **nicht** hier, sondern im Entscheid-Volltext → als **G-VOLLTEXT-VERZ** in
+> `FAHRPLAN-RECHTSPRECHUNG.md` §8.1 verortet (eigenes Design + GP). Zwei weitere
+> Zweitprüfungs-Kandidaten sind unten ergänzt: **G-ASXML** (bei G-HIST) und
+> **G-TAB** (Tier 2).
+
+### G-REF · Externe amtliche Verweise extrahieren (Bau-Kandidat)
+
+- **Befund:** Quelle liefert maschinen-auflösbare externe Verweis-Anker
+  (`<ref fedlex:rs=… fedlex:rs-uri=…/eli/cc/…>` SR→Erlass, OR 79×; AS `eli/oc`
+  1260×, BBl `eli/fga` 976×, meist in Fussnoten). `entferneTags`
+  (`scripts/normtext/extrahiere-fedlex.ts`, ~Z. 767–777) strippt **alle**
+  Inline-`<a>`/`<ref>` → ELI-Deep-Link + Zielidentität verloren; Reader
+  re-derived nur heuristisch, nur erlass-genau (`passus.ts`).
+- **Richtigstellung (kein Scope-Creep):** **INTERNE** Artikel-zu-Artikel-Kanten
+  gibt es in der Quelle **nicht als Daten** (0 Body-Hrefs, vgl.
+  §Quell-Architektur) → dort ist die Heuristik korrekt, keine Lücke. Nur die
+  **externen, amtlich verlinkten** Verweise sind betroffen.
+- **Einordnung:** = die konkrete Nutzung des schon erkannten ELI-Signals →
+  **Geschwister von M12 / N2-Fix (Verweis-Chips)** und **Phase-1-ELI-Zitations-
+  Graph**. **Dep:** M5/M12, Phase-0-Verifikations-Tor. **Umfang:** M–L.
+  **Risiko:** hoch (plausibel-falsche Links schlimmer als tote; §1-Vorrang) →
+  Ziel lesen statt raten, tote/aufgehobene ELI behandeln, golden-Re-Bless.
+
+### G-HIST · Artikel-genaue Historie strukturieren (Bau-Kandidat)
+
+- **Befund:** konsolidiertes AKN-XML hat **kein** `<lifecycle>`/`<temporalGroup>`;
+  die artikel-genaue Historie steht nur als Fussnoten-Prosa (`<authorialNote>`:
+  «Eingefügt durch …, in Kraft seit …» / «Aufgehoben durch … mit Wirkung seit
+  …»). Diese Fussnoten **speichern wir schon** (`fussnoten-extrahiere.ts`,
+  227/227 Sidecars), aber **unstrukturiert**; wir führen nur EIN Ur-Inkrafttreten
+  je Erlass (`inkrafttreten-generieren.ts`, ~Z. 16–22).
+- **Bau:** die bereits gespeicherte Prosa in eine **Per-Artikel-Timeline** parsen
+  (Point-in-Time «seit wann gilt dieser Artikel», Aufhebungs-Datum je Artikel).
+- **Einordnung:** = der Daten-Unterbau von **M16 (Point-in-Time / «Drift wird zum
+  Feature»)**. **Dep:** M5, M13. **Umfang:** L. **Risiko:** hoch (Datums-Parser
+  über 227 Erlasse, Determinismus-/Golden-Pflicht, gestaffelte Gegenprüfung).
+
+### G-ASXML · AS-enacted-AKN-XML = diff-genaue Änderungstexte (Zweitprüfung 17.7.2026, G-HIST-Erweiterungsstufe)
+
+- **Quelle + Stand:** AS-enacted-Erlasse liegen als **AKN-XML** mit `<mod>`/
+  `quotedStructure` vor (live verifiziert `eli/oc/2026/393`: **33 `mod` / 66
+  `quotedStructure`**, 17.7.2026). Detailquelle (§11): `bibliothek/normen/
+  informations-nutzung-gesetze-2026-07-17.md` (Linse 2).
+- **Befund:** das enacted-XML trägt die **wörtlichen Änderungstexte je Artikel**
+  → hebt **G-HIST** von «**wann** geändert» auf «**was** geändert». **Grenze:**
+  Alt-AS liegt nur als **PDF** vor (kein enacted-XML) → dort kein diff-genauer Text.
+- **Geltungsbereich + Ausnahmen:** Bund, nur neuere AS. **Pflegebedarf:**
+  Extraktions-Risikopfad (Diff-Text = Haftung), golden-Pflicht, Drift-Zyklus.
+- **Einordnung:** **Erweiterungsstufe von G-HIST/M16** (Wortlaut statt nur Datum).
+  **Umfang:** L. **Risiko:** hoch. **Abnahme-Status:** Zweitprüfung (17.7.2026),
+  Bau-GO ausstehend.
+
+### G-TAB · Layout- vs. Datentabellen nicht diskriminiert (Zweitprüfung 17.7.2026, Tier 2 — Verifikation zuerst)
+
+- **Quelle + Stand:** Fedlex AKN-XML (Voll-Zensus 17.7.2026): Layout-Tabellen sind
+  explizit markiert (`table@fedlex:function="layout"`, 26×), Datentabellen tragen
+  `border="1"` (69×). Detailquelle (§11): siehe bibliothek-Datei (Linse 1).
+- **Befund:** unsere Tabellen-Extraktion (`extrahiere-fedlex.ts`) hat **keinen
+  Diskriminator** → eine reine Layout-Tabelle könnte fälschlich als **Datengitter**
+  rendern. **Zuerst VERIFIZIEREN** (Kandidat **VTS**, 46 `border`-Tabellen), dann
+  ggf. fixen. **Umfang:** S (Verifikation), Fix nur falls bestätigt. **Nähe M8/M13.**
+
+### G-ANNEX-META · Anhang-eigene In-Kraft-Daten (Tier 2, Verifikation zuerst)
+
+- Jeder `<doc name="annex">` (`<act>/<components>/<component>`) trägt einen
+  **eigenen FRBR-Block** (eigenes `dateEntryInForce`/`dateApplicability`) →
+  abweichende Anhang-Geltung möglich; unsere M13-Annex-Extraktion kollabiert das
+  evtl. auf Erlass-Ebene. **Zuerst verifizieren**, dann ggf. je-Anhang-Stand
+  führen. **Umfang:** M. Nähe M13/M16.
+
+### G-FORMEL-FLAG · `formel:true` setzen (Tier 2, kosmetisch)
+
+- Das Flag `formel` wird nie gesetzt (`extrahiere-fedlex.ts`) → Formeln rendern
+  als «Amtliche Abbildung» statt «Formel». **Umfang:** S. Nähe M8. (Formel-
+  **Semantik** bleibt Quell-Grenze: 0 MathML/alt-Text — nicht hier.)
+
+### 🚧 David-Bau-Gate (ganz am Ende — GO je Kandidat ausstehend)
+
+**Bau-GO je Kandidat ausstehend (David).** Grund: **Extraktion = Risikopfad**
+(§1/§14 Ziff. 4). Für **jeden** der obigen Kandidaten gilt vor Übernahme:
+
+1. adversariale **Gegenprüfung Pflicht** (Tor `check:gegenpruefung`, `QS-GP`),
+2. **golden byte-gleich** — Engine-Golden unberührt, Daten-Index bewusst +
+   adversarial neu gesegnet (§6),
+3. je Kandidat **eine** saubere Bau-Einheit, Risiko-Klassen nicht mischen
+   (G-REF/G-HIST je eigen; G-SUCH/G-PRERENDER liegen ohnehin getrennt),
+4. **kein Deploy** vor Abnahme; isolierter Worktree, eigener `npm ci`.
+
+Reihenfolge-Empfehlung bei GO: **G-REF** (höchster Hebel, reitet auf M12/N2)
+vor **G-HIST** (grösster Umfang, braucht M5/M13). G-SUCH ist unabhängig und
+jederzeit ziehbar (kleiner Schnitt, kein Risikopfad).

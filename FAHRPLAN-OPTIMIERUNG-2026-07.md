@@ -76,6 +76,45 @@ Session-PRs, nicht nächtliche Daten-Auto-Deploys) und (b) Turso-Schreib-Token a
 CI-Secret (#6). Bis dahin: alles läuft, aber PRs bleiben zur Session-Abnahme offen.
 Fachentscheide (Wortlaut-Änderungen an Engine-Normen) eskalieren als Issue — zeitsperren-kompatibel.
 
+### O-2 · Zweitprüfungs-Nachtrag (17.7.2026, Ökosystem-Linse)
+
+> **Herkunft:** Recherche «Informations-Nutzung der Gesetze», Zweitprüfung David
+> 17.7.2026 (Ökosystem/Triplestore-Linse, live SPARQL). **Detailquelle (§11):**
+> `bibliothek/normen/informations-nutzung-gesetze-2026-07-17.md`. Hierher verortet,
+> weil **Frische-/Detektions-Fläche** (O-2) — beide Kandidaten ergänzen den
+> Frische-Kreislauf.
+
+#### G-AUFH · `dateNoLongerInForce` wird nirgends geprüft — **NÄCHSTE BAU-EINHEIT (David-GO liegt vor)**
+
+- **Quelle + Stand:** Fedlex-Triplestore, `jolux:dateNoLongerInForce` am Erlass
+  (live SPARQL 17.7.2026).
+- **Befund (deterministisch):** die Wiedervorlage-/Frische-Prüfung
+  (`scripts/fedlex-versionen-pruefen.ts:107-119`) filtert nur geltende vs. künftige
+  **Konsolidierungen** und meldet die neueste geltende als «OK» — sie prüft
+  **`dateNoLongerInForce` nicht**. Folge: ein **ganz aufgehobener** Erlass bliebe
+  still «geltend geprüft» (**§7/§8-Verstoss**; das Skill-Recipe
+  `scraping-swiss-official-sources` fordert den Check explizit).
+- **Geltungsbereich + Ausnahmen:** Bund, alle gepinnten Erlasse.
+- **Pflegebedarf:** Check an den Drift-Zyklus koppeln (`check:fedlex-versionen`);
+  Aufhebungs-Datum = datierter Parameter.
+- **Umfang:** **klein** (ein zusätzlicher Query-Filter + Alarm-Zweig).
+- **Abnahme-Status:** Zweitprüfung (17.7.2026). **🟢 David-GO liegt vor** («setze
+  befunde um») → **als NÄCHSTE Bau-Einheit markiert** (Korrektheits-Bug, hoher
+  Hebel, kleiner Fix).
+
+#### G-RSS · STALE-PENDING-Fenster + amtlicher RSS-OC-Feed ungenutzt
+
+- **Quelle + Stand:** amtlicher RSS-Feed `api/rss-oc-de.xml` (Amtliche Sammlung,
+  live verifiziert 17.7.2026, **50 Items**).
+- **Befund (deterministisch):** die Konsolidierung hinkt der AS um **Tage–Wochen**
+  nach (STALE-PENDING-Fenster). O-2 pollt heute nur **gepinnte** Erlasse (Stärke:
+  Zukunfts-Signal künftiger `dateApplicability`), **abonniert aber den RSS-OC-Feed
+  nicht** — der auch **brandneue** Erlasse ohne Pin deckt.
+- **Geltungsbereich + Ausnahmen:** Bund.
+- **Pflegebedarf:** Feed-Abo im Wochen-Monitor; neue OC-Einträge → Issue/PR.
+- **Umfang:** S–M. **Abnahme-Status:** Zweitprüfung (17.7.2026), Bau-GO ausstehend
+  (ergänzt O-2, kein eigenes Rahmen-Gate nötig).
+
 ## O-3 · Prüf-Tore nachziehen — SOFORT BAUBAR (harte Reihenfolge)
 
 **Kern:** Die teuersten Prüf-Blindspots im Rechen-Kern und die Flake-Wurzel der

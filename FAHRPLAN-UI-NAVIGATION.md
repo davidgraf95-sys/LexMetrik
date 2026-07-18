@@ -448,6 +448,33 @@ präzisiert, nie autonom gekippt.
 | **Z5** | Listen-Scroll-Restoration als Prüfpunkt | — | in **J1** eingefaltet |
 | **Z6** | Korpus-Abdeckungsseite «Was ist drin» (global, aus Registern generiert) | S | in **S3/E1** eingefaltet |
 | **E4** | a11y-Prüfauftrag: Skip-Link, Fokus nach Anker-Sprung, aria-live «✓ kopiert» | S–M | Prüfauftrag + Fixes, mit R6 |
+| **G-SUCH** | **Suchindex indexiert Fussnoten + Tabellen mit** (Intake 17.7.2026, siehe §7b) | S | eigene Index-Einheit, Nähe **S4** |
+
+---
+
+## §7b · Intake G-SUCH — Suchindex ignoriert Fussnoten + Tabellen (David 17.7.2026)
+
+> **Herkunft:** Recherche «Informations-Nutzung der Gesetze» (Auftrag David
+> 17.7.2026). **Detailquelle (§11):**
+> `bibliothek/normen/informations-nutzung-gesetze-2026-07-17.md`. Hierher verortet,
+> weil **Index/Ranking-Fläche** (S4) — **getrennt** von den Extraktions-Risikopfad-
+> Kandidaten G-REF/G-HIST (die liegen in `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake`,
+> §14 Ziff. 2).
+
+- **Befund (deterministisch):** `scripts/such-index-generieren.ts`
+  (`artikelText`, ~Z. 26–33 + Loop ~Z. 92–100) indexiert nur `b.text` +
+  `items.text` + Marginalie + Gliederung. **Omittiert** Fussnoten-Text,
+  Tabellenzellen (`mehrspaltig`), Füllpunkt-`tabelle`, `grundlage`, Bild-`alt`.
+  Die **Korpus-Suche** (FlexSearch) findet damit keinen Text, der nur in
+  Tabellen/Fussnoten steht; **In-Page-Ctrl+F ist unberührt** (§15).
+- **Bau:** die omittierten Felder in `artikelText` (bzw. den Index-Eintrag)
+  aufnehmen. Kleiner Schnitt, **kein Extraktions-Risikopfad** (reines
+  Build-Artefakt, golden-neutral gegenüber der Engine). **Umfang:** S.
+- **Bezug:** Eval-Harness **#251** (Umgangssprache-Recall 0.118) misst genau
+  solche Recall-Lücken → dort als Regressions-Nachweis nutzbar.
+- **🚧 Bau-GO ausstehend (David):** jederzeit ziehbar; Gate = `gate:schnell`
+  (Index-Determinismus) + Recall-Beweis am Testset. Kein `QS-GP` nötig (kein
+  Rechts-/Extraktions-Risikopfad), aber Index-Determinismus muss grün bleiben.
 
 ---
 

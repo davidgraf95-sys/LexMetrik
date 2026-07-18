@@ -384,6 +384,16 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 > DE/FR/IT ~95–99 % ausgerichtet) → schaltet `#art`-genaue Chips, ELI-Zitations-Graph, M15 (DE/FR/IT) und
 > M16 (Point-in-Time) frei.
 >
+> **Intake «Informations-Nutzung der Gesetze» (David 17.7.2026) → hierher:** Recherche-Verdikt
+> = Normtext-KÖRPER nahezu erschöpfend genutzt; die handlungsreifen Lücken sind **G-REF** (externe
+> amtliche ELI-Verweise, verworfen via `entferneTags` — konkretisiert N2/Phase-1-ELI-Graph) und
+> **G-HIST** (artikel-genaue Historie liegt nur als Fussnoten-Prosa — Daten-Unterbau von M16). Beide
+> = **Extraktions-Risikopfad** (`QS-GP`, golden byte-gleich; **Bau-GO je Kandidat ausstehend, David**),
+> verortet in `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake`. Der **Suchindex** (G-SUCH, Fussnoten/Tabellen
+> nicht indexiert, kein Risikopfad) liegt getrennt in `FAHRPLAN-UI-NAVIGATION.md §7b`, **G-PRERENDER**
+> (SEO/§15) in `FAHRPLAN-SEO-A11Y-GOVERNANCE.md §11`. **Detailquelle (§11):**
+> `bibliothek/normen/informations-nutzung-gesetze-2026-07-17.md`.
+>
 > **Bündel B · Rechtsprechungs-Leser → Schritt 6 / W2·6-BGE:**
 > - **B1 BGE ohne «vollständiges Urteil»** (Bsp. BGE 152 V 2): `azaUrteil:null` + kein
 >   `auszugAbschnitte` ⇒ `switcherSichtbar=false`, Ansicht fest auf «Auszug». **12/272 BGE** betroffen
