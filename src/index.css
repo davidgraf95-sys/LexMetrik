@@ -28,6 +28,24 @@
   descent-override: 31.1781%;
   size-adjust: 107.4471%;
 }
+@font-face {
+  font-family: 'Source Serif Times Fallback';
+  /* Linux-Härtung (R5-Forensik 19.7.2026): das CI-Image hat KEIN Georgia/Charter →
+     die Georgia-getunte 'Source Serif 4 Fallback' greift dort nicht, generic
+     `serif` = Liberation Serif (Times-Metrik, SCHMAL) trug die Lesespalte untuned →
+     77 statt ≤75 ch. Liberation Serif / Tinos sind metrik-IDENTISCH zu Times New
+     Roman (wie Arimo/Liberation Sans zu Arial) → dieselben Times-getunten Overrides
+     gelten 1:1 (gleiche Laufweite); size-adjust hebt die horizontale Advance auf
+     Source Serif 4. Overrides GEMESSEN, nicht geraten: scripts/gen-font-fallbacks.ts
+     (@capsizecss, timesNewRoman-Metrik). macOS erreicht diese Familie nie (Georgia
+     löst davor) → dort unverändert. */
+  src: local('Liberation Serif'), local('Tinos'), local('Times New Roman'),
+       local('TimesNewRomanPSMT'), local('Times'), local('Nimbus Roman');
+  ascent-override: 87.8653%;
+  descent-override: 28.4121%;
+  line-gap-override: 0%;
+  size-adjust: 117.9077%;
+}
 
 @layer base {
   :root {
@@ -239,7 +257,7 @@
     --font-sans:'Geist Variable','Geist Fallback','Hanken Grotesk';
     --font-mono:'Geist Mono Variable','IBM Plex Mono';
     /* Lese-Serif NUR für den Gesetzes-Volltext (Rubrik V). */
-    --font-serif:'Source Serif 4 Variable','Source Serif 4 Fallback','Charter','Georgia';
+    --font-serif:'Source Serif 4 Variable','Source Serif 4 Fallback','Source Serif Times Fallback','Charter','Georgia';
     /* Fein-Typo der Leser/Chrome (25.6.2026, DESIGN-REGLEMENT B2): die zuvor
        12 rohen text-[…rem]-Sonderwerte sind auf die bestehende Skala
        (micro/xs/body-s/base/body-l/h3) verdichtet — keine Sondertokens mehr,
