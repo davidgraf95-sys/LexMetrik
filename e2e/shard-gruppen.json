@@ -1,0 +1,56 @@
+{
+  "_kommentar": "e2e-Shard-Balancing: gemessene Datei-Gruppen statt Playwrights Test-Zahl-Sharding (alphabetisch geklumpt). Gepackt per LPT (longest-processing-time) aus lokal serial gemessenen Spec-Dauern (19.7.2026, workers:1, Total 636.6s). Ziel-Makespan je Gruppe ~212s; die schweren OR-Reader-Specs (a33 91.6s · a11y 69.2s · ux-9punkte 52.7s · a37 37.5s · verzahnung 36.0s · verweis-u 26.9s · norm-sprung 25.7s · linien-kanon 24.8s · leser-suche 24.0s · ia-v2-walks 21.8s) sind auf alle drei Gruppen VERTEILT. Gemessene Gruppen-Summen: G1 212.2s · G2 212.1s · G3 212.3s (Spread <0.1%). Union-Wächter (scripts/e2e-shard-gruppen.mjs --pruefen, in check:seriell + CI vor den Shards) beweist: Gruppen == playwright --list, keine Doppelten/Fehlenden. Ändert NUR, welche Datei auf welchem Runner läuft — kein Test/Assertion/Timeout/Umfang (§6.3). Neue Spec → hier einer Gruppe zuordnen, sonst Wächter rot.",
+  "gruppen": {
+    "1": [
+      "ag-gruendung-wizard.e2e.ts",
+      "entscheid-verweis-praezision.e2e.ts",
+      "fremdgesetz-verweis-aig.e2e.ts",
+      "gesetze-ia-v2-walks.e2e.ts",
+      "gesetze-marginalie.e2e.ts",
+      "gesetze-pdf-download.e2e.ts",
+      "gesetze-ux-g3a.e2e.ts",
+      "leser-gliederung-a33.e2e.ts",
+      "leser-kopf-g2b.e2e.ts",
+      "materialien-m1-estv-mwst.e2e.ts",
+      "materialien-m5-verzahnung.e2e.ts",
+      "norm-sprung.e2e.ts",
+      "normrevision-badge.e2e.ts",
+      "rechtsprechung.e2e.ts",
+      "suche-seite.e2e.ts"
+    ],
+    "2": [
+      "a11y.e2e.ts",
+      "gesetze-randtitel-6b.e2e.ts",
+      "gesetze-rechtsgebiet-g6.e2e.ts",
+      "gesetze-uebersicht-u.e2e.ts",
+      "gesetze-ux-g3b-anhang.e2e.ts",
+      "leser-kopf-v2.e2e.ts",
+      "leser-lesemass.e2e.ts",
+      "leser-linien-kanon.e2e.ts",
+      "leser-position-u.e2e.ts",
+      "materialien-m3-edoeb.e2e.ts",
+      "plz-wahl.e2e.ts",
+      "smoke.e2e.ts",
+      "tastatur.e2e.ts",
+      "verzahnung.e2e.ts",
+      "zustaendigkeit-fluss.e2e.ts"
+    ],
+    "3": [
+      "a31a-fussnote-inline.e2e.ts",
+      "gesetze-kanton-g5.e2e.ts",
+      "gesetze-ux-9punkte.e2e.ts",
+      "gesetze.e2e.ts",
+      "leitfaelle-chips.e2e.ts",
+      "leser-breite-a37.e2e.ts",
+      "leser-kopf-a9.e2e.ts",
+      "leser-optionen.e2e.ts",
+      "leser-suche-a35-a40-a41.e2e.ts",
+      "materialien-m2-seco.e2e.ts",
+      "materialien-m4-estv-ks.e2e.ts",
+      "schnellrechner-kalender.e2e.ts",
+      "split-view-a34.e2e.ts",
+      "verlauf-o1.e2e.ts",
+      "verweis-u.e2e.ts"
+    ]
+  }
+}

@@ -36,28 +36,30 @@ export default defineConfig({
     baseURL: `http://localhost:${E2E_PORT}`,
     trace: 'retain-on-failure',
   },
-  // ── Test-Timeout-Politik (O-3.3, CPU-Drossel-Forensik 17.7.) ───────────────
-  // Der globale Test-Timeout bleibt bei Playwrights Default (30 s). Unter CPU-
-  // Last auf dem 2-Kern-Free-Runner rissen aber die axe-schweren a11y-Specs
-  // (a11y.e2e.ts:174/192) und der tief geschachtelte ZGB-684-Reader
-  // (leser-linien-kanon.e2e.ts:105) reihum genau dieses 30-s-Budget — lokal
-  // 6/6 grün in ~12–19 s, also Contention, kein Code-Defekt. Sharding senkt die
-  // Contention, hebt sie aber nicht sicher unter 30 s; darum laufen genau diese
-  // Dateien im Projekt «schwer» mit 60 s Budget, alle übrigen bleiben bei 30 s.
-  // Das ist INFRASTRUKTUR (Zeitbudget), KEIN Assertion-Change (§6.3): kein
-  // `expect` und kein Prüf-Schritt wird berührt, der Timeout greift nur bei
-  // Überschreitung und verlangsamt grüne Tests nicht. Sharding (`--shard`)
-  // verteilt über beide Projekte hinweg, bleibt also unberührt.
+  // ── Test-Timeout-Politik (O-3.3, CPU-Drossel-Forensik 17.7.; Runner-Budgets 19.7.) ─
+  // LOKAL bleibt der Test-Timeout bei Playwrights Default (30 s), schwere Specs
+  // bei 60 s — dort ist keine Contention. Auf dem 2-vCPU-Free-Runner riss aber
+  // reihum genau dieses 30-s-Budget bei wandernden Einzeltests (gesetze-randtitel-6b,
+  // verweis-u, leser-kopf-a9, gesetze.e2e, norm-sprung): lokal < 5 s in ~1–2 s,
+  // auf langsamen Runner-Instanzen 30–40 s — also Contention/Instanz-Streuung,
+  // kein Code-Defekt. Jeder solche Timeout kostet die Merge-Kette einen Rerun-
+  // Zyklus. Darum hebe ich den CI-Zweig des Default-Timeouts auf 90 s (schwere
+  // Specs analog auf 90 s, damit die 60-s-Override sie nicht UNTER den neuen
+  // Default drückt). LOKAL unverändert (30 s / 60 s) — CI und lokal sind getrennt
+  // konfigurierbar. Das ist INFRASTRUKTUR (Zeitbudget), KEIN Assertion-Change
+  // (§6.3): kein `expect` und kein Prüf-Schritt wird berührt, der Timeout greift
+  // nur bei Überschreitung und verlangsamt grüne Läufe nicht. Sharding (`--shard`)
+  // verteilt über beide Projekte hinweg, bleibt unberührt.
   projects: [
     {
       name: 'schwer',
       testMatch: SCHWERE_SPECS,
-      timeout: 60_000,
+      timeout: process.env.CI ? 90_000 : 60_000,
     },
     {
       name: 'chromium',
       testIgnore: SCHWERE_SPECS,
-      timeout: 30_000,
+      timeout: process.env.CI ? 90_000 : 30_000,
     },
   ],
   webServer: {
