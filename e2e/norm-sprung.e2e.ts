@@ -8,6 +8,14 @@
 import { test, expect, type Page } from '@playwright/test'
 import { clsBeobachtenInstallieren, clsAuslesen } from './helpers/cls'
 
+// CI-Härtung 19.7.2026 (BEFUND 3b): die Sprung-Tests warten per 20-s-Latch auf den
+// EINMAL-Load des ~4-MB-Artikel-Index (P3 u. a.). Auf dem 2-vCPU-Runner unter
+// Starvation überschritt dieser Latch reihum das globale 30-s-Test-Budget. Budget
+// darum explizit auf 60 s (Muster gesetze-pdf-download). Der A9-CLS-Test behält sein
+// eigenes test.slow(). INFRASTRUKTUR (Zeitbudget), KEIN Assertion-Change (§6.3):
+// Sprung-/CLS-Assertions unberührt, Timeout greift nur bei Überschreitung.
+test.describe.configure({ timeout: 60_000 })
+
 function fehlerSammeln(page: Page): string[] {
   const fehler: string[] = []
   page.on('pageerror', (e) => fehler.push(`pageerror: ${e.message}`))
