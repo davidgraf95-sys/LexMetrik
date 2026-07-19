@@ -30,7 +30,11 @@ export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, bestimmungsWo
   return (
     <header className="space-y-2.5 border-b border-line pb-5">
       <p className="lc-overline">{overline}</p>
-      <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">
+      {/* min-h-titel-2z (§15.2): reserviert die 2-Zeilen-Höhe des Titels, damit der
+          font-display-Swap (Fallback 2-zeilig ↔ Geist 1-zeilig, s. tailwind.config)
+          den Kopf nicht wachsen/schrumpfen lässt (CLS 0). Nur Platz-Reservierung —
+          der volle Titel steht immer (§15/2). */}
+      <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto min-h-titel-2z">
         {erlass.kuerzel}{!titelRedundant && <span className="text-ink-500 font-normal"> — {erlass.titel}</span>}
       </h1>
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
