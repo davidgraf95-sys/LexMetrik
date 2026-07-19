@@ -773,28 +773,37 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         // gar nicht auto-aufklappen (explizites Einklappen des aktiven Zweigs gewinnt).
         // Jedes Aktiv-Vorkommen (inkl. Vorfahren aus pfadZu) frischt den Nachlauf-Tick.
         for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) { auto.add(id); autoTickRef.current.set(id, tick); }
-        // BEFUND 2 (A9-Forensik 19.7.2026): das AUTO_ZU_NACHLAUF-Fenster reicht NICHT
-        // — auf dem 2-vCPU-Runner traf das verzögerte Zuklappen doch einen ON-SCREEN
-        // Ast (li 248×195→0×0, CLS ~0.029). Darum vor dem Zuklappen prüfen, ob der Ast
-        // im Sichtfenster des [data-toc]-Scroll-Containers liegt: sichtbare Äste bleiben
-        // offen (ihr Kollaps wäre ein gezählter Layout-Shift), nur off-screen-Äste
-        // klappen zu. Funktion (Auto-Akkordeon) unberührt — nur das WANN verschiebt sich
-        // ans Verlassen des Sichtfensters. `getBoundingClientRect` ist eine reine Lese-
-        // Messung (kein Reflow-Trigger hier, da im Timer nach dem Settle).
+        // BEFUND 3 (A9-Forensik 19.7.2026): der bisherige «nur off-screen»-Wächter
+        // (BEFUND 2) prüfte auf ÜBERLAPPUNG mit dem [data-toc]-Sichtband und klappte
+        // jeden NICHT-überlappenden Ast zu — also auch Äste OBERHALB des Bandes. Genau
+        // das riss auf dem 2-vCPU-Runner das Budget: kollabiert ein Ast oberhalb der
+        // sichtbaren Zeilen, rückt der GESAMTE sichtbare Inhalt DARUNTER nach oben — ein
+        // gezählter Layout-Shift (das gemeldete li 248×195→0×0 ist ein Kind eines
+        // solchen oberhalb-Astes). §15.2-treuer Fix: einen Ast NUR zuklappen, wenn er
+        // GANZ UNTERHALB des Sichtbandes liegt (r.top ≥ contRect.bottom) — dann bewegt
+        // sein Kollaps ausschliesslich off-screen-Inhalt (der Ast selbst + alles darunter
+        // sind unsichtbar), nie eine sichtbare Zeile. Äste im Band ODER darüber bleiben
+        // offen. Das ist strikt KONSERVATIVER als zuvor (klappt eine Teilmenge der
+        // bisherigen Äste zu) → kann keinen NEUEN Shift erzeugen. Auto-Akkordeon (Auftrag
+        // K) bleibt: beim Zurück-nach-oben-Scrollen verlassene (jetzt unterhalb liegende)
+        // Äste klappen weiterhin zu; beim Weiterlesen nach unten bleiben die überholten
+        // (oberhalb liegenden) Äste ruhig offen statt sichtbar zu springen (deckt sich mit
+        // Davids Kernwunsch «Gliederung springt nicht umher», 16.7.). `getBoundingClientRect`
+        // ist reine Lese-Messung (kein Reflow-Trigger, im Timer nach dem Settle).
         const tocCont = (paneRoot(imPane, wurzel) ?? document).querySelector('[data-toc]') as HTMLElement | null;
         const contRect = tocCont?.getBoundingClientRect();
-        const imTocSichtbar = (id: string): boolean => {
-          if (!tocCont || !contRect) return false;
+        const darfZuklappen = (id: string): boolean => {
+          if (!tocCont || !contRect) return false; // kein Container/Mass ⇒ sicherheitshalber NICHT zuklappen
           const el = tocCont.querySelector(`[data-sektion-id="${CSS.escape(id)}"]`) as HTMLElement | null;
-          if (!el) return false; // nicht gefunden ⇒ nicht als sichtbar behandeln (darf zuklappen)
+          if (!el) return false; // nicht gefunden ⇒ nicht zuklappen (keine Blind-Aktion)
           const r = el.getBoundingClientRect();
-          return r.bottom > contRect.top && r.top < contRect.bottom;
+          return r.top >= contRect.bottom; // NUR wenn der Ast komplett unter dem Sichtband sitzt
         };
         const schliessen: string[] = [];
         for (const id of [...auto]) {
           if (ids.includes(id)) continue; // im aktiven Pfad → offen halten
           if (tick - (autoTickRef.current.get(id) ?? 0) <= AUTO_ZU_NACHLAUF) continue; // noch im Nachlauf-Fenster
-          if (imTocSichtbar(id)) continue; // on-screen im TOC → nicht zuklappen (kein sichtbarer Reflow)
+          if (!darfZuklappen(id)) continue; // nur Äste GANZ UNTERHALB des Sichtbands (sonst sichtbarer Reflow)
           auto.delete(id); autoTickRef.current.delete(id); schliessen.push(id);
         }
         setTocBaum((o) => {
