@@ -236,10 +236,17 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
 
     // regesteKurz aus dem GEGLÄTTETEN Text (normalisiereRegeste strippt u.a. die
     // führende „Regeste"-Überschrift) — sonst stünde „Regeste" doppelt bzw. als Präfix.
-    const regesteKurz = regesteKurzVon(snap);
+    // BS-Tranche (Bauplan §4): das Portal publiziert keine Regeste, aber einen
+    // amtlichen Betreff-Titel (rubrum.gegenstand) → als Karten-Kurzzeile ≤120 Z.
+    // (regesteVorhanden bleibt false — der Titel ist Betreff, keine Regeste, §8).
+    const regesteKurz = regesteKurzVon(snap)
+      ?? (snap.quelle === 'gerichte-bs' && snap.rubrum?.gegenstand
+        ? kuerzeRegeste(snap.rubrum.gegenstand, 120) : null);
     manifest.push({
       key, gericht: snap.gericht, gerichtName: snap.gerichtName, gerichtstyp: snap.gerichtstyp,
       kanton: snap.kanton, nummer: snap.nummer, bgeReferenz: snap.bgeReferenz, datum: snap.datum,
+      // datumUnbekannt nur projizieren, wenn gesetzt (Bestand bleibt byte-gleich, §6).
+      ...(snap.datumUnbekannt ? { datumUnbekannt: true as const } : {}),
       zitierung: snap.zitierung, leitcharakter: snap.leitcharakter,
       regesteVorhanden: !!snap.regeste, regesteKurz, sachgebiet: snap.sachgebiet, sprache: snap.sprache,
       normKeys: snap.normKeys, bestand: snap.bestand, kuratierung: snap.kuratierung,

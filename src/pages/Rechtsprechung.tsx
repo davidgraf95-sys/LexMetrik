@@ -29,18 +29,45 @@ function leseDichte(): Dichte {
   return localStorage.getItem(DICHTE_KEY) === 'karten' ? 'karten' : 'liste';
 }
 
+// DOM-Deckel (BS-Tranche §7.1, axe-Timeout-Lektion): mit ~3'800 BS-Einträgen
+// wüchse eine ungefilterte Sektion sonst auf Tausende DOM-Knoten. Es werden je
+// Liste max. LISTE_DECKEL Einträge GERENDERT («Weitere anzeigen» lädt +Deckel);
+// die Facetten-/Sektions-Zähler bleiben über den Gesamtbestand (R15) — reine
+// Render-Begrenzung, keine Daten-/Zählerspaltung. Die Register-Liste ist kein
+// Normtext (§15.1 unberührt); jeder Entscheid bleibt als Datei vollständig.
+const LISTE_DECKEL = 100;
+
 // Eine Treffer-Liste je Dichte rendern (geteilte Datenquelle, nur Darstellung).
 function Liste({ liste, dichte, onNorm }: { liste: BrowseEntscheid[]; dichte: Dichte; onNorm: (k: string) => void }) {
+  const [max, setMax] = useState(LISTE_DECKEL);
+  // Bei neuer Datenbasis (Filterwechsel) auf den Deckel zurücksetzen — offizielles
+  // «adjust state during render»-Muster (kein Effekt-Flackern, kein Ref im Render).
+  const [vorherListe, setVorherListe] = useState(liste);
+  if (vorherListe !== liste) { setVorherListe(liste); setMax(LISTE_DECKEL); }
+  const sichtbar = liste.length > max ? liste.slice(0, max) : liste;
+  const mehr = liste.length - sichtbar.length;
+  const mehrKnopf = mehr > 0 && (
+    <button type="button" onClick={() => setMax((m) => m + LISTE_DECKEL)}
+      className="lc-chip mx-auto mt-3 block hover:border-brass-400 hover:text-brass-700">
+      Weitere anzeigen (<span className="num">{mehr}</span> weitere)
+    </button>
+  );
   if (dichte === 'karten') {
     return (
-      <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
-        {liste.map((e) => <EntscheidKarte key={e.key} e={e} onNorm={onNorm} />)}
+      <div>
+        <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
+          {sichtbar.map((e) => <EntscheidKarte key={e.key} e={e} onNorm={onNorm} />)}
+        </div>
+        {mehrKnopf}
       </div>
     );
   }
   return (
-    <div className="lc-panel divide-y divide-line overflow-hidden">
-      {liste.map((e) => <EntscheidZeile key={e.key} e={e} onNorm={onNorm} />)}
+    <div>
+      <div className="lc-panel divide-y divide-line overflow-hidden">
+        {sichtbar.map((e) => <EntscheidZeile key={e.key} e={e} onNorm={onNorm} />)}
+      </div>
+      {mehrKnopf}
     </div>
   );
 }

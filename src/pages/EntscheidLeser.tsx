@@ -18,7 +18,15 @@ import { normalisiereRegeste } from '../lib/rechtsprechung/register';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import { usePaneKontext } from '../components/layout/PaneKontext';
 import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
-import type { EntscheidSnapshot, EntscheidSprache, Abschnittstyp } from '../lib/rechtsprechung/typen';
+import type { EntscheidSnapshot, EntscheidSprache, Abschnittstyp, Entscheidquelle } from '../lib/rechtsprechung/typen';
+
+// Provenienz-Fuss (§7): Daten-Label je Quelle — BS-Tranche §7.1 (vorher hart
+// «OpenCaseLaw», was für gerichte-bs falsch wäre). Deklariert, kein Raten.
+const QUELLE_LABEL: Record<Entscheidquelle, string> = {
+  opencaselaw: 'OpenCaseLaw',
+  entscheidsuche: 'entscheidsuche.ch',
+  'gerichte-bs': 'Rechtsprechungs-Datenbank der Gerichte Basel-Stadt (amtlich)',
+};
 
 // Reader EINES Entscheids (/rechtsprechung/:key). Lädt Manifest-Eintrag → Datei
 // → Snapshot; Kopf, sticky Sprung-Navigation, hervorgehobene Regeste,
@@ -508,7 +516,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
             title={massgeblichTitel}>
             ↗ massgebliche Fassung{massgeblichFehlt && <span className="text-ink-500"> (Urteil n. v.)</span>}
           </a>
-          <span className="text-ink-500">Daten: OpenCaseLaw</span>
+          <span className="text-ink-500">Daten: {QUELLE_LABEL[snap.quelle] ?? snap.quelle}</span>
         </div>
         <p className="text-micro text-ink-500 max-w-reading leading-relaxed">
           Der Urteilstext ist als amtliches Werk gemeinfrei (Art. 5 URG). Eine allfällige
