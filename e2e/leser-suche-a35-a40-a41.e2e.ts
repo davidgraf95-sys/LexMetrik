@@ -12,6 +12,13 @@ import { test, expect, type Page } from '@playwright/test';
 //  · A41: die Header-Suche (Topbar-Combobox) öffnet ihr Dropdown ÜBER der sticky
 //         Gesetzes-Kopfzeile (Stacking/z-index) — nicht mehr dahinter.
 
+// CI-Härtung 19.7.2026 (BEFUND 3b): der OR-Reader + In-Gesetz-Suche kettet mehrere
+// 15–20-s-Latches (Artikel-Index-/Struktur-Load, Highlight). Auf dem 2-vCPU-Runner
+// unter Starvation riss der A35-Highlight-Walk reihum das 30-s-Test-Budget. Budget
+// explizit auf 60 s (Muster gesetze-pdf-download). INFRASTRUKTUR (Zeitbudget), KEIN
+// Assertion-Change (§6.3): Highlight-/Stacking-Assertions unberührt.
+test.describe.configure({ timeout: 60_000 });
+
 const inGesetzSuche = (page: Page) => page.getByRole('searchbox', { name: 'Im Gesetz suchen' });
 const headerFeld = (page: Page) => page.getByRole('combobox', { name: /LexMetrik durchsuchen/ });
 

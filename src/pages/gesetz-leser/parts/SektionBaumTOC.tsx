@@ -2,6 +2,16 @@ import { memo, type ReactNode } from 'react';
 import type { Sektion } from '../../../lib/normtext/browse';
 import { romanFrei, margLabel } from '../helpers';
 
+// §15.2 (CLS, 18.7.2026): die obersten STANDARD_OFFEN_TIEFE Gliederungs-Ebenen sind
+// ab dem ERSTEN Render offen (Default, kein State-Wechsel → kein Lade-Shift). Damit
+// klappt der Scroll-Spy beim Lesen nur noch TIEFE Blatt-Zweige auf/zu (wenige Zeilen)
+// statt eines ganzen Mehr-Ebenen-Pfades — der grosse, un-input-zugerechnete Reflow
+// (auf 2-vCPU-CI ~0.06–0.09 CLS) entfällt, die Struktur-Übersicht bleibt (mehr Inhalt
+// sichtbar, §15.2: nie WENIGER). Tiefere Ebenen bleiben Default zu und werden vom
+// Scroll-Spy automatisch nachgeführt (K, David 26.6.). Manuelles Zu-/Aufklappen
+// (tocBaum) überschreibt den Default je Knoten.
+const STANDARD_OFFEN_TIEFE = 2;
+
 // TOC-Gliederungsbaum: jede Stufe einklappbar (geteilter Zustand mit dem
 // Fliesstext); Dreieck klappt, Label springt.
 // Rank 4 (QS-PERF, §15/4): React.memo (Default-Komparator) — der Baum re-rendert
@@ -18,12 +28,15 @@ export const SektionBaumTOC = memo(function SektionBaumTOC({ sektionen, aktivPfa
   // auf und beim Verlassen wieder zu. Manuell (Klick) geöffnete Zweige bleiben
   // offen (autoOffenRef im Reader steuert das). Markierung über `aktivPfad`.
   const zeile = (s: Sektion, tiefe: number): ReactNode => {
-    const auf = offen[s.id] ?? false;
+    const auf = offen[s.id] ?? tiefe < STANDARD_OFFEN_TIEFE;
     const { pre, rest } = romanFrei(s.label);
     const aktiv = aktivPfad.includes(s.id);
     const hatKinder = s.kinder.length > 0;
     return (
-      <li key={s.id}>
+      // data-sektion-id: erlaubt dem Reader (inhalt.tsx) beim Auto-Zuklappen zu
+      // prüfen, ob dieser Ast im Sichtfenster des [data-toc]-Containers liegt —
+      // sichtbare Äste werden NICHT zugeklappt (§15.2, kein On-Screen-Reflow).
+      <li key={s.id} data-sektion-id={s.id}>
         <div className="flex items-start" style={{ paddingLeft: `${tiefe * 0.6}rem` }}>
           {hatKinder
             ? <button type="button" onClick={() => onToggle(s.id)} aria-label={auf ? 'Einklappen' : 'Aufklappen'} className="shrink-0 text-ink-300 hover:text-ink-600 px-1 mt-0.5 text-micro w-4">{auf ? '▾' : '▸'}</button>

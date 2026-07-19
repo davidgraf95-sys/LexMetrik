@@ -12,6 +12,12 @@ function fehlerSammeln(page: Page): string[] {
   return fehler
 }
 
+// CI-Härtung 19.7.2026 (BEFUND 3b): der OR-Reader-Test kettet mehrere 15–20-s-Latches
+// (Manifest-/Artikel-Index-/Struktur-Load, TOC, In-Gesetz-Suche). Auf dem 2-vCPU-
+// Runner unter Starvation riss er reihum das 30-s-Budget. Budget explizit auf 60 s
+// (Muster gesetze-pdf-download). INFRASTRUKTUR (Zeitbudget), KEIN Assertion-Change (§6.3).
+test.describe.configure({ timeout: 60_000 })
+
 test.describe('/gesetze — Übersicht', () => {
   test('Landeplatz zeigt drei Einstiegskacheln (kein stiller Bund-Default), Bund öffnet die Systematik', async ({ page }) => {
     const fehler = fehlerSammeln(page)

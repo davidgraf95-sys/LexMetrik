@@ -16,6 +16,7 @@ import { fromBuffer } from '@capsizecss/unpack';
 import { createFontStack } from '@capsizecss/core';
 import arial from '@capsizecss/metrics/arial';
 import georgia from '@capsizecss/metrics/georgia';
+import timesNewRoman from '@capsizecss/metrics/timesNewRoman';
 
 const FILES = {
   geist: 'node_modules/@fontsource-variable/geist/files/geist-latin-wght-normal.woff2',
@@ -36,6 +37,13 @@ async function main() {
 
   const sans = createFontStack([geist, arial]);
   const serifStack = createFontStack([serif, georgia]);
+  // Linux-Härtung (R5-Forensik 19.7.2026): das CI-Image hat KEIN Georgia →
+  // der Georgia-getunte Fallback greift dort NICHT, generic `serif` = Liberation
+  // Serif (Times-Metrik, schmal) trägt untuned die Lesespalte → 77 statt ≤75 ch.
+  // Liberation Serif / Tinos sind metrik-IDENTISCH zu Times New Roman (wie
+  // Arimo/Liberation Sans zu Arial) → Times-New-Roman-Metrik ist der korrekte
+  // capsize-Proxy, um die horizontale Laufweite auf Source Serif 4 zu heben.
+  const serifTimesStack = createFontStack([serif, timesNewRoman]);
 
   console.log('/* ── SANS (Geist → Arial-Fallback) ── */');
   console.log('fontFamily:', sans.fontFamily);
@@ -44,6 +52,10 @@ async function main() {
   console.log('/* ── SERIF (Source Serif 4 → Georgia-Fallback) ── */');
   console.log('fontFamily:', serifStack.fontFamily);
   console.log(serifStack.fontFaces);
+  console.log();
+  console.log('/* ── SERIF-TIMES (Source Serif 4 → Times/Liberation-Serif-Fallback) ── */');
+  console.log('fontFamily:', serifTimesStack.fontFamily);
+  console.log(serifTimesStack.fontFaces);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
