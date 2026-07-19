@@ -350,6 +350,8 @@ Im `baueEntscheidManifest` (nicht „später"): existiert eine `bge_reference`/`
 
 **Nachtrag QS-DATA (2.7.2026):** Das Stufen-/Budget-Modell begrenzt weiterhin die **committete Projektion** (`public/rechtsprechung/`), ist aber **nicht mehr die Obergrenze des Korpus**: die Masse (P1–P3+) lebt im DB-Artefakt und wird on-demand/per Edge geliefert (`FAHRPLAN-DATENHALTUNG.md` E2/E3). `BUDGET_MB` bleibt Tor für das Schaufenster.
 
+**Nachtrag Budget (19.7.2026):** `BUDGET_MB` 200 → **1024 MB** (David 19.7.2026, «1 GB für Kantons-Vollimporte») — erste Nutzung: BS-Tranche des P3+-Slices (Vollimport seit 2022, ~3'765 Dokumente vom amtlichen Portal; Detail `FAHRPLAN-KANTONALE-ENTSCHEIDE.md` §8 + `bibliothek/register/BS-RECHTSPRECHUNG-QUELLE-2026-07.md`).
+
 ### 6.6 Currency/Drift-Gate (ehrlich)
 Ein ergangener Entscheid ändert seinen Text nie — **kein** Konsolidierungs-Drift. `fassungsToken = content_hash` ist ein **Inhalts-/Verfügbarkeits-Fingerabdruck**, kein „Fassungsstand". Neue Prüfungen in `check-entscheide.ts`:
 - **Offline:** Register⊇Snapshots (Orphan-Tor, eigener Namespace); Provenienz vollständig (`datum`/`quelleUrl`/`quelle`/`fassungsToken`); `sha`==`sha256EntscheidBloecke(abschnitte)`; Budget-Tor (6.5); Lizenz-Defensive (nie aus `/scholarship/*`).
