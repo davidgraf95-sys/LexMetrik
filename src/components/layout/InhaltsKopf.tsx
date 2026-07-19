@@ -29,8 +29,10 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
     // Topbar-Kontext gefangen ist) → «kopfzeile bei gesetzen verdeckt suchresultate
     // aus dem header». z-[19] hält den Kopf weiter über den Reader-Sticky-Leisten
     // (z-16/z-15 → A26-Panel bleibt oben), lässt aber das Header-Dropdown darüber.
-    <div className="sticky top-16 z-[19] border-b border-line bg-paper">
-      <div className={`${breiteKlasse} mx-auto px-5 sm:px-6 h-9 grid grid-cols-[1fr_auto_1fr] items-center gap-2`}>
+    <div data-inhalt-kopf className="sticky top-16 z-[19] border-b border-line bg-paper">
+      {/* `relative`: Anker für das mobile Overlay-Suchfeld (A35, sucheSlot) — es legt
+          sich `absolute` über die Zeile, ohne etwas zu verschieben (§15.2). */}
+      <div className={`${breiteKlasse} relative mx-auto px-5 sm:px-6 h-9 grid grid-cols-[1fr_auto_1fr] items-center gap-2`}>
         <nav aria-label="Brotkrümel" className="flex min-w-0 items-center gap-1 text-xs text-ink-500">
           {daten.breadcrumb.map((b, i) => (
             <span key={`${i}-${b.label}`} className="inline-flex min-w-0 items-center gap-1">
@@ -43,11 +45,15 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
         </nav>
         <span className="num justify-self-center text-xs font-medium text-ink-700">{daten.artikel ?? ''}</span>
         <div className="flex items-center justify-self-end gap-2">
+          {/* A35 (David 19.7.2026): das In-Gesetz-Suchfeld sitzt jetzt HIER in der
+              Kopfzeile (statt in der früheren full-width Such-Leiste) — links vom
+              «Ansicht»-Dropdown, damit Suche + Ansicht + Stand in EINER Zeile stehen. */}
+          {daten.sucheSlot && <span data-such-slot>{daten.sucheSlot}</span>}
           {/* A26 (David 11.7.2026): das grundart-spezifische Bedien-Element (beim
               Gesetzes-Volltext das «Ansicht»-Dropdown) — links vom Stand/✕, damit die
               Darstellungsoptionen immer erreichbar sind, während man im Gesetz ist. */}
           {daten.ansichtSlot}
-          {daten.stand && <span className="text-xs text-ink-500">Stand <span className="num">{daten.stand}</span></span>}
+          {daten.stand && <span className="shrink-0 whitespace-nowrap text-xs text-ink-500">Stand <span className="num">{daten.stand}</span></span>}
           <button type="button" onClick={onSchliessen}
             aria-label="Schliessen (zur Startseite)" title="Schliessen (zur Startseite)"
             className="inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 transition-colors hover:border-brass-400 hover:text-brass-700">

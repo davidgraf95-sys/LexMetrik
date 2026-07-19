@@ -2,10 +2,13 @@ import { test, expect, type Page } from '@playwright/test';
 
 // E5-Welle (David 16.7.2026, §10.10) — A35 · A40 · A41.
 //
-//  · A35: In-Gesetz-Suchfeld sitzt in der STICKY Kopfzeilen-Leiste (data-such-bar,
-//         direkt unter dem Ansicht-tragenden Inhalts-Kopf), NICHT mehr «oberhalb
-//         der Gliederung» in der TOC-Spalte; Suchtreffer werden im Text markiert
-//         (CSS Custom Highlight API «lc-such-treffer»).
+//  · A35: In-Gesetz-Suchfeld sitzt (David 19.7.2026) OBEN im Inhalts-Kopf selbst
+//         — in der Zeile mit Brotkrümel · Artikel-Chip · «Ansicht ▾» · Stand · ✕
+//         (data-such-slot im data-inhalt-kopf), NICHT mehr in der früheren full-
+//         width Such-Leiste darunter und NICHT in der Gliederungsspalte (aside).
+//         Suchtreffer werden im Text markiert (CSS Custom Highlight API
+//         «lc-such-treffer»). Der Auftrag verlegte den ORT; das Feld-Verhalten
+//         (Highlight, Enter-Navigation, A40-BGer-Fallback) bleibt unverändert.
 //  · A40: «beim Bundesgericht …»-Link eines Ausser-Bestand-BGE ist ein EHRLICHER
 //         Such-Link (type=simple_query), KEIN konstruierter highlight_docid-Permalink
 //         (der landete beim falschen Entscheid).
@@ -23,16 +26,20 @@ const inGesetzSuche = (page: Page) => page.getByRole('searchbox', { name: 'Im Ge
 const headerFeld = (page: Page) => page.getByRole('combobox', { name: /LexMetrik durchsuchen/ });
 
 test.describe('A35 — In-Gesetz-Suche in der Kopfzeile + Treffer-Highlight', () => {
-  test('Suchfeld sitzt in der sticky Kopfzeilen-Leiste, NICHT in der Gliederungsspalte', async ({ page }) => {
+  test('Suchfeld sitzt OBEN im Inhalts-Kopf, NICHT in einer eigenen Leiste oder der Gliederungsspalte', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
     await expect(page.locator('#art-1')).toBeVisible({ timeout: 20000 });
     const suche = inGesetzSuche(page);
     await expect(suche).toBeVisible({ timeout: 20000 });
-    // Genau EIN Suchfeld (kein Doppel aus TOC-Spalte + Leiste).
+    // Genau EIN Suchfeld (kein Doppel aus mehreren Positionen).
     await expect(suche).toHaveCount(1);
-    // Das Feld liegt in der data-such-bar-Kopfzeilen-Leiste …
-    await expect(suche.locator('xpath=ancestor::*[@data-such-bar]')).toHaveCount(1);
-    // … und NICHT innerhalb der Gliederungsspalte (aside/[data-toc]).
+    // Das Feld liegt im Inhalts-Kopf (data-such-slot im data-inhalt-kopf) …
+    await expect(suche.locator('xpath=ancestor::*[@data-such-slot]')).toHaveCount(1);
+    await expect(suche.locator('xpath=ancestor::*[@data-inhalt-kopf]')).toHaveCount(1);
+    // … die frühere full-width Such-Leiste (data-such-bar) existiert in der
+    // Einzelansicht NICHT mehr (rückstandsfrei entfernt, David 19.7.2026) …
+    await expect(page.locator('[data-such-bar]')).toHaveCount(0);
+    // … und das Feld liegt NICHT innerhalb der Gliederungsspalte (aside/[data-toc]).
     await expect(suche.locator('xpath=ancestor::aside')).toHaveCount(0);
   });
 
