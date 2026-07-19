@@ -1,9 +1,11 @@
 {
-  "hash": "2196621d3b735a4e734a01f3e763d987a992eda4541b9736710b7e913529cb94",
+  "hash": "861c9802f94585fab823a2f31805ab4a825c4cfa7c9c6604642d21b8d04cef0c",
   "verdikt": "bestanden",
-  "quellePin": "fedlex bund (G-REF-Sidecars, gepinnte Konsolidierungen)",
+  "quellePin": "fedlex asylv2 20260714",
   "datum": "2026-07-19",
   "dateien": [
-    "daten-manifest.json"
+    "daten-manifest.json",
+    "public/normtext/historie/ASYLV2.json",
+    "public/normtext/struktur/bund/ASYLV2.json"
   ]
 }
