@@ -62,7 +62,10 @@ const BEKANNTE_BEFUNDE: Record<string, string[]> = {
   // brass-Trefferlinks tragen denselben Markenentscheid (B-2, no-underline).
   'suche-seite': ['link-in-text-block'],
   'rechtsprechung-uebersicht': ['link-in-text-block'],
+  // BS-Facette/-Reader (W2·6-BS Block B): dieselben Inline-Link-Marken (B-2).
+  'rechtsprechung-uebersicht-bs': ['link-in-text-block'],
   'rechtsprechung-leser': ['link-in-text-block'],
+  'rechtsprechung-leser-bs': ['link-in-text-block'],
   'international': ['link-in-text-block'],
   // Tab-Streifen-Prüfpunkt lädt /rechner/tagerechner: derselbe dokumentierte
   // Inline-Link-Marken-Entscheid (B-2) der Seite. Der Streifen SELBST ist
@@ -190,19 +193,42 @@ test('Gesetze — Reader Bund (GebV-HReg, Tarif-Tabelle)', async ({ page }, test
 })
 
 test('Rechtsprechung — Übersicht', async ({ page }, testInfo) => {
-  // Budget 120 s statt 60 s (§6.3 INFRASTRUKTUR, kein Assertion-Change): die
-  // /rechtsprechung-Übersicht rendert den GESAMTEN Korpus ungeblättert (Liste,
-  // Rechtsprechung.tsx) — mit BGE 148–151 (register.json ~2,9 MB) wächst das DOM
-  // so, dass axe.analyze lokal ~25 s braucht (1 Worker, isoliert gemessen 18.7.).
-  // Auf dem 4×-gedrosselten CI-Runner (×2–3, Starvation-Forensik 17.7.) reisst das
-  // das 60-s-«schwer»-Budget. Scoping (axe include/exclude) hilft nicht, weil die
-  // grosse Entscheid-Liste GENAU der zu prüfende Hauptinhalt ist — Scoping würde
-  // nur Nav/Footer sparen (Bruchteil) und die Zeilen-Abdeckung schwächen. Darum
-  // gezielt nur DIESE Prüfung auf 120 s, alle übrigen Specs bleiben strikt bei 60 s.
+  // Budget 120 s statt 60 s (§6.3 INFRASTRUKTUR, kein Assertion-Change): vor dem
+  // Listen-DOM-Deckel (BS-Tranche §7.1, Rechtsprechung.tsx LISTE_DECKEL=100)
+  // renderte die Übersicht den GESAMTEN Korpus ungeblättert — axe.analyze brauchte
+  // lokal ~25 s, auf dem 4×-gedrosselten CI-Runner riss das das 60-s-Budget. Der
+  // Deckel begrenzt das DOM jetzt auf ~100 Zeilen je Sektion; die 120 s bleiben
+  // als Sicherheitsmarge gegen CI-Starvation stehen (greifen nur bei Überschreitung).
   testInfo.setTimeout(120_000)
   await oeffnen(page, '/rechtsprechung')
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await axePruefen(page, testInfo, 'rechtsprechung-uebersicht')
+})
+
+// BS-Tranche (W2·6-BS Block B): dieselbe Übersicht mit aktiver BS-Facette —
+// deckt die BS-Zeilen (amtl.-Betreff-Marker, «o. D.»-Datumszellen) + den
+// «Weitere anzeigen»-Knopf des DOM-Deckels a11y ab.
+test('Rechtsprechung — Übersicht, Facette BS', async ({ page }, testInfo) => {
+  testInfo.setTimeout(120_000)
+  await oeffnen(page, '/rechtsprechung')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await page.getByRole('button', { name: /^Gemeinwesen: BS \(\d+\)$/ }).click()
+  await expect(page.locator('a[href^="/rechtsprechung/bs_"]').first()).toBeVisible()
+  await axePruefen(page, testInfo, 'rechtsprechung-uebersicht-bs')
+})
+
+// BS-Reader (kantonaler Entscheid, Word-Marker-Gliederung): heller UND dunkler
+// Modus — Kontrast der neuen Meta-Elemente (Sekundärnummer, Betreff/`o. D.`).
+test('Rechtsprechung — BS-Entscheid-Reader', async ({ page }, testInfo) => {
+  await oeffnen(page, '/rechtsprechung/bs_appellationsgericht_AUS.2026.54')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'rechtsprechung-leser-bs')
+})
+
+test('Rechtsprechung — BS-Entscheid-Reader (dunkel)', async ({ page }, testInfo) => {
+  await oeffnen(page, '/rechtsprechung/bs_appellationsgericht_AUS.2026.54', 'dunkel')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'rechtsprechung-leser-bs')
 })
 
 // UI-NAV S5: die /suche-Ergebnisseite mit Treffern (Gruppen-Landmarken,
