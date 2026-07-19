@@ -38,6 +38,15 @@ import { setzeSuchHighlight } from './suchHighlight';
 // Compiler → Modulfunktionen), sekPos/sektionMeta/sekLabelById-Ableitungen und
 // der Download-Text leben jetzt in ./berechnungen.ts. Ab hier NUR die
 // zustandsbehaftete Reader-Komponente (Hooks, Effekte, Rendering).
+
+// §15.2: Nachlauf-Fenster (in Pfadwechseln) fürs Auto-ZUklappen des TOC-Baums. Ein
+// automatisch geöffneter Zweig bleibt so lange offen, bis die Leseposition ihn um so
+// viele distinkte Pfadwechsel hinter sich gelassen hat — dann ist er sicher aus dem
+// sichtbaren TOC-Fenster gescrollt und sein Zuklappen erzeugt keinen sichtbaren Layout-
+// Shift (off-screen bzw. vom Scroll-Anchoring verschluckt). 6 ≈ mehrere TOC-Bildschirm-
+// höhen Vorlauf; deckt das Hin-und-Her (PageUp nach PageDown) verlässlich ab.
+const AUTO_ZU_NACHLAUF = 6;
+
 export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
   const basisPfad = `/gesetze/${ebene}/${encodeURIComponent(schluessel)}`;
   const navigate = useNavigate();
@@ -130,6 +139,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Zweig verlässt — manuell (Klick) geöffnete Zweige bleiben offen, weil sie
   // nicht in diesem Set stehen (tocToggle/springeZuSektion nehmen sie heraus).
   const autoOffenRef = useRef<Set<string>>(new Set());
+  // §15.2-Nachlauf (18.7.2026): Tick des letzten Aktiv-Vorkommens je Auto-Zweig +
+  // monotoner Pfadwechsel-Zähler. Der Spy klappt einen Auto-Zweig erst zu, wenn er
+  // AUTO_ZU_NACHLAUF Pfadwechsel aus dem aktiven Pfad heraus ist (dann off-screen →
+  // CLS-frei); verhindert das sichtbare Auf-/Zuklappen beim Hin-und-Her-Scrollen.
+  const autoTickRef = useRef<Map<string, number>>(new Map());
+  const autoTickNowRef = useRef(0);
   // Zweige, die der NUTZER selbst aufgeklappt hat (Klick/Sprung). Der Scroll-Spy
   // darf diese NIE ins Auto-Set adoptieren und NIE auto-zuklappen — auch dann
   // nicht, wenn die Leseposition durch sie hindurchscrollt (David: «nur was
@@ -149,7 +164,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const tocToggle = useCallback((id: string) => {
     setTocBaum((o) => {
       const offenJetzt = !o[id];
-      autoOffenRef.current.delete(id);
+      autoOffenRef.current.delete(id); autoTickRef.current.delete(id);
       if (offenJetzt) { manuellOffenRef.current.add(id); manuellZuRef.current.delete(id); }
       else { manuellOffenRef.current.delete(id); manuellZuRef.current.add(id); }
       return { ...o, [id]: offenJetzt };
@@ -330,6 +345,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     [eintraege, struktur],
   );
 
+
   // W2·5d U-LINIEN (A8): das Linien-Regelwerk «wann welche Linie» leitet der Reader
   // aus dem TATSÄCHLICHEN Aufbau des Erlasses ab (Struktur-Sidecar: Gliederungstiefe
   // + Artikel-Dichte je Ebene), NICHT mehr aus der grundart-Schublade (der frühere
@@ -499,7 +515,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // Sprung-Ziel als MANUELL behandeln (K): in manuellOffenRef aufnehmen und aus
     // dem Auto-Set nehmen, damit der Scroll-Spy den angesprungenen Zweig nicht
     // gleich wieder zuklappt.
-    for (const x of ids) { autoOffenRef.current.delete(x); manuellOffenRef.current.add(x); manuellZuRef.current.delete(x); }
+    for (const x of ids) { autoOffenRef.current.delete(x); autoTickRef.current.delete(x); manuellOffenRef.current.add(x); manuellZuRef.current.delete(x); }
     // §15.2: der Klick öffnet den TOC-Zweig — diese Höhenänderung SYNCHRON im
     // Klick-Task committen (flushSync), damit der Layout-Shift des einwachsenden
     // Gliederungs-Zweigs dem Input zugerechnet wird (hadRecentInput ⇒ CLS-frei).
@@ -745,16 +761,51 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         // Wertgleichen Pfad nicht neu setzen (pfadZu liefert stets ein neues Array):
         // sonst Re-Render + Mitscroll-Effekt bei jedem Artikel derselben Blatt-Sektion.
         setAktivIds((prev) => prev.length === ids.length && prev.every((v, i) => v === ids[i]) ? prev : ids);
-        // Auto-Set fortschreiben (Seiteneffekt ausserhalb des State-Updaters, der
-        // rein bleibt): zuklappen, was automatisch offen war und nicht mehr im
-        // aktiven Pfad liegt; aufklappen, was jetzt im Pfad liegt.
+        // Auto-Set fortschreiben (Seiteneffekt ausserhalb des State-Updaters, der rein
+        // bleibt): aufklappen, was jetzt im Pfad liegt; zuklappen NUR, was die Lese-
+        // position um AUTO_ZU_NACHLAUF Pfadwechsel hinter sich gelassen hat (§15.2: dann
+        // off-screen → Zuklapp-Reflow zählt nicht; verhindert das sichtbare Auf-/Zu-
+        // klappen beim Hin-und-Her-Scrollen, das auf 2-vCPU-CI das CLS-Budget riss).
         const auto = autoOffenRef.current;
-        const schliessen: string[] = [];
-        for (const id of [...auto]) if (!ids.includes(id)) { auto.delete(id); schliessen.push(id); }
+        const tick = ++autoTickNowRef.current;
         // Aktive Pfad-IDs auto-aufklappen — aber manuell geöffnete NICHT ins Auto-Set
         // adoptieren (die bleiben dauerhaft offen) und manuell ZUgeklappte (manuellZuRef)
         // gar nicht auto-aufklappen (explizites Einklappen des aktiven Zweigs gewinnt).
-        for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) auto.add(id);
+        // Jedes Aktiv-Vorkommen (inkl. Vorfahren aus pfadZu) frischt den Nachlauf-Tick.
+        for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) { auto.add(id); autoTickRef.current.set(id, tick); }
+        // BEFUND 3 (A9-Forensik 19.7.2026): der bisherige «nur off-screen»-Wächter
+        // (BEFUND 2) prüfte auf ÜBERLAPPUNG mit dem [data-toc]-Sichtband und klappte
+        // jeden NICHT-überlappenden Ast zu — also auch Äste OBERHALB des Bandes. Genau
+        // das riss auf dem 2-vCPU-Runner das Budget: kollabiert ein Ast oberhalb der
+        // sichtbaren Zeilen, rückt der GESAMTE sichtbare Inhalt DARUNTER nach oben — ein
+        // gezählter Layout-Shift (das gemeldete li 248×195→0×0 ist ein Kind eines
+        // solchen oberhalb-Astes). §15.2-treuer Fix: einen Ast NUR zuklappen, wenn er
+        // GANZ UNTERHALB des Sichtbandes liegt (r.top ≥ contRect.bottom) — dann bewegt
+        // sein Kollaps ausschliesslich off-screen-Inhalt (der Ast selbst + alles darunter
+        // sind unsichtbar), nie eine sichtbare Zeile. Äste im Band ODER darüber bleiben
+        // offen. Das ist strikt KONSERVATIVER als zuvor (klappt eine Teilmenge der
+        // bisherigen Äste zu) → kann keinen NEUEN Shift erzeugen. Auto-Akkordeon (Auftrag
+        // K) bleibt: beim Zurück-nach-oben-Scrollen verlassene (jetzt unterhalb liegende)
+        // Äste klappen weiterhin zu; beim Weiterlesen nach unten bleiben die überholten
+        // (oberhalb liegenden) Äste ruhig offen statt sichtbar zu springen (deckt sich mit
+        // Davids Kernwunsch «Gliederung springt nicht umher», 16.7.). `getBoundingClientRect`
+        // ist reine Lese-Messung (kein Reflow-Trigger, im Timer nach dem Settle).
+        const tocCont = (paneRoot(imPane, wurzel) ?? document).querySelector('[data-toc]') as HTMLElement | null;
+        const contRect = tocCont?.getBoundingClientRect();
+        const darfZuklappen = (id: string): boolean => {
+          if (!tocCont || !contRect) return false; // kein Container/Mass ⇒ sicherheitshalber NICHT zuklappen
+          const el = tocCont.querySelector(`[data-sektion-id="${CSS.escape(id)}"]`) as HTMLElement | null;
+          if (!el) return false; // nicht gefunden ⇒ nicht zuklappen (keine Blind-Aktion)
+          const r = el.getBoundingClientRect();
+          return r.top >= contRect.bottom; // NUR wenn der Ast komplett unter dem Sichtband sitzt
+        };
+        const schliessen: string[] = [];
+        for (const id of [...auto]) {
+          if (ids.includes(id)) continue; // im aktiven Pfad → offen halten
+          if (tick - (autoTickRef.current.get(id) ?? 0) <= AUTO_ZU_NACHLAUF) continue; // noch im Nachlauf-Fenster
+          if (!darfZuklappen(id)) continue; // nur Äste GANZ UNTERHALB des Sichtbands (sonst sichtbarer Reflow)
+          auto.delete(id); autoTickRef.current.delete(id); schliessen.push(id);
+        }
         setTocBaum((o) => {
           let geaendert = false;
           const n = { ...o };
@@ -902,10 +953,39 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     return () => { window.cancelAnimationFrame(id); setzeSuchHighlight(null, ''); };
   }, [treffer, sucheTrim]);
 
+  // §15.2 CLS-Lade-Reservierung: solange Snapshot/Struktur/Currency async laden,
+  // reserviert min-h-screen (Token, §13) die volle Lesehöhe. Kein Inhalt wird
+  // versteckt/gekürzt (§15/2) — es ist derselbe Spinner-Platzhalter für alle
+  // Lade-Pfade (Fehler ausgenommen), damit der einwachsende React-Baum keinen
+  // grossen Sprung erzeugt.
+  const ladeAnzeige = (
+    <div className="min-h-screen py-12 text-center space-y-3">
+      <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
+      <p className="text-body-s text-ink-500">Der Erlass wird abgerufen …</p>
+    </div>
+  );
+
   if (fehler) {
     // W2·10-UI-NAV/N0b: hilfreiche Fehlseite (angefragter Key + Fuzzy-Vorschläge +
     // eingebettetes Erlass-Suchfeld) statt der nackten «nicht verfügbar»-Notiz.
     return <GesetzFehlSeite schluessel={schluessel} manifest={manifest} />;
+  }
+  // ── A9 §15.2-Pin: Currency-Chips NICHT nachträglich einwachsen lassen ────────
+  // Die Kopf-Chips «geltend geprüft am … / nächste Fassung ab …» (ErlassLeserKopf)
+  // stehen im Prerender (erlassVolltextHtml projiziert currency.json build-time).
+  // Der Client lädt currency aber async (ladeCurrency, eigener Fetch). Rendert ein
+  // Kopf-Pfad die Kopfzeile schon VOR dem Currency-Fetch, wachsen die zwei
+  // whitespace-nowrap-Chips nachträglich in die flex-wrap-Meta-Zeile ein und
+  // schieben Ingress + 2-Spalten-Grid ~30 px nach unten (Lade-Shift, auf dem
+  // 2-vCPU-Runner voll gezählt: CLS ~0.10, lokal repro unter 6× Drossel + langsamem
+  // Netz = 0.086). Darum ALLE Kopf-tragenden Render-Pfade (pdf-embed / nur-live-link
+  // / Volltext) auf den AUFGELÖSTEN Currency-Stand pinnen (§15.2 «Client-Initialstate
+  // auf den Server-Zustand pinnen»): solange `currency === null`, bleibt der
+  // reservierte Lade-Platzhalter stehen — kein Inhalt versteckt (§15/2). `ladeCurrency`
+  // löst IMMER auf (Fetch-Fehler ⇒ {}), i. d. R. lange vor dem grossen eintraege-Fetch
+  // ⇒ kein LCP-Verlust, und die Kopfzeile kann den Reader nicht aufhängen.
+  if (erlass && currency === null) {
+    return ladeAnzeige;
   }
   // ── pdf-embed: amtliches PDF in-app (kein extrahierbarer Volltext-HTML) ──────
   // Auftrag David 25.6.2026: statt nacktem Live-Link das amtliche Fedlex-PDF in
@@ -993,13 +1073,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // laden: ohne sie kollabiert das (bei Bund prerenderte) Volltext-Dokument auf
     // die kurze Spinner-Zeile und der einwachsende React-Baum erzeugt den grossen
     // CLS-Sprung. min-h-screen ist ein Token (§13), reserviert nur Platz, kürzt
-    // keinen Inhalt (§15/2).
-    return (
-      <div className="min-h-screen py-12 text-center space-y-3">
-        <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
-        <p className="text-body-s text-ink-500">Der Erlass wird abgerufen …</p>
-      </div>
-    );
+    // keinen Inhalt (§15/2). Derselbe `ladeAnzeige`-Platzhalter wie der Currency-Pin.
+    return ladeAnzeige;
   }
 
   const regRef = (id: string) => (el: HTMLElement | null) => {

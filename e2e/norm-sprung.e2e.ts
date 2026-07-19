@@ -6,6 +6,15 @@
 // gruppierte Universal-Suche. ⌘K/Ctrl-K fokussiert das Feld (kein Overlay).
 // Läuft gegen `vite preview` (dist).
 import { test, expect, type Page } from '@playwright/test'
+import { clsBeobachtenInstallieren, clsAuslesen } from './helpers/cls'
+
+// CI-Härtung 19.7.2026 (BEFUND 3b): die Sprung-Tests warten per 20-s-Latch auf den
+// EINMAL-Load des ~4-MB-Artikel-Index (P3 u. a.). Auf dem 2-vCPU-Runner unter
+// Starvation überschritt dieser Latch reihum das globale 30-s-Test-Budget. Budget
+// darum explizit auf 60 s (Muster gesetze-pdf-download). Der A9-CLS-Test behält sein
+// eigenes test.slow(). INFRASTRUKTUR (Zeitbudget), KEIN Assertion-Change (§6.3):
+// Sprung-/CLS-Assertions unberührt, Timeout greift nur bei Überschreitung.
+test.describe.configure({ timeout: 60_000 })
 
 function fehlerSammeln(page: Page): string[] {
   const fehler: string[] = []
@@ -171,15 +180,10 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     await feld.fill('')
     await expect(box).toBeHidden()
 
-    // CLS-Beobachter VOR der gemessenen Interaktion scharf schalten (nur unerwartete Shifts).
-    await page.evaluate(() => {
-      ;(window as unknown as { __cls: number }).__cls = 0
-      new PerformanceObserver((list) => {
-        for (const e of list.getEntries() as unknown as { value: number; hadRecentInput: boolean }[]) {
-          if (!e.hadRecentInput) (window as unknown as { __cls: number }).__cls += e.value
-        }
-      }).observe({ type: 'layout-shift', buffered: true })
-    })
+    // CLS-Beobachter VOR der gemessenen Interaktion scharf schalten (nur unerwartete
+    // Shifts). Mit Quellen-Erfassung: bei Überschreitung nennt die expect-Meldung
+    // die Top-shiftenden Elemente + nav-relative Zeitstempel im Klartext.
+    await clsBeobachtenInstallieren(page, true)
     // CI-realistischer Drossel-Grad: der 2-vCPU-CI-Runner drosselt durch Contention
     // schon von sich aus; 6× käme dort effektiv ≈12× nahe und misst dann Host-
     // Auslastung statt Interaktions-Lag (systematisch rot in #160/#161/#162). Darum
@@ -208,8 +212,8 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     // CLS der Such-Interaktion messen, SOLANGE die Seite noch dieselbe ist
     // (Enter navigiert weg und ersetzt das window/__cls). Die Sprung-Gruppe wächst
     // nur oben an und verschiebt nichts → CLS ≈ 0 (§15.2).
-    const cls = await page.evaluate(() => (window as unknown as { __cls?: number }).__cls ?? 0)
-    expect(cls, `CLS ${cls}`).toBeLessThan(0.05)
+    const { cls, bericht } = await clsAuslesen(page)
+    expect(cls, `CLS ${cls} — ${bericht}`).toBeLessThan(0.05)
     // SPRINGEN (deterministisch — CI-Härtung QS-PERF, §15.3-Nachzug zu #183):
     // Enter OHNE aktive Pfeil-Auswahl nimmt den OBERSTEN Treffer = den Norm-Sprung
     // (exakt der A5-Kontrakt des P3-Tests oben). Die vorangehende Pfeil-Navigation
