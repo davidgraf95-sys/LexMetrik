@@ -19,6 +19,12 @@ export interface KopfDaten {
    *  components/layout rendert es opak, ohne die Reader-Interna zu kennen); andere
    *  Inhaltstypen lassen es weg → kein Element. */
   ansichtSlot?: ReactNode;
+  /** A35-Verlegung (David 19.7.2026): das In-Gesetz-Suchfeld, das der Kopf im rechten
+   *  Bedien-Cluster (links vom «Ansicht»-Dropdown) mitführt — beim Gesetzes-Volltext-
+   *  Leser in der EINZELansicht. Der Reader baut das fertige Element (er hält den
+   *  Such-State/Highlight); der Kopf rendert es opak (Layer-Trennung wie `ansichtSlot`).
+   *  Andere Inhaltstypen / der Split-View lassen es weg → kein Element. */
+  sucheSlot?: ReactNode;
 }
 
 // Melde-Funktion: Inhaltsseiten rufen sie (im Effect) mit ihren Kopfdaten bzw.
