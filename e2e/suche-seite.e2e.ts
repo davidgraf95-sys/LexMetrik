@@ -61,11 +61,14 @@ test.describe('/suche — Volltext-Ergebnisseite (S5)', () => {
     await feld.fill('Miete')
     const box = page.getByRole('listbox', { name: 'Suchtreffer' })
     await expect(box).toBeVisible()
-    // Die Gesetzestext-Gruppe im Dropdown trägt jetzt einen «alle N →»-Link nach
-    // /suche — bislang war sie die einzige Gruppe ohne «alle N»-Ziel (§8).
-    const suchLink = box.locator('a[href^="/suche?q="]')
-    await expect(suchLink.first()).toBeVisible()
-    await suchLink.first().click()
+    // Die Gesetzestext-Gruppe führt nach /suche — seit dem a11y-Fix 19.7.2026
+    // nicht mehr als <a> im Gruppenkopf (axe-critical aria-required-children in
+    // role=listbox), sondern als echte role=option «alle N Treffer anzeigen»
+    // am Gruppenende (SuchResultate.tsx, MEHR_TREFFER_ID).
+    const mehrOption = box.getByRole('group', { name: 'Gesetzestext' })
+      .getByRole('option', { name: /alle \d+ Treffer anzeigen/ })
+    await expect(mehrOption.first()).toBeVisible()
+    await mehrOption.first().click()
     await expect(page).toHaveURL(/\/suche\?q=Miete/)
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Suche')
   })
