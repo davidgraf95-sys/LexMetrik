@@ -1,11 +1,9 @@
 {
-  "hash": "861c9802f94585fab823a2f31805ab4a825c4cfa7c9c6604642d21b8d04cef0c",
+  "hash": "d364f5f0a29f3143646850c5a8e8bffa46cc871c746fa0fd5efedfa7824d55b5",
   "verdikt": "bestanden",
-  "quellePin": "fedlex asylv2 20260714",
+  "quellePin": "fedlex BGBM 20250101 (eli/cc/1996/1738_1738_1738, SR 943.02, kanonische Filestore-HTML -4)",
   "datum": "2026-07-19",
   "dateien": [
-    "daten-manifest.json",
-    "public/normtext/historie/ASYLV2.json",
-    "public/normtext/struktur/bund/ASYLV2.json"
+    "src/lib/normtext/historie-laden.ts"
   ]
 }
