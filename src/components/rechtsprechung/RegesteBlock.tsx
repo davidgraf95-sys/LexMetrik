@@ -68,7 +68,9 @@ export default function RegesteBlock({ regeste, amtlich, mitAnker = true }: Prop
     return (
       <section {...anker} className="scroll-mt-[var(--rsp-stick,7rem)] lc-highlight space-y-2">
         <p className="lc-overline text-brass-700">{amtlich ? 'Regeste' : 'Zusammenfassung'}</p>
-        <p className="font-serif text-body-l leading-[1.7] text-ink-900 whitespace-pre-line">{text}</p>
+        {/* break-words: gleiche Bug-Klasse wie im EntscheidBody (unumbrechbare
+            Über-Token, z. B. lange URLs) — Mobil-Querscroll-Schutz (R21). */}
+        <p className="font-serif text-body-l leading-[1.7] text-ink-900 whitespace-pre-line break-words">{text}</p>
         <p className="text-micro text-ink-600">
           {amtlich
             ? 'Amtliche Regeste der Sammlung · Quelle: OpenCaseLaw'

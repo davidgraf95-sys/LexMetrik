@@ -14,7 +14,12 @@ import { zitatMitAusweis, heuteIso } from '../../lib/format';
 //  · Dispositiv als nummerierte Liste; Schlussformel gedämpft.
 //  · `rsp-prose` hält Norm-Links dezent (R11); Lesegrösse via --rsp-fs (R17).
 
-const ABSATZ = 'font-serif text-[length:var(--rsp-fs,1.08rem)] leading-[1.7] text-ink-800 whitespace-pre-line';
+// break-words (overflow-wrap): amtliche Urteilstexte tragen unumbrechbare
+// Über-Token (BS SB.2018.46: 169-Zeichen-Fedlex-URL im Fliesstext) — ohne
+// Umbruch-Erlaubnis reisst der Absatz die Mobil-Spalte auf (R21-Querscroll,
+// e2e-Befund Block B). Rein visuelle Zeilenbruch-Erlaubnis, Inhalt/NBSP-
+// Fidelity unberührt (§15: kein Logikverlust).
+const ABSATZ = 'font-serif text-[length:var(--rsp-fs,1.08rem)] leading-[1.7] text-ink-800 whitespace-pre-line break-words';
 const SEKTIONS_ORDNUNG: Record<string, number> = { sachverhalt: 0, erwaegung: 1, dispositiv: 2 };
 
 // ── A1: Inline-Kolumnentitel der amtlichen Sammlung dezent herauslösen ────────
@@ -156,12 +161,12 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
           {nummeriert.map((b, i) => (
             <li key={i} className="grid grid-cols-[1.7rem_minmax(0,1fr)] gap-x-2">
               <span className="num tabular-nums font-semibold text-ink-700">{b.marke}</span>
-              <p className="font-serif text-[length:var(--rsp-fs,1.08rem)] leading-[1.65] text-ink-800 whitespace-pre-line"><BodyText text={b.text} /></p>
+              <p className="font-serif text-[length:var(--rsp-fs,1.08rem)] leading-[1.65] text-ink-800 whitespace-pre-line break-words"><BodyText text={b.text} /></p>
             </li>
           ))}
         </ol>
         {schluss.map((b, i) => (
-          <p key={i} className="mt-4 pt-3 border-t border-line/60 text-body-s text-ink-500 whitespace-pre-line">{b.text}</p>
+          <p key={i} className="mt-4 pt-3 border-t border-line/60 text-body-s text-ink-500 whitespace-pre-line break-words">{b.text}</p>
         ))}
       </>
     );

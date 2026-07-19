@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
-import { themaText, istSynth, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
+import { themaText, istSynth, istBetreff, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
-import { formatiereDatum, spracheBadgeTitel } from './format';
+import { datumAnzeige, DATUM_UNBEKANNT_TITEL, spracheBadgeTitel } from './format';
 
 // Kompakte Listen-Zeile (Default-Dichte). Bezeichnung führt mit dem THEMA/Leitsatz
 // (Auftrag David: man soll schon sehen, worum es geht) — die BGE-Nummer steht als
@@ -29,9 +29,11 @@ export function EntscheidZeile({ e, onNorm }: {
       {/* Overlay-Link über der ganzen Zeile (Navigation); Name = Bezeichnung. */}
       <Link to={ziel} aria-label={bezeichnung} className="absolute inset-0 no-underline" />
 
-      {/* Ganz links — Entscheiddatum (feste Spalte, scanbare Kante). */}
-      <span className="num w-[5.25rem] shrink-0 pt-0.5 text-xs text-ink-500 tabular-nums">
-        {formatiereDatum(e.datum)}
+      {/* Ganz links — Entscheiddatum (feste Spalte, scanbare Kante). Platzhalter
+          datumsloser Entscheide NIE als echtes Datum (§8/BS §7.2): «JJJJ, o. D.». */}
+      <span className="num w-[5.25rem] shrink-0 pt-0.5 text-xs text-ink-500 tabular-nums"
+        title={e.datumUnbekannt ? DATUM_UNBEKANNT_TITEL : undefined}>
+        {datumAnzeige(e.datum, e.datumUnbekannt)}
       </span>
 
       <div className="min-w-0 flex-1 space-y-1.5">
@@ -50,6 +52,12 @@ export function EntscheidZeile({ e, onNorm }: {
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-500">
           <span className="text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</span>
           {synth && <span className="text-micro italic text-ink-500">ohne amtl. Regeste</span>}
+          {/* §8-Ehrlichkeit (Block-B-Kontrakt): die Bezeichnung ist der amtliche
+              Betreff der Trefferliste, KEINE Regeste — offen etikettieren. */}
+          {istBetreff(e) && (
+            <span className="text-micro italic text-ink-500"
+              title="Betreff/Titel aus dem amtlichen Portal — keine Regeste">amtl. Betreff</span>
+          )}
           {e.kuratierung === 'maschinell' && (
             <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
           )}

@@ -112,6 +112,18 @@ export function istSynth(e: BrowseEntscheid): boolean {
 }
 
 /**
+ * true, wenn `regesteKurz` KEINE Regeste trägt, sondern den amtlichen
+ * Betreff/Titel der Quelle (BS-Tranche: regesteKurz = Trefferlisten-Titel des
+ * Portals, regesteVorhanden bleibt false — Bauplan §3.4 «Titel ist Betreff,
+ * KEINE Regeste»). Quellen-agnostisch über die Feld-Kombination, damit künftige
+ * Findinfo-Kantone (F6) das Verhalten erben. §8: ein Betreff wird nie als
+ * Regeste etikettiert oder leitsatz-gestrippt.
+ */
+export function istBetreff(e: BrowseEntscheid): boolean {
+  return !!e.regesteKurz && !e.regesteVorhanden;
+}
+
+/**
  * Schmales Feld-Set für die Thema-Synthese — erfüllt von BrowseEntscheid (Übersicht)
  * UND EntscheidSnapshot (Reader-Kopf). So bleibt synthThema die alleinige SSoT (§5),
  * ohne dass der Reader casten oder eine zweite Kaskade pflegen müsste.
@@ -191,9 +203,23 @@ export function regesteLeitsatz(regesteKurz: string): string {
   return satz.charAt(0).toLocaleUpperCase('de-DE') + satz.slice(1);
 }
 
-/** Leitelement-Text für Karte und Liste: Leitsatz der Regeste, sonst synthThema. */
+// Memo auf die Datenreferenz (§15.4-Muster WeakMap, React Compiler AUS): die
+// Manifest-Einträge sind stabil/unveränderlich; themaText läuft in Filter-Suche
+// (heu je Eintrag) UND Render — mit ~6'300 Einträgen (BS-Tranche) lohnt der
+// Cache. Rein: Ergebnis hängt nur von Feldern des Eintrags ab (§2).
+const themaCache = new WeakMap<BrowseEntscheid, string>();
+
+/** Leitelement-Text für Karte und Liste: Leitsatz der Regeste; amtlicher
+ *  Betreff (istBetreff) verbatim — nie leitsatz-gestrippt (§8); sonst synthThema. */
 export function themaText(e: BrowseEntscheid): string {
-  return e.regesteKurz ? regesteLeitsatz(e.regesteKurz) : synthThema(e);
+  let t = themaCache.get(e);
+  if (t === undefined) {
+    t = e.regesteKurz
+      ? (e.regesteVorhanden ? regesteLeitsatz(e.regesteKurz) : e.regesteKurz)
+      : synthThema(e);
+    themaCache.set(e, t);
+  }
+  return t;
 }
 
 /** Filter über das Manifest (Client, deterministisch, kein FTS). Leere Werte → kein Filter. */

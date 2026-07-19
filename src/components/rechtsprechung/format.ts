@@ -6,6 +6,19 @@ export function formatiereDatum(iso: string): string {
   return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
 }
 
+/**
+ * Datums-Zelle für Karte/Zeile: ein Platzhalterdatum (datumUnbekannt, BS §7.2)
+ * NIE als echtes Datum zeigen (§8) — stattdessen «JJJJ, o. D.» (Jahr aus der
+ * Geschäftsnummer, ohne Datum); Tooltip via DATUM_UNBEKANNT_TITEL.
+ */
+export function datumAnzeige(iso: string, datumUnbekannt?: boolean): string {
+  return datumUnbekannt ? `${iso.slice(0, 4)}, o. D.` : formatiereDatum(iso);
+}
+
+/** Ehrlicher Tooltip zur «o. D.»-Zelle (§8). */
+export const DATUM_UNBEKANNT_TITEL =
+  'Entscheiddatum nicht publiziert — Jahr aus der Geschäftsnummer';
+
 /** Kanton-Anzeige: 'CH' → 'Bund', sonst das Kürzel. */
 export function kantonLabel(kanton: string): string {
   return kanton === 'CH' ? 'Bund' : kanton;

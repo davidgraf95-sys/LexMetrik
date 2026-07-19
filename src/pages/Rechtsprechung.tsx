@@ -168,7 +168,7 @@ export function Rechtsprechung() {
       <SeitenKopf
         overline="Bundesgericht & Kantone"
         titel="Rechtsprechung"
-        intro="Kuratierte Auswahl von Entscheiden des Bundesgerichts und kantonaler Gerichte — Leitentscheide und Sachfrage zuerst, verzahnt mit der angewandten Norm. Daten: OpenCaseLaw. Massgeblich bleibt stets die amtliche Fassung."
+        intro="Kuratierte Auswahl von Entscheiden des Bundesgerichts und kantonaler Gerichte — Leitentscheide und Sachfrage zuerst, verzahnt mit der angewandten Norm. Daten: OpenCaseLaw und amtliche Gerichts-Portale (z. B. Basel-Stadt). Massgeblich bleibt stets die amtliche Fassung."
       />
 
       {fehler && (
