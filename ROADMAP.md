@@ -118,6 +118,8 @@ darum ist die Verzahnung Burggraben UND das Kriterium, nach dem neue Schritte ei
 wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offen)
 §4-lizenz: Live-Rechtsprechung — CC-BY-SA vs. Art. 5 URG, CORS/Rate-Limits unbestätigt
 26x-slot: BELEGT durch E3 (W2·6-DATA, seit 3.7.2026 — BGer-Massen-Import); W3·12 wartet dahinter (Leitprinzip 4)
+zeit-historik-poc: Norm-Zeitmaschine/Fassungs-Diff (W2·5e-ZEIT) — historische Fedlex-Konsolidierungs-Extraktion fehlt (auf Platte nur die geltende Fassung; SPARQL dateApplicability vorhanden, Durchlauf gross); POC + Bau-GO je Kandidat durch David ausstehend
+richter-analytik-gate: Richter-/Spruchkörper-Analytik (W3·15-RICHTER) — nur deskriptiv, kein Erfolgs-Ranking und keine Prognose; bewusste Freigabe Davids erforderlich (heikel: Standesrecht, Persönlichkeitsschutz, richterliche Unabhängigkeit)
 -->
 
 <!-- @slot-kette (dokumentarisch; harte Prüfung via @meta-Feld `slot: inhaber`, check.ts 5b)
@@ -307,6 +309,24 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   je Gate notiert was danach noch zu VERDRAHTEN bleibt). Teilbare Einheiten gesplittet: Dossier/Entwurf/Skript/Tor
   = §A (jetzt), Bestellung/Freigabe/Kauf = §B. **§A wird jetzt autonom gebaut** (je Einheit Worktree+PR+Auto-Merge);
   Trailer `Roadmap: QS-BASIS`.
+- [ ] **`QS-UI` — Oberflächen-Qualität app-weit** *(Ideen-Intake 20.7.2026 · reines UI/Design, §13 · kontinuierlich)*
+  <!-- @meta id: QS-UI · status: ready · of: ja · blocker: null · dep: [] · kollision: [DESIGN-REGLEMENT.md, src/index.css, tailwind.config.js, scripts/check-farbwelt.ts, e2e] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-QUALITAET.md -->
+  **Kein Einzel-Redesign und kein Reihenfolge-Slot**, sondern ein **kontinuierlicher, mess-getriebener
+  Querschnitt-Strang** auf dem vorhandenen Fundament: Dach-`DESIGN-REGLEMENT.md` + 4 Domänen-Reglemente,
+  Tor `scripts/check-farbwelt.ts` (OKLCH/WCAG/APCA) und `@axe-core/playwright`. **Nordstern:
+  Kanzlei-Praxistauglichkeit** — nicht Schönheit, sondern schneller zum belegten Ergebnis.
+  **Teil-Schritte statt vagem «UI besser machen»:** **(a) Fundament-Pass** app-weit gemeinsame Muster
+  und Navigation · **(b) Informationshierarchie-Pass** «Verdikt zuerst, Warum auf Abruf» (§13.2) über
+  alle Werkzeuge · **(c) Muster-/Navigations-Konsistenz** (⌘K, Verlauf, Breadcrumb) · **(d)
+  Kanzlei-Alltags-Flow-Audits** domänenweise gegen das jeweilige Reglement · **(e) Gate-Verschärfung**
+  (Farbwelt-Baseline enger ziehen, axe von Stichprobe auf Flächendeckung, ggf. Flow-/Hierarchie-Checks).
+  **Feasibility 🟢 aus-Bestand** (Reglemente + Farbwelt-Gate + axe stehen). **Abgrenzung (§14.3,
+  verbindlich):** `QS-UI` **koordiniert und härtet**, es **dupliziert nicht** `W2·10-UI-NAV`
+  (Navigations-Plumbing), `W2·11-DESIGN` (Farbwärme) oder `W3·14` (Split/Responsive) — diese bleiben die
+  konkreten Sub-Efforts, die dieser Strang treibt und einfordert. Nachgelagert hängt
+  **`W2·5f-GESETZ-UI`** (Gesetzes-Fläche) an diesem Fundament. Detailquelle: **`FAHRPLAN-UI-QUALITAET.md`**.
+  **DoD je Teil-Schritt:** §13-Tore grün (`check:farbwelt`, axe) · golden byte-gleich, wo die Änderung
+  verhaltensrelevant ist. Trailer `Roadmap: QS-UI`.
 
 ---
 
@@ -461,6 +481,23 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Cockpit. **I2 bleibt blockiert** (⟵ Recherche `wbqdyap3x`: Schlichtungs-/Reduktions-/
   Rechtsmittel-Modifikatoren). Festsetzung/Dispositiv → Welle 2. **26×-Slot damit frei** →
   Voraussetzung für Welle 3 · Schritt 12 erfüllt.
+- [ ] **5-PRAXIS · Frist × Kosten verzahnen** *(Ideen-Intake 20.7.2026 · UI-Orchestrierung, `[OF]`)*:
+  <!-- @meta id: W1·5-PRAXIS · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/rechnerPermalinks.ts, src/lib/permalink.ts, src/lib/icsExport.ts, src/pages, src/components/forms] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-PROZESSKOSTEN-COCKPIT.md -->
+  Die heute isoliert nebeneinander stehenden Rechner zu **einem Praxis-Workflow verketten**:
+  Streitwert-Ergebnis → Gerichtskosten + Parteientschädigung; Rechtsmittelfrist ab Entscheiddatum ×
+  Kanton × Gerichtsferien → in denselben Kostenfluss und in den `.ics`-Export. **Baut vollständig auf
+  Gebautem:** `prozesskosten.ts` (Art. 95 ZPO, alle 26 Kantone), `streitwert.ts`, `staffel.ts`,
+  `zpoFeiertage.ts`/`schkgFeiertage.ts` (Computus + 26-Kantone-Feiertagsmatrix, BJ-verifiziert),
+  `fristenEngine.ts` + Fachlader, `rechnerPermalinks.ts`/`permalink.ts` (Prefill), `icsExport.ts`.
+  **Feasibility 🟢 aus-Bestand — ehrlich:** es fehlt **nur eine dünne UI-Orchestrierungs-/Prefill-Schicht**
+  (Ergebnis-Übergabe zwischen Rechnern), **kein neues Rechenfundament**; keine offene technische Frage.
+  **Nicht zu verwechseln mit `W1·4`** (Prozesskosten-Cockpit, `parked` auf `wbqdyap3x`): W1·4 betrifft
+  Cockpit-Interna und Reduktionsfaktoren und ist blockiert — W1·5-PRAXIS ist die cross-Rechner-
+  Verzahnungsschicht darüber und **unblockiert**; kein Parallel-Schritt zur selben Bau-Fläche (§14.3).
+  Offen ist allein die Formfrage (eigene «Kosten-Cockpit»-Fläche vs. Prefill-Deep-Links) — Entscheid
+  beim Bau, kein Blocker. Detail: `FAHRPLAN-PROZESSKOSTEN-COCKPIT.md` §Verzahnung. **DoD:** §6-/§9-Tore
+  grün · **golden byte-gleich** (Engines bleiben unberührt) · `check:gegenpruefung` nur, falls doch ein
+  Risiko-Glob berührt wird — sauberes Chaining vermeidet das. Trailer `Roadmap: W1·5-PRAXIS`.
 
 ### Welle 2 — Griff (Auffindbarkeit) + Konsultieren + mehr Klingen
 
@@ -854,6 +891,40 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   David-Gate Platzierung) · EID-3 Folge-Härtungen (Breadcrumb-eIds → teilbare Sektions-Deep-Links,
   Linien-Tiefe aus eId-Pfadlänge; optional, David-Gate wegen A27/§11.7 SektionKontextKopf).
   Bau-Go der Einheiten ausstehend (§12.5, David-Gates ans Ende). Trailer `Roadmap: W2·5d`.
+- [ ] **5e-ZEIT · Norm-Zeitmaschine + Fassungs-Diff** *(Ideen-Intake 20.7.2026 · Extraktion, `QS-GP`)*:
+  <!-- @meta id: W2·5e-ZEIT · status: blocked · of: ja · blocker: zeit-historik-poc · dep: [] · kollision: [scripts/normtext, src/lib/normtext, public/normtext] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZESDARSTELLUNG-V2.md -->
+  «Art. X, wie er am Tag Y galt» (verknüpft mit dem Entscheiddatum) + **visueller Diff zweier
+  Konsolidierungen**. Konsolidiert die heute verstreute Planung in **eine** getrackte Einheit: **M16**
+  «Point-in-Time» (freigeschaltet nach AKN-XML-Phase 1) + **G-HIST** als Daten-Unterbau.
+  **Feasibility ehrlich getrennt — die zwei Hälften sind sehr ungleich (§8):**
+  🟢 **Metadaten-Timeline** («gilt seit …» / «was änderte sich wann») ist aus dem Bestand baubar und
+  **läuft bereits** als G-HIST-UI (`public/normtext/historie/*.json` mit `giltSeit` + `ereignisse[]`
+  aus Datum/Absatz/AS-ELI) — **hier nicht duplizieren**.
+  🟠 **Der eigentliche Wunsch — echter Alt-Volltext plus Alt-vs-Neu-Wortdiff — BRAUCHT ZUSATZDATEN und
+  ist GROSS:** auf Platte liegt je Norm **nur die geltende Fassung** (ein `stand`/`fassungsToken`/
+  `bloecke` je Artikel); die Historie liefert Änderungs-**Metadaten, nicht den historischen Text**. Die
+  Fähigkeit ist vorhanden (Fedlex `jolux:Consolidation`/`dateApplicability` via SPARQL — `fedlex-versionen-pruefen.ts`
+  fragt das bereits ab), aber es braucht einen **neuen historischen Extraktions-Durchlauf** (N Konsolidierungen
+  × 227 Erlasse) samt neuem Speicher- und §7-Provenienz-Modell. Der Diff selbst ist danach
+  trivial-deterministisch (String-Diff, §2) — **der Aufwand steckt vollständig in der Daten-Beschaffung.**
+  **Etappe Z0 (blocker-auflösend, vor jedem Bau):** POC historische Konsolidierungs-Extraktion +
+  Speicher-/Provenienz-Entwurf + **Bau-GO je Kandidat durch David** (analog zum bestehenden
+  G-HIST-Intake-Vorbehalt). POC-Rahmen und Kostenschätzung:
+  `bibliothek/recherche/norm-zeitmaschine-poc.md`. Timeline-Detail `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake`.
+  **DoD:** POC-Verdikt + David-GO **vor** Bau · `check:normtext`/`check:normtext-netz` ·
+  `check:gegenpruefung` · §7 a–d je Fassung · golden byte-gleich. Trailer `Roadmap: W2·5e-ZEIT`.
+- [ ] **5f-GESETZ-UI · Gesetzes-Webseite: UX-Pass** *(Ideen-Intake 20.7.2026 · reine UI/Darstellung)*:
+  <!-- @meta id: W2·5f-GESETZ-UI · status: ready · of: ja · blocker: null · dep: [QS-UI, W2·5d] · kollision: [src/pages/gesetz-leser, src/pages/GesetzLeser.tsx, src/components/normtext, src/components/suche] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZES-UX.md -->
+  **Folgeschritt aus `QS-UI`** (Davids Sequenz: erst app-weit, dann die Gesetzes-Fläche): die Rubrik
+  `/gesetze` und der Gesetz-Leser maximal tauglich für die tägliche Norm-Arbeit — Normtext-Darstellung,
+  Gliederung/TOC, Split-View im Leser, Suche im Gesetz, Fussnoten und Marginalien. **Baut auf** `W2·5d`
+  (Gesetzes-UX, G0/G1/G2a gebaut) und `W3·14` (Split-View). **Feasibility 🟢 aus-Bestand.**
+  **Detailquellen sind die bestehenden Gesetzes-Fahrpläne — hier bewusst NICHT dupliziert (§14.3):**
+  `FAHRPLAN-GESETZES-UX.md` (G-Etappen) und `FAHRPLAN-NORMTEXT-DARSTELLUNG.md`; diese Einheit bündelt
+  allein den 8b-UX-Pass darauf. Sequenz-Begründung: erst müssen die gemeinsamen Muster und die
+  Informationshierarchie aus `QS-UI` stehen, sonst wird die Gesetzes-Fläche zweimal angefasst.
+  **DoD:** `check:perf-budget` · `check:linien-kanon` · `e2e/leser-lesemass` · axe · **golden byte-gleich
+  (Normtext-Treue §15 — Tempo gewinnt nie gegen Treue)**. Trailer `Roadmap: W2·5f-GESETZ-UI`.
 - [ ] **5e · UI-Nutzwert & Navigation (Ultracode-Synthese 11.7.)** *(`[OF]`, reine UI/Navigation)*:
   <!-- @meta id: W2·10-UI-NAV · status: ready · of: ja · blocker: null · dep: [W2·5d] · kollision: [src/components/suche, src/lib/suche, src/lib/universalSuche.ts, src/components/layout, src/components/rechtsprechung, src/pages/Rechtsprechung.tsx, src/pages/gesetz-leser, src/pages/GesetzLeser.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-NAVIGATION.md -->
   Priorisierter UI-Verbesserungs-Plan aus 60 empirischen Befunden + 3 Kritik-Linsen
@@ -1003,6 +1074,25 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     - [x] **Verweis-Präzision im Entscheid-Leser (Referenz BGE 151 III 377)** *(W2·6, `QS-GP`, 3.7.2026)*. i.V.m.-Ketten-Verlinkung (Kürzel auf bare Glieder propagiert, `normVerweiseImText`) + Zitierte-Normen-Chips → Sprung zur ersten Fundstelle-Erwägung; Tore grün, Snapshots additiv. **Chronik:** `ROADMAP-CHRONIK.md` → W2·6/Verweis-Präzision.
     - [x] **BGE-Auszug abgeschnitten — vollständig gefixt (34/34)** *(W2·6-BGE, Inhaltsverlust, `[OF]`)*. 29.6.2026: still mitten im Wort gekappte Auszug-Erwägungen voll nachgeladen (`fuelleGekappteErwaegungen` + Id-Disambiguierung) + Schutz-Tor U+2026 in `check:entscheide`; alle 34 BGE regeneriert, golden byte-gleich. Öffnet keinen 26×-Slot. **Chronik:** `ROADMAP-CHRONIK.md` → W2·6/BGE-Auszug.
       - [x] **Rest 30.6.2026 geschlossen** — `bge_151_V_1`/`bge_151_V_30` via Id-Disambiguierung sauber re-gefetcht (kein Hand-Edit §7), WARN-Quarantäne entfernt. **Chronik:** `ROADMAP-CHRONIK.md` → W2·6/BGE-Auszug.
+- [ ] **6-ZNETZ · Zitationsnetz: Rückwärts-Zitate + Leitentscheid-Score** *(Ideen-Intake 20.7.2026 · Daten-Derivation, `QS-GP`)*:
+  <!-- @meta id: W2·6-ZNETZ · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/verzahnung, src/lib/verzahnung, src/lib/rechtsprechung, public/rechtsprechung] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-VERZAHNUNG-UI.md -->
+  «Welche Entscheide zitieren diesen?» (Rückwärts-Kanten) + **Leitentscheid-Score nach Zitierhäufigkeit**.
+  **Baut auf** hartem Bestand: jeder Entscheid-Snapshot trägt bereits `zitierteEntscheide` (BGE-Zitate UND
+  Geschäftsnummern; 200-BGE-Stichprobe = 2566 Kanten), die Vorwärts-Auflösung läuft schon zur Laufzeit
+  (`src/lib/verzahnung/entscheid-kanten.ts` gegen `register.json`), und ein **1:1-Vorbild für den
+  Build-Zeit-Rückwärts-Index existiert**: `scripts/normtext/entscheide-schreiben.ts` schreibt bereits
+  `register.json` + `norm-index.json` + Leitfall-Shards (Typen `src/lib/rechtsprechung/norm-index.ts`).
+  **Feasibility ehrlich zweistufig:**
+  🟢 **kuratierter Korpus** (5093 Snapshots auf Platte) ist jetzt baubar — der neue Build-Generator ist
+  der Spiegel des norm-index-Generators (+ Shards + UI-Chip). 🟠 **Long-Tail über die 195k Massen-Entscheide
+  ist es NICHT:** er hängt am nicht ausgelieferten ~5,7-GB-Artefakt `masse.db` (dort liegt `zitat_kanten`
+  mit `ix_zitat_nach` bereits vor) und fällt damit in **`W2·6-DATA` E3-Serving/E4** — kein Parallel-Schritt
+  (§14.3). **UI läuft in `W2·7-VZUI` V2 ein** («Wird zitiert von» + Startseiten-Kachel «Meistzitierte
+  Artikel») und wird hier **nicht doppelt geplant**. **Score bleibt deskriptiv** — reine Zählhäufigkeit mit
+  ausgewiesener Grundgesamtheit, kein LLM-Ranking und keine Qualitätsaussage (§2/§8). Feasibility-Beleg:
+  `bibliothek/recherche/zitationsnetz-feasibility.md`. **DoD:** Generator deterministisch (2 Läufe
+  byte-gleich) · `check:gegenpruefung` bestanden · golden byte-gleich · Tore grün. Trailer
+  `Roadmap: W2·6-ZNETZ` + `Gegenpruefung: <Verdikt>`.
 - [ ] **6-VZUI · Verzahnung sichtbar machen** *(David-Auftrag 3.7.2026; reine UI auf vorhandenen Daten)* — **V1a ✅ GEBAUT 3.7.2026** (PRs #118/#121/#122 + e2e/Doku-PR; Fundament + Vereinheitlichung + Entscheid beide Richtungen + alle 4 Zusatzaufträge; 13 Verzahnungs-e2e grün, Referenzfall ZGB 684→BGE 151 III 377 = E. 2.3.1) · **V1c ✅ GEBAUT 4.7.2026** (Normrevisions-Ehrlichkeit: Build-Extrakt `public/verzahnung/artikel-revisionen/` 201 Erlasse/12702 Artikel + `klassifiziereFassungsBezug` in LeitfallZeile/KontextPanel/EntscheidLeser + `StatusBadge revidiert` ↻ mit Revisionsdatum+AS; Gegenprüfung bestanden — 3 reale Parser-Bugs gefixt, 0 Rest über 12702 Belege + 10 Artikel gegen Fedlex; 22 Unit + e2e AIG Art. 5/34); **V1b ✅ GEBAUT 4.7.2026** (Branch `feat/vzui-v1b-rangliste`; E4-Rangliste in die 19 Leitfall-Shards eingebacken: `norm_rangliste`-`gewicht` ersetzt build-time das kuratierte, Provenienz NIE gemischt — `gewichtQuelle:'e4'|'alt'` je Shard, 5 e4 [AHVG/AVIG/BVG/ELG/VVG] / 14 alt [vintage-absent Band-152-BGE oder Recall-Lücke]; masse.db-Rebuild deterministisch [195 342 Entscheide, Resolve-Quote 0,8245], Oracle-Tor GRÜN 931 Tripel/0 UNERKLÄRT, `check:entscheide` prüft Membership+Monotonie masse-frei; **727a-Vorbestands-Bug gefixt** [`normArtikelToken` strippt `_`, Reader-Query `727_a`→Shard `727a`]; Gegenprüfung bestanden) · **offen: V2 (E3-Serving) · V2 (E3-Serving) · V3 (E6a)**:
   <!-- @meta id: W2·7-VZUI · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/pages/gesetz-leser/parts.tsx, src/components/kontext/KontextPanel.tsx, src/pages/EntscheidLeser.tsx, src/components/NormPopover.tsx, src/components/suche/SuchResultate.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-VERZAHNUNG-UI.md -->
   EINE Interaktions-Grammatik (KantenChip · StatusBadge nur-Abweichung · KontextGruppe-Overlines ·
@@ -1027,6 +1117,18 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 - [ ] **8 · Schriften-Baukasten** *(VORLAGEN, Worktree)* — Berufung/BGG-Beschwerde/Sistierung/
   <!-- @meta id: W2·8 · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/vorlagen] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-VORLAGEN-AUSBAU.md -->
   Beweisverzeichnis über `vorlagen/engine.ts`; Zulässigkeit nur Hinweis, Status «entwurf».
+  - [ ] **Zitat-Export & Fussnoten-Ausgabe** *(Ideen-Intake 20.7.2026, `[OF]`, klein → inline §14.1)* —
+    Ein-Klick-Zitat in korrekter amtlicher Form (`BGE 148 III 1 E. 2.3` · `BGer 5A_691/2023 vom …`)
+    plus **Word-Fussnoten-Export** einer gesammelten Zitatliste. **Baut auf** fertigem Bestand:
+    `src/lib/gerichtszitat.ts` (deterministischer BGE/BGer-Formatierer),
+    `src/lib/rechtsprechung/ecli.ts` (ECLI-Minting), `src/lib/rechtsprechung/zitat-extraktion.ts`,
+    `src/components/useKopieren.ts`, `src/lib/vorlagen/vorlagenDocx.ts` (produktiver docx-Renderer, `docx ^9.7.1`) und dem
+    bereits gebauten Gerichts-Baustein-Set aus `W2·7` (Zitierer + Rubrum). **Feasibility 🟢
+    aus-Bestand:** nur ein **dünner Renderer** (docx-Fussnoten über die vorhandenen
+    `gerichtszitat`/`ecli`-Ausgaben) + Verdrahtung an Entscheid- und Norm-Ansichten — keine neue
+    Abhängigkeit, kein neues Fundament. Detail in `FAHRPLAN-VORLAGEN-AUSBAU.md`. **DoD:** golden
+    byte-gleich · Zitierform stichprobenweise gegen die amtliche Fundstelle geprüft · Tore grün.
+    Trailer `Roadmap: W2·8`.
 - [ ] **9 · Aufräum-Item** *(UX-PUNKTELISTE ⚫ überholt)*. Deliverable = Mapping-Tabelle
   <!-- @meta id: W2·9 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-UX-PUNKTELISTE.md -->
   **alt-Punkt → Code-Pfad → Status**, *bevor* Restpunkte C2/C5 angefasst werden.
@@ -1063,6 +1165,23 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   kein Parallel-Schritt** (§14.3). Risikopfade (Tarif/Extraktion) je Opus + `gegenpruefung`.
   Verworfen u. a. Client-Kanton-Suchindex (K10/§15-Arbiter). Detail: **`FAHRPLAN-KANTONE.md`**.
   Trailer `Roadmap: W2·13-KANTONE`.
+- [ ] **14-SIGNAL · Watchlist & Änderungs-Signale** *(Ideen-Intake 20.7.2026 · Infra/UI, kein Rechtsinhalt)*:
+  <!-- @meta id: W2·14-SIGNAL · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-wiedervorlage-generieren.ts, public/normtext/currency.json, src/lib/zuletztVerwendet.ts, src/pages] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
+  «Sag mir, wenn sich Norm Y ändert / Gericht X neu entscheidet.» **Baut auf** vorhandener Currency-/
+  Drift-Infra: `check:fedlex-versionen`, `check:rss-oc`, `scripts/fedlex-wiedervorlage-generieren.ts`,
+  `register/parameter-verfall.md`, `public/normtext/currency.json`, Muster `src/lib/zuletztVerwendet.ts`.
+  **Feasibility bewusst gespalten (§8) — die zwei baubaren Stufen sind NICHT das, wonach es klingt:**
+  **B1 🟢 statischer Änderungs-Feed** (RSS/Atom/JSON, zur Build-Zeit aus `currency.json` + Verfallsregister
+  erzeugt, analog `gen:fedlex-wiedervorlage`) · **B2 🟢 Client-Watchlist** (localStorage-Liste gemerkter
+  Normen/Gerichte, beim Besuch gegen das statische `currency.json` geprüft → «seit deinem letzten Besuch
+  geändert»-Flag; exakt das `zuletztVerwendet`-Muster). Beide sind **zustandslos-konform** und aus dem
+  Bestand baubar. **🟠 Echtes Push-/E-Mail-Abo ist ein Architektur-BRUCH** — es verlangt Nutzeridentität,
+  serverseitigen Subscription-State und einen Sendedienst und verletzt damit «Werkzeuge bleiben zustandslos»
+  (CLAUDE.md §5): **kein Bau ohne ausdrücklichen Architektur-Entscheid Davids**, und **nicht** in den
+  B1/B2-Bau mischen. Optionen-Vergleich (B1/B2/Push, mit Kosten und Bruchstellen):
+  `bibliothek/recherche/watchlist-signale-architektur.md`. Currency-Fläche: `FAHRPLAN-FEDLEX-PORTFOLIO.md`;
+  lose an `QS-CURRENCY`. **DoD:** Feed-Generator deterministisch (2 Läufe byte-gleich) · **keine
+  Mandats-/Personendaten in localStorage** (§8, Berufsgeheimnis) · Tore grün. Trailer `Roadmap: W2·14-SIGNAL`.
 
 ### Welle 3 — Tiefe / Breite (opportunistisch)
 
@@ -1131,6 +1250,22 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     nur `aria-modal="true"`); Fix = Guard auf offenen fokus-gefangenen Drawer weiten. **#7**
     `Shell.tsx` F6-Handler ordnet Fokus auf PaneKopf-Knopf/Gutter dem falschen Pane zu; Fix =
     `data-pane-root`-Marker + `closest()`. (#1/#2 MITTEL + #3/#5 NIEDRIG am 29.6. gefixt + deployt.)
+- [ ] **15-RICHTER · Spruchkörper-Analytik** *(Ideen-Intake 20.7.2026 · **bewusst freigabe-pflichtig**)* —
+  <!-- @meta id: W3·15-RICHTER · status: blocked · of: ja · blocker: richter-analytik-gate · dep: [] · kollision: [] · worktree: ja · 26x: nein -->
+  Ziel = **ausschliesslich deskriptive** Spruchkörper-Muster auf Entscheid-Metadaten (z. B. Verteilung
+  von Sachgebieten/Verfahrensausgängen der Form nach je Kammer und Zeitraum). **Harte Leitplanke, die
+  den Bau bindet:** **kein** Erfolgs-/Trefferquoten-Ranking einzelner Richterinnen und Richter, **keine**
+  Prognose («wie entscheidet X wohl»), **keine** Bewertung von Personen — nur ehrliche, quellengestützte
+  Deskription mit ausgewiesener Grundgesamtheit und offengelegten Grenzen (§8). Richterliche Unabhängigkeit,
+  Persönlichkeitsschutz und Standesrecht gehen der Auswertbarkeit vor; im Zweifel wird weggelassen.
+  **Baut auf** dem separat laufenden **Richter-Filter-Fundament** (Branch `feat/richter-fundament`,
+  Auftrag David 20.7.2026) — dessen Intake wird hier **nicht dupliziert** (§14.3), diese Einheit ist
+  allein die *darauf aufsetzende Analytik-Schicht*. **Feasibility: 🔴 technisch nachgelagert machbar,
+  aber gesperrt** — Bau erst nach ausdrücklicher Freigabe Davids (`richter-analytik-gate`). Detailquelle
+  vorerst `bibliothek/recherche/richter-analytik-leitplanken.md` (Leitplanken + deskriptiver Scope);
+  eine `FAHRPLAN-RICHTER-ANALYTIK.md` entsteht **erst nach** der Freigabe. **DoD:** Freigabe dokumentiert ·
+  adversariale Prüfung «kein verstecktes Ranking» bestanden · §8-Offenlegung der Aussagegrenzen.
+  Trailer `Roadmap: W3·15-RICHTER`.
 
 ### Studierende-Layer (querliegend, `[OF]`, billig)
 
