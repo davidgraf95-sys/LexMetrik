@@ -1,0 +1,1427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Kanton Basel - FindInfoWeb</title>
+	<!-- special styles for media = "screen" -->
+   <link rel="stylesheet" href="/findinfo/stylesheets/findinfoweb_screen.css" type="text/css" media="screen" />
+	<!-- special styles for media = "print" -->
+	<link rel="stylesheet" href="/findinfo/stylesheets/findinfoweb_print.css" type="text/css" media="print" />
+	<!-- WORD DOCUMENT STYLES (werden hier automatisch hinzugefügt, wenn die 1. Zahl im Juris Parameter "FindInfoWeb: Allgemeine Einstellungen" gleich 0 ist.) -->
+	<style type="text/css">
+	<!-- /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:'Cambria Math';
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Univers;
+	panose-1:2 11 6 3 2 2 2 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;}
+h1
+	{mso-style-name:'Überschrift 1\,00 Arabisch fortlaufend';
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;
+	font-weight:normal;}
+h2
+	{mso-style-name:'Überschrift 2\,00 Arabisch fortlaufend Unterziffer';
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:0cm;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	line-height:14.0pt;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:11.0pt;
+	font-family:'Arial',sans-serif;}
+p.gehtan, li.gehtan, div.gehtan
+	{mso-style-name:'geht an';
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:16.0pt;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:'Univers',sans-serif;}
+p.aaRmischfortlaufend, li.aaRmischfortlaufend, div.aaRmischfortlaufend
+	{mso-style-name:'aa Römisch fortlaufend';
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;
+	font-weight:bold;}
+p.aaEntscheidungsgrnde, li.aaEntscheidungsgrnde, div.aaEntscheidungsgrnde
+	{mso-style-name:'aa Entscheidungsgründe';
+	margin-top:60.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;
+	font-weight:bold;}
+p.aaText, li.aaText, div.aaText
+	{mso-style-name:'aa Text';
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;}
+p.aaDispositiv, li.aaDispositiv, div.aaDispositiv
+	{mso-style-name:'aa Dispositiv';
+	mso-style-link:'aa Dispositiv Zchn';
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;}
+span.aaDispositivZchn
+	{mso-style-name:'aa Dispositiv Zchn';
+	mso-style-link:'aa Dispositiv';
+	font-family:'Arial',sans-serif;}
+p.aaTatsachen, li.aaTatsachen, div.aaTatsachen
+	{mso-style-name:'aa Tatsachen';
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;
+	font-weight:bold;}
+p.aaRmisch1, li.aaRmisch1, div.aaRmisch1
+	{mso-style-name:'aa Römisch 1';
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;
+	font-weight:bold;}
+p.aaArabisch1, li.aaArabisch1, div.aaArabisch1
+	{mso-style-name:'aa Arabisch 1';
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;}
+p.aaArabisch1Unterziffer, li.aaArabisch1Unterziffer, div.aaArabisch1Unterziffer
+	{mso-style-name:'aa Arabisch 1 Unterziffer';
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:0cm;
+	line-height:120%;
+	font-size:12.0pt;
+	font-family:'Arial',sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 70.9pt 76.55pt 70.9pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+	-->
+	</style>
+	<!-- /WORD DOCUMENT STYLES -->
+	<!-- FINDINFO STYLES -->
+	<style type="text/css">
+	<!--
+		/* special styles for media = "screen" */
+		a.searchterms {
+			color:black;
+			background-color:#FFFFC0;
+			font-weight:bold;
+		}
+		
+		div#fiwcontent *, table.default tr td {
+			font-size: 11pt;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	-->
+	</style>
+	<!-- /FINDINFO STYLES -->
+	<!-- FINDINFOWEB JSCRIPT -->
+	<script src="/findinfo/scripts/script.js" type="text/javascript"></script>
+	<!-- /FINDINFOWEB JSCRIPT -->
+</head>
+<body>
+<!-- CUSTOM HEADER (customize as you wish) -->
+<div id="header">
+	<table class="header">
+		<tr align="left" valign="top"> 
+			<td><a href="http://www.gerichte.bs.ch" target="_top"><img src="/findinfo/images/logo_gerichte.png" alt="Basel-Stadt" border="0"></a></td>
+		</tr>
+	</table>
+</div>
+<!-- /CUSTOM HEADER -->
+
+<!-- FINDINFOWEB NAVIGATION PANEL (required) -->
+<div id="fiwnavigation">
+	<fiw:layout-component name="navigation" />
+</div>
+<!-- /FINDINFOWEB NAVIGATION PANEL -->
+
+<!-- FINDINFOWEB CONTENT PANEL (required) -->
+<div id="fiwcontent">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<!-- This table is needed in order that scrolling works properly with IE7! -->
+		<tr>
+			<td>
+	<!-- GOTOFIRSTMATCH (fulltextsearch only) -->
+	<div class="notprintable">
+	<table width="100%" class="default">
+		<tr>
+			<td>
+				<br /><br />
+			</td>
+		</tr>
+	</table>
+	</div>
+	<!-- /GOTOFIRSTMATCH (fulltextsearch only) -->
+	
+	<!-- METADATA -->
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<table  border="0" cellspacing="0" cellpadding="0">
+					<tr>
+					<td nowrap="nowrap" width="180"><b>Gesch&auml;ftsnummer:</b></td> 
+						<td width="5000"><b>IV.2025.93</b> (SVG.2026.119)</td>
+					</tr>
+					<tr>
+						<td nowrap="nowrap" >Instanz:</td> 
+						<td>Sozialversicherungsgericht</td>
+					</tr>  
+					<tr>
+						<td nowrap="nowrap" >Entscheiddatum:</td> 
+						<td>&nbsp;</td>
+					</tr>  
+					<tr>
+						<td nowrap="nowrap" class="customHeight"><acronym title="Datum der ersten Publikation im Internet">Erstpublikationsdatum</acronym>:</td> 
+						<td>23.06.2026</td>
+					</tr>  
+					<tr>
+						<td nowrap="nowrap" class="customHeight"><acronym title="Datum der letzten Aktualisierung im Internet">Aktualisierungsdatum</acronym>:</td> 
+						<td>10.07.2026</td>
+					</tr>
+					<tr><td colspan="2" height="10"></td></tr>
+					<tr>
+						<td style="vertical-align: top;"><b>Titel:</b></td> 
+						<td><b>IVG Invalidenrente</b></td>
+					</tr>
+				</table>
+			</td>
+			<td>&nbsp;</td>
+			<td width="200" align="right" nowrap="nowrap" rowspan="6">
+				<table cellpadding="0" cellspacing="0" width="100%" class="stiwos">
+					<!--
+					<tr>
+						<td style="background-color: #636163; color: #FFFFFF; text-align: right; font-size: 11px;">Stichworte:</td>
+					</tr>
+					<tr>
+						<td style="padding: 3px 2px;">
+							
+						</td>
+					</tr>
+					<tr><td height="2px" style="background-color: #DDDDDD;"></td></tr>
+					-->
+					<!--
+					<tr>
+						<td style="background-color: #636163; color: #FFFFFF; text-align: right; font-size: 11px;">Gesetzesartikel:</td>
+					</tr>
+					<tr>
+						<td style="padding: 3px 2px;">
+							
+						</td>
+					</tr>
+					-->
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!-- /METADATA -->
+	
+	<!-- DOCUMENT -->
+	<table width="100%">
+		<tr>
+			<td width="20">&nbsp;</td>
+			<td>
+				<br /><br />
+				
+
+<div class="WordSection1">
+
+<table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tr style="height:80.85pt">
+  <td width="79" valign="top" style="width:59.4pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:80.85pt">
+  <p class="aaArabisch1Unterziffer"><img width="39" height="60" src="/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&amp;WebServerUrl=&amp;WebServerScript=/cgi-bin/nph-omniscgi.exe&amp;OmnisLibrary=JURISWEB&amp;OmnisClass=rtFindinfoWebHtmlService&amp;OmnisServer=JURISWEB,7000&amp;Parametername=WEB&amp;Schema=BS_FI_WEB&amp;Source=&amp;Aufruf=getImage&amp;nF38_KEY=139529" alt="" /></p>
+  </td>
+  <td width="535" valign="top" style="width:401.2pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:80.85pt">
+  <p class="MsoNormal"><span style="font-size:18.0pt">Sozialversicherungsgericht</span></p>
+  <div style="border:none;border-bottom:solid windowtext 1.0pt;padding:0cm 0cm 1.0pt 0cm">
+  <p class="MsoNormal" style="border:none;padding:0cm"><span style="font-size:
+  18.0pt">des Kantons Basel-Stadt</span></p>
+  </div>
+  <p class="MsoNormal"><span style="font-size:18.0pt">&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt"><b><span style="font-size:20.0pt">URTEIL</span></b></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">vom 28. April 2026</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt">Mitwirkende</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:3.6pt;margin-bottom:0cm;
+margin-left:63.0pt;margin-bottom:.0001pt">Dr. A. Pfleiderer (Vorsitz), lic.
+phil. D. Borer, Dr. med. F. W. Eymann</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:3.6pt;margin-bottom:0cm;
+margin-left:63.0pt;margin-bottom:.0001pt">und Gerichtsschreiberin lic. iur. B.
+Bertazzo</p>
+
+<div style="border:none;border-bottom:solid windowtext 1.0pt;padding:0cm 0cm 1.0pt 0cm;
+margin-left:63.0pt;margin-right:0cm">
+
+<p class="MsoNormal" style="border:none;padding:0cm">&nbsp;</p>
+
+</div>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt">Parteien</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt"><b>A____</b></p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:75.6pt;margin-bottom:
+0cm;margin-left:63.0pt;margin-bottom:.0001pt">[...] </p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:75.6pt;margin-bottom:
+0cm;margin-left:63.0pt;margin-bottom:.0001pt">vertreten durch Dr. Alex Hediger,
+Advokat, Freie&nbsp;Strasse&nbsp;82, Postfach, 4051&nbsp;Basel   </p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">                                                                                                                                  </p>
+
+<p class="MsoNormal">                                                                              
+Beschwerdeführerin </p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt">&nbsp;</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt"><b>IV-Stelle Basel-Stadt</b></p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:75.6pt;margin-bottom:
+0cm;margin-left:63.0pt;margin-bottom:.0001pt">Rechtsdienst, Aeschengraben&nbsp;9,
+Postfach, 4002 Basel</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:75.6pt;margin-bottom:
+0cm;margin-left:63.0pt;margin-bottom:.0001pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-right:75.6pt">                                                                              
+Beschwerdegegnerin</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt">Gegenstand</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt"><b>IV.2025.93</b></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">Verfügung vom 19. Juni 2025</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">Invalidenrente</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:63.0pt">&nbsp;</p>
+
+<b><span style="line-height:120%;font-family:'Arial',sans-serif"><br style="page-break-before:always" />
+</span></b>
+
+<p class="aaTatsachen">Tatsachen</p>
+
+<p class="aaRmisch1" style="margin-left:0cm;text-indent:0cm">I.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;</p>
+
+<p class="aaText">a)&nbsp;A____&nbsp;(Beschwerdeführerin), geb.&nbsp;[...] 1997,
+absolvierte die obligatorische Schulzeit, das 10. Schuljahr sowie ein fünfmonatiges
+Praktikum als Büroassistentin/Kreditvermittlerin (IV-Akte 1, S. 7 und IV-Akte 13,
+S.&nbsp;18). Im Jahr 2015 meldete sich die Beschwerdeführerin bei der Sozialhilfe
+Basel-Stadt an (IV-Akte 13, S. 1). Die Sozialhilfe unternahm verschiedene
+Versuche, die Beschwerdeführerin in das Arbeitsleben zu integrieren. Im Jahr
+2016 nahm die Beschwerdeführerin am Programm «Lernhaus» teil. Dieses Programm
+musste nach drei Monaten infolge fehlender Konstanz abgebrochen werden (IV-Akte
+13, S. 18). Im Jahr 2017 nahm die Beschwerdeführerin an einer weiteren
+Massnahme der Sozialhilfe in der Freizeithalle [...] teil. Diese Massnahme
+musste nach fünf Monaten infolge fehlender psychischer Stabilität abgebrochen
+werden (IV-Akte 13, S. 18).  </p>
+
+<p class="aaText">b) Im Jahr 2019 zog die Beschwerdeführerin zwecks
+Eheschliessung nach Kolumbien und arbeitete während zehn Monaten in einem Büro
+für Geldwechsel (IV-Akte 13, S. 18). Nach ihrer Rückkehr in die Schweiz im Jahr
+2020 arbeitete die Beschwerdeführerin während fünf Tagen bei der&nbsp;B____&nbsp;AG
+als Reinigungsmitarbeiterin (IV-Akte&nbsp;13, S. 18). Dieses Arbeitsverhältnis
+wurde innerhalb der Probezeit durch die Arbeitgeberin aufgelöst (IV-Akte 18, S.
+4). Im Jahr 2022 wurde die 2019 in Kolumbien geschlossene Ehe geschieden (IV-Akte
+1, S. 12-14).</p>
+
+<p class="aaText">c) Im November 2022 meldete sich die Beschwerdeführerin bei der
+IV-Stelle Basel-Stadt (Beschwerdegegnerin) zum Leistungsbezug an. Die
+Beschwerdeführerin machte geltend, sie leide seit dem Jahr 2017 an einer Skoliose,
+an chronischen Schmerzen sowie an einem chronischen cervicothorakalen
+Schmerzsyndrom (IV-Akte 1). Gestützt auf die Beurteilung des Regionalen
+Ärztlichen Dienstes beider Basel (RAD) teilte die Beschwerdegegnerin der
+Beschwerdeführerin mit Vorbescheid vom 9. August 2023 mit, es bestehe kein
+Gesundheitsschaden mit Auswirkung auf die Arbeitsfähigkeit und es werde
+beabsichtigt, das Leistungsbegehren abzuweisen (IV-Akte 26). Der dagegen von
+der Beschwerdeführerin mit Schreiben vom 18. August 2023 erhobene Einwand wurde
+gutgeheissen (IV-Akte 27 und 31). </p>
+
+<p class="aaText">d) Nachdem die Beschwerdeführerin am&nbsp;[...]&nbsp;2024 einen
+Sohn geboren hatte, konnten weitere – auch bildgebende – Abklärungen erfolgen
+(IV-Akte 35). Mit Vorbescheid vom 17. Mai 2024 teilte die Beschwerdegegnerin
+der Beschwerdeführerin erneut mit, dass beabsichtigt werde, das
+Leistungsbegehren abzuweisen (IV-Akte 48). Dagegen erhob die Beschwerdeführerin
+am 10. Juni 2024 erneut Einwand (IV-Akte&nbsp;49). </p>
+
+<p class="aaText">e) Mit Bericht vom 11. September 2024 empfahl der RAD eine
+bidisziplinäre Begutachtung in den Fachbereichen Rheumatologie und Psychiatrie (IV-Akte
+60). Gestützt auf das Gutachten der Dres. med.&nbsp;C____, FMH Innere Medizin
+und FMH Rheumatologie und&nbsp;D____, FMH Psychiatrie und Psychotherapie, vom
+27.&nbsp;Februar 2025, stellte die Beschwerdegegnerin mit Vorbescheid vom 28.
+März 2025 erneut die Leistungsablehnung in Aussicht (IV-Akte 87 und 91).
+Dagegen erhob zunächst die Beschwerdeführerin selbst und anschliessend vertreten
+durch den Rechtsdienst der Sozialhilfe Einwand (IV-Akte 97, S. 3 und IV-Akte
+103). Mit Verfügung vom 19. Juni 2025 hielt die Beschwerdegegnerin an ihrem
+Entscheid fest und lehnte das Leistungsbegehren ab (IV-Akte 106).  </p>
+
+<p class="aaRmischfortlaufend" style="margin-left:0cm;text-indent:0cm">II.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;</p>
+
+<p class="aaRmischfortlaufend" style="margin-top:0cm;text-align:justify"><span style="font-weight:normal">a) Hiergegen hat die Beschwerdeführerin am 12.
+August 2025, damals vertreten durch Dominique Flach, Advokatin, Beschwerde beim
+Sozialversicherungsgericht Basel-Stadt erhoben. Die Beschwerdeführerin
+beantragt, die Verfügung vom 19. Juni 2025 sei aufzuheben und es seien ihr die
+gesetzlichen Leistungen zu erbringen. Zudem sei der Beschwerdeführerin die
+unentgeltliche Rechtspflege mit der Unterzeichneten als unentgeltlichem
+Rechtsbeistand zu gewähren. </span></p>
+
+<p class="aaRmischfortlaufend" style="margin-top:0cm;text-align:justify"><span style="font-weight:normal">b) Mit Schreiben vom 16. August 2025 erhebt die
+Beschwerdeführerin selbst Beschwerde gegen die Verfügung vom 19. Juni 2025 und
+teilt mit, dass die Beschwerdeschrift vom 12. August 2025 ohne ihr
+abschliessendes Einverständnis eingereicht worden sei. Die Beschwerdeführerin
+ersucht um Einräumung einer angemessenen Nachfrist zur Ausarbeitung und
+Einreichung einer ausführlichen Beschwerdebegründung sowie zur Mandatierung
+einer neuen Rechtsvertretung. </span></p>
+
+<p class="aaRmischfortlaufend" style="margin-top:0cm;text-align:justify"><span style="font-weight:normal">c) Mit Schreiben vom 17. August 2025 (Postaufgabe
+27. August 2025) ersucht die Beschwerdeführerin um Gewährung der
+unentgeltlichen Rechtspflege sowie um die «Beiordnung einer geeigneten
+unentgeltlichen Rechtsvertretung».</span></p>
+
+<p class="aaRmischfortlaufend" style="margin-top:0cm;text-align:justify"><span style="font-weight:normal">d) Mit Beschwerdeantwort vom 9. September 2025
+beantragt die Beschwerdegegnerin die Abweisung der Beschwerde. </span></p>
+
+<p class="aaRmischfortlaufend" style="margin-top:0cm;text-align:justify"><span style="font-weight:normal">e) Mit Replik vom 13. November 2025 beantragt die
+Beschwerdeführerin, nunmehr vertreten durch Dr. Alex Hediger, Advokat, die
+Verfügung vom 19. Juni 2025 sei aufzuheben und es sei ihr mit Wirkung ab 1.
+Januar 2024 eine ganze IV-Rente basierend auf einem mindestens 70-prozentigen
+Invaliditätsgrad auszurichten. Zudem sei der Beschwerdeführerin die
+unentgeltliche Rechtspflege mit dem unterzeichneten Anwalt als unentgeltlichem
+Rechtsbeistand zu gewähren. </span></p>
+
+<p class="aaRmischfortlaufend" style="margin-top:0cm;text-align:justify"><span style="font-weight:normal">f) Mit Verfügung der Instruktionsrichterin vom 14.
+November 2025 wird der Beschwerdeführerin die unentgeltliche Rechtspflege und
+Vertretung durch Dr. Alex Hediger, Advokat, bewilligt. </span></p>
+
+<p class="aaRmischfortlaufend" style="margin-top:0cm;text-align:justify"><span style="font-weight:normal">g) Mit Duplik vom 16. Dezember 2025 hält die
+Beschwerdegegnerin an den gestellten Rechtsbegehren fest. </span></p>
+
+<p class="aaRmischfortlaufend" style="margin-left:0cm;text-indent:0cm">III.<span>&nbsp;&nbsp;&nbsp; </span>&nbsp;</p>
+
+<p class="aaText">Am 28. April 2026 findet die Beratung der Sache durch die
+Kammer des Sozialversicherungsgerichts statt. </p>
+
+<p class="aaEntscheidungsgrnde">Entscheidungsgründe</p>
+
+<p class="aaArabisch1" style="margin-left:0cm;text-indent:0cm"><b>1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>&nbsp;</p>
+
+<p class="aaArabisch1Unterziffer" style="margin-left:0cm;text-indent:0cm"><b>1.1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Das Sozialversicherungsgericht Basel-Stadt ist als einzige kantonale
+Instanz zum Entscheid über die vorliegende Streitigkeit zuständig (§ 82 Abs. 1
+des basel-städtischen Gesetzes vom 3. Juni 2015 betreffend die Organisation der
+Gerichte und der Staatsanwaltschaft [Gerichtsorganisationsgesetz], GOG; SG
+154.100). Die örtliche Zuständigkeit des angerufenen Gerichts ergibt sich aus
+Art. 69 Abs. 1 lit. a des Bundesgesetzes vom 19. Juni 1959 über die
+Invalidenversicherung (IVG; SR&nbsp;831.20).  </p>
+
+<p class="aaArabisch1Unterziffer" style="margin-left:0cm;text-indent:0cm"><b>1.2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Da auch die übrigen formellen Beschwerdevoraussetzungen erfüllt
+sind, ist auf die rechtzeitig erhobene Beschwerde einzutreten.  </p>
+
+<h1 style="margin-left:0cm;text-indent:0cm"><b>2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>&nbsp;</h1>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>2.1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Die Beschwerdegegnerin ist gestützt auf das bidisziplinäre Gutachten
+vom 27. Februar 2025 der Ansicht, dass die Beschwerdeführerin aus medizinischer
+Sicht seit März 2023 ganztags arbeitsfähig ist, mit einer
+Leistungseinschränkung von 20&nbsp;%. Sowohl das rheumatologische als auch das
+psychiatrische Gutachten wird als schlüssig und beweiswertig betrachtet. Das
+Begehren um Ausrichtung einer IV-Rente wurde deshalb mit Verfügung vom 19. Juni
+2025 abgewiesen. </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>2.2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Demgegenüber vertritt die Beschwerdeführerin die Ansicht, dass
+insbesondere auf das rheumatologische Gutachten vom 12. Februar 2025 nicht
+abgestellt werden kann. Die Beschwerdeführerin ist der Überzeugung, dass
+aufgrund einer axialen Spondyloarthritis weder auf dem ersten noch auf dem
+zweiten Arbeitsmarkt eine Arbeitsfähigkeit besteht. Die Beschwerdeführerin
+beantragt deshalb mit Wirkung ab 1. Januar 2024 die Ausrichtung einer ganzen
+IV-Rente.</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>2.3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Streitig und zu prüfen ist somit, ob die Beschwerdegegnerin den Leistungsanspruch
+der Beschwerdeführerin mit Verfügung vom 19. Juni 2025 zu Recht verneint hat. Dabei
+stellt sich insbesondere die Frage, ob das bidisziplinäre Gutachten vom 27.
+Februar 2025 als schlüssig und beweiswertig betrachtet werden kann. </h2>
+
+<h1 style="margin-left:0cm;text-indent:0cm"><b>3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>&nbsp;</h1>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>3.1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Gemäss Art. 28 Abs. 1 IVG haben Anspruch auf eine Rente versicherte
+Personen, die: ihre Erwerbsfähigkeit oder die Fähigkeit, sich im
+Aufgabenbereich zu betätigen, nicht durch zumutbare Eingliederungsmassnahmen
+wiederherstellen, erhalten oder verbessern können (lit. a.); während eines
+Jahres ohne wesentlichen Unterbruch durchschnittlich mindestens 40 %
+arbeitsunfähig (Art. 6 des Bundesgesetzes vom 6. Oktober 2000 über den
+Allgemeinen Teil des Sozialversicherungsrechts; ATSG [SR 830.1]) gewesen sind
+(lit. b); und nach Ablauf dieses Jahres zu mindestens 40 % invalid (Art. 8
+ATSG) sind (lit. c). Gestützt auf Art. 28b IVG wird die Höhe des
+Rentenanspruchs in prozentualen Anteilen an einer ganzen Rente festgelegt (Abs.
+1). Bei einem Invaliditätsgrad von 50&nbsp;bis 69 % entspricht der prozentuale
+Anteil dem Invaliditätsgrad (Abs. 2). Bei einem Invaliditätsgrad ab 70 %
+besteht Anspruch auf eine ganze Rente (Abs. 3). Bei einem Invaliditätsgrad
+unter 50 % gelten die im Gesetz festgelegten prozentualen Anteile (Abs. 4).</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>3.2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Im Sozialversicherungsverfahren prüft der Versicherungsträger (wie
+auch das Sozialversicherungsgericht gemäss Art. 61 lit. c ATSG) die Begehren,
+nimmt die notwendigen Abklärungen von Amtes wegen vor und holt die
+erforderlichen Auskünfte ein (Art. 43 Abs. 1 ATSG). Er kann insbesondere
+medizinische Begutachtungen veranlassen (vgl. Art. 43 Abs. 2 ATSG).  </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>3.3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Im Rahmen der Invaliditätsbemessung ist es Aufgabe der ärztlichen
+Fachperson, den Gesundheitszustand der versicherten Person zu beurteilen und
+dazu Stellung zu nehmen, in welchem Umfang und bezüglich welcher Tätigkeiten diese
+arbeitsunfähig ist. Des Weiteren sind die ärztlichen Auskünfte eine wichtige
+Grundlage für die Beurteilung der Frage, welche Arbeitsleistungen der versicherten
+Person noch zugemutet werden können (BGE 141 V 281 E. 5.2.1.; BGE 140 V 193 E.&nbsp;3.2.).
+</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>3.4.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Ein medizinisches Gutachten erfüllt die rechtsprechungsgemässen
+Anforderungen dann, wenn es umfassend ist, auf allseitigen Untersuchungen
+beruht, auch die geklagten Beschwerden berücksichtigt, in Kenntnis der Vorakten
+(Anamnese) abgegeben worden ist, in der Beurteilung der medizinischen
+Zusammenhänge und in der Beurteilung der medizinischen Situation einleuchtet
+und wenn die Schlussfolgerungen der Experten begründet sind (BGE 125 V 351 E.
+3a). </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>3.5.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Im Sinne einer Richtlinie ist den im Rahmen des
+Verwaltungsverfahrens eingeholten Gutachten von externen Spezialärztinnen oder
+Spezialärzten, welche aufgrund eingehender Beobachtungen und Untersuchungen
+sowie nach Einsicht in die Akten Bericht erstatten und bei der Erörterung der
+Befunde zu schlüssigen Ergebnissen gelangen, volle Beweiskraft zuzuerkennen,
+solange nicht konkrete Indizien gegen die Zuverlässigkeit der Expertise
+sprechen (BGE 135 V 465 E. 4.4. und BGE&nbsp;125 V 351 E. 3b/bb). Solche
+Indizien können sich aus dem Gutachten selber ergeben (z.B. innere
+Widersprüche, mangelnde Nachvollziehbarkeit) oder auch aus Unvereinbarkeiten
+mit anderen ärztlichen Stellungnahmen (Urteil des Bundesgerichts 9C_49/2014 vom
+29. Oktober 2014 E. 4.1.).  </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>3.6.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Gemäss ständiger Praxis des Bundesgerichts kommt den im Rahmen eines
+Gutachtens erstellten Berichten unabhängiger Fachärztinnen oder Fachärzte
+höherer Beweiswert zu als solchen von Hausärztinnen bzw. Hausärzten oder
+behandelnder Fachärztinnen oder Fachärzte (vgl. BGE 135 V 465 E. 4.5. mit
+weiteren Hinweisen).  </h2>
+
+<h1 style="margin-left:0cm;text-indent:0cm"><b>4.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>&nbsp;</h1>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>4.1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Die Beschwerdegegnerin stellt für die Beurteilung des
+Gesundheitszustandes der Beschwerdeführerin auf das bidisziplinäre
+rheumatologisch-psychiatrische Gutachten von Dr.&nbsp;C____&nbsp;und&nbsp;Dr.&nbsp;D____&nbsp;vom
+27. Februar 2025 ab (IV-Akte 87). </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm">4.1.1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Dr.&nbsp;C____&nbsp;attestierte der Beschwerdeführerin aus
+rheumatologischer Sicht folgende Diagnosen mit Einfluss auf die
+Arbeitsfähigkeit:</h2>
+
+<p class="aaText" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="line-height:120%">1.<span>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="line-height:120%">Widespread
+Pain-Syndrom (ICD-10: M79.7)</span></p>
+
+<p class="aaText" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="line-height:120%">2.<span>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="line-height:120%">Hypermobilitätssyndrom
+(ICD-10: M35.7)</span></p>
+
+<p class="aaText">Als ohne Auswirkungen auf die Arbeitsfähigkeit stellte Dr.&nbsp;C____&nbsp;folgende
+Diagnosen:</p>
+
+<p class="aaText" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="line-height:120%">3.<span>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="line-height:120%">Chronisches
+thorakolumbales Schmerzsyndrom mit Zeichen einer myostatischen Dysbalance und
+Haltungsinsuffizienz und leichte Hyperlordose</span></p>
+
+<p class="aaText" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="line-height:120%">-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="line-height:120%">Unspezifische,
+leicht degenerative Veränderungen im Bereich der Hals-, Brust- und
+Lendenwirbelsäule sowie des Iliosakralgelenkes bds. mit leichtem
+Knochenmarködem am Iliosakralgelenk ohne Hinweise für eine aktive Sakroiliitis</span></p>
+
+<p class="aaText" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="line-height:120%">4.<span>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="line-height:120%">Zwei plantare
+Tumore Fusssohle rechts auf Höhe Metatarsalköpfchen IV und MTP4-Gelenk
+(Epidermale Inklusionszysten mit intermetatarsaler Reizung Dig. IV/V plantar
+des MTP IV-Gelenkes, ES 11/2019, ED 12/2022)</span></p>
+
+<p class="aaText" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="line-height:120%">5.<span>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="line-height:120%">Adipositas BMI
+32.6.</span></p>
+
+<p class="aaText">&nbsp;</p>
+
+<p class="aaText" style="margin-left:0cm;text-indent:0cm">4.1.2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Zur
+Begründung führte Dr.&nbsp;C____&nbsp;aus, die Beschwerden, welche die
+Explorandin äussere, insbesondere im mittleren Rücken, im unteren Thorakal- und
+oberen Lumbalbereich, könnten nicht auf ein strukturelles und morphologisches
+Korrelat zurückgeführt werden. Auch unter Beizug der MRTs der Wirbelsäule und
+des Beckens vom April und August 2024 seien keine degenerativen oder
+entzündlichen Veränderungen in diesem Bereich objektivierbar. Das
+Nichterscheinen von entzündlichen Veränderungen MR-tomografisch sei grundsätzlich
+kein verlässlicher Hinweis für das Nichtvorliegen einer entzündlichen
+Skeletterkrankung, jedoch ein Indiz; dies insbesondere bei repetitiver
+Durchführung. Hingegen sei die im Iliosakralgelenk gelegene, dominant
+rechtsseitige iliacal, leichte Knochenödemkonstellation nicht mit den gültigen
+ASAS-Kriterien 2010 vereinbar. Hier müsste eine über vier Schichten vorliegende
+Sakroiliitis vorliegen mit Beteiligung der sakralen und iliakralen Gelenkfläche
+sowie eine Synovialitis und somit auch Gelenkentzündung. Die bei der
+Explorandin vorliegenden Veränderungen seien differentialdiagnostisch in diesem
+Bereich des Iliosakralgelenks auch als sekundär degenerativ oder als
+insbesondere unspezifisch zu werten. Dies sei im ersten MRT so bewertet und
+auch durch den erstbeurteilenden Rheumatologen bestätigt worden (vgl. IV-Akte
+87, S. 79).</p>
+
+<p class="aaText">Die zweite MRT-Untersuchung vom August 2024 habe aus dem
+früheren Knochenmarksödem nun eine Sakroiliitis diagnostiziert. Dies könne auch
+aktuell nicht bestätigt werden. Die Bursitis subdeltoidea in den
+sonographischen Untersuchungen vom September 2024 könnten als solche nicht mehr
+objektiviert werden respektive seien kaum auch in den sonographischen
+Untersuchungen nachvollziehbar, sofern eine Ergussdarstellung möglich wäre. Bei
+einer entzündlichen Bursitis würde man auch eine verdickte Bursalinie im Sinne
+einer Entzündungsreaktion erwarten, was nicht objektiviert werden könne. Dabei
+sei einschränkend zu bemerken, dass Fremdbeurteilungen von statischen Bildern
+der Sonografie kaum möglich seien und dies nur durch direkte Untersuchung
+geprüft werden könne. Aus diesem Grund sei vom Referenten eine
+Ultraschalluntersuchung des linken Schultergürtels durchgeführt worden, welche
+keine Anzeichen für eine entzündliche Veränderung im Bereich der Schleimbeutel,
+keine Veränderungen im Bereich der Rotatorenmanschette oder der Gelenke
+aufzeige. Im Übrigen seien keine Hinweise für eine entzündlich-rheumatische
+Erkrankung auch anderer Organsysteme objektivierbar (vgl. IV-Akte 87, S. 80). </p>
+
+<p class="aaText">Die geklagten Beschwerden im Bereich des Rückens, der Gelenke
+sowie der Muskulatur seien nach Art und Lokalisation nicht mit objektivierbaren
+Befunden in Einklang zu bringen. Es bestehe eine Diskrepanz der subjektiven
+Beschwerdeschilderung, welche insbesondere als sehr hoch und gravierend
+eingeschätzt werde. In der Untersuchungssituation zeige sich ein geringer
+Leidensdruck trotz intensiv geschilderter Beschwerden, was auf eine sog. Belle
+indifference hinweise. Es seien zudem vage und wechselhaft unpräzise Schilderungen
+der Beschwerden vorhanden und dies während des gesamten Krankheitsverlaufes. Es
+würden sich diskrepante Angaben über insbesondere andauernde Beschwerden
+ergeben, welche zu keiner Tageszeit bessern würden, was nicht auf eine
+entzündlich-rheumatische Erkrankung hinweisend sei (vgl. IV-Akte 87, S. 83). </p>
+
+<p class="aaText">Die anamnestischen Angaben, die Aktenlage sowie die aktuelle
+rheumatologische und schmerzmedizinische Untersuchung zeige eine sehr hohe
+Wahrscheinlichkeit für das Vorliegen einer Fibromyalgie. Die rein somatischen
+Beschwerden könnten das subjektive Schmerzbild und Schmerzerleben nicht
+erklären (vgl. IV-Akte 87, S. 86 f.).</p>
+
+<p class="aaText">Abschliessend hielt Dr.&nbsp;C____&nbsp;fest, dass die Diagnose
+der Fibromyalgie gestellt werden könne. Die Diagnose der Spondylarthritis
+scheine unwahrscheinlich, sei aber noch nicht abschliessend ausgeschlossen
+(vgl. IV-Akte 87, S. 88 f.). </p>
+
+<p class="aaText">Hingegen seien das beklagte Beschwerdeausmass sowie die
+subjektiven Einschränkungen im Alltag als zu stark zu werten respektive nicht
+nachvollziehbar. Typischerweise wäre bei axialen Spondylarthritiden eine
+Linderung der Beschwerden durch körperliche Betätigung vorhanden. Zudem fehlten
+der Explorandin die typischen Zeichen für eine entzündliche Rückenerkrankung
+sowie auch für extraaxiale Beschwerden und die internationalen ASAS Kriterien
+würden nicht erfüllt. Somit bleibe als Hauptbeschwerdepunkt die chronische
+Schmerzsymptomatik mit Diagnose der Widespread Pain-Symptomatik respektive
+Fibromyalgie (vgl. IV-Akte 87, S. 89). </p>
+
+<p class="aaText" style="margin-left:0cm;text-indent:0cm">4.1.3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Aus
+rheumatologischer Sicht beurteilte Dr.&nbsp;C____&nbsp;die Beschwerdeführerin in
+einer leichten und mittelschweren Tätigkeit als zu 80 % arbeitsfähig bezogen
+auf ein Ganztagespensum. Die Einschränkung von 20 % resultiere aus einem
+erhöhten Pausen- und Ruhebedarf durch die Widespread Pain-Symptomatik. Gemäss
+Dr.&nbsp;C____&nbsp;seien keine Anzeichen für eine Schädigung im Achsenskelett
+objektivierbar. Aus somatisch-rheumatologischer Sicht könne deshalb – ausser
+der Fibromyalgie-Symptomatik – keine Einschränkung der Belastbarkeit und
+Leistungsfähigkeit objektiviert werden, welche eine relevante Einschränkung der
+Arbeitsfähigkeit in einer leichten und mittelschweren Tätigkeit bedingen würde
+(vgl. IV-Akte&nbsp;87, S. 91-92).</p>
+
+<h2 style="margin-left:0cm;text-indent:0cm">4.1.4.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Dr.&nbsp;D____&nbsp;attestierte der Beschwerdeführerin im
+psychiatrischen Teilgutachten folgende Diagnose mit Auswirkung auf die
+Arbeitsfähigkeit:</h2>
+
+<h2 style="margin-left:42.55pt;text-indent:-24.55pt"><span style="line-height:120%">1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="line-height:120%">anhaltende
+somatoforme Schmerzstörung (ICD-10 F45.4). </span></h2>
+
+<h2>Diagnosen ohne Auswirkung auf die Arbeitsfähigkeit stellte Dr.&nbsp;D____&nbsp;nicht
+(vgl. IV-Akte 87, S. 29). </h2>
+
+<p class="aaText" style="margin-left:0cm;text-indent:0cm">4.1.5.<span>&nbsp;&nbsp; </span>  Zur Begründung
+führte Dr.&nbsp;D____&nbsp;aus, die Explorandin sei bis 18-jährig zu Hause in
+ihrer Familie aufgewachsen. Als sie 16-jährig gewesen sei, hätten sich die
+Eltern getrennt. Die Explorandin berichte über gute Verhältnisse, in welchen
+sie als Kind und Jugendliche aufgewachsen sei. Sie sei zufrieden und glücklich
+gewesen und sie habe ausreichend emotionale Zuwendung und Liebe von beiden
+Eltern erhalten. Es sei allerdings darauf hinzuweisen, dass sich die Eltern
+eine längere Zeit getrennt hätten, als die Explorandin zwischen 8- und
+10-jährig gewesen sei, was die Explorandin damals traurig gestimmt hätte. Es
+würden sich ansonsten aber keinerlei Hinweise aus den subjektiven Angaben der
+Explorandin dafür ergeben, dass andere relevante Belastungen das Familiensystem
+geprägt hätten. Somit könne nicht postuliert werden, dass die Explorandin in
+Familienverhältnissen aufgewachsen sei, in welchen sie instabile primäre
+Beziehungsgestaltungen erlebt hätte, so dass auch nicht postuliert werden
+könne, dass ihre narzisstische Entwicklung insuffizient und instabil habe
+erfolgen müssen. Es könne somit festgehalten werden, dass die
+psychostrukturelle Entwicklung der Explorandin schlechthin nicht defizitär habe
+erfolgen müssen (vgl. IV-Akte 87, S. 30). </p>
+
+<p class="aaText">Die Explorandin habe eine weitgehend unauffällige Schulanamnese
+durchlaufen. Danach sei allerdings seit Abschluss der Schulbildung eine
+Anamnese hinsichtlich Berufsbildung und Berufstätigkeit gefolgt, die auffällig
+sei und welche dahingehend beleuchtet werden müsse, ob bei dieser Explorandin
+eine psychostrukturelle Störung dafür verantwortlich sei, dass es ihr nie
+gelungen sei, eine Berufsbildung zu durchlaufen und sich beruflich zu
+integrieren. Es stelle sich die Frage, inwiefern die Explorandin allenfalls aus
+psychostrukturellen Gründen keine ausreichende Willenskraft aufbringen könne. Wenn
+nochmals gewürdigt werde, dass aus der Beleuchtung der früheren
+Familienverhältnisse bis auf die oben erwähnten Besonderheiten keine Hinweise
+für eine defizitäre narzisstische Entwicklung resultiere und die Explorandin in
+der Schulanamnese sowie auch an ihren Arbeitsstellen immer gut integriert
+gewesen sei, sich auch nicht als selbstunsichere Arbeitnehmerin erlebt habe und
+mit Kritik, dies gemäss ihren subjektiven Angaben, gut zurechtgekommen sei, so
+würden sich in der Tat keinerlei Hinweise für zugrundeliegende
+psychostrukturelle Auffälligkeiten und Pathologien, die für diese
+nachschulische anamnestische Entwicklung verantwortlich sein könnten, ergeben
+(vgl. IV-Akte 87, S. 31 f.).  </p>
+
+<p class="aaText">Die Explorandin sei überdies sozial gut eingebunden. Sie
+berichte über einen intakten Freundeskreis, den sie regelmässig pflege. Ihre
+Beziehung zu ihrem Verlobten, die seit zwei Jahren dauere, beschreibe sie als
+intakt. Zusammen mit ihm habe sie ein 1-jähriges Kind, zu welchem sie gut
+schauen könne. Hinzuweisen sei auf den Umstand, dass die Explorandin zwischen
+2019 und 2022 mit einem Mann verheiratet gewesen sei, von dem sie sich getrennt
+habe, als er sie einmal gewürgt habe. Die Explorandin habe zu dieser Beziehung
+keine allzu detaillierten Angaben machen können, ausser dass sie überrascht
+gewesen sei über dessen Handlung. In der hiesigen Begutachtung habe die
+Explorandin sodann im objektiven Psychostatus bis auf einen einmaligen
+affektlabilen Einbruch, als sie darüber gesprochen habe, dass ihr die
+anhaltenden Körperschmerzen psychischen manchmal zusetzten, in den zu
+erhebenden objektiven Parametern und Dimensionen keinerlei pathologische
+Auslenkungen gezeigt. Insbesondere habe sie keine interaktionellen Auffälligkeiten
+gezeigt (vgl. IV-Akte 87, S. 32). </p>
+
+<p class="aaText">Aufgrund dieser diversen Beurteilungsdimensionen könne
+festgehalten werden, dass bei dieser Explorandin die Kardinaldefinition für
+eine Persönlichkeitsstörung nicht erfüllt sei, wonach ab verhältnismässig
+frühem Lebensalter zentrale Bereiche der privaten, sozialen und beruflichen
+Anamnese nachhaltig und relevant tangiert sein müssten. Dies bedeute, dass die
+Explorandin grundsätzlich auf ausreichend sublimierte Abwehrmechanismen in
+Belastungs- und Konfliktsituationen zurückgreifen könne, so dass sie nicht dazu
+prädestiniere, schwerergradige und chronifizierende psychische
+Symptomformationen zu entwickeln (vgl. IV-Akte 87, S. 32).</p>
+
+<p class="aaText">Weiter berichte die Explorandin über eine euthyme
+Grundstimmung. Sie verneine eine Antriebsminderung und eine Tagesmüdigkeit.
+Ebenso verneine sie eine Freud-, Interesse- und Lustlosigkeit. Die Explorandin
+erfülle mit diesen subjektiven Angaben die diagnostischen B-Kriterien gemäss
+ICD-10 für eine depressive Episode nicht. Hinzuzufügen sei, dass die
+Explorandin Stimmungsschwankungen ebenso verneine wie Suizidideen,
+Suizidversuche oder Selbstverletzungshandlungen, so dass keinerlei Hinweise für
+eine emotionale Instabilität vorlägen (vgl. IV-Akte 87, S. 33). </p>
+
+<p class="aaText">Die Explorandin berichte, dass sie seit 2017 zunehmend unter
+Körperschmerzen leide. In der hiesigen Begutachtung würden sich Hinweise für
+Selbstlimitierungen ergeben, und zwar dahingehend, dass sich die Explorandin
+als vollständig arbeitsunfähig einstufe, während sie tagsüber doch zahlreichen
+Tätigkeiten nachgehen könne. Die Explorandin scheine in ihren Körperschmerzen
+bzw. in ihrem Schmerzerleben gefangen. Die Explorandin benötige aufgrund dieses
+Schmerzerlebens einen leicht höheren Pausenbedarf in sämtlichen Tätigkeiten,
+die sie ausübe (vgl. IV-Akte 87, S.&nbsp;34). </p>
+
+<p class="aaText">Abschliessend hielt Dr.&nbsp;D____&nbsp;fest, dass die
+Standardindikatoren maximal leicht erfüllt seien. Die qualitativen
+Funktionsfähigkeiten beurteilte&nbsp;Dr. D____&nbsp;als maximal leicht
+beeinträchtigt (vgl. IV-Akte 87, S. 36 f.).</p>
+
+<h2>4.1.6.    Gemäss&nbsp;Dr. D____&nbsp;beträgt die Arbeitsfähigkeit in
+jeglichen beruflichen Tätigkeiten des ersten Arbeitsmarktes aus psychiatrischer
+Sicht 80 %. Die Minderung um 20&nbsp;% ergäbe sich aufgrund des erhöhten
+Pausen- und Ruhebedarfs (IV-Akte 87, S.&nbsp;39). </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm">4.1.7.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>In der Konsensbeurteilung führten die Gutachter aus, die
+Beschwerdeführerin habe ab 2017 zunehmende Schmerzen in verschiedenen
+Körperregionen entwickelt. Diese könnten somatisch nicht erklärt werden. Es
+könne aus psychiatrischer Sicht davon ausgegangen werden, dass diese
+Körperschmerzen bewusstseinsfern entstanden seien, sodass eine anhaltende
+somatoforme Schmerzstörung diagnostiziert werden könne. Eine anderweitige
+psychiatrische Diagnose liege nicht vor. Aus rheumatologischer Sicht sei das
+Hauptbeschwerdebild eine chronische, therapieresistente Schmerzkonstellation,
+welche die Kriterien einer Widespread Pain-Symptomatik erfülle. Es seien keine
+ausreichenden somatischen, strukturellen und morphologischen Befunde erhebbar,
+welche das subjektive Schmerzerleben zu erklären vermögen. Zudem bestehe ein
+deutliches Schonverhalten und eine Selbstlimitierung. Ebenso sei ein sekundärer
+Krankheitsgewinn vorhanden (IV-Akte 87, S. 11). Integral gesamtmedizinisch betrage
+die Arbeitsfähigkeit 80 % (IV-Akte 87, S. 12). </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>4.2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Auf das bidisziplinäre rheumatologisch-psychiatrische Gutachten vom 27.&nbsp;Februar
+2025 kann abgestellt werden. Es entspricht den bundesgerichtlichen
+Anforderungen an beweiskräftige medizinische Expertisen (BGE 125 V 351 E. 3a). Das
+Gutachten beruht auf einlässlichen fachärztlichen Untersuchungen (vgl. IV-Akte
+87, S. 21 ff. und S. 62 ff.), berücksichtigt die geklagten Beschwerden (vgl.
+IV-Akte 87, bspw. S. 28, 31, 33 und 78) und ist in Kenntnis der relevanten
+Vorakten ergangen (vgl. IV-Akte 87, S. 67 ff.; insbesondere die MRTs vom 12.
+April und 26.&nbsp;August 2024, die Sonographie der Schulter vom 3. September
+2024 sowie die Arztberichte von Dr.&nbsp;med.&nbsp;E____, FMH Rheumatologie,
+vom 10. und 24. Oktober 2024). Sodann wurden die festgestellten
+gesundheitlichen Beeinträchtigungen sowie die Schlussfolgerungen bezüglich der
+Arbeitsfähigkeit der Beschwerdeführerin im Gutachten diskutiert und umfassend
+beleuchtet (vgl. IV-Akte 87, S. 30 ff. und S.&nbsp;78&nbsp;ff.). Die Gutachter
+nahmen zu Diskrepanzen zwischen der Aktenlage und der gutachterlichen
+Beurteilung ausführlich Stellung und beantworteten die gestellten Fragen (vgl.
+im Einzelnen die nachstehenden Überlegungen).</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>4.3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>4.3.1. Was zunächst das rheumatologische Gutachten angeht, so hat Dr.&nbsp;C____&nbsp;die
+von ihm gestellten Diagnosen aufgrund der erhobenen Befunde und in
+Auseinandersetzung mit den Vorakten schlüssig begründet. Soweit die
+Beschwerdeführerin geltend macht, es sei keine hinreichende Auseinandersetzung
+mit den Vorakten erfolgt; es lägen organische Beeinträchtigungen mit Auswirkung
+auf die Arbeitsfähigkeit vor (vgl. Ziff. 14-17 der Beschwerde), kann ihr somit
+nicht gefolgt werden. </h2>
+
+<h2>4.3.2.  Dr.&nbsp;C____&nbsp;hat im rheumatologischen Gutachten schlüssig
+erläutert, weshalb die im MRT vom 26. August 2024 festgestellte Sakroiliitis
+nicht bestätigt werden kann (vgl. IV-Akte 87, S. 76 ff. sowie E. 4.1.2.
+hiervor). Dr.&nbsp;C____&nbsp;hielt fest, die im Iliosakralgelenk gelegene
+leichte Knochenmarködemkonstellation sei nicht mit den gültigen ASAS-Kriterien
+2010 vereinbar, da keine über vier Schichten vorliegende Sakroiliitis vorliege
+(vgl. IV-Akte 87, S. 79 sowie E. 4.1.2. hiervor). Die klinische Präsentation
+der axialen und extraaxialen Beschwerden sei nicht konklusiv, um eine Diagnose
+gemäss den ASAS-Kriterien 2010 stellen zu können (vgl. IV-Akte&nbsp;87, S. 86
+sowie E.&nbsp;4.1.2. hiervor). Diese gutachterliche Einschätzung ist
+nachvollziehbar und es besteht kein Anlass, an der Schlussfolgerung von
+Dr.&nbsp;C____&nbsp;zu zweifeln. Ebenfalls hat Dr.&nbsp;C____&nbsp;anlässlich
+der rheumatologischen Begutachtung am 12.&nbsp;Februar 2025 eine Sonographie
+der Schulter links und des Ellenbogens rechts durchgeführt. Dabei konnte die im
+September 2024 festgestellte beidseitige mässige Bursitis nicht mehr
+festgestellt werden (vgl. IV-Akte 87, S. 71 und 76 sowie E. 4.1.2. hiervor).
+Auch diese Einschätzung erscheint plausibel. </h2>
+
+<h2>4.3.3.  Weiter macht die Beschwerdeführerin geltend, dass im Labor sehr oft
+ein leicht erhöhtes BSR (Entzündungswert) habe nachgewiesen werden können und
+auch eine familiäre Belastung bestehe, da ihr Vater Psoriasis habe (vgl. Ziff.
+14-17 der Beschwerde). Auch diesbezüglich ist festzustellen, dass auf die
+Beurteilung von Dr.&nbsp;C____, wonach insbesondere die klinischen,
+radiologischen Befunde und die Laboruntersuchungen nicht ausreichend seien, um
+eine Diagnose gemäss den ASAS-Kriterien 2010 stellen zu können (vgl. IV-Akte
+87, S. 86), gefolgt werden kann. Daran ändert auch die am 20.&nbsp;August 2024
+einmalig festgestellte, leicht erhöhte Blutsenkungsreaktion (BSR) nichts. Dr.&nbsp;C____&nbsp;sah
+es aufgrund dieser Ausgangslage korrekterweise nicht als notwendig an,
+zusätzliche Analysen vorzunehmen (vgl. IV-Akte 87, S. 73). Sodann ist
+festzustellen, dass Dr.&nbsp;C____&nbsp;auch den Hinweis der
+Beschwerdeführerin, dass eine familiäre Belastung bestehe, in das
+rheumatologische Teilgutachten hat einfliessen lassen (vgl. IV-Akte 87, Hinweise
+u.&nbsp;a. in S. 50, 53, 54 und 59). Auch diesbezüglich ist jedoch
+festzustellen, dass eine mögliche familiäre Belastung an der eingehend
+begründeten Schlussfolgerung von Dr.&nbsp;C____, wonach die Kriterien für eine
+entzündlich-rheumatologische Erkrankung nicht gegeben sind, nichts zu ändern
+vermag.</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm">4.3.4.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Weiter macht die Beschwerdeführerin geltend, eine angebliche
+Verweigerung der Medikation zur Diagnosestellung sei aktenwidrig. Es sei
+zunächst eine Behandlung mit einem nichtsteroidalen Antirheumatikum (NSAR)
+versucht worden. Infolge einer Unverträglichkeit sei die Medikation auf Coxibe
+umgestellt worden. Da dies jedoch nicht ausreichend gewesen sei, habe man eine
+Behandlung mit Salazopyrin begonnen. Diese Medikation musste aufgrund einer
+Unverträglichkeit ebenfalls abgesetzt werden, so dass die Behandlung mit Coxibe
+weitergeführt wurde. Aktuell erfolge eine Therapie mit Humira (vgl. Ziff. 15
+der Beschwerde). Zum Einwand der Beschwerdeführerin, dass eine angebliche
+Verweigerung der Medikation zur Diagnosestellung aktenwidrig sei, gilt es
+festzuhalten, dass sich dem rheumatologischen Teilgutachten an verschiedenen
+Stellen Hinweise zu den in der Vergangenheit verordneten Medikamente entnehmen
+lassen (vgl. IV-Akte 87, Hinweise u. a. in S. 53, 76, 105 und 106). Dr.&nbsp;C____&nbsp;war
+somit über die vergangene Medikation orientiert. Sein Hinweis, die Möglichkeit
+einer Diagnoseevaluation sei von der Beschwerdeführerin versagt worden, kann
+sich deshalb nur auf die geplante Medikation mit Humira beziehen. Diesbezüglich
+hat die Beschwerdeführerin selbst anlässlich der Befragung angegeben, sie habe
+das Medikament Humira primär verweigert (vgl. IV-Akte 87, S.&nbsp;54 und 85).
+Inzwischen erfolgt aber offenbar die geplante Behandlung mit Humira, wie dem
+Dauerrezept der behandelnden Rheumatologin vom 4. August 2025 entnommen werden
+kann (vgl. Replik, Beilage 9). Da die Behandlung mit Humira – gestützt auf das
+Dauerrezept vom 4. August 2025 – mit überwiegender Wahrscheinlichkeit erst im
+August 2025 begonnen hat, ist der Hinweis von Dr.&nbsp;C____&nbsp;im Gutachten
+vom 27. Februar 2025, die Beschwerdeführerin verweigere die Möglichkeit einer
+Therapie zur Diagnoseevaluation, nicht als falsch anzusehen. Zusammenfassend
+ist deshalb festzustellen, dass sich der Hinweis von Dr.&nbsp;C____&nbsp;nur
+auf die Medikation mit Humira bezogen haben dürfte. Diesbezüglich hat die
+Beschwerdeführerin selbst anlässlich der Befragung angegeben, sie habe das
+Medikament Humira primär verweigert. Die Beschwerdeführerin kann deshalb aus
+dem Einwand, eine angebliche Verweigerung der Medikation zur Diagnosestellung sei
+aktenwidrig, nichts zu ihren Gunsten ableiten. </h2>
+
+<h2>4.3.5.   Schliesslich kann die Beschwerdeführerin auch aus dem mit der
+Replik eingereichten MRT vom 20. Oktober 2025, mit welchem erstmals eine
+leichtgradige Synovialitis der Facettengelenke LWK 4 – SWK 1 beidseits
+festgestellt wurde, nichts zu ihren Gunsten ableiten (vgl. Replik, Beilage 8).
+Zeitliche Bezugsgrösse der richterlichen Überprüfungsbefugnis bildet die
+Verfügung der Beschwerdegegnerin vom 19.&nbsp;Juni 2025 (BGE 143 V 409 E. 2.1.).
+Spätere Arztberichte sind in die Beurteilung miteinzubeziehen, soweit sie
+Rückschlüsse auf die in diesem Zeitpunkt gegebene Situation erlauben (BGE 121 V
+362 E. 1b; Urteile des Bundesgerichts 8C_60/2024 vom 16. September 2024 E. 5.1.
+und 8C_318/2024 vom 23. Januar 2025 E. 4.8.3.). Das MRT datiert vom 20. Oktober
+2025 und wurde damit vier Monate nach Erlass der Verfügung vom 19. Juni 2025
+erstellt. Dem Untersuchungsbericht vom 20. Oktober 2025 lassen sich keine
+Hinweise entnehmen, wonach die erstmals festgestellte Synovialitis bereits vor
+dem Erlass der Verfügung bestanden haben könnte. Das mit der Replik
+eingereichte MRT vom 20. Oktober 2025 kann deshalb in vorliegendem Verfahren
+nicht berücksichtigt werden. Der Beschwerdeführerin steht allerdings die
+Möglichkeit offen, bei einer seit Verfügungserlass eingetretenen
+Verschlechterung des Gesundheitszustands ein neues Gesuch bei der Beschwerdegegnerin
+einzureichen.   </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>4.4.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Zusammenfassend kann somit festgestellt werden, dass die Einwände
+der Beschwerdeführerin gegen das rheumatologische Teilgutachten nicht geeignet
+sind, die nachvollziehbare Schlussfolgerung von Dr.&nbsp;C____&nbsp;in Zweifel
+zu ziehen. Es liegen keinerlei Hinweise vor, dass wesentliche Aspekte im
+rheumatologischen Teilgutachten unberücksichtigt geblieben sind. Es muss daher
+festgestellt werden, dass sich das rheumatologische Teilgutachten in der
+Darlegung der medizinischen Zusammenhänge als schlüssig und nachvollziehbar
+erweist, weshalb ihm volle Beweiskraft zukommt.</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>4.5.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Auch auf das psychiatrische Gutachten von Dr.&nbsp;D____&nbsp;kann
+abgestellt werden. Die hiergegen erhobenen Einwände der Beschwerdeführerin sind
+– wie nachfolgend dargelegt – nicht zu hören. </h2>
+
+<h2>4.5.1.    So bringt die Beschwerdeführerin vor, die medizinische
+Dokumentation in Bezug auf den psychiatrischen Gesundheitszustand erweise sich
+als lückenhaft und damit unvollständig. So habe sie in der Begutachtung –
+vermutlich aus einem Krankheitsbild heraus – die Darstellung ihrer
+Einschränkungen beschönigt. In den Protokollen lägen weitere Indizien vor,
+wonach die sozialen Beziehungen nicht immer so intakt gewesen seien, wie vom
+Gutachter aufgrund ihrer Schilderungen angenommen. Zudem habe sie den
+Tagesablauf gegenüber den beiden Gutachtern völlig anders geschildert. Sie sähe
+die Ursache für das Nichtgelingen des Berufseinstiegs klar in körperlichen
+Ursachen. Sie habe deshalb nie eine psychiatrische Behandlung versucht bzw.
+bereits nach kurzer Zeit wieder abgebrochen. Die psychiatrische Begutachtung
+habe sie so sehr vermeiden wollen, dass sie sogar dazu bereit gewesen sei, das
+Leistungsgesuch zurückzuziehen. Vor dem Hintergrund, dass keine psychiatrischen
+Vorakten vorlägen, sei es umso wichtiger, auf ihre Aussagen einzugehen,
+nachzuhaken und zu hinterfragen. Dies habe der Gutachter jedoch unterlassen.
+Eine einstündige Exploration reiche für die sorgfältige Herleitung einer
+Persönlichkeitsstörung keinesfalls aus. Zudem habe es der Gutachter verweigert,
+ein spezifisches Instrumentarium zur Diagnostik einer Persönlichkeitsstörung
+anzuwenden (vgl. Ziff. 18-30 der Beschwerde). </h2>
+
+<h2>4.5.2. Zunächst ist diesbezüglich festzuhalten, dass keinerlei Hinweise
+vorliegen, dass das psychiatrische Teilgutachten unvollständig ist, die
+Beschwerdeführerin ihre Einschränkungen beschönigt oder ihren Tagesablauf
+unterschiedlich geschildert hat. Die Beschwerdeführerin äusserte sich
+ausführlich zu ihrer Psyche und verneinte depressive Stimmungszustände zu
+erleben. Die Beschwerdeführerin erwähnte allerdings, dass sie Momente habe, wo
+sie denke, weshalb sie diese Schmerzen habe und weshalb sie nicht mehr ganz
+gesund sei. Die Beschwerdeführerin erwähnte auch, dass der Schlaf wegen den
+Schmerzen nicht gut und sie wegen den Schmerzen manchmal abgelenkt sei. Weiter
+äusserte sich die Beschwerdeführerin auch zu schwierigen Erlebnissen, wie
+beispielsweise die Trennung ihrer Eltern oder das Ereignis in der Freizeithalle
+[...], als zwei junge Männer anzügliche Bemerkungen gemacht hätten. Sie
+erwähnte, dass sie in der Folge etwa viermal zu einer Psychologin gegangen sei,
+um über diese Sorgen zu sprechen. Danach habe sie dies nicht mehr nötig gehabt
+(vgl. IV-Akte 87, S. 25). </h2>
+
+<h2>4.5.3.    Den Tagesablauf schilderte die Beschwerdeführerin gegenüber dem
+psychiatrischen Gutachter dahingehend, dass sie zu unterschiedlichen Zeiten am
+Morgen aufstehe. Sie bereite dann ihrem Sohn den Schoppen zu. Ihrer
+Körperpflege gehe sie täglich nach. Sie könne im Haushalt aktiv sein, könne
+aber wegen ihren Schmerzen nicht immer am Stück die Haushaltsarbeiten tätigen.
+Sie erhalte Hilfe durch ihren Lebenspartner sowie durch ihre Geschwister. Die
+Beschwerdeführerin gibt an, dass sie sehr gerne koche. Sie könne aber aufgrund
+ihrer Schmerzen nicht immer kochen. Mit ihrem Sohn könne sie spielen, zu ihm schauen
+und die Pflege übernehmen. Sie gehe sehr gerne täglich spazieren (vgl. IV-Akte
+87, S. 25 f.). </h2>
+
+<h2>4.5.4.    In diesem Sinne äusserte sich die Beschwerdeführerin auch gegenüber
+dem rheumatologischen Gutachter. Anlässlich der rheumatologischen Begutachtung
+führte die Beschwerdeführerin aus, sie könne morgens nicht immer aufstehen und
+würde teilweise noch schlafen, wenn die Unterstützung in ihre Wohnung komme.
+Meistens komme der Verlobte, die Mutter oder die Schwester. Durch den Tag würde
+sie dann, nachdem sei aufgestanden sei, spazieren, kochen oder etwas mit dem
+Kind spielen oder singen. Sie besuche den Zoologischen Garten oder die Lange
+Erlen. Die Haushaltstätigkeiten würden von anderen erledigt. Zeitweise würde
+sie kochen. Wegen des Schmerzes könne sie sich nicht immer konzentrieren (vgl.
+IV-Akte 87, S. 54 f.). </h2>
+
+<h2>4.5.5.    Damit ist festzustellen, dass die Beschwerdeführerin sowohl
+anlässlich der rheumatologischen als auch anlässlich der psychiatrischen
+Begutachtung angegeben hat, dass sie auf die Unterstützung durch ihren
+Verlobten und die Familie angewiesen ist, insbesondere was die Tätigkeiten im
+Haushalt betrifft. Auch bei der Betreuung ihres Sohnes erhält sie
+Unterstützung. Sie kann aber mit ihm spielen und spazieren gehen. Die
+Beschwerdeführerin gibt übereinstimmend an, dass sie gerne koche, ihr dies aber
+aufgrund ihrer Schmerzen nicht immer möglich sei. Ebenfalls führt sie
+übereinstimmend aus, dass sie manchmal abgelenkt sei und sich nicht immer
+konzentrieren könne. Die beiden Begutachtungen haben mit einem Abstand von
+einer Woche stattgefunden. Es kann deshalb nicht erwartet werden, dass
+keinerlei Abweichungen zwischen den Schilderungen im Tagesablauf vorliegen. Es
+ist vielmehr nachvollziehbar, dass die Beschwerdeführerin einige Abläufe im
+Alltag leicht anders geschildert hat. Aus dem Umstand, dass gewisse
+geringfügige Abweichungen in der Schilderung des Tagesablaufs vorliegen, kann
+die Beschwerdeführerin deshalb nichts zu ihren Gunsten ableiten. </h2>
+
+<h2>4.5.6.    Zusammenfassend ist somit festzuhalten, dass sich die
+Beschwerdeführerin ausführlich zu ihrer Psyche geäussert hat und keinerlei
+Hinweise vorliegen, wonach die Beschwerdeführerin ihre Einschränkungen
+beschönigt oder den Tagesablauf gegenüber den beiden Gutachtern völlig anders
+geschildert hat. Es ist deshalb – entgegen der Ansicht der Beschwerdeführerin
+(vgl. Ziff. 26-30 der Beschwerde) – nicht davon auszugehen, dass die
+medizinische Dokumentation in Bezug auf den psychiatrischen Gesundheitszustand
+der Beschwerdeführerin lückenhaft und damit unvollständig ist. Daran ändern
+auch die von der Beschwerdeführerin erwähnten Protokolle der Sozialhilfe nichts
+(vgl. Ziff. 27 der Beschwerde). Es mag zutreffen, dass sich diesen Protokollen
+teilweise Hinweise zu einer fehlenden psychischen Stabilität der Beschwerdeführerin
+entnehmen lassen. Diese vereinzelten Hinweise sind aber nicht geeignet, die
+nachvollziehbare und ausführlich begründete Schlussfolgerung von Dr.&nbsp;D____&nbsp;in
+Frage zu stellen. </h2>
+
+<h2>4.5.7.    Was den Einwand der Beschwerdeführerin betrifft, dass eine
+einstündige Exploration für die sorgfältige Herleitung einer
+Persönlichkeitsstörung keinesfalls ausreiche, ist festzuhalten, dass nach
+neuerer konstanter Rechtsprechung aus einer – verhältnismässig – kurzen Dauer
+der psychiatrischen Exploration nicht von vornherein auf eine
+Sorgfaltswidrigkeit des Gutachters geschlossen werden kann. Für den
+Aussagegehalt eines medizinischen Berichts kommt es nämlich nicht in erster
+Linie auf die Dauer der Untersuchung an. Massgeblich ist vielmehr, ob der
+Bericht inhaltlich vollständig und im Ergebnis schlüssig ist. Der für eine
+psychiatrische Untersuchung zu betreibende zeitliche Aufwand hängt stets von
+der Fragestellung und der zu beurteilenden Psychopathologie ab. Wichtigste
+Grundlage gutachterlicher Schlussfolgerungen bildet – gegebenenfalls neben
+standardisierten Tests – die klinische Untersuchung mit Anamneseerhebung,
+Symptomerfassung und Verhaltensbeobachtung (vgl. u. a. Urteile des
+Bundesgerichts 8C_715/2022 vom 3. August 2023 E.&nbsp;5.3.1. und 8C_47/2016 vom
+15. März 2016 E.&nbsp;3.2.2.). Vorliegend sind keine Anhaltspunkte dafür
+erkennbar, dass Dr.&nbsp;D____&nbsp;die entsprechenden Vorgaben nicht bzw. nur
+ungenügend beachtet hätte. Dr.&nbsp;D____&nbsp;hat die Anamnese erhoben, er berücksichtigte
+die von der Beschwerdeführerin geklagten Beschwerden und setzte sich mit den
+Standardindikatoren auseinander. Kann – wie hier – von inhaltlicher
+Vollständigkeit und Schlüssigkeit im Ergebnis ausgegangen werden, ist die
+Untersuchungsdauer ohnehin regelmässig nicht entscheidend (Urteil des
+Bundesgerichts 9C_671/2012 vom 15. November 2012 E. 4.5. mit Hinweis).&nbsp;</h2>
+
+<h2>4.5.8.    Weiter ist festzuhalten, dass die Beschwerdeführerin auch aus dem
+Einwand, der Gutachter habe es verweigert, ein spezifisches Instrumentarium zur
+Diagnostik einer Persönlichkeitsstörung anzuwenden, nichts zu ihren Gunsten
+ableiten kann. Die Durchführung von Tests unterliegt grundsätzlich der
+Fachkenntnis und dem Ermessensspielraum des Experten (Urteile des
+Bundesgerichts 9C_804/2018 vom 23.&nbsp;Januar 2019 E. 2.2.; 9C_998/2010 vom 8.
+März 2011 E. 3.2.3.; I 305/06 vom 22.&nbsp;Mai 2007 E. 3.2.). Diesbezüglich hat
+Dr.&nbsp;D____&nbsp;eingehend begründet, weshalb er auf die Verwendung von
+psychometrischen Instrumenten verzichtet hat (IV-Akte 87, S. 40). Seine
+Ausführungen erscheinen plausibel und es gibt keinen Anlass, seine Begründung
+in Zweifel zu ziehen. </h2>
+
+<h2>4.5.9.    Zusammenfassend kann somit festgestellt werden, dass die Einwände
+der Beschwerdeführerin gegen das psychiatrische Teilgutachten nicht geeignet
+sind, die nachvollziehbare Schlussfolgerung von Dr.&nbsp;D____&nbsp;in Zweifel
+zu ziehen. Es liegen keinerlei Hinweise vor, dass wesentliche Aspekte im
+psychiatrischen Teilgutachten unberücksichtigt geblieben sind. Es muss daher
+festgestellt werden, dass sich auch das psychiatrische Teilgutachten in der
+Darlegung der medizinischen Zusammenhänge als schlüssig und nachvollziehbar
+erweist, weshalb ihm volle Beweiskraft zukommt.</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>4.6.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Abschliessend lässt die Beschwerdeführerin vorbringen, sie habe
+aufgrund ihrer Invalidität keine berufliche Ausbildung beginnen oder
+abschliessen können. Es sei ihr deshalb infolge Frühinvalidität eine Rente
+zuzusprechen (vgl. Ziff. 31-34 der Beschwerde). Diesbezüglich ist festzuhalten,
+dass der Beginn der 80-prozentigen Arbeitsfähigkeit gemäss psychiatrischem
+Teilgutachten nicht ohne weiteres präzise festgehalten werden kann. Es wird am
+ehesten vom Begutachtungsdatum (5. Februar 2025) oder vom Zeitpunkt der
+Anmeldung bei der Beschwerdegegnerin (22.&nbsp;März 2023) ausgegangen (vgl. IV-Akte
+87, S. 39). Es erscheint nachvollziehbar, dass Dr.&nbsp;D____&nbsp;die
+Arbeitsfähigkeit nicht rückwirkend ab dem Zeitpunkt des Schulaustritts
+festlegen konnte. Es ist deshalb auch nicht mit überwiegender
+Wahrscheinlichkeit davon auszugehen, dass die Beschwerdeführerin aus
+gesundheitlichen Gründen nicht in der Lage gewesen ist, eine berufliche
+Ausbildung zu absolvieren. Gestützt auf das beweiskräftige bidisziplinäre
+Gutachten ist deshalb davon auszugehen, dass die gutachterlich festgestellte 80-prozentige
+Arbeitsfähigkeit frühestens ab dem Zeitpunkt der Anmeldung bei der
+Beschwerdegegnerin vorgelegen hat. Es gibt keinen Anlass, an der
+diesbezüglichen Einschätzung von Dr.&nbsp;D____&nbsp;zu zweifeln. Dem Antrag
+der Beschwerdeführerin, ihr sei aufgrund einer Frühinvalidität eine Rente
+zuzusprechen, kann deshalb nicht gefolgt werden. </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>4.7.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>4.7.1. Zusammenfassend ist somit festzuhalten, dass die
+Beschwerdegegnerin ihren Entscheid zu Recht auf das
+rheumatologisch-psychiatrische Gutachten vom 27.&nbsp;Februar 2025 abstützte
+und korrekterweise davon ausging, dass der Beschwerdeführerin eine
+Arbeitstätigkeit im Umfang von 80 % zumutbar ist. Bei dieser medizinischen
+Ausgangslage durfte die Beschwerdegegnerin auf erwerbliche Überlegungen
+verzichten. </h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm">4.7.2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Die Beschwerdegegnerin hat das Leistungsgesuch der Beschwerdeführerin
+mit Verfügung vom 19.&nbsp;Juni 2025 (IV-Akte 106) zu Recht abgewiesen. </h2>
+
+<h1 style="margin-left:0cm;text-indent:0cm"><b>5.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>&nbsp;</h1>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>5.1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Den obigen Ausführungen zufolge ist die Beschwerde abzuweisen.</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>5.2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Die ordentlichen Kosten des Verfahrens, bestehend aus einer Gebühr
+von Fr. 800.00, hat die Beschwerdeführerin zu tragen. Zufolge Bewilligung der
+unentgeltlichen Rechtspflege gehen diese Kosten zu Lasten des Staates.</h2>
+
+<h2 style="margin-left:0cm;text-indent:0cm"><b>5.3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>Die ausserordentlichen Kosten sind wettzuschlagen. Da der
+Beschwerdeführerin der Kostenerlass bewilligt worden ist, ist ihrem Vertreter,
+Dr. Alex Hediger, Advokat, ein angemessenes Anwaltshonorar aus der
+Gerichtskasse auszurichten. Aufgrund des nach der Einreichung der
+Beschwerdeschrift erfolgten Anwaltswechsels, ist die Bewilligung des
+Kostenerlasses hiermit auf die ehemalige Vertreterin, Dominique Flach,
+Advokatin, zu erweitern. Üblicherweise spricht das Sozialversicherungsgericht
+Basel-Stadt im Sinne einer Faustregel in durchschnittlichen IV-Fällen bei
+doppeltem Schriftenwechsel ein Kostenerlasshonorar von Fr. 3'000.00 (inklusive
+Auslagen) zuzüglich Mehrwehrsteuer zu. Im vorliegenden Fall ist in Bezug auf
+die sich stellenden Sachverhalts- und Rechtsfragen sowie unter Berücksichtigung
+des anwaltlichen Aufwandes von einem durchschnittlichen Fall auszugehen.
+Angesichts der aufgrund des Anwaltswechsels entstandenen Mehraufwände erscheint
+vorliegend ein Betrag von Fr. 3'500.00 (inklusive Auslagen) zuzüglichen
+Mehrwertsteuer als angemessen. Dieser Betrag wird hälftig aufgeteilt, so dass Dr.
+Alex Hediger, Advokat und Dominique Flach, Advokatin, je Fr.&nbsp;1'750.00
+(inklusive Auslagen) zuzüglich Mehrwertsteuer auszurichten sind. </h2>
+
+<b><span style="line-height:120%;font-family:'Arial',sans-serif"><br style="page-break-before:always" />
+</span></b>
+
+<p class="aaText" style="margin-bottom:24.0pt"><b>Demgemäss erkennt das
+Sozialversicherungsgericht</b>:</p>
+
+<p class="aaDispositiv">://:        Die Beschwerde wird abgewiesen. </p>
+
+<p class="aaDispositiv">            Die Beschwerdeführerin trägt die ordentlichen
+Kosten des Verfahrens, bestehend aus einer Gebühr von Fr. 800.00. Zufolge
+Bewilligung der unentgeltlichen Rechtspflege gehen diese Kosten zu Lasten des
+Staates. </p>
+
+<p class="aaDispositiv">            Die ausserordentlichen Kosten werden
+wettgeschlagen. </p>
+
+<p class="aaDispositiv">            Dem Vertreter der Beschwerdeführerin im
+Kostenerlass, Dr. Alex Hediger, Advokat, wird ein Anwaltshonorar von Fr.
+1'750.00 (inklusive Auslagen) zuzüglich Mehrwertsteuer von Fr. 141.75 aus der
+Gerichtskasse zugesprochen.</p>
+
+<p class="aaDispositiv">            Der ehemaligen Vertreterin der
+Beschwerdeführerin im Kostenerlass, Dominique Flach, Advokatin, wird ein
+Anwaltshonorar von Fr. 1'750.00 (inklusive Auslagen) zuzüglich Mehrwertsteuer
+von Fr. 141.75 aus der Gerichtskasse zugesprochen.  </p>
+
+<p class="aaDispositiv">&nbsp;</p>
+
+<p class="aaDispositiv">&nbsp;</p>
+
+<p class="aaDispositiv">            </p>
+
+<p class="aaDispositiv">            </p>
+
+<p class="aaDispositiv">&nbsp;</p>
+
+<p class="aaDispositiv"><b><span style="text-transform:uppercase">Sozialversicherungsgericht</span>
+BASEL-STADT</b></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:120%">Die Präsidentin                                                         Die
+Gerichtsschreiberin   </p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:120%;punctuation-wrap:
+simple;text-autospace:none;vertical-align:baseline">Dr. A. Pfleiderer                                                        lic.
+iur. B. Bertazzo<span lang="EN-GB">            </span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">&nbsp;</p>
+
+<b><span style="line-height:120%;font-family:'Arial',sans-serif"><br style="page-break-before:always" />
+</span></b>
+
+<p class="MsoBodyText" style="margin-bottom:24.0pt;text-align:justify;line-height:
+120%"><b><span style="line-height:120%">Rechtsmittelbelehrung</span></b></p>
+
+<p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+120%"><span style="line-height:120%">Gegen diesen Entscheid
+kann innert 30 Tagen nach der Eröffnung der vollständigen Ausfertigung beim
+Bundesgericht Beschwerde eingereicht werden (Art. 100 Abs. 1 des Bundesgesetzes
+vom 17. Juni 2005 über das Bundesgericht [Bundesgerichtsgesetz, BGG]). Die Beschwerdefrist
+kann nicht erstreckt werden (Art. 47 Abs. 1 BGG). Die Beschwerdegründe sind in
+Art. 95 ff. BGG geregelt.</span></p>
+
+<p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+120%"><span style="line-height:120%">Die Beschwerdeschrift ist
+dem Bundesgericht, Schweizerhofquai 6, 6004 Luzern, in dreifacher Ausfertigung
+zuzustellen. Die Beschwerdeschrift hat den Anforderungen gemäss Art. 42 BGG zu
+genügen; zu beachten ist dabei insbesondere:</span></p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:36.0pt;text-align:justify;text-indent:-36.0pt;line-height:120%"><span style="line-height:120%">a)            Die Beschwerdeschrift
+ist in einer Amtssprache abzufassen und hat die Begehren, deren Begründung mit
+Angabe der Beweismittel und die Unterschrift zu enthalten;</span></p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:36.0pt;text-align:justify;text-indent:-36.0pt;line-height:120%"><span style="line-height:120%">b)            in der Begründung ist in
+gedrängter Form darzulegen, inwiefern der angefochtene Entscheid Recht
+verletzt;</span></p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:36.0pt;text-align:justify;text-indent:-36.0pt;line-height:120%"><span style="line-height:120%">c)             die Urkunden, auf die
+sich die Partei als Beweismittel beruft, sind beizulegen, soweit die Partei sie
+in Händen hat, ebenso der angefochtene Entscheid.</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:110%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">Geht an:</p>
+
+<p class="gehtan" style="margin-bottom:0cm"><span style="
+font-family:'Arial',sans-serif">–          Beschwerdeführerin<br />
+–          Beschwerdegegnerin</span></p>
+
+<p class="gehtan" style="margin-bottom:0cm"><span style="
+font-family:'Arial',sans-serif">–          Bundesamt für Sozialversicherungen</span></p>
+
+<p class="gehtan" style="margin-bottom:0cm"><span style="
+font-family:'Arial',sans-serif">–          Advokatin Dominique Flach (nur Dispositiv)</span></p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:120%">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt;line-height:120%">Versandt am: </p>
+
+</div>
+
+
+				<br /><br />
+			</td>
+			<td width="20">&nbsp;</td>
+		</tr>
+	</table>
+	<!-- /DOCUMENT -->
+			</td>
+		</tr>
+	</table>
+	<!-- CUSTOM FOOTER (customize as you wish) -->
+	<div id="footer" class="notprintable">
+	</div>
+	<!-- /CUSTOM FOOTER -->
+</div>
+<!-- /FINDINFOWEB CONTENT PANEL -->
+</body>
+</html>

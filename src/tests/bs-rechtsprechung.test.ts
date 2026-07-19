@@ -1,0 +1,191 @@
+// ─── BS-Rechtsprechungs-Pipeline: netzfreie Parser-Tests gegen golden fixtures ─
+//
+// Fixtures = echte Portal-Antworten (rohbytes, windows-1252; URG-Art.-5-frei),
+// committet unter scripts/rechtsprechung/fixtures/. Deckt beide Dokument-
+// Vokabulare (aa*-Klassen / Word-Klassen), die Trefferlisten-Struktur, die
+// Latin-1/Windows-1252-Fidelity und die docketSafe-Kollisionsregel (§3.2).
+
+import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { encodeLatin1, dekodiereBs, trefferAnzahl, dokumentUrl, sucheUrl } from '../../scripts/rechtsprechung/bs-client';
+import { parseTrefferliste, gnJahr } from '../../scripts/rechtsprechung/bs-inventar';
+import { parseBsDokument, baueSnapshot, docketSafeVergabe, normAsciiWs } from '../../scripts/rechtsprechung/bs-parse';
+import { sha256EntscheidBloecke } from '../../scripts/normtext/sha-entscheide';
+import type { InventarZeile } from '../../scripts/rechtsprechung/bs-inventar';
+
+const FIX = join(process.cwd(), 'scripts', 'rechtsprechung', 'fixtures');
+const fix = (name: string): Buffer => readFileSync(join(FIX, name));
+
+describe('bs-client', () => {
+  it('encodeLatin1 prozent-encodiert über Latin-1-Bytes (nie UTF-8)', () => {
+    expect(encodeLatin1('31.12.2022')).toBe('31.12.2022');
+    expect(encodeLatin1('ä')).toBe('%E4');            // UTF-8 wäre %C3%A4
+    expect(encodeLatin1('a b')).toBe('a%20b');
+    expect(() => encodeLatin1('€')).toThrow();         // ausserhalb Latin-1: ehrlich scheitern
+  });
+
+  it('dekodiereBs behandelt C1-Bytes als Windows-1252 (Browser-Semantik)', () => {
+    expect(dekodiereBs(Buffer.from([0x96]))).toBe('–');   // en-dash, latin1 ergäbe U+0096
+    expect(dekodiereBs(Buffer.from([0xe4]))).toBe('ä');
+    expect(dekodiereBs(Buffer.from([0xa0]))).toBe(' ');
+  });
+
+  it('URLs tragen die Pflicht-Basis-Parameter; Dokument-URL das Pflicht-Template', () => {
+    const u = dokumentUrl(77812);
+    expect(u).toContain('Schema=BS_FI_WEB');
+    expect(u).toContain('nF30_KEY=77812');
+    expect(u).toContain('Template=search_result_document.html');   // ohne: 17-Byte-#ERROR bei HTTP 200
+    expect(u).not.toContain('W10_KEY');                            // session-gebunden, nie einbetten
+    const s = sucheUrl({ seite: 2, von: '01.01.2022', bis: '31.12.2022' });
+    expect(s).toContain('nAnzahlTrefferProSeite=999');
+    expect(s).toContain('nSeite=2');
+    expect(s).not.toContain('bInstanzInt');                        // kastriert den Korpus (§1.4)
+  });
+});
+
+describe('bs-inventar (Trefferlisten-Parse, strukturell)', () => {
+  const html = dekodiereBs(fix('trefferliste-2023-gn.html'));
+
+  it('Zeilenzahl == Portal-N («von N gefundenen»)', () => {
+    const rows = parseTrefferliste(html);
+    expect(trefferAnzahl(html)).toBe(3);
+    expect(rows).toHaveLength(3);
+  });
+
+  it('Zeilen tragen Key/GN/Sekundär-GN/Daten/Titel', () => {
+    const rows = parseTrefferliste(html);
+    for (const r of rows) {
+      expect(r.key).toBeGreaterThan(0);
+      expect(r.gn).toMatch(/^[A-Z][A-Z0-9]*\.\d{4}\.\d+$/);
+      expect(r.titel.length).toBeGreaterThan(0);
+      expect(r.erstpublikation).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    }
+  });
+
+  it('gnJahr liest das mittlere GN-Segment', () => {
+    expect(gnJahr('IV.2025.93')).toBe(2025);
+    expect(gnJahr('ZB.2023.4')).toBe(2023);
+    expect(gnJahr('unsinn')).toBeNull();
+  });
+});
+
+describe('bs-parse (aa*-Klassen-Vokabular, Sozialversicherungsgericht)', () => {
+  const p = parseBsDokument(fix('svg-iv-2025-93-datumlos.html'));
+
+  it('Metadaten-Kopf vollständig; datumlos erkannt', () => {
+    expect(p.gn).toBe('IV.2025.93');
+    expect(p.gnSekundaer).toBe('SVG.2026.119');
+    expect(p.court).toBe('bs_sozialversicherungsgericht');
+    expect(p.datum).toBeNull();                       // Portal publiziert kein Entscheiddatum
+    expect(p.erstpublikation).toBe('2026-06-23');
+    expect(p.aktualisiert).toBe('2026-07-10');
+    expect(p.titel).toBe('IVG Invalidenrente');
+  });
+
+  it('Abschnitte strukturell: Tatsachen → Entscheidungsgründe → Dispositiv', () => {
+    expect(p.strukturQuelle).toBe('klassen');
+    expect(p.abschnitte.map((a) => a.typ)).toEqual(['sachverhalt', 'erwaegung', 'dispositiv']);
+    const sv = p.abschnitte[0];
+    expect(sv.bloecke.map((b) => b.marke).filter(Boolean)).toEqual(['I.', 'II.', 'III.']);
+    const erw = p.abschnitte[1];
+    const marken = erw.bloecke.map((b) => b.marke).filter(Boolean);
+    expect(marken[0]).toBe('E. 1');
+    expect(marken).toContain('E. 3.2');
+    // Marken-Kette der Top-Ebene lückenlos (Fidelity §8.2).
+    const tops = marken.filter((m) => /^E\. \d+$/.test(m!)).map((m) => Number(m!.slice(3)));
+    expect(tops).toEqual([1, 2, 3, 4, 5]);
+  });
+
+  it('Dispositiv-Ziffern extrahiert («://:»-Konvention)', () => {
+    expect(p.dispositivOrders[0]).toBe('Die Beschwerde wird abgewiesen.');
+    expect(p.dispositivOrders.length).toBeGreaterThanOrEqual(4);
+  });
+
+  it('Typographie verbatim: NBSP erhalten, keine Entities/Tags/C1-Reste', () => {
+    const text = p.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
+    expect(text).toContain(' ');                  // NBSP nie ASCII-gefoldet
+    expect(text).not.toMatch(/&(nbsp|auml|ouml|uuml);/);
+    expect(text).not.toMatch(/<\/?(p|b|span|div|td|tr|br|img)\b[^>]*>/i);
+    expect(text).not.toMatch(/[-]/);       // windows-1252 korrekt dekodiert
+    expect(text).not.toContain('�');
+  });
+});
+
+describe('bs-parse (Word-Klassen-Vokabular, Appellationsgericht)', () => {
+  it('BEZ.2024.79: Marker-Segmentierung + Erwägungsmarken aus führendem <b>', () => {
+    const p = parseBsDokument(fix('ag-bez-2024-79.html'));
+    expect(p.gn).toBe('BEZ.2024.79');
+    expect(p.court).toBe('bs_appellationsgericht');
+    expect(p.datum).toBe('2024-12-30');
+    expect(p.strukturQuelle).toBe('marker');
+    expect(p.abschnitte.map((a) => a.typ)).toEqual(['sachverhalt', 'erwaegung', 'dispositiv']);
+    const marken = p.abschnitte[1].bloecke.map((b) => b.marke).filter(Boolean);
+    expect(marken).toEqual(['E. 1', 'E. 2', 'E. 3', 'E. 4', 'E. 4.1', 'E. 4.2', 'E. 5']);
+    expect(p.dispositivOrders[0]).toMatch(/^Die Beschwerde gegen den Entscheid des Zivilgerichts/);
+  });
+
+  it('ZB.2024.34: tiefe Erwägungs-Hierarchie (x.y.z) mit tiefe-Angabe', () => {
+    const p = parseBsDokument(fix('ag-zb-2024.html'));
+    const erw = p.abschnitte.find((a) => a.typ === 'erwaegung')!;
+    const tief = erw.bloecke.find((b) => b.marke === 'E. 1.2.1');
+    expect(tief?.tiefe).toBe(3);
+    // Windows-1252-Typographie (en-dash/Apostroph) überlebt verbatim.
+    const text = erw.bloecke.map((b) => b.text).join('\n');
+    expect(text).toMatch(/[–’]/);
+  });
+
+  it('SB.2023.43 (Strafsache): Dispositiv mit vielen Ziffern vollständig', () => {
+    const p = parseBsDokument(fix('ag-2024-3.html'));
+    expect(p.gn).toBe('SB.2023.43');
+    expect(p.abschnitte.map((a) => a.typ)).toContain('dispositiv');
+    expect(p.dispositivOrders.length).toBeGreaterThanOrEqual(5);
+  });
+});
+
+describe('Snapshot-Assemblierung (§3.4) + Kollisionsregel (§3.2)', () => {
+  const zeile: InventarZeile = {
+    key: 74438, gn: 'IV.2025.93', gnSekundaer: 'SVG.2026.119', datum: null,
+    titel: 'IVG Invalidenrente', erstpublikation: '2026-06-23', aktualisiert: '2026-07-10',
+  };
+
+  it('datumlos: Platzhalter <GN-Jahr>-01-01 + datumUnbekannt + Zitierung ohne «vom»', () => {
+    const p = parseBsDokument(fix('svg-iv-2025-93-datumlos.html'));
+    const s = baueSnapshot(p, zeile, p.gn, '2026-07-19');
+    expect(s.datum).toBe('2025-01-01');
+    expect(s.datumUnbekannt).toBe(true);
+    expect(s.zitierung).toBe('Sozialversicherungsgericht BS IV.2025.93');
+    expect(s.id).toBe('kanton/BS/bs_sozialversicherungsgericht/IV.2025.93');
+    expect(s.quelle).toBe('gerichte-bs');
+    expect(s.kuratierung).toBe('maschinell');
+    expect(s.regeste).toBeNull();                      // Titel ist Betreff, keine Regeste (§8)
+    expect(s.rubrum?.gegenstand).toBe('IVG Invalidenrente');
+    expect(s.nummerSekundaer).toBe('SVG.2026.119');
+    expect(s.fassungsToken).toBe('2026-07-10');        // aktualisiert als Drift-Token
+    expect(s.sha).toBe(sha256EntscheidBloecke(s.abschnitte));
+    expect(s.sachgebiet).toBe('sozial-abgaben');       // IV-Präfix
+    expect(s.quelleUrl).toContain('nF30_KEY=74438');
+  });
+
+  it('docketSafe: Erstes Dokument blank, weitere -YYYYMMDD, gleiches Datum zusätzlich -key', () => {
+    const p1 = { gn: 'ZB.2023.4', datum: '2023-05-04' };
+    const p2 = { gn: 'ZB.2023.4', datum: '2023-08-01' };
+    const p3 = { gn: 'ZB.2023.4', datum: '2023-08-01' };
+    const z = (key: number): InventarZeile => ({ ...zeile, key, gn: 'ZB.2023.4' });
+    const m = docketSafeVergabe([
+      { p: p2 as never, z: z(20) }, { p: p1 as never, z: z(10) }, { p: p3 as never, z: z(30) },
+    ]);
+    expect(m.get(10)).toBe('ZB.2023.4');
+    expect(m.get(20)).toBe('ZB.2023.4-20230801');
+    expect(m.get(30)).toBe('ZB.2023.4-20230801-30');
+  });
+});
+
+describe('normAsciiWs (Typographie-Treue)', () => {
+  it('kollabiert nur ASCII-Whitespace; NBSP/U+202F bleiben verbatim', () => {
+    expect(normAsciiWs('a  \t\r\n b')).toBe('a b');
+    expect(normAsciiWs('a  b')).toBe('a  b');
+    expect(normAsciiWs('CHF 100')).toBe('CHF 100');
+    expect(normAsciiWs('  rand  ')).toBe('rand');
+  });
+});
