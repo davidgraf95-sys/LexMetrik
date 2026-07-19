@@ -62,18 +62,30 @@ export function gruppiereErwaegungen(bloecke: EntscheidBlock[]): ErwGruppe[] {
     if (!g || g.top !== top) roh.push({ top, bloecke: [b] });
     else g.bloecke.push(b);
   }
+  // Mehrteilige Urteile starten die amtliche Nummerierung mehrfach neu (BS-Korpus:
+  // 31 Entscheide, z. B. SB.2018.46 tops = 1,2,4,5,1,2,3,1,…). Derselbe `top` darf
+  // aber nie zweimal denselben Anker (und der Reader nie doppelte React-Keys)
+  // erzeugen — Pin-Cite-Permalinks müssen eindeutig bleiben (R7). Regel: der ERSTE
+  // Lauf einer Ziffer behält den bisherigen Anker («e-3», «e-3-1» — bestehende
+  // Permalinks bleiben stabil), jeder WIEDERHOLUNGS-Lauf trägt das deterministische
+  // Suffix «-wN» (N = Laufnummer, z. B. «e-3-w2», «e-3-1-w2»). «w» kollidiert nie
+  // mit echten Marken-Ankern (nur Ziffern bzw. römisch i/v/x).
+  const laufVon = new Map<number, number>();
   return roh.map(({ top, bloecke: bl }) => {
     if (top === 0) {
       // Markenlose Erwägungen: reiner Fliesstext, KEINE Anker (kein «E. 0»).
       return { top, kopf: null, kopfAnker: '', subs: bl.map((block) => ({ block, anker: '' })) };
     }
+    const lauf = (laufVon.get(top) ?? 0) + 1;
+    laufVon.set(top, lauf);
+    const suffix = lauf > 1 ? `-w${lauf}` : '';
     const erstesIstKopf = segmente(bl[0].marke).length === 1;
     const kopf = erstesIstKopf ? bl[0] : null;
     const subBloecke = erstesIstKopf ? bl.slice(1) : bl;
-    const kopfAnker = `e-${top}`;
+    const kopfAnker = `e-${top}${suffix}`;
     const subs = subBloecke.map((block, i) => ({
       block,
-      anker: block.marke ? ankerFuer(block.marke) : `${kopfAnker}-${i}`,
+      anker: block.marke ? `${ankerFuer(block.marke)}${suffix}` : `${kopfAnker}-${i}`,
     }));
     return { top, kopf, kopfAnker, subs };
   });

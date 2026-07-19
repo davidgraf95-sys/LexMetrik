@@ -149,6 +149,26 @@ test.describe('Kanton BS — Register-Facette und Reader', () => {
     await page.screenshot({ path: '.scratch/bs-reader-mobil.png', fullPage: false })
   })
 
+  test('mehrteiliges Urteil (Nummerierungs-Restarts): keine React-Key-Errors, keine doppelten Anker-IDs (R7)', async ({ page }) => {
+    // SB.2018.46 startet die amtliche Erwägungs-Nummerierung mehrfach neu
+    // (tops 1,2,4,5,1,2,3,1,…) — vor dem Fix: 16 console.errors «two children
+    // with the same key» + 34 doppelte DOM-IDs (#e-1 5×), Pin-Cite mehrdeutig.
+    const fehler = fehlerSammeln(page)
+    await page.goto('/rechtsprechung/bs_appellationsgericht_SB.2018.46')
+    await expect(page.locator('#abschnitt-erwaegung')).toBeAttached()
+    // Alle Anker-IDs im Dokument eindeutig (Pin-Cite-Permalinks, R7).
+    const doppelte = await page.evaluate(() => {
+      const alle = [...document.querySelectorAll('[id]')].map((el) => el.id)
+      const gesehen = new Set<string>(); const dupl = new Set<string>()
+      for (const id of alle) { if (gesehen.has(id)) dupl.add(id); gesehen.add(id) }
+      return [...dupl]
+    })
+    expect(doppelte, `doppelte DOM-IDs: ${doppelte.join(', ')}`).toEqual([])
+    // Wiederholungs-Lauf trägt das -wN-Suffix und ist als Sprungziel vorhanden.
+    await expect(page.locator('#e-1-w2')).toBeAttached()
+    expect(fehler).toEqual([])
+  })
+
   test('BS-Karte/-Zeile: amtlicher Betreff ehrlich etikettiert, nie als Regeste (§8)', async ({ page }) => {
     await page.goto('/rechtsprechung')
     await page.getByRole('button', { name: /^Gemeinwesen: BS \(\d+\)$/ }).click()

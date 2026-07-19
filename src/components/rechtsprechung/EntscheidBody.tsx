@@ -128,7 +128,10 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
             );
           }
           return (
-            <section key={g.top} className="mt-7 pt-5 border-t border-line first:mt-2 first:pt-0 first:border-0">
+            // key = kopfAnker (nicht top): bei Nummerierungs-Restarts mehrteiliger
+            // Urteile (SB.2018.46) kommt derselbe top mehrfach vor — der Anker ist
+            // per gruppiereErwaegungen lauf-eindeutig (-wN-Suffix), Keys kollisionsfrei.
+            <section key={g.kopfAnker} className="mt-7 pt-5 border-t border-line first:mt-2 first:pt-0 first:border-0">
               <div id={g.kopfAnker} className="group scroll-mt-[7rem]">
                 <Ziffer label={`${g.top}.`} marke={`E. ${g.top}`} anker={g.kopfAnker} stark />
                 {g.kopf && <p className={`${ABSATZ} mt-1`}><BodyText text={g.kopf.text} /></p>}
