@@ -54,3 +54,33 @@ describe('ersteFundstelle — Referenz BGE 151 III 377', () => {
     expect(new Set(anker).size).toBe(anker.length); // keine Kollisionen
   });
 });
+
+// ─── Nummerierungs-Restarts mehrteiliger Urteile (R7-Fix 19.7.2026) ──────────
+// BS-Korpus: 31 Entscheide starten die amtliche Erwägungs-Nummerierung mehrfach
+// neu (SB.2018.46: tops 1,2,4,5,1,2,3,1,…). Anker/Keys müssen eindeutig bleiben:
+// erster Lauf unverändert (Permalink-Stabilität), Wiederholungs-Läufe mit -wN.
+describe('gruppiereErwaegungen — Restart-Ketten eindeutig verankert', () => {
+  const b = (marke: string | null, text = 'Text'): { marke: string | null; text: string } => ({ marke, text });
+
+  it('erster Lauf behält e-N; Wiederholungs-Läufe erhalten -wN (Kopf UND Subs)', () => {
+    const gruppen = gruppiereErwaegungen([
+      b('E. 1'), b('E. 2'), b('E. 2.1'),
+      b('E. 1'), b('E. 1.1'), b('E. 2'),
+      b('E. 1'),
+    ] as never);
+    const kopfAnker = gruppen.map((g) => g.kopfAnker);
+    expect(kopfAnker).toEqual(['e-1', 'e-2', 'e-1-w2', 'e-2-w2', 'e-1-w3']);
+    const subAnker = gruppen.flatMap((g) => g.subs.map((s) => s.anker));
+    expect(subAnker).toContain('e-2-1');       // erster Lauf unverändert
+    expect(subAnker).toContain('e-1-1-w2');    // Wiederholungs-Lauf disambiguiert
+    // Alle vergebenen Anker global eindeutig (Pin-Cite/R7):
+    const alle = [...kopfAnker, ...subAnker].filter(Boolean);
+    expect(new Set(alle).size).toBe(alle.length);
+  });
+
+  it('ohne Restart bleibt alles byte-identisch zum bisherigen Schema', () => {
+    const gruppen = gruppiereErwaegungen([b('E. 1'), b('E. 1.1'), b('E. 2')] as never);
+    expect(gruppen.map((g) => g.kopfAnker)).toEqual(['e-1', 'e-2']);
+    expect(gruppen[0].subs[0].anker).toBe('e-1-1');
+  });
+});

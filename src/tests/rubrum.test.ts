@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { rubrumFeldPlausibel } from '../lib/rechtsprechung/rubrum';
+import { rubrumAusAmtlichemStrukturfeld, rubrumFeldPlausibel } from '../lib/rechtsprechung/rubrum';
 
 describe('rubrumFeldPlausibel', () => {
   it('akzeptiert knappe, sauber beginnende Einträge', () => {
@@ -33,5 +33,24 @@ describe('rubrumFeldPlausibel', () => {
 
   it('verwirft überlange Werte (fehlgeschnittener Fliesstext)', () => {
     expect(rubrumFeldPlausibel('gegenstand', 'Wort '.repeat(40).trim())).toBe(false);
+  });
+});
+
+// ─── Amtliche Strukturfelder (BS-Portal-Betreff) passieren verbatim (§8-Fix 19.7.2026) ──
+describe('rubrumFeldPlausibel — amtliches Strukturfeld (gerichte-bs)', () => {
+  it('BS-Betreffs mit Kleinbuchstaben-Anfang/Überlänge werden NICHT verworfen', () => {
+    expect(rubrumFeldPlausibel('gegenstand', 'betreffend Vorbereitungshaft', true)).toBe(true);
+    expect(rubrumFeldPlausibel('gegenstand', 'ad 1 & 2: mehrfache Widerhandlung', true)).toBe(true);
+    expect(rubrumFeldPlausibel('gegenstand', 'Wort '.repeat(40).trim(), true)).toBe(true);
+    // Kontrolle: dieselben Werte fallen ohne Amtlich-Flag weiterhin durch.
+    expect(rubrumFeldPlausibel('gegenstand', 'betreffend Vorbereitungshaft')).toBe(false);
+  });
+  it('leer bleibt leer — auch amtlich', () => {
+    expect(rubrumFeldPlausibel('gegenstand', '   ', true)).toBe(false);
+  });
+  it('rubrumAusAmtlichemStrukturfeld kennt genau die Portal-Quelle', () => {
+    expect(rubrumAusAmtlichemStrukturfeld('gerichte-bs')).toBe(true);
+    expect(rubrumAusAmtlichemStrukturfeld('bger')).toBe(false);
+    expect(rubrumAusAmtlichemStrukturfeld(null)).toBe(false);
   });
 });

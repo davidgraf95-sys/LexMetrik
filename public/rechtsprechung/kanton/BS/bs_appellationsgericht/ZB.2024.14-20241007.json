@@ -1,0 +1,99 @@
+{
+  "erzeugt": "2026-07-19",
+  "eintraege": [
+    {
+      "id": "kanton/BS/bs_appellationsgericht/ZB.2024.14-20241007",
+      "gericht": "bs_appellationsgericht",
+      "gerichtName": "Appellationsgericht BS",
+      "gerichtstyp": "kantonal",
+      "kanton": "BS",
+      "abteilung": null,
+      "nummer": "ZB.2024.14",
+      "bgeReferenz": null,
+      "zitierung": "Appellationsgericht BS ZB.2024.14 vom 07.10.2024",
+      "datum": "2024-10-07",
+      "sprache": "de",
+      "leitcharakter": "routine",
+      "sachgebiet": "privat",
+      "legalArea": null,
+      "rubrum": {
+        "gegenstand": "Aufsichtsrechtliche Anzeige",
+        "parteien": null,
+        "vorinstanz": null,
+        "besetzung": null
+      },
+      "regeste": null,
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Mit Eingabe vom 19. März 2024 (Abgabe am Schalter des Appellationsgerichts am 20. März 2024) wandte sich A____ (nachfolgend Anzeigesteller) an das Appellationsgericht. Diese Eingabe wurde vom Appellationsgericht unter anderem als sinngemässe aufsichtsrechtliche Anzeige wegen angeblicher Verletzungen von Amtspflichten beim Zivilgericht entgegengenommen. Für aufsichtsrechtliche Anzeigen gegen die der Aufsicht des Appellationsgerichts unterstehende Gerichte ist ein Dreiergericht des Appellationsgerichts zuständig (§ 92 Abs. 1 Ziff. 12 des Gerichtsorganisationsgesetzes [GOG, SG 154.100]). Mit Eingabe vom 17. September 2024 zog der inzwischen anwaltlich vertretene Anzeigesteller sämtliche am Appellationsgericht hängigen Verfahren und damit auch seine aufsichtsrechtliche Anzeige protestando Kosten zurück. Aufgrund der vorliegenden Akten besteht auch kein Anlass für ein Einschreiten von Amtes wegen. Folglich ist das durch die sinngemässe aufsichtsrechtliche Anzeige vom 19. März 2024 veranlasste aufsichtsrechtliche Verfahren einzustellen."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Demgemäss erkennt das Appellationsgericht (Dreiergericht):"
+            },
+            {
+              "marke": null,
+              "text": "://:        Das durch die sinngemässe aufsichtsrechtliche Anzeige veranlasste aufsichtsrechtliche Verfahren wird eingestellt."
+            },
+            {
+              "marke": null,
+              "text": "Es werden keine Kosten erhoben."
+            },
+            {
+              "marke": null,
+              "text": "Mitteilung an:"
+            },
+            {
+              "marke": null,
+              "text": "-       Anzeigesteller"
+            },
+            {
+              "marke": null,
+              "text": "-       Zivilgericht Basel-Stadt"
+            },
+            {
+              "marke": null,
+              "text": "APPELLATIONSGERICHT BASEL-STADT"
+            },
+            {
+              "marke": null,
+              "text": "Die Gerichtsschreiberin"
+            },
+            {
+              "marke": null,
+              "text": "MLaw Siena Nigon"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Das durch die sinngemässe aufsichtsrechtliche Anzeige veranlasste aufsichtsrechtliche Verfahren wird eingestellt.",
+        "Es werden keine Kosten erhoben."
+      ],
+      "zitierteNormen": [],
+      "normKeys": [],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "gerichte-bs",
+      "quelleUrl": "https://rechtsprechung.gerichte.bs.ch/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&WebServerUrl=rechtsprechung.gerichte.bs.ch&WebServerScript=%2Fcgi-bin%2Fnph-omniscgi.exe&OmnisLibrary=JURISWEB&OmnisClass=rtFindinfoWebHtmlService&OmnisServer=JURISWEB%2C7000&Schema=BS_FI_WEB&Parametername=WEB&cSprache=DE&Aufruf=getMarkupDocument&nF30_KEY=77480&Template=search_result_document.html",
+      "abgerufen": "2026-07-19",
+      "fassungsToken": "2025-04-10",
+      "sha": "5d0930e9cf1bef2b3ebf343fa5813183e64bd13e3d5ca0790eab6b7ef0f9f630",
+      "erstpublikation": "2025-04-10",
+      "aktualisiert": "2025-04-10",
+      "nummerSekundaer": "AG.2024.577",
+      "ecli": "ECLI:CH:BSA:2024:ZB.2024.14"
+    }
+  ]
+}

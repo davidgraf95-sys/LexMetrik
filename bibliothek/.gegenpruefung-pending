@@ -1,9 +1,9 @@
 {
-  "hash": "3d2beac0f7a6ac1f7fa840205637539a9f0c8e66ff206ea3552a02f1003774e7",
+  "hash": "2196621d3b735a4e734a01f3e763d987a992eda4541b9736710b7e913529cb94",
   "verdikt": "bestanden",
-  "quellePin": "fedlex jolux:titleShort 20260716 (in-force) + bger/bvger/bstger/bpatger Urteile",
-  "datum": "2026-07-16",
+  "quellePin": "fedlex bund (G-REF-Sidecars, gepinnte Konsolidierungen)",
+  "datum": "2026-07-19",
   "dateien": [
-    "scripts/normtext-entscheide.ts"
+    "daten-manifest.json"
   ]
 }

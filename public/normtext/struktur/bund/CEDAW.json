@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "0.108",
   "titel": "Übereinkommen zur Beseitigung jeder Form von Diskriminierung der Frau",
@@ -99,7 +99,8 @@
     "links": [
      {
       "label": "SR <b>0.120</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160",
+      "rs": "0.120"
      }
     ],
     "absatz": null,
@@ -111,7 +112,8 @@
     "links": [
      {
       "label": "SR <b>0.103.1</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/19"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1993/725_725_725",
+      "rs": "0.103.1"
      }
     ],
     "absatz": null,

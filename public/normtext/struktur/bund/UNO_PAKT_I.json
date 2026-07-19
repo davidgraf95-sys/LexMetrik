@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "0.103.1",
   "titel": "Internationaler Pakt über wirtschaftliche, soziale und kulturelle Rechte",
@@ -52,7 +52,8 @@
     "links": [
      {
       "label": "SR <b>0.120</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160",
+      "rs": "0.120"
      }
     ],
     "absatz": null,
@@ -139,7 +140,8 @@
      "links": [
       {
        "label": "SR<b> 0.822.719.7</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3622"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1976/689_689_689",
+       "rs": "0.822.719.7"
       }
      ],
      "absatz": null,
@@ -316,7 +318,8 @@
      "links": [
       {
        "label": "SR <b>0.193.501</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/809"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1948/1048_1037_1010",
+       "rs": "0.193.501"
       }
      ],
      "absatz": null,

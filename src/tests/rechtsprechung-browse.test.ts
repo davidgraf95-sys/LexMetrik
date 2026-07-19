@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  themaText, regesteLeitsatz, synthThema, istSynth, normLabel, istBge, hauptIdentitaet,
+  themaText, regesteLeitsatz, synthThema, istSynth, istBetreff, normLabel, istBge, hauptIdentitaet,
   nachRelevanz, nachDatum, nachGericht, sortiere, gruppiereNachLeit, gruppiereNachInstanz,
   zaehleSachgebiete, normHaeufigkeit, filterEntscheide, filterNachNorm,
 } from '../lib/rechtsprechung/browse';
@@ -31,7 +31,7 @@ describe('normLabel', () => {
 
 describe('themaText / synthThema / istSynth', () => {
   it('nimmt die amtliche Regeste, wenn vorhanden', () => {
-    const e = be({ regesteKurz: 'Bauhandwerkerpfandrecht', normKeys: ['ZGB'] });
+    const e = be({ regesteKurz: 'Bauhandwerkerpfandrecht', regesteVorhanden: true, normKeys: ['ZGB'] });
     expect(themaText(e)).toBe('Bauhandwerkerpfandrecht');
     expect(istSynth(e)).toBe(false);
   });
@@ -47,8 +47,22 @@ describe('themaText / synthThema / istSynth', () => {
     expect(regesteLeitsatz('Bauhandwerkerpfandrecht')).toBe('Bauhandwerkerpfandrecht');
   });
   it('themaText führt mit dem Leitsatz, nicht mit dem Artikel-Block', () => {
-    const e = be({ regesteKurz: 'Art. 8 ZGB; Beweislast bei der Vaterschaft. Der Kläger trägt die Beweislast.', normKeys: ['ZGB'] });
+    const e = be({ regesteKurz: 'Art. 8 ZGB; Beweislast bei der Vaterschaft. Der Kläger trägt die Beweislast.', regesteVorhanden: true, normKeys: ['ZGB'] });
     expect(themaText(e)).toBe('Beweislast bei der Vaterschaft.');
+  });
+  // BS-Tranche §7.2/§8 (Block-B-Kontrakt): regesteKurz OHNE regesteVorhanden =
+  // amtlicher Betreff/Titel — verbatim führen, nie leitsatz-strippen (er ist
+  // keine Regeste; ein normzitat-führender Betreff würde sonst verstümmelt).
+  it('istBetreff: Betreff-Titel (regesteVorhanden=false) wird erkannt und verbatim geführt', () => {
+    const rk = 'Art. 132 ZPO. Kostenerlass für die Kindesvertretung';
+    const e = be({ regesteKurz: rk, quelle: 'gerichte-bs' });
+    expect(istBetreff(e)).toBe(true);
+    expect(istSynth(e)).toBe(false);
+    expect(themaText(e)).toBe(rk);
+  });
+  it('istBetreff ist false bei echter Regeste und bei Synth-Fällen', () => {
+    expect(istBetreff(be({ regesteKurz: 'Mietzins', regesteVorhanden: true }))).toBe(false);
+    expect(istBetreff(be({ regesteKurz: null }))).toBe(false);
   });
   it('regesteLeitsatz trennt auch am Punkt nach dem Gesetzeskürzel (statt Semikolon)', () => {
     expect(regesteLeitsatz('Art. 6 Abs. 4 lit. b ZPO; Art. 105 FusG. Die fusionsrechtliche Überprüfungsklage ist zulässig.'))

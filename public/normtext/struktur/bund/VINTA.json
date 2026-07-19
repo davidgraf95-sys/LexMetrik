@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "142.205",
   "titel": "Verordnung über die Integration von Ausländerinnen und Ausländern",
@@ -29,7 +29,8 @@
     "links": [
      {
       "label": "SR <b>142.20</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2007/758",
+      "rs": "142.20"
      }
     ],
     "absatz": null,
@@ -41,7 +42,8 @@
     "links": [
      {
       "label": "SR <b>142.31</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/358",
+      "rs": "142.31"
      }
     ],
     "absatz": null,
@@ -155,7 +157,8 @@
      "links": [
       {
        "label": "SR <b>170.512</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2004/745",
+       "rs": "170.512"
       }
      ],
      "absatz": null,
@@ -236,7 +239,8 @@
      "links": [
       {
        "label": "SR <b>616.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857",
+       "rs": "616.1"
       }
      ],
      "absatz": "1",
@@ -309,7 +313,8 @@
      "links": [
       {
        "label": "SR <b>851.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10359"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1978/221_221_221",
+       "rs": "851.1"
       }
      ],
      "absatz": "6",
@@ -334,7 +339,8 @@
      "links": [
       {
        "label": "SR <b>616.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857",
+       "rs": "616.1"
       }
      ],
      "absatz": "2",
@@ -384,7 +390,8 @@
      "links": [
       {
        "label": "SR <b>616.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857",
+       "rs": "616.1"
       }
      ],
      "absatz": "3",

@@ -110,6 +110,8 @@ const GERICHT_ANZEIGE: Record<string, string> = {
   ag_gerichte: 'Obergericht AG',
   sg_gerichte: 'Verwaltungs-/Versicherungsgericht SG',
   gr_gerichte: 'Kantonsgericht GR',
+  // BS-Tranche (§3.1): Kopf-Instanz «Aufsichtskommission …» (Anwaltsaufsicht, BGFA).
+  bs_aufsichtskommission: 'Aufsichtskommission über die Anwältinnen und Anwälte BS',
 };
 const SUFFIX_NAME: Record<string, string> = {
   obergericht: 'Obergericht', verwaltungsgericht: 'Verwaltungsgericht',
@@ -133,6 +135,23 @@ const KANT_PRAEFIX: Array<[RegExp, Rechtsgebiet]> = [
   [/^(ZR|ZB|ZK|ZG|PS|PQ|PC|PD|PF|RE|RU|NP|LB|LC|LF|RB|HG)\b/i, 'privat'],
   [/^(SB|SK|UE|UH|US|BK|SU)\b/i, 'straf'],
   [/^(WBE|VB|VWBE)\b/i, 'oeffentlich'],
+  // BS-Geschäftsarten (BS-Tranche §3.4) — jede Zeile an ≥3 echten Portal-Titeln
+  // verifiziert (Inventar 19.7.2026; bei Kleinst-Beständen MV/SG/K5/KR an ALLEN
+  // existierenden Dokumenten + Kopf-Instanz); unsichere Präfixe (DGZ/BO)
+  // bewusst weggelassen (ehrlich Default statt geraten):
+  //  AL Arbeitslosenversicherung · AH AHV · MV Militärversicherung · SG Schieds-
+  //  gericht Sozialversicherung (KVG-Tarif) — Sozialversicherung.
+  [/^(AL|AH|MV|SG)\b/i, 'sozial-abgaben'],
+  //  BES Beschwerde Strafsachen · HB Haftsachen · DGS Dreiergericht Strafsachen ·
+  //  ZS Strafsachen (Landesverweisung/Verkehrsregeln/erkennungsdienstlich).
+  [/^(BES|HB|DGS|ZS)\b/i, 'straf'],
+  //  BEZ Beschwerde Zivilsachen · KE Kindes-/Erwachsenenschutz · ZV Versicherungs-
+  //  gericht VVG (privatrechtliche Zusatzversicherung) · K5 Zivilgericht Kammer 5
+  //  (Bauhandwerkerpfandrecht/Arbeitsvertrag) · KR Kindesrückführung (HKÜ).
+  [/^(BEZ|KE|ZV|K5|KR)\b/i, 'privat'],
+  //  VD Verwaltungsrekurse · AUS Ausschaffungs-/Vorbereitungshaft · VG Verfassungs-
+  //  gericht · AK Anwaltsaufsicht (Disziplinarrecht BGFA) · DGV Dreiergericht Verwaltung.
+  [/^(VD|AUS|VG|AK|DGV)\b/i, 'oeffentlich'],
 ];
 export function kantonalSachgebiet(docket: string): Rechtsgebiet | null {
   const d = String(docket).trim();

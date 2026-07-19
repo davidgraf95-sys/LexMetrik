@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "700.1",
   "titel": "Raumplanungsverordnung",
@@ -28,7 +28,8 @@
     "links": [
      {
       "label": "SR <b>700</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8351"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573",
+      "rs": "700"
      }
     ],
     "absatz": null,
@@ -962,7 +963,8 @@
      "links": [
       {
        "label": "SR <b>211.412.11</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1993/1410_1410_1410",
+       "rs": "211.412.11"
       }
      ],
      "absatz": "1",
@@ -1365,7 +1367,8 @@
      "links": [
       {
        "label": "SR <b>211.412.110</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5758"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1993/2904_2904_2904",
+       "rs": "211.412.110"
       }
      ],
      "absatz": null,
@@ -1378,7 +1381,8 @@
      "links": [
       {
        "label": "SR <b>211.412.11</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1993/1410_1410_1410",
+       "rs": "211.412.11"
       }
      ],
      "absatz": null,
@@ -1525,7 +1529,8 @@
      "links": [
       {
        "label": "SR <b>431.841</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7029"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2017/376",
+       "rs": "431.841"
       }
      ],
      "absatz": "1",
@@ -1537,7 +1542,8 @@
      "links": [
       {
        "label": "SR <b>912.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10437"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1999/46",
+       "rs": "912.1"
       }
      ],
      "absatz": "2",
@@ -1586,7 +1592,8 @@
      "links": [
       {
        "label": "SR <b>912.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10437"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1999/46",
+       "rs": "912.1"
       }
      ],
      "absatz": null,
@@ -1806,7 +1813,8 @@
      "links": [
       {
        "label": "SR <b>520.31</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7609"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2014/616",
+       "rs": "520.31"
       }
      ],
      "absatz": null,
@@ -1825,7 +1833,8 @@
      "links": [
       {
        "label": "SR <b>451</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7166"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1966/1637_1694_1679",
+       "rs": "451"
       }
      ],
      "absatz": null,
@@ -2225,7 +2234,8 @@
      "links": [
       {
        "label": "SR <b>211.412.11</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1993/1410_1410_1410",
+       "rs": "211.412.11"
       }
      ],
      "absatz": "1",
@@ -2237,7 +2247,8 @@
      "links": [
       {
        "label": "SR <b>455.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7198"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/416",
+       "rs": "455.1"
       }
      ],
      "absatz": "3",
@@ -2431,7 +2442,8 @@
      "links": [
       {
        "label": "SR <b>910.13</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10406"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2013/765",
+       "rs": "910.13"
       }
      ],
      "absatz": "4",

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "943.02",
   "titel": "Bundesgesetz über den Binnenmarkt",
@@ -38,7 +38,8 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404",
+      "rs": "101"
      }
     ],
     "absatz": null,
@@ -257,7 +258,8 @@
      "links": [
       {
        "label": "SR <b>0.142.112.681</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2002/243",
+       "rs": "0.142.112.681"
       }
      ],
      "absatz": "3bis",
@@ -310,7 +312,8 @@
      "links": [
       {
        "label": "SR <b>0.632.231.422</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2256"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1996/609_609_609",
+       "rs": "0.632.231.422"
       }
      ],
      "absatz": "1",
@@ -644,7 +647,8 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799",
+       "rs": "311.0"
       },
       {
        "label": "AS <b>2006</b> 3459",
@@ -660,7 +664,8 @@
      "links": [
       {
        "label": "SR <b>313.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857",
+       "rs": "313.0"
       }
      ],
      "absatz": "2",

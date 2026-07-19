@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
-import { themaText, istSynth, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
+import { themaText, istSynth, istBetreff, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
-import { formatiereDatum, spracheBadgeTitel } from './format';
+import { datumAnzeige, DATUM_UNBEKANNT_TITEL, spracheBadgeTitel } from './format';
 
 // Karte eines Entscheids (Dichte 'karten'). Hierarchie-Umkehr ggü. der alten
 // Karte: das THEMA führt (Scent), das Aktenzeichen wandert in die gedämpfte
@@ -18,6 +18,9 @@ export function EntscheidKarte({ e, onNorm }: {
 }) {
   const leit = e.leitcharakter === 'leitentscheid';
   const synth = istSynth(e);
+  // Amtlicher Betreff (BS-Portal-Titel) ≠ Regeste: eigene, ehrliche Optik + Marker
+  // (§8, Block-B-Kontrakt) — nie die Serifen-Regeste-Optik vortäuschen.
+  const betreff = istBetreff(e);
   // Verweis-Eintrag: das vollständige Urteil zu einem BGE → Deep-Link in die Voll-Ansicht.
   const verweis = e.verweis ?? null;
   const ziel = verweis
@@ -42,6 +45,10 @@ export function EntscheidKarte({ e, onNorm }: {
           </span>
           <span className="flex shrink-0 items-center gap-1.5">
             {synth && <span className="text-ink-500 italic">ohne amtl. Regeste</span>}
+            {betreff && (
+              <span className="text-ink-500 italic"
+                title="Betreff/Titel aus dem amtlichen Portal — keine Regeste">amtl. Betreff</span>
+            )}
             {e.kuratierung === 'maschinell' && (
               <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
             )}
@@ -54,7 +61,11 @@ export function EntscheidKarte({ e, onNorm }: {
           ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2">Vollständiges Urteil zu <span className="num">BGE {verweis.bgeReferenz}</span></p>
           : synth
             ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2">{themaText(e)}</p>
-            : <p className="mt-2 font-serif text-body-l text-ink-900 leading-snug line-clamp-2">{themaText(e)}</p>}
+            : betreff
+              /* Amtlicher Betreff: verbindlicher Text (font-medium, ink-900), aber
+                 Sans statt der Serifen-Regeste-Optik — ehrlich unterscheidbar (§8). */
+              ? <p className="mt-2 text-body-s font-medium text-ink-900 leading-snug line-clamp-2">{themaText(e)}</p>
+              : <p className="mt-2 font-serif text-body-l text-ink-900 leading-snug line-clamp-2">{themaText(e)}</p>}
 
       </Link>
 
@@ -79,7 +90,9 @@ export function EntscheidKarte({ e, onNorm }: {
           <span className="text-ink-300" aria-hidden>·</span>
           <span>{e.gerichtName}</span>
           <span className="text-ink-300" aria-hidden>·</span>
-          <span className="num">{formatiereDatum(e.datum)}</span>
+          <span className="num" title={e.datumUnbekannt ? DATUM_UNBEKANNT_TITEL : undefined}>
+            {datumAnzeige(e.datum, e.datumUnbekannt)}
+          </span>
           {istBge(e) && <span className="num text-ink-500" title="Aktenzeichen">({e.nummer})</span>}
           {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
         </div>

@@ -73,6 +73,35 @@ describe('G15 fnTextMitLinks — Hervorhebungen (fett/kursiv) als Rich-Text', ()
   });
 });
 
+describe('G-REF fnTextMitLinks — SR-Zielidentität (rs) treibt die Auflösung, ELI als amtlicher Fallback', () => {
+  it('rs auf einen NICHT gehaltenen Erlass → amtlicher ELI-Link (nicht mehr Vokabular)', () => {
+    const fn: Fussnote = {
+      nr: '1',
+      text: 'Fassung gemäss dem GwG (SR 943.03).',
+      links: [{ label: 'SR 943.03', url: 'https://fedlex.data.admin.ch/eli/cc/2016/752', rs: '943.03' }],
+    };
+    const out = render(fn);
+    // Link zur amtlichen Fassung (eli/cc), extern; keine Vokabular-Taxonomie-Seite
+    expect(out).toContain('href="https://fedlex.data.admin.ch/eli/cc/2016/752"');
+    expect(out).toContain('target="_blank"');
+    expect(out).not.toContain('vocabulary');
+    expect(out).not.toContain('/gesetze/bund');
+  });
+
+  it('rs auf einen GEHALTENEN Erlass (272 → ZPO) → INTERN, auch ohne «SR»-Präfix im Label', () => {
+    // Staatsvertrags-/Alt-Stil-Label «0.xxx»/nackte Nummer: das Label-Regex allein
+    // (^SR N$) griffe nicht — die maschinen-genaue rs-Nummer löst trotzdem auf.
+    const fn: Fussnote = {
+      nr: '2',
+      text: 'nach der ZPO 272.',
+      links: [{ label: '272', url: 'https://fedlex.data.admin.ch/eli/cc/2010/262', rs: '272' }],
+    };
+    const out = render(fn);
+    expect(out).toContain('href="/gesetze/bund/ZPO"');
+    expect(out).not.toContain('target="_blank"');
+  });
+});
+
 describe('A42 fnTextMitLinks — kantonaler Ingress-/Fussnoten-Verweis (intern vs. amtlich)', () => {
   it('vom Generator aufgelöster `intern`-Verweis linkt INTERN (Kanton)', () => {
     const fn: Fussnote = {

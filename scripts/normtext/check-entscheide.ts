@@ -31,7 +31,10 @@ const PUB = join(ROOT, 'public', 'rechtsprechung');
 // 18.7.2026: 100 → 200 MB — David-Entscheid 18.7.2026; Bände 148–151 = 98,3 MB, deckt
 // ~10+ weitere Jahrgänge; langfristig wandert der Korpus in die QS-DATA-DB-Auslieferung
 // (FAHRPLAN-DATENHALTUNG).
-const BUDGET_MB = 200;
+// 19.7.2026: 200 → 1024 MB — David-Entscheid 19.7.2026 («1 GB für Kantons-Vollimporte»):
+// BS-Rechtsprechungs-Vollimport seit 2022 (~3'765 Dokumente, amtliches Portal
+// rechtsprechung.gerichte.bs.ch) + Luft für weitere Kantons-Tranchen (~+30 MB/Jahr BS).
+const BUDGET_MB = 1024;
 // Eigenes Budget für die eine Datei norm-index.json (W3): die neue Artikel-Ebene
 // (proNormArtikel, keyed 'LAW/ART') fächert breit auf — ein Deckel verhindert, dass
 // der Fan-out still ballooniert. Ist 2.7.2026 ≈ 0.53 MB (Erlass- + Artikel-Ebene);
@@ -170,7 +173,11 @@ function main() {
     // (Abbruch am 5000-Boundary, egal ob davor Buchstabe/Space/Punkt/Ziffer steht). Einzige
     // Ausnahme: das amtliche «(…)»-Auslassungszeichen (Lookbehind `(?<!\()`). Hart blockierend
     // (§8: kein still unvollständiger Entscheidtext).
-    for (const [feld, abs] of [['abschnitte', snap.abschnitte], ['auszugAbschnitte', snap.auszugAbschnitte ?? []]] as const) {
+    // BS-Tranche (19.7.2026): NUR für Excerpt-Risiko-Quellen (OCL/entscheidsuche) — die
+    // gerichte-bs-Pipeline kennt keinen Kappungs-Mechanismus (raw-golden, Vollständigkeit
+    // sichern Count-/Fidelity-Gates in check:bs-entscheide); reale BS-Urteile enden z.T.
+    // verbatim amtlich auf «.…» (AUS.2026.4 E. 2.2.3, nF30_KEY 79253) — kein Kappungs-Indiz.
+    for (const [feld, abs] of snap.quelle === 'gerichte-bs' ? [] as const : [['abschnitte', snap.abschnitte], ['auszugAbschnitte', snap.auszugAbschnitte ?? []]] as const) {
       for (const a of abs) for (const b of a.bloecke) {
         if (/(?<!\()…\s*$/u.test(b.text)) {
           fehler.push(`${e.key}: ${feld} bricht mitten im Wort ab (U+2026, gekapptes Excerpt): «…${b.text.trimEnd().slice(-40)}»`);

@@ -49,6 +49,8 @@ export interface BrowseEntscheid {
   nummer: string;
   bgeReferenz: string | null;
   datum: string;
+  /** true ⇒ `datum` ist ein Platzhalter (Quelle ohne Entscheiddatum, BS §3.3/§7.2). */
+  datumUnbekannt?: true;
   zitierung: string;
   leitcharakter: Leitcharakter;
   regesteVorhanden: boolean;

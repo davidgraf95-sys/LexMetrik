@@ -18,7 +18,15 @@ import { normalisiereRegeste } from '../lib/rechtsprechung/register';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import { usePaneKontext } from '../components/layout/PaneKontext';
 import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
-import type { EntscheidSnapshot, EntscheidSprache, Abschnittstyp } from '../lib/rechtsprechung/typen';
+import type { EntscheidSnapshot, EntscheidSprache, Abschnittstyp, Entscheidquelle } from '../lib/rechtsprechung/typen';
+
+// Provenienz-Fuss (§7): Daten-Label je Quelle — BS-Tranche §7.1 (vorher hart
+// «OpenCaseLaw», was für gerichte-bs falsch wäre). Deklariert, kein Raten.
+const QUELLE_LABEL: Record<Entscheidquelle, string> = {
+  opencaselaw: 'OpenCaseLaw',
+  entscheidsuche: 'entscheidsuche.ch',
+  'gerichte-bs': 'Rechtsprechungs-Datenbank der Gerichte Basel-Stadt (amtlich)',
+};
 
 // Reader EINES Entscheids (/rechtsprechung/:key). Lädt Manifest-Eintrag → Datei
 // → Snapshot; Kopf, sticky Sprung-Navigation, hervorgehobene Regeste,
@@ -79,6 +87,24 @@ const SYNTH_MARKER: Record<EntscheidSprache, string> = {
 
 // Reihenfolge der Sprung-Ziele (amtliche Gliederung); Regeste vorangestellt.
 const NAV_TYPEN: Abschnittstyp[] = ['regeste', 'sachverhalt', 'erwaegung', 'dispositiv'];
+
+// Datums-Aussage der Meta-Zeile — EINE Regel für Kopf UND Lesemodus (§5):
+// 1) datumUnbekannt (BS §7.2): die amtliche Quelle publiziert KEIN Entscheiddatum
+//    → das Platzhalterdatum (<GN-Jahr>-01-01) nie als echtes Datum zeigen (§8);
+//    stattdessen ehrlich «Entscheiddatum nicht publiziert» + Erstpublikation.
+// 2) BGE-Bandjahr-Platzhalter → «BGE-Jahrgang». 3) sonst «Urteil vom …».
+function DatumMeta({ snap }: { snap: EntscheidSnapshot }) {
+  if (snap.datumUnbekannt) {
+    return (
+      <span title="Die amtliche Quelle publiziert kein Entscheiddatum">
+        Entscheiddatum nicht publiziert
+        {snap.erstpublikation && <> · Erstpublikation <span className="num">{formatiereDatum(snap.erstpublikation)}</span></>}
+      </span>
+    );
+  }
+  if (istBandjahr(snap)) return <span>BGE-Jahrgang <span className="num">{bgeJahrgang(snap)}</span></span>;
+  return <span>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></span>;
+}
 
 // Lese-Schriftgrössen (R17, A−/A+); Index 1 = Default (1.08rem).
 const FS_STUFEN = [1.0, 1.08, 1.18, 1.3];
@@ -392,13 +418,19 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
 
         {/* 5 Meta + Badges + Lese-Steuerung — gedämpfte Schlusszeile */}
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
-          {istBandjahr(snap)
-            ? <span>BGE-Jahrgang <span className="num">{bgeJahrgang(snap)}</span></span>
-            : <span>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></span>}
+          <DatumMeta snap={snap} />
           {snap.bgeReferenz && (
             <>
               <span className="text-ink-300" aria-hidden>·</span>
               <span className="num">{snap.bgeReferenz}</span>
+            </>
+          )}
+          {/* BS §7.2: parallele Zweit-Geschäftsnummer desselben Verfahrens
+              («ZB.2023.4 (AG.2023.…)») — Identität, keine zweite Zitierung. */}
+          {snap.nummerSekundaer && (
+            <>
+              <span className="text-ink-300" aria-hidden>·</span>
+              <span className="num" title="Parallele Geschäftsnummer desselben Verfahrens">({snap.nummerSekundaer})</span>
             </>
           )}
           {/* V1.2 (W2·7-VZUI): geteiltes StatusBadge-Vokabular — aria-label
@@ -508,7 +540,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
             title={massgeblichTitel}>
             ↗ massgebliche Fassung{massgeblichFehlt && <span className="text-ink-500"> (Urteil n. v.)</span>}
           </a>
-          <span className="text-ink-500">Daten: OpenCaseLaw</span>
+          <span className="text-ink-500">Daten: {QUELLE_LABEL[snap.quelle] ?? snap.quelle}</span>
         </div>
         <p className="text-micro text-ink-500 max-w-reading leading-relaxed">
           Der Urteilstext ist als amtliches Werk gemeinfrei (Art. 5 URG). Eine allfällige
@@ -634,10 +666,9 @@ function LesemodusOverlay({ snap, abschnitte, regesteText, massgeblicheUrl, mass
         </p>
         <h1 className="mt-2 text-h2 sm:text-h1 font-display font-semibold text-ink-900 num">{snap.zitierung}</h1>
         <p className="mt-1 text-xs text-ink-500">
-          {istBandjahr(snap)
-            ? <>BGE-Jahrgang <span className="num">{bgeJahrgang(snap)}</span></>
-            : <>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></>}
+          <DatumMeta snap={snap} />
           {snap.bgeReferenz && <> · <span className="num">{snap.bgeReferenz}</span></>}
+          {snap.nummerSekundaer && <> · <span className="num" title="Parallele Geschäftsnummer desselben Verfahrens">({snap.nummerSekundaer})</span></>}
         </p>
 
         {regesteText && snap.regeste && (

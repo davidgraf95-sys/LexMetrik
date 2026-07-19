@@ -25,13 +25,30 @@ const MAX_LAENGE: Record<RubrumFeld, number> = {
 const ERWAEGUNGS_MARKER = /\bBGE\s+\d|\bBBl\b|\bE\.\s*\d|\bi\.V\.m\.|\bZiff\.\s*\d|\bErwägung/i;
 
 /**
+ * Quellen, deren Rubrum-Felder AMTLICHE Strukturfelder sind (verbatim aus einer
+ * Metadaten-Tabelle des Portals übernommen, keine best-effort-Volltextextraktion).
+ * Für sie gilt die Fragment-Heuristik NICHT: echte BS-Betreffs beginnen oft klein
+ * («betreffend Vorbereitungshaft», «ad 1 & 2: …») oder überschreiten 160 Zeichen —
+ * die Heuristik verwarf so 532/3765 amtliche Betreffs (UI-Befund 19.7.2026) und
+ * der Reader behauptete fälschlich «keine amtliche Regeste vorhanden», während
+ * Karte/Zeile denselben Betreff als «amtl. Betreff» führten (§8-Bruch).
+ * EINE SSoT (§5): Anzeige (kopf.ts) und Bestands-Reinigung fragen hier an.
+ */
+export function rubrumAusAmtlichemStrukturfeld(quelle: string | null | undefined): boolean {
+  return quelle === 'gerichte-bs';
+}
+
+/**
  * true ⇒ der Wert ist als Rubrum-Eintrag plausibel. Verworfen wird, was nach
  * abgeschnittenem Fliesstext aussieht: leer, zu lang, mit Kleinbuchstaben
  * beginnend (Satzmitte) oder mit Erwägungs-/Zitat-Markern.
+ * `amtlichesStrukturfeld` (rubrumAusAmtlichemStrukturfeld): der Wert stammt
+ * verbatim aus einem amtlichen Metadatenfeld → nur der Leer-Check gilt.
  */
-export function rubrumFeldPlausibel(label: RubrumFeld, wert: string | null | undefined): boolean {
+export function rubrumFeldPlausibel(label: RubrumFeld, wert: string | null | undefined, amtlichesStrukturfeld = false): boolean {
   const t = (wert ?? '').trim();
   if (!t) return false;
+  if (amtlichesStrukturfeld) return true;
   if (t.length > MAX_LAENGE[label]) return false;
   // Saubere Einträge beginnen mit Grossbuchstabe, Ziffer oder Parteimarke (A.);
   // ein Kleinbuchstabe am Anfang verrät ein mitten im Satz gekapptes Fragment.

@@ -148,6 +148,38 @@ ist, **nicht** Pseudo-Struktur erzeugen, sondern die amtliche Form zeigen:
 - **R4 Selektive Abdeckung:** strukturell, nicht behebbar → ehrlich kommunizieren,
   nie «vollständig» suggerieren.
 
+## 7a. BS-Tranche / Vendor Findinfo — Bauplan-Kurzfassung (gebaut 19.7.2026)
+
+**Direktauftrag David 19.7.2026 (Vollimport seit 2022) — erste gebaute Kanton-Tranche
+des P3+-Slices (FAHRPLAN-RECHTSPRECHUNG §10).** Quelle = das AMTLICHE Portal
+`rechtsprechung.gerichte.bs.ch` (Findinfo/Omnis, `Schema=BS_FI_WEB`) — nicht
+entscheidsuche (nur Count-Gegenprobe, keine Metadaten-Übernahme). Voll-Dossier:
+`bibliothek/register/BS-RECHTSPRECHUNG-QUELLE-2026-07.md`.
+
+- **Scope:** Entscheiddatum ≥ 01.01.2022 ODER datumlos mit GN-Jahr ≥ 2022; alle 4
+  Instanzen (Appellationsgericht inkl. Straf-Geschäftsarten, Sozialversicherungs-,
+  Zivilgericht, Aufsichtskommission Anwältinnen/Anwälte). Takedown-Respekt: was das
+  Portal nicht mehr listet, fliegt beim Delta-Lauf raus.
+- **Pipeline** `scripts/rechtsprechung/bs-*.ts` (`npm run entscheide:bs`):
+  Inventar (Gesamtlauf 999/Seite + Jahresfenster-Gegenprobe, Count-Gates hart) →
+  Fetch (golden raw, Checkpoint, resumierbar, ~1 req/s) → Parse (linkedom,
+  zwei Dokument-Vokabulare: aa*-Klassen / Word-Klassen+Bold-Marken; windows-1252) →
+  additiv `schreibeKorpus()`. Delta: `npm run entscheide:bs -- --delta`.
+- **Request-Fallen (empirisch):** nur GET · Basis-Parameter Pflicht ·
+  `bInstanzInt_*` NIE senden (kastriert Korpus) · Paging-Wrap (nSeite>max ⇒ Seite 1) ·
+  Query-Encoding latin1 · Dokument-URL braucht `Template=search_result_document.html`
+  (sonst 17-Byte-`#ERROR` mit HTTP 200) · Bodies sind windows-1252 trotz
+  iso-8859-1-Header.
+- **Tor:** `check:bs-entscheide` (offline; Inventar==Register je GN/Jahr, Waisen,
+  docketSafe-Kollisionsregel, Fidelity-Assertions, NBSP-Quote) in `check:seriell`
+  hinter `check:entscheide` — erfüllt «je Kanton-Tranche eigenes grünes Tor» (P3+-DoD).
+- **Folge-Einheiten (NICHT gebaut):** F1 Bestand vor 2022 (~7'000 Dok.) · F2 Normzitat-
+  Extraktion/kantonaler Norm-Resolver · F3 Rubrum-Vertiefung (Besetzung/Parteien/Kammer) ·
+  F4 Masse-DB-Angleichung (rechtsprechung.db/E3) · F5 Register-Sharding · F6 weitere
+  Findinfo-Kantone mit demselben `bs-client`-Kern (Vendor-Hebel §2).
+
+---
+
 ## 7. Quellen
 entscheidsuche.ch (UZH-Blog, GitHub `entscheidsuche/NeueScraper`,
 `mcp.entscheidsuche.ch`, S3 `Spiderliste.xml`) · OpenCaseLaw (opencaselaw.ch, HF

@@ -15,7 +15,7 @@
 
 import type { EntscheidSnapshot } from './typen';
 import { synthThema } from './browse';
-import { rubrumFeldPlausibel, type RubrumFeld } from './rubrum';
+import { rubrumAusAmtlichemStrukturfeld, rubrumFeldPlausibel, type RubrumFeld } from './rubrum';
 
 export type KopfLabelKey = RubrumFeld;
 
@@ -51,7 +51,9 @@ export function kopfModell(s: EntscheidSnapshot): KopfModell {
     .map((label) => ({ label, wert: (r?.[label] ?? '').trim() }))
     // §1/§8: nur plausible Einträge zeigen — fehlgeschnittene Erwägungs-Fragmente
     // (Falsch-Positive der Extraktion) werden verworfen, nicht prominent gerendert.
-    .filter((z) => rubrumFeldPlausibel(z.label, z.wert));
+    // Amtliche Strukturfelder (BS-Portal-Betreff) sind KEINE Extraktion → verbatim
+    // zeigen; sonst widerspricht der Reader der Karte («amtl. Betreff», §8).
+    .filter((z) => rubrumFeldPlausibel(z.label, z.wert, rubrumAusAmtlichemStrukturfeld(s.quelle)));
 
   const hatGegenstand = rubrumZeilen.some((z) => z.label === 'gegenstand');
   // Die Regeste-Box (Reader) zeigt jede vorhandene Regeste → dann trägt sie das

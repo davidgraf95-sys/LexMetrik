@@ -55,8 +55,16 @@ public/such-index/
 # (das dauerhafte Register bibliothek/register/gegenpruefung-register.md wird committet)
 bibliothek/.gegenpruefung-pending
 
-# QS-DATA: DB-Artefakt (Werk-Zwischenprodukt, aus JSON reproduzierbar)
-daten/
+# QS-DATA: DB-Artefakt (Werk-Zwischenprodukt, aus JSON reproduzierbar).
+# BS-Rechtsprechung (Bauplan §5.1): inventar.json + fehlerliste.json werden
+# committet (Grundlage des Offline-Tors check:bs-entscheide); raw/ (golden,
+# ~250 MB, via `npm run entscheide:bs -- --fetch-only` reproduzierbar) und
+# checkpoint.json bleiben lokal.
+daten/*
+!daten/bs-fiw/
+daten/bs-fiw/*
+!daten/bs-fiw/inventar.json
+!daten/bs-fiw/fehlerliste.json
 .env*
 
 # Startseite-V3 Baseline/Abnahme-Screenshots (PNGs nie committen)

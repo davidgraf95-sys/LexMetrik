@@ -12,9 +12,20 @@
 # reihum schwere Specs das Test-Timeout (a11y/leser-linien-kanon — lokal grün,
 # ~12–19 s), bei >3 parallelen PR-Läufen wurde es Roulette. Jetzt:
 #   1) `tore` baut dist EINMAL und legt es als Artefakt ab (kein 3× Bauen);
-#   2) `e2e` fährt Playwright `--shard=i/3` als Matrix (je eigener vite-preview,
-#      `E2E_PORT` bleibt env-konfigurierbar) → je Shard ~⅓ der Wand, weniger
+#   2) `e2e` fährt Playwright als 3er-Matrix (je eigener vite-preview,
+#      `E2E_PORT` bleibt env-konfigurierbar) → je Job ~⅓ der Wand, weniger
 #      Contention, ohne die Parallelität in EINEN Runner zurückzuholen;
+#      VERTEILUNG NACH GEMESSENER DAUER (Shard-Balancing 19.7.): Playwrights
+#      `--shard=i/3` verteilt nach TEST-ZAHL in Alphabet-Reihenfolge — die
+#      schweren OR-Reader-Specs (leser-*, gesetze.e2e, norm-sprung) klumpten so
+#      alle in Shard 2 (22–42 min; Shard 1/3 nur 7–11 min), und die lange
+#      Chromium-Session auf dem gestarveten Runner riss dann Einzel-Budgets.
+#      Statt Alphabet packt jetzt `e2e/shard-gruppen.json` drei dauer-gleiche
+#      Gruppen (LPT aus lokal gemessenen Spec-Dauern, je ~212 s, Spread <0.1 %,
+#      schwere Specs verteilt). Der Union-Wächter (`check:e2e-shards`, auch in
+#      `tore`/`check:seriell`) beweist vor den Shards: Gruppen == `playwright
+#      --list` — kein Test doppelt, keiner verloren. Reine Verteilung, kein
+#      Test/Assertion/Timeout/Umfang berührt (§6.3);
 #   3) `perf` misst §15-Budgets ERST, wenn Bau + alle e2e-Shards grün sind
 #      (`needs: [tore, e2e]`) — die «Tempo zählt nur bei grüner Treue»-Kopplung
 #      ist damit job-übergreifend härter als die frühere Schritt-Reihenfolge.
@@ -91,7 +102,7 @@ jobs:
           include-hidden-files: true
 
   e2e:
-    name: Browser-Smoke Shard ${{ matrix.shard }}/3 (Playwright)
+    name: Browser-Smoke Shard ${{ matrix.gruppe }}/3 (Playwright)
     needs: tore
     runs-on: ubuntu-latest
     env:
@@ -99,7 +110,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shard: [1, 2, 3]
+        gruppe: [1, 2, 3]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -107,6 +118,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Union-Wächter VOR den Shards: beweist, dass die drei Gruppen in
+      # e2e/shard-gruppen.json exakt die von Playwright gesammelte Spec-Menge
+      # abdecken (kein Test doppelt, keiner verloren). Läuft in jedem Matrix-Job
+      # (billig, `playwright --list` ohne Browser/Server) — reisst die Kette,
+      # bevor eine unbalancierte oder lückenhafte Verteilung Tests verschluckt.
+      - name: e2e-Shard-Union-Wächter (Gruppen == playwright --list)
+        run: npm run check:e2e-shards
       - name: dist-Artefakt herunterladen (aus `tore`, nicht neu bauen)
         uses: actions/download-artifact@v4
         with:
@@ -120,10 +138,11 @@ jobs:
       - name: Playwright-Browser (Chromium)
         run: npx playwright install --with-deps chromium
       # `npm run preview` serviert das heruntergeladene dist/ (kein Rebuild);
-      # jeder Shard fährt nur ~⅓ der Specs seriell (workers:1 bleibt, damit die
-      # Contention NICHT in EINEN Runner zurückkehrt) → e2e-Wand ~gedrittelt.
-      - name: Browser-Smoke (Playwright, e2e/ gegen dist — Shard ${{ matrix.shard }}/3)
-        run: npm run test:e2e -- --shard=${{ matrix.shard }}/3
+      # jeder Job fährt nur die Specs SEINER dauer-gepackten Gruppe seriell
+      # (workers:1 bleibt, damit die Contention NICHT in EINEN Runner zurückkehrt)
+      # → e2e-Wand gedrittelt UND dauer-balanciert (je ~212 s statt 7–42 min).
+      - name: Browser-Smoke (Playwright, e2e/ gegen dist — Gruppe ${{ matrix.gruppe }}/3)
+        run: npm run test:e2e:gruppe -- ${{ matrix.gruppe }}
 
   perf:
     name: Perf-Budget (§15 — nur bei grüner Treue)

@@ -14,7 +14,7 @@
 //
 import { readFileSync, readdirSync, writeFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { rubrumFeldPlausibel, type RubrumFeld } from '../../src/lib/rechtsprechung/rubrum';
+import { rubrumAusAmtlichemStrukturfeld, rubrumFeldPlausibel, type RubrumFeld } from '../../src/lib/rechtsprechung/rubrum';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 
 const PUB = join(process.cwd(), 'public', 'rechtsprechung');
@@ -48,7 +48,9 @@ for (const datei of alleSnapshotDateien(PUB)) {
   let veraendert = false;
   for (const feld of FELDER) {
     const wert = neuRubrum[feld];
-    if (wert && !rubrumFeldPlausibel(feld, wert)) {
+    // Amtliche Strukturfelder (BS-Portal-Betreff) nie «bereinigen» — sie sind
+    // verbatim amtlich, die Fragment-Heuristik gilt nur für Extraktions-Felder (§5).
+    if (wert && !rubrumFeldPlausibel(feld, wert, rubrumAusAmtlichemStrukturfeld(snap.quelle))) {
       entfernt.push({ id: snap.id, feld, wert: wert.slice(0, 90) });
       neuRubrum[feld] = null;
       veraendert = true;

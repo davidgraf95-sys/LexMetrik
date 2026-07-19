@@ -137,6 +137,11 @@ export interface FnLink {
    *  Fallback (§8). Bund-Fussnoten tragen ihn nicht (dort löst der SR-Label-
    *  Resolver zur Laufzeit auf) → Bund-Rendering unverändert. */
   intern?: { ebene: 'bund' | 'kanton'; key: string };
+  /** G-REF: SR-Nummer eines amtlich verlinkten SR-Verweises (Zielidentität).
+   *  `url` ist dann der amtliche ELI-Deep-Link (eli/cc) zum Ziel-Erlass. Der
+   *  Reader nutzt `rs` als robuste SR-Erkennung (statt nur das Label zu parsen)
+   *  und fällt sonst auf den amtlichen ELI-Link (§8) zurück. */
+  rs?: string;
 }
 export interface Fussnote {
   nr: string; text: string; links: FnLink[];

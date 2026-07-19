@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "281.35",
   "titel": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs",
@@ -28,7 +28,8 @@
     "links": [
      {
       "label": "SR <b>281.1</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
+      "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529",
+      "rs": "281.1"
      }
     ],
     "absatz": null,
@@ -288,7 +289,8 @@
      "links": [
       {
        "label": "SR <b>172.220.111.31</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5350"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2001/485",
+       "rs": "172.220.111.31"
       }
      ],
      "absatz": "2",
@@ -567,7 +569,8 @@
      "links": [
       {
        "label": "SR <b>211.413.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5775"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/215_211_275",
+       "rs": "211.413.1"
       }
      ],
      "absatz": "1",
@@ -732,7 +735,8 @@
      "links": [
       {
        "label": "SR <b>272</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6136"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2010/262",
+       "rs": "272"
       }
      ],
      "absatz": "1",
@@ -866,7 +870,8 @@
      "links": [
       {
        "label": "SR <b>272</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6136"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2010/262",
+       "rs": "272"
       }
      ],
      "absatz": "1",
@@ -890,7 +895,8 @@
      "links": [
       {
        "label": "SR <b>952.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11561"
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129",
+       "rs": "952.0"
       }
      ],
      "absatz": "2",
@@ -1108,7 +1114,8 @@
      "links": [
       {
        "label": "SR <b>272.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6137"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2010/413",
+       "rs": "272.1"
       }
      ],
      "absatz": "1",
