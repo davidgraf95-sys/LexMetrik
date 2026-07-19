@@ -11,7 +11,11 @@
    Reine Darstellung, kein Inhaltseffekt (§3). */
 @font-face {
   font-family: 'Geist Fallback';
-  src: local('Arial'), local('ArialMT');
+  /* Linux-Härtung (A9-Forensik 19.7.2026): Arial fehlt auf dem CI-Image → ohne
+     Arimo/Liberation Sans (metrik-identische Arial-Klone) fiele der metrik-
+     angepasste Fallback aus und der Sans-Swap könnte umbrechen. Die Arial-
+     getunten Overrides gelten für Arimo/Liberation Sans 1:1 (gleiche Laufweite). */
+  src: local('Arial'), local('ArialMT'), local('Arimo'), local('Liberation Sans');
   ascent-override: 95.9379%;
   descent-override: 28.1609%;
   line-gap-override: 0%;
