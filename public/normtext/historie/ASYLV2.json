@@ -1,8 +1,8 @@
 {
  "erlass": "ASYLV2",
  "abdeckung": {
-  "fussnoten": 210,
-  "ereignis": 170,
+  "fussnoten": 211,
+  "ereignis": 171,
   "referenz": 38,
   "unparsed": 2
  },
@@ -710,6 +710,14 @@
   "24": {
    "giltSeit": "2025-07-01",
    "ereignisse": [
+    {
+     "typ": "berichtigt",
+     "datum": null,
+     "wirkung": false,
+     "quellen": [],
+     "absatz": "1",
+     "item": "b"
+    },
     {
      "typ": "fassung",
      "datum": "2022-06-01",
