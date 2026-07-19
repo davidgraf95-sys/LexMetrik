@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "0.211.231.011",
   "titel": "Übereinkommen über die Zuständigkeit, das anzuwendende Recht, die Anerkennung, Vollstreckung und Zusammenarbeit auf dem Gebiet der elterlichen Verantwortung und der Massnahmen zum Schutz von Kindern",
@@ -70,7 +70,8 @@
     "links": [
      {
       "label": "SR <b>0.211.231.01</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/859"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1969/181_191_191",
+      "rs": "0.211.231.01"
      }
     ],
     "absatz": null,
@@ -82,7 +83,8 @@
     "links": [
      {
       "label": "SR <b>0.107</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/28"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1998/2055_2055_2055",
+      "rs": "0.107"
      }
     ],
     "absatz": null,
@@ -643,7 +645,8 @@
      "links": [
       {
        "label": "SR <b>0.211.230.02</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/856"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1983/1694_1694_1694",
+       "rs": "0.211.230.02"
       }
      ],
      "absatz": null,

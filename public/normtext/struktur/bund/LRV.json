@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "814.318.142.1",
   "titel": "Luftreinhalte-Verordnung",
@@ -28,7 +28,8 @@
     "links": [
      {
       "label": "SR <b>814.01</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122",
+      "rs": "814.01"
      }
     ],
     "absatz": null,
@@ -374,7 +375,8 @@
      "links": [
       {
        "label": "SR <b>941.210</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11180"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/245",
+       "rs": "941.210"
       }
      ],
      "absatz": "2",
@@ -1222,7 +1224,8 @@
      "links": [
       {
        "label": "SR <b>946.51</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11467"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725",
+       "rs": "946.51"
       }
      ],
      "absatz": "1",
@@ -1354,7 +1357,8 @@
      "links": [
       {
        "label": "SR <b>946.51</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11467"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725",
+       "rs": "946.51"
       }
      ],
      "absatz": "2",
@@ -1497,7 +1501,8 @@
      "links": [
       {
        "label": "SR <b>510.620</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7339"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/389",
+       "rs": "510.620"
       }
      ],
      "absatz": null,

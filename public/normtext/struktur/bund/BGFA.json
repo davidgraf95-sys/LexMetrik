@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "935.61",
   "titel": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte",
@@ -30,7 +30,8 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404",
+      "rs": "101"
      }
     ],
     "absatz": null,
@@ -42,7 +43,8 @@
     "links": [
      {
       "label": "SR <b>0.142.112.681</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/243",
+      "rs": "0.142.112.681"
      }
     ],
     "absatz": null,
@@ -91,7 +93,8 @@
      "links": [
       {
        "label": "SR <b>0.142.113.672</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/261"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2020/1059",
+       "rs": "0.142.113.672"
       }
      ],
      "absatz": "2",
@@ -119,7 +122,8 @@
      "links": [
       {
        "label": "SR <b>0.412.136.7</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40305"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2025/203",
+       "rs": "0.412.136.7"
       }
      ],
      "absatz": "2",
@@ -289,7 +293,8 @@
      "links": [
       {
        "label": "SR <b>330</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6257"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/600",
+       "rs": "330"
       }
      ],
      "absatz": "1",
@@ -671,7 +676,8 @@
      "links": [
       {
        "label": "SR <b>0.142.112.681</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2002/243",
+       "rs": "0.142.112.681"
       }
      ],
      "absatz": "2",
@@ -740,7 +746,8 @@
      "links": [
       {
        "label": "SR <b>431.03</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6953"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2010/705",
+       "rs": "431.03"
       }
      ],
      "absatz": null,

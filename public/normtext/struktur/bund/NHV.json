@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "451.1",
   "titel": "Verordnung über den Natur- und Heimatschutz",
@@ -31,7 +31,8 @@
     "links": [
      {
       "label": "SR <b>451</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7166"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1966/1637_1694_1679",
+      "rs": "451"
      }
     ],
     "absatz": null,
@@ -43,7 +44,8 @@
     "links": [
      {
       "label": "SR <b>814.01</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122",
+      "rs": "814.01"
      }
     ],
     "absatz": null,
@@ -55,7 +57,8 @@
     "links": [
      {
       "label": "SR <b>0.455</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1853"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1982/802_802_802",
+      "rs": "0.455"
      }
     ],
     "absatz": null,
@@ -105,7 +108,8 @@
      "links": [
       {
        "label": "SR <b>700</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8351"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573",
+       "rs": "700"
       }
      ],
      "absatz": null,
@@ -241,7 +245,8 @@
      "links": [
       {
        "label": "SR <b>520.31</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7609"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2014/616",
+       "rs": "520.31"
       }
      ],
      "absatz": null,
@@ -538,7 +543,8 @@
      "links": [
       {
        "label": "SR <b>616.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857",
+       "rs": "616.1"
       }
      ],
      "absatz": "3",
@@ -662,7 +668,8 @@
      "links": [
       {
        "label": "SR <b>910.13</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10406"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2013/765",
+       "rs": "910.13"
       }
      ],
      "absatz": "2",
@@ -788,7 +795,8 @@
      "links": [
       {
        "label": "SR <b>910.13</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10406"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2013/765",
+       "rs": "910.13"
       }
      ],
      "absatz": null,
@@ -814,7 +822,8 @@
      "links": [
       {
        "label": "SR <b>922.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10979"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1988/506_506_506",
+       "rs": "922.0"
       }
      ],
      "absatz": "2",
@@ -1153,7 +1162,8 @@
       },
       {
        "label": "SR <b>700.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8353"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2000/310",
+       "rs": "700.1"
       }
      ],
      "absatz": "2",
@@ -1214,7 +1224,8 @@
      "links": [
       {
        "label": "SR <b>700</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8351"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573",
+       "rs": "700"
       }
      ],
      "absatz": "2",
@@ -1488,7 +1499,8 @@
      "links": [
       {
        "label": "SR <b>510.620</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7339"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/389",
+       "rs": "510.620"
       }
      ],
      "absatz": null,

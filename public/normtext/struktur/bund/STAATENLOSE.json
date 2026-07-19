@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "0.142.40",
   "titel": "Übereinkommen über die Rechtsstellung der Staatenlosen",
@@ -56,7 +56,8 @@
     "links": [
      {
       "label": "SR <b>0.120</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160",
+      "rs": "0.120"
      }
     ],
     "absatz": null,
@@ -68,7 +69,8 @@
     "links": [
      {
       "label": "SR<b> 0.142.30</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/432"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1955/443_461_469",
+      "rs": "0.142.30"
      }
     ],
     "absatz": null,

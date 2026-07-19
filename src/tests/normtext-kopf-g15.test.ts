@@ -115,6 +115,51 @@ describe('G15 · fnDefinitionen — Hervorhebungen (fett/kursiv) erhalten', () =
   });
 });
 
+describe('G-REF · fnDefinitionen — externer SR-Verweis dockt an der amtlichen ELI an', () => {
+  // Neue Fedlex-Generation: der SR-Verweis in der Fussnote trägt den amtlichen
+  // ELI-Deep-Link in `data-rs-uri` und die SR-Nummer in `data-rs`; das `href`
+  // zeigt auf eine Vokabular-Taxonomie-Seite (NICHT die amtliche Fassung).
+  const FN_SR = `<article id="art_1"><div class="collapseable"><p class="absatz">` +
+    `<sup>1</sup> Vgl. das Geldwäschereigesetz<sup><a href="#fn-sr" id="fnbck-sr">5</a></sup>.</p>` +
+    `<div class="footnotes"><p id="fn-sr"><sup><a href="#fnbck-sr">5</a></sup> ` +
+    `Fassung gemäss dem GwG (<a href="https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11301" ` +
+    `target="_blank" data-rs-uri="https://fedlex.data.admin.ch/eli/cc/2016/752" data-rs="943.03" data-lang="de">` +
+    `SR <b>943.03</b></a>).</p></div></div></article>`;
+
+  it('SR-Verweis: url = data-rs-uri (eli/cc), rs = data-rs — NICHT die Vokabular-href', () => {
+    const defs = fnDefinitionen(FN_SR);
+    const fn = defs.get('fn-sr')!;
+    const sr = fn.links.find((l) => l.label === 'SR <b>943.03</b>')!;
+    expect(sr).toBeDefined();
+    expect(sr.url).toBe('https://fedlex.data.admin.ch/eli/cc/2016/752'); // amtliche Fassung
+    expect(sr.url).not.toContain('vocabulary');                         // NICHT die Taxonomie-Seite
+    expect(sr.rs).toBe('943.03');                                       // Zielidentität erhalten
+    // Fussnoten-TEXT unberührt (nur die Verweis-Struktur wird angereichert)
+    expect(fn.text).toContain('SR <b>943.03</b>');
+  });
+
+  it('Alt-Stil SR-Anker (href = eli/cc, kein data-rs) bleibt unverändert — kein rs', () => {
+    // ZGB_KOPF fn-d1706615e18 trägt «…(<a href="…/eli/cc/1999/404">SR <b>101</b></a>)» OHNE data-rs.
+    const fn = fnDefinitionen(ZGB_KOPF).get('fn-d1706615e18')!;
+    const sr = fn.links.find((l) => l.label === 'SR <b>101</b>')!;
+    expect(sr.url).toBe('https://fedlex.data.admin.ch/eli/cc/1999/404');
+    expect(sr.rs).toBeUndefined();
+  });
+
+  it('AS-/BBl-Verweise (data-rs-los) bleiben ihr amtlicher href — kein rs', () => {
+    const fn = fnDefinitionen(ZGB_KOPF).get('fn-d1706615e36')!;
+    const as = fn.links.find((l) => l.label === 'AS <b>2000</b> 2355')!;
+    expect(as.url).toBe('https://fedlex.data.admin.ch/eli/oc/2000/374');
+    expect(as.rs).toBeUndefined();
+  });
+
+  it('Fussnoten-Rück-/Inline-Marker (href="#fnbck-…"/"#fn-…") werden NIE Link', () => {
+    const fn = fnDefinitionen(FN_SR).get('fn-sr')!;
+    expect(fn.links.every((l) => l.url.startsWith('https://'))).toBe(true);
+    expect(fn.links.some((l) => l.url.includes('#fn'))).toBe(false);
+  });
+});
+
 describe('G11 · extrahiereStruktur — Section-heading-Fussnoten behalten ihre Überschrift', () => {
   // OR-Ausschnitt (faithful): Randtitel «G. Verjährung» = <div class="heading">
   // (kind='m'), mit Fussnote 34 am Titel; danach der erste Artikel darunter.

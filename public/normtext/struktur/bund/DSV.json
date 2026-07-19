@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "235.11",
   "titel": "Verordnung über den Datenschutz",
@@ -28,7 +28,8 @@
     "links": [
      {
       "label": "SR <b>235.1</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2022/491",
+      "rs": "235.1"
      }
     ],
     "absatz": null,
@@ -657,7 +658,8 @@
      "links": [
       {
        "label": "SR <b>152.3</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4937"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/355",
+       "rs": "152.3"
       }
      ],
      "absatz": null,
@@ -752,7 +754,8 @@
      "links": [
       {
        "label": "SR <b>172.041.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5068"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2004/677",
+       "rs": "172.041.1"
       }
      ],
      "absatz": "5",

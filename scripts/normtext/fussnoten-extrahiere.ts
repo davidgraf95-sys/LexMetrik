@@ -15,7 +15,19 @@
 
 import { findeDlEnde, findeDdEnde, ankerZuToken, parseArtikelInner } from './extrahiere-fedlex';
 
-export interface FnLink { label: string; url: string }
+export interface FnLink {
+  label: string;
+  url: string;
+  /**
+   * G-REF: bei einem amtlich verlinkten SR-Verweis (`<a data-rs-uri="…/eli/cc/…"
+   * data-rs="943.03">SR 943.03</a>`) die maschinen-auflösbare SR-Nummer als
+   * Zielidentität. Fedlex trägt den ELI-Deep-Link zum ZIEL-Erlass in `data-rs-uri`
+   * (→ `url`), nicht im `href` (der zeigt auf eine Vokabular-Taxonomie-Seite, NICHT
+   * auf die amtliche Fassung). Nur SR-Verweise tragen `rs`; AS-/BBl-Verweise nicht
+   * (deren `href` ist bereits der amtliche eli/oc- bzw. eli/fga-Deep-Link).
+   */
+  rs?: string;
+}
 export interface Fussnote {
   nr: string; text: string; links: FnLink[];
   absatz?: string | null; item?: string | null;
@@ -63,11 +75,25 @@ export function fnDefinitionen(html: string): Map<string, Fussnote> {
     const nr = roh.match(/<a[^>]*href="#fnbck-[^"]*"[^>]*>(\d+[a-z]?)<\/a>/i)?.[1]
       ?? roh.match(/^\s*<sup[^>]*>(\d+[a-z]?)<\/sup>/i)?.[1]
       ?? '';
-    // Links (AS/BBl etc.) vor dem Tag-Strippen sammeln.
+    // Links (AS/BBl/SR etc.) vor dem Tag-Strippen sammeln.
+    // G-REF: SR-Verweise (`data-rs-uri` + `data-rs`) docken NICHT am `href` an —
+    // dieses zeigt auf eine Vokabular-Taxonomie-Seite, nicht auf die amtliche
+    // Fassung. Der amtliche ELI-Deep-Link zum Ziel-Erlass steht in `data-rs-uri`,
+    // die SR-Nummer (Zielidentität) in `data-rs`. AS-/BBl-Verweise tragen kein
+    // `data-rs`; ihr `href` IST bereits der amtliche eli/oc- bzw. eli/fga-Link
+    // (unverändert übernommen). Fussnoten-Rück-/Inline-Marker (`href="#fnbck-…"`,
+    // `href="#fn-…"`) haben weder eine http(s)-URL noch `data-rs` → werden wie
+    // bisher NICHT als Link erfasst.
     const links: FnLink[] = [];
-    for (const a of roh.matchAll(/<a[^>]*\bhref="(https?:\/\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    for (const a of roh.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
+      const attrs = a[1];
       const label = clean(a[2]);
-      if (label) links.push({ label, url: a[1] });
+      if (!label) continue;
+      const rsUri = attrs.match(/\bdata-rs-uri="([^"]+)"/i)?.[1];
+      const rs = attrs.match(/\bdata-rs="([^"]+)"/i)?.[1];
+      if (rsUri && rs) { links.push({ label, url: rsUri, rs }); continue; }
+      const href = attrs.match(/\bhref="(https?:\/\/[^"]+)"/i)?.[1];
+      if (href) links.push({ label, url: href });
     }
     // Back-Marker (führende Nummer) vor dem Text entfernen, Rest als Text.
     const ohneBack = roh.replace(/<sup\b[^>]*>\s*<a[^>]*href="#fnbck-[^"]*"[\s\S]*?<\/sup>/i, '');

@@ -1,13 +1,9 @@
 {
-  "hash": "a7b6e630f8f77eaadd849abb1a5737d8030c925ab8a649a749dd5c36cffd7eb4",
+  "hash": "2196621d3b735a4e734a01f3e763d987a992eda4541b9736710b7e913529cb94",
   "verdikt": "bestanden",
-  "quellePin": "fedlex BankG(cc/51 20240101)/THG(cc/1996 20230901)/ASYLV2(cc/1999/360 20260714)",
+  "quellePin": "fedlex bund (G-REF-Sidecars, gepinnte Konsolidierungen)",
   "datum": "2026-07-19",
   "dateien": [
-    "daten-manifest.json",
-    "public/normtext/historie/BANKG.json",
-    "public/normtext/historie/THG.json",
-    "public/normtext/pdf-quellen.json",
-    "public/normtext/register.json"
+    "daten-manifest.json"
   ]
 }

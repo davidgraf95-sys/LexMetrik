@@ -244,16 +244,17 @@ export function fnTextMitLinks(fn: Fussnote): ReactNode {
           className="text-brass-700/90 hover:text-brass-700 hover:underline decoration-dotted underline-offset-2">{richText(t, `fn${i}`)}</Link>
       );
     }
-    // SR-Erkennung (M11) auf dem TAG-FREIEN Label — Hervorhebungen («SR <b>220</b>»)
-    // dürfen den Treffer nicht verhindern.
-    const plano = t.replace(/<[^>]+>/g, '');
     const kinder = richText(t, `fn${i}`);
     // M11 (§5): SR-Verweis «SR 220» auf einen Erlass, den wir im Volltext haben,
     // verlinkt INTERN auf den LexMetrik-Leser statt immer nach Fedlex — man bleibt
-    // im Werkzeug. Die SR-Nummer steht im Label; nur exakte Treffer (Bund,
-    // snapshot/pdf-embed). Sonst Fedlex-Link als ehrlicher Fallback (§8).
-    const srTreffer = plano.match(/^SR\s+([\d.]+)$/);
-    const intern = srTreffer ? SR_INTERN.get(srTreffer[1]) : undefined;
+    // im Werkzeug. Nur exakte Treffer (Bund, snapshot/pdf-embed). Sonst amtlicher
+    // ELI-Link als ehrlicher Fallback (§8).
+    // G-REF: die SR-Nummer kommt jetzt maschinen-genau aus `link.rs` (Fedlex
+    // `data-rs`), sonst — für ungetaggte Alt-Links — aus dem TAG-FREIEN Label
+    // («SR <b>220</b>»). `link.url` ist bei SR-Verweisen der amtliche ELI-Deep-Link
+    // (data-rs-uri), nicht mehr die Vokabular-Taxonomie-Seite.
+    const srNr = link.rs ?? t.replace(/<[^>]+>/g, '').match(/^SR\s+([\d.]+)$/)?.[1];
+    const intern = srNr ? SR_INTERN.get(srNr) : undefined;
     if (intern) {
       // Stand-Transparenz (§5/§8, David-Entscheid 28.6.): der intern gezeigte
       // Stand kann vom zitierten abweichen (bis Versionierung) → den zitierten
