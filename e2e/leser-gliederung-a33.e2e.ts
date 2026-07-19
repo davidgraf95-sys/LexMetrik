@@ -43,20 +43,16 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
   // fährt der A9-Test unten (echtes Tastatur-Scrollen unter 4× Drossel, Repo-Konvention
   // wie leser-position-u.e2e.ts). Hier zählt allein die TOC-Eigenbewegung + Highlight.
   test('F1 — Lese-Scroll: TOC-Eigenbewegung ≤ Nudge, Highlight folgt', async ({ page }) => {
-    // CI-Härtung 18.7.: explizit 180 s (zuvor 120 s, davor test.slow() = 90 s). Dieser
-    // Test macht das schwerste REALE Lese-Scrollen aller Specs (14 mouse.wheel-Schritte
-    // auf der 2000-Artikel-OR-Seite, je mit content-visibility- + Auto-Akkordeon-
-    // Reflow). KEIN versteckter Hänger: F1 wartet nur auf `article`/`[data-toc]`
-    // (beide unabhängig von STANDARD_OFFEN_TIEFE) und misst danach über kurze
-    // page.evaluate-Reads; die Zeit geht rein in die Reflow-Kosten je Wheel. Unter
-    // 5-Worker-Contention lokal 60–72 s; der 2-vCPU-Runner ist nochmals langsamer und
-    // riss reihum auch das 120-s-Budget. Ich HEBE das Budget (statt die Schrittzahl
-    // weiter zu senken), weil die Prüfschärfe an den 14 Schritten hängt: die Highlight-
-    // Wanderung (≥ 3 distinkt) und der ½-Container-Sprung-Nachweis (289–315 px) brauchen
-    // reales Durchscrollen vieler TOC-Einträge — weniger Schritte verengten die Marge
-    // dieser Assertions. Der Timeout greift nur bei Überschreitung und verlangsamt
-    // grüne Läufe nicht (§6.3, kein Assertion-Change).
-    test.setTimeout(180_000)
+    // Runner-Budgets 19.7.: F1-Notdach explizit 240 s (zuvor 180 s). Dieser Test macht
+    // das schwerste REALE Lese-Scrollen aller Specs auf der 2000-Artikel-OR-Seite, je
+    // mit content-visibility- + Auto-Akkordeon-Reflow. Die Schrittzahl ist parallel von
+    // 14 auf 8 gesenkt (Kalibrierung unten). KEIN versteckter Hänger: F1 wartet nur auf
+    // `article`/`[data-toc]` (beide unabhängig von STANDARD_OFFEN_TIEFE) und misst danach
+    // über kurze page.evaluate-Reads; die Zeit geht rein in die Reflow-Kosten je Wheel.
+    // Auf langsamen 2-vCPU-Runner-Instanzen riss reihum auch das 180-s-Budget (auf
+    // schnellen ~90 s). 240 s ist ein NOTDACH gegen die Instanz-Streuung; es greift nur
+    // bei Überschreitung und verlangsamt grüne Läufe nicht (§6.3, kein Assertion-Change).
+    test.setTimeout(240_000)
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 820 })
     await page.goto('/gesetze/bund/OR')
@@ -75,15 +71,21 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
     let maxDelta = 0
     let vorherTop = await tocScrollTop(page)
     labels.add(await aktivLabel(page))
-    // 14 feine Lese-Scroll-Schritte à 120 px; nach jedem die TOC-Eigenbewegung messen.
-    // CI-Härtung 18.7.: von 24 auf 14 Schritte gesenkt (echtes mouse.wheel bleibt —
-    // der Scroll-Spy braucht reales Lese-Scrollen). Auf dem 2-vCPU-Runner kostet
-    // jeder Wheel-Schritt auf der 2000-Artikel-OR-Seite einen content-visibility-
-    // + Auto-Akkordeon-Reflow; 32 Wheels rissen reihum das 90-s-Test-Budget. 14
-    // Schritte × 120 px durchlaufen weiterhin viele TOC-Einträge — der ½-Container-
-    // Sprung (289–315 px) würde auch so sofort auffallen, und die Highlight-
-    // Wanderung (≥ 3 distinkt) bleibt scharf. Prüfumfang reduziert, Prüfschärfe nicht.
-    for (let i = 0; i < 14; i++) {
+    // 8 feine Lese-Scroll-Schritte à 120 px; nach jedem die TOC-Eigenbewegung messen.
+    // Runner-Budgets 19.7.: von 14 auf 8 Schritte gesenkt (echtes mouse.wheel bleibt —
+    // der Scroll-Spy braucht reales Lese-Scrollen). EMPIRISCH KALIBRIERT (lokal, 6×
+    // CPU-Drossel, 2 deterministische Läufe byte-gleich): die Highlight-Wanderung ist
+    // rein layout-getrieben und erreicht 3 distinkte Highlights bereits bei Schritt 4
+    // (dist-Folge 1·2·2·3·3·3·4·4 über die Schritte 1–8), also dist=4 nach 8 Schritten —
+    // ein volles distinkt Marge über die geforderten ≥ 3 (und 3 schon 4 Schritte vor
+    // Schluss). Die TOC-Eigenbewegung (½-Container-Sprung-Wächter) blieb über ALLE
+    // Schritte bei 0 px, weit unter der 150-px-Grenze — der Nudge-Fix hält den Container
+    // ruhig, unabhängig von der Schrittzahl. Die pro-Schritt-Wartezeit bleibt bei 260 ms
+    // (> F3-Entprellung 200 ms): kürzer bringt kaum Zeit, riskiert aber, einen mid-flight-
+    // Nudge als transienten Ausreisser zu lesen — mit maxDelta=0 ist das unnötiges Risiko.
+    // Prüfumfang reduziert (~43 % weniger Scroll-Reflows → tragbares Wallclock auf langsamen
+    // Runner-Instanzen), Prüfschärfe unverändert: beide Assertions behalten Marge.
+    for (let i = 0; i < 8; i++) {
       await page.mouse.wheel(0, 120)
       await page.waitForTimeout(260) // > F3-Entprellung (200 ms) → Nudge eingeschwungen
       const jetzt = await tocScrollTop(page)
@@ -103,9 +105,10 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
 
   // ── F2 / V1: Wer selbst in der Gliederung blättert, behält seine Position ──
   test('F2/V1 — manuelles TOC-Blättern wird nicht zurückgerissen', async ({ page }) => {
-    // CI-Härtung 18.7.: explizit 120 s (statt test.slow() = 90 s), gleiche Begründung
-    // wie F1 (reales Wheel-Scrollen auf der schweren OR-Seite unter 2-vCPU-Last).
-    test.setTimeout(120_000)
+    // Runner-Budgets 19.7.: F2/V1-Notdach explizit 180 s (zuvor 120 s), analog zu F1 —
+    // reales Wheel-Scrollen auf der schweren OR-Seite streut auf langsamen 2-vCPU-Runner-
+    // Instanzen; das Notdach greift nur bei Überschreitung (§6.3, kein Assertion-Change).
+    test.setTimeout(180_000)
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 820 })
     await page.goto('/gesetze/bund/OR')
