@@ -15,6 +15,15 @@
 // §11.6.9 Mobil @390 (kollabiert, keine Wucherung). Läuft gegen `vite preview`.
 import { test, expect, type Page } from '@playwright/test'
 
+// CI-Härtung 19.7.2026 (BEFUND 3a): die IA-1-Walks laden EINMAL den ~4-MB-Artikel-
+// Index und warten per 20-s-Latch auf den «Sprung»-Treffer (sprungWalk). Auf dem
+// 2-vCPU-Runner unter Starvation frisst allein dieser Latch fast das globale 30-s-
+// Test-Budget → IA-1 riss reihum. Darum das Test-Budget dieser Datei explizit auf
+// 90 s (Muster gesetze-pdf-download / gesetze-ux-9punkte). INFRASTRUKTUR (Zeitbudget),
+// KEIN Assertion-Change (§6.3): der Interaktions-Beweis (Enter → URL, Budget-Zählung)
+// bleibt unberührt; der Timeout greift nur bei Überschreitung und bremst grüne Läufe nicht.
+test.describe.configure({ timeout: 90_000 })
+
 function fehlerSammeln(page: Page): string[] {
   const fehler: string[] = []
   page.on('pageerror', (e) => fehler.push(`pageerror: ${e.message}`))
@@ -32,7 +41,13 @@ async function sprungWalk(page: Page, query: string): Promise<{ interaktionen: n
   await feld.fill(query)
   // Warten, bis der deterministische Sprung als oberster Treffer steht (kein
   // zusätzlicher Klick — das Warten ist keine Interaktion, nur Synchronisation).
-  await expect(listbox(page).getByText('Sprung', { exact: true })).toBeVisible()
+  // CI-Härtung 18.7.: 20-s-Timeout (statt Default 10 s) für den EINMAL-Load des
+  // ~4-MB-Artikel-Index. Auf dem 2-vCPU-Runner kann dessen Parse länger als 10 s
+  // brauchen, bis der «Sprung»-Treffer erscheint (Flaky-Quelle IA-1); die
+  // Schwester-Spec norm-sprung nutzt für denselben Index-Latch bereits 20 s. Reine
+  // Lade-Synchronisation, kein Prüfschritt — der Interaktions-Beweis (Enter → URL)
+  // bleibt eng gebunden und unverändert.
+  await expect(listbox(page).getByText('Sprung', { exact: true })).toBeVisible({ timeout: 20_000 })
   await feld.press('Enter')
   return { interaktionen: 1 } // Eingabe+Enter = 1
 }

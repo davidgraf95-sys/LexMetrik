@@ -106,7 +106,17 @@ export default {
       // (hell = dunkel). `modul-news` benennt den bisherigen Arbitrary-Wert der
       // News-Streifen-Reservierung; `modul-zuletzt` reserviert die Chip-Zeile
       // von «Zuletzt verwendet» (Fallback-Reservierung, FAHRPLAN §3 #5).
-      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem' },
+      // CLS-Reservierung des Leser-Kopf-Titels (§15.2, A9-Forensik 19.7.2026): der
+      // lange «Kürzel — Volltitel» (OR) bricht mit der metrik-angepassten Fallback-
+      // Schrift ('Geist Fallback', size-adjust 104.76% ⇒ ~5 % breiter) auf CI-Linux
+      // ZWEIzeilig, mit dem geladenen Geist-Webfont EINzeilig. Der font-display-Swap
+      // liess den <h1> so 74px↔37px springen und schob Meta/Ingress/Grid ~37px (auf
+      // dem 2-vCPU-Runner voll gezählt, CLS ~0.10). `titel-2z` reserviert die
+      // 2-Zeilen-Höhe (em-relativ ⇒ trägt text-h2 mobil UND text-h1 ab sm gleich;
+      // Zeilenhöhe 1.15 ⇒ 2 Zeilen = 2.30em, +Puffer 2.35em): der Titelkasten bleibt
+      // in BEIDEN Font-Zuständen gleich hoch → kein Swap-Shift. Reserviert nur Platz,
+      // versteckt/kürzt nichts (§15/2); kürzere Titel gewinnen etwas Weissraum.
+      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem', 'titel-2z': '2.35em' },
     },
   },
   // Container-Queries (Split-View B-0b, Entscheid David 29.6.2026): erlaubt
