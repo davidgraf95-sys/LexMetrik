@@ -1,0 +1,191 @@
+{
+  "erzeugt": "2026-07-19",
+  "eintraege": [
+    {
+      "id": "kanton/BS/bs_appellationsgericht/BES.2024.91",
+      "gericht": "bs_appellationsgericht",
+      "gerichtName": "Appellationsgericht BS",
+      "gerichtstyp": "kantonal",
+      "kanton": "BS",
+      "abteilung": null,
+      "nummer": "BES.2024.91",
+      "bgeReferenz": null,
+      "zitierung": "Appellationsgericht BS BES.2024.91 vom 24.10.2025",
+      "datum": "2025-10-24",
+      "sprache": "de",
+      "leitcharakter": "routine",
+      "sachgebiet": "straf",
+      "legalArea": null,
+      "rubrum": {
+        "gegenstand": "Nichtanhandnahme",
+        "parteien": null,
+        "vorinstanz": null,
+        "besetzung": null
+      },
+      "regeste": null,
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Am 7. Juni 2024 beantragte die A____ AG bei der Staatsanwaltschaft Basel-Stadt die Bestrafung von B____, C____, D____, allesamt Verantwortliche der E____ AG, wegen Urheberrechtsverletzung und unlauteren Wettbewerbs. Dem Strafantrag liegt der Verdacht zu Grunde, die E____ AG habe die von der A____ AG entwickelte Software «[...]» (nachfolgend […]), welche sie aufgrund eines Lizenz- und Wartungsvertrags nutzen durfte, ohne Einverständnis der A____ AG nachgebaut und an Dritte verkauft. Am 18. Juli 2024 erliess die Staatsanwaltschaft eine Nichtanhandnahmeverfügung. Gemäss dieser wurde auf die Strafanzeige nicht eingetreten, da die fraglichen Straftatbestände eindeutig nicht erfüllt seien.\n\nAm 26. Juli 2024 hat die A____ AG dem Appellationsgericht eine Kopie ihrer ebenfalls vom 26. Juli 2024 datierenden Eingabe an die Staatsanwaltschaft zukommen lassen, in der die A____ AG darlegt, weshalb die Nichtanhandnahmeverfügung nach Ansicht der A____ AG zu Unrecht erfolgt sei. Auf Nachfrage des verfahrensleitenden Appellationsgerichtspräsidenten vom 29. Juli 2024 hat die A____ AG mit Eingabe vom 6. August 2024 mitgeteilt, dass die Eingabe vom 26. Juli 2024 als Beschwerde behandelt werden soll, und zugleich eine Begründung der Beschwerde eingereicht. Die Beschwerdeführerin beantragt, die Staatsanwaltschaft zu verpflichten, die Strafuntersuchung unverzüglich an die Hand zu nehmen, die notwendigen Massnahmen zur Sicherung der Beweismittel vorzunehmen.\n\nDer vorliegende Entscheid ist im schriftlichen Verfahren unter Beizug der Vorakten ergangen. Die Einzelheiten des Sachverhalts und der Parteistandpunkte ergeben sich, soweit sie für den Entscheid von Bedeutung sind, aus den nachfolgenden Erwägungen."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "1.         Formelles\n\nNichtanhandnahmeverfügungen der Staatsanwaltschaft können innert zehn Tagen mittels Beschwerde bei der Beschwerdeinstanz angefochten werden (Art. 393 Abs. 1 lit. a sowie Art. 310 Abs. 2 in Verbindung mit Art. 322 Abs. 2 der Strafprozessordnung [StPO, SR 312.0]). Die Beschwerdeführerin, die geltend macht, die angezeigten angeblichen Straftaten seien zu ihrem Nachteil begangen worden, hat ein rechtlich geschütztes Interesse an der Aufhebung oder Änderung der Verfügung und ist somit zur Beschwerde legitimiert (Art. 382 Abs. 1 StPO). Die vorliegende Beschwerde gegen die Nichtanhandnahmeverfügung der Staatsanwaltschaft ist fristgerecht sowie entsprechend den Erfordernissen von Art. 396 Abs. 1 StPO schriftlich und begründet beim eingereicht worden. Zu deren Beurteilung ist das Appellationsgericht als Einzelgericht zuständig (§ 88 Abs. 1 und § 93 Abs. 1 Ziff. 1 des Gerichtsorganisationsgesetzes [GOG, SG 154.100]). Dieses urteilt nach Art. 393 Abs. 2 StPO mit freier Kognition.\n\n2.         Standpunkte der Parteien"
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Die Staatsanwaltschaft hat mit Verfügung vom 18. Juli 2024 das von der Beschwerdeführerin beantragte Strafverfahren wegen des Verdachts auf Widerhandlungen gegen das Bundesgesetz gegen den unlauteren Wettbewerb (UWG, SR 241) und das Urheberrechtsgesetz (URG, SR 231.1) mit der Begründung nicht an die Hand genommen, dass die fraglichen Straftatbestände eindeutig nicht erfüllt seien. Das Urheberrecht schütze nicht die in der Umsetzung verkörperte geistige Idee hinter einem Computerprogramm, sondern lediglich dessen Programmierung als geistige Leistung. Dies bedeute, dass durch eine eigenständige Programmierung einer Software, welche dieselben Spezifikationen wie eine bereits bestehende erfüllt, kein Werk zweiter Hand im Sinne des Urheberrechts entstehe und entsprechend auch keine Urheberrechtsverletzung begangen werde. Auf Rückfrage habe die Beschwerdeführerin bestätigt, dass die E____ AG zu keiner Zeit Zugriff auf den Quellcode der fraglichen Software gehabt habe. Indem sie eine eigene analoge Software habe programmieren lassen, seien daher keine fremden Urheberrechte verletzt worden. Dasselbe gelte mutatis mutandis auch für den Vorwurf des unlauteren Wettbewerbs durch Verwertung eines anvertrauten Arbeitsergebnisses im Sinne von Art. 5 lit. a UWG. Nicht ein fremdes, sondern ein eigenes Arbeitsergebnis werde verwertet, dessen Entwicklung durch Nachbau der entsprechenden Spezifikationen der Originalsoftware ebenso wie das sog. Reverse Engineering keine unlautere Wettbewerbshandlung darstelle (Akten S. 1 f.)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Zur Begründung ihrer Beschwerde verweist die Beschwerdeführerin teilweise auf die Strafanzeige. Zusammengefasst wird geltend gemacht, dass die Staatsanwaltschaft zu Unrecht eine Urheberrechtsverletzung verneint habe, obschon die Beschwerdeführerin durch verschiedene Hinweise einen dringenden Tatverdacht geliefert und die Vornahme von Untersuchungshandlungen beantragt habe (Akten S. 24 f.). Vorliegend habe die Beschwerdeführerin für die E____ AG seit dem Jahr 2014 eine komplexe und massgeschneiderte Softwarelösung ([...]) entwickelt (Akten S. 36) und dafür seit 2015 jährlich CHF 32'400.– an Nutzungsgebühren erhalten (Akten S. 28). Am 12. März 2024 habe B____ der Beschwerdeführerin mitgeteilt, dass die E____ AG in den letzten Monaten eine eigene Software entwickelt habe, die die Software [...] ersetzen werde. In der Folge habe die E____ AG um eine Offerte für die Urheberrechtsgebühr angefragt, woraufhin ihr die Beschwerdeführerin am 12. April 2024 jährliche Urheberrechtsgebühren von CHF 18'000.– offeriert habe (Akten S. 28). Es sei – so die Beschwerdeführerin – undenkbar, dass beim Nachbau der Software nicht wesentliche Elemente des Programms [...] übernommen worden sind. Es sei technisch nicht möglich, eine analoge Funktionalität zu erstellen (Akten S. 37). Zudem äussert die Beschwerdeführerin den Verdacht, dass das Programm [...] in bearbeiteter Form verschiedenen Kunden angeboten bzw. verkauft worden sei (Akten S. 39). Wenn sich die Staatsanwaltschaft darauf berufe, dass in Bezug auf Computerprogramme lediglich die Programmierung als geistige Leistung und somit nur der Code einer Software urheberrechtlich geschützt sei, nicht aber die Herstellung eines Programms mit denselben Spezifikationen in einer anderen Programmiersprache, so berücksichtige sie nicht, dass die Geschäftsbeziehung zwischen der E____ AG und der Beschwerdeführerin klar durch einen Vertrag geregelt werde, wonach es der E____ AG nicht erlaubt sei, das Programm [...] mittels Reverse Engineering nachzuprogrammieren (Akten S. 25). Zudem würden durch ein solches Verständnis die Erfinder von Computerprogrammen etwa gegenüber Komponisten von Musikstücken diskriminiert (Akten S. 26). Wenn ein Musiker, der ein Musikstück mit dem Komponisten und einem Orchester aufgenommen und vom Komponisten alle Einzelheiten dieses Musikstücks kennen gelernt habe, dieses Musikstück auf einem Computer mit allen Einzelheiten nachprogrammiert, dann sei das genauso eine Urheberrechtsverletzung, wie wenn der von der Beschwerdeführerin als Superuser geschulte B____, der alle Eigenschaften und Funktionen der Software [...] im Detail kenne, dieses Wissen anwendet, um ein neues Programm zu erstellen (Akten S. 28). Zu berücksichtigen sei ferner, dass der Aufwand für die Nachprogrammierung ohne Verwendung des Programms [...] als Vorlage um den Faktor 4 grösser gewesen wäre (Akten S. 27). Im Übrigen habe auch eine Bestrafung gemäss Art. 23 Abs. 1 UWG zu erfolgen, handle es sich bei der Software [...] doch um ein der E____ AG anvertrautes Arbeitsergebnis, das von dieser unbefugt verwertet worden sei (Akten S. 39). Um die Übernahme von urheberrechtlich wesentlichen Elementen nachzuweisen, habe die Staatsanwaltschaft das von der E____ AG erstellte Programm zu Beweiszwecken sicherzustellen und ein Gutachten betreffend Durchführung eines Codevergleichs in Auftrag zu geben (Akten S. 40).\n\n3.         Materielles"
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": ""
+            },
+            {
+              "marke": "E. 3.1.1",
+              "tiefe": 3,
+              "text": "Gemäss Art. 310 Abs. 1 lit. a StPO verfügt die Staatsanwaltschaft die Nichtanhandnahme, sobald aufgrund der Strafanzeige oder des Polizeirapports feststeht, dass die fraglichen Straftatbestände eindeutig nicht erfüllt sind. Diesbezüglich gilt der aus dem Legalitätsprinzip fliessende Grundsatz «in dubio pro duriore» (Art. 5 Abs. 1 BV und Art. 2 Abs. 1 StPO in Verbindung mit Art. 309 Abs. 1, Art. 319 Abs. 1 und Art. 324 Abs. 1 StPO; vgl. BGer 6B_856/2013 vom 3. April 2014 E. 2.2, 1B_253/2012 vom 19. Juli 2012 E. 2.1). Dieser gebietet, dass eine Nichtanhandnahme grundsätzlich nur bei klarer Straflosigkeit bzw. offensichtlich fehlenden Prozessvoraussetzungen angeordnet werden darf. Hingegen ist das Verfahren an die Hand zu nehmen, wenn eine Verurteilung wahrscheinlicher erscheint als ein Freispruch. Bei der Beurteilung dieser Frage verfügt die Staatsanwaltschaft über einen gewissen Spielraum (BGer 1B_253/2012 vom 19. Juli 2012, E. 2.1 m.w.H.). Eine Nichtanhandnahmeverfügung hat somit zu ergehen, wenn bereits aus den Ermittlungsergebnissen oder aus der Strafanzeige selbst ersichtlich wird, dass der zur Beurteilung stehende Sachverhalt mit Sicherheit unter keinen Straftatbestand fällt oder gar nicht verfolgbar ist, so dass die Führung eines Verfahrens geradezu aussichtslos erscheint. Bei Vorliegen der in Art. 310 StPO genannten Gründe darf die Staatsanwaltschaft kein Strafverfahren eröffnen, sondern muss zwingend eine Nichtanhandnahmeverfügung erlassen (Vogelsang, in: Basler Kommentar, 3. Aufl. 2014, Art. 310 StPO N 8; Landshut/Boss­hard, in: Donatsch et al. [Hrsg.], Kommentar zur Schweizerischen Strafprozessordnung, 3. Aufl., Zürich 2020, Art. 310 N 1a, je mit weiteren Hinweisen; vgl. auch AGE BES.2022.158 E. 2.1, BES.2020.159 vom 7. Dezember 2020 E. 2.1)."
+            },
+            {
+              "marke": "E. 3.1.2",
+              "tiefe": 3,
+              "text": ""
+            },
+            {
+              "marke": "E. 3.1.2.1",
+              "tiefe": 4,
+              "text": "Gemäss Art. 67 Abs. 1 URG wird unter anderem auf Antrag mit Freiheitsstrafe bis zu einem Jahr oder Geldstrafe bestraft, wer vorsätzlich und unrechtmässig ein Werk ändert (lit. c), ein Werk zur Schaffung eines Werks zweiter Hand verwendet (lit. d) oder auf irgendeine Weise Werkexemplare herstellt (lit. e). Werke sind, unabhängig von ihrem Wert oder Zweck, geistige Schöpfungen der Literatur und Kunst, die individuellen Charakter haben (Art. 2 Abs. 1 URG). Werke zweiter Hand sind geistige Schöpfungen mit individuellem Charakter, die unter Verwendung bestehender Werke so geschaffen werden, dass die verwendeten Werke in ihrem individuellen Charakter erkennbar bleiben (Art. 3 Abs. 1 URG). Werkexemplare entstehen durch Vervielfältigung oder Aufzeichnung eines Werks (Rehbinder/Haas/Uhlig, OFK URG, 4. Aufl., Zürich 2022, Art. 67 N 16). Wird eine Urheberrechtsverletzung beim Besorgen der Angelegenheiten einer juristischen Person begangen, so sind deren Organe und Geschäftsführer verantwortlich, wenn sie es in Verletzung einer Rechtspflicht vorsätzlich oder fahrlässig unterlassen, eine Widerhandlung der Untergebenen oder Beauftragten abzuwenden oder in ihren Wirkungen aufzuheben (Art. 71 URG i.V.m. Art. 6 des Bundesgesetzes über das Verwaltungsstrafrecht [VStrR, SR 313.0]; Straub, Softwareschutz, 2. Aufl. 2024, Rn. 687 f.).\n\nGemäss Art. 2 Abs. 3 URG gelten als Werke auch Computerprogramme, das heisst ausführbare Programmcodes (in einer Programmiersprache verfasste Anweisungen), die eine unmittelbare Funktionalität aufweisen (der Ausführung einer Aufgabe dienen) und nicht nur statisch, sondern dynamisch und ggf. interaktiv gebraucht werden können (Rehbinder/Haas/Uhlig, a.a.O., Art. 2 N 31). Urheberrechtlich nicht geschützt sind die einem Computerprogramm zugrundeliegenden Ideen, insbesondere Algorithmen und Programmlogik (Botschaft URG, BBl 1989 III 523; Egloff, in:  Barrelet/Egloff (Hrsg.), Kommentar URG, 4. Aufl., Bern 2020, Art. 2 N 32; Straub, a.a.O., Rn. 273; Rehbinder/Haas/Uhlig, a.a.O., Art. 2 N 31) sowie die einzelnen Funktionen wie Fettdruck, Sortiermöglichkeiten oder das Rückgängigmachen von Bearbeitungsschritten (Straub, a.a.O., Rn. 116). Vom Urheberrecht geschützt ist hingegen die konkrete Umsetzung (der konkrete Lösungsweg, die individuelle Ausdrucksform) der dem Programm zugrundeliegenden Idee (Botschaft URG, BBl 1989 III 523; Straub, a.a.O., Rn. 116; Rehbinder/Haas/Uhlig, a.a.O., Art. 2 N 31), das heisst der für Menschen lesbare, in einer Programmiersprache verfasste Quellcode («source code»), der für Menschen unverständliche, aus Nullen und Einsen bestehende Maschinencode («object code») sowie die Gestaltung der Benutzeroberfläche (Egloff, in:  Kommentar URG, 4. Aufl., Bern 2020, Art. 2 N 32; Brändli, Die Flexibilität urheberrechtlicher Schrankensysteme, 2017, Rn. 351). Geschützt sind auch Teile von Computerprogrammen, sog. Sequenzenschutz (HGer SG HG.2019.32-HGP vom 24. Januar 2020 E. 2.2; OGer ZH LK100006-O/U vom 24. Januar 2013 E. 5.2). Wie die anderen Werkkategorien auch, sind Computerprogramme bzw. Teile von Computerprogrammen nur geschützt, wenn es sich um geistige Schöpfungen mit individuellem Charakter handelt. Nicht schutzwürdig sind «triviale» Computerprogramm, die auf rein alltäglicher standardisierter Programmierarbeit beruhen, ohne dass ein individueller Gestaltungsspielraum ausgenützt würde oder wenn überhaupt kein Spielraum für eine individuelle Tätigkeit vorhanden ist (BGE 125 III 263 E. 4d; HGer SG HG.2019.32-HGP vom 24. Januar 2020 E. 2.2; OGer ZH LK100006-O/U vom 24. Januar 2013 E. 5.1; Botschaft URG, BBl 1989 III 522; Rehbinder/Haas/Uhlig, a.a.O., Art. 2 N 31).\n\nDa der Algorithmus oft nicht klar von seiner Implementierung getrennt werden kann (Rehbinder/Haas/Uhlig, a.a.O., Art. 2 N 31; BBl 1989 III 523), ist es schwierig, den Schutzbereich gegen Nachahmung zu bestimmen (Rehbinder/Haas/Uhlig, a.a.O., Art. 2 N 31; Hilty, Urheberrecht, 2. Aufl., Bern 2020, Rn. 217). Auf der einen Seite ist die direkte Raubkopie verboten (Rehbinder/Haas/Uhlig, a.a.O., Art. 2 N 31; Hilty, a.a.O., Rn. 217), auf der anderen Seite ist es dem Erwerber eines Computerprogramms grundsätzlich erlaubt, urheberrechtlich nicht schützbare Ideen durch Beobachtung des Programmablaufs zu ermitteln (Straub, a.a.O., Rn. 274). Dazwischen liegt die auch als Entschlüsselung bezeichnete Dekompilation, bei der mithilfe des Maschinencodes («object code») der unbekannte Quellcode («source code») bis zu einem gewissen Grad rekonstruiert werden kann (Brändli, a.a.O., Rn. 348; Straub, a.a.O., Rn. 272). Urheberrechtlich kommt es dabei sowohl zu Änderungen als auch zu Vervielfältigungen des Werks (Brändli, a.a.O., Rn. 348, 349; Straub, a.a.O., Rn. 273). Eine solche Dekompilation ist gemäss Art. 21 URG nur ausnahmsweise zulässig, wenn der Hersteller eines Computerprogramms nicht bereit ist, dem rechtmässigen Erwerber die zur Herstellung interoperabler Software notwendigen Schnittstelleninformationen bekannt zu geben (Brändli, a.a.O., Rn. 351–354; Straub, a.a.O., Rn. 276)."
+            },
+            {
+              "marke": "E. 3.1.2.2",
+              "tiefe": 4,
+              "text": "Vorliegend wirft die Beschwerdeführerin den Beanzeigten vor, die Software [...] nachgebaut bzw. deren Nachbau veranlasst zu haben, wobei wesentliche Elemente der ursprünglichen Software übernommen worden seien (vgl. oben E. 2.2). Indem sie zugleich einen gutachterlichen Codevergleich beantragt, unterstellt die Beschwerdeführerin zumindest implizit eine teilweise Dekompilation bzw. Entschlüsselung des – ihren eigenen Angaben zufolge der E____ AG unbekannten (Akten S. 1, 40) – Quellcodes des Programms [...] (Vgl. oben E. 2.2). Sofern die E____ AG den Nachbau des Programms [...] tatsächlich – zumindest teilweise – mittels Dekompilation vorgenommen hätte, wäre damit der objektive Tatbestand von Art. 67 Abs. 1 lit. c oder d URG erfüllt. Unter diesen Umständen hätte die Staatsanwaltschaft das Verfahren nicht mit der Begründung, dass der fragliche Straftatbestand eindeutig nicht erfüllt sei (Art. 310 Abs. 1 lit. a StPO), nicht an die Hand nehmen dürfen."
+            },
+            {
+              "marke": "E. 3.1.3",
+              "tiefe": 3,
+              "text": ""
+            },
+            {
+              "marke": "E. 3.1.3.1",
+              "tiefe": 4,
+              "text": "Gemäss Art. 23 Abs. 1 UWG wird auf Antrag mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft, wer vorsätzlich unlauteren Wettbewerb unter anderem nach Art. 5 UWG (Verwertung fremder Leistung) begeht. Nach ständiger Rechtsprechung dürfen Leistungen oder Arbeitsergebnisse, die als solche keinen Immaterialgüterschutz geniessen, von jedermann genutzt werden; das Lauterkeitsrecht enthält kein generelles Verbot, fremde Leistungen nachzuahmen, sondern es besteht grundsätzlich Nachahmungsfreiheit (BGE 151 III 106 E. 4.4.1, 131 III 384 E. 5.1, 118 II 459 E. 3b/bb, 117 II 199 E. 2a/ee, 116 II 471 E. 3a/aa). Dementsprechend wird im Rahmen von Art. 5 UWG nur die missbräuchliche Verschaffung eines Wettbewerbsvorteils durch Verwertung eines fremden Arbeitsergebnisses untersagt, es soll mit anderen Worten verhindert werden, dass der Nachahmer durch die Übernahme fremder Leistungen einen Wettbewerbsvorteil (Ersparnis von Entwicklungsaufwand und Entwicklungskosten) vor dem Leistungserzeuger erhält (Botschaft UWG, BBl 1983 II, 1027; Birkhäuser, a.a.O., Art. 5 N 1). Wird ein Verstoss gegen das Lauterkeitsrecht beim Besorgen der Angelegenheiten einer juristischen Person begangen, so sind deren Organe und Geschäftsführer verantwortlich, wenn sie es in Verletzung einer Rechtspflicht vorsätzlich oder fahrlässig unterlassen, eine Widerhandlung der Untergebenen oder Beauftragten abzuwenden oder in ihren Wirkungen aufzuheben (Art. 26 UWG i.V.m. Art. 6 VStrR; Straub, Softwareschutz, 2. Aufl. 2024, Rn. 687 f.).\n\nNach Art. 5 lit. a UWG handelt insbesondere unlauter, wer ein ihm anvertrautes Arbeitsergebnis wie Offerten, Berechnungen oder Pläne unbefugt verwertet. Als Arbeitsergebnis gelten auch unkörperliche Dinge wie ein Quellcode oder andere elektronische Daten (Birkhäuser, in: Jung (Hrsg.), SHK UWG, 3. Aufl. 2023, Art. 5 N 10). Art. 5 lit. a UWG schützt nur anvertraute Arbeitsergebnisse, das heisst solche, die sich noch nicht auf dem Markt befinden, sowie solche, die – wie etwa Konstruktionspläne, Berechnungen etc. – nicht für den Markt bestimmt sind, obschon gestützt darauf erstellte Produkte bereits im Markt eingeführt wurden (Fahrländer, in: Heizmann/Loacker (Hrsg.), Kommentar UWG, 2018, Art. 5 N 11; Birkhäuser, a.a.O., Art. 5 N 9 mit Anm. 27). Unter den Begriff der Verwertung fällt jede gewerbliche bzw. wirtschaftliche Nutzbarmachung des im Arbeitsergebnis verkörperten Wissens, erfasst ist auch die blosse Verwertung eines Teilaspekts, wie auch die Modifikation oder Weiterentwicklung des Arbeitsergebnisses (Birkhäuser, a.a.O., Art. 5 N 21). Missbräuchlich ist die Handlung des Erwerbers, weil er gegen ein vertragliches, vorvertragliches oder vertragsähnliches Verwertungsverbot verstösst (Fahrländer, a.a.O., Art. 5 N 1) und dadurch den erheblichen Aufwand umgeht, den er – wie alle anderen Wettbewerber – auf sich nehmen müsste, um das sich auf dem Markt befindliche Produkt durch sog. reverse engineering nachzukonstruieren (Fahrländer, a.a.O., Art. 5 N 11).\n\nNach Art. 5 lit. c UWG handelt sodann unlauter, wer das marktreife Arbeitsergebnis eines andern ohne angemessenen eigenen Aufwand durch technische Reproduktionsverfahren als solches übernimmt und verwertet (lit. c). Davon erfasst ist jede Art von marktfähigen Produkten, auch Computerprogramme, nicht jedoch blosse Ideen und Konzepte (Birkhäuser, a.a.O., Art. 5 N 23). Gemäss dem Bundesgericht fällt nur die unmittelbare Verwertung mittels technischer Reproduktionsverfahren unter Art. 5 lit. c UWG, nicht jedoch die wirtschaftliche Nutzung des kopierten Arbeitsergebnisses als Grundlage einer eigenen Leistung (BGE 131 III 384 E. 4.3). Zur Beurteilung, ob ein angemessener Aufwand vorliegt, ist auf Seiten des Übernehmers der gesamte Aufwand für die Reproduktion, allfällige Weiterentwicklung und Variation zu berücksichtigen (BGE 131 III 384 E. 4.4.2). Zudem ist ein Missverhältnis zwischen dem Aufwand des Erstkonkurrenten und dem Aufwand des Übernehmers zu verneinen, wenn der Erstkonkurrent seine Kosten zum Zeitpunkt der Übernahme bereits amortisiert hat (BGE 131 III 384 E. 4.4.1)."
+            },
+            {
+              "marke": "E. 3.1.3.2",
+              "tiefe": 4,
+              "text": "Vorliegend wirft die Beschwerdeführerin den Beanzeigten vor, das Programm [...] unter Verletzung des Lizenzvertrages kopiert bzw. nachgebaut und in bearbeiteter Form verschiedenen Kunden angeboten bzw. verkauft zu haben (vgl. oben E. 2.2). Der von der Beschwerdeführerin eingereichte Lizenz- und Wartungsvertrag vom 5. Dezember 2024 untersagt es der E____ AG unter anderem, das ihr von der Beschwerdeführerin ihr zur Verfügung gestellte «umfassende Nachschlagwerk» über die Software [...] an Dritte weiterzugeben oder Dritten zugänglich zu machen (Ziff. 2.1.i [Akten S. 52]) sowie das Übertragen, Kopieren, Vervielfältigen, Reverse Engineering oder sonst wie vertraglich nicht vorgesehene Verwenden der Software [...] (Ziff. 4.5 [Akten S. 54]). Sofern die Schilderungen der Beschwerdeführerin zutreffen, ist es möglich, dass damit der Straftatbestand von Art. 23 Abs. 1 UWG erfüllt worden ist. Unter diesen Umständen hätte die Staatsanwaltschaft das Verfahren nicht mit der Begründung, dass der fragliche Straftatbestand eindeutig nicht erfüllt sei (Art. 310 Abs. 1 lit. a StPO), nicht an die Hand nehmen dürfen."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": ""
+            },
+            {
+              "marke": "E. 3.2.1",
+              "tiefe": 3,
+              "text": "Gemäss bundesgerichtlicher Rechtsprechung kann eine Nichtanhandnahmeverfügung auch bei Fehlen eines zureichenden Verdachts erlassen werden. Dies ist beispielsweise der Fall, wenn sich keine deliktsrelevanten Anhaltspunkte feststellen lassen. Die Staatsanwaltschaft eröffnet hingegen eine Untersuchung, wenn sich aus den Informationen und Berichten der Polizei, aus der Strafanzeige oder aus ihren eigenen Feststellungen ein hinreichender Tatverdacht ergibt (Art. 309 Abs. 1 lit. a StPO). Die zur Eröffnung einer Strafuntersuchung erforderlichen tatsächlichen Hinweise auf eine strafbare Handlung müssen erheblich und konkreter Natur sein. Blosse Gerüchte oder Vermutungen genügen nicht. Der Anfangsverdacht soll eine plausible Tatsachengrundlage haben, aus der sich die konkrete Möglichkeit der Begehung einer Straftat ergibt (BGer 6B_830/2013 vom 10. Dezember 2013 E. 1.4 mit Hinweisen; vgl. auch BGer 6B_1105/2013 vom 18. Juli 2014 E. 3.1). Die Ermittlungs- und Untersuchungsorgane sollen im Interesse der Rechtsstaatlichkeit sowie eines sinnvollen Ressourceneinsatzes nicht ohne konkreten, verdachtserweckenden Anlass irgendwelche Vorgänge überprüfen (vgl. Walder, Grenzen der Ermittlungstätigkeit, in: ZStW 1983, S. 862, 867). Dies bedeutet, dass nicht zuerst ermittelt werden darf, um überhaupt Verdacht schöpfen zu können; vielmehr muss aufgrund bestimmter Tatsachen schon ein Anfangsverdacht feststehen (vgl. Aepli, Die strafprozessuale Sicherstellung von elektronisch gespeicherten Daten: unter besonderer Berücksichtigung der Beweismittelbeschlagnahme am Beispiel des Kantons Zürich, Diss. Zürich 2004, S. 42)."
+            },
+            {
+              "marke": "E. 3.2.2",
+              "tiefe": 3,
+              "text": "Vorliegend bringt die Beschwerdeführerin in ihrer Strafanzeige vom 7. Juni 2024 (Akten S. 34 ff.) und in ihrer Beschwerdebegründung vom 6. August 2024 (Akten S. 23 ff.) im Wesentlichen die folgenden Indizien für das Vorliegen einer Straftat vor. Zunächst behauptet sie, am 12. März 2024 sei ihr von B____ mitgeteilt worden, dass die E____ AG in den letzten Monaten eine eigene Software entwickelt habe, um die Software [...] zu ersetzen. Die Beschwerdeführerin vermute daher, dass die Software [...] nachgebaut bzw. nachprogrammiert worden sei. Für sie sei es undenkbar, dass beim Nachbau nicht wesentliche urheberrechtlich geschützte Elemente von [...] übernommen worden seien, da es technisch nicht möglich sei, eine analoge Funktionalität zu erstellen. Dies erläutert sie an einigen Beispielen und beantragt, ein Gutachten betreffend Durchführung eines Codevergleichs in Auftrag zu geben. Sodann hege die Beschwerdeführerin den dringenden Verdacht, dass die Software [...] in bearbeiteter Form verschiedenen Kunden angeboten bzw. verkauft werde oder bereits verkauft worden sei. Abgesehen von diesen Tatsachenbehauptungen hat die Beschwerdeführerin Urkunden als Beweismittel ins Recht gelegt, so eine von F____, dem CEO der Beschwerdeführerin, an B____ gerichtete E-Mail, in der E____ AG – unter Bezugnahme auf eine vorgängige Anfrage – «Lizenzgebühren/Urheberrechtsgebühren» in Höhe von jährlich CHF 18'000.– offeriert werden (Akten S. 79). Zudem hat die Beschwerdeführerin den Lizenz- und Wartungsvertrag zwischen ihr und der E____ AG vom 5. Dezember 2014 eingereicht, der es der E____ AG unter anderem untersagt, das ihr von der Beschwerdeführerin ihr zur Verfügung gestellte «umfassende Nachschlagwerk» zur Software [...] an Dritte weiterzugeben oder Dritten zugänglich zu machen (Ziff. 2.1.i [Akten S. 52]) sowie das Übertragen, Kopieren, Vervielfältigen, Reverse Engineering oder sonst wie vertraglich nicht vorgesehene Verwenden der Applikation (Ziff. 4.5 [Akten S. 54]).\n\nAus diesen Tatsachenbehauptungen und Urkunden lassen sich keine über blosse Vermutungen hinausgehenden Anhaltspunkte für das Vorliegen einer Straftat entnehmen. Die Schilderungen der Beschwerdeführerin beruhen, was die strafrechtlichen Handlungen betrifft, auf Hörensagen und blossen Vermutungen. Dass der Quellcode («source code») der Software […] entschlüsselt worden sei, wird von der Beschwerdeführerin nicht einmal behauptet, sondern ergibt sich nur implizit aus dem beantragten Codevergleich. Auch die Befürchtung, dass die nachgebaute Software an Dritte verkauft werden könnte oder schon verkauft worden sei, ist eine nicht näher konkretisierte Vermutung. Wie bereits dargelegt, müssen die Hinweise auf eine strafbare Handlung erheblich und konkreter Natur sein, blosse Gerüchte oder Vermutungen genügen nicht. Es ist der Beschwerdeführerin zwar zugute zu halten, dass es in einem Fall wie dem vorliegenden prinzipiell schwierig ist, die zur Begründung des hinreichenden Tatverdachts erforderlichen Hinweise zusammenzutragen. Dann ist es jedoch nicht die Aufgabe der Strafjustiz, ohne konkreten Verdacht Ermittlungs- und Untersuchungshandlungen vorzunehmen, um einen solchen Verdacht erst zu generieren. Dementsprechend hätte die Staatsanwaltschaft die Nichtanhandnahmeverfügung bei der vorliegenden Sachlage gestützt auf das Fehlen eines zureichenden Verdachts erlassen müssen."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Zusammenfassend ist somit festzuhalten, dass die Staatsanwaltschaft das Verfahren zu Recht nicht an die Hand genommen hat."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist folglich abzuweisen. Bei diesem Ausgang des Verfahrens hat die Beschwerdeführerin gemäss Art. 428 Abs. 1 StPO grundsätzlich dessen Kosten zu tragen. Aufgrund der gesamten Umstände ist im vorliegenden Fall jedoch von der Erhebung von Verfahrenskosten abzusehen (§ 40 Abs. 1 Gerichtsgebührenreglement [GGR, SG 154.810])."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Demgemäss erkennt das Appellationsgericht (Einzelgericht):"
+            },
+            {
+              "marke": null,
+              "text": "://:        Die Beschwerde wird abgewiesen."
+            },
+            {
+              "marke": null,
+              "text": "Auf die Erhebung von Kosten für das Beschwerdeverfahren wird umständehalber verzichtet."
+            },
+            {
+              "marke": null,
+              "text": "Mitteilung an:"
+            },
+            {
+              "marke": null,
+              "text": "-       Beschwerdeführerin"
+            },
+            {
+              "marke": null,
+              "text": "-       Staatsanwaltschaft Basel-Stadt"
+            },
+            {
+              "marke": null,
+              "text": "APPELLATIONSGERICHT BASEL-STADT"
+            },
+            {
+              "marke": null,
+              "text": "Der Präsident                                                            Der Gerichtsschreiber"
+            },
+            {
+              "marke": null,
+              "text": "lic. iur. Christian Hoenen                                         MLaw Andreas Callierotti"
+            },
+            {
+              "marke": null,
+              "text": "Rechtsmittelbelehrung"
+            },
+            {
+              "marke": null,
+              "text": "Gegen diesen Entscheid kann unter den Voraussetzungen von Art. 78 ff. des Bundesgerichtsgesetzes (BGG) innert 30 Tagen seit schriftlicher Eröffnung Beschwerde in Strafsachen erhoben werden. Die Beschwerdeschrift muss spätestens am letzten Tag der Frist beim Bundesgericht (1000 Lausanne 14) eingereicht oder zu dessen Handen der Schweizerischen Post oder einer diplomatischen oder konsularischen Vertretung der Schweiz im Ausland übergeben werden (Art. 48 Abs. 1 BGG). Für die Anforderungen an den Inhalt der Beschwerdeschrift wird auf Art. 42 BGG verwiesen. Über die Zulässigkeit des Rechtsmittels entscheidet das Bundesgericht."
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird abgewiesen.",
+        "Auf die Erhebung von Kosten für das Beschwerdeverfahren wird umständehalber verzichtet."
+      ],
+      "zitierteNormen": [],
+      "normKeys": [],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "gerichte-bs",
+      "quelleUrl": "https://rechtsprechung.gerichte.bs.ch/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&WebServerUrl=rechtsprechung.gerichte.bs.ch&WebServerScript=%2Fcgi-bin%2Fnph-omniscgi.exe&OmnisLibrary=JURISWEB&OmnisClass=rtFindinfoWebHtmlService&OmnisServer=JURISWEB%2C7000&Schema=BS_FI_WEB&Parametername=WEB&cSprache=DE&Aufruf=getMarkupDocument&nF30_KEY=78998&Template=search_result_document.html",
+      "abgerufen": "2026-07-19",
+      "fassungsToken": "2026-05-23",
+      "sha": "6282705c3998afef6e78f18e7c45a9e1942bf379a9db354ff551d4c87d874a06",
+      "erstpublikation": "2026-05-23",
+      "aktualisiert": "2026-05-23",
+      "nummerSekundaer": "AG.2025.642",
+      "ecli": "ECLI:CH:BSA:2025:BES.2024.91"
+    }
+  ]
+}
