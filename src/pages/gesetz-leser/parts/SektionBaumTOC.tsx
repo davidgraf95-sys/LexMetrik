@@ -33,7 +33,10 @@ export const SektionBaumTOC = memo(function SektionBaumTOC({ sektionen, aktivPfa
     const aktiv = aktivPfad.includes(s.id);
     const hatKinder = s.kinder.length > 0;
     return (
-      <li key={s.id}>
+      // data-sektion-id: erlaubt dem Reader (inhalt.tsx) beim Auto-Zuklappen zu
+      // prüfen, ob dieser Ast im Sichtfenster des [data-toc]-Containers liegt —
+      // sichtbare Äste werden NICHT zugeklappt (§15.2, kein On-Screen-Reflow).
+      <li key={s.id} data-sektion-id={s.id}>
         <div className="flex items-start" style={{ paddingLeft: `${tiefe * 0.6}rem` }}>
           {hatKinder
             ? <button type="button" onClick={() => onToggle(s.id)} aria-label={auf ? 'Einklappen' : 'Aufklappen'} className="shrink-0 text-ink-300 hover:text-ink-600 px-1 mt-0.5 text-micro w-4">{auf ? '▾' : '▸'}</button>

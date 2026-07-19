@@ -773,10 +773,28 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         // gar nicht auto-aufklappen (explizites Einklappen des aktiven Zweigs gewinnt).
         // Jedes Aktiv-Vorkommen (inkl. Vorfahren aus pfadZu) frischt den Nachlauf-Tick.
         for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) { auto.add(id); autoTickRef.current.set(id, tick); }
+        // BEFUND 2 (A9-Forensik 19.7.2026): das AUTO_ZU_NACHLAUF-Fenster reicht NICHT
+        // — auf dem 2-vCPU-Runner traf das verzögerte Zuklappen doch einen ON-SCREEN
+        // Ast (li 248×195→0×0, CLS ~0.029). Darum vor dem Zuklappen prüfen, ob der Ast
+        // im Sichtfenster des [data-toc]-Scroll-Containers liegt: sichtbare Äste bleiben
+        // offen (ihr Kollaps wäre ein gezählter Layout-Shift), nur off-screen-Äste
+        // klappen zu. Funktion (Auto-Akkordeon) unberührt — nur das WANN verschiebt sich
+        // ans Verlassen des Sichtfensters. `getBoundingClientRect` ist eine reine Lese-
+        // Messung (kein Reflow-Trigger hier, da im Timer nach dem Settle).
+        const tocCont = (paneRoot(imPane, wurzel) ?? document).querySelector('[data-toc]') as HTMLElement | null;
+        const contRect = tocCont?.getBoundingClientRect();
+        const imTocSichtbar = (id: string): boolean => {
+          if (!tocCont || !contRect) return false;
+          const el = tocCont.querySelector(`[data-sektion-id="${CSS.escape(id)}"]`) as HTMLElement | null;
+          if (!el) return false; // nicht gefunden ⇒ nicht als sichtbar behandeln (darf zuklappen)
+          const r = el.getBoundingClientRect();
+          return r.bottom > contRect.top && r.top < contRect.bottom;
+        };
         const schliessen: string[] = [];
         for (const id of [...auto]) {
           if (ids.includes(id)) continue; // im aktiven Pfad → offen halten
           if (tick - (autoTickRef.current.get(id) ?? 0) <= AUTO_ZU_NACHLAUF) continue; // noch im Nachlauf-Fenster
+          if (imTocSichtbar(id)) continue; // on-screen im TOC → nicht zuklappen (kein sichtbarer Reflow)
           auto.delete(id); autoTickRef.current.delete(id); schliessen.push(id);
         }
         setTocBaum((o) => {
