@@ -29,6 +29,10 @@
           "typ": "sachverhalt",
           "bloecke": [
             {
+              "marke": null,
+              "text": "Anerkennungsklage (Art. 79 SchKG) betreffend Beiträge der Arbeitgeberin an die Vorsorgeeinrichtung (Art. 66 Abs. 2 BVG): Die Tätigkeit der Beklagten fällt unter den zeitlichen, räumlichen, betrieblichen und persönlichen Geltungsbereich des Kollektivvertrags für die vorzeitige Pensionierung im westschweizerischen Ausbaugewerbe. Die geforderten Beiträge sind somit nicht zu beanstanden und der Rechtsvorschlag wird beseitigt"
+            },
+            {
               "marke": "1",
               "tiefe": 1,
               "text": ""
@@ -222,7 +226,7 @@
       "quelleUrl": "https://rechtsprechung.gerichte.bs.ch/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&WebServerUrl=rechtsprechung.gerichte.bs.ch&WebServerScript=%2Fcgi-bin%2Fnph-omniscgi.exe&OmnisLibrary=JURISWEB&OmnisClass=rtFindinfoWebHtmlService&OmnisServer=JURISWEB%2C7000&Schema=BS_FI_WEB&Parametername=WEB&cSprache=DE&Aufruf=getMarkupDocument&nF30_KEY=77389&Template=search_result_document.html",
       "abgerufen": "2026-07-19",
       "fassungsToken": "2024-10-03",
-      "sha": "90c55d51d02f870318c041a352d555044983bb6240998252a70705dfcdc61049",
+      "sha": "9822db8eba233c34448a5d54c492d58ec464f4c3edff94735137a827db7776d8",
       "erstpublikation": "2024-10-01",
       "aktualisiert": "2024-10-03",
       "nummerSekundaer": "SVG.2024.171",

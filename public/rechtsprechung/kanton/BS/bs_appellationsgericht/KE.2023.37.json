@@ -133,9 +133,82 @@
               "text": "Nach dem Gesagten ist die Beschwerde abzuweisen. Wie bereits die Vorinstanz verzichtet auch das Verwaltungsgericht gestützt auf § 40 des Gerichtsgebührenreglements (SG 154.810) umständehalber auf die Erhebung von Kosten."
             }
           ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Demgemäss erkennt das Verwaltungsgericht (Dreiergericht):"
+            },
+            {
+              "marke": null,
+              "text": "://:        Die Beschwerde im Verfahren KE.2023.37 wird abgewiesen."
+            },
+            {
+              "marke": null,
+              "text": "Das Beschwerdeverfahren KE.2023.38 wird zufolge Rückzugs der Beschwerde als erledigt abgeschrieben."
+            },
+            {
+              "marke": null,
+              "text": "Umständehalber wird auf die Erhebung von Verfahrenskosten verzichtet."
+            },
+            {
+              "marke": null,
+              "text": "Mitteilung an:"
+            },
+            {
+              "marke": null,
+              "text": "-       Beschwerdeführerin"
+            },
+            {
+              "marke": null,
+              "text": "-       Kindes- und Erwachsenenschutzbehörde (KESB)"
+            },
+            {
+              "marke": null,
+              "text": "-       Kinder- und Jugenddienst (z.H. E____)"
+            },
+            {
+              "marke": null,
+              "text": "-       Beigeladene"
+            },
+            {
+              "marke": null,
+              "text": "-       B____"
+            },
+            {
+              "marke": null,
+              "text": "APPELLATIONSGERICHT BASEL-STADT"
+            },
+            {
+              "marke": null,
+              "text": "Die Gerichtsschreiberin"
+            },
+            {
+              "marke": null,
+              "text": "lic. iur. Mirjam Kündig"
+            },
+            {
+              "marke": null,
+              "text": "Rechtsmittelbelehrung"
+            },
+            {
+              "marke": null,
+              "text": "Gegen diesen Entscheid kann unter den Voraussetzungen von Art. 82 ff. des Bundesgerichtsgesetzes (BGG) innert 30 Tagen seit schriftlicher Eröffnung Beschwerde in Zivilsachen erhoben werden. Die Beschwerdeschrift ist fristgerecht dem Bundesgericht (1000 Lausanne 14) einzureichen. Für die Anforderungen an deren Inhalt wird auf Art. 42 BGG verwiesen. Über die Zulässigkeit des Rechtsmittels entscheidet das Bundesgericht."
+            },
+            {
+              "marke": null,
+              "text": "Ob an Stelle der Beschwerde in Zivilsachen ein anderes Rechtsmittel in Frage kommt (z.B. die subsidiäre Verfassungsbeschwerde an das Bundesgericht gemäss Art. 113 BGG), ergibt sich aus den anwendbaren gesetzlichen Bestimmungen. Wird sowohl Beschwerde in Zivilsachen als auch Verfassungsbeschwerde erhoben, sind beide Rechtsmittel in der gleichen Rechtsschrift einzureichen."
+            }
+          ]
         }
       ],
-      "dispositivOrders": [],
+      "dispositivOrders": [
+        "Die Beschwerde im Verfahren KE.2023.37 wird abgewiesen.",
+        "Das Beschwerdeverfahren KE.2023.38 wird zufolge Rückzugs der Beschwerde als erledigt abgeschrieben.",
+        "Umständehalber wird auf die Erhebung von Verfahrenskosten verzichtet."
+      ],
       "zitierteNormen": [],
       "normKeys": [],
       "zitierteEntscheide": [],
@@ -145,7 +218,7 @@
       "quelleUrl": "https://rechtsprechung.gerichte.bs.ch/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&WebServerUrl=rechtsprechung.gerichte.bs.ch&WebServerScript=%2Fcgi-bin%2Fnph-omniscgi.exe&OmnisLibrary=JURISWEB&OmnisClass=rtFindinfoWebHtmlService&OmnisServer=JURISWEB%2C7000&Schema=BS_FI_WEB&Parametername=WEB&cSprache=DE&Aufruf=getMarkupDocument&nF30_KEY=76512&Template=search_result_document.html",
       "abgerufen": "2026-07-19",
       "fassungsToken": "2025-05-23",
-      "sha": "b4fc9d8492331aa8e0e4ab641f60a9d24a2dff6f2ded0203e4f5c244e24c70d0",
+      "sha": "ff89a2dd89426179bc0d164f7116ed4b9b07313779e32a5dae5a3562003d0145",
       "erstpublikation": "2025-05-23",
       "aktualisiert": "2025-05-23",
       "nummerSekundaer": "AG.2024.144",

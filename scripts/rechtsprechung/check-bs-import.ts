@@ -145,6 +145,11 @@ function main() {
     if (/&(nbsp|auml|ouml|uuml|amp|szlig);/.test(text)) fehler.push(`${e.key}: HTML-Entity-Literal im Text`);
     if (/<\/?(p|b|i|em|strong|span|div|td|tr|th|table|br|hr|h[1-6]|img|a|ul|ol|li)\b[^>]*>/i.test(text)) fehler.push(`${e.key}: HTML-Tag-Rest im Text`);
     if (/[\u0080-\u009f]/.test(text)) fehler.push(`${e.key}: C1-Steuerzeichen im Text (Windows-1252-Dekodierfehler)`);
+    // C0-Debris (NUL/STX/…): kommt verbatim aus defekten Portal-Dokumenten und wird
+    // vom Parser bereinigt (bereinigeQuellDebris) — darf publizierte JSONs nie
+    // erreichen (Rendering-/Such-Risiko, Fidelity-Befund 19.7.2026).
+    // eslint-disable-next-line no-control-regex -- C0-Steuerzeichen sind der Prüfgegenstand
+    if (/[\u0000-\u0008\u000b\u000e-\u001f]/.test(text)) fehler.push(`${e.key}: C0-Steuerzeichen im Text (Quell-Debris nicht bereinigt)`);
     if (text.includes('\u00a0')) mitNbsp++;
     if (!snap.abschnitte.length || !text.replace(/\s+/g, '')) fehler.push(`${e.key}: leerer Entscheidtext`);
   }

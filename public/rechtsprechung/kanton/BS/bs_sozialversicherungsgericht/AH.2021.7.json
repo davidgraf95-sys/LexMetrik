@@ -26,6 +26,25 @@
       "regesteAmtlich": false,
       "abschnitte": [
         {
+          "typ": "sachverhalt",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Der 1960 geborene Beschwerdeführer ist Vater von vier Kindern mit Jahrgängen 1990, 1991, 1993 und 2000 (vgl. Auszug aus dem Datenmarkt vom 17. November 2021). Nachdem die Ehepartnerin des Beschwerdeführers im März 2020 verstorben war, meldete er sich am 7. Dezember 2020 zum Bezug einer Witwerrente an (Beschwerdeantwortbeilage [BA] 2). Mit Verfügung vom 26. Mai 2021 lehnte die Beschwerdegegnerin einen Anspruch auf eine Witwerrente ab. Zur Begründung führte sie an, das (jüngste) Kind habe das 18. Altersjahr vollendet, weshalb die Voraussetzungen für eine Witwerrente nicht erfüllt seien (BA 3). Dagegen erhob der Beschwerdeführer am 18. Juni 2021 unter Hinweis auf das Urteil der 3. Kammer des Europäischen Gerichtshofs für Menschenrechte (EGMR) 78630/12 Beeler gegen Schweiz vom 20. Oktober 2020 Einsprache, da eine Ungleichbehandlung von Witwen und Witwer in Bezug auf den Anspruch auf eine Hinterlassenenrente eine Verletzung von Art. 14 in Verbindung mit Art. 8 der Konvention zum Schutze der Menschenrechte und Grundfreiheiten (EMRK) darstelle. Bis zum Vorliegen neuer gesetzlicher Bestimmung zur Hinterlassenenrente sei das Einspracheverfahren zu sistieren (BA 4). Mit Einspracheentscheid vom 22. Juli 2021 hielt die Beschwerdegegnerin an der Ablehnung des Anspruchs auf eine Witwerrente fest und wies das Sistierungsgesuch des Beschwerdeführers ab (BA 5)."
+            },
+            {
+              "marke": "II.",
+              "tiefe": 1,
+              "text": "Dagegen erhebt der Beschwerdeführer am 27. August 2021 Beschwerde beim Sozialversicherungsgericht Basel-Stadt. Darin beantragt er, die Beschwerdegegnerin sei zu verurteilen, dem Beschwerdeführer eine Witwerrente auch in der Zeit ab April 2020 auszuzahlen. In verfahrensrechtlicher Hinsicht ersucht der Beschwerdeführer um Sistierung des Verfahrens bis zur Rechtskraft des Urteils der 3. Kammer des EGMR 78630/12 Beeler gegen Schweiz vom 20. Oktober 2020 oder bis zum Vorliegen des Urteils der Grossen Kammer des EGMR.\n\nIn Nachachtung der instruktionsrichterlichen Verfügung vom 30. August 2021 nimmt die Beschwerdegegnerin mit Eingabe vom 22. September 2021 zum Sistierungsantrag des Beschwerdeführers Stellung.\n\nMit Beschwerdebegründung vom 19. Oktober 2021 hält der Beschwerdeführer an den gestellten Rechtsbegehren fest.\n\nMit Beschwerdeantwort vom 16. November 2021 schliesst die Beschwerdegegnerin auf Abweisung der Beschwerde.\n\nMit Verfügung vom 16. Dezember 2021 sistiert die Instruktionsrichterin das Verfahren vorerst bis 30. November 2022.\n\nMit Eingabe vom 17. November 2022 beantragt der Beschwerdeführer die Aufhebung der Sistierung des Verfahrens und hält an den in der Beschwerde gestellten Rechtsbegehren fest.\n\nMit Eingabe vom 9. Dezember 2022 nimmt die Beschwerdegegnerin zur vorerwähnten Eingabe des Beschwerdeführers Stellung und hält an der Abweisung der Beschwerde fest.\n\nMit Verfügung vom 23. Dezember 2022 hebt die Instruktionsrichterin die Sistierung des Verfahrens auf.\n\nIn Nachachtung der instruktionsrichterlichen Verfügung vom 23. Dezember 2022 lässt sich der Beschwerdeführer zur Eingabe der Beschwerdegegnerin vom 9. Dezember 2022 vernehmen. Die Eingabe des Beschwerdeführers vom 29. Dezember 2022 wird der Beschwerdegegnerin zur Kenntnisnahme zugestellt (instruktionsrichterliche Verfügung vom 10. Januar 2023)."
+            },
+            {
+              "marke": "III.",
+              "tiefe": 1,
+              "text": "Nachdem die Parteien auf eine mündliche Hauptverhandlung verzichtet hatten, findet am 16. Februar 2023 die Urteilsberatung durch die Kammer des Gerichts statt."
+            }
+          ]
+        },
+        {
           "typ": "erwaegung",
           "bloecke": [
             {
@@ -218,7 +237,7 @@
       "quelleUrl": "https://rechtsprechung.gerichte.bs.ch/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&WebServerUrl=rechtsprechung.gerichte.bs.ch&WebServerScript=%2Fcgi-bin%2Fnph-omniscgi.exe&OmnisLibrary=JURISWEB&OmnisClass=rtFindinfoWebHtmlService&OmnisServer=JURISWEB%2C7000&Schema=BS_FI_WEB&Parametername=WEB&cSprache=DE&Aufruf=getMarkupDocument&nF30_KEY=76061&Template=search_result_document.html",
       "abgerufen": "2026-07-19",
       "fassungsToken": "2024-06-26",
-      "sha": "fc70150b68755c24920ead2929fc9e159ff6e43eb6a2d5a6a5f4a717cb9bf467",
+      "sha": "5df088ef4ac9d1c67fdfc1895ea4ba2f6306f1029410c9524497e88b4041eca5",
       "erstpublikation": "2023-11-21",
       "aktualisiert": "2024-06-26",
       "nummerSekundaer": "SVG.2023.236",

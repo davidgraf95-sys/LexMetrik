@@ -1,23 +1,10 @@
 {
-  "hash": "63fbaa68224731244710123b1346e1c41d92d6da2f2d8d31f393951bd596aacc",
+  "hash": "729239ada3bbd5e1177f9c11586e55075927f621356c17db92ce802f3ab0dce0",
   "verdikt": "bestanden",
-  "quellePin": "rechtsprechung.gerichte.bs.ch (amtl. Portal, Abruf 19.7.2026)",
+  "quellePin": "rechtsprechung.gerichte.bs.ch raw-golden 20260719 (Raw==Live byte-gleich 76512+74208, in Prüfsession gefetcht)",
   "datum": "2026-07-19",
   "dateien": [
-    "daten/bs-fiw/fehlerliste.json",
-    "daten/bs-fiw/inventar.json",
-    "scripts/normtext/entscheide-mapping.ts",
-    "scripts/normtext/entscheide-schreiben.ts",
-    "scripts/rechtsprechung/bs-client.ts",
-    "scripts/rechtsprechung/bs-fetch.ts",
-    "scripts/rechtsprechung/bs-import.ts",
-    "scripts/rechtsprechung/bs-inventar.ts",
-    "scripts/rechtsprechung/bs-parse.ts",
-    "scripts/rechtsprechung/fixtures/ag-2024-3.html",
-    "scripts/rechtsprechung/fixtures/ag-bez-2024-79.html",
-    "scripts/rechtsprechung/fixtures/ag-zb-2024.html",
-    "scripts/rechtsprechung/fixtures/svg-iv-2025-93-datumlos.html",
-    "scripts/rechtsprechung/fixtures/trefferliste-2023-gn.html",
-    "scripts/rechtsprechung/fixtures/zg-k5-2023-13.html"
+    "scripts/normtext/rubrum-bereinigen.ts",
+    "scripts/rechtsprechung/bs-parse.ts"
   ]
 }

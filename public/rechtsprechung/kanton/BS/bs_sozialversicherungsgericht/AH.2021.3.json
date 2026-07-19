@@ -29,6 +29,10 @@
           "typ": "sachverhalt",
           "bloecke": [
             {
+              "marke": null,
+              "text": "Abgabe von Hilfsmitteln durch die Altersversicherung. Aufhebung des Einspracheentscheides der Ausgleichskasse betreffend Nichteintreten mangels veränderter Verhältnisse. Rückweisung an die zuständige IV-Stelle zur Prüfung des Antrags auf Hilfsmittel. Hernach ggf. Entscheid der zuständigen Ausgleichskasse."
+            },
+            {
               "marke": "1",
               "tiefe": 1,
               "text": ""
@@ -188,7 +192,7 @@
       "quelleUrl": "https://rechtsprechung.gerichte.bs.ch/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&WebServerUrl=rechtsprechung.gerichte.bs.ch&WebServerScript=%2Fcgi-bin%2Fnph-omniscgi.exe&OmnisLibrary=JURISWEB&OmnisClass=rtFindinfoWebHtmlService&OmnisServer=JURISWEB%2C7000&Schema=BS_FI_WEB&Parametername=WEB&cSprache=DE&Aufruf=getMarkupDocument&nF30_KEY=73688&Template=search_result_document.html",
       "abgerufen": "2026-07-19",
       "fassungsToken": "2022-09-21",
-      "sha": "dbe6c84505cf5c182dc89676b04cfa2fc55bfcbe0a7696a7c9e1fda54513de69",
+      "sha": "617c287efaa42d6e66bdf5e8b4cc9db9a6f168983fb3dff659df3275a9daec4d",
       "erstpublikation": "2022-09-21",
       "aktualisiert": "2022-09-21",
       "nummerSekundaer": "SVG.2022.142",

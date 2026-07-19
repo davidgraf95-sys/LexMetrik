@@ -10,7 +10,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { encodeLatin1, dekodiereBs, trefferAnzahl, dokumentUrl, sucheUrl } from '../../scripts/rechtsprechung/bs-client';
 import { parseTrefferliste, gnJahr } from '../../scripts/rechtsprechung/bs-inventar';
-import { parseBsDokument, baueSnapshot, docketSafeVergabe, normAsciiWs } from '../../scripts/rechtsprechung/bs-parse';
+import { parseBsDokument, baueSnapshot, bereinigeQuellDebris, docketSafeVergabe, normAsciiWs } from '../../scripts/rechtsprechung/bs-parse';
 import { sha256EntscheidBloecke } from '../../scripts/normtext/sha-entscheide';
 import type { InventarZeile } from '../../scripts/rechtsprechung/bs-inventar';
 
@@ -187,5 +187,121 @@ describe('normAsciiWs (Typographie-Treue)', () => {
     expect(normAsciiWs('a  b')).toBe('a  b');
     expect(normAsciiWs('CHF 100')).toBe('CHF 100');
     expect(normAsciiWs('  rand  ')).toBe('rand');
+  });
+});
+
+
+// ─── Fix-Welle 19.7.2026 (Fidelity-Befunde): synthetische Minimal-Dokumente ──
+// Echte Portal-Strukturen nachgebildet (WordSection2/3, <li>-Listen, C0-Debris,
+// Deckblatt-Prosa, SVG-Vokabular-Varianten); windows-1252-Bytes via latin1.
+
+const KOPF = `<table>
+<tr><td>Geschäftsnummer:</td><td>SB.2023.99</td></tr>
+<tr><td>Instanz:</td><td>Appellationsgericht</td></tr>
+<tr><td>Entscheiddatum:</td><td>15.03.2023</td></tr>
+<tr><td>Titel:</td><td>Testbetreff</td></tr>
+</table>`;
+const doku = (body: string): Buffer => Buffer.from(`<html><body>${KOPF}${body}</body></html>`, 'latin1');
+
+describe('bs-parse Fix-Welle 19.7.2026 (Fidelity-Befunde)', () => {
+  it('liest ALLE WordSection-Divs: Dispositiv in WordSection2 geht nicht verloren', () => {
+    const p = parseBsDokument(doku(`
+      <div class=WordSection1>
+        <p class=MsoNormal>Sachverhalt</p>
+        <p class=MsoNormal>Es geschah etwas.</p>
+        <p class=MsoNormal>Erwägungen</p>
+        <p class=MsoNormal><b>1.</b> Erste Erwägung.</p>
+      </div>
+      <div class=WordSection2>
+        <p class=MsoNormal>Demgemäss erkennt das Verwaltungsgericht (Dreiergericht):</p>
+        <p class=MsoNormal>://: Die Beschwerde wird abgewiesen.</p>
+      </div>`));
+    expect(p.abschnitte.map((a) => a.typ)).toEqual(['sachverhalt', 'erwaegung', 'dispositiv']);
+    expect(p.dispositivOrders).toContain('Die Beschwerde wird abgewiesen.');
+  });
+
+  it('nimmt <li>-Aufzählungen als Einheiten auf (Vorstrafenlisten AUS.2023.4/18)', () => {
+    const p = parseBsDokument(doku(`
+      <div class=WordSection1>
+        <p class=MsoNormal>Erwägungen</p>
+        <p class=MsoNormal><b>1.</b> Der Beurteilte ist wiederholt straffällig:</p>
+        <ul>
+          <li class=MsoNormalCxSpMiddle>Strafbefehl der Staatsanwaltschaft A vom 1. Januar 2020.</li>
+          <li class=MsoNormalCxSpMiddle>Urteil des Strafgerichts B vom 2. Februar 2021.</li>
+        </ul>
+      </div>`));
+    const text = p.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
+    expect(text).toContain('Strafbefehl der Staatsanwaltschaft A vom 1. Januar 2020.');
+    expect(text).toContain('Urteil des Strafgerichts B vom 2. Februar 2021.');
+  });
+
+  it('bereinigt C0-Quell-Debris: verifizierte UTF-16-Drop-Paare gemappt, Rest entfernt', () => {
+    expect(bereinigeQuellDebris('CHF 32\u0000\u0019370.60')).toBe('CHF 32\u2019370.60');
+    expect(bereinigeQuellDebris('2023 \u0000\u0013 und somit')).toBe('2023 \u2013 und somit');
+    expect(bereinigeQuellDebris('://:\u0000\u0002\u0002\u0002 Text')).toBe('://: Text');
+    const p = parseBsDokument(doku(`
+      <div class=WordSection1>
+        <p class=MsoNormal>Erwägungen</p>
+        <p class=MsoNormal><b>1.</b> Betrag von CHF 32\u0000\u0019370.60 am 13. Februar 2023 \u0000\u0013 und somit\u0000.</p>
+      </div>`));
+    const text = p.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
+    expect(text).toContain('CHF 32\u2019370.60');
+    expect(text).toContain('2023 \u2013 und somit');
+    // eslint-disable-next-line no-control-regex -- C0 ist der Prüfgegenstand
+    expect(text).not.toMatch(/[\u0000-\u0008\u000b\u000e-\u001f]/);
+  });
+
+  it('Deckblatt-Ende quantitativ: substanzielle Prosa VOR dem ersten Marker wird Sachverhalt', () => {
+    const prosa = 'Am 12. Juli 2020 kam es vor der Liegenschaft zu einem Vorfall. '.repeat(6); // >= 300 Zeichen
+    const p = parseBsDokument(doku(`
+      <div class=WordSection1>
+        <p class=MsoNormal>Mitwirkende</p>
+        <p class=MsoNormal>Dr. A. Muster (Vorsitz)</p>
+        <p class=MsoNormal>${prosa}</p>
+        <p class=MsoNormal>Erwägungen</p>
+        <p class=MsoNormal><b>1.</b> Erste Erwägung.</p>
+      </div>`));
+    expect(p.abschnitte.map((a) => a.typ)).toEqual(['sachverhalt', 'erwaegung']);
+    const sv = p.abschnitte[0].bloecke.map((b) => b.text).join('\n');
+    expect(sv).toContain('Am 12. Juli 2020');
+    expect(sv).not.toContain('Mitwirkende');            // kurzes Rubrum bleibt übersprungen
+  });
+
+  it('kurzes Deckblatt (alle Absätze < 300 Zeichen) wird weiterhin komplett übersprungen', () => {
+    const p = parseBsDokument(doku(`
+      <div class=WordSection1>
+        <p class=MsoNormal>Mitwirkende</p>
+        <p class=MsoNormal>Dr. A. Muster (Vorsitz)</p>
+        <p class=MsoNormal>Erwägungen</p>
+        <p class=MsoNormal><b>1.</b> Erste Erwägung.</p>
+      </div>`));
+    expect(p.abschnitte.map((a) => a.typ)).toEqual(['erwaegung']);
+  });
+
+  it('SVG-Varianten: «Entscheidgründe»-Marker + «… erkennt:» schlägt aaTatsachen-Fehlklasse (IV.2022.64)', () => {
+    const p = parseBsDokument(doku(`
+      <div class=WordSection1>
+        <p class=aaText>Entscheidgründe</p>
+        <p class=aaText><b>1.</b> Das Gericht ist zuständig.</p>
+        <p class=aaTatsachen>Die Präsidentin des Sozialversicherungsgerichts erkennt:</p>
+        <p class=aaArabisch1>://: Das Verfahren wird abgeschrieben.</p>
+      </div>`));
+    expect(p.abschnitte.map((a) => a.typ)).toEqual(['erwaegung', 'dispositiv']);
+    expect(p.dispositivOrders).toContain('Das Verfahren wird abgeschrieben.');
+  });
+
+  it('kein Rückfall aus dem Dispositiv: aaTatsachen-Rechtsmittelbelehrung bleibt im Dispositiv (UV.2024.30)', () => {
+    const p = parseBsDokument(doku(`
+      <div class=WordSection1>
+        <p class=MsoNormal>Erwägungen</p>
+        <p class=MsoNormal><b>1.</b> Erste Erwägung.</p>
+        <p class=MsoNormal>Demgemäss erkennt das Sozialversicherungsgericht:</p>
+        <p class=MsoNormal>://: Die Beschwerde wird abgewiesen.</p>
+        <p class=aaTatsachen>Rechtsmittelbelehrung</p>
+        <p class=MsoNormal>Gegen diesen Entscheid kann innert 30 Tagen Beschwerde erhoben werden.</p>
+      </div>`));
+    expect(p.abschnitte.map((a) => a.typ)).toEqual(['erwaegung', 'dispositiv']);
+    const disp = p.abschnitte[1].bloecke.map((b) => b.text).join('\n');
+    expect(disp).toContain('Rechtsmittelbelehrung');
   });
 });

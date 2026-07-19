@@ -3,7 +3,8 @@
 // Struktur-Parse (linkedom-DOM), nie Regex über Fliesstext wo Struktur existiert:
 //  · Metadaten-Kopf (Geschäftsnummer/Instanz/Entscheiddatum/Erstpublikation/
 //    Aktualisierung/Titel) aus der METADATA-Tabelle.
-//  · Body aus div.WordSection1; zwei real vorkommende Dokument-Vokabulare:
+//  · Body aus ALLEN div.WordSection*-Sektionen (Dispositive/Anhänge stehen real
+//    auch in WordSection2/3); zwei real vorkommende Dokument-Vokabulare:
 //    (a) semantische aa*-Klassen (aaTatsachen/aaEntscheidungsgrnde/aaDispositiv/
 //        aaRmisch*/aaArabisch1*) — v.a. Sozialversicherungsgericht;
 //    (b) Word-Klassen (MsoNormal/T1TextAG…) mit strukturellen Marker-Absätzen
@@ -48,6 +49,30 @@ export function normAsciiWs(s: string): string {
 const istLeer = (s: string): boolean => s.replace(/\s+/g, '') === '';
 
 /**
+ * Quell-Debris-Bereinigung (Fidelity-Befund 19.7.2026): einzelne Portal-Dokumente
+ * tragen C0-Steuerzeichen VERBATIM im HTML (Raw==Live verifiziert, Quelle defekt).
+ * Zwei Klassen, beide deterministisch behandelt (kein Raten, §1):
+ *  (a) UTF-16BE-High-Byte-Drop: das Original-Zeichen U+20xx steht als Byte-Paar
+ *      0x00 0xXX im 1252-Strom. Empirisch verifiziert (alle 3 Vorkommen einzeln
+ *      geprüft): «CHF 32␀␙370.60» → «32’370.60» (74208), «727.␀␓ zielenden» →
+ *      «727.– …» (74434), «2023 ␀␓ und somit» → Gedankenstrich (75135).
+ *      Nur diese belegten Paare werden auf ihr Original abgebildet.
+ *  (b) Rest-Debris (␀-/␂-Läufe im Dispositiv-Padding, ␀ mitten im Wort mit
+ *      unrekonstruierbarem Zeichenverlust): Steuerzeichen tragen im Quell-HTML
+ *      keinen Glyph — sie werden ENTFERNT (Parität zum Browser-Rendering der
+ *      amtlichen Seite); der Zeichenverlust ist quellseitig, nicht rekonstruierbar.
+ * Das Fidelity-Gate (unten) hält dagegen: kein C0 darf den Snapshot erreichen.
+ */
+export function bereinigeQuellDebris(html: string): string {
+  /* eslint-disable no-control-regex -- C0-Steuerzeichen sind hier der PRÜFGEGENSTAND */
+  return html
+    .replace(/\u0000\u0013/g, '\u2013')
+    .replace(/\u0000\u0019/g, '\u2019')
+    .replace(/[\u0000-\u0008\u000b\u000e-\u001f]/g, '');
+  /* eslint-enable no-control-regex */
+}
+
+/**
  * Zähl-Basis des Einheiten↔Blöcke-Fidelity-Gates: Inhalts-Zeichen (Umlaute +
  * Guillemets), die keine legitime Trim-/Gliederungs-Transformation je berührt.
  * NBSP wird hier bewusst NICHT auf Gleichheit gezählt: reine NBSP-Filler-Absätze
@@ -73,7 +98,11 @@ interface Einheit {
   istTabelle: boolean;
 }
 
-const BLOCK_TAGS = new Set(['P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
+// LI gehört dazu (Fidelity-Befund 19.7.2026): zwei Dokumente (AUS.2023.4/74636,
+// AUS.2023.18/75037) tragen Vorstrafenlisten als direkte <li>-Texte — ohne LI
+// wurden deren Textknoten beim Rekursieren stumm verworfen. Ein <li> wird wie
+// ein Absatz behandelt (textContent inkl. allfälliger Kind-Blöcke, kein Doppelzug).
+const BLOCK_TAGS = new Set(['P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'LI']);
 
 function tabelleZuText(tbl: Element): string {
   const zeilen: string[] = [];
@@ -130,13 +159,26 @@ const ROEM_RE = /^([IVX]{1,6})\.$/;
 /** Marker-Absatz? (ganzer Absatztext = Sektions-Überschrift bzw. Dispositiv-Einleitung) */
 function sektionsMarker(e: Einheit): SektionsTyp | null {
   const k = e.klasse;
+  const t = e.text.replace(/\u00a0/g, ' ').replace(/ +/g, ' ').trim();
+  // Dispositiv-Einleitung «<Spruchkörper> erkennt:» VOR den Klassen-Regeln:
+  // das SVG-Template klebt vereinzelt aaTatsachen an genau diese Zeile
+  // (IV.2022.64/75372) — der Text ist hier das verlässlichere Struktursignal.
+  // Korpus-Scan 19.7.2026: exakt 4 Absatz-Wortlaute, alle echte Dispositiv-Intros
+  // («Das Appellationsgericht (Dreiergericht/Einzelgericht/Kammer) erkennt:»,
+  // «Die Präsidentin des Sozialversicherungsgerichts erkennt:»).
+  if (/^(Der|Die|Das)\b/.test(t) && /\berkennt\s*:$/.test(t) && t.length < 120) return 'dispositiv';
+  // Auch die «Demgemäss …»-Einleitung schlägt die Klassen: das SVG-Template klebt
+  // aaTatsachen real an «Demgemäss erkennt das Sozialversicherungsgericht:»
+  // (UV.2025.50/79639, EL.2025.5/79724) — sonst entstünde ein zweiter, falscher
+  // sachverhalt-Abschnitt mitten im Dispositiv.
+  if (/^(Demgemäss|Demnach|Demzufolge)\b.{0,120}\berk(e|a)nnt\b/i.test(t) && t.length < 160) return 'dispositiv';
   if (/\baaTatsachen\b/.test(k)) return 'sachverhalt';
   if (/\baaEntscheidungsgrnde\b/.test(k)) return 'erwaegung';
   if (/\baaDispositiv\b/.test(k)) return 'dispositiv';
-  const t = e.text.replace(/\u00a0/g, ' ').replace(/ +/g, ' ').trim();
   if (/^(Tatsachen|Sachverhalt)$/i.test(t)) return 'sachverhalt';
-  if (/^(Entscheidungsgründe|Erwägungen|Aus den Erwägungen|Erwägung|Gründe)$/i.test(t)) return 'erwaegung';
-  if (/^(Demgemäss|Demnach|Demzufolge)\b.{0,120}\berk(e|a)nnt\b/i.test(t) && t.length < 160) return 'dispositiv';
+  // «Entscheidgründe» (ohne -ungs-): reale SVG-Variante (IV.2022.64/75372) —
+  // ohne sie fielen deren nummerierte Erwägungen komplett vor den ersten Marker.
+  if (/^(Entscheidungsgründe|Entscheidgründe|Erwägungen|Aus den Erwägungen|Erwägung|Gründe)$/i.test(t)) return 'erwaegung';
   if (/^Es wird erkannt\s*:?$/i.test(t)) return 'dispositiv';
   if (t.startsWith('://:')) return 'dispositiv';   // erste Dispositiv-Ziffer ohne Einleitungssatz
   return null;
@@ -206,7 +248,7 @@ const dIso = (s: string | null): string | null => {
 
 /** Ein rohes BS-Dokument (windows-1252-Bytes) strukturell parsen. */
 export function parseBsDokument(bytes: Buffer): ParseErgebnis {
-  const html = dekodiereBs(bytes);
+  const html = bereinigeQuellDebris(dekodiereBs(bytes));
   const { document } = parseHTML(html);
 
   // ── Metadaten-Kopf ──
@@ -223,9 +265,18 @@ export function parseBsDokument(bytes: Buffer): ParseErgebnis {
   const titel = metaWert(document, 'Titel') ?? '';
 
   // ── Body ──
-  const root = document.querySelector('div.WordSection1');
-  if (!root) throw new Error('Body: div.WordSection1 fehlt');
-  const einheiten = sammleEinheiten(root);
+  // ALLE WordSection-Divs in Dokument-Reihenfolge (Fidelity-Befund 19.7.2026):
+  // Word bricht bei Sektionswechseln in WordSection2/3 um — dort stehen real
+  // Dispositive und Anhänge (KE.2023.37/76512: ganzes Dispositiv in WordSection2;
+  // ZB.2023.62/77467: Erwägungs-Fortsetzung + Dispositiv + Unterhalts-Anhang in
+  // WordSection2+3; SB.2020.87/75885: Zivilforderungs-Anhang). Nur WordSection1
+  // zu lesen, verwarf diese Inhalte vollständig. Verschachtelte Treffer werden
+  // dedupliziert (nur Wurzeln sammeln — kein Doppelzug).
+  const wsAlle = [...document.querySelectorAll('div')]
+    .filter((d) => /^WordSection\d+$/.test(d.getAttribute('class') ?? ''));
+  const roots = wsAlle.filter((d) => !wsAlle.some((o) => o !== d && o.contains(d)));
+  if (!roots.length) throw new Error('Body: div.WordSection1 fehlt');
+  const einheiten = roots.flatMap((r) => sammleEinheiten(r));
   if (!einheiten.length) throw new Error('Body: keine Inhalts-Einheiten');
 
   const hatAaKlassen = einheiten.some((e) => /\baa(Tatsachen|Entscheidungsgrnde|Dispositiv)\b/.test(e.klasse));
@@ -238,13 +289,31 @@ export function parseBsDokument(bytes: Buffer): ParseErgebnis {
   // Deckblatt (Briefkopf/Mitwirkende/Parteien — Rubrum-Vertiefung = Folge-Einheit F3)
   // wird nur übersprungen, wenn ein Sachverhalt-/Erwägungs-Marker existiert; beginnt
   // das Dokument direkt mit dem Dispositiv-Marker, bleibt alles davor als Erwägung.
-  const start = ersterInhaltsMarker >= 0 ? ersterInhaltsMarker : 0;
+  //
+  // Deckblatt-ENDE zusätzlich quantitativ begrenzt (Fidelity-Befund 19.7.2026):
+  // 26 Dokumente tragen SUBSTANZIELLE Prosa VOR dem ersten Marker (Sachverhalts-
+  // Geschichte ohne «Sachverhalt»-Überschrift, SVG-Zusammenfassungen, Anklage-
+  // Betreffs; Extremfall SB.2018.45/74624: ~52k Zeichen Verfahrensgeschichte).
+  // Struktursignal: echte Rubrum-/Briefkopf-Absätze sind kurz (Korpus-Scan: in
+  // 3739/3765 Dokumenten ALLE Vor-Marker-Einheiten < 300 Zeichen). Der Skip endet
+  // darum am ersten Absatz ≥ 300 Zeichen — ab dort ist es Inhalt und wird als
+  // Sachverhalt geführt (alles zwischen Rubrum und Erwägungen ist funktional
+  // Sachverhalt/Verfahrensgeschichte; folgt ein «Sachverhalt»-Marker, fliesst er
+  // in DENSELBEN Abschnitt).
+  const DECKBLATT_MAX_ZEICHEN = 300;
+  const ersterInhaltsAbsatz = einheiten.findIndex((e) => e.text.length >= DECKBLATT_MAX_ZEICHEN);
+  const start = ersterInhaltsMarker >= 0
+    ? (ersterInhaltsAbsatz >= 0 && ersterInhaltsAbsatz < ersterInhaltsMarker ? ersterInhaltsAbsatz : ersterInhaltsMarker)
+    : 0;
   const strukturQuelle: ParseErgebnis['strukturQuelle'] =
     ersterMarker < 0 ? 'flach' : hatAaKlassen ? 'klassen' : 'marker';
 
   // ── Segmentieren + Blöcke gruppieren ──
   const abschnitte: EntscheidAbschnitt[] = [];
-  let sektion: SektionsTyp = 'erwaegung';   // Fallback-Sektion (flach, §3.5)
+  // Fallback-Sektion: flach (§3.5) = erwaegung; beginnt der Inhalt VOR dem ersten
+  // Marker (Deckblatt-Ende-Signal), ist er Sachverhalts-Stoff (siehe oben).
+  let sektion: SektionsTyp = ersterInhaltsMarker >= 0 && start < ersterInhaltsMarker
+    ? 'sachverhalt' : 'erwaegung';
   let bloecke: EntscheidBlock[] = [];
   let aktuellerBlock: EntscheidBlock | null = null;
   const zaehlung = fidelityZaehlung('');
@@ -259,11 +328,18 @@ export function parseBsDokument(bytes: Buffer): ParseErgebnis {
     const e = einheiten[i];
     for (const [ch, n] of Object.entries(fidelityZaehlung(e.text))) zaehlung[ch] += n;
     const marker = sektionsMarker(e);
-    if (marker && marker !== sektion) { schliesseAbschnitt(); sektion = marker; }
+    // Kein Rückfall aus dem Dispositiv: nach «Demgemäss erkennt …» folgt amtlich
+    // nur noch Mitteilung/Rechtsmittelbelehrung. Das SVG-Template klassiert deren
+    // Überschrift vereinzelt als aaTatsachen (UV.2024.30/78316, UV.2024.40/78868)
+    // — ein später «sachverhalt»-Marker wäre ein falscher zweiter Abschnitt.
+    const abschnitteHattenDispositiv = sektion === 'dispositiv';
+    if (marker && marker !== sektion && !(abschnitteHattenDispositiv && marker !== 'dispositiv')) {
+      schliesseAbschnitt(); sektion = marker;
+    }
     // Reine Überschrift-Absätze («Tatsachen», «Erwägungen») tragen keinen Inhalt —
     // ABER: aaDispositiv-/Demgemäss-/«://:»-Einheiten SIND Inhalt.
     const istReineUeberschrift = marker !== null && marker !== 'dispositiv'
-      && /^(Tatsachen|Sachverhalt|Entscheidungsgründe|Erwägungen|Aus den Erwägungen|Erwägung|Gründe)$/i
+      && /^(Tatsachen|Sachverhalt|Entscheidungsgründe|Entscheidgründe|Erwägungen|Aus den Erwägungen|Erwägung|Gründe)$/i
         .test(e.text.replace(/\u00a0/g, ' ').trim());
     if (istReineUeberschrift) {
       // Überschrift zählt zur Fidelity-Basis der Einheiten NICHT (nicht aufgenommen).
@@ -316,6 +392,11 @@ export function parseBsDokument(bytes: Buffer): ParseErgebnis {
   // ── Fidelity-Gates (§3.6, pro Dokument hart) ──
   const alleTexte = abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
   if (alleTexte.includes('�')) throw new Error('Fidelity: U+FFFD im Text');
+  // C0-Steuerzeichen dürfen den Snapshot nie erreichen (Quell-Debris-Bereinigung
+  // oben deckt die bekannten Muster; neue Varianten sollen HART scheitern statt
+  // still in Rendering/Suche/Downstream zu wandern).
+  // eslint-disable-next-line no-control-regex -- C0-Steuerzeichen sind der Prüfgegenstand
+  if (/[\u0000-\u0008\u000b\u000e-\u001f]/.test(alleTexte)) throw new Error('Fidelity: C0-Steuerzeichen im Text');
   if (/&nbsp;|&auml;|&ouml;|&uuml;|&amp;/.test(alleTexte)) throw new Error('Fidelity: HTML-Entity-Literal im Text');
   // Nur ECHTE HTML-Tag-Namen flaggen — Urteilstexte können legitime «<Wort»-Zitate
   // tragen (real: «&lt;Versprecher» in 73471, entity-dekodiert korrekt).

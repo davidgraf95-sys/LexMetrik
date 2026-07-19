@@ -126,17 +126,12 @@
           ]
         },
         {
-          "typ": "sachverhalt",
+          "typ": "dispositiv",
           "bloecke": [
             {
               "marke": null,
               "text": "Demgemäss erkennt das Sozialversicherungsgericht:"
-            }
-          ]
-        },
-        {
-          "typ": "dispositiv",
-          "bloecke": [
+            },
             {
               "marke": null,
               "text": "://:       Die Beschwerde wird abgewiesen, soweit auf sie eingetreten wird."
@@ -209,7 +204,7 @@
       "quelleUrl": "https://rechtsprechung.gerichte.bs.ch/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&WebServerUrl=rechtsprechung.gerichte.bs.ch&WebServerScript=%2Fcgi-bin%2Fnph-omniscgi.exe&OmnisLibrary=JURISWEB&OmnisClass=rtFindinfoWebHtmlService&OmnisServer=JURISWEB%2C7000&Schema=BS_FI_WEB&Parametername=WEB&cSprache=DE&Aufruf=getMarkupDocument&nF30_KEY=79724&Template=search_result_document.html",
       "abgerufen": "2026-07-19",
       "fassungsToken": "2026-07-10",
-      "sha": "1ec774e7476c1c50fb22e1eeae66d9b5a938f5e4170a2c5cf9be79355c8310a6",
+      "sha": "e1406c0676796bcc716439db81cc98d93daa59218b27626841e204a2644f3764",
       "erstpublikation": "2026-06-20",
       "aktualisiert": "2026-07-10",
       "nummerSekundaer": "SVG.2026.113",

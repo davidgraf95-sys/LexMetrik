@@ -26,6 +26,25 @@
       "regesteAmtlich": false,
       "abschnitte": [
         {
+          "typ": "sachverhalt",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Der Beschwerdeführer ist indischer Staatsangehöriger (Aufenthaltsbewilligung, Beschwerdeantwortbeilage [AB] 2) und war vom 1. Mai 2020 bis am 30. April 2024 als Assistent/Doktorand (PhD) im Departement B____ an der C____ in [...] tätig (Arbeitsvertrag, AB 3; Vertragsergänzung, AB 5; Zweite Vertragsergänzung, AB 6). Nachdem sein Vertrag nicht verlängert worden war (vgl. Schreiben vom 23. April 2024, AB 7), war er seit 1. Mai 2024 ohne Arbeit und meldete sich per 16. August 2024 beim RAV zur Arbeitsvermittlung an (Anmeldung, AB 8; Anmeldebestätigung, AB 9). Zu diesem Zeitpunkt war er im Besitz einer bis am 31. Oktober 2024 gültigen Aufenthaltsbewilligung (Bewilligung B) zum Zweck der «Ausbildung mit Erwerbstätigkeit» sowie «Doktorand mit eigenen finanziellen Mitteln» (a.a.O.; vgl. auch Aufenthaltsbewilligung, AB 2).\n\nDer Beschwerdeführer stellte am 22. August 2024 einen Antrag auf Arbeitslosenentschädigung ab dem 1. Mai 2024 (Antrag, AB 10). Nachdem die Beschwerdegegnerin die Arbeitgeberbestätigung vom 2. September 2024 erhalten hatte (vgl. AB 11), sandte die öffentliche Arbeitslosenkasse dem Beschwerdeführer die Daten seiner Anspruchsberechtigung zu (vgl. Schreiben vom 3. September 2024, AB 12).\n\nAm 23. Oktober 2024 erhielt der Beschwerdeführer eine Kurzaufenthaltsbewilligung (Bewilligung L) bis 6. Februar 2025 (Auszug Kantonaler Datenmarkt, Beschwerdeantwortbeilage/AB 1) mit den Anmerkungen «Aufenthalt zur Stellensuche», «nicht verlängerbar» sowie «Aufnahme der Erwerbstätigkeit bewilligungspflichtig» (vgl. Aufenthaltsbewilligung, AB 13). Gestützt darauf kam die Öffentliche Arbeitslosenkasse auf ihr Schreiben vom 3. September 2024 zurück und verfügte am 9. Dezember 2024, dass der Beschwerdeführer seit der Anmeldung bei der Arbeitslosenversicherung mangels freiem Zugang zum Schweizer Arbeitsmarkt keinen Anspruch auf Arbeitslosenentschädigung habe (AB 14). Zur Begründung führte sie aus, beim Antrag auf Arbeitslosenentschädigung per 16. August 2024 bei der Öffentlichen Arbeitslosenkasse Basel-Stadt, habe der Beschwerdeführer über eine B-Bewilligung mit «Ausbildung mir Erwerbstätigkeit/Doktorand mit eigenen finanziellen Mitteln» verfügt. Dieser vermerk sei seitens Öffentlichen Arbeitslosenkasse Basel-Stadt fälschlicherweise übersehen worden. Mit Einsendung der neuen L-Bewilligung, sei sein Anspruch nochmals geprüft worden. Personen aus Drittstaaten mit solch einer Bewilligung hätten generell nur einen befristeten Aufenthalt in der Schweiz und somit auch keinen freien Zugang zum Schweizer Arbeitsmarkt. Somit sei eine Berechtigung nicht vollumfänglich gegeben und ein Anspruch auf Arbeitslosenentschädigung bestehe nicht (a.a.O.). Mit separater Verfügung vom 9. Dezember 2024 verfügte sie die Rückforderung von CHF 6'267.15 (vgl. Beschwerdebeilage [BB] 1)\n\nGegen beide Verfügungen wehrte sich der Beschwerdeführer mit Einsprache vom 16. Januar 2025 (AB 15 und 16). Diese wurde mit Einspracheentscheid vom 22. Januar 2025 abgewiesen (AB 17)."
+            },
+            {
+              "marke": "II.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde vom 19. Februar 2025 (Postaufgabe 20. Februar 2025) wird beantragt, es seien dem Beschwerdeführer die gesetzlichen Leistungen zu gewähren und ihm die Rückforderung der bereits bezogenen CHF 6’267.15 zu erlassen. In der Beilage reicht der Beschwerdeführer die Verfügung vom 9. Januar 2025 der Beschwerdegegnerin ein, worin CHF 6’267.15 von ihm zurückgefordert werden.\n\nMit Instruktionsverfügung vom 4. April 2025 wird festgestellt, dass innert Frist bis 28. März 2025 keine Beschwerdeantwort eingegangen ist. Daraufhin teilt die Beschwerdegegnerin mit Schreiben vom 7. April 2025 mit, dass sie mit A-Post Plus vom 28. März 2025 um eine Fristerstreckung ersucht habe. Hierzu legt sie das Postbüchlein mit der Postaufgabequittung des A-Post Plus Schreibens bei. Nach Abklärung der Umstände des stark verzögerten Eingangs des Fristerstreckungsgesuchs wird auf der Grundlage einer entsprechenden Mitteilung der Post CH AG festgestellt, dass der Fehler wohl aufgrund einer falschen Zustellung der Post eingetreten ist (Instruktionsverfügung vom 23. April 2025). Entsprechend wird der Beschwerdegegnerin die beantragte Friststreckung gewährt.\n\nMit E-Mail vom 3. Mai 2025 meldet der Beschwerdeführer eine neue Zustelladresse in Indien und bittet darum, ihm die gerichtliche Korrespondenz dorthin zuzustellen.\n\nDie Beschwerdegegnerin schliesst mit Beschwerdeantwort vom 20. Mai 2025 auf Abweisung der Beschwerde.\n\nDer Beschwerdeführer hält mit Replik vom 18. Juni 2025 an den gestellten Rechtsbegehren fest."
+            },
+            {
+              "marke": "III.",
+              "tiefe": 1,
+              "text": "Die Urteilsberatung der Kammer des Sozialversicherungsgerichts Basel-Stadt findet am 5. August 2025 statt."
+            }
+          ]
+        },
+        {
           "typ": "erwaegung",
           "bloecke": [
             {
@@ -228,7 +247,7 @@
       "quelleUrl": "https://rechtsprechung.gerichte.bs.ch/cgi-bin/nph-omniscgi.exe?OmnisPlatform=WINDOWS&WebServerUrl=rechtsprechung.gerichte.bs.ch&WebServerScript=%2Fcgi-bin%2Fnph-omniscgi.exe&OmnisLibrary=JURISWEB&OmnisClass=rtFindinfoWebHtmlService&OmnisServer=JURISWEB%2C7000&Schema=BS_FI_WEB&Parametername=WEB&cSprache=DE&Aufruf=getMarkupDocument&nF30_KEY=78918&Template=search_result_document.html",
       "abgerufen": "2026-07-19",
       "fassungsToken": "2025-12-16",
-      "sha": "cd36f6448215cbe3ad5f0288148184da302cc502eb2edd5b6d2c6249c8780c44",
+      "sha": "1d181325830c2be9a928e2197d3d78c9a61319f3d955106874c09742732e8075",
       "erstpublikation": "2025-12-13",
       "aktualisiert": "2025-12-16",
       "nummerSekundaer": "SVG.2025.180",
