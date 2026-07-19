@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "232.16",
   "titel": "Bundesgesetz über den Schutz von Pflanzenzüchtungen",
@@ -30,7 +30,8 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404",
+      "rs": "101"
      }
     ],
     "absatz": null,
@@ -100,7 +101,8 @@
      "links": [
       {
        "label": "SR <b>0.232.161</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1107"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1977/1359_1359_1359",
+       "rs": "0.232.161"
       }
      ],
      "absatz": null,
@@ -324,7 +326,8 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377",
+       "rs": "220"
       }
      ],
      "absatz": "1",
@@ -644,7 +647,8 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
+       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723",
+       "rs": "711"
       }
      ],
      "absatz": "2",

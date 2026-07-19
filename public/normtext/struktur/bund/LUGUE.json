@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "0.275.12",
   "titel": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen",
@@ -359,7 +359,8 @@
      "links": [
       {
        "label": "SR <b>0.232.142.2</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1089"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2007/849",
+       "rs": "0.232.142.2"
       }
      ],
      "absatz": null,
@@ -425,7 +426,8 @@
      "links": [
       {
        "label": "SR <b>0.274.131</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1200"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2809_2809_2809",
+       "rs": "0.274.131"
       }
      ],
      "absatz": null,

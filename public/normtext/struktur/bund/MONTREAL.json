@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-11",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "0.748.411",
   "titel": "Übereinkommen zur Vereinheitlichung bestimmter Vorschriften über die Beförderung im internationalen Luftverkehr",
@@ -59,7 +59,8 @@
     "links": [
      {
       "label": "SR <b>0.748.410</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3299"
+      "url": "https://fedlex.data.admin.ch/eli/cc/50/438_450_499",
+      "rs": "0.748.410"
      }
     ],
     "absatz": null,
@@ -71,7 +72,8 @@
     "links": [
      {
       "label": "SR <b>0.748.0</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3110"
+      "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381",
+      "rs": "0.748.0"
      }
     ],
     "absatz": null,
@@ -755,7 +757,8 @@
      "links": [
       {
        "label": "SR <b>0.748.410.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3300"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1963/665_664_685",
+       "rs": "0.748.410.1"
       }
      ],
      "absatz": null,
@@ -767,7 +770,8 @@
      "links": [
       {
        "label": "SR <b>0.748.410.2</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3301"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1964/154_150_151",
+       "rs": "0.748.410.2"
       }
      ],
      "absatz": null,
@@ -779,15 +783,18 @@
      "links": [
       {
        "label": "SR<b> 0.748.410.3</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3302"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2003/20",
+       "rs": "0.748.410.3"
       },
       {
        "label": "<b>0.748.410.4</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3303"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2003/21",
+       "rs": "0.748.410.4"
       },
       {
        "label": "<b>0.748.410.6</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3304"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2003/23",
+       "rs": "0.748.410.6"
       }
      ],
      "absatz": null,

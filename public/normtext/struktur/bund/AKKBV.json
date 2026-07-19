@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "946.512",
   "titel": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde‑ und Zulassungsstellen",
@@ -35,7 +35,8 @@
     "links": [
      {
       "label": "SR <b>946.51</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11467"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725",
+      "rs": "946.51"
      }
     ],
     "absatz": null,
@@ -47,7 +48,8 @@
     "links": [
      {
       "label": "SR <b>0.946.523.21</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4340"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2001/436",
+      "rs": "0.946.523.21"
      }
     ],
     "absatz": null,
@@ -59,7 +61,8 @@
     "links": [
      {
       "label": "SR <b>0.946.526.81</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4341"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/276",
+      "rs": "0.946.526.81"
      }
     ],
     "absatz": null,
@@ -83,7 +86,8 @@
     "links": [
      {
       "label": "SR <b>0.632.31</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1960/590_635_621",
+      "rs": "0.632.31"
      }
     ],
     "absatz": null,
@@ -95,7 +99,8 @@
     "links": [
      {
       "label": "SR <b>0.946.536.71</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40078"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2023/11",
+      "rs": "0.946.536.71"
      }
     ],
     "absatz": null,
@@ -107,7 +112,8 @@
     "links": [
      {
       "label": "SR <b>0.812.101.933.6</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40144"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2023/419",
+      "rs": "0.812.101.933.6"
      }
     ],
     "absatz": null,
@@ -1032,7 +1038,8 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799",
+       "rs": "311.0"
       }
      ],
      "absatz": "1",

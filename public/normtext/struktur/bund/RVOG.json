@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "172.010",
   "titel": "Regierungs- und Verwaltungsorganisationsgesetz",
@@ -30,7 +30,8 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404",
+      "rs": "101"
      }
     ],
     "absatz": null,
@@ -346,7 +347,8 @@
       },
       {
        "label": "SR <b>171.10</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4991"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2003/510",
+       "rs": "171.10"
       },
       {
        "label": "AS <b>2017</b> 3259",
@@ -519,7 +521,8 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755",
+       "rs": "172.021"
       }
      ],
      "absatz": "2",
@@ -1276,7 +1279,8 @@
      "links": [
       {
        "label": "SR <b>173.32</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5621"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/352",
+       "rs": "173.32"
       }
      ],
      "absatz": "6",
@@ -2657,7 +2661,8 @@
      "links": [
       {
        "label": "SR <b>235.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/491",
+       "rs": "235.1"
       }
      ],
      "absatz": "1",
@@ -2796,7 +2801,8 @@
      "links": [
       {
        "label": "SR <b>235.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/491",
+       "rs": "235.1"
       }
      ],
      "absatz": "1",
@@ -3070,7 +3076,8 @@
      "links": [
       {
        "label": "SR <b>152.3</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4937"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/355",
+       "rs": "152.3"
       }
      ],
      "absatz": "4",

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "143.5",
   "titel": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen",
@@ -32,7 +32,8 @@
     "links": [
      {
       "label": "SR <b>142.20</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2007/758",
+      "rs": "142.20"
      }
     ],
     "absatz": null,
@@ -44,7 +45,8 @@
     "links": [
      {
       "label": "SR <b>142.31</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/358",
+      "rs": "142.31"
      }
     ],
     "absatz": null,
@@ -56,7 +58,8 @@
     "links": [
      {
       "label": "SR <b>0.142.30</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/432"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1955/443_461_469",
+      "rs": "0.142.30"
      }
     ],
     "absatz": null,
@@ -68,7 +71,8 @@
     "links": [
      {
       "label": "SR <b>0.142.40</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/460"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1972/2320_2374_2150",
+      "rs": "0.142.40"
      }
     ],
     "absatz": null,
@@ -137,7 +141,8 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799",
+       "rs": "311.0"
       }
      ],
      "absatz": "1",
@@ -149,7 +154,8 @@
      "links": [
       {
        "label": "SR <b>321.0</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6242"
+       "url": "https://fedlex.data.admin.ch/eli/cc/43/359_375_369",
+       "rs": "321.0"
       }
      ],
      "absatz": "1",
@@ -208,7 +214,8 @@
      "links": [
       {
        "label": "SR <b>0.142.305</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/434"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1986/464_464_464",
+       "rs": "0.142.305"
       }
      ],
      "absatz": "1",
@@ -240,7 +247,8 @@
      "links": [
       {
        "label": "SR <b>192.121</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5677"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2007/861",
+       "rs": "192.121"
       }
      ],
      "absatz": "2",
@@ -533,7 +541,8 @@
      "links": [
       {
        "label": "SR <b>142.512</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4899"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2014/2",
+       "rs": "142.512"
       }
      ],
      "absatz": "5",
@@ -705,7 +714,8 @@
       },
       {
        "label": "SR <b>191.11</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5669"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/652",
+       "rs": "191.11"
       }
      ],
      "absatz": null,
@@ -732,7 +742,8 @@
      "links": [
       {
        "label": "SR <b>172.041.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5068"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2004/677",
+       "rs": "172.041.1"
       }
      ],
      "absatz": null,

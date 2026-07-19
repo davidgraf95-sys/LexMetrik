@@ -1,10 +1,9 @@
 {
-  "hash": "729239ada3bbd5e1177f9c11586e55075927f621356c17db92ce802f3ab0dce0",
+  "hash": "2196621d3b735a4e734a01f3e763d987a992eda4541b9736710b7e913529cb94",
   "verdikt": "bestanden",
-  "quellePin": "rechtsprechung.gerichte.bs.ch raw-golden 20260719 (Raw==Live byte-gleich 76512+74208, in Prüfsession gefetcht)",
+  "quellePin": "fedlex bund (G-REF-Sidecars, gepinnte Konsolidierungen)",
   "datum": "2026-07-19",
   "dateien": [
-    "scripts/normtext/rubrum-bereinigen.ts",
-    "scripts/rechtsprechung/bs-parse.ts"
+    "daten-manifest.json"
   ]
 }

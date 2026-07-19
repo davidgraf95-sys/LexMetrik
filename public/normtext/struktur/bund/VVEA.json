@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "814.600",
   "titel": "Verordnung über die Vermeidung und die Entsorgung von Abfällen",
@@ -30,7 +30,8 @@
     "links": [
      {
       "label": "SR <b>814.01</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122",
+      "rs": "814.01"
      }
     ],
     "absatz": null,
@@ -42,7 +43,8 @@
     "links": [
      {
       "label": "SR <b>814.20</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9477"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1992/1860_1860_1860",
+      "rs": "814.20"
      }
     ],
     "absatz": null,
@@ -114,7 +116,8 @@
      "links": [
       {
        "label": "SR<b> 814.610</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9575"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2005/551",
+       "rs": "814.610"
       }
      ],
      "absatz": null,
@@ -138,7 +141,8 @@
      "links": [
       {
        "label": "SR <b>814.81</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9592"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2005/478",
+       "rs": "814.81"
       }
      ],
      "absatz": null,
@@ -519,7 +523,8 @@
      "links": [
       {
        "label": "SR <b>814.12</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9475"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1998/1854_1854_1854",
+       "rs": "814.12"
       }
      ],
      "absatz": "1",
@@ -572,7 +577,8 @@
      "links": [
       {
        "label": "SR <b>814.680</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9581"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1998/2261_2261_2261",
+       "rs": "814.680"
       }
      ],
      "absatz": "2",
@@ -1179,7 +1185,8 @@
       },
       {
        "label": "SR <b>916.171</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10645"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2023/711",
+       "rs": "916.171"
       }
      ],
      "absatz": "1",
@@ -1191,7 +1198,8 @@
      "links": [
       {
        "label": "SR <b>814.81</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9592"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2005/478",
+       "rs": "814.81"
       }
      ],
      "absatz": "3",
@@ -1370,7 +1378,8 @@
      "links": [
       {
        "label": "SR <b>510.620</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7339"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/389",
+       "rs": "510.620"
       }
      ],
      "absatz": null,
@@ -1582,7 +1591,8 @@
      "links": [
       {
        "label": "SR <b>814.680</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9581"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1998/2261_2261_2261",
+       "rs": "814.680"
       }
      ],
      "absatz": "3",
@@ -1865,7 +1875,8 @@
      "links": [
       {
        "label": "SR <b>814.318.142.1</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9521"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1986/208_208_208",
+       "rs": "814.318.142.1"
       }
      ],
      "absatz": null,

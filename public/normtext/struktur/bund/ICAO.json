@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "0.748.0",
   "titel": "Übereinkommen über die internationale Zivilluftfahrt",
@@ -450,11 +450,13 @@
      "links": [
       {
        "label": "SR <b>0.232.01</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1027"
+       "url": "https://fedlex.data.admin.ch/eli/cc/45/243_255_253",
+       "rs": "0.232.01"
       },
       {
        "label": "SR<b> 0.232.02</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1028"
+       "url": "https://fedlex.data.admin.ch/eli/cc/55/1237_1277_1265",
+       "rs": "0.232.02"
       }
      ],
      "absatz": null,
@@ -1142,7 +1144,8 @@
      "links": [
       {
        "label": "SR <b>0.748.111.2</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3116"
+       "url": "https://fedlex.data.admin.ch/eli/cc/63/1408_1408_1412",
+       "rs": "0.748.111.2"
       }
      ],
      "absatz": null,
@@ -1426,7 +1429,8 @@
      "links": [
       {
        "label": "SR <b>0.193.501</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/809"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1948/1048_1037_1010",
+       "rs": "0.193.501"
       }
      ],
      "absatz": null,
@@ -1456,7 +1460,8 @@
      "links": [
       {
        "label": "SR <b>0.193.501</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/809"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1948/1048_1037_1010",
+       "rs": "0.193.501"
       }
      ],
      "absatz": null,
@@ -1667,7 +1672,8 @@
      "links": [
       {
        "label": "SR <b>0.120</b>",
-       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2003/160",
+       "rs": "0.120"
       }
      ],
      "absatz": null,

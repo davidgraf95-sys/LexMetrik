@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-16",
+ "erzeugt": "2026-07-19",
  "kopf": {
   "srNummer": "0.109",
   "titel": "Übereinkommen über die Rechte von Menschen mit Behinderungen",
@@ -33,7 +33,8 @@
     "links": [
      {
       "label": "SR <b>0.120</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160",
+      "rs": "0.120"
      }
     ],
     "absatz": null,
@@ -45,7 +46,8 @@
     "links": [
      {
       "label": "SR <b>0.103.1</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/19"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1993/725_725_725",
+      "rs": "0.103.1"
      }
     ],
     "absatz": null,
@@ -57,7 +59,8 @@
     "links": [
      {
       "label": "SR <b>0.103.2</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/20"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1993/750_750_750",
+      "rs": "0.103.2"
      }
     ],
     "absatz": null,
@@ -69,7 +72,8 @@
     "links": [
      {
       "label": "SR <b>0.104</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/24"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1995/1164_1164_1164",
+      "rs": "0.104"
      }
     ],
     "absatz": null,
@@ -81,7 +85,8 @@
     "links": [
      {
       "label": "SR <b>0.108</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/34"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/239",
+      "rs": "0.108"
      }
     ],
     "absatz": null,
@@ -93,7 +98,8 @@
     "links": [
      {
       "label": "SR <b>0.105</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/25"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1987/1307_1307_1307",
+      "rs": "0.105"
      }
     ],
     "absatz": null,
@@ -105,7 +111,8 @@
     "links": [
      {
       "label": "SR <b>0.107</b>",
-      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/28"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1998/2055_2055_2055",
+      "rs": "0.107"
      }
     ],
     "absatz": null,
