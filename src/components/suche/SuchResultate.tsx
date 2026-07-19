@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import type { SuchGruppe, SuchTreffer } from '../../lib/universalSuche';
 import type { Abdeckung } from './useUniversalSuche';
 import { suchOptionId } from './suchOptionId';
+import { MEHR_TREFFER_ID } from './trefferAuswahl';
 import { StatusBadge } from '../verzahnung/StatusBadge';
 
 // ─── Trefferpanel der Universal-Suche (geteilt: Header-Dropdown + Hero, §5) ──
@@ -124,7 +125,10 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q, sektio
         <span className="lc-overline">{g.titel}</span>
         {/* Zähler je Gruppe (A6) — ausser beim einzeiligen Norm-Sprung («1» wäre Lärm). */}
         {!g.laedt && g.id !== 'sprung' && <span className="num text-xs text-ink-500">{g.gesamt}</span>}
-        {g.mehrHref && (
+        {/* Listbox-Modus: KEIN <a> im Gruppenkopf — ein Link ist als Listbox-Kind
+            ein axe-critical aria-required-children-Verstoss. Der «alle N»-Sprung
+            wird dort als echte role=option am Gruppenende gerendert (unten). */}
+        {g.mehrHref && !listboxId && (
           <Link to={g.mehrHref} onClick={onAuswahl} className="ml-auto text-body-s text-brass-700 no-underline hover:text-brass-600">
             alle {g.gesamt} →
           </Link>
@@ -150,6 +154,19 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q, sektio
               return <Zeile key={`${g.id}:${t.id}`} t={t} onAuswahl={onAuswahl} onNavigate={onNavigate}
                 optionId={oid} aktiv={!!oid && oid === aktivId} alsOption={!!listboxId} sprung={g.id === 'sprung'} q={q} />;
             })}
+            {/* «alle N Treffer»-Sprung als ARIA-Option (statt Kopf-Link, s. oben);
+                in flacheTreffer() enthalten → per Pfeiltasten + Enter erreichbar. */}
+            {listboxId && g.mehrHref && (() => {
+              const oid = suchOptionId(listboxId, g.id, MEHR_TREFFER_ID);
+              return (
+                <li role="option" id={oid} aria-selected={oid === aktivId}
+                  onClick={() => { onAuswahl?.(); onNavigate?.(g.mehrHref!); }}
+                  className={`${ZEILE_CLS} cursor-pointer${oid === aktivId ? ' bg-brass-100/40' : ''}`}>
+                  <span className="min-w-0 flex-1 text-body-s font-medium text-brass-700">alle {g.gesamt} Treffer anzeigen</span>
+                  <span aria-hidden className="text-ink-300 transition-all group-hover/z:translate-x-0.5 group-hover/z:text-brass-500">→</span>
+                </li>
+              );
+            })()}
           </ul>}
     </div>
   );

@@ -8,7 +8,9 @@
 import type { Rechtsgebiet } from '../normtext/register';
 
 export type EntscheidSprache = 'de' | 'fr' | 'it' | 'rm';
-export type Entscheidquelle = 'opencaselaw' | 'entscheidsuche';
+// 'gerichte-bs' = amtliches Rechtsprechungs-Portal der Gerichte Basel-Stadt
+// (rechtsprechung.gerichte.bs.ch, Findinfo/Omnis-CGI — BS-Tranche, Bauplan §3.3).
+export type Entscheidquelle = 'opencaselaw' | 'entscheidsuche' | 'gerichte-bs';
 
 /** Zwei orthogonale Status-Achsen (Fahrplan Strang-0). */
 export type Bestandstatus = 'snapshot' | 'nur-live-link';     // technisch: gespiegelt vs. nur Verweis
@@ -121,6 +123,18 @@ export interface EntscheidSnapshot {
    */
   ecli?: string | null;
   datum: string;            // OCL decision_date ('YYYY-MM-DD')
+  /**
+   * true ⇒ die amtliche Quelle publiziert KEIN Entscheiddatum; `datum` trägt dann
+   * einen deterministischen Platzhalter (<GN-Jahr>-01-01, Muster BGE-Bandjahr).
+   * Die UI zeigt den Platzhalter nie als echtes Datum (§8). BS-Tranche §3.3/§3.4.
+   */
+  datumUnbekannt?: true;
+  /** Erstpublikationsdatum der amtlichen Quelle (ISO), falls publiziert (BS §3.3). */
+  erstpublikation?: string;
+  /** Aktualisierungsdatum der amtlichen Quelle (ISO) — Drift-/Delta-Token (BS §3.3). */
+  aktualisiert?: string;
+  /** Parallele Zweit-Geschäftsnummer (z.B. AK.2025.27 «(AG.2025.604)», BS §3.3). */
+  nummerSekundaer?: string;
   sprache: EntscheidSprache;
   leitcharakter: Leitcharakter;
   /** Kuratierte Sach-Achse (deklariert, nie geraten — Verzahnung mit den Gesetzen). */

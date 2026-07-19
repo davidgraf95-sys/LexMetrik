@@ -154,6 +154,7 @@ zugeordnet (grob bei Mantelvorlagen, §8); fachliche Abnahme David offen.
 | Dokument | Inhalt |
 |---|---|
 | [quellen-register.md](register/quellen-register.md) | Verifizierte Fedlex-Quellen (ELI, Konsolidierung, geprüfte Anker, Filestore-Muster) |
+| [BS-RECHTSPRECHUNG-QUELLE-2026-07.md](register/BS-RECHTSPRECHUNG-QUELLE-2026-07.md) | **W2·6-BS** Amtliches BS-Rechtsprechungs-Portal (Findinfo/Omnis): URL-Templates + Fallen (GET-only, Template-Pflicht, Paging-Wrap, Windows-1252), Scope 2022+ (3'765 Dok., 42 datumlos), Count-Anker je Jahr, Delta-/Takedown-Regeln, Zahlenreport Vollimport 19.7.2026 |
 | [p3-drop-klassen-inventar-2026-07-05.md](register/p3-drop-klassen-inventar-2026-07-05.md) | **W2·5b P3** Korpusweite `<p>`-Klassen-Drop-Inventur (218 Bund-Erlasse): welche `<p class>` der Extraktor still verwarf. Verdikt je Klasse (extrahieren: `man-template-tab-krpr`/OR 361-362 + bare `referenz`→grundlage; bewusst ignorieren: inkrafttreten/utit-Titel; deferiert: absatz-pt-Varianten/ParlG-Eid). Tor `check:p-klassen` friert das Vokabular ein |
 | [poc-linkedom-tiefenzaehler-2026-07-05.md](register/poc-linkedom-tiefenzaehler-2026-07-05.md) | **W2·5b** linkedom-POC gegen die Regex-Tiefenzähler `findeDlEnde`/`findeDdEnde` (44 740 `<dl>`/`<dd>`-Grenzen, 0 Abweichungen) → Verdikt: Regex DOM-äquivalent, KEINE Migration (§7-Messung) |
 | [e6a-quell-inventar-2026-07-03.md](register/e6a-quell-inventar-2026-07-03.md) | E6a-Quell-Inventar Verwaltungsverordnungen (9 Behörden, Probe-Fetches, Ranking: ESTV-MWST-HTML > ESTV-KS-PDF > BSV; VPB tot, Fallen dokumentiert) |

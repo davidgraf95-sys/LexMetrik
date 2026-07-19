@@ -73,6 +73,9 @@ export function istRisikoPfad(p: string): boolean {
   // QS-DATA (FAHRPLAN-DATENHALTUNG §4/§5 E1): Datenhaltungs-Schicht = Extraktion/Projektion
   // = Risiko-Pfad. Das Dump-Manifest bindet den DB-Zustand mit (Drift-Anker).
   if (p.startsWith('scripts/datenhaltung/')) return true;
+  // BS-Rechtsprechung (Bauplan §8.4): Crawl-/Parse-Pipeline des amtlichen
+  // BS-Portals = Extraktions-Risiko (check-*-Basenames via istPruefLogik ausgenommen).
+  if (p.startsWith('scripts/rechtsprechung/')) return true;
   if (p.startsWith('daten/')) return true;
   if (p === 'daten-manifest.json') return true;
   // rekursiv (nicht nur die 4 Top-Level-Index-JSONs) — Blocker Linse 2:
