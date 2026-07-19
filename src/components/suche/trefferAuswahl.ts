@@ -18,12 +18,33 @@
 //
 // Reine Auswahl-Arithmetik (§2/§3): keine Rechts-/Trefferlogik, nur Navigation.
 
+import type { SuchGruppe } from '../../lib/universalSuche';
+import { suchOptionId } from './suchOptionId';
+
 /** Ein flacher Treffer in Anzeigereihenfolge: stabile Options-ID + Ziel-Link. */
 export interface FlacherTreffer {
   /** Stabile, zwischen Feld und Panel geteilte Options-ID (suchOptionId). */
   oid: string;
   /** Deep-Link des Treffers. */
   href: string;
+}
+
+/** Treffer-Teil-ID der «alle N Treffer»-Option einer Gruppe (mehrHref). Doppelter
+ *  Unterstrich = reserviert, kollidiert mit keiner echten Treffer-ID. */
+export const MEHR_TREFFER_ID = '__mehr';
+
+/**
+ * Flache Options-Liste in Anzeigereihenfolge — EINE Quelle (§5) für Header-Suche
+ * UND Hero. Enthält je Gruppe hinter den Treffern auch die «alle N Treffer»-
+ * Option (mehrHref): der frühere Header-`<a>` war als Kind der role=listbox ein
+ * axe-critical `aria-required-children`-Verstoss (a11y-Befund 19.7.2026) — als
+ * echte role=option ist der Sprung ARIA-konform UND per Pfeiltasten erreichbar.
+ */
+export function flacheTreffer(gruppen: SuchGruppe[], listboxId: string): FlacherTreffer[] {
+  return gruppen.flatMap((g) => [
+    ...g.treffer.map((t) => ({ oid: suchOptionId(listboxId, g.id, t.id), href: t.href })),
+    ...(g.mehrHref ? [{ oid: suchOptionId(listboxId, g.id, MEHR_TREFFER_ID), href: g.mehrHref }] : []),
+  ]);
 }
 
 /** Position des per Key gewählten Treffers in der AKTUELLEN (evtl. gewachsenen)

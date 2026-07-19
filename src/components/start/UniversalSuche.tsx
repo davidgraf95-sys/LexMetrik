@@ -2,8 +2,7 @@ import { useEffect, useId, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useUniversalSuche } from '../suche/useUniversalSuche';
 import { SuchResultate } from '../suche/SuchResultate';
-import { suchOptionId } from '../suche/suchOptionId';
-import { aktivePosition, naechsterKey, vorigerKey, gewaehlterHref } from '../suche/trefferAuswahl';
+import { aktivePosition, flacheTreffer, naechsterKey, vorigerKey, gewaehlterHref } from '../suche/trefferAuswahl';
 
 // ─── Universal-Suche (Held der Startseite) ──────────────────────────────────
 //
@@ -81,7 +80,9 @@ export function UniversalSuche() {
   // entkoppelte Artikelgruppe (§15.3/#183) einen Tick später ein und verschiebt
   // die Positionen, folgt die Auswahl dem SEMANTISCH gleichen Treffer, statt auf
   // einen fremden umzuspringen (Race-Fix #210, Logik in trefferAuswahl.ts).
-  const flach = gruppen.flatMap((g) => g.treffer.map((t) => ({ oid: suchOptionId(listboxId, g.id, t.id), href: t.href })));
+  // flacheTreffer (SSoT, §5) enthält am Gruppenende auch die «alle N Treffer»-
+  // Option (mehrHref) — so ist der Sprung auch per Tastatur erreichbar (a11y).
+  const flach = flacheTreffer(gruppen, listboxId);
   const [aktivKey, setAktivKey] = useState<string | null>(null);
   // Bei jeder neuen Query die Hervorhebung zurücksetzen (Render-Phasen-Abgleich
   // statt setState-im-Effekt).
