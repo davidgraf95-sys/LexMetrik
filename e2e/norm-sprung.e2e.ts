@@ -169,6 +169,18 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     // Auf dem langsamen CI-Runner grosszügig binden, damit der Warmlauf nicht auf
     // eine noch nicht hydrierte Leiste tippt (sonst Klick-/fill-Timeout).
     await expect(feld).toBeVisible({ timeout: 20000 })
+    // ZUSÄTZLICHE Ready-Latte auf den ROUTEN-Inhalt (20.7.2026). Die Kopf-Suchleiste
+    // gehört zur App-SHELL und steht bereits, während die Route selbst noch am
+    // Suspense-Fallback hängt. Beginnt die Messung in diesem Fenster, fällt der
+    // Fallback-Wechsel (`App.tsx` min-h-screen → echte Routenhöhe) in das Budget —
+    // ein Lade-Shift, den dieser INTERAKTIONS-Test laut Kontrakt nicht misst.
+    // Empirisch: wartet der Warmlauf zusätzlich auf den Routen-Inhalt, misst der
+    // Test CLS 0 bei 10×, 20× und 30× Drossel; ohne diese Latte riss er ab 8×
+    // reproduzierbar (5 von 8 Läufen, bitgleiche Werte). Reine Ready-Bedingung —
+    // Budget und Prüfschritte unverändert (§6.3).
+    await expect(
+      page.getByRole('main').getByRole('button', { name: /Direkt zum Artikel springen/ }),
+    ).toBeVisible({ timeout: 20000 })
     await feld.click()
     const box = listbox(page)
     // WARMLAUF (ungedrosselt): der erste Tastendruck stösst das einmalige Lazy-

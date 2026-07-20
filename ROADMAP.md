@@ -255,23 +255,31 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     Artikelsuche blockierte den Sprung-Aufbau (`useUniversalSuche` `useDeferredValue` entkoppelt).
     Golden byte-gleich (nur React-Reader/Such-Hook); 10× lokal grün unter 6× Drossel. Detail:
     STRUKTUR-Karte 10.7.
-  - [x] **TBT-Deckel je Job normieren statt absolut prüfen** *(erledigt 20.7.2026, PR fix/ci-falschrot)*.
-    Umgesetzt als Kalibrier-Referenz im selben Job: eine synthetische, deterministische CPU-Last
-    (`dist/_perf-kalibrier.html`, zur Laufzeit geschrieben) wird über dieselbe Lighthouse-Kette
-    gemessen; `TBT normiert = TBT roh / (TBT kalibriert / BASIS)`. **Wirkungsnachweis** über eine
-    frische 8er-Matrix-Messreihe (8 unabhängige Runner, Lauf 29765490018): OR-TBT-Streuung
-    **CV 31.2 % → 16.5 %**, Korrelation zur Runner-Geschwindigkeit **r +0.83 → −0.21**. Deckel neu
-    **OR normiert 5900 ms** (~0.8 % Rauschen-Rot, 39 % über dem Ist) statt roh 6500 (3.8 %, 55 %);
-    **Startseite normiert 300 ms** statt roh 1500 (651 % → 48 % Kopffreiheit). Der Roh-Deckel bleibt
-    als weites Sicherheitsnetz (OR 9000), falls die Kalibrierung selbst ausfällt. Damit trägt TBT
-    wieder Prüfschärfe — der Übergangszustand «CLS trägt die Regressions-Last allein» ist beendet.
-    Restgrenze (§8): die verbleibenden 16.5 % sind Within-Job-Rauschen BEIDER Messungen; weiter
-    senkbar nur über mehr Läufe je Job, was Wanduhr kostet.
-  - [x] **Chrome-Isolation je Lighthouse-Lauf + Neukalibrierung** *(erledigt 20.7.2026, PR fix/ci-falschrot)*.
+  - [~] **TBT-Deckel je Job normieren statt absolut prüfen** *(gebaut, gemessen, VERWORFEN 20.7.2026)*.
+    Umgesetzt und empirisch geprüft: eine synthetische, deterministische CPU-Last
+    (`dist/_perf-kalibrier.html`) wird über dieselbe Lighthouse-Kette gemessen und als Divisor
+    genutzt. **Ergebnis: funktioniert nicht zuverlässig.** Zwei Reihen zu je 8 unabhängigen Runnern
+    (identischer App-Code) widersprechen sich: Reihe 1 senkt die OR-TBT-Streuung von CV 31.2 % auf
+    16.5 % und räumt die Runner-Korrelation ab (r +0.83 → −0.21); Reihe 2 kehrt das Vorzeichen um
+    (roh r −0.43) und das Normieren VERSCHLECHTERT auf CV 29.9 %. Gepoolt (n=16) bleibt eine
+    Scheinverbesserung 26.8 % → 23.3 %. Auch eine abgeschwächte Korrektur `roh·(BASIS/kalib)^α`
+    rettet es nicht: das gepoolt beste α=0.70 wirkt in den beiden Reihen in ENTGEGENGESETZTE
+    Richtungen. Die Regressions-Steigung log(TBT)~log(kalib) ist 0.65 statt 1 — die unterstellte
+    Proportionalität besteht nicht (eine Integer-Schleife misst die Kernfrequenz, die OR-TBT hängt
+    daneben an Speicherbandbreite/Cache/Nachbarlast). **Assertiert wird darum weiter der Rohwert.**
+    Die Kalibrierung bleibt als Diagnose-Ausgabe stehen (~15 s je Job) — Rohmaterial für einen
+    späteren, besseren Normierer und im Log sofort sichtbar, ob ein Job langsam lief.
+    **Damit ist «TBT auf OR wieder scharf» NICHT erreicht** und bleibt offen (§8, kein
+    stillschweigend abgehaktes Ziel).
+  - [x] **Chrome-Isolation je Lighthouse-Lauf + Neukalibrierung** *(erledigt 20.7.2026)*.
     `einLauf()` startet je Messung eine frische Chrome-Instanz und killt sie danach (~1–2 s/Lauf,
-    in CI ~9 Läufe ⇒ ~15 s). Damit ist die kumulative Instanz-Drift weg und jeder Lauf eine
-    definierte Kalt-Last. Die Schwellen wurden im SELBEN Schritt neu erhoben (Messreihe oben),
-    die 27-Lauf-Historie des alten Regimes bewusst NICHT übernommen.
+    ~15 s je CI-Job). Die kumulative Instanz-Drift ist weg (belegt: Startseite sprang zuvor von
+    143–237 auf 1543 ms TBT ohne App-Code-Änderung), jeder Lauf ist definierte Kalt-Last.
+    Schwellen im SELBEN Schritt neu erhoben über **16 Messpunkte auf 16 unabhängigen Runnern**;
+    die Historie des alten Regimes wurde verworfen, nicht übernommen. **Verschärft** (echte
+    Schärfe, runner-unabhängige Metriken): Start-TBT 1500 → **400** (Deckel lag 571 % über dem Ist),
+    Start-LCP 11000 → **10000** (sd nur 37 ms über alle 16 Runner!), OR-TTI 15000 → **13000**,
+    Start-Score 40 → **55**. **Unverändert** OR-TBT 6500 (siehe Schritt oben) und CLS 0.05.
   - [ ] **OR-LCP ist bimodal — Ursache offen** *(neuer Befund 20.7.2026)*. In der 8er-Messreihe misst
     `/gesetze/bund/OR` LCP entweder **~3.5 s** (4×) oder **~11.3–11.6 s** (4×), nichts dazwischen,
     **unabhängig von der Runner-Geschwindigkeit** (die Kalibrier-Referenz korreliert nicht mit dem

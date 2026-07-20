@@ -73,41 +73,50 @@ const MESSEN_NUR = process.argv.includes('--messen'); // nur messen + drucken, k
 // mittelt echte Instanz-Streuung statt kumulativer Drift.
 const RUNS = zahlAusUmgebung('PERF_RUNS', process.env.CI ? 3 : 1);
 
-// ── TBT-Normierung je Job (NEU 20.7.2026, Baustelle A2) ─────────────────────
+// ── TBT-Normierung je Job: GEBAUT, GEMESSEN, VERWORFEN (20.7.2026, A2) ──────
 //
-// Problem (belegt 19./20.7.2026 über 27 CI-Läufe): die TBT-Streuung sitzt
-// **zwischen** den Jobs (2262…5612 ms, Faktor 2.5), nicht innerhalb (±9 %).
-// Der GitHub-Runner-Pool ist heterogen; welche Maschine ein Job zugeteilt
-// bekommt, entscheidet über den Messwert. Ein ABSOLUTER Deckel kann daher nicht
-// zwischen «Software langsamer geworden» und «langsamer Runner erwischt»
-// unterscheiden — er misst zu einem guten Teil die Runner-Zuteilung.
+// Die Idee: die TBT-Streuung sitzt ZWISCHEN den Jobs (heterogener Runner-Pool),
+// nicht innerhalb. Ein absoluter Deckel kann daher nicht zwischen «Software
+// langsamer» und «langsamen Runner erwischt» unterscheiden. Gegenmittel wäre
+// eine Referenzmessung mit demselben Instrument im selben Job: eine synthetische,
+// deterministische CPU-Last (`dist/_perf-kalibrier.html`, kein App-Code, kein
+// Netz), über dieselbe Lighthouse-Kette gemessen, als Divisor —
 //
-// Mechanismus: **eine Referenzmessung mit demselben Instrument im selben Job.**
-// Das Script schreibt eine synthetische Kalibrier-Seite nach `dist/` (fixe,
-// deterministische CPU-Last in gleich grossen Blöcken, kein Netz, kein App-Code)
-// und misst deren TBT über exakt dieselbe Lighthouse-Kette (gleiche 4×-Drossel,
-// gleiche Chrome-Isolation). Dieser Wert hängt NUR an der Runner-Geschwindigkeit,
-// nie am Anwendungscode. Daraus:
+//   faktor = tbtKalibrier / KALIBRIER_BASIS ;  TBT normiert = TBT roh / faktor
 //
-//   faktor       = tbtKalibrier / KALIBRIER_BASIS
-//   TBT normiert = TBT roh / faktor
+// ERGEBNIS DER MESSUNG: **funktioniert nicht zuverlässig — darum wird auf dem
+// normierten Wert NICHT assertiert.** Zwei Messreihen zu je 8 unabhängigen
+// Runnern (Läufe 29765490018 und 29766507765, identischer App-Code):
 //
-// Ein langsamer Runner hebt Zähler und Nenner gemeinsam → normiert bleibt der
-// Wert gleich. Eine echte Code-Regression hebt NUR den Zähler → normiert steigt
-// sie durch. Genau die Diskriminierung, die dem Absolut-Deckel fehlt.
+//                        OR-TBT roh        OR-TBT normiert    Korrelation kalib↔TBT
+//   Reihe 1 (n=8)        CV 31.2 %         CV 16.5 %          roh +0.83 → norm −0.21
+//   Reihe 2 (n=8)        CV 22.7 %         CV 29.9 %          roh −0.43 → norm −0.80
+//   gepoolt (n=16)       CV 26.8 %         CV 23.3 %          roh +0.49 → norm −0.39
 //
-// Zwei Deckel statt einem (bewusst, §8):
-//   • `tbtNormMax` — der SCHARFE, diskriminierende Deckel auf dem normierten Wert.
-//   • `tbtMax`     — ein WEITER absoluter Sicherheitsnetz-Deckel auf dem Rohwert.
-//     Er bleibt, damit eine katastrophale Absolut-Regression auch dann anschlägt,
-//     wenn die Kalibrierung selbst danebenliegt (Instrument-Ausfall, Plausibilität
-//     unten). Er ist NICHT der Regressions-Fänger — das ist `tbtNormMax`.
+// Reihe 1 sah nach einem klaren Erfolg aus (Streuung fast halbiert, Runner-
+// Korrelation weg). Reihe 2 kehrt das Vorzeichen um: dort korreliert die
+// Kalibrierung NEGATIV mit der OR-TBT, und das Normieren VERSCHLECHTERT die
+// Streuung. Gepoolt bleibt eine Scheinverbesserung von 26.8 % auf 23.3 %.
 //
-// Plausibilitäts-Sicherung: liegt die Kalibrier-TBT ausserhalb des als plausibel
-// gemessenen Bandes (KALIBRIER_MIN…KALIBRIER_MAX), gilt die Kalibrierung als
-// GESCHEITERT — dann wird NICHT normiert, sondern ehrlich gemeldet und nur der
-// weite Rohdeckel assertiert (kein stilles Durchwinken, kein stilles Rot).
-// Abschaltbar über PERF_NORMIEREN=0 (Diagnose/Vergleichsmessung).
+// Auch eine abgeschwächte Korrektur rettet es nicht. Mit `norm = roh ·
+// (BASIS/kalib)^α` liegt das gepoolt beste α bei 0.70 (CV 22.5 %) — aber die
+// Wirkung zeigt in den beiden Reihen in ENTGEGENGESETZTE Richtungen
+// (Reihe 1: 31.2 → 17.7 %, Reihe 2: 22.7 → 27.1 %). Eine Korrektur, deren
+// Vorzeichen von der Stichprobe abhängt, passt Rauschen an, sie entfernt es
+// nicht. Die Regressions-Steigung log(TBT)~log(kalib) beträgt 0.65, nicht 1 —
+// die unterstellte Proportionalität besteht schlicht nicht: eine reine
+// Integer-Schleife misst die Kernfrequenz, die OR-TBT hängt daneben an
+// Speicherbandbreite, Cache und Nachbar-Last auf dem geteilten Host.
+//
+// KONSEQUENZ (§8: lieber ein ehrliches Nein als eine hübsche Zahl):
+//   • Assertiert wird weiterhin der ROHWERT.
+//   • Die Kalibrierung BLEIBT als Diagnose-Ausgabe (~15 s je Job). Sie ist die
+//     Rohmaterial-Basis, falls jemand später einen besseren Normierer baut, und
+//     sie macht im Log sofort sichtbar, ob ein Job auf einer langsamen Instanz lief.
+//   • Das Ziel «TBT wieder scharf stellen» ist damit auf OR NICHT erreicht.
+//     Erreicht wurde es auf den Metriken, die runner-unabhängig sind (Start-TBT,
+//     Start-LCP, OR-TTI, Start-Score — siehe SCHWELLEN unten).
+// Abschaltbar über PERF_NORMIEREN=0.
 const NORMIEREN = process.env.PERF_NORMIEREN !== '0';
 // Blockzahl × Iterationen je Block der Kalibrier-Last. Bewusst in ~8 mittellange
 // Tasks zerlegt (statt eines Riesen-Tasks): so ähnelt das Lastprofil einer echten
@@ -137,93 +146,68 @@ const KALIBRIER_MAX = 20_000;
 type Schwelle = {
   clsMax: number;     // Cumulative Layout Shift (geräteunabhängig — der harte Regressions-Fänger)
   lcpMax: number;     // Largest Contentful Paint (ms) — CPU-abhängig, grosszügiger Deckel
-  tbtMax: number;     // Total Blocking Time (ms) — WEITES absolutes Sicherheitsnetz (siehe NORMIEREN)
-  tbtNormMax: number; // Total Blocking Time (ms), job-normiert — der SCHARFE Regressions-Fänger
+  tbtMax: number;     // Total Blocking Time (ms)
   ttiMax: number;     // Time To Interactive (ms)
   scoreMin: number;   // Performance-Score 0..100
 };
 
-// ── Schwellen-Kalibrierung (NEU 20.7.2026 — Messregime + Deckel gemeinsam) ──
+// ── Schwellen-Kalibrierung (NEU 20.7.2026, neues Messregime) ────────────────
 //
 // Binding ist der **CI-Runner** (dort läuft das Tor), nicht die lokale Maschine.
 //
-// WARUM NEU ERHOBEN: Die Kalibrierung vom Vormittag des 20.7. stammt aus dem
-// ALTEN Messregime (eine geteilte, driftende Chrome-Instanz, Läufe mal warm mal
-// kalt). Chrome-Isolation (A1) und Job-Normierung (A2) ändern das Regime — die
-// alten 27 Läufe sind als Bezug damit entwertet und werden NICHT übernommen.
-// Grundlage ist stattdessen eine frische Messreihe im neuen Regime:
-// `.github/workflows/perf-kalibrierung.yml`, 8er-Matrix = **8 unabhängige
-// Runner-Zuteilungen**, je Median aus 3 Läufen (Lauf 29765490018).
+// WARUM NEU ERHOBEN: Die Chrome-Isolation (A1) ändert das Messregime — jeder Lauf
+// ist jetzt Kalt-Last statt einer Mischung aus warm und kalt. Die 27-Lauf-Historie
+// des alten Regimes ist als Bezug damit entwertet und wurde NICHT übernommen.
+// Grundlage sind **16 Messpunkte auf 16 unabhängigen Runner-Zuteilungen**
+// (`.github/workflows/perf-kalibrierung.yml`, zwei 8er-Matrizen, je Median aus 3;
+// Läufe 29765490018 + 29766507765, identischer App-Code).
 //
-// ── Messreihe (8 Runner, neues Regime) ──────────────────────────────────────
+//   Metrik            min      Mittel     max       sd     Deckel   Rausch-Rot
+//   OR TBT          2551      4489      5940     1204     6500        ~4.7 %
+//   OR CLS         0.0056    0.0074    0.0093   0.0013    0.05        ~0
+//   OR LCP          3508      7484     11613     4098    13500      s. u.
+//   OR TTI          9368     10701     11613      864    13000        ~0.4 %
+//   OR Score          37        46        53        7       25        ~0
+//   Start TBT         98       224       292       57      400        ~0.1 %
+//   Start LCP       9141      9225      9275       37    10000        ~0
+//   Start Score       65        67        70        2       55        ~0
+//   (Rausch-Rot = einseitige Normal-Approximation; beobachtet 0/16 bei ALLEN Deckeln.)
 //
-//   Kalibrier-Referenz   min  720 · Mittel 1118 · max 1476 ms   (Spanne ×2.05)
-//     → der Runner-Pool streut faktisch um Faktor 2, wie vermutet.
+// WAS VERSCHÄRFT WURDE — und was nicht (§8):
+//   • **Start TBT 1500 → 400.** Der alte Deckel lag 571 % über dem Ist und fing
+//     faktisch nichts; 400 liegt 79 % darüber bei ~0.1 % Rausch-Rot. Echte Schärfe.
+//   • **Start LCP 11000 → 10000.** Diese Metrik ist erstaunlich stabil: 9141…9275 ms,
+//     sd 37 ms über alle 16 Runner (netzgebunden, runner-unabhängig). 10000 liegt
+//     8 % über dem Maximum — das sind ~21 sd.
+//   • **OR TTI 15000 → 13000** (12 % über dem Maximum) und **Start Score 40 → 55**
+//     (min beobachtet 65). Beides echte Verschärfung ohne Flake-Risiko.
+//   • **OR TBT bleibt 6500** — hier ist die Verschärfung NICHT gelungen. Der Wert
+//     streut über die Runner mit CV 26.8 %; der Versuch, das per Job-Normierung
+//     herauszurechnen, ist gemessen gescheitert (Block oben). 6500 liegt 45 % über
+//     dem Ist bei ~4.7 % Rausch-Rot und 0/16 beobachteten Überschreitungen. Enger
+//     zu ziehen hiesse, Rauschen-Rot zu kaufen; loser zu ziehen hiesse, Schärfe zu
+//     verschenken. Das ist der ehrliche Stand, kein Zwischenziel, das schon erreicht wäre.
+//   • **OR CLS bleibt 0.05** (5× über dem Ist). CLS ist weiterhin der schärfste
+//     geräteunabhängige Fänger — aber nicht mehr der einzige.
 //
-//   OR-TBT roh           min 2551 · Mittel 4185 · max 5465 ms · sd 1307 · CV 31.2 %
-//   OR-TBT normiert      min 3007 · Mittel 4231 · max 5437 ms · sd  698 · CV 16.5 %
-//
-//   Start-TBT roh        min   98 · Mittel  200 · max  266 ms · sd   60 · CV 30.1 %
-//   Start-TBT normiert   min  152 · Mittel  202 · max  286 ms · sd   41 · CV 20.2 %
-//
-// WIRKT DIE NORMIERUNG? Ja, und zwar belegt an zwei unabhängigen Kennzahlen:
-//   (1) Relative Streuung OR-TBT **31.2 % → 16.5 %** (fast halbiert).
-//   (2) Korrelation zur Runner-Geschwindigkeit **r = +0.83 → −0.21**: der
-//       Zusammenhang «langsamer Runner ⇒ hoher Messwert», der den Absolut-Deckel
-//       unbrauchbar machte, ist herausgerechnet.
-// Der Rest (CV 16.5 %) ist die Within-Job-Streuung BEIDER Messungen (je ~9 %,
-// quadratisch addiert ~13 %) — mehr Läufe je Job könnten ihn weiter senken,
-// kosten aber Wanduhr; bewusst nicht getan (§8: Grenze offengelegt, nicht
-// weggeredet).
-//
-// ── Deckel-Wahl (Rot-durch-Rauschen einseitig normal-approximiert) ──────────
-//
-//   OR   normiert 5900 ms → z 2.39 → **~0.8 %** Rauschen-Rot · 39 % über dem Ist
-//   Start normiert  300 ms → z 2.39 → **~0.9 %** Rauschen-Rot · 48 % über dem Ist
-//
-// Zum Vergleich derselbe Datensatz gegen die bisherigen ROH-Deckel:
-//   OR roh 4000 (vor #312) → z −0.14 → **56 %** Rauschen-Rot (das gemessene Elend)
-//   OR roh 6500 (seit #312) → z 1.77 → **3.8 %** Rauschen-Rot · 55 % über dem Ist
-//   Start roh 1500          → **651 %** über dem Ist — fing faktisch nichts.
-//
-// Der normierte Deckel ist damit auf BEIDEN Achsen besser als der Roh-Deckel:
-// seltener grundlos rot (0.8 % statt 3.8 %) UND näher am Ist (39 % statt 55 %).
-// Auf der Startseite ist der Gewinn drastisch: von 651 % auf 48 % Kopffreiheit —
-// dort war der alte Deckel reine Dekoration. Damit trägt TBT wieder Prüfschärfe;
-// CLS musste diese Rolle seit #312 allein tragen (Übergangszustand beendet).
-//
-// ── Die übrigen Metriken (roh, mit demselben Datensatz nachgezogen) ─────────
-//   • OR CLS max 0.0093 ⇒ Deckel 0.05 bleibt (≈5× Luft, flake-sicher).
-//   • OR LCP ist **bimodal**: entweder ~3.5 s oder ~11.3–11.6 s, nichts dazwischen
-//     (4× / 4× in der Reihe), unabhängig von der Runner-Geschwindigkeit. Der hohe
-//     Modus ist in sich eng (11299…11601 ms). Deckel 13500 bleibt: ~16 % über dem
-//     beobachteten Maximum. Die Ursache der Bimodalität ist NICHT geklärt (der
-//     Verdacht «warm/kalt» ist mit der Chrome-Isolation ausgeschlossen) — als
-//     offener Befund in ROADMAP/QS-PERF notiert, statt sie stillschweigend
-//     wegzudeckeln (§8).
-//   • OR TTI max 11601 ⇒ 15000 → **13000** (z 2.53, ~0.6 % Rauschen-Rot).
-//   • Start LCP ist bemerkenswert stabil: 9141…9242 ms, sd 36 ms (CV 0.4 %) über
-//     alle acht Runner — netzgebunden, runner-unabhängig. 11000 → **10000**
-//     (≈8 % über dem Maximum, ~21 sd): ein echter, scharfer Deckel.
-//   • Start Score 66…70 ⇒ 40 → **55** (7.6 sd Luft). OR Score 38…53 ⇒ 25 bleibt
-//     (Score ist ein Komposit der ohnehin gedeckelten Metriken; ihn zusätzlich eng
-//     zu ziehen erkauft wenig Signal für zusätzliches Rauschen-Rot).
-//   • Roh-TBT-Sicherheitsnetze: OR 6500 → **9000** (65 % über dem beobachteten
-//     Maximum), Start bleibt 1500. Sie sind bewusst WEIT — scharf ist jetzt der
-//     normierte Deckel; das Netz greift nur, wenn die Kalibrierung selbst ausfällt.
-//
-// Erwartetes Rauschen-Rot des ganzen Tors: **~2 %** (Summe der Einzelrisiken),
-// gegen ~4 % allein aus TBT im bisherigen Zustand und ~26 % vor #312.
+// OFFEN, bewusst nicht weggedeckelt: **OR-LCP ist bimodal** — 8× ~3.5 s und 8×
+// ~11.3–11.6 s, nichts dazwischen, unabhängig von der Runner-Geschwindigkeit. Die
+// naheliegende Erklärung (warm/kalt geladen) ist durch die Chrome-Isolation
+// ausgeschlossen; vermutlich wählt Lighthouse je nach Timing ein anderes
+// LCP-Element. Die sd von 4098 ms ist deshalb ein Artefakt der Zwei-Gipfel-Form,
+// nicht echte Streuung: der hohe Modus ist in sich eng (11299…11613 ms, Spanne
+// 314 ms), und 13500 liegt 16 % darüber. Der Deckel bleibt, bis die Ursache
+// verstanden ist — als offener Schritt in ROADMAP/QS-PERF geführt.
 const SCHWELLEN: Record<string, { url: string; label: string; s: Schwelle }> = {
   or: {
     url: `${BASE}/gesetze/bund/OR`,
     label: '/gesetze/bund/OR (≈930 KB HTML)',
-    s: { clsMax: 0.05, lcpMax: 13500, tbtMax: 9000, tbtNormMax: 5900, ttiMax: 13000, scoreMin: 25 },
+    s: { clsMax: 0.05, lcpMax: 13500, tbtMax: 6500, ttiMax: 13000, scoreMin: 25 },
   },
   start: {
     url: `${BASE}/`,
     label: 'Startseite',
-    s: { clsMax: 0.05, lcpMax: 10000, tbtMax: 1500, tbtNormMax: 300, ttiMax: 12000, scoreMin: 55 },
+    s: { clsMax: 0.05, lcpMax: 10000, tbtMax: 400, ttiMax: 12000, scoreMin: 55 },
   },
 };
 
@@ -434,20 +418,16 @@ async function main(): Promise<void> {
         `    Score ${m.score} (≥ ${s.scoreMin})  ` +
         `CLS ${m.cls.toFixed(3)} (≤ ${s.clsMax})  ` +
         `LCP ${(m.lcp / 1000).toFixed(2)} s (≤ ${(s.lcpMax / 1000).toFixed(1)} s)  ` +
-        `TBT ${Math.round(m.tbt)} ms roh (≤ ${s.tbtMax} Sicherheitsnetz)` +
-        (tbtNorm !== undefined ? ` · ${Math.round(tbtNorm)} ms normiert (≤ ${s.tbtNormMax} scharf)  ` : '  ') +
+        `TBT ${Math.round(m.tbt)} ms (≤ ${s.tbtMax})` +
+        (tbtNorm !== undefined ? ` · ${Math.round(tbtNorm)} ms normiert [nur Diagnose]  ` : '  ') +
         `TTI ${(m.tti / 1000).toFixed(2)} s (≤ ${(s.ttiMax / 1000).toFixed(1)} s)`,
       );
       if (!MESSEN_NUR) {
         if (m.cls > s.clsMax) fehler.push(`${label}: CLS ${m.cls.toFixed(3)} > ${s.clsMax} (Layout-Sprung — §15/2, höchste Prio).`);
         if (m.lcp > s.lcpMax) fehler.push(`${label}: LCP ${(m.lcp / 1000).toFixed(2)} s > ${(s.lcpMax / 1000).toFixed(1)} s.`);
-        // TBT: der scharfe Deckel greift auf dem NORMIERTEN Wert (Runner-Last
-        // herausgerechnet), der weite Roh-Deckel bleibt als Sicherheitsnetz für
-        // den Fall, dass die Kalibrierung selbst danebenliegt.
-        if (tbtNorm !== undefined && tbtNorm > s.tbtNormMax) {
-          fehler.push(`${label}: TBT normiert ${Math.round(tbtNorm)} ms > ${s.tbtNormMax} ms (roh ${Math.round(m.tbt)} ms, Normier-Faktor ${faktor?.toFixed(3)}).`);
-        }
-        if (m.tbt > s.tbtMax) fehler.push(`${label}: TBT roh ${Math.round(m.tbt)} ms > ${s.tbtMax} ms (absolutes Sicherheitsnetz).`);
+        // TBT wird auf dem ROHWERT assertiert. Der normierte Wert wird nur
+        // mitgedruckt (Diagnose) — Begründung im NORMIEREN-Block oben.
+        if (m.tbt > s.tbtMax) fehler.push(`${label}: TBT ${Math.round(m.tbt)} ms > ${s.tbtMax} ms.`);
         if (m.tti > s.ttiMax) fehler.push(`${label}: TTI ${(m.tti / 1000).toFixed(2)} s > ${(s.ttiMax / 1000).toFixed(1)} s.`);
         if (m.score < s.scoreMin) fehler.push(`${label}: Score ${m.score} < ${s.scoreMin}.`);
       }

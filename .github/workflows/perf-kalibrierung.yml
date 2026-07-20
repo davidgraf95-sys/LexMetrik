@@ -20,11 +20,6 @@
 name: Perf-Kalibrierung (Messreihe, assertiert nicht)
 
 on:
-  # TEMPORÄR während der Kalibrier-Einheit: `workflow_dispatch` ist erst
-  # verfügbar, wenn die Datei auf dem Default-Branch liegt. Vor dem Merge wieder
-  # entfernt — danach trägt `workflow_dispatch` allein.
-  push:
-    branches: [fix/ci-falschrot]
   workflow_dispatch:
     inputs:
       runs:
