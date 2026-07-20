@@ -1,11 +1,14 @@
 {
-  "hash": "861c9802f94585fab823a2f31805ab4a825c4cfa7c9c6604642d21b8d04cef0c",
+  "hash": "62ae799028358f31a7aaf1ce1520ddec1ed3b8bbafb7ee30a50300857e4cb8b3",
   "verdikt": "bestanden",
-  "quellePin": "fedlex asylv2 20260714",
-  "datum": "2026-07-19",
+  "quellePin": "rechtsprechung.gerichte.bs.ch (Findinfo) Roh-Golden 20260719, live gegengeprueft 20260720; Bund-Rubra aus Bestands-Snapshots",
+  "datum": "2026-07-20",
   "dateien": [
     "daten-manifest.json",
-    "public/normtext/historie/ASYLV2.json",
-    "public/normtext/struktur/bund/ASYLV2.json"
+    "daten/bs-fiw/inventar.json",
+    "scripts/normtext/entscheide-schreiben.ts",
+    "scripts/rechtsprechung/bs-besetzung.ts",
+    "scripts/rechtsprechung/bs-parse.ts",
+    "src/lib/rechtsprechung/besetzung.ts"
   ]
 }

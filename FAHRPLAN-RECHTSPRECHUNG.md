@@ -552,3 +552,79 @@ Tore laufen automatisch (in `check` eingehängt) + e2e. Bug-Check-Agents auf das
 ---
 
 **Relevante Pfade (verifiziert 2026-06-23):** `scripts/normtext-snapshot.ts:140` (`sha256Bloecke` privat), `:693`/`:816-822` (Misch-Muster); `scripts/normtext/browse-manifest.ts:116`/`:128-150` (`vergleiche`/nur bund+kanton-Scan); `src/lib/bge.ts:42` (`rechtsprechungUrl` sync); `src/components/NormText.tsx:84` (sync, nur Bund-Normen); `src/lib/normtext/werkzeuge.ts:13/37` (keyt auf Register-key); `src/lib/fedlex.ts:182` (`erkenneFedlexGesetz` exportiert); `scripts/prerender.ts:37` (`ERWARTETE_ROUTEN=53`); `src/lib/seo.ts:104` (`prerenderRouten`); `package.json:15-16` (`check`/`check:netz`); `src/data/verifikation.ts` (bestehende Aktenzeichen-SSoT).
+
+---
+
+## 12. `R-RICHTER` — Richter-/Spruchkörper-Filter
+
+*Detailquelle zum ROADMAP-Schritt «Richter-/Spruchkörper-Filter — Fundament»
+(Welle 2 · Rechtsprechungs-Übersicht). Kein zweiter Einstieg — Einstieg ist die
+`ROADMAP.md` (§14 Ziff. 1).*
+
+**Auftrag (David 20.7.2026):** Die Rechtsprechung soll nach Richter:in filterbar
+sein. Praxiswert: wer vor einer bestimmten Kammer auftritt, will deren bisherige
+Entscheide sehen.
+
+### 12.1 Datenmodell
+
+| Ort | Feld | Rolle |
+|---|---|---|
+| Snapshot | `rubrum.besetzung: string \| null` | **SSoT**, amtlicher Freitext (unverändert, human-lesbar) |
+| Manifest | `BrowseEntscheid.richter?: {s,r}[]` | Projektion: Kanon-Slug + Rolle; Client filtert danach |
+| `public/rechtsprechung/richter.json` | `{[slug]: {name, count}}` | Slug → Anzeigename + Trefferzahl (lazy für Labels) |
+
+Kurzschlüssel `s`/`r`, weil das Manifest bereits ~7,5 MB wiegt (§15); der
+Anzeigename steht **einmal** je Slug, nicht bis zu 700× im Manifest.
+Rollen: `vorsitz` · `mitglied` · `gerichtsschreiber`.
+
+### 12.2 Anonymisierungs-Grenze (Invariante, verschärft §9.2)
+
+Richter:innen/Gerichtsschreiber:innen sind amtlich **namentlich** (Art. 5 URG-frei);
+Parteien/Gutachter sind **anonymisiert**. Vier Schichten: (1) nur der abgegrenzte
+Rubrum-Block wird gelesen, nie Fliesstext; (2) harte `____`-Bremse im Schnitt;
+(3) Guard je Segment im Parser; (4) Partei-/Vertreter-Marker verwerfen.
+**«Dr. med.» ist KEIN Ausschluss** — 472 Besetzungen tragen ihn als Fachrichter.
+Tor-Anforderung: Leak-Scan korpusweit **0**.
+
+### 12.3 Tore
+
+`check:besetzung` (in `check:seriell`, nach `check:bs-entscheide`):
+- **G1 Leak (hart)** — kein Slug/Anzeigename mit Anonymisierungs-Token.
+- **G2 Konsistenz (hart)** — jeder Manifest-Slug existiert im Register, Rollen gültig.
+- **G3 Determinismus (hart)** — Projektion aus den Snapshots reproduziert das
+  committete Manifest exakt; **plus Anti-Vakuum-Assertion** (das Tor muss ≥95 % der
+  Einträge tatsächlich verglichen haben, sonst ist der Nachweis wertlos → rot).
+- **G4 Abdeckung (Schwelle)** — BS ≥ 95 %, Bund ≥ 90 %; echte Zahlen, nichts fabriziert.
+- **Fidelity-Stichprobe** — extrahierte Nachnamen müssen im amtlichen Freitext stehen.
+- **Kollisions-Report** (WARN) — false-merge + false-split in beide Richtungen.
+
+### 12.4 Scope-Schnitt
+
+**Block A (Daten/Risiko, erledigt):** Schnitt, Parser/Kanon, Projektionen, Tor,
+Re-Parse ohne Re-Crawl, Dossier.
+**Block B (offen, reines UI):** `EntscheidFilterWerte.richter`, `filterEntscheide`-Zweig,
+`richterHaeufigkeit` (cross-gefiltert, R15), Combobox statt Chip-Band (~208 Namen),
+`?richter`-URL-Achse, e2e + axe + `check:perf-budget`.
+**Später:** Gerichtsschreiber:in als eigene Achse (Daten liegen bereits vor),
+Spruchkörper-Anzeige im Reader, Richter-Profilseite, weitere Kantone (erben das Muster).
+
+### 12.5 Übergabe-Kontrakt A → B
+
+```ts
+// src/lib/rechtsprechung/register.ts
+export type RichterRolle = 'vorsitz' | 'mitglied' | 'gerichtsschreiber';
+export interface RichterRef { s: string; r: RichterRolle }
+export interface BrowseEntscheid { /* … */ richter?: RichterRef[] }
+export interface RichterRegister { erzeugt: string; richter: Record<string, { name: string; count: number }> }
+```
+`count` zählt **nur** die Mitwirkung als Richter:in — ein Slug mit `count: 0` ist
+reine:r Gerichtsschreiber:in und gehört **nicht** in die Richter-Facette (§8).
+Entscheide ohne erfassbare Besetzung tragen **kein** `richter`-Feld (nie ein leeres
+Array) — sie sind unter «Besetzung unbekannt» ehrlich auszuweisen, nicht als Treffer.
+
+### 12.6 Belegte Bauplan-Korrekturen
+
+Vier Annahmen des ursprünglichen Bauplans waren am Korpus widerlegt (Hidden-Spans
+kleben statt zu zerreissen · Initial-Slug verschmilzt Patrizia/Patrick Schmid ·
+Absatzgrenze ist ein Trenner · sie ist es aber **nicht immer**). Messungen,
+Gegenproben und Zahlen: `bibliothek/rechtsprechung/besetzung-extraktion-2026-07-20.md`.

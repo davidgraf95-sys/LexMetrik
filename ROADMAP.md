@@ -942,6 +942,23 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       neues Offline-Tor **`check:bs-entscheide`** in der Gate-Kette, `BUDGET_MB` 200→1024 (David
       19.7.2026). Detail: `FAHRPLAN-KANTONALE-ENTSCHEIDE.md` §7a + Dossier
       `bibliothek/register/BS-RECHTSPRECHUNG-QUELLE-2026-07.md`. Trailer `Roadmap: W2·6-BS`.
+    - [~] **Richter-/Spruchkörper-Filter — Fundament** *(`R-RICHTER`, Direktauftrag David 20.7.2026;
+      gebündelt mit der BS-Tranche darüber: dieselbe Pipeline, dasselbe Datenasset — kein
+      Parallel-Schritt, §14.2)*: der amtliche Spruchkörper wird aus dem Rubrum extrahiert und
+      korpusweit zu Kanon-Slugs normalisiert, damit die Rechtsprechung nach Richter:in filterbar
+      wird. **Block A (Daten/Risiko, erledigt):** Schnitt `scripts/rechtsprechung/bs-besetzung.ts`
+      (BS-Deckblatt + Signatur, Re-Parse der 3765 aus dem Roh-Golden **ohne Re-Crawl**), reiner
+      Parser/Kanon `src/lib/rechtsprechung/besetzung.ts` (deterministisch, §2), Projektion
+      `BrowseEntscheid.richter[{s,r}]` + neues `public/rechtsprechung/richter.json`
+      (Slug → Anzeigename + Trefferzahl), neues Tor **`check:besetzung`** in der Gate-Kette
+      (Leak/Konsistenz/Determinismus hart, Abdeckung mit Schwelle, Kollisions-Report).
+      Abdeckung BS 98.6 % · Bund 96.1 %, 511 Slugs (208 Richter:innen, 303 Gerichtsschreiber:innen),
+      **Anonymisierungs-Leak-Scan korpusweit 0**. `abschnitte`/`sha` byte-unverändert (§6).
+      **Block B (offen, reines UI):** Facette als Autocomplete/Combobox + `?richter`-URL-Achse
+      + e2e/axe/perf — bewusst getrennt, um Risiko-Klassen nicht zu mischen (§14.2).
+      **Spätere Politur:** Gerichtsschreiber:in als eigene Achse, Spruchkörper-Anzeige im Reader,
+      Richter-Profilseite. Detail: `FAHRPLAN-RECHTSPRECHUNG.md` §12. Dossier
+      `bibliothek/rechtsprechung/besetzung-extraktion-2026-07-20.md`. Trailer `Roadmap: R-RICHTER`.
     *— Datenausbau-Unterschritte (Quellen → DB → Korpus = Fundament der Verzahnung):*
     - [D] **Quellen-Steinbruch OpenCaseLaw** *(Analyse 2.7.2026; **Richtungsentscheid gefallen 2.7.: KONSUMIEREN statt scrapen** — Massen-/Graph-Verwertung läuft im DB-Strang **W2·6-DATA**/`FAHRPLAN-DATENHALTUNG.md`; Technik-Ports W1/W4–W13 unverändert nach `PLAN-OCL-ABBAU.md`)* — Auswertung
       von opencaselaw.ch/`caselaw-repo-1` (Daten CC0, Code MIT): was für LexMetrik verwertbar ist
