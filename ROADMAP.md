@@ -294,6 +294,33 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   sha/Zeilenzahlen vs. committete Projektion; bestehende `check:*-netz` bleiben Quellen-Arbiter).
   Kuratiertes Schaufenster bleibt prerendert (§15); Long-Tail on-demand inhaltsvollständig (§15 Regel 6).
   Bau-Strang = **W2·6-DATA**; Detailquelle **`FAHRPLAN-DATENHALTUNG.md`**. **Stand 3.7.2026: E0/E0+/E1/E1-Rest-A + E2-Vorarbeiten durch** (E1 = Generator-Flip Bund + Tor `check:datenhaltung`; **E2-Vorarbeiten = hot-FTS build-time [`fts_artikel` external content + `fts_entscheide_schaufenster` standalone, Tokenizer `unicode61 remove_diacritics 2`, HOT-Replika 178 MiB/1 GB] + Such-Query-Modul `scripts/datenhaltung/suche.ts` mit Pagination-by-design + Edge-Funktion `api/suche.ts` [503 ohne Turso]**; **E2-Anbindung ✅ 3.7.2026 = Gruppe «Volltext-Suche (online)» im geteilten `useUniversalSuche`/`SuchResultate` [`src/lib/suche/onlineVolltext.ts`, debounced Fetch, AbortController ~4 s, §8-Offenlegung, ehrliches Degradieren bei 503/Netz/Timeout/200-leer, 5-min-Feature-Cache]**) — **E2 offen NUR: Turso-Hot-Daten laden/synchronisieren [David-Handschritt; Prod-Edge liefert aktuell 200-leer] → dann perf-budget/Payload-Grenz-Test greifen**. **§11.2 Leitfälle-Chips (3.7.2026): das tote `proNormArtikel`-Modell ist verdrahtet — Schaufenster-Shards je Erlass (`public/rechtsprechung/norm-index/<ERLASS>.json`, 19) + `leitfaelleFuerArtikel`-Lazy-Lader + Chip-Zeile im `ArtikelLeser` (Chip → Entscheid + «⧉ daneben öffnen»); Weiche-B-Masse-Anteil «+n weitere (online)» offen bis E2-live.** Details am Schritt W2·6-DATA. Trailer `Roadmap: W2·6-DATA`.
+  **Reparatur 20.7.2026 — Sync-Transport + Frische-Wächter (E2 betriebsfest).** Der Workflow
+  `turso-sync.yml` lief seit dem 18.7. sechsmal in den 20-min-Job-Timeout und wurde jedes Mal
+  `cancelled` (grau, nicht rot) — BS-Import #300, G-REF #299, ASYLV2 #304, Richter #309/#310
+  erreichten die Suche nie. Ursache war NICHT der Timeout: der Sync schickte je Zeile ein eigenes
+  Hrana-`execute`, also einen durablen Commit pro Zeile (**gemessen 33 Zeilen/s** → ~46 min für
+  61k Zeilen). Behoben durch **Mehrzeilen-INSERT in BEGIN/COMMIT** (gemessen **1429 Zeilen/s**,
+  43×) + **Schatten-Tabellen mit atomarem Tausch** (ein Abbruch lässt den alten Stand stehen,
+  statt wie bisher eine halb gedroppte Prod-Replika zu hinterlassen — genau das lag tagelang live:
+  `artikel` 16'400 von 55'822, `fts_entscheide_schaufenster` gar nicht vorhanden). Die Atomarität
+  trägt erst über den Hrana-**`baton`** (BEGIN und COMMIT in getrennten Requests): ein einzelner
+  Request mit `BEGIN/…/COMMIT` ist NICHT atomar — die Pipeline bricht bei einem fehlgeschlagenen
+  Statement nicht ab und das COMMIT schreibt den Teilzustand fest (von der Gegenprüfung empirisch
+  widerlegt, im Wegwerf-Test verschwand eine Live-Tabelle dauerhaft). Neu:
+  **`check:turso-frische`** — vierfach: Struktur · **Vollständigkeit** (Ist-Zeilenzahl gegen die
+  vom letzten Sync protokollierten Soll-Zahlen; eine reine «nicht leer»-Prüfung hätte den
+  historischen Schaden von 16'400 statt 55'822 Zeilen passieren lassen) · `manifest_sha` gegen
+  `daten-manifest.json` · Alter — als harter Schritt im Sync **und** als täglicher cron-Job mit
+  eigenem Token-Riegel; bewusst NICHT in `check:netz` (dort ohne Token = Schein-Abdeckung).
+  Ein abgebrochener Sync schweigt nicht mehr (§8). HOT-Artefakte (lokal gebaute FTS-DBs, das
+  Budget-Mass aus `build.ts`) **651.99 MiB / 1024 MiB (63.7 %)** — Treiber ist die
+  `eintrag`-Tabelle der rechtsprechung.db (465.93 MiB). **Gekoppelter Folgeschritt:** der
+  Quell-Riegel hasht via `manifestDb()` die ganze DB (~1.9 GiB Spitzen-Heap, Reserve 2.3× zum
+  4288-MiB-Limit); auf die vier geprüften Tabellen einschränken, sobald der Entscheid-Korpus
+  sich verdoppelt, die Heap-Reserve unter 1.5× fällt ODER das 1-GB-Budget reisst — gleicher
+  Treiber, darum gemeinsam prüfen. Doku-Korrektur in `fts.ts`/`turso-sync.ts`:
+  die «342 kuratierten Schaufenster-Entscheide» waren seit langem falsch — der Code filtert nicht,
+  es sind alle `eintrag`-Zeilen (Stand 5093).
   **🔒 BLOCKER: VPS-Bestellung (David, ~15 Min) — entsperrt E3-Serving (195 342 Entscheide, cold-FTS 58-GB-Klasse) + E4-Zitatgraph + VZUI-V2 «Zitiert-von».** Bestell-Dossier mit 3 live-verifizierten Angeboten (17.7.2026, Empfehlung **netcup RS 4000 G12 · 32 GB/1 TB NVMe · ~€40/Mt**) + Setup-Plan + Schritt-für-Schritt-Anleitung: **`bibliothek/betrieb/vps-bestell-dossier-2026-07-17.md`** (QS-BASIS B-5). Serving-Bau bleibt QS-DATA. Synergie: derselbe VPS = Backup-Zweitziel (QS-BASIS B-2) + Fassungs-Archiv (B-9).
 - **Optimierungs-Research Juli 2026 — Betrieb/Frische/Prüf-Tore/FR-IT** *(QS-OPT, `[OF]`, neu 12.7.2026)*.
   <!-- @meta id: QS-OPT · status: ready · of: ja · blocker: null · dep: [] · kollision: [vercel.json, .github/workflows/normen-monitor.yml, src/lib/normtext/laden.ts] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-OPTIMIERUNG-2026-07.md -->

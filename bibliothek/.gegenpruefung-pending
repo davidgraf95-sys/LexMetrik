@@ -1,14 +1,9 @@
 {
-  "hash": "62ae799028358f31a7aaf1ce1520ddec1ed3b8bbafb7ee30a50300857e4cb8b3",
+  "hash": "cdc6fd57ada6104c919ad3aa7cc71d8bac1ec1d4a7256410bb783a092571d215",
   "verdikt": "bestanden",
-  "quellePin": "rechtsprechung.gerichte.bs.ch (Findinfo) Roh-Golden 20260719, live gegengeprueft 20260720; Bund-Rubra aus Bestands-Snapshots",
+  "quellePin": "CI-Lauf 29757068566 (workflow_dispatch, turso-sync.yml) — gemessene Laufzeit 32.8 min, Entscheid-Phase 1336.5 s bei 4 Zeilen/s",
   "datum": "2026-07-20",
   "dateien": [
-    "daten-manifest.json",
-    "daten/bs-fiw/inventar.json",
-    "scripts/normtext/entscheide-schreiben.ts",
-    "scripts/rechtsprechung/bs-besetzung.ts",
-    "scripts/rechtsprechung/bs-parse.ts",
-    "src/lib/rechtsprechung/besetzung.ts"
+    "scripts/datenhaltung/turso-sync.ts"
   ]
 }

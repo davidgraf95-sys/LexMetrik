@@ -3,8 +3,17 @@
 // (FAHRPLAN-DATENHALTUNG §3 DDL + §11.5 hot/cold-Grenze).
 //
 // HOT (edge-replika-fähig, < 1 GB, das IST der E2-POC-Zuschnitt):
-//   - fts_artikel                    (external content über `artikel`, alle 218 Bund-Erlasse)
-//   - fts_entscheide_schaufenster    (standalone, die 342 kuratierten Schaufenster-Entscheide)
+//   - fts_artikel                    (external content über `artikel`, ALLE Erlasse Bund+Kanton)
+//   - fts_entscheide_schaufenster    (standalone, ALLE Einträge der rechtsprechung.db)
+//
+// ZAHLEN-KORREKTUR 20.7.2026 (§5/§8): hier standen bis dahin „218 Bund-Erlasse" und „342
+// kuratierte Schaufenster-Entscheide". Beides beschrieb den E2-Erstzuschnitt und war zur
+// laufenden Korpus-Erweiterung nie nachgeführt worden — der Code filtert an KEINER Stelle,
+// er nimmt schlicht alle Zeilen. Ist-Stand 20.7.2026: 1458 Erlasse / 55'822 Artikel und
+// 5093 Entscheide (BS-Import #300 u. a.). Konkrete Zahlen stehen darum bewusst NICHT mehr
+// in diesen Kommentaren — sie veralten still und erzeugen genau die irreführende Doku, die
+// §8 verbietet. Massgeblich ist der jeweils gemessene Stand aus `npm run datenhaltung:build`
+// bzw. `daten-manifest.json`.
 //
 // COLD (server-only, NIE embedded): fts_entscheide_masse — der 58-GB-Vollkorpus-Index
 // entsteht erst mit E3 auf dem Self-Host-VPS (§11.5). Wird hier BEWUSST NICHT gebaut,
@@ -64,11 +73,18 @@ export function baueFtsArtikel(db: DatabaseSync): number {
 /**
  * fts_entscheide_schaufenster — STANDALONE (self-contained) FTS5. Die Ziel-Tabelle
  * `entscheide` ist in E0+/E1/E2-Vorarbeiten LEER (befüllt erst E3), darum external
- * content unmöglich → die 342 Schaufenster-Entscheide werden aus ihren Blob-Einträgen
- * (`eintrag`-Tabelle der rechtsprechung.db) gespeist. Spalten: id/quelle_url UNINDEXED
- * (Rückgabe/Join ohne Index), titel/regeste/text indexiert. Native `snippet()` ist hier
- * verfügbar (Text physisch gespeichert). Insert-Reihenfolge = (pfad, idx) → deterministisch.
- * @returns Zeilenzahl (== 342 Schaufenster).
+ * content unmöglich → gespeist wird aus den Blob-Einträgen (`eintrag`-Tabelle der
+ * rechtsprechung.db). Spalten: id/quelle_url UNINDEXED (Rückgabe/Join ohne Index),
+ * titel/regeste/text indexiert. Native `snippet()` ist hier verfügbar (Text physisch
+ * gespeichert). Insert-Reihenfolge = (pfad, idx) → deterministisch.
+ *
+ * UMFANG (klargestellt 20.7.2026): ALLE `eintrag`-Zeilen, ohne jeden Filter. Der Kommentar
+ * sprach früher von „den 342 kuratierten Schaufenster-Entscheiden" — das war der Stand der
+ * E2-Erstfassung und beschrieb den Code schon länger falsch. Der Name „Schaufenster" trennt
+ * hier HOT von COLD (`fts_entscheide_masse`, E3/VPS), er bezeichnet keine Auswahl innerhalb
+ * der HOT-Daten. Wichtig fürs Produkt (§8): die Suche kennt damit denselben Entscheid-Korpus,
+ * den der Reader zeigt — es gibt keine stille Teilmenge, über die Nutzer getäuscht würden.
+ * @returns Zeilenzahl (== Anzahl `eintrag`-Zeilen der rechtsprechung.db).
  */
 export function baueFtsEntscheideSchaufenster(db: DatabaseSync): number {
   db.exec(
