@@ -126,7 +126,7 @@ const KALIBRIER_RUNS = zahlAusUmgebung('PERF_KALIBRIER_RUNS', process.env.CI ? 3
 // Herleitung im SCHWELLEN-Block unten). Ein Runner mit genau diesem Wert bekommt
 // Faktor 1.000, d. h. normiert == roh; die normierten Deckel bleiben damit auf
 // derselben Grössenordnung wie die bisherigen Absolutwerte und sind direkt lesbar.
-const KALIBRIER_BASIS = zahlAusUmgebung('PERF_KALIBRIER_BASIS', 2000);
+const KALIBRIER_BASIS = zahlAusUmgebung('PERF_KALIBRIER_BASIS', 1120);
 // Plausibilitätsband: ausserhalb gilt die Kalibrierung als gescheitert (Instrument
 // defekt / Seite nicht ausgeliefert / Runner pathologisch) → keine Normierung.
 // Bewusst weit: es soll nur Instrument-Ausfall fangen, nicht langsame Runner
@@ -143,94 +143,87 @@ type Schwelle = {
   scoreMin: number;   // Performance-Score 0..100
 };
 
-// ── Schwellen-Kalibrierung (NEU 20.7.2026, empirisch gegen 27 CI-Läufe) ─────
+// ── Schwellen-Kalibrierung (NEU 20.7.2026 — Messregime + Deckel gemeinsam) ──
 //
 // Binding ist der **CI-Runner** (dort läuft das Tor), nicht die lokale Maschine.
 //
-// Die alte Kalibrierung (5.7.2026) notierte als CI-Ist «OR TBT ~2.3 s» und setzte
-// den Deckel auf 4000 ms — gedachte Kopffreiheit ~74 %. Dieses Ist ist seither
-// still veraltet: gemessen über die 27 CI-Läufe vom 19./20.7.2026 (jeder Wert
-// bereits ein Median aus 3) liegt TBT/OR bei
+// WARUM NEU ERHOBEN: Die Kalibrierung vom Vormittag des 20.7. stammt aus dem
+// ALTEN Messregime (eine geteilte, driftende Chrome-Instanz, Läufe mal warm mal
+// kalt). Chrome-Isolation (A1) und Job-Normierung (A2) ändern das Regime — die
+// alten 27 Läufe sind als Bezug damit entwertet und werden NICHT übernommen.
+// Grundlage ist stattdessen eine frische Messreihe im neuen Regime:
+// `.github/workflows/perf-kalibrierung.yml`, 8er-Matrix = **8 unabhängige
+// Runner-Zuteilungen**, je Median aus 3 Läufen (Lauf 29765490018).
 //
-//   min 2262 · Median 3527 · Mittel 3555 · max 5094 ms · sd ≈ 687 ms
-//   (nur main-Pushes: Mittel 3821 · max 5094 · sd ≈ 812 — main-Läufe sind
-//    systematisch langsamer, weil beim Push mehr Jobs um denselben 2-vCPU-Runner
-//    konkurrieren; dieselbe Runner-Starvation wie bei den e2e-Shards.)
+// ── Messreihe (8 Runner, neues Regime) ──────────────────────────────────────
 //
-// Der Deckel 4000 lag damit nur z ≈ +0.65 über dem Mittel ⇒ rechnerisch ~26 %
-// Rot-durch-Rauschen; beobachtet 4/27 aller Läufe und 3/10 der main-Läufe rot.
-// Ein Tor, das auf main jeden dritten Lauf grundlos rot wirft, misst nicht mehr
-// die Software, sondern die Runner-Auslastung — und erzieht zum Rerun-Reflex,
-// der echte Regressionen mit durchwinkt (§8).
+//   Kalibrier-Referenz   min  720 · Mittel 1118 · max 1476 ms   (Spanne ×2.05)
+//     → der Runner-Pool streut faktisch um Faktor 2, wie vermutet.
 //
-// Beleg, dass es NICHT am Code liegt (der eigentliche Kontrollversuch):
-//   • main bae8dff1 — ein **reiner Dokumentations-Commit** (docs/roadmap, keine
-//     Code-Zeile) — mass 5094 ms und war ROT. Derselbe Inhalt auf seinem
-//     PR-Branch: 3653 und 3830 ms, beide grün. Spanne 1441 ms bei identischem Code.
-//   • main 4f363fd0 mass 4537 ms ROT — ebenfalls VOR dem G-HIST-UI-Merge (#305).
-//   • Der #305-Branch selbst (2588ef31) mass 3527 ms — den Median aller Läufe,
-//     grün. Erst der Merge-Commit desselben Codes (50ffd6ae) mass 5007 ms.
-//   • Lokale A/B-Messung (Apple Silicon, Mobil-Preset, je Median aus 7):
-//     Vor-#305 (464cfbf4) 815 ms · mit #305 (50ffd6ae) 828 ms ⇒ **+13 ms
-//     = +1.6 %**, auf CI-Niveau hochgerechnet ~+56 ms. #305 ist damit ~1/20 der
-//     beobachteten Streuung und erklärt den Ausschlag nicht.
+//   OR-TBT roh           min 2551 · Mittel 4185 · max 5465 ms · sd 1307 · CV 31.2 %
+//   OR-TBT normiert      min 3007 · Mittel 4231 · max 5437 ms · sd  698 · CV 16.5 %
 //
-// WO die Streuung sitzt (Befund aus den neu gedruckten Einzelwerten, 20.7.2026):
-// **zwischen den Jobs, nicht innerhalb.** Ein Job druckte
-//   Einzelläufe TBT: 5612 · 5149 · 5537 ms  |  LCP: 11.3 · 3.5 · 11.3 s
-// — innerhalb des Jobs nur ±9 % Streuung, quer über die Jobs aber 2262…5612 ms
-// (Faktor 2.5). Der GitHub-Runner-Pool ist heterogen; welche Maschine ein Job
-// zugeteilt bekommt, entscheidet über den Messwert. (Die LCP-Spalte zeigt
-// zusätzlich, dass die geteilte Chrome-Instanz mal warm, mal kalt lädt — 3.5 s
-// gegen 11.3 s; die historisch «guten» Werte waren überwiegend Warm-Cache.)
+//   Start-TBT roh        min   98 · Mittel  200 · max  266 ms · sd   60 · CV 30.1 %
+//   Start-TBT normiert   min  152 · Mittel  202 · max  286 ms · sd   41 · CV 20.2 %
 //
-// Daraus folgt hart: **mehr Läufe je Job mitteln das NICHT weg** — sie mitteln
-// nur innerhalb der ±9 %. Ein Probelauf mit RUNS=5 hat das bestätigt (und über
-// die Chrome-Drift zusätzlich die Startseite verdorben, siehe RUNS-Kommentar).
-// Gegen Between-Job-Varianz hilft nur ein höherer Deckel oder eine
-// **Normierung je Job** (Kalibrier-Workload im selben Job messen und das
-// VERHÄLTNIS prüfen statt des Absolutwerts) — Letzteres ist der eigentlich
-// richtige Bau und als Folgeschritt in ROADMAP/QS-PERF notiert.
+// WIRKT DIE NORMIERUNG? Ja, und zwar belegt an zwei unabhängigen Kennzahlen:
+//   (1) Relative Streuung OR-TBT **31.2 % → 16.5 %** (fast halbiert).
+//   (2) Korrelation zur Runner-Geschwindigkeit **r = +0.83 → −0.21**: der
+//       Zusammenhang «langsamer Runner ⇒ hoher Messwert», der den Absolut-Deckel
+//       unbrauchbar machte, ist herausgerechnet.
+// Der Rest (CV 16.5 %) ist die Within-Job-Streuung BEIDER Messungen (je ~9 %,
+// quadratisch addiert ~13 %) — mehr Läufe je Job könnten ihn weiter senken,
+// kosten aber Wanduhr; bewusst nicht getan (§8: Grenze offengelegt, nicht
+// weggeredet).
 //
-// Konsequenz — die Schärfe wandert dorthin, wo Signal ist, statt pauschal zu
-// lockern:
-//   • TBT/OR 4000 → 6500 ms. Über dem beobachteten Maximum (5612 ms) plus ~16 %
-//     Kopffreiheit ≈ 2 Within-Job-sd. Das ist ehrlich ein **stumpferer**
-//     Absolut-Deckel — er ist der Preis dafür, dass eine Metrik mit Faktor-2.5-
-//     Runner-Streuung überhaupt assertierbar bleibt, ohne jeden dritten
-//     main-Push grundlos rot zu werfen. Er fängt weiter grobe §15/3-Verstösse
-//     («Suchindex in den kritischen Pfad»), aber er ist KEIN feiner
-//     Regressions-Fänger mehr; diese Rolle trägt bis zur Job-Normierung die
-//     CLS-Schranke unten. Bewusst offengelegt statt stillschweigend gesetzt (§8).
-//   • LCP/OR 12000 → 13500 ms. Bei Kalt-Last misst OR 11.31–11.41 s — gegen den
-//     alten Deckel nur ~6 % Luft, d. h. die nächste Kalt-Messung wäre ohne
-//     Zutun rot geworden. Gleiche stille Erosion wie bei TBT, hier vorab geheilt.
-//   • TTI/OR 14000 → 15000 ms (mitziehend, TTI ≈ LCP auf dieser Seite).
-//   • CLS/OR 0.15 → 0.05 und Start 0.10 → 0.05 (GEGENGEWICHT, Verschärfung).
-//     CLS ist die deterministische, geräteunabhängige Metrik und laut §15.2 «der
-//     eigentliche Regressions-Fänger» — beobachtet über dieselben 27 Läufe aber
-//     nur 0.004–0.008 auf OR (Start 0.002). Ein Deckel von 0.15 ist das 19- bis
-//     37-Fache des Ist und fängt faktisch nichts. 0.05 ist ~6× über dem
-//     beobachteten Maximum, also flake-sicher, und deckt sich mit dem Budget, das
-//     die CLS-e2e-Specs (verweis-u, gesetze-historie-badge) bereits fahren.
-//     Ehrliche Grenze (§8): die #305-CLS-Regression hätte auch dieser Deckel
-//     nicht gefangen — sie trat nur auf einer **Anker-Deeplink**-URL auf
-//     (/gesetze/bund/MWSTV#art-165), die dieses Tor nicht misst; gefangen hat sie
-//     die e2e-Spec. Die Verschärfung stellt die Deckel-Disziplin wieder her, sie
-//     ersetzt die Deeplink-Specs nicht.
-//   • LCP/TTI/Score hängen wie TBT an CPU+Netz → bewusst grosszügige Deckel.
-// Nächster Schritt (nicht in dieser Einheit): eine Anker-Deeplink-URL als dritte
-// Messseite aufnehmen, damit der CLS-Deckel die Klasse Spät-Einwuchs auch dort sieht.
+// ── Deckel-Wahl (Rot-durch-Rauschen einseitig normal-approximiert) ──────────
+//
+//   OR   normiert 5900 ms → z 2.39 → **~0.8 %** Rauschen-Rot · 39 % über dem Ist
+//   Start normiert  300 ms → z 2.39 → **~0.9 %** Rauschen-Rot · 48 % über dem Ist
+//
+// Zum Vergleich derselbe Datensatz gegen die bisherigen ROH-Deckel:
+//   OR roh 4000 (vor #312) → z −0.14 → **56 %** Rauschen-Rot (das gemessene Elend)
+//   OR roh 6500 (seit #312) → z 1.77 → **3.8 %** Rauschen-Rot · 55 % über dem Ist
+//   Start roh 1500          → **651 %** über dem Ist — fing faktisch nichts.
+//
+// Der normierte Deckel ist damit auf BEIDEN Achsen besser als der Roh-Deckel:
+// seltener grundlos rot (0.8 % statt 3.8 %) UND näher am Ist (39 % statt 55 %).
+// Auf der Startseite ist der Gewinn drastisch: von 651 % auf 48 % Kopffreiheit —
+// dort war der alte Deckel reine Dekoration. Damit trägt TBT wieder Prüfschärfe;
+// CLS musste diese Rolle seit #312 allein tragen (Übergangszustand beendet).
+//
+// ── Die übrigen Metriken (roh, mit demselben Datensatz nachgezogen) ─────────
+//   • OR CLS max 0.0093 ⇒ Deckel 0.05 bleibt (≈5× Luft, flake-sicher).
+//   • OR LCP ist **bimodal**: entweder ~3.5 s oder ~11.3–11.6 s, nichts dazwischen
+//     (4× / 4× in der Reihe), unabhängig von der Runner-Geschwindigkeit. Der hohe
+//     Modus ist in sich eng (11299…11601 ms). Deckel 13500 bleibt: ~16 % über dem
+//     beobachteten Maximum. Die Ursache der Bimodalität ist NICHT geklärt (der
+//     Verdacht «warm/kalt» ist mit der Chrome-Isolation ausgeschlossen) — als
+//     offener Befund in ROADMAP/QS-PERF notiert, statt sie stillschweigend
+//     wegzudeckeln (§8).
+//   • OR TTI max 11601 ⇒ 15000 → **13000** (z 2.53, ~0.6 % Rauschen-Rot).
+//   • Start LCP ist bemerkenswert stabil: 9141…9242 ms, sd 36 ms (CV 0.4 %) über
+//     alle acht Runner — netzgebunden, runner-unabhängig. 11000 → **10000**
+//     (≈8 % über dem Maximum, ~21 sd): ein echter, scharfer Deckel.
+//   • Start Score 66…70 ⇒ 40 → **55** (7.6 sd Luft). OR Score 38…53 ⇒ 25 bleibt
+//     (Score ist ein Komposit der ohnehin gedeckelten Metriken; ihn zusätzlich eng
+//     zu ziehen erkauft wenig Signal für zusätzliches Rauschen-Rot).
+//   • Roh-TBT-Sicherheitsnetze: OR 6500 → **9000** (65 % über dem beobachteten
+//     Maximum), Start bleibt 1500. Sie sind bewusst WEIT — scharf ist jetzt der
+//     normierte Deckel; das Netz greift nur, wenn die Kalibrierung selbst ausfällt.
+//
+// Erwartetes Rauschen-Rot des ganzen Tors: **~2 %** (Summe der Einzelrisiken),
+// gegen ~4 % allein aus TBT im bisherigen Zustand und ~26 % vor #312.
 const SCHWELLEN: Record<string, { url: string; label: string; s: Schwelle }> = {
   or: {
     url: `${BASE}/gesetze/bund/OR`,
     label: '/gesetze/bund/OR (≈930 KB HTML)',
-    s: { clsMax: 0.05, lcpMax: 13500, tbtMax: 6500, tbtNormMax: 0, ttiMax: 15000, scoreMin: 25 },
+    s: { clsMax: 0.05, lcpMax: 13500, tbtMax: 9000, tbtNormMax: 5900, ttiMax: 13000, scoreMin: 25 },
   },
   start: {
     url: `${BASE}/`,
     label: 'Startseite',
-    s: { clsMax: 0.05, lcpMax: 11000, tbtMax: 1500, tbtNormMax: 0, ttiMax: 12000, scoreMin: 40 },
+    s: { clsMax: 0.05, lcpMax: 10000, tbtMax: 1500, tbtNormMax: 300, ttiMax: 12000, scoreMin: 55 },
   },
 };
 

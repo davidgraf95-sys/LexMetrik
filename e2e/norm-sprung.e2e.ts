@@ -183,7 +183,11 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     // CLS-Beobachter VOR der gemessenen Interaktion scharf schalten (nur unerwartete
     // Shifts). Mit Quellen-Erfassung: bei Überschreitung nennt die expect-Meldung
     // die Top-shiftenden Elemente + nav-relative Zeitstempel im Klartext.
-    await clsBeobachtenInstallieren(page, true)
+    // `nurAbInstall` (20.7.2026): NUR Shifts ab hier zählen. Der `buffered`-Observer
+    // rechnete zuvor die Shifts des bewusst ungedrosselten WARMLAUFS oben (und den
+    // Seitenaufbau) diesem Interaktions-Budget zu — Beleg + Begründung im Kopf von
+    // `helpers/cls.ts`. Das Budget 0.05 unten bleibt unverändert.
+    await clsBeobachtenInstallieren(page, true, true)
     // CI-realistischer Drossel-Grad: der 2-vCPU-CI-Runner drosselt durch Contention
     // schon von sich aus; 6× käme dort effektiv ≈12× nahe und misst dann Host-
     // Auslastung statt Interaktions-Lag (systematisch rot in #160/#161/#162). Darum
