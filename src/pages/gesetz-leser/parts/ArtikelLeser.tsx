@@ -419,8 +419,16 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
           <LeitfallZeile refs={leitfaelle} normZitat={zitat} revision={revision} />
           {/* G-HIST-UI: «Gilt seit»-Badge + aufklappbare Fassungs-Timeline dieses
               Artikels (aus dem erlass-lokalen Historie-Shard, idle geladen). Am
-              Artikel-Fuss wie Verweise/Leitfälle — below-fold, CLS-neutral (§15.2). */}
-          <ArtikelHistorieZeile historie={historie} artikel={e.artikel} />
+              Artikel-Fuss wie Verweise/Leitfälle. §15.2: der Slot steht ab dem
+              ERSTEN Render und reserviert die eine Chip-Zeile (`min-h-hist-zeile`,
+              Token — gemessen exakt 24 px, deterministisch über alle Artikel), damit
+              der idle-Shard-Resolve reservierten Platz FÜLLT statt sichtbare Artikel
+              zu schieben (Messung 20.7.: sonst CLS 0.0227 statt 0.0002 unter 6×). Der
+              Aussenabstand sitzt hier am Slot, nicht in der Zeile — sonst fallen
+              reservierte und gefüllte Höhe auseinander. */}
+          <div className="mt-4 min-h-hist-zeile">
+            <ArtikelHistorieZeile historie={historie} artikel={e.artikel} />
+          </div>
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar). W2·5d G2b:
               der Apparat liegt IMMER im DOM (Ctrl+F/Print/Screenreader, R9/§8);
               der data-fussnoten-CSS-Toggle dämpft ihn bei «AUS» (data-fn-apparat),

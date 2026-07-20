@@ -116,7 +116,19 @@ export default {
       // Zeilenhöhe 1.15 ⇒ 2 Zeilen = 2.30em, +Puffer 2.35em): der Titelkasten bleibt
       // in BEIDEN Font-Zuständen gleich hoch → kein Swap-Shift. Reserviert nur Platz,
       // versteckt/kürzt nichts (§15/2); kürzere Titel gewinnen etwas Weissraum.
-      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem', 'titel-2z': '2.35em' },
+      // CLS-Reservierung der Fassungs-Zeile am Artikel-Fuss (§15.2, G-HIST-UI-
+      // Forensik 20.7.2026): der Historie-Shard wird per requestIdleCallback
+      // NACH dem ersten Artikel-Render geholt (§15/3) — die «Gilt seit»-Badge
+      // wuchs damit in bereits sichtbare Artikel ein und schob alles darunter.
+      // Gemessen auf /gesetze/bund/MWSTV#art-165 unter 6× CPU-Drossel: CLS 0.0227
+      // gegen 0.0002 ohne die Zeile (94 Zeilen, jede exakt 24 px hoch — die Badge
+      // ist immer EINE Chip-Zeile, die Timeline klappt nur auf ECHTEN Klick auf
+      // ⇒ input-behaftet, CLS-exkludiert). `hist-zeile` reserviert diese eine
+      // Zeile am Slot, der ab dem ERSTEN Render steht: der Shard-Resolve füllt
+      // reservierten Platz, statt Platz zu schaffen → kein Shift. Reserviert nur
+      // Platz, versteckt/kürzt nichts (§15/2); Artikel ohne Historie-Eintrag
+      // (und Erlasse ganz ohne Shard) gewinnen etwas Weissraum am Fuss.
+      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem', 'titel-2z': '2.35em', 'hist-zeile': '1.5rem' },
     },
   },
   // Container-Queries (Split-View B-0b, Entscheid David 29.6.2026): erlaubt

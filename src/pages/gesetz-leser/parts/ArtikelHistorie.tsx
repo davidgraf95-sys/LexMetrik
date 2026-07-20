@@ -10,12 +10,19 @@ import { formatiereDatum } from '../helpers';
 // Komponente rechnet KEINE Daten, sie rendert nur, was der Shard liefert
 // (giltSeit / aufgehobenSeit als Badge, `ereignisse` als Timeline).
 //
-// §15.2 (CLS): die Zeile sitzt am Artikel-FUSS (unter Wortlaut/Verweisen/Leitfällen)
-// und wächst — wie die Leitfall-Zeile — erst mit dem idle-Shard-Resolve unterhalb des
-// prerenderten Normtexts ein (below-fold; off-screen deckt die content-visibility-
-// Platzhöhe des Artikels). Die Timeline ist im Initialzustand ZU (Klick = echter
-// Input ⇒ CLS-exkludiert). Kein reservierter Leerraum, kein leerer Kasten (§13):
-// ohne datierten Stand UND ohne Ereignis rendert die Zeile GAR NICHT (§8).
+// §15.2 (CLS) — KORRIGIERT nach Messung 20.7.2026. Die ursprüngliche Annahme, die
+// Zeile wachse nur «below-fold» ein und sei darum CLS-neutral, war FALSCH: bei einem
+// Anker-Deeplink (`/gesetze/bund/MWSTV#art-165`) steht der Zielartikel oben im
+// Viewport, die Artikel darunter sind SICHTBAR — der idle-Shard-Resolve schob sie
+// alle. Gemessen unter 6× CPU-Drossel: CLS 0.0227 gegen 0.0002 auf main (Faktor
+// ~100), auf dem CI-Runner 0.0550 gegen Budget 0.05. Darum reserviert der Slot in
+// ArtikelLeser (`mt-4 min-h-hist-zeile`) die eine Chip-Zeile ab dem ERSTEN Render,
+// und `schaetzeArtikelHoehe` trägt sie in `contain-intrinsic-size` für die
+// off-screen-Artikel nach. Diese Komponente rendert deshalb OHNE eigenen
+// Aussenabstand (der sitzt am Slot), damit reservierte und gefüllte Höhe exakt
+// zusammenfallen. Die Timeline ist im Initialzustand ZU (Klick = echter Input ⇒
+// CLS-exkludiert). Kein leerer Kasten (§13): ohne datierten Stand UND ohne Ereignis
+// rendert die Zeile GAR NICHT (§8) — der Slot bleibt dann leerer Weissraum.
 
 // HistorieTyp → deutsches Anzeige-Label (Darstellung, keine Rechtslogik). Deckt die
 // im Korpus belegten Ereignistypen (historie-parse.ts) vollständig ab.
@@ -91,7 +98,10 @@ export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ histori
       : 'Fassungshistorie';
 
   return (
-    <div data-historie-zeile className="mt-4">
+    // Kein eigener Aussenabstand mehr: den trägt der reservierte Slot in
+    // ArtikelLeser (`mt-4 min-h-hist-zeile`), damit reservierte und gefüllte
+    // Höhe exakt zusammenfallen (§15.2, sonst schiebt der Resolve doch wieder).
+    <div data-historie-zeile>
       <div className="flex flex-wrap items-center gap-2">
         <span className="lc-overline mr-1" title="Fassungshistorie dieses Artikels aus den amtlichen Änderungs-Fussnoten (Fedlex). Massgeblich bleibt die amtliche Quelle.">
           <span className="lc-punkt" aria-hidden />Fassung
