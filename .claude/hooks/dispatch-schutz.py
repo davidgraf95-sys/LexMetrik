@@ -35,7 +35,12 @@ try:
 except Exception:
     sys.exit(0)
 
-if data.get("tool_name") != "Task":
+# Das Delegations-Werkzeug heisst je nach Harness "Task" ODER "Agent" (in der
+# Umgebung vom 20.7.2026: "Agent"). Ein Matcher auf nur EINEN Namen macht diesen
+# Hook zum stillen No-op — genau die Fehlerklasse, die er verhindern soll.
+# Befund von Fable bei der Vor-Merge-Pruefung von #316; die Sabotage-Proben des
+# PR liefen mit synthetischem stdin und konnten das darum nicht aufdecken.
+if data.get("tool_name") not in ("Task", "Agent"):
     sys.exit(0)
 
 ti = data.get("tool_input") or {}
