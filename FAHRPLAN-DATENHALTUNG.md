@@ -1003,3 +1003,14 @@ implementieren.**
 am David-Gate `vps-bestellung-david` (E3-Serving, Abschnitt 5/E3). Die Varianten «ausweisen» und
 «schweigen» brauchen keinen VPS — aber trotzdem Davids Entscheid, weil sie festlegen, was das Produkt
 über seine eigene Vollständigkeit sagt.
+
+### 12.4 Korpus aus git ausgliedern (R6) — herabgestuft, KEIN Dringlichkeits-Fall (Messung 20./21.7.2026)
+Die Vereinfachungs-Idee «den committeten Korpus (JSON-Projektionen `public/normtext/**`,
+`public/rechtsprechung/**`) aus git ausgliedern» wurde gemessen statt vermutet und ist damit **kein
+Dringlichkeits-Fall**: `git status` misst **25–80 ms**, die CI checkt ohnehin *shallow* aus; die real
+sichtbaren Kosten sind **~400 MB je Worktree-Checkout**, **273 MB Pack** und **minimaler Churn**. Das
+rechtfertigt keine eigenständige Umbau-Aktion. **Verortung:** R6 gehört als **Vorstufe/Teil des
+serverlosen Korpus-Serving-Vorhabens** hierher (Datenhaltungs-Optimierung, §14-Intake `QS-BASIS` (d);
+Bau-Strang `W2·6-DATA`, E3/E4-Nachbarschaft) — sinnvoll erst, wenn das Serving-Ziel ohnehin die
+Korpus-Artefakte aus dem Repo herauslöst, nicht als isolierter git-Eingriff davor. Bis dahin: bewusst
+liegen lassen, nicht treiben.
