@@ -50,6 +50,16 @@ neu 6.6.2026: [gesellschaftsgruendung](recherche/gesellschaftsgruendung.md)
 Maske Gründungsunterlagen) und [ag-gruendung](recherche/ag-gruendung.md)
 (inkl. Emissionsabgabe am neu gepinnten StG-Cache)
 
+**Spruchkörper-Extraktion (Richter-Filter):** [rechtsprechung/besetzung-extraktion-2026-07-20.md](rechtsprechung/besetzung-extraktion-2026-07-20.md) —
+Fundament des Richter-Filters (`R-RICHTER`, Block A): wie der amtliche Besetzungs-Block
+aus BS-Rohdokumenten geschnitten und korpusweit zu Kanon-Slugs normalisiert wird.
+Enthält die **Anonymisierungs-Grenze** als testbare Invariante (Leak-Scan korpusweit 0;
+«Dr. med.» = legitimer Fachrichter, kein Ausschluss), vier belegte Korrekturen am
+ursprünglichen Bauplan (Hidden-Spans, Voll-Vorname statt Initial, Absatz-Naht in
+BEIDE Richtungen), die Abdeckungszahlen je Gericht und den Kollisions-Report
+(false-merge/false-split) samt Alias-Tabelle. Abnahme-Status: Erstrecherche — die
+fachliche Richtigkeit der Alias-Zusammenführungen ist Davids Abnahme.
+
 **Rechtsprechungs-Register:** [rechtsprechung/bge-register.md](rechtsprechung/bge-register.md) —
 alle 93 im Code zitierten BGE/BGer-Urteile mit amtlichem Link (URL-Schema §7-verifiziert
 6.6.2026: ATF-Permalink bzw. AZA-Suche), Aussage, Code-Fundorten und Status; generiert

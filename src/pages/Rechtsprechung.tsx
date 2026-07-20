@@ -8,18 +8,19 @@ import { EntscheidFilter } from '../components/rechtsprechung/EntscheidFilter';
 import { SachgebietKacheln } from '../components/rechtsprechung/SachgebietKacheln';
 import { LiveSuche } from '../components/rechtsprechung/LiveSuche';
 import {
-  ladeEntscheidManifest, filterEntscheide, sortiere, gruppiereNachLeit, gruppiereNachInstanz,
-  zaehleSachgebiete, normLabel,
+  ladeEntscheidManifest, ladeRichterRegister, filterEntscheide, sortiere, gruppiereNachLeit,
+  gruppiereNachInstanz, zaehleSachgebiete, normLabel,
   type EntscheidFilterWerte, type SortModus,
 } from '../lib/rechtsprechung/browse';
-import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
+import type { BrowseEntscheid, RichterRegister } from '../lib/rechtsprechung/register';
 import type { Rechtsgebiet } from '../lib/normtext/register';
 
 // Übersicht der Rubrik «Rechtsprechung» — kuratierter Einstieg (Sachgebiets-Rail,
 // Leitentscheide-first, Norm-Verzahnung), bessere Übersicht als eine flache
 // Trefferliste. Reine Darstellung (§3): Laden/Sortieren/Filtern/Gruppieren liegen
 // in lib/rechtsprechung/browse.ts; hier nur Anzeige + URL-Zustand (?rg= Sachgebiet,
-// ?norm= angewandte Norm). Sortierung/Dichte lokal (Dichte in localStorage).
+// ?norm= angewandte Norm, ?richter= Spruchkörper). Sortierung/Dichte lokal
+// (Dichte in localStorage).
 
 type Dichte = 'liste' | 'karten';
 const DICHTE_KEY = 'rsp:dichte';
@@ -92,6 +93,10 @@ export function Rechtsprechung() {
   // (@3xl/pane) statt auf den Viewport; ausserhalb byte-gleich (lg:).
   const pk = usePaneKlasse();
   const [alle, setAlle] = useState<BrowseEntscheid[] | null>(null);
+  // Richter-Register (Slug → Name) — eigene, kleine Projektion neben dem Manifest.
+  // Nur für Labels; Filtern/Zählen laufen über die Slugs im Manifest. Bleibt es
+  // null, zeigt die Facette ehrlich den Slug statt eines geratenen Namens (§8).
+  const [richterRegister, setRichterRegister] = useState<RichterRegister | null>(null);
   const [fehler, setFehler] = useState(false);
   const [params, setParams] = useSearchParams();
   // Nicht-URL-gehaltene Filterwerte lokal; Sachgebiet (?rg) und Norm (?norm) in der URL (teilbar).
@@ -101,12 +106,24 @@ export function Rechtsprechung() {
 
   const sachgebiet = (params.get('rg') as Rechtsgebiet | null) ?? null;
   const norm = params.get('norm');
+  const richter = params.get('richter');
 
-  const setzeUrl = (schluessel: 'rg' | 'norm', wert: string | null) => {
+  type UrlAchse = 'rg' | 'norm' | 'richter';
+
+  // Mehrere URL-Achsen in EINEM Schreibvorgang. Zwei getrennte setzeUrl-Aufrufe
+  // im selben Handler bauen beide auf demselben — im laufenden Render bereits
+  // VERALTETEN — `params` auf; der zweite Aufruf stellt die Löschung des ersten
+  // wieder her. Bis zur Richter-Achse gab es nie zwei gleichzeitige URL-Achsen,
+  // darum war der Fehler latent; «zurücksetzen» (norm + richter zusammen) hat ihn
+  // real gemacht: `?norm=` kam zurück (empirisch 20.7.2026).
+  const setzeUrlAchsen = (achsen: Partial<Record<UrlAchse, string | null>>) => {
     const p = new URLSearchParams(params);
-    if (wert) p.set(schluessel, wert); else p.delete(schluessel);
+    for (const [k, v] of Object.entries(achsen)) {
+      if (v) p.set(k, v); else p.delete(k);
+    }
     setParams(p, { replace: true });
   };
+  const setzeUrl = (schluessel: UrlAchse, wert: string | null) => setzeUrlAchsen({ [schluessel]: wert });
   const setzeDichte = (d: Dichte) => {
     setDichte(d);
     if (typeof localStorage !== 'undefined') localStorage.setItem(DICHTE_KEY, d);
@@ -119,19 +136,21 @@ export function Rechtsprechung() {
       if (!m) { setFehler(true); return; }
       setAlle(m.entscheide);
     });
+    // Parallel, nicht verkettet: das Register blockiert die Liste nie (§15.3).
+    ladeRichterRegister().then((r) => { if (lebt) setRichterRegister(r); });
     return () => { lebt = false; };
   }, []);
 
   // URL-Achsen (Sachgebiet/Norm) + restliche Filter zusammenführen.
   const werte: EntscheidFilterWerte = useMemo(
-    () => ({ ...rest, sachgebiet, norm }), [rest, sachgebiet, norm]);
+    () => ({ ...rest, sachgebiet, norm, richter }), [rest, sachgebiet, norm, richter]);
 
   // Rail-Zähler über den vollen Bestand minus Sachgebiet (sonst zeigt die nicht
   // gewählte Kachel «0»); restliche Filter (Suche/Norm/…) dürfen die Zähler aber
   // einschränken, darum ohne sachgebiet.
   const fuerRail = useMemo(
-    () => (alle ? filterEntscheide(alle, { ...rest, norm, sachgebiet: null }) : []),
-    [alle, rest, norm],
+    () => (alle ? filterEntscheide(alle, { ...rest, norm, richter, sachgebiet: null }) : []),
+    [alle, rest, norm, richter],
   );
   const railZaehler = useMemo(() => zaehleSachgebiete(fuerRail), [fuerRail]);
   // «Alle Sachgebiete» = Summe der Kacheln: Verweis-Einträge (vollständige Urteile zu
@@ -155,9 +174,13 @@ export function Rechtsprechung() {
 
   const onFilter = (w: EntscheidFilterWerte) => {
     // Sachgebiet & Norm gehören in die URL, der Rest bleibt lokal.
-    const { sachgebiet: rg, norm: n, ...r } = w;
-    if ((rg ?? null) !== sachgebiet) setzeUrl('rg', rg ?? null);
-    if ((n ?? null) !== norm) setzeUrl('norm', n ?? null);
+    const { sachgebiet: rg, norm: n, richter: ri, ...r } = w;
+    // Alle geänderten Achsen sammeln und GEMEINSAM schreiben (s. setzeUrlAchsen).
+    const achsen: Partial<Record<UrlAchse, string | null>> = {};
+    if ((rg ?? null) !== sachgebiet) achsen.rg = rg ?? null;
+    if ((n ?? null) !== norm) achsen.norm = n ?? null;
+    if ((ri ?? null) !== richter) achsen.richter = ri ?? null;
+    if (Object.keys(achsen).length > 0) setzeUrlAchsen(achsen);
     setRest(r);
   };
   const waehleSachgebiet = (g: Rechtsgebiet | null) => setzeUrl('rg', g);
@@ -212,6 +235,7 @@ export function Rechtsprechung() {
               werte={werte}
               onChange={onFilter}
               bestand={alle}
+              richterRegister={richterRegister}
               sort={sort}
               onSort={setSort}
               dichte={dichte}

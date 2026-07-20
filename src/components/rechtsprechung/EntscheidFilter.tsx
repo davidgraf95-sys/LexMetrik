@@ -1,6 +1,8 @@
+import { useMemo } from 'react';
 import type { EntscheidFilterWerte, SortModus } from '../../lib/rechtsprechung/browse';
-import { normLabel, filterEntscheide, INSTANZ_ORDNUNG } from '../../lib/rechtsprechung/browse';
-import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
+import { normLabel, filterEntscheide, richterHaeufigkeit, INSTANZ_ORDNUNG } from '../../lib/rechtsprechung/browse';
+import type { BrowseEntscheid, RichterRegister } from '../../lib/rechtsprechung/register';
+import { RichterFilter } from './RichterFilter';
 
 // Schlanke Steuerleiste der Übersicht /rechtsprechung (ersetzt den schweren
 // Filterblock): EINE Toolbar-Zeile (Suche + Sortierung + Dichte) + eine sichtbare
@@ -43,11 +45,13 @@ function FacettenGruppe({ label, optionen }: {
   );
 }
 
-export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte, onDichte }: {
+export function EntscheidFilter({ werte, onChange, bestand, richterRegister, sort, onSort, dichte, onDichte }: {
   werte: EntscheidFilterWerte;
   onChange: (w: EntscheidFilterWerte) => void;
   /** Voller Bestand (vor Filter) — für die Auswahllisten/Zähler. */
   bestand: BrowseEntscheid[];
+  /** Slug → Anzeigename der Richter:innen; null solange die Projektion lädt (§8: dann Slug). */
+  richterRegister: RichterRegister | null;
   sort: SortModus;
   onSort: (s: SortModus) => void;
   dichte: 'liste' | 'karten';
@@ -128,6 +132,20 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
     })),
   ].filter((o) => o.id === 'alle' || o.n > 0 || o.aktiv);
 
+  // ── Spruchkörper-Achse (R-RICHTER): cross-gefilterte Optionen wie jede andere
+  //    Achse (R15) — die Zahl am Namen ist die ECHTE Resttreffer-Zahl im aktuellen
+  //    Filterzustand, nicht der Korpus-Wert.
+  //    useMemo ist Pflicht (§15.4, React Compiler AUS), hält den Pass aber NUR bei
+  //    Re-Renders ohne Filterwechsel (Sortierung/Dichte) zurück — ändert sich `werte`,
+  //    wird sehr wohl neu gerechnet, auch je Tastendruck der Freitext-Suche. Das ist
+  //    vertretbar und gemessen: voller Bestand (6'341) median 0.9–2.0 ms, p90 4.7 ms
+  //    (20.7.2026) — deutlich unter einem 16-ms-Frame, also nicht merklich langsamer.
+  const richterOpt = useMemo(
+    () => richterHaeufigkeit(filterEntscheide(bestand, { ...werte, richter: null }), richterRegister),
+    [bestand, werte, richterRegister],
+  );
+  const richterName = werte.richter ? richterRegister?.richter[werte.richter]?.name ?? null : null;
+
   // Aktive Sekundärfilter (ohne Sachgebiet — das zeigt die Rail) als entfernbare Chips.
   const aktiveChips: { key: string; label: string; loesche: () => void }[] = [];
   // Gemeinwesen (kanton/ebene) steht als sichtbare Facetten-Leiste mit Toggle —
@@ -184,6 +202,19 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
       {hatKantonal && gemeinwesenOpt.length > 1 && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} />}
       {hatMehrereInstanzen && instanzOpt.length > 1 && <FacettenGruppe label="Instanz" optionen={instanzOpt} />}
       {hatMehrsprachig && spracheOpt.length > 1 && <FacettenGruppe label="Sprache" optionen={spracheOpt} />}
+      {/* Spruchkörper: Autocomplete statt Chip-Leiste (~180 Namen, s. RichterFilter).
+          Die Achse erscheint nur, wenn der Ausschnitt überhaupt erfasste Besetzungen
+          trägt — ein leeres Suchfeld über nichts wäre eine Fehlversprechung (§8).
+          Der Aktiv-Chip lebt in der Komponente selbst (wie «Gemeinwesen» kein
+          zusätzlicher Chip unten — sonst doppelte Repräsentation). */}
+      {(richterOpt.length > 0 || werte.richter) && (
+        <RichterFilter
+          aktiv={werte.richter ?? null}
+          aktivName={richterName}
+          optionen={richterOpt}
+          onWaehle={(slug) => setze({ richter: slug })}
+        />
+      )}
 
       {/* Sekundärfilter — standardmässig zu (Inhalt steht oben, nicht der Filter). */}
       <details className="lc-card px-4 py-2.5">

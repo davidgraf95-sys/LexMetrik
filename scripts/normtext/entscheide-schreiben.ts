@@ -8,7 +8,8 @@ import { mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node
 import { join } from 'node:path';
 import { kuerzeRegeste, normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
-import type { BrowseEntscheid, EntscheidManifest } from '../../src/lib/rechtsprechung/register';
+import type { BrowseEntscheid, EntscheidManifest, RichterRef, RichterRegister } from '../../src/lib/rechtsprechung/register';
+import { parseBesetzung, kanonisiere, type KanonEintrag } from '../../src/lib/rechtsprechung/besetzung';
 import type { EntscheidRef, LeitfallRef, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
 import { extrahiereStatutRefs } from '../../src/lib/rechtsprechung/zitat-extraktion';
 import { minteEcliFuerSnapshot } from '../../src/lib/rechtsprechung/ecli';
@@ -219,6 +220,27 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   const manifest: BrowseEntscheid[] = [];
   const proNorm: Record<string, EntscheidRef[]> = {};
 
+  // ── Richter-Projektion, Durchgang 1: Besetzungs-Freitexte korpusweit parsen ──
+  // Die Kanonisierung («P. Schmid» → Patrizia oder Patrick?) ist nur mit Blick auf
+  // den GANZEN Korpus entscheidbar, darum zwei Durchgänge (§2: deterministisch,
+  // kein Raten). Der Snapshot bleibt unberührt — `rubrum.besetzung` ist und bleibt
+  // der amtliche Freitext (SSoT); `richter[]` ist eine reine Projektion daraus.
+  const besetzungRoh = new Map<string, ReturnType<typeof parseBesetzung>['richter']>();
+  const kanonInput: KanonEintrag[] = [];
+  for (const snap of auswahl) {
+    const freitext = snap.rubrum?.besetzung ?? null;
+    if (!freitext) continue;
+    const res = parseBesetzung(freitext, { gericht: snap.gericht });
+    if (!res.richter.length) continue;
+    besetzungRoh.set(keyVon(snap).key, res.richter);
+    for (const r of res.richter) {
+      kanonInput.push({ slug: r.slug, nachSlug: r.nachSlug, givenSlug: r.givenSlug, name: r.name, raum: snap.kanton });
+    }
+  }
+  const kanon = kanonisiere(kanonInput);
+  const raumVon = new Map<string, string>(auswahl.map((s2) => [keyVon(s2).key, s2.kanton]));
+  const richterCount = new Map<string, number>();
+
   for (const snap of auswahl) {
     const { key, datei } = keyVon(snap);
     const ziel = join(PUB, datei);
@@ -251,6 +273,25 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
       regesteVorhanden: !!snap.regeste, regesteKurz, sachgebiet: snap.sachgebiet, sprache: snap.sprache,
       normKeys: snap.normKeys, bestand: snap.bestand, kuratierung: snap.kuratierung,
       datei, quelle: snap.quelle, quelleUrl: snap.quelleUrl, fassungsToken: snap.fassungsToken,
+      ...(() => {
+        const roh = besetzungRoh.get(key);
+        if (!roh?.length) return {};
+        const raum = raumVon.get(key) ?? snap.kanton;
+        const richter: RichterRef[] = roh.map((r) => ({
+          s: kanon.map.get(`${raum}|${r.slug}`) ?? r.slug,
+          r: r.rolle,
+        }));
+        // Jeder Slug kommt ins Register (damit Block B IMMER einen Anzeigenamen
+        // auflösen kann — auch für reine Gerichtsschreiber:innen). Gezählt wird
+        // aber nur die RICHTER-Mitwirkung: die Facette in Block B führt
+        // Gerichtsschreiber:innen nicht als Richter (eigene Achse, später).
+        for (const x of richter) {
+          if (!richterCount.has(x.s)) richterCount.set(x.s, 0);
+          if (x.r === 'gerichtsschreiber') continue;
+          richterCount.set(x.s, richterCount.get(x.s)! + 1);
+        }
+        return { richter };
+      })(),
     });
 
     // Getrennter Übersichts-Eintrag (Auftrag David 26.6.): das vollständige Urteil zu
@@ -307,6 +348,23 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   manifest.sort((a, b) => (a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : 0));
   const manifestObj: EntscheidManifest = { erzeugt: datum, entscheide: manifest };
   writeFileSync(join(PUB, 'register.json'), JSON.stringify(manifestObj, null, 2) + '\n', 'utf8');
+  // ── Richter-Register (Slug → Anzeigename + Trefferzahl) ──
+  // Eigene, schlanke Projektion: die Facette in Block B lädt sie lazy für Labels
+  // und Zähler, damit das grosse register.json slug-schlank bleibt (§15).
+  // Enthält ALLE Spruchkörper-Slugs (Namensauflösung ist total); `count` zählt nur
+  // die Mitwirkung als RICHTER — ein Slug mit count 0 ist reine:r Gerichtsschreiber:in
+  // und gehört nicht in die Richter-Facette (§8: keine falsche Rollen-Zuschreibung).
+  // Deterministisch sortiert (Slug alphabetisch), damit Re-Läufe byte-gleich sind.
+  const richterEintraege: RichterRegister['richter'] = {};
+  for (const slug of [...richterCount.keys()].sort()) {
+    richterEintraege[slug] = {
+      name: kanon.anzeige.get(slug) ?? slug,
+      count: richterCount.get(slug)!,
+    };
+  }
+  const richterObj: RichterRegister = { erzeugt: datum, richter: richterEintraege };
+  writeFileSync(join(PUB, 'richter.json'), JSON.stringify(richterObj, null, 2) + '\n', 'utf8');
+
   // Artikel-Ebene (W3) zusätzlich zur Erlass-Ebene — proNorm bleibt unverändert.
   const proNormArtikel = baueArtikelIndex(auswahl);
   writeFileSync(join(PUB, 'norm-index.json'), JSON.stringify({ erzeugt: datum, proNorm, proNormArtikel }, null, 2) + '\n', 'utf8');
