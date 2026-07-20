@@ -359,3 +359,135 @@ describe('«M.» ist im deutschen Kantonstext ein Initial, keine Anrede', () => 
       .toEqual(['chaix:vorsitz', 'haag:mitglied', 'kropf:gerichtsschreiber']);
   });
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Regressionen der Gegenprüfung 20.7.2026 (Phantom-Richter, Fusionen, Rollen).
+// Jeder Fall ist ein belegter Amtstext aus dem Korpus, nicht konstruiert.
+// ─────────────────────────────────────────────────────────────────────────────
+describe('Gegenprüfung 20.7.2026 — erfundene Amtsträger:innen', () => {
+  it('«Juge présidant» ist ein Rollenwort, kein Nachname (BGE 151 IV 98)', () => {
+    const r = slugs('MM. et Mme les Juges fédéraux Denys, Juge présidant, Muschietti, Abrecht et von Felten', 'bge');
+    expect(r).not.toContain('presidant:mitglied');
+    // Der Vorsitz gehört Denys — der Marker hatte ihn zuvor konsumiert.
+    expect(r[0]).toBe('denys:vorsitz');
+  });
+
+  it('«giudice unica» (feminin) erzeugt keinen Richter «unica» (BVGer F-4218/2026)', () => {
+    const r = slugs('Giudice Regula Schenker Senn, giudice unica, con l’approvazione della giudice Aileen Truttmann', 'bvger');
+    expect(r).toEqual(['schenker-senn-regula:vorsitz', 'truttmann-aileen:mitglied']);
+  });
+
+  it('ZWEI Rollen-Qualifikatoren werden gestrippt — ein Richter, ein Slug (BStGer)', () => {
+    const fr = slugs('Les juges pénaux fédéraux Patrick Robert-Nicoud, président, Roy Garré', 'bstger');
+    const it = slugs('Giudici penali federali Patrick Robert-Nicoud, Presidente, Roy Garré', 'bstger');
+    expect(fr[0]).toBe('robert-nicoud-patrick:vorsitz');
+    // Beide Sprachfassungen MÜSSEN denselben Eimer treffen.
+    expect(it[0]).toBe(fr[0]);
+  });
+
+  it('blosses «de» der Zustimmungsformel klebt nicht am Namen (BVGer E-165/2026)', () => {
+    const r = slugs('Grégory Sauder, juge unique, avec l’approbation de Yanick Felley, juge', 'bvger');
+    expect(r).toEqual(['sauder-gregory:vorsitz', 'felley-yanick:mitglied']);
+  });
+
+  it('«Dr. phil. II» ist ein Grad, kein Richter «II» (bpatger O2024_002)', () => {
+    const r = slugs('Richter Dr. phil. II, Dipl. Biochem. Andreas Schöllhorn Savary', 'bpatger');
+    expect(r).toEqual(['schollhorn-savary-andreas:vorsitz']);
+  });
+
+  it('«Referent» ist NICHT der Vorsitz — höchstens ein Vorsitz je Spruchkörper', () => {
+    const r = parseBesetzung(
+      'Präsident Dr. iur. Mark Schweizer (Vorsitz), Richter Dr. chem. Michael Kaufmann (Referent)',
+      { gericht: 'bpatger' },
+    ).richter;
+    expect(r.filter((x) => x.rolle === 'vorsitz')).toHaveLength(1);
+    expect(r.find((x) => x.slug === 'kaufmann-michael')!.rolle).toBe('mitglied');
+  });
+});
+
+describe('Gegenprüfung 20.7.2026 — Fusionen, Spaltungen, Kontamination', () => {
+  it('fehlendes amtliches Komma verschmilzt zwei Bundesrichter nicht (BGE 147 II 454)', () => {
+    const r = slugs('MM. et Mme les Juges fédéraux Seiler, Président, Aubry Girardin, Donzallaz Beusch et Hartmann', 'bge');
+    expect(r).toContain('donzallaz:mitglied');
+    expect(r).toContain('beusch:mitglied');
+    expect(r.join()).not.toContain('donzallaz-beusch');
+  });
+
+  it('echte zweiteilige Nachnamen werden NICHT gespalten', () => {
+    expect(slugs('MM. les Juges fédéraux Aubry Girardin, van de Graaf et Kistler Vianin', 'bge'))
+      .toEqual(['aubry-girardin:vorsitz', 'van-de-graaf:mitglied', 'kistler-vianin:mitglied']);
+  });
+
+  it('Aktenzeichen im Rubrum-Feld kostet die Gerichtsschreiberin nicht (BGE 151 IV 175)', () => {
+    const r = slugs('MM. et Mme les Juges fédéraux Abrecht, Président, Koch et Hofmann. Greffière: Mme Kropf. 7B_950/2024et', 'bge');
+    expect(r).toContain('kropf:gerichtsschreiber');
+  });
+
+  it('Bund-Gerichtsschreiberin: zweiteiliger Nachname bleibt Nachname', () => {
+    const r = parseBesetzung('Bundesrichter Parrino, Präsident, Gerichtsschreiberin Keel Baumann', { gericht: 'bge' }).richter;
+    const gs = r.find((x) => x.rolle === 'gerichtsschreiber')!;
+    expect(gs.slug).toBe('keel-baumann');
+    expect(gs.nachSlug).toBe('keel-baumann');
+    expect(gs.givenSlug).toBeNull();   // sonst würde «keel» als Vollname registriert
+  });
+
+  it('führende Abkürzung «Th.» ist Vorname, nicht Nachnamensbestandteil', () => {
+    const r = parseBesetzung('Bundesrichter Haag, Th. Müller, Merz', { gericht: 'bge' }).richter;
+    const m = r.find((x) => x.nachSlug === 'muller')!;
+    expect(m.slug).toBe('muller-th');
+    expect(m.givenAbk).toBe(true);
+    expect(m.name).toBe('Th. Müller');
+  });
+
+  it('«Müller Th.» und «Th. Müller» landen im SELBEN Eimer (Wortstellung egal)', () => {
+    const a = parseBesetzung('Bundesrichter Th. Müller', { gericht: 'bge' }).richter[0];
+    const b = parseBesetzung('Bundesrichter Müller Th.', { gericht: 'bge' }).richter[0];
+    // Der Parser lässt die Schreibweise stehen (er stellt Namen nie um) — beide
+    // falten aber auf denselben Slug, sind also EINE Person in der Facette.
+    expect(a.slug).toBe('muller-th');
+    expect(b.slug).toBe('muller-th');
+    // Den Anzeigenamen entscheidet der Kanon-Pass: die häufigere, korrekt
+    // gestellte Form gewinnt — «Müller Th» darf nicht zum Facetten-Label werden.
+    const k = kanonisiere([
+      { slug: a.slug, nachSlug: a.nachSlug, givenSlug: a.givenSlug, givenAbk: a.givenAbk, name: a.name, raum: 'CH' },
+      { slug: a.slug, nachSlug: a.nachSlug, givenSlug: a.givenSlug, givenAbk: a.givenAbk, name: a.name, raum: 'CH' },
+      { slug: b.slug, nachSlug: b.nachSlug, givenSlug: b.givenSlug, givenAbk: b.givenAbk, name: b.name, raum: 'CH' },
+    ]);
+    expect(k.anzeige.get('muller-th')).toBe('Th. Müller');
+  });
+
+  it('nachgestellte EINZEL-Initiale bleibt Rauschen («Stadelmann T.» → stadelmann)', () => {
+    expect(slugs('Bundesrichter Stadelmann T., Präsident', 'bge')).toEqual(['stadelmann:vorsitz']);
+  });
+});
+
+describe('Gegenprüfung 20.7.2026 — Kanon: Abkürzung ist kein Vollname', () => {
+  const k = (slug: string, nachSlug: string, givenSlug: string | null, givenAbk: boolean, name: string): KanonEintrag =>
+    ({ slug, nachSlug, givenSlug, givenAbk, name, raum: 'BS' });
+
+  it('«Ph.» zieht den Initial-Eimer NICHT auf sich (waegeli-p bleibt Kanon)', () => {
+    const r = kanonisiere([
+      ...Array.from({ length: 97 }, () => k('waegeli-p', 'waegeli', 'p', true, 'P. Waegeli')),
+      k('waegeli-ph', 'waegeli', 'ph', true, 'Ph. Waegeli'),
+    ]);
+    expect(r.map.get('BS|waegeli-p')).toBe('waegeli-p');
+    expect(r.anzeige.get('waegeli-p')).toBe('P. Waegeli');
+    expect(r.kollisionen.some((z) => z.startsWith('ABKÜRZUNGS-VARIANTEN'))).toBe(true);
+  });
+
+  it('Anzeigename: HÄUFIGKEIT schlägt Länge — der Tippfehler gewinnt nicht mehr', () => {
+    const r = kanonisiere([
+      ...Array.from({ length: 167 }, () => k('t-k-d', 'tk', 'daniela', false, 'Daniela Thurnherr Keller')),
+      k('t-k-d', 'tk', 'daniela', false, 'Daniela Thurnherrr Keller'),
+    ]);
+    expect(r.anzeige.get('t-k-d')).toBe('Daniela Thurnherr Keller');
+  });
+
+  it('Anzeigename: ausgeschriebener Vorname schlägt die häufigere Abkürzung', () => {
+    const r = kanonisiere([
+      ...Array.from({ length: 288 }, () => k('pfleiderer-andrea', 'pfleiderer', 'a', true, 'A. Pfleiderer')),
+      ...Array.from({ length: 2 }, () => k('pfleiderer-andrea', 'pfleiderer', 'andrea', false, 'Andrea Pfleiderer')),
+    ]);
+    expect(r.anzeige.get('pfleiderer-andrea')).toBe('Andrea Pfleiderer');
+  });
+});

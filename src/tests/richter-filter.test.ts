@@ -56,3 +56,35 @@ describe('naechsterSlug / vorigerSlug — Auswahl über den STABILEN Slug', () =
     expect(vorigerSlug([], 'a')).toBeNull();
   });
 });
+
+describe('trefferFuer — «Vorname Nachname» bei nur-Nachname-Einträgen (20.7.2026)', () => {
+  // Über die Hälfte der Facetten-Einträge ist reiner Nachname bzw. Initial+Nachname:
+  // die Bundesgerichts-Rubra nennen keine Vornamen. Die natürliche Eingabe
+  // «Thomas Stadelmann» lief darum in den Leerzustand «Keine Richter:in mit diesem
+  // Namen …» — eine sachlich FALSCHE Aussage, denn die Person ist im Ausschnitt.
+  const liste = [
+    opt('stadelmann', 'Stadelmann', 213),
+    opt('thomi-g', 'G. Thomi', 302),
+    opt('denys', 'Denys', 189),
+    opt('oser-marc', 'Marc Oser', 425),
+  ];
+
+  it('findet die Person über den Nachnamen, wenn ein Vorname mitgetippt wird', () => {
+    expect(trefferFuer(liste, 'Thomas Stadelmann').map((o) => o.slug)).toEqual(['stadelmann']);
+    expect(trefferFuer(liste, 'Gabrielle Thomi').map((o) => o.slug)).toEqual(['thomi-g']);
+  });
+
+  it('findet auch bei umgekehrter Wortstellung', () => {
+    expect(trefferFuer(liste, 'Stadelmann Thomas').map((o) => o.slug)).toEqual(['stadelmann']);
+  });
+
+  it('lockert NICHT, solange die ganze Eingabe direkt trifft', () => {
+    // «Marc Oser» trifft Stufe 1 — die Fallback-Stufen dürfen nicht zusätzlich
+    // aufmachen, sonst verwässert eine präzise Eingabe.
+    expect(trefferFuer(liste, 'Marc Oser').map((o) => o.slug)).toEqual(['oser-marc']);
+  });
+
+  it('bleibt beim echten Fehlschlag leer (kein Verlegenheitstreffer)', () => {
+    expect(trefferFuer(liste, 'Zwygart Bäumlin')).toEqual([]);
+  });
+});

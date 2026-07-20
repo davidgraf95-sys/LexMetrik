@@ -27,11 +27,36 @@ export function faltName(s: string): string {
   return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ß/g, 'ss').toLowerCase();
 }
 
-/** Namens-Treffer zur Eingabe, Reihenfolge unverändert (bereits count-sortiert). */
+/**
+ * Namens-Treffer zur Eingabe, Reihenfolge unverändert (bereits count-sortiert).
+ *
+ * DREI STUFEN, weil der reine Teilketten-Vergleich die häufigste Eingabe verfehlte
+ * (Befund Gegenprüfung 20.7.2026): über die Hälfte der Facetten-Einträge ist NUR
+ * Nachname oder Initial+Nachname («Stadelmann» 213, «G. Thomi» 302, «Denys» 189) —
+ * die Bundesgerichts-Rubra nennen keine Vornamen. Wer «Thomas Stadelmann» eintippt,
+ * also so, wie Jurist:innen eine Richterperson benennen, bekam
+ * «Keine Richter:in mit diesem Namen im aktuellen Ausschnitt.» — eine SACHLICH
+ * FALSCHE Aussage: die Person ist im Ausschnitt, nur unter dem Nachnamen-Eimer.
+ *
+ *  1. Ganze Eingabe als Teilkette (bisheriges Verhalten, unverändert).
+ *  2. Sonst: NACHNAME = letztes Eingabe-Token («Thomas Stadelmann» → «stadelmann»).
+ *  3. Sonst: irgendein Token («Stadelmann Thomas», umgekehrte Reihenfolge).
+ *
+ * Die Stufen greifen strikt nacheinander: solange Stufe 1 etwas findet, ändert sich
+ * nichts am bisherigen Ergebnis — die Lockerung tritt nur ein, wo vorher NICHTS
+ * stand. Damit kann sie keine engere Suche verwässern.
+ */
 export function trefferFuer(optionen: RichterZaehler[], q: string): RichterZaehler[] {
   const f = faltName(q.trim());
   if (!f) return optionen;
-  return optionen.filter((o) => faltName(o.name).includes(f));
+  const direkt = optionen.filter((o) => faltName(o.name).includes(f));
+  if (direkt.length) return direkt;
+  const toks = f.split(/\s+/).filter(Boolean);
+  if (toks.length < 2) return [];
+  const nach = toks[toks.length - 1];
+  const ueberNachname = optionen.filter((o) => faltName(o.name).includes(nach));
+  if (ueberNachname.length) return ueberNachname;
+  return optionen.filter((o) => toks.some((t) => faltName(o.name).includes(t)));
 }
 
 // Auswahl über den STABILEN Slug statt über einen Positions-Index — dieselbe

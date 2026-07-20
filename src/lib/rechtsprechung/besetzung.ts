@@ -348,20 +348,16 @@ function tokenisiereName(rest: string, nurNachname: boolean): NameTeile | null {
     if (ohne.length > 1 && (istInitiale(ohne[0]) || istAbkuerzung(ohne[0]))) {
       return { given: ohne[0], surname: ohne.slice(1).join(' '), abk: true };
     }
-    // NACHgestellte MEHRBUCHSTABIGE Abkürzung trägt dieselbe Information in
-    // umgekehrter Wortstellung: «Bundesrichter Müller Th.» ist derselbe Amtsträger
-    // wie «Bundesrichter Th. Müller». Ohne diesen Zweig entstünden zwei Eimer für
-    // eine Person — genau die Klasse, die als «Th. Müller» / «Müller Th» in der
-    // Facette sichtbar war (Befund Gegenprüfung 20.7.2026).
-    //
-    // ABGRENZUNG zur Einzel-Initiale oben: ein einzelner Buchstabe («Stadelmann T.»)
-    // bleibt verworfenes Rauschen. Die Unterscheidung ist gewollt — das Kürzel «Th.»
-    // ist ein bewusst gesetzter Unterscheider des Gerichts und trägt Information,
-    // ein blosses «T.» nicht. Nur so bleibt `stadelmann` ein Eimer (213 Entscheide).
-    const letzt = ohne[ohne.length - 1];
-    if (ohne.length > 1 && istAbkuerzung(letzt)) {
-      return { given: letzt, surname: ohne.slice(0, -1).join(' '), abk: true };
-    }
+    // NACHgestellte Abkürzung («Bundesrichter Müller Th.») wird hier BEWUSST NICHT
+    // umgestellt: `trimRand` hat den Punkt zu diesem Zeitpunkt bereits entfernt, und
+    // ohne ihn ist ein kurzes Schluss-Token nicht mehr von einem echten zweiten
+    // Nachnamensteil zu unterscheiden («Hugi Yar», «Kistler Vianin»). Ein Umstellen
+    // per Längen-Heuristik würde diese Namen zerreissen — teurer Schaden für einen
+    // Einzelfall im Korpus.
+    // Das ist unschädlich, weil der Slug ohnehin zusammenfällt: «Müller Th» faltet zu
+    // `muller-th`, genau wie «Th. Müller» (Nachname + Vornamen-Kürzel). Beide Formen
+    // landen also im SELBEN Eimer; zu klären war nur der ANZEIGENAME, und das
+    // erledigt `hatAbkuerzung()` im Kanon-Pass.
     return { given: null, surname: ohne.join(' '), abk: false };
   }
   if (toks.length === 1) return { given: null, surname: toks[0], abk: false };
@@ -755,9 +751,24 @@ function byteVergleich(a: string, b: string): number {
   return a < b ? -1 : a > b ? 1 : 0;
 }
 
-/** Trägt der Anzeigename ein abgekürztes Namenselement («A.», «Th.»)? */
+/**
+ * Trägt der Anzeigename ein abgekürztes Namenselement («A.», «Th.»)?
+ *
+ * Die zweite Alternative fängt die Form OHNE Punkt: `trimRand` entfernt die
+ * Schluss-Interpunktion, «Bundesrichter Müller Th.» erreicht den Kanon-Pass also als
+ * «Müller Th». Beide Formen falten auf denselben Slug (`muller-th`), es ging nur um
+ * den Anzeigenamen — ohne diesen Zweig galt «Müller Th» als ausgeschrieben und
+ * schlug die korrekte, dreimal häufigere Schreibweise «Th. Müller» (Befund
+ * Gegenprüfung 20.7.2026).
+ *
+ * Nur für die ANZEIGENAMEN-Rangfolge, nie für Slug oder Identität — ein
+ * fälschlich als Abkürzung gewerteter zweiteiliger Nachname («Hugi Yar») kann
+ * darum keinen Schaden anrichten: konkurriert keine andere Schreibweise um
+ * denselben Slug, wird er ohnehin gewählt.
+ */
 function hatAbkuerzung(name: string): boolean {
-  return /(?:^|\s)[A-ZÄÖÜ][a-zäöüA-ZÄÖÜ]{0,2}\.(?=\s|$)/.test(name);
+  return /(?:^|\s)[A-ZÄÖÜ][a-zäöüA-ZÄÖÜ]{0,2}\.(?=\s|$)/.test(name)
+    || /\s[A-ZÄÖÜ][a-zäöü]{0,2}$/.test(name);
 }
 
 export function kanonisiere(eintraege: readonly KanonEintrag[]): KanonErgebnis {

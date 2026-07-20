@@ -157,6 +157,14 @@ export function EntscheidFilter({ werte, onChange, bestand, richterRegister, sor
   // zusammengeführt. Semantik trägt `leitcharakter`; der `nurBge`-Prädikat bleibt in
   // browse.ts erhalten (spätere Trennung amtliche-BGE ⟂ Leitentscheid bleibt möglich).
   if (werte.nurLeitentscheide) aktiveChips.push({ key: 'leit', label: 'Nur Leitentscheide (amtliche BGE)', loesche: () => setze({ nurLeitentscheide: false }) });
+  // Richter zählt als aktiver Filter — er fehlte in dieser Liste, obwohl die
+  // «zurücksetzen»-Zeile nur bei `aktiveChips.length > 0 || suchAktiv` rendert.
+  // Folge: beim typischen geteilten `?richter=…`-Link (einziger Filter, oft 0
+  // Treffer) verwies der Leerzustand auf ein «zurücksetzen», das es gar nicht gab
+  // (Befund Gegenprüfung 20.7.2026). Kein zusätzlicher sichtbarer Chip — die
+  // Richter-Achse hat ihren eigenen Chip in der Facette; hier zählt sie nur mit,
+  // damit die Zeile erscheint (sonst zwei Darstellungen derselben Sache).
+  const richterAktiv = !!werte.richter;
   if (werte.datumVon) aktiveChips.push({ key: 'von', label: `ab ${werte.datumVon}`, loesche: () => setze({ datumVon: null }) });
   if (werte.datumBis) aktiveChips.push({ key: 'bis', label: `bis ${werte.datumBis}`, loesche: () => setze({ datumBis: null }) });
   const suchAktiv = !!werte.q?.trim();
@@ -211,6 +219,7 @@ export function EntscheidFilter({ werte, onChange, bestand, richterRegister, sor
         <RichterFilter
           aktiv={werte.richter ?? null}
           aktivName={richterName}
+          registerGeladen={!!richterRegister}
           optionen={richterOpt}
           onWaehle={(slug) => setze({ richter: slug })}
         />
@@ -253,7 +262,7 @@ export function EntscheidFilter({ werte, onChange, bestand, richterRegister, sor
       </details>
 
       {/* Aktiv-Filter-Chips (immer sichtbar, auch bei zugeklapptem Disclosure). */}
-      {(aktiveChips.length > 0 || suchAktiv) && (
+      {(aktiveChips.length > 0 || suchAktiv || richterAktiv) && (
         <div className="flex flex-wrap items-center gap-1.5">
           {aktiveChips.map((c) => (
             <button key={c.key} type="button" onClick={c.loesche}
