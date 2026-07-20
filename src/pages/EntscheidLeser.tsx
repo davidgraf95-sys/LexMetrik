@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
@@ -14,7 +14,8 @@ import { NormText } from '../components/NormText';
 import { KontextPanel } from '../components/kontext/KontextPanel';
 import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/browse';
 import { kopfModell, type KopfLabelKey } from '../lib/rechtsprechung/kopf';
-import { normalisiereRegeste } from '../lib/rechtsprechung/register';
+import { normalisiereRegeste, type BrowseEntscheid, type RichterRef } from '../lib/rechtsprechung/register';
+import { besetzungsTeile } from '../lib/rechtsprechung/besetzung-verlinkung';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import { usePaneKontext } from '../components/layout/PaneKontext';
 import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
@@ -76,6 +77,53 @@ const KOPF_LABEL: Record<EntscheidSprache, Record<KopfLabelKey, string>> = {
   it: { gegenstand: 'Oggetto', parteien: 'Parti', vorinstanz: 'Autorità inferiore', besetzung: 'Composizione' },
   rm: { gegenstand: 'Gegenstand', parteien: 'Parteien', vorinstanz: 'Vorinstanz', besetzung: 'Besetzung' },
 };
+
+// ── Besetzungs-Zeile: amtlicher Wortlaut, Richter:innen klickbar ────────────
+//
+// Der Wortlaut bleibt UNVERÄNDERT — `besetzungsTeile()` zerschneidet ihn nur und
+// hängt die Teile lückenlos wieder aneinander (§8, Test-Invariante). Verlinkt
+// werden ausschliesslich richterliche Mitwirkende mit eindeutigem Kanon-Slug;
+// Gerichtsschreiber:innen und nicht eindeutig zuordenbare Namen bleiben Text
+// (die Facette `?richter=` führt GS nicht — ein Link liefe ins Leere).
+//
+// Optik (§13): derselbe dezente Inline-Link wie die Norm-Verweise im Lesetext
+// (gepunktete Unterstreichung, Akzent erst im Hover) — als Link erkennbar, ohne
+// den Rubrum-Block zu tigern. Fokus trägt der globale :focus-visible-Outline (F3).
+const BESETZUNG_LINK = 'underline decoration-dotted underline-offset-2 hover:text-brass-700';
+
+// §15.4: der React Compiler ist AUS — die Zerlegung (ein Parser-Lauf) darf nicht
+// an jedem Render des Lesers hängen (Tab-Wechsel, Kopiert-Toast, Lese-Modus,
+// Schriftgrösse). `useMemo` + `React.memo` mit Default-Komparator.
+const BesetzungWert = memo(function BesetzungWert({ freitext, gericht, refs }: {
+  freitext: string;
+  gericht: string;
+  refs: RichterRef[] | undefined;
+}) {
+  const teile = useMemo(
+    () => besetzungsTeile(freitext, gericht, refs),
+    [freitext, gericht, refs],
+  );
+  // Genau ein Teil OHNE Slug = reiner Wortlaut (nichts verlinkbar). Ein einzelner
+  // Teil MIT Slug ist dagegen ein gültiger Link (Freitext besteht nur aus dem
+  // Namen) und darf nicht wegfallen — Befund Gegenprüfung 20.7.2026.
+  if (teile.length === 1 && !teile[0].slug) return <>{freitext}</>;
+  return (
+    <>
+      {teile.map((t, i) => (t.slug
+        ? (
+          <Link key={i} to={`/rechtsprechung?richter=${encodeURIComponent(t.slug)}`}
+            className={BESETZUNG_LINK}
+            // §8 genau: die Facette zeigt ALLE Entscheide dieser Person — auch den
+            // gerade gelesenen. «Übrige» wäre eine kleine Unwahrheit.
+            title={`Alle Entscheide mit ${t.text} anzeigen`}>
+            {t.text}
+          </Link>
+        )
+        : <span key={i}>{t.text}</span>
+      ))}
+    </>
+  );
+});
 
 // Ehrlicher Marker, wenn die Thema-Leitzeile abgeleitet ist (keine amtliche Regeste, §8).
 const SYNTH_MARKER: Record<EntscheidSprache, string> = {
@@ -154,6 +202,12 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
   const hashRoh = (imPane ? paneLoc.hash : typeof window !== 'undefined' ? window.location.hash : '').slice(1);
   const meldeInhaltsKopf = useMeldeInhaltsKopf();
   const [snap, setSnap] = useState<EntscheidSnapshot | null>(null);
+  // Manifest-Eintrag desselben Entscheids — trägt die korpus-kanonisierten
+  // Richter-Slugs für die Besetzungs-Verlinkung. Bewusst im SELBEN Lade-Schritt
+  // gesetzt wie `snap` (der Eintrag ist ohnehin schon geladen, bevor der
+  // Snapshot geholt wird): kein zweiter async-Sprung, also kein Nachwachsen und
+  // kein Layout-Shift (§15.2).
+  const [eintrag, setEintrag] = useState<BrowseEntscheid | null>(null);
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
   const [kopiert, setKopiert] = useState(false);
   const [lese, setLese] = useState(false);
@@ -203,6 +257,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
       const s = await ladeEntscheid(eintrag.datei);
       if (!lebt) return;
       if (!s) { setZustand('fehlt'); return; }
+      setEintrag(eintrag);
       setSnap(s);
       setZustand('da');
       // Start-Ansicht GENAU EINMAL festlegen (Lade-Effekt, nicht pro Render →
@@ -410,7 +465,11 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
             {kopf.rubrumZeilen.map((z) => (
               <div key={z.label} className="contents">
                 <dt className="lc-overline pt-0.5">{kopfLabel[z.label]}</dt>
-                <dd className={z.label === 'gegenstand' ? 'text-ink-800' : 'text-ink-700'}>{z.wert}</dd>
+                <dd className={z.label === 'gegenstand' ? 'text-ink-800' : 'text-ink-700'}>
+                  {z.label === 'besetzung'
+                    ? <BesetzungWert freitext={z.wert} gericht={snap.gericht} refs={eintrag?.richter} />
+                    : z.wert}
+                </dd>
               </div>
             ))}
           </dl>
