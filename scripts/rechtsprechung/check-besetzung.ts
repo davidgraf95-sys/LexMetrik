@@ -165,6 +165,29 @@ if (verglichen < mitRichter * G3_MINDEST) {
   );
 }
 
+/**
+ * Identitäts-Beleg im gefalteten Raum: `fold()` bildet jede Nicht-Alphanumerik auf
+ * «-» ab, der Freitext ist also eine Folge bindestrich-getrennter Segmente.
+ * Ein Name gilt nur als belegt, wenn seine EIGENEN Segmente dort als
+ * zusammenhängende Segmentfolge auftreten — nicht als Teilkette innerhalb eines
+ * Segments. Sonst belegt «ott» den Namen Ott in «rottenberg» und «meier» in
+ * «meierhans». Mehrteilige Namen («gutmanns-bauer») bleiben so ebenfalls exakt.
+ */
+export function istWortTreffer(freitextGefaltet: string, nameGefaltet: string): boolean {
+  if (!nameGefaltet) return false;
+  const hay = freitextGefaltet.split('-').filter(Boolean);
+  const needle = nameGefaltet.split('-').filter(Boolean);
+  if (needle.length === 0 || needle.length > hay.length) return false;
+  for (let i = 0; i + needle.length <= hay.length; i++) {
+    let alle = true;
+    for (let j = 0; j < needle.length; j++) {
+      if (hay[i + j] !== needle[j]) { alle = false; break; }
+    }
+    if (alle) return true;
+  }
+  return false;
+}
+
 // ── Fidelity-Stichprobe: Nachname muss im amtlichen Freitext stehen ──
 // Deterministische Auswahl (jeder n-te Schlüssel), damit der Lauf reproduzierbar ist.
 // VOLLPRÜFUNG statt Stichprobe: die frühere Fassung prüfte jeden n-ten Schlüssel
@@ -176,9 +199,12 @@ for (const key of keys) {
   const ft = fold(freitextVon.get(key) ?? '');
   for (const r of rohProKey.get(key)!) {
     stichprobe++;
-    // Der gefaltete Nachname muss als Teilkette im gefalteten Freitext vorkommen.
-    if (ft.includes(r.nachSlug)) treffer++;
-    else fehler.push(`FIDELITY: ${key} → «${r.name}» (${r.nachSlug}) steht nicht im amtlichen Freitext.`);
+    // IDENTITÄTS-BELEG statt Substring-Präsenz (CLAUDE.md §6 Ziff. 7 d).
+    // `ft.includes(nachSlug)` liess jeden Namen durch, der zufällig als Teilkette
+    // irgendwo im Freitext vorkam — «Ott» in «Rottenberg», «Meier» in «Meierhans».
+    // Ein Beleg muss den Namen als eigenständiges Wort treffen, sonst belegt er nichts.
+    if (istWortTreffer(ft, r.nachSlug)) treffer++;
+    else fehler.push(`FIDELITY: ${key} → «${r.name}» (${r.nachSlug}) steht nicht als eigenständiger Name im amtlichen Freitext.`);
   }
 }
 
