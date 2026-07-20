@@ -242,3 +242,22 @@ Geklontes OCL-Repo lag unter `scratchpad/ocl` (ephemer). POC-Probe-Artefakte im 
 ## GESAMT-VERDIKT beide Achsen
 
 Der grösste ungenutzte Hebel ist **NICHT Scraper**, sondern **Technik-Ports build-time**: pro-Artikel-Leitfälle (#1) + Zitationsgraph + Instanzenzug + ECLI — deterministisches JSON im Produktpfad, keine Laufzeit-OCL-API (FAHRPLAN §8). Scraper: Hybrid statt Flotte. Nächste Entscheidung Davids: (Gesetze) Schema-Trade-off (a/b/c) · (Rechtsprechung) welcher Hebel zuerst — pro-Artikel-Leitfälle ist der Produkt-Nordstern.
+
+---
+
+## Nebengleis-Sichtung: fedlex-mcp (`github.com/malkreide/fedlex-mcp`) — geprüft 20.7.2026
+
+*Separater Fremd-Repo, nicht OCL* — hier als Steinbruch-Sichtung angedockt, weil es dieselbe Fedlex-SPARQL-Ader wie ② bespielt. Read-only-Sichtung von README + komplettem `server.py`. **Verdikt: KEIN Baustein für unsere Pipeline; drei Query-Muster als Steinbruch (MIT-lizenziert, frei übernehmbar).**
+
+**Was:** MCP-Server (Python/FastMCP, **MIT**, seit 3/2026, aktiv gepflegt), 12 Tools über zwei SPARQL-Endpunkte: **Fedlex** (SR/AS/BBl/Staatsverträge/Vernehmlassungen) + **LINDAS** (TERMDAT-Terminologie).
+
+**Warum kein Baustein (strikt flacher als unsere Pipeline):**
+- Liefert nur **Metadaten, nie Volltext** — kein `isExemplifiedBy`, kein Filestore-Zugriff, kein AKN-XML (② Query D + der Filestore-AKN-Pfad sind bei uns bereits tiefer).
+- Fassungswahl über `jolux:inForceStatus` **statt `dateApplicability`-Fenster** → vordatierte Konsolidierungen unbehandelt (bei uns Arbiter `check:fedlex-versionen`, §7-Currency).
+- SR-Suche ist **Titel-only**.
+- → Unsere eigene Pipeline (Filestore-AKN + `check:fedlex-versionen` als Currency-Arbiter) ist strikt tiefer. **NICHT installieren** (Dritt-MCP = Fremdcode im Gesprächskontext); nur Query-Muster übernehmen.
+
+**Steinbruch-Wert (drei Query-Muster, ★★★, Aufwand niedrig):**
+1. **Vernehmlassungen** via `jolux:Consultation` am Fedlex-SPARQL: Fristen-Monitoring mit `deadline`, `days_remaining` (Europe/Zurich berechnet), abgeleitetem Status (abgelaufene erscheinen nie als laufend). Fertiges Muster, falls je ein **Kanzlei-Rechtsmonitoring**-Feature gebaut wird (Nordstern Kanzlei-Praxistauglichkeit, `[[lexmetrik-praxis-handlungsplan]]`).
+2. **TERMDAT** über LINDAS-SPARQL: amtliche Terminologie der Bundeskanzlei, Begriff → DE/FR/IT/RM/EN inkl. Definition. **Bisher nicht in unserem Steinbruch** — neue Quelle.
+3. **Monitoring-Queries** als Vergleichsmaterial für `normen-monitor.yml`: `jolux:Act` + `publicationDate >= heute−N` (neueste AS-Publikationen) und `dateEntryInForce > heute` (bevorstehende Inkraftsetzungen).
