@@ -31,6 +31,15 @@
 // `ladeWerte()`, warum das SQL mitgezählt werden muss. Kompression wurde geprüft und
 // VERWORFEN: der Endpunkt lehnt `Content-Encoding: gzip` mit HTTP 400 ab (empirisch).
 //
+// VERBLEIBENDER ENGPASS (gemessen 20.7.2026, CI-Lauf 29757068566): die Entscheid-Phase
+// braucht 22,3 der 32,8 Minuten — 5093 Zeilen / 165 MiB bei 4 Zeilen/s. Dieselbe Rate lokal
+// über eine Heim-Leitung, also KEIN Bandbreiten-Problem, sondern der Schreibpfad der
+// Gegenseite für grosse FTS5-Mehrzeilen-Inserts (~2,9 MiB je Request in ~22 s ≈ 128 KiB/s).
+// Ein schnellerer Runner hilft nicht. Wächst der Entscheid-Korpus deutlich, ist das der
+// Punkt, der als Nächstes reisst — dann greift eine der Weichen, die hier bewusst NICHT
+// gezogen wurden (inkrementeller Sync mit stabilen rowids, oder Entscheide in einen
+// eigenen, seltener laufenden Job). `timeout-minutes: 90` trägt ~3,7x den heutigen Korpus.
+//
 // HOT-Inhalt (§11.5): erlasse + erlass_fassungen + artikel + fts_artikel (contentless FTS5,
 // Text einmalig lokal aus bloecke_json extrahiert) und fts_entscheide_schaufenster
 // (standalone, ALLE Schaufenster-Entscheide der rechtsprechung.db — Stand 20.7.2026 sind

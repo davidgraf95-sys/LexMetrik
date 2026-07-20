@@ -42,10 +42,22 @@ jobs:
     name: Build HOT-Artefakt · Turso-Sync · Live-Paritaet
     if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
-    # Gemessene Laufzeit des vollstaendigen Syncs nach der Transport-Reparatur: siehe
-    # PR-Beschreibung. Der Wert traegt Reserve fuer Korpus-Wachstum und schwankende
-    # Runner-Bandbreite — er ist die Notbremse, nicht das Zeitbudget.
-    timeout-minutes: 45
+    # GEMESSEN AUF DIESEM RUNNER (workflow_dispatch 20.7.2026, Lauf 29757068566):
+    # 32,8 min gesamt, davon 22,3 min allein `fts_entscheide_schaufenster` (5093 Zeilen,
+    # 165 MiB) bei 4 Zeilen/s.
+    #
+    # WICHTIG, weil es die naheliegende Annahme widerlegt: dieselbe Phase lief lokal ueber
+    # eine Heim-Leitung EBENFALLS mit 4-8 Zeilen/s. Der Engpass ist also NICHT die
+    # Bandbreite des Ausfuehrenden, sondern der Schreibpfad der Gegenseite fuer grosse
+    # FTS5-Mehrzeilen-Inserts (~2,9 MiB je Request in ~22 s = ~128 KiB/s effektiv). Ein
+    # schnellerer Runner hilft hier nicht.
+    #
+    # Daraus das Budget: 90 min sind ~2,7x der gemessenen Laufzeit. Bei 45 min waeren es
+    # nur 1,37x gewesen — der Entscheid-Korpus haette um ~65 % wachsen koennen, bevor der
+    # Job wieder in denselben Timeout laeuft, und genau dieser Wiederholungsfall ist der
+    # Grund fuer diese Reparatur. Mit 90 min traegt es ~3,7x den heutigen Korpus.
+    # Der Timeout bleibt die Notbremse; die eigentliche Grenze ist der Durchsatz oben.
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

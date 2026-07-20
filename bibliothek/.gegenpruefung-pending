@@ -1,11 +1,9 @@
 {
-  "hash": "76b352f861c7fcf3e41301fcc3a6537fb749efc699ed98e27f263a3028f3ae05",
+  "hash": "cdc6fd57ada6104c919ad3aa7cc71d8bac1ec1d4a7256410bb783a092571d215",
   "verdikt": "bestanden",
-  "quellePin": "fedlex OR 20260101 (AKN-XML, geltende Konsolidierung) + fedlex ZGB 20260701 + fedlex KG 20230701 + rechtsprechung.gerichte.bs.ch (AK.2022.32 / AK.2023.5 / AUS.2022.11) + Turso-Live-Replika",
+  "quellePin": "CI-Lauf 29757068566 (workflow_dispatch, turso-sync.yml) — gemessene Laufzeit 32.8 min, Entscheid-Phase 1336.5 s bei 4 Zeilen/s",
   "datum": "2026-07-20",
   "dateien": [
-    "scripts/datenhaltung/fts.ts",
-    "scripts/datenhaltung/turso-sync.ts",
-    "scripts/datenhaltung/turso-transport.ts"
+    "scripts/datenhaltung/turso-sync.ts"
   ]
 }
