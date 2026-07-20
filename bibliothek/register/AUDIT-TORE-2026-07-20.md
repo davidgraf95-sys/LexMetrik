@@ -192,6 +192,98 @@ nie; und `cancelled`-Läufe sehen im GitHub-UI aus wie kein Problem.
 
 ---
 
+## 4b. Signal-Ertrag: welches Tor hat je etwas gefangen?
+
+**Die Grenze vorweg (§8).** Die auswertbare `ci.yml`-Historie umfasst
+**60 Läufe über zwei Tage** (19.7.2026 00:52 – 20.7.2026 21:39 UTC). Das ist ein
+**zu dünnes Fenster**, um 58 Toren je eine belastbare Ertragsklasse zuzuweisen.
+Eine vollständige 58er-Tabelle wäre hier geraten, nicht gemessen — sie wird
+darum **nicht** geliefert. Was folgt, ist das, was die Historie wirklich trägt.
+
+### Verteilung der 60 Läufe
+
+| Ausgang | Anzahl |
+|---|---|
+| success | 36 |
+| failure | 17 |
+| cancelled | 6 |
+| laufend | 1 |
+
+### Alle 17 roten Läufe kamen aus genau ZWEI Quellen
+
+Ausgezählt über den jeweils fehlgeschlagenen *Step* jedes roten Laufs:
+
+| Auslöser | Rote Läufe |
+|---|---|
+| `check:perf-lighthouse` («Perf-Budget — Lighthouse-Metriken, 4× CPU + langsames 4G») | **6** |
+| e2e/Playwright-Shards («Browser-Smoke gegen dist», Shard/Gruppe 1–3) | **11** |
+| **irgendein anderes `check:*`-Tor in `ci.yml`** | **0** |
+
+Die zwölf schnellen Tore im PR-Pfad (`check:inventur`, `check:bibliothek`,
+`check:verfall`, `check:sweep`, `check:smoke`, `check:besetzung`,
+`check:entscheide`, `check:bs-entscheide`, `check:plan`,
+`check:dispatch-klausel`, `check:tor-paritaet`, `check:e2e-shards`) sind in
+diesem Fenster **kein einziges Mal** rot geworden.
+
+**Das ist kein Argument, sie zu streichen.** Sie laufen auf Code, den `npm run
+gate` lokal bereits blockiert hat — ein Tor, das lokal greift, kann in CI gar
+nicht mehr feuern. «Nie in CI rot» misst hier die Wirksamkeit der *lokalen*
+Kette, nicht die Nutzlosigkeit des Tors.
+
+### Echt vs. Falsch-Rot — beides belegt
+
+Die 17 roten Läufe zerfallen nachweislich in beide Klassen:
+
+**Falsch-Rot (Tor war fehlkalibriert, nicht das Produkt):**
+
+- `371ad5c9` «fix(ci): Falsch-Rot beseitigen — Chrome-Isolation, TBT-Normierung,
+  Shard-Starvation (#314)»
+- `76d5a85b` / `f68ff9da` «Deckel gegen die Between-Job-Streuung kalibriert
+  (TBT 6500, LCP 13500)»
+- `b76b3d6d` «Normierer nach Gegenmessung verworfen, Deckel dort verschärft wo
+  Signal ist»
+
+**Echte, gefangene Produktdefekte (mit Fix-Commit):**
+
+| Beleg | Gefangener Defekt |
+|---|---|
+| `3d88886f` | CLS-Fix: Serif-Webfont `font-display:optional` gegen **Linux-Wrapping-Swap** (A9 +30 px) — die Ursache der CLS-Serie |
+| `087a80d4` | Leser-Kopf-Titel gegen font-swap-Reflow gepinnt (BEFUND 1) |
+| `b3f30459` | metrik-getunter Times/Liberation-Serif-Fallback für Linux-CI (R5) |
+| `7d900388` | Fassungs-Zeile bekommt reservierten Slot — **CLS 0.0227 → 0.0002**, mit gemessenem Vorher/Nachher |
+
+Die CLS-Tore (e2e + Lighthouse) sind damit die **einzigen Tore mit im Messfenster
+belegtem Produkt-Ertrag**. Bemerkenswert: der Defekt trat **nur unter Linux-CI**
+auf und war lokal auf macOS nicht reproduzierbar — genau der Fall, für den ein
+CI-Tor existiert.
+
+### Der schärfste Einzelbeleg: `check:besetzung`
+
+`464cfbf4` «fix(rechtsprechung): Richter-Fundament — **11 erfundene
+Amtsträger:innen**, Namens-Fusionen/-Spaltungen, Tor-Blindstellen (#310)».
+`ci.yml` hält dazu selbst fest: «`check:besetzung` ist das Tor, das die 11
+erfundenen Amtsträger:innen aus #309 fängt — es war ausgerechnet unsichtbar.»
+
+Dieses Tor hat also einen **echten Datenintegritäts-Defekt** gefangen (erfundene
+Personen im Rechtsprechungs-Korpus — ein §8-Vorfall erster Ordnung) und stand
+dabei **auf der Paritäts-Allowlist**, lief also in keinem CI. Es ist der
+konkreteste vorliegende Beleg dafür, dass die Allowlist-Tore nicht ertragsarm
+sind, sondern nur **unsichtbar** — und damit das stärkste Einzelargument für R-1.
+
+### Klassifikation, so weit die Historie trägt
+
+| Klasse | Tore |
+|---|---|
+| **FING-ECHTE-DEFEKTE** (Beleg vorhanden) | `check:perf-lighthouse` + die e2e-CLS-Specs (`3d88886f`, `087a80d4`, `b3f30459`, `7d900388`) · `check:besetzung` (`464cfbf4`) · `check:tabellen`/`check:design-tokens`/`check:farbwelt`/`check:zyklen`/`check:seo-index`/`check:verfall-ui` (**Scheiterns-Fähigkeit in diesem Audit empirisch gezeigt**, §2.1) |
+| **NUR-GEFLAKED / fehlkalibriert** (teilweise) | `check:perf-lighthouse` — dieselben 6 roten Läufe enthielten auch echte Funde; das Tor ist beides gewesen |
+| **UNKLAR — Historie zu dünn** | alle übrigen Tore. Zwei Tage CI-Fenster erlauben keine Aussage «nie gefeuert»; ein Tor kann seit Monaten still schützen. |
+
+Ausdrücklich **nicht** behauptet wird für irgendein Tor «NIE-GEFEUERT». Diese
+Klasse liesse sich nur über eine Historie belegen, die hier nicht vorliegt — und
+nach §1 wäre sie ohnehin kein hinreichender Streich-Grund.
+
+---
+
 ## 5. Doppelungs-Analyse
 
 ### 5.1 Die zwei Perf-Tore — **keine Doppelung**
@@ -263,6 +355,10 @@ zusammenschrumpfen.
 Das ist zugleich der billigste Schritt des ganzen Audits — ein Block YAML gegen
 zehn Sekunden Laufzeit — und der mit dem grössten Effekt: er schliesst die Lücke,
 die `check:tor-paritaet` heute nur einfriert.
+
+Der Präzedenzfall liegt vor: `check:besetzung` fing die **11 erfundenen
+Amtsträger:innen** (#309/#310) — und stand dabei selbst auf dieser Allowlist
+(§4b). Die Tore dort sind nicht ertragsarm, sie sind unsichtbar.
 
 ### R-2 — `check:tor-paritaet` schärfen: Delegation maschinell binden
 
@@ -381,6 +477,10 @@ ausdrücklich «offene Bau-Einheit», also eher unfertig als tot.
 
 Ehrlich benannt (§8):
 
+- **Signal-Ertrag je einzelnem Tor** liess sich **nicht** flächendeckend
+  belegen: die `ci.yml`-Historie reicht nur zwei Tage zurück (60 Läufe). Was
+  belegbar war, steht in §4b; für alle übrigen Tore lautet das Verdikt
+  ausdrücklich **UNKLAR**, nicht «nie gefeuert».
 - **Nicht sabotiert** wurden die Tore, die bereits in `ci.yml` laufen (12) sowie
   die 10 Netz-Tore (`check:netz`) — letztere brauchen echte Netz-Zugriffe auf
   amtliche Quellen; eine Sabotage-Probe hätte dort keine Aussage über die
