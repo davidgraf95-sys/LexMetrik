@@ -98,3 +98,62 @@ I2 (sobald Recherche zurück) → I4 (Kriterien, mit I2) → I3 (Handelsgericht)
 I5 (Kostenrisiko, eigene §7-Grundlage Art. 106 ff.) → **I6 (fertig)** → I7 → I8 → I9.
 Je Etappe: Gate grün, §9-Bug-Check, Deploy auf frisches Ja. Nichts trägt
 `geprüft` bis zu Davids Wort-für-Wort-Abnahme (§7/§8).
+
+---
+
+## §Verzahnung — Frist × Kosten als Praxis-Workflow (`W1·5-PRAXIS`, Ideen-Intake 20.7.2026)
+
+> **ROADMAP-Schritt:** `W1·5-PRAXIS` (Welle 1 · 5-PRAXIS). Dieser Abschnitt ist die aus der
+> ROADMAP verlinkte Detailquelle (§14.1) — er ist **kein zweiter Einstieg**.
+>
+> **Abgrenzung zu `W1·4` (bindend, §14.3):** `W1·4` ist der **Cockpit-Restbau** (Etappen I2–I9
+> oben), `parked` auf der Recherche `wbqdyap3x` (Schlichtungs-/Reduktions-/Rechtsmittel-
+> Modifikatoren). `W1·5-PRAXIS` ist die **cross-Rechner-Verzahnungsschicht darüber** und
+> unblockiert. Beide fassen **nicht dieselben Dateien** an: I2–I9 arbeiten in
+> `src/lib/tarif`/`src/data/tarif` (Rechen-/Normschicht), `W1·5-PRAXIS` ausschliesslich in der
+> Orchestrierungs-/Prefill-Schicht. Wird diese Grenze im Bau verletzt, ist es eine
+> `W1·4`-Änderung und fällt unter deren Blocker.
+
+### V-1 · Was verkettet wird (Datenfluss, keine neue Rechenregel)
+
+```
+Streitwert (streitwert.ts, staffel.ts)
+      └─→ Gerichtskosten + Parteientschädigung (prozesskosten.ts, Art. 95 ZPO, 26 Kantone)
+Entscheiddatum × Kanton × Gerichtsferien (zpoFeiertage.ts, fristenEngine.ts)
+      └─→ Rechtsmittelfrist ──→ derselbe Kostenfluss  ──→ icsExport.ts
+```
+
+**Kein Rechenfundament wird angefasst.** Jede Zahl entsteht weiterhin in der jeweiligen Engine;
+diese Einheit reicht Ergebnisse **weiter** und füllt Formulare **vor**. Das ist der Grund, warum
+sie `golden byte-gleich` bleiben muss: ändert sich ein Wert, war es keine Verkettung, sondern ein
+Eingriff in die Logikschicht (§1/§3).
+
+### V-2 · Trägerbestand (verifiziert, Repo-Stand 20.7.2026)
+
+| Baustein | Fundort | Rolle in der Kette |
+|---|---|---|
+| Prozesskosten (Art. 95 ZPO, 26 Kt.) | `src/lib/tarif/prozesskosten.ts` | Kosten-Senke |
+| Streitwert / Staffel | `src/lib/tarif/streitwert.ts`, `staffel.ts` | Kosten-Quelle |
+| Fristen-Engine + Fachlader | `src/lib/fristenspiegel/fristenEngine.ts` | Frist-Quelle |
+| Feiertage/Computus (BJ-verifiziert) | `zpoFeiertage.ts`, `schkgFeiertage.ts` | Frist-Grundlage |
+| Prefill/Permalink | `src/lib/rechnerPermalinks.ts`, `src/lib/permalink.ts` | **die Verkettung** |
+| Kalender-Export | `src/lib/icsExport.ts` | Ausgang |
+
+### V-3 · Offene Formfrage (Entscheid beim Bau, kein Blocker)
+
+Eigene «Kosten-Cockpit»-Fläche **vs.** Prefill-Deep-Links zwischen den bestehenden Rechnern.
+Empfehlung: **Deep-Links zuerst** — sie sind additiv, brauchen keine neue Seite, keinen neuen
+Zustand und lassen sich ohne golden-Risiko zurücknehmen. Eine eigene Fläche erst, wenn die
+Deep-Link-Variante nachweislich zu viele Klicks kostet.
+
+### V-4 · Bewusst NICHT
+
+Keine Mandats-/Falldatei-Persistenz (Werkzeuge bleiben zustandslos, CLAUDE.md §5) · keine
+Fristenüberwachung und kein Anschein davon (§8) · keine neuen Tarif-Parameter (die gehören in
+`W1·4`/I2) · kein Eingriff in `src/lib/tarif` oder `src/data/tarif`.
+
+### V-5 · DoD
+
+§6-/§9-Tore grün · **golden byte-gleich** (Engines unberührt — das ist der Beweis, dass nur
+orchestriert wurde) · `check:gegenpruefung` nur, falls doch ein Risiko-Glob berührt wird; sauberes
+Chaining vermeidet das. Trailer `Roadmap: W1·5-PRAXIS`.

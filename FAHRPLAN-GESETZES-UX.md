@@ -1876,3 +1876,57 @@ dem steuerungs-Querverweis «§12 Ziff. 2» = Pathspec-Commit-Konvention).
 - **Gesamt-Bau-Go (Ausführung der Einheiten):** ausstehend — dieser Abschnitt ist der Intake
   (David-GO 17.7. = Aufnahme als Bau-Einheit), die Ausführung folgt der Fahrplan-Sequenz mit
   den obigen Gates.
+
+---
+
+## 13 · Gesetzes-Webseite UX-Pass «8b» (`W2·5h-GESETZ-UI`, Ideen-Intake 20.7.2026)
+
+> **ROADMAP-Schritt:** `W2·5h-GESETZ-UI` (Welle 2). Dieser Abschnitt ist die aus der ROADMAP
+> verlinkte Detailquelle (§14.1). Er ist **kein zweiter Einstieg** und **dupliziert die
+> G-Etappen der §§10–12 nicht** — er bündelt allein den UX-Pass **auf** ihnen.
+
+### 13.0 · Abgrenzung zu den bestehenden §-Einheiten (bindend, §14.3)
+
+Der Schritt liegt bewusst auf **fremder Bau-Fläche**. Die Grenze ist darum nicht Prosa,
+sondern im `@meta` als `seq-hart`/`seq-weich` geführt:
+
+| Nachbar | Gemeinsame Dateien | Verhältnis |
+|---|---|---|
+| `W2·5d` (§10/§11, Gesetzes-UX) | `parts.tsx`, `inhalt.tsx`, `ArtikelBody.tsx` | **`dep`** — echte Bau-Voraussetzung (G0/G1/G2a müssen stehen) |
+| `W2·5b` (Reader-Darstellung, `wip`) | `gesetz-leser/parts.tsx`, `inhalt.tsx`, `ArtikelBody.tsx` | **`seq-hart`** — läuft noch, nicht gleichzeitig anfassen |
+| `QS-UI` (a) Fundament- + (b) Hierarchie-Pass | Token-/Reglement-Schicht | **`seq-hart` auf die Teil-Schritte**, NICHT `dep` auf den Strang (s. 13.1) |
+| `W2·10-UI-NAV` | `gesetz-leser`, `GesetzLeser.tsx`, `components/suche` | **`seq-weich`** — Worktree-Isolation §12 genügt |
+| `W3·14` | Split-View-Rahmen | **`seq-weich`** — Rahmen dort, Inhalt hier |
+
+**Regel:** Wird im Bau eine Datei angefasst, die laut Tabelle einem Nachbarn gehört, ist es
+**dessen** Änderung und fällt unter dessen Status/Gate — nicht unter diesen Schritt.
+
+### 13.1 · Warum `QS-UI` NICHT als `dep` steht (§14.5, keine Schönung)
+
+`QS-UI` ist ausdrücklich ein **kontinuierlicher Querschnitt-Strang ohne Endzustand** («kein
+Reihenfolge-Slot»). Ein `dep` darauf wäre **nie erfüllbar** und machte diesen Schritt dauerhaft
+nicht startbar — das Tor `check:plan` prüft nur Azyklie, nicht Erfüllbarkeit, hätte den
+Widerspruch also nicht gemeldet. Massgeblich ist darum `seq-hart` auf die zwei **konkreten,
+abschliessbaren** QS-UI-Teil-Schritte (a) Fundament-Pass und (b) Informationshierarchie-Pass.
+Erst wenn diese beiden stehen, wird die Gesetzes-Fläche angefasst — sonst wird sie zweimal
+angefasst, und das ist der ganze Grund für Davids Sequenz «erst app-weit, dann Gesetze».
+
+### 13.2 · Scope
+
+Rubrik `/gesetze` + Gesetz-Leser für die tägliche Norm-Arbeit: Normtext-Darstellung,
+Gliederung/TOC, Split-View **im Leser** (Rahmen bleibt `W3·14`), Suche im Gesetz, Fussnoten
+und Marginalien. **Feasibility 🟢 aus-Bestand** — es entsteht keine neue Datenart, keine neue
+Extraktion und kein neuer Zustand; es ist ein Darstellungs-/Interaktions-Pass auf bereits
+ausgeliefertem Material.
+
+### 13.3 · Bewusst NICHT
+
+Keine Änderung an Extraktion oder Snapshot-Format (das wäre §-10/§-12-Fläche bzw.
+`W2·5g-ZEIT`) · kein neuer persistenter Zustand · keine Re-Öffnung der A27/§11.7-Entscheidung
+(SektionKontextKopf) ohne David-Entscheid · keine Umnummerierung der `#art-`-Konvention (R8/K2).
+
+### 13.4 · DoD
+
+`check:perf-budget` · `check:linien-kanon` · `e2e/leser-lesemass` · axe ·
+**golden byte-gleich (Normtext-Treue §15 — Tempo gewinnt nie gegen Treue)**.
+Trailer `Roadmap: W2·5h-GESETZ-UI`.

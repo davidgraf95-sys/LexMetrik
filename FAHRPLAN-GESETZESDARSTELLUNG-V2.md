@@ -110,3 +110,55 @@ Doktrin: Farbe NUR auf der Referenz-/Verzahnungsschicht (Chips/Badges/Kopf); Nor
 - Fussnoten-Apparat als eigene visuelle Kategorie (F5 optional slate-Trenner): fest zuweisen oder bewusst offen lassen.
 - Marker-Granularität bei intakten Erlassen (Absatz-Ende statt Wortstelle): bekannt, erst mit FN-5 behoben.
 - **Sektionstitel-/Anhang-Fussnoten ohne Ziel-Token (Gegenprüfungs-Befund 10.7., vorbestehend, KEINE Regression):** Fussnoten, deren Marker auf einem artikellosen Abschnitts-/Gliederungstitel (VZG 225/226 «Schlussbestimmungen der Änderung vom …», OR 871–873/881/894/920–922/942–944 Übergangs-Titel) oder in einem Anhang (FZA 42–120, Anhang I ff.) sitzen, haben kein `art_`-Token und bleiben unerfasst — `randtitelFn` greift nur, wenn unter der Überschrift ein Artikel folgt. Eigener Backlog-Posten (Anhang-/Titel-Fussnoten-Träger), nicht Teil von FN-1.
+
+---
+
+## §6 Norm-Zeitmaschine + Fassungs-Diff (`W2·5g-ZEIT`, Ideen-Intake 20.7.2026)
+
+> **ROADMAP-Schritt:** `W2·5g-ZEIT`, `status: blocked` auf `zeit-historik-poc`.
+> Detailquelle zum ROADMAP-Schritt (§14.1). Die **Metadaten-Timeline** ist Sache von G-HIST /
+> `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake` und wird hier **nicht dupliziert** (§14.3).
+
+**Ziel.** «Art. X, wie er am Tag Y galt» (verknüpft mit dem Entscheiddatum) + visueller Diff
+zweier Konsolidierungen. Diese Einheit konsolidiert die bisher verstreute Planung: **M16**
+(Point-in-Time, freigeschaltet nach AKN-XML-Phase 1, s. §2/Quell-Architektur) + **G-HIST** als
+Daten-Unterbau.
+
+### §6.1 Die zwei Hälften sind sehr ungleich (§8, keine Schönung)
+
+🟢 **Metadaten-Timeline** («gilt seit …» / «was änderte sich wann») — **läuft bereits** als
+G-HIST-UI: `public/normtext/historie/*.json` mit `giltSeit` + `ereignisse[]` (Datum/Absatz/AS-ELI).
+**Hier nichts zu bauen.**
+
+🟠 **Echter Alt-Volltext + Alt-vs-Neu-Wortdiff — braucht Zusatzdaten und ist gross.** Auf Platte
+liegt je Norm **nur die geltende Fassung** (ein `stand`/`fassungsToken`/`bloecke` je Artikel); die
+Historie liefert Änderungs-**Metadaten, nicht den historischen Text**. Die Fähigkeit ist vorhanden
+(Fedlex `jolux:Consolidation`/`dateApplicability` via SPARQL — `fedlex-versionen-pruefen.ts` fragt
+das bereits ab), aber es braucht einen **neuen historischen Extraktions-Durchlauf**
+(N Konsolidierungen × 227 Erlasse) samt neuem Speicher- und §7-Provenienz-Modell.
+
+**Der Diff selbst ist trivial-deterministisch** (String-Diff, §2). **Der Aufwand steckt
+vollständig in der Daten-Beschaffung** — wer das umdreht, plant die Einheit falsch.
+
+### §6.2 Etappe Z0 (blocker-auflösend, VOR jedem Bau)
+
+1. POC historische Konsolidierungs-Extraktion (ein Erlass, mehrere Konsolidierungen),
+2. Speicher-/Provenienz-Entwurf (§7 a–d **je Fassung**, nicht nur je Erlass),
+3. Kostenschätzung Durchlauf + Artefaktgrösse,
+4. **Bau-GO je Kandidat durch David** (analog zum bestehenden G-HIST-Intake-Vorbehalt).
+
+Rahmen und Kostenschätzung: `bibliothek/recherche/norm-zeitmaschine-poc.md`.
+
+### §6.3 Vorbedingungen, die KEINE `dep` sein können (§14.5-Ehrlichkeit)
+
+AKN-XML-Phase 1 und G-HIST sind **keine getrackten ROADMAP-Schritte mit `@meta`-ID** — sie leben
+als Strang-Detailblock bzw. in `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake`. Ein `dep` auf sie ist
+maschinell nicht formulierbar; die Reihenfolge trägt darum **vollständig der Blocker
+`zeit-historik-poc`**, dessen Registereintrag in `ROADMAP.md` beide Vorbedingungen ausdrücklich
+mitführt. Sobald eine davon ein eigener Schritt wird, wandert sie in `dep`.
+
+### §6.4 DoD
+
+POC-Verdikt + David-GO **vor** Bau · `check:normtext` / `check:normtext-netz` ·
+`check:gegenpruefung` (Extraktions-Risikopfad) · §7 a–d **je Fassung** · golden byte-gleich.
+Trailer `Roadmap: W2·5g-ZEIT`.
