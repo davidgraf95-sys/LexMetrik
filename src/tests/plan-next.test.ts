@@ -68,6 +68,52 @@ describe('resolve', () => {
   });
 });
 
+// Der `slot: inhaber`-Zweig (next.ts, Befund 20.7.2026 bei der Slot-Übergabe
+// W2·6-DATA → W3·12): Ohne den ausdrücklichen Inhaber-Vorrang meldete next.ts
+// den Inhaber als «wartet auf 26×-Slot» — wartend auf den Slot, den er selbst
+// hält — und liess statt seiner den dokument-ersten anderen 26×-Schritt zu.
+describe('resolve — 26×-Slot-Inhaber (slot: inhaber)', () => {
+  it('Inhaber ist ready-now, obwohl ein anderes 26× im Dokument FRÜHER steht', () => {
+    const b = resolve([
+      einheit('FRUEH', { asset26x: true }),
+      einheit('INHABER', { asset26x: true, slot: 'inhaber' }),
+    ]);
+    expect(b.readyNow).toContain('INHABER');
+    expect(b.readyNow).not.toContain('FRUEH');
+    // Der Inhaber darf NIE auf den Slot warten, den er selbst hält.
+    expect(b.wartet26xSlot).toEqual(['FRUEH']);
+  });
+
+  it('alle Nicht-Inhaber-26× warten auf den Slot, unabhängig von der Position', () => {
+    const b = resolve([
+      einheit('VOR', { asset26x: true }),
+      einheit('HALTER', { asset26x: true, slot: 'inhaber' }),
+      einheit('NACH', { asset26x: true }),
+    ]);
+    expect(b.readyNow).toEqual(['HALTER']);
+    expect(b.wartet26xSlot).toEqual(['VOR', 'NACH']);
+  });
+
+  it('Nicht-26×-Schritte bleiben vom Inhaber unberührt', () => {
+    const b = resolve([
+      einheit('NORMAL', { kollision: ['src/a.ts'] }),
+      einheit('INHABER', { asset26x: true, slot: 'inhaber' }),
+      einheit('ANDERES26X', { asset26x: true }),
+    ]);
+    expect(b.readyNow).toEqual(['NORMAL', 'INHABER']);
+    expect(b.wartet26xSlot).toEqual(['ANDERES26X']);
+  });
+
+  it('ohne Inhaber gilt weiter die Dokumentreihenfolge (Rückfall-Zweig)', () => {
+    const b = resolve([
+      einheit('ERST', { asset26x: true }),
+      einheit('ZWEIT', { asset26x: true }),
+    ]);
+    expect(b.readyNow).toEqual(['ERST']);
+    expect(b.wartet26xSlot).toEqual(['ZWEIT']);
+  });
+});
+
 describe('resolve — Lane-Sicherheit + inArbeit (Sweep)', () => {
   it('leere kollision → konservativ eigene Lane (nicht co-laned)', () => {
     const b = resolve([einheit('A'), einheit('B')]);

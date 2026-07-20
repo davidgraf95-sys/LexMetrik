@@ -35,6 +35,12 @@ export function resolve(einheiten: Einheit[]): Buckets {
   const done = new Set(sortiert.filter((e) => e.etikett.status === 'done').map((e) => e.id));
   const slot = sortiert.find((e) => e.etikett.asset26x && e.etikett.status === 'wip');
   const slot26xBelegtVon = slot ? slot.id : null;
+  // Der ausdrücklich etikettierte Slot-Inhaber (@meta `slot: inhaber`, von check.ts Regel 5b
+  // auf höchstens EINEN erzwungen) hat Vorrang vor «erster ready-26×-Schritt in Dokument-
+  // reihenfolge». Ohne diese Zeile meldete next.ts den Inhaber als «wartet auf 26×-Slot» —
+  // also wartend auf den Slot, den er selbst hält — und liess statt seiner den erstbesten
+  // anderen 26×-Schritt zu (Befund 20.7.2026 bei der Slot-Übergabe W2·6-DATA → W3·12).
+  const inhaber26x = sortiert.find((e) => e.etikett.slot === 'inhaber')?.id ?? null;
 
   const readyNow: string[] = [];
   const wartetDep: { id: string; offen: string[] }[] = [];
@@ -55,7 +61,8 @@ export function resolve(einheiten: Einheit[]): Buckets {
     if (!t.of) { wartetFachzeit.push(e.id); continue; }
     const offen = t.dep.filter((d) => !done.has(d));
     if (offen.length) { wartetDep.push({ id: e.id, offen }); continue; }
-    if (t.asset26x && (slot26xBelegtVon || ready26xAdmitted)) { wartet26xSlot.push(e.id); continue; }
+    if (t.asset26x && inhaber26x && e.id !== inhaber26x) { wartet26xSlot.push(e.id); continue; }
+    if (t.asset26x && !inhaber26x && (slot26xBelegtVon || ready26xAdmitted)) { wartet26xSlot.push(e.id); continue; }
     if (t.asset26x) ready26xAdmitted = true;
     readyNow.push(e.id);
   }

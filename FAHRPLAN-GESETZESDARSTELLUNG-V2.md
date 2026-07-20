@@ -162,3 +162,57 @@ mitführt. Sobald eine davon ein eigener Schritt wird, wandert sie in `dep`.
 POC-Verdikt + David-GO **vor** Bau · `check:normtext` / `check:normtext-netz` ·
 `check:gegenpruefung` (Extraktions-Risikopfad) · §7 a–d **je Fassung** · golden byte-gleich.
 Trailer `Roadmap: W2·5g-ZEIT`.
+
+---
+
+## §7 Fassungshistorie an-/abwählbar + Fassungs-Fundament (`W2·5i-HIST-ANSICHT`, §14-Intake 20.7.2026)
+
+### §7.1 Der Befund (gemessen am OR)
+| Klasse | Anzahl | Anteil |
+|---|---:|---:|
+| Fussnoten gesamt | 933 | 100 % |
+| davon **Änderungsvermerke** | **778** | **~83 %** |
+| davon **echte Verweise** | **77** | ~8 % |
+
+Die Fussnoten-Spalte ist damit überwiegend **Fassungshistorie im Fussnoten-Gewand**. Folge für die
+Bedienung: Wer Fussnoten abschaltet, verliert die echten Verweise mit; wer sie anlässt, liest
+überwiegend Revisionsprosa. Beides ist schlecht — deshalb die Trennung.
+
+### §7.2 Bau-Vorschlag
+Dreiwertige Auswahl **«Änderungshistorie: aus / als Fussnoten / als Chronologie»**, eingeklinkt in das
+bestehende **«Ansicht ▾»**-Menü (`src/pages/gesetz-leser/LeserAnsichtMenu.tsx` — hat Persistenz **und**
+Pre-Paint-Mechanik bereits; kein neues Menü bauen). **Verweis-Fussnoten unabhängig davon** schaltbar.
+Löst nebenbei das bekannte Leerraum-Residuum im Reader.
+
+### §7.3 ZWINGENDE Vorstufe H0 — Trennbarkeit messen, bevor gebaut wird
+Die 778/77-Zahl belegt, **dass** zwei Klassen existieren. Sie belegt **nicht**, dass sie maschinell
+sauber trennbar sind. Vor jeder UI-Zeile ist zu erheben:
+
+1. **Korpusweit**, nicht nur am OR — die Leitplanke «nie aus einem Beispiel aufs Ganze schliessen» gilt
+   hier besonders, weil das OR ein alter, oft revidierter Erlass ist und damit ein Ausreisser sein
+   könnte.
+2. **Präzision und Recall** der Klassifikation Änderungsvermerk ↔ Verweis, mit Zahlen.
+3. **Die Grauzone benennen:** Fussnoten, die *beides* tun (Änderungsvermerk *mit* Verweis). Ihre Zahl
+   entscheidet mit über die Machbarkeit.
+
+**Verdikt-Regel:** Fällt H0 schlecht aus, wird der Umschalter **nicht** gebaut. Eine Ansicht, die 5 %
+der Fussnoten falsch einordnet, blendet Normtext-Information aus und verletzt die §15-Funktions-Treue.
+Ein ehrliches «nicht trennbar» ist ein gültiges Ergebnis dieses Schritts.
+
+### §7.4 Fassungs-Fundament (gilt über diesen Schritt hinaus)
+David, 20.7.2026: das Fundament für historische Gesetzesfassungen soll bei **jeder** Normtext-Arbeit
+mitgedacht werden — nicht erst, wenn die Zeitmaschine (`W2·5g-ZEIT`, geparkt) gebaut wird. Verankert
+ist es hier statt dort, weil ein geparkter Schritt keine Auflage durchsetzen kann.
+
+1. **Fassungs-Schlüssel durchgängig mitführen** — `fassungsToken` / `stand` / `sha` auch dort, wo heute
+   nur die geltende Fassung gezeigt wird. Sie später nachzurüsten ist teurer, als sie jetzt
+   mitzuschleifen.
+2. **Anker fassungsstabil halten** — `#art-…` darf nicht kippen, sobald eine zweite Fassung danebentritt.
+   Deep-Links und Zitate aus Schriftsätzen müssen über den Fassungs-Zuwachs hinweg gültig bleiben
+   (§15-Funktions-Treue).
+3. **§8 «nicht geltendes Recht» unmissverständlich** — sobald irgendwo eine Nicht-Ist-Fassung sichtbar
+   wird, muss sie als solche erkennbar sein, ohne dass man die URL liest. Eine historische Fassung, die
+   aussieht wie geltendes Recht, ist ein Haftungsrisiko, kein Feature.
+
+**Das ist kein eigener Bau-Schritt**, sondern eine Auflage. Sie wird in `W2·5i-HIST-ANSICHT` zuerst
+wirksam und gilt danach fort.
