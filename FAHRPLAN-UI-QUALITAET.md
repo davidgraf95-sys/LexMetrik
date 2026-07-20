@@ -106,3 +106,48 @@ gemeinsamen Muster und die Hierarchie, dann wird die Gesetzes-Fläche darauf gez
 - **Golden byte-gleich**, wo die Änderung verhaltensrelevant sein könnte (§6).
 - Kein Rechtsinhalt in derselben Einheit wie reine UI (§14.2 — Risiko-Klassen nicht mischen).
 - Trailer `Roadmap: QS-UI`.
+
+---
+
+## §7 · Funktions-Inventar und Bedienungsanleitung (`W2·16-INVENTAR` / `W2·16-ANLEITUNG`)
+
+**§14-Intake 20.7.2026.** Davids Vorgabe wörtlich: **«erst wenn es Sinn ergibt»** → daraus der
+**Zweischritt**. Beide Schritte hängen an diesem Fahrplan, weil das Inventar Input für `QS-UI` ist
+und die Anleitung erst nach `QS-UI` entsteht.
+
+### §7.1 Schritt 1 — Funktions-Inventar (`W2·16-INVENTAR`, früh)
+Vollständige, ehrliche Aufnahme dessen, **was Lexmetrik heute kann**. Je Werkzeug/Fläche:
+
+| Feld | Inhalt |
+|---|---|
+| Zweck | wofür man es benutzt, in einem Satz |
+| Eingaben | was der Nutzer liefern muss |
+| Grenzen | was es **nicht** kann/abdeckt (§8) |
+| Status | `verified` / `entwurf` / `geplant` — **geprüft, nicht abgeschrieben** |
+| Fundort | Route + Engine-Datei |
+
+**Warum früh:** Man kann eine Oberfläche nicht konsistent machen, solange niemand die Funktionsmenge
+aufgeschrieben hat. Das Inventar ist damit **Vorleistung für `QS-UI`** (§1 Audit-Methodik: man auditiert
+gegen eine Liste, nicht gegen Erinnerung) und **nicht** an die Anleitung gekettet.
+
+**Quellen:** `src/lib/startseiteConfig.ts` (§5-SSoT) + der Funktions-Katalog in `ROADMAP.md`.
+**Heimat des Ergebnisses:** `bibliothek/` mit Eintrag in `bibliothek/INDEX.md` (CLAUDE.md §11).
+
+**Fallstrick, ausdrücklich:** Status-Marker werden **an der Realität geprüft**, nicht aus dem Katalog
+übernommen. Ein Inventar, das die vorhandenen Marker abschreibt, reproduziert nur deren Fehler — und
+`LERNPHASE-AB` (Status-Marker-Audit) hat genau diese Aufgabe noch offen. Die beiden Schritte stützen
+sich gegenseitig; wer zuerst läuft, liefert dem anderen Belege.
+
+### §7.2 Schritt 2 — Bedienungsanleitung / Onboarding (`W2·16-ANLEITUNG`, bewusst spät)
+**Nach `QS-UI` (8a) und nach `W2·5h-GESETZ-UI` (8b).** Eine Anleitung auf eine Oberfläche zu schreiben,
+die gleich danach umgebaut wird, ist doppelte Arbeit und veraltet beim Merge.
+
+**Sequenz-Mechanik (§14.3), bewusst wie bei `W2·5h-GESETZ-UI`:** `dep` trägt **nur**
+`W2·16-INVENTAR` — ein endlicher Schritt, dessen `done` erreichbar ist. `QS-UI` ist ein
+**kontinuierlicher Querschnitt ohne Endzustand**; ein `dep` darauf wäre nie erfüllbar und machte die
+Anleitung dauerhaft nicht startbar. Die echte Reihenfolge trägt darum `seq-hart: [QS-UI(8a),
+W2·5h-GESETZ-UI(8b)]`.
+
+**DoD:** deckt die Funktionsmenge aus dem Inventar **vollständig** ab — jede stille Auslassung ist ein
+§8-Verstoss, weil sie eine Fähigkeit verschweigt oder eine nicht vorhandene suggeriert · Sprache nach
+§13 Ziff. 3 (klar für Fach **und** Laie, keine Schachtelsätze) · axe · golden byte-gleich.

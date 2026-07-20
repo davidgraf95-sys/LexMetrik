@@ -250,3 +250,68 @@ Vollständige 25 verifizierten Befunde (je mit `costEvidence`, `logicLossAssessm
 `verdict`) im Workflow-Ergebnis vom 30.6.2026 (Task `wotwblspd`). Bei Bau eines Punktes die dortige
 `logicLossAssessment` lesen — sie nennt je Befund die **verlustfreie Variante** und die verworfene
 riskante Variante.
+
+---
+
+## Nachlese aus #312/#314 + echter CLS-Defekt (§14-Intake 20.7.2026)
+
+### A · Der Tag in einem Satz
+#312 hat den TBT-Deckel auf `/gesetze/bund/OR` gegen die gemessene Runner-Verteilung kalibriert,
+#314 hat das CI-Falsch-Rot von 39 % auf ~2 % gedrückt. Beides war richtig — aber der Zustand, den sie
+hinterlassen, ist **ein Übergangszustand**, und zwei neue blinde Flecken sind dabei entstanden.
+
+### B · Fünf offene Posten, nach Hebel geordnet (`QS-PERF` Teil e)
+
+**1. LCP-Element-Attribution — die dringendste Einzeländerung.**
+`largest-contentful-paint-element` aus dem LHR ins Log **und** nach `dist/_perf/lighthouse.json`.
+~5 Zeilen, reine Diagnose, kein Verhaltensrisiko. Sie beantwortet die derzeit teuerste offene Frage:
+Die **OR-LCP-Bimodalität** (8 Läufe ~3,5 s, 8 Läufe ~11,4 s) ist entweder ein Messartefakt — oder der
+**Replace-Repaint ist das LCP-Element**. Im zweiten Fall ist der 11,4-s-Modus **reales Nutzererleben**
+und der 3,5-s-Modus misst das falsche Ereignis. **Jede weitere Messreihe ohne diese Angabe ist
+verschenkt**, darum steht sie vor allem anderen.
+
+**2. TBT auf OR wieder scharf stellen.** Aktuell **6500 — bewusst stumpf**. Damit trägt **CLS (0,05)
+derzeit allein die Regressions-Last**. Erst nach Posten 1 und nach neu erhobener Verteilung nachziehen.
+
+**3. Zwei blinde Flecken, die #314 selbst erzeugt hat.** Ehrlich mitführen, nicht verschweigen:
+- **(a) Warm-/kumulative Regressionen.** Die Chrome-Isolation macht jeden Lauf **kalt**. Die dabei
+  entfernte «Drift» war zugleich ein **akzidenteller Detektor für aufschaukelnde Degradation**
+  (Speicherlecks, nicht abgeräumte Listener, Cache-Bloat). Defekte, die **ab der 2. Navigation**
+  auftreten, werden jetzt **nie** gemessen. Antwort: eine bewusste, getrennte Warm-Messreihe — nicht
+  die Isolation zurücknehmen (die war richtig).
+- **(b) Interaktions-Spätshifts.** `nurAbInstall` verbannt **Layout-Sprünge >500 ms nach Interaktion**
+  aus **jedem** Budget. Auf langsamen Geräten sind genau die real sichtbar. Antwort: eigene
+  Interaktions-Messung, oder ausdrücklich dokumentierter Verzicht — aber keine stille Lücke.
+
+**4. Versions-Pinning der Deckel dokumentieren.** Die Schwellen sind implizit an eine
+**Lighthouse-Version gepinnt**; das steht bisher **nirgends**. Ein Lighthouse-Upgrade verschiebt sie
+still und macht jeden Vorher-/Nachher-Vergleich ungültig. Version im Tor festhalten und beim Upgrade
+neu kalibrieren.
+
+**5. Revisions-Politik für legitimes Wachstum.** Ohne Politik wird jeder Deckel irgendwann «mal eben»
+hochgesetzt und misst danach nichts mehr. **Vorschlag: Deckel = Ist + max(3 sd, ~25 %)**, und
+**Anhebung nur mit Mess-Beleg** (Verteilung, nicht Einzelwert). Das ist die verallgemeinerte Form der
+Lektion aus #312: `sd ≈ 687 ms` bedeutete, dass der alte Deckel 4000 bei z ≈ +0,65 lag — also ~26 %
+Rot allein aus Rauschen.
+
+### C · Serif-Preload (`QS-PERF` Teil f)
+`font-display:optional` hat die CLS-Ursache (Serif-Font-Swap unter Linux) beseitigt — **um den Preis**,
+dass die Serif-Schrift bei langsamer Verbindung im ersten Paint gar nicht erscheint und der Wechsel
+erst beim nächsten Besuch sichtbar wird. Ein gezielter `preload` **nur** der im ersten Viewport
+benutzten Schnitte holt den Trade-off zurück. **Auflage: CLS vorher/nachher messen** — ein Preload, der
+CLS wieder anhebt, ist keine Verbesserung, sondern ein Rückschritt mit Extra-Bytes.
+
+### D · Der echte CLS-Defekt auf `/gesetze` — eigener Schritt `W2·15-CLS`
+**Nicht Teil von `QS-PERF`, sondern Produktfehler mit eigener Einheit (§14.2).** `QS-PERF` ist Arbeit am
+**Tor**; dies ist ein Defekt, den Nutzer:innen sehen. Werden beide vermischt, verdeckt die
+Tor-Kalibrierung den Defekt — exakt das ist am 20.7. passiert.
+
+- **Befund:** `/gesetze` misst **CLS 0.109 unter 8× CPU**; Ursache sind **zwei unreservierte
+  Platzhalter**, die asynchron einwachsen.
+- **Warum kein Tor es fing:** der CLS-Deckel läuft auf `/gesetze/bund/OR` und der Startseite —
+  **nicht** auf der Übersicht `/gesetze`. Der Defekt lief an allen Budgets vorbei.
+- **Fix nach §15.2:** Platz **reservieren** (token-basierte Mindesthöhe am **prerenderten** Element),
+  Client-Initialstate auf den Server-Zustand pinnen. Niemals durch weniger Inhalt lösen.
+- **Zweiter, gleich wichtiger Teil: `/gesetze` in die gemessenen Routen aufnehmen.** Ohne das fällt
+  dieselbe Klasse beim nächsten Mal wieder durch — ein Defekt, den kein Tor beobachtet, ist ein Defekt,
+  der wiederkommt.

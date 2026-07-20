@@ -372,3 +372,56 @@ SOFORT:   K-1 → K-2 → K-3 → K-4 → K-5 → K-6 → K-7 → K-8 → K-9 �
           (K-7a F20-Gate blockiert jeden FR/VS/AR-PDF-Nachzug; K-5: F41 vor F40)
 GEGATET:  [E3-Slot-Freigabe] → K-G1 (nach K-7f+K-8) → K-G2 → K-G3 → K-G4 (nach K-7) → K-G5 (= W3·12)
 ```
+
+---
+
+## §1-C · §14-Intake 20.7.2026 (David) — K-15 und K-16
+
+Zwei Punkte aus dem Intake vom 20.7. sind **hier eingegliedert statt danebengelegt** (CLAUDE.md §14.3):
+sie treffen exakt die Bau-Fläche dieses Plans (`scripts/normtext`, `public/normtext/kanton`, kantonale
+Adapter). Ein Parallel-Schritt hätte dieselben Dateien ein zweites Mal geöffnet.
+
+### K-15 · Kantonale Extraktionstiefe (**ULTRACODE**, David: später)
+
+**Befund — gemessen, nicht vermutet:**
+
+| Beobachtung | Wert |
+|---|---|
+| BS: Erlasse **ohne Gliederung** | **41 %** |
+| Kantonale Fussnoten vs. Bund | **~Faktor 40 dünner** |
+| ZH: Struktur-Dateien | **0** |
+
+**Hypothese — ausdrücklich als Hypothese markiert:** Quellen-Priorität bzw. PDF-Tier; kantonale Erlasse
+werden aus schwächeren Quellformaten gezogen als Bundeserlasse (strukturiertes XML → Rendering → PDF,
+vgl. Daueranweisung «an höchste Struktur andocken»).
+
+**DIAGNOSE VOR FIX — verbindlich.** Vor jeder Adapter-Änderung ist je Kanton zu erheben:
+1. **Welches Quellformat** wird tatsächlich verwendet (nicht: welches wäre verfügbar)?
+2. **Wo geht die Struktur verloren** — ist die Quelle dünn, der Adapter dünn, oder die Nachbearbeitung?
+3. Ist das Muster **kantonsspezifisch oder korpusweit**? ZH mit 0 Struktur-Dateien sieht nach einem
+   anderen Defekt aus als BS mit 41 % — sie dürfen nicht als ein Problem behandelt werden.
+
+Ein Fix ohne diese Zuordnung repariert die falsche Schicht. Passt zur bestehenden §0-Leitplanke
+«korpusweiter Adapter-Hebel VOR jedem Bulk» (`FAHRPLAN-BS-VORBILDKANTON.md`) und zu **K-G3**
+(Gliederungs-Extraktion korpusweit, §1-B) — dort einhängen, **nicht** doppelt planen.
+
+**Risiko-Einstufung:** Extraktion ⇒ Opus + `check:gegenpruefung`.
+
+### K-16 · Kantonale Änderungshistorie + Fundstelle im Kantonsblatt (David: «wenn möglich»)
+
+**Feasibility 🟢, belegt:** Die kantonale Quelle liefert beides **strukturiert** — `change_documents`
+und `history_information_map`. Es ist Mapping-Arbeit gegen vorhandene Felder, **keine** Text-Heuristik
+auf Fussnoten-Prosa (anders als G-HIST beim Bund, das aus Prosa rekonstruieren musste).
+
+**Zwei Auflagen:**
+1. **§7 Norm + Link + Stand je Fundstelle.** Eine Änderungshistorie ohne Stand ist wertlos, weil man
+   nicht weiss, ob sie vollständig ist.
+2. **Die Kantonsblatt-Fundstelle ist eine amtliche Referenz** — sie wird **stichprobenweise gegen das
+   Kantonsblatt selbst verifiziert**, nicht der API blind geglaubt. Eine falsche amtliche Fundstelle ist
+   schlimmer als keine: sie sieht zitierfähig aus.
+
+**Risiko-Einstufung:** Extraktion ⇒ Opus + `check:gegenpruefung`.
+
+**Verhältnis zum Fassungs-Fundament:** Beide Punkte erzeugen Fassungs-/Änderungsdaten. Es gilt die
+Auflage aus `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §7.4 (Fassungs-Schlüssel durchgängig, Anker
+fassungsstabil, §8 «nicht geltendes Recht» unmissverständlich).
