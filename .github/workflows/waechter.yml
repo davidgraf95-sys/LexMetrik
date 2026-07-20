@@ -1,0 +1,42 @@
+# .github/workflows/waechter.yml — Wächter über die geplanten Workflows (F2c).
+#
+# WARUM EIN EIGENER, ZEITGESTEUERTER WORKFLOW:
+# Der Ausfall, den dieses Tor fängt, ist definitionsgemäss einer, den niemand
+# bemerkt. `turso-sync.yml` lief 13.–20.7.2026 sechsmal in den Timeout und
+# endete `cancelled` — GitHub färbt das GRAU, nicht rot. `normen-monitor.yml`
+# hatte am 20.7.2026 seinen letzten Erfolg am 22.6., also vier Wochen davor.
+# Beides fiel nur auf, weil dieses Tor gebaut wurde.
+#
+# Der Wächter darf darum NICHT an `ci.yml` hängen: ein PR-getriebenes Tor
+# meldet nur, wenn jemand einen PR fährt. Der Auslöser muss die ZEIT sein.
+#
+# Er läuft bewusst NICHT in `check:seriell`: sein Befund betrifft den Zustand
+# der Automatik auf `main`, nicht die Korrektheit eines Arbeitsbaums. Ein
+# kaputter Wochen-Job soll den lokalen Bau nicht blockieren — er soll sichtbar
+# sein. Sichtbarkeit stellt dieser Workflow her (rot in der Actions-Liste).
+name: Wächter (geplante Läufe)
+
+on:
+  schedule:
+    - cron: '11 6 * * *' # täglich 06:11 UTC — nach den 04:43/05:17-Jobs
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  laeufe:
+    name: Geplante Workflows — cancelled/skipped zählen als ROT
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Lauf-Zustand der geplanten Workflows
+        run: npm run check:ci-laeufe
+        env:
+          GH_TOKEN: ${{ github.token }}

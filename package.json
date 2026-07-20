@@ -137,6 +137,7 @@
     "gen:historie": "vite-node scripts/normtext/historie-generieren.ts",
     "check:historie": "vite-node scripts/normtext/historie-generieren.ts -- --check",
     "check:tor-paritaet": "vite-node scripts/check-tor-paritaet.ts",
+    "check:ci-laeufe": "vite-node scripts/check-ci-laeufe.ts",
     "check:merge-schutz": "vite-node scripts/check-merge-schutz.ts",
     "dispatch": "vite-node scripts/dispatch-cli.ts --",
     "check:dispatch-klausel": "vite-node scripts/check-dispatch-klausel.ts"

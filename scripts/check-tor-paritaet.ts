@@ -82,7 +82,7 @@ const ALLOWLIST: Record<string, string> = {
   'check:revisionen': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
   'check:pdf': 'braucht die PDF-Quellen-Caches (nicht im CI-Checkout)',
   'check:pdf-quellen': 'braucht die PDF-Quellen-Caches (nicht im CI-Checkout)',
-  'check:gegenpruefung': 'CI-Selbstschutz: no-op-grün unter CI=1 (kern.ts) — Arbiter ist lokal + check:merge-schutz',
+  'check:gegenpruefung': 'liest den Working Tree, der in CI sauber ist; protokolliert unter CI=1 ausdrücklich SKIP (§6 Ziff. 7 lit. b) — Arbiter für den committeten Bereich ist check:merge-schutz in ci.yml',
   'check:zyklen': 'reine Statik über Importgraph — vom lint-Job mitabgedeckt',
 };
 

@@ -49,7 +49,25 @@ export function bewerte(
   pending: Pending | null,
 ): { gruen: boolean; meldung: string } {
   if (!r.kontext) {
-    return { gruen: true, meldung: 'check:gegenpruefung grün — no-op (CI oder kein Git/HEAD).' };
+    // §6 Ziff. 7 lit. b: kein stilles Grün bei fehlender Voraussetzung.
+    // Bis 20.7.2026 stand hier «grün — no-op (CI oder kein Git/HEAD)» — ein
+    // Grün-Exit, der zwei verschiedene Ursachen in einem Satz vermischte und
+    // damit genau die Regel verletzte, die dieser PR eingeführt hat.
+    // Jetzt: ausdrücklicher SKIP mit benannter Ursache und benanntem Arbiter.
+    return r.grund === 'kein-git'
+      ? {
+          gruen: true,
+          meldung:
+            'check:gegenpruefung SKIP — kein Git-Kontext (kein toplevel oder kein HEAD). ' +
+            'Das Tor kann seinen Diff nicht bilden und trifft KEINE Aussage über den Stand.',
+        }
+      : {
+          gruen: true,
+          meldung:
+            'check:gegenpruefung SKIP — CI-Selbstschutz: dieses Tor liest den Working Tree, ' +
+            'der in CI per Definition sauber ist. Arbiter für den committeten Bereich ist ' +
+            'check:merge-schutz (in ci.yml verdrahtet). KEINE Aussage über den Stand.',
+        };
   }
   if (r.hash === null) {
     return {
