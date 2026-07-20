@@ -1,7 +1,19 @@
 // scripts/plan/check.ts
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { parseRoadmap, type Einheit } from './parse';
+import { type Status } from './etikett';
 import { INVENTAR } from './inventar';
+
+// (5c) Status, die den 26×-Slot halten, ohne ihn je zurückzugeben. next.ts sperrt
+// über `t.asset26x && inhaber26x && e.id !== inhaber26x` JEDEN anderen 26×-Schritt,
+// solange irgendein Schritt `slot: inhaber` trägt — unabhängig von dessen Status.
+// Steht der Inhaber auf `done`, arbeitet niemand mehr am Slot und niemand gibt ihn
+// frei: stiller Dauer-Stillstand aller 26×-Assets. `parked` und `blocked` stellen
+// dieselbe Falle — auch sie bauen nicht und geben nichts zurück. Zulässig bleiben
+// nur `ready` (Inhaber wartet auf seinen Bau) und `wip` (Inhaber baut).
+// Befund 20.7.2026 (Slot-Übergabe W2·6-DATA → W3·12): W2·6-DATA hielt den Slot
+// über den eigenen Abschluss hinaus; weder next.ts noch check.ts sah es.
+const SLOT_STILLSTAND: readonly Status[] = ['done', 'parked', 'blocked'];
 
 export interface Problem { id: string | null; meldung: string }
 
@@ -111,6 +123,15 @@ export function pruefe(
   const slotInhaber = einheiten.filter((e) => e.etikett.slot === 'inhaber');
   if (slotInhaber.length > 1) probleme.push({ id: null, meldung: `zwei 26×-Slot-Inhaber: ${slotInhaber.map((e) => e.id).join(', ')}` });
   for (const e of slotInhaber) if (!e.etikett.asset26x) probleme.push({ id: e.id, meldung: `slot: inhaber ohne 26x: ja` });
+  // (5c) Slot-Inhaber muss den Slot auch zurückgeben können — s. SLOT_STILLSTAND.
+  for (const e of slotInhaber) {
+    if (SLOT_STILLSTAND.includes(e.etikett.status)) {
+      probleme.push({
+        id: e.id,
+        meldung: `slot: inhaber bei status ${e.etikett.status} — hält den 26×-Slot, gibt ihn aber nie zurück (Slot übergeben oder slot-Feld streichen)`,
+      });
+    }
+  }
   // (7) FAHRPLAN-Link-Check (eingegliedertes QS-PH)
   for (const f of fahrplanDateien) if (!md.includes(f)) probleme.push({ id: null, meldung: `${f} ist nicht aus ROADMAP.md verlinkt` });
 
