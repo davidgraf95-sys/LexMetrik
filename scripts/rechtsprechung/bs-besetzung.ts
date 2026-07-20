@@ -92,6 +92,66 @@ const NAHT_OFFEN =
   /(?:\b(?:Prof|Dr|lic|iur|med|phil|oec|rer|nat|sc|dent|pharm|dipl|a\.o|ao|PD|Mag|pol)\.|\b(?:und|et|ed|&|von|van|de|di|du|della|del|dal|zu|zur|ten|ter|le|la)\s*)$/i;
 
 /**
+ * Titel-Präfixe, die einem Vornamen vorangehen — für den Vollständigkeits-Test unten.
+ */
+const TITEL_PRAEFIX =
+  /^(?:(?:Prof|Dr|lic|iur|med|phil|oec|rer|nat|sc|dent|pharm|dipl|Mag|pol|PD|a\.\s*o|ao)\.?\s*|(?:Ass\.\s*-?\s*Prof\.|MLaw|BLaw|LL\.?\s*M\.?|ETH)\s*)+/i;
+
+/**
+ * Ist der bisher gesammelte Text mit einem UNVOLLSTÄNDIGEN Namen offen?
+ *
+ * Word bricht die Mitwirkenden-Zeile schlicht nach Satzbreite um — MITTEN im Namen.
+ * Belegt am Rohkorpus (20.7.2026, `daten/bs-fiw/raw/`):
+ *   ZB.2023.5  «… lic. iur. André Equey, Prof. Dr. Ramon» | «Mabillard und …»
+ *   VD.2023.26 «… lic. iur. André Equey, Prof. Dr. Daniela» | «Thurnherr Keller und …»
+ * Die frühere NAHT-Regel setzte hier ein Komma (der Absatz endet weder auf Titel noch
+ * Konjunktion noch Partikel) und zerlegte damit EINE Richterperson in zwei: die
+ * Facette führte «Ramon» und «Daniela» als eigenständige, auswählbare Richter:innen.
+ *
+ * Diskriminator ist die Vollständigkeit des letzten Namens-Segments: an den Basler
+ * Gerichten nennt der Amtstext IMMER Vorname + Nachname. Bleibt nach dem Strippen der
+ * Titel nur EIN Wort übrig, fehlt der Nachname — der Name läuft im nächsten Absatz
+ * weiter, die Absatzgrenze ist dann kein Trenner.
+ *
+ * Bewusst eng: bei zwei oder mehr Rest-Wörtern (vollständiger Name) bleibt es beim
+ * Komma. Die Regel rät also nie über eine Person hinweg, sie schliesst nur die
+ * strukturell unmögliche Lesart «Person ohne Nachnamen» aus (§8).
+ */
+/**
+ * Kuratierte ZWEITEILIGE Nachnamen, die der Zeilenumbruch auseinanderreissen kann.
+ *
+ * Realfall SB.2025.48 (roh belegt): «… Prof. Dr. Daniela Thurnherr» | «Keller, Prof.
+ * Dr. Ramon Mabillard, …». Hier greift `nameUnvollstaendig` NICHT — «Daniela
+ * Thurnherr» sieht wie ein kompletter Name aus, «Keller» wie der nächste. Aus einer
+ * Person wurden so `thurnherr-daniela` + der Phantom-Richter `keller`.
+ *
+ * Eine allgemeine Regel gibt es hier nicht: ob «Keller» der zweite Nachnamensteil
+ * oder die nächste Person ist, entscheidet der Absatz nicht — das ist genau die
+ * Stelle, an der geraten würde (§8). Darum eine Positivliste belegter Amtsträger:
+ * innen statt einer Heuristik. Aufnahme nur, wenn die zusammenhängende Schreibweise
+ * im Korpus dominiert. Korpus 20.7.2026: «Thurnherr Keller» 167 Entscheide
+ * zusammenhängend ↔ 3 an der Absatznaht getrennt. Abnahme-Status: Erstrecherche (§11).
+ */
+const VERBUND_NACHNAMEN: readonly (readonly [string, string])[] = [
+  ['Thurnherr', 'Keller'],
+];
+
+/** Setzt die Absatznaht einen bekannten zweiteiligen Nachnamen auseinander? */
+function verbundNaht(s: string, next: string): boolean {
+  const letztes = s.split(/\s+/).pop() ?? '';
+  const erstes = (next.split(/[\s,]+/)[0] ?? '');
+  return VERBUND_NACHNAMEN.some(([a, b]) => a === letztes && b === erstes);
+}
+
+function nameUnvollstaendig(s: string): boolean {
+  const letztes = s.split(/,|\s+und\s+|\s+et\s+|\s+&\s+/i).pop()?.trim() ?? '';
+  if (!letztes) return false;
+  const ohneTitel = letztes.replace(TITEL_PRAEFIX, '').trim();
+  if (!ohneTitel) return true;
+  return ohneTitel.split(/\s+/).filter(Boolean).length < 2;
+}
+
+/**
  * Absätze des Mitwirkenden-Blocks zu EINEM Freitext fügen.
  *
  * Der Absatz-Umbruch ist im amtlichen Layout MEIST ein Segment-Trenner — Word setzt
@@ -119,7 +179,15 @@ function fuegeAbsaetze(teile: readonly string[]): string {
   let s = '';
   for (const t of teile) {
     if (!s) { s = t; continue; }
-    s += NAHT_OFFEN.test(s) ? ` ${t}` : `, ${t}`;
+    // (1) Offener BINDESTRICH — der Umbruch liegt INNERHALB eines zusammengesetzten
+    //     Nachnamens: «Dr. Heidrun Gutmanns-» | «bauer» (KE.2025.52, roh belegt).
+    //     Hier darf nicht einmal ein Leerzeichen dazwischen, sonst zerfällt der Name
+    //     in «Heidrun Gutmanns-» + «bauer» — zwei Richter:innen, einer davon mit
+    //     hängendem Bindestrich, einer kleingeschrieben.
+    if (/-$/.test(s)) { s += t; continue; }
+    // (2) Offener Titel/Konjunktion/Partikel bzw. noch unvollständiger Name → der
+    //     Name läuft weiter, die Absatzgrenze ist kein Trenner.
+    s += NAHT_OFFEN.test(s) || nameUnvollstaendig(s) || verbundNaht(s, t) ? ` ${t}` : `, ${t}`;
   }
   return s
     .replace(/,\s*,/g, ',')                       // doppelte Naht

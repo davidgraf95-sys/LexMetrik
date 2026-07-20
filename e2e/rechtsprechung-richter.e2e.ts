@@ -99,7 +99,12 @@ test.describe('/rechtsprechung — Richter-Facette', () => {
     // Vor der ersten Eingabe steht kein Fehler (§13/C2) — nur Vorschläge.
     await expect(optionen(page).first()).toBeVisible()
     await feld(page).fill('zzzzzzz')
-    await expect(page.getByText('Keine Richter:in mit diesem Namen', { exact: false })).toBeVisible()
+    // Wortlaut geändert 20.7.2026 (fachliche Änderung, §6.3 deklariert): der frühere
+    // Satz «Keine Richter:in mit diesem Namen im aktuellen Ausschnitt» war bei der
+    // häufigsten Eingabeform SACHLICH FALSCH — «Thomas Stadelmann» lief hinein,
+    // obwohl die Person im Ausschnitt ist (nur unter dem Nachnamen-Eimer erfasst).
+    // Die Suche findet das jetzt; der Leerzustand nennt zusätzlich den Grund.
+    await expect(page.getByText('Kein Treffer im aktuellen Ausschnitt', { exact: false })).toBeVisible()
     await expect(optionen(page)).toHaveCount(0)
     // Die Trefferliste bleibt unangetastet, solange nichts gewählt ist.
     await expect(page).not.toHaveURL(/richter=/)
@@ -209,5 +214,51 @@ test.describe('/rechtsprechung — Richter-Facette', () => {
     await page.screenshot({ path: 'e2e-shots/rechtsprechung-richter-mobil.png', fullPage: false })
     const b = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }))
     expect(b.scroll, `scrollWidth ${b.scroll} > ${b.client}`).toBeLessThanOrEqual(b.client + 1)
+  })
+
+  // ── Regressionen der Gegenprüfung 20.7.2026 ────────────────────────────────
+  test('findet die Person auch bei Eingabe «Vorname Nachname»', async ({ page }) => {
+    // Die Bundesgerichts-Rubra nennen keine Vornamen — gut die Hälfte der
+    // Facetten-Einträge ist reiner Nachname. Die natürliche Eingabe lief darum
+    // vorher in den Leerzustand, obwohl die Person im Ausschnitt ist.
+    await page.goto('/rechtsprechung')
+    await feld(page).click()
+    await feld(page).fill('Thomas Stadelmann')
+    await expect(optionen(page).first()).toBeVisible()
+    await expect(optionen(page).first()).toContainText('Stadelmann')
+  })
+
+  test('unbekannter Slug wird als kaputter Link ausgewiesen, nicht als Person', async ({ page }) => {
+    await page.goto('/rechtsprechung?richter=gibts-nicht-xyz')
+    await expect(page.getByText('im Register nicht bekannt', { exact: false })).toBeVisible()
+  })
+
+  test('«zurücksetzen» ist da, wenn Richter der einzige Filter ist', async ({ page }) => {
+    // Der typische geteilte ?richter=-Link: der Leerzustand verwies auf ein
+    // «zurücksetzen», das gar nicht gerendert wurde.
+    await page.goto(`/rechtsprechung?richter=${RICHTER_SLUG}`)
+    await expect(page.getByRole('button', { name: /zurücksetzen/i })).toBeVisible()
+  })
+
+  test('keine erfundenen Amtsträger:innen in der Facette', async ({ page }) => {
+    // Rollenwörter/Fragmente, die vor dem Fix als wählbare Richter:innen standen.
+    await page.goto('/rechtsprechung')
+    // Geprüft wird die Abwesenheit des PHANTOM-LABELS, nicht eine leere Liste:
+    // «Donzallaz Beusch» findet über die Nachnamen-Stufe zu Recht den echten
+    // Bundesrichter Beusch — verboten ist nur der verschmolzene Eintrag selbst.
+    for (const phantom of ['présidant', 'unica', 'federali Patrick Robert-Nicoud',
+      'Donzallaz Beusch', 'de Yanick Felley', 'Heidrun Gutmanns-']) {
+      await feld(page).click()
+      await feld(page).fill(phantom)
+      const exakt = new RegExp(`^${phantom.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*\\d+$`, 'i')
+      await expect(optionen(page).filter({ hasText: exakt })).toHaveCount(0)
+      await feld(page).fill('')
+    }
+    // Gegenprobe: der REALE Richter, der zuvor als «de Yanick Felley» (Partikel am
+    // Vornamen) im Register stand, ist jetzt korrekt erfasst — die Bereinigung hat
+    // ihn nicht mitentfernt, sondern richtiggestellt.
+    await feld(page).click()
+    await feld(page).fill('Felley')
+    await expect(optionen(page).first()).toHaveText(/^Yanick Felley\s*\d+$/)
   })
 })

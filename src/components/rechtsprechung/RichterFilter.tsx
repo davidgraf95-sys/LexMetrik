@@ -1,4 +1,4 @@
-import { useId, useMemo, useRef, useState } from 'react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import type { RichterZaehler } from '../../lib/rechtsprechung/browse';
 import { SICHTBAR_MAX, trefferFuer, naechsterSlug, vorigerSlug } from './richterAuswahl';
 
@@ -13,11 +13,21 @@ import { SICHTBAR_MAX, trefferFuer, naechsterSlug, vorigerSlug } from './richter
 // (filterEntscheide/richterHaeufigkeit); diese Datei hält nur Eingabe, Auswahl-
 // Navigation und ARIA.
 
-export function RichterFilter({ aktiv, aktivName, optionen, onWaehle }: {
+export function RichterFilter({ aktiv, aktivName, registerGeladen, optionen, onWaehle }: {
   /** Gewählter Slug (?richter=) oder null. */
   aktiv: string | null;
   /** Anzeigename des gewählten Slugs — null, solange das Register noch lädt. */
   aktivName: string | null;
+  /**
+   * Ist das Richter-Register da? Trennt «lädt noch» von «Slug gibt es nicht».
+   *
+   * Ohne diese Unterscheidung wurde ein unbekannter Slug aus einem veralteten oder
+   * vertippten Link (`?richter=gibts-nicht-xyz`) als regulärer Aktiv-Chip mit
+   * «0 Entscheide» gerendert — der Nutzer las das als Aussage ÜBER DIE PERSON
+   * statt als kaputten Link (Befund Gegenprüfung 20.7.2026). Da die Achse
+   * ausdrücklich als teilbar gebaut ist, ist das kein Randfall.
+   */
+  registerGeladen: boolean;
   /** Cross-gefilterte Optionen (count > 0), absteigend nach Trefferzahl (R15). */
   optionen: RichterZaehler[];
   onWaehle: (slug: string | null) => void;
@@ -43,6 +53,19 @@ export function RichterFilter({ aktiv, aktivName, optionen, onWaehle }: {
   const hatListbox = zeigtListe && sichtbar.length > 0;
   const optId = (slug: string) => `${listboxId}-${slug}`;
   const aktivId = aktivKey && sichtbar.some((o) => o.slug === aktivKey) ? optId(aktivKey) : undefined;
+
+  // Bei kurzen Viewports (gemessen 390×640: Unterkante 785 bei 640 sichtbar, also
+  // 145 px abgeschnitten = 3 Optionen + der Kappungs-Hinweis unsichtbar) lag die
+  // aufgeklappte Liste unter dem Fold, ohne dass irgendetwas nachführte. Statt
+  // eines Scroll-Containers (der ohne Tastatur-Fokus ein axe-`scrollable-region-
+  // focusable`-Verstoss wäre und zusätzlich eine scrollIntoView-Kopplung an die
+  // Pfeil-Auswahl bräuchte) holt der Browser das Panel in den sichtbaren Bereich.
+  // `block: 'nearest'` scrollt nur, wenn es nötig ist — auf normalen Viewports
+  // passiert dadurch nichts.
+  const panel = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (zeigtListe) panel.current?.scrollIntoView({ block: 'nearest' });
+  }, [zeigtListe, sichtbar.length]);
 
   const waehle = (slug: string) => {
     onWaehle(slug);
@@ -94,12 +117,16 @@ export function RichterFilter({ aktiv, aktivName, optionen, onWaehle }: {
           className="lc-input lc-input-sm w-full"
         />
         {zeigtListe && (
-          <div className="lc-panel absolute left-0 right-0 top-full z-30 mt-1 shadow-md">
+          <div ref={panel} className="lc-panel absolute left-0 right-0 top-full z-30 mt-1 shadow-md">
             {sichtbar.length === 0 ? (
               // Leerzustand (F4): ehrliche Auskunft, keine Fehler-Optik — der
               // Name kommt schlicht im aktuellen Filterausschnitt nicht vor.
+              // §8: der Zusatz ist keine Floskel, sondern die Erklärung des
+              // häufigsten Fehlschlags — die Bundesgerichts-Rubra nennen keine
+              // Vornamen, gut die Hälfte der Einträge ist reiner Nachname.
               <p role="status" className="px-3 py-2 text-body-s text-ink-600">
-                Keine Richter:in mit diesem Namen im aktuellen Ausschnitt.
+                Kein Treffer im aktuellen Ausschnitt. Der Spruchkörper ist teilweise
+                nur mit Nachnamen erfasst — dann den Nachnamen allein eingeben.
               </p>
             ) : (
               <>
@@ -134,16 +161,26 @@ export function RichterFilter({ aktiv, aktivName, optionen, onWaehle }: {
       </div>
 
       {aktiv && (
-        <button
-          type="button"
-          onClick={() => { onWaehle(null); feld.current?.focus(); }}
-          className="lc-chip inline-flex items-center gap-1 border-brass-400 text-brass-700"
-          // §8: solange das Register lädt, steht der Slug da — nie ein geratener Name.
-          aria-label={`Richter-Filter «${aktivName ?? aktiv}» entfernen`}
-          title="Filter entfernen"
-        >
-          {aktivName ?? aktiv}<span aria-hidden>×</span>
-        </button>
+        <>
+          <button
+            type="button"
+            onClick={() => { onWaehle(null); feld.current?.focus(); }}
+            className="lc-chip inline-flex items-center gap-1 border-brass-400 text-brass-700"
+            // §8: solange das Register lädt, steht der Slug da — nie ein geratener Name.
+            aria-label={`Richter-Filter «${aktivName ?? aktiv}» entfernen`}
+            title="Filter entfernen"
+          >
+            {aktivName ?? aktiv}<span aria-hidden>×</span>
+          </button>
+          {registerGeladen && !aktivName && (
+            // §8: unbekannter Slug ist ein kaputter Link, keine Aussage über eine
+            // Person. «0 Entscheide» allein wäre irreführend.
+            <span role="status" className="text-body-s text-ink-600">
+              Diese Kennung ist im Register nicht bekannt — der Link ist vermutlich
+              veraltet oder vertippt.
+            </span>
+          )}
+        </>
       )}
     </div>
   );

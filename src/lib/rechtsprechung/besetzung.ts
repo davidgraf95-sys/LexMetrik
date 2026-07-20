@@ -24,6 +24,17 @@ export interface RichterRoh {
   nachSlug: string;
   /** Gefalteter Vorname — voll («patrizia») oder Initial («p»); null wenn nur Nachname. */
   givenSlug: string | null;
+  /**
+   * true ⇒ der Vorname stand im Amtstext als ABKÜRZUNG («P.», «Th.», «Ph.», «St.»).
+   *
+   * Der Kanon-Pass hat das früher an der LÄNGE des gefalteten Vornamens abgelesen
+   * (`length > 1` ⇒ ausgeschrieben). Das war falsch für mehrbuchstabige Abkürzungen:
+   * «Ph.» faltet zu `ph` (Länge 2), galt damit als Vollname und zog den Initial-Eimer
+   * `waegeli-p` (97 Nennungen) auf sich — wären «P. Wägeli» und «Ph. Wägeli» zwei
+   * Personen (Peter/Philipp), hätte die Regel sie stumm verschmolzen. Ein explizites
+   * Flag statt einer Längen-Heuristik schliesst diese Klasse aus (§2/§8).
+   */
+  givenAbk: boolean;
   /** Kanonischer Anzeigename (Titel/Rolle gestrippt, Whitespace geglättet). */
   name: string;
   /** Name wie im Block gefunden (nach Strip von Rolle/Titel, vor Slug-Fold). */
@@ -62,8 +73,29 @@ const PARTEI_RE =
 // («Mmes et M. les Juges fédéraux Hohl, P résidente, Kiss, …», BGE 147 III 440).
 // Ohne die Leerzeichen-Toleranz wurde «P résidente» als Nachname «résidente»
 // gelesen und erschien als eigener Richter.
+// `pr[ée]sidant`: das französische PARTIZIP («Denys, Juge présidant», BGE 151 IV 98)
+// stand nicht in der Liste — «présidant» wurde als Nachname gelesen und erschien als
+// Phantom-Richter mit 5 Entscheiden, während Denys seine Vorsitz-Rolle verlor
+// (Befund Gegenprüfung 20.7.2026).
+// `giudic[ea]\s+unic[ao]`: die FEMININE Form («Giudice Regula Schenker Senn, giudice
+// unica», BVGer F-4218/2026) fehlte ebenso → Phantom-Slug `unica`.
+// `Referent` steht hier bewusst NICHT (mehr): der Referent ist der berichterstattende
+// Richter, NICHT der Vorsitzende. Am Bundespatentgericht führt der Präsident den
+// Vorsitz, der Referent sitzt daneben — beide standen dadurch mit Rolle «vorsitz» im
+// selben Spruchkörper (bpatger O2024_002 / S2024_005). Der Marker wird jetzt über
+// REFERENT_RE nur noch ENTFERNT, ohne eine Rolle zu setzen.
 const VORSITZ_RE =
-  /\(\s*Vorsitz\s*\)|Vorsitzende(?:r|n)?|P\s?r[äa]sident(?:in|en)?|p\s?r[ée]sident(?:e|s)?|P\s?residente|pr[äa]sidierendes?\s+Mitglied|Einzelrichter(?:in)?|Einzelgericht|juge\s+unique|giudice\s+unico|Referent(?:in)?/i;
+  /\(\s*Vorsitz\s*\)|Vorsitzende(?:r|n)?|P\s?r[äa]sident(?:in|en)?|p\s?r[ée]sident(?:e|s)?|p\s?r[ée]sidant(?:e|s)?|P\s?residente|pr[äa]sidierendes?\s+Mitglied|Einzelrichter(?:in)?|Einzelgericht|juge\s+unique|giudic[ea]\s+unic[ao]/i;
+
+/**
+ * Referenten-Marker — wird entfernt, setzt aber KEINE Rolle.
+ *
+ * Ohne eigenen Schnitt bliebe «(Referent)» im Segment stehen und wanderte in den
+ * Nachnamen («Kaufmann (Referent)»). Eine eigene Rolle bekommt der Referent (noch)
+ * nicht: der Übergabe-Kontrakt kennt nur vorsitz/mitglied/gerichtsschreiber, und
+ * eine erfundene vierte Rolle wäre eine Aussage, die das Schema nicht trägt (§8).
+ */
+const REFERENT_RE = /\(\s*Referent(?:in)?\s*\)|\bReferent(?:in)?\b/gi;
 
 // ── Gerichtsschreiber-Rollen-Token (Rolle = gerichtsschreiber) ──
 const GS_TOKEN =
@@ -82,11 +114,22 @@ const GS_TOKEN =
 const LEAD_STRIP = new RegExp(
   '^(?:' + [
     // (1) Rollen-Phrasen als Einheit (Artikel + Rollennomen + Zusatz)
-    '(?:(?:les|la|le|il|i|gli|der|die|das)\\s+)?(?:Juges?|Giudici|Giudice)(?:\\s+(?:f[ée]d[ée]ra(?:les|le|ux|l)|p[ée]na(?:les|le|ux|l)|federal[ie]|penal[ie]))?',
+    // Der Zusatz ist WIEDERHOLBAR (`*` statt `?`): die Bundesstrafgerichts-Rubra
+    // tragen ZWEI Qualifikatoren («Les juges pénaux fédéraux», «Giudici penali
+    // federali»). Mit nur einem erlaubten Zusatz blieb der zweite stehen und wurde
+    // zum Vornamen — derselbe Richter erschien als `patrick-robert-nicoud-federaux`
+    // UND `patrick-robert-nicoud-federali`, beide mit Rollenwort im Anzeigenamen
+    // (Befund Gegenprüfung 20.7.2026).
+    '(?:(?:les|la|le|il|i|gli|der|die|das)\\s+)?(?:Juges?|Giudici|Giudice)(?:\\s+(?:f[ée]d[ée]ra(?:les|le|ux|l)|p[ée]na(?:les|le|ux|l)|federal[ie]|penal[ie]))*',
     // (1b) Zustimmungs-Formeln (BVGer-Einzelrichter entscheidet MIT ZUSTIMMUNG
     //      einer zweiten Richterperson — die ist mitwirkend und gehört erfasst,
     //      die Formel davor nicht).
-    'mit\\s+Zustimmung\\s+von', 'avec\\s+l[\'’]approbation\\s+(?:de\\s+l[ae]?|du|des)?',
+    //      Das BLOSSE «de» muss mitgestrippt werden («avec l'approbation de Yanick
+    //      Felley», BVGer E-165/2026): mit `de\s+l[ae]?` traf die Formel nur «de la»/
+    //      «de l'», das nackte «de» überlebte, wurde per PARTIKEL-Regel zum
+    //      Nachnamensbestandteil und erzeugte den Phantom-Richter «de Yanick Felley».
+    //      `(?:\s+l[ae]?)?` ist gierig, «de la juge de Werra» bleibt also korrekt.
+    'mit\\s+Zustimmung\\s+von', 'avec\\s+l[\'’]approbation\\s+(?:de(?:\\s+l[ae]?)?|du|des)?',
     'con\\s+l[\'’]approvazione\\s+(?:dell[ao]?|del|degli)?',
     // (1c) Nebenamt/Ausserordentlichkeit — Funktionszusatz, kein Namensteil.
     'nebenamtliche[rn]?', 'ausserordentliche[rn]?',
@@ -103,7 +146,12 @@ const LEAD_STRIP = new RegExp(
     // (4) akademische Titel + Grade (nie Diskriminator, nur Rauschen)
     'Prof\\.', 'Ass\\.\\s*-?\\s*Prof\\.', 'PD',
     'Dr\\.\\s*med\\.\\s*dent\\.', 'Dr\\.\\s*med\\.', 'Dr\\.\\s*iur\\.',
-    'Dr\\.\\s*sc\\.\\s*nat\\.\\s*ETH', 'Dr\\.\\s*sc\\.\\s*nat\\.', 'Dr\\.\\s*phil\\.',
+    'Dr\\.\\s*sc\\.\\s*nat\\.\\s*ETH', 'Dr\\.\\s*sc\\.\\s*nat\\.',
+    // Der Zürcher Grad «Dr. phil. II» trägt die römische Ziffer ALS TEIL DES GRADES.
+    // Ohne sie im Strip blieb «II» als eigenes Segment stehen und stand als
+    // Phantom-Richter «II» in der Facette (bpatger O2024_002). MUSS vor dem
+    // kürzeren «Dr. phil.» stehen — die Alternation ist ordnungsabhängig.
+    'Dr\\.\\s*phil\\.\\s*I{1,3}', 'Dr\\.\\s*phil\\.',
     'Dr\\.\\s*rer\\.\\s*[a-z]+\\.?', 'Dr\\.',
     // «lic»/«iur» auch OHNE Punkt: die Amtstexte tragen reale Tippfehler
     // («lic iur. André Equey», «lic .iur André Equey») — ohne Toleranz entstünden
@@ -142,6 +190,19 @@ const STOPP_NACHNAME: ReadonlySet<string> = new Set([
   'gerichtsschreiber', 'gerichtsschreiberin', 'greffier', 'greffiere',
   'einzelrichter', 'einzelrichterin', 'einzelgericht', 'referent', 'referentin',
   'hsg', 'eth',
+  // Zweite Schicht (Gürtel + Hosenträger) gegen die Phantom-Klasse «Rollenwort als
+  // Person», Befund Gegenprüfung 20.7.2026. Die Regexes oben fangen diese Wörter
+  // bereits; die Sperrliste garantiert, dass eine künftige Amtstext-Variante sie
+  // nicht doch als Nachname durchreicht — ein erfundener Amtsträger ist im
+  // Richter-Filter der teuerste denkbare Fehler (§1/§8).
+  'presidant', 'presidante', 'presidants', 'presidantes',
+  'unico', 'unica', 'unique', 'uniques',
+  'federal', 'federale', 'federales', 'federali', 'federaux',
+  'penal', 'penale', 'penales', 'penali', 'penaux',
+  'giudice', 'giudici', 'juge', 'juges', 'richter', 'richterin',
+  'approbation', 'approvazione', 'zustimmung',
+  // Römische Grad-Ziffern («Dr. phil. II») sind nie ein Nachname.
+  'i', 'ii', 'iii',
 ]);
 
 const KONJUNKTION_LEAD = /^(?:und|et|ed|e|&)\b[\s,]*/i;
@@ -210,13 +271,52 @@ export const ALIAS: Readonly<Record<string, string>> = Object.freeze({
   //   christ-e ~ christ-l · meier-a ~ meyer-a · steiner-j ~ steiner-s
 });
 
+/**
+ * Kuratierte SPALTUNGS-Tabelle: amtlich VERSCHMOLZENE Nachnamen → die realen Personen.
+ *
+ * Spiegelbild der ALIAS-Tabelle. Fehlt im Amtstext ein Komma, verschmelzen ZWEI
+ * Bundesrichter zu EINER Person, die es nie gab — der teuerste Fehlertyp in einem
+ * Produkt für Juristen: die Facette zeigt einen erfundenen Amtsträger, und die beiden
+ * echten Richter verlieren den Entscheid (Befund Gegenprüfung 20.7.2026).
+ *
+ * Aufnahmekriterium (streng, wie bei ALIAS): beide Teile sind im SELBEN Spruchkörper-
+ * Kontext je für sich als Richter belegt, und die kommagetrennte Schreibweise
+ * dominiert die verschmolzene deutlich — das Muster eines Erfassungsfehlers, nicht
+ * eines Doppelnamens. Am Korpus 20.7.2026 ausgezählt:
+ *   · «Donzallaz, Hänni»  56× ↔ «Donzallaz Hänni»  1×  (BGE 147 II 287)
+ *   · «Donzallaz, Beusch» 10× ↔ «Donzallaz Beusch» 1×  (BGE 147 II 454)
+ * Einzelbelege: Donzallaz 173 · Beusch 205 · Hänni 165 Entscheide.
+ *
+ * ABGRENZUNG: echte zweiteilige Nachnamen («Aubry Girardin», «van de Graaf»,
+ * «Kistler Vianin», «Hugi Yar») stehen hier NIE — sie werden nicht gespalten. Die
+ * Tabelle ist bewusst eine Positivliste aus belegten Einzelfällen, keine Regel.
+ * Abnahme-Status: Erstrecherche (§11).
+ */
+export const SPALTUNG: Readonly<Record<string, readonly string[]>> = Object.freeze({
+  'donzallaz-beusch': ['Donzallaz', 'Beusch'],
+  'donzallaz-hanni': ['Donzallaz', 'Hänni'],
+});
+
 /** Slug ggf. über die Alias-Tabelle auf den Kanon abbilden. */
 export function kanonSlug(slug: string): string {
   return ALIAS[slug] ?? slug;
 }
 
 // ── Name-Tokenisierung → {given, surname} ──
-interface NameTeile { given: string | null; surname: string; }
+interface NameTeile { given: string | null; surname: string; abk: boolean }
+
+/** Einzel-Initial («G.», «F.») — genau ein Buchstabe, Punkt optional. */
+const istInitiale = (t: string) => /^[A-ZÄÖÜ]\.?$/.test(t) && t.replace('.', '').length === 1;
+
+/**
+ * Vornamens-ABKÜRZUNG («Th.», «Ph.», «St.», «Chr.») — Grossbuchstabe + 1–3
+ * Kleinbuchstaben + zwingender Punkt.
+ *
+ * Der Punkt ist der Diskriminator: ohne ihn wäre jeder kurze Nachname («Ott», «Rey»)
+ * betroffen. Romanische Namenspartikel («de», «van») sind kleingeschrieben und
+ * punktlos, werden also nie getroffen.
+ */
+const istAbkuerzung = (t: string) => /^[A-ZÄÖÜ][a-zäöüA-ZÄÖÜ]{1,3}\.$/.test(t);
 
 /**
  * Namenspartikel, die zum NACHNAMEN gehören und nie ein Vorname sind.
@@ -239,23 +339,44 @@ function tokenisiereName(rest: string, nurNachname: boolean): NameTeile | null {
     const ohne = toks.length > 1 && /^[A-ZÄÖÜ]\.?$/.test(toks[toks.length - 1])
       ? toks.slice(0, -1)
       : toks;
-    return { given: null, surname: ohne.join(' ') };
+    // VORANGESTELLTE Abkürzung ist dagegen ein Vornamen-Kürzel und gehört NICHT in
+    // den Nachnamen: «Bundesrichter Th. Müller» (BGE) ergab sonst den Nachnamen
+    // «Th. Müller» → Slug `th-muller`, ein toter Eimer neben `muller`; eine Suche
+    // nach «Müller» fand den Richter nicht mehr (Befund Gegenprüfung 20.7.2026).
+    // Die alte Regel warf nur NACHgestellte EINZEL-Initiale ab und griff für «Th.»
+    // doppelt nicht (führend + zweibuchstabig).
+    if (ohne.length > 1 && (istInitiale(ohne[0]) || istAbkuerzung(ohne[0]))) {
+      return { given: ohne[0], surname: ohne.slice(1).join(' '), abk: true };
+    }
+    // NACHgestellte Abkürzung («Bundesrichter Müller Th.») wird hier BEWUSST NICHT
+    // umgestellt: `trimRand` hat den Punkt zu diesem Zeitpunkt bereits entfernt, und
+    // ohne ihn ist ein kurzes Schluss-Token nicht mehr von einem echten zweiten
+    // Nachnamensteil zu unterscheiden («Hugi Yar», «Kistler Vianin»). Ein Umstellen
+    // per Längen-Heuristik würde diese Namen zerreissen — teurer Schaden für einen
+    // Einzelfall im Korpus.
+    // Das ist unschädlich, weil der Slug ohnehin zusammenfällt: «Müller Th» faltet zu
+    // `muller-th`, genau wie «Th. Müller» (Nachname + Vornamen-Kürzel). Beide Formen
+    // landen also im SELBEN Eimer; zu klären war nur der ANZEIGENAME, und das
+    // erledigt `hatAbkuerzung()` im Kanon-Pass.
+    return { given: null, surname: ohne.join(' '), abk: false };
   }
-  if (toks.length === 1) return { given: null, surname: toks[0] };
+  if (toks.length === 1) return { given: null, surname: toks[0], abk: false };
   // Führendes Partikel ⇒ der ganze Rest ist der Nachname («de Sépibus», «van de Graaf»).
-  if (PARTIKEL.has(toks[0].toLowerCase())) return { given: null, surname: toks.join(' ') };
+  if (PARTIKEL.has(toks[0].toLowerCase())) return { given: null, surname: toks.join(' '), abk: false };
   // Führende Initialen («G.», «F. W.») → Vorname(n), Rest = Nachname.
   // MEHRERE Initialen müssen ALLE konsumiert werden (Befund Gegenprüfung
   // 20.7.2026): «Dr. med. F. W. Eymann» ergab mit Ein-Initial-Regel den Nachnamen
   // «W. Eymann» und den Slug `w-eymann-f` — eine Suche nach «Eymann» fand den
   // Fachrichter nicht mehr. Der Anzeigename behält alle Initialen («F. W. Eymann»),
   // der Slug bindet an das ERSTE (`eymann-f`), damit er stabil bleibt.
-  const istInitiale = (t: string) => /^[A-ZÄÖÜ]\.?$/.test(t) && t.replace('.', '').length === 1;
-  if (istInitiale(toks[0])) {
+  // Mehrbuchstabige Abkürzungen («Th. Aeschbach», «Ph. Waegeli») zählen hier mit —
+  // sie sind Vornamens-Kürzel, kein Nachnamensbestandteil.
+  const istKurz = (t: string) => istInitiale(t) || istAbkuerzung(t);
+  if (istKurz(toks[0])) {
     let i = 0;
-    while (i < toks.length - 1 && istInitiale(toks[i])) i++;
+    while (i < toks.length - 1 && istKurz(toks[i])) i++;
     // i zeigt aufs erste Nicht-Initial-Token = Beginn des Nachnamens.
-    return { given: toks.slice(0, i).join(' '), surname: toks.slice(i).join(' ') };
+    return { given: toks.slice(0, i).join(' '), surname: toks.slice(i).join(' '), abk: true };
   }
   // Sonst: erstes Token = Vorname, Rest = Nachname(n) (mehrteilige Nachnamen bleiben zusammen).
   // MITTEL-Initialen gehören zum Vornamen, nicht zum Nachnamen: «Christoph A. Spenlé»
@@ -263,7 +384,7 @@ function tokenisiereName(rest: string, nurNachname: boolean): NameTeile | null {
   // nach «Spenlé» fand ihn nicht mehr.
   let i = 1;
   while (i < toks.length - 1 && /^[A-ZÄÖÜ]\.?$/.test(toks[i]) && toks[i].replace('.', '').length === 1) i++;
-  return { given: toks.slice(0, i).join(' '), surname: toks.slice(i).join(' ') };
+  return { given: toks.slice(0, i).join(' '), surname: toks.slice(i).join(' '), abk: false };
 }
 
 /**
@@ -283,17 +404,19 @@ function tokenisiereName(rest: string, nurNachname: boolean): NameTeile | null {
  * NUR dann auf einen Vollnamen zurück, wenn dieser eindeutig ist — sonst bleibt er
  * ein eigener Eimer und wird als Kollision berichtet (nie raten, §2/§8).
  */
-function slugTeile(t: NameTeile): { slug: string; nachSlug: string; givenSlug: string | null } {
+function slugTeile(t: NameTeile): {
+  slug: string; nachSlug: string; givenSlug: string | null; givenAbk: boolean;
+} {
   const nachSlug = fold(t.surname);
-  if (!t.given) return { slug: nachSlug, nachSlug, givenSlug: null };
+  if (!t.given) return { slug: nachSlug, nachSlug, givenSlug: null, givenAbk: false };
   // Mehrere Initialen («F. W.») binden im Slug nur an die ERSTE: sonst entstünde
   // `eymann-f-w` mit givenSlug «f-w» (Länge 3), und der Kanon-Pass hielte das für
   // einen ausgeschriebenen Vornamen — «F. W. Eymann» und ein späteres
   // «Fritz Eymann» würden dann nie zusammengeführt. Mit `eymann-f` bleibt die
   // Initial-Semantik (Länge 1) erhalten, die `kanonisiere()` auswertet.
   const givenSlug = fold(t.given.split(/\s+/)[0]);
-  if (!givenSlug) return { slug: nachSlug, nachSlug, givenSlug: null };
-  return { slug: `${nachSlug}-${givenSlug}`, nachSlug, givenSlug };
+  if (!givenSlug) return { slug: nachSlug, nachSlug, givenSlug: null, givenAbk: false };
+  return { slug: `${nachSlug}-${givenSlug}`, nachSlug, givenSlug, givenAbk: t.abk };
 }
 
 /**
@@ -381,7 +504,12 @@ function segmentZuRichter(
   if (STOPP_NACHNAME.has(fold(teile.surname))) return null;
   const name = teile.given ? `${teile.given} ${teile.surname}` : teile.surname;
   const st = slugTeile(teile);
-  return { r: { slug: st.slug, nachSlug: st.nachSlug, givenSlug: st.givenSlug, name, nameRoh: rest, rolle } };
+  return {
+    r: {
+      slug: st.slug, nachSlug: st.nachSlug, givenSlug: st.givenSlug,
+      givenAbk: st.givenAbk, name, nameRoh: rest, rolle,
+    },
+  };
 }
 
 /** Segment-Trenner: Komma, Semikolon, « und »/« et »/« e »/« ed » (mit Whitespace). */
@@ -405,12 +533,38 @@ export interface BesetzungErgebnis {
  * Reihenfolge: (1) Gerichtsschreiber-Teil abtrennen, (2) Richter-Teil segmentieren,
  * (3) je Segment Rolle ernten + Titel/Rollen strippen + Namen bilden.
  */
+/**
+ * Nachlaufendes Fremdmuster aus dem Besetzungs-Freitext schneiden.
+ *
+ * Realfall BGE 151 IV 175 (Korpus-Befund 20.7.2026): der Rubrum-Schnitt hat ein
+ * AKTENZEICHEN mit eingesammelt \u2014
+ *   \u00ab\u2026 Greffi\u00e8re: Mme Kropf. 7B_950/2024et\u00bb
+ * Folgeschaden war nicht bloss Rauschen: das Segment \u00abMme Kropf. 7B_950/2024et\u00bb tr\u00e4gt
+ * eine Ziffer, fiel damit in den \u00abkein sicherer Name\u00bb-Zweig und wurde KOMPLETT
+ * verworfen \u2014 die amtlich genannte Gerichtsschreiberin Kropf fehlte im Register.
+ *
+ * Das Aktenzeichen ist nie Teil der Besetzung, sein Schnitt also kein Informations-
+ * verlust (der volle amtliche Freitext bleibt im Snapshot als Rubrum erhalten, \u00a75).
+ * Bewusst eng gefasst (Ende der Zeichenkette, Bundesgerichts-Dossierformat), damit
+ * kein Namensbestandteil getroffen wird.
+ */
+export function bereinigeBesetzungsFreitext(s: string): string {
+  return s
+    // Kein `\b` nach der Jahreszahl: im Realfall klebt das Beiwerk direkt an
+    // («7B_950/2024et»), zwischen «4» und «e» steht dann keine Wortgrenze.
+    .replace(/[.,;\s]*\b\d[A-Za-z]?_\d+\/\d{4}\s*(?:et|e|und)?\s*$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export function parseBesetzung(
   freitext: string | null | undefined,
   ctx: BesetzungKontext,
 ): BesetzungErgebnis {
   const leer: BesetzungErgebnis = { richter: [], leakErkannt: false, unstrukturiert: false };
-  const roh = (freitext ?? '').replace(/[\u00a0\u202f]/g, ' ').replace(/\s+/g, ' ').trim();
+  const roh = bereinigeBesetzungsFreitext(
+    (freitext ?? '').replace(/[\u00a0\u202f]/g, ' ').replace(/\s+/g, ' ').trim(),
+  );
   if (!roh) return leer;
   const nurNachname = NUR_NACHNAME_GERICHTE.has(ctx.gericht);
   const anrede = ANREDE_GERICHTE.has(ctx.gericht);
@@ -466,6 +620,8 @@ export function parseBesetzung(
     const vorsitzLeitet = hatVorsitz && mV!.index === 0;
     const ohneMarker = seg
       .replace(VORSITZ_RE, ' ')
+      // Referent: Marker entfernen, aber KEINE Rolle setzen (siehe REFERENT_RE).
+      .replace(REFERENT_RE, ' ')
       .replace(/\bMitglied\b/gi, ' ')
       .replace(/\s+/g, ' ')
       .trim();
@@ -480,12 +636,38 @@ export function parseBesetzung(
     // Leitender Marker MIT eigenem Namen: der Vorsitz gilt dem vorigen Richter,
     // der aktuelle Name ist Mitglied (schon so gesetzt).
     if (vorsitzLeitet) vorigenAlsVorsitz();
+    // Amtlich verschmolzene Nachnamen wieder in die realen Personen auftrennen
+    // (kuratiert + belegt, siehe SPALTUNG). Die Rolle des Segments gilt dem ERSTEN
+    // Namen; die weiteren sind Mitglieder — in beiden belegten Fällen steht die
+    // Verschmelzung ohnehin in einem Mitglieder-Segment.
+    const teile = SPALTUNG[res.r.slug];
+    if (teile) {
+      teile.forEach((nachname, i) => {
+        const t = tokenisiereName(nachname, nurNachname)!;
+        const st = slugTeile(t);
+        richter.push({
+          slug: st.slug, nachSlug: st.nachSlug, givenSlug: st.givenSlug,
+          givenAbk: st.givenAbk, name: nachname, nameRoh: nachname,
+          rolle: i === 0 ? res.r.rolle : 'mitglied',
+        });
+      });
+      continue;
+    }
     richter.push(res.r);
   }
 
   // ── Gerichtsschreiber ──
   for (const seg of gsNamen) {
-    const res = segmentZuRichter(seg, 'gerichtsschreiber', /* GS immer mit Namen */ false, anrede);
+    // `nurNachname` gilt für Gerichtsschreiber:innen GENAUSO wie für Richter:innen.
+    // Die frühere Fassung übergab hart `false` — an BGE/BGer, wo der Amtstext nie
+    // einen Vornamen führt, zerlegte das jeden ZWEITEILIGEN Nachnamen in Vorname +
+    // Nachname: «Greffière: Mme Keel Baumann» → given «Keel» / surname «Baumann»,
+    // Slug `baumann-keel`. Betroffen war die ganze Klasse (Berger Götz, Tornay
+    // Schaller, Hugi Yar, Kopp Käch …), und schlimmer: `kanonisiere()` registrierte
+    // «keel» als ausgeschriebenen Vornamen unter CH|baumann — jedes künftige
+    // «K. Baumann» wäre automatisch in diesen Eimer gezogen worden (False-Merge-
+    // Attraktor, §1). Befund Gegenprüfung 20.7.2026.
+    const res = segmentZuRichter(seg, 'gerichtsschreiber', nurNachname, anrede);
     if (res && 'leak' in res) { leakErkannt = true; continue; }
     if (res) richter.push(res.r);
   }
@@ -518,6 +700,8 @@ export interface KanonEintrag {
   slug: string;
   nachSlug: string;
   givenSlug: string | null;
+  /** Stand der Vorname als Abkürzung im Amtstext? (siehe RichterRoh.givenAbk) */
+  givenAbk: boolean;
   name: string;
   /**
    * Namensraum der Zusammenführung (z.B. 'CH' für Bundesgerichte, 'BS' für
@@ -552,13 +736,57 @@ export interface KanonErgebnis {
  *  3. Der Anzeigename je Kanon-Slug ist die längste beobachtete Schreibweise
  *     (Gleichstand → lexikographisch kleinste), damit die Ausgabe stabil ist (§2).
  */
+/**
+ * Byte-stabiler Zeichenketten-Vergleich (§2 Determinismus).
+ *
+ * `localeCompare()` OHNE explizite Locale ist umgebungsabhängig: das Ergebnis hängt
+ * am ICU-Build und an der Default-Locale des Rechners. Empirisch verifiziert
+ * (20.7.2026): «van de Graaf».localeCompare(«Van de Graaf») = -1 unter full-ICU,
+ * reiner Code-Unit-Vergleich = +1 — beide Schreibweisen sind gleich lang, der
+ * Tiebreak entschied also allein über den Anzeigenamen. Auf einem small-ICU-Node
+ * oder unter abweichender CI-Locale hätte derselbe Input ein anderes Register
+ * erzeugt, und `check:besetzung` wäre je nach Host rot geworden.
+ */
+function byteVergleich(a: string, b: string): number {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
+/**
+ * Trägt der Anzeigename ein abgekürztes Namenselement («A.», «Th.»)?
+ *
+ * Die zweite Alternative fängt die Form OHNE Punkt: `trimRand` entfernt die
+ * Schluss-Interpunktion, «Bundesrichter Müller Th.» erreicht den Kanon-Pass also als
+ * «Müller Th». Beide Formen falten auf denselben Slug (`muller-th`), es ging nur um
+ * den Anzeigenamen — ohne diesen Zweig galt «Müller Th» als ausgeschrieben und
+ * schlug die korrekte, dreimal häufigere Schreibweise «Th. Müller» (Befund
+ * Gegenprüfung 20.7.2026).
+ *
+ * Nur für die ANZEIGENAMEN-Rangfolge, nie für Slug oder Identität — ein
+ * fälschlich als Abkürzung gewerteter zweiteiliger Nachname («Hugi Yar») kann
+ * darum keinen Schaden anrichten: konkurriert keine andere Schreibweise um
+ * denselben Slug, wird er ohnehin gewählt.
+ */
+function hatAbkuerzung(name: string): boolean {
+  return /(?:^|\s)[A-ZÄÖÜ][a-zäöüA-ZÄÖÜ]{0,2}\.(?=\s|$)/.test(name)
+    || /\s[A-ZÄÖÜ][a-zäöü]{0,2}$/.test(name);
+}
+
 export function kanonisiere(eintraege: readonly KanonEintrag[]): KanonErgebnis {
-  // (a) Vollnamen je (Raum, Nachname) sammeln.
+  // (a) AUSGESCHRIEBENE Vornamen je (Raum, Nachname) sammeln.
+  // Diskriminator ist `givenAbk`, NICHT mehr die Länge des gefalteten Vornamens:
+  // «Ph.» faltet zu `ph` (Länge 2) und galt darum fälschlich als Vollname — der
+  // Initial-Eimer `waegeli-p` (97) wurde auf die Abkürzung `waegeli-ph` (1) gezogen,
+  // der Kanon-Eimer war also selbst eine Abkürzung (Befund Gegenprüfung 20.7.2026).
   const voll = new Map<string, Set<string>>();
+  const abkuerzungen = new Map<string, Set<string>>();
   for (const e of eintraege) {
-    if (!e.givenSlug || e.givenSlug.length <= 1) continue;
+    if (!e.givenSlug) continue;
     const k = `${e.raum}|${e.nachSlug}`;
-    (voll.get(k) ?? voll.set(k, new Set()).get(k)!).add(e.givenSlug);
+    if (e.givenAbk) {
+      (abkuerzungen.get(k) ?? abkuerzungen.set(k, new Set()).get(k)!).add(e.givenSlug);
+    } else {
+      (voll.get(k) ?? voll.set(k, new Set()).get(k)!).add(e.givenSlug);
+    }
   }
 
   // (b) Roh-Slug → Kanon-Slug.
@@ -569,7 +797,9 @@ export function kanonisiere(eintraege: readonly KanonEintrag[]): KanonErgebnis {
     const key = `${e.raum}|${e.slug}`;
     if (map.has(key)) continue;
     let ziel = kanonSlug(e.slug);
-    if (e.givenSlug && e.givenSlug.length === 1) {
+    // Eine Abkürzung wird NUR auf einen ausgeschriebenen Vornamen zurückgeführt,
+    // nie auf eine andere Abkürzung (sonst würde eine Abkürzung zum Kanon).
+    if (e.givenSlug && e.givenAbk) {
       const kandidaten = [...(voll.get(`${e.raum}|${e.nachSlug}`) ?? [])]
         .filter((g) => g.startsWith(e.givenSlug!))
         .sort();
@@ -585,6 +815,19 @@ export function kanonisiere(eintraege: readonly KanonEintrag[]): KanonErgebnis {
       `→ bleibt eigener Eimer (nicht zugeordnet, §8).`,
     );
   }
+  // Mehrere ABKÜRZUNGS-Varianten desselben Nachnamens ohne auflösenden Vollnamen
+  // («P. Wägeli» / «Ph. Wägeli») sind entweder eine Person mit zwei Schreibweisen
+  // oder zwei Personen — das entscheidet der Korpus NICHT. Sie bleiben getrennt und
+  // werden gemeldet, damit die Klärung über die kuratierte ALIAS-Tabelle läuft
+  // statt über eine stille Regel (§8: nie raten, aber auch nie verschweigen).
+  for (const [k, set] of [...abkuerzungen].sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0))) {
+    if (set.size < 2) continue;
+    const [raum, nach] = k.split('|');
+    kollisionen.push(
+      `ABKÜRZUNGS-VARIANTEN — ${raum}/${nach}: ${[...set].sort().join(', ')} ` +
+      `→ getrennte Eimer (keine Auflösung ohne ausgeschriebenen Vornamen, §8).`,
+    );
+  }
 
   // (c) Anzeigenamen + Divergenz-Report je Kanon-Slug.
   const namen = new Map<string, Map<string, number>>();
@@ -594,12 +837,29 @@ export function kanonisiere(eintraege: readonly KanonEintrag[]): KanonErgebnis {
     m.set(e.name, (m.get(e.name) ?? 0) + 1);
   }
   const anzeige = new Map<string, string>();
-  for (const [slug, m] of [...namen].sort((a, b) => a[0].localeCompare(b[0]))) {
-    const sortiert = [...m.keys()].sort((a, b) => b.length - a.length || a.localeCompare(b));
+  for (const [slug, m] of [...namen].sort((a, b) => byteVergleich(a[0], b[0]))) {
+    // Anzeigename-Regel (Befund Gegenprüfung 20.7.2026 — die alte Regel «längste
+    // Schreibweise gewinnt» machte systematisch den TIPPFEHLER zum Facetten-Label,
+    // weil ein Buchstabendreher mit Extra-Zeichen die längere Variante ist):
+    //   1. AUSGESCHRIEBENE Form vor abgekürzter («Andrea Pfleiderer» ×2 schlägt
+    //      «A. Pfleiderer» ×288 — die Vollform ist die bessere Auskunft),
+    //   2. dann HÄUFIGKEIT («Daniela Thurnherr Keller» ×167 schlägt den Dreher
+    //      «Daniela Thurnherrr Keller» ×2; «Anja Dillena» ×137 schlägt ×1
+    //      «Anja Dellena»),
+    //   3. dann Länge, zuletzt byte-stabiler Vergleich (§2).
+    const sortiert = [...m.keys()].sort((a, b) =>
+      Number(hatAbkuerzung(a)) - Number(hatAbkuerzung(b))
+      || m.get(b)! - m.get(a)!
+      || b.length - a.length
+      || byteVergleich(a, b));
     anzeige.set(slug, sortiert[0]);
     // Divergente VORNAMEN unter einem Slug sind der klassische False-Merge.
+    // Abkürzungen sind hier auszuklammern: «A. Pfleiderer» neben «Andrea Pfleiderer»
+    // ist eine legitime Initial-Auflösung, kein False-Merge. Der frühere Filter
+    // `length > 2` traf das nur zufällig («A.» raus, «Th.» drin) — der explizite
+    // Abkürzungs-Test ist die gemeinte Regel.
     const vornamen = new Set(
-      [...m.keys()].map((n) => n.split(/\s+/)[0]).filter((v) => v.length > 2),
+      [...m.keys()].map((n) => n.split(/\s+/)[0]).filter((v) => v.length > 1 && !hatAbkuerzung(v)),
     );
     if (vornamen.size > 1) {
       kollisionen.push(

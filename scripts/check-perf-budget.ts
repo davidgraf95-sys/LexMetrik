@@ -73,6 +73,32 @@ if (entry.length === 1) {
   }
 }
 
+// 4) DATEN-Nutzlast auf dem kritischen Pfad (Befund Gegenprüfung 20.7.2026).
+//    Das Tor prüfte ausschliesslich dist/assets/*.js und fasste public/**/*.json
+//    nie an — der grösste Einzelposten von /rechtsprechung lag damit vollständig
+//    ausserhalb des Budgets. «check:perf-budget grün» war für den Datenzuwachs
+//    des Richter-Fundaments (+118 KB gzip auf register.json) eine leere
+//    Zusicherung. register.json lädt zudem NICHT nur auf /rechtsprechung: die
+//    Shell zieht es für jeden Inhaltspfad (Breadcrumb-Label), also faktisch auf
+//    jeder Gesetzes-Leserseite. Ohne Schranke wächst die Achse mit jedem weiteren
+//    Kanton unbemerkt weiter (§15).
+const DATEN_BUDGET: readonly (readonly [string, number])[] = [
+  ['public/rechtsprechung/register.json', 780 * 1024],
+  ['public/rechtsprechung/richter.json', 24 * 1024],
+  ['public/rechtsprechung/norm-index.json', 260 * 1024],
+];
+console.log('check:perf-budget — Daten-Nutzlast (gzip):');
+for (const [rel, max] of DATEN_BUDGET) {
+  const p = join(process.cwd(), rel);
+  if (!existsSync(p)) { fehler.push(`${rel} fehlt — Budget nicht prüfbar.`); continue; }
+  const g = gz(p);
+  console.log(`  ${rel.replace('public/', '')}  gzip ${kb(g)}  (Budget ${kb(max)})`);
+  if (g > max) {
+    fehler.push(`${rel} ${kb(g)} > Budget ${kb(max)} — Daten-Nutzlast auf dem kritischen Pfad. `
+      + 'Entweder die Projektion verschlanken (Felder/Rollen auslagern) oder das Budget bewusst anheben.');
+  }
+}
+
 if (fehler.length) {
   console.error('\ncheck:perf-budget ROT:');
   for (const f of fehler) console.error(`  ✗ ${f}`);
