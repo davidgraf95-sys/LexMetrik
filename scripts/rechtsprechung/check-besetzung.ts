@@ -86,7 +86,7 @@ for (const s of snaps) {
   if (!res.richter.length) continue;
   rohProKey.set(key, res.richter);
   for (const r of res.richter) {
-    kanonInput.push({ slug: r.slug, nachSlug: r.nachSlug, givenSlug: r.givenSlug, name: r.name, raum: s.kanton });
+    kanonInput.push({ slug: r.slug, nachSlug: r.nachSlug, givenSlug: r.givenSlug, givenAbk: r.givenAbk, name: r.name, raum: s.kanton });
   }
 }
 const kanon = kanonisiere(kanonInput);

@@ -207,8 +207,10 @@ describe('Rollen-/Titel-Rauschen wird nie ein Richter', () => {
 });
 
 describe('kanonisiere — Initial→Vollname nur bei Eindeutigkeit', () => {
+  // `givenAbk` wird — wie in der Produktion — aus der Schreibweise des Namens
+  // abgeleitet: «K. Zimmermann» trägt eine Abkürzung, «Katharina Zimmermann» nicht.
   const e = (slug: string, nachSlug: string, givenSlug: string | null, name: string, raum = 'BS'): KanonEintrag =>
-    ({ slug, nachSlug, givenSlug, name, raum });
+    ({ slug, nachSlug, givenSlug, givenAbk: /^[A-ZÄÖÜ][a-zäöüA-ZÄÖÜ]{0,2}\.(?=\s|$)/.test(name), name, raum });
 
   it('eindeutiges Initial wird auf den Vollnamen gezogen', () => {
     const k = kanonisiere([
