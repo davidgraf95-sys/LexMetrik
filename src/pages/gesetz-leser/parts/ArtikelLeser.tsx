@@ -15,6 +15,8 @@ import {
 } from '../../../lib/verzahnung/artikel-revisionen';
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../../lib/normtext/typen';
+import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
+import { ArtikelHistorieZeile } from './ArtikelHistorie';
 import { margStufeStil, fnTextMitLinks, baueZitat, margLabel } from '../helpers';
 import { zitatMitAusweis, heuteIso } from '../../../lib/format';
 import { schaetzeArtikelHoehe } from '../berechnungen';
@@ -137,9 +139,12 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }:
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, revision, istAnhang = false }: {
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, revision, historie, istAnhang = false }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; intern?: InternRefs;
   marg?: string[];
+  /** G-HIST-UI: Fassungshistorie dieses Artikels aus dem erlass-lokalen Shard
+   *  (Reader lädt ihn einmal idle). undefined = kein Eintrag ⇒ kein Badge (§8). */
+  historie?: ArtikelHistorie;
   /** W2·5d G3b (③/⑤): der Eintrag ist ein Anhang (`annex_*`) bzw. Staatsvertrags-
    *  Protokoll (`lvl_*`) — als eigenständig erkennbarer, klar abgesetzter Block
    *  rendern (Struktur-Trenner statt Artikel-Trenner, «Anhang N»/«Protokoll N» als
@@ -412,6 +417,18 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               aus dem erlass-lokalen Shard. Verdrahtet das bisher tote proNormArtikel-
               Modell (norm-index.ts) sichtbar — vom Artikel direkt zur Rechtsprechung. */}
           <LeitfallZeile refs={leitfaelle} normZitat={zitat} revision={revision} />
+          {/* G-HIST-UI: «Gilt seit»-Badge + aufklappbare Fassungs-Timeline dieses
+              Artikels (aus dem erlass-lokalen Historie-Shard, idle geladen). Am
+              Artikel-Fuss wie Verweise/Leitfälle. §15.2: der Slot steht ab dem
+              ERSTEN Render und reserviert die eine Chip-Zeile (`min-h-hist-zeile`,
+              Token — gemessen exakt 24 px, deterministisch über alle Artikel), damit
+              der idle-Shard-Resolve reservierten Platz FÜLLT statt sichtbare Artikel
+              zu schieben (Messung 20.7.: sonst CLS 0.0227 statt 0.0002 unter 6×). Der
+              Aussenabstand sitzt hier am Slot, nicht in der Zeile — sonst fallen
+              reservierte und gefüllte Höhe auseinander. */}
+          <div className="mt-4 min-h-hist-zeile">
+            <ArtikelHistorieZeile historie={historie} artikel={e.artikel} />
+          </div>
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar). W2·5d G2b:
               der Apparat liegt IMMER im DOM (Ctrl+F/Print/Screenreader, R9/§8);
               der data-fussnoten-CSS-Toggle dämpft ihn bei «AUS» (data-fn-apparat),

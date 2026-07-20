@@ -26,6 +26,7 @@ import { InGesetzSuche } from './parts/InGesetzSuche';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
 import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
+import { ladeHistorieShard, historieFuerArtikel, type HistorieShard } from '../../lib/normtext/historie-laden';
 import {
   paneRoot, istAnhangToken, findeArt,
   berechneSekPos, berechneSektionMeta,
@@ -69,6 +70,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Shard; klassifiziert je Leitfall-Kante, ob sich die Norm SEIT dem Entscheid
   // revidiert hat (Normrevisions-Ehrlichkeit, §V1c).
   const [revisionShard, setRevisionShard] = useState<{ key: string; shard: RevisionShard | null } | null>(null);
+  // G-HIST-UI: Per-Artikel-Historie-Shard des Erlasses. EIN idle-Fetch auf Reader-
+  // Ebene (wie Leitfall-/Revisions-Shard); der Artikel-Eintrag wird als Prop
+  // durchgereicht (die ArtikelHistorieZeile ist ein reiner Renderer). An den Erlass-
+  // Key gebunden — ein Pane-/Erlass-Wechsel liefert nie fremde Historie.
+  const [historieShard, setHistorieShard] = useState<{ key: string; shard: HistorieShard | null } | null>(null);
   const [fehler, setFehler] = useState(false);
   // W2·10-UI-NAV/N0d·O3: kurze Bestätigung nach «In neuem Reiter» — der Reader
   // wird bei der ?r-Instanz-Navigation NICHT neu gemountet (gleicher key=schluessel),
@@ -108,6 +114,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const abbrechen = beiLeerlauf(() => {
       void ladeLeitfallShard(key).then((shard) => { if (lebt) setLeitfallShard({ key, shard }); });
       void ladeRevisionShard(key).then((shard) => { if (lebt) setRevisionShard({ key, shard }); });
+      // G-HIST-UI: Historie-Shard (Bund; Kanton 404 → null → still kein Badge, §8).
+      void ladeHistorieShard(key).then((shard) => { if (lebt) setHistorieShard({ key, shard }); });
     });
     return () => { lebt = false; abbrechen(); };
   }, [erlass?.key]);
@@ -125,6 +133,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       ? revisionFuerToken(revisionShard.shard, artikel)
       : undefined
   ), [erlass, revisionShard]);
+  // G-HIST-UI: Artikel-Token → Fassungshistorie des AKTUELLEN Erlasses (sonst
+  // undefined = kein Badge). Direkter Roh-Token-Lookup (Snapshot/Shard gleiche
+  // Extraktion). Stabile Referenz aus dem Shard → memo-freundlich.
+  const historieFuer = useCallback((artikel: string) => (
+    erlass && historieShard?.key === erlass.key
+      ? historieFuerArtikel(historieShard.shard, artikel)
+      : undefined
+  ), [erlass, historieShard]);
 
   const [offen, setOffen] = useState<Record<string, boolean>>({});
   // Eigener Auf-/Zu-Zustand NUR für den TOC-Baum (entkoppelt vom Fliesstext).
@@ -967,12 +983,45 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Highlight-Menge (Suche verlassen / Erlass wechseln). Ausser-Bestand-neutral,
   // da `treffer===null` (kein Suchmodus) sofort löscht.
   const trefferRef = useRef<HTMLDivElement | null>(null);
+  // Handle auf den noch nicht gefeuerten Setz-rAF, damit ihn AUCH der Sofort-
+  // Aufräumer unten abbestellen kann (React Compiler ist AUS, §15/4 → Ref).
+  const highlightRaf = useRef<number | null>(null);
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!treffer) { setzeSuchHighlight(null, ''); return; }
     const id = window.requestAnimationFrame(() => setzeSuchHighlight(trefferRef.current, sucheTrim));
-    return () => { window.cancelAnimationFrame(id); setzeSuchHighlight(null, ''); };
+    highlightRaf.current = id;
+    return () => { window.cancelAnimationFrame(id); highlightRaf.current = null; setzeSuchHighlight(null, ''); };
   }, [treffer, sucheTrim]);
+
+  // A35-Sofort-Aufräumer (Befund 20.7.2026, Shard 3/3). Das Löschen der Highlight-
+  // Registry hing bisher AUSSCHLIESSLICH am Effekt oben — und der läuft erst, wenn
+  // `treffer` über den ENTPRELLTEN `sucheTrim` auf null kippt. Genau dieser Commit
+  // ist der teuerste des Readers: die Trefferliste weicht dem vollständigen
+  // Volltext-Baum (OR: 1686 Artikel-Knoten neu gemountet). Gemessen von der Leerung
+  // des Feldes bis zum `CSS.highlights.delete`: ~2,4 s ohne Drossel, 9,8 s bei 4×,
+  // 21,9 s bei 8× CPU-Drossel — auf dem 2-vCPU-Runner reisst das reihum das
+  // 15-s-Prüfbudget des A35-Specs, und der Nutzer sieht die Markierung sekundenlang
+  // weiterleuchten, obwohl das Suchfeld leer ist (§8: die Anzeige lügt über den
+  // Zustand). Latenz-Kopplung, KEIN Leck: der Eintrag verschwand am Ende immer.
+  //
+  // Darum das Aufräumen vom teuren Commit ENTKOPPELN: es hängt am ROHEN Feldwert,
+  // nicht am entprellten. Der Render, der `suche` leert, ist billig (die memoisierten
+  // ArtikelLeser der noch stehenden Trefferliste steigen aus der Reconciliation aus),
+  // also feuert dieser Effekt im nächsten Frame. Nur der boolesche Kipp-Punkt ist
+  // Dependency — beim Tippen läuft KEIN zusätzlicher TreeWalker (§15/3, kein
+  // Setz-Pfad hier). Wirkt für JEDEN Ausstieg aus dem Suchmodus (Feld leeren,
+  // `springeZuArtikel`, Erlass-/Pane-Wechsel), unabhängig davon, welche Teilbäume
+  // neu rendern. Der Effekt oben bleibt unverändert der einzige SETZENDE Pfad.
+  const sucheFeldLeer = suche.trim() === '';
+  useEffect(() => {
+    if (typeof window === 'undefined' || !sucheFeldLeer) return;
+    if (highlightRaf.current !== null) {
+      window.cancelAnimationFrame(highlightRaf.current);
+      highlightRaf.current = null;
+    }
+    setzeSuchHighlight(null, '');
+  }, [sucheFeldLeer]);
 
   // §15.2 CLS-Lade-Reservierung: solange Snapshot/Struktur/Currency async laden,
   // reserviert min-h-screen (Token, §13) die volle Lesehöhe. Kein Inhalt wird
@@ -1145,7 +1194,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           ...s.kinder.map((k) => ({ pos: sekPos.get(k.id) ?? Infinity, el: renderSektion(k, true, tiefe + 1) })),
           ...s.artikel.map((e) => ({
             pos: artIndex.get(e.artikel) ?? 0,
-            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />,
+            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} historie={historieFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />,
           })),
         ].sort((a, b) => a.pos - b.pos)
       : [];
@@ -1414,14 +1463,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           {treffer ? (
             <div ref={trefferRef} className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} historie={historieFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} historie={historieFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true, 0))}

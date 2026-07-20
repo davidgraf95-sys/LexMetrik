@@ -145,7 +145,12 @@ function textZeilen(text: string | undefined, proZeile = 68): number {
 }
 export function schaetzeArtikelHoehe(e: NormSnapshot): number {
   const ZEILE = 30;        // px je Fliesstext-Zeile
-  let h = 104;             // Artikelkopf: «Art. N» + Trenner (border-t + pt-7 mt-7) + Basisabstand
+  // G-HIST-UI (§15.2, 20.7.2026): der reservierte Fassungs-Slot am Artikel-Fuss
+  // (`mt-4 min-h-hist-zeile` in ArtikelLeser) ist 16 + 24 px hoch und steht bei
+  // JEDEM Artikel — er gehört darum in die Platzhalter-Höhe der off-screen-Artikel
+  // (`contain-intrinsic-size`), sonst schiebt das Aufblenden beim Hereinscrollen.
+  const HIST_SLOT = 40;
+  let h = 104 + HIST_SLOT; // Artikelkopf: «Art. N» + Trenner (border-t + pt-7 mt-7) + Basisabstand + Fassungs-Slot
   if (e.titel) h += 30;    // amtlicher Randtitel/Sachüberschrift (eine Zeile)
   for (const b of e.bloecke) {
     // M13-Annex-Zwischenüberschrift (titel = Heading-Tiefe): kompakte Titelzeile.
