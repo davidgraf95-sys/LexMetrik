@@ -50,9 +50,19 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
     // `article`/`[data-toc]` (beide unabhängig von STANDARD_OFFEN_TIEFE) und misst danach
     // über kurze page.evaluate-Reads; die Zeit geht rein in die Reflow-Kosten je Wheel.
     // Auf langsamen 2-vCPU-Runner-Instanzen riss reihum auch das 180-s-Budget (auf
-    // schnellen ~90 s). 240 s ist ein NOTDACH gegen die Instanz-Streuung; es greift nur
-    // bei Überschreitung und verlangsamt grüne Läufe nicht (§6.3, kein Assertion-Change).
-    test.setTimeout(240_000)
+    // schnellen ~90 s). Das Notdach greift nur bei Überschreitung und verlangsamt
+    // grüne Läufe nicht (§6.3, kein Assertion-Change).
+    //
+    // 240 → 360 s (20.7.2026): 240 s war zu knapp bemessen, und zwar messbar. Die
+    // Runner-Streuung ist inzwischen quantifiziert — dieselbe Software misst quer
+    // über die Jobs TBT 2262…5612 ms, also **Faktor 2.5** allein aus der
+    // Maschinenzuteilung (Beleg + Messreihe: scripts/perf/lighthouse-budget.ts,
+    // Schwellen-Block). Auf die ~90 s dieses Tests auf einer schnellen Instanz
+    // angewandt sind das ~225 s auf einer langsamen — das alte Dach lag mit 240 s
+    // nur ~7 % darüber und riss folgerichtig (CI-Lauf 29744687036:
+    // «page.evaluate: Test timeout of 240000ms exceeded»). 360 s ≙ 4× der schnellen
+    // Beobachtung deckt die gemessene Spanne mit Reserve.
+    test.setTimeout(360_000)
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 820 })
     await page.goto('/gesetze/bund/OR')
@@ -185,7 +195,12 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
     await expect(page.locator('[data-toc]')).toBeVisible({ timeout: 10000 })
     // Beobachter mit Quellen-Erfassung (buffered wie bisher): bei Überschreitung
     // nennt die expect-Meldung die Top-shiftenden Elemente im Klartext + Wachser.
-    await clsBeobachtenInstallieren(page, true)
+    // `nurAbInstall` (20.7.2026): NUR Shifts ab hier zählen. Dieser Test misst laut
+    // Titel/DoD das LESE-SCROLLEN unter Drossel; der `buffered`-Observer zog ihm
+    // bisher zusätzlich den ~2.7-s-Lade-Shift an (im Kommentar oben schon benannt,
+    // aber nicht ausgeschlossen). Der Lade-CLS bleibt anderswo gedeckt — Beleg +
+    // Begründung im Kopf von `helpers/cls.ts`. Budget 0.05 unverändert.
+    await clsBeobachtenInstallieren(page, true, true)
     const client = await page.context().newCDPSession(page)
     await client.send('Emulation.setCPUThrottlingRate', { rate: 4 })
     // Echtes Tastatur-Scrollen (content-visibility-Reflows dem Input zugerechnet).

@@ -169,6 +169,18 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     // Auf dem langsamen CI-Runner grosszügig binden, damit der Warmlauf nicht auf
     // eine noch nicht hydrierte Leiste tippt (sonst Klick-/fill-Timeout).
     await expect(feld).toBeVisible({ timeout: 20000 })
+    // ZUSÄTZLICHE Ready-Latte auf den ROUTEN-Inhalt (20.7.2026). Die Kopf-Suchleiste
+    // gehört zur App-SHELL und steht bereits, während die Route selbst noch am
+    // Suspense-Fallback hängt. Beginnt die Messung in diesem Fenster, fällt der
+    // Fallback-Wechsel (`App.tsx` min-h-screen → echte Routenhöhe) in das Budget —
+    // ein Lade-Shift, den dieser INTERAKTIONS-Test laut Kontrakt nicht misst.
+    // Empirisch: wartet der Warmlauf zusätzlich auf den Routen-Inhalt, misst der
+    // Test CLS 0 bei 10×, 20× und 30× Drossel; ohne diese Latte riss er ab 8×
+    // reproduzierbar (5 von 8 Läufen, bitgleiche Werte). Reine Ready-Bedingung —
+    // Budget und Prüfschritte unverändert (§6.3).
+    await expect(
+      page.getByRole('main').getByRole('button', { name: /Direkt zum Artikel springen/ }),
+    ).toBeVisible({ timeout: 20000 })
     await feld.click()
     const box = listbox(page)
     // WARMLAUF (ungedrosselt): der erste Tastendruck stösst das einmalige Lazy-
@@ -183,7 +195,11 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     // CLS-Beobachter VOR der gemessenen Interaktion scharf schalten (nur unerwartete
     // Shifts). Mit Quellen-Erfassung: bei Überschreitung nennt die expect-Meldung
     // die Top-shiftenden Elemente + nav-relative Zeitstempel im Klartext.
-    await clsBeobachtenInstallieren(page, true)
+    // `nurAbInstall` (20.7.2026): NUR Shifts ab hier zählen. Der `buffered`-Observer
+    // rechnete zuvor die Shifts des bewusst ungedrosselten WARMLAUFS oben (und den
+    // Seitenaufbau) diesem Interaktions-Budget zu — Beleg + Begründung im Kopf von
+    // `helpers/cls.ts`. Das Budget 0.05 unten bleibt unverändert.
+    await clsBeobachtenInstallieren(page, true, true)
     // CI-realistischer Drossel-Grad: der 2-vCPU-CI-Runner drosselt durch Contention
     // schon von sich aus; 6× käme dort effektiv ≈12× nahe und misst dann Host-
     // Auslastung statt Interaktions-Lag (systematisch rot in #160/#161/#162). Darum

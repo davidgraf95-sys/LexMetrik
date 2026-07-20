@@ -32,8 +32,42 @@ import type { Page } from '@playwright/test'
 // Installiert den Beobachter im Seitenkontext. `buffered` bleibt dem Aufrufer
 // überlassen, damit das Mess-Fenster byte-gleich zur bisherigen Inline-Messung
 // der jeweiligen Spec bleibt (a33/norm-sprung nutzen `buffered: true`).
-export async function clsBeobachtenInstallieren(page: Page, buffered: boolean): Promise<void> {
-  await page.evaluate((buffered) => {
+//
+// ── MESSFENSTER-KORREKTUR (20.7.2026, deklarierte fachliche Änderung §6.3) ───
+// `buffered: true` zieht dem Observer ALLE Layout-Shifts seit der Navigation
+// nach — auch solche, die VOR seiner Installation passiert sind. Für einen
+// LADE-CLS-Test ist das genau richtig (gesetze-historie-badge misst bewusst den
+// Lade-Einwuchs). Für die beiden A9-INTERAKTIONS-Tests ist es falsch: die messen
+// laut ihrem eigenen Kontrakt die gedrosselte Interaktion NACH einem bewusst
+// ungedrosselten Warmlauf — und bekamen die Shifts dieses Warmlaufs trotzdem
+// angerechnet.
+//
+// Beleg aus dem CI-Log (Lauf 29707427161, norm-sprung A9):
+//   «CLS 0.12616997612847222 — Beobachter@7640ms · Top-Quellen:
+//     Δ0.1250 @7589ms [… .lc-card 497,62·576×188→497,81·576×485; p.mt-2.px-1 →0×0]
+//     … Δ0.0012 @91ms […]»
+// Der Beobachter wurde bei 7640 ms scharf geschaltet, angerechnet wurden Shifts
+// von 7589 ms (Warmlauf-Ende: Trefferliste klappt zu) und von 91 ms (Seitenaufbau,
+// 7.5 s davor). Beide liegen ausserhalb des Fensters, das der Test zu messen
+// erklärt. Weil die Shift-GEOMETRIE fix ist, war der Fehlwert über Tage und
+// Commits bitgleich (0.12616997612847222 in drei Läufen) — ein reproduzierbares
+// Mess-Artefakt, kein Rauschen. Ob er das Budget reisst, entschied allein, ob der
+// Warmlauf-Shift in das 500-ms-`hadRecentInput`-Fenster des Browsers fiel: auf
+// schnellen Runnern ja (verworfen), auf langsamen nein (gezählt) — daher grün/rot
+// nach Maschinenzuteilung.
+//
+// `nurAbInstall: true` zählt darum nur Shifts ab dem Install-Zeitpunkt. Das
+// SCHWÄCHT keine Assertion (das Budget 0.05 bleibt unverändert) und verkleinert
+// die Prüffläche nicht: der Lade-CLS bleibt durch `gesetze-historie-badge`
+// (Lade-CLS mit Badge-Einwuchs) UND durch das Lighthouse-Tor `check:perf-budget`
+// (CLS ≤ 0.05 auf OR + Startseite) gedeckt. Es rückt jede Messung in das Fenster,
+// das ihr Test benennt.
+export async function clsBeobachtenInstallieren(
+  page: Page,
+  buffered: boolean,
+  nurAbInstall = false,
+): Promise<void> {
+  await page.evaluate(({ buffered, nurAbInstall }) => {
     // Snapshot der «Über-dem-Grid»-Kette: Höhe (h) + y je Kandidat-Wachser.
     interface Oben { [name: string]: { h: number; y: number } }
     interface Q { el: string; von: string; nach: string }
@@ -126,6 +160,9 @@ export async function clsBeobachtenInstallieren(page: Page, buffered: boolean): 
         sources?: { node: Node | null; previousRect: DOMRectReadOnly; currentRect: DOMRectReadOnly }[]
       }[]) {
         if (e.hadRecentInput) continue
+        // Messfenster-Korrektur: Shifts von VOR der Installation gehören nicht in
+        // ein Interaktions-Budget (Begründung + Beleg am Funktionskopf).
+        if (nurAbInstall && e.startTime < w.__clsInstallMs) continue
         w.__cls += e.value
         const quellen = (e.sources ?? []).slice(0, 3).map((s) => ({
           el: nenne(s.node),
@@ -157,7 +194,7 @@ export async function clsBeobachtenInstallieren(page: Page, buffered: boolean): 
         })
       }
     }).observe({ type: 'layout-shift', buffered })
-  }, buffered)
+  }, { buffered, nurAbInstall })
 }
 
 // Startet NUR den Über-Grid-Höhen-Sampler (den Ring `w.__clsObenRing`) bereits am

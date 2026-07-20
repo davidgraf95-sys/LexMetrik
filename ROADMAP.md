@@ -255,30 +255,47 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     Artikelsuche blockierte den Sprung-Aufbau (`useUniversalSuche` `useDeferredValue` entkoppelt).
     Golden byte-gleich (nur React-Reader/Such-Hook); 10× lokal grün unter 6× Drossel. Detail:
     STRUKTUR-Karte 10.7.
-  - [ ] **TBT-Deckel je Job normieren statt absolut prüfen** *(offen, Befund 20.7.2026 — der
-    eigentlich richtige Bau)*. Die neu gedruckten Einzelwerte belegen: die Streuung sitzt
-    **zwischen den Jobs, nicht innerhalb**. Ein Job mass `5612 · 5149 · 5537 ms` (±9 %), quer
-    über die Jobs streut derselbe Code aber `2262…5612 ms` (**Faktor 2.5**) — der
-    GitHub-Runner-Pool ist heterogen, die Maschinenzuteilung entscheidet über den Messwert.
-    Folge: **mehr Läufe je Job mitteln das nicht weg** (mit `PERF_RUNS=5` empirisch bestätigt).
-    Ein absoluter Deckel muss darum über dem langsamsten Runner liegen und ist auf dem
-    schnellsten entsprechend stumpf — auf einer schnellen Maschine (2262 ms) rutschte selbst
-    eine +3000-ms-Regression durch. Zu tun: einen billigen Kalibrier-Workload im SELBEN Job
-    messen und das **Verhältnis** prüfen (bzw. die Runner-Klasse aus dem Kalibrierwert
-    ableiten und den Deckel danach skalieren). Erst damit wird TBT wieder ein feiner
-    Regressions-Fänger; bis dahin trägt diese Rolle die CLS-Schranke.
-  - [ ] **Chrome-Isolation je Lighthouse-Lauf + Neukalibrierung** *(offen, Befund 20.7.2026)*.
-    `scripts/perf/lighthouse-budget.ts` teilt EINE Chrome-Instanz über alle Läufe BEIDER
-    Messseiten. Folgen, beide belegt: (a) die Instanz driftet über die Läufe — ein Probelauf mit
-    `PERF_RUNS=5` liess die Startseite (misst als zweite, nach allen OR-Läufen) von historisch
-    143–237 ms TBT auf **1543 ms** springen, **ohne jede Änderung am App-Code**; (b) die Läufe
-    laden mal warm, mal kalt (`LCP: 11.3 · 3.5 · 11.3 s` im selben Job) — die historisch «guten»
-    Werte waren überwiegend Warm-Cache, der Median misst also weder Kalt- noch Dauerlast sauber.
-    Zu tun: je Lauf eine frische Chrome-Instanz (Kosten ~1–2 s/Lauf) ⇒ jeder Lauf ist eine
-    definierte **Kalt-Last** (der realistische Erstbesuch, §15). **Achtung — Messregime-Wechsel:**
-    die absoluten Werte verschieben sich und entwerten die Historie, gegen die die Deckel
-    kalibriert sind ⇒ Schwellen im selben Schritt neu erheben, nicht übernehmen. Darum bewusst
-    NICHT mit der Deckel-Kalibrierung vom 20.7. gebündelt (§14.2).
+  - [~] **TBT-Deckel je Job normieren statt absolut prüfen** *(gebaut, gemessen, VERWORFEN 20.7.2026)*.
+    Umgesetzt und empirisch geprüft: eine synthetische, deterministische CPU-Last
+    (`dist/_perf-kalibrier.html`) wird über dieselbe Lighthouse-Kette gemessen und als Divisor
+    genutzt. **Ergebnis: funktioniert nicht zuverlässig.** Zwei Reihen zu je 8 unabhängigen Runnern
+    (identischer App-Code) widersprechen sich: Reihe 1 senkt die OR-TBT-Streuung von CV 31.2 % auf
+    16.5 % und räumt die Runner-Korrelation ab (r +0.83 → −0.21); Reihe 2 kehrt das Vorzeichen um
+    (roh r −0.43) und das Normieren VERSCHLECHTERT auf CV 29.9 %. Gepoolt (n=16) bleibt eine
+    Scheinverbesserung 26.8 % → 23.3 %. Auch eine abgeschwächte Korrektur `roh·(BASIS/kalib)^α`
+    rettet es nicht: das gepoolt beste α=0.70 wirkt in den beiden Reihen in ENTGEGENGESETZTE
+    Richtungen. Die Regressions-Steigung log(TBT)~log(kalib) ist 0.65 statt 1 — die unterstellte
+    Proportionalität besteht nicht (eine Integer-Schleife misst die Kernfrequenz, die OR-TBT hängt
+    daneben an Speicherbandbreite/Cache/Nachbarlast). **Assertiert wird darum weiter der Rohwert.**
+    Die Kalibrierung bleibt als Diagnose-Ausgabe stehen (~15 s je Job) — Rohmaterial für einen
+    späteren, besseren Normierer und im Log sofort sichtbar, ob ein Job langsam lief.
+    **Damit ist «TBT auf OR wieder scharf» NICHT erreicht** und bleibt offen (§8, kein
+    stillschweigend abgehaktes Ziel).
+  - [x] **Chrome-Isolation je Lighthouse-Lauf + Neukalibrierung** *(erledigt 20.7.2026)*.
+    `einLauf()` startet je Messung eine frische Chrome-Instanz und killt sie danach (~1–2 s/Lauf,
+    ~15 s je CI-Job). Die kumulative Instanz-Drift ist weg (belegt: Startseite sprang zuvor von
+    143–237 auf 1543 ms TBT ohne App-Code-Änderung), jeder Lauf ist definierte Kalt-Last.
+    Schwellen im SELBEN Schritt neu erhoben über **16 Messpunkte auf 16 unabhängigen Runnern**;
+    die Historie des alten Regimes wurde verworfen, nicht übernommen. **Verschärft** (echte
+    Schärfe, runner-unabhängige Metriken): Start-TBT 1500 → **400** (Deckel lag 571 % über dem Ist),
+    Start-LCP 11000 → **10000** (sd nur 37 ms über alle 16 Runner!), OR-TTI 15000 → **13000**,
+    Start-Score 40 → **55**. **Unverändert** OR-TBT 6500 (siehe Schritt oben) und CLS 0.05.
+  - [ ] **OR-LCP ist bimodal — Ursache offen** *(neuer Befund 20.7.2026)*. In der 8er-Messreihe misst
+    `/gesetze/bund/OR` LCP entweder **~3.5 s** (4×) oder **~11.3–11.6 s** (4×), nichts dazwischen,
+    **unabhängig von der Runner-Geschwindigkeit** (die Kalibrier-Referenz korreliert nicht mit dem
+    Modus). Der naheliegende Verdacht «warm/kalt geladen» ist durch die Chrome-Isolation
+    ausgeschlossen — jeder Lauf ist kalt. Vermutung, ungeprüft: Lighthouse wählt je nach Timing ein
+    anderes LCP-Element. Der Deckel 13500 liegt ~16 % über dem hohen Modus und ist damit sicher;
+    bevor er verschärft wird, muss die Bimodalität verstanden sein (sonst deckelt man sie nur weg, §8).
+  - [ ] **e2e-Shard-Balance gegen GEMESSENE CI-Dauern packen** *(vorbereitet 20.7.2026, Daten laufen auf)*.
+    Die Gruppen in `e2e/shard-gruppen.json` sind gegen LOKALE Dauern gepackt (Spread <0.1 %), die
+    aber nicht uniform auf den CI-Runner skalieren: `leser-gliederung-a33.e2e.ts` braucht lokal 92 s,
+    auf CI ~360 s (**Faktor 3.9**), andere Specs weit weniger. Ist-Schieflage der Shard-Wandzeit:
+    Median **729 / 570 / 780 s** statt je ~693 s. Eine Neupackung auf geschätzter Grundlage wurde
+    bewusst UNTERLASSEN (kann die Balance ebenso gut verschlechtern, §14.2). Stattdessen liefert der
+    neue JSON-Reporter je Shard-Job ein Report-Artefakt mit echten Per-Spec-CI-Dauern — damit ist die
+    nächste Packung gemessen. **Strukturelle Grenze:** a33 ist mit ~360 s bereits grösser als das
+    Shard-Drittel; Datei-Granularität kann das nicht auflösen (Aufteilen der Spec wäre der Hebel).
   - **Constraints:** alles `[OF]`/zeitsperre-konform (Darstellungs-/Lade-/Build-Schicht); **kein**
     DOM-entfernendes Virtualisieren/`hydrateRoot`/Teilparse (Treue-Verlust, verworfen); Snapshot-
     Regenerierung (c) öffnet **keinen** 26×-Slot (nur Format, Union byte-gleich); Worktree-Isolation
