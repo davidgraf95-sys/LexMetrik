@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "prepare": "bash scripts/git-setup.sh",
     "dev": "vite",
     "build": "npm run gen:suchindex && tsc -b && vite build && vite-node scripts/prerender.ts",
     "gen:suchindex": "vite-node scripts/such-index-generieren.ts",
