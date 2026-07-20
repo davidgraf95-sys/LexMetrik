@@ -25,7 +25,19 @@ export default defineConfig({
   // 1 Worker (sequenziell, stabil); lokal volle Parallelität.
   workers: process.env.CI ? 1 : undefined,
   retries: process.env.CI ? 2 : 0,
-  reporter: process.env.CI ? 'github' : 'list',
+  // CI zusätzlich als JSON: der `github`-Reporter druckt KEINE Per-Test-Dauern
+  // (das tut nur das lokale `list`-Format), und `reportSlowTests` flaggt erst ab
+  // 5 Minuten GESAMT-Dauer je Datei. Ergebnis war, dass sich die Shard-Gruppen
+  // nur gegen LOKAL gemessene Dauern packen liessen — und die skalieren nicht
+  // uniform: `leser-gliederung-a33.e2e.ts` braucht lokal 92 s, auf dem CI-Runner
+  // aber ~360 s (Faktor 3.9), während andere Specs weit darunter bleiben. Genau
+  // daher die Schieflage der Shard-Wandzeiten (Median 729 / 570 / 780 s statt
+  // je ~693 s). Der JSON-Report (als Artefakt hochgeladen) liefert die echten
+  // Per-Spec-CI-Dauern, damit die nächste Packung GEMESSEN statt geschätzt ist.
+  // Reine Berichterstattung — kein Test, keine Assertion, kein Timeout berührt (§6.3).
+  reporter: process.env.CI
+    ? [['github'], ['json', { outputFile: 'playwright-report.json' }]]
+    : 'list',
   // Auf langsamen CI-Runnern überschreiten einzelne Web-First-Assertions den
   // Playwright-Default (5000 ms) — z. B. wenn ein content-visibility-Artikelbody
   // nach Wieder-Aufklappen neu rendert. Lokal < 5 s; auf CI sporadisch rot. Das

@@ -84,3 +84,6 @@ abnahme/design-d5/*.png
 # QS-TOK/T8: generierte Repo-/Symbol-Map (on-demand via `npm run map -- --out`,
 # nie committen — kollidiert sonst bei jedem Parallel-PR, DIRTY-Kaskade)
 .repo-map.generated.md
+
+# Playwright-JSON-Report (CI-Artefakt für das Shard-Balancing, nie committen)
+playwright-report.json
