@@ -2,9 +2,12 @@
 import { resolve } from '../../scripts/plan/next';
 import type { Einheit } from '../../scripts/plan/parse';
 
+// `pos` = Dokumentreihenfolge. Im Test zählt ein Modul-Zähler hoch, damit die
+// Aufrufreihenfolge der Helferfunktion die ROADMAP-Reihenfolge nachbildet.
+let posZaehler = 0;
 function einheit(id: string, p: Partial<Einheit['etikett']> = {}): Einheit {
   return {
-    id, checkbox: null, sektion: 'Die geordnete Abarbeitung',
+    id, checkbox: null, sektion: 'Die geordnete Abarbeitung', pos: posZaehler++,
     etikett: { id, status: 'ready', statusAgent: null, of: true, blocker: null, dep: [], kollision: [], worktree: false, asset26x: false, fahrplan: null, ...p },
   };
 }
@@ -50,13 +53,18 @@ describe('resolve', () => {
     expect(b.wartet26xSlot).toContain('Q');
   });
 
-  it('26x: zwei frische ready-26x → nur lex-erstes ready-now, anderes wartet auf Slot', () => {
+  // GEÄNDERTE SEMANTIK 20.7.2026 (deklarierter fachlicher Schritt, §6 Ziff. 3):
+  // Rangfolge ist die ROADMAP-Dokumentreihenfolge (`pos`), nicht mehr die
+  // lexikografische ID. Vorher waren alle 23 ready-Einheiten gleichrangig und
+  // «oberster offener Schritt» war nicht beantwortbar. Hier steht B VOR A im
+  // Dokument, also bekommt B den 26×-Slot.
+  it('26x: zwei frische ready-26x → nur das dokument-erste ready-now, anderes wartet auf Slot', () => {
     const b = resolve([
       einheit('B', { asset26x: true }),
       einheit('A', { asset26x: true }),
     ]);
-    expect(b.readyNow).toEqual(['A']);
-    expect(b.wartet26xSlot).toEqual(['B']);
+    expect(b.readyNow).toEqual(['B']);
+    expect(b.wartet26xSlot).toEqual(['A']);
   });
 });
 

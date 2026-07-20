@@ -37,6 +37,25 @@ describe('pruefe', () => {
     expect(pruefe(OK, ['FAHRPLAN-PLAN-STEUERUNG.md', 'FAHRPLAN-GEISTER.md'], existiert, inv).some((p) => /GEISTER/.test(p.meldung))).toBe(true);
   });
 
+  // Regel (4c), Befund 20.7.2026: W2·6a-MAT stand auf done und hing an
+  // W2·7-VZUI (ready) — die Regel fehlte, also fiel der falsche Plan-Zustand
+  // monatelang nicht auf. Beide Richtungen festhalten.
+  it('done mit offenem dep → Problem', () => {
+    const bad = OK.replace(
+      'id: W1·1 · status: done · of: ja · blocker: null · dep: []',
+      'id: W1·1 · status: done · of: ja · blocker: null · dep: [W1·4]');
+    const p = pruefe(bad, ['FAHRPLAN-PLAN-STEUERUNG.md'], existiert, inv);
+    expect(p.some((x) => x.id === 'W1·1' && /dep "W1·4" ist blocked/.test(x.meldung))).toBe(true);
+  });
+
+  it('done mit done-dep → kein Problem', () => {
+    const gut = OK.replace(
+      'id: W1·4 · status: blocked · of: ja · blocker: wbqdyap3x · dep: []',
+      'id: W1·4 · status: done · of: ja · blocker: null · dep: [W1·1]')
+      .replace('- [ ] **4 · D**', '- [x] **4 · D**');
+    expect(pruefe(gut, ['FAHRPLAN-PLAN-STEUERUNG.md'], existiert, inv)).toEqual([]);
+  });
+
   it('kollision-Pfad existiert nicht → Problem', () => {
     const bad = OK.replace('kollision: [] · worktree: nein · 26x: nein -->\n- [ ] **4 · D**', 'kollision: [src/fehlt.ts] · worktree: nein · 26x: nein -->\n- [ ] **4 · D**');
     expect(pruefe(bad, ['FAHRPLAN-PLAN-STEUERUNG.md'], (p) => p !== 'src/fehlt.ts', inv).some((p) => /fehlt\.ts/.test(p.meldung))).toBe(true);
