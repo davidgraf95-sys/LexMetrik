@@ -255,16 +255,29 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     Artikelsuche blockierte den Sprung-Aufbau (`useUniversalSuche` `useDeferredValue` entkoppelt).
     Golden byte-gleich (nur React-Reader/Such-Hook); 10× lokal grün unter 6× Drossel. Detail:
     STRUKTUR-Karte 10.7.
+  - [ ] **TBT-Deckel je Job normieren statt absolut prüfen** *(offen, Befund 20.7.2026 — der
+    eigentlich richtige Bau)*. Die neu gedruckten Einzelwerte belegen: die Streuung sitzt
+    **zwischen den Jobs, nicht innerhalb**. Ein Job mass `5612 · 5149 · 5537 ms` (±9 %), quer
+    über die Jobs streut derselbe Code aber `2262…5612 ms` (**Faktor 2.5**) — der
+    GitHub-Runner-Pool ist heterogen, die Maschinenzuteilung entscheidet über den Messwert.
+    Folge: **mehr Läufe je Job mitteln das nicht weg** (mit `PERF_RUNS=5` empirisch bestätigt).
+    Ein absoluter Deckel muss darum über dem langsamsten Runner liegen und ist auf dem
+    schnellsten entsprechend stumpf — auf einer schnellen Maschine (2262 ms) rutschte selbst
+    eine +3000-ms-Regression durch. Zu tun: einen billigen Kalibrier-Workload im SELBEN Job
+    messen und das **Verhältnis** prüfen (bzw. die Runner-Klasse aus dem Kalibrierwert
+    ableiten und den Deckel danach skalieren). Erst damit wird TBT wieder ein feiner
+    Regressions-Fänger; bis dahin trägt diese Rolle die CLS-Schranke.
   - [ ] **Chrome-Isolation je Lighthouse-Lauf + Neukalibrierung** *(offen, Befund 20.7.2026)*.
     `scripts/perf/lighthouse-budget.ts` teilt EINE Chrome-Instanz über alle Läufe BEIDER
-    Messseiten. Die Instanz driftet über die Läufe, und die zuletzt gemessene Seite erbt die
-    Drift: ein Probelauf mit `PERF_RUNS=5` liess die Startseite (misst als zweite, nach allen
-    OR-Läufen) von historisch 143–237 ms TBT auf **1543 ms** springen und OR-LCP von ~3.5 s auf
-    11.3 s — **ohne jede Änderung am App-Code**. Folge: mehr Läufe beruhigen die Messung nicht,
-    sie verschlechtern die späteren Werte. Zu tun: je Lauf eine frische Chrome-Instanz starten
-    (Kosten ~1–2 s/Lauf), danach `RUNS` erhöhen. **Achtung — Messregime-Wechsel:** die absoluten
-    Werte verschieben sich, die 27-Lauf-Historie, gegen die die TBT/CLS-Deckel kalibriert sind,
-    wird entwertet ⇒ Schwellen im selben Schritt neu erheben, nicht übernehmen. Darum bewusst
+    Messseiten. Folgen, beide belegt: (a) die Instanz driftet über die Läufe — ein Probelauf mit
+    `PERF_RUNS=5` liess die Startseite (misst als zweite, nach allen OR-Läufen) von historisch
+    143–237 ms TBT auf **1543 ms** springen, **ohne jede Änderung am App-Code**; (b) die Läufe
+    laden mal warm, mal kalt (`LCP: 11.3 · 3.5 · 11.3 s` im selben Job) — die historisch «guten»
+    Werte waren überwiegend Warm-Cache, der Median misst also weder Kalt- noch Dauerlast sauber.
+    Zu tun: je Lauf eine frische Chrome-Instanz (Kosten ~1–2 s/Lauf) ⇒ jeder Lauf ist eine
+    definierte **Kalt-Last** (der realistische Erstbesuch, §15). **Achtung — Messregime-Wechsel:**
+    die absoluten Werte verschieben sich und entwerten die Historie, gegen die die Deckel
+    kalibriert sind ⇒ Schwellen im selben Schritt neu erheben, nicht übernehmen. Darum bewusst
     NICHT mit der Deckel-Kalibrierung vom 20.7. gebündelt (§14.2).
   - **Constraints:** alles `[OF]`/zeitsperre-konform (Darstellungs-/Lade-/Build-Schicht); **kein**
     DOM-entfernendes Virtualisieren/`hydrateRoot`/Teilparse (Treue-Verlust, verworfen); Snapshot-

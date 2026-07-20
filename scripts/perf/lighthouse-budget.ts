@@ -98,16 +98,37 @@ type Schwelle = {
 //     = +1.6 %**, auf CI-Niveau hochgerechnet ~+56 ms. #305 ist damit ~1/20 der
 //     beobachteten Streuung und erklärt den Ausschlag nicht.
 //
+// WO die Streuung sitzt (Befund aus den neu gedruckten Einzelwerten, 20.7.2026):
+// **zwischen den Jobs, nicht innerhalb.** Ein Job druckte
+//   Einzelläufe TBT: 5612 · 5149 · 5537 ms  |  LCP: 11.3 · 3.5 · 11.3 s
+// — innerhalb des Jobs nur ±9 % Streuung, quer über die Jobs aber 2262…5612 ms
+// (Faktor 2.5). Der GitHub-Runner-Pool ist heterogen; welche Maschine ein Job
+// zugeteilt bekommt, entscheidet über den Messwert. (Die LCP-Spalte zeigt
+// zusätzlich, dass die geteilte Chrome-Instanz mal warm, mal kalt lädt — 3.5 s
+// gegen 11.3 s; die historisch «guten» Werte waren überwiegend Warm-Cache.)
+//
+// Daraus folgt hart: **mehr Läufe je Job mitteln das NICHT weg** — sie mitteln
+// nur innerhalb der ±9 %. Ein Probelauf mit RUNS=5 hat das bestätigt (und über
+// die Chrome-Drift zusätzlich die Startseite verdorben, siehe RUNS-Kommentar).
+// Gegen Between-Job-Varianz hilft nur ein höherer Deckel oder eine
+// **Normierung je Job** (Kalibrier-Workload im selben Job messen und das
+// VERHÄLTNIS prüfen statt des Absolutwerts) — Letzteres ist der eigentlich
+// richtige Bau und als Folgeschritt in ROADMAP/QS-PERF notiert.
+//
 // Konsequenz — die Schärfe wandert dorthin, wo Signal ist, statt pauschal zu
 // lockern:
-//   • TBT/OR 4000 → 4800 ms, kalibriert gegen genau diese Verteilung:
-//     4800 liegt bei z ≈ +1.8 (Mittel 3555 + 1.8·687) ⇒ erwartete Rot-durch-
-//     Rauschen-Quote fällt von ~26 % auf ~3.5 % (auf main-Pushes von ~30 % auf
-//     ~12 %). Fängt weiterhin jede echte Regression ab ~+1200 ms — die
-//     Grössenordnung, die §15/3-Verstösse («Suchindex in den kritischen Pfad»)
-//     erzeugen —, aber nicht mehr die blosse Runner-Auslastung. Der Deckel
-//     bleibt damit unter dem beobachteten Maximum (5094 ms): er ist gelockert,
-//     nicht ausgeschaltet.
+//   • TBT/OR 4000 → 6500 ms. Über dem beobachteten Maximum (5612 ms) plus ~16 %
+//     Kopffreiheit ≈ 2 Within-Job-sd. Das ist ehrlich ein **stumpferer**
+//     Absolut-Deckel — er ist der Preis dafür, dass eine Metrik mit Faktor-2.5-
+//     Runner-Streuung überhaupt assertierbar bleibt, ohne jeden dritten
+//     main-Push grundlos rot zu werfen. Er fängt weiter grobe §15/3-Verstösse
+//     («Suchindex in den kritischen Pfad»), aber er ist KEIN feiner
+//     Regressions-Fänger mehr; diese Rolle trägt bis zur Job-Normierung die
+//     CLS-Schranke unten. Bewusst offengelegt statt stillschweigend gesetzt (§8).
+//   • LCP/OR 12000 → 13500 ms. Bei Kalt-Last misst OR 11.31–11.41 s — gegen den
+//     alten Deckel nur ~6 % Luft, d. h. die nächste Kalt-Messung wäre ohne
+//     Zutun rot geworden. Gleiche stille Erosion wie bei TBT, hier vorab geheilt.
+//   • TTI/OR 14000 → 15000 ms (mitziehend, TTI ≈ LCP auf dieser Seite).
 //   • CLS/OR 0.15 → 0.05 und Start 0.10 → 0.05 (GEGENGEWICHT, Verschärfung).
 //     CLS ist die deterministische, geräteunabhängige Metrik und laut §15.2 «der
 //     eigentliche Regressions-Fänger» — beobachtet über dieselben 27 Läufe aber
@@ -127,7 +148,7 @@ const SCHWELLEN: Record<string, { url: string; label: string; s: Schwelle }> = {
   or: {
     url: `${BASE}/gesetze/bund/OR`,
     label: '/gesetze/bund/OR (≈930 KB HTML)',
-    s: { clsMax: 0.05, lcpMax: 12000, tbtMax: 4800, ttiMax: 14000, scoreMin: 25 },
+    s: { clsMax: 0.05, lcpMax: 13500, tbtMax: 6500, ttiMax: 15000, scoreMin: 25 },
   },
   start: {
     url: `${BASE}/`,
