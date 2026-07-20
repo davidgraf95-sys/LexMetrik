@@ -39,6 +39,12 @@ export const NORMTEXT_REVISIONEN_DIR = 'public/normtext/revisionen';
 export const RECHTSPRECHUNG_MANIFESTE = [
   'public/rechtsprechung/register.json',
   'public/rechtsprechung/norm-index.json',
+  // richter.json (Spruchkörper-Projektion, R-RICHTER) war als NEUE committete
+  // Datei unter public/rechtsprechung/ nirgends registriert und lief damit an
+  // check:paritaet vorbei — genau der still-grüne Fall, den Regel 2 oben
+  // ausschliesst («ungedeckte neue Datei = rot, nie still-grün»).
+  // `npm run check:paritaet` meldete «Rechtsprechung-Manifeste 2» statt 3.
+  'public/rechtsprechung/richter.json',
 ];
 // Schaufenster-Shards (Weiche B, §11.2): je Erlass eine committete Projektion des
 // norm-index (nur Erlasse mit Artikel-Treffern). Variable Datei-Menge → über den

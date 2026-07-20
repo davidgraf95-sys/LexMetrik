@@ -52,6 +52,36 @@ for (const e of manifest.entscheide) {
   }
 }
 
+// ── G1b PHANTOM-SCAN (hart) — Rollenwort/Fragment als Person ──────────────────
+// Die Fidelity-Prüfung unten ist EINSEITIG (Nachname muss im Freitext vorkommen)
+// und kann diese Klasse strukturell nicht finden: «présidant», «unica», «federali»,
+// «II» und «Keller» stehen alle wörtlich im amtlichen Freitext — 11 erfundene
+// Amtsträger:innen passierten das Tor grün (Befund Gegenprüfung 20.7.2026).
+// Ein Nachname, der ein Rollen-/Funktionswort IST, ist nie eine Person.
+const ROLLENWORT =
+  /^(?:pr[ée]sid(?:ent|ant)[esn]*|vorsitz(?:ende[rn]?)?|unic[ao]|uniques?|juges?|giudici?|richter(?:in)?|f[ée]d[ée]ra(?:l|le|les|ux)|federal[ie]|p[ée]na(?:l|le|les|ux)|penal[ie]|greffi[eè]re?|cancellier[ea]|gerichtsschreiber(?:in)?|referent(?:in)?|mitglied|besetzung|approbation|approvazione|zustimmung|einzelrichter(?:in)?|I{1,3})$/i;
+// Anzeigenamen-Hygiene: was hier greift, ist Extraktions-Rauschen, kein Name.
+const NAME_MUELL: readonly (readonly [RegExp, string])[] = [
+  [/[\d_]/, 'Ziffer oder Underscore im Namen (Aktenzeichen-Kontamination?)'],
+  [/[-–]\s*$/, 'hängender Bindestrich (Zeilenumbruch mitten im Namen?)'],
+  [/^\s*[-–]/, 'führender Bindestrich'],
+  [/\b(?:Dr|Prof|lic|iur|med|phil|oec|MLaw|BLaw|Dipl|PD)\b\.?/, 'Titelrest im Namen'],
+];
+// Kleingeschriebene Namensanfänge sind NUR als echte Partikel zulässig.
+const PARTIKEL_START = /^(?:de|di|du|da|dal|del|della|dello|des|van|von|vom|zu|zur|ten|ter|le|la|d')\s/;
+for (const [slug, e] of Object.entries(richterReg.richter)) {
+  const nach = slug.split('-')[0];
+  if (ROLLENWORT.test(nach) || ROLLENWORT.test(e.name)) {
+    fehler.push(`G1b PHANTOM: Slug «${slug}» / Name «${e.name}» ist ein Rollen-/Funktionswort, keine Person.`);
+  }
+  for (const [re, was] of NAME_MUELL) {
+    if (re.test(e.name)) fehler.push(`G1b PHANTOM: «${e.name}» (${slug}) — ${was}.`);
+  }
+  if (/^[a-zäöüéèàß]/.test(e.name) && !PARTIKEL_START.test(e.name)) {
+    fehler.push(`G1b PHANTOM: «${e.name}» (${slug}) beginnt klein und trägt kein Namenspartikel.`);
+  }
+}
+
 // ── G2 Konsistenz (hart) ──
 const ROLLEN = new Set(['vorsitz', 'mitglied', 'gerichtsschreiber']);
 let mitRichter = 0;
@@ -62,6 +92,20 @@ for (const e of manifest.entscheide) {
   for (const r of e.richter) {
     if (!ROLLEN.has(r.r)) fehler.push(`G2: ${e.key} → unbekannte Rolle «${r.r}».`);
     if (!(r.s in richterReg.richter)) fehler.push(`G2: ${e.key} → Slug «${r.s}» fehlt im Richter-Register.`);
+  }
+  // G2b ROLLEN-KARDINALITÄT (hart): ein Spruchkörper hat HÖCHSTENS einen Vorsitz.
+  // Fehlte bisher ganz — «Referent» galt als Vorsitz-Marker, zwei bpatger-Entscheide
+  // trugen dadurch zwei Vorsitzende und das Tor blieb grün.
+  const vorsitze = e.richter.filter((r) => r.r === 'vorsitz');
+  if (vorsitze.length > 1) {
+    fehler.push(`G2b KARDINALITÄT: ${e.key} trägt ${vorsitze.length} Vorsitzende (${vorsitze.map((v) => v.s).join(', ')}) — ein Spruchkörper hat einen.`);
+  }
+  // G2c: derselbe Slug zweimal im selben Entscheid ⇒ zwei Personen teilen einen
+  // Eimer (Bundesrichter Seiler ↔ Gerichtsschreiber Seiler). Kein Blocker — an
+  // Nur-Nachname-Gerichten nicht auflösbar —, aber nie stillschweigend.
+  const slugs = e.richter.map((r) => r.s);
+  if (new Set(slugs).size !== slugs.length) {
+    warnung.push(`SLUG-KOLLISION — ${e.key}: ${slugs.join(', ')} (gleicher Nachname in zwei Rollen; Identität ungeklärt, §8).`);
   }
 }
 
@@ -122,18 +166,30 @@ if (verglichen < mitRichter * G3_MINDEST) {
 
 // ── Fidelity-Stichprobe: Nachname muss im amtlichen Freitext stehen ──
 // Deterministische Auswahl (jeder n-te Schlüssel), damit der Lauf reproduzierbar ist.
+// VOLLPRÜFUNG statt Stichprobe: die frühere Fassung prüfte jeden n-ten Schlüssel
+// (~200 von 4961 = 4 %) — bei einem Lauf von wenigen Sekunden ist das eine
+// Selbstbeschränkung ohne Gegenwert. Ein Fehler in den übrigen 96 % blieb unsichtbar.
 const keys = [...rohProKey.keys()].sort();
-const SCHRITT = Math.max(1, Math.floor(keys.length / 200));
 let stichprobe = 0, treffer = 0;
-for (let i = 0; i < keys.length; i += SCHRITT) {
-  const key = keys[i];
+for (const key of keys) {
   const ft = fold(freitextVon.get(key) ?? '');
   for (const r of rohProKey.get(key)!) {
     stichprobe++;
     // Der gefaltete Nachname muss als Teilkette im gefalteten Freitext vorkommen.
-    const nach = r.nachSlug.replace(/-/g, '-');
-    if (ft.includes(nach)) treffer++;
+    if (ft.includes(r.nachSlug)) treffer++;
     else fehler.push(`FIDELITY: ${key} → «${r.name}» (${r.nachSlug}) steht nicht im amtlichen Freitext.`);
+  }
+}
+
+// ── Fremdmuster im Besetzungs-Freitext (Rubrum-Grenze) ──
+// Der Schnitt darf nur den Spruchkörper liefern. Ein Aktenzeichen im Feld ist eine
+// Grenzverletzung — und war real folgenschwer: BGE 151 IV 175 trug «… Kropf.
+// 7B_950/2024et», das ziffernhaltige Segment fiel in den «kein sicherer Name»-Zweig
+// und die Gerichtsschreiberin verschwand komplett. Kein Tor prüfte darauf.
+const AKTENZEICHEN = /\b\d[A-Za-z]?_\d+\/\d{4}/;
+for (const [key, ft] of freitextVon) {
+  if (AKTENZEICHEN.test(ft)) {
+    fehler.push(`RUBRUM-GRENZE: ${key} → Aktenzeichen im besetzung-Feld: «${ft.slice(-60)}».`);
   }
 }
 

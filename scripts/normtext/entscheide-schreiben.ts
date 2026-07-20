@@ -9,7 +9,7 @@ import { join } from 'node:path';
 import { kuerzeRegeste, normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { BrowseEntscheid, EntscheidManifest, RichterRef, RichterRegister } from '../../src/lib/rechtsprechung/register';
-import { parseBesetzung, kanonisiere, type KanonEintrag } from '../../src/lib/rechtsprechung/besetzung';
+import { parseBesetzung, kanonisiere, bereinigeBesetzungsFreitext, type KanonEintrag } from '../../src/lib/rechtsprechung/besetzung';
 import type { EntscheidRef, LeitfallRef, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
 import { extrahiereStatutRefs } from '../../src/lib/rechtsprechung/zitat-extraktion';
 import { minteEcliFuerSnapshot } from '../../src/lib/rechtsprechung/ecli';
@@ -225,6 +225,21 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   // den GANZEN Korpus entscheidbar, darum zwei Durchgänge (§2: deterministisch,
   // kein Raten). Der Snapshot bleibt unberührt — `rubrum.besetzung` ist und bleibt
   // der amtliche Freitext (SSoT); `richter[]` ist eine reine Projektion daraus.
+  // Rubrum-Grenze säubern, BEVOR irgendetwas den Freitext liest oder schreibt.
+  // Der Crawl hat in Einzelfällen über die Rubrum-Grenze hinaus eingesammelt —
+  // BGE 151 IV 175 trug ein Aktenzeichen im Besetzungs-Feld («… Greffière: Mme
+  // Kropf. 7B_950/2024et»). Folge war nicht bloss Rauschen: das ziffernhaltige
+  // Segment fiel in den «kein sicherer Name»-Zweig, und die amtlich genannte
+  // Gerichtsschreiberin fehlte vollständig. Das Aktenzeichen ist nie Teil der
+  // Besetzung, der Schnitt also kein Informationsverlust (§5). Idempotent (§2) —
+  // ein erneuter Lauf über bereits gesäuberte Snapshots ändert nichts.
+  for (const snap of auswahl) {
+    const ft = snap.rubrum?.besetzung;
+    if (!ft) continue;
+    const sauber = bereinigeBesetzungsFreitext(ft);
+    if (sauber !== ft) snap.rubrum!.besetzung = sauber;
+  }
+
   const besetzungRoh = new Map<string, ReturnType<typeof parseBesetzung>['richter']>();
   const kanonInput: KanonEintrag[] = [];
   for (const snap of auswahl) {
