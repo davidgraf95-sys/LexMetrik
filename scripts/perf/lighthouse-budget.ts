@@ -37,9 +37,17 @@ const BASE = process.env.PERF_BASE_URL ?? `http://localhost:${PORT}`;
 const MESSEN_NUR = process.argv.includes('--messen'); // nur messen + drucken, keine Assertion
 // Lighthouse-Einzelläufe streuen auf einem geteilten CI-Runner stark (v. a. TBT/
 // Score/CLS unter der 4×-CPU-Drossel). Darum je Seite N Läufe → **Median** je
-// Metrik (der Standard-Ansatz von Lighthouse-CI gegen Ausreisser-Flake). CI: 3,
+// Metrik (der Standard-Ansatz von Lighthouse-CI gegen Ausreisser-Flake). CI: 5,
 // lokal 1 (schnell). Override über PERF_RUNS.
-const RUNS = Number(process.env.PERF_RUNS ?? (process.env.CI ? 3 : 1));
+//
+// CI 3 → 5 (Kalibrierung 20.7.2026, Beleg unten): die 27 ausgewerteten CI-Läufe
+// sind bereits Mediane aus 3 — ihre Streuung (sd ≈ 690 ms auf TBT/OR) ist also
+// die Streuung DES MEDIANS, nicht des Einzellaufs. Der Median aus 5 hat rund
+// 0.53·σ statt 0.70·σ des Einzellaufs, senkt die Streuung des berichteten Werts
+// also auf ~525 ms. Kosten: 2 zusätzliche Lighthouse-Läufe je Seite (~90 s im
+// eigenen Job) — der günstigste verfügbare Hebel gegen Rot-durch-Rauschen, und
+// er macht kein Tor stumpf (anders als ein höherer Deckel).
+const RUNS = Number(process.env.PERF_RUNS ?? (process.env.CI ? 5 : 1));
 
 type Schwelle = {
   clsMax: number;   // Cumulative Layout Shift (geräteunabhängig — der harte Regressions-Fänger)
@@ -49,32 +57,71 @@ type Schwelle = {
   scoreMin: number; // Performance-Score 0..100
 };
 
-// Ist-Werte (lokal, dist gebaut, Mobil-Preset) siehe PR-Beschreibung; Schwellen
-// = Ist + ehrliche Kopffreiheit (CLS eng, CPU-Metriken weit, weil der CI-Runner
-// langsamer ist als die lokale Messmaschine).
+// ── Schwellen-Kalibrierung (NEU 20.7.2026, empirisch gegen 27 CI-Läufe) ─────
+//
 // Binding ist der **CI-Runner** (dort läuft das Tor), nicht die lokale Maschine.
-// Beobachtet (2-Kern-GitHub-Runner, Median-Kalibrierlauf 5.7.2026, Mobil-Preset):
-//   OR     Score ~38 / CLS ~0.098 / LCP 7.6 s / TBT ~2.3 s / TTI 7.6 s
-//   Start  Score ~72 / CLS 0.000  / LCP 6.4 s / TBT ~0.2 s / TTI 6.4 s
-// (lokal, Apple Silicon, war OR CLS 0.005 / TBT 0.5 s — der langsame Runner
-// legt unter der 4×-CPU-Drossel echten Spät-Shift + Blocking-Time offen.)
-// Schwellen = beobachtetes CI-Ist + ehrliche Kopffreiheit gegen Rest-Streuung.
-//   • CLS: OR 0.15 (fängt die alte 0.64-Regression mit Marge; FAHRPLAN-Eintritt war
-//     0.25 → Ziel 0.10 — 0.15 ist der ehrliche erste Staffel-Schritt), Start 0.10
-//     (dort stabil 0.000). CLS ist der eigentliche Regressions-Fänger.
-//   • LCP/TBT/TTI/Score hängen an CPU+Netz → grosszügige Deckel (fangen grobe
-//     Rückschritte wie «16-MiB-Suchindex in den kritischen Pfad», flaken nicht).
-// Verschärfung = dokumentierter Folgeschritt nach breiterer CI-Baseline.
+//
+// Die alte Kalibrierung (5.7.2026) notierte als CI-Ist «OR TBT ~2.3 s» und setzte
+// den Deckel auf 4000 ms — gedachte Kopffreiheit ~74 %. Dieses Ist ist seither
+// still veraltet: gemessen über die 27 CI-Läufe vom 19./20.7.2026 (jeder Wert
+// bereits ein Median aus 3) liegt TBT/OR bei
+//
+//   min 2262 · Median 3527 · Mittel 3555 · max 5094 ms · sd ≈ 687 ms
+//   (nur main-Pushes: Mittel 3821 · max 5094 · sd ≈ 812 — main-Läufe sind
+//    systematisch langsamer, weil beim Push mehr Jobs um denselben 2-vCPU-Runner
+//    konkurrieren; dieselbe Runner-Starvation wie bei den e2e-Shards.)
+//
+// Der Deckel 4000 lag damit nur z ≈ +0.65 über dem Mittel ⇒ rechnerisch ~26 %
+// Rot-durch-Rauschen; beobachtet 4/27 aller Läufe und 3/10 der main-Läufe rot.
+// Ein Tor, das auf main jeden dritten Lauf grundlos rot wirft, misst nicht mehr
+// die Software, sondern die Runner-Auslastung — und erzieht zum Rerun-Reflex,
+// der echte Regressionen mit durchwinkt (§8).
+//
+// Beleg, dass es NICHT am Code liegt (der eigentliche Kontrollversuch):
+//   • main bae8dff1 — ein **reiner Dokumentations-Commit** (docs/roadmap, keine
+//     Code-Zeile) — mass 5094 ms und war ROT. Derselbe Inhalt auf seinem
+//     PR-Branch: 3653 und 3830 ms, beide grün. Spanne 1441 ms bei identischem Code.
+//   • main 4f363fd0 mass 4537 ms ROT — ebenfalls VOR dem G-HIST-UI-Merge (#305).
+//   • Der #305-Branch selbst (2588ef31) mass 3527 ms — den Median aller Läufe,
+//     grün. Erst der Merge-Commit desselben Codes (50ffd6ae) mass 5007 ms.
+//   • Lokale A/B-Messung (Apple Silicon, Mobil-Preset, je Median aus 7):
+//     Vor-#305 (464cfbf4) 815 ms · mit #305 (50ffd6ae) 828 ms ⇒ **+13 ms
+//     = +1.6 %**, auf CI-Niveau hochgerechnet ~+56 ms. #305 ist damit ~1/20 der
+//     beobachteten Streuung und erklärt den Ausschlag nicht.
+//
+// Konsequenz — die Schärfe wandert dorthin, wo Signal ist, statt pauschal zu
+// lockern:
+//   • TBT/OR 4000 → 4800 ms. Kalibriert auf Mittel + ~2 sd des durch RUNS 3→5
+//     beruhigten Medians (3555 + 2·525 ≈ 4605), aufgerundet auf 4800. Fängt
+//     weiterhin jede echte Regression ab ~+1200 ms — die Grössenordnung, die
+//     §15/3-Verstösse («Suchindex in den kritischen Pfad») erzeugen —, aber
+//     nicht mehr die Runner-Streuung. Zusammen mit RUNS 5 ist das eine
+//     Netto-Verschärfung der Aussagekraft, keine Absenkung des Anspruchs.
+//   • CLS/OR 0.15 → 0.05 und Start 0.10 → 0.05 (GEGENGEWICHT, Verschärfung).
+//     CLS ist die deterministische, geräteunabhängige Metrik und laut §15.2 «der
+//     eigentliche Regressions-Fänger» — beobachtet über dieselben 27 Läufe aber
+//     nur 0.004–0.008 auf OR (Start 0.002). Ein Deckel von 0.15 ist das 19- bis
+//     37-Fache des Ist und fängt faktisch nichts. 0.05 ist ~6× über dem
+//     beobachteten Maximum, also flake-sicher, und deckt sich mit dem Budget, das
+//     die CLS-e2e-Specs (verweis-u, gesetze-historie-badge) bereits fahren.
+//     Ehrliche Grenze (§8): die #305-CLS-Regression hätte auch dieser Deckel
+//     nicht gefangen — sie trat nur auf einer **Anker-Deeplink**-URL auf
+//     (/gesetze/bund/MWSTV#art-165), die dieses Tor nicht misst; gefangen hat sie
+//     die e2e-Spec. Die Verschärfung stellt die Deckel-Disziplin wieder her, sie
+//     ersetzt die Deeplink-Specs nicht.
+//   • LCP/TTI/Score hängen wie TBT an CPU+Netz → bewusst grosszügige Deckel.
+// Nächster Schritt (nicht in dieser Einheit): eine Anker-Deeplink-URL als dritte
+// Messseite aufnehmen, damit der CLS-Deckel die Klasse Spät-Einwuchs auch dort sieht.
 const SCHWELLEN: Record<string, { url: string; label: string; s: Schwelle }> = {
   or: {
     url: `${BASE}/gesetze/bund/OR`,
     label: '/gesetze/bund/OR (≈930 KB HTML)',
-    s: { clsMax: 0.15, lcpMax: 12000, tbtMax: 4000, ttiMax: 14000, scoreMin: 25 },
+    s: { clsMax: 0.05, lcpMax: 12000, tbtMax: 4800, ttiMax: 14000, scoreMin: 25 },
   },
   start: {
     url: `${BASE}/`,
     label: 'Startseite',
-    s: { clsMax: 0.10, lcpMax: 11000, tbtMax: 1500, ttiMax: 12000, scoreMin: 40 },
+    s: { clsMax: 0.05, lcpMax: 11000, tbtMax: 1500, ttiMax: 12000, scoreMin: 40 },
   },
 };
 
