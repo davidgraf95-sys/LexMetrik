@@ -111,24 +111,41 @@ export function besetzungsTeile(
 
   const heu = normLaengentreu(roh);
   const teile: BesetzungsTeil[] = [];
-  let cursor = 0;
+  // ZWEI Positionen, bewusst getrennt (sonst geht Wortlaut verloren):
+  //  · `emit`  — bis hierher ist der Freitext bereits in `teile` ausgegeben.
+  //  · `suchAb` — ab hier wird der nächste Name gesucht.
+  // Sie laufen auseinander, sobald ein Gerichtsschreiber-Name übersprungen wird:
+  // dessen Textstelle wird zwar mitgezählt (damit ein nachfolgender Richter nicht
+  // rückwärts trifft), darf aber NICHT ausgegeben werden — sie gehört zum nächsten
+  // Text-Teil. Eine einzige gemeinsame Position hätte genau diesen Text verschluckt
+  // (Test «hängt lückenlos zum Original zusammen» fiel darauf).
+  let emit = 0;
+  let suchAb = 0;
   for (let i = 0; i < geparst.length; i++) {
-    // Ehrlichkeits-Regel 3: Gerichtsschreiber:innen führt die Facette nicht.
-    if (geparst[i].rolle === 'gerichtsschreiber') continue;
     const nadel = normLaengentreu(geparst[i].nameRoh);
     if (!nadel) continue;
-    const idx = findeWortgenau(heu, nadel, cursor);
+    const idx = findeWortgenau(heu, nadel, suchAb);
+    // Ehrlichkeits-Regel 3: Gerichtsschreiber:innen führt die Facette nicht — kein
+    // Link. Die Suchposition wandert trotzdem über ihren Namen hinweg, damit die
+    // Korrektheit NICHT an der impliziten Annahme hängt, `parseBesetzung` hänge die
+    // GS immer ans Ende der Liste (heute wahr, aber eine undokumentierte Kopplung
+    // über zwei Dateien hinweg — Befund Gegenprüfung 20.7.2026).
+    if (geparst[i].rolle === 'gerichtsschreiber') {
+      if (idx >= 0) suchAb = idx + nadel.length;
+      continue;
+    }
     // Ehrlichkeits-Regel 2: ein einziger nicht lokalisierbarer Anker kippt die
     // ganze Zuordnung auf «kein Link» — nie eine verrutschte Person (§1).
     if (idx < 0) return nurText;
-    if (idx > cursor) teile.push({ text: roh.slice(cursor, idx), slug: null, rolle: null });
+    if (idx > emit) teile.push({ text: roh.slice(emit, idx), slug: null, rolle: null });
     teile.push({
       text: roh.slice(idx, idx + nadel.length),
       slug: refs[i].s,
       rolle: geparst[i].rolle,
     });
-    cursor = idx + nadel.length;
+    emit = idx + nadel.length;
+    suchAb = emit;
   }
-  if (cursor < roh.length) teile.push({ text: roh.slice(cursor), slug: null, rolle: null });
+  if (emit < roh.length) teile.push({ text: roh.slice(emit), slug: null, rolle: null });
   return teile;
 }

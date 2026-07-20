@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
@@ -91,20 +91,31 @@ const KOPF_LABEL: Record<EntscheidSprache, Record<KopfLabelKey, string>> = {
 // den Rubrum-Block zu tigern. Fokus trägt der globale :focus-visible-Outline (F3).
 const BESETZUNG_LINK = 'underline decoration-dotted underline-offset-2 hover:text-brass-700';
 
-function BesetzungWert({ freitext, gericht, refs }: {
+// §15.4: der React Compiler ist AUS — die Zerlegung (ein Parser-Lauf) darf nicht
+// an jedem Render des Lesers hängen (Tab-Wechsel, Kopiert-Toast, Lese-Modus,
+// Schriftgrösse). `useMemo` + `React.memo` mit Default-Komparator.
+const BesetzungWert = memo(function BesetzungWert({ freitext, gericht, refs }: {
   freitext: string;
   gericht: string;
   refs: RichterRef[] | undefined;
 }) {
-  const teile = besetzungsTeile(freitext, gericht, refs);
-  if (teile.length <= 1) return <>{freitext}</>;
+  const teile = useMemo(
+    () => besetzungsTeile(freitext, gericht, refs),
+    [freitext, gericht, refs],
+  );
+  // Genau ein Teil OHNE Slug = reiner Wortlaut (nichts verlinkbar). Ein einzelner
+  // Teil MIT Slug ist dagegen ein gültiger Link (Freitext besteht nur aus dem
+  // Namen) und darf nicht wegfallen — Befund Gegenprüfung 20.7.2026.
+  if (teile.length === 1 && !teile[0].slug) return <>{freitext}</>;
   return (
     <>
       {teile.map((t, i) => (t.slug
         ? (
           <Link key={i} to={`/rechtsprechung?richter=${encodeURIComponent(t.slug)}`}
             className={BESETZUNG_LINK}
-            title={`Übrige Entscheide mit ${t.text} anzeigen`}>
+            // §8 genau: die Facette zeigt ALLE Entscheide dieser Person — auch den
+            // gerade gelesenen. «Übrige» wäre eine kleine Unwahrheit.
+            title={`Alle Entscheide mit ${t.text} anzeigen`}>
             {t.text}
           </Link>
         )
@@ -112,7 +123,7 @@ function BesetzungWert({ freitext, gericht, refs }: {
       ))}
     </>
   );
-}
+});
 
 // Ehrlicher Marker, wenn die Thema-Leitzeile abgeleitet ist (keine amtliche Regeste, §8).
 const SYNTH_MARKER: Record<EntscheidSprache, string> = {

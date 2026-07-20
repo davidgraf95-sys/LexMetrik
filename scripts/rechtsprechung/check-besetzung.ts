@@ -23,6 +23,7 @@ import { ladeBestandSnapshots, keyVon } from '../normtext/entscheide-schreiben';
 import {
   parseBesetzung, kanonisiere, istAnonymisiert, fold, type KanonEintrag,
 } from '../../src/lib/rechtsprechung/besetzung';
+import { besetzungsTeile } from '../../src/lib/rechtsprechung/besetzung-verlinkung';
 
 const ROOT = process.cwd();
 const PUB = join(ROOT, 'public', 'rechtsprechung');
@@ -193,6 +194,68 @@ for (const [key, ft] of freitextVon) {
   }
 }
 
+// ── G5 VERLINKUNG (HART) — die Reader-Links zeigen auf die richtige Person ──
+//
+// Der Entscheid-Leser macht die Besetzung klickbar. Die Zuordnung Freitext-Name →
+// Kanon-Slug läuft POSITIONELL (Position i des Parser-Ergebnisses ↔ Position i von
+// `BrowseEntscheid.richter`) und ist damit an eine Annahme gebunden, die kein
+// Laufzeit-Guard vollständig prüfen kann: dass Manifest und Parser dieselbe
+// Personen-Reihenfolge tragen. Ein Laufzeit-Guard sieht nur Anzahl und Rollen —
+// verschöbe eine Drift die PERSON an Position i, ohne Anzahl/Rollenfolge zu ändern,
+// würde still auf die falsche Person verlinkt (Befund Gegenprüfung 20.7.2026, die
+// teuerste Fehlklasse überhaupt, vgl. die 11 erfundenen Amtsträger:innen aus #310).
+//
+// ARBEITSTEILUNG mit G3, damit hier kein Schein-Tor entsteht:
+//   · Die PERSONEN-IDENTITÄT an Position i prüft **G3** — es vergleicht die aus den
+//     Snapshots neu berechnete Projektion (Parser + Kanon-Pass) mit der committeten
+//     Manifest-Liste, geordnet und vollständig. Ein vertauschter oder verschobener
+//     Slug im Manifest ändert diese Zeichenkette und macht G3 rot. Solange G3 grün
+//     ist, IST die positionelle Annahme des Readers bewiesen.
+//   · G5 prüft die Schicht darüber: was der Reader aus dieser Liste tatsächlich
+//     rendert. (Ein Versuch, die Identität hier ein zweites Mal zu prüfen, wäre
+//     tautologisch — Linktext und Parser-Name stammen aus derselben Quelle und
+//     können nie auseinanderfallen. Empirisch bestätigt 20.7.2026: eine simulierte
+//     Slug-Vertauschung im Manifest lief durch eine solche Prüfung glatt hindurch,
+//     während G3 sie fängt. Ein Tor, das nicht scheitern kann, ist gefährlicher als
+//     keines — siehe die G3-VAKUUM-Notiz oben.)
+//
+// Geprüft wird also, was der Reader TATSÄCHLICH rendert:
+//  (a) die verlinkten Textstellen sind genau die richterlichen Mitwirkenden,
+//      in Reihenfolge, mit exakt den Slugs des Manifests;
+//  (b) kein Gerichtsschreiber-Slug wird je verlinkt (die Facette führt ihn nicht,
+//      der Link liefe ins Leere);
+//  (c) der amtliche Wortlaut bleibt byte-genau erhalten (Konkatenation der Teile).
+let verlinkGeprueft = 0, verlinkFehler = 0, verlinkte = 0;
+for (const key of rohProKey.keys()) {
+  const e = manifestByKey.get(key);
+  const ft = freitextVon.get(key);
+  if (!e || !ft) continue;
+  verlinkGeprueft++;
+  const teile = besetzungsTeile(ft, e.gericht, e.richter);
+  const melde = (grund: string) => {
+    verlinkFehler++;
+    if (verlinkFehler <= 5) fehler.push(`G5 VERLINKUNG: ${key} — ${grund}`);
+  };
+  // (c) Wortlaut-Treue: die Teile ergeben lückenlos den amtlichen Freitext.
+  if (teile.map((t) => t.text).join('') !== ft) { melde('Konkatenation ≠ amtlicher Freitext.'); continue; }
+  // (a)+(b) Soll = die Nicht-GS-Refs des Manifests, in Reihenfolge.
+  const soll = (e.richter ?? []).filter((r) => r.r !== 'gerichtsschreiber').map((r) => r.s);
+  const ist = teile.filter((t) => t.slug).map((t) => t.slug!);
+  if (ist.join(',') !== soll.join(',')) {
+    melde(`verlinkte Slugs ≠ richterliche Manifest-Refs.\n     verlinkt: ${ist.join(',') || '(keine)'}\n     erwartet: ${soll.join(',') || '(keine)'}`);
+    continue;
+  }
+  verlinkte += ist.length;
+}
+if (verlinkFehler > 5) fehler.push(`G5 VERLINKUNG: … und ${verlinkFehler - 5} weitere.`);
+// Anti-Vakuum (wie G3): ein Tor, das nichts geprüft hat, ist keine Aussage.
+if (verlinkGeprueft < mitRichter * G3_MINDEST) {
+  fehler.push(
+    `G5 VAKUUM: nur ${verlinkGeprueft} von ${mitRichter} Einträgen auf Verlinkung geprüft `
+    + `(< ${(G3_MINDEST * 100).toFixed(0)} %) — der Nachweis wäre wertlos.`,
+  );
+}
+
 // ── G4 Abdeckung (Schwellen) ──
 const proKorpus = new Map<string, { mit: number; total: number }>();
 for (const e of manifest.entscheide) {
@@ -219,6 +282,7 @@ for (const z of kanon.kollisionen) warnung.push(z);
 console.log(`[check:besetzung] Register: ${geprueft} Slugs · Manifest: ${mitRichter} Entscheide mit Spruchkörper`);
 console.log(`[check:besetzung] Determinismus: ${verglichen} Einträge verglichen, ${abweichungen} Abweichungen`);
 console.log(`[check:besetzung] Fidelity-Stichprobe: ${treffer}/${stichprobe} Nachnamen im amtlichen Freitext belegt`);
+console.log(`[check:besetzung] Verlinkung: ${verlinkGeprueft} Rubra geprüft, ${verlinkte} Links, ${verlinkFehler} Fehlzuordnungen`);
 if (warnung.length) {
   console.log(`[check:besetzung] Kollisions-Report (${warnung.length}) — Sichtung, kein Blocker:`);
   for (const w of warnung) console.log(`    · ${w}`);

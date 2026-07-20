@@ -103,6 +103,29 @@ describe('besetzungsTeile — kein erfundener Link (§1/§8)', () => {
     expect(links(teile)).toEqual(['G. Thomi→thomi-gabriella']);
   });
 
+  it('verlinkt auch einen Freitext, der NUR aus einem Namen besteht', () => {
+    // Befund Gegenprüfung 20.7.2026: hier ist `teile.length === 1` MIT Slug —
+    // eine «length <= 1 ⇒ reiner Text»-Abkürzung hätte den gültigen Link verworfen.
+    const t = 'Stephan Wullschleger';
+    const teile = besetzungsTeile(t, 'bs_appellationsgericht', refsWie(t, 'bs_appellationsgericht'));
+    expect(teile).toHaveLength(1);
+    expect(links(teile)).toEqual(['Stephan Wullschleger→wullschleger-stephan']);
+  });
+
+  it('setzt den Cursor auch über Gerichtsschreiber-Namen hinweg', () => {
+    // Regel: der GS bekommt keinen Link, seine Textstelle wird aber übersprungen.
+    // Damit hängt die Korrektheit NICHT daran, dass parseBesetzung die GS ans Ende
+    // der Liste hängt. Realfall mit demselben Nachnamen in beiden Rollen (BGE 148 II 285):
+    // der RICHTER Seiler wird verlinkt, der GERICHTSSCHREIBER Seiler bleibt Text.
+    const t = 'Bundesrichter Seiler, Präsident, Bundesrichter Donzallaz, Gerichtsschreiber Seiler';
+    const teile = besetzungsTeile(t, 'bge', refsWie(t, 'bge'));
+    expect(wortlaut(teile)).toBe(t);
+    expect(links(teile)).toEqual(['Seiler→seiler', 'Donzallaz→donzallaz']);
+    // Der GS-Seiler steht am Ende und ist NICHT verlinkt.
+    expect(teile[teile.length - 1].slug).toBeNull();
+    expect(teile[teile.length - 1].text).toContain('Gerichtsschreiber Seiler');
+  });
+
   it('trifft keinen Namen mitten in einem längeren Wort', () => {
     // Wortgrenzen-Guard: «Meier» darf nicht in «Meierhans» treffen.
     const t = 'Meierhans-Gasse-Vorinstanz, Peter Meier';
