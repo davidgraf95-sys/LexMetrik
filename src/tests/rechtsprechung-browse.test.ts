@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   themaText, regesteLeitsatz, synthThema, istSynth, istBetreff, normLabel, istBge, hauptIdentitaet,
   nachRelevanz, nachDatum, nachGericht, sortiere, gruppiereNachLeit, gruppiereNachInstanz,
-  zaehleSachgebiete, normHaeufigkeit, filterEntscheide, filterNachNorm,
+  zaehleSachgebiete, normHaeufigkeit, richterHaeufigkeit, filterEntscheide, filterNachNorm,
 } from '../lib/rechtsprechung/browse';
 import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
 
@@ -225,5 +225,68 @@ describe('filterEntscheide', () => {
   });
   it('leere Werte filtern nicht', () => {
     expect(filterEntscheide(liste, {}).length).toBe(3);
+  });
+});
+
+// ─── Richter-/Spruchkörper-Achse (R-RICHTER Block B) ────────────────────────
+describe('filterEntscheide — Richter-Achse', () => {
+  const mitR = be({ key: 'a', richter: [{ s: 'gelzer-claudius', r: 'vorsitz' }, { s: 'oser-marc', r: 'mitglied' }] });
+  const nurGs = be({ key: 'b', richter: [{ s: 'gelzer-claudius', r: 'gerichtsschreiber' }] });
+  const ohne = be({ key: 'c' });
+
+  it('trifft Vorsitz und Mitglied', () => {
+    expect(filterEntscheide([mitR, nurGs, ohne], { richter: 'gelzer-claudius' }).map((e) => e.key)).toEqual(['a']);
+    expect(filterEntscheide([mitR, nurGs, ohne], { richter: 'oser-marc' }).map((e) => e.key)).toEqual(['a']);
+  });
+  it('trifft NICHT, wenn die Person nur Gerichtsschreiber:in war', () => {
+    expect(filterEntscheide([nurGs], { richter: 'gelzer-claudius' })).toEqual([]);
+  });
+  it('Entscheide ohne erfasste Besetzung sind nie ein Treffer (§8)', () => {
+    expect(filterEntscheide([ohne], { richter: 'gelzer-claudius' })).toEqual([]);
+  });
+  it('leerer Wert filtert nicht', () => {
+    expect(filterEntscheide([mitR, nurGs, ohne], { richter: null })).toHaveLength(3);
+  });
+  it('kombiniert mit der Gericht-Achse (Schnittmenge)', () => {
+    const bs = be({ key: 'd', gericht: 'bs_appellationsgericht', richter: [{ s: 'gelzer-claudius', r: 'mitglied' }] });
+    const treffer = filterEntscheide([mitR, bs], { richter: 'gelzer-claudius', gericht: 'bs_appellationsgericht' });
+    expect(treffer.map((e) => e.key)).toEqual(['d']);
+  });
+});
+
+describe('richterHaeufigkeit', () => {
+  const reg = { erzeugt: '2026-07-20', richter: {
+    'gelzer-claudius': { name: 'Claudius Gelzer', count: 486 },
+    'oser-marc': { name: 'Marc Oser', count: 425 },
+  } };
+  it('zählt absteigend, Gerichtsschreiber:innen NICHT als Richter:in', () => {
+    const liste = [
+      be({ key: 'a', richter: [{ s: 'gelzer-claudius', r: 'vorsitz' }, { s: 'oser-marc', r: 'mitglied' }] }),
+      be({ key: 'b', richter: [{ s: 'gelzer-claudius', r: 'mitglied' }, { s: 'oser-marc', r: 'gerichtsschreiber' }] }),
+    ];
+    expect(richterHaeufigkeit(liste, reg)).toEqual([
+      { slug: 'gelzer-claudius', name: 'Claudius Gelzer', count: 2 },
+      { slug: 'oser-marc', name: 'Marc Oser', count: 1 },
+    ]);
+  });
+  it('zählt eine Person je Entscheid nur EINMAL (Doppelrolle Richter + GS)', () => {
+    const liste = [be({ key: 'a', richter: [{ s: 'seiler', r: 'vorsitz' }, { s: 'seiler', r: 'gerichtsschreiber' }] })];
+    expect(richterHaeufigkeit(liste, null)).toEqual([{ slug: 'seiler', name: 'seiler', count: 1 }]);
+  });
+  it('lässt Verweis-Einträge aus (sonst zählt ein BGE doppelt)', () => {
+    const liste = [
+      be({ key: 'a', richter: [{ s: 'gelzer-claudius', r: 'vorsitz' }] }),
+      be({ key: 'b', richter: [{ s: 'gelzer-claudius', r: 'vorsitz' }],
+        verweis: { zielKey: 'a', ansicht: 'voll', bgeReferenz: '150 III 1' } }),
+    ];
+    expect(richterHaeufigkeit(liste, reg)[0].count).toBe(1);
+  });
+  it('zeigt ohne Register ehrlich den Slug statt eines geratenen Namens (§8)', () => {
+    const liste = [be({ key: 'a', richter: [{ s: 'unbekannt-x', r: 'vorsitz' }] })];
+    expect(richterHaeufigkeit(liste, null)).toEqual([{ slug: 'unbekannt-x', name: 'unbekannt-x', count: 1 }]);
+  });
+  it('ist deterministisch bei Gleichstand (slug-stabil, §2)', () => {
+    const liste = [be({ key: 'a', richter: [{ s: 'b-zwei', r: 'vorsitz' }, { s: 'a-eins', r: 'mitglied' }] })];
+    expect(richterHaeufigkeit(liste, null).map((r) => r.slug)).toEqual(['a-eins', 'b-zwei']);
   });
 });
