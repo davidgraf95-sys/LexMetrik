@@ -52,6 +52,46 @@ Byte-stabil halten — der Block wird maschinell eingefügt: `npm run dispatch -
   nachgelagerter Auftrag nach bestandener adversarialer Pruefung.
 ```
 
+### Was der Block kostet — ehrliche Bilanz (Korrektur 20.7.2026)
+
+PR #315 wies eine Netto-Bilanz von **«≈ −511 Token je Dispatch»** aus (aus
+`CLAUDE.md` 27 557 → 25 718 Zeichen). Die *Messung* stimmt, die **Bezugsgrösse
+nicht** — die adversariale Prüfung hat das aufgedeckt. Zwei unabhängige Fehler,
+beide in dieselbe Richtung:
+
+1. **Cache.** `CLAUDE.md` liegt im Prompt-Präfix, der zu ~95,8 % Cache-Read ist.
+   Gecachter Input kostet rund ein Zehntel. Die Kürzung wirkt also **einmal je
+   Session** mit ~−55 effektiven Token, nicht je Dispatch.
+2. **Multiplizität.** **Sub-Agenten erhalten `CLAUDE.md` gar nicht** (verifiziert
+   20.7.2026) — das ist die Kernprämisse dieses Templates. Ein Dispatch profitiert
+   von der Kürzung um **exakt 0 Token**.
+
+Dagegen ist der §0-Block **frischer, ungecachter Input bei jedem Dispatch, zum
+Vollpreis**. Gemessen: Block 20 Zeilen / 1 397 Zeichen; voller Generator-Output
+23 Zeilen / 1 529–1 584 Zeichen je Klasse. Der Plan veranschlagte «~13 Zeilen
+≈ 150 Token» — real sind es **≈ 425–470 Token, rund das 2,8-Fache**.
+
+| | wirkt | Häufigkeit | Preis |
+|---|---|---|---|
+| `CLAUDE.md` −1 839 Zeichen | Orchestrator | 1× je Session | ~10 % (Cache) → ≈ −55 Tok |
+| §0-Block +1 397 Zeichen | jeder Sub-Agent | N× je Session | 100 % (frisch) → ≈ +425 Tok |
+
+Bei 20 Dispatches je Session lautet die reale Bilanz rund **+8 500 frische Token
+pro Session** — das **umgekehrte Vorzeichen** der Behauptung.
+
+**Das ist kein Argument gegen den Block, sondern gegen die falsche Begründung.**
+Der Block ist eine bewusst gekaufte Versicherung gegen F1/F3/F4/F5/F6: ein
+einziger verhinderter Vorfall der #309-Klasse (11 erfundene Amtsträger:innen
+~1 h auf prod, danach ein voller Reparatur-PR) kostet ein Vielfaches der
+~8 500 Token. Er wird über seinen **Nutzen** gerechtfertigt, nie über eine
+Ersparnis, die es nicht gibt.
+
+**Umrechnungsbasis.** Frühere Zahlen nutzten `Zeichen / 3,6`. Für deutschen
+Markdown mit Umlauten, Komposita und Auszeichnung ist das zu optimistisch;
+realistisch sind **3,0–3,3 Zeichen/Token**. `CLAUDE.md` liegt damit bei
+~7 800–8 600 Token, nicht bei 7 144. Deltas bleiben richtungstreu, **Absolut-
+grössen nicht** — wer daraus ein Budget ableitet, rechnet mit 3,0–3,3.
+
 **Warum genau diese sechs** (Fehlerklassen-Zuordnung, Vorfälle 18.–20.7.2026):
 
 | Nr. | Fehlerklasse | Beleg |
