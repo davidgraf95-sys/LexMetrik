@@ -348,6 +348,20 @@ function tokenisiereName(rest: string, nurNachname: boolean): NameTeile | null {
     if (ohne.length > 1 && (istInitiale(ohne[0]) || istAbkuerzung(ohne[0]))) {
       return { given: ohne[0], surname: ohne.slice(1).join(' '), abk: true };
     }
+    // NACHgestellte MEHRBUCHSTABIGE Abkürzung trägt dieselbe Information in
+    // umgekehrter Wortstellung: «Bundesrichter Müller Th.» ist derselbe Amtsträger
+    // wie «Bundesrichter Th. Müller». Ohne diesen Zweig entstünden zwei Eimer für
+    // eine Person — genau die Klasse, die als «Th. Müller» / «Müller Th» in der
+    // Facette sichtbar war (Befund Gegenprüfung 20.7.2026).
+    //
+    // ABGRENZUNG zur Einzel-Initiale oben: ein einzelner Buchstabe («Stadelmann T.»)
+    // bleibt verworfenes Rauschen. Die Unterscheidung ist gewollt — das Kürzel «Th.»
+    // ist ein bewusst gesetzter Unterscheider des Gerichts und trägt Information,
+    // ein blosses «T.» nicht. Nur so bleibt `stadelmann` ein Eimer (213 Entscheide).
+    const letzt = ohne[ohne.length - 1];
+    if (ohne.length > 1 && istAbkuerzung(letzt)) {
+      return { given: letzt, surname: ohne.slice(0, -1).join(' '), abk: true };
+    }
     return { given: null, surname: ohne.join(' '), abk: false };
   }
   if (toks.length === 1) return { given: null, surname: toks[0], abk: false };
