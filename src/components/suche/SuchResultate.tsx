@@ -218,11 +218,20 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate,
       {/* Knappe Live-Region: die Trefferzahl (mit Aufschlüsselung), nicht die ganze
           Liste (§13/F4). */}
       <p className="sr-only" role="status" aria-live="polite">{status}</p>
-      {/* Sichtbare Ergebnis-Kopfzeile (IA-1): erst wenn alles geladen ist und es
-          Treffer gibt (der Leerfall steht ehrlich in der Karte selbst). aria-hidden,
-          weil die Live-Region oben denselben Text bereits ansagt. */}
-      {gruppen.length > 0 && !nochLaedt && (
-        <p aria-hidden className="mb-2 px-1 text-body-s font-medium text-ink-600">{kopf}</p>
+      {/* Sichtbare Ergebnis-Kopfzeile (IA-1): der Text erscheint erst, wenn alles
+          geladen ist (der Leerfall steht ehrlich in der Karte selbst). aria-hidden,
+          weil die Live-Region oben denselben Text bereits ansagt.
+          §15.2/CLS-Fix (Shard-1-Last, 20.7.2026): Der SLOT wird bereits reserviert,
+          sobald Gruppen da sind — solange geladen wird, hält ihn `invisible` auf
+          voller Zeilenhöhe (Layout bleibt, kein sichtbarer Text). Erschien die
+          Kopfzeile erst mit `!nochLaedt`, mountete sie unter Runner-Last SPÄT
+          (ausserhalb des 500-ms-hadRecentInput-Fensters) ÜBER der bereits gemalten
+          Trefferkarte und schob diese um eine Zeilenhöhe nach unten — der dominante
+          A9-Shift (Δ≈0.125, `div#…lc-card` y+19). Mit reserviertem Slot bewegt sich
+          die Karte beim Fertig-Werden nicht mehr. `invisible` ist eine echte
+          Utility (keine Magic-Number, §13); der Slot bleibt aria-hidden. */}
+      {gruppen.length > 0 && (
+        <p aria-hidden className={`mb-2 px-1 text-body-s font-medium text-ink-600${nochLaedt ? ' invisible' : ''}`}>{nochLaedt ? ' ' : (kopf || ' ')}</p>
       )}
       {/* «Meinten Sie …?» (S3) — deterministischer Tippfehler-Vorschlag, ausserhalb
           der Listbox (kein Options-Element), setzt bei Klick die Query. */}
@@ -248,7 +257,13 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate,
           : gruppen.map((g, i) => <Gruppe key={g.id} g={g} index={i} onAuswahl={onAuswahl} onNavigate={onNavigate} listboxId={listboxId} aktivId={aktivId} q={q} sektionsRollen={sektionsRollen} />)}
       </div>
       {/* §8-Korpus-Offenlegung (S3/E1): was die Suche wirklich durchsucht, ausserhalb
-          der Listbox. Link auf die Abdeckungsseite «Was ist drin». */}
+          der Listbox. Link auf die Abdeckungsseite «Was ist drin». Erscheint — wie
+          zuvor — sobald die Manifeste (gesetze+entscheide) da sind, NICHT erst wenn
+          alles fertig geladen ist: das hielte die §8-Offenlegung auf dem langsamen
+          Runner unnötig lange zurück (Fragilität genau dort, wo wir härten). Ihr
+          kleiner, spät durch das Karten-Wachstum ausgelöster Rest-Shift bleibt weit
+          unter Budget; den dominanten A9-Shift trägt die Kopfzeilen-Reservierung
+          oben (§15.2). */}
       {abdeckung && (
         // 11px-Feinschrift in ink-600, nicht ink-500 (Auftrag David 25.6.2026,
         // Muster lc-fineprint): auf brass-getönten Flächen (Hero) fällt ink-500

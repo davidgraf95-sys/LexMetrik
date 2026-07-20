@@ -268,6 +268,16 @@ geteilten Index in fremde Commits gewandert, ein fremder Commit per
    Commit die `--stat`-Dateizahl gegen die eigene add-Liste prüfen.
 3. Deploys nie aus dem Arbeitsverzeichnis, immer aus einem sauberen
    HEAD-Worktree (Details: Skill `deploy-check`).
+4. **Merge-Treiber-Politik gegen wiederkehrende Konflikte** (`.gitattributes`,
+   aktiv pro Clone via `prepare` → `scripts/git-setup.sh`): Append-Register
+   (`gegenpruefung-register.md`) `merge=union`; generierte Projektionen
+   (`daten-manifest.json`, `*.generated.ts`, rechtsprechung-Indexe)
+   `merge=regen` (eigene Seite behalten → **Generator neu laufen**, das CI-Tor
+   erzwingt es). `golden/*.json` und `public/normtext/**` bewusst OHNE Treiber
+   (Byte-Oracle bzw. Drop/Leak-Konflikt soll anhalten). `rerere` ist aktiv
+   (merkt manuelle Auflösungen). Die Treiber greifen nur bei LOKALEN
+   merges/rebases, nie beim GitHub-Server-Merge. Serielle Landung (EINE PR aufs
+   Mal, generierte Dateien nie von Hand mischen): Skill `landung`.
 
 ## §13 Design folgt dem Dach-Reglement (Anweisung David 25.6.2026)
 
