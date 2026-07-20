@@ -1,9 +1,14 @@
 {
-  "hash": "d364f5f0a29f3143646850c5a8e8bffa46cc871c746fa0fd5efedfa7824d55b5",
+  "hash": "62ae799028358f31a7aaf1ce1520ddec1ed3b8bbafb7ee30a50300857e4cb8b3",
   "verdikt": "bestanden",
-  "quellePin": "fedlex BGBM 20250101 (eli/cc/1996/1738_1738_1738, SR 943.02, kanonische Filestore-HTML -4)",
-  "datum": "2026-07-19",
+  "quellePin": "rechtsprechung.gerichte.bs.ch (Findinfo) Roh-Golden 20260719, live gegengeprueft 20260720; Bund-Rubra aus Bestands-Snapshots",
+  "datum": "2026-07-20",
   "dateien": [
-    "src/lib/normtext/historie-laden.ts"
+    "daten-manifest.json",
+    "daten/bs-fiw/inventar.json",
+    "scripts/normtext/entscheide-schreiben.ts",
+    "scripts/rechtsprechung/bs-besetzung.ts",
+    "scripts/rechtsprechung/bs-parse.ts",
+    "src/lib/rechtsprechung/besetzung.ts"
   ]
 }

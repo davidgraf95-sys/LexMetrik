@@ -233,3 +233,56 @@ V3-Vorlagen + Stillstand-Wortlaut offen. Push/Deploy gesperrt (frisches Ja).
 3. Ziel-C-Konzept (Dossier Abschn. 6): Rubriken-Schnitt, ausgabeArt-Zeile,
    Detailgrad-Pilot — Abnahme als Design-Entscheid (analog RECHNER-EINHEIT).
 4. Arbeitszeugnis endgültig ✗ (Quellbefund stützt den Teil-D-Vorschlag).
+
+---
+
+## V8 — Zitat-Export & Fussnoten-Ausgabe (`W2·8`, Ideen-Intake 20.7.2026)
+
+> **ROADMAP-Schritt:** `W2·8` (Schriften-Baukasten), Unterpunkt «Zitat-Export & Fussnoten-Ausgabe».
+> Detailquelle zum inline verorteten Schritt (§14.1).
+
+**Ziel.** Ein-Klick-Zitat in korrekter amtlicher Form plus Word-Fussnoten-Export einer
+gesammelten Zitatliste — damit ein Zitat aus LexMetrik ohne Nachtippen in eine Rechtsschrift geht.
+
+**Zielformen (deterministisch, §2):**
+
+```
+BGE 148 III 1 E. 2.3
+BGer 5A_691/2023 vom 14.03.2024 E. 4.1
+ECLI:CH:BGER:2024:5A_691.2023          (optional, aus ecli.ts)
+```
+
+### V8.1 · Trägerbestand (verifiziert, Repo-Stand 20.7.2026)
+
+| Baustein | Fundort | Rolle |
+|---|---|---|
+| BGE/BGer-Formatierer | `src/lib/gerichtszitat.ts` | **die Zitierform** |
+| ECLI-Minting | `src/lib/rechtsprechung/ecli.ts` | optionale Zusatzform |
+| Zitat-Extraktion | `src/lib/rechtsprechung/zitat-extraktion.ts` | Fundstellen im Text |
+| Kopier-Hook | `src/components/useKopieren.ts` | Ein-Klick-Weg |
+| docx-Renderer (produktiv) | `src/lib/vorlagen/vorlagenDocx.ts` (`docx ^9.7.1`) | Fussnoten-Ausgabe |
+| Zitierer/Rubrum-Bausteine | aus `W2·7` gebaut | Einbettung in Schriften |
+
+**Feasibility 🟢 aus-Bestand — ehrlich:** es fehlt **nur ein dünner Renderer** (docx-Fussnoten
+über die vorhandenen `gerichtszitat`/`ecli`-Ausgaben) plus die Verdrahtung an Entscheid- und
+Norm-Ansichten. Keine neue Abhängigkeit, kein neues Fundament, keine neue Rechtsregel.
+
+### V8.2 · Bau-Schnitt
+
+1. **Zitat-Objekt** (rein, deterministisch): Entscheid/Norm → `{ kurzform, langform, ecli?, fundstelleUrl, stand }`.
+2. **Kopier-Aktion** an Entscheid-Leser und Norm-Ansicht (`useKopieren`, kein neuer Zustand).
+3. **Sammelliste** rein clientseitig, **nur Kennungen** — keine Mandatsbezüge, keine Freitexte
+   (§8, Berufsgeheimnis; Werkzeuge bleiben zustandslos, CLAUDE.md §5).
+4. **docx-Fussnoten-Export** über `vorlagenDocx.ts` — derselbe Assemble-Weg wie die Vorlagen (§5,
+   kein zweiter Renderer).
+
+### V8.3 · Bewusst NICHT
+
+Kein Zitierstil-Konfigurator (eine amtliche Form, keine Hausstile) · keine Literatur-/
+Kommentar-Zitate (Art. 5 URG, nur amtliche Quellen) · keine BibTeX/CSL-Schicht · keine
+serverseitige Zitat-Bibliothek.
+
+### V8.4 · DoD
+
+golden byte-gleich · Zitierform **stichprobenweise gegen die amtliche Fundstelle geprüft** (§7 —
+nicht gegen das Modellgedächtnis) · Tore grün. Trailer `Roadmap: W2·8`.

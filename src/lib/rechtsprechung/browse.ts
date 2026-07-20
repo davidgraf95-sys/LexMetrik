@@ -4,7 +4,7 @@
 // einzelnen Entscheid-Dateien lazy, plus reine Gruppier-/Filter-Helfer.
 // Reine Ladeschicht (§3) — kein Inhalt erzeugt.
 
-import type { EntscheidManifest, BrowseEntscheid } from './register';
+import type { EntscheidManifest, BrowseEntscheid, RichterRegister } from './register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei, Gerichtstyp } from './typen';
 import { GEBIETE, GEBIET_LABEL, type Rechtsgebiet } from '../normtext/register';
 
@@ -24,6 +24,28 @@ export async function ladeEntscheidManifest(): Promise<EntscheidManifest | null>
     })();
   }
   return manifestPromise;
+}
+
+// ── Richter-Register (Slug → Anzeigename, eigene schlanke Projektion) ────────
+//
+// Bewusst NICHT im Manifest: der Name stünde sonst bis zu ~700× dupliziert (§15).
+// Eigener Lazy-Load nach demselben Muster wie das Manifest; die Facette braucht
+// ihn nur für Labels — Filtern/Zählen läuft über die Slugs im Manifest.
+let richterPromise: Promise<RichterRegister | null> | null = null;
+
+export async function ladeRichterRegister(): Promise<RichterRegister | null> {
+  if (!richterPromise) {
+    richterPromise = (async () => {
+      try {
+        const res = await fetch('/rechtsprechung/richter.json');
+        if (!res.ok) return null;
+        return (await res.json()) as RichterRegister;
+      } catch {
+        return null;
+      }
+    })();
+  }
+  return richterPromise;
 }
 
 /** Manifest-Eintrag eines Schlüssels. */
@@ -73,6 +95,12 @@ export interface EntscheidFilterWerte {
   norm?: string | null;
   /** Ebene Bund (kanton 'CH') vs. Kantone — klare Trennung (Auftrag David). */
   ebene?: 'bund' | 'kanton' | null;
+  /**
+   * Spruchkörper-Achse (?richter=): Kanon-Slug einer mitwirkenden Person.
+   * Trifft NUR richterliche Mitwirkung (Vorsitz/Mitglied) — Gerichtsschreiber:innen
+   * sind erfasst, aber keine Richter:innen und bilden hier keinen Treffer.
+   */
+  richter?: string | null;
 }
 
 // ── Thema-Scent (Leitelement statt wertlosem Aktenzeichen, 0/75 BGE-Ref) ─────
@@ -232,6 +260,10 @@ export function filterEntscheide(liste: BrowseEntscheid[], f: EntscheidFilterWer
     if (f.kanton && e.kanton !== f.kanton) return false;
     if (f.sprache && e.sprache !== f.sprache) return false;
     if (f.norm && !e.normKeys.includes(f.norm)) return false;
+    // Spruchkörper: nur richterliche Mitwirkung zählt (GS ausgenommen). Entscheide
+    // ohne erfassbare Besetzung tragen kein `richter`-Feld (§8) → nie ein Treffer,
+    // nie eine erfundene Zuordnung.
+    if (f.richter && !e.richter?.some((r) => r.s === f.richter && r.r !== 'gerichtsschreiber')) return false;
     if (f.ebene === 'bund' && e.kanton !== 'CH') return false;
     if (f.ebene === 'kanton' && e.kanton === 'CH') return false;
     if (f.nurLeitentscheide && e.leitcharakter !== 'leitentscheid') return false;
@@ -361,6 +393,46 @@ export function zaehleSachgebiete(liste: BrowseEntscheid[]): SachgebietZaehler[]
 export interface NormZaehler {
   normKey: string;
   count: number;
+}
+
+export interface RichterZaehler {
+  slug: string;
+  /** Anzeigename aus dem Richter-Register; fehlt er, ehrlich der Slug (§8, nie erfunden). */
+  name: string;
+  count: number;
+}
+
+/**
+ * Häufigkeit der mitwirkenden Richter:innen über eine (cross-gefilterte) Liste —
+ * absteigend, slug-stabil (§2). Grundlage der Richter-Facette; die Zahl ist die
+ * ECHTE Resttreffer-Zahl im aktuellen Filterzustand (R15), nicht der Korpus-Wert
+ * aus dem Register.
+ *
+ * Drei Ehrlichkeits-Regeln (§8):
+ * 1. Gerichtsschreiber:innen zählen nicht als Richter:in (Rolle ausgenommen) —
+ *    sie sind erfasst, gehören aber nicht in diese Achse.
+ * 2. Je Entscheid zählt eine Person höchstens EINMAL (dieselbe Person kann im
+ *    selben Entscheid als Mitglied UND Gerichtsschreiber:in auftreten).
+ * 3. Verweis-Einträge (vollständige Urteile zu einem BGE) bleiben aussen vor —
+ *    symmetrisch zu zaehleSachgebiete/normHaeufigkeit, sonst zählt ein BGE doppelt.
+ */
+export function richterHaeufigkeit(
+  liste: BrowseEntscheid[],
+  register: RichterRegister | null,
+): RichterZaehler[] {
+  const zahl = new Map<string, number>();
+  for (const e of liste) {
+    if (istVolltextVerweis(e) || !e.richter) continue;
+    const gesehen = new Set<string>();
+    for (const r of e.richter) {
+      if (r.r === 'gerichtsschreiber' || gesehen.has(r.s)) continue;
+      gesehen.add(r.s);
+      zahl.set(r.s, (zahl.get(r.s) ?? 0) + 1);
+    }
+  }
+  return [...zahl.entries()]
+    .map(([slug, count]) => ({ slug, name: register?.richter[slug]?.name ?? slug, count }))
+    .sort((a, b) => b.count - a.count || (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0));
 }
 
 /** Häufigkeit der angewandten Erlasse, absteigend, key-stabil (Top-Normen-Leiste). */

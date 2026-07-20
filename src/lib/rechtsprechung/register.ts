@@ -39,6 +39,35 @@ export interface VolltextVerweis {
   bgeReferenz: string;      // für das Karten-Label «… zu BGE 152 IV 14»
 }
 
+/** Rolle im Spruchkörper (amtlich namentlich, URG-Art.-5-frei). */
+export type RichterRolle = 'vorsitz' | 'mitglied' | 'gerichtsschreiber';
+
+/**
+ * Ein Spruchkörper-Mitglied im Manifest — bewusst auf zwei Ein-Zeichen-Schlüssel
+ * verkürzt (`s`/`r`), weil das Register bereits ~7,5 MB wiegt und der Client danach
+ * filtert (§15). Der ANZEIGENAME steht nicht je Entscheid, sondern einmal je Slug im
+ * Richter-Register `public/rechtsprechung/richter.json` — sonst stünde derselbe Name
+ * bis zu 700× im Manifest.
+ */
+export interface RichterRef {
+  /** Kanon-Slug (Filter-/Join-Key), z.B. 'wullschleger-stephan'. */
+  s: string;
+  /** Rolle im Spruchkörper. */
+  r: RichterRolle;
+}
+
+/** Slug → Anzeigename + Korpus-Trefferzahl (eigene, schlanke Projektion). */
+export interface RichterRegisterEintrag {
+  name: string;
+  /** Zahl der Entscheide, in denen die Person als Richter:in mitwirkte (ohne GS). */
+  count: number;
+}
+
+export interface RichterRegister {
+  erzeugt: string;
+  richter: Record<string, RichterRegisterEintrag>;
+}
+
 /** Manifest-Eintrag (Register + aus dem Snapshot abgeleitete Felder). */
 export interface BrowseEntscheid {
   key: string;
@@ -67,6 +96,12 @@ export interface BrowseEntscheid {
   quelle: Entscheidquelle;
   quelleUrl: string;
   fassungsToken: string;
+  /**
+   * Spruchkörper (Richter-Facette). Nur gesetzt, wenn der amtliche Besetzungs-Block
+   * strukturiert werden konnte — fehlt er, fehlt das Feld (nie leeres Array, nie
+   * erfundene Besetzung, §8). Anonymisierte Parteien/Gutachter erscheinen hier NIE.
+   */
+  richter?: RichterRef[];
   /** Gesetzt nur bei Verweis-Einträgen (vollständiges Urteil zu einem BGE); sonst undefined. */
   verweis?: VolltextVerweis | null;
 }

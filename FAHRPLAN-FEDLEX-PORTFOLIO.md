@@ -792,3 +792,69 @@ Fallen: typisierte notation; SPA-Shell (200 ≠ Inhalt → Existenz per SPARQL p
 3. **Umgang mit Pre-2000.** Empfehlung: Lücke transparent als Hinweis ausweisen (nicht stumm weglassen).
 4. **Behörden-Taxonomie für den Bundesrat.** Empfehlung: gleicher Namespace mit neuem Doktyp `botschaft` + eigener «Entstehungsgeschichte»-UI-Sektion (minimaler Umbau, klare Trennung).
 5. **Currency-Coverage-Assertion (Paket 1).** Empfehlung: **hart** blockieren (Exit 1), wenn ein Volltext-Erlass keinen Pin hat — genau die Blindstelle, die den Report nötig machte.
+
+---
+
+## Paket 7 — Watchlist & Änderungs-Signale (`W2·14-SIGNAL`, Ideen-Intake 20.7.2026)
+
+> **ROADMAP-Schritt:** `W2·14-SIGNAL` (Welle 2). Dieser Abschnitt ist die aus der ROADMAP
+> verlinkte Detailquelle (§14.1). Der Optionen-Vergleich B1/B2/Push mit Kosten und Bruchstellen
+> liegt in `bibliothek/recherche/watchlist-signale-architektur.md`; hier steht die Bau-Spec.
+> **Lose an `QS-CURRENCY`** — dieses Paket nutzt die Currency-Infra der Pakete 1/5, ändert sie nicht.
+
+### 7.0 · Welches Feld das Signal WIRKLICH trägt (empirisch nachgelesen, §7)
+
+Das ist die zentrale Korrektur zum Erst-Intake — sie entscheidet über Brauchbarkeit oder
+Falschmeldungen:
+
+| Quelle | Tatsächlicher Inhalt (Repo-Stand 20.7.2026, nachgezählt) | Taugt für |
+|---|---|---|
+| `public/normtext/currency.json` | 227 Erlasse, je `{geprueftAm, naechsteFassungAb?}` — z. B. `AHVG {geprueftAm: 2026-07-10, naechsteFassungAb: 2034-01-01}` | **nur VORWÄRTS** (`naechsteFassungAb`) |
+| `public/normtext/<ebene>/<ERLASS>.json` → `eintraege[]` | je Artikel `stand` + `fassungsToken` + `sha` — nachgeprüft an `bund/ADOV` `art_1` (`stand 2023-01-23`, `fassungsToken 20230123`, `sha 8e02eda78a7b…`) | **RÜCKBLICK** (echtes Änderungs-Delta) |
+| `public/rechtsprechung/register.json` | 6341 Einträge, je `gericht`/`gerichtstyp`/`kanton`/`datum`/`normKeys`/`fassungsToken` | Gerichts-Delta (s. 7.2) |
+
+**`geprueftAm` ist NICHT verwendbar für «hat sich geändert».** Es ist das Datum **unseres**
+Currency-Laufs: es wandert bei jedem Re-Check auch dann, wenn sich nichts geändert hat
+(→ systematische Falschmeldungen), und es markiert eine echte Änderung nicht als solche.
+**Der Watchlist-Vergleich läuft gegen `fassungsToken`/`sha` der Snapshots.** Wer hier
+`geprueftAm` verdrahtet, hat die Funktion gebaut, die es zu vermeiden galt.
+
+### 7.1 · B1 🟢 statischer Änderungs-Feed · B2 🟢 Client-Watchlist
+
+**B1** — RSS/Atom/JSON, zur **Build-Zeit** aus `currency.json` (Vorwärts-Fall) + Verfallsregister
+`bibliothek/register/parameter-verfall.md` erzeugt, exakt analog zum bestehenden
+`gen:fedlex-wiedervorlage` (`scripts/fedlex-wiedervorlage-generieren.ts`).
+**B2** — localStorage-Liste gemerkter Normen/Gerichte, beim Besuch gegen die statischen
+Build-Artefakte geprüft → «seit deinem letzten Besuch geändert»-Flag; exakt das bestehende
+`src/lib/zuletztVerwendet.ts`-Muster. Beide **zustandslos-konform** (CLAUDE.md §5): kein Server,
+keine Identität, kein Subscription-State.
+
+### 7.2 · Gerichts-Hälfte — eigenes Verdikt 🟡, NICHT unter dem Fedlex-🟢 mitgeführt (§8)
+
+Die Currency-Belege dieses Fahrplans (`check:fedlex-versionen`, `check:rss-oc`,
+`fedlex-wiedervorlage-generieren.ts`, `currency.json`) sind **ausnahmslos Norm-seitig** — auch
+`check:rss-oc` prüft den Amtliche-Sammlung-RSS, **nicht** Gerichte. «Gericht X entscheidet neu»
+trägt ein **anderer** Bestand: `public/rechtsprechung/register.json` + die Import-Strecke
+`scripts/rechtsprechung/` (BS) und `scripts/normtext-entscheide.ts`.
+
+**Verdikt 🟡 — baubar mit ehrlicher Einschränkung:** ein Build-Zeit-Delta über `register.json`
+(neue Einträge je Gericht/Norm seit Datum X) ist deterministisch und billig. Es gibt aber
+**keinen Live-Gerichts-Feed**: das Signal feuert erst, wenn **wir** neu importieren. Die Latenz
+ist die **Import-Kadenz**, nicht die Publikationsgeschwindigkeit des Gerichts. **Das wird in der
+UI offengelegt** («Stand des Entscheid-Bestands: …») — sonst suggeriert die Funktion eine
+Aktualität, die der Korpus nicht trägt.
+
+### 7.3 · 🟠 Push/E-Mail-Abo — Architektur-BRUCH, nicht in B1/B2 mischen
+
+Ein echtes Abo verlangt Nutzeridentität, serverseitigen Subscription-State und einen Sendedienst
+und verletzt damit «Werkzeuge bleiben zustandslos» (CLAUDE.md §5). **Kein Bau ohne ausdrücklichen
+Architektur-Entscheid Davids** — und ausdrücklich **nicht** in den B1/B2-Bau hineinziehen, auch
+nicht «vorbereitend».
+
+### 7.4 · DoD
+
+Feed-Generator deterministisch (2 Läufe byte-gleich) · **keine Mandats-/Personendaten in
+localStorage** (§8, Berufsgeheimnis) · Rückblick-Flag nachweislich gegen `fassungsToken`/`sha`
+gebildet, **nicht** gegen `geprueftAm` · Gerichts-Signal mit sichtbarem Bestands-Stand
+ausgeliefert (§8-Offenlegung der Import-Latenz) · Tore grün.
+Trailer `Roadmap: W2·14-SIGNAL`.

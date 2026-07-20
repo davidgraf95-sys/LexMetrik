@@ -16,3 +16,39 @@ golden/*.json linguist-generated
 # Reine Massendaten ohne sinnvollen Textdiff: einklappen UND Diff unterdrücken (K).
 src/lib/pdf/fonts/fontData.ts linguist-generated -diff
 src/lib/normtext/grundart.generated.ts linguist-generated -diff
+
+# ── Merge-Treiber gegen wiederkehrende Konflikte paralleler PRs/Sessions ──
+# (Bau-Einheit «Konflikt-Entschärfung», §12). WICHTIG: Diese Treiber greifen nur
+# bei LOKALEN merges/rebases (origin/main in den Feature-Branch ziehen) — genau
+# dort entsteht der Schmerz. GitHub-Server-Merges nutzen sie NICHT.
+# `merge=union` und `merge=regen` brauchen einen git-config-Eintrag pro Clone
+# (`scripts/git-setup.sh`, verdrahtet als npm "prepare"; im Haupt-Clone einmal
+# manuell). Fehlt der Eintrag, fällt git still auf den Standard-3-Wege-Merge
+# zurück — nie falscher Merge, nur kein Komfort.
+
+# APPEND-Register (unveränderliche Zeilen-Ledger): beide Seiten hängen nur neue
+# Zeilen an, bestehende werden nie editiert → `union` nimmt beide Seiten, kein
+# Konflikt, keine Duplikate. NUR hier verifiziert append-only (git log -p, 80
+# Commits: 0 editierte Datenzeilen). NICHT auf STRUKTUR.md/ROADMAP.md/FAHRPLAN-*/
+# INDEX.md setzen — die werden in-place editiert (Rotation, Checkbox-Flips), dort
+# erzeugt union stille Duplikate.
+bibliothek/register/gegenpruefung-register.md merge=union
+
+# GENERIERTE Projektionen (reine Funktion ihrer Quellen, kein eigener Wahrheits-
+# wert): `regen` = Treiber `true` behält die eigene Seite ohne Konfliktmarker.
+# DANACH MUSS der Generator neu laufen — das committete Ergebnis ist erst gültig,
+# wenn das jeweilige CI-Tor grün ist. Neulauf je Datei:
+#   daten-manifest.json          → `npm run datenhaltung:manifest`  (Tor: check:datenhaltung + check:paritaet)
+#   *.generated.ts               → das im Datei-Banner genannte `npm run gen:*`   (Tor: das jeweilige check:* --check)
+#   public/rechtsprechung/*index* → entscheide-Pipeline (`npm run entscheide …`)  (Tor: check:entscheide)
+daten-manifest.json merge=regen
+*.generated.ts merge=regen
+public/rechtsprechung/register.json merge=regen
+public/rechtsprechung/norm-index.json merge=regen
+public/rechtsprechung/norm-index/*.json merge=regen
+# BEWUSST NICHT `regen`: golden/*.json ist der §6-Byte-Oracle selbst — ein
+# Auto-„eigene Seite + regenerieren" würde genau die Tripwire aushebeln, die
+# unbeabsichtigte Byte-Drift beim Merge fangen soll. Golden-Konflikte von Hand
+# lösen, dann `npm run golden` + den Byte-Diff bewusst als beabsichtigt bestätigen.
+# public/normtext/**/*.json bleibt ebenfalls ohne Treiber: Extraktions-Risikopfad,
+# ein Merge-Konflikt dort SOLL die Gegenprüfung (Drop/Leak-Jagd) anhalten.
