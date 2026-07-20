@@ -983,12 +983,45 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Highlight-Menge (Suche verlassen / Erlass wechseln). Ausser-Bestand-neutral,
   // da `treffer===null` (kein Suchmodus) sofort löscht.
   const trefferRef = useRef<HTMLDivElement | null>(null);
+  // Handle auf den noch nicht gefeuerten Setz-rAF, damit ihn AUCH der Sofort-
+  // Aufräumer unten abbestellen kann (React Compiler ist AUS, §15/4 → Ref).
+  const highlightRaf = useRef<number | null>(null);
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!treffer) { setzeSuchHighlight(null, ''); return; }
     const id = window.requestAnimationFrame(() => setzeSuchHighlight(trefferRef.current, sucheTrim));
-    return () => { window.cancelAnimationFrame(id); setzeSuchHighlight(null, ''); };
+    highlightRaf.current = id;
+    return () => { window.cancelAnimationFrame(id); highlightRaf.current = null; setzeSuchHighlight(null, ''); };
   }, [treffer, sucheTrim]);
+
+  // A35-Sofort-Aufräumer (Befund 20.7.2026, Shard 3/3). Das Löschen der Highlight-
+  // Registry hing bisher AUSSCHLIESSLICH am Effekt oben — und der läuft erst, wenn
+  // `treffer` über den ENTPRELLTEN `sucheTrim` auf null kippt. Genau dieser Commit
+  // ist der teuerste des Readers: die Trefferliste weicht dem vollständigen
+  // Volltext-Baum (OR: 1686 Artikel-Knoten neu gemountet). Gemessen von der Leerung
+  // des Feldes bis zum `CSS.highlights.delete`: ~2,4 s ohne Drossel, 9,8 s bei 4×,
+  // 21,9 s bei 8× CPU-Drossel — auf dem 2-vCPU-Runner reisst das reihum das
+  // 15-s-Prüfbudget des A35-Specs, und der Nutzer sieht die Markierung sekundenlang
+  // weiterleuchten, obwohl das Suchfeld leer ist (§8: die Anzeige lügt über den
+  // Zustand). Latenz-Kopplung, KEIN Leck: der Eintrag verschwand am Ende immer.
+  //
+  // Darum das Aufräumen vom teuren Commit ENTKOPPELN: es hängt am ROHEN Feldwert,
+  // nicht am entprellten. Der Render, der `suche` leert, ist billig (die memoisierten
+  // ArtikelLeser der noch stehenden Trefferliste steigen aus der Reconciliation aus),
+  // also feuert dieser Effekt im nächsten Frame. Nur der boolesche Kipp-Punkt ist
+  // Dependency — beim Tippen läuft KEIN zusätzlicher TreeWalker (§15/3, kein
+  // Setz-Pfad hier). Wirkt für JEDEN Ausstieg aus dem Suchmodus (Feld leeren,
+  // `springeZuArtikel`, Erlass-/Pane-Wechsel), unabhängig davon, welche Teilbäume
+  // neu rendern. Der Effekt oben bleibt unverändert der einzige SETZENDE Pfad.
+  const sucheFeldLeer = suche.trim() === '';
+  useEffect(() => {
+    if (typeof window === 'undefined' || !sucheFeldLeer) return;
+    if (highlightRaf.current !== null) {
+      window.cancelAnimationFrame(highlightRaf.current);
+      highlightRaf.current = null;
+    }
+    setzeSuchHighlight(null, '');
+  }, [sucheFeldLeer]);
 
   // §15.2 CLS-Lade-Reservierung: solange Snapshot/Struktur/Currency async laden,
   // reserviert min-h-screen (Token, §13) die volle Lesehöhe. Kein Inhalt wird
