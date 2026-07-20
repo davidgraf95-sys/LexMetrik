@@ -1,14 +1,11 @@
 {
-  "hash": "62ae799028358f31a7aaf1ce1520ddec1ed3b8bbafb7ee30a50300857e4cb8b3",
+  "hash": "76b352f861c7fcf3e41301fcc3a6537fb749efc699ed98e27f263a3028f3ae05",
   "verdikt": "bestanden",
-  "quellePin": "rechtsprechung.gerichte.bs.ch (Findinfo) Roh-Golden 20260719, live gegengeprueft 20260720; Bund-Rubra aus Bestands-Snapshots",
+  "quellePin": "fedlex OR 20260101 (AKN-XML, geltende Konsolidierung) + fedlex ZGB 20260701 + fedlex KG 20230701 + rechtsprechung.gerichte.bs.ch (AK.2022.32 / AK.2023.5 / AUS.2022.11) + Turso-Live-Replika",
   "datum": "2026-07-20",
   "dateien": [
-    "daten-manifest.json",
-    "daten/bs-fiw/inventar.json",
-    "scripts/normtext/entscheide-schreiben.ts",
-    "scripts/rechtsprechung/bs-besetzung.ts",
-    "scripts/rechtsprechung/bs-parse.ts",
-    "src/lib/rechtsprechung/besetzung.ts"
+    "scripts/datenhaltung/fts.ts",
+    "scripts/datenhaltung/turso-sync.ts",
+    "scripts/datenhaltung/turso-transport.ts"
   ]
 }

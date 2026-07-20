@@ -117,6 +117,7 @@
     "struktur:aktuell": "python3 .claude/hooks/struktur-aktuell.py",
     "fahrplan": "vite-node scripts/fahrplan-slice.ts",
     "check:paritaet": "vite-node scripts/datenhaltung/check-paritaet.ts",
+    "check:turso-frische": "vite-node scripts/datenhaltung/check-turso-frische.ts",
     "check:datenhaltung": "vite-node scripts/datenhaltung/check-datenhaltung.ts",
     "datenhaltung:build": "vite-node scripts/datenhaltung/build.ts",
     "datenhaltung:manifest": "vite-node scripts/datenhaltung/check-datenhaltung.ts -- --schreibe",
