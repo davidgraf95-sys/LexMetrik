@@ -45,8 +45,11 @@ jobs:
         punkt: [1, 2, 3, 4, 5, 6, 7, 8]
     env:
       TZ: Europe/Zurich
-      PERF_RUNS: ${{ github.event.inputs.runs }}
-      PERF_KALIBRIER_RUNS: ${{ github.event.inputs.kalibrier_runs }}
+      # `|| '3'` ist Pflicht, nicht Kosmetik: bei einem push-Event existiert
+      # `github.event.inputs` nicht, der Ausdruck wird zum LEEREN String — und
+      # eine leere Zahl-Variable hat die erste Messreihe komplett entwertet.
+      PERF_RUNS: ${{ github.event.inputs.runs || '3' }}
+      PERF_KALIBRIER_RUNS: ${{ github.event.inputs.kalibrier_runs || '3' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

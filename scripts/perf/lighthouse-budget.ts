@@ -32,7 +32,25 @@ const requireCJS = createRequire(import.meta.url);
 
 // ── Konfiguration ──────────────────────────────────────────────────────────
 
-const PORT = Number(process.env.PERF_PORT ?? 4319);
+/**
+ * Zahl aus einer Umgebungsvariablen — LEERE Variable zählt als «nicht gesetzt».
+ * `Number(process.env.X ?? default)` reicht dafür NICHT: `??` greift nur bei
+ * `undefined`, und `Number('')` ist `0`. Genau daran ist die erste Messreihe
+ * gescheitert — GitHub setzt `${{ github.event.inputs.* }}` bei einem
+ * push-Event als LEEREN String, damit wurde PERF_RUNS=0 und das Script mass
+ * null Läufe (Median über die leere Liste ⇒ `null` in allen Feldern).
+ */
+function zahlAusUmgebung(name: string, vorgabe: number): number {
+  const roh = process.env[name];
+  if (roh === undefined || roh.trim() === '') return vorgabe;
+  const n = Number(roh);
+  if (!Number.isFinite(n) || n <= 0) {
+    throw new Error(`${name}='${roh}' ist keine brauchbare positive Zahl.`);
+  }
+  return n;
+}
+
+const PORT = zahlAusUmgebung('PERF_PORT', 4319);
 const BASE = process.env.PERF_BASE_URL ?? `http://localhost:${PORT}`;
 const MESSEN_NUR = process.argv.includes('--messen'); // nur messen + drucken, keine Assertion
 // Lighthouse-Einzelläufe streuen auf einem geteilten CI-Runner stark (v. a. TBT/
@@ -53,7 +71,7 @@ const MESSEN_NUR = process.argv.includes('--messen'); // nur messen + drucken, k
 // sie danach (Kosten ~1–2 s je Lauf, in CI ~9 Läufe ⇒ ~15 s). Damit ist jeder
 // Lauf gleich kalt, die Reihenfolge der Seiten ist ohne Einfluss, und der Median
 // mittelt echte Instanz-Streuung statt kumulativer Drift.
-const RUNS = Number(process.env.PERF_RUNS ?? (process.env.CI ? 3 : 1));
+const RUNS = zahlAusUmgebung('PERF_RUNS', process.env.CI ? 3 : 1);
 
 // ── TBT-Normierung je Job (NEU 20.7.2026, Baustelle A2) ─────────────────────
 //
@@ -103,12 +121,12 @@ const KALIBRIER_BLOECKE = 8;
 // Lauf kostet mehr Zeit, als das Tor spart.
 const KALIBRIER_ITER = 5_000_000;
 // Kalibrier-Läufe je Job → Median (die Referenz soll selbst nicht flackern).
-const KALIBRIER_RUNS = Number(process.env.PERF_KALIBRIER_RUNS ?? (process.env.CI ? 3 : 1));
+const KALIBRIER_RUNS = zahlAusUmgebung('PERF_KALIBRIER_RUNS', process.env.CI ? 3 : 1);
 // Bezugsgrösse: Median-TBT der Kalibrier-Seite über die CI-Messreihe (Werte und
 // Herleitung im SCHWELLEN-Block unten). Ein Runner mit genau diesem Wert bekommt
 // Faktor 1.000, d. h. normiert == roh; die normierten Deckel bleiben damit auf
 // derselben Grössenordnung wie die bisherigen Absolutwerte und sind direkt lesbar.
-const KALIBRIER_BASIS = Number(process.env.PERF_KALIBRIER_BASIS ?? 2000);
+const KALIBRIER_BASIS = zahlAusUmgebung('PERF_KALIBRIER_BASIS', 2000);
 // Plausibilitätsband: ausserhalb gilt die Kalibrierung als gescheitert (Instrument
 // defekt / Seite nicht ausgeliefert / Runner pathologisch) → keine Normierung.
 // Bewusst weit: es soll nur Instrument-Ausfall fangen, nicht langsame Runner
