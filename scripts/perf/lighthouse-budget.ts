@@ -40,30 +40,89 @@ const MESSEN_NUR = process.argv.includes('--messen'); // nur messen + drucken, k
 // Metrik (der Standard-Ansatz von Lighthouse-CI gegen Ausreisser-Flake). CI: 3,
 // lokal 1 (schnell). Override über PERF_RUNS.
 //
-// BEWUSST bei 3 belassen (Befund 20.7.2026). Naheliegend wäre, gegen die unten
-// belegte Streuung einfach mehr Läufe zu mitteln — ein Probelauf mit RUNS=5 in
-// CI zeigt aber, dass das **nicht** funktioniert, weil dieses Script EINE
-// Chrome-Instanz für ALLE Läufe BEIDER Seiten teilt: die Instanz driftet über
-// die Läufe, und die zuletzt gemessene Seite erbt die Drift. Gemessen mit
-// RUNS=5 sprang die Startseite (misst als zweite, nach allen OR-Läufen) von
-// historisch 143–237 ms TBT auf **1543 ms**, und OR-LCP von ~3.5 s auf 11.3 s —
-// ohne jede Änderung am App-Code. Mehr Läufe machen die Messung hier also nicht
-// ruhiger, sondern die späteren Werte schlechter.
+// ── Chrome-Isolation je Lauf (NEU 20.7.2026, Baustelle A1) ──────────────────
+// Vorher teilte dieses Script EINE Chrome-Instanz über ALLE Läufe BEIDER Seiten.
+// Die Instanz driftete über die Läufe, und die zuletzt gemessene Seite erbte die
+// Drift: ein Probelauf mit RUNS=5 liess die Startseite (misst als zweite, nach
+// allen OR-Läufen) von historisch 143–237 ms TBT auf **1543 ms** springen und
+// OR-LCP von ~3.5 s auf 11.3 s — ohne jede Änderung am App-Code. Mehr Läufe
+// machten die Messung damit nicht ruhiger, sondern die späteren Werte schlechter;
+// zusätzlich mass Lauf 1 kalt und Lauf 2+ warm (LCP 11.3 s gegen 3.5 s im selben Job).
 //
-// Der saubere Weg ist Chrome-Isolation je Lauf (frische Instanz), erst danach
-// wird ein höheres RUNS sinnvoll. Das ist eine **Änderung des Messregimes** —
-// sie verschiebt die absoluten Werte und entwertet die 27-Lauf-Historie, gegen
-// die die Schwellen unten kalibriert sind. Darum NICHT in dieser Einheit
-// (§14.2: nicht über-bündeln); als eigener, neu kalibrierter Schritt notiert:
-// ROADMAP → QS-PERF «Chrome-Isolation je Lighthouse-Lauf + Neukalibrierung».
+// Jetzt startet `einLauf()` je Messung eine **frische Chrome-Instanz** und killt
+// sie danach (Kosten ~1–2 s je Lauf, in CI ~9 Läufe ⇒ ~15 s). Damit ist jeder
+// Lauf gleich kalt, die Reihenfolge der Seiten ist ohne Einfluss, und der Median
+// mittelt echte Instanz-Streuung statt kumulativer Drift.
 const RUNS = Number(process.env.PERF_RUNS ?? (process.env.CI ? 3 : 1));
 
+// ── TBT-Normierung je Job (NEU 20.7.2026, Baustelle A2) ─────────────────────
+//
+// Problem (belegt 19./20.7.2026 über 27 CI-Läufe): die TBT-Streuung sitzt
+// **zwischen** den Jobs (2262…5612 ms, Faktor 2.5), nicht innerhalb (±9 %).
+// Der GitHub-Runner-Pool ist heterogen; welche Maschine ein Job zugeteilt
+// bekommt, entscheidet über den Messwert. Ein ABSOLUTER Deckel kann daher nicht
+// zwischen «Software langsamer geworden» und «langsamer Runner erwischt»
+// unterscheiden — er misst zu einem guten Teil die Runner-Zuteilung.
+//
+// Mechanismus: **eine Referenzmessung mit demselben Instrument im selben Job.**
+// Das Script schreibt eine synthetische Kalibrier-Seite nach `dist/` (fixe,
+// deterministische CPU-Last in gleich grossen Blöcken, kein Netz, kein App-Code)
+// und misst deren TBT über exakt dieselbe Lighthouse-Kette (gleiche 4×-Drossel,
+// gleiche Chrome-Isolation). Dieser Wert hängt NUR an der Runner-Geschwindigkeit,
+// nie am Anwendungscode. Daraus:
+//
+//   faktor       = tbtKalibrier / KALIBRIER_BASIS
+//   TBT normiert = TBT roh / faktor
+//
+// Ein langsamer Runner hebt Zähler und Nenner gemeinsam → normiert bleibt der
+// Wert gleich. Eine echte Code-Regression hebt NUR den Zähler → normiert steigt
+// sie durch. Genau die Diskriminierung, die dem Absolut-Deckel fehlt.
+//
+// Zwei Deckel statt einem (bewusst, §8):
+//   • `tbtNormMax` — der SCHARFE, diskriminierende Deckel auf dem normierten Wert.
+//   • `tbtMax`     — ein WEITER absoluter Sicherheitsnetz-Deckel auf dem Rohwert.
+//     Er bleibt, damit eine katastrophale Absolut-Regression auch dann anschlägt,
+//     wenn die Kalibrierung selbst danebenliegt (Instrument-Ausfall, Plausibilität
+//     unten). Er ist NICHT der Regressions-Fänger — das ist `tbtNormMax`.
+//
+// Plausibilitäts-Sicherung: liegt die Kalibrier-TBT ausserhalb des als plausibel
+// gemessenen Bandes (KALIBRIER_MIN…KALIBRIER_MAX), gilt die Kalibrierung als
+// GESCHEITERT — dann wird NICHT normiert, sondern ehrlich gemeldet und nur der
+// weite Rohdeckel assertiert (kein stilles Durchwinken, kein stilles Rot).
+// Abschaltbar über PERF_NORMIEREN=0 (Diagnose/Vergleichsmessung).
+const NORMIEREN = process.env.PERF_NORMIEREN !== '0';
+// Blockzahl × Iterationen je Block der Kalibrier-Last. Bewusst in ~8 mittellange
+// Tasks zerlegt (statt eines Riesen-Tasks): so ähnelt das Lastprofil einer echten
+// Seite (viele Long Tasks), TBT summiert über alle, und die TTI-Erkennung von
+// Lighthouse bleibt stabil.
+const KALIBRIER_BLOECKE = 8;
+// Grösse empirisch gewählt (20.7.2026): 8 Blöcke à 5 Mio Iterationen ergeben
+// lokal (Apple Silicon, 4×-Drossel) ~0.5 s Kalibrier-TBT und auf dem 2-vCPU-CI-
+// Runner ~2 s — also dieselbe Grössenordnung wie die zu normierende OR-TBT.
+// Zu klein ⇒ Referenz verschwindet im Messrauschen; zu gross ⇒ der Kalibrier-
+// Lauf kostet mehr Zeit, als das Tor spart.
+const KALIBRIER_ITER = 5_000_000;
+// Kalibrier-Läufe je Job → Median (die Referenz soll selbst nicht flackern).
+const KALIBRIER_RUNS = Number(process.env.PERF_KALIBRIER_RUNS ?? (process.env.CI ? 3 : 1));
+// Bezugsgrösse: Median-TBT der Kalibrier-Seite über die CI-Messreihe (Werte und
+// Herleitung im SCHWELLEN-Block unten). Ein Runner mit genau diesem Wert bekommt
+// Faktor 1.000, d. h. normiert == roh; die normierten Deckel bleiben damit auf
+// derselben Grössenordnung wie die bisherigen Absolutwerte und sind direkt lesbar.
+const KALIBRIER_BASIS = Number(process.env.PERF_KALIBRIER_BASIS ?? 2000);
+// Plausibilitätsband: ausserhalb gilt die Kalibrierung als gescheitert (Instrument
+// defekt / Seite nicht ausgeliefert / Runner pathologisch) → keine Normierung.
+// Bewusst weit: es soll nur Instrument-Ausfall fangen, nicht langsame Runner
+// aussortieren — genau die soll die Normierung ja einfangen.
+const KALIBRIER_MIN = 150;
+const KALIBRIER_MAX = 20_000;
+
 type Schwelle = {
-  clsMax: number;   // Cumulative Layout Shift (geräteunabhängig — der harte Regressions-Fänger)
-  lcpMax: number;   // Largest Contentful Paint (ms) — CPU-abhängig, grosszügiger Deckel
-  tbtMax: number;   // Total Blocking Time (ms)
-  ttiMax: number;   // Time To Interactive (ms)
-  scoreMin: number; // Performance-Score 0..100
+  clsMax: number;     // Cumulative Layout Shift (geräteunabhängig — der harte Regressions-Fänger)
+  lcpMax: number;     // Largest Contentful Paint (ms) — CPU-abhängig, grosszügiger Deckel
+  tbtMax: number;     // Total Blocking Time (ms) — WEITES absolutes Sicherheitsnetz (siehe NORMIEREN)
+  tbtNormMax: number; // Total Blocking Time (ms), job-normiert — der SCHARFE Regressions-Fänger
+  ttiMax: number;     // Time To Interactive (ms)
+  scoreMin: number;   // Performance-Score 0..100
 };
 
 // ── Schwellen-Kalibrierung (NEU 20.7.2026, empirisch gegen 27 CI-Läufe) ─────
@@ -148,12 +207,12 @@ const SCHWELLEN: Record<string, { url: string; label: string; s: Schwelle }> = {
   or: {
     url: `${BASE}/gesetze/bund/OR`,
     label: '/gesetze/bund/OR (≈930 KB HTML)',
-    s: { clsMax: 0.05, lcpMax: 13500, tbtMax: 6500, ttiMax: 15000, scoreMin: 25 },
+    s: { clsMax: 0.05, lcpMax: 13500, tbtMax: 6500, tbtNormMax: 0, ttiMax: 15000, scoreMin: 25 },
   },
   start: {
     url: `${BASE}/`,
     label: 'Startseite',
-    s: { clsMax: 0.05, lcpMax: 11000, tbtMax: 1500, ttiMax: 12000, scoreMin: 40 },
+    s: { clsMax: 0.05, lcpMax: 11000, tbtMax: 1500, tbtNormMax: 0, ttiMax: 12000, scoreMin: 40 },
   },
 };
 
@@ -204,7 +263,26 @@ const median = (xs: number[]): number => {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 };
 
-async function einLauf(url: string, port: number): Promise<Metrik> {
+/**
+ * Frische Chrome-Instanz je Messung (Baustelle A1). Vorher teilte das Script EINE
+ * Instanz über alle Läufe beider Seiten; sie driftete, und die zuletzt gemessene
+ * Seite erbte die Drift (Beleg im RUNS-Kommentar oben). Kosten der Isolation:
+ * ~1–2 s je Lauf — der Preis dafür, dass jeder Lauf dieselbe Ausgangslage hat.
+ */
+async function mitFrischemChrome<T>(fn: (port: number) => Promise<T>): Promise<T> {
+  const chrome = await chromeLauncher.launch({
+    chromePath: chromePfad(),
+    chromeFlags: ['--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage'],
+  });
+  try {
+    return await fn(chrome.port);
+  } finally {
+    await chrome.kill();
+  }
+}
+
+async function einLauf(url: string): Promise<Metrik> {
+  return mitFrischemChrome(async (port) => {
   // Default = Mobil-Preset: cpuSlowdownMultiplier 4 + langsames 4G (das Audit-Profil).
   const runner = await lighthouse(url, {
     port,
@@ -222,6 +300,59 @@ async function einLauf(url: string, port: number): Promise<Metrik> {
     tti: num('interactive'),
     score: Math.round((lhr.categories.performance?.score ?? 0) * 100),
   };
+  });
+}
+
+// ── Kalibrier-Referenz je Job (Baustelle A2) ─────────────────────────────────
+
+/**
+ * Schreibt die synthetische Kalibrier-Seite nach `dist/`. Sie enthält KEINEN
+ * App-Code, kein Netz, keine Bilder — nur eine deterministische Integer-Schleife
+ * in KALIBRIER_BLOECKE gleich grossen Tasks, gestartet nach dem ersten Paint
+ * (damit die Blockzeit im TBT-Fenster FCP→TTI liegt). Ihr TBT hängt damit
+ * ausschliesslich an der Rechenleistung des Runners.
+ *
+ * Die Seite wird zur Laufzeit erzeugt (nicht committet): sie ist Messinstrument,
+ * kein Produkt-Inhalt, und darf nie im ausgelieferten Build landen. `dist/` wird
+ * in CI ohnehin je Lauf frisch aus dem Artefakt gezogen.
+ */
+function schreibeKalibrierSeite(): string {
+  const html = `<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Perf-Kalibrierung (Messinstrument, kein Inhalt)</title></head>
+<body><h1>Kalibrier-Last</h1>
+<p>Synthetische, deterministische CPU-Last zur Job-Normierung des Perf-Tors.</p>
+<script>
+(function () {
+  var bloecke = ${KALIBRIER_BLOECKE}, iter = ${KALIBRIER_ITER}, x = 1, n = 0;
+  function block() {
+    for (var i = 0; i < iter; i++) { x = (x * 1103515245 + 12345) & 0x7fffffff; }
+    if (++n < bloecke) setTimeout(block, 0);
+    else document.title = 'kalibriert ' + x;
+  }
+  addEventListener('load', function () { setTimeout(block, 0); });
+})();
+</script>
+</body></html>
+`;
+  const pfad = join(process.cwd(), 'dist', '_perf-kalibrier.html');
+  writeFileSync(pfad, html);
+  return `${BASE}/_perf-kalibrier.html`;
+}
+
+/** Median-TBT der Kalibrier-Seite = Geschwindigkeits-Fingerabdruck dieses Jobs. */
+async function kalibriere(): Promise<number> {
+  const url = schreibeKalibrierSeite();
+  const werte: number[] = [];
+  for (let i = 0; i < KALIBRIER_RUNS; i++) werte.push((await einLauf(url)).tbt);
+  const m = median(werte);
+  console.log(
+    `  Kalibrier-Referenz (synthetische CPU-Last, ${KALIBRIER_BLOECKE}×${KALIBRIER_ITER.toLocaleString('de-CH')} Iter.)\n` +
+    `    Einzelläufe TBT: ${werte.map((v) => Math.round(v)).join(' · ')} ms  →  Median ${Math.round(m)} ms`,
+  );
+  return m;
 }
 
 // N Läufe → Median je Metrik (Ausreisser-Flake auf geteiltem CI-Runner dämpfen).
@@ -229,9 +360,9 @@ async function einLauf(url: string, port: number): Promise<Metrik> {
 // ist im CI-Log unterscheidbar, ob ein roter Median echte Last ist oder ein über
 // die Läufe driftender Messaufbau (siehe RUNS-Kommentar oben) — sonst diskutiert
 // die nächste Session wieder über eine einzelne Zahl ohne Streuung (§8).
-async function messe(url: string, port: number): Promise<Metrik> {
+async function messe(url: string): Promise<Metrik> {
   const laeufe: Metrik[] = [];
-  for (let i = 0; i < RUNS; i++) laeufe.push(await einLauf(url, port));
+  for (let i = 0; i < RUNS; i++) laeufe.push(await einLauf(url));
   console.log(`    Einzelläufe TBT: ${laeufe.map((m) => Math.round(m.tbt)).join(' · ')} ms`
     + `  |  LCP: ${laeufe.map((m) => (m.lcp / 1000).toFixed(1)).join(' · ')} s`);
   return {
@@ -252,33 +383,60 @@ async function main(): Promise<void> {
   }
 
   let preview: ChildProcess | undefined;
-  let chrome: chromeLauncher.LaunchedChrome | undefined;
   const fehler: string[] = [];
-  const bericht: Record<string, Metrik> = {};
+  const bericht: Record<string, unknown> = {};
 
   try {
     if (!process.env.PERF_BASE_URL) preview = await startePreview();
-    chrome = await chromeLauncher.launch({
-      chromePath: chromePfad(),
-      chromeFlags: ['--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage'],
-    });
 
-    console.log(`check:perf-lighthouse — Lighthouse-Mobil (4× CPU + langsames 4G), Median aus ${RUNS} ${RUNS === 1 ? 'Lauf' : 'Läufen'}:`);
+    console.log(`check:perf-lighthouse — Lighthouse-Mobil (4× CPU + langsames 4G), frische Chrome-Instanz je Lauf, Median aus ${RUNS} ${RUNS === 1 ? 'Lauf' : 'Läufen'}:`);
+
+    // Job-Normierung: zuerst die Referenzlast messen (Baustelle A2).
+    let faktor: number | undefined;
+    let kalib: number | undefined;
+    if (NORMIEREN) {
+      kalib = await kalibriere();
+      if (kalib >= KALIBRIER_MIN && kalib <= KALIBRIER_MAX) {
+        faktor = kalib / KALIBRIER_BASIS;
+        console.log(
+          `    Normier-Faktor ${faktor.toFixed(3)} (Basis ${KALIBRIER_BASIS} ms)` +
+          ` — dieser Runner ist ${faktor >= 1 ? `${((faktor - 1) * 100).toFixed(0)} % langsamer` : `${((1 - faktor) * 100).toFixed(0)} % schneller`} als die Basis.`,
+        );
+      } else {
+        console.log(
+          `    ⚠ Kalibrierung UNPLAUSIBEL (${Math.round(kalib)} ms ausserhalb ${KALIBRIER_MIN}–${KALIBRIER_MAX} ms).\n` +
+          `      Es wird NICHT normiert; assertiert wird nur der weite Roh-Deckel. Kein stilles Durchwinken (§8).`,
+        );
+      }
+    } else {
+      console.log('    (Normierung per PERF_NORMIEREN=0 abgeschaltet — nur Roh-Deckel.)');
+    }
+    bericht.kalibrierTbt = kalib ?? null;
+    bericht.kalibrierFaktor = faktor ?? null;
+
     for (const [key, { url, label, s }] of Object.entries(SCHWELLEN)) {
-      const m = await messe(url, chrome.port);
-      bericht[key] = m;
+      const m = await messe(url);
+      const tbtNorm = faktor ? m.tbt / faktor : undefined;
+      bericht[key] = { ...m, tbtNorm: tbtNorm ?? null };
       console.log(
         `  ${label}\n` +
         `    Score ${m.score} (≥ ${s.scoreMin})  ` +
         `CLS ${m.cls.toFixed(3)} (≤ ${s.clsMax})  ` +
         `LCP ${(m.lcp / 1000).toFixed(2)} s (≤ ${(s.lcpMax / 1000).toFixed(1)} s)  ` +
-        `TBT ${Math.round(m.tbt)} ms (≤ ${s.tbtMax})  ` +
+        `TBT ${Math.round(m.tbt)} ms roh (≤ ${s.tbtMax} Sicherheitsnetz)` +
+        (tbtNorm !== undefined ? ` · ${Math.round(tbtNorm)} ms normiert (≤ ${s.tbtNormMax} scharf)  ` : '  ') +
         `TTI ${(m.tti / 1000).toFixed(2)} s (≤ ${(s.ttiMax / 1000).toFixed(1)} s)`,
       );
       if (!MESSEN_NUR) {
         if (m.cls > s.clsMax) fehler.push(`${label}: CLS ${m.cls.toFixed(3)} > ${s.clsMax} (Layout-Sprung — §15/2, höchste Prio).`);
         if (m.lcp > s.lcpMax) fehler.push(`${label}: LCP ${(m.lcp / 1000).toFixed(2)} s > ${(s.lcpMax / 1000).toFixed(1)} s.`);
-        if (m.tbt > s.tbtMax) fehler.push(`${label}: TBT ${Math.round(m.tbt)} ms > ${s.tbtMax} ms.`);
+        // TBT: der scharfe Deckel greift auf dem NORMIERTEN Wert (Runner-Last
+        // herausgerechnet), der weite Roh-Deckel bleibt als Sicherheitsnetz für
+        // den Fall, dass die Kalibrierung selbst danebenliegt.
+        if (tbtNorm !== undefined && tbtNorm > s.tbtNormMax) {
+          fehler.push(`${label}: TBT normiert ${Math.round(tbtNorm)} ms > ${s.tbtNormMax} ms (roh ${Math.round(m.tbt)} ms, Normier-Faktor ${faktor?.toFixed(3)}).`);
+        }
+        if (m.tbt > s.tbtMax) fehler.push(`${label}: TBT roh ${Math.round(m.tbt)} ms > ${s.tbtMax} ms (absolutes Sicherheitsnetz).`);
         if (m.tti > s.ttiMax) fehler.push(`${label}: TTI ${(m.tti / 1000).toFixed(2)} s > ${(s.ttiMax / 1000).toFixed(1)} s.`);
         if (m.score < s.scoreMin) fehler.push(`${label}: Score ${m.score} < ${s.scoreMin}.`);
       }
@@ -288,8 +446,12 @@ async function main(): Promise<void> {
     const outDir = join(process.cwd(), 'dist', '_perf');
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, 'lighthouse.json'), JSON.stringify(bericht, null, 2));
+    // Eine maschinenlesbare Zeile — so lässt sich eine Messreihe über mehrere
+    // (Matrix-)Jobs hinweg direkt aus den Logs aggregieren, ohne Artefakte
+    // einzusammeln. Wird von `.github/workflows/perf-kalibrierung.yml` genutzt.
+    console.log(`PERF-MESSPUNKT ${JSON.stringify(bericht)}`);
   } finally {
-    if (chrome) await chrome.kill();
+    // Chrome-Instanzen werden je Lauf in `mitFrischemChrome` geschlossen (A1).
     if (preview) preview.kill('SIGTERM');
   }
 
