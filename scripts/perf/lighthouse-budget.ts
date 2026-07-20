@@ -37,17 +37,26 @@ const BASE = process.env.PERF_BASE_URL ?? `http://localhost:${PORT}`;
 const MESSEN_NUR = process.argv.includes('--messen'); // nur messen + drucken, keine Assertion
 // Lighthouse-Einzelläufe streuen auf einem geteilten CI-Runner stark (v. a. TBT/
 // Score/CLS unter der 4×-CPU-Drossel). Darum je Seite N Läufe → **Median** je
-// Metrik (der Standard-Ansatz von Lighthouse-CI gegen Ausreisser-Flake). CI: 5,
+// Metrik (der Standard-Ansatz von Lighthouse-CI gegen Ausreisser-Flake). CI: 3,
 // lokal 1 (schnell). Override über PERF_RUNS.
 //
-// CI 3 → 5 (Kalibrierung 20.7.2026, Beleg unten): die 27 ausgewerteten CI-Läufe
-// sind bereits Mediane aus 3 — ihre Streuung (sd ≈ 690 ms auf TBT/OR) ist also
-// die Streuung DES MEDIANS, nicht des Einzellaufs. Der Median aus 5 hat rund
-// 0.53·σ statt 0.70·σ des Einzellaufs, senkt die Streuung des berichteten Werts
-// also auf ~525 ms. Kosten: 2 zusätzliche Lighthouse-Läufe je Seite (~90 s im
-// eigenen Job) — der günstigste verfügbare Hebel gegen Rot-durch-Rauschen, und
-// er macht kein Tor stumpf (anders als ein höherer Deckel).
-const RUNS = Number(process.env.PERF_RUNS ?? (process.env.CI ? 5 : 1));
+// BEWUSST bei 3 belassen (Befund 20.7.2026). Naheliegend wäre, gegen die unten
+// belegte Streuung einfach mehr Läufe zu mitteln — ein Probelauf mit RUNS=5 in
+// CI zeigt aber, dass das **nicht** funktioniert, weil dieses Script EINE
+// Chrome-Instanz für ALLE Läufe BEIDER Seiten teilt: die Instanz driftet über
+// die Läufe, und die zuletzt gemessene Seite erbt die Drift. Gemessen mit
+// RUNS=5 sprang die Startseite (misst als zweite, nach allen OR-Läufen) von
+// historisch 143–237 ms TBT auf **1543 ms**, und OR-LCP von ~3.5 s auf 11.3 s —
+// ohne jede Änderung am App-Code. Mehr Läufe machen die Messung hier also nicht
+// ruhiger, sondern die späteren Werte schlechter.
+//
+// Der saubere Weg ist Chrome-Isolation je Lauf (frische Instanz), erst danach
+// wird ein höheres RUNS sinnvoll. Das ist eine **Änderung des Messregimes** —
+// sie verschiebt die absoluten Werte und entwertet die 27-Lauf-Historie, gegen
+// die die Schwellen unten kalibriert sind. Darum NICHT in dieser Einheit
+// (§14.2: nicht über-bündeln); als eigener, neu kalibrierter Schritt notiert:
+// ROADMAP → QS-PERF «Chrome-Isolation je Lighthouse-Lauf + Neukalibrierung».
+const RUNS = Number(process.env.PERF_RUNS ?? (process.env.CI ? 3 : 1));
 
 type Schwelle = {
   clsMax: number;   // Cumulative Layout Shift (geräteunabhängig — der harte Regressions-Fänger)
@@ -91,12 +100,14 @@ type Schwelle = {
 //
 // Konsequenz — die Schärfe wandert dorthin, wo Signal ist, statt pauschal zu
 // lockern:
-//   • TBT/OR 4000 → 4800 ms. Kalibriert auf Mittel + ~2 sd des durch RUNS 3→5
-//     beruhigten Medians (3555 + 2·525 ≈ 4605), aufgerundet auf 4800. Fängt
-//     weiterhin jede echte Regression ab ~+1200 ms — die Grössenordnung, die
-//     §15/3-Verstösse («Suchindex in den kritischen Pfad») erzeugen —, aber
-//     nicht mehr die Runner-Streuung. Zusammen mit RUNS 5 ist das eine
-//     Netto-Verschärfung der Aussagekraft, keine Absenkung des Anspruchs.
+//   • TBT/OR 4000 → 4800 ms, kalibriert gegen genau diese Verteilung:
+//     4800 liegt bei z ≈ +1.8 (Mittel 3555 + 1.8·687) ⇒ erwartete Rot-durch-
+//     Rauschen-Quote fällt von ~26 % auf ~3.5 % (auf main-Pushes von ~30 % auf
+//     ~12 %). Fängt weiterhin jede echte Regression ab ~+1200 ms — die
+//     Grössenordnung, die §15/3-Verstösse («Suchindex in den kritischen Pfad»)
+//     erzeugen —, aber nicht mehr die blosse Runner-Auslastung. Der Deckel
+//     bleibt damit unter dem beobachteten Maximum (5094 ms): er ist gelockert,
+//     nicht ausgeschaltet.
 //   • CLS/OR 0.15 → 0.05 und Start 0.10 → 0.05 (GEGENGEWICHT, Verschärfung).
 //     CLS ist die deterministische, geräteunabhängige Metrik und laut §15.2 «der
 //     eigentliche Regressions-Fänger» — beobachtet über dieselben 27 Läufe aber
@@ -193,9 +204,15 @@ async function einLauf(url: string, port: number): Promise<Metrik> {
 }
 
 // N Läufe → Median je Metrik (Ausreisser-Flake auf geteiltem CI-Runner dämpfen).
+// Die Einzelwerte werden mitgedruckt (Diagnose, ändert nichts am Verdikt): nur so
+// ist im CI-Log unterscheidbar, ob ein roter Median echte Last ist oder ein über
+// die Läufe driftender Messaufbau (siehe RUNS-Kommentar oben) — sonst diskutiert
+// die nächste Session wieder über eine einzelne Zahl ohne Streuung (§8).
 async function messe(url: string, port: number): Promise<Metrik> {
   const laeufe: Metrik[] = [];
   for (let i = 0; i < RUNS; i++) laeufe.push(await einLauf(url, port));
+  console.log(`    Einzelläufe TBT: ${laeufe.map((m) => Math.round(m.tbt)).join(' · ')} ms`
+    + `  |  LCP: ${laeufe.map((m) => (m.lcp / 1000).toFixed(1)).join(' · ')} s`);
   return {
     cls: median(laeufe.map((m) => m.cls)),
     lcp: median(laeufe.map((m) => m.lcp)),

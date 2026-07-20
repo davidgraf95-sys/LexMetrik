@@ -255,6 +255,17 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     Artikelsuche blockierte den Sprung-Aufbau (`useUniversalSuche` `useDeferredValue` entkoppelt).
     Golden byte-gleich (nur React-Reader/Such-Hook); 10× lokal grün unter 6× Drossel. Detail:
     STRUKTUR-Karte 10.7.
+  - [ ] **Chrome-Isolation je Lighthouse-Lauf + Neukalibrierung** *(offen, Befund 20.7.2026)*.
+    `scripts/perf/lighthouse-budget.ts` teilt EINE Chrome-Instanz über alle Läufe BEIDER
+    Messseiten. Die Instanz driftet über die Läufe, und die zuletzt gemessene Seite erbt die
+    Drift: ein Probelauf mit `PERF_RUNS=5` liess die Startseite (misst als zweite, nach allen
+    OR-Läufen) von historisch 143–237 ms TBT auf **1543 ms** springen und OR-LCP von ~3.5 s auf
+    11.3 s — **ohne jede Änderung am App-Code**. Folge: mehr Läufe beruhigen die Messung nicht,
+    sie verschlechtern die späteren Werte. Zu tun: je Lauf eine frische Chrome-Instanz starten
+    (Kosten ~1–2 s/Lauf), danach `RUNS` erhöhen. **Achtung — Messregime-Wechsel:** die absoluten
+    Werte verschieben sich, die 27-Lauf-Historie, gegen die die TBT/CLS-Deckel kalibriert sind,
+    wird entwertet ⇒ Schwellen im selben Schritt neu erheben, nicht übernehmen. Darum bewusst
+    NICHT mit der Deckel-Kalibrierung vom 20.7. gebündelt (§14.2).
   - **Constraints:** alles `[OF]`/zeitsperre-konform (Darstellungs-/Lade-/Build-Schicht); **kein**
     DOM-entfernendes Virtualisieren/`hydrateRoot`/Teilparse (Treue-Verlust, verworfen); Snapshot-
     Regenerierung (c) öffnet **keinen** 26×-Slot (nur Format, Union byte-gleich); Worktree-Isolation
