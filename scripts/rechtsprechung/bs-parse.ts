@@ -21,6 +21,7 @@ import { join } from 'node:path';
 import { parseHTML } from 'linkedom';
 import { dekodiereBs, dokumentUrl } from './bs-client';
 import { rawPfad, BS_DATEN } from './bs-fetch';
+import { extrahiereBesetzung } from './bs-besetzung';
 import { gnJahr, type Inventar, type InventarZeile } from './bs-inventar';
 import { sha256EntscheidBloecke } from '../normtext/sha-entscheide';
 import { gerichtAnzeigename, kantonalSachgebiet, fmtDatumDe } from '../normtext/entscheide-mapping';
@@ -225,6 +226,10 @@ export interface ParseErgebnis {
   strukturQuelle: 'klassen' | 'marker' | 'flach';
   /** Fidelity: Zeichen-Zählung über die aufgenommenen Einheiten (Gate §3.6). */
   zaehlungEinheiten: Record<string, number>;
+  /** Amtlicher Spruchkörper-Freitext aus dem Rubrum (null, wenn nicht schneidbar). */
+  besetzung: string | null;
+  /** Woher der Besetzungs-Block stammt — Ausweis fürs Tor/Report. */
+  besetzungQuelle: 'mitwirkende' | 'signatur' | 'keine';
 }
 
 function metaWert(document: Document, label: string): string | null {
@@ -278,6 +283,9 @@ export function parseBsDokument(bytes: Buffer): ParseErgebnis {
   if (!roots.length) throw new Error('Body: div.WordSection1 fehlt');
   const einheiten = roots.flatMap((r) => sammleEinheiten(r));
   if (!einheiten.length) throw new Error('Body: keine Inhalts-Einheiten');
+
+  // Spruchkörper aus dem Deckblatt-/Signatur-Block (eigener Pass, siehe unten).
+  const besetzungRoh = extrahiereBesetzung(document);
 
   const hatAaKlassen = einheiten.some((e) => /\baa(Tatsachen|Entscheidungsgrnde|Dispositiv)\b/.test(e.klasse));
   const ersterMarker = einheiten.findIndex((e) => sektionsMarker(e) !== null);
@@ -415,6 +423,12 @@ export function parseBsDokument(bytes: Buffer): ParseErgebnis {
     aktualisiert: dIso(metaWert(document, 'Aktualisierungsdatum')),
     titel, abschnitte, dispositivOrders, strukturQuelle,
     zaehlungEinheiten: zaehlung,
+    // Eigener Lese-Pass über das DOM: `sammleEinheiten` verwirft die Anker- und
+    // Label-Struktur (nur textContent), und das Deckblatt wird für `abschnitte`
+    // ohnehin übersprungen. Der Besetzungs-Block wird darum separat geschnitten —
+    // das lässt `abschnitte`/`sha` unverändert (§6).
+    besetzung: besetzungRoh.text,
+    besetzungQuelle: besetzungRoh.quelle,
   };
 }
 
@@ -462,7 +476,11 @@ export function baueSnapshot(p: ParseErgebnis, z: InventarZeile, docketSafe: str
     leitcharakter: 'routine',
     sachgebiet,
     legalArea: null,
-    rubrum: { gegenstand: p.titel || null, parteien: null, vorinstanz: null, besetzung: null },
+    // besetzung: amtlicher Freitext des Spruchkörpers (Richter + Gerichtsschreiber),
+    // geschnitten aus dem abgegrenzten Rubrum-Block. Anonymisierte Parteien stehen
+    // NIE darin (Schnitt endet vor «Beteiligte»/«Parteien», zusätzlich ____-Bremse).
+    // Additiv: `abschnitte` und damit `sha` bleiben davon unberührt (§6).
+    rubrum: { gegenstand: p.titel || null, parteien: null, vorinstanz: null, besetzung: p.besetzung },
     regeste: null,             // Titel ist Betreff, KEINE Regeste (SG-Fehletikett-Lektion)
     regesteAmtlich: false,
     abschnitte: p.abschnitte,

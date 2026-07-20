@@ -76,6 +76,13 @@ export function istRisikoPfad(p: string): boolean {
   // BS-Rechtsprechung (Bauplan §8.4): Crawl-/Parse-Pipeline des amtlichen
   // BS-Portals = Extraktions-Risiko (check-*-Basenames via istPruefLogik ausgenommen).
   if (p.startsWith('scripts/rechtsprechung/')) return true;
+  // Richter-Fundament (FAHRPLAN-RECHTSPRECHUNG §R-RICHTER): der Besetzungs-Parser
+  // entscheidet über PERSONEN-IDENTITÄT (welcher Rohname wird zu welchem Kanon-Slug)
+  // und trägt den Anonymisierungs-Guard, der anonymisierte Parteien/Gutachter von
+  // amtlich genannten Richter:innen scheidet. Ein Fehler hier verschmilzt zwei reale
+  // Amtsträger zu einer Filter-Person oder de-anonymisiert eine Partei — beides
+  // Risiko-Klasse, obwohl die Datei unter src/lib/ liegt.
+  if (p === 'src/lib/rechtsprechung/besetzung.ts') return true;
   if (p.startsWith('daten/')) return true;
   if (p === 'daten-manifest.json') return true;
   // rekursiv (nicht nur die 4 Top-Level-Index-JSONs) — Blocker Linse 2:
