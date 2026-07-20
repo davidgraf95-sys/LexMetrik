@@ -223,6 +223,22 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     aussieht: er ist der benannte **Ersatz-Arbiter für neun nur-lokale Tore** — solange er rot ist,
     **läuft deren Allowlist-Begründung leer** (s. `QS-BASIS`, Tor-Parität 16/36). Erst diagnostizieren,
     dann fixen; nicht raten.
+    - **a′ · `normen-monitor.yml` — Ursache diagnostiziert (20.7.2026, doppelt verifiziert, Beleg
+      CI-Run `29727448005`).** Der Monitor ist seit 29.6. rot; die **aktuelle** Ursache liegt in
+      `check:netz`/Kanonik-Arbiter: **`chemrrv`** (SR 814.81, `eli/cc/2005/478`, Konsolidierung
+      `20260716`, gepinnt 16.7.) zeigt auf die **nicht-kanonische** Revisions-Wurzel `html-0`,
+      kanonisch ist `html-1`. **Reparatur (offener Bau-Schritt, NICHT im reinen Doku-Schritt
+      ausgeführt):** Re-Pin nur für `chemrrv` via `scripts/fedlex-repin-kanonik.ts` → Snapshot-
+      Regeneration über den Generator → **Inhalts-Treue-Diff** (gleiche Konsolidierung ⇒ substanziell
+      identischer Text; ~31 mehrspaltig-Tabellenblöcke stichprobenhaft) → dann `workflow_dispatch` des
+      Normen-Monitors als Echt-Beweis. **Dringlichkeit:** die Rechtsstand-Wache ist bis zur Reparatur
+      faktisch **blind**, weil das Dauer-Rot jede neue Drift maskiert. **Risiko-Klasse abweichend von
+      der DoD dieses Querschnitts:** dieser Re-Pin ist ein **Extraktions-Risikopfad** (Fedlex-Snapshot,
+      berührt `scripts/fedlex-*`/`public/normtext/**`) ⇒ **`QS-GP`-Gegenprüfung Pflicht, kein
+      Auto-Merge vor Verdikt** (§14.4) — anders als die reine Workflow-Plumbing-Arbeit unter a/b. Die
+      Re-Pin-Mechanik teilt sich mit **`QS-CURRENCY`** (Korpus-Pflege) und **`QS-OPT` O-2** (Batch-
+      Re-Pin vor dem 1.8.-Berg); der `chemrrv`-Fix ist deren terminnahes Geschwister, wird aber hier
+      geführt, weil er den Monitor entsperrt.
   - **b · Turso-Wächter-Abdeckung ausdehnen.** `check:turso-frische` (aus #313) prüft vierfach
     (Struktur · Vollständigkeit gegen Soll-Zahlen · `manifest_sha` · Alter) — offen bleibt: **wo überall**
     geprüft wird, eine **Laufzeit-Prüfung in `api/suche`** (der Ausfall vom 20.7. war im Betrieb
@@ -233,8 +249,10 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   **unabhängige** Referenz prüfen und seine **Scheiterns-Fähigkeit an einem ECHTEN Aufruf** belegen —
   nicht an einer Nachbildung mit selbstgebauter Eingabe (CLAUDE.md §6 Ziff. 7).
   **DoD:** beide Workflows nachweislich wieder grün **mit protokollierter Ursache** (nicht durch Rerun
-  grün gemacht) · `check:ci-laeufe` grün · Alarmpfad dokumentiert · reine Prüflogik ⇒ golden byte-gleich,
-  `Gegenpruefung: n/a`. Trailer `Roadmap: QS-AUTOMATIK`.
+  grün gemacht) · `check:ci-laeufe` grün · Alarmpfad dokumentiert. Die Workflow-/Tor-Plumbing-Anteile
+  (a/b) sind **reine Prüflogik ⇒ golden byte-gleich, `Gegenpruefung: n/a`**; der `chemrrv`-Re-Pin (a′)
+  ist die **Ausnahme** — Extraktions-Risikopfad ⇒ eigener Commit mit `QS-GP`-Verdikt, kein Auto-Merge.
+  Trailer `Roadmap: QS-AUTOMATIK`.
 - **Wissens-/Werkzeug-Infrastruktur** *(QS-WISSEN, `[OF]`, neu 10.7.2026)*.
   <!-- @meta id: QS-WISSEN · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-NOTEBOOKLM-EINSATZ.md -->
   NotebookLM als **menschen-seitige** Recall-/Recherche-Oberfläche über den stabilen
@@ -337,15 +355,23 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     ausgeschlossen — jeder Lauf ist kalt. Vermutung, ungeprüft: Lighthouse wählt je nach Timing ein
     anderes LCP-Element. Der Deckel 13500 liegt ~16 % über dem hohen Modus und ist damit sicher;
     bevor er verschärft wird, muss die Bimodalität verstanden sein (sonst deckelt man sie nur weg, §8).
-  - [ ] **e2e-Shard-Balance gegen GEMESSENE CI-Dauern packen** *(vorbereitet 20.7.2026, Daten laufen auf)*.
+  - [ ] **e2e-Shard-Balance gegen GEMESSENE CI-Dauern packen** *(vorbereitet 20.7.2026; CI-Messwerte
+    da 21.7.2026 — geparkt, gekoppelt an Davids Merge-Queue-Entscheid)*.
     Die Gruppen in `e2e/shard-gruppen.json` sind gegen LOKALE Dauern gepackt (Spread <0.1 %), die
     aber nicht uniform auf den CI-Runner skalieren: `leser-gliederung-a33.e2e.ts` braucht lokal 92 s,
-    auf CI ~360 s (**Faktor 3.9**), andere Specs weit weniger. Ist-Schieflage der Shard-Wandzeit:
-    Median **729 / 570 / 780 s** statt je ~693 s. Eine Neupackung auf geschätzter Grundlage wurde
-    bewusst UNTERLASSEN (kann die Balance ebenso gut verschlechtern, §14.2). Stattdessen liefert der
-    neue JSON-Reporter je Shard-Job ein Report-Artefakt mit echten Per-Spec-CI-Dauern — damit ist die
-    nächste Packung gemessen. **Strukturelle Grenze:** a33 ist mit ~360 s bereits grösser als das
-    Shard-Drittel; Datei-Granularität kann das nicht auflösen (Aufteilen der Spec wäre der Hebel).
+    auf CI ~360 s (**Faktor ~3.7–3.9**), andere Specs weit weniger. **CI-Messbefund (Lauf
+    `29779602507`): 283 Tests / 2100 s bei `workers:1`; die Top-10-Specs tragen 66 % der Zeit;
+    `leser-gliederung-a33.e2e.ts` allein 342 s = 16 % der Gesamtzeit in nur 4 Tests; Shard 3 ist
+    systematisch am längsten**, weil die Packung nach lokalen Zeiten geschah. Eine Neupackung auf
+    geschätzter Grundlage wurde bewusst UNTERLASSEN (kann die Balance ebenso gut verschlechtern,
+    §14.2) — jetzt liegen die CI-echten Per-Spec-Zeiten als `playwright-report.json`-Artefakte je
+    Shard-Job vor, damit ist die Packung **gemessen**. **Hebel:** Neupackung nach CI-Messwerten,
+    optional **`a33`-Split in zwei Spec-Dateien** (Tests byte-gleich, Anzahl 283 vorher = nachher)
+    bzw. feineres Sharding — **kein Prüfumfang-Abbau (§6.3)**. **Strukturelle Grenze:** a33 ist mit
+    ~342–360 s bereits grösser als das Shard-Drittel; Datei-Granularität allein löst das nicht (der
+    Spec-Split ist der eigentliche Hebel). **Kopplung (§14.2):** ausdrücklich an den noch offenen
+    **Merge-Queue-Entscheid Davids** gebunden (`QS-BASIS` B-12 / `QS-OPT` O-3.2/O-3.3) — ein CI-Umbau,
+    nicht zwei; erst zusammen mit der Merge-Queue-Richtung neu packen.
   - **Constraints:** alles `[OF]`/zeitsperre-konform (Darstellungs-/Lade-/Build-Schicht); **kein**
     DOM-entfernendes Virtualisieren/`hydrateRoot`/Teilparse (Treue-Verlust, verworfen); Snapshot-
     Regenerierung (c) öffnet **keinen** 26×-Slot (nur Format, Union byte-gleich); Worktree-Isolation
@@ -441,7 +467,7 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   `FAHRPLAN-SEO-A11Y-GOVERNANCE.md` einsortiert) · **O-6 Werkzeug-Empirie** (DAVID-GATE §0a,
   als Notiz-Block in `KATALOG-ROADMAP.md` §D verortet). **Nur Plan — kein Bau in diesem Schritt.**
 - **Basis-Ausbau — Fundament-Handlungsplan** *(QS-BASIS, `[OF]`, neu 17.7.2026)*.
-  **§14-Intake 20.7.2026 (David):** (a) **Turso-Wächter-Abdeckung** — alle relevanten Stellen prüfen, gekoppelt an die Tor-Echtheit (Wächter gegen UNABHÄNGIGE Grösse, nicht gegen die Sync-Marke; `cancelled`/`skipped` zählen als rot — Auslöser `turso-sync.yml` timeout-minutes: 20). (b) **CI-Fehlläufe** (#30) — Referenz auf Worktree `lm-ci`, hier NICHT duplizieren; Playbook-Eintrag «CI-Starvation» ist WIDERLEGT (Queue-Wartezeit 0,0–0,3 min über 10 Läufe gemessen), Kostentreiber sind Reruns (~72 % der Wanduhr). (c) **CI/lokal-Tor-Parität** — `check:seriell` fährt 36 Tore, CI 11; `check:tor-paritaet` friert die Lücke ein, das Schliessen ist offen. **Stand 20.7.2026 (PR `docs/bau-fundament`): 16/36 in CI** — `check:merge-schutz` · `check:tor-paritaet` · `check:dispatch-klausel` · `check:besetzung` · `check:entscheide` · `check:bs-entscheide` neu verdrahtet; die drei Rechtsprechungs-Tore standen mit der sachlich FALSCHEN Begründung «braucht rechtsprechung.db (488 MB)» auf der Allowlist, sie lesen in Wahrheit die committeten Projektionen (je ~1 s grün unter `CI=1`). Rest-Lücke 20 Tore, davon 9 mit Ersatz-Arbiter `fedlex-frische.yml` — **dessen Lauf ist rot (#37), solange das gilt, läuft diese Begründung leer.** (d) **Datenhaltungs-Optimierung** *(§14-Intake David 20.7.2026; im ersten Intake-Durchgang verloren gegangen und durch die adversariale Prüfung von PR #315 wiedergefunden — Nachtrag 20.7.)*: **inkrementeller Sync** (nicht bei jedem Lauf den Vollbestand schieben) · **contentless-FTS** (`content=''` statt external content, wo der Rohtext schon im Serving-Store liegt) · **Index-Strategie** (welche Spalten tragen die realen Query-Pfade aus `api/suche`) · **Heiss/Kalt-Gate** (was gehört in die 1-GB-Turso-Replika, was bleibt kalt). Detailquelle `FAHRPLAN-DATENHALTUNG.md`; Bau-Strang W2·6-DATA (E4-Nachbarschaft). Kein eigener FAHRPLAN.
+  **§14-Intake 20.7.2026 (David):** (a) **Turso-Wächter-Abdeckung** — alle relevanten Stellen prüfen, gekoppelt an die Tor-Echtheit (Wächter gegen UNABHÄNGIGE Grösse, nicht gegen die Sync-Marke; `cancelled`/`skipped` zählen als rot — Auslöser `turso-sync.yml` timeout-minutes: 20). (b) **CI-Fehlläufe** (#30) — Referenz auf Worktree `lm-ci`, hier NICHT duplizieren; Playbook-Eintrag «CI-Starvation» ist WIDERLEGT (Queue-Wartezeit 0,0–0,3 min über 10 Läufe gemessen), Kostentreiber sind Reruns (~72 % der Wanduhr). (c) **CI/lokal-Tor-Parität** — `check:seriell` fährt 36 Tore, CI 11; `check:tor-paritaet` friert die Lücke ein, das Schliessen ist offen. **Stand 20.7.2026 (PR `docs/bau-fundament`): 16/36 in CI** — `check:merge-schutz` · `check:tor-paritaet` · `check:dispatch-klausel` · `check:besetzung` · `check:entscheide` · `check:bs-entscheide` neu verdrahtet; die drei Rechtsprechungs-Tore standen mit der sachlich FALSCHEN Begründung «braucht rechtsprechung.db (488 MB)» auf der Allowlist, sie lesen in Wahrheit die committeten Projektionen (je ~1 s grün unter `CI=1`). Rest-Lücke 20 Tore, davon 9 mit Ersatz-Arbiter `fedlex-frische.yml` — **dessen Lauf ist rot (#37), solange das gilt, läuft diese Begründung leer.** (d) **Datenhaltungs-Optimierung** *(§14-Intake David 20.7.2026; im ersten Intake-Durchgang verloren gegangen und durch die adversariale Prüfung von PR #315 wiedergefunden — Nachtrag 20.7.)*: **inkrementeller Sync** (nicht bei jedem Lauf den Vollbestand schieben) · **contentless-FTS** (`content=''` statt external content, wo der Rohtext schon im Serving-Store liegt) · **Index-Strategie** (welche Spalten tragen die realen Query-Pfade aus `api/suche`) · **Heiss/Kalt-Gate** (was gehört in die 1-GB-Turso-Replika, was bleibt kalt) · **Korpus aus git ausgliedern (R6)** — gemessen 20./21.7.2026 als **moderate Kosten** (git status 25–80 ms, CI shallow; real: ~400 MB je Worktree-Checkout, 273 MB Pack, minimaler Churn) ⇒ **kein Dringlichkeits-Fall**, Vorstufe/Teil dieses serverlosen Korpus-Serving-Vorhabens, nicht als isolierter git-Eingriff (Detail `FAHRPLAN-DATENHALTUNG.md` §12.4). Detailquelle `FAHRPLAN-DATENHALTUNG.md`; Bau-Strang W2·6-DATA (E4-Nachbarschaft). Kein eigener FAHRPLAN.
   <!-- @meta id: QS-BASIS · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-BASIS-AUSBAU.md -->
   Kritik-gefilterte Ablage des Ultracode-Fundament-Research (Auftrag David 17.7.2026: «was ich an der
   Basis von LexMetrik verbessern kann»; 5 Miner + 3 Fable-Strategen + Fable-Judge, dedupliziert gegen den

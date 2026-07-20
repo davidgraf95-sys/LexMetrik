@@ -318,6 +318,7 @@
 | **ESLint `consistent-type-imports` als Autofix-Sweep** | **DEFERIERT (G2)** | Repo-weiter Churn kollidiert mit PR-Kette #164/#165; danach warn-only einführen (H-8-Nachtrag). |
 | **konventionen.ts-Move nach tests/helfer** | **VERWORFEN (Kommentar-Variante)** | Move = 3 Import-Pfad-Edits ohne Zusatznutzen; Kopfkommentar + knip-Whitelist erreichen dasselbe (H-4/B8). |
 | **Löschen der Einmal-Skripte** | **VERWORFEN (Archiv-Move)** | Einmal-Generatoren = Reproduzierbarkeits-Beweise für Datenstände (§11-nah); Daueranweisung verlangt «verhaltensneutral belegt» → `scripts/archiv/` + Beleg-Zeile (H-5). |
+| **`scripts/`-«Friedhof» (R5, Vereinfachungs-Idee)** | **GEPRÜFT + VERNEINT (Messung 20./21.7.2026)** | Referenzgraph über **220 `scripts/`-Dateien**: **199 erreichbar**, **18 bewusste One-Shots/Archiv** (knip-ignoriert), nur **3 unerreichbar** — `scripts/normtext/regeste-kurz-refresh.ts`, `scripts/normtext/sim-gemeinde-systematik.ts` und die Fixture `scripts/rechtsprechung/fixtures/zg-k5-2023-13.html`. **Kein Friedhof** ⇒ kein Aufräum-Sweep nötig. Falls die 3 später bereinigt werden: die Fixture **vor Löschung mit der Rechtsprechungs-Arbeit abklären** (kann Test-/Reproduktions-Seam sein). Reine Verortung, kein Bau. |
 
 ---
 
