@@ -2,7 +2,10 @@
 
 > **ROADMAP-Schritt:** `QS-UI` (Querschnitt-Band — **kontinuierlich, kein Reihenfolge-Slot**).
 > **Anlass:** Ideen-Intake 20.7.2026, Idee 8a («UI app-weit optimieren»); die Gesetzes-Fläche
-> folgt als 8b in `W2·5f-GESETZ-UI` und hängt per `dep` an diesem Strang.
+> folgt als 8b in `W2·5h-GESETZ-UI`. Dieser Schritt hängt **nicht per `dep`** an diesem Strang —
+> `QS-UI` ist kontinuierlich und erreicht nie «fertig», ein `dep` wäre nie erfüllbar. Massgeblich
+> ist `seq-hart` auf die zwei abschliessbaren Teil-Schritte (a) Fundament- und (b) Hierarchie-Pass
+> (Begründung: `FAHRPLAN-GESETZES-UX.md` §13.1).
 > **Charakter:** Dieses Dokument ist die **Umbrella-Detailquelle** für einen mess-getriebenen
 > Dauer-Strang. Es ist **kein Redesign-Plan** und **kein zweiter Einstieg** (§14.1) — es
 > koordiniert und härtet, es baut nicht neben den bestehenden UI-Schritten her.
@@ -46,7 +49,7 @@ Jeder Teil-Schritt läuft nach demselben Vierschritt, damit Befunde vergleichbar
    ein sauberes Gate). Befunde, die eine bestehende Einheit betreffen, laufen **dort ein**.
 
 **Abgrenzungs-Precheck (Pflicht vor jedem Schnitt):** berührt der Befund
-`W2·10-UI-NAV`, `W2·11-DESIGN`, `W3·14` oder `W2·5f-GESETZ-UI`? Dann gehört er **dorthin**,
+`W2·10-UI-NAV`, `W2·11-DESIGN`, `W3·14` oder `W2·5h-GESETZ-UI`? Dann gehört er **dorthin**,
 nicht hierher (§14.3). Dieser Strang liefert dann nur Messung und Priorisierung.
 
 ## §2 · Informationshierarchie-Pass («Verdikt zuerst»)
@@ -91,7 +94,7 @@ Jede Verschärfung kommt **nach** den Fixes, die sie grün machen — nie ein ro
 | **(d) Flow-Audits** | Kanzlei-Alltags-Flows domänenweise gegen ihr Reglement | Befunde laufen in die Domänen-Schritte ein |
 | **(e) Gate-Verschärfung** | Farbwelt enger, axe flächendeckend (§4) | eigener Commit, verhaltensneutral |
 
-**Nachgelagert:** `W2·5f-GESETZ-UI` (Idee 8b) setzt auf (a)+(b) auf — erst stehen die
+**Nachgelagert:** `W2·5h-GESETZ-UI` (Idee 8b) setzt auf (a)+(b) auf — erst stehen die
 gemeinsamen Muster und die Hierarchie, dann wird die Gesetzes-Fläche darauf gezogen.
 **Nicht dupliziert:** `W2·10-UI-NAV` (Navigation), `W2·11-DESIGN` (Farbwärme),
 `W3·14` (Split/Responsive), `FAHRPLAN-GESETZES-UX.md` + `FAHRPLAN-NORMTEXT-DARSTELLUNG.md`

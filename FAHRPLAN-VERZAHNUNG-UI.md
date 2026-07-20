@@ -348,3 +348,46 @@ Kommentar-Konvention `// Erweiterungspunkt V2/V3: …` (Weiche-B-Stil), keine to
 - `FAHRPLAN-VERZAHNUNG-UI.md` = diese Datei, im Repo-Wurzelverzeichnis ablegen.
 
 **Absolute Pfade (Bau-Referenz):** `/Users/david/Developer/LexMetrik/src/components/kontext/KontextPanel.tsx` · `/Users/david/Developer/LexMetrik/src/lib/kontext.ts` · `/Users/david/Developer/LexMetrik/src/pages/gesetz-leser/parts.tsx` · `/Users/david/Developer/LexMetrik/src/pages/EntscheidLeser.tsx` · `/Users/david/Developer/LexMetrik/src/components/NormPopover.tsx` · `/Users/david/Developer/LexMetrik/src/components/suche/SuchResultate.tsx` · `/Users/david/Developer/LexMetrik/src/lib/rechtsprechung/{typen.ts,norm-index.ts}` · `/Users/david/Developer/LexMetrik/src/index.css` (Token) · `/Users/david/Developer/LexMetrik/scripts/plan/inventar.ts` · `/Users/david/Developer/LexMetrik/ROADMAP.md` · NEU: `/Users/david/Developer/LexMetrik/src/lib/verzahnung/` + `/Users/david/Developer/LexMetrik/src/components/verzahnung/` + `/Users/david/Developer/LexMetrik/FAHRPLAN-VERZAHNUNG-UI.md`.
+
+---
+
+## 8. Zitationsnetz — Rückwärts-Zitate + Leitentscheid-Score (`W2·6-ZNETZ`, Ideen-Intake 20.7.2026)
+
+> **ROADMAP-Schritt:** `W2·6-ZNETZ`. Detailquelle zum ROADMAP-Schritt (§14.1); die **UI** dieser
+> Kanten läuft in `W2·7-VZUI` V2 ein und wird hier **nicht doppelt geplant** (§14.3).
+
+**Ziel.** «Welche Entscheide zitieren diesen?» (Rückwärts-Kanten) + Leitentscheid-Score nach
+Zitierhäufigkeit.
+
+### 8.1 · Warum das kein Neubau ist (Trägerbestand, verifiziert 20.7.2026)
+
+| Baustein | Fundort | Rolle |
+|---|---|---|
+| Kanten-Rohdaten je Snapshot | `zitierteEntscheide` (BGE-Zitate **und** Geschäftsnummern) | Eingang |
+| Vorwärts-Auflösung (Laufzeit) | `src/lib/verzahnung/entscheid-kanten.ts` gegen `register.json` | Vorbild Semantik |
+| **1:1-Vorbild Build-Index** | `scripts/normtext/entscheide-schreiben.ts` (schreibt `register.json` + `norm-index.json` + Leitfall-Shards) | Vorbild Mechanik |
+| Typen | `src/lib/rechtsprechung/norm-index.ts` | Ausgang-Form |
+
+Der neue Generator ist der **Spiegel des norm-index-Generators**: gleiche Eingangsdaten, gleiche
+Shard-Mechanik, invertierte Kantenrichtung. Stichprobe 200 BGE = 2566 Kanten.
+
+### 8.2 · Zweistufige Feasibility (ehrlich getrennt, §8)
+
+- 🟢 **Kurierter Korpus (5093 Snapshots auf Platte) — jetzt baubar.** Generator + Shards + UI-Chip.
+- 🟠 **Long-Tail über die 195k Massen-Entscheide — NICHT jetzt.** Er hängt am nicht ausgelieferten
+  ~5,7-GB-Artefakt `masse.db` (dort liegt `zitat_kanten` mit `ix_zitat_nach` bereits vor) und fällt
+  damit in **`W2·6-DATA` E3-Serving/E4** — **kein Parallel-Schritt** (§14.3).
+
+### 8.3 · Score-Leitplanke (bindend)
+
+Der Leitentscheid-Score ist **reine Zählhäufigkeit mit ausgewiesener Grundgesamtheit** — kein
+LLM-Ranking, keine Qualitäts- oder Autoritätsaussage (§2/§8). Er wird nie ohne die Angabe
+ausgegeben, über welchen Korpus gezählt wurde: ein Score über den kuratierten Korpus ist etwas
+anderes als einer über 195k Entscheide, und diese Differenz muss sichtbar bleiben.
+
+### 8.4 · DoD
+
+Generator **deterministisch** (2 Läufe byte-gleich) · `check:gegenpruefung` bestanden
+(Daten-Derivation = Risikopfad) · golden byte-gleich · Tore grün.
+Trailer `Roadmap: W2·6-ZNETZ` + `Gegenpruefung: <Verdikt>`.
+Feasibility-Beleg: `bibliothek/recherche/zitationsnetz-feasibility.md`.

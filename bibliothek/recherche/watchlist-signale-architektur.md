@@ -9,7 +9,10 @@ Optionen-Vergleich gegen den Repo-Stand vom 20.7.2026, kein adversarialer Zweitd
 
 | Beleg | Fundort | Rolle |
 |---|---|---|
-| Currency-Stand je Erlass | `public/normtext/currency.json` | Datenquelle für Signale |
+| Currency-Prüfdatum je Erlass | `public/normtext/currency.json` (`geprueftAm`, opt. `naechsteFassungAb`) | **nur** Vorwärts-Signal — s. §3-Warnung |
+| Fassungsstand je Artikel | `public/normtext/**/<ERLASS>.json` → `stand` · `fassungsToken` · `sha` | **das** Rückblick-Signal (§7 Build-Regel 4) |
+| Entscheid-Register | `public/rechtsprechung/register.json` (6341 Einträge; `gericht`/`datum`/`normKeys`/`fassungsToken`) | Datenquelle Gerichts-Signal |
+| Entscheid-Import-Strecke | `scripts/rechtsprechung/`, `scripts/normtext-entscheide.ts` | bestimmt die Signal-Latenz |
 | Wiedervorlage-Generator (Bau-Muster) | `scripts/fedlex-wiedervorlage-generieren.ts` | Vorbild B1 |
 | Currency-/Drift-Tore | `check:fedlex-versionen`, `check:rss-oc` | Erkennung |
 | Verfallsregister | `bibliothek/register/parameter-verfall.md` | datierte Parameter |
@@ -37,20 +40,53 @@ Optionen-Vergleich gegen den Repo-Stand vom 20.7.2026, kein adversarialer Zweitd
 
 ## §3 · Regel deterministisch
 
+> **⚠ Feld-Warnung (empirisch nachgelesen 20.7.2026, korrigiert den Erst-Entwurf):**
+> `currency.json` führt je Erlass **nur** `{geprueftAm, naechsteFassungAb?}` — ein `stand`-Feld
+> gibt es dort **nicht**. `geprueftAm` ist das Datum **unseres Currency-Laufs**, kein
+> Norm-Änderungsdatum: es wandert bei jedem Re-Check auch dann, wenn sich nichts geändert hat
+> (→ Falschmeldungen), und markiert eine echte Änderung nicht als solche. Der Rückblick-Vergleich
+> läuft darum gegen `stand`/`fassungsToken`/`sha` aus den **Normtext-Snapshots**
+> (`public/normtext/**/<ERLASS>.json`, §7 Build-Regel 4 — verifiziert an `bund/ADOV` Art. 1:
+> `stand: 2023-01-23`, `fassungsToken: 20230123`). Aus `currency.json` trägt allein
+> `naechsteFassungAb` — und zwar nur den **Vorwärts**-Fall («ab wann kommt eine neue Fassung»).
+
 **B1 — Feed (Build-Zeit):**
 ```
-Eingang:  currency.json (Fassungsstände) + parameter-verfall.md (datierte Parameter)
-Regel:    je Erlass E: wenn stand(E, heute) != stand(E, letzter Build) → Eintrag
+Eingang:  Normtext-Snapshots (fassungsToken/sha je Artikel) + currency.json (naechsteFassungAb)
+          + parameter-verfall.md (datierte Parameter)
+Regel:    je Erlass E: wenn fassungsToken(E, heute) != fassungsToken(E, letzter Build) → Eintrag
           Eintrag = { Erlass, alter Stand, neuer Stand, amtliche Fundstelle, Datum }
 Ausgang:  Feed-Datei, stabil sortiert (Determinismus §2 → zwei Läufe byte-gleich)
 ```
 
 **B2 — Watchlist (Client):**
 ```
-Eingang:  localStorage: [{ id, gesehenerStand, gemerktAm }]   — NUR Kennungen
-Regel:    beim Besuch je Eintrag: currency.json[id].stand != gesehenerStand → Flag
+Eingang:  localStorage: [{ id, gesehenerToken, gemerktAm }]   — NUR Kennungen
+Regel:    beim Besuch je Eintrag: fassungsToken(id) != gesehenerToken → Flag
+          (NICHT geprueftAm — das wandert ohne Änderung, s. Feld-Warnung)
 Ausgang:  «geändert seit deinem letzten Besuch» + Sprung zur amtlichen Fundstelle
 ```
+
+**B3 — Gerichts-Signal (Build-Zeit; eigenes Verdikt 🟡, NICHT unter dem Fedlex-🟢 mitgeführt):**
+
+Der Erst-Entwurf führte «Gericht X entscheidet neu» unter denselben Belegen wie die Norm-Seite.
+Das war falsch: `check:fedlex-versionen`, `check:rss-oc`, `fedlex-wiedervorlage-generieren.ts` und
+`currency.json` sind **ausnahmslos Norm-seitig** — auch `check:rss-oc` prüft den
+Amtliche-Sammlung-RSS, nicht Gerichte. Der tragende Bestand ist ein anderer:
+
+```
+Eingang:  public/rechtsprechung/register.json (6341 Einträge; gericht, gerichtstyp, kanton,
+          datum, normKeys, fassungsToken)
+Regel:    je Watchlist-Eintrag (Gericht G bzw. Norm N): Einträge mit datum > gesehenesDatum
+          und gericht == G bzw. normKeys enthält N → Liste, stabil sortiert
+Ausgang:  «neue Entscheide seit deinem letzten Besuch» + Sprung in den Entscheid-Leser
+```
+
+**Ehrliche Einschränkung (§8, muss in die UI):** es gibt **keinen Live-Gerichts-Feed**. Das Signal
+feuert erst, wenn WIR neu importieren (`scripts/rechtsprechung/`, `scripts/normtext-entscheide.ts`).
+Die Latenz ist die **Import-Kadenz**, nicht die Publikationsgeschwindigkeit des Gerichts. Ohne einen
+sichtbaren Bestands-Stand («Entscheid-Bestand Stand: …») suggeriert die Funktion eine Aktualität,
+die der Korpus nicht trägt — dann ist sie nicht zu bauen.
 
 ## §4 · Harte Auflagen (Berufsgeheimnis, §8)
 

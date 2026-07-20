@@ -118,7 +118,7 @@ darum ist die Verzahnung Burggraben UND das Kriterium, nach dem neue Schritte ei
 wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offen)
 §4-lizenz: Live-Rechtsprechung — CC-BY-SA vs. Art. 5 URG, CORS/Rate-Limits unbestätigt
 26x-slot: BELEGT durch E3 (W2·6-DATA, seit 3.7.2026 — BGer-Massen-Import); W3·12 wartet dahinter (Leitprinzip 4)
-zeit-historik-poc: Norm-Zeitmaschine/Fassungs-Diff (W2·5e-ZEIT) — historische Fedlex-Konsolidierungs-Extraktion fehlt (auf Platte nur die geltende Fassung; SPARQL dateApplicability vorhanden, Durchlauf gross); POC + Bau-GO je Kandidat durch David ausstehend
+zeit-historik-poc: Norm-Zeitmaschine/Fassungs-Diff (W2·5g-ZEIT) — historische Fedlex-Konsolidierungs-Extraktion fehlt (auf Platte nur die geltende Fassung; SPARQL dateApplicability vorhanden, Durchlauf gross); POC + Bau-GO je Kandidat durch David ausstehend. UMFASST AUCH die beiden Vorbedingungen, die KEINE getrackten ROADMAP-Schritte sind und darum nicht als `dep` abbildbar wären: AKN-XML-Phase 1 (Quell-Architektur-Entscheid Council 30.6., schaltet M16 frei) und G-HIST als Daten-Unterbau (beide dokumentarisch im Strang-Detailblock oben + FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake, Bau-GO je Kandidat ebenfalls offen)
 richter-analytik-gate: Richter-/Spruchkörper-Analytik (W3·15-RICHTER) — nur deskriptiv, kein Erfolgs-Ranking und keine Prognose; bewusste Freigabe Davids erforderlich (heikel: Standesrecht, Persönlichkeitsschutz, richterliche Unabhängigkeit)
 -->
 
@@ -310,7 +310,7 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   = §A (jetzt), Bestellung/Freigabe/Kauf = §B. **§A wird jetzt autonom gebaut** (je Einheit Worktree+PR+Auto-Merge);
   Trailer `Roadmap: QS-BASIS`.
 - [ ] **`QS-UI` — Oberflächen-Qualität app-weit** *(Ideen-Intake 20.7.2026 · reines UI/Design, §13 · kontinuierlich)*
-  <!-- @meta id: QS-UI · status: ready · of: ja · blocker: null · dep: [] · kollision: [DESIGN-REGLEMENT.md, src/index.css, tailwind.config.js, scripts/check-farbwelt.ts, e2e] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-QUALITAET.md -->
+  <!-- @meta id: QS-UI · status: ready · of: ja · blocker: null · dep: [] · kollision: [DESIGN-REGLEMENT.md, src/index.css, tailwind.config.js, scripts/check-farbwelt.ts, e2e/a11y.e2e.ts] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-QUALITAET.md -->
   **Kein Einzel-Redesign und kein Reihenfolge-Slot**, sondern ein **kontinuierlicher, mess-getriebener
   Querschnitt-Strang** auf dem vorhandenen Fundament: Dach-`DESIGN-REGLEMENT.md` + 4 Domänen-Reglemente,
   Tor `scripts/check-farbwelt.ts` (OKLCH/WCAG/APCA) und `@axe-core/playwright`. **Nordstern:
@@ -324,7 +324,7 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   verbindlich):** `QS-UI` **koordiniert und härtet**, es **dupliziert nicht** `W2·10-UI-NAV`
   (Navigations-Plumbing), `W2·11-DESIGN` (Farbwärme) oder `W3·14` (Split/Responsive) — diese bleiben die
   konkreten Sub-Efforts, die dieser Strang treibt und einfordert. Nachgelagert hängt
-  **`W2·5f-GESETZ-UI`** (Gesetzes-Fläche) an diesem Fundament. Detailquelle: **`FAHRPLAN-UI-QUALITAET.md`**.
+  **`W2·5h-GESETZ-UI`** (Gesetzes-Fläche) an diesem Fundament. Detailquelle: **`FAHRPLAN-UI-QUALITAET.md`**.
   **DoD je Teil-Schritt:** §13-Tore grün (`check:farbwelt`, axe) · golden byte-gleich, wo die Änderung
   verhaltensrelevant ist. Trailer `Roadmap: QS-UI`.
 
@@ -402,12 +402,16 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 > noch-nicht-in-Kraft). Der **HTML→AKN-XML-Wechsel ist Phase 1** — inkrementell über den Drift-Zyklus, **nie
 > Big-Bang** (B «XML direkt rendern» verworfen); empirisch freigegeben (eId 99,7 % stabil über Konsolidierungen,
 > DE/FR/IT ~95–99 % ausgerichtet) → schaltet `#art`-genaue Chips, ELI-Zitations-Graph, M15 (DE/FR/IT) und
-> M16 (Point-in-Time) frei.
+> M16 (Point-in-Time) frei. **M16 ist seit dem Ideen-Intake 20.7.2026 als eigene Bau-Einheit
+> `W2·5g-ZEIT` getrackt** (Norm-Zeitmaschine + Fassungs-Diff, `blocked` auf `zeit-historik-poc`) —
+> diese Stelle hier bleibt die *Architektur*-Begründung, die *Bau*-Planung steht dort und wird hier
+> nicht doppelt geführt (§14.3).
 >
 > **Intake «Informations-Nutzung der Gesetze» (David 17.7.2026) → hierher:** Recherche-Verdikt
 > = Normtext-KÖRPER nahezu erschöpfend genutzt; die handlungsreifen Lücken sind **G-REF** (externe
 > amtliche ELI-Verweise, verworfen via `entferneTags` — konkretisiert N2/Phase-1-ELI-Graph) und
-> **G-HIST** (artikel-genaue Historie liegt nur als Fussnoten-Prosa — Daten-Unterbau von M16). Beide
+> **G-HIST** (artikel-genaue Historie liegt nur als Fussnoten-Prosa — Daten-Unterbau von M16, und
+> damit ausdrücklich Vorbedingung des Blockers `zeit-historik-poc` in `W2·5g-ZEIT`). Beide
 > = **Extraktions-Risikopfad** (`QS-GP`, golden byte-gleich; **Bau-GO je Kandidat ausstehend, David**),
 > verortet in `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake`. Der **Suchindex** (G-SUCH, Fussnoten/Tabellen
 > nicht indexiert, kein Risikopfad) liegt getrennt in `FAHRPLAN-UI-NAVIGATION.md §7b`, **G-PRERENDER**
@@ -482,7 +486,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Rechtsmittel-Modifikatoren). Festsetzung/Dispositiv → Welle 2. **26×-Slot damit frei** →
   Voraussetzung für Welle 3 · Schritt 12 erfüllt.
 - [ ] **5-PRAXIS · Frist × Kosten verzahnen** *(Ideen-Intake 20.7.2026 · UI-Orchestrierung, `[OF]`)*:
-  <!-- @meta id: W1·5-PRAXIS · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/rechnerPermalinks.ts, src/lib/permalink.ts, src/lib/icsExport.ts, src/pages, src/components/forms] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-PROZESSKOSTEN-COCKPIT.md -->
+  <!-- @meta id: W1·5-PRAXIS · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/rechnerPermalinks.ts, src/lib/permalink.ts, src/lib/icsExport.ts, src/pages/RechnerProzesskosten.tsx, src/pages/RechnerStreitwert.tsx, src/pages/RechnerZpo.tsx, src/pages/RechnerUebersicht.tsx, src/components/forms/ProzesskostenForm.tsx, src/components/forms/StreitwertForm.tsx, src/components/forms/ZpoFristenForm.tsx, src/components/forms/VorlagenSprung.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-PROZESSKOSTEN-COCKPIT.md -->
   Die heute isoliert nebeneinander stehenden Rechner zu **einem Praxis-Workflow verketten**:
   Streitwert-Ergebnis → Gerichtskosten + Parteientschädigung; Rechtsmittelfrist ab Entscheiddatum ×
   Kanton × Gerichtsferien → in denselben Kostenfluss und in den `.ics`-Export. **Baut vollständig auf
@@ -891,40 +895,6 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   David-Gate Platzierung) · EID-3 Folge-Härtungen (Breadcrumb-eIds → teilbare Sektions-Deep-Links,
   Linien-Tiefe aus eId-Pfadlänge; optional, David-Gate wegen A27/§11.7 SektionKontextKopf).
   Bau-Go der Einheiten ausstehend (§12.5, David-Gates ans Ende). Trailer `Roadmap: W2·5d`.
-- [ ] **5e-ZEIT · Norm-Zeitmaschine + Fassungs-Diff** *(Ideen-Intake 20.7.2026 · Extraktion, `QS-GP`)*:
-  <!-- @meta id: W2·5e-ZEIT · status: blocked · of: ja · blocker: zeit-historik-poc · dep: [] · kollision: [scripts/normtext, src/lib/normtext, public/normtext] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZESDARSTELLUNG-V2.md -->
-  «Art. X, wie er am Tag Y galt» (verknüpft mit dem Entscheiddatum) + **visueller Diff zweier
-  Konsolidierungen**. Konsolidiert die heute verstreute Planung in **eine** getrackte Einheit: **M16**
-  «Point-in-Time» (freigeschaltet nach AKN-XML-Phase 1) + **G-HIST** als Daten-Unterbau.
-  **Feasibility ehrlich getrennt — die zwei Hälften sind sehr ungleich (§8):**
-  🟢 **Metadaten-Timeline** («gilt seit …» / «was änderte sich wann») ist aus dem Bestand baubar und
-  **läuft bereits** als G-HIST-UI (`public/normtext/historie/*.json` mit `giltSeit` + `ereignisse[]`
-  aus Datum/Absatz/AS-ELI) — **hier nicht duplizieren**.
-  🟠 **Der eigentliche Wunsch — echter Alt-Volltext plus Alt-vs-Neu-Wortdiff — BRAUCHT ZUSATZDATEN und
-  ist GROSS:** auf Platte liegt je Norm **nur die geltende Fassung** (ein `stand`/`fassungsToken`/
-  `bloecke` je Artikel); die Historie liefert Änderungs-**Metadaten, nicht den historischen Text**. Die
-  Fähigkeit ist vorhanden (Fedlex `jolux:Consolidation`/`dateApplicability` via SPARQL — `fedlex-versionen-pruefen.ts`
-  fragt das bereits ab), aber es braucht einen **neuen historischen Extraktions-Durchlauf** (N Konsolidierungen
-  × 227 Erlasse) samt neuem Speicher- und §7-Provenienz-Modell. Der Diff selbst ist danach
-  trivial-deterministisch (String-Diff, §2) — **der Aufwand steckt vollständig in der Daten-Beschaffung.**
-  **Etappe Z0 (blocker-auflösend, vor jedem Bau):** POC historische Konsolidierungs-Extraktion +
-  Speicher-/Provenienz-Entwurf + **Bau-GO je Kandidat durch David** (analog zum bestehenden
-  G-HIST-Intake-Vorbehalt). POC-Rahmen und Kostenschätzung:
-  `bibliothek/recherche/norm-zeitmaschine-poc.md`. Timeline-Detail `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake`.
-  **DoD:** POC-Verdikt + David-GO **vor** Bau · `check:normtext`/`check:normtext-netz` ·
-  `check:gegenpruefung` · §7 a–d je Fassung · golden byte-gleich. Trailer `Roadmap: W2·5e-ZEIT`.
-- [ ] **5f-GESETZ-UI · Gesetzes-Webseite: UX-Pass** *(Ideen-Intake 20.7.2026 · reine UI/Darstellung)*:
-  <!-- @meta id: W2·5f-GESETZ-UI · status: ready · of: ja · blocker: null · dep: [QS-UI, W2·5d] · kollision: [src/pages/gesetz-leser, src/pages/GesetzLeser.tsx, src/components/normtext, src/components/suche] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZES-UX.md -->
-  **Folgeschritt aus `QS-UI`** (Davids Sequenz: erst app-weit, dann die Gesetzes-Fläche): die Rubrik
-  `/gesetze` und der Gesetz-Leser maximal tauglich für die tägliche Norm-Arbeit — Normtext-Darstellung,
-  Gliederung/TOC, Split-View im Leser, Suche im Gesetz, Fussnoten und Marginalien. **Baut auf** `W2·5d`
-  (Gesetzes-UX, G0/G1/G2a gebaut) und `W3·14` (Split-View). **Feasibility 🟢 aus-Bestand.**
-  **Detailquellen sind die bestehenden Gesetzes-Fahrpläne — hier bewusst NICHT dupliziert (§14.3):**
-  `FAHRPLAN-GESETZES-UX.md` (G-Etappen) und `FAHRPLAN-NORMTEXT-DARSTELLUNG.md`; diese Einheit bündelt
-  allein den 8b-UX-Pass darauf. Sequenz-Begründung: erst müssen die gemeinsamen Muster und die
-  Informationshierarchie aus `QS-UI` stehen, sonst wird die Gesetzes-Fläche zweimal angefasst.
-  **DoD:** `check:perf-budget` · `check:linien-kanon` · `e2e/leser-lesemass` · axe · **golden byte-gleich
-  (Normtext-Treue §15 — Tempo gewinnt nie gegen Treue)**. Trailer `Roadmap: W2·5f-GESETZ-UI`.
 - [ ] **5e · UI-Nutzwert & Navigation (Ultracode-Synthese 11.7.)** *(`[OF]`, reine UI/Navigation)*:
   <!-- @meta id: W2·10-UI-NAV · status: ready · of: ja · blocker: null · dep: [W2·5d] · kollision: [src/components/suche, src/lib/suche, src/lib/universalSuche.ts, src/components/layout, src/components/rechtsprechung, src/pages/Rechtsprechung.tsx, src/pages/gesetz-leser, src/pages/GesetzLeser.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-NAVIGATION.md -->
   Priorisierter UI-Verbesserungs-Plan aus 60 empirischen Befunden + 3 Kritik-Linsen
@@ -980,6 +950,55 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   (Befund-Vintage teils vor #201). Verworfen mit Grund (`--paper-warm`, Dark-Brass-Tausch,
   Elevation-Neubau, Sepia-Modus u. a.). Detail: **[`FAHRPLAN-DESIGN-WAERME.md`](FAHRPLAN-DESIGN-WAERME.md)**.
   Trailer `Roadmap: W2·11-DESIGN`.
+- [ ] **5g-ZEIT · Norm-Zeitmaschine + Fassungs-Diff** *(Ideen-Intake 20.7.2026 · Extraktion, `QS-GP`)*:
+  <!-- @meta id: W2·5g-ZEIT · status: blocked · of: ja · blocker: zeit-historik-poc · dep: [] · kollision: [scripts/normtext, src/lib/normtext, public/normtext] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZESDARSTELLUNG-V2.md -->
+  «Art. X, wie er am Tag Y galt» (verknüpft mit dem Entscheiddatum) + **visueller Diff zweier
+  Konsolidierungen**. Konsolidiert die heute verstreute Planung in **eine** getrackte Einheit: **M16**
+  «Point-in-Time» (freigeschaltet nach AKN-XML-Phase 1) + **G-HIST** als Daten-Unterbau.
+  **Warum `dep: []` trotz dieser Vorbedingungen korrekt ist (§14.5, keine Schönung):** weder
+  AKN-XML-Phase 1 noch G-HIST sind eigene getrackte ROADMAP-Schritte mit `@meta`-ID — sie leben als
+  Strang-Detailblock/`FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake`. Ein `dep` auf sie ist maschinell
+  nicht formulierbar; die Reihenfolge wird darum **vollständig vom Blocker `zeit-historik-poc`
+  getragen**, dessen Registereintrag beide Vorbedingungen ausdrücklich mitführt. Sobald eine der
+  beiden ein eigener Schritt wird, wandert sie hier in `dep`.
+  **Feasibility ehrlich getrennt — die zwei Hälften sind sehr ungleich (§8):**
+  🟢 **Metadaten-Timeline** («gilt seit …» / «was änderte sich wann») ist aus dem Bestand baubar und
+  **läuft bereits** als G-HIST-UI (`public/normtext/historie/*.json` mit `giltSeit` + `ereignisse[]`
+  aus Datum/Absatz/AS-ELI) — **hier nicht duplizieren**.
+  🟠 **Der eigentliche Wunsch — echter Alt-Volltext plus Alt-vs-Neu-Wortdiff — BRAUCHT ZUSATZDATEN und
+  ist GROSS:** auf Platte liegt je Norm **nur die geltende Fassung** (ein `stand`/`fassungsToken`/
+  `bloecke` je Artikel); die Historie liefert Änderungs-**Metadaten, nicht den historischen Text**. Die
+  Fähigkeit ist vorhanden (Fedlex `jolux:Consolidation`/`dateApplicability` via SPARQL — `fedlex-versionen-pruefen.ts`
+  fragt das bereits ab), aber es braucht einen **neuen historischen Extraktions-Durchlauf** (N Konsolidierungen
+  × 227 Erlasse) samt neuem Speicher- und §7-Provenienz-Modell. Der Diff selbst ist danach
+  trivial-deterministisch (String-Diff, §2) — **der Aufwand steckt vollständig in der Daten-Beschaffung.**
+  **Etappe Z0 (blocker-auflösend, vor jedem Bau):** POC historische Konsolidierungs-Extraktion +
+  Speicher-/Provenienz-Entwurf + **Bau-GO je Kandidat durch David** (analog zum bestehenden
+  G-HIST-Intake-Vorbehalt). POC-Rahmen und Kostenschätzung:
+  `bibliothek/recherche/norm-zeitmaschine-poc.md`. Timeline-Detail `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake`.
+  **DoD:** POC-Verdikt + David-GO **vor** Bau · `check:normtext`/`check:normtext-netz` ·
+  `check:gegenpruefung` · §7 a–d je Fassung · golden byte-gleich. Trailer `Roadmap: W2·5g-ZEIT`.
+- [ ] **5h-GESETZ-UI · Gesetzes-Webseite: UX-Pass** *(Ideen-Intake 20.7.2026 · reine UI/Darstellung)*:
+  <!-- @meta id: W2·5h-GESETZ-UI · status: ready · of: ja · blocker: null · dep: [W2·5d] · kollision: [src/pages/gesetz-leser, src/pages/GesetzLeser.tsx, src/components/normtext, src/components/suche] · seq-hart: [QS-UI(a Fundament-Pass + b Hierarchie-Pass), W2·5b(gesetz-leser/parts.tsx, inhalt.tsx, ArtikelBody.tsx)] · seq-weich: [W2·10-UI-NAV(gesetz-leser, GesetzLeser.tsx, components/suche), W3·14(Split-View-Rahmen)] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZES-UX.md -->
+  **Folgeschritt aus `QS-UI`** (Davids Sequenz: erst app-weit, dann die Gesetzes-Fläche): die Rubrik
+  `/gesetze` und der Gesetz-Leser maximal tauglich für die tägliche Norm-Arbeit — Normtext-Darstellung,
+  Gliederung/TOC, Split-View im Leser, Suche im Gesetz, Fussnoten und Marginalien. **Baut auf** `W2·5d`
+  (Gesetzes-UX, G0/G1/G2a gebaut) und `W3·14` (Split-View). **Feasibility 🟢 aus-Bestand.**
+  **Sequenz maschinenlesbar (§12/§14.3) — bewusst NICHT als `dep`:** `QS-UI` ist ein
+  **kontinuierlicher Querschnitt-Strang ohne Endzustand**; ein `dep` darauf wäre nie erfüllbar und
+  machte diesen Schritt dauerhaft nicht startbar. Massgeblich ist darum `seq-hart` auf die konkreten
+  QS-UI-**Teil**-Schritte (a) Fundament-Pass und (b) Informationshierarchie-Pass — erst wenn diese
+  beiden stehen, wird die Gesetzes-Fläche angefasst. `dep` bleibt allein `W2·5d` (echte
+  Bau-Voraussetzung). **Datei-Überschneidungen ausgewiesen statt nur in Prosa behauptet:**
+  `W2·5b` (Reader-Dateien, `wip`) hart sequenziert; `W2·10-UI-NAV` (`gesetz-leser`,
+  `GesetzLeser.tsx`, `components/suche`) und `W3·14` (Split-View-Rahmen) weich — Worktree-Isolation
+  §12 ist hier Pflicht, nicht Kür.
+  **Detailquellen sind die bestehenden Gesetzes-Fahrpläne — hier bewusst NICHT dupliziert (§14.3):**
+  `FAHRPLAN-GESETZES-UX.md` (G-Etappen) und `FAHRPLAN-NORMTEXT-DARSTELLUNG.md`; diese Einheit bündelt
+  allein den 8b-UX-Pass darauf. Sequenz-Begründung: erst müssen die gemeinsamen Muster und die
+  Informationshierarchie aus `QS-UI` stehen, sonst wird die Gesetzes-Fläche zweimal angefasst.
+  **DoD:** `check:perf-budget` · `check:linien-kanon` · `e2e/leser-lesemass` · axe · **golden byte-gleich
+  (Normtext-Treue §15 — Tempo gewinnt nie gegen Treue)**. Trailer `Roadmap: W2·5h-GESETZ-UI`.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
@@ -1166,22 +1185,47 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Verworfen u. a. Client-Kanton-Suchindex (K10/§15-Arbiter). Detail: **`FAHRPLAN-KANTONE.md`**.
   Trailer `Roadmap: W2·13-KANTONE`.
 - [ ] **14-SIGNAL · Watchlist & Änderungs-Signale** *(Ideen-Intake 20.7.2026 · Infra/UI, kein Rechtsinhalt)*:
-  <!-- @meta id: W2·14-SIGNAL · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-wiedervorlage-generieren.ts, public/normtext/currency.json, src/lib/zuletztVerwendet.ts, src/pages] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
+  <!-- @meta id: W2·14-SIGNAL · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-wiedervorlage-generieren.ts, public/normtext/currency.json, public/rechtsprechung/register.json, src/lib/zuletztVerwendet.ts, src/pages/Startseite.tsx, src/pages/Einstellungen.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
   «Sag mir, wenn sich Norm Y ändert / Gericht X neu entscheidet.» **Baut auf** vorhandener Currency-/
   Drift-Infra: `check:fedlex-versionen`, `check:rss-oc`, `scripts/fedlex-wiedervorlage-generieren.ts`,
   `register/parameter-verfall.md`, `public/normtext/currency.json`, Muster `src/lib/zuletztVerwendet.ts`.
   **Feasibility bewusst gespalten (§8) — die zwei baubaren Stufen sind NICHT das, wonach es klingt:**
   **B1 🟢 statischer Änderungs-Feed** (RSS/Atom/JSON, zur Build-Zeit aus `currency.json` + Verfallsregister
   erzeugt, analog `gen:fedlex-wiedervorlage`) · **B2 🟢 Client-Watchlist** (localStorage-Liste gemerkter
-  Normen/Gerichte, beim Besuch gegen das statische `currency.json` geprüft → «seit deinem letzten Besuch
+  Normen/Gerichte, beim Besuch gegen die statischen Build-Artefakte geprüft → «seit deinem letzten Besuch
   geändert»-Flag; exakt das `zuletztVerwendet`-Muster). Beide sind **zustandslos-konform** und aus dem
-  Bestand baubar. **🟠 Echtes Push-/E-Mail-Abo ist ein Architektur-BRUCH** — es verlangt Nutzeridentität,
+  Bestand baubar.
+  **Welches Feld das Rückblick-Signal WIRKLICH trägt (empirisch nachgelesen, §7 — Korrektur zum
+  Erst-Intake):** `public/normtext/currency.json` führt je Erlass nur `{geprueftAm, naechsteFassungAb?}`.
+  `geprueftAm` ist das Datum **unseres Currency-Laufs**, kein Norm-Änderungsdatum — es wandert bei jedem
+  Re-Check auch ohne jede Änderung (→ Falschmeldungen) und markiert eine echte Änderung nicht als solche.
+  **Tragfähig ist es nur für den VORWÄRTS-Fall** (`naechsteFassungAb`, «ab wann kommt eine neue Fassung»).
+  Das **RÜCKBLICK-Signal kommt aus den Normtext-Snapshots**: `public/normtext/**/<ERLASS>.json` führt je
+  Artikel `stand` (In-Kraft-Datum) + `fassungsToken` + `sha` (§7 Build-Regel 4) — nachgeprüft an
+  `bund/ADOV` Art. 1 (`stand: 2023-01-23`, `fassungsToken: 20230123`). Der Watchlist-Vergleich läuft
+  darum gegen `fassungsToken`/`sha`, nicht gegen `geprueftAm`.
+  **Gerichts-Hälfte — eigenes Verdikt, nicht unter dem Fedlex-🟢 mitgeführt (§8, Korrektur zum
+  Erst-Intake):** die oben genannten Belege (`check:fedlex-versionen`, `check:rss-oc`,
+  `fedlex-wiedervorlage-generieren.ts`, `currency.json`) sind **ausnahmslos Norm-seitig** — auch
+  `check:rss-oc` prüft den Amtliche-Sammlung-RSS, nicht Gerichte. Der Bestand, der «Gericht X entscheidet
+  neu» trägt, ist ein **anderer**: `public/rechtsprechung/register.json` (6341 Einträge, je Eintrag
+  `gericht`/`gerichtstyp`/`kanton`/`datum`/`normKeys`/`fassungsToken`) plus die Import-Strecke
+  `scripts/rechtsprechung/` (BS) und `scripts/normtext-entscheide.ts`. **Verdikt darauf: 🟡 baubar mit
+  ehrlicher Einschränkung** — ein Build-Zeit-Delta über `register.json` (neue Einträge je Gericht/Norm
+  seit Datum X) ist deterministisch und billig; es gibt aber **keinen Live-Gerichts-Feed**: das Signal
+  feuert erst, wenn WIR neu importieren. Die Latenz ist damit die Import-Kadenz, nicht die Publikations-
+  geschwindigkeit des Gerichts — **das wird in der UI offengelegt** («Stand des Entscheid-Bestands: …»),
+  sonst suggeriert die Funktion eine Aktualität, die der Korpus nicht trägt.
+  **🟠 Echtes Push-/E-Mail-Abo ist ein Architektur-BRUCH** — es verlangt Nutzeridentität,
   serverseitigen Subscription-State und einen Sendedienst und verletzt damit «Werkzeuge bleiben zustandslos»
   (CLAUDE.md §5): **kein Bau ohne ausdrücklichen Architektur-Entscheid Davids**, und **nicht** in den
   B1/B2-Bau mischen. Optionen-Vergleich (B1/B2/Push, mit Kosten und Bruchstellen):
   `bibliothek/recherche/watchlist-signale-architektur.md`. Currency-Fläche: `FAHRPLAN-FEDLEX-PORTFOLIO.md`;
   lose an `QS-CURRENCY`. **DoD:** Feed-Generator deterministisch (2 Läufe byte-gleich) · **keine
-  Mandats-/Personendaten in localStorage** (§8, Berufsgeheimnis) · Tore grün. Trailer `Roadmap: W2·14-SIGNAL`.
+  Mandats-/Personendaten in localStorage** (§8, Berufsgeheimnis) · Rückblick-Flag nachweislich gegen
+  `fassungsToken`/`sha` gebildet, **nicht** gegen `geprueftAm` (sonst Falschmeldungen) · Gerichts-Signal
+  mit sichtbarem Bestands-Stand ausgeliefert (§8-Offenlegung der Import-Latenz) · Tore grün.
+  Trailer `Roadmap: W2·14-SIGNAL`.
 
 ### Welle 3 — Tiefe / Breite (opportunistisch)
 
@@ -1253,7 +1297,12 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 - [ ] **15-RICHTER · Spruchkörper-Analytik** *(Ideen-Intake 20.7.2026 · **bewusst freigabe-pflichtig**)* —
   <!-- @meta id: W3·15-RICHTER · status: blocked · of: ja · blocker: richter-analytik-gate · dep: [] · kollision: [] · worktree: ja · 26x: nein -->
   Ziel = **ausschliesslich deskriptive** Spruchkörper-Muster auf Entscheid-Metadaten (z. B. Verteilung
-  von Sachgebieten/Verfahrensausgängen der Form nach je Kammer und Zeitraum). **Harte Leitplanke, die
+  von **Sachgebieten und Formalien** je Kammer und Zeitraum). **Verfahrensausgänge sind bewusst NICHT
+  im Scope** (Korrektur 20.7.2026): eine Ausgangs-Verteilung je Kammer ist genau das Rohmaterial, aus
+  dem die unten verbotene Erfolgs-/Trefferquote entsteht — es fehlt nur ein Aggregationsschritt, und die
+  Kammer→Personen-Zuordnung liefert das Richter-Filter-Fundament separat. Eine Ausweitung auf
+  Verfahrensausgänge wäre eine **eigene, ausdrücklich zu begründende David-Entscheidung** und ist mit
+  der blossen Freigabe dieses Schritts NICHT mitgegeben. **Harte Leitplanke, die
   den Bau bindet:** **kein** Erfolgs-/Trefferquoten-Ranking einzelner Richterinnen und Richter, **keine**
   Prognose («wie entscheidet X wohl»), **keine** Bewertung von Personen — nur ehrliche, quellengestützte
   Deskription mit ausgewiesener Grundgesamtheit und offengelegten Grenzen (§8). Richterliche Unabhängigkeit,

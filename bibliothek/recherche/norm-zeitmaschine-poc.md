@@ -1,7 +1,7 @@
 # Norm-Zeitmaschine & Fassungs-Diff — POC-Rahmen und Kostenschätzung
 
 **Erstellt:** 20.7.2026 (Ideen-Intake §14 der 8 Alleinstellungs-Ideen, Ideen 2+3 — Verortung als
-ROADMAP-Schritt `W2·5e-ZEIT`, Status `blocked` auf `zeit-historik-poc`; dieses Dossier hält fest,
+ROADMAP-Schritt `W2·5g-ZEIT`, Status `blocked` auf `zeit-historik-poc`; dieses Dossier hält fest,
 **warum** blockiert und **was der POC klären muss**) · **Status:** ERSTRECHERCHE — Bestandsaufnahme
 gegen den Repo-Stand vom 20.7.2026; die Aufwandsschätzung in §4 ist eine Grössenordnung, **keine
 gemessene Zahl**.

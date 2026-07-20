@@ -13,5 +13,5 @@ export const INVENTAR: readonly string[] = [
   'W2·12-HYGIENE', 'W2·13-KANTONE',
 
   // Ideen-Intake 20.7.2026 (§14): 8 Alleinstellungs-Ideen verortet.
-  'W1·5-PRAXIS', 'W2·5e-ZEIT', 'W2·5f-GESETZ-UI', 'W2·6-ZNETZ', 'W2·14-SIGNAL', 'W3·15-RICHTER', 'QS-UI',
+  'W1·5-PRAXIS', 'W2·5g-ZEIT', 'W2·5h-GESETZ-UI', 'W2·6-ZNETZ', 'W2·14-SIGNAL', 'W3·15-RICHTER', 'QS-UI',
 ];

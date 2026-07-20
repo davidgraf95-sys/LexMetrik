@@ -28,8 +28,16 @@ sich unmittelbar aus amtlichen Metadaten ergeben und einer Kammer, nicht einer P
 
 - Verteilung der **Sachgebiete** je Kammer und Zeitraum,
 - **Verfahrensdauer** und Geschäftslast der Form nach (soweit amtlich ausgewiesen),
-- Häufigkeit von **Verfahrensausgängen der Form nach** (z. B. Nichteintreten vs. materielle Beurteilung),
 - **Publikationsquote** (welcher Anteil wird amtlich publiziert).
+
+**Bewusst NICHT im Erst-Scope — Korrektur 20.7.2026:** ursprünglich stand hier «Häufigkeit von
+**Verfahrensausgängen der Form nach** (z. B. Nichteintreten vs. materielle Beurteilung)». Das ist
+gestrichen. Begründung: eine Ausgangs-Verteilung je Kammer ist das unmittelbare Rohmaterial der in
+§3 verbotenen Erfolgs-/Trefferquote — es fehlt nur ein Aggregationsschritt, und die
+Kammer→Personen-Zuordnung liefert das Richter-Filter-Fundament separat. Die Unterscheidung
+«formal vs. materiell» klingt harmlos, ist aber genau die Achse, aus der eine Quote gebildet wird.
+Eine Aufnahme wäre ein **eigener, ausdrücklich zu begründender David-Entscheid** — mit der Freigabe
+des Schritts `W3·15-RICHTER` ist sie **nicht** mitgegeben.
 
 Jede Zahl trägt Grundgesamtheit, Zeitraum und Korpus-Abdeckung — ohne diese drei Angaben wird
 sie nicht ausgegeben (§8).
