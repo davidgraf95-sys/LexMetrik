@@ -9,6 +9,13 @@
 # Code) — und das war exakt die Lücke, durch die 3 Waisen grün mergten,
 # weil check:plan bislang NIRGENDS in CI lief. Der Schritt bleibt trotzdem
 # günstig: nur Node + npm ci + ein vite-node-Skript, kein Build/Playwright.
+#
+# ERWEITERT 21.7.2026: David setzte am 20.7. sechs Required Checks auf main;
+# dieser Zwilling meldete aber nur «Tore …» — die 3 Playwright-Shards und
+# «Perf-Budget» wurden bei .md-only-PRs NIE gemeldet, darum hingen reine
+# .md-PRs (#318, #320) permanent unmergbar. Deshalb unten je ein No-op-
+# Zwilling für die Shard- und Perf-Kontexte (byte-genaue Job-Namen).
+# «Vercel» braucht KEINEN Zwilling — die App-Integration meldet sich selbst.
 name: CI (Doku-No-op)
 
 on:
@@ -31,3 +38,24 @@ jobs:
       - name: Plan-Inventar-Konsistenz (einziger echter Check im Zwilling)
         run: npm run check:plan
       - run: echo "Reine Doku-Änderung — restliche Code-Tore nicht betroffen (Zwilling meldet grün)."
+
+  # Zwilling der Playwright-Shards aus ci.yml (Job `e2e`): dort triggert der
+  # Lauf wegen paths-ignore **.md nie, der Required-Kontext bliebe ungemeldet.
+  # Job-Namen MÜSSEN exakt «Browser-Smoke Shard X/3 (Playwright)» ergeben —
+  # gleiche Matrix (gruppe: [1, 2, 3]) wie in ci.yml.
+  e2e:
+    name: Browser-Smoke Shard ${{ matrix.gruppe }}/3 (Playwright)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        gruppe: [1, 2, 3]
+    steps:
+      - run: echo "Reine Doku-Änderung — Browser-Smoke Shard ${{ matrix.gruppe }}/3 nicht betroffen, Zwilling meldet grün."
+
+  # Zwilling von `perf` aus ci.yml — Job-Name exakt der Required-Kontext.
+  perf:
+    name: Perf-Budget (§15 — nur bei grüner Treue)
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Reine Doku-Änderung — Perf-Budget nicht betroffen, Zwilling meldet grün."
