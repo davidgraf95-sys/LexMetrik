@@ -1,16 +1,27 @@
 #!/usr/bin/env python3
-"""PreToolUse-Hook (Bash): blockiert die zwei teuersten Unfall-Muster.
+"""PreToolUse-Hook (Bash): blockiert die drei teuersten Unfall-Muster.
 
 1. Tor-Kommandos (Lint/Test/tsc/Golden/Check) durch Pipes jagen —
    Pipes verschlucken den Exit-Code (real passiert: 8 Lint-Fehler und
    eine Golden-Abweichung gingen so verloren).
 2. git commit --amend — hat bei laufender Parallel-Session einen
    fremden Commit umgeschrieben. Nur additive Commits.
+3. `gh pr merge` auf einem Risiko-Pfad ohne Gegenprüfungs-Verdikt
+   (Vorfall PR #309, 20.7.2026: 11 erfundene Amtsträger:innen ~1 h auf
+   prod). Prosa hätte #309 NICHT verhindert — der Agent hat korrekt
+   befolgt, was im Auftrag stand. Nur die Tool-Ebene greift auch dann,
+   wenn die Merge-Erlaubnis im falschen Prompt-Block steht, und auch in
+   Sub-Agenten, die CLAUDE.md gar nicht sehen.
+
+Prompt-Cache (QS-TOK/T19): PreToolUse liegt AUSSERHALB des gecachten
+Präfix — dieser Hook kostet bei Grün 0 Token und keine Cache-Invalidierung.
 
 Exit 2 = Aufruf blockieren, stderr geht als Feedback an Claude.
 """
 import json
+import os
 import re
+import subprocess
 import sys
 
 try:
@@ -47,6 +58,29 @@ if re.search(r"git\s+commit\b[^\n]*--amend", cmd):
         "(Lektion 6.6.: hat bei laufender Parallel-Session einen fremden "
         "Commit umgeschrieben). Nachzügler als eigenen, additiven Commit."
     )
+
+# ── 3. Merge-Sperre auf Risiko-Pfaden ──────────────────────────────────
+# Nur bei `gh pr merge` (selten) — die ~3 s Laufzeit fallen sonst nie an.
+if re.search(r"\bgh\s+pr\s+merge\b", cmd):
+    projekt = os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd()
+    try:
+        p = subprocess.run(
+            ["npm", "run", "--silent", "check:merge-schutz"],
+            cwd=projekt, capture_output=True, text=True, timeout=120,
+        )
+        if p.returncode != 0:
+            probleme.append(
+                "BLOCKIERT (§9/§14 Ziff. 4): Merge auf einem Risiko-Pfad ohne "
+                "Gegenprüfungs-Verdikt.\n\n" + (p.stdout or p.stderr).strip()
+            )
+    except Exception as e:  # noqa: BLE001
+        # Fail-closed: kann das Tor nicht laufen, wird NICHT durchgewinkt.
+        # Ein Tor, das bei Störung still grün wird, ist kein Tor (§6 Ziff. 7).
+        probleme.append(
+            f"BLOCKIERT: check:merge-schutz konnte nicht laufen ({e}). "
+            "Merge nicht freigegeben — erst das Tor lauffähig machen "
+            "(`npm run check:merge-schutz`), dann erneut."
+        )
 
 if probleme:
     print("\n".join(probleme), file=sys.stderr)

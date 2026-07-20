@@ -7,6 +7,10 @@ export interface Einheit {
   etikett: Etikett;
   checkbox: Checkbox;
   sektion: string;
+  /** 0-basierte Position in der ROADMAP-Dokumentreihenfolge = die Bau-Reihenfolge.
+   *  Ohne dieses Feld sortiert next.ts lexikografisch und macht damit alle
+   *  ready-Einheiten gleichrangig — «oberster offener Schritt» wird unbeantwortbar. */
+  pos: number;
 }
 
 function checkboxAus(zeile: string): Checkbox {
@@ -53,7 +57,7 @@ export function parseRoadmap(md: string): { einheiten: Einheit[]; blockers: Reco
         cb = checkboxAus(zeilen[j]);
         break;
       }
-      einheiten.push({ id: etikett.id, etikett, checkbox: cb, sektion });
+      einheiten.push({ id: etikett.id, etikett, checkbox: cb, sektion, pos: einheiten.length });
     }
   }
   return { einheiten, blockers };

@@ -81,6 +81,20 @@ export function pruefe(
     if (t.status === 'ready' && t.blocker) probleme.push({ id: e.id, meldung: `status ready aber blocker gesetzt` });
     // (4) dep-IDs existieren
     for (const d of t.dep) if (!vorhanden.has(d)) probleme.push({ id: e.id, meldung: `dep "${d}" existiert nicht` });
+    // (4c) done ⇒ alle dep sind done. Ein erledigter Schritt, der auf einem
+    // offenen hängt, ist entweder falsch abgehakt oder trägt eine überholte
+    // dep — beides macht den Plan unwahr. (Befund 20.7.2026: W2·6a-MAT done
+    // mit dep auf W2·7-VZUI ready — die Regel fehlte, also fiel es nie auf.)
+    if (t.status === 'done') {
+      const offeneDeps = t.dep.filter((d) => {
+        const ziel = einheiten.find((x) => x.id === d);
+        return ziel && ziel.etikett.status !== 'done';
+      });
+      for (const d of offeneDeps) {
+        const ziel = einheiten.find((x) => x.id === d)!;
+        probleme.push({ id: e.id, meldung: `status done, aber dep "${d}" ist ${ziel.etikett.status}` });
+      }
+    }
     // (6) kollision-Pfade existieren (Globs: nur einfache Existenz des Pfads bzw. Verzeichnis-Präfix)
     for (const k of t.kollision) {
       const basis = k.replace(/[*?{[].*$/, '');

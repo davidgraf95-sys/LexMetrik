@@ -28,7 +28,10 @@ function kollidiert(a: string[], b: string[]): boolean {
 }
 
 export function resolve(einheiten: Einheit[]): Buckets {
-  const sortiert = [...einheiten].sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true }));
+  // Dokumentreihenfolge = Bau-Reihenfolge. Vorher wurde lexikografisch nach ID
+  // sortiert; damit waren alle ready-Einheiten gleichrangig und die Frage nach
+  // dem «obersten offenen Schritt» (Ausführungs-Protokoll) nicht beantwortbar.
+  const sortiert = [...einheiten].sort((a, b) => a.pos - b.pos);
   const done = new Set(sortiert.filter((e) => e.etikett.status === 'done').map((e) => e.id));
   const slot = sortiert.find((e) => e.etikett.asset26x && e.etikett.status === 'wip');
   const slot26xBelegtVon = slot ? slot.id : null;
@@ -77,6 +80,7 @@ if (!process.env.VITEST) {
   const { einheiten } = parseRoadmap(readFileSync('ROADMAP.md', 'utf8'));
   const b = resolve(einheiten);
   const z = (s: string) => console.log(s);
+  z(`▶ OBERSTER offener Schritt: ${b.readyNow[0] ?? '—'}`);
   z(`▶ JETZT baubar (ready-now): ${b.readyNow.join(', ') || '—'}`);
   z(`  Parallel-Lanes: ${b.lanes.map((l) => `[${l.join(' + ')}]`).join('  ') || '—'}`);
   if (b.wartetDep.length) z(`⏳ wartet auf dep: ${b.wartetDep.map((x) => `${x.id}→${x.offen.join(',')}`).join(' · ')}`);

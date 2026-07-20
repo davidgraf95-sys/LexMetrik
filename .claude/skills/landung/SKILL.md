@@ -47,6 +47,19 @@ Strikt der Reihe nach, EIN Kommando aufs Mal, volle Ausgabe lesen:
 
 5. **CI-Grün verifizieren.** Push (`git push`), dann `gh pr checks <nr> --watch`
    bis grün. Billing-rot bei lokal-grün = OK (§9).
+   **`cancelled` und `skipped` zählen als ROT**, nicht als «nicht rot» — ein
+   abgebrochener Lauf hat nichts bewiesen. (Realfall 20.7.2026: 5 stumm
+   abgebrochene `turso-sync`-Läufe, der Suchindex veraltete unbemerkt.)
+
+5b. **Bei Daten-/Extraktions-PRs: Identitätsbeleg.** Bevor neue Entitäten
+   (Personen, Erlasse, Entscheide) live gehen, eine Stichprobe **n ≥ 10** gegen
+   die **amtliche Quelle** prüfen und die Trefferquote im PR dokumentieren.
+   Belege sind **Identitäts-Treffer mit Wortgrenze**, nie Substring-Präsenz.
+   *Warum als eigener Schritt und nicht als Verweis: PR #309 hat genau hier
+   versagt — 11 erfundene Amtsträger:innen gingen ~1 h auf prod, weil der
+   Verweis auf den Gegenprüfungs-Skill beim Abarbeiten der Liste übersprungen
+   wurde. Maschinelle Rückendeckung: `check:merge-schutz` blockiert den Merge
+   auf Risiko-Pfaden ohne Verdikt.*
 
 6. **Manuell mergen.** `gh pr merge <nr> --squash`. **KEIN `--auto`**, solange
    die Required Checks nicht neu gesetzt sind (David-Handschritt offen).
