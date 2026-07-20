@@ -5,10 +5,19 @@
 // und CI kann strukturell nie melden, dass ein Tor fehlt. Genau diese Blindheit
 // ist die Fehlerklasse «schweigendes Tor» eine Ebene höher.
 //
-// Dieses Tor behebt die Lücke NICHT (das ist eine eigene Bau-Einheit), es
-// FRIERT sie ein: jedes Tor, das nicht in CI läuft, braucht einen begründeten
-// Allowlist-Eintrag. Ein NEU hinzugefügtes Tor ohne CI-Lauf und ohne Eintrag
-// macht dieses Tor rot. Damit kann die Lücke nur noch kleiner werden, nie grösser.
+// Dieses Tor friert die Lücke ein: jedes Tor, das nicht in CI läuft, braucht
+// einen begründeten Allowlist-Eintrag. Ein NEU hinzugefügtes Tor ohne CI-Lauf
+// und ohne Eintrag macht dieses Tor rot. Die Lücke kann nur kleiner werden.
+//
+// NACHTRAG 20.7.2026 (adversariale Prüfung): Das Tor stand SELBST auf seiner
+// Allowlist — mit dem Grund «dieses Tor selbst — prüft die Liste, steht nicht
+// in ihr». Der Satz war sachlich falsch (es steht sehr wohl in `check:seriell`,
+// sonst bräuchte es keinen Eintrag) und die Wirkung war rekursiv F2b: der
+// Melder unsichtbarer Tore war selbst unsichtbar. Ein PR, der ein Tor ohne
+// CI-Verdrahtung hinzufügt und lokal kein `npm run gate` fährt, blieb
+// unbemerkt. Das Tor läuft jetzt in ci.yml und steht auf keiner Liste mehr.
+// Ebenso entfielen check:besetzung/entscheide/bs-entscheide, deren
+// DB-Begründung nachweislich falsch war (sie lesen committete Projektionen).
 import { readFileSync, readdirSync } from 'node:fs';
 
 const pkg = JSON.parse(readFileSync('package.json', 'utf8')) as {
@@ -64,17 +73,17 @@ const ALLOWLIST: Record<string, string> = {
   'check:historie': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
   'check:grundart': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
   'check:linien-kanon': 'Darstellungs-Kanon, reine Statik',
-  'check:entscheide': 'braucht rechtsprechung.db (488 MB, nicht im CI-Checkout)',
-  'check:bs-entscheide': 'braucht rechtsprechung.db (488 MB, nicht im CI-Checkout)',
-  'check:besetzung': 'braucht rechtsprechung.db (488 MB, nicht im CI-Checkout)',
+  // check:entscheide / check:bs-entscheide / check:besetzung standen hier bis
+  // 20.7.2026 mit «braucht rechtsprechung.db (488 MB)». Das war sachlich falsch:
+  // sie lesen die committeten Projektionen unter public/rechtsprechung/
+  // (ladeBestandSnapshots), nicht die DB — gemessen je ~1 s grün unter CI=1.
+  // Alle drei laufen jetzt in ci.yml. Der Eintrag entfiel damit ersatzlos.
   'check:materialien': 'braucht daten/*.db für die Byte-Reprojektion (CI-Zweig prüft committete Shards)',
   'check:revisionen': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
   'check:pdf': 'braucht die PDF-Quellen-Caches (nicht im CI-Checkout)',
   'check:pdf-quellen': 'braucht die PDF-Quellen-Caches (nicht im CI-Checkout)',
-  'check:gegenpruefung': 'CI-Selbstschutz: no-op-grün unter CI=1 (kern.ts) — Arbiter ist lokal + check:merge-schutz',
+  'check:gegenpruefung': 'liest den Working Tree, der in CI sauber ist; protokolliert unter CI=1 ausdrücklich SKIP (§6 Ziff. 7 lit. b) — Arbiter für den committeten Bereich ist check:merge-schutz in ci.yml',
   'check:zyklen': 'reine Statik über Importgraph — vom lint-Job mitabgedeckt',
-  'check:dispatch-klausel': 'reine Statik über eine Doku-Datei; CI-Verdrahtung offen — ci.yml gehört am 20.7. dem parallelen lm-ci-Worktree, Nachzug in Task 30',
-  'check:tor-paritaet': 'dieses Tor selbst — prüft die Liste, steht nicht in ihr',
 };
 
 const seriell = seriellTore();
@@ -93,13 +102,31 @@ for (const t of ungedeckt) {
 // (2) Verrottete Allowlist: ein Eintrag, dessen Tor inzwischen in CI läuft oder
 //     der gar kein serielles Tor (mehr) ist, ist tote Regel und wird gemeldet.
 for (const [t, grund] of Object.entries(ALLOWLIST)) {
-  if (t === 'check:tor-paritaet') continue;
   if (!seriell.includes(t)) {
     fehler.push(`  ${t}: steht auf der Allowlist, ist aber nicht (mehr) in check:seriell — Eintrag streichen.`);
   } else if (ci.has(t)) {
     fehler.push(
       `  ${t}: läuft inzwischen in CI (${ci.get(t)!.join(', ')}), Allowlist-Eintrag ist überholt — streichen.\n` +
       `      (alter Grund: ${grund})`);
+  }
+}
+
+// (3) Nennt ein Grund einen Workflow als Ersatz-Arbiter, muss dieser Workflow
+//     existieren. Neun Eintraege tragen dieselbe Sammelbegruendung
+//     «Drift-Arbiter ist fedlex-frische.yml» — als Prosa ist das nicht
+//     ueberpruefbar und war genau der Einwand der adversarialen Pruefung
+//     (20.7.2026). Statt neun Mal denselben Satz umzuformulieren, wird die
+//     Behauptung MASCHINELL gebunden: verschwindet der genannte Workflow,
+//     wird der Verweis rot statt still falsch zu werden.
+const vorhandeneWorkflows = new Set(readdirSync('.github/workflows'));
+for (const [t, grund] of Object.entries(ALLOWLIST)) {
+  for (const m of grund.matchAll(/([a-z0-9-]+\.ya?ml)/g)) {
+    if (!vorhandeneWorkflows.has(m[1])) {
+      fehler.push(
+        `  ${t}: Grund nennt '${m[1]}' als Ersatz-Arbiter, aber ` +
+        `.github/workflows/${m[1]} existiert nicht.\n` +
+        `      → Der Verweis ist tot: entweder Tor in CI verdrahten oder Grund korrigieren.`);
+    }
   }
 }
 

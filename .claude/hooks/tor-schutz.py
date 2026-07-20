@@ -60,8 +60,25 @@ if re.search(r"git\s+commit\b[^\n]*--amend", cmd):
     )
 
 # ── 3. Merge-Sperre auf Risiko-Pfaden ──────────────────────────────────
-# Nur bei `gh pr merge` (selten) — die ~3 s Laufzeit fallen sonst nie an.
-if re.search(r"\bgh\s+pr\s+merge\b", cmd):
+# Nur bei Merge-Kommandos (selten) — die ~3 s Laufzeit fallen sonst nie an.
+#
+# BEFUND adversariale Pruefung 20.7.2026: die erste Fassung traf nur
+# /\bgh\s+pr\s+merge\b/. Zwei belegte Umgehungen blieben offen:
+#   (a) `gh api -X PUT repos/o/r/pulls/315/merge --field merge_method=squash`
+#       passierte den Hook mit Exit 0 bei rotem Tor.
+#   (b) `gh pr merge --auto` prueft den Stand im Moment des AKTIVIERENS;
+#       danach gepushte Risiko-Commits merged GitHub serverseitig, ohne dass
+#       je wieder ein Bash-Aufruf und damit dieser Hook laeuft.
+# (a) ist unten mitgefasst. (b) ist mit einem PreToolUse-Hook strukturell
+# nicht schliessbar — darum wird `--auto` auf Risikopfaden GANZ gesperrt und
+# auf den nachgelagerten Merge nach gruener CI verwiesen. Der eigentliche
+# Schliesser bleibt der Required Check in den Branch-Regeln (DAVID-GATE).
+MERGE_MUSTER = re.compile(
+    r"\bgh\s+pr\s+merge\b"                       # gh pr merge …
+    r"|\bgh\s+api\b[^\n]*?/(?:pulls|merges)\b"   # gh api …/pulls/N/merge, …/merges
+    r"|\bgh\s+api\b[^\n]*?\bmerge\b"
+)
+if MERGE_MUSTER.search(cmd):
     projekt = os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd()
     try:
         p = subprocess.run(
@@ -73,6 +90,25 @@ if re.search(r"\bgh\s+pr\s+merge\b", cmd):
                 "BLOCKIERT (§9/§14 Ziff. 4): Merge auf einem Risiko-Pfad ohne "
                 "Gegenprüfungs-Verdikt.\n\n" + (p.stdout or p.stderr).strip()
             )
+        elif re.search(r"--auto\b", cmd):
+            # Tor ist JETZT grün — aber `--auto` merged erst spaeter, ohne
+            # erneute Pruefung. Auf Risikopfaden ist das die Luecke aus
+            # Befund (b): ein danach gepushter Risiko-Commit faehrt
+            # ungeprueft auf prod.
+            risiko = subprocess.run(
+                ["npm", "run", "--silent", "check:merge-schutz"],
+                cwd=projekt, capture_output=True, text=True, timeout=120,
+            ).stdout
+            if "kein Risiko-Pfad" not in risiko:
+                probleme.append(
+                    "BLOCKIERT (§9): `--auto` auf einem Risiko-Pfad.\n\n"
+                    "  Auto-Merge prueft den Stand nur JETZT. Jeder danach "
+                    "gepushte Risiko-Commit wird serverseitig gemergt, ohne "
+                    "dass dieses Tor je wieder laeuft.\n"
+                    "  Weg: CI gruen abwarten, dann OHNE --auto mergen.\n"
+                    "  (Davids Daueranweisung 'Auto-merge bei gruener CI' "
+                    "bleibt fuer alle Nicht-Risiko-PRs unveraendert.)"
+                )
     except Exception as e:  # noqa: BLE001
         # Fail-closed: kann das Tor nicht laufen, wird NICHT durchgewinkt.
         # Ein Tor, das bei Störung still grün wird, ist kein Tor (§6 Ziff. 7).

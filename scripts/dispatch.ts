@@ -28,26 +28,27 @@ export function pflichtKlausel(md: string): string {
 }
 
 /** Auftragsklassen-Zusatz: was diese Klasse ÜBER die Pflicht-Klausel hinaus braucht. */
-const KLASSEN: Record<string, string> = {
+export const KLASSEN: Record<string, string> = {
   bau: 'TABU: kein Merge, kein Deploy, keine Änderung an .claude/ oder CLAUDE.md.\nRÜCKGABE: geänderte Dateien (absolute Pfade) · Tor-Ergebnisse mit Exit-Code · offene Punkte.',
   pruefung: 'TABU: nichts ändern — nur lesen, messen, berichten.\nRÜCKGABE: Befund je Fundstelle (Datei:Zeile) · Beleg · Schweregrad · was du NICHT prüfen konntest.',
   recherche: 'TABU: kein Code, keine Repo-Änderung.\nRÜCKGABE: je Fakt Quelle + Stand + Link; ungedeckte Fragen ausdrücklich als offen markieren.',
   daten: 'RISIKOPFAD: Gegenprüfung ist Pflicht (Skill »gegenpruefung«), Merge ist gesperrt (check:merge-schutz).\nRÜCKGABE: Stichprobe n≥10 mit Identitätsbeleg gegen die Amtsquelle + Trefferquote.',
 };
 
-// Nur ausführen, wenn DIESE Datei das Einstiegsmodul ist — sonst würde der
-// CLI-Block auch beim Import durch check-dispatch-klausel.ts feuern.
-const istEinstieg =
-  !process.env.VITEST && /(^|\/)dispatch\.ts$/.test(process.argv[1] ?? '');
-
-if (istEinstieg) {
-  const klasse = process.argv[2];
-  const namen = Object.keys(KLASSEN).join(' | ');
-  if (!klasse || !(klasse in KLASSEN)) {
-    console.error(`Aufruf: npm run dispatch -- <${namen}>`);
-    process.exit(1);
+/**
+ * Reine Text-Erzeugung (testbar, ohne Prozess-Seiteneffekte).
+ * @throws wenn die Klasse unbekannt ist — der Aufrufer entscheidet über den Exit.
+ */
+export function dispatchText(klasse: string, md: string): string {
+  if (!(klasse in KLASSEN)) {
+    throw new Error(`Unbekannte Auftragsklasse '${klasse}'. Bekannt: ${Object.keys(KLASSEN).join(' | ')}`);
   }
-  console.log(pflichtKlausel(readFileSync(TEMPLATE, 'utf8')));
-  console.log('');
-  console.log(KLASSEN[klasse]);
+  return `${pflichtKlausel(md)}\n\n${KLASSEN[klasse]}`;
+}
+
+/** Marker, an dem Hook und Tor den eingebauten §0-Block wiedererkennen. */
+export const KLAUSEL_MARKER = '§0 PFLICHT-KLAUSEL';
+
+export function templateLesen(): string {
+  return readFileSync(TEMPLATE, 'utf8');
 }

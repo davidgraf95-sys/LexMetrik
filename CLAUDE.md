@@ -127,7 +127,9 @@ Vor jedem Struktur-Umbau gilt das Protokoll:
 7. **Ein Tor ist erst ein Tor, wenn** (a) es gegen eine **unabhängige** Referenz
    prüft, nie gegen die eigene Ladung desselben Laufs; (b) es bei fehlender
    Voraussetzung **rot** wird oder explizit `SKIP` protokolliert — nie still grün;
-   (c) sein Nicht-Laufen sichtbar ist (`cancelled`/`skipped` zählen als rot);
+   (c) sein Nicht-Laufen sichtbar ist — `cancelled`/`skipped` zählen als rot,
+   erzwungen durch `check:ci-laeufe` (`waechter.yml`, täglich) über jeden
+   `schedule:`-Workflow; ein grauer Lauf ist kein bestandener Lauf;
    (d) Belege **Identitäts-Treffer mit Wortgrenze** sind, nie Substring-Präsenz.
    Wer ein Tor baut, zeigt es einmal **rot** (Sabotage-Probe) — ein Tor, das nicht
    scheitern kann, ist gefährlicher als keines.
@@ -216,7 +218,14 @@ die Tore rot lässt oder nicht doppelt verifiziert ist.
 
 **Auto-Merge ist auf Risiko-Pfaden (§14 Ziff. 4) gesperrt** — dort wird erst nach
 vorliegendem Gegenprüfungs-Verdikt gemergt (maschinell: `check:merge-schutz`, im
-Hook `tor-schutz.py` vor `gh pr merge`). Vorfall PR #309.
+Hook `tor-schutz.py` vor Merge-Kommandos **und** in `ci.yml`). Das Verdikt braucht
+eine prüfbare Form und einen Zuwachs im committeten Gegenprüfungs-Register — ein
+Trailer allein ist eine Behauptung über eine Prüfung, kein Nachweis. `--auto` ist
+auf Risikopfaden ganz gesperrt (es prüft nur den Stand beim Aktivieren).
+**Reichweite ehrlich (§8):** der Hook greift nur mit dieser `settings.json`; die
+harte, maschinenunabhängige Schranke entsteht erst, wenn `check:merge-schutz` als
+**Required Check** in den Branch-Regeln steht — dieser Handschritt ist offen
+(DAVID-GATE). Vorfall PR #309.
 
 ## §10 Wachstum folgt dem Rahmen
 

@@ -62,12 +62,24 @@ jobs:
       # Nutzer in der Schweiz.
       TZ: Europe/Zurich
     steps:
+      # fetch-depth: 0 — check:merge-schutz bildet merge-base(origin/main, HEAD).
+      # Mit dem Default (depth 1) gibt es keine gemeinsame Basis und das Tor
+      # wuerde (korrekt) rot melden, dass es seine Referenz nicht bilden kann.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Merge-Sperre auf Risikopfaden (F1, Vorfall PR #309). Lief bis 20.7.2026
+      # NUR im lokalen PreToolUse-Hook — Web-UI-Merge, `gh api …/merge` und die
+      # Zeitluecke von `gh pr merge --auto` waren damit ungedeckt. Hier ist das
+      # Tor maschinenunabhaengig; als Required Check wird es zur echten Schranke
+      # (Branch-Regel setzt David, DAVID-GATE).
+      - name: Merge-Schutz (Gegenprüfungs-Verdikt auf Risikopfaden)
+        run: npm run check:merge-schutz
       - name: Plan-Inventar-Konsistenz (Node-only, günstig — darum vor tsc/Build)
         run: npm run check:plan
       - name: TypeScript (tsc -b)
@@ -90,6 +102,26 @@ jobs:
         run: npm run golden:vergleich
       - name: SSR-Smoke (alle Seiten)
         run: npm run check:smoke
+      # ── Tore, die bis 20.7.2026 auf der Paritaets-Allowlist standen ──────
+      # Die Begruendung «braucht rechtsprechung.db (488 MB, nicht im CI-
+      # Checkout)» war fuer diese drei sachlich falsch: sie lesen die
+      # COMMITTETEN Projektionen unter public/rechtsprechung/ (5121 Dateien,
+      # ladeBestandSnapshots), nicht die DB. Gemessen 20.7.2026: je ~1 s,
+      # gruen unter CI=1. check:besetzung ist das Tor, das die 11 erfundenen
+      # Amtstraeger:innen aus #309 faengt — es war ausgerechnet unsichtbar.
+      - name: Spruchkörper-Projektion (Leak · Konsistenz · Determinismus)
+        run: npm run check:besetzung
+      - name: Entscheid-Korpus (Bund)
+        run: npm run check:entscheide
+      - name: Entscheid-Korpus (BS)
+        run: npm run check:bs-entscheide
+      # Selbstschutz der Tor-Landschaft: meldet neue Tore ohne CI-Lauf.
+      # Lief selbst nur lokal — der Melder war damit so unsichtbar wie der
+      # Defekt, den er meldet (F2b rekursiv).
+      - name: Tor-Parität (CI/lokal)
+        run: npm run check:tor-paritaet
+      - name: Dispatch-Pflichtklausel (§0-Generator lauffähig)
+        run: npm run check:dispatch-klausel
       # dist EINMAL bauen, an e2e-Shards + perf weitergeben (O-3.3): der teure
       # Build-Schritt (gen:suchindex + tsc + vite build + prerender) läuft nur
       # hier; die Folgejobs holen dist als Artefakt statt 3× zu bauen.

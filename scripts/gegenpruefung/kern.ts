@@ -38,8 +38,17 @@ function sha256(daten: Buffer | string): string {
 }
 
 export interface DiffErgebnis {
-  /** false = CI-Selbstschutz ODER kein Git/kein HEAD → Aufrufer wird no-op-grün. */
+  /** false = CI-Selbstschutz ODER kein Git/kein HEAD → Aufrufer protokolliert SKIP. */
   kontext: boolean;
+  /**
+   * WARUM der Kontext fehlt — nur gesetzt, wenn `kontext === false`.
+   * Die frühere Fassung warf beide Fälle in einen Text («no-op (CI oder kein
+   * Git/HEAD)») und meldete sie als «grün». Das verletzt §6 Ziff. 7 lit. b
+   * (bei fehlender Voraussetzung rot ODER explizit SKIP — nie still grün) und
+   * vermischte zwei völlig verschiedene Ursachen: der CI-Selbstschutz ist ein
+   * bewusster Entscheid, ein kaputtes Git-Verzeichnis ist ein Defekt.
+   */
+  grund?: 'ci-selbstschutz' | 'kein-git';
   /** null = Git vorhanden, aber keine Risiko-Datei geändert (grün, «nichts zu beweisen»). */
   hash: string | null;
   /** die behaltenen (Risiko ∖ Prüflogik) Pfade, byte-sortiert. */
@@ -179,10 +188,17 @@ export function risikoDiffHash(
   const behaltenFn = opts.behalten ?? behalten;
 
   // CI-Selbstschutz (GH Actions/Vercel setzen CI; GITHUB_ACTIONS als Gürtel+Hosenträger).
-  if (process.env.CI || process.env.GITHUB_ACTIONS) return { kontext: false, hash: null, dateien: [] };
+  // Der Arbiter für den committeten Bereich ist in CI `check:merge-schutz`
+  // (seit 20.7.2026 in ci.yml verdrahtet) — dieses Tor liest den Working Tree,
+  // der in CI per Definition sauber ist.
+  if (process.env.CI || process.env.GITHUB_ACTIONS) {
+    return { kontext: false, grund: 'ci-selbstschutz', hash: null, dateien: [] };
+  }
 
   const root = toplevel(cwd);
-  if (!root || !hatHead(root)) return { kontext: false, hash: null, dateien: [] };
+  if (!root || !hatHead(root)) {
+    return { kontext: false, grund: 'kein-git', hash: null, dateien: [] };
+  }
 
   let out: Buffer;
   try {
