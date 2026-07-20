@@ -1930,3 +1930,39 @@ Keine Änderung an Extraktion oder Snapshot-Format (das wäre §-10/§-12-Fläch
 `check:perf-budget` · `check:linien-kanon` · `e2e/leser-lesemass` · axe ·
 **golden byte-gleich (Normtext-Treue §15 — Tempo gewinnt nie gegen Treue)**.
 Trailer `Roadmap: W2·5h-GESETZ-UI`.
+
+---
+
+## 14 · Tabellen in Gesetzen lesbar machen (`W2·5j-TABELLEN`, §14-Intake 20.7.2026)
+
+**Status: `parked` — David hat den Punkt am 20.7.2026 ausdrücklich auf «später» gesetzt.** Kein
+technischer Blocker; Auflösung ist Davids Ja (`@blockers: david-spaeter-tabellen`).
+
+### 14.1 Datenlage — die Daten sind GUT
+Referenzfall `/gesetze/kanton/BS-154.810#art-29`. Tabellen liegen **strukturiert** vor, als Block-Feld
+`mehrspaltig` mit `spalten[{typ, titel}]` + `zeilen[[…]]`. Es ist damit ein **reines Darstellungs-
+Problem**, keine Extraktions-Lücke.
+
+**Konsequenz für die Verortung (§14.2):** Dieser Schritt wird bewusst **nicht** mit `W2·13-KANTONE`
+(kantonale Extraktionstiefe) gebündelt. Dort geht es um fehlende Daten und damit um einen
+Extraktions-Risikopfad; hier um Layout. Andere Risiko-Klasse, andere Prüfung, eigene Einheit.
+
+### 14.2 Fläche (erhoben)
+**656 `mehrspaltig`-Blöcke in 137 Erlassen.** Schwerpunkte: VTS 68 · CHEMRRV 31 · VZV 30 · NBV 26 ·
+VVV 25 · LRV 21. Das ist breit genug, dass eine Einzelfall-Lösung nicht trägt — es braucht ein
+Regelwerk, keine Patches je Erlass.
+
+### 14.3 Auflagen beim Bau
+1. **Lesespalte vs. Tabellenbreite.** Der Fliesstext lebt in `max-w-reading` (42rem); breite
+   Tarif-/Barème-Tabellen passen dort nicht. Ausbruch aus der Lesespalte ist erlaubt, das
+   **horizontale Scrollen gehört in den Tabellen-Container**, nie in den Seiten-Body.
+2. **§15.1 gilt unverändert:** kein DOM-Entfernen, keine Virtualisierung. **Ctrl+F über die ganze
+   Tabelle und Print/PDF müssen vollständig bleiben.** Eine Tabelle, die erst beim Aufklappen
+   existiert, ist Logikverlust.
+3. **Mobil @390** ist der harte Testfall, nicht der Nachgedanke.
+4. Tokens statt Magic-Numbers (§13/D2); vorhandenes Tabellen-Regelwerk **T-A…T-F** (Abschnitt 2)
+   ist die Grundlage — dieser Schritt erweitert es auf `mehrspaltig`, ersetzt es nicht.
+
+### 14.4 DoD
+`check:tabellen` grün · golden byte-gleich (Zellinhalte unverändert) · Ctrl+F-/Print-Nachweis an
+mindestens einem breiten Erlass (VTS) · axe · `check:perf-budget`.

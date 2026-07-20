@@ -946,3 +946,60 @@ Fallback. Cross-Korpus-FTS: E2-hot zuerst, Masse-cold ab E3 dazuschaltbar.
   als Turso-Embedded-Replica edge-fähig. Das IST der E2-POC-Zuschnitt.
 - **Cold** (`fts_entscheide_masse`): der 58-GB-Vollkorpus-Index bleibt ausschliesslich serverseitig auf dem
   Self-Host-VPS, nie embedded, nur per Read-API.
+
+---
+
+## 12. Datenhaltungs-Optimierung + Heiss/Kalt-Grenze (§14-Intake David 20.7.2026)
+
+Verortet in `ROADMAP.md` unter **`QS-BASIS` (d)**; **Bau-Strang ist `W2·6-DATA`** (E4-Nachbarschaft).
+Dieser Abschnitt ist die Detailquelle dazu. *Der Punkt war im ersten Intake-Durchgang verloren gegangen
+und wurde durch die adversariale Prüfung von PR #315 wiedergefunden — er wird darum hier ausdrücklich
+und dauerhaft festgehalten.*
+
+### 12.1 Vier technische Posten
+
+**(a) Inkrementeller Sync.** Heute schiebt jeder Lauf den Vollbestand. **Vorsicht, gemessene Falle:**
+Bei #313 wurde inkrementell **bewusst verworfen** — `fts_artikel` ist *contentless* und über `rowid`
+gekoppelt, Delta-Inserts invalidieren den Index **still**. Ein inkrementeller Sync muss dieses Problem
+zuerst lösen, sonst tauscht er einen sichtbaren Zeitverbrauch gegen einen unsichtbaren Datenverlust.
+Der atomare Schatten-Tabellen-Tausch aus #313 ist die Referenz, gegen die jede Alternative antritt.
+
+**(b) contentless-FTS.** `content=''` statt external content **dort, wo der Rohtext ohnehin im
+Serving-Store liegt** — spart Duplikat-Speicher im 1-GB-Budget. Auflage: Genau prüfen, welche Queries
+Snippets brauchen; contentless kann keine Snippets rekonstruieren.
+
+**(c) Index-Strategie.** Nicht raten, **messen**: welche Spalten tragen die realen Query-Pfade aus
+`api/suche`? Jeder Index kostet Platz im knappsten Budget des Systems.
+
+**(d) Heiss/Kalt-Grenze** → eigener Abschnitt 12.2, weil es **kein technischer**, sondern ein
+Produkt-/Ehrlichkeits-Entscheid ist.
+
+### 12.2 Heiss/Kalt-Grenze — **DAVID-GATE**
+
+**Die Zahl, die den Entscheid erzwingt:** 195 000 Massen-Entscheide passen **nie** in die 1-GB-Turso-
+Replika. Budget-Ist am 20.7.2026: **652 / 1024 MiB (64 %)** — und das bei nur **5093** kuratierten
+Entscheiden. Es gibt keine Kompression, die diese Lücke schliesst; die Grenze ist strukturell.
+
+**Die eigentliche Frage ist darum keine technische, sondern §8:**
+> **Was darf die Suche behaupten, wenn der Long-Tail kalt liegt?**
+
+Drei Optionen, alle vertretbar, mit verschiedenen Kosten:
+
+| Option | Was der Nutzer erlebt | Preis |
+|---|---|---|
+| **Schweigen** | Long-Tail existiert für die Suche nicht | stille Falsch-Negative — **abzulehnen** |
+| **Ausweisen** | «nur kuratierter Korpus durchsucht (5093 von 195 000)» | ehrlich, aber sichtbar begrenzt |
+| **Kalt nachladen** | vollständige Treffer, spürbare Latenz | braucht VPS-Serving (E3), teurer |
+
+**Warum das nicht agentenseitig entschieden wird:** Ein stiller Teiltreffer wäre exakt der Fehler aus
+PR #313 in neuer Form — dort servierte `api/suche` einen halben Gesetzesindex und **null** Entscheide,
+**ohne je rot zu werden**. Die Wahl zwischen «ehrlich begrenzt» und «vollständig aber langsam» ist eine
+Produktentscheidung mit Haftungsbezug (ein Jurist, der glaubt, vollständig gesucht zu haben, ist
+schlechter dran als einer, der die Grenze kennt). **Entscheid gehört David; bis dahin nicht
+implementieren.**
+
+### 12.3 Abhängigkeiten
+(a)–(c) sind **frei baubar, ohne VPS**. Die Umsetzung von 12.2 hängt in der Variante «kalt nachladen»
+am David-Gate `vps-bestellung-david` (E3-Serving, Abschnitt 5/E3). Die Varianten «ausweisen» und
+«schweigen» brauchen keinen VPS — aber trotzdem Davids Entscheid, weil sie festlegen, was das Produkt
+über seine eigene Vollständigkeit sagt.

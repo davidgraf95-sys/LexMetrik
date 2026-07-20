@@ -116,4 +116,29 @@ describe('pruefe — Lücken-Abdeckung (Task-5-Review)', () => {
     );
     expect(ok(md, ['A', 'B']).some((p) => /wip/.test(p.meldung))).toBe(true);
   });
+
+  // Regel (5c): `slot: inhaber` verträgt sich nicht mit einem Status, der den
+  // 26×-Slot nie zurückgibt. Genau diese Kombination hält über next.ts jeden
+  // anderen 26×-Schritt an, ohne dass noch jemand am Slot arbeitet.
+  const slotUnit = (cb: string, status: string, blocker: string) =>
+    unit(cb, `id: A · status: ${status} · of: ja · blocker: ${blocker} · dep: [] · kollision: [] · worktree: nein · 26x: ja · slot: inhaber`);
+
+  it('slot: inhaber mit status done → Problem', () => {
+    const md = plan(slotUnit('[x]', 'done', 'null'));
+    expect(ok(md, ['A']).some((p) => p.id === 'A' && /nie zurück/.test(p.meldung))).toBe(true);
+  });
+  it('slot: inhaber mit status parked → Problem (gibt den Slot ebenso wenig zurück)', () => {
+    const md = plan(slotUnit('[d]', 'parked', 'b1'));
+    expect(ok(md, ['A']).some((p) => p.id === 'A' && /nie zurück/.test(p.meldung))).toBe(true);
+  });
+  it('slot: inhaber mit status blocked → Problem', () => {
+    const md = plan(slotUnit('[ ]', 'blocked', 'b1'));
+    expect(ok(md, ['A']).some((p) => p.id === 'A' && /nie zurück/.test(p.meldung))).toBe(true);
+  });
+  it('slot: inhaber mit status ready → kein Problem (Inhaber wartet auf seinen Bau)', () => {
+    expect(ok(plan(slotUnit('[ ]', 'ready', 'null')), ['A'])).toEqual([]);
+  });
+  it('slot: inhaber mit status wip → kein Problem (Inhaber baut)', () => {
+    expect(ok(plan(slotUnit('[~]', 'wip', 'null')), ['A'])).toEqual([]);
+  });
 });

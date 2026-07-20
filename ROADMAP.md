@@ -117,14 +117,17 @@ darum ist die Verzahnung Burggraben UND das Kriterium, nach dem neue Schritte ei
 <!-- @blockers
 wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren. EIGENTÜMER: kein David-Gate — die Recherche ist [OF] und selbst Teil von W1·4. Also zuerst erledigen, nicht als Wartegrund führen (sonst bleibt der Hauptmoat dauerhaft geparkt).
 §4-lizenz: Live-Rechtsprechung — CC-BY-SA vs. Art. 5 URG, CORS/Rate-Limits unbestätigt
-26x-slot: BELEGT durch E3 (W2·6-DATA, seit 3.7.2026 — BGer-Massen-Import); W3·12 wartet dahinter (Leitprinzip 4)
+26x-slot: FREI seit 3.7.2026 (E3 fertig), aber bis 20.7.2026 nicht zurückgegeben — 17 Tage grundlose Blockade von W3·12. Slot am 20.7.2026 per @slot-kette an W3·12 übergeben (Kanton-Gesetze, Leitprinzip 4 + Davids Reihenfolge-Entscheid 2.7.: «E3 zuerst, W3·12 danach»). Dieser Blocker ist damit AUFGELÖST und wird von keinem Schritt mehr referenziert; Eintrag bleibt als Beleg der Kette stehen.
+vps-bestellung-david: E3-Serving + E4-UI hängen an einer VPS-Bestellung (David, ~15 Min) — Dossier `bibliothek/betrieb/vps-bestell-dossier-2026-07-17.md` (PR #271). ECHTES David-Gate, kein Bau-Blocker. Bis dahin sind QS-DATA/W2·6-DATA nur im NICHT-VPS-Teil baubar (E0–E4 sind lokal fertig). Befund 20.7.2026: dieser Blocker stand bisher NUR im Fliesstext («🔒 BLOCKER»), das @meta trug `blocker: null` — für `check:plan` unsichtbar.
 zeit-historik-poc: Norm-Zeitmaschine/Fassungs-Diff (W2·5g-ZEIT) — historische Fedlex-Konsolidierungs-Extraktion fehlt (auf Platte nur die geltende Fassung; SPARQL dateApplicability vorhanden, Durchlauf gross); POC + Bau-GO je Kandidat durch David ausstehend. UMFASST AUCH die beiden Vorbedingungen, die KEINE getrackten ROADMAP-Schritte sind und darum nicht als `dep` abbildbar wären: AKN-XML-Phase 1 (Quell-Architektur-Entscheid Council 30.6., schaltet M16 frei) und G-HIST als Daten-Unterbau (beide dokumentarisch im Strang-Detailblock oben + FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Intake, Bau-GO je Kandidat ebenfalls offen)
+david-spaeter-tabellen: Tabellen-Darstellung in Gesetzen (W2·5j-TABELLEN). KEIN technischer Blocker — Daten und Weg sind geklärt (656 `mehrspaltig`-Blöcke, 137 Erlasse); David hat den Punkt am 20.7.2026 ausdrücklich auf «später» gesetzt. Auflösung = Davids Ja, kein Bau-Vorlauf nötig.
 richter-analytik-gate: Richter-/Spruchkörper-Analytik (W3·15-RICHTER). GRENZE (20.7.2026): Filtern/Facette/Verlinkung sind FREI und gebaut (#309/#311); gesperrt bleiben allein RANKING und PROGNOSE. Nur deskriptiv; bewusste Freigabe Davids erforderlich (heikel: Standesrecht, Persönlichkeitsschutz, richterliche Unabhängigkeit)
 -->
 
 <!-- @slot-kette (dokumentarisch; harte Prüfung via @meta-Feld `slot: inhaber`, check.ts 5b)
-inhaber: W2·6-DATA (E3 seit 3.7.2026)
-kette: E3(W2·6-DATA) · W3·12(Kanton-Gesetze) · Tarif-Bündel(W1·4) · E5(Kanton-Rechtsprechung) · Gerichtsferien-Matrix
+inhaber: W3·12 (Kanton-Gesetze, übergeben 20.7.2026 — E3 war seit 3.7.2026 fertig, der Slot nur nie zurückgegeben)
+kette: ~~E3(W2·6-DATA) ✅ 3.7.2026~~ · W3·12(Kanton-Gesetze) ← JETZT · Tarif-Bündel(W1·4) · E5(Kanton-Rechtsprechung, W2·6-DATA) · Gerichtsferien-Matrix
+begruendung-uebergabe: E3 ist gebaut (195 342 Entscheide, 2 Voll-Läufe determinismus-gleich, Gegenprüfung bestanden) ⇒ Leitprinzip 4 «eine Säule fertig führen» erfüllt. Der offene E3-**Serving**-Rest ist KEIN Massenimport, sondern hängt am David-Gate `vps-bestellung-david` — er rechtfertigt keine Slot-Bindung. Nächstes Kettenglied ist laut Kette W3·12 (Davids Reihenfolge-Entscheid 2.7.2026, `FAHRPLAN-DATENHALTUNG.md` §10(1)); W1·4 wäre falsch (26x: nein + eigener Blocker `wbqdyap3x`).
 uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan erzwingt höchstens EINEN Inhaber (muss 26x: ja)
 -->
 
@@ -133,7 +136,7 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
 ## Querschnitt-Band (läuft begleitend — kein Reihenfolge-Slot)
 
 - **Status-Marker-Audit + Verifikations-Infrastruktur** *(LERNPHASE A/B, `[OF]`)*. Jede Karte/Engine
-  <!-- @meta id: LERNPHASE-AB · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-LERNPHASE-2026.md -->
+  <!-- @meta id: LERNPHASE-AB · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-LERNPHASE-2026.md -->
   trägt sichtbaren ehrlichen Status (`verified`/`entwurf`/`geplant`) + Stand; Golden-Abdeckung &
   Norm-Anker-Prüfung automatisieren. **Werkzeug-Andockung (Audit 1, 2.7.):** `fast-check`-Property-Tests
   für Staffel-/Bandgrenzen (`src/tests/tarifInvarianten.test.ts` — fängt Off-by-one; Dev-Dependency,
@@ -146,8 +149,14 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   grün, keine Engine-Änderung) · (2) Gate-Parallelisierung nachgemessen (seriell 16,2 s → parallel 6,5 s, 10-Kern; durch
   langsamsten Einzel-Check gedeckelt; Rot-Propagation adversarial bewiesen) · (3) B6 Myers-`diff` in `golden:diff` (Gate
   bleibt Byte-Vergleich).
+  **Status-Korrektur 20.7.2026 (§8):** Die drei Werkzeug-Andockungen sind **fertig** (`9da9a9d4` ·
+  `c6b7eef0` · `0d104ab5`, Doku `445001e9`, alle 5.7.2026) — seither **kein** Commit mit
+  `Roadmap: LERNPHASE-AB`, kein Worktree, kein offener PR. Der **Dach-Auftrag** ist damit NICHT erledigt:
+  «jede Karte/Engine trägt sichtbaren ehrlichen Status + Stand» (Strang A) und «Golden-Abdeckung &
+  Norm-Anker-Prüfung automatisieren» sind nirgends als erfüllt belegt. Der Schritt stand nur deshalb auf
+  `wip`, weil das Etikett nach dem 5.7. nie zurückgesetzt wurde ⇒ **`ready`** (offen, baubar, niemand baut).
 - **Adversariale Gegenprüfung — systematisiert** *(QS-GP, LERNPHASE B, `[OF]`)*, neu 29.6.2026 —
-  <!-- @meta id: QS-GP · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
+  <!-- @meta id: QS-GP · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   erweitert die Verifikations-Infrastruktur. Der adversariale Zweitdurchgang (unabhängiger
   Opus-Agent, frischer Kontext, Auftrag: Output gegen die amtliche Quelle **widerlegen**) fing real
   die teuersten Bugs (Tabellen-Drop, Footnote-Leak, `bis`/`ter`-Verlust), hängt aber bisher an
@@ -156,7 +165,15 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   Nachweis-Register [`bibliothek/register/gegenpruefung-register.md`](bibliothek/register/gegenpruefung-register.md).
   **Stand 1.7.2026: Bausteine a+b+c gebaut, gemergt PR #67 (`252731bd`) + prod-live** (Tor
   `check:gegenpruefung` in `npm run gate`, Skill »gegenpruefung«, Register + Quittier-Helfer
-  `npm run gegenpruefung:ok`); offen nur Baustein d (rückwirkende Kampagne). **Hinweis:** die
+  `npm run gegenpruefung:ok`); offen nur Baustein d (rückwirkende Kampagne).
+  **Präzisierung 20.7.2026 (§8 — die alte Formel «offen nur d» verdeckte, dass d SELBST dreistufig ist):**
+  von den drei Kampagnen-Stufen **Rechnen → extrahierte Normen → Rest** ist **nur Stufe 1 «Rechnen» gelaufen**
+  (`58e8237e`, 2.7.2026, ~45 norm-belegte Korrekturen, Trailer `Gegenpruefung: bestanden (Opus, 7 Linsen) —
+  45 confirmed/0 refuted`; Report `bibliothek/register/QS-GP-KAMPAGNE-2026-07-02.md`, 127 Rohbefunde/38 Dateien).
+  **Offen bleiben Stufe 2 (extrahierte Normen), Stufe 3 (Rest) und die BGE-Korpus-Regenerierung.** Das Register
+  führt bisher **keinen Kampagnen-Burn-down**, sondern nur Diff-gebundene Einzelquittungen aus laufender
+  Bauarbeit — der rückwirkende Fortschritt ist also nicht messbar; ihn messbar zu machen gehört in Stufe 2.
+  Status darum `ready` (niemand baut daran), nicht `wip`. **Hinweis:** die
   Risiko-Glob-Formen unten sind der *ursprüngliche Plan* — beim Bau korrigiert (verschachtelte
   `public/normtext/**` statt Top-Level-`*.json`, hand-gerolltes Pfad-Prädikat statt kaputter
   `*(a|b)*`-Alternation, `git status -uall`); die **as-built**-Wahrheit steht in
@@ -188,10 +205,36 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     26×-Asset → nur bei freiem Slot, nie zwei parallel (Leitprinzip 4). Korrekturen aus der Kampagne
     sind verhaltensändernd → golden-gegated (§6) + Push/Deploy nur auf Davids Ja (§9).
 - **Plan-Hygiene-Wächter** *(QS-PH, `[OF]`)*. Mechanischer Check nach Vorbild des SessionStart-Hooks
-  <!-- @meta id: QS-PH · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-PLAN-STEUERUNG.md -->
+  <!-- @meta id: QS-PH · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-PLAN-STEUERUNG.md -->
   `.claude/hooks/struktur-aktuell.py`: meldet **rot**, sobald eine neu hinzugefügte `FAHRPLAN-*.md`
   **nicht aus `ROADMAP.md` verlinkt** ist — setzt die Plan-Hygiene-Regel durch (jede `FAHRPLAN-*.md`
   muss aus der ROADMAP referenziert sein, sonst steuert sie unsichtbar; CLAUDE.md §14 Ziff. 1). Detail + Etikett-System: **`FAHRPLAN-PLAN-STEUERUNG.md`** (Tor `check:plan` = Etikett-Konsistenz + FAHRPLAN-Verlinkung der referenzierten Dateien).
+- **Automatik-Gesundheit: läuft unsere Automatik wirklich?** *(QS-AUTOMATIK, `[OF]`, neu 20.7.2026 — §14-Intake)*.
+  <!-- @meta id: QS-AUTOMATIK · status: ready · of: ja · blocker: null · dep: [] · kollision: [.github/workflows, scripts/datenhaltung/check-turso-frische.ts, scripts/check-ci-laeufe.ts] · worktree: ja · 26x: nein -->
+  **Gebündelt aus zwei Befunden vom 20.7., weil sie dieselbe Prüf-Fläche und dieselbe Risiko-Klasse haben**
+  (Tor-/Automatik-Logik, kein Rechtsinhalt) — §14.2. Der Anlass ist die **zentrale Lektion des 20.7.:**
+  *ein Tor, das sich gegen die eigene Ladung prüft, ist kein Tor* — dreimal an einem Tag aufgetreten
+  (Turso-Sync→Marke→Wächter · selbst-attestierter Gegenprüfungs-Trailer · Hook-Probe mit selbstgebautem
+  stdin). Dieser Querschnitt hält die Gegenfrage dauerhaft offen: **läuft die Automatik, und würde sie
+  scheitern können?**
+  - **a · Zwei tote Workflows** (gefunden von `waechter.yml`, sofort beim ersten Lauf):
+    **`normen-monitor.yml` — letzter Erfolgslauf 22.6.2026, seither failure/cancelled, also ~4 Wochen
+    still tot.** **`fedlex-frische.yml` — jüngster Lauf failure.** Der zweite wiegt schwerer, als er
+    aussieht: er ist der benannte **Ersatz-Arbiter für neun nur-lokale Tore** — solange er rot ist,
+    **läuft deren Allowlist-Begründung leer** (s. `QS-BASIS`, Tor-Parität 16/36). Erst diagnostizieren,
+    dann fixen; nicht raten.
+  - **b · Turso-Wächter-Abdeckung ausdehnen.** `check:turso-frische` (aus #313) prüft vierfach
+    (Struktur · Vollständigkeit gegen Soll-Zahlen · `manifest_sha` · Alter) — offen bleibt: **wo überall**
+    geprüft wird, eine **Laufzeit-Prüfung in `api/suche`** (der Ausfall vom 20.7. war im Betrieb
+    unsichtbar: ein halber Gesetzesindex und **null** Entscheide, ohne je rot zu werden), ein definierter
+    **Alarmpfad** (wer erfährt es, wie?) und **Wachstums-Schwellen** (Budget-Ist 652/1024 MiB = 64 %;
+    ab welchem Füllstand wird gewarnt, bevor der Sync an die Wand fährt?).
+  **Leitplanke für JEDE Massnahme hier (aus derselben Lektion):** das neue/erweiterte Tor gegen eine
+  **unabhängige** Referenz prüfen und seine **Scheiterns-Fähigkeit an einem ECHTEN Aufruf** belegen —
+  nicht an einer Nachbildung mit selbstgebauter Eingabe (CLAUDE.md §6 Ziff. 7).
+  **DoD:** beide Workflows nachweislich wieder grün **mit protokollierter Ursache** (nicht durch Rerun
+  grün gemacht) · `check:ci-laeufe` grün · Alarmpfad dokumentiert · reine Prüflogik ⇒ golden byte-gleich,
+  `Gegenpruefung: n/a`. Trailer `Roadmap: QS-AUTOMATIK`.
 - **Wissens-/Werkzeug-Infrastruktur** *(QS-WISSEN, `[OF]`, neu 10.7.2026)*.
   <!-- @meta id: QS-WISSEN · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-NOTEBOOKLM-EINSATZ.md -->
   NotebookLM als **menschen-seitige** Recall-/Recherche-Oberfläche über den stabilen
@@ -206,7 +249,7 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   (Tabellen-Semantik, Tastatur-e2e, hreflang). Reines SEO geparkt. **Bedingung der Gleichzeitigkeit:
   eigener Worktree.**
 - **Gesetze-Currency & Coverage** *(QS-CURRENCY, `[OF]`, neu 4.7.2026 — Fedlex-Portfolio Paket 1)*.
-  <!-- @meta id: QS-CURRENCY · status: wip · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-cache.sh, public/normtext/register.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
+  <!-- @meta id: QS-CURRENCY · status: done · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-cache.sh, public/normtext/register.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
   Kein Bund-Erlass wird veraltet ausgeliefert, keine Currency-Lücke bleibt strukturell
   unsichtbar. Detailquelle **`FAHRPLAN-FEDLEX-PORTFOLIO.md`** (Paket 1, P1-a…d). **Stand 5.7.2026:
   P1-a + P1-b gebaut (dieser PR) — Paket 1 damit komplett (P1-c/d schon in main, PR #142).**
@@ -218,6 +261,12 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   1:1, 0 Verlust); `check:fedlex-versionen` **Exit 0 (0 stale)**. Nebenbei zwei Mechanik-Bugs gefixt
   (Golden-`--erlass`-Merge behielt Phantom-Keys; check:pdf-netz notation-Join-Partial-Result).
   Gegenprüfung bestanden. Trailer `Roadmap: QS-CURRENCY`. **Status: `[✓]` (Paket 1 abgeschlossen).**
+  **Etikett-Korrektur 20.7.2026:** Der Schritt stand trotz dieses `[✓]` noch auf `wip` ⇒ jetzt **`done`**.
+  Geprüft, dass der Schritt-Umfang wirklich nur **Paket 1** ist: `FAHRPLAN-FEDLEX-PORTFOLIO.md` ordnet die
+  Pakete 2/5/3/4 fremden IDs zu (`W2·6`, `W2·6-REV`, `W3·11`, `W3·13`), `W2·14-SIGNAL` hängt nur lose daran —
+  es bleibt also kein Rest unter diesem Etikett liegen. Die laufende **Korpus-Pflege** (`check:fedlex-versionen`,
+  Wiedervorlage-Läufe, z. B. `5b676c3b`) läuft als Automatik weiter und ist **kein** offener Bau-Schritt;
+  die Gesundheit dieser Automatik wird neu von **`QS-AUTOMATIK`** überwacht (dort ist `fedlex-frische.yml` rot).
 - **Geräte-Last / Performance** *(QS-PERF, `[OF]`, neu 30.6.2026 — Leitprinzip 7 + CLAUDE.md §15)*.
   **§14-Intake 20.7.2026 (David):** TBT-Budget `/gesetze/bund/OR` (#28) — VOR jeder Feature-Zuschreibung Nullprobe + Streuung (Dispatch §0 Ziff. 3): das Budget ist der einzige Job mit Rot im Sample, die Rausch-Rotquote allein erklärt den Grossteil. Lighthouse-Median n≥3 statt Einzelwert gehört in `scripts/perf/` (Worktree `lm-ci`).
   <!-- @meta id: QS-PERF · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-PERFORMANCE.md -->
@@ -300,9 +349,43 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   - **Constraints:** alles `[OF]`/zeitsperre-konform (Darstellungs-/Lade-/Build-Schicht); **kein**
     DOM-entfernendes Virtualisieren/`hydrateRoot`/Teilparse (Treue-Verlust, verworfen); Snapshot-
     Regenerierung (c) öffnet **keinen** 26×-Slot (nur Format, Union byte-gleich); Worktree-Isolation
-    bei `vite.config.ts`/Generatoren/`public/normtext/**` (§12). Trailer `Roadmap: QS-PERF`.
+    bei `vite.config.ts`/Generatoren/`public/normtext/**` (§12).
+  - **e · Tor-Nachlese aus #312/#314 (§14-Intake 20.7.2026) — fünf offene Posten.** Der Tag hat das Tor
+    kalibriert, aber in einem **bewusst stumpfen Übergangszustand** hinterlassen; das darf nicht
+    einschlafen. **Reihenfolge nach Hebel:**
+    1. **LCP-Element-Attribution — die DRINGENDSTE Einzeländerung, ~5 Zeilen, reine Diagnose.**
+       `largest-contentful-paint-element` aus dem LHR ins Log **und** in `dist/_perf/lighthouse.json`.
+       Sie entscheidet, ob die **OR-LCP-Bimodalität** (8× ~3,5 s / 8× ~11,4 s) ein Messartefakt ist oder
+       der **Replace-Repaint als LCP-Element** — im zweiten Fall wäre der 11,4-s-Modus **reales
+       Nutzererleben** und der 3,5-s-Modus misst schlicht das falsche Ereignis. **Jede Messreihe ohne
+       diese Angabe ist verschenkt** — darum vor allen weiteren Messungen.
+    2. **TBT auf OR wieder scharf stellen.** Heute **6500 = bewusst stumpf**; CLS (0,05) trägt derzeit
+       **allein** die Regressions-Last. Erst nach (1) und nach neu erhobener Verteilung.
+    3. **Zwei NEUE blinde Flecken, die #314 selbst erzeugt hat** (ehrlich mitführen, nicht verschweigen):
+       **(a)** Die Chrome-Isolation macht jeden Lauf **kalt** — die entfernte «Drift» war zugleich ein
+       **akzidenteller Detektor für aufschaukelnde Degradation** (Lecks, Listener, Cache-Bloat).
+       Defekte ab der **2. Navigation** werden jetzt **nie** gemessen. **(b)** `nurAbInstall` verbannt
+       **Layout-Sprünge >500 ms nach Interaktion** aus **jedem** Budget — auf langsamen Geräten real
+       sichtbar. Beide brauchen eine bewusste Antwort (eigene Warm-/Interaktions-Messreihe), nicht ein
+       Achselzucken.
+    4. **Versions-Pinning der Deckel dokumentieren.** Die Schwellen sind implizit **Lighthouse-versions-
+       gepinnt** — bisher **undokumentiert**. Ein Lighthouse-Upgrade verschiebt sie still.
+    5. **Revisions-Politik für legitimes Wachstum.** Vorschlag: **Deckel = Ist + max(3 sd, ~25 %)**,
+       **Anhebung nur mit Mess-Beleg**. Ohne solche Politik wird jeder Deckel irgendwann «mal eben»
+       hochgesetzt — und misst danach nichts mehr (Lektion 20.7.).
+    **Abgrenzung:** Der **echte CLS-Defekt auf `/gesetze` (0.109 @8×)** gehört **NICHT hierher**, sondern
+    ist ein Produktfehler mit eigenem Schritt **`W2·15-CLS`** — Tor-Arbeit und Defekt-Behebung dürfen sich
+    nicht gegenseitig verdecken (§14.2).
+  - **f · Serif-Preload nachziehen** *(§14-Intake 20.7.2026 — kleiner UX-Trade-off, Folge von
+    `font-display:optional`)*. `font-display:optional` hat die CLS-Ursache (Serif-Font-Swap unter Linux)
+    beseitigt — **um den Preis**, dass die Serif-Schrift bei langsamer Verbindung im ersten Paint
+    **gar nicht** erscheint und der Wechsel erst beim nächsten Besuch sichtbar wird. Ein gezielter
+    `preload` der tatsächlich im ersten Viewport benutzten Schnitte holt den Trade-off zurück, **ohne**
+    den CLS-Gewinn aufzugeben. **Auflage:** mit CLS-Messung **vorher/nachher** belegen — eine
+    Preload-Änderung, die CLS wieder hebt, ist keine Verbesserung. Klein, eigener Commit.
+    Trailer `Roadmap: QS-PERF`.
 - **Datenhaltung / Single-Source-DB** *(QS-DATA, `[OF]`, neu 2.7.2026 — Council-Entscheid)*.
-  <!-- @meta id: QS-DATA · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
+  <!-- @meta id: QS-DATA · status: blocked · of: ja · blocker: vps-bestellung-david · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
   Für die Korpus-Inhalte (Normtext · Rechtsprechung · Materialien) wird ein **generator-erzeugtes
   DB-Artefakt die EINE Wahrheit (§5)**; `public/*.json` + prerenderte Seiten sind fortan
   **byte-gleiche Projektion** daraus — nie parallel gepflegt. Amtlicher Arbiter bleiben
@@ -575,8 +658,8 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 
 ### Welle 2 — Griff (Auffindbarkeit) + Konsultieren + mehr Klingen
 
-- [~] **5 · Auffindbarkeits-Schicht** *(ein Index → mehrere Oberflächen)*. **Zweiachsiger Einstieg
-  <!-- @meta id: W2·5 · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
+- [ ] **5 · Auffindbarkeits-Schicht** *(ein Index → mehrere Oberflächen)*. **Zweiachsiger Einstieg
+  <!-- @meta id: W2·5 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   (Rechtsgebiet × Aufgabe)** ✅ **28.6.2026 (gegated, deployt 2.7.2026):** `einstiegMatrix()`
   (`src/lib/einstieg.ts`) projiziert den Katalog (§5) auf Rechtsgebiet × Aufgabe; Komponente
   `ZweiachsigerEinstieg` als zweite Achse auf `/rechner` (aufklappbare Gebiets-Kacheln, Werkzeuge
@@ -590,8 +673,24 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Phrasen unscharf (§8-ehrlich). Snippet + Sprung `#art-`. Visuell bestätigt.
   **Offen:** Kanton-Volltext im Index nachziehen · ~~Startseiten-Modul-Rahmen~~ → **wird in W2·5c
   gebaut** (Modul-Registry, `FAHRPLAN-STARTSEITE-V3.md` §4 — FUNDAMENT-Vorleistung).
-- [~] **5b · Reader-Darstellung Bund** *(GESETZESDARSTELLUNG-BUND, `[OF]`, eigener Worktree)* —
-  <!-- @meta id: W2·5b · status: wip(reader-wt) · of: ja · blocker: null · dep: [] · kollision: [src/pages/gesetz-leser/inhalt.tsx, src/pages/gesetz-leser/parts.tsx, src/components/normtext/ArtikelBody.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZESDARSTELLUNG-BUND.md -->
+  **Status-Korrektur 20.7.2026: `wip` → `ready`.** Der Restposten ist gemessen, nicht geschätzt:
+  `scripts/such-index-generieren.ts` baut ausschliesslich `public/such-index/artikel-bund.json` aus
+  `public/normtext/bund` (`ebene: 'bund'` hartcodiert) — der Kanton-Volltext fehlt im Index also belegt.
+  Seit dem 10.7. kein Commit mit `Roadmap: W2·5`, kein Worktree, kein offener PR ⇒ es baut niemand daran.
+  **Zur Klarstellung (Befund 20.7.):** `W2·5b`/`5c`/`5d`/`5g`/`5h` sind **keine Kinder** dieses Schritts —
+  `scripts/plan/*` kennt kein Eltern-/Kind-Konzept, jeder trägt eigenes `@meta` mit eigenem Status. Es ist
+  eine **Nummern-Familie, keine Hierarchie**; W2·5 ist selbsttragend und wird eigenständig abgeschlossen.
+- [ ] **5b · Reader-Darstellung Bund** *(GESETZESDARSTELLUNG-BUND, `[OF]`, eigener Worktree)* —
+  <!-- @meta id: W2·5b · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/pages/gesetz-leser/inhalt.tsx, src/pages/gesetz-leser/parts.tsx, src/components/normtext/ArtikelBody.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZESDARSTELLUNG-BUND.md -->
+  **Status-Korrektur 20.7.2026: `wip(reader-wt)` → `ready`.** Der Marker zeigte auf einen Worktree, den es
+  **nicht mehr gibt** (`git worktree list` kennt nur LexMetrik/lm-ci/lm-fundament/lm-planintake; kein Branch
+  `*w25b*`/`*reader*`). Der Restblock ist gelandet: **PR #156, Merge-Commit `9b0f9e48` (5.7.2026)**.
+  **Vor einem Bau-Start zwingend nachmessen (§8, nicht abhaken ohne Beleg):** `FAHRPLAN-GESETZESDARSTELLUNG-BUND.md`
+  führt Batch C (M4 Suche/Gliederung responsiv · M5 kompakt zum Header · M7 Scroll-Offset nach Suche ·
+  M8 Treffer-Highlight) und Batch D (M11 Verweis-Popup + Artikel-Bezeichnung · M6-Renderteil) noch unabgehakt —
+  **M5 und M8 sind aber vermutlich durch W2·5d-Arbeit faktisch erledigt** (PR #284 «A35 Suche in Kopfzeile +
+  A40 Highlight», PR #301 «Suchfeld in die Kopfzeile»), ohne dass die Fahrplan-Checkboxen nachgezogen wurden.
+  Erst am heutigen Reader verifizieren, dann bauen — sonst wird zweimal dasselbe gebaut.
   konsolidierter QA-Sweep der **Bund-Gesetzesdarstellung** (29.6.2026): 11 Defekt-/Ausbau-Punkte
   (Präambel-Fussnoten · Fussnoten einheitlich erst auf Klick · Randtitel-/Gruppierungslinien je
   Gesetz + Umschalter · Suche↔Gliederung responsiv + kompakt zum Header · Verweis ZGB→BVG via
@@ -1071,6 +1170,44 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Informationshierarchie aus `QS-UI` stehen, sonst wird die Gesetzes-Fläche zweimal angefasst.
   **DoD:** `check:perf-budget` · `check:linien-kanon` · `e2e/leser-lesemass` · axe · **golden byte-gleich
   (Normtext-Treue §15 — Tempo gewinnt nie gegen Treue)**. Trailer `Roadmap: W2·5h-GESETZ-UI`.
+- [ ] **5i-HIST-ANSICHT · Fassungshistorie an-/abwählbar + Fussnoten von Änderungsvermerken trennen**
+  <!-- @meta id: W2·5i-HIST-ANSICHT · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/pages/gesetz-leser/LeserAnsichtMenu.tsx, src/components/normtext/ArtikelBody.tsx, src/pages/gesetz-leser/inhalt.tsx, public/normtext/historie] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZESDARSTELLUNG-V2.md -->
+  *(§14-Intake 20.7.2026, David — Queue-Platz 4 · Darstellung + Datenklassifikation, kein Rechtsinhalt)*.
+  **Der Befund, der den Schritt trägt (gemessen, nicht geschätzt):** im OR sind **778 von 933 Fussnoten
+  Änderungsvermerke** und nur **77 echte Verweise**. Die Fussnoten-Spalte ist damit zu ~83 % Fassungs-
+  historie, die als «Fussnote» getarnt den Lesefluss trägt — wer Fussnoten abschaltet, verliert die
+  echten Verweise mit; wer sie anlässt, liest überwiegend Revisionsprosa.
+  **Bau-Vorschlag:** dreiwertige Auswahl **«Änderungshistorie: aus / als Fussnoten / als Chronologie»**
+  im bestehenden **«Ansicht ▾»-Menü** (`src/pages/gesetz-leser/LeserAnsichtMenu.tsx` hat Persistenz **und** Pre-Paint-Mechanik
+  schon — dort einklinken, kein neues Menü), **Verweis-Fussnoten unabhängig davon** schaltbar. Löst
+  nebenbei das bekannte Leerraum-Residuum.
+  **ZWINGENDE VORSTUFE H0 — Trennbarkeit MESSEN, bevor irgendetwas gebaut wird (§8):** die 778/77-Zahl
+  belegt, *dass* es zwei Klassen gibt, **nicht**, dass sie maschinell **sauber trennbar** sind. Vor dem Bau
+  ist korpusweit (nicht nur am OR — Leitplanke «nie aus einem Beispiel aufs Ganze») zu erheben, mit welcher
+  Präzision/Recall die Klassifikation Änderungsvermerk ↔ Verweis gelingt und **wie die Grauzone aussieht**
+  (Fussnoten, die beides tun). Ergebnis ist ein Verdikt mit Zahlen; fällt es schlecht aus, wird der
+  Umschalter **nicht** gebaut (eine Ansicht, die 5 % der Fussnoten falsch einordnet, verliert Normtext-
+  Information und verstösst gegen §15-Funktions-Treue). **Erst H0, dann H1 (UI).**
+  **Fassungs-Fundament (§14-Intake 20.7., David — gilt über diesen Schritt hinaus):** Dieser Schritt ist die
+  erste aktive Fläche, an der es greift — darum hier verankert statt im geparkten `W2·5g-ZEIT`:
+  **(i)** Fassungs-Schlüssel (`fassungsToken`/`stand`/`sha`) **durchgängig** mitführen, auch wo heute nur die
+  geltende Fassung gezeigt wird · **(ii)** Anker **fassungsstabil** halten (`#art-` darf nicht kippen, wenn
+  später eine zweite Fassung danebentritt) · **(iii)** §8 «nicht geltendes Recht» **unmissverständlich**
+  auszeichnen. Das ist **kein eigener Bau-Schritt**, sondern eine Auflage an **jede** Normtext-Arbeit;
+  Begründung und Detail: `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §7.
+  **DoD:** H0-Verdikt mit Korpus-Zahlen **vor** H1 · `check:normtext`/`check:historie` · golden byte-gleich
+  (§6/§15 — kein Fussnoten-Verlust in KEINER der drei Ansichten) · axe · `check:perf-budget`.
+  Trailer `Roadmap: W2·5i-HIST-ANSICHT`.
+- [d] **5j-TABELLEN · Tabellen in Gesetzen lesbar machen** *(§14-Intake 20.7.2026, David: **ausdrücklich «später»**)*
+  <!-- @meta id: W2·5j-TABELLEN · status: parked · of: ja · blocker: david-spaeter-tabellen · dep: [] · kollision: [src/components/normtext/ArtikelBody.tsx, src/pages/gesetz-leser/inhalt.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZES-UX.md -->
+  Beispiel `/gesetze/kanton/BS-154.810#art-29`. **Datenlage erhoben — die Daten sind GUT:** strukturiert als
+  Block-Feld `mehrspaltig` mit `spalten[{typ,titel}]` + `zeilen[[…]]`. Es ist ein **reines Darstellungs-
+  Problem**, keine Extraktions-Lücke — darum bewusst **nicht** mit `W2·13-KANTONE` (Extraktionstiefe)
+  gebündelt: andere Risiko-Klasse (§14.2). **Fläche: 656 `mehrspaltig`-Blöcke in 137 Erlassen** (VTS 68 ·
+  CHEMRRV 31 · VZV 30 · NBV 26 · VVV 25 · LRV 21). **Beim Bau zu beachten:** Lesespalte 42rem vs. breite
+  Tarif-Tabellen · §15.1 (kein DOM-Entfernen; Ctrl+F und Print müssen vollständig bleiben) · Mobil @390.
+  **Parkgrund, ehrlich:** kein technischer Blocker — David hat den Punkt am 20.7. ausdrücklich zurückgestellt.
+  Umparken auf `ready` ist ein Einzeiler, sobald er ihn zieht. Trailer `Roadmap: W2·5j-TABELLEN`.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
@@ -1150,8 +1287,8 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       (kein `eli/treaty`-Extraktor); International-Volltext 18→27; POC: keine strukturierte Parteien-Kante → «Geltungsbereich»-Anhang
       verbatim, html-0 bei 5/9 stale → kanonische html-N gepinnt; Gegenprüfung bestanden. Detailquelle
       `bibliothek/register/fedlex-staatsvertraege-2026-07-10.md`. **Damit sind alle 5 Portfolio-Pakete gebaut.**
-    - [~] **Datenhaltung-Bau: DB-Artefakt + Massen-Korpus + Edge-Suche** *(W2·6-DATA; Council 2.7.2026 — löst die drei OCL-Abbau-„DAVID-ENTSCHEID"-Punkte auf)*.
-      <!-- @meta id: W2·6-DATA · status: wip · of: ja · blocker: null · dep: [] · kollision: [scripts/normtext-snapshot.ts, scripts/prerender.ts, public/normtext/register.json] · worktree: ja · 26x: ja · fahrplan: FAHRPLAN-DATENHALTUNG.md · slot: inhaber -->
+    - [ ] **Datenhaltung-Bau: DB-Artefakt + Massen-Korpus + Edge-Suche** *(W2·6-DATA; Council 2.7.2026 — löst die drei OCL-Abbau-„DAVID-ENTSCHEID"-Punkte auf)*.
+      <!-- @meta id: W2·6-DATA · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/normtext-snapshot.ts, scripts/prerender.ts, public/normtext/register.json] · worktree: ja · 26x: ja · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
       Andockpunkt **eine Schicht UNTER dem heutigen Generator** — die bestehenden Adapter befüllen
       ein libSQL/SQLite-Artefakt, `public/*.json` + Prerender werden Projektion (Tor `check:paritaet`,
       §7 Build-Regel 6). Etappen (Detail `FAHRPLAN-DATENHALTUNG.md`): **E0** Fundament/Reverse-
@@ -1160,10 +1297,29 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       E3 zuerst, W3·12 danach, David 2.7., `FAHRPLAN-DATENHALTUNG.md` §10(1)) → **E4** Zitat-Graph → **E5** Kanton-Rechtsprechung (26×, Slot-Kette #4) → **E6a**
       Verwaltungsverordnungen (Kreisschreiben — Bund-Strang, kein Slot; Nordstern-Doktyp) → **E6b**
       Materialien-Vollausbau (Detail `FAHRPLAN-DATENHALTUNG.md` §5). E0–E2 golden-neutral zu den Gesetzen; jede Projektions-
-      Änderung golden byte-gleich (§6) + `QS-GP`. OCL-Pakete W12 (Bulk-Parquet) + F2 gehen hier auf. **E0 ✅ 2.7.2026** (PR #80/81, `ad065c03`: 218 Bund-Normtext byte-gleich DB↔JSON, `check:paritaet` in der Gate-Kette, doppelt verifiziert). **E0+ ✅ 3.7.2026** (Branch `feat/qs-data-e0-plus`, expliziter Sub-Schritt, KEIN neuer ROADMAP-Schritt — §14): Ziel-Schema §3 angelegt (erlasse/erlass_fassungen/artikel/entscheide inkl. `ecli_key`/`bge_key`+Indizes/soft_law + leere norm_referenzen/zitat_kanten/norm_rangliste) · Partitionierung je Doktyp (`daten/normtext.db`·`rechtsprechung.db`·`soft-law.db`; Monolith `lexmetrik.db` entfällt ersatzlos) · `normalisiere-zitat.ts` + DB-freie Unit-Tests · Reverse-Ingest ausgedehnt (Kanton-Normtext 1231 · Rechtsprechung 342 · 4 Manifeste inkl. Trailing-Newline · Materialien 1) — **`check:paritaet` byte-gleich über 1796 Dateien**, golden-neutral, doppelt verifiziert. **Nächstes: E1** (Generator-Flip). **Klarstellung Leitprinzip 4:** der Reverse-Ingest bereits committeter Kantons-JSONs öffnet **KEINEN** 26×-Slot (Leitprinzip 4 meint neuen Massenimport, nicht Reverse-Befüllung committeter Daten). **Weichen entschieden 3.7.:** Kontext-Auslieferung = Hybrid (Shards+Edge, `FAHRPLAN-DATENHALTUNG.md` §10(6)/§11.5) · Massen-Rebuild = Voll-Rebuild (§10(7)). **E1 ✅ 3.7.2026** (Branch `feat/qs-data-e1-flip`): Generator-Flip Bund-Normtext auf das Spalten-Zielschema (`erlasse`/`erlass_fassungen`/`artikel`), `public/*.json` = Projektion (Wächter alt≠neu → hart ab); neues Tor **`check:datenhaltung`** (Dump-Manifest-Determinismus + Drift gegen committetes `daten-manifest.json` + Invarianten Orphans/§7-Spalten/ATTACH); Risiko-Globs um `scripts/datenhaltung/**`+`daten/**`+`normtext-snapshot.ts` erweitert; Stabilitäts-Report. Byte-Beweis 3 Doppelläufe alt==neu==committet (218 Erlasse/24858 Artikel), `check:paritaet` unverändert 1796, golden byte-gleich, `QS-GP` bestanden. **VORBEHALT:** alter Direktpfad bleibt Wächter (Entfernen = eigener §6-Schritt); Kanton/Rechtsprechung/Materialien noch Blob-Weg. **E2 ✅ 3.7.2026** (Edge-Suche live: `api/suche.ts` + Turso-Hot-Replika; Sync-Timeout-Wurzel behoben 20.7., PR #313). **E3 ✅** (`rechtsprechung.db`, 488 MB). **Nächstes: E4** (Zitat-Graph) — hält den 26×-Slot.
-    - [~] **+ Auftrags-Eingang 30.6.: Bündel B** — **B1+B2+A18 ✅ GEBAUT 5.7.2026** (Branch
-      <!-- @meta id: W2·6-B · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: ja · 26x: nein -->
-      `feat/w26b-regeste-a18`; B3 offen = reine UI). **B1** BGE ohne «vollständiges Urteil»:
+      Änderung golden byte-gleich (§6) + `QS-GP`. OCL-Pakete W12 (Bulk-Parquet) + F2 gehen hier auf. **E0 ✅ 2.7.2026** (PR #80/81, `ad065c03`: 218 Bund-Normtext byte-gleich DB↔JSON, `check:paritaet` in der Gate-Kette, doppelt verifiziert). **E0+ ✅ 3.7.2026** (Branch `feat/qs-data-e0-plus`, expliziter Sub-Schritt, KEIN neuer ROADMAP-Schritt — §14): Ziel-Schema §3 angelegt (erlasse/erlass_fassungen/artikel/entscheide inkl. `ecli_key`/`bge_key`+Indizes/soft_law + leere norm_referenzen/zitat_kanten/norm_rangliste) · Partitionierung je Doktyp (`daten/normtext.db`·`rechtsprechung.db`·`soft-law.db`; Monolith `lexmetrik.db` entfällt ersatzlos) · `normalisiere-zitat.ts` + DB-freie Unit-Tests · Reverse-Ingest ausgedehnt (Kanton-Normtext 1231 · Rechtsprechung 342 · 4 Manifeste inkl. Trailing-Newline · Materialien 1) — **`check:paritaet` byte-gleich über 1796 Dateien**, golden-neutral, doppelt verifiziert. **Nächstes: E1** (Generator-Flip). **Klarstellung Leitprinzip 4:** der Reverse-Ingest bereits committeter Kantons-JSONs öffnet **KEINEN** 26×-Slot (Leitprinzip 4 meint neuen Massenimport, nicht Reverse-Befüllung committeter Daten). **Weichen entschieden 3.7.:** Kontext-Auslieferung = Hybrid (Shards+Edge, `FAHRPLAN-DATENHALTUNG.md` §10(6)/§11.5) · Massen-Rebuild = Voll-Rebuild (§10(7)). **E1 ✅ 3.7.2026** (Branch `feat/qs-data-e1-flip`): Generator-Flip Bund-Normtext auf das Spalten-Zielschema (`erlasse`/`erlass_fassungen`/`artikel`), `public/*.json` = Projektion (Wächter alt≠neu → hart ab); neues Tor **`check:datenhaltung`** (Dump-Manifest-Determinismus + Drift gegen committetes `daten-manifest.json` + Invarianten Orphans/§7-Spalten/ATTACH); Risiko-Globs um `scripts/datenhaltung/**`+`daten/**`+`normtext-snapshot.ts` erweitert; Stabilitäts-Report. Byte-Beweis 3 Doppelläufe alt==neu==committet (218 Erlasse/24858 Artikel), `check:paritaet` unverändert 1796, golden byte-gleich, `QS-GP` bestanden. **VORBEHALT:** alter Direktpfad bleibt Wächter (Entfernen = eigener §6-Schritt); Kanton/Rechtsprechung/Materialien noch Blob-Weg. **E2 ✅ 3.7.2026** (Edge-Suche live: `api/suche.ts` + Turso-Hot-Replika; Sync-Timeout-Wurzel behoben 20.7., PR #313). **E3 ✅** (`rechtsprechung.db`, 488 MB).
+      **Korrektur 20.7.2026 (§8 — die alte Zeile «Nächstes: E4 — hält den 26×-Slot» war doppelt falsch):**
+      **E4 ist seit 3.7.2026 LOKAL FERTIG** (`FAHRPLAN-DATENHALTUNG.md` §5/E4, Bericht
+      `bibliothek/register/e4-lokal-2026-07-03.md`, Oracle-Tor grün, 0 UNERKLÄRT) — E0/E0+/E1/E2/E3/E4 sind
+      damit alle gebaut. Und der Schritt **hält den 26×-Slot nicht mehr** (am 20.7. an `W3·12` übergeben, s.
+      `@slot-kette`). **Was wirklich offen ist, zerfällt in zwei Klassen:** (i) **VPS-gebunden**
+      (David-Gate `vps-bestellung-david`): E3-Serving (rsync + cold-FTS `fts_entscheide_masse`, 58-GB-Klasse,
+      Read-API, Long-Tail-Route `/rechtsprechung/:key`) und die E4-UI-Panels · (ii) **frei baubar, ohne VPS:**
+      die **Datenhaltungs-Optimierung** (§14-Intake David 20.7., verortet in `QS-BASIS` (d), Bau-Strang hier —
+      inkrementeller Sync · contentless-FTS · Index-Strategie · **Heiss/Kalt-Grenze = DAVID-GATE**, s. unten).
+      Nachgelagert bleiben **E5** (Kanton-Rechtsprechung, 26× — braucht den Slot zurück) und E6a/E6b.
+      **Heiss/Kalt-Grenze als DAVID-GATE (§8-Frage, nicht technisch entscheidbar):** 195 000 Massen-Entscheide
+      passen **nie** in die 1-GB-Turso-Replika (Budget-Ist 20.7.: 652/1024 MiB bei 5093 kuratierten Entscheiden).
+      Es muss darum entschieden werden, **was die Suche behaupten darf**, wenn der Long-Tail kalt liegt:
+      schweigen, «nur kuratierter Korpus durchsucht» ausweisen, oder kalt nachladen mit spürbarer Latenz.
+      Ein stiller Teiltreffer wäre der Fehler aus PR #313 in neuer Form (dort servierte `api/suche` einen halben
+      Index, **ohne je rot zu werden**). Entscheid gehört David; bis dahin nicht implementieren.
+    - [x] **+ Auftrags-Eingang 30.6.: Bündel B** — **B1+B2+A18 ✅ GEBAUT 5.7.2026** (Branch
+      <!-- @meta id: W2·6-B · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: ja · 26x: nein -->
+      `feat/w26b-regeste-a18`). **Korrektur 20.7.2026:** die frühere Klammer «B3 offen = reine UI» war stale —
+      **B3 ist erledigt und empirisch verifiziert** (10.7.2026, s. Zeile «Bündel B» oben: der Sticky-Kopf-Defekt
+      wurde durch den U-KOPF/Split-View-Refactor `60988318` geschlossen, Playwright-Beweis an BGE 152 I 65).
+      Damit sind alle drei Posten des Bündels erledigt ⇒ Status `wip` → **`done`**. **B1** BGE ohne «vollständiges Urteil»:
       aza-Resolver gehärtet (2. OCL-Kopfformat «BGE … (aza)» + Bandjahr statt fehlerhaftem
       `decision_date` als Plausibilitäts-Referenz) — **5/12 voll aufgelöst** (150 I 183/151 V 30/
       151 I 41/150 II 334/151 IV 316), **2 Kollisions-quarantäniert** (152 V 2/20 = OCL-Konflation,
@@ -1182,8 +1338,51 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     - [x] **Verweis-Präzision im Entscheid-Leser (Referenz BGE 151 III 377)** *(W2·6, `QS-GP`, 3.7.2026)*. i.V.m.-Ketten-Verlinkung (Kürzel auf bare Glieder propagiert, `normVerweiseImText`) + Zitierte-Normen-Chips → Sprung zur ersten Fundstelle-Erwägung; Tore grün, Snapshots additiv. **Chronik:** `ROADMAP-CHRONIK.md` → W2·6/Verweis-Präzision.
     - [x] **BGE-Auszug abgeschnitten — vollständig gefixt (34/34)** *(W2·6-BGE, Inhaltsverlust, `[OF]`)*. 29.6.2026: still mitten im Wort gekappte Auszug-Erwägungen voll nachgeladen (`fuelleGekappteErwaegungen` + Id-Disambiguierung) + Schutz-Tor U+2026 in `check:entscheide`; alle 34 BGE regeneriert, golden byte-gleich. Öffnet keinen 26×-Slot. **Chronik:** `ROADMAP-CHRONIK.md` → W2·6/BGE-Auszug.
       - [x] **Rest 30.6.2026 geschlossen** — `bge_151_V_1`/`bge_151_V_30` via Id-Disambiguierung sauber re-gefetcht (kein Hand-Edit §7), WARN-Quarantäne entfernt. **Chronik:** `ROADMAP-CHRONIK.md` → W2·6/BGE-Auszug.
+- [ ] **6-FILTER · Entscheid-Filter über die API — Richter + allgemeine Facetten** *(§14-Intake 20.7.2026, David — Queue-Plätze 2 und 3; **ULTRACODE freigegeben** für Teil b)*
+  <!-- @meta id: W2·6-FILTER · status: ready · of: ja · blocker: null · dep: [] · kollision: [api/suche.ts, scripts/datenhaltung, src/components/suche, src/lib/rechtsprechung, public/rechtsprechung] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-ENTSCHEIDSUCHE-AUSBAU.md -->
+  **Gebündelt, weil beide Teile dieselbe Bau-Fläche tragen** (Turso-Schema + Sync + `api/suche` + Facetten-UI)
+  und dieselbe Risiko-Klasse haben (Abfrage/Projektion, **kein** Rechtsinhalt) — §14.2. Reihenfolge folgt
+  Davids Queue: **a vor b**. Vorleistung steht: Besetzung ist extrahiert und verlinkt (#309/#310/#311),
+  die Sync-Architektur trägt seit #313 einen atomaren Voll-Rebuild.
+  - **a · Richterfilter über die API** — Turso-Tabelle **`entscheid_richter(entscheid_id, slug, rolle)`** +
+    Slug-Index, `api/suche` um **`?richter=<slug>`**. Heute existiert der Filter nur client-seitig über die
+    ausgelieferten Projektionen; über die API ist er nicht abfragbar. **Feasibility 🟢** — Daten liegen vor
+    (19 467 Nennungen, 484 Personen, 100 % eindeutig), es ist Schema + Sync + Query-Parameter.
+  - **b · Gerichtsentscheide allgemein besser filterbar** — gilt **allgemein, nicht nur BS** (David).
+    **Datenlage erhoben, drei ehrlich getrennte Klassen (§8):**
+    🟢 **billig, sofort:** `datum` · `leitcharakter` (**1259 Leitentscheide**) · `sprache` ·
+    `regesteVorhanden` · `gerichtstyp` — alle durchgängig befüllt.
+    🔴 **teuer, NICHT als Filter versprechen:** `normKeys` ist **nur zu 18 % befüllt**. Ein Normen-Filter auf
+    18 % Abdeckung erzeugt stille Falsch-Negative («keine Treffer» statt «nicht erfasst») — das ist der
+    Fehler aus PR #313 in neuer Form. Entweder vorher die Abdeckung heben oder die Lücke im UI **ausweisen**;
+    nicht stillschweigend filtern.
+    🟠 **ableitbar, aber verifikationspflichtig:** **Geschäftsnummer-Präfix → Verfahrensart**
+    (VD 612 · BES 494 · SB 450 · IV 429 …). Die Ableitung ist plausibel und wertvoll, aber sie ist eine
+    **Rechtsaussage über die Verfahrensart** — sie **MUSS gegen die amtliche Geschäftsordnung/das amtliche
+    Abkürzungsverzeichnis verifiziert werden**, bevor sie ein Filter-Label wird (§7 Norm+Link+Stand). Bis
+    dahin nicht ausliefern. Dieser Teil ist Risikopfad ⇒ `check:gegenpruefung`, Opus.
+  **Abgrenzung:** Ranking und Prognose über Richter:innen bleiben gesperrt (`richter-analytik-gate`,
+  `W3·15-RICHTER`); Filtern/Facette/Verlinkung sind ausdrücklich frei. Richter im Entscheid klickbar (#24)
+  ist ✅ mit #311 erledigt und hier **nicht** erneut geplant.
+  **DoD:** `check:entscheide` · `check:besetzung` · `check:turso-frische` (Soll-Zahlen mitziehen!) ·
+  Verifikations-Beleg für jede Verfahrensart-Abkürzung · golden byte-gleich. Trailer `Roadmap: W2·6-FILTER`.
+- [ ] **6-RNAME · Richternamen gegen den Staatskalender auflösen** *(§14-Intake 20.7.2026, David · **Extraktion/Personendaten — Risikopfad**, `QS-GP`)*
+  <!-- @meta id: W2·6-RNAME · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/rechtsprechung, public/rechtsprechung, src/lib/rechtsprechung] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-ENTSCHEIDSUCHE-AUSBAU.md -->
+  Abgekürzte Vornamen auflösen: **«P. Kaderli» → «Kaderli Peter»**, Abgleich gegen **Staatskalender /
+  amtliches Behördenverzeichnis** (§7: amtliche Quelle, mit Stand). **Bewusst NICHT mit `W2·6-FILTER`
+  gebündelt (§14.2): andere Risiko-Klasse** — hier werden Personen identifiziert, dort nur abgefragt.
+  **Harte Gegenrichtung, die den Schritt definiert:** zwei verschiedene Personen mit gleichem Nachnamen +
+  gleicher Initiale werden **NIE verschmolzen**. Aufgelöst wird **nur bei Eindeutigkeit**; bei jeder
+  Mehrdeutigkeit bleiben die Einträge **getrennt** und wandern in einen **Kollisions-Report**. Diese Regel
+  ist nicht optional: #309 ging mit **11 erfundenen Amtsträger:innen** live (u. a. «Donzallaz Beusch» =
+  zwei Bundesrichter verschmolzen), gefunden erst **nach** dem Merge. Eine Namens-Auflösung ist exakt die
+  Operation, die diese Fehlerklasse erzeugt.
+  **DoD:** Auflösung nur bei Eindeutigkeit · Kollisions-Report als Artefakt · Phantom-Scan + Vorsitz-
+  Kardinalität (die Tore aus #310) grün über die **volle** Grundgesamtheit, nicht über eine Stichprobe ·
+  `check:gegenpruefung` **bestanden** (Opus, unabhängig gegen den Staatskalender) · golden byte-gleich.
+  **Fundament zugleich für** `W3·15-RICHTER` und Davids «Kenne-deine-Prüfer»-Dossier.
+  Trailer `Roadmap: W2·6-RNAME`.
 - [ ] **6-ZNETZ · Zitationsnetz: Rückwärts-Zitate + Leitentscheid-Score** *(Ideen-Intake 20.7.2026 · Daten-Derivation, `QS-GP`)*:
-  **§14-Intake 20.7.2026 (David):** Richterfilter über die API (#26, Turso-Schema + `api/suche`) · Richter im Entscheid klickbar (#24, ✅ #311) · Gerichtsentscheide allgemein besser filterbar (#16). Grenze: Filter/Facette frei, Ranking/Prognose bleiben gesperrt (`richter-analytik-gate`).
   <!-- @meta id: W2·6-ZNETZ · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/verzahnung, src/lib/verzahnung, src/lib/rechtsprechung, public/rechtsprechung] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-VERZAHNUNG-UI.md -->
   «Welche Entscheide zitieren diesen?» (Rückwärts-Kanten) + **Leitentscheid-Score nach Zitierhäufigkeit**.
   **Baut auf** hartem Bestand: jeder Entscheid-Snapshot trägt bereits `zitierteEntscheide` (BGE-Zitate UND
@@ -1274,6 +1473,23 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Vollkorpus-Ausbau (BS+AR = 91,4 % des Korpus, ZH 3/~940) — **K-G5 hängt in `W3·12` ein,
   kein Parallel-Schritt** (§14.3). Risikopfade (Tarif/Extraktion) je Opus + `gegenpruefung`.
   Verworfen u. a. Client-Kanton-Suchindex (K10/§15-Arbiter). Detail: **`FAHRPLAN-KANTONE.md`**.
+  **§14-Intake 20.7.2026 (David) — zwei Punkte HIER eingegliedert statt danebengelegt (§14.3), weil sie
+  exakt dieselbe Bau-Fläche treffen (`scripts/normtext`, `public/normtext/kanton`, kantonale Adapter):**
+  - **K-15 · Kantonale Extraktionstiefe** *(**ULTRACODE**, David: später)*. **Befund, nicht Vermutung:**
+    **BS hat 41 % Erlasse ohne Gliederung** · kantonale Fussnoten sind **um Faktor ~40 dünner als beim
+    Bund** · **ZH hat 0 Struktur-Dateien**. **Hypothese** (ausdrücklich als solche markiert): Quellen-
+    Priorität bzw. PDF-Tier — kantonale Erlasse werden aus schwächeren Quellformaten gezogen als die
+    Bundes-Erlasse. **DIAGNOSE VOR FIX, verbindlich:** erst je Kanton erheben, **welches Quellformat**
+    tatsächlich verwendet wird und **wo** die Struktur verloren geht (Quelle dünn? Adapter dünn?
+    Nachbearbeitung?). Ein Fix ohne diese Zuordnung repariert die falsche Schicht. Passt zur bestehenden
+    Leitplanke «korpusweiter Adapter-Hebel VOR jedem Bulk» (`FAHRPLAN-BS-VORBILDKANTON.md`) und zu
+    K-G3 (Gliederungs-Extraktion korpusweit) — dort einhängen, nicht doppelt planen.
+  - **K-16 · Kantonale Änderungshistorie + Fundstelle im Kantonsblatt** *(David: «wenn möglich»)*.
+    **Feasibility 🟢, belegt:** die kantonale Quelle liefert das **strukturiert** — `change_documents`
+    und `history_information_map`. Es ist also Mapping-Arbeit, keine Text-Heuristik. **Zwei Auflagen:**
+    (i) §7 Norm + Link + **Stand** je Fundstelle; (ii) die Kantonsblatt-Fundstelle ist eine amtliche
+    Referenz — **stichprobenweise gegen das Kantonsblatt selbst verifizieren**, nicht der API blind
+    glauben. Beide Punkte sind Risikopfad (Extraktion) ⇒ `check:gegenpruefung`, Opus.
   Trailer `Roadmap: W2·13-KANTONE`.
 - [ ] **14-SIGNAL · Watchlist & Änderungs-Signale** *(Ideen-Intake 20.7.2026 · Infra/UI, kein Rechtsinhalt)*:
   <!-- @meta id: W2·14-SIGNAL · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-wiedervorlage-generieren.ts, public/normtext/currency.json, public/rechtsprechung/register.json, src/lib/zuletztVerwendet.ts, src/pages/Startseite.tsx, src/pages/Einstellungen.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
@@ -1317,6 +1533,43 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   `fassungsToken`/`sha` gebildet, **nicht** gegen `geprueftAm` (sonst Falschmeldungen) · Gerichts-Signal
   mit sichtbarem Bestands-Stand ausgeliefert (§8-Offenlegung der Import-Latenz) · Tore grün.
   Trailer `Roadmap: W2·14-SIGNAL`.
+- [ ] **15-CLS · Echter CLS-Defekt auf `/gesetze` (0.109 @8× CPU)** *(§14-Intake 20.7.2026 · **Produktfehler**, reine UI)*
+  <!-- @meta id: W2·15-CLS · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/pages/Gesetze.tsx, src/components/start] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-PERFORMANCE.md -->
+  **Bewusst ein eigener Schritt und NICHT unter `QS-PERF` mitgeführt (§14.2):** `QS-PERF` ist die Arbeit am
+  **Tor**; dies hier ist ein **Defekt im Produkt**, den Nutzer:innen sehen. Die beiden dürfen sich nicht
+  gegenseitig verdecken — genau das ist am 20.7. passiert, als die Tor-Kalibrierung die ganze
+  Aufmerksamkeit band.
+  **Befund:** `/gesetze` misst **CLS 0.109 unter 8× CPU**; Ursache sind **zwei unreservierte Platzhalter**,
+  die asynchron einwachsen. **Kein Tor deckt das ab:** der CLS-Deckel läuft auf `/gesetze/bund/OR` und der
+  Startseite, nicht auf der Übersicht `/gesetze` — der Defekt ist an allen Budgets vorbeigelaufen.
+  **Fix nach §15.2:** Platz **reservieren** (token-basierte Mindesthöhe am **prerenderten** Element),
+  **nie** weniger Inhalt zeigen. **Zweiter, gleich wichtiger Teil: `/gesetze` in die Perf-Messung aufnehmen**,
+  sonst fällt derselbe Defekt beim nächsten Mal wieder durch.
+  **DoD:** CLS auf `/gesetze` unter dem geltenden Deckel, gemessen unter 8× **und** 4× · `/gesetze` als
+  gemessene Route im Tor verdrahtet · golden byte-gleich · axe. Trailer `Roadmap: W2·15-CLS`.
+- [ ] **16-INVENTAR · Funktions-Inventar (Vorstufe der Bedienungsanleitung)** *(§14-Intake 20.7.2026, David: «erst wenn es Sinn ergibt» → Zweischritt, dies ist Schritt 1)*
+  <!-- @meta id: W2·16-INVENTAR · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/startseiteConfig.ts, bibliothek/INDEX.md] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-QUALITAET.md -->
+  Vollständige, ehrliche Aufnahme dessen, **was Lexmetrik heute kann** — je Werkzeug/Fläche: Zweck,
+  Eingaben, Grenzen, Status (§8 `verified`/`entwurf`/`geplant`), Fundort. **Der Nutzen liegt VOR der
+  Anleitung:** das Inventar ist **Input für `QS-UI`** — man kann eine Oberfläche nicht konsistent machen,
+  solange niemand die Funktionsmenge aufgeschrieben hat. Darum **früh** und **nicht** an die Anleitung
+  gekettet. Quelle ist der bestehende **Funktions-Katalog** (unten in dieser Datei) + `src/lib/startseiteConfig.ts`
+  (§5-SSoT); Heimat des Ergebnisses: `bibliothek/` nach §11.
+  **DoD:** jede Karte aus `src/lib/startseiteConfig.ts` erfasst · Status-Marker gegen die Realität geprüft, nicht
+  abgeschrieben (§8) · `check:bibliothek` grün · Eintrag in `bibliothek/INDEX.md`.
+  Trailer `Roadmap: W2·16-INVENTAR`.
+- [ ] **16-ANLEITUNG · Bedienungsanleitung / Onboarding** *(§14-Intake 20.7.2026, David — Schritt 2, **bewusst spät**)*
+  <!-- @meta id: W2·16-ANLEITUNG · status: ready · of: ja · blocker: null · dep: [W2·16-INVENTAR] · kollision: [src/pages, src/components/layout] · seq-hart: [QS-UI(8a), W2·5h-GESETZ-UI(8b)] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-QUALITAET.md -->
+  Davids Vorgabe wörtlich: **«erst wenn es Sinn ergibt»** — eine Anleitung auf eine Oberfläche zu schreiben,
+  die gleich danach umgebaut wird, ist doppelte Arbeit und veraltet sofort. Darum **nach `QS-UI` (8a) und
+  nach `W2·5h-GESETZ-UI` (8b)**.
+  **Sequenz maschinenlesbar, bewusst getrennt (§14.3 — dieselbe Konstruktion wie bei `W2·5h-GESETZ-UI`):**
+  `dep` trägt nur **`W2·16-INVENTAR`** (echte Bau-Voraussetzung, endlicher Schritt). `QS-UI` ist ein
+  **kontinuierlicher Querschnitt ohne Endzustand** — ein `dep` darauf wäre nie erfüllbar und machte diesen
+  Schritt dauerhaft nicht startbar; massgeblich ist darum `seq-hart` auf die konkreten Teil-Schritte.
+  **DoD:** deckt die Funktionsmenge aus `W2·16-INVENTAR` **vollständig** ab (keine stille Auslassung, §8) ·
+  Sprache nach §13 Ziff. 3 (Fach **und** Laie) · axe · golden byte-gleich.
+  Trailer `Roadmap: W2·16-ANLEITUNG`.
 
 ### Welle 3 — Tiefe / Breite (opportunistisch)
 
@@ -1341,8 +1594,15 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   **Rest offen:** Parlamentsgeschäfte (parlament.ch), künftige-Fassungen-Drift, Übersichtsseite «alle
   laufenden Vernehmlassungen», Laufend-Badge im Reader-Kopf (gesetz-leser war TABU).
 - [ ] **12 · Kanton-Gesetze-Bündel** *(GESETZE-IMPORT-3TIER + BS-VORBILDKANTON + RECHTSSAMMLUNG P6 + POPUP-Kanton-Rest, 26×)*. **Erst öffnen, wenn
-  <!-- @meta id: W3·12 · status: parked · of: ja · blocker: 26x-slot · dep: [] · kollision: [] · worktree: nein · 26x: ja · fahrplan: FAHRPLAN-GESETZE-IMPORT-3TIER.md -->
-  der Prozesskosten-26×-Slot frei ist** (Schritt 4). §14-gebündelt (Phase 0): führende Detailquelle
+  <!-- @meta id: W3·12 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: ja · fahrplan: FAHRPLAN-GESETZE-IMPORT-3TIER.md · slot: inhaber -->
+  **SLOT-ÜBERGABE 20.7.2026: dieser Schritt hält jetzt den 26×-Slot.** E3 (`W2·6-DATA`) hatte ihn seit
+  3.7.2026 belegt, war aber am selben Tag fertig — der Slot wurde 17 Tage lang nur nicht zurückgegeben und
+  hat W3·12 grundlos geparkt gehalten. Übergabe folgt der `@slot-kette` und Davids Reihenfolge-Entscheid
+  2.7.2026 («E3 zuerst, W3·12 danach»); Blocker `26x-slot` damit aufgelöst, Status `parked` → `ready`.
+  **Achtung Umfang (§8, keine Schönung):** «ready» heisst hier *slot-frei und startbar*, nicht *klein*.
+  Dies ist ein 26×-Massenimport; er steht bewusst weit unten in Welle 3 und läuft **nicht** an Davids
+  laufender Queue vorbei. Vor dem Start gilt Leitprinzip 4 (nie zwei 26×-Assets parallel).
+  §14-gebündelt (Phase 0): führende Detailquelle
   `FAHRPLAN-GESETZE-IMPORT-3TIER.md`; **BS-Sofortfixes S1–S13** = `FAHRPLAN-BS-VORBILDKANTON.md`
   (korpusweiter Adapter-Hebel VOR jedem Bulk); Volltext-Kanton = `FAHRPLAN-RECHTSSAMMLUNG.md` (P6).
   BS-Pilot; Kantonale-Entscheide-Import hart **nachgelagert**, nie gleichzeitig. *Werkzeug-Funde (Audit 1):

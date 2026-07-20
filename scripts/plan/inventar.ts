@@ -14,4 +14,10 @@ export const INVENTAR: readonly string[] = [
 
   // Ideen-Intake 20.7.2026 (§14): 8 Alleinstellungs-Ideen verortet.
   'W1·5-PRAXIS', 'W2·5g-ZEIT', 'W2·5h-GESETZ-UI', 'W2·6-ZNETZ', 'W2·14-SIGNAL', 'W3·15-RICHTER', 'QS-UI',
+
+  // §14-Intake 20.7.2026 (2. Welle, Befunde des Tages). Label-Vergabe bewusst geprüft:
+  // W2·5e/5f sind VERBRANNT (am 20.7. doppelt vergeben, danach auf 5g/5h umbenannt) —
+  // die Reihe wird darum bei 5i fortgesetzt, nicht mit den freigewordenen Buchstaben.
+  'W2·5i-HIST-ANSICHT', 'W2·5j-TABELLEN', 'W2·6-FILTER', 'W2·6-RNAME',
+  'W2·15-CLS', 'W2·16-INVENTAR', 'W2·16-ANLEITUNG', 'QS-AUTOMATIK',
 ];

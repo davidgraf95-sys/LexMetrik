@@ -217,11 +217,12 @@ der unmittelbar danach laufende `check:plan` nie an der eigenen Setzer-Aktion ro
   Wächter — kein zweites Tool, nichts fällt unter den Tisch.
 - **Nur Prüflogik** → golden byte-gleich (§6).
 
-**Einhängung (verifiziert):** `check:plan` wird der **`check`-`&&`-Kette in `package.json`** hinzugefügt;
-`gate.sh` ruft im `voll`-Modus `npm run check`, damit läuft es in `npm run gate` mit. **Lokal**, CI
-unverändert. Muster = reale `check:*`-Skripte (`check:perf-budget`, `check:design-tokens`);
-`check:gegenpruefung` ist **noch nicht gebaut**, dient nicht als Vorlage. Neue `.ts` müssen `npm run
-lint` (eslint, in `gate voll`) bestehen.
+**Einhängung — Stand 20.7.2026 (as-built, ersetzt die Bau-Zeit-Planung):** `check:plan` läuft in
+`check:seriell` (`package.json`) **und** als Schritt in `.github/workflows/ci.yml` — also nicht mehr
+nur lokal. `npm run check:plan` grün verifiziert 20.7.2026. Muster = reale `check:*`-Skripte
+(`check:perf-budget`, `check:design-tokens`). **Korrektur:** die frühere Zeile «`check:gegenpruefung`
+ist noch nicht gebaut» ist überholt — das Tor steht seit PR #67 (1.7.2026, Bausteine a+b+c) und ist
+seither eine taugliche Vorlage. Neue `.ts` müssen `npm run lint` (eslint, in `gate voll`) bestehen.
 
 ---
 
