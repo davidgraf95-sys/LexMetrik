@@ -73,6 +73,7 @@ const ALLOWLIST: Record<string, string> = {
   'check:pdf-quellen': 'braucht die PDF-Quellen-Caches (nicht im CI-Checkout)',
   'check:gegenpruefung': 'CI-Selbstschutz: no-op-grün unter CI=1 (kern.ts) — Arbiter ist lokal + check:merge-schutz',
   'check:zyklen': 'reine Statik über Importgraph — vom lint-Job mitabgedeckt',
+  'check:dispatch-klausel': 'reine Statik über eine Doku-Datei; CI-Verdrahtung offen — ci.yml gehört am 20.7. dem parallelen lm-ci-Worktree, Nachzug in Task 30',
   'check:tor-paritaet': 'dieses Tor selbst — prüft die Liste, steht nicht in ihr',
 };
 
