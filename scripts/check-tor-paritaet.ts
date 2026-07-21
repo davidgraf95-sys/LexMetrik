@@ -59,31 +59,20 @@ function ciTore(): Map<string, string[]> {
  * ein bewusster Entscheid ist und nicht ein Versehen.
  */
 const ALLOWLIST: Record<string, string> = {
-  'check:design-tokens': 'reine Statik über src/ — vom lint-Job in ci.yml mitabgedeckt',
-  'check:farbwelt': 'reine Statik über tailwind.config.js — lint-Job deckt Klassenfehler',
-  'check:seo-index': 'liest gebautes dist/ — im CI durch den build-Job implizit geprüft',
-  'check:verfall-ui': 'UI-Projektion des Verfallsregisters; check:verfall läuft in CI',
-  'check:zaehler': 'Zähler-Konsistenz gegen Katalog — deterministisch, kein Netz',
-  'check:tabellen': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:invarianten': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:p-klassen': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:bilder': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:vollstaendigkeit': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:artikel-revisionen': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:historie': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:grundart': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:linien-kanon': 'Darstellungs-Kanon, reine Statik',
   // check:entscheide / check:bs-entscheide / check:besetzung standen hier bis
   // 20.7.2026 mit «braucht rechtsprechung.db (488 MB)». Das war sachlich falsch:
   // sie lesen die committeten Projektionen unter public/rechtsprechung/
   // (ladeBestandSnapshots), nicht die DB — gemessen je ~1 s grün unter CI=1.
   // Alle drei laufen jetzt in ci.yml. Der Eintrag entfiel damit ersatzlos.
+  //
+  // 18 weitere Einträge (design-tokens, farbwelt, seo-index, verfall-ui,
+  // zaehler, tabellen, invarianten, p-klassen, bilder, vollstaendigkeit,
+  // artikel-revisionen, historie, grundart, linien-kanon, revisionen, pdf,
+  // pdf-quellen, zyklen) entfielen am 21.7.2026 mit der R1-Verdrahtung dieser
+  // Tore in ci.yml (Tor-Wirksamkeits-Audit #318: 17 von 20 Delegations-
+  // Begründungen hielten der Sabotage-Probe nicht stand).
   'check:materialien': 'braucht daten/*.db für die Byte-Reprojektion (CI-Zweig prüft committete Shards)',
-  'check:revisionen': 'Normtext-Projektion; Drift-Arbiter ist fedlex-frische.yml',
-  'check:pdf': 'braucht die PDF-Quellen-Caches (nicht im CI-Checkout)',
-  'check:pdf-quellen': 'braucht die PDF-Quellen-Caches (nicht im CI-Checkout)',
   'check:gegenpruefung': 'liest den Working Tree, der in CI sauber ist; protokolliert unter CI=1 ausdrücklich SKIP (§6 Ziff. 7 lit. b) — Arbiter für den committeten Bereich ist check:merge-schutz in ci.yml',
-  'check:zyklen': 'reine Statik über Importgraph — vom lint-Job mitabgedeckt',
 };
 
 const seriell = seriellTore();
