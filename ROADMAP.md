@@ -1218,6 +1218,16 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     Quelle ist nachweislich reich genug); NICHT K-G4 (das ist die andere Block-Klasse
     `enumeration_tabular`/Barème). Risikopfad (Extraktion) ⇒ `check:gegenpruefung`, Opus.
     Detail: `FAHRPLAN-KANTONE.md` §1-D.
+  - **K-18 · Verweis-Erkenner: zusammengesetzte Abs.-/Art.-Angaben** *(Anlassfall `BS-154.100`
+    § 92 Abs. 1 lit. d/f GOG, David: StGB-Verweise nicht verlinkt)*. **Am Erkenner reproduziert:**
+    `normVerweiseImText` (geteilt, `src/lib/fedlex.ts`) erkennt «Art. 62c **Abs. 1-3 und Abs. 6**
+    StGB», «Art. 63b **Abs. 2, 3 und 5** StGB» und «(Art. 7 **Abs. 3, 39 und 40** JStPO)» NICHT
+    (je 0 Treffer); einfache Formen inkl. Buchstaben-Artikel (62a/62c) treffen. **Wirkung
+    site-weit, nicht kantonsspezifisch** — Ausmass obere Schranke ~117 Stellen / **72 Erlasse**
+    (Bund + Kanton). Vorbild für den Fix: `artikelnPluralVerweise` (Plural-Formen sind gelöst).
+    Eigene Einheit statt K-5-Anbau (K-5 = «EINE Einheit, gleiche Datei» für §-Verweise); kein
+    Korpus-Rebuild, golden-neutral; Leitplanke «kein Link besser als falscher Link» (§1).
+    Detail: `FAHRPLAN-KANTONE.md` §1-D/K-18.
   Trailer `Roadmap: W2·13-KANTONE`.
 - [ ] **14-SIGNAL · Watchlist & Änderungs-Signale** *(Ideen-Intake 20.7.2026 · Infra/UI, kein Rechtsinhalt)*:
   <!-- @meta id: W2·14-SIGNAL · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-wiedervorlage-generieren.ts, public/normtext/currency.json, public/rechtsprechung/register.json, src/lib/zuletztVerwendet.ts, src/pages/Startseite.tsx, src/pages/Einstellungen.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->

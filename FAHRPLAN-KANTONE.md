@@ -473,3 +473,39 @@ die amtliche Darstellung (Stufen identisch) · Unit-Test Zitat-Kette für die Re
 Ziff.→lit. (die invertierte Heuristik-Annahme) · Korpus-Zählung: wie viele Kanton-Artikel tragen
 zweistufige enumeration_item-Blöcke (Ausmass ausweisen, §8) · `check:gegenpruefung` bestanden
 (Opus) · Tore grün. Trailer `Roadmap: W2·13-KANTONE`.
+
+### K-18 · Verweis-Erkenner: zusammengesetzte Abs.-/Art.-Angaben — Aufwand S/M — golden-neutral, Wirkung site-weit
+
+**Anlassfall (David, 21.7.2026):** `BS-154.100#art-92`, § 92 Abs. 1 lit. d und lit. f GOG —
+StGB-Verweise nicht verlinkt.
+
+**Reproduziert am Erkenner (deterministisch, `normVerweiseImText`, `src/lib/fedlex.ts`):**
+
+| Textstelle | Treffer |
+|---|---|
+| «Art. 62c **Abs. 1-3 und Abs. 6** StGB» (lit. d) | **0** — Absatz-Bereich |
+| «Art. 63b **Abs. 2, 3 und 5** StGB» (lit. f) | **0** — Absatz-Aufzählung |
+| «(Art. 7 **Abs. 3, 39 und 40** JStPO)» (Ziff. 5, gleicher §) | **0** — Artikel-Aufzählung |
+| «Art. 59 Abs. 4 StGB» / «Art. 62a Abs. 3 StGB» / «Art. 62c Abs. 4 StGB» | je 1 ✓ |
+
+Die Lücke liegt NICHT im Kanton-Adapter, sondern im **geteilten** Erkenner (§5) — sie trifft
+Bund-Seiten genauso. **Ausmass (obere Schranke, Korpus-Scan 21.7.2026):** ~117 Textstellen in
+**72 Erlassen** (Bund + Kanton): 73× Abs.-Bereich («Abs. 1-3»), 37× Abs.-Aufzählung
+(«Abs. 2, 3 und 5»), 7× Artikel-Aufzählung («Abs. 3, 39 und 40 JStPO»).
+
+**Fix-Richtung:** die drei zusammengesetzten Singular-Formen im Erkenner nachrüsten; Vorbild ist
+`artikelnPluralVerweise` (die PLURAL-Formen «Absätze 1 und 2» sind bereits gelöst, inkl. der
+numerus-ambigen Abkürzungen). Link-Ziel bleibt der Artikel (Abs.-Feinheit ändert das Ziel nicht) —
+entscheidend ist, dass der Span **erkannt** wird.
+
+**Leitplanke (aus K-5 übernommen, §1):** lieber kein Link als ein falscher Link — die
+Artikel-Aufzählung («…, 39 und 40 JStPO») erzeugt nur dann Mehrfach-Links, wenn die Zuordnung
+Nummer→Artikel eindeutig ist; im Zweifel bleibt die Aufzählung ein Span mit EINEM Ziel (Art. 7).
+
+**Abgrenzung:** eigene Einheit statt K-5-Anbau — K-5 ist ausdrücklich «EINE Einheit (gleiche
+Datei)» für §-Verweise; K-18 ändert eine andere Datei (`src/lib/fedlex.ts`) mit site-weiter
+Wirkung. Kein Korpus-Rebuild (reiner Reader-/Erkenner-Pass, Snapshots unberührt).
+
+**DoD:** Unit-Tests für die drei Muster + Negativfälle (bestehende Treffer bleiben byte-gleich
+erkannt) · Anlassfälle § 92 lit. d/f + Ziff. 5 verlinkt · golden byte-gleich (keine
+Dokument-/Engine-Änderung) · Tore grün. Trailer `Roadmap: W2·13-KANTONE`.
