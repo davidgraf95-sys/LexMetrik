@@ -178,6 +178,14 @@ function main(): void {
     ({ kanten, dokMeta } = ladeKantenAusDb(db));
     db.close();
   }
+  // Reprojektionsfähig ist die DB nur MIT Harvest-Kanten: `datenhaltung:build` erzeugt
+  // eine hohle soft-law.db (nur Blob-Ingest, norm_referenzen/soft_law leer) — Byte-
+  // Reprojektion daraus würde JEDEN committeten Shard fälschlich als Orphan melden
+  // (Falsch-Rot 21.7.2026). Massgeblich sind allein die kanten: projiziereShards leitet
+  // die Shard-Dateien ausschliesslich daraus ab; dokMeta ohne kanten würde den Byte-Pfad
+  // betreten und dasselbe Falsch-Rot erzeugen (Gegenprüfungs-Befund 21.7.2026, Angriff 5).
+  // Ohne Kanten gilt der CI-Pfad; das SKIP wird protokolliert, nie still (§6 Ziff. 7 lit. b).
+  const reprojektionsfaehig = kanten.length > 0;
 
   // ── 4. register.json einlesen + Dreieck/Determinismus (byte-gleich) ───────────
   if (!existsSync(REGISTER_PFAD)) {
@@ -196,15 +204,19 @@ function main(): void {
     fehler.push(`${REGISTER_PFAD} weicht von der frischen Projektion ab — nur über den Generator pflegen (§2). 'npm run materialien -- --datum=$(date +%F)'.`);
   }
 
-  // Shard-Byte-Reprojektion nur lokal-mit-DB; in CI (keine DB) direkt validieren (§0/M0-Vermerk).
+  // Shard-Byte-Reprojektion nur lokal-mit-Harvest-DB; sonst (CI ohne DB, hohle Build-DB)
+  // committete Shards direkt validieren (§0/M0-Vermerk).
   let downgradesN = 0;
-  if (dbExists) {
+  if (dbExists && reprojektionsfaehig) {
     const shard1 = projiziereShards(register.erzeugt, kanten, dokMeta, korpus);
     const shard2 = projiziereShards(register.erzeugt, kanten, dokMeta, korpus);
     if (JSON.stringify(shard1.dateien) !== JSON.stringify(shard2.dateien)) fehler.push('Shard-Projektion nicht deterministisch (2-Lauf-Diff).');
     downgradesN = shard1.downgrades.length;
     pruefeShardDrift(shard1.dateien, gelistet);
   } else {
+    if (dbExists) {
+      console.log(`SKIP  Byte-Reprojektion: ${SOFT_LAW_DB} ohne Harvest-Zeilen (norm_referenzen/soft_law leer, z.B. nach datenhaltung:build) — committete Shards werden direkt validiert (CI-Pfad).`);
+    }
     pruefeCommittedShards(gelistet);
   }
 
