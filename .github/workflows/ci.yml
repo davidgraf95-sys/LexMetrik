@@ -122,6 +122,31 @@ jobs:
         run: npm run check:tor-paritaet
       - name: Dispatch-Pflichtklausel (§0-Generator lauffähig)
         run: npm run check:dispatch-klausel
+      # ── R1-Nachzug (20.7.2026): die bis dahin unsichtbaren Tore ─────────────
+      # Das Tor-Wirksamkeits-Audit (bibliothek/, PR #318) hat die 20 Allowlist-
+      # Begruendungen per Sabotage geprueft: 17 halten NICHT, 2 sind gar keine
+      # Begruendung, 1 haelt. Sechs Proben, sechsmal dasselbe Bild — zustaendiges
+      # Tor ROT, behaupteter Ersatz GRUEN (bei "vom lint mitabgedeckt" war die
+      # lint-Ausgabe sogar byte-identisch zur Baseline). Die 9x behauptete
+      # Delegation an fedlex-frische.yml scheitert dreifach: der Workflow faehrt
+      # diese Tore nicht, faengt die Fehlerklasse nicht, und lief genau einmal —
+      # mit failure.
+      # Kostenargument gibt es keines: alle zusammen laufen unter CI=1 in ~10 s.
+      # Und: check:besetzung — das Tor, das die 11 erfundenen Amtstraeger:innen
+      # fing — stand selbst auf dieser Liste. Diese Tore sind nicht ertragsarm,
+      # sie waren unsichtbar.
+      - name: Darstellungs-Kanon (Tokens · Farbwelt · Linien · p-Klassen)
+        run: npm run check:design-tokens && npm run check:farbwelt && npm run check:linien-kanon && npm run check:p-klassen
+      - name: Import-Zyklen
+        run: npm run check:zyklen
+      - name: Normtext-Projektionen (Vollständigkeit · Zähler · Historie · Revisionen)
+        run: npm run check:vollstaendigkeit && npm run check:zaehler && npm run check:historie && npm run check:revisionen && npm run check:artikel-revisionen
+      - name: Normtext-Struktur (Tabellen · Grundart · Invarianten)
+        run: npm run check:tabellen && npm run check:grundart && npm run check:invarianten
+      - name: Quellen-Projektionen (PDF · PDF-Quellen · Bilder)
+        run: npm run check:pdf && npm run check:pdf-quellen && npm run check:bilder
+      - name: SEO-Index · Verfall-UI
+        run: npm run check:seo-index && npm run check:verfall-ui
       # dist EINMAL bauen, an e2e-Shards + perf weitergeben (O-3.3): der teure
       # Build-Schritt (gen:suchindex + tsc + vite build + prerender) läuft nur
       # hier; die Folgejobs holen dist als Artefakt statt 3× zu bauen.
