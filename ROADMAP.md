@@ -1202,6 +1202,22 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     (i) §7 Norm + Link + **Stand** je Fundstelle; (ii) die Kantonsblatt-Fundstelle ist eine amtliche
     Referenz — **stichprobenweise gegen das Kantonsblatt selbst verifizieren**, nicht der API blind
     glauben. Beide Punkte sind Risikopfad (Extraktion) ⇒ `check:gegenpruefung`, Opus.
+  **§14-Intake 21.7.2026 (David) — hier eingegliedert (§14.3, gleiche Bau-Fläche `scripts/normtext` +
+  `public/normtext/kanton`):**
+  - **K-17 · enumeration_item-Verschachtelung: explizite `tiefe` im LexWork-Adapter** *(Anlassfall
+    `BS-154.100` § 71 GOG, David: «Tabelle nicht stimmig»)*. **Kette komplett diagnostiziert (nicht
+    Hypothese):** die amtliche LexWork-Quelle TRÄGT die Stufe (Unterpunkt = leere erste Nummernzelle
+    + zweite `number`-Zelle im `enumeration_item`-Markup), `adapter-lexwork.ts` flacht beim
+    Extrahieren ab (`items` ohne `tiefe` — das Feld existiert seit M6 nur für Bund/Fedlex), und die
+    Renderer-Fallback-Heuristik (`ArtikelBody.tsx`) rät die Stufen mit der **inversen** Annahme
+    (lit.=Hauptstufe, Ziff. danach=Unterstufe) → § 71 rückt «2. das Dreiergericht» UNTER lit. a/b
+    ein, Haupt- und Unterpunkte erscheinen vertauscht. **§1-Folge, darum kein Kosmetik-Punkt: die
+    Zitat-Kette der Zitierknöpfe baut auf den geratenen Stufen** — präzise Zitate («§ 71 Abs. 1
+    Ziff. 2 lit. b GOG») können falsch zusammengesetzt werden. Konkreter, **sofort baubarer**
+    Einzelfall der K-15-Klasse mit bereits erfüllter Diagnose-Auflage (richtige Schicht = Adapter,
+    Quelle ist nachweislich reich genug); NICHT K-G4 (das ist die andere Block-Klasse
+    `enumeration_tabular`/Barème). Risikopfad (Extraktion) ⇒ `check:gegenpruefung`, Opus.
+    Detail: `FAHRPLAN-KANTONE.md` §1-D.
   Trailer `Roadmap: W2·13-KANTONE`.
 - [ ] **14-SIGNAL · Watchlist & Änderungs-Signale** *(Ideen-Intake 20.7.2026 · Infra/UI, kein Rechtsinhalt)*:
   <!-- @meta id: W2·14-SIGNAL · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-wiedervorlage-generieren.ts, public/normtext/currency.json, public/rechtsprechung/register.json, src/lib/zuletztVerwendet.ts, src/pages/Startseite.tsx, src/pages/Einstellungen.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->

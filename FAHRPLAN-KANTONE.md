@@ -425,3 +425,51 @@ auf Fussnoten-Prosa (anders als G-HIST beim Bund, das aus Prosa rekonstruieren m
 **Verhältnis zum Fassungs-Fundament:** Beide Punkte erzeugen Fassungs-/Änderungsdaten. Es gilt die
 Auflage aus `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §7.4 (Fassungs-Schlüssel durchgängig, Anker
 fassungsstabil, §8 «nicht geltendes Recht» unmissverständlich).
+
+---
+
+## §1-D · §14-Intake 21.7.2026 (David) — K-17
+
+Eingegliedert statt danebengelegt (CLAUDE.md §14.3): exakt die Bau-Fläche dieses Plans
+(`scripts/normtext/adapter-lexwork.ts`, `public/normtext/kanton`, Kanton-Reader).
+
+### K-17 · enumeration_item-Verschachtelung: explizite `tiefe` im LexWork-Adapter — Aufwand S/M — **Risikopfad: Opus + gegenpruefung**
+
+**Anlassfall (David, 21.7.2026):** `lexmetrik.vercel.app/gesetze/kanton/BS-154.100#art-71` —
+«Tabelle nicht stimmig».
+
+**Kette komplett diagnostiziert (21.7.2026), alle vier Glieder am Objekt belegt:**
+
+1. **Amtliche Quelle trägt die Stufe.** LexWork-`xhtml_tol` (API
+   `/api/de/texts_of_law/154.100`) markiert zweistufige Aufzählungen strukturell: Hauptpunkt =
+   `<table class='enumeration_item'>` mit `<td class='number'>1.</td>` + `colspan='3'`; Unterpunkt =
+   **leere erste Nummernzelle** (`&nbsp;`) + zweite `number`-Zelle (`a.`) + `colspan='2'`. § 71 GOG:
+   Ziff. 1./2./3. = Spruchkörper (Einzelgericht/Dreiergericht/Kammer), lit. a./b. = Fälle darunter.
+2. **Adapter flacht ab.** `adapter-lexwork.ts` extrahiert `enumeration_item` in flache
+   `items[{marke,text}]` ohne Stufen-Information. Das Feld `tiefe` existiert seit M6 nur im
+   Bund-Pfad (Fedlex); Kanton-Snapshots (hier `public/normtext/kanton/BS-154.100.json`) haben es nie.
+3. **Renderer rät invers.** Die Fallback-Heuristik in `ArtikelBody.tsx` (greift genau dann, wenn
+   keine `tiefe` vorliegt) nimmt an: Bst = Stufe 0, Ziff. NACH einem Bst = Stufe 1. § 71 ist genau
+   umgekehrt strukturiert → «2. das Dreiergericht» wird unter lit. a/b eingerückt, «a./b.» stehen
+   auf Hauptstufe. Die angezeigte Hierarchie ist **invertiert**, nicht nur unschön.
+4. **§1-Folge — Zitat-Treue betroffen:** Die Zitat-Kette der Zitierknöpfe (itemZitat) baut die
+   Eltern-Kette aus denselben geratenen Stufen. Präzise Zitate der Form
+   «§ 71 Abs. 1 Ziff. 2 lit. b GOG» können falsch zusammengesetzt werden.
+
+**Fix-Richtung (Schicht identifiziert — Adapter, nicht Quelle, nicht Nachbearbeitung):**
+- Adapter emittiert `tiefe` aus der Zellstruktur (Zahl der führenden leeren `number`-Zellen =
+  Stufe); additives Feld, bestehendes Schema `items[].tiefe` vom Bund-Pfad wiederverwenden (§5).
+- Kanton-Snapshots über den Generator regenerieren (nie Hand-Edit, §7 Build-Regel).
+- Renderer: der existierende explizite `tiefe`-Pfad übernimmt; die Heuristik bleibt nur Fallback
+  für noch nicht regenerierte Bestände.
+
+**Abgrenzung:** Einzelfall-konkreter Ableger der K-15-Klasse (Extraktionstiefe) — die dortige
+Auflage «Diagnose vor Fix» ist für diese Fehlerklasse ERFÜLLT (siehe Kette oben); K-15 bleibt als
+korpusweites Diagnose-Programm unberührt. NICHT K-G4: dort geht es um `enumeration_tabular`
+(Gebühren-/Barème-Tabellen), hier um `enumeration_item`-Verschachtelung.
+
+**DoD:** `tiefe` additiv (Regeneration sonst byte-gleich, 2 Läufe identisch) · § 71-Abgleich gegen
+die amtliche Darstellung (Stufen identisch) · Unit-Test Zitat-Kette für die Reihenfolge
+Ziff.→lit. (die invertierte Heuristik-Annahme) · Korpus-Zählung: wie viele Kanton-Artikel tragen
+zweistufige enumeration_item-Blöcke (Ausmass ausweisen, §8) · `check:gegenpruefung` bestanden
+(Opus) · Tore grün. Trailer `Roadmap: W2·13-KANTONE`.
