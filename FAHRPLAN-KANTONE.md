@@ -425,3 +425,87 @@ auf Fussnoten-Prosa (anders als G-HIST beim Bund, das aus Prosa rekonstruieren m
 **Verhältnis zum Fassungs-Fundament:** Beide Punkte erzeugen Fassungs-/Änderungsdaten. Es gilt die
 Auflage aus `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §7.4 (Fassungs-Schlüssel durchgängig, Anker
 fassungsstabil, §8 «nicht geltendes Recht» unmissverständlich).
+
+---
+
+## §1-D · §14-Intake 21.7.2026 (David) — K-17
+
+Eingegliedert statt danebengelegt (CLAUDE.md §14.3): exakt die Bau-Fläche dieses Plans
+(`scripts/normtext/adapter-lexwork.ts`, `public/normtext/kanton`, Kanton-Reader).
+
+### K-17 · enumeration_item-Verschachtelung: explizite `tiefe` im LexWork-Adapter — Aufwand S/M — **Risikopfad: Opus + gegenpruefung**
+
+**Anlassfall (David, 21.7.2026):** `lexmetrik.vercel.app/gesetze/kanton/BS-154.100#art-71` —
+«Tabelle nicht stimmig».
+
+**Kette komplett diagnostiziert (21.7.2026), alle vier Glieder am Objekt belegt:**
+
+1. **Amtliche Quelle trägt die Stufe.** LexWork-`xhtml_tol` (API
+   `/api/de/texts_of_law/154.100`) markiert zweistufige Aufzählungen strukturell: Hauptpunkt =
+   `<table class='enumeration_item'>` mit `<td class='number'>1.</td>` + `colspan='3'`; Unterpunkt =
+   **leere erste Nummernzelle** (`&nbsp;`) + zweite `number`-Zelle (`a.`) + `colspan='2'`. § 71 GOG:
+   Ziff. 1./2./3. = Spruchkörper (Einzelgericht/Dreiergericht/Kammer), lit. a./b. = Fälle darunter.
+2. **Adapter flacht ab.** `adapter-lexwork.ts` extrahiert `enumeration_item` in flache
+   `items[{marke,text}]` ohne Stufen-Information. Das Feld `tiefe` existiert seit M6 nur im
+   Bund-Pfad (Fedlex); Kanton-Snapshots (hier `public/normtext/kanton/BS-154.100.json`) haben es nie.
+3. **Renderer rät invers.** Die Fallback-Heuristik in `ArtikelBody.tsx` (greift genau dann, wenn
+   keine `tiefe` vorliegt) nimmt an: Bst = Stufe 0, Ziff. NACH einem Bst = Stufe 1. § 71 ist genau
+   umgekehrt strukturiert → «2. das Dreiergericht» wird unter lit. a/b eingerückt, «a./b.» stehen
+   auf Hauptstufe. Die angezeigte Hierarchie ist **invertiert**, nicht nur unschön.
+4. **§1-Folge — Zitat-Treue betroffen:** Die Zitat-Kette der Zitierknöpfe (itemZitat) baut die
+   Eltern-Kette aus denselben geratenen Stufen. Präzise Zitate der Form
+   «§ 71 Abs. 1 Ziff. 2 lit. b GOG» können falsch zusammengesetzt werden.
+
+**Fix-Richtung (Schicht identifiziert — Adapter, nicht Quelle, nicht Nachbearbeitung):**
+- Adapter emittiert `tiefe` aus der Zellstruktur (Zahl der führenden leeren `number`-Zellen =
+  Stufe); additives Feld, bestehendes Schema `items[].tiefe` vom Bund-Pfad wiederverwenden (§5).
+- Kanton-Snapshots über den Generator regenerieren (nie Hand-Edit, §7 Build-Regel).
+- Renderer: der existierende explizite `tiefe`-Pfad übernimmt; die Heuristik bleibt nur Fallback
+  für noch nicht regenerierte Bestände.
+
+**Abgrenzung:** Einzelfall-konkreter Ableger der K-15-Klasse (Extraktionstiefe) — die dortige
+Auflage «Diagnose vor Fix» ist für diese Fehlerklasse ERFÜLLT (siehe Kette oben); K-15 bleibt als
+korpusweites Diagnose-Programm unberührt. NICHT K-G4: dort geht es um `enumeration_tabular`
+(Gebühren-/Barème-Tabellen), hier um `enumeration_item`-Verschachtelung.
+
+**DoD:** `tiefe` additiv (Regeneration sonst byte-gleich, 2 Läufe identisch) · § 71-Abgleich gegen
+die amtliche Darstellung (Stufen identisch) · Unit-Test Zitat-Kette für die Reihenfolge
+Ziff.→lit. (die invertierte Heuristik-Annahme) · Korpus-Zählung: wie viele Kanton-Artikel tragen
+zweistufige enumeration_item-Blöcke (Ausmass ausweisen, §8) · `check:gegenpruefung` bestanden
+(Opus) · Tore grün. Trailer `Roadmap: W2·13-KANTONE`.
+
+### K-18 · Verweis-Erkenner: zusammengesetzte Abs.-/Art.-Angaben — Aufwand S/M — golden-neutral, Wirkung site-weit
+
+**Anlassfall (David, 21.7.2026):** `BS-154.100#art-92`, § 92 Abs. 1 lit. d und lit. f GOG —
+StGB-Verweise nicht verlinkt.
+
+**Reproduziert am Erkenner (deterministisch, `normVerweiseImText`, `src/lib/fedlex.ts`):**
+
+| Textstelle | Treffer |
+|---|---|
+| «Art. 62c **Abs. 1-3 und Abs. 6** StGB» (lit. d) | **0** — Absatz-Bereich |
+| «Art. 63b **Abs. 2, 3 und 5** StGB» (lit. f) | **0** — Absatz-Aufzählung |
+| «(Art. 7 **Abs. 3, 39 und 40** JStPO)» (Ziff. 5, gleicher §) | **0** — Artikel-Aufzählung |
+| «Art. 59 Abs. 4 StGB» / «Art. 62a Abs. 3 StGB» / «Art. 62c Abs. 4 StGB» | je 1 ✓ |
+
+Die Lücke liegt NICHT im Kanton-Adapter, sondern im **geteilten** Erkenner (§5) — sie trifft
+Bund-Seiten genauso. **Ausmass (obere Schranke, Korpus-Scan 21.7.2026):** ~117 Textstellen in
+**72 Erlassen** (Bund + Kanton): 73× Abs.-Bereich («Abs. 1-3»), 37× Abs.-Aufzählung
+(«Abs. 2, 3 und 5»), 7× Artikel-Aufzählung («Abs. 3, 39 und 40 JStPO»).
+
+**Fix-Richtung:** die drei zusammengesetzten Singular-Formen im Erkenner nachrüsten; Vorbild ist
+`artikelnPluralVerweise` (die PLURAL-Formen «Absätze 1 und 2» sind bereits gelöst, inkl. der
+numerus-ambigen Abkürzungen). Link-Ziel bleibt der Artikel (Abs.-Feinheit ändert das Ziel nicht) —
+entscheidend ist, dass der Span **erkannt** wird.
+
+**Leitplanke (aus K-5 übernommen, §1):** lieber kein Link als ein falscher Link — die
+Artikel-Aufzählung («…, 39 und 40 JStPO») erzeugt nur dann Mehrfach-Links, wenn die Zuordnung
+Nummer→Artikel eindeutig ist; im Zweifel bleibt die Aufzählung ein Span mit EINEM Ziel (Art. 7).
+
+**Abgrenzung:** eigene Einheit statt K-5-Anbau — K-5 ist ausdrücklich «EINE Einheit (gleiche
+Datei)» für §-Verweise; K-18 ändert eine andere Datei (`src/lib/fedlex.ts`) mit site-weiter
+Wirkung. Kein Korpus-Rebuild (reiner Reader-/Erkenner-Pass, Snapshots unberührt).
+
+**DoD:** Unit-Tests für die drei Muster + Negativfälle (bestehende Treffer bleiben byte-gleich
+erkannt) · Anlassfälle § 92 lit. d/f + Ziff. 5 verlinkt · golden byte-gleich (keine
+Dokument-/Engine-Änderung) · Tore grün. Trailer `Roadmap: W2·13-KANTONE`.
