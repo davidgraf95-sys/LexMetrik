@@ -90,6 +90,13 @@ export async function geometrieScan(page: Page): Promise<RohFund[]> {
       if (!sichtbar(el)) continue
       const cs = getComputedStyle(el)
 
+      // ABSICHTLICHE, BENANNTE Kappung — einmal berechnet, von a UND b genutzt
+      // (§5: eine Messstelle). `gekapptMitTitle` = die Stelle kuerzt bewusst per
+      // Ellipse/Line-Clamp UND haelt den vollen Text ueber `title` erreichbar.
+      const istLineClamp = cs.display === '-webkit-box' && cs.getPropertyValue('-webkit-line-clamp') !== 'none' && cs.getPropertyValue('-webkit-line-clamp') !== ''
+      const istEllipsis = cs.textOverflow === 'ellipsis' && cs.overflow !== 'visible'
+      const gekapptMitTitle = (istLineClamp || istEllipsis) && hatTitleAmVorfahren(el)
+
       // ── a) scrollWidth > clientWidth ohne affordanzierten Scroller ─────────
       // NACHGEZOGEN (erster Lauf 6.9.2026): `clientWidth > 0` liess die
       // Screenreader-only-Technik (`.sr-only`: 1×1 px, `overflow: hidden`,
@@ -99,8 +106,23 @@ export async function geometrieScan(page: Page): Promise<RohFund[]> {
       // je sichtbar war (R8 misst VISUELLE Kappung). Schwelle > 4 px statt
       // > 0 — real schmale, aber sichtbare Elemente (z. B. ein 6-px-Strich)
       // bleiben erfasst, die 1-px-A11y-Technik nicht mehr.
+      //
+      // NACHGEZOGEN (R8-Fixer-Lauf 7.9.2026) · EINE KAPPUNG, EINE KATEGORIE:
+      // `a` zaehlte JEDE ellipsierte Stelle mit — auch die, die den vollen Text
+      // per `title` erreichbar haelt. Das ist das REZEPT, nicht der Defekt: der
+      // Auftrag definiert den Fund ausdruecklich als «scrollWidth > clientWidth
+      // an Textknoten OHNE title / OHNE Ellipsen-Absicht». Belegt am
+      // /rechtsprechung-Bestand: 1914 von 2268 Funden des Erstlaufs (84 %) waren
+      // `span.min-w-0 flex-1 truncate` MIT `title` — also exakt die R5-U3-Fassung,
+      // die Kategorie b zuvor eingefordert hatte. Das Werkzeug haette damit jeden
+      // b-Fix mit einem unaufloesbaren a-Fund quittiert: `title` setzen raeumt b,
+      // nie a — gruen waere nur ohne jede Kappung erreichbar gewesen.
+      // KEINE VERBLENDUNG (§6.7): eine Kappung OHNE `title` schlaegt unveraendert
+      // an — in b (der zustaendigen Kategorie) UND weiterhin hier in a. Nur die
+      // benannte, wiederherstellbare Kappung ist ausgenommen; die Rot-Probe im
+      // Protokoll R8-ABSCHNITT.md zeigt beide Kategorien weiterhin rot.
       const htmlEl = el as HTMLElement
-      if (htmlEl.clientWidth > 4 && htmlEl.scrollWidth > htmlEl.clientWidth + tol) {
+      if (!gekapptMitTitle && htmlEl.clientWidth > 4 && htmlEl.scrollWidth > htmlEl.clientWidth + tol) {
         if (!(cs.overflowX === 'auto' || cs.overflowX === 'scroll') || !el.classList.contains('lc-scrollrand-x')) {
           if (!inAffordanziertemScroller(el)) {
             // Kein Kind eines bereits gemeldeten Vorfahren-Überläufers doppelt melden.
@@ -120,8 +142,7 @@ export async function geometrieScan(page: Page): Promise<RohFund[]> {
       }
 
       // ── b) ellipsis/line-clamp ohne title ───────────────────────────────────
-      const istLineClamp = cs.display === '-webkit-box' && cs.getPropertyValue('-webkit-line-clamp') !== 'none' && cs.getPropertyValue('-webkit-line-clamp') !== ''
-      const istEllipsis = cs.textOverflow === 'ellipsis' && cs.overflow !== 'visible'
+      // `istLineClamp`/`istEllipsis` stehen oben (eine Berechnung fuer a und b).
       if (istLineClamp || istEllipsis) {
         const truncated = istLineClamp
           ? htmlEl.scrollHeight > htmlEl.clientHeight + tol
