@@ -292,12 +292,12 @@ export function EntscheidFilter({
               `DatumsFeld` hier nicht: es bringt Kalender-Popover und `pr-11`-
               Reserve mit, die Filterzeile ist `h-9 py-0`. */}
           <label className="flex flex-col gap-1 text-xs text-ink-500">
-            <span>Urteil ab</span>
+            <span>Entscheid ab</span>
             <input type="date" lang="de-CH" className="lc-input h-9 py-0 text-body-s"
               value={werte.datumVon ?? ''} onChange={(e) => setze({ datumVon: e.target.value || null })} />
           </label>
           <label className="flex flex-col gap-1 text-xs text-ink-500">
-            <span>Urteil bis</span>
+            <span>Entscheid bis</span>
             <input type="date" lang="de-CH" className="lc-input h-9 py-0 text-body-s"
               value={werte.datumBis ?? ''} onChange={(e) => setze({ datumBis: e.target.value || null })} />
           </label>

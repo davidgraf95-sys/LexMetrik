@@ -77,26 +77,42 @@ export function erlassVonPfad(path: string, m: VerlaufManifeste = {}): BrowseErl
     ?? null;
 }
 
-/** Bestmögliches Label für die Anzeige; nie ein Rohpfad. */
+/**
+ * Bestmögliches Label für die Anzeige; nie ein Rohpfad.
+ *
+ * R7-F3 (W2·24, 6./7.9.2026): der generische Platzhalter «X öffnen» galt
+ * bisher UNBEDINGT — auch dann, wenn das Manifest längst geladen war und der
+ * Schlüssel darin nachweislich FEHLT (nicht gefunden statt noch ladend). Die
+ * Verlaufsschiene übernimmt das Label unverändert als Reiter-Titel; ein Reiter
+ * «Entscheid öffnen» neben einem Seiteninhalt «Entscheid nicht gefunden» ist
+ * ein sichtbarer Widerspruch (Linse 3, Befund F3). Fix, EINHEITLICH für alle
+ * drei Manifest-Zweige (gleiche Bauform, keine Sonderlösung nur für Entscheide):
+ * Manifest noch nicht geladen (`m.… === undefined`) → weiterhin der
+ * Lade-Platzhalter «X öffnen»; Manifest geladen, Schlüssel fehlt → «X nicht
+ * gefunden».
+ */
 export function verlaufLabel(path: string, m: VerlaufManifeste = {}): string {
   const meta = labelAusMeta(path);
   if (meta) return meta;
 
   if (gesetzPfad(path)) {
     const e = erlassVonPfad(path, m);
-    return e ? e.kuerzel || e.titel : 'Gesetz öffnen';
+    if (e) return e.kuerzel || e.titel;
+    return m.gesetze ? 'Gesetz nicht gefunden' : 'Gesetz öffnen';
   }
 
   const ent = entscheidPfad(path);
   if (ent) {
     const e = m.entscheide?.entscheide.find((x) => x.key === ent.key);
-    return e ? e.zitierung : 'Entscheid öffnen';
+    if (e) return e.zitierung;
+    return m.entscheide ? 'Entscheid nicht gefunden' : 'Entscheid öffnen';
   }
 
   const mat = materialPfad(path);
   if (mat) {
     const e = m.materialien?.materialien.find((x) => x.key === mat.key);
-    return e ? e.titel : 'Material öffnen';
+    if (e) return e.titel;
+    return m.materialien ? 'Material nicht gefunden' : 'Material öffnen';
   }
 
   return 'Zuletzt geöffnet';

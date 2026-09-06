@@ -589,3 +589,70 @@ describe('A-3: das Material-Pane meldet seinen Dokumentnamen', () => {
       .toContain('<InhaltsKopfMeldeProvider value={setKopf}>');
   });
 });
+
+// ═══ R7 «BESCHRIFTUNGEN» (W2·24-DESIGN-IDENTITAET, Session E6, 6./7.9.2026) ═
+//
+// Befund F1: der Begriffs-Kanon schreibt «Entscheid» vor, nicht «Urteil» —
+// die Filterzeile («Urteil ab/bis») und die generische Fallback-Datumszeile im
+// Entscheid-Leser («Urteil vom …») sprachen trotzdem von «Urteil», obwohl sie
+// für JEDE Instanz/Gerichtsbarkeit gelten, nicht nur für Urteile im engen
+// Sinn (Beschlüsse/Verfügungen laufen über denselben Zweig).
+//
+// ALLOWLIST: «Urteil» bleibt ausserhalb dieser zwei Stellen ein echter
+// Rechtsbegriff — Formular-Labels der Rechner/Vorlagen («vollstreckbares
+// Urteil», Art. 80 SchKG) und der EntscheidLeser-Fliesstext «vollständiges
+// Urteil» ↔ «amtlicher BGE-Auszug» (eine andere, bewusst beibehaltene
+// Unterscheidung: volltextliches Urteil vs. kuratierter Sammlungsauszug, kein
+// Synonym für «Entscheid»). Bewacht wird NUR der enge Begriffs-Kanon-Fall.
+const R7_URTEIL_DATEIEN = [
+  'components/rechtsprechung/EntscheidFilter.tsx',
+  'components/rechtsprechung/EntscheidKopfTeile.tsx',
+];
+
+describe('R7 F1: Kanon «Entscheid», nicht «Urteil», in Filterzeile und Datumsfallback', () => {
+  const VERBOTEN: RegExp[] = [/>Urteil ab</, />Urteil bis</, />Urteil vom /];
+
+  for (const muster of VERBOTEN) {
+    it(`«${muster.source}» kommt in den zwei bewachten Dateien nicht mehr vor`, () => {
+      const treffer = R7_URTEIL_DATEIEN.filter((d) => muster.test(ohneKommentare(LIES_APP(d))));
+      expect(treffer,
+        `Verworfener Wortlaut in ${treffer.join(', ')} — der Begriffs-Kanon sagt «Entscheid», ` +
+        'nicht «Urteil» (F1). Rechtsbegriff-Verwendungen ausserhalb dieser Filterzeile/Fallback ' +
+        'sind davon nicht betroffen (Allowlist siehe Kommentar oben).',
+      ).toEqual([]);
+    });
+  }
+
+  it('Rot-Beweis: das Verbotsmuster hätte den alten Wortlaut wirklich getroffen', () => {
+    expect('<span>Urteil ab</span>').toMatch(VERBOTEN[0]);
+    expect('<span>Urteil bis</span>').toMatch(VERBOTEN[1]);
+    expect('<span>Urteil vom <Datum /></span>').toMatch(VERBOTEN[2]);
+  });
+
+  it('Positiv-Sonde: der Kanon-Begriff steht jetzt wirklich da', () => {
+    const filter = ohneKommentare(LIES_APP('components/rechtsprechung/EntscheidFilter.tsx'));
+    expect(filter).toContain('Entscheid ab');
+    expect(filter).toContain('Entscheid bis');
+    expect(ohneKommentare(LIES_APP('components/rechtsprechung/EntscheidKopfTeile.tsx')))
+      .toContain('Entscheid vom ');
+  });
+});
+
+describe('R7 F2: ZitierMarke trägt den Kopier-Scope auch im aria-label (Fehlerbuch-18)', () => {
+  // GEMESSEN (Finder, Session E6): `title` allein ist auf Touch unerreichbar
+  // und nicht in jedem Screenreader-Baum verlässlich — dasselbe Muster wurde
+  // im Erlass-Kopf (Amtliche-Fassung-Link, ArtikelLeser.tsx) und im
+  // EntscheidLeser (5B-Nachzug) bereits behoben. `ZitierMarke` bedient JEDEN
+  // Absatz-/Ziffernmarker in JEDEM Erlass und war der eine noch offene Fall.
+  const ZITIER = () => ohneKommentare(LIES_APP('components/normtext/ArtikelBody.zitier.tsx'));
+
+  it('aria-label steht neben title, mit demselben Scope-Text', () => {
+    expect(ZITIER()).toContain('title={`${zitat} — kopieren`}');
+    expect(ZITIER()).toContain('aria-label={`${zitat} — kopieren`}');
+  });
+
+  it('Rot-Beweis: ein Knopf ohne aria-label wäre am Muster erkennbar', () => {
+    const nurTitle = '<button title={`${zitat} — kopieren`}>{children}</button>';
+    expect(nurTitle).not.toContain('aria-label={`${zitat} — kopieren`}');
+  });
+});

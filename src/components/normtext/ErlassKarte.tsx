@@ -48,7 +48,7 @@ function KarteInhalt({ e }: { e: BrowseErlass }) {
         <span className="flex items-baseline gap-2 shrink-0">
           {/* §8: ganz aufgehobener Erlass bleibt auffindbar, ist aber sichtbar
               markiert (Design-Token danger, §13). */}
-          {e.aufgehoben && <span className="lc-badge lc-badge-danger">Aufgehoben</span>}
+          {e.aufgehoben && <span className="lc-badge lc-badge-danger">aufgehoben</span>}
           {e.sprache !== 'de' && (
             <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>
           )}
