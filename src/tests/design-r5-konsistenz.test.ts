@@ -32,7 +32,7 @@
 import { describe, it, expect } from 'vitest';
 import { join } from 'node:path';
 import { readdirSync } from 'node:fs';
-import { APP_WURZEL, alleQuellen, rel, ohneKommentare, liesRoh, pruefeAusnahmen } from './appDateien';
+import { APP_WURZEL, alleQuellen, alleTsx, rel, ohneKommentare, liesRoh, pruefeAusnahmen } from './appDateien';
 
 const CSS = liesRoh(join(APP_WURZEL, 'index.css'));
 const TEST_ORDNER = join(APP_WURZEL, 'tests');
@@ -227,5 +227,79 @@ describe('R5-D · die anklickbare Zeile tönt sich über EINEN Baustein ein', ()
     ]);
     // Negativ-Kontrolle: die migrierte Form fällt nicht auf.
     expect('className="rounded px-2 lc-hover-flaeche"'.match(HOVER_FLAECHE)).toBeNull();
+  });
+});
+
+// ─── R5-E · der Reiter trägt keinen Kasten (B-R1, R9-1, 6.9.2026) ────────────
+
+/**
+ * BEFUND (r9-befunde-b.md B-R1): `ui/Tabs.tsx` zeigte den aktiven Reiter als
+ * Box-Chip — `bg-surface-raised text-brass-700 shadow-sm border border-line` —,
+ * die Arbeitsleiste desselben Hauses denselben Zustand als Unterstrich. Seit
+ * B-R1 steht die Anatomie EINMAL als `.lc-tab` in `index.css`.
+ *
+ * DIE SONDE HÄNGT AN DER SACHE, nicht an einer Zeilennummer: sie sucht jede
+ * App-Datei, die einen `role="tab"`-Knopf baut, und verlangt, dass er den
+ * Baustein trägt. Wer eine vierte Reiter-Optik von Hand baut, fällt auf.
+ *
+ * KASTEN-UTILITIES sind die vier Formen, die den Befund ausmachten: Schatten,
+ * Rahmen, Radius und Fläche. `border-b`/`border-transparent` sind ausgenommen —
+ * der Unterstrich IST die Zielform, nicht ihr Gegenteil.
+ */
+const REITER_MARKE = /role=(?:"tab"|\{[^}]*['"]tab['"][^}]*\})/;
+const KASTEN_UTILITY = /\b(?:shadow-(?:sm|md|lg|xl)|rounded-[a-z]+(?:-[a-z0-9]+)*|border(?:-(?!b\b|transparent\b)[a-z]+(?:-[a-z0-9]+)*)?|bg-(?:surface|paper|brass)[a-z0-9-]*)\b/g;
+
+/**
+ * Reiter-Knöpfe, die ihre eigene Optik noch von Hand tragen. JEDER Eintrag
+ * nennt den Grund und die Hand, die ihn abräumt — eine Allowlist ohne
+ * Räumungsdatum ist ein stiller Freibrief (§8).
+ */
+const REITER_AUSNAHMEN = [
+  {
+    datei: 'components/vorlagen/Dokumentmappe.tsx',
+    begruendung: 'APG-Tabs: roving tabindex + Pfeiltasten/Home/End (vgl. ui/Tabs.tsx)',
+  },
+  {
+    datei: 'pages/gesetz-leser/v3/LeserPanel.tsx',
+    begruendung: 'role=menu) ist `role="tablist"` hier die richtige Rolle',
+  },
+] as const;
+
+describe('R5-E · der Reiter trägt den Unterstrich, nicht den Kasten', () => {
+  it('index.css führt `.lc-tab`, und die Klasse trägt weder Rahmen noch Fläche noch Schatten', () => {
+    expect(CSS, '`.lc-tab` existiert').toContain('.lc-tab {');
+    expect(CSS, 'aktiv = Strich in der Tinte, nicht Fläche in Messing')
+      .toMatch(/\.lc-tab\[aria-selected="true"\][\s\S]{0,120}border-bottom-color: var\(--ink-900\)/);
+    const block = CSS.slice(CSS.indexOf('.lc-tab {'), CSS.indexOf('.lc-tab:hover'));
+    expect(block, 'kein Schatten').toContain('box-shadow: none');
+    expect(block, 'kein Radius').toContain('border-radius: 0');
+    expect(block, 'kein Rahmen ausser dem Strich unten').toContain('border: 0');
+  });
+
+  it('kein Reiter-Knopf der App baut sich seine Optik selbst', () => {
+    const erlaubt = pruefeAusnahmen(REITER_AUSNAHMEN);
+    const funde: string[] = [];
+    for (const p of alleTsx()) {
+      if (erlaubt.has(rel(p))) continue;
+      const quelle = ohneKommentare(liesRoh(p));
+      if (!REITER_MARKE.test(quelle)) continue;
+      const kasten = quelle.match(KASTEN_UTILITY);
+      if (kasten) funde.push(`${rel(p)}: ${[...new Set(kasten)].join(' ')}`);
+    }
+    expect(
+      funde,
+      'B-R1/F0.9: die Reiter-Anatomie steht EINMAL als `.lc-tab` in index.css — '
+      + 'Kasten-Utilities (Schatten, Rahmen, Radius, Fläche) an einem `role="tab"`-Knopf '
+      + 'sind die zweite Anatomie, die der Befund abgeschafft hat.',
+    ).toEqual([]);
+  });
+
+  it('ROT-BEWEIS: der Ausdruck erkennt die Form, die vor B-R1 in `ui/Tabs.tsx` stand', () => {
+    const vorher = "const AKTIV = 'bg-surface-raised text-brass-700 shadow-sm border border-line';";
+    expect(vorher.match(KASTEN_UTILITY), 'alle vier Kasten-Formen müssen auffallen')
+      .toEqual(['bg-surface-raised', 'shadow-sm', 'border', 'border-line']);
+    // Negativ-Kontrolle: die migrierte Form fällt nicht auf.
+    expect('className={`lc-tab shrink-0 whitespace-nowrap ${KNOPF[groesse]}`}'.match(KASTEN_UTILITY))
+      .toBeNull();
   });
 });

@@ -69,7 +69,15 @@ export function QuellLink({ href, variante = 'geltend', className, children, tit
       target="_blank"
       rel="noopener noreferrer"
       title={title}
-      className={className ?? 'text-brass-700 hover:underline'}
+      // B-L1 (R9-1, 6.9.2026): die Vorgabe war `hover:underline` — der Strich
+      // erschien also erst beim Überfahren, und «Amtliche Fassung ↗» stand
+      // ausserhalb des Lesers (Abruf-Fehler, Entscheid-Kopf, Popover) als Link
+      // da, den nur die Farbe auswies (WCAG 1.4.1). `.lc-link` ist die
+      // Opt-in-Klasse der EINEN Textlink-Regel in `index.css` — derselbe Strich
+      // wie im Gesetzes- und im Rechtsprechungs-Leser, ohne dass jede
+      // Aufrufstelle ihn selbst schreibt (§5/§10). Aufrufer, die ein eigenes
+      // `className` übergeben (z. B. `lc-chip no-underline`), sind unberührt.
+      className={className ?? 'lc-link text-brass-700 hover:text-brass-800'}
     >
       {children ? <>{children} ↗</> : kanon}
     </a>

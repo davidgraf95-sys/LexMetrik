@@ -222,8 +222,13 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
                       /* Aktenzeichen → amtlicher bger.ch-Link (Auftrag David 6.6.2026);
                          der Verifikations-Vorbehalt (§8) bleibt unverändert sichtbar */
                       <span key={j} className="lc-badge lc-badge-danger gap-1 font-mono">
+                        {/* B-L1 (R9-1, 6.9.2026): `no-underline hover:underline` fällt —
+                            der Strich erschien erst beim Überfahren, also für Tastatur
+                            und Touch gar nicht. Der Anker steht IN einem `.lc-badge`,
+                            trägt seine Affordanz damit aus der Form (F0.8) und bleibt
+                            dauerhaft ohne Strich; die Rückmeldung gibt die Farbe. */}
                         <RechtsprechungAnker aktenzeichen={r.aktenzeichen}
-                          className="no-underline hover:underline" />
+                          className="no-underline hover:text-brass-800" />
                         {!r.verifiziert && <span className="font-sans text-micro">· zu verifizieren</span>}
                       </span>
                     ))}

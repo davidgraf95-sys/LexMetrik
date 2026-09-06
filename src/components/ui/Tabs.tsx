@@ -42,17 +42,23 @@ export type TabItem<T extends string> = {
  */
 type TabGroesse = 's' | 'm' | 'zweizeilig';
 
+// ── B-R1 (R9-1, 6.9.2026) · UNTERSTRICH STATT BOX-CHIP ──────────────────────
+// Die ANATOMIE (Farbe, Strich, Gewicht, Fokus) steht seit diesem Nachzug EINMAL
+// in `src/index.css` als `.lc-tab` — hier bleiben nur Grösse und Polsterung.
+// Vorher stand sie als `AKTIV`/`INAKTIV`-Klassenpaar direkt hier und trug
+// `bg-surface-raised text-brass-700 shadow-sm border border-line`: Kissen statt
+// Kante (F0.5), Fläche statt Linie (F0.6), Messing statt Tinte (F0.3).
+// `rounded-md` ist mitentfallen — `--radius-md` steht seit R1 auf 0, die
+// Utility LOG also schon vorher (dieselbe Diagnose wie R5-F2 im Wizard).
 const KNOPF: Record<TabGroesse, string> = {
-  m: 'px-3 rounded-md text-body-s font-medium transition-all',
-  s: 'px-2.5 rounded-md text-xs font-medium transition-all',
-  zweizeilig: 'px-4 py-2 rounded-md text-body-s font-medium transition-all',
+  m: 'px-1 text-body-s',
+  s: 'px-1 text-xs',
+  zweizeilig: 'px-1 py-2 text-body-s',
 };
 // Mobile grössere Trefferfläche (Redesign E7: h-11 = 44px erreicht auf Touch
 // die AAA-Empfehlung), ab sm zurück auf die kompakte Desktop-Höhe.
 const HOEHE: Record<TabGroesse, string> = { m: 'h-11 sm:h-9', s: 'h-10 sm:h-8', zweizeilig: 'min-h-11' };
 
-const AKTIV = 'bg-surface-raised text-brass-700 shadow-sm border border-line';
-const INAKTIV = 'text-ink-600 hover:text-ink-900';
 
 export function Tabs<T extends string>({
   items, value, onChange, groesse = 'm', mode = 'tab', ariaLabel,
@@ -96,6 +102,12 @@ export function Tabs<T extends string>({
       // Strecke. Kein JavaScript, kein Listener, kein Re-Render (§2/§15).
       // `lc-scrollrand-grund-surface`, weil die Leiste auf `bg-surface` sitzt:
       // der Deckel muss die Farbe der Fläche haben, die er abdeckt.
+      // NACHTRAG B-R1 (R9-1, 6.9.2026) — der Satz oben galt für die BOX-Leiste:
+      // sie trug `bg-surface` selbst, also musste der Deckel `--surface` sein.
+      // Mit der Unterstrich-Anatomie hat die Leiste keine eigene Fläche mehr;
+      // der Deckel nimmt darum den Vorgabewert `--paper` (`.lc-scrollrand-x`),
+      // also die Farbe der Seite, über der er wirklich liegt. Die Messung von
+      // damals bleibt richtig, ihr Gegenstand ist weg (§2b).
       // ── R-1 (Fixer 2 → 1b, 6.9.2026) · UNTER 400 px WIRD UMBROCHEN, NICHT
       //    GESCHOBEN ──────────────────────────────────────────────────────────
       // Die Affordanz oben sagt zwar, dass es weitergeht — aber GEMESSEN am
@@ -112,7 +124,13 @@ export function Tabs<T extends string>({
       // greifen nur unterhalb der Schranke, der Schieber daher ebenso.
       // `min-h-11` an den Knoepfen (unten) haelt das 44-px-Fingermass, das die
       // feste Container-Hoehe im umgebrochenen Zustand nicht mehr geben kann.
-      className={`print:hidden flex ${HOEHE[groesse]} items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit max-w-full overflow-x-auto lc-scrollrand-x lc-scrollrand-grund-surface max-[400px]:flex-wrap max-[400px]:h-auto max-[400px]:overflow-x-visible`}
+      // `max-[400px]:bg-none` GEHOERT DAZU (Nachzug B-R1, Sichtbeleg 6.9.2026,
+      // `r9-1-reiter-schkg-390-h.jpg`): unter 400 px wird umgebrochen, also
+      // NICHT geschoben — die Schatten der Scroll-Affordanz standen dort als
+      // heller Balken quer ueber den umgebrochenen Zeilen. Eine Affordanz fuer
+      // eine Bewegung, die es nicht gibt, ist ein Fleck. Dieselbe Bauform wie
+      // die `lg:bg-none`-Zeile an der Seitenleisten-Schiene.
+      className={`print:hidden flex ${HOEHE[groesse]} items-stretch gap-4 w-fit max-w-full overflow-x-auto lc-scrollrand-x max-[400px]:flex-wrap max-[400px]:h-auto max-[400px]:overflow-x-visible max-[400px]:bg-none`}
     >
       {items.map((it, i) => {
         const aktiv = value === it.code;
@@ -149,7 +167,7 @@ export function Tabs<T extends string>({
             // Container geclippt und wäre wirkungslos. h-8/h-9 erfüllen
             // WCAG 2.2 AA (≥24px); AAA (44px) ist in einer scrollbaren
             // Segmented-Control ohne Redesign nicht erreichbar.
-            className={`shrink-0 whitespace-nowrap max-[400px]:min-h-11 ${KNOPF[groesse]} ${aktiv ? AKTIV : INAKTIV}`}
+            className={`lc-tab shrink-0 whitespace-nowrap max-[400px]:min-h-11 ${KNOPF[groesse]}`}
           >
             {it.label}
           </button>

@@ -1084,10 +1084,42 @@
      WÄCHTER (§6.7): `e2e/leser-links-p3.e2e.ts` misst am gebauten Leser, dass
      kein `a[href]` ohne Unterstrich UND ohne eine der erklärten Ausnahmen
      dasteht. Rot zu bekommen, indem diese Regel entfernt wird. */
-  .lc-leser :where(a[href]) {
+  /* ── B-L1 (R9-1, 6.9.2026) · DIESELBE REGEL GILT JETZT IM GANZEN HAUS ──────
+     Der Leser war der erste Ort, an dem P3 durchgezogen wurde — geblieben
+     waren vier Textlink-Rezepte nebeneinander (r9-befunde-b.md B-L1, Zählung
+     6.9.2026): unterstrichen 106×, gepunktet 6× (VERWEIS_RUHE), NUR-BEI-HOVER
+     2×, und im Rechtsprechungs-Reader eine `border-bottom`-Linie statt eines
+     Unterstrichs. Vier Formen für EINE Aussage «das hier ist ein Link».
+
+     Die Regel steht darum nicht mehr am Leser allein, sondern an ALLEN
+     Fliesstext-Flächen des Hauses plus einer ausdrücklichen Opt-in-Klasse
+     `.lc-link` für den Einzellink ausserhalb einer solchen Fläche. Die
+     Bauform bleibt exakt die von P3: `:where()` hält die Spezifität auf NULL
+     und die Regel liegt in einer Cascade-Layer — jede Tailwind-Utility
+     (`no-underline`, `decoration-dotted`, `underline-offset-*`) gewinnt
+     weiterhin. Unterstrichen ist die VORGABE; wer ohne Strich stehen soll,
+     sagt es im Markup.
+
+     `.15em` statt 2 px beim Abstand: der Strich soll mit der Schriftgrösse
+     mitwachsen — im Leser (18 px) sitzt er sonst zu eng, in der 12-px-Metazeile
+     zu weit.
+
+     ZWEI DOKUMENTIERTE AUSNAHMEN, beide unberührt:
+       · `VERWEIS_RUHE` (Normtext, `decoration-dotted`) — die gepunktete Linie
+         ist dort die BEWUSSTE Ruhe-Form des §13-farbfreien Verweises, nicht
+         ein viertes Rezept. Sie trägt einen Strich, nur einen leiseren.
+       · Navigation, Listenzeilen, Brotkrume, Artikelnummer-Anker, `.lc-chip`
+         und `.lc-btn-mini` — sie tragen ihre Affordanz aus der FORM und sagen
+         das mit `no-underline` ausdrücklich (F0.8).
+     ABGESCHAFFT ist dagegen der Nur-bei-Hover-Strich: ein Link, den man erst
+     beim Überfahren als Link erkennt, ist für Tastatur- und Touch-Bedienung
+     gar keiner. Wächter: `design-r9-link-form.test.ts`. */
+  .lc-leser :where(a[href]),
+  .rsp-prose :where(a[href]),
+  .lc-link {
     text-decoration-line: underline;
     text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    text-underline-offset: .15em;
   }
 
   /* Der DRUCK fällt in die Zeilenform zurück — die Regeln dafür stehen im
@@ -2722,6 +2754,58 @@
      eine zweizeilig umbrechende Beschriftung gequetscht. */
   .lc-menu-regler { @apply flex w-full items-center justify-between gap-2 px-3 py-2; border-top: 1px solid var(--rule-soft); }
 
+  /* ═══ B-R1 (R9-1, 6.9.2026) · DAS EINE REITER-REZEPT ═════════════════════════
+     BEFUND (r9-befunde-b.md B-R1, gemessen 6.9.2026): `ui/Tabs.tsx` trug den
+     aktiven Reiter als BOX-CHIP — `bg-surface-raised text-brass-700 shadow-sm
+     border border-line`, dazu am Container `bg-surface border border-line
+     rounded-lg`. Die Arbeitsleiste desselben Hauses zeigt denselben Zustand
+     dagegen als UNTERSTRICH. Zwei Anatomien für dieselbe Sache — und die
+     Box-Variante verletzte gleich drei F0-Regeln auf einmal: Kissen statt
+     Kante (F0.5), Fläche statt Linie (F0.6) und `brass-700` als Akzentfarbe,
+     obwohl der Akzent seit F0.3 die TINTE ist.
+
+     DIE REGEL STEHT HIER, NICHT AN DEN 9 KONSUMENTEN (§5/§10). `ui/Tabs.tsx`
+     setzt nur noch `.lc-tab` plus die Grössen-Utilities; wer den Reiter
+     umfärben will, ändert diese drei Regeln.
+
+     ANATOMIE (F0.9 «Reiterleiste», F0.6 «Linien statt Flächen»):
+       · Ruhe   — ink-600, ein UNSICHTBARER 2-px-Platzhalter unten. Der
+                  Platzhalter ist kein Zierrat: ohne ihn springt die Zeile
+                  beim Umschalten um 2 px (dieselbe Bauform wie `.fc-schalter`
+                  und `.ub-schalter`).
+       · Hover  — Strich in `--rule-soft`, Text ink-900.
+       · Aktiv  — Strich in `--ink-900` (Tinte, F0.3) + `font-weight: 500`.
+                  Das Gewicht ist der zweite, farbfreie Träger des Zustands
+                  (F2/F4: eine Auswahl darf nie NUR über Farbe sprechen);
+                  `aria-selected`/`aria-pressed` tragen ihn für Hilfsmittel.
+     KEIN Rahmen, KEINE Fläche, KEIN Schatten, Radius 0 — bewacht von
+     `design-r5-konsistenz.test.ts` («R5-E · der Reiter trägt keinen Kasten»).
+
+     WARUM `[aria-selected]` UND `[aria-pressed]`: der Baustein führt zwei
+     Modi (ARIA-Tabs vs. Toggle-Gruppe, `mode`-Prop) — beide meinen denselben
+     sichtbaren Zustand, also trägt ihn dieselbe Regel.
+
+     KEINE Registerfarbe am Strich: der Baustein kennt seine Domäne nicht (kein
+     `data-reg` an einer Aufrufstelle), und eine Regel, die nie feuert, wird
+     nicht gebaut (§17-Gegengewicht). Kommt die Prop, gehört sie hierher —
+     Vorbild `.fc-zeile[data-reg]`. */
+  .lc-tab {
+    background: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--ink-600);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    transition: color .15s, border-color .15s;
+  }
+  .lc-tab:hover { color: var(--ink-900); border-bottom-color: var(--rule-soft); }
+  /* Fokus als Strich, nicht als Kasten — dasselbe Bild wie `.lc-menu-zeile`
+     und `.lc-input` (EIN Fokus-Bild für die ganze App, R3-F3). */
+  .lc-tab:focus-visible { outline: none; color: var(--ink-900); border-bottom-color: var(--focus); }
+  .lc-tab[aria-selected="true"],
+  .lc-tab[aria-pressed="true"] { color: var(--ink-900); font-weight: 500; border-bottom-color: var(--ink-900); }
+
   /* Referenzwerk-Liste: Messing-Gedankenstrich als Marker (FAHRPLAN-DESIGN
      5.5) — für Hinweis-Listen der Vorlagen (Preflight nimmt Browser-Bullets
      weg; diese Klasse gibt der Liste ihr Zeichen zurück, im Haus-Akzent). */
@@ -2916,15 +3000,23 @@
    die Erwägungen sollen sich „wie ein Buch" lesen, nicht getigert). Unlayered →
    überschreibt die Tailwind-Utility `underline …` von NormText im Lese-Fliesstext.
    `.rsp-prose a` schlägt die Utility-Spezifität; greift hell + dunkel über die Tokens. */
+/* ── B-L1 (R9-1, 6.9.2026) · DIE LINIE IST EIN UNTERSTRICH, KEIN RAHMEN ──────
+   Die Absicht oben («dezent, nicht getigert») bleibt Wort für Wort gültig und
+   wird weiterhin von der FARBE getragen: ink-900 statt des brass-700 der
+   Basisregel. Was fällt, ist die FORM — `text-decoration: none` plus eine
+   nachgebaute `border-bottom` war das vierte Textlink-Rezept des Hauses
+   (B-L1). Den Strich setzt jetzt dieselbe Regel wie im Gesetzesleser
+   (`.rsp-prose :where(a[href])`, Suchwort «DIESELBE REGEL GILT JETZT IM GANZEN
+   HAUS»); hier bleiben nur Farbe und Hover.
+   `text-decoration-color` erbt `currentColor` — der Strich wechselt beim Hover
+   also mit der Schrift auf `--accent-text`, wie es die frühere
+   `border-bottom-color`-Zeile tat. */
 .rsp-prose a {
-  text-decoration: none;
   color: var(--ink-900);
-  border-bottom: 1px solid color-mix(in oklab, var(--brass-500) 38%, transparent);
-  transition: color .15s, border-color .15s;
+  transition: color .15s, text-decoration-color .15s;
 }
 .rsp-prose a:hover {
   color: var(--accent-text);
-  border-bottom-color: var(--brass-500);
 }
 
 /* Overlines auf der Messing-Hervorhebung (lc-highlight, bg-brass-100): der

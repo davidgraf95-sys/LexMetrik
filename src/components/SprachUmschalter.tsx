@@ -46,9 +46,20 @@ export function SprachUmschalter() {
             return (
               <button key={l.code} type="button" aria-pressed={aktiv} autoFocus={aktiv}
                 onClick={() => { setLocale(l.code); setOffen(false); triggerRef.current?.focus(); }}
-                className={`w-full flex items-center justify-between gap-2 px-3 py-2 rounded-md text-left text-body-s transition-colors ${
-                  aktiv ? 'bg-brass-100/70 text-ink-900 font-medium' : 'text-ink-700 hover:bg-brass-100/40'
-                }`}>
+                // B-M1 (R9-1, 6.9.2026): DAS EINE MENUE-ITEM-REZEPT. Hier stand ein
+                // zweites: 14 px/500 auf einer Messing-Flaeche (`bg-brass-100/70`),
+                // Radius `rounded-md`, Hover `bg-brass-100/40` — waehrend jedes andere
+                // Menue des Hauses (`ui/Menue`, Verlauf, Reiter-Blatt, Ansicht) die
+                // Zeile als `.lc-menu-zeile` fuehrt: 14 px/400, Polster 8/12, Haarlinie
+                // nach unten, Hover in `--well`, Radius 0, Fokus als Strich. Zwei
+                // Rezepte fuer dieselbe Sache (r9-befunde-b.md B-M1).
+                // GEAENDERT WIRD NUR DIE KLASSENZEILE: Struktur, Handler, `aria-pressed`,
+                // `autoFocus`, das Haekchen rechts und die «In Vorbereitung»-Marke
+                // bleiben Zeichen fuer Zeichen. Der gewaehlte Eintrag traegt seinen
+                // Zustand weiterhin doppelt — Tinte statt ink-700 UND das ✓ — also
+                // nicht allein ueber die Farbe (F2/F4); nur die Flaeche faellt weg
+                // (F0.6 «Linien statt Flaechen»).
+                className={`lc-menu-zeile justify-between ${aktiv ? 'text-ink-900' : ''}`}>
                 <span className={l.inBearbeitung ? 'text-ink-500' : ''}>
                   <span className="num uppercase text-xs mr-2">{l.code}</span>{l.label}
                 </span>
