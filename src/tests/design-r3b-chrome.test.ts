@@ -448,7 +448,10 @@ describe('A3-1 · das Schliess-✕ kommt aus EINEM Baustein', () => {
       'components/layout/TabPanel.tsx',
       'components/layout/InhaltsKopf.tsx',
       'components/layout/PaneKopf.tsx',
-      'components/layout/Reiterleiste.tsx',
+      // W2·24-R13 (7.9.2026): der Reiter wohnt seit dem §6.6-Split der
+      // Arbeitsleiste in einer eigenen Datei — dieselbe Zeile, derselbe Grund,
+      // nur ein neuer Pfad.
+      'components/layout/reiterleiste/Reiter.tsx',
     ];
     const funde = alleTsx()
       .filter((p) => ohneKommentare(liesRoh(p)).includes('komfort={false}'))
@@ -593,7 +596,9 @@ describe('A3-2 · schwebende Flächen teilen EINE Anatomie', () => {
       'components/SprachUmschalter.tsx',
       'components/DatumsFeld.tsx',
       'components/layout/VerlaufUebersicht.tsx',
-      'components/layout/Reiterleiste.tsx',
+      // W2·24-R13 (7.9.2026): das Überlauf-Blatt der Arbeitsleiste steht seit
+      // dem §6.6-Split in `reiterleiste/ReiterBlatt.tsx`.
+      'components/layout/reiterleiste/ReiterBlatt.tsx',
       'pages/gesetz-leser/v3/LeserAnsichtV3.tsx',
       'pages/gesetz-leser/v3/LeserPanel.tsx',
       'pages/gesetz-leser/v3/LeserTrefferBlatt.tsx',

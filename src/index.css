@@ -2340,33 +2340,43 @@
      gemeldet) hält denselben Platz: die Leiste steht schon vor dem ersten
      Spy-Lauf da, wo sie danach steht. */
   .rl-stelle { display: inline-block; min-width: var(--app-reiter-stelle-b); flex-shrink: 0; }
-  /* ── W2·24-CI · DIE RESERVE WAR HÖHER ALS IHR INHALT ──────────────────────
+  /* ── R13-4 (Prüfbefund 7.9.2026) · KEINE RESERVE OHNE INHALT ──────────────
+     GEMESSEN am Stand `0ba97c5d6` (@1440, gebautes dist/): ein Gesetzes-Reiter
+     ohne gemeldete Lesestellung trug `.rl-stelle` mit leerem `textContent` und
+     60 px Breite — im Bild ein Loch links vom Namen (ZGB 137 px, ohne Reserve
+     77 px). Entscheide, Rechner und Vorlagen hatten den Platzhalter gar nicht;
+     die Reitertexte begannen also an drei verschiedenen Stellen (§13: eine
+     Zeile, eine Kante).
+     `display:none` im leeren Fall statt einer schmaleren Reserve: eine Box mit
+     Breite 0 bliebe eine Box und brächte den unten beschriebenen
+     Baseline-Fehler zurück. So ist sie schlicht nicht da.
+     DIE RESERVE SELBST BLEIBT (D27): sobald eine Stellung gemeldet ist, hält
+     der Slot seine 60 px, damit der wandernde Artikel den Reiter nicht bei
+     jedem Scroll umbaut. Der einmalige Übergang «keine Stelle → Art. 1»
+     verschiebt seit R13-2 nichts mehr: die Reiter schrumpfen gemeinsam, die
+     Gesamtbreite des Streifens ist gedeckelt. */
+  .rl-stelle:empty { display: none; }
+  /* ── W2·24-CI · DIE RESERVE WAR HÖHER ALS IHR INHALT (HISTORIE) ──────────
      BEFUND 6.9.2026 (Repro `scratchpad/diag17.cjs` gegen `dist`, StPO @1280):
-     die Reservierung oben deckte die BREITE, nicht die HÖHE. Solange die
-     Stellung leer ist (`stelle === ''`), hat der inline-block keine Zeilenbox;
-     in der baseline-ausgerichteten Reiter-Zeile (`items-baseline`) liegt seine
-     Baseline damit an der Unterkante und schiebt die Zeile auseinander.
-     GEMESSEN: der Reiter-Knopf ist vor dem ersten Spy-Lauf 39 px hoch, danach
-     33 px — in einer Leiste, die `--app-reiter-h` = 34 px hoch ist. Die leere
-     Reservierung war also 6 px HÖHER als der gefüllte Zustand und lief über
-     ihre eigene Leiste hinaus, bis der Spy die Stelle meldete.
-     Das nicht-brechende Leerzeichen gibt dem leeren Feld genau EINE Zeilenbox
-     mit normaler Text-Baseline — dieselbe Kur wie am Fassungs-Slot des
-     Artikelkopfs (`.lr7-fassung [data-hist-slot]:empty`, unten): reservierte
-     und gefüllte Höhe fallen zusammen (gemessen 33 px vorher wie nachher). Es
-     greift NUR im leeren Zustand, das gefüllte Bild ist unverändert (§6).
+     die leere Reservierung deckte die BREITE, nicht die HÖHE — ein leerer
+     inline-block hat keine Zeilenbox, seine Baseline lag in der
+     baseline-ausgerichteten Reiter-Zeile an der Unterkante und schob sie
+     auseinander (Reiter-Knopf 39 px vor, 33 px nach dem ersten Spy-Lauf, in
+     einer 34 px hohen Leiste). Die Kur war ein nicht-brechendes Leerzeichen
+     via `::before`. Sie ist mit R13-4 ERSATZLOS weg, weil ihr Anlass weg ist:
+     den leeren Slot gibt es nicht mehr (`display:none` oben), also auch keine
+     leere Zeilenbox (§17-Gegengewicht — was nicht mehr scheitern kann, wird
+     gestrichen statt bewacht).
      WAS HIER NICHT DER GRUND WAR (Beleg altert nicht, §0 Ziff. 2b): die erste
-     Fassung dieser Zeile stand als `min-height: 1lh` und war mit der Vermutung
-     begründet, dieser Höhensprung unterdrücke nach css-scroll-anchoring-1 §3.2
-     das Scroll-Anchoring des Dokuments und erkläre damit die 66–70 px, um die
-     ein roher `element.scrollIntoView()` an der StPO wegdriftet. Die Vermutung
-     ist FALSIFIZIERT: mit der Reservierung repariert (Reiter-Knopf stabil bei
-     33 px) und selbst mit KOMPLETT ausgeblendeter Arbeitsleiste
-     (`display:none`) driftet derselbe rohe Scroll unverändert von 198 px auf
-     133 px. Die Drift hat eine andere, noch offene Ursache; der PRODUKT-Weg
-     (Deep-Link `#art-429`, TOC-Sprung) landet auf beiden Ständen exakt und
-     bleibt stehen (gemessen Abstand −1 px über 4 s, PR wie origin/main). */
-  .rl-stelle:empty::before { content: "\a0"; }
+     Fassung stand als `min-height: 1lh` und war mit der Vermutung begründet,
+     dieser Höhensprung unterdrücke nach css-scroll-anchoring-1 §3.2 das
+     Scroll-Anchoring und erkläre die 66–70 px, um die ein roher
+     `element.scrollIntoView()` an der StPO wegdriftet. FALSIFIZIERT: mit
+     reparierter Reservierung und selbst mit komplett ausgeblendeter
+     Arbeitsleiste (`display:none`) driftet derselbe rohe Scroll unverändert
+     von 198 px auf 133 px. Die Drift hat eine andere, noch offene Ursache; der
+     PRODUKT-Weg (Deep-Link `#art-429`, TOC-Sprung) landet auf beiden Ständen
+     exakt und bleibt stehen (gemessen Abstand −1 px über 4 s). */
 
   /* ─── W2·24 · AUSWAHL-KACHEL (SelectionGrid) · KANTIG, LINIE, HAEKCHEN ─────
      Prueferbefund Fixer 2 (6.9.2026): die Kacheln standen als abgerundete

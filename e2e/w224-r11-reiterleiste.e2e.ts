@@ -164,8 +164,17 @@ test.describe('M3 — zuletzt geschlossen', () => {
     // Reiter seeden, damit nach dem Schliessen noch drei stehen.
     await page.setViewportSize({ width: 390, height: 844 })
     await seed(page, [OR, BGE, RECHNER, VORLAGE])
-    await page.locator(`${STREIFEN} [data-reiter-schluessel="${RECHNER}"]`)
-      .getByRole('button', { name: /schliessen/ }).click()
+    // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3, W2·24-R13, Prüfbefund R13-2) ───────
+    // Geschlossen wurde bisher am Reiter IM STREIFEN. Seit R13-2 hängt es an
+    // der gemessenen Breite, welche vier Reiter @390 nebeneinander stehen —
+    // «ZPO-Fristen» steht dort in der Regel gar nicht mehr, sondern im Blatt.
+    // Das Schliessen ist hier BLOSSER AUFBAU (die Zusage ist die sichtbare
+    // Wiederherstellung darunter); es geht darum jetzt über das Blatt, das
+    // alle Reiter führt. Umfang und Erwartung des Falls sind unverändert.
+    await page.locator(REITER).getByRole('button', { name: /Alle \d+ offenen Reiter/ }).click()
+    const listeVorher = page.getByRole('dialog', { name: 'Alle geöffneten Reiter' })
+    await listeVorher.getByRole('button', { name: /«ZPO-Fristen» schliessen/ }).click()
+    await page.keyboard.press('Escape')
     await page.locator(REITER).getByRole('button', { name: /Alle \d+ offenen Reiter/ }).click()
     const blatt = page.getByRole('dialog', { name: 'Alle geöffneten Reiter' })
     const knopf = blatt.getByRole('button', { name: /Wieder öffnen/ })
@@ -239,16 +248,38 @@ test.describe('M4 — Kontextmenü auf einem Reiter', () => {
 // waagrechtes Rad bewegte die Leiste (F3b). Und rechts des letzten Reiters
 // lagen 457 px Leerfläche, auf der ein Doppelklick nichts tat (C3).
 test.describe('M6 — Mausrad rollt, Doppelklick öffnet', () => {
-  test('@390: senkrechtes Mausrad über der überlaufenden Leiste rollt sie waagrecht', async ({ page }) => {
+  // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3, W2·24-R13, Prüfbefund R13-2, 7.9.2026)
+  // Hier stand: «@390 rollt das senkrechte Mausrad die ÜBERLAUFENDE Leiste
+  // waagrecht». Die Vorbedingung dieses Falls — dass die Leiste überläuft —
+  // ist mit R13-2 abgeschafft, und zwar absichtlich: die Reiter schrumpfen,
+  // und was dann noch nicht ganz ins Bild passt, steht im «+N»-Blatt statt
+  // stumm hinter der (per CSS unsichtbaren) Scrollkante. Ein Fall, der einen
+  // Zustand herstellen will, den es nicht mehr geben darf, misst nichts.
+  // GEPRÜFT WIRD DARUM DIE NEUE ZUSAGE an derselben Stelle und mit derselben
+  // Bestückung: @390 läuft nichts über, kein Reiter ist angeschnitten, und der
+  // Weg zu den übrigen ist sichtbar. Der `wheel`-Griff selbst BLEIBT als
+  // Rückfall für den Restfall «ein einziger Reiter ist breiter als der ganze
+  // Streifen» (sehr schmale Geräte); bewacht ist er weiter vom Fall darunter,
+  // der zeigt, dass er ohne Überlauf die Seite in Ruhe lässt.
+  test('@390: die Leiste läuft nicht über — der Rest steht im Blatt', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 })
-    await seed(page, [OR, BGE, RECHNER, VORLAGE, '/gesetze/bund/ZGB'])
+    const tabs = [OR, BGE, RECHNER, VORLAGE, '/gesetze/bund/ZGB']
+    await seed(page, tabs)
+    await page.waitForTimeout(1500)
     const streifen = page.locator(STREIFEN)
-    const ueberlauf = await streifen.evaluate((el) => el.scrollWidth > el.clientWidth)
-    expect(ueberlauf, 'die Leiste muss @390 wirklich überlaufen, sonst misst der Fall nichts').toBe(true)
-    expect(await streifen.evaluate((el) => el.scrollLeft)).toBe(0)
-    await streifen.hover({ position: { x: 40, y: 12 } })
-    await page.mouse.wheel(0, 300)
-    await expect.poll(() => streifen.evaluate((el) => el.scrollLeft)).toBeGreaterThan(0)
+    const m = await streifen.evaluate((el) => {
+      const k = [...el.querySelectorAll<HTMLElement>('[data-reiter-schluessel]')]
+      return {
+        scrollW: el.scrollWidth, clientW: el.clientWidth, sichtbar: k.length,
+        letzteKante: k.length ? Math.round(k[k.length - 1].offsetLeft + k[k.length - 1].offsetWidth) : 0,
+      }
+    })
+    expect(m.scrollW, 'Vorstand: 818 in 253').toBeLessThanOrEqual(m.clientW + 1)
+    expect(m.letzteKante).toBeLessThanOrEqual(m.clientW + 1)
+    expect(m.sichtbar).toBeGreaterThan(0)
+    expect(m.sichtbar).toBeLessThan(tabs.length)
+    await expect(page.locator(REITER).getByRole('button', { name: /Alle \d+ offenen Reiter/ }))
+      .toHaveText(`+${tabs.length - m.sichtbar}`)
   })
 
   test('ohne Überlauf bleibt das Rad beim Dokument — die Seite scrollt weiter', async ({ page }) => {

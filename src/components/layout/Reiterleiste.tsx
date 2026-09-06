@@ -1,5 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTabs } from './useTabs';
 import {
@@ -11,21 +10,15 @@ import {
   // (`TabPanel`) baute daneben seine eigene Beschriftung aus `verlaufLabel`
   // und trug darum den Volltitel, wo die Leiste die Kurzform zeigte. Jetzt
   // stehen sie in `lib/tabs` und beide Flächen lesen dieselbe Quelle.
-  reiterKurzformTeile, reiterKurzformText, reiterTitel,
+  reiterKurzformText,
 } from '../../lib/tabs';
 import { verlaufLabel, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { reiterKategorie } from '../../lib/tabGruppen';
-import { registerVonPfad, REG_FLAECHE, REG_TON } from './bereiche';
-import { SchliessKnopf } from '../ui/SchliessKnopf';
-import { Leerzustand } from '../ui/Leerzustand';
-// ── §15 · AUCH DAS ÜBERLAUF-BLATT ERST BEIM ÖFFNEN ─────────────────────────
-// Dieselbe Überlegung wie beim Kontextmenü unten, und dieselbe Messung: das
-// Blatt rendert ausschliesslich im Portal hinter `blattOffen`, zieht aber mit
-// `TabPanel` die ganze Gruppier-Achse (`lib/tabGruppen`, `HerkunftIcon`) in
-// den Start-Chunk. Wer nie auf «+N» klickt — die Mehrheit —, lädt sie
-// umsonst. Logikverlust: keiner, dieselbe Komponente, nur später.
-const TabPanel = lazy(() => import('./TabPanel').then((m) => ({ default: m.TabPanel })));
+import { Reiter } from './reiterleiste/Reiter';
+import { ReiterBlatt } from './reiterleiste/ReiterBlatt';
+import { useReiterFenster } from './reiterleiste/useReiterFenster';
 import { useDialogFokus } from './useDialogFokus';
+import { useKopieren } from '../useKopieren';
 import { usePaneSteuerung } from './usePaneLayout';
 // ── §15 · DAS KONTEXTMENÜ GEHÖRT NICHT IN DEN START-CHUNK ──────────────────
 // GEMESSEN 6.9.2026 (`npm run check:perf-budget`, gebautes dist/): mit einem
@@ -58,17 +51,10 @@ import type { ReiterMenueEintrag } from './ReiterMenue';
 // (localStorage `lexmetrik-tabs`, Pfad INKLUSIVE `#art-…`-Anker — die
 // Lesestellung überlebt den Neustart also schon heute, §5a Ziff. 6).
 
-/** Wie viele Reiter höchstens NEBENEINANDER stehen; der Rest zieht in das
- *  «+N»-Blatt. Zahl aus §5a Ziff. 5 («Überlauf ab ~8 Reitern»). Der aktive
- *  Reiter ist von der Kappung ausgenommen — er ist immer im Bild. */
-const SICHTBAR_MAX = 8;
-/** Ab dieser Zahl bietet die schmale Ansicht zusätzlich den «N offen»-Knopf
- *  an (§5a Ziff. 8). */
-const MOBIL_BLATT_AB = 3;
-/** Eigener MIME-Typ für das Ziehen eines Reiters in ein Pane (§5a Ziff. 4).
- *  `dragover` darf die Nutzlast nicht lesen, nur die Typen — darum ein eigener
- *  Typ statt einer Inhaltsprüfung auf `text/plain`. */
-export const REITER_MIME = 'application/x-lexmetrik-reiter';
+/** Der MIME-Typ des Reiter-Zugs wohnt seit R13 bei der Überlauf-Rechnung
+ *  (`reiterleiste/ueberlauf`) — hier steht nur noch die Durchreiche, damit
+ *  `Shell.tsx` seinen bisherigen Import behält (§5: eine Quelle). */
+export { REITER_MIME } from './reiterleiste/ueberlauf';
 
 export function Reiterleiste({ paneSchluessel = [] }: {
   /** Reiter-Schlüssel der offenen Panes in Fenster-Ordnung (0 = links/Haupt).
@@ -81,6 +67,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
   const { oeffneDaneben, kannOeffnen, istOffen, schliessePane } = usePaneSteuerung();
   const [manifeste, setManifeste] = useState<VerlaufManifeste>({});
   const [blattOffen, setBlattOffen] = useState(false);
+  const { kopieren } = useKopieren();
   const [suche, setSuche] = useState('');
   const triggerRef = useRef<HTMLButtonElement>(null);
   const blattRef = useRef<HTMLDivElement>(null);
@@ -89,7 +76,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
    *  für den Doppelklick auf den Leerraum. */
   const streifenRef = useRef<HTMLDivElement>(null);
   /** Offenes Reiter-Kontextmenü (M4): welcher Reiter, an welcher Stelle. */
-  const [menue, setMenue] = useState<{ path: string; x: number; y: number } | null>(null);
+  const [menue, setMenue] = useState<{ path: string | null; x: number; y: number } | null>(null);
   const gezogen = useRef<string | null>(null);
   /** Gezogener Reiter als STATE (nicht nur Ref): der Reiter unter dem Zeiger
    *  soll sich während des Zugs sichtbar zurücknehmen — dafür braucht es ein
@@ -152,21 +139,28 @@ export function Reiterleiste({ paneSchluessel = [] }: {
   // Verzeichnis.
   const ordnung = tabs;
 
-  // ── Überlauf (§5a Ziff. 5) · NIE STILLES SCHLIESSEN ────────────────────────
-  // Gekappt wird nur die SICHTBARKEIT, nie die Liste. Der aktive Reiter ist von
-  // der Kappung ausgenommen: liegt er hinter der Grenze, rückt er auf den
-  // letzten sichtbaren Platz — «der aktive Reiter ist im Bild» gilt auch, wenn
-  // zwölf offen sind.
-  const { sichtbar, versteckt } = useMemo(() => {
-    if (ordnung.length <= SICHTBAR_MAX) return { sichtbar: ordnung, versteckt: [] as TabEintrag[] };
-    const vorn = ordnung.slice(0, SICHTBAR_MAX);
-    const hinten = ordnung.slice(SICHTBAR_MAX);
-    const aktivHinten = hinten.findIndex((t) => tabSchluessel(t.path) === aktivSchluessel);
-    if (aktivHinten === -1) return { sichtbar: vorn, versteckt: hinten };
-    const getauscht = [...vorn.slice(0, SICHTBAR_MAX - 1), hinten[aktivHinten]];
-    const rest = [vorn[SICHTBAR_MAX - 1], ...hinten.filter((_, i) => i !== aktivHinten)];
-    return { sichtbar: getauscht, versteckt: rest };
-  }, [ordnung, aktivSchluessel]);
+  // ── R13-2/R13-3 · ÜBERLAUF AUS DER GEMESSENEN BREITE, FENSTER STATT TAUSCH ─
+  //
+  // Hier stand bis R13 eine feste Zahl (`SICHTBAR_MAX = 8`) UND ein
+  // Positions-Tausch: lag der aktive Reiter dahinter, wurde er auf Slot 8
+  // GESETZT und der bisherige Slot-8-Reiter fiel ins Blatt. GEMESSEN 7.9.2026
+  // (15 Reiter, Wechsel #14 → #15): «ARG» verschwand aus dem Streifen, obwohl
+  // niemand ihn geschlossen hatte — die Leiste zeigte eine Nachbarschaft, die
+  // es im Speicher nicht gibt, und Alt+⇧+←/→ ordnete gegen das Bild (R13-3).
+  // Zugleich sagte die feste 8 nichts über den PLATZ: 8 lange Reiter @1440
+  // massen 1476 px in einem 1355 px breiten Streifen, ohne «+N» und ohne
+  // sichtbaren Scrollbalken — der achte stand als stummes «Z» an der Kante,
+  // @1024 fehlten zwei Reiter ganz (R13-2).
+  //
+  // JETZT: `useReiterFenster` misst, wie viele Reiter NEBENEINANDER ganz ins
+  // Bild passen (die Reiter schrumpfen dabei bis an ihre Inhaltsgrenze), und
+  // die Leiste zeigt ein zusammenhängendes FENSTER dieser Länge über die echte
+  // Speicherordnung — verschoben genau so weit, dass der aktive Reiter darin
+  // liegt. Alles ausserhalb steht im «+N»-Blatt, nichts wird angeschnitten.
+  const aktivIdx = ordnung.findIndex((t) => tabSchluessel(t.path) === aktivSchluessel);
+  const { start, anzahl } = useReiterFenster(streifenRef, ordnung.length, aktivIdx);
+  const sichtbar = ordnung.slice(start, start + anzahl);
+  const versteckt = [...ordnung.slice(0, start), ...ordnung.slice(start + anzahl)];
 
   const schliessen = (path: string) => {
     // M1: steht dieser Reiter gerade in einem zweiten Fenster, geht das Fenster
@@ -192,6 +186,19 @@ export function Reiterleiste({ paneSchluessel = [] }: {
     neuerLeererReiter();
     navigate('/');
     window.dispatchEvent(new CustomEvent('lm:suche-fokus'));
+  };
+
+  // ── R13-6 · «ALLE SCHLIESSEN» AN EINER STELLE GERECHNET ───────────────────
+  // GEMESSEN 7.9.2026: @1440 mit 3–8 Reitern ist der Blatt-Knopf `md:hidden`
+  // (Breite 0) — und «Alle schliessen» stand AUSSCHLIESSLICH im Blatt. Am
+  // Desktop war die Geste damit gar nicht erreichbar. Jetzt steht sie in beiden
+  // Kontextmenüs und im Blatt; gerechnet wird sie genau hier (§5). Die Fenster
+  // gehen mit (M1) — sonst zeigte ein Pane weiter ein Dokument, das die Leiste
+  // nicht mehr führt.
+  const alleSchliessen = () => {
+    for (const x of ordnung) schliessePane(x.path);
+    leereTabs();
+    navigate('/');
   };
 
   // ── M3 · «ZULETZT GESCHLOSSEN» (Prüfbefund R11 #37) ───────────────────────
@@ -220,9 +227,35 @@ export function Reiterleiste({ paneSchluessel = [] }: {
   // statt verschoben.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (!e.altKey || e.ctrlKey || e.metaKey || e.defaultPrevented) return;
+      if (e.defaultPrevented) return;
+      const strgTab = e.ctrlKey && !e.altKey && !e.metaKey && e.key === 'Tab';
+      if (!e.altKey && !strgTab) return;
       const a = document.activeElement as HTMLElement | null;
       if (a && (/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName) || a.isContentEditable)) return;
+      // ── R13-8 · ZYKLISCH BLÄTTERN ────────────────────────────────────────
+      // Browser-Norm ist Ctrl+Tab / Ctrl+⇧+Tab, UMLAUFEND (anders als das
+      // Umordnen mit Alt+⇧+←/→, das am Rand bewusst stehen bleibt: hier geht
+      // nichts verloren, man kommt nur wieder vorn heraus).
+      // GEMESSEN 7.9.2026: Ctrl+Tab bleibt im normalen Browserfenster wirkungs-
+      // los — Chrome und Firefox fangen es für ihre EIGENEN Tabs ab, bevor die
+      // Seite es sieht. Der Griff steht hier trotzdem (er kostet nichts und
+      // wirkt dort, wo die Umgebung ihn durchlässt), ANGEBOTEN wird in der
+      // Oberfläche aber nur das Paar, das man wirklich bekommt: Alt+Bild↑/↓
+      // (§8 — keine Zusage, die nicht gilt).
+      const blaettern = (vor: boolean) => {
+        if (ordnung.length < 2) return;
+        const idx = ordnung.findIndex((t) => tabSchluessel(t.path) === aktivSchluessel);
+        const von = idx === -1 ? 0 : idx;
+        const ziel = ordnung[(von + (vor ? 1 : ordnung.length - 1)) % ordnung.length];
+        navigate(ziel.path);
+      };
+      if (strgTab) { e.preventDefault(); blaettern(!e.shiftKey); return; }
+      if (e.key === 'PageDown' || e.key === 'PageUp') {
+        e.preventDefault();
+        blaettern(e.key === 'PageDown');
+        return;
+      }
+      if (e.ctrlKey || e.metaKey) return;
       if (e.shiftKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
         const idx = ordnung.findIndex((t) => tabSchluessel(t.path) === aktivSchluessel);
         if (idx === -1) return;
@@ -243,8 +276,13 @@ export function Reiterleiste({ paneSchluessel = [] }: {
         return;
       }
       if (e.shiftKey) return;
+      // ── R13-8 · ALT+9 IST DER LETZTE REITER, NICHT DER NEUNTE ───────────
+      // Browser-Norm (Chrome, Firefox, Safari): die 9 springt ans ENDE. Vorher
+      // war sie schlicht der neunte — bei 15 Reitern war #10 und alles dahinter
+      // per Tastatur unerreichbar (GEMESSEN 7.9.2026).
       if (/^[1-9]$/.test(e.key)) {
-        const ziel = ordnung[Number(e.key) - 1];
+        const n = Number(e.key);
+        const ziel = n === 9 ? ordnung[ordnung.length - 1] : ordnung[n - 1];
         if (!ziel) return;
         e.preventDefault();
         navigate(ziel.path);
@@ -290,7 +328,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
     else if (rechts > streifen.scrollLeft + streifen.clientWidth) {
       streifen.scrollLeft = rechts - streifen.clientWidth;
     }
-  }, [aktivSchluessel, sichtbar.length]);
+  }, [aktivSchluessel, sichtbar.length, anzahl]);
 
   // ── M6 · DAS MAUSRAD ROLLT DIE LEISTE (Prüfbefund R11 #33) ────────────────
   //
@@ -390,6 +428,19 @@ export function Reiterleiste({ paneSchluessel = [] }: {
       merkeTab(ziel, t.label);
       navigate(ziel);
     } });
+    // ── R13-9 · «ADRESSE KOPIEREN» (Prüfbefund 7.9.2026) ────────────────────
+    // Das Kontextmenü eines Browser-Tabs trägt sie; die App kann sie (der
+    // `LinkTeilenButton` tut dasselbe an anderer Stelle), das Reiter-Menü bot
+    // sie nicht an. EIN Klick, kein neuer Zustand. Der Eintrag erscheint nur,
+    // wo die Zwischenablage überhaupt zu haben ist (§8: kein toter Eintrag) —
+    // `navigator.clipboard` fehlt in unsicheren Kontexten.
+    // EINE KOPIER-MECHANIK (R4-D): geschrieben wird über `useKopieren`, nicht
+    // von Hand — der Hook quittiert erst NACH erfolgreichem Schreiben und
+    // schluckt weder verweigerte Berechtigung noch fehlende API als Erfolg.
+    if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      e.push({ id: 'adresse', label: 'Adresse kopieren',
+        onKlick: () => kopieren(new URL(t.path, window.location.origin).href) });
+    }
     if (ordnung.length > 1) {
       e.push({ id: 'andere', label: 'Alle anderen schliessen', onKlick: () => {
         for (const x of ordnung) if (tabSchluessel(x.path) !== tabSchluessel(t.path)) schliessePane(x.path);
@@ -403,6 +454,9 @@ export function Reiterleiste({ paneSchluessel = [] }: {
         schliesseRechtsVon(t.path);
         if (rechts.some((x) => tabSchluessel(x.path) === aktivSchluessel)) navigate(t.path);
       } });
+    }
+    if (ordnung.length > 1) {
+      e.push({ id: 'alle', label: 'Alle schliessen', onKlick: alleSchliessen });
     }
     // KEINE ✕-Marke: das Schliess-Glyph kommt in dieser App aus genau EINEM
     // Baustein (`ui/SchliessKnopf`, A3-1) — eine Menüzeile, die es selbst
@@ -421,6 +475,28 @@ export function Reiterleiste({ paneSchluessel = [] }: {
     return e;
   };
 
+  // ── R13-5 · DAS MENÜ DES LEERRAUMS (Prüfbefund 7.9.2026) ──────────────────
+  //
+  // GEMESSEN: nach dem Schliessen des LETZTEN Reiters standen 0 Reiter, der
+  // Ring hielt 3 Einträge — und der Rechtsklick auf den Leerraum ergab
+  // `[role=menu]` = 0 (das Browser-Menü). Zurück kam man nur mit Alt+⇧+T; mit
+  // der Maus gar nicht. Das ist genau der Moment, in dem man die Rückfahrkarte
+  // braucht, und genau die Stelle, an der der Browser sie anbietet.
+  const leerraumEintraege = (): ReiterMenueEintrag[] => {
+    const wieder = letzterGeschlossener();
+    const e: ReiterMenueEintrag[] = [
+      { id: 'neu', label: 'Neuer Reiter', rechts: 'Alt+T', onKlick: neuerReiter },
+    ];
+    // EIN WORT FÜR EINE SACHE (Ä118): derselbe Wortlaut wie im Reiter-Menü und
+    // im Blatt.
+    if (wieder) {
+      e.push({ id: 'wieder', label: `Wieder öffnen: ${reiterKurzformText(wieder, manifeste)}`,
+        rechts: 'Alt+⇧+T', onKlick: stelleWiederHer });
+    }
+    if (tabs.length > 0) e.push({ id: 'alle', label: 'Alle schliessen', onKlick: alleSchliessen });
+    return e;
+  };
+
   /** R2: kein Reiter offen — die Leiste hält ihre Höhe, aber weder Unterstrich
    *  noch Trennkante, und das «+» rückt an den Inhaltsrand. */
   const leer = tabs.length === 0;
@@ -434,208 +510,6 @@ export function Reiterleiste({ paneSchluessel = [] }: {
       <span aria-hidden className="lc-griff-glyph">+</span>
     </button>
   );
-
-  const reiter = (t: TabEintrag, i: number) => {
-    const schluessel = tabSchluessel(t.path);
-    const aktiv = schluessel === aktivSchluessel;
-    const { kopf, kern, stelle } = reiterKurzformTeile(t, manifeste);
-    const name = reiterKurzformText(t, manifeste);
-    // R8 · Volltitel, Stand/Datum/Kurzbeschreibung und Lesestellung stehen in
-    // EINER Ableitung (`lib/tabs.reiterTitel`) — Herleitung dort.
-    const titel = reiterTitel(t, manifeste);
-    const reg = registerVonPfad(t.path);
-    // F10 · EINE REGEL FÜR BEIDE GRIFFE (✕ und ⧉): der aktive Reiter zeigt sie
-    // immer, inaktive bei Hover ODER Tastatur-Fokus irgendwo im Reiter. Vorher
-    // war das ✕ dauernd sichtbar und das ⧉ nur bei Hover — zwei Regeln für
-    // dieselbe Zeile, und die Tastatur erreichte das ⧉ nur unsichtbar.
-    const griffSicht = aktiv
-      ? ''
-      : 'opacity-0 transition-opacity group-hover/reiter:opacity-100 group-focus-within/reiter:opacity-100';
-    // Aktiv-Marken der Panes: welcher Reiter steht in welchem Fenster (§5a
-    // Ziff. 4). Bei einem einzigen Pane trägt der aktive Reiter keine Marke —
-    // «links» ohne ein «rechts» sagt nichts.
-    const paneIdx = paneSchluessel.length > 1 ? paneSchluessel.indexOf(schluessel) : -1;
-    const paneWort = paneIdx === 0 ? 'links' : paneIdx > 0 ? 'rechts' : null;
-    return (
-      <div key={schluessel}
-        data-reiter-aktiv={aktiv}
-        // Test-Anker: die Reiter-IDENTITÄT im DOM (`lib/tabs.tabSchluessel`).
-        // Die Beschriftung taugt dafür nicht — sie hängt an lazy geladenen
-        // Manifesten und ist genau das, was hier NICHT gemessen werden soll.
-        data-reiter-schluessel={schluessel}
-        draggable
-        onDragStart={(ev) => {
-          gezogen.current = t.path;
-          setZieht(t.path);
-          ev.dataTransfer.setData('text/plain', t.path);
-          ev.dataTransfer.setData(REITER_MIME, t.path);
-          ev.dataTransfer.effectAllowed = 'copyMove';
-          // GHOST: der Reiter selbst hängt am Zeiger, gefasst dort, wo man ihn
-          // angepackt hat. Chromium nimmt zwar von sich aus das gezogene
-          // Element — aber erst NACH dem Handler und ohne Griffpunkt; ein
-          // explizites `setDragImage` mit dem Zeiger-Offset ist der Unterschied
-          // zwischen «etwas fliegt» und «ich halte diesen Reiter» (D15: die
-          // Funktion war da, nur nicht als Funktion erkennbar).
-          const kasten = ev.currentTarget.getBoundingClientRect();
-          try { ev.dataTransfer.setDragImage(ev.currentTarget, ev.clientX - kasten.left, ev.clientY - kasten.top); }
-          catch { /* ältere Engines ohne setDragImage — der Default-Ghost tut es auch */ }
-        }}
-        onDragOver={(ev) => {
-          const von = gezogen.current;
-          if (!von || von === t.path) return;
-          ev.preventDefault();
-          // SEITE AUS DEM ZEIGER-X (D15, «analog browser»): linke Hälfte des
-          // Ziels = davor, rechte Hälfte = dahinter. Ohne diese Unterscheidung
-          // liesse sich ein Reiter nie ans ENDE der Leiste ziehen — hinter dem
-          // letzten gibt es kein weiteres Ziel.
-          const kasten = ev.currentTarget.getBoundingClientRect();
-          const davor = ev.clientX < kasten.left + kasten.width / 2;
-          if (ueber?.path !== t.path || ueber.davor !== davor) setUeber({ path: t.path, davor });
-        }}
-        onDrop={(ev) => {
-          ev.preventDefault();
-          const von = gezogen.current ?? ev.dataTransfer.getData(REITER_MIME);
-          if (von && von !== t.path) {
-            const kasten = ev.currentTarget.getBoundingClientRect();
-            ordneTabsUm(von, t.path, ev.clientX < kasten.left + kasten.width / 2);
-          }
-          gezogen.current = null; setZieht(null); setUeber(null);
-        }}
-        onDragEnd={() => { gezogen.current = null; setZieht(null); setUeber(null); }}
-        // M4 · RECHTSKLICK ÖFFNET DAS REITER-MENÜ. Unterdrückt wird das
-        // Browser-Kontextmenü NUR über einem Reiter — über der Leiste
-        // daneben, über dem «+» und über der ganzen übrigen Seite bleibt es
-        // erreichbar (Risiko aus dem Plan).
-        onContextMenu={(ev) => {
-          ev.preventDefault();
-          setMenue({ path: t.path, x: ev.clientX, y: ev.clientY });
-        }}
-        title={titel}
-        // F9 · DER AKTIVE REITER IST EINE FLÄCHE, KEIN 4-EINHEITEN-UNTERSCHIED.
-        // GEMESSEN 6.9.2026: aktiv `paper-raised` (255) gegen inaktiv `paper`
-        // (251) — der Unterschied trug allein der 2-px-Strich. Jetzt trägt der
-        // aktive Reiter die REGISTERFARBE seiner Domäne als leichte Tönung
-        // (Papier bleibt Papier, die Farbe sagt zugleich, WELCHES Register).
-        // `cursor-grab` / `active:cursor-grabbing` an der HÜLLE: die Affordanz
-        // war der ganze D15-Befund — das Ziehen funktionierte, sah aber nach
-        // nichts aus. Der Zeiger sagt jetzt schon vor dem Anfassen, dass hier
-        // etwas zu greifen ist; die Griffe ✕/⧉ setzen ihren eigenen Zeiger.
-        // Der gezogene Reiter nimmt sich zurück (`opacity-40`) — was am Zeiger
-        // hängt, soll nicht zugleich an seinem alten Platz stehen.
-        className={`group/reiter relative flex shrink-0 cursor-grab items-center border-r border-rule-soft active:cursor-grabbing ${
-          zieht === t.path ? 'opacity-40' : ''
-        } ${aktiv ? (reg ? REG_TON[reg] : 'bg-paper-raised') : ''}`}>
-        {/* EINFÜGEMARKE (D15): 2 px in der Registerfarbe des GEZOGENEN Reiters,
-            über die volle Reiterhöhe, auf der Seite, auf der er landen wird.
-            Sie ersetzt den früheren, immer linken `border-l-2` — der konnte
-            nicht sagen, ob der Reiter davor oder dahinter einrastet, und ans
-            Ende der Leiste kam man mit ihm gar nicht. */}
-        {ueber?.path === t.path && (
-          <span aria-hidden data-reiter-marke={ueber.davor ? 'davor' : 'dahinter'}
-            className={`pointer-events-none absolute inset-y-0 w-0.5 ${ueber.davor ? '-left-px' : '-right-px'} ${
-              zieht && registerVonPfad(zieht) ? REG_FLAECHE[registerVonPfad(zieht)!] : 'bg-ink-900'}`} />
-        )}
-        {/* ── R1 (Prüfbefund R11, 6.9.2026) · DIE LEISTE IST NICHT TRIST ─────
-            GEMESSEN: alle inaktiven Reiter trugen `bg-ink-400 opacity-30` —
-            eine graue Leiste, in der die Registerfarbe erst beim Überfahren
-            erschien. Der Streifen ist aber die EINE Stelle, an der man ohne
-            Lesen sieht, was offen ist (Gesetz, Entscheid, Werkzeug …).
-            ENTSCHEID (David «nicht trist»): jeder Reiter trägt seine eigene
-            Registerfarbe, der inaktive auf 60 % Deckkraft, der aktive voll
-            plus Flächen-Tönung (`REG_TON`, oben). 60 % ist die Stufe, die
-            RUHIG bleibt und den aktiven Reiter trotzdem eindeutig lässt: er
-            unterscheidet sich in ZWEI Merkmalen (volle Farbe UND Tönung),
-            nicht nur in der Deckkraft. Der Hover hebt auf 100 % — dieselbe
-            Auskunft wie vorher, nur nicht mehr die einzige.
-            Ohne Register (Meta-Route) bleibt es bei Tinte: geraten wird keine
-            Farbe (§8). */}
-        <span aria-hidden className={`absolute inset-x-0 bottom-0 h-0.5 ${
-          aktiv
-            ? (reg ? REG_FLAECHE[reg] : 'bg-ink-900')
-            : `${reg ? REG_FLAECHE[reg] : 'bg-ink-400'} opacity-60 group-hover/reiter:opacity-100`}`} />
-        <button type="button" aria-current={aktiv ? 'page' : undefined}
-          onClick={() => navigate(t.path)}
-          onAuxClick={(ev) => {
-            // Mittelklick schliesst — das Browser-Idiom, das David meint.
-            if (ev.button === 1) { ev.preventDefault(); schliessen(t.path); }
-          }}
-          // M4 · DASSELBE MENÜ OHNE MAUS: Shift+F10 und die Menü-Taste sind
-          // die beiden Wege, die Windows/Linux-Tastaturen dafür kennen
-          // (WCAG 2.1.1 — eine Zeigergeste allein wäre keine Bedienung).
-          // Verankert wird es an der linken unteren Ecke des Reiters, nicht am
-          // Zeiger, den es hier nicht gibt.
-          onKeyDown={(ev) => {
-            if (ev.key !== 'ContextMenu' && !(ev.key === 'F10' && ev.shiftKey)) return;
-            ev.preventDefault();
-            const k = ev.currentTarget.getBoundingClientRect();
-            setMenue({ path: t.path, x: k.left, y: k.bottom });
-          }}
-          className={`flex min-w-0 items-baseline gap-1 py-1.5 pl-2.5 pr-1 text-body-s ${
-            aktiv ? 'font-medium text-ink-900' : 'text-ink-600 hover:text-ink-900'}`}>
-          <span className="sr-only">{`Reiter ${i + 1}: `}</span>
-          {/* F6 · DIE GESCHÄFTSNUMMER WIRD NIE GEKÜRZT. Gekürzt wird der Kopf
-              (das Gericht, ohnehin schon abgekürzt); der Kern trägt die Nummer
-              und steht `shrink-0`. Der Deckel sitzt darum AM KOPF, nicht am
-              Knopf: läge er am Knopf, ragte ein langer Kern als `shrink-0`-Kind
-              über dessen Kasten und legte sich über die ⧉/✕-Griffe daneben.
-              Ohne Kopf kürzt der Kern selbst — dann ist er der ganze Name
-              (Gesetz, Rechner, Vorlage) und nichts daran ist geschützt. */}
-          {/* ── DIE WORTFUGE IST EIN ECHTES LEERZEICHEN, KEIN `gap` ─────────
-              GEMESSEN 6.9.2026 (`e2e/w224-plus-reiter`, nach der D27-Trennung):
-              der Knopf las sich als «Art. 257dOR» — die Lücke kam allein aus
-              `gap-1` des Flex-Kastens, und die trägt weder `textContent` noch
-              die Berechnung des Accessible Name (WCAG 4.1.2: eine Sprachaus-
-              gabe hätte «Artikel 257dOR» gesagt). `{' '}` ist ein Leerzeichen-
-              Textknoten: als Flex-Kind wird er nicht gerendert (das Bild bleibt
-              byte-gleich, die Lücke macht weiter `gap-1`), im Text steht er.
-              Gilt für BEIDE Fugen — die zum Kopf hatte den Defekt schon
-              vorher («OGer AGHOR.2024.19»). */}
-          {kopf && <span className="truncate max-w-[9rem]">{kopf}</span>}
-          {kopf && ' '}
-          {/* ── D27 (David 6.9.2026) · DIE LESESTELLUNG STEHT IM REITER ──────
-              «diese funktion, dass es anzeigt in welchem artikel wir sind,
-              soll der tab bekommen.» Die Stelle wandert beim Scrollen (aus
-              `lib/tabs`, entprellt auf 200 ms vom Scroll-Spy des Lesers) —
-              und ein wandernder Text ändert seine Breite. Läge er im selben
-              Fluss wie der Kern, schöbe jeder Artikelwechsel alle Reiter
-              rechts davon. `.rl-stelle` (index.css) reserviert darum eine
-              feste Breite, auch solange die Stellung noch unbekannt ist
-              (`stelle === ''`): die Leiste steht schon vor dem ersten
-              Spy-Lauf da, wo sie danach steht. Nur Gesetzes-Reiter tragen den
-              Platz (`stelle === null` = keine Stellung möglich). */}
-          {stelle !== null && <span className="rl-stelle num">{stelle}</span>}
-          {stelle ? ' ' : null}
-          <span className={kopf ? 'shrink-0' : 'truncate max-w-[15rem]'}>{kern}</span>
-          {paneWort && <span className="sr-only">{` (Fenster ${paneWort})`}</span>}
-        </button>
-        {/* Fenster-Marke: zeigt, welcher Reiter links bzw. rechts steht. */}
-        {paneWort && (
-          <span aria-hidden title={`Fenster ${paneWort}`}
-            className="shrink-0 border border-rule-soft px-1 text-micro leading-tight text-ink-500">
-            {paneWort === 'links' ? '◧' : '◨'}
-          </span>
-        )}
-        {/* «daneben öffnen» — der Klick-Weg zu dem, was das Ziehen ins zweite
-            Fenster tut (§5a Ziff. 4); nur ab lg und mit freier Kapazität. */}
-        {kannOeffnen && !istOffen(t.path) && (
-          <button type="button" onClick={() => oeffneDaneben(t.path)}
-            aria-label={`«${name}» daneben öffnen`} title="Daneben öffnen"
-            className={`hidden lg:inline-flex h-6 w-5 shrink-0 items-center justify-center text-ink-400 hover:text-ink-900 ${griffSicht}`}>
-            <span aria-hidden className="lc-griff-glyph">⧉</span>
-          </button>
-        )}
-        {/* A3-1: EIN Schliess-✕ der App; der Klick wirft ein offenes Dokument
-            samt Leseposition weg — derselbe deklarierte destruktive Ton wie in
-            der Reiter-Liste und der Pane-Titelleiste.
-            `komfort={false}`: die 44-px-Trefferfläche des Bausteins läge in
-            einer 28-px-Reiterzeile über dem ⧉-Nachbarn UND über dem nächsten
-            Reiter — dieselbe begründete Ausnahme wie dort; die AA-Untergrenze
-            (24 px, WCAG 2.5.8) hält die Grundklasse. */}
-        <SchliessKnopf name={`Reiter «${name}» schliessen`} ton="destruktiv" komfort={false}
-          onClick={() => schliessen(t.path)} klasse={`h-6 w-6 mr-1 shrink-0 ${griffSicht}`} />
-      </div>
-    );
-  };
 
   return (
     <nav aria-label="Offene Reiter" ref={leisteRef}
@@ -670,10 +544,34 @@ export function Reiterleiste({ paneSchluessel = [] }: {
             Doppelklick AUF einem Reiter steigt hierher auf und darf keinen
             zweiten Reiter erzeugen (Risiko aus dem Plan). */}
         <div ref={streifenRef} data-reiter-streifen
+          // Mess-Anker für die Sonden (R13): «ab welchem Reiter / wie viele /
+          // von wie vielen». Die Zahlen sind das, was `useReiterFenster`
+          // ausgerechnet hat — im DOM nachlesbar, statt aus Breiten erraten.
+          data-reiter-fenster={`${start}/${anzahl}/${ordnung.length}`}
           onDoubleClick={(ev) => { if (ev.target === ev.currentTarget) neuerReiter(); }}
+          // R13-5 · Rechtsklick NUR auf der freien Fläche (dieselbe Bedingung
+          // wie beim Doppelklick daneben): über einem Reiter gilt dessen
+          // eigenes Menü, über allem anderen bleibt das Browser-Menü.
+          onContextMenu={(ev) => {
+            if (ev.target !== ev.currentTarget) return;
+            ev.preventDefault();
+            setMenue({ path: null, x: ev.clientX, y: ev.clientY });
+          }}
           className={`relative flex min-w-0 flex-1 items-stretch overflow-x-auto lc-reiter-scroll${
             leer ? '' : ' border-l border-rule-soft'}`}>
-          {sichtbar.map(reiter)}
+          {sichtbar.map((t) => {
+            const k = tabSchluessel(t.path);
+            const nr = ordnung.findIndex((x) => tabSchluessel(x.path) === k) + 1;
+            return (
+              <Reiter key={k} t={t} nr={nr} letzter={nr === ordnung.length}
+                aktiv={k === aktivSchluessel} manifeste={manifeste} paneSchluessel={paneSchluessel}
+                zieht={zieht} ueber={ueber} gezogenRef={gezogen}
+                kannOeffnen={kannOeffnen} istOffen={istOffen} onDaneben={oeffneDaneben}
+                onNavigate={navigate} onSchliessen={schliessen}
+                onZieht={setZieht} onUeber={setUeber} onMenue={setMenue}
+                onUmordnen={ordneTabsUm} />
+            );
+          })}
         </div>
         {/* D19 · BROWSER-«+» AM ENDE DES STREIFENS — fest, nicht Teil der
             scrollenden Reiter-Fläche (das Vorbild wandert beim Scrollen der
@@ -685,14 +583,29 @@ export function Reiterleiste({ paneSchluessel = [] }: {
             schmale Ansicht (§5a Ziff. 5 + 8). Inhalt ist die gruppierte Liste
             `TabPanel`, also genau das, was das abgelöste ☰-Flyout zeigte,
             zusätzlich mit Suchfeld. */}
-        {(ueberlaufZahl > 0 || tabs.length >= MOBIL_BLATT_AB) && (
+        {/* ── R13-1 · DER KNOPF STEHT IMMER, UND IMMER GLEICH BREIT ────────
+            Er erschien bis R13 erst BEI Überlauf (und ab md nur dann). Genau
+            das war die Ursache des R13-1-Befundes: der Knopf verschmälerte den
+            Streifen um ~58 px, NACHDEM die Leiste gerechnet hatte — der aktive
+            Reiter stand danach angeschnitten am Rand.
+            Und es ist zugleich eine RÜCKKOPPLUNG: die gemessene Überlauf-Zahl
+            (R13-2) entscheidet über den Knopf, der Knopf über die Breite, die
+            Breite wieder über die Zahl. GEMESSEN 7.9.2026 @1024 mit 8 Reitern:
+            React-Fehler #185 («Maximum update depth exceeded»), die Leiste
+            verschwand ganz. Ein fester Platz bricht den Kreis: die Breite des
+            Streifens hängt nicht mehr davon ab, wie viele Reiter hineinpassen.
+            FESTE Breite, nicht nur eine Mindestbreite: die Aufschrift wechselt
+            zwischen «8 offen» und «+2», und GEMESSEN 7.9.2026 reichte allein
+            dieser Textwechsel, um den Kreis am Leben zu halten (React #185
+            blieb). Ein Kasten mit fester Breite hat keine Meinung zu seinem
+            Inhalt — erst damit ist der Streifen wirklich unabhängig. */}
+        {!leer && (
           <button ref={triggerRef} type="button"
             aria-haspopup="dialog" aria-expanded={blattOffen}
             aria-label={`Alle ${tabs.length} offenen Reiter`}
             title="Alle offenen Reiter"
             onClick={() => setBlattOffen((v) => !v)}
-            className={`shrink-0 self-center ml-2 border border-rule-soft px-2 py-1 text-body-s text-ink-600 hover:text-ink-900 ${
-              ueberlaufZahl > 0 ? '' : 'md:hidden'}`}>
+            className="shrink-0 self-center ml-2 w-[4.5rem] overflow-hidden whitespace-nowrap border border-rule-soft px-1 py-1 text-center text-body-s text-ink-600 hover:text-ink-900">
             <span className="num">{blattTitel}</span>
           </button>
         )}
@@ -701,8 +614,15 @@ export function Reiterleiste({ paneSchluessel = [] }: {
       {/* M4 · das Kontextmenü des angeklickten Reiters. Ein Menü zur Zeit —
           `menue` hält den Reiter, nicht der Reiter das Menü (sonst stünden bei
           zwölf Reitern zwölf Portale bereit). */}
-      {menue && (() => {
-        const t = tabs.find((x) => tabSchluessel(x.path) === tabSchluessel(menue.path));
+      {menue && menue.path === null && (
+        <Suspense fallback={null}>
+          <ReiterMenue x={menue.x} y={menue.y} name="Offene Reiter"
+            eintraege={leerraumEintraege()} onSchliessen={() => setMenue(null)} />
+        </Suspense>
+      )}
+      {menue && menue.path !== null && (() => {
+        const pfad = menue.path;
+        const t = tabs.find((x) => tabSchluessel(x.path) === tabSchluessel(pfad));
         if (!t) return null;
         return (
           <Suspense fallback={null}>
@@ -712,77 +632,18 @@ export function Reiterleiste({ paneSchluessel = [] }: {
         );
       })()}
 
-      {blattOffen && createPortal(
-        <div className="fixed inset-0 z-overlay">
-          <div className="lc-scrim-voll absolute inset-0" onClick={() => setBlattOffen(false)} aria-hidden />
-          <div ref={blattRef} tabIndex={-1} role="dialog" aria-label="Alle geöffneten Reiter"
-            className="lc-schwebeflaeche absolute right-2 top-2 max-h-[80vh] w-[22rem] max-w-[calc(100vw-1rem)] overflow-y-auto p-2 focus:outline-none">
-            <label className="mb-2 block">
-              <span className="sr-only">Offene Reiter durchsuchen</span>
-              <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
-                placeholder="Reiter suchen" className="lc-input h-9 w-full py-0 text-body-s" />
-            </label>
-            {/* D19 · derselbe Browser-«+» zusätzlich im Blatt: die schmale
-                Ansicht (§5a Ziff. 8) wechselt bei drei und mehr Reitern auf
-                dieses durchsuchbare Blatt als Haupt-Weg zu den Reitern — der
-                «+» gehört dort dazu, ohne erst den Streifen dahinter zu
-                verlassen. Der Streifen-Knopf bleibt daneben unverändert
-                erreichbar (fixe Breite, nicht Teil der scrollenden Fläche). */}
-            <button type="button" onClick={() => { neuerReiter(); setBlattOffen(false); }}
-              title="Neuer Reiter (Alt+T)" className="lc-btn-outline lc-btn-sm mb-2 w-full">
-              <span aria-hidden className="lc-griff-glyph mr-1">+</span>Neuer Reiter
-            </button>
-            <Suspense fallback={null}>
-              <TabPanel
-                tabs={gefiltert}
-                manifeste={manifeste}
-                aktivSchluessel={aktivSchluessel}
-                onNavigate={(p) => { navigate(p); setBlattOffen(false); }}
-                onSchliessen={schliessen}
-                onDaneben={kannOeffnen ? (p) => { oeffneDaneben(p); setBlattOffen(false); } : undefined}
-                paneOffen={istOffen}
-              />
-            </Suspense>
-            {gefiltert.length === 0 && (
-              <div className="px-2 py-3">
-                {/* D-7: EIN Leerzustands-Baustein für «hier ist nichts» — die
-                    Suche filtert einen BESTAND, der Weiterweg ist das Leeren
-                    des Feldes. */}
-                <Leerzustand art="filter" text={`Kein offener Reiter passt zu «${suche.trim()}».`}
-                  weiterweg={{ text: 'Filter leeren', onKlick: () => setSuche('') }} />
-              </div>
-            )}
-            {/* M3 · DIE RÜCKFAHRKARTE, SICHTBAR. Alt+Shift+T kennt niemand,
-                der es nicht gesagt bekommt — und «Alle schliessen» direkt
-                darunter ist genau die Geste, nach der man sie am dringendsten
-                braucht. Steht nur da, wenn der Ring etwas hergibt. */}
-            {(() => {
-              const wieder = letzterGeschlossener();
-              if (!wieder) return null;
-              return (
-                <div className="mt-1 border-t border-rule-soft pt-1">
-                  <button type="button"
-                    onClick={() => { stelleWiederHer(); setBlattOffen(false); }}
-                    title="Zuletzt geschlossenen Reiter wiederherstellen (Alt+Shift+T)"
-                    className="lc-btn-outline lc-btn-sm w-full">
-                    <span aria-hidden className="lc-griff-glyph mr-1">↩</span>
-                    Wieder öffnen: {reiterKurzformText(wieder, manifeste)}
-                  </button>
-                </div>
-              );
-            })()}
-            {tabs.length > 1 && (
-              <div className="mt-1 border-t border-rule-soft pt-1">
-                <button type="button"
-                  onClick={() => { leereTabs(); navigate('/'); setBlattOffen(false); }}
-                  className="lc-btn-outline lc-btn-sm w-full">
-                  Alle schliessen
-                </button>
-              </div>
-            )}
-          </div>
-        </div>,
-        document.body,
+      {blattOffen && (
+        <ReiterBlatt
+          blattRef={blattRef} tabs={tabs} gefiltert={gefiltert} manifeste={manifeste}
+          aktivSchluessel={aktivSchluessel} suche={suche} onSuche={setSuche}
+          onNavigate={(p) => { navigate(p); setBlattOffen(false); }}
+          onSchliessen={schliessen}
+          onDaneben={kannOeffnen ? (p) => { oeffneDaneben(p); setBlattOffen(false); } : undefined}
+          paneOffen={istOffen}
+          onNeu={() => { neuerReiter(); setBlattOffen(false); }}
+          onWieder={() => { stelleWiederHer(); setBlattOffen(false); }}
+          onAlle={() => { alleSchliessen(); setBlattOffen(false); }}
+          onZu={() => setBlattOffen(false)} />
       )}
     </nav>
   );
