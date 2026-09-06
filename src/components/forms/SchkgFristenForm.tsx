@@ -357,8 +357,14 @@ export function SchkgFristenForm({ live }: {
         )}
       </div>
 
+      {/* R9-2 (6.9.2026): `role="status"`, nicht `role="alert"`. Die Meldung
+          antwortet nicht auf einen Eingabefehler, sondern beschreibt eine
+          ABDECKUNGSGRENZE des Rechners (§8) — es gibt nichts zu beheben, also
+          unterbricht sie auch nichts. Die Blocker- und Mängellisten der Vorlagen
+          tragen aus demselben Grund `role="alert"`. Wächter:
+          `src/tests/design-r9-fehlerbox-baustein.test.ts`. */}
       {istInfo && aktiv && (
-        <div className="lc-notice-danger">
+        <div role="status" className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Keine berechenbare Frist – {aktiv.norm}</p>
           <p className="text-body-s text-danger-700">{aktiv.hinweis}</p>
         </div>

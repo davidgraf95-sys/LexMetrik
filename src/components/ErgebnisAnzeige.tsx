@@ -167,15 +167,26 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             Zustand trägt `<details>`/der Inhalt, nicht eine Glyphe im Namen.
             `.lc-druck-chevron` bleibt — die Druckregel blendet die reine
             Auf/Zu-Deko weiterhin aus (LM-173). */}
+        {/* C4-2/D-18 (R9-2, 6.9.2026): der Vorbehalts-Block war ein KASTEN von Hand
+            — 1-px-Vollrahmen `var(--warn-500)` als Inline-Style plus `bg-warn-bg`
+            ZWEIMAL (Kopf und Körper) — neben dem geteilten `.lc-notice-warn`, das
+            dieselbe Aussage als LINIE trägt (F0.6). Der Rahmen ist die Linie des
+            Bausteins geworden; die Füllung kommt jetzt EINMAL vom Container, die
+            Kinder erben sie. `rounded-md` ist ersatzlos weg: alle fünf Radius-Token
+            stehen auf 0 (F0.5), die Utility behauptete eine Rundung, die es seit
+            der Handschrift nicht mehr gibt — mit Playwright gemessen (`border-radius:
+            0px`, Befund D-18). `p-0` schaltet die Polsterung des Bausteins ab, weil
+            Kopf und Körper des Aufklappers ihre eigene tragen (sonst doppelt).
+            Mechanik, Zustände, `data-vorbehalte`-Tor-Griff und Wortlaut unverändert. */}
         {ergebnis.warnungen.length > 0 && (
-          <div data-vorbehalte={ergebnis.warnungen.length} className="rounded-md overflow-hidden" style={{ border: '1px solid var(--warn-500)' }}>
+          <div data-vorbehalte={ergebnis.warnungen.length} className="lc-notice-warn p-0 overflow-hidden">
             <button type="button" onClick={() => setWarnungenOffen(!warnungenOffen)}
-              className="lc-druck-kopf w-full flex items-center justify-between px-4 py-2.5 bg-warn-bg text-left transition-colors">
+              className="lc-druck-kopf w-full flex items-center justify-between px-4 py-2.5 text-left transition-colors">
               <span className="lc-overline text-warn-700">Hinweise / Vorbehalte ({ergebnis.warnungen.length})</span>
               <span aria-hidden className={`lc-druck-chevron shrink-0 text-warn-700 transition-transform motion-reduce:transition-none ${warnungenOffen ? 'rotate-90' : ''}`}>▸</span>
             </button>
             {(warnungenOffen || druckErzwingtOffen) && (
-              <div className="bg-warn-bg px-4 pb-3 space-y-1">
+              <div className="px-4 pb-3 space-y-1">
                 {/* Norm- UND Entscheid-Zitate in Warnungen verlinkt (Web-Anzeige; Text unverändert) */}
                 {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700 max-w-reading"><NormText text={w} /></p>)}
               </div>
@@ -185,7 +196,8 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Rechenweg (5.6.1) — geöffnet trägt der Block einen Messing-Tick
             (FAHRPLAN-DESIGN 5.7: Marken-Element am täglichsten Interaktionspunkt) */}
-        <div className={`border border-line rounded-md overflow-hidden ${rechenWegOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
+        {/* D-18: `rounded-md` entfernt — Radius-Token = 0 (F0.5), die Utility log. */}
+        <div className={`border border-line overflow-hidden ${rechenWegOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
           <button type="button"
             onClick={() => setRechenWegOffen(!rechenWegOffen)}
             className="lc-druck-kopf w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
@@ -224,7 +236,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Annahmen */}
         {ergebnis.annahmen.length > 0 && (
-          <div className={`border border-line rounded-md overflow-hidden ${annahmenOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
+          <div className={`border border-line overflow-hidden ${annahmenOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
             <button type="button"
               onClick={() => setAnnahmenOffen(!annahmenOffen)}
               className="lc-druck-kopf w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"

@@ -290,7 +290,7 @@ export function VorlageVollmacht() {
               onChange={(v) => set('buergschaft', v)}
               label={<><span>Eingehung von Bürgschaften <span className="text-danger-700"><NormText text={`(Form-Gate: Art. 493 Abs. 6 OR – sperrt den Export, Notariat erforderlich)`} /></span></span></>} />
             {a.buergschaft && (
-              <div className="lc-notice-danger">
+              <div role="alert" className="lc-notice-danger">
                 <p className="text-body-s text-danger-700">
                   Die Bürgschaftsvollmacht bedarf derselben Form wie die Bürgschaft selbst (Art. 493 Abs. 6 OR);
                   bei natürlichen Personen über CHF 2000 heisst das öffentliche Beurkundung (Art. 493 Abs. 2 OR).
@@ -330,7 +330,7 @@ export function VorlageVollmacht() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700"><NormText text={b} /></p>
             </div>
           ))}

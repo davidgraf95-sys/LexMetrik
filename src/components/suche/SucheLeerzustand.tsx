@@ -3,6 +3,7 @@ import { reiterKurzform } from '../../lib/tabs';
 import { suchOptionId } from './suchOptionId';
 import { RegisterMarke } from './RegisterMarke';
 import { artVonRoute } from './suchArt';
+import { Leerzustand } from '../ui/Leerzustand';
 
 // ─── Leerzustand der Suche (⌘K / Fokus ohne Eingabe) — UI-NAV O1, Schritt 2 ──
 //
@@ -68,7 +69,19 @@ export function SucheLeerzustand({ verlauf, listboxId, aktivId, onNavigate, pane
       {verlauf.length === 0
         // §8: ehrlich statt leer — der Verlauf ist noch keiner. KEINE Ersatz-Liste
         // (das wären die «Einstiege», die genau hier gefallen sind).
-        ? <p className="px-4 pb-3 text-body-s text-ink-500">Noch nichts geöffnet.</p>
+        //
+        // C3-1 (R9-2, 6.9.2026): der Satz stand hier in der KANON-FORM des
+        // Leerzustands, von Hand gezeichnet (`text-body-s text-ink-500`) — die
+        // App-weite Sonde `leerzustand-d7.test.tsx` (3) sucht diese Rohform, griff
+        // aber nur bei «Kein…»/«Keine…»/«Noch kein…» und lief an «Noch nichts…»
+        // vorbei. Jetzt der Baustein: `art="bestand"`, weil der Zweig über den
+        // VOLLEN Verlauf läuft und nicht hinter einer Sucheingabe hängt (R4-E:
+        // die Art folgt der Lage, nicht dem Wortlaut) — es ist nichts DA, nichts
+        // verdeckt, also kein erfundener Weiterweg (§8). Wortlaut unverändert.
+        // Die Polsterung bleibt am UMSCHLAG: sie gehört zur Panel-Geometrie
+        // (`px-4`, wie Überschrift und Fussnote darüber/darunter), nicht zum
+        // Leerzustand — der Baustein nimmt bewusst keine Zusatzklassen.
+        ? <div className="px-4 pb-3"><Leerzustand art="bestand" text="Noch nichts geöffnet." /></div>
         : (
           <>
             <ul role="none" className="pb-1">

@@ -6,6 +6,7 @@ import { usePaneKlasse } from '../layout/PaneKontext';
 import { ModulFuss } from './PultModul';
 import type { StartModulProps } from '../../lib/startseiteModulTypen';
 import { ohneDatumsSuffix } from './entscheidZitierung';
+import { Datum } from '../ui/Datum';
 
 // ─── Jüngste Entscheide im Korpus (W2·24-R3, vormals NewsHeader) ────────────
 //
@@ -38,11 +39,14 @@ const MAX = 6;
 
 const nf = (n: number) => n.toLocaleString('de-CH');
 
-/** ISO «YYYY-MM-DD…» → «DD.MM.YYYY» ohne Date-Objekt (deterministisch, SSR-sicher). */
-function deDatum(iso: string): string {
-  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
-  return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
-}
+// A-3 (R9-2, 6.9.2026): Hier stand ein SECHSTER byte-gleicher Datums-Formatierer
+// («ISO → DD.MM.YYYY» per Regex). Genau diese Streuung hat `ui/Datum.tsx` in
+// Welle B eingesammelt — Formatierung UND Ziffern-Auszeichnung gehören zusammen,
+// sonst läuft das eine ohne das andere weiter (die Herleitung steht dort im
+// Wortlaut). Der Aufruf unten benutzt jetzt den Baustein; er bringt `.lc-ziffern`
+// mit (Ziffernrolle ohne erzwungene Mono-Familie) und ersetzt damit auch das
+// lokale `.num`, das hier Monospace erzwang, wo der Kanon keine Familie wechselt.
+// Format der Anzeige unverändert («17.06.2026»), Nicht-ISO bleibt stehen (§8).
 
 /**
  * Ein Listen-Eintrag: der Entscheid plus die VORAB aufgelösten Norm-Kürzel.
@@ -135,7 +139,7 @@ export function EntscheideListe({ an }: StartModulProps) {
           <li key={g.datum} className={`grid items-baseline gap-x-4 border-t border-rule-soft py-1.5 ${pk(
             'sm:grid-cols-[5.5rem_minmax(0,1fr)]', '@lg/pane:grid-cols-[5.5rem_minmax(0,1fr)]',
           )}`}>
-            <p className="num font-sans text-xs text-ink-500">{deDatum(g.datum)}</p>
+            <Datum iso={g.datum} className="block font-sans text-xs text-ink-500" />
             <div className="grid gap-y-1">
               {g.eintraege.map(({ e, gebiet, normen }) => (
                 /* Spaltenbreite GEMESSEN, nicht geschätzt (6.9.2026, Preview
@@ -151,8 +155,15 @@ export function EntscheideListe({ an }: StartModulProps) {
                 <p key={e.key} className={`grid items-baseline gap-x-4 ${pk(
                   'sm:grid-cols-[16rem_minmax(0,1fr)]', '@2xl/pane:grid-cols-[16rem_minmax(0,1fr)]',
                 )}`}>
+                  {/* A2-6 (R9-2): dieselbe Fachgrösse «Zitierung/Aktenzeichen» trug
+                      an zwei von drei Stellen `.num` (Leser-Kopf `EntscheidLeser.tsx:671`,
+                      Karte `EntscheidKarte.tsx:128/141`) und hier an der dritten nicht —
+                      also ohne Tabellenziffern. `.num` ist hier der Kanon, nicht
+                      `.lc-ziffern`: die Zitierung IST das Aktenzeichen, und für
+                      Aktenzeichen ist die Mono-Stimme ausdrücklich vorgesehen
+                      (Herleitung im Kopf von `ui/Datum.tsx`). */}
                   <Link to={`/rechtsprechung/${encodeURIComponent(e.key)}`}
-                    className="font-sans font-medium text-body-s text-ink-900 no-underline hover:text-reg-r hover:underline">
+                    className="num font-sans font-medium text-body-s text-ink-900 no-underline hover:text-reg-r hover:underline">
                     {ohneDatumsSuffix(e.zitierung)}
                   </Link>
                   {/* Beschreibung: amtliche Kurz-Regeste, sonst die im Entscheid
@@ -161,7 +172,14 @@ export function EntscheideListe({ an }: StartModulProps) {
                       DETERMINISTISCH erfasste `sachgebiet` — dasselbe Feld, das
                       Liste, Karte und Sachgebiets-Rail benutzen (§5). */}
                   <span className="font-serif text-body-s text-ink-600">
-                    {e.leitcharakter === 'leitentscheid' && <em className="not-italic font-medium text-ink-900">Leitentscheid. </em>}
+                    {/* C1-1 (R9-2): dieselbe Aussage trug zwei Bauformen — auf der
+                        Karte den Badge `.lc-badge lc-badge-ok` (`EntscheidKarte.tsx:52`),
+                        hier einen Fettdruck-Satzanfang mit Punkt. Kanon ist der Badge
+                        (verbreitetere Form, und die Marke ist ein Status, kein Satz).
+                        Das WORT bleibt «Leitentscheid» — kein ★, kein Icon (Prüfer-
+                        Verdikt D23-F4: eine Marke, die nur ein Zeichen ist, sagt
+                        nichts). Der Satzpunkt entfällt mit dem Satz. */}
+                    {e.leitcharakter === 'leitentscheid' && <><span className="lc-badge lc-badge-ok">Leitentscheid</span>{' '}</>}
                     <span data-gebiet={gebiet}>{gebiet}</span>
                     {e.regesteKurz
                       ? <> · {e.regesteKurz}</>

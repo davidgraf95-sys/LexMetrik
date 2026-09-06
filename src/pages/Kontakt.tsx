@@ -73,7 +73,7 @@ export function Kontakt() {
         </label>
 
         {beruehrt && fehler.length > 0 && (
-          <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
+          <div role="alert" className="lc-notice lc-notice-danger space-y-0.5">
             {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
           </div>
         )}

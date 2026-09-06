@@ -823,15 +823,29 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
                 deckt ihn zu), es gibt also keinen Zwilling zu unterscheiden. */}
             <span className="inline-flex shrink-0 items-center gap-1.5" role="group" aria-label="Grösse nur des Entscheidtexts">
               <span aria-hidden className="select-none whitespace-nowrap text-micro text-ink-500">Nur Entscheidtext</span>
-              <span className="inline-flex items-stretch rounded border border-line overflow-hidden">
+              {/* B-K1 (R9-2, 6.9.2026): die beiden Stufenknöpfe waren die EINZIGEN
+                  rohen `<button>` dieser Datei — ein selbstgezeichnetes Segment-
+                  Steuerelement (aussen `rounded border border-line overflow-hidden`,
+                  innen `min-h-6 px-2 py-1` plus eine Trennlinie von Hand), während
+                  die Nachbarn derselben Zeile (Fundstelle, Zitat kopieren, Lesemodus)
+                  auf `.lc-chip` stehen. Kanon für kleine Textknöpfe in einer Meta-
+                  Zeile ist `.lc-btn-mini` — dieselbe Bauform wie die Zitat/Link-Paare
+                  im Gesetzes-Leser (`parts/ArtikelLeser.tsx:522/523`) und der
+                  Zurücksetzer der Filterleiste (`EntscheidFilter.tsx:355`); die
+                  Haarlinie IST dort die Anatomie, jeder Knopf trägt sie selbst, und
+                  die Höhe kommt aus `--tap-ziel` statt aus einer `min-h-6`-Zahl.
+                  `rounded` fällt weg (Radius-Token = 0, F0.5). Handler, `disabled`,
+                  `aria-label`, `title`, `role="group"` und Fokus-Reihenfolge
+                  unverändert. */}
+              <span className="inline-flex items-center gap-1">
                 <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}
                   aria-label="Entscheidtext verkleinern"
                   title="Entscheidtext verkleinern — die Anwendung bleibt gleich gross"
-                  className="min-h-6 px-2 py-1 text-ink-600 lc-hover-flaeche disabled:opacity-40">A−</button>
+                  className="lc-btn-mini text-ink-600 hover:text-brass-700 disabled:opacity-40">A−</button>
                 <button type="button" onClick={() => setFs(fsIdx + 1)} disabled={fsIdx === FS_STUFEN.length - 1}
                   aria-label="Entscheidtext vergrössern"
                   title="Entscheidtext vergrössern — die Anwendung bleibt gleich gross"
-                  className="min-h-6 px-2 py-1 text-ink-600 lc-hover-flaeche disabled:opacity-40 border-l border-line">A+</button>
+                  className="lc-btn-mini text-ink-600 hover:text-brass-700 disabled:opacity-40">A+</button>
               </span>
             </span>
             <button type="button" onClick={kopiereZitat}

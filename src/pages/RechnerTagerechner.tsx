@@ -244,9 +244,16 @@ export function RechnerTagerechner() {
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
             <Tabs items={VERFAHREN} value={verfahren} onChange={wechsle}
               ariaLabel="Verfahrensart wählen" />
+            {/* B-K1 (R9-2, 6.9.2026): dieser Aufklapp-Schalter stand als roher
+                `<button>` neben den Verfahrens-Reitern — als Bedienelement kenntlich
+                allein an Farbe und Fettung, also gar nicht (F0.8: Affordanz nie nur
+                aus der Farbe). `.lc-btn-mini` ist der Hauskanon für den kleinen
+                Textknopf neben einer Leiste (`EntscheidFilter.tsx:355`,
+                `parts/ArtikelLeser.tsx:522/523`): Haarlinie als Anatomie, Höhe aus
+                `--tap-ziel`. Beschriftung, `aria-expanded` und Handler unverändert. */}
             <button type="button" onClick={() => setWeicheOffen((o) => !o)}
               aria-expanded={weicheOffen}
-              className="text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
+              className="lc-btn-mini text-body-s font-medium text-brass-700 hover:text-brass-600">
               Weiss nicht?
             </button>
           </div>
@@ -255,13 +262,23 @@ export function RechnerTagerechner() {
               <p className="text-body-s text-ink-600 max-w-reading">
                 Drei Fragen führen zum Regime – die Wahl bleibt bei Ihnen:
               </p>
+              {/* B-K1, Teil 2 (R9-2): die drei Regime-Wahlen stehen MITTEN IM SATZ.
+                  `.lc-btn-mini`/`.lc-btn-ghost` sind Block-Anatomien (inline-flex mit
+                  eigener Höhe) und würden die Zeilen aufbrechen; einen benannten
+                  Baustein für den Textknopf IM FLIESSTEXT gibt es heute nicht (F0.8
+                  regelt den `<a>`-Inline-Link, nicht den `<button>`). Sie bekommen
+                  darum die Affordanz, die das Reglement für Inline-Verweise verlangt
+                  — den Unterstrich, `underline-offset-2` wie die «zum Schritt →»-
+                  Sprünge in `VorlageSchlichtungsgesuchBs.tsx:517`. Ein Bedienelement,
+                  das nur die Farbe ausweist, ist keines (F0.8/WCAG 1.4.1). Fehlender
+                  Baustein im Protokoll vermerkt. */}
               <ol className="space-y-1.5 text-body-s text-ink-600 list-decimal pl-5 max-w-reading">
                 <li>
                   Läuft die Frist in einer <span className="font-medium text-ink-900">Betreibungssache</span> (Zahlungsbefehl,
                   Rechtsvorschlag, Fortsetzung, Konkursandrohung – auch gerichtliche Fristen daraus,
                   z. B. Rechtsöffnung)?{' '}
                   <button type="button" onClick={() => weicheWahl('schkg')}
-                    className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
+                    className="font-medium text-brass-700 underline underline-offset-2 hover:text-brass-600 whitespace-nowrap">
                     → Betreibung (SchKG)
                   </button>
                 </li>
@@ -270,14 +287,14 @@ export function RechnerTagerechner() {
                   Schlichtungsbehörde</span> die Frist nach ZPO gesetzt (Klage, Stellungnahme,
                   Berufung, Vorschuss)?{' '}
                   <button type="button" onClick={() => weicheWahl('zpo')}
-                    className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
+                    className="font-medium text-brass-700 underline underline-offset-2 hover:text-brass-600 whitespace-nowrap">
                     → Zivilprozess (ZPO)
                   </button>
                 </li>
                 <li>
                   Sonst – Vertrags- oder Gesetzesfrist ausserhalb eines solchen Verfahrens:{' '}
                   <button type="button" onClick={() => weicheWahl('allgemein')}
-                    className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
+                    className="font-medium text-brass-700 underline underline-offset-2 hover:text-brass-600 whitespace-nowrap">
                     → Allgemein (Vertrag/OR)
                   </button>{' '}
                   <span className="text-ink-500">– rechnet ohne Gerichtsferien; die Warnungen im

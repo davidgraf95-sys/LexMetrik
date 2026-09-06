@@ -357,8 +357,8 @@ export function FehlerBox({ fehler }: { fehler: string[] }) {
   const beruehrt = useContext(BeruehrtContext);
   if (!beruehrt || fehler.length === 0) return null;
   return (
-    <div role="alert" className="border border-line bg-danger-bg p-4 space-y-1">
-      <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
+    <div role="alert" className="lc-notice lc-notice-danger space-y-1">
+      <p className="lc-overline text-danger-700 mb-1">Eingabefehler</p>
       {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={f} /></p>)}
     </div>
   );

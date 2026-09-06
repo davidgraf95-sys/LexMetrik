@@ -256,7 +256,7 @@ export function VorlagePatientenverfuegung() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="lc-overline text-danger-700 mb-1">Nicht zulässig – vor der Ausgabe zu beheben</p>
               <p className="text-body-s text-danger-700"><NormText text={b} /></p>
             </div>

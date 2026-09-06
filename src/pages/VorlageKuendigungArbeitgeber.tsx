@@ -255,7 +255,7 @@ export function VorlageKuendigungArbeitgeber() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.length > 0 && (
-            <div className="lc-notice-danger space-y-1">
+            <div role="alert" className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Export gesperrt</p>
               {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>

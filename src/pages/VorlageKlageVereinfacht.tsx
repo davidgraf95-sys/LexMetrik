@@ -375,7 +375,7 @@ export function VorlageKlageVereinfacht() {
       case 'pruefen': return (
         <div className="space-y-5">
           {maengel.map((m, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700">{m.text}</p>
             </div>
           ))}

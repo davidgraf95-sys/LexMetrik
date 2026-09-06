@@ -62,7 +62,7 @@ export function MappenGates({ gates }: { gates: { blocker: string[]; warnungen: 
   return (
     <>
       {gates.blocker.length > 0 && (
-        <div className="bg-danger-bg p-3 space-y-0.5">
+        <div role="alert" className="lc-notice lc-notice-danger space-y-0.5">
           {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700 max-w-reading">• <NormText text={b} /></p>)}
         </div>
       )}

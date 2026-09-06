@@ -164,7 +164,7 @@ export function VorlageKuendigungMieter() {
                 <input className={inputCls} value={a.ehegatteName} onChange={(e) => set('ehegatteName', e.target.value)} placeholder="Vorname Name" />
               </Field>
               {nichtig && (
-                <div className="lc-notice-danger">
+                <div role="alert" className="lc-notice-danger">
                   <p className="text-body-s text-danger-700 font-medium">
                     Ohne Zustimmung ist die Kündigung nichtig — der Export bleibt gesperrt, bis die Zustimmung bestätigt ist.
                   </p>
@@ -254,7 +254,7 @@ export function VorlageKuendigungMieter() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.length > 0 && (
-            <div className="lc-notice-danger space-y-1">
+            <div role="alert" className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Export gesperrt</p>
               {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
