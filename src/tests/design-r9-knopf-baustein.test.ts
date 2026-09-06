@@ -85,7 +85,7 @@ const HOECHSTZAHL: Readonly<Record<string, number>> = {
   'pages/gesetz-leser/parts/TrefferListe.tsx': 4,
   'pages/gesetz-leser/v3/LeserAnsichtV3.tsx': 1,
   'pages/gesetz-leser/v3/LeserGliederungSchiene.tsx': 1,
-  'pages/gesetz-leser/v3/LeserLeseZeile.tsx': 1,
+  'pages/gesetz-leser/v3/LeserKopf.tsx': 1, // Gliederungs-Griff, D32 aus LeserLeseZeile verlegt
   'pages/gesetz-leser/v3/LeserPanelOeffner.tsx': 1,
   'pages/gesetz-leser/v3/LeserRahmenV3.tsx': 1,
   'pages/gesetz-leser/v3/LeserSeitenleiste.tsx': 2,
@@ -98,14 +98,14 @@ const HOECHSTZAHL: Readonly<Record<string, number>> = {
   'pages/gesetz-leser/v3/TrefferLeiste.tsx': 3,
 
   // R9-2 (2 Dateien, 7 Knoepfe)
-  'pages/EntscheidLeser.tsx': 2,
   'pages/RechnerTagerechner.tsx': 5,
 
   // RAHMEN (8 Dateien, 20 Knoepfe)
   'components/layout/HeaderSuche.tsx': 1,
   'components/layout/OrtsAngabe.tsx': 1,
   'components/layout/PaneKopf.tsx': 4,
-  'components/layout/Reiterleiste.tsx': 4,
+  'components/layout/Reiterleiste.tsx': 2,
+  'components/layout/reiterleiste/Reiter.tsx': 2, // R13 §6.6-Split aus Reiterleiste
   'components/layout/Shell.tsx': 1,
   'components/layout/Sidebar.tsx': 3,
   'components/layout/TabPanel.tsx': 5,
