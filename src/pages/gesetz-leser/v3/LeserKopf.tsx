@@ -86,7 +86,7 @@ import { kopfElemente, type KopfStufe } from './kopfStufen';
 
 export function LeserKopf({
   erlass, fussnotenAnzahl, hatAenderungsvermerke, stufe, gliederungKnopf,
-  panelOeffner, onPanelOeffnen, suchZone,
+  panelOeffner, onPanelOeffnen, suchZone, suchInZeile, tocOffen, onGliederungZu,
 }: {
   erlass: BrowseErlass;
   // D27: `aktArtikel` ist hier ersatzlos gestrichen. Die Lesestellung ist damit
@@ -118,6 +118,24 @@ export function LeserKopf({
    *  Zone gibt, und legt ihre Höhe als `--leser-v3-such-h` aus — diese Datei
    *  rendert sie nur (§3) und bleibt ohne Breiten-Zweig. */
   suchZone?: ReactNode;
+  /** ── N4 (David 7.9.2026) · DIE ZONE STEHT IN DER ZEILE ─────────────────────
+   *  Wo eine linke Spur steht, ist neben dem Feld Platz für die zwei Griffe —
+   *  dann trägt die Kopf-ZEILE die Zone, statt eine zweite Reihe darunter
+   *  aufzuziehen (Herleitung samt Messung in `./leserGeometrie`, `suchInZeile`).
+   *  Die Element-Zahl der Zeile bleibt bei vier (Kennung · Feld · ⚖ · Ansicht),
+   *  Design-Grundlage Kap. 6. Der Rahmen entscheidet, diese Datei ordnet an. */
+  suchInZeile?: boolean;
+  /** ── D32 · DER GLIEDERUNGS-GRIFF IM LINKEN STREIFEN ────────────────────────
+   *  «‹ Gliederung ausblenden» sass bis 7.9.2026 im Kopf der Gliederungsspalte
+   *  selbst (`./LeserLeseZeile`). Seit die Kopfzeile links einen Streifen von
+   *  genau der Spurbreite hat (`--leser-spur-versatz`), stünde der leer — und
+   *  der Griff säss 28 px darunter in einer eigenen Zeile. Er zieht darum hier
+   *  ein; die Gliederung beginnt entsprechend 28 px höher.
+   *  `undefined`, wo die Spalte nicht steht: dann ist die Schiene der eine
+   *  Griff (Ä79), und ein zweiter wäre einer ohne Wirkung. */
+  onGliederungZu?: () => void;
+  /** Zustand für `aria-expanded` an diesem Griff. */
+  tocOffen?: boolean;
 }) {
   const el = kopfElemente(stufe);
 
@@ -165,7 +183,13 @@ export function LeserKopf({
         marginTop: 'calc(-1 * (var(--leser-v3-kopf-luecke, 0px) + var(--leser-v3-app-band, 0px)))',
       }}
     >
-      <div className="flex items-center gap-2 sm:gap-3" style={{ height: 'var(--leser-v3-kopf-h)' }}>
+      {/* N4: EINE Reihe. Der linke Streifen ist genau so breit wie die Spur
+          neben dem Gesetzestext (`--leser-spur-versatz`, D32) — deshalb kein
+          `gap` zwischen ihm und der Zone: der Abstand STECKT schon in der
+          Zahl, ein zusätzliches `gap` schöbe das Feld um 12 px neben den Text.
+          Ohne Spur (Pane, @390) bleibt die Zeile, was sie war. */}
+      <div className={suchInZeile ? 'flex items-center' : 'flex items-center gap-2 sm:gap-3'}
+        style={{ height: suchInZeile ? 'var(--leser-v3-kopf-block-h)' : 'var(--leser-v3-kopf-h)' }}>
         {/* ── D27 · DIE ERLASS-KENNUNG, EINE SCHRUMPFENDE ZONE ─────────────
             Bis 6.9.2026 stand hier die volle Ortsangabe (Krume + laufender
             Artikel) unter `<nav aria-label="Ort im Gesetz">`. Mit D27 (oben)
@@ -174,8 +198,22 @@ export function LeserKopf({
             Screenreader eine leere Verheissung (§8). Die Zone selbst bleibt als
             `data-v3-kopf-ort` bestehen; sie ist die linke Spur der Kopfzeile,
             gegen die die Klapp-Sonde misst (`e2e/leser-klapp-sonde.e2e.ts`). */}
+        {/* ── D32 · DER LINKE STREIFEN ──────────────────────────────────────
+            Im Zeilen-Bild ist er genau so breit wie die Spur neben dem
+            Gesetzestext (`--leser-spur-versatz`) und gibt nichts davon her
+            (`shrink-0`) — sonst begänne das Feld daneben nicht an der Textkante.
+            `h-full`: sonst misst der Streifen seinen höchsten Inhalt, und die
+            Kennung rutschte um 3 px, sobald der Gliederungs-Griff daneben
+            verschwindet (gemessen an der Klapp-Sonde, 7.9.2026 — «ort: Δy=3»).
+            Der Griff steht NEBEN `data-v3-kopf-ort`, nicht darin: die Zone ist
+            die Erlass-Kennung und nichts sonst — `leser-v3-kopfzeile` (a) liest
+            ihren Text und verlangt genau das Kürzel. */}
+        <div className={suchInZeile
+          ? 'flex h-full min-w-0 shrink-0 items-center'
+          : 'flex min-w-0 flex-1 items-baseline'}
+          style={suchInZeile ? { width: 'var(--leser-spur-versatz)' } : undefined}>
         <div data-v3-kopf-ort
-          className="flex min-w-0 flex-1 items-baseline gap-1.5 overflow-hidden whitespace-nowrap text-xs text-ink-500">
+          className="flex min-w-0 items-baseline gap-1.5 overflow-hidden whitespace-nowrap text-xs text-ink-500">
           {/* ── A4 (H2b-Nachzug) · DIE KENNUNG WIRD NIE ELLIPSIERT ────────────
               Ä21 gab dem Kürzel `min-w-0 truncate` (statt `shrink-0`), weil es bei
               ZH-211.11 der ganze Name ist (45 Zeichen) und die Zone sonst
@@ -191,8 +229,40 @@ export function LeserKopf({
               Sonde `e2e/leser-v3-kopf-buendig.ts` (d) misst dieselben Erlasse. */}
           <span data-v3-kopf-kuerzel
             className={`font-medium text-ink-800 ${
-              el.volltitel && zeigeVolltitel(erlass) ? 'shrink-0' : 'min-w-0 truncate'}`}>{erlass.kuerzel}</span>
+              el.volltitel && zeigeVolltitel(erlass) && !suchInZeile ? 'shrink-0' : 'min-w-0 truncate'}`}
+            // D32, offengelegt (§7/§8): im Zeilen-Bild ist der Streifen nur so
+            // breit wie die Spur — bei EINGEKLAPPTER Gliederung sind das 56 px,
+            // und ein langes Kantons-Kürzel (ZH-211.11) kürzt dort. Der volle
+            // Name steht zwei Zeilen tiefer im Erlass-Kopf; der `title` gibt
+            // ihn am Griff selbst her, statt ihn zu verschweigen.
+            title={suchInZeile ? erlass.kuerzel : undefined}>{erlass.kuerzel}</span>
         </div>
+          {/* D32: der Griff endet über der GLIEDERUNG, nicht über dem Text —
+              darum die Spur-Lücke als rechtes Polster (`--leser-spur-abstand`,
+              dieselbe Zahl wie das `gap-5` der Lese-Zeile). */}
+          {onGliederungZu && (
+            <span className="ml-auto shrink-0" style={{ paddingInlineEnd: 'var(--leser-spur-abstand)' }}>
+              <button type="button" data-v3-gliederung-zu onClick={onGliederungZu}
+                aria-expanded={tocOffen} title="Gliederung ausblenden"
+                className="lc-leiste-griff gap-1 px-1.5 text-micro">
+                {/* Ä12 (Ästhetik-Review 16.8.2026): hier stand nur «ausblenden»
+                    — Wort für Wort dasselbe wie «Seitenleiste ausblenden» der
+                    App-Leiste zwei Zentimeter weiter oben, aber mit anderer
+                    Wirkung. Zwei gleich beschriftete Knöpfe, die Verschiedenes
+                    tun, sind eine Falle (§8). Der Knopf sagt, WAS er
+                    ausblendet. Wortlaut mit dem Umzug unverändert. */}
+                <span aria-hidden>‹</span><span>Gliederung ausblenden</span>
+              </button>
+            </span>
+          )}
+        </div>
+
+        {/* N4/D32 · DIE ERLASS-SUCHE, BÜNDIG MIT DEM GESETZESTEXT ────────────
+            Sie steht zwischen dem linken Streifen und den Griffen und nimmt den
+            Rest der Zeile; ihren eigenen Deckel (`max-w-reading`) bringt sie
+            mit (`./SuchZone`). `min-w-0`, damit ein langes Feld die Griffe
+            nicht aus der Zeile drückt. */}
+        {suchInZeile && <div className="min-w-0 flex-1">{suchZone}</div>}
 
         {/* ── Griffe: ⚖ · ☰ (nur wenn nötig) · Ansicht ────────────────────────
             Design-Grundlage Kap. 6: «Kopfzeile im Ruhezustand ≤ 4 Elemente,
@@ -206,7 +276,10 @@ export function LeserKopf({
             Wort (Krume bzw. «‹ Gesetze»); Herleitung, Messreihe und die neue
             Auflage «höchstens ein ✕ je Kopfzeile» in `./kopfStufen`. Damit
             ergibt jede Stufe höchstens Ort · ⚖ · ☰ · Ansicht = vier. */}
-        <div data-v3-kopf-griffe className="flex shrink-0 items-center gap-1 sm:gap-1.5">
+        <div data-v3-kopf-griffe
+          className={suchInZeile
+            ? 'flex shrink-0 items-center gap-1 pl-2 sm:gap-1.5 sm:pl-3'
+            : 'flex shrink-0 items-center gap-1 sm:gap-1.5'}>
           {panelOeffner}
           {gliederungKnopf}
           <LeserAnsichtV3 kompakt={stufe === 'mini'} fussnotenAnzahl={fussnotenAnzahl}
@@ -217,8 +290,10 @@ export function LeserKopf({
           als eigenes `sticky`-Element darunter. Zwei gestapelte Sticky-Blöcke
           hätten zwei `top`-Werte, zwei z-Ebenen und zwischen sich den `mb-4`
           dieses Kopfes als durchscheinenden Spalt gebraucht. Ein Block, eine
-          Kante, eine Höhe (`--leser-v3-kopf-h` + `--leser-v3-such-h`). */}
-      {suchZone}
+          Kante, eine Höhe (`--leser-v3-kopf-block-h`).
+          N4 (7.9.2026): steht die Zone IN der Zeile (oben), fällt diese zweite
+          Reihe weg — sie wäre sonst zweimal im DOM. */}
+      {!suchInZeile && suchZone}
     </div>
   );
 }

@@ -19,7 +19,7 @@ import { SatzspiegelKontext } from './satzspiegel';
 // Inhalte kommen als Slots herein, sie kennt weder Modell noch Erlass.
 
 export function LeserLeseZeile({
-  bild, vollflaechig, tocOffen, onSchieneAuf, onGliederungZu, leiste, zelle, panelZone,
+  bild, vollflaechig, onSchieneAuf, leiste, zelle, panelZone,
 }: {
   /** Die Breiten-Entscheidung. `bild.spalten === undefined` = kein Grid, alles
    *  steht untereinander wie vor Ä60 (c). */
@@ -31,14 +31,10 @@ export function LeserLeseZeile({
    *  Datei, die den Hüllen-Zustand selbst liest, verzweigt auf ihn. Diese Datei
    *  verzweigt auf eine EIGENSCHAFT DER FLÄCHE, die ihr der Rahmen mitteilt. */
   vollflaechig: boolean;
-  /** Zustand für `aria-expanded` am «Gliederung ausblenden»-Griff. */
-  tocOffen: boolean;
-  /** Klick auf die Schiene. Was er alles tut (Blatt schliessen, wenn es ihren
-   *  Platz hat), entscheidet der Rahmen aus `bild.schieneHoltPlatz`. */
+  /** Klick auf die Schiene — läuft im Rahmen durch den Stick-Ausgleich.
+   *  D33 (7.9.2026): er holt keinen Platz mehr vom Blatt zurück, weil das Blatt
+   *  keine Spur mehr belegt (`bild.schieneHoltPlatz` ist mit ihr gefallen). */
   onSchieneAuf: () => void;
-  /** Klick auf «‹ Gliederung ausblenden». Läuft im Rahmen durch den
-   *  Stick-Ausgleich, sonst kostete das Einklappen die Leseposition (V6). */
-  onGliederungZu: () => void;
   /** Inhalt der Gliederungsspalte (Übersicht · Feld · Baum). */
   leiste: ReactNode;
   /** Rechte Zelle: Erlass-Kopf, Ingress und Lesekörper. */
@@ -90,19 +86,13 @@ export function LeserLeseZeile({
               ? 'calc(100vh - var(--nt-stick) - 1.5rem)'
               : 'calc(100dvh - var(--leser-kopf-h) - var(--leser-sub-h) - 1rem)',
           }}>
-          <div className="flex items-center justify-end pb-1">
-            <button type="button" data-v3-gliederung-zu onClick={onGliederungZu}
-              aria-expanded={tocOffen} title="Gliederung ausblenden"
-              className="lc-leiste-griff gap-1 px-1.5 text-micro">
-              {/* Ä12 (Ästhetik-Review 16.8.2026): hier stand nur «ausblenden» —
-                  Wort für Wort dasselbe wie «Seitenleiste ausblenden» der
-                  App-Leiste zwei Zentimeter weiter oben, aber mit anderer
-                  Wirkung. Zwei gleich beschriftete Knöpfe, die Verschiedenes
-                  tun, sind eine Falle (§8). Der Knopf sagt jetzt, WAS er
-                  ausblendet. */}
-              <span aria-hidden>‹</span><span>Gliederung ausblenden</span>
-            </button>
-          </div>
+          {/* D32 (7.9.2026): der Griff «‹ Gliederung ausblenden» stand hier als
+              eigene 28-px-Zeile über der Gliederung. Er ist in den linken
+              Streifen der Kopfzeile gezogen (`./LeserKopf`, `gliederungGriff`),
+              der seit D32 genau die Breite dieser Spur hat und sonst leer
+              stünde — Beschriftung, Ä12-Herleitung und `aria-expanded`
+              unverändert mitgenommen, nur der Ort ist neu. Folge, gewollt und
+              in den Bildbogen aufgenommen: die Gliederung beginnt 28 px höher. */}
           {leiste}
         </aside>
       )}
@@ -144,6 +134,13 @@ export function LeserLeseZeile({
           `ArtikelLeser` lesen dieselbe Quelle. */}
       <SatzspiegelKontext.Provider value={bild.satzspiegel}>
       <div className="relative min-w-0" data-lr-spiegel={bild.satzspiegel}>
+        {/* D33 (7.9.2026): die Panel-Zone steht IN der Lese-Zelle, nicht neben
+            ihr. Ihre klebende Gestalt braucht einen `relative`-Bezug und eine
+            natürliche Lage unter dem Kopf-Block — beides gibt genau diese Zelle
+            her (Herleitung in `./LeserPanelZone`). Sie nimmt keinen Platz: im
+            Ruhezustand ist sie `display: contents` ohne Kinder, offen eine
+            0-Höhen-Hülle mit absolut gesetztem Blatt. */}
+        {panelZone}
         <div aria-hidden data-v3-blur="oben" className="pointer-events-none sticky z-sticky h-0 overflow-visible print:hidden"
           style={{ top: 'var(--nt-stick)' }}>
           <div className="h-4 bg-gradient-to-b from-paper/70 to-transparent" />
@@ -154,8 +151,6 @@ export function LeserLeseZeile({
         </div>
       </div>
       </SatzspiegelKontext.Provider>
-
-      {panelZone}
     </div>
   );
 }

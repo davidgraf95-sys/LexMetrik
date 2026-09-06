@@ -6,9 +6,24 @@
 // «achte darauf, dass dann das gleiche gilt».
 //
 // DIE REGEL, die daraus wird: beim Ein- und Ausklappen der Gliederung darf sich
-// im klebenden Leser-Kopf NICHTS verschieben — nicht die Erlass-Suche, nicht
-// die Kopf-Knöpfe, nicht das Ansicht-Menü. Δx = Δy = 0. Was sich ändern DARF,
-// ist die Breite der Textspalte; genau dafür klappt man die Gliederung ja ein.
+// im klebenden Leser-Kopf NICHTS verschieben — nicht die Kopf-Knöpfe, nicht das
+// Ansicht-Menü. Δx = Δy = 0. Was sich ändern DARF, ist die Breite der
+// Textspalte; genau dafür klappt man die Gliederung ja ein.
+//
+// ── §6.3-DEKLARATION (D32, David 7.9.2026) · DIE SUCHE IST AUSGENOMMEN ──────
+// Für die Erlass-Suche galt hier bis zum 7.9.2026 dieselbe Null. Sie war der
+// Grund für Davids nächsten Befund: «die suche erscheint in der gliederung».
+// GEMESSEN @1440 (OR, Preview-Build 7.9.2026): das Feld stand bei x = 184 —
+// der linken Kante der GLIEDERUNGSSPALTE —, der Gesetzestext begann bei
+// x = 492. Δ 308 px. Genau die Null, die dieser Fall bewachte, hielt das Feld
+// dort fest: beim Einklappen sprang die Textspalte um −252 px, das Feld blieb
+// stehen (Δx 0 gegen −252).
+// D28 selbst hatte «oben am gesetz» verlangt; die Null war die Umsetzung eines
+// Teilsatzes («dann verschiebt sie sich auch nicht»), nicht des Auftrags.
+// NEUE REGEL für die Suche, die BEIDES hält: sie steht an der Kante des
+// Gesetzestextes und wandert mit ihm — Δx(Suche) === Δx(Lesespalte). Für jedes
+// andere Kopf-Element bleibt Δ = 0, unverändert und unverhandelt.
+// Deklarierte fachliche Änderung; die Messung von damals bleibt oben stehen.
 //
 // WARUM DAS EINE ECHTE SONDE BRAUCHT, obwohl D28 die Lage strukturell löst:
 // der Kopf-Block liegt über der ganzen Rahmenbreite, seine x-Position hängt
@@ -21,13 +36,12 @@
 // nach links (Messreihe im Kommentar von `rahmenSpalten.ts`). Die Sonde misst
 // also nicht die Absicht, sondern das Ergebnis.
 //
-// ROT ZU BEKOMMEN (§6.7, gesehen): in
-// `src/pages/gesetz-leser/v3/LeserRahmenV3.tsx` `const suchZoneKlebt =
-// hatLeiste;` zurück auf `hatLeiste && !zweiSpalten` setzen — dann wandert das
-// Feld beim Einklappen aus der Gliederungs-Spalte in den Kopf, und (a) meldet
-// eine Verschiebung von rund 250 px. (Zweiter Weg: in `rahmenSpalten` die
-// Schienen-Spur `SPUR_SCHIENE` von 2.25 auf 0 setzen — dann rückt die ganze
-// Zeile.)
+// ROT ZU BEKOMMEN (§6.7, gesehen): in `src/pages/gesetz-leser/v3/rahmenSpalten.ts`
+// `spurVersatzRem` fest auf `0` setzen — dann bleibt das Feld beim Einklappen
+// stehen, während die Textspalte wandert, und (a) meldet «Δx Suche 0 gegen
+// Δx Spalte −252». (Zweiter Weg: die Schienen-Spur `SPUR_SCHIENE` von 2.25 auf
+// 0 setzen — dann rückt die ganze Zeile, und die Null der übrigen Elemente
+// bricht.)
 //
 // ── DIE APP-SEITENLEISTE IST BEWUSST EINE ANDERE FRAGE (offengelegt, §7) ────
 // Der Auftrag nennt neben der Gliederung auch das Ein-/Ausblenden der
@@ -42,9 +56,10 @@
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 
-/** Die Kopf-Elemente, deren Lage D28-Regel festnagelt. */
+/** Die Kopf-Elemente, deren Lage D28-Regel festnagelt. Die Erlass-Suche steht
+ *  NICHT darunter — sie folgt seit D32 der Textspalte (Deklaration oben) und
+ *  wird im Fall (a) gegen DEREN Δ gemessen. */
 const ZIELE = {
-  suche: '[data-v3-such-zone] input',
   kopf: '[data-v3-kopf]',
   ort: '[data-v3-kopf-ort]',
   griffe: '[data-v3-kopf-griffe]',
@@ -86,6 +101,18 @@ function delta(vor: Lage, nach: Lage, bezugVor = { x: 0, y: 0 }, bezugNach = { x
   return { text: zeilen.join(' · '), max }
 }
 
+/** D32: Feld-Kante und Kante der Gesetzesspalte in EINER Auswertung — zwei
+ *  Aufrufe massen zwei Layout-Zustände. */
+async function suchePaar(page: Page): Promise<{ feld: number | null; spalte: number | null }> {
+  return page.evaluate(() => {
+    const kante = (w: string) => {
+      const el = document.querySelector(w)
+      return el ? Math.round(el.getBoundingClientRect().left) : null
+    }
+    return { feld: kante('[data-v3-such-zone] input'), spalte: kante('[data-lr-spiegel]') }
+  })
+}
+
 async function oeffne(page: Page, breite = 1440): Promise<string[]> {
   const fehler = fehlerSammeln(page)
   await page.setViewportSize({ width: breite, height: 900 })
@@ -104,7 +131,8 @@ test.describe('D28-Regel — beim Klappen verschiebt sich im Leser-Kopf nichts',
     await expect(page.locator('[data-v3-aside]')).toBeVisible({ timeout: 20_000 })
 
     const vor = await lagen(page)
-    expect(vor.suche, 'die Erlass-Suche steht vor dem Klappen gar nicht im Kopf').not.toBe(null)
+    const sucheVor = await suchePaar(page)
+    expect(sucheVor.feld, 'die Erlass-Suche steht vor dem Klappen gar nicht im Kopf').not.toBe(null)
 
     // ZU: die Gliederung weicht auf ihre Schiene (Ä79).
     await page.locator('[data-v3-gliederung-zu]').first().click()
@@ -118,9 +146,13 @@ test.describe('D28-Regel — beim Klappen verschiebt sich im Leser-Kopf nichts',
     // Die Gegenprobe, ohne die der Fall nicht trüge: die TEXTSPALTE hat sich
     // wirklich verändert. Sonst wäre die Null oben auch bei einem Klick ohne
     // jede Wirkung grün (§6.7).
-    const spalteVor = await page.evaluate(() =>
-      Math.round(document.querySelector('#lc-lesespalte')?.getBoundingClientRect().width ?? 0))
-    expect(spalteVor, 'die Lesespalte ist nicht messbar — Fall trägt nicht').toBeGreaterThan(0)
+    const sucheZu = await suchePaar(page)
+    const dSpalte = sucheZu.spalte! - sucheVor.spalte!
+    expect(Math.abs(dSpalte), 'die Lesespalte ist beim Einklappen nicht gewandert — Fall trägt nicht')
+      .toBeGreaterThan(50)
+    // D32: das Feld wandert mit ihr, nicht gegen sie.
+    expect(sucheZu.feld! - sucheVor.feld!,
+      `Δx Suche ${sucheZu.feld! - sucheVor.feld!} ≠ Δx Lesespalte ${dSpalte}`).toBe(dSpalte)
 
     // AUF: zurück in die Spalte.
     await page.locator('[data-v3-gliederung-schiene]').first().click()
@@ -130,6 +162,8 @@ test.describe('D28-Regel — beim Klappen verschiebt sich im Leser-Kopf nichts',
 
     const dAuf = delta(vor, auf)
     expect(dAuf.max, `nach dem Wiederaufklappen: ${dAuf.text}`).toBe(0)
+    const sucheAuf = await suchePaar(page)
+    expect(sucheAuf.feld, 'nach dem Wiederaufklappen steht die Suche woanders').toBe(sucheVor.feld)
 
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })

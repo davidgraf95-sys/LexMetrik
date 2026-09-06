@@ -55,20 +55,33 @@ test.describe('H3 — Zähler, Lasche, F8-Regel', () => {
 
     const zaehler = page.locator('[data-v3-panel-zaehler]')
     await expect(zaehler).toBeVisible()
-    // Vor dem Öffnen steht dort KEINE Zahl: der Shard ist nicht geladen, und
-    // eine 0 wäre eine Behauptung über den Bestand (§8).
+    // ── §6.3-DEKLARATION (N1, David 7.9.2026) · DIE ZAHL IST VON ANFANG AN DA ─
+    // Hier stand: «Vor dem Öffnen steht dort KEINE Zahl — der Shard ist nicht
+    // geladen, und eine 0 wäre eine Behauptung über den Bestand (§8).» Der
+    // zweite Halbsatz gilt unverändert; der erste beschrieb die QUELLE, nicht
+    // die Zusage. Gemessen 7.9.2026 @1440 an OR Art. 336c: die Bezüge-Zeile am
+    // Artikel nannte «11 Entscheide», der Kopf-Zähler daneben «3» — zwei Zahlen
+    // für dieselbe Sache, weil der Zähler die GEFILTERTEN Kanten des lazy
+    // geladenen Shards zählte. Er liest jetzt die Zähl-Datei (ø 289 B, kommt im
+    // Leerlauf), also dieselbe Bezugsgrösse wie die Zeile. Folge: die Zahl steht
+    // vor dem ersten Öffnen — und die Beschriftung des Knopfes wechselt nicht
+    // mehr unter dem Cursor, sobald der Shard eintrifft (D33).
+    // WAS UNVERÄNDERT GILT und hier weiter geprüft wird: ohne Datei keine Zahl
+    // (kein `0` aus Unwissen), und der Öffner führt wirklich ins Panel.
     await expect(zaehler).toHaveAttribute('aria-expanded', 'false')
-    expect(await zaehler.getAttribute('data-v3-panel-anzahl')).toBeNull()
     await expect(page.locator('[data-v3-panel]')).toHaveCount(0)
+    // Die StPO führt an Art. 1 Leitentscheide; gewartet wird auf das Attribut,
+    // nicht auf eine Zeit.
+    await expect(zaehler).toHaveAttribute('data-v3-panel-anzahl', /\d+/, { timeout: 20_000 })
+    const vorDemOeffnen = await zaehler.getAttribute('data-v3-panel-anzahl')
 
     await zaehler.click()
     await expect(page.locator('[data-v3-panel]')).toBeVisible()
     await expect(zaehler).toHaveAttribute('aria-expanded', 'true')
 
-    // Jetzt lädt der Bezugs-Shard (Nachladen) und der Zähler bekommt seine Zahl.
-    // Die StPO führt an Art. 1 Leitentscheide; gewartet wird auf das Attribut,
-    // nicht auf eine Zeit.
-    await expect(zaehler).toHaveAttribute('data-v3-panel-anzahl', /\d+/, { timeout: 20_000 })
+    // Das Öffnen ändert die Zahl nicht — es lädt nur die Kanten dahinter nach.
+    expect(await zaehler.getAttribute('data-v3-panel-anzahl'),
+      'die Zahl am Zähler springt beim Öffnen').toBe(vorDemOeffnen)
 
     // Und die Entscheide stehen wirklich im Panel, nicht bloss der Reiter.
     await expect(page.locator('[data-v3-panel] [data-v3-panel-gruppe]').first()).toBeVisible({ timeout: 20_000 })

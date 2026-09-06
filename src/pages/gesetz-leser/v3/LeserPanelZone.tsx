@@ -13,23 +13,22 @@ import { usePopoverAutoZu } from './usePopoverAutoZu';
 
 // ─── WO das Panel steht (H3, Kap. 4d) ────────────────────────────────────────
 //
-// DREI Gestalten seit Ä60 (c). Welche gilt, entscheidet `rahmenSpalten.rahmenBild`
-// im Rahmen — diese Datei ordnet an, sie entscheidet nicht (§3):
+// ═══ D33 (David 7.9.2026) · DIE DRITTE GESTALT `'spalte'` IST GESTRICHEN ═════
+// Sie war die eigene 22-rem-Spur neben dem Text (Ä60 (c), 17.8.2026) und hat
+// genau das getan, was sie verhindern sollte: weil der RAHMEN für sie wuchs,
+// sprang beim Öffnen die ganze Seite. Gemessen 7.9.2026 @1440 (OR): Lesespalte
+// x 492 → 404, Breite 764 → 640, der geklickte Knopf x 1075 → 1253; @1024 fiel
+// die Gliederungsspalte ganz aus dem DOM. Herleitung, David-Entscheid und die
+// verworfenen Varianten B/C stehen in `./rahmenSpalten` am Dateikopf.
+// Geblieben sind ZWEI Gestalten — und `'rechts'` trägt seither jede
+// Desktop-Breite, nicht nur die engen:
 //
-//   'spalte'  D, Einzelansicht, aufgeweiteter Rahmen — eine EIGENE Spur neben
-//             dem Text. Keine Überlagerung, kein verdecktes Zeilenende; im
-//             Fluss und darum `sticky` statt `fixed`. Das ist die Gestalt, die
-//             der Fahrplan von Anfang an vorsah («D: Panel rechts 22 rem»).
-//   'rechts'  D, Einzelansicht, ENGER Rahmen — 22 rem am rechten Rand, NICHT
+//   'rechts'  D, Einzelansicht — 22 rem am rechten Rand, NICHT
 //             modal. Der Lesetext links bleibt sichtbar UND bedienbar; das
 //             Panel ist Beiwerk und verhält sich auch so (Ä52, s. u.).
 //   'unten'   H und jedes Pane — echtes Bottom-Sheet, modal. Es reicht von der
 //             Unterkante nach oben und lässt den Artikel darüber stehen (Ä55).
 //
-// WARUM DIE SPALTE ERST JETZT: bis H4 deckelte der Seitenrahmen auf 70 rem
-// (gemessen 1072 px auf jeder Desktop-Breite), 18 + 40 + 22 rem samt Abständen
-// brauchen 84 rem = 1344. Der Zweig war nicht falsch, ihm fehlten 272 px —
-// David-Entscheid (c) vom 17.8.2026 gibt sie ihm (`rahmenSpalten.ts`).
 // UNBERÜHRT bleibt die harte Regel «NIE drei vertikale Flächen» im geteilten
 // Fenster (Design-Grundlage Kap. 8 Nr. 8, ausdrücklich «im Split-View»): im
 // Pane ist die Gestalt weiterhin ausnahmslos `'unten'`.
@@ -80,6 +79,13 @@ import { usePopoverAutoZu } from './usePopoverAutoZu';
  *  Overlay-Schicht liegt und nicht zum Fenster. */
 const BLATT_ANTEIL = 55;
 
+/** Die 0-Höhen-Hülle der klebenden Gestalt (Herleitung bei `flaeche` unten);
+ *  ohne Klassen reicht sie ihr Kind unverändert durch. */
+function Huelle({ klassen, children }: { klassen?: string; children: ReactNode }) {
+  if (!klassen) return <>{children}</>;
+  return <div className={klassen} style={{ top: 'var(--nt-stick)' }}>{children}</div>;
+}
+
 export function LeserPanelZone({
   form, panelId, paneZiel, paneRolle, zustand, bezuege, erlassKey, quelleUrl, normZitat,
   artikelLabel, erlassKuerzel, bestimmungsWort, aktArtikel, steckbrief, ebene,
@@ -104,9 +110,9 @@ export function LeserPanelZone({
    *  ADRESS-Angabe und seit Befund 45 nicht mehr deckungsgleich mit der
    *  fachlichen Ebene (`/gesetze/international/…`). */
   ebene: 'bund' | 'kanton';
-  /** Gestalt des Blatts — `rahmenBild(...)` im Rahmen entscheidet (sie folgt
-   *  `panelForm`, ausser wo der aufgeweitete Rahmen eine eigene Spur trägt). */
-  form: 'rechts' | 'unten' | 'spalte';
+  /** Gestalt des Blatts — `rahmenBild(...)` im Rahmen entscheidet; sie folgt
+   *  seit D33 (7.9.2026) ausnahmslos `panelForm`. */
+  form: 'rechts' | 'unten';
   /** Id der Fläche. Kommt vom RAHMEN, nicht aus einem lokalen `useId` (A3): die
    *  Öffner stehen ausserhalb dieser Datei und brauchen dieselbe Id für ihr
    *  `aria-controls` — zwei `useId` hätten zwei Ids ergeben, und eine davon
@@ -148,9 +154,12 @@ export function LeserPanelZone({
 
   usePopoverAutoZu({
     offen, schliesse, wrapRef, panelRef,
-    // Ä60 (c): die eigene Spur ist Layout, kein aufgezogenes Blatt — sie kennt
-    // darum keinen Aussenklick (Herleitung samt Messung in `usePopoverAutoZu`).
-    modus: modal ? 'blatt' : form === 'spalte' ? 'spalte' : 'beiwerk',
+    // Ä86/D33: das Blatt neben dem Text ist kein aufgezogenes Popover — es
+    // schliesst über ✕ · Esc · Zweitklick am Zähler · «r», NICHT bei jedem Klick
+    // in die Lesespalte (sonst wäre Textmarkieren unmöglich, Klick-Test
+    // 18.8.2026; Wächter `leser-v3-rahmen` (f)). Der Modus hiess bis 7.9.2026
+    // `'spalte'` nach der Lage, die es nicht mehr gibt — die Regel bleibt.
+    modus: modal ? 'blatt' : 'fest',
     // Die Öffner liegen ausserhalb von `wrapRef` (Kopfzeile, «Ansicht ▾»-Menü) —
     // ohne diese Ausnahme schlösse ihr `pointerdown` das Panel, das ihr `click`
     // gleich darauf wieder öffnete (Herleitung in `usePopoverAutoZu`).
@@ -237,32 +246,36 @@ export function LeserPanelZone({
   // ── Die Fläche ────────────────────────────────────────────────────────────
   // Anschlag-Kante und Deckel je Gestalt. Alle drei Zweige sind `fixed` bzw.
   // `absolute`, brauchen also keinen Platz im Fluss (§15/2, CLS 0).
-  const flaeche = form === 'spalte' && !imPaneBlatt
-    // Ä60 (c) · D breit · EIGENE Spur: das Blatt liegt NICHT mehr über dem Text,
-    // sondern neben ihm. Es ist damit das einzige der drei Bilder, das im Fluss
-    // steht — `sticky` statt `fixed`, und die Höhe rechnet aus derselben Quelle
-    // wie die Gliederungsspalte gegenüber (`--nt-stick`, Risiko R1/LM-003).
+  const flaeche = form === 'rechts' && !imPaneBlatt
+    // ── D33 (7.9.2026) · DAS BLATT KLEBT AN DER LESE-ZELLE, NICHT AM FENSTER ──
+    // Bis hierher war diese Gestalt `fixed … right-0` mit `top: var(--nt-stick)`.
+    // GEMESSEN am ersten Bau von D33 (@1440, OR, Seite NICHT gescrollt): der
+    // klebende Kopf steht dann noch an seiner natürlichen Stelle (y 145–201),
+    // `--nt-stick` (154 px) meint aber die Stelle, an der er KLEBT. Das Blatt
+    // begann darum 47 px zu hoch und lag über dem ⚖-Knopf, der es aufgezogen
+    // hatte: `elementFromPoint` am Klickpunkt lieferte «Rechtsprechung &
+    // Kontext» statt des Knopfes, der zweite Klick traf das Blatt. Das ist
+    // wortgleich der Ä52-Befund von 17.8.2026 — nur die Ursache war neu.
+    // JETZT: `sticky` in der Lese-Zelle. Die natürliche Lage ist die Oberkante
+    // der Zelle (also unter dem Kopf, wo immer der gerade steht), und beim
+    // Scrollen klebt es bei `--nt-stick` — «tiefer von beiden», ohne zu messen.
+    // Die 0-Höhen-Hülle darum ist derselbe Kniff, mit dem die Scroll-Blende in
+    // `./LeserLeseZeile` aus dem Fluss bleibt: kein Platz, kein CLS, Δ = 0.
     ? {
-      klassen: 'sticky flex min-h-0 flex-col self-start',
-      stil: {
-        top: 'var(--nt-stick)',
-        maxHeight: 'calc(100vh - var(--nt-stick) - 1.5rem)',
-      } as CSSProperties,
-    }
-    : form === 'rechts' && !imPaneBlatt
-    // D · rechts angeschlagen, von der Kopf-Unterkante bis zum Fensterboden.
-    ? {
-      klassen: 'fixed bottom-0 right-0 z-modal w-[22rem] max-w-[calc(100vw-2rem)] p-2',
-      stil: { top: 'var(--nt-stick)' } as CSSProperties,
+      huelle: 'pointer-events-none sticky z-modal h-0 overflow-visible',
+      klassen: 'pointer-events-auto absolute right-0 top-0 w-[22rem] max-w-[calc(100vw-2rem)] p-2',
+      stil: { maxHeight: 'calc(100vh - var(--nt-stick) - 1.5rem)' } as CSSProperties,
     }
     : imPaneBlatt
       // Pane · unten angeschlagen in der Overlay-Schicht (die den Pane deckt).
       ? {
+        huelle: undefined,
         klassen: 'pointer-events-auto absolute inset-x-0 bottom-0 z-modal',
         stil: { maxHeight: `${BLATT_ANTEIL}%` } as CSSProperties,
       }
       // H · echtes Bottom-Sheet: unten angeschlagen, gedeckelt, Artikel bleibt oben.
       : {
+        huelle: undefined,
         klassen: 'fixed inset-x-0 bottom-0 z-modal',
         stil: { maxHeight: `${BLATT_ANTEIL}dvh` } as CSSProperties,
       };
@@ -274,15 +287,13 @@ export function LeserPanelZone({
       // im Grid des Rahmens keine Spur erzeugt: alle Kinder sind `fixed` bzw.
       // `absolute`, der Träger selbst darf darum keine Box haben. Ein
       // gewöhnliches `div` als Grid-Kind hätte eine implizite dritte Spalte samt
-      // `gap-8` daneben aufgezogen — 32 px Leerraum, die niemand angefordert hat
+      // `gap-5` daneben aufgezogen — Leerraum, den niemand angefordert hat
       // (derselbe Mechanismus, den der Rahmen für Toast/Weiterlesen beschreibt).
       // Die DOM-Vorfahrenkette bleibt unberührt: `data-v3-pane` trägt weiter
       // (H2-Befund), und die CSS-Variable unten erbt an die Kinder.
-      // Ä60 (c): GENAU EINE Lage braucht die Box — die eigene Spur. Dort ist der
-      // Träger das Grid-Kind, und `contents` liesse die Spur ins Leere laufen.
-      // Geschlossen bleibt er auch dort ohne Box: sonst stünde eine 22-rem-Spur
-      // samt `gap-8` im Bild, in der nichts steht.
-      className={form === 'spalte' && offen ? 'min-w-0' : 'contents'}
+      // D33: seit die eigene Spur weg ist, gilt `contents` in JEDER Lage — es
+      // gibt keine Gestalt mehr, die eine Box im Grid braucht.
+      className="contents"
       // Ä5: der BEHÄLTER nennt seine Fläche (dieselbe Zusage wie beim
       // Gliederungs-Blatt) — sonst malte ein klebender Sockel darin `paper` auf
       // ein `paper-raised`-Blatt.
@@ -310,6 +321,7 @@ export function LeserPanelZone({
               className={imPaneBlatt ? 'lc-scrim pointer-events-auto absolute inset-0 z-overlay' : 'lc-scrim fixed inset-0 z-overlay'}
               onClick={schliesse} aria-hidden />
           )}
+          <Huelle klassen={flaeche.huelle}>
           <div
             // `role="dialog"` nur, wo es einer IST. Das Beiwerk ist eine benannte
             // REGION: ein Dialog ohne Fokus-Falle und ohne Modalität wäre die
@@ -336,6 +348,7 @@ export function LeserPanelZone({
               // Ä89: die Steckbrief-Zeile gehört dem Panel, nicht seinen Tafeln.
               steckbrief={steckbrief} />
           </div>
+          </Huelle>
         </>
       )}
     </div>

@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import { kopfHoehe, type KopfStufe } from './kopfStufen';
 import { SUCH_H_AKTIV, SUCH_H_RUHE } from './SuchZone';
-import { LESEMASS_MAX } from './rahmenSpalten';
+import { LESEMASS_MAX, SPUR_ABSTAND } from './rahmenSpalten';
 
 // ═══ Die EINE Stelle, an der die Geometrie des Lesers V3 gerechnet wird ══════
 //
@@ -95,6 +95,19 @@ export interface LeserGeometrieLage {
   suchZoneKlebt: boolean;
   /** Läuft eine Suche? Die Zone ist dann höher (zweite Zeile mit den Zahlen). */
   sucheAktiv: boolean;
+  /** ── N4 (David 7.9.2026) · EINE KOPFZEILE STATT ZWEIER REIHEN ─────────────
+   *  Steht die Such-Zone IN der Kopfzeile (statt als zweite Reihe darunter)?
+   *  Gemessen 7.9.2026 @1440: der klebende Block war 100 px hoch — Kopfzeile
+   *  56 px mit den zwei Griffen rechts, darunter die Such-Zone 44 px mit dem
+   *  Feld links; dazwischen rund 70 % Leerfläche. Sobald das Feld nach D32 an
+   *  der Kante des Gesetzestextes beginnt, liegen Feld und Griffe ohnehin auf
+   *  EINER Achse. Der Block misst dann `max(Kopfzeile, Zone)` statt ihrer
+   *  Summe: **−44 px** klebende Höhe im Ruhezustand.
+   *  Nur wo eine linke Spur steht (`rahmenBild.spurVersatzRem > 0`) — im Pane
+   *  und @390 gäbe es neben dem Feld keinen Platz, dort bleiben es zwei. */
+  suchInZeile: boolean;
+  /** D32: waagrechter Versatz der Lese-Zelle (rem) — `rahmenBild.spurVersatzRem`. */
+  spurVersatzRem: number;
 }
 
 /**
@@ -105,7 +118,7 @@ export interface LeserGeometrieLage {
  * `leser-v3-kopf-buendig` und `leser-v3-suchfeld-ueberall` messen beide Enden).
  */
 export function leserCssVariablen(lage: LeserGeometrieLage): CSSProperties {
-  const { stufe, vollflaechig, suchZoneKlebt, sucheAktiv } = lage;
+  const { stufe, vollflaechig, suchZoneKlebt, sucheAktiv, suchInZeile, spurVersatzRem } = lage;
   return {
     '--leser-v3-kopf-h': kopfHoehe(stufe),
     // A-2: in der Einzelansicht klebt der Kopf direkt unter der Topbar — die
@@ -128,13 +141,32 @@ export function leserCssVariablen(lage: LeserGeometrieLage): CSSProperties {
     // nächsten Umbau nicht mehr auseinanderzuhalten (§5).
     '--leser-v3-app-band': vollflaechig ? APP_BAND_H : '0rem',
     '--leser-sub-h': vollflaechig ? '0rem' : 'var(--leser-v3-kopf-h)',
+    // N4: die Höhe des ganzen klebenden Kopf-BLOCKS. Zwei Reihen ⇒ Summe; EINE
+    // Reihe ⇒ das Maximum, denn die Zone steht dann in der Zeile und wächst sie
+    // nur, wenn eine laufende Suche sie höher macht als die Griffe (68 px
+    // gegen 56). Alles, was «wie hoch klebt es» wissen muss, liest diese eine
+    // Variable — `--nt-stick` unten rechnet daraus, nicht neben ihr (LM-003).
+    // D32: die Kante des Gesetzestextes, EINMAL benannt. Die Kopfzeile stellt
+    // ihre linke Zone genau so breit; damit beginnt die Erlass-Suche über dem
+    // Text statt über der Gliederung — ohne dass die Kopfzeile die Spuren
+    // nachrechnen müsste (LM-003: eine Geometrie-Quelle, `./rahmenSpalten`).
+    '--leser-spur-versatz': `${spurVersatzRem}rem`,
+    // Der Abstand ZWISCHEN den Spuren (`gap-5` der Lese-Zeile), damit der
+    // Gliederungs-Griff in der Kopfzeile über der Gliederung endet und nicht
+    // über dem Gesetzestext.
+    '--leser-spur-abstand': `${SPUR_ABSTAND}rem`,
+    '--leser-v3-kopf-block-h': suchInZeile
+      ? 'max(var(--leser-v3-kopf-h), var(--leser-v3-such-h))'
+      : 'calc(var(--leser-v3-kopf-h) + var(--leser-v3-such-h))',
     // Auftrag David 21.8.2026 (`./rahmenSpalten`, LESEMASS_MAX): der Deckel des
     // Lesemasses, EINMAL benannt, von `index.css` gelesen (`#lc-lesespalte`
     // und `.max-w-normtext` im V3-Wurzelbaum). Zustandsunabhängig — anders als
     // die übrigen Variablen hier gilt derselbe Wert in jeder Lage.
     '--leser-lesemass-max': `${LESEMASS_MAX}rem`,
     '--nt-stick': vollflaechig
-      ? `calc(${APP_TOPBAR_H} + var(--leser-v3-kopf-h) + var(--leser-v3-such-h))`
+      ? `calc(${APP_TOPBAR_H} + var(--leser-v3-kopf-block-h))`
+      // Im Pane steht die Zone nie in der Zeile (dort gibt es keine linke
+      // Spur) — die Summe bleibt darum die Summe.
       : 'calc(var(--leser-sub-h) + var(--leser-v3-such-h))',
   } as CSSProperties;
 }

@@ -1,6 +1,43 @@
-import { useCallback, useEffect, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { satzspiegelFuer, type Satzspiegel } from './satzspiegel';
 
+// ═══ D33 (David 7.9.2026) · DAS BEIWERK-BLATT BEKOMMT KEINE SPUR MEHR ════════
+//
+// DEKLARIERTE FACHLICHE ÄNDERUNG (§6.3), nicht Refactoring: die dritte Spur des
+// Rahmens — die eigene 22-rem-Spalte für das Rechtsprechungs-Blatt, gebaut als
+// Ä60 (c) am 17.8.2026 — ist zurückgebaut. Der Rahmen kennt seither GENAU ZWEI
+// Spuren (Gliederung bzw. ihre Schiene · Gesetzestext), seine Breite hängt an
+// keinem Panel-Zustand mehr, und das Blatt überlagert (Gestalt `'rechts'`,
+// dieselbe, die enge Desktop-Fenster seit Ä52 tragen).
+//
+// DER BEFUND, gemessen 7.9.2026 @1440 hell und dunkel, `/gesetze/bund/OR`:
+//   Klick auf «⚖ Rechtsprechung»   Ruhe        offen        Δ
+//   Gesetzesspalte  x / Breite     492 / 764   404 / 640    −88 / −124
+//   Gliederung      x               184         96          −88
+//   Zähler (der geklickte Knopf) x 1075        1253        +178
+//   @1024 (ZGB): die Gliederungsspalte fiel beim Öffnen ganz aus dem DOM.
+// Folge: jede Zeile des gelesenen Artikels brach neu um, und an der geklickten
+// Stelle lag danach der Gesetzestext — ein zweiter Klick dorthin tat nichts.
+// Das verstiess gegen D9 («nichts verschiebt sich») und gegen die Zusage von
+// M3 («zeig es mir daneben, der Artikel bleibt»).
+//
+// WARUM VARIANTE A UND NICHT «SPUR DAUERHAFT RESERVIEREN» (B): eine ständig
+// reservierte Spur nähme dem Text auf JEDER Breite 22 rem — gegen D20 («mehr
+// Breite für den Gesetzestext»). Variante C (der Zähler öffnet die Entscheide
+// im zweiten Fenster, wie die Randnotiz) ist die sauberere Produktlogik, aber
+// ein eigener Fahrplan-Schritt: die Reiter Änderungen/Materialien/Anwendung
+// brauchen dann eine eigene Heimat. A kostet Δ = 0 und keinen Umbau.
+//
+// PREIS, offengelegt (§8): das Blatt verdeckt im geöffneten Zustand die rechten
+// ~352 px. Im Ruhezustand verdeckt es nichts, und es schliesst auf Esc, auf
+// den ✕-Griff, auf einen zweiten Klick am Zähler und auf einen Klick daneben.
+//
+// ── ALLES AB HIER IST DIE HERLEITUNG DES ZURÜCKGEBAUTEN ZUSTANDS ────────────
+// Sie bleibt im Wortlaut stehen (Belege altern nicht): die Messreihen erklären,
+// warum die Spur damals richtig gerechnet war — der Mangel lag nicht in ihrer
+// Arithmetik, sondern darin, dass sie am Panel-Zustand hing. Was von ihr im
+// Code weiterlebt, sind die zwei Spuren und ihre Schwellen.
+//
 // ═══ Ä60 (c) · WIE BREIT DER LESER IST UND WELCHE SPUREN ER TRÄGT ════════════
 //
 // David-Entscheid 17.8.2026 (Chat, wörtlich «ja und c, mach so»): von den drei
@@ -71,14 +108,13 @@ import { satzspiegelFuer, type Satzspiegel } from './satzspiegel';
 const SPUR_GLIEDERUNG = 18;
 /** Breite der eingeklappten Gliederungs-Schiene (rem), `LeserGliederungSchiene`. */
 const SPUR_SCHIENE = 2.25;
-/** Breite des Beiwerk-Blatts (rem) — Kap. 4d «Panel rechts 22rem». */
-const SPUR_BLATT = 22;
 /** Abstand zwischen zwei Spuren (rem) = `gap-5` (LeserLeseZeile.tsx).
  *  2 → 1.25 rem am 29.8.2026 (Auftrag David: «weniger Abstand Gesetz ↔
  *  Gliederung»); Folgewerte LESER_MAX_REM/RAUM_MIN_BLATT rechnen mit. */
-const SPUR_ABSTAND = 1.25;
-/** Lesemass der Lesespalte (rem) = `max-w-reading`, `LeserLesespalte`. */
-const LESEMASS = 40;
+export const SPUR_ABSTAND = 1.25;
+// `LESEMASS` (40 rem, `max-w-reading`) ist als Konstante mit `LESER_MAX_REM`
+// gefallen (D33): der Rahmen rechnet nicht mehr mit ihm. Der Wert selbst lebt
+// unverändert in `tailwind.config.js` und in `--leser-lesemass-max` weiter.
 
 // ── LESEMASS_MAX · Auftrag David 21.8.2026, wörtlich «können wir machen, dass
 //    der gesetzestext bei verfügbarer breite vom bildschirm oder wenn
@@ -127,41 +163,20 @@ const LESEMASS = 40;
 export const LESEMASS_MAX = 45;
 
 /**
- * Deckel des Leser-Rahmens (rem) = die Summe seiner drei Spuren samt Abständen.
- * NICHT `max-w-content`: der gilt für jede andere Seite unverändert weiter.
- *
- * BLEIBT auf `LESEMASS` (40), nicht `LESEMASS_MAX` (45): diese Zahl entscheidet
- * NUR, wie weit der RAHMEN wachsen darf und ob die Gliederung ihre Spalte
- * behält (`vollesLesemass` unten) — beides seit H4 gemessen und unverändert
- * (`leser-v3-rahmenspalten.test.ts`: 84 rem = 1344 px, Rückung −112 px @1440).
- * Sie an `LESEMASS_MAX` zu hängen, sähe nach «derselben Quelle» aus, verschöbe
- * aber diese Schwelle auf 89 rem = 1424 px — mehr, als @1440 real an Raum
- * steht (≈1392 px) — und liesse die Gliederungsspalte dort in die Schiene
- * kippen: sie bräche genau die Zusage, die dieser Fix halten soll (aside=1
- * bleibt, `leser-v3-rahmen.e2e.ts` (a)). Die eigentliche Reserve für
- * `LESEMASS_MAX` steht darum NICHT hier, sondern in `RahmenBild.lesemassMaxRem`
- * (Kommentar dort).
+ * D33 (7.9.2026): `LESER_MAX_REM`, `LESE_MIN` und `RAUM_MIN_BLATT` sind mit der
+ * dritten Spur gestrichen — der Rahmen wächst nicht mehr, also braucht er
+ * keinen Deckel, und «passt das Blatt neben den Text» ist keine Frage mehr.
+ * Die Herleitung dieser drei Zahlen (82.5 rem = 18 + 1.25 + 40 + 1.25 + 22;
+ * 28 rem Lesespalten-Boden; 54.75 rem Mindestraum) steht im Deklarations-Block
+ * am Dateikopf und in `abnahme/design-identitaet/R6E-LESER.md`.
  */
-export const LESER_MAX_REM = SPUR_GLIEDERUNG + SPUR_ABSTAND + LESEMASS + SPUR_ABSTAND + SPUR_BLATT; // 82.5 (seit 29.8.2026; vorher 84)
-
-/**
- * Kleinste Lesespalte, die das Blatt als Spur überhaupt rechtfertigt (rem).
- *
- * WOHER DIE ZAHL: 28 rem = 448 px sind bei gemessenen 8.5 px/ch (StPO, 17-px-
- * Stufe: 620 px Absatzbreite = 73 ch) rund **46 ch** — die Untergrenze, die die
- * Design-Grundlage für eine Lesespalte nennt. Sie greift real erst, wenn die
- * App-Seitenleiste ausgeklappt ist (Fenster 1200 px − 256 − 48 = 896 < 900);
- * ohne sie ist der Raum ab 1024 px Fenster immer ≥ 976 px. Ein Deckel, der
- * NIE greifen kann, wäre kein Deckel (§6.7) — dieser kann.
- */
-const LESE_MIN = 28;
-/** Raum (rem), unter dem das Blatt keine eigene Spur bekommt. */
-const RAUM_MIN_BLATT = SPUR_SCHIENE + SPUR_ABSTAND + LESE_MIN + SPUR_ABSTAND + SPUR_BLATT; // 54.75 (seit 29.8.2026; vorher 56.25)
 
 export interface RahmenRaum {
-  /** Breite (px), die dem Leser im `<main>` zur Verfügung steht. */
+  /** Breite (px), die dem Leser im `<main>` zur Verfügung steht. Seit D33
+   *  liest `rahmenBild` sie nicht mehr (der Rahmen wächst nicht); gemessen
+   *  wird sie weiter, weil sie den `ResizeObserver` am `<main>` mitträgt. */
   raumPx: number;
-  /** Breite (px), die der Rahmen ohne Aufweitung hat (gedeckelte Elternbreite). */
+  /** Breite (px) des Rahmens = Inhaltsbreite seines Elternkastens. */
   ruhePx: number;
   /** Gemessene Wurzel-Schriftgrösse (px) — der Schriftregler verstellt sie (R3). */
   remPx: number;
@@ -174,162 +189,76 @@ export interface RahmenLage {
   spaltenLage: boolean;
   /** Hat der Nutzer die Gliederung offen? */
   tocOffen: boolean;
-  /** Ist das Beiwerk-Blatt offen? */
-  blattOffen: boolean;
-  /** Gestalt, die das Blatt ohne eigene Spur hätte (`kopfStufen.panelForm`). */
+  /** D33 (7.9.2026): `blattOffen` ist als Eingabe GESTRICHEN, nicht nur
+   *  ungenutzt. «Das Bild hängt nicht am Panel-Zustand» ist damit strukturell
+   *  wahr statt bewacht — wer es wieder einführt, muss diese Zeile löschen.
+   *  Gestalt des Blatts (`kopfStufen.panelForm`) — sie entscheidet mit über die
+   *  Artikelform (`./satzspiegel`), nicht mehr über die Spuren. */
   ruheForm: 'rechts' | 'unten';
 }
 
 export interface RahmenBild {
-  /** Gestalt des Beiwerk-Blatts — `'spalte'` ist die neue, nicht überlagernde. */
-  blattForm: 'rechts' | 'unten' | 'spalte';
+  /** Gestalt des Beiwerk-Blatts. D33 (7.9.2026): die dritte Gestalt `'spalte'`
+   *  ist gestrichen — das Blatt überlagert (`'rechts'`) bzw. liegt unten. */
+  blattForm: 'rechts' | 'unten';
   /** Steht die Gliederung als 18-rem-Spalte? */
   gliederungSpalte: boolean;
   /** Steht statt ihrer die schmale Schiene? */
   schiene: boolean;
   /**
-   * Muss ein Klick auf die Schiene das Blatt schliessen? (Es hat ihren Platz.)
+   * Waagrechter Versatz der Lese-Zelle gegenüber der linken Rahmenkante (rem)
+   * — also die Breite der linken Spur SAMT ihrem Abstand, oder 0, wo keine
+   * Spur steht (Handy, Pane, kein Gliederungs-Inhalt).
    *
-   * ── P1-1 (Bug-Check 18.8.2026) · DIE FRAGE HING AM FALSCHEN ZUSTAND ────────
-   * Bis zum H4-Nachzug lautete die Bedingung `blattSpur && tocOffen &&
-   * !gliederungSpalte` — sie las also, ob der Nutzer die Gliederung GERADE
-   * offen hat. Reproduziert @1280 (StPO, `p1/r2-schiene.cjs`): klappt man die
-   * Gliederung ZUERST ein und öffnet DANN das Blatt, ist `tocOffen` falsch, der
-   * Schienen-Griff schliesst das Blatt also nicht — und weil der Platz für
-   * beide nicht reicht, bleibt die Spalte aus. Gemessen: `[data-v3-aside]`
-   * nach dem ersten Klick **0**, Grid unverändert `36px 780px 352px`; erst der
-   * ZWEITE Klick brachte sie (`288px 752px`). Dazwischen stand `tocOffen`
-   * still auf `true`, ohne dass etwas sichtbar war — der nächste Esc hätte die
-   * Gliederung aufspringen lassen.
+   * ── D32 (David 6./7.9.2026) · «DIE SUCHE ERSCHEINT IN DER GLIEDERUNG» ─────
+   * Die Erlass-Suche gehört seit D28 in den klebenden Kopf-BLOCK, der über der
+   * ganzen Rahmenbreite steht. Gemessen 7.9.2026 @1440 (OR) hatte das zur
+   * Folge, dass das Feld bei x = 184 begann — der linken Kante der
+   * GLIEDERUNGSSPALTE — während der Gesetzestext erst bei x = 492 anfing:
+   * **308 px** daneben, also über der Gliederung statt über dem Gesetz. Genau
+   * das meinte Davids Befund; D28 selbst hatte «oben am gesetz» verlangt.
    *
-   * Die Frage ist nicht «hat der Nutzer die Gliederung offen», sondern «steht
-   * die Schiene, WEIL das Blatt ihren Platz hat». Genau das ist
-   * `blattSpur && !vollesLesemass`: unterhalb von 84 rem schliessen sich Spalte
-   * und Blatt aus (Herleitung oben), oberhalb nicht — dort holt der Griff
-   * keinen Platz, er blendet nur ein. Beweis: `leser-v3-rahmenspalten.test.ts`
-   * («ein Klick genügt»), Sichtbeweis `leser-v3-rahmen` (g).
+   * Diese Zahl ist die Antwort, und sie steht HIER, weil hier schon entschieden
+   * wird, welche Spur links steht (eine Geometrie-Quelle, LM-003). Der Rahmen
+   * legt sie als `--leser-spur-versatz` aus; die Kopfzeile stellt ihre linke
+   * Zone genau so breit, und damit beginnt die Suche in JEDER Lage an der
+   * Kante des Gesetzestextes — beim Ein- und Ausklappen wandert sie um exakt
+   * denselben Betrag wie die Textspalte (Sonde `w224-leser-d32-d33` (a)/(b)).
    */
-  schieneHoltPlatz: boolean;
+  spurVersatzRem: number;
   /** `grid-template-columns` der Lese-Zeile; `undefined` = kein Grid (wie bisher). */
   spalten: string | undefined;
-  /** Aufweitung des Wurzelelements; `undefined` = unverändert wie bisher. */
-  breite: CSSProperties | undefined;
-  /**
-   * Deckel für `--leser-lesemass-max` (rem) — STATISCH, unabhängig von
-   * `blattOffen` (Fix 21.8.2026, CI-Rot PR #559).
-   *
-   * ── DER BEFUND ───────────────────────────────────────────────────────────
-   * `LESEMASS_MAX` (`index.css`, `--leser-lesemass-max`) stand bis zu diesem
-   * Fix als FLACHER Wert (45 rem, immer) am Wurzelelement — unabhängig davon,
-   * ob das Blatt gerade eine Spur belegt. Geschlossen füllte die Lese-Zelle
-   * (`minmax(0,1fr)`) den ganzen Rahmen und der Deckel griff bei 45 rem;
-   * offen nimmt dieselbe Zelle nur, was der Rahmen NACH Gliederung, Blatt und
-   * zwei Abständen übrig lässt — bei voller Gliederungsspalte @1440 sind das
-   * strukturell nur 40 rem (`LESER_MAX_REM` reserviert exakt so viel, siehe
-   * dort). Der flache Deckel wechselte beim Öffnen also von 45 auf faktisch
-   * 40 rem — ein Reflow, den Ä60(c) («die Spur nimmt den freien Rand, nie den
-   * Text») und die CLS-Zusage (`leser-v3-kontext-cls.e2e.ts`) ausschliessen.
-   *
-   * ── DER FIX: DIESELBE RESERVE, IMMER ────────────────────────────────────
-   * Statt den Deckel erst beim Öffnen schrumpfen zu lassen, rechnet er die
-   * Blatt-Spur-Reserve STATISCH ein — sobald der Raum eine Spur überhaupt
-   * ERLAUBEN würde (`ruheForm === 'rechts' && spaltenLage && passt`, exakt die
-   * Bedingung von `blattSpur` MINUS `blattOffen`). Ob die Gliederung dabei als
-   * Spalte oder Schiene stünde, folgt derselben Fallunterscheidung wie
-   * `gliederungSpalte`, nur mit `blattSpur` hypothetisch `true` gerechnet
-   * (`!blattSpur || vollesLesemass` wird dann zu `vollesLesemass`) — das ist
-   * `gliederungWennOffen` unten. Keine neue Konstante: dieselben `SPUR_*` und
-   * derselbe `LESER_MAX_REM`, nur diesmal für die TEXT-Zelle statt für den
-   * Rahmen gerechnet. `blattOffen` fliesst nirgends ein — der Wert ist beim
-   * ersten Render derselbe wie nach jedem Klick auf den Panel-Zähler.
-   */
-  lesemassMaxRem: number;
   satzspiegel: Satzspiegel; // Artikelform (W2·24-R6b) — Herleitung in `./satzspiegel`
 }
 
 /**
- * Die eine Entscheidung über Rahmenbreite und Spuren — rein, an jeder Breite
+ * Die eine Entscheidung über die Spuren des Rahmens — rein, an jeder Breite
  * nachrechenbar (§2), Beweis in `src/tests/leser-v3-rahmenspalten.test.ts`.
+ *
+ * D33 (7.9.2026): `blattOffen` ist aus der Lage GESTRICHEN. Das ist die ganze
+ * Zusage der Variante A — dieselbe Eingabe, dasselbe Bild, ob das Blatt offen
+ * ist oder nicht.
  */
 export function rahmenBild(lage: RahmenLage): RahmenBild {
-  const { raum, spaltenLage, tocOffen, blattOffen, ruheForm } = lage;
+  const { raum, spaltenLage, tocOffen, ruheForm } = lage;
   const rem = raum?.remPx ?? 16;
-  const passt = raum != null && raum.raumPx >= RAUM_MIN_BLATT * rem;
-  // Eine eigene Spur bekommt das Blatt nur dort, wo es sonst ÜBER dem Text läge
-  // (`'rechts'`) — im Pane und auf dem Handy bleibt es das Bottom-Sheet, weil
-  // dort die harte Regel «nie drei vertikale Flächen» gilt (Kap. 4d).
-  const blattSpur = blattOffen && ruheForm === 'rechts' && spaltenLage && passt;
-  // Die Gliederungsspalte bleibt genau so lange, wie der Text sein volles
-  // Lesemass behält; darunter weicht sie auf ihre Schiene (Herleitung oben).
-  const vollesLesemass = raum != null && raum.raumPx >= LESER_MAX_REM * rem;
-  const gliederungSpalte = spaltenLage && tocOffen && (!blattSpur || vollesLesemass);
+  const gliederungSpalte = spaltenLage && tocOffen;
   const schiene = spaltenLage && !gliederungSpalte;
 
-  // `lesemassMaxRem` (Feld-Kommentar bei `RahmenBild`): dieselbe Bedingung wie
-  // `blattSpur`, aber OHNE `blattOffen` — «könnte das Blatt hier je eine Spur
-  // bekommen», nicht «hat es gerade eine».
-  const blattSpurMoeglich = ruheForm === 'rechts' && spaltenLage && passt;
-  const gliederungWennOffen = spaltenLage && tocOffen && vollesLesemass;
-  const seiteWennOffenRem = gliederungWennOffen ? SPUR_GLIEDERUNG : SPUR_SCHIENE;
-  // Klammer wie `aufweitung`: bis `LESER_MAX_REM`, nie über den echten Raum.
-  const rootWennOffenPx = raum
-    ? Math.max(raum.ruhePx, Math.min(LESER_MAX_REM * rem, raum.raumPx))
-    : null;
-  const lesemassMaxRem = blattSpurMoeglich && rootWennOffenPx != null
-    ? Math.min(LESEMASS_MAX, rootWennOffenPx / rem - seiteWennOffenRem - 2 * SPUR_ABSTAND - SPUR_BLATT)
-    : LESEMASS_MAX;
-
-  const spurenPx = spaltenLage ? ((gliederungSpalte ? SPUR_GLIEDERUNG : SPUR_SCHIENE) + SPUR_ABSTAND + (blattSpur ? SPUR_BLATT + SPUR_ABSTAND : 0)) * rem : 0;
-  // W2·24-R6b: die Lese-Zelle entscheidet die Artikelform (`./satzspiegel`); die
-  // R6-Aufweitung für die Randnotiz ist mit ihr gestrichen (`lesemassMaxRem` deckelt den Text ohnehin).
-  const zellePx = raum == null ? null : (blattSpur ? (rootWennOffenPx ?? raum.ruhePx) : raum.ruhePx) - spurenPx;
+  const spurRem = gliederungSpalte ? SPUR_GLIEDERUNG : SPUR_SCHIENE;
+  const spurVersatzRem = spaltenLage ? spurRem + SPUR_ABSTAND : 0;
+  const zellePx = raum == null ? null : raum.ruhePx - spurVersatzRem * rem;
   const satzspiegel = satzspiegelFuer(zellePx, rem, spaltenLage && ruheForm === 'rechts');
   return {
-    blattForm: blattSpur ? 'spalte' : ruheForm,
+    blattForm: ruheForm,
     gliederungSpalte,
     schiene,
-    // P1-1: NICHT `tocOffen` (siehe Feld-Kommentar) — die Schiene holt genau
-    // dann Platz, wenn das Blatt eine Spur hat und beide nicht zusammen passen.
-    schieneHoltPlatz: blattSpur && !vollesLesemass,
-    spalten: spaltenLage
-      ? `${gliederungSpalte ? `${SPUR_GLIEDERUNG}rem` : `${SPUR_SCHIENE}rem`} minmax(0,1fr)`
-        + (blattSpur ? ` ${SPUR_BLATT}rem` : '')
-      : undefined,
-    breite: blattSpur && raum ? aufweitung(raum, LESER_MAX_REM * rem) : undefined,
-    lesemassMaxRem,
+    spurVersatzRem,
+    spalten: spaltenLage ? `${spurRem}rem minmax(0,1fr)` : undefined,
     satzspiegel,
   };
 }
 
-/**
- * Die Aufweitung als Kasten-Rechnung.
- *
- * WARUM NICHT EINFACH ZENTRIERT: der Rahmen steht in einem zentrierten Eltern-
- * Kasten. Ihn beim Öffnen des Blatts neu zu zentrieren, schöbe den gelesenen
- * Text waagrecht weg — @1920 um 152 px, obwohl rechts 400 px frei sind. Der
- * Rahmen wächst darum ZUERST in den freien Rand rechts und rückt nur um den
- * Rest nach links (@1920: 0 px, @1440: 112 px). Der Text bleibt stehen, wo der
- * Platz es zulässt; das ist dieselbe Zusage wie die von `useStickAusgleich` für
- * die senkrechte Richtung.
- */
-function aufweitung(raum: RahmenRaum, maxPx: number): CSSProperties | undefined {
-  const breite = Math.min(maxPx, raum.raumPx);
-  if (breite <= raum.ruhePx) return undefined; // kein Gewinn — nichts anfassen
-  const linksHeute = (raum.raumPx - raum.ruhePx) / 2;
-  const links = Math.min(linksHeute, raum.raumPx - breite);
-  const dx = links - linksHeute; // ≤ 0
-  return {
-    // Als eigenes Token ausgelegt, damit die Zahl im Browser ablesbar ist und
-    // eine spätere Regel sie lesen kann, ohne sie zu wiederholen (§5).
-    '--leser-max-w': `${breite}px`,
-    width: 'var(--leser-max-w)',
-    marginInlineStart: `${dx}px`,
-    // Der Kasten muss aufgehen: dx + Breite + Ende = Elternbreite. Ohne die
-    // zweite Zahl löst der Browser die Übergleichung selbst auf — sichtbar
-    // gleich, aber nicht mehr nachrechenbar.
-    marginInlineEnd: `${raum.ruhePx - breite - dx}px`,
-  } as CSSProperties;
-}
 
 /**
  * Misst den Raum am Elternkasten und am umgebenden `<main>`.
