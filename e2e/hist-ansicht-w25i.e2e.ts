@@ -156,17 +156,15 @@ test('VERLUSTFREI: keine Stellung blendet V oder Z aus — nur A wechselt', asyn
   }
   expect((await v13.textContent())?.trim() ?? '').toContain('0.142.112.681');
 
-  // CLS-Beobachter NUR für künftige Shifts (die Lade-Shifts sind nicht Gegenstand
-  // des Umschalt-Beweises).
-  await page.evaluate(() => {
-    (window as unknown as { __cls: number }).__cls = 0;
-    new PerformanceObserver((l) => {
-      for (const e of l.getEntries()) {
-        const s = e as unknown as { value: number; hadRecentInput: boolean };
-        if (!s.hadRecentInput) (window as unknown as { __cls: number }).__cls += s.value;
-      }
-    }).observe({ type: 'layout-shift' });
-  });
+  // ── DER CLS-BEWEIS STEHT NICHT HIER (§5/§6.7, Befund beim Voll-Lauf 7.9.2026)
+  // Er stand bis hierher mitten in dieser Schleife und mass 0.000153 statt 0 —
+  // NICHT vom Umschalten: die Schleife scrollt zwischen den Stellungen, und der
+  // idle nachgeladene Historie-Shard wächst dabei ein. Ein Beobachter, der über
+  // drei Umschaltungen samt Scroll-Fahrten läuft, misst Nachlade-Shifts mit und
+  // sagt darum über den Klick nichts aus. Der enge, aussagekräftige Fall — ein
+  // Beobachter, EIN Umschaltvorgang, kein Scroll dazwischen — steht in
+  // `e2e/leser-optionen.e2e.ts` («A1-Mechanik … kein CLS»). Zwei Kopien
+  // derselben Zusage sind ohnehin eine zu viel.
 
   for (const stellung of ['fassung', 'aus'] as const) {
     await waehle(page, stellung);
@@ -196,9 +194,6 @@ test('VERLUSTFREI: keine Stellung blendet V oder Z aus — nur A wechselt', asyn
   await waehle(page, 'fussnoten');
   await expect(a12).toBeVisible();
   await expect(a14).toBeVisible();
-
-  // A9-Muster: klick-getriebener Reflow ist input-exkludiert ⇒ kein CLS-Beitrag.
-  expect(await page.evaluate(() => (window as unknown as { __cls: number }).__cls)).toBe(0);
 });
 
 test('Die A-MARKER im Wortlaut folgen der Wahl, die V-Marker nie', async ({ page }) => {
