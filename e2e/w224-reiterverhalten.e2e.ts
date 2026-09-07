@@ -333,6 +333,32 @@ test.describe('Arbeitsleiste — eine Navigation, ein Reiter', () => {
     await expect.poll(() => beschriftungen(page).then((b) => b[0]), { timeout: 20_000 }).toBe(anfang)
   })
 
+  // ── (h) · D27 · OHNE LESE-GRIFF WIRD DIE STELLUNG NICHT ANGETASTET ────────
+  // Fall (e) oben faellt nur auf, solange `art-1` bei 900 px Fensterhoehe UEBER
+  // der Bezugslinie des Scroll-Spys liegt (877 px am Stand vom 7.9.2026; bei
+  // 921 px meldete der Spy am Dokumentanfang nichts und der Defekt blieb
+  // unsichtbar — genau so ueberlebte er die Staende 0ba97c5d6/a60dd7f75).
+  // Dieser Fall misst die Zusage ohne jede Geometrie: eine gespeicherte
+  // Stellung, KEIN Scrollen, und danach steht sie unveraendert da.
+  // ROT ZU BEKOMMEN (§6.7): in `gesetz-leser/inhalt-hooks.tsx` das Tor
+  // `if (gescrollt.current)` um den `aktualisiereTabArtikel`-Zweig streichen ⇒
+  // der Spy schreibt beim Aufsetzen `#art-1` ueber `#art-99`.
+  test('(h) ohne Lese-Griff bleibt die gespeicherte Stellung unangetastet (D27)', async ({ page }) => {
+    await page.goto('/gesetze/bund/ZGB')
+    await leserBereit(page)
+    await page.evaluate(() => localStorage.setItem(
+      'lexmetrik-tabs', JSON.stringify([{ path: '/gesetze/bund/ZGB#art-99' }])))
+    await page.reload()
+    await leserBereit(page)
+    // Feste Wartezeit mit Begruendung: geprueft wird ein NICHT-Ereignis, auf das
+    // kein Poll warten kann. 2000 ms decken den ersten Observer-Frame plus die
+    // 200-ms-Entprellung des Schreibpfads um eine Zehnerpotenz ab (gemessen:
+    // der Ueberschreiber stand ohne Tor ~150 ms nach dem Reload im Speicher).
+    await page.waitForTimeout(2000)
+    expect((await pfade(page))[0], 'die gespeicherte Stellung wurde ueberschrieben')
+      .toBe('/gesetze/bund/ZGB#art-99')
+  })
+
   // ── (g) · D27 · IM SPLIT FOLGT JEDES FENSTER SEINER EIGENEN STELLUNG ──────
   test('(g) beide Pane-Reiter tragen je ihre eigene Stellung (D27, Split)', async ({ page }) => {
     // Zwei Leser-Instanzen desselben Erlasses in einem Fenster — Begründung für
