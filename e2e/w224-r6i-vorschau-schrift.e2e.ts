@@ -56,6 +56,16 @@ const PFAD = '/gesetze/bund/OR';
 test.describe('W2·24-R6I — Vorschau-Insel und Tieflink', () => {
   test('(1) die prerenderte Insel behält ihre Höhe über den Schrift-Swap @412', async ({ page }) => {
     test.slow();
+    // ── ZWEI EINGRIFFE, BEIDE NÖTIG, damit der Fall überhaupt messbar ist ───
+    //  · Die App-Bündel bleiben AUS. Sonst ersetzt React die Insel binnen
+    //    Millisekunden und der Vergleich «vor/nach dem Swap» misst zweimal
+    //    verschiedene Flächen (erster Bauversuch: `<header>` 0 px, weil zur
+    //    Messzeit gar nicht mehr da). Ohne JS ist das zugleich exakt die Lage,
+    //    für die die Insel existiert — Crawler und der Moment vor der Übernahme.
+    //  · Jede Schrift-Antwort wird zurückgehalten. Gegen einen lokalen Preview
+    //    ist die woff2 sonst VOR dem ersten Paint da, die Insel malt nie im
+    //    Fallback, und die Spec könnte nicht rot werden (§6.7).
+    await page.route('**/assets/*.js', (route) => route.abort());
     await page.route('**/*.woff2', async (route) => {
       await new Promise((r) => setTimeout(r, SCHRIFT_VERZUG_MS));
       await route.continue();
@@ -70,8 +80,13 @@ test.describe('W2·24-R6I — Vorschau-Insel und Tieflink', () => {
     await kopf.waitFor({ state: 'attached', timeout: 20_000 });
 
     const hoehe = () => kopf.evaluate((el) => Math.round(el.getBoundingClientRect().height));
+    // `attached` heisst «im DOM», nicht «gesetzt»: unmittelbar nach `commit`
+    // misst der Kopf 0 px, weil das Stylesheet noch nicht angewandt ist. Erst
+    // eine gerechnete Höhe ist ein Vergleichswert (sonst misst Fall (1) den
+    // Sprung von 0 auf irgendetwas und wäre nie aussagekräftig).
+    await expect.poll(hoehe, { timeout: 20_000, message: 'die Vorschau-Insel bekommt keinen gesetzten Kopf' })
+      .toBeGreaterThan(0);
     const vorher = await hoehe();
-    expect(vorher, 'die Vorschau-Insel hat keinen messbaren Kopf').toBeGreaterThan(0);
 
     // Auf den Swap warten: erst wenn die Schriften geladen SIND, ist die Frage
     // «hat der Swap umgebrochen?» überhaupt beantwortbar.
@@ -120,18 +135,32 @@ test.describe('W2·24-R6I — Vorschau-Insel und Tieflink', () => {
       requestAnimationFrame(tick);
     }));
 
-    // Die LESELINIE ist keine geratene Zahl, sondern `--nt-stick` — dieselbe
-    // Quelle, aus der `scroll-margin-top` des `.nt-anker` rechnet
-    // (`v3/leserGeometrie.ts`, Risiko R1). Die Spec liest sie am Ziel selbst ab
-    // und kann darum nicht still veralten, wenn der Kopf seine Höhe ändert.
-    const { oben, leselinie } = await ziel.evaluate((el) => ({
-      oben: el.getBoundingClientRect().top,
-      leselinie: parseFloat(getComputedStyle(el).scrollMarginTop),
-    }));
-    expect(Number.isFinite(leselinie), '`--nt-stick` löst am Ziel nicht auf').toBe(true);
-    expect(Math.abs(oben - leselinie),
-      `Tieflink landet ${Math.round(oben)} px statt auf der Leselinie ${Math.round(leselinie)} px`)
-      .toBeLessThanOrEqual(8);
+    // ── GEMESSEN WIRD GEGEN DEN ECHTEN KOPF, NICHT GEGEN `--nt-stick` ────────
+    // Erster Bauversuch verglich `getBoundingClientRect().top` des Ziels mit
+    // dessen eigenem `scroll-margin-top`. Das ist ein Zirkel: `scrollIntoView`
+    // richtet sich nach genau diesem Wert, beide Seiten der Gleichung kommen
+    // aus derselben Variablen — die Zusicherung konnte nicht scheitern (§6.7).
+    // Nachgewiesen: `--nt-stick`-Ableitung und Platzhalterhöhen im gebauten CSS
+    // verstellt ⇒ die Spec blieb grün.
+    // Die Zusage, die dem Leser gehört, lautet anders: **der Artikel steht
+    // UNTER der klebenden Kopf-Zone, nicht dahinter.** Sie vergleicht darum die
+    // Oberkante des Ziels mit der gemessenen UNTERKANTE des Kopf-Blocks. Diese
+    // beiden Zahlen entstehen unabhängig voneinander — die eine aus dem Sprung,
+    // die andere aus dem tatsächlichen Layout —, und genau deshalb kann ihr
+    // Auseinanderlaufen (Risiko R1: der Kopf wächst, `--nt-stick` weiss nichts
+    // davon) hier auffallen.
+    const kopf = page.locator('[data-v3-kopf]').first();
+    await expect(kopf, 'der klebende Leser-Kopf fehlt — Messung ohne Bezug').toBeVisible();
+    const kopfUnten = await kopf.evaluate((el) => el.getBoundingClientRect().bottom);
+    const oben = await ziel.evaluate((el) => el.getBoundingClientRect().top);
+    expect(oben - kopfUnten,
+      `Tieflink landet ${Math.round(oben)} px, der Kopf endet bei ${Math.round(kopfUnten)} px — `
+      + `${Math.round(kopfUnten - oben)} px des Artikels liegen hinter der Kopf-Zone`)
+      .toBeGreaterThanOrEqual(-8);
+    expect(oben - kopfUnten,
+      `Tieflink landet ${Math.round(oben) - Math.round(kopfUnten)} px UNTER der Kopf-Unterkante — `
+      + 'zwischen Kopf und Artikel klafft eine Lücke')
+      .toBeLessThanOrEqual(24);
 
     // Nach dem Einschwingen darf nichts mehr von selbst wandern.
     const vorRuhe = await page.evaluate(() => (window as unknown as { __cls: number }).__cls);
