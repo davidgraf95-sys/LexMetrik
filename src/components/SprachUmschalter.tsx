@@ -64,13 +64,30 @@ export function SprachUmschalter() {
                 // Zustand weiterhin doppelt — Tinte statt ink-700 UND das ✓ — also
                 // nicht allein ueber die Farbe (F2/F4); nur die Flaeche faellt weg
                 // (F0.6 «Linien statt Flaechen»).
-                className={`lc-menu-zeile justify-between ${aktiv ? 'text-ink-900' : ''}`}>
-                <span className={l.inBearbeitung ? 'text-ink-500' : ''}>
+                // ── D35-F4 (7.9.2026) · DER ZUSTAND STEHT LINKS UND IN BEIDEN
+                //    STELLUNGEN ──────────────────────────────────────────────
+                // B-M1 hat die Zeile schon auf `.lc-menu-zeile` geholt; das
+                // ZUSTANDS-Bild blieb aber das alte: ein Messing-Haken RECHTS,
+                // und im nicht gewaehlten Zustand gar nichts. Das ist derselbe
+                // Befund, den David am Ansicht-Menue erhoben hat («liest sich
+                // wie eine Rubrik, nicht wie ein Schalter»), nur in der
+                // Topbar. Die Sprachwahl ist eine WAHL AUS MEHREREN, also
+                // traegt sie die Punkt-Form des Rezepts (`lc-menu-punkt-form`),
+                // nicht das Kaestchen.
+                // FUNKTION UNVERAENDERT: `aria-pressed` traegt die Auskunft wie
+                // bisher (das Zeichen ist `aria-hidden`), Handler, `autoFocus`
+                // und die «In Vorbereitung»-Marke bleiben Zeichen fuer Zeichen.
+                className={`lc-menu-zeile ${aktiv ? 'text-ink-900' : ''}`}>
+                <span aria-hidden className="lc-menu-marke">
+                  <span data-an={aktiv ? 'an' : 'aus'} data-menu-marke="punkt"
+                    className="lc-menu-kasten lc-menu-punkt-form">
+                    {aktiv && <span className="lc-menu-punkt-kern" />}
+                  </span>
+                </span>
+                <span className={`lc-menu-label ${l.inBearbeitung ? 'text-ink-500' : ''}`}>
                   <span className="num uppercase text-xs mr-2">{l.code}</span>{l.label}
                 </span>
-                {l.inBearbeitung
-                  ? <span className="lc-badge-geplant shrink-0">In Vorbereitung</span>
-                  : aktiv && <span aria-hidden className="text-brass-700">✓</span>}
+                {l.inBearbeitung && <span className="lc-badge-geplant shrink-0">In Vorbereitung</span>}
               </button>
             );
           })}

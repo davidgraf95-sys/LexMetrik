@@ -21,9 +21,35 @@ import type { ReactNode } from 'react';
 // Pfeiltasten-Bedienung, die diese Popover nicht haben. Die Rollen setzt darum
 // der Aufrufer, passend zu dem, was er wirklich einlöst.
 
-/** Titel-Etikett über einer Menü-Gruppe (Archivo 12 px = `.lc-overline`). */
+/**
+ * Titel-Etikett über einer Menü-Gruppe.
+ *
+ * D35-F4 (7.9.2026): kursive Literata-Zeile (`.lc-randtitel`, GB-2) statt
+ * Archivo-Etikett (`.lc-overline`). Der Gruppenkopf ist im Haus die Zeile, die
+ * einen Abschnitt BENENNT — dieselbe Stimme wie Marginalie und Blattname; mit
+ * der Overline sahen Kopf und Zeile darunter nach zwei Systemen aus. Grösse,
+ * Tinte und Innenabstand stehen als `.lc-menu-titel` in `index.css`, damit
+ * hier keine zweite Wahrheit über Menü-Masse entsteht (§5).
+ */
 export function MenueTitel({ children }: { children: ReactNode }) {
-  return <p className="lc-overline px-3 pb-1 pt-1.5">{children}</p>;
+  return <p className="lc-randtitel lc-menu-titel">{children}</p>;
+}
+
+/**
+ * Klammer um Zeilen, die zusammen EINE Frage beantworten.
+ *
+ * Die Haarlinie eines Menüs steht zwischen zwei Gruppen, nicht unter jeder
+ * Zeile (Herleitung in `index.css`, Block «DIE LINIE TRENNT GRUPPEN»). Der
+ * Aufrufer entscheidet, ob die Gruppe eine ARIA-Rolle trägt: eine Radio-Gruppe
+ * setzt `attrs={{ role: 'group', 'aria-label': … }}`, das Ansicht-Menü setzt
+ * `role="menu"` — dieselbe Trennung wie bei den Zeilen («die Rollen setzt der
+ * Aufrufer, passend zu dem, was er wirklich einlöst»).
+ */
+export function MenueGruppe({ children, attrs }: {
+  children: ReactNode;
+  attrs?: Record<string, string | undefined>;
+}) {
+  return <div className="lc-menu-gruppe" {...attrs}>{children}</div>;
 }
 
 /**
@@ -59,23 +85,43 @@ export function MenueZeile({ label, titel, onKlick, rechts, attrs }: {
 }
 
 /**
- * Schalter-Zeile (`role="switch"`).
+ * Schalter-Zeile (`role="switch"`, vom Aufrufer auf `menuitemcheckbox` bzw.
+ * `menuitemradio` umgesetzt).
  *
- * DER ZUSTAND STEHT LINKS UND SAGT SICH GENAU EINMAL: ein Häkchen, wenn an,
- * sonst die leere Marken-Spalte. Bis zu diesem Nachzug stand rechts «✓ an» bzw.
- * «○ aus» — ein Zeichen UND ein Wort für dieselbe Auskunft, und beides an der
- * Stelle, an der das Auge zuletzt hinkommt. Für Screenreader ändert sich
- * nichts: die Auskunft trug schon immer `aria-checked`, das sichtbare Doppel
- * war `aria-hidden` und damit ohnehin nur für Sehende gedacht.
+ * DER ZUSTAND STEHT LINKS UND SAGT SICH GENAU EINMAL: bis zum D5-Nachzug stand
+ * rechts «✓ an» bzw. «○ aus» — ein Zeichen UND ein Wort für dieselbe Auskunft,
+ * an der Stelle, an die das Auge zuletzt kommt.
+ *
+ * ── D35-F4 (7.9.2026) · … UND ER SAGT SICH AUCH IM AUS-ZUSTAND ─────────────
+ * Davids Bild: «Fussnoten» und «Fassung» lesen sich wie Rubriken, nicht wie
+ * Schalter. Gemessen war das zutreffend — «aus» rendert bis hierher einen
+ * LEEREN Hakenplatz; der einzige sichtbare Unterschied war die Tintenstufe der
+ * Beschriftung. Eine Farbe allein trägt nie eine Auskunft (§13/F2), und wer
+ * ein Menü mit drei ausgeschalteten Zeilen öffnet, sieht gar keinen Schalter.
+ * JETZT trägt die Marke eine FORM, die in beiden Stellungen dasteht: ein
+ * Kästchen (`kasten`, Vorgabe — eine Ja/Nein-Frage) oder ein Kreis (`punkt` —
+ * eine Wahl aus mehreren, `menuitemradio`). Die Tintenstufe der Beschriftung
+ * BLEIBT: sie ist jetzt die zweite Auskunft, nicht die einzige.
+ *
+ * Für Screenreader ändert sich nichts: die Auskunft trägt `aria-checked`, das
+ * sichtbare Zeichen ist `aria-hidden` und damit nur für Sehende gedacht.
  */
-export function MenueSchalter({ an, label, titel, onKlick, ariaLabel, attrs }: {
+export function MenueSchalter({ an, label, titel, onKlick, ariaLabel, form = 'kasten', attrs }: {
   an: boolean;
   label: string;
   titel: string;
   onKlick: () => void;
   ariaLabel?: string;
+  /**
+   * Die FORM der Marke, nicht ihre Rolle: `kasten` für eine Ja/Nein-Frage
+   * (Vorgabe), `punkt` für eine Zeile, die eine von mehreren Möglichkeiten
+   * wählt. Die ARIA-Rolle setzt weiterhin der Aufrufer über `attrs` — hier
+   * steht nur, was man sieht (§3).
+   */
+  form?: 'kasten' | 'punkt';
   attrs?: Record<string, string>;
 }) {
+  const punkt = form === 'punkt';
   return (
     <button
       type="button" role="switch" aria-checked={an} aria-label={ariaLabel}
@@ -84,7 +130,12 @@ export function MenueSchalter({ an, label, titel, onKlick, ariaLabel, attrs }: {
     >
       {/* `aria-hidden`: die Zustandsauskunft trägt `aria-checked`, nicht das
           Zeichen — sonst hörte ein Screenreader sie zweimal. */}
-      <span aria-hidden className="lc-menu-marke">{an ? '✓' : ''}</span>
+      <span aria-hidden className="lc-menu-marke">
+        <span data-an={an ? 'an' : 'aus'} data-menu-marke={form}
+          className={`lc-menu-kasten${punkt ? ' lc-menu-punkt-form' : ''}`}>
+          {an && (punkt ? <span className="lc-menu-punkt-kern" /> : '✓')}
+        </span>
+      </span>
       <span className="lc-menu-label" title={label}>{label}</span>
     </button>
   );
