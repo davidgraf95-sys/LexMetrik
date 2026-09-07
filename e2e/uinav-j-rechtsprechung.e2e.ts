@@ -212,7 +212,18 @@ test.describe('W2·10-UI-NAV-J · Rechtsprechungs-Seiten', () => {
     await expect(liste.getByRole('listitem').first()).toBeVisible()
 
     // (a) Datum-Dedupe: jedes Datum steht in der Liste GENAU EINMAL.
-    const daten = await liste.locator('li > p').allTextContents()
+    // §6.3-DEKLARATION (W2·24-DESIGN-IDENTITAET, Runde FC, 7.9.2026): der Griff
+    // war `li > p` — das Gruppen-Datum stand als eigener `<p class="num">` direkt
+    // im `<li>` (R3, 4dd675fd3). R9-2/A-3 (55acbf45d) hat genau diesen SECHSTEN
+    // byte-gleichen Datums-Formatierer eingesammelt: die Gruppe trägt ihr Datum
+    // seither über den geteilten Baustein `ui/Datum` (§5), also als
+    // `span.lc-ziffern` statt als `<p>`. NULLPROBE: `EntscheideListe.tsx` und
+    // `ui/Datum.tsx` sind byte-gleich zur Zweig-Basis `018b41a37` — der Griff war
+    // schon dort tot, die Wurzel liegt VOR diesem Zweig, nicht in ihm.
+    // Die drei Zusagen bleiben wörtlich; nur der Griff folgt dem Baustein:
+    // `.lc-ziffern` ist die Ziffernrolle, die `ui/Datum` setzt und ausdrücklich
+    // nicht verhandelt (Herleitung im Kopf des Bausteins).
+    const daten = await liste.locator('li > .lc-ziffern').allTextContents()
     expect(daten.length, 'mindestens eine Datums-Gruppe').toBeGreaterThan(0)
     expect(new Set(daten).size, `Daten doppelt: ${daten.join(', ')}`).toBe(daten.length)
 
