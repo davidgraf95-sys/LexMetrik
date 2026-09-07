@@ -71,18 +71,11 @@ const RUBRIKEN: ReadonlyArray<{ id: FussRubrik; label: string; titel: (dativ: st
   {
     id: 'a',
     label: 'Aktionen',
-    // NACHZUG NACH DEM F1-NACHFIX (7.9.2026): der vierte Griff der Zeile heisst
-    // seither nicht mehr «Daneben öffnen» — das Wort bleibt dem ERLASS-Kopf
-    // (`./ReiterAktion.tsx`), die Zeile stellt die einzelne Stelle daneben
-    // (`../parts/ArtikelAktionen.tsx`). Der Titel nennt darum die VERBFORM
-    // «daneben stellen», die dort in `title` und `aria-label` steht.
-    //
-    // WARUM NICHT DER SICHTBARE TEXT «⧉ Artikel daneben»: er traegt die
-    // Bund-Annahme als festes Wort, und an einem §-Erlass (BS-640.100) waere sie
-    // falsch. In `v3/` ist das gegatet (`leser-v3-fundament` C1: kein
-    // «Artikel»-Literal ausserhalb von `./erlassAnsicht.ts`) — die Regel gilt
-    // hier und wird nicht umgangen; die Verbform sagt dasselbe ohne Substantiv.
-    titel: () => '«Zitat», «Link», «Amtliche Fassung ↗» und «daneben stellen» in der Zeile am Ende zeigen',
+    // D44 (David 7.9.2026): die Zeile trug testweise einen vierten Griff
+    // («⧉ Artikel daneben», Verbform «daneben stellen» in `title`/`aria-label`
+    // von `../parts/ArtikelAktionen.tsx`) — ersatzlos gestrichen. Diese Gruppe
+    // schaltet seither nur noch die drei verbliebenen Aktionen.
+    titel: () => '«Zitat», «Link» und «Amtliche Fassung ↗» in der Zeile am Ende zeigen',
   },
 ];
 

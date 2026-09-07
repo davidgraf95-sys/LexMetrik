@@ -187,3 +187,21 @@ Nachfix), die vier Sonden aus Ziff. 5 sowie
 `e2e/leser-v3-split-a34-bugs.e2e.ts` (Setup, Ziff. 2a),
 `e2e/shard-gruppen.json` (Projektion, `gen:e2e-shards`), diese Datei,
 fünf Screenshots.
+
+## 6 · Nachzug D44 (David 7.9.2026): «⧉ Artikel daneben» ist wieder weg
+
+Wörtlich: «entferne ⧉ Artikel daneben unten.» Der Beleg oben (Ziff. 4, letzter
+Screen; Ziff. 5, Fall (f)) bleibt Beleg SEINES Datums und wird nicht
+nachgeführt (§0 Ziff. 2b) — er zeigt den Stand nach dem Nachfix vom 7.9.2026,
+bevor David die Aktion wieder strich. Ergänzt ist nur dieser Absatz.
+
+**Geänderte Dateien (D44):** `src/pages/gesetz-leser/parts/ArtikelAktionen.tsx`
+(vierter Knopf samt `usePaneSteuerung`/`naechsteInstanz`-Verdrahtung ersatzlos
+entfernt), `parts/BezuegeKopf.tsx`, `parts/ArtikelLeser.bezuegeFuss.tsx`,
+`leserOptionen.ts`, `v3/LeserRubrikenWahl.tsx` (Kommentare/Menü-Titel, die die
+vierte Aktion nannten, auf drei Aktionen zurückgeführt), `e2e/leser-d35-f1-
+funktionszeile.e2e.ts` (Fall (d): drei statt vier Aktionen; Fall (f): prüft
+seither die Abwesenheit statt die Wirkung), diese Datei. Der Erlass-Kopf-Griff
+«⧉ Daneben öffnen» (`v3/ReiterAktion.tsx`) ist unverändert — er trägt eine
+andere Aktion (Erlass statt Artikel, Herleitung ArtikelAktionen.tsx) und war
+nie Gegenstand des Auftrags.
