@@ -16,6 +16,17 @@ import { ersterUeberlauf, fensterStart } from './ueberlauf';
 // also im Bild. Der Scroll-Effekt der Leiste bleibt daneben als Netz für den
 // Rest (ein einzelner Reiter, der breiter ist als der ganze Streifen).
 //
+// WORAUF DIE MESSUNG BAUT (FB, Prüfbefund 7.9.2026): dass der Reiterkasten
+// seinen Inhalt TRÄGT. `offsetLeft + offsetWidth` ist die Kante des KASTENS;
+// solange ein Reiter nicht unter seinen `min-content` schrumpfen kann, ist das
+// zugleich die Kante seines Inhalts. R8 gab der Hülle `min-w-0` und nahm ihr
+// genau diese Untergrenze — danach passten @390 alle acht Kästen exakt bis 241
+// px, während der Streifen `scrollWidth 256` mass und die Beschriftungen auf
+// Breite 0 standen. Der Boden wohnt seither als `--app-reiter-min-b` in
+// `.rl-reiter` (index.css); wer ihn durch `min-w-0` ersetzt, macht diese
+// Rechnung nicht falsch, sondern BLIND — sie findet dann nie mehr einen
+// Überlauf.
+//
 // WARUM GEMESSEN STATT GERECHNET: eine Mindestbreite mal Reiterzahl wäre nur
 // dann richtig, wenn jeder Reiter beliebig schrumpfen könnte. Er kann es nicht
 // — die Geschäftsnummer wird nie gekürzt (F6, `Reiter.tsx`), ihr Kern steht

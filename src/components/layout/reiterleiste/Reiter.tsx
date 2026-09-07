@@ -147,7 +147,24 @@ export function Reiter({
         // gekürzte Gericht) kürzt sich weg, die Untergrenze ist sein
         // `min-content` — die Geschäftsnummer bleibt ungekürzt (F6, unten).
         // Was auch dann nicht mehr passt, zieht ins Blatt (`useReiterFenster`).
-        className={`group/reiter relative flex min-w-0 cursor-grab items-center border-r border-rule-soft active:cursor-grabbing ${
+        // ── FB (Prüfbefund 7.9.2026) · DER KASTEN TRÄGT SEINEN INHALT ─────
+        //    Hier stand seit R8 (`ce321f202`) `min-w-0`. Schrumpfen muss die
+        //    Hülle wirklich (R8s eigener Befund, s. bei den Spans unten) — nur
+        //    ist `min-width:0` die Aussage «dieser Reiter darf 0 px breit
+        //    sein», und die ist nie wahr. Unter seinem Boden passt der KASTEN
+        //    per Definition immer, sein INHALT steht daneben; genau auf die
+        //    Kastenkante misst aber R13-2 (`useReiterFenster`).
+        //    GEMESSEN am Stand `85daf2926` (Preview 4419, gebautes dist/,
+        //    Chromium @390, 8 Reiter): alle acht Kästen endeten bei 241 px =
+        //    `clientWidth`, `ersterUeberlauf` fand nichts, das Fenster blieb
+        //    `0/8/8`, «+N» erschien nie — und der Streifen mass `scrollWidth
+        //    256`, weil der letzte Kasten (22 px) 38 px Inhalt trug
+        //    (218 + 38). Alle acht Beschriftungen standen auf Breite 0.
+        //    `.rl-reiter` (index.css) setzt an dieselbe Stelle einen Boden als
+        //    MASS (`--app-reiter-min-b`, 5rem): schrumpfen ja, aber nur bis
+        //    dorthin, wo der Inhalt noch ganz im Kasten steht. Der Rest zieht
+        //    ins «+N»-Blatt. Herleitung der Zahl und die Messreihe: index.css.
+        className={`group/reiter rl-reiter relative flex cursor-grab items-center border-r border-rule-soft active:cursor-grabbing ${
         zieht === t.path ? 'opacity-40' : ''
       } ${aktiv ? (reg ? REG_TON[reg] : 'bg-paper-raised') : ''}`}>
       {/* EINFÜGEMARKE (D15): 2 px in der Registerfarbe des GEZOGENEN Reiters,

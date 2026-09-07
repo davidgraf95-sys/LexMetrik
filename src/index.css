@@ -410,6 +410,19 @@
        kleinsten wird. `min-width`, nie `width`: die Stelle darf nicht
        verstümmeln (§8). */
     --app-reiter-stelle-b:3.75rem;
+    /* --app-reiter-min-b · FB (Prüfbefund 7.9.2026): der BODEN eines Reiters —
+       wie schmal er werden darf, bevor der Rest ins «+N»-Blatt zieht (R13-2).
+       Warum es diesen Boden BRAUCHT, steht bei `.rl-reiter` (unten).
+       GEMESSEN 7.9.2026 (Preview 4419, gebautes dist/, Chromium, Messreihe über
+       5 · 5.5 · 6 · 6.5 · 7 rem an zehn Fällen): 5rem = 80 px ist der Wert, an
+       dem BEIDES stimmt. Er trägt den Inhalt — Schliess-✕ 24 + Abstand 4
+       (`SchliessKnopf`, `h-6 w-6 mr-1`) + Knopf-Polster 14 (`pl-2.5 pr-1`) = 42
+       unkürzbare Pixel, dazu 38 px Aufschrift, in denen ein Erlass-Kürzel ganz
+       steht («URG», «ZGB», «StGB»). Und er bleibt UNTER jeder natürlichen
+       Kürzel-Breite (ZGB misst 93 px), drängt also keinem kurzen Reiter Leerraum
+       auf — ab 6rem wuchs der ZGB-Reiter auf 96/104/112 px, gegen R13-4, und
+       @390 standen nur noch zwei statt drei Reiter im Bild. */
+    --app-reiter-min-b:5rem;
     --app-kopf-h:calc(var(--app-krone-h) + var(--app-reiter-h));
     --z-base:0; --z-sticky:10; --z-entscheid-sticky:15;
     --z-reader-scrim:16; --z-reader-kopf:17; --z-inhalt-kopf:19;
@@ -2412,6 +2425,38 @@
      innerhalb der Reservierung nicht. Der leere Fall (Stellung noch nicht
      gemeldet) hält denselben Platz: die Leiste steht schon vor dem ersten
      Spy-Lauf da, wo sie danach steht. */
+  /* ── FB (Prüfbefund 7.9.2026) · DER REITER HAT EINEN BODEN ────────────────
+     R13-2 leitet die Zahl der nebeneinander stehenden Reiter aus GEMESSENEN
+     Kanten ab (`useReiterFenster`: `offsetLeft + offsetWidth`). Diese Rechnung
+     sagt nur dann die Wahrheit, wenn ein Reiter einen Boden hat.
+     R8 (`ce321f202`) gab der Hülle `min-w-0` — nötig, damit sie überhaupt
+     schrumpfen KANN (ein `truncate`-Span macht den `min-content` der Hülle so
+     breit wie den ganzen Text; gemessen /gesetze/kanton/ZH-211.11 @320: Kasten
+     171 px, Inhalt 283 px). Nur ist `min-width:0` die Aussage «dieser Reiter
+     darf 0 px breit sein», und die ist nie wahr: unter dem Boden passt der
+     KASTEN per Definition immer, sein INHALT steht daneben.
+     GEMESSEN am Stand `85daf2926` (Preview 4419, gebautes dist/, Chromium @390,
+     8 Reiter): alle acht Kästen endeten exakt bei 241 px = `clientWidth`,
+     `ersterUeberlauf` fand also nichts, das Fenster blieb `0/8/8`, «+N»
+     erschien nie — und der Streifen mass trotzdem `scrollWidth 256`, weil der
+     letzte Kasten (22 px) 38 px Inhalt trug (218 + 38). Alle acht
+     Beschriftungen standen auf Breite 0.
+     `min-width` STATT `min-w-0` löst beide Sorgen mit einer Zahl: der Reiter
+     schrumpft (R8) — aber nur bis dorthin, wo sein Inhalt noch ganz in ihm
+     steht (R13-2). Was dann nicht mehr nebeneinander passt, zieht ins
+     «+N»-Blatt, statt gequetscht zu werden.
+     NACHGEMESSEN am selben Ort: @390 drei Reiter à 80 px mit voller Aufschrift
+     («ZPO», «StGB», «URG»), Fenster `5/3/8`, kein Überstand; @320 zwei; @1440
+     alle acht in ihrer natürlichen Breite. Und die Einzel-Reiter mit langem
+     Namen (ZH-211.11, ESTV-KS-DBG-49, /vorlagen/nda, /rechner/zustaendigkeit)
+     stehen @320 wieder in ihren 171 px statt in 283 — das war R8s eigener
+     Befund, den `min-w-0` nur solange behob, wie kein zweiter Reiter danebenlag.
+     BLEIBT OFFEN (nicht von dieser Zahl abhängig): ein Entscheid-Reiter, dessen
+     Geschäftsnummer nach F6 ungekürzt bleibt («BGer 1B_278/2022 vom 20. Juni
+     2022»), misst @320 mehr Inhalt (217 px) als der Streifen breit ist (171) —
+     mit und ohne diesen Boden gleichermassen, gemessen über alle fünf Werte
+     der Reihe. Das ist die F6-Spannung, nicht die des Bodens. */
+  .rl-reiter { min-width: var(--app-reiter-min-b); }
   .rl-stelle { display: inline-block; min-width: var(--app-reiter-stelle-b); flex-shrink: 0; }
   /* ── R13-4 (Prüfbefund 7.9.2026) · KEINE RESERVE OHNE INHALT ──────────────
      GEMESSEN am Stand `0ba97c5d6` (@1440, gebautes dist/): ein Gesetzes-Reiter

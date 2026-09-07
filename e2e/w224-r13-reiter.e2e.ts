@@ -123,6 +123,58 @@ test.describe('R13-2 — Überlauf aus der gemessenen Breite', () => {
   }
 })
 
+// ═══ FB · DER KASTEN TRÄGT SEINEN INHALT (Prüfbefund 7.9.2026) ══════════════
+//
+// R13-2 oben misst den STREIFEN. Diese Sonde misst, was R13-2 stillschweigend
+// voraussetzt und was zwischen R13 und der Gesamtprüfung verloren ging: dass
+// die Kante eines Reiterkastens zugleich die Kante seines Inhalts ist.
+//
+// GEMESSEN am Stand `85daf2926` (Preview 4419, gebautes dist/, Chromium @390,
+// die acht Reiter von oben): alle acht Kästen endeten exakt bei 241 px =
+// `clientWidth` — die Rechnung von R13-2 fand also keinen Überlauf, das Fenster
+// blieb `0/8/8`, «+N» erschien nie. Der Streifen mass trotzdem `scrollWidth
+// 256`: der letzte Kasten war 22 px breit und trug 38 px Inhalt (218 + 38).
+// Die Beschriftungen aller acht Reiter standen auf Breite 0.
+// URSACHE: `min-w-0` an der Reiter-HÜLLE (R8, `ce321f202`) — ein Flex-Kind ohne
+// inhaltsbezogene Untergrenze passt per Definition immer.
+//
+// ROT ZU BEKOMMEN (§6.7, einmal gefahren 7.9.2026): in `Reiter.tsx` der Hülle
+// wieder `min-w-0` geben ⇒ @390 acht Reiter, `spill` 16 px je Kasten,
+// `beschriftung 0`.
+test.describe('FB — kein Reiter trägt mehr Inhalt, als sein Kasten fasst', () => {
+  for (const [w, h] of [[390, 844], [320, 700]] as const) {
+    test(`@${w}: jeder Reiter steht ganz in seinem Kasten und ist lesbar`, async ({ page }) => {
+      await page.setViewportSize({ width: w, height: h })
+      await seed(page, ACHT, '/gesetze/bund/URG')
+      const m = await page.evaluate(() => {
+        const s = document.querySelector('[data-reiter-streifen]')!
+        const k = [...s.querySelectorAll<HTMLElement>('[data-reiter-schluessel]')]
+        return {
+          streifen: { scrollW: s.scrollWidth, clientW: s.clientWidth },
+          reiter: k.map((e) => ({
+            schluessel: e.getAttribute('data-reiter-schluessel')!,
+            spill: e.scrollWidth - e.clientWidth,
+            // Die breiteste Beschriftung im Reiter: der Name (`kern`) bzw. der
+            // Kopf. 0 hiesse, der Reiter zeigt niemandem, was er ist.
+            beschriftung: Math.max(0, ...[...e.querySelectorAll<HTMLElement>('button span')]
+              .filter((x) => !x.className.includes('sr-only'))
+              .map((x) => Math.round(x.getBoundingClientRect().width))),
+          })),
+        }
+      })
+      expect(m.reiter.length, 'mindestens ein Reiter steht im Bild').toBeGreaterThan(0)
+      expect(m.streifen.scrollW, `@${w} Vorstand: 256 in 241`)
+        .toBeLessThanOrEqual(m.streifen.clientW + 1)
+      for (const r of m.reiter) {
+        expect(r.spill, `«${r.schluessel}» ragt über seinen Kasten (Vorstand: 16 px)`)
+          .toBeLessThanOrEqual(1)
+        expect(r.beschriftung, `«${r.schluessel}» ist ohne Aufschrift (Vorstand: 0 px)`)
+          .toBeGreaterThan(0)
+      }
+    })
+  }
+})
+
 // ═══ R13-1 · DER AKTIVE REITER IST IMMER GANZ IM BILD ═══════════════════════
 //
 // GEMESSEN am Vorstand @390 mit acht Reitern, aktiv = letzter: `scrollLeft 785`
