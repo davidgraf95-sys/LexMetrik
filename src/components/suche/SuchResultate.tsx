@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useMemo, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import type { GruppenId, SuchGruppe, SuchTreffer } from '../../lib/universalSuche';
 import { hervorhebungsStellen } from '../../lib/suche/hervorhebung';
@@ -107,8 +107,12 @@ function markiere(text: string, q: string): ReactNode {
   return teile;
 }
 
-function ZeileInhalt({ t, gruppe, sprung, q }: { t: SuchTreffer; gruppe: GruppenId; sprung?: boolean; q: string }) {
-  const art = trefferArt(t);
+function ZeileInhalt({ t, gruppe, sprung, q, artStumm }: {
+  t: SuchTreffer; gruppe: GruppenId; sprung?: boolean; q: string;
+  /** G19: die Zeile darüber trägt dieselbe Art — dann schweigt diese. */
+  artStumm?: boolean;
+}) {
+  const art = artStumm ? null : trefferArt(t);
   return (
     <>
       {/* Der Registerstrich am Zeilenanfang — dasselbe Zeichen wie im
@@ -135,7 +139,7 @@ function ZeileInhalt({ t, gruppe, sprung, q }: { t: SuchTreffer; gruppe: Gruppen
   );
 }
 
-function Zeile({ t, gruppe, onAuswahl, onNavigate, optionId, aktiv, alsOption, sprung, q }: {
+function Zeile({ t, gruppe, onAuswahl, onNavigate, optionId, aktiv, alsOption, sprung, q, artStumm, buendelStart }: {
   t: SuchTreffer;
   gruppe: GruppenId;
   onAuswahl?: () => void;
@@ -145,7 +149,14 @@ function Zeile({ t, gruppe, onAuswahl, onNavigate, optionId, aktiv, alsOption, s
   alsOption?: boolean;
   sprung?: boolean;
   q: string;
+  artStumm?: boolean;
+  buendelStart?: boolean;
 }) {
+  // G19: die Haarlinie sitzt an der Zeile, nicht als eigener Knoten — ein
+  // zusätzliches <li> zwischen den Optionen wäre im Listbox-Modus ein
+  // aria-required-children-Verstoss (dieselbe Grenze, an der schon der
+  // «alle N»-Sprung als echte role=option gebaut ist).
+  const zeileCls = buendelStart ? `${ZEILE_CLS} border-t border-line/60` : ZEILE_CLS;
   // Listbox-Option: KEIN inneres <a> (ein fokussierbarer Link in role=option ist
   // nested-interactive, axe serious — Entscheid David 26.6.2026). Maus/Touch
   // navigieren über onNavigate; die Tastatur läuft über die Combobox (Enter im
@@ -154,15 +165,15 @@ function Zeile({ t, gruppe, onAuswahl, onNavigate, optionId, aktiv, alsOption, s
     return (
       <li role="option" id={optionId} aria-selected={!!aktiv}
         onClick={() => { onAuswahl?.(); onNavigate?.(t.href); }}
-        className={`${ZEILE_CLS} cursor-pointer${aktiv ? ' hs-aktiv' : ''}`}>
-        <ZeileInhalt t={t} gruppe={gruppe} sprung={sprung} q={q} />
+        className={`${zeileCls} cursor-pointer${aktiv ? ' hs-aktiv' : ''}`}>
+        <ZeileInhalt t={t} gruppe={gruppe} sprung={sprung} q={q} artStumm={artStumm} />
       </li>
     );
   }
   return (
     <li>
-      <Link to={t.href} onClick={onAuswahl} className={ZEILE_CLS}>
-        <ZeileInhalt t={t} gruppe={gruppe} sprung={sprung} q={q} />
+      <Link to={t.href} onClick={onAuswahl} className={zeileCls}>
+        <ZeileInhalt t={t} gruppe={gruppe} sprung={sprung} q={q} artStumm={artStumm} />
       </Link>
     </li>
   );
@@ -182,6 +193,34 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q, sektio
   // der /suche-Seite (S5) optional per `sektionsRollen`, damit Screenreader die
   // Inhaltstyp-Abschnitte ansteuern können — ohne den Options-Modus.
   const alsGruppe = !!listboxId || !!sektionsRollen;
+  // ── G19 (Gesamtprüfung 6.9.2026) · DER RHYTHMUS EINER TREFFERLISTE ────────
+  // Gemessen @1440 auf `/suche` (Screen `gesamt-a-14`): in der
+  // Gesetzestext-Gruppe stand rechts in JEDER der 200 Zeilen dasselbe Wort
+  // «Gesetz», und die ersten 200 Treffer waren Art. 271 ff. DESSELBEN Erlasses
+  // ohne jede Zäsur. Beides ist Wiederholung, nicht Auskunft: den Typ nennt
+  // schon der Gruppenkopf darüber, und eine 200 Zeilen lange Fläche ohne
+  // Gliederung liest sich als eine einzige.
+  // Zwei rein darstellerische Ableitungen, beide ohne Eingriff in Reihenfolge
+  // oder Auswahl der Treffer (Suchlogik unberührt, §5 — sie bleibt in
+  // `lib/universalSuche.ts`):
+  //   · die Art rechts erscheint nur, wo sie WECHSELT (Kanton, Regime,
+  //     «Leitentscheid») — die Wiederholung schweigt;
+  //   · wo mehrere Treffer auf dasselbe Dokument zeigen, trennt eine Haarlinie
+  //     die Bündel. Sie erscheint NUR in Gruppen, in denen wirklich gebündelt
+  //     wird — sonst wäre sie an jeder Zeile und damit wieder Rauschen.
+  const rhythmus = useMemo(() => {
+    const basis = g.treffer.map((t) => t.href.split('#')[0].split('?')[0]);
+    const zaehl = new Map<string, number>();
+    for (const b of basis) zaehl.set(b, (zaehl.get(b) ?? 0) + 1);
+    const buendelt = [...zaehl.values()].some((n) => n > 1);
+    let vorigeArt: string | null = null;
+    return g.treffer.map((t, i) => {
+      const art = trefferArt(t);
+      const artStumm = art !== null && art === vorigeArt;
+      vorigeArt = art;
+      return { artStumm, buendelStart: buendelt && i > 0 && basis[i] !== basis[i - 1] };
+    });
+  }, [g.treffer]);
   return (
     <div role={alsGruppe ? 'group' : undefined} aria-label={alsGruppe ? g.titel : undefined}
       className="lc-reveal border-t border-line first:border-t-0" style={{ animationDelay: `${index * 55}ms` }}>
@@ -223,10 +262,11 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q, sektio
             <SkelettListe />
           </>
         : <ul role={listboxId ? 'none' : undefined} className="pb-1.5">
-            {g.treffer.map((t) => {
+            {g.treffer.map((t, i) => {
               const oid = listboxId ? suchOptionId(listboxId, g.id, t.id) : undefined;
               return <Zeile key={`${g.id}:${t.id}`} t={t} gruppe={g.id} onAuswahl={onAuswahl} onNavigate={onNavigate}
-                optionId={oid} aktiv={!!oid && oid === aktivId} alsOption={!!listboxId} sprung={g.id === 'sprung'} q={q} />;
+                optionId={oid} aktiv={!!oid && oid === aktivId} alsOption={!!listboxId} sprung={g.id === 'sprung'} q={q}
+                artStumm={rhythmus[i].artStumm} buendelStart={rhythmus[i].buendelStart} />;
             })}
             {/* «alle N Treffer»-Sprung als ARIA-Option (statt Kopf-Link, s. oben);
                 in flacheTreffer() enthalten → per Pfeiltasten + Enter erreichbar. */}

@@ -21,7 +21,9 @@ import {
   ENTSCHEID_HIGHLIGHT_INSTANZ, ankunftsAnker,
   LESE_PARAM, leseAusParam, loescheNennungen, maleNennungen, nennungsAnker,
   referenzImTitel, trefferInErwaegungen, urlMitHash, urlMitLese, zaehleNennungen, zaehleTreffer,
+  angabeImTitel, leitzeileOhneKopfangaben,
 } from './entscheidLeserRegeln';
+import { datumOderStrich } from '../components/ui/datumText';
 import { setzeSuchHighlight } from './gesetz-leser/suchHighlight';
 import { usePaneKlasse, usePaneKontext } from '../components/layout/PaneKontext';
 import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
@@ -524,6 +526,15 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
   // Einheitlicher Kopf: Modell aus der reinen Regel-Lib (§3) — Komponente rendert nur.
   const kopf = kopfModell(snap);
   const kopfLabel = KOPF_LABEL[snap.sprache];
+  // ── GA-2 (W2·24, 7.9.2026) · was der Kopf schon sagt, sagt er nicht zweimal ─
+  // Beide Ableitungen sind rein und liegen in `entscheidLeserRegeln` (dort die
+  // Messung und die Herleitung); hier stehen nur die zwei Aufrufe, damit die
+  // Bänder unten lesbar bleiben.
+  const datumImTitel = !snap.datumUnbekannt && angabeImTitel(snap.zitierung, datumOderStrich(snap.datum));
+  const leitzeile = leitzeileOhneKopfangaben(kopf.leitzeile, [
+    GEBIET_LABEL[snap.sachgebiet],   // steht in der Overline
+    snap.gerichtName,                // steht in der H1 (Zitierung)
+  ]);
   // BGE-Umschalter: nur wenn ein separater amtlicher Sammlungs-Auszug vorliegt.
   const hatAuszug = !!snap.auszugAbschnitte && snap.auszugAbschnitte.length > 0;
 
@@ -646,7 +657,13 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
         // J3 (§8): Sachgebiet ist maschinell zugeordnet — der title sagt es an
         // Ort und Stelle; das Badge dazu trägt der Kopf bereits (V1.2, unten).
         overline={<KopfOverline glieder={[
-          { text: snap.gerichtName, rolle: 'herkunft' },
+          // GA-2 (7.9.2026): der Gerichtsname steht nur hier, wenn die
+          // ZITIERUNG darunter ihn nicht ohnehin wörtlich trägt — sie tut es am
+          // heutigen Korpus fast immer («Obergericht AG HOR.2024.19 vom …»),
+          // und dann war die Overline die dritte Nennung desselben Namens im
+          // selben Bild (Herleitung: `entscheidLeserRegeln`, GA-2).
+          angabeImTitel(snap.zitierung, snap.gerichtName)
+            ? null : { text: snap.gerichtName, rolle: 'herkunft' },
           snap.abteilung ? { text: snap.abteilung, rolle: 'art' } : null,
           {
             text: GEBIET_LABEL[snap.sachgebiet], rolle: 'sachgebiet',
@@ -668,15 +685,21 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
            Panes ist die Klassenzeile zeichengleich zum Vorzustand (Prerender
            der 5'093 Entscheid-Seiten unberührt); im Pane misst die Kaskade
            neu die Pane- statt die Fensterbreite. */
-        titel={<SeitenTitel className={`num${lese ? ' hidden' : ''}`}>{snap.zitierung}</SeitenTitel>}
+        /* G3 (Gesamtprüfung 6.9.2026): `stimme="serif"`. Der Entscheid-Titel lief
+           als einziger Leser-Titel in der Sans-Display-Stimme, während Erlass-
+           und Vorlagen-Leser Literata sprechen — im Split-View standen beide
+           nebeneinander (Screen 15). Ein Urteil IST zitierfähiger Quelltext,
+           also die Stimme, für die `ui/SeitenTitel` sie vorsieht. Die
+           `num`-Klasse bleibt: sie setzt nur `tabular-nums`, keine Schriftart. */
+        titel={<SeitenTitel stimme="serif" className={`num${lese ? ' hidden' : ''}`}>{snap.zitierung}</SeitenTitel>}
         nachTitel={
           <>
             {/* 3 Abgeleitete Sachgebiets-Leitzeile — nur wenn weder ein Rubrum-Gegenstand
                 noch die Regeste-Box das Thema trägt (kopf.ts entscheidet, §3/§5). Nüchtern +
                 ehrlicher Marker, dass sie aus der Struktur abgeleitet ist (§8). */}
-            {kopf.leitzeile && (
+            {leitzeile && (
               <div className="space-y-0.5">
-                <p className="text-body-s leading-snug text-ink-700">{kopf.leitzeile}</p>
+                <p className="text-body-s leading-snug text-ink-700">{leitzeile}</p>
                 <p className="text-micro italic text-ink-500">{SYNTH_MARKER[snap.sprache]}</p>
               </div>
             )}
@@ -753,7 +776,11 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
            BS §7.2: die parallele Zweit-Geschäftsnummer desselben Verfahrens
            («ZB.2023.4 (AG.2023.…)») ist Identität, keine zweite Zitierung. */
         fakten={[
-          <DatumMeta snap={snap} />,
+          // GA-2 (7.9.2026): «Entscheid vom 12.12.2025» entfällt, wenn die
+          // Zitierung darüber dasselbe Datum wörtlich führt — sonst steht das
+          // Urteilsdatum zweimal in 60 px. Fehlt es im Titel (BGE-Zitierungen,
+          // «Entscheiddatum nicht publiziert», BGE-Jahrgang), bleibt die Zeile.
+          datumImTitel ? null : <DatumMeta snap={snap} />,
           snap.bgeReferenz && !referenzImTitel(snap.zitierung, snap.bgeReferenz)
             ? <span className="num">{snap.bgeReferenz}</span> : null,
           snap.nummerSekundaer

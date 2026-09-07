@@ -2,6 +2,7 @@ import type { KopfDaten } from './InhaltsKopfKontext';
 import { RuecksprungChip } from './RuecksprungChip';
 import { DeepLinkSkeleton } from './DeepLinkSkeleton';
 import { OrtsAngabe, StandAngabe } from './OrtsAngabe';
+import { ortsLeistenKrumen } from './BrotkrumeRegel';
 import { SchliessKnopf } from '../ui/SchliessKnopf';
 
 // ─── Inhalts-Kopf (Einzelansicht «analog Split-View», ohne Verschiebe-Optionen) ─
@@ -169,7 +170,12 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
             aus dem geteilten Baustein `./OrtsAngabe`, den auch der `PaneKopf`
             konsumiert. `mitLink`, weil in der Einzelansicht der globale Router
             zuständig ist (im Pane ist es der Pane-eigene Navigator). */}
-        <OrtsAngabe breadcrumb={daten.breadcrumb} artikel={daten.artikel} mitLink navLabel="Brotkrümel" />
+        {/* GA-1 (W2·24, 7.9.2026): die Leiste zeigt NIE das Blatt, nur den
+            Rücksprung auf die Sektion — und den nur, wo die Seite keinen
+            eigenen trägt. Herleitung und Messung: `./BrotkrumeRegel`. Die
+            MELDUNG der Seiten bleibt vollständig (der `PaneKopf` braucht die
+            ganze Kette); gefiltert wird an der Leiste, die die Regel betrifft. */}
+        <OrtsAngabe breadcrumb={ortsLeistenKrumen(daten.breadcrumb)} artikel={daten.artikel} mitLink navLabel="Brotkrümel" />
         {/* ③ GRIFF-RIEGEL: drei Gruppen (finden · wählen · Blatt), innen gap-1,
             zwischen den Gruppen gap-3 — Nähe trägt die Gruppierung, nicht Linien
             (Reglement F1). */}

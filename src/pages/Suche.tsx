@@ -80,11 +80,20 @@ export function Suche() {
 
   return (
     <div className="space-y-8">
-      <SeitenKopf
-        overline="Suche"
-        titel="Suche"
-        intro="Alle Treffer auf einer Seite — Gesetzestext, Gesetze, Rechtsprechung, Materialien sowie Rechner und Vorlagen, ungekappt und teilbar. Die Suchleiste oben bleibt der Schnellzugriff; hier steht das ganze Ergebnis."
-      />
+      {/* ── G9/G17/G18 (Gesamtprüfung 6.9.2026) · EINE KOPF-ANATOMIE ────────
+          Diese Seite trug als einzige Übersicht die Bauform der STATISCHEN
+          Seiten: Overline + Ablesekante + H1 + drei Zeilen Lead. Gemessen
+          @1440 stand die H1 dadurch auf y = 213 statt auf den 177, die
+          `/gesetze` und `/rechtsprechung` zeigen — 36 px Versatz und zwei
+          Bauformen für dieselbe Sache (G17). Die Overline sagte zudem
+          wortgleich, was die H1 darunter sagt («Suche»/«Suche», G18), und der
+          Lead erklärte eine Seite, die aus einem Suchfeld und ihren Treffern
+          besteht (D11 «Übersichts-Köpfe ohne Erklärtext», G9).
+          Was der Lead an FUNKTION trug, trägt der Platzhalter des Feldes
+          darunter — er nennt beide Wege («Suchen oder Norm springen») mit
+          Beispielen und steht dort, wo man ihn braucht (§8: nichts geht
+          verloren, es steht nur nicht mehr im Kopf). */}
+      <SeitenKopf titel="Suche" />
 
       <div role="search" className="space-y-4">
         <div className="relative max-w-reading">

@@ -376,7 +376,13 @@ export function Gesetze() {
               auf alle Ebenen erweitern
             </button>
           )}
-          <span>Artikel-Sprung über die Suche oben (⌘K)</span>
+          {/* G9 (Gesamtprüfung 6.9.2026): der Satz «Artikel-Sprung über die
+              Suche oben (⌘K)» ist gestrichen — ein Erklärtext über ein
+              Bedienelement, das sichtbar zwei Zeilen darüber steht und seinen
+              Kürzel-Hinweis selbst führt (D11). Die Scope-Zeile daneben
+              BLEIBT: sie ist die `aria-describedby`-Beschreibung des Feldes
+              (WCAG) und ändert sich mit dem Filter — eine Auskunft, keine
+              Erklärung. */}
         </p>
         <div className="mt-1">
           <EbenenSchalter aktiv={gewaehlt} onWahl={setzeEbene} onAlle={zurUebersicht} />

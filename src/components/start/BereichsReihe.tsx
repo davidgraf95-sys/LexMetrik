@@ -52,13 +52,19 @@ const ANGABEN: Record<string, Angabe> = {
     reg: 'm', zahl: z.materialien, einheit: 'amtliche Materialien erfasst',
     satz: 'Kreisschreiben, Wegleitungen und Leitfäden nach Behörde',
   },
+  // G16 (Gesamtprüfung 6.9.2026): die Einheit sagt, WAS gezählt wurde — bei
+  // diesen beiden Bereichen wiederholte sie bis hierher bloss den Bereichsnamen
+  // («Rechner / 23 / Rechner»), während die drei Nachbarn dort eine Sacheinheit
+  // nennen («Erlasse im Volltext», «Entscheide im Volltext»). Der Zusatz ist
+  // gezählt-deckungsgleich (§8): es sind die Einträge des Katalogs bzw. die
+  // ausfüllbaren Vorlagen, nichts Weiteres.
   '/rechner': {
-    reg: 'w', zahl: z.rechner, einheit: 'Rechner',
+    reg: 'w', zahl: z.rechner, einheit: 'Rechner im Katalog',
     satz: 'Fristen, Gebühren und Beträge, Zuständigkeiten',
   },
   '/vorlagen': {
-    reg: 'w', zahl: z.vorlagen, einheit: 'Vorlagen',
-    satz: 'Verträge, Klagen und Gesuche zum Ausfüllen',
+    reg: 'w', zahl: z.vorlagen, einheit: 'Vorlagen zum Ausfüllen',
+    satz: 'Verträge, Klagen und Gesuche',
   },
 };
 
