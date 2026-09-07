@@ -72,6 +72,9 @@ export function Reiter({
   // «links» ohne ein «rechts» sagt nichts.
   const paneIdx = paneSchluessel.length > 1 ? paneSchluessel.indexOf(schluessel) : -1;
   const paneWort = paneIdx === 0 ? 'links' : paneIdx > 0 ? 'rechts' : null;
+  // R13B: «in diesem Reiter wird gelesen» — nur er kann vom Scroll-Spy eine
+  // Lesestellung bekommen und hält darum ihren Platz frei (s. bei `.rl-stelle`).
+  const liest = aktiv || paneSchluessel.indexOf(schluessel) >= 0;
   return (
     <div
       data-reiter-aktiv={aktiv}
@@ -267,7 +270,21 @@ export function Reiter({
             jedem Scroll umbaut (D27). Der einmalige Übergang «keine Stelle →
             Art. 1» springt seit R13-2 nichts mehr: die Reiter schrumpfen
             gemeinsam, die Gesamtbreite des Streifens ändert sich nicht. */}
-        {stelle ? <span className="rl-stelle num">{stelle}</span> : null}
+        {/* ── R13B (7.9.2026) · DER GELESENE REITER HÄLT SEINEN PLATZ ──────
+            `stelle === ''` heisst «Gesetzes-Reiter, Stellung noch unbekannt».
+            Unbekannt bleibt sie, bis der Spy nach dem ERSTEN Scrollen meldet
+            (`inhalt-hooks.tsx`, `if (gescrollt.current)`) — und genau dieser
+            Mount weitete den Reiter GEMESSEN von 80 auf 137 px, das ✕ von 69
+            auf 133 (Stand `cfa8a9f81`, @1280, /gesetze/bund/ZGB).
+            Gescrollt wird im Reiter, der offen VOR EINEM steht: aktiv, oder in
+            einem der beiden Panes. Nur dort wird der Platz vorgehalten
+            (`.rl-stelle-frei`, index.css — dort auch die Baseline-Kur). Der
+            Hintergrund-Reiter ohne Stellung bleibt schmal; das war R13-4s
+            Befund und bleibt so (Sonde `w224-r13-reiter.e2e.ts` R13-4).
+            `aria-hidden` und kein Textknoten: der Accessible Name bleibt Wort
+            für Wort derselbe wie ohne Reserve. */}
+        {stelle ? <span className="rl-stelle num">{stelle}</span>
+          : stelle === '' && liest ? <span aria-hidden className="rl-stelle-frei" /> : null}
         {stelle ? ' ' : null}
         <span className={kopf ? 'shrink-0' : 'min-w-0 truncate max-w-[15rem]'}>{kern}</span>
         {paneWort && <span className="sr-only">{` (Fenster ${paneWort})`}</span>}

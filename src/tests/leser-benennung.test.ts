@@ -62,7 +62,13 @@ const GETEILTE_BAUSTEINE = [
   // «Rechner») und standen bis zum Split IN der Datei darüber. Ohne diese zwei
   // Zeilen hätte der Split die Wörter still aus dem Geltungsbereich getragen.
   'parts/ArtikelLeser.kopfteile.tsx',
-  'parts/ArtikelLeser.bezuegeZone.tsx',
+  // §6.3-DEKLARATION (W2·24-D34, 7.9.2026): die Datei hiess bis D33
+  // `ArtikelLeser.bezuegeZone.tsx`. Sie ist mit D34 zum EINEN Bezüge-Fuss
+  // beider Satzspiegel-Formen geworden und heisst darum `…bezuegeFuss.tsx`.
+  // GEÄNDERT ist ausschliesslich der Pfad in dieser Liste — der
+  // Geltungsbereich des Wächters (dieselbe Datei, dieselben Wörter) und
+  // jede Zusage darüber sind unverändert.
+  'parts/ArtikelLeser.bezuegeFuss.tsx',
   'parts/SektionKopf.tsx',
   'parts/ErlassKopfBlock.tsx',
 ];

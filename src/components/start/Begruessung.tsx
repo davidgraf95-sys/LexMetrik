@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { waehleBegruessung } from '../../lib/begruessungen';
 
 // ─── Begrüssung und Tagesdatum der Startseite (W2·23-STARTSEITE-V4 §4) ──────
@@ -39,11 +39,40 @@ export interface Heute {
   wochentag: string;
   /** «5. September 2026» */
   datum: string;
+  /** «14:32» — `null` vor der Hydration (Prerender UND erster Client-Render,
+   *  s. `uhrzeit()` unten), danach jede Minute nachgeführt. NIE im
+   *  Server-HTML: SuchBlock reserviert dafür Platz, statt ihn erst beim
+   *  Erscheinen zu öffnen (§15, CLS 0). */
+  uhrzeit: string | null;
 }
 
-/** Gruss, Wochentag und Datum aus EINER Uhrzeit (einmal beim Mount, lazy init). */
+const pad = (n: number) => String(n).padStart(2, '0');
+
+/** «14:32», 24-Stunden, ohne Locale-Abhängigkeit (wie Wochentag/Datum oben). */
+function uhrzeit(jetzt: Date): string {
+  return `${pad(jetzt.getHours())}:${pad(jetzt.getMinutes())}`;
+}
+
+/** Gruss, Wochentag und Datum aus EINER Uhrzeit (einmal beim Mount, lazy init).
+ *
+ *  UHRZEIT SEPARAT (D39, David 7.9.2026 «datum und uhrzeit»): Gruss/Wochentag/
+ *  Datum bleiben wie bisher EIN Bild vom Mount-Zeitpunkt (§4-Kommentar oben —
+ *  sie sollen nicht mitten in der Sitzung springen). Die Uhrzeit dagegen SOLL
+ *  ticken; sie lebt darum in einem eigenen State, startet mit `null` (identisch
+ *  zwischen Server- und erstem Client-Render, also keine Hydration-Divergenz
+ *  UND kein Prerender-Wert, der beim Build einfriert) und wird erst im
+ *  `useEffect` — also NACH der Hydration — gesetzt und danach jede Minute
+ *  nachgeführt.
+ *
+ *  ZEITQUELLE INJIZIERBAR: bewusst KEIN eigener Injektions-Parameter hier —
+ *  die Komponente ruft schlicht `new Date()`/`setInterval`, dieselben
+ *  Globals, die Playwrights `page.clock` (verfügbar ab 1.45, hier 1.60)
+ *  transparent abfängt. Ein zweiter, nur für Tests existierender Parameter
+ *  wäre eine spekulative Abstraktion für einen Bedarf, den es schon gibt
+ *  (Minimalismus-Prinzip, `.claude/rules/schichtentrennung.md`) — der e2e-
+ *  Wächter (`e2e/d39-begruessung.e2e.ts`) installiert die Uhr vor `goto`. */
 export function useHeute(): Heute {
-  const [heute] = useState<Heute>(() => {
+  const [heute] = useState<Omit<Heute, 'uhrzeit'>>(() => {
     const jetzt = new Date();
     return {
       gruss: waehleBegruessung(jetzt.getHours(), Math.random),
@@ -51,5 +80,12 @@ export function useHeute(): Heute {
       datum: `${jetzt.getDate()}. ${MONATE[jetzt.getMonth()]} ${jetzt.getFullYear()}`,
     };
   });
-  return heute;
+  const [zeit, setZeit] = useState<string | null>(null);
+  useEffect(() => {
+    const nachfuehren = () => setZeit(uhrzeit(new Date()));
+    nachfuehren();
+    const id = setInterval(nachfuehren, 60_000);
+    return () => clearInterval(id);
+  }, []);
+  return { ...heute, uhrzeit: zeit };
 }

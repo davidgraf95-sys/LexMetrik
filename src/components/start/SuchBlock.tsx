@@ -1,14 +1,27 @@
 import { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { SAMMLUNG_TITEL } from '../../lib/seo';
 import { usePaneKlasse } from '../layout/PaneKontext';
 import { useHeute } from './Begruessung';
 
-// ─── Erste Ebene des Pults: die Begrüssung (W2·24-R10, D18) ────────────────
+// ─── Erste Ebene des Pults: die Begrüssung (W2·24-R10, D18, D39) ───────────
 //
-// Referenzbild `abnahme/design-identitaet/pult-freigegeben.html`, Marke `.such`:
-// Titelblatt-Wort, darunter die Begrüssung kursiv in Literata mit kleinem Datum
-// daneben. Kein Kasten, keine Fläche.
+// Referenzbild `abnahme/design-identitaet/pult-freigegeben.html`, Marke `.such`,
+// FORTGESCHRIEBEN mit D39 (David 7.9.2026 — s. unten): die Begrüssung kursiv
+// in Literata, darunter klein Wochentag, Datum und Uhrzeit. Kein Kasten, keine
+// Fläche — Abgrenzung zur Bereichs-Reihe darunter über die Linie (F0.6).
+//
+// ── D39 (David 7.9.2026) · KEIN TITELBLATT-WORT MEHR, BEGRÜSSUNG WIRD DIE H1 ─
+// Wortlaut: «entferne oberhalb der begrüssung das wort Sammlung und dann mach
+// die begrüssung prominenter und klarer von dem darunter abgegrenzt. also das
+// hallo und dann etwas kleiner datum und uhrzeit.» Bis hierher trug dieser
+// Block ZWEI Zeilen: eine eigene `<h1>{SAMMLUNG_TITEL}</h1>` («Sammlung», Archivo
+// 12 px) über der Begrüssung, und Wochentag/Datum standen NEBEN dem Gruss in
+// derselben Zeile (R10-NACHZUG D14). Jetzt ist die BEGRÜSSUNG selbst die H1
+// (kein zweites Element mehr, das den Rang trüge) — `SAMMLUNG_TITEL` bleibt in
+// `lib/seo.ts` als Wortmaterial bestehen (Fuss/Marke), verliert hier nur die
+// Rolle als eigene Kopfzeile. Wochentag/Datum ziehen in eine EIGENE, kleinere
+// Zeile darunter und bekommen dort die Uhrzeit dazu (neu, minütlich
+// nachgeführt — s. `Begruessung.tsx`, `useHeute`).
 //
 // ── D18 (David 6.9.2026) · HIER STEHT KEINE SUCHE MEHR ──────────────────────
 // Wortlaut: «insgesamt braucht es auf der startseite keine suche. nur oben
@@ -40,22 +53,29 @@ import { useHeute } from './Begruessung';
 //     6.9.2026 als «zu viel text» gesehen hat. Die Konstante selbst bleibt: der
 //     Seitenfuss (`layout/Footer`) trägt sie unverändert auf jeder Seite.
 //
-// A-1-AUSNAHME (R3-α, 31.8.2026), fortgeschrieben: kein `SeitenTitel`. Der
-// Baustein trägt die Seiten-Titelgrösse (`text-h2 sm:text-h1`) und die
-// Pane-Kaskade; das Pult hat keine Titelzeile dieser Art — sein Titel ist das
-// kleine Titelblatt-Wort über der Begrüssung. Eine <h1> bleibt es trotzdem
-// (genau eine je Seite, SICHTBAR — `e2e/a11y.e2e.ts` prüft `h1` auf
-// Sichtbarkeit, eine `sr-only`-H1 wäre dort rot).
-// GRÖSSE ≠ RANG (R10-NACHZUG, D14): der Gruss (ein <p>) ist optisch grösser als
-// diese <h1> — das ist zulässig, weil die Heading-Ordnung SEMANTISCH bleibt
-// (genau eine, sichtbare H1; der Gruss erzeugt keine zweite Überschrift und
-// keinen Sprung in der Heading-Liste, `e2e/a11y.e2e.ts` misst `heading-order`
-// am Baum, nicht an Schriftgrössen). Optische Grösse ist ein Darstellungsmittel
-// (§3), Heading-Rang ein Struktur-Merkmal — beides läuft hier bewusst
-// auseinander.
+// A-1-AUSNAHME (R3-α, 31.8.2026), fortgeschrieben mit D39: kein `SeitenTitel`.
+// Der Baustein trägt die Seiten-Titelgrösse (`text-h2 sm:text-h1`) und die
+// Pane-Kaskade; das Pult hat keine Titelzeile dieser Art — sein Titel IST die
+// Begrüssung selbst (bis D39 war es das kleine Titelblatt-Wort daneben, s.
+// oben). Eine <h1> bleibt es weiterhin (genau eine je Seite, SICHTBAR —
+// `e2e/a11y.e2e.ts` prüft `h1` auf Sichtbarkeit, eine `sr-only`-H1 wäre dort
+// rot); GRÖSSE UND RANG laufen jetzt bewusst ZUSAMMEN statt auseinander (die
+// frühere GRÖSSE-≠-RANG-Anmerkung ist mit der zweiten Zeile entfallen).
+//
+// GRÖSSE (D39, eine Typo-Stufe über dem R10-NACHZUG-Stand D14 — Skala aus
+// `tailwind.config.js`, kein neuer Wert): `text-h1 lg:text-display` — 32 px
+// @390, 36 px @1440 (zuvor 25.6/32 px). Im Pane misst `@3xl/pane` denselben
+// Wechsel an der Pane-Breite statt am Viewport (B-1, `PaneKontext.ts`).
+//
+// ABGRENZUNG NACH UNTEN (D39, F0.6): `border-b border-rule` — die 1-px-Kante
+// im Haus-Ton, NICHT `--rule-soft` (der ist für Zeilen im Satzspiegel reserviert,
+// hier grenzt die ganze erste Ebene des Pults gegen die Bereichs-Reihe ab) —
+// plus `pb-8`, das zusätzlich zum bestehenden `gap-y-9` des Pult-Rasters
+// (`Startseite.tsx`) einen sichtbar grösseren Abstand ergibt als zwischen den
+// übrigen Ebenen. Gilt ungestaffelt auch @390 (keine Breakpoint-Ausnahme).
 
 export function SuchBlock() {
-  const { gruss, wochentag, datum } = useHeute();
+  const { gruss, wochentag, datum, uhrzeit } = useHeute();
   const pk = usePaneKlasse();
   const navigate = useNavigate();
   const [params] = useSearchParams();
@@ -70,18 +90,26 @@ export function SuchBlock() {
 
   // Breiten-Deckel wie im Referenzbild (`.such{max-width:860px}`).
   return (
-    <div className="max-w-[54rem]">
-      <h1 className="font-sans text-xs text-ink-500">{SAMMLUNG_TITEL}</h1>
-      {/* Gruss und Datum kommen aus EINER Uhrzeit (`useHeute`); beide weichen
-          zwischen Build und Client ab (der Build backt einen Gruss und den
-          Build-Tag) und tragen darum ehrlich `suppressHydrationWarning`.
-          GRÖSSE (R10-NACHZUG, D14): `text-h2 lg:text-h1` — ~24 px @390 (h2,
-          25.6 px), ~32 px @1440 (h1, 32 px). Im Pane misst `@3xl/pane` denselben
-          Wechsel an der Pane-Breite statt am Viewport (B-1, `PaneKontext.ts`). */}
-      <p className={`mt-0.5 flex flex-wrap items-baseline gap-x-3 font-serif italic text-ink-900 ${pk('text-h2 lg:text-h1', 'text-h2 @3xl/pane:text-h1')}`}>
-        <span suppressHydrationWarning>{gruss}</span>
-        <span suppressHydrationWarning className="num font-sans not-italic text-xs text-ink-500">
-          {wochentag}, {datum}
+    <div className="max-w-[54rem] border-b border-rule pb-8">
+      {/* Gruss kommt aus EINER Uhrzeit (`useHeute`) und weicht zwischen Build
+          und Client ab (der Build backt einen Gruss) — trägt darum ehrlich
+          `suppressHydrationWarning`. */}
+      <h1 suppressHydrationWarning
+        className={`font-serif italic text-ink-900 ${pk('text-h1 lg:text-display', 'text-h1 @3xl/pane:text-display')}`}>
+        {gruss}
+      </h1>
+      {/* Wochentag/Datum/Uhrzeit — kleiner, EIGENE Zeile unter der Begrüssung
+          (D39). Die Uhrzeit ist `null` vor der Hydration (Prerender UND erster
+          Client-Render, `Begruessung.tsx`); der Platz dafür ist über
+          `visibility:hidden` an einem `00:00`-Platzhalter UNVERÄNDERT von
+          Anfang an reserviert (beide unter `.num` tabellarisch gleich breit),
+          statt erst beim Erscheinen der echten Zeit zu öffnen — kein CLS
+          (§15). Datum trägt ebenfalls `suppressHydrationWarning` (Build- vs.
+          Client-Tag). */}
+      <p className="num mt-1.5 font-sans text-xs text-ink-500">
+        <span suppressHydrationWarning>{wochentag}, {datum}</span>
+        <span suppressHydrationWarning style={{ visibility: uhrzeit ? 'visible' : 'hidden' }}>
+          {' '}· {uhrzeit ?? '00:00'}
         </span>
       </p>
     </div>
