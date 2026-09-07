@@ -107,8 +107,20 @@ test.describe('Kanton BS — Register-Facette und Reader', () => {
     const fehler = fehlerSammeln(page)
     await page.goto('/rechtsprechung/bs_appellationsgericht_AUS.2026.54')
     await expect(page.getByRole('heading', { level: 1, name: /AUS\.2026\.54/ })).toBeVisible()
-    // Breadcrumb-Ebene «Kanton BS» (Inhalts-Kopf).
-    await expect(page.getByText('Kanton BS', { exact: true }).first()).toBeVisible()
+    // §6.3-DEKLARATION (W2·24-DESIGN-IDENTITAET, Runde FC, 7.9.2026): hier stand
+    // `getByText('Kanton BS', { exact: true })` — die EBENEN-KRUME der Ortsleiste.
+    // Sie ist mit GA-1 ABSICHTLICH entfallen: `layout/BrotkrumeRegel.ts` lässt in
+    // der Einzelansicht nur noch die Sektions-Krume («Rechtsprechung») stehen,
+    // weil das Blatt Reiter und H1 ohnehin nennen (Messung dort im Wortlaut).
+    // Dieselbe Streichung ist am Gesetz-Leser bereits deklariert (D27,
+    // `leser-v3-kopfzeile.e2e.ts:397`) — die Regel ist jetzt EINE (§5).
+    // Die ZUSAGE des Falls bleibt unverändert: der Kopf sagt, WOHER der
+    // Entscheid stammt. Gemessen wird sie an der H1, die den kantonalen
+    // Spruchkörper wörtlich führt («Appellationsgericht BS AUS.2026.54 vom …»);
+    // wo die Zitierung den Gerichtsnamen NICHT trägt, hält ihn GA-2 in der
+    // Overline (`EntscheidLeser.tsx`) — die Herkunft steht also immer.
+    // Rot-Beweis und Nullprobe: `abnahme/design-identitaet/FC-RECHTSPRECHUNG.md`.
+    await expect(page.getByRole('heading', { level: 1, name: /Appellationsgericht BS/ })).toBeVisible()
     // §8-Ehrlichkeit: maschinell-Badge sichtbar.
     await expect(page.getByText('maschinell', { exact: true }).first()).toBeVisible()
     // Sprung-Navigation: «Erwägungen»-Chip führt zum Anker (Ziel existiert).
