@@ -5,7 +5,6 @@ import { labelMitBereich, artikelGanzAufgehoben } from '../../../lib/normtext/da
 import type { Fussnote } from '../../../lib/normtext/browse';
 import { NEUER_TAB } from '../../../lib/benennung';
 import { useKopieren } from '../../../components/useKopieren';
-import { NormChip } from '../../../components/vorlagen/NormChip';
 import type { LeitfallRef } from '../../../lib/rechtsprechung/norm-index';
 import type { MaterialBezug } from '../../../lib/normtext/werkzeuge';
 import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen';
@@ -17,26 +16,21 @@ import { fnTextMitLinks, baueZitat } from '../helpers';
 import { SUCH_META } from '../suchHighlight';
 import { zitatMitAusweis, heuteIso } from '../../../lib/format';
 import { schaetzeArtikelHoehe } from '../berechnungen';
-import { LeitfallZeile } from './ArtikelLeser.leitfaelle';
 import { fussnotenAnzeige, verteileFussnoten, sammleVerweise } from './ArtikelLeser.fussnoten';
-import { BezuegeZeile } from './BezuegeZeile';
 import { useSatzspiegel } from '../v3/satzspiegel';
 import type { ArtikelBezuege } from '../bezuegeLaden';
 import { urlMitHash } from '../../../lib/liveUrlSync';
 import { usePaneKontext } from '../../../components/layout/PaneKontext';
 import { werkzeugeAmArtikel } from '../randNotizWerkzeuge';
 import { HistSlot, RandTitel } from './ArtikelLeser.kopfteile';
-import { ArtikelBezuegeZone } from './ArtikelLeser.bezuegeZone';
-import type { Werkzeug } from '../../../lib/normtext/werkzeuge';
+import { ArtikelBezuegeFuss } from './ArtikelLeser.bezuegeFuss';
 
 // Ein Artikel im Lesefluss (Richtung A): zweispaltig wie die amtliche Druckfassung —
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-/** Geteilte leere Liste — spart je Artikel ohne Werkzeug-Kante eine Allokation. */
-const LEERE_WERKZEUGE: readonly Werkzeug[] = [];
 
-export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, bezuege, bezuegeImKopf, materialien, onBezuegeOeffnen, bezuegeLaedt, revision, historie, zaehler, istAnhang = false }: {
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, bezuege, bezuegeImFuss, materialien, onBezuegeOeffnen, bezuegeLaedt, revision, historie, zaehler, istAnhang = false }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; intern?: InternRefs;
   marg?: string[];
   /** G-HIST-UI: Fassungshistorie dieses Artikels aus dem erlass-lokalen Shard
@@ -77,21 +71,28 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
    *  nebeneinander, das wären zwei Wahrheiten am selben Artikel). */
   bezuege?: ArtikelBezuege;
   /**
-   * D30 · der Inhalt der AUFGEKLAPPTEN Bezüge-Zeile am Artikelkopf.
+   * D30 · der Inhalt der AUFGEKLAPPTEN Bezüge-Zeile. Sie hiess bis D33
+   * `bezuegeImFuss` — die Zeile stand damals unter der Artikelnummer; seit D34
+   * steht sie am Artikelfuss (Auftrag David 7.9.2026), und der Prop-Name folgt
+   * dem Ort.
    *
    * BEWUSST NICHT `bezuege` (Nullprobe 7.9.2026, `leser-v3-kontext-cls` (b)):
-   * `bezuege` speist AUCH den Artikelfuss der schmalen Form und der Suchsicht
-   * (`!kopfForm`, unten). Wer im V3-Leser `bezuege` setzt, bringt damit Pos. 12
-   * zurück — gemessen @390 an der StPO: das Öffnen des Panels lud den Shard, und
-   * die Fuss-Zeile wuchs an JEDEM Artikel in den Lesekörper hinein (Artikel-y
-   * 1385→1493, 1798→2013, 2461→2783). Genau das verbietet der CLS-Fall.
+   * `bezuege` speiste AUCH den unbedingten Artikelfuss der schmalen Form und
+   * der Suchsicht (`!kopfForm`). Wer im V3-Leser `bezuege` setzte, brachte
+   * damit Pos. 12 zurück — gemessen @390 an der StPO: das Öffnen des Panels lud
+   * den Shard, und die Fuss-Zeile wuchs an JEDEM Artikel in den Lesekörper
+   * hinein (Artikel-y 1385→1493, 1798→2013, 2461→2783). Genau das verbietet der
+   * CLS-Fall.
    *
-   * Zwei Props also, weil es zwei ORTE sind (§5 gilt für die Daten, nicht für
-   * den Prop-Namen): dieselbe `ArtikelBezuege`-Form, aber die eine landet nur
-   * innerhalb des `<details>`, das der Leser selbst geöffnet hat, und die
-   * andere unbedingt im Fluss. Die V3-Hülle setzt ausschliesslich die erste.
+   * DER BELEG BLEIBT STEHEN, DIE STELLE IST WEG: D34 hat den unbedingten
+   * Fuss-Zweig gelöscht — beide Props landen jetzt im selben `<details>`.
+   * Zwei Props bleiben es trotzdem, weil es zwei LADEVERTRÄGE sind: `bezuege`
+   * wird unbedingt gesetzt (Ist-Hülle, Tests, V1), diese hier erst, NACHDEM der
+   * Leser eine Zeile aufgeklappt hat. Genau diese Grenze bewacht die H3-Sonde
+   * in `src/tests/leser-v3-fundament.test.ts`; sie fiele mit einer
+   * zusammengelegten Prop ersatzlos weg (§6.7).
    */
-  bezuegeImKopf?: ArtikelBezuege;
+  bezuegeImFuss?: ArtikelBezuege;
   /** D30 (David 6.9.2026) · die Materialien DIESES Artikels, sobald der Leser
    *  die Bezüge-Zeile einmal aufgeklappt hat (`../artikelMaterialienLaden`).
    *  Bis dahin `undefined` — die Rubrik zeigt dann ihre gezählte Zahl aus der
@@ -265,9 +266,13 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // eigenen, schmalen Fläche und soll den Treffer zeigen, nicht seinen Apparat.
   const kopfForm = spiegel === 'breit' && !imTreffer;
   // «Rechnen» in der Bezüge-Zeile (seit W2·24-R6): statische Kantentabelle, kein
-  // Ladepfad — Herleitung in `randNotizWerkzeuge.ts`. Nur in der Breitform
-  // gefragt; in der Zeilenform bleibt der Artikel byte-gleich (§6).
-  const werkzeuge = kopfForm ? werkzeugeAmArtikel(erlass?.key, e.artikel) : LEERE_WERKZEUGE;
+  // Ladepfad — Herleitung in `randNotizWerkzeuge.ts`.
+  // D34: nicht mehr an `kopfForm` gebunden. Seit die Bezüge-Zeile in BEIDEN
+  // Formen am Artikelfuss steht, fragt auch die Zeilenform nach der Rubrik; die
+  // frühere Form-Weiche (samt der geteilten Leerliste `LEERE_WERKZEUGE`, die
+  // nur ihr Sonst-Zweig war) ist ersatzlos gefallen. Kein Ladepfad, kein Netz —
+  // ein Nachschlag in einer statischen Tabelle je Artikel (§15).
+  const werkzeuge = werkzeugeAmArtikel(erlass?.key, e.artikel);
   // Fassungsdatum in den Artikelkopf (Auftrag (a)): «Gilt seit …» steht klein
   // neben dem Randtitel, nicht mehr in einer eigenen Randspalte und nicht mehr
   // unten im Beiwerk.
@@ -499,20 +504,6 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             <div className="mt-0.5 text-xs italic leading-snug text-ink-500">{e.grundlage}</div>
           )}
         </div>
-        {/* ── (b) BREITFORM: die Bezüge als EINE Zeile unter dem Artikelkopf ──
-            Dieselben Blöcke, die bis R6 in der Randspalte standen — eingeklappt
-            eine Zeile mit Registerfarben-Marken, aufgeklappt der volle Apparat.
-            Markup und Rechnung stehen seit dem §6.6-Split (W2·24-F) in
-            `./ArtikelLeser.bezuegeZone`; die Herleitung ist wörtlich mit
-            umgezogen. Ausserhalb von `artOffen`, genau wie die Randspalte
-            vorher: der Apparat gehört zum Artikel, nicht zu seinem entfalteten
-            Wortlaut. */}
-        {kopfForm && (
-          <ArtikelBezuegeZone bezuege={bezuege} bezuegeImKopf={bezuegeImKopf}
-            leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
-            werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}
-            onOeffnen={onBezuegeOeffnen} laedt={bezuegeLaedt && !bezuege} />
-        )}
         {/* Rechte Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
             overflow-x-clip + min-w-0: bei geteiltem/schmalem Bildschirm darf der
             Artikel-Block (hängender Absatz-Einzug pl-9/-indent-9) NICHT über die
@@ -577,41 +568,26 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               klick-getrieben, liegt binnen 500 ms nach der Eingabe und ist damit per
               Definition kein unerwarteter Sprung. Zahlen im Vollzugsvermerk S2. */}
           <div data-beiwerk>
-          {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David).
-              R6b: in der Breitform steht dieser Block in der Bezüge-Zeile am
-              Artikelkopf (`kopfForm`) — NIE an beiden Orten; das wären zwei
-              Wahrheiten am selben Artikel (§5). */}
-          {/* S8: Verweis-Chips sind Wegweiser, kein Wortlaut — `data-such-meta`,
-              damit die Suche nach «Verweise» oder einer Chip-Beschriftung nicht
-              eine Fundstelle malt, die es im Gesetzestext nicht gibt (§4.4). */}
-          {!kopfForm && verweise.length > 0 && (
-            <div {...{ [SUCH_META]: '' }} className="mt-4 flex flex-wrap items-center gap-2">
-              <span className="lc-overline mr-1"><span className="lc-punkt" aria-hidden />Verweise</span>
-              {verweise.map((v) => <NormChip key={v} artikel={v} />)}
-            </div>
-          )}
-          {/* LEITFÄLLE (§11.2): Bundesgerichtsentscheide zu genau diesem Artikel, lazy
-              aus dem erlass-lokalen Shard. Verdrahtet das bisher tote proNormArtikel-
-              Modell (norm-index.ts) sichtbar — vom Artikel direkt zur Rechtsprechung.
+          {/* ── W2·24-D34 · WAS HIER NICHT MEHR STEHT ───────────────────────
+              Bis D33 trug das Beiwerk der ZEILENFORM einen ZWEITEN Artikelfuss:
+              eine offene Verweis-Chip-Reihe und daneben die unbedingte
+              Rechtsprechungs-Zeile (`BezuegeZeile`, sonst `LeitfallZeile`).
+              Derselbe Fachinhalt wie die Rubriken «Verweise» und «Entscheide»
+              der Breitform — nur in anderer Gestalt, an anderem Ort und aus
+              einer anderen Prop: zwei Wahrheiten am selben Artikel (§5).
 
-              W2·7-BEZUG/B4: der Reader liefert `bezuege` — die nach Instanz
-              gruppierte Auflistung aus dem Bezugs-Shard. Sie tritt AN DIE STELLE
-              der V1a-Zeile (Obermenge, §5): nie beide, sonst stünden dieselben
-              BGE zweimal am Artikel. Ist keine Facette aktiv, ist `bezuege`
-              undefined UND `leitfaelle` ungesetzt ⇒ unter dem Artikel steht
-              nichts (Vorgabe David 28.7.2026). */}
-          {/* S8: die Rechtsprechungs-Zeile am Artikelfuss ist Referenzschicht,
-              kein Normtext (§4.4) — sie zählt nicht zu den Fundstellen und
-              wird darum auch nicht markiert. */}
-          {!kopfForm && (
-          <div {...{ [SUCH_META]: '' }}>
-            {bezuege
-              ? <BezuegeZeile kanten={bezuege.kanten} gesamt={bezuege.gesamt}
-                  zeitAktiv={bezuege.zeitAktiv} kantonAktiv={bezuege.kantonAktiv}
-                  normZitat={zitat} revision={revision} />
-              : <LeitfallZeile refs={leitfaelle} normZitat={zitat} revision={revision} />}
-          </div>
-          )}
+              Beide Blöcke sind mit D34 ERSATZLOS gelöscht, nicht bewacht
+              (§17-Gegengewicht). Verweise, Entscheide, Materialien und Rechner
+              stehen in BEIDEN Formen im EINEN Bezüge-Fuss unter diesem Block
+              (`ArtikelBezuegeFuss`, ganz unten) — und erst auf Aufklappen.
+
+              NEBENWIRKUNG, ausdrücklich erwünscht: Pos. 12 kann es baulich
+              nicht mehr geben. Die gelöschte Zeile war die Stelle, an der der
+              eintreffende Bezugs-Shard @390 in den Lesekörper hineinwuchs
+              (gemessen an der StPO, Artikel-y 1385→1493→…; `leser-v3-kontext-
+              cls` (b)). Ein geschlossenes `<details>` legt seinen Inhalt nicht
+              ins Layout — die Zusage hängt jetzt an der Bauart, nicht mehr an
+              der Disziplin, eine Prop wegzulassen. */}
           {/* G-HIST-UI: «Gilt seit»-Badge + aufklappbare Fassungs-Timeline dieses
               Artikels (aus dem erlass-lokalen Historie-Shard, idle geladen). Am
               Artikel-Fuss wie Verweise/Leitfälle. §15.2: der Slot steht ab dem
@@ -745,6 +721,29 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
           </div>{/* /data-beiwerk */}
         </div>
         )}
+        {/* ═══ W2·24-D34 · DER BEZÜGE-FUSS ═══════════════════════════════════
+            Auftrag David 7.9.2026, wörtlich: «das mit den bezügen soll unten an
+            den artikel und nicht direkt nach der artikel nummer». Die Zeile
+            steht darum HIER: unter dem letzten Absatz und dem Fussnoten-Apparat,
+            vor dem nächsten Artikel. Eine feine Trennlinie darüber (`.lr7-bez`,
+            `--rule-soft`) sagt «gehört noch zu diesem Artikel, ist aber nicht
+            mehr sein Wortlaut» — eine Linie, keine Fläche (F0.6).
+
+            EIN Baustein für BEIDE Formen (§5). Bis D33 hatte die Breitform ihn
+            unter dem Artikelkopf und die Zeilenform einen eigenen, anders
+            gestalteten Fuss im Beiwerk; beide Stellen sind gelöscht, `kopfForm`
+            entscheidet über die Bezüge nichts mehr.
+
+            AUSSERHALB von `artOffen`, genau wie die Kopf-Variante vorher: der
+            Apparat gehört zum Artikel, nicht zu seinem entfalteten Wortlaut —
+            ein eingeklappter (typisch: aufgehobener) Artikel behält seine
+            Bezüge-Zeile, und sie steht dann direkt unter dem Kopf, weil es
+            dazwischen nichts gibt. Im Druck bleibt sie ausgeblendet
+            (`print:hidden` in `BezuegeKopf.tsx`). */}
+        <ArtikelBezuegeFuss bezuege={bezuege} bezuegeImFuss={bezuegeImFuss}
+          leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
+          werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}
+          onOeffnen={onBezuegeOeffnen} laedt={bezuegeLaedt && !bezuege} />
       </div>
     </article>
   );

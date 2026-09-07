@@ -1,5 +1,5 @@
 import {
-  pfadTeil, entscheidPfad, erlassVonPfad, verlaufLabel, katalogKurzform,
+  pfadTeil, entscheidPfad, erlassVonPfad, gesetzPfad, verlaufLabel, katalogKurzform,
   type VerlaufManifeste,
 } from './verlaufLabel';
 import { reiterKategorie, artikelLabelVonPfad } from './tabGruppen';
@@ -41,15 +41,6 @@ export interface TabEintrag {
    *  nachaktualisiert wird, verlöre sonst seinen Artikel, bis der Leser das
    *  erste Mal gescrollt hat. Er wird nie aus der Lesestellung nachgezogen. */
   wahl?: string;
-  /** ── D19 (David 6.9.2026: «mit plus einen neuen reiter erzeugen können») ──
-   *  Markiert den EINEN Browser-artigen «+»-Reiter: Pfad `/`, aber — anders
-   *  als die sonst reiterlose Startseite (D7-Abweichung unten) — ein
-   *  ausdrücklich angelegtes, noch UNGEFÜLLTES Dokument. `neuerLeererReiter`
-   *  legt höchstens einen gleichzeitig an; die erste Navigation/Suche
-   *  ERSETZT ihn (§5a Ziff. 3, über `ersetzeTab`) mit einem frischen Eintrag
-   *  OHNE dieses Feld — er ist dann kein leerer Reiter mehr, ganz ohne
-   *  Sonderfall an der Ersetzungsstelle. */
-  leer?: boolean;
 }
 
 // ─── D7 (David 6.9.2026: «achte darauf dass der reiter bei gesetz mitzählt») ─
@@ -67,15 +58,43 @@ export interface TabEintrag {
 // jedes andere Dokument — «Gesetze», «Rechtsprechung», «Materialien»,
 // «Rechner», «Vorlagen»; sie zählen in «N offen» und in Alt+Ziffer mit.
 //
-// ABWEICHUNG, ausdrücklich offengelegt (§7): Die STARTSEITE «/» erzeugt
-// weiterhin KEINEN Reiter. Sie ist kein Bestandteil der Sammlung, sondern ihr
-// Titelblatt: über die Marke von jeder Route aus einen Klick entfernt, ohne
-// eigenen Zustand, und ein Reiter «Sammlung» neben den fünf Bereichen wäre der
-// einzige, den man nie schliessen wollte. Eine Kurzform trägt sie trotzdem
-// (unten) — sie kann als Reiter EXISTIEREN, wenn jemand sie ausdrücklich
-// daneben öffnet (Pane, Ctrl-Klick, Prüfbefund R3-F7); nur angelegt wird sie
-// nicht von selbst. Ebenso unverändert ohne Reiter: Meta- und Infoseiten
-// (/ueber, /methodik, /einstellungen …).
+// ABWEICHUNG, ausdrücklich offengelegt (§7) — GALT BIS R14, 7.9.2026: Die
+// STARTSEITE «/» erzeugte KEINEN Reiter. Sie war kein Bestandteil der Sammlung,
+// sondern ihr Titelblatt: über die Marke von jeder Route aus einen Klick
+// entfernt, ohne eigenen Zustand, und ein Reiter «Sammlung» neben den fünf
+// Bereichen wäre der einzige, den man nie schliessen wollte. Eine Kurzform trug
+// sie trotzdem (unten) — sie konnte als Reiter EXISTIEREN, wenn jemand sie
+// ausdrücklich daneben öffnete (Pane, Ctrl-Klick, Prüfbefund R3-F7); nur
+// angelegt wurde sie nicht von selbst. Ebenso ohne Reiter: Meta- und
+// Infoseiten (/ueber, /methodik, /einstellungen …).
+//
+// ── R14 (Entscheid David 7.9.2026, Variante A) · DIE ABWEICHUNG IST AUFGEHOBEN
+//
+// Der Absatz darüber bleibt als DATIERTER BELEG stehen (§0 Ziff. 2b: Belege
+// altern nicht, sie werden ergänzt, nicht nachgeführt) — er beschreibt den
+// Stand bis `79023e630`. Aufgehoben ist er aus einem gemessenen Grund, nicht
+// aus Geschmack. Davids Wortlaut 7.9.2026: «irgendwie ist es weird wenn ich im
+// gesetz bin dann wieder startseite usw. ausserdem wenn alles zu ist und ich
+// plus klicke dann erscheint einfach neuer reiter.»
+//
+// GEMESSEN (R14-Prüfung am Stand `cfa8a9f81`): OR offen → Klick auf die Marke →
+// Klick auf ZGB ergab `tabs=[ZGB]` und den OR im Schliess-Ring. Der OR-Reiter
+// war weg, obwohl ihn niemand geschlossen hatte. Ursache war genau diese
+// Zweiteilung: weil «/» keinen Reiter trug, blieb der Ref des `TabTracker` auf
+// dem verlassenen Dokument stehen, und die nächste Navigation traf DESSEN
+// Reiter. Ebenfalls gemessen: bei 0 Reitern zeigte die App schon die Sammlung;
+// «+» legte nur eine Aufschrift über einen Zeichen für Zeichen identischen
+// Bildschirm (3777 == 3777 Zeichen).
+//
+// NEUE REGEL, in einem Satz: **Die Sammlung «/» ist ein gewöhnlicher Reiter und
+// zugleich die Neuer-Reiter-Seite.** Man steht immer in genau einem Reiter —
+// dieselbe Regel wie im Browser, wo die Neuer-Tab-Seite ein Tab ist. Was damit
+// ERSATZLOS entfällt (§17-Gegengewicht: vier Sonderfälle raus, kein fünfter
+// rein): `TabEintrag.leer`, `NEUER_REITER_NAME`, `neuerLeererReiter`,
+// `hatLeerenReiter` und der D19-Zweig in `components/TabTracker.tsx`.
+// Meta- und Infoseiten (/ueber, /methodik, /einstellungen, /kontakt) bleiben
+// unverändert ohne Reiter — sie sind kein Bestandteil der Sammlung, und dort
+// ist «kein Reiter» die wahre Auskunft, nicht eine Lücke.
 export const BEREICHS_UEBERSICHTEN = [
   '/gesetze', '/rechtsprechung', '/materialien', '/rechner', '/vorlagen',
 ] as const;
@@ -95,7 +114,10 @@ export const BEREICHS_UEBERSICHTEN = [
  *  Detailseiten erst recht. */
 export function istReiterPfad(path: string): boolean {
   const p = path.split('#')[0].split('?')[0];
-  return /^\/(rechner|vorlagen|gesetze|rechtsprechung|materialien)\/.+/.test(p)
+  // R14: die Sammlung zuerst — sie ist der Reiter, in dem man landet, wenn
+  // sonst keiner offen ist (Neuer-Reiter-Seite, Herleitung im Block oben).
+  return p === '/'
+    || /^\/(rechner|vorlagen|gesetze|rechtsprechung|materialien)\/.+/.test(p)
     || (BEREICHS_UEBERSICHTEN as readonly string[]).includes(p);
 }
 
@@ -197,11 +219,10 @@ function zerlege(zitierung: string): { kopf: string; kern: string } {
  *  Der Einzeiler (`reiterKurzformText`) bleibt Wort für Wort derselbe wie vor
  *  der Trennung — «Art. 336c OR», «Art. 266g OR (2)». */
 function basisKurzform(t: TabEintrag, m: VerlaufManifeste): KurzformTeile {
-  // D19: der leere Reiter zeigt '/', ist aber KEINE Startseite, sondern ein
-  // eigenes, noch ungefülltes Dokument — er bekommt NICHT `reiterKurzform('/')`
-  // («Sammlung»), sondern seinen eigenen Namen. Erste Prüfung, vor jeder
-  // Pfad-Auflösung.
-  if (t.leer) return { kopf: '', kern: NEUER_REITER_NAME, stelle: null };
+  // R14 (7.9.2026): hier stand der D19-Zweig für den leeren «+»-Reiter
+  // («Neuer Reiter» statt «Sammlung»). Er ist ersatzlos weg — es gibt keinen
+  // leeren Reiter mehr, «/» ist ein Pfad wie jeder andere und holt seine
+  // Kurzform aus derselben Tabelle wie die fünf Übersichten.
   // R3-F7 (Prüfbefund 6.9.2026): Übersichts- und Startseiten-Routen tragen ihre
   // Kurzform aus `lib/tabs` («Gesetze», «Sammlung») statt des SEO-Titels, den
   // `labelAusMeta` liefert («Schweizer Recht an einem Ort: …»). Erst seit D7
@@ -210,7 +231,33 @@ function basisKurzform(t: TabEintrag, m: VerlaufManifeste): KurzformTeile {
   const fest = reiterKurzform(t.path);
   if (fest) return { kopf: '', kern: fest, stelle: null };
   const kat = reiterKategorie(t.path);
-  const kuerzel = kat === 'gesetze' ? erlassVonPfad(t.path, m)?.kuerzel : null;
+  // ── R13B (Prüfbefund PR #743 §8 b / Fixer D34, 7.9.2026) · DIE VORLÄUFIGE
+  //    AUFSCHRIFT IST DER SCHLÜSSEL DER ADRESSE, NICHT EINE AUFFORDERUNG ─────
+  //  Das Browse-Manifest kommt lazy (`Reiterleiste.tsx`, `ladeBrowseManifest`);
+  //  bis dahin lieferte `erlassVonPfad` null, der Reiter fiel auf `verlaufLabel`
+  //  zurück und trug «Gesetz öffnen». GEMESSEN am Stand `cfa8a9f81` (gebautes
+  //  dist/, Preview 4429, Chromium @1280, `/gesetze/bund/ZGB`): der Reiter stand
+  //  bei t=243 ms mit 131 px da und sprang bei t=260 ms auf 80 px, sobald das
+  //  Manifest eintraf — 51 px, die das Schliess-✕ (127 → 69) und jeden Reiter
+  //  rechts davon mitnahmen (Layout-Shift 0.000046 bei einem, 0.000521 beim
+  //  zweiten Reiter, input-frei).
+  //  Reserviert werden kann diese Breite nicht: WIE breit die Aufschrift wird,
+  //  weiss erst das Manifest. Also darf die vorläufige Aufschrift nicht breiter
+  //  sein als die endgültige — und der Schlüssel der ADRESSE ist genau das:
+  //  keine Schätzung (§2/§7), sondern die Zeichenkette, die der Nutzer
+  //  angeklickt hat und die in der Adresszeile steht.
+  //  GEMESSEN gegen `dist/normtext/register.json` (1'576 Erlasse): 123 tragen
+  //  Schlüssel und Kürzel identisch, 212 in gleicher LÄNGE; die grosse Mehrheit
+  //  der Bundes-Abweichungen ist reine Schreibung (`HREGV`→`HRegV`,
+  //  `FUSG`→`FusG`) und damit im Bereich weniger Pixel. Kantonale Erlasse
+  //  (`AG-291.150`→`Anwaltstarif`) weichen weiter ab — auch dort ist der
+  //  Schlüssel näher an der Endbreite als die 131-px-Aufforderung, und er nennt
+  //  das Dokument statt es zu verschweigen (§8).
+  //  NUR solange das Manifest FEHLT. Ist es da und kennt den Erlass nicht,
+  //  bleibt es bei «Gesetz nicht gefunden» (`verlaufLabel`, G23) — ein Irrtum
+  //  wird ausgewiesen, nicht mit dem Rohschlüssel überdeckt.
+  const vorlaeufig = kat === 'gesetze' && !m.gesetze ? gesetzPfad(t.path)?.key ?? null : null;
+  const kuerzel = kat === 'gesetze' ? erlassVonPfad(t.path, m)?.kuerzel ?? vorlaeufig : null;
   if (kuerzel) {
     // Gesetze: EIN kurzer Block («Art. 336c OR») — hier gibt es nichts, was
     // gegen die Kürzung geschützt werden müsste, der ganze Text ist die Marke.
@@ -308,7 +355,6 @@ export function reiterKurzformText(t: TabEintrag, m: VerlaufManifeste): string {
  *  `datumUnbekannt` (Quelle ohne Entscheiddatum) bekommt darum kein Datum.
  */
 export function reiterTitel(t: TabEintrag, m: VerlaufManifeste): string {
-  if (t.leer) return NEUER_REITER_NAME;
   const voll = verlaufLabel(t.path, m);
   const teile: (string | null)[] = [voll];
 
@@ -357,17 +403,38 @@ export function tabSchluessel(path: string): string {
  *  (useTabs → ReiterUebersicht/TabPanel) im selben Browser-Tab synchron halten. */
 export const TABS_EVENT = 'lexmetrik:tabs';
 
+/** ── R14 (7.9.2026) · DER GESPEICHERTE «LEERE REITER» WIRD ZUR SAMMLUNG ────
+ *  Bis R14 trug der eine «+»-Reiter das Feld `leer: true` (D19). Wer die App
+ *  mit einem solchen Eintrag im Speicher neu lädt, bekommt jetzt einen
+ *  gewöhnlichen Reiter auf «/» — dieselbe Adresse, dieselbe Position, nur ohne
+ *  den Sonderfall. Rein deterministisch (§2), kein Zeitstempel: ein
+ *  Feld-Filter, sonst nichts. Fällt dabei ein zweiter Eintrag mit derselben
+ *  Reiter-Identität an (eine bereits offene Sammlung neben dem leeren Reiter,
+ *  über Pane/Ctrl-Klick möglich), bleibt der ERSTE stehen — die Reihenfolge
+ *  ist die des Speichers, und zwei Reiter mit identischem Schlüssel wären für
+ *  jede Aktion mehrdeutig (`tabSchluessel` ist die Identität, §5). */
 export function ladeTabs(): TabEintrag[] {
   try {
     const roh = localStorage.getItem(KEY);
     const arr = roh ? JSON.parse(roh) : [];
     if (!Array.isArray(arr)) return [];
+    const gesehen = new Set<string>();
     return arr
-      .filter((e): e is TabEintrag =>
+      .filter((e): e is TabEintrag & { leer?: unknown } =>
         e && typeof e.path === 'string' &&
         (e.label === undefined || typeof e.label === 'string') &&
-        (e.wahl === undefined || typeof e.wahl === 'string') &&
-        (e.leer === undefined || typeof e.leer === 'boolean'))
+        (e.wahl === undefined || typeof e.wahl === 'string'))
+      .map(({ path, label, wahl }): TabEintrag => ({
+        path,
+        ...(label ? { label } : {}),
+        ...(wahl ? { wahl } : {}),
+      }))
+      .filter((e) => {
+        const k = tabSchluessel(e.path);
+        if (gesehen.has(k)) return false;
+        gesehen.add(k);
+        return true;
+      })
       .slice(0, MAX);
   } catch {
     return [];
@@ -447,8 +514,20 @@ export function merkeTab(path: string, label?: string): void {
  *     → anhängen wie bisher.
  *
  *  `altPath` ist die Adresse, aus der die Navigation kam; `null` heisst «es gab
- *  keinen». Rein deterministisch (§2), kein Zeitstempel, kein DOM. */
-export function ersetzeTab(altPath: string | null | undefined, neuPath: string, label?: string): void {
+ *  keinen». Rein deterministisch (§2), kein Zeitstempel, kein DOM.
+ *
+ *  ── R14 (7.9.2026) · BLÄTTERN IST KEIN VERLUST ────────────────────────────
+ *  `ringt` sagt, ob der ersetzte Reiter in den «zuletzt geschlossen»-Ring
+ *  gehört. GEMESSEN am Vorstand `79023e630` (`/gesetze` → OR → Zurück →
+ *  Vorwärts): der Ring stand auf `[/gesetze, /gesetze/bund/OR, /gesetze]` —
+ *  «/gesetze» doppelt, obwohl niemand etwas geschlossen hatte. Zurück und
+ *  Vorwärts bewegen die History INNERHALB des Reiters; dabei geht nichts
+ *  verloren, was man wiederherstellen müsste, und Alt+⇧+T verlor genau die
+ *  Verlässlichkeit, für die R11-M3 es eingeführt hat. Der Aufrufer
+ *  (`components/TabTracker.tsx`) kennt die Richtung deterministisch aus
+ *  `useNavigationType()`; der Default `true` lässt jede andere Aufrufstelle
+ *  (Panes in `layout/Shell.tsx`) bit-gleich wie vorher. */
+export function ersetzeTab(altPath: string | null | undefined, neuPath: string, label?: string, ringt = true): void {
   const teilNeu = tabSchluessel(neuPath);
   const bisher = ladeTabs();
   if (bisher.some((t) => tabSchluessel(t.path) === teilNeu)) { merkeTab(neuPath, label); return; }
@@ -458,7 +537,7 @@ export function ersetzeTab(altPath: string | null | undefined, neuPath: string, 
   // M3: der ERSETZTE Reiter ist so verloren wie ein geschlossener — er kommt
   // darum in denselben Ring. Genau hier ist der Verlust häufiger als im
   // Browser, weil §5a Ziff. 3 das Ersetzen zum Normalfall macht.
-  merkeGeschlossen([{ eintrag: bisher[idxAlt], index: idxAlt }]);
+  if (ringt) merkeGeschlossen([{ eintrag: bisher[idxAlt], index: idxAlt }]);
   // KEIN `alt`-Vorzustand: der Reiter zeigt jetzt ein ANDERES Dokument — Label,
   // Lesestellung und gewählter Anker des alten gehören nicht dorthin.
   naechste[idxAlt] = eintragAus(neuPath, label);
@@ -585,11 +664,13 @@ function schreibeGeschlossene(ring: GeschlossenerReiter[]): void {
 }
 
 /** Legt geschlossene/ersetzte Reiter hinten in den Ring (jüngster zuletzt).
- *  Der leere «+»-Reiter kommt NICHT hinein: er trägt kein Dokument, seine
+ *  Die SAMMLUNG kommt NICHT hinein: sie trägt kein Dokument, ihre
  *  «Wiederherstellung» wäre ein Klick auf «+» (§8 — nichts versprechen, was
- *  keinen Wert hat). */
+ *  keinen Wert hat). Bis R14 stand hier dieselbe Regel für den leeren
+ *  «+»-Reiter (`!eintrag.leer`); seit die Sammlung selbst der Reiter ist, ist
+ *  ihr PFAD das Merkmal — der Sonderfall im Datenmodell entfällt. */
 function merkeGeschlossen(neue: GeschlossenerReiter[]): void {
-  const echte = neue.filter(({ eintrag }) => !eintrag.leer);
+  const echte = neue.filter(({ eintrag }) => pfadTeil(eintrag.path) !== '/');
   if (echte.length === 0) return;
   schreibeGeschlossene([...ladeGeschlossene(), ...echte]);
 }
@@ -649,36 +730,4 @@ export function aktualisiereTabArtikel(path: string): void {
   const naechste = [...bisher];
   naechste[idx] = { ...bisher[idx], path };
   schreibe(naechste);
-}
-
-// ─── D19 (David 6.9.2026: «in der tab zeile oben soll man mit plus einen
-//     neuen reiter erzeugen können») · DER LEERE REITER ────────────────────
-//
-// Ein Browser-«+»: legt einen NEUEN, leeren Reiter an, der bis zur ersten
-// Navigation/Suche die Startseite zeigt (§5a Ziff. 3 «Navigation ersetzt den
-// aktiven Reiter» übernimmt das Füllen unverändert — `TabTracker.tsx` muss nur
-// wissen, dass der leere Reiter der AKTIVE ist, s. dort). Höchstens EIN
-// leerer Reiter gleichzeitig: ein zweiter Klick auf «+» aktiviert den
-// bestehenden, statt einen zweiten anzulegen — sonst häufen sich leere Reiter
-// an, genau der «Reiter-Wildwuchs», den §5a Ziff. 3 verhindern sollte.
-//
-// Kanonische Anzeige-Bezeichnung, EIN Ort (§5): `Reiterleiste.kurzform` und
-// `TabPanel.zeile` lesen von hier statt den String je einmal zu tragen.
-export const NEUER_REITER_NAME = 'Neuer Reiter';
-
-/** Legt den einen leeren Reiter an (Pfad `/`, `leer: true`) — oder tut nichts,
- *  wenn schon einer existiert. Der Aufrufer navigiert danach auf `/`; das
- *  Navigieren dorthin ist so oder so richtig, ob neu angelegt oder schon da. */
-export function neuerLeererReiter(): void {
-  const bisher = ladeTabs();
-  if (bisher.some((t) => t.leer)) return;
-  schreibe([...bisher, { path: '/', leer: true }].slice(-MAX));
-}
-
-/** true, wenn GENAU der leere Reiter (s.o.) gerade existiert. `TabTracker`
- *  braucht das: Pfad `/` erzeugt sonst KEINEN Reiter (D7-Abweichung oben) und
- *  würde ohne diese Ausnahme übersprungen — die nächste Navigation ersetzte
- *  dann nicht ihn, sondern den davor aktiven Reiter (oder häufte an). */
-export function hatLeerenReiter(): boolean {
-  return ladeTabs().some((t) => t.leer === true);
 }

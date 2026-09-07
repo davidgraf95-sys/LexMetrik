@@ -41,10 +41,6 @@ async function ansichtAuf(page: Page, w: number, h: number): Promise<void> {
 /** Alle Zeilen des Menüs — Schalter, Knopfzeilen UND Reglerzeile. */
 const ZEILEN = '[data-v3-ansicht-panel] .lc-menu-zeile, [data-v3-ansicht-panel] .lc-menu-regler'
 
-/** Alle Zustands-Bedienungen des Menüs — Checkbox UND Radio-Stellungen (D35-F3). */
-const SCHALTER = '[data-v3-ansicht-panel] [role="menuitemcheckbox"], '
-  + '[data-v3-ansicht-panel] [role="menuitemradio"]'
-
 test.describe('D35-F4 — jede Menüzeile ist gleich hoch', () => {
   for (const [w, h] of [[1440, 900], [390, 844]] as const) {
     test(`@${w}: alle Zeilen ±1 px gleich`, async ({ page }) => {
@@ -63,16 +59,12 @@ test.describe('D35-F4 — jede Menüzeile ist gleich hoch', () => {
 test.describe('D35-F4 — der Aus-Zustand ist eine Form, keine Tintenstufe', () => {
   test('@1440: jeder Schalter zeigt seine Marke in BEIDEN Stellungen', async ({ page }) => {
     await ansichtAuf(page, 1440, 900)
-    // D35-F3 (§6.3): das Menü führt seit dem Entscheid vom 7.9.2026 eine
-    // Checkbox UND drei Radios. Der geprüfte Sachverhalt ist unverändert —
-    // jede Marke steht in BEIDEN Stellungen da, Kästchen wie Kreis.
-    const marken = async () => page.locator(SCHALTER).evaluateAll(
+    const marken = async () => page.locator('[data-v3-ansicht-panel] [role="menuitemcheckbox"]').evaluateAll(
       (els) => els.map((e) => {
         const m = e.querySelector<HTMLElement>('[data-menu-marke]')
         const r = m?.getBoundingClientRect()
         return {
           an: e.getAttribute('aria-checked'),
-          rolle: e.getAttribute('role'),
           da: !!m,
           b: Math.round(r?.width ?? 0),
           hh: Math.round(r?.height ?? 0),
@@ -90,8 +82,6 @@ test.describe('D35-F4 — der Aus-Zustand ist eine Form, keine Tintenstufe', () 
     }
     // Umlegen — die Form bleibt, nur ihre Füllung wechselt. Genau das war der
     // Befund: vorher verschwand im Aus-Zustand ALLES ausser der Tintenstufe.
-    // Umgelegt wird eine CHECKBOX: eine Radio-Stellung, die schon steht,
-    // wechselt beim Klick nicht (und das ist ihre Zusage, nicht ein Fehler).
     const erster = page.locator('[data-v3-ansicht-panel] [role="menuitemcheckbox"]').first()
     const stand = await erster.getAttribute('aria-checked')
     await erster.click()
@@ -101,8 +91,7 @@ test.describe('D35-F4 — der Aus-Zustand ist eine Form, keine Tintenstufe', () 
       expect(m.da, 'Marke auch nach dem Umlegen').toBe(true)
       expect(m.b).toBeGreaterThanOrEqual(10)
     }
-    const iCheckbox = vorher.findIndex((m) => m.rolle === 'menuitemcheckbox')
-    expect(nachher[iCheckbox].an).not.toBe(vorher[iCheckbox].an)
+    expect(nachher[0].an).not.toBe(vorher[0].an)
   })
 })
 
@@ -166,7 +155,7 @@ test.describe('D35-F4 — a11y des aufgezogenen Menüs', () => {
     await ansichtAuf(page, 1440, 900)
     const panel = page.locator('[data-v3-ansicht-menue]')
     await expect(panel).toHaveAttribute('role', 'menu')
-    expect(await page.locator(SCHALTER).count()).toBeGreaterThanOrEqual(2)
+    expect(await page.locator('[role="menuitemcheckbox"]').count()).toBeGreaterThanOrEqual(2)
     await page.keyboard.press('ArrowDown')
     const fokus1 = await page.evaluate(() => document.activeElement?.textContent?.trim() ?? '')
     await page.keyboard.press('ArrowDown')

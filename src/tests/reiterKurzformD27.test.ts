@@ -95,7 +95,10 @@ describe('D27 — die Breite der Stelle ist reserviert, nicht geraten', () => {
     for (const pfad of ['/rechner/tagerechner', '/vorlagen/kuendigung', '/gesetze', '/']) {
       expect(reiterKurzformTeile(t({ path: pfad }), m).stelle, pfad).toBeNull();
     }
-    expect(reiterKurzformTeile(t({ path: '/', leer: true }), m).stelle).toBeNull();
+    // DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, 7.9.2026: hier stand
+    // `t({ path: '/', leer: true })` — der leere «+»-Reiter (D19). Die Eingabe
+    // existiert nicht mehr; die Sammlung «/» steht bereits in der Schleife
+    // darüber und trägt dieselbe Zusage (nie eine Lesestellung).
   });
 
   it('der Einzeiler ist derselbe wie vor der Zerlegung in drei Teile', () => {
