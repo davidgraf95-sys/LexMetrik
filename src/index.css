@@ -730,7 +730,7 @@
      (930 KB Normtext) nach oben; das ist der ganze Sprung.
      GEGENPROBE (7.9.2026, Playwright 412x823, Drossel 4x + langsames 4G):
      mit woff2 CLS 0.1224 mit einem Ereignis 0.05502 bei t=2292 ms — mit
-     `route('**/*.woff2', abort)` CLS 0.0674 und dieses Ereignis FEHLT. Der
+     abgebrochenen woff2-Antworten CLS 0.0674 und dieses Ereignis FEHLT. Der
      Webfont-Swap war der Sprung, nicht der Erlass.
 
      DER FIX IST DIE ABWESENHEIT EINER LADBAREN SCHRIFT: die Insel bekommt
