@@ -74,6 +74,34 @@ export async function geometrieScan(page: Page): Promise<RohFund[]> {
       return false
     }
 
+    /** VOLLE BREITE PER NEGATIVEM RAND ist Absicht, kein Abschnitt.
+     *  Sticky-Koepfe (Leser `-mx-1`, Entscheid `-mx-5 sm:-mx-6`) ziehen sich
+     *  bewusst in das Polster ihres Elternteils, damit ihre Flaeche bis an
+     *  dessen Kante reicht. Jeder Vorfahre meldet dann `scrollWidth >
+     *  clientWidth`, obwohl NICHTS verdeckt ist: keiner von ihnen klippt
+     *  (`overflow: visible`), der Inhalt wird vollstaendig gezeichnet — nur
+     *  ausserhalb der eigenen Kastenkante.
+     *  Die Bluter werden EINMAL vorab gesammelt (ein Knoten kann tief im
+     *  Teilbaum liegen, nicht nur als direktes Kind — genau daran ging die
+     *  erste Fassung dieser Regel vorbei: 72 `div.lc-route`-Funde blieben
+     *  stehen, weil der blutende Kopf zwei Ebenen tiefer sass). */
+    const bluter: { el: Element; breite: number }[] = []
+    for (const kandidat of document.querySelectorAll('body *')) {
+      const kcs = getComputedStyle(kandidat)
+      const links = parseFloat(kcs.marginLeft) || 0
+      const rechts = parseFloat(kcs.marginRight) || 0
+      if (links < 0 || rechts < 0) {
+        bluter.push({ el: kandidat, breite: Math.max(links < 0 ? -links : 0, rechts < 0 ? -rechts : 0) })
+      }
+    }
+
+    /** Groesste Blutung IM TEILBAUM von `el` (inkl. el selbst), in px. */
+    function blutungsBreite(el: Element): number {
+      let max = 0
+      for (const b of bluter) if (el.contains(b.el)) max = Math.max(max, b.breite)
+      return max
+    }
+
     function hatTitleAmVorfahren(el: Element): boolean {
       let a: Element | null = el
       while (a && a !== document.documentElement) {
@@ -122,14 +150,33 @@ export async function geometrieScan(page: Page): Promise<RohFund[]> {
       // benannte, wiederherstellbare Kappung ist ausgenommen; die Rot-Probe im
       // Protokoll R8-ABSCHNITT.md zeigt beide Kategorien weiterhin rot.
       const htmlEl = el as HTMLElement
-      if (!gekapptMitTitle && htmlEl.clientWidth > 4 && htmlEl.scrollWidth > htmlEl.clientWidth + tol) {
+      const ueberschuss = htmlEl.scrollWidth - htmlEl.clientWidth
+      // NACHGEZOGEN (R8-Fixer-Lauf 7.9.2026) · GEWOLLTE VOLLE BREITE IST KEIN
+      // ABSCHNITT: 72 der 170 verbliebenen Funde waren `div.lc-route` auf den
+      // sechs Leser-/Entscheid-Routen ueber ALLE Viewports — Ursache je ein
+      // sticky Kopf mit `-mx-1` (Leser, +4 px) bzw. `-mx-5 sm:-mx-6` (Entscheid,
+      // +24 px). Der Ueberschuss ist dort exakt der negative Rand, das Element
+      // klippt nicht, und der Inhalt landet im Polster des Elternteils — es ist
+      // nichts verdeckt und nichts unerreichbar.
+      // KATEGORIE c BLEIBT DER WAECHTER (§6.7): wuerde die Blutung wirklich aus
+      // dem Fenster ragen, meldet c sie unveraendert (`c-verlaesst-viewport`,
+      // 8-px-Toleranz) — die Ausnahme hier deckt nur den Fall, in dem der
+      // Ueberschuss die Blutung NICHT uebersteigt. Ein groesserer Ueberlauf am
+      // selben Knoten schlaegt weiterhin an.
+      const blutung = blutungsBreite(el)
+      if (!gekapptMitTitle && ueberschuss > blutung && htmlEl.clientWidth > 4 && htmlEl.scrollWidth > htmlEl.clientWidth + tol) {
         if (!(cs.overflowX === 'auto' || cs.overflowX === 'scroll') || !el.classList.contains('lc-scrollrand-x')) {
           if (!inAffordanziertemScroller(el)) {
             // Kein Kind eines bereits gemeldeten Vorfahren-Überläufers doppelt melden.
-            const elternUeberlauf = el.parentElement
-              && (el.parentElement as HTMLElement).clientWidth > 4
-              && (el.parentElement as HTMLElement).scrollWidth > (el.parentElement as HTMLElement).clientWidth + tol
-              && !inAffordanziertemScroller(el.parentElement)
+            // Der Elternteil unterdrueckt das Kind nur, wenn er SELBST gemeldet
+            // wuerde — sonst verschluckte eine blosse Blutung (s. o.) den echten
+            // Fund darunter.
+            const elternteil = el.parentElement as HTMLElement | null
+            const elternUeberlauf = elternteil
+              && elternteil.clientWidth > 4
+              && elternteil.scrollWidth > elternteil.clientWidth + tol
+              && (elternteil.scrollWidth - elternteil.clientWidth) > blutungsBreite(elternteil)
+              && !inAffordanziertemScroller(elternteil)
             if (!elternUeberlauf) {
               funde.push({
                 kategorie: 'a-ueberlauf-ohne-scroller',
