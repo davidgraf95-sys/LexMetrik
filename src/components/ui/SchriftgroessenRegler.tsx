@@ -47,9 +47,29 @@ export function SchriftgroessenRegler({
   kleinerAttrs?: KnopfExtra;
   groesserAttrs?: KnopfExtra;
 }) {
-  const knopf = 'rounded-md px-2.5 py-1 text-body-s font-medium text-ink-600 transition-colors hover:text-ink-900 disabled:pointer-events-none disabled:opacity-40';
+  // ── D35-F4 (7.9.2026) · DER REGLER IST EINE ZEILE, KEIN KASTEN ────────────
+  // BEFUND, gemessen im Ansicht-Menü des Lesers: «A− 108 % A+» sass in einem
+  // 135 × 35 px grossen Kasten mit eigener Kante UND eigener Fläche
+  // (`rounded-lg border border-line bg-surface`) — eine Pille INNERHALB einer
+  // Menüzeile, die selbst schon auf Papier liegt. Das ist zweimal dasselbe
+  // gesagt und verstösst gegen F0.6 («Linien statt Flächen») und F0.9: die
+  // Füllung war `--surface`, also 2/255 gegen `--paper` — keine Fläche,
+  // sondern eine Behauptung (dasselbe Argument, mit dem L5 die
+  // `.lc-btn-mini`-Ruhefüllung und U2 die `.lc-notice`-Füllung gestrichen hat).
+  // Und der Kasten war es auch, der die Reglerzeile auf 52 px trieb, während
+  // ihre Nachbarn 38 px massen.
+  // JETZT: die Knöpfe sind Textknöpfe (`.lc-btn-mini` — das Haus-Rezept für
+  // eine Mini-Aktion, Haarlinie statt Fläche, `--tap-ziel` als Untergrenze),
+  // die Klammer um sie trägt nichts mehr als den Abstand. Funktion,
+  // Beschriftungen, Titel, `aria-live` und die Datenattribute der Aufrufer
+  // sind Zeile für Zeile unberührt.
+  // ZWEITER KONSUMENT, offengelegt: `pages/Einstellungen.tsx` («Ganze Seite»)
+  // zieht denselben Baustein und wird damit mitgeändert — genau der Zweck des
+  // gemeinsamen Rezepts (§5). Zwei Anatomien für dasselbe Knopf-Paar wären der
+  // Befund, den C1 hier abgeräumt hat.
+  const knopf = 'lc-btn-mini text-body-s font-medium text-ink-600 hover:text-ink-900 disabled:pointer-events-none disabled:opacity-40';
   return (
-    <span className="inline-flex items-center gap-0.5 rounded-lg border border-line bg-surface p-0.5">
+    <span className="inline-flex items-center gap-1">
       <button
         type="button"
         aria-label={kleinerLabel}

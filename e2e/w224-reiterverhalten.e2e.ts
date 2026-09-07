@@ -170,10 +170,17 @@ test.describe('Arbeitsleiste — eine Navigation, ein Reiter', () => {
     // §5a Ziff. 2: die Beschriftung ist die Kurzform, NICHT der SEO-Titel
     // («Schweizer Recht an einem Ort: …», Prüfbefund R3-F7).
     expect((await beschriftungen(page))[0]).toBe('Gesetze')
-    // Die Startseite bleibt bewusst ohne Reiter (Begründung an `istReiterPfad`).
+    // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ────
+    // Alter Wortlaut: «Die Startseite bleibt bewusst ohne Reiter (Begründung an
+    // `istReiterPfad`)» mit `toEqual(['/gesetze'])` nach dem Klick auf die
+    // Marke. Seit R14 ist die Sammlung ein Reiter: der Klick auf die Marke
+    // AKTIVIERT sie und lässt die Übersicht stehen, statt sie zu überschreiben
+    // — genau der Verlust, den David 7.9.2026 als «weird» gemeldet hat. Die
+    // D7-Zusage dieses Falls (die Übersicht /gesetze ist ein Reiter «Gesetze»
+    // und zählt mit) ist unberührt.
     await page.locator('header.sticky a[aria-label^="LexMetrik"]').first().click()
     await expect(page).toHaveURL(/\/$/, { timeout: 20_000 })
-    expect(await identitaeten(page)).toEqual(['/gesetze'])
+    await expect.poll(() => identitaeten(page), { timeout: 10_000 }).toEqual(['/gesetze', '/'])
   })
 
   test('(b) der Wechsel auf einen offenen Reiter wirft den aktiven NICHT weg', async ({ page }) => {

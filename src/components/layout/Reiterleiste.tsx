@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useTabs } from './useTabs';
 import {
   schliesseTab, leereTabs, ordneTabsUm, tabSchluessel, type TabEintrag,
-  neuerLeererReiter, schliesseAndere, schliesseRechtsVon,
+  schliesseAndere, schliesseRechtsVon,
   stelleLetztenWiederHer, letzterGeschlossener, naechsteInstanz, merkeTab,
   // ── R3 (Prüfbefund R11, 6.9.2026) · EINE KURZFORM, EIN TITEL (§5) ────────
   // Beide Ableitungen wohnten bis hierher IN dieser Datei — das Überlauf-Blatt
@@ -162,6 +162,16 @@ export function Reiterleiste({ paneSchluessel = [] }: {
   const sichtbar = ordnung.slice(start, start + anzahl);
   const versteckt = [...ordnung.slice(0, start), ...ordnung.slice(start + anzahl)];
 
+  // ── R14 (Entscheid David 7.9.2026) · DIE LEISTE STEHT NIE LEER ────────────
+  //
+  // GEMESSEN am Vorstand `79023e630`: nach dem letzten ✕ standen 0 Reiter, ein
+  // leerer 34-px-Streifen und die Sammlung als Inhalt OHNE Reiter — der
+  // Zustand «App offen, kein Tab aktiv», den es im Browser nicht gibt. Seit
+  // R14 tritt die Sammlung an die Stelle des letzten Reiters: EIN Zug, kein
+  // Zwischenbild mit 0 Reitern (`merkeTab` VOR `navigate`, sonst sähe die
+  // Leiste den Leerzustand für einen Frame).
+  const zurSammlung = () => { merkeTab('/'); navigate('/'); };
+
   const schliessen = (path: string) => {
     // M1: steht dieser Reiter gerade in einem zweiten Fenster, geht das Fenster
     // mit — sonst zeigte es weiter ein Dokument, das die Leiste nicht mehr
@@ -172,19 +182,22 @@ export function Reiterleiste({ paneSchluessel = [] }: {
       const idx = ordnung.findIndex((t) => tabSchluessel(t.path) === teil);
       const nachbar = ordnung[idx - 1] ?? ordnung[idx + 1];
       schliesseTab(path);
-      navigate(nachbar ? nachbar.path : '/');
+      if (nachbar) navigate(nachbar.path); else zurSammlung();
     } else schliesseTab(path);
   };
 
-  // ── D19 (David 6.9.2026: «mit plus einen neuen reiter erzeugen können») ───
-  // Der Browser-«+»: legt den (höchstens einen) leeren Reiter an bzw.
-  // aktiviert den bestehenden (`lib/tabs.neuerLeererReiter` trägt die
-  // Höchstens-einer-Regel), zeigt die Startseite und schickt den Fokus in die
-  // Kopf-Suche — dieselbe global lauschende Geste wie der /gesetze-Landeplatz
-  // (`lm:suche-fokus`, `HeaderSuche.tsx`); kein zweiter Fokus-Weg nötig.
+  // ── D19 (David 6.9.2026: «mit plus einen neuen reiter erzeugen können»),
+  //    R14-Fassung ─────────────────────────────────────────────────────────
+  // Der Browser-«+» öffnet die SAMMLUNG — die Neuer-Reiter-Seite dieser App —
+  // und schickt den Fokus in die Kopf-Suche (dieselbe global lauschende Geste
+  // wie der /gesetze-Landeplatz, `lm:suche-fokus` in `HeaderSuche.tsx`; kein
+  // zweiter Fokus-Weg nötig). Bis R14 legte er einen LEEREN Reiter über einen
+  // Zeichen für Zeichen identischen Bildschirm — Davids «dann erscheint
+  // einfach neuer reiter». Die Höchstens-einer-Regel (R13-Entscheid, für W2·25
+  // bindend) braucht dafür keinen Sonderfall mehr: `merkeTab` erkennt die
+  // bereits offene Sammlung an ihrer Identität und aktiviert sie.
   const neuerReiter = () => {
-    neuerLeererReiter();
-    navigate('/');
+    zurSammlung();
     window.dispatchEvent(new CustomEvent('lm:suche-fokus'));
   };
 
@@ -198,7 +211,9 @@ export function Reiterleiste({ paneSchluessel = [] }: {
   const alleSchliessen = () => {
     for (const x of ordnung) schliessePane(x.path);
     leereTabs();
-    navigate('/');
+    // R14: «alle» heisst alle Dokumente — übrig bleibt die Sammlung, wie im
+    // Browser das letzte Fenster mit der Neuer-Tab-Seite.
+    zurSammlung();
   };
 
   // ── M3 · «ZULETZT GESCHLOSSEN» (Prüfbefund R11 #37) ───────────────────────
@@ -498,7 +513,16 @@ export function Reiterleiste({ paneSchluessel = [] }: {
   };
 
   /** R2: kein Reiter offen — die Leiste hält ihre Höhe, aber weder Unterstrich
-   *  noch Trennkante. */
+   *  noch Trennkante.
+   *
+   *  ── R14 (7.9.2026) · WANN ES DIESEN ZUSTAND NOCH GIBT ────────────────────
+   *  Auf «/» und nach dem letzten ✕ gibt es ihn NICHT mehr: die Sammlung ist
+   *  seit R14 ein Reiter, die Leiste trägt dort immer mindestens einen. Übrig
+   *  bleibt er allein auf den Meta-Routen (/ueber, /methodik, /einstellungen,
+   *  /kontakt) beim Kaltstart mit leerem Speicher — und dort ist «kein Reiter»
+   *  die WAHRE Auskunft (§8): keiner dieser Reiter zeigt diese Seite. Der
+   *  Zustand wird darum weiter gezeichnet, statt ihn mit einem Reiter zu
+   *  füllen, den niemand geöffnet hat. */
   const leer = tabs.length === 0;
 
   /** Der Browser-«+» (D19). `solo` = die Fassung ohne Reiter: keine linke

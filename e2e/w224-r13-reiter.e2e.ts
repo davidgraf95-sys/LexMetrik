@@ -251,6 +251,13 @@ test('R13-4 — ein Gesetzes-Reiter ohne Lesestellung reserviert keinen Platz', 
 // Reiter, der Ring hielt drei Einträge — und der Rechtsklick auf den Leerraum
 // ergab `[role=menu]` = 0. Zurück kam man nur mit Alt+⇧+T, mit der Maus gar
 // nicht.
+// ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ───────
+// Der Fall stand auf dem Zustand «0 Reiter» (`toHaveCount(0)` nach dem letzten
+// ✕). Den gibt es seit R14 nicht mehr: der letzte ✕ führt in die Sammlung, die
+// Leiste trägt danach genau EINEN Reiter. Die geprüfte ZUSAGE (R13-5) ist
+// unverändert — die Rückfahrkarte liegt da, wo man sie sucht, nämlich im
+// Rechtsklick auf die freie Fläche; nachgeführt ist allein die Reiterzahl, auf
+// der gemessen wird.
 test('R13-5 — Rechtsklick auf den Leerraum bietet «Wieder öffnen» an', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await seed(page, [OR, BGE], OR)
@@ -258,7 +265,10 @@ test('R13-5 — Rechtsklick auf den Leerraum bietet «Wieder öffnen» an', asyn
     await page.locator(`[data-reiter-schluessel="${s}"] button[aria-label*="schliessen"]`).first().click()
     await page.waitForTimeout(300)
   }
-  await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(0)
+  // R14: übrig bleibt die Sammlung — sie ist die freie Fläche, auf der der
+  // Rechtsklick gemessen wird.
+  await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(1)
+  await expect(page.locator(`${STREIFEN} [data-reiter-schluessel="/"]`)).toHaveCount(1)
 
   const kasten = (await page.locator(STREIFEN).boundingBox())!
   await page.mouse.click(kasten.x + kasten.width - 40, kasten.y + kasten.height / 2, { button: 'right' })
@@ -268,7 +278,8 @@ test('R13-5 — Rechtsklick auf den Leerraum bietet «Wieder öffnen» an', asyn
   await expect(menue.getByRole('menuitem', { name: 'Neuer Reiter' })).toBeVisible()
 
   await menue.getByRole('menuitem', { name: /Wieder öffnen/ }).click()
-  await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(1)
+  // Der wiederhergestellte Reiter tritt NEBEN die Sammlung.
+  await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(2)
 })
 
 // ═══ R13-6/R13-9 · WAS IM REITER-MENÜ FEHLTE ════════════════════════════════
@@ -285,8 +296,14 @@ test.describe('R13-6/R13-9 — «Alle schliessen» und «Adresse kopieren» am R
     const menue = page.locator('[role=menu]')
     await expect(menue.getByRole('menuitem', { name: 'Alle schliessen' })).toBeVisible()
     await menue.getByRole('menuitem', { name: 'Alle schliessen' }).click()
-    await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(0)
-    expect(await gespeichert(page)).toEqual([])
+    // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ────
+    // Alter Wortlaut: `toHaveCount(0)` und `gespeichert(page) === []`. «Alle
+    // schliessen» schliesst seit R14 alle DOKUMENTE; übrig bleibt die
+    // Sammlung, wie im Browser das letzte Fenster mit der Neuer-Tab-Seite
+    // stehen bleibt. Die geprüfte R13-6-Zusage — die Geste steht am Desktop im
+    // Reiter-Menü und WIRKT — ist unverändert.
+    await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(1)
+    expect(await gespeichert(page)).toEqual(['/'])
   })
 
   test('«Adresse kopieren» legt die kanonische Adresse in die Zwischenablage', async ({ page, context }) => {
