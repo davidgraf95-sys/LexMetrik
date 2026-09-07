@@ -48,9 +48,9 @@ import { VertrauensFuss } from '../components/start/VertrauensFuss';
 // Client-Baum gestaltgleich — ein Struktur-Unterschied liesse React 19 die
 // Hydration verwerfen und die ganze Seite neu rendern.
 //
-// A11y (§8): genau EINE <h1> (das Titelblatt-Wort im Suchblock), je Modul eine
-// <h2> in einer `<section aria-labelledby>` — keine Heading-Sprünge.
-// Reine Darstellung (§3).
+// A11y (§8): genau EINE <h1> (die Begrüssung im Suchblock, seit D39 —
+// David 7.9.2026, s. `start/SuchBlock.tsx`), je Modul eine <h2> in einer
+// `<section aria-labelledby>` — keine Heading-Sprünge. Reine Darstellung (§3).
 export function Startseite() {
   const pk = usePaneKlasse();
   const posten = useSyncExternalStore(
