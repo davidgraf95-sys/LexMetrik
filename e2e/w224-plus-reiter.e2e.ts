@@ -22,9 +22,12 @@
 // 7.9.2026):
 //   (a) in `layout/Reiterleiste.neuerReiter` das `zurSammlung()` streichen ⇒
 //       der Klick auf «+» tut nichts, kein Reiter entsteht.
-//   (b) in `lib/tabs.istReiterPfad` den `'/'`-Zweig streichen ⇒ die Suche aus
-//       der Sammlung legt einen ZWEITEN Reiter an, statt sie zu füllen — der
-//       zweite Fall unten wird rot (2 Reiter statt 1).
+//   (b) GALT BIS R14b: «in `lib/tabs.istReiterPfad` den `'/'`-Zweig streichen»
+//       — die Funktion ist mit R14b ersatzlos gestrichen (jede Route ist ein
+//       Reiter). Der gleichwertige Rot-Weg heute: in
+//       `components/TabTracker.tsx` das `|| pathname === '/'` aus dem
+//       `merkeTab`-Zweig nehmen ⇒ die Suche aus der Sammlung ERSETZT nicht,
+//       sondern der Fall «zweiter Klick auf «+»» legt einen zweiten Reiter an.
 import { test, expect, type Page } from '@playwright/test'
 import { warteAufSuchindex } from './helpers/warteAufSuchindex'
 
@@ -52,7 +55,15 @@ test.beforeEach(async ({ page }) => {
   // Startroute BEWUSST ohne eigenen Reiter (analog w224-reiter-umordnen-d16):
   // sonst legte der TabTracker beim Laden bereits einen Reiter an und die
   // «genau 1 Reiter»-Messung unten wäre verfälscht.
+  //
+  // ── DEKLARIERTE SONDEN-ÄNDERUNG (§6.3) · R14b, 7.9.2026 ──────────────────
+  // Seit R14b gibt es keine reiterlose Route mehr — `/kontakt` trägt den
+  // Reiter «Kontakt». Die Zusagen dieser Datei («+» legt GENAU EINEN
+  // Sammlungs-Reiter an, ein zweiter Klick verdoppelt ihn nicht) sind
+  // unverändert; nur der Ausgangszustand wird jetzt ausdrücklich hergestellt,
+  // statt sich auf eine Ausnahme zu verlassen: Speicher leeren, dann messen.
   await page.goto('/kontakt')
+  await page.evaluate(() => localStorage.removeItem('lexmetrik-tabs'))
   await expect(plusKnopf(page)).toBeVisible()
 })
 

@@ -15,12 +15,17 @@
 //
 // ROT ZU BEKOMMEN (§6.7 — je Zusage einzeln gefahren, 7.9.2026, Vorstand
 // `79023e630`):
-//   Z1  `lib/tabs.istReiterPfad`: den `'/'`-Zweig streichen ⇒ der Klick auf die
-//       Marke lässt 1 Reiter (den ersetzten) statt 2 stehen.
+//   Z1  GALT BIS R14b: «`lib/tabs.istReiterPfad`: den `'/'`-Zweig streichen».
+//       Die Funktion ist mit R14b ersatzlos gestrichen; gleichwertig ist heute,
+//       in `components/TabTracker.tsx` das `|| pathname === '/'` aus dem
+//       `merkeTab`-Zweig zu nehmen ⇒ der Klick auf die Marke ERSETZT den
+//       Gesetzes-Reiter und lässt 1 statt 2 stehen.
 //   Z2  `layout/Reiterleiste.neuerReiter` auf `neuerLeererReiter()` zurück ⇒
 //       die Aufschrift heisst «Neuer Reiter», nicht «Sammlung».
 //   Z3  in `Reiterleiste.schliessen` das `zurSammlung()` durch `navigate('/')`
-//       ersetzen ⇒ nach dem letzten ✕ stehen 0 Reiter und `data-reiter-leer`.
+//       ersetzen ⇒ nach dem letzten ✕ steht für einen Frame kein Reiter
+//       (bis R14b zusätzlich sichtbar am Attribut `data-reiter-leer`, das mit
+//       R14b ersatzlos weggefallen ist).
 //   Z4  in `TabTracker` das `ringt: navTyp !== 'POP'` streichen ⇒ Zurück und
 //       Vorwärts füllen den Ring, «/gesetze» steht doppelt darin.
 //   Z5  wie Z1 ⇒ «/» trägt keinen Reiter, die Leiste steht leer.
@@ -47,7 +52,13 @@ const ring = (page: Page) => page.evaluate(() =>
 
 /** Startroute ohne eigenen Reiter (`lib/tabs.istReiterPfad` ist für /kontakt
  *  falsch — Meta-Seiten bleiben auch nach R14 aussen vor): so trägt der
- *  Speicher genau das, was der Fall selbst erzeugt. */
+ *  Speicher genau das, was der Fall selbst erzeugt.
+ *
+ *  ── DEKLARIERTE SONDEN-ÄNDERUNG (§6.3) · R14b, 7.9.2026 ──────────────────
+ *  Der Absatz darüber bleibt als datierter Beleg (§0 Ziff. 2b) — er galt bis
+ *  `8d398874e`. Seit R14b trägt auch `/kontakt` einen Reiter; die Rolle der
+ *  Startroute ist deshalb nur noch, `localStorage` erreichbar zu machen, bevor
+ *  das `beforeEach` ihn leert. Die Zusagen Z3–Z6 sind unberührt. */
 const START = '/kontakt'
 const OR = '/gesetze/bund/OR'
 
@@ -100,8 +111,6 @@ test('Z3 — nach dem letzten ✕ steht genau ein Reiter «Sammlung», die Leist
   await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(1)
   await expect(aktiv(page)).toContainText('Sammlung')
   expect(await pfade(page)).toEqual(['/'])
-  // Der 0-Reiter-Zustand der Sammlung ist ersatzlos weg (R2-Reserve entfällt).
-  await expect(page.locator(`${REITER}[data-reiter-leer]`)).toHaveCount(0)
   // Das geschlossene Dokument ist die Rückfahrkarte, die Sammlung nicht.
   expect(await ring(page)).toEqual([OR])
 })
@@ -141,7 +150,6 @@ test('Z5 — die Sammlung trägt ihren eigenen Reiter, auch beim Kaltstart auf �
   await page.goto('/')
   await expect.poll(() => pfade(page), { timeout: 10_000 }).toEqual(['/'])
   await expect(aktiv(page)).toContainText('Sammlung')
-  await expect(page.locator(`${REITER}[data-reiter-leer]`)).toHaveCount(0)
 })
 
 // ═══ Z6 · DER NEUSTART FINDET DIESELBE LEISTE ══════════════════════════════

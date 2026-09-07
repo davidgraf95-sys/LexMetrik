@@ -12,7 +12,7 @@ export type TabKat = 'gesetze' | 'rechtsprechung' | 'materialien' | 'vorlagen' |
  *  `components/layout/bereiche.ts` importiert: das ist die Darstellungsschicht
  *  (§3), und sie fasst Rechner und Vorlagen zu EINEM Register «Werkzeuge»
  *  zusammen — die Reiter-Gruppierung hält sie getrennt. Zwei Achsen, zwei
- *  Tabellen; die Reihenfolge ist die von `KAT_ORDER`/`BEREICHS_UEBERSICHTEN`. */
+ *  Tabellen; die Reihenfolge ist die von `KAT_ORDER`. */
 const BEREICHS_KAT = ['gesetze', 'rechtsprechung', 'materialien', 'vorlagen', 'rechner'] as const;
 
 // Kategorie rein aus dem BEREICHS-PRÄFIX ableiten: die Tool-Routen sind
@@ -24,7 +24,7 @@ const BEREICHS_KAT = ['gesetze', 'rechtsprechung', 'materialien', 'vorlagen', 'r
 // statt unter «Gesetze» — die Prüfungen verlangten alle einen Schrägstrich
 // NACH dem Bereich (`/gesetze/…`), und genau den trägt die Übersicht nicht.
 // Seit D7 ist sie aber ein Reiter wie jedes andere Dokument
-// (`lib/tabs.BEREICHS_UEBERSICHTEN`); ein Bereich, dessen eigene Übersicht
+// (die fünf Bereichs-Übersichten); ein Bereich, dessen eigene Übersicht
 // nicht in seiner Gruppe steht, ist keine Gruppierung, sondern ein Loch.
 // (M2, 6.9.2026, gilt unverändert mit: ohne die `materialien`-Zeile landete
 // jede Material-Detailseite unter «Weitere».)
@@ -49,7 +49,7 @@ export const KAT_META: Record<TabKat, { label: string; pikto: string }> = {
   sonstiges: { label: 'Weitere', pikto: '◦' },
 };
 // Feste Reihenfolge der Sammel-Reiter (stabil, unabhängig von Öffnungs-Reihenfolge).
-// Reihenfolge = die der Bereichs-Übersichten (`lib/tabs.BEREICHS_UEBERSICHTEN`),
+// Reihenfolge = die der fünf Bereichs-Übersichten,
 // damit Blatt und Navigation dieselbe Ordnung sprechen.
 export const KAT_ORDER: TabKat[] = ['gesetze', 'rechtsprechung', 'materialien', 'vorlagen', 'rechner', 'sonstiges'];
 
