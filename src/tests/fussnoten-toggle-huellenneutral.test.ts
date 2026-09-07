@@ -95,9 +95,13 @@ describe('Die Ansicht-Weiche dämpft hüllenneutral und nur die Klasse A', () =>
     // `V` (Verweis/Substanz), `G` (Grauzone), `Z` (Publikationsnachweis) und `U`
     // (unklar) sind amtlicher Nicht-Änderungs-Apparat. Sie zu verstecken wäre
     // Substanzverlust (§7/§8) — gemessen am ZPO-Apparat 99 von 311 Einträgen.
+    // `includes` statt `not.toContain(css)`: der Diff einer 4100-Zeilen-Datei
+    // im Fehlerbild ist unlesbar (und teuer) — der Satz sagt alles (T5).
     for (const kl of ['V', 'G', 'Z', 'U']) {
-      expect(css, `index.css selektiert [data-fn-klasse="${kl}"] — H0-Auflage 1 verletzt`)
-        .not.toContain(`[data-fn-klasse="${kl}"]`);
+      expect(
+        css.includes(`[data-fn-klasse="${kl}"]`),
+        `src/index.css selektiert [data-fn-klasse="${kl}"] — H0-Auflage 1 verletzt`,
+      ).toBe(false);
     }
   });
 

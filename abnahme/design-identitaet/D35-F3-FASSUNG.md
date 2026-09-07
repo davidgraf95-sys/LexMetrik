@@ -167,3 +167,33 @@ Konflikt beim Landen ist klein und mechanisch.
 
 ## 8 Rot-Proben (§6.7 — jede einmal gefahren)
 
+### R-1 · Die Migrations-Tabelle (Unit, gefahren 7.9.2026)
+
+Eingriff: in `leserOptionen.ts` `ausAltenSchaltern` die zwei Zeilen vertauscht
+(`hist === 'an'` liefert «fussnoten» statt «fassung»).
+
+```
+ ❯ src/tests/leser-optionen-migration.test.ts (14 tests | 11 failed)
+   × fussnoten=an · histansicht=an ⇒ «fassung»      AssertionError: expected 'fussnoten' to be 'fassung'
+   × fussnoten=an · histansicht=aus ⇒ «fussnoten»   AssertionError: expected 'aus' to be 'fussnoten'
+   × fussnoten=aus · histansicht=aus ⇒ «aus»        AssertionError: expected 'fassung' to be 'aus'
+   × leerer Speicher ⇒ Vorgabe: Fassung sichtbar    - "vermerke": "fassung" / + "vermerke": "fussnoten"
+   … 11 von 14 rot
+```
+
+Zurückgenommen (`git checkout`), danach 14/14 grün.
+
+### R-2 · H0-Auflage 1 als Tor (Unit, gefahren 7.9.2026)
+
+Eingriff: in `src/index.css` `[data-fn-klasse="V"]` neben den A-Selektor gesetzt.
+
+```
+ FAIL  src/tests/fussnoten-toggle-huellenneutral.test.ts
+   > H0-Auflage 1: KEINE Regel dämpft eine andere Fussnoten-Klasse als A
+   AssertionError: src/index.css selektiert [data-fn-klasse="V"] — H0-Auflage 1 verletzt
+```
+
+Zurückgenommen, danach 6/6 grün. *(Nebenbefund mitbehoben: die Zusicherung lief
+über `expect(css).not.toContain(...)` und warf im Fehlerfall den Diff einer
+4100-Zeilen-Datei aus — jetzt `expect(css.includes(...)).toBe(false)`, T5.)*
+
