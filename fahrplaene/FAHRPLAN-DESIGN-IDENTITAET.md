@@ -277,10 +277,10 @@ abwählbar (`D35-F2-KOPF.md`, #758). Zwei Nachträge Davids binden den Bau: die 
 **immer zu beim Laden** und öffnet nur auf Klick (kein Dauer-Merker), und **jede** Rubrik ist im
 Ansicht-Menü einzeln abwählbar.
 
-**Noch in Landung beim Buchen (SHA trägt der Orchestrator nach):** D41/D42 (das Ansicht-Menü
-bekommt keine Abdunkelung, der Gesetzes-Pane bleibt im Split bedienbar — #759) · D44 (Aktion
-«⧉ Artikel daneben» ersatzlos entfernt — #760) · D40 (Fassungs-Slot wird eine Rubrik der
-Funktionszeile, der Kopf-Slot entfällt). D43 «wo sind die Materialien?» ist eine Sichtprüfung an
+**Nachgelandet (7.9.2026, Abend):** D41/D42 (das Ansicht-Menü bekommt keine Abdunkelung, der
+Gesetzes-Pane bleibt im Split bedienbar — #759, 967caad87) · D44 (Aktion «⧉ Artikel daneben»
+ersatzlos entfernt — #760, ef0519bf4) · D40 (Fassungs-Slot wird eine Rubrik der Funktionszeile,
+der Kopf-Slot entfällt — #761, ae32c5c4e). D43 «wo sind die Materialien?» ist eine Sichtprüfung an
 einem Artikel MIT Materialien; D45 ist ein Folgeschritt (§8 Nr. 11).
 
 **Gesamtprüfung (Schluss, 7.9.2026).** Zwei Linsen: (a) Ästhetik hell/dunkel über alle Bereiche —

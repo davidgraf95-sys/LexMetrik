@@ -58,7 +58,7 @@ werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 | R14b Meta-Seiten als Reiter | #757 | `5b350cb4f` | `R14-REITER-MODELL.md` (Nachtrag) |
 | D35-F2 Kopf ohne Artikel-Zahl, Erlass-Blatt, Rubriken abwählbar | #758 | `2f55a1122` | `D35-F2-KOPF.md` |
 
-**In Landung (SHA trägt der Orchestrator nach):** #759 D41/D42 (kein Scrim über dem Menü, Split bleibt bedienbar) · #760 D44 («⧉ Artikel daneben» entfernt) · D40 (Fassung als Rubrik der Funktionszeile, PR folgt) · D45 (Entscheid-Klick in der Fusszeile öffnet daneben statt zu navigieren) offen.
+**Nachgelandet (Abend):** #759 967caad87 D41/D42 (kein Scrim über dem Menü, Split bleibt bedienbar) · #760 ef0519bf4 D44 («⧉ Artikel daneben» entfernt) · #761 ae32c5c4e D40 (Fassung als Rubrik der Funktionszeile) · D45 (Entscheid-Klick in der Fusszeile öffnet daneben statt zu navigieren) offen.
 
 **Entscheide David (wörtlich am Tag):** D35 «A und verlustfrei» (Variante A der Fusszeilen-Untersuchung, kein Funktionsverlust) · R14 Variante A «Alles ist ein Reiter» · «alles wie empfohlen» (leerer Reiterstreifen auf «/» bleibt, ZGB-Reiter bleibt «ZGB», Orchestrator-Entscheide vom Vortag) · D35-Nachtrag «das alles soll dann nur auf klick aufklappbar sein» (Fusszeile immer zu beim Laden, kein Dauer-Merker) · D35-Nachtrag 2 «man soll mittels ansicht alles einzelne abwählen können» (jede Rubrik im Ansicht-Menü abwählbar).
 

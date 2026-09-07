@@ -455,9 +455,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   ✅ **erledigt 7.9.2026 (PR #739, e2ac7def9)** — Handschrift «Sammlung»: R1–R13 samt Nachzügen, Gesamtprüfung
   (Ästhetik + Funktions-Inventar 90 OK / 0 verloren), Reglement §F0. Protokolle
   `abnahme/design-identitaet/`; Zielbeschreibung: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026.
-  **Nachwünsche 7.9. (Tag):** 13 weitere PRs #744–#758 (D34–D39, D35-F1…F4, L6, R13B, R14, R14b) —
-  Tabelle Thema/PR/SHA/Protokoll in STRUKTUR.md, Abschnitt «Nachwünsche 7.9.»; #759 (D41/D42),
-  #760 (D44) und D40 waren beim Buchen noch in Landung.
+  **Nachwünsche 7.9. (Tag):** 16 weitere PRs #744–#761 (D34–D44, D35-F1…F4, L6, R13B, R14, R14b) —
+  Tabelle Thema/PR/SHA/Protokoll in STRUKTUR.md, Abschnitt «Nachwünsche 7.9.» (zuletzt #761 ae32c5c4e).
   **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §1 — Stand je Runde dort in §6, Folgeschritte in §8.
   - [ ] **⚖ öffnet Entscheide im zweiten Pane** *(`W2·24-C`, Variante C zu D33)* — heute Variante A (überlagerndes Blatt, Δ=0); C = echtes zweites Pane (Split-Regel M3). **Zuerst prüfen, ob D35-F2 (#758, Erlass-Blatt) das schon abdeckt** — sonst doppelter Weg zum selben Inhalt. Fahrplan §8.
   - [ ] **Bezüge-Zeile: Kopfzähler gefiltert/ungefiltert** *(R5-F1K §7; löst D20 ab)* — Kopfzähler = Bezugsgrösse (Entscheid N1), Panel filtert; Anzeige beider Zahlen offen.
