@@ -81,7 +81,7 @@ Alle ≥ 4.5 : 1 in beiden Modi — AA für Fliesstext, nicht nur für Grosstext
 
 ## 3 · Wächter und Rot-Proben (§6.7)
 
-**① `e2e/w224-gb-register.e2e.ts`** — 39 Fälle: je Route MIT Register ≥ 3
+**① `e2e/w224-gb-register.e2e.ts`** — 40 Fälle: je Route MIT Register ≥ 3
 Registerfarb-Träger im ersten Bild ausserhalb der Leisten (hell + dunkel,
 1440 + 390); zweiseitig, dass eine Route OHNE Register keine geratene Farbe
 trägt; kein `.lc-badge` mit berechnetem `uppercase`.
@@ -126,7 +126,7 @@ Ausnahme-Liste 1 Fundstelle, Exit 1.
 | `check:design-tokens` | grün — 75 gültige Stufen, 17 wirksame Deckkraft-Klassen |
 | `check:farbwelt` | grün — 146 WCAG-Pflichtpaare, 4 beratende Bestands-Warnungen |
 | `check:e2e-shards` | grün — 130 Specs, Union der 8 Gruppen deckungsgleich |
-| `e2e/w224-gb-register` | **39 passed (28.5 s)** |
+| `e2e/w224-gb-register` | **40 passed (29.7 s)** — Schlusslauf auf dem sauberen Baum |
 | `check:schlankheit` | **ROT auf `ArtikelLeser.tsx` (866 Z.) — NICHT von GB.** Nullprobe (§0.3): die Datei ist byte-gleich zur Basis `018b41a37` und liegt dort ebenso über der Schwelle; der Lauf im fremden Worktree `w2-24-folge` (ohne GB-Änderung) ist mit derselben Meldung rot. |
 
 ---
