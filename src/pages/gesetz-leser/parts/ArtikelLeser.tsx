@@ -3,8 +3,6 @@ import { ArtikelBody, FnRef } from '../../../components/normtext/ArtikelBody';
 import { type InternRefs } from '../../../components/NormText';
 import { labelMitBereich, artikelGanzAufgehoben } from '../../../lib/normtext/darstellung';
 import type { Fussnote } from '../../../lib/normtext/browse';
-import { NEUER_TAB } from '../../../lib/benennung';
-import { useKopieren } from '../../../components/useKopieren';
 import type { LeitfallRef } from '../../../lib/rechtsprechung/norm-index';
 import type { MaterialBezug } from '../../../lib/normtext/werkzeuge';
 import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen';
@@ -14,16 +12,14 @@ import { verifizierLinkArtikel } from '../../../lib/normtext/verifikationslink';
 import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 import { fnTextMitLinks, baueZitat } from '../helpers';
 import { SUCH_META } from '../suchHighlight';
-import { zitatMitAusweis, heuteIso } from '../../../lib/format';
 import { schaetzeArtikelHoehe } from '../berechnungen';
 import { fussnotenAnzeige, verteileFussnoten, sammleVerweise } from './ArtikelLeser.fussnoten';
 import { useSatzspiegel } from '../v3/satzspiegel';
 import type { ArtikelBezuege } from '../bezuegeLaden';
-import { urlMitHash } from '../../../lib/liveUrlSync';
-import { usePaneKontext } from '../../../components/layout/PaneKontext';
 import { werkzeugeAmArtikel } from '../randNotizWerkzeuge';
 import { HistSlot, RandTitel } from './ArtikelLeser.kopfteile';
 import { ArtikelBezuegeFuss } from './ArtikelLeser.bezuegeFuss';
+import { ArtikelAktionen } from './ArtikelAktionen';
 
 // Ein Artikel im Lesefluss (Richtung A): zweispaltig wie die amtliche Druckfassung —
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
@@ -115,18 +111,13 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // Trefferliste zu ankern.
   imTreffer?: boolean; onSpringe?: (token: string) => void;
 }) {
-  // R4-D (5.9.2026): der Zwei-Ziele-Zustand war der Grund, warum diese Fläche
-  // den geteilten Hook nicht nutzen konnte — die Zeile trägt ZWEI Kopier-Knöpfe
-  // («Zitat», «Link»), und nur der geklickte darf sein Häkchen zeigen. Der Hook
-  // kennt dafür jetzt eine MARKE; der lokale Timer entfällt samt seiner
-  // Lücken (kein Handle, kein Unmount-Aufräumen).
-  const { marke: kopiert, kopieren } = useKopieren();
-  // LM-202: der Teilen-Knopf schreibt die Adresse — im SEKUNDÄREN Pane nicht
-  // (Herleitung unten bei `kopiere`; massgeblich ist die Rolle, nicht `imPane`).
-  // Ohne montierten Provider liefert der Kontext `rolle: 'primaer'` ⇒
-  // Einzelansicht/Prerender unverändert.
-  const { rolle } = usePaneKontext();
-  const istSekundaer = rolle === 'sekundaer';
+  // ── W2·24-D35-F1 · DIE KOPIER-MECHANIK WOHNT JETZT BEI IHREN KNÖPFEN ────
+  // `useKopieren` (Marke), `usePaneKontext` (Rolle) und die ganze
+  // `kopiere`-Funktion samt LM-202-Regel sind mit den drei Knöpfen nach
+  // `./ArtikelAktionen.tsx` gezogen — WORT FÜR WORT, mitsamt ihren
+  // Herleitungen. Diese Datei kannte den Zustand nur, weil die Knöpfe hier
+  // standen; sie stehen jetzt am Artikelende (§6.6, und eine Datei weniger
+  // gegen die 800er-Schwelle).
   const label = labelMitBereich(e.artikelLabel, e.artikel);
   // KURZ-Zitat («Art. 957 OR») — Fundstellen-Signal für den Entscheid-Sprung
   // (LeitfallZeile `normZitat` → ?norm=). MUSS knapp bleiben, sonst matcht der
@@ -176,69 +167,6 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // VERWEISE: im Artikel genannte, aufloesbare (Bund-)Normverweise als Chips am
   // Fuss sammeln — Herleitung und Dedupe in `./ArtikelLeser.fussnoten` (§6.6-Split).
   const verweise: string[] = sammleVerweise(e.bloecke);
-  const kopiere = (was: 'zitat' | 'link') => {
-    // §5 — der Permalink wird mit DERSELBEN Funktion kodiert, die unten die
-    // Adresse schreibt (`urlMitHash`). Vorher stand hier ein handgebauter
-    // String, und die beiden gerieten bei 54 Artikel-Token auseinander: Tokens
-    // mit Leerzeichen oder Halbgeviert («22 a» in BS-215.400, «36–42» in
-    // AR-233.3, «10. 1» in BS-785.700) liefen als Kopie roh («#art-22 a»), als
-    // Adresse prozent-kodiert («#art-22%20a») aus dem Haus. Kopie ≠ Adresse ist
-    // genau das, was LM-202 abstellt — und ein Leerzeichen im Permalink bricht
-    // zusätzlich die Auto-Verlinkung in Mail- und Chat-Programmen.
-    // `origin` nur im Browser; `kopiere` läuft ausschliesslich aus einem
-    // onClick, der Zweig ohne `window` ist reine Absicherung (kein URL-Wurf).
-    const permalink = typeof window !== 'undefined'
-      ? urlMitHash(`${window.location.origin}${basisPfad}`, `art-${e.artikel}`)
-      : `${basisPfad}#art-${e.artikel}`;
-    // B-6 (QS-BASIS): die Zitat-Kopie trägt jetzt den Stand-Ausweis (§7 a–d) —
-    // `zitatVoll` (baueZitat) liefert bereits «… (Stand …)» = die Fassung, der
-    // Baustein ergänzt Abrufdatum + Permalink (kein doppeltes Standdatum, §5).
-    // W2·10-UI-NAV/R3: zusätzlich der amtliche Deep-Link (`amtlich`, EID-2) —
-    // derselbe Wert, den der «amtliche Fassung ↗»-Knopf daneben ansteuert (§5,
-    // EINE Quelle: `verifizierLinkArtikel`). Er stand bisher nur ALS KLICK im
-    // UI; wer das Zitat kopierte, verlor genau den Nachweis, der es überprüfbar
-    // macht. `?? undefined`: liefert der Validator null (Kanton, aufgehoben,
-    // Synthese-Suffix), bleibt die Zeile ohne amtliche Quelle statt mit einer
-    // geratenen (§8).
-    const text = was === 'zitat'
-      ? zitatMitAusweis(zitatVoll, {
-          abruf: heuteIso(new Date()), permalink, amtlich: amtlich ?? undefined,
-        })
-      : permalink;
-    kopieren({ text, marke: was });
-    // ── LM-202 (W2·10-UI-NAV-URL, David-Entscheid 3.8.2026) ──────────────────
-    // «Die URL ändert sich NUR bei explizitem Klick auf einen Artikel-Anker bzw.
-    // bei der Teilen-Aktion.» Der «Link»-Knopf IST die Teilen-Aktion — er legte
-    // den Permalink bisher in die Zwischenablage, während die Adressleiste auf
-    // dem zuletzt angesprungenen Anker stehen blieb. Wer den Link teilte und
-    // danach die Adresse las, sah zwei verschiedene Fundstellen (genau die
-    // LM-202-Beobachtung). Darum: der Teilen-Klick setzt den Anker auch in die
-    // Adresse — per `replaceState`, damit das Kopieren keinen «Zurück»-Schritt
-    // erzeugt (Verlaufs-Ökonomie wie LM-209).
-    //
-    // NUR beim «Link»-Knopf, nicht beim «Zitat»-Knopf: das Zitat wandert in
-    // einen Schriftsatz, es ist kein Ortswechsel.
-    //
-    // Und nur, wenn dieser Teilbaum die ADRESSIERTE Seite ist. Die Grenze heisst
-    // darum `!istSekundaer`, NICHT `!imPane` — die beiden fallen im Split-View
-    // auseinander: `Shell.tsx` montiert auch das PRIMÄRE Pane mit
-    // `imPane: true` (Container-Query-Modus), nur die Rolle unterscheidet die
-    // beiden. Mit `!imPane` schwieg der Teilen-Knopf im Split-View auf BEIDEN
-    // Seiten, während `springeZuArtikel` (inhalt.tsx) im primären Pane sehr wohl
-    // schrieb — das LM-202-Symptom (Kopie ≠ Adresse) überlebte dort also genau
-    // in der Ansicht, für die es gebaut wurde. `springeZuArtikel` zieht die
-    // Grenze seit je über `istSekundaer`; hier gilt dieselbe (§5, EINE Grenze).
-    // Sekundäres Pane bleibt aussen vor: es ist nicht die adressierte Seite und
-    // darf die Haupt-URL nie umschreiben (Konvention auch von `wechsleTab`).
-    //
-    // `?r=`-Instanz-Diskriminator: die Adresse behält ihn (er ist die Reiter-
-    // Identität), der KOPIERTE Link trägt ihn bewusst nicht — er ist rein lokal
-    // und hätte beim Empfänger keine Bedeutung. Ohne offene Zweitinstanz sind
-    // beide zeichengleich.
-    if (was === 'link' && !istSekundaer && typeof window !== 'undefined' && window.history) {
-      window.history.replaceState(window.history.state, '', urlMitHash(window.location.href, `art-${e.artikel}`));
-    }
-  };
   // Aufhebungsnotiz (G16/#3): die amtliche «Aufgehoben durch … (AS …)»-Notiz eines
   // voll aufgehobenen Artikels liegt als artikel-Ebene-Fussnote im Snapshot
   // (absatz/item = null). M2 (David 29.6.2026) / G2b: sie ist eine Fussnote und liegt
@@ -437,47 +365,20 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             {/* aufgehoben gedämpft, aber ink-500 (WCAG 4.5:1 hell+dunkel) statt
                 ink-400 (3.2–3.6:1) — essentieller Link-Text, kein incidental. */}
             {ganzAufgehoben && <span {...{ [SUCH_META]: '' }} className="text-xs italic text-ink-500">· aufgehoben</span>}
-            {artOffen && (
-              // W2·19-GLIEDERUNG/S8 (Bau-Spec §4.4): `data-such-meta` — die
-              // Aktions-Zeile ist BEDIENUNG, kein Gesetzestext. Ohne die Marke
-              // malte die Suche nach «Zitat» oder «Link» in JEDEM Artikel eine
-              // Fundstelle, die der datenseitige Zähler zu Recht nicht kennt
-              // (gemessen am BGFA: 0 gezählt gegen 39 gemalt) — und weil die
-              // Zeile bis zum Hover `opacity-0` trägt, wären es 39 UNSICHTBARE
-              // Markierungen. Genau der Fall, für den SUCH_META gebaut wurde
-              // (Bug-Check §9 vom 4.8.2026, B1).
-              <span {...{ [SUCH_META]: '' }}
-                className="ml-auto flex shrink-0 gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
-                {/* LM-091 (W2·17-UI-BEFUNDE B10, 4.9.2026). Teilwiderlegt und
-                    teilgebaut. WIDERLEGT: die Zeile hat Abstand (`gap-3`) und
-                    erscheint nicht nur bei Mausbedienung — `focus-within` holt
-                    sie per Tastatur, `[@media(hover:none)]` auf Touch.
-                    REPRODUZIERT: «als Aktion erkennbar». Gemessen 22×13 px,
-                    border 0, Farbe ink-500 — unter der AA-Untergrenze
-                    (WCAG 2.5.8, 24 px) und optisch nicht von einem
-                    Fliesstext-Link zu unterscheiden. `.lc-btn-mini` gibt allen
-                    dreien Fläche, Haarlinie und `--tap-ziel` als Mindesthöhe.
-                    Die PLATZIERUNG (rechts oben in der Artikel-Kopfzeile)
-                    bleibt unangetastet — sie ist mit EID-2 am 25.7.2026
-                    abgenommen (FAHRPLAN-GESETZES-UX §12.5, PR #349) und wird
-                    von einem Affordanz-Fix nicht umgeworfen; ebenso bleibt die
-                    leise Stimme (`text-micro`/`ink-500`, §13). */}
-                <button type="button" onClick={() => kopiere('zitat')} className="lc-btn-mini text-micro text-ink-500 hover:text-brass-700" aria-label={`Zitat kopieren: ${zitatVoll}`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
-                <button type="button" onClick={() => kopiere('link')} className="lc-btn-mini text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
-                {/* EID-2: Outbound zur amtlichen Fassung AN DIESER STELLE (ELI-Form,
-                    target/rel wie die bestehenden amtlichen Links, §12.4). Stil =
-                    dieselbe dezente Aktions-Stimme wie Zitat/Link daneben (§13). */}
-                {amtlich && (
-                  <a href={amtlich} target="_blank" rel="noopener noreferrer"
-                    className="lc-btn-mini text-micro text-ink-500 hover:text-brass-700 no-underline whitespace-nowrap"
-                    aria-label={`Amtliche Fassung von ${zitat} auf Fedlex öffnen ${NEUER_TAB}`}
-                    // Ä110 (18.8.2026): EINE Schreibung für EIN Ziel — der
-                    // sichtbare Text folgt dem `aria-label` und dem `title`
-                    // darüber, die schon immer «Amtliche Fassung» sagten.
-                    title="Amtliche Fassung an genau dieser Stelle (Fedlex)">Amtliche Fassung ↗</a>
-                )}
-              </span>
-            )}
+            {/* ── W2·24-D35-F1 (David 7.9.2026) · HIER STANDEN DIE AKTIONEN ──
+                «Zitat · Link · Amtliche Fassung ↗» sassen rechtsbündig in
+                dieser Kopfzeile — und trugen `opacity-0` bis Hover, Fokus oder
+                Touch (gemessen 7.9.2026: Deckkraft 0). Mit dem Variante-A-
+                Entscheid stehen sie am ARTIKELENDE in der Funktionszeile,
+                dauerhaft sichtbar (`./ArtikelAktionen.tsx`, eingehängt unten am
+                `<ArtikelBezuegeFuss aktionen=…>`).
+
+                ERSATZLOS gelöscht, nicht zusätzlich gebaut (§5/§17-Gegengewicht):
+                zwei Orte für dieselbe Aktion wären genau die Dopplung, die D35
+                abräumt. Mit der Zeile fällt auch ihr `data-such-meta`-Bedarf
+                weg — die Suche kann in dieser Kopfzeile keine unsichtbaren
+                Fundstellen mehr malen (Bug-Check B1, 4.8.2026), weil hier keine
+                Bedienwörter mehr stehen. */}
             {/* Amtliche Aufhebungsnotiz (eigene Zeile, dezent eingerückt) — M2: erst
                 auf Klick (hinter dem Fussnoten-Schalter), wie jede andere Fussnote.
                 Die Statuszeile «· aufgehoben» oben bleibt unabhängig immer sichtbar. */}
@@ -731,7 +632,9 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
         <ArtikelBezuegeFuss bezuege={bezuege} bezuegeImFuss={bezuegeImFuss}
           leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
           werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}
-          onOeffnen={onBezuegeOeffnen} laedt={bezuegeLaedt && !bezuege} />
+          onOeffnen={onBezuegeOeffnen} laedt={bezuegeLaedt && !bezuege}
+          aktionen={<ArtikelAktionen artikel={e.artikel} basisPfad={basisPfad}
+            zitat={zitat} zitatVoll={zitatVoll} amtlich={amtlich} />} />
       </div>
     </article>
   );

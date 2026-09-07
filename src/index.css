@@ -909,16 +909,28 @@
     display: none;
   }
 
-  /* Entscheide AUS (V2·B-1, David 10.7.2026): die verlinkten Bundesgerichts-
-     Leitfall-Zeilen werden ganz ausgeblendet — reine Referenzschicht, der NORMTEXT
-     ist NIE betroffen. `display:none` an der `[data-leitfall-zeile]`-Zeile (Marker
-     an LeitfallZeile). Blaupause der Fussnoten-Regel: Default 'an' emittiert keine
-     Regel (byte-gleich, R6); toggle-getrieben ⇒ Reflow binnen 500 ms nach Klick
-     (input-exkludiert) ⇒ kein CLS-Beitrag. KEIN React-Re-Render (§15) — die Zeilen
-     bleiben im DOM (Ctrl+F/Screenreader-neutral wie der Fussnoten-Toggle). */
-  html[data-leitfaelle="aus"] .lc-leser [data-leitfall-zeile] {
-    display: none;
-  }
+  /* ── W2·24-D35-F1 (7.9.2026) · HIER STAND EINE REGEL, DIE GELOGEN HAT ────
+     Bis hierher blendete `html[data-leitfaelle="aus"] .lc-leser
+     [data-leitfall-zeile]` die Entscheid-Liste im Lesetext aus (V2·B-1, David
+     10.7.2026). Der Schalter «Rechtsprechung im Kopf» war damit schon am
+     18.8.2026 überholt: `LeserAnsichtV3.tsx` hält seit B2 ausdrücklich fest,
+     die Regel «greift weiter, es findet in V3 nur keine Zeile» — die Entscheide
+     standen im Panel, nicht im Text.
+
+     MIT D34 FAND SIE WIEDER EINE. GEMESSEN 7.9.2026 (D35-Untersuchung M-6, OR
+     Art. 336c): Schalter auf «aus» ⇒ die Fusszeile verspricht weiter «11
+     Entscheide», der aufgeklappte Block ist `display:none`, Höhe 0 px. Elf
+     zugesagte Entscheide, null gelieferte — genau der §8-Fall, den das Haus
+     abräumt.
+
+     WURZEL-FIX, nicht Symptom-Fix (§17): die Regel ist ERSATZLOS gestrichen.
+     Die Fusszeile zeigt, was sie zählt — immer. Der Schalter behält die
+     Wirkung, die sein Wort und sein `title` seit Ä128 versprechen (Zähler und
+     Zugang im Erlass-KOPF, `[data-v3-panel-zaehler]`); er greift nicht mehr
+     unsichtbar in den Artikel hinein. Der Marker `[data-leitfall-zeile]` bleibt
+     vorerst am Markup stehen: über die Zukunft des Schalters entscheidet
+     W2·24-D35-F2 (Kopf-Entlastung), und ein Marker, den F2 gerade begutachtet,
+     wird hier nicht nebenbei mitgenommen. */
 
   /* ── Ä1 (LESER-V3 H2b) · die Polsterung, die der V3-Kopf verschluckt ────────
      Der Route-Wrapper polstert den Seiteninhalt oben (`py-8 sm:py-12` in
@@ -3402,33 +3414,45 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
   border-top: 1px solid var(--rule-soft);
   padding-top: 0.5rem;
 }
+/* D35-F1: die Zeile war bis D34 ein `<summary>` mit EINEM Zustand für alle
+   Rubriken. Sie ist jetzt eine Reihe: links das Wort «Bezüge» und je Rubrik ein
+   eigener Griff, rechts die Artikel-Aktionen. Cursor, Fokusring und Hover
+   sitzen darum an den GRIFFEN (`.lc-btn-mini`), nicht mehr an der Zeile — sie
+   selbst ist kein Bedienelement mehr. */
 .lr7-bez-zeile {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
-  list-style: none; /* Firefox: das Dreieck der <summary> */
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 0.75rem;
   line-height: 1.5rem; /* = min-h-beiwerk: die Zeile ist so hoch wie eine Chip-Zeile */
   color: var(--ink-500);
 }
-.lr7-bez-zeile::-webkit-details-marker { display: none; }
-.lr7-bez-zeile:hover { color: var(--brass-700); }
-/* Sichtbarer Fokus (WCAG 2.4.7) — dieselbe Ringfarbe wie im Haus. */
-.lr7-bez-zeile:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
 .lr7-bez-wort { font-weight: 500; color: var(--ink-600); }
 /* Registerfarben-Marke je Rubrik: derselbe 3-px-Strich, der bis R6 am
-   `.lr-notiz-titel` stand — die einzige Farbe am Artikel. */
+   `.lr-notiz-titel` stand — die einzige Farbe am Artikel. Er sitzt seit D35-F1
+   auf der linken Kante des Mini-Knopfes: die Haarlinie ringsum ist die
+   Affordanz («das hier klappt auf»), die kräftigere linke Kante bleibt die
+   Registerauskunft. Zwei Aufgaben, eine Linie, kein Kasten (F0.6). */
 .lr7-bez-marke {
-  padding-left: 0.5rem;
-  border-left: 3px solid var(--ink-900);
+  gap: 0.25rem;
+  border-left-width: 3px;
+  border-left-color: var(--ink-900);
   white-space: nowrap;
+  color: var(--ink-600);
+}
+.lr7-bez-marke[aria-expanded="true"] { color: var(--ink-900); }
+/* Die Aktionen des Artikels stehen am rechten Ende derselben Zeile; @390 (oder
+   sobald die Rubriken die Breite füllen) rutschen sie auf die nächste Zeile —
+   `margin-left: auto` schiebt sie dort nicht aus dem Bild, weil der Umbruch
+   vorher greift. Dauerhaft sichtbar: keine Deckkraft, keine Hover-Kette. */
+.lr7-bez-aktionen {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
 }
 .lr7-bez-marke[data-reg="r"] { border-left-color: var(--reg-r); }
 /* W2·24-R6c: die Rubrik «Materialien» hat mit der Zähl-Datei eine echte Zahl
@@ -3442,7 +3466,7 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
    löste er sich optisch von dem, was er aufklappt (gesehen am Bild r6b-1440,
    6.9.2026). */
 .lr7-bez-pfeil { display: inline-block; transition: transform var(--dur-fast, 120ms) var(--ease, ease); }
-.lr7-bez[open] .lr7-bez-pfeil { transform: rotate(90deg); }
+.lr7-bez-marke[aria-expanded="true"] .lr7-bez-pfeil { transform: rotate(90deg); }
 .lr7-bez-inhalt {
   display: grid;
   gap: 0.75rem;
@@ -3451,6 +3475,12 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
   border-left: 3px solid var(--rule-artikel);
 }
 .lr7-bez-block[data-reg] { min-width: 0; }
+/* D35-F1 · das Skelett der wartenden Rubrik. Die reservierte HÖHE steht als
+   `min-h-bez-skelett` in `tailwind.config.js` — Hausform für Höhen-
+   Reservierungen (`beiwerk`, `titel-2z`), und index.css bleibt frei von rohen
+   min-height-Zahlen (F9, `tap-ziel-token.test.ts`). Hier steht nur, dass das
+   Skelett eine eigene Zeile ist. */
+.lr7-bez-skelett { display: block; }
 
 /* ── D30 (David 6.9.2026) · DER AUFGEKLAPPTE APPARAT ────────────────────────
    Befund: die Zeile zählte «11 Entscheide» und zeigte beim Aufklappen nur den
