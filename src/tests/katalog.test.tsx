@@ -6,7 +6,10 @@ import { Startseite } from '../pages/Startseite';
 import { RechnerUebersicht } from '../pages/RechnerUebersicht';
 import { VorlagenUebersicht } from '../pages/VorlagenUebersicht';
 import { HeaderSuche } from '../components/layout/HeaderSuche';
-import { SAMMLUNG_TITEL } from '../lib/seo';
+import { IMMER, TAGESZEITEN } from '../lib/begruessungen';
+
+/** Alle möglichen Grüsse — für den H1-Inhaltstest unten (D39). */
+const ALLE_GRUESSE = [...IMMER, ...TAGESZEITEN.flatMap((t) => t.pool)];
 
 // Akzeptanztests Katalog/Rubriken. Stand UI-Welle (deklarierte Anpassung
 // §6 Ziff. 3): /recherche ist aufgelöst — die Rechner-/Vorlagen-Register leben
@@ -187,13 +190,24 @@ describe('Globale Suche im Top-Streifen (UI-Welle: Dropdown überall, §6.3)', (
 });
 
 describe('Startseite R3 — Inhaltsverzeichnis der Sammlung (deklarierte Anpassung §6.3)', () => {
-  it('Titelblatt-Zeile: EINE H1 «Sammlung», Begrüssung mit Datum, Bestands-Aufzählung — kein Slogan', () => {
+  it('Titelblatt-Zeile: EINE H1 = die Begrüssung, Datumszeile, Bestands-Aufzählung — kein Slogan', () => {
     const html = startHtml('/');
-    // Genau eine H1, und sie trägt den Titelblatt-Begriff (nicht mehr die
-    // Value Proposition). `e2e/a11y.e2e.ts` prüft zusätzlich, dass sie SICHTBAR
-    // ist — eine sr-only-H1 wäre dort rot.
+    // Genau eine H1. DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET D39,
+    // David 7.9.2026, §6.3): bis hierher trug die H1 wortwörtlich den
+    // Titelblatt-Begriff `SAMMLUNG_TITEL` («Sammlung») — Wortlaut «entferne
+    // oberhalb der begrüssung das wort Sammlung […] die begrüssung [wird
+    // die] h1». Die H1 trägt jetzt den (zufällig gezogenen) Gruss aus dem
+    // Begrüssungs-Pool statt eines festen Worts; geprüft wird darum
+    // Mitgliedschaft im Pool statt eines festen Substrings, UND dass
+    // «Sammlung» nirgends mehr im Kopfbereich (vor der Bereichs-Reihe) steht.
+    // `e2e/a11y.e2e.ts` prüft zusätzlich, dass die H1 SICHTBAR ist — eine
+    // sr-only-H1 wäre dort rot.
     expect(html.match(/<h1[\s>]/g) ?? []).toHaveLength(1);
-    expect(html).toContain(SAMMLUNG_TITEL);
+    const h1Inhalt = html.match(/<h1[^>]*>(.*?)<\/h1>/s)?.[1] ?? '';
+    expect(h1Inhalt, `H1-Inhalt: ${h1Inhalt}`).not.toBe('');
+    expect(ALLE_GRUESSE, `H1-Inhalt «${h1Inhalt}» nicht im Gruss-Pool`).toContain(h1Inhalt);
+    const kopfbereich = html.slice(0, html.indexOf('Bereiche der Sammlung'));
+    expect(kopfbereich, 'kein «Sammlung» oberhalb der Bereichs-Reihe (D39)').not.toContain('Sammlung');
     // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R10, 6.9.2026, §6.3): hier
     // stand zusätzlich `toContain(SAMMLUNG_BESTAND)` — «Gesetze, Entscheide,
     // Materialien, Rechner, Vorlagen.». Genau diese fünf stehen seit R10 als
@@ -212,8 +226,14 @@ describe('Startseite R3 — Inhaltsverzeichnis der Sammlung (deklarierte Anpassu
     expect(html).not.toContain('an einem Ort');
     expect(html).not.toContain('miteinander verzahnt');
     expect(html).not.toContain('Berechnung statt KI');
-    // Begrüssung + Datum «T. Monat JJJJ» (weiterhin ohne tickende Uhr).
+    // Begrüssung + Datum «T. Monat JJJJ». Seit D39 tickt daneben eine Uhr —
+    // aber NICHT im statischen Server-Render hier (`renderToString` feuert
+    // keine `useEffect`s, s. `Begruessung.tsx` `useHeute`): der HTML-Schnappschuss
+    // trägt darum nur den unsichtbaren `00:00`-Platzhalter, der die Zeilenbreite
+    // reserviert (§15, CLS) — keine echte, gebackene Uhrzeit.
     expect(html).toMatch(/\d{1,2}\.\s(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s\d{4}/);
+    expect(html, 'Uhrzeit-Platzhalter unsichtbar reserviert').toContain('visibility:hidden');
+    expect(html.match(/\d{2}:\d{2}/g), 'einzige HH:MM-Stelle ist der Platzhalter').toEqual(['00:00']);
     // ── DEKLARIERTE ANPASSUNG (§6.3, W2·24-R5-F1C, David-Befund D18, 6.9.2026)
     // «insgesamt braucht es auf der startseite keine suche. nur oben reicht».
     // Hier standen drei Erwartungen an die Hero-Suche (`role="search"`,
