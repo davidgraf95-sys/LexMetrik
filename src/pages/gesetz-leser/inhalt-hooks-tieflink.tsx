@@ -238,6 +238,50 @@ export function useTieflinkSprung(opts: {
     let letzteLage = Number.NaN;
     let rafId = 0;
     let fertig = false;
+    // ── W2·24-D34/2 · WER BESITZT DEN SCROLL GERADE (§5) ────────────────────
+    //
+    // BEFUND (CI-Rot 34117385177, Shard 1, `e2e/leser-history-hash.e2e.ts:21`;
+    // lokal 3/3 byte-gleich nachgestellt, `dist/`-Preview, Chromium 1440×900,
+    // Port 4424). Die Sonde springt per Tieflink auf `AIG#art-90` und scrollt
+    // dann PROGRAMMATISCH zu Art. 5. Zwei `scroll`-Ereignisse, 10 ms auseinander:
+    //     t 1458 ms  scrollY 3'280   — Art. 90 bei 92'403 px (weit unterhalb)
+    //     t 1468 ms  scrollY 95'529  — Art. 90 wieder bei 154 px
+    // Die zweite Zeile ist der Nachzug: er las «das Ziel ist von seiner Lage
+    // weggelaufen» und zog zurück. Der Anker-Spy sah damit nie Art. 5, die
+    // A16-Leseposition blieb Art. 90 — die ganze LM-199-Kette fiel.
+    //
+    // WURZEL: die Schleife kannte NUR die Frage «hat sich die Lage geändert?»,
+    // nicht die Frage «von wem?». Zuwachs oberhalb (der D34-Fall) und ein
+    // FREMDER Scroll erzeugen dasselbe Signal. Die vier Übernahme-Ereignisse
+    // unten fangen den Menschen (Rad, Tippen, Tippen auf den Schirm, Zeiger),
+    // aber keinen Scroll aus Code — Playwrights `scrollIntoViewIfNeeded`, die
+    // A16-Konvergenzschleife, ein `scrollTo` aus einem anderen Baustein.
+    //
+    // DER MASSSTAB, und er ist hergeleitet, nicht gewählt: unkompensiert kann
+    // das Ziel nur das verschieben, was ZWISCHEN dem oberen Bildrand (dem
+    // Scroll-Anker des Browsers) und dem Ziel wächst — und das Ziel steht per
+    // Konstruktion am Landepunkt, also im ERSTEN Bild. Ein Nachzug bewegt es
+    // darum höchstens um eine Bildhöhe. Ein Ziel, das das Bild VERLASSEN hat,
+    // ist kein Nachzug-Fall, sondern ein fremder Scroll: dann gibt die Schleife
+    // ab, statt zurückzureissen. Damit gibt es genau EINEN Eigentümer des
+    // Scrolls je Zeitpunkt (§5) statt zweier Schleifen im Rennen.
+    //
+    // GEMESSEN wird die Bildhöhe am FENSTER, auch im Pane: `getBoundingClient-
+    // Rect().top` ist immer fenster-relativ, und das Pane liegt im Fenster —
+    // eine Grösse, die in beiden Lagen dasselbe misst (wie oben bei `letzteLage`).
+    //
+    // DER SCHALTER IST NICHT `aufgedeckt`, SONDERN `eingeschwungen`. Deckt der
+    // Zeitdeckel (`AUFDECK_MS`) auf, WÄHREND die Lage noch wandert, steht das
+    // Ziel u. U. gar nicht im Bild — eine Abgabe in diesem Moment liesse den
+    // Leser irgendwo stehen. Erst wenn die Lage zwei Frames ruhig war, ist der
+    // Landepunkt erreicht und «ausserhalb des Bildes» aussagekräftig.
+    //
+    // NICHT NOCHMAL GEBAUT (§17-Gegengewicht): «nur beim echten Tieflink-
+    // Einsprung» steht bereits zweimal weiter oben — `istHashVerbraucht()`
+    // (Z. 95) sperrt Zurück/Vorwärts aus einer anderen Route, `hashSeedGetan`
+    // (Z. 87) den Pane-Wechsel. Beim Browser-Zurück läuft dieser Effekt also
+    // gar nicht erst bis hierher; die Sonde unten belegt das.
+    let eingeschwungen = false;
     const UEBERNAHME = ['wheel', 'touchstart', 'keydown', 'pointerdown'] as const;
     const beende = () => {
       if (fertig) return;
@@ -254,12 +298,16 @@ export function useTieflinkSprung(opts: {
       if (fertig) return;
       const el = ziel();
       if (!el) { beende(); return; }
+      const vorLage = el.getBoundingClientRect().top;
+      // Ziel ausserhalb des Bildes ⇒ der Scroll gehört jemand anderem: abgeben.
+      if (eingeschwungen && (vorLage < 0 || vorLage > window.innerHeight)) { beende(); return; }
       // Verdeckt: jeden Frame nachziehen. Aufgedeckt: nur bei Weglaufen.
-      if (!aufgedeckt || Math.abs(el.getBoundingClientRect().top - letzteLage) > 1) springe(el);
+      if (!aufgedeckt || Math.abs(vorLage - letzteLage) > 1) springe(el);
       const lage = el.getBoundingClientRect().top;
-      if (!aufgedeckt) {
-        ruhig = Math.abs(lage - letzteLage) <= 1 ? ruhig + 1 : 0;
-        if (ruhig >= 2) { window.clearTimeout(deckel); aufdecken(); }
+      ruhig = Math.abs(lage - letzteLage) <= 1 ? ruhig + 1 : 0;
+      if (ruhig >= 2) {
+        eingeschwungen = true;
+        if (!aufgedeckt) { window.clearTimeout(deckel); aufdecken(); }
       }
       letzteLage = lage;
       rafId = window.requestAnimationFrame(nachziehen);

@@ -216,3 +216,80 @@ Zeile angefasst.
 7454 grün · `npx tsc -b` 0 · lint 0 Fehler (1 Bestands-Warnung) ·
 `golden:vergleich` 256 Fälle byte-gleich · `check:golden-normtext` 60 257 Knoten
 · `check:perf-lighthouse` (PERF_RUNS=1) grün, OR-CLS **0.002** (≤ 0.05).
+
+## 10 Nachfix 7.9.2026 — CI-Rot 34117385177 (Shard 1): der Nachzug riss zurück
+
+Der Nachzug aus §9 hat einen zweiten Fehler ausgelöst. CI-Rot **34117385177**,
+Shard 1, `e2e/leser-history-hash.e2e.ts:21` (LM-199 «Zurück mit stehendem
+#hash: Leseposition, nicht Einstiegs-Anker»): `toBeInViewport` fehlgeschlagen.
+
+**Reproduktion, 3/3 byte-gleich** (`dist/`-Preview auf Stand c79e8e067,
+Chromium 1440×900, `E2E_PORT=4424`, `--repeat-each=3 --workers=2`): rot **nicht**
+beim Browser-Zurück, sondern schon in Zeile 37 — direkt nach dem organischen
+Wegscrollen zu Art. 5, lange vor der Rückkehr aus dem StGB. Die Anfangsvermutung
+(«die Leseposition-Wiederherstellung und der Nachzug rennen beim Zurück
+gegeneinander») ist damit **falsifiziert**: beim Zurück läuft der Effekt gar
+nicht erst an, `istHashVerbraucht()` bricht ihn in Zeile 95 ab.
+
+**Wurzel, direkt gemessen** (`scroll`-Ereignis-Sonde auf `/gesetze/bund/AIG#art-90`,
+danach `scrollIntoViewIfNeeded()` auf Art. 5) — zwei Ereignisse, 10 ms auseinander:
+
+| t | `scrollY` | Lage Art. 90 |
+|---|---|---|
+| 1458 ms | 3'280 | 92'403 px (weit unterhalb des Bildes) |
+| 1468 ms | 95'529 | **154 px** (zurück am Landepunkt) |
+
+Die zweite Zeile ist der Nachzug. Er kannte nur die Frage «hat sich die Lage
+geändert?», nicht die Frage «**von wem?**» — Zuwachs oberhalb (der D34-Fall aus
+§9) und ein fremder Scroll erzeugen dasselbe Signal. Die vier Übernahme-Ereignisse
+(`wheel`/`touchstart`/`keydown`/`pointerdown`) fangen den Menschen, aber keinen
+Scroll aus Code: Playwrights `scrollIntoViewIfNeeded`, die A16-Konvergenzschleife,
+jedes `scrollTo` aus einem anderen Baustein. Folge in der Sonde: der Anker-Spy sah
+nie Art. 5, die A16-Leseposition blieb Art. 90, und die ganze LM-199-Kette fiel.
+
+**Fix** (`src/pages/gesetz-leser/inhalt-hooks-tieflink.tsx`, keine zweite
+Mechanik): dieselbe Schleife bekommt **einen Eigentümer-Begriff** (§5). Ist das
+Ziel nach dem Einschwingen aus dem Bild gelaufen, gibt sie ab (`beende()`) statt
+zurückzureissen. Der Massstab ist hergeleitet, nicht gewählt: unkompensiert kann
+das Ziel nur verschieben, was **zwischen dem oberen Bildrand** (dem Scroll-Anker
+des Browsers) **und dem Ziel** wächst — und das Ziel steht per Konstruktion am
+Landepunkt, also im ersten Bild. Ein Nachzug bewegt es darum höchstens um eine
+Bildhöhe; alles darüber ist ein fremder Scroll. Gemessen wird die Bildhöhe am
+Fenster, auch im Pane: `getBoundingClientRect().top` ist immer fenster-relativ.
+
+Der Schalter ist bewusst **`eingeschwungen`**, nicht `aufgedeckt`: deckt der
+Zeitdeckel (`AUFDECK_MS`) auf, während die Lage noch wandert, steht das Ziel u. U.
+gar nicht im Bild — eine Abgabe in diesem Moment liesse den Leser irgendwo stehen.
+Erst nach zwei ruhigen Frames ist «ausserhalb des Bildes» aussagekräftig.
+
+**Nicht nochmal gebaut** (§17-Gegengewicht): «nur beim echten Tieflink-Einsprung»
+steht bereits zweimal in derselben Datei — `istHashVerbraucht()` sperrt
+Zurück/Vorwärts aus einer anderen Route, `hashSeedGetan` den Pane-Wechsel. Ein
+dritter Wächter für dieselbe Sorge wäre eine zweite Wahrheit (§5).
+
+### 10.1 Zwei neue Sonden und ihre Rot-Proben (§6.7)
+
+Angehängt an `e2e/leser-bezuege-fuss-d34.e2e.ts` (Gruppe 2) — der Nachzug ist die
+Kehrseite derselben Design-Entscheidung, er gehört nicht in eine eigene Datei.
+Beide Zusagen sind **gegenläufig**; jede einzeln ist wertlos.
+
+| | Zusage | rot gemacht durch | Ergebnis |
+|---|---|---|---|
+| (e) | fremder Scroll gewinnt: nach dem Wegscrollen bleibt man weg | Abgabe-Zeile löschen (= Stand c79e8e067) | **3/3 rot** — Art. 5 mit `viewport ratio 0` |
+| (f) | der Nachzug greift weiterhin: frischer Tieflink steht nach dem Nachrendern am Landepunkt | `if (aufgedeckt) { beende(); return; }` an den Kopf von `nachziehen` (= Stand VOR c79e8e067) | **3/3 rot** — Art. 8 bei y=**203** statt **154**, also die 49 px der Bezüge-Zeile aus §9 |
+
+Jede Probe färbt **genau eine** der beiden Sonden: bei (e) blieb (f) grün, bei (f)
+blieb (e) grün. Die bestehenden Sonden sind unverändert (§6.3) — an
+`e2e/leser-history-hash.e2e.ts` und `e2e/leser-ruecksprung-r5-r7.e2e.ts` ist keine
+Zeile angefasst. Der Rückweg per Browser-Zurück braucht keine eigene neue Sonde:
+`leser-history-hash.e2e.ts` misst genau diesen Fall und ist der Anlass des Nachfixes.
+
+### 10.2 Tore nach dem Nachfix
+
+Fünf Specs (`leser-history-hash`, `leser-ruecksprung-r5-r7`, `leser-bezuege-fuss-d34`,
+`w224-reiterverhalten`, `leser-v3-kontext-cls`) mit `--repeat-each=3 --workers=2`:
+**93 passed** (7.9 min) · `npm run test` **460 Dateien / 7454 Tests grün**, 2 skipped ·
+`npx tsc -b` **0** · `npm run lint` **0 Fehler** (1 Bestands-Warnung in
+`useUniversalSuche.ts`, unberührt) · `golden:vergleich` **256 Fälle byte-gleich** ·
+`check:golden-normtext` **60 257 Knoten**, 0 Waisen · `check:schlankheit` grün
+(1487 Dateien) · `check:e2e-shards` grün (142 Specs).
