@@ -3192,3 +3192,21 @@ Elternschritte ist unangetastet.*
   - [x] **V6 valibot-Formprüfung** — ✅ (Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 6.9.2026).
   - [x] **V8 pagefind-Spike** — ✅ (Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 6.9.2026).
 
+
+# Umschichtung 8.9.2026 — erledigte Schritte aus dem Steuerungsplan
+
+*Anlass: Roadmap-Aufräumen (Auftrag David 8.9.2026, „kannst du auch noch roadmap aufräumen?").
+`W2·23-STARTSEITE-V4` behielt seit der Umschichtung 7.9.2026 einen ✅-Einzeiler samt `@meta` in
+`ROADMAP.md`, weil er der einzige Link auf `fahrplaene/FAHRPLAN-STARTSEITE-V4.md` war
+(`check:plan` Regel 7/9). Verify-then-archive (aufraeumen.md Ziff. 4): kein weiterer lebender
+Zeiger auf den Basenamen in ROADMAP.md, fahrplaene/, bibliothek/ oder docs/, keine `dep:`-Referenz
+auf die ID — Fahrplan nach `archiv/fahrplaene/FAHRPLAN-STARTSEITE-V4.md` verschoben, der
+verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
+
+## W2·23-STARTSEITE-V4 — Rest-Stub, geschlossen mit Fahrplan-Archivierung *(done, verschoben 8.9.2026)*
+
+- [x] **Startseite V4 «Werkbank»: Einstieg mit Gesetzes-Schwerpunkt, persönliche Begrüssung, Kopf- und Seitenleiste** *(`W2·23-STARTSEITE-V4`, Auftrag David 5.9.2026)*
+  <!-- @meta id: W2·23-STARTSEITE-V4 · status: done · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-STARTSEITE-V4.md -->
+  ✅ gelandet 5.9.2026 (#730/#732) — Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026. Der
+  Eintrag bleibt hier, bis `FAHRPLAN-STARTSEITE-V4.md` archiviert ist (einziger Link, `check:plan`).
+  **Detail:** [FAHRPLAN-STARTSEITE-V4.md](fahrplaene/FAHRPLAN-STARTSEITE-V4.md) §1.
