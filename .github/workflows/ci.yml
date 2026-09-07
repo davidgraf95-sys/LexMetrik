@@ -728,7 +728,7 @@ jobs:
         run: npm run check:e2e-shards
       - name: dist-Artefakt herunterladen (aus `bau`, nicht neu bauen)
         if: needs.diff.outputs.art == 'code'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist
@@ -844,7 +844,7 @@ jobs:
           cache: npm
       - run: npx -y npm@11 ci
       - name: dist-Artefakt herunterladen (aus `bau`, nicht neu bauen)
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist
