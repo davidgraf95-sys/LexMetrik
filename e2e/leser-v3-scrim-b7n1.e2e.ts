@@ -29,7 +29,21 @@ import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 
 const SCRIM_FARBE = 'rgba(0, 0, 0, 0.3)'
-const PFAD = '/gesetze/bund/OR'
+// ── WURZEL-FIX (§17, W2·24-R6c 6.9.2026): NICHT MEHR DER OR ─────────────────
+// Diese Datei lief auf `/gesetze/bund/OR` und riss reproduzierbar unter
+// Parallel-Last an `leserBereit` («element(s) not found» nach 20 s), während
+// jeder Fall einzeln grün war — 4 von 8 Fällen im 5-Worker-Lauf, 1 von 8 im
+// seriellen (Nullprobe auf 2a18f97bb, also ÄLTER als R6c). Gemessen am
+// Preview-Build: die OR-Seite liefert **8.75 MB** vorgerendertes HTML, BGBM
+// **144 KB** — Faktor 60. Der Scrim ist erlass-neutral (er hängt am Menü, nicht
+// am Gesetzestext), also kostet der Wechsel keine Aussage und nimmt der Datei
+// ihre einzige Flake-Ursache. Dasselbe Argument und derselbe Erlass stehen seit
+// dem 4.7.2026 in `e2e/leser-lesemass.e2e.ts` («BGBM … klein (~22 KB), trägt
+// Marker UND Apparat — der grosse OR starvte den gedrosselten CI-Runner»).
+// GEPRÜFT, dass BGBM alle vier Haken dieser Datei trägt (je 1×):
+// `[data-leser-v3="rahmen"]`, `[data-v3-ansicht]`, `[data-v3-panel-oeffner]`,
+// `[data-v3-panel-zaehler]`.
+const PFAD = '/gesetze/bund/BGBM'
 
 const ansichtOeffner = (page: Page) => page.locator('[data-v3-ansicht]')
 const ansichtPanel = (page: Page) => page.locator('[data-v3-ansicht-panel]')

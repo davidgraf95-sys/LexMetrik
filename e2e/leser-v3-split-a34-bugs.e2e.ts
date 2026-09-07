@@ -19,6 +19,7 @@
 //
 // Läuft gegen `vite preview` (dist). Reine UI-Einheit (golden-neutral).
 import { test, expect, type Page } from '@playwright/test'
+import { SCHALTER_ROLLE } from './helpers/leserBeschriftung'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 import { panelAufziehen } from './helpers/panelOeffnen'
 
@@ -97,7 +98,7 @@ test('V3/A34/Bug2 (≥lg): «Ansicht»-Menü im Split-View bleibt beim Scrollen 
   await ansicht.click()
   await expect(primaer.locator('[data-v3-ansicht-panel]')).toBeVisible()
   const vorher = await page.evaluate(() => document.documentElement.getAttribute('data-fussnoten') ?? 'an')
-  await primaer.getByRole('switch', { name: /Fussnoten/ }).first().click()
+  await primaer.getByRole(SCHALTER_ROLLE, { name: /Fussnoten/ }).first().click()
   await expect.poll(() => page.evaluate(() => document.documentElement.getAttribute('data-fussnoten') ?? 'an'))
     .toBe(vorher === 'aus' ? 'an' : 'aus')
   expect(fehler).toEqual([])

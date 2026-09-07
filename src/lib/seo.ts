@@ -24,11 +24,21 @@ export const SITE_URL = 'https://lexmetrik.vercel.app';
 // Absolutum, der Status-Terminus «geprüft» ist für Inhalte reserviert (nie
 // «geprüfte Bausteine»), «Ohne KI» nie als Siegel — nur der gescopte Satz.
 
-/** H1 der Startseite (Value Proposition; W2·23-STARTSEITE-V4 §5). */
-export const HERO_TITEL = 'Schweizer Recht an einem Ort';
-/** Subline unter der H1 (W2·23-STARTSEITE-V4 §5). */
-export const HERO_SUBLINE =
-  'Gesetze von Bund und Kantonen, Bundesgerichtsentscheide und amtliche Materialien — miteinander verzahnt, mit Stand und Link zur amtlichen Quelle. Dazu Rechner und Vorlagen für Fristen, Kosten und Eingaben.';
+// ─── SPRACH-DIÄT (W2·24-DESIGN-IDENTITAET R3, Fahrplan §6 (h)) ──────────────
+// Weg sind die beiden SICHTBAREN Nutzenversprechen der Startseite: die H1
+// «Schweizer Recht an einem Ort» und die Subline «… miteinander verzahnt …».
+// Beide behaupteten eine Eigenschaft, statt den Bestand zu bezeichnen; «an einem
+// Ort» und «verzahnt» sind genau die Wendungen, die §5 des Fahrplans als
+// Slogan-Sprache benennt. An ihrer Stelle steht der Titelblatt-Begriff und eine
+// AUFZÄHLUNG. Die SEO-Träger unten (`SITE_TITEL`/`SITE_DESCRIPTION`) sind
+// gekürzt, nicht getilgt — sie sind an `check:seo-index` und an index.html
+// gebunden, und eine Seite ohne Suchbegriffe im Titel findet niemand.
+
+/** H1 der Startseite — der Titelblatt-Begriff, keine Value Proposition. */
+export const SAMMLUNG_TITEL = 'Sammlung';
+/** Was in der Sammlung steht, als Aufzählung (Bezeichnung, kein Versprechen). */
+export const SAMMLUNG_BESTAND =
+  'Gesetze, Entscheide, Materialien, Rechner, Vorlagen.';
 /** Vertrauens-Fuss, erster Satz — gescopter Anti-KI-Satz (§6, Auflage 1). */
 export const VERTRAUENS_SATZ =
   'Kein Sprachmodell schätzt Ergebnisse: gerechnet wird nach festen Regeln, der Rechenweg ist offengelegt, Normen sind mit der amtlichen Sammlung verlinkt.';
@@ -41,18 +51,18 @@ export const SITE_KURZFORM = 'Gerechnet wird nach festen Regeln, mit offengelegt
 
 /** Globaler Titel/Description — aus dem I2-Material (§6) abgeleitet; index.html
  *  spiegelt genau diese Werte (Tor check:seo-index). */
-// W2·23-STARTSEITE-V4 §5: der Seitentitel ist NICHT mehr `LexMetrik — ${HERO_TITEL}`.
-// Die H1 ist mit V4 bewusst kurz («Schweizer Recht an einem Ort»); ein <title>
-// braucht daneben die drei Suchbegriffe, unter denen die Seite gefunden wird.
-// Darum hier literal — der Titel bleibt trotzdem EINE Quelle (index.html
-// spiegelt ihn, Tor check:seo-index).
-export const SITE_TITEL = 'LexMetrik — Schweizer Recht an einem Ort: Gesetze, Urteile, Rechner';
+// Der Seitentitel ist NICHT aus der H1 abgeleitet: ein <title> braucht die
+// Suchbegriffe, unter denen die Seite gefunden wird. Darum hier literal — der
+// Titel bleibt trotzdem EINE Quelle (index.html spiegelt ihn, Tor
+// check:seo-index). W2·24-R3: der Slogan-Teil «Schweizer Recht an einem Ort»
+// ist gestrichen, die Suchbegriffe stehen unverändert.
+export const SITE_TITEL = 'LexMetrik — Schweizer Gesetze, Rechtsprechung, Materialien, Rechner';
 export const SITE_DESCRIPTION =
-  'Schweizer Recht an einem Ort: Gesetze von Bund und Kantonen, Bundesgerichtsentscheide und amtliche Materialien — miteinander verzahnt, mit Stand und Link zur amtlichen Quelle. Dazu Rechner und Vorlagen.';
+  'Gesetze von Bund und Kantonen, Bundesgerichtsentscheide und amtliche Materialien der Schweiz, mit Stand und Link zur amtlichen Quelle. Dazu Rechner und Vorlagen.';
 /** Kuratierter Social-Share-Text der Startseite (og:description) — bewusst mit
  *  dem gescopten Rechen-Satz statt Marketing-Claim. */
 export const SITE_OG_DESCRIPTION =
-  'Gesetze von Bund und Kantonen, Bundesgerichtsentscheide und Materialien an einem Ort, dazu Rechner und Vorlagen. Gerechnet wird nach festen Regeln, mit Norm, Link und Stand.';
+  'Gesetze von Bund und Kantonen, Bundesgerichtsentscheide und amtliche Materialien der Schweiz, dazu Rechner und Vorlagen. Gerechnet wird nach festen Regeln, mit Norm, Link und Stand.';
 
 export interface RouteMetadaten {
   pfad: string;          // z. B. '/rechner/verzugszins'

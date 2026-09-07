@@ -215,7 +215,7 @@ export function UebersichtBox({ angaben }: { angaben: UebersichtsAngaben }) {
               // Links, und gilt darum auch für ein künftiges drittes Ziel.
               <a key={l.id} data-v3-uebersicht-link={l.id} href={l.href}
                 target="_blank" rel="noopener noreferrer"
-                className="text-brass-700 hover:underline">
+                className="text-brass-700">
                 {l.zeichen === '↗'
                   ? <>{l.label} <span aria-hidden>↗</span></>
                   : <><span aria-hidden>{l.zeichen}</span> {l.label}</>}

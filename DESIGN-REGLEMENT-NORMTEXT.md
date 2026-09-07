@@ -143,6 +143,47 @@ Detailplan: `archiv/FAHRPLAN-GESETZESDARSTELLUNG-BUND.md` (M4/M5/M7/M8/M10).
   ARIA-Tabellensemantik vollständig (Kopf↔Zelle), Kontrast/Fokus über Tokens (§13/F).
   Tausender-Apostroph/Währung sind **Anzeige**, nie im Snapshot (§7).
 
+### §4a-D28 · Die Erlass-Suche steht oben am Gesetz (David 6.9.2026)
+
+**Der Ort ist Regel, nicht Geschmack.** Bis zum 6.9.2026 hatte das Such-/Sprungfeld
+zwei Wohnorte — die Gliederungs-Spalte, solange sie stand, und den klebenden
+Kopf-Block, sobald man sie einklappte. David dazu, wörtlich: «die suchleiste im
+gesetz, welche sich oben an der gliederung befindet, will ich oben am gesetz —
+dann verschiebt sie sich auch nicht, wenn gliederung eingeklappt ist; achte
+darauf, dass dann das gleiche gilt.»
+
+1. **Ein Feld, ein Ort.** Die Erlass-interne Suche liegt in JEDER Lage im
+   klebenden Kopf-Block des Lesers (`v3/SuchZone.tsx`) — Desktop, Pane, Handy,
+   Gliederung offen oder zu. Die Gliederungs-Seitenleiste trägt nur die
+   Gliederung. Einzige Ausnahme: im modalen Gliederungs-Sheet steht das Feld in
+   dessen Kopf, weil der Fokus den Dialog nicht verlassen darf (WCAG 2.4.3) —
+   die Zone gibt es solange her, es bleibt bei **einem** Feld im DOM.
+2. **Beim Klappen verschiebt sich im Kopf nichts.** Δx = Δy = 0 für Erlass-Suche,
+   Kopf-Zone, Kopf-Griffe und Ansicht-Menü, wenn die Gliederung ein- oder
+   ausklappt; nur die Textspalte ändert Lage und Breite. Der Kopf-Block liegt
+   über der ganzen Rahmenbreite — die Zusage ist damit strukturell erfüllt und
+   zusätzlich gemessen (`e2e/leser-klapp-sonde.e2e.ts`). Beim Ein-/Ausblenden der
+   APP-Seitenleiste rückt der ganze Inhalt mit; dort gilt die Zusage **relativ
+   zum Leser-Rahmen**, nicht absolut.
+3. **Das Feld ist ein Feld, keine Wand.** Es wird auf `max-w-reading` (40 rem)
+   gedeckelt — dieselbe Token-Breite wie die Lesespalte. Ohne Deckel erbt es die
+   Rahmenbreite (gemessen 1072 px @1440).
+4. **Zähler und Treffer-Schritt stehen in einer Zeile.** «N Artikel · M
+   Fundstellen» und die Griffe ‹ › bedienen dieselbe Fundstellen-Folge wie ↑↓ im
+   Feld und die Pfeile im Kopf der Trefferliste. Steht die Trefferliste bereits
+   als Spalte daneben, **schweigt die Zone** — Zahlen und Schritt stehen dort,
+   und zwei gleiche Listen übereinander sind ein §5-Bruch.
+5. **Der Druck kennt keine Suchleiste.** Die ganze Zone fällt im Ausdruck, nicht
+   nur ihre Knöpfe.
+
+**Und die Ortsangabe steht genau einmal (D27).** Die Kopfzeile des Lesers trägt
+keine Brotkrume und keinen laufenden Artikel mehr: der Ort steht im Reiter, den
+der Scroll-Spy über `aktualisiereTabArtikel` (`lib/tabs.ts`) live führt; der
+Erlass-Kontext steht im Titelblatt und als Kennung im Kopf; der Rücksprung steht
+in der Hauptnavigation. Wer eine dieser Angaben ein zweites Mal in den Kopf
+zurückholt, baut die Doppelkrume wieder auf, die der Entscheid vom 17.8.2026
+abgeschafft hat. Protokoll mit Messreihen: `abnahme/design-identitaet/R6D.md`.
+
 ### §4b · Linien-Kanon & Lese-Typografie (W2·5d G1, 4.7.2026)
 
 Leitprinzip (aus Fedlex-Messung + SotA doppelt belegt): **Ruhe durch Reduktion.
@@ -173,12 +214,16 @@ Harte Regeln:
 2. **Innere Sektionen (ebene ≥ 2) und randtitel-promotete Knoten** («A.», «II.»)
    tragen **keine** Horizontal-Linie (die frühere feine ebene-2-Linie entfällt);
    ihre Tiefe trägt die Typo.
-3. **Marker-Scope + Chrome-Ausnahme:** die drei Rollen gelten NUR an den mit
+3. **Marker-Scope + Chrome-Ausnahme:** die zwei Rollen gelten NUR an den mit
    `data-normtext-linie` markierten strukturellen Containern. Chrome-Borders
    (Such-Boxen, Buttons, Drawer, Nav, Fussnoten-Popover, Tabellen-**Aussenbox**)
-   und die **Brass**-Sprache (Ziel-/Zitat-Kanten, Fussnoten-Links) sind eine
-   eigene, ausdrücklich ausgenommene Sprache — sie bleiben `border-line` bzw.
-   Brass, nie mit der Linien-Sprache vermischt.
+   sind eine eigene, ausdrücklich ausgenommene Sprache — sie bleiben `border-line`
+   bzw. tragen die zwei soliden Trenner des Dachs (`--rule-soft` 1 px,
+   `--rule` 2 px, `DESIGN-REGLEMENT.md` F0.6), nie mit der Normtext-Linien-Sprache
+   vermischt. *AUFGEHOBEN 6.9.2026 (W2·24-DESIGN-IDENTITAET R1):* die frühere
+   dritte Sprache «**Brass** (Ziel-/Zitat-Kanten, Fussnoten-Links)». Die
+   Messing-Skala ist neutral geworden und trägt keine eigene Kanten-Sprache mehr;
+   was dort Brass hiess, ist heute Tinte bzw. Registerfarbe (Dach F0.3).
 
 **Einzug-Skala — AUFGEHOBEN am 29.8.2026, s. §4b-C.** Hier stand die Skala
 (`einzug` 20 px/Stufe, `einzug-mobil` 12 px, gedeckelt bei 5 Stufen). Die Tokens
@@ -188,20 +233,69 @@ Kante.
 **Lese-Typografie.** Lesespalte **hart auf einem benannten Token**, nie arbitrary
 `max-w-[…rem]` (R2). Seit dem 29.8.2026 sind es ZWEI Deckel, der schmalere
 gewinnt: der Pixel-Deckel `--leser-lesemass-max` (45 rem, 21.8.2026) und der
-Zeichen-Deckel `--leser-zeilenmass` (~68 Zeichen, §4b-C). Fliesstext 18px Serif (über Fedlex 14px),
-gedämpft `text-ink-800`, Flatterrand (nie Blocksatz). **`hyphens: manual`** (nicht
+Zeichen-Deckel `--leser-zeilenmass` (~70 Zeichen, §4b-C). Fliesstext 18px Serif (über Fedlex 14px),
+gedämpft `text-ink-800`, Flatterrand (nie Blocksatz). Die Serife ist seit dem
+6.9.2026 **Literata** mit geladener `opsz`-Achse (`font-optical-sizing: auto`) und
+dem Lesegewicht `--lese-gewicht: 450` — Bildschirm-Serifen brauchen optische Grösse
+und etwas mehr Gewicht (D12, Belege in `abnahme/design-identitaet/KONTRAST-R1.md`
+Nachtrag D12). *AUFGEHOBEN am 6.9.2026:* Source Serif 4 als Lese-Serife.
+**`hyphens: manual`** (nicht
 `auto`) auf dem Normtext-Body — die deutsche Auto-Silbentrennung an schmalen
 Spalten war der sichtbare «Ge-werbes»-Treiber; `[overflow-wrap:anywhere]` bleibt
 der Overflow-Schutz für lange Komposita. **Randtitel-Hierarchie:** Blatt/Sach-
-überschrift `font-semibold text-ink-800`, oberste Marginalie `uppercase
-tracking-wide text-ink-500`, dazwischen `text-ink-600`; mehrzeilige Randtitel mit
+überschrift `font-semibold text-ink-800`, oberste Marginalie `text-ink-500`,
+dazwischen `text-ink-600`. *AUFGEHOBEN 6.9.2026 (W2·24 R1, Dach F0.7):* `uppercase
+tracking-wide` an der obersten Marginalie — es gibt in der Sammlung keine
+Versal-Etiketten mehr; die Hierarchie trägt allein Gewicht und Tinten-Tier.
+Mehrzeilige Randtitel mit
 **Hänge-Einzug-Schutz** (`text-indent:-1em` + `pl-[1em]`) gegen den Fedlex-AVOID
 «1. Im / Allgemeinen».
+
+**Artikelform im Leser (W2·24-R6b, 6.9.2026 — löst den dreispaltigen Satzspiegel
+aus R4/R6 ab).** Auftrag David, wörtlich: «der platz rechts und links neben dem
+gesetz für bspw. rechner oder fassung nimmt viel platz vom gesetzestext weg.»
+Die beiden Randspuren (Marginalie 150 px links, Randnotizen 210 px rechts, dazu
+zwei Rinnen à 36 px = **432 px**) sind **ersatzlos gefallen**. Es bleiben ZWEI
+Formen, gerechnet in `pages/gesetz-leser/v3/satzspiegel.ts` und am DOM als
+`data-lr-spiegel` ablesbar:
+
+* `zeile` — Ist-Form: Randtitel als Zeile über der Artikelnummer, Beiwerk unter
+  dem Wortlaut. Gilt im Pane (beide Hälften des Split-Views tragen dieselbe
+  Form), auf schmalen Flächen, in der Trefferliste und ohne Rahmen-Provider.
+* `breit` — ab **28 rem** Lese-Zelle in Spalten-Lage: der Randtitel steht als
+  kursive Literata-Zeile IM ARTIKELKOPF über der Artikelnummer, das Fassungs-
+  datum klein daneben (`.lr7-kopf`); die Bezüge stehen als EINE aufklappbare
+  Zeile darunter (`.lr7-bez`, `<details>` mit Registerfarben-Marken, Zustand in
+  `localStorage` gemerkt). Aufgeklappt erscheinen dieselben Blöcke, die sonst am
+  Artikelfuss stehen — nie beide zugleich (§5).
+
+Das Gewicht des Randtitel-Blatts bleibt die Ä7-Stufe (13 px semibold ink-800);
+kursiv und Serife kommen aus der Form, das Gewicht aus dem Entscheid. Im DRUCK
+trägt der Kopf den Randtitel, die Bezüge-Zeile ist ausgeblendet (`print:hidden`).
+
+**Grösse und Zeilenhöhe des Fliesstexts: 18 px / 1.62** (`leser-text` in
+`tailwind.config.js`). Die Zeilenhöhe stammt aus dem freigegebenen Referenzbild
+`abnahme/design-identitaet/vorschlag-freigegeben.html` (`.norm { font-size:17px;
+line-height:1.62 }`, seit 6.9.2026; davor 1.55). Die GRÖSSE steht seit W2·24-R6c
+(6.9.2026) auf 18 px — D20 (c), Auftrag David: der Satzspiegel ohne Randspuren
+gibt dem Lesetext die Breite, und der Lesekomfort (D12) verlangt die Stufe
+darüber. Sie hängt an DREI Orten zusammen und darf nirgends einzeln wandern:
+`tailwind.config.js` (`leser-text` = 1.125 rem), `src/index.css` (Block
+LESER-SCHRIFTSKALA: die Reglerstufen 1.215 / 1.3275 / 1.4625 rem, Faktoren
+1.08 / 1.18 / 1.30) und `src/pages/gesetz-leser/leserSchrift.ts` (`SCHRIFT_REM`,
+Anzeigewerte 100 · 108 · 118 · 130 %). `src/tests/leser-schriftskala.test.ts`
+hält die drei gegeneinander. Die Zahl steht in der
+Typo-STUFE und nie im Markup — `src/tests/leser-typo-tokens.test.ts` verbietet
+jedes `leading-…` am Fliesstext. WCAG 1.4.8 gemessen am gebauten Stand
+(6.9.2026, Methode `e2e/leser-lesemass.e2e.ts`): lh 1.62 ≥ 1.5, Zeilenmass
+OR 64 · StPO 64 · ZGB 64 · SchKG 63 · ZPO 62 · BS-640.100 56 Zeichen im
+Satzspiegel @1400 (Decke 80, Hausgrenze 75) — Messung VOR R6c, s. die Messreihe
+in §4b-C für den Stand mit 18 px.
 
 **Maschinell gegated:** R1 `check:linien-kanon` (marker-scoped, in `npm run gate`),
 R2 eslint (`no-restricted-syntax` gegen arbitrary `max-w-[…rem]` im Reader), R5
 als Playwright-e2e (`leser-lesemass.e2e.ts`: WCAG-Decke ≤ 80 ch an drei Breiten,
-Haus-Deckel ≤ 70 ch @ 1440 an sechs Erlassen [Block T-1C], Mobil-Boden ≥ 34 ch /
+Haus-Spanne 65–72 ch @ 1440 und @1280 an sechs Erlassen [Block T-1C], Mobil-Boden ≥ 31 ch /
 kein horizontaler Overflow @ 390);
 `leser-ohne-gliederungslinie.e2e.ts` hält fest, dass **keine** Guide-Linie
 zurückkommt und **kein** Tiefen-Einzug — samt der Wirkungs-Gegenprobe «genau
@@ -294,14 +388,21 @@ jeder Erlass **genau eine** Kante und eine Breite.
   ein Navigations-Baum, kein Fliesstext.
 - Der **Hänge-Einzug-Schutz** mehrzeiliger Randtitel (§4b «Lese-Typografie»).
 
-**Gebündelt entschieden (Variante 1C): Zeilenmass-Deckel ~68 Zeichen.** Mit
+**Gebündelt entschieden (Variante 1C): Zeilenmass-Deckel ~70 Zeichen** (bis
+W2·24-R6c 68).** Mit
 einer Kante läuft jeder Erlass an denselben Pixel-Deckel, das Zeilenmass stieg
 gemessen auf 69–74 Zeichen. Der Textkörper trägt darum einen zweiten, in
 ZEICHEN rechnenden Deckel (`--leser-zeilenmass`, `src/index.css`); der
 schmalere der beiden gewinnt. Die Zahl ist ch-basiert hergeleitet: 1 CSS-`ch`
 misst in der Lese-Serife 0.5078 em, das mittlere Prosa-Zeichen 0.4805 em
-(Schlechtfall der Stichprobe) — 68 Zeichen entsprechen 64 CSS-`ch`. Der Deckel
-hängt an `--lm-leser-schrift` und **skaliert darum mit jeder Schriftstufe**.
+(Schlechtfall der Stichprobe). Der Deckel hängt an `--lm-leser-schrift` und
+**skaliert darum mit jeder Schriftstufe**.
+
+**W2·24-R6c: 68 → 70.** D20 (c) gibt die Spanne **65–72 CPL** vor. Die Konstante
+RECHNET, das Tor MISST — und misst systematisch tiefer, weil
+`--leser-zeichenbreite` am Schlechtfall kalibriert ist. Mit 68 lag die gemessene
+Untergrenze nach R6b bei 63 ch, also unter der Spanne (R6-NACHZUG §4). 70 hebt
+die Rechengrösse, nicht die Messmethode.
 
 Messreihe @1440 (Methode `e2e/leser-lesemass.e2e.ts`, Zeichen je Zeile des
 längsten mehrzeiligen Absatzes):
@@ -310,15 +411,27 @@ längsten mehrzeiligen Absatzes):
 |---|---|---|---|---|---|---|
 | vorher (Staffelung) | 68 | 64 | 69 | 68 | 74 | 56 |
 | eine Kante, ohne Deckel | 73 | 70 | 73 | 69 | 74 | 61 |
-| **mit Deckel (Ist)** | **67** | **66** | **66** | **64** | **63** | **56** |
+| Deckel 68, Schrift 17 px (bis R6c) | 67 | 66 | 66 | 64 | 63 | 56 |
+| **Deckel 70, Schrift 18 px (Ist)** | **67** | **67** | **68** | **68** | **68** | **56** |
 
-Die WCAG-Decke SC 1.4.8 (≤ 80 ch) bleibt mit ≥ 13 ch Reserve gehalten. Mobil
-@390 greift der Deckel nicht (591 px > Viewport); dort steigt das Zeilenmass
-durch den Wegfall der Engstelle (OR 33 → 37 ch).
+Die WCAG-Decke SC 1.4.8 (≤ 80 ch) bleibt mit ≥ 12 ch Reserve gehalten. @1280
+misst dieselbe Reihe (Textkörper 641 statt 640 px). BS-640.100 liegt bei 56 ch,
+obwohl seine Spalte gleich breit ist: die Methode rechnet `Textlänge /
+Zeilenkästen`, und kantonale §-Absätze enden häufig mit einer halb gefüllten
+Zeile — die Zahl beschreibt dort die Absatzform, nicht den Satzspiegel, und
+trägt deshalb keine Untergrenze (§8).
 
-**Maschinell gegated:** `e2e/leser-lesemass.e2e.ts` Block **T-1C** (sechs
-Erlasse: genau eine Kante, eine Breite, ≤ 70 ch @ 1440) und der auf 34 ch
-angehobene Mobil-Boden; `e2e/leser-ohne-gliederungslinie.e2e.ts` Ziff. 3
+Mobil @390 greift der Deckel nicht (641 px > Viewport); die Spalte bleibt bei
+350 px. Mit 18 px stehen dort **ZGB 37 · OR 35 · VMWG 32 · StGB 41 · StPO 34 ·
+BS-640.100 33 ch** — je nach Erlass 0–3 ch weniger als mit 17 px. Das ist keine
+Verschlechterung, sondern der Preis der grösseren Type auf physikalisch
+unveränderter Breite; der Mobil-Boden folgt der Messung (34 → 31 ch,
+Schlechtfall VMWG 32 minus 1 ch Reserve).
+
+**Maschinell gegated:** `e2e/leser-lesemass.e2e.ts` Block **T-1C** (sechs Erlasse
+× zwei Fenster @1440 und @1280: genau eine Kante, eine Breite, **65–72 ch** —
+BS-640.100 ohne Untergrenze, s. o. — plus die erwartete Textkörperbreite) und
+der Mobil-Boden ≥ 31 ch; `e2e/leser-ohne-gliederungslinie.e2e.ts` Ziff. 3
 (keine Sektion mit `padding-left` **und** die Wirkungs-Gegenprobe). Beide
 Wächter wurden am 29.8.2026 je einmal rot gezeigt (§6.7; Rot-Beweis im Commit
 `test(leser): Wächter der einen Textkante deklariert nachgeführt`).
@@ -327,10 +440,37 @@ Die Tokens `einzug` / `einzug-mobil` sind aus `tailwind.config.js` **entfernt**
 
 ### §4b-B · Farb-Wörterbuch der Referenzschicht (W2·5d V2·C-1, 10.7.2026, David «go zu allem»)
 
-Grundsatz (David 10.7.2026): **Farbe NUR auf der Referenz-/Verzahnungsschicht**
-(Chips, Badges, Kopf) — der **Normtext-Körper bleibt farbfrei** (Rangfolge §4b:
-die Typo trägt die Tiefe allein; kein Ton im Lesefluss). Das Wörterbuch ist EIN Entscheid je
-Farbe — kein Ton trägt zwei Bedeutungen:
+Grundsatz (David 10.7.2026, unverändert gültig): **Farbe NUR auf der Referenz-/
+Verzahnungsschicht** (Chips, Badges, Kopf) — der **Normtext-Körper bleibt
+farbfrei** (Rangfolge §4b: die Typo trägt die Tiefe allein; kein Ton im
+Lesefluss). Das Wörterbuch ist EIN Entscheid je Farbe — kein Ton trägt zwei
+Bedeutungen.
+
+**Nachzug 6.9.2026 (W2·24-DESIGN-IDENTITAET R1, Dach `DESIGN-REGLEMENT.md` F0.2/
+F0.3) — die Zeile «brass» ist ersetzt, die drei übrigen gelten unverändert.**
+Der Referenzschicht stehen seither **vier Registerfarben** als einzige Farbe zur
+Verfügung, je eine pro Register der Sammlung; die Messing-Skala ist neutral
+geworden und trägt keine eigene Bedeutung mehr:
+
+| Register | Token | hell | dunkel | Trägt sie |
+| --- | --- | --- | --- | --- |
+| Gesetze | `--reg-g` | `#1D4E89` | `#8FB8F0` | Norm-Kanten und -Punkte, Reiter-Strich Gesetze, Kantonskarten-Marke (`--karte-marke`) |
+| Rechtsprechung | `--reg-r` | `#7A1F2B` | `#E39AA6` | Entscheid-Kanten, Reiter-Strich Rechtsprechung, Bezugs-Marke `r` |
+| Materialien | `--reg-m` | `#2F7A3E` | `#9AD489` | Materialien-Kanten, Reiter-Strich, Bezugs-Marke `m` |
+| Werkzeuge | `--reg-w` | `#8F5E0E` | `#E6B95A` | Rechner/Vorlagen-Kanten, Wahl-Kachel-Strich, Bezugs-Marke `w` |
+
+Sie stehen als **Strich, Reiter-Unterkante und Randmarke**, nie als Fläche unter
+Fliesstext, und tragen nie allein Bedeutung (`aria-hidden`, Wortlabel daneben —
+§13/F2, WCAG 1.4.1). Alle sechzehn Paare (vier Töne × vier Flächen) halten
+≥ 4.5:1 in beiden Modi und sind sämtlich Pflichtpaare im Tor; Messreihe
+`abnahme/design-identitaet/KONTRAST-R1.md` D12.4.
+
+*AUFGEHOBEN 6.9.2026:* die Zeile **brass** («Marke / Hervorhebung /
+Wortlaut-Referenz»). Ihre Träger — Norm-KantenChip-Tick, ★-Leitentscheid-Glyph
+(seit R11/D23 als **Wort** «Leitentscheid», nicht als Glyphe), Verweis-Links,
+`lc-punkt`, NormChip-Hover, Norm-Familien-Punkt — bestehen fort, färben aber über
+die neutrale Skala bzw. über `--reg-g` um. Der Wortlaut bleibt unten stehen,
+damit Alt-Verweise auflösen; **als geltende Regel ist er ersetzt.**
 
 | Ton | Bedeutung (die EINE) | Trägt sie |
 | --- | --- | --- |
@@ -347,16 +487,34 @@ ohne Wertung** — beide Vorkommen (Entscheid-Chip UND soft-Badge) teilen genau 
 eine Semantik. Der einzige quasi-Status-Gebrauch (Revision) wandert nach **warn** und
 verlässt damit slate. brass bleibt die Marke/Hervorhebung, nie ein Rechtsstatus (R16).
 
-**Anatomie unverändert (§6/R6):** Die `kategorie`-Prop am `KantenChip` tauscht NUR
+**Anatomie unverändert (§6/R6):** *(Messwerte dieses Absatzes = Stand 10.7.2026
+bis 16.7.2026; die Ist-Zahlen stehen in der Tabelle darunter.)* Die
+`kategorie`-Prop am `KantenChip` tauscht NUR
 den Tick (`border-left-color`) und die Hover-Utilities; Form/Token/Grösse bleiben →
 **CLS 0**, keine Layout-Verschiebung. Der Default `'norm'` emittiert die unveränderte
 brass-Klassenzeile ⇒ Grundzustand **byte-gleich** (`golden:vergleich` IDENTISCH; die
 zitierten Normen im KontextPanel bleiben brass). Kontrast als Gate gemessen
-(WCAG 1.4.11 ≥ 3:1 für den Tick, 1.4.3 ≥ 4.5:1 für Glyphen): slate-500-Tick **5.03**
-hell / **3.47** dunkel; warn-700-↻ **5.48** / **9.43**; brass-700-★ **5.13** / **10.48**.
-*(D-5/A38, 16.7.: die HELL-Werte stiegen [4.81→5.03 · 5.24→5.48 · 4.91→5.13], weil
-`--well` heller/weisser wurde [#F2EFE6→#F6F4EE]; DUNKEL unverändert — s. `DESIGN-REGLEMENT.md`
-§F2b-Nachtrag D-5.)*
+(WCAG 1.4.11 ≥ 3:1 für den Tick, 1.4.3 ≥ 4.5:1 für Glyphen) — **Ist-Werte
+nachgezogen 6.9.2026 aus dem Tor-Lauf `npm run check:farbwelt`** (dokumentiert in
+`scripts/farbwelt-tabellen.ts` `REFERENZ`; das Tor meldet «Referenz-Drift …
+Zahl in DESIGN-REGLEMENT-NORMTEXT §4b-B nachziehen», wenn diese Tabelle von der
+Messung abweicht — sie ist also gegatet, nicht Prosa):
+
+| | Rolle | Tick/Glyphe auf `--well` | hell | dunkel |
+|---|---|---|---:|---:|
+| **C-1** | Rechtsprechungs-Tick `lc-chip-entscheid` | slate-500 | **4.86** | **3.38** |
+| **C-2** | Currency-Chip «nächste Fassung ab …» | warn-700 | **5.30** | **9.20** |
+| **C-3** | Akzent-Tick (**= Tinte**, früher Messing-★) | brass-700 | **13.79** | **14.19** |
+
+Herkunft der Zahlen (Belege altern nicht, sie werden ergänzt): C-1 D-5 5.03/3.47 →
+R1 4.86/3.47 → D12 4.86/3.38 · C-2 D-5 5.48/9.43 → R1 5.29/9.49 → D12 5.30/9.20 ·
+C-3 D-5 5.13/10.48 (damals Messing auf hellerem Well) → R1 16.02/16.49 → D12
+13.79/14.19. Der Sprung bei C-3 ist **kein Messfehler und keine Drift**, sondern
+der Rollenwechsel: `--brass-700` zeigt seit R1 per `var()` auf die Tinte
+`--ink-fixed-dark`.
+*(D-5/A38, 16.7.: die HELL-Werte stiegen damals [4.81→5.03 · 5.24→5.48 ·
+4.91→5.13], weil `--well` heller/weisser wurde [#F2EFE6→#F6F4EE]; DUNKEL
+unverändert — s. `DESIGN-REGLEMENT.md` §F2b-Nachtrag D-5.)*
 `--slate-500` wird in `html.dark` bewusst NICHT überschrieben (Tick-Kontrast bleibt
 gehalten). **Gegated:** `verzahnung.test` (Default byte-identisch, Entscheid-Slate,
 ↻-warn), Golden byte-gleich. **D-3-Neu-Messung (12.7.2026, color-mix srgb→oklab):

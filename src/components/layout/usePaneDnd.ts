@@ -7,7 +7,21 @@ import { useRef, useState, type DragEvent } from 'react';
 // sekundär); `move` interpretiert sie (Sekundär-Reorder vs. Tausch mit dem
 // Hauptfenster). Muster wie TabPanel: gezogener Index in Ref (überlebt Re-Render),
 // überfahrener Index als State (Drop-Indikator).
-export function usePaneDnd(move: (von: number, nach: number) => void) {
+// ── W2·24 R2 (§5a Ziff. 4) · EIN REITER LÄSST SICH IN EIN FENSTER ZIEHEN ────
+// Zweite Nutzlast auf denselben Spalten-Drop-Zielen: nicht nur ein Pane-Index
+// (Umsortieren), sondern auch ein REITER-PFAD aus der Arbeitsleiste. Die beiden
+// sind an der Nutzlast unterscheidbar — `gezogen.current` ist beim Reiter-Zug
+// null, und der Zug führt den eigenen MIME-Typ `REITER_MIME`. `dragover` darf
+// die Nutzlast nicht LESEN, nur ihre TYPEN prüfen; genau darum trägt der
+// Reiter-Zug einen eigenen Typ statt einer Inhaltsprüfung auf `text/plain`.
+export function usePaneDnd(
+  move: (von: number, nach: number) => void,
+  /** Reiter-Pfad auf Pane `ziel` fallen gelassen (0 = Hauptfenster). */
+  onReiter?: (pfad: string, ziel: number) => void,
+  /** MIME-Typ des Reiter-Zugs (aus `Reiterleiste`), nur gebraucht, wenn
+   *  `onReiter` gesetzt ist. */
+  reiterMime?: string,
+) {
   const gezogen = useRef<number | null>(null);
   const [ueber, setUeber] = useState<number | null>(null);
 
@@ -24,14 +38,22 @@ export function usePaneDnd(move: (von: number, nach: number) => void) {
   /** Props für die Pane-Spalte i als Drop-Ziel (inkl. `ueber` für den Indikator). */
   const spalte = (i: number) => ({
     onDragOver: (e: DragEvent) => {
-      if (gezogen.current != null && gezogen.current !== i) {
+      const reiter = onReiter != null && reiterMime != null
+        && gezogen.current == null && e.dataTransfer.types.includes(reiterMime);
+      if (reiter || (gezogen.current != null && gezogen.current !== i)) {
         e.preventDefault();
         if (ueber !== i) setUeber(i);
       }
     },
     onDrop: (e: DragEvent) => {
-      e.preventDefault();
       const von = gezogen.current;
+      if (von == null && onReiter != null && reiterMime != null) {
+        const pfad = e.dataTransfer.getData(reiterMime);
+        if (pfad) { e.preventDefault(); onReiter(pfad, i); }
+        setUeber(null);
+        return;
+      }
+      e.preventDefault();
       if (von != null && von !== i) move(von, i);
       gezogen.current = null;
       setUeber(null);

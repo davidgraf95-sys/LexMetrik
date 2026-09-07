@@ -105,7 +105,7 @@ export function SekundaerPane(props: SekundaerPaneProps) {
         onDragOver={onDragOver}
         onDrop={onDrop}
         style={style}
-        className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-brass-700' : 'border-line'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
+        className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-rule' : 'border-rule-soft'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
       >
         <PaneKopf
           label={label} stand={stand} breadcrumb={kopf?.breadcrumb} onBreadcrumb={navigiere} artikel={kopf?.artikel} rolle="sekundaer"

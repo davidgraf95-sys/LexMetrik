@@ -1,6 +1,6 @@
 // @shard-gruppe: 8
 import { test, expect, type Page } from '@playwright/test';
-import { ANSICHT_PANEL, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
+import { ANSICHT_PANEL, SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
 
 // ⚠ DER DATEINAME MEINT NICHT DEN LESER V2 (Vermerk 31.8.2026, Runde 2 / Batch A).
 // «V2» ist hier die FAHRPLAN-Etappe GESETZESDARSTELLUNG-V2, nicht die alte
@@ -86,13 +86,14 @@ test('K-1: «in Kraft seit» in der Meta-Zeile (Bund), nicht beim Kanton', async
 test('K-2 (A26): Fussnoten-Eintrag im «Ansicht»-Dropdown — Zähler + Toggle (aria-checked), CLS 0', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   // A26 (David 11.7.2026): der frühere separate Fussnoten-Chip ist als EINTRAG ins
-  // «Ansicht»-Dropdown gewandert — role=switch mit dem Zähler N im Accessible-Name
+  // «Ansicht»-Dropdown gewandert — Schalter-Rolle mit dem Zähler N im Accessible-Name
+  // (bis D4/7.9.2026 `switch`, seither `menuitemcheckbox`, s. `SCHALTER_ROLLE`)
   // («Fussnoten (N)») und dem Zähler-Badge daneben. Menü öffnen und darauf zugreifen.
   await ansichtOeffnen(page);
   const gruppe = page.locator(ANSICHT_PANEL).first();
   // LM-025 (B8, 31.8.2026): der Accessible Name erklärt die Zahl jetzt —
   // «Fussnoten (932 im Erlass)» statt der unerklärten «(932)».
-  const fn = gruppe.getByRole('switch', { name: /^Fussnoten \(\d+ im Erlass\)$/ });
+  const fn = gruppe.getByRole(SCHALTER_ROLLE, { name: /^Fussnoten \(\d+ im Erlass\)$/ });
   await expect(fn).toBeVisible({ timeout: 15000 });
   await expect(fn).toHaveAttribute('aria-checked', 'true'); // Default: Fussnoten an
 
@@ -201,5 +202,5 @@ test('B-2: die Alt-Zeitraum-Wahl ist aus dem Ansicht-Menü ENTFERNT (B5)', async
   // geworden. Die AUSSAGE der Zeile ist unverändert — «das Menü trägt weiter seine
   // Historie-Bedienung» — nur ihr Griff ist der neue; der Vertrag des Schalters
   // selbst liegt unter `hist-ansicht-w25i.e2e.ts`.
-  await expect(panel.getByRole('switch', { name: VERMERKE_SCHALTER_NAME })).toBeVisible();
+  await expect(panel.getByRole(SCHALTER_ROLLE, { name: VERMERKE_SCHALTER_NAME })).toBeVisible();
 });

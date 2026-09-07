@@ -3,7 +3,7 @@ import {
   KOPF_SCHWELLE_KOMPAKT, KOPF_SCHWELLE_MINI,
   kopfElemente, kopfHoehe, kopfStufe,
 } from '../pages/gesetz-leser/v3/kopfStufen';
-import { oeffnerLabel, oeffnerLabelKompakt, oeffnerName } from '../pages/gesetz-leser/v3/panelModell';
+import { OEFFNER_WORT, oeffnerLabelKompakt, oeffnerName } from '../pages/gesetz-leser/v3/panelModell';
 
 // FAHRPLAN-LESER-V3 Kap. 4a — die Overflow-Regel der V3-Kopfzeile:
 //
@@ -95,19 +95,19 @@ describe('Overflow-Regel der V3-Kopfzeile (Kap. 4a)', () => {
     expect(kopfElemente('mini').panel).toBe('kompakt');
   });
 
-  // Der Chip trägt eine ZAHL oder nichts — nie eine erfundene 0 (§8). Dieselbe
-  // Schranke wie `oeffnerLabel`, an derselben Stelle geprüft, damit die beiden
-  // Gestalten nicht auseinanderlaufen können (§5).
+  // Der Chip trägt eine ZAHL oder nichts — nie eine erfundene 0 (§8).
+  // §6.3-DEKLARATION (N1, 7.9.2026): `oeffnerLabel` ist gestrichen (Herleitung
+  // in `leser-v3-panel.test.tsx`), die Marke ist auf JEDEM Zuschnitt dieselbe
+  // Ableitung — die zwei Gestalten können damit gar nicht mehr auseinanderlaufen
+  // (§5), und geprüft wird nur noch die Schranke selbst.
   it('der kompakte Zähler behauptet keine Zahl, die wir nicht haben', () => {
     expect(oeffnerLabelKompakt(null)).toBe('');
     expect(oeffnerLabelKompakt(0)).toBe('');
     expect(oeffnerLabelKompakt(1)).toBe('1');
     expect(oeffnerLabelKompakt(14)).toBe('14');
-    // Wo die lange Gestalt schweigt, schweigt auch die kurze — und umgekehrt.
-    for (const n of [null, 0, 1, 2, 14, 1443]) {
-      const lang = oeffnerLabel(n) !== 'Rechtsprechung';
-      expect(oeffnerLabelKompakt(n) !== '', `Zahl-Aussage weicht ab bei ${String(n)}`).toBe(lang);
-    }
+    // Das Wort daneben steht in jeder Datenlage — es ist keine Aussage über
+    // den Bestand, sondern der Name des Knopfes.
+    expect(OEFFNER_WORT).toBe('Rechtsprechung');
     // Der volle Wortlaut bleibt im Accessible Name — er ist es, der die
     // Kürzung auf dem Handy überhaupt zulässig macht.
     expect(oeffnerName(14, 'Art. 429')).toContain('14 Entscheide');

@@ -1,15 +1,38 @@
-import { Link } from 'react-router-dom';
-import { Fragment, type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import { LeserAnsichtV3 } from './LeserAnsichtV3';
-import { brotkrume, ebeneAngabe, zeigeVolltitel } from './erlassAnsicht';
+import { zeigeVolltitel } from './erlassAnsicht';
 import { kopfElemente, type KopfStufe } from './kopfStufen';
 
 // ─── Die EINE Kopfzeile des Lesers V3 (FAHRPLAN-LESER-V3 Kap. 4a, H1) ────────
 //
-//   D  │ Gesetze › Bund › StPO   Art. 429      ⚖ 14 Entscheide  Ansicht ▾ │
-//   S  │ ‹ Gesetze  StPO   Art. 429     ⚖ 14 Entscheide  ☰  Ansicht ▾│
-//   H  │ ‹ Gesetze StPO · Art. 429   ⚖  ☰  ···│
+//   D  │ StPO                              ⚖ 14 Entscheide  Ansicht ▾ │
+//   S  │ StPO                       ⚖ 14 Entscheide  ☰  Ansicht ▾│
+//   H  │ StPO                    ⚖  ☰  ···│
+//     │ [ Im Erlass suchen …                                    ⌘K ] │
+//
+// ── D27 (David 6.9.2026) · DIE BROTKRUME IST WEG ────────────────────────────
+// WÖRTLICH, zum Bild «Reiter ‹Art. 40 ZGB›» neben der Krume «… › Art. 43a»:
+// «diese funktion, dass es anzeigt in welchem artikel wir sind, soll der tab
+// bekommen. es kann dann direkt im gesetz raus.»
+//
+// GEMESSEN war das ein WIDERSPRUCH auf zwei Zentimetern: der Reiter nannte den
+// Artikel, den man beim Öffnen gewählt hatte (Adresse), die Krume den, an dem
+// man gerade steht (Scroll-Spy) — zwei Ortsangaben derselben Sache, die sich
+// beim Lesen auseinanderbewegen. Aufgelöst wird das an EINER Stelle: der Reiter
+// folgt der Lesestellung, und die Krume entfällt hier ganz.
+//
+// WAS ENTFÄLLT: die Kette «Gesetze › Bund ›» samt ihrem engen Ersatz
+// «‹ Gesetze» und der laufende Artikel «· Art. 429».
+// WAS BLEIBT: das Kürzel — es ist nicht der ORT, sondern der NAME des
+// Dokuments, und ohne es trüge die klebende Zeile beim Scrollen keine Auskunft
+// mehr darüber, worin man liest.
+// WO DER ORT JETZT STEHT: im Reiter (Kürzel + Lesestellung, eine Angabe) —
+// gespeist von `aktualisiereTabArtikel` (`lib/tabs.ts`), das der Scroll-Spy in
+// `../inhalt-hooks.tsx` bei jedem Artikelwechsel im Bild entprellt schreibt.
+// WO DER RÜCKSPRUNG JETZT STEHT: in der App-Seitenleiste und im Reiter
+// «Gesetze» — beide sind auf jeder Breite sichtbar, die Krume war es nicht
+// (unter 900 px Elementbreite fiel sie ohnehin auf ein einziges Wort zusammen).
 //
 // ── A-2 · «DIE EINE» IST SEIT 17.8.2026 WÖRTLICH GEMEINT ────────────────────
 // Bis dahin sass diese Zeile UNTER der App-Krumen-Leiste, die denselben Ort
@@ -53,14 +76,23 @@ import { kopfElemente, type KopfStufe } from './kopfStufen';
 // Rücksprung immer da ist, hängt an `erlassAnsicht.hatRuecksprung` und ist
 // dort unit-bewiesen; die Auflage «höchstens ein ✕ je Kopfzeile, Rücksprung
 // immer beschriftet» samt Messreihe steht in `./kopfStufen`.
+// NACHTRAG 6.9.2026 (der Absatz oben bleibt als Befund vom 18.8. stehen, er
+// beschreibt den damaligen Stand richtig): mit D27 trägt DIESE Zeile den
+// Rücksprung nicht mehr. Er steht seither in der App-Seitenleiste («Gesetze»)
+// und in der Arbeitsleiste (Reiter «Gesetze», D7) — beide klebend und auf jeder
+// Breite sichtbar, also nicht schwächer als die Krume, die unter 900 px
+// Elementbreite ohnehin auf ein Wort zusammenfiel. Die Auflage «höchstens ein ✕
+// je Kopfzeile» in `./kopfStufen` ist unberührt.
 
 export function LeserKopf({
-  erlass, aktArtikel, fussnotenAnzahl, hatAenderungsvermerke, stufe, gliederungKnopf,
-  panelOeffner, onPanelOeffnen, suchZone,
+  erlass, fussnotenAnzahl, hatAenderungsvermerke, stufe, gliederungKnopf,
+  panelOeffner, onPanelOeffnen, suchZone, suchInZeile, tocOffen, onGliederungZu,
 }: {
   erlass: BrowseErlass;
-  /** Laufender Artikel aus dem bestehenden Scroll-Spy («Art. 429»). */
-  aktArtikel: string | null;
+  // D27: `aktArtikel` ist hier ersatzlos gestrichen. Die Lesestellung ist damit
+  // nicht verloren — sie fliesst unverändert aus demselben Scroll-Spy in den
+  // Reiter (`lib/tabs.aktualisiereTabArtikel`) und in die Positions-Persistenz
+  // (`../lesePosition.ts`); nur diese Zeile zeigt sie nicht mehr an.
   fussnotenAnzahl: number | null;
   /** D1 — durchgereicht, nicht hier abgeleitet: die Frage gehört ins Modell (§5). */
   hatAenderungsvermerke: boolean;
@@ -86,16 +118,26 @@ export function LeserKopf({
    *  Zone gibt, und legt ihre Höhe als `--leser-v3-such-h` aus — diese Datei
    *  rendert sie nur (§3) und bleibt ohne Breiten-Zweig. */
   suchZone?: ReactNode;
+  /** ── N4 (David 7.9.2026) · DIE ZONE STEHT IN DER ZEILE ─────────────────────
+   *  Wo eine linke Spur steht, ist neben dem Feld Platz für die zwei Griffe —
+   *  dann trägt die Kopf-ZEILE die Zone, statt eine zweite Reihe darunter
+   *  aufzuziehen (Herleitung samt Messung in `./leserGeometrie`, `suchInZeile`).
+   *  Die Element-Zahl der Zeile bleibt bei vier (Kennung · Feld · ⚖ · Ansicht),
+   *  Design-Grundlage Kap. 6. Der Rahmen entscheidet, diese Datei ordnet an. */
+  suchInZeile?: boolean;
+  /** ── D32 · DER GLIEDERUNGS-GRIFF IM LINKEN STREIFEN ────────────────────────
+   *  «‹ Gliederung ausblenden» sass bis 7.9.2026 im Kopf der Gliederungsspalte
+   *  selbst (`./LeserLeseZeile`). Seit die Kopfzeile links einen Streifen von
+   *  genau der Spurbreite hat (`--leser-spur-versatz`), stünde der leer — und
+   *  der Griff säss 28 px darunter in einer eigenen Zeile. Er zieht darum hier
+   *  ein; die Gliederung beginnt entsprechend 28 px höher.
+   *  `undefined`, wo die Spalte nicht steht: dann ist die Schiene der eine
+   *  Griff (Ä79), und ein zweiter wäre einer ohne Wirkung. */
+  onGliederungZu?: () => void;
+  /** Zustand für `aria-expanded` an diesem Griff. */
+  tocOffen?: boolean;
 }) {
   const el = kopfElemente(stufe);
-  // Ebene-Beschriftung aus dem Datenmodell, nicht aus `if (bund)` — die eine
-  // Ableitung steht in `./erlassAnsicht` (Fundament-Auflage 2).
-  const ebene = ebeneAngabe(erlass);
-  // A-2: dieselbe Kette, die bis 17.8. an die App-Leiste gemeldet wurde.
-  const krume = brotkrume(erlass);
-  // V2 (Nachzug 17.8.): der EINE Rücksprung für die engen Zuschnitte — die
-  // erste Stufe DERSELBEN Kette («Gesetze»), nie ein zweiter Text (§5).
-  const rueckKrume = krume[0];
 
   return (
     // `sticky top` aus `--leser-v3-kopf-top`: der Rahmen legt den Wert EINMAL
@@ -141,99 +183,93 @@ export function LeserKopf({
         marginTop: 'calc(-1 * (var(--leser-v3-kopf-luecke, 0px) + var(--leser-v3-app-band, 0px)))',
       }}
     >
-      <div className="flex items-center gap-2 sm:gap-3" style={{ height: 'var(--leser-v3-kopf-h)' }}>
-        {/* ── Ortsangabe: EINE schrumpfende Zone (Krume + laufender Artikel) ── */}
-        <nav aria-label="Ort im Gesetz" data-v3-kopf-ort
-          className="flex min-w-0 flex-1 items-baseline gap-1.5 overflow-hidden whitespace-nowrap text-xs text-ink-500">
-          {/* ── A-2 (David 17.8.2026) · DIE GANZE KRUME STEHT JETZT HIER ──────
-              «Gesetze › Bund › StPO» — die Kette, die bis 17.8. die App-Krumen-
-              Leiste 37 px darüber trug. Sie kommt aus DERSELBEN Funktion, die sie
-              dorthin gemeldet hat (`erlassAnsicht.brotkrume`): Bund, Kanton und
-              Staatsvertrag laufen durch eine Ableitung, kein `if (bund)` (Bund →
-              «Bund», Kanton BS → «Kanton BS», Staatsvertrag → «International»;
-              unit-geprüft in `leser-v3-erlassansicht.test.ts`). Gerendert werden
-              hier nur die FÜHRENDEN Stufen — die letzte ist das Kürzel und hat
-              unten ihre eigene Kürzungs-Regel (A4).
-              KLICKBAR bleibt sie: `<Link>` löst im Pane gegen den PANE-EIGENEN
-              Navigator auf (`Pane.tsx`, `navKontext`) — der Klick navigiert
-              pane-lokal und reisst nicht das ganze Fenster weg (dieselbe
-              Zusicherung wie beim ✕ unten). */}
-          {el.krume === 'voll' && krume.slice(0, -1).map((stufeKrume) => (
-            <Fragment key={stufeKrume.label}>
-              {stufeKrume.to
-                ? <Link to={stufeKrume.to} className="shrink-0 truncate no-underline hover:text-brass-700">{stufeKrume.label}</Link>
-                : <span className="shrink-0 truncate">{stufeKrume.label}</span>}
-              {/* C5 (29.8.2026): Trenner ink-300 → ink-400, Herleitung in `layout/InhaltsKopf.tsx`. */}
-              <span aria-hidden className="shrink-0 text-ink-400">›</span>
-            </Fragment>
-          ))}
-          {/* ── V2 (Nachzug 17.8.2026) · DER RÜCKSPRUNG, WO DIE KETTE NICHT PASST
-              Unter 900 px Elementbreite fiel die Krume bis hierher GANZ weg —
-              @390 und in jedem Pane unter 900 px. Bis A-2 fing die
-              App-Krumen-Leiste das auf; seither gab es dort keinen Weg nach oben
-              ausser dem ✕, und das springt auf die Gesetzes-Übersicht, also an
-              der Ebene vorbei. Statt der Kette steht jetzt ihre erste Stufe als
-              EIN Rücksprung: dieselbe Quelle (`brotkrume`), dieselbe pane-lokale
-              Auflösung wie oben (`<Link>` gegen den Pane-Navigator), ein Element
-              mehr in der Ort-Zone und keines mehr in der Kopf-ZEILE (Kap. 6).
-              Trüge die Stufe kein Ziel, wäre sie kein Rücksprung und entfällt —
-              ein stummer Link wäre schlechter als keiner (§8). */}
-          {el.krume === 'kurz' && rueckKrume?.to && (
-            <Link to={rueckKrume.to} data-v3-kopf-krume-kurz
-              className="shrink-0 truncate no-underline hover:text-brass-700">
-              <span aria-hidden className="mr-0.5 text-ink-400">‹</span>{rueckKrume.label}
-            </Link>
-          )}
+      {/* N4: EINE Reihe. Der linke Streifen ist genau so breit wie die Spur
+          neben dem Gesetzestext (`--leser-spur-versatz`, D32) — deshalb kein
+          `gap` zwischen ihm und der Zone: der Abstand STECKT schon in der
+          Zahl, ein zusätzliches `gap` schöbe das Feld um 12 px neben den Text.
+          Ohne Spur (Pane, @390) bleibt die Zeile, was sie war. */}
+      <div className={suchInZeile ? 'flex items-center' : 'flex items-center gap-2 sm:gap-3'}
+        style={{ height: suchInZeile ? 'var(--leser-v3-kopf-block-h)' : 'var(--leser-v3-kopf-h)' }}>
+        {/* ── D27 · DIE ERLASS-KENNUNG, EINE SCHRUMPFENDE ZONE ─────────────
+            Bis 6.9.2026 stand hier die volle Ortsangabe (Krume + laufender
+            Artikel) unter `<nav aria-label="Ort im Gesetz">`. Mit D27 (oben)
+            bleibt genau der NAME des Dokuments — das ist keine Navigation mehr,
+            also auch kein `nav`: eine Landmarke ohne Ziel darin wäre für einen
+            Screenreader eine leere Verheissung (§8). Die Zone selbst bleibt als
+            `data-v3-kopf-ort` bestehen; sie ist die linke Spur der Kopfzeile,
+            gegen die die Klapp-Sonde misst (`e2e/leser-klapp-sonde.e2e.ts`). */}
+        {/* ── D32 · DER LINKE STREIFEN ──────────────────────────────────────
+            Im Zeilen-Bild ist er genau so breit wie die Spur neben dem
+            Gesetzestext (`--leser-spur-versatz`) und gibt nichts davon her
+            (`shrink-0`) — sonst begänne das Feld daneben nicht an der Textkante.
+            `h-full`: sonst misst der Streifen seinen höchsten Inhalt, und die
+            Kennung rutschte um 3 px, sobald der Gliederungs-Griff daneben
+            verschwindet (gemessen an der Klapp-Sonde, 7.9.2026 — «ort: Δy=3»).
+            Der Griff steht NEBEN `data-v3-kopf-ort`, nicht darin: die Zone ist
+            die Erlass-Kennung und nichts sonst — `leser-v3-kopfzeile` (a) liest
+            ihren Text und verlangt genau das Kürzel. */}
+        <div className={suchInZeile
+          ? 'flex h-full min-w-0 shrink-0 items-center'
+          : 'flex min-w-0 flex-1 items-baseline'}
+          style={suchInZeile ? { width: 'var(--leser-spur-versatz)' } : undefined}>
+        <div data-v3-kopf-ort
+          className="flex min-w-0 items-baseline gap-1.5 overflow-hidden whitespace-nowrap text-xs text-ink-500">
           {/* ── A4 (H2b-Nachzug) · DIE KENNUNG WIRD NIE ELLIPSIERT ────────────
               Ä21 gab dem Kürzel `min-w-0 truncate` (statt `shrink-0`), weil es bei
               ZH-211.11 der ganze Name ist (45 Zeichen) und die Zone sonst
               gesprengt hätte. NEBENWIRKUNG, gemessen 17.8.2026 @1440 an LugÜ: in
               einer Zone mit ZWEI `truncate`-Geschwistern verteilt Flexbox den
               Mangel auf beide — das VIER Zeichen kurze «LugÜ» wurde zu «Lu…»
-              (`scrollWidth` 29 in `clientWidth` 23). Ausgerechnet die Kennung, die
-              man sucht, um den Erlass wiederzuerkennen (Ä-(d) hat sie im Titel
-              gerade darum nach vorn gezogen), verschwand als erste.
-              REGEL: das Kürzel schrumpft nur, wenn es allein steht — dann ist es
-              der ganze Name und darf umbrechen bzw. kürzen. Steht ein Volltitel
+              (`scrollWidth` 29 in `clientWidth` 23).
+              REGEL unverändert: das Kürzel schrumpft nur, wenn es allein steht —
+              dann ist es der ganze Name und darf kürzen. Steht ein Volltitel
               daneben, gibt DIESER nach, und die Kennung bleibt vollständig.
-              BEWACHT: `e2e/leser-v3-kopf-buendig.e2e.ts` (d) misst LugÜ/StPO und
-              ZH-211.11 auf `scrollWidth <= clientWidth` am Kürzel-Element. */}
+              Dass seit D27 kein Geschwister mehr in der Zone steht, hebt die
+              Regel NICHT auf: `el.volltitel` entscheidet weiterhin, und die
+              Sonde `e2e/leser-v3-kopf-buendig.ts` (d) misst dieselben Erlasse. */}
           <span data-v3-kopf-kuerzel
             className={`font-medium text-ink-800 ${
-              el.volltitel && zeigeVolltitel(erlass) ? 'shrink-0' : 'min-w-0 truncate'}`}>{erlass.kuerzel}</span>
-          {/* ── Ä21 (H2b) · DER NAME STEHT EINMAL ─────────────────────────────
-              Gemessen 17.8.2026 an ZH-211.11: «Gebührenverordnung des
-              Obergerichts (GebV OG)» stand in der App-Krume, direkt darunter als
-              V3-Kürzel UND ein drittes Mal als Volltitel daneben — weil dort das
-              Register-Kürzel bereits der volle Name ist. Drei Ausgaben derselben
-              Angabe in zwei Zentimetern (§5).
-              Die Entscheidung liegt in `erlassAnsicht.zeigeVolltitel` (rein,
-              erlassneutral, unit-geprüft): trägt der Titel neben dem Kürzel keine
-              eigene Auskunft, entfällt er. Bund, Verordnung und Staatsvertrag
-              sind unberührt — dort sagt der Volltitel etwas anderes als das
-              Kürzel.
-              B2 (H2b-Nachzug): «keine eigene Auskunft» heisst seit dem Nachzug
-              WORTGLEICH, nicht «fängt gleich an» — die alte Regel unterdrückte
-              auch Titel, die mehr sagen als das Kürzel (BS-BeE 610.100, AsylG;
-              Herleitung und Messwerte in `erlassAnsicht.zeigeVolltitel`). Hier
-              stand zudem der Satz, der volle Wortlaut bleibe «im `title` des
-              Kürzels» erreichbar — das war falsch (das Kürzel trug nie ein
-              `title`) und wäre auch als Absicht falsch: ein Tooltip ist kein
-              Ersatz für sichtbare Auskunft (§8). Bleibt der Volltitel, steht er
-              sichtbar; sein `title` unten ist nur der Volltext der Ellipse. */}
-          {el.volltitel && zeigeVolltitel(erlass) && (
-            <span className="min-w-0 truncate text-ink-500" title={`${erlass.titel} · ${ebene.label}`}>{erlass.titel}</span>
-          )}
-          {/* Der laufende Artikel fällt NIE (Kap. 4a) — darum `shrink-0`: beim
-              Engerwerden gibt der Volltitel nach, nie die genauere Angabe.
-              Auf der Mini-Stufe steht er als «StPO · Art. N» direkt hinter dem
-              Kürzel, wie es die Skizze zeigt. */}
-          {aktArtikel && (
-            <span data-v3-kopf-artikel className="num shrink-0 text-micro font-medium text-ink-700">
-              <span aria-hidden className="mr-1 text-ink-300">·</span>{aktArtikel}
+              el.volltitel && zeigeVolltitel(erlass) && !suchInZeile ? 'shrink-0' : 'min-w-0 truncate'}`}
+            // D32, offengelegt (§7/§8): im Zeilen-Bild ist der Streifen nur so
+            // breit wie die Spur — bei EINGEKLAPPTER Gliederung sind das 56 px,
+            // und ein langes Kantons-Kürzel (ZH-211.11) kürzt dort. Der volle
+            // Name steht zwei Zeilen tiefer im Erlass-Kopf; der `title` gibt
+            // ihn am Griff selbst her, statt ihn zu verschweigen.
+            // R8 (7.9.2026): der `title` hing an `suchInZeile` — die Kennung
+            // kappt aber in JEDEM `min-w-0 truncate`-Zweig. Gemessen auf
+            // /gesetze/kanton/ZH-211.11 @320: 132 von 276 px sichtbar
+            // («Gebuehrenverordnung des Obergerichts (GebV OG)»), der Rest war
+            // ohne Suchzeile nirgends abrufbar. Jetzt traegt ihn jeder Zweig,
+            // der kappen kann; nur der `shrink-0`-Zweig (voller Name steht
+            // daneben) braucht ihn nicht.
+            title={el.volltitel && zeigeVolltitel(erlass) && !suchInZeile ? undefined : erlass.kuerzel}>{erlass.kuerzel}</span>
+        </div>
+          {/* D32: der Griff endet über der GLIEDERUNG, nicht über dem Text —
+              darum die Spur-Lücke als rechtes Polster (`--leser-spur-abstand`,
+              dieselbe Zahl wie das `gap-5` der Lese-Zeile). */}
+          {onGliederungZu && (
+            <span className="ml-auto shrink-0" style={{ paddingInlineEnd: 'var(--leser-spur-abstand)' }}>
+              <button type="button" data-v3-gliederung-zu onClick={onGliederungZu}
+                aria-expanded={tocOffen} title="Gliederung ausblenden"
+                className="lc-leiste-griff gap-1 px-1.5 text-micro">
+                {/* Ä12 (Ästhetik-Review 16.8.2026): hier stand nur «ausblenden»
+                    — Wort für Wort dasselbe wie «Seitenleiste ausblenden» der
+                    App-Leiste zwei Zentimeter weiter oben, aber mit anderer
+                    Wirkung. Zwei gleich beschriftete Knöpfe, die Verschiedenes
+                    tun, sind eine Falle (§8). Der Knopf sagt, WAS er
+                    ausblendet. Wortlaut mit dem Umzug unverändert. */}
+                <span aria-hidden>‹</span><span>Gliederung ausblenden</span>
+              </button>
             </span>
           )}
-        </nav>
+        </div>
+
+        {/* N4/D32 · DIE ERLASS-SUCHE, BÜNDIG MIT DEM GESETZESTEXT ────────────
+            Sie steht zwischen dem linken Streifen und den Griffen und nimmt den
+            Rest der Zeile; ihren eigenen Deckel (`max-w-reading`) bringt sie
+            mit (`./SuchZone`). `min-w-0`, damit ein langes Feld die Griffe
+            nicht aus der Zeile drückt. */}
+        {suchInZeile && <div className="min-w-0 flex-1">{suchZone}</div>}
 
         {/* ── Griffe: ⚖ · ☰ (nur wenn nötig) · Ansicht ────────────────────────
             Design-Grundlage Kap. 6: «Kopfzeile im Ruhezustand ≤ 4 Elemente,
@@ -247,7 +283,10 @@ export function LeserKopf({
             Wort (Krume bzw. «‹ Gesetze»); Herleitung, Messreihe und die neue
             Auflage «höchstens ein ✕ je Kopfzeile» in `./kopfStufen`. Damit
             ergibt jede Stufe höchstens Ort · ⚖ · ☰ · Ansicht = vier. */}
-        <div data-v3-kopf-griffe className="flex shrink-0 items-center gap-1 sm:gap-1.5">
+        <div data-v3-kopf-griffe
+          className={suchInZeile
+            ? 'flex shrink-0 items-center gap-1 pl-2 sm:gap-1.5 sm:pl-3'
+            : 'flex shrink-0 items-center gap-1 sm:gap-1.5'}>
           {panelOeffner}
           {gliederungKnopf}
           <LeserAnsichtV3 kompakt={stufe === 'mini'} fussnotenAnzahl={fussnotenAnzahl}
@@ -258,8 +297,10 @@ export function LeserKopf({
           als eigenes `sticky`-Element darunter. Zwei gestapelte Sticky-Blöcke
           hätten zwei `top`-Werte, zwei z-Ebenen und zwischen sich den `mb-4`
           dieses Kopfes als durchscheinenden Spalt gebraucht. Ein Block, eine
-          Kante, eine Höhe (`--leser-v3-kopf-h` + `--leser-v3-such-h`). */}
-      {suchZone}
+          Kante, eine Höhe (`--leser-v3-kopf-block-h`).
+          N4 (7.9.2026): steht die Zone IN der Zeile (oben), fällt diese zweite
+          Reihe weg — sie wäre sonst zweimal im DOM. */}
+      {!suchInZeile && suchZone}
     </div>
   );
 }

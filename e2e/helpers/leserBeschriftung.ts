@@ -10,14 +10,32 @@
 // V3-Beschriftung. Die Namen bleiben unverändert, damit die 16 konsumierenden
 // Specs unangetastet bleiben (§6.3) — nur die Definitionen sind schlanker.
 
-/** Das aufgezogene Ansicht-Menü (die `role=group` mit den Schaltern) — trägt
- *  die Identität `data-v3-ansicht-panel`. Als Selektor-String, damit derselbe
- *  Ausdruck in `page.locator(...)` UND in `document.querySelector(...)`
- *  innerhalb von `page.evaluate` funktioniert. */
+/** Die aufgezogene Ansicht-Fläche — trägt die Identität `data-v3-ansicht-panel`.
+ *  Als Selektor-String, damit derselbe Ausdruck in `page.locator(...)` UND in
+ *  `document.querySelector(...)` innerhalb von `page.evaluate` funktioniert.
+ *  Sie war bis 7.9.2026 selbst die `role=group` mit den Schaltern; seit D4
+ *  (Gesamtprüfung W2·24) liegt die Rolle auf dem inneren Eintrags-Block
+ *  (`[data-v3-ansicht-menue]`, `role=menu`), weil der Schriftregler daneben
+ *  kein Menü-Eintrag ist. Der Selektor bleibt derselbe. */
 export const ANSICHT_PANEL = '[data-v3-ansicht-panel]';
 
-/** Der zugängliche Name desselben Menüs für `getByRole('group', { name: … })`. */
+/** Der zugängliche Name des Menüs. */
 export const ANSICHT_NAME = 'Ansicht';
+
+/**
+ * ── D4 (Gesamtprüfung W2·24, 7.9.2026) · DIE ROLLE DER DREI SCHALTER ─────────
+ * Sie waren `role="switch"` in einer `role="group"`. Gemessen war die Fläche
+ * damit für assistive Technik eine namenlose Knopf-Sammlung: `[role=menu]` 0,
+ * kein Eintrags-Zähler, keine Pfeiltasten. Seit D4 trägt der Eintrags-Block
+ * `role="menu"` — und ARIA lässt darin `switch` NICHT zu, sondern verlangt
+ * `menuitemcheckbox`. Dieselbe Auskunft, derselbe `aria-checked`, derselbe
+ * Accessible Name; nur die Rolle wechselt.
+ * ALS KONSTANTE, nicht 32-mal als Literal: genau diese 32 Fundstellen in acht
+ * Specs mussten beim Wechsel von Hand nachgezogen werden (§17 — dieselbe
+ * Störung darf einer künftigen Session nicht noch einmal Zeit kosten).
+ * Rot zu bekommen: auf `'switch'` zurückstellen ⇒ 12 Fälle rot.
+ */
+export const SCHALTER_ROLLE = 'menuitemcheckbox' as const;
 
 /**
  * Der zugängliche Name des Leser-Suchfelds («Im Erlass ‹Kürzel› suchen …»,

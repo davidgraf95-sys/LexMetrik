@@ -34,7 +34,12 @@ export function SprachUmschalter() {
     <div ref={ref} className="relative">
       <button ref={triggerRef} type="button" onClick={() => setOffen((o) => !o)}
         aria-expanded={offen} aria-label="Sprache wählen"
-        className="inline-flex items-center gap-1 h-11 min-w-11 justify-center px-2.5 rounded-lg border border-line bg-surface num text-xs text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors uppercase">
+        /* GB-15 (W2·24): eine Knopf-Form für alle Griffe des Titelblatts
+           (Herleitung an `layout/Topbar`, Rezept index.css §GB-15). `uppercase`
+           bleibt: der Sprachcode «DE» ist ein Kürzel, kein Etikett — F0.7 zielt
+           auf Versal-ETIKETTEN (`.lc-overline`/`.lc-badge`), nicht auf die
+           Schreibung eines ISO-Codes. */
+        className="lc-topbar-griff gap-1 px-2.5 num text-xs uppercase">
         {locale}
         <span aria-hidden className={`text-ink-500 transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
       </button>
@@ -46,9 +51,20 @@ export function SprachUmschalter() {
             return (
               <button key={l.code} type="button" aria-pressed={aktiv} autoFocus={aktiv}
                 onClick={() => { setLocale(l.code); setOffen(false); triggerRef.current?.focus(); }}
-                className={`w-full flex items-center justify-between gap-2 px-3 py-2 rounded-md text-left text-body-s transition-colors ${
-                  aktiv ? 'bg-brass-100/70 text-ink-900 font-medium' : 'text-ink-700 hover:bg-brass-100/40'
-                }`}>
+                // B-M1 (R9-1, 6.9.2026): DAS EINE MENUE-ITEM-REZEPT. Hier stand ein
+                // zweites: 14 px/500 auf einer Messing-Flaeche (`bg-brass-100/70`),
+                // Radius `rounded-md`, Hover `bg-brass-100/40` — waehrend jedes andere
+                // Menue des Hauses (`ui/Menue`, Verlauf, Reiter-Blatt, Ansicht) die
+                // Zeile als `.lc-menu-zeile` fuehrt: 14 px/400, Polster 8/12, Haarlinie
+                // nach unten, Hover in `--well`, Radius 0, Fokus als Strich. Zwei
+                // Rezepte fuer dieselbe Sache (r9-befunde-b.md B-M1).
+                // GEAENDERT WIRD NUR DIE KLASSENZEILE: Struktur, Handler, `aria-pressed`,
+                // `autoFocus`, das Haekchen rechts und die «In Vorbereitung»-Marke
+                // bleiben Zeichen fuer Zeichen. Der gewaehlte Eintrag traegt seinen
+                // Zustand weiterhin doppelt — Tinte statt ink-700 UND das ✓ — also
+                // nicht allein ueber die Farbe (F2/F4); nur die Flaeche faellt weg
+                // (F0.6 «Linien statt Flaechen»).
+                className={`lc-menu-zeile justify-between ${aktiv ? 'text-ink-900' : ''}`}>
                 <span className={l.inBearbeitung ? 'text-ink-500' : ''}>
                   <span className="num uppercase text-xs mr-2">{l.code}</span>{l.label}
                 </span>

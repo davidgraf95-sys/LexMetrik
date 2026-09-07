@@ -160,7 +160,7 @@ export function VorlageTestament() {
             <div className="flex items-center justify-between">
               <GruppenTitel>Erbinnen und Erben</GruppenTitel>
               {a.erben.length > 0 && (
-                <span className={`num text-xs rounded-full px-2 py-0.5 ${Math.abs(erbenSumme - 100) < 0.01 ? 'bg-ok-bg text-ok-text' : 'bg-warn-bg text-warn-700'}`}>
+                <span className={`num text-xs px-2 py-0.5 ${Math.abs(erbenSumme - 100) < 0.01 ? 'bg-ok-bg text-ok-text' : 'bg-warn-bg text-warn-700'}`}>
                   Summe {erbenSumme} %
                 </span>
               )}
@@ -262,7 +262,7 @@ export function VorlageTestament() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.length > 0 && (
-            <div className="lc-notice-danger space-y-1">
+            <div role="alert" className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Vor der Ausgabe zu beheben</p>
               {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
@@ -341,6 +341,7 @@ export function VorlageTestament() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} extra={pflichtteilePanel} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_ABSCHREIBEN, dateiName: 'Testament-Mustertext.pdf' },

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import {
-  PANEL_REITER, gruppiereKanten, normZitat, oeffnerLabel, oeffnerName, panelBezug, reiterTitel,
-  trefferZahl, zaehlerAttribut,
+  OEFFNER_WORT, PANEL_REITER, gruppiereKanten, normZitat, oeffnerLabelKompakt, oeffnerName, panelBezug, reiterTitel,
+  artikelZahl, zaehlerAttribut,
 } from '../pages/gesetz-leser/v3/panelModell';
 import { kopfElemente, panelForm } from '../pages/gesetz-leser/v3/kopfStufen';
 import { PanelSachgebiet } from '../pages/gesetz-leser/v3/PanelSachgebiet';
@@ -29,18 +29,26 @@ function kante(key: string, status: BezugStatus, datum = '2022-03-14'): Bezug {
   } as unknown as Bezug;
 }
 
-describe('oeffnerLabel — §8: keine Zahl, die wir nicht haben', () => {
-  it('unbekannt (null) ⇒ kein Zähler, nur das Wort', () => {
-    expect(oeffnerLabel(null)).toBe('Rechtsprechung');
+// ── §6.3-DEKLARATION (N1, David 7.9.2026) · EIN NAME STATT ZWEIER ──────────
+// `oeffnerLabel` gab je nach Datenlage «Rechtsprechung» ODER «14 Entscheide»
+// aus — gemessen 7.9.2026 @1440 wechselte der Knopf beim ersten Öffnen dauerhaft
+// seinen Namen (105 → 87 px). Die Funktion ist ersatzlos gestrichen: das Wort
+// steht als `OEFFNER_WORT` fest, die Zahl daneben ist `oeffnerLabelKompakt`.
+// Deklarierte fachliche Änderung; die §8-Schranke «keine Zahl, die wir nicht
+// haben» prüft der Fall unten unverändert weiter, nur an der Marke.
+describe('OEFFNER_WORT / Marke — §8: keine Zahl, die wir nicht haben', () => {
+  it('das Wort am Knopf ist unveränderlich', () => {
+    expect(OEFFNER_WORT).toBe('Rechtsprechung');
   });
 
-  it('gewusste 0 ⇒ ebenfalls KEIN Zähler (kein leerer Zähler bei Kantonserlassen)', () => {
-    expect(oeffnerLabel(0)).toBe('Rechtsprechung');
+  it('unbekannt (null) und gewusste 0 ⇒ keine Marke', () => {
+    expect(oeffnerLabelKompakt(null)).toBe('');
+    expect(oeffnerLabelKompakt(0)).toBe('');
   });
 
-  it('Singular und Plural sind getrennt — «1 Entscheide» wäre ein Grammatikfehler im Produkt', () => {
-    expect(oeffnerLabel(1)).toBe('1 Entscheid');
-    expect(oeffnerLabel(14)).toBe('14 Entscheide');
+  it('jede bekannte Zahl steht als Marke da', () => {
+    expect(oeffnerLabelKompakt(1)).toBe('1');
+    expect(oeffnerLabelKompakt(14)).toBe('14');
   });
 });
 
@@ -61,7 +69,7 @@ describe('oeffnerName — der Accessible-Name sagt, WORAUF sich die Zahl bezieht
   });
 });
 
-describe('zaehlerAttribut — das Attribut sagt dasselbe wie das Label', () => {
+describe('zaehlerAttribut — das Attribut sagt dasselbe wie die Marke', () => {
   // BEFUND beim ersten Lauf von `leser-v3-panel-facetten` (d), 17.8.2026: am
   // Kantonserlass stand sichtbar «Rechtsprechung», im Attribut aber «0» — zwei
   // Aussagen an einem Knopf. Die Sonde hält die Deckung fest.
@@ -70,14 +78,14 @@ describe('zaehlerAttribut — das Attribut sagt dasselbe wie das Label', () => {
     expect(zaehlerAttribut(0)).toBeUndefined();
   });
 
-  it('jede Zahl, die das Label zeigt, steht auch im Attribut', () => {
+  it('jede Zahl, die die Marke zeigt, steht auch im Attribut', () => {
     expect(zaehlerAttribut(1)).toBe(1);
     expect(zaehlerAttribut(14)).toBe(14);
   });
 
-  it('Label und Attribut sind über den ganzen Wertebereich deckungsgleich', () => {
+  it('Marke und Attribut sind über den ganzen Wertebereich deckungsgleich', () => {
     for (const n of [null, 0, 1, 2, 99]) {
-      const hatZahl = oeffnerLabel(n) !== 'Rechtsprechung';
+      const hatZahl = oeffnerLabelKompakt(n) !== '';
       expect(zaehlerAttribut(n) !== undefined, `n = ${n}`).toBe(hatZahl);
     }
   });
@@ -143,26 +151,27 @@ describe('gruppiereKanten — Rangordnung strukturell, nie nach Zähler', () => 
   });
 });
 
-describe('trefferZahl — «lädt noch» ist nicht «leer»', () => {
+// ── §6.3-DEKLARATION (N1, David 7.9.2026) · `trefferZahl` IST GESTRICHEN ────
+// Sie zählte die GEFILTERTEN Kanten des Bezugs-Shards und war damit die zweite
+// Zahl für denselben Artikel: gemessen @1440 an OR Art. 336c sagte sie «3»,
+// während die Bezüge-Zeile am selben Artikel «11 Entscheide» nannte. Der Zähler
+// liest seither die Bezugsgrösse aus der Zähl-Datei (`artikelZahl`, unten);
+// die «lädt noch ≠ leer»-Schranke, die diese Fälle bewachten, steckt dort in
+// `null` statt in einem eigenen `geladen`-Argument.
+describe('artikelZahl — die Bezugsgrösse des Artikels, ohne UI-Filter', () => {
   const leer = () => undefined;
-  // A1 (H3-Nachzug): das «geladen»-Argument kommt aus `useBezuege().geladen`, nicht
-  // mehr aus einem Klassen-Zähler. `shardGeladen` ist mit dem Befund gestrichen —
-  // die Funktion KONNTE einen Erlass ohne Shard nicht von einem ladenden trennen
-  // (Herleitung in `panelModell.trefferZahl` und `bezuegeLaden.geladen`).
-  it('vor dem Lade-Ende: null, nicht 0', () => {
-    expect(trefferZahl(leer, false, '429')).toBeNull();
-  });
 
-  it('nach dem Lade-Ende und ohne Kante am Artikel: gewusste 0', () => {
-    expect(trefferZahl(leer, true, '429')).toBe(0);
+  it('ohne Zähl-Datei: null, nicht 0 — «noch nicht da» ist nicht «leer» (§8)', () => {
+    expect(artikelZahl(leer, '429')).toBeNull();
   });
 
   it('ohne Leseposition bleibt es null — die Zahl gilt einem Artikel', () => {
-    expect(trefferZahl(() => ({ kanten: [kante('a', 'bge')] }), true, null)).toBeNull();
+    expect(artikelZahl(() => ({ entscheide: 11, materialien: 1 }), null)).toBeNull();
   });
 
-  it('zählt die GEFILTERTEN Kanten des Artikels', () => {
-    expect(trefferZahl(() => ({ kanten: [kante('a', 'bge'), kante('b', 'bger')] }), true, '429')).toBe(2);
+  it('mit Zähl-Datei: genau die Zahl, die auch die Bezüge-Zeile nennt', () => {
+    expect(artikelZahl(() => ({ entscheide: 11, materialien: 1 }), '336c')).toBe(11);
+    expect(artikelZahl(() => ({ entscheide: 0, materialien: 0 }), '1')).toBe(0);
   });
 });
 

@@ -5,6 +5,7 @@
 // filtert; das Dropdown verlinkt «alle N →» hierher. Läuft gegen `vite preview`.
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
+import { warteAufSuchindex } from './helpers/warteAufSuchindex'
 
 const sucheFeld = (page: Page) => page.getByRole('combobox', { name: /LexMetrik durchsuchen/ })
 
@@ -13,6 +14,10 @@ test.describe('/suche — Volltext-Ergebnisseite (S5)', () => {
     const fehler = fehlerSammeln(page)
     await page.goto('/suche?q=Miete')
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Suche')
+    // §17-Wurzelfix (Fixer 1h): auf den lazy Such-Index warten statt auf die
+    // Playwright-Standarduhr — vorher flakte `zeilen.count()` unten auf einer
+    // kalten/gedrosselten Maschine (`e2e/helpers/warteAufSuchindex.ts`).
+    await warteAufSuchindex(page)
     // Die Gesetzestext-Gruppe erscheint und zeigt mietrechtliche OR-Artikel …
     const gesetzestext = page.getByRole('group', { name: 'Gesetzestext' })
     await expect(gesetzestext).toBeVisible()
@@ -26,6 +31,8 @@ test.describe('/suche — Volltext-Ergebnisseite (S5)', () => {
 
   test('Inhaltstyp-Facette filtert auf eine Gruppe', async ({ page }) => {
     await page.goto('/suche?q=Miete')
+    // Die Facette erscheint erst, wenn genug Gruppen geladen sind (§17-Wurzelfix).
+    await warteAufSuchindex(page)
     const facette = page.getByRole('group', { name: /Nach Inhaltstyp filtern/ })
     await expect(facette).toBeVisible()
     // Auf «Gesetzestext» filtern → nur diese Gruppe bleibt sichtbar (exact, sonst
@@ -58,6 +65,9 @@ test.describe('/suche — Volltext-Ergebnisseite (S5)', () => {
     await feld.fill('Miete')
     const box = page.getByRole('listbox', { name: 'Suchtreffer' })
     await expect(box).toBeVisible()
+    // §17-Wurzelfix: die «alle N Treffer anzeigen»-Option unten in der
+    // Gesetzestext-Gruppe existiert erst, wenn der lazy Index geladen ist.
+    await warteAufSuchindex(page)
     // Die Gesetzestext-Gruppe führt nach /suche — seit dem a11y-Fix 19.7.2026
     // nicht mehr als <a> im Gruppenkopf (axe-critical aria-required-children in
     // role=listbox), sondern als echte role=option «alle N Treffer anzeigen»

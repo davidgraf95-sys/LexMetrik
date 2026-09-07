@@ -44,8 +44,14 @@ async function oeffnen(page: Page, url: string, thema: 'hell' | 'dunkel' = 'hell
 //   «Abschwächung ist Gestaltungsabsicht; Info zusätzlich in title+Legende»);
 //   Hebung = Entscheid David (BERICHT.md B-1).
 const BEKANNTE_BEFUNDE: Record<string, string[]> = {
-  'startseite': ['link-in-text-block'],
-  'startseite-suche': ['link-in-text-block'],
+  // R3-NACHZUG 6.9.2026 (W2·24, Befund R3-F1): 'startseite' und
+  // 'startseite-suche' standen hier mit 'link-in-text-block' — dem
+  // B-2-Markenentscheid «Inline-Links ohne Unterstreichung». Dieser Entscheid
+  // ist mit dem Design-Identitäts-Umbau AUFGEHOBEN (§5 des Fahrplans: «Links
+  // unterstrichen»), die Startseiten-Verweise sind unterstrichen — der Freibrief
+  // ist damit gegenstandslos und GESTRICHEN, nicht umgeschrieben. Ab jetzt gatet
+  // die Regel auf «/» wieder (verifiziert: mit Freibrief grün, ohne Freibrief
+  // grün — der Befund ist behoben, nicht versteckt).
   'tagerechner': ['link-in-text-block'],
   'tagerechner-kalender': ['link-in-text-block'],
   'vorlage-arbeitsvertrag': ['link-in-text-block'],
@@ -106,16 +112,68 @@ test('Startseite', async ({ page }, testInfo) => {
   await axePruefen(page, testInfo, 'startseite')
 })
 
-test('Startseite mit offener Universal-Suche', async ({ page }, testInfo) => {
+test('Startseite mit offener Kopf-Suche', async ({ page }, testInfo) => {
   // Startseiten-Überarbeitung: der frühere Katalog-«Register-Panel»-Zustand
   // existiert auf «/» nicht mehr (Katalog lebt auf /recherche). Geprüft wird
-  // stattdessen der wichtigste neue interaktive Zustand — die offene Universal-
-  // Suche mit gruppierter Trefferliste (Katalog-Gruppe rendert synchron, ohne
-  // Lazy-Daten, daher sofort sichtbar).
+  // stattdessen der wichtigste interaktive Zustand — die offene Suche mit
+  // gruppierter Trefferliste (Katalog-Gruppe rendert synchron, ohne Lazy-Daten,
+  // daher sofort sichtbar).
   await oeffnen(page, '/')
-  await page.locator('section[role="search"] input[type="search"]').fill('kündigung')
-  await page.locator('section[role="search"] .lc-card').waitFor({ state: 'visible' })
+  await page.locator('header [role="search"] input[type="search"]').fill('kündigung')
+  // §6.3-DEKLARATION (W2·24-R5-F1C, David-Befund D18, 6.9.2026): «insgesamt
+  // braucht es auf der startseite keine suche. nur oben reicht» — die
+  // Hero-Suche auf «/» ist entfallen, die EINE Suche steht im Titelblatt.
+  // Geprüft wird unverändert derselbe Zustand (offene Suche mit gruppierter
+  // Trefferliste, dasselbe Panel `.lc-suchpanel`), nur steht das Feld jetzt
+  // im `header` statt in einer `section` der Seite. Assertion, Umfang und
+  // axe-Regeln unverändert.
+  await page.locator('header [role="search"] .lc-suchpanel').waitFor({ state: 'visible' })
   await axePruefen(page, testInfo, 'startseite-suche')
+})
+
+// ── W2·24-R5-F1G · DER POPUP, AUF DEN DAS FELD ZEIGT, MUSS ES GEBEN ─────────
+//
+// GEMESSENER ANLASS (6.9.2026, `e2e-pre-landung.log`): der Fall darüber war
+// 6/10 rot mit
+//   aria-valid-attr-value (critical) — Invalid ARIA attribute value:
+//   aria-controls="_r_0_"  · 1 Knoten, `input`
+// In den 120 ms Entprellung zwischen Tastendruck und übernommener Query
+// rendert `suche/SuchResultate` ein WARTE-Panel; das trug bis zum Wurzel-Fix
+// weder `id` noch `role`, während das Feld bereits `aria-expanded=true` +
+// `aria-controls` meldete. Der Fall darüber traf das nur, wenn axe zufällig in
+// dieses Fenster fiel — daher die Flatterhaftigkeit.
+//
+// Dieser Fall misst die INVARIANTE statt des Zufalls: solange das Feld ein
+// Popup ankündigt, muss das angekündigte Element existieren — und zwar in
+// BEIDEN Zuständen, die es gibt (Warte-Panel und fertige Trefferliste).
+//
+// ROT ZU BEKOMMEN (§6.7, einmal gefahren): in `suche/SuchResultate` im
+// `q === ''`-Zweig `id={listboxId}` streichen ⇒ die erste Messung findet 0
+// Knoten mit dieser id.
+test('E5 — aria-controls der Kopf-Suche zeigt nie ins Leere (Warte- wie Treffer-Panel)', async ({ page }) => {
+  await oeffnen(page, '/')
+  const feld = page.locator('header [role="search"] input[type="search"]')
+  const ziel = async () => page.evaluate(() => {
+    const i = document.querySelector('header [role="search"] input[type="search"]')
+    const id = i?.getAttribute('aria-controls')
+    if (!id) return { id: null, gefunden: 0, rolle: null as string | null }
+    const els = [...document.querySelectorAll(`[id="${CSS.escape(id)}"]`)]
+    return { id, gefunden: els.length, rolle: els[0]?.getAttribute('role') ?? null }
+  })
+  // (1) Das Entprellungs-Fenster: getippt ist schon, die Query noch nicht
+  // übernommen — genau der Zustand, der 6/10 rot war. Ohne Warten gemessen.
+  await feld.pressSequentially('kündigung', { delay: 0 })
+  const sofort = await ziel()
+  if (sofort.id !== null) {
+    expect(sofort.gefunden, `aria-controls=«${sofort.id}» zeigt auf ${sofort.gefunden} Elemente`).toBe(1)
+    expect(sofort.rolle).toBe('listbox')
+  }
+  // (2) Die fertige Trefferliste.
+  await page.locator('header [role="search"] [role="listbox"]').first().waitFor({ state: 'visible' })
+  const fertig = await ziel()
+  expect(fertig.id, 'das Feld kündigt kein Popup an, obwohl eines offen steht').not.toBeNull()
+  expect(fertig.gefunden, `aria-controls=«${fertig.id}» zeigt auf ${fertig.gefunden} Elemente`).toBe(1)
+  expect(fertig.rolle).toBe('listbox')
 })
 
 test('Tagerechner', async ({ page }, testInfo) => {
@@ -124,20 +182,28 @@ test('Tagerechner', async ({ page }, testInfo) => {
   await axePruefen(page, testInfo, 'tagerechner')
 })
 
-// In-App-Reiter-Übersicht (Gesetze-UX Batch 2 ersetzte den horizontalen
-// TabStreifen durch einen Topbar-Trigger ☰ + Dialog-Panel). 2 Reiter vorab
-// seeden, sonst ist der Trigger unsichtbar (tabs.length < 1). Geprüft wird der
-// sichtbare Trigger UND das geöffnete Dialog-Panel (die reiche interaktive Fläche).
-test('Reiter-Übersicht mit zwei offenen Reitern', async ({ page }, testInfo) => {
+// In-App-Reiter (W2·24-DESIGN-IDENTITAET R2, 6.9.2026): der Topbar-Trigger ☰ +
+// Dialog-Panel ist der sichtbaren ARBEITSLEISTE gewichen (`Reiterleiste.tsx`,
+// §5a — Wunsch David «analog zum browser die offenen tabs oben»). Geprüft wird
+// unverändert BEIDES, nur an seinem neuen Ort: die sichtbare Reiter-Zeile UND
+// das geöffnete Blatt (die reiche interaktive Fläche). 10 Reiter vorab seeden
+// statt 2 — erst über der Überlauf-Schwelle (8) trägt die Leiste den
+// «+N»-Knopf, der auf Desktop-Breite ins Blatt führt; die kleinere Saat prüfte
+// den Überlauf gar nicht mit.
+test('Arbeitsleiste mit Überlauf-Blatt', async ({ page }, testInfo) => {
   await page.addInitScript(() => {
     try {
       localStorage.setItem('lexmetrik-tabs', JSON.stringify([
         { path: '/rechner/tagerechner' }, { path: '/rechner/verzugszins' },
+        { path: '/rechner/streitwert' }, { path: '/rechner/erbteilung' },
+        { path: '/rechner/teuerung' }, { path: '/rechner/prozesskosten' },
+        { path: '/vorlagen/testament' }, { path: '/vorlagen/vollmacht' },
+        { path: '/vorlagen/mahnung' }, { path: '/vorlagen/nda' },
       ]))
     } catch { /* privater Modus */ }
   })
   await oeffnen(page, '/rechner/tagerechner')
-  const trigger = page.getByRole('button', { name: 'Alle geöffneten Reiter' })
+  const trigger = page.getByRole('button', { name: /Alle \d+ offenen Reiter/ })
   await trigger.waitFor({ state: 'visible' })
   await trigger.click()
   await page.getByRole('dialog', { name: 'Alle geöffneten Reiter' }).waitFor({ state: 'visible' })
@@ -170,7 +236,13 @@ test('Zuständigkeit mit PLZ-Auswahl-Kacheln', async ({ page }, testInfo) => {
 // (2) ein Reader (BS-640.100) — die beiden Orte der UI-Quick-Wins.
 test('Gesetze — Kanton BS (eingeklappt)', async ({ page }, testInfo) => {
   await oeffnen(page, '/gesetze?ebene=kanton&kt=BS')
-  await expect(page.getByRole('heading', { name: 'Schweizer Gesetzessammlung' })).toBeVisible()
+// ── §6.3-DEKLARATION (W2·24-R6/D11, 6.9.2026) · DIE H1 HEISST «GESETZE» ─────
+// David 6.9.2026 zum Bild /gesetze: Overline «Rechtssammlung Schweiz» + H1
+// «Schweizer Gesetzessammlung» + Erklär-Absatz sagten dreimal dasselbe. Die H1
+// trägt seither den BEREICHSNAMEN — dasselbe Wort wie Reiter und Navigation.
+// Deklarierte fachliche Änderung: die ERWARTUNG wandert mit, die ABSICHT des
+// Falls (die Seite ist da und trägt eine H1) bleibt unberührt.
+  await expect(page.getByRole('heading', { name: 'Gesetze', exact: true })).toBeVisible()
   // Kanton-Header (Wappen + Name) ist da, die Systematik gerendert.
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await axePruefen(page, testInfo, 'gesetze-kanton-BS')
@@ -283,10 +355,17 @@ const DUNKEL_PUNKTE: Array<{
 }> = [
   { titel: 'Startseite', punkt: 'startseite', url: '/' },
   {
-    titel: 'Startseite mit offener Universal-Suche', punkt: 'startseite-suche', url: '/',
+    titel: 'Startseite mit offener Kopf-Suche', punkt: 'startseite-suche', url: '/',
     herstellen: async (page) => {
-      await page.locator('section[role="search"] input[type="search"]').fill('kündigung')
-      await page.locator('section[role="search"] .lc-card').waitFor({ state: 'visible' })
+      await page.locator('header [role="search"] input[type="search"]').fill('kündigung')
+      // §6.3-DEKLARATION (W2·24-R5-F1C, David-Befund D18, 6.9.2026): «insgesamt
+      // braucht es auf der startseite keine suche. nur oben reicht» — die
+      // Hero-Suche auf «/» ist entfallen, die EINE Suche steht im Titelblatt.
+      // Geprüft wird unverändert derselbe Zustand (offene Suche mit gruppierter
+      // Trefferliste, dasselbe Panel `.lc-suchpanel`), nur steht das Feld jetzt
+      // im `header` statt in einer `section` der Seite. Assertion, Umfang und
+      // axe-Regeln unverändert.
+      await page.locator('header [role="search"] .lc-suchpanel').waitFor({ state: 'visible' })
     },
   },
   { titel: 'Tagerechner', punkt: 'tagerechner', url: '/rechner/tagerechner' },
@@ -298,18 +377,22 @@ const DUNKEL_PUNKTE: Array<{
     },
   },
   {
-    titel: 'Reiter-Übersicht mit zwei offenen Reitern', punkt: 'tab-streifen', url: '/rechner/tagerechner',
+    titel: 'Arbeitsleiste mit Überlauf-Blatt', punkt: 'tab-streifen', url: '/rechner/tagerechner',
     seeden: async (page) => {
       await page.addInitScript(() => {
         try {
           localStorage.setItem('lexmetrik-tabs', JSON.stringify([
             { path: '/rechner/tagerechner' }, { path: '/rechner/verzugszins' },
+            { path: '/rechner/streitwert' }, { path: '/rechner/erbteilung' },
+            { path: '/rechner/teuerung' }, { path: '/rechner/prozesskosten' },
+            { path: '/vorlagen/testament' }, { path: '/vorlagen/vollmacht' },
+            { path: '/vorlagen/mahnung' }, { path: '/vorlagen/nda' },
           ]))
         } catch { /* privater Modus */ }
       })
     },
     herstellen: async (page) => {
-      const trigger = page.getByRole('button', { name: 'Alle geöffneten Reiter' })
+      const trigger = page.getByRole('button', { name: /Alle \d+ offenen Reiter/ })
       await trigger.waitFor({ state: 'visible' })
       await trigger.click()
       await page.getByRole('dialog', { name: 'Alle geöffneten Reiter' }).waitFor({ state: 'visible' })

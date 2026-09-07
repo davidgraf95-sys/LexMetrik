@@ -26,12 +26,20 @@ export const NICHT_GESPEICHERT_HINWEIS =
  *  Steuert, wann `Field` `htmlFor` setzen darf (siehe dort). */
 const BESCHRIFTBAR = ['input', 'select', 'textarea'];
 
-export function Field({ label, children, hint, optional }: {
+export function Field({ label, children, hint, optional, fehlt }: {
   /** Beschriftung. `ReactNode` (R2-E/F1-2), weil einzelne Felder dem Namen eine
    *  leise Präzisierung nachstellen («Zugang Kündigung (Stichtag B/C)») — die
    *  gehörte bis dahin zu den Gründen, warum ein Formular am Baustein
    *  vorbeibaute. Der Normalfall bleibt ein String. */
   label: React.ReactNode; children: React.ReactNode; hint?: string; optional?: boolean;
+  /** D5 (W2·24): Meldung zu genau DIESEM Feld. Gesetzt heisst «Pflichtangabe
+   *  fehlt/ist ungültig» — das native Control bekommt `aria-invalid` und eine
+   *  Fehlerzeile, auf die es per `aria-describedby` zeigt. Bis D5 trug ein
+   *  Vorlagen-Formular seine Fehler AUSSCHLIESSLICH in der Sammel-Box am Fuss
+   *  der Karte; gemessen am 6./7.9.2026 (Befund D5) waren es auf
+   *  `/vorlagen/schlichtungsgesuch-bs` 0 × `aria-invalid` im ganzen Wizard.
+   *  Wer die Prop nicht setzt, bekommt exakt das bisherige Feld (§6). */
+  fehlt?: string;
 }) {
   // Label↔Control-Verknüpfung (FAHRPLAN-DESIGN 3.6): native Einzel-Controls
   // (input/select/textarea) bekommen automatisch id + htmlFor; zusammengesetzte
@@ -54,8 +62,17 @@ export function Field({ label, children, hint, optional }: {
   const komposit = isValidElement(children) && typeof children.type !== 'string'
     && (children.props as Record<string, unknown>)['aria-label'] === undefined
     && (children.props as Record<string, unknown>)['aria-labelledby'] === undefined;
+  // D5: `aria-invalid`/`aria-describedby` NUR auf ein natives Control — ein
+  // zusammengesetztes Kind (DatumsFeld, BetragsFeld) reicht unbekannte Props
+  // nicht an sein inneres <input> weiter, das Attribut landete dann auf einem
+  // Wrapper-DIV und wäre eine Behauptung ohne Wirkung (§8). Dort bleibt die
+  // sichtbare Fehlerzeile die ganze Aussage.
+  const fehlerId = `${id}-fehler`;
+  const invalid = nativ && fehlt
+    ? { 'aria-invalid': true as const, 'aria-describedby': fehlerId }
+    : {};
   const control = nativ
-    ? cloneElement(children as React.ReactElement<{ id?: string }>, { id })
+    ? cloneElement(children as React.ReactElement<{ id?: string }>, { id, ...invalid })
     : komposit
       ? cloneElement(children as React.ReactElement<{ 'aria-labelledby'?: string }>, { 'aria-labelledby': `${id}-label` })
       : children;
@@ -74,6 +91,11 @@ export function Field({ label, children, hint, optional }: {
           liefert dort 6.35:1 und auf `--paper` 7.4:1 — AA auf JEDER Fläche des
           Hauses, statt einer Ausnahme je Kasten. */}
       {hint && <p className="text-xs text-ink-600"><NormText text={hint} /></p>}
+      {/* D5: die Fehlerzeile steht AM Feld, nicht nur in der Sammel-Box —
+          `role=alert` bleibt der Sammel-Box vorbehalten (sonst rufen bei einem
+          leeren Formular ein Dutzend Zeilen gleichzeitig), die Verbindung zum
+          Control macht `aria-describedby`. */}
+      {fehlt && <p id={fehlerId} className="text-xs text-danger-700"><NormText text={fehlt} /></p>}
     </div>
   );
 }
@@ -206,7 +228,7 @@ export function ListenEditor<T>({
 /** Sektions-Kopf innerhalb eines Wizard-Schritts (Redesign, Entscheid David):
  *  Overline (Messing) + Haarlinie — gleiche Anatomie wie die Abschnitts-Köpfe
  *  der Rechner/des Katalogs, damit lange Schritte in lesbare Sektionen
- *  zerfallen. Ersetzt das zuvor leise <p className="lc-overline">-Muster.
+ * zerfallen. Ersetzt das zuvor leise <p className="lc-overline">-Muster.
  *
  *  B3-1 (R3-β, 31.8.2026): «gleiche Anatomie wie …» war bis hierher eine
  *  zeichengleiche KOPIE der Anatomie von `ui/GruppenKopf` — ohne dessen
@@ -260,13 +282,19 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
           <span className="lc-overline shrink-0">Schritt <span className="num">{aktiv + 1}</span>/<span className="num">{schritte.length}</span></span>
           <span className="text-body-s font-medium text-ink-700 truncate text-right">{schritte[aktiv].label}</span>
         </div>
-        <div className="h-1 rounded-full bg-well overflow-hidden"
+        <div className="h-1 bg-well overflow-hidden"
           role="progressbar" aria-valuenow={aktiv + 1} aria-valuemin={1} aria-valuemax={schritte.length}>
           <div className="h-full bg-brass-500 origin-left transition-transform motion-reduce:transition-none" style={{ transform: `scaleX(${anteil})` }} />
         </div>
       </div>
-      {/* Desktop: klickbare Schritt-Chips */}
-      <div className="hidden sm:flex flex-wrap gap-x-1 gap-y-2">
+      {/* Desktop: klickbare Schritt-Chips.
+          R5-F2 (6.9.2026, D6): `flex-wrap` liess bei 7 Schritten den letzten
+          («Prüfen & Download») unter die Zeile fallen, sobald die Fläche schmaler
+          als ~1250 px war (Pane, 1024, gezoomt) — eine zweizeilige Leiste liest
+          sich wie zwei Gruppen. Eine Schrittfolge ist EINE Zeile: statt Umbruch
+          jetzt waagrechter Scroll mit sichtbarem Rand (`lc-scrollrand-x`, die
+          Haus-Affordanz für jeden Scroller). */}
+      <div className="hidden sm:flex gap-x-1 overflow-x-auto lc-scrollrand-x">
         {schritte.map((s, i) => {
           const erledigt = i < aktiv;
           const istAktiv = i === aktiv;
@@ -287,13 +315,33 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
               // Klick-Sperre bleibt Wort für Wort dieselbe.
               aria-disabled={i > aktiv ? true : undefined}
               title={i > aktiv ? 'Noch nicht erreichbar — vorherige Schritte zuerst ausfüllen' : undefined}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                istAktiv ? 'bg-surface-raised border border-line text-brass-700 shadow-sm'
-                : erledigt ? 'text-ink-700 hover:bg-brass-100/50'
-                : 'text-ink-500 cursor-not-allowed'
+              // R5-F2/V5 (6.9.2026): der aktive Schritt war ein Kasten
+              // (Rahmen + Radius + eigene Füllung + Schatten-Utility). Im
+              // Zielbild markiert eine LINIE die Stelle, an der man steht —
+              // Radius und Fläche fallen weg, der Unterstrich trägt den
+              // Zustand. Klickverhalten, ARIA und Reihenfolge unverändert.
+              className={`inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap border-b-2 px-2.5 py-1.5 text-xs font-medium transition-colors ${
+                istAktiv ? 'border-rule text-ink-900'
+                : erledigt ? 'border-transparent text-ink-700 hover:border-line-strong'
+                : 'border-transparent text-ink-500 cursor-not-allowed'
               }`}>
-              <span className={`num inline-flex items-center justify-center w-5 h-5 rounded-full text-micro ${
-                erledigt ? 'bg-brass-500 text-ink-900' : istAktiv ? 'border border-brass-500 text-brass-700' : 'border border-line text-ink-500'
+              {/* ── GB-21 (W2·24, Befund G21, 7.9.2026) · DIE NUMMER STEHT IN DER ZEILE
+                  GEMESSEN im ersten Bild der Vorlage @1440: 7 ×
+                  `span.num.inline-flex.h-5` — sieben Kästchen in einer Leiste,
+                  die ihren Zustand seit R5-F2/V5 ohnehin über den UNTERSTRICH
+                  trägt (`border-b-2`, Kommentar oben). Das Kästchen war also das
+                  zweite Signal für dieselbe Sache, in der Form, die F0.6 gerade
+                  abschafft — und die Marke war «kantig» nur noch, weil der
+                  Radius weg war, ein Kasten blieb sie. §17-Gegengewicht: wer
+                  addiert, streicht zuerst die Stelle, die dieselbe Sorge schon
+                  trägt.
+                  NEU: die Ziffer steht blank in der Zeile. Der ERLEDIGT-Zustand
+                  bleibt am ✓ (Glyphe = Form, nicht Farbe), der AKTIVE an der
+                  Tinte — beide Aussagen bleiben also erhalten, nur ohne Rahmen
+                  und ohne Fläche. Höhe/Abstände der Leiste unverändert (die
+                  Marke war 20 px hoch in einer 30-px-Zeile) ⇒ CLS 0. */}
+              <span className={`num text-micro ${
+                erledigt ? 'text-ink-900' : istAktiv ? 'text-ink-900' : 'text-ink-500'
               }`}>{erledigt ? '✓' : i + 1}</span>
               {s.label}
             </button>
@@ -343,8 +391,8 @@ export function FehlerBox({ fehler }: { fehler: string[] }) {
   const beruehrt = useContext(BeruehrtContext);
   if (!beruehrt || fehler.length === 0) return null;
   return (
-    <div role="alert" className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
-      <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
+    <div role="alert" className="lc-notice lc-notice-danger space-y-1">
+      <p className="lc-overline text-danger-700 mb-1">Eingabefehler</p>
       {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={f} /></p>)}
     </div>
   );

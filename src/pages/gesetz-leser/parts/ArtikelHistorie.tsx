@@ -62,7 +62,7 @@ function Quellen({ quellen }: { quellen: HistorieEreignis['quellen'] }) {
         <span key={q.label + i}>
           {i > 0 && <span aria-hidden> · </span>}
           {q.url ? (
-            <a href={q.url} target="_blank" rel="noopener noreferrer" className="num hover:text-brass-700 hover:underline">{q.label}</a>
+            <a href={q.url} target="_blank" rel="noopener noreferrer" className="num hover:text-brass-700">{q.label}</a>
           ) : (
             <span className="num">{q.label}</span>
           )}

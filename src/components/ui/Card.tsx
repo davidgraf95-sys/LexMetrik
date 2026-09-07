@@ -19,7 +19,20 @@ export function Card({
 } & HTMLAttributes<HTMLDivElement>) {
   const pad = padding === 'md' ? 'p-5 sm:p-6' : 'p-6 sm:p-8';
   return (
-    <div className={`bg-surface-raised rounded-2xl border border-line ${pad}${className ? ' ' + className : ''}`} {...rest}>
+    // ── U2-NACHZUG (Prüfbefund R-5 der Rechner-Familie, 6.9.2026) ─────────
+    //  Dieselbe Umstellung wie an `.lc-card` (index.css): kein Seitenrahmen,
+    //  keine eigene Füllung, Trennung über je eine Haarlinie oben und unten.
+    //  GEMESSEN hatte der Prüfer die Karte auf ALLEN 20 Rechner-Routen als
+    //  «Rahmen ≥ 3 Seiten + Füllung ≠ Papier» — und die Füllungsdifferenz mit
+    //  2–4/255 (hell) als visuell nicht wahrnehmbar. Genau das ist der U2-Fall:
+    //  ein Kasten, den man sieht, um eine Fläche, die es nicht gibt. Er blieb
+    //  in jenem Bericht als «kein Handlungsbedarf» stehen, weil er isoliert
+    //  betrachtet wurde; NEBEN einer linien-basierten `.lc-card` auf derselben
+    //  Seite ist er die Inkonsistenz, die David meint («alles angleichen»).
+    //  Der Radius war mit R1 ohnehin schon 0 (`--radius-2xl: 0px`) — die
+    //  Utility `rounded-2xl` erzeugte keine sichtbare Rundung mehr und fällt
+    //  darum ersatzlos weg statt still mitgeführt zu werden.
+    <div className={`border-y border-rule-soft ${pad}${className ? ' ' + className : ''}`} {...rest}>
       {children}
     </div>
   );

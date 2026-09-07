@@ -12,6 +12,9 @@ export const KARTEN_FRISTEN: Record<string, CalculatorCard> = {
     id: 'zpo-fristen', modus: 'rechner', art: 'frist', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
     title: 'Verfahrens- & Rechtsmittelfristen',
+    // M7: Kurzform für den Reiter (§5a Ziff. 2) — aus dem eigenen
+    // Routen-Slug und dem Kürzel des massgeblichen Erlasses, nicht geraten.
+    kurz: 'ZPO-Fristen',
     szenarien: [
       { label: 'Rechtsmittel, Schlichtung, Erstinstanz (Phasen-Auswahl)', status: 'entwurf' },
       { label: 'Klagebewilligung – Geltungsdauer (Schlichtungs-Preset)', status: 'entwurf' },
@@ -40,6 +43,9 @@ export const KARTEN_FRISTEN: Record<string, CalculatorCard> = {
     id: 'schkg-fristen', modus: 'rechner', art: 'frist', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',
     title: 'Betreibungs- & Konkursfristen',
+    // M7: Kurzform für den Reiter (§5a Ziff. 2) — aus dem eigenen
+    // Routen-Slug und dem Kürzel des massgeblichen Erlasses, nicht geraten.
+    kurz: 'SchKG-Fristen',
     szenarien: [
       { label: 'Einleitung bis Konkurs (Verfahrensphasen)', status: 'entwurf' },
       { label: 'Rechtsöffnung, Aberkennung, Kollokation', status: 'entwurf' },
@@ -267,6 +273,9 @@ export const KARTEN_FRISTEN: Record<string, CalculatorCard> = {
     id: 'bgg-fristen', modus: 'rechner', art: 'frist', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'uebergreifend',
     title: 'Beschwerde ans Bundesgericht (BGG)',
+    // M7: Kurzform für den Reiter (§5a Ziff. 2) — aus dem eigenen
+    // Routen-Slug und dem Kürzel des massgeblichen Erlasses, nicht geraten.
+    kurz: 'BGG-Beschwerde', // Gegenprüfung 6.9.2026: «BGG-Fristen» verengte Art. 74/113 BGG + Art. 33 BGerR
     description: 'Weiterzug ans Bundesgericht für alle vier Beschwerdewege: Zulässigkeit (Streitwertgrenzen mit Ausnahmen), Frist 30/10/5/3 Tage mit Stillstand und konkretem Fristende, zuständige Abteilung – inkl. subsidiärer Verfassungsbeschwerde.',
     status: 'entwurf',
     norms: [

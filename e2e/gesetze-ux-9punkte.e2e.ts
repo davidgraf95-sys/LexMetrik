@@ -112,14 +112,37 @@ test.describe('Gesetze-UX 9 Punkte', () => {
     await expect(page.locator('[data-toc-aktiv]').first()).toBeVisible();
   });
 
+  // ── §6.3-DEKLARATION 6.9.2026 (W2·24 R2/R11 · D19) ─────────────────────────
+  // GEGENSTAND UNVERÄNDERT: die Übersicht ALLER offenen Reiter steht in der
+  // Kopfzone und ist gruppiert — Kategorie «Gesetze», darunter die Herkunft
+  // «Bund» (`lib/tabGruppen`). GEÄNDERT ist der WEG dorthin: das Reiter-Dropdown
+  // der alten Topbar ist der Arbeitsleiste gewichen (`layout/Reiterleiste.tsx`).
+  // Ihr Blatt-Auslöser heisst jetzt konstant «Alle N offenen Reiter» (die Zahl
+  // gehört zum Namen) und erscheint erst, wenn es etwas zu überlaufen gibt
+  // (Desktop: `ueberlaufZahl > 0`; schmale Ansicht ab drei Reitern). Zwei
+  // geöffnete Gesetze reichten dafür nicht mehr — der Fall lief 150 s in den
+  // Timeout, weil er auf einen Knopf wartete, den es bei zwei Reitern nicht
+  // gibt. Der Wächter stellt die Bedingung darum selbst her (Reiter-Speicher
+  // seeden, Muster aus `a11y.e2e.ts` / `w224-r11-reiterleiste.e2e.ts`).
+  // ROT ZU BEKOMMEN (§6.7): in `lib/tabGruppen.reiterKategorie` das
+  // `gesetze`-Präfix streichen ⇒ die Bund-Erlasse landen unter «Weitere» und
+  // die beiden Gruppen-Überschriften fehlen.
   test('P3/B: Reiter-Übersicht im Header, gruppiert (Gesetze→Bund)', async ({ page }) => {
-    // Zwei Gesetze öffnen → Reiter entstehen.
-    await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible();
+    // Startroute ohne eigenen Reiter, damit der Speicher genau das trägt, was
+    // hier gesetzt wird (`lib/tabs.istReiterPfad`).
+    await page.goto('/kontakt');
+    await page.evaluate(() => {
+      try {
+        localStorage.setItem('lexmetrik-tabs', JSON.stringify(
+          ['OR', 'ZGB', 'StGB', 'ZPO', 'StPO', 'SchKG', 'BV', 'DSG', 'URG']
+            .map((k) => ({ path: `/gesetze/bund/${k}` }))));
+      } catch { /* privater Modus */ }
+    });
     await page.goto('/gesetze/bund/ZGB');
     await expect(page.locator('article').first()).toBeVisible();
-    // Übersicht aus der TOPBAR öffnen (Trigger trägt aria-label «Alle geöffneten Reiter»).
-    await page.getByRole('button', { name: 'Alle geöffneten Reiter' }).click();
+    // Übersicht aus der KOPFZONE öffnen (Arbeitsleiste → Blatt).
+    const ausloeser = page.getByRole('button', { name: /Alle \d+ offenen Reiter/ });
+    await ausloeser.click();
     const dialog = page.getByRole('dialog', { name: 'Alle geöffneten Reiter' });
     await expect(dialog).toBeVisible();
     await expect(dialog.getByText('Gesetze', { exact: true })).toBeVisible();

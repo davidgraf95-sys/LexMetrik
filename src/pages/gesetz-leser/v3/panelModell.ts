@@ -7,6 +7,7 @@ import { bestimmungDativ, type BestimmungsWort } from './erlassAnsicht';
 import { useLeserOptionen } from '../leserOptionen';
 import { STATUS_RANG, type BezugStatus } from '../../../lib/verzahnung/facetten';
 import type { Bezug } from '../../../lib/rechtsprechung/bezuege';
+import type { ZaehlerNachschlag } from '../bezuegeZaehler';
 
 // ─── Modell des Rechtsprechungs-/Kontext-Panels (FAHRPLAN-LESER-V3 Kap. 4d, H3) ─
 //
@@ -82,28 +83,33 @@ export function reiterTitel(id: PanelReiter, wort: BestimmungsWort): string {
 export const OEFFNER_SELEKTOR = '[data-v3-panel-oeffner]';
 
 /**
- * Beschriftung des Panel-Öffners.
+ * Das Wort am Panel-Öffner — unveränderlich, in jeder Datenlage und jedem
+ * Zuschnitt (ausser `mini`, wo nur Ikone und Marke Platz haben).
  *
- * ── §8: KEINE ZAHL, DIE WIR NICHT HABEN ────────────────────────────────────
- * `null` heisst «noch nicht geladen» und ergibt «Rechtsprechung» ohne Zahl —
- * NICHT «0 Entscheide». Der Bezugs-Shard wird erst beim Öffnen geholt (s. o.),
- * und ein Korpus führt kein leichtes Zähl-Sidecar, aus dem die Zahl vorher
- * bekannt sein könnte. Eine 0 an dieser Stelle wäre eine Behauptung über den
- * Bestand, die wir aus Unwissen aufstellen.
- *
- * `0` heisst «geladen, dieser Artikel führt keine Entscheide» und ergibt
- * ebenfalls KEINEN Zähler: ein «0 Entscheide →» ist genau der leere Zähler, den
- * die Erlass-Neutralitäts-Regel verbietet (Kantonserlasse ohne Bezüge).
- * Der Öffner bleibt in beiden Fällen da — er führt zu allen Reitern der Leiste
- * (seit W2·7-VZUI vier), nicht nur zu den Entscheiden.
+ * Der Öffner führt zu ALLEN vier Reitern der Leiste (seit W2·7-VZUI), nicht nur
+ * zu den Entscheiden; «Rechtsprechung» ist ihr gemeinsames Dach und zugleich
+ * das Wort, unter dem David die Fläche anspricht.
  */
-export function oeffnerLabel(anzahl: number | null): string {
-  if (anzahl === null || anzahl <= 0) return 'Rechtsprechung';
-  return anzahl === 1 ? '1 Entscheid' : `${anzahl} Entscheide`;
-}
+export const OEFFNER_WORT = 'Rechtsprechung';
 
 /**
- * Dasselbe für den Handy-Zuschnitt: nur die ZAHL, ohne Zähl-Substantiv.
+ * ── N1/D33 (David 7.9.2026) · DAS WORT BLEIBT, DIE ZAHL WIRD EINE MARKE ─────
+ * Bis hierher gab diese Stelle je nach Datenlage ZWEI verschiedene
+ * Beschriftungen aus — «Rechtsprechung» (105 px) und, sobald der Bezugs-Shard
+ * da war, «3 Entscheide» (87 px). Gemessen 7.9.2026 @1440: der Wechsel trat
+ * beim ERSTEN Öffnen ein und war dauerhaft; der Knopf hiess danach anders als
+ * vorher und war schmaler. Zwei Namen für denselben Knopf sind eine Falle (§8,
+ * dieselbe Klasse wie Ä12), und im Ruhezustand sagte er nicht, worauf er zeigt.
+ *
+ * SEITHER: `OEFFNER_WORT` steht immer, die Zahl steht als Marke DANEBEN — und
+ * sie kommt aus der Zähl-Datei (`../bezuegeZaehler`), also aus derselben Quelle
+ * wie die Bezüge-Zeile am Artikel und ohne Lazy-Gate (N1, §5).
+ * `oeffnerLabelKompakt` unten IST diese Marke; eine zweite Ableitung derselben
+ * Zahl gibt es nicht mehr — `oeffnerLabel` ist ersatzlos gestrichen.
+ */
+
+/**
+ * Die Zahl-Marke am Öffner — und auf `mini` seine ganze Beschriftung.
  *
  * H4-II (17./18.8.2026). Auf `mini` ist die Kopfzeile innen 350 px breit
  * (gemessen @390, StPO) — «⚖ 14 Entscheide» misst dort 115 px, «⚖ 14» rund 50.
@@ -111,11 +117,10 @@ export function oeffnerLabel(anzahl: number | null): string {
  * Wortlaut steht unverkürzt im Accessible Name (`oeffnerName`), also dort, wo
  * ihn ein Screenreader ohnehin liest.
  *
- * DIESELBE §8-SCHRANKE WIE OBEN, nicht eine zweite: keine Zahl, die wir nicht
- * haben. `null` (noch nicht geladen) und `0` (geladen, nichts erfasst) ergeben
- * die leere Zeichenkette — dann trägt der Chip nur die Ikone. Wer hier eine «0»
- * schriebe, behauptete auf dem engsten Zuschnitt genau das, was `oeffnerLabel`
- * auf den beiden anderen verbietet.
+ * DIE §8-SCHRANKE: keine Zahl, die wir nicht haben. `null` (noch nicht geladen)
+ * und `0` (geladen, nichts erfasst) ergeben die leere Zeichenkette — dann trägt
+ * der Knopf nur Ikone und Wort. Eine «0» wäre eine Behauptung über den Bestand,
+ * die wir aus Unwissen aufstellen (Kantonserlasse ohne Bezüge).
  */
 export function oeffnerLabelKompakt(anzahl: number | null): string {
   return anzahl !== null && anzahl > 0 ? String(anzahl) : '';
@@ -199,13 +204,34 @@ export interface PanelZustand {
    */
   oeffnerSichtbar: boolean;
   offen: boolean;
-  /** War das Panel in dieser Sitzung schon einmal offen? Steuert das Nachladen. */
+  /** War das Panel in dieser Sitzung schon einmal offen — oder hat jemand
+   *  ANDERS nach denselben Daten gefragt? Steuert das Nachladen.
+   *
+   *  D30 (6.9.2026): das Flag heisst weiterhin so, trägt aber seither zwei
+   *  Auslöser. Der zweite ist `weckeDaten()` unten. */
   jeGeoeffnet: boolean;
   reiter: PanelReiter;
   setReiter: (r: PanelReiter) => void;
   oeffne: (r?: PanelReiter) => void;
   schliesse: () => void;
   umschalten: () => void;
+  /**
+   * Die Daten holen, OHNE das Panel aufzuziehen (W2·24-R5-F1K, D30).
+   *
+   * Anlass, Davids Wortlaut: die Bezüge-Zeile am Artikelkopf «klappt auf, zeigt
+   * aber nur den Rechnen-Block; die gezählten Entscheide … werden nicht
+   * geladen». Sie sass am kurzen Ende von H3: der Bezugs-Shard wird seither erst
+   * beim Öffnen des Panels geholt, und die Zeile hatte keinen Weg, danach zu
+   * fragen. Die Zahl stand da (Zähl-Datei, R6c), der Apparat kam nie.
+   *
+   * DIESELBE STELLE, KEIN ZWEITER LADEPFAD (§5): das Aufklappen setzt genau das
+   * Flag, das auch das Panel setzt — `useBezuege` bekommt seinen Erlass-Key,
+   * `usePanelBezuege` und die Bezüge-Zeile lesen danach DIESELBE Hook-Instanz.
+   * Wer erst die Zeile aufklappt und dann das Panel öffnet, löst keinen zweiten
+   * Fetch aus; wer die Zeile wieder zuklappt, verliert die Daten nicht (der
+   * Grund, aus dem das Flag `jeGeoeffnet` heisst und nicht `offen`).
+   */
+  weckeDaten: () => void;
 }
 
 export function usePanelZustand(): PanelZustand {
@@ -220,6 +246,10 @@ export function usePanelZustand(): PanelZustand {
     setOffen(true);
   }, []);
   const schliesse = useCallback(() => setOffen(false), []);
+  // D30: nur das Lade-Flag, kein `setOffen` — das Panel bleibt zu.
+  // `setJeGeoeffnet(true)` auf einem bereits gesetzten Flag ist in React ein
+  // No-op (Bail-out), die Zeile darf also bei jedem Aufklappen rufen.
+  const weckeDaten = useCallback(() => setJeGeoeffnet(true), []);
   const umschalten = useCallback(() => {
     setOffen((o) => {
       if (!o) setJeGeoeffnet(true);
@@ -232,7 +262,7 @@ export function usePanelZustand(): PanelZustand {
   // Tastatur erreichbar». Wer `r` drückt, während der Schalter aus ist, bekommt
   // das Panel — es hat dann nur keine Lasche und keinen Zähler, über die man es
   // wieder zumachen könnte, wohl aber sein eigenes ✕ und Esc.
-  return { oeffnerSichtbar, offen, jeGeoeffnet, reiter, setReiter, oeffne, schliesse, umschalten };
+  return { oeffnerSichtbar, offen, jeGeoeffnet, reiter, setReiter, oeffne, schliesse, umschalten, weckeDaten };
 }
 
 /**
@@ -249,32 +279,6 @@ export function usePanelBezuege(erlassKey: string | undefined, jeGeoeffnet: bool
   return useBezuege(jeGeoeffnet ? erlassKey : undefined);
 }
 
-/**
- * Trefferzahl am Öffner: Kanten des GELESENEN Artikels nach Facetten-Filter.
- *
- * `null` = wir wissen es nicht (Lade-Versuch noch offen) ⇒ der Öffner zeigt
- * keine Zahl (§8, siehe `oeffnerLabel`). Die Unterscheidung «lädt noch» gegen
- * «leer» kann NICHT aus `bezuegeFuer` kommen: die Hook gibt in beiden Fällen
- * `undefined` zurück (Begründung dort). Sie kommt darum aus `geladen` — und
- * zwar seit dem H3-Nachzug (A1) aus dem **Lade-Ende-Signal von `useBezuege`**,
- * nicht mehr aus dem Klassen-Zähler des Erlasses.
- *
- * ── WARUM DER KLASSEN-ZÄHLER DAFÜR UNTAUGLICH WAR (gemessen 17.8.2026) ──────
- * `shardGeladen(klassenImErlass)` hiess «nicht leer ⇒ ausgewertet». Ein Erlass
- * ohne Shard bekommt aber ein `{}`, das sich von «noch nicht geladen» nicht
- * unterscheidet — der Zustand blieb an 1149 von 1459 Erlassen (79 %) für immer
- * «lädt noch». Die Funktion ist darum gestrichen, nicht bewacht (§17): ein
- * Signal, das die entscheidende Lage nicht ausdrücken KANN, lässt sich nicht
- * durch einen Test retten.
- */
-export function trefferZahl(
-  bezuegeFuer: (artikel: string) => { kanten: readonly Bezug[] } | undefined,
-  geladen: boolean,
-  aktArtikel: string | null,
-): number | null {
-  if (!geladen || !aktArtikel) return null;
-  return bezuegeFuer(aktArtikel)?.kanten.length ?? 0;
-}
 
 /**
  * Auf WELCHEN Artikel bezieht sich das Panel?
@@ -296,6 +300,33 @@ export function trefferZahl(
  * Das Label kommt aus `labelMitBereich` — derselben Funktion, aus der der Kern
  * es baut (§5): sonst stimmte das `?norm=` bei Bereichs-Artikeln nicht.
  */
+/**
+ * ── N1 (Finder-Befund 7.9.2026) · EINE ZAHL JE ARTIKEL, NICHT ZWEI ──────────
+ * Die Zahl am Kopf-Zähler, aus der Zähl-Datei des Erlasses.
+ *
+ * GEMESSEN @1440 an OR Art. 336c, EIN Bildschirm: die Bezüge-Zeile am Artikel
+ * sagte «Bezüge · 11 Entscheide», der Kopf-Zähler daneben «⚖ 3 Entscheide».
+ * Beide Zahlen waren richtig und meinten Verschiedenes — die Zeile nennt die
+ * BEZUGSGRÖSSE aus der Zähl-Datei (ausdrücklich «ohne UI-Filter»,
+ * `../bezuegeZaehler`), der Zähler zählte die gerade GEFILTERTEN Kanten
+ * (`bezuegeLaden.waehleBezuege`). Zwei Zahlen für dieselbe Sache auf einem
+ * Bildschirm sind ein §5-/§8-Mangel, egal wie gut jede für sich begründet ist.
+ * Der Kopf nennt jetzt dieselbe Bezugsgrösse; GEFILTERT wird im Panel, wo die
+ * Schalter stehen und die Wirkung sichtbar ist.
+ *
+ * NEBENWIRKUNG, gewollt: die Zahl steht ab dem ersten Leerlauf fest, statt erst
+ * nach dem ersten Öffnen aus dem 2.2-MB-Shard zu kommen — die Beschriftung des
+ * Knopfes wechselt damit nicht mehr unter dem Cursor (D33). Das abgelöste
+ * `trefferZahl` (gefiltert, mit `geladen`-Schranke) ist ersatzlos gestrichen.
+ *
+ * `null` = noch keine Zähl-Datei: der Knopf trägt dann nur sein Wort und
+ * behauptet keine 0 (§8, `oeffnerLabelKompakt`).
+ */
+export function artikelZahl(zaehler: ZaehlerNachschlag, artikel: string | null): number | null {
+  if (!artikel) return null;
+  return zaehler(artikel)?.entscheide ?? null;
+}
+
 export function panelBezug(
   aktArtikel: string | null,
   aktivToken: string | null,

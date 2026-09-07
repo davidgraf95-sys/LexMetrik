@@ -90,11 +90,47 @@ describe('A-4 — Ortsangabe: EINE Anatomie in beiden Leisten', () => {
     // davor steht. Die weite Fassung trägt seither dieselbe Kürzung wie die
     // Einzelansicht; die schmale bleibt das volle Zitat (dort steht keine Krume
     // daneben) — §5: eine Quelle, zwei Zuschnitte.
-    for (const [name, html] of [['Einzelansicht', inhaltsKopfHtml()], ['Pane', paneKopfHtml()]] as const) {
-      expect(html, name).toContain('data-ort-artikel');
-      expect(html, `${name}: die weite Fassung doppelt das Kürzel`).toContain('>Art. 429</span>');
-      expect(html, `${name}: die schmale Fassung hat das volle Zitat verloren`).toContain('>Art. 429 StPO</span>');
-    }
+    //
+    // ── FORTGESCHRIEBEN 7.9.2026 (GA-1, W2·24) ────────────────────────────
+    // Der Fall ist seither ASYMMETRISCH, und zwar aus der Substanz heraus: die
+    // Einzelansicht zeigt die Blatt-Krume «StPO» gar nicht mehr (die Regel
+    // dazu in `layout/BrotkrumeRegel`), also steht neben dem Artikel kein
+    // Kürzel, das er doppeln könnte — dort MUSS das volle Zitat stehen, sonst
+    // fehlte die Angabe ganz (§8). Im Pane steht die Krume weiterhin daneben,
+    // dort gilt die Kürzung unverändert. Die geprüfte Aussage ist dieselbe
+    // geblieben: das Kürzel steht genau einmal je Leiste.
+    const einzel = inhaltsKopfHtml();
+    expect(einzel, 'Einzelansicht').toContain('data-ort-artikel');
+    expect(einzel, 'Einzelansicht: die Blatt-Krume ist mit GA-1 gefallen').not.toContain('>StPO</span>');
+    expect(einzel, 'Einzelansicht: ohne Krume daneben gehört das volle Zitat hin')
+      .not.toContain('>Art. 429</span>');
+    expect(einzel, 'Einzelansicht: das volle Zitat fehlt').toContain('>Art. 429 StPO</span>');
+
+    const pane = paneKopfHtml();
+    expect(pane, 'Pane').toContain('data-ort-artikel');
+    expect(pane, 'Pane: die weite Fassung doppelt das Kürzel').toContain('>Art. 429</span>');
+    expect(pane, 'Pane: die schmale Fassung hat das volle Zitat verloren').toContain('>Art. 429 StPO</span>');
+  });
+
+  it('GA-1: die Ortsleiste der Einzelansicht nennt nur die Sektion, das Pane die ganze Kette', () => {
+    // Die eine Regel, an ihrer Wirkung geprüft (Herleitung und Messung in
+    // `layout/BrotkrumeRegel.ts`): oben trägt der Reiter das Blatt, unten die
+    // H1 — dazwischen bleibt nur der Rückweg. Im Split-View ist die Zeile
+    // dagegen die Identität des Fensters und behält die Kette.
+    const einzel = inhaltsKopfHtml();
+    expect(einzel).toContain('>Gesetze</a>');
+    expect(einzel, 'die Zwischen-Krume steht wieder in der Leiste').not.toContain('>Bund</a>');
+    expect(paneKopfHtml()).toContain('Bund');
+  });
+
+  it('GA-1: wo die Seite ihren Rückweg selbst zeigt, schweigt die Leiste ganz', () => {
+    // Vorlagen: `vorlagen/wizard` rendert «← Zurück zum Katalog» im Kopf —
+    // eine zweite Krume daneben wäre der zweite Rückweg auf dasselbe Ziel.
+    const html = inhaltsKopfHtml({
+      breadcrumb: [{ label: 'Vorlagen', to: '/vorlagen' }, { label: 'Kündigung durch Arbeitgeber:in' }],
+    });
+    expect(html).not.toContain('>Vorlagen</a>');
+    expect(html).not.toContain('Kündigung durch Arbeitgeber:in');
   });
 
   it('ohne Suffix-Treffer bleibt das Zitat ganz (keine blinde Kürzung)', () => {

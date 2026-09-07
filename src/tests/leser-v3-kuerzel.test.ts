@@ -144,8 +144,13 @@ describe('Die Vorrangregel lebt in zwei Dateien und ist nur als Paar wahr', () =
     expect(RAHMEN, 'der Rahmen ruft das Kürzel-Hook nicht mehr ohne Öffner')
       .toContain('useSuchSprungKuerzel({ feldRef: suchFeldRef');
     // Positiv-Sonde: das Feld ist in JEDER Lage vorhanden, weil die Zone es
-    // trägt, wo die Spalte fehlt — sonst bewachte der Rückbau eine Lücke.
-    expect(RAHMEN).toContain('const suchZoneKlebt = hatLeiste && !zweiSpalten;');
+    // trägt — sonst bewachte der Rückbau eine Lücke.
+    // §6.3-NACHZUG D28 (David 6.9.2026): die Bedingung lautete bis 6.9.
+    // `hatLeiste && !zweiSpalten` (Zone nur OHNE Gliederungs-Spalte, weil dort
+    // die Leiste das Feld trug). Mit D28 trägt die Zone es in jeder Lage — die
+    // Sonde wird dadurch STRENGER, nicht weicher: sie schliesst jetzt auch den
+    // Fall aus, dass das Feld bei stehender Spalte wieder in die Leiste rutscht.
+    expect(RAHMEN).toContain('const suchZoneKlebt = hatLeiste;');
     expect(RAHMEN, 'das Blatt bekommt das Feld nicht').toContain('sprungFeld={suchFeld}');
   });
 });

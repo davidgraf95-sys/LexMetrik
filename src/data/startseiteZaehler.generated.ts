@@ -14,10 +14,28 @@ export interface StartseiteZaehler {
   /** IA-7: erfasste Erlasse JE Kanton (alle Manifest-Einträge der Ebene kanton —
    *  dieselbe Zählregel wie die IA-2-Badges/`kantonAnzahl` in Gesetze.tsx). */
   kantonErlassZahlen: Record<string, number>;
+  /** W2·24-R3: Systematik des Bundesrechts (Ordnung + Titel aus
+   *  `lib/normtext/systematik.ts`, Anker `/gesetze?ebene=bund#sys-<id>`),
+   *  je Kategorie die Zahl der VOLLTEXT-Erlasse und bis zu vier Kürzel. */
+  bundSystematik: Array<{ nr: string; id: string; titel: string; kuerzel: string[]; anzahl: number }>;
+  /** Bundeserlasse der Säule «International» im Volltext (rechtsgebiet international). */
+  gesetzeInternationalVolltext: number;
+  /** Bis zu vier Kürzel der Säule «International» (Register-Reihenfolge). */
+  internationalKuerzel: string[];
   /** Gerichtsentscheide im Volltext (Nicht-Verweise). */
   rechtsprechungVolltext: number;
+  /** W2·24-D26: Entscheide je Sachgebiet (Ordnung/Label aus `GEBIETE`),
+   *  Zählregel identisch zu `zaehleSachgebiete` (Verweise raus); Sachgebiete
+   *  ohne Entscheid fehlen (§8). Ziel je Zeile: `/rechtsprechung?rg=<id>`. */
+  rechtsprechungSachgebiete: Array<{ id: string; label: string; anzahl: number }>;
+  /** W2·24-D26: amtliche Leitentscheide (Nicht-Verweise, leitcharakter
+   *  `leitentscheid`) — Ziel `/rechtsprechung?leit=1`. */
+  rechtsprechungLeitentscheide: number;
   /** Erfasste amtliche Materialien (Behördenpublikationen, nur-live-link). */
   materialien: number;
+  /** W2·24-R3: erfasste Materialien je Behörde, Reihenfolge BEHOERDEN (rang);
+   *  Behörden ohne Eintrag fehlen (nie eine 0-Zeile behaupten, §8). */
+  materialienBehoerden: Array<{ id: string; kuerzel: string; name: string; anzahl: number }>;
   /** Verfügbare Rechner (eigene Seite). */
   rechner: number;
   /** Verfügbare Vorlagen (eigene Seite). */
@@ -28,6 +46,14 @@ export interface StartseiteZaehler {
   standRechtsprechung: string;
   /** Stand der Materialien-Register-Erzeugung (ISO). */
   standMaterialien: string;
+  /** D8: jüngster Konsolidierungsstand über alle Volltext-Erlasse (ISO)
+   *  — das Alter der INHALTE, nicht des Builds. null = kein gültiges Datum. */
+  juengsterGesetzStand: string | null;
+  /** D8: jüngstes Entscheiddatum (Nicht-Verweise, ISO) oder null. */
+  juengsterEntscheid: string | null;
+  /** D8: jüngster Materialien-Stand (ISO) oder null — fehlt das Feld im
+   *  Register durchgehend, bleibt die Zeile in der Anzeige weg (§8). */
+  juengsteMaterialie: string | null;
 }
 
 export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
@@ -62,11 +88,172 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
     "ZG": 4,
     "ZH": 111
   },
+  "bundSystematik": [
+    {
+      "nr": "01",
+      "id": "staat",
+      "titel": "Staats- und Verfassungsrecht",
+      "kuerzel": [
+        "BV",
+        "ParlG",
+        "RVOG",
+        "RVOV"
+      ],
+      "anzahl": 9
+    },
+    {
+      "nr": "02",
+      "id": "privatrecht",
+      "titel": "Privatrecht",
+      "kuerzel": [
+        "ZGB",
+        "ZStV",
+        "GBV",
+        "TGBV"
+      ],
+      "anzahl": 32
+    },
+    {
+      "nr": "03",
+      "id": "zivilverfahren",
+      "titel": "Zivilprozess- und Zwangsvollstreckungsrecht",
+      "kuerzel": [
+        "ZPO",
+        "SchKG",
+        "GebV SchKG",
+        "KOV"
+      ],
+      "anzahl": 6
+    },
+    {
+      "nr": "04",
+      "id": "straf",
+      "titel": "Strafrecht und Strafverfahren",
+      "kuerzel": [
+        "StGB",
+        "StPO",
+        "JStPO",
+        "JStG"
+      ],
+      "anzahl": 14
+    },
+    {
+      "nr": "05",
+      "id": "verwaltung",
+      "titel": "Verwaltungsrecht",
+      "kuerzel": [
+        "VwVG",
+        "VGG",
+        "VGKE",
+        "VGR"
+      ],
+      "anzahl": 139
+    }
+  ],
+  "gesetzeInternationalVolltext": 27,
+  "internationalKuerzel": [
+    "CISG",
+    "LugÜ",
+    "HZÜ",
+    "HBewÜ"
+  ],
   "rechtsprechungVolltext": 5093,
+  "rechtsprechungSachgebiete": [
+    {
+      "id": "privat",
+      "label": "Privatrecht",
+      "anzahl": 992
+    },
+    {
+      "id": "straf",
+      "label": "Strafrecht",
+      "anzahl": 1419
+    },
+    {
+      "id": "prozess",
+      "label": "Verfahrensrecht",
+      "anzahl": 86
+    },
+    {
+      "id": "oeffentlich",
+      "label": "Öffentliches Recht",
+      "anzahl": 1330
+    },
+    {
+      "id": "steuern",
+      "label": "Steuern & Abgaben",
+      "anzahl": 116
+    },
+    {
+      "id": "sozialversicherung",
+      "label": "Sozialversicherung",
+      "anzahl": 1150
+    }
+  ],
+  "rechtsprechungLeitentscheide": 1259,
   "materialien": 1561,
+  "materialienBehoerden": [
+    {
+      "id": "ESTV",
+      "kuerzel": "ESTV",
+      "name": "Eidgenössische Steuerverwaltung",
+      "anzahl": 144
+    },
+    {
+      "id": "EDOEB",
+      "kuerzel": "EDÖB",
+      "name": "Eidg. Datenschutz- und Öffentlichkeitsbeauftragter",
+      "anzahl": 18
+    },
+    {
+      "id": "SECO",
+      "kuerzel": "SECO",
+      "name": "Staatssekretariat für Wirtschaft",
+      "anzahl": 155
+    },
+    {
+      "id": "BSV",
+      "kuerzel": "BSV",
+      "name": "Bundesamt für Sozialversicherungen",
+      "anzahl": 3
+    },
+    {
+      "id": "BJ",
+      "kuerzel": "EHRA",
+      "name": "Eidg. Amt für das Handelsregister (Bundesamt für Justiz)",
+      "anzahl": 2
+    },
+    {
+      "id": "FINMA",
+      "kuerzel": "FINMA",
+      "name": "Eidgenössische Finanzmarktaufsicht",
+      "anzahl": 2
+    },
+    {
+      "id": "IGE",
+      "kuerzel": "IGE",
+      "name": "Eidg. Institut für Geistiges Eigentum",
+      "anzahl": 2
+    },
+    {
+      "id": "BR",
+      "kuerzel": "BR",
+      "name": "Bundesrat (Botschaften)",
+      "anzahl": 407
+    },
+    {
+      "id": "BUND",
+      "kuerzel": "Bund",
+      "name": "Bund (Vernehmlassungen)",
+      "anzahl": 828
+    }
+  ],
   "rechner": 23,
   "vorlagen": 26,
   "standGesetze": "2026-09-05",
   "standRechtsprechung": "2026-09-05",
-  "standMaterialien": "2026-09-05"
+  "standMaterialien": "2026-09-05",
+  "juengsterGesetzStand": "2026-09-02",
+  "juengsterEntscheid": "2026-07-08",
+  "juengsteMaterialie": "2026-09-05"
 };

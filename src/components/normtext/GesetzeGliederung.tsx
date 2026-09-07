@@ -15,12 +15,26 @@ import {
   nachRelevanz, nachKantonRelevanz, SR0_KLASSEN, intlSachziffer,
 } from '../../lib/normtext/relevanz';
 import { GLIEDERUNGEN, type Gliederung } from '../../lib/normtext/gliederung';
-import { ErlassKarte, SysZeile } from './ErlassKarte';
+import { ErlassKarte, ErlassTabelle } from './ErlassKarte';
 import { usePaneKlasse } from '../layout/PaneKontext';
 import { GruppenKopf } from '../ui/GruppenKopf';
 import { Leerzustand } from '../ui/Leerzustand';
 
 // ── Der gemeinsame Umschalter (ein Interaktions-Vokabular, A15/A4) ────────────
+
+// D24 (David 6.9.2026, Sprach-Diät): der dreizeilige Erklärabsatz über der
+// Kanton-Relevanz-Liste ist entfallen. Was er sagte, sagt jetzt der Reiter
+// selbst — als `title` am Schalter, dort wo die Frage «was ordnet das?»
+// entsteht, statt als Fliesstext über der Liste (D24: «als Tooltip am Reiter
+// ‹Relevanz› oder weg»). Die §8-Vorbehalte der beiden anderen Sichten
+// (kantonale Sach-Achse meist Default, EU-Recht ohne SR-Nummer) bleiben als
+// sichtbarer Text stehen: sie berichten eine Lücke, das ist keine Erklärung,
+// die man wegkürzt.
+const GLIEDERUNG_HINWEIS: Record<Gliederung, string> = {
+  relevanz: 'Die Kern-Erlasse zuerst — Verfassung, Einführungs- und Organisationsgesetze, Steuer- und Gebührenrecht; danach die amtliche Ordnung.',
+  systematisch: 'Die amtliche Systematik der Sammlung.',
+  rechtsgebiet: 'Nach Rechtsgebiet gruppiert (Sach-Achse des Registers).',
+};
 
 /** 3-Wege-Umschalter Relevanz · Systematisch · Rechtsgebiet. Echte Buttons mit
  *  role=group + aria-pressed (F3/F4). Gilt für alle drei Säulen gleich. */
@@ -41,6 +55,7 @@ export function GliederungUmschalter({ wert, onWahl }: {
       <div className="flex flex-wrap items-center gap-1.5">
         {GLIEDERUNGEN.map((g) => (
           <button key={g.id} type="button" onClick={() => onWahl(g.id)} aria-pressed={wert === g.id}
+            title={GLIEDERUNG_HINWEIS[g.id]}
             className={`rounded px-2.5 py-0.5 text-body-s font-medium transition-colors ${
               wert === g.id ? 'bg-brass-100 text-brass-800' : 'text-ink-500 lc-hover-flaeche hover:text-brass-700'
             }`}>
@@ -83,36 +98,26 @@ export function RelevanzGitter({ erlasse }: { erlasse: BrowseErlass[] }) {
 export function KantonRelevanzListe({ erlasse, sys }: {
   erlasse: BrowseErlass[]; sys?: KantonSystematik;
 }) {
-  const pk = usePaneKlasse();
   const sortiert = nachKantonRelevanz(erlasse, sys);
   if (sortiert.length === 0) return <Leerzustand art="bestand" text="Kein Erlass gefunden." />;
+  /* ── D24 (David 6.9.2026) · EINE TABELLE STATT ZWEIER SPALTEN-FRAGMENTE ────
+     Hier stand `lc-listenspalten columns-1 sm:columns-2` mit je einer
+     `SysZeile` je Erlass. CSS-`columns` erzeugt ZWEI UNABHÄNGIGE Fragmente:
+     GEMESSEN 6.9.2026 auf `/gesetze?ebene=kanton&kt=BS&gliederung=relevanz`
+     (859 Erlasse, Preview `dist`) stand Zeile i links gegen Zeile i rechts
+     @1440 um bis zu 105 px versetzt, @1280 um bis zu 126 px — die Zeilen
+     «beider spalten» lagen also gerade nicht «auf selber höhe».
+     `ui/ListenTabelle` legt EIN Raster über beide Spalten (Zeile i ist links
+     und rechts dieselbe Grid-Zeile) und füllt es weiter SPALTENWEISE, damit
+     die Leserichtung aus LM-141 (erst links hinunter, dann rechts) bleibt.
+     Der Erklärabsatz darüber ist entfallen (Sprach-Diät, D24) — sein Inhalt
+     steht als `title` am Reiter «Relevanz», s. GLIEDERUNG_HINWEIS. */
   return (
-    <div className="space-y-4">
-      <RelevanzHinweis>
-        Die Kern-Erlasse zuerst — Kantonsverfassung, Einführungsgesetze,
-        Gerichts- und Behördenorganisation, Steuer- und Gebührenrecht —, danach
-        nach der amtlichen Systematik des Kantons. Für die volle amtliche
-        Gliederung «Systematisch» wählen.
-      </RelevanzHinweis>
-      {/* ── LM-141 (W2·17-UI-BEFUNDE/B16) · LESERICHTUNG DER ZWEISPALTIGEN LISTE ─
-          Hier stand `grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2`. Ein Grid
-          füllt ZEILENWEISE (1 links, 2 rechts, 3 wieder links …) — wer die Liste
-          liest, springt bei jedem Eintrag über die Spalte. `columns` füllt
-          SPALTENWEISE: erst links von oben nach unten, dann rechts. Gemessen
-          4.9.2026 @1440 auf /gesetze?ebene=kanton&kt=BS (859 Erlasse, Preview von
-          origin/main). Abstände und Umbruchschutz trägt `.lc-listenspalten`
-          (Herleitung dort, src/index.css).
-
-          NICHT hier gebaut: die im selben Befund genannte doppelte Systematik-
-          nummer («111.100» in der Zeile, «(11100)» nochmals im Titel). Die Nummer
-          steckt ein zweites Mal im Datenfeld `titel` des Registers — das ist
-          §5-Fläche (Korpus/Generator), nicht Darstellung; sie in der Anzeige per
-          Regex wegzuschneiden hiesse, eine zweite Wahrheit über das Datum zu
-          legen. Zurückgestellt, gehört in die Korpus-Werkstatt. */}
-      <div className={pk('lc-listenspalten columns-1 sm:columns-2', 'lc-listenspalten columns-1 @lg/pane:columns-2')}>
-        {sortiert.map((e) => <SysZeile key={e.key} e={e} />)}
-      </div>
-    </div>
+    <ErlassTabelle
+      erlasse={sortiert}
+      art="kanton"
+      beschriftung="Erlasse nach Relevanz — Nummer, Titel, Umfang"
+    />
   );
 }
 
@@ -123,7 +128,6 @@ export function KantonRelevanzListe({ erlasse, sys }: {
  *  tragen das Rechtsgebiet meist als Default ('öffentlich') — die feinere
  *  amtliche Ordnung liefert «Systematisch». */
 export function KantonGebietGruppen({ erlasse }: { erlasse: BrowseErlass[] }) {
-  const pk = usePaneKlasse();
   const proGebiet = new Map<string, BrowseErlass[]>();
   for (const e of erlasse) {
     const arr = proGebiet.get(e.rechtsgebiet) ?? [];
@@ -147,9 +151,10 @@ export function KantonGebietGruppen({ erlasse }: { erlasse: BrowseErlass[] }) {
               (unsuffixiertes `bg-line`, weil Tailwinds Deckkraft-Suffix auf
               dem color-mix-Token `--line` keine CSS-Regel erzeugt). */}
           <GruppenKopf titel={g.label} zahl={g.items.length} />
-          <div className={pk('lc-listenspalten columns-1 sm:columns-2', 'lc-listenspalten columns-1 @lg/pane:columns-2')}>
-            {g.items.map((e) => <SysZeile key={e.key} e={e} />)}
-          </div>
+          {/* D24: dieselbe Umstellung wie in der Relevanz-Sicht — EIN Raster
+              über beide Spalten statt zweier `columns`-Fragmente. */}
+          <ErlassTabelle erlasse={g.items} art="kanton"
+            beschriftung={`${g.label} — Nummer, Titel, Umfang`} />
         </section>
       ))}
     </div>
