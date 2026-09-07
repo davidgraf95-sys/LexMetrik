@@ -34,6 +34,10 @@ test.describe('IA-7 · Erlass-Zahl-Badges an den Sidebar-Kantonslinks', () => {
     // herstellen, gemessen wird danach unverändert.
     await seitenleisteOeffnen(page)
     const nav = page.getByRole('navigation', { name: 'Hauptnavigation' })
+    // D37 (deklariert, §6.3): der Abschnitt «Gesetze» startet jetzt selbst zu
+    // (nur der Abschnitt der aktiven Route startet offen) — Vorbedingung
+    // herstellen, damit «Kantone» überhaupt im DOM steht.
+    await nav.getByRole('button', { name: 'Gesetze aufklappen' }).click()
     await nav.getByRole('button', { name: 'Kantone aufklappen' }).click()
 
     // Alle 26 Kantonslinks tragen den vollen Accessible Name (Name+Zahl+Wort).
@@ -74,6 +78,8 @@ test.describe('IA-7 · Erlass-Zahl-Badges an den Sidebar-Kantonslinks', () => {
     await page.getByRole('button', { name: 'Navigation öffnen' }).click()
     const dialog = page.getByRole('dialog', { name: 'Navigation' })
     await expect(dialog).toBeVisible()
+    // D37 (deklariert, §6.3): s. o. — «Gesetze» erst öffnen, dann «Kantone».
+    await dialog.getByRole('button', { name: 'Gesetze aufklappen' }).click()
     await dialog.getByRole('button', { name: 'Kantone aufklappen' }).click()
 
     const { label, n } = erwarteterName('ZH', 'Zürich')
