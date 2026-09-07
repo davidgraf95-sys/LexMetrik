@@ -72,7 +72,10 @@ function renderKopf(props: Partial<Parameters<typeof LeserKopf>[0]> & { stufe: K
       {/* D27 (6.9.2026): die Prop `aktArtikel` ist weg — der laufende Artikel
           steht im Reiter, nicht mehr in dieser Zeile (Herleitung in
           `v3/LeserKopf.tsx`). */}
-      <LeserKopf erlass={ERLASS} fussnotenAnzahl={3}
+      {/* D35-F3: `aenderungsFussnoten` reicht der Kopf ebenso nur durch — hier
+          ein Erlass MIT klassifizierter Historie, damit die Fälle unten die
+          Dreier-Wahl ohne den §8-Hinweis sehen. */}
+      <LeserKopf erlass={ERLASS} fussnotenAnzahl={3} aenderungsFussnoten={2}
         hatAenderungsvermerke {...props} />
     </MemoryRouter>,
   );

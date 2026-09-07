@@ -85,7 +85,7 @@ import { kopfElemente, type KopfStufe } from './kopfStufen';
 // je Kopfzeile» in `./kopfStufen` ist unberührt.
 
 export function LeserKopf({
-  erlass, fussnotenAnzahl, hatAenderungsvermerke, stufe, gliederungKnopf,
+  erlass, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, stufe, gliederungKnopf,
   panelOeffner, onPanelOeffnen, suchZone, suchInZeile, tocOffen, onGliederungZu,
 }: {
   erlass: BrowseErlass;
@@ -96,6 +96,9 @@ export function LeserKopf({
   fussnotenAnzahl: number | null;
   /** D1 — durchgereicht, nicht hier abgeleitet: die Frage gehört ins Modell (§5). */
   hatAenderungsvermerke: boolean;
+  /** D35-F3 · durchgereicht ans Ansicht-Menü (§8-Hinweis auf unklassifizierten
+   *  Erlassen). Der Kopf wertet sie nicht aus — er ist die Leitung, nicht der Ort. */
+  aenderungsFussnoten: number | null;
   stufe: KopfStufe;
   /** ☰-Öffner der Gliederung — der Rahmen baut ihn, wenn die Seitenleiste
    *  gerade NICHT als Spalte steht. `undefined` = die Gliederung ist sichtbar,
@@ -290,7 +293,8 @@ export function LeserKopf({
           {panelOeffner}
           {gliederungKnopf}
           <LeserAnsichtV3 kompakt={stufe === 'mini'} fussnotenAnzahl={fussnotenAnzahl}
-            hatAenderungsvermerke={hatAenderungsvermerke} onPanelOeffnen={onPanelOeffnen} />
+            hatAenderungsvermerke={hatAenderungsvermerke} aenderungsFussnoten={aenderungsFussnoten}
+            onPanelOeffnen={onPanelOeffnen} />
         </div>
       </div>
       {/* Ä19: die Such-Zone als zweite Zeile DESSELBEN klebenden Blocks — nicht

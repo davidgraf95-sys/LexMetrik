@@ -406,7 +406,8 @@ export function useLeserAnsichtZustand({ tocAuf, setTocAuf }: {
   const istSekundaer = rolle === 'sekundaer';
   // W2·5d G2b (Fussnoten-Unifizierung): der frühere `fussnotenAuf`-React-Schalter
   // (Such-Leiste, Default AUS) entfällt — die Fussnoten-Bedienung ist jetzt EINE
-  // (der data-fussnoten-Toggle der Options-Leiste, Default AN). Marker + Apparat
+  // (seit D35-F3 die Stellung der `data-vermerke`-Wahl, Vorgabe «fassung» —
+  // bis 7.9.2026 der `data-fussnoten`-Toggle mit Vorgabe AN). Marker + Apparat
   // liegen IMMER im DOM (R9/§8, Ctrl+F/Print/Screenreader); «AUS» dämpft rein per
   // CSS (index.css), versteckt nie. Kein React-State-Zweig mehr im Artikel-Baum.
   // Die Gliederungslinie ist ersatzlos entfallen (Entscheid David 13.8.2026,

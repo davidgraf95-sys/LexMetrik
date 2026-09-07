@@ -28,7 +28,7 @@
 // Beleg: bibliothek/betrieb/testapparat-fang-historie-2026-08-31.md §1.
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
-import { ANSICHT_PANEL, SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME, RECHTSPRECHUNG_SCHALTER_NAME } from './helpers/leserBeschriftung'
+import { ANSICHT_PANEL, SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME, RECHTSPRECHUNG_SCHALTER_NAME, WAHL_ROLLE } from './helpers/leserBeschriftung'
 import { DROSSEL, REAKTIONS_BUDGET, REAKTIONS_LATTE, CONTAINER_BUDGET_CI, CONTAINER_LOKAL_READER } from './helpers/budgets'
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -684,13 +684,16 @@ test('A9: «Ansicht»-Dropdown + Gliederungs-Sprung flüssig unter CPU-Throttle,
   // `kl:'A'`-Fussnoten, der Schalter ist dort also angeboten (S1-Nachzug B3).
   // Ä116 (18.8.2026): der zweite Schalter heisst in V3 «Fassung», in der
   // Ist-Hülle weiter «Änderungsvermerke» (helpers/leserBeschriftung).
+  // D35-F3 (§6.3, Entscheid David 7.9.2026): die beiden sind Stellungen EINER
+  // Radiogruppe geworden (`menuitemradio`). Geprüfter Sachverhalt unverändert —
+  // Reaktionszeit je Bedienung unter Drossel.
   for (const name of [/^Fussnoten/, VERMERKE_SCHALTER_NAME] as const) {
     t0 = Date.now();
-    const sw = gruppe.getByRole(SCHALTER_ROLLE, { name });
+    const sw = gruppe.getByRole(WAHL_ROLLE, { name });
     const vorher = await sw.getAttribute('aria-checked');
     await sw.click();
     await expect(sw).not.toHaveAttribute('aria-checked', vorher ?? '', { timeout: REAKTIONS_LATTE });
-    expect(Date.now() - t0, `Switch «${name}» zu langsam`).toBeLessThan(REAKTIONS_BUDGET);
+    expect(Date.now() - t0, `Stellung «${name}» zu langsam`).toBeLessThan(REAKTIONS_BUDGET);
   }
 
   // Dropdown schliessen (Escape), dann Gliederungs-Sprung: TOC-Klick springt
