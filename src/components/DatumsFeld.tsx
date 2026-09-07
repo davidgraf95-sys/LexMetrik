@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 // eslint-disable-next-line no-restricted-imports -- §3-Ausnahme (gegrandfathert 8.8.2026, QS-AUDIT-VERWEISE): addDays navigiert hier nur das Kalender-Raster (Darstellung), es berechnet keine Frist.
 import { addDays, format, isValid, parse, parseISO } from 'date-fns';
 
@@ -43,9 +43,15 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
   // Externer Wert hat Vorrang (auch nach Auswahl im Kalender) —
   // Sync während des Renderns statt im Effect (React-Pattern «adjusting state»).
   const [letzterWert, setLetzterWert] = useState(value);
+  // D1 (W2·24-Gesamtprüfung 7.9.2026): ein unmögliches Datum (z. B. 31.02.2026)
+  // löscht unten in `tippen` den `value` (onChange('')) — OHNE dieses Flag würde
+  // dieser Sync den gerade getippten (ungültigen) Text sofort wieder mit dem nun
+  // leeren `value` überschreiben, und der Nutzer sähe seinen Tippfehler nicht mehr.
+  const [ungueltig, setUngueltig] = useState(false);
+  const fehlerId = useId();
   if (value !== letzterWert) {
     setLetzterWert(value);
-    setText(value ? isoZuAnzeige(value) : '');
+    if (!ungueltig) setText(value ? isoZuAnzeige(value) : '');
   }
 
   // Schliessen bei Klick ausserhalb / Escape
@@ -108,13 +114,24 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
   // Tippen: erst bei vollständigem, gültigem Datum emittieren
   const tippen = (s: string) => {
     setText(s);
-    if (!/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(s.trim())) return;
+    if (!/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(s.trim())) { setUngueltig(false); return; }
     const d = parse(s.trim(), 'd.M.yyyy', new Date());
-    if (isValid(d)) onChange(format(d, 'yyyy-MM-dd'));
+    if (isValid(d)) { setUngueltig(false); onChange(format(d, 'yyyy-MM-dd')); return; }
+    // D1: vollständig eingegeben, aber kein echtes Kalenderdatum (31.02.2026,
+    // 99.99.9999 …). Vorher blieb der ALTE `value` unverändert stehen — das
+    // Ergebnis oben zeigte weiter die alte Berechnung, ohne jede Rückmeldung.
+    // Jetzt: Feld wird sichtbar ungültig, und der Wert wird geleert — der
+    // Aufrufer fällt auf seinen bestehenden Leerzustand zurück (reine
+    // Darstellungs-Korrektur, §3 — keine Rechenlogik berührt).
+    setUngueltig(true);
+    onChange('');
   };
 
-  // Verlassen: leeres Feld löscht den Wert, ungültiger Text springt zurück
+  // Verlassen: leeres Feld löscht den Wert, ungültiger Text springt zurück —
+  // ein sichtbar ungültiger Text (D1) bleibt dagegen stehen, bis der Nutzer
+  // ihn korrigiert, statt beim Blur kommentarlos zu verschwinden.
   const verlassen = () => {
+    if (ungueltig) return;
     if (text.trim() === '') { if (value) onChange(''); return; }
     setText(value ? isoZuAnzeige(value) : '');
   };
@@ -146,6 +163,7 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
         type="text" inputMode="numeric" placeholder="TT.MM.JJJJ"
         value={text} onChange={(e) => tippen(e.target.value)} onBlur={verlassen}
         className={`${className} pr-11`} aria-label={ariaLabel} aria-labelledby={ariaLabelledby}
+        aria-invalid={ungueltig} aria-describedby={ungueltig ? fehlerId : undefined}
       />
       <button
         ref={toggleRef}
@@ -158,6 +176,15 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
           <path d="M5 6h14v14H5zM5 10h14M9 4v4M15 4v4" />
         </svg>
       </button>
+
+      {/* D1: Feld-Fehlerzeile im bestehenden Baustein — dieselbe Klasse wie
+          `SchkgZustaendigkeitTeil.tsx` an ihrer Feld-Fehlerzeile, hier als
+          Danger statt Warn (ein unmögliches Datum ist ein Fehler, keine Warnung). */}
+      {ungueltig && (
+        <p id={fehlerId} role="alert" className="lc-notice-danger text-body-s mt-1">
+          Dieses Datum gibt es nicht – bitte prüfen.
+        </p>
+      )}
 
       {offen && (
         <div role="dialog" aria-label="Kalender"

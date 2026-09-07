@@ -209,7 +209,24 @@ export function HeaderSuche({ onFokusModus, onFokusZurueck }: {
   useEffect(() => {
     if (!offen) return;
     const aus = (e: PointerEvent) => { if (huelle.current && !huelle.current.contains(e.target as Node)) setOffen(false); };
-    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') { setOffen(false); feld.current?.blur(); } };
+    // D2/D3 (W2·24-Gesamtprüfung 7.9.2026): `<input type="search">` löscht
+    // seinen Wert bei Escape NATIV (Chromium) und feuert dabei sein eigenes
+    // 'input'-Event — dessen `onChange` (unten am Feld) rief im SELBEN
+    // Tastendruck erneut `setOffen(true)` auf und überschrieb den gerade
+    // gesetzten Schliess-Zustand (D3: `aria-expanded` blieb `true`, bis ein
+    // zweiter Esc griff). `preventDefault` unterdrückt die native Löschung;
+    // dieselben State-Setzer wie `auswahl()` (unten, nach einer echten
+    // Trefferwahl) leeren Feld/Query/Panel deterministisch über React-State
+    // — inline statt über `auswahl()` selbst, weil die Deklarationsreihenfolge
+    // sonst `react-hooks/immutability` verletzt (der Effekt liegt vor ihr).
+    // KEIN `feld.current?.blur()` mehr (D2): der Fokus bleibt im Feld —
+    // Vorbild ist die Erlass-Suche im Leser (`SuchSprungFeld.tsx`), die auf
+    // Esc ebenfalls nur leert und nie defokussiert.
+    const esc = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      e.preventDefault();
+      setOffen(false); setWert(''); setQ(''); setAktivKey(null); setEnterQ(null);
+    };
     window.addEventListener('pointerdown', aus);
     window.addEventListener('keydown', esc);
     return () => { window.removeEventListener('pointerdown', aus); window.removeEventListener('keydown', esc); };

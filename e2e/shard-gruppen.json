@@ -15,7 +15,8 @@
    "leser-v3-esc-ohne-sprung.e2e.ts",
    "leser-v3-treffer-reihenfolge.e2e.ts",
    "leser-v3-schriftskala.e2e.ts",
-   "leser-v3-kopf.e2e.ts"
+   "leser-v3-kopf.e2e.ts",
+   "kopfsuche-esc.e2e.ts"
   ],
   "2": [
    "bild-block-items.e2e.ts",
@@ -144,7 +145,8 @@
    "leser-v3-ortsangabe.e2e.ts",
    "leser-v3-uebersicht.e2e.ts",
    "leser-v3-scroll-blur.e2e.ts",
-   "leser-v3-split-a34-bugs.e2e.ts"
+   "leser-v3-split-a34-bugs.e2e.ts",
+   "tagerechner-datum-ungueltig.e2e.ts"
   ]
  }
 }
