@@ -213,13 +213,11 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q, sektio
     const zaehl = new Map<string, number>();
     for (const b of basis) zaehl.set(b, (zaehl.get(b) ?? 0) + 1);
     const buendelt = [...zaehl.values()].some((n) => n > 1);
-    let vorigeArt: string | null = null;
-    return g.treffer.map((t, i) => {
-      const art = trefferArt(t);
-      const artStumm = art !== null && art === vorigeArt;
-      vorigeArt = art;
-      return { artStumm, buendelStart: buendelt && i > 0 && basis[i] !== basis[i - 1] };
-    });
+    const arten = g.treffer.map(trefferArt);
+    return g.treffer.map((_t, i) => ({
+      artStumm: arten[i] !== null && i > 0 && arten[i] === arten[i - 1],
+      buendelStart: buendelt && i > 0 && basis[i] !== basis[i - 1],
+    }));
   }, [g.treffer]);
   return (
     <div role={alsGruppe ? 'group' : undefined} aria-label={alsGruppe ? g.titel : undefined}
