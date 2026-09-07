@@ -123,7 +123,10 @@ describe('Leser-Schriftskala — Persistenz und Migration', () => {
     // Schreiben abgeräumt wie jeder Alt-Schlüssel. Die Aussage des Falls — der
     // Schrift-Setzer rührt die FREMDEN Felder desselben Speichers nicht an —
     // steht unverändert, jetzt am nachgerückten Feld.
-    expect(o.fussRubriken).toEqual(['r', 'm', 'g', 'w', 'a']);
+    // §6.3-DEKLARATION (D40, 7.9.2026): der Grundzustand trägt die sechste
+    // Rubrik `f` (Fassung in der Funktionszeile). Die Aussage bleibt: der
+    // Schrift-Setzer rührt das fremde Feld nicht an.
+    expect(o.fussRubriken).toEqual(['f', 'r', 'm', 'g', 'w', 'a']);
     expect(o.bezugKantone).toEqual(['BS']);
     // S1 (deklarierte fachliche Änderung, §6.3): `hist: 'aus'` stand als
     // `histansicht: 'aus'` im neuen Speicher — die Nutzerwahl erhalten, nur

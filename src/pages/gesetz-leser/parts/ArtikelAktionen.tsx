@@ -1,10 +1,8 @@
 import { usePaneKontext } from '../../../components/layout/PaneKontext';
-import { usePaneSteuerung } from '../../../components/layout/usePaneLayout';
 import { useKopieren } from '../../../components/useKopieren';
 import { NEUER_TAB } from '../../../lib/benennung';
 import { zitatMitAusweis, heuteIso } from '../../../lib/format';
 import { urlMitHash } from '../../../lib/liveUrlSync';
-import { naechsteInstanz } from '../../../lib/tabs';
 
 // ═══ W2·24-D35-F1 · DIE AKTIONEN DES ARTIKELS ═══════════════════════════════
 //
@@ -24,36 +22,14 @@ import { naechsteInstanz } from '../../../lib/tabs';
 //     zusätzlich gebaut (§5, §17-Gegengewicht): zwei Orte für dieselbe Aktion
 //     wären genau die Dopplung, die dieser Schritt abräumt.
 //
-// ── (3) «⧉ DANEBEN ÖFFNEN» · DER MESSFEHLER VOM 7.9.2026 UND SEINE KORREKTUR ─
-//
-// MESSUNG (7.9.2026, Preview :4435, /gesetze/bund/OR#art-336_c @1440) — sie
-// bleibt richtig und wird NICHT nachgeführt: mit der Bedingung
-// `kannOeffnen && !istOffen(basisPfad + '#art-…')` renderte der Knopf an KEINEM
-// Artikel. Die Kennung eines Fensters ist `tabSchluessel`, und die streift den
-// `#hash` ab (`usePaneLayout.ts:26`, `Shell.tsx:301`) — `/gesetze/bund/OR#art-336_c`
-// ist für die Pane-Steuerung derselbe Pfad wie `/gesetze/bund/OR`, und der steht
-// immer offen: sonst stünde dieser Artikel gar nicht auf dem Schirm.
-//
-// FALSCH WAR NICHT DIE MESSUNG, SONDERN DER SCHLUSS (Nachfix 7.9.2026). Aus ihr
-// wurde «ein Knopf, der nie erscheint, wird nicht gebaut» — und die vierte
-// Aktion des Auftrags fiel weg. Das war ein FUNKTIONSVERLUST: die Bedingung war
-// falsch, nicht die Funktion. Die App löst diese Frage seit M8 (Prüfbefund R11
-// #28, 6.9.2026) längst — und zwar EINE Stelle weiter oben, am Erlass-Kopf:
-// `v3/ReiterAktion.tsx` öffnet nicht den EIGENEN Pfad (der ist per Definition
-// offen), sondern `naechsteInstanz(pfad)` — «…/OR?r=2», den Instanz-
-// Diskriminator, den `tabSchluessel` ausdrücklich BEHÄLT. Damit ist der Pfad nie
-// «schon offen», `istOffen` ist gegenstandslos, und `kannOeffnen` (≥ lg + freie
-// Kapazität) bleibt die einzige, richtige Bedingung.
-//
-// §5 — KEIN ZWEITER MECHANISMUS: dieselbe Steuerung (`usePaneSteuerung`),
-// dieselbe Instanz-Vergabe (`lib/tabs.naechsteInstanz`) wie am Erlass-Kopf, in
-// der Arbeitsleiste und im Reiter-Kontextmenü. Der Unterschied ist allein der
-// ANKER — und weil er ein anderer ist, trägt der Griff hier seit dem Nachfix
-// vom 7.9.2026 ein eigenes Wort («Artikel daneben» statt «Daneben öffnen»,
-// Herleitung unten am Knopf). Der ANKER: der Erlass-Kopf
-// nimmt `pathname + search + hash` (die Stelle, an der die Adresse steht),
-// diese Zeile nimmt IHREN Artikel (`#art-<token>`) — «Art. 336c neben
-// Art. 335c» ist genau die Geste, für die es die zweite Instanz gibt.
+// ── D44 (David 7.9.2026) · «⧉ ARTIKEL DANEBEN» IST ERSATZLOS GESTRICHEN ────
+// Die Zeile trug testweise eine vierte Aktion, die diesen Artikel per
+// `usePaneSteuerung`/`naechsteInstanz` in ein zweites Fenster stellte
+// (Herleitung, Messung `bb99937aa` und Nachfix: Git-Historie dieser Datei
+// sowie `abnahme/design-identitaet/D35-F1-FUSSZEILE.md` §Nachzug). David
+// wollte sie nicht — ersatzlos entfernt, kein zweiter Mechanismus dafür
+// gebaut (§17-Gegengewicht). Die Zeile trägt seither nur noch die drei
+// Aktionen, die es schon vor D35-F1 gab.
 //
 // FUNKTION, aria und title der drei bestehenden Knöpfe sind WORT FÜR WORT
 // unverändert übernommen (§6: der Schritt verschiebt und macht sichtbar, er
@@ -81,20 +57,13 @@ export function ArtikelAktionen({ artikel, basisPfad, zitat, zitatVoll, amtlich 
   // primäre Pane mit `imPane: true`; nur die Rolle unterscheidet die beiden.
   const { rolle } = usePaneKontext();
   const istSekundaer = rolle === 'sekundaer';
-  // Nur `kannOeffnen` (≥ lg + freie Kapazität) — Herleitung im Kopf (3).
-  const { oeffneDaneben, kannOeffnen } = usePaneSteuerung();
 
-  /** §5 — EINE Kodierung für Kopie, Adresse und Pane-Pfad (`urlMitHash`).
+  /** §5 — EINE Kodierung für Kopie und Adresse (`urlMitHash`).
    *  Handgebaute Strings gerieten bei 54 Artikel-Token mit Leerzeichen oder
    *  Halbgeviert («22 a», «36–42», «10. 1») auseinander; ein Leerzeichen im
    *  Permalink bricht zusätzlich die Auto-Verlinkung in Mail und Chat. */
   const ursprung = typeof window !== 'undefined' ? window.location.origin : 'https://lexmetrik.ch';
   const permalink = urlMitHash(`${ursprung}${basisPfad}`, `art-${artikel}`);
-  /** Derselbe Wert als PFAD — das ist es, was ein Pane speichert. */
-  const panePfad = (() => {
-    const u = new URL(permalink);
-    return `${u.pathname}${u.hash}`;
-  })();
 
   const kopiere = (was: 'zitat' | 'link') => {
     // B-6 (QS-BASIS): die Zitat-Kopie trägt den Stand-Ausweis (§7 a–d) —
@@ -137,41 +106,6 @@ export function ArtikelAktionen({ artikel, basisPfad, zitat, zitatVoll, amtlich 
           className="lc-btn-mini text-micro text-ink-500 hover:text-brass-700 no-underline whitespace-nowrap"
           aria-label={`Amtliche Fassung von ${zitat} auf Fedlex öffnen ${NEUER_TAB}`}
           title="Amtliche Fassung an genau dieser Stelle (Fedlex)">Amtliche Fassung ↗</a>
-      )}
-      {/* Ä118/M8: das Wort sagt die Wirkung. Die Glyphe steht NEBEN ihrem Wort
-          und folgt dessen Type (R3-B, «beschriftet»); sie trägt darum keine
-          eigene Typo-Klasse. Geöffnet wird die NÄCHSTE Instanz dieses Erlasses
-          AN DIESEM ANKER (`?r=<n>#art-…`), nie der eigene Pfad — Herleitung im
-          Kopf (3).
-
-          ── NACHFIX 7.9.2026 · ZWEI BEZÜGE BRAUCHEN ZWEI WÖRTER ──────────────
-          Bis hierher hiess dieser Knopf wortgleich «Daneben öffnen» und trug
-          den Accessible Name `«Art. n OR» daneben öffnen`. GEMESSEN am Stand
-          `bb99937aa` (lokal, `vite preview` auf dem gebauten `dist/`,
-          /gesetze/bund/OR @1440): `getByRole('button', { name:
-          /daneben öffnen/i })` löste auf 1687 Elemente auf — den EINEN Griff
-          des Erlass-Kopfs (`v3/ReiterAktion.tsx`) und 1686 Artikel-Griffe. Die
-          M8-Sonde (`e2e/w224-r11-reiterleiste.e2e.ts:347`) meint den Kopf-Griff
-          und lief in die strict-mode-Verletzung; deren Aufbereitung dauerte
-          gemessene 105 s und riss darum vorher den 30-s-Timeout mit der
-          irreführenden Meldung «element(s) not found». Auf `origin/main`
-          (5b350cb4f) trägt KEIN Artikel diesen Namen — die Mehrdeutigkeit
-          entsteht erst mit dieser Zeile.
-
-          Ä118 («ein Feature, ein Wort») ist damit NICHT verletzt und wird auch
-          nicht nachgeführt: der Kopf-Griff öffnet den ERLASS (`pathname +
-          search + hash` — die Stelle, an der die Adresse gerade steht), dieser
-          hier stellt DIESEN ARTIKEL daneben (`#art-<token>`, D4). Zwei
-          verschiedene Bezüge, zwei Wörter — «Daneben öffnen» bleibt dem
-          Erlass-Kopf, hier steht «Artikel daneben». Die Wirkung, die Steuerung
-          (`usePaneSteuerung`) und die Instanz-Vergabe (`naechsteInstanz`) sind
-          unverändert dieselben (§5). */}
-      {kannOeffnen && (
-        <button type="button" onClick={() => oeffneDaneben(naechsteInstanz(panePfad))}
-          className="lc-btn-mini text-micro text-ink-500 hover:text-brass-700 whitespace-nowrap"
-          title={`${zitat} daneben stellen — zusätzlich im zweiten Fenster, an genau dieser Stelle`}
-          aria-label={`Artikel ${zitat} daneben stellen`}>
-          <span aria-hidden>⧉</span>&nbsp;Artikel daneben</button>
       )}
     </span>
   );

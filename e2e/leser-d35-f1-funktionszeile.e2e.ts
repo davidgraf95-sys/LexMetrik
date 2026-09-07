@@ -4,7 +4,7 @@
 // ENTSCHEID David 7.9.2026 (Variante A des D35-Vorschlags), Nachtrag wörtlich:
 // «das alles soll dann nur auf klick aufklappbar sein».
 //
-// FÜNF ZUSAGEN, je einzeln messbar:
+// VIER ZUSAGEN, je einzeln messbar:
 //  (a) ZU BEIM LADEN. Keine Rubrik steht offen — auch dann nicht, wenn der
 //      alte Merker `lm.leser.bezuege-offen` im Speicher liegt. Er ist ersatzlos
 //      gelöscht; läge er noch, wäre «nur auf klick» nur eine Absicht.
@@ -13,25 +13,23 @@
 //  (c) ZÄHLER = LISTE. Die Zahl auf dem Griff ist die Länge dessen, was er
 //      aufklappt (§8) — hier an der Rubrik «Verweise» gemessen, die ohne jeden
 //      Shard auskommt und darum eine harte, nicht wartende Gleichung ist.
-//  (d) AKTIONEN OHNE HOVER. «Zitat · Link · Amtliche Fassung ↗ · ⧉ Artikel
-//      daneben» stehen in der Zeile mit Deckkraft 1 und WCAG-2.5.8-Höhe, ohne
-//      dass die Maus etwas berührt — und sie stehen dort GENAU EINMAL: die alte
-//      Kopf-Variante ist weg, nicht zusätzlich (§5).
-//  (f) «⧉ ARTIKEL DANEBEN» IST DA UND WIRKT. Die vierte Aktion des Auftrags. Sie
-//      war am 7.9.2026 gestrichen worden, weil die Bedingung
-//      `kannOeffnen && !istOffen(pfad + '#art-…')` an keinem Artikel wahr wird
-//      (`tabSchluessel` streift den Hash) — der Schluss war falsch, nicht die
-//      Messung: die App löst dieselbe Frage am Erlass-Kopf seit M8 über
-//      `naechsteInstanz` («…?r=2»), und diese Zeile benutzt jetzt denselben Weg
-//      (§5). Gemessen wird beides: der Knopf STEHT mit Deckkraft 1 an ≥ lg, und
-//      sein Klick öffnet wirklich ein zweites Fenster (`[data-pane="sekundaer"]`)
-//      mit diesem Artikel darin. Unter lg ist er ABWESEND — dort geht kein
-//      Fenster auf, und eine Zusage ohne Wirkung wäre §8-widrig.
+//  (d) AKTIONEN OHNE HOVER. «Zitat · Link · Amtliche Fassung ↗» stehen in der
+//      Zeile mit Deckkraft 1 und WCAG-2.5.8-Höhe, ohne dass die Maus etwas
+//      berührt — und sie stehen dort GENAU EINMAL: die alte Kopf-Variante ist
+//      weg, nicht zusätzlich (§5).
 //  (e) DAS SKELETT ÜBERRESERVIERT NICHT. Während der Entscheid-Shard unterwegs
 //      ist, hält die Rubrik einen Boden frei (`min-h-bez-skelett`). Er ist ein
 //      BODEN: der Block darf beim Eintreffen der Liste nur WACHSEN, nie
 //      schrumpfen — sonst wäre der Sprung bloss verlegt. Gemessen mit
 //      künstlich verzögertem Shard, damit das Skelett überhaupt sichtbar wird.
+//
+// ── D44 (David 7.9.2026) · «⧉ ARTIKEL DANEBEN» IST WIEDER WEG ──────────────
+// Die frühere Zusage (f) — eine vierte Aktion, die diesen Artikel per
+// `naechsteInstanz` in ein zweites Fenster stellte — ist ersatzlos gestrichen
+// (Herleitung `parts/ArtikelAktionen.tsx`, Nachzug
+// `abnahme/design-identitaet/D35-F1-FUSSZEILE.md`). Fall (d) prüft seither
+// GENAU DREI Aktionen statt vier; der Fall (f) selbst prüft seither die
+// ABWESENHEIT des Knopfs, an jeder Breite.
 //
 // ROT ZU BEKOMMEN (§6.7), je einzeln belegt in
 // `abnahme/design-identitaet/D35-F1-FUSSZEILE.md`:
@@ -46,11 +44,9 @@
 //    Erstfassung der Sonde falsch grün (s. den Absatz bei (d) unten).
 //  · in `tailwind.config.js` `'bez-skelett': '3rem'` auf `'40rem'` setzen
 //    (= das Skelett reserviert mehr, als der Inhalt braucht)      ⇒ (e) rot
-//  · in `parts/ArtikelAktionen.tsx` `naechsteInstanz(panePfad)` durch
-//    `panePfad` ersetzen (= der eigene, immer offene Pfad; `Shell.tsx:357`
-//    verwirft ihn stillschweigend)                                ⇒ (f) rot
-//  · dort die Bedingung `{kannOeffnen && (` um `&& false` ergänzen (= die
-//    Streichung vom 7.9.2026)                                     ⇒ (f)+(d) rot
+//  · in `parts/ArtikelAktionen.tsx` die Aktionsgruppe um einen vierten Knopf
+//    ergänzen, der `<span aria-hidden>⧉</span>` mit dem Wort «daneben» trägt
+//    (= die D44-Rückkehr des gestrichenen Knopfs)                  ⇒ (f) rot
 import { test, expect, type Page } from '@playwright/test';
 
 const ORT = '/gesetze/bund/OR#art-336_c';
@@ -139,7 +135,10 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     await oeffne(page);
     const artikel = page.locator(`#art-${ART}`);
     // GENAU EINMAL je Artikel: die Kopf-Variante ist gelöscht, nicht gedoppelt.
-    for (const name of [/^Zitat kopieren:/, /^Permalink kopieren$/, /^Amtliche Fassung von /, /^Artikel .* daneben stellen$/]) {
+    // D44 (David 7.9.2026): die vierte Aktion «⧉ Artikel daneben»
+    // (`/^Artikel .* daneben stellen$/`) ist ersatzlos gestrichen — sie stand
+    // hier testweise (s. Fall (f) unten).
+    for (const name of [/^Zitat kopieren:/, /^Permalink kopieren$/, /^Amtliche Fassung von /]) {
       expect(await artikel.getByLabel(name).count(), `«${name}» steht nicht genau einmal am Artikel`).toBe(1);
     }
     // Ohne jede Maus-Berührung sichtbar, mit Trefferfläche nach WCAG 2.5.8.
@@ -164,9 +163,9 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
         sichtbar: (el as HTMLElement).checkVisibility({ opacityProperty: true, visibilityProperty: true }),
       };
     }));
-    // VIER an ≥ lg: die drei Kopier-/Outbound-Aktionen und «⧉ Artikel daneben».
-    // Der vierte Knopf steht NUR hier — unter lg fällt er weg (s. Fall (f)).
-    expect(mess.length, 'keine Aktionsgruppe in der Funktionszeile').toBe(4);
+    // DREI: Zitat, Link, Amtliche Fassung ↗. D44 strich die vierte Aktion
+    // «⧉ Artikel daneben» ersatzlos (s. Fall (f) unten) — an jeder Breite.
+    expect(mess.length, 'keine Aktionsgruppe in der Funktionszeile').toBe(3);
     for (const a of mess) {
       expect(a.deckkraft, `«${a.text}» steht mit Deckkraft ${a.deckkraft} da`).toBe(1);
       expect(a.hoehe, `«${a.text}» misst ${a.hoehe} px hoch (WCAG 2.5.8: ≥ 24)`).toBeGreaterThanOrEqual(24);
@@ -209,54 +208,23 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     expect(hoeheSkelett, 'das Skelett reserviert gar nichts').toBeGreaterThanOrEqual(48);
   });
 
-  // ── DEKLARIERTE BENENNUNGS-ÄNDERUNG (§6.3, Nachfix 7.9.2026) ─────────────
-  // Der Knopf hiess bis `bb99937aa` wortgleich wie der Griff des ERLASS-KOPFS
-  // («Daneben öffnen», Accessible Name `Art. 336c OR daneben öffnen`). Damit
-  // löste die M8-Sonde (`w224-r11-reiterleiste.e2e.ts:347`), die den Kopf-Griff
-  // meint, auf GEMESSENE 1687 Elemente auf. Geändert ist allein das WORT, nicht
-  // eine Zusage dieses Falls: Vorhandensein, Deckkraft, Trefferfläche, Wirkung
-  // und Anker werden unverändert geprüft (Herleitung in `ArtikelAktionen.tsx`).
-  test('(f) «⧉ Artikel daneben» steht sichtbar da — und öffnet wirklich ein zweites Fenster', async ({ page }) => {
+  // ── DEKLARIERTE ANPASSUNG (§6.3, D44, David 7.9.2026) ────────────────────
+  // Bis hierher prüfte Fall (f) an dieser Stelle, dass der vierte Knopf
+  // («⧉ Artikel daneben», nach dem Nachfix vom 7.9.2026 mit dem Accessible
+  // Name `Artikel Art. 336c OR daneben stellen`) an ≥ lg STEHT und wirklich
+  // ein zweites Fenster öffnet, und in einem zweiten Test, dass er unter lg
+  // ABWESEND ist (`kannOeffnen` ist erst ab lg wahr). David wollte den Knopf
+  // nicht — D44 streicht ihn ersatzlos, kein zweiter Mechanismus dafür
+  // (§17-Gegengewicht). Fall (f) prüft seither an BEIDEN Breiten dieselbe
+  // Abwesenheit; Herleitung in `parts/ArtikelAktionen.tsx`, Nachzug in
+  // `abnahme/design-identitaet/D35-F1-FUSSZEILE.md`.
+  test('(f) «Artikel daneben» ist an keiner Breite da (D44)', async ({ page }) => {
     await oeffne(page);
     const artikel = page.locator(`#art-${ART}`);
-    const knopf = artikel.getByRole('button', { name: /^Artikel Art\. 336c OR daneben stellen$/ });
-    // (1) ER IST DA. Genau einmal, sichtbar, ohne Hover, mit voller Deckkraft
-    //     über die ganze Vorfahren-Kette (dieselbe Messweise wie (d) — Deckkraft
-    //     ist kumulativ, nicht vererbt).
-    await expect(knopf, 'die vierte Aktion des Auftrags fehlt am Artikel').toHaveCount(1);
-    await expect(knopf).toBeVisible();
-    const deckkraft = await knopf.evaluate((el) => {
-      let d = 1;
-      for (let n: Element | null = el; n && n !== document.body; n = n.parentElement) d *= Number(getComputedStyle(n).opacity);
-      return d;
-    });
-    expect(deckkraft, `«Artikel daneben» steht mit Deckkraft ${deckkraft} da`).toBe(1);
-    expect((await knopf.boundingBox())!.height, 'WCAG 2.5.8: ≥ 24 px hoch').toBeGreaterThanOrEqual(24);
-
-    // (2) ER WIRKT. Vor dem Klick gibt es kein zweites Fenster; danach steht
-    //     eines da, und DIESER Artikel steht darin. Genau das konnte die
-    //     gestrichene Fassung nicht: `Shell.tsx:357` verwirft einen Pfad, der
-    //     schon offen ist — der eigene ist es immer.
-    await expect(page.locator('[data-pane="sekundaer"]')).toHaveCount(0);
-    await knopf.click();
-    const sek = page.locator('[data-pane="sekundaer"]');
-    await expect(sek, 'der Klick öffnet kein zweites Fenster').toBeVisible({ timeout: 15_000 });
-    await expect(sek.locator(`#art-${ART}`)).toBeVisible({ timeout: 20_000 });
-    // Und er landet AM ANKER, nicht am Erlassanfang: der Artikel steht im
-    // oberen Drittel des Fensters, nicht 149'000 px tiefer.
-    const abstand = await sek.evaluate((s) => {
-      const a = s.querySelector('#art-336_c')!.getBoundingClientRect();
-      return Math.round(a.top - s.getBoundingClientRect().top);
-    });
-    expect(abstand, `Art. 336c steht ${abstand} px unter der Fensteroberkante — der Anker ging verloren`)
-      .toBeLessThan(400);
-  });
-
-  test('(f) @1023: kein Knopf, wo kein Fenster aufgeht (§8)', async ({ page }) => {
-    // `kannOeffnen` ist erst ab lg (1024) wahr. Ein Knopf, der nichts bewirken
-    // kann, wäre eine Zusage ohne Wirkung — er darf unter lg NICHT stehen.
+    await expect(artikel.getByRole('button', { name: /daneben stellen$/ }),
+      'die mit D44 gestrichene Aktion steht wieder am Artikel').toHaveCount(0);
+    // Auch unter lg (wo der Knopf schon vor D44 wegen `kannOeffnen` fehlte).
     await page.setViewportSize({ width: 1023, height: 900 });
-    await oeffne(page);
     await expect(page.locator(`#art-${ART}`).getByRole('button', { name: /daneben stellen$/ }))
       .toHaveCount(0);
   });

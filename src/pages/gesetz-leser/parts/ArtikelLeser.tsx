@@ -17,7 +17,8 @@ import { fussnotenAnzeige, verteileFussnoten, sammleVerweise } from './ArtikelLe
 import { useSatzspiegel } from '../v3/satzspiegel';
 import type { ArtikelBezuege } from '../bezuegeLaden';
 import { werkzeugeAmArtikel } from '../randNotizWerkzeuge';
-import { HistSlot, RandTitel } from './ArtikelLeser.kopfteile';
+import { RandTitel } from './ArtikelLeser.kopfteile';
+import { ArtikelHistorieZeile } from './ArtikelHistorie';
 import { ArtikelBezuegeFuss } from './ArtikelLeser.bezuegeFuss';
 import { ArtikelAktionen } from './ArtikelAktionen';
 
@@ -206,21 +207,29 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // nur ihr Sonst-Zweig war) ist ersatzlos gefallen. Kein Ladepfad, kein Netz —
   // ein Nachschlag in einer statischen Tabelle je Artikel (§15).
   const werkzeuge = werkzeugeAmArtikel(erlass?.key, e.artikel);
-  // Fassungsdatum in den Artikelkopf (Auftrag (a)): «Gilt seit …» steht klein
-  // neben dem Randtitel, nicht mehr in einer eigenen Randspalte und nicht mehr
-  // unten im Beiwerk.
-  // Verlagert wird der SLOT samt `data-hist-slot`, nicht sein Inhalt — der
-  // Schalter «Änderungsvermerke» (`index.css`; seit D35-F3 7.9.2026 die Stellung
-  // `html[data-vermerke]`, bis dahin `html[data-histansicht="aus"]`)
-  // greift unverändert, und die 24-px-Reserve (`min-h-beiwerk`, CLS) steht
-  // weiter am selben Element. Im Kopf kann sie sogar nicht mehr schieben: die
-  // Artikelhöhe kommt aus der Textspalte.
-  const histImKopf = kopfForm;
-  // Randtitel und Fassungs-Slot stehen seit dem §6.6-Split (W2·24-F) als
-  // Bauteile in `./ArtikelLeser.kopfteile` — beide Satzspiegel-Formen zeigen
-  // DASSELBE Markup an zwei verschiedenen Orten, und genau darum sind es
-  // Bauteile (Herleitung dort). Hier bleiben sie Werte, weil jede Form sie an
-  // ihrer eigenen Stelle einsetzt.
+  // ── W2·24-D40 (David 7.9.2026) · DER FASSUNGS-SLOT IM KOPF IST GEFALLEN ──
+  // Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Hier stand
+  // bis D40 `histImKopf`/`histSlot` — der Slot `[data-hist-slot]` mit «Gilt
+  // seit … ▸», in der Breitform neben dem Randtitel (`.lr7-fassung`), in der
+  // Zeilenform im Beiwerk. Beide Orte sind ERSATZLOS gelöscht, nicht bewacht
+  // (§17-Gegengewicht): die Auskunft ist jetzt die Rubrik «Fassung» der
+  // Funktionszeile am Artikelende, wo alle anderen artikelbezogenen Rubriken
+  // seit D34/D35 stehen (`./ArtikelLeser.bezuegeFuss.tsx`, Marke `reg: 'f'`).
+  //
+  // MIT DEM SLOT FÄLLT SEINE RESERVE (`mt-4 min-h-beiwerk`, §15.2/Ä26, und die
+  // `:empty`-Zeilenbox aus W2·24-CI). Sie fing einen idle eintreffenden Shard
+  // ab, der jetzt nichts mehr im Lesekörper aufblendet: die Zeitleiste rendert
+  // erst auf Klick, die Marke wächst in eine Zeile hinein, die ohnehin auf die
+  // Zähl-Datei wartet. Eine Reservierung ohne Gegenstand wäre die Phantom-Lücke,
+  // gegen die Ä26 sie überhaupt artikelweise gemacht hat (§8).
+  //
+  // WAS DER DRUCK BEHÄLT, steht unten in der Beiwerk-Zone (`[data-hist-druck]`).
+  //
+  // Der Randtitel steht seit dem §6.6-Split (W2·24-F) als Bauteil in
+  // `./ArtikelLeser.kopfteile` — beide Satzspiegel-Formen zeigen DASSELBE
+  // Markup an zwei verschiedenen Orten, und genau darum ist es ein Bauteil
+  // (Herleitung dort). Hier bleibt er ein Wert, weil jede Form ihn an ihrer
+  // eigenen Stelle einsetzt.
   /** Trägt die Randtitel-Zeile der ZEILENFORM überhaupt etwas? Ohne das stünde
    *  der Registerfarben-Strich als Balken über einer leeren Zeile — Lärm statt
    *  Gliederung. In React entschieden und nicht per `:has()`: eine
@@ -229,10 +238,6 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
    *  Wertgleich mit der Null-Bedingung von `RandTitel` — die Breitform prüft
    *  darum ebenfalls hiergegen (§6-Split W2·24-F, Herleitung dort). */
   const randInhalt = (marg != null && marg.length > 0) || !!e.titel;
-  const histSlot = (
-    <HistSlot historie={historie} artikel={e.artikel} imKopf={histImKopf}
-      reserviert={fussAnzeige.length > 0 || !!historie} />
-  );
   const randTitel = (
     <RandTitel marg={marg} margBasis={margBasis} titel={e.titel} artikel={e.artikel}
       markerOffen={artOffen} fnProSektion={fnProSektion} fnKlasse={fnKlasse} />
@@ -307,10 +312,14 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             überhaupt etwas darin?» beantwortet der Wert, den die Zeilenform
             oben ohnehin schon bildet (wertgleich mit der Null-Bedingung von
             `RandTitel`). */}
-        {kopfForm && (randInhalt || fussAnzeige.length > 0 || historie) && (
+        {/* D40: die Bedingung ist wieder die EINE Frage «trägt der Randtitel
+            etwas?». Die beiden anderen Glieder (`fussAnzeige.length > 0 ||
+            historie`) standen nur dafür da, den Fassungs-Slot daneben zu
+            tragen — mit ihm sind sie gefallen; ohne Randtitel wäre der Kopf
+            sonst ein leerer Kasten (§8/§13). */}
+        {kopfForm && randInhalt && (
           <div className="lr7-kopf">
             <div className="lr7-kopf-titel">{randTitel}</div>
-            <div className="lr7-fassung">{histSlot}</div>
           </div>
         )}
         {/* Kopfzeile des Artikels: «Art. N» als Anker über dem Fliesstext. */}
@@ -494,6 +503,46 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               cls` (b)). Ein geschlossenes `<details>` legt seinen Inhalt nicht
               ins Layout — die Zusage hängt jetzt an der Bauart, nicht mehr an
               der Disziplin, eine Prop wegzulassen. */}
+          {/* ═══ W2·24-D40 (David 7.9.2026) · WAS HIER NOCH STEHT: DER DRUCK ═══
+              Wörtlich: «und wieso ist fassung nicht auch unten am artikel?».
+              Auf dem BILDSCHIRM steht die Fassungs-Auskunft seither in der
+              Funktionszeile am Artikelende, als Rubrik «3 Fassungen ›» neben den
+              anderen (`./ArtikelLeser.bezuegeFuss.tsx`). Der reservierte Slot
+              `[data-hist-slot]`, den die Absätze darunter beschreiben, gibt es
+              nicht mehr — weder hier noch im Kopf.
+
+              AUF DEM PAPIER ÄNDERT SICH NICHTS, und das ist der Grund für dieses
+              Element. Die Funktionszeile ist `print:hidden` (sie ist Bedienung,
+              `./BezuegeKopf.tsx`); ihr die Fassung zu überlassen hiesse, dem
+              Ausdruck den Stand des Artikels zu nehmen — die Auskunft, die ein
+              Aktenstück am dringendsten braucht (§8, dieselbe Sorge wie die
+              Stand-Zeile im Erlass-Kopf, `e2e/druck-fundstellen-z2`).
+
+              KEINE ZWEITE WAHRHEIT (§5): es ist DIESELBE Komponente mit
+              DENSELBEN Daten, nur eine zweite Projektion — Bildschirm auf Klick,
+              Papier immer. Und es ist BYTE-GLEICH zu dem, was der Drucker bis
+              D40 bekam: dort war die Zeitleiste zugeklappt, also stand auch nur
+              das Badge «Fassung · Gilt seit …» auf dem Blatt (`zeitleiste`
+              bleibt darum aus, §2b — der Druckstand wird gehalten, nicht
+              nachgeführt).
+
+              KOSTET NICHTS ZUSÄTZLICH: die Komponente wurde bis D40 an genau
+              dieser Stelle für JEDEN Artikel gerendert. `hidden print:block` ist
+              `display:none` am Bildschirm — kein Layout, kein Paint, keine
+              Reserve (die 24-px-Reserve ist mit dem Slot gefallen, s. o.).
+              Die Dreier-Wahl greift weiter (`html[data-vermerke]` auf
+              `[data-hist-druck]`, `src/index.css`): sie stand schon bisher
+              ausserhalb von `@media screen`, weil der Fassungs-Slot ABGELEITET
+              ist und der Wahl auch im Druck folgt. */}
+          <div data-hist-druck className="hidden print:block">
+            <ArtikelHistorieZeile historie={historie} />
+          </div>
+          {/* ── WAS HIER BIS D40 STAND (§0 Ziff. 2b: ERGÄNZT, nicht ────────────
+              nachgeführt). Die folgenden Absätze beschreiben den reservierten
+              Fassungs-Slot und seine Messungen vom 20.7./17.8.2026. Sie bleiben
+              Wort für Wort stehen: sie belegen, warum die Reserve gebaut wurde
+              und was sie gemessen verhindert hat. Der Slot selbst ist mit D40
+              gefallen (Herleitung oben), die Belege altern nicht. */}
           {/* G-HIST-UI: «Gilt seit»-Badge + aufklappbare Fassungs-Timeline dieses
               Artikels (aus dem erlass-lokalen Historie-Shard, idle geladen). Am
               Artikel-Fuss wie Verweise/Leitfälle. §15.2: der Slot steht ab dem
@@ -574,7 +623,6 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               Der Token heisst seit S2 `min-h-beiwerk` (Wert unverändert 1.5 rem = die
               gemessenen 24 px der einen Chip-Zeile): er reserviert den Boden der
               Beiwerk-Zone, nicht «eine Historie-Zeile». */}
-          {!histImKopf && histSlot}
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar). W2·5d G2b:
               der Apparat liegt IMMER im DOM (Ctrl+F/Print/Screenreader, R9/§8);
               der data-fussnoten-CSS-Toggle dämpft ihn bei «AUS» (data-fn-apparat),
@@ -647,7 +695,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             dazwischen nichts gibt. Im Druck bleibt sie ausgeblendet
             (`print:hidden` in `BezuegeKopf.tsx`). */}
         <ArtikelBezuegeFuss bezuege={bezuege} bezuegeImFuss={bezuegeImFuss}
-          leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
+          historie={historie} leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
           werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}
           onOeffnen={onBezuegeOeffnen} onImBlatt={onImBlatt} laedt={bezuegeLaedt && !bezuege}
           aktionen={<ArtikelAktionen artikel={e.artikel} basisPfad={basisPfad}

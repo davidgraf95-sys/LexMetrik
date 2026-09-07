@@ -4,7 +4,6 @@ import { usePopoverAutoZu } from './usePopoverAutoZu';
 import { menueTastenFahrt } from './menueTasten';
 import { kopfGriffKlassen } from './kopfStufen';
 import { useLeserOptionen } from '../leserOptionen';
-import { LeserScrim } from './LeserScrim';
 import { LeserAenderungsWahl } from './LeserAenderungsWahl';
 import { LeserRubrikenWahl } from './LeserRubrikenWahl';
 import type { BestimmungsWort } from './erlassAnsicht';
@@ -191,11 +190,27 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
           : <><span aria-hidden>◧</span><span>Ansicht</span><span aria-hidden className={`transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span></>}
       </button>
 
-      {/* B7-N1 · LM-015: die abdunkelnde Fläche hinter diesem Menü. Regel,
-          Farbwahl, Stapelordnung und a11y stehen im Kopf von `./LeserScrim`
-          — kurz: der Scrim folgt der FOKUS-FALLE (Modus `popover` fängt sie),
-          nicht der Fläche; Ä52 bleibt davon unberührt. */}
-      {offen && <LeserScrim onSchliessen={() => setOffen(false)} />}
+      {/* ── D41 (David 7.9.2026) · HIER STAND DIE ABDUNKELUNG DES MENÜS ──────
+          AUFGEHOBEN, nicht verschoben: B7-N1/LM-015 hat dem «Ansicht ▾»-Menü am
+          8.8.2026 einen Vollflächen-Scrim gegeben (`./LeserScrim`, mit der Datei
+          entfallen). Der Befund von damals — «kein Scrim im DOM», 240 × 199 px
+          auf deckendem `paper-raised` — bleibt als Messung gültig; falsch war die
+          daraus gezogene FOLGERUNG.
+          Gemessen 7.9.2026 @1440 (Melder David, «wird uneinheitlich abgedunkelt»):
+          über dem Scrim (z 16) liegen VIER Balken mit DREI Breiten — Topbar
+          (z 30, 1440 px), Reiterleiste (z 20, 1440), `InhaltsKopf` (z 19, 1440)
+          und der Leser-Kopf `[data-v3-kopf]` (z 17, nur **1080** px). Δ Leuchtdichte
+          im Kopf-Band y 120–135: x 0–160 −74.9 · x 200–1160 **0.0** · x 1280–1400
+          −74.9. Ergebnis ist ein 1080 × 57 px helles Fenster mit zwei harten
+          Kanten, das beim Scrollen mitwandert. Ein vollflächiger Scrim unter einem
+          NICHT vollflächigen Kopf kann gar nicht einheitlich aussehen — der Mangel
+          war die Bauart, keine Regression.
+          Ein Dropdown auf deckendem Grund braucht keine Abdunklung (Browser-Norm);
+          die Wege hinaus trägt `usePopoverAutoZu` im Modus `popover` selbst —
+          gemessen bei entferntem Scrim-Knoten: Aussenklick 1 → 0, Escape 1 → 0.
+          Mit der Fläche entfällt allein die Zusage «Klick auf die Abdunklung
+          schliesst». Ä52 (Beiwerk-Panel ohne Scrim) bleibt unberührt und wird in
+          `e2e/leser-v3-scrim-b7n1.e2e.ts` jetzt AUCH bei offenem Menü gemessen. */}
 
       {offen && (
         <div

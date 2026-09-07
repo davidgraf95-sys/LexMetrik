@@ -11,6 +11,10 @@ import { bestimmungDativ, type BestimmungsWort } from './erlassAnsicht';
 // Aktionen. Wer eine davon nicht braucht, wählt sie hier ab — Zähler UND
 // Inhalt verschwinden, nicht nur der Inhalt.
 //
+// D40 (David 7.9.2026, «und wieso ist fassung nicht auch unten am artikel?»):
+// die Liste ist um «Fassung» gewachsen — sechs Zeilen statt fünf. Herleitung an
+// der Rubrik selbst, unten in `RUBRIKEN`.
+//
 // ── WARUM CSS UND NICHT REACT (§15) ────────────────────────────────────────
 // Die Wahl landet als EIN Attribut am <html> (`data-fuss-aus`, gesetzt in
 // `../leserOptionen`), und `src/index.css` blendet danach aus. Ein Abo je
@@ -30,11 +34,11 @@ import { bestimmungDativ, type BestimmungsWort } from './erlassAnsicht';
 //
 // ── DIE ROLLEN SETZT DER AUFRUFER (`ui/Menue`-Vertrag) ─────────────────────
 // `MenueSchalter` bringt `role="switch"` mit; hier wird daraus
-// `menuitemcheckbox` — fünf unabhängige Ja/Nein-Fragen, also die Marke `kasten`
+// `menuitemcheckbox` — sechs unabhängige Ja/Nein-Fragen, also die Marke `kasten`
 // (Vorgabe), nicht der `punkt` der Radiogruppe eine Gruppe weiter oben.
 
 /**
- * Die fünf Rubriken in der Reihenfolge, in der sie am Artikelende stehen (§5:
+ * Die sechs Rubriken in der Reihenfolge, in der sie am Artikelende stehen (§5:
  * dieselbe Ordnung wie `FUSS_RUBRIKEN` und dasselbe `data-reg` wie die
  * Funktionszeile — eine Rubrik, ein Buchstabe).
  *
@@ -44,6 +48,22 @@ import { bestimmungDativ, type BestimmungsWort } from './erlassAnsicht';
  * und keine Konstante — dieselbe Bauform wie `panelModell.reiterTitel`.
  */
 const RUBRIKEN: ReadonlyArray<{ id: FussRubrik; label: string; titel: (dativ: string) => string }> = [
+  {
+    // ── W2·24-D40 (David 7.9.2026) · «wieso ist fassung nicht auch unten am
+    // artikel?». Sie steht ZUERST, weil sie in der Zeile zuerst steht (§5:
+    // dieselbe Ordnung wie `FUSS_RUBRIKEN` und die Marken) — und weil sie als
+    // einzige den Artikel SELBST beschreibt, statt von ihm wegzuzeigen.
+    //
+    // DIESER SCHALTER ERSETZT DIE ÄNDERUNGS-WAHL NICHT. Eine Gruppe weiter oben
+    // entscheidet «Fassung | Fussnoten | aus», OB es eine Fassungs-Auskunft
+    // gibt; hier wird gewählt, ob sie AM ARTIKEL steht. Steht die Wahl oben auf
+    // «Fussnoten» oder «aus», ist dieser Schalter wirkungslos — und das ist
+    // richtig so, nicht versteckt: er sagt «am Artikel zeigen», nicht
+    // «Änderungen führen» (§5/§8; die Weiche steht in `src/index.css`).
+    id: 'f',
+    label: 'Fassung',
+    titel: (d) => `Fassungsstand und Zeitleiste zu ${d} in der Zeile am Ende zeigen`,
+  },
   { id: 'r', label: 'Entscheide', titel: (d) => `Gerichtsentscheide zu ${d} in der Zeile am Ende zeigen` },
   { id: 'm', label: 'Materialien', titel: (d) => `Botschaften und Vernehmlassungen zu ${d} in der Zeile am Ende zeigen` },
   { id: 'g', label: 'Verweise', titel: (d) => `Die in ${d} genannten Normverweise in der Zeile am Ende zeigen` },
@@ -51,18 +71,11 @@ const RUBRIKEN: ReadonlyArray<{ id: FussRubrik; label: string; titel: (dativ: st
   {
     id: 'a',
     label: 'Aktionen',
-    // NACHZUG NACH DEM F1-NACHFIX (7.9.2026): der vierte Griff der Zeile heisst
-    // seither nicht mehr «Daneben öffnen» — das Wort bleibt dem ERLASS-Kopf
-    // (`./ReiterAktion.tsx`), die Zeile stellt die einzelne Stelle daneben
-    // (`../parts/ArtikelAktionen.tsx`). Der Titel nennt darum die VERBFORM
-    // «daneben stellen», die dort in `title` und `aria-label` steht.
-    //
-    // WARUM NICHT DER SICHTBARE TEXT «⧉ Artikel daneben»: er traegt die
-    // Bund-Annahme als festes Wort, und an einem §-Erlass (BS-640.100) waere sie
-    // falsch. In `v3/` ist das gegatet (`leser-v3-fundament` C1: kein
-    // «Artikel»-Literal ausserhalb von `./erlassAnsicht.ts`) — die Regel gilt
-    // hier und wird nicht umgangen; die Verbform sagt dasselbe ohne Substantiv.
-    titel: () => '«Zitat», «Link», «Amtliche Fassung ↗» und «daneben stellen» in der Zeile am Ende zeigen',
+    // D44 (David 7.9.2026): die Zeile trug testweise einen vierten Griff
+    // («⧉ Artikel daneben», Verbform «daneben stellen» in `title`/`aria-label`
+    // von `../parts/ArtikelAktionen.tsx`) — ersatzlos gestrichen. Diese Gruppe
+    // schaltet seither nur noch die drei verbliebenen Aktionen.
+    titel: () => '«Zitat», «Link» und «Amtliche Fassung ↗» in der Zeile am Ende zeigen',
   },
 ];
 
@@ -101,9 +114,9 @@ export function LeserRubrikenWahl({ gewaehlt, bestimmungsWort }: {
         />
       ))}
       {/* ── DER RÜCKWEG IST DIESELBE ZEILE ────────────────────────────────────
-          Fünf Zeilen einzeln abzuwählen ist fünf Klicks; die Zeile hier ist
+          Sechs Zeilen einzeln abzuwählen ist sechs Klicks; die Zeile hier ist
           einer. Sie ist ein `menuitem` (eine HANDLUNG), kein Schalter: ein
-          sechster Kasten neben fünf Kästen läse sich als sechste Rubrik, und
+          siebter Kasten neben sechs Kästen läse sich als siebte Rubrik, und
           eine Rubrik ist sie nicht. Ihre Beschriftung wechselt darum mit dem
           Stand — sie sagt, was der Klick TUT, und ist so zugleich der Weg
           zurück.
@@ -124,8 +137,8 @@ export function LeserRubrikenWahl({ gewaehlt, bestimmungsWort }: {
       <MenueZeile
         label={alleAus ? 'Alles zeigen' : 'Alles ausblenden'}
         titel={alleAus
-          ? 'Alle fünf Rubriken der Zeile am Ende wieder einblenden'
-          : 'Alle fünf Rubriken der Zeile am Ende ausblenden — die Zeile verschwindet dann ganz'}
+          ? 'Alle sechs Rubriken der Zeile am Ende wieder einblenden'
+          : 'Alle sechs Rubriken der Zeile am Ende ausblenden — die Zeile verschwindet dann ganz'}
         onKlick={() => setzeFussRubriken(alleAus ? FUSS_RUBRIKEN : [])}
         attrs={{ role: 'menuitem', 'data-v3-fussrubriken-alle': alleAus ? 'an' : 'aus' }}
       />

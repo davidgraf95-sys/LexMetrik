@@ -1,9 +1,6 @@
 import { FnRef } from '../../../components/normtext/ArtikelBody';
 import { WJ } from '../../../components/normtext/wortverbinder';
 import { margStufeStil, margLabel } from '../helpers';
-import { SUCH_META } from '../suchHighlight';
-import { ArtikelHistorieZeile } from './ArtikelHistorie';
-import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 
 // ═══ Die zwei KOPFTEILE des Artikels: Randtitel und Fassungs-Slot ═══════════
 //
@@ -31,25 +28,17 @@ import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 // Registerfarben-Strich), und eine zweite Funktion daneben verstiesse gegen
 // die Fast-Refresh-Regel dieser Datei (nur Komponenten exportieren).
 
-export function HistSlot({ historie, artikel, imKopf, reserviert }: {
-  historie?: ArtikelHistorie;
-  artikel: string;
-  /** Steht der Slot im Artikelkopf (Breitform)? Dann ohne den `mt-4` der
-   *  Beiwerk-Zone — im Kopf sitzt er neben dem Randtitel. */
-  imKopf: boolean;
-  /** Kann in diesem Slot je eine Fassungs-Zeile eintreffen? Nur dann wird die
-   *  Höhe reserviert (Ä26, artikelweise am Datenmodell entschieden). */
-  reserviert: boolean;
-}) {
-  return (
-    <div {...{ [SUCH_META]: '' }} data-hist-slot
-      className={reserviert
-        ? `min-h-beiwerk${imKopf ? '' : ' mt-4'}`
-        : undefined}>
-      <ArtikelHistorieZeile historie={historie} artikel={artikel} />
-    </div>
-  );
-}
+// ── W2·24-D40 (David 7.9.2026) · HIER STAND `HistSlot` ─────────────────────
+// Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Der Slot
+// `[data-hist-slot]` — «Gilt seit … ▸» plus Zeitleiste, mit seiner 24-px-Reserve
+// (`min-h-beiwerk`) und der `SUCH_META`-Kennung — ist ERSATZLOS gelöscht, nicht
+// bewacht (§17-Gegengewicht). Die Auskunft ist seither eine Rubrik der
+// Funktionszeile am Artikelende (`./ArtikelLeser.bezuegeFuss.tsx`, `reg: 'f'`),
+// der Druck bekommt sie aus `./ArtikelLeser.tsx` (`[data-hist-druck]`).
+//
+// DER DATEINAME BLEIBT «kopfteile», obwohl nur noch EIN Bauteil darin steht:
+// ein Umbenennen führte datierte Belege nach, statt sie stehenzulassen
+// (§0 Ziff. 2b) — der §6.6-Split von W2·24-F ist mit dieser Datei belegt.
 
 /** Die Randtitel selbst — in beiden Formen DASSELBE Markup, nur an einem
  *  anderen Ort (§5: eine Quelle für die Stufen-Stimme, `helpers.tsx`). */

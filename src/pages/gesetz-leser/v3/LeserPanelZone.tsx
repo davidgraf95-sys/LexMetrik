@@ -26,8 +26,11 @@ import { usePopoverAutoZu } from './usePopoverAutoZu';
 //   'rechts'  D, Einzelansicht — 22 rem am rechten Rand, NICHT
 //             modal. Der Lesetext links bleibt sichtbar UND bedienbar; das
 //             Panel ist Beiwerk und verhält sich auch so (Ä52, s. u.).
-//   'unten'   H und jedes Pane — echtes Bottom-Sheet, modal. Es reicht von der
-//             Unterkante nach oben und lässt den Artikel darüber stehen (Ä55).
+//   'unten'   H und jedes Pane — Bottom-Sheet. Es reicht von der Unterkante nach
+//             oben und lässt den Artikel darüber stehen (Ä55).
+//             «modal» stand hier bis D42 (7.9.2026) und galt für BEIDE Orte;
+//             seither nur noch für H (Einzelansicht) — im Pane ist dasselbe
+//             Blatt Beiwerk. Herleitung bei der Ableitung `modal` unten.
 //
 // UNBERÜHRT bleibt die harte Regel «NIE drei vertikale Flächen» im geteilten
 // Fenster (Design-Grundlage Kap. 8 Nr. 8, ausdrücklich «im Split-View»): im
@@ -49,6 +52,10 @@ import { usePopoverAutoZu } from './usePopoverAutoZu';
 // gibt es darum keinen Scrim, kein `aria-modal` und keine Fokus-Falle mehr
 // (`usePopoverAutoZu` Modus `beiwerk`, Herleitung dort); auf H und im Pane bleibt
 // das Sheet modal, weil es dort die ganze Bedienfläche beansprucht.
+// ── AUFGEHOBEN für den Pane-Teil (D42, 7.9.2026) ───────────────────────────
+// Der letzte Halbsatz war für das Pane eine Annahme, keine Messung, und ist
+// widerlegt: 404 von 735 px, also 55 %. Ä52 gilt seither auch dort — der Satz
+// bleibt als Beleg von damals stehen (§2b), die Rechnung steht unten bei `modal`.
 //
 // ═══ Ä55 (H3-Nachzug) · DAS «BOTTOM-SHEET» HING OBEN ═════════════════════════
 // Gemessen @390: das Sheet begann bei y = 100 und war 744 px hoch — es füllte
@@ -145,12 +152,49 @@ export function LeserPanelZone({
   const kantone = useBezugKantone();
   const { offen, reiter, setReiter, schliesse } = zustand;
 
-  // Im Pane ist das Blatt IMMER modal (es beansprucht die ganze Pane-Fläche);
-  // in der Einzelansicht entscheidet die Gestalt. `imPaneBlatt` ist die
-  // Portal-Frage, `modal` die Bedien-Frage — bis zum Nachzug waren beide
-  // dieselbe Bedingung, und genau daran hing Ä52.
+  // ═══ D42 (David 7.9.2026) · MODAL IST DAS BLATT NUR, WO ES ALLES DECKT ═════
+  // AUFGEHOBEN steht hier seit Ä52: «Im Pane ist das Blatt IMMER modal (es
+  // beansprucht die ganze Pane-Fläche)». Die BEOBACHTUNG von damals bleibt
+  // gültig, die BEGRÜNDUNG ist am 7.9.2026 gemessen widerlegt: im Pane belegt
+  // das Blatt **404 von 735 px** Pane-Höhe (55 %, `BLATT_ANTEIL`) — darüber
+  // stehen 331 px Gesetzestext sichtbar da. Es beansprucht also gerade NICHT
+  // die ganze Fläche; der Scrim tat es (`absolute inset-0`, rect [2,165,718,735]).
+  //
+  // WAS DAVID GEMELDET HAT («split screen … fast nicht mehr bedienbar») und was
+  // gemessen wurde: `elementFromPoint` auf die Mitte von Ansicht-Öffner,
+  // ⚖-Öffner, Suchfeld und Textabsatz im Gesetzes-Pane lieferte VIERMAL
+  // `div[data-v3-panel-scrim]` statt des Ziels — jeder Klick schloss stattdessen
+  // das Blatt. Nicht optisch, real. Gegenprobe: Scrim-Knoten per JS entfernt →
+  // alle Ziele wieder treffbar (Alleinursache; kein `inert`, kein `aria-hidden`,
+  // kein `pointer-events:none` am Pane).
+  //
+  // DIE WURZEL WAR DIE KOPPLUNG SELBST. `paneZiel` wechselt beim Split von
+  // `null` auf die Overlay-Wurzel — eine reine PORTAL-Frage. Über `||` hing die
+  // BEDIEN-Frage daran: dasselbe offene, nicht-modale Beiwerk-Panel mutierte
+  // beim Übergang still zum Dialog, ohne dass sich an seinem Zustand sonst
+  // etwas änderte. Ä52 hat genau diese Verwechslung schon einmal aufgelöst («bis
+  // zum Nachzug waren beide dieselbe Bedingung») — für den Pane-Fall stand sie
+  // noch. Jetzt entscheidet allein die GESTALT, und `imPaneBlatt` ist wieder
+  // reine Portal-Frage:
+  //
+  //   modal  ⇔  Bottom-Sheet in der Einzelansicht (@390) — dort deckt das Blatt
+  //             die einzige Bedienfläche, die es gibt.
+  //   nicht  ⇔  Beiwerk neben dem Text (D, `'rechts'`) UND im Pane — beide Male
+  //             bleibt der Lesetext sichtbar UND bedienbar (Ä52-Zusage von
+  //             `panelForm`, jetzt auch im Split eingelöst).
+  //
+  // NICHT die Wurzel und darum unverändert: `panelForm` (`./kopfStufen`) gibt im
+  // Pane weiterhin `'unten'`. Die GESTALT ist begründet — ein 22-rem-Streifen in
+  // einer 718-px-Spalte liesse vom Text nichts übrig (gemessene Lesespalte im
+  // Pane: x 40, Breite 641) —, und «NIE drei vertikale Flächen im Split» bleibt.
+  // Falsch war allein die Modalität, nie die Gestalt.
+  //
+  // DER WEG HINAUS BLEIBT: `modus` unten fällt im Pane auf `'fest'`; das steht in
+  // `OHNE_FALLE` (`./usePopoverAutoZu`), woran der Escape-Handler hängt — Escape,
+  // ✕ und der Zweitklick am Zähler tragen weiter. Nur der Aussenklick entfällt,
+  // genau wie auf D seit Ä52 gewollt (sonst wäre Textmarkieren unmöglich).
   const imPaneBlatt = paneZiel != null;
-  const modal = imPaneBlatt || form === 'unten';
+  const modal = !imPaneBlatt && form === 'unten';
 
   usePopoverAutoZu({
     offen, schliesse, wrapRef, panelRef,
@@ -316,9 +360,14 @@ export function LeserPanelZone({
               F2-1 (31.8.2026): derselbe Wert, jetzt aus `.lc-scrim`
               (src/index.css) statt als Utility-Kette — die Zahl der ROLLE
               «angeschlagenes Blatt» steht seither an genau einer Stelle. */}
+          {/* D42 (7.9.2026): der `imPaneBlatt ? absolute : fixed`-Ternär ist hier
+              zusammengefallen. Er hatte nur einen Zweck — den Scrim auf die
+              Pane-Fläche zu begrenzen —, und im Pane gibt es seither keinen
+              Scrim mehr. Modal ist nur noch das Bottom-Sheet der Einzelansicht,
+              und dessen Fläche IST das Fenster: `fixed`. */}
           {modal && (
             <div data-v3-panel-scrim
-              className={imPaneBlatt ? 'lc-scrim pointer-events-auto absolute inset-0 z-overlay' : 'lc-scrim fixed inset-0 z-overlay'}
+              className="lc-scrim fixed inset-0 z-overlay"
               onClick={schliesse} aria-hidden />
           )}
           <Huelle klassen={flaeche.huelle}>
@@ -328,7 +377,7 @@ export function LeserPanelZone({
             // Rollen-Lüge, die §8 an anderer Stelle («ehrliche Disclosure statt
             // role=menu») schon verboten hat.
             role={modal ? 'dialog' : 'region'}
-            aria-modal={modal && !imPaneBlatt ? true : undefined}
+            aria-modal={modal || undefined}
             aria-labelledby={titelId}
             data-v3-panel-form={form}
             data-v3-panel-modal={modal ? 'ja' : 'nein'}

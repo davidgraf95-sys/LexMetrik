@@ -72,8 +72,12 @@ describe('D35-F3: zwei Bestands-Schalter → eine Dreier-Wahl', () => {
   // gestrichen (Herleitung in `leserOptionen.ts`); an seiner Stelle steht der
   // Grundzustand der Rubriken-Wahl, und die Aussage bleibt dieselbe: ein leerer
   // Speicher ergibt die Vorgabe, nichts Halbes.
+  // §6.3-DEKLARATION (D40, 7.9.2026): der Grundzustand hat eine SECHSTE Rubrik
+  // bekommen — `f` = Fassung, seit sie in der Funktionszeile am Artikelende
+  // steht statt am Artikelkopf (David: «und wieso ist fassung nicht auch unten
+  // am artikel?»). Die Aussage des Falls ist unverändert.
   it('leerer Speicher ⇒ Vorgabe: Fassung sichtbar, alle Rubriken am Artikel', () => {
-    expect(migriereOptFelder({})).toEqual({ vermerke: 'fassung', fussRubriken: ['r', 'm', 'g', 'w', 'a'] });
+    expect(migriereOptFelder({})).toEqual({ vermerke: 'fassung', fussRubriken: ['f', 'r', 'm', 'g', 'w', 'a'] });
   });
 
   it('das Ergebnis trägt GENAU die zwei heutigen Schlüssel', () => {
@@ -134,20 +138,54 @@ describe('Migration: das unveränderte Feld und der reale Bestand', () => {
   // alten Fall trug — eine getroffene Nutzerwahl kippt nicht still.
   it('fussRubriken: fehlt der Schlüssel, steht alles; ein leeres Array bleibt leer', () => {
     // Jeder Bestands-Speicher vor D35-F2 hat den Schlüssel nicht — Grundzustand.
-    expect(migriereOptFelder({}).fussRubriken).toEqual(['r', 'm', 'g', 'w', 'a']);
-    // «Alles ausblenden» ist eine WAHL, kein fehlender Wert (§8).
-    expect(migriereOptFelder({ fussRubriken: [] }).fussRubriken).toEqual([]);
+    expect(migriereOptFelder({}).fussRubriken).toEqual(['f', 'r', 'm', 'g', 'w', 'a']);
+    // «Alles ausblenden» ist eine WAHL, kein fehlender Wert (§8) — im Speicher
+    // von HEUTE (`stand: 2`) heisst leer auch leer.
+    expect(migriereOptFelder({ fussRubriken: [], stand: 2 }).fussRubriken).toEqual([]);
+  });
+
+  // ── §6.3-DEKLARATION (D40, 7.9.2026) · DIE SECHSTE RUBRIK IM BESTAND ──────
+  // `fussRubriken` trägt die GEWÄHLTEN. Ein neuer Buchstabe fehlt darum in
+  // jedem Bestands-Speicher, und «fehlt» hiesse ohne diese Regel «abgewählt» —
+  // die Fassungs-Auskunft wäre bei jedem Leser still verschwunden, der die
+  // Rubriken je angefasst hat (§8). `stand` ist die einzige Frage dazu:
+  // «konnte dieser Speicher `f` überhaupt kennen?»
+  it('D40: ein Speicher ohne `stand` bekommt `f` dazu — auch der leere', () => {
+    // Bestand mit vier abgewählten Rubriken: die Wahl bleibt, `f` kommt dazu.
+    expect(migriereOptFelder({ fussRubriken: ['r', 'a'] }).fussRubriken).toEqual(['f', 'r', 'a']);
+    // «Alles ausblenden» von vor D40 hiess «die FÜNF aus» — die Fassung stand
+    // danach weiter am Artikelkopf. Getreu ist darum `['f']`, nicht `[]`.
+    expect(migriereOptFelder({ fussRubriken: [] }).fussRubriken).toEqual(['f']);
+    // Ein falscher Stand ist kein Stand (Whitelist, wie überall im Store).
+    for (const unfug of [1, 3, '2', null, undefined] as unknown[]) {
+      expect(migriereOptFelder({ fussRubriken: ['r'], stand: unfug }).fussRubriken,
+        `stand: ${String(unfug)}`).toEqual(['f', 'r']);
+    }
+  });
+
+  it('D40: mit `stand: 2` ist die Abwahl von `f` eine echte Abwahl', () => {
+    // Sonst wäre die neue Menüzeile ein Schalter ohne Wirkung über den
+    // Seitenwechsel hinaus — eine Wahl, die sich still zurückstellt (§8).
+    expect(migriereOptFelder({ fussRubriken: ['r', 'm', 'g', 'w', 'a'], stand: 2 }).fussRubriken)
+      .toEqual(['r', 'm', 'g', 'w', 'a']);
+  });
+
+  it('D40: `stand` selbst rutscht NICHT in den Zustand', () => {
+    // Er ist Speicher-Buchführung, kein Options-Feld — als `data-stand` am
+    // <html> wäre er eine Leiche ohne Regel (§17-Gegengewicht).
+    expect(Object.keys(migriereOptFelder({ fussRubriken: ['r'], stand: 2 })).sort())
+      .toEqual(['fussRubriken', 'vermerke']);
   });
 
   it('fussRubriken: unbekannte Buchstaben rutschen nicht durch, die Ordnung ist kanonisch', () => {
     // Ein unbekannter Buchstabe landete sonst als `data-fuss-aus="…"` am <html>,
     // wo keine Regel ihn kennt — dieselbe Whitelist-Sicherung wie bei `vermerke`.
-    expect(migriereOptFelder({ fussRubriken: ['a', 'x', 'r', 42, null] }).fussRubriken)
+    expect(migriereOptFelder({ fussRubriken: ['a', 'x', 'r', 42, null], stand: 2 }).fussRubriken)
       .toEqual(['r', 'a']);
     // Kein Array ⇒ Grundzustand, ohne zu werfen.
-    for (const unfug of [null, 'rmgwa', 7, {}] as unknown[]) {
+    for (const unfug of [null, 'frmgwa', 7, {}] as unknown[]) {
       expect(() => migriereOptFelder({ fussRubriken: unfug })).not.toThrow();
-      expect(migriereOptFelder({ fussRubriken: unfug }).fussRubriken).toEqual(['r', 'm', 'g', 'w', 'a']);
+      expect(migriereOptFelder({ fussRubriken: unfug }).fussRubriken).toEqual(['f', 'r', 'm', 'g', 'w', 'a']);
     }
   });
 
@@ -164,6 +202,6 @@ describe('Migration: das unveränderte Feld und der reale Bestand', () => {
     // D35-F2: `leitfaelle: 'an'` im Bestand wird nicht mehr übernommen — das
     // Feld gibt es nicht mehr; die Rubriken-Wahl fehlt im Speicher und fällt
     // darum auf ihren Grundzustand.
-    expect(migriereOptFelder(bestand)).toEqual({ vermerke: 'fassung', fussRubriken: ['r', 'm', 'g', 'w', 'a'] });
+    expect(migriereOptFelder(bestand)).toEqual({ vermerke: 'fassung', fussRubriken: ['f', 'r', 'm', 'g', 'w', 'a'] });
   });
 });
