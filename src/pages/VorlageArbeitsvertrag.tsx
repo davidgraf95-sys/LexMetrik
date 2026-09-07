@@ -523,6 +523,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       kopfSchalter={
         <VariantenKopf
           untertypLabel="Vertragstyp"

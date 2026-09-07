@@ -1,6 +1,8 @@
-import { useMemo, useState, type Dispatch, type ReactNode, type SetStateAction } from 'react';
+import { createContext, useContext, useMemo, useRef, useState, type Dispatch, type ReactNode, type SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
 import { FehlerBox, KopierButton, NormLink, Stepper } from './ui';
+import { PruefBefund } from './PruefBefund';
+import { befundZahl, sammleBefunde } from './seiteHelfer';
 import { useZielSichtbar } from './useZielSichtbar';
 import { NormChip } from './NormChip';
 import { PassendeRechner } from './PassendeRechner';
@@ -24,11 +26,21 @@ import type { PdfBanner } from '../../lib/vorlagen/banner';
 // (PDF lazy, DOCX lazy, Text kopieren). Eine neue Vorlage liefert nur noch
 // Schema, Schritte und Schritt-Inhalte – KEINE Fachlogik hier (§3).
 
+// ── D5 (W2·24) · Zahl der offenen Pflichtangaben als Kontext ────────────────
+// Der Prüf-Befund entsteht im RAHMEN (nur er kennt alle Schritte), gebraucht
+// wird er in der ExportLeiste — und die rendert jede Seite selbst, an ~19
+// Stellen. Ein Prop hätte 19 Seiten anfassen müssen, ohne dass eine davon
+// etwas dazu weiss; der Kontext hält die Kopplung an EINER Stelle (dieselbe
+// Bauart wie `BeruehrtContext` in ui.tsx). Default 0 = «nichts bekannt» —
+// ExportLeisten ausserhalb eines Wizards (Dokumentmappe) verhalten sich damit
+// unverändert.
+const OffeneAngabenContext = createContext(0);
+
 export function VorlagenWizardRahmen({
   // W2·10-UI-NAV/N0a: «Zurück zum Katalog» führte auf «/» (Startseite) statt
   // auf die Vorlagen-Übersicht — Default ans Label angeglichen (/vorlagen).
   zurueckHref = '/vorlagen', overline, titel, intro, norms, badge,
-  fussnote, zuruecksetzen, schritte, schritt, setSchritt, fehler,
+  fussnote, zuruecksetzen, schritte, schritt, setSchritt, fehler, fehlerJeSchritt,
   weiterDeaktiviert, inhalt, vorschau, kopfSchalter,
 }: {
   zurueckHref?: string;
@@ -45,6 +57,14 @@ export function VorlagenWizardRahmen({
   schritt: number;
   setSchritt: Dispatch<SetStateAction<number>>;
   fehler?: string[];
+  /** D5 (W2·24): dieselbe Auskunft wie `fehler`, aber für JEDEN Schritt —
+   *  damit der letzte Schritt («Prüfen & Download») prüfen kann, was die
+   *  Eingabe-Schritte offen gelassen haben. Die Seite reicht ihre vorhandene
+   *  Fehlerfunktion durch (`fehlerImSchritt` bzw. `maengel`-Filter); NEUE
+   *  Fachlogik entsteht dabei keine (§3). Fehlt die Prop, bleibt der Rahmen
+   *  zeichengleich zum Stand vor D5 — der Wächter `wizard-pruefschritt-d5`
+   *  hält fest, welche Flächen sie führen müssen. */
+  fehlerJeSchritt?: (schritt: number) => string[];
   /** Default: fehler vorhanden. Überschreibbar (z. B. Stopp-Karten). */
   weiterDeaktiviert?: boolean;
   inhalt: ReactNode;
@@ -61,6 +81,30 @@ export function VorlagenWizardRahmen({
   // weiterhin deaktiviert (weiterAus oben), nur die MELDUNG wird zurückgehalten.
   const [beruehrt, setBeruehrt] = useState(false);
   const merkeEingabe = () => { if (!beruehrt) setBeruehrt(true); };
+
+  // ── D5 (W2·24) · der «Prüfen»-Schritt prüft ───────────────────────────────
+  // Nur im LETZTEN Schritt und nur, wenn die Seite ihre Fehlerfunktion
+  // durchreicht. Der Befund erscheint dort OHNE `beruehrt`-Vorbehalt: wer den
+  // Prüfen-Schritt aufruft, hat um die Prüfung gebeten — der
+  // Zurückhalte-Grundsatz David (14.6.2026) schützt den leeren ANFANGSzustand
+  // der Eingabe-Schritte, nicht das Ergebnis einer angeforderten Prüfung.
+  const letzterSchrittIdx = schritte.length - 1;
+  // Kein useMemo: die Seiten reichen eine bei jedem Render neu erzeugte
+  // Closure durch (`fehlerImSchritt`), ein Memo daran wäre nie ein Treffer —
+  // und `sammleBefunde` ist ein Durchlauf über < 10 reine Funktionsaufrufe.
+  const imPruefSchritt = !!fehlerJeSchritt && schritt === letzterSchrittIdx;
+  const befunde = imPruefSchritt ? sammleBefunde(schritte, fehlerJeSchritt!) : [];
+  const offeneAngaben = befundZahl(befunde);
+  // Sprung aus der Sammelliste in den Schritt mit der Lücke: dort greift dann
+  // die gewohnte FehlerBox — darum `beruehrt` setzen, sonst landet man in
+  // einem Schritt, der schweigt. Fokus auf die Schritt-Überschrift, damit
+  // Tastatur und Screenreader dem Sprung folgen (der `key={schritt}`-Remount
+  // lässt die Ref-Callback beim Ankommen feuern).
+  const springFokus = useRef(false);
+  const springeZuSchritt = (i: number) => { setBeruehrt(true); springFokus.current = true; setSchritt(i); };
+  const titelRef = (el: HTMLHeadingElement | null) => {
+    if (el && springFokus.current) { springFokus.current = false; el.focus(); }
+  };
   // Split-View E: Formular‖Vorschau-Split nach PANE-Breite (md→@3xl/pane), damit
   // der Wizard in einem schmalen Pane nicht zweispaltig gequetscht wird. Ausserhalb
   // eines Panes byte-gleich (Viewport-md:).
@@ -95,9 +139,13 @@ export function VorlagenWizardRahmen({
   };
 
   return (
-    // pb-20 mobil (Auftrag David 25.6.2026): der schwebende «Vorschau ↓»-FAB
-    // (fixed bottom-4 right-4) deckte sonst die letzten Felder / den Weiter-
-    // Knopf zu — die Boden-Polsterung lässt sie frei darüber scrollen.
+    // D5: `inhalt`/`vorschau` sind zwar AUSSEN erzeugte Knoten, werden aber
+    // HIER gerendert — React-Kontext folgt dem Render-Baum, die ExportLeiste
+    // der Seite liest die Zahl also ohne Props-Plumbing.
+    <OffeneAngabenContext.Provider value={offeneAngaben}>
+    {/* pb-20 mobil (Auftrag David 25.6.2026): der schwebende «Vorschau ↓»-FAB
+        (fixed bottom-4 right-4) deckte sonst die letzten Felder / den Weiter-
+        Knopf zu — die Boden-Polsterung lässt sie frei darüber scrollen. */}
     <div className={`space-y-6 pb-20 ${pk('md:pb-0', '@3xl/pane:pb-0')}`}>
       {/* Kopf */}
       <div className="space-y-3">
@@ -214,7 +262,13 @@ export function VorlagenWizardRahmen({
           {/* key={schritt}: re-mountet den Schrittinhalt → dezenter Einblende-
               Fade beim Schrittwechsel (Redesign E8); Fehlerbox/Buttons bleiben ruhig. */}
           <div key={schritt} className="lc-route space-y-5">
-            <h2 className="text-h3 font-serif font-semibold text-ink-900">{schritte[schritt].label}</h2>
+            {/* tabIndex=-1: KEINE Tab-Station (die Überschrift bleibt aus der
+                Reihenfolge), nur programmatisch fokussierbar — das Ziel des
+                Sprungs aus dem Prüf-Befund (D5). */}
+            <h2 ref={titelRef} tabIndex={-1} className="text-h3 font-serif font-semibold text-ink-900">{schritte[schritt].label}</h2>
+            {/* D5: Der Befund steht VOR dem Schritt-Inhalt — er ist die
+                Antwort auf «Prüfen», nicht eine Fussnote darunter. */}
+            {imPruefSchritt && <PruefBefund befunde={befunde} onSpringe={springeZuSchritt} />}
             {inhalt}
           </div>
 
@@ -338,6 +392,7 @@ export function VorlagenWizardRahmen({
         </button>
       )}
     </div>
+    </OffeneAngabenContext.Provider>
   );
 }
 
@@ -647,17 +702,33 @@ export function ExportLeiste({ ergebnis, deaktiviert, kopiert, onKopieren, pdf, 
   // Der Kopier-Text hing zuvor am Klick; als Prop liefe die Serialisierung des
   // ganzen Dokuments sonst bei jedem Render mit (§15) — darum memoisiert.
   const kopierText = useMemo(() => dokumentAlsText(ergebnis), [ergebnis]);
+
+  // ── D5 (W2·24) · EINMAL nachfragen, nie sperren ───────────────────────────
+  // Der Knopf bleibt aktiv (Daueranweisung David 12.6.2026: jede Vorlage ist
+  // jederzeit herunterladbar). Fehlen Pflichtangaben, fängt der ERSTE Klick
+  // die Aktion ab und stellt die Rückfrage; wer sie bejaht, exportiert — und
+  // wird in dieser Sitzung nicht noch einmal gefragt (`gefragt`). Gesperrt
+  // bleibt weiterhin nur `deaktiviert` (fachliche Blocker / Bestätigung).
+  const offen = useContext(OffeneAngabenContext);
+  const [rueckfrage, setRueckfrage] = useState<null | (() => void)>(null);
+  const [gefragt, setGefragt] = useState(false);
+  const mitRueckfrage = (los: () => void) => {
+    if (offen > 0 && !gefragt) { setRueckfrage(() => los); return; }
+    los();
+  };
+  const pdfLos = () => exportieren(pdfExport(ergebnis, pdf), 'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.');
+  const docxLos = () => docx && exportieren(docxExport(ergebnis, docx), 'Der Word-Export ist fehlgeschlagen. Bitte erneut versuchen.');
   return (
     <div className="space-y-3">
       <div className="flex flex-wrap gap-3">
         <button type="button" disabled={deaktiviert || laeuft} aria-busy={laeuft}
-          onClick={() => exportieren(pdfExport(ergebnis, pdf), 'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
+          onClick={() => mitRueckfrage(pdfLos)}
           className="lc-btn-primary">
           {pdf.label}
         </button>
         {docx && (
           <button type="button" disabled={deaktiviert || laeuft} aria-busy={laeuft}
-            onClick={() => exportieren(docxExport(ergebnis, docx), 'Der Word-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
+            onClick={() => mitRueckfrage(docxLos)}
             className="lc-btn-outline">
             {docx.label}
           </button>
@@ -671,6 +742,23 @@ export function ExportLeiste({ ergebnis, deaktiviert, kopiert, onKopieren, pdf, 
           className="lc-btn-outline" disabled={deaktiviert}
           kopiert={kopiert} onKopieren={onKopieren} />
       </div>
+      {rueckfrage && (
+        <div role="alert" data-export-rueckfrage className="lc-notice lc-notice-warn space-y-2">
+          <p className="text-body-s">
+            Es fehlen <span className="num">{offen}</span> {offen === 1 ? 'Pflichtangabe' : 'Pflichtangaben'} — trotzdem exportieren?
+            Offene Stellen erscheinen im Dokument als Ausfüll-Striche («________»).
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <button type="button" className="lc-btn-primary lc-btn-sm"
+              onClick={() => { const los = rueckfrage; setRueckfrage(null); setGefragt(true); los(); }}>
+              Trotzdem exportieren
+            </button>
+            <button type="button" className="lc-btn-outline lc-btn-sm" onClick={() => setRueckfrage(null)}>
+              Abbrechen
+            </button>
+          </div>
+        </div>
+      )}
       {fehler && <FehlerBox fehler={[fehler]} />}
     </div>
   );

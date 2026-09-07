@@ -314,6 +314,7 @@ export function VorlagePatientenverfuegung() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_UNTERSCHREIBEN, dateiName: 'Patientenverfuegung-Entwurf.pdf' },

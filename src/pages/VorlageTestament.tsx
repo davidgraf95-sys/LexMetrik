@@ -341,6 +341,7 @@ export function VorlageTestament() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} extra={pflichtteilePanel} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_ABSCHREIBEN, dateiName: 'Testament-Mustertext.pdf' },
