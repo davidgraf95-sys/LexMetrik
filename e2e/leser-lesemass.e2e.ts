@@ -496,14 +496,64 @@ test.describe('R5 · Lesemass Desktop (≤ 80 ch @ 1440)', () => {
 // ROT ZU BEKOMMEN (§6.7): `--leser-zeichen` in `index.css` auf 60 senken (alle
 // fünf Untergrenzen reissen, Spalte 555 statt 640 px) oder auf 90 heben bzw. die
 // `min()`-Klammer entfernen (Obergrenzen reissen) — beides einzeilig.
+// [Nachtrag 7.9.2026: es sind seither VIER Untergrenzen — VMWG ist zu BS-640.100
+//  gewandert, Herleitung im Block unten. Das Rezept wirkt unverändert; VMWG
+//  reisst dann über die Breiten-Zusage statt über die Zeichenzahl.]
+// ── §6.3-DEKLARATION (CI-Fix E, 7.9.2026): VMWG VERLIERT SEINE UNTERGRENZE ──
+//
+// Die Messreihe darüber bleibt unangetastet (§0 Ziff. 2b — datierte Belege
+// werden ergänzt, nie nachgeführt): am 6.9.2026 mass VMWG @1440 lokal 68 ch,
+// und mit dieser Zahl ist die Untergrenze eingezogen worden. Der erste CI-Lauf,
+// der die Datei überhaupt erreichte (34066539241, Shard 2, 6./7.9.2026), hat sie
+// falsifiziert — und zwar so, dass die WURZEL mitgeliefert wird:
+//
+//   VMWG @1280  GRÜN   (Spalte 641 px)
+//   VMWG @1440  ROT     63 ch bei Spalte **640 px** — genau der erwartete Wert
+//   ZGB/OR/StGB/StPO @1440 und @1280  alle GRÜN (Shard-Bilanz: 230 passed,
+//   1 failed, 0 did not run — die anderen elf T-1C-Fälle sind wirklich gelaufen)
+//
+// DIE SPALTE IST ALSO RICHTIG, und der CI rendert auch nicht pauschal breiter:
+// derselbe Erlass fällt bei EINEM Pixel Spaltenunterschied von 68 auf 63 ch.
+// Das kann keine Aussage über den Satzspiegel sein.
+//
+// WARUM DIE ZAHL BEI VMWG KIPPT — dieselbe Mechanik wie bei BS-640.100 oben,
+// nur eine Stufe schärfer. Die Methode rechnet `Textlänge / Zeilenkästen`, ein
+// MITTEL über alle Zeilen samt der halb gefüllten letzten. Der Wert eines
+// Erlasses ist das MAXIMUM über seine Absätze, und er ist damit nur so gut wie
+// der glücklichste Absatz: einer, dessen letzte Zeile zufällig fast voll läuft.
+// Gemessen 7.9.2026 (Preview 4406, @1440) die fünf höchsten VMWG-Absätze:
+//   68 (204 Z. auf 3 Kästen) · 63 (188/3) · 55 (164/3) · 53 (158/3) · 46 (415/9)
+// Die 68 hängen an EINEM Absatz. Bricht er eine Zeile später um — und genau das
+// tut er auf dem CI-Runner bei 640 statt 641 px —, fällt er auf 204/4 = 51, und
+// der Erlass erbt die 63 des Zweitplatzierten. Zum Vergleich die grossen
+// Erlasse, gleiche Messung: ZGB 67·67·66·66·66·66, StPO 68·66·64·63·63·60 —
+// dort trägt nicht ein Absatz, sondern ein Feld von Absätzen die Zahl.
+//
+// DER MASSSTAB IST DAMIT BENANNT (und nicht nur VMWG ausgenommen): die
+// Untergrenze ist nur für Erlasse mit GROSSEM Absatzbestand aussagekräftig, weil
+// erst dort ein Absatz mit voll laufender Schlusszeile sicher vorkommt. Gemessen
+// (messbare Absätze mit ≥ 3 Zeilenkästen, 7.9.2026): ZGB 3375 · StPO 1427 —
+// gegen VMWG 101. Eine Verordnung mit hundert kurzen Absätzen misst ihre
+// Absatzform, nicht ihre Spalte. VMWG steht damit dort, wo BS-640.100 seit R6c
+// aus demselben Grund steht.
+//
+// WAS DER FALL BEI VMWG WEITERHIN ZUSAGT — und warum das keine Lücke ist: die
+// Obergrenze (≤ 72 ch) bleibt, die EINE Textkante und die EINE Breite bleiben,
+// und die Breiten-Zusage unten bindet VMWG auf **dieselben 640/641 px wie die
+// fünf anderen** (`toBeCloseTo(…, -0.5)`, Toleranz ~1.6 px). Genau diese Zusage
+// hat der rote Lauf erfüllt gemeldet. Vier von sechs Erlassen tragen die
+// Untergrenze unverändert; verloren geht nur eine Zahl, die eine Woche lang
+// Zufall gemessen hat.
 const T1C_MAX_CH = 72;
 const T1C_MIN_CH = 65;
 /** Erwartete Textkörperbreite je Fenster (px) — s. Messreihe oben. */
 const T1C_BREITE: Readonly<Record<number, number>> = { 1440: 640, 1280: 641 };
 const T1C_ERLASSE = [
   ['ZGB', 'bund/ZGB', true], ['OR', 'bund/OR', true], ['StGB', 'bund/STGB', true],
-  ['StPO', 'bund/STPO', true], ['VMWG', 'bund/VMWG', true],
-  // `false` = keine Untergrenze, s. Herleitung oben.
+  ['StPO', 'bund/STPO', true],
+  // `false` = keine Untergrenze, s. Herleitung oben (BS-640.100 seit R6c,
+  // VMWG seit dem CI-Fix vom 7.9.2026 — beide aus demselben Grund).
+  ['VMWG', 'bund/VMWG', false],
   ['BS-640.100', 'kanton/BS-640.100', false],
 ] as const;
 
