@@ -2,6 +2,17 @@ import { type ReactNode } from 'react';
 
 // ═══ W2·24-R6b · DIE BEZÜGE ALS EINE ZEILE UNTER DEM ARTIKELKOPF ════════════
 //
+// ── W2·24-D34 (David 7.9.2026) · DER ORT HAT GEWECHSELT ────────────────────
+// Wörtlich: «das mit den bezügen soll unten an den artikel und nicht direkt
+// nach der artikel nummer». Die Zeile steht seither am ARTIKELFUSS — unter dem
+// letzten Absatz und dem Fussnoten-Apparat, vor dem nächsten Artikel, mit einer
+// feinen Trennlinie darüber (`.lr7-bez`, index.css). Dateiname, Komponentenname
+// und Klassenpräfix bleiben, was sie waren: sie sind der VERTRAG zu den Sonden
+// (`e2e/leser-bezuege-*`, `popover-lesbar-d31`, `verweis-u`) und zu den datierten
+// Belegen, die auf sie zeigen; ein Umbenennen hätte Beleg-Texte «nachgeführt»,
+// statt sie stehenzulassen. Der Text unten beschreibt darum weiterhin R6b/D30
+// im Wortlaut ihres Datums — massgeblich für den ORT ist dieser Absatz.
+//
 // Auftrag David 6.9.2026, wörtlich: «der platz rechts und links neben dem
 // gesetz für bspw. rechner oder fassung nimmt viel platz vom gesetzestext weg.»
 //

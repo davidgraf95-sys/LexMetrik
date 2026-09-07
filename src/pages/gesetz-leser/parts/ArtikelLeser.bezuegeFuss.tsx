@@ -9,33 +9,49 @@ import type { LeitfallRef } from '../../../lib/rechtsprechung/norm-index';
 import type { MaterialBezug, Werkzeug } from '../../../lib/normtext/werkzeuge';
 import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen';
 
-// ═══ Die BEZÜGE-ZEILE der Breitform (R6b) ═══════════════════════════════════
+// ═══ Der BEZÜGE-FUSS des Artikels — EIN Baustein für BEIDE Formen ═══════════
 //
 // §6.6-Split aus `./ArtikelLeser.tsx` (W2·24-F, 7.9.2026 — 866 Zeilen gegen
-// die Schwelle 800). Herausgelöst ist der Block, den die BREITFORM unter dem
-// Artikelkopf zeigt und den die Zeilenform gar nicht kennt: die vier Rubriken
-// (Entscheide · Materialien · Verweise · Rechnen) samt der Zahlen-Zeile, aus
-// der sie aufklappen. Er hat einen eigenen Aufhänger (`kopfForm`), eine eigene
-// Datenquelle (`bezuegeImKopf`) und eine eigene Zusage
-// (`e2e/leser-bezuege-inhalt-d30.e2e.ts`) — deshalb ist er ein Bauteil und
-// nicht bloss ein Abschnitt.
+// die Schwelle 800). Herausgelöst sind die vier Rubriken (Entscheide ·
+// Materialien · Verweise · Rechnen) samt der Zahlen-Zeile, aus der sie
+// aufklappen.
 //
-// WAS HIER NICHT STEHT: die Rechtsprechungs-Zeile der ZEILENFORM am
-// Artikelfuss. Sie bleibt im Beiwerk der Hauptdatei — NIE beide Orte zugleich
-// (§5: zwei Wahrheiten am selben Artikel).
+// ── W2·24-D34 (David 7.9.2026) · DIE ZEILE STEHT AM ARTIKELENDE ────────────
+// Wörtlich: «das mit den bezügen soll unten an den artikel und nicht direkt
+// nach der artikel nummer». Bis D33 sass die Zeile direkt unter der
+// Artikelnummer (Breitform, `kopfForm`) — dort trennte sie die Überschrift von
+// ihrem eigenen Wortlaut. Sie steht jetzt UNTER dem letzten Absatz und dem
+// Fussnoten-Apparat, vor dem nächsten Artikel, mit einer feinen Trennlinie
+// darüber (Linien statt Flächen, F0.6). Im Druck bleibt sie ausgeblendet.
 //
-// VERHALTENSNEUTRAL (§6): Markup, Reihenfolge, Klassen und die Rechnung der
-// Marken sind wörtlich übernommen; verändert sind nur die Namen der von aussen
-// kommenden Werte (`onBezuegeOeffnen` → `onOeffnen`, `bezuegeLaedt && !bezuege`
-// → `laedt`). Golden-Beweis über `npm run golden:vergleich` und
-// `check:golden-normtext`.
+// DAMIT FÄLLT DIE ZWEITE STELLE. Bis D33 hatte die ZEILENFORM (@390, Pane,
+// Trefferliste) einen EIGENEN Artikelfuss im Beiwerk der Hauptdatei: eine
+// offene Verweis-Chip-Reihe und daneben `BezuegeZeile`/`LeitfallZeile` als
+// zweiter Konsument derselben Bezugsdaten. Zwei Orte, zwei Gestalten, ein
+// Fachinhalt — genau die zweite Wahrheit, die §5 verbietet. Beide Orte sind
+// jetzt DIESER Baustein; die Form entscheidet nichts mehr (kein `kopfForm`-
+// Aufhänger). Der alte Zweig ist ersatzlos gelöscht, nicht bewacht
+// (§17-Gegengewicht).
+//
+// NEBENWIRKUNG, die ausdrücklich erwünscht ist: die Verweis-Chips und die
+// Entscheid-Liste stehen in beiden Formen nur noch INNERHALB des `<details>`.
+// Ein geschlossenes `<details>` legt seinen Inhalt nicht ins Layout — die
+// unbedingte Fuss-Zeile der Zeilenform, die beim Eintreffen des Shards in den
+// Lesekörper hineinwuchs (Pos. 12, `e2e/leser-v3-kontext-cls` (b)), kann es
+// darum baulich nicht mehr geben.
+//
+// VERHALTENSNEUTRAL (§6) gegenüber D33 im INHALT: Markup, Reihenfolge, Klassen
+// und die Rechnung der Marken sind unverändert; verändert sind der ORT und die
+// Namen der von aussen kommenden Werte (`onBezuegeOeffnen` → `onOeffnen`,
+// `bezuegeLaedt && !bezuege` → `laedt`). Golden-Beweis über
+// `npm run golden:vergleich` und `check:golden-normtext`.
 
-export function ArtikelBezuegeZone({
-  bezuege, bezuegeImKopf, leitfaelle, materialien, verweise, werkzeuge, zaehler,
+export function ArtikelBezuegeFuss({
+  bezuege, bezuegeImFuss, leitfaelle, materialien, verweise, werkzeuge, zaehler,
   zitat, revision, onOeffnen, laedt,
 }: {
   bezuege?: ArtikelBezuege;
-  bezuegeImKopf?: ArtikelBezuege;
+  bezuegeImFuss?: ArtikelBezuege;
   leitfaelle?: LeitfallRef[];
   materialien?: MaterialBezug[];
   /** Die im Artikel genannten, auflösbaren Normverweise (`sammleVerweise`). */
@@ -71,13 +87,14 @@ export function ArtikelBezuegeZone({
   // und keine Hoffnung: `e2e/leser-bezuege-inhalt-d30.e2e.ts` (b) misst
   // Kopfzahl gegen die Zahl der gerenderten Zeilen.
   //
-  // Der Fallback nimmt `bezuegeImKopf` VOR `bezuege`: in der Kopf-Form ist das
-  // die Quelle, die auch die Liste darunter zeigt — die Zahl beschriebe sonst
-  // eine andere Menge als das, was daneben steht.
+  // Der Fallback nimmt `bezuegeImFuss` VOR `bezuege`: das ist die Quelle, die
+  // auch die Liste darunter zeigt — die Zahl beschriebe sonst eine andere
+  // Menge als das, was daneben steht. (Bis D34 hiess die Prop
+  // `bezuegeImKopf`; der Ort hat gewechselt, die Rangfolge nicht.)
   const bezugsMarken: BezugsMarke[] = [
     {
       reg: 'r',
-      anzahl: zaehler ? zaehler.entscheide : ((bezuegeImKopf ?? bezuege) ? (bezuegeImKopf ?? bezuege)!.kanten.length : (leitfaelle?.length ?? 0)),
+      anzahl: zaehler ? zaehler.entscheide : ((bezuegeImFuss ?? bezuege) ? (bezuegeImFuss ?? bezuege)!.kanten.length : (leitfaelle?.length ?? 0)),
       wort: ['Entscheid', 'Entscheide'],
     },
     // Die Rubrik erscheint NUR mit echter Zahl (`anzahl > 0` filtert sie sonst
@@ -103,10 +120,10 @@ export function ArtikelBezuegeZone({
             Liste unter dem Artikelkopf sucht niemand eine waagrechte
             Scrollachse. Der Klick öffnet daneben (Split-Regel M3) — das
             bringt `KanteMitVorschau` mit, nicht diese Stelle. */}
-        {((bezuegeImKopf ?? bezuege) || (leitfaelle && leitfaelle.length > 0)) && (
+        {((bezuegeImFuss ?? bezuege) || (leitfaelle && leitfaelle.length > 0)) && (
           <div className="lr7-bez-block" data-reg="r">
             {(() => {
-              const b = bezuegeImKopf ?? bezuege;
+              const b = bezuegeImFuss ?? bezuege;
               return b
                 ? <BezuegeZeile kanten={b.kanten} gesamt={b.gesamt}
                     zeitAktiv={b.zeitAktiv} kantonAktiv={b.kantonAktiv}
