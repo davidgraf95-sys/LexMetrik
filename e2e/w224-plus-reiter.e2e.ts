@@ -36,9 +36,14 @@ const aktiv = (page: Page) => page.locator(`${REITER} [data-reiter-aktiv="true"]
 const plusKnopf = (page: Page) => page.locator(REITER).getByRole('button', { name: 'Neuer Reiter', exact: true })
 const kopfFeld = (page: Page) => page.getByRole('combobox', { name: /LexMetrik durchsuchen/ })
 
-/** Die gespeicherte Reiter-Liste — die Wahrheit, die auch den Neustart übersteht. */
+/** Die gespeicherten Reiter-ADRESSEN — die Wahrheit, die den Neustart übersteht.
+ *  Nur die Pfade: die Sammlung trägt wie die fünf Bereichs-Übersichten ihren
+ *  SEO-Titel als `label` (R3-F7 — die ANZEIGE holt ihre Kurzform «Sammlung»
+ *  aus `lib/tabs.reiterKurzform`, nicht daraus), und dieses Feld wird vom
+ *  TabTracker einen Tick nach dem Öffnen nachgetragen. Ein Vergleich ganzer
+ *  Objekte hinge damit am Zeitpunkt der Messung, nicht an der Zusage. */
 const tabs = (page: Page) => page.evaluate(() =>
-  JSON.parse(localStorage.getItem('lexmetrik-tabs') ?? '[]') as { path: string }[])
+  (JSON.parse(localStorage.getItem('lexmetrik-tabs') ?? '[]') as { path: string }[]).map((t) => t.path))
 
 test.describe.configure({ timeout: 60_000 })
 
@@ -54,7 +59,7 @@ test.beforeEach(async ({ page }) => {
 test('Klick auf «+» legt einen aktiven Sammlungs-Reiter an und schickt den Fokus in die Kopf-Suche', async ({ page }) => {
   await plusKnopf(page).click()
   await expect(page).toHaveURL(/\/$/)
-  expect(await tabs(page)).toEqual([{ path: '/' }])
+  expect(await tabs(page)).toEqual(['/'])
   await expect(aktiv(page)).toContainText('Sammlung')
   await expect(kopfFeld(page)).toBeFocused()
 })
@@ -75,23 +80,23 @@ test('Suche füllt DENSELBEN Reiter — kein zweiter, die Zahl bleibt', async ({
   // Genau EIN Reiter — der leere ist gefüllt, nicht verdoppelt.
   const t = await tabs(page)
   expect(t.length).toBe(1)
-  expect(t[0].path).toContain('/gesetze/bund/OR')
+  expect(t[0]).toContain('/gesetze/bund/OR')
   await expect(aktiv(page)).toContainText('257d OR')
 })
 
 test('zweiter Klick auf «+» aktiviert den bestehenden Sammlungs-Reiter statt einen zweiten anzulegen', async ({ page }) => {
   await plusKnopf(page).click()
-  expect(await tabs(page)).toEqual([{ path: '/' }])
+  expect(await tabs(page)).toEqual(['/'])
   // Das Suchvorschlags-Blatt fängt sonst den Zeiger ab (R14-Prüfung §1.3 e).
   await page.keyboard.press('Escape')
   await plusKnopf(page).click()
-  expect(await tabs(page)).toEqual([{ path: '/' }])
+  expect(await tabs(page)).toEqual(['/'])
 })
 
 test('Alt+T legt denselben Sammlungs-Reiter an wie der Klick', async ({ page }) => {
   await page.keyboard.press('Alt+T')
   await expect(page).toHaveURL(/\/$/)
-  expect(await tabs(page)).toEqual([{ path: '/' }])
+  expect(await tabs(page)).toEqual(['/'])
   await expect(kopfFeld(page)).toBeFocused()
 })
 
@@ -100,5 +105,5 @@ test('Reload: der Sammlungs-Reiter übersteht den Neustart', async ({ page }) =>
   await page.reload()
   await expect(plusKnopf(page)).toBeVisible()
   await expect(aktiv(page)).toContainText('Sammlung')
-  expect(await tabs(page)).toEqual([{ path: '/' }])
+  expect(await tabs(page)).toEqual(['/'])
 })

@@ -50,7 +50,6 @@ const ring = (page: Page) => page.evaluate(() =>
  *  Speicher genau das, was der Fall selbst erzeugt. */
 const START = '/kontakt'
 const OR = '/gesetze/bund/OR'
-const ZGB = '/gesetze/bund/ZGB'
 
 test.describe.configure({ timeout: 90_000 })
 
@@ -156,7 +155,6 @@ test('Z6 — Sammlung und Gesetz überstehen den Reload, die Sammlung bleibt akt
   await expect.poll(() => pfade(page), { timeout: 10_000 }).toEqual([OR, '/'])
   await expect(aktiv(page)).toContainText('Sammlung')
   // Und der Wechsel zurück ins Gesetz kostet keinen Reiter (§5a Ziff. 3).
-  await page.locator(`${REITER} [data-reiter-schluessel="${ZGB}"]`).count()
   await page.locator(`${REITER} [data-reiter-schluessel="${OR}"]`)
     .getByRole('button', { name: /^Reiter \d+: / }).click()
   await expect(page).toHaveURL(new RegExp(`${OR}$`))

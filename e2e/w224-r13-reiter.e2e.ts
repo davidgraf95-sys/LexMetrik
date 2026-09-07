@@ -296,8 +296,14 @@ test.describe('R13-6/R13-9 — «Alle schliessen» und «Adresse kopieren» am R
     const menue = page.locator('[role=menu]')
     await expect(menue.getByRole('menuitem', { name: 'Alle schliessen' })).toBeVisible()
     await menue.getByRole('menuitem', { name: 'Alle schliessen' }).click()
-    await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(0)
-    expect(await gespeichert(page)).toEqual([])
+    // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ────
+    // Alter Wortlaut: `toHaveCount(0)` und `gespeichert(page) === []`. «Alle
+    // schliessen» schliesst seit R14 alle DOKUMENTE; übrig bleibt die
+    // Sammlung, wie im Browser das letzte Fenster mit der Neuer-Tab-Seite
+    // stehen bleibt. Die geprüfte R13-6-Zusage — die Geste steht am Desktop im
+    // Reiter-Menü und WIRKT — ist unverändert.
+    await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(1)
+    expect(await gespeichert(page)).toEqual(['/'])
   })
 
   test('«Adresse kopieren» legt die kanonische Adresse in die Zwischenablage', async ({ page, context }) => {
