@@ -64,13 +64,16 @@ test.describe('Ansicht-Menü — D1/B3', () => {
     await oeffne('/gesetze/bund/STPO')
     await expect(panel.getByRole(WAHL_ROLLE, { name: VERMERKE_SCHALTER_NAME })).toHaveCount(1)
     await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(3)
-    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(5)
+    // §6.3-DEKLARATION (D40, 7.9.2026): SECHS Rubriken-Schalter — «Fassung» ist
+    // dazugekommen (David: «und wieso ist fassung nicht auch unten am
+    // artikel?»). Die Aussage bleibt: die Wahl steht vollzählig.
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(6)
 
     // NEGATIV 1 — BS-640.100 (StG BS): 16 Fussnoten, KEINE klassifiziert, kein
-    // Historie-Shard. Keine Wahl; die fünf Rubriken-Schalter bleiben.
+    // Historie-Shard. Keine Wahl; die sechs Rubriken-Schalter bleiben.
     await oeffne('/gesetze/kanton/BS-640.100')
     await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(0)
-    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(5)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(6)
     // §8: nichts weggeblendet — es gibt hier wirklich keine Fassungs-Zeile …
     await expect(page.locator('[data-historie-zeile]')).toHaveCount(0)
     // … und die 16 klassenlosen Fussnoten stehen vollständig da (verlustfrei).
@@ -86,7 +89,7 @@ test.describe('Ansicht-Menü — D1/B3', () => {
     await page.locator('[data-v3-ansicht]').click()
     await expect(panel).toBeVisible()
     await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(0)
-    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(5)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(6)
 
     expect(fehler, fehler.join('\n')).toEqual([])
   })

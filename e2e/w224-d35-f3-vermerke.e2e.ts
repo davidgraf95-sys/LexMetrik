@@ -29,6 +29,7 @@
 //   · in `LeserAenderungsWahl` `ohneKlassifikation` fest auf `false`
 //     ⇒ der MONTREAL-Fall wird rot.
 import { test, expect, type Page } from '@playwright/test';
+import { F_MARKE } from './helpers/fassungsRubrik';
 import {
   ANSICHT_PANEL, AUS_WAHL_NAME, FUSSNOTEN_WAHL_NAME, VERMERKE_SCHALTER_NAME, WAHL_ROLLE,
 } from './helpers/leserBeschriftung';
@@ -221,7 +222,10 @@ test.describe('D35-F3 — §8: ein Erlass ohne kl-Klassifikation sagt es hin', (
     // Was die Wahl hier SEHR WOHL tut: die Fassungs-Zeile. Ohne diese Hälfte
     // wäre die Wahl an MONTREAL wirkungslos und dürfte nach D1 gar nicht
     // angeboten werden (§8, kein totes Steuerelement).
-    const slot = page.locator('.lc-leser [data-hist-slot]').first();
+    // §6.3-DEKLARATION (D40, 7.9.2026): die Fassungs-Spur ist die Rubrik-Marke
+    // der Funktionszeile am Artikelende, nicht mehr der Kopf-Slot. Die Zusage
+    // ist unverändert — die Wahl muss an MONTREAL etwas bewirken.
+    const slot = page.locator(`.lc-leser ${F_MARKE}`).first();
     await expect(slot).toBeVisible({ timeout: 15_000 });
     await ansichtAuf(page);
     await panel.getByRole(WAHL_ROLLE, { name: AUS_WAHL_NAME }).click();

@@ -1,5 +1,6 @@
 // @shard-gruppe: 5
 import { test, expect, type Page } from '@playwright/test';
+import { F_MARKE, fassungAufklappen, fassungsMarke } from './helpers/fassungsRubrik';
 import AxeBuilder from '@axe-core/playwright';
 import {
   ANSICHT_PANEL, AUS_WAHL_NAME, FUSSNOTEN_WAHL_NAME, VERMERKE_SCHALTER_NAME, WAHL_ROLLE,
@@ -250,7 +251,12 @@ test('DREI-STELLUNGS-MATRIX: Bund mit Klassen · Kanton ohne Klassifikation', as
         apparat: n('.lc-leser [data-fn-apparat] > p'),
         nichtA: n('.lc-leser [data-fn-apparat] > p:not([data-fn-klasse="A"])'),
         marker: n('.lc-leser [data-fn-ref]'),
-        fassung: n('.lc-leser [data-historie-zeile]'),
+        // §6.3-DEKLARATION (D40, 7.9.2026): die Fassungs-SPUR im Lesetext ist
+        // seit D40 die Rubrik-Marke der Funktionszeile, nicht mehr der
+        // Kopf-Slot. `[data-historie-zeile]` taugt als Sichtbarkeits-Zähler
+        // nicht mehr — sie steht jetzt auch in der Druck-Projektion
+        // (`hidden print:block`), die am Bildschirm nie sichtbar ist.
+        fassung: n('.lc-leser .lr7-bez-marke[data-reg="f"]'),
       };
     });
 
@@ -311,8 +317,11 @@ test('«Fassung» zeigt die Fassungs-Spur, «Fussnoten» und «aus» nehmen sie 
 
   const art2 = page.locator('#art-2');
   await art2.scrollIntoViewIfNeeded();
-  const fassung = art2.locator('[data-historie-zeile]');
-  const slot = art2.locator('[data-hist-slot]');
+  // §6.3-DEKLARATION (D40, 7.9.2026): die Fassungs-Spur ist die Rubrik der
+  // Funktionszeile — Marke UND Block. Beide werden geprüft, weil beide fallen
+  // müssen: ein Griff ohne Block wäre die Zusage einer Liste, die nicht kommt.
+  const fassung = art2.locator(F_MARKE);
+  const slot = art2.locator('.lr7-bez-block[data-reg="f"]');
   // Sichtbarkeits-Zählung der A-Marker. `checkVisibility()` und NICHT
   // `offsetParent`/`display` am Element selbst: geschaltet wird der VORFAHR, das
   // Knopf-Element trägt weiter `display: inline`. Und NICHT
@@ -325,10 +334,13 @@ test('«Fassung» zeigt die Fassungs-Spur, «Fussnoten» und «aus» nehmen sie 
     .evaluateAll((els) => els.filter((el) => (el as HTMLElement).checkVisibility()).length);
   // Der Badge wächst mit dem idle-Shard-Resolve ein — POSITIV-Vorbedingung: ohne
   // ihn prüfte die Negativ-Zusicherung unten nichts (§6.7).
-  await expect(fassung).toBeVisible({ timeout: 15000 });
-  await expect(fassung.getByText('Fassung', { exact: true })).toBeVisible();
-  const badgeText = (await fassung.textContent())?.trim() ?? '';
+  const zeile = await fassungAufklappen(art2);
+  await expect(zeile.getByText('Fassung', { exact: true })).toBeVisible();
+  const badgeText = (await zeile.textContent())?.trim() ?? '';
   expect(badgeText, 'Fassungs-Zeile ohne Text — die Sonde unten wäre wertlos').toContain('Gilt seit');
+  // Die Marke selbst nennt die Zahl der Fassungen (§8: gezählt, nie geschätzt).
+  const markeText = (await fassung.textContent())?.trim() ?? '';
+  expect(markeText, 'die Marke nennt keine Fassungs-Zahl').toMatch(/\d+\s*Fassung/);
 
   // Art. 9 trägt AUSSCHLIESSLICH A-Fussnoten — der schärfste Fall: sein Apparat
   // hat in «Fassung»/«aus» keine einzige Zeile mehr zu zeigen und verschwindet
@@ -343,8 +355,8 @@ test('«Fassung» zeigt die Fassungs-Spur, «Fussnoten» und «aus» nehmen sie 
   const markerVorher = await aMarkerSichtbar();
   expect(markerVorher, '«Fussnoten» zeigt A-Marker').toBeGreaterThan(0);
   await art2.scrollIntoViewIfNeeded();
-  await expect(fassung, '«Fussnoten» lässt die Fassungs-Zeile stehen').toBeHidden();
-  await expect(slot).toBeHidden();
+  await expect(fassung, '«Fussnoten» lässt die Fassungs-Marke stehen').toBeHidden();
+  await expect(slot, '«Fussnoten» lässt den Fassungs-Block stehen').toBeHidden();
 
   await waehle(page, 'fassung');
   // Die Fassungs-Spur ist da …
@@ -359,22 +371,30 @@ test('«Fassung» zeigt die Fassungs-Spur, «Fussnoten» und «aus» nehmen sie 
 
   await waehle(page, 'aus');
   await art2.scrollIntoViewIfNeeded();
-  // DER EINE TRÄGER: keine Fassungs-Spur mehr — weder die Zeile noch der
-  // reservierte Slot. Der Slot MIT: seine reservierte Höhe (mt-4 +
-  // min-h-beiwerk = 16+24 px) bliebe sonst als Phantom-Lücke unter jedem Artikel
-  // stehen, und «aus» hätte doch eine Spur hinterlassen.
+  // DER EINE TRÄGER: keine Fassungs-Spur mehr — weder die Marke noch ihr Block.
+  //
+  // §0 Ziff. 2b: der Satz, der hier stand, galt dem reservierten Kopf-Slot
+  // («seine reservierte Höhe mt-4 + min-h-beiwerk = 16+24 px bliebe sonst als
+  // Phantom-Lücke unter jedem Artikel stehen») und war für seinen Stand richtig.
+  // Mit D40 ist der Slot gefallen; die Zusage «keine Spur» gilt unverändert und
+  // trifft jetzt beide Träger der Rubrik.
   await expect(fassung).toBeHidden();
   await expect(slot).toBeHidden();
   await page.locator('#art-9').scrollIntoViewIfNeeded();
   await expect(apparat9).toBeHidden();
 
   // DOM-VOLLSTÄNDIGKEIT (§8): alles ist noch da, mit unverändertem Text.
+  // D40: geprüft wird an der DRUCK-Projektion — sie ist die Stelle, an der die
+  // Zeile in JEDER Stellung im DOM steht (die Rubrik rendert ihren Block erst
+  // auf Klick, s. D35-F1). Genau daran hängt auch die Zusage «der Ausdruck
+  // verliert den Fassungsstand nicht».
+  const imDruck = art2.locator('[data-hist-druck] [data-historie-zeile]');
   // `textContent`, NICHT `innerText`: die Artikel stehen unter
   // `content-visibility: auto` (W2.8) — dort liefert `innerText` für nicht
   // gerenderte Teilbäume einen LEEREN String, und die Zusicherung wäre still
   // wahr. `textContent` ist layout-unabhängig.
-  await expect(fassung).toHaveCount(1);
-  expect((await fassung.textContent())?.trim() ?? '').toBe(badgeText);
+  await expect(imDruck).toHaveCount(1);
+  expect((await imDruck.textContent())?.trim() ?? '').toContain('Gilt seit');
   await expect(apparat9).toHaveCount(1);
   expect((await apparat9.textContent())?.trim() ?? '').toContain('Eingefügt durch');
 
@@ -415,7 +435,13 @@ test('Persistenz + Pre-Paint: die Wahl übersteht den Reload ohne Flackern', asy
   // Verlustfrei auch nach dem Reload: V und Z stehen, A ist gedämpft.
   await expect(apparatZeile(page, '4', '13')).toBeVisible();
   await expect(apparatZeile(page, '4', '12')).toBeHidden();
-  await expect(page.locator('.lc-leser [data-hist-slot]').first()).toBeHidden();
+  // D40: die Fassungs-Spur nach dem Reload ist die Rubrik-Marke; «aus» nimmt sie.
+  // KEINE Zähl-Zusicherung: die A1-Mechanik lässt das Element im DOM stehen
+  // (David 5.7.2026, `display:none` statt löschen) — gezählt wird, was der
+  // Leser SIEHT, und das müssen null sein.
+  expect(await page.locator(`.lc-leser ${F_MARKE}`)
+    .evaluateAll((els) => els.filter((e) => (e as HTMLElement).checkVisibility()).length),
+  '«aus» lässt Fassungs-Marken stehen').toBe(0);
 });
 
 test('MIGRATION im Browser: ein gespeichertes «chronologie» steht als «Fassung» da', async ({ page }) => {
@@ -444,7 +470,7 @@ test('MIGRATION im Browser: ein gespeichertes «chronologie» steht als «Fassun
     .toHaveAttribute('aria-checked', 'true');
   // Und die Fassung ist wirklich da (nicht bloss die Stellung richtig gesetzt).
   await page.locator('#art-2').scrollIntoViewIfNeeded();
-  await expect(page.locator('#art-2 [data-historie-zeile]')).toBeVisible({ timeout: 15000 });
+  await fassungsMarke(page.locator('#art-2'));
 });
 
 test('H0-Auflage 1: KEINE Klasse ausser A folgt der Wahl — A, G und U auf einem Artikel', async ({ page }) => {

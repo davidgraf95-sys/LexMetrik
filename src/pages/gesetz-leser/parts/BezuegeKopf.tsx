@@ -40,6 +40,23 @@ import { useState, type ReactNode } from 'react';
 //     genau für die Rubriken: eine Rubrik ohne echte Zahl erscheint nicht (§8),
 //     die Zeile selbst steht, solange sie etwas zu tragen hat.
 //
+// ── W2·24-D40 (David 7.9.2026) · DIE FASSUNG IST DIE SECHSTE RUBRIK ───────
+// Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Die Frage
+// trifft: seit D34/D35 stand JEDE artikelbezogene Auskunft in dieser Zeile —
+// nur die Fassungshistorie nicht, die hing weiter am Artikelkopf. Sie ist
+// jetzt eine Rubrik wie die anderen, mit Zahl («3 Fassungen»), Griff und
+// Menü-Schalter; der Kopf-Slot ist ersatzlos gefallen (§17-Gegengewicht — wer
+// hinzufügt, streicht zuerst die Stelle, die dieselbe Sorge schon trägt).
+//
+// Die Zeile liest sich damit:
+//
+//     3 Fassungen ›   Bezüge  11 Entscheide › · 2 Materialien › · …
+//                             Zitat · Link · Amtliche Fassung ↗ · ⧉ …
+//
+// Warum «Fassung» LINKS vom Wort «Bezüge» steht, warum sie den Registerstrich
+// der Gesetze trägt und trotzdem einen eigenen Buchstaben hat: unten am Typ
+// `BezugsMarke.reg` und an der Zustands-Rechnung.
+//
 // ── WAS UNVERÄNDERT BLEIBT ─────────────────────────────────────────────────
 // Der ORT (Artikelende, seit D34), die Klassen (`.lr7-bez*` — sie sind der
 // Vertrag zu den Sonden `e2e/leser-bezuege-*`, `popover-lesbar-d31`,
@@ -59,8 +76,16 @@ import { useState, type ReactNode } from 'react';
 /** Eine Rubrik der Zeile: Zahl, Wort, Registerfarbe — und was sie aufklappt. */
 export interface BezugsMarke {
   /** Registerbuchstabe für die Farbe: r = Rechtsprechung, m = Materialien,
-   *  g = Gesetze, w = Werkzeuge. */
-  reg: 'r' | 'm' | 'g' | 'w';
+   *  g = Gesetze, w = Werkzeuge.
+   *
+   *  D40 · `f` = Fassung. Sie trägt den Registerstrich der GESETZE (`--reg-g`,
+   *  `src/index.css`) — die Fassungshistorie ist Auskunft über den Erlass
+   *  selbst, nicht über eine fremde Gattung; eine sechste Farbe für dieselbe
+   *  Landkarte wäre eine zweite Legende (§5). Der BUCHSTABE bleibt trotzdem
+   *  eigen: er ist der Schlüssel des Aufklapp-Zustands, der Menü-Wahl
+   *  (`../leserOptionen`, `data-fuss-aus`) und der CSS-Regel — `g` doppelt
+   *  vergeben hiesse, dass «Verweise» abwählen die Fassung mitnimmt. */
+  reg: 'f' | 'r' | 'm' | 'g' | 'w';
   /** Anzahl — nur echte, gezählte Werte (§8: nie geschätzt, nie erfunden). */
   anzahl: number;
   /** Einzahl/Mehrzahl des Rubriknamens. */
@@ -114,6 +139,18 @@ export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false 
   // neu, keinen zweiten.
   const [offen, setOffen] = useState<Partial<Record<BezugsMarke['reg'], boolean>>>({});
   const sichtbar = marken.filter((m) => m.anzahl > 0);
+  // ── D40 · DIE ZEILE HAT ZWEI HÄLFTEN, UND DAS WORT GEHÖRT NUR EINER ───────
+  // «Fassung» ist die Auskunft über DIESEN Artikel; «Entscheide · Materialien ·
+  // Verweise · Rechner» zeigen von ihm WEG. Das Wort «Bezüge» benennt nur die
+  // zweite Gruppe — stünde es davor, behauptete es, die Fassungshistorie sei
+  // ein Bezug auf etwas anderes (§8, derselbe Massstab wie die D35-F2-Regel
+  // «‹Bezüge› steht nur, solange es etwas benennt»).
+  //
+  // Es sind zwei `filter` und keine Sortier-Ordnung: die Reihenfolge INNERHALB
+  // beider Hälften bleibt die des Aufrufers (`./ArtikelLeser.bezuegeFuss.tsx`,
+  // §3 — diese Datei rendert, sie entscheidet nichts über den Bestand).
+  const eigen = sichtbar.filter((m) => m.reg === 'f');
+  const bezug = sichtbar.filter((m) => m.reg !== 'f');
   // Kein leerer Fuss ohne Deckung (§8): ohne Rubrik UND ohne Aktionen steht
   // hier nichts. Mit Aktionen steht die Zeile auch am Artikel ohne Bezüge —
   // «Zitat», «Link» und «Amtliche Fassung» gelten für jeden Artikel.
@@ -134,6 +171,27 @@ export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false 
     if (jetzt && m.brauchtDaten) onOeffnen?.();
   };
 
+  /** Der Griff EINER Rubrik. Lokale Funktion, kein Export: diese Datei darf nur
+   *  Komponenten exportieren (Fast-Refresh-Regel, s. `./ArtikelLeser.kopfteile.tsx`),
+   *  und zwei Aufrufstellen für dasselbe Markup wären zwei Anatomien (§5). */
+  const griff = (m: BezugsMarke) => {
+    const auf = offen[m.reg] === true;
+    const name = m.anzahl === 1 ? m.wort[0] : m.wort[1];
+    return (
+      <button key={m.reg} type="button" className="lc-btn-mini lr7-bez-marke"
+        data-reg={m.reg} aria-expanded={auf}
+        // WCAG 4.1.2 · der Name nennt die Rubrik UND den Artikel: auf
+        // einer Seite mit 1686 Artikeln ist «11 Entscheide» allein in der
+        // Knopfliste eines Screenreaders nicht auffindbar. Den Zustand
+        // trägt `aria-expanded`, nie das Wort (ARIA_ZUSTANDSNAME).
+        aria-label={`${m.anzahl} ${name} zu ${zitat}`}
+        onClick={() => schalte(m)}>
+        {m.anzahl}&nbsp;{name}
+        <span aria-hidden className="lr7-bez-pfeil">›</span>
+      </button>
+    );
+  };
+
   return (
     // `print:hidden`: im Ausdruck trägt der Artikelkopf den Randtitel, die
     // Funktionszeile ist Bedienung und gehört nicht aufs Papier.
@@ -148,24 +206,9 @@ export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false 
     // Zeilen statt der sechzehn Teilmengen, die die Umkehrung gekostet hätte.
     <div className="lr7-bez print:hidden" data-bez-marken={sichtbar.map((m) => m.reg).join('')}>
       <div className="lr7-bez-zeile">
-        {sichtbar.length > 0 && <span className="lr7-bez-wort">Bezüge</span>}
-        {sichtbar.map((m) => {
-          const auf = offen[m.reg] === true;
-          const name = m.anzahl === 1 ? m.wort[0] : m.wort[1];
-          return (
-            <button key={m.reg} type="button" className="lc-btn-mini lr7-bez-marke"
-              data-reg={m.reg} aria-expanded={auf}
-              // WCAG 4.1.2 · der Name nennt die Rubrik UND den Artikel: auf
-              // einer Seite mit 1686 Artikeln ist «11 Entscheide» allein in der
-              // Knopfliste eines Screenreaders nicht auffindbar. Den Zustand
-              // trägt `aria-expanded`, nie das Wort (ARIA_ZUSTANDSNAME).
-              aria-label={`${m.anzahl} ${name} zu ${zitat}`}
-              onClick={() => schalte(m)}>
-              {m.anzahl}&nbsp;{name}
-              <span aria-hidden className="lr7-bez-pfeil">›</span>
-            </button>
-          );
-        })}
+        {eigen.map(griff)}
+        {bezug.length > 0 && <span className="lr7-bez-wort">Bezüge</span>}
+        {bezug.map(griff)}
         {aktionen}
       </div>
       {sichtbar.some((m) => offen[m.reg]) && (

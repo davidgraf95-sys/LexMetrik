@@ -101,10 +101,27 @@ type ZweiWert = 'an' | 'aus';
  * `html:not([data-fuss-an*="r"])` lauten muessen — die greift auch, solange es
  * das Attribut noch gar nicht gibt, und der Leser saehe fuer einen Moment einen
  * Artikel ganz ohne Funktionszeile.
+ *
+ * ── W2·24-D40 (David 7.9.2026) · `f` = FASSUNG ist die sechste Rubrik ─────
+ * Woertlich: «und wieso ist fassung nicht auch unten am artikel?». Der
+ * Fassungs-Slot («Gilt seit … ▸» + Zeitleiste) stand bis D40 am ARTIKELKOPF und
+ * war als einzige artikelbezogene Auskunft nicht Teil der Funktionszeile. Er ist
+ * jetzt eine Rubrik wie die anderen — also braucht er auch deren Frage «steht das
+ * an meinem Artikel?» und damit einen eigenen Buchstaben.
+ *
+ * `f` STEHT VORN, weil die Rubrik vorn steht: sie ist die Auskunft ueber den
+ * Artikel SELBST, die vier danach zeigen von ihm weg (darum traegt sie das Wort
+ * «Bezuege» auch nicht mit, `parts/BezuegeKopf.tsx`). Die Reihenfolge dieser
+ * Konstante IST die Reihenfolge in der Zeile und im Menue (§5).
+ *
+ * WAS `f` NICHT ENTSCHEIDET: ob die Fassungs-Auskunft ueberhaupt gilt. Das
+ * bleibt die Dreier-Wahl `vermerke` (D35-F3) — «Fussnoten» und «aus» nehmen die
+ * Rubrik weg, `f` waehlt innerhalb der Stellung «Fassung». Zwei Fragen, zwei
+ * Schalter, keine zweite Wahrheit (§5).
  */
-export type FussRubrik = 'r' | 'm' | 'g' | 'w' | 'a';
+export type FussRubrik = 'f' | 'r' | 'm' | 'g' | 'w' | 'a';
 /** Kanonische Reihenfolge — sie ist zugleich die Reihenfolge im Menue (§5). */
-export const FUSS_RUBRIKEN: readonly FussRubrik[] = ['r', 'm', 'g', 'w', 'a'];
+export const FUSS_RUBRIKEN: readonly FussRubrik[] = ['f', 'r', 'm', 'g', 'w', 'a'];
 
 /**
  * D35-F3 (Entscheid David 7.9.2026, «A und verlustfrei») · DIE EINE WAHL.
@@ -163,6 +180,31 @@ export type LeserSchrift = 'normal' | 'mittel' | 'gross' | 'sehr-gross';
 const KEY = 'lm.leser.optionen';
 /** D35-F2 · Grundzustand: alles steht. Geteilte Konstante, damit der
  *  unveraenderte Leser dieselbe Array-Referenz sieht (Object.is, §15). */
+/**
+ * ── W2·24-D40 · DER STAND DES GESPEICHERTEN OBJEKTS ─────────────────────────
+ *
+ * WOZU eine Zahl im Speicher, wo bisher keine noetig war: `fussRubriken` traegt
+ * die GEWAEHLTEN. Ein Buchstabe, der neu hinzukommt, fehlt darum in JEDEM
+ * Bestands-Speicher — und «fehlt» heisst in diesem Feld «abgewaehlt». Ohne
+ * Unterscheidung saehe jeder Leser, der die Rubriken je angefasst hat, die
+ * Fassungs-Rubrik ab D40 als abgewaehlt: eine Auskunft, die er nie abbestellt
+ * hat, waere still verschwunden (§8). Die Zahl beantwortet genau eine Frage —
+ * «konnte dieser Speicher `f` ueberhaupt kennen?» — und sonst keine.
+ *
+ * WARUM `f` DABEI HINZUGEFUEGT WIRD, AUCH ZUM LEEREN ARRAY: bis D40 hing die
+ * Fassungs-Auskunft ALLEIN an `vermerke` und stand am Artikelkopf. Wer im Menue
+ * «Alles ausblenden» waehlte, blendete die FUENF Rubriken der Zeile aus; die
+ * Fassung stand danach weiter da. Das getreue Bild dieses Willens ist «die
+ * fuenf aus, `f` an» — nicht «alle sechs aus» (§8: eine Umstellung darf eine
+ * getroffene Nutzerwahl nicht stillschweigend ausweiten).
+ *
+ * IDEMPOTENT und ohne Uhr (§2): solange der Speicher alt ist, ergaenzt jedes
+ * Laden dasselbe `f`; der erste Schreibvorgang setzt `OPT_STAND` und die Wahl
+ * gilt danach unveraendert so, wie sie im Menue steht — auch «f abgewaehlt».
+ */
+const STAND_KEY = 'stand';
+const OPT_STAND = 2;
+
 const DEFAULT_FUSS_RUBRIKEN: readonly FussRubrik[] = [...FUSS_RUBRIKEN];
 const DEFAULT: LeserOptionen = { vermerke: 'fassung', fussRubriken: DEFAULT_FUSS_RUBRIKEN };
 
@@ -235,6 +277,8 @@ export function migriereOptFelder(roh: Readonly<Record<string, unknown>>): Leser
 function leseFussRubriken(roh: Readonly<Record<string, unknown>>): readonly FussRubrik[] {
   if (!Array.isArray(roh.fussRubriken)) return DEFAULT_FUSS_RUBRIKEN;
   const gewaehlt = new Set(roh.fussRubriken as unknown[]);
+  // D40 · der Bestands-Speicher kann `f` gar nicht kennen (s. `OPT_STAND`).
+  if (roh[STAND_KEY] !== OPT_STAND) gewaehlt.add('f');
   return FUSS_RUBRIKEN.filter((r) => gewaehlt.has(r));
 }
 
@@ -371,7 +415,7 @@ function speichere(): void {
     // Die gestrichenen Schlüssel (`zeitraum`, `hist`, `verweise`, `linien`)
     // stehen bewusst NICHT im Objekt — Begründung im Datei-Kopf.
     localStorage.setItem(KEY, JSON.stringify({
-      ...aktuell, schrift: aktuellSchrift,
+      ...aktuell, [STAND_KEY]: OPT_STAND, schrift: aktuellSchrift,
       bezugKlassen: aktuellKlassen, bezugKantone: aktuellKantone,
       bezugVon: aktuellVon, bezugBis: aktuellBis,
     }));

@@ -986,8 +986,30 @@
      ENTSCHIEDENE Stellung. Byte-Gleichheit bleibt gewahrt, wo sie zählt: das
      ausgelieferte Markup ist unverändert (`check:golden-normtext`), das Attribut
      entsteht erst zur Laufzeit in `wendeLeserOptionenAn`. ══════════════════ */
-  html[data-vermerke="fussnoten"] .lc-leser [data-hist-slot],
-  html[data-vermerke="aus"] .lc-leser [data-hist-slot] {
+  /* ── W2·24-D40 (David 7.9.2026) · DIESELBE WEICHE, ZWEI NEUE ORTE ────────
+     Hier standen `[data-hist-slot]`-Selektoren. Den Slot gibt es nicht mehr:
+     die Fassungs-Auskunft ist seit D40 die Rubrik `f` der Funktionszeile am
+     Artikelende (`parts/BezuegeKopf.tsx`), und der Druck bekommt sie aus
+     `[data-hist-druck]` (`parts/ArtikelLeser.tsx`). Die FRAGE ist unverändert
+     die von D35-F3 — «gilt die Fassungs-Auskunft überhaupt?» —, und sie bleibt
+     hier beantwortet: `f` im Ansicht-Menü wählt INNERHALB der Stellung
+     «Fassung», es ersetzt sie nicht (zwei Fragen, zwei Schalter, §5).
+
+     GRIFF UND BLOCK FALLEN GEMEINSAM, wie bei der Rubriken-Wahl unten: ein
+     Griff ohne Block wäre die Zusage einer Liste, die nicht kommt, ein Block
+     ohne Griff ein Block ohne Weg zurück (§8). `display:none` nimmt den Griff
+     zugleich aus Tab-Reihenfolge und Screenreader-Baum.
+
+     `[data-hist-druck]` steht bewusst AUSSERHALB von `@media screen` — genau
+     wie der Slot vorher: der Fassungs-Stand ist ABGELEITET (kein amtlicher
+     Fussnotentext), er folgt der Wahl darum auch auf dem Papier. Am Bildschirm
+     ist das Element ohnehin `display:none` (`hidden print:block`). */
+  html[data-vermerke="fussnoten"] .lc-leser .lr7-bez-marke[data-reg="f"],
+  html[data-vermerke="fussnoten"] .lc-leser .lr7-bez-block[data-reg="f"],
+  html[data-vermerke="fussnoten"] .lc-leser [data-hist-druck],
+  html[data-vermerke="aus"] .lc-leser .lr7-bez-marke[data-reg="f"],
+  html[data-vermerke="aus"] .lc-leser .lr7-bez-block[data-reg="f"],
+  html[data-vermerke="aus"] .lc-leser [data-hist-druck] {
     display: none;
   }
   @media screen {
@@ -3493,11 +3515,14 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
    braucht.
 
    ── (a) DER ARTIKELKOPF: RANDTITEL LINKS, FASSUNG KLEIN DANEBEN ────────────── */
+/* D40 (7.9.2026): der Kopf trägt nur noch den Randtitel — die Fassung steht in
+   der Funktionszeile am Artikelende. `justify-content: space-between` und
+   `gap: 1rem` sind damit gegenstandslos (sie verteilten ZWEI Kinder) und
+   gestrichen statt stehengelassen (§17-Gegengewicht); `display:flex` und die
+   Baseline bleiben, damit die Kopfzeile ihre gemessene Höhe behält. */
 .lr7-kopf {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
   margin-bottom: 0.125rem;
 }
 .lr7-kopf-titel { min-width: 0; }
@@ -3514,42 +3539,22 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
      Gewichte für EINE Rolle wären eine zweite Wahrheit (§5) — Familie und Schnitt
      kommen von hier, das Gewicht bleibt, wo es abgenommen ist. */
 }
-/* Das Fassungsdatum: klein, leise, rechts an der Textkante — «Archivo 12,
-   ink-500» (Auftrag (a)). Der Slot behält seine 24-px-Reserve (`min-h-beiwerk`);
-   `flex-shrink:0` hält ihn auf EINER Zeile, damit die Reserve stimmt. */
-.lr7-fassung {
-  flex: 0 0 auto;
-  font-size: 0.75rem;
-  line-height: 1.35;
-  color: var(--ink-500);
-  text-align: right;
-}
-/* ── W2·24-CI · DIE RESERVE DARF NICHT GRÖSSER SEIN ALS IHR INHALT ──────────
-   BEFUND 6.9.2026 (Repro `scratchpad/diag15.cjs`, BGBM Art. 2, Historie-Shard
-   angehalten und dann freigegeben — dieselbe Bedingung wie
-   `e2e/gesetze-historie-badge`): der reservierte, aber noch LEERE Slot machte
-   den Artikelkopf HÖHER als der gefüllte. Gemessen `.lr7-kopf`
-   31.55 px leer → 24.00 px gefüllt, Artikel 3 sprang dabei 3'077 → 3'069 px.
-   Ursache ist die Baseline-Ausrichtung dieser Zeile (`.lr7-kopf`,
-   `align-items: baseline`): ein leerer Block hat keine Zeilenbox, seine
-   Baseline ist die Unterkante — mit `min-h-beiwerk` (24 px) sitzt sie also
-   24 px unter der Oberkante und schiebt die Zeile auf 31.55 px auseinander.
-   Der Slot wanderte mit R6b aus dem Artikelfuss (dort war der Kasten NICHT
-   baseline-ausgerichtet, darum trug die Reserve) in diesen Kopf; die
-   Reservierung ist mitgewandert, ihre Voraussetzung nicht.
-   Das nicht-brechende Leerzeichen gibt dem leeren Slot genau EINE Zeilenbox
-   von der Höhe, die der gefüllte ohnehin hat — reservierte und gefüllte Höhe
-   fallen wieder exakt zusammen (§15.2). Es greift NUR im leeren Zustand
-   (`:empty`), das gefüllte Bild ist byte-gleich (§6); gemessen 24.00 px vorher
-   wie nachher, Artikel 3 unverändert 3'069 px.
-   NICHT `align-self: flex-start` am Slot (misst sich gleich): das hätte die
-   Baseline-Ausrichtung des GEFÜLLTEN Falls mit erledigt — Fassungsdatum und
-   Randtitel stünden nicht mehr auf einer Linie (index.css oben, Auftrag (a)). */
-.lr7-fassung [data-hist-slot]:empty::before {
-  content: "\a0";
-  display: inline-block;
-  line-height: 1.5rem; /* = min-h-beiwerk */
-}
+/* ── W2·24-D40 (David 7.9.2026) · HIER STAND `.lr7-fassung` ────────────────
+   Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Der kleine
+   rechte Kopf-Slot mit «Gilt seit …» (Archivo 12, ink-500, `flex: 0 0 auto`)
+   und die dazugehörige W2·24-CI-Reserve
+   (`.lr7-fassung [data-hist-slot]:empty::before`, das nicht-brechende
+   Leerzeichen gegen die Baseline-Falle) sind ERSATZLOS gestrichen, nicht
+   bewacht (§17-Gegengewicht). Beide hatten genau EINEN Gegenstand — den Slot im
+   Artikelkopf —, und den gibt es seit D40 nicht mehr: die Fassung ist eine
+   Rubrik der Funktionszeile am Artikelende.
+
+   DIE BELEGE ALTERN NICHT (§0 Ziff. 2b). Die CI-Messung vom 6.9.2026 (BGBM
+   Art. 2, `.lr7-kopf` 31.55 px leer gegen 24.00 px gefüllt, Artikel 3 sprang
+   3'077 → 3'069 px) bleibt richtig für ihren Stand; sie steht unverändert im
+   Commit e2ac7def9 und im Vollzugsvermerk. Sie wird hier nicht nachgeführt,
+   sondern gegenstandslos: ohne zweites Kind gibt es im Kopf keine
+   Baseline-Verteilung mehr, gegen die eine Zeilenbox zu reservieren wäre. */
 
 /* ── (b) DIE BEZÜGE-ZEILE: EINGEKLAPPT EINE ZEILE ─────────────────────────── */
 /* W2·24-D34 (David 7.9.2026): die Zeile steht am ARTIKELENDE, unter dem letzten
@@ -3632,6 +3637,12 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
 
    CLS: klick-getrieben (Reflow binnen 500 ms nach der Eingabe, input-exkludiert),
    nichts wird nachgeladen und kein Artikel neu gerendert (§15). */
+/* D40 · `f` = Fassung, die sechste Rubrik. Sie steht in derselben Liste, weil
+   sie dieselbe Frage beantwortet («steht das an meinem Artikel?»). Was sie NICHT
+   ersetzt: die Dreier-Wahl `data-vermerke` weiter oben — die entscheidet, ob es
+   überhaupt eine Fassungs-Auskunft gibt; `f` wählt innerhalb davon. */
+html[data-fuss-aus*="f"] .lc-leser .lr7-bez-marke[data-reg="f"],
+html[data-fuss-aus*="f"] .lc-leser .lr7-bez-block[data-reg="f"],
 html[data-fuss-aus*="r"] .lc-leser .lr7-bez-marke[data-reg="r"],
 html[data-fuss-aus*="r"] .lc-leser .lr7-bez-block[data-reg="r"],
 html[data-fuss-aus*="m"] .lc-leser .lr7-bez-marke[data-reg="m"],
@@ -3666,6 +3677,13 @@ html[data-fuss-aus*="a"] .lc-leser .lr7-bez-aktionen {
    BEFUND, der die Regel ausgelöst hat (gemessen 7.9.2026, Bild `d35-f2-c`):
    ZPO Art. 272 führt genau eine Rubrik («Entscheide»). Mit abgewählter Rubrik
    stand dort «Bezüge» allein neben den Aktionen — eine Überschrift über nichts.
+   D40 · `f` STEHT ABSICHTLICH NICHT IN DIESER LISTE. «Fassung» ist keine
+   Angabe ÜBER etwas anderes — sie sagt, seit wann dieser Artikel gilt. Sie
+   steht darum links VOR dem Wort (`parts/BezuegeKopf.tsx` teilt die Zeile in
+   zwei Hälften), und ein Artikel, an dem nur noch sie sichtbar ist, zeigt
+   folgerichtig kein «Bezüge» — dasselbe Kriterium wie unten, nur konsequent zu
+   Ende gedacht (§8).
+
    ROT GESEHEN (§6.7, 7.9.2026): die vier Zeilen unten durch eine pauschale
    `display: block`-Regel ersetzt ⇒ `w224-d35-f2-kopf` («das Wort ‹Bezüge›
    steht nur, solange es etwas benennt») meldet «‹Bezüge› steht über einer
@@ -3680,8 +3698,10 @@ html:not([data-fuss-aus*="w"]) .lc-leser .lr7-bez[data-bez-marken*="w"] .lr7-bez
 /* Alles abgewählt ⇒ die Zeile selbst geht, samt ihrer Trennlinie und ihrem
    Abstand. Eine leere Linie unter jedem Artikel wäre ein Rahmen ohne Inhalt
    (F0.6). Der Vergleich ist EXAKT, nicht `*=`: die Buchstaben stehen immer in
-   der kanonischen Reihenfolge (`setzeFussRubriken` normalisiert, §2). */
-html[data-fuss-aus="rmgwa"] .lc-leser .lr7-bez {
+   der kanonischen Reihenfolge (`setzeFussRubriken` normalisiert, §2).
+   D40: die Kette heisst seither `frmgwa` — `f` steht vorn, weil die Rubrik
+   «Fassung» vorn in der Zeile steht (`../leserOptionen`, `FUSS_RUBRIKEN`). */
+html[data-fuss-aus="frmgwa"] .lc-leser .lr7-bez {
   display: none;
 }
 /* D35-F2 · «im Blatt öffnen ›» am Fuss der aufgeklappten Rubrik «Entscheide».
@@ -3694,6 +3714,10 @@ html[data-fuss-aus="rmgwa"] .lc-leser .lr7-bez {
    die Vierer-Leiter r/m/g/w ist die eine Landkarte, §5). */
 .lr7-bez-marke[data-reg="m"] { border-left-color: var(--reg-m); }
 .lr7-bez-marke[data-reg="g"] { border-left-color: var(--reg-g); }
+/* D40 · «Fassung» trägt den Registerstrich der GESETZE: die Fassungshistorie ist
+   Auskunft über den Erlass selbst, nicht über eine fremde Gattung. Eine sechste
+   Farbe für dieselbe Vierer-Leiter wäre eine zweite Legende (§5). */
+.lr7-bez-marke[data-reg="f"] { border-left-color: var(--reg-g); }
 .lr7-bez-marke[data-reg="w"] { border-left-color: var(--reg-w); }
 /* Der Pfeil steht direkt hinter der letzten Marke, nicht am Zeilenende: er
    gehört zur Aufzählung («… · Rechner ›»), nicht an den rechten Rand — dort

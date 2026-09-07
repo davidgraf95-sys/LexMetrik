@@ -1,5 +1,6 @@
 // @shard-gruppe: 5
 import { test, expect, type Page } from '@playwright/test';
+import { F_MARKE } from './helpers/fassungsRubrik';
 import {
   ANSICHT_PANEL, AUS_WAHL_NAME, RECHTSPRECHUNG_SCHALTER_NAME, SCHALTER_ROLLE,
   VERMERKE_SCHALTER_NAME, WAHL_ROLLE,
@@ -90,7 +91,7 @@ async function ansichtOeffnen(page: Page): Promise<void> {
 // D4 (7.9.2026): die drei hiessen bis dahin `role=switch`. Seit das Menü
 // `role="menu"` trägt, verlangt ARIA dort `menuitemcheckbox` — dieselbe
 // Auskunft, derselbe `aria-checked`, derselbe Name (`SCHALTER_ROLLE`).
-test('Options-Leiste: die Änderungs-Wahl + fünf Rubriken-Schalter — «Linien» und «Verweise» entfallen', async ({ page }) => {
+test('Options-Leiste: die Änderungs-Wahl + sechs Rubriken-Schalter — «Linien» und «Verweise» entfallen', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator(ANSICHT_PANEL).first();
@@ -127,10 +128,13 @@ test('Options-Leiste: die Änderungs-Wahl + fünf Rubriken-Schalter — «Linien
   // unverändert der Deckel: genau diese Bedienungen, keine mehr, keine weniger.
   await expect(gruppe.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }))
     .toHaveCount(0);
-  for (const name of [/^Entscheide$/, /^Materialien$/, /^Verweise$/, /^Rechner$/, /^Aktionen$/]) {
+  // §6.3-DEKLARATION (D40, 7.9.2026): «Fassung» ist die sechste Rubrik — sie
+  // steht ZUERST, weil sie in der Zeile zuerst steht (§5). Der Deckel selbst
+  // ist die unveränderte Aussage: genau diese Bedienungen, keine mehr.
+  for (const name of [/^Fassung$/, /^Entscheide$/, /^Materialien$/, /^Verweise$/, /^Rechner$/, /^Aktionen$/]) {
     await expect(gruppe.getByRole(SCHALTER_ROLLE, { name })).toHaveAttribute('aria-checked', 'true');
   }
-  await expect(gruppe.getByRole(SCHALTER_ROLLE)).toHaveCount(5);
+  await expect(gruppe.getByRole(SCHALTER_ROLLE)).toHaveCount(6);
   for (const name of [/^Fussnoten/, VERMERKE_SCHALTER_NAME, AUS_WAHL_NAME]) {
     await expect(gruppe.getByRole(WAHL_ROLLE, { name })).toHaveCount(1);
   }
@@ -217,11 +221,13 @@ test('Ä69/D35-F3: keine Hinweiszeile an einem Erlass MIT klassifizierter Histor
 
   // Und die Stellung WIRKT: «Fassung» zeigt den Slot, «aus» nimmt ihn.
   await expect(fassung).toHaveAttribute('aria-checked', 'true');
-  const slot = page.locator('.lc-leser [data-hist-slot]').first();
+  // §6.3-DEKLARATION (D40, 7.9.2026): der Kopf-Slot ist gefallen; die Wirkung
+  // der Stellung zeigt sich an der Rubrik-Marke der Funktionszeile.
+  const slot = page.locator(`.lc-leser ${F_MARKE}`).first();
   await expect(slot).toBeVisible({ timeout: 15000 });
   await gruppe.getByRole(WAHL_ROLLE, { name: AUS_WAHL_NAME }).click();
   await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'aus');
-  await expect(slot, '«aus» nimmt den Fassungs-Slot nicht').toBeHidden();
+  await expect(slot, '«aus» nimmt die Fassungs-Rubrik nicht').toBeHidden();
 });
 
 test('A1-Mechanik: die Wahl VERSCHWINDET die A-Spur (display:none), der Text bleibt im DOM, kein CLS', async ({ page }) => {

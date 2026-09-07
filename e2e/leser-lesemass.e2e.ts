@@ -254,57 +254,29 @@ test.describe('S2 · Fussnotenmarke: hochgestellt, ohne Klammern (Entscheid Davi
   });
 });
 
-// ── S2 · Ä26: die Beiwerk-Reserve folgt dem DATENMODELL, nicht der Erlass-Ebene ──
+// ── §17-RÜCKBAU · W2·24-D40 (David 7.9.2026) · HIER STAND DAS Ä26-TOR ───────
 //
-// Befund des Ästhetik-Prüfers (17.8.2026): der Fassungs-Slot reservierte 40 px
-// unter JEDEM Artikel JEDES Erlasses — auch dort, wo nie eine Fassungs-Zeile
-// eintreffen kann (auf BS-640.100 waren das 292 von 292 Artikeln). Die Reserve
-// hängt jetzt daran, ob DER ARTIKEL Fussnoten führt: nur aus denen erzeugt
-// `historie-generieren.ts` überhaupt Einträge (Generator-Invariante, Herleitung
-// und Korpus-Messung am Slot in `ArtikelLeser.tsx`).
+// Es bewachte die Beiwerk-RESERVE des Fassungs-Slots: «§ 20 (mit Fussnoten)
+// reserviert 24 px, § 1 (ohne) reserviert nicht» — die artikelweise Regel, mit
+// der der Ästhetik-Prüfer am 17.8.2026 die Phantom-Lücke unter 292 von 292
+// Artikeln des BS-640.100 abgeräumt hat.
 //
-// Der KANTONS-Erlass ist hier bewusst der Träger des POSITIV-Falls, nicht nur des
-// Negativ-Falls. Ein S2-Zwischenstand hing die Reserve an `erlass.ebene === 'bund'`
-// — korpustreu, aber ein Erlass-Sonderpfad. Dieser Fall wäre unter jener Regel ROT
-// gewesen und hält die Erlass-Neutralität darum konstruktiv fest.
+// DER GEGENSTAND IST WEG, ALSO GEHT DAS TOR MIT. Davids Frage «und wieso ist
+// fassung nicht auch unten am artikel?» hat den Slot in die Funktionszeile am
+// Artikelende verlegt; mit ihm ist seine Reserve (`mt-4 min-h-beiwerk`)
+// ersatzlos gefallen, und ein Tor ohne Gegenstand kann nicht mehr scheitern
+// (§6.7/§17-Gegengewicht — gestrichen statt bewacht). Es misst heute nichts:
+// `[data-hist-slot]` existiert im DOM nicht mehr, beide Fälle wären still grün.
 //
-// ROT ZU BEKOMMEN (§6.7): in `ArtikelLeser.tsx` die Bedingung des Slots auf
-// `erlass.ebene === 'bund'` zurückdrehen (Positiv-Fall rot) oder das `min-h-beiwerk`
-// bedingungslos setzen (Negativ-Fall rot).
-test.describe('S2 · Ä26 — Reserve nur, wo eine Fassungs-Zeile eintreffen kann', () => {
-  test.use({ viewport: { width: 1440, height: 900 } });
-
-  test('BS-640.100: § 20 (mit Fussnoten) reserviert, § 1 (ohne) reserviert NICHT', async ({ page }) => {
-    await page.goto('/gesetze/kanton/BS-640.100');
-    await expect(page.locator('#art-1')).toBeVisible({ timeout: 20000 });
-    await page.evaluate(() => document.fonts?.ready);
-    await page.waitForTimeout(300);
-
-    const hoehen = await page.evaluate(() => {
-      const lies = (id: string) => {
-        const art = document.getElementById(id);
-        if (!art) return null;
-        const slot = art.querySelector('[data-hist-slot]');
-        if (!slot) return { slot: false as const };
-        return { slot: true as const, min: getComputedStyle(slot).minHeight };
-      };
-      return { a20: lies('art-20'), a1: lies('art-1') };
-    });
-
-    // § 20 trägt eine Fussnote (Struktur-Sidecar, 14 solche Artikel im Erlass) ⇒
-    // hier KANN eine Fassungs-Zeile ankommen, also steht der Boden.
-    expect(hoehen.a20, '§ 20 nicht gefunden').not.toBeNull();
-    expect(hoehen.a20!.slot, '§ 20 hat keinen Fassungs-Slot').toBe(true);
-    expect(parseFloat(hoehen.a20!.min!), '§ 20: Reserve fehlt (Ä26-Regel greift nicht auf Kantonsrecht ⇒ Erlass-Sonderpfad)')
-      .toBeCloseTo(24, 0);
-
-    // § 1 trägt keine Fussnote ⇒ kein Eintrag möglich ⇒ kein reservierter Raum.
-    expect(hoehen.a1, '§ 1 nicht gefunden').not.toBeNull();
-    const min1 = hoehen.a1!.slot ? parseFloat(hoehen.a1!.min ?? '0') : 0;
-    expect(min1 || 0, '§ 1: Phantom-Lücke — reserviert, obwohl nie eine Fassungs-Zeile kommen kann (Ä26)')
-      .toBeLessThan(4);
-  });
-});
+// DER BELEG BLEIBT STEHEN (§0 Ziff. 2b): die Messreihe vom 17.8.2026 und die
+// Herleitung «die Reserve folgt dem Datenmodell, nicht der Erlass-Ebene» sind
+// im Commit dieses Tors und in `ArtikelLeser.tsx` unverändert nachlesbar. Sie
+// waren richtig für ihren Stand.
+//
+// WAS AN SEINE STELLE TRITT: `e2e/gesetze-historie-badge` misst den
+// Marken-Einwuchs jetzt an der Geometrie der FOLGENDEN Artikel (exakte
+// Gleichheit, kein Budget), und `e2e/w224-d40-fassung` misst dieselbe Zusage
+// am gelesenen Artikel. Beide sind schärfer als eine `min-height`-Ablesung.
 
 // ── S2 · Umschalten hinterlässt keinen Rest (Rundlauf) ───────────────────────
 //
@@ -391,8 +363,10 @@ test.describe('S2 · Schalter-Rundlauf ist verlustfrei (A1-konform)', () => {
     // beweisbar etwas tun (§6.7) — sichtbar/unsichtbar ist die Sache selbst,
     // eine Höhendifferenz war immer nur ihr Nebeneffekt. Die
     // RUNDLAUF-Prüfung darunter misst weiterhin die Höhen, byte-gleich.
+    // §6.3-DEKLARATION (D40, 7.9.2026): `[data-hist-slot]` gibt es nicht mehr;
+    // die schaltbare Fassungs-Spur ist die Rubrik-Marke der Funktionszeile.
     const beiwerkSichtbar = () => page.evaluate(() => [...document.querySelectorAll(
-      '[data-hist-slot] [data-historie-zeile], [data-fn-apparat], [data-fn-marker]')]
+      '.lr7-bez-marke[data-reg="f"], [data-fn-apparat], [data-fn-marker]')]
       .filter((e) => (e as HTMLElement).checkVisibility()).length);
     // Ä116: V3 «Fassung» (helpers/leserBeschriftung).
     // ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ──────────────────
