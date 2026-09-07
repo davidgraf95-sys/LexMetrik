@@ -161,6 +161,20 @@ Davids Entscheid.
 Klick-Shift. Ein Beobachter, der Nachladen mitmisst, sagt über den Klick nichts
 aus (§6.7). Die enge Messung bleibt in `leser-optionen`.
 
+**A-5 · Ein Media-Emulations-Artefakt in `druck-fundstellen-z2` behoben (§6.3).**
+Die A-Dämpfung steht in `@media screen` (Print bleibt vollständig).
+`page.emulateMedia` schaltet das LIVE-Layout um, und der Rundlauf
+screen→print→screen kostet dadurch Dokumenthöhe — gemessen 7.9.2026 an ZGB
+#art-684: vor print y 352 277 / Höhe 571 855 / Zähler 3 · in print Höhe 843 946
+/ Zähler 9 · nach print y 351 993 / Höhe 571 948 / **Zähler weg**. Die absolute
+Scrollposition zeigt danach auf einen anderen Artikel, der Scroll-Spy findet
+dort keine Entscheide. **Nullprobe gefahren (§0 Ziff. 3):** derselbe Fall auf
+der Basis `21c1ddd63`, workers=1, kalt — **5 passed**; auf diesem Zweig unter
+derselben Messbedingung 2/2 rot. Es ist also die Änderung, nicht Kontention.
+Ein echter Ausdruck lässt das Bildschirm-Layout unangetastet; die Sonde prüft
+den Split-AUSDRUCK, nicht die Spy-Stabilität unter Media-Wechsel — sie lädt
+darum nach der Referenzmessung frisch. Danach 10/10 grün.
+
 **A-4 · Kollision gemeldet, nicht doppelt gebaut (§0 Ziff. 5).** PR #744 (D34,
 Bezüge-Zeile ans Artikelende) berührt ebenfalls `parts/ArtikelLeser.tsx`. Diese
 Runde fasst dort **eine** Zeile an (`data-fn-nur-a` am Apparat-`<div>`); ein
