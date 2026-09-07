@@ -498,15 +498,39 @@ export function Reiterleiste({ paneSchluessel = [] }: {
   };
 
   /** R2: kein Reiter offen — die Leiste hält ihre Höhe, aber weder Unterstrich
-   *  noch Trennkante, und das «+» rückt an den Inhaltsrand. */
+   *  noch Trennkante. */
   const leer = tabs.length === 0;
 
   /** Der Browser-«+» (D19). `solo` = die Fassung ohne Reiter: keine linke
-   *  Trennkante, weil links von ihm nichts steht, das zu trennen wäre. */
-  const plusKnopf = (solo: boolean) => (
+   *  Trennkante, weil links von ihm nichts steht, das zu trennen wäre.
+   *
+   *  ── R13B (Prüfbefund PR #743 §8 b + Fixer D34, 7.9.2026) · EIN PLATZ ─────
+   *  Bis hierher gab es ZWEI Aufrufstellen: `{leer && plusKnopf(true)}` VOR dem
+   *  Streifen und `{!leer && plusKnopf(false)}` DAHINTER. Der erste Reiter liess
+   *  das «+» damit die Seite wechseln — GEMESSEN am Stand `cfa8a9f81` (gebautes
+   *  dist/, Preview 4429, Chromium @1280, `/` → `/gesetze/bund/ZGB`):
+   *  «+» x 24 → 1140, der Streifen x 60|1196 → 24|1116, Layout-Shift 0.000944
+   *  (input-frei, Quelle `DIV.relative.flex.min-w-0` in dieser Datei).
+   *  Das ist der Befund «das führende + fällt beim ersten Reiter weg».
+   *
+   *  JETZT: EINE Aufrufstelle, und zwar die LINKE. Die Wahl ist nicht frei —
+   *  die Bestandssonde R2 (`e2e/w224-r11-reiterleiste.e2e.ts:345`, «+ am linken
+   *  Inhaltsrand») misst genau diesen Platz im leeren Fall und bleibt
+   *  unverändert (§6.3). Ein «+» am ENDE hätte sie rot gemacht; ein zweiter,
+   *  unsichtbarer Platzhalter links hätte den Reitern dauerhaft 36 px Leerraum
+   *  vorgeschoben. Bleibt der eine linke Platz: er erfüllt R2 in BEIDEN
+   *  Zuständen, kostet keinen Raum und bewegt sich nie.
+   *  WAS SICH DAMIT ÄNDERT (offen für Davids Entscheid): das Vorbild aus D19
+   *  («analog zum browser») setzt das «+» hinter den letzten Reiter. Seine
+   *  FUNKTION ist unberührt — Klick und Alt+T legen weiter einen neuen Reiter
+   *  an —, nur seine Seite ist jetzt links statt rechts.
+   *  `solo` heisst darum nicht mehr «ohne Reiter», sondern «ganz links, es steht
+   *  nichts links davon, das zu trennen wäre» — und das gilt immer. Die
+   *  Trennung zu den Reitern trägt jetzt der Streifen (`border-l`, unten). */
+  const plusKnopf = () => (
     <button type="button" onClick={neuerReiter}
       aria-label="Neuer Reiter" title="Neuer Reiter (Alt+T)"
-      className={`rl-plus${solo ? ' rl-plus-solo' : ''}`}>
+      className="rl-plus rl-plus-solo">
       <span aria-hidden className="lc-griff-glyph">+</span>
     </button>
   );
@@ -530,13 +554,30 @@ export function Reiterleiste({ paneSchluessel = [] }: {
       // CLS 0, bewacht in `e2e/w224-r11-reiterleiste.e2e.ts`.
       data-reiter-leer={leer ? '' : undefined}
       className={`print:hidden shrink-0 sticky top-[var(--app-krone-h)] z-leiste h-[var(--app-reiter-h)] bg-paper${
-        leer ? '' : ' border-b border-rule-soft'}`}>
-      <div className="flex items-stretch px-4 sm:px-6">
-        {/* R2 · OHNE REITER STEHT DAS «+» LINKS, AM INHALTSRAND. Im Browser
-            beginnt die Leiste dort, wo der Inhalt beginnt — ein «+», das ganz
-            rechts im Leeren klebt, findet niemand. Mit Reitern bleibt es am
-            Ende des Streifens (unten), wo es dem letzten Reiter folgt. */}
-        {leer && plusKnopf(true)}
+        leer ? '' : ''}`}>
+      {/* ── R13B (7.9.2026) · DER UNTERSTRICH LIEGT AUF, NICHT IM FLUSS ──────
+          R2 wollte «kein Strich unter dem Nichts» und hat ihn als `border-b`
+          an-/abgeschaltet. Ein Rahmen ist aber Geometrie: box-border zieht er
+          1 px aus der INNENhöhe, die Zeile darin sass mit und ohne Reiter
+          verschieden hoch. Als absolut liegende 1-px-Linie sagt er dasselbe,
+          ohne dass die Leiste ihre Masse ändert — `borderBottomWidth` bleibt
+          in BEIDEN Zuständen `0px` (das misst R2). */}
+      {!leer && <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-rule-soft" />}
+      {/* ── R13B (7.9.2026) · DIE ZEILE HAT IHRE HÖHE AUS SICH SELBST ────────
+          GEMESSEN am Stand `cfa8a9f81`: der Streifen mass OHNE Reiter 16 px,
+          MIT dem ersten 33 px — seine Höhe kam allein aus dem Inhalt, den er
+          im leeren Fall nicht hat. `h-full` bindet sie an die feste Leistenhöhe
+          des `<nav>` (`--app-reiter-h`), die R2 schon reserviert hatte; damit
+          stehen «+» und Blatt (beide `items-stretch`/`self-center`) vom ersten
+          Bild an auf ihrer Endhöhe. */}
+      <div className="flex h-full items-stretch px-4 sm:px-6">
+        {/* R2 · DAS «+» STEHT LINKS, AM INHALTSRAND. «Im Browser beginnt die
+            Leiste dort, wo der Inhalt beginnt — ein «+», das ganz rechts im
+            Leeren klebt, findet niemand.» R13B (7.9.2026) macht daraus den
+            EINZIGEN Platz: mit und ohne Reiter derselbe, damit der erste Reiter
+            ihn nicht mehr die Seite wechseln lässt (Herleitung bei
+            `plusKnopf`). */}
+        {plusKnopf()}
         {/* M6 · DOPPELKLICK AUF DEN LEERRAUM = NEUER REITER (Befund #34).
             GEMESSEN 6.9.2026: 457 px ungenutzte Fläche rechts des letzten
             Reiters — im Browser genau die Stelle, auf die man doppelklickt.
@@ -558,7 +599,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
             setMenue({ path: null, x: ev.clientX, y: ev.clientY });
           }}
           className={`relative flex min-w-0 flex-1 items-stretch overflow-x-auto lc-reiter-scroll${
-            leer ? '' : ' border-l border-rule-soft'}`}>
+            leer ? ' border-l border-transparent' : ' border-l border-rule-soft'}`}>
           {sichtbar.map((t) => {
             const k = tabSchluessel(t.path);
             const nr = ordnung.findIndex((x) => tabSchluessel(x.path) === k) + 1;
@@ -578,7 +619,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
             Reiter nicht mit weg). `.rl-plus` trägt nur Breite/Zentrierung/
             Hover (index.css); die 34-px-Höhe kommt aus `items-stretch` des
             Elternflusses, ohne eigene Höhen-Angabe. */}
-        {!leer && plusKnopf(false)}
+
         {/* «+N» bzw. «N offen» — EIN Blatt für Überlauf (Desktop) und die
             schmale Ansicht (§5a Ziff. 5 + 8). Inhalt ist die gruppierte Liste
             `TabPanel`, also genau das, was das abgelöste ☰-Flyout zeigte,
@@ -599,16 +640,27 @@ export function Reiterleiste({ paneSchluessel = [] }: {
             dieser Textwechsel, um den Kreis am Leben zu halten (React #185
             blieb). Ein Kasten mit fester Breite hat keine Meinung zu seinem
             Inhalt — erst damit ist der Streifen wirklich unabhängig. */}
-        {!leer && (
-          <button ref={triggerRef} type="button"
-            aria-haspopup="dialog" aria-expanded={blattOffen}
-            aria-label={`Alle ${tabs.length} offenen Reiter`}
-            title="Alle offenen Reiter"
-            onClick={() => setBlattOffen((v) => !v)}
-            className="shrink-0 self-center ml-2 w-[4.5rem] overflow-hidden whitespace-nowrap border border-rule-soft px-1 py-1 text-center text-body-s text-ink-600 hover:text-ink-900">
-            <span className="num">{blattTitel}</span>
-          </button>
-        )}
+        {/* ── R13B (7.9.2026) · DER PLATZ GILT AUCH FÜR DAS NICHTS ────────────
+            R13-1 (oben) hat den Knopf schon vom Überlauf gelöst; am `leer`-Fall
+            hing er weiter. GEMESSEN am Stand `cfa8a9f81` (@1280, `/` →
+            `/gesetze/bund/ZGB`): mit dem ersten Reiter erschien der Knopf und
+            nahm dem `flex-1`-Streifen 4.5rem + `ml-2` weg — das «+» rechts davon
+            rückte mit. Derselbe Kreis, denselben Schritt weitergedacht: der
+            Kasten steht IMMER, mit `visibility` statt Mount/Unmount, und ist
+            ohne Reiter aus Bedienung und Vorlesereihenfolge genommen
+            (`invisible` + `aria-hidden` + `disabled` + `tabIndex={-1}`) — was
+            R2 wollte («kein Knopf über dem Nichts»), ohne dass die Geometrie
+            der Leiste davon abhängt. */}
+        <button ref={triggerRef} type="button"
+          aria-haspopup="dialog" aria-expanded={blattOffen}
+          aria-label={`Alle ${tabs.length} offenen Reiter`}
+          title="Alle offenen Reiter"
+          aria-hidden={leer || undefined} tabIndex={leer ? -1 : undefined} disabled={leer}
+          onClick={() => setBlattOffen((v) => !v)}
+          className={`shrink-0 self-center ml-2 w-[4.5rem] overflow-hidden whitespace-nowrap border border-rule-soft px-1 py-1 text-center text-body-s text-ink-600 hover:text-ink-900${
+            leer ? ' invisible' : ''}`}>
+          <span className="num">{blattTitel}</span>
+        </button>
       </div>
 
       {/* M4 · das Kontextmenü des angeklickten Reiters. Ein Menü zur Zeit —
