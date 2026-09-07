@@ -85,18 +85,7 @@ const OVERLINE_DIM_RE = /\blc-overline\b[^"'`]*\btext-ink-(?:500|400|300)\b|\bte
 // ABGRENZUNG: nicht betroffen ist `uppercase` an einem Sprach-/ISO-CODE ausser
 // halb der Badge-Achse (`SprachUmschalter`: «DE» ist ein Kürzel, kein Etikett).
 const BADGE_VERSAL_RE = /\blc-badge(?:-[a-z]+)?\b[^"'`]*\buppercase\b|\buppercase\b[^"'`]*\blc-badge(?:-[a-z]+)?\b/;
-/** BEFRISTETE AUSNAHME, Kollisions-Vorsicht (7.9.2026): `pages/EntscheidLeser`
- *  liegt in der Hand des parallel laufenden Fixers GA (Befunde G3/G4 derselben
- *  Prüfrunde) und ist für GB ausdrücklich TABU. Die WIRKUNG ist bereits gekappt
- *  — `.lc-badge { text-transform: none }` (src/index.css §GB-13) entversalt das
- *  Etikett auch dort, die e2e-Sonde `w224-gb-register` misst genau das an der
- *  berechneten Formatierung und deckt die Seite mit ab. Offen ist allein die
- *  QUELLEN-Hygiene: das Wort «uppercase» steht dort noch und tut nichts.
- *  FÄLLT WEG, sobald GA gelandet ist — dann die eine Utility streichen und
- *  diesen Eintrag mit ihr (§17: ein Workaround ohne hinterlegten Wurzel-Fix
- *  wäre ein offener Mangel, hier ist der Fix ein Wort und der Grund eine
- *  Bau-Kollision, kein technisches Hindernis). */
-const BADGE_VERSAL_AUSNAHMEN = new Set(['src/pages/EntscheidLeser.tsx']);
+const BADGE_VERSAL_AUSNAHMEN = new Set<string>(); // Ausnahme EntscheidLeser 7.9.2026 aufgelöst (GA+GB gelandet)
 // ── Verbot: Reinweiss als Fläche (§13-Nachtrag d / Befund 41) ──────────────
 // Lese-/Arbeitsflächen tragen --paper*/--surface*, nie #FFFFFF. Kein
 // bg-white/text-white/…-white und kein #fff/#ffffff im Inline-Style

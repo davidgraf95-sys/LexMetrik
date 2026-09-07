@@ -807,7 +807,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
           <div className="space-y-1 text-xs text-ink-500">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
               {snap.leitcharakter === 'leitentscheid' && <StatusBadge praedikat="leitentscheid" interaktiv />}
-              <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(snap.sprache)}>{snap.sprache}</span>
+              <span className="lc-badge lc-badge-soft" title={spracheBadgeTitel(snap.sprache)}>{snap.sprache}</span>
               {snap.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
             </div>
             <p className="leading-snug">Wiedergabe des amtlichen Urteilstexts — {MASSGEBLICH_HALBSATZ}</p>
