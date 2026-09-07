@@ -130,8 +130,11 @@ test.describe('R13B — Reiterleiste: CLS 0 über Öffnen, Schliessen, Hover und
     await expect(page.locator(LEISTE)).toBeVisible({ timeout: 45_000 })
     // R14b: genau EIN Reiter, und er heisst «Kontakt» — statt des früheren
     // `[data-reiter-leer]`-Attributs, das es nicht mehr gibt (§6.7: kein Tor,
-    // das nicht scheitern kann).
+    // das nicht scheitern kann). Der Speicher wird danach geleert, damit das
+    // folgende `page.goto` (ein KALTSTART, der nichts ersetzt) wieder bei
+    // genau EINEM Reiter landet — sonst mässe der Fall 1 gegen 2 Reiter.
     await expect(page.locator('[data-reiter-streifen] [data-reiter-schluessel]')).toHaveCount(1)
+    await page.evaluate(() => localStorage.removeItem('lexmetrik-tabs'))
     await page.waitForTimeout(1200)
     const leer = await masse(page)
     await lesen(page)
@@ -226,6 +229,10 @@ test.describe('R13B — Reiterleiste: CLS 0 über Öffnen, Schliessen, Hover und
     await beobachten(page)
     await page.goto(START)
     await expect(page.locator(LEISTE)).toBeVisible({ timeout: 45_000 })
+    // R14b (s. Fall darüber): Speicher leeren, damit der Kaltstart auf ZGB
+    // wieder GENAU EINEN Reiter trägt und der letzte ✕ ihn auch trifft.
+    await expect(page.locator('[data-reiter-streifen] [data-reiter-schluessel]')).toHaveCount(1)
+    await page.evaluate(() => localStorage.removeItem('lexmetrik-tabs'))
     await page.waitForTimeout(1200)
     const leerVorher = await masse(page)
 

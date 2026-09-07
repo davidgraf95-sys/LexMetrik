@@ -59,6 +59,94 @@ bestehen — nur auf «/» und nach dem letzten ✕ sind sie nicht mehr erreichb
 reiterfähig zu machen — das geht über den Entscheid hinaus und würde einen Reiter zeigen, den
 niemand geöffnet hat. **Wartet auf David:** ob die Meta-Routen ebenfalls Reiter tragen sollen.
 
+### Nachzug R14b (7.9.2026) — die Grenze ist geschlossen
+
+Der Absatz darüber bleibt als **datierter Beleg** stehen (§0 Ziff. 2b: Belege altern nicht) — er
+beschreibt den Stand bis `8d398874e`. Entschieden (Orchestrator, R14b-Auftrag; Davids Bestätigung
+steht am Schluss der Bau-Einheit aus): **die Meta-Routen tragen ebenfalls Reiter.** Damit gilt die
+Browser-Norm ohne Ausnahme — **jede Route ist Reiterinhalt**, und die Leiste steht auf keiner Seite
+mehr leer.
+
+Bau: Worktree `w2-24-r14b`, Branch `feat/w2-24-r14b-meta-reiter`, Basis `8d398874e`.
+Messrahmen: gebautes `dist/`, `vite preview :4436`, Chromium headless @1440×900 und @390×844, hell.
+
+**Ersatzlos gestrichen** (§17-Gegengewicht — vier Stellen weniger, keine neue dazu):
+
+| Weg | Was daran hing |
+|---|---|
+| `lib/tabs.istReiterPfad` | die eine Liste, die entschied, welcher Pfad einen Reiter trägt |
+| `lib/tabs.BEREICHS_UEBERSICHTEN` | nur noch von `istReiterPfad` gelesen; die Reihenfolge der fünf Bereiche steht in `lib/tabGruppen.KAT_ORDER` |
+| Meta-Zweig in `components/TabTracker.tsx` | `aktiv.current = null` — die gemessene Wurzel des Reiter-Verlusts, nur eine Ebene tiefer |
+| Guard in `components/layout/Shell.tsx` | ein Fenster auf einer Meta-Route bekam keinen Reiter |
+| `data-reiter-leer` + vier `leer`-Zweige in `layout/Reiterleiste.tsx` | Attribut, Unterstrich, Trennkante des Streifens, ausgeblendeter Blatt-Knopf |
+
+**Neu — genau zwei Dinge.** (a) Die Kurzform-Tabelle (`lib/tabs.KURZFORM`) trägt jetzt auch die
+Meta- und Dienst-Routen: «Über», «Methodik», «Einstellungen», «Kontakt», «Datenschutz»,
+«Abdeckung», «Suche». Ohne sie hiessen die Reiter «Wie LexMetrik rechnet», «Kontakt aufnehmen»,
+«Datenschutzerklärung» — SEO-Titel statt Reiter-Aufschriften (dieselbe Falle wie R3-F7).
+(b) Eine Route **ohne** Titel (404, Redirect-Quelle) trägt ihre **Adresse** statt der generischen
+Sammel-Aufschrift «Zuletzt geöffnet»: im Verlauf richtig, auf einem Reiter ein Name, den die Seite
+nicht hat (§8). Der Browser zeigt in genau diesem Fall die Adresse.
+
+**Unberührt geblieben:** Registerfarbe (eine Meta-Route hat kein Register — die Marke bleibt Tinte,
+geraten wird keine Farbe), die Geometrie-Zusagen von R2/R13B (feste Leistenhöhe, Unterstrich liegt
+auf statt als `border-b` im Fluss, «+» und Blatt an festem Platz), Persistenz, Verlauf, Alt+⇧+T,
+Split-Panes, D16-Ziehen, das R13-Überlauf-Fenster, die Lesestellung D27.
+
+**Neue Sonde** `e2e/w224-r14b-meta-reiter.e2e.ts` (4 Fälle): A jede Meta-Route trägt genau einen
+Reiter mit ihrer Kurzform · B auf 10 Routen (5 Meta, `/abdeckung`, `/suche`, `/`, `/gesetze`,
+`/gesetze/bund/OR`) steht mindestens ein Reiter, `[data-reiter-leer]` existiert nirgends mehr ·
+C der SPA-Klick von `/gesetze` auf `/ueber` ERSETZT den Reiter (kein zweiter, keine tote Herkunft),
+die Marke bleibt Tinte, der Reload findet denselben Reiter · D der letzte ✕ auf einem Meta-Reiter
+führt in die Sammlung, Alt+⇧+T holt den Meta-Reiter aus dem Schliess-Ring zurück.
+
+**Rot-Probe (§6.7), je einzeln gefahren am 7.9.2026 auf gebautem `dist/`:**
+
+| Rot-Weg | Beobachtung |
+|---|---|
+| A · die fünf Meta-Zeilen aus `lib/tabs.KURZFORM` streichen | Unit: `reiterKurzform('/einstellungen')` = `null` statt «Einstellungen» (2 Fälle rot) · e2e Fall A: Reiter heisst «Wie LexMetrik rechnet» statt «Methodik» |
+| A′ · den R14b-Zweig «Route ohne Titel trägt ihre Adresse» aus `basisKurzform` nehmen | Unit rot: «Zuletzt geöffnet» statt `/gibt-es-nicht` |
+| B · den alten Meta-Zweig in `TabTracker` wörtlich zurückbauen | alle vier e2e-Fälle rot; Fall C zeigt exakt den R14-Befund wieder («/gesetze» bleibt als tote Herkunft stehen), Fall B meldet «/ueber: die Leiste steht leer» |
+| C · `zurSammlung()` in `Reiterleiste.schliessen` streichen | Fall D rot: nach dem letzten ✕ bleibt die Seite auf `/methodik` und 0 Reiter stehen |
+
+**Deklarierte Sonden-Änderungen (§6.3, R14b)** — je mit Begründung am Fundort:
+
+| Datei | Alter Wortlaut | Warum er kippt |
+|---|---|---|
+| `src/tests/tabs.test.ts` | Block «M2 — Materialien sind reiterfähig», 3 Fälle über `istReiterPfad` | Funktion ersatzlos gestrichen; drei Fälle, die nicht mehr scheitern können, bleiben nicht als Attrappe stehen (§6.7). Ersetzt durch die Kurzform-Zusagen, die R14b tatsächlich gibt |
+| `e2e/w224-r11-reiterleiste.e2e.ts` | R2 mass `toHaveAttribute('data-reiter-leer', '')` auf `/kontakt`; `seed` landete per `reload()` dort | Attribut existiert nicht mehr; gemessen wird jetzt «genau EIN Reiter, und er heisst «Kontakt»». `seed` landet auf dem zuletzt geseedeten Reiter, damit keine Zählung sich verschiebt; `seed(page, [])` leert den Speicher nach der Landung |
+| `e2e/w224-r13-reiter.e2e.ts` | `seed(..., ziel = START)` | Startroute trägt jetzt selbst einen Reiter ⇒ Default-Ziel ist der zuletzt geseedete Reiter (Dublette, Zahl unverändert) |
+| `e2e/w224-r13b-reiter-cls.e2e.ts` | zweimal `[data-reiter-leer]` (`toHaveCount(1)` / `(0)`) | ersetzt durch die positive Zusage «genau EIN Reiter»; zusätzlich wird der Speicher nach der Startroute geleert, damit der Kaltstart aufs Dokument wieder bei einem Reiter landet |
+| `e2e/w224-r14-reiter-modell.e2e.ts` | zweimal `[data-reiter-leer]`-`toHaveCount(0)` | ein Tor auf ein nicht mehr existierendes Attribut kann nicht scheitern (§6.7) — gestrichen; Z3/Z5 messen die Reiterzahl unverändert |
+| `e2e/w224-reiter-umordnen-d16.e2e.ts` | `setzeReiter` per `page.reload()` auf `/kontakt` | Landung auf dem zuletzt geseedeten Reiter statt Reload |
+| `e2e/w224-plus-reiter.e2e.ts` | `beforeEach` verliess sich auf «/kontakt trägt keinen Reiter» | Ausgangszustand wird jetzt ausdrücklich hergestellt (Speicher leeren), statt sich auf eine Ausnahme zu verlassen |
+| `e2e/w224-reiterverhalten.e2e.ts`, `e2e/gesetze-ux-9punkte.e2e.ts`, `e2e/w224-plus-reiter.e2e.ts` (Kopf) | Rot-Wege über `istReiterPfad`/`BEREICHS_UEBERSICHTEN` | ein Rot-Weg, der auf eine gestrichene Funktion zeigt, ist keiner — je durch den gleichwertigen heutigen ersetzt, der alte als datierter Beleg daneben |
+
+**Tore R14b**
+
+| Tor | Ergebnis |
+|---|---|
+| `npx tsc -b` | grün (Exit 0) |
+| `npm run lint` | 0 errors, 1 Bestandswarnung (`useUniversalSuche.ts:176`, unberührt) |
+| `npm run test` | 461 Dateien · 7469 Tests grün, 2 skipped |
+| `npm run check:schlankheit` | grün — 1489 Dateien, keine Neuzugänge über der §6.6-Schwelle |
+| `npm run check:zyklen` | ok — 1/1 Zyklen (kalibriert) |
+| `npm run check:e2e-shards` | grün — 148 Specs, Union deckungsgleich, `shard-gruppen.json` byte-gleich |
+| `npm run golden:vergleich` | IDENTISCH — 256 Fälle byte-gleich |
+| e2e (`w224-r1*-*`, `w224-reiter*`, `w224-plus-reiter`, `d36-einstellungen-fuss`, `a11y`, `w224-r14b-meta-reiter`), `--repeat-each=2 --workers=2` | **260 grün / 0 rot** (10.5 min) |
+| `PERF_RUNS=1 npm run check:perf-lighthouse` | GRÜN — Startseite CLS **0.000**, Score 66; OR CLS 0.000, Score 42; Übersicht 76; Kanton-Leser 46 |
+
+Der zusätzliche Reiter auf den Meta-Routen kostet **kein** CLS: alle vier gemessenen Seiten stehen
+weiter bei 0.000 (die Leiste hat seit R11-R2 eine feste, reservierte Höhe — R14b nimmt ihr nur die
+Sonderfälle, nicht die Geometrie).
+
+**Screens R14b** (hell, gebautes `dist/`)
+
+| Datei | Was sie zeigt |
+|---|---|
+| `r14b-einstellungen-reiter-1440.jpg` | @1440: «OR» und «Einstellungen» nebeneinander, «Einstellungen» aktiv, «2 offen». Vorher stand hier ein leerer 34-px-Streifen. |
+| `r14b-meta-reiter-390.jpg` | @390: dasselbe auf dem Telefon — «OR» (Registerfarbe Gesetze) neben «Methodik» (Tinte, kein geratenes Register), «2 offen». |
+
 Ebenfalls **unberührt geblieben**: die Lesestellung D27 (`pages/gesetz-leser/lesePosition.ts`),
 Persistenz, Verlauf, Alt+⇧+T, Split-Panes, D16-Ziehen, das R13-Überlauf-Fenster.
 

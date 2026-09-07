@@ -68,8 +68,13 @@ async function seed(page: Page, tabs: string[], panes: string[] = []): Promise<v
   }, { t: tabs, p: panes })
   // R14b: `page.reload()` landete wieder auf /kontakt und legte dort seit R14b
   // einen zusätzlichen Reiter an. Ziel ist darum der letzte geseedete Reiter
-  // (Dublette ⇒ Zahl und Reihenfolge unverändert); ohne Seed die Sammlung.
+  // (Dublette ⇒ Zahl und Reihenfolge unverändert).
   await page.goto(tabs[tabs.length - 1] ?? '/')
+  // `seed(page, [])` heisst «leerer Speicher». Seit R14b trägt JEDE Landeroute
+  // einen Reiter — der Schlüssel wird danach darum noch einmal entfernt, damit
+  // die Aufrufer, die anschliessend selbst navigieren, wirklich bei null
+  // anfangen (sonst stünde neben ihrem Dokument ein Sammlungs-Reiter).
+  if (tabs.length === 0) await page.evaluate(() => localStorage.removeItem('lexmetrik-tabs'))
   if (tabs.length + panes.length > 0) {
     await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`).first()).toBeVisible({ timeout: 20_000 })
   }

@@ -22,9 +22,12 @@
 //      `if (!istReiterPfad(pathname)) { aktiv.current = null; return }` klammern
 //      (Funktion aus `lib/tabs` wiederherstellen) ⇒ die Meta-Routen tragen
 //      keinen Reiter, die Fälle B und C werden rot.
-//   C  in `Reiterleiste.schliessen` das `zurSammlung()` durch `navigate('/')`
-//      ersetzen ⇒ der letzte ✕ auf dem Meta-Reiter lässt die Leiste leer, Fall
-//      D wird rot.
+//   C  in `Reiterleiste.schliessen` das `zurSammlung()` streichen (nur
+//      `if (nachbar) navigate(nachbar.path)` stehen lassen) ⇒ der letzte ✕ auf
+//      dem Meta-Reiter lässt 0 Reiter zurück und die Seite stehen, Fall D wird
+//      rot. (`navigate('/')` STATT `zurSammlung()` genügt seit R14b NICHT mehr
+//      als Rot-Weg: der TabTracker legt den Sammlungs-Reiter dann selbst an —
+//      genau das ist der Gewinn dieses Nachzugs.)
 import { test, expect, type Page } from '@playwright/test'
 
 const REITER = 'nav[aria-label="Offene Reiter"]'
