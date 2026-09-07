@@ -244,6 +244,8 @@ mache nochmals einen kompletten fix indem du selbst auf die webseite gehst»).
 | R12 | Wege verkürzen (Köpfe, Listen) | erledigt | `R12A-KOEPFE.md`, `R12B-LISTEN.md` |
 | R13 | Reiter nützlicher und intuitiver (zweite Reiter-Runde, David 7.9.) | erledigt | `R13-REITER.md` |
 | R14 | «Alles ist ein Reiter»: die Sammlung wird Reiter und Neuer-Reiter-Seite (Entscheid David 7.9., Variante A) | erledigt | `R14-REITER-MODELL.md` |
+| R13B | Reiterstreifen ohne Layout-Sprung (Nachzug zu §8 Nr. 8, CLS-Wurzel) | erledigt (PR #748) | `R13B-REITER-CLS.md` |
+| R14b | Meta-Seiten (`/ueber`, `/methodik`, `/einstellungen`, `/kontakt`, `/suche`, `/abdeckung`, 404) tragen ebenfalls Reiter | erledigt (PR #757) | `R14-REITER-MODELL.md` (Nachtrag) |
 
 **Nachträge D30–D33** (Befunde David am Bild/Dev-Server, Wortlaut im Befundregister der Session):
 D30 Bezüge-Zeile klappt auf, zeigt aber nur den Rechnen-Block → Entscheide + Materialien lazy mit
@@ -254,6 +256,32 @@ Kopfzeile zusammen mit den Griffen ⚖/Ansicht (−44 px); D33 «Ansicht Rechtsp
 **Entscheid 7.9.: Variante A**, Panel als überlagerndes Blatt mit Δ=0 (Variante C «zweites Pane»
 als Folgeschritt, §8). N1: der Kopfzähler ist die Bezugsgrösse (gleiche Zahl wie die Bezüge-Zeile),
 gefiltert wird nur im Panel. Protokoll: `R6E-LESER.md`, `R6F-LESER.md`, `R6G-LESER.md`.
+
+**Nachwünsche D34–D45 (David am Tag des 7.9., nach der Landung #739).** Je Wunsch ein eigener
+Agent, je Wunsch ein eigener PR; Tabelle Thema/PR/SHA/Protokoll in der Session-Karte
+(`STRUKTUR.md`, Abschnitt «Nachwünsche 7.9.»). D34 Bezüge-Zeile vom Artikelkopf ans Artikelende
+(`R6J-BEZUEGE-FUSS.md`, #744) · D36 «Einstellungen» wieder unten in der Seitenleiste, abgesetzt,
+die vier übrigen Meta-Links bleiben im Fuss (`D36-SEITENLEISTE.md`, #745) · L6 Pane-Kopf nennt die
+Kurzform (`L6-PANEKOPF.md`, #746) · D37 die **Gruppen** der Seitenleiste starten zugeklappt
+(Korrektur Davids auf Rückfrage; die Leiste selbst bleibt wie bisher — Bilder `d37-*.jpg`, #747) ·
+D38 die Suchtreffer ersetzen den Gesetzestext statt in der Gliederung zu erscheinen
+(`R6K-SUCHE-LESESPALTE.md`, #749) · D39 Begrüssung als Kopf, «Sammlung» weg, Datum + Uhrzeit
+darunter (`D39-BEGRUESSUNG.md`, #751).
+
+**D35 «Funktionszeile am Artikelende» — Entscheid David: «A und verlustfrei».** Erst Untersuchung
+und Vorschlag (David: «untersuch das zuerst»), dann vier Bauten: F4 Menü-Anatomie und Baustein
+`ui/Menue` (`D35-F4-MENUE.md`, #752) · F3 Dreier-Wahl «Fassung | Fussnoten | aus», verlustfrei
+(nur die A-Fussnoten tauschen; `D35-F3-FASSUNG.md`, #755) · F1 die Funktionszeile selbst
+(`D35-F1-FUSSZEILE.md`, #756) · F2 Kopf ohne Artikel-Zahl, Erlass-Blatt, Rubriken im Ansicht-Menü
+abwählbar (`D35-F2-KOPF.md`, #758). Zwei Nachträge Davids binden den Bau: die Fusszeile ist
+**immer zu beim Laden** und öffnet nur auf Klick (kein Dauer-Merker), und **jede** Rubrik ist im
+Ansicht-Menü einzeln abwählbar.
+
+**Nachgelandet (7.9.2026, Abend):** D41/D42 (das Ansicht-Menü bekommt keine Abdunkelung, der
+Gesetzes-Pane bleibt im Split bedienbar — #759, 967caad87) · D44 (Aktion «⧉ Artikel daneben»
+ersatzlos entfernt — #760, ef0519bf4) · D40 (Fassungs-Slot wird eine Rubrik der Funktionszeile,
+der Kopf-Slot entfällt — #761, ae32c5c4e). D43 «wo sind die Materialien?» ist eine Sichtprüfung an
+einem Artikel MIT Materialien; D45 ist ein Folgeschritt (§8 Nr. 11).
 
 **Gesamtprüfung (Schluss, 7.9.2026).** Zwei Linsen: (a) Ästhetik hell/dunkel über alle Bereiche —
 11 hoch/11 mittel, abgearbeitet in den Fixern GA (Köpfe, Dopplungen, Übersichten) und GB (Leben,
@@ -416,12 +444,31 @@ Gebucht in `ROADMAP.md` unter `W2·24-DESIGN-IDENTITAET` als eigene Zeilen; hier
 7. **Leser-Mount auf langsamem Netz: 68-px-Sprung** (CLS 0.066 nur unter langsamem 4G, PR #743
    §8 a): `LadeAnzeige` reserviert den Vorgriff nicht, den `LeserKopf` per negativem Margin
    verschluckt — braucht eine Höhenquelle, die auch im Ladezustand gilt (§5). Kein W2·24-Rückschritt.
-8. **Reiterstreifen 0.0014 CLS** (PR #743 §8 b): das führende «+» fällt beim ersten Reiter weg —
-   berührt R11/R13-Sonden, eigener kleiner Schritt.
+8. ~~**Reiterstreifen 0.0014 CLS** (PR #743 §8 b)~~ — **erledigt 7.9.2026 als R13B** (PR #748,
+   `R13B-REITER-CLS.md`): der Streifen durchlief vier Zustände statt einem; Wurzel behoben.
 9. **Vorlagen-Hierarchie am Anschlag** (FD 7.9.: `arbeitsvertrag` 1.2135 gegen 1.25): Einleitungsblock
    452 px + Hauswirtschafts-Zeile «Eingaben zurücksetzen» über dem Formular — eigener Hierarchie-Schritt.
 10. **OR-Erstsprung > 7 s auf Produktion** (Live-Sicht 7.9.): 2,2-MB-Erlass lädt vor dem Ankersprung
    vollständig — gehört zu `W2·24-PERF-REST` (Messung erst, dann Fix).
+
+11. **D45 · Entscheid-Klick in der Fusszeile öffnet daneben.** Heute navigiert er die ganze Seite:
+   `randNotizZiel` greift nur innerhalb `.lr-notiz` (`gesetz-leser/v3/LeserLesespalte.tsx`). Soll
+   nach D30-Spec und Split-Regel M3 — öffnet daneben wie die Randnotiz, ⌘-Klick neuer Reiter.
+   Nebenfund des D41-Fixers.
+12. **«Daneben öffnen» mit `?r=`-Instanz** (F1-Rest). Die Aktion fiel aus der Funktionszeile,
+   weil `istOffen()` den Hash streift und darum an jedem Artikel `false` liefert; sie braucht die
+   Instanz-Adresse statt des Hashs (R13-Adress-Kern, Nr. 3 — zusammen bauen).
+13. **Bezüge-Zähler in den Erlass-Payload** (D34-Nachfix). Heute holt die Funktionszeile die
+   Zähler per eigenem Fetch, weshalb die 145 Fuss-Zeilen erst in der zweiten Render-Runde
+   entstehen. Korpus/Generator ⇒ **Gegenprüfung Pflicht**, Golden byte-gleich bzw. deklarierter
+   Re-Bless.
+14. **OR-Leser trägt 15'239 Knöpfe im DOM** (§15, seit F1 sichtbar): 1686 Artikel × ~4 Aktionen.
+   Rollen-Abfragen und Screenreader werden teuer; Aktionen erst beim Aufklappen/Hover rendern
+   oder Ereignis-Delegation. Mit Logikverlust-Bewertung (§15) — keine Aktion darf verschwinden.
+15. **Rest-CLS 0.0003 im Leser-Kopf**: `LeserKopf.tsx:289` (`data-v3-kopf-griffe`, Klassenwechsel
+   `gap`/`pl`), der einzige verbliebene Sprung in `e2e/leser-r1-r2`.
+16. **«OR» dreimal untereinander @1440** (L6-Nebenbefund): Reiter · Pane-Titel · Leser-Kennung.
+   Der V3-Leser sollte sein Kürzel im Pane abgeben, statt es ein drittes Mal zu setzen.
 
 Ausserdem gebucht, aber eigene Schritte: `W2·25-ARBEITSMAPPE` (Anheften, §7 dieses Fahrplans) und
 `W2·24-PERF-REST` (`fremdRoutingFormB`/`artikelnPluralVerweise`, erst verifizieren, dann fixen).
