@@ -2053,6 +2053,32 @@
   .lc-bezug-linie::-webkit-scrollbar-track { background: transparent; }
   .lc-bezug-linie::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
 
+  /* ─── `lc-wortumbruch` · EIN LANGES WORT SPRENGT SEINE SPALTE NICHT (R8, 7.9.2026) ─
+     Deutsch-schweizerisches Rechtsvokabular besteht aus Komposita: «Datenschutz-
+     erklärung», «Generalversammlungsbeschlüssen», «Rechtsprechung». Ein solches
+     Wort ist EIN Token — der normale Wortumbruch hat darin keine Fuge und lässt
+     es aus dem Kasten laufen. Gemessen im R8-Sweep 7.9.2026 (25 Routen × 6
+     Viewports × hell/dunkel) war das die häufigste Wurzel überhaupt: die
+     Fuss-Navigation auf allen 25 Routen (137 px Wort in 124 px Spalte), die
+     Bereichs-Kacheln der Startseite @320 und die Sektions-Titel im Gesetzesleser
+     (+20 px). Drei Flächen, ein Defekt — darum EIN Rezept (§5) statt drei Pflaster.
+
+     `hyphens: auto` trennt an der Silbengrenze (html lang="de-CH"; Chromium und
+     Safari bringen das deutsche Wörterbuch mit) — das ist die schöne Lösung.
+     `overflow-wrap: break-word` ist der GARANT darunter: ohne Wörterbuch, bei
+     Zeichenketten ohne Silben (Aktenzeichen, URLs) und in jedem Fall, in dem die
+     Trennung nicht greift, bricht das Wort hart statt überzulaufen. Beide
+     zusammen, weil die erste Regel schön, aber nicht garantiert ist.
+
+     NICHT global auf `body` gesetzt: in Tabellen und Scrollern ist ein zu
+     schmaler Kasten die ABSICHT (dort trägt `lc-scrollrand-x` die Affordanz),
+     und der Normtext-Satzspiegel gehört nicht pauschal umgehängt. Die Klasse
+     kommt an die geteilten Bausteine, die freie deutsche Beschriftungen führen. */
+  .lc-wortumbruch {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
   /* ─── `lc-scrollrand-x|y` · Scroll-Affordanz für JEDEN Scroller (B8, 31.8.2026) ─
      LM-063 (Tab-/Phasen-Leisten schneiden das letzte Fach ab, kein Hinweis) und
      LM-064 (der Gliederungs-Scroller schneidet die letzte Zeile durch, ohne
