@@ -8,7 +8,7 @@ import { useState, type ReactNode } from 'react';
 // die Rubriken dieses Artikels mit ihren Zahlen und RECHTS seine Aktionen:
 //
 //     Bezüge  11 Entscheide › · 2 Materialien › · 6 Verweise › · 1 Rechner ›
-//                             Zitat · Link · Amtliche Fassung ↗ · ⧉ Daneben öffnen
+//                             Zitat · Link · Amtliche Fassung ↗ · ⧉ Artikel daneben
 //
 // DREI ÄNDERUNGEN GEGENÜBER D34, jede mit eigenem Grund:
 //

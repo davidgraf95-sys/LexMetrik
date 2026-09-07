@@ -38,13 +38,24 @@ const schluessel = (p: string) => p.split('#')[0].split('?')[0]
 // Startroute BEWUSST ohne eigenen Reiter (`lib/tabs.istReiterPfad` ist für
 // /kontakt falsch): sonst legte der TabTracker beim Laden einen zusätzlichen
 // Reiter an und verfälschte jede Reihenfolge-Messung.
+// ── DEKLARIERTE SONDEN-ÄNDERUNG (§6.3) · R14b, 7.9.2026 ─────────────────────
+// `/kontakt` war die Startroute, WEIL sie keinen Reiter trug. Seit R14b trägt
+// JEDE Route einen (`lib/tabs.ts`, Block «R14b»; `istReiterPfad` ist ersatzlos
+// gestrichen) — der Seed landet darum auf dem ZULETZT geseedeten Reiter statt
+// auf einer reiterlosen Meta-Route. Damit bleibt die Reiterzahl exakt die
+// geseedete, und keine Zählung dieser Datei verschiebt sich. `/kontakt` bleibt
+// nur noch der Ort, an dem der Speicher überhaupt erreichbar ist (localStorage
+// braucht eine geladene Herkunft), bevor er überschrieben wird.
 const START = '/kontakt'
 
 async function setzeReiter(page: Page, pfade: string[]): Promise<void> {
   await page.goto(START)
   await page.evaluate((p) => localStorage.setItem('lexmetrik-tabs',
     JSON.stringify(p.map((path) => ({ path })))), pfade)
-  await page.reload()
+  // R14b: statt `page.reload()` (das auf /kontakt einen zusätzlichen Reiter
+  // anlegte) auf den letzten geseedeten Reiter — Dublette, also keine Änderung
+  // an Zahl und Reihenfolge.
+  await page.goto(pfade[pfade.length - 1] ?? '/')
   await expect(page.locator('[data-reiter-streifen] [data-reiter-schluessel]').first())
     .toBeVisible({ timeout: 20_000 })
 }

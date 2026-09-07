@@ -128,8 +128,11 @@ test.describe('Gesetze-UX 9 Punkte', () => {
   // `gesetze`-Präfix streichen ⇒ die Bund-Erlasse landen unter «Weitere» und
   // die beiden Gruppen-Überschriften fehlen.
   test('P3/B: Reiter-Übersicht im Header, gruppiert (Gesetze→Bund)', async ({ page }) => {
-    // Startroute ohne eigenen Reiter, damit der Speicher genau das trägt, was
-    // hier gesetzt wird (`lib/tabs.istReiterPfad`).
+    // Startroute nur als Herkunft für `localStorage`: was hier gesetzt wird,
+    // überschreibt sie. (Bis R14b trug `/kontakt` selbst keinen Reiter; seit
+    // R14b trägt jede Route einen — für diesen Fall ohne Belang, weil das Ziel
+    // `/gesetze/bund/ZGB` bereits im Seed steht und die Zahl im Knopfnamen
+    // ohnehin als `\d+` gelesen wird.)
     await page.goto('/kontakt');
     await page.evaluate(() => {
       try {

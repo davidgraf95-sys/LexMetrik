@@ -91,8 +91,9 @@ test.describe('Arbeitsleiste — eine Navigation, ein Reiter', () => {
   // waren die Bereichs-Übersichten für die Reiter unsichtbar; die Schleife
   // dieses Falls kehrt nach jedem Erlass über den Kopf-Link auf `/gesetze`
   // zurück, und diese Rückkehr liess den Reiter darum unverändert stehen.
-  // Seit `lib/tabs.istReiterPfad` ist `/gesetze` ein Reiter-Ziel wie jedes
-  // andere — die Rückkehr ERSETZT den aktiven Reiter, genau wie im Browser.
+  // Seit dem D7-Nachzug ist `/gesetze` ein Reiter-Ziel wie jedes andere (seit
+  // R14b gilt das ohne jede Ausnahme für JEDE Route) — die Rückkehr ERSETZT
+  // den aktiven Reiter, genau wie im Browser.
   // Die geprüfte ZUSAGE ist unverändert die von §5a Ziff. 3 (kein Wildwuchs:
   // sechs Navigationen, EIN Reiter); nachgeführt ist nur, welchen Inhalt
   // dieser eine Reiter am Ende trägt — den zuletzt besuchten, und das ist
@@ -111,9 +112,13 @@ test.describe('Arbeitsleiste — eine Navigation, ein Reiter', () => {
   })
 
   // ── D7 · DIE PFLICHTFÄLLE (a)–(e) DES DAVID-BEFUNDS ───────────────────────
-  // ROT ZU BEKOMMEN: in `lib/tabs.istReiterPfad` die `BEREICHS_UEBERSICHTEN`-
-  // Zeile streichen ⇒ (D7-e) findet 0 Reiter; `ersetzeTab` in `TabTracker`
-  // durch `merkeTab` tauschen ⇒ (D7-c) findet 2 statt 1.
+  // ROT ZU BEKOMMEN: GALT BIS R14b («in `lib/tabs.istReiterPfad` die
+  // `BEREICHS_UEBERSICHTEN`-Zeile streichen ⇒ (D7-e) findet 0 Reiter»);
+  // Funktion und Konstante sind mit R14b ersatzlos gestrichen. Gleichwertig
+  // heute: in `lib/tabs.KURZFORM` die Zeile `'/gesetze'` streichen ⇒ (D7-e)
+  // findet die Beschriftung «Schweizer Gesetzessammlung» statt «Gesetze».
+  // Unverändert: `ersetzeTab` in `TabTracker` durch `merkeTab` tauschen ⇒
+  // (D7-c) findet 2 statt 1.
   test('(D7 a/b) Erlass ohne und mit Artikel-Anker erzeugt je EINEN zählenden Reiter', async ({ page }) => {
     await page.goto('/gesetze/bund/OR')
     await leserBereit(page)
@@ -141,8 +146,8 @@ test.describe('Arbeitsleiste — eine Navigation, ein Reiter', () => {
 
   // (D7 d) «Wechsel Bund→Kanton→International je eigener Reiter nur bei
   // Ctrl-Klick, sonst Ersatz». Geprüft wird der ERLASS-Wechsel; die Ebene
-  // spielt für die Regel keine Rolle (`istReiterPfad` und `tabSchluessel`
-  // kennen nur den Pfad, nicht die Ebene) — und dieselbe Ebenen-Frage prüft
+  // spielt für die Regel keine Rolle (`tabSchluessel` kennt nur den Pfad,
+  // nicht die Ebene) — und dieselbe Ebenen-Frage prüft
   // `(f)` samt Kanonisierung der Alt-Adressen bereits am Datenmodell.
   // WICHTIG für die Nachbau-Treue: die Schritte laufen als SPA-KLICKS. Ein
   // `page.goto()` ist ein Kaltstart, und dort ersetzt der Tracker bewusst

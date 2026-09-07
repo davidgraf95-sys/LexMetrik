@@ -11,8 +11,12 @@
 // gefahren, 6.9.2026):
 //   M1 (#16) `Shell.tsx`: den `paneReiter`-Effekt entfernen ⇒ das rechte
 //        Fenster hat keinen Reiter, die Leiste zeigt EINE Marke statt zwei.
-//   M2 (#23/#24) `lib/tabs.istReiterPfad`: `materialien` aus dem Regex
-//        streichen ⇒ die Material-Detailseite erzeugt 0 Reiter.
+//   M2 (#23/#24) GALT BIS R14b («`lib/tabs.istReiterPfad`: `materialien` aus
+//        dem Regex streichen»); die Funktion ist mit R14b ersatzlos gestrichen,
+//        jede Route ist ein Reiter. Gleichwertiger Rot-Weg heute: in
+//        `lib/verlaufLabel.verlaufLabel` den `materialPfad`-Zweig streichen ⇒
+//        der Material-Reiter heisst «Zuletzt geöffnet» statt
+//        «Praxismitteilung EHRA 1/25».
 //   M3 (#37) `lib/tabs`: den `merkeGeschlossen`-Aufruf in `schliesseTab`
 //        entfernen ⇒ Alt+Shift+T bringt den Reiter nicht zurück.
 //   M4 (#35) `layout/Reiterleiste.tsx`: das `onContextMenu` am Reiter
@@ -27,7 +31,15 @@ const REITER = 'nav[aria-label="Offene Reiter"]'
 const STREIFEN = '[data-reiter-streifen]'
 /** Startroute BEWUSST ohne eigenen Reiter (`lib/tabs.istReiterPfad`): sonst
  *  legte der TabTracker beim Laden einen zusätzlichen Reiter an und jede
- *  Zählung wäre um eins daneben. Muster aus `w224-reiter-umordnen-d16`. */
+ *  Zählung wäre um eins daneben. Muster aus `w224-reiter-umordnen-d16`.
+ *
+ *  ── DEKLARIERTE SONDEN-ÄNDERUNG (§6.3) · R14b, 7.9.2026 ──────────────────
+ *  Seit R14b trägt JEDE Route einen Reiter (`lib/tabs.ts`, Block «R14b»);
+ *  `istReiterPfad` ist ersatzlos gestrichen. `/kontakt` bleibt nur noch der
+ *  Ort, an dem `localStorage` überhaupt erreichbar ist, bevor `seed` ihn
+ *  überschreibt — GELANDET wird danach auf dem zuletzt geseedeten Reiter, so
+ *  dass die Reiterzahl exakt die geseedete bleibt und keine Zählung dieser
+ *  Datei sich verschiebt. */
 const START = '/kontakt'
 
 const OR = '/gesetze/bund/OR#art-336_c'
@@ -54,7 +66,15 @@ async function seed(page: Page, tabs: string[], panes: string[] = []): Promise<v
     localStorage.setItem('lexmetrik-tabs', JSON.stringify(t.map((path) => ({ path }))))
     localStorage.setItem('lexmetrik-panes', JSON.stringify(p))
   }, { t: tabs, p: panes })
-  await page.reload()
+  // R14b: `page.reload()` landete wieder auf /kontakt und legte dort seit R14b
+  // einen zusätzlichen Reiter an. Ziel ist darum der letzte geseedete Reiter
+  // (Dublette ⇒ Zahl und Reihenfolge unverändert).
+  await page.goto(tabs[tabs.length - 1] ?? '/')
+  // `seed(page, [])` heisst «leerer Speicher». Seit R14b trägt JEDE Landeroute
+  // einen Reiter — der Schlüssel wird danach darum noch einmal entfernt, damit
+  // die Aufrufer, die anschliessend selbst navigieren, wirklich bei null
+  // anfangen (sonst stünde neben ihrem Dokument ein Sammlungs-Reiter).
+  if (tabs.length === 0) await page.evaluate(() => localStorage.removeItem('lexmetrik-tabs'))
   if (tabs.length + panes.length > 0) {
     await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`).first()).toBeVisible({ timeout: 20_000 })
   }
@@ -74,7 +94,8 @@ test.describe('M1 — jedes Fenster hat seinen Reiter (P4)', () => {
   test('ein Pane ohne Reiter bekommt einen; beide Marken ◧ und ◨ stehen da', async ({ page }) => {
     await seed(page, [OR, RECHNER], [BGE])
     // Auf den Reiter des HAUPTFENSTERS gehen: die Marke «links» hängt an der
-    // Primär-URL, und `/kontakt` trägt keinen Reiter (Seed-Route, s. START).
+    // Primär-URL. (`seed` landet seit R14b bereits auf RECHNER; der Sprung auf
+    // OR ist die eigentliche Aussage des Falls und bleibt.)
     await page.goto(OR)
     // Der Reiter des rechten Fensters entsteht aus dem Pane-Zustand.
     await expect(page.locator(`${STREIFEN} [data-reiter-schluessel="${BGE}"]`)).toBeVisible({ timeout: 20_000 })
@@ -341,27 +362,34 @@ test.describe('M8 — der Erlass-Kopf öffnet wirklich das Fenster', () => {
 
 // ═══ R1/R2/R5 (Prüfer R11, 6.9.2026) · DIE LEISTE SELBST ════════════════════
 
-test.describe('R2 — die Leiste ohne Reiter', () => {
-  // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ──────
-  // Dieser Fall stand auf «/» — dort war die Leiste bis R14 leer. Seit R14 ist
-  // die Sammlung ein Reiter, «/» trägt also immer einen; der 0-Reiter-Zustand
-  // gibt es nur noch auf den Meta-Routen, und dort ist er die wahre Auskunft.
-  // Die ZUSAGEN sind unverändert (kein Strich unter dem Nichts · «+» am linken
-  // Inhaltsrand · CLS 0 beim ersten Reiter) — gemessen wird sie jetzt von
-  // `/kontakt` aus, derselben Startroute, die dieser Spec ohnehin benutzt.
-  // Zusätzlich hält der Fall die R14-Zusage fest, dass «/» selbst nie leer ist.
-  test('kein durchgehender Unterstrich, «+» am linken Inhaltsrand, Höhe reserviert', async ({ page }) => {
+test.describe('R2 — die Geometrie der Leiste', () => {
+  // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, David 7.9.2026 · R14b-Nachzug ─
+  // Dieser Fall stand auf «/» — dort war die Leiste bis R14 leer. R14 machte
+  // die Sammlung zum Reiter, so dass nur noch die Meta-Routen leer standen;
+  // gemessen wurde darum von `/kontakt` aus, mit
+  // `toHaveAttribute('data-reiter-leer', '')`.
+  // R14b hat auch diese Ausnahme gestrichen: `/kontakt` trägt jetzt den Reiter
+  // «Kontakt», das Attribut `data-reiter-leer` existiert nicht mehr (ersatzlos,
+  // §17-Gegengewicht). Ein `toHaveAttribute` darauf wäre ab sofort ein Tor, das
+  // nicht mehr scheitern KANN (§6.7) — es ist durch die Zusage ersetzt, die
+  // R14b tatsächlich gibt: auf einer Meta-Route steht genau EIN Reiter, und er
+  // heisst «Kontakt».
+  // Die drei GEOMETRIE-Zusagen sind unverändert (`borderBottomWidth: 0px` ·
+  // «+» am linken Inhaltsrand · gleiche Leistenhöhe vor und nach dem Wechsel).
+  test('kein Rahmen-Unterstrich, «+» am linken Inhaltsrand, Höhe konstant', async ({ page }) => {
     // GEMESSEN am Stand `c91541617`: auf «/» stand ein leerer 34-px-Streifen
     // mit `border-b` über die volle Breite — eine Trennlinie, die nichts trennt.
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto(START)
     const leiste = page.locator(REITER)
-    await expect(leiste).toHaveAttribute('data-reiter-leer', '')
+    await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(1)
+    await expect(page.locator(`${STREIFEN} [data-reiter-schluessel="/kontakt"]`))
+      .toContainText('Kontakt', { timeout: 20_000 })
     const leer = await leiste.evaluate((e) => ({
       unterstrich: getComputedStyle(e).borderBottomWidth,
       hoehe: Math.round(e.getBoundingClientRect().height),
     }))
-    expect(leer.unterstrich, 'ohne Reiter kein Unterstrich').toBe('0px')
+    expect(leer.unterstrich, 'der Unterstrich liegt auf, er ist kein Rahmen').toBe('0px')
 
     // «+» steht links: seine linke Kante fällt mit dem Inhaltsrand zusammen
     // (px-4/sm:px-6 des Streifens), nicht am rechten Fensterrand.
@@ -375,8 +403,7 @@ test.describe('R2 — die Leiste ohne Reiter', () => {
     await page.goto(OR)
     await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`).first()).toBeVisible()
     const voll = await leiste.evaluate((e) => Math.round(e.getBoundingClientRect().height))
-    expect(voll, `leer ${leer.hoehe} px · mit Reiter ${voll} px`).toBe(leer.hoehe)
-    await expect(leiste).toHaveAttribute('data-reiter-leer', /^$/ , { timeout: 1 }).catch(() => {})
+    expect(voll, `Meta-Reiter ${leer.hoehe} px · Gesetzes-Reiter ${voll} px`).toBe(leer.hoehe)
   })
 
   // R14: die Sammlung selbst ist nie ohne Reiter — der Zustand, den der Fall
@@ -385,7 +412,6 @@ test.describe('R2 — die Leiste ohne Reiter', () => {
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('/')
     await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(1)
-    await expect(page.locator(`${REITER}[data-reiter-leer]`)).toHaveCount(0)
   })
 })
 

@@ -512,18 +512,21 @@ export function Reiterleiste({ paneSchluessel = [] }: {
     return e;
   };
 
-  /** R2: kein Reiter offen — die Leiste hält ihre Höhe, aber weder Unterstrich
-   *  noch Trennkante.
+  /** ── R14b (Nachzug 7.9.2026) · DEN 0-REITER-ZUSTAND GIBT ES NICHT MEHR ────
    *
-   *  ── R14 (7.9.2026) · WANN ES DIESEN ZUSTAND NOCH GIBT ────────────────────
-   *  Auf «/» und nach dem letzten ✕ gibt es ihn NICHT mehr: die Sammlung ist
-   *  seit R14 ein Reiter, die Leiste trägt dort immer mindestens einen. Übrig
-   *  bleibt er allein auf den Meta-Routen (/ueber, /methodik, /einstellungen,
-   *  /kontakt) beim Kaltstart mit leerem Speicher — und dort ist «kein Reiter»
-   *  die WAHRE Auskunft (§8): keiner dieser Reiter zeigt diese Seite. Der
-   *  Zustand wird darum weiter gezeichnet, statt ihn mit einem Reiter zu
-   *  füllen, den niemand geöffnet hat. */
-  const leer = tabs.length === 0;
+   *  Hier stand `const leer = tabs.length === 0;` und trug vier Zweige: das
+   *  Mess-Attribut `data-reiter-leer`, den Unterstrich, die Trennkante des
+   *  Streifens und den ausgeblendeten Blatt-Knopf. R2 hatte sie für die
+   *  Startseite gebaut, R14 hat «/» und den letzten ✕ herausgenommen, R14b
+   *  jetzt die letzten fünf Routen (/ueber, /methodik, /einstellungen,
+   *  /kontakt, /datenschutz): seit `lib/tabs` keine Route mehr ausnimmt, legt
+   *  `components/TabTracker.tsx` auf JEDER Adresse einen Reiter an — die
+   *  Leiste steht nie leer, und ein Zweig, der nicht mehr scheitern kann, wird
+   *  gestrichen statt bewacht (§17-Gegengewicht).
+   *  Die GEOMETRIE-Zusagen von R2/R13B bleiben unangetastet: die Höhe ist
+   *  weiter fest reserviert (`--app-reiter-h`), der Unterstrich liegt weiter
+   *  absolut auf statt als `border-b` im Fluss (`borderBottomWidth: 0px`), und
+   *  «+» wie Blatt-Knopf haben weiter ihren festen Platz. */
 
   /** Der Browser-«+» (D19). `solo` = die Fassung ohne Reiter: keine linke
    *  Trennkante, weil links von ihm nichts steht, das zu trennen wäre.
@@ -576,9 +579,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
       // reserviert (`h-[var(--app-reiter-h)]`, box-border: der 1-px-Rahmen
       // liegt INNEN), damit der Inhalt beim ersten Reiter nicht springt —
       // CLS 0, bewacht in `e2e/w224-r11-reiterleiste.e2e.ts`.
-      data-reiter-leer={leer ? '' : undefined}
-      className={`print:hidden shrink-0 sticky top-[var(--app-krone-h)] z-leiste h-[var(--app-reiter-h)] bg-paper${
-        leer ? '' : ''}`}>
+      className="print:hidden shrink-0 sticky top-[var(--app-krone-h)] z-leiste h-[var(--app-reiter-h)] bg-paper">
       {/* ── R13B (7.9.2026) · DER UNTERSTRICH LIEGT AUF, NICHT IM FLUSS ──────
           R2 wollte «kein Strich unter dem Nichts» und hat ihn als `border-b`
           an-/abgeschaltet. Ein Rahmen ist aber Geometrie: box-border zieht er
@@ -586,7 +587,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
           verschieden hoch. Als absolut liegende 1-px-Linie sagt er dasselbe,
           ohne dass die Leiste ihre Masse ändert — `borderBottomWidth` bleibt
           in BEIDEN Zuständen `0px` (das misst R2). */}
-      {!leer && <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-rule-soft" />}
+      <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-rule-soft" />
       {/* ── R13B (7.9.2026) · DIE ZEILE HAT IHRE HÖHE AUS SICH SELBST ────────
           GEMESSEN am Stand `cfa8a9f81`: der Streifen mass OHNE Reiter 16 px,
           MIT dem ersten 33 px — seine Höhe kam allein aus dem Inhalt, den er
@@ -622,8 +623,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
             ev.preventDefault();
             setMenue({ path: null, x: ev.clientX, y: ev.clientY });
           }}
-          className={`relative flex min-w-0 flex-1 items-stretch overflow-x-auto lc-reiter-scroll${
-            leer ? ' border-l border-transparent' : ' border-l border-rule-soft'}`}>
+          className="relative flex min-w-0 flex-1 items-stretch overflow-x-auto lc-reiter-scroll border-l border-rule-soft">
           {sichtbar.map((t) => {
             const k = tabSchluessel(t.path);
             const nr = ordnung.findIndex((x) => tabSchluessel(x.path) === k) + 1;
@@ -666,7 +666,8 @@ export function Reiterleiste({ paneSchluessel = [] }: {
             Inhalt — erst damit ist der Streifen wirklich unabhängig. */}
         {/* ── R13B (7.9.2026) · DER PLATZ GILT AUCH FÜR DAS NICHTS ────────────
             R13-1 (oben) hat den Knopf schon vom Überlauf gelöst; am `leer`-Fall
-            hing er weiter. GEMESSEN am Stand `cfa8a9f81` (@1280, `/` →
+            hing er weiter (R14b hat den Fall selbst gestrichen — der feste
+            Platz bleibt, er war nie nur für ihn da). GEMESSEN am Stand `cfa8a9f81` (@1280, `/` →
             `/gesetze/bund/ZGB`): mit dem ersten Reiter erschien der Knopf und
             nahm dem `flex-1`-Streifen 4.5rem + `ml-2` weg — das «+» rechts davon
             rückte mit. Derselbe Kreis, denselben Schritt weitergedacht: der
@@ -679,10 +680,8 @@ export function Reiterleiste({ paneSchluessel = [] }: {
           aria-haspopup="dialog" aria-expanded={blattOffen}
           aria-label={`Alle ${tabs.length} offenen Reiter`}
           title="Alle offenen Reiter"
-          aria-hidden={leer || undefined} tabIndex={leer ? -1 : undefined} disabled={leer}
           onClick={() => setBlattOffen((v) => !v)}
-          className={`shrink-0 self-center ml-2 w-[4.5rem] overflow-hidden whitespace-nowrap border border-rule-soft px-1 py-1 text-center text-body-s text-ink-600 hover:text-ink-900${
-            leer ? ' invisible' : ''}`}>
+          className="shrink-0 self-center ml-2 w-[4.5rem] overflow-hidden whitespace-nowrap border border-rule-soft px-1 py-1 text-center text-body-s text-ink-600 hover:text-ink-900">
           <span className="num">{blattTitel}</span>
         </button>
       </div>

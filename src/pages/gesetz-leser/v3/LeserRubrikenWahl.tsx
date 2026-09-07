@@ -51,7 +51,11 @@ const RUBRIKEN: ReadonlyArray<{ id: FussRubrik; label: string; titel: (dativ: st
   {
     id: 'a',
     label: 'Aktionen',
-    titel: () => '«Zitat», «Link», «Amtliche Fassung ↗» und «Daneben öffnen» in der Zeile am Ende zeigen',
+    // Das Wort des Artikel-Griffs ist seit dem F1-Nachfix vom 7.9.2026
+    // «Artikel daneben» (nicht «Daneben öffnen» — das bleibt dem Erlass-Kopf,
+    // Herleitung in `../parts/ArtikelAktionen.tsx`). Der Menütitel nennt die
+    // Aktionen so, wie sie in der Zeile stehen (Ä110: EINE Schreibung).
+    titel: () => '«Zitat», «Link», «Amtliche Fassung ↗» und «Artikel daneben» in der Zeile am Ende zeigen',
   },
 ];
 

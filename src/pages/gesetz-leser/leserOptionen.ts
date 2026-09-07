@@ -83,7 +83,7 @@ type ZweiWert = 'an' | 'aus';
  * Die Buchstaben sind DIESELBEN wie das `data-reg` der Funktionszeile
  * (`parts/BezuegeKopf.tsx`, Registerfarben r/m/g/w) — eine Rubrik, ein
  * Buchstabe, an beiden Enden derselbe (§5). `a` ist die Aktionsgruppe rechts
- * («Zitat · Link · Amtliche Fassung ↗ · ⧉ Daneben öffnen»,
+ * («Zitat · Link · Amtliche Fassung ↗ · ⧉ Artikel daneben»,
  * `parts/ArtikelAktionen.tsx`); sie hat keine Registerfarbe, aber dieselbe
  * Frage «steht das an meinem Artikel?».
  *
