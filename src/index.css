@@ -3574,3 +3574,145 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
 @media print {
   .lr8-erlasssuche { display: none !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GB · «LEBEN»: REGISTERFARBE, SERIFEN-AKZENT, LINIEN STATT KÄSTEN
+   (W2·24-DESIGN-IDENTITAET, 7.9.2026 — Befunde G1/G2/G12/G13/G15/G20/G21 der
+   Gesamtprüfung «Ästhetik + Kopf-/Ortsprüfung»)
+
+   UNGESCHICHTET UND AM DATEIENDE, mit Absicht: alle Regeln hier müssen
+   Tailwind-Utilities schlagen (`text-brass-700` an der Overline, `border` an
+   der Wahl-Kachel, `uppercase` am Sprach-Badge, `bg-surface` an den
+   Topbar-Griffen). Eine Regel in `@layer components` verlöre gegen sie
+   unabhängig von der Spezifität — die Layer-Ordnung entscheidet vor der
+   Spezifität. Dieselbe Begründung trägt schon `.lc-highlight .lc-overline`
+   (Z. 3025) und der Druck-Block darunter.
+   ═════════════════════════════════════════════════════════════════════════ */
+
+/* ─── GB-1 · DIE REGISTERFARBE STEHT IN DER SEITE, NICHT NUR IM REITER ──────
+   BEFUND G1 (gemessen, hell+dunkel, 1440+390): Registerfarb-Träger im ersten
+   Bild — Erlass-Leser 2 · /gesetze 3 · Entscheid 4 · Rechner 5 · Vorlage 6 ·
+   /einstellungen 6 · /rechtsprechung 7, und in 7 von 9 Fällen war der EINZIGE
+   Träger der Unterstrich der Arbeitsleiste. Referenz «/» = 14.
+   `layout/RouteHuelle` sagt das Register des Pfades als `data-reg` an (dort die
+   Herleitung); hier stehen die Rezepte, die es lesen. Kein Konsument bekommt
+   eine Farb-Prop, keine Seite eine Einzelstelle — wer künftig einen Kopf baut,
+   erbt die Farbe (§5/§10). */
+.lc-route[data-reg="g"] { --reg-marke: var(--reg-g); }
+.lc-route[data-reg="r"] { --reg-marke: var(--reg-r); }
+.lc-route[data-reg="m"] { --reg-marke: var(--reg-m); }
+.lc-route[data-reg="w"] { --reg-marke: var(--reg-w); }
+
+/* Der Registerstrich am Seitenkopf. ABSOLUT positioniert und darum CLS 0: er
+   nimmt keine Höhe, er liegt in den vorhandenen Kopfabstand. 3.5 rem breit —
+   eine Marke, keine Trennlinie über die ganze Breite (die trüge der Kopf schon,
+   F0.6: «2 px --rule unter Kopfzeilen»). */
+.lc-route[data-reg] { position: relative; }
+.lc-route[data-reg]::before {
+  content: ''; position: absolute; top: 0; inset-inline-start: 0;
+  width: 3.5rem; height: 2px; background: var(--reg-marke);
+  pointer-events: none;
+}
+
+/* Zähler-Marke der Ausgabe-Zeile (`SeitenKopf`-Slot `ausgabe`, `.ub-ausgabe`):
+   die ZAHL trägt die Registerfarbe, das Wort daneben bleibt ink-500 — die Farbe
+   sagt nichts allein, sie hebt nur den Bestand hervor (§8/WCAG 1.4.1).
+   Kontrast gemessen (7.9.2026, sRGB-Formel, gegen --paper hell #FAF7F2 /
+   dunkel #1B1917): g 7.85/8.58 · r 9.55/7.88 · m 4.94/10.14 · w 5.21/9.56 —
+   AA in beiden Modi, auf --well (4.65 … 10.83) ebenso. */
+.lc-route[data-reg] .ub-ausgabe .num { color: var(--reg-marke); }
+
+/* ─── GB-2 · RANDTITEL SIND EINE KURSIVE LITERATA-ZEILE ─────────────────────
+   BEFUND G2 (gemessen): `Literata italic` kam im ersten Bild auf 8 von 9 Routen
+   GAR NICHT vor (nur «/» trug 2, die Begrüssung) — der Akzent, den David am
+   Bildbogen mochte, existierte ausserhalb der Startseite nicht.
+   FAHRPLAN-DESIGN-IDENTITAET §5 Ziff. 2 lässt das Etikett ausdrücklich «fett
+   ODER KURSIV» sein; F0.7 (keine Versalien, keine Kästen, ink-Boden) bleibt
+   Wort für Wort gültig — `.lc-overline` selbst wird NICHT angefasst, sie bleibt
+   Archivo. `.lc-randtitel` ist die Variante für die Zeile, die einen Abschnitt
+   BENENNT (Gruppenkopf, Blattname, Marginalie); sie ist ein Rezept, kein
+   Einzelstellen-Stil. */
+.lc-randtitel {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  letter-spacing: 0;
+}
+/* … und sie ist der Ort, an dem die Registerfarbe der Route sichtbar wird. */
+.lc-route[data-reg] .lc-randtitel { color: var(--reg-marke); }
+
+/* ─── GB-12 · NORMKÜRZEL SIND KLARTEXT, KEIN KASTEN ─────────────────────────
+   BEFUND G12 (gemessen): /rechtsprechung zeigt 12 gerahmte Chips im ersten Bild
+   (5–7 je Trefferzeile), im DOM 847 `span.lc-chip`. Den Rahmen setzt die
+   Chip-Grammatik der Metazeilen (`.lc-chip-zeile [role="button"].lc-chip`,
+   Z. ~1940) — sie ist für die KOPF-Metazeile von Erlass und Entscheid gebaut,
+   wo drei Element-Arten nebeneinander stehen und die Form sie trennen muss
+   (LM-044). In der TREFFERLISTE steht nur eine Art, 847-fach; dort trennt die
+   Form nichts, sie rahmt nur. F0.6: Linien statt Flächen.
+   `.lc-normzeile` ist die Trefferlisten-Variante derselben Zeile: gleiche
+   Rolle, gleiche Tap-Fläche (`min-height` bleibt, a11y-Pflicht), aber Klartext
+   in ink-500. Die Affordanz trägt der Unterstrich bei Hover/Fokus (F0.8: ein
+   Link, den nur die Farbe ausweist, wäre keiner — hier weist ihn die
+   Unterstreichung aus, und `role="button"` sagt es der Technik). */
+.lc-normzeile [role="button"].lc-chip,
+.lc-normzeile button.lc-chip {
+  border: 0;
+  background: transparent;
+  padding-inline: 0;
+  margin-inline-end: .125rem;
+  font-weight: 400;
+  color: var(--ink-500);
+}
+.lc-normzeile [role="button"].lc-chip:hover,
+.lc-normzeile [role="button"].lc-chip:focus-visible,
+.lc-normzeile button.lc-chip:hover,
+.lc-normzeile button.lc-chip:focus-visible {
+  color: var(--reg-marke, var(--brass-700));
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+}
+
+/* ─── GB-13 · KEINE VERSALIEN AM BADGE ──────────────────────────────────────
+   BEFUND G13 (gemessen): 53 × `span.lc-badge.lc-badge-soft.uppercase` mit
+   Inhalt «fr»/«it» auf /rechtsprechung, 1 × im Entscheid-Leser. F0.7: «Kein
+   ALL-CAPS-Etikett mehr». Die Utility `uppercase` steht an fünf Aufrufern,
+   zwei davon in fremder Bauhand (`components/materialien/MaterialKarte`,
+   `components/normtext/ErlassKarte`) und einer im Entscheid-Leser. Die Regel
+   steht darum EINMAL an der Klasse — dieselbe Bauweise, mit der F0.7 schon die
+   ~260 Overline-Konsumenten ohne Edit entversalt hat. Der volle Sprachname
+   bleibt im `title` (`spracheBadgeTitel`), er geht nicht verloren (§8). */
+.lc-badge { text-transform: none; }
+
+/* ─── GB-15 · EINE KNOPF-FORM IM TITELBLATT ─────────────────────────────────
+   BEFUND G15 (gemessen @390): in EINER Zeile drei Formen — ☰ ohne Kasten,
+   🔍/◐/«DE ▾» mit 1-px-Kasten und Füllung, § als schwarze Fläche. F0.6/F0.9:
+   Linien statt Flächen, Bedien-Griffe als Textknopf. Ein Rezept für alle
+   Griffe des Streifens; das Siegel (§) bleibt, was es ist — die MARKE, kein
+   Knopf (Referenzbild `vorschlag-freigegeben.html`), darum ausgenommen.
+   Die Tap-Fläche (44 px) bleibt unverändert: die ruhigere Optik darf sie nie
+   kaufen (F2b, dieselbe Auflage wie an `.lc-kopf-aktionen .lc-chip`). */
+.lc-topbar-griff {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: var(--tap-ziel-komfort, 2.75rem);
+  min-width: var(--tap-ziel-komfort, 2.75rem);
+  border: 0; border-radius: 0; background: transparent;
+  color: var(--ink-600);
+  transition: color var(--dur-fast) var(--ease);
+}
+.lc-topbar-griff:hover { color: var(--ink-900); }
+.lc-topbar-griff:hover .lc-griff-glyph,
+.lc-topbar-griff:focus-visible .lc-griff-glyph { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ─── GB-20/21 · DIE WAHL-KACHEL IST EINE ZEILE ─────────────────────────────
+   BEFUND G20 (gemessen): die Ferien-/Stillstand-Auswahl des Rechners ist ein
+   Raster aus 6 gerahmten Kästen (`div.border.border-line`) mit je 3–5 Zeilen
+   Kleintext. BEFUND G21: die Vorlage trägt 8 × `button.lc-wahl-kachel`.
+   F0.6 und David 6.9.2026 («Linien statt Flächen»). Der Vollrahmen fällt weg,
+   die OBERE Haarlinie bleibt und trennt die Zeilen — das Raster wird zur
+   Zeilenliste, ohne dass 60 Aufrufer ihre Spaltenzahl ändern müssten
+   (`ui/SelectionGrid` setzt `border-t` statt `border`, dort die Herleitung).
+   UNVERÄNDERT: der 3-px-Strich in `--reg-w` am gewählten Zustand (er IST die
+   Linie, die das Zielbild verlangt), das Häkchen, `pr-6`, die Tap-Fläche.
+   Die PILLE ist nicht betroffen: sie steht in einer Reihe kurzer Antworten,
+   dort ist die geschlossene Form die Aussage «ich bin ein Knopf». */
+.lc-wahl-kachel:hover { border-top-color: var(--reg-w); }
+.lc-wahl-kachel[aria-pressed="true"] { border-top-color: var(--reg-w); }

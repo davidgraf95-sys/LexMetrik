@@ -303,11 +303,23 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
                 : erledigt ? 'border-transparent text-ink-700 hover:border-line-strong'
                 : 'border-transparent text-ink-500 cursor-not-allowed'
               }`}>
-              {/* Nummern-Marke: `rounded-full` (20 px) war der einzige Radius in
-                  der Leiste — über der 12-px-Ausnahme für «echte Punkte» (§5).
-                  Jetzt kantig; erledigt = gefüllt, aktiv = umrandet. */}
-              <span className={`num inline-flex h-5 w-5 items-center justify-center text-micro ${
-                erledigt ? 'bg-ink-900 text-paper' : istAktiv ? 'border border-ink-900 text-ink-900' : 'border border-line text-ink-500'
+              {/* ── GB-21 (W2·24, Befund G21, 7.9.2026) · DIE NUMMER STEHT IN DER ZEILE
+                  GEMESSEN im ersten Bild der Vorlage @1440: 7 ×
+                  `span.num.inline-flex.h-5` — sieben Kästchen in einer Leiste,
+                  die ihren Zustand seit R5-F2/V5 ohnehin über den UNTERSTRICH
+                  trägt (`border-b-2`, Kommentar oben). Das Kästchen war also das
+                  zweite Signal für dieselbe Sache, in der Form, die F0.6 gerade
+                  abschafft — und die Marke war «kantig» nur noch, weil der
+                  Radius weg war, ein Kasten blieb sie. §17-Gegengewicht: wer
+                  addiert, streicht zuerst die Stelle, die dieselbe Sorge schon
+                  trägt.
+                  NEU: die Ziffer steht blank in der Zeile. Der ERLEDIGT-Zustand
+                  bleibt am ✓ (Glyphe = Form, nicht Farbe), der AKTIVE an der
+                  Tinte — beide Aussagen bleiben also erhalten, nur ohne Rahmen
+                  und ohne Fläche. Höhe/Abstände der Leiste unverändert (die
+                  Marke war 20 px hoch in einer 30-px-Zeile) ⇒ CLS 0. */}
+              <span className={`num text-micro ${
+                erledigt ? 'text-ink-900' : istAktiv ? 'text-ink-900' : 'text-ink-500'
               }`}>{erledigt ? '✓' : i + 1}</span>
               {s.label}
             </button>

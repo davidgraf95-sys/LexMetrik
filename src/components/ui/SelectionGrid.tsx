@@ -131,7 +131,23 @@ export function SelectionGrid<T extends string>({
             className={pille
               ? `lc-wahl-pille ${PILLE_HITBOX} px-3 py-1.5 text-body-s font-medium border transition-colors ${
                 aktiv ? aktivKlasse : `${ruhe} text-ink-600`}`
-              : `lc-wahl-kachel text-left p-3 pr-6 min-h-11 border transition-colors ${aktiv ? aktivKlasse : ruhe}`}
+              // ── GB-20/21 (W2·24, Befunde G20/G21, 7.9.2026) · ZEILE STATT KASTEN
+              //    GEMESSEN: die Ferien-/Stillstand-Auswahl des Fristenrechners ist
+              //    ein Raster aus 6 gerahmten Kästen (`div.border.border-line`) mit
+              //    je 3–5 Zeilen Kleintext; der Vorlagen-Assistent trägt 8 davon.
+              //    F0.6 («Linien statt Flächen») und David 6.9.2026 («Linien statt
+              //    Flächen»). `border` → `border-t`: der Vollrahmen fällt weg, die
+              //    obere Haarlinie bleibt und TRENNT die Zeilen. Damit wird das
+              //    Raster zur Zeilenliste, ohne dass die 60 Aufrufer ihre
+              //    Spaltenzahl ändern müssen (§10 — der Rahmen wird gebaut, nicht
+              //    60 Aufrufe umgeschrieben). Der 3-px-Strich in `--reg-w` am
+              //    gewählten Zustand, das Häkchen, `pr-6` und `min-h-11` bleiben
+              //    Wort für Wort (index.css `.lc-wahl-kachel`).
+              //    DIE PILLE BLEIBT GESCHLOSSEN: sie steht in einer Reihe kurzer
+              //    Antworten («ja»/«nein»), wo die geschlossene Form die Aussage
+              //    «ich bin ein Knopf» ist — eine offene Zeile wäre dort keine
+              //    Auswahl mehr, sondern Fliesstext.
+              : `lc-wahl-kachel text-left p-3 pr-6 min-h-11 border-t transition-colors ${aktiv ? aktivKlasse : ruhe}`}
           >
             {pille ? it.label : (
               <>

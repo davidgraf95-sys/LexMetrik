@@ -106,11 +106,21 @@ export function Topbar({ onMenu, schubladeOffen, seitenleisteEingeklappt, onSeit
           als `APP_TOPBAR_H` in `leserGeometrie.ts` annimmt, und der klebende
           Leser-Kopf sässe um genau diese zwei Pixel falsch. */}
       <div className="px-4 sm:px-6 h-16 border-b-2 border-rule flex items-center gap-3 sm:gap-5">
+        {/* ── GB-15 (W2·24, Befund G15, 7.9.2026) · EINE KNOPF-FORM ───────────
+            GEMESSEN @390, hell und dunkel: in EINER Zeile standen drei Formen —
+            ☰ ohne Kasten (`lc-btn-ghost`), 🔍/◐/«DE ▾» mit 1-px-Rahmen UND
+            Füllung (`border-line bg-surface`), § als schwarze Fläche. F0.6
+            («Linien statt Flächen») und F0.9 (Bedien-Griffe als Textknopf).
+            Alle Griffe des Streifens tragen ab hier `lc-topbar-griff`
+            (index.css §GB-15): 44-px-Tap-Fläche unverändert, kein Rahmen,
+            keine Füllung, Zustand über Tinte und Unterstrich.
+            AUSGENOMMEN das Siegel (§): es ist die MARKE, kein Knopf — das
+            Referenzbild `vorschlag-freigegeben.html` trägt es so. */}
         {/* Mobil: Schublade öffnen — auf Desktop trägt die persistente Leiste. */}
         <button
           type="button"
           ref={menuKnopf}
-          className={`lc-btn lc-btn-ghost lc-btn-sm lg:hidden shrink-0 min-h-11 min-w-11 ${weicht}`}
+          className={`lc-topbar-griff lg:hidden shrink-0 ${weicht}`}
           aria-label="Navigation öffnen"
           aria-expanded={schubladeOffen}
           // aria-controls nur bei offener Schublade: die Ziel-ID existiert erst
@@ -128,7 +138,7 @@ export function Topbar({ onMenu, schubladeOffen, seitenleisteEingeklappt, onSeit
             der Ausnahme selbst entfallen. */}
         <button
           type="button"
-          className="lc-btn lc-btn-ghost lc-btn-sm hidden lg:inline-flex shrink-0 min-h-11 min-w-11"
+          className="lc-topbar-griff hidden lg:inline-flex shrink-0"
           // WCAG 4.1.2 · konstanter zugänglicher Name (QS-UI Folgeschritt, 5.9.2026):
           // der Name benennt konstant das bediente Ding, den Zustand trägt allein
           // `aria-pressed` (gedrückt = Leiste ist eingeblendet). Bewacht von
