@@ -24,7 +24,7 @@ export function MaterialKarte({ m }: { m: BrowseMaterial }) {
     >
       <div className="flex items-baseline justify-between gap-3">
         <span className="lc-overline">{overline}</span>
-        {m.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase">{m.sprache}</span>}
+        {m.sprache !== 'de' && <span className="lc-badge lc-badge-soft">{m.sprache}</span>}
       </div>
       <p className="mt-1.5 text-body-s font-medium text-ink-900 leading-snug line-clamp-3">{m.titel}</p>
       {/* lc-chip-zeile (LM-044/N1): der Stand-Chip ist ein <span> ohne role und

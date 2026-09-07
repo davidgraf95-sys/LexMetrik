@@ -313,10 +313,27 @@ export function EinfacheFristForm({ minimal = false, variante = 'block', onErgeb
       ) : (
         <fieldset className="space-y-1.5">
           <legend className="lc-overline">Ferien / Stillstand</legend>
-          <div className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-2 max-w-2xl`}>
+          {/* ── GB-20 (W2·24, Befund G20, 7.9.2026) · RADIO-ZEILEN STATT SECHS KAESTEN
+              GEMESSEN im ersten Bild des Fristenrechners, hell und dunkel, 1440
+              und 390: die Ferien-/Stillstand-Wahl war ein Raster aus SECHS
+              gerahmten Kaesten (`label.lc-card`, je 3-5 Zeilen Kleintext), der
+              gewaehlte zusaetzlich mit einem 2-px-Ring. F0.6 «Linien statt
+              Flaechen» und David 6.9.2026 («Linien statt Flaechen»).
+              NEU: eine Spalte, sechs Zeilen, 1-px-Trennlinie oben
+              (`lc-wahl-zeile`, index.css §GB-20); der gewaehlte Zustand traegt
+              den 3-px-Strich in `--reg-w` statt eines Rings — dieselbe Sprache,
+              die `.lc-wahl-kachel[aria-pressed]` seit R5 spricht (§5).
+              DIE SPALTENZAHL FAELLT WEG, nicht die Angabe: Titel, Untertext,
+              Radio, Reihenfolge, `name`, `checked`, `onChange` sind Wort fuer
+              Wort dieselben — die RECHENLOGIK ist unberuehrt (§3), gewaehlt
+              wird weiterhin genau ein Regime, und keine Option ist versteckt
+              (§1: welches Regime rechnet, darf nie hinter einer Ellipse oder
+              einem Mehr-Knopf stehen). Der `pk()`-Pane-Zweig entfaellt, weil er
+              nur die Spaltenzahl unterschied. */}
+          <div className="grid grid-cols-1 max-w-2xl">
             {FERIEN_OPTIONEN.map((o) => (
               <label key={o.code}
-                className={`lc-card px-3 py-2 cursor-pointer space-y-0.5 ${ferien === o.code ? 'ring-2 ring-brass-400' : ''}`}>
+                className={`lc-wahl-zeile px-3 py-2 cursor-pointer space-y-0.5 ${ferien === o.code ? 'lc-wahl-zeile-gewaehlt' : ''}`}>
                 {/* LM-077/LM-082 (B19): items-start statt items-center — bei
                     zweizeiligen Titeln (z. B. «Betreibungsferien (SchKG)»)
                     zentrierte der Radiobutton sonst zwischen den Zeilen statt

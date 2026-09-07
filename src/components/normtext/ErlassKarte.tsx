@@ -50,7 +50,7 @@ function KarteInhalt({ e }: { e: BrowseErlass }) {
               markiert (Design-Token danger, §13). */}
           {e.aufgehoben && <span className="lc-badge lc-badge-danger">aufgehoben</span>}
           {e.sprache !== 'de' && (
-            <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>
+            <span className="lc-badge lc-badge-soft">{e.sprache}</span>
           )}
         </span>
       </div>
