@@ -107,6 +107,14 @@ function KrumeInhalt({ krume, blatt, aufKrume, mitLink, children }: {
   if (krume.to && aufKrume) {
     return (
       <button type="button" onClick={() => aufKrume(krume.to!)}
+        /* R8 (7.9.2026): die Krume kappt per `truncate` — dann MUSS der volle
+           Wortlaut per `title` erreichbar bleiben. Gemessen ohne ihn: der
+           Blatt-Krumen auf /materialien/ESTV-KS-DBG-49 @320 zeigte 242 von
+           351 px («Kreisschreiben Nr. 49: Aufwand bei Ausland-Au…»), auf
+           /gesetze/kanton/ZH-211.11 132 von 276 px — der Rest war nirgends
+           abrufbar. Quelle ist `krume.label` (immer ein String), nicht
+           `inhalt`: das kann ein ReactNode sein. */
+        title={krume.label}
         /* Ring/Farbe kommen aus der globalen `:focus-visible`-Regel (index.css,
            Rolle --focus); NUR der Offset ist lokal: negativ, weil der Krümel in
            einer schmalen Kopfzeile sitzt und ein aussenliegender Ring dort
@@ -115,9 +123,9 @@ function KrumeInhalt({ krume, blatt, aufKrume, mitLink, children }: {
     );
   }
   if (krume.to && mitLink) {
-    return <Link to={krume.to} className="truncate no-underline hover:text-brass-700">{inhalt}</Link>;
+    return <Link to={krume.to} title={krume.label} className="truncate no-underline hover:text-brass-700">{inhalt}</Link>;
   }
-  return <span className={`truncate ${blatt ? 'font-medium text-ink-800' : ''}`}>{inhalt}</span>;
+  return <span title={krume.label} className={`truncate ${blatt ? 'font-medium text-ink-800' : ''}`}>{inhalt}</span>;
 }
 
 export function OrtsAngabe({ breadcrumb, blattLabel, artikel, aufKrume, mitLink, navLabel }: {
@@ -201,7 +209,7 @@ export function OrtsAngabe({ breadcrumb, blattLabel, artikel, aufKrume, mitLink,
           (`e2e/leser-v3-ortsangabe.e2e.ts`); er ändert nichts an der Anzeige. */}
       {artikel && (
         <>
-          <span data-ort-artikel className="num min-w-0 truncate text-micro font-medium text-ink-700 @md/ort:hidden">{artikel}</span>
+          <span data-ort-artikel title={artikel} className="num min-w-0 truncate text-micro font-medium text-ink-700 @md/ort:hidden">{artikel}</span>
           <span data-ort-artikel className="num hidden shrink-0 text-micro font-medium text-ink-700 @md/ort:inline">
             <span aria-hidden className="mr-1 text-ink-300">·</span>{artikelKurz}
           </span>

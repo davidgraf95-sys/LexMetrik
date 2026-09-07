@@ -98,7 +98,7 @@ export function BereichsReihe() {
           <Link key={abschnitt.ziel} to={abschnitt.ziel}
             className="group grid content-start gap-1.5 no-underline">
             <span aria-hidden className={`block h-[3px] w-full ${STRICH[a.reg]}`} />
-            <span className="mt-1 font-sans font-medium text-body-l leading-tight text-ink-900 group-hover:underline">
+            <span className="mt-1 lc-wortumbruch font-sans font-medium text-body-l leading-tight text-ink-900 group-hover:underline">
               {abschnitt.titel}
             </span>
             <span className="num font-serif text-h2 leading-none text-ink-900">

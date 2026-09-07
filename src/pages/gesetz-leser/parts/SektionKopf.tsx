@@ -106,7 +106,7 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel,
           <span className={`shrink-0 w-4 text-body-s transition-colors ${offen ? 'text-brass-600' : 'text-ink-500'} group-hover/sek:text-brass-700`}>{offen ? '▾' : '▸'}</span>
           {/* A30: bis/ter-Suffix des Randtitel-Enumerators hochgestellt (margLabel);
               No-op bei Sachtiteln ohne Enumerator-Suffix. */}
-          <span className={`${titelFont} ${titelStil} group-hover/sek:text-brass-700`}>{margLabel(rest || s.label)}</span>
+          <span className={`lc-wortumbruch ${titelFont} ${titelStil} group-hover/sek:text-brass-700`}>{margLabel(rest || s.label)}</span>
         </button>
         {sekFn && (
           <span className="shrink-0" data-fn-marker>

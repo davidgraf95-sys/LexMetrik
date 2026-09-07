@@ -177,8 +177,8 @@ function SprungNavigation({ ziele, springe, aktiv }: {
           brachen also um, statt zu scrollen, und rissen die klebende Leiste auf
           zwei Zeilen. Jetzt misst sie im Pane die PANE-Breite. */}
       <div className={pk(
-        'flex gap-2 overflow-x-auto pb-0.5 -mb-0.5 pr-5 sm:pr-0 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]',
-        'flex gap-2 overflow-x-auto pb-0.5 -mb-0.5 pr-5 @xl/pane:pr-0 @xl/pane:flex-wrap @xl/pane:overflow-visible [scrollbar-width:thin]',
+        'flex gap-2 overflow-x-auto lc-scrollrand-x pb-0.5 -mb-0.5 pr-5 sm:pr-0 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]',
+        'flex gap-2 overflow-x-auto lc-scrollrand-x pb-0.5 -mb-0.5 pr-5 @xl/pane:pr-0 @xl/pane:flex-wrap @xl/pane:overflow-visible [scrollbar-width:thin]',
       )}>
         {/* ── LM-059 (B15, 4.9.2026) · REITER SIND KEINE CHIPS ────────────────
             GEMESSEN vor dem Bau, `/rechtsprechung/bs_sozialversicherungsgericht_AH.2025.7`

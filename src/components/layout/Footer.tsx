@@ -75,10 +75,27 @@ export function Footer() {
             `sm` bleibt es einspaltig — dort ist der Fuss ohnehin gestapelt. */}
         <nav aria-label="Footer-Navigation">
           <p className="lc-overline mb-3">Navigation</p>
+          {/* ── R8 «Nichts abgeschnitten» (7.9.2026) · EIN LANGES WORT DARF SEINE
+              SPALTE NIE SPRENGEN ────────────────────────────────────────────
+              Gemessen auf ALLEN 25 Sweep-Routen x 1024/1280/1440 x hell/dunkel:
+              150 Funde der Kategorie a, immer derselbe Link — «Datenschutz-
+              erklaerung» braucht 137 px, die `sm:grid-cols-2`-Spalte bietet
+              124 px (Nav-Spalte ~272 px, minus `gap-x-6`). Das Wort ist EIN
+              Token, also greift der normale Wortumbruch nicht: es lief 13 px
+              aus seiner Zelle.
+              KEINE Ruecknahme von LM-139/B16 (zwei Kolonnen zum Hoehenausgleich)
+              und keine von D2 (44 px Tap-Ziel, WCAG 2.5.8): beides bleibt. Statt
+              die Spalte auf eine Magic-Number-Breite zu ziehen, die beim naechsten
+              laengeren Label und bei jeder Stufe des Schriftgroessen-Reglers wieder
+              risse, darf das Wort selbst brechen: `lc-wortumbruch` (Rezept in
+              index.css, dieselbe Wurzel traegt auch die Bereichs-Kacheln und die
+              Sektions-Titel des Lesers). Waechst dadurch eine Zeile auf zwei,
+              bleibt die Trefferflaeche >= 44 px (`min-h-11` ist ein Minimum,
+              kein Deckel). */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
             {NAVIGATION.map((n) => (
               <Link key={n.label} to={n.to}
-                className="flex items-center min-h-11 text-body-s text-ink-600 hover:text-ink-900 underline underline-offset-2 decoration-rule-soft hover:decoration-ink-900 transition-colors">
+                className="flex items-center min-h-11 lc-wortumbruch text-body-s text-ink-600 hover:text-ink-900 underline underline-offset-2 decoration-rule-soft hover:decoration-ink-900 transition-colors">
                 {n.label}
               </Link>
             ))}

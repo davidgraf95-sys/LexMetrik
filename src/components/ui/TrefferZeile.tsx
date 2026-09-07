@@ -76,11 +76,11 @@ export function TrefferZeile({ titel, untertitel, meta, marke, pfeil = '→', st
   return (
     <>
       <span className="min-w-0 flex-1">
-        <span className={`block text-body-s font-medium leading-snug text-ink-900${
+        <span className={`block lc-wortumbruch text-body-s font-medium leading-snug text-ink-900${
           klickbar ? ' transition-colors group-hover/treffer:text-brass-800' : ''}${
           streifen ? ' max-sm:line-clamp-2 sm:truncate' : ''}`}>{titel}</span>
         {untertitel !== undefined && untertitel !== null && untertitel !== '' && (
-          <span className="block line-clamp-2 text-body-s leading-snug text-ink-500">{untertitel}</span>
+          <span className="block lc-wortumbruch line-clamp-2 text-body-s leading-snug text-ink-500">{untertitel}</span>
         )}
         {meta && (
           <span className="mt-1 flex flex-wrap items-center gap-x-2 text-micro text-ink-500">{meta}</span>
