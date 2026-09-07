@@ -43,10 +43,10 @@
    "popover-lesbar-d31.e2e.ts",
    "w224-ga-kopf.e2e.ts",
    "w224-gb-register.e2e.ts",
-   "w224-r13b-reiter-cls.e2e.ts",
-   "w224-l6-panekopf.e2e.ts",
-   "w224-r14-reiter-modell.e2e.ts",
    "leser-bezuege-fuss-d34.e2e.ts",
+   "w224-l6-panekopf.e2e.ts",
+   "w224-r13b-reiter-cls.e2e.ts",
+   "w224-r14-reiter-modell.e2e.ts",
    "w224-r14b-meta-reiter.e2e.ts"
   ],
   "3": [
@@ -107,7 +107,8 @@
    "leser-v3-kontext-cls.e2e.ts",
    "leser-v3-panel-nachzug.e2e.ts",
    "leser-v3-scrim-b7n1.e2e.ts",
-   "leser-kein-ueberlauf.e2e.ts"
+   "leser-kein-ueberlauf.e2e.ts",
+   "leser-d35-f1-funktionszeile.e2e.ts"
   ],
   "6": [
    "fremdgesetz-verweis-aig.e2e.ts",

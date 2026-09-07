@@ -402,7 +402,16 @@ export default {
       // Höhen-Reservierungen (`titel-2z`, `beiwerk`, `inhalt-region`), und
       // `src/tests/tap-ziel-token.test.ts` hält index.css frei von rohen
       // min-height-Zahlen (F9: dort gehört nur var(--tap-ziel) hin).
-      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem', 'titel-2z': '2.35em', beiwerk: '1.5rem', 'inhalt-region': 'calc(100svh - 8rem)', 'kopf-stand': '5.4375rem', 'kopf-stand-sm': '4.375rem', 'kopf-stand-md': '3.375rem' },
+      // W2·24-D35-F1 (7.9.2026) · `bez-skelett` reserviert den BODEN der
+      // wartenden Rubrik in der Funktionszeile am Artikelende. Sie klappt auf
+      // KLICK auf (input-behaftet, CLS-exkludiert), aber der Entscheid-Shard
+      // trifft danach ein — und darf den Artikel darunter nicht noch einmal
+      // schieben. Der Wert ist ein BODEN und bewusst KNAPPER als der echte
+      // Inhalt: ein Entscheid-Eintrag misst Gruppenkopf + Chip + Regeste, die
+      // Reservierung 48 px. Ein Skelett, das MEHR reserviert, als der Inhalt
+      // braucht, verlegt den Sprung nur (der Block schrumpfte beim Laden) —
+      // dagegen misst `e2e/leser-d35-f1-funktionszeile` (e).
+      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem', 'titel-2z': '2.35em', beiwerk: '1.5rem', 'bez-skelett': '3rem', 'inhalt-region': 'calc(100svh - 8rem)', 'kopf-stand': '5.4375rem', 'kopf-stand-sm': '4.375rem', 'kopf-stand-md': '3.375rem' },
       // E4-Korrektur (David 25.7.2026): der frühere `toc-kontext`-33vh-Slot-
       // Token ist ERSATZLOS entfernt — er klemmte das Gliederungs-Sichtfenster
       // ein («aktuell schneidet es gliederung ab»). Das Kontext-Panel steht

@@ -133,11 +133,13 @@ for (const thema of ['light', 'dark'] as const) {
       test.slow();
       await page.goto('/gesetze/bund/OR#art-336_c');
       await expect(page.locator('#art-1')).toBeVisible({ timeout: 20_000 });
-      const details = page.locator('#art-336_c details.lr7-bez');
+      // D35-F1 (7.9.2026, §6.3): die Funktionszeile klappt je RUBRIK auf —
+      // hier gebraucht wird die Rubrik «Entscheide» (`data-reg="r"`).
+      const details = page.locator('#art-336_c .lr7-bez');
       await expect(details).toHaveCount(1, { timeout: 20_000 });
-      if (!(await details.evaluate((d) => (d as HTMLDetailsElement).open))) {
-        await details.locator('summary.lr7-bez-zeile').click();
-      }
+      const griff = details.locator('.lr7-bez-marke[data-reg="r"]');
+      await expect(griff).toHaveCount(1, { timeout: 20_000 });
+      if (await griff.getAttribute('aria-expanded') !== 'true') await griff.click();
       const chip = details.locator('[data-bezug-linie] a[href^="/rechtsprechung/"]').first();
       // ── WARTEFENSTER, GEMESSEN (CI-Fix E, 7.9.2026) ───────────────────────
       // Lauf 34066539241/Shard 2 meldete diesen Fall zweimal FLAKY (hell und

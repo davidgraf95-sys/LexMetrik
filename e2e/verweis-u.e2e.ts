@@ -171,8 +171,11 @@ test.describe('A7 — strukturiertes Verweis-Popover (Wortlaut → Entscheide �
     // Der Prüfpunkt bleibt Wort für Wort derselbe: der interne Verweis-Chip
     // öffnet das strukturierte Popover mit den Leitfall-Kanten. Neu ist EIN
     // Handgriff davor — genau der, den ein Leser seit R6b auch tut.
-    const bezuege = art.locator('summary.lr7-bez-zeile').first();
-    if (await bezuege.count() > 0 && !await art.locator('details.lr7-bez[open]').count()) {
+    // D35-F1 (7.9.2026, §6.3): die Zeile klappt je RUBRIK auf. Der Verweis-Chip
+    // «Art. 20 OR» hängt an der Rubrik «Verweise» (`data-reg="g"`) — genau die
+    // wird hier geöffnet, nicht mehr die ganze Zeile.
+    const bezuege = art.locator('.lr7-bez-marke[data-reg="g"]').first();
+    if (await bezuege.count() > 0 && await bezuege.getAttribute('aria-expanded') !== 'true') {
       await bezuege.click();
     }
     const chip = art.getByRole('link', { name: /^Art\. 20 OR$/ }).first();
