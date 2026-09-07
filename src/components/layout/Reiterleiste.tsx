@@ -512,15 +512,25 @@ export function Reiterleiste({ paneSchluessel = [] }: {
    *  «+» x 24 → 1140, der Streifen x 60|1196 → 24|1116, Layout-Shift 0.000944
    *  (input-frei, Quelle `DIV.relative.flex.min-w-0` in dieser Datei).
    *  Das ist der Befund «das führende + fällt beim ersten Reiter weg».
-   *  JETZT: EINE Aufrufstelle am Ende des Streifens — dort, wo D19 («analog zum
-   *  browser») das «+» ohnehin haben will und wo es bei jedem Reiterstand steht.
-   *  Was R2 daran gelegen war, bleibt: ohne Reiter trägt es keine linke
-   *  Trennkante (`rl-plus-solo`, und die ist CLS-neutral — der Rahmen liegt bei
-   *  fester `w-9` INNEN, box-border, s. index.css). */
-  const plusKnopf = (solo: boolean) => (
+   *
+   *  JETZT: EINE Aufrufstelle, und zwar die LINKE. Die Wahl ist nicht frei —
+   *  die Bestandssonde R2 (`e2e/w224-r11-reiterleiste.e2e.ts:345`, «+ am linken
+   *  Inhaltsrand») misst genau diesen Platz im leeren Fall und bleibt
+   *  unverändert (§6.3). Ein «+» am ENDE hätte sie rot gemacht; ein zweiter,
+   *  unsichtbarer Platzhalter links hätte den Reitern dauerhaft 36 px Leerraum
+   *  vorgeschoben. Bleibt der eine linke Platz: er erfüllt R2 in BEIDEN
+   *  Zuständen, kostet keinen Raum und bewegt sich nie.
+   *  WAS SICH DAMIT ÄNDERT (offen für Davids Entscheid): das Vorbild aus D19
+   *  («analog zum browser») setzt das «+» hinter den letzten Reiter. Seine
+   *  FUNKTION ist unberührt — Klick und Alt+T legen weiter einen neuen Reiter
+   *  an —, nur seine Seite ist jetzt links statt rechts.
+   *  `solo` heisst darum nicht mehr «ohne Reiter», sondern «ganz links, es steht
+   *  nichts links davon, das zu trennen wäre» — und das gilt immer. Die
+   *  Trennung zu den Reitern trägt jetzt der Streifen (`border-l`, unten). */
+  const plusKnopf = () => (
     <button type="button" onClick={neuerReiter}
       aria-label="Neuer Reiter" title="Neuer Reiter (Alt+T)"
-      className={`rl-plus${solo ? ' rl-plus-solo' : ''}`}>
+      className="rl-plus rl-plus-solo">
       <span aria-hidden className="lc-griff-glyph">+</span>
     </button>
   );
@@ -544,7 +554,15 @@ export function Reiterleiste({ paneSchluessel = [] }: {
       // CLS 0, bewacht in `e2e/w224-r11-reiterleiste.e2e.ts`.
       data-reiter-leer={leer ? '' : undefined}
       className={`print:hidden shrink-0 sticky top-[var(--app-krone-h)] z-leiste h-[var(--app-reiter-h)] bg-paper${
-        leer ? ' border-b border-transparent' : ' border-b border-rule-soft'}`}>
+        leer ? '' : ''}`}>
+      {/* ── R13B (7.9.2026) · DER UNTERSTRICH LIEGT AUF, NICHT IM FLUSS ──────
+          R2 wollte «kein Strich unter dem Nichts» und hat ihn als `border-b`
+          an-/abgeschaltet. Ein Rahmen ist aber Geometrie: box-border zieht er
+          1 px aus der INNENhöhe, die Zeile darin sass mit und ohne Reiter
+          verschieden hoch. Als absolut liegende 1-px-Linie sagt er dasselbe,
+          ohne dass die Leiste ihre Masse ändert — `borderBottomWidth` bleibt
+          in BEIDEN Zuständen `0px` (das misst R2). */}
+      {!leer && <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-rule-soft" />}
       {/* ── R13B (7.9.2026) · DIE ZEILE HAT IHRE HÖHE AUS SICH SELBST ────────
           GEMESSEN am Stand `cfa8a9f81`: der Streifen mass OHNE Reiter 16 px,
           MIT dem ersten 33 px — seine Höhe kam allein aus dem Inhalt, den er
@@ -553,10 +571,13 @@ export function Reiterleiste({ paneSchluessel = [] }: {
           stehen «+» und Blatt (beide `items-stretch`/`self-center`) vom ersten
           Bild an auf ihrer Endhöhe. */}
       <div className="flex h-full items-stretch px-4 sm:px-6">
-        {/* R2 · OHNE REITER STEHT DAS «+» LINKS, AM INHALTSRAND. Im Browser
-            beginnt die Leiste dort, wo der Inhalt beginnt — ein «+», das ganz
-            rechts im Leeren klebt, findet niemand. Mit Reitern bleibt es am
-            Ende des Streifens (unten), wo es dem letzten Reiter folgt. */}
+        {/* R2 · DAS «+» STEHT LINKS, AM INHALTSRAND. «Im Browser beginnt die
+            Leiste dort, wo der Inhalt beginnt — ein «+», das ganz rechts im
+            Leeren klebt, findet niemand.» R13B (7.9.2026) macht daraus den
+            EINZIGEN Platz: mit und ohne Reiter derselbe, damit der erste Reiter
+            ihn nicht mehr die Seite wechseln lässt (Herleitung bei
+            `plusKnopf`). */}
+        {plusKnopf()}
         {/* M6 · DOPPELKLICK AUF DEN LEERRAUM = NEUER REITER (Befund #34).
             GEMESSEN 6.9.2026: 457 px ungenutzte Fläche rechts des letzten
             Reiters — im Browser genau die Stelle, auf die man doppelklickt.
@@ -598,7 +619,7 @@ export function Reiterleiste({ paneSchluessel = [] }: {
             Reiter nicht mit weg). `.rl-plus` trägt nur Breite/Zentrierung/
             Hover (index.css); die 34-px-Höhe kommt aus `items-stretch` des
             Elternflusses, ohne eigene Höhen-Angabe. */}
-        {plusKnopf(leer)}
+
         {/* «+N» bzw. «N offen» — EIN Blatt für Überlauf (Desktop) und die
             schmale Ansicht (§5a Ziff. 5 + 8). Inhalt ist die gruppierte Liste
             `TabPanel`, also genau das, was das abgelöste ☰-Flyout zeigte,
