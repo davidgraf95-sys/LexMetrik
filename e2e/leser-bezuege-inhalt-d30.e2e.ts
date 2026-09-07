@@ -23,6 +23,11 @@
 //  · in `v3/LeserLesespalte.tsx` `onBezuegeOeffnen` weglassen  ⇒ (a)(b)(c) rot
 //  · in `parts/BezuegeKopf.tsx` den `ref`-Ruf entfernen        ⇒ (a) rot bei
 //    gemerkt offener Zeile
+//    (D35-F1, 7.9.2026: dieser Rot-Weg ist GEGENSTANDSLOS geworden — der
+//    gemerkte Zustand `lm.leser.bezuege-offen` ist ersatzlos gelöscht, die
+//    Zeile steht beim Laden immer zu. Der Beleg bleibt als Beleg SEINES
+//    Datums stehen (§2b); die Rot-Wege für (a) sind heute die beiden anderen
+//    hier genannten und der neue Wächter `leser-d35-f1-funktionszeile`.)
 //  · in `parts/ArtikelLeser.tsx` den Zähler wieder auf `zaehler` vorziehen ⇒ (b) rot
 import { test, expect, type Page, type Locator } from '@playwright/test';
 
@@ -47,15 +52,24 @@ async function marke(page: Page, artikel: string, reg: 'r' | 'm' | 'g' | 'w'): P
   return m ? Number(m[1]) : null;
 }
 
-/** Die Bezüge-Zeile aufklappen (idempotent) und auf den Apparat warten. */
-async function klappeAuf(page: Page, artikel: string): Promise<Locator> {
-  const details = page.locator(`#art-${artikel} details.lr7-bez`);
-  await expect(details, `keine Bezüge-Zeile an Art. ${artikel}`).toHaveCount(1, { timeout: 20_000 });
-  if (!(await details.evaluate((d) => (d as HTMLDetailsElement).open))) {
-    await details.locator('summary.lr7-bez-zeile').click();
-  }
-  await expect(details).toHaveAttribute('open', '', { timeout: 5_000 });
-  return details;
+/**
+ * EINE Rubrik der Funktionszeile aufklappen (idempotent).
+ *
+ * ── DEKLARIERTE ANPASSUNG (W2·24-D35-F1, 7.9.2026 — §6.3) ──────────────────
+ * Bis D34 war die Zeile EIN `<details>`: ein Klick auf die `<summary>` öffnete
+ * alle vier Rubriken zugleich. Seit D35-F1 trägt jede Rubrik ihren eigenen
+ * Griff (David: «das alles soll dann nur auf klick aufklappbar sein») — der
+ * Helfer nennt darum die Rubrik, die er will. Die vier ZUSAGEN (a)–(d) unten
+ * sind unverändert; nur der Weg zum Aufklappen ist ein anderer.
+ */
+async function klappeAuf(page: Page, artikel: string, reg: 'r' | 'm' | 'g' | 'w' = 'r'): Promise<Locator> {
+  const zeile = page.locator(`#art-${artikel} .lr7-bez`);
+  await expect(zeile, `keine Funktionszeile an Art. ${artikel}`).toHaveCount(1, { timeout: 20_000 });
+  const griff = zeile.locator(`.lr7-bez-marke[data-reg="${reg}"]`);
+  await expect(griff, `keine Rubrik «${reg}» an Art. ${artikel}`).toHaveCount(1, { timeout: 20_000 });
+  if (await griff.getAttribute('aria-expanded') !== 'true') await griff.click();
+  await expect(griff).toHaveAttribute('aria-expanded', 'true', { timeout: 5_000 });
+  return zeile;
 }
 
 test.describe('D30 · Bezüge-Zeile: was gezählt wird, wird auch gezeigt', () => {
@@ -140,7 +154,7 @@ test.describe('D30 · Bezüge-Zeile: was gezählt wird, wird auch gezeigt', () =
     await expect(page.locator('#art-1')).toBeVisible({ timeout: 20_000 });
     await expect(page.locator('#art-15_a .lr7-bez-marke[data-reg="m"]'))
       .toHaveText(/\d+\s*Materiali/, { timeout: 20_000 });
-    const details = await klappeAuf(page, '15_a');
+    const details = await klappeAuf(page, '15_a', 'm');
     const mat = details.locator('.lr7-bez-block[data-reg="m"] li[data-bez-material]');
     await expect(mat.first(), 'Materialien-Rubrik zählt, zeigt aber nichts').toBeVisible({ timeout: 25_000 });
     const zahl = await marke(page, '15_a', 'm');

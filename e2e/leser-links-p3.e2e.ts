@@ -69,12 +69,14 @@ test.describe('P3 · Links im Gesetzesleser', () => {
     await page.waitForTimeout(400);
     // Die Bezüge-Zeile aufklappen — ihre Links sind der Kern des Befunds und
     // liegen eingeklappt nicht im Layout.
-    const zeile = page.locator('#art-336_c .lr7-bez-zeile').first();
-    if (await zeile.count()) {
-      const offen = await page.locator('#art-336_c .lr7-bez').first().evaluate((d) => (d as HTMLDetailsElement).open);
-      if (!offen) await zeile.click();
-      await page.waitForTimeout(250);
+    // D35-F1 (7.9.2026, §6.3): je Rubrik ein eigener Griff — für diesen Befund
+    // zählen die Links ALLER Rubriken, also werden alle geöffnet.
+    const griffe = page.locator('#art-336_c .lr7-bez-marke');
+    for (let i = 0; i < await griffe.count(); i += 1) {
+      const g = griffe.nth(i);
+      if (await g.getAttribute('aria-expanded') !== 'true') await g.click();
     }
+    await page.waitForTimeout(250);
 
     const mess = await page.evaluate(() => {
       const nackt: string[] = [];
