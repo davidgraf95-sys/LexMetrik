@@ -83,6 +83,15 @@ export interface PaneKopfProps {
    *  `label` bleibt trotzdem gesetzt: die Steuer-Knöpfe brauchen ihn für ihre
    *  Accessible Names («‹StPO› schliessen») — sichtbar wird er nicht mehr. */
   nurSteuerung?: boolean;
+  /** ── L6 (Entscheid David 7.9.2026) · DER NAME, WENN DIE SEITE DIE KRUME HAT ─
+   *  Der Name des Fensters — die kanonische Kurzform des Dokuments darin, als
+   *  fertiges Element (`./PaneName`, dort Herleitung und §5-Quelle). Diese
+   *  Leiste rendert ihn opak und weiss nicht, woraus er entsteht: sie bleibt
+   *  reine Darstellung (§3), wie beim `ansichtSlot` des `InhaltsKopf`.
+   *  Gezeigt wird er NUR, wenn die Leiste ihren Identitäts-Teil abgegeben hat
+   *  (`nurSteuerung`); trägt sie ihn selbst, nennt die `OrtsAngabe` das Dokument
+   *  schon, und eine zweite Nennung wäre genau die Dopplung, die D4 verbietet. */
+  kurzform?: ReactNode;
   /** HTML5-Drag-Handler für den ⠿-Griff (nur wenn ziehbar, d. h. ≥2 Panes). */
   ziehbar?: boolean;
   onDragStart?: (e: DragEvent) => void;
@@ -115,7 +124,7 @@ const GRIFF_BOX = 'inline-flex h-7 w-7 items-center justify-center transition-co
 const GRIFF_FLAECHE = 'lc-hover-flaeche';
 const knopf = `${GRIFF_BOX} ${GRIFF_FLAECHE} text-ink-500 hover:text-ink-900 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink-500`;
 
-export function PaneKopf({ icon, label, stand, breadcrumb, onBreadcrumb, artikel, rolle, onSchliessen, onHauptfenster, onTeilen, teilenKopiert, onLinks, onRechts, kannLinks, kannRechts, nurSteuerung, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
+export function PaneKopf({ icon, label, stand, breadcrumb, onBreadcrumb, artikel, rolle, onSchliessen, onHauptfenster, onTeilen, teilenKopiert, onLinks, onRechts, kannLinks, kannRechts, nurSteuerung, kurzform, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
   // A-2: eine Zeile, ein Zuständiger. Trägt die Seite ihre Kopfzeile selbst,
   // zeigt diese Leiste NICHTS von der Identität — sonst stünde derselbe Ort
   // zweimal in zwei Zentimetern (§5, Ä45 «Doppelkrume»).
@@ -167,7 +176,35 @@ export function PaneKopf({ icon, label, stand, breadcrumb, onBreadcrumb, artikel
             Platz ist pane-eigen: hier steht kein Griff-Riegel, in den die Angabe
             gehörte, darum sitzt sie hinter der Ortsangabe (Trenner «·»). */}
         {zeigeIdentitaet && stand && <StandAngabe stand={stand} trenner />}
-        {rolle === 'primaer' && <span className="sr-only">(aktuelle Adresse)</span>}
+        {/* ── L6 (Entscheid David 7.9.2026) · EIN FENSTER OHNE NAMEN GAB ES NICHT
+            MEHR ────────────────────────────────────────────────────────────
+            GEMESSEN am Preview 4423, Split @1440 (`/gesetze/bund/OR?p=/gesetze/
+            bund/ZGB`): BEIDE Titelleisten trugen «⠿ … ▸ ✕» und sonst nichts —
+            die linke zusätzlich das sr-only «(aktuelle Adresse)». Zwei
+            Fenster nebeneinander, keines sagt, welches Gesetz darin liegt,
+            während die Reiter darüber «OR» und «ZGB» nennen. Ursache ist A-2:
+            der V3-Leser meldet `kopfzeileSelbst`, die Leiste gibt darauf ihren
+            GANZEN Identitäts-Teil ab — Krume UND Name.
+            A-2 bleibt richtig, aber es hat einen Krümel zu viel abgegeben. Die
+            Krume darf nicht doppelt stehen (Ä45), der NAME des Fensters aber
+            gehört der Titelleiste: sie ist für das Pane, was der Reiter für den
+            Browser-Tab ist. Genau diese Kurzform steht darum hier — kein
+            Rücksprung-Pfad, keine Krumen-Kette, ein Wort.
+            §5/§15: woher die Zeichenkette kommt und warum sie ein eigenes
+            Element ist, steht in `./PaneName` — nicht hier (§3).
+
+            ── DER PLATZHALTER IST ERSETZT, NICHT ERGÄNZT (§17-Gegengewicht) ──
+            Hier stand bis 7.9.2026 `{rolle === 'primaer' && <span
+            className="sr-only">(aktuelle Adresse)</span>}` — die einzige
+            «Beschriftung» des linken Fensters, und sie nannte nicht das
+            Dokument, sondern die ROLLE. Die Rolle sagt diese Leiste ohnehin
+            schon: der Schliess-Knopf unten heisst im primären Pane
+            «Hauptfenster schliessen», im sekundären «‹ZGB› schliessen». Zwei
+            verschieden formulierte Fassungen derselben Auskunft in EINER Leiste
+            sind der Fall, den D4 ausschliesst; die schwächere fällt. Ersatzlos
+            leer wird dabei nichts: `kurzform` ist nie leer — steht das Manifest
+            noch aus, liefert `verlaufLabel` «Gesetz öffnen». */}
+        {!zeigeIdentitaet && kurzform}
       </div>
       {/* Rechts: Steuerung. */}
       <div className="flex items-center">

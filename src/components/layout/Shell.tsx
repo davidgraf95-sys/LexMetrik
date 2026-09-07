@@ -17,6 +17,7 @@ import { PaneProvider } from './PaneKontext';
 import { InhaltsKopf } from './InhaltsKopf';
 import { InhaltsKopfMeldeProvider, istInhaltsPfad, kopfVonPfad, type KopfDaten } from './InhaltsKopfKontext';
 import { tabSchluessel, merkeTab, ersetzeTab, istReiterPfad } from '../../lib/tabs';
+import { PaneName } from './PaneName';
 import { verlaufLabel, erlassVonPfad, gesetzPfad, entscheidPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { useDialogFokus } from './useDialogFokus';
 
@@ -282,10 +283,18 @@ export function Shell({ children }: { children: ReactNode }) {
     })();
     return () => { lebt = false; };
   }, [multipane, kopfMoeglich, brauchtGesetze, brauchtEntscheide]);
+  // L6 (Entscheid David 7.9.2026): der Pane-Kopf nennt das Dokument, sobald die
+  // Inhaltsseite die Krume selbst trägt. Der Name ist ein fertiges Element
+  // (`./PaneName`) und KEIN Feld dieser Ableitung — sein Abonnement auf die
+  // Lesestellung soll die App-Hülle nicht mit-rendern (§15, Herleitung dort).
   const titelVon = (pfad: string) => {
     const stand = erlassVonPfad(pfad, manifeste)?.stand ?? null;
     const m = stand && /^(\d{4})-(\d{2})-(\d{2})/.exec(stand);
-    return { label: verlaufLabel(pfad, manifeste), stand: m ? `${m[3]}.${m[2]}.${m[1]}` : stand };
+    return {
+      label: verlaufLabel(pfad, manifeste),
+      kurzform: <PaneName pfad={pfad} manifeste={manifeste} />,
+      stand: m ? `${m[3]}.${m[2]}.${m[1]}` : stand,
+    };
   };
 
   // Dedup gegen ALLE offenen Panes (Primär-URL inkl., Sekundäre live) — kein Doppel.
@@ -511,8 +520,15 @@ export function Shell({ children }: { children: ReactNode }) {
               <div {...(multipane ? { onDragOver: dnd.spalte(0).onDragOver, onDrop: dnd.spalte(0).onDrop } : {})}
                 style={multipane ? wachstum(0) : undefined}
                 className={multipane ? `flex flex-col flex-1 min-w-0 border-l-2 ${dnd.spalte(0).ueber ? 'border-l-ink-900' : 'border-l-transparent'} max-lg:flex-none max-lg:w-full max-lg:snap-start` : 'contents'}>
+                {/* L6: `titelVon(pathname + search)` statt `titelVon(pathname)`
+                    — dieselbe Reiter-Identität, mit der die Leiste oben ihre
+                    Marken zeichnet (`paneSchluessel`). Ohne den Diskriminator
+                    `?r=2` fände `kurzformVon` bei zwei offenen Instanzen
+                    desselben Erlasses die ERSTE und zeigte deren Lesestellung.
+                    `label` und `stand` sind davon unberührt: beide Ableitungen
+                    schneiden die Query ohnehin ab (`pfadTeil`). */}
                 {multipane && (
-                  <PaneKopf {...titelVon(pathname)} breadcrumb={kopfDaten?.breadcrumb} onBreadcrumb={(to) => navigate(to)} artikel={kopfDaten?.artikel}
+                  <PaneKopf {...titelVon(pathname + search)} breadcrumb={kopfDaten?.breadcrumb} onBreadcrumb={(to) => navigate(to)} artikel={kopfDaten?.artikel}
                     nurSteuerung={kopfDaten?.kopfzeileSelbst}
                     rolle="primaer" onSchliessen={schliesseHaupt}
                     onRechts={() => verschiebePane(0, 1)} kannRechts={pane.sekundaer.length > 0}
