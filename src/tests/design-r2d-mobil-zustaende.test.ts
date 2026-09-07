@@ -100,9 +100,13 @@ describe('F2-1 · die abdunkelnde Fläche hinter einem Overlay hat EINE Quelle',
     }
   });
 
-  it('die sieben Fundstellen konsumieren die Klasse ihrer ROLLE', () => {
+  // D41 (7.9.2026): SECHS statt sieben — `v3/LeserScrim.tsx` ist ersatzlos
+  // entfallen (das «Ansicht ▾»-Menü trägt keine Abdunklung mehr, Herleitung
+  // dort, wo die Montage stand: `v3/LeserAnsichtV3.tsx`). Die Negativ-Kontrolle
+  // oben behält ihren Vorzustand-Wortlaut von damals unverändert (§2b): sie
+  // prüft den AUSDRUCK, nicht den heutigen Dateibestand.
+  it('die sechs Fundstellen konsumieren die Klasse ihrer ROLLE', () => {
     const rolle: Array<[string, string]> = [
-      ['pages/gesetz-leser/v3/LeserScrim.tsx', 'lc-scrim'],
       ['pages/gesetz-leser/v3/LeserPanelZone.tsx', 'lc-scrim'],
       ['pages/gesetz-leser/parts/GliederungSheet.tsx', 'lc-scrim'],
       ['components/rechtsprechung/FilterSheet.tsx', 'lc-scrim'],
