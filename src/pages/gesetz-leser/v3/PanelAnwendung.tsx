@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { artikelWerkzeugGruppen, werkzeugeFuerNorm } from '../../../lib/normtext/werkzeuge';
 import type { MaterialBezug, Werkzeug } from '../../../lib/normtext/werkzeuge';
 import { datumAnzeige } from '../../../components/rechtsprechung/format';
+import { GruppenKopf } from '../../../components/ui/GruppenKopf';
 import type { Geladen } from './panelKontextLaden';
 
 // ─── Reiter «Anwendung» (W2·7-VZUI, 31.8.2026) ───────────────────────────────
@@ -78,9 +79,21 @@ function WerkzeugChip({ w }: { w: Werkzeug }) {
   );
 }
 
-export function PanelAnwendung({ softLaw, erlassKey }: {
+// ── K-2b/F37 (W2·13-KANTONE, 31.8.2026) · WARUM DER KANTON HIER LEER IST ─────
+// Dieselbe Quelle wie bei den Materialien, dieselbe Messung: die neun
+// hinterlegten Behörden sind ausnahmslos eidgenössisch, kein kantonaler
+// Erlass-Key trägt eine Kante. Der Zusatz nennt darum NUR die
+// Behörden-Ressourcen — über die Werkzeuge sagt er nichts, denn die kommen aus
+// der Karten-Tabelle und sind an keine Ebene gebunden (dieser Zweig läuft
+// ohnehin nur, wenn es auch keine gibt).
+const KANTON_ABDECKUNG = 'Behörden-Ressourcen sind bisher nur zu Bundeserlassen erfasst.';
+
+export function PanelAnwendung({ softLaw, erlassKey, ebene }: {
   softLaw: Geladen<MaterialBezug[]>;
   erlassKey: string;
+  /** Ebene des Erlasses — durchgereicht aus dem Modell (§5, s. `PanelEntscheide`).
+   *  Steuert allein den Leerzustands-Zusatz; `undefined` = keine Aussage. */
+  ebene?: 'bund' | 'kanton';
 }) {
   // Beide Werkzeug-Quellen sind SYNCHRON (statische Karten-Tabelle, kein Fetch) —
   // sie haben darum keinen Ladezustand und dürfen bereits stehen, während die
@@ -101,6 +114,9 @@ export function PanelAnwendung({ softLaw, erlassKey }: {
     return (
       <p data-v3-panel-reiter-inhalt="anwendung" className="px-2.5 py-3 text-body-s text-ink-500">
         Zu diesem Erlass sind weder Behörden-Ressourcen noch Werkzeuge erfasst.
+        {ebene === 'kanton' && (
+          <span data-v3-panel-abdeckung="kanton" className="block text-ink-400">{KANTON_ABDECKUNG}</span>
+        )}
       </p>
     );
   }
@@ -109,9 +125,8 @@ export function PanelAnwendung({ softLaw, erlassKey }: {
     <div data-v3-panel-reiter-inhalt="anwendung" className="px-2.5 py-1">
       {ressourcen.length > 0 && (
         <section data-v3-anwendung="behoerden" className="pt-1">
-          <p className="lc-overline">Behörden-Praxis
-            <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{ressourcen.length}</span>
-          </p>
+          {/* B3-1 (R3-β): dichte Gestalt des EINEN Gruppenkopfs (`ui/GruppenKopf`). */}
+          <GruppenKopf als="p" dicht titel="Behörden-Praxis" zahl={ressourcen.length} />
           {/* §8: der Rang wird genannt, nicht vorausgesetzt. Eine Wegleitung neben
               Gerichtsentscheiden ohne diesen Satz läse sich wie eine Quelle
               gleichen Rangs — R16 verbietet Wertungsfarben, dieser Satz ersetzt
@@ -146,9 +161,7 @@ export function PanelAnwendung({ softLaw, erlassKey }: {
 
       {gruppen.length > 0 && (
         <section data-v3-anwendung="werkzeuge" className="pt-2">
-          <p className="lc-overline">Werkzeuge
-            <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{gruppen.length}</span>
-          </p>
+          <GruppenKopf als="p" dicht titel="Werkzeuge" zahl={gruppen.length} />
           <ul className="mt-0.5">
             {gruppen.map((g) => (
               <li key={`${g.von}-${g.bis}`} className="flex flex-wrap items-baseline gap-x-2 gap-y-1.5 border-t border-line/60 py-1.5 first:border-t-0">
@@ -165,9 +178,7 @@ export function PanelAnwendung({ softLaw, erlassKey }: {
 
       {grob.length > 0 && (
         <section data-v3-anwendung="werkzeuge-grob" className="pt-2">
-          <p className="lc-overline">Werkzeuge
-            <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{grob.length}</span>
-          </p>
+          <GruppenKopf als="p" dicht titel="Werkzeuge" zahl={grob.length} />
           {/* §8: die Zuordnung ist hier ERLASS-weit und nicht artikelscharf — das
               steht da, statt eine Genauigkeit zu suggerieren, die die Tabelle für
               diesen Erlass nicht führt. */}

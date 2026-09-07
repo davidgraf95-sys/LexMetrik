@@ -133,7 +133,14 @@ export function TeuerungForm() {
 
       <div className={`grid grid-cols-1 ${pk('sm:grid-cols-2', '@lg/pane:grid-cols-2')} gap-4`}>
         <Field label={modus === 'indexmiete' ? 'Nettomietzins alt (CHF/Monat)' : modus === 'unterhalt' ? 'Unterhaltsbeitrag gemäss Urteil (CHF)' : 'Betrag alt (CHF)'}>
-          <BetragsFeld className={inputCls + ' num w-44'} value={betrag}
+          {/* LM-072 (B12, 4.9.2026): die feste Feldbreite ist weg — das Feld folgt jetzt
+                seiner Rasterzelle wie jedes andere `Field` derselben Reihe. GEMESSEN
+                @1440 stand es als 176 px neben Feldern von 495 px, ohne dass die
+                schmalere Breite etwas aussagte (§8: eine Breite ist eine Zusage über
+                die erwartete Eingabelänge). Die schmalen Felder der INLINE-Reihen
+                (Zahl + Einheit nebeneinander, `w-24`) bleiben, dort trägt die Breite
+                die Zusammengehörigkeit. */}
+          <BetragsFeld className={inputCls + ' num'} value={betrag}
             aria-invalid={!!fehler && /Betrag/.test(fehler)}
             onChange={setBetrag} />
         </Field>

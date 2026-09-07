@@ -25,6 +25,23 @@ export async function sparqlSelect(query: string, fetchImpl: FetchImpl = fetch):
     body: `query=${encodeURIComponent(query)}`,
   });
   if (!res.ok) throw new Error(`Fedlex-SPARQL antwortet ${res.status}`);
+  // W2·22 (gemessen 2.9.2026): der Endpunkt beantwortet manche Abfrageformen mit
+  // HTTP 200 UND einer HTML-Fehlerseite — `res.ok` ist dann true und `.json()`
+  // wirft bloss einen nichtssagenden Parser-Fehler. Der Statuscode taugt nicht
+  // als Erfolgsmass (Skill `scraping-swiss-official-sources`, Falle 3: dieselbe
+  // Mechanik am Filestore). Massgeblich ist der Content-Type.
+  // Bewusst NUR ablehnend, wenn der Header DA ist und nicht nach JSON aussieht:
+  // die bestehenden Unit-Tests reichen Attrappen ohne `headers` durch (kein Netz),
+  // und eine HTML-Fehlerseite trägt IMMER `text/html`. So greift die Prüfung
+  // gegen die reale Falle, ohne netzfreie Tests zu brechen.
+  const typ = res.headers?.get?.('content-type') ?? null;
+  if (typ !== null && !typ.includes('json')) {
+    const anfang = (await res.text()).slice(0, 200).replace(/\s+/g, ' ');
+    throw new Error(
+      `Fedlex-SPARQL antwortet ${res.status}, aber Content-Type «${typ}» statt JSON `
+      + `(HTML-Fehlerseite trotz 200). Beginn: ${anfang}`,
+    );
+  }
   const json = (await res.json()) as { results?: { bindings?: SparqlBinding[] } };
   return json.results?.bindings ?? [];
 }

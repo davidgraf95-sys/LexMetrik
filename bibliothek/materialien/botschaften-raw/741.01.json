@@ -123,123 +123,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2010/1610"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/2293"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2012/744"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-10-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "10.092"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu Via sicura, Handlungsprogramm des Bundes  für mehr Sicherheit im Strassenverkehr"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant Via sicura, le programme d'action de la Confédération visant à renforcer la sécurité routière"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente Via sicura, programma d'intervento della Confederazione volto ad aumentare la sicurezza stradale"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "741.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2010/1610"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/2293"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2012/744"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-10-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "10.092"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu Via sicura, Handlungsprogramm des Bundes  für mehr Sicherheit im Strassenverkehr"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant Via sicura, le programme d'action de la Confédération visant à renforcer la sécurité routière"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente Via sicura, programma d'intervento della Confederazione volto ad aumentare la sicurezza stradale"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "741.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2010/1610"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/2293"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2012/744"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-10-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "10.092"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu Via sicura, Handlungsprogramm des Bundes  für mehr Sicherheit im Strassenverkehr"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant Via sicura, le programme d'action de la Confédération visant à renforcer la sécurité routière"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente Via sicura, programma d'intervento della Confederazione volto ad aumentare la sicurezza stradale"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "741.01"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2002/692"
     },
     "proj": {
@@ -465,6 +348,123 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente una modifica della legge sulla circolazione stradale (Revoca della licenza di condurre dopo un'infrazione commessa all'estero)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "741.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2010/1610"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/2293"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2012/744"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-10-20"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.092"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu Via sicura, Handlungsprogramm des Bundes  für mehr Sicherheit im Strassenverkehr"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant Via sicura, le programme d'action de la Confédération visant à renforcer la sécurité routière"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente Via sicura, programma d'intervento della Confederazione volto ad aumentare la sicurezza stradale"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "741.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2010/1610"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/2293"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2012/744"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-10-20"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.092"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu Via sicura, Handlungsprogramm des Bundes  für mehr Sicherheit im Strassenverkehr"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant Via sicura, le programme d'action de la Confédération visant à renforcer la sécurité routière"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente Via sicura, programma d'intervento della Confederazione volto ad aumentare la sicurezza stradale"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "741.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2010/1610"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/2293"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2012/744"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-10-20"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.092"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu Via sicura, Handlungsprogramm des Bundes  für mehr Sicherheit im Strassenverkehr"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant Via sicura, le programme d'action de la Confédération visant à renforcer la sécurité routière"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente Via sicura, programma d'intervento della Confederazione volto ad aumentare la sicurezza stradale"
     }
   }
 ]

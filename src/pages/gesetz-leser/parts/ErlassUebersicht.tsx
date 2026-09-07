@@ -6,8 +6,9 @@ import { erfassungsgrad, STUFE_WORT } from '../../../lib/normtext/erfassungsgrad
 import { zaehlWort } from '../../../lib/normtext/erlassKopfText';
 import type { KantonSystematik } from '../../../lib/normtext/systematik';
 import type { GliederungsKennzahlen } from '../gliederungsModell';
-import { AMTLICHE_FASSUNG, AMTLICHE_FASSUNG_AUFGEHOBEN } from '../benennung';
 import { formatiereDatum, kopfOverline, verifiziertesSachgebiet } from '../helpers';
+import { GruppenKopf } from '../../../components/ui/GruppenKopf';
+import { QuellLink } from '../../../components/ui/QuellLink';
 import {
   teilerfassung, nurErlassdatum, erlassOrgan, istDatumsToken,
 } from '../erlassUebersichtDaten';
@@ -138,10 +139,10 @@ export function ErlassUebersicht({
 
   return (
     <section data-erlass-uebersicht aria-labelledby="erlass-uebersicht-titel" className="space-y-2">
-      <div className="flex items-baseline gap-3">
-        <h2 id="erlass-uebersicht-titel" className="lc-overline text-brass-700">Erlass-Übersicht</h2>
-        <span aria-hidden className="h-px flex-1 bg-line" />
-      </div>
+      {/* C-2/C-6/C-7-NACHZUG (R2-A, 31.8.2026): selbstgezeichnetes
+          Gruppenkopf-Rezept → geteilter Baustein (§5/§10). Kein Zähler: die
+          Übersicht ist keine Menge. `items-baseline` → `items-center`. */}
+      <GruppenKopf stufe={2} id="erlass-uebersicht-titel" titel="Erlass-Übersicht" />
 
       {/* Konsolidierungs-Zeile. §15.2: sie steht IMMER und hat eine feste
           Zwei-Zeilen-Höhe (`min-h-uebersicht-hinweis` + `line-clamp-2`,
@@ -226,15 +227,19 @@ export function ErlassUebersicht({
           §8-Regel wie im Erlass-Kopf. */}
       <p className="truncate text-micro leading-snug">
         <span className="text-ink-500">Quelle: </span>
-        {erlass.quelleUrl && !erlass.aufgehoben && (
-          <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">{AMTLICHE_FASSUNG} ↗</a>
-        )}
-        {erlass.quelleUrl && erlass.aufgehoben && (
-          <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">{AMTLICHE_FASSUNG_AUFGEHOBEN} ↗</a>
+        {/* B-1/B3-5 (R3-α, 31.8.2026): hier standen zwei handgebaute Links —
+            dieselbe Anatomie wie `ui/QuellLink`, aber der Name war als
+            «{WORT} ↗» aus zwei Textknoten zusammengesetzt. `renderToString`
+            schiebt dazwischen ein `<!-- -->`; der zugängliche Name war im
+            prerenderten HTML also zerschnitten (die Herleitung steht im
+            Baustein). Beide Zweige laufen jetzt über ihn, die
+            Aufhebungs-Variante als deklarierte `variante="aufgehoben"`. */}
+        {erlass.quelleUrl && (
+          <QuellLink href={erlass.quelleUrl} variante={erlass.aufgehoben ? 'aufgehoben' : 'geltend'} />
         )}
         {erlass.pdfUrl && (
           <>{erlass.quelleUrl && PUNKT}
-            <a href={erlass.pdfUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">↗ amtliches PDF</a>
+            <a href={erlass.pdfUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700">↗ amtliches PDF</a>
           </>
         )}
         {!erlass.quelleUrl && !erlass.pdfUrl && <span className="text-ink-500">keine amtliche Quelle hinterlegt</span>}

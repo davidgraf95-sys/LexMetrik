@@ -6,6 +6,7 @@ import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { VorlagenSeite, type SeiteCtx, type VorlagenSeitenConfig } from '../components/vorlagen/VorlagenSeite';
 
 // ─── Vorlagen-Wizard: Abtretungserklärung / Zession (Art. 164 ff. OR) ───────
@@ -69,7 +70,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<FaAntworten>, schritt: number) {
           label={<><span>Betrag in der Erklärung nennen <span className="text-ink-500">(optional – die Bezeichnung muss die Forderung auch ohne Betrag bestimmen)</span></span></>} />
         {a.betragErfassen && (
           <Field label="Forderungsbetrag (CHF)">
-            <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.betrag} onChange={(e) => set('betrag', e.target.value)} placeholder="z. B. 25000.00" />
+            <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.betrag} onChange={(v) => set('betrag', v)} placeholder="z. B. 25'000.00" />
           </Field>
         )}
         <Checkbox

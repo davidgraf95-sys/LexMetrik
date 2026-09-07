@@ -31,17 +31,28 @@ import { STATUS_LABEL, type BezugStatus } from '../../lib/verzahnung/facetten';
 import type { BezugsBilanz, KlassenZahlen } from '../../lib/rechtsprechung/bezuege';
 import { ZeichenLegende } from './ZeichenLegende';
 
-/** Gemeinsame Schalter-Optik der Streifen.
- *  S1-Nachzug 17.8.2026 (Architektur-Prüfer C1): der Klammer-Zusatz «identisch zu
- *  ZeitraumWahl/HistAnsichtWahl» ist entfernt — beide Komponenten existieren nicht
- *  mehr (`ZeitraumWahl` mit W2·7-BEZUG/B5, `HistAnsichtWahl` mit S1/F1). Ein
- *  Verweis auf einen toten Namen führt die nächste Leserin in die Irre; die Optik
- *  steht seither allein hier. */
-const KNOPF = 'rounded px-1.5 py-0.5 text-xs transition-colors';
-const AKTIV = 'bg-brass-100/60 font-medium text-ink-900';
-const RUHIG = 'text-ink-500 hover:bg-brass-100/40';
-/** Klasse ohne eine einzige Kante in DIESEM Erlass — bedienbar, aber sichtbar leer. */
-const LEER = 'text-ink-400 opacity-60 hover:bg-brass-100/30';
+/** Klasse ohne eine einzige Kante in DIESEM Erlass — bedienbar, aber sichtbar leer.
+ *
+ *  ── W2·19-DESIGN-KONSISTENZ · D-2: DIE SCHALTER-OPTIK IST HIER WEG ──────────
+ *  Bis hierher standen drei Konstanten (`KNOPF`/`AKTIV`/`RUHIG`) mit einer
+ *  eigenen Knopf-Optik. Sie sind GELÖSCHT, nicht angeglichen: die Streifen
+ *  tragen jetzt die hausweite Chip-Familie `.lc-chip`/`.lc-chip-selected` in
+ *  einer `.lc-chip-zeile` (§5/§10 — Konsumenten auf EINEN Baustein ziehen).
+ *  Der Befund: dieselben drei Zeilen standen byte-gleich auch in
+ *  `pages/gesetz-leser/v3/PanelSachgebiet.tsx` — zwei Kopien EINER Optik, und
+ *  beide zeigten die Auswahl allein über eine Farbfläche, ohne das ✓-Präfix,
+ *  das `.lc-chip-selected` seit LM-040/F4 trägt (F2: «Farbe nie allein»).
+ *
+ *  KORREKTUR EINES IRRTUMS AM SELBEN ORT: der Kommentar behauptete, die Optik
+ *  «steht seither allein hier». Das war schon beim Schreiben falsch —
+ *  `PanelSachgebiet` führte dieselben Zeilen unter der ausdrücklichen Ansage
+ *  «wörtlich wie BezugFacettenWahl». Der Satz ist mit den Konstanten
+ *  weggefallen; die Optik steht jetzt tatsächlich an EINEM Ort: `src/index.css`.
+ *
+ *  Die Leer-Kennzeichnung bleibt als ZUSÄTZLICHE Dämpfung auf dem Chip (nicht
+ *  `disabled` — Begründung bei `schalterTitel`). Tragend ist unverändert die
+ *  Zahl «0» am Schalter und der Titel, nicht die Opazität. */
+const LEER = 'opacity-60';
 
 /**
  * Der Titel eines Instanz-Schalters — die ganze Auskunft in einem Satz (B7/c, §8).
@@ -112,7 +123,7 @@ export function BezugFacettenWahl({ klassen, kantone, kantoneVerfuegbar, klassen
 
   return (
     <>
-      <div role="group" aria-label="Instanzen der Bezüge" className="flex flex-wrap items-center gap-1 px-2.5 pt-1.5 pb-0.5">
+      <div role="group" aria-label="Instanzen der Bezüge" className="lc-chip-zeile flex flex-wrap items-center gap-x-2 gap-y-1.5 px-2.5 pt-1.5 pb-0.5">
         <span className="lc-overline mr-1">Instanzen</span>
         {BEDIENBARE_KLASSEN.map((k) => {
           const aktiv = klassen.includes(k);
@@ -123,10 +134,13 @@ export function BezugFacettenWahl({ klassen, kantone, kantoneVerfuegbar, klassen
             <button key={k} type="button" aria-pressed={aktiv} aria-label={titel}
               data-bezug-klasse={k} data-bezug-klasse-zahl={n} title={titel}
               onClick={() => onKlassen(schalteKlasse(klassen, k))}
-              className={`${KNOPF} ${aktiv ? AKTIV : n === 0 ? LEER : RUHIG}`}>
+              className={`lc-chip ${aktiv ? 'lc-chip-selected' : n === 0 ? LEER : ''}`}>
               {KLASSE_SCHALTER[k]}
               {n !== undefined && (
-                <span className="num tabular-nums ml-1 text-micro font-normal text-ink-500">{n}</span>
+                /* LM-051: Trenner als eigener Textknoten (sonst «BGE164» beim
+                   Kopieren). ink-600 statt ink-500 — 12px-Ziffer auf --well
+                   ≥4.5:1 (R4); der aktive Chip erbt brass-800. */
+                <>{' '}<span className={`num ml-1 font-normal ${aktiv ? '' : 'text-ink-600'}`}>{n}</span></>
               )}
             </button>
           );
@@ -136,20 +150,23 @@ export function BezugFacettenWahl({ klassen, kantone, kantoneVerfuegbar, klassen
       {/* Kantons-Feinschnitt nur, wenn die kantonale Klasse überhaupt AN ist —
           sonst wirkungslos (§13 F4, gleiches Muster wie ZeitraumWahl). */}
       {klassen.includes('kantonal') && kantoneVerfuegbar.length > 0 && (
-        <div role="group" aria-label="Kantone der kantonalen Entscheide" className="flex flex-wrap items-center gap-1 px-2.5 pt-1.5 pb-0.5">
+        <div role="group" aria-label="Kantone der kantonalen Entscheide" className="lc-chip-zeile flex flex-wrap items-center gap-x-2 gap-y-1.5 px-2.5 pt-1.5 pb-0.5">
           <span className="lc-overline mr-1">Kantone</span>
           <button type="button" aria-pressed={alleKantone} onClick={() => onKantone([])}
             title="Kantonale Entscheide aus allen erfassten Kantonen zeigen"
-            className={`${KNOPF} ${alleKantone ? AKTIV : RUHIG}`}>
+            className={`lc-chip ${alleKantone ? 'lc-chip-selected' : ''}`}>
             alle
           </button>
           {kantoneVerfuegbar.map((k) => {
             const aktiv = kantone.includes(k);
+            /* `num` entfällt: `.lc-chip` setzt die Mono-Stimme bereits (§13 e —
+               Kantonskürzel sind ein Struktur-Etikett), die Zusatzklasse wäre
+               eine zweite Wahrheit über dieselbe Schrift. */
             return (
               <button key={k} type="button" aria-pressed={aktiv} data-bezug-kanton={k}
                 title={`Nur kantonale Entscheide aus ${k} zeigen`}
                 onClick={() => onKantone(schalteKanton(kantone, k))}
-                className={`num ${KNOPF} ${aktiv ? AKTIV : RUHIG}`}>
+                className={`lc-chip ${aktiv ? 'lc-chip-selected' : ''}`}>
                 {k}
               </button>
             );

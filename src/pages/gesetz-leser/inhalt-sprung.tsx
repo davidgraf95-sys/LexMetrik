@@ -6,11 +6,14 @@ import { flushSync } from 'react-dom';
 import type { NavigateFunction } from 'react-router-dom';
 import type { InternRefs } from '../../components/NormText';
 import type { Sektion } from '../../lib/normtext/browse';
+import type { BrowseErlass } from '../../lib/normtext/browse-typen';
+import { erlassPfad } from '../../lib/normtext/erlassAdresse';
 import type { NormSnapshot } from '../../lib/normtext/typen';
-import { pfadZu } from './helpers';
+import { grundartMeta, pfadZu } from './helpers';
 import { istHashVerbraucht } from './scrollAnker';
 import { paneRoot } from './berechnungen';
 import { loeseSpyNachlauf } from './inhalt-hooks';
+import { useTiefLinkZweig } from './v3/tiefLinkZweig';
 
 // ═══ ABSCHNITT · Sektions-Sprung, Instanz-Navigation, Suche-Scroll (§6.6-Split,
 // QS-TOK/T14) ════════════════════════════════════════════════════════════════
@@ -59,6 +62,9 @@ export function useSektionSprung(opts: {
     jumpLockRef: MutableRefObject<boolean>;
     autoOffenRef: MutableRefObject<Set<string>>;
     autoTickRef: MutableRefObject<Map<string, number>>;
+    /** Laufender Pfadwechsel-Tick (W2·24-R6c: der Tieflink-Zweig braucht ihn,
+     *  damit sein Ast denselben Nachlauf bekommt wie ein vom Spy geöffneter). */
+    autoTickNowRef: MutableRefObject<number>;
     manuellOffenRef: MutableRefObject<Set<string>>;
     manuellZuRef: MutableRefObject<Set<string>>;
     tocBaumTimer: MutableRefObject<number | null>;
@@ -68,8 +74,16 @@ export function useSektionSprung(opts: {
     sektionen, sekRefs, location, istSekundaer, imPane, wurzel, sucheDebounced, springeZuArtikel,
     setOffen, setTocBaum, setAktivIds, setTocAuf, scrollVorSucheRef, sucheVorherRef,
     scrollBeiSuchwechsel = true,
-    refs: { jumpLockRef, autoOffenRef, autoTickRef, manuellOffenRef, manuellZuRef, tocBaumTimer },
+    refs: { jumpLockRef, autoOffenRef, autoTickRef, autoTickNowRef, manuellOffenRef, manuellZuRef, tocBaumTimer },
   } = opts;
+
+  // W2·24-R6c · D21-Nebenfund: der Tieflink öffnet seinen Gliederungszweig VOR
+  // dem ersten Bild — er gehört zu den Sprüngen und steht darum hier. Befund,
+  // Messreihe und Herleitung: `./v3/tiefLinkZweig`.
+  useTiefLinkZweig({
+    hash: location.hash, sektionen, erlassMarke: location.key,
+    setTocBaum, autoOffenRef, autoTickRef, autoTickNowRef, manuellOffenRef, manuellZuRef,
+  });
 
   // Sprung aus dem Gliederungs-Baum (TOC): Pfad öffnen, markieren, scrollen. Beim
   // Sprung den mobilen Drawer schliessen (analog Seitenleiste). Rank 4 (QS-PERF,
@@ -230,13 +244,123 @@ export function useSektionSprung(opts: {
   return springeZuSektion;
 }
 
+// ─── §-Designation des gelesenen Erlasses (F41/F40, W2·13-KANTONE) ───────────
+/**
+ * Zählt der gelesene Erlass seine Bestimmungen mit «§»?
+ *
+ * Die Weiche gibt es bereits: `bestimmungsEtikett: 'paragraf'` im
+ * Grundart-Register (SSoT, §5) — sie wird hier ABGEFRAGT, nicht neu erfunden.
+ * Ehrlichkeits-Vermerk (§8): das Register führt die Etiketten durchgehend mit
+ * `bestimmungsEtikettStatus: 'entwurf'` — die Link-Entscheidung hängt an einer
+ * noch nicht fachlich abgenommenen Klassifikation. Wirkung bleibt auf
+ * Link/kein-Link beschränkt, der Normtext selbst ändert nie
+ * und nicht aus dem Wortlaut geraten (§2). Zugang ist `grundartMeta`, dieselbe
+ * Ableitung, die `v3/erlassAnsicht.bestimmungsWort` benutzt.
+ *
+ * Der Schlüssel steckt im Lese-Basispfad: `erlassPfad()` baut ihn als
+ * `/gesetze/<routenEbene>/<encodeURIComponent(key)>` — das letzte Segment
+ * dekodiert ist genau der Register-Key («BS-427.800», «OR»). Bewusst KEIN
+ * zweiter Erlass-Parameter durch die Hook-Kette: `basisPfad` ist die Angabe,
+ * die `useInternRefs` ohnehin führt, und ein zweiter Weg zum selben Schlüssel
+ * wäre die Stelle, an der die beiden auseinanderlaufen.
+ *
+ * Rein und deterministisch (§2); ein unbekannter Key liefert `false` (Bund und
+ * alles Unklassierte bleiben damit unverändert — kein Rückfall auf «§»).
+ */
+export function istParagrafDesigniert(basisPfad: string): boolean {
+  return grundartMeta(schluesselAusPfad(basisPfad)).bestimmungsEtikett === 'paragraf';
+}
+
+/** Register-Schlüssel aus dem Lese-Basispfad («/gesetze/kanton/BS-427.800» →
+ *  «BS-427.800»). EINE Ableitung für alle Weichen der Lesesicht (§5).
+ *  Defektes %-Escape ⇒ roh weiterverwenden: `decodeURIComponent` WIRFT dann,
+ *  und ein geworfener Fehler im Lese-Pfad wäre eine leere Seite statt eines
+ *  fehlenden Links. */
+function schluesselAusPfad(basisPfad: string): string {
+  const letztes = basisPfad.split('/').pop() ?? '';
+  try { return decodeURIComponent(letztes); } catch { return letztes; }
+}
+
+// ─── V-3 · Kürzel-Register des Kantons (W2·20-VERWEIS-SCHAERFE) ─────────────
+/**
+ * Kürzel → Lese-Adresse der ANDEREN Erlasse desselben Kantons.
+ *
+ * Der Grosswort-Guard in `NormText` sperrt «§ 6 IRG», weil ein Kürzel ohne
+ * Kanton mehrdeutig ist («ein StG in BS ist nicht das StG in ZH»). Der Kanton
+ * des gelesenen Erlasses steht aber fest, und das Register-Manifest hat der
+ * Leser ohnehin geladen — kein neuer Client-Index, kein Eager-Fetch (§15).
+ * Rein und deterministisch (§2), darum ohne Hook und einzeln testbar.
+ *
+ * VIER HARTE REGELN, jede eine Fundstelle des Messberichts vom 31.8.2026:
+ *  1. KANDIDAT ist ein EINZELNES Wort. Das Register-Feld `kuerzel` trägt
+ *     kantonal teils den ganzen Titel («Dekret über den Notariatstarif», bis
+ *     521 Zeichen) und teils ein Paar «Langname; Kürzel»
+ *     («Behindertenfinanzierungsgesetz; BeFiG»). Am Zitat steht immer EIN Wort
+ *     («IRG», «SoHaG», «Personalgesetz»), darum werden die «;»-Segmente
+ *     getrennt und mehrwortige verworfen. Ein mehrwortiges Kürzel zu matchen
+ *     hiesse, im Fliesstext nach Titeln zu suchen — das ist Raten (§1).
+ *  2. EINDEUTIG IM KANTON. Zwei Erlasse mit demselben Kandidaten löschen ihn
+ *     (65 mehrdeutige Kürzel im Korpus) — lieber Text als der falsche der
+ *     beiden.
+ *  3. NIE DER GELESENE ERLASS. Er zählt bei der Eindeutigkeit MIT (sonst würbe
+ *     ein geteiltes Kürzel plötzlich den anderen Erlass), ist aber nie Ziel:
+ *     ein Verweis auf den eigenen Erlass ist Sache der V-2-Selbstmarker-Weiche
+ *     und bleibt ein Sprung, kein Aussen-Verweis.
+ *  4. NUR LESBARE ZIELE (`status === 'snapshot'`): ein Link soll den Wortlaut
+ *     zeigen, nicht eine Registerkarte ohne Text (§8).
+ *
+ * `null`/leerer Kanton (Bund, Staatsverträge) ⇒ `undefined` ⇒ die Weiche in
+ * `NormText` ruht, Rendering byte-identisch zum Stand davor.
+ */
+export function baueKantonKuerzelKarte(
+  erlasse: readonly BrowseErlass[] | undefined,
+  kanton: string | null | undefined,
+  eigenerKey: string | undefined,
+): ReadonlyMap<string, string> | undefined {
+  if (!erlasse || !kanton) return undefined;
+  const karte = new Map<string, string>();
+  const mehrdeutig = new Set<string>();
+  for (const e of erlasse) {
+    if (e.kanton !== kanton || e.status !== 'snapshot') continue;
+    for (const k of kuerzelKandidaten(e.kuerzel)) {
+      if (mehrdeutig.has(k)) continue;
+      const schon = karte.get(k);
+      if (schon !== undefined && schon !== erlassPfad(e)) { karte.delete(k); mehrdeutig.add(k); continue; }
+      karte.set(k, erlassPfad(e));
+    }
+  }
+  if (eigenerKey) {
+    const eigen = erlasse.find((e) => e.key === eigenerKey);
+    if (eigen) for (const k of kuerzelKandidaten(eigen.kuerzel)) karte.delete(k);
+  }
+  return karte;
+}
+
+/** Die Kürzel-Kandidaten EINES Registereintrags (Regel 1 oben). */
+export function kuerzelKandidaten(kuerzel: string): string[] {
+  return kuerzel.split(';').map((s) => s.trim())
+    .filter((s) => s.length >= 2 && !/\s/.test(s) && /^[A-ZÄÖÜ]/.test(s));
+}
+
 // ─── Token-Auflösung für bare Artikelverweise im Wortlaut ────────────────────
-export function useInternRefs({ eintraege, basisPfad, springeZuArtikel, istSekundaer, navigate }: {
+export function useInternRefs({ eintraege, basisPfad, springeZuArtikel, istSekundaer, navigate, erlassKuerzel, manifestErlasse, kanton }: {
   eintraege: NormSnapshot[] | null;
   basisPfad: string;
   springeZuArtikel: (token: string) => void;
   istSekundaer: boolean;
   navigate: NavigateFunction;
+  /** V-2 (W2·20): Register-Kürzel des gelesenen Erlasses, für die
+   *  Selbstmarker-Weiche in NormText. Kommt aus dem Register-Manifest, das der
+   *  Leser ohnehin geladen hat — kantonal ist es NICHT aus `basisPfad`
+   *  ableitbar (der trägt die Systematik-Nummer «BS-410.700», das Kürzel ist
+   *  «SLV»). Ungesetzt ⇒ die Weiche ruht (byte-identisches Rendering). */
+  erlassKuerzel?: string;
+  /** V-3 (W2·20): das Register-Manifest, das der Leser ohnehin geladen hat, und
+   *  der Kanton des gelesenen Erlasses. Beides ist ROHSTOFF — die Kürzel-Karte
+   *  entsteht hier (`baueKantonKuerzelKarte`), damit alle Weichen der
+   *  Lesesicht an EINER Stelle gebaut werden. Fehlt eines, ruht V-3. */
+  manifestErlasse?: readonly BrowseErlass[];
+  kanton?: string | null;
 }) {
   // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
   return useMemo<InternRefs | undefined>(() => {
@@ -257,6 +381,16 @@ export function useInternRefs({ eintraege, basisPfad, springeZuArtikel, istSekun
       if (istSekundaer) { springeZuArtikel(t); return; }
       navigate(`${basisPfad}${window.location.search}#art-${t}`);
     };
-    return { tokenMap, basisPfad, springeZu: springeZuRef };
-  }, [eintraege, basisPfad, springeZuArtikel, istSekundaer, navigate]);
+    // F41/F40: §-Designation einmal je Erlass bestimmen und mitgeben — NormText
+    // fragt das Register nicht selbst (Schichtentrennung §3: die Komponente
+    // bekommt die Weiche als Wert, nicht die Nachschlage-Fähigkeit).
+    return {
+      tokenMap, basisPfad, springeZu: springeZuRef,
+      paragrafDesigniert: istParagrafDesigniert(basisPfad),
+      eigenesKuerzel: erlassKuerzel,
+      // V-3: kantons-gescopetes Kürzel-Register; der gelesene Erlass steckt
+      // im Basispfad (dieselbe Ableitung wie `istParagrafDesigniert`).
+      kantonKuerzel: baueKantonKuerzelKarte(manifestErlasse, kanton, schluesselAusPfad(basisPfad)),
+    };
+  }, [eintraege, basisPfad, springeZuArtikel, istSekundaer, navigate, erlassKuerzel, manifestErlasse, kanton]);
 }

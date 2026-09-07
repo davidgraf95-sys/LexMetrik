@@ -18,7 +18,7 @@ test.describe('Gesetze-UX 9 Punkte', () => {
   // OR.json ~1.9 MB → ~1700 Artikel). Die Detailseite liefert nur PRERENDERTES
   // Volltext-HTML (erlassVolltextHtml: <article> OHNE id="art-1", OHNE Klapp-Knopf);
   // React ersetzt es clientseitig NACH dem Fetch+Parse (render-then-replace, §15.5,
-  // kein hydrateRoot). #art-1, der «Artikel einklappen»-Knopf und die Reiter-
+  // kein hydrateRoot). #art-1, der Artikel-Klappknopf und die Reiter-
   // Registrierung entstehen also erst nach dem Client-Takeover. Die auto-wartenden
   // Locators (locator.click ohne actionTimeout → an das TEST-Timeout gebunden)
   // warten korrekt genau darauf. Auf dem 1-Kern-CI-Runner (workers:1) übersteigt die
@@ -73,11 +73,24 @@ test.describe('Gesetze-UX 9 Punkte', () => {
     await page.goto('/gesetze/bund/OR');
     const art = page.locator('#art-1');
     await expect(art).toContainText('Willensäusserung'); // Body sichtbar
-    await art.getByRole('button', { name: 'Artikel einklappen' }).click();
-    // Erst auf das deterministische Umschalt-Signal warten (Knopf trägt jetzt
-    // «Artikel ausklappen»), DANN den Body prüfen — sonst rennt die Assertion auf
-    // langsamen CI-Runnern gegen die noch laufende Einklapp-Umschaltung (Flake).
-    await expect(art.getByRole('button', { name: 'Artikel ausklappen' })).toBeVisible();
+    // §6.3-ANPASSUNG 5.9.2026 (deklarierte fachliche Änderung, QS-UI
+    // Folgeschritt): der Klapp-Knopf hiess zustandsabhängig «Artikel
+    // einklappen» / «Artikel ausklappen» — zwölf wortgleiche Namen auf
+    // /gesetze/bund/GEBV_HREG, 1598 auf dem OR, und der Name wechselte beim
+    // Klick (WCAG 4.1.2, Tor ARIA_ZUSTANDSNAME). Er heisst jetzt konstant
+    // «‹Art. N› auf- und zuklappen»; den Zustand trägt `aria-expanded`.
+    // Das deterministische Umschalt-Signal, auf das diese Spec wartet, ist
+    // damit NICHT verloren, sondern präziser: statt auf einen Namenswechsel
+    // wartet sie auf `expanded` — dieselbe Wartebedingung, an der richtigen
+    // Stelle. Die Sache der Spec (Body klappt zu, Nummer bleibt, Randtitel
+    // bleibt) ist unverändert.
+    const klapp = art.getByRole('button', { name: '«Art. 1» auf- und zuklappen' });
+    await expect(klapp, 'Vorbedingung: Artikel ist aufgeklappt').toHaveAttribute('aria-expanded', 'true');
+    await klapp.click();
+    // Erst auf das Umschalt-Signal warten (`aria-expanded=false`), DANN den Body
+    // prüfen — sonst rennt die Assertion auf langsamen CI-Runnern gegen die noch
+    // laufende Einklapp-Umschaltung (Flake).
+    await expect(klapp).toHaveAttribute('aria-expanded', 'false');
     // Body weg, Artikelnummer bleibt. §6.3-Anpassung 29.6.2026: Der Randtitel
     // «Im Allgemeinen» ist seit B1 ein eigener Sektionskopf AUSSERHALB des Artikels
     // (immer sichtbar) — daher auf Seitenebene geprüft, nicht mehr innerhalb #art-1.
@@ -85,8 +98,8 @@ test.describe('Gesetze-UX 9 Punkte', () => {
     await expect(art.getByText('Art. 1')).toBeVisible();
     await expect(page.getByText('Im Allgemeinen', { exact: false }).first()).toBeVisible();
     // Wieder aufklappen — ebenso erst auf das Umschalt-Signal warten.
-    await art.getByRole('button', { name: 'Artikel ausklappen' }).click();
-    await expect(art.getByRole('button', { name: 'Artikel einklappen' })).toBeVisible();
+    await klapp.click();
+    await expect(klapp).toHaveAttribute('aria-expanded', 'true');
     await expect(art).toContainText('Willensäusserung');
   });
 
@@ -99,14 +112,40 @@ test.describe('Gesetze-UX 9 Punkte', () => {
     await expect(page.locator('[data-toc-aktiv]').first()).toBeVisible();
   });
 
+  // ── §6.3-DEKLARATION 6.9.2026 (W2·24 R2/R11 · D19) ─────────────────────────
+  // GEGENSTAND UNVERÄNDERT: die Übersicht ALLER offenen Reiter steht in der
+  // Kopfzone und ist gruppiert — Kategorie «Gesetze», darunter die Herkunft
+  // «Bund» (`lib/tabGruppen`). GEÄNDERT ist der WEG dorthin: das Reiter-Dropdown
+  // der alten Topbar ist der Arbeitsleiste gewichen (`layout/Reiterleiste.tsx`).
+  // Ihr Blatt-Auslöser heisst jetzt konstant «Alle N offenen Reiter» (die Zahl
+  // gehört zum Namen) und erscheint erst, wenn es etwas zu überlaufen gibt
+  // (Desktop: `ueberlaufZahl > 0`; schmale Ansicht ab drei Reitern). Zwei
+  // geöffnete Gesetze reichten dafür nicht mehr — der Fall lief 150 s in den
+  // Timeout, weil er auf einen Knopf wartete, den es bei zwei Reitern nicht
+  // gibt. Der Wächter stellt die Bedingung darum selbst her (Reiter-Speicher
+  // seeden, Muster aus `a11y.e2e.ts` / `w224-r11-reiterleiste.e2e.ts`).
+  // ROT ZU BEKOMMEN (§6.7): in `lib/tabGruppen.reiterKategorie` das
+  // `gesetze`-Präfix streichen ⇒ die Bund-Erlasse landen unter «Weitere» und
+  // die beiden Gruppen-Überschriften fehlen.
   test('P3/B: Reiter-Übersicht im Header, gruppiert (Gesetze→Bund)', async ({ page }) => {
-    // Zwei Gesetze öffnen → Reiter entstehen.
-    await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible();
+    // Startroute nur als Herkunft für `localStorage`: was hier gesetzt wird,
+    // überschreibt sie. (Bis R14b trug `/kontakt` selbst keinen Reiter; seit
+    // R14b trägt jede Route einen — für diesen Fall ohne Belang, weil das Ziel
+    // `/gesetze/bund/ZGB` bereits im Seed steht und die Zahl im Knopfnamen
+    // ohnehin als `\d+` gelesen wird.)
+    await page.goto('/kontakt');
+    await page.evaluate(() => {
+      try {
+        localStorage.setItem('lexmetrik-tabs', JSON.stringify(
+          ['OR', 'ZGB', 'StGB', 'ZPO', 'StPO', 'SchKG', 'BV', 'DSG', 'URG']
+            .map((k) => ({ path: `/gesetze/bund/${k}` }))));
+      } catch { /* privater Modus */ }
+    });
     await page.goto('/gesetze/bund/ZGB');
     await expect(page.locator('article').first()).toBeVisible();
-    // Übersicht aus der TOPBAR öffnen (Trigger trägt aria-label «Alle geöffneten Reiter»).
-    await page.getByRole('button', { name: 'Alle geöffneten Reiter' }).click();
+    // Übersicht aus der KOPFZONE öffnen (Arbeitsleiste → Blatt).
+    const ausloeser = page.getByRole('button', { name: /Alle \d+ offenen Reiter/ });
+    await ausloeser.click();
     const dialog = page.getByRole('dialog', { name: 'Alle geöffneten Reiter' });
     await expect(dialog).toBeVisible();
     await expect(dialog.getByText('Gesetze', { exact: true })).toBeVisible();

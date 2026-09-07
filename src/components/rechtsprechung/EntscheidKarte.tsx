@@ -4,6 +4,7 @@ import { themaText, istSynth, istBetreff, istBge, hauptIdentitaet } from '../../
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
 import { datumAnzeige, DATUM_UNBEKANNT_TITEL, spracheBadgeTitel } from './format';
+import { StatusBadge } from '../verzahnung/StatusBadge';
 
 // Karte eines Entscheids (Dichte 'karten'). Hierarchie-Umkehr ggü. der alten
 // Karte: das THEMA führt (Scent), das Aktenzeichen wandert in die gedämpfte
@@ -29,8 +30,13 @@ export function EntscheidKarte({ e, onNorm }: {
   const ziel = verweis
     ? `/rechtsprechung/${encodeURIComponent(verweis.zielKey)}?ansicht=voll`
     : `/rechtsprechung/${encodeURIComponent(e.key)}`;
+  // `data-aktiv`: die Hover-Grammatik der Karten liegt seit C-3 (31.8.2026) als
+  // EINE Regel in `index.css` und greift am ELEMENT (`a`/`button`). Diese Karte
+  // ist klickbar, aber ein <div> — der Stretched-Link liegt innen, damit die
+  // Norm-Chips seine Geschwister bleiben. Das Attribut ist die eine erklärte
+  // Ausnahme, kein zweiter Hover-Weg.
   return (
-    <div className="lc-card group flex h-full flex-col p-4 transition-colors hover:border-brass-400">
+    <div data-aktiv className="lc-card group flex h-full flex-col p-4">
       {/* Lese-Bereich (klickbar). flex-1 schiebt den Fuss auf gleiche Höhe.
           Stretched-Link: der Link deckt die ganze Lesefläche per ::after ab, die
           Norm-Chips liegen als GESCHWISTER darüber (relative) — so ist der
@@ -52,23 +58,41 @@ export function EntscheidKarte({ e, onNorm }: {
               <span className="text-ink-500 italic"
                 title="Betreff/Titel aus dem amtlichen Portal — keine Regeste">amtl. Betreff</span>
             )}
-            {e.kuratierung === 'maschinell' && (
-              <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
-            )}
+            {e.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
           </span>
         </div>
 
+        {/* LM-036 (B11-Karten, 4.9.2026) · `min-h-[2lh]` am Thema-Absatz.
+            Der Titel ist auf zwei Zeilen begrenzt (`line-clamp-2`), FÜLLT sie
+            aber nicht immer — die Normchip-Zeile darunter sass in Nachbarkarten
+            verschieden hoch, während der Kartenfuss fluchtete («unten
+            ausgerichtet, in der Mitte nicht»). Gemessen auf Prod (1440 px,
+            Dichte «Karten», 339 Karten / 118 Reihen): 37 Reihen mit versetzter
+            Chip-Zeile, bis 25 px. Der Absatz reserviert jetzt seine zwei Zeilen
+            (`2lh` = zwei eigene Zeilenhöhen, gilt für alle vier Thema-Varianten
+            ohne Zahlenwert, §13/B2), womit die Chip-Zeile bei gleicher Variante
+            IMMER auf derselben Höhe steht: nachgemessen 1 Reihe / 11 px, und
+            diese eine mischt Serifen-Regeste (body-l) mit Sans-Synth (body-s)
+            — verschiedene Zeilenhöhen, kein Ausrichtungsfehler.
+            Verworfen wurde die naheliegende Alternative «Chip-Zeile per
+            `mt-auto` an den Fuss des Lesebereichs»: gemessen nur 37 → 28
+            Reihen, weil sie den Versatz bloss von der Titel- auf die
+            Fusszeilen-Höhe verlagert (28 Reihen mit ungleich hohem Fuss).
+            Preis der gewählten Lösung: die Liste wächst 34'059 → 35'594 px
+            (+4,5 %) — Reihen aus lauter Einzeilern reservieren die zweite
+            Zeile mit. Die Kartenhöhe je Reihe bleibt vom Raster bestimmt
+            (A3-Abnahme, FAHRPLAN-ARCHIV-RESTPUNKTE §20, nicht gekippt). */}
         {/* THEMA — Leitelement. Verweis: klarer Bezug zum BGE; sonst echte Regeste in
             Serif (Lesebild), Synth in Sans. */}
         {verweis
-          ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2">Vollständiges Urteil zu <span className="num">BGE {verweis.bgeReferenz}</span></p>
+          ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2 min-h-[2lh]">Vollständiges Urteil zu <span className="num">BGE {verweis.bgeReferenz}</span></p>
           : synth
-            ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2">{themaText(e)}</p>
+            ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2 min-h-[2lh]">{themaText(e)}</p>
             : betreff
               /* Amtlicher Betreff: verbindlicher Text (font-medium, ink-900), aber
                  Sans statt der Serifen-Regeste-Optik — ehrlich unterscheidbar (§8). */
-              ? <p className="mt-2 text-body-s font-medium text-ink-900 leading-snug line-clamp-2">{themaText(e)}</p>
-              : <p className="mt-2 font-serif text-body-l text-ink-900 leading-snug line-clamp-2">{themaText(e)}</p>}
+              ? <p className="mt-2 text-body-s font-medium text-ink-900 leading-snug line-clamp-2 min-h-[2lh]">{themaText(e)}</p>
+              : <p className="mt-2 font-serif text-body-l text-ink-900 leading-snug line-clamp-2 min-h-[2lh]">{themaText(e)}</p>}
 
       </Link>
 
@@ -78,7 +102,7 @@ export function EntscheidKarte({ e, onNorm }: {
           Grammatik macht die Aktions-Form an der ROLLE fest, damit sie gleich
           aussehen wie die Facetten-<button> der Filterleiste (§23). */}
       {e.normKeys.length > 0 && (
-        <div className="lc-chip-zeile relative mt-3 flex flex-wrap items-center gap-1.5">
+        <div className="lc-chip-zeile lc-normzeile relative mt-3 flex flex-wrap items-center gap-1.5">
           {e.normKeys.slice(0, 4).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
           {/* LM-049: der Überlaufhinweis ist ein ZÄHLER, kein Bedienelement — die
               nackte «+2» war neben den gerahmten Chips nicht als Text erkennbar.
@@ -116,7 +140,7 @@ export function EntscheidKarte({ e, onNorm }: {
           {istBge(e) && e.nummer !== e.bgeReferenz && (
             <span className="num text-ink-500" title="Aktenzeichen">({e.nummer})</span>
           )}
-          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
+          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
         </div>
         <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer"
           className="shrink-0 text-xs text-ink-500 no-underline hover:text-brass-700"

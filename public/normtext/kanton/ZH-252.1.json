@@ -1,0 +1,338 @@
+{
+  "erzeugt": "2026-09-01",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/252.1/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Teilrechte der Mitglieder von Korporationen sind in ein besonderes, vom Grundbuchamt des Sitzes der Korporation zu führendes Verzeichnis aufzunehmen (Ergänzungsgesetz vom 5. März 1916 zu § 54 des Einführungsgesetzes zum Schweizerischen Zivilgesetzbuch)."
+        },
+        {
+          "absatz": "2",
+          "text": "In das Verzeichnis sind alle Rechtsgeschäfte betreffend den Erwerb und die Verpfändung von Teilrechten sowie die Bestellung anderer dinglicher Rechte an denselben einzutragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bestehen Zweifel darüber, ob es sich um eine Korporation mit Teilrechten handle, so entscheidet das Obergericht."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "58efa6c795633da35f2988bc9464ea34feb2d215e7b5a6c0dcadf80aca8b875b"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Verzeichnis der Korporationsteilrechte bildet einen Bestandteil des Grundbuches. Die Eintragungen in dieses Verzeichnis haben für die Korporationsteilrechte die gleichen Wirkungen wie die Eintragungen in das Grundbuch (Grundprotokoll)."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "00171eee3a7a44f311fea2edd4e5581c831f7ac24744225369d6578f2e911393"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verzeichnis ist nach einheitlichem Formular herzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es soll enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Namen und Sitz der Korporation,"
+            },
+            {
+              "marke": "b",
+              "text": "eine Verweisung auf die Aufnahme der Grundstücke der Korporation im Grundbuch (Grundprotokoll) und Angabe der Gesamtzahl der ganzen Teilrechte,"
+            },
+            {
+              "marke": "c",
+              "text": "die Namen der Inhaber der Teilrechte mit Hinweis auf den letzten bezüglichen Protokolleintrag,"
+            },
+            {
+              "marke": "d",
+              "text": "die zur Darstellung der Rechtsverhältnisse an den Teilrechten erforderlichen Blätter (vgl. § 4)."
+            }
+          ]
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "d4e3b77340f400360b3b7ddb8842b0a408fcbcb8b9a39af012cf01357531e708"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_4",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Jedes Korporationsmitglied erhält im Verzeichnis ein Doppelblatt, auf welchem in besonderen Abteilungen eingetragen werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Erwerb der Teilrechte (Handänderungen),"
+            },
+            {
+              "marke": "b",
+              "text": "die Pfandrechte, mit denen die einzelnen Teilrechte belastet sind,"
+            },
+            {
+              "marke": "c",
+              "text": "andere Rechtsverhältnisse (Nutzniessung, Vorkaufsrecht, Pfändung, Konkurs usw.)."
+            }
+          ]
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "adbd4f5f738be2d6dc086cf307966162b503595c7ff00e87be14d472b59da710"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Grundbuch (Grundprotokoll) soll bei den Einträgen betreffend das Eigentum an den Korporationsgrundstücken auf das Bestehen von Teilrechten hingewiesen werden (z. B.: «Forstkorporation X. in Z., Korporation mit 120 Teilrechten der Mitglieder, siehe besonderes Verzeichnis S. ...»)."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "4192031c6331aaff352b59ce398d062eacffafcfa885c9e55ba2b18ee1ad0f75"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_6",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Anlage des Verzeichnisses der Korporationsteilrechte erfolgt aufgrund der bisherigen Einträge im Grundprotokoll sowie eines vom Vorstand der Korporation dem Grundbuchamt einzureichenden Mitgliederverzeichnisses. Weichen die bisherigen Einträge von letzterem ab, so hat das Grundbuchamt die erforderlichen Ausweise zu verlangen."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "aeeb8a9e1637dfd2fd3eaa157cc7aa7d8faccbb9eead8f6dfd827395190d9597"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_7",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Teilrechte sowie die auf ihnen ruhenden Lasten (Pfandrechte usw.) sind von Amtes wegen in das Verzeichnis überzutragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Grundbuch (Grundprotokoll) ist von dieser Übertragung unter Hinweis auf den Eintrag im Verzeichnis Vormerk zu nehmen."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "4bdffd2bde807aa1889f109a3920c35ca15582f39271a12ba573e56d4db53c70"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_8",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Voraussetzungen der Eintragung und der Änderung oder Löschung eines Eintrages sowie für die Form der Eintragung im Verzeichnis der Korporationsteilrechte und die Ausstellung der Pfandtitel und anderer Urkunden über Korporationsteilrechte finden die für die Grundbuchführung bestehenden Vorschriften, wie namentlich die eidgenössische Grundbuchverordnung vom 22. Februar 1910 und die Verordnung des Obergerichtes über die Geschäftsführung der Grundbuchämter und die Einführung des eidgenössischen Grundbuches (Kantonale Grundbuchverordnung) vom 26. März 1958, sinngemässe Anwendung."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "bfe3934e4e79b311dfa3f724fea22ff0cca20aeb0676b731dabc225a13f35cf6"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_9",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Veräussert ein Berechtigter eines von mehreren Teilrechten oder einen Bruchteil eines Teilrechts, so ist die Änderung auf dem Blatte des Veräusserers als «Abgang», auf dem Blatte des Erwerbers als «Zuwachs» einzutragen und auf beiden Blättern in der entsprechenden Spalte der neue Bestand der Rechte anzugeben. Ist der Erwerber noch nicht Mitglied der Korporation, so wird ein neues Blatt eröffnet."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "7ffdeb096c3a9e6d034b0aeadd3078ed35ad10436e7570917d28707135c4e274"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_10",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wird ein Teilrecht zusammen mit Grundstücken verpfändet, so soll im Verzeichnis in der Spalte «Bemerkungen» auf die mitverpfändeten Grundstücke und im Grundbuch (Grundprotokoll) auf das mitverpfändete Teilrecht hingewiesen werden."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "4d33065d76ac238def5a622b62e567e41422399e730eb2c9a6ebbee0a5c6759a"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_11",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Namen der Korporationsmitglieder sowie alle Veränderungen derselben sind entsprechend der Vorschrift des Art. 109 der Grundbuchverordnung in das Eigentümerverzeichnis einzuschreiben."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "4c1ec61158110441c2bde9a2bcd7d94e4fa25ec57f869b69e1431a7725ecddfa"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_12",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Vorschriften des Notariatsgesetzes vom 9. Juni 1985 und der Verordnung des Kantonsrates vom 7. November 1988 über die Notariats- und Grundbuchgebühren finden auf die Führung des Verzeichnisses der Korporationsteilrechte in gleicher Weise Anwendung wie auf die Grundbuchführung."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "027fead104c4a142c909bf00dfdcbc66bb47b35ff98f06fe5ad2eade3809565e"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_13",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Verzeichnisse der Korporationsteilrechte eines Grundbuchkreises oder auch einzelner politischer Gemeinden sind in einem Band zu vereinigen. Dieser muss mit Seitenzahlen versehen und vom Grundbuchverwalter auf dem Titelblatt unter Angabe des Datums der Anlegung (Eröffnung) des Verzeichnisses unterschrieben werden."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "a75e21c7609e5649342ca086af3bc1c4d50950bcb188be3c8eb0e4fffa6121ff"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_14",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/252.1/art_15",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichtes über die Grundbuchführung betreffend die Korporationsteilrechte (LS 252.1)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt sofort in Kraft."
+        }
+      ],
+      "stand": "1916-04-19",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-252_1-1916_04_19-1916_04_19-091.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d184dc984475cd170c22d1a1d14593bc71645f722a2427d4eda3fa5103ff6deb",
+      "sha": "238540f55f28868b111d71734072f7d9831aa34d15b94a0b4352742e7adbf933"
+    }
+  ]
+}

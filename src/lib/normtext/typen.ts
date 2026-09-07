@@ -67,6 +67,16 @@ export interface NormSnapshot {
     /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag). */
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
     /**
+     * VERWEIS-Spalte einer Tarif-Zeile, quellgetreu getrennt (ZH-243, A2 der
+     * ZH-Fix-Runde 3). `etikett` ist der am amtlichen Spaltenkopf GELESENE Titel
+     * («Grundbuchgebühren siehe Ziff.:» bzw. «Beurkundungsgebühren siehe
+     * Ziff.:»), `ziffern` sind die Zellen-Werte. Vorher hängte der Generator
+     * daraus ein «(vgl. Ziff. …)» an den Zitattext — ein Zusatz, den kein
+     * amtliches PDF trägt (§7), und beide Spalten kollabierten dabei auf
+     * denselben Wortlaut. Optional; nur Anhang-Tarif-Einträge tragen das Feld.
+     */
+    verweis?: { etikett: string; ziffern: string };
+    /**
      * Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.).
      *
      * KANONISCHES MODELL (T-B1, M10): `spalten` ist der explizite Spalten-Vektor

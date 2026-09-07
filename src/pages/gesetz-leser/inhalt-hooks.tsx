@@ -2,15 +2,17 @@ import { useEffect, useRef, type Dispatch, type MutableRefObject, type RefObject
 import { flushSync } from 'react-dom';
 import type { NavigateFunction } from 'react-router-dom';
 import { aktualisiereTabArtikel, tabSchluessel } from '../../lib/tabs';
-import { merkeAnker, bezugslinie, ankerLandepunkt, istHashVerbraucht } from './scrollAnker';
+import { merkeAnker, bezugslinie, ankerLandepunkt } from './scrollAnker';
 import { aktiverArtikel } from '../../lib/normtext/aktuellerArtikel';
 import { useMeldeInhaltsKopf } from '../../components/layout/InhaltsKopfKontext';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeErlassKopf, ladeKantonSystematik, ladeCurrency,
-  type Sektion, type StrukturMap, type ErlassKopf, type CurrencyMap,
+  ladeKantonLuecken,
+  type Sektion, type StrukturMap, type ErlassKopf, type CurrencyMap, type KantonLueckenMap,
 } from '../../lib/normtext/browse';
 import type { KantonSystematik } from '../../lib/normtext/systematik';
 import { pfadZu, tabTitel } from './helpers';
+import { useTieflinkSprung } from './inhalt-hooks-tieflink';
 import { paneRoot, findeArt } from './berechnungen';
 import { findeSynthPfad, uebersetzeRohPfad, type GliederungsKnoten } from './gliederungsModell';
 import { planeZuklappen, retteFokusVorZuklapp, scrollRuht, AUTO_AUF_RUHE_MS } from './tocAutoZuklappen';
@@ -28,6 +30,10 @@ import { datenEbeneVonRoute, erlassPfad } from '../../lib/normtext/erlassAdresse
 // kein Normtext, keine Reihenfolge der Logik verändert.
 
 type MeldeKopf = ReturnType<typeof useMeldeInhaltsKopf>;
+
+// `useIsoLayoutEffect` (Layout-Effekt im Browser, gewöhnlicher Effekt im
+// Prerender) wurde nur vom Tieflink-Sprung gebraucht und steht seit dem
+// §6.6-Split mit ihm in `./inhalt-hooks-tieflink.tsx`.
 
 // Auto-Zuklappen des Gliederungsbaums (F2): Nachlauf-Fenster, Fallback-Schalter
 // und die Lage-Entscheidung leben seit W2·19-GLIEDERUNG/S5 in ./tocAutoZuklappen —
@@ -67,13 +73,14 @@ export function useLeserDaten(opts: {
   setStruktur: Dispatch<SetStateAction<StrukturMap | null>>;
   setKopf: Dispatch<SetStateAction<ErlassKopf | null>>;
   setKantonSys: Dispatch<SetStateAction<Record<string, KantonSystematik>>>;
+  setKantonLuecken: Dispatch<SetStateAction<KantonLueckenMap>>;
   setErlass: Dispatch<SetStateAction<BrowseErlass | null>>;
   setEintraege: Dispatch<SetStateAction<NormSnapshot[] | null>>;
   setFehler: Dispatch<SetStateAction<boolean>>;
 }): void {
   const {
     ebene, schluessel, navigate, erlass, istSekundaer,
-    setManifest, setCurrency, setStruktur, setKopf, setKantonSys, setErlass, setEintraege, setFehler,
+    setManifest, setCurrency, setStruktur, setKopf, setKantonSys, setKantonLuecken, setErlass, setEintraege, setFehler,
   } = opts;
 
   useEffect(() => {
@@ -91,6 +98,9 @@ export function useLeserDaten(opts: {
     // N13: Systematik-Bäume nur für die Kanton-Lesesicht laden; fehlen sie, bleibt
     // die Overline ohne Sachgebiet (§8 — nichts Erfundenes).
     if (daten === 'kanton') void ladeKantonSystematik().then((s) => { if (lebt) setKantonSys(s); });
+    // §8-Nachzug (PR #614-Auflage): Erlass-Lücken ebenso nur für Kanton laden —
+    // der Bund trägt keine Einträge (§15, kein Zusatz-Fetch).
+    if (daten === 'kanton') void ladeKantonLuecken().then((l) => { if (lebt) setKantonLuecken(l); });
     void ladeErlass(schluessel).then(async (e) => {
       if (!lebt) return;
       if (!e) {
@@ -238,83 +248,14 @@ export function useLeserSprungSpy(opts: {
     tocBaumTimer, tabArtikelTimer, aktArtikelTimer, tocTouchRef,
   } = refs;
 
-  const oeffnePfad = (ids: string[]) => setOffen((o) => {
-    const n = { ...o }; for (const id of ids) n[id] = true; return n;
+  // ── Tieflink-Sprung (§6.6-Split, W2·24) ──────────────────────────────────
+  // Der Block stand bis hierher inline; er ist Wort fuer Wort nach
+  // `./inhalt-hooks-tieflink` gezogen und wird an SEINER Stelle gerufen, damit
+  // die Hook-Reihenfolge byte-identisch bleibt (dort die Herleitung).
+  useTieflinkSprung({
+    ebene, schluessel, eintraege, sektionen, istSekundaer, imPane, wurzel,
+    paneLocationHash, artLabelByToken, setOffen, setAktArtikel, setAktivIds,
   });
-
-  // E3/A34 (David 16.7.2026): der Seed-Sprung unten darf pro Erlass-Ladung NUR
-  // EINMAL feuern — nicht erneut, wenn die Einzelansicht in den Split-View kippt
-  // (`imPane`/`wurzel` wechseln von false→true). Sonst las der Effekt beim Pane-
-  // Öffnen erneut `window.location.hash` (= der zuvor angeklickte Artikel) und
-  // sprang das frisch weitergescrollte Gesetz-Pane auf diesen früheren Artikel
-  // zurück (Scroll-Verlust, §15 Funktions-Treue «Split-View-Pane-Zustand»). Der
-  // Wächter wird pro Erlass zurückgesetzt; spätere Hash-Wechsel trägt ohnehin der
-  // letzteNavKey-Effekt (Primär) bzw. die eigene Pane-History (A16/A17).
-  const hashSeedGetan = useRef(false);
-  useEffect(() => { hashSeedGetan.current = false; }, [ebene, schluessel]);
-
-  // Hash-Sprung: alle Vorfahren des Ziel-Artikels öffnen + scrollen.
-  // W2·5d U-POSITION/A17: auch im SEKUNDÄREN Pane an die Fundstelle springen —
-  // der ⧉-Öffner legt den Pfad MIT `#art-token` ab (NormPopover readerLink), aber
-  // die Fundstelle stand bisher nur in `window.location.hash` (= die Haupt-URL,
-  // NICHT der Pane-Pfad) und der Effekt brach für Panes ab ⇒ das Pane öffnete oben
-  // statt an der Norm. Quelle des Hashs ist im Pane die PANE-LOKALE Location
-  // (`<Routes location={loc}>` → react-router `useLocation()` liefert den Pane-Pfad),
-  // sonst wie bisher die echte Fenster-URL (Primär/Einzelansicht byte-gleich).
-  useEffect(() => {
-    if (!eintraege || !sektionen.length || typeof window === 'undefined') return;
-    // A34: nur der ERSTE inhaltsbereite Lauf sät den Sprung. Danach gesperrt —
-    // ein `imPane`/`wurzel`-Wechsel (Split-View öffnet) re-triggert den Effekt,
-    // darf aber NICHT erneut an den (alten) Hash springen. Wächter VOR dem Hash-
-    // Test setzen, damit auch ein hashloser Erststart den späteren Re-Lauf sperrt.
-    if (hashSeedGetan.current) return;
-    hashSeedGetan.current = true;
-    // LM-199 (W2·17-UI-BEFUNDE-B2): VERBRAUCHTER Einstiegs-Hash — beim Browser-
-    // Zurück aus einer anderen Route steht der alte «#art-…» noch in der URL,
-    // massgeblich ist aber die A16-Anker-Restauration (App.tsx). Ohne diesen
-    // Wächter kaperte der Seed-Sprung nach dem Remount die Rückkehr-Position
-    // erneut (Prod-Messung 2.8.2026: ~149'000 px daneben). Nur Primär — das
-    // sekundäre Pane hat seine eigene, frisch geseedete Location (A17).
-    if (!istSekundaer && istHashVerbraucht()) return;
-    const hashQuelle = istSekundaer ? paneLocationHash : window.location.hash;
-    const m = hashQuelle.match(/^#art-(.+)$/);
-    if (!m) return;
-    // Deep-Link mit Artikel-Anker → aktiven Reiter darauf melden (Live-Label).
-    // Sekundäres Pane treibt den globalen Reiter-Tracker NICHT (es ist nicht die URL).
-    if (!istSekundaer) aktualisiereTabArtikel(window.location.pathname + window.location.search + window.location.hash);
-    const token = decodeURIComponent(m[1]);
-    const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
-    // LM-157 (W2·17-UI-BEFUNDE-B4): der Seed-Sprung öffnete den TOC-Pfad
-    // (`oeffnePfad`) und scrollte den Text, setzte aber nie `aktivIds`/`aktArtikel`
-    // selbst — beides blieb dem IntersectionObserver-Scroll-Spy weiter unten
-    // überlassen. Bei einem frischen Aufruf mit `#art-…`-Anker beobachtete der Spy
-    // den programmatischen Sprung nicht zuverlässig (Ziel ist im selben Frame noch
-    // nicht am Bezugspunkt), darum blieben Gliederung UND Breadcrumb auf dem
-    // Dokumentanfang stehen, bis von Hand gescrollt wurde. Fix: dieselben zwei
-    // State-Setter, die auch der Klick-Sprung (springeZuSektion) und der laufende
-    // Scroll-Spy (unten, Z. ~421/453) verwenden — hier synchron mit dem Seed statt
-    // erst nach dem ersten manuellen Scroll.
-    if (ids.length) {
-      setAktivIds(ids);
-      const artLabel = artLabelByToken.get(token) ?? `Art. ${token.replace(/_/g, '')}`;
-      setAktArtikel(artLabel);
-    }
-    window.requestAnimationFrame(() => {
-      if (ids.length) oeffnePfad(ids);
-      window.setTimeout(() => {
-        const el = findeArt(paneRoot(imPane, wurzel), token);
-        // R1: oberer Lese-Rand statt Mitte (deckt sich mit der Scroll-Spy-Bezugslinie).
-        el?.scrollIntoView({ block: 'start', behavior: 'auto' });
-        el?.classList.add('lc-ziel-blink');
-        window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
-      }, 110);
-    });
-    // location.hash bewusst NICHT in den Deps: der Effekt springt EINMAL beim
-    // Erlass-Laden an die (Pane-lokale bzw. Fenster-)Fundstelle — die Primär-
-    // Instanz führt spätere Hash-Wechsel über den letzteNavKey-Effekt nach
-    // (kein Doppel-Sprung/-Blink), das Pane öffnet an seiner Seed-Fundstelle.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [eintraege, sektionen, istSekundaer, imPane, wurzel]);
 
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
   // IntersectionObserver bestimmt den Artikel, der OBEN im Viewport angeschnitten
@@ -334,6 +275,32 @@ export function useLeserSprungSpy(opts: {
   // allein, ausgewertet pro Scroll-Frame. Herleitung + Messprotokoll unten am
   // Observer.
   const letzterArtToken = useRef<string | null>(null);
+  // ── LH (D27, Zusage 2) · DIE GESPEICHERTE LESESTELLUNG GEHÖRT DEM LESEN,
+  //    NICHT DEM AUFSETZEN DES SPYS ──────────────────────────────────────────
+  // BEFUND (7.9.2026, gebautes `dist/`, Preview 4417, ZGB @1440×900): 1500 px
+  // scrollen ⇒ Reiter `#art-3`; Reload ⇒ ~150 ms später steht `#art-1` darin.
+  // Der Leser springt beim Neustart bewusst NICHT zurück (W2·10-UI-NAV/R4,
+  // `lesePosition.ts`: kein Auto-Sprung, nur ein Chip) — der Spy setzte beim
+  // Aufsetzen am Dokumentanfang trotzdem `#art-1` und LÖSCHTE damit genau die
+  // Stelle, die den Neustart tragen soll.
+  // BISECT (je eigener Build, dieselbe Sonde, art-1.top bei scrollY 0):
+  //   0ba97c5d6 (Nullprobe) 921 px ⇒ Spy meldet nichts ⇒ `#art-3` bleibt · GRÜN
+  //   a60dd7f75 (D30/D31)   921 px ⇒ GRÜN
+  //   7e71a5dd2 (D32/N4)    877 px ⇒ Spy meldet «1» ⇒ `#art-1` · ROT
+  // D32 («Suche über dem Gesetz») hat den 44-px-Kopf aus R6d aus der Lese-
+  // spalte genommen; `art-1` fällt dadurch bei 900 px Fensterhöhe wieder ÜBER
+  // die Bezugslinie. Der Kopf ist damit der Auslöser, nicht die Wurzel: die
+  // Wurzel ist der ungeschützte Schreibpfad unten — er hing allein an einer
+  // Fensterhöhe, was seit dem F1G-Stand (877 px, dieselbe Lage) latent war.
+  // REGEL: der Reiter-Anker folgt dem Lesen. Vor dem ersten Scrollen IN DIESEM
+  // Dokument schreibt der Spy nichts; die Kopfzeile (Zweig (a) unten) meldet
+  // «Art. 1» unverändert — sie ist Darstellung, nicht Persistenz (§3).
+  const gescrollt = useRef(false);
+  // Zurück auf «noch nicht gelesen», sobald ein ANDERES Dokument/Pane-Instanz
+  // im Fenster steht: sonst trüge ein SPA-Wechsel die Scroll-Erlaubnis des
+  // Vorgängers weiter und der neue Leser überschriebe dessen gespeicherte
+  // Stelle beim Aufsetzen (genau die Kalt-/SPA-Asymmetrie des F5-Befunds).
+  useEffect(() => { gescrollt.current = false; }, [basisPfad, paneLocationSearch]);
   useEffect(() => {
     // C (Auftrag David 26.6.2026): auch starten, wenn der Erlass KEINE Gliederung
     // hat (kantonale Erlasse → alle Artikel in `ohneGliederung`). Sonst lief der
@@ -409,9 +376,13 @@ export function useLeserSprungSpy(opts: {
       // `location.search`, s. o.) macht auch für das Sekundär-Pane den
       // richtigen Reiter-Treffer möglich — ohne window.location zu lesen,
       // bleibt die Änderung rein pane-lokal/darstellend (§3).
-      const tabZiel = `${basisPfad}${paneLocationSearch}#art-${token}`;
-      if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
-      tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
+      //     LH (s. o.): NUR nach dem ersten echten Scrollen in diesem Dokument —
+      //     vor dem ersten Lese-Griff ist der gespeicherte Anker die Wahrheit.
+      if (gescrollt.current) {
+        const tabZiel = `${basisPfad}${paneLocationSearch}#art-${token}`;
+        if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
+        tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
+      }
       // (a) Gliederung: aktiven Pfad markieren + den Zweig automatisch AUFklappen
       //     und beim Verlassen wieder ZUklappen (K, Auftrag David 26.6.2026) —
       //     aber nur Zweige, die der Spy selbst geöffnet hat (autoOffenRef);
@@ -609,7 +580,11 @@ export function useLeserSprungSpy(opts: {
     // Leser gerade», nicht «hat irgendetwas den Spy geweckt». Der Nachlauf-Wecker
     // unten ist kein Scroll — zählte er mit, verzögerte er den Aufklapp nach einem
     // Klick-Sprung ohne jeden Grund.
-    const beiScroll = () => { letzterScroll = Date.now(); wecke(); };
+    // `gescrollt` (LH, s. o.) latcht HIER — beim echten Scroll-Ereignis, das dem
+    // rAF-Kranz vorausgeht: der Spy sieht die Erlaubnis darum schon im ersten
+    // Frame nach dem Rad, und ein Klick-/TOC-Sprung (scrollt programmatisch,
+    // feuert also `scroll`) gibt sie ebenso frei.
+    const beiScroll = () => { gescrollt.current = true; letzterScroll = Date.now(); wecke(); };
     scrollZiel.addEventListener('scroll', beiScroll, { passive: true });
     // N2: dritter Auslöser — das Lösen des jumpLock (Herleitung oben bei
     // `spyNachlauf`). Derselbe rAF-Kranz wie Observer und Scroll.

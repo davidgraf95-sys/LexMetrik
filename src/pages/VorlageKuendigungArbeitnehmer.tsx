@@ -5,6 +5,7 @@ import {
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
+import { Datum } from '../components/ui/Datum';
 import { Checkbox, Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { istIsoDatum } from '../components/vorlagen/seiteHelfer';
 import { VorlagenSeite, type SeiteCtx, type VorlagenSeitenConfig } from '../components/vorlagen/VorlagenSeite';
@@ -105,8 +106,17 @@ function eingabeInhalt({ a, set, z }: SeiteCtx<KanAntworten, KanZusammenstellung
         {engine?.beendigungsdatum && (
           <div className="lc-tile">
             <GruppenTitel>Beendigung des Arbeitsverhältnisses</GruppenTitel>
-            <p className="text-h2 font-display font-semibold text-ink-900 leading-none num">
-              {engine.beendigungsdatum.toLocaleDateString('de-CH')}
+            {/* B-3/B3-7 (R3-α, 31.8.2026): hier stand
+                `toLocaleDateString('de-CH')` — die EINZIGE Stelle der App, die
+                das Anzeigedatum aus der Browser-Locale zog. Sie schrieb
+                «1.6.2026» (ohne führende Nullen), während jede andere Fläche
+                «01.06.2026» zeigt, und setzte es in die Mono-Stimme (`num`),
+                die seit S2/Ä-(b) auf SR-Nr./Aktenzeichen begrenzt ist. Beides
+                kommt jetzt aus dem EINEN Baustein. `sv-SE` liefert das
+                LOKALE Datum in ISO-Form (Haus-Idiom, E2-1) — es ersetzt nur
+                die Formatierung, nicht die Rechnung (§3). */}
+            <p className="text-h2 font-display font-semibold text-ink-900 leading-none">
+              <Datum iso={engine.beendigungsdatum.toLocaleDateString('sv-SE')} />
             </p>
             <p className="text-body-s text-ink-600 mt-1.5">{engine.ergebnis.ergebnis}</p>
             {engine.istProbezeit && (

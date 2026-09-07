@@ -9,11 +9,9 @@
   "scripts/normtext/check-normkeys-abdeckung.ts": 811,
   "scripts/normtext/entscheide-mapping.ts": 1152,
   "scripts/normtext/extrahiere-fedlex.ts": 1496,
+  "scripts/normtext/zh-quellen.ts": 1214,
   "scripts/plan/bildSeiten.ts": 843,
-  "src/components/normtext/ArtikelBody.tsx": 926,
+  "scripts/plan/selbstoptKern.ts": 1094,
   "src/lib/rechtsprechung/zitat-extraktion.ts": 844,
-  "src/pages/EntscheidLeser.tsx": 1095,
-  "src/tests/gruendungAgDokumente.test.ts": 1018,
-  "src/tests/normtext-fedlex.test.ts": 940,
-  "src/tests/vorlagen.test.ts": 893
+  "src/pages/EntscheidLeser.tsx": 1095
 }

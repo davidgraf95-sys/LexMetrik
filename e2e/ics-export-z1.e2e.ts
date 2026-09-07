@@ -37,7 +37,7 @@ test.describe('Z1 · Kalender-Ausleitung im Schnell-/Tagerechner', () => {
 
     // Deterministische Eingabe statt des «heute»-Defaults: 10 Tage ab 1.6.2026
     // unter ZPO-Gerichtsferien (Vorbelegung des Rechners).
-    await page.locator('input[type="date"]').first().fill('2026-06-01')
+    await page.locator('input[placeholder="TT.MM.JJJJ"]').first().fill('01.06.2026')
     await expect(page.locator(EINFACH).getByText('Fristende', { exact: true })).toBeVisible()
 
     const { name, text } = await icsHolen(page, () => knopf.click())
@@ -71,7 +71,7 @@ test.describe('Z1 · Kalender-Ausleitung im Schnell-/Tagerechner', () => {
     await page.goto('/rechner/tagerechner')
     const knopf = page.locator(EINFACH).getByRole('button', { name: KNOPF })
     await expect(knopf).toBeVisible()
-    await page.locator('input[type="date"]').first().fill('2026-06-01')
+    await page.locator('input[placeholder="TT.MM.JJJJ"]').first().fill('01.06.2026')
 
     const holen = async (regime: string) => {
       await page.locator(`input[name="einfache-frist-ferien"][value="${regime}"]`).check()
@@ -96,7 +96,11 @@ test.describe('Z1 · Kalender-Ausleitung im Schnell-/Tagerechner', () => {
     expect(zpo.uid, `UID kollidiert: ${ohne.uid}`).not.toBe(ohne.uid)
   })
 
-  test('Startseiten-Schnellrechner trägt dieselbe Ausleitung', async ({ page }) => {
+  // DEKLARIERTE UMBENENNUNG (W2·23-STARTSEITE-V4, 5.9.2026): auf «/» steht seit
+  // V4 kein Tab-Kasten «Schnellrechner» mehr, sondern die Fristen-ZEILE
+  // (dieselbe `EinfacheFristForm`, Variante `zeile`). Die geprüfte Zusage —
+  // die Startseite trägt dieselbe .ics-Ausleitung — ist unverändert.
+  test('Startseiten-Fristenzeile trägt dieselbe Ausleitung', async ({ page }) => {
     await page.goto('/')
     const knopf = page.getByRole('button', { name: KNOPF }).first()
     await expect(knopf).toBeVisible()
@@ -142,9 +146,9 @@ test.describe('Z1 · Kalender-Ausleitung im Schnell-/Tagerechner', () => {
     })
 
     await cdp.send('Emulation.setCPUThrottlingRate', { rate: 6 })
-    const datum = page.locator('input[type="date"]').first()
+    const datum = page.locator('input[placeholder="TT.MM.JJJJ"]').first()
     const start = Date.now()
-    for (const d of ['2026-06-01', '2026-07-20', '2026-12-24', '2027-01-05']) {
+    for (const d of ['01.06.2026', '20.07.2026', '24.12.2026', '05.01.2027']) {
       await datum.fill(d)
       await expect(page.locator(EINFACH).getByRole('button', { name: KNOPF })).toBeVisible()
     }

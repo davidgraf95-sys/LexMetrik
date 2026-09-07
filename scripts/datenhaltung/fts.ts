@@ -3,8 +3,14 @@
 // (FAHRPLAN-DATENHALTUNG §3 DDL + §11.5 hot/cold-Grenze).
 //
 // HOT (edge-replika-fähig, < 1 GB, das IST der E2-POC-Zuschnitt):
-//   - fts_artikel                    (external content über `artikel`, ALLE Erlasse Bund+Kanton)
+//   - fts_artikel                    (contentless, 6 Felder, ALLE Erlasse Bund+Kanton)
 //   - fts_entscheide_schaufenster    (standalone, ALLE Einträge der rechtsprechung.db)
+//
+// RECALL-PARITÄT 31.8.2026 (QS-BASIS (d) K1): `fts_artikel` trug bis dahin nur den
+// Artikeltext und fand darum systematisch weniger als der statische Client-Index.
+// Seit K1 indexiert er dieselben sechs Felder (Extraktion geteilt via
+// scripts/suche-felder.ts, §5) und liegt lokal wie remote CONTENTLESS. Begründung
+// beider Wechsel steht am Kopf von baueFtsArtikel().
 //
 // ZAHLEN-KORREKTUR 20.7.2026 (§5/§8): hier standen bis dahin „218 Bund-Erlasse" und „342
 // kuratierte Schaufenster-Entscheide". Beides beschrieb den E2-Erstzuschnitt und war zur
@@ -27,12 +33,13 @@
 // beweist Determinismus über die QUELL-Tabellen; der FTS-Index ist eine reine Ableitung
 // daraus (rebuildbar) und wird aus dem Manifest ausgeklammert (manifest.ts → tabellen()).
 import type { DatabaseSync } from 'node:sqlite';
-import { bloeckeText } from './suche-kern';
+import { bloeckeText, FTS_ARTIKEL_SPALTEN } from './suche-kern';
+import { baueRecallFelder, type Block, type StrukturArtikel } from '../suche-felder';
 
 // Vercel-Fix 3.7.2026: `bloeckeText` (+ Doku) ist in das IMPORT-FREIE ./suche-kern.ts
 // gewandert — api/suche.ts braucht es (Snippet-Bau) und darf keine node:sqlite-Kette
 // ziehen (Vercels Function-Compile). Re-Export für bestehende Konsumenten:
-export { bloeckeText };
+export { bloeckeText, FTS_ARTIKEL_SPALTEN };
 
 /** Tokenizer-Spezifikation (§3, nicht verhandelbar): diakritik-insensitiv DE/FR/IT. */
 export const TOKENIZER = 'unicode61 remove_diacritics 2';
@@ -47,27 +54,126 @@ export function abschnitteText(abschnitte: Abschnitt[] | undefined): string {
   return teile.join(' ').replace(/\s+/g, ' ').trim();
 }
 
+/** DDL von `fts_artikel` — EINE Quelle für lokal und remote (§5). Die Spaltenliste
+ *  kommt aus suche-kern.ts, weil nur sie von BEIDEN Ausführungswegen erreichbar ist. */
+export function ddlFtsArtikel(name: string): string {
+  return `CREATE VIRTUAL TABLE ${name} USING fts5(${FTS_ARTIKEL_SPALTEN.join(', ')}, content='', tokenize='${TOKENIZER}')`;
+}
+
+/** Spalten von `fts_entscheide_schaufenster` in Index-Reihenfolge — standalone
+ *  (Text physisch gespeichert, damit die native `snippet()` verfügbar ist).
+ *  `id`/`quelle_url` sind UNINDEXED: sie werden zurückgegeben, nicht durchsucht. */
+export const FTS_ENTSCHEIDE_SPALTEN = [
+  'id UNINDEXED',
+  'titel',
+  'regeste',
+  'text',
+  'quelle_url UNINDEXED',
+] as const;
+
 /**
- * fts_artikel — external content über `artikel` (§3 DDL). Der FTS-Index speichert
- * KEINE zweite Textkopie (Grösse!); der indexierte `text` wird beim Bau aus
- * `bloecke_json` extrahiert. MATCH + bm25 laufen rein über den Index; das Listen-
- * Snippet baut das Such-Modul deterministisch aus `bloecke_json` der Trefferzeile
- * (native FTS-`snippet()` ist bei external content ohne physische `text`-Spalte
- * nicht verfügbar — `artikel` trägt strukturiertes `bloecke_json`, keinen Plaintext).
- * Insert-Reihenfolge = artikel.rowid → deterministischer Segment-Aufbau.
- * @returns Zeilenzahl (== artikel-Zeilen).
+ * DDL von `fts_entscheide_schaufenster` — EINE Quelle für lokal und remote (§5).
+ *
+ * Bis zum 31.8.2026 stand diese Spaltenliste ZWEIMAL wörtlich im Repo: hier für die
+ * lokale Tabelle und ein zweites Mal von Hand in turso-sync.ts für die Replika. Genau
+ * davor warnt der Kommentar an der Sync-Stelle für `fts_artikel` — «eine Abweichung in
+ * Zahl oder Reihenfolge der Spalten liesse den Shadow-Transport NICHT scheitern, sondern
+ * legte die Gewichte auf das falsche Feld» —, nur war die Warnung für die Entscheide
+ * selbst nie eingelöst (Gegenprüfungs-Befund F1, Umfeld). Jetzt ist sie es.
  */
-export function baueFtsArtikel(db: DatabaseSync): number {
-  db.exec(
-    `CREATE VIRTUAL TABLE fts_artikel USING fts5(text, content='artikel', content_rowid='rowid', tokenize='${TOKENIZER}');`,
-  );
-  const rows = db.prepare('SELECT rowid AS rowid, bloecke_json FROM artikel ORDER BY rowid').all() as Array<{
+export function ddlFtsEntscheide(name: string): string {
+  return `CREATE VIRTUAL TABLE ${name} USING fts5(${FTS_ENTSCHEIDE_SPALTEN.join(', ')}, tokenize='${TOKENIZER}')`;
+}
+
+interface StrukturDatei {
+  artikel?: Record<string, StrukturArtikel>;
+}
+
+/** Ergebnis von `baueFtsArtikel` — Zeilenzahl UND Struktur-Abdeckung. */
+export interface FtsArtikelBericht {
+  /** Indexierte Zeilen (MUSS == artikel-Zeilen sein; der Such-Join hängt daran). */
+  zeilen: number;
+  /** Artikel ohne Struktur-Sidecar-Eintrag → m/n/g/f bleiben leer (§8: nicht still). */
+  ohneStruktur: number;
+}
+
+/**
+ * fts_artikel — CONTENTLESS FTS5 (`content=''`), rowid == artikel.rowid.
+ *
+ * SECHS SPALTEN statt einer (QS-BASIS (d) K1, 31.8.2026). Bis dahin trug der Index
+ * allein `bloeckeText(bloecke_json)` — also nur das, was der statische Client-Index
+ * als Feld `t` führt. Die fünf Recall-Felder m/n/g/tb/f (21.5 % des Rohtextes) hatten
+ * am Edge kein Gegenstück, und der DB-Weg fand darum systematisch weniger als der
+ * statische: Query «Miete» lieferte OR 253 und OR 267 mit NULL Treffern, während zehn
+ * kantonale Gebührenerlasse die Liste anführten (Messung K0, bibliothek/register/
+ * suche-edge-nullprobe-2026-08-31.md Ziff. 3). Still war der Fehler, weil die Antwort
+ * nie leer war — nur schlechter. Die Extraktion teilt sich der Index jetzt mit dem
+ * Generator (scripts/suche-felder.ts, §5).
+ *
+ * WARUM CONTENTLESS UND NICHT MEHR `content='artikel'` (Wechsel im selben Schritt):
+ * Die alte Deklaration behauptete eine Spalte `text` auf `artikel` — die es dort nie
+ * gab. Das trug nur, weil ausschliesslich MATCH/bm25/rowid gelesen werden; ein blosses
+ * `SELECT count(*) FROM fts_artikel` OHNE MATCH scheitert heute schon mit «no such
+ * column: T.text» (am 31.8.2026 reproduziert). Mit sechs Spalten hätte die Lüge fünf
+ * weitere nicht existierende Spalten behauptet — und `marginalie` hätte auf Rebuild
+ * die ECHTE, anders belegte `artikel.marg`-Spalte gelesen. Die Turso-Gegenseite ist
+ * ohnehin seit jeher contentless (turso-sync.ts); lokal dasselbe zu deklarieren
+ * entfernt die Divergenz, statt sie auf sechs Spalten auszuweiten. Snippets waren nie
+ * betroffen — die baut suche-kern.ts deterministisch aus `bloecke_json`.
+ *
+ * Insert-Reihenfolge = artikel.rowid → deterministischer Segment-Aufbau (§2).
+ * LEFT JOIN auf `erlasse`: ein Artikel ohne Erlass-Zeile darf NICHT aus dem Index
+ * fallen — die Zeilengleichheit fts_artikel == artikel ist die Invariante, an der
+ * der Such-Join und der Index-Riegel des Syncs hängen.
+ */
+export function baueFtsArtikel(db: DatabaseSync): FtsArtikelBericht {
+  db.exec(ddlFtsArtikel('fts_artikel') + ';');
+
+  // Struktur-Sidecars kommen aus der DB (ingest.ts legt sie als `dokument` mit
+  // typ='normtext-struktur' ab) — NICHT aus dem Dateisystem. So bleibt der FTS-Bau
+  // eine reine Funktion der DB und funktioniert auch für in-memory-Aufbauten (Tests).
+  const strukturen = new Map<string, StrukturDatei>();
+  for (const r of db
+    .prepare("SELECT pfad, inhalt FROM dokument WHERE typ = 'normtext-struktur'")
+    .all() as Array<{ pfad: string; inhalt: string }>) {
+    // pfad = public/normtext/struktur/<ebene>/<erlass_key>.json → Schlüssel '<ebene>/<key>'
+    const m = /\/struktur\/([^/]+)\/(.+)\.json$/.exec(r.pfad);
+    if (!m) continue;
+    try {
+      strukturen.set(`${m[1]}/${m[2]}`, JSON.parse(r.inhalt) as StrukturDatei);
+    } catch {
+      /* unlesbarer Sidecar → Felder bleiben leer, wie im statischen Index */
+    }
+  }
+
+  const rows = db
+    .prepare(
+      `SELECT a.rowid AS rowid, a.erlass_key AS erlass_key, a.artikel AS artikel,
+              a.grundlage AS grundlage, a.bloecke_json AS bloecke_json, e.ebene AS ebene
+       FROM artikel a LEFT JOIN erlasse e ON e.key = a.erlass_key
+       ORDER BY a.rowid`,
+    )
+    .all() as Array<{
     rowid: number;
+    erlass_key: string;
+    artikel: string;
+    grundlage: string | null;
     bloecke_json: string;
+    ebene: string | null;
   }>;
-  const ins = db.prepare('INSERT INTO fts_artikel(rowid, text) VALUES (?, ?)');
-  for (const r of rows) ins.run(r.rowid, bloeckeText(r.bloecke_json));
-  return rows.length;
+
+  const ins = db.prepare(
+    `INSERT INTO fts_artikel(rowid, ${FTS_ARTIKEL_SPALTEN.join(', ')}) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+  );
+  let ohneStruktur = 0;
+  for (const r of rows) {
+    const sa = r.ebene ? strukturen.get(`${r.ebene}/${r.erlass_key}`)?.artikel?.[r.artikel] : undefined;
+    if (!sa) ohneStruktur++;
+    const bloecke = JSON.parse(r.bloecke_json) as Block[];
+    const f = baueRecallFelder(bloecke, sa, r.grundlage);
+    ins.run(r.rowid, bloeckeText(r.bloecke_json), f.m, f.n, f.g, f.tb, f.f);
+  }
+  return { zeilen: rows.length, ohneStruktur };
 }
 
 /**
@@ -87,9 +193,7 @@ export function baueFtsArtikel(db: DatabaseSync): number {
  * @returns Zeilenzahl (== Anzahl `eintrag`-Zeilen der rechtsprechung.db).
  */
 export function baueFtsEntscheideSchaufenster(db: DatabaseSync): number {
-  db.exec(
-    `CREATE VIRTUAL TABLE fts_entscheide_schaufenster USING fts5(id UNINDEXED, titel, regeste, text, quelle_url UNINDEXED, tokenize='${TOKENIZER}');`,
-  );
+  db.exec(ddlFtsEntscheide('fts_entscheide_schaufenster') + ';');
   const rows = db.prepare('SELECT blob FROM eintrag ORDER BY pfad, idx').all() as Array<{ blob: string }>;
   const ins = db.prepare(
     'INSERT INTO fts_entscheide_schaufenster(id, titel, regeste, text, quelle_url) VALUES (?, ?, ?, ?, ?)',

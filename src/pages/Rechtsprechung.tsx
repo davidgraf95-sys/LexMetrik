@@ -7,6 +7,9 @@ import { EntscheidZeile } from '../components/rechtsprechung/EntscheidZeile';
 import { EntscheidFilter } from '../components/rechtsprechung/EntscheidFilter';
 import { SachgebietKacheln } from '../components/rechtsprechung/SachgebietKacheln';
 import { LiveSuche } from '../components/rechtsprechung/LiveSuche';
+import { Leerzustand } from '../components/ui/Leerzustand';
+import { GruppenKopf } from '../components/ui/GruppenKopf';
+import { zahlGruppiert } from '../components/typografie';
 import {
   ladeEntscheidManifest, ladeRichterRegister, filterEntscheide, sortiere, gruppiereNachLeit,
   gruppiereNachInstanz, zaehleSachgebiete, normLabel,
@@ -23,6 +26,11 @@ import { FilterSheet } from '../components/rechtsprechung/FilterSheet';
 import type { BrowseEntscheid, RichterRegister } from '../lib/rechtsprechung/register';
 import type { Rechtsgebiet } from '../lib/normtext/register';
 import { useSucheAusUrl } from '../components/suche/useSucheAusUrl';
+import { STARTSEITE_ZAEHLER } from '../data/startseiteZaehler.generated';
+
+/** Zahl der Ausgabe-Zeile in Schweizer Schreibweise (1'338). */
+const nf = (n: number) => n.toLocaleString('de-CH');
+
 
 // Übersicht der Rubrik «Rechtsprechung» — kuratierter Einstieg (Sachgebiets-Rail,
 // Leitentscheide-first, Norm-Verzahnung), bessere Übersicht als eine flache
@@ -60,6 +68,7 @@ function Liste({ liste, dichte, onNorm, speicherKey, mitSprungleiste }: {
   liste: BrowseEntscheid[]; dichte: Dichte; onNorm: (k: string) => void;
   speicherKey: string; mitSprungleiste?: boolean;
 }) {
+  const pk = usePaneKlasse();
   // Fenster aus der Sitzung wiederherstellen — LAZY, also schon im ersten Render
   // (J1-Prüfpunkt: nach «zurück» muss das Dokument sofort wieder so hoch sein,
   // sonst greift die zentrale Scroll-Wiederherstellung in App.tsx ins Leere).
@@ -166,7 +175,18 @@ function Liste({ liste, dichte, onNorm, speicherKey, mitSprungleiste }: {
       <div>
         {sprungleiste}
         {frueherKnopf}
-        <div ref={behaelterRef} className="grid grid-cols-1 gap-3 xl:grid-cols-2">
+        {/* C-1 (Design-Konsistenz, 31.8.2026): das Raster hing als einzige
+            Karten-Fläche der App noch am VIEWPORT (`xl:grid-cols-2`) statt an
+            der eigenen Breite. Im Split-View war der Effekt sichtbar falsch
+            herum: eine schmale Pane auf einem breiten Bildschirm bekam zwei
+            Spalten, eine breite Pane auf einem schmalen Gerät keine. `pk()`
+            wählt zwischen Viewport- und Container-Query-Stufen (48:1 die
+            hausweite Form). Die Spaltenzahl bleibt bewusst bei ZWEI: die
+            Entscheid-Karte trägt Regeste und Norm-Chips und ist breiter als
+            die Erlass-Karte des dreispaltigen `Gitter`-Rezepts — dieselbe
+            Klassenkette wäre eine Gleichsetzung zweier verschiedener Inhalte
+            (§1), darum bleiben die beiden Raster getrennt. */}
+        <div ref={behaelterRef} className={pk('grid grid-cols-1 gap-3 xl:grid-cols-2', 'grid grid-cols-1 gap-3 @3xl/pane:grid-cols-2')}>
           {sichtbar.map((e) => <EntscheidKarte key={e.key} e={e} onNorm={onNorm} />)}
         </div>
         {mehrKnopf}
@@ -192,10 +212,7 @@ function Sektion({ titel, liste, dichte, onNorm, speicherKey }: {
   if (!liste.length) return null;
   return (
     <section className="space-y-3">
-      <h2 className="lc-overline text-brass-700 flex items-center gap-3">
-        {titel}<span className="num text-ink-500">{liste.length}</span>
-        <span aria-hidden className="h-px flex-1 bg-line" />
-      </h2>
+      <GruppenKopf stufe={2} titel={titel} zahl={liste.length} />
       <Liste liste={liste} dichte={dichte} onNorm={onNorm} speicherKey={speicherKey} />
     </section>
   );
@@ -320,10 +337,13 @@ export function Rechtsprechung() {
 
   return (
     <div className="space-y-6">
+      {/* D11/D22 (David 6.9.2026) — Kopf-Regel für ALLE fünf Übersichten,
+          Herleitung in `components/layout/SeitenKopf.tsx`: H1 = Bereichsname
+          wie im Reiter, DARUNTER die Ausgabe-Zeile aus dem Register — keine
+          Overline, keine halbe Haarlinie, kein Erklär-Absatz. */}
       <SeitenKopf
-        overline="Bundesgericht & Kantone"
         titel="Rechtsprechung"
-        intro="Entscheide des Bundesgerichts und kantonaler Gerichte, verzahnt mit der angewandten Norm."
+        ausgabe={`${nf(STARTSEITE_ZAEHLER.rechtsprechungVolltext)} Entscheide des Bundesgerichts und kantonaler Gerichte im Volltext`}
       />
 
       {fehler && (
@@ -332,8 +352,28 @@ export function Rechtsprechung() {
         </div>
       )}
 
+      {/* ── D21-NEBENFUND (David 6.9.2026): «Fusszeile flackert beim Routenwechsel» ──
+          GEMESSEN 6.9.2026 @1440, gebautes dist/, Chromium mit 400 kbit/s + 150 ms
+          Latenz (Nullprobe 3×, Weg /gesetze → /rechtsprechung per Sidebar-Klick):
+            t≈2.8 s  Suspense-Fallback  → Dokumenthöhe 1524, Fuss bei y=1189 (unter der Falz)
+            t≈3.2 s  DIESER Ladezustand → Dokumenthöhe  900, Fuss bei y= 564 (IM Bild)
+            t≈5.4 s  Daten da           → Dokumenthöhe 27208
+          Der einzige gezählte Layout-Shift war `<footer>` von y=564 nach unten,
+          CLS 0.307. Über eine schnelle Leitung ist dasselbe Fenster ~100 ms lang —
+          genau das «Flackern», das David gesehen hat. Auf «/» → /rechner trat es
+          nicht auf: dort lädt die Seite keine zweite Datei nach.
+          URSACHE: `RouteHuelle` reserviert die Routenhöhe NUR bis zum Auflösen des
+          lazy-Chunks. Danach hängt die Seite an ihrem eigenen `register.json`
+          (Fetch in der useEffect oben) und rendert bis dahin diesen ~200 px hohen
+          Block — die Inhaltsspalte fällt unter die Fensterhöhe, der Fuss rutscht
+          ins Bild und beim Eintreffen der Daten wieder hinaus.
+          FIX: der Ladezustand reserviert dieselbe Höhe wie der Fallback der
+          Routen-Hülle (`components/layout/RouteHuelle.tsx`, dort die Herleitung,
+          warum es im Pane ein fester Block statt 100 vh ist). Nichts wird
+          verzögert oder versteckt: es steht dieselbe Anzeige, nur ohne dass der
+          Seitenfuss dafür nach oben rückt. */}
       {!alle && !fehler && (
-        <div className="space-y-3 py-12 text-center">
+        <div className={`${pk('min-h-screen', 'min-h-[24rem]')} space-y-3 py-12 text-center`}>
           <div className="scale-rule mx-auto max-w-[200px]" aria-hidden />
           <p className="text-body-s text-ink-500">Die Sammlung wird abgerufen …</p>
         </div>
@@ -348,7 +388,8 @@ export function Rechtsprechung() {
       {alle && alle.length > 0 && (
         <div className={pk('lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-6', '@3xl/pane:grid @3xl/pane:grid-cols-[14rem_minmax(0,1fr)] @3xl/pane:gap-6')}>
           {/* Links: Sachgebiets-Rail (Mobil oben als Chip-Band). */}
-          <div className={pk('mb-4 lg:mb-0', 'mb-4 @3xl/pane:mb-0')}>
+          {/* D22 Ziff. 4: @390 stand die Rail 49 px über der Live-Suche (Budget 48). */}
+          <div className={pk('mb-3 lg:mb-0', 'mb-3 @3xl/pane:mb-0')}>
             <SachgebietKacheln
               zaehler={railZaehler}
               gesamt={railGesamt}
@@ -398,14 +439,28 @@ export function Rechtsprechung() {
             {/* Treffer-Zähler. Die Bund↔Kanton-Trennung (früher ein eigenes Ebene-
                 Segment, Auftrag David) liegt jetzt in der «Gemeinwesen»-Facetten-
                 Leiste der Filterzeile — eine kohärente Achse statt zweier Controls. */}
+            {/* B13/LM-116: die Zeile behält ihre drei Bestandteile und zeigt für
+                jeden den Wert der AKTUELLEN Menge — auch die 0. Vorher fielen
+                «Leitentscheide» und «Volltext-Verweise» beim Filtern ganz weg:
+                die Zeile wurde kürzer, der Inhalt darunter rutschte hoch
+                (§15.2), und «0 Leitentscheide in dieser Auswahl» blieb als
+                Auskunft ungesagt (§8). Zahlen tausendergruppiert (LM-108). */}
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-ink-500">
-              <span><span className="num text-ink-700">{echtAnzahl}</span> {echtAnzahl === 1 ? 'Entscheid' : 'Entscheide'}</span>
-              {leitAnzahl > 0 && <span>· <span className="num">{leitAnzahl}</span> Leitentscheide</span>}
-              {volltextAnzahl > 0 && <span>· <span className="num">{volltextAnzahl}</span> Volltext-Verweise</span>}
+              <span><span className="num text-ink-700">{zahlGruppiert(echtAnzahl)}</span> {echtAnzahl === 1 ? 'Entscheid' : 'Entscheide'}</span>
+              <span>· <span className="num">{zahlGruppiert(leitAnzahl)}</span> Leitentscheide</span>
+              <span>· <span className="num">{zahlGruppiert(volltextAnzahl)}</span> Volltext-Verweise</span>
             </div>
 
             {gefiltert.length === 0 ? (
-              <div className="lc-notice">Kein Entscheid gefunden. Filter anpassen oder zurücksetzen.</div>
+              /* W2·19-DESIGN-KONSISTENZ · D-7: EIN Leerzustands-Baustein statt
+                 dreier Bauformen. Vorher eine `lc-notice`-Box mit dem Satz
+                 «… Filter anpassen oder zurücksetzen.» — der Ausweg stand als
+                 Prosa da, aber es gab nichts zu drücken (C1: keine Sackgasse).
+                 Jetzt Aussagesatz + echter Knopf; die Sachgebiets-Achse (Rail/
+                 URL) bleibt dabei erhalten, exakt wie beim «zurücksetzen» der
+                 Filterleiste (§5: EINE Rücksetz-Semantik, nicht zwei). */
+              <Leerzustand art="filter" text="Kein Entscheid gefunden."
+                weiterweg={{ text: 'Filter zurücksetzen', onKlick: () => onFilter({ sachgebiet: werte.sachgebiet ?? null }) }} />
             ) : alsSektionen ? (
               <div className="space-y-8">
                 <Sektion titel="Amtliche Leitentscheide (BGE)" liste={gruppen.leitentscheide} dichte={dichte} onNorm={waehleNorm} speicherKey={deckelKey('leit')} />
@@ -421,11 +476,8 @@ export function Rechtsprechung() {
                     Label «amtlich») — falsch ist nur die Zugehörigkeit zur BGE-Sammlung. */}
                 {gruppen.weitere.length > 0 && (
                   <div className="space-y-6">
-                    <h2 className="lc-overline flex items-center gap-3">
-                      Weitere Entscheide — nicht in der amtlichen Sammlung (BGE)
-                      <span className="num text-ink-500">{gruppen.weitere.length}</span>
-                      <span aria-hidden className="h-px flex-1 bg-line" />
-                    </h2>
+                    <GruppenKopf stufe={2} zahl={gruppen.weitere.length}
+                      titel="Weitere Entscheide — nicht in der amtlichen Sammlung (BGE)" />
                     {gruppiereNachInstanz(gruppen.weitere).map((g) => (
                       <Sektion key={g.typ} titel={g.label} liste={g.liste} dichte={dichte} onNorm={waehleNorm} speicherKey={deckelKey(`instanz:${g.typ}`)} />
                     ))}

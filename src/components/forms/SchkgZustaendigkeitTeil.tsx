@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EckdatenKachel, Field, GruppenTitel, inputCls, NormLink } from '../vorlagen/ui';
+import { Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls, NormLink } from '../vorlagen/ui';
 import { NormText } from '../NormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
@@ -221,10 +221,12 @@ export function SchkgZustaendigkeitTeil() {
           <Field label="Forderung (CHF)" hint="für die Gebühr des Zahlungsbefehls (Art. 16 GebV SchKG)">
             <BetragsFeld className={inputCls + ' num w-44'} value={forderungRoh} onChange={setForderungRoh} aria-invalid={forderungUngueltig} />
           </Field>
-          <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 sm:mt-7">
-            <input type="checkbox" checked={arrestGelegt} onChange={(e) => setArrestGelegt(e.target.checked)} />
-            Für die Forderung ist bereits Arrest gelegt (Art. 52 SchKG)
-          </label>
+          <Checkbox
+            checked={arrestGelegt}
+            onChange={setArrestGelegt}
+            label="Für die Forderung ist bereits Arrest gelegt (Art. 52 SchKG)"
+            className="sm:mt-7"
+          />
         </div>
         {anliegen === 'widerspruch' && (
           <Field label="Widerspruchs-Konstellation" hint="bestimmt Forum UND Parteirollen (Art. 107–109)">
@@ -422,7 +424,7 @@ export function SchkgZustaendigkeitTeil() {
               <ol className="space-y-2.5">
                 {r.fahrplan.map((s, i) => (
                   <li key={s.titel} className="flex gap-3">
-                    <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
+                    <span aria-hidden className="shrink-0 w-6 h-6 bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
                     <span>
                       <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
                       <span className="block text-body-s text-ink-600">{s.text}</span>

@@ -1,3 +1,5 @@
+import { AbrufFehler } from '../../../components/ui/AbrufFehler';
+import { GruppenKopf } from '../../../components/ui/GruppenKopf';
 import { datumAnzeige } from '../../../components/rechtsprechung/format';
 import { VERNEHMLASSUNG_STATUS_LABEL } from '../../../lib/materialien/vernehmlassungen';
 import type { Geladen, MaterialStand } from './panelKontextLaden';
@@ -26,21 +28,38 @@ import type { Geladen, MaterialStand } from './panelKontextLaden';
 // Reiter «Anwendung» (`PanelAnwendung.tsx`, vierter Eintrag in `PANEL_REITER`).
 // Wer erwägt, hier eine dritte Sektion aufzumachen, liest zuerst den Kopf dort.
 
-export function PanelMaterialien({ stand, quelleUrl }: {
+// ── K-2b/F37 (W2·13-KANTONE, 31.8.2026) · WARUM DER KANTON HIER LEER IST ─────
+// GEMESSEN am 31.8.2026: `public/materialien/register.json` führt 1559 Einträge
+// von neun Behörden — ESTV, EDÖB, SECO, BSV, EHRA, FINMA, IGE, BR, Bund —, also
+// ausnahmslos eidgenössische; `public/materialien/kanten/` hat 10 Dateien,
+// davon 0 zu einem kantonalen Erlass-Key. «Zu diesem Erlass ist kein amtliches
+// Material erfasst» war damit am Kantonserlass eine Aussage über den Erlass, wo
+// eine über den KORPUS hingehört (§8) — der Zusatz sagt sie.
+const KANTON_ABDECKUNG = 'Die Materialien-Sammlung erfasst bisher nur Bundeserlasse.';
+
+export function PanelMaterialien({ stand, quelleUrl, ebene }: {
   stand: Geladen<MaterialStand>;
   quelleUrl: string;
+  /** Ebene des Erlasses — durchgereicht aus dem Modell (§5, s. `PanelEntscheide`).
+   *  Steuert allein den Leerzustands-Zusatz; `undefined` = keine Aussage. */
+  ebene?: 'bund' | 'kanton';
 }) {
   if (!stand.fertig) {
     return <p data-v3-panel-reiter-inhalt="materialien" className="px-2.5 py-3 text-body-s text-ink-500">Materialien werden geladen …</p>;
   }
   const { botschaften, vernehmlassungen } = stand.wert ?? { botschaften: null, vernehmlassungen: null };
   // BEIDE null = Manifest unerreichbar (Fetch-Fehler), nicht «nichts erfasst» (§8).
+  // F2-4 (31.8.2026): die Zeile läuft über den EINEN Abruf-Fehler-Baustein
+  // (`ui/AbrufFehler`) — dieselbe Auskunft stand im Haus viermal in zwei
+  // Optiken. Der Ton wechselt dabei von `ink-500` auf `warn-700`: `ink-500` ist
+  // der Ton des ruhigen Leerzustands (die nächste Verzweigung unten), und genau
+  // diesen Unterschied betont der Kommentar über dieser Zeile selbst (§8).
+  // Das `rel="nofollow"` entfällt mit dem Baustein — es stand an genau dieser
+  // einen von vier Fundstellen und an keinem anderen Quell-Link des Hauses.
   if (botschaften === null && vernehmlassungen === null) {
     return (
-      <p data-v3-panel-reiter-inhalt="materialien" className="px-2.5 py-3 text-body-s text-ink-500">
-        Materialien konnten nicht geladen werden. Amtliche Quelle:{' '}
-        <a href={quelleUrl} rel="nofollow noopener noreferrer" target="_blank" className="text-brass-700">Amtliche Fassung ↗</a>
-      </p>
+      <AbrufFehler gegenstand="Materialien" mehrzahl href={quelleUrl}
+        className="px-2.5 py-3" daten={{ 'data-v3-panel-reiter-inhalt': 'materialien' }} />
     );
   }
   const hatBotschaften = (botschaften?.length ?? 0) > 0;
@@ -49,6 +68,9 @@ export function PanelMaterialien({ stand, quelleUrl }: {
     return (
       <p data-v3-panel-reiter-inhalt="materialien" className="px-2.5 py-3 text-body-s text-ink-500">
         Zu diesem Erlass ist kein amtliches Material erfasst.
+        {ebene === 'kanton' && (
+          <span data-v3-panel-abdeckung="kanton" className="block text-ink-400">{KANTON_ABDECKUNG}</span>
+        )}
       </p>
     );
   }
@@ -56,9 +78,9 @@ export function PanelMaterialien({ stand, quelleUrl }: {
     <div data-v3-panel-reiter-inhalt="materialien" className="px-2.5 py-1">
       {hatBotschaften && (
         <section data-v3-panel-material="botschaften" className="pt-1">
-          <p className="lc-overline">Entstehung
-            <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{botschaften?.length}</span>
-          </p>
+          {/* B3-1 (R3-β): dichte Gestalt des EINEN Gruppenkopfs (`ui/GruppenKopf`)
+              — bis hierher sechsmal in den Panels handgezeichnet. */}
+          <GruppenKopf als="p" dicht titel="Entstehung" zahl={botschaften?.length} />
           <ul className="mt-0.5">
             {botschaften?.map((b) => (
               <li key={b.key} className="border-t border-line/60 py-1.5 first:border-t-0">
@@ -90,9 +112,7 @@ export function PanelMaterialien({ stand, quelleUrl }: {
       )}
       {hatVernehmlassungen && (
         <section data-v3-panel-material="vernehmlassungen" className="pt-2">
-          <p className="lc-overline">In Arbeit
-            <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{vernehmlassungen?.length}</span>
-          </p>
+          <GruppenKopf als="p" dicht titel="In Arbeit" zahl={vernehmlassungen?.length} />
           <ul className="mt-0.5">
             {vernehmlassungen?.map((v) => (
               <li key={v.key} className="border-t border-line/60 py-1.5 first:border-t-0">

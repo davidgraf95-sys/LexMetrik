@@ -13,7 +13,8 @@
  *
  * Die neun Referenz-Erlasse decken die Typen-Matrix ab:
  *   OR (T1) · AIG (T2) · VwVG (T3) · NHG (T4) · RBUE (T9) · BS-211.100 (T8) ·
- *   BS-730.110 (T7) · ZH-243 (T6/T10) · SG-3849 (T6/T10)
+ *   BS-730.110 (T7) · SG-2935 (T6/T10, seit 2.9.2026 anstelle von ZH-243) ·
+ *   SG-3849 (T6/T10) · ZH-243 (T6, seit R1 mit Sidecar)
  * Ergänzt um ZGB (T1, Verdichtung feuert), VMWG (T4 ohne Sektionen) und
  * AR-145.312 (T5 Mini) — die drei belegen Kanten, die sonst ungeprüft blieben.
  */
@@ -171,12 +172,32 @@ describe('S3 — Modus-Kette an den Referenz-Erlassen', () => {
   // deklariert auf B2 (flacher Index). Was unverändert bleibt: es wird keine
   // Gliederung konstruiert, die es nicht gibt (`amtlicheKnoten` 0), und der
   // §8-Hinweis auf das fehlende Sidecar (`hatSidecar`) trägt weiter.
-  it('T10 ZH-243: kein Sidecar → B2 Index statt leerer Leiste, kein konstruierter Baum', () => {
-    const m = lade('kanton', 'ZH-243');
+  // FIXTURE-WECHSEL, deklariert (§6.3, 2.9.2026): der T10-Fall stand auf
+  // ZH-243. Der Erlass ist kein T10 mehr — seit den ZH-Gliederungs-/
+  // Randtitel-Sidecars (R1) trägt er eines. Die Messung von damals bleibt
+  // richtig und wird nicht nachgeführt (§0-2b); T10 misst hier ab sofort
+  // SG-2935 (gemessen 2.9.2026: kein Sidecar, 112 Artikel, 78 % Anhang) neben
+  // dem unveränderten SG-3849. ZH-243 selbst behält direkt darunter einen
+  // eigenen Fall — mit der neuen, ehrlich benannten Erwartung.
+  it('T10 SG-2935: kein Sidecar → B2 Index statt leerer Leiste, kein konstruierter Baum', () => {
+    const m = lade('kanton', 'SG-2935');
     expect(m.kennzahlen.hatSidecar).toBe(false);
     expect(m.modus).toBe('b2-index');
     expect(m.kennzahlen.amtlicheKnoten).toBe(0);
-    // Der Anhang-Anteil bleibt trotzdem messbar (Spec: ZH-243 88 %).
+    // Der Anhang-Anteil bleibt trotzdem messbar (SG-2935 87/112 = 78 %).
+    expect(Math.round(m.kennzahlen.anhangAnteil * 100)).toBe(78);
+  });
+
+  it('T6 ZH-243: Sidecar seit R1 — Modus, Anhang-Anteil und «kein Baum» unverändert', () => {
+    // Der Wächter zur ZH-Randtitel-Slice: ein neu hinzugekommenes Sidecar darf
+    // die Modus-Kette NICHT verschieben (kein Sprung nach B1/B3), es liefert nur
+    // Randtitel in die Index-Zeilen. `amtlicheKnoten` bleibt 0, weil das
+    // ZH-Sidecar für diesen Erlass keine amtliche Gliederung trägt — es wird
+    // also weiterhin kein Baum konstruiert, den es nicht gibt (§8).
+    const m = lade('kanton', 'ZH-243');
+    expect(m.kennzahlen.hatSidecar).toBe(true);
+    expect(m.modus).toBe('b2-index');
+    expect(m.kennzahlen.amtlicheKnoten).toBe(0);
     expect(Math.round(m.kennzahlen.anhangAnteil * 100)).toBe(88);
   });
 

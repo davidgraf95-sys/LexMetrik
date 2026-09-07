@@ -23,335 +23,28 @@
 //   + REFERENZWERTE (C-1/C-2/C-3 Farb-Wörterbuch §4b-B + --paper-Fixpunkte):
 //       Regressions-Referenz — Drift über Toleranz = FAIL (Zahlen dürfen nie
 //       stillschweigend falsch werden).
+//   (e) KEINE HEX-FARBE IN EINER DATA-URI in src/index.css (R3-F2, 6.9.2026) —
+//       Farbwerte in URLs erben keine Token und überleben jede Rekalibrierung.
 //   + BEKANNTE RISSE (D-1-Input): heute unter der Schwelle liegende Paare —
 //       WARNUNG + Fail NUR bei Verschlechterung (Baseline-Guard), damit das Tor
 //       auf dem IST-Stand grün ist, ohne die Risse zu verstecken.
 //
 // Lauf:  npm run check:farbwelt   (Teil von check:seriell → check-parallel → gate).
 import { readFileSync } from 'node:fs';
-import { converter, parse, wcagContrast } from 'culori';
 import { calcAPCA } from 'apca-w3';
-import tw from '../tailwind.config.js';
+// Farb-Maschine (Token-Auflösung, Kontrast, OKLCh) und Regelkorpus (WAS
+// geprüft wird) stehen in eigenen Modulen; hier lebt nur das Tor — Ausführung,
+// Fail/Warn-Politik, Bericht (§6.6-Trennung, 31.8.2026).
+import { hex, kontrast, loeseFarbe, oklchOf, tokensOf, ueber, type Mode } from './farbwelt-messung';
+import {
+  ALIAS, APCA_PROBEN, BASELINE_TOL, CONFIG_TOKENS, FAMILIEN, FIXPUNKT,
+  HUE_DRIFT_MAX, PFLICHT, REFERENZ, REF_TOL, RISSE,
+} from './farbwelt-tabellen';
 
-const CSS = 'src/index.css';
-const toRgb = converter('rgb');
-const toOklab = converter('oklab');
-const toOklch = converter('oklch');
-
-type Farbe = { mode: 'rgb'; r: number; g: number; b: number; alpha: number };
-
-// ── 1 · Token-Extraktion aus index.css (:root + html.dark) ───────────────────
-function ausschnitt(css: string, selektor: string): string {
-  // Findet `<selektor> {` und liefert den Inhalt bis zur passenden `}`.
-  const start = css.indexOf(selektor);
-  if (start < 0) throw new Error(`check-farbwelt: Selektor «${selektor}» nicht in ${CSS} gefunden.`);
-  let i = css.indexOf('{', start);
-  let tiefe = 0;
-  const von = i + 1;
-  for (; i < css.length; i++) {
-    if (css[i] === '{') tiefe++;
-    else if (css[i] === '}') { tiefe--; if (tiefe === 0) return css.slice(von, i); }
-  }
-  throw new Error(`check-farbwelt: Block «${selektor}» nicht geschlossen.`);
-}
-
-function tokenMap(block: string): Map<string, string> {
-  const m = new Map<string, string>();
-  // Nur Deklarationen der obersten Ebene (keine verschachtelten Regeln): jede
-  // `--name: wert;`-Zeile. color-mix()-Werte enthalten kein `;` bis zum Ende.
-  const re = /--([\w-]+)\s*:\s*([^;]+);/g;
-  let x: RegExpExecArray | null;
-  while ((x = re.exec(block)) !== null) m.set(x[1], x[2].trim());
-  return m;
-}
-
-const css = readFileSync(CSS, 'utf8');
-const rootBlock = ausschnitt(css, ':root');
-const darkBlock = ausschnitt(css, 'html.dark');
-const ROOT = tokenMap(rootBlock);
-const DARK = new Map([...ROOT, ...tokenMap(darkBlock)]); // dark = root, überschrieben
-
-// ── 2 · Wert-Auflösung: var(), color-mix(in srgb|oklab), transparent, hex ─────
-function splitTop(s: string, sep: string): string[] {
-  const out: string[] = [];
-  let tiefe = 0, akt = '';
-  for (const ch of s) {
-    if (ch === '(') tiefe++;
-    else if (ch === ')') tiefe--;
-    if (ch === sep && tiefe === 0) { out.push(akt); akt = ''; }
-    else akt += ch;
-  }
-  out.push(akt);
-  return out;
-}
-
-function loesePercent(tok: string, tokens: Map<string, string>): number {
-  tok = tok.trim();
-  const varM = tok.match(/^var\(\s*--([\w-]+)\s*(?:,\s*([^)]+))?\)$/);
-  if (varM) {
-    const v = tokens.get(varM[1]) ?? varM[2];
-    if (v == null) throw new Error(`check-farbwelt: Prozent-Var --${varM[1]} unauflösbar.`);
-    return loesePercent(v, tokens);
-  }
-  const m = tok.match(/^([\d.]+)%$/);
-  if (!m) throw new Error(`check-farbwelt: kein Prozentwert: «${tok}».`);
-  return parseFloat(m[1]) / 100;
-}
-
-function mischeInRaum(cA: Farbe, pA: number, cB: Farbe, pB: number, raum: string): Farbe {
-  // color-mix: premultiplizierte Alpha im angegebenen Raum (CSS-konform).
-  const sum = pA + pB || 1;
-  pA /= sum; pB /= sum;
-  const aOut = pA * cA.alpha + pB * cB.alpha;
-  const kanal = (a: number, b: number) => (aOut === 0 ? 0 : (pA * cA.alpha * a + pB * cB.alpha * b) / aOut);
-  if (raum === 'oklab') {
-    const oa = toOklab(cA), ob = toOklab(cB);
-    const gemischt = { mode: 'oklab' as const, l: kanal(oa.l, ob.l), a: kanal(oa.a, ob.a), b: kanal(oa.b, ob.b), alpha: aOut };
-    const r = toRgb(gemischt);
-    return { mode: 'rgb', r: r.r, g: r.g, b: r.b, alpha: aOut };
-  }
-  // srgb: gamma-kodierte sRGB-Kanäle (CSS «in srgb»).
-  return { mode: 'rgb', r: kanal(cA.r, cB.r), g: kanal(cA.g, cB.g), b: kanal(cA.b, cB.b), alpha: aOut };
-}
-
-const TRANSPARENT: Farbe = { mode: 'rgb', r: 0, g: 0, b: 0, alpha: 0 };
-
-function loeseFarbe(raw: string, tokens: Map<string, string>, seen = new Set<string>()): Farbe {
-  raw = raw.trim();
-  if (raw === 'transparent') return TRANSPARENT;
-  const varM = raw.match(/^var\(\s*--([\w-]+)\s*(?:,\s*(.+))?\)$/);
-  if (varM) {
-    const name = varM[1];
-    if (seen.has(name)) throw new Error(`check-farbwelt: Zyklus bei --${name}.`);
-    const v = tokens.get(name) ?? varM[2];
-    if (v == null) throw new Error(`check-farbwelt: Farb-Var --${name} unauflösbar.`);
-    return loeseFarbe(v, tokens, new Set([...seen, name]));
-  }
-  if (raw.startsWith('color-mix(')) {
-    const inner = raw.slice(raw.indexOf('(') + 1, raw.lastIndexOf(')'));
-    const teile = splitTop(inner, ',').map((t) => t.trim());
-    const raum = teile[0].replace(/^in\s+/, '').trim();
-    const args = teile.slice(1).map((arg) => {
-      const worte = arg.split(/\s+/).filter(Boolean);
-      let pct: number | null = null, farbe = '';
-      for (const w of worte) {
-        if (/%$/.test(w) || /^var\(--[\w-]+\)$/.test(w) && tokens.get(w.slice(6, -1))?.endsWith('%')) {
-          pct = loesePercent(w, tokens);
-        } else farbe += (farbe ? ' ' : '') + w;
-      }
-      return { farbe: loeseFarbe(farbe, tokens, seen), pct };
-    });
-    // Fehlende Prozente füllen sich zum Rest auf 100 %.
-    const bekannt = args.reduce((s, a) => s + (a.pct ?? 0), 0);
-    const offen = args.filter((a) => a.pct == null).length;
-    for (const a of args) if (a.pct == null) a.pct = offen ? (1 - bekannt) / offen : 0;
-    return mischeInRaum(args[0].farbe, args[0].pct!, args[1].farbe, args[1].pct!, raum);
-  }
-  const p = parse(raw);
-  if (!p) throw new Error(`check-farbwelt: unparsbare Farbe «${raw}».`);
-  const r = toRgb(p);
-  return { mode: 'rgb', r: r.r, g: r.g, b: r.b, alpha: r.alpha ?? 1 };
-}
-
-function ueber(fg: Farbe, bg: Farbe): Farbe {
-  const a = fg.alpha;
-  return { mode: 'rgb', r: fg.r * a + bg.r * (1 - a), g: fg.g * a + bg.g * (1 - a), b: fg.b * a + bg.b * (1 - a), alpha: 1 };
-}
-
-type Mode = 'hell' | 'dunkel';
-function tokensOf(mode: Mode): Map<string, string> { return mode === 'hell' ? ROOT : DARK; }
-
-/** Kontrast fg-Token gegen bg-Token; transluzente Werte werden korrekt über
- *  das Grund-Papier des Modus komponiert. */
-function kontrast(fg: string, bg: string, mode: Mode): number {
-  const t = tokensOf(mode);
-  const basis = ueber(loeseFarbe(t.get('paper')!, t), { mode: 'rgb', r: 1, g: 1, b: 1, alpha: 1 });
-  let bgC = loeseFarbe(t.get(bg) ?? bg, t);
-  if (bgC.alpha < 1) bgC = ueber(bgC, basis);
-  let fgC = loeseFarbe(t.get(fg) ?? fg, t);
-  if (fgC.alpha < 1) fgC = ueber(fgC, bgC);
-  return wcagContrast(fgC, bgC);
-}
-
-function hex(c: Farbe): string {
-  const h = (n: number) => Math.round(Math.max(0, Math.min(1, n)) * 255).toString(16).padStart(2, '0');
-  return `#${h(c.r)}${h(c.g)}${h(c.b)}`.toUpperCase();
-}
-function oklchOf(token: string, mode: Mode) {
-  const t = tokensOf(mode);
-  const c = loeseFarbe(t.get(token)!, t);
-  // Das vorangestellte `l: toOklab(c).l` war TOTER CODE: der nachfolgende Spread
-  // überschrieb es (TS2783, sichtbar erst seit QS-TYP-LUECKE 15.8.2026). Der
-  // gelieferte Wert ändert sich dadurch NICHT — OKLCh ist die Polarform von
-  // OKLab und trägt dasselbe L. Weg damit, damit die Zeile sagt, was sie tut.
-  return { ...toOklch(c) } as { l: number; c: number; h: number | undefined };
-}
-
-// ── 3 · Assertion-Tabellen ───────────────────────────────────────────────────
+// ── Tor-Zustand ─────────────────────────────────────────────────────────────
 const fehler: string[] = [];
 const warnungen: string[] = [];
 
-// (a) WCAG-PFLICHTPAARE — heute erfüllt, FAIL bei Unterschreitung.
-type Paar = { fg: string; bg: string; min: number; art: 'Text' | 'Nicht-Text'; quelle: string };
-const TEXT = (fg: string, bg: string, quelle: string): Paar => ({ fg, bg, min: 4.5, art: 'Text', quelle });
-const NICHT = (fg: string, bg: string, quelle: string): Paar => ({ fg, bg, min: 3.0, art: 'Nicht-Text', quelle });
-const PFLICHT: Paar[] = [
-  // ── Kantonskarte (Bug-Check #568, 29.8.2026, §17-Wurzelfix): die Erfassungs-
-  // grad-Füllungen tragen ihre Bedienbarkeit über die Kanten-Trennung — dunkel
-  // liegt «vollständig» nur 0.05 über der 3:1-Schwelle; eine spätere
-  // --ink-700-/Basis-Korrektur risse F2 sonst STUMM. Kante = --karte-kante.
-  NICHT('karte-kante', 'karte-voll', 'Kantonskarte: Kanten-Trennung auf «vollständig»'),
-  NICHT('karte-kante', 'karte-auswahl', 'Kantonskarte: Kanten-Trennung auf «Auswahl»'),
-  NICHT('karte-kante', 'karte-duenn', 'Kantonskarte: Kanten-Trennung auf «dünn»'),
-  NICHT('karte-kante', 'karte-leer', 'Kantonskarte: Kanten-Trennung auf «keine Erlasse»'),
-  // ── QS-UI 8a, Verschärfung Stufe 1a: Fliesstext-Basis ───────────────────────
-  // Befund des Audits (4.8.2026): ink-900 — der TRAGENDE Fliesstext-Ton der
-  // ganzen App — war in keinem einzigen Pflichtpaar vertreten. Geprüft waren
-  // nur die Sekundär-/Tertiär-Tiers (ink-600/500). Eine Verschiebung von
-  // ink-900 wäre also stumm durch das Tor gegangen. Gemessen (culori, alle weit
-  // über 4.5:1): paper 16.68·14.80 · surface 16.99·13.94 · well 15.81·15.52 ·
-  // paper-raised 17.25·13.50 (hell·dunkel).
-  TEXT('ink-900', 'paper', 'QS-UI 8a: Fliesstext auf Papier — Basis-Lesefläche'),
-  TEXT('ink-900', 'surface', 'QS-UI 8a: Fliesstext auf Karte'),
-  TEXT('ink-900', 'well', 'QS-UI 8a: Fliesstext auf Eingabefeld (.lc-input)'),
-  TEXT('ink-900', 'paper-raised', 'QS-UI 8a: Fliesstext auf erhabener Fläche (Popover/Dialog)'),
-  // ── QS-UI 8a, Verschärfung Stufe 1b: die Fläche --paper-raised ─────────────
-  // Zweiter Audit-Befund: die Pflichtpaare kannten nur paper/surface/well. Die
-  // vierte Flächen-Rolle --paper-raised (Popover, Dialog, Drawer, Menü) war
-  // ungeprüft, obwohl `bg-paper-raised` an 283 Stellen in 13+ Komponenten steht
-  // (u. a. Shell-Drawer, Reiter-/Verlauf-Übersicht, LeserAnsichtMenu,
-  // GliederungSheet). Das ist die Fläche, auf der die Navigation stattfindet.
-  // Gemessen: ink-600 7.61·7.53 · ink-500 5.27·5.04 · brass-700 5.60·9.11.
-  TEXT('ink-600', 'paper-raised', 'QS-UI 8a: Sekundärtext im Popover/Dialog'),
-  TEXT('ink-500', 'paper-raised', 'QS-UI 8a: Tertiärtext im Popover/Dialog'),
-  TEXT('brass-700', 'paper-raised', 'QS-UI 8a: Link/Akzent im Popover/Dialog'),
-  NICHT('focus', 'paper-raised', 'QS-UI 8a: --focus-Ring auf erhabener Fläche (5.60·5.98)'),
-  // NICHT aufgenommen — bewusst, mit Grund (§8-Ehrlichkeit statt stiller Lücke):
-  //   · placeholder/paper-raised dunkel = 4.532 gegen die 4.5-Schwelle. Derselbe
-  //     Messer-Rand, den §11 für warn-line beschreibt (0.032 Abstand). Ein
-  //     Platzhalter steht ausserdem in `.lc-input` (= --well), nicht auf
-  //     paper-raised; das Paar wäre ein konstruierter Grund. → offen, in der
-  //     Restliste des PR.
-  //   · brass-line/paper-raised hell = 3.084, brass-line/paper hell = 2.982.
-  //     Der zweite Wert läge unter der Schwelle — für BEIDE fand das Audit
-  //     aber keinen Call-Site: `.lc-notice` und `.lc-akzent-brass` zeichnen
-  //     ihre brass-Kante auf `--surface` (dort 3.28, seit je Pflichtpaar). Ein
-  //     Riss-Eintrag ohne belegten Konsumenten wäre ein erfundener Befund (§7),
-  //     darum bleibt es ein Messwert in der Audit-Liste, kein Tor-Eintrag.
-  // Sekundär-/Meta-/Feinschrift-Basis (lc-overline/lc-fineprint/lc-notice = ink-600)
-  TEXT('ink-600', 'well', 'lc-overline/lc-fineprint (index.css:350/374)'),
-  TEXT('ink-600', 'paper', 'ink-600 Sekundärtext'),
-  TEXT('ink-600', 'surface', 'ink-600 auf Karte'),
-  // Tertiärtext ink-500 — D-4 (13.7.): well-Riss geheilt (4.48→4.62), jetzt Pflicht.
-  TEXT('ink-500', 'paper', 'ink-500 Tertiärtext (D-4: 5.00)'),
-  TEXT('ink-500', 'surface', 'ink-500 auf Karte (D-4: 5.17)'),
-  TEXT('ink-500', 'well', 'ink-500 auf Eingabefeld (D-4 geheilt: 4.62, vorher 4.48)'),
-  TEXT('placeholder', 'well', 'lc-input::placeholder (index.css:37/164)'),
-  // Messing-Text/Links
-  TEXT('brass-700', 'paper', 'a/--accent-text (index.css:90/214)'),
-  TEXT('brass-700', 'surface', 'brass-700 auf Karte'),
-  TEXT('brass-700', 'well', 'brass-700 auf Eingabefeld'),
-  TEXT('brass-800', 'brass-100', 'lc-highlight .lc-overline (index.css:649/65)'),
-  // Status-Badge-Text auf Tönungsfläche
-  TEXT('sage-700', 'sage-bg', 'lc-badge-ok (index.css:525)'),
-  TEXT('slate-700', 'slate-bg', 'lc-badge-soft (index.css:537)'),
-  TEXT('warn-700', 'warn-bg', 'lc-badge-warn (index.css:528)'),
-  TEXT('danger-700', 'danger-bg', 'lc-badge-danger (index.css:536)'),
-  // Nicht-Text: Fokus-Ring (--focus) auf allen drei Flächen (WCAG 1.4.11)
-  NICHT('focus', 'paper', '--focus Ring (index.css:91-95/187-189)'),
-  NICHT('focus', 'surface', '--focus Ring auf Karte'),
-  NICHT('focus', 'well', '--focus Ring auf Eingabefeld'),
-  // Nicht-Text: Akzent-/Hinweis-Linien auf Karte.
-  // Label-Wahrheit nachgezogen 3.8.2026: #418 entfernte .lc-akzent-warn und
-  // .lc-akzent-danger aus index.css — die Labels benannten damit zwei Klassen,
-  // die es nicht mehr gibt (und drei überholte Zeilennummern). Die GEPRÜFTEN
-  // Token-Paare bleiben unverändert; nur der Text wird ehrlich.
-  NICHT('brass-line', 'surface', 'lc-akzent-brass (index.css:583) / lc-notice-Kante (index.css:885)'),
-  NICHT('warn-line', 'surface', 'warn-line auf Karte — konservativer Boden, echter Konsument ist lc-notice-warn (index.css:886)'),
-  NICHT('danger-line', 'surface', 'border-t-danger-line auf lc-tile/lc-card (KuendigungSperrForm:228, VorlageKuendigungArbeitgeber:92, StrafZustaendigkeitTeil:479)'),
-  // ── QS-UI 8a, Verschärfung Stufe 1c: Status-Kanten auf IHRER Tönungsfläche ──
-  // ERLEDIGT der bis 3.8.2026 hier stehende OFFENE PUNKT. Er lautete: die
-  // lc-notice-/Badge-Kanten rendern NICHT auf «surface», sondern auf der
-  // getönten Fläche -bg (der strengere Grund) — aber warn-line/warn-bg lag mit
-  // 3.008 nur 0.008 über der Schwelle, und ein Tor auf dieser Messerschneide
-  // wäre bei jeder Token-Rundung gekippt. Genau deshalb war es keine Frage der
-  // Tor-Politik, sondern des Tokens: QS-UI-WARNLINE (FAHRPLAN-UI-QUALITAET §11)
-  // hat --warn-line um OKLCH L −0.020 abgedunkelt. Damit tragen alle vier
-  // Status-Kanten Reserve und werden hart (culori, hell·dunkel):
-  //   warn-line/warn-bg   3.264 · 3.948   (vorher 3.008 · 4.283)
-  //   danger-line/danger-bg 5.538 · 6.685
-  //   sage-line/sage-bg     4.022 · 8.441
-  //   slate-line/slate-bg   4.625 · 7.768
-  NICHT('warn-line', 'warn-bg', 'QS-UI 8a/§11: lc-notice-warn-Kante auf ihrer Tönungsfläche (index.css:974)'),
-  NICHT('danger-line', 'danger-bg', 'QS-UI 8a: lc-notice-danger-Kante auf ihrer Tönungsfläche (index.css:975)'),
-  NICHT('sage-line', 'sage-bg', 'QS-UI 8a: sage-Kante/Balken auf sage-Tönung'),
-  NICHT('slate-line', 'slate-bg', 'QS-UI 8a: slate-Kante/Balken auf slate-Tönung'),
-  // D-1.3: sage/slate-Linien-Aliasse (dunkel auf -700 gehoben) — Nicht-Text-
-  // Kanten/Balken greifen den Alias, nie -500 direkt.
-  NICHT('sage-line', 'surface', 'D-1.3 border-sage-line (Patientenverfügung u. a.)'),
-  NICHT('slate-line', 'surface', 'D-1.3 --slate-line-Alias'),
-  NICHT('danger-line', 'paper', 'D-1.3 border-t-danger-line/SperrtageZaehler-Balken'),
-];
-
-// (Referenz) C-1/C-2/C-3-Farb-Wörterbuch (§4b-B) — dokumentierte Zahlen als
-// Regressions-Referenz; Drift > Toleranz = FAIL.
-// D-3 (srgb→oklab, 12.7.2026): NEU GEMESSEN — alle drei Paare sind Voll-Token
-// auf dem soliden --well, kein color-mix im Pfad → Werte byte-identisch
-// (4.81/3.47 · 5.24/9.43 · 4.91/10.48). Die oklab-Umstellung verschiebt
-// sichtbar NUR die vier -bg-Rezepte (PFLICHT-Badge-Paare oben, alle ≥5.1:1);
-// Mixe mit `transparent` rendern wegen premultiplied alpha raumunabhängig gleich.
-type Ref = { fg: string; bg: string; hell: number; dunkel: number; quelle: string };
-const REF_TOL = 0.06;
-// D-5/A38 (16.7.): --well heller/weisser (#F2EFE6→#F6F4EE) → die HELL-Werte steigen
-// (hellerer Grund = mehr Kontrast); DUNKEL unverändert (dunkle Fläche unberührt, A38).
-// Neu deterministisch gemessen (culori) und in §4b-B/§F2b nachgezogen.
-const REFERENZ: Ref[] = [
-  { fg: 'slate-500', bg: 'well', hell: 5.03, dunkel: 3.47, quelle: 'C-1 lc-chip-entscheid Tick (§4b-B; hell D-5: 4.81→5.03)' },
-  { fg: 'warn-700', bg: 'well', hell: 5.48, dunkel: 9.43, quelle: 'C-2 Currency-Chip warn (§4b-B; hell D-5: 5.24→5.48)' },
-  { fg: 'brass-700', bg: 'well', hell: 5.13, dunkel: 10.48, quelle: 'C-3 brass-Tick (§4b-B; hell D-5: 4.91→5.13)' },
-];
-
-// (Fixpunkt) --paper hell/dunkel sind unantastbare Anker (Fixpunkt 1).
-// D-5/A38-Übersteuerung (16.7.): der frühere Hell-Fixpunkt #FAF8F2 ist durch Davids
-// Direktive «ganze Website heller und weisser» ausdrücklich überschrieben → neuer,
-// hellerer/weisserer Hell-Anker #FCFAF6 (deklariert, Tor bleibt scharf). DUNKEL bleibt
-// unantastbar (A38 betrifft nur die helle Fläche; D-6 kommt separat).
-const FIXPUNKT: { token: string; mode: Mode; soll: string }[] = [
-  { token: 'paper', mode: 'hell', soll: '#FCFAF6' },
-  { token: 'paper', mode: 'dunkel', soll: '#16150F' },
-];
-
-// (Baseline) BEKANNTE RISSE (D-1-Input): heute unter Schwelle → WARNUNG, FAIL nur
-// bei Verschlechterung gegenüber dem gemessenen Ist-Wert (Baseline-Guard).
-const BASELINE_TOL = 0.03;
-const RISSE: { fg: string; bg: string; mode: Mode; schwelle: number; ist: number; tag: string }[] = [
-  // D-4 ✅ (13.7.): ink-500/well hell 4.48→4.62 (L −0.007 bei Hue-Normalisierung) —
-  // aus RISSE entfernt, jetzt harte PFLICHT (s. o.).
-  // D-1.3 ✅: alle direkten Nicht-Text-Call-Sites von danger-500 sind auf
-  // --danger-line aliassiert (dunkel = -700, 7.54:1) — das Token-PAAR bleibt
-  // als Baseline-Guard, bis D-4/D-5 die -500-Mitte selbst kalibriert.
-  { fg: 'danger-500', bg: 'paper', mode: 'dunkel', schwelle: 3.0, ist: 2.72, tag: 'D-1.3 Call-Sites aliassiert (--danger-line); Token-Paar bis D-4/D-5' },
-];
-
-// ── 4 · tailwind.config-Drift-Wächter: jedes geprüfte Token muss als Utility
-//        existieren (sonst stiller No-op, F7). ────────────────────────────────
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const twColors: Record<string, any> = (tw as any).theme?.extend?.colors ?? {};
-const CONFIG_TOKENS = new Set<string>();
-for (const [fam, val] of Object.entries(twColors)) {
-  if (val && typeof val === 'object') for (const s of Object.keys(val)) CONFIG_TOKENS.add(s === 'DEFAULT' ? fam : `${fam}-${s}`);
-  else CONFIG_TOKENS.add(fam);
-}
-// Semantische :root-Aliase, die bewusst kein Utility sind (nur via var() genutzt).
-// QS-UI 8a: `warn-line` und `danger-line` standen hier, EXISTIEREN aber als
-// Utility (tailwind.config.js:51/52, `warn.line`/`danger.line` → border-warn-line).
-// Die Ausnahme war damit breiter als ihre eigene Begründung und nahm genau die
-// zwei Linien-Token aus dem No-op-Wächter heraus, die QS-UI 8a neu als
-// Pflichtpaare führt — der Wächter hätte ihr Verschwinden aus der Config nicht
-// gemeldet (F6/F7: eine Ausnahme, die nicht mehr stimmt, ist ein stiller Riss).
-// Geprüft 4.8.2026 gegen die Config: nur die vier hier verbliebenen Namen sind
-// tatsächlich reine :root-Aliase ohne Utility.
-const ALIAS = new Set(['focus', 'placeholder', 'brass-line', 'auf-gold']);
 function pruefeConfig(token: string) {
   if (ALIAS.has(token) || CONFIG_TOKENS.has(token)) return;
   fehler.push(`Config-Drift: Token «${token}» wird geprüft, fehlt aber in tailwind.config.js (stiller Utility-No-op, F7).`);
@@ -397,6 +90,32 @@ for (const r of RISSE) {
     fehler.push(`Verschlechterung ${r.fg}/${r.bg} ${r.mode}: ${ist.toFixed(2)}:1 < Baseline ${r.ist.toFixed(2)}:1 — bekannter Riss darf nicht tiefer sinken (${r.tag}).`);
 }
 
+// ── (e) KEINE HEX-FARBE IN EINER DATA-URI (R3-F2, 6.9.2026) ─────────────────
+//
+// ANLASS, gemessen: Nach dem Token-Tausch R1 (Messing → Tinte/Registerfarben)
+// blieb GENAU EINE Stelle in `src/index.css` gold — der Select-Chevron, zweimal
+// als `data:image/svg+xml` mit `stroke='%23826225'` (hell) bzw. `%23D8BD78`
+// (dunkel). Kein Tor konnte das sehen: dieses Script prüft TOKEN-Werte, und ein
+// Farbwert in einer URL ist für die Token-Auflösung unsichtbar. Genau darin
+// liegt der Schaden — eine Rekalibrierung der Farbwelt zieht jeden Token mit,
+// aber keine data-URI. Das ist die zweite Wahrheit, die §5 verbietet.
+//
+// GREIFER: jedes `%23`-Hexliteral (URL-kodiertes `#`) im Blatt. Nur dort —
+// gewöhnliche `#RRGGBB`-Literale sind in `index.css` die TOKEN-DEFINITIONEN
+// selbst und damit die eine Quelle, kein Verstoss.
+// KOMMENTARE werden vorher entfernt: ein Hexwert in einer Notiz malt nichts
+// (und dieser Befund selbst wird unten in `index.css` erklärt — der Wächter
+// dürfte sich nicht an seiner eigenen Begründung entzünden).
+const CSS_ROH = readFileSync(new URL('../src/index.css', import.meta.url), 'utf8');
+const CSS_OHNE_KOMMENTAR = CSS_ROH.replace(/\/\*[\s\S]*?\*\//g, '');
+for (const m of CSS_OHNE_KOMMENTAR.matchAll(/%23[0-9A-Fa-f]{3,8}/g)) {
+  fehler.push(
+    `Hex-Farbe «${m[0]}» in einer data-URI in src/index.css — eine URL erbt keine Token und `
+    + `wird bei einer Farb-Rekalibrierung stumm zurückgelassen (§5, Befund R3-F2 6.9.2026). `
+    + `Weg: currentColor (Farbverlauf/SVG-Element) oder ein Token an einer CSS-Eigenschaft.`,
+  );
+}
+
 // (c) Dunkel-Rezept: Flächen-L-Leiter well<paper<surface<raised — FAIL-Regel.
 for (const mode of ['hell', 'dunkel'] as Mode[]) {
   const leiter = ['well', 'paper', 'surface', 'paper-raised'];
@@ -406,15 +125,7 @@ for (const mode of ['hell', 'dunkel'] as Mode[]) {
       fehler.push(`Flächen-L-Leiter ${mode}: ${leiter[i - 1]}(L${Ls[i - 1].toFixed(3)}) ≥ ${leiter[i]}(L${Ls[i].toFixed(3)}) — Erhebungs-Logik verletzt (D-0c/D-6).`);
 }
 
-// (b) OKLCH Hue-Drift + L-Monotonie je Familie.
-//  D-4 (13.7.): die ink-Achse ist auf EINEN Ziel-Hue (88°, brass-verwandt)
-//  normalisiert → für ink SCHARF geschaltet (FAIL bei Hue-Drift >8° oder gebrochener
-//  L-Monotonie). brass bleibt beratend (WARNUNG), bis D-9/Stripe-L-Anker entscheidet.
-const FAMILIEN: Record<string, string[]> = {
-  ink: ['ink-900', 'ink-800', 'ink-700', 'ink-600', 'ink-500', 'ink-400', 'ink-300'],
-  brass: ['brass-800', 'brass-700', 'brass-600', 'brass-500', 'brass-400', 'brass-300'],
-};
-const HUE_DRIFT_MAX = 8;
+// (b) OKLCH Hue-Drift + L-Monotonie je Familie (Tabelle: farbwelt-tabellen.ts).
 for (const [fam, toks] of Object.entries(FAMILIEN)) {
   const senke = fam === 'ink' ? fehler : warnungen;
   const stufe = fam === 'ink' ? 'HART (D-4)' : 'beratend';
@@ -444,12 +155,6 @@ for (const tok of FAMILIEN.brass) {
 }
 
 // (d) APCA-Spalte — NUR beratend (Lc), nie Fail.
-const APCA_PROBEN: { fg: string; bg: string; label: string; ziel: number }[] = [
-  { fg: 'ink-900', bg: 'paper', label: 'Fliesstext', ziel: 75 },
-  { fg: 'ink-600', bg: 'paper', label: 'Meta/Sekundär', ziel: 60 },
-  { fg: 'brass-700', bg: 'paper', label: 'Link/Akzent', ziel: 60 },
-  { fg: 'focus', bg: 'paper', label: 'Nicht-Text Fokus', ziel: 45 },
-];
 const apcaZeilen: string[] = [];
 for (const a of APCA_PROBEN) {
   for (const mode of ['hell', 'dunkel'] as Mode[]) {
@@ -481,5 +186,6 @@ if (fehler.length) {
 console.log(
   `Farbwelt-Tor ok — ${PFLICHT.length * 2} WCAG-Pflichtpaare (hell+dunkel), ` +
   `${REFERENZ.length * 2} Referenzwerte (§4b-B), ${FIXPUNKT.length} Fixpunkte, ` +
-  `Flächen-L-Leiter beide Modi. ${warnungen.length} beratende Warnung(en) offen (D-1/D-4/D-5).`,
+  `Flächen-L-Leiter beide Modi, kein Hex in data-URIs. ${warnungen.length} beratende Warnung(en) offen (D-1/D-4/D-5).`,
 );
+

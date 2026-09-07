@@ -34,11 +34,18 @@
  *     «1. 1. 15 - 87», Seitenzahlen → verworfen.
  *   - Silbentrennung am Zeilenende («Gebüh-\nren» → «Gebühren»): zusammengefügt.
  *
- * Drift-Token (§7 d): es gibt kein version_uid. quelleHash = sha256 der
- * normalisierten extrahierten PDF-Textbasis (alle Artikel + items, stabil
- * sortiert) dient als fassungsToken; `stand` aus dem PDF-Kopf-Marker
- * («1. 1. 15 - 87» → In-Kraft 1.1.2015) bzw. Registry. Re-fetch +
- * quelleHash-Vergleich erkennt jede inhaltliche Änderung der Quelle.
+ * Drift-Token (§7 d): es gibt kein version_uid. `quelleHash` = sha256 der
+ * ROHEN PDF-Bytes (Fix-Runde 3 — vorher der Hash der Extraktion, der jede
+ * Quell-Änderung in einem verworfenen Teil überspringt; Begründung im
+ * Feld-Kommentar bei ZhErgebnis.meta). `extraktHash` daneben trennt
+ * «neu gesetzt» von «Wortlaut geändert».
+ *
+ * `stand` = **Publikationsdatum der geltenden Nachtragsfassung aus dem
+ * Registry-HTML** (`<dt>Publikationsdatum</dt>`, s. leseZhPublikationsdatum).
+ * Fallback-Kette danach: UR-Inkrafttreten aus dem Registry-URL-Slug
+ * (leseZhStandAusUrl), dann der Loseblatt-Nachtragsmarker aus dem PDF-Fussband
+ * («1. 1. 15 - 87», leseZhStand). Der Fussband-Marker ist NICHT die Regel — er
+ * kann dem Publikationsdatum vorauslaufen (Fehlerklasse `check:stand-zukunft`).
  *
  * §2: rein/deterministisch (kein Date.now/Math.random). Die reine Parser-
  * Funktion extrahiereZhParagraphen() arbeitet ohne Netz/FS (testbar gegen
@@ -47,6 +54,46 @@
 
 import { createHash } from 'node:crypto';
 import { typisiereSpalten, type Spalte } from './mehrspaltige-tabelle.ts';
+import { fetchMitWiederholung } from './netz-retry.ts';
+import { fuegeZeilen } from './zh-text.ts';
+import {
+  extrahiereZhStreitwertStaffel,
+  extrahiereZhNotariatsTarif,
+} from './zh-tarif-geometrie.ts';
+import { SAMMEL_MARKER, expandiereSammelbereich } from './zh-sammelkopf.ts';
+import {
+  extrahiereZhTextZeilen,
+  serialisiereZhZeilen,
+  TITEL_MARKER,
+} from './zh-seitenmontage.ts';
+
+// Die GEOMETRIE-Schicht (Koordinaten -> Textzeilen -> serialisierte Textbasis)
+// wohnt seit der Fix-Runde 3 in `zh-seitenmontage.ts` (§6.6: der Adapter stand
+// 35 % ueber seiner Baseline). Bestehende Aufrufer - Tests, Werkzeuge - greifen
+// weiterhin ueber diesen Adapter darauf zu; der Umzug bleibt fuer sie unsichtbar.
+export {
+  extrahiereZhTextZeilen,
+  montiereZhSeite,
+  serialisiereZhZeilen,
+  bestimmeBodySchrift,
+  TITEL_MARKER,
+  type ZhTextZeile,
+  type ZhExtrakt,
+} from './zh-seitenmontage.ts';
+import {
+  holeZhQuelle,
+  modusAusUmgebung,
+  type CacheModus,
+} from './zh-pdf-cache.ts';
+
+// Bestehende Aufrufer (Tests, Werkzeuge) importieren die Tarif-Geometrie
+// weiterhin über diesen Adapter — der Umzug bleibt für sie unsichtbar.
+export {
+  extrahiereZhStreitwertStaffel,
+  extrahiereZhNotariatsTarif,
+} from './zh-tarif-geometrie.ts';
+export { SAMMEL_MARKER, expandiereSammelbereich } from './zh-sammelkopf.ts';
+export { fuegeZeilen } from './zh-text.ts';
 // (segmentiereAnhangZiffern wird für ZH NICHT mehr genutzt — der Anhang wird
 //  spaltenbewusst über extrahiereZhAnhangSpalten gelesen; generischer
 //  Segmentierer bleibt für SG/LU im adapter-pdf.)
@@ -76,6 +123,22 @@ export interface ZhBlock {
    *  Kanton-Nachzug (G3b Schritt 2): kanonisches `spalten`-Modell (typisiert);
    *  `kopf` bleibt für Abwärtskompat, ist aber im ZH-Pfad ersetzt (zuKanonisch). */
   mehrspaltig?: { spalten?: Spalte[]; kopf?: string[]; zeilen: string[][] };
+  /**
+   * VERWEIS-Spalte einer Tarif-Zeile als EIGENES Feld (A2, Fix-Runde 3).
+   *
+   * VORHER hängte der Adapter den Verweis als Fliesstext an den Wortlaut —
+   * «… (vgl. Ziff. 2.2.1, 2.2.2)». Dieser Zusatz steht so in KEINEM amtlichen
+   * PDF; er war eine Synthese des Generators, also ein erfundenes Zitat (§7:
+   * massgeblich ist die amtliche Fassung — ein Snapshot darf nichts enthalten,
+   * was die Quelle nicht trägt). 32 Einträge in ZH-243 waren betroffen.
+   * Zusätzlich kollabierten dabei ZWEI verschiedene Quell-Spalten
+   * («Grundbuchgebühren siehe Ziff.:», S. 5–7, und «Beurkundungsgebühren siehe
+   * Ziff.:», S. 8–14) auf denselben Wortlaut — die Unterscheidung ging verloren.
+   *
+   * JETZT: `etikett` ist der am Spaltenkopf GELESENE Titel (nie gesetzt),
+   * `ziffern` sind die Zellen-Werte. Der Zitattext bleibt quellrein.
+   */
+  verweis?: { etikett: string; ziffern: string };
 }
 
 export interface ZhArtikel {
@@ -86,313 +149,245 @@ export interface ZhErgebnis {
   meta: {
     titel: string;
     stand: string;
+    /**
+     * Drift-Token (§7 d) — seit Fix-Runde 3 der sha256 der ROHEN PDF-Bytes.
+     *
+     * VORHER hashte dieses Feld die EXTRAKTION (alle Artikel + items). Das ist
+     * strukturell blind: ändert die amtliche Quelle etwas in einem Teil, den
+     * der Adapter bewusst verwirft (Übergangs-/Schlussapparat, PBG-Anhang,
+     * Fussnoten-Apparat — bei ZH-700.1 immerhin 11 % der Textzeilen), bleibt
+     * der Hash gleich und die Drift-Prüfung schweigt. Ein Token, der genau die
+     * Lücke nicht sieht, die der Lücken-Index ausweist, ist keiner.
+     *
+     * Der Byte-Hash sieht JEDE Quell-Änderung. Preis: er reagiert auch auf
+     * eine reine Neu-Erzeugung des PDF ohne Textänderung — dann meldet der
+     * Drift-Check eine Drift, `extraktHash` zeigt aber unverändert, und die
+     * Neu-Erzeugung des Snapshots ist byte-gleich. Das ist die richtige
+     * Richtung: lieber ein erklärbares Rauschen als ein blinder Fleck (§8).
+     */
     quelleHash: string;
+    /**
+     * sha256 der EXTRAHIERTEN Artikel (der frühere `quelleHash`). Bleibt als
+     * zweite Stufe erhalten: der Drift-Check unterscheidet damit «Quelle neu
+     * gesetzt, Wortlaut gleich» von «Wortlaut geändert». NICHT im Snapshot
+     * gespeichert (das verlangte eine Schema-Änderung in
+     * `scripts/datenhaltung/**` — fremder Bau-Strang).
+     */
+    extraktHash: string;
+    /** Provenienz des Cache-Eintrags (O1): woher die Bytes kamen. */
+    quellBytes: number;
   };
   artikel: Record<string, ZhArtikel>; // token → Artikel
   /** Einheitliches Label je token: «§ N» (ZH ist ein «§»-Erlass). */
   labels: Record<string, string>;
+  /**
+   * §8-Auslassungen dieses Erlasses in Klartext (Bug B-6, Gegenprüfung Runde 2):
+   * bewusst nicht erfasste Erlassteile (Übergangs-/Schlussapparat, Anhang mit
+   * Altfassungen) und nicht lückenlos expandierbare Sammel-Aufhebungsbereiche.
+   * Der Generator schreibt sie nach `public/normtext/kanton-luecken.json`, damit
+   * die Auslassung im Artefakt sichtbar ist statt nur im Code-Kommentar.
+   */
+  hinweise: string[];
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// PDF-Text-Extraktion (pdfjs, BUILD-time, NUR in scripts/)
-// ─────────────────────────────────────────────────────────────────────────────
-
-/** Ein extrahiertes Text-Fragment mit Koordinaten (für die Layout-Analyse). */
-interface PdfStueck {
-  x: number;
-  y: number;
-  h: number;
-  s: string;
-  /** Fragment-Breite (pt) — für die Spalten-Lücken-Erkennung. */
-  w: number;
-}
-
-// Schwelle (pt) für eine Spaltengrenze zwischen zwei Fragmenten derselben
-// Textzeile. Empirisch an ZH-Tarif-PDFs (Probe 20.6.2026): normale Marke→Text-
-// Lücken liegen bei 2–15 pt, echte Tabellenspalten (Wert-/Verweis-Spalte,
-// Randtitel→Body) bei ≥21 pt. 18 pt trennt beides sauber. Eingefügt wird NUR ein
-// Leerzeichen an der Spaltengrenze — kein Zeichen geändert/entfernt/umgestellt
-// (Wortlaut unangetastet, §1; konsistent mit entglueZhTarif).
-const SPALTEN_LUECKE_PT = 18;
-
-/** Eine zusammengefügte Textzeile (eine y-Position einer Seite). */
-export interface ZhTextZeile {
-  /** Führende Absatznummer (hochgestellte Ziffer am Zeilenanfang) oder null. */
-  absatz: string | null;
-  /** Der bereinigte Zeilentext (Fussnoten-Hochzahlen entfernt). */
-  text: string;
-}
-
-/** Ergebnis der PDF-Layout-Extraktion: Body-Zeilen + der verworfene Kopf-/
- *  Fussband-Text (für die Stand-Erkennung «1. 1. 15 - 87»). */
-export interface ZhExtrakt {
-  zeilen: ZhTextZeile[];
-  /** Roh-Text aus den Kopf-/Fussbändern (y>520 / y<60), zeilenfrei verkettet. */
-  randText: string;
-}
-
-/**
- * Extrahiert die strukturierten Body-Textzeilen aus den PDF-Bytes (pdfjs).
- * Verwirft Marginalie (Sachtitel im Aussenrand), Kopf-/Fusszeilen-Bänder und
- * Fussnoten-Hochzahlen; erkennt Absatz-Hochzahlen am Zeilenanfang.
- *
- * Reine Layout-Logik bis auf den pdfjs-Aufruf; die Textzeilen werden danach
- * von extrahiereZhParagraphen() in §-Artikel zerlegt (testbar via serialisiere…).
- */
-export async function extrahiereZhTextZeilen(
-  bytes: Uint8Array,
-  spaltenLuecke = false,
-): Promise<ZhExtrakt> {
-  // pdfjs legacy/node-Build: NUR hier (scripts/) importiert — kein src/-Import,
-  // damit der Client-Bundle unberührt bleibt.
-  const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
-  const doc = await pdfjs.getDocument({ data: bytes, useSystemFonts: true })
-    .promise;
-
-  const zeilen: ZhTextZeile[] = [];
-  const randStuecke: string[] = [];
-
-  for (let p = 1; p <= doc.numPages; p++) {
-    const seite = await doc.getPage(p);
-    const inhalt = await seite.getTextContent();
-
-    // Roh-Stücke mit Koordinaten sammeln (Kopf-/Fussband y>520 / y<60 raus,
-    // aber den Rand-Text für die Stand-Erkennung separat sammeln).
-    const stuecke: PdfStueck[] = [];
-    for (const it of inhalt.items) {
-      const item = it as { str: string; transform: number[]; height?: number };
-      if (!item.str || !item.str.replace(/\s/g, '')) continue;
-      const x = item.transform[4];
-      const y = item.transform[5];
-      const h = item.height ?? 9;
-      // Kopf-/Fussband: laufender Erlasstitel + LS-Nr. liegen bei y≈539 (oben)
-      // bzw. y≈51 (unten, «1. 1. 15 - 87» + Seitenzahl). Der oberste Body-
-      // Absatz-Hochzahl-Marker kann bis y≈521 reichen — darum y>530 als
-      // Kopf-Schwelle (nicht 520), sonst geht die Absatznummer der ersten
-      // Body-Zeile verloren.
-      if (y < 60 || y > 530) {
-        randStuecke.push(item.str);
-        continue; // Kopf-/Fussband
-      }
-      if (h >= 11) continue; // Erlasstitel (Kopf)
-      stuecke.push({ x, y, h, s: item.str, w: (item as { width?: number }).width ?? 0 });
-    }
-    if (stuecke.length === 0) continue;
-
-    // Body-Spalte dieser Seite aus den Body-Stücken (h≈9.2) bestimmen.
-    const bodyXs = stuecke.filter((s) => s.h >= 8.7).map((s) => s.x);
-    if (bodyXs.length === 0) continue;
-    const bodyMinX = Math.min(...bodyXs);
-    // Body-Textblock ist ~242pt breit; Marginalie liegt im Aussenrand:
-    //   links  (gerade Seiten): x < bodyMinX − 3
-    //   rechts (ungerade Seiten): x > bodyMinX + 250
-    // Gebühren-Tabellen (gleiche Schrifthöhe wie Marginalie!) liegen IN der
-    // Body-Spalte und bleiben darum erhalten.
-    const istMarginalie = (st: PdfStueck): boolean =>
-      st.h <= 7.7 && (st.x < bodyMinX - 3 || st.x > bodyMinX + 250);
-
-    // Nach y gruppieren (eine Textzeile). y auf ganze Punkte runden.
-    const nachY = new Map<number, PdfStueck[]>();
-    for (const st of stuecke) {
-      if (istMarginalie(st)) continue;
-      const key = Math.round(st.y);
-      let liste = nachY.get(key);
-      if (!liste) {
-        liste = [];
-        nachY.set(key, liste);
-      }
-      liste.push(st);
-    }
-
-    // Zeilen von oben nach unten (y absteigend), je Zeile nach x sortiert.
-    const yKeys = [...nachY.keys()].sort((a, b) => b - a);
-    for (const yKey of yKeys) {
-      const stueckeDerZeile = nachY.get(yKey)!.sort((a, b) => a.x - b.x);
-
-      let absatz: string | null = null;
-      let text = '';
-      let vorEndeX: number | null = null; // rechter Rand des letzten übernommenen Fragments
-      for (let k = 0; k < stueckeDerZeile.length; k++) {
-        const st = stueckeDerZeile[k];
-        const istHoch = st.h < 7.0;
-        if (istHoch) {
-          // Führende Hochzahl am Zeilenanfang = Absatznummer.
-          if (k === 0 && /^\s*\d+\s*$/.test(st.s)) {
-            absatz = st.s.trim();
-            continue;
-          }
-          // Sonstige Hochzahl (Fussnoten-Verweis, auch «1, 2») → verwerfen.
-          if (/^[\s,\d]+$/.test(st.s)) continue;
-        }
-        // Spaltengrenze: liegt das nächste Fragment deutlich rechts vom Ende des
-        // vorigen (Wert-/Verweis-Spalte einer Tabelle, Randtitel→Body), fehlt das
-        // Spalten-Whitespace in der PDF-Extraktion → ein Leerzeichen einfügen.
-        // Nur Whitespace, kein Zeichen geändert (§1).
-        if (spaltenLuecke && vorEndeX !== null && st.x - vorEndeX > SPALTEN_LUECKE_PT) {
-          text += ' ';
-        }
-        text += st.s;
-        vorEndeX = st.x + st.w;
-      }
-      const bereinigt = text.replace(/\s+/g, ' ').trim();
-      // FUSSNOTEN-DEFINITIONEN aussondern (Bug 22.6.2026 «mis-assigned ZH
-      // footnotes»): die Quellen-/Änderungs-Fussnoten am Seitenfuss («OS 64, 280»,
-      // «ABl 2008, 1188», «SR 210», «LS 242», «Eingefügt durch B vom …», «Fassung
-      // gemäss B vom …», «In/Kraft seit …», «Begründung siehe …») stehen in der
-      // KLEINEREN Fussnoten-Schrift (h≈8.0; Body ist h≈9.18) und sind KEIN
-      // Normtext. Ohne Filter hängt der §-Parser sie an den letzten § (bei ZH-243
-      // § 17 = Schlussbestimmung, da KEIN § 18 folgt) → unlesbarer Blob, und bei
-      // ZH-215.3 entstand daraus sogar ein Schein-«§ 25». Signatur (§1: NUR
-      // Fussnoten-Definitionen, nie Body): alle Zeilen-Stücke in Fussnoten-Höhe
-      // (h≤8.5) UND der Text beginnt mit einem Fussnoten-Definitions-Marker. So
-      // bleiben die Tarif-/Streitwert-Tabellen (Zahlen, «Gebühr», «bis») unberührt.
-      const istFussnotenSchrift =
-        stueckeDerZeile.length > 0 &&
-        stueckeDerZeile.every((st) => st.h <= 8.5);
-      const istFussnotenDefinition =
-        istFussnotenSchrift &&
-        // Opener-Marker einer Fussnoten-Definition …
-        (/^(?:OS \d|ABl \d|SR \d|LS \d|Eingefügt durch|Fassung gemäss|Aufgehoben durch|In Kraft seit|Kraft seit|Begründung siehe|Inkrafttreten:|\d+\. \w+ \d{4})/.test(
-          bereinigt,
-        ) ||
-          // … oder eine Fussnoten-FORTSETZUNGSZEILE (Umbruch von «… In Kraft /
-          // seit 1. Januar 2024.»): «seit …» bzw. «Kraft seit …» / reines
-          // Datumsfragment «1. Januar 2017 (ABl …).». NUR in Fussnoten-Höhe
-          // (h≤8.5) → Body-Sätze mit «seit» (h≈9.18) bleiben unberührt (§1).
-          /^(?:seit \d|Kraft seit|\d+\. (?:Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember) \d{4})/.test(
-            bereinigt,
-          ));
-      if (istFussnotenDefinition) {
-        // Eine Fussnoten-Fortsetzungszeile trägt oft eine (fälschlich als Absatz
-        // gelesene) führende Hochzahl (die Fussnoten-Nummer). Diese Zeile wird
-        // komplett verworfen — der Absatz-Marker darf NICHT als leerer §-Block
-        // überleben (sonst Schein-Absätze «¶14»/«¶15» in § 17).
-        continue;
-      }
-      // Reine Leer-/Absatz-Marker-Zeile: trotzdem behalten, falls Absatz gesetzt
-      // (die Absatznummer steht oft auf eigener y-Zeile vor dem Text).
-      if (bereinigt === '' && absatz === null) continue;
-      zeilen.push({ absatz, text: bereinigt });
-    }
-  }
-
-  return { zeilen, randText: randStuecke.join(' ') };
-}
-
-/**
- * Serialisiert Body-Textzeilen in einen einzigen, zeilengetrennten Text mit
- * eingebetteten Absatz-Markern «¶N» am Zeilenanfang. Diese Form ist die
- * testbare «extrahierte PDF-Textbasis», die extrahiereZhParagraphen() parst —
- * so kann der Parser ohne pdfjs/Netz gegen eine Fixture getestet werden.
- */
-export function serialisiereZhZeilen(zeilen: ZhTextZeile[]): string {
-  return zeilen
-    .map((z) => (z.absatz !== null ? `¶${z.absatz} ${z.text}` : z.text))
-    .join('\n');
-}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Reiner Parser: extrahierte Textbasis → §-Artikel
 // ─────────────────────────────────────────────────────────────────────────────
 
-/** §-Kopf am Zeilenanfang: «§ 4.» / «§ 4a.» / «§ 12.» (mit Punkt). Der Marker
- *  kann an einem Marginalie-Rest kleben — wir suchen ihn an beliebiger Stelle,
- *  akzeptieren aber als Artikelgrenze nur, wenn er den Zeilenanfang dominiert. */
-const PARAGRAF_KOPF = /§\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)\s*\./;
+/**
+ * §-Kopf — NUR am Zeilenanfang (Bug B-3, Gegenprüfung 31.8.2026).
+ *
+ * Vorher war das Muster UNVERANKERT und traf jeden Quer­verweis mitten im Satz
+ * («… richtet sich nach § 7.», «Vorbehalten bleibt § 181.»). Der laufende § galt
+ * damit als beendet, `speichere()` verwarf den bereits gesehenen Token («erster
+ * Treffer gewinnt») und der Rest der Bestimmung fiel ersatzlos weg — messbar an
+ * 26 Stellen im ZH-Bestand, u. a. ZH-212.812 § 8 («… rich-» statt «… richtet
+ * sich nach § 7.») und ZH-215.3 § 11 Abs. 3/4.
+ *
+ * Der Kopf steht in den ZH-PDF ausnahmslos am Zeilenanfang (gemessen: 2334 von
+ * 2360 Treffern; die restlichen 26 sind genau die Querverweise). Ein voran-
+ * gestellter Absatzmarker «¶N» ist zugelassen, weil serialisiereZhZeilen() ihn
+ * dort einfügt.
+ *
+ * Getrennte Gruppen für Zahl · Buchstaben-Suffix · lat. Suffix: die Zürcher
+ * Loseblattsammlung SETZT den Buchstaben-Suffix mit Leerzeichen («§ 4 a.»,
+ * «§§ 64 a und 64 b» — am Druckbild verifiziert 31.8.2026), der lateinische
+ * Suffix dagegen hochgestellt und ohne Abstand («§ 183bis.»).
+ *
+ * «§§ …» (Bereichs-/Sammelüberschrift wie «§§ 137bis–144.») ist KEIN Kopf.
+ */
+export const PARAGRAF_KOPF =
+  /^(?:¶\d+(?:bis|ter|quater|quinquies)?\s+)?§(?!§)\s*(\d+)\s*([a-z])?\s*(bis|ter|quater|quinquies)?\s*\./;
+
+/**
+ * Artikel-Kopf am Zeilenanfang: «Art. 1 Der Kanton …» (E2-H1, 31.8.2026).
+ * Die Kantonsverfassung (LS 101) zählt in Artikeln, nicht in Paragraphen — der
+ * Adapter kannte nur den §-Marker und lieferte darum 0 Artikel für die KV.
+ * Kein Punkt nach der Nummer (anders als beim §-Kopf); die Abgrenzung gegen
+ * einen Quer­verweis leistet die Zeilenanker-Disziplin plus die Marker-Wahl je
+ * Erlass (siehe erkenneMarker) — in einem «§»-Erlass feuert dieses Muster nie.
+ */
+export const ARTIKEL_KOPF =
+  /^(?:¶\d+(?:bis|ter|quater|quinquies)?\s+)?Art\.\s*(\d+)\s*([a-z])?\s*(bis|ter|quater|quinquies)?(?=\s|$)/;
+
+/**
+ * ZIFFERN-Marke einer Aufzählung am Zeilenanfang: «5. für die Anfechtung …»,
+ * «1.» (aufgehobene Ziffer, nackt), «1.–3.» (aufgehobener Bereich).
+ *
+ * ANLASS (GP3b, Fix-Runde 3): drei Aufzählungen im Bestand standen als PROSA im
+ * Blocktext statt als `items` — ZH-230 § 34 Abs. 1 («… zuständige Behörde: 1.
+ * 2. 3. 4. 5. für die Anfechtung …»), § 43 und § 248. Der Block-Sammler kannte
+ * nur die BUCHSTABEN-Marke; Ziffern-Aufzählungen flossen als Fliesstext durch.
+ * §7-Build-Regel 2 verlangt aber «lit. UND Ziff. als items je Absatz».
+ *
+ * §1-SICHERUNG gegen Fehltreffer — drei Wächter, alle am Bestand erhoben:
+ *  (a) SEQUENZ. Eine Ziffern-Marke wird nur akzeptiert, wenn sie die Folge
+ *      fortsetzt (erste Marke muss «1.» sein, danach je +1; ein aufgehobener
+ *      Bereich «1.–3.» setzt die Folge auf 3). Das erledigt die häufigste Falle:
+ *      eine umbrochene Fliesstext-Zeile, die mit einer Zahl beginnt —
+ *      «65. Altersjahres hat keine besonderen Leistungen zur Folge.»
+ *      (ZH-171.1), «23. Juni 1831 werden aufgehoben.» (ZH-175.2).
+ *  (b) DATUM. «17. Dezember 1976 über die politischen Rechte …» wäre als
+ *      Ziffer 17 zwar ohnehin folgenwidrig, aber ein Monatsname nach der Zahl
+ *      schliesst die Marke unabhängig davon aus.
+ *  (c) TITEL-SCHRIFT. Arabisch nummerierte ÜBERSCHRIFTEN («2. Aufgaben»)
+ *      erreichen den Block-Sammler gar nicht mehr — sie werden eine Stufe
+ *      früher an der Titel-Schrift erkannt und verworfen (s. TITEL_MARKER).
+ */
+const ZIFFER_MARKE = /^(\d+)\.(?:\s*(\S.*))?$/;
+/** Aufgehobener Ziffern-BEREICH als eigene Zeile: «1.–3.», «12.–14.». */
+const ZIFFER_BEREICH = /^(\d+)\.\s*[–—−-]\s*(\d+)\.$/;
+/** Monatsname direkt nach der Zahl = Datum, keine Aufzählungsmarke. */
+const MONAT_NACH_ZAHL =
+  /^(?:Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b/;
 
 /** lit.-Marke am Zeilenanfang: «a. …» / «a.…» (ZH nutzt lit. mit Punkt; in der
  *  PDF-Extraktion steht oft KEIN Leerzeichen zwischen «a.» und dem Punkttext,
  *  weil der Punkt-Buchstabe und der Text getrennte Fragmente am gleichen y sind).
  *  EIN Kleinbuchstabe + Punkt am Zeilenanfang (lit.-Punkte stehen in der PDF auf
  *  EIGENER Zeile). Der Folgetext beginnt teils klein («a.im Zivilprozess»). */
-const LIT_MARKE = /^([a-z])\.\s*(\S.*)$/;
+const LIT_MARKE = /^([a-z])\.\s*(\S.*)?$/;
 
 /** Gliederungs-/Abschnitts-Überschrift (NICHT Normtext): «A. Allgemein»,
  *  «B. Schlichtungsverfahren», «C. Zivilprozess» — Grossbuchstabe + Punkt +
- *  Titel, ohne § und ohne Absatztext. Wird zwischen Artikeln verworfen. */
-const GLIEDERUNG = /^[A-Z]\.\s+[A-ZÄÖÜ]/;
-
-/** Absatz-Marker «¶N» am Zeilenanfang (von serialisiereZhZeilen gesetzt; der
- *  Resttext ist optional — die Absatznummer steht oft auf der eigenen Zeile). */
-const ABSATZ_MARKER = /^¶(\d+(?:bis|ter)?)\s*(.*)$/;
-
-const TOKEN_SUFFIX = /^(\d+)([a-z])?(bis|ter|quater|quinquies)?$/i;
-/** «4»→'4', «4a»→'4_a', «12»→'12' (kongruent parsePassus/HTM-Adapter). */
-function normalisiereToken(roh: string): string {
-  return roh
-    .toLowerCase()
-    .replace(TOKEN_SUFFIX, (_, n, b, suf) =>
-      [n, b, suf].filter(Boolean).join('_'),
-    );
-}
+ *  Titel, ohne § und ohne Absatztext. Wird zwischen Artikeln verworfen.
+ *  Der lat. Suffix («Abis. Eherecht», ZH-230) gehört dazu: er ist hochgestellt
+ *  gesetzt und wird seit der Hochstellungs-Zuordnung an den Buchstaben gefügt. */
+export const GLIEDERUNG =
+  /^(?:[A-Z](?:bis|ter|quater|quinquies)?|[IVXL]+)\.\s+[A-ZÄÖÜ]/;
 
 /**
- * Entkleben der ZH-Gebührentabellen-Fragmente (Bug-Fix 16.6.2026). In der PDF-
- * Extraktion stehen die Tabellenspalten (Streitwert | Grundgebühr) als getrennte
- * Fragmente am gleichen y und werden ohne Leerzeichen aneinandergeklebt
- * («bis1000 25%des», «zuzügl.20%des», «Fr.1000übersteigenden»). Wir trennen NUR
- * an eindeutigen Tarif-Tabellen-Grenzen, die in korrekter ZH-Rechtsprosa NICHT
- * vorkommen (empirisch geprüft an allen ZH-Snapshots, §7) — sonst unverändert:
- *   - Schlüsselwort «bis/über/dès» direkt vor Ziffer:  «bis1000»  → «bis 1000»
- *   - Ziffer direkt vor «bis/über/dès»:                «1000über» → «1000 über»
- *   - «Fr.»/«Mio.» direkt vor Ziffer:                  «Fr.1000»  → «Fr. 1000»
- *   - «zuzügl.» vor Ziffer:                            «zuzügl.20»→ «zuzügl. 20»
- *   - «%» direkt vor Buchstabe:                        «20%des»   → «20% des»
- *   - «)(» (zwei Spaltenköpfe):                        «)(in»     → «) (in»
- *   - camelCase-Spaltenkopf «StreitwertGebühr/Grund…»: Kleinbuchst.→Grossbuchst.
- * Die reinen Spalten-Zahlenketten (z.B. «5000250») bleiben unangetastet — ihre
- * Spaltentrennung ist ohne Layout-Information nicht eindeutig rekonstruierbar.
+ * Gliederungs-Überschrift der ZÄHLENDEN Form (Bug B-3, Gegenprüfung Runde 2,
+ * 31.8.2026): «2. Kapitel: Grundrechte», «1. Abschnitt: Stimmberechtigte»,
+ * «Erster Abschnitt: …», «Dritter Teil: Steuerstrafrecht». Sie steht auf einer
+ * eigenen Zeile im Body-Satz (h = 9.18, kein Kopf-Einzug) und war darum vom
+ * Schriftbild NICHT von Fliesstext zu trennen — sie klebte am Vorgänger-Block
+ * (gemessen: 103 Blöcke in 10 Erlassen).
  *
- * Artefakt-Fix 22.6.2026 — «St PO» → «StPO»: Die ZH-PDF-Spalten-Lücken-Erkennung
- * (SPALTEN_LUECKE_PT = 18 pt) fügt bei einer Spaltenlücke ein Leerzeichen ein.
- * In ZH-211.11 GebV OG liegt die Abkürzung «StPO» (Strafprozessordnung) als
- * zwei PDF-Fragmente («St» und «PO») im Abstand > 18 pt nebeneinander → das
- * Leerzeichen wird irrtümlich eingefügt (Artefakt «St PO»). «St PO» mit Leerzeichen
- * kommt in korrekter ZH-Rechtsprosa NIE vor (§1-sicher, empirisch verifiziert
- * an allen ZH-Snapshots); die Behebung stellt den echten Wortlaut wieder her.
+ * Massgeblich ist die am Bestand erhobene Form (alle 24 PDF ausgezählt):
+ * Zeilenanfang + Zähler (Ziffer / römisch / ausgeschriebenes Ordinale) +
+ * Gliederungswort + DOPPELPUNKT. Der Doppelpunkt trennt die Überschriften
+ * sauber von den Fliesstext-Treffern, die dieselben Wörter tragen — «(2. Teil,
+ * 5. Titel ZPO, …)», «1. und 2. Abschnitt) finden ergänzend Anwendung.» —
+ * keiner davon setzt ihn (empirisch: 0 Fehltreffer im Gesamtbestand).
+ *
+ * Die BUCHSTABEN-Form («A. Allgemein», «III. Bezirksrat») fängt weiterhin
+ * GLIEDERUNG; sie war nie undicht.
  */
-function entglueZhTarif(text: string): string {
-  // Hinweis: \b ist hier untauglich — ü/ö/ä sind im JS-Standard-Regex KEINE
-  // Wortzeichen, darum greift \b an «über»/«dès» nicht. Wir verankern die
-  // Schlüsselwörter daher an Leerzeichen/Wortgrenze bzw. Zeilenanfang explizit.
-  return text
-    // Schlüsselwort (Wortanfang) direkt vor Ziffer: «bis1000»/«über1000».
-    .replace(/(^|[\s(])(bis|über|dès)(\d)/gi, '$1$2 $3')
-    // Ziffer direkt vor Schlüsselwort/«übersteigenden» («1000über 5000»,
-    // «Fr.1000übersteigenden» → «Fr. 1000 übersteigenden»). In den ZH-Tarifen
-    // sind die EINZIGEN Ziffer→Buchstabe-Klebungen genau diese Fälle (§7-Scan),
-    // darum hier gezielt ohne generelle Ziffer↔Buchstabe-Trennung.
-    .replace(/(\d)(bis|über)/gi, '$1 $2')
-    .replace(/\b(Fr|Mio|zuzügl)\.(\d)/g, '$1. $2')
-    .replace(/(%)([A-Za-zÄÖÜäöü])/g, '$1 $2')
-    .replace(/\)\(/g, ') (')
-    .replace(/([a-zäöü])([A-ZÄÖÜ])/g, '$1 $2')
-    // Spalten-Lücken-Artefakt: «St PO» (StPO = Strafprozessordnung) — §1-sicher,
-    // da «St PO» mit Leerzeichen in korrekter ZH-Rechtsprosa nicht vorkommt.
-    // Zwei Formen: «St PO» gefolgt von Nicht-Buchstabe (ZH-211.11: «St PO,»)
-    // und «St PO» direkt vor einem Buchstaben ohne Trennleerzeichen
-    // (ZH-215.3: «St PObemisst» → «StPO bemisst»).
-    .replace(/\bSt PO(?=\P{L}|$)/gu, 'StPO')
-    .replace(/\bSt PO(?=\p{L})/gu, 'StPO ');
+export const GLIEDERUNG_ZAEHLEND =
+  /^(?:\d+|[IVXLC]+|(?:Ers|Zwei|Drit|Vier|Fünf|Sechs|Sieb|Sieben|Ach|Neun|Zehn|Elf|Zwölf)ter)\.?\s+(?:Kapitel|Abschnitt|Unterabschnitt|Teil|Titel|Abteilung):/;
+
+/**
+ * Gliederungs-Überschrift der ARABISCH NUMMERIERTEN, wortlosen Form (Befund
+ * GP3a-1 der dritten Gegenprüfung, 31.8.2026): «1. Sonderbauvorschriften»,
+ * «2. Aufgaben», «3. Budgetkredit» — Zahl, Punkt, Sachtitel, KEIN
+ * Gliederungswort und KEIN Doppelpunkt.
+ *
+ * §1-KRITISCH: Dieses Muster trifft WORTGLEICH auch jede echte
+ * Aufzählungszeile («2. die Schulpflege,», «5. für die Anfechtung des
+ * Kindesverhältnisses …»). Es darf DESHALB NIE allein entscheiden — nur
+ * zusammen mit dem TITEL_MARKER, der die typografische Tatsache trägt
+ * (Zeile vollständig in der Titel-Schrift). Zwei Unit-Tests halten beide
+ * Richtungen fest: Überschrift mit Marker wird verworfen, Aufzählungszeile
+ * ohne Marker bleibt — auch bei identischem Wortlaut.
+ *
+ * Der lateinische Suffix ist zugelassen («1bis. Ergänzende Ordnung»), damit die
+ * Form dieselbe Suffix-Reichweite hat wie GLIEDERUNG.
+ */
+export const GLIEDERUNG_ARABISCH =
+  /^\d+(?:bis|ter|quater|quinquies)?\.\s*\S/;
+
+/**
+ * Wie viele FORTSETZUNGS-Zeilen eine Überschrift höchstens haben darf.
+ *
+ * Gemessen an allen 24 ZH-PDF: die längsten Gliederungs-Überschriften brechen
+ * auf ZWEI Zeilen um (ZH-700.1 § 165 «5. Der Bau der Erschliessungsanlagen,
+ * Ausstattungen | und Ausrüstungen; Rechtsverhältnisse»); drei kommen nicht
+ * vor. Der Deckel begrenzt den Schaden, falls je eine ganze Tarif-Tabelle in
+ * der Titel-Schrift auf eine Überschrift folgt (ZH-211.11 § 4 ist vollständig
+ * in Titel-Schrift gesetzt!) — dann fielen ohne Deckel Tabellenzeilen weg (§1).
+ */
+const TITEL_KETTE_MAX = 2;
+
+/**
+ * Grenze zum Erlass-Schluss­apparat (Bug B-6, zweiter Teil, 31.8.2026).
+ *
+ * Nach dem letzten § folgen in den ZH-PDF die Übergangs-/Schlussbestimmungen
+ * der Änderungserlasse und — bei ZH-700.1 — ein Anhang, der ältere Fassungen
+ * einzelner §§ nachdruckt. Beide führen eigene, bei 1 neu beginnende §-Zählungen
+ * und kollidieren dadurch mit dem Haupttext (ZH-700.1: 34 doppelte §-Nummern,
+ * ZH-631.1: 4). Bisher fielen sie über «erster Treffer gewinnt» still weg — und
+ * der Übergangs-Text hing als Pseudo-Absatz am letzten § (ZH-851.1 § 55).
+ *
+ * Ab dieser Grenze wird nichts mehr aufgenommen. Die Übergangsbestimmungen sind
+ * damit im Snapshot NICHT enthalten (§8: ausgewiesene Lücke statt falscher
+ * Zuordnung); ihre Aufnahme als eigener Eintragstyp ist ZH-4d-Stoff.
+ */
+export const SCHLUSSAPPARAT = /^(?:Übergangs|Schluss)bestimmung(?:en)?\b/;
+
+/** ANHANG-Titel am Zeilenanfang — nur die echte Überschrift, nicht jedes Wort
+ *  «Anhang». Zulässig: «Anhang», «Anhang 1», «Anhang: Gebührentarif (§ 1)».
+ *  NICHT: «Anhang I zum Abkommen …», «Anhang K Anlage 1 …» (umbrochene
+ *  Fliesstext-Zeile in ZH-851.1 § 5e lit. c — sie kappte mit der alten Fassung
+ *  `^Anhang(:|\b)` den halben Erlass; in der Fix-Runde 2 selbst erzeugt und
+ *  gemessen, 31.8.2026). */
+export const ANHANG_TITEL = /^Anhang(?:\s*\d*)?(?::|$)/;
+
+/** Absatz-Marker «¶N» am Zeilenanfang (von serialisiereZhZeilen gesetzt; der
+ *  Resttext ist optional — die Absatznummer steht oft auf der eigenen Zeile).
+ *  Lat. Suffixe vollständig (Bug B-1): «¶2bis», «¶1ter» — das alte Muster kannte
+ *  nur bis/ter, die Hochstellungs-Zuordnung liefert aber alle vier Stufen. */
+const ABSATZ_MARKER = /^¶(\d+(?:bis|ter|quater|quinquies)?)\s*(.*)$/;
+
+
+/** Token aus den drei Kopf-Gruppen (Zahl · Buchstabe · lat. Suffix):
+ *  «§ 4 a.»→'4_a', «§ 183bis.»→'183_bis', «Art. 12»→'12'
+ *  (kongruent parsePassus/HTM-Adapter). */
+function normalisiereZhKopf(kopf: RegExpMatchArray): string {
+  return [kopf[1], kopf[2], kopf[3]]
+    .filter(Boolean)
+    .map((t) => t.toLowerCase())
+    .join('_');
 }
 
-/** Silbentrennung am Zeilenende zusammenfügen: «…wer-» + «den.» → «…werden.».
- *  Nur wenn die Zeile auf «-» endet und die nächste mit Kleinbuchstabe beginnt
- *  (echte Worttrennung; ein «-» vor Grossbuchstabe/Ziffer bleibt erhalten). */
-function fuegeZeilen(roh: string[]): string {
-  let out = '';
-  for (let i = 0; i < roh.length; i++) {
-    const zeile = roh[i];
-    const naechste = roh[i + 1] ?? '';
-    if (/[a-zäöüé]-$/.test(zeile) && /^[a-zäöüé]/.test(naechste)) {
-      // Trennstrich entfernen, nächste Zeile direkt anhängen (ohne Leerzeichen).
-      out += zeile.slice(0, -1);
-    } else {
-      out += zeile + (i < roh.length - 1 ? ' ' : '');
-    }
-  }
-  return entglueZhTarif(out.replace(/\s+/g, ' ').trim());
-}
+// ENTFERNT 31.8.2026 — `entglueZhTarif()` (§17-Gegengewicht).
+//
+// Die Funktion trennte nachträglich zusammengelaufene Tarif-Fragmente
+// («bis1000», «Fr.1000», «20%des», «)(in») und enthielt dafür u. a. die Regel
+// «Kleinbuchstabe direkt vor Grossbuchstabe → Leerzeichen». Beides war eine
+// Reparatur an der falschen Stelle: die Klebung entstand oben in der
+// Zeilenmontage, weil ein Leerzeichen erst ab 18 pt Fragmentlücke gesetzt wurde.
+//
+// Seit die Lücke geometrisch ausgewertet wird (WORT_LUECKE_PT), tritt KEINE der
+// sechs Klebe-Formen im Bestand noch auf — gemessen an allen 24 ZH-Erlassen:
+// «bis|über» + Ziffer 0×, «Fr.|Mio.|zuzügl.» + Ziffer 0×, «%» + Buchstabe 0×,
+// «)(» 0×, «St PO»/«Sch KG» 0×. Die camelCase-Regel dagegen war schädlich
+// geworden: sie zerschnitt 60+ amtliche Abkürzungen in 13 Erlassen — «StGB» →
+// «St GB», «JStPO» → «JSt PO», «SchKG» → «Sch KG», «PartG» → «Part G»,
+// «BehiG» → «Behi G», «§§ 137bis–144» → «§§ 137 bis–144». Ein Wächter, der
+// nichts mehr fangen kann und dabei den Wortlaut verändert, wird gestrichen,
+// nicht gepflegt (§1 vor Bequemlichkeit).
 
 /** Zerlegt eine Absatznummer «2» / «1bis» / «2ter» in (Zahl, lat. Suffix-Rang),
  *  damit baueBloecke die Sequenz validieren kann. Suffix-Rang: ''=0, bis=1,
@@ -432,6 +427,8 @@ function baueBloecke(zeilen: string[]): ZhBlock[] {
   // den zuletzt akzeptierten Absatz, um lat. Suffixe (1→1bis→1ter) zu erlauben.
   let zuletztNummer = 0;
   let zuletztSuffix = -1; // -1 = noch kein nummerierter Absatz
+  /** Zuletzt akzeptierte Aufzählungs-ZIFFER im laufenden § (0 = keine). */
+  let zuletztZiffer = 0;
 
   const flushText = (): void => {
     if (textPuffer.length > 0 && aktiv) {
@@ -443,7 +440,15 @@ function baueBloecke(zeilen: string[]): ZhBlock[] {
   const flushItem = (): void => {
     if (aktivItem && aktiv) {
       const t = fuegeZeilen(itemPuffer);
-      (aktiv.items ??= []).push({ marke: aktivItem.marke, text: t });
+      // Eine Ziffer OHNE jeden Text ist eine AUFGEHOBENE Ziffer — die Zürcher
+      // Sammlung druckt sie als nackte Nummer, der Wortlaut steht in der
+      // amtlichen Fussnote («Aufgehoben durch …»). Gleiche Schreibweise wie beim
+      // nackten §-Kopf und beim Sammel-Aufhebungskopf, damit die Zählung im
+      // Lese-View lückenlos bleibt statt als «1. 2. 3. 4. 5.»-Prosa zu erscheinen.
+      (aktiv.items ??= []).push({
+        marke: aktivItem.marke,
+        text: t === '' ? 'Aufgehoben' : t,
+      });
     }
     itemPuffer = [];
     aktivItem = null;
@@ -533,8 +538,46 @@ function baueBloecke(zeilen: string[]): ZhBlock[] {
       flushItem();
       if (!aktiv) neuerBlock(null);
       aktivItem = { marke: litM[1].toLowerCase() };
-      itemPuffer = [litM[2].trim()];
+      // NACKTE lit.-Marke = AUFGEHOBENER Buchstabe (Fund des neuen
+      // lit.-Wächters, Fix-Runde 3): ZH-631.1 § 23 druckt «e.» ohne Text, der
+      // Beleg steht in der amtlichen Fussnote. Vorher verlangte das Muster
+      // zwingend Text; die nackte Zeile fiel als Fortsetzung an lit. d und
+      // erzeugte dort «… Nichtausübung eines Rechtes, e.». Leerer Puffer →
+      // flushItem setzt den Platzhalter (gleiche Konvention wie bei den
+      // Ziffern und beim nackten §-Kopf).
+      itemPuffer = litM[2] ? [litM[2].trim()] : [];
       continue;
+    }
+
+    // ZIFFERN-Aufzählung (s. ZIFFER_MARKE): nur mit Sequenz- und Datums-Wächter.
+    const berM = zeile.match(ZIFFER_BEREICH);
+    const zifM = berM ? null : zeile.match(ZIFFER_MARKE);
+    if (berM || zifM) {
+      const von = Number(berM ? berM[1] : zifM![1]);
+      const bis = berM ? Number(berM[2]) : von;
+      const rest = berM ? '' : (zifM![2] ?? '').trim();
+      // Eine Aufzählung läuft in der Zürcher Sammlung ÜBER DIE ABSATZGRENZE
+      // hinweg weiter (ZH-230 § 44: Abs. 1 trägt Ziff. 1–8, Abs. 2 setzt bei
+      // Ziff. 9 fort). Die Folge zählt darum je §, nicht je Absatz; «1.» eröffnet
+      // daneben immer eine neue Aufzählung.
+      const folgt =
+        (von === zuletztZiffer + 1 || von === 1) && bis >= von && bis - von <= 50;
+      const istDatum = MONAT_NACH_ZAHL.test(rest);
+      if (folgt && !istDatum) {
+        flushText();
+        flushItem();
+        if (!aktiv) neuerBlock(null);
+        // Ein aufgehobener BEREICH «1.–3.» wird zu je einem Platzhalter-item
+        // (nie zu einem einzigen «1.–3.»-Eintrag): so bleibt die Ziffernfolge
+        // im Lese-View lückenlos, und jede Ziffer bleibt einzeln adressierbar.
+        for (let n = von; n < bis; n++) {
+          (aktiv!.items ??= []).push({ marke: String(n), text: 'Aufgehoben' });
+        }
+        aktivItem = { marke: String(bis) };
+        itemPuffer = rest ? [rest] : [];
+        zuletztZiffer = bis;
+        continue;
+      }
     }
 
     // Fortsetzungszeile.
@@ -567,27 +610,159 @@ export function extrahiereZhParagraphen(
   return alle[token] ?? null;
 }
 
+/** Zählweise eines Erlasses: «§ N.» (Regelfall) oder «Art. N» (Kantons-
+ *  verfassung LS 101). Wird je Dokument aus der Textbasis erhoben, nie geraten. */
+export type ZhMarker = 'paragraf' | 'artikel';
+
+/**
+ * Bestimmt die Zählweise eines Erlasses aus seiner Textbasis (E2-H1).
+ * Massstab ist die MENGE der zeilenanfangs-verankerten Köpfe: ein «§»-Erlass
+ * enthält vereinzelt Zeilen, die mit einem «Art. …»-Quer­verweis auf Bundesrecht
+ * beginnen (1–5 im Bestand), aber Dutzende bis Hunderte §-Köpfe; die
+ * Kantonsverfassung enthält 147 «Art.»-Köpfe und keinen einzigen §-Kopf.
+ * Gleichstand (auch 0:0) → 'paragraf' (unveränderter Bestandsweg).
+ */
+export function erkenneZhMarker(text: string): ZhMarker {
+  let par = 0;
+  let art = 0;
+  for (const rohZeile of text.split('\n')) {
+    // Marker abstreifen: ein Kopf kann in der Titel-Schrift stehen (LS 101
+    // «Art. 35»). Ohne das Abstreifen zählte die Zählweisen-Erhebung ihn nicht
+    // mit — und bei der Kantonsverfassung kippte die Marker-Wahl.
+    const zeile = rohZeile.startsWith(TITEL_MARKER)
+      ? rohZeile.slice(TITEL_MARKER.length)
+      : rohZeile;
+    if (PARAGRAF_KOPF.test(zeile)) par++;
+    else if (ARTIKEL_KOPF.test(zeile)) art++;
+  }
+  return art > par ? 'artikel' : 'paragraf';
+}
+
 /** Wie extrahiereZhParagraphen, aber ALLE Artikel (token → Artikel). Kern für
- *  holeZhPdf (Vollabdeckung §7) und den quelleHash. */
+ *  holeZhPdf (Vollabdeckung §7) und den quelleHash.
+ *
+ *  `protokoll` (optional) nimmt die §8-Sichtbarkeitsmeldungen auf: bewusst nicht
+ *  erfasste Erlassteile (Schlussapparat/Anhang) und nicht lückenlos
+ *  expandierbare Sammel-Aufhebungsbereiche. Ohne den Parameter verhält sich die
+ *  Funktion unverändert. */
 export function extrahiereAlleZhParagraphen(
   text: string,
+  marker: ZhMarker = erkenneZhMarker(text),
+  protokoll?: string[],
 ): Record<string, ZhArtikel> {
   const zeilen = text.split('\n');
   const artikel: Record<string, ZhArtikel> = {};
+  const KOPF_MUSTER = marker === 'artikel' ? ARTIKEL_KOPF : PARAGRAF_KOPF;
 
   let aktivToken: string | null = null;
   let aktivZeilen: string[] = [];
+  // Ab dem Schluss­apparat (Übergangs-/Schlussbestimmungen, Anhang) wird nichts
+  // mehr aufgenommen — dort beginnt eine zweite, kollidierende §-Zählung.
+  let imSchlussapparat = false;
+  // Tokens, die NUR aus einem Sammel-Aufhebungskopf stammen. Ein späterer echter
+  // Kopf desselben Tokens darf den Platzhalter ersetzen — sonst würde die
+  // Wiedereröffnungs-Sperre echten Normtext verschlucken (§1).
+  const ausSammelkopf = new Set<string>();
+  // Wo die Erfassung endet (§8-Auslassung, Bug B-6). Fix-Runde 3 (A4): ALLE
+  // Schnitte werden erfasst, nicht nur der erste. ZH-700.1 hat zwei — die
+  // Übergangsbestimmungen ab S. 86 UND den Anhang ab S. 93, der ältere
+  // Fassungen einzelner §§ nachdruckt. Bis hierher deklarierte der Index nur
+  // den ersten und verschwieg damit ausgerechnet den grösseren Teil.
+  const schnitte: Array<{ grund: string; ab: string; abIndex: number }> = [];
+  /** Zähler der laufenden (mehrzeiligen) arabischen Gliederungs-Überschrift:
+   *  0 = keine, 1 = Kopfzeile gesehen, 2… = Fortsetzungszeilen. */
+  let titelKette = 0;
+  const melde = (zeile: string): void => {
+    if (protokoll && !protokoll.includes(zeile)) protokoll.push(zeile);
+  };
 
   const speichere = (): void => {
     if (aktivToken === null) return;
+    const token = aktivToken;
+    if (token in artikel) return; // Wiedereröffnung ausgeschlossen (s.u.)
     const bloecke = baueBloecke(aktivZeilen);
-    if (bloecke.length > 0 && !(aktivToken in artikel)) {
-      artikel[aktivToken] = { bloecke };
+    if (bloecke.length > 0) {
+      artikel[token] = { bloecke };
+      return;
     }
+    // AUFGEHOBENE BESTIMMUNG (Bug B-5, 31.8.2026): Die Zürcher Sammlung druckt
+    // eine aufgehobene Bestimmung als nackten Kopf OHNE jeden Text; die
+    // zugehörige amtliche Fussnote lautet «Aufgehoben durch …» (verifiziert am
+    // Druckbild: ZH-230 § 28 → Fussnote 50, ZH-175.2 § 18 → Fussnote 32).
+    // Bisher fiel der Kopf mangels Blöcken ersatzlos weg — 53 eIds im ZH-Korpus,
+    // und die Nummerierung wirkte lückenhaft. Jetzt bleibt der Token mit dem
+    // Platzhalter «Aufgehoben» erhalten (gleiche Schreibweise wie im Bund-Korpus
+    // aus Fedlex). Der Platzhalter wird NUR gesetzt, wenn die ganze §-Region
+    // keine einzige Textzeile trug — nie über vorhandenen Text hinweg.
+    artikel[token] = { bloecke: [{ absatz: null, text: 'Aufgehoben' }] };
   };
 
-  for (const rohZeile of zeilen) {
+  let zeilenIndex = -1;
+  for (const rohMitMarker of zeilen) {
+    zeilenIndex++;
+    // TITELSCHRIFT-Marker abstreifen, BEVOR irgendein Muster greift (er stünde
+    // sonst vor dem «§» und keiner der Köpfe würde mehr erkannt).
+    const istTitelschrift = rohMitMarker.startsWith(TITEL_MARKER);
+    const rohZeile = istTitelschrift
+      ? rohMitMarker.slice(TITEL_MARKER.length)
+      : rohMitMarker;
     const zeile = rohZeile.replace(/\s+$/g, '');
+    // Arabisch nummerierte Gliederungs-Überschrift: NUR mit der typografischen
+    // Bestätigung (s. GLIEDERUNG_ARABISCH / TITEL_MARKER). Die Prüfung steht
+    // hier oben, weil die Überschrift auch MITTEN in einer lit.-Aufzählung
+    // stehen kann (ZH-131.1 § 102 lit. b, ZH-215.1 § 21 lit. e) — dort hängt
+    // sie sonst an den laufenden item-Text, nicht an den Blocktext.
+    const istArabischerTitel =
+      istTitelschrift && aktivToken !== null && GLIEDERUNG_ARABISCH.test(zeile.trim());
+    // FORTSETZUNGSZEILE einer solchen Überschrift: Die längeren Titel brechen um
+    // («5. Der Bau der Erschliessungsanlagen, Ausstattungen | und Ausrüstungen;
+    // Rechtsverhältnisse», ZH-700.1 § 165; «2. Abstände von Territorialgrenzen,
+    // Wald und von durch | Baulinien gesicherten Anlagen», § 260). Die zweite
+    // Zeile trägt keine Nummer mehr, steht aber in derselben Titel-Schrift und
+    // direkt darunter. Ohne diese Kette blieb der halbe Titel im Normtext.
+    // BEWUSST ENG: nur unmittelbar nach einer VERWORFENEN arabischen
+    // Überschrift, und nie über einen §-Kopf hinweg (§1). Die Fortsetzungen der
+    // Buchstaben-/zählenden Gliederung sind ein anderer, älterer Befund (B-8,
+    // Marginalien-Ebene) und bleiben unberührt.
+    const istTitelFortsetzung =
+      istTitelschrift &&
+      titelKette > 0 &&
+      titelKette <= TITEL_KETTE_MAX &&
+      aktivToken !== null &&
+      !PARAGRAF_KOPF.test(zeile.trim()) &&
+      !ARTIKEL_KOPF.test(zeile.trim()) &&
+      !SCHLUSSAPPARAT.test(zeile.trim()) &&
+      !ANHANG_TITEL.test(zeile.trim());
+    if (istArabischerTitel) {
+      titelKette = 1;
+      continue;
+    }
+    if (istTitelFortsetzung) {
+      titelKette++;
+      continue;
+    }
+    titelKette = 0;
+    if (SCHLUSSAPPARAT.test(zeile.trim())) {
+      speichere();
+      aktivToken = null;
+      aktivZeilen = [];
+      schnitte.push({
+        grund: 'Übergangs-/Schlussbestimmungen',
+        ab: zeile.trim().slice(0, 70),
+        abIndex: zeilenIndex,
+      });
+      imSchlussapparat = true;
+      continue;
+    }
+    // Auch INNERHALB des bereits abgeschnittenen Teils wird weiter nach
+    // Abschnitts-Marken gesucht (A4): sonst bliebe der zweite Schnitt eines
+    // Erlasses unsichtbar, obwohl er der grössere ist.
+    if (imSchlussapparat) {
+      if (ANHANG_TITEL.test(zeile.trim())) {
+        schnitte.push({ grund: 'Anhang', ab: zeile.trim().slice(0, 70), abIndex: zeilenIndex });
+      }
+      continue;
+    }
     // ANHANG-GRENZE (Bug 22.6.2026): der «Anhang: Gebührentarif» (ZH-243) ist
     // eine eigene Tarif-TABELLE und wird SPALTENBEWUSST über
     // extrahiereZhAnhangSpalten erfasst — NICHT vom generischen §-Parser. Da auf
@@ -595,14 +770,55 @@ export function extrahiereAlleZhParagraphen(
     // der Parser sonst den GANZEN Anhang an § 17 hängen (3740-Zeichen-Blob).
     // Beim «Anhang»-Titel wird der laufende § abgeschlossen und die Akkumulation
     // gestoppt (Rest der Textbasis = Tabelle, gehört nicht in einen §).
-    if (/^Anhang(:|\b)/.test(zeile.trim())) {
+    if (ANHANG_TITEL.test(zeile.trim())) {
       speichere();
       aktivToken = null;
       aktivZeilen = [];
+      schnitte.push({ grund: 'Anhang', ab: zeile.trim().slice(0, 70), abIndex: zeilenIndex });
+      imSchlussapparat = true;
       continue;
     }
-    // §-Kopf? (kann an Marginalie-Rest kleben; wir prüfen auf den Marker.)
-    const kopf = zeile.match(PARAGRAF_KOPF);
+    // SAMMEL-AUFHEBUNGSKOPF «§§ 66–69.» (Bug B-2, Gegenprüfung Runde 2).
+    //
+    // Vorher fiel die Zeile durch jedes Muster: PARAGRAF_KOPF schliesst «§§»
+    // ausdrücklich aus, also war sie gewöhnlicher Text und klebte am
+    // Vorgänger-§ (26 kontaminierte Blöcke im Bestand, 6 davon NUR aus
+    // Fremdmaterial). Die genannten §§ fehlten ersatzlos — allein in ZH-230
+    // u. a. 58–63, 66–69, 73–116, 117 a–117 m, 137bis–167, 253–255.
+    //
+    // Jetzt: laufenden § schliessen, Bereich expandieren, je genannten § einen
+    // «Aufgehoben»-Platzhalter mit eigenem Token emittieren — dieselbe
+    // Schreibweise wie beim nackten Einzel-Kopf (dort am Druckbild gegen die
+    // Fussnote «Aufgehoben durch …» verifiziert).
+    const sammel = zeile.trim().startsWith(SAMMEL_MARKER)
+      ? zeile.trim().slice(SAMMEL_MARKER.length).trim()
+      : null;
+    if (sammel !== null) {
+      speichere();
+      aktivToken = null;
+      aktivZeilen = [];
+      const liste = sammel.replace(/^§§\s*/, '').replace(/\s*\.$/, '');
+      const { tokens, exakt } = expandiereSammelbereich(liste);
+      if (tokens.length === 0) {
+        melde(`Sammel-Aufhebungskopf «${sammel}» nicht lesbar — §§ NICHT im Snapshot.`);
+        continue;
+      }
+      if (!exakt) {
+        melde(
+          `Sammel-Aufhebungskopf «${sammel}»: Bereich nicht lückenlos ableitbar — ` +
+            `erfasst sind ${tokens.join(', ')}; dazwischen liegende §§ mit ` +
+            `Buchstaben-/lat. Suffix können fehlen (nicht geraten, §8).`,
+        );
+      }
+      for (const t of tokens) {
+        if (t in artikel) continue;
+        artikel[t] = { bloecke: [{ absatz: null, text: 'Aufgehoben' }] };
+        ausSammelkopf.add(t);
+      }
+      continue;
+    }
+    // Kopf am Zeilenanfang? (Marker-Muster je Erlass, s. erkenneZhMarker.)
+    const kopf = zeile.match(KOPF_MUSTER);
     if (kopf) {
       // VERLORENE «¹»-Recovery (Bug 22.6.2026): die hochgestellte Absatznummer
       // «1» des ERSTEN Absatzes steht in den ZH-PDF auf einer EIGENEN Zeile
@@ -614,12 +830,40 @@ export function extrahiereAlleZhParagraphen(
       // kann nie das LETZTE des vorigen § sein — sein Absatztext stünde sonst
       // zwischen ihm und dem §-Kopf, nicht danach.) §1: nur Zuordnung der
       // bereits extrahierten Nummer korrigiert, kein Zeichen erfunden.
-      let verirrterMarker: string | null = null;
+      //
+      // KEINE WIEDERERÖFFNUNG (Bug B-3, zweiter Teil): Ein bereits gespeicherter
+      // Token darf nie ein zweites Mal einen Artikel eröffnen. Vorher verwarf
+      // `speichere()` den zweiten Treffer still und beendete trotzdem den
+      // laufenden §; damit ging Normtext verloren, ohne dass irgendetwas rot
+      // wurde. Jetzt gilt die Zeile in diesem Fall als gewöhnlicher Text und
+      // fliesst in den laufenden § — kein Zeichen geht verloren.
+      const kandidat = normalisiereZhKopf(kopf);
+      // Ein Token, das bisher NUR als Sammelkopf-Platzhalter existiert, wird von
+      // einem echten Kopf überschrieben: sonst schluckte die Wiedereröffnungs-
+      // Sperre den Normtext dieses § (§1). Umgekehrt bleibt ein echter Artikel
+      // gegen jede Wiedereröffnung geschützt.
+      if (kandidat in artikel && ausSammelkopf.has(kandidat)) {
+        delete artikel[kandidat];
+        ausSammelkopf.delete(kandidat);
+        melde(
+          `§ ${kandidat.replace(/_/g, '')} stand in einem Sammel-Aufhebungskopf UND trägt ` +
+            `eigenen Text — der Platzhalter wurde durch den Wortlaut ersetzt.`,
+        );
+      }
+      if (kandidat in artikel) {
+        if (aktivToken !== null) aktivZeilen.push(zeile.trim());
+        continue;
+      }
+      // Ein Absatzmarker, der auf der Kopfzeile selbst steht, gehört zum ersten
+      // Absatz des NEUEN § und darf beim Abschneiden des Kopfs nicht verloren
+      // gehen (Regelfall ist die eigene Marker-Zeile, s. Recovery unten).
+      const kopfMarker = kopf[0].match(/^¶(\d+(?:bis|ter|quater|quinquies)?)/);
+      let verirrterMarker: string | null = kopfMarker ? `¶${kopfMarker[1]}` : null;
       while (aktivZeilen.length > 0 && aktivZeilen[aktivZeilen.length - 1] === '') {
         aktivZeilen.pop();
       }
       const letzte = aktivZeilen[aktivZeilen.length - 1];
-      if (letzte !== undefined) {
+      if (letzte !== undefined && verirrterMarker === null) {
         const m = letzte.match(ABSATZ_MARKER);
         if (m && m[2].trim() === '') {
           verirrterMarker = `¶${m[1]}`;
@@ -629,7 +873,7 @@ export function extrahiereAlleZhParagraphen(
       // Alles vor dem § ist Marginalie-Rest/Müll → verwerfen; alles nach «§ N.»
       // ist der Beginn des ersten Absatzes.
       speichere();
-      aktivToken = normalisiereToken(kopf[1]);
+      aktivToken = kandidat;
       aktivZeilen = [];
       // Den verirrten Erst-Absatz-Marker dem neuen § voranstellen, BEVOR der
       // Resttext der Kopfzeile als (markerlose) Folgezeile dazukommt — so wird
@@ -644,11 +888,41 @@ export function extrahiereAlleZhParagraphen(
       continue;
     }
     if (aktivToken === null) continue; // vor dem ersten §: Präambel → ignorieren
-    // Gliederungs-Überschriften («B. Schlichtungsverfahren») sind kein Normtext.
+    // Gliederungs-Überschriften («B. Schlichtungsverfahren», «2. Kapitel:
+    // Grundrechte») sind kein Normtext (Bug B-3 für die zählende Form).
     if (GLIEDERUNG.test(zeile.trim())) continue;
+    if (GLIEDERUNG_ZAEHLEND.test(zeile.trim())) continue;
     aktivZeilen.push(zeile.trim());
   }
   speichere();
+
+  // Je ABSCHNITTSART eine Protokoll-Zeile (nicht je Überschrift): ein Erlass
+  // trägt oft ein halbes Dutzend «Übergangsbestimmung zur Änderung vom …»-Köpfe
+  // hintereinander — das ist EINE Auslassung, nicht sechs. Aufeinanderfolgende
+  // Schnitte gleicher Art werden darum zusammengefasst; der Wechsel der Art
+  // (Übergangsapparat → Anhang) beginnt eine neue Zeile.
+  const gruppen: Array<{ grund: string; ab: string; anzahl: number }> = [];
+  for (let i = 0; i < schnitte.length; i++) {
+    const s = schnitte[i];
+    const bis = schnitte[i + 1]?.abIndex ?? zeilen.length;
+    const anzahl = Math.max(bis - s.abIndex, 0);
+    const letzte = gruppen[gruppen.length - 1];
+    if (letzte && letzte.grund === s.grund) letzte.anzahl += anzahl;
+    else gruppen.push({ grund: s.grund, ab: s.ab, anzahl });
+  }
+  for (const s of gruppen) {
+    const anzahl = s.anzahl;
+    const anteil = Math.round((anzahl / Math.max(zeilen.length, 1)) * 100);
+    const grundText =
+      s.grund === 'Anhang'
+        ? 'Grund: der Anhang führt eine eigene, mit dem Haupttext kollidierende Zählung.'
+        : 'Grund: die Änderungserlasse führen eine eigene, bei 1 neu beginnende §-Zählung.';
+    melde(
+      `${s.grund} ab «${s.ab}» vom §-Parser NICHT erfasst — ` +
+        `${anzahl} von ${zeilen.length} Textzeilen (${anteil} %). ` +
+        `${grundText} Massgeblich ist die amtliche Fassung.`,
+    );
+  }
 
   return artikel;
 }
@@ -669,12 +943,14 @@ export function berechneZhQuelleHash(
       const items = (b.items ?? [])
         .map((i) => `${i.marke}\t${i.text}`)
         .join('\n');
+      const vTeil = b.verweis ? `${b.verweis.etikett}\t${b.verweis.ziffern}` : '';
       const mTeil = b.mehrspaltig
         ? [(b.mehrspaltig.kopf ?? []).join('\t'), ...b.mehrspaltig.zeilen.map((z) => z.join('\t'))].join('\n')
         : '';
       teile.push(
         [
           `${b.absatz ?? ''}\t${b.text}${items ? `\n${items}` : ''}`,
+          vTeil,
           mTeil,
         ]
           .filter(Boolean)
@@ -724,406 +1000,47 @@ export function leseZhStandAusUrl(registryUrl: string): string {
   return `${m[1]}-${m[2]}-${m[3]}`;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// x-koordinatenbasierte Streitwert-Staffel-Extraktion (ZH-215.3 § 4, ZH-211.11 § 3 + § 4)
-// ─────────────────────────────────────────────────────────────────────────────
-
 /**
- * Extrahiert eine Streitwert-Staffel-Tabelle aus den rohen PDF-Stücken {x,y,h,s,p}
- * einer §-Region. Unterstützt zwei Tabellenformen, automatisch erkannt am Kopf:
+ * Liest das **Publikationsdatum** der geltenden Nachtragsfassung aus dem
+ * zhlex-Registry-HTML → ISO. Das ist der `stand` (Befund E2-H4, 31.8.2026).
  *
- * 3-Spalten-Form (ZH-215.3 § 4, ZH-211.11 § 4, h≈7.50 pt):
- *   Kopf «Streitwert | Grundgebühr» → kopf: ['Streitwert','Grundgebühr','Zuschlag']
- *   threshold1 = x von «Grundgebühr» (≈169 pt); threshold2 = threshold1+47 (≈216 pt).
- *   «zuzügl.»-Token in col2 wird an den Anfang von col3 verschoben (deterministisch).
+ * WARUM NICHT DAS URL-DATUM: der zweite Datums-Tripel im Slug ist das
+ * UR-Inkrafttreten des Erlasses. Für das VRG (LS 175.2) ist das der 1.5.1960 —
+ * als «Stand» einer Fassung, die den Rechtszustand von 2026 wiedergibt, ist das
+ * falsch und irreführend (§8).
  *
- * 2-Spalten-Form (ZH-211.11 § 3, h≈7.98 pt):
- *   Kopf «Streitwert | Gebühr» → kopf: ['Streitwert','Gebühr']
- *   threshold1 = x von «Gebühr» (≈203 pt); kein threshold2.
- *   Datenzeilen 2-spaltig: [Streitwert, Gebühr].
+ * WARUM NICHT DER PDF-FUSSBAND-MARKER («1. 10. 26 - 134»): das ist die
+ * Ausgabe-Marke der Loseblatt-Nachführung, die dem Publikationsdatum
+ * vorauslaufen kann — genau die Fehlerklasse, die `check:stand-zukunft` am
+ * SZ-Fall («SRSZ 1.2.2027») festgehalten hat.
  *
- * Erkennungslogik (§1: nur aus x-Geometrie, kein Ziffern-Raten):
- *   - TABLE_MAX_H = 8.5 pt: erfasst beide Tabellenschrift-Höhen (7.50 und 7.98).
- *   - Kopfzeile = erste y-Gruppe mit «Streitwert»-Stück.
- *   - «Grundgebühr» in derselben Kopfzeile → 3-Spalten-Form;
- *     «Gebühr» ohne «Grundgebühr» → 2-Spalten-Form.
- *   - Keine Heuristik/Ziffern-Raten — nur Stück-x als Spalten-Zuordnung.
+ * MESSUNG (alle 24 ZH-Erlasse, offline aus dem Roh-PDF-Cache, Fix-Runde 3):
+ * Der Fussband-Marker weicht in **11 von 24** Erlassen vom Publikationsdatum ab
+ * (ZH-101 · 170.4 · 177.10 · 211.11 · 211.15 · 230 · 323.1 · 331 · 631.1 ·
+ * 631.11 · 700.1); grösste Abweichung ZH-211.11 (Marke 1.1.2015,
+ * Publikationsdatum 1.1.2011), typischer Fall ZH-700.1 (Marke 1.10.2026,
+ * Publikationsdatum 1.8.2026). Das URL-Datum (UR-Inkrafttreten) weicht in
+ * **22 von 24** ab — es ist als «Stand» praktisch immer falsch und nur
+ * Notnagel. *(Korrektur: der Kommentar nannte bis zur Fix-Runde 3 «7 von 24» —
+ * eine Fehlzählung derselben Session, keine gealterte Angabe; die Reihenfolge
+ * der Fallback-Kette war und ist davon unberührt.)*
  *
- * Guard: keine Kopfzeile oder < 2 Datenzeilen → null (mehrdeutige Geometrie).
- * §1: Stücke werden nie intern aufgespalten; §2: kein Date.now/Math.random.
- * §3: reine Extraktion, kein UI-Code.
+ * BELEG, dass das Publikationsdatum der Fassungsbeginn ist: die Historie
+ * derselben Registry-Seite nennt für die Vorgängerfassung «in Kraft bis
+ * <dasselbe Datum>» (geprüft an allen 24 Erlassen, 31.8.2026 — z. B. LS 175.2:
+ * «Nachtragsnummer 133 (aktuell) · 129 (in Kraft bis 01.07.2026)» und
+ * «Publikationsdatum 01.07.2026»).
+ *
+ * Markup (server-gerendert, kein JS nötig):
+ *   <dt>Publikationsdatum</dt>\n<dd>01.07.2026</dd>
+ * Liefert '' wenn das Feld fehlt — dann greift die Fallback-Kette in holeZhPdf.
  */
-export function extrahiereZhStreitwertStaffel(
-  stuecke: Array<{ x: number; y: number; h: number; s: string; p: number }>,
-): { kopf: string[]; zeilen: string[][] } | null {
-  if (stuecke.length === 0) return null;
-
-  // ── Schritt 1: Tabellenschrift filtern
-  // TABLE_MAX_H = 8.5 pt: erfasst ZH-211.11 § 3 (h=7.98) + ZH-211.11/215.3 § 4 (h=7.50).
-  // Body-Text (h≈9.18) und Absatz-Hochzahlen (h≈5.70) werden ausgeschlossen.
-  // Marginalien (x≤60, h≤7.7) ausschliessen (liegen bei x≈28 im Aussenrand).
-  const TABLE_MAX_H = 8.5; // Tabellenschrift bis 7.98; Body-Text 9.18
-  const TABLE_MIN_H = 6.5; // Absatz-Hochzahlen h≈5.7: NICHT Tabellenspalten
-  const MARG_X_MAX = 60;   // Marginalien-Stücke liegen bei x≈28
-
-  const tabStuecke = stuecke.filter(
-    (s) => s.h >= TABLE_MIN_H && s.h <= TABLE_MAX_H && s.x > MARG_X_MAX,
+export function leseZhPublikationsdatum(registryHtml: string): string {
+  const m = registryHtml.match(
+    /<dt>\s*Publikationsdatum\s*<\/dt>\s*<dd>\s*(\d{2})\.(\d{2})\.(\d{4})\s*<\/dd>/,
   );
-
-  if (tabStuecke.length === 0) return null;
-
-  // ── Schritt 2: Zeilen (p, y-absteigend) bilden
-  const byPY = new Map<string, Array<{ x: number; s: string }>>();
-  for (const s of tabStuecke) {
-    const key = `${s.p}_${Math.round(s.y)}`;
-    let l = byPY.get(key);
-    if (!l) {
-      l = [];
-      byPY.set(key, l);
-    }
-    l.push({ x: s.x, s: s.s });
-  }
-
-  const zeilen = [...byPY.entries()].sort((a, b) => {
-    const [pa, ya] = a[0].split('_').map(Number);
-    const [pb, yb] = b[0].split('_').map(Number);
-    return pa - pb || yb - ya;
-  });
-
-  // ── Schritt 3: Kopfzeile finden + Tabellenform erkennen
-  // Erste Zeile mit «Streitwert»-Stück = Kopfzeile.
-  // threshold1 = x der zweiten Kopfspalte («Grundgebühr» oder «Gebühr»).
-  // threshold2 = threshold1 + 47 (Grundgebühr|Zuschlag-Grenze, empirisch).
-  //
-  // 3-Spalten-Form: «Grundgebühr» im Kopf → dreiSpalten = true (sicher).
-  // Sonst («Gebühr» im Kopf): dreiSpalten = true, WENN in den Datenzeilen nach
-  // dem Kopf tatsächlich Stücke bei x ≥ threshold2 vorhanden sind (ZH-215.3 § 4
-  // hat «Gebühr» als Kopf, aber Zuschlag-Stücke bei x≈216); SONST 2-Spalten-Form
-  // (ZH-211.11 § 3 hat «Gebühr» + keine Stücke rechts von threshold2≈250).
-  // §1: nur x-Koordinaten, kein Ziffern-Raten; mehrdeutige Geometrie → null.
-  let kopfIdx = -1;
-  let threshold1 = 0;
-  let dreiSpalten = false;
-  for (let i = 0; i < zeilen.length; i++) {
-    const [, stueckeRow] = zeilen[i];
-    const streitwertSt = stueckeRow.find((s) => s.s.trim() === 'Streitwert');
-    if (!streitwertSt) continue;
-    // «Grundgebühr» im Kopf → sicher 3-Spalten
-    const grundgebuehrSt = stueckeRow.find((s) => s.s.trim() === 'Grundgebühr');
-    // «Gebühr» im Kopf → erst Daten prüfen
-    const gebuehrSt = stueckeRow.find((s) => s.s.trim() === 'Gebühr');
-    if (grundgebuehrSt) {
-      kopfIdx = i;
-      threshold1 = grundgebuehrSt.x; // x von «Grundgebühr» → Grenze Streitwert|Grundgebühr
-      dreiSpalten = true;
-      break;
-    }
-    if (gebuehrSt) {
-      kopfIdx = i;
-      threshold1 = gebuehrSt.x; // x von «Gebühr» → vorläufige Grenze Streitwert|Gebühr
-      // dreiSpalten wird nach dem Daten-Prüfschritt gesetzt (s.u.)
-      break;
-    }
-  }
-
-  if (kopfIdx < 0 || threshold1 === 0) return null;
-
-  // threshold2 = Grundgebühr|Zuschlag-Grenze (empirisch: threshold1 + 47 pt).
-  // Zuschlag-Stücke (ZH-215.3 § 4) starten empirisch bei x ≈ 215 (threshold1≈168+47).
-  const threshold2 = threshold1 + 47;
-
-  // Daten-Prüfschritt: Falls Kopf nur «Gebühr» (kein «Grundgebühr») → prüfen ob
-  // in den Datenzeilen nach dem Kopf Stücke bei x ≥ threshold2 vorhanden (Zuschlag).
-  if (!dreiSpalten) {
-    for (let i = kopfIdx + 1; i < zeilen.length; i++) {
-      const [, stueckeRow] = zeilen[i];
-      if (stueckeRow.some((s) => s.s.includes('(in Franken)'))) continue;
-      if (stueckeRow.some((s) => s.x >= threshold2)) {
-        dreiSpalten = true;
-        break;
-      }
-    }
-  }
-
-  // ── Schritt 4: Datenzeilen extrahieren
-  // «(in Franken)»-Unterzeile und leere Zeilen überspringen.
-  const datenZeilen: string[][] = [];
-  for (let i = kopfIdx + 1; i < zeilen.length; i++) {
-    const [, stueckeRow] = zeilen[i];
-    if (stueckeRow.some((s) => s.s.includes('(in Franken)'))) continue;
-    if (stueckeRow.length === 0) continue;
-
-    const sorted = [...stueckeRow].sort((a, b) => a.x - b.x);
-
-    if (dreiSpalten) {
-      // 3-Spalten-Form: Streitwert | Grundgebühr | Zuschlag
-      const col1: string[] = [];
-      const col2: string[] = [];
-      const col3: string[] = [];
-      for (const st of sorted) {
-        if (st.x < threshold1) {
-          col1.push(st.s);
-        } else if (st.x < threshold2) {
-          col2.push(st.s);
-        } else {
-          col3.push(st.s);
-        }
-      }
-
-      let c1 = col1.join(' ').replace(/\s+/g, ' ').trim();
-      let c2 = col2.join(' ').replace(/\s+/g, ' ').trim();
-      let c3 = col3.join(' ').replace(/\s+/g, ' ').trim();
-
-      // Post-Prozess §1-sicher: «über 10 Mio. 106» — «106» (x knapp < threshold1)
-      // fälschlich in col1 → an den Anfang von col2 verschieben (kein Ziffern-Raten,
-      // nur Fragment-Verschiebung).
-      const mioSplit = c1.match(/^(.*\bMio\.)\s+(\d[\d\s]*)$/);
-      if (mioSplit) {
-        c1 = mioSplit[1].trim();
-        const wanderFragment = mioSplit[2].trim();
-        c2 = c2 ? `${wanderFragment} ${c2}` : wanderFragment;
-      }
-
-      // Post-Prozess: «zuzügl.» am Ende von col2 → Anfang von col3 verschieben.
-      if (c2.endsWith(' zuzügl.') || c2 === 'zuzügl.') {
-        const stripped = c2.endsWith(' zuzügl.')
-          ? c2.slice(0, -' zuzügl.'.length).trim()
-          : '';
-        c2 = stripped;
-        c3 = c3 ? `zuzügl. ${c3}` : 'zuzügl.';
-      } else if (c2.includes(' zuzügl.')) {
-        const idx = c2.lastIndexOf(' zuzügl.');
-        const stripped = c2.slice(0, idx).trim();
-        const rest = c2.slice(idx + 1).trim();
-        c2 = stripped;
-        c3 = rest + (c3 ? ` ${c3}` : '');
-      }
-
-      if (!c1 && !c2 && !c3) continue;
-      datenZeilen.push([c1, c2, c3]);
-    } else {
-      // 2-Spalten-Form: Streitwert | Gebühr
-      const col1: string[] = [];
-      const col2: string[] = [];
-      for (const st of sorted) {
-        if (st.x < threshold1) {
-          col1.push(st.s);
-        } else {
-          col2.push(st.s);
-        }
-      }
-
-      const c1 = col1.join(' ').replace(/\s+/g, ' ').trim();
-      const c2 = col2.join(' ').replace(/\s+/g, ' ').trim();
-
-      if (!c1 && !c2) continue;
-      datenZeilen.push([c1, c2]);
-    }
-  }
-
-  // Guard: ≥ 2 Datenzeilen erforderlich (§1: mehrdeutige Geometrie → null)
-  if (datenZeilen.length < 2) return null;
-
-  return {
-    kopf: dreiSpalten ? ['Streitwert', 'Grundgebühr', 'Zuschlag'] : ['Streitwert', 'Gebühr'],
-    zeilen: datenZeilen,
-  };
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// x-koordinatenbasierte NotGebV-Anhang-Tarif-Extraktion (ZH-243 «Anhang: Gebührentarif»)
-// ─────────────────────────────────────────────────────────────────────────────
-
-/**
- * Extrahiert den gesamten ZH-NotGebV-Anhang-Gebührentarif (ZH-243, «Anhang:
- * Gebührentarif (§ 1)», PDF-Seiten 5–22) x-koordinatenbasiert aus den rohen
- * PDF-Stücken {x,y,h,s,p} der Anhang-Region (alles ab dem «Anhang»-Titel).
- *
- * Spaltenmodell (empirisch verifiziert, Geometrie-Spike 22.6.2026 — §7):
- * Der Anhang ist eine 4-Spalten-Tabelle im Spiegelrand-Buch, deren x-Lage je
- * Seitenparität wechselt (Bundsteg):
- *   - UNGERADE Seiten: Ziffer x≈54 · Beschreibung x≈82 (Unter-«–» x≈91)
- *                      · Ansatz/Fr. x≈252 · «siehe Ziff.» (Verweis) x≈289–295
- *   - GERADE Seiten:   Ziffer x≈88 · Beschreibung x≈116 (Unter-«–» x≈125)
- *                      · Ansatz/Fr. x≈286 · «siehe Ziff.» (Verweis) x≈329
- * Die Schwellen werden RELATIV zur Beschreibungsspalte (descX, linkester
- * Nicht-Ziffer-Cluster der Seite) bestimmt — robust gegen den Bundsteg:
- *   descX+170 ≈ Ansatzspalte · descX+207…213 ≈ Verweisspalte.
- *
- * §1 (Wortlaut-Treue): der Ansatz (0,75‰, «mindestens 50», Rahmen «100–1500»)
- * bleibt INLINE in Lese-Reihenfolge in der Beschreibung — bei mehrzeiligen
- * hierarchischen Einträgen (Unter-«–»-Bänder) steht so jeder Betrag direkt bei
- * seinem Tatbestand (eine flache Betrags-Spalte würde Betrag und Phrase
- * trennen → unlesbar/irreführend). Nur die Verweis-Spalte («siehe Ziff.»,
- * Querverweis-Ziffern wie «2.2.1, 2.2.2,») wird separiert und als
- * «(vgl. Ziff. …)» ans Zeilenende gestellt. Silbentrennung an Zeilengrenzen
- * («Begrün-»+«dung» → «Begründung») wird zusammengefügt (ausser vor
- * Konjunktionen wie «oder/und» = echte Hängestrich-Komposita). Kein Zeichen
- * geändert/erfunden — nur Spalten getrennt, Trennstriche gefügt (§1/§3).
- *
- * Schrift-Trennung (§1): Tarif-/Tatbestand-Stücke sind h≈9.18 (Body). Die
- * Spaltenköpfe «Ansatz/Fr.»/«Grundbuchgebühren siehe Ziff.:» (h≈8.2) und die
- * Fussnoten-Definitionen (h≈8.0) werden über h ≥ 8.7 ausgeschlossen — sie
- * dürfen NIE in eine Tarif-Zelle geraten (Bug 22.6.2026: die Köpfe klebten
- * früher als «… 50 Ansatz/Fr. Beurkundungsgebühren siehe Ziff.:» in den Text).
- *
- * Rückgabe: `{ kopf, zeilen }` — eine N-Spalten-Tabelle des GANZEN Anhangs.
- * Jede Zeile = [Ziffer, Beschreibung (mit Inline-Ansätzen), «siehe Ziff.»].
- * Die hierarchischen Ziffern (2.3.3, 2.3.5.1) bleiben als Strings in Spalte 0.
- * Guard (§1): null, wenn die Geometrie keine Ziffer-Spalte hergibt (mehrdeutig
- * → kein geratenes Resultat). `holeZhPdf` zerlegt die Zeilen anschliessend in
- * die je-Ziffer-Snapshot-Einträge (Token-adressierbar für die Zitat-Auflösung).
- *
- * §2 rein/deterministisch (kein Date.now/Math.random); §3 keine UI.
- */
-export function extrahiereZhNotariatsTarif(
-  stuecke: Array<{ x: number; y: number; h: number; s: string; p: number }>,
-): { kopf: string[]; zeilen: string[][] } | null {
-  if (stuecke.length === 0) return null;
-
-  // Nur Body-/Tarif-Schrift (h≈9.18). Köpfe (h≈8.2) + Fussnoten (h≈8.0) raus.
-  const content = stuecke.filter((s) => s.h >= 8.7);
-  if (content.length === 0) return null;
-
-  // Nach (Seite, y) zu Tabellenzeilen gruppieren, von oben nach unten lesen.
-  type S = { x: number; y: number; h: number; s: string; p: number };
-  const byPY = new Map<string, S[]>();
-  for (const s of content) {
-    const key = `${s.p}_${Math.round(s.y)}`;
-    let l = byPY.get(key);
-    if (!l) {
-      l = [];
-      byPY.set(key, l);
-    }
-    l.push(s);
-  }
-  const rows = [...byPY.entries()]
-    .map(([key, ss]) => {
-      const [p, y] = key.split('_').map(Number);
-      return { p, y, ss: ss.sort((a, b) => a.x - b.x) };
-    })
-    .sort((a, b) => a.p - b.p || b.y - a.y);
-
-  // Ziffer-Token am Zeilenanfang in der Ziffer-Spalte. Zwei Formen:
-  //   - hierarchisch «N.N…» (1.1.1, 2.3.3, 5.2) — Sektion A/B + 5.x;
-  //   - nackt «N» / «NN» (1, 2, …, 14) — Sektions-Gruppenköpfe (1–4: «Beurkundungs-
-  //     gebühren», die Halbgebühr-Regel) UND die Sektion-C-Posten (5–14: «Auszüge»,
-  //     «Schriftliche Auskunft» …). Beide tragen eigenen Tarif-Wortlaut und sind je
-  //     eine Tabellenzeile — nur so endet 5.2 NICHT als Riesen-Blob, der 6–14 mit-
-  //     verschluckt. Die x-Lage (Ziffer-Spalte) trennt Kopf von einer nackten
-  //     Betrags-Zahl (die in der Ansatz-/Body-Spalte rechts liegt).
-  // Verweis-Ziffern (2.2.1 …) matchen das Muster auch, liegen aber rechts
-  // (Verweisspalte) → über die x-Schwelle (descX-3) ausgeschlossen.
-  const KOPF = /^(\d+(?:\.\d+)*)\s*(.*)$/; // Token (hierarchisch ODER nackt) + Resttext
-  const REF = /^\d+\.\d+[\d.,\s]*$/; // reine Verweis-Ziffernkette «2.2.1, 2.2.2,»
-  const KONJ = /^(oder|und|bzw|sowie|beziehungsweise)\b/i;
-  // Ein Ziffer-Kopf-Stück: «N.N…» (mit/ohne Resttext) ODER nackt «N»/«NN» (1–2
-  // Stellen, kein Komma/Punkt → keine Betrags-/Verweis-Zahl).
-  const istZifferKopfStueck = (s: string): boolean => {
-    const t = s.trim();
-    return /^\d+(?:\.\d+)+(?:\s|$)/.test(t) || /^\d{1,2}(?:\s|$)/.test(t);
-  };
-
-  // Spalten-x je Seite: tokX = linkester Ziffer-Cluster; descX = linkester
-  // Nicht-Ziffer-Cluster rechts davon (Beschreibungsspalte). Relativ dazu die
-  // Verweisspalte (descX+195) — der Ansatz bleibt INLINE in der Beschreibung.
-  const tokX = new Map<number, number>();
-  for (const r of rows) {
-    const f = r.ss[0];
-    if (istZifferKopfStueck(f.s)) {
-      const c = tokX.get(r.p);
-      if (c === undefined || f.x < c) tokX.set(r.p, f.x);
-    }
-  }
-  const descX = new Map<number, number>();
-  for (const r of rows) {
-    for (const s of r.ss) {
-      if (s.x > (tokX.get(r.p) ?? 0) + 12) {
-        const c = descX.get(r.p);
-        if (c === undefined || s.x < c) descX.set(r.p, s.x);
-      }
-    }
-  }
-
-  type E = { token: string; lines: Array<{ main: string; ref: string }> };
-  const eintraege: E[] = [];
-  let cur: E | null = null;
-
-  // Eine Tabellenzeile in (Beschreibung+Ansatz inline | Verweis) zerlegen.
-  const baueZeile = (pieces: S[], dX: number): { main: string; ref: string } => {
-    const bVer = dX + 195; // Schwelle Beschreibung/Ansatz (inline) → Verweisspalte
-    const main = pieces
-      .filter((s) => s.x < bVer)
-      .map((s) => s.s)
-      .join(' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-    const ref = pieces
-      .filter((s) => s.x >= bVer && REF.test(s.s.trim()))
-      .map((s) => s.s)
-      .join(' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-    return { main, ref };
-  };
-
-  for (const r of rows) {
-    const dX = descX.get(r.p) ?? 82;
-    const first = r.ss[0];
-    const firstIstZiffer = first.x < dX - 3 && istZifferKopfStueck(first.s);
-    if (firstIstZiffer) {
-      const m = first.s.trim().match(KOPF)!;
-      // Erster Treffer eines Tokens gewinnt (defensiv gegen Wiederholungen).
-      if (eintraege.some((e) => e.token === m[1])) {
-        cur = eintraege.find((e) => e.token === m[1])!;
-        continue;
-      }
-      cur = { token: m[1], lines: [] };
-      eintraege.push(cur);
-      const ln = baueZeile(r.ss.slice(1), dX);
-      const main = `${m[2] ? `${m[2]} ` : ''}${ln.main}`.replace(/\s+/g, ' ').trim();
-      cur.lines.push({ main, ref: ln.ref });
-      continue;
-    }
-    if (!cur) continue; // vor dem ersten Ziffer-Kopf (Abschnitts-Titel «A.») → ignorieren
-    // Fortsetzungszeile: alles ab der Beschreibungsspalte (Abschnitts-Letter
-    // «A./B./C.» und nackte Top-Level-Zahlen in der Ziffer-Spalte überspringen).
-    const body = r.ss.filter((s) => s.x >= dX - 3);
-    if (body.length === 0) continue;
-    cur.lines.push(baueZeile(body, dX));
-  }
-
-  // Guard (§1): keine Ziffer-Einträge erkannt → mehrdeutige Geometrie → null.
-  if (eintraege.length === 0) return null;
-
-  // Zeilen je Eintrag zusammenfügen: Silbentrennung an Zeilengrenzen (nicht vor
-  // Konjunktionen); Verweise gesammelt als «(vgl. Ziff. …)»-Suffix.
-  const zeilen: string[][] = [];
-  for (const e of eintraege) {
-    let desc = '';
-    for (const ln of e.lines) {
-      const t = ln.main;
-      if (!t) continue;
-      if (/\p{L}-$/u.test(desc) && /^\p{Ll}/u.test(t) && !KONJ.test(t)) {
-        desc = desc.slice(0, -1) + t;
-      } else {
-        desc = desc ? `${desc} ${t}` : t;
-      }
-    }
-    desc = desc.replace(/\s+/g, ' ').trim();
-    const refs = e.lines
-      .map((l) => l.ref)
-      .filter(Boolean)
-      .join(' ')
-      .replace(/[,\s]+$/, '')
-      .replace(/\s+/g, ' ')
-      .trim();
-    if (!desc && !refs) continue;
-    zeilen.push([e.token, desc, refs]);
-  }
-
-  if (zeilen.length === 0) return null;
-  return { kopf: ['Ziffer', 'Beschreibung', 'siehe Ziff.'], zeilen };
+  if (!m) return '';
+  return `${m[3]}-${m[2]}-${m[1]}`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1131,6 +1048,51 @@ export function extrahiereZhNotariatsTarif(
 // ─────────────────────────────────────────────────────────────────────────────
 
 const UA = 'Mozilla/5.0 (LexMetrik Normtext-Snapshot)';
+
+// ── ZH-4b · Netz-Härtung (§17-Wurzelfix, 31.8.2026) ──────────────────────────
+// Vorher: drei NACKTE `fetch` je Erlass ohne Timeout/Wiederholung. Bei 3
+// Erlassen nie aufgefallen; ab ~20 Erlassen schlägt ein transienter Ausfall
+// still zu (der Erlass fehlt kommentarlos im Korpus — Befund Dossier §7).
+//
+// Zwei Massnahmen, beide HIER (nicht global), damit FETCH_CONCURRENCY für die
+// übrigen Kantons-Routen unangetastet bleibt:
+//   1. `fetchMitWiederholung` (netz-retry.ts): Timeout je Versuch + Backoff bei
+//      Netz-Wurf/429/5xx. 4xx bleibt hart (löst sich nicht von selbst).
+//   2. Globale SERIELLE Drossel auf ~1 Request/Sekunde gegen zh.ch/notes.zh.ch.
+//      Das Dossier hat nur seriell ~1 req/s gemessen (§5) — über Parallel-
+//      Massenlast sagt die Messung nichts. Die Drossel gilt prozessweit, also
+//      auch wenn der Aufrufer die Erlasse über pLimit(4) parallel anstösst:
+//      die Erlass-Schleife darf parallel laufen, die Requests tun es nicht.
+const ZH_MIN_ABSTAND_MS = 1000;
+let zhKette: Promise<unknown> = Promise.resolve();
+let zhLetzterStart = 0;
+
+const schlafe = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Ein Request gegen die ZH-Hosts: seriell eingereiht, auf ~1 req/s gedrosselt,
+ * mit Timeout + Wiederholung. Wirft nach erschöpften Versuchen (kein stiller
+ * Verlust — der Aufrufer meldet den Erlass als Fehl-Erlass).
+ */
+async function zhFetch(url: string): Promise<Response> {
+  const anDerReihe = zhKette.then(async () => {
+    const wartezeit = ZH_MIN_ABSTAND_MS - (Date.now() - zhLetzterStart);
+    if (wartezeit > 0) await schlafe(wartezeit);
+    zhLetzterStart = Date.now();
+  });
+  // Kette fortschreiben, BEVOR gewartet wird: der nächste Aufrufer hängt sich
+  // hinter diesen Platz (Reihenfolge = Aufrufreihenfolge, kein Gedränge).
+  zhKette = anDerReihe;
+  await anDerReihe;
+  return fetchMitWiederholung(
+    url,
+    { headers: { 'User-Agent': UA } },
+    {
+      beiWiederholung: (versuch, grund, warteMs) =>
+        console.warn(`  ZH-Netz: Wiederholung ${versuch} für ${url} (${grund}) — warte ${warteMs} ms`),
+    },
+  );
+}
 
 /** Extrahiert die OpenAttachment-PDF-URL aus dem Registry-HTML (notes.zh.ch). */
 export function leseAttachmentUrl(registryHtml: string): string | null {
@@ -1184,12 +1146,18 @@ async function extrahiereZhAnhangSpalten(
 
   const eintraege: Record<string, ZhArtikel> = {};
   for (const [ziffer, beschreibung, verweis] of tarif.zeilen) {
-    const text = beschreibung + (verweis ? ` (vgl. Ziff. ${verweis})` : '');
-    if (!text) continue;
+    if (!beschreibung && !verweis) continue;
     // Nackte Top-Level-Posten (kein Punkt) → «anhang_N» (Kollisions-Schutz §§).
     const token = ziffer.includes('.') ? ziffer : `${ANHANG_NACKT_PREFIX}${ziffer}`;
     if (token in eintraege) continue; // erster Treffer gewinnt
-    eintraege[token] = { bloecke: [{ absatz: null, text }] };
+    const block: ZhBlock = { absatz: null, text: beschreibung };
+    if (verweis) {
+      // Etikett quellgetreu vom Spaltenkopf; fehlt es (Seite ohne Kopfzeile),
+      // bleibt das Feld weg statt geraten zu werden (§8).
+      const etikett = tarif.verweisEtiketten[ziffer];
+      if (etikett !== undefined) block.verweis = { etikett, ziffern: verweis };
+    }
+    eintraege[token] = { bloecke: [block] };
   }
   return eintraege;
 }
@@ -1249,22 +1217,24 @@ async function extrahiereZhParStuecke(
   bytes: Uint8Array,
   startMarker: RegExp,
   endMarker: RegExp,
-): Promise<Array<{ x: number; y: number; h: number; s: string; p: number }>> {
+): Promise<Array<{ x: number; y: number; h: number; s: string; p: number; w?: number }>> {
   const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
   const doc = await pdfjs.getDocument({ data: bytes, useSystemFonts: true }).promise;
 
-  type S = { x: number; y: number; h: number; s: string; p: number };
+  type S = { x: number; y: number; h: number; s: string; p: number; w?: number };
   const alle: S[] = [];
   for (let p = 1; p <= doc.numPages; p++) {
     const inhalt = await (await doc.getPage(p)).getTextContent();
     for (const it of inhalt.items) {
-      const item = it as { str: string; transform: number[]; height?: number };
+      const item = it as { str: string; transform: number[]; height?: number; width?: number };
       if (!item.str || !item.str.replace(/\s/g, '')) continue;
       const y = item.transform[5];
       if (y < 60 || y > 530) continue; // Kopf-/Fussband
       const h = item.height ?? 9;
       if (h >= 11) continue; // Erlasstitel
-      alle.push({ x: item.transform[4], y, h, s: item.str, p });
+      // `w` (Fragment-Breite) trägt die Spaltenrand-Trennung in
+      // zh-tarif-geometrie.ts (Bug B-5) — ohne sie bleibt jedes Fragment ganz.
+      alle.push({ x: item.transform[4], y, h, s: item.str, p, w: item.width });
     }
   }
 
@@ -1309,43 +1279,32 @@ async function extrahiereZhParStuecke(
 
 export async function holeZhPdf(
   registryUrl: string,
+  modus: CacheModus = modusAusUmgebung('auto'),
 ): Promise<ZhErgebnis> {
-  // 1. Registry-HTML.
-  const regRes = await fetch(registryUrl, { headers: { 'User-Agent': UA } });
-  if (!regRes.ok) throw new Error(`ZH-Registry ${registryUrl}: HTTP ${regRes.status}`);
-  const regHtml = await regRes.text();
-
-  const attachUrl = leseAttachmentUrl(regHtml);
-  if (!attachUrl) {
-    throw new Error(`ZH ${registryUrl}: kein OpenAttachment-Link gefunden`);
-  }
-
-  // 2. OpenAttachment → JS-Redirect.
-  const redirRes = await fetch(attachUrl, { headers: { 'User-Agent': UA } });
-  if (!redirRes.ok) throw new Error(`ZH-Attachment ${attachUrl}: HTTP ${redirRes.status}`);
-  const redirHtml = await redirRes.text();
-  const pdfUrl = loeseRedirect(redirHtml, attachUrl);
-  if (!pdfUrl) {
-    throw new Error(`ZH ${attachUrl}: kein window.location-Redirect gefunden`);
-  }
-
-  // 3. PDF-Bytes.
-  const pdfRes = await fetch(pdfUrl, { headers: { 'User-Agent': UA } });
-  if (!pdfRes.ok) throw new Error(`ZH-PDF ${pdfUrl}: HTTP ${pdfRes.status}`);
-  const ct = pdfRes.headers.get('content-type') ?? '';
-  const bytes = new Uint8Array(await pdfRes.arrayBuffer());
-  if (!ct.includes('pdf') && !(bytes[0] === 0x25 && bytes[1] === 0x50)) {
-    throw new Error(`ZH-PDF ${pdfUrl}: keine PDF-Antwort (content-type ${ct})`);
-  }
+  // 1.–3. Registry-HTML → OpenAttachment → JS-Redirect → PDF-Bytes, über den
+  // Roh-PDF-Cache (O1, Skill-Prinzip «store raw as golden»). Im Modus 'auto'
+  // berührt ein Cache-Treffer kein Netz; 'netz' erzwingt den Abruf (Drift-
+  // Check), 'offline' verbietet ihn (CI/Tor ohne Netz).
+  const quelle = await holeZhQuelle(
+    registryUrl,
+    { hole: zhFetch, leseAttachmentUrl, loeseRedirect },
+    modus,
+  );
+  const regHtml = quelle.registryHtml;
+  const bytes = quelle.bytes;
 
   // 4. Extraktion + Parsing. bytes für JEDEN pdfjs-Lauf kopieren (getDocument
   // detacht den Puffer → zweiter Lauf auf demselben Array würfe DataCloneError).
   // Spalten-Lücken-Erkennung AKTIV (Probe ZH-243 20.6.2026 validiert: nur
   // Leerzeichen an Spaltengrenzen, Wortlaut beweisbar identisch). Materialisiert
   // sich erst beim nächsten `npm run normtext` (Rollout) in die ZH-Snapshots.
-  const { zeilen, randText } = await extrahiereZhTextZeilen(bytes.slice(), true);
+  const { zeilen, randText } = await extrahiereZhTextZeilen(bytes.slice());
   const textbasis = serialisiereZhZeilen(zeilen);
-  const artikel = extrahiereAlleZhParagraphen(textbasis);
+  // Zählweise («§ N.» oder «Art. N») einmal je Erlass aus der Textbasis erheben
+  // und für Parser UND Label verwenden (E2-H1) — nie erraten, nie verdrahten.
+  const marker = erkenneZhMarker(textbasis);
+  const hinweise: string[] = [];
+  const artikel = extrahiereAlleZhParagraphen(textbasis, marker, hinweise);
 
   // Anhang-Tarif SPALTENBEWUSST erfassen (Auftrag David 17.6.2026): der ZH-
   // NotGebV-Anhang ist eine 4-Spalten-Tabelle (Ziffer | Beschreibung | Ansatz |
@@ -1356,6 +1315,21 @@ export async function holeZhPdf(
   const anhang = await extrahiereZhAnhangSpalten(bytes.slice());
   for (const [ziff, e] of Object.entries(anhang)) {
     if (!(ziff in artikel)) artikel[ziff] = e;
+  }
+  // §8-EHRLICHKEIT (A4, Fix-Runde 3): Der §-Parser meldet den Anhang als
+  // Auslassung — für ZH-243 stimmt das NICHT, dort erfasst ihn der
+  // spaltenbewusste Tarif-Zweig vollständig (150 Einträge). Ein Lücken-Index,
+  // der eine erfasste Fläche als Lücke ausweist, ist so falsch wie einer, der
+  // eine echte Lücke verschweigt. Die Zeile wird darum ersetzt, nicht ergänzt.
+  if (Object.keys(anhang).length > 0) {
+    for (let i = 0; i < hinweise.length; i++) {
+      if (!hinweise[i].startsWith('Anhang ab ')) continue;
+      const ab = hinweise[i].match(/^Anhang ab «([^»]*)»/)?.[1] ?? '';
+      hinweise[i] =
+        `Anhang ab «${ab}» ist als eigene Tarif-Einträge erfasst ` +
+        `(${Object.keys(anhang).length} Ziffern, spaltenbewusst gelesen) — der ` +
+        `§-Parser lässt ihn aus, damit die Anhang-Zählung nicht mit den §§ kollidiert.`;
+    }
   }
 
   // ── Streitwert-Staffel spaltenbewusst (Stufe-2 Mehrspalten) ─────────────────
@@ -1375,7 +1349,11 @@ export async function holeZhPdf(
     const staffel3 = extrahiereZhStreitwertStaffel(par3Stuecke);
     if (staffel3 !== null) {
       const block0 = artikel['3'].bloecke[0];
-      artikel['3'].bloecke[0] = { ...block0, text: '', mehrspaltig: zuKanonisch(staffel3) };
+      artikel['3'].bloecke[0] = {
+        ...block0,
+        text: staffel3.einleitung,
+        mehrspaltig: zuKanonisch(staffel3),
+      };
     }
   }
 
@@ -1385,22 +1363,27 @@ export async function holeZhPdf(
     const staffel = extrahiereZhStreitwertStaffel(par4Stuecke);
     if (staffel !== null) {
       const block0 = artikel['4'].bloecke[0];
-      artikel['4'].bloecke[0] = { ...block0, text: '', mehrspaltig: zuKanonisch(staffel) };
+      artikel['4'].bloecke[0] = {
+        ...block0,
+        text: staffel.einleitung,
+        mehrspaltig: zuKanonisch(staffel),
+      };
     }
   }
 
-  // Stand = In-Kraft-Datum aus dem Registry-URL-Slug (zweites Datum-Tripel, §7/§8).
-  // Der PDF-Fussband-Marker «1. 1. 15 - 87» ist der Loseblatt-Nachtrag-Druckstand,
-  // NICHT das Inkrafttreten → nur noch Fallback.
+  // Stand = Publikationsdatum der geltenden Nachtragsfassung (Befund E2-H4).
   const stand =
+    leseZhPublikationsdatum(regHtml) ||
     leseZhStandAusUrl(registryUrl) ||
     leseZhStand(randText) ||
-    leseZhStand(regHtml) ||
     '';
   // Titel: erste Body-Zeile.
   const titel = zeilen.length > 0 ? zeilen[0].text : '';
 
-  const quelleHash = berechneZhQuelleHash(artikel);
+  // Drift-Token = Hash der QUELL-Bytes (C2/§7 d); der Extraktions-Hash bleibt
+  // als zweite Stufe daneben stehen (s. ZhErgebnis.meta).
+  const extraktHash = berechneZhQuelleHash(artikel);
+  const quelleHash = quelle.sidecar.bytesSha256;
 
   // Vollabdeckung (§7): ALLE Artikel zurückgeben. Label «Anhang Ziff. N.N.N» für
   // die gepunkteten Anhang-Ziffern (kongruent zu parsePassus, das «Anhang Ziff. …»
@@ -1408,14 +1391,20 @@ export async function holeZhPdf(
   // (Token «anhang_N», Kollisions-Schutz gegen die §§); sonst «§ N» (Paragraphen,
   // inkl. lat. Suffix «8a» aus «8_a»).
   const labels: Record<string, string> = {};
+  const marke = marker === 'artikel' ? 'Art. ' : '§ ';
   for (const token of Object.keys(artikel)) {
     if (token.startsWith(ANHANG_NACKT_PREFIX)) {
       labels[token] = `Anhang Ziff. ${token.slice(ANHANG_NACKT_PREFIX.length)}`;
     } else if (token.includes('.')) {
       labels[token] = `Anhang Ziff. ${token}`;
     } else {
-      labels[token] = `§ ${token.replace(/_/g, '')}`;
+      labels[token] = `${marke}${token.replace(/_/g, '')}`;
     }
   }
-  return { meta: { titel, stand, quelleHash }, artikel, labels };
+  return {
+    meta: { titel, stand, quelleHash, extraktHash, quellBytes: bytes.length },
+    artikel,
+    labels,
+    hinweise,
+  };
 }

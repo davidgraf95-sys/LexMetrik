@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   bundPdfQuellen, kantonAusLexwork, lexworkApiUrl, pdfQuellenJson,
-  type ErlassBasis,
+  raeumeVerwaisteSidecarEintraege, type ErlassBasis, type PdfQuellenMap,
 } from '../../scripts/normtext/pdf-quellen-generieren.ts';
 import { pruefeOffline } from '../../scripts/normtext/check-pdf-quellen.ts';
 
@@ -115,5 +115,43 @@ describe('pruefeOffline — Bindung an die Pin-Überwachung', () => {
     const ke = { key: 'AG-1', ebene: 'kanton', status: 'snapshot', quelleUrl: 'https://ag.ch/app/de/texts_of_law/1', stand: '2024-01-01', pdfUrl: 'https://boese.example/x.pdf', pdfStand: '2024-01-01' };
     const b = pruefeOffline(kq, [ke], pins);
     expect(b.some((x) => x.includes('PDF-Host'))).toBe(true);
+  });
+});
+
+// Gegenprüfungs-Befund PR #694 (5.9.2026): die Waisen-Räumung (main(), vormals
+// Zeilen 239-260) hatte keinen Unit-Test — nur die STATISCHE check-pdf-quellen-
+// Meldung oben («ROT bei verwaistem Eintrag») war getestet, nicht die Funktion,
+// die den Sidecar tatsächlich bereinigt. Minimal aus main() extrahiert
+// (raeumeVerwaisteSidecarEintraege), keine Logikänderung.
+describe('raeumeVerwaisteSidecarEintraege — löscht nur Waisen des gefahrenen Kantons', () => {
+  const map: PdfQuellenMap = {
+    'GL-III%20B_7_1': { url: 'https://gl.ch/x', stand: '2024-01-01', quelle: 'lexwork' },
+    'GL-III-A.5': { url: 'https://gl.ch/y', stand: '2024-01-01', quelle: 'lexwork' },
+    'BE-154.21': { url: 'https://be.ch/z', stand: '2024-01-01', quelle: 'lexwork' },
+  };
+  const imRegister = new Set(['GL-III-A.5', 'BE-154.21']); // GL-III%20B_7_1 zurückgezogen
+
+  it('entfernt genau den zurückgezogenen Key des gefahrenen Kantons', () => {
+    const { map: bereinigt, entfernt } = raeumeVerwaisteSidecarEintraege(map, imRegister, new Set(['GL']));
+    expect(entfernt).toEqual(['GL-III%20B_7_1']);
+    expect('GL-III%20B_7_1' in bereinigt).toBe(false);
+    expect(bereinigt['GL-III-A.5']).toEqual(map['GL-III-A.5']);
+  });
+
+  it('fremder Kanton bleibt unberührt, auch wenn er (fälschlich) nicht im Register steht', () => {
+    const ohneBE = new Set(['GL-III-A.5']); // BE-154.21 fehlt jetzt zusätzlich im Register
+    const { map: bereinigt, entfernt } = raeumeVerwaisteSidecarEintraege(map, ohneBE, new Set(['GL']));
+    // Nur der GL-Waise wird entfernt — GL ist der einzige gefahrene Kanton.
+    expect(entfernt).toEqual(['GL-III%20B_7_1']);
+    // BE-154.21 fehlt im Register, aber BE wird nicht gefahren → unangetastet
+    // (§8: aufgeräumt wird nur innerhalb der gefahrenen Kantone).
+    expect(bereinigt['BE-154.21']).toEqual(map['BE-154.21']);
+  });
+
+  it('leere Waisen-Menge → map unverändert (kein Eintrag entfernt)', () => {
+    const vollstaendig = new Set(Object.keys(map));
+    const { map: bereinigt, entfernt } = raeumeVerwaisteSidecarEintraege(map, vollstaendig, new Set(['GL', 'BE']));
+    expect(entfernt).toEqual([]);
+    expect(bereinigt).toEqual(map);
   });
 });

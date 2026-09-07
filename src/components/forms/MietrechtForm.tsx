@@ -217,7 +217,7 @@ export function MietrechtForm() {
             {MONATE.map((m, i) => (
               <button key={m} type="button" aria-pressed={monate.includes(i + 1)}
                 onClick={() => setMonate((arr) => (arr.includes(i + 1) ? arr.filter((x) => x !== i + 1) : [...arr, i + 1].sort((a, b) => a - b)))}
-                className={`px-2.5 py-1.5 rounded-md text-body-s border transition-colors ${monate.includes(i + 1) ? 'border-brass-500 bg-brass-100/60 text-ink-900 font-medium' : 'border-line bg-surface text-ink-700 hover:border-brass-400'}`}>
+                className={`px-2.5 py-1.5 text-body-s border transition-colors ${monate.includes(i + 1) ? 'border-brass-500 bg-brass-100/60 text-ink-900 font-medium' : 'border-line bg-surface text-ink-700 hover:border-brass-400'}`}>
                 {m}
               </button>
             ))}
@@ -239,8 +239,15 @@ export function MietrechtForm() {
           </Field>
         )}
         {art === 'ordentlich' && istRaum && (
-          <Field label="Vereinbarte Kündigungsfrist in Monaten (optional)" hint="Länger als das Gesetz zulässig; kürzer wäre nichtig (Art. 266a Abs. 1 OR)">
-            <input type="number" inputMode="decimal" min={1} value={fristMonate} onChange={(e) => setFristMonate(e.target.value)} className={inputCls + ' w-28'} />
+          <Field label="Vereinbarte Kündigungsfrist in Monaten" optional hint="Länger als das Gesetz zulässig; kürzer wäre nichtig (Art. 266a Abs. 1 OR)">
+            {/* LM-072 (B12, 4.9.2026): die feste Feldbreite ist weg — das Feld folgt jetzt
+                seiner Rasterzelle wie jedes andere `Field` derselben Reihe. GEMESSEN
+                @1440 stand es als 112 px neben Feldern von 495 px, ohne dass die
+                schmalere Breite etwas aussagte (§8: eine Breite ist eine Zusage über
+                die erwartete Eingabelänge). Die schmalen Felder der INLINE-Reihen
+                (Zahl + Einheit nebeneinander, `w-24`) bleiben, dort trägt die Breite
+                die Zusammengehörigkeit. */}
+            <input type="number" inputMode="decimal" min={1} value={fristMonate} onChange={(e) => setFristMonate(e.target.value)} className={inputCls} />
           </Field>
         )}
         {art === 'zahlungsverzug' && (
@@ -279,14 +286,25 @@ export function MietrechtForm() {
           {/* FE-5: byte-gleiches Markup → geteilte EckdatenKachel (Inventur
               10.6.2026: einzige exakt deckungsgleiche Rest-Dublette). */}
           <div className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-3`}>
-            <EckdatenKachel akzent num
+            {/* LM-039 (B11-Karten, 4.9.2026): der Platzhalter war ein nacktes
+                «–» — auf /rechner/mietrecht trug die dritte Kachel neben zwei
+                Datums-Kacheln nur diesen Strich (4.9. gemessen). Ein Strich
+                sagt nicht, WAS fehlt. Der Ersatztext ist bewusst der bereits im
+                Haus stehende Wortlaut für genau diesen Fall
+                (`lib/fristenspiegel/vermieterkuendigung.ts`: «kein Datum
+                berechnet»): er behauptet NICHT «nicht anwendbar» und nicht
+                «nicht berechenbar» — die Unterscheidung ist eine fachliche
+                Aussage, die die Engine heute nicht liefert (§8, §5).
+                LM-034: `num` folgt dem Wert, nicht der Kachel — Sätze bleiben
+                in der Textstimme (DESIGN-REGLEMENT §4b(e)). */}
+            <EckdatenKachel akzent num={ergebnis.status !== 'nichtig' && !!ergebnis.endtermin}
               label={ergebnis.status === 'nichtig' ? 'Form' : 'Mietverhältnis endet am'}
-              wert={ergebnis.status === 'nichtig' ? 'NICHTIG (Art. 266o OR)' : ergebnis.endtermin ?? '–'} />
-            <EckdatenKachel num label="Spätester Zugang für diesen Termin"
-              wert={ergebnis.spaetesterZugang ?? '–'} />
-            <EckdatenKachel num
+              wert={ergebnis.status === 'nichtig' ? 'NICHTIG (Art. 266o OR)' : ergebnis.endtermin ?? 'kein Datum berechnet'} />
+            <EckdatenKachel num={!!ergebnis.spaetesterZugang} label="Spätester Zugang für diesen Termin"
+              wert={ergebnis.spaetesterZugang ?? 'kein Datum berechnet'} />
+            <EckdatenKachel num={!!(ergebnis.zahlungsfristEnde ?? ergebnis.anfechtungBis)}
               label={ergebnis.zahlungsfristEnde ? 'Zahlungsfrist läuft bis' : 'Anfechtung/Erstreckung bis'}
-              wert={ergebnis.zahlungsfristEnde ?? ergebnis.anfechtungBis ?? '–'} />
+              wert={ergebnis.zahlungsfristEnde ?? ergebnis.anfechtungBis ?? 'kein Datum berechnet'} />
           </div>
 
           <ErgebnisAnzeige titel="Kündigungstermine und -fristen (Art. 253 ff. OR)" ergebnis={ergebnis} />

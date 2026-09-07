@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz, fremdgesetzNachArtikel, normVerweiseImText, artikelToken, fremdRoutingFormB, erkenneGenitivGesetz, artikelnPluralVerweise } from '../lib/fedlex';
+import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz, fremdgesetzNachArtikel, normVerweiseImText, artikelToken, fremdRoutingFormB, erkenneGenitivGesetz, artikelnPluralVerweise, NORM_IM_TEXT } from '../lib/fedlex';
 
 describe('fedlexUrl', () => {
   it('Zahl-Artikel', () => {
@@ -392,8 +392,19 @@ describe('artikelnPluralVerweise — Plural-Aufzählungs-Regionen (A10)', () => 
     expect(rs[0].fremd).toBe('StGB');
   });
 
-  it('Negativ (§1): unauflösbarer ausgeschriebener Fremdname ⇒ unterdrückt (nie geratener Self-Link)', () => {
+  // V-7b (W2·20, 1.9.2026, deklarierte fachliche Änderung): der amtliche Volltitel
+  // «Bundesgesetzes vom … über Schuldbetreibung und Konkurs» ist seit der
+  // Positivliste ein deterministisches Signal → SchKG (vorher pauschal unterdrückt).
+  it('Volltitel mit Datum (V-7b): «… des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs» → SchKG', () => {
     const rs = artikelnPluralVerweise('nach den Artikeln 91, 163 und 222 des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs');
+    expect(rs).toHaveLength(1);
+    expect(rs[0].fremd).toBe('SchKG');
+    expect(rs[0].unterdruecken).toBe(false);
+    expect(rs[0].glieder.map((g) => g.roh)).toEqual(['91', '163', '222']);
+  });
+
+  it('Negativ (§1): unbekannter ausgeschriebener Fremdname ⇒ unterdrückt (nie geratener Self-Link)', () => {
+    const rs = artikelnPluralVerweise('nach den Artikeln 91, 163 und 222 des Bundesgesetzes vom 11. April 1889 über die Sache');
     expect(rs).toHaveLength(1);
     expect(rs[0].unterdruecken).toBe(true);
   });
@@ -446,8 +457,16 @@ describe('fremdRoutingFormB — Genitiv-Kurztitel OHNE Klammer (A11-Erweiterung)
     expect(fremdRoutingFormB(' des Zivilgesetzbuches (Code civil) gilt', '14')).toBeNull();
   });
 
-  it('generischer Genitiv bleibt ohne Routing: «des Bundesgesetzes über …» → null', () => {
-    expect(fremdRoutingFormB(' des Bundesgesetzes über die Alters- und Hinterlassenenversicherung gilt', '5')).toBeNull();
+  // V-7b (W2·20, 1.9.2026, deklarierte fachliche Änderung): der amtliche Volltitel
+  // löst seit der Positivliste auf; generisch bleibt nur ein UNBEKANNTER Titel.
+  it('amtlicher Volltitel routet (V-7b): «des Bundesgesetzes über die Alters- und Hinterlassenenversicherung» → AHVG', () => {
+    const r = fremdRoutingFormB(' des Bundesgesetzes über die Alters- und Hinterlassenenversicherung gilt', '5');
+    expect(r?.gesetz).toBe('AHVG');
+    expect(r?.signal).toBe('titel');
+  });
+
+  it('unbekannter Titel bleibt ohne Routing: «des Bundesgesetzes über die Sache» → null', () => {
+    expect(fremdRoutingFormB(' des Bundesgesetzes über die Sache gilt', '5')).toBeNull();
   });
 });
 
@@ -517,5 +536,127 @@ describe('artikelnPluralVerweise — B1: unterbrochene Plural-Wertliste (Gegenpr
     const rs = artikelnPluralVerweise('nach den Artikeln 8 Absätze 1 und 2, 11 und 13 gilt');
     expect(rs[0].glieder.map((g) => g.roh)).toEqual(['8']);
     expect(rs[0].unterdruecken).toBe(false);
+  });
+});
+
+// ─── V-7/V-8 (W2·20-VERWEIS-SCHAERFE, 1.9.2026): Erlassnamen-Positivliste ────
+describe('fremdRoutingFormB — Positivliste V-7 (Kurztitel-Geltung, Volltitel, Klammer-Nachprüfung)', () => {
+  it('Volltitel mit Datums-Einschub: «des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung» → AHVG', () => {
+    const rest = ' Absatz 4 Buchstabe a des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung, so muss';
+    const r = fremdRoutingFormB(rest, '71');
+    expect(r?.gesetz).toBe('AHVG');
+    expect(r?.signal).toBe('titel');
+    expect(rest.slice(r!.regionEnd)).toBe(', so muss'); // Region endet hinter dem Titel
+  });
+
+  it('Klammer hinter dem Datum widerspricht dem Namen (BE-154.21, Falschlink auf main) ⇒ null', () => {
+    expect(fremdRoutingFormB(' des Datenschutzgesetzes vom 19. Februar 1986 (KDSG) sind gebührenfrei', '21')).toBeNull();
+    expect(fremdRoutingFormB(' des Bundesgesetzes über den Datenschutz vom 25. September 2020 (KDSG)', '21')).toBeNull();
+  });
+
+  it('Klammer mit DEMSELBEN Kürzel bestätigt den Namen und wird in die Region eingezogen', () => {
+    const rest = ' des Datenschutzgesetzes vom 25. September 2020 (DSG) gilt';
+    const r = fremdRoutingFormB(rest, '5');
+    expect(r?.gesetz).toBe('DSG');
+    expect(rest.slice(r!.regionEnd)).toBe(' gilt');
+  });
+
+  it('Geltung «bund»: «des Datenschutzgesetzes» löst im Bund auf, im Kanton nicht (AR-146.1 heisst gleich)', () => {
+    expect(fremdRoutingFormB(' des Datenschutzgesetzes gilt', '5', undefined, 'bund')?.gesetz).toBe('DSG');
+    expect(fremdRoutingFormB(' des Datenschutzgesetzes gilt', '5', undefined, 'kanton')).toBeNull();
+    // Der Default ist «bund» — das bisherige Verhalten der Bund-Leser.
+    expect(fremdRoutingFormB(' des Datenschutzgesetzes gilt', '5')?.gesetz).toBe('DSG');
+  });
+
+  it('Geltung «alle»: Volltitel «Bundesgesetzes über …» und eindeutige Kurztitel lösen auch im Kanton auf', () => {
+    expect(fremdRoutingFormB(' Abs. 2 des Bundesgesetzes über Schuldbetreibung und Konkurs gleichgestellt', '80', undefined, 'kanton')?.gesetz).toBe('SchKG');
+    expect(fremdRoutingFormB(' des Schweizerischen Strafgesetzbuches, das', '382', undefined, 'kanton')?.gesetz).toBe('StGB');
+    expect(fremdRoutingFormB(' des Bankengesetzes vom 8. November 1934 (BankG) werden', '7', undefined, 'kanton')?.gesetz).toBe('BANKG');
+  });
+
+  it('Kopf «Verordnung» nur im Bund: «der Verordnung über die Krankenversicherung» → KVV / null', () => {
+    expect(fremdRoutingFormB(' der Verordnung über die Krankenversicherung gilt', '93', undefined, 'bund')?.gesetz).toBe('KVV');
+    expect(fremdRoutingFormB(' der Verordnung über die Krankenversicherung gilt', '93', undefined, 'kanton')).toBeNull();
+    // Kopf entscheidet zwischen Gesetz und Verordnung gleichen Titels.
+    expect(fremdRoutingFormB(' des Bundesgesetzes über die Krankenversicherung gilt', '93')?.gesetz).toBe('KVG');
+  });
+
+  it('Präfix-Schutz: ein längerer Titel ist kein Treffer für ein kürzeres Fragment', () => {
+    // «über die Finanzinstitute» (FINIG) darf «über die Finanzinstitutsaufsicht» nicht binden.
+    expect(fremdRoutingFormB(' des Bundesgesetzes über die Finanzinstitutsaufsicht gilt', '5')).toBeNull();
+    // ROT-BEWEIS Fix-Runde 1 (§6.7, Gegenprüfung 1.9.2026): der Wortlaut aus
+    // kanton/BS/132.100/art_4 Abs. 4 — vor dem Fix band das Fragment «über die
+    // politischen Rechte» auf BPR (SR 161.1); gemeint ist das eigenständige
+    // BPRAS (SR 161.5, nicht im Korpus). Das Titelwort NACH dem Fragment ist
+    // das deterministische Signal, dass ein LÄNGERER Titel zitiert wird.
+    const bs = ' des Bundesgesetzes über die politischen Rechte der Auslandschweizer vom 19. Dezember 1975 gemeldet haben.';
+    expect(fremdRoutingFormB(bs, '5', undefined, 'kanton')).toBeNull();
+    expect(fremdRoutingFormB(bs, '5', undefined, 'bund')).toBeNull();
+    expect(artikelnPluralVerweise(
+      'Auslandschweizer, die sich gemäss den Artikeln 5 und 6 des Bundesgesetzes über die politischen Rechte der Auslandschweizer vom 19. Dezember 1975 gemeldet haben.',
+      'kanton',
+    )[0].fremd).toBeNull();
+    // Der KURZE Titel selbst bleibt ein Treffer (kein Rückbau des V-7b-Gewinns).
+    expect(fremdRoutingFormB(' des Bundesgesetzes über die politischen Rechte gilt', '5', undefined, 'kanton')?.gesetz).toBe('BPR');
+  });
+
+  it('Zeit-Kante: ein zitierter aufgehobener Vorgänger-Erlass wird nicht auf das geltende Gesetz verlinkt', () => {
+    // ROT-BEWEIS Fix-Runde 1 (§6.7): Wortlaut aus bund/STHG/art_76 — das
+    // Militärversicherungsgesetz von 1949 ist aufgehoben, das geltende MVG
+    // datiert vom 19.6.1992 und zählt anders. Vor dem Fix: Link auf MVG.
+    const sthg = ' Absatz 2 des Bundesgesetzes vom 20. September 1949 über die Militärversicherung ist hinsichtlich';
+    expect(fremdRoutingFormB(sthg, '47')).toBeNull();
+    expect(artikelnPluralVerweise('nach den Artikeln 47 und 48 des Bundesgesetzes vom 20. September 1949 über die Militärversicherung')[0].fremd).toBeNull();
+    // Dasselbe Muster, weitere belegte Fundstellen (OR disp_u13_art_6 / BBV 74 / LMG 43).
+    expect(fremdRoutingFormB(' des Bundesgesetzes vom 19. April 1978 über die Berufsbildung', '74')).toBeNull();
+    expect(fremdRoutingFormB(' des Bundesgesetzes vom 16. Dezember 1994 über das öffentliche Beschaffungswesen', '43')).toBeNull();
+    // Das GELTENDE Datum bindet weiterhin — auch abgekürzt geschrieben.
+    expect(fremdRoutingFormB(' Absatz 2 des Bundesgesetzes vom 19. Juni 1992 über die Militärversicherung ist', '47')?.gesetz).toBe('MVG');
+    expect(fremdRoutingFormB(' des Bundesgesetzes vom 20. Dez. 1946 über die Alters- und Hinterlassenenversicherung', '71')?.gesetz).toBe('AHVG');
+    // Kurztitel-Genitiv mit Datum: falsches Datum ⇒ kein Link, richtiges ⇒ Link.
+    expect(fremdRoutingFormB(' des Bankengesetzes vom 1. Januar 2000 (BankG) werden', '7')).toBeNull();
+    expect(fremdRoutingFormB(' des Bankengesetzes vom 8. November 1934 (BankG) werden', '7')?.gesetz).toBe('BANKG');
+    // Mehrdeutige Monats-Abkürzung ist nicht auflösbar → kein Link (§1).
+    expect(fremdRoutingFormB(' des Bundesgesetzes vom 19. Ju. 1992 über die Militärversicherung', '47')).toBeNull();
+  });
+
+  it('Signal-Feld unterscheidet Klammer, Genitiv und Titel', () => {
+    expect(fremdRoutingFormB(' des Strafgesetzbuchs (StGB)', '66a')?.signal).toBe('klammer');
+    expect(fremdRoutingFormB(' der Bundesverfassung,', '130')?.signal).toBe('genitiv');
+    expect(fremdRoutingFormB(' des Bundesgesetzes über das Bundesgericht.', '8')?.signal).toBe('titel');
+  });
+
+  it('Plural-Pfad: Volltitel routet, widersprechende Klammer unterdrückt, Kanton-Geltung gilt', () => {
+    expect(artikelnPluralVerweise('nach den Artikeln 5 und 6 des Datenschutzgesetzes vom 19. Februar 1986 (KDSG)')[0].unterdruecken).toBe(true);
+    expect(artikelnPluralVerweise('nach den Artikeln 5 und 6 des Datenschutzgesetzes gilt', 'kanton')[0].unterdruecken).toBe(true);
+    expect(artikelnPluralVerweise('nach den Artikeln 5 und 6 des Datenschutzgesetzes gilt', 'bund')[0].fremd).toBe('DSG');
+    expect(artikelnPluralVerweise('nach den Artikeln 80 und 81 des Bundesgesetzes über Schuldbetreibung und Konkurs', 'kanton')[0].fremd).toBe('SchKG');
+  });
+});
+
+describe('Kürzel-Schreibweisen V-8 — amtliche Mischschreibung erkennt den FEDLEX-Key', () => {
+  it('erkenneFedlexGesetz: «BankG» → BANKG, «FinfraG» → FINFRAG, «StHG» ≠ «StG»', () => {
+    expect(erkenneFedlexGesetz('Art. 1b BankG')).toBe('BANKG');
+    expect(erkenneFedlexGesetz('Art. 4 Abs. 2 FinfraG')).toBe('FINFRAG');
+    expect(erkenneFedlexGesetz('Art. 7 StHG')).toBe('STHG');
+    expect(erkenneFedlexGesetz('Art. 7 StG')).toBe('StG');
+    expect(erkenneFedlexGesetz('Art. 7 XBankG')).toBeNull(); // Wortgrenze
+  });
+
+  it('NORM_IM_TEXT findet «Art. 1b BankG», der Deep-Link zeigt auf den BANKG-Anker', () => {
+    const m = 'Vorbehalten bleibt Art. 1b BankG.'.match(NORM_IM_TEXT);
+    expect(m).toEqual(['Art. 1b BankG']);
+    expect(fedlexLinkFuerArtikel('Art. 1b BankG')).toBe(`${FEDLEX.BANKG}#art_1_b`);
+  });
+
+  it('fremdgesetzNachArtikel unterdrückt den Self-Link bei «Artikel 4 Absatz 2 des FinfraG»', () => {
+    expect(fremdgesetzNachArtikel(' Absatz 2 des FinfraG eine Bewilligung')).toBe('FINFRAG');
+    expect(fremdgesetzNachArtikel(' Absatz 2 AsylG.')).toBe('ASYLG');
+  });
+
+  it('Klammer-Form B mit amtlicher Schreibweise: «des Partnerschaftsgesetzes vom 18. Juni 2004 (PartG)» → PARTG', () => {
+    const r = fremdRoutingFormB(' des Partnerschaftsgesetzes vom 18. Juni 2004 (PartG) bis', '18');
+    expect(r?.gesetz).toBe('PARTG');
+    expect(r?.signal).toBe('klammer');
   });
 });

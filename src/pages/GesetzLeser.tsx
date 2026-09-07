@@ -1,6 +1,7 @@
 import { Suspense, lazy, useLayoutEffect } from 'react';
-import { Navigate, useLocation, useParams } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
+import { zerlegeErlassPfad } from '../lib/normtext/erlassAdresse';
 import { LadeAnzeige } from './gesetz-leser/inhalt-ansichten';
 import { umzugsZiel } from './gesetz-leser/adressUmzug';
 
@@ -52,9 +53,41 @@ const LeserRahmenV3 = lazy(() =>
 export function GesetzLeser() {
   // `ebene` heisst in der Route so, im Register auch — darum hier einmal
   // umbenannt: was aus der ADRESSE kommt, heisst ab hier `routenSegment`.
-  const { ebene: routenSegment, key: keyRoh } = useParams<{ ebene: string; key: string }>();
-  const schluessel = keyRoh ? decodeURIComponent(keyRoh) : '';
-  const { hash, search } = useLocation();
+  //
+  // ── F25 · DER SCHLÜSSEL KOMMT AUS DEM PFAD (K-1b, W2·13-KANTONE, 31.8.2026) ─
+  //
+  // Hier stand `useParams()` plus ein `decodeURIComponent` auf dem Key. ZWEI
+  // Fehler in einer Zeile, beide 31.8.2026 gemessen:
+  //
+  //  ① Der Zweitdecode war einer zu viel — `react-router` v7 dekodiert
+  //     Routen-Parameter bereits selbst. Für die 162 Schlüssel mit Leerzeichen
+  //     blieb das folgenlos (ein Leerzeichen dekodiert sich nicht weiter), für
+  //     die drei Glarner Schlüssel mit `%` IN DER KANONIK zerstörte es den
+  //     Schlüssel: `GL-III%20B_7_1` kam als `GL-III B_7_1` an.
+  //  ② `useParams()` KANN diese Schlüssel gar nicht liefern. Nach dem Dekodieren
+  //     ersetzt react-router jedes verbliebene `%2F` durch `/`
+  //     (`matchPathImpl`), damit Splat-Routen kodierte Schrägstriche sehen. Aus
+  //     `GL-III%20B%2F7%2F1` wird dabei `GL-III%20B/7/1` — ein Schlüssel, den
+  //     das Register nicht kennt. Das ist Framework-Verhalten, kein Aufruf-
+  //     fehler: es passiert, gleich was diese Komponente danach tut.
+  //
+  // Der ROHE Pfad trägt beide Fälle unversehrt. Zerlegt wird er von der einen
+  // Ableitung, die es dafür schon gibt (`zerlegeErlassPfad`, §5) — derselben,
+  // mit der `kanonisierePfad` gespeicherte Reiter- und Pane-Adressen nachzieht.
+  // `location` statt `window.location`: im Split-View trägt jedes Pane seine
+  // eigene, hier gilt die des eigenen Panes (`layout/Pane.tsx` reicht sie an den
+  // `RouteSwitch`; `useParams` las dieselbe Quelle).
+  // Ein Pfad, der keine Erlass-Adresse ist, liefert einen leeren Schlüssel —
+  // dann zeigt der Leser seine Fehlseite, statt auf einen geratenen Erlass zu
+  // springen (§8). Wächter: `src/tests/leser-schluessel-decode-k1b.test.tsx`.
+  // Trailing Slash normalisieren: `useParams()` tat das implizit; Prod fängt
+  // ihn per `trailingSlash:false` (308) ab, dev/preview nicht — ohne Strip
+  // wäre `/gesetze/kanton/ZH-211.1/` dort eine Fehlseite (§9-Bug-Check
+  // 31.8.2026, Fund 4).
+  const { hash, search, pathname } = useLocation();
+  const adresse = zerlegeErlassPfad(pathname.replace(/\/+$/, ''));
+  const routenSegment = adresse?.ebene ?? '';
+  const schluessel = adresse?.key ?? '';
   const meldeInhaltsKopf = useMeldeInhaltsKopf();
   // `useLayoutEffect`, nicht `useEffect` — und das ist gemessen, nicht Geschmack:
   // die Shell setzt ihre Kopfdaten bei JEDEM Pfadwechsel zurück (Shell.tsx, im

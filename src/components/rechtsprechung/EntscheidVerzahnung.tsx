@@ -137,7 +137,7 @@ export function ZitierteNormenGruppe({ abschnitte, zitierteNormen, regesteAnker,
                 <button type="button" onClick={() => oeffneDaneben(readerLink)}
                   title={`${norm} nebeneinander öffnen`} aria-label={`${norm} nebeneinander öffnen`}
                   className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
-                  <span aria-hidden className="text-base leading-none">⧉</span>
+                  <span aria-hidden className="lc-griff-glyph">⧉</span>
                 </button>
               )}
             </span>
@@ -209,7 +209,7 @@ export function ZitiertGruppe({ zitierteEntscheide, abschnitte, selbstKey }: {
                   <button type="button" onClick={() => oeffneDaneben(ziel)}
                     title={`${k.zitat} nebeneinander öffnen`} aria-label={`${k.zitat} nebeneinander öffnen`}
                     className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
-                    <span aria-hidden className="text-base leading-none">⧉</span>
+                    <span aria-hidden className="lc-griff-glyph">⧉</span>
                   </button>
                 )}
               </li>

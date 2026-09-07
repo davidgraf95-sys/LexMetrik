@@ -9,7 +9,15 @@
 // `fts_entscheide_schaufenster` gar nicht vorhanden — api/suche servierte einen
 // verstümmelten Index und meldete es nirgends. Genau dieses Schweigen bricht dieser Tor.
 //
-// Geprüft wird vierfach:
+// Geprüft wird fünffach:
+//   0. SCHEMA      — trägt die Replika die HEUTIGE DDL der FTS-Tabellen? (neu 31.8.2026,
+//      Gegenprüfungs-Befund F1 zu QS-BASIS (d)). Alle anderen Dimensionen zählen Zeilen,
+//      rowids und Signaturen; gegenüber einer FORM-Änderung sind sie blind. Genau die stand
+//      an: `fts_artikel` bekam sechs Spalten statt einer, und api/suche.ts schickt seit K2
+//      spalten-gefilterte MATCH-Ausdrücke (`{marginalie gliederung} : "…"`). Gegen die alte
+//      Ein-Spalten-Replika antwortet SQLite `no such column: marginalie`, api/suche.ts macht
+//      daraus 502 — auf JEDE Artikel-Query. Zeilenzahl, rowid-Spannweite und manifest_sha
+//      wären dabei allesamt grün geblieben, weil sich an den DATEN nichts geändert hatte.
 //   1. STRUKTUR    — existieren alle HOT-Tabellen und sind sie nicht leer?
 //   2. VOLLSTÄNDIG — stimmt die Ist-Zeilenzahl je Tabelle mit der Zahl überein, die der
 //      letzte erfolgreiche Sync in `sync_meta` hinterlegt hat? Das ist der eigentliche
@@ -44,6 +52,7 @@
 // Aufruf: npm run check:turso-frische
 import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { ddlFtsArtikel, ddlFtsEntscheide } from './fts';
 
 const URL_STD = 'libsql://lexmetrik-ravedave.aws-eu-west-1.turso.io';
 const TOKEN_DATEI = 'daten/turso-token.txt';
@@ -110,6 +119,62 @@ const sollZahlen: Record<string, number> = {};
       const v = Number(zeile[1]?.value ?? NaN);
       if (k && Number.isFinite(v)) sollZahlen[k.replace(/^zeilen_/, '')] = v;
     }
+  }
+}
+
+// ── 0) Schema: trägt die Replika die HEUTIGE DDL? ─────────────────────────────────────
+//
+// Verglichen wird `sqlite_master.sql` der Replika gegen die Funktionen, aus denen der Sync
+// die Tabellen anlegt (fts.ts, §5) — NICHT gegen eine hier gepflegte Zweitkopie. Eine
+// Zweitkopie wäre derselbe Fehler, den der Tor fangen soll, nur eine Ebene höher.
+//
+// WARUM NORMALISIERT UND NICHT ROH VERGLICHEN WIRD (empirisch geprüft, 31.8.2026): der
+// Tausch am Ende des Syncs läuft über `ALTER TABLE fts_artikel_neu RENAME TO fts_artikel`,
+// und SQLite schreibt den Namen dabei GEQUOTET in `sqlite_master` zurück:
+//   vor  RENAME: CREATE VIRTUAL TABLE fts_artikel_neu USING fts5(text, marginalie, …)
+//   nach RENAME: CREATE VIRTUAL TABLE "fts_artikel"   USING fts5(text, marginalie, …)
+// Ein roher Stringvergleich gegen `ddlFtsArtikel('fts_artikel')` wäre also DAUERHAFT ROT,
+// obwohl nichts fehlt — und ein Tor, das immer rot ist, erzieht binnen Tagen zum Wegsehen
+// (§6.7). Normalisiert werden darum genau zwei Dinge und sonst nichts: die Quotes um den
+// Tabellennamen und Whitespace-Läufe. Die Spaltenliste selbst — Zahl, Namen, REIHENFOLGE,
+// `content=''`, Tokenizer — bleibt bit-genau im Vergleich; sie ist das, woran die
+// bm25-Gewichte und der Spaltenfilter hängen.
+function normalisiereDdl(sql: string): string {
+  return sql
+    .replace(/^\s*CREATE\s+VIRTUAL\s+TABLE\s+"([^"]+)"/i, 'CREATE VIRTUAL TABLE $1')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** FTS-Tabellen mit ihrer Soll-DDL. Die Namen sind die LIVE-Namen nach dem Tausch. */
+const SCHEMA_SOLL: Array<{ tabelle: string; ddl: string }> = [
+  { tabelle: 'fts_artikel', ddl: ddlFtsArtikel('fts_artikel') },
+  { tabelle: 'fts_entscheide_schaufenster', ddl: ddlFtsEntscheide('fts_entscheide_schaufenster') },
+];
+
+for (const { tabelle, ddl } of SCHEMA_SOLL) {
+  const ist = await abfrage(`SELECT sql FROM sqlite_master WHERE name = '${tabelle}'`);
+  if (ist.fehler || ist.wert === null) {
+    befunde.push(
+      `Schema von \`${tabelle}\` nicht lesbar (${ist.fehler ?? 'kein sqlite_master-Eintrag'}) — ` +
+        'die Form der Replika ist damit unbelegt.',
+    );
+    continue;
+  }
+  const istN = normalisiereDdl(ist.wert);
+  const sollN = normalisiereDdl(ddl);
+  if (istN !== sollN) {
+    befunde.push(
+      `SCHEMA-DRIFT bei \`${tabelle}\`: die Replika trägt eine ANDERE Form als der heutige ` +
+        'Generator baut. api/suche.ts fragt gegen die heutige Form ab — passt sie nicht, ' +
+        'antwortet die Live-Suche mit 502, ohne dass Zeilenzahlen oder manifest_sha etwas ' +
+        'davon merken.\n' +
+        `      live: ${istN}\n` +
+        `      soll: ${sollN}\n` +
+        '      Behebung: `npm run datenhaltung:turso-sync` (der Sync legt die Tabellen neu an).',
+    );
+  } else {
+    console.log(`  Schema ${tabelle}: == ddl${tabelle === 'fts_artikel' ? 'FtsArtikel' : 'FtsEntscheide'}() (Form identisch)`);
   }
 }
 
@@ -232,4 +297,4 @@ if (befunde.length > 0) {
   console.error('oder den Workflow `Turso-Serving-Sync` per workflow_dispatch anstossen.');
   process.exit(1);
 }
-console.log('check:turso-frische grün: HOT-Replika vollständig, aktuell und datiert.');
+console.log('check:turso-frische grün: HOT-Replika formgleich, vollständig, aktuell und datiert.');

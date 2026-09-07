@@ -29,14 +29,22 @@ import * as modifikatoren from '../../src/data/tarif/modifikatoren.ts';
 import * as bundesgericht from '../../src/data/tarif/bundesgericht.ts';
 import * as nichtVermoegensrechtlich from '../../src/data/tarif/nicht-vermoegensrechtlich.ts';
 import { parsePassus } from '../../src/lib/normtext/passus.ts';
+import { ZH_QUELLEN } from './zh-quellen.ts';
 
 /** Roh-Tarif-Eintrag, wie er in den Daten steht (nur die hier relevanten Felder). */
-interface TarifEintrag {
+export interface TarifEintrag {
   kanton: string;
   erlassName: string;
   erlassNr: string;
   artikel: string;
   quelleUrl: string;
+  /** Anzeige-String der Fassung («1.1.2024», «2026 (konsolidiert)», …).
+   *  W3-TARIF-STAND: das Drift-Tor `check:tarif-drift` liest ihn über die
+   *  Projektion `scripts/tarif/stand.ts`. Alle 954 Einträge tragen ihn
+   *  (Erhebung 6.9.2026) — die Signatur-Erkennung unten prüft ihn mit, damit
+   *  ein künftiger Eintrag ohne `stand` sichtbar herausfällt statt still
+   *  ungeprüft mitzulaufen. */
+  stand: string;
 }
 
 export interface KantonInventarArtikel {
@@ -155,6 +163,43 @@ function pdfProfil(kanton: string, url: string): PdfProfilName | null {
 /** /app/(de|fr)/texts_of_law/<lawId> — Host + Sprache + lawId. */
 const LEXWORK = /^https:\/\/([^/]+)\/app\/(de|fr)\/texts_of_law\/(.+)$/;
 
+/**
+ * Kanonische Schreibweise einer LexWork-lawId (§5 eine Wahrheit, §7 amtliche
+ * Nummer). Rein.
+ *
+ * Die amtliche Systematiknummer ist EIN Pfadsegment — sie darf selbst
+ * Schrägstriche tragen (GL «GS III B/7/1»). In der quelleUrl kann derselbe
+ * Erlass darum in zwei Schreibweisen stehen, und gesetze.gl.ch beantwortet
+ * beide mit HTTP 200 (empirisch 5.9.2026):
+ *   …/texts_of_law/III%20B%2F7%2F1   (Nummer als EIN kodiertes Segment)
+ *   …/texts_of_law/III%20B/7/1       (Schrägstriche roh)
+ * Ungefiltert erzeugt das zwei Gruppen, zwei Snapshots und zwei Register-Keys
+ * für einen Erlass: der Schlüssel entsteht aus `lawIdSafe` («/»→«_»), also
+ * `GL-III%20B_7_1` NEBEN `GL-III%20B%2F7%2F1` — dieselbe Verordnung zweimal in
+ * Register, Sitemap und Kantonsliste (§5-Doppelwahrheit; Befund der
+ * Gegenprüfung zu PR #684, 5.9.2026).
+ *
+ * Kanonisch ist die vollständig kodierte Form. Begründung: nur sie dekodiert
+ * verlustfrei auf die amtliche Nummer «III B/7/1» zurück (der `_`-Ersatz in
+ * `lawIdSafe` ist von einem echten Unterstrich nicht mehr unterscheidbar), nur
+ * sie adressiert die Nummer als das eine Pfadsegment, das sie ist, und sie
+ * deckt sich mit der Schreibweise des Schwester-Erlasses
+ * `GL-III%20B%2F3%2F2` wie auch der Mehrheit der Tarif-Zitate.
+ */
+export function kanonischeLawId(lawId: string): string {
+  return lawId.replace(/\//g, '%2F');
+}
+
+/** Dekodierte Identität einer lawId — zwei Schreibweisen derselben amtlichen
+ *  Nummer fallen hier zusammen («III%20B/7/1» und «III%20B%2F7%2F1» → «III B/7/1»). */
+function lawIdIdentitaet(lawId: string): string {
+  try {
+    return decodeURIComponent(kanonischeLawId(lawId));
+  } catch {
+    return kanonischeLawId(lawId);
+  }
+}
+
 /** Strukturiert erschlossene HTML/HTM-Erlassquellen, je Profil:
  *   NE: rsn.ne.ch …/htm/*.htm        (Word-Export, latin-1)
  *   GE: silgeneve.ch …/*.htm         (Word-Export, latin-1)
@@ -183,7 +228,8 @@ function istTarifEintrag(v: unknown): v is TarifEintrag {
     typeof o.erlassName === 'string' &&
     typeof o.erlassNr === 'string' &&
     typeof o.artikel === 'string' &&
-    typeof o.quelleUrl === 'string'
+    typeof o.quelleUrl === 'string' &&
+    typeof o.stand === 'string'
   );
 }
 
@@ -201,8 +247,12 @@ function sammleEintraege(v: unknown, ziel: TarifEintrag[]): void {
 
 /** Alle Tarif-Module deep-walken → flache, deduplizierte Eintragsliste.
  *  (Mehrere Module re-exportieren dieselbe NOTARIAT/GRUNDBUCH-Tabelle; ein
- *   Eintrag ist über die Identität des Objekts oder den Tripel-Schlüssel eindeutig.) */
-function alleTarifEintraege(): TarifEintrag[] {
+ *   Eintrag ist über die Identität des Objekts oder den Tripel-Schlüssel eindeutig.)
+ *
+ *  Exportiert (W3-TARIF-STAND, 6.9.2026): `scripts/tarif/tarif-drift.ts` braucht
+ *  dieselbe Eintragsliste. §5 — ein zweiter Enumerator wäre eine zweite Wahrheit
+ *  darüber, was «alle Tarif-Einträge» sind. */
+export function alleTarifEintraege(): TarifEintrag[] {
   const module: unknown[] = [
     gerichtskosten,
     schlichtung,
@@ -247,7 +297,12 @@ export function sammleKantonInventar(): KantonInventarGruppe[] {
     // in den Tarif-Daten trägt das www. korrekt; daran halten wir uns.
     const host = m[1];
     const lang = m[2] as 'de' | 'fr';
-    const lawId = m[3];
+    // §5: die Systematiknummer wird auf ihre kanonische Schreibweise gebracht,
+    // BEVOR gruppiert wird — sonst spaltet eine zweite Schreibweise denselben
+    // Erlass in zwei Gruppen (→ zwei Register-Keys, s. kanonischeLawId).
+    const lawId = kanonischeLawId(m[3]);
+    const quelleUrl =
+      lawId === m[3] ? e.quelleUrl : `https://${host}/app/${lang}/texts_of_law/${lawId}`;
 
     const passus = parsePassus(e.artikel);
     if (!passus) continue; // kein Artikel-Token extrahierbar
@@ -262,7 +317,7 @@ export function sammleKantonInventar(): KantonInventarGruppe[] {
         lawId,
         erlassName: e.erlassName,
         erlassNr: e.erlassNr,
-        quelleUrl: e.quelleUrl,
+        quelleUrl,
         artikel: [],
       };
       gruppen.set(schluessel, gruppe);
@@ -279,7 +334,33 @@ export function sammleKantonInventar(): KantonInventarGruppe[] {
 
   // Leere Gruppen können nicht entstehen (jede Gruppe wird mit mind. einem
   // Token erzeugt); zur Sicherheit dennoch filtern.
-  return [...gruppen.values()].filter((g) => g.artikel.length > 0);
+  const fertig = [...gruppen.values()].filter((g) => g.artikel.length > 0);
+
+  // §5-Netz: `kanonischeLawId` fängt die Schrägstrich-Achse. Bleiben zwei
+  // Gruppen mit derselben dekodierten Nummer übrig (etwa rohes Leerzeichen
+  // gegen «%20»), ist das erneut ein Erlass mit zwei Schlüsseln — dann bricht
+  // der Generator ab, statt still eine Dublette in den Korpus zu schreiben.
+  const nachIdentitaet = new Map<string, KantonInventarGruppe[]>();
+  for (const g of fertig) {
+    const id = `${g.kanton}|${g.host}|${g.lang}|${lawIdIdentitaet(g.lawId)}`;
+    const liste = nachIdentitaet.get(id);
+    if (liste) liste.push(g);
+    else nachIdentitaet.set(id, [g]);
+  }
+  const kollisionen = [...nachIdentitaet.entries()].filter(([, v]) => v.length > 1);
+  if (kollisionen.length > 0) {
+    const text = kollisionen
+      .map(([id, v]) => `  ${id} ← ${v.map((g) => JSON.stringify(g.lawId)).join(' , ')}`)
+      .join('\n');
+    throw new Error(
+      'BLOCKED: dieselbe amtliche Systematiknummer steht in den Tarif-Daten in ' +
+        `mehreren Schreibweisen — das erzeugt zwei Snapshot-Schlüssel für einen Erlass (§5).\n${text}\n` +
+        'Fix: die quelleUrl in src/data/tarif/*.ts auf EINE Schreibweise bringen ' +
+        '(kanonisch: Systematiknummer als ein prozent-kodiertes Pfadsegment).',
+    );
+  }
+
+  return fertig;
 }
 
 /**
@@ -336,6 +417,22 @@ export function sammleHtmInventar(): HtmInventarGruppe[] {
  * löst parsePassus auch «Anhang Ziff. N.N.N» (NotGebV) auf einen gepunkteten Token
  * auf → diese Einträge sind jetzt HIER (nicht mehr Fallback) und werden über den
  * zhlex-PDF-Anhang-Segmentierer (segmentiereAnhangZiffern) als Volltext erschlossen.
+ *
+ * ZH-4a (31.8.2026): Die Menge ist seither die VEREINIGUNG aus (a) der
+ * Tarif-Ableitung und (b) der deklarativen Quellenliste `ZH_QUELLEN`
+ * (`zh-quellen.ts`), dedupliziert über die Registry-URL. Vorher war ein
+ * ZH-Erlass ohne Tarif-Zitat für Generator UND Drift-Prüfung nicht existent
+ * (§7-d-Lücke, Dossier §7). Listen-Erlasse tragen keine zitierten §-Tokens —
+ * `artikel: []` ist für sie der Normalfall und KEIN Mangel: der Generator
+ * extrahiert ohnehin alle Paragraphen (Vollabdeckung §7-1); `artikel` steuert
+ * nur die §8-Sichtbarkeit «zitierter Token fehlt im Erlass».
+ *
+ * DEDUPE-REGEL (§6-Verhaltensneutralität): Bei gleicher Registry-URL gewinnt
+ * die TARIF-Ableitung die Kopf-Daten (`erlassName`/`erlassNr`) — sie speisen
+ * `erlassBezeichnung()` und damit das `erlass`-Feld jedes Snapshots. Würde die
+ * Liste sie überschreiben, änderten sich die drei Bestands-Snapshots
+ * (ZH-211.11/215.3/243) byte-weise ohne fachlichen Grund. Die Liste ergänzt
+ * darum nur, was die Tarif-Ableitung nicht kennt.
  */
 export function sammleZhPdfInventar(): ZhPdfInventarGruppe[] {
   const eintraege = alleTarifEintraege();
@@ -368,7 +465,25 @@ export function sammleZhPdfInventar(): ZhPdfInventarGruppe[] {
     }
   }
 
-  return [...gruppen.values()].filter((g) => g.artikel.length > 0);
+  // Tarif-Gruppen ohne parsebaren Token fallen wie bisher weg (Fallback-Route);
+  // erst DANACH kommt die deklarative Liste dazu, damit ein Listen-Erlass nicht
+  // an diesem Filter scheitert (er hat naturgemäss keine zitierten Tokens).
+  const vereinigt = [...gruppen.values()].filter((g) => g.artikel.length > 0);
+  const bekannt = new Set(vereinigt.map((g) => g.quelleUrl));
+  for (const q of ZH_QUELLEN) {
+    if (bekannt.has(q.registryUrl)) continue;
+    vereinigt.push({
+      kanton: 'ZH',
+      quelleUrl: q.registryUrl,
+      erlassName: q.titel,
+      // «LS 131.1» — dieselbe Schreibweise wie die Tarif-Zitate (Bestand:
+      // «Notariatsgebührenverordnung (NotGebV) (LS 243)»), damit der Korpus
+      // eine Erlass-Bezeichnung führt und nicht zwei.
+      erlassNr: `LS ${q.nr}`,
+      artikel: [],
+    });
+  }
+  return vereinigt;
 }
 
 /**

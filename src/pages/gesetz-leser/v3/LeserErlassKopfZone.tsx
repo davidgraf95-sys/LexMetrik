@@ -1,4 +1,6 @@
-import { formatiereDatum, grundartMeta, kopfOverline } from '../helpers';
+import { formatiereDatum, grundartMeta, kopfGlieder } from '../helpers';
+import { KopfOverline } from '../../../components/layout/LeserKopfGeruest';
+import { MASSGEBLICH_HALBSATZ } from '../../../lib/benennung';
 import { ErlassLeserKopf } from '../parts';
 import { AmtlichesPdf } from '../parts/AmtlichesPdf';
 import { ReiterAktion } from './ReiterAktion';
@@ -37,11 +39,16 @@ export function LeserErlassKopfZone({ m, erlass, artikelAnzahl, bestimmungsWort 
   return (
     <ErlassLeserKopf erlass={erlass} artikelAnzahl={artikelAnzahl} bestimmungsWort={bestimmungsWort}
       currency={m.currency?.[erlass.key]} nichtKonsolidiert={m.nichtKonsolidiert}
+      luecken={m.kantonLuecken[erlass.key]}
       kennzahlen={m.gliederung.kennzahlen} nichtKonsolidiertSeit={m.nichtKonsolidiertSeit}
       // Ä-(d) aus S3: bei sehr langen Titeln steht die Kennung VOR dem Titel
       // statt am Ende einer dreizeiligen H1 (`erlassAnsicht.titelKennung`).
       kennung={titelKennung(erlass)}
-      overline={kopfOverline(erlass, meta.erlassTyp, overlineGebiet(erlass, m.kantonSys))}
+      // B-7 (31.8.2026): die Overline ist eine gegliederte Angabe, kein Satz —
+      // Herkunft · Art · Sachgebiet, jedes Glied mit seinem Ton, unbekannte
+      // ersatzlos (`KopfOverline`). Bis dahin fügte `kopfOverline` sie zu einem
+      // String und warf beim Kanton das Sachgebiet weg (Herleitung in `helpers`).
+      overline={<KopfOverline glieder={kopfGlieder(erlass, meta.erlassTyp, overlineGebiet(erlass, m.kantonSys))} />}
       // ── Ä-Rest der Live-Prüfung (18.8.2026) · KEIN «SNAPSHOT» IN DER
       //    KERNAUSKUNFT ─────────────────────────────────────────────────────
       // GEMESSEN am Live-Stand: unter dem Erlass-Titel stand «Snapshot —
@@ -57,9 +64,12 @@ export function LeserErlassKopfZone({ m, erlass, artikelAnzahl, bestimmungsWort 
       // Leser, der die Kette überliest, bekommt hier das Datum ausgeschrieben.
       // Ohne Stand (2 von 1469 Erlassen, VD) entfällt das Datum statt eine
       // leere Präposition stehen zu lassen (§8, dieselbe Regel wie B8).
+      // B-6-Nachzug (31.8.2026, R2-B): der Vorbehalt war hier zweimal als
+      // Literal ausgeschrieben — genau die zweite Wahrheit, vor der die
+      // Herleitung in `lib/benennung` warnt. Zeichengleich, jetzt gebaut.
       hinweis={erlass.stand
-        ? `Kopie vom ${formatiereDatum(erlass.stand)} — massgeblich ist die amtliche Fassung`
-        : 'Kopie des amtlichen Texts — massgeblich ist die amtliche Fassung'}
+        ? `Kopie vom ${formatiereDatum(erlass.stand)} — ${MASSGEBLICH_HALBSATZ}`
+        : `Kopie des amtlichen Texts — ${MASSGEBLICH_HALBSATZ}`}
       aktionen={
         <>
           <ReiterAktion kuerzel={erlass.kuerzel} onGeoeffnet={() => {

@@ -6,6 +6,318 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0205"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2001-02-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "01.023"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Totalrevision der Bundesrechtspflege"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision totale de l'organisation judiciaire fédérale "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione totale dell'organizzazione giudiziaria federale"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0205"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2001-02-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "01.023"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Totalrevision der Bundesrechtspflege"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision totale de l'organisation judiciaire fédérale "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione totale dell'organizzazione giudiziaria federale"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0205"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2001-02-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "01.023"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Totalrevision der Bundesrechtspflege"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision totale de l'organisation judiciaire fédérale "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione totale dell'organizzazione giudiziaria federale"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0205"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2001-02-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "01.023"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Totalrevision der Bundesrechtspflege"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision totale de l'organisation judiciaire fédérale "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione totale dell'organizzazione giudiziaria federale"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/2377"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2008-09-10"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "08.066"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/2377"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2008-09-10"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "08.066"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/2377"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2008-09-10"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "08.066"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/2377"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2008-09-10"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "08.066"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.71"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2016/1190"
     },
     "proj": {
@@ -192,318 +504,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente l'armonizzazione delle pene e l'adeguamento del diritto penale accessorio alla nuova disciplina delle sanzioni "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2001/731"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0205"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2001-02-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "01.023"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Totalrevision der Bundesrechtspflege"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision totale de l'organisation judiciaire fédérale "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione totale dell'organizzazione giudiziaria federale"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2001/731"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0205"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2001-02-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "01.023"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Totalrevision der Bundesrechtspflege"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision totale de l'organisation judiciaire fédérale "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione totale dell'organizzazione giudiziaria federale"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2001/731"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0205"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2001-02-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "01.023"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Totalrevision der Bundesrechtspflege"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision totale de l'organisation judiciaire fédérale "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione totale dell'organizzazione giudiziaria federale"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2001/731"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0205"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2001-02-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "01.023"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Totalrevision der Bundesrechtspflege"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision totale de l'organisation judiciaire fédérale "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione totale dell'organizzazione giudiziaria federale"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/2377"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2008-09-10"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "08.066"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/2377"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2008-09-10"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "08.066"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/2377"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2008-09-10"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "08.066"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/2377"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2008-09-10"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "08.066"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
     }
   }
 ]

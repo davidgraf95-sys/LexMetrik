@@ -27,17 +27,19 @@ describe('prerenderRouten()', () => {
         .map((h) => h.split('#')[0]),
     );
     for (const p of kartenPfade) expect(ROUTEN).toContain(p);
-    // 11 statische Seiten inkl. /gesetze (Rubrik V Gesetzessammlung, 17.6.2026),
+    // 13 statische Seiten inkl. /gesetze (Rubrik V Gesetzessammlung, 17.6.2026),
     // /rechtsprechung (Rubrik Rechtsprechung, 23.6.2026), /materialien (Rubrik
     // Materialien, 27.6.2026) und — seit der UI-Welle — /rechner + /vorlagen
     // (Rubrik-Übersichten, lösen /recherche ab).
     // /suche kam mit UI-NAV S5 (11.7.2026) als Volltext-Ergebnisseite dazu.
     // /international ist mit IA-6 Stufe 2 (3.8.2026) ENTFALLEN — Redirect auf
     // die Säule /gesetze?ebene=international (s. VERBOTEN).
-    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/materialien', '/methodik', '/ueber', '/kontakt', '/datenschutz', '/abdeckung', '/suche']) {
+    // /einstellungen kam mit QS-UI B14 #670 (5.9.2026) dazu — fehlte bisher im
+    // Register und erbte Titel/Canonical der Startseite.
+    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/materialien', '/methodik', '/ueber', '/kontakt', '/datenschutz', '/abdeckung', '/suche', '/einstellungen']) {
       expect(ROUTEN).toContain(p);
     }
-    expect(ROUTEN).toHaveLength(kartenPfade.size + 12);
+    expect(ROUTEN).toHaveLength(kartenPfade.size + 13);
   });
 
   it('enthält keine Duplikate, Hashes oder relativen Pfade', () => {
@@ -115,7 +117,7 @@ describe('jsonLdFuerPfad()', () => {
   it('Startseite → WebSite+Organization; übrige statische Seiten → null; nirgends FAQPage', () => {
     const start = jsonLdFuerPfad('/') as { '@graph': { '@type': string }[] };
     expect(start['@graph'].map((g) => g['@type'])).toEqual(['WebSite', 'Organization']);
-    for (const p of ['/methodik', '/ueber', '/kontakt', '/datenschutz']) {
+    for (const p of ['/methodik', '/ueber', '/kontakt', '/datenschutz', '/einstellungen']) {
       expect(jsonLdFuerPfad(p)).toBeNull();
     }
     for (const p of ROUTEN) {

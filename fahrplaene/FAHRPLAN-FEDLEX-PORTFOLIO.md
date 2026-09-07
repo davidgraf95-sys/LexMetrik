@@ -383,6 +383,30 @@ Trailer `Roadmap: QS-KORPUS`, Gegenstand unverändert.*
 
 ---
 
+## §21 · ROADMAP-Spec `W2·5n-BUND-VOLL` — Bund-Vollabdeckung (Entscheid David 1.9.2026)
+
+**Anlass:** Quellen-Sichtung 1.9.2026 (`bibliothek/recherche/fremdquellen-sichtung-2026-09-02.md` (absorbiert)):
+Legalize-ch (5'139) und OpenCaseLaw (5'525) zeigen, dass alle SR-Erlasse mit deutschem Akoma-Ntoso-XML
+maschinell ladbar sind; LexMetrik pinnt 238. Zielbild «alle Gesetze, die ein Schweizer Jurist braucht»
+heisst für den Bund: die ganze SR, nicht nur der Kern.
+
+**Ziel und Grenzen (Schritt nennt Ziel, nicht Weg):**
+- Inventar per Fedlex-SPARQL: alle `eli/cc/`-Erlasse mit deutscher XML-Konsolidierung, in Kraft.
+  Zweitlesung des Inventars gegen die Dateilisten von Legalize-ch (`ch/cc-*.md`) und OpenCaseLaw
+  (`laws` federal) — Abweichungen je Richtung ausweisen, nie stillschweigend übernehmen.
+- Laden über den bestehenden Fedlex-Adapter (`fedlex-cache.sh` / Skill `korpus-werkstatt`, sechs
+  Build-Regeln), in Tranchen ≤ 500 Erlasse mit je einer Gegenprüfungs-Stichprobe n ≥ 10.
+- **Harte Auflage Datenlast (§15):** Voraussetzung ist der Register-Schnitt aus `QS-PERF` — Register
+  je Erlass/Shard, Katalog-Projektion getrennt; `check:perf-budget` ist das Tor, der Deckel wird nicht
+  angehoben. Ohne Schnitt kein Tranchen-Start.
+- Bestand golden byte-gleich; neue Erlasse Status «entwurf», Abnahme-Welle ab 1.12.2026.
+- Ausserhalb: fr/it (Zielbild Deutschschweiz), Staatsverträge ohne deutsches XML (bleiben Live-Link).
+
+**Fertig, wenn** das Inventar 0 fehlende deutsche XML-Konsolidierungen meldet und `check:normtext`,
+`check:fedlex-versionen`, `check:perf-budget` grün sind.
+
+---
+
 ## Archivierte Abschnitte *(Plan-Neuschnitt 29.8.2026)*
 
 19 Abschnitt(e) dieser Datei sind wörtlich nach

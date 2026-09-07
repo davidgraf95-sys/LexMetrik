@@ -6,123 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2016"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/714"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-09-03"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.069"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung der Rechtsgrundlagen für die Weiterentwicklung der Armee "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la modification des bases légales concernant le développement de l'armée "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica delle basi legali per l'ulteriore sviluppo dell'esercito "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "510.10"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2016"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/714"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-09-03"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.069"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung der Rechtsgrundlagen für die Weiterentwicklung der Armee "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la modification des bases légales concernant le développement de l'armée "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica delle basi legali per l'ulteriore sviluppo dell'esercito "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "510.10"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2016"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/714"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-09-03"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.069"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung der Rechtsgrundlagen für die Weiterentwicklung der Armee "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la modification des bases légales concernant le développement de l'armée "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica delle basi legali per l'ulteriore sviluppo dell'esercito "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "510.10"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2000/114"
     },
     "proj": {
@@ -231,6 +114,240 @@
     "titleIt": {
       "type": "literal",
       "value": "Rapporto e messaggio concernente gli strumenti adottati nel 1997, 1998 e 1999 dalla Conferenza internazionale del lavoro in occasione delle sue 85a, 86a e 87a sessioni e sulla Convenzione (n. 144) concernente le consultazioni tripartite volte a promuovere l'attuazione delle norme internazionali del lavoro, 1976 "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "510.10"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5586"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/323"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-10-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "99.084"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "510.10"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5586"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/323"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-10-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "99.084"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "510.10"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5586"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/323"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-10-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "99.084"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "510.10"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5587"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/324"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-10-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "99.084"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "510.10"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5587"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/324"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-10-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "99.084"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "510.10"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5587"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/324"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-10-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "99.084"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
     }
   },
   {
@@ -474,36 +591,114 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2019/618"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2018/3126"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2016"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2020/307"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/714"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2019-02-20"
+      "value": "2014-09-03"
     },
     "curia": {
       "type": "literal",
-      "value": "19.022"
+      "value": "14.069"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Armeebotschaft 2019"
+      "value": "Botschaft zur Änderung der Rechtsgrundlagen für die Weiterentwicklung der Armee "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message sur l'armée 2019"
+      "value": "Message relatif à la modification des bases légales concernant le développement de l'armée "
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio sull'esercito 2019"
+      "value": "Messaggio concernente la modifica delle basi legali per l'ulteriore sviluppo dell'esercito "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "510.10"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2016"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/714"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2014-09-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "14.069"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung der Rechtsgrundlagen für die Weiterentwicklung der Armee "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la modification des bases légales concernant le développement de l'armée "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica delle basi legali per l'ulteriore sviluppo dell'esercito "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "510.10"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2016"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/714"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2014-09-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "14.069"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung der Rechtsgrundlagen für die Weiterentwicklung der Armee "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la modification des bases légales concernant le développement de l'armée "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica delle basi legali per l'ulteriore sviluppo dell'esercito "
     }
   },
   {
@@ -591,231 +786,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2019/618"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5586"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2018/3126"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/323"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2020/307"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-10-27"
+      "value": "2019-02-20"
     },
     "curia": {
       "type": "literal",
-      "value": "99.084"
+      "value": "19.022"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
+      "value": "Armeebotschaft 2019"
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
+      "value": "Message sur l'armée 2019"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "510.10"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5586"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/323"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-10-27"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "99.084"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "510.10"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5586"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/323"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-10-27"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "99.084"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "510.10"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5587"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/324"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-10-27"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "99.084"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "510.10"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5587"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/324"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-10-27"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "99.084"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "510.10"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2000/142"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/5587"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/324"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-10-27"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "99.084"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft betreffend die Änderung des Militärgesetzes"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur l'armée et l'administration militaire"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sull'esercito e sull'amministrazione militare"
+      "value": "Messaggio sull'esercito 2019"
     }
   },
   {

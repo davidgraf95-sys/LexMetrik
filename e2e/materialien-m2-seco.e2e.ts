@@ -15,7 +15,7 @@ test('MaterialLeser einer neuen SECO-DB-Karte zeigt den sichtbaren amtlichen Liv
   await expect(page.getByRole('heading', { name: /ArG Artikel 3a/ })).toBeVisible()
 
   // Prominenter, sichtbarer Live-Link zur amtlichen Fassung (§7c) mit der DAM-PDF-URL.
-  const link = page.getByRole('link', { name: /Zur amtlichen Fassung/ })
+  const link = page.getByRole('link', { name: /Amtliche Fassung ↗/ })
   await expect(link).toBeVisible()
   const href = await link.getAttribute('href')
   expect(href).toContain('seco.admin.ch/dam/')

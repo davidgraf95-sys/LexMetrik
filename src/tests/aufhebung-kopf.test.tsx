@@ -57,7 +57,16 @@ describe('ErlassLeserKopf — Aufhebungs-Banner', () => {
     expect(out).toContain('https://www.fedlex.admin.ch/eli/cc/2025/408/de'); // Nachfolger
     expect(out).toContain('Nachfolge-Erlass');
     expect(out).toContain('https://www.fedlex.admin.ch/eli/cc/2009/423/de'); // amtlich (aufgehoben)
-    expect(out).toContain('amtliche (aufgehobene) Fassung');
+    // ── B-2 (Design-Konsistenz 31.8.2026) · NACHGEFÜHRTE ZUSICHERUNG ────────
+    // Bis hierher stand «amtliche (aufgehobene) Fassung» — klein beginnend,
+    // Pfeil VORNE («↗ amtliche …»). Das brach Ä110, das seit 18.8.2026 für
+    // denselben Link im Kopf darüber gilt. Die Beschriftung ist eine DEKLARIERTE
+    // fachliche Änderung (§6.3), keine stille Test-Anpassung: geprüft wird
+    // weiterhin, DASS das Banner den amtlichen Link mit dem Zusatz
+    // «(aufgehobene)» ausweist (§8) — nur in der Kanon-Schreibung.
+    expect(out).toContain('Amtliche (aufgehobene) Fassung ↗');
+    // Der Nachfolge-Link trägt dieselbe Anatomie: Pfeil HINTEN.
+    expect(out).not.toContain('↗ Nachfolge-Erlass');
   });
 
   it('unterdrückt Standausweis und «geltende Fassung» bei aufgehobenem Erlass (§8)', () => {

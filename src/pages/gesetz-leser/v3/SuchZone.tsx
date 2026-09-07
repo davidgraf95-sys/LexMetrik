@@ -13,15 +13,27 @@ import { zaehlform, type BestimmungsWort } from './erlassAnsicht';
 //
 // DIE REGEL, die daraus folgt (und die Kap. 4b für die Spalte schon setzt):
 // **Das Such-/Sprungfeld ist auf JEDER Breite das oberste Element des klebenden
-// Blocks.** Welcher Block das ist, hängt allein davon ab, ob die Gliederung als
-// Spalte steht:
+// Blocks.** Welcher Block das ist, hing bis zum 6.9.2026 davon ab, ob die
+// Gliederung als Spalte stand (Spalte → Seitenleiste, sonst → Kopfzeile).
 //
-//   Spalte da     → klebender Block der Seitenleiste  (Kap. 4b, unverändert)
-//   keine Spalte  → klebender Block der Kopfzeile     (diese Zone)
+// ── D28 (David 6.9.2026) · DER BLOCK IST JETZT IMMER DIE KOPFZEILE ──────────
+// WÖRTLICH: «die suchleiste im gesetz, welche sich oben an der gliederung
+// befindet, will ich oben am gesetz — dann verschiebt sie sich auch nicht, wenn
+// gliederung eingeklappt ist». Der Lagewechsel WAR der Mangel: dasselbe Feld
+// sass bei offener Gliederung in der 18-rem-Spalte (x ≈ 184) und beim Einklappen
+// im Kopf-Block (x ≈ 190 … volle Rahmenbreite) — wer die Gliederung zuklappte,
+// suchte sein Suchfeld. Seither trägt es AUSSCHLIESSLICH diese Zone, und die
+// hängt am Kopf-Block, der über der ganzen Rahmenbreite steht: seine x-Position
+// ist von jedem Spalten-Zustand unabhängig (D28-Zusatz, Δx = 0; Klapp-Sonde
+// `e2e/leser-klapp-sonde.e2e.ts`).
+// Die Gliederung behält damit nur noch die Gliederung.
 //
 // Damit gibt es weiterhin GENAU EIN Feld im DOM, es ist ohne Geste erreichbar,
 // und es verdeckt keinen Text: die Zone ist Teil des Chromes, das ohnehin klebt.
-// Das Blatt bleibt für die Trefferliste zuständig und trägt kein zweites Feld.
+// D38 (7.9.2026): die Trefferliste liegt seither über der LESESPALTE
+// (`./LeserTrefferSpalte`); das Blatt am Feld ist gefallen. Diese Zone trägt
+// damit genau zwei Dinge — das Feld und, solange die Liste weggeschaltet ist,
+// eine Zeile mit den Zahlen und dem Weg zurück.
 //
 // DEKLARIERTE PRÄZISIERUNG von Kap. 4a («die Kopfzeile trägt kein Suchfeld»):
 // die Kopf-ZEILE trägt weiterhin keines — ihre Element-Zahl ist unverändert
@@ -58,15 +70,16 @@ export const SUCH_H_RUHE = '2.75rem';
 export const SUCH_H_AKTIV = '4.25rem';
 
 export function SuchZone({
-  suchFeld, sucheAktiv, bestimmungen, fundstellen, bestimmungsWort, onListe, blattOffen, blatt,
+  suchFeld, sucheAktiv, bestimmungen, fundstellen, bestimmungsWort, onListe,
+  onVor, onZurueck, listeSteht,
 }: {
   /** Das Such-/Sprungfeld. Oberstes Element — das ist die ganze Zusage (Ä19).
    *
    *  A2 (H2b-Nachzug): `undefined`, solange das Bottom-Sheet offen ist. Das Feld
-   *  steht dann IM Blatt (dort ist es fokussierbar, dort greift Esc auf den
-   *  Dialog); die Zone bleibt mit UNVERÄNDERTER Höhe stehen, damit das Chrome
-   *  hinter dem Overlay nichts verschiebt. Es gibt weiterhin genau EIN Feld im
-   *  DOM — die Zone gibt es her, das Blatt nimmt es (§5/K2). */
+   *  steht dann IM Gliederungs-Sheet (dort ist es fokussierbar, dort greift Esc
+   *  auf den Dialog); die Zone bleibt mit UNVERÄNDERTER Höhe stehen, damit das
+   *  Chrome hinter dem Overlay nichts verschiebt. Es gibt weiterhin genau EIN
+   *  Feld im DOM — die Zone gibt es her, das Sheet nimmt es (§5/K2). */
   suchFeld?: ReactNode;
   /** Läuft gerade eine Suche? Nur dann gibt es etwas zu berichten. */
   sucheAktiv: boolean;
@@ -77,56 +90,102 @@ export function SuchZone({
   /** Zähl-Substantiv aus dem Datenmodell (Ä23) — nie ein Bund-Vorgabewert.
    *  B8: Typ und Zählform aus `./erlassAnsicht` (eine Quelle). */
   bestimmungsWort: BestimmungsWort;
-  /** Weg zur vollen Trefferliste: Blatt am Feld öffnen bzw. Bottom-Sheet. */
+  /** Weg zur vollen Trefferliste: holt sie über die Lesespalte zurück (D38). */
   onListe: () => void;
-  /** ── Ä78 / V5 (Nachzug 17.8.2026) · HÄNGT DIE LISTE SCHON DARUNTER? ────────
-   *  Dann schweigt die Zähler-Zeile. Sie sagt zweierlei — «N Artikel · M
-   *  Fundstellen» und «Treffer anzeigen →» —, und beides ist beantwortet, sobald
-   *  das Blatt offen ist: die Zahlen stehen in seinem Listenkopf (dieselben
-   *  Werte aus derselben Quelle, §5), und der Weg dorthin ist gegangen. Ein
-   *  Knopf, der ein offenes Blatt öffnet, ist kein Angebot, sondern Rauschen —
-   *  Befund des Ästhetik-Reviews 17.8.2026 (Ä78, «Blatt offen»).
-   *  KEIN Layout-Sprung: die Zonen-Höhe kommt aus `--leser-v3-such-h`
-   *  (`./leserGeometrie`, zwei feste Werte am SUCH-Zustand, nicht am Blatt) und
-   *  bleibt unverändert — der B9-Wächter (`e2e/leser-v3-suchfeld-ueberall`(e))
-   *  misst dieselben Werte wie zuvor, und `--nt-stick` rechnet mit derselben
-   *  Zahl weiter. Der Platz bleibt reserviert, damit das Schliessen des Blattes
-   *  die Zeile zurückbringt, ohne den Lesetext zu verschieben (§15.2). */
-  blattOffen?: boolean;
-  /** ── Ä76 (17.8.2026) · DIE TREFFERLISTE, ANGEHÄNGT AN DIESE ZONE ───────────
-   *  Gesetzt, wo die Gliederung als Spalte fehlt, aber Platz neben dem Text ist
-   *  (Desktop mit eingeklappter Spalte) — dann liegt die Liste als Blatt DIREKT
-   *  unter dem Feld statt inline über dem Lesetext, wo sie 3596 px hoch unter der
-   *  Falz verschwand (Befund und Messreihe: `./LeserTrefferBlatt`).
-   *  Es hängt an DIESER Zone, weil «die Liste steht, wo das Feld steht» die eine
-   *  Regel ist, die Ä19 für alle Breiten gesetzt hat — und weil die Zone das
-   *  einzige Element ist, das in JEDER Lage ohne Spalte klebt. */
-  blatt?: ReactNode;
+  /** ── D28 (David 6.9.2026) · «Treffer-Navigation ‹ › und Zähler in derselben
+   *  Zeile» ──────────────────────────────────────────────────────────────────
+   *  Bis hierher lag der Schritt von Fundstelle zu Fundstelle allein auf ↑↓ im
+   *  Feld und auf den Pfeilen im Kopf der TREFFERLISTE — also hinter einer
+   *  Geste, die man kennen muss, bzw. hinter einer Liste, die man erst öffnen
+   *  muss. Beides ist in derselben Zone vorhanden, sobald eine Suche läuft; sie
+   *  sichtbar zu machen kostet zwei 20-px-Griffe und keine Zeile Höhe (§8:
+   *  «sichtbar im Ruhezustand» — die Zahl daneben verspricht die Fundstellen
+   *  bereits, der Weg dorthin war der einzige unbenannte Teil).
+   *  KEINE zweite Mechanik: dieselben Callbacks, die ↑↓ im Feld bedienen und
+   *  die die Trefferliste ruft (`m.springeZuFundstelle`, §5). Fehlen sie oder
+   *  gibt es nichts zu treffen, stehen die Griffe gar nicht erst da. */
+  onVor?: () => void;
+  onZurueck?: () => void;
+  /** ── D28-NACHZUG (6.9.2026), FORTGESCHRIEBEN MIT D38 (7.9.2026) ────────────
+   *  STEHT DIE LISTE SCHON DA? Dann schweigt diese Zeile.
+   *  GEMESSEN am ersten D28-Stand @1440 (StPO, «Kosten», Screen
+   *  `r6d-leser-1440-suche-aktiv`): weil die Zone seit D28 auch bei stehender
+   *  Gliederungs-Spalte da ist, erschien das Treffer-Blatt (Ä76) am Feld — und
+   *  legte sich über die Spalte, die dieselbe Trefferliste samt demselben Kopf
+   *  «49 Artikel · 110 Fundstellen» bereits zeigte. Zwei gleiche Listen
+   *  übereinander, die obere verdeckte die untere (§5).
+   *  Der Fall ist mit D38 ein anderer und die Regel dieselbe: die Liste liegt
+   *  jetzt über der LESESPALTE, und solange sie dort liegt, sagt sie ihre Zahlen
+   *  und ihr ↑↓ selbst. Diese Zeile schweigt dann — kein zweiter Zähler, kein
+   *  «Treffer anzeigen →» auf eine Liste, die man ansieht.
+   *  KEIN Layout-Sprung dadurch: die Zonen-Höhe hängt seit D38 am ROHEN
+   *  Feldwert (`zoneHoch`, `./leserGeometrie`), nicht daran, ob die Zeile
+   *  gerade etwas sagt. Der Platz bleibt reserviert, damit das Wegschalten der
+   *  Liste die Zeile zurückbringt, ohne den Lesetext zu verschieben (§15.2). */
+  listeSteht?: boolean;
 }) {
   return (
-    // `relative`: der Bezugsrahmen des Blattes (`absolute top-full`). Es nimmt
-    // keinen Platz — die Zonen-Höhe bleibt allein `--leser-v3-such-h`, und die
-    // Höhen-Konstanten oben behalten ihre Gültigkeit (B9-Wächter unberührt).
-    <div data-v3-such-zone className="relative flex flex-col justify-start gap-1 pb-2"
+    // `lr8-erlasssuche`: der Anschluss für die eine Druck-Regel (D28, «Druck
+    // ohne Feld»). Sie steht in `index.css` und nicht hier, weil `@media print`
+    // keine Prop ist — und sie greift an DIESER Zone statt am Feld, damit auch
+    // die Zähler-Zeile und die Griffe daneben aus der Kanzlei-Akte fallen. Der
+    // Pauschal-Selektor des Druck-Blocks (`button`) hätte nur die Griffe
+    // erwischt und das Eingabefeld samt Zahlen stehen lassen.
+    <div data-v3-such-zone className="lr8-erlasssuche flex flex-col justify-start gap-1 pb-2"
       style={{ height: 'var(--leser-v3-such-h)' }}>
-      {suchFeld}
-      {sucheAktiv && !blattOffen && (
+      {/* ── D28 · DAS FELD IST EIN FELD, KEINE WAND ──────────────────────────
+          GEMESSEN 6.9.2026 @1440 (STPO, Preview 4372) nach dem Umzug: das
+          Eingabefeld lief über die volle Rahmenbreite von **1072 px**. Vorher
+          sass es in der 18-rem-Spalte und war 264 px breit; die Zone erbt
+          dagegen die Breite des Kopf-Blocks. Ein Unterstrich-Feld über einen
+          Meter Bildschirm ist keine Eingabe mehr, sondern eine Linie — und der
+          Cursor steht am linken Ende einer Fläche, die zu 90 % leer bleibt
+          (Design-Grundlage Kap. 8 Nr. 7, «nie Fensterbreite für eine Zeile»).
+          DER DECKEL IST DAS LESEMASS, nicht eine gegriffene Zahl: `max-w-reading`
+          (40 rem = 640 px, `tailwind.config.js`) ist dieselbe Token-Breite, an
+          der sich die Lesespalte orientiert — das Feld steht damit über dem Text
+          und nicht über der Fensterbreite. Ein arbitrary `max-w-[…rem]` verbietet
+          der Linien-/Typo-Kanon hier ausdrücklich (R2, `eslint.config.js`), und
+          zu Recht: die zweite Zahl wäre die, die vom Lesemass wegdriftet.
+          Darunter (Pane · Handy) greift der Deckel nie, dort bleibt `w-full` in
+          Kraft — kein Breakpoint, ein `max-width`. */}
+      <div className="w-full max-w-reading">{suchFeld}</div>
+      {sucheAktiv && !listeSteht && (
         // §8: die Zahl steht dran, und der Weg zur Liste ist BENANNT statt als ☰
         // zu erraten — genau das war der zweite Teil des Ä19-Befunds («das
         // geöffnete Blatt verdeckt das Pane»): der Leser soll selbst entscheiden,
         // ob er die Liste sehen will. Kein zweiter Zähler: dieselben Werte wie im
         // Listenkopf, aus derselben Quelle (§5).
-        <button type="button" data-v3-treffer-weg onClick={onListe}
-          className="flex min-h-5 w-full items-center gap-1 rounded-sm text-left text-micro text-ink-600 transition-colors hover:text-brass-700">
-          <span className="num">{bestimmungen}</span>
-          <span>{zaehlform(bestimmungen, bestimmungsWort)}</span>
-          <span aria-hidden className="text-ink-300">·</span>
-          <span className="num">{fundstellen}</span>
-          <span>{fundstellen === 1 ? 'Fundstelle' : 'Fundstellen'}</span>
-          <span aria-hidden className="ml-auto shrink-0">Treffer anzeigen →</span>
-        </button>
+        // D28: EINE Zeile, zwei Rollen — links die Zahlen samt Weg zur Liste,
+        // rechts der Schritt durch die Fundstellen. Der Zähler bleibt ein
+        // eigener Knopf (er hat sein eigenes Ziel); die zwei Griffe stehen
+        // NEBEN ihm statt darin, weil ein Knopf im Knopf kein Knopf ist.
+        <div className="flex min-h-5 w-full items-center gap-1">
+          <button type="button" data-v3-treffer-weg onClick={onListe}
+            className="flex min-w-0 flex-1 items-center gap-1 rounded-sm text-left text-micro text-ink-600 transition-colors hover:text-brass-700">
+            <span className="num">{bestimmungen}</span>
+            <span>{zaehlform(bestimmungen, bestimmungsWort)}</span>
+            <span aria-hidden className="text-ink-300">·</span>
+            <span className="num">{fundstellen}</span>
+            <span>{fundstellen === 1 ? 'Fundstelle' : 'Fundstellen'}</span>
+            <span aria-hidden className="ml-auto shrink-0 truncate">Treffer anzeigen →</span>
+          </button>
+          {fundstellen > 0 && (onZurueck || onVor) && (
+            <span data-v3-treffer-schritt className="flex shrink-0 items-center gap-0.5">
+              <button type="button" data-v3-treffer-zurueck onClick={onZurueck}
+                aria-label="Vorherige Fundstelle" title="Vorherige Fundstelle (↑)"
+                className="lr8-erlasssuche-schritt">
+                <span aria-hidden>‹</span>
+              </button>
+              <button type="button" data-v3-treffer-vor onClick={onVor}
+                aria-label="Nächste Fundstelle" title="Nächste Fundstelle (↓ oder ↵)"
+                className="lr8-erlasssuche-schritt">
+                <span aria-hidden>›</span>
+              </button>
+            </span>
+          )}
+        </div>
       )}
-      {blatt}
     </div>
   );
 }

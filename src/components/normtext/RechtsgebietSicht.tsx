@@ -7,8 +7,9 @@ import {
   type RechtsgebietThema, type ThemaMitglied,
 } from '../../lib/normtext/rechtsgebiet-thema';
 import { getCalculator } from '../../lib/calculators';
-import { ErlassZeile } from './ErlassKarte';
+import { ErlassTabelle } from './ErlassKarte';
 import { usePaneKlasse } from '../layout/PaneKontext';
+import { GruppenKopf } from '../ui/GruppenKopf';
 import { erlassPfadVonKey } from '../../lib/normtext/erlassAdresse';
 
 // ─── Rechtsgebiets-Sicht (zweite Gliederung, «Gerüst» — G6/§4.4) ─────────────
@@ -64,8 +65,18 @@ function ThemaKarte({ t, proKey }: { t: RechtsgebietThema; proKey: Map<string, B
       <div className="space-y-1.5">
         <div className="flex items-baseline gap-2.5 flex-wrap">
           <h3 className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{t.label}</h3>
-          {/* §8: das Querschnitts-Delta ist Entwurf bis zur fachlichen Abnahme. */}
-          <span className="lc-badge lc-badge-soft">Entwurf</span>
+          {/* §8: das Querschnitts-Delta ist Entwurf bis zur fachlichen Abnahme.
+              W2·19-DESIGN-KONSISTENZ · D-4: die Marke trug `lc-badge-soft` und
+              damit den SLATE-Ton. Das Farb-Wörterbuch schliesst genau das aus —
+              slate bedeutet ausschliesslich «neutrale, maschinell-prozedurale
+              Referenzinformation ohne Wertung» und ausdrücklich NICHT
+              «ungeprüft/in Vorbereitung» (DESIGN-REGLEMENT-NORMTEXT.md:337 ff.,
+              aufgelöste slate-Doppelbelegung). Der Prüfstands-Zustand «Entwurf»
+              hat seine eigene, hausweit einzige Marke: `lc-badge-entwurf`
+              (index.css:1482 — sie @applyt `lc-badge` bereits selbst, darum hier
+              KEINE zweite Klasse). Der WORTLAUT bleibt unverändert «Entwurf»:
+              §8 wird nicht abgeschwächt, nur richtig eingefärbt. */}
+          <span className="lc-badge-entwurf">Entwurf</span>
         </div>
         <p className="text-body-s text-ink-600 max-w-reading">{t.kurz}</p>
       </div>
@@ -97,7 +108,6 @@ function ThemaKarte({ t, proKey }: { t: RechtsgebietThema; proKey: Map<string, B
 // je Gebiet aufklappbar (Übersicht zuerst, wie die Systematik-Sicht). Deckt
 // JEDEN Bund-Erlass — auch die keinem Querschnitts-Thema zugeordneten.
 function Grundgeruest({ erlasse }: { erlasse: BrowseErlass[] }) {
-  const pk = usePaneKlasse();
   const proGebiet = useMemo(() => {
     const m = new Map<string, BrowseErlass[]>();
     for (const e of erlasse) {
@@ -124,8 +134,11 @@ function Grundgeruest({ erlasse }: { erlasse: BrowseErlass[] }) {
               <span className="font-sans font-semibold text-ink-900 text-body-l tracking-tight">{g.label}</span>
               <span className="num text-body-s text-ink-500 ml-auto">{items.length}</span>
             </summary>
-            <div className={pk('px-5 pb-4 pt-3 border-t border-line grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2', 'px-5 pb-4 pt-3 border-t border-line grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-5 gap-y-2')}>
-              {items.map((e) => <ErlassZeile key={e.key} e={e} />)}
+            {/* D24: EIN Raster statt zweier verschieden hoch umbrechender
+                Spalten — Zeile i links und rechts auf derselben Höhe. */}
+            <div className="px-5 pb-4 pt-3 border-t border-line">
+              <ErlassTabelle erlasse={items} art="bund"
+                beschriftung={`${g.label} — Kürzel, Titel, SR-Nummer`} />
             </div>
           </details>
         );
@@ -171,20 +184,14 @@ export function RechtsgebietSicht({ erlasse }: { erlasse: BrowseErlass[] }) {
       </div>
 
       <section className="space-y-3">
-        <div className="flex items-baseline gap-3">
-          <h2 className="lc-overline text-brass-700">Querschnitts-Themen</h2>
-          <span aria-hidden className="flex-1 h-px bg-line" />
-        </div>
+        <GruppenKopf stufe={2} titel="Querschnitts-Themen" />
         <div className={pk('grid grid-cols-1 lg:grid-cols-2 gap-4', 'grid grid-cols-1 @3xl/pane:grid-cols-2 gap-4')}>
           {themen.map((t) => <ThemaKarte key={t.id} t={t} proKey={proKey} />)}
         </div>
       </section>
 
       <section className="space-y-3">
-        <div className="flex items-baseline gap-3">
-          <h2 className="lc-overline text-brass-700">Grundgerüst nach Rechtsgebiet</h2>
-          <span aria-hidden className="flex-1 h-px bg-line" />
-        </div>
+        <GruppenKopf stufe={2} titel="Grundgerüst nach Rechtsgebiet" />
         <p className="text-body-s text-ink-500 max-w-reading">
           Das ganze Bundesrecht nach seiner Sach-Achse — <span className="num">{kategorisiert}</span> von{' '}
           <span className="num">{gesamt}</span> Erlassen sind zusätzlich einem Querschnitts-Thema

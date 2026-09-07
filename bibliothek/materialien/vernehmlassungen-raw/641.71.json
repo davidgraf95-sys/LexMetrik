@@ -84,6 +84,35 @@
     },
     "cons": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2026/83/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/1"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Revision des CO2-Gesetzes im Bereich Fahrzeuge für die Zeit ab 2030 und des Energiegesetzes (Fahrzeug-Label)"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Révision de la loi sur le CO2, concernant les véhicules, pour la période débutant en 2030, et de la loi sur l'énergie (étiquette du véhicule)"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Revisione della legge sul CO2 (veicoli) per il periodo successivo al 2030 e della legge federale sull’energia (etichetta per i veicoli)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "641.71"
+    },
+    "cons": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/dl/proj/6012/46/cons_1"
     },
     "status": {

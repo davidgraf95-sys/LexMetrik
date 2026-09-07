@@ -6,10 +6,12 @@ import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { istIsoDatum } from '../components/vorlagen/seiteHelfer';
 import { VorlagenSeite, type SeiteCtx, type VorlagenSeitenConfig } from '../components/vorlagen/VorlagenSeite';
 import { usePaneKlasse } from '../components/layout/PaneKontext';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
 
 // ─── Vorlagen-Wizard: Auftrag / Dienstleistungsvertrag (Art. 394 ff. OR) ─────
 // P1-Grundtyp der Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V3).
@@ -49,18 +51,16 @@ const VERGUETUNG_OPTIONEN: { id: AfVerguetung; label: string }[] = [
 function MandatWahl({ wert, onWahl }: { wert: AfMandatstyp; onWahl: (v: AfMandatstyp) => void }) {
   const pk = usePaneKlasse();
   return (
-    <div className={pk('grid grid-cols-2 sm:grid-cols-4 gap-2', 'grid grid-cols-2 @3xl/pane:grid-cols-4 gap-2')}>
-      {MANDAT_OPTIONEN.map((m) => (
-        <button key={m.id} type="button"
-          onClick={() => onWahl(m.id)}
-          className={`rounded-lg border px-3 py-2 text-left text-body-s ${wert === m.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
-          <span className="font-medium block">{m.label}</span>
-          {/* LM-176 (Fahrplan B5, §6): ink-500 auf gewählter bg-brass-100 lag
-              bei 4.37:1 (unter WCAG AA) — Muster wie VorlageNda.tsx. */}
-          <span className="text-ink-600 text-xs">{m.hint}</span>
-        </button>
-      ))}
-    </div>
+    /* B3-4/A3-5 (R3-α, 31.8.2026): handgezeichnete Auswahl-Reihe ohne
+       `aria-pressed` (Screenreader hörten nur Knöpfe, nicht die Auswahl),
+       ohne `min-h-11` und mit `bg-brass-100` statt `bg-brass-100/60`. Die
+       Kopie ist gelöscht (§5/§10); die LM-176-Messung (Unterzeile ink-600)
+       ist in den Baustein gewandert. */
+    <SelectionGrid<AfMandatstyp>
+      className={pk('grid grid-cols-2 sm:grid-cols-4 gap-2', 'grid grid-cols-2 @3xl/pane:grid-cols-4 gap-2')}
+      gruppenLabel="Mandatstyp"
+      items={MANDAT_OPTIONEN.map((m) => ({ code: m.id, label: m.label, sub: m.hint }))}
+      value={wert} onSelect={onWahl} />
   );
 }
 
@@ -100,24 +100,20 @@ function eingabeInhalt({ a, set }: SeiteCtx<AfAntworten>, schritt: number) {
           <DatumsFeld value={a.beginn} onChange={(v) => set('beginn', v)} className={inputCls} />
         </Field>
         <Field label="Vergütung">
-          <div className="grid grid-cols-3 gap-2">
-            {VERGUETUNG_OPTIONEN.map((v) => (
-              <button key={v.id} type="button"
-                onClick={() => set('verguetung', v.id)}
-                className={`rounded-lg border px-3 py-2 text-body-s ${a.verguetung === v.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
-                {v.label}
-              </button>
-            ))}
-          </div>
+          {/* dito B3-4/A3-5 — dieselbe Reihe, ohne Unterzeile. */}
+          <SelectionGrid
+            className="grid grid-cols-3 gap-2" gruppenLabel="Vergütung"
+            items={VERGUETUNG_OPTIONEN.map((v) => ({ code: v.id, label: v.label }))}
+            value={a.verguetung} onSelect={(v) => set('verguetung', v)} />
         </Field>
         {a.verguetung === 'pauschal' && (
           <Field label="Pauschalhonorar (CHF)">
-            <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.pauschalCHF} onChange={(e) => set('pauschalCHF', e.target.value)} placeholder="z. B. 5000.00" />
+            <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.pauschalCHF} onChange={(v) => set('pauschalCHF', v)} placeholder="z. B. 5'000.00" />
           </Field>
         )}
         {a.verguetung === 'aufwand' && (
           <Field label="Stundenansatz (CHF)">
-            <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.stundensatzCHF} onChange={(e) => set('stundensatzCHF', e.target.value)} placeholder="z. B. 250.00" />
+            <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.stundensatzCHF} onChange={(v) => set('stundensatzCHF', v)} placeholder="z. B. 250.00" />
           </Field>
         )}
         <Checkbox

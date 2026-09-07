@@ -99,6 +99,16 @@ const bgeBaender = (arg('--bge-baender') ?? '').split(',').map((s) => Number(s.t
 // den committeten Snapshots — mit gleichem --datum byte-gleich wiederholbar (§2).
 // Berührt `sha` NICHT (der deckt nur `abschnitte`).
 const remap = process.argv.includes('--remap');
+// --rubrum-refresh (LM-127/LM-132, Datenschritt 5.9.2026): normalisiert den
+// Satzzeichen-Abstand im amtlichen Besetzungs-Freitext des BESTEHENDEN Korpus.
+// STRIKT OFFLINE (kein Netz-Zweig läuft), rein aus den committeten Snapshots, über
+// denselben Writer (§5) — der Writer ruft `bereinigeBesetzungsFreitext` ohnehin auf
+// jedem Snapshot auf, dieser Modus macht daraus nur einen benennbaren, messbaren
+// Lauf. Nötig, weil `daten/bs-fiw/raw/` leer ist: eine echte Neu-Extraktion hinge
+// am Vollabruf von 3765 Rohdokumenten des BS-Portals. Idempotent (§2) — ein zweiter
+// Lauf mit gleichem --datum ändert nichts. Berührt AUSSCHLIESSLICH
+// `rubrum.besetzung`; `abschnitte`/`sha`/Volltext bleiben unberührt (§7 Zitattreue).
+const rubrumRefresh = process.argv.includes('--rubrum-refresh');
 /**
  * DEKLARIERTE Alt-Key-Bewahrung (Linse 3, 28.7.2026) — die Ratsche bekommt eine
  * Sperre.
@@ -291,6 +301,32 @@ async function eidgKorpus(): Promise<EntscheidSnapshot[]> {
 const docketSlug = (d: string) => d.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g, '_');
 
 async function main() {
+  // ── Rubrum-Satzzeichen (LM-127/LM-132) — OFFLINE, vor allen Netz-Zweigen ────
+  if (rubrumRefresh) {
+    const basis = ladeBestandSnapshots();
+    if (!basis.length) {
+      console.log('[rubrum-refresh] 0 Snapshots geladen (kein Bestand?) — Korpus unberührt.');
+      return;
+    }
+    const defekt = /\s[,;:.]/;
+    const vorher = basis.filter((s2) => defekt.test(s2.rubrum?.besetzung ?? '')).length;
+    const proKanton = new Map<string, number>();
+    for (const s2 of basis) {
+      if (!defekt.test(s2.rubrum?.besetzung ?? '')) continue;
+      proKanton.set(s2.kanton || 'BUND', (proKanton.get(s2.kanton || 'BUND') ?? 0) + 1);
+    }
+    // Der Writer säubert jeden Besetzungs-Freitext mit `bereinigeBesetzungsFreitext`
+    // und schreibt die Snapshots neu; die Zählung danach liest die geschriebenen
+    // Objekte (der Writer mutiert `snap.rubrum.besetzung` in place).
+    const res = schreibeKorpus(basis, datum);
+    const nachher = basis.filter((s2) => defekt.test(s2.rubrum?.besetzung ?? '')).length;
+    console.log(`[rubrum-refresh] ${basis.length} Snapshots · Besetzung mit Whitespace vor Satzzeichen: ${vorher} → ${nachher}`);
+    console.log(`[rubrum-refresh] vorher je Raum: ${[...proKanton].sort().map(([k, n]) => `${k}:${n}`).join(' ') || '—'}`);
+    console.log(`[rubrum-refresh] geschrieben: ${res.anzahl} Manifest-Einträge, ${res.normBuckets} Norm-Buckets.`);
+    if (nachher !== 0) { console.error('[rubrum-refresh] ABBRUCH-BEFUND: Rest > 0 — Regel greift nicht vollständig.'); process.exit(1); }
+    return;
+  }
+
   // ── Re-Map der normKeys (W2·6-NKEY) — OFFLINE, vor allen Netz-Zweigen ───────
   if (remap) {
     const basis = ladeBestandSnapshots();

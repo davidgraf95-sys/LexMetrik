@@ -7,6 +7,9 @@ import { useEinstellungen, setzeEinstellung } from '../lib/einstellungen';
 import { DETAILGRAD_OPTIONEN } from '../lib/vorlagen/detailgrad';
 import { speichereThema, wendeThemaAn, systemThema, useThemaWahl, type ThemaWahl } from '../components/thema';
 import { useAusgabeStil, setAusgabeStil } from '../components/vorlagen/ausgabeStil';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
+import { SchriftgroessenRegler } from '../components/ui/SchriftgroessenRegler';
+import { useSchriftskala } from '../components/layout/useSchriftskala';
 
 // ─── Rubrik «Einstellungen» (Auftrag David) ─────────────────────────────────
 //
@@ -20,20 +23,14 @@ function Segment<T extends string>({ wert, optionen, onWahl, label }: {
   wert: T; optionen: { id: T; label: string; sub?: string }[]; onWahl: (id: T) => void; label: string;
 }) {
   return (
-    <div role="group" aria-label={label} className="flex flex-wrap gap-2">
-      {optionen.map((o) => {
-        const aktiv = o.id === wert;
-        return (
-          <button key={o.id} type="button" aria-pressed={aktiv} onClick={() => onWahl(o.id)}
-            className={`rounded-lg border px-3.5 py-2 text-left transition-colors ${
-              aktiv ? 'border-brass-500 bg-brass-100/60 text-brass-800' : 'border-line bg-surface text-ink-700 hover:border-brass-300 hover:text-ink-900'
-            }`}>
-            <span className="block text-body-s font-medium">{o.label}</span>
-            {o.sub && <span className="block text-xs text-ink-500">{o.sub}</span>}
-          </button>
-        );
-      })}
-    </div>
+    /* B3-4 (R3-α, 31.8.2026): eigene Kachel-Anatomie (px-3.5 py-2, aktive
+       Tinte brass-800 statt ink-900, Unterzeile ink-500) → der EINE Baustein.
+       Die Wahl selbst ist unverändert; nur die Kachel wird nicht mehr hier
+       gezeichnet (§5/§10). */
+    <SelectionGrid
+      className="flex flex-wrap gap-2" gruppenLabel={label}
+      items={optionen.map((o) => ({ code: o.id, label: o.label, sub: o.sub }))}
+      value={wert} onSelect={onWahl} />
   );
 }
 
@@ -68,6 +65,10 @@ function schreibeKey(key: string, wert: string): void {
 export function Einstellungen() {
   const e = useEinstellungen();
   const stil = useAusgabeStil();
+  // W2·23-STARTSEITE-V4 §6.2: der Regler «Ganze Seite» stand bis hierher im
+  // Top-Streifen. Er gehört zu den Dauer-Vorgaben, die diese Seite pflegt —
+  // derselbe Hook, derselbe Speicher-Schlüssel, nur ein anderer Ort.
+  const schrift = useSchriftskala();
   // Theme aus dem geteilten Store (synchron mit dem Topbar-Umschalter); Rechtsprechungs-
   // Ansicht lokal (clientseitig, opt-in).
   const themaWahl: ThemaWahl = useThemaWahl() ?? 'auto';
@@ -94,9 +95,34 @@ export function Einstellungen() {
   };
 
   return (
-    <div className="max-w-[44rem] space-y-8">
-      <SeitenKopf overline="Persönlich" titel="Einstellungen"
-        intro="Standardwerte für die ganze Seite — sie werden lokal in diesem Browser gespeichert, nie übermittelt." />
+    // ── LM-136 (W2·17-UI-BEFUNDE/B16) · KEIN EINZELWERT FÜR DIE LESEBREITE ────
+    // Hier stand `max-w-[44rem]`. Gemessen 4.9.2026 @1440 (Preview von
+    // origin/main): der Shell deckelt zentral auf `max-w-content` (1120 px, innen
+    // 312→1384) — die Rechnerseiten laufen bis 1384, /einstellungen brach schon
+    // bei 1016 ab. Die Abweichung entstand also nicht im Shell (D7-Heilung trägt),
+    // sondern an diesem inneren Wrapper, und 44 rem ist ein Wert, den sonst
+    // NIEMAND trägt: die statischen Schwesterseiten /kontakt, /ueber und
+    // /datenschutz stehen alle auf `max-w-reading` (40 rem). Angeglichen auf
+    // dasselbe Token — gleichartige Seiten, gleiche Inhaltsbreite, und ein
+    // Arbitrary-Wert weniger im Design-System (§13/design.md: Tokens statt
+    // Rohwerten).
+    //
+    // NICHT geändert, weil Kanon und kein Defekt: der dritte Teil des Befundes
+    // («der Fliesstextblock der Startseite ist schmaler als alles darüber»). Die
+    // Lesespalte unter breiteren Modulen ist die gewollte Satzbreite (§13.2,
+    // dieselbe Herleitung wie Responsive-Audit D3 in pages/Methodik.tsx).
+    <div className="max-w-reading space-y-8">
+      {/* ── G9/G17 (Gesamtprüfung 6.9.2026) · DIESELBE KOPF-ANATOMIE ────────
+          H1 zuerst, darunter EINE Zeile aus dem Bestand — die Form aller
+          Übersichten (`layout/SeitenKopf`, D22). Overline und Ablesekante
+          entfallen; sie hoben die H1 auf y = 213 statt auf 177 (G17).
+          DER §8-SATZ BLEIBT, er wechselt nur die Zeile: dass Einstellungen
+          diesen Browser nie verlassen, ist eine Zusage über die Datenhaltung,
+          kein Erklärtext — als Ausgabe-Zeile (13 px, ink-500) steht sie in
+          derselben Zelle, in der `/gesetze` seine Zähler führt, und fällt
+          damit nicht unter D11 («Übersichts-Köpfe ohne Erklärtext»). */}
+      <SeitenKopf titel="Einstellungen"
+        ausgabe="Standardwerte für die ganze Seite — lokal in diesem Browser gespeichert, nie übermittelt." />
 
       <section className="lc-card p-5 sm:p-6 space-y-5">
         <Zeile titel="Standard-Kanton" hinweis="Wird in Fristen- und Gebührenrechnern vorgewählt (ein Permalink oder eine eigene Wahl im Formular geht weiter vor).">
@@ -120,6 +146,24 @@ export function Einstellungen() {
       </section>
 
       <section className="lc-card p-5 sm:p-6 space-y-5">
+        <Zeile titel="Schriftgrösse — ganze Seite"
+          hinweis="Vergrössert Schrift und Abstände der ganzen Anwendung (der Gesetzestext hat im Leser-Menü «Ansicht» zusätzlich einen eigenen Regler). Die Wahl gilt sofort und bleibt in diesem Browser gespeichert.">
+          {/* role="group" + sichtbares Scope-Wort bleiben am Aufrufer (Baustein
+              trägt nur das Knopf-Paar) — derselbe Umschluss wie
+              `v3/LeserAnsichtV3.tsx` («Nur Gesetzestext»), hier mit dem
+              Gegenstück «Ganze Seite» (C4, Entscheid David 5B 29.8.2026). */}
+          <div role="group" aria-label="Schriftgrösse der ganzen Seite" className="inline-flex items-center gap-1.5">
+            <span aria-hidden className="select-none whitespace-nowrap text-micro text-ink-500">Ganze Seite</span>
+            <SchriftgroessenRegler
+              schrift={schrift}
+              kleinerLabel="Ganze Seite verkleinern"
+              kleinerTitle="Verkleinert die ganze Anwendung — der Gesetzestext hat im Menü «Ansicht» einen eigenen Regler"
+              groesserLabel="Ganze Seite vergrössern"
+              groesserTitle="Vergrössert die ganze Anwendung — der Gesetzestext hat im Menü «Ansicht» einen eigenen Regler"
+            />
+          </div>
+        </Zeile>
+
         <Zeile titel="Farbschema">
           <Segment label="Farbschema" wert={themaWahl} onWahl={themaSetzen}
             optionen={[

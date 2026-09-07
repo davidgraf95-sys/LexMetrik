@@ -62,7 +62,12 @@ const html = (el: React.ReactElement) => renderToString(<MemoryRouter>{el}</Memo
  */
 function zaehlerText(markup: string, status: string): string {
   const gruppe = markup.split(`data-bezug-gruppe="${status}"`)[1] ?? '';
-  const treffer = gruppe.match(/tabular-nums[^>]*>([^<]*)</);
+  // R4-B (5.9.2026): der Sucher hing an `tabular-nums` — einer Utility, die in
+  // `.num` ohnehin steckt und die beim Zug auf `ui/GruppenKopf` wegfiel. Die
+  // ERWARTUNGEN dieses Tests sind unverändert (§6.3); nur der Sucher greift
+  // jetzt die Zähler-Rolle (`.num`) statt einer austauschbaren Utility — ein
+  // Test, der an der Optik sucht, prüft irgendwas (Lehre `data-ort-artikel`).
+  const treffer = gruppe.match(/class="num[^"]*"[^>]*>([^<]*)</);
   return treffer ? treffer[1].replace(/&#x27;/g, "'").replace(/&#39;/g, "'") : '';
 }
 

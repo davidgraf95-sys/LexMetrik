@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { pruefeFormulierung, FLOSKELN } from '../lib/konventionen';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
+import { pruefeFormulierung, FLOSKELN, REGELN } from '../lib/konventionen';
 import { ALLE_KARTEN } from '../lib/startseiteConfig';
 
 // Stufe-4-Linter des Formulierungs-Auftrags (5.6.2026): prüft die ECHTE
@@ -380,5 +382,80 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     const verstoesse = ALLE_KARTEN.flatMap((k) =>
       pruefeAlles({ title: k.title, description: k.description, norms: k.norms.map((n) => n.label) }, k.id));
     expect(verstoesse, verstoesse.join('\n')).toEqual([]);
+  });
+
+  // ── Tor-Ausbau QS-UI (B13 #676, 5.9.2026) ─────────────────────────────────
+  // Bisher prüfte der Linter nur die ECHTE Textausgabe (Vorlagen/Engines/
+  // Katalog, s. o.) — «5%» in einem JSX-Label oder Select-Option-Text lief
+  // jahrelang daran vorbei (LM-111). Zusatz-Scan über die Darstellungsschicht
+  // (src/components, src/pages): NUR die «Prozent»-Regel aus REGELN (§5,
+  // reimportiert statt dupliziert), nicht der volle Regelsatz — «— » (Geviert-
+  // strich als Trenner in Hint-Texten, z. B. «Kanton — Feiertage …») und
+  // Guillemets/Art.-Abstand treffen in echten UI-Hints erwartungsgemäss und
+  // legitim, weil dort Trenner-Konvention statt Fliesstext-Konvention gilt;
+  // ein voller Regelsatz-Scan über UI-Strings würde ~350 Falschtreffer werfen
+  // (gemessen 5.9.2026, Prototyp-Sweep) statt echte Formatfehler zu finden.
+  // Ausgeschlossen: Test-/Fixture-Dateien (eigener Massstab), Zeilen mit
+  // `style=`/`className=`/CSS-Property-Mustern (Tailwind-Arbiträrwerte,
+  // Inline-Style-Objekte — keine UI-Texte) sowie Block-/Zeilenkommentare
+  // (Code-Doku, keine Ausgabe an Nutzer:innen).
+  describe('UI-Strings (Darstellungsschicht) tragen keine «5%»-Schreibweise', () => {
+    const prozentRegel = REGELN.find((r) => r.regel.startsWith('Prozent'));
+    if (!prozentRegel) throw new Error('Prozent-Regel fehlt in REGELN — SSoT verschoben?');
+    const prozentMuster = prozentRegel.muster;
+    const CSS_HINWEIS = /style\s*=|width\s*:|Width\s*:|height\s*:|Height\s*:|top\s*:|bottom\s*:|left\s*:|right\s*:|transform\s*:|translateX|translateY|scale\(|calc\(|minmax\(|grid-template|rootMargin|opacity\s*:/;
+    // className-Attributwerte und Tailwind-Arbiträrwerte werden aus der Zeile
+    // ENTFERNT statt die ganze Zeile zu überspringen — sonst bleibt echter
+    // UI-Text im selben Tag unentdeckt, z. B. `<span className="text-sm">5%
+    // Rabatt</span>` (Auflage Gegenprüfung #720, 5.9.2026).
+    const CLASSNAME_ATTR = /className\s*=\s*(?:"[^"]*"|'[^']*'|\{`[^`]*`\}|\{'[^']*'\}|\{"[^"]*"\})/g;
+    const TAILWIND_ARBITRAER = /[a-zA-Z][a-zA-Z0-9-]*\[[^\]]*\]/g;
+
+    function zeileIstVerstoss(zeile: string): boolean {
+      const t = zeile.trim();
+      if (t.startsWith('//') || t.startsWith('*')) return false;
+      const bereinigt = zeile.replace(CLASSNAME_ATTR, '').replace(TAILWIND_ARBITRAER, '');
+      if (CSS_HINWEIS.test(bereinigt)) return false;
+      return prozentMuster.test(bereinigt);
+    }
+
+    function dateienUnter(dir: string): string[] {
+      const out: string[] = [];
+      for (const name of readdirSync(dir)) {
+        const p = join(dir, name);
+        if (statSync(p).isDirectory()) { out.push(...dateienUnter(p)); continue; }
+        if (/\.tsx?$/.test(name) && !/\.test\.tsx?$/.test(name)) out.push(p);
+      }
+      return out;
+    }
+
+    function verstoesseInDatei(pfad: string): string[] {
+      const roh = readFileSync(pfad, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+      const treffer: string[] = [];
+      roh.split('\n').forEach((zeile, i) => {
+        if (zeileIstVerstoss(zeile)) treffer.push(`${pfad}:${i + 1}: «${zeile.trim().slice(0, 100)}»`);
+      });
+      return treffer;
+    }
+
+    it('src/components + src/pages sind frei von unformatierten Prozentzahlen', () => {
+      const wurzel = join(__dirname, '..', '..');
+      const dateien = [
+        ...dateienUnter(join(wurzel, 'src', 'components')),
+        ...dateienUnter(join(wurzel, 'src', 'pages')),
+      ];
+      // Leer-Treffer-Schutz 5.9.2026 (Gegenprüfung #720)
+      expect(dateien.length).toBeGreaterThan(0);
+      const treffer = dateien.flatMap(verstoesseInDatei);
+      expect(treffer, treffer.join('\n')).toEqual([]);
+    });
+
+    it('findet «5%» in echtem UI-Text trotz className im selben Tag (Gegenprüfung #720)', () => {
+      expect(zeileIstVerstoss('<span className="text-sm">5% Rabatt</span>')).toBe(true);
+    });
+
+    it('schlägt bei Tailwind-Arbiträrwerten in className nicht fälschlich an (Gegenprüfung #720)', () => {
+      expect(zeileIstVerstoss('<div className="w-[5%]" />')).toBe(false);
+    });
   });
 });

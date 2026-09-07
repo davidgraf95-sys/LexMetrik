@@ -474,6 +474,45 @@
     },
     "cons": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2024/101/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Änderung des Geoinformationsgesetzes – Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Modification de la loi sur la géoinformation – Cadastre des restrictions de droit public à la propriété foncière"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Modifica della legge sulla geoinformazione - Catasto delle restrizioni di diritto pubblico della proprietà"
+    },
+    "start": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2025-03-21"
+    },
+    "ende": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2025-06-30"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "210"
+    },
+    "cons": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/dl/proj/2021/31/cons_1"
     },
     "status": {
@@ -543,45 +582,6 @@
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
       "value": "2022-04-30"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "210"
-    },
-    "cons": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2024/101/cons_1"
-    },
-    "status": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
-    },
-    "titelDe": {
-      "type": "literal",
-      "xml:lang": "de",
-      "value": "Änderung des Geoinformationsgesetzes – Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen"
-    },
-    "titelFr": {
-      "type": "literal",
-      "xml:lang": "fr",
-      "value": "Modification de la loi sur la géoinformation – Cadastre des restrictions de droit public à la propriété foncière"
-    },
-    "titelIt": {
-      "type": "literal",
-      "xml:lang": "it",
-      "value": "Modifica della legge sulla geoinformazione - Catasto delle restrizioni di diritto pubblico della proprietà"
-    },
-    "start": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2025-03-21"
-    },
-    "ende": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2025-06-30"
     }
   },
   {

@@ -61,11 +61,21 @@ describe('Klasse B — kanonisches Spalten-Modell + Rechteckigkeit', () => {
 });
 
 describe('Klasse B — typisiereSpalten Regression-Lock (deterministisch, §2)', () => {
-  it('ZH-215.3 §4: [text Streitwert, zahl Grundgebühr, text Zuschlag]', () => {
+  it('ZH-215.3 §4: [text Streitwert, text Grundgebühr, text Zuschlag]', () => {
+    // FOLGE DES B-5-FIXES (Gegenprüfung Runde 2, 31.8.2026 — fachliche
+    // Änderung, kein Refactoring, §6.3): Bis hierher stand die erste
+    // Staffelzeile vollständig in Spalte 1 («bis 5 000 25% des Streitwertes,
+    // mind. aber Fr. 100»), die Grundgebühr-Spalte trug dort eine LEERE Zelle
+    // und war damit rein numerisch → `zahl`. Seit die Zeile korrekt getrennt
+    // ist, enthält die Spalte in Zeile 1 echte Prosa; `typisiereSpalten` stuft
+    // sie darum §1-konservativ auf `text` (Regel unverändert: eine einzige
+    // Prosa-Zelle kippt die Spalte, damit nie rechtsbündig gruppiert wird, was
+    // kein Betrag ist). Die frühere `zahl`-Einstufung beruhte auf einer Zelle,
+    // die es im amtlichen Druckbild gar nicht gibt.
     const b = ladeBloecke('ZH-215.3').find((x) => x.label === '§ 4')!;
     expect(typisiereSpalten(['Streitwert', 'Grundgebühr', 'Zuschlag'], b.zeilen)).toEqual([
       { typ: 'text', titel: 'Streitwert' },
-      { typ: 'zahl', titel: 'Grundgebühr' },
+      { typ: 'text', titel: 'Grundgebühr' },
       { typ: 'text', titel: 'Zuschlag' },
     ]);
   });

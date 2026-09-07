@@ -1,4 +1,5 @@
 import type { ReactNode, RefObject } from 'react';
+import { SheetRahmen } from '../../../components/ui/SheetRahmen';
 
 // ─── W2·10-UI-NAV/R2 · Mobile Gliederung als volles Bottom-Sheet ───────────────
 //
@@ -118,49 +119,40 @@ export function GliederungSheet({
     : null;
   return (
     <>
-      <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : 'fixed inset-0 z-40 bg-ink-900/30'}
+      {/* F2-1: Farbe und Deckung des Scrims kommen aus `.lc-scrim`
+          (src/index.css). Hier stand `bg-ink-900/30` — `--ink-900` flippt mit
+          dem Thema und ist im Dunkelmodus `#E9E7E2`, dieser «Scrim» HELLTE also
+          im Dunkelmodus auf, statt abzudunkeln (Messung/Herleitung:
+          `../v3/LeserScrim.tsx`, B7-N1). Position und z-Ebene bleiben hier. */}
+      <div className={inPane ? 'lc-scrim pointer-events-auto absolute inset-0 z-overlay' : 'lc-scrim fixed inset-0 z-overlay'}
         onClick={onSchliessen} aria-hidden />
-      {/* B11: auch der Dialog selbst heisst, was er zeigt — sonst kündigt der
-          Screenreader «Gliederung» an, und darin steht die Trefferliste. */}
-      <div ref={sheetRef} tabIndex={-1} role="dialog" aria-modal={inPane ? undefined : true} aria-label={titel}
-        data-gliederung-sheet
-        // Volle Höhe in der Daumenzone: unten angeschlagen, oben bis knapp unter
-        // den Inhalts-Kopf (Topbar 4rem + Kopf 2.25rem) bzw. bis knapp unter die
-        // Pane-Oberkante. `dvh` statt `vh`, damit die mobile Browser-Leiste das
-        // Sheet nicht unter den Rand schiebt.
-        className={`${inPane
-          ? 'pointer-events-auto absolute inset-x-0 bottom-0 top-8 z-50 rounded-t-xl'
-          : 'fixed inset-x-0 bottom-0 z-50 rounded-t-xl'} flex flex-col border-t border-line bg-paper-raised shadow-lg`}
-        // W2·19-GLIEDERUNG/S2: Kopf-Höhe aus `--leser-kopf-h` (gesetzt an genau
-        // einer Stelle, `.lc-leser` in inhalt.tsx). Dieser Zweig rendert IMMER im
-        // Fluss unterhalb von `.lc-leser` (nur der inPane-Zweig portaliert in die
-        // Overlay-Wurzel, und der trägt hier gar kein style) — die Variable erbt
-        // also zuverlässig. Rechnerisch unverändert 6.25rem / 100dvh − 6.25rem.
-        style={inPane ? undefined : { top: 'var(--leser-kopf-h)', maxHeight: 'calc(100dvh - var(--leser-kopf-h))' }}>
-        {/* 1 · Griffleiste + Titel + Schliessen */}
-        <div className="shrink-0 border-b border-line">
-          <div aria-hidden className="mx-auto mt-2 h-1 w-10 rounded-full bg-line" />
-          <div className="flex items-center justify-between px-4 py-1.5">
-            <p className="lc-overline">{titel}</p>
-            {/* B11 (H2b-Nachzug): der Name folgt dem Titel. Bis hierher hiess der
-                Knopf immer «Gliederung schliessen» — gemessen 17.8.2026 auch
-                dann, wenn über ihm «Treffer» stand: der Screenreader nannte
-                eine Zone, die das Blatt gerade nicht zeigt (§8). */}
-            <button type="button" onClick={onSchliessen} aria-label={`${titel} schliessen`}
-              className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-md text-ink-500 hover:text-brass-700">
-              <span aria-hidden className="text-base leading-none">✕</span>
-            </button>
-          </div>
-        </div>
-        {/* 2/3 · Feld und Ortsangabe — Reihenfolge und Vorhandensein entscheidet
-            der Aufrufer (`feldZuoberst`, `ortAnzeigen`); Vorgabe = Ist-Anordnung. */}
-        {feldZuoberst ? <>{feldZone}{ortZone}</> : <>{ortZone}{feldZone}</>}
-        {/* 4 · Gliederungsbaum — einziger Scroller des Sheets. `overflow-x-hidden`
-            (Zusatzpunkt David 9.8.2026, W2·19-GLIEDERUNG/S9): dieselbe Garantie
-            wie in der Desktop-Spalte ([data-toc], inhalt-volltext.tsx) — kein
-            horizontales Scrollen, lange Etikette brechen um. */}
-        <div data-gliederung-baum-scroll className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain px-3 py-2 [scrollbar-width:thin]">{baum}</div>
-      </div>
+      {/* Rahmen, Griffleiste, Titelzeile, ✕ und Scroller kommen aus dem EINEN
+          Sheet-Baustein (F2-2, `ui/SheetRahmen`) — sie standen zeichengleich
+          auch im `rechtsprechung/FilterSheet`.
+          B11: auch der Dialog selbst heisst, was er zeigt — sonst kündigt der
+          Screenreader «Gliederung» an, und darin steht die Trefferliste; und der
+          ✕-Name folgt dem Titel (gemessen 17.8.2026: der Knopf hiess «Gliederung
+          schliessen», während über ihm «Treffer» stand, §8). Beides trägt der
+          Baustein aus `titel`.
+          W2·19-GLIEDERUNG/S2: Anschlag aus `--leser-kopf-h` (gesetzt an genau
+          einer Stelle, `.lc-leser` in inhalt.tsx) statt aus der Vorgabe
+          `--sheet-anschlag` — hier ist die Kopfhöhe GEMESSEN, nicht angenommen.
+          Dieser Zweig rendert immer im Fluss unterhalb von `.lc-leser` (nur der
+          inPane-Zweig portaliert in die Overlay-Wurzel, und der trägt gar keinen
+          Anschlag) — die Variable erbt also zuverlässig.
+          `overflow-x-hidden` am Scroller (Zusatzpunkt David 9.8.2026,
+          W2·19-GLIEDERUNG/S9): dieselbe Garantie wie in der Desktop-Spalte
+          ([data-toc], inhalt-volltext.tsx) — kein horizontales Scrollen, lange
+          Etikette brechen um. */}
+      <SheetRahmen sheetRef={sheetRef} inPane={inPane} titel={titel} onSchliessen={onSchliessen}
+        anschlag="var(--leser-kopf-h)" daten="data-gliederung-sheet"
+        scrollerDaten="data-gliederung-baum-scroll"
+        scrollerKlassen="overflow-x-hidden px-3 py-2"
+        // Feld und Ortsangabe — Reihenfolge und Vorhandensein entscheidet der
+        // Aufrufer (`feldZuoberst`, `ortAnzeigen`); Vorgabe = Ist-Anordnung.
+        zwischenZonen={feldZuoberst ? <>{feldZone}{ortZone}</> : <>{ortZone}{feldZone}</>}>
+        {baum}
+      </SheetRahmen>
     </>
   );
 }

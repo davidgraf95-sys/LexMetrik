@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BeruehrtRahmen, Checkbox, ErgebnisPlatzhalter, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, ErgebnisPlatzhalter, FehlerBox, Field, inputCls, ListenEditor } from '../vorlagen/ui';
 import { zahlBeliebig as zahl } from './eingabe';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
@@ -13,6 +13,8 @@ import { permalinkKodieren, type PermalinkSpec } from '../../lib/permalink';
 import { usePermalinkFelder } from '../../hooks/usePermalinkFelder';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { berechneStreitwert, streitwertGrenzwerte, type Begehren, type BegehrenTyp, type WiederkehrDauer, type StreitwertErgebnis, type StreitwertGebiet } from '../../lib/streitwert';
+import { chfPraefix } from '../../lib/format';
+import { SelectionGrid } from '../ui/SelectionGrid';
 
 // ─── Streitwert-Form (Art. 91–94a ZPO) — Quick-Win B.9 ──────────────────────
 // Reine Darstellung (§3): Begehren-Editor + Weichen; gerechnet wird in
@@ -138,19 +140,22 @@ export function StreitwertForm() {
     <div className="space-y-6">
       <PflichtDisclaimer kurz="Streitwert nach Rechtsbegehren (Art. 91 ff. ZPO); Ermessens-Konstellationen setzt das Gericht fest." text={SW_DISCLAIMER} />
 
-      {/* Begehren-Editor */}
+      {/* Begehren-Editor — R2-F/F1-9: der handgebaute Behälter (`border
+          border-line rounded-md`), die eigene Entfernen-Optik (`text-ink-500
+          hover:text-danger-700`, gross geschrieben) und «+ Begehren
+          hinzufügen» sind dem geteilten ListenEditor gewichen. Die Kappung bei
+          10 Begehren war bisher ein stiller No-Op des Knopfs — neu blendet sie
+          ihn aus (§8: ein Knopf, der nichts bewirkt, ist keine Ehrlichkeit). */}
       <div className="space-y-4">
-        {begehren.map((b, i) => (
-          <div key={i} className="border border-line rounded-md p-4 space-y-4">
-            <div className="flex items-center justify-between gap-3">
-              <GruppenTitel>Begehren {i + 1}</GruppenTitel>
-              {begehren.length > 1 && (
-                <button type="button" className="text-body-s text-ink-500 hover:text-danger-700"
-                  onClick={() => setBegehren((alt) => alt.filter((_, j) => j !== i))}>
-                  Entfernen
-                </button>
-              )}
-            </div>
+        <ListenEditor
+          element="Begehren"
+          eintraege={begehren}
+          mindestens={1}
+          hoechstens={10}
+          className="space-y-4"
+          onHinzufuegen={() => setBegehren((alt) => [...alt, LEERES_BEGEHREN])}
+          onEntfernen={(i) => setBegehren((alt) => alt.filter((_, j) => j !== i))}
+          kinder={(b, i) => (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Field label="Art des Begehrens">
                 <select value={b.typ} onChange={(e) => setFeld(i, { typ: e.target.value as BegehrenTyp })} className={inputCls}>
@@ -198,22 +203,19 @@ export function StreitwertForm() {
                 </p>
               )}
             </div>
-          </div>
-        ))}
-        <div className="flex flex-wrap items-center gap-4">
-          <button type="button" className="lc-btn-outline lc-btn-sm"
-            onClick={() => setBegehren((alt) => (alt.length < 10 ? [...alt, LEERES_BEGEHREN] : alt))}>
-            + Begehren hinzufügen
-          </button>
-          {begehren.length > 1 && (
-            <Checkbox checked={ausschliessend} onChange={setAusschliessend}
-              label="die Begehren schliessen sich gegenseitig aus (kein Zusammenrechnen, Art. 93 ZPO)" />
           )}
-        </div>
+        />
+        {begehren.length > 1 && (
+          <Checkbox checked={ausschliessend} onChange={setAusschliessend}
+            label="die Begehren schliessen sich gegenseitig aus (kein Zusammenrechnen, Art. 93 ZPO)" />
+        )}
       </div>
 
-      {/* Widerklage */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {/* Widerklage — LM-080 (B19): pl-3 gleicht die linke Feldkante an die
+          Begehren-Unterkarte an (ListenEditor → `.lc-panel p-3`, geteilter
+          Baustein `vorlagen/ui.tsx` unverändert); ohne die Angleichung stand
+          diese Zeile rund 13 px weiter links als die Felder in «Begehren 1». */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pl-3">
         <Field label="Widerklage (CHF)" hint="leer lassen, wenn keine Widerklage (Art. 94 ZPO)">
           <BetragsFeld value={widerklageRoh} onChange={setWiderklageRoh} className={inputCls}
             placeholder="Streitwert der Widerklage" aria-label="Streitwert der Widerklage" />
@@ -242,6 +244,19 @@ export function StreitwertForm() {
 
       {ergebnis && (
         <ErgebnisBlock>
+          {/* Finder-6 A2 (5.9.2026): einziger ErgebnisAnzeige-Rechner ohne Eckdaten-
+              Kachelreihe vor dem Verdikt (R4 Ziff. 1) — an das Muster der anderen
+              angeglichen (z. B. VerzugszinsForm). Nur bei berechenbarem Streitwert
+              (Ermessensfälle bleiben Fliesstext im Verdikt, kein Kachel-«null»). */}
+          {ergebnis.streitwertVerfahrenCHF != null && (
+            <div className={ergebnis.kostenBasisCHF != null && ergebnis.kostenBasisCHF !== ergebnis.streitwertVerfahrenCHF
+              ? 'grid grid-cols-1 sm:grid-cols-2 gap-3' : 'grid grid-cols-1 gap-3'}>
+              <EckdatenKachel label="Streitwert (Verfahren/Rechtsmittel)" wert={chfPraefix(ergebnis.streitwertVerfahrenCHF)} num akzent />
+              {ergebnis.kostenBasisCHF != null && ergebnis.kostenBasisCHF !== ergebnis.streitwertVerfahrenCHF && (
+                <EckdatenKachel label="Kosten-Bemessungsgrundlage (Art. 94 ZPO)" wert={chfPraefix(ergebnis.kostenBasisCHF)} num />
+              )}
+            </div>
+          )}
           <ErgebnisAnzeige titel="Streitwert (Art. 91–94a ZPO)" ergebnis={ergebnis} />
 
           {/* Grenzwert-Abgleich (#2): ZPO-Verfahrensart ≠ BGG-Beschwerde-Schwelle,
@@ -251,15 +266,19 @@ export function StreitwertForm() {
               <p className="lc-overline">Grenzwert-Abgleich</p>
               <div className="flex items-center gap-2 text-xs">
                 <span className="text-ink-500">Gebiet (für BGG):</span>
-                {([['uebrige', 'übrige'], ['miete_arbeit', 'Miete/Arbeit']] as const).map(([code, label]) => (
-                  <button
-                    key={code}
-                    type="button"
-                    aria-pressed={gebiet === code}
-                    onClick={() => setGebiet(code)}
-                    className={`rounded-sm border px-2 py-0.5 transition-colors ${gebiet === code ? 'border-brass-500 bg-brass-100/60 text-ink-900' : 'border-line text-ink-600 hover:bg-brass-100/30'}`}
-                  >{label}</button>
-                ))}
+                {/* B3-4/A3-5 (R3-α, 31.8.2026): eigene Pillen-Anatomie
+                    (`rounded-sm px-2 py-0.5` = 18 px hoch, unter WCAG 2.5.8)
+                    → die Pillen-Variante des EINEN Bausteins, die ihre
+                    Trefferfläche über ein unsichtbares `::after` auf
+                    `--tap-ziel-komfort` hebt, ohne breiter zu zeichnen. */}
+                <SelectionGrid
+                  className="flex items-center gap-2" gruppenLabel="Gebiet (für BGG)"
+                  variant="pille"
+                  items={[
+                    { code: 'uebrige', label: 'übrige' },
+                    { code: 'miete_arbeit', label: 'Miete/Arbeit' },
+                  ] as const}
+                  value={gebiet} onSelect={setGebiet} />
               </div>
             </div>
             {streitwertGrenzwerte(ergebnis.streitwertVerfahrenCHF, gebiet).map((g) => (

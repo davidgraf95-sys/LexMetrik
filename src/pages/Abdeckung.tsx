@@ -59,8 +59,10 @@ export function Abdeckung() {
             <strong className="text-ink-900">{z ? z.bundVolltext : '…'} Bundeserlasse</strong> sind im
             Volltext durchsuchbar — die Suche findet einzelne Artikel nach Wortlaut. Die{' '}
             <strong className="text-ink-900">{z ? z.kantonTitel : '…'} kantonalen Erlasse</strong> liegen im
-            Reader ebenfalls im Volltext vor, sind in der Suche aber nur <em>nach Titel</em> auffindbar
-            (der Artikel-Volltextindex ist derzeit Bund-only). Über{' '}
+            Reader ebenfalls im Volltext vor. In der Suche sind sie <em>nach Titel</em> immer auffindbar,
+            im <em>Wortlaut</em> nur über die Online-Suche: der ausgelieferte Artikel-Volltextindex ist
+            seit dem 1.9.2026 wieder Bund-only, kantonale Artikel kommen von unserem Suchdienst. Ohne
+            Verbindung fehlen kantonale Volltext-Treffer darum ganz. Über{' '}
             <Link to="/gesetze" className="text-brass-700 no-underline hover:text-brass-600">Gesetze</Link>{' '}
             sind alle browse- und lesbar.
           </p>

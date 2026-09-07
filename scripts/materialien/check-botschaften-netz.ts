@@ -2,11 +2,19 @@
 // Paket 2 (W2·6, FAHRPLAN-FEDLEX-PORTFOLIO): Live-Drift-Arbiter der Botschaften-Zuordnung
 // gegen den amtlichen Fedlex-Projekt-Graphen. Verdrahtet in `check:netz`.
 //
-// Struktur: für eine STRATIFIZIERTE Stichprobe von Erlassen die Reverse-Kette live nachfahren
-// (dieselbe reine parse-Funktion wie der Generator) und die resultierende Botschafts-Key-Menge
-// je Erlass gegen das committete botschaften.generated.ts vergleichen. Drift (neue/verschwundene
-// Botschaft, Datums-/Curia-Abweichung) ⇒ ROT = «Generator neu laufen lassen» (nie Auto-Fix, §7).
-// Zusätzlich Referenzfall-Assertionen (DSG→2). Exit 0 OK · 1 Drift · 2 Netzfehler.
+// Struktur: für die GESAMTE Grundmenge (alle Bund-Volltext-Erlasse mit SR) die Reverse-Kette
+// live nachfahren (dieselbe reine parse-Funktion wie der Generator, dieselben VALUES-Batches)
+// und die Botschafts-Key-Menge je Erlass gegen das committete botschaften.generated.ts
+// vergleichen. Drift (neue/verschwundene Botschaft, Datums-/Curia-Abweichung) ⇒ ROT = «Generator
+// neu laufen lassen» (nie Auto-Fix, §7). Zusätzlich Referenzfall-Assertion (DSG→2).
+// Exit 0 OK · 1 Drift · 2 Netzfehler.
+//
+// VOLLABGLEICH statt Stichprobe seit 1.9.2026 (Befund (d), QS-MONITOR-ROT): die frühere
+// Stichprobe von 8 festen Keys war blind für Register-Zuwachs — #581 fand am 30.8. zwei
+// amtliche Botschaften (BOTSCHAFT-2025-1528 EOG, BOTSCHAFT-2024-2448 ELG), die monatelang
+// fehlten, während das Tor grün war. Kosten: 227 SR in 5 VALUES-Batches (= ein Generator-Lauf,
+// ~2 s), kein Mehrpreis gegenüber der Stichprobe (die dieselbe Batch-Mechanik nutzte).
+// Rot-Beweis 1.9.2026: committete Botschaft ausserhalb der 8 Keys entfernt → alt grün, neu rot.
 
 import {
   grundmenge, holeBindings, baueBotschaften, type BotschaftEintrag, type ErlassMeta,
@@ -23,9 +31,8 @@ function intrinsischeSig(b: { titel: string; titelFr?: string; titelIt?: string;
   return [b.titel, b.titelFr ?? '', b.titelIt ?? '', b.stand, b.quelleUrl].join('');
 }
 
-// Stratifizierte Stichprobe: Referenzfälle (DSG/AVIG) + je ein Erlass pro grobem Gebiet +
-// ein Mantelerlass-Kandidat + ein Verordnungs-Erlass (erwartet 0 Botschaften, Negativfall).
-const STICHPROBE_KEYS = ['DSG', 'AVIG', 'OR', 'AHVG', 'AIG', 'MG', 'ZGB', 'VRV'];
+// Referenzfall (DoD, seit Paket 2): DSG → genau 2 Botschaften.
+const REFERENZ_DSG = 2;
 
 function keysProErlass(eintraege: { key: string; normKeys: string[] }[]): Map<string, Set<string>> {
   const m = new Map<string, Set<string>>();
@@ -37,11 +44,9 @@ function keysProErlass(eintraege: { key: string; normKeys: string[] }[]): Map<st
 }
 
 async function main(): Promise<void> {
-  const alle = grundmenge();
-  const meta: ErlassMeta[] = alle.filter((m) => STICHPROBE_KEYS.includes(m.key));
-  const fehlend = STICHPROBE_KEYS.filter((k) => !meta.some((m) => m.key === k));
-  if (fehlend.length) {
-    console.error(`check:botschaften-netz ROT: Stichproben-Keys nicht in der Grundmenge: ${fehlend.join(', ')}.`);
+  const meta: ErlassMeta[] = grundmenge();
+  if (meta.length < 200 || !meta.some((m) => m.key === 'DSG')) {
+    console.error(`check:botschaften-netz ROT: Grundmenge unplausibel (${meta.length} Erlasse, DSG ${meta.some((m) => m.key === 'DSG') ? 'da' : 'fehlt'}) — Register-Bruch?`);
     process.exit(1);
   }
 
@@ -54,9 +59,8 @@ async function main(): Promise<void> {
   }
   const live = baueBotschaften(bindings, meta);
 
-  // committet: nur die Botschaften, die MINDESTENS einen Stichproben-Erlass tragen.
-  const stichKeys = new Set(STICHPROBE_KEYS);
-  const committetRelevant = BOTSCHAFTEN.filter((b) => (b.normKeys ?? []).some((k) => stichKeys.has(k)));
+  // committet: ALLE Botschaften (Vollabgleich) — die Grundmenge ist dieselbe wie im Generator.
+  const committetRelevant = BOTSCHAFTEN;
   const sigCommittet = new Map(committetRelevant.map((b) => [b.key, intrinsischeSig(b)]));
   const sigLive = new Map(live.map((b: BotschaftEintrag) => [b.key, intrinsischeSig(b)]));
 
@@ -64,7 +68,7 @@ async function main(): Promise<void> {
   const commProErlass = keysProErlass(committetRelevant.map((b) => ({ key: b.key, normKeys: b.normKeys ?? [] })));
 
   const fehler: string[] = [];
-  for (const key of STICHPROBE_KEYS) {
+  for (const key of meta.map((m) => m.key)) {
     const l = liveProErlass.get(key) ?? new Set<string>();
     const c = commProErlass.get(key) ?? new Set<string>();
     for (const k of l) if (!c.has(k)) fehler.push(`${key}: Botschaft '${k}' live vorhanden, fehlt committet (Generator neu laufen).`);
@@ -78,14 +82,17 @@ async function main(): Promise<void> {
 
   // Referenzfall-Assertion (DoD): DSG → genau 2 Botschaften.
   const dsg = liveProErlass.get('DSG') ?? new Set();
-  if (dsg.size !== 2) fehler.push(`Referenzfall DSG: erwartet 2 Botschaften, live ${dsg.size}.`);
+  if (dsg.size !== REFERENZ_DSG) fehler.push(`Referenzfall DSG: erwartet ${REFERENZ_DSG} Botschaften, live ${dsg.size}.`);
+  // Mengen-Gate: Botschaften ohne Bezug zur Grundmenge dürfen weder live noch committet auftauchen.
+  const liveKeys = new Set(live.map((b: BotschaftEintrag) => b.key));
+  for (const b of committetRelevant) if (!liveKeys.has(b.key)) fehler.push(`Botschaft '${b.key}' committet, live in keinem Erlass der Grundmenge mehr (Generator neu laufen).`);
 
   if (fehler.length) {
     for (const f of fehler) console.error(`ROT   botschaften-netz: ${f}`);
     console.error(`\ncheck:botschaften-netz — ${fehler.length} Drift-Befund(e). 'npm run materialien:botschaften -- --datum=$(date +%F)' + 'npm run materialien -- …' neu laufen (nie Auto-Fix).`);
     process.exit(1);
   }
-  console.log(`check:botschaften-netz OK — ${STICHPROBE_KEYS.length} Erlasse stichprobenweise drift-frei gegen den Fedlex-Projekt-Graphen (DSG-Referenz: 2).`);
+  console.log(`check:botschaften-netz OK — Vollabgleich ${meta.length} Erlasse, ${committetRelevant.length} Botschaften drift-frei gegen den Fedlex-Projekt-Graphen (DSG-Referenz: ${REFERENZ_DSG}).`);
 }
 
 main().catch((e) => {

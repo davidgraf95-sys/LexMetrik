@@ -27,6 +27,7 @@ import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import lighthouse from 'lighthouse';
 import * as chromeLauncher from 'chrome-launcher';
+import { erlassPfadVonKey } from '../../src/lib/normtext/erlassAdresse';
 
 const requireCJS = createRequire(import.meta.url);
 
@@ -160,6 +161,17 @@ const KALIBRIER_BASIS = zahlAusUmgebung('PERF_KALIBRIER_BASIS', 1120);
 // aussortieren — genau die soll die Normierung ja einfangen.
 const KALIBRIER_MIN = 150;
 const KALIBRIER_MAX = 20_000;
+
+// ── Kanton-Leser-Route (K-11, 31.8.2026) ────────────────────────────────────
+// Als Konstante, weil derselbe Erlass-Schlüssel an ZWEI Stellen gebraucht wird:
+// in der Schwellen-Tabelle und in der Existenz-Sonde unten. Ein Tor, dessen
+// Messobjekt still verschwinden kann, ist ein Tor, das nicht scheitern kann
+// (§6.7) — der kantonale Korpus wird in `W2·13-KANTONE-DATEN` neu erzeugt, und
+// eine 404-/Fehlseite hat ein makelloses CLS. Darum die Sonde.
+const KANTON_LESER_SCHLUESSEL = 'SO-614.11';
+// Adresse über den EINEN Formatierer (§5-Tor `erlass-adresse.test.ts`) —
+// die Ebene liefert die Kantonskürzel-Regel aus `routenEbeneVonKey`.
+const KANTON_LESER_PFAD = erlassPfadVonKey(KANTON_LESER_SCHLUESSEL);
 
 // `null` heisst: **gemessen und gedruckt, aber NICHT assertiert** — für eine
 // Route, die (noch) keine Runner-Kalibrierung hat. Ein aus der Luft gegriffener
@@ -298,6 +310,67 @@ const SCHWELLEN: Record<string, { url: string; label: string; s: Schwelle }> = {
   uebersicht: {
     url: `${BASE}/gesetze`,
     label: '/gesetze (Übersicht)',
+    s: { clsMax: 0.05, lcpMax: null, tbtMax: null, ttiMax: null, scoreMin: null },
+  },
+  // ── VIERTE ROUTE: Kanton-Leser — neu 31.8.2026, Schritt W2·13-KANTONE/K-11 ──
+  //
+  // WARUM SIE FEHLTE: die drei Routen oben decken Bund-Leser, Startseite und
+  // Übersicht ab. Der KANTONALE Leserpfad — 1231 Erlasse, der wachsende Teil
+  // des Korpus — stand in keinem Budget. Das Profil vom 31.8.2026
+  // (bibliothek/seo/kanton-reader-profil-2026-08-31.md) hat genau dort die
+  // teuerste Achse gemessen; ein Defekt, den kein Tor beobachtet, kommt
+  // wieder (§17).
+  //
+  // WELCHER ERLASS: `SO-614.11` (Steuergesetz SO, 347 Artikel) ist mit **281 KB
+  // Prerender-HTML** die schwerste kantonale Leserseite im Bestand (gemessen
+  // 31.8.2026, `ls -lS dist/gesetze/kanton/*.html`). Dieselbe Logik, nach der
+  // oben `/gesetze/bund/OR` als «die schwerste Leser-Seite» steht: ein Wächter
+  // auf dem Normalfall bewacht den Ausreisser nicht mit, umgekehrt schon.
+  //   EHRLICHE EINSCHRÄNKUNG (§8): «schwerste» heisst hier **nach HTML-Masse**,
+  //   und das ist die für CLS/LCP bindende Grösse — Lighthouse lädt die Seite,
+  //   nicht den Artikelbaum. Nach ARTIKELZAHL führt `SG-3849` mit 607 gegen 347
+  //   (gemessen über `eintraege.length` aller 1232 Kanton-Snapshots), bei nur
+  //   214 KB HTML. Wer den Wächter eines Tages um eine render-lastige Metrik
+  //   erweitert, prüft zuerst, ob dafür SG-3849 die richtigere Route wäre.
+  //
+  // WAS ASSERTIERT WIRD — und warum nur das (§8, §6.7):
+  //   • **CLS 0.05** wie auf den drei anderen Routen: geräteunabhängig, ohne
+  //     Runner-Kalibrierung belastbar, und die Metrik der Defekt-Klasse, die
+  //     `/gesetze` am 29.8.2026 unbemerkt passiert hat.
+  //     KALIBRIERUNG DER ZAHL (K-11-Auflage «konservativ am Ist»): lokal
+  //     gemessen 0.0143 (Median aus 3) bzw. 0.0155 (n=1) — der Deckel liegt
+  //     also 3.2–3.5× über dem Ist. Das ist NICHT enger als bei den Nachbarn
+  //     (OR misst 0.0014–0.0026 gegen denselben Deckel) und bleibt bewusst auf
+  //     der Klassen-Zahl: 0.05 ist hier die Grenze zwischen «ruhiger Aufbau»
+  //     und «sichtbarer Sprung», nicht ein aus dem Ist hochgerechneter Wert.
+  //     Ein enger geschnittener Deckel (etwa 0.02) hätte auf einer Metrik, die
+  //     lokal schon zwischen 0.0143 und 0.0155 wandert, Rausch-Rot-Potenzial,
+  //     ohne eine Defekt-Klasse zusätzlich zu fangen.
+  //   • **LCP/TBT/TTI/Score: `null` = gemessen, gedruckt, NICHT assertiert.**
+  //     Für diese vier ist der CI-Runner die bindende Grösse (Block oben), und
+  //     dafür fehlt hier — wie bei `uebersicht` — die Erhebung auf unabhängigen
+  //     Runnern. Lokal gemessen 31.8.2026 (`PERF_RUNS=3 npm run
+  //     check:perf-lighthouse -- --messen`, Normier-Faktor 0.468):
+  //     Score 68 · CLS 0.014 · LCP 9.91 s · TBT roh 153 ms / normiert 327 ms ·
+  //     TTI 9.91 s. Ein aus dem Lokalwert gegriffener Deckel wäre 7–10× neben
+  //     dem CI-Ist (dieselbe Begründung wie bei `uebersicht`) — lieber eine
+  //     ehrlich als «unkalibriert» gedruckte Zahl als eine hübsche (§8).
+  //     NACHZUG: `perf-kalibrierung.yml` einmal über diese Route laufen lassen
+  //     (Schlüssel `kantonleser`), dann die vier Deckel nach dem Muster der
+  //     3.8.-Nachmessung setzen.
+  //
+  // ROT-BEWEIS (§6.7, 31.8.2026, beide lokal geführt):
+  //   1. Schwelle testweise auf `clsMax: 0.005` → «check:perf-lighthouse ROT:
+  //      ✗ /gesetze/kanton/SO-614.11 …: CLS 0.016 > 0.005», Exit 1, die drei
+  //      Bestandsrouten blieben grün.
+  //   2. `dist/gesetze/kanton/SO-614.11.html` weggeschoben → die Existenz-Sonde
+  //      unten bricht mit Exit 1, BEVOR Lighthouse eine Fehlseite als CLS 0
+  //      grün melden kann.
+  //
+  // KEINE Änderung an den drei Routen darüber (additiv, K-11-Auflage).
+  kantonleser: {
+    url: `${BASE}${KANTON_LESER_PFAD}`,
+    label: `${KANTON_LESER_PFAD} (schwerste Kanton-Leserseite, 281 KB HTML)`,
     s: { clsMax: 0.05, lcpMax: null, tbtMax: null, ttiMax: null, scoreMin: null },
   },
 };
@@ -465,6 +538,20 @@ async function messe(url: string): Promise<Metrik> {
 async function main(): Promise<void> {
   if (!existsSync(join(process.cwd(), 'dist', 'index.html'))) {
     console.error('check:perf-lighthouse — dist/ fehlt. Zuerst `npm run build`.');
+    process.exit(1);
+  }
+  // Existenz-Sonde für die Kanton-Leser-Route (K-11): fehlt der Prerender, misst
+  // Lighthouse die Fehlseite — mit tadellosem CLS, also STILL GRÜN. Lieber hier
+  // laut brechen und den Schlüssel bewusst nachziehen (§6.7/§8).
+  const kantonPrerender = join(process.cwd(), 'dist', 'gesetze', 'kanton', `${KANTON_LESER_SCHLUESSEL}.html`);
+  if (!existsSync(kantonPrerender)) {
+    console.error(
+      `check:perf-lighthouse — Messobjekt fehlt: ${kantonPrerender}\n` +
+      `  Der Kanton-Leser-Wächter (K-11) misst '${KANTON_LESER_PFAD}'. Ist der Erlass aus dem\n` +
+      `  Korpus gefallen oder umbenannt, wäre die Messung eine Fehlseite mit CLS 0 — still grün.\n` +
+      `  Darum: KANTON_LESER_SCHLUESSEL in dieser Datei auf einen vorhandenen schweren\n` +
+      `  Kanton-Erlass ziehen (Kandidaten: \`ls -lS dist/gesetze/kanton/*.html | head\`).`,
+    );
     process.exit(1);
   }
 

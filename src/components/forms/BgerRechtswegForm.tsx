@@ -242,9 +242,12 @@ export function BgerRechtswegForm() {
         <ErgebnisBlock>
           <div className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-3`}>
             <EckdatenKachel label="Beschwerde" wert={ergebnis.beschwerdeTyp.replace('Beschwerde in ', '')} sub={ergebnis.fristNorm} />
+            {/* LM-034: «jederzeit» ist ein Wort, keine Frist-Zahl — Mono nur für
+                die Tages-Angabe (DESIGN-REGLEMENT §4b(e)). */}
             <EckdatenKachel label="Frist" akzent={!ergebnis.fristende}
               wert={ergebnis.fristTage === null ? 'jederzeit' : `${ergebnis.fristTage} Tage`}
-              sub={ergebnis.fristTage === null ? 'Art. 100 Abs. 7 BGG' : ergebnis.stillstand ? 'mit Stillstand (Art. 46 BGG)' : 'OHNE Stillstand'} num />
+              sub={ergebnis.fristTage === null ? 'Art. 100 Abs. 7 BGG' : ergebnis.stillstand ? 'mit Stillstand (Art. 46 BGG)' : 'OHNE Stillstand'}
+              num={ergebnis.fristTage !== null} />
             {ergebnis.fristende
               ? <EckdatenKachel label="Letzter Tag" akzent wert={ergebnis.fristende.endeText} sub={ergebnis.fristende.verschoben ? 'verschoben (Art. 45 BGG)' : undefined} num />
               : <EckdatenKachel label="Abteilung" wert={ergebnis.abteilung ? ergebnis.abteilung.split(' (')[0] : 'nach Geschäftsverteilung'} />}

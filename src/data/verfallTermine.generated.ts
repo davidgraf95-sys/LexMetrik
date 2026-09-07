@@ -12,19 +12,11 @@ export type VerfallTermin = {
   rhythmus?: string;
 };
 
-export const VERFALL_STAND = "29.8.2026";
+export const VERFALL_STAND = "6.9.2026";
 export const VERFALL_QUELLE = "bibliothek/register/parameter-verfall.md";
-export const VERFALL_MANUELL_ANZAHL = 21;
+export const VERFALL_MANUELL_ANZAHL = 22;
 
 export const VERFALL_TERMINE: VerfallTermin[] = [
-  {
-    "label": "Hypothekarischer Referenzzinssatz",
-    "datum": "2026-09-01",
-    "quelle": "Tabelle",
-    "fundstelle": "`src/lib/vorlagen/mietvertrag.ts` (`MV_PARAMETER.referenzzinssatz`)",
-    "wert": "1.25 % (Stand 2.6.2026)",
-    "rhythmus": "quartalsweise (referenzzinssatz.admin.ch)"
-  },
   {
     "label": "Künftige Fassung BankG (SR 952.0)",
     "datum": "2026-10-01",
@@ -144,6 +136,14 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "fundstelle": "`src/lib/vorlagen/mietvertrag.ts` (`MV_FORMULARPFLICHT`)",
     "wert": "BWO 4.2.2026",
     "rhythmus": "jährlich; BE ändert dynamisch per 1.11.2026"
+  },
+  {
+    "label": "Hypothekarischer Referenzzinssatz",
+    "datum": "2026-12-01",
+    "quelle": "Tabelle",
+    "fundstelle": "`src/lib/vorlagen/mietvertrag.ts` (`MV_PARAMETER.referenzzinssatz`)",
+    "wert": "1.25 % (unverändert; Stand 2.9.2026, publiziert 1.9.2026, BWO https://www.bwo.admin.ch/de/referenzzinssatz)",
+    "rhythmus": "quartalsweise (bwo.admin.ch/de/referenzzinssatz)"
   },
   {
     "label": "Künftige Fassung ChemRRV (SR 814.81)",
@@ -301,7 +301,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "datum": "2027-01-01",
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (DBG)",
-    "wert": "gepinnt 1.1.2026",
+    "wert": "gepinnt 2.9.2026",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
@@ -486,7 +486,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "quelle": "Tabelle",
     "fundstelle": "`public/normtext/kanton/*.json` mit `quelleUrl` `…/api/<lang>/versions/<vid>/pdf_file` (8 Erlasse) ↔ `normen/kanton-gliederung-sidecar-luecke-2026-08-13.md`",
     "wert": "Diese Snapshots hängen an einer festen Versions-Id; ihr `fassungsToken` ist ein Inhalts-Hash des PDF und ändert sich NICHT, wenn das Portal längst eine neue Fassung führt — die Drift bleibt unbemerkt. Belegt 13.8.2026: SG-2808 (GKV sGS 941.12) hängt an Version 2808 / Stand 1.3.2012, amtlich gilt Version 3863 seit 1.7.2026. Übrige sieben am selben Datum fassungsgleich geprüft",
-    "rhythmus": "halbjährlich, bis ein Tor `current_version.id` gegen die Snapshot-Version prüft (Wurzel-Fix, §17)"
+    "rhythmus": "halbjährlich, bis ein Tor `current_version.id` gegen die Snapshot-Version prüft (Wurzel-Fix, §17). NACHTRAG 6.9.2026: Für die TARIF-Seite derselben Erlasse leistet das jetzt `check:tarif-drift` (es meldet SG-2808 automatisch, Lauf 6.9.2026); die SNAPSHOT-Seite (`public/normtext/kanton/*.json`) ist damit NICHT gedeckt — dieser Wurzel-Fix bleibt offen"
   },
   {
     "label": "Künftige Fassung BVV 3 (SR 831.461.3)",

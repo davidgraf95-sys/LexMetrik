@@ -25,6 +25,7 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 import { getStandardKanton } from '../../lib/einstellungen';
 import { usePaneKlasse } from '../layout/PaneKontext';
+import type { EinfacheFristMeldung } from './einfacheFristTexte';
 
 // ─── Allgemeiner Fristenrechner (Free) – UI ─────────────────────────────────
 // Reine Darstellung; sämtliche Rechtsregeln liegen in lib/allgemeineFrist.ts.
@@ -54,7 +55,12 @@ const DEFAULTS: State = {
 // Mechanik-Presets seit FE-3 in lib/allgemeineFrist.ts (MECHANIK_PRESETS) —
 // der Preset-Index des Tagerechners listet sie von dort (§5).
 
-export function AllgemeineFristForm() {
+export function AllgemeineFristForm({ live }: {
+  /** Live-Brücke des Tagerechners (Auftrag David 1.9.2026): die oben
+   *  BERÜHRTEN Felder überschreiben die geteilten Felder hier, damit der
+   *  Rechenweg automatisch mitrechnet. */
+  live?: EinfacheFristMeldung;
+} = {}) {
   const pk = usePaneKlasse();
   const [tab, setTab] = useState<'frist' | 'rueckwaerts' | 'zwischen'>('frist');
   // FE-3: Preset-Index-Links tragen den Fach-Preset-Schlüssel (fp=) —
@@ -96,6 +102,42 @@ export function AllgemeineFristForm() {
   const [zustellDatum, setZustellDatum] = useState('');
 
   const set = <K extends keyof State>(k: K, v: State[K]) => setForm((f) => ({ ...f, [k]: v }));
+
+  // Live-Brücke: Sync während des Renderns (Muster «adjusting state», wie die
+  // Hash-Sync der Tagerechner-Seite). Referenzvergleich genügt — die Seite
+  // hält `live` im State und erzeugt je Meldung genau EIN neues Objekt.
+  // Initial undefined: eine frisch (per Regime-Wechsel oben) gemountete Form
+  // übernimmt die Werte schon im ersten Render. Anwendungsregel (GP-Befund
+  // B2): oben Berührtes gewinnt immer; Unberührtes füllt nur Felder, die
+  // hier weder aus dem Permalink/Preset stammen noch von Hand geändert
+  // wurden. Der Unter-Tab bleibt, wo ihn die nutzende Person hingestellt
+  // hat (GP-Befund B5).
+  const [ausLinkFelder] = useState(() => {
+    try {
+      const aus = fristQueryLesen(window.location.search) ?? {};
+      return {
+        start: aus.start !== undefined,
+        laenge: aus.laenge !== undefined || !!famAusLink,
+        einheit: aus.einheit !== undefined || !!famAusLink,
+        kanton: aus.kanton !== undefined,
+      };
+    } catch { return { start: false, laenge: false, einheit: false, kanton: false }; }
+  });
+  // Mount-Stand als einmaliger State-Snapshot (kein Ref — Refs sind im
+  // Render tabu, react-hooks/refs); nie aktualisiert, nur Vergleichsbasis.
+  const [mountForm] = useState(form);
+  const [letzterLive, setLetzterLive] = useState<EinfacheFristMeldung | undefined>(undefined);
+  if (live && live !== letzterLive) {
+    setLetzterLive(live);
+    const n = { ...form };
+    let geaendert = false;
+    (['start', 'laenge', 'einheit', 'kanton'] as const).forEach((k) => {
+      if (live.beruehrt.includes(k) || (!ausLinkFelder[k] && form[k] === mountForm[k])) {
+        if (n[k] !== live.werte[k]) { (n as Record<string, unknown>)[k] = live.werte[k]; geaendert = true; }
+      }
+    });
+    if (geaendert) setForm(n);
+  }
 
   // P1.3 Validierung (sichtbare Meldungen statt stillem Verhalten)
   const fehler: string[] = [];

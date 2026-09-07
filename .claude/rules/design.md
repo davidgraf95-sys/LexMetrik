@@ -6,10 +6,28 @@ paths:
 ---
 # §13 Design → `DESIGN-REGLEMENT.md`
 
-<!-- Wortlaut unverändert aus CLAUDE.md §13 hierher verschoben (QS-HOOKS-AUSBAU
-     14.8.2026). Lädt pfad-gescoped bei Berührung der Darstellungsschicht. -->
-
 Jede sichtbare Änderung folgt `DESIGN-REGLEMENT.md` als Dach-Schicht; darunter
 konkretisieren die Domänen-Reglemente ihren Bereich. Bei Konflikt gewinnt das
 speziellere innerhalb seiner Domäne, sonst das Dach. Der hier tragende Satz —
 **jeder Rechtswert mit Norm, Link und Stand** (D1) — ist mit §7 verzahnt.
+
+## Handschrift «Sammlung» (6.9.2026) — zwölf Zeilen, Detail in §F0
+
+1. Literata liest, Archivo bedient, Mono nur Rechenweg/Code (Zahlen `tabular-nums`) → F0.4
+2. Papier/Tinte chromafrei-nah, Leiter `well<paper<surface<paper-raised` → F0.1
+3. Reinweiss existiert genau einmal: `--paper-raised`, die schwebende Ebene → §G d
+4. Vier Registerfarben `--reg-g/r/m/w` als Strich/Kante/Marke, nie Fläche, nie allein → F0.2
+5. Status bleibt `sage/slate/warn/danger`, keine Ad-hoc-Farbe → B3
+6. `--accent-*`/`--brass-*` sind **neutral = Tinte**; der Klassenname lügt, die Werte gelten → F0.3
+7. Alle Radien 0 (`rounded-full` ausgenommen); ein Schatten, nur `.lc-schwebeflaeche` → F0.5
+8. Trennung über Linien: 1 px `--rule-soft`, 2 px `--rule` — nicht über Kästen → F0.6
+9. Etiketten ohne Versalien und ohne Sperrsatz (Regel sitzt an `.lc-overline`) → F0.7
+10. Inline-Links unterstrichen; Navigation/Listen/Chips dürfen ohne, sagen es im Markup → F0.8
+11. Menü = Liste mit Linien + Zustandswort + Fokus-Strich; Feld = Unterstrich, Panel setzt es fort → F0.9
+12. Sprache: keine Slogans, keine Nutzenversprechen — Bezeichnungen, Zahlen mit Scope, Verben → §A6
+
+Normtext hat eigene Regeln: `DESIGN-REGLEMENT-NORMTEXT.md` §4b (Linien-Kanon,
+Lese-Typografie) und §4b-B (Farb-Wörterbuch) — §4b-B ist **gegatet**,
+`check:farbwelt` vergleicht seine Zahlen gegen die Messung. Aufgehobene Regeln
+(Brass als Marke, Wärme-Dramaturgie, Geist/Source Serif 4, Versal-Overlines,
+gerundete Kanten) stehen mit AUFGEHOBEN-Vermerk am Ort; Fundstellen in F0.10.

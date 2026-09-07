@@ -13,7 +13,7 @@ test('MaterialLeser einer neuen ESTV-KS-DB-Karte zeigt den sichtbaren amtlichen 
   await expect(page.getByRole('heading', { name: /Kreisschreiben Nr\. 49/ })).toBeVisible()
 
   // Prominenter, sichtbarer Live-Link zur amtlichen Fassung (§7c) mit der DAM-PDF-URL.
-  const link = page.getByRole('link', { name: /Zur amtlichen Fassung/ })
+  const link = page.getByRole('link', { name: /Amtliche Fassung ↗/ })
   await expect(link).toBeVisible()
   const href = await link.getAttribute('href')
   expect(href).toContain('estv.admin.ch/dam/')

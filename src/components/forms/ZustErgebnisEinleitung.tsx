@@ -151,7 +151,7 @@ export function ZustErgebnisEinleitung({ z }: { z: ZustaendigkeitFormModell }) {
                   <GruppenTitel>Passende Vorlage für Ihre Eingabe</GruppenTitel>
                   <p className="text-body-s text-ink-900 font-medium">
                     {k ? k.title : (ziel as { titel: string }).titel}
-                    {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">In Vorbereitung</span>}
+                    {!gebaut && <span className="lc-badge-geplant ml-2 align-middle">In Vorbereitung</span>}
                   </p>
                   {ziel.zusatz && <p className="text-body-s text-ink-700">{ziel.zusatz}</p>}
                   {linkZiel ? (
@@ -399,7 +399,7 @@ export function ZustErgebnisEinleitung({ z }: { z: ZustaendigkeitFormModell }) {
                 <ol className="space-y-2.5">
                   {fahrplan.map((s, i) => (
                     <li key={s.titel} className="flex gap-3">
-                      <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
+                      <span aria-hidden className="shrink-0 w-6 h-6 bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
                       <span>
                         <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
                         <span className="block text-body-s text-ink-600">{s.text}</span>

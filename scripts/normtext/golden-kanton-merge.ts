@@ -32,6 +32,9 @@ export interface GoldenKantonMerge {
   ersetzt: string[];
   /** Erlass-Präfixe der Ziel-Kantone OHNE frische Einträge — Altbestand bewahrt. */
   bewahrt: string[];
+  /** Erlass-Präfixe der Ziel-Kantone ohne frische Einträge UND ohne Snapshot-Datei
+   *  — aus dem Korpus zurückgezogen, darum korrekt fallengelassen. */
+  verworfen: string[];
   /** Ziel-Kantone, die im Lauf KEINEN einzigen frischen Eintrag lieferten. */
   fehlgeschlageneKantone: string[];
 }
@@ -43,11 +46,14 @@ export interface GoldenKantonMerge {
  * @param bestand  committeter Golden-Index (golden/normtext-snapshot.json)
  * @param frisch   Lauf-Index: nur die in DIESEM Lauf erzeugten Snapshot-Knoten
  * @param kantone  Ziel-Kantone des Teillaufs (--kanton=…)
+ * @param dateiExistiert Sonde auf den Projektionspfad (i.d.R. existsSync). Ohne
+ *   Sonde bleibt jeder ausgefallene Erlass bewahrt — das bisherige Verhalten.
  */
 export function mischeGoldenKanton(
   bestand: Record<string, string>,
   frisch: Record<string, string>,
   kantone: ReadonlySet<string>,
+  dateiExistiert: (pfad: string) => boolean = () => true,
 ): GoldenKantonMerge {
   // §8 (kein stiller Datenverlust). Ersetzbarkeit wird je ERLASS bestimmt, nicht
   // je Kanton: verworfen wird nur der Altbestand jener Snapshot-Dateien, die
@@ -76,9 +82,34 @@ export function mischeGoldenKanton(
     const p = erlassPraefix(k);
     if (p !== null) frischePraefixe.add(p);
   }
+  const zielPraefixe = new Set<string>();
+  for (const k of Object.keys(bestand)) {
+    const p = erlassPraefix(k);
+    if (p !== null && kantone.has(p.split('/')[1])) zielPraefixe.add(p);
+  }
+
+  // DIESELBE Datei-Sonde wie im Voll-Lauf (mischeGoldenVollLauf, s.u.), und aus
+  // demselben Grund: «0 frische Knoten» hat zwei Ursachen, die nur das
+  // Dateisystem trennt. Der Erlass ist AUSGEFALLEN (Snapshot-Datei liegt noch
+  // da → Altbestand bewahren, §8) oder er wurde aus dem Korpus ZURÜCKGEZOGEN
+  // (Datei fort → Golden-Knoten verwerfen, sonst verwaist der Index und die
+  // zurückgezogene Identität lebt in der Drift-Basis weiter, §5).
+  // Bis hierher kannte nur der Voll-Lauf diese Unterscheidung; ein Teillauf
+  // konnte einen Erlass darum GAR NICHT zurücknehmen — genau die Lage beim
+  // Rückzug der GL-Schreibweisen-Dublette (5.9.2026), die einen Voll-Lauf über
+  // alle 25 Kantone erzwungen hätte, um EINEN Schlüssel loszuwerden.
+  const zurueckgezogen = new Set<string>();
+  for (const p of zielPraefixe) {
+    if (frischePraefixe.has(p)) continue;
+    const pfad = snapshotDateiPfad(p);
+    // Unbekannte Präfix-Form: bewahren (nie stillschweigend löschen, §8).
+    if (pfad !== null && !dateiExistiert(pfad)) zurueckgezogen.add(p);
+  }
+
   const istErsetzbar = (key: string): boolean => {
     const p = erlassPraefix(key);
-    return p !== null && kantone.has(p.split('/')[1]) && frischePraefixe.has(p);
+    if (p === null || !kantone.has(p.split('/')[1])) return false;
+    return frischePraefixe.has(p) || zurueckgezogen.has(p);
   };
 
   const gemischt: Record<string, string> = {};
@@ -86,16 +117,14 @@ export function mischeGoldenKanton(
   for (const k of Object.keys(frisch)) gemischt[k] = frisch[k];
 
   const erfolgKantone = new Set(Object.keys(frisch).map((k) => k.split('/')[1]));
-  const zielPraefixe = new Set<string>();
-  for (const k of Object.keys(bestand)) {
-    const p = erlassPraefix(k);
-    if (p !== null && kantone.has(p.split('/')[1])) zielPraefixe.add(p);
-  }
 
   return {
     gemischt,
     ersetzt: [...zielPraefixe].filter((p) => frischePraefixe.has(p)).sort(),
-    bewahrt: [...zielPraefixe].filter((p) => !frischePraefixe.has(p)).sort(),
+    bewahrt: [...zielPraefixe]
+      .filter((p) => !frischePraefixe.has(p) && !zurueckgezogen.has(p))
+      .sort(),
+    verworfen: [...zurueckgezogen].sort(),
     fehlgeschlageneKantone: [...kantone].filter((k) => !erfolgKantone.has(k)).sort(),
   };
 }

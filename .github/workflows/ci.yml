@@ -172,10 +172,16 @@ jobs:
           # `vite-node`-Aufruf bräuchte Checkout + `npx -y npm@11 ci` bei JEDEM Lauf,
           # nicht nur bei code-fernen. Dieselbe Regel liegt zusätzlich als
           # reine, Vitest-getestete Funktion in scripts/ci/diff-klassieren.ts
-          # (§6.7-Beweis dort, `npx vitest run src/tests/ci-diff-klassieren.
+          # (§6.7-Beweis dort, `npx vitest run src/tests/steuerwerkzeuge.
           # test.ts`) — die Pfadliste hier ist wortgleich zu deren
           # CODE_FERNE_MUSTER, damit beide Fassungen nicht auseinanderlaufen.
           CODE_FERN_RE='(\.md$|^scripts/plan/|^scripts/cowork/|^\.claude/|^docs/|^bibliothek/|^messwerte/|^archiv/)'
+          # Trotz `.md`-Endung KEIN reiner Doku-Fall (Anlass PR #619, 2.9.2026):
+          # .claude/agents/lex-bau.md wurde von Hand geändert, der reine-.md-
+          # Kurzschluss unten stufte den Diff als `doku` ein, der Tore-Job
+          # (check:dispatch-klausel) lief nicht (§6.7). Wortgleich zu
+          # WERKZEUG_TROTZ_MD_MUSTER in scripts/ci/diff-klassieren.ts.
+          WERKZEUG_TROTZ_MD_RE='(^\.claude/agents/|^docs/token-oekonomie/dispatch-template\.md$)'
           # `merge_group` und `workflow_dispatch` fahren unverändert das volle
           # Programm: die Merge Queue prüft einen Stand, der gleich main WIRD,
           # und ein Handstart ist immer als Volllauf gemeint.
@@ -236,10 +242,12 @@ jobs:
               echo "Dateizahl ${anzahl} (leer oder an der API-Kappungsgrenze 300) — volles Programm."
               exit 0
             fi
-            # Doku-Menge: alle .md. (Die frühere inventar.ts-Ausnahme ist mit
-            # der Löschung von scripts/plan/inventar.ts obsolet — Plan-Neuschnitt
-            # 29.8.2026; die Messung dazu steht historisch im Kopf, lit. a.)
-            if grep -qvE '\.md$' push-dateien.txt; then
+            # Doku-Menge: alle .md UND keine davon Werkzeug-Konfiguration
+            # trotz .md-Endung (WERKZEUG_TROTZ_MD_RE, Anlass PR #619 oben).
+            # (Die frühere inventar.ts-Ausnahme ist mit der Löschung von
+            # scripts/plan/inventar.ts obsolet — Plan-Neuschnitt 29.8.2026;
+            # die Messung dazu steht historisch im Kopf, lit. a.)
+            if grep -qvE '\.md$' push-dateien.txt || grep -qE "$WERKZEUG_TROTZ_MD_RE" push-dateien.txt; then
               # Nicht rein Doku — app-ferne Zusatz-Klasse prüfen (CODE_FERN_RE,
               # Kopf dieses Schritts) statt sofort das volle Programm.
               if grep -qvE "$CODE_FERN_RE" push-dateien.txt; then
@@ -252,7 +260,7 @@ jobs:
               fi
             else
               echo "art=doku" >> "$GITHUB_OUTPUT"
-              echo "Reiner Doku-Push (${anzahl} Datei(en)) — Merge-Schutz, Testtreue und check:plan laufen ECHT, restliche Code-Tore quittieren."
+              echo "Reiner Doku-Push (${anzahl} Datei(en)) — Merge-Schutz, Testtreue, check:plan, check:steuerdeckel und check:bibliothek laufen ECHT, restliche Code-Tore quittieren."
             fi
             exit 0
           fi
@@ -269,9 +277,10 @@ jobs:
             echo "LEERER DIFF (changed_files=0) — genau die Klasse, die bis 3.8.2026 gar keinen Lauf und damit einen ewig 'expected'en Required-Kontext erzeugte (PR #417). Kontexte werden jetzt gemeldet."
             exit 0
           fi
-          if grep -qvE '\.md$' pr-dateien.txt; then
-            # Nicht rein .md — app-ferne Zusatz-Klasse prüfen (CODE_FERN_RE,
-            # Kopf dieses Schritts).
+          if grep -qvE '\.md$' pr-dateien.txt || grep -qE "$WERKZEUG_TROTZ_MD_RE" pr-dateien.txt; then
+            # Nicht rein .md (oder Werkzeug-Konfiguration trotz .md-Endung,
+            # WERKZEUG_TROTZ_MD_RE oben, Anlass PR #619) — app-ferne
+            # Zusatz-Klasse prüfen (CODE_FERN_RE, Kopf dieses Schritts).
             if grep -qvE "$CODE_FERN_RE" pr-dateien.txt; then
               echo "art=code" >> "$GITHUB_OUTPUT"
               echo "App-nahe Dateien im Diff — volles Programm:"
@@ -287,7 +296,7 @@ jobs:
             fi
           else
             echo "art=doku" >> "$GITHUB_OUTPUT"
-            echo "Reine .md-Änderung (${anzahl} Datei(en)) — Merge-Schutz und check:plan laufen ECHT, restliche Code-Tore quittieren."
+            echo "Reine .md-Änderung (${anzahl} Datei(en)) — Merge-Schutz, check:plan, check:steuerdeckel und check:bibliothek laufen ECHT, restliche Code-Tore quittieren."
           fi
 
   bau:
@@ -372,6 +381,71 @@ jobs:
         run: npm run check:merge-schutz
       - name: Testtreue (§6.3 — refactor-Commits ändern keine Tests)
         run: npm run check:testtreue
+      # Squash-Falle (Beleg 7.9.2026, PR #739): GitHub setzt beim Squash-Merge ALLE
+      # Commit-Betreffs des PR in die Commit-Message von main. Trägt EINER davon
+      # `[skip ci]`, überspringt GitHub auf main jeden Workflow — kein CI, KEIN
+      # DEPLOY, keine Plan-Buchung; der nächste Doku-Push meldet dann art=doku und
+      # deployt ebenfalls nicht. e2ac7def9 (287 Dateien) lag so unausgeliefert.
+      # Darum Required-Tor: kein Commit im PR darf `[skip ci]`/`[ci skip]` tragen.
+      - name: Squash-Schutz (kein [skip ci] in PR-Commits)
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          treffer=$(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR}/commits" --paginate \
+            --jq '.[] | select(.commit.message | test("\\[(skip ci|ci skip)\\]"; "i")) | "\(.sha[0:9]) \(.commit.message | split("\n")[0])"' || true)
+          if [ -n "$treffer" ]; then
+            echo "::error::Squash-Schutz ROT — Commits mit [skip ci] im PR (landen sonst in der main-Message und schalten CI+Deploy stumm):"
+            echo "$treffer"
+            echo "Abhilfe: Betreff umschreiben (Rebase) oder den PR mit --merge/--rebase statt Squash landen."
+            exit 1
+          fi
+          echo "Squash-Schutz grün — kein [skip ci] in den PR-Commits."
+      # Fremd-PR-Tor (T6, 3.9.2026, fahrplaene/FAHRPLAN-FREMDAGENTEN.md §2
+      # Phase 1): nur Branches im Jules-Muster (19-stellige Task-ID im Namen oder
+      # Präfix `jules-`/`jules/`) sind
+      # zuständig — Regex-Erkennung im Shell-Step, weil `if:` keine Regex kann.
+      # Bewusst KEIN eigenes check-*.ts (Steuerungs-Deckel, §17-Gegengewicht):
+      # Regel 1 = bestehendes scripts/analyse/test-assertion-diff.ts (Jules darf
+      # Tests verschieben, nie ändern), Regel 2 = keine Datei ausserhalb src/**
+      # (Risikopfade deckt check:merge-schutz). Exit ≠ 0 des Diff-Skripts (1 oder
+      # 2 = Referenz fehlt) ist rot — ein Tor ohne Referenz ist kein Tor.
+      - name: Fremd-PR-Tor (Assertion-Diff + Dateigrenzen, Jules-Branches)
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          # Jules-Muster (Beleg 4.9.2026, PR #647): `jules-<19 Ziffern>-<8 hex>` ODER
+          # `<slug>-<19 Ziffern>` — also: 19-Ziffern-Lauf irgendwo oder Präfix `jules-`/`jules/`.
+          # NICHT «jules irgendwo im Namen»: Beleg 4.9.2026, PR #656 (`docs/jules-weiche`) wurde
+          # fälschlich als Fremd-PR geprüft und rot (Dateien ausserhalb src/**).
+          if ! [[ "$HEAD_REF" =~ [0-9]{19} || "$HEAD_REF" =~ ^jules[-/] ]]; then
+            echo "Fremd-PR-Tor: nicht zuständig ($HEAD_REF)"; exit 0
+          fi
+          git fetch -q origin main
+          basis=$(git merge-base origin/main HEAD)
+          npx vite-node scripts/analyse/test-assertion-diff.ts "$basis" HEAD src/tests/
+          ausserhalb=$(git diff --name-only "$basis"..HEAD | grep -v '^src/' || true)
+          if [ -n "$ausserhalb" ]; then
+            echo "Fremd-PR-Tor ROT — Jules-Branch ändert Dateien ausserhalb src/**:"; echo "$ausserhalb"; exit 1
+          fi
+          # Regel 3 (Beleg PR #662, 4.9.2026): Kommentar-Bilanz — Jules erreichte die
+          # Zeilen-Grenze durch Löschen von 197 Kommentarzeilen (datierte Belege, Rot-
+          # Beweis-Verweise). Verschieben ist erlaubt (Summe bleibt), Löschen nicht.
+          vorher=0; nachher=0
+          for f in $(git diff --name-only --diff-filter=DM "$basis"..HEAD -- 'src/*.ts' 'src/*.tsx'); do
+            vorher=$((vorher + $(git show "$basis:$f" | grep -cE '^\s*(//|/\*|\*)' || true)))
+          done
+          for f in $(git diff --name-only --diff-filter=AM "$basis"..HEAD -- 'src/*.ts' 'src/*.tsx'); do
+            nachher=$((nachher + $(git show "HEAD:$f" | grep -cE '^\s*(//|/\*|\*)' || true)))
+          done
+          if [ "$nachher" -lt "$vorher" ]; then
+            echo "Fremd-PR-Tor ROT — Kommentar-Bilanz sinkt ($vorher → $nachher Kommentarzeilen): Kommentare sind Inhalt, verschieben ja, löschen nie."; exit 1
+          fi
+          echo "Kommentar-Bilanz ok ($vorher → $nachher)"
+          echo "Fremd-PR-Tor grün ($HEAD_REF, Basis ${basis:0:8})"
       - name: Plan-Inventar-Konsistenz (Node-only, günstig — darum vor tsc/Build)
         run: npm run check:plan
       # Steuerungs-Deckel (David 15.8.2026 «Steuerungszuwachs minimieren, und
@@ -395,8 +469,11 @@ jobs:
       # ── Katalog-Inventur ENTFERNT (14.8.2026, QS-PLAN-EINFACH) ──────────────
       # Das Skript hat keinen Abbruchpfad und konnte nie rot werden (§6.7) —
       # es heisst jetzt ehrlich `report:inventur` und läuft auf Abruf.
+      # LÄUFT IMMER (auch art=doku), seit Bug-Check #626 (2.9.2026): ein reiner
+      # bibliothek/**-Diff ist selbst .md-only und wurde vom `art != 'doku'`-
+      # Gate bisher komplett übersprungen — das einzige md-lesende Tor, das
+      # NICHT wie check:plan/check:steuerdeckel schon unconditional lief.
       - name: Bibliotheks-Standards (S1–S10)
-        if: needs.diff.outputs.art != 'doku'
         run: npm run check:bibliothek
       # ── check:verfall STEHT HIER BEWUSST NICHT MEHR (3.8.2026, K7) ──────────
       # Es ist das einzige Tor im PR-Pfad, dessen Ergebnis von der WANDUHR
@@ -466,6 +543,12 @@ jobs:
       - name: Bezugs-Schicht (Facetten · Projektion · Grundgesamtheit)
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:bezuege
+      # N0a: die Gegenrichtung der Bezugs-Shards (Entscheid -> kantonaler
+      # Erlass). Eigener Schreib-Zweig, darum eigenes Tor: eine Projektion,
+      # die niemand gegen ihre Bezugsgroessen haelt, driftet still.
+      - name: Kantonale Zitat-Bruecke (Referenz-Integritaet)
+        if: needs.diff.outputs.art != 'doku'
+        run: npm run check:normkeys-kanton
       # Selbstschutz der Tor-Landschaft: meldet neue Tore ohne CI-Lauf.
       # Lief selbst nur lokal — der Melder war damit so unsichtbar wie der
       # Defekt, den er meldet (F2b rekursiv).
@@ -475,6 +558,13 @@ jobs:
       - name: Dispatch-Pflichtklausel (§0-Generator lauffähig)
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:dispatch-klausel
+      # Lizenz-Tor (QS-VERWENDEN V1b, 2.9.2026): prüft ALLE installierten
+      # Abhängigkeiten (prod + dev) gegen die Allowlist permissiver Lizenzen —
+      # unabhängig vom Diff-Inhalt (npm ls --all liest node_modules, nicht den
+      # PR-Diff), darum ohne die art!=doku-Schranke der Nachbar-Tore. Vorher
+      # nur lokal in check:seriell/gate — Verdrahtung war Folgeschritt V1b.
+      - name: Lizenz-Tor (Abhängigkeiten)
+        run: npm run check:lizenzen
       # ── R1-Nachzug (20.7.2026): die bis dahin unsichtbaren Tore ─────────────
       # Das Tor-Wirksamkeits-Audit (bibliothek/, PR #318) hat die 20 Allowlist-
       # Begruendungen per Sabotage geprueft: 17 halten NICHT, 2 sind gar keine
@@ -499,15 +589,41 @@ jobs:
       - name: UI-Normzitate (Korpus-Abgleich)
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:ui-normzitate
+      # Verweis-Inventar (V-1, W2·20-VERWEIS-SCHAERFE, 31.8.2026): wie viele
+      # Verweis-Stellen der Normtext-Korpus trägt und wie der Leser sie auflöst
+      # (SELF/FREMD/TEXT je Formklasse), gegen eine committete Basislinie.
+      # Offline, ~1 s über alle 1458 Snapshots. Muss VOR den Merge: die Guards
+      # der Auflösung sind im Tor TRANSKRIBIERT, und nur hier fällt auf, wenn
+      # jemand `NormText.tsx` ändert, ohne die Messung nachzuziehen (SHA-Anker).
+      - name: Verweis-Inventar (Basislinie)
+        if: needs.diff.outputs.art != 'doku'
+        run: npm run check:verweis-inventar
       - name: Import-Zyklen
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:zyklen
       - name: Normtext-Projektionen (Vollständigkeit · Zähler · Historie · Revisionen)
         if: needs.diff.outputs.art != 'doku'
-        run: npm run check:vollstaendigkeit && npm run check:zaehler && npm run check:historie && npm run check:revisionen && npm run check:artikel-revisionen
+        run: npm run check:vollstaendigkeit && npm run check:zaehler && npm run check:bezuege-zaehler && npm run check:historie && npm run check:revisionen && npm run check:artikel-revisionen
       - name: Normtext-Struktur (Tabellen · Grundart · Invarianten)
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:tabellen && npm run check:grundart && npm run check:invarianten
+      # ZH-Vollständigkeit, ARTEFAKT-Teil (ZH-Fix-Runde 3, B7). Das Tor hält den
+      # Snapshot gegen das amtliche PDF; sein PDF-Teil braucht den Roh-PDF-Cache
+      # `daten/pdf-cache-zh/` (gitignored) und läuft darum lokal im `gate` und
+      # im Netz-Teil unter `check:netz`. Was OHNE PDF entscheidbar ist — kein
+      # Block endet auf einem Trennstrich, kein Gliederungstitel steht im
+      # Normtext —, gehört in jeden PR: genau diese zwei Klassen sind in den
+      # Runden 1–3 dreimal aufgetreten.
+      - name: ZH-Vollständigkeit (Artefakt-Teil, ohne PDF)
+        if: needs.diff.outputs.art != 'doku'
+        run: npm run check:zh-vollstaendigkeit -- --artefakt
+      # Randtitel/Gliederung der ZH-Sidecars (R1, 2.9.2026). Der Artefakt-Teil
+      # braucht kein PDF: er haelt die Sidecars gegen die Snapshots und gegen
+      # die eingefrorene Deckungs-Messreihe. Die Zweitlesung aus dem Roh-PDF
+      # laeuft lokal im `gate` (Cache ist gitignored).
+      - name: ZH-Randtitel (Artefakt-Teil, ohne PDF)
+        if: needs.diff.outputs.art != 'doku'
+        run: npm run check:zh-randtitel -- --artefakt
       # Verdrahtet 15.8.2026 (QS-AUTOMATIK-PARITAET lit. b): diese drei standen
       # bis dahin NUR in fedlex-frische.yml — einem schedule-Workflow. Das ist
       # Wächter-, nicht PR-Deckung: er meldet Korpus-Drift erst NACH dem Merge
@@ -551,15 +667,20 @@ jobs:
       # beweist, dass jede der 8377 Dateien byte-gleich zurückprojiziert wird.
       # Auch dieses Tor lief bis dahin nur in fedlex-frische.yml (Wächter, post
       # merge). Gemessen 15.8.2026 unter CI=1: 3.4 s, kein daten/*.db nötig.
-      - name: Datenhaltungs-Manifest · Byte-Parität DB↔Projektion
+      # check:feed kam 5.9.2026 dazu (QS-VERWENDEN V5b, Nachzug zu H-2/2.9.2026):
+      # bis dahin stand es NUR in der Allowlist von check-tor-paritaet.ts, mit dem
+      # Vermerk, die Verdrahtung sei ein eigener nachgelagerter Schritt. Prüft
+      # `public/feed.xml` gegen den deterministischen Generator (`--check`,
+      # keine Netz-/DB-Abhängigkeit) — dieselbe Fehlerklasse wie das Tor daneben.
+      - name: Datenhaltungs-Manifest · Byte-Parität DB↔Projektion · Feed
         if: needs.diff.outputs.art != 'doku'
-        run: npm run check:datenhaltung && npm run check:paritaet
+        run: npm run check:datenhaltung && npm run check:paritaet && npm run check:feed
       - name: SEO-Index · Verfall-UI
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:seo-index && npm run check:verfall-ui
       - name: Kurzquittung (Doku-/Leer-Diff)
         if: needs.diff.outputs.art == 'doku'
-        run: echo "Kein Code im Diff — Merge-Schutz und check:plan sind oben ECHT gelaufen; die übrigen Code-Tore sind nicht betroffen."
+        run: echo "Kein Code im Diff — Merge-Schutz, check:plan, check:steuerdeckel und check:bibliothek sind oben ECHT gelaufen; die übrigen Code-Tore sind nicht betroffen."
 
   e2e:
     name: Browser-Smoke Shard ${{ matrix.gruppe }}/8 (Playwright)
@@ -617,9 +738,43 @@ jobs:
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      # Ein Mirror-Stall im apt-Teil von `--with-deps` hat am 5.9.2026 den
+      # Shard 5 gekippt: `Fetched 21.1 MB in 22min 56s (15.3 kB/s)` —
+      # xfonts-scalable tröpfelte von azure.archive.ubuntu.com, während die
+      # sieben übrigen Shards DESSELBEN Laufs dieselben Pakete in 0–8 s holten
+      # (Lauf 33937186925, Job 101227653560). Der Playwright-Lauf startete
+      # darum erst 02:14:11 — 24 min nach Job-Start — und wurde 50 s später
+      # vom 25-min-Deckel gekappt: «cancelled», kein einziger Test bewertet.
+      # Die Ursache ist NICHT der Spec-Inhalt; es ist genau die
+      # Runner-Stall-Klasse, die `e2e/shard-gruppen.json` am 15.8.2026 als
+      # offenen §17-Punkt notiert hat («Indiz für Runner-Queueing/Kontention,
+      # nicht für eine Spec-Schieflage») — hier zum ersten Mal mit Log-Beleg.
+      #
+      # WURZEL-FIX statt Deckel-Erhöhung: je Versuch ein hartes 5-min-Limit,
+      # zwei Versuche. Ein hängender Spiegel kostet damit 10 statt 23 min, und
+      # der Retry ist billig — apt hat die bereits geholten .debs im Cache.
+      # Rechnung gegen den 25-min-Job-Deckel: 10 min Install (worst case)
+      # + ~8 min langsamster Shard + ~2 min Rüstzeit = 20 min, der Deckel
+      # bleibt also scharf. ROT BLEIBT ROT (§6.7): scheitern beide Versuche,
+      # endet der Schritt rot mit ::error — die Schriftart-Pakete werden NICHT
+      # übersprungen, weil fehlende Fonts die Pixel-Vergleiche still verschöben.
       - name: Playwright-Browser (Chromium)
         if: needs.diff.outputs.art == 'code'
-        run: npx playwright install --with-deps chromium
+        run: |
+          # apt geduldig, aber nicht endlos: Retries und Socket-Timeout greifen
+          # bei STILLE. Gegen das Schneckentempo oben (15.3 kB/s bei fliessenden
+          # Daten) kennt apt keine Option — dagegen hilft nur das `timeout`.
+          echo 'Acquire::Retries "3"; Acquire::http::Timeout "30"; Acquire::https::Timeout "30";' \
+            | sudo tee /etc/apt/apt.conf.d/99-lexmetrik-geduld > /dev/null
+          for versuch in 1 2; do
+            if timeout 300 npx playwright install --with-deps chromium; then
+              echo "playwright install --with-deps: Versuch ${versuch}/2 durch."
+              exit 0
+            fi
+            echo "::warning::playwright install --with-deps: Versuch ${versuch}/2 nach spätestens 5 min abgebrochen (Mirror-Stall?) — Wiederholung."
+          done
+          echo "::error::playwright install --with-deps kam in zwei Versuchen à 5 min nicht durch — Paketspiegel gestört, Shard rot (nicht still übersprungen)."
+          exit 1
       # `npm run preview` serviert das heruntergeladene dist/ (kein Rebuild);
       # jeder Job fährt nur die Specs SEINER dauer-gepackten Gruppe seriell
       # (workers:1 bleibt, damit die Contention NICHT in EINEN Runner zurückkehrt)

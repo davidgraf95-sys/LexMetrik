@@ -16,6 +16,9 @@ import type { DatabaseSync } from 'node:sqlite';
 import {
   klemmeFenster,
   baueFtsMatch,
+  baueFtsSpaltenMatch,
+  FTS_SPALTEN_HAUPT,
+  FTS_SPALTEN_NEBEN,
   naechsterOffset,
   formeArtikelTreffer,
   formeEntscheidTreffer,
@@ -33,13 +36,19 @@ import {
 
 export * from './suche-kern';
 
-/** Artikel-Volltextsuche über fts_artikel (bm25-Ranking, paginiert, Volltext-frei). */
+/** Artikel-Volltextsuche über fts_artikel (topische Stufung + bm25, paginiert, Volltext-frei). */
 export function sucheArtikel(db: DatabaseSync, query: string, opt?: SucheOptionen): SucheAntwort<ArtikelTreffer> {
   const { limit, offset } = klemmeFenster(opt);
   const match = baueFtsMatch(query);
   if (!match) return { treffer: [], gesamt: 0, naechsteSeite: null };
+  // Die Stufen-Ausdrücke zerlegen dieselben Terme wie `match` und können darum nur
+  // dann null sein, wenn `match` es auch wäre. Der Fallback hält die Abfrage gültig.
+  const haupt = baueFtsSpaltenMatch(query, FTS_SPALTEN_HAUPT) ?? match;
+  const neben = baueFtsSpaltenMatch(query, FTS_SPALTEN_NEBEN) ?? match;
   const gesamt = (db.prepare(SQL_ARTIKEL_COUNT).get(match) as { n: number }).n;
-  const rows = db.prepare(SQL_ARTIKEL_TREFFER).all(match, limit, offset) as unknown as ArtikelRohzeile[];
+  const rows = db
+    .prepare(SQL_ARTIKEL_TREFFER)
+    .all(match, haupt, neben, limit, offset) as unknown as ArtikelRohzeile[];
   return {
     treffer: rows.map((r) => formeArtikelTreffer(r, query)),
     gesamt,

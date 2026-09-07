@@ -1,4 +1,5 @@
 import { DETAILGRAD_OPTIONEN, type Detailgrad } from '../../lib/vorlagen/detailgrad';
+import { SelectionGrid } from '../ui/SelectionGrid';
 
 // ─── Varianten-Kopf (FAHRPLAN-VERTRAGS-VARIANTEN P0) ────────────────────────
 // Segment-Schalter über dem Stepper: Untertyp (optional, regime-treue Weiche)
@@ -22,37 +23,31 @@ export function VariantenKopf<T extends string>({
   detailgrad: Detailgrad;
   onDetailgrad: (v: Detailgrad) => void;
 }) {
+  // R5-F2 (6.9.2026): Kasten (Rahmen rundum + Radius + eigene Füllung) →
+  // Linien-Block. Der Kopf-Schalter ist kein Objekt auf dem Papier, sondern
+  // ein Abschnitt: eine weiche Linie oben und unten, sonst Weissraum
+  // (§5 «Linien statt Flächen»).
   return (
-    <div className="rounded-xl border border-line bg-surface-raised p-4 space-y-3">
+    <div className="border-y border-rule-soft py-4 space-y-3">
       {untertypOptionen && untertypOptionen.length > 0 && (
         <fieldset className="space-y-1.5">
           <legend className="lc-overline">{untertypLabel ?? 'Untertyp'}</legend>
-          <div className="flex flex-wrap gap-2">
-            {untertypOptionen.map((o) => (
-              <button key={o.id} type="button" onClick={() => onUntertyp?.(o.id)}
-                aria-pressed={untertyp === o.id}
-                className={`rounded-lg border px-3 py-1.5 text-left text-body-s ${untertyp === o.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
-                <span className="font-medium block leading-tight">{o.label}</span>
-                {/* ink-600 (nicht ink-500): das Unterlabel sitzt im selektierten
-                    Chip auf bg-brass-100 — ink-500 = 4.4:1 (axe serious), ink-600 = 6.3:1. */}
-                {o.sub && <span className="text-ink-600 text-xs">{o.sub}</span>}
-              </button>
-            ))}
-          </div>
+          {/* B3-4 (R3-α, 31.8.2026): eigene Kachel-Anatomie → der EINE
+              Baustein. Die ink-600-Messung des Unterlabels ist mit dorthin
+              gewandert, `min-h-11` kommt neu dazu. */}
+          <SelectionGrid<T>
+            className="flex flex-wrap gap-2"
+            items={untertypOptionen.map((o) => ({ code: o.id, label: o.label, sub: o.sub }))}
+            value={untertyp ?? ''} onSelect={(c) => onUntertyp?.(c)} />
         </fieldset>
       )}
       <fieldset className="space-y-1.5">
         <legend className="lc-overline">Detailgrad</legend>
-        <div className="grid grid-cols-3 gap-2 max-w-xl">
-          {DETAILGRAD_OPTIONEN.map((o) => (
-            <button key={o.id} type="button" onClick={() => onDetailgrad(o.id)}
-              aria-pressed={detailgrad === o.id}
-              className={`rounded-lg border px-3 py-2 text-left text-body-s ${detailgrad === o.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
-              <span className="font-medium block leading-tight">{o.label}</span>
-              <span className="text-ink-600 text-xs">{o.sub}</span>
-            </button>
-          ))}
-        </div>
+        {/* dito B3-4 */}
+        <SelectionGrid
+          className="grid grid-cols-3 gap-2 max-w-xl"
+          items={DETAILGRAD_OPTIONEN.map((o) => ({ code: o.id, label: o.label, sub: o.sub }))}
+          value={detailgrad} onSelect={onDetailgrad} />
       </fieldset>
     </div>
   );

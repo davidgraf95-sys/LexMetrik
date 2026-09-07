@@ -17,9 +17,48 @@
 // Kopplung, die der e2e-Lauf voraussetzt.
 import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
+import ts from 'typescript'
 
 const CSS = readFileSync('src/index.css', 'utf8')
 const TOPBAR = readFileSync('src/components/layout/Topbar.tsx', 'utf8')
+
+/**
+ * Element-Ebene statt Zeichen-Fenster (Fixer 1h, §17-Wurzelfix zum offenen
+ * Punkt «Aus Fixer 1e»): die alte Sonde suchte `TOPBAR.match(/<header[\s\S]
+ * {0,300}?>/)` — ein Regex-Fenster von 300 Zeichen ab dem ersten `<header`.
+ * Trägt das `<header>`-Tag mehr als 300 Zeichen Attribute VOR der Klasse,
+ * findet der Regex kein `>` im Fenster und liefert `undefined` — die Sonde
+ * verfehlt die Klasse lautlos, ohne je rot zu werden (dieselbe Fehlerklasse
+ * wie beim Klammerzählen in `scripts/analyse/test-assertion-diff.ts`, dort
+ * bereits auf die TypeScript-Compiler-API umgestellt: String-/JSX-Literale
+ * sind EIGENE Knoten, keine Zeichenkette zum Zählen/Fenstern).
+ *
+ * Der TypeScript-Compiler kennt das JSX-Opening-Element als eigenen Knoten
+ * mit einer eigenen Attribut-Liste — die Prüfung sitzt GENAU am `<header>`,
+ * unabhängig davon, wie lang seine Attribute sind.
+ */
+function ersterHeaderTraegtKlasse(quelltext: string, klasse: string): boolean {
+  const sf = ts.createSourceFile('Topbar.tsx', quelltext, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+  let treffer: boolean | null = null;
+  const besuch = (knoten: ts.Node) => {
+    if (treffer !== null) return;
+    if (
+      (ts.isJsxOpeningElement(knoten) || ts.isJsxSelfClosingElement(knoten))
+      && knoten.tagName.getText(sf) === 'header'
+    ) {
+      const klassAttr = knoten.attributes.properties.find(
+        (p): p is ts.JsxAttribute => ts.isJsxAttribute(p) && p.name.getText(sf) === 'className',
+      );
+      const text = klassAttr?.initializer ? klassAttr.initializer.getText(sf) : '';
+      treffer = text.includes(klasse);
+      return;
+    }
+    ts.forEachChild(knoten, besuch);
+  };
+  besuch(sf);
+  if (treffer === null) throw new Error('kein <header>-Element in der Quelldatei gefunden');
+  return treffer;
+}
 
 /** Der Inhalt des `@media print`-Blocks, Kommentare entfernt. */
 function druckBlock(): string {
@@ -56,9 +95,31 @@ describe('Z2 — Druck der Fundstelle', () => {
 
   it('Topbar trägt die Klasse, auf die die Druckregel zielt', () => {
     expect(TOPBAR, 'Topbar.tsx muss lc-glass führen, sonst greift die Druckregel ins Leere').toContain('lc-glass')
-    // …und zwar am <header> selbst, nicht irgendwo im Baum.
-    const headerTag = TOPBAR.match(/<header[\s\S]{0,300}?>/)?.[0] ?? ''
-    expect(headerTag, '<header> der Topbar trägt lc-glass').toContain('lc-glass')
+    // …und zwar am <header> selbst, nicht irgendwo im Baum — auf Element-Ebene
+    // (JSX-Attribut-Knoten), nicht über ein 300-Zeichen-Regex-Fenster (s. o.).
+    expect(ersterHeaderTraegtKlasse(TOPBAR, 'lc-glass'), '<header> der Topbar trägt lc-glass').toBe(true)
+  })
+
+  // ROT-PROBE (§6.7 — die Sonde muss beide Enden erkennen können):
+  it('NEGATIV-KONTROLLE: erkennt eine fehlende Klasse noch am selben <header>', () => {
+    // `lc-glass` steht VORHER schon in einem erklärenden Kommentar (s. o.) —
+    // ein blosses `.replace('lc-glass', …)` träfe den Kommentar, nicht das Tag.
+    // Ziel ist die tatsächliche className am <header> selbst.
+    const ohneKlasse = TOPBAR.replace('z-dropdown lc-glass', 'z-dropdown irgendwas-anderes')
+    expect(ohneKlasse, 'Beleg: die Ersetzung hat wirklich am <header>-Tag gegriffen').not.toContain('<header className="sticky top-0 z-dropdown lc-glass"')
+    expect(ersterHeaderTraegtKlasse(ohneKlasse, 'lc-glass')).toBe(false)
+  })
+
+  // ROT-PROBE für den WURZEL-FUND: dieselbe Konstellation, die die ALTE
+  // 300-Zeichen-Regex-Sonde lautlos verfehlt hätte (langes Attribut-Fenster
+  // VOR der Klasse), zeigt hier ROT für die alte Sonde und GRÜN für die neue
+  // Element-Sonde — belegt am selben `<header>`-Fall, nicht nur behauptet.
+  it('NEGATIV-KONTROLLE: die alte 300-Zeichen-Regex hätte ein langes Attribut-Fenster verfehlt', () => {
+    const langesHeader = `<header ${'data-x="y" '.repeat(40)}className="lc-glass">`
+    expect(langesHeader.length, 'Beleg: das Tag ist wirklich länger als das alte 300-Zeichen-Fenster').toBeGreaterThan(300 + '<header className="lc-glass">'.length)
+    const alteSonde = langesHeader.match(/<header[\s\S]{0,300}?>/)?.[0] ?? ''
+    expect(alteSonde, 'ROT-BELEG: die alte Regex-Sonde verfehlt die Klasse im langen Tag').not.toContain('lc-glass')
+    expect(ersterHeaderTraegtKlasse(langesHeader, 'lc-glass'), 'die neue Element-Sonde findet die Klasse trotzdem').toBe(true)
   })
 
   it('druckt absolute Quell-URLs als Text (Fundstelle bleibt auf Papier)', () => {

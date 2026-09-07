@@ -65,6 +65,7 @@ KEIN WARTE-STOPP (F5, 3. Vorfall 31.8.2026): Beende deinen Turn NIE im Zustand �
   mehrfach zum Abschluss aufgefordert werden).
 
 TABU: kein Merge, kein Deploy, keine Änderung an .claude/ oder CLAUDE.md.
+QUITTUNG: Ein Bauer quittiert NIE seine eigene Arbeit — kein gegenpruefung:ok, keine Zeile im Gegenprüfungs-Register, kein Gegenpruefung:-Trailer (F10, PR #616 2.9.2026); Verdikt kommt vom Prüf-Agenten, Quittung setzt der Orchestrator.
 RÜCKGABE: geänderte Dateien (absolute Pfade) · Tor-Ergebnisse mit Exit-Code · offene Punkte.
 
 Standard-Routing: Stufe stark (aktuell model=opus), effort=high — Abweichungen setzt der Orchestrator im Call.

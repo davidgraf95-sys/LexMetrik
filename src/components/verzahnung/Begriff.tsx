@@ -45,7 +45,7 @@ export function Begriff({ schluessel, children, ariaLabel, className = '' }: {
         aria-describedby={offen ? id : undefined}
         aria-expanded={offen}
         onClick={() => setOffen((v) => !v)}
-        className={`cursor-help underline decoration-dotted decoration-ink-300 underline-offset-2 hover:decoration-brass-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-600 ${className}`}
+        className={`cursor-help underline decoration-dotted decoration-ink-300 underline-offset-2 hover:decoration-brass-500 ${className}`}
       >
         {children ?? eintrag.begriff}
       </button>
@@ -53,7 +53,7 @@ export function Begriff({ schluessel, children, ariaLabel, className = '' }: {
         <span
           role="tooltip"
           id={id}
-          className="lc-card absolute left-0 top-full z-30 mt-1 block w-64 max-w-[80vw] p-3 text-left text-body-s font-normal normal-case tracking-normal text-ink-700"
+          className="lc-popover absolute left-0 top-full z-dropdown mt-1 block w-64 max-w-[80vw] p-3 text-left text-body-s font-normal normal-case tracking-normal text-ink-700"
         >
           <span className="lc-overline mb-1 block text-brass-700">{eintrag.begriff}</span>
           {eintrag.erklaerung}

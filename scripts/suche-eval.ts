@@ -40,7 +40,7 @@ import { readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as flex from 'flexsearch';
-import { baueIndex } from './such-index-generieren';
+import { baueIndex, EBENEN } from './such-index-generieren';
 import { baueSuchFn } from '../src/lib/suche/artikelVolltext';
 import { baueNormIndex, parseNormQuery, type NormErlass } from '../src/lib/suche/normQuery';
 import { baueBgeIndex, parseBgeSprung } from '../src/lib/suche/bgeQuery';
@@ -176,7 +176,13 @@ function main(): void {
   const gold = ladeGold();
 
   // Produktions-Pipeline instanziieren (FRISCHER Index wie im Gate-Test).
-  const eintraege = baueIndex().eintraege;
+  // ÜBER BEIDE EBENEN, ausdrücklich (K3-Scharfschaltung 1.9.2026): der Generator
+  // liefert per Default nur noch den Bund. Dieses Werkzeug misst die Rang-Qualität
+  // gegen ein Testset, das seit W2·5 kantonale Fälle enthält; liesse man es dem
+  // Default folgen, verglichen die Messreihen ab heute stillschweigend einen
+  // anderen Korpus als gestern — und der Rückgang läse sich als Ranking-Regress.
+  // Was die AUSLIEFERUNG trägt, misst check:perf-budget, nicht dieses Werkzeug.
+  const eintraege = baueIndex(EBENEN).eintraege;
   const artikelSuche = baueSuchFn(eintraege as never, FlexSearch);
   const erlasse = JSON.parse(readFileSync(resolve(wurzel, 'public/normtext/register.json'), 'utf8')).erlasse as unknown[];
   const entscheide = JSON.parse(readFileSync(resolve(wurzel, 'public/rechtsprechung/register.json'), 'utf8')).entscheide as unknown[];

@@ -8,6 +8,7 @@ import { sachgruppe, topTitel, subTitel, type KantonSystematik } from '../../lib
 import { norm } from '../../lib/suche/normQuery';
 import { datumCh } from '../../lib/normtext/erlassKopfText';
 import { erlassPfadRoh, erlassPfadVonKey } from '../../lib/normtext/erlassAdresse';
+import type { OverlineGlied } from '../../components/layout/LeserKopfGeruest';
 
 // M11 (§5 Verzahnung): Reverse-Resolver SR-Nummer → interner Erlass, ABGELEITET
 // aus dem Register (keine Handtabelle, §3/§5 eine Quelle). Nur Bund-Erlasse, die
@@ -236,31 +237,75 @@ export function tabTitel(kuerzel: string, titel: string): string {
 //     das amtliche Sachgebiet bleibt als « · Gebiet»-Zusatz (N13).
 //   • Kanton → «Kanton XX · Gesetz|Verordnung» (⑥); wo erlassTyp neutral ist
 //     (sonstiges), das amtliche Sachgebiet als Zusatz behalten (N13).
-export function kopfOverline(
+//
+// ─── B-7 (W2·19-DESIGN-KONSISTENZ, Runde 2, 31.8.2026) · DIE ORDNUNG ─────────
+//
+// BEFUND: die Overline beantwortet an jedem Leser dieselbe Frage («woher kommt
+// das Dokument?»), und der Erlass-Kopf beantwortete sie ärmer als der
+// Entscheid-Leser. Der Kanton-Zweig VERWARF sein Sachgebiet, sobald eine Art
+// bekannt war (`const zusatz = typ ?? overlineGebiet` — das eine `??`, das die
+// zweite Auskunft wegwirft statt sie danebenzustellen). GEMESSEN heisst das:
+// an einem kantonalen Gesetz mit verifiziertem Sachgebiet stand «Kanton BS ·
+// Gesetz», das Sachgebiet blieb ungenannt — obwohl es erhoben, verifiziert und
+// eine Zeile weiter (Erlass-Übersicht) sichtbar ist.
+//
+// Die Ordnung ist jetzt ebenen-neutral und dreigliedrig — Herkunft/Ebene ·
+// Art/Abteilung · Sachgebiet (Definition und Ton: `layout/LeserKopfGeruest`,
+// `KopfOverline`) —, und ein unbekanntes Glied entfällt ERSATZLOS (§8), statt
+// ein bekanntes zu verdrängen.
+//
+// ZWEI AUSSPIELUNGEN, EINE REGEL (§5): `kopfGlieder` ist die Wahrheit,
+// `kopfOverline` fügt sie für die Aufrufer, die eine Zeichenkette brauchen
+// (Erlass-Übersicht, Art-Zeile). Beide Bund-Ausspielungen bleiben Zeichen für
+// Zeichen wie bisher; einzig der Kanton gewinnt sein drittes Glied.
+//
+// INTERNATIONAL trägt bewusst NUR das erste Glied: sein Sachgebiet heisst
+// «International / Staatsverträge» (`GEBIET_LABEL`) und wiederholte damit die
+// Herkunft. Ein Glied, das nichts hinzufügt, ist keine Auskunft (§8).
+export function kopfGlieder(
   erlass: Pick<BrowseErlass, 'ebene' | 'kanton' | 'rechtsgebiet'>,
   erlassTyp: ErlassTyp | undefined,
   overlineGebiet: string | null,
-): string {
+): OverlineGlied[] {
+  const sachgebiet: OverlineGlied[] = overlineGebiet
+    ? [{ text: overlineGebiet, rolle: 'sachgebiet' }]
+    : [];
   if (erlass.rechtsgebiet === 'international') {
-    if (erlassTyp === 'staatsvertrag') return 'Staatsvertrag';
-    return overlineGebiet ?? 'Staatsvertrag';
+    if (erlassTyp === 'staatsvertrag') return [{ text: 'Staatsvertrag', rolle: 'herkunft' }];
+    return [{ text: overlineGebiet ?? 'Staatsvertrag', rolle: 'herkunft' }];
   }
   if (erlass.ebene === 'bund') {
+    // «Bundesgesetz»/«Verordnung» IST hier die Herkunfts-Angabe: der amtliche
+    // Erlassname nennt Ebene und Art in EINEM Wort. Ihn in «Bund · Gesetz» zu
+    // zerlegen, wäre keine Vereinheitlichung, sondern ein neuer, unamtlicher
+    // Begriff (§1 vor Symmetrie).
     const typ =
       erlassTyp === 'verfassung' ? 'Bundesverfassung'
       : erlassTyp === 'verordnung' ? 'Verordnung'
       : erlassTyp === 'staatsvertrag' ? 'Staatsvertrag'
       : 'Bundesgesetz';
-    return overlineGebiet ? `${typ} · ${overlineGebiet}` : typ;
+    return [{ text: typ, rolle: 'herkunft' }, ...sachgebiet];
   }
-  const basis = `Kanton ${erlass.kanton}`;
   const typ =
     erlassTyp === 'gesetz' ? 'Gesetz'
     : erlassTyp === 'verordnung' ? 'Verordnung'
     : erlassTyp === 'verfassung' ? 'Verfassung'
     : null;
-  const zusatz = typ ?? overlineGebiet;
-  return zusatz ? `${basis} · ${zusatz}` : basis;
+  return [
+    { text: `Kanton ${erlass.kanton}`, rolle: 'herkunft' },
+    ...(typ ? [{ text: typ, rolle: 'art' } as OverlineGlied] : []),
+    ...sachgebiet,
+  ];
+}
+
+/** Dieselbe Ordnung als Zeichenkette — für Aufrufer ohne Darstellungs-Kontext
+ *  (Art-Zeile der Erlass-Übersicht). Nie ein zweiter Regelsatz (§5). */
+export function kopfOverline(
+  erlass: Pick<BrowseErlass, 'ebene' | 'kanton' | 'rechtsgebiet'>,
+  erlassTyp: ErlassTyp | undefined,
+  overlineGebiet: string | null,
+): string {
+  return kopfGlieder(erlass, erlassTyp, overlineGebiet).map((g) => g.text).join(' · ');
 }
 
 // W2·19-GLIEDERUNG/S8: `passtAufSuche` ist hier ENTFALLEN. Sie war die
@@ -561,9 +606,37 @@ export function margStufeStil(level: number, istBlatt: boolean): string {
   // sind genau dieser Fall. ink-800 gegen ink-600 ist eine Kontrast-ERHÖHUNG
   // (13.94 : 1 gegen 7.36 : 1, Grundlage Kap. 4), also nie ein A11y-Risiko; die
   // Hierarchie trägt hier das Gewicht, nicht die Farbe.
-  // Stufe 0 gewinnt zugleich Kontrast: ink-500 → ink-600 (V2-Spalte; 5.10 : 1 →
-  // 7.36 : 1, damit AAA statt knapp AA bei 13 px Versalien).
+  // Stufe 0 gewinnt zugleich Kontrast: ink-500 → ink-600 (V2-Spalte).
+  //
+  // ── W2·24-R6/L17 · DER VERSAL-ZWEIG IST GESTRICHEN ────────────────────────
+  // Bis hierher trug `level <= 0` zusätzlich `uppercase tracking-wide`. GEMESSEN
+  // am gebauten Stand (Finder R5, 6.9.2026, über 1792 Randtitel: OR 641 · ZGB 664
+  // · ZPO 403 · BS-640.100 84 · CISG 0): **0** Elemente mit `text-transform:
+  // uppercase`, `letter-spacing` durchweg `normal` — der Zweig hat mit den
+  // heutigen Daten nie gefeuert. Und feuern SOLL er auch nicht mehr: §5 des
+  // Fahrplans nimmt Versalien und Tracking aus der Identität
+  // («Overlines/Versal-Etiketten → normale kleine Grotesk-Zeilen»). Was nicht
+  // scheitern kann, wird gestrichen statt bewacht (§17-Gegengewicht). Die Stufe
+  // behält ihr `font-medium` — sie ist weiterhin die oberste Randtitel-Stufe,
+  // nur ohne Versalien.
+  // ── GB-2 (W2·24, Befund G2, 7.9.2026) · DIE VORFAHREN SIND KURSIVE LITERATA
+  // GEMESSEN im ersten Bild, hell und dunkel, 1440 und 390: `Literata italic`
+  // kam auf 8 von 9 Routen GAR NICHT vor, der Erlass-Leser trug zugleich nur
+  // 2 Registerfarb-Traeger (Referenz «/»: 14). FAHRPLAN §5 nennt die kursive
+  // Literata ausdruecklich als Akzent «an Begruessung und RANDTITELN».
+  // Geaendert ist allein die KLASSENZEILE der Vorfahren-Stufen: `font-sans` →
+  // `lc-randtitel` (index.css §GB-2: Literata kursiv + Registerfarbe der Route
+  // ueber `data-reg`). Stufe, Groesse (`text-leser-rand` 13 px), Gewicht,
+  // Einzug und Hierarchie bleiben Wort fuer Wort.
+  // DAS BLATT BLEIBT SANS — ausdruecklich (§7, ein Beleg altert nicht): David
+  // hat am Bildbogen 17.8.2026 die Spalte «Marginalie/Randtitel 0.8125 rem,
+  // SANS» gewaehlt, und der Auftrag vom 26.6.2026 verlangt, dass die
+  // Sachueberschrift nicht «zu einem blassen Abschnittslabel verkuemmert»;
+  // ~83 % aller 1792 Randtitel sind Blaetter. Der Akzent kommt auf den 17 %
+  // Vorfahren zurueck, ohne die datierte Entscheidung zu ueberschreiben — und
+  // die Drei-Stufen-Hierarchie gewinnt sogar, weil die Stimmen sich jetzt
+  // zusaetzlich in Schrift und Farbe unterscheiden.
   if (istBlatt) return `${hang} font-sans text-leser-rand font-semibold text-ink-800`;
-  if (level <= 0) return `${hang} font-sans text-leser-rand font-medium uppercase tracking-wide text-ink-600`;
-  return `${hang} font-sans text-leser-rand text-ink-600`;
+  if (level <= 0) return `${hang} lc-randtitel text-leser-rand font-medium text-ink-600`;
+  return `${hang} lc-randtitel text-leser-rand text-ink-600`;
 }

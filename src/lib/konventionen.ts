@@ -39,7 +39,10 @@ export const FLOSKELN = {
 export type KonventionsVerstoss = { regel: string; fundstelle: string };
 
 // Verbotene Muster in der TEXTAUSGABE (Stufe-4-Linter des Auftrags).
-const REGELN: { regel: string; muster: RegExp }[] = [
+// Exportiert (QS-UI B13, 5.9.2026): `check:konventionen-ui` (Test-Datei)
+// wiederverwendet die «Prozent»-Regel für einen zweiten, engeren Scan über
+// UI-Strings der Darstellungsschicht — §5 SSoT, keine zweite Regex-Wahrheit.
+export const REGELN: { regel: string; muster: RegExp }[] = [
   { regel: 'ß ist verboten (Schweizer Hochdeutsch: ss)', muster: /ß/ },
   { regel: 'Prozent mit Leerschlag («5 %», nicht «5%»)', muster: /\d%/ },
   { regel: 'Leerzeichen nach «Art.» («Art. 221», nicht «Art.221»)', muster: /Art\.\d/ },

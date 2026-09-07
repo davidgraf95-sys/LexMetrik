@@ -6,123 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2017/1085"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2019/111"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2017-09-15"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "17.059"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Totalrevision des Bundesgesetzes über den Datenschutz und die Änderung weiterer Erlasse zum Datenschutz"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la révision totale  de la loi fédérale sur la protection des données et sur la modification d'autres lois fédérales"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale relativa alla revisione totale della legge sulla protezione dei dati e alla modifica di altri atti normativi sulla protezione dei dati"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "235.1"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2017/1085"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2019/111"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2017-09-15"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "17.059"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Totalrevision des Bundesgesetzes über den Datenschutz und die Änderung weiterer Erlasse zum Datenschutz"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la révision totale  de la loi fédérale sur la protection des données et sur la modification d'autres lois fédérales"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale relativa alla revisione totale della legge sulla protezione dei dati e alla modifica di altri atti normativi sulla protezione dei dati"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "235.1"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2017/1085"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2019/111"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2017-09-15"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "17.059"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Totalrevision des Bundesgesetzes über den Datenschutz und die Änderung weiterer Erlasse zum Datenschutz"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la révision totale  de la loi fédérale sur la protection des données et sur la modification d'autres lois fédérales"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale relativa alla revisione totale della legge sulla protezione dei dati e alla modifica di altri atti normativi sulla protezione dei dati"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "235.1"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2003/267"
     },
     "proj": {
@@ -231,6 +114,123 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la revisione della legge federale sulla protezione dei dati (LPD) e il decreto federale concernente l'adesione della Svizzera al Protocollo aggiuntivo dell'8 novembre 2001 alla Convenzione per la protezione delle persone in relazione all'elaborazione automatica dei dati a carattere personale concernente le autorità di controllo e i flussi internazionali di dati"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "235.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2017/1085"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2019/111"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2017-09-15"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "17.059"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Totalrevision des Bundesgesetzes über den Datenschutz und die Änderung weiterer Erlasse zum Datenschutz"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la révision totale  de la loi fédérale sur la protection des données et sur la modification d'autres lois fédérales"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale relativa alla revisione totale della legge sulla protezione dei dati e alla modifica di altri atti normativi sulla protezione dei dati"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "235.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2017/1085"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2019/111"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2017-09-15"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "17.059"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Totalrevision des Bundesgesetzes über den Datenschutz und die Änderung weiterer Erlasse zum Datenschutz"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la révision totale  de la loi fédérale sur la protection des données et sur la modification d'autres lois fédérales"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale relativa alla revisione totale della legge sulla protezione dei dati e alla modifica di altri atti normativi sulla protezione dei dati"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "235.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2017/1085"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2019/111"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2017-09-15"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "17.059"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Totalrevision des Bundesgesetzes über den Datenschutz und die Änderung weiterer Erlasse zum Datenschutz"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la révision totale  de la loi fédérale sur la protection des données et sur la modification d'autres lois fédérales"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale relativa alla revisione totale della legge sulla protezione dei dati e alla modifica di altri atti normativi sulla protezione dei dati"
     }
   },
   {

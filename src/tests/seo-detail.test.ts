@@ -66,19 +66,73 @@ describe('metaFuerErlass()', () => {
     expect(m.beschreibung).toContain('Stand');
     expect(m.beschreibung.length).toBeGreaterThan(50);
   });
+  it('leerer stand → «Stand unbekannt» statt «Stand ,» in der Beschreibung (§9-Bug-Check Fund 1)', () => {
+    const m = metaFuerErlass({ ...or, stand: '' });
+    expect(m.beschreibung).toContain('Stand unbekannt,');
+    expect(m.beschreibung).not.toContain('Stand ,');
+  });
+  it('hängt das Kürzel nicht doppelt an, wenn der Titel es schon enthält (Fehlerbuch W2·18, EMRK)', () => {
+    const emrk = erlasse.find((e) => e.key === 'EMRK')!;
+    const m = metaFuerErlass(emrk);
+    expect(m.titel).not.toContain('(EMRK (EMRK)');
+    expect(m.titel).toContain('(EMRK)');
+    expect((m.titel.match(/EMRK/g) ?? []).length).toBe(1);
+  });
+
+  // Auflage Gegenprüfung PR #721 (5.9.2026, nicht bestanden): die vorige
+  // `titel.includes(kuerzel)`-Bedingung matchte das Kürzel auch als
+  // Substring innerhalb eines längeren Titel-Worts — Folge: die
+  // Kürzel-Klammer fehlte im <title> komplett, obwohl das Kürzel dort gar
+  // kein eigenständiges Wort ist.
+  it('hängt das Kürzel an, wenn es im Titel nur als Substring (kein Token) vorkommt — ZEMIS-V', () => {
+    const zemis = erlasse.find((e) => e.key === 'ZEMIS_V')!;
+    expect(zemis.kuerzel).toBe('ZEMIS-V');
+    expect(zemis.titel).toContain('ZEMIS-Verordnung');
+    const m = metaFuerErlass(zemis);
+    expect(m.titel).toContain('(ZEMIS-V');
+  });
+
+  it('hängt das Kürzel an, wenn es im Titel nur als Substring (kein Token) vorkommt — Staatenlose', () => {
+    const staatenlose = erlasse.find((e) => e.key === 'STAATENLOSE')!;
+    expect(staatenlose.kuerzel).toBe('Staatenlose');
+    expect(staatenlose.titel).toContain('der Staatenlosen');
+    const m = metaFuerErlass(staatenlose);
+    expect(m.titel).toContain('(Staatenlose');
+  });
+
+  it('erkennt das Kürzel als Token am Titel-Ende (kein Substring-Fehlschluss)', () => {
+    const m = metaFuerErlass({ ...or, titel: 'Bundesgesetz betreffend die Ergänzung des OR', sr: '' });
+    // Kürzel ist am Titel-Ende bereits ein eigenständiges Wort → nicht erneut anhängen.
+    expect(m.titel).not.toContain('(OR)');
+    expect((m.titel.match(/OR/g) ?? []).length).toBe(1);
+  });
 });
 
 describe('jsonLdFuerErlass()', () => {
-  it('emittiert Legislation (ohne Geltungsaussage) + BreadcrumbList', () => {
+  it('emittiert Legislation (mit legislationDateVersion, ohne legislationLegalForce) + BreadcrumbList', () => {
     const ld = jsonLdFuerErlass(or) as { '@graph': Array<Record<string, unknown>> };
     const leg = ld['@graph'][0];
     expect(leg['@type']).toBe('Legislation');
     expect(leg.legislationIdentifier).toBe('220');
     expect(leg.name).toBe(or.titel);
-    // §7: keine Geltungsaussage
+    // V4 (QS-VERWENDEN, 2.9.2026, Bug-Check #630): legislationDateVersion =
+    // gepinntes Stand-Datum (schema.org eli:version_date), wenn valides
+    // ISO-Datum im Datensatz vorhanden (OR: '2026-01-01').
+    expect(leg.legislationDateVersion).toBe(or.stand);
+    expect(or.stand).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    // §8: kein positiver Geltungsstatus im Datensatz → keine Geltungsaussage
     expect(leg).not.toHaveProperty('legislationLegalForce');
+    // legislationDate (Verabschiedungsdatum) wird nie gesetzt — schema.org-
+    // Semantik verlangt ein anderes Datenfeld als das gepinnte Stand-Datum.
     expect(leg).not.toHaveProperty('legislationDate');
     expect(ld['@graph'][1]['@type']).toBe('BreadcrumbList');
+  });
+  it('lässt legislationDateVersion weg, wenn `stand` kein valides ISO-Datum ist (§9-Bug-Check-Fall, zwei VD-Einträge)', () => {
+    const ld = jsonLdFuerErlass({ ...or, stand: '' }) as { '@graph': Array<Record<string, unknown>> };
+    const leg = ld['@graph'][0];
+    expect(leg).not.toHaveProperty('legislationDateVersion');
+    expect(leg).not.toHaveProperty('legislationDate');
+    expect(leg).not.toHaveProperty('legislationLegalForce');
   });
 });
 
@@ -103,6 +157,43 @@ describe('erlassVolltextHtml()', () => {
     // Beginn des echten Textes muss (escaped) im HTML stehen
     const probe = ersterText!.slice(0, 24).replace(/&/g, '&amp;').replace(/</g, '&lt;');
     expect(html).toContain(probe);
+  });
+});
+
+describe('erlassVolltextHtml() — §5-Gleichlauf mit dem interaktiven Kopf (K-2)', () => {
+  const kanton = erlasse.find((e) => e.ebene === 'kanton' && e.datei && e.stand)!;
+  const datei: NormSnapshotDatei = JSON.parse(
+    readFileSync(join(PUB, 'normtext', kanton.datei!), 'utf8'),
+  );
+  it('Kantonserlass ohne Currency-Beleg trägt «Geltung ungeprüft» auch prerendert', () => {
+    const html = erlassVolltextHtml(kanton, datei);
+    expect(html).toContain('Geltung ungeprüft');
+  });
+  it('Bund ohne Beleg bleibt unverändert (keine Ungeprüft-Zeile)', () => {
+    const orDatei: NormSnapshotDatei = JSON.parse(
+      readFileSync(join(PUB, 'normtext', or.datei!), 'utf8'),
+    );
+    expect(erlassVolltextHtml(or, orDatei)).not.toContain('Geltung ungeprüft');
+  });
+  it('aufgehobener Kantonserlass trägt KEINE Ungeprüft-Zeile (lebt-Gate wie im interaktiven Kopf)', () => {
+    const html = erlassVolltextHtml(
+      { ...kanton, aufgehoben: { seit: '2020-01-01', quelleUrl: kanton.quelleUrl } as never },
+      datei,
+    );
+    expect(html).not.toContain('Geltung ungeprüft');
+  });
+  it('aufgehobener Erlass trägt auch KEINEN Standausweis-Satz (lebt-Gate beider Zweige)', () => {
+    const html = erlassVolltextHtml(
+      { ...kanton, aufgehoben: { seit: '2020-01-01', quelleUrl: kanton.quelleUrl } as never },
+      datei,
+      { geprueftAm: '2026-08-01' },
+    );
+    expect(html).not.toContain('geprüft am');
+  });
+  it('leerer stand wird «Stand unbekannt» statt «Stand » (K-2d)', () => {
+    const html = erlassVolltextHtml({ ...kanton, stand: '' }, datei);
+    expect(html).toContain('Stand unbekannt');
+    expect(html).not.toContain('Stand  ·');
   });
 });
 

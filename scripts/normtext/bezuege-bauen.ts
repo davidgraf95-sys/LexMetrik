@@ -176,6 +176,21 @@ export interface BezugsShard {
 export interface BezugsIndex {
   /** Schlüssel 'ERLASS/artikel' → Kanten, je Status sortiert, UNGEDECKELT. */
   proArtikel: Map<string, BezugsKante[]>;
+  /**
+   * N0a — die GEGENRICHTUNG von `proArtikel` auf Erlass-Ebene: Entscheid-key →
+   * zitierte kantonale Erlass-keys ('BS-154.100'), sortiert, dedupliziert.
+   * Nur Entscheide mit mindestens einem Treffer stehen drin (§8: kein leerer
+   * Eintrag, der Abdeckung vortäuscht).
+   *
+   * WARUM EIGENE PROJEKTION UND NICHT `register.json`. Gemessen 31.8.2026:
+   * `public/rechtsprechung/register.json` steht bei 775'070 B gzip-6 gegen die
+   * 780-KB-Schranke (97.0 %, 23'650 B Luft); die Projektion kostet ~15.1 KB
+   * gzip und liesse 1 % übrig. Der Kommentar an `DATEN_BUDGET`
+   * (scripts/check-perf-budget.ts) benennt genau diesen Ausweg als die
+   * vorgesehene Folgearbeit — die Schranke anzuheben, weil man an sie stösst,
+   * wäre ihr Gegenteil (§8).
+   */
+  kantonNormKeys: Map<string, string[]>;
   befund: BezugsBefund;
 }
 
@@ -271,6 +286,7 @@ export function baueBezugsIndex(
   const nummerOhneBestand = new Set<string>();
   const nummerMinderheit = new Set<string>();
   const fremdVerworfen = new Set<string>();
+  const kantonNormKeys = new Map<string, string[]>();
   let kantonalOhneErlass = 0;
   const literaturVerwurfUebrige = { paare: 0, nennungen: 0, spannen: 0 };
 
@@ -347,6 +363,12 @@ export function baueBezugsIndex(
     // Bezeichnung — dafür fehlt die FP-Analyse, also bleibt es hier bewusst
     // aussen vor (§7: benannte Lücke statt ungeprüfter Ausweitung).
     const bestand = s.kanton !== 'CH' ? kantonBestaende.get(s.kanton) : undefined;
+    // N0a: die ERLASS-Ebene derselben Auflösung, je Entscheid gesammelt. Nicht
+    // aus `schluessel` zurückgerechnet — dort stehen Bundes- und Kantons-Keys
+    // gemischt, und ein Muster-Filter darüber wäre eine zweite, ratende
+    // Identitäts-Regel (§5/§7). Hier ist die Herkunft strukturell eindeutig:
+    // was `loeseKantonZitate` liefert, IST kantonal.
+    const kantonErlasse = new Set<string>();
     if (bestand && bestand.size) {
       const kb = loeseKantonZitate(
         fliesstextOhneApparat(s), s.kanton, bestand,
@@ -354,6 +376,7 @@ export function baueBezugsIndex(
       );
       for (const z of kb.zitate) {
         schluessel.add(`${z.erlass}/${z.artikel}`);
+        kantonErlasse.add(z.erlass);
         kantonalJeKanal[z.kanal] = (kantonalJeKanal[z.kanal] ?? 0) + 1;
       }
       kantonalOhneErlass += kb.ohneErlass;
@@ -363,6 +386,7 @@ export function baueBezugsIndex(
     }
 
     const { key } = keyVon(s);
+    if (kantonErlasse.size) kantonNormKeys.set(key, [...kantonErlasse].sort());
     eintraege.push({
       key,
       ref: {
@@ -445,6 +469,7 @@ export function baueBezugsIndex(
 
   return {
     proArtikel,
+    kantonNormKeys,
     befund: {
       snapshotsJeStatus, kantenJeStatus, kantonalJeKanal, kantonalOhneErlass,
       abkAusgeschlossen: [...abkAusgeschlossen].sort(),

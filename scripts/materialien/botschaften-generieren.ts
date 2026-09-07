@@ -217,6 +217,21 @@ SELECT ?sr ?botschaft ?proj ?oc ?dateDoc ?curia ?titleDe ?titleFr ?titleIt WHERE
 }`;
 }
 
+/**
+ * Deterministische Ordnung der Roh-Bindings je SR (Befund (f), QS-MONITOR-ROT, 1.9.2026): der
+ * SPARQL-Endpunkt liefert ohne ORDER BY in wechselnder Reihenfolge — vier Roh-Dateien
+ * (172.010 · 812.121 · 831.10 · 836.2) wurden am 30.8. und erneut am 1.9.2026 bei
+ * unverändertem Inhalt umsortiert (multiset-identisch, `comm`-/JSON-Beweis). Ein ORDER BY in
+ * der Query wäre die andere Stelle; hier liegt sie am Schreibpunkt und deckt jede Query.
+ * Schlüssel = kanonisches JSON des Bindings (Schlüssel sortiert) — vollständig, kein Feld-Tupel,
+ * das bei Duplikaten kippen könnte. Rein.
+ */
+export function sortiereBindings(bs: SparqlBinding[]): SparqlBinding[] {
+  const kanon = (b: SparqlBinding): string =>
+    JSON.stringify(Object.fromEntries(Object.entries(b).sort(([a], [c]) => (a < c ? -1 : a > c ? 1 : 0))));
+  return [...bs].sort((x, y) => { const a = kanon(x); const b = kanon(y); return a < b ? -1 : a > b ? 1 : 0; });
+}
+
 /** Holt die Bindings für die gesamte Grundmenge (VALUES-Batching, §0c; store-raw je SR). */
 export async function holeBindings(
   meta: ErlassMeta[],
@@ -236,7 +251,7 @@ export async function holeBindings(
     }
     for (const [sr, bs] of proSr) {
       const datei = `${rawDir}/${sr.replace(/[^0-9.]/g, '_')}.json`;
-      writeFileSync(datei, JSON.stringify(bs, null, 2) + '\n', 'utf8');
+      writeFileSync(datei, JSON.stringify(sortiereBindings(bs), null, 2) + '\n', 'utf8');
     }
   }
   return bindings;

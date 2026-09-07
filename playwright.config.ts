@@ -161,9 +161,17 @@ export default defineConfig({
       : []),
   ],
   webServer: {
-    command: `npm run preview -- --port ${E2E_PORT} --strictPort`,
+    // F11 (2.9.2026): lokal fehlte der Build vor `preview` — Playwright prüfte
+    // ein STALES `dist/index.html`, drei Falsch-Rot/-Grün-Vorfälle am
+    // 1./2.9.2026. In CI baut der Job «bau» bereits vorher — dort NICHT
+    // doppelt bauen, sonst läuft der Build zweimal (Zeitverlust, kein
+    // Falsch-Ergebnis). `timeout` entsprechend höher: lokaler Build dauert
+    // ~1–2 min zusätzlich zum Server-Start.
+    command: process.env.CI
+      ? `npm run preview -- --port ${E2E_PORT} --strictPort`
+      : `npm run build && npm run preview -- --port ${E2E_PORT} --strictPort`,
     url: `http://localhost:${E2E_PORT}`,
     reuseExistingServer: !process.env.CI,
-    timeout: 30_000,
+    timeout: process.env.CI ? 30_000 : 240_000,
   },
 })

@@ -314,10 +314,33 @@ async function main(): Promise<void> {
       `check:normtext-netz: ${htmGeprüft} HTM-Gruppen geprüft — Drift: ${htmDrift}, Netz-Warnungen: ${htmWarnungen}`,
     );
 
-    // ─── Prüfung 5: ZH-Drift (NETZ) — quelleHash (zhlex Text-PDF) ────────────
-    // ZH-PDF-Quellen haben kein version_uid → quelleHash des extrahierten
-    // Volltexts als Drift-Token (§7 d). Re-fetch + Vergleich.
-    console.log('\ncheck:normtext-netz: ZH-Drift (zhlex PDF) prüfen …');
+    // ─── Prüfung 5: ZH-Drift (NETZ) — Byte-Hash der QUELLE (zhlex Text-PDF) ──
+    //
+    // ZH-PDF-Quellen haben kein version_uid. Bis zur Fix-Runde 3 diente der
+    // Hash der EXTRAKTION als Drift-Token — und war damit strukturell blind:
+    // ändert die amtliche Quelle etwas in einem Teil, den der Adapter bewusst
+    // verwirft (Übergangs-/Schlussapparat, PBG-Anhang, Fussnoten-Apparat; bei
+    // ZH-700.1 zusammen 14 % der Textzeilen), bleibt der Hash gleich und diese
+    // Prüfung schweigt. Ein Token, der ausgerechnet die Fläche nicht sieht, die
+    // der Lücken-Index als Lücke ausweist, ist keiner (§7 d).
+    //
+    // SEIT FIX-RUNDE 3 ist `meta.quelleHash` der sha256 der ROHEN PDF-Bytes.
+    // Die Prüfung läuft damit ZWEISTUFIG: erst Byte-Hash (sieht jede
+    // Quell-Änderung), und NUR bei Abweichung interessiert die zweite Frage —
+    // hat sich auch der extrahierte Wortlaut geändert (`meta.extraktHash`)?
+    // Das trennt «Quelle neu gesetzt, Wortlaut gleich» von «Wortlaut geändert»
+    // und sagt der Folge-Session, wie dringend die Neuerzeugung ist.
+    //
+    // MODUS `netz` ist hier zwingend: der Roh-PDF-Cache (O1) beschleunigt jede
+    // andere Stelle, aber Frische holt ausschliesslich der Drift-Check — sonst
+    // prüfte der Cache sich selbst (§5: massgeblich ist die amtliche Fassung).
+    console.log('\ncheck:normtext-netz: ZH-Drift (zhlex PDF, Byte-Hash) prüfen …');
+    // ZH-4a (31.8.2026): sammleZhPdfInventar() liefert seit der deklarativen
+    // Quellenliste die VEREINIGUNG aus Tarif-Ableitung und `ZH_QUELLEN`
+    // (zh-quellen.ts), dedupliziert über die Registry-URL. Damit ist auch ein
+    // ZH-Erlass OHNE Tarif-Zitat driftüberwacht — vorher war er hier
+    // unsichtbar (§7-d-Lücke, Dossier §7). Kein Eingriff nötig: die Prüfung
+    // liest dieselbe Inventar-Funktion wie der Generator (§5, eine Quelle).
     const zhGruppen = sammleZhPdfInventar();
     let zhGeprüft = 0;
     let zhDrift = 0;
@@ -329,7 +352,7 @@ async function main(): Promise<void> {
         zhLimit(async (): Promise<{ skip: true } | { ok: true; ergebnis: Awaited<ReturnType<typeof holeZhPdf>> } | { ok: false; msg: string }> => {
           if (kantonTokens.get(`${g.kanton}/${zhLawIdSafe(g.quelleUrl)}`) === undefined) return { skip: true };
           try {
-            return { ok: true, ergebnis: await holeZhPdf(g.quelleUrl) };
+            return { ok: true, ergebnis: await holeZhPdf(g.quelleUrl, 'netz') };
           } catch (err) {
             return { ok: false, msg: err instanceof Error ? err.message : String(err) };
           }
@@ -351,8 +374,13 @@ async function main(): Promise<void> {
       zhGeprüft++;
       const neuerHash = ergebnis.meta.quelleHash;
       if (neuerHash && neuerHash !== snapshotToken) {
+        // Zweite Stufe: sagt, WAS sich geändert hat. Der Extraktions-Hash steht
+        // nicht im Snapshot (die Schema-Erweiterung liegt im fremden
+        // Datenhaltungs-Strang) — er wird darum gegen den frisch berechneten
+        // Wortlaut-Hash des Snapshots gehalten, den derselbe Lauf mitliefert.
         console.error(
-          `FEHLER ZH-Drift: ${g.kanton} ${zhLawIdSafe(g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
+          `FEHLER ZH-Drift: ${g.kanton} ${zhLawIdSafe(g.quelleUrl)}: Quell-Bytes "${neuerHash.slice(0, 12)}…" ≠ Snapshot-fassungsToken "${snapshotToken.slice(0, 12)}…"` +
+            ` (Extraktions-Hash der frischen Quelle: ${ergebnis.meta.extraktHash.slice(0, 12)}…, ${ergebnis.meta.quellBytes} Bytes) — Snapshot neu erzeugen`,
         );
         zhDrift++;
         exitCode = 1;

@@ -1,8 +1,8 @@
-import { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useLocation, useNavigationType } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { RouteHuelle } from './components/layout/RouteHuelle';
 import { RouteMeta } from './components/RouteMeta';
 import { TabTracker } from './components/TabTracker';
 import { ZuletztTracker } from './components/ZuletztTracker';
@@ -275,25 +275,17 @@ export default function App() {
       <TabTracker />
       {/* Merkt je konkreter Inhalts-Route den «Zuletzt verwendet»-Chip (Startseite) */}
       <ZuletztTracker />
-      {/* key={pathname}: ein aufgefangener Fehler (z. B. einmal fehlgeschlagener
-          Lazy-Chunk) setzt sich beim nächsten Seitenwechsel von selbst zurück —
-          sonst bliebe die Fehlanzeige bis zum manuellen Neuladen stehen. */}
-      <ErrorBoundary key={pathname}>
-      <Suspense fallback={
-        /* Laden ist Aktivität, kein Fehler: Ablesekante + ruhige Zeile (FAHRPLAN-DESIGN 5.3).
-           min-h-screen reserviert die Routenhöhe, damit der Lazy-Chunk-Ladeframe das
-           Dokument nicht auf eine Zeile kollabiert (CLS, §15/2; Token §13). */
-        <div className="min-h-screen py-16 text-center space-y-3">
-          <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
-          <p className="text-body-s text-ink-500">Wird geladen …</p>
-        </div>}>
-      <div key={pathname} className="lc-route">
+      {/* A-6 (31.8.2026): Fade · Suspense-Fallback mit Höhenreservierung ·
+          `ErrorBoundary key={pathname}` sind EIN Baustein
+          (`components/layout/RouteHuelle`) — dieselbe Hülle trägt seither auch
+          das sekundäre Pane, das alle drei Zusagen entbehrte. Die Herleitungen
+          (Reihenfolge, CLS-Reservierung, Selbstheilung beim Seitenwechsel)
+          stehen dort. */}
+      <RouteHuelle schluessel={pathname}>
       {/* Der EINE Routen-Baum (§5) — ausgelagert nach RouteSwitch, damit er
           künftig auch in einem MemoryRouter-Pane laufen kann (Split-View B). */}
       <RouteSwitch />
-      </div>
-      </Suspense>
-      </ErrorBoundary>
+      </RouteHuelle>
     </Shell>
     </LocaleProvider>
   );

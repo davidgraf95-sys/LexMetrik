@@ -1,6 +1,7 @@
 import { parseISO } from 'date-fns';
 import { formatDatum } from '../../lib/datumsUtils';
 import type { Einheit } from '../../lib/allgemeineFrist';
+import type { Kanton } from '../../types/legal';
 
 // ─── Beschriftungs-Tabellen des einfachen Fristenrechners ──────────────────
 //
@@ -13,6 +14,35 @@ import type { Einheit } from '../../lib/allgemeineFrist';
 // Rechtslogik (§3), reine Beschriftung.
 
 export type Ferien = 'keine' | 'zpo' | 'schkg' | 'vwvg' | 'bgg';
+
+// Live-Brücke des Tagerechners (Auftrag David 1.9.2026 «der Rechenweg
+// aktualisiert sich nicht automatisch»): der einfache Rechner meldet seine
+// Eingaben nach oben, die Seite reicht sie als EIN stabiles Objekt an das
+// aktive Voll-Formular weiter (Referenzvergleich dort — deshalb Typ hier,
+// an der einen geteilten Stelle). Reine Beschriftungs-/Transport-Struktur,
+// keine Rechtslogik (§3).
+export type EinfacheFristEingaben = {
+  start: string;
+  laenge: number;
+  einheit: Einheit;
+  ferien: Ferien;
+  kanton: Kanton;
+};
+
+// Die Meldung trägt alle vier geteilten Werte PLUS die Liste der seit dem
+// Mount tatsächlich BERÜHRTEN Felder. Anwendungsregel im Voll-Formular
+// (GP-Befund B2, 1.9.2026): Berührtes gewinnt immer; Unberührtes füllt nur
+// Felder, die dort weder aus einem Permalink/Preset stammen noch von Hand
+// geändert wurden. So stampft ein blosser Kanton-Wechsel oben keine per
+// Link geteilte 20-Tage-Frist unten auf den 10-Tage-Default (§1), und ein
+// frisch geöffnetes Voll-Formular startet trotzdem kohärent mit den oben
+// sichtbaren Werten statt mit seinem veralteten Beispiel-Default.
+export type EinfacheFristFeld = 'start' | 'laenge' | 'einheit' | 'kanton';
+export type EinfacheFristMeldung = {
+  ferien: Ferien;
+  werte: Pick<EinfacheFristEingaben, EinfacheFristFeld>;
+  beruehrt: EinfacheFristFeld[];
+};
 
 export const FERIEN_OPTIONEN: { code: Ferien; label: string; sub: string }[] = [
   // Bug-Check §9 (fachliche Lupe, MITTEL): Samstag-Verschiebung folgt dem

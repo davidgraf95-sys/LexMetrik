@@ -23,12 +23,22 @@
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 
-/** Suche starten und das Treffer-Blatt öffnen (@390, Feld im klebenden Kopf). */
-async function trefferBlattOeffnen(page: Page, begriff: string): Promise<void> {
+/**
+ * Suche starten UND das Bottom-Sheet öffnen (@390, Feld im klebenden Kopf).
+ *
+ * §6.3-UMSTELLUNG D38 (7.9.2026): der Helfer hiess `trefferBlattOeffnen` und
+ * zog das Sheet über die Zähler-Zeile auf, weil DORT die Trefferliste lag. Seit
+ * D38 liegt sie über der Lesespalte und das Sheet zeigt in jedem Zustand die
+ * Gliederung — geöffnet wird es darum über ☰, wie ohne Suche auch. Was diese
+ * Spec prüft, ist davon unberührt: A2 (Fokus und Esc gehören dem offenen
+ * Overlay) und A3 (⌘K bedient das eigene Pane) sind Aussagen über den DIALOG,
+ * nicht über seinen Inhalt.
+ */
+async function sheetBeiSucheOeffnen(page: Page, begriff: string): Promise<void> {
   await expect(page.locator('[data-v3-kopf]')).toBeVisible({ timeout: 20_000 })
   await page.locator('[data-v3-such-zone] input').fill(begriff)
-  await expect(page.locator('[data-v3-treffer-weg]')).toBeVisible({ timeout: 15_000 })
-  await page.locator('[data-v3-treffer-weg]').click()
+  await expect(page.locator('[data-treffer-liste]')).toBeVisible({ timeout: 20_000 })
+  await page.locator('[data-v3-gliederung-auf]').first().click()
   await expect(page.locator('[data-gliederung-sheet]')).toBeVisible({ timeout: 15_000 })
 }
 
@@ -41,7 +51,7 @@ test.describe('A2 — bei offenem Blatt bleibt die Bedienung im Blatt', () => {
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto('/gesetze/bund/STPO')
-    await trefferBlattOeffnen(page, 'Kosten')
+    await sheetBeiSucheOeffnen(page, 'Kosten')
 
     await page.keyboard.press('Control+k')
 
@@ -78,7 +88,7 @@ test.describe('A2 — bei offenem Blatt bleibt die Bedienung im Blatt', () => {
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto('/gesetze/bund/STPO')
-    await trefferBlattOeffnen(page, 'Kosten')
+    await sheetBeiSucheOeffnen(page, 'Kosten')
     await page.keyboard.press('Control+k')
     await expect(page.locator('[data-gliederung-sheet] [data-v3-suchsprung] input')).toBeFocused()
 
@@ -145,33 +155,46 @@ test.describe('A3 — ⌘K bedient das Pane, in dem der Fokus steht', () => {
 })
 
 test.describe('Ä32/B11 — das Blatt zeigt und benennt, was es zeigt', () => {
-  // ROT ZU BEKOMMEN (§6.7): `ortAnzeigen={!m.sucheAktiv}` im Rahmen auf
-  // `ortAnzeigen` (true) setzen ⇒ «Sie sind hier» erscheint im Treffer-Blatt;
-  // die `uebersicht`-Weiche zurücknehmen ⇒ Übersichtszeile erscheint;
-  // `aria-label={`${titel} schliessen`}` in `parts/GliederungSheet.tsx` wieder
-  // fest auf «Gliederung schliessen» ⇒ (d) rot. Alle drei so gemessen.
-  test('(d) im TREFFER-Blatt: kein «Sie sind hier», keine Übersicht, richtiger Name', async ({ page }) => {
+  // ── §6.3-UMSTELLUNG D38 (David 7.9.2026) · DIE FRAGE HAT SICH GEDREHT ─────
+  // Ä32/B11 fragten: «zeigt und benennt das Blatt, was es zeigt?» — und die
+  // Antwort war, dass im TREFFER-Blatt weder «Sie sind hier» noch die Übersicht
+  // noch «alles auf/zu» etwas verloren haben, weil dort kein Baum stand. Seit
+  // D38 steht dort IMMER der Baum: die Treffer liegen über der Lesespalte
+  // («die suchresultate … sollen nicht in der gliederung erscheinen»). Damit
+  // hat der Fall keinen Gegenstand mehr — und die Zusage, die er trug, wird
+  // wertvoller, nicht kleiner: das Sheet muss die Gliederung auch WÄHREND einer
+  // Suche vollständig hergeben. Genau das prüft er jetzt.
+  // ROT ZU BEKOMMEN (§6.7): in `v3/leisteAufbau.tsx` `titel="Gliederung"` gegen
+  // die alte Weiche `titel={m.sucheAktiv ? 'Treffer' : 'Gliederung'}` tauschen
+  // bzw. `ortAnzeigen` wieder auf `!m.sucheAktiv` setzen ⇒ (d) rot.
+  test('(d) mit laufender Suche zeigt das Sheet die vollständige Gliederung', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto('/gesetze/bund/STPO')
-    await trefferBlattOeffnen(page, 'Kosten')
+    await sheetBeiSucheOeffnen(page, 'Kosten')
 
     const blatt = page.locator('[data-gliederung-sheet]')
-    // Positiv-Sonde: es ist wirklich das TREFFER-Blatt und es trägt Treffer.
-    await expect(blatt.locator('[data-treffer-liste]')).toBeVisible({ timeout: 15_000 })
-    expect(await blatt.locator('[data-sie-sind-hier]').count(),
-      '«Sie sind hier» steht im Treffer-Blatt').toBe(0)
-    expect(await blatt.locator('[data-v3-uebersicht]').count(),
-      'die Erlass-Übersicht steht im Treffer-Blatt').toBe(0)
-    expect(await blatt.locator('[data-v3-alle]').count(),
-      '«alles auf/zu» steht über der Trefferliste, klappt aber einen Baum').toBe(0)
-    // «↑ Anfang» bleibt — es bezieht sich auf den Erlass, nicht auf den Baum.
-    await expect(blatt.locator('[data-v3-anfang]')).toHaveCount(1)
+    // Positiv-Sonde: die Suche läuft wirklich — die Liste steht über der
+    // Lesespalte, nur eben nicht hier (sonst prüfte alles Weitere den
+    // Ruhezustand und wäre grundlos grün, §6.7 b).
+    await expect(page.locator('[data-v3-treffer-spalte] [data-treffer-liste]'))
+      .toHaveCount(1, { timeout: 15_000 })
+    expect(await blatt.locator('[data-treffer-liste]').count(),
+      'die Trefferliste steckt im Gliederungs-Sheet').toBe(0)
 
-    // B11: Dialog UND ✕ heissen «Treffer».
-    await expect(blatt).toHaveAttribute('aria-label', 'Treffer')
-    expect(await blatt.locator('button[aria-label="Treffer schliessen"]').count(),
-      'der ✕ heisst nicht «Treffer schliessen»').toBe(1)
+    await expect(blatt.locator('[data-sie-sind-hier]'),
+      '«Sie sind hier» fehlt während der Suche').toHaveCount(1)
+    await expect(blatt.locator('[data-v3-uebersicht]'),
+      'die Erlass-Übersicht fehlt während der Suche').toHaveCount(1)
+    await expect(blatt.locator('[data-v3-alle]'),
+      '«alles auf/zu» fehlt während der Suche').toHaveCount(1)
+    // Pos. 15 unverändert: «↑ Anfang» steht GENAU EINMAL auf der Seite.
+    await expect(page.locator('[data-v3-anfang]')).toHaveCount(1)
+
+    // B11: Dialog UND ✕ heissen «Gliederung» — und meinen es jetzt auch.
+    await expect(blatt).toHaveAttribute('aria-label', 'Gliederung')
+    expect(await blatt.locator('button[aria-label="Gliederung schliessen"]').count(),
+      'der ✕ heisst nicht «Gliederung schliessen»').toBe(1)
 
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })
@@ -225,36 +248,50 @@ test.describe('Ä32/B11 — das Blatt zeigt und benennt, was es zeigt', () => {
 // während die Kontext-Schnipsel zwei bis drei Zeilen hoch waren (30–45 px).
 // Nachher: kein Randtitel mehr angeschnitten, jeder Schnipsel einzeilig (15 px).
 //
-// ROT ZU BEKOMMEN (§6.7): in `v3/LeserSeitenleiste.tsx` `zeigtZeile` fest auf
-// `true` ⇒ (f) rot (Zone A wieder 34 px, «↑ Anfang» nicht in der Treffer-Leiste);
-// in `v3/LeserTrefferListe.tsx` am Randtitel `line-clamp-2` gegen `truncate`
-// tauschen bzw. `einzeilig` am Kopf-Schnipsel weglassen ⇒ (g) rot. So gemessen.
+// ── §6.3-UMSTELLUNG D38 (David 7.9.2026) · Ä94 HAT KEINEN GEGENSTAND MEHR ───
+// Die zwei klebenden Balken übereinander gab es genau in EINER Lage: Sheet mit
+// TREFFERLISTE. Seit D38 zeigt das Sheet die Gliederung und die Liste liegt über
+// der Lesespalte — es gibt keine Zone A über einer Trefferliste mehr, also auch
+// keine leere. (f) prüft darum, was die Lage HEUTE zusagt und was Ä94 mit dem
+// Weiterreichen des Knopfes sichern wollte: «↑ Anfang» steht GENAU EINMAL auf
+// der Seite (Pos. 15), und keine klebende Zeile steht leer da.
+// Der Slot selbst (`v3/anfangSlot.ts`) ist damit unbesetzt; sein Rückbau berührt
+// die Seitenleiste, an der am 7.9.2026 zwei parallele Einheiten bauen, und ist
+// als Nachzug übergeben (Herleitung in der Datei).
+//
+// ROT ZU BEKOMMEN (§6.7): in `v3/leisteAufbau.tsx` `baumKnoepfe={false}` an der
+// `<LeserSeitenleiste>` setzen ⇒ Zone A trägt im Sheet nur noch «↑ Anfang»,
+// gibt ihn an die Trefferliste ab — die steht dort nicht mehr, also verschwindet
+// der Knopf ganz: (f) meldet 0 statt 1. In `v3/LeserTrefferListe.tsx` am
+// Randtitel `line-clamp-2` gegen `truncate` tauschen bzw. `einzeilig` am
+// Kopf-Schnipsel weglassen ⇒ (g) rot. So gemessen.
 test.describe('Ä94/Ä96 — die Werkzeugzeile trägt etwas, der Randtitel bleibt ganz', () => {
-  test('(f) @390: keine leere Kopfzeile über der Trefferliste, kein Stummel', async ({ page }) => {
+  test('(f) @390: «↑ Anfang» steht genau einmal, und keine klebende Zeile steht leer', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto('/gesetze/bund/STPO')
-    await trefferBlattOeffnen(page, 'Entschädigung')
+    await sheetBeiSucheOeffnen(page, 'Entschädigung')
 
     const blatt = page.locator('[data-gliederung-sheet]')
-    await expect(blatt.locator('[data-treffer-liste]')).toBeVisible({ timeout: 15_000 })
+    // Vorbedingung: die Suche läuft (Liste über der Lesespalte), das Sheet
+    // trägt den Baum.
+    await expect(page.locator('[data-v3-treffer-spalte] [data-treffer-liste]'))
+      .toHaveCount(1, { timeout: 15_000 })
+    await expect(blatt.locator('[data-v3-leiste-baum] button').first()).toBeVisible()
 
-    // Zone A trägt im Treffer-Blatt nichts mehr — also auch keine Höhe.
+    // Pos. 15: EIN Knopf pro Seite — im Sheet, nicht zusätzlich in der Liste.
+    await expect(page.locator('[data-v3-anfang]'), '«↑ Anfang» steht nicht genau einmal')
+      .toHaveCount(1)
+    await expect(blatt.locator('[data-v3-anfang]'), '«↑ Anfang» steht nicht im Sheet')
+      .toHaveCount(1)
+
+    // Und Zone A steht nicht leer da: sie trägt «alles auf/zu» UND den Knopf —
+    // das war Ä94s eigentliche Sorge (34 px klebende Fläche für 62 px Inhalt).
     const zoneA = await blatt.locator('[data-v3-leiste-baumkopf]').boundingBox()
-    expect(zoneA?.height ?? -1, 'Zone A ist über der Trefferliste wieder ein leerer Balken').toBe(0)
-
-    // «↑ Anfang» steht jetzt IN der Werkzeugzeile der Trefferliste — und dort
-    // rechts, nicht irgendwo: es füllt genau den Stummel neben dem Segment.
-    const anfang = blatt.locator('[data-treffer-leiste] [data-v3-anfang]')
-    await expect(anfang, '«↑ Anfang» steht nicht in der Werkzeugzeile').toHaveCount(1)
-    const seg = await blatt.locator('[data-v3-suchbereich]').boundingBox()
-    const knopf = await anfang.boundingBox()
-    expect(seg && knopf, 'Segment oder Knopf nicht messbar').toBeTruthy()
-    // Gleiche Zeile (Grundlinien-Abstand < eine Zeilenhöhe) …
-    expect(Math.abs((seg!.y + seg!.height / 2) - (knopf!.y + knopf!.height / 2)))
-      .toBeLessThan(12)
-    // … und der Knopf steht RECHTS vom Segment, ohne es zu überlappen.
-    expect(knopf!.x, '«↑ Anfang» überlappt das Segment').toBeGreaterThanOrEqual(seg!.x + seg!.width)
+    expect(zoneA, 'Zone A nicht messbar').toBeTruthy()
+    const inhalt = await blatt.locator('[data-v3-leiste-baumkopf] button').count()
+    expect(inhalt, `Zone A ist ${zoneA!.height} px hoch und trägt ${inhalt} Knöpfe`)
+      .toBeGreaterThanOrEqual(2)
 
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })

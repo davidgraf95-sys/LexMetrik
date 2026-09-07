@@ -122,12 +122,26 @@ test.describe('LM-201 — Routenwechsel auf kürzere Seite: kein Frame mit alter
     // (ab `lg`, dieser Test läuft auf 1440×900) trägt NUR die Sidebar das Logo als
     // Startseiten-Link — Topbar.tsx Zeile 111 ist bewusst `lg:hidden` ("Logo nur
     // unterhalb lg — ab lg trägt die Seitenleiste die Marke"). Der reale,
-    // immer sichtbare Nutzerweg ist der Topbar-Knopf «Seitenleiste einblenden»
+    // immer sichtbare Nutzerweg ist der Topbar-Schalter der Seitenleiste
     // (Topbar.tsx, unabhängig vom Leser-Pfad gerendert): er öffnet die Sidebar,
     // danach ist der Startseiten-Link da und klickbar — das prüft DOM-Probe
     // (isVisible/boundingBox) vor diesem Fix belegt.
-    await page.getByRole('button', { name: 'Seitenleiste einblenden' }).click()
-    await page.locator('nav[aria-label="Hauptnavigation"] a[aria-label="LexMetrik – Startseite"]').click()
+    // §6.3-ANPASSUNG 5.9.2026 (deklarierte fachliche Änderung, QS-UI
+    // Folgeschritt): der Knopf hiess zustandsabhängig «Seitenleiste einblenden»
+    // / «Seitenleiste ausblenden» — ein Name, der den Zustand mitführt und beim
+    // Klick wechselt (WCAG 4.1.2, Tor ARIA_ZUSTANDSNAME). Er heisst jetzt
+    // konstant «Seitenleiste ein- und ausblenden»; den Zustand trägt
+    // `aria-pressed`. Die Sache dieser Spec (LM-201) ist unverändert: erst den
+    // Schalter, dann den Startseiten-Link. `pressed: false` hält zusätzlich
+    // fest, WAS hier vorausgesetzt wird — die Leiste ist im Leser eingeklappt
+    // (Ä1c); vorher steckte diese Vorbedingung stillschweigend im Namen.
+    // DEKLARIERTE ANPASSUNG W2·24-DESIGN-IDENTITAET R2 (6.9.2026, §6.3): seit der
+    // Titelblatt-Zeile trägt die Marke im `header` auf JEDER Breite den
+    // Startseiten-Link (Topbar.tsx); der Seitenleisten-Logo-Link lebt nur noch in
+    // der mobilen Schublade (`hidden max-[480px]:flex`). Der Umweg über den
+    // Seitenleisten-Schalter entfällt — die Sache (SPA-Navigation per Klick auf
+    // eine kürzere Seite) ist unverändert.
+    await page.locator('header a[aria-label="LexMetrik – Startseite"]').first().click()
     await expect(page).toHaveURL(/\/$/, { timeout: 15000 })
     await page.waitForFunction(() => (window as unknown as { __lm201?: unknown[] }).__lm201!.length >= 4, undefined, { timeout: 15000 })
 

@@ -8,7 +8,7 @@ import {
 import { BANNER_UNTERSCHREIBEN } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
-import { SelectionGrid } from '../components/ui/SelectionGrid';
+import { SelectionGrid, type SelectionItem } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -32,11 +32,16 @@ const SCHRITTE = [
   { id: 'pruefen', label: 'Prüfen & Unterschreiben' },
 ] as const;
 
-const ENTSCHEIDE: { code: PvEntscheid; label: string }[] = [
+// D-3 (31.8.2026): die Reihe läuft über `ui/SelectionGrid` (variant «pille»).
+// Der `ton` hält die BEDEUTUNGS-Farbe der Entscheide fest — sie sagt auf einen
+// Blick, was verfügt wurde, und ist darum kein blosses Auswahl-Signal
+// (Herleitung im Baustein). «keine Angabe» trägt keinen Ton und zeigt seither
+// das Kanon-Signal statt der früheren invertierten ink-900-Füllung.
+const ENTSCHEIDE: SelectionItem<PvEntscheid>[] = [
   { code: 'keine_angabe', label: 'keine Angabe' },
-  { code: 'zustimmen', label: 'zustimmen' },
-  { code: 'ablehnen', label: 'ablehnen' },
-  { code: 'nur_befristet', label: 'nur befristet' },
+  { code: 'zustimmen', label: 'zustimmen', ton: 'zustimmung' },
+  { code: 'ablehnen', label: 'ablehnen', ton: 'ablehnung' },
+  { code: 'nur_befristet', label: 'nur befristet', ton: 'vorbehalt' },
 ];
 
 const ZIELE: { code: Exclude<PvZiel, 'keine_angabe'>; label: string; sub: string }[] = [
@@ -163,22 +168,14 @@ export function VorlagePatientenverfuegung() {
           {PV_MASSNAHMEN.map((m) => (
             <div key={m.id} className="lc-card p-3.5 space-y-2">
               <p className="text-body-s font-medium text-ink-900">{m.label}</p>
-              <div className="flex flex-wrap gap-1" role="group" aria-label={m.label}>
-                {ENTSCHEIDE.map((e) => (
-                  <button key={e.code} type="button" aria-pressed={a.massnahmen[m.id] === e.code}
-                    onClick={() => set('massnahmen', { ...a.massnahmen, [m.id]: e.code })}
-                    className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-colors ${
-                      a.massnahmen[m.id] === e.code
-                        ? e.code === 'ablehnen' ? 'bg-danger-bg border-danger-line text-danger-700'
-                          : e.code === 'zustimmen' ? 'bg-sage-bg border-sage-line text-sage-700'
-                          : e.code === 'nur_befristet' ? 'bg-warn-bg border-warn-500 text-warn-700'
-                          : 'bg-ink-900 border-ink-900 text-paper'
-                        : 'bg-surface border-line text-ink-600 hover:border-brass-400'
-                    }`}>
-                    {e.label}
-                  </button>
-                ))}
-              </div>
+              <SelectionGrid
+                variant="pille"
+                gruppenLabel={m.label}
+                className="flex flex-wrap gap-1.5"
+                items={ENTSCHEIDE}
+                value={a.massnahmen[m.id] ?? ''}
+                onSelect={(code) => set('massnahmen', { ...a.massnahmen, [m.id]: code })}
+              />
             </div>
           ))}
         </div>
@@ -223,17 +220,21 @@ export function VorlagePatientenverfuegung() {
           </Field>
           <div className="space-y-2">
             <GruppenTitel>Organspende</GruppenTitel>
-            <div className="flex flex-wrap gap-1.5" role="group" aria-label="Organspende">
-              {([['keine_angabe', 'keine Angabe'], ['ja', 'Ich stimme zu'], ['nein', 'Ich lehne ab']] as const).map(([code, label]) => (
-                <button key={code} type="button" aria-pressed={a.organspende === code}
-                  onClick={() => set('organspende', code)}
-                  className={`px-3 py-1.5 rounded-full text-body-s font-medium border transition-colors ${
-                    a.organspende === code ? 'bg-ink-900 border-ink-900 text-paper' : 'bg-surface border-line text-ink-600 hover:border-brass-400'
-                  }`}>
-                  {label}
-                </button>
-              ))}
-            </div>
+            {/* D-3: Pillen-Reihe über den geteilten Baustein. Anders als bei den
+                Massnahmen trägt hier keine Antwort einen semantischen Ton — die
+                Auswahl zeigt das Kanon-Signal. */}
+            <SelectionGrid
+              variant="pille"
+              gruppenLabel="Organspende"
+              className="flex flex-wrap gap-1.5"
+              items={[
+                { code: 'keine_angabe', label: 'keine Angabe' },
+                { code: 'ja', label: 'Ich stimme zu' },
+                { code: 'nein', label: 'Ich lehne ab' },
+              ] as const}
+              value={a.organspende ?? ''}
+              onSelect={(code) => set('organspende', code)}
+            />
             {a.organspende === 'ja' && (
               <Checkbox
                 checked={a.organspendeVorbereitend ?? false}
@@ -255,7 +256,7 @@ export function VorlagePatientenverfuegung() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="lc-overline text-danger-700 mb-1">Nicht zulässig – vor der Ausgabe zu beheben</p>
               <p className="text-body-s text-danger-700"><NormText text={b} /></p>
             </div>
@@ -313,6 +314,7 @@ export function VorlagePatientenverfuegung() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_UNTERSCHREIBEN, dateiName: 'Patientenverfuegung-Entwurf.pdf' },

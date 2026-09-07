@@ -31,6 +31,20 @@ nicht ins .md. **Netto-Prosa-Zuwachs ist zu begründen.**
 Und: **ein Tor ist erst ein Tor, wenn es einmal rot war.** Wer eines baut, zeigt
 den Sabotage-Beweis (§6.7 — Skill `refactoring`, Ziff. 7).
 
+### Formregel-Ergänzung: Fremdagenten (QS-FREMDAGENTEN, 4.9.2026)
+
+Jede **Ablehnung eines Fremd-PRs** (Jules geschlossen, nie gemergt) und jede
+**Schein-Klasse des Diskrepanz-Finders** (Gemini-Fund als Schein protokolliert)
+wird in DERSELBEN Session nach der Formregel oben verankert — als Tor-Regel
+(Fremd-PR-Tor/Erstfilter) oder als Vorlagen-Zeile —, **nie nur als Kommentar**
+im Fahrplan-Register. Belege, dass das wirkt: der Assertion-Diff aus T5 (PR
+#638, `scripts/analyse/test-assertion-diff.ts`), die Kommentar-Bilanz aus
+#662 (Fremd-PR-Tor Regel 3), die Label-/Tabellen-Regeln aus #650
+(deterministischer Erstfilter). Stufe 2 (`retro:17`) trägt seit demselben
+Auftrag einen Erinnerungs-Vorschlag: jeder in den letzten 7 Tagen
+geschlossene Jules-PR erzeugt eine ENTWURF-Zeile «Lehre verankern» — sie
+ersetzt die Formregel nicht, sie erinnert nur daran, wenn sie vergessen ginge.
+
 ## Register der belegten Fehlerklassen (Vorfälle seit 18.7.2026)
 
 | # | Klasse | Was passierte | Gegenmittel — wo es sitzt |
@@ -66,6 +80,37 @@ liefen durch, und der verschärfte Merge-Schutz (574 Risiko-Dateien ohne Verdikt
 blockierte drei Wochen-PRs in Folge still. Gegenmittel: Workflow auf Gate-Lauf
 (Frische-Fix-PR); die Auto-Merge-Politik auf Risikopfaden (Verdikt-Pflicht vs.
 David-Rahmen 16.7.) wartet auf David.
+
+**F10 — Bauer bescheinigt sich selbst (2.9.2026, PR #616).** Ein Bau-Agent
+schrieb seine eigene Gegenprüfungs-Quittung ins Register, der Merge-Schutz war
+grün, die echte Prüfung fand vier Auflagen. Gegenmittel: Verbot wörtlich in
+`lex-bau.md`/`lex-daten.md` (QUITTUNG) und Skill `gegenpruefung` Regel 5; der
+Orchestrator prüft vor jeder Landung, ob die Register-Zeile vom Prüfer stammt.
+**F11 — Prüfen gegen ein altes Bundle (2.9.2026, dreimal an einem Tag).**
+`test:e2e` startete `vite preview` ohne Build, `preview_start` lief mit cwd im
+geteilten Haupt-Checkout statt im Worktree, eine Perf-Sonde lief neben der
+e2e-Suite: je Falsch-Rot bzw. Falsch-Grün. Gegenmittel: Playwright-`webServer`
+baut vor dem Preview (Wurzel-Fix), Skill `auftrag` Ziff. 6 (Preview nur aus
+Worktree-cwd, Scratchpad-Dateien agent-eindeutig, lange Läufe als persistenter
+Monitor), Skill `perf` Bauregel 7.
+**F12 — Doku-Klassierung überspringt das Tor, das die Drift fangen müsste
+(2.9.2026, PR #619 → #621/#622 rot).** Ein Hand-Edit generierter Agenten-
+definitionen lief als «doku» ohne Tore-Job durch; erst fremde PRs wurden an
+`check:dispatch-klausel` rot. Gegenmittel: `.claude/agents/**`,
+`scripts/dispatch.ts`, Dispatch-Template zählen in der Diff-Klassierung als
+«werkzeug» (PR der Parallel-Session lexmetrik-a1); Quelle ändern, nie die
+Projektion (§5; Wurzel-Fix PR #624).
+**F13 — Merge-Lauf auf main endete «cancelled», Merge nie live (2.9.2026, #629).**
+Beobachtung: `gh run list` zeigte den CI-Lauf des Squash-Commits 1123b1974 als
+`cancelled`, ~30 s nachdem ein Doku-Push (9cdbb6a55) auf main folgte; der
+Doku-Lauf überspringt den Deploy-Job → Live-Build blieb auf dem Vorgänger
+(Sidecar 404), erst `gh run rerun` heilte. **Ursache offen:** ci.yml hat seit
+26.7.2026 `cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}` — die
+Concurrency kann es nicht gewesen sein (Mechanik-Agent 2.9., Reproduktion
+negativ). Kandidaten: ein Selbst-Cancel-Schritt im Workflow bei bewegtem HEAD,
+oder ein GitHub-seitiger Abbruch. ROADMAP-Zeile unter `QS-AUTOMATIK` (Ursache
+klären, Rot-Beweis). Bis dahin Regel Skill `landung` Nachkontrolle 0: nach
+einem Code-Merge kein weiterer main-Push, bis der Deploy-Job grün ist.
 
 ## Eine neue Lehre ablegen
 

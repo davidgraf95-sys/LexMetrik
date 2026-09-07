@@ -15,7 +15,9 @@
    "leser-v3-esc-ohne-sprung.e2e.ts",
    "leser-v3-treffer-reihenfolge.e2e.ts",
    "leser-v3-schriftskala.e2e.ts",
-   "leser-v3-kopf.e2e.ts"
+   "leser-v3-kopf.e2e.ts",
+   "kopfsuche-esc.e2e.ts",
+   "vorlagen-pruefschritt-d5.e2e.ts"
   ],
   "2": [
    "bild-block-items.e2e.ts",
@@ -27,7 +29,25 @@
    "rechtsprechung-richter.e2e.ts",
    "verzahnung.e2e.ts",
    "leser-v3-blatt.e2e.ts",
-   "international-adresse-b45.e2e.ts"
+   "international-adresse-b45.e2e.ts",
+   "a11y-flaeche.e2e.ts",
+   "w223b-kopf-seitenleiste.e2e.ts",
+   "w224-reiterverhalten.e2e.ts",
+   "w224-reiter-umordnen-d16.e2e.ts",
+   "w224-plus-reiter.e2e.ts",
+   "w224-r11-reiterleiste.e2e.ts",
+   "w224-kopfsuche-d23.e2e.ts",
+   "leser-bezuege-zaehler.e2e.ts",
+   "leser-links-p3.e2e.ts",
+   "leser-bezuege-inhalt-d30.e2e.ts",
+   "popover-lesbar-d31.e2e.ts",
+   "w224-ga-kopf.e2e.ts",
+   "w224-gb-register.e2e.ts",
+   "leser-bezuege-fuss-d34.e2e.ts",
+   "w224-l6-panekopf.e2e.ts",
+   "w224-r13b-reiter-cls.e2e.ts",
+   "w224-r14-reiter-modell.e2e.ts",
+   "w224-r14b-meta-reiter.e2e.ts"
   ],
   "3": [
    "a31a-fussnote-inline.e2e.ts",
@@ -44,7 +64,11 @@
    "leser-v3-panel-zaehler.e2e.ts",
    "leser-marken-geometrie.e2e.ts",
    "leser-v3-rahmen.e2e.ts",
-   "gesetze-rechtsgebiet-uebersicht-j3.e2e.ts"
+   "gesetze-rechtsgebiet-uebersicht-j3.e2e.ts",
+   "startseite-pult-r10.e2e.ts",
+   "w224-r13-reiter.e2e.ts",
+   "gesetze-schnellzugriff-filter.e2e.ts",
+   "d39-begruessung.e2e.ts"
   ],
   "4": [
    "gesetze-rechtsgebiet-g6.e2e.ts",
@@ -64,7 +88,8 @@
    "leser-v3-panel-erwaegungssprung.e2e.ts",
    "leser-v3-panel-kurztext.e2e.ts",
    "leser-v3-panel-revision-badge.e2e.ts",
-   "split-erwaegungssprung.e2e.ts"
+   "split-erwaegungssprung.e2e.ts",
+   "leser-gliederung-p8.e2e.ts"
   ],
   "5": [
    "plz-wahl.e2e.ts",
@@ -82,7 +107,10 @@
    "leser-v3-kontext-cls.e2e.ts",
    "leser-v3-panel-nachzug.e2e.ts",
    "leser-v3-scrim-b7n1.e2e.ts",
-   "leser-kein-ueberlauf.e2e.ts"
+   "leser-kein-ueberlauf.e2e.ts",
+   "leser-d35-f1-funktionszeile.e2e.ts",
+   "w224-d35-f2-kopf.e2e.ts",
+   "w224-d40-fassung.e2e.ts"
   ],
   "6": [
    "fremdgesetz-verweis-aig.e2e.ts",
@@ -97,7 +125,11 @@
    "leser-v3-panel-bezuege-wirkung.e2e.ts",
    "topbar-kein-ueberlauf-320.e2e.ts",
    "leser-v3-panel-anwendung.e2e.ts",
-   "leser-v3-kopfzeile.e2e.ts"
+   "leser-v3-kopfzeile.e2e.ts",
+   "leser-w224-g.e2e.ts",
+   "w224-r6i-vorschau-schrift.e2e.ts",
+   "d36-einstellungen-fuss.e2e.ts",
+   "w224-d35-f4-menue.e2e.ts"
   ],
   "7": [
    "schnellrechner-kalender.e2e.ts",
@@ -111,7 +143,12 @@
    "leser-ohne-gliederungslinie.e2e.ts",
    "leser-v3-suchfeld-ueberall.e2e.ts",
    "leser-v3-fokusring-suchfeld.e2e.ts",
-   "leser-v3-suche-ohne-gliederung.e2e.ts"
+   "leser-v3-suche-ohne-gliederung.e2e.ts",
+   "tagerechner-rechenweg-sync.e2e.ts",
+   "d21-seitenleiste-kein-sprung.e2e.ts",
+   "leser-klapp-sonde.e2e.ts",
+   "w224-leser-d32-d33.e2e.ts",
+   "leser-d38-treffer-lesespalte.e2e.ts"
   ],
   "8": [
    "leser-spy-w25d.e2e.ts",
@@ -126,7 +163,11 @@
    "leser-v3-ortsangabe.e2e.ts",
    "leser-v3-uebersicht.e2e.ts",
    "leser-v3-scroll-blur.e2e.ts",
-   "leser-v3-split-a34-bugs.e2e.ts"
+   "leser-v3-split-a34-bugs.e2e.ts",
+   "tagerechner-datum-ungueltig.e2e.ts",
+   "kein-abschnitt.e2e.ts",
+   "w224-d37-seitenleiste-gruppen.e2e.ts",
+   "w224-d35-f3-vermerke.e2e.ts"
   ]
  }
 }

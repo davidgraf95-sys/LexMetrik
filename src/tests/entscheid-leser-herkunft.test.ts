@@ -183,10 +183,13 @@ describe('ankunftsAnker — Fedlex zuerst, wörtliche Nennung als Fallback', () 
     expect(nennungsAnker(snap.abschnitte, 'Art. 684 ZGB')[0]).toBe('e-2-4');
   });
 
-  it('BUNDESRECHT ausserhalb des Fedlex-Verzeichnisses: AsylG landet jetzt', () => {
+  it('BUNDESRECHT mit amtlicher Kürzel-Schreibweise: AsylG findet seit V-8 schon die Fedlex-Regel', () => {
     const snap = ladeSnapshot('bund/bge/148_IV_281.json');
-    // Rot-Beweis (§6.7): die bisherige Regel allein findet hier nichts.
-    expect(ersteFundstelle(snap.abschnitte, 'Art. 1 AsylG')).toBeNull();
+    // Bis 1.9.2026 kannte das Fedlex-Verzeichnis nur «ASYLG»; «AsylG» fiel auf die
+    // wörtliche Nennung zurück (Rot-Beweis damals: ersteFundstelle ⇒ null). V-8
+    // (W2·20, deklarierte fachliche Änderung) macht die amtliche Schreibweise zum
+    // Fedlex-Treffer — beide Regeln landen auf derselben Erwägung.
+    expect(ersteFundstelle(snap.abschnitte, 'Art. 1 AsylG')).toBe('e-1-4-2');
     expect(ankunftsAnker(snap.abschnitte, 'Art. 1 AsylG', ersteFundstelle)).toBe('e-1-4-2');
   });
 

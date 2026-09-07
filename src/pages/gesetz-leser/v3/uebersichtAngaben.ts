@@ -5,7 +5,7 @@ import { erfassungsgrad, type Erfassungsgrad } from '../../../lib/normtext/erfas
 import { nichtKonsolidiertSatz, naechsteFassungSatz, zaehlWort } from '../../../lib/normtext/erlassKopfText';
 import type { KantonSystematik } from '../../../lib/normtext/systematik';
 import type { GliederungsKennzahlen } from '../gliederungsModell';
-import { AMTLICHE_FASSUNG, AMTLICHE_FASSUNG_AUFGEHOBEN } from '../benennung';
+import { AMTLICHE_FASSUNG, AMTLICHE_FASSUNG_AUFGEHOBEN } from '../../../lib/benennung';
 import { formatiereDatum, kennungText, verifiziertesSachgebiet } from '../helpers';
 import { teilerfassung, erlassOrgan } from '../erlassUebersichtDaten';
 import { erlassArt, type BestimmungsWort } from './erlassAnsicht';

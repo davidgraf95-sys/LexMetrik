@@ -161,6 +161,13 @@ export function istRisikoPfad(p: string): boolean {
   // scheitern kann, wo der teuerste Fehler sitzt (§6.7/§17).
   if (p === 'src/lib/rechtsprechung/besetzung.ts') return true;
   if (p.startsWith('src/lib/rechtsprechung/besetzung/')) return true;
+  // Fedlex-Verweis-Erkennung (W2·22, 2.9.2026): entscheidet, auf welche Norm ein
+  // Zitat zeigt — jeder Span ist eine Rechtsaussage (§1). Analog zum besetzung/-
+  // Zweig ist `fedlex.ts` reine Fassade, die tragende Logik liegt im Ordner
+  // (tabelle/url/erkennung/parser/spannen); ohne beide Zeilen lief W2·22 (+1 097
+  // neue Links) ungeprüft durch das Tor — Befund der Z1-Gegenprüfung 2.9.2026.
+  if (p === 'src/lib/fedlex.ts') return true;
+  if (p.startsWith('src/lib/fedlex/')) return true;
   if (p.startsWith('daten/')) return true;
   if (p === 'daten-manifest.json') return true;
   // rekursiv (nicht nur die 4 Top-Level-Index-JSONs) — Blocker Linse 2:

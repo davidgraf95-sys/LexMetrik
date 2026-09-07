@@ -103,6 +103,43 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
   const istRelevant = (d: Date): boolean =>
     bandStatus(d) !== null || isSameDay(d, ereignis) || (aQuo != null && isSameDay(d, aQuo)) || isSameDay(d, adQuem);
 
+  // ── LM-190 (W2·17-UI-BEFUNDE/B18) · GLEICH HOHE MONATSBLÖCKE ───────────────
+  // Der Wochen-Filter oben rechnet je Monat für sich. Bei einem Monatsübergang
+  // stand darum ein Block mit EINER Woche neben einem mit fünf, und unter dem
+  // kurzen klaffte eine grosse Leerfläche (Befund: «Juli eine Zeile, August
+  // fünf»; nachgemessen 5.9.2026 @1440 auf `/` mit Ereignis 28.09./10 Tagen:
+  // September-Raster 57 px hoch, Oktober-Raster 91 px).
+  // Jetzt bekommen alle gezeigten Monate DIESELBE Zeilenzahl: das Fenster des
+  // kürzeren wächst auf die Spanne des längsten — erst nach unten, dann nach
+  // oben, immer innerhalb desselben Monats. Es kommen also nur echte Tage
+  // dieses Monats dazu, nie fremde; die Bedeutung einer Zelle ist unverändert.
+  // Reine Darstellung (§3) — Band, Marker und Legende rechnen weiter über den
+  // vollen Monat (`stillstandSichtbar` oben scannt ohnehin alle Tage).
+  const raster = monate.map((monat) => {
+    const jahr = monat.getFullYear();
+    const m = monat.getMonth();
+    const anzahl = new Date(jahr, m + 1, 0).getDate();
+    const offset = (new Date(jahr, m, 1).getDay() + 6) % 7; // Mo-first
+    const alle: (Date | null)[] = [...Array(offset).fill(null), ...Array.from({ length: anzahl }, (_, i) => new Date(jahr, m, i + 1))];
+    const wochen: (Date | null)[][] = [];
+    for (let i = 0; i < alle.length; i += 7) wochen.push(alle.slice(i, i + 7));
+    return wochen;
+  });
+  const fenster = raster.map((wochen) => {
+    const treffer = wochen.map((w, i) => (w.some((d) => d && istRelevant(d)) ? i : -1)).filter((i) => i >= 0);
+    return treffer.length > 0 ? { von: treffer[0], bis: treffer[treffer.length - 1] } : { von: 0, bis: wochen.length - 1 };
+  });
+  const spanne = Math.max(...fenster.map((f) => f.bis - f.von + 1));
+  // `i % 7` bleibt weiter unten die Spalte: geschnitten wird auf GANZEN Wochen,
+  // die Zellenzahl vor jedem Tag bleibt damit ein Vielfaches von 7.
+  const zellenJeMonat = raster.map((wochen, idx) => {
+    if (!kompakt) return wochen.flat();
+    let { von, bis } = fenster[idx];
+    while (bis - von + 1 < spanne && bis < wochen.length - 1) bis++;
+    while (bis - von + 1 < spanne && von > 0) von--;
+    return wochen.slice(von, bis + 1).flat();
+  });
+
   return (
     // data-ansicht (QS-UI 8b): markiert eine ABGELEITETE Ansicht im Sinne von
     // DESIGN-REGLEMENT-RECHNER R4 Ziff. 3 — sie stellt dar, was die Engine
@@ -122,25 +159,20 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
           Zusammenfassung unten ersetzt (E9, WCAG 1.3.1/1.4.1). */}
       {/* kompakt (Startseiten-Schnellrechner): Monate zentriert + fraktional
           wachsend, damit der Kalender seine Karte ausfüllt statt links zu
-          kleben (Befund David 26.6.2026 «füllt nicht alles aus»). Nicht-kompakt
-          (sechs Fristen-Formulare) bleibt byte-gleich. */}
+          kleben (Befund David 26.6.2026 «füllt nicht alles aus»).
+          Nicht-kompakt (sechs Fristen-Formulare) wuchs damals bewusst NICHT mit;
+          seit LM-142 (4.9.2026) tut es das ebenfalls — Herleitung an der
+          Breiten-Zeile unten. Die Ausrichtung bleibt getrennt: kompakt zentriert
+          (Kachel), Formular linksbündig an der Feldkante. */}
       <div className={`flex flex-wrap items-start ${kompakt ? 'justify-center gap-x-6 gap-y-5' : 'gap-x-7 gap-y-6'}`} aria-hidden>
         {monate.map((monat, idx) => {
           const jahr = monat.getFullYear();
           const m = monat.getMonth();
           const anzahl = new Date(jahr, m + 1, 0).getDate();
-          const offset = (new Date(jahr, m, 1).getDay() + 6) % 7; // Mo-first
-          const alleZellen: (Date | null)[] = [...Array(offset).fill(null), ...Array.from({ length: anzahl }, (_, i) => new Date(jahr, m, i + 1))];
           // kompakt: nur Wochen (7er-Zeilen) mit einem relevanten Tag zeigen
-          // (Ereignis→Fristende-Band + Marker) → leere Vor-/Nachwochen entfallen.
-          // i % 7 bleibt korrekt: ganze (volle) Wochen werden gedroppt (Vielfaches 7).
-          const zellen: (Date | null)[] = kompakt
-            ? (() => {
-                const w: (Date | null)[][] = [];
-                for (let i = 0; i < alleZellen.length; i += 7) w.push(alleZellen.slice(i, i + 7));
-                return w.filter((woche) => woche.some((d) => d && istRelevant(d))).flat();
-              })()
-            : alleZellen;
+          // (Ereignis→Fristende-Band + Marker) → leere Vor-/Nachwochen entfallen,
+          // in allen gezeigten Monaten aber gleich viele (LM-190, s. oben).
+          const zellen: (Date | null)[] = zellenJeMonat[idx];
           // Nicht angrenzende Monate: ···-Trenner statt nahtlosem Anschluss
           // (die Fussnote unten bleibt als explizite Aussage bestehen).
           const trenner = idx > 0 && keys[idx] - keys[idx - 1] > 1;
@@ -155,7 +187,24 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                   EINZELNER (letzter) Monat darf per flex-1 die Karte füllen statt
                   gekappt-schmal zentriert zu bleiben (Auftrag David 1.7.2026 «füllt
                   die Karte» — behebt den bauartbedingten <55%-Füllgrad bei 1 Monat). */}
-              <div className={kompakt ? `flex-1 basis-[12.5rem] ${monate.length > 1 ? 'max-w-[17rem]' : ''}` : 'w-[min(15.5rem,100%)]'}>
+              {/* ── LM-142 (W2·17-UI-BEFUNDE/B16) · AUCH DER FORMULAR-KALENDER
+                  FÜLLT SEINE KARTE. Nicht-kompakt stand auf der starren Breite
+                  `w-[min(15.5rem,100%)]` (248 px). Gemessen 4.9.2026 @1440 auf
+                  /rechner/schkg-fristen (Preview von origin/main): zwei Monate bei
+                  366→614 und 642→890 in einer Karte, die von 345 bis 1351 läuft —
+                  rechts blieben rund 440 px leer (ebenso /rechner/kuendigung und
+                  /rechner/mietrecht).
+                  Das ist DERSELBE Befund, den David am 26.6./1.7.2026 für den
+                  kompakten Modus gemeldet hat («füllt nicht alles aus» / «füllt die
+                  Karte»), und die Antwort steht schon daneben: fraktional wachsen
+                  mit Mindest-Basis und Kappe. Der damalige Scope-Satz «Nicht-
+                  kompakt bleibt byte-gleich» war eine Abgrenzung des damaligen
+                  Auftrags, kein Befund gegen das Muster — er wird hier ausdrücklich
+                  und begründet aufgehoben, nicht still (§0.2). Die Kappe liegt bei
+                  22 rem statt 17 rem, weil dieser Modus die volle Tages-Matrix
+                  zeigt (keine gefilterten Wochen) und die Zellen sonst nur mit-
+                  wachsen, ohne dass eine Woche je in eine Zeile passt. */}
+              <div className={kompakt ? `flex-1 basis-[12.5rem] ${monate.length > 1 ? 'max-w-[17rem]' : ''}` : 'flex-1 basis-[15.5rem] max-w-[22rem]'}>
                 {/* Almanach-Monatskopf: Display-Name, Messing-Jahr, Haarlinie */}
                 <p className="flex items-baseline justify-between gap-2 border-b border-line pb-1.5 mb-2">
                   <span className="font-display text-body-s font-semibold tracking-[-0.01em] text-ink-900">{MONATE[m]}</span>
@@ -192,9 +241,31 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                     // anzutasten.
                     let marker = frei ? (band === 'frist' ? 'text-ink-600' : 'text-ink-500') : 'text-ink-700';
                     let title = frei ? 'arbeitsfrei (Sa/So/Feiertag)' : '';
-                    if (isAdQuem) { marker = 'bg-sage-500 text-paper font-semibold rounded-full lc-termin-ring'; title = L.adquem; }
-                    else if (isAQuo) { marker = 'bg-brass-500 text-ink-900 font-semibold rounded-full'; title = L.aquo; }
-                    else if (isEreignis) { marker = 'border-2 border-ink-900 text-ink-900 font-semibold rounded-full bg-paper-raised'; title = L.ereignis; }
+                    // A3-6 (R3-α, 31.8.2026): DOPPEL-FAMILIE aufgelöst. Die Zelle mischte
+                      // zwei Farbfamilien für EINE Aussage: die Füllung kam aus der
+                      // Materialien-Kennfarbe `sage-500`, der Ring darüber aus der
+                      // Zustands-Rolle (`.lc-termin-ring` → `--ok-solid`). Beide sind
+                      // wertidentisch, aber nur eine ist hier gemeint: der ad-quem-Tag
+                      // ist ein ZUSTAND («Frist endet»), kein Werkstoff.
+                    // C2 (5.9.2026, Fund L6/Befund 2): `text-paper` flippt im
+                    // Dunkelmodus auf fast-schwarz und mass gegen `--ok-solid`
+                    // (bewusst thema-fest) nur 3.84:1 (< 4.5:1) — `text-auf-sage`
+                    // ist die nicht flippende helle Tinte für diese Fläche.
+                    if (isAdQuem) { marker = 'bg-ok-solid text-auf-sage font-semibold rounded-full lc-termin-ring'; title = L.adquem; }
+                    // C2 (5.9.2026): `text-ink-900` flippt im Dunkelmodus auf
+                    // hell und mass dort nur 3.84:1 gegen `bg-brass-500`
+                    // (< 4.5:1, WCAG 1.4.3/F2) — `text-auf-gold` ist die nicht
+                    // flippende Tinte für Text auf Gold-Füllung (D-1.8,
+                    // `--auf-gold`, Beleg VerzugszinsTimeline.tsx).
+                    else if (isAQuo) { marker = 'bg-brass-500 text-auf-gold font-semibold rounded-full'; title = L.aquo; }
+                    // LM-190: Die Papier-Füllung des Ereignis-Rings deckte die LINKE
+                    // Rundung des Fristbands zu — das Band schien erst am Folgetag
+                    // zu beginnen, mit einer sichtbaren Kerbe davor (gemessen
+                    // 5.9.2026 @1440 auf `/`, Element-Screenshot). Liegt Band
+                    // darunter, bleibt der Ring jetzt durchsichtig und die Rundung
+                    // läuft durch; ohne Band behält er seine Füllung, damit der
+                    // Ring gegen die Kartenfläche eine geschlossene Kante hat.
+                    else if (isEreignis) { marker = `border-2 border-ink-900 text-ink-900 font-semibold rounded-full ${band ? '' : 'bg-paper-raised'}`; title = L.ereignis; }
                     else if (band === 'still') { marker = 'text-warn-700'; title = 'Gerichtsstillstand'; }
 
                     return (
@@ -234,7 +305,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
         <span className="lc-overline">Legende</span>
         {ereignisISO !== aQuoISO && <Legende kreis="border-2 border-ink-900 bg-paper-raised" label={L.ereignis} />}
         {aQuoISO && <Legende kreis="bg-brass-500" label={L.aquo} />}
-        <Legende kreis="bg-sage-500 lc-termin-ring" label={L.adquem} />
+        <Legende kreis="bg-ok-solid lc-termin-ring" label={L.adquem} />
         <span aria-hidden className="hidden sm:inline-block h-4 w-px bg-line" />
         <Legende band="bg-brass-100" label={L.band ?? 'laufende Frist'} />
         {stillstandSichtbar && <Legende band="lc-hatch-warn" label="Gerichtsstillstand" />}

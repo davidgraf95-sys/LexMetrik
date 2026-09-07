@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useUniversalSuche } from '../components/suche/useUniversalSuche';
 import { SuchResultate } from '../components/suche/SuchResultate';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
+import { FacettenGruppe } from '../components/ui/FacettenGruppe';
 import type { GruppenId } from '../lib/universalSuche';
 
 // ─── /suche — Volltext-Ergebnisseite (UI-NAV S5) ────────────────────────────
@@ -79,11 +80,20 @@ export function Suche() {
 
   return (
     <div className="space-y-8">
-      <SeitenKopf
-        overline="Suche"
-        titel="Suche"
-        intro="Alle Treffer auf einer Seite — Gesetzestext, Gesetze, Rechtsprechung, Materialien sowie Rechner und Vorlagen, ungekappt und teilbar. Die Suchleiste oben bleibt der Schnellzugriff; hier steht das ganze Ergebnis."
-      />
+      {/* ── G9/G17/G18 (Gesamtprüfung 6.9.2026) · EINE KOPF-ANATOMIE ────────
+          Diese Seite trug als einzige Übersicht die Bauform der STATISCHEN
+          Seiten: Overline + Ablesekante + H1 + drei Zeilen Lead. Gemessen
+          @1440 stand die H1 dadurch auf y = 213 statt auf den 177, die
+          `/gesetze` und `/rechtsprechung` zeigen — 36 px Versatz und zwei
+          Bauformen für dieselbe Sache (G17). Die Overline sagte zudem
+          wortgleich, was die H1 darunter sagt («Suche»/«Suche», G18), und der
+          Lead erklärte eine Seite, die aus einem Suchfeld und ihren Treffern
+          besteht (D11 «Übersichts-Köpfe ohne Erklärtext», G9).
+          Was der Lead an FUNKTION trug, trägt der Platzhalter des Feldes
+          darunter — er nennt beide Wege («Suchen oder Norm springen») mit
+          Beispielen und steht dort, wo man ihn braucht (§8: nichts geht
+          verloren, es steht nur nicht mehr im Kopf). */}
+      <SeitenKopf titel="Suche" />
 
       <div role="search" className="space-y-4">
         <div className="relative max-w-reading">
@@ -100,20 +110,38 @@ export function Suche() {
           {wert && (
             <button type="button" onClick={() => setze('')} aria-label="Suche leeren"
               className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-7 w-7 items-center justify-center rounded-md text-ink-500 transition-colors hover:text-brass-700">
-              <span aria-hidden className="text-base leading-none">✕</span>
+              <span aria-hidden className="lc-griff-glyph">✕</span>
             </button>
           )}
         </div>
 
-        {/* Inhaltstyp-Facette — nur wenn es etwas zu filtern gibt. */}
+        {/* Inhaltstyp-Facette — nur wenn es etwas zu filtern gibt.
+
+            W2·19-DESIGN-KONSISTENZ · D-1 (Welle B1): dieselbe Facetten-Bedienung
+            trug hier eine EIGENE Optik (Pillen `rounded-full border`, Sans,
+            Farbnuance als einziges Auswahl-Signal), während /rechtsprechung
+            dieselbe Sache mit der Chip-Familie `.lc-chip` zeigt. Diese Reihe ist
+            auf den Kanon gezogen — die lokale `FacetChip`-Kopie ist gelöscht,
+            nicht angeglichen (§5/§10). Damit erbt sie zwei Dinge, die die Kopie
+            nicht hatte: das ✓-Präfix des `.lc-chip-selected` (LM-040 · F4
+            «selected»: die Auswahl ist ohne Farbvergleich erkennbar, F2 «Farbe
+            nie allein») und die Chip-Grammatik der `.lc-chip-zeile` (LM-044/N1).
+
+            Runde 2: auch die ANATOMIE der Achse (Gruppen-Rolle · Etikett · Chip
+            mit Zahl · a11y-Name «<Achse>: <Wert> (<n>)») liegt jetzt in EINEM
+            Baustein, `ui/FacettenGruppe`, den /rechtsprechung mitträgt. Die
+            zugänglichen Namen bleiben identisch; sichtbar dazu kommt das
+            Achsen-Etikett «INHALTSTYP» vor den Chips. */}
         {q !== '' && facetten.length > 1 && (
-          <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Nach Inhaltstyp filtern">
-            <FacetChip aktiv={aktiverTyp === 'alle'} onClick={() => setTyp('alle')}
-              label="Alle" n={facetten.reduce((s, f) => s + f.n, 0)} />
-            {facetten.map((f) => (
-              <FacetChip key={f.id} aktiv={aktiverTyp === f.id} onClick={() => setTyp(f.id)} label={f.titel} n={f.n} />
-            ))}
-          </div>
+          <FacettenGruppe label="Inhaltstyp" gruppenLabel="Nach Inhaltstyp filtern"
+            optionen={[
+              { id: 'alle' as const, titel: 'Alle', n: facetten.reduce((s, f) => s + f.n, 0) },
+              ...facetten,
+            ].map((o) => ({
+              id: o.id, text: o.titel, n: o.n,
+              aktiv: aktiverTyp === o.id,
+              waehle: () => setTyp(o.id),
+            }))} />
         )}
       </div>
 
@@ -137,28 +165,11 @@ export function Suche() {
             vorschlag={vorschlag}
             abdeckung={abdeckung}
             onVorschlag={(b) => setze(b)}
+            onLeeren={() => setze('')}
             onNavigate={(href) => navigate(href)}
             sektionsRollen
           />
         )}
     </div>
-  );
-}
-
-function FacetChip({ label, n, aktiv, onClick }: { label: string; n: number; aktiv: boolean; onClick: () => void }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={aktiv}
-      className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-body-s transition-colors ${
-        aktiv
-          ? 'border-brass-500 bg-brass-100/60 text-brass-800'
-          : 'border-line text-ink-600 hover:border-brass-300 hover:text-brass-700'
-      }`}
-    >
-      {label}
-      <span className="num text-xs text-ink-500">{n}</span>
-    </button>
   );
 }

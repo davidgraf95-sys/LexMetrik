@@ -69,7 +69,7 @@ export function ZeichenLegende() {
         type="button"
         aria-controls={id}
         onClick={() => setOffen((v) => !v)}
-        className="cursor-help text-micro text-ink-500 underline decoration-dotted decoration-ink-300 underline-offset-2 hover:text-brass-700 hover:decoration-brass-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-600"
+        className="cursor-help text-micro text-ink-500 underline decoration-dotted decoration-ink-300 underline-offset-2 hover:text-brass-700 hover:decoration-brass-500"
       >
         Zeichenerklärung
       </button>
@@ -79,7 +79,7 @@ export function ZeichenLegende() {
         role="status"
         id={id}
         className={offen
-          ? 'lc-card absolute left-0 top-full z-30 mt-1 block w-72 max-w-[80vw] p-3 text-left text-body-s font-normal normal-case tracking-normal text-ink-700'
+          ? 'lc-popover absolute left-0 top-full z-dropdown mt-1 block w-72 max-w-[80vw] p-3 text-left text-body-s font-normal normal-case tracking-normal text-ink-700'
           : undefined}
       >
         {offen && (

@@ -23,6 +23,12 @@ interface Fundstelle {
   erlass?: string;
   artikel?: string;
   quelleUrl: string;
+  /** Daten-Ebene des Erlasses ('bund' | 'kanton'), seit F35 im Edge-DTO.
+   *  OPTIONAL: eine gecachte Alt-Antwort trägt sie nicht — dann gilt das
+   *  bisherige Verhalten (Bund-Fallback), nie ein Raten. */
+  ebene?: string;
+  /** Kantonskürzel («AG») bei ebene === 'kanton'; bei Bund nicht gesetzt. */
+  kanton?: string;
 }
 interface ApiArtikelTreffer {
   id: string;
@@ -81,14 +87,30 @@ export function zuruecksetzenOnlineSperre(): void {
 }
 
 /**
- * Interne Artikel-Route (E2-hot-Scope = NUR Bund-Gesetze, §11.5) — mirror des
- * statischen Client-Helfers (artikelVolltext.ts): `/gesetze/bund/<key>#art-<artikel>`.
- * Der Anker `art-<artikel>` ist die im Reader gesetzte Artikel-ID (parts.tsx:
+ * Interne Artikel-Route — mirror des statischen Client-Helfers
+ * (artikelVolltext.ts): `/gesetze/<ebene>/<key>#art-<artikel>`. Der Anker
+ * `art-<artikel>` ist die im Reader gesetzte Artikel-ID (parts.tsx:
  * `<article id={art-${e.artikel}}>`); die Anzeige-Nummer (`330_a`) wird NICHT
  * URL-kodiert (identisch zum bestehenden Helfer), der Routen-Key schon.
+ *
+ * SCOPE-KORREKTUR (W2·13-KANTONE K-3, 31.8.2026, §8-Doku): hier stand «E2-hot-
+ * Scope = NUR Bund-Gesetze, §11.5». Das war nie zutreffend — `ingestNormtextZiel`
+ * (scripts/datenhaltung/ingest.ts) schreibt Bund UND Kanton in `artikel`, und
+ * `baueFtsArtikel` (fts.ts) indexiert `SELECT … FROM artikel` ohne Ebenen-Filter.
+ * Die hot-FTS trägt damit auch das kantonale Recht (gezählt am 31.8.2026:
+ * 1231 kantonale Snapshot-Dateien mit 30 709 Artikel-Einträgen unter
+ * public/normtext/kanton). Folge des falschen Scopes war ein falscher Link: der
+ * Href entstand ohne Ebene, und `erlassPfadVonKey` fällt ohne Ebene auf 'bund'
+ * zurück — jeder kantonale Online-Treffer landete auf `/gesetze/bund/<kanton-key>`.
+ *
+ * DIE DTO-EBENE IST NUR DER FALLBACK, nicht die Entscheidung: über einen Schlüssel,
+ * den das Erlass-Register kennt, entscheidet das Register (so bleibt ein
+ * Staatsvertrag unter `/gesetze/international/…`, Befund 45). Erst für Schlüssel
+ * ausserhalb des Registers — genau die kantonalen — trägt die Ebene aus dem DTO.
+ * Fehlt sie (Alt-Antwort aus dem Cache), gilt unverändert das bisherige Verhalten.
  */
 export function artikelTrefferHref(f: Fundstelle): string {
-  return `${erlassPfadVonKey(f.erlass ?? '')}#art-${f.artikel ?? ''}`;
+  return `${erlassPfadVonKey(f.erlass ?? '', f.ebene || 'bund')}#art-${f.artikel ?? ''}`;
 }
 
 /** Interne Entscheid-Route — mirror von universalSuche.entscheidGruppe: `/rechtsprechung/<key>`.
@@ -112,13 +134,25 @@ function entferneSnippetKlammern(snippet: string): string {
 
 /** Antwort → geteilte SuchTreffer. Artikel zuerst, dann Entscheide (feste Ordnung). */
 function baueTreffer(antwort: SucheApiAntwort): { treffer: SuchTreffer[]; gesamt: number } {
-  const artikel: SuchTreffer[] = (antwort.artikel?.treffer ?? []).map((t) => ({
-    id: t.id,
-    label: t.titel,
-    untertitel: entferneSnippetKlammern(t.snippet),
-    marke: { text: 'Gesetz', ton: 'soft' as const, redundant: true },
-    href: artikelTrefferHref(t.fundstelle),
-  }));
+  const artikel: SuchTreffer[] = (antwort.artikel?.treffer ?? []).map((t) => {
+    // HERKUNFT EHRLICH (§8, F35) — exakt das Doppel-Idiom des statischen Index
+    // (artikelVolltext.treffer), damit derselbe Erlass in beiden Trefferwegen
+    // gleich aussieht: Label-Suffix « · AG» (steht auch dort, wo keine Marke
+    // gerendert wird) PLUS Marke «AG» OHNE `redundant` — die Bund-Marke ist auf
+    // Mobile ausgeblendet (redundant zum Gruppentitel), das Kantonskürzel trägt
+    // dagegen Information und muss auf JEDER Breite sichtbar bleiben.
+    const kantonal = t.fundstelle.ebene === 'kanton' && !!t.fundstelle.kanton;
+    const kt = t.fundstelle.kanton ?? '';
+    return {
+      id: t.id,
+      label: kantonal ? `${t.titel} · ${kt}` : t.titel,
+      untertitel: entferneSnippetKlammern(t.snippet),
+      marke: kantonal
+        ? { text: kt, ton: 'soft' as const }
+        : { text: 'Gesetz', ton: 'soft' as const, redundant: true },
+      href: artikelTrefferHref(t.fundstelle),
+    };
+  });
   const entscheide: SuchTreffer[] = (antwort.entscheide?.treffer ?? []).map((t) => ({
     id: t.id,
     label: t.titel,
@@ -132,8 +166,15 @@ function baueTreffer(antwort: SucheApiAntwort): { treffer: SuchTreffer[]; gesamt
   };
 }
 
+// F36 (W2·13-KANTONE K-3): Der Hinweis sagte «über Gesetze + Leitentscheide» —
+// das liess offen, WELCHE Gesetze und verschwieg, dass diese Gruppe als einzige
+// gar nicht erscheint, wenn man offline ist. Beides steht jetzt da (§8): der
+// Umfang (Bund UND Kanton — die hot-FTS trägt beide Ebenen, s. artikelTrefferHref)
+// und die Bedingung («läuft nur online»). Der Datenschutz-Halbsatz bleibt
+// wörtlich erhalten; er ist der Grund, warum es diesen Hinweis überhaupt gibt.
 const HINWEIS =
-  'Online-Volltextsuche über Gesetze + Leitentscheide — Suchbegriffe verlassen dafür den Browser.';
+  'Online-Volltextsuche über Erlasse von Bund und Kantonen + Leitentscheide — läuft nur online, ' +
+  'Suchbegriffe verlassen dafür den Browser.';
 
 /** Baut die fertige §8-markierte Online-Gruppe (oder null, wenn leer). */
 function baueGruppe(antwort: SucheApiAntwort): SuchGruppe | null {

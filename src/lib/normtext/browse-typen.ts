@@ -54,6 +54,37 @@ export interface BrowseErlass {
    *  (historische Fassung), wird aber nie als geltend dargestellt: Reader zeigt
    *  ein Status-Banner, der Katalog ein «Aufgehoben»-Badge. Absenz = geltend. */
   aufgehoben?: ErlassAufhebung;
+  // ── N0b: amtliche kantonale Systematik-Einordnung ──
+  /** Nur kantonale Snapshots: die Stelle des Erlasses im amtlichen
+   *  Systematik-Baum seines Kantons, deterministisch aus der Systematik-Nummer
+   *  im Snapshot-key gejoint (public/normtext/kanton-systematik.json).
+   *
+   *  Das ist die AMTLICHE Ordnung des Kantons — nicht `rechtsgebiet`, das eine
+   *  LexMetrik-eigene, korpusweite Grobachse ist. Beide bleiben nebeneinander
+   *  stehen: die amtliche Einordnung ersetzt keine kantonsübergreifende
+   *  Vergleichbarkeit, und die Grobachse ersetzt keine amtliche Herkunft.
+   *
+   *  Fehlt, wo der Kanton keinen erhobenen Baum hat oder die Nummer nicht
+   *  ziffernhierarchisch ist (GL: römische Systematik) — ehrlich ohne Feld
+   *  statt geraten (§8). */
+  sachgebietKanton?: SachgebietKanton;
+}
+
+/** Ein bis zwei Ebenen des amtlichen kantonalen Systematik-Baums. Die Form
+ *  spiegelt den Index-Eintrag `[top, sub]` aus kanton-systematik.json 1:1 —
+ *  keine erfundene Zwischenstruktur (§5). */
+export interface SachgebietKanton {
+  /** Oberste Ebene, immer vorhanden. */
+  wurzel: SystematikEbene;
+  /** Zweite Ebene, wo der Baum sie führt und die Nummer sie trifft. */
+  unter?: SystematikEbene;
+}
+
+export interface SystematikEbene {
+  /** Amtliche Gliederungsnummer ('1', '15', 'BeE'). */
+  nummer: string;
+  /** Amtliche Bezeichnung der Gliederungsstufe. */
+  name: string;
 }
 
 export interface BrowseManifest {

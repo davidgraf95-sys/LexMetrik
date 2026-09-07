@@ -201,45 +201,6 @@
     },
     "cons": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2021/32/cons_1"
-    },
-    "status": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
-    },
-    "titelDe": {
-      "type": "literal",
-      "xml:lang": "de",
-      "value": "Einführung des Trusts (Änderung des Obligationenrechts)"
-    },
-    "titelFr": {
-      "type": "literal",
-      "xml:lang": "fr",
-      "value": "Introduction du trust (modification du code des obligations)"
-    },
-    "titelIt": {
-      "type": "literal",
-      "xml:lang": "it",
-      "value": "Introduzione del trust (modificazione del codice delle obbligazioni)"
-    },
-    "start": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2022-01-12"
-    },
-    "ende": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2022-04-30"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "642.21"
-    },
-    "cons": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/dl/proj/2024/42/cons_1"
     },
     "status": {
@@ -299,6 +260,45 @@
       "type": "literal",
       "xml:lang": "it",
       "value": "Legge federale e ordinanza sul trattamento dei dati personali in ambito fiscale (atti mantello su modifiche di LTB, LIFD, LIP, LAID e LTEO e sulle relative ordinanze; RS 641.10, RS 641.101, RS 642.11, RS 642.14, RS 642.21, RS 661 e RS 661.1)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "642.21"
+    },
+    "cons": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2021/32/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Einführung des Trusts (Änderung des Obligationenrechts)"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Introduction du trust (modification du code des obligations)"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Introduzione del trust (modificazione del codice delle obbligazioni)"
+    },
+    "start": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2022-01-12"
+    },
+    "ende": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2022-04-30"
     }
   },
   {

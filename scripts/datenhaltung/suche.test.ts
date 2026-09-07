@@ -8,6 +8,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { oeffneDb, frischesSchema } from './schema';
 import { ingestNormtext, ingestNormtextZiel, ingestRechtsprechung } from './ingest';
 import { baueFtsArtikel, baueFtsEntscheideSchaufenster } from './fts';
+import { bloeckeText } from './suche-kern';
 import { sucheArtikel, sucheEntscheide, MAX_LIMIT } from './suche';
 
 const PAYLOAD_WAND = 4.5 * 1024 * 1024; // 4,5-MB-Function-Payload-Wand (§4)
@@ -57,7 +58,45 @@ beforeAll(() => {
   // hält zum schlechtesten belegten Wert noch ~30 % Abstand; eine echte
   // Verlangsamung der Ingest-Strecke (etwa durch einen Korpus-Sprung) fällt
   // unverändert durch. KEINE Assertion und kein Prüfschritt berührt (§6.3).
-}, 95000);
+  //
+  // ── NACHTRAG 6.9.2026 (W2·24 · §17-Wurzelfix, DREI Runden Falsch-Rot) ──────
+  //
+  // Der 95-s-Deckel riss in W2·24 dreimal, ohne dass an dieser Datei etwas
+  // geändert worden wäre. Vor der Zuschreibung an eine Ursache steht die
+  // Messung (§0 Ziff. 3), also NEU ERHOBEN, gleiche Bedingung wie oben
+  // «isoliert», n=3, 6.9.2026, Dateidauer in s:
+  //     16.10 · 16.18 · 14.50   (mittel 15.59, sd 0.94)
+  // Die Zahlen oben (mittel 10.85) bleiben stehen — sie sind nicht falsch
+  // geworden, sie sind von damals (§2b). Der Vergleich IST der Befund:
+  //
+  //   DIE URSACHE IST NICHT DIE PARALLEL-LAST, SONDERN DER KORPUS.
+  //   Die isolierte Strecke ist seit der Deckel-Festlegung um +44 % gewachsen
+  //   (10.85 → 15.59 s), ganz ohne fremde Last. Der Deckel wurde also gegen
+  //   einen Ist-Stand bemessen, den es nicht mehr gibt; seine Reserve war
+  //   längst um dieselben 44 % geschrumpft, bevor die erste Parallel-Last
+  //   ihn zum Reissen brachte. Ein absoluter Millisekunden-Deckel auf einer
+  //   mitwachsenden Ingest-Strecke veraltet von selbst.
+  //
+  // NEUE HÖHE, aus den vorhandenen Messreihen fortgeschrieben (nicht geraten):
+  //   · Lastfaktor aus der Reihe oben: 50.53 / 10.85 = 4.66×
+  //   · relative Streuung unter Last: sd/mittel = 9.46 / 50.53 = 18.7 %
+  //   · erwartet unter Last, heutiger Korpus: 15.59 × 4.66 = 72.6 s
+  //     (sd entsprechend 13.6 s)
+  //   · QS-PERF Ziff. 5, Ist + max(3 sd, 25 %): 72.6 + 40.8 = 113.4 s
+  //   · Die Bau-Flotte dieser Runde fährt SECHS Arbeitsbäume parallel, also
+  //     mehr als die Bedingung, unter der der Lastfaktor 4.66 gemessen wurde.
+  //     Für diesen Aufschlag ist 240 000 ms gesetzt — gut das Doppelte des
+  //     fortgeschriebenen Werts.
+  //
+  // WAS DIESER DECKEL DAMIT IST — und was er ausdrücklich NICHT ist: er ist
+  // eine ROBUSTHEITS-Grenze gegen einen hängenden Lauf, keine Perf-Schranke.
+  // Als Perf-Schranke hat er nie getaugt: eine Wanduhr-Messung unter
+  // unbekannter Fremdlast misst die Maschine, nicht die Ingest-Strecke (genau
+  // die Verwechslung, vor der §0 Ziff. 3 warnt). Wer die Ingest-GESCHWINDIGKEIT
+  // bewachen will, braucht eine Messung mit genannter Bedingung — das gehört
+  // zu `check:perf-budget`, nicht in einen Vitest-Hook-Timeout.
+  // KEINE Assertion, kein Prüfschritt, kein Deckel-Wert des Tests berührt.
+}, 240000);
 
 afterAll(() => {
   dbN?.close();
@@ -84,6 +123,27 @@ describe('sucheArtikel', () => {
       // Volltext-Leck ausgeschlossen (bloecke/text/volltext/bloecke_json tauchen nie auf).
       const roh = JSON.stringify(t);
       expect(roh).not.toMatch(/"bloecke"|"bloecke_json"|"volltext"/);
+    }
+  });
+
+  it('F35: jeder Treffer trägt die Ebene, kantonale zusätzlich ihr Kürzel', () => {
+    // EMPIRISCH gegen den echten Korpus (§7): dass `e.ebene`/`e.kanton` in der
+    // Fundstelle stehen, beweist der Unit-Test suche-kern.test.ts an einer
+    // Hand-Zeile — hier steht der Beweis, dass die Spalten aus dem WIRKLICHEN
+    // Schema kommen und für kantonales Recht wirklich 'kanton' + Kürzel liefern.
+    // Ohne diesen Fall wäre F35 an der Netzgrenze eine Behauptung.
+    const alle = sucheArtikel(dbN, 'recht', { limit: MAX_LIMIT }).treffer;
+    expect(alle.length).toBeGreaterThan(0);
+    for (const t of alle) expect(['bund', 'kanton']).toContain(t.fundstelle.ebene);
+
+    const kantonal = ['regierungsrat', 'grossratsbeschluss', 'anwaltstarif', 'kantonsrat']
+      .flatMap((q) => sucheArtikel(dbN, q, { limit: MAX_LIMIT }).treffer)
+      .filter((t) => t.fundstelle.ebene === 'kanton');
+    expect(kantonal.length, 'kein kantonaler Treffer — der Prüfsatz misst nichts').toBeGreaterThan(0);
+    for (const t of kantonal) expect(t.fundstelle.kanton).toMatch(/^[A-Z]{2}$/);
+    // Bundeserlasse tragen KEIN Kanton-Kürzel (kein leeres Feld im Draht).
+    for (const t of alle.filter((x) => x.fundstelle.ebene === 'bund')) {
+      expect('kanton' in t.fundstelle).toBe(false);
     }
   });
 
@@ -120,6 +180,62 @@ describe('sucheArtikel', () => {
     const bytes = Buffer.byteLength(JSON.stringify(a), 'utf8');
     expect(bytes).toBeLessThan(PAYLOAD_WAND);
     expect(bytes).toBeLessThan(200_000); // real: Grössenordnung Kilobytes, nicht Megabytes
+  });
+});
+
+// ── K1 Recall-Parität: die Felder m/n/g/tb/f müssen am Edge ankommen ─────────────
+//
+// Der statische Client-Index (scripts/such-index-generieren.ts) führt neben dem
+// Artikeltext `t` fünf REKALL-Felder: m (primäre Marginalie), n (nachrangige),
+// g (Gliederung), tb (Tabellen-/Struktur-Tier), f (Fussnoten). `fts_artikel`
+// indexierte bis QS-BASIS (d) NUR `bloeckeText` — also allein `t`. Damit fand der
+// DB-/Edge-Weg systematisch weniger als der statische Weg, und zwar STILL: die
+// Antwort war nie leer, nur schlechter.
+//
+// Leitfall ist der, den such-index-generieren.ts:112-121 selbst als Begründung für
+// das Gliederungs-Feld nennt: «Miete» steht im Artikeltext von OR 253/267 NICHT als
+// Token, wohl aber in der Gliederung «Achter Titel: Die Miete».
+//
+// GEMESSENER ROT-STAND vor dem Fix (K0-Nullprobe, bibliothek/register/
+// suche-edge-nullprobe-2026-08-31.md Ziff. 3): Query «Miete» → 79 Treffer, davon
+// OR 253 = 0 und OR 267 = 0; die Top-10 führten zehn kantonale Gebühren- und
+// Besoldungserlasse an.
+describe('K1 Recall-Parität: Recall-Felder im Edge-Index', () => {
+  /** Alle Treffer-IDs einer Query über das volle Fenster (Pagination ausgereizt). */
+  function alleIds(query: string): string[] {
+    const ids: string[] = [];
+    for (let off = 0; off < 500; off += MAX_LIMIT) {
+      const a = sucheArtikel(dbN, query, { limit: MAX_LIMIT, offset: off });
+      for (const t of a.treffer) ids.push(t.id);
+      if (a.naechsteSeite === null) break;
+    }
+    return ids;
+  }
+
+  it('findet OR 253/267 für «Miete» ÜBER DIE GLIEDERUNG (nicht über den Artikeltext)', () => {
+    // Vorbedingung des Falls: der Artikeltext trägt das Token «Miete» wirklich
+    // nicht — sonst prüfte der Test die Gliederung gar nicht.
+    const roh = dbN
+      .prepare("SELECT bloecke_json FROM artikel WHERE erlass_key = 'OR' AND art_id = 'art_253'")
+      .get() as { bloecke_json: string } | undefined;
+    expect(roh, 'OR art_253 muss im Korpus sein').toBeDefined();
+    expect(/\bmiete\b/i.test(bloeckeText(roh!.bloecke_json))).toBe(false);
+
+    const ids = alleIds('Miete');
+    expect(ids).toContain('art:OR:art_253');
+    expect(ids).toContain('art:OR:art_267');
+  });
+
+  it('findet über die primäre Marginalie (OR 127 «Verjährung»)', () => {
+    const ids = alleIds('Verjährung');
+    expect(ids).toContain('art:OR:art_127');
+  });
+
+  it('indexiert Fussnoten- und Tabellen-Tier (Recall-only, kein topischer Boost)', () => {
+    // Ein AS-Fundstellen-Token steht ausschliesslich im Fussnoten-Body — trifft die
+    // Suche es, ist das Fussnoten-Feld nachweislich im Index.
+    const treffer = sucheArtikel(dbN, 'BBl', { limit: MAX_LIMIT });
+    expect(treffer.gesamt).toBeGreaterThan(0);
   });
 });
 

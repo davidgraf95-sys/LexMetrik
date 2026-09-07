@@ -8,6 +8,9 @@ import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_PROZESSUAL, FRISTEN_MATERIELL, fristenE
 import { ZUSTAENDIGKEIT_FELDER, ZUSTAENDIGKEIT_FELD_IDS } from '../lib/zustaendigkeitKategorie';
 import { kartePasst, LEERER_FILTER } from '../lib/katalogSuche';
 import { sansAmp } from './typografie';
+import { GruppenKopf } from './ui/GruppenKopf';
+import { TrefferZeile, TREFFER_ZEILE_RAHMEN } from './ui/TrefferZeile';
+import { Leerzustand } from './ui/Leerzustand';
 
 // Register-Bausteine der Rubrik-Übersichten (Auftrag David 10.6.2026, Struktur;
 // UI-Welle: neuer Ort /rechner + /vorlagen). Eine Oberkategorie wird als
@@ -29,30 +32,39 @@ import { sansAmp } from './typografie';
 
 // Geteilte Listen-Zeile (Redesign #1): EIN Karten-Zeilen-Muster für Werkzeuge
 // und Fristen-Regime (vorher WerkzeugZeile + FristenRegimeZeile, fast wortgleich).
-//  subWrap  – Sub-Label umbrechen statt abschneiden (Fristen-WARUM-Satz)
 //  zeigeGeplant – «In Vorbereitung»-Badge mitzeigen (sonst nur Entwurf)
-function ListenZeile({ k, subLabel, subWrap = false, zeigeGeplant }: { k: CalculatorCard; subLabel?: string; subWrap?: boolean; zeigeGeplant?: boolean }) {
+// C-4 (31.8.2026): die Zeilen-ANATOMIE (Titel/Untertitel/Marke/Pfeil) liegt seit
+// Runde 2 in `ui/TrefferZeile` — dieselbe wie im Such-Panel. Hier bleibt nur der
+// BEHÄLTER (Karte) und die Statuslogik. Der frühere Schalter `subWrap` ist
+// entfallen: der Baustein kappt das Sub-Label nie mehr hart, er lässt zwei
+// Zeilen zu (§8, Herleitung im Baustein).
+function ListenZeile({ k, subLabel, zeigeGeplant }: { k: CalculatorCard; subLabel?: string; zeigeGeplant?: boolean }) {
   const aktiv = istAktiv(k.status) && !!k.href;
   const inhalt = (
-    <>
-      <span className="min-w-0">
-        <span className="block font-sans font-medium text-ink-900 text-body-s leading-snug">{sansAmp(k.title)}</span>
-        {subLabel && <span className={`block text-xs text-ink-500 leading-snug${subWrap ? '' : ' truncate'}`}>{sansAmp(subLabel)}</span>}
-      </span>
-      <span className="flex items-center gap-2 shrink-0">
-        {k.status === 'entwurf' && (
-          <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
-        )}
-        {zeigeGeplant && k.status === 'geplant' && (
-          <span className="lc-badge lc-badge-soft">In Vorbereitung</span>
-        )}
-        {aktiv && <span aria-hidden className="text-brass-700 leading-none">→</span>}
-      </span>
-    </>
+    <TrefferZeile
+      titel={sansAmp(k.title)}
+      untertitel={subLabel ? sansAmp(subLabel) : undefined}
+      pfeil={aktiv ? '→' : null}
+      marke={(k.status === 'entwurf' || (zeigeGeplant && k.status === 'geplant')) ? (
+        <>
+          {k.status === 'entwurf' && (
+            <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
+          )}
+          {zeigeGeplant && k.status === 'geplant' && (
+            <span className="lc-badge-geplant">In Vorbereitung</span>
+          )}
+        </>
+      ) : undefined}
+    />
   );
-  const klasse = 'lc-card text-left px-4 py-3 flex items-center justify-between gap-3 min-w-0 bg-surface no-underline transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none';
+  // C-3 (31.8.2026): der Lift (`hover:shadow-lg hover:-translate-y-0.5`) ist
+  // entfallen — Karten-Hover läuft hausweit über die Farbstufe, als EINE Regel
+  // an `.lc-card` (index.css). Damit fällt auch der eigene Transition-Ausdruck
+  // samt `motion-reduce`-Rücknahme weg: ohne Transform bleibt nur der
+  // Farbübergang, den die Regel selbst mitbringt.
+  const klasse = `lc-card text-left px-4 py-3 bg-surface no-underline ${TREFFER_ZEILE_RAHMEN}`;
   return aktiv ? (
-    <Link to={k.href!} className={`${klasse} hover:shadow-lg hover:-translate-y-0.5`}>{inhalt}</Link>
+    <Link to={k.href!} className={klasse}>{inhalt}</Link>
   ) : (
     <div className={klasse}>{inhalt}</div>
   );
@@ -70,7 +82,7 @@ function ListenZeile({ k, subLabel, subWrap = false, zeigeGeplant }: { k: Calcul
 function FristenHauptKarte({ k, untertitel }: { k: CalculatorCard; untertitel: string }) {
   return (
     <Link to={k.href!}
-      className="lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface no-underline transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5 group">
+      className="lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface no-underline group">
       <span className="flex items-baseline gap-3">
         <span className="font-sans font-semibold text-ink-900 text-h3 leading-snug group-hover:text-brass-700 transition-colors">{sansAmp(k.title)}</span>
         <span aria-hidden className="ml-auto text-brass-700 leading-none">→</span>
@@ -101,14 +113,11 @@ function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
   const rubrik = (titel: string, lede: string, zeilen: ReturnType<typeof zeilenFuer>, extra: CalculatorCard[] = []) => (
     (zeilen.length > 0 || extra.length > 0) && (
       <div className="space-y-2">
-        <div className="flex items-center gap-3">
-          <h3 className="lc-overline text-brass-700">{titel}</h3>
-          <span aria-hidden className="flex-1 h-px bg-line" />
-        </div>
+        <GruppenKopf titel={titel} />
         <p className="text-body-s text-ink-500 max-w-reading">{lede}</p>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-          {zeilen.map((r) => <ListenZeile key={r.id} k={r.k} subLabel={r.warum ?? r.k.rechtsgebiet} subWrap />)}
-          {extra.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} subWrap />)}
+          {zeilen.map((r) => <ListenZeile key={r.id} k={r.k} subLabel={r.warum ?? r.k.rechtsgebiet} />)}
+          {extra.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
         </div>
       </div>
     )
@@ -120,10 +129,7 @@ function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
           vorhanden sind — bei aktivem Übersichts-Filter sonst leerer Kopf. */}
       {haupt.length > 0 && (
         <div className="space-y-2">
-          <div className="flex items-center gap-3">
-            <h3 className="lc-overline text-brass-700">Fristen berechnen</h3>
-            <span aria-hidden className="flex-1 h-px bg-line" />
-          </div>
+          <GruppenKopf titel="Fristen berechnen" />
           <div className="grid grid-cols-1 gap-3">
             {haupt.map((h) => <FristenHauptKarte key={h.id} k={h.k} untertitel={h.untertitel} />)}
           </div>
@@ -160,10 +166,7 @@ function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
           (bei aktivem Übersichts-Filter sonst leerer Kopf). */}
       {felder.length > 0 && (
         <div className="space-y-2">
-          <div className="flex items-center gap-3">
-            <h3 className="lc-overline text-brass-700">Rechtswege</h3>
-            <span aria-hidden className="flex-1 h-px bg-line" />
-          </div>
+          <GruppenKopf titel="Rechtswege" />
           <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
             {felder.map((f) => <ListenZeile key={f.id} k={f.k} subLabel={f.untertitel} zeigeGeplant />)}
           </div>
@@ -171,10 +174,8 @@ function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
       )}
       {weitere.length > 0 && (
         <div className="space-y-2">
-          <div className="flex items-center gap-3">
-            <h3 className="lc-overline">Weitere Werkzeuge <span className="num">({weitere.length})</span></h3>
-            <span aria-hidden className="flex-1 h-px bg-line" />
-          </div>
+          {/* C-7 (31.8.2026): «(n)» → nackte Zahl (Kanon 12:6:4:2). */}
+          <GruppenKopf titel="Weitere Werkzeuge" zahl={weitere.length} />
           <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
             {weitere.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
           </div>
@@ -206,10 +207,7 @@ function GebuehrenRegister({ karten, sortiert }: {
         if (xs.length === 0) return null;
         return (
           <div key={r.id} className="space-y-2">
-            <div className="flex items-center gap-3">
-              <h3 className="lc-overline text-brass-700">{r.titel} <span className="num text-ink-500">({xs.length})</span></h3>
-              <span aria-hidden className="flex-1 h-px bg-line" />
-            </div>
+            <GruppenKopf titel={r.titel} zahl={xs.length} />
             <p className="text-body-s text-ink-500 max-w-reading">{r.lede}</p>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
               {xs.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
@@ -253,11 +251,7 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
         /* id-Anker «vorlage-<id>»: Sprungziel der Seitenleisten-Vorlagen-
            Untergruppen (navigation.ts → ScrollZuHash). */
         <div key={s.id} id={`vorlage-${s.id}`} className="space-y-2 scroll-mt-24">
-          <div className="flex items-center gap-3">
-            <h3 className="lc-overline text-brass-700">{s.title}
-              <span className="num text-ink-500"> ({verf.length})</span></h3>
-            <span aria-hidden className="flex-1 h-px bg-line" />
-          </div>
+          <GruppenKopf titel={s.title} zahl={verf.length} />
           <p className="text-body-s text-ink-500 max-w-reading">{s.lede}</p>
           {s.art === 'eingabe' ? (
             /* Behördeneingaben: drei Unterrubriken, flach (ohne Einrück-Borte). */
@@ -282,11 +276,18 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
                 return (
                   <div key={r.id} className="space-y-2">
                     {rVerf.length > 6 ? (
-                      <details className="group space-y-2">
-                        <summary className="cursor-pointer list-none select-none">
+                      /* LM-060-Klasse (B15, 4.9.2026): hier standen ZWEI
+                          Klappmarken — dieses vorangestellte ▸ UND das «▸» der
+                          App-weiten `details > summary::after`-Regel, das
+                          `list-none` nicht abschaltet (gemessen auf `/vorlagen`
+                          an der Schwester-Stelle «In Vorbereitung (44)»). Das
+                          eigene Zeichen fällt weg; das EINE Zeichen kommt aus
+                          der geteilten Regel, dort rechtsbündig und drehend.
+                          `group` trug nur noch dessen Drehung und geht mit. */
+                      <details className="space-y-2">
+                        <summary className="cursor-pointer select-none">
                           <h4 className="lc-overline inline">
-                            <span aria-hidden className="inline-block mr-1.5 transition-transform group-open:rotate-90">▸</span>
-                            {r.titel} <span className="num text-ink-500">({rVerf.length})</span>
+                            {r.titel} <span className="num text-ink-500">{rVerf.length}</span>
                           </h4>
                         </summary>
                         {zeilen(rVerf)}
@@ -375,6 +376,15 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
               ← Alle Kategorien
             </button>
           )}
+          {/* C-7-AUSNAHME, bewusst NICHT auf `GruppenKopf`/nackte Zahl gezogen
+              (31.8.2026): Dies ist der SEKTIONS-Kopf einer Kategorie, kein
+              Gruppenkopf — die Sektion darunter enthält neben den `verfuegbar`-
+              Zeilen zusätzlich den «In Vorbereitung»-Block. Eine nackte Zahl
+              würde hier also nicht die Einträge der Sektion zählen, sondern
+              eine falsche Aussage über deren Umfang machen. «verfügbar» ist an
+              dieser Stelle ein Ehrlichkeitswort (§8), keine Schreibvariante des
+              Zählers — es bleibt. Ebenso die Sans-Stimme: ein Kategorie-Kopf
+              ist die Seiten-Überschrift, kein Struktur-Etikett (§G-e). */}
           <div className="flex items-baseline gap-4">
             <h2 id={`register-titel-${kat.id}`} className="whitespace-nowrap">
               <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{kat.titel}</span>
@@ -391,30 +401,44 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
       {/* Rechtsgebiet-Filter (Redesign 24.6.2026): EIN Dropdown statt ~14 Pillen —
           macht die Vorlagen-«Wand» scanbar; die Auswahl engt alle Gruppen live ein.
           Die «Nur verfügbare»-Pille entfällt: der Hauptbereich zeigt ohnehin nur
-          Einsatzbereite, Geplantes liegt im Sammelblock unten. */}
+          Einsatzbereite, Geplantes liegt im Sammelblock unten.
+          ── D22 Ziff. 2 (Nachzug D24, 6.9.2026) · DIE HÜLLE DER FILTERZEILE ───
+          R12A §4 hatte /vorlagen ausdrücklich offengelassen. Die Zeile trägt
+          jetzt dieselbe Anatomie wie /gesetze, /materialien und /rechner:
+          sichtbares Label «Filtern» über dem Feld (`.ub-filter`), Feld über die
+          Inhaltsbreite, Umfang und Zähler in der Fuss-Zeile (`.ub-filter-fuss`,
+          per `aria-describedby` verknüpft) — statt einer halbleeren Flex-Zeile
+          mit inline-Etikett.
+          BEWUSST KEIN Text-Schalter je Facette: die Achse führt ~14
+          Rechtsgebiete. Dieselbe Begründung wie bei den Materialien-Facetten in
+          R12A — ein Schalter je Wert wäre genau die Wand, die D22 abräumt.
+          Das <select> bleibt, es bekommt nur die Hülle. */}
       {filterAktiv && vorhandeneGebiete.length > 1 && (
-        <div className="flex flex-wrap items-center gap-3" role="group" aria-label="Vorlagen nach Rechtsgebiet filtern">
-          <label className="flex flex-wrap items-center gap-2 text-body-s text-ink-600">
-            <span>Rechtsgebiet</span>
-            <select value={[...aktiveGebiete][0] ?? ''}
-              onChange={(e) => setzeFilter(e.target.value ? new Set([e.target.value]) : new Set(), false)}
-              className="lc-select lc-input-sm w-full min-w-0 sm:w-auto sm:min-w-[12rem]">
-              <option value="">Alle</option>
-              {vorhandeneGebiete.map((g) => <option key={g} value={g}>{g}</option>)}
-            </select>
-          </label>
-          <span className="lc-overline num">
-            <span className="text-brass-700">{verfuegbar.length}</span> verfügbar
-          </span>
+        <div className="ub-filter" role="group" aria-label="Vorlagen nach Rechtsgebiet filtern">
+          <label htmlFor={`vorlagen-filter-${kat.id}`} className="lc-overline">Filtern</label>
+          <select id={`vorlagen-filter-${kat.id}`}
+            value={[...aktiveGebiete][0] ?? ''}
+            onChange={(e) => setzeFilter(e.target.value ? new Set([e.target.value]) : new Set(), false)}
+            aria-describedby={`vorlagen-filter-scope-${kat.id}`}
+            className="lc-select h-11 py-0 text-body-s w-full">
+            <option value="">Alle Rechtsgebiete</option>
+            {vorhandeneGebiete.map((g) => <option key={g} value={g}>{g}</option>)}
+          </select>
+          <p id={`vorlagen-filter-scope-${kat.id}`} className="ub-filter-fuss min-h-5">
+            <span>Rechtsgebiet dieser Vorlagen · Gesetzes- und Entscheidtext über die Suche oben</span>
+            <span className="num"><span className="text-brass-700">{verfuegbar.length}</span> verfügbar</span>
+          </p>
         </div>
       )}
 
       {filterAktiv && gefiltert.filter(istVorlage).length === 0 && geplant.length === 0 ? (
-        <p className="text-body-s text-ink-500 py-6">
-          Keine Vorlage in dieser Auswahl.{' '}
-          <button type="button" onClick={() => setzeFilter(new Set(), false)}
-            className="font-medium text-brass-700 hover:text-brass-600">Filter zurücksetzen</button>
-        </p>
+        <div className="py-6">
+          {/* D-7 (R3-α, 31.8.2026): war ein handgezeichneter Absatz mit
+              eigenem Knopf — Form und Wortlaut sind unverändert, die
+              Anatomie kommt jetzt aus dem EINEN Baustein (§5/§10). */}
+          <Leerzustand art="filter" text="Keine Vorlage in dieser Auswahl."
+            weiterweg={{ text: 'Filter zurücksetzen', onKlick: () => setzeFilter(new Set(), false) }} />
+        </div>
       ) : kat.id === 'fristen' ? (
         /* FE-1 (FAHRPLAN-FRISTEN-EINHEIT): EIN Einstieg + Regime-Abzweigungen
            statt der Alltag/Weitere-Mischliste. */
@@ -432,10 +456,7 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
         <>
           {alltag.length > 0 && (
             <div className="space-y-2">
-              <div className="flex items-center gap-3">
-                <h3 className="lc-overline text-brass-700">Alltag</h3>
-                <span aria-hidden className="flex-1 h-px bg-line" />
-              </div>
+              <GruppenKopf titel="Alltag" />
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
                 {alltag.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
               </div>
@@ -443,10 +464,7 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
           )}
           {weitere.length > 0 && (
             <div className="space-y-2">
-              <div className="flex items-center gap-3">
-                <h3 className="lc-overline">{alltag.length > 0 ? 'Weitere Werkzeuge' : 'Werkzeuge'} <span className="num">({weitere.length})</span></h3>
-                <span aria-hidden className="flex-1 h-px bg-line" />
-              </div>
+              <GruppenKopf titel={alltag.length > 0 ? 'Weitere Werkzeuge' : 'Werkzeuge'} zahl={weitere.length} />
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
                 {weitere.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
               </div>
@@ -458,9 +476,11 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
       {geplant.length > 0 && (
         // W2·10-UI-NAV/N0d·W4: bei aktivem Übersichts-Filter aufgeklappt, damit
         // passende «In Vorbereitung»-Karten nicht hinter dem Accordion verborgen bleiben.
-        <details className="group" open={alleOffen || undefined}>
-          <summary className="cursor-pointer list-none text-body-s text-ink-500 hover:text-brass-700 transition-colors select-none">
-            <span aria-hidden className="inline-block mr-1.5 transition-transform group-open:rotate-90">▸</span>
+        /* LM-060-Klasse (B15, 4.9.2026): zweite Fundstelle derselben Doppelmarke
+            — GEMESSEN auf `/vorlagen` @1440 trug diese Summary das eigene ▸ UND
+            das «▸» der App-weiten Regel. Nur noch das geteilte Zeichen. */
+        <details open={alleOffen || undefined}>
+          <summary className="cursor-pointer text-body-s text-ink-500 hover:text-brass-700 transition-colors select-none">
             In Vorbereitung <span className="num">({geplant.length})</span>
           </summary>
           <p className="text-body-s text-ink-500 leading-relaxed pt-2 pl-4">

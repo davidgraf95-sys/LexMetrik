@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useDialogFokus } from '../../components/layout/useDialogFokus';
 import { usePaneKontext } from '../../components/layout/PaneKontext';
 import { useMeldeInhaltsKopf } from '../../components/layout/InhaltsKopfKontext';
-import type { StrukturMap, ErlassKopf, CurrencyMap } from '../../lib/normtext/browse';
+import type { StrukturMap, ErlassKopf, CurrencyMap, KantonLueckenMap } from '../../lib/normtext/browse';
 import type { KantonSystematik } from '../../lib/normtext/systematik';
 import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
@@ -406,7 +406,8 @@ export function useLeserAnsichtZustand({ tocAuf, setTocAuf }: {
   const istSekundaer = rolle === 'sekundaer';
   // W2·5d G2b (Fussnoten-Unifizierung): der frühere `fussnotenAuf`-React-Schalter
   // (Such-Leiste, Default AUS) entfällt — die Fussnoten-Bedienung ist jetzt EINE
-  // (der data-fussnoten-Toggle der Options-Leiste, Default AN). Marker + Apparat
+  // (seit D35-F3 die Stellung der `data-vermerke`-Wahl, Vorgabe «fassung» —
+  // bis 7.9.2026 der `data-fussnoten`-Toggle mit Vorgabe AN). Marker + Apparat
   // liegen IMMER im DOM (R9/§8, Ctrl+F/Print/Screenreader); «AUS» dämpft rein per
   // CSS (index.css), versteckt nie. Kein React-State-Zweig mehr im Artikel-Baum.
   // Die Gliederungslinie ist ersatzlos entfallen (Entscheid David 13.8.2026,
@@ -415,6 +416,9 @@ export function useLeserAnsichtZustand({ tocAuf, setTocAuf }: {
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
   const [kantonSys, setKantonSys] = useState<Record<string, KantonSystematik>>({});
+  // §8-Nachzug (PR #614-Auflage): ausgewiesene Erlass-Lücken je kantonalem
+  // Erlass-Key — analog `kantonSys` lazy geladen, nur für die Kanton-Lesesicht.
+  const [kantonLuecken, setKantonLuecken] = useState<KantonLueckenMap>({});
   // BGer-Entscheide/Materialien/Werkzeuge zu diesem Erlass: das einheitliche
   // KontextPanel (B3) lädt + zeigt sie selbst (Single Source, §5) — am Leseende.
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
@@ -445,6 +449,7 @@ export function useLeserAnsichtZustand({ tocAuf, setTocAuf }: {
   return {
     tocOffen, setTocOffen, istXl, imPane, wurzel, overlayWurzel, istSekundaer,
     meldeInhaltsKopf, aktArtikel, setAktArtikel, kantonSys, setKantonSys,
+    kantonLuecken, setKantonLuecken,
     sekRefs, tocDrawerRef, tabArtikelTimer, aktArtikelTimer, tocBaumTimer, tocTouchRef,
   };
 }

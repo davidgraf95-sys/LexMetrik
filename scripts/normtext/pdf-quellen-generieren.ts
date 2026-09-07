@@ -9,6 +9,7 @@
 //
 //   npm run gen:pdf-quellen -- --datum=$(date +%F)            (Netz, manuell)
 //   npm run gen:pdf-quellen -- --nur=bund --datum=…           (nur Bund)
+//   npm run gen:pdf-quellen -- --nur=kanton --kanton=BE       (nur ein Kanton)
 //
 // Quellen (ausschliesslich amtlich, §7):
 //   · Bund   — Fedlex-SPARQL `jolux:isExemplifiedBy` der pdf-a-Manifestation der
@@ -35,6 +36,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sparqlBatch, type FetchImpl } from '../fedlex-sparql.ts';
 import { inKraftSeit } from './adapter-lexwork.ts';
+import { lexworkApiUrl } from './lexwork-url.ts';
 
 // Triviale, seiteneffektfreie Helfer lokal (der Bezug fedlex-wiedervorlage-
 // generieren.ts läuft beim Import als CLI mit — darum NICHT von dort importieren).
@@ -124,11 +126,10 @@ export async function bundPdfQuellen(
 
 // ─── Kanton: LexWork pdf_link_tol (nur bei Versions-Gleichstand) ─────────────
 
-/** '…/app/de/texts_of_law/291.150' → '…/api/de/texts_of_law/291.150'. null = kein LexWork-Muster. */
-export function lexworkApiUrl(quelleUrl: string): string | null {
-  const m = quelleUrl.match(/^(https:\/\/[^/]+)\/app\/(de|fr|it)\/texts_of_law\/(.+)$/);
-  return m ? `${m[1]}/api/${m[2]}/texts_of_law/${m[3]}` : null;
-}
+/** '…/app/de/texts_of_law/291.150' → '…/api/de/texts_of_law/291.150'. null = kein LexWork-Muster.
+ *  Wohnt seit 6.9.2026 in `lexwork-url.ts` (nebenwirkungsfrei importierbar) und
+ *  wird hier nur re-exportiert — Aufrufer und Test bleiben unverändert. */
+export { lexworkApiUrl };
 
 type LexworkText = {
   text_of_law?: {
@@ -193,6 +194,31 @@ export function pdfQuellenJson(map: PdfQuellenMap): string {
   return JSON.stringify(sortiert, null, 2) + '\n';
 }
 
+/**
+ * Reine Räum-Funktion (Gegenprüfungs-Befund PR #694, 5.9.2026, minimal aus
+ * main() extrahiert für Testbarkeit — keine Logikänderung). Entfernt aus
+ * `map` jene Sidecar-Einträge, die (a) nicht mehr im Register stehen UND
+ * (b) mit `<KT>-` eines der GEFAHRENEN Kantone beginnen — ein aus dem Korpus
+ * zurückgezogener Erlass steht nicht mehr im Register und überlebte sonst
+ * jeden Teillauf als Waise (§5/§8). Fremde Kantone/Register-Einträge bleiben
+ * unberührt. Mutiert `map` nicht.
+ */
+export function raeumeVerwaisteSidecarEintraege(
+  map: PdfQuellenMap,
+  imRegister: ReadonlySet<string>,
+  gefahren: ReadonlySet<string>,
+): { map: PdfQuellenMap; entfernt: string[] } {
+  const bereinigt: PdfQuellenMap = { ...map };
+  const entfernt: string[] = [];
+  for (const key of Object.keys(map)) {
+    if (imRegister.has(key)) continue;
+    if (![...gefahren].some((kt) => key.startsWith(`${kt}-`))) continue;
+    entfernt.push(key);
+    delete bereinigt[key];
+  }
+  return { map: bereinigt, entfernt };
+}
+
 // ─── CLI ─────────────────────────────────────────────────────────────────────
 
 function heute(): string {
@@ -203,10 +229,24 @@ function heute(): string {
 async function main() {
   const nurArg = process.argv.find((a) => a.startsWith('--nur='));
   const nur = nurArg ? nurArg.slice('--nur='.length) : 'beide';
+  // `--kanton=BE[,SG]` grenzt die KANTONALE Erhebung auf einzelne Kantone ein
+  // (QS-MONITOR-ROT, 4.9.2026). WARUM: eine Kanton-Reparatur an EINEM Erlass
+  // (hier BE 154.21) musste bisher alle 1231 kantonalen Quellen neu befragen —
+  // derselbe Churn-Schaden, gegen den der Bund-Arm 1.9.2026 `--nur=bund` bekam
+  // (fedlex-frische.yml: «13 BS-Erlasse verloren dabei ihren PDF-Link … ein
+  // echter, aber sachfremder Befund, der einen eigenen Schritt verdient»).
+  // Ohne Flag unverändertes Verhalten (alle Kantone); die `delete`-Zeile unten
+  // räumt nur die GEFILTERTEN Keys, fremde Sidecar-Einträge bleiben.
+  const kantonArg = process.argv.find((a) => a.startsWith('--kanton='));
+  const kantonFilter = kantonArg
+    ? new Set(kantonArg.slice('--kanton='.length).split(',').map((s) => s.trim().toUpperCase()).filter(Boolean))
+    : null;
   const erlasse = (JSON.parse(readFileSync(REGISTER_JSON, 'utf8')) as { erlasse: ErlassBasis[] }).erlasse;
   const snap = erlasse.filter((e) => e.status === 'snapshot' && e.quelleUrl);
   const bund = snap.filter((e) => e.ebene === 'bund' && e.sr);
-  const kanton = snap.filter((e) => e.ebene === 'kanton');
+  const kanton = snap.filter(
+    (e) => e.ebene === 'kanton' && (!kantonFilter || (e.kanton !== null && kantonFilter.has(e.kanton.toUpperCase()))),
+  );
 
   // Bestehende Sidecar-Einträge erhalten, wenn nur ein Teil neu erhoben wird.
   let map: PdfQuellenMap = {};
@@ -221,6 +261,25 @@ async function main() {
   if (nur === 'kanton' || nur === 'beide') {
     const { map: km, ohne, fehler } = await kantonPdfQuellen(kanton, fetch);
     for (const e of kanton) delete map[e.key];
+    // §5-Rückzug: `delete map[e.key]` räumt nur Keys, die IM REGISTER stehen.
+    // Ein aus dem Korpus zurückgezogener Erlass steht dort nicht mehr — sein
+    // Sidecar-Eintrag überlebte darum jeden Teillauf und blieb als Waise liegen
+    // (check:pdf-quellen «verwaister PDF-Quellen-Eintrag»; real beim Rückzug der
+    // GL-Schreibweisen-Dublette, 5.9.2026). Aufgeräumt wird ausschliesslich
+    // INNERHALB der gefahrenen Kantone; fremde Einträge bleiben unberührt (§8).
+    const imRegister = new Set(erlasse.map((e) => e.key));
+    const gefahren =
+      kantonFilter ??
+      new Set(
+        erlasse
+          .filter((e) => e.ebene === 'kanton' && e.kanton !== null)
+          .map((e) => (e.kanton as string).toUpperCase()),
+      );
+    const { map: bereinigt, entfernt: zurueckgezogen } = raeumeVerwaisteSidecarEintraege(map, imRegister, gefahren);
+    map = bereinigt;
+    if (zurueckgezogen.length > 0) {
+      console.log(`Kanton: ${zurueckgezogen.length} verwaiste(r) Eintrag entfernt (nicht mehr im Register): ${zurueckgezogen.join(', ')}`);
+    }
     Object.assign(map, km);
     console.log(`Kanton: ${Object.keys(km).length}/${kanton.length} amtliche PDF-URLs; ${ohne.length} ohne/Drift; ${fehler.length} Netz-Fehler`);
     if (fehler.length) console.log(`  Fehler (Auszug): ${fehler.slice(0, 10).join(' · ')}${fehler.length > 10 ? ' …' : ''}`);

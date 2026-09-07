@@ -1,6 +1,10 @@
 // @shard-gruppe: 5
 import { test, expect, type Page } from '@playwright/test';
-import { ANSICHT_PANEL, RECHTSPRECHUNG_SCHALTER_NAME, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
+import { F_MARKE } from './helpers/fassungsRubrik';
+import {
+  ANSICHT_PANEL, AUS_WAHL_NAME, RECHTSPRECHUNG_SCHALTER_NAME, SCHALTER_ROLLE,
+  VERMERKE_SCHALTER_NAME, WAHL_ROLLE,
+} from './helpers/leserBeschriftung';
 
 // W2·5d G2a — Leser-Options-Leiste: reine data-*-/CSS-Toggles am <html>,
 // persistent (localStorage) + Pre-Paint (main.tsx, CSP-konform ohne
@@ -72,12 +76,22 @@ async function warteReader(page: Page, url: string, artId: string): Promise<void
 // Layout-Shift der Seite); sein Name heisst seit Ä114 in V3 «Ansicht» und in
 // der Ist-Hülle weiter «Darstellungsoptionen» — beide Fälle deckt
 // `ANSICHT_PANEL` (helpers/leserBeschriftung).
+// IDEMPOTENT (D35-F3): ein Klick auf eine Menü-Zeile schliesst das Panel NICHT.
+// Ein zweiter blinder Klick auf «Ansicht» klappte es darum zu, und die folgende
+// Zusicherung scheiterte am fehlenden Panel — ein Fehlschlag der Prüfmechanik,
+// nicht der Sache (derselbe Befund wie in `hist-ansicht-w25i.e2e.ts`).
 async function ansichtOeffnen(page: Page): Promise<void> {
-  await page.getByRole('button', { name: 'Ansicht' }).first().click();
-  await expect(page.locator(ANSICHT_PANEL).first()).toBeVisible();
+  const panel = page.locator(ANSICHT_PANEL).first();
+  if (!(await panel.isVisible())) {
+    await page.getByRole('button', { name: 'Ansicht' }).first().click();
+  }
+  await expect(panel).toBeVisible();
 }
 
-test('Options-Leiste: drei role=switch (Fussnoten/Änderungsvermerke/Rechtsprechung anzeigen) — «Entscheide» via Panel, «Linien» und «Verweise» entfallen', async ({ page }) => {
+// D4 (7.9.2026): die drei hiessen bis dahin `role=switch`. Seit das Menü
+// `role="menu"` trägt, verlangt ARIA dort `menuitemcheckbox` — dieselbe
+// Auskunft, derselbe `aria-checked`, derselbe Name (`SCHALTER_ROLLE`).
+test('Options-Leiste: die Änderungs-Wahl + sechs Rubriken-Schalter — «Linien» und «Verweise» entfallen', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator(ANSICHT_PANEL).first();
@@ -98,14 +112,41 @@ test('Options-Leiste: drei role=switch (Fussnoten/Änderungsvermerke/Rechtsprech
   // Wirkung; die geprüfte Aussage («genau diese drei, keine mehr, keine
   // weniger») ist unverändert. Herleitung: `v3/LeserAnsichtV3.tsx`.
   // Ä115/Ä116: zwei der drei Namen sind in V3 gewechselt (helpers/leserBeschriftung).
-  for (const name of [/^Fussnoten/, VERMERKE_SCHALTER_NAME, RECHTSPRECHUNG_SCHALTER_NAME]) {
-    await expect(gruppe.getByRole('switch', { name })).toHaveAttribute('aria-checked', 'true');
+  // ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ────────────────────
+  // «Fussnoten» und «Fassung» waren zwei unabhängige `menuitemcheckbox`; sie
+  // sind zwei von drei Stellungen EINER Radiogruppe geworden. Die geprüfte
+  // Aussage bleibt dieselbe («genau diese Bedienungen, keine mehr, keine
+  // weniger»), nur die Rollen trennen sich: EINE Checkbox (Rechtsprechung) und
+  // DREI Radios (die Änderungs-Wahl). Herleitung: `v3/LeserAenderungsWahl.tsx`.
+  // ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ────────────────────
+  // Die eine verbliebene Checkbox war «Rechtsprechung im Kopf». Sie ist mit
+  // Variante A ERSATZLOS gefallen: der Kopf trägt keine Artikel-Zahl mehr, die
+  // sie hätte verbergen können (Herleitung in `v3/LeserAnsichtV3.tsx` und
+  // `v3/panelModell.ts`). An ihre Stelle treten FÜNF Checkboxen — die
+  // Rubriken-Wahl «An diesem Artikel zeigen» (Davids Nachtrag «man soll mittels
+  // ansicht alles einzelne abwählen können»). Die geprüfte Aussage ist
+  // unverändert der Deckel: genau diese Bedienungen, keine mehr, keine weniger.
+  await expect(gruppe.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }))
+    .toHaveCount(0);
+  // §6.3-DEKLARATION (D40, 7.9.2026): «Fassung» ist die sechste Rubrik — sie
+  // steht ZUERST, weil sie in der Zeile zuerst steht (§5). Der Deckel selbst
+  // ist die unveränderte Aussage: genau diese Bedienungen, keine mehr.
+  for (const name of [/^Fassung$/, /^Entscheide$/, /^Materialien$/, /^Verweise$/, /^Rechner$/, /^Aktionen$/]) {
+    await expect(gruppe.getByRole(SCHALTER_ROLLE, { name })).toHaveAttribute('aria-checked', 'true');
   }
-  await expect(gruppe.getByRole('switch')).toHaveCount(3);
-  await expect(gruppe.getByRole('switch', { name: 'Linien' })).toHaveCount(0);
+  await expect(gruppe.getByRole(SCHALTER_ROLLE)).toHaveCount(6);
+  for (const name of [/^Fussnoten/, VERMERKE_SCHALTER_NAME, AUS_WAHL_NAME]) {
+    await expect(gruppe.getByRole(WAHL_ROLLE, { name })).toHaveCount(1);
+  }
+  await expect(gruppe.getByRole(WAHL_ROLLE)).toHaveCount(3);
+  await expect(gruppe.getByRole(SCHALTER_ROLLE, { name: 'Linien' })).toHaveCount(0);
   // Negativ-Sonde gegen die Rückkehr: eine entfernte Steuerung, die niemand
   // vermisst, schleicht sich beim nächsten Merge sonst wieder ein.
-  await expect(gruppe.getByRole('switch', { name: 'Verweise' })).toHaveCount(0);
+  // D35-F2: der Name «Verweise» ist seither VERGEBEN — an eine Rubrik der
+  // Funktionszeile, nicht an den gestrichenen S1-Schalter. Die Negativ-Sonde
+  // greift darum am Attribut `data-verweise` unten, das der Alt-Schalter
+  // schaltete und die Rubrik nicht kennt; eine Namensprüfung wäre hier seit
+  // D35-F2 mehrdeutig (§7: Identität, nicht Substring).
   const html = page.locator('html');
   // Kein `data-linien` mehr am <html> — das Attribut existierte nur für die Linie.
   await expect(html).not.toHaveAttribute('data-linien', /.*/);
@@ -113,8 +154,16 @@ test('Options-Leiste: drei role=switch (Fussnoten/Änderungsvermerke/Rechtsprech
   // sein — ein zurückgelassenes Attribut wäre der stille Rest, an dem eine
   // CSS-Regel später wieder anwachsen könnte.
   await expect(html).not.toHaveAttribute('data-verweise', /.*/);
-  await expect(html).toHaveAttribute('data-fussnoten', 'an');
-  await expect(html).toHaveAttribute('data-histansicht', 'an');
+  // D35-F3: EIN Attribut für die eine Frage; die zwei alten sind weg — ein
+  // zurückgelassenes Attribut wäre der stille Rest, an dem eine CSS-Regel später
+  // wieder anwachsen könnte (dieselbe Sorge wie bei `data-verweise` oben).
+  await expect(html).toHaveAttribute('data-vermerke', 'fassung');
+  await expect(html).not.toHaveAttribute('data-fussnoten', /.*/);
+  await expect(html).not.toHaveAttribute('data-histansicht', /.*/);
+  // D35-F2: dieselbe Sorge am gestrichenen `leitfaelle` — und das eine neue
+  // Attribut steht im Grundzustand LEER, emittiert also keine Regel (R6/§6).
+  await expect(html).not.toHaveAttribute('data-leitfaelle', /.*/);
+  await expect(html).toHaveAttribute('data-fuss-aus', '');
 });
 
 // ── S1-NACHZUG B3 · GELÖSCHT IN H4 (Flip 18.8.2026) ─────────────────────────
@@ -143,60 +192,69 @@ test('Options-Leiste: drei role=switch (Fussnoten/Änderungsvermerke/Rechtsprech
 // statt der erklärten Abhängigkeit wird die Unabhängigkeit selbst gemessen. Ohne
 // diese zweite Hälfte wäre es eine reine Negativ-Sonde, die auch bei einem
 // kaputten Menü grün bliebe (§6.7).
-test('Ä69: kein Hinweis mehr am Vermerke-Schalter — er hängt in keiner Stellung am Fussnoten-Schalter', async ({ page }) => {
+test('Ä69/D35-F3: keine Hinweiszeile an einem Erlass MIT klassifizierter Historie', async ({ page }) => {
+  // ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ────────────────────
+  // Der Fall prüfte die UNABHÄNGIGKEIT der zwei Schalter (Ä69: kein Hinweis
+  // nötig, weil es keine Kreuz-Abhängigkeit mehr gibt). Zwei Schalter gibt es
+  // nicht mehr, also auch keine Kreuz-Abhängigkeit — die Aussage ist damit
+  // strukturell erfüllt statt geprüft. Was BLEIBT und hier geprüft wird: der
+  // Alt-Hinweis ist restlos weg, UND die einzige Hinweiszeile, die es heute
+  // gibt (§8, Erlasse ohne `kl`-Klassifikation), erscheint an einem Erlass MIT
+  // Klassifikation nicht. Ohne diese zweite Hälfte wäre es eine reine
+  // Negativ-Sonde, die auch bei einem kaputten Menü grün bliebe (§6.7); die
+  // positive Hälfte — der Hinweis IST da, wo er hingehört — steht in
+  // `e2e/w224-d35-f3-vermerke.e2e.ts` an MONTREAL.
   const ALT_HINWEIS = 'Marker und Apparat sind mit den Fussnoten ausgeblendet';
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator(ANSICHT_PANEL).first();
-  const vermerke = gruppe.getByRole('switch', { name: VERMERKE_SCHALTER_NAME });
-  await expect(vermerke).toHaveCount(1);
+  const fassung = gruppe.getByRole(WAHL_ROLLE, { name: VERMERKE_SCHALTER_NAME });
+  await expect(fassung).toHaveCount(1);
+  await expect(gruppe.getByText(ALT_HINWEIS)).toHaveCount(0);
+  await expect(gruppe.getByText('keine klassifizierten Änderungs-Fussnoten')).toHaveCount(0);
+  // Die Wahl-Gruppe trägt an einem klassifizierten Erlass keine Beschreibung —
+  // ein verwaistes `aria-describedby` zeigte auf ein Element, das es nicht gibt.
+  expect(
+    await gruppe.locator('[data-v3-vermerke-wahl]').getAttribute('aria-describedby'),
+    'die Wahl trägt an BGBM noch eine Beschreibung',
+  ).toBeNull();
 
-  // (1) In BEIDEN Stellungen des Fussnoten-Schalters keine Hinweiszeile — und
-  // auch kein verwaistes `aria-describedby`, das auf ein leeres Element zeigt.
-  for (const stellung of ['an', 'aus'] as const) {
-    if (stellung === 'aus') {
-      await gruppe.getByRole('switch', { name: 'Fussnoten' }).click();
-    }
-    await expect(page.locator('html')).toHaveAttribute('data-fussnoten', stellung);
-    await expect(gruppe.getByText(ALT_HINWEIS)).toHaveCount(0);
-    expect(
-      await vermerke.getAttribute('aria-describedby'),
-      `Vermerke-Schalter trägt bei «Fussnoten: ${stellung}» noch eine Beschreibung`,
-    ).toBeNull();
-  }
-
-  // (2) Und die Unabhängigkeit ist echt: bei «Fussnoten: aus» steht der
-  // Vermerke-Schalter nicht bloss unerklärt auf «an» — er WIRKT auch. Das ist der
-  // Grund, warum kein Hinweis nötig ist.
-  await expect(vermerke).toHaveAttribute('aria-checked', 'true');
-  const slot = page.locator('.lc-leser [data-hist-slot]').first();
+  // Und die Stellung WIRKT: «Fassung» zeigt den Slot, «aus» nimmt ihn.
+  await expect(fassung).toHaveAttribute('aria-checked', 'true');
+  // §6.3-DEKLARATION (D40, 7.9.2026): der Kopf-Slot ist gefallen; die Wirkung
+  // der Stellung zeigt sich an der Rubrik-Marke der Funktionszeile.
+  const slot = page.locator(`.lc-leser ${F_MARKE}`).first();
   await expect(slot).toBeVisible({ timeout: 15000 });
-  await vermerke.click();
-  await expect(page.locator('html')).toHaveAttribute('data-histansicht', 'aus');
-  await expect(slot, 'Vermerke=aus wirkt bei «Fussnoten: aus» nicht').toBeHidden();
+  await gruppe.getByRole(WAHL_ROLLE, { name: AUS_WAHL_NAME }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'aus');
+  await expect(slot, '«aus» nimmt die Fassungs-Rubrik nicht').toBeHidden();
 });
 
-test('Fussnoten-Toggle: AN sichtbar → AUS VERSCHWINDEN (A1, David 5.7.2026), Text bleibt im DOM, kein CLS beim Toggle', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
-
-  // A1 (David 5.7.2026, überstimmt die frühere R9-Dämpfungs-Regel): Fussnoten bei
-  // AUS VERSCHWINDEN visuell (display:none am `[data-fn-marker]`-Cluster und am
-  // `[data-fn-apparat]`), statt nur gedämpft zu werden. Trade-off: die Marker-
-  // Ziffern + Apparat-Texte verlassen Ctrl+F — NUR sie, nie der Normtext; der
-  // Fussnotentext bleibt im DOM (`#fn-…`) und «Fussnoten AN» stellt alles wieder her.
-  const marker = page.locator('.lc-leser [data-fn-ref]').first();
-  await expect(marker).toBeVisible({ timeout: 15000 });
-  const nrText = (await marker.textContent())?.trim() ?? '';
-  expect(nrText.length).toBeGreaterThan(0);
-
-  // A4: Switches liegen im «Ansicht»-Dropdown — öffnen (absolut positioniert,
-  // kein Layout-Shift der Seite), dann den CLS-Beobachter installieren.
+test('A1-Mechanik: die Wahl VERSCHWINDET die A-Spur (display:none), der Text bleibt im DOM, kein CLS', async ({ page }) => {
+  // ── §6.3-DEKLARATION (D35-F3) ─────────────────────────────────────────────
+  // Hier stand der Toggle-Fall des Apparat-Schalters («AN sichtbar → AUS
+  // verschwinden», A1 David 5.7.2026). Den Schalter gibt es nicht mehr —
+  // amtlicher Nicht-Änderungs-Apparat wird nie versteckt. Die A1-MECHANIK gilt
+  // unverändert und wird hier an dem gemessen, was heute noch verschwinden
+  // kann: der Änderungs-Fussnote. Trade-off unverändert: die Marker-Ziffer und
+  // der Apparat-Text verlassen Ctrl+F — NUR sie, nie der Normtext; der Text
+  // bleibt im DOM (`#fn-…`), und «Fussnoten» stellt alles wieder her.
+  await warteReader(page, '/gesetze/bund/BGBM', 'art-4');
   await ansichtOeffnen(page);
+  await page.getByRole(WAHL_ROLLE, { name: /^Fussnoten/ }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'fussnoten');
+
+  const aMarker = page.locator('.lc-leser [data-fn-klasse="A"] [data-fn-ref]').first();
+  await expect(aMarker).toBeVisible({ timeout: 15000 });
+  const nrText = (await aMarker.textContent())?.trim() ?? '';
+  expect(nrText.length).toBeGreaterThan(0);
+  const vZeile = page.locator('#fn-4-13');
+  await expect(vZeile).toBeVisible();
 
   // CLS-Beobachter INSTALLIEREN (NUR künftige Shifts, kein `buffered` — die
-  // Lade-Shifts sind nicht Gegenstand des Toggle-Beweises), dann togglen: ein
-  // toggle-getriebener Reflow liegt binnen 500 ms nach dem Klick (input-exkludiert)
-  // und darf KEINEN CLS beitragen.
+  // Lade-Shifts sind nicht Gegenstand des Umschalt-Beweises), dann umschalten:
+  // ein klick-getriebener Reflow liegt binnen 500 ms nach dem Klick
+  // (input-exkludiert) und darf KEINEN CLS beitragen.
   await page.evaluate(() => {
     (window as unknown as { __cls: number }).__cls = 0;
     new PerformanceObserver((l) => {
@@ -207,24 +265,26 @@ test('Fussnoten-Toggle: AN sichtbar → AUS VERSCHWINDEN (A1, David 5.7.2026), T
     }).observe({ type: 'layout-shift' });
   });
 
-  // NEGATIV: «Fussnoten» AUS → Marker + Apparat visuell WEG (display:none), aber
-  // der Marker bleibt im DOM (Text abfragbar), niemals gelöscht.
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
-  await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
-  await expect(marker).toBeHidden();
-  expect(await marker.evaluate((el) => getComputedStyle(el).display)).toBe('none');
-  // Text bleibt im DOM (Element existiert, Inhalt unverändert) — nur visuell weg.
-  expect((await marker.textContent())?.trim()).toBe(nrText);
-  await expect(page.locator('.lc-leser [data-fn-apparat]').first()).toBeHidden();
+  // NEGATIV: «Fassung» → A-Marker visuell WEG (display:none am Vorfahren), aber
+  // im DOM (Text abfragbar), niemals gelöscht. Die V-Zeile bleibt sichtbar.
+  await ansichtOeffnen(page);
+  await page.getByRole(WAHL_ROLLE, { name: VERMERKE_SCHALTER_NAME }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'fassung');
+  await expect(aMarker).toBeHidden();
+  expect(await aMarker.evaluate(
+    (el) => getComputedStyle(el.closest('[data-fn-klasse]') as Element).display,
+  )).toBe('none');
+  expect((await aMarker.textContent())?.trim()).toBe(nrText);
+  await expect(vZeile, 'die V-Zeile ist mit verschwunden — Substanzverlust').toBeVisible();
 
-  // POSITIV zurück: «Fussnoten» AN → Marker wieder sichtbar (Wiederherstellung).
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
-  await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'an');
-  await expect(marker).toBeVisible();
+  // POSITIV zurück: «Fussnoten» → Marker wieder sichtbar (Wiederherstellung).
+  await ansichtOeffnen(page);
+  await page.getByRole(WAHL_ROLLE, { name: /^Fussnoten/ }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'fussnoten');
+  await expect(aMarker).toBeVisible();
 
-  // CLS über beide Toggles == 0 (input-exkludiert): kein Layout-Sprung.
-  const cls = await page.evaluate(() => (window as unknown as { __cls: number }).__cls);
-  expect(cls).toBe(0);
+  // CLS über beide Umschaltungen == 0 (input-exkludiert): kein Layout-Sprung.
+  expect(await page.evaluate(() => (window as unknown as { __cls: number }).__cls)).toBe(0);
 });
 
 test('S1: die Verweis-Links behalten OHNE den Schalter alles, was sie tragen', async ({ page }) => {
@@ -241,10 +301,16 @@ test('S1: die Verweis-Links behalten OHNE den Schalter alles, was sie tragen', a
   // beim ersten Lauf dieser Fassung als erster Treffer da. Die Zusage aus F2
   // betrifft die VERWEIS-LINKS, also wird auf das Element gezielt, das eine
   // Adresse haben kann.
-  const links = page.locator('.lc-leser [id^="art-"] a.decoration-dotted');
+  // `:visible` (D35-F3, §6.3-Deklaration): in der Vorgabe-Stellung «Fassung»
+  // sind die Änderungs-Fussnoten gedämpft, und die tragen ihrerseits
+  // Verweis-Links («Aufgehoben durch …»). Der erste Treffer lag danach in einem
+  // `display:none`-Teilbaum, und `hover()` wartete 30 s auf ein Element, das es
+  // auf dem Schirm nicht gibt. Gemeint war immer der Verweis-Link IM LESETEXT —
+  // der ist sichtbar, und genau seine Zusage aus F2 wird hier geprüft.
+  const links = page.locator('.lc-leser [id^="art-"] a.decoration-dotted:visible');
   const link = links.first();
   const anzahl = await links.count();
-  test.skip(anzahl === 0, 'kein Verweis-Link auf dieser Seite');
+  test.skip(anzahl === 0, 'kein sichtbarer Verweis-Link auf dieser Seite');
 
   await link.scrollIntoViewIfNeeded();
   // POSITIV: :hover unterstreicht — unverändert das heutige Verhalten.

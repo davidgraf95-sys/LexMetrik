@@ -1,5 +1,7 @@
 import type { SperrfristenErgebnis } from '../lib/sperrfristen';
 import { NormText } from './NormText';
+import { GruppenKopf } from './ui/GruppenKopf';
+import { datumOderStrich } from './ui/datumText';
 
 // Sperrtage-Zähler (Art. 336c Abs. 1 OR): je Ereignis beanspruchte Tage;
 // bei Krankheit/Unfall zusätzlich Kontingent (30/90/180 je Dienstjahr) und
@@ -17,7 +19,6 @@ const TYP_LABEL: Record<string, string> = {
   urlaub_tod_mutter: 'Urlaub nach Tod der Mutter (lit. cquinquies)',
 };
 
-const fmtISO = (s: string) => (s ? s.split('-').reverse().join('.') : '–');
 
 export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<SperrfristenErgebnis['sperrtage']> }) {
   if (sperrtage.length === 0) return null;
@@ -25,12 +26,21 @@ export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<Sperrfr
     // data-ansicht: abgeleitete Ansicht (R4 Ziff. 3) — steht immer NACH dem
     // Verdikt, vom Tor `e2e/qsui-hierarchie.e2e.ts` (I1) geprüft.
     <section data-ansicht="sperrtage-zaehler" aria-label="Sperrtage-Zähler" className="lc-card p-5 space-y-3">
-      <div className="flex items-center gap-4">
-        <h3 className="lc-overline text-ink-700">Sperrtage-Zähler</h3>
-        <div className="flex-1 h-px bg-line" />
-        {/* LM-101-Muster: Buchstabenzusatz (336c) darf die uppercase-Overline nicht durchlaufen. */}
-        <span className="lc-overline normal-case"><NormText text={`Art. 336c OR`} /></span>
-      </div>
+      {/* B3-2 (R3-β, 31.8.2026): der Kopf war die letzte handgezeichnete Kopie
+          des Gruppenkopf-Rezepts — R2-A hatte hier bereits die fehlende
+          `aria-hidden`-Auszeichnung der Haarlinie nachgezogen, also genau den
+          Mangel geflickt, den der geteilte Baustein von sich aus nicht hat
+          (§5/§10: Konsumenten ziehen, nicht Kopien angleichen). Die Norm-Marke
+          steht rechts der Haarlinie — dieselbe Stelle, an der der breite Kopf
+          seinen Zähler führt. Sichtbar ändert sich damit zweierlei, beides der
+          Kanon: `gap-3` statt `gap-4` und die Overline in `brass-700` statt
+          `ink-700` (C-2, alle 12 breiten Köpfe der App). */}
+      <GruppenKopf
+        titel="Sperrtage-Zähler"
+        markeStellung="rechts"
+        /* LM-101-Muster: Buchstabenzusatz (336c) darf die uppercase-Overline nicht durchlaufen. */
+        marke={<span className="lc-overline normal-case"><NormText text={`Art. 336c OR`} /></span>}
+      />
 
       <ul className="space-y-3">
         {sperrtage.map((z) => {
@@ -42,7 +52,7 @@ export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<Sperrfr
                 <p className="text-body-s text-ink-700">
                   <span className="num text-ink-500 mr-1.5">{z.ereignis}.</span>
                   {label}
-                  <span className="text-ink-500"> · {fmtISO(z.vonISO)} – {fmtISO(z.bisISO)}</span>
+                  <span className="text-ink-500"> · {datumOderStrich(z.vonISO)} – {datumOderStrich(z.bisISO)}</span>
                 </p>
                 {z.rueckfall ? (
                   <p className="text-body-s text-ink-500">Rückfall – kein neues Kontingent</p>

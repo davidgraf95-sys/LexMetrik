@@ -8,7 +8,7 @@ import {
 import { BANNER_ABSCHREIBEN } from '../lib/vorlagen/banner';
 import { berechneErbteilung } from '../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../lib/bruch';
-import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, ListenEditor } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { DatumsFeld } from '../components/DatumsFeld';
@@ -160,39 +160,39 @@ export function VorlageTestament() {
             <div className="flex items-center justify-between">
               <GruppenTitel>Erbinnen und Erben</GruppenTitel>
               {a.erben.length > 0 && (
-                <span className={`num text-xs rounded-full px-2 py-0.5 ${Math.abs(erbenSumme - 100) < 0.01 ? 'bg-sage-bg text-sage-700' : 'bg-warn-bg text-warn-700'}`}>
+                <span className={`num text-xs px-2 py-0.5 ${Math.abs(erbenSumme - 100) < 0.01 ? 'bg-ok-bg text-ok-text' : 'bg-warn-bg text-warn-700'}`}>
                   Summe {erbenSumme} %
                 </span>
               )}
             </div>
-            {a.erben.map((e, i) => (
-              <div key={i} className="lc-card p-4 space-y-3">
-                <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_7rem] gap-3">
-                  <Field label="Name"><input className={inputCls} value={e.name}
-                    onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, name: ev.target.value } : x))}
-                    placeholder="Vorname Nachname" /></Field>
-                  <Field label="Geburtsdatum / Adresse" hint="genaue Personalien – keine Kosenamen">
-                    <input className={inputCls} value={e.angaben}
-                      onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, angaben: ev.target.value } : x))}
-                      placeholder="geb. 01.01.1990, Musterweg 1, 4051 Basel" /></Field>
-                  <Field label="Quote %"><input type="number" min={0} max={100} className={inputCls} value={e.quoteProzent}
-                    onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, quoteProzent: Number(ev.target.value) } : x))} /></Field>
-                </div>
-                <div className="flex flex-wrap items-end gap-3">
-                  <div className="flex-1 min-w-[14rem]">
-                    <Field label="Ersatzperson" optional hint="falls die Person vorverstirbt oder ausschlägt (Art. 487 ZGB)">
-                      <input className={inputCls} value={e.ersatz ?? ''}
-                        onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, ersatz: ev.target.value } : x))} />
-                    </Field>
+            {/* R2-F/F1-9: Behälter war `lc-card p-4` (die Karte der Seite,
+                nicht der Panel-Kanon), der Knopf ein nacktes `lc-btn-outline`
+                mit «+ … hinzufügen». Beides kommt neu aus dem ListenEditor. */}
+            <ListenEditor
+              element="Erbin/Erben"
+              eintraege={a.erben}
+              onHinzufuegen={() => set('erben', [...a.erben, { name: '', angaben: '', quoteProzent: a.erben.length === 0 ? 100 : 0 } as TestamentErbe])}
+              onEntfernen={(i) => set('erben', a.erben.filter((_, j) => j !== i))}
+              kinder={(e, i) => (
+                <div className="space-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_7rem] gap-3">
+                    <Field label="Name"><input className={inputCls} value={e.name}
+                      onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, name: ev.target.value } : x))}
+                      placeholder="Vorname Nachname" /></Field>
+                    <Field label="Geburtsdatum / Adresse" hint="genaue Personalien – keine Kosenamen">
+                      <input className={inputCls} value={e.angaben}
+                        onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, angaben: ev.target.value } : x))}
+                        placeholder="geb. 01.01.1990, Musterweg 1, 4051 Basel" /></Field>
+                    <Field label="Quote %"><input type="number" min={0} max={100} className={inputCls} value={e.quoteProzent}
+                      onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, quoteProzent: Number(ev.target.value) } : x))} /></Field>
                   </div>
-                  <button type="button" onClick={() => set('erben', a.erben.filter((_, j) => j !== i))}
-                    className="text-body-s text-danger-700 hover:underline pb-2.5">entfernen</button>
+                  <Field label="Ersatzperson" optional hint="falls die Person vorverstirbt oder ausschlägt (Art. 487 ZGB)">
+                    <input className={inputCls} value={e.ersatz ?? ''}
+                      onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, ersatz: ev.target.value } : x))} />
+                  </Field>
                 </div>
-              </div>
-            ))}
-            <button type="button"
-              onClick={() => set('erben', [...a.erben, { name: '', angaben: '', quoteProzent: a.erben.length === 0 ? 100 : 0 } as TestamentErbe])}
-              className="lc-btn-outline">+ Erbin/Erben hinzufügen</button>
+              )}
+            />
             <p className="text-xs text-ink-500"><NormText text={`Tipp: Decken Sie den ganzen Nachlass ab (100 %) – der nicht verfügte Teil fällt an die gesetzlichen Erben (Art. 481 ZGB).`} /></p>
           </div>
         </div>
@@ -204,30 +204,27 @@ export function VorlageTestament() {
             Mit einem Vermächtnis erhält eine Person einen bestimmten Gegenstand oder Betrag,
             ohne Erbin/Erbe zu werden (Art. 484 ZGB). Dieser Schritt ist optional.
           </p>
-          {a.vermaechtnisse.map((v, i) => (
-            <div key={i} className="lc-card p-4 space-y-3">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <Field label="Empfänger/in"><input className={inputCls} value={v.empfaenger}
-                  onChange={(ev) => set('vermaechtnisse', a.vermaechtnisse.map((x, j) => j === i ? { ...x, empfaenger: ev.target.value } : x))} /></Field>
-                <Field label="Gegenstand oder Betrag"><input className={inputCls} value={v.gegenstand}
-                  onChange={(ev) => set('vermaechtnisse', a.vermaechtnisse.map((x, j) => j === i ? { ...x, gegenstand: ev.target.value } : x))}
-                  placeholder="z. B. CHF 10’000 / meine Uhrensammlung" /></Field>
-              </div>
-              <div className="flex flex-wrap items-end gap-3">
-                <div className="flex-1 min-w-[14rem]">
-                  <Field label="Ersatzperson" optional>
-                    <input className={inputCls} value={v.ersatz ?? ''}
-                      onChange={(ev) => set('vermaechtnisse', a.vermaechtnisse.map((x, j) => j === i ? { ...x, ersatz: ev.target.value } : x))} />
-                  </Field>
+          <ListenEditor
+            element="Vermächtnis"
+            eintraege={a.vermaechtnisse}
+            onHinzufuegen={() => set('vermaechtnisse', [...a.vermaechtnisse, { empfaenger: '', gegenstand: '' } as TestamentVermaechtnis])}
+            onEntfernen={(i) => set('vermaechtnisse', a.vermaechtnisse.filter((_, j) => j !== i))}
+            kinder={(v, i) => (
+              <div className="space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <Field label="Empfänger/in"><input className={inputCls} value={v.empfaenger}
+                    onChange={(ev) => set('vermaechtnisse', a.vermaechtnisse.map((x, j) => j === i ? { ...x, empfaenger: ev.target.value } : x))} /></Field>
+                  <Field label="Gegenstand oder Betrag"><input className={inputCls} value={v.gegenstand}
+                    onChange={(ev) => set('vermaechtnisse', a.vermaechtnisse.map((x, j) => j === i ? { ...x, gegenstand: ev.target.value } : x))}
+                    placeholder="z. B. CHF 10’000 / meine Uhrensammlung" /></Field>
                 </div>
-                <button type="button" onClick={() => set('vermaechtnisse', a.vermaechtnisse.filter((_, j) => j !== i))}
-                  className="text-body-s text-danger-700 hover:underline pb-2.5">entfernen</button>
+                <Field label="Ersatzperson" optional>
+                  <input className={inputCls} value={v.ersatz ?? ''}
+                    onChange={(ev) => set('vermaechtnisse', a.vermaechtnisse.map((x, j) => j === i ? { ...x, ersatz: ev.target.value } : x))} />
+                </Field>
               </div>
-            </div>
-          ))}
-          <button type="button"
-            onClick={() => set('vermaechtnisse', [...a.vermaechtnisse, { empfaenger: '', gegenstand: '' } as TestamentVermaechtnis])}
-            className="lc-btn-outline">+ Vermächtnis hinzufügen</button>
+            )}
+          />
         </div>
       );
 
@@ -265,7 +262,7 @@ export function VorlageTestament() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.length > 0 && (
-            <div className="lc-notice-danger space-y-1">
+            <div role="alert" className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Vor der Ausgabe zu beheben</p>
               {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
@@ -344,6 +341,7 @@ export function VorlageTestament() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} extra={pflichtteilePanel} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_ABSCHREIBEN, dateiName: 'Testament-Mustertext.pdf' },

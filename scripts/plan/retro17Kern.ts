@@ -51,6 +51,38 @@ export const NIE_ROT_MINDEST_LAEUFE = 30;
 export const CI_FAILURE_SCHWELLE = 0.2;
 export const CI_RERUN_SCHWELLE = 0.15;
 
+// ── Fremdagenten (QS-FREMDAGENTEN, 4.9.2026) — Schwellen aus Fahrplan §2/§3 ──
+
+/** Unter so vielen Jules-PRs (gemerged+geschlossen, 7 Tage) ist die Quote nicht belastbar. */
+export const JULES_QUOTE_MIN_N = 3;
+/** Fahrplan §3 «Phase 1 Jules … < 2 von 3 ⇒ zurück auf Doku-only». */
+export const JULES_RUECKBAU_QUOTE = 2 / 3;
+/**
+ * Fahrplan §3, Zeile «Skalierung Jules»: Skalierungs-Kandidat ab dieser
+ * Landungsquote UND dieser Median-Dauer UND dieser Mindest-Stichprobe.
+ *
+ * Die drei Zahlen stehen seit 4.9.2026 WÖRTLICH im Fahrplan §3 — vorher waren
+ * sie nur hier gesetzt, und ein Befund, der «Fahrplan §2 Phase 4» zitierte,
+ * belegte damit einen Satz, den es dort nicht gab (Gegenprüfung 4.9.2026).
+ * `JULES_SKALIEREN_MIN_N` ist der Grund, warum 5/6 nicht schon bei 5/6 = n 6
+ * zufällig erreicht wird: unter sechs PRs ist «83 %» eine Handvoll Fälle, kein
+ * Verlauf.
+ */
+export const JULES_SKALIEREN_QUOTE = 5 / 6;
+export const JULES_SKALIEREN_MEDIAN_MAX_MIN = 45;
+export const JULES_SKALIEREN_MIN_N = 6;
+/** Fahrplan §3 «Phase 3 Zweitblick … n = 5». */
+export const ZWEITBLICK_DURCHGAENGE_SCHWELLE = 5;
+/**
+ * Regel (h), Ergänzung QS-FREMDAGENTEN 4.9.2026: liegt die letzte Sichtung des
+ * Antigravity-Registers (`bibliothek/register/antigravity-stand.json`,
+ * gelesen von `retro-17.ts` — dieser Kern liest weiterhin nur Zeitreihe +
+ * Chronik, s. Kopf) mehr als so viele Tage zurück, schlägt `retro:17` die
+ * Google-Ökosystem-Sichtung aus Fahrplan §7 vor. Referenzzeitpunkt ist der
+ * letzte Snapshot-Stempel (`erhobenAm`), NIE die Wanduhr (§2).
+ */
+export const ANTIGRAVITY_SICHTUNG_SCHWELLE_TAGE = 30;
+
 /** Die Marke, an der jede maschinell erzeugte Vorschlagszeile erkennbar ist. */
 export const ENTWURF_MARKE = '<!-- ENTWURF retro:17 — Übernahme nur durch Session-/David-Entscheid -->';
 
@@ -58,7 +90,20 @@ export const ENTWURF_MARKE = '<!-- ENTWURF retro:17 — Übernahme nur durch Ses
 
 export interface Befund {
   /** Kurzschlüssel der Regel — stabil, damit Befunde vergleichbar bleiben. */
-  art: 'rot-haeufung' | 'nie-rot' | 'ci-failure' | 'ci-rerun' | 'f-klasse';
+  art:
+    | 'rot-haeufung'
+    | 'nie-rot'
+    | 'ci-failure'
+    | 'ci-rerun'
+    | 'f-klasse'
+    | 'jules-rueckbau'
+    | 'jules-skalieren'
+    | 'jules-lehre'
+    | 'gemini-rueckbau'
+    | 'zweitblick-schwelle'
+    | 'kontingent-beleg'
+    | 'jules-alarm'
+    | 'antigravity-sichtung';
   /** Vorgeschlagener Schritt-Titel (fett im ROADMAP-Bullet). */
   titel: string;
   /** Der belegende Satz: Zahlen, Schwelle, Quelle. */
@@ -68,13 +113,16 @@ export interface Befund {
 }
 
 /**
- * Deutet die Zeitreihe. Reine Funktion über Zeitreihe + Chronik-Text.
+ * Deutet die Zeitreihe. Reine Funktion über Zeitreihe + Chronik-Text, plus
+ * optional das Datum der letzten Antigravity-Sichtung (Regel h) — dieser
+ * dritte Parameter kommt von aussen (`retro-17.ts` liest das Register), die
+ * Funktion selbst öffnet keine dritte Datei.
  *
  * Reihenfolge der Befunde ist die Reihenfolge der Regeln, innerhalb einer Regel
  * alphabetisch nach Tor-Name — nicht nach Schwere. Eine Sortierung nach Schwere
  * wäre eine Gewichtung, und Gewichten ist Deuten: das bleibt beim Menschen.
  */
-export function befunde(z: Zeitreihe, chronik: string): Befund[] {
+export function befunde(z: Zeitreihe, chronik: string, letzteSichtungAntigravity: string | null = null): Befund[] {
   const out: Befund[] = [];
   const snaps = z.snapshots;
   if (snaps.length === 0) return out;
@@ -194,6 +242,184 @@ export function befunde(z: Zeitreihe, chronik: string): Befund[] {
     });
   }
 
+  // (5) Fremdagenten — Jules und Gemini, aus dem letzten Snapshot (Stufe 1,
+  //     QS-FREMDAGENTEN). `letzter.fremdagenten` ist bei alten Snapshots
+  //     (Schema < 3, migriert) und bei Ausfall der jeweiligen Quelle `null` —
+  //     jede Teilregel schweigt dann, statt mit erfundenen Zahlen zu deuten.
+  const jules = letzter.fremdagenten?.jules ?? null;
+  if (jules) {
+    // (a)+(b) LANDUNGSQUOTE = gemerged ÷ (gemerged + geschlossen), Proben
+    //     ausgeschlossen. Sie misst, was von Jules ANKOMMT — ausdrücklich
+    //     NICHT die Fahrplan-Spalte «Nacharbeit»: ein PR kann landen und
+    //     trotzdem Nacharbeit gekostet haben. Die Nacharbeits-Quote wird von
+    //     Hand geführt (Fahrplan §5) und hat hier keine automatische Quelle.
+    const n = jules.prs_gemerged_7d + jules.prs_geschlossen_7d;
+    const probenZusatz =
+      (jules.proben_7d === null
+        ? '; Proben in dieser Messung nicht unterschieden (Schema < 4)'
+        : `; ${jules.proben_7d} Probe(n) mit Label \`probe\` ausgeschlossen`) +
+      (jules.entwurf_antworten_7d === null
+        ? '; Entwurf-Antworten in dieser Messung nicht unterschieden (Schema < 5)'
+        : `; ${jules.entwurf_antworten_7d} Entwurf-Antwort(en) mit Label \`entwurf-antwort\` ausgeschlossen`);
+    if (n >= JULES_QUOTE_MIN_N) {
+      const quote = jules.prs_gemerged_7d / n;
+      if (quote < JULES_RUECKBAU_QUOTE) {
+        out.push({
+          art: 'jules-rueckbau',
+          titel: 'Rückbau: Jules nur Doku/Mechanik',
+          anlass:
+            `Landungsquote (gemerged ÷ (gemerged + geschlossen), Proben ausgeschlossen) ${quoteText(quote)} ` +
+            `über n=${n} PRs der letzten 7 Tage (${jules.prs_gemerged_7d} gemerged, ` +
+            `${jules.prs_geschlossen_7d} geschlossen${probenZusatz}); ` +
+            `Schwelle ${quoteText(JULES_RUECKBAU_QUOTE)} (Fahrplan §3 «Phase 1 Jules … < 2 von 3»)`,
+          hinweis:
+            'geschlossen ≠ Nacharbeit; handgeführte Nacharbeits-Quote steht in Fahrplan §5. ' +
+            'Fahrplan §3 Rückbau-Regel: der betroffene Teil wird zurückgebaut, nicht bewacht. Flächen: ' +
+            '`auftrag`-Weiche, `AGENTS.md`, ci.yml-Step, `landung`-Absatz, Ticket-Vorlage, Label.',
+        });
+      } else if (
+        n >= JULES_SKALIEREN_MIN_N &&
+        quote >= JULES_SKALIEREN_QUOTE &&
+        jules.median_dauer_min !== null &&
+        jules.median_dauer_min <= JULES_SKALIEREN_MEDIAN_MAX_MIN
+      ) {
+        out.push({
+          art: 'jules-skalieren',
+          titel: 'Ticketzahl auf 3–5 anheben (Phase 4)',
+          anlass:
+            `Landungsquote (gemerged ÷ (gemerged + geschlossen), Proben ausgeschlossen) ${quoteText(quote)} ` +
+            `über n=${n} PRs · Median-Dauer ${jules.median_dauer_min} min${probenZusatz}; ` +
+            `Schwellen ${quoteText(JULES_SKALIEREN_QUOTE)}, ≤ ${JULES_SKALIEREN_MEDIAN_MAX_MIN} min und ` +
+            `n ≥ ${JULES_SKALIEREN_MIN_N} (Fahrplan §3 «Skalierung Jules»)`,
+          hinweis:
+            'geschlossen ≠ Nacharbeit; handgeführte Nacharbeits-Quote steht in Fahrplan §5 — erst diese ' +
+            'Spalte gegenlesen, dann seriell auf 3–5 Tickets pro Session anheben (Stückzahl entsperrt ' +
+            '4.9.2026, Messung bleibt Pflicht).',
+        });
+      }
+    }
+
+    // (c) Jeder NEU geschlossene Jules-PR ⇒ Lehre verankern — je PR GENAU
+    //     EINMAL. Ohne Entdopplung steht derselbe abgelehnte PR sieben Tage
+    //     lang in jedem Snapshot und die Regel schlüge bei jeder Erhebung
+    //     dieselbe Lehre erneut vor. Dasselbe Muster wie bei den F-Klassen
+    //     oben: verglichen wird gegen das, was frühere Snapshots schon
+    //     genannt haben, und nur der Zuwachs löst aus.
+    //
+    //     `prs_geschlossen_nummern === null` heisst «diese Messung führte
+    //     keine Nummern mit» (Schema < 4). Dann kann nicht entdoppelt werden,
+    //     und die Regel fällt ehrlich auf die blosse Zählung zurück, statt
+    //     eine leere Liste als «nichts Neues» zu lesen.
+    const schonGenannt = new Set<number>();
+    for (const s of snaps.slice(0, -1)) {
+      for (const nr of s.fremdagenten?.jules?.prs_geschlossen_nummern ?? []) schonGenannt.add(nr);
+    }
+    const nummern = jules.prs_geschlossen_nummern;
+    const neue = nummern === null ? null : nummern.filter((nr) => !schonGenannt.has(nr));
+    if (neue === null ? jules.prs_geschlossen_7d > 0 : neue.length > 0) {
+      out.push({
+        art: 'jules-lehre',
+        titel: 'Lehre verankern: Tor-Regel oder Vorlagen-Zeile je abgelehntem Jules-PR',
+        anlass:
+          neue === null
+            ? `${jules.prs_geschlossen_7d} geschlossene(r) Jules-PR(s) in den letzten 7 Tagen (Quelle: ` +
+              'Jules-Messung; Nummern in dieser Messung nicht mitgeführt — keine Entdopplung möglich)'
+            : `neu geschlossene(r) Jules-PR(s): ${neue.map((nr) => `#${nr}`).join(', ')} ` +
+              `(Quelle: Jules-Messung, letzte 7 Tage; bereits in früheren Snapshots genannte Nummern ` +
+              `lösen nicht erneut aus)`,
+        hinweis:
+          'Formregel Skill `lehren`, Ergänzung Fremdagenten: die Ablehnung noch in DERSELBEN Session als ' +
+          'Tor-Regel (Fremd-PR-Tor/Erstfilter) oder Vorlagen-Zeile verankern — nie nur als Kommentar.',
+      });
+    }
+  }
+
+  const gemini = letzter.fremdagenten?.gemini ?? null;
+  if (gemini) {
+    // (d) Diskrepanz-Finder: mehr Schein- als echte Funde ⇒ Rückbau prüfen.
+    if (gemini.diskrepanz_schein > gemini.diskrepanz_echt) {
+      out.push({
+        art: 'gemini-rueckbau',
+        titel: 'Rückbau Diskrepanz-Finder prüfen',
+        anlass:
+          `Phase-2-Register: Schein ${gemini.diskrepanz_schein} > echt ${gemini.diskrepanz_echt} über ` +
+          `${gemini.diskrepanz_laeufe} Erlass-Läufe (Fahrplan §3 «Schein > echt ⇒ Rückbau»)`,
+        hinweis:
+          'Flächen bei Rückbau: `scripts/analyse/gemini-diskrepanz*.ts`, `korpus-werkstatt`-Absatz, ' +
+          '`gegenpruefung`-Station.',
+      });
+    }
+
+    // (e) Phase-3-Zweitblick-Durchgänge erreichen die Zähl-Schwelle.
+    if (gemini.zweitblick_durchgaenge >= ZWEITBLICK_DURCHGAENGE_SCHWELLE) {
+      out.push({
+        art: 'zweitblick-schwelle',
+        titel: 'Schwelle §3 anwenden, Verdikt eintragen',
+        anlass:
+          `${gemini.zweitblick_durchgaenge} Zweitblick-Durchgänge im §5-Register erreicht ` +
+          `(Schwelle n=${ZWEITBLICK_DURCHGAENGE_SCHWELLE}, Fahrplan §3 «Phase 3 … mehr Schein als echt ⇒ Weg zu»)`,
+        hinweis:
+          'Echt gegen Schein über die Durchgänge auszählen und das Verdikt in Fahrplan §3 eintragen — ' +
+          'dieses Werkzeug zählt nur die Durchgänge, nicht das Verdikt.',
+      });
+    }
+
+    // (f) Jedes protokollierte Kontingent-Ereignis ⇒ Fahrplan-Zahlen abgleichen.
+    if (gemini.kontingent_ereignisse >= 1) {
+      out.push({
+        art: 'kontingent-beleg',
+        titel: 'Limiten im Fahrplan belegen/korrigieren',
+        anlass:
+          `${gemini.kontingent_ereignisse} Kontingent-Ereignis(se) im §5-Register (Fahrplan §5: Zahlen ` +
+          `100/Tag · 15 parallel für Jules bislang unbelegt)`,
+        hinweis:
+          'Das erste real beobachtete Ereignis belegt die Fahrplan-Zahlen oder korrigiert sie — Eintrag ' +
+          'gegen die Tabelle prüfen, Text bei Bedarf anpassen (Fahrplan §4 «Limite erkennen»).',
+      });
+    }
+  }
+
+  // (g) Alarm «Issue ohne Annahme» — eigenständig von der Quote, da er einen
+  //     akuten Betriebszustand meldet, keinen Verlauf.
+  if (jules?.alarm) {
+    out.push({
+      art: 'jules-alarm',
+      titel: 'Jules-Verbindung prüfen — Issue seit über 10 min ohne Annahme',
+      anlass:
+        `Alarm aus der letzten Kontingent-/Ticket-Messung (tickets_24h=${jules.tickets_24h}); Signal ` +
+        `«kein "Jules is on it" binnen 10 min» (Fahrplan §4 «Limite erkennen»)`,
+      hinweis:
+        'Erst `npm run fremdagenten:messung -- --kontingent` laufen lassen: Tages-/Parallel-Stopp, ' +
+        'App-Problem oder eine hängende Session unterscheiden. Bis geklärt: keine neuen Jules-Tickets ' +
+        '(Skill `auftrag` Ziff. 6 «Grüne Spur → Jules»).',
+    });
+  }
+
+  // (h) Google-Ökosystem-Sichtung fällig: letzte Sichtung im Antigravity-
+  //     Register liegt mehr als ANTIGRAVITY_SICHTUNG_SCHWELLE_TAGE Tage
+  //     zurück. Referenzzeitpunkt ist der letzte Snapshot-Stempel, nicht die
+  //     Wanduhr (§2) — `letzteSichtungAntigravity === null` (kein Register,
+  //     oder retro-17.ts fand keins) lässt die Regel schweigen statt zu raten.
+  if (letzteSichtungAntigravity) {
+    const tageSeitSichtung = Math.floor(
+      (new Date(letzter.erhobenAm).getTime() - new Date(letzteSichtungAntigravity).getTime()) / 86_400_000,
+    );
+    if (tageSeitSichtung > ANTIGRAVITY_SICHTUNG_SCHWELLE_TAGE) {
+      out.push({
+        art: 'antigravity-sichtung',
+        titel: 'Jules-/Antigravity-Changelog sichten',
+        anlass:
+          `letzte Sichtung ${letzteSichtungAntigravity.slice(0, 10)}, ${tageSeitSichtung} Tage her ` +
+          `(Schwelle ${ANTIGRAVITY_SICHTUNG_SCHWELLE_TAGE} Tage, Fahrplan §7 «Google-Ökosystem-Sichtung»)`,
+        hinweis:
+          'Gemini-Recherche (agy, read_url(*)) «neue Google-KI-Produkte/Modelle, Jules-/Antigravity-' +
+          'Changelog seit <letzte Sichtung>», Bewertung ~30 min, Eintrag in Fahrplan §7; danach ' +
+          '`npm run fremdagenten:messung -- --kontingent --snapshot` laufen lassen, um das Register-Datum ' +
+          'zu erneuern.',
+      });
+    }
+  }
+
   return out;
 }
 
@@ -233,7 +459,7 @@ function aufschluesselung(s: Snapshot): string {
  * Das Etikett vergibt die übernehmende Session bewusst, nicht dieses Werkzeug.
  * Der Block sagt das in seinem Kopf, damit niemand es durch Ausprobieren lernt.
  */
-export function bericht(z: Zeitreihe, chronik: string): string[] {
+export function bericht(z: Zeitreihe, chronik: string, letzteSichtungAntigravity: string | null = null): string[] {
   const z2: string[] = [];
   const n = z.snapshots.length;
   const letzter = n ? z.snapshots[n - 1] : null;
@@ -257,7 +483,7 @@ export function bericht(z: Zeitreihe, chronik: string): string[] {
     return z2;
   }
 
-  const gefunden = befunde(z, chronik);
+  const gefunden = befunde(z, chronik, letzteSichtungAntigravity);
   const duenn = n < MIN_SNAPSHOTS;
 
   if (duenn) {

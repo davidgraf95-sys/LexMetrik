@@ -1,14 +1,14 @@
 import { BEGRUENDUNG_VORBEHALT } from '../lib/begruendung';
-import { useKopieren } from './useKopieren';
+import { KopierButton } from './vorlagen/ui';
 
 // ─── «Für die Rechtsschrift»-Absatz — geteilter Baustein (FAHRPLAN-PRAXIS 2.2) ─
 // Zeigt den kopierfertigen Begründungs-Absatz (lib/begruendung.ts) und
 // kopiert ihn mit einem Klick. Reine Darstellung (§3). Die EINE Aufrufstelle
 // pro Form ist BegruendungSlot (B2-0); diese Komponente rendert den fertigen
-// Text. Copy-Mechanik: useKopieren (B2-1); Vorbehalt: lib-Konstante (§5/§8).
+// Text. Copy-Mechanik: der geteilte KopierButton (R2-E/F1-10, intern
+// useKopieren aus B2-1); Vorbehalt: lib-Konstante (§5/§8).
 
 export function BegruendungAbsatz({ text }: { text: string }) {
-  const { kopiert, kopieren } = useKopieren(text);
   if (!text.trim()) return null;
   return (
     <details className="lc-card p-4">
@@ -25,9 +25,7 @@ export function BegruendungAbsatz({ text }: { text: string }) {
       <p className="mt-3 text-body-s text-ink-900 leading-relaxed bg-paper-sunken rounded-md p-3 select-all max-w-reading">
         {text}
       </p>
-      <button type="button" className="lc-btn-outline lc-btn-sm mt-3" onClick={kopieren}>
-        {kopiert ? 'Kopiert ✓' : 'Absatz kopieren'}
-      </button>
+      <KopierButton text={text} gegenstand="Absatz" className="lc-btn-outline lc-btn-sm mt-3" />
       <p className="text-xs text-ink-500 mt-2 max-w-reading">
         {BEGRUENDUNG_VORBEHALT}
       </p>

@@ -6,45 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2025/1528"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/dl/proj/7024/0194"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2026/433"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2025-04-16"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "25.039"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Bundesgesetzes über den Erwerbsersatz (Angleichung der EO-Leistungen)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi fédérale sur les allocations pour perte de gain (Harmonisation des prestations dans le régime des APG)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge sulle indennità di perdita di guadagno (Armonizzazione delle prestazioni nell’ordinamento delle IPG)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "834.1"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2000/99"
     },
     "proj": {
@@ -270,6 +231,45 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la modifica della legge sulle indennità di perdita di guadagno (Digitalizzazione nell’ordinamento delle indennità di perdita di guadagno)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "834.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2025/1528"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/7024/0194"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2026/433"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2025-04-16"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "25.039"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Bundesgesetzes über den Erwerbsersatz (Angleichung der EO-Leistungen)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi fédérale sur les allocations pour perte de gain (Harmonisation des prestations dans le régime des APG)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge sulle indennità di perdita di guadagno (Armonizzazione delle prestazioni nell’ordinamento delle IPG)"
     }
   }
 ]

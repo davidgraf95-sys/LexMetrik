@@ -7,6 +7,7 @@ import {
   type Phase,
 } from '../lib/gruendungsunterlagen';
 import { ErgebnisSprung, Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { NormChip } from '../components/vorlagen/NormChip';
 import { NormText } from '../components/NormText';
 import { GmbhDokumentmappe } from '../components/vorlagen/GmbhDokumentmappe';
@@ -14,6 +15,7 @@ import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
 import { usePaneKlasse } from '../components/layout/PaneKontext';
+import { SeitenTitel } from '../components/ui/SeitenTitel';
 
 // ─── Maske: GmbH-Gründung — Checkliste + Dokumentmappe (Plan 9b, 7.6.2026) ───
 // Checkliste: deterministische Unterlagenliste (lib/gruendungsunterlagen.ts).
@@ -91,12 +93,16 @@ export function VorlageGmbhGruendung() {
   return (
     <div className="space-y-6">
       <Link to="/" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
-        <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
+        <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 border border-line bg-surface">←</span>
         Zurück zum Katalog
       </Link>
       <div className="space-y-3">
         <GruppenTitel>Gesellschaftsrecht · Checkliste</GruppenTitel>
-        <h1 className="text-h1 font-display font-semibold text-ink-900">GmbH-Gründungsunterlagen</h1>
+        {/* A-1/B3-6 (R3-α, 31.8.2026): war eine handgebaute H1 mit fester
+            `text-h1`. Sie ging am A-1-Wächter vorbei, weil der nur die
+            Kaskade `text-h2 …` kannte — und sie mass im Split-View den
+            Viewport statt der Pane-Breite. */}
+        <SeitenTitel>GmbH-Gründungsunterlagen</SeitenTitel>
         <p className="text-body-l text-ink-600 max-w-reading">
           Checkliste UND Dokumentmappe: Die Checkliste leitet die registerrechtlich verlangten
           Belege (abschliessend in Art. 71/72 HRegV, Art. 776–777c OR) aus Ihrer
@@ -134,8 +140,13 @@ export function VorlageGmbhGruendung() {
               <option value="rs">Revisionsstelle bestellt</option>
             </select>
           </Field>
-          <Field label="Leistungen der Gesellschafter (CHF, optional)">
-            <input className={inputCls} inputMode="numeric" placeholder="z. B. 20000" value={leistungen} onChange={(e) => setLeistungen(e.target.value)} />
+          {/* R2-F (Rest aus R2-E): «optional» gehört in die Prop (rendert
+              « · optional»), und CHF-Beträge tragen das Haus-BetragsFeld mit
+              Tausender-Apostroph. Der Wert-Vertrag bleibt: das Feld gibt den
+              bereinigten Rohwert zurück, und die Auswertung oben streift
+              Apostrophe ohnehin ab. */}
+          <Field label="Leistungen der Gesellschafter (CHF)" optional>
+            <BetragsFeld className={inputCls} placeholder="z. B. 20'000" value={leistungen} onChange={setLeistungen} />
           </Field>
         </div>
         <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700')}>

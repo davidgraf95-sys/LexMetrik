@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ThemenEinstieg } from '../components/ThemenEinstieg';
 import { Card } from '../components/ui/Card';
+import { Tabs } from '../components/ui/Tabs';
 import { LohnfortzahlungForm } from '../components/forms/LohnfortzahlungForm';
 import { KuendigungSperrForm } from '../components/forms/KuendigungSperrForm';
 import { KombinierteAnsicht } from '../components/forms/KombinierteAnsicht';
@@ -47,17 +48,32 @@ export function RechnerKuendigung() {
       <RechnerKopf calc={calc} />
       <TagerechnerRueckverweis />
 
-      <div className="flex flex-wrap gap-1 p-1 bg-surface rounded-xl w-fit">
-        {TABS.map((t) => (
-          <button type="button" key={t.id} onClick={() => setTab(t.id)}
-            className={`px-4 py-2.5 rounded-lg text-body-s font-medium transition-all ${
-              tab === t.id ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-            }`}>
-            <span className="block">{t.label}</span>
-            <span className="block text-xs font-normal opacity-70">{t.sub}</span>
-          </button>
-        ))}
-      </div>
+      {/* E-2 (Design-Konsistenz 31.8.2026): hier stand eine wortgleiche Kopie
+          der Segmented-Control aus `ui/Tabs` — dieselben Zustands-Klassen
+          («bg-surface-raised text-brass-700 shadow-sm border border-line»),
+          nur mit eigener Geometrie. Ersetzt durch den geteilten Baustein in
+          der Variante `zweizeilig` (§5/§10); er bringt zusätzlich die
+          ARIA-Tabs-Semantik mit Pfeiltasten-Navigation und die Klartext-Zeile
+          im Ausdruck mit. */}
+      <Tabs
+        items={TABS.map((t) => ({
+          code: t.id,
+          label: (
+            <>
+              <span className="block">{t.label}</span>
+              {/* `opacity-70` → Token (QS-UI Teilpass (e), 5.9.2026): Opazität
+                  auf Text hebelt jede Kontrast-Zusage der Token-Schicht aus —
+                  sie rechnet die FERTIGE Farbe gegen den Grund und macht aus
+                  einer geprüften Farbe eine ungeprüfte. Gemessen am neuen
+                  Flächen-Tor: im aktiven Reiter wurde brass-700 (#826225) zu
+                  #A89166 auf #FFFEFC = 3.01:1 (AA verlangt 4.5) — `color-contrast`,
+                  serious. ink-600 (#56534C) ist die gedämpfte Stufe des Hauses
+                  und liegt in BEIDEN Reiter-Zuständen über AA. */}
+              <span className="block text-xs font-normal text-ink-600">{t.sub}</span>
+            </>
+          ),
+        }))}
+        value={tab} onChange={setTab} groesse="zweizeilig" ariaLabel="Berechnungs-Variante" />
 
       <Card>
         {tab === 'a' && <LohnfortzahlungForm />}

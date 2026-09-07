@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   ESTV_MWST_BEREICHE,
   menuUrl, tocUrl, kurzUrl, urlBasis,
-  parseMenu, parseTocBaum, normalisiereToc, tocDriftToken,
+  parseMenu, parseTocBaum, tocDriftToken,
   parseZifferSeite, fundstelleVonLabel, baueDokUndKanten, istFehlerSeite,
   type MenuEintrag, type ZifferMitBefund,
 } from '../../scripts/materialien/adapter-estv-mwst';
@@ -80,7 +80,6 @@ describe('ToC-Drift-Arbiter (§3 Q1): ViewState-Normalisierung', () => {
     const b = TOC_HTML.replace('-597050:-84985', '111111:222222');
     expect(a).not.toBe(b);
     expect(tocDriftToken(a)).toBe(tocDriftToken(b));
-    expect(normalisiereToc(a)).toBe(normalisiereToc(b));
   });
   it('inhaltliche ToC-Änderung (componentId-Wechsel) kippt den Token', () => {
     const c = TOC_HTML.replace('1268985', '1399999');
@@ -99,10 +98,26 @@ describe('ToC-Drift-Arbiter (§3 Q1): ViewState-Normalisierung', () => {
     expect(mit).not.toBe(ohne);
     expect(tocDriftToken(mit)).toBe(tocDriftToken(ohne));
   });
-  it('main-active-Strip fasst keine Inhaltsklassen an', () => {
+  // §17-Wurzel-Fix 1.9.2026 (QS-MONITOR-ROT, Spec FAHRPLAN-OFFENE-BEFUNDE §2): der Token
+  // hängt nur noch an den cipherDisplay-Ankern (publicationId · componentId · Label), nicht
+  // mehr am kompletten XHTML. Seitenrahmen-Rauschen ausserhalb der Anker — Nav-Klassen,
+  // PrimeFaces-Hover-Zustände, Script-Nonces — kippt den Token NICHT mehr. Die frühere
+  // Zusicherung «andere-klasse kippt den Token» war das Gegenteil des Ziels: sie bewachte
+  // das Rauschen. Rot-Beweis: mit dem Hash über das normalisierte Voll-XHTML (Stand 31.8.)
+  // schlug dieser Test fehl (Kommando + Ausgabe im PR-Body).
+  it('JSF-Rauschen ausserhalb der Anker (Nav-Klasse, Hover, Nonce) ⇒ gleicher Token', () => {
     const nav = (klasse: string) => `<ul><li role="presentation"${klasse}><a href="#">01 MWST</a></li></ul>`;
-    expect(tocDriftToken(nav(' class="andere-klasse"') + TOC_HTML))
-      .not.toBe(tocDriftToken(nav('') + TOC_HTML));
+    const basis = tocDriftToken(nav('') + TOC_HTML);
+    expect(tocDriftToken(nav(' class="andere-klasse"') + TOC_HTML)).toBe(basis);
+    expect(tocDriftToken(nav('') + TOC_HTML.replace('data-nodetype="cipherType"', 'data-nodetype="cipherType" class="ui-state-hover"'))).toBe(basis);
+    expect(tocDriftToken(nav('') + TOC_HTML + '<script nonce="abc123"></script>')).toBe(basis);
+  });
+  it('Label-Änderung einer Ziffer (Inhalt) kippt den Token', () => {
+    expect(tocDriftToken(TOC_HTML.replace('1.1 Betreiben eines Unternehmens', '1.1 Betreiben eines Betriebs')))
+      .not.toBe(tocDriftToken(TOC_HTML));
+  });
+  it('leeres ToC (Shell-Fetch) bekommt KEINEN Token, sondern wirft', () => {
+    expect(() => tocDriftToken('<html><body>Casemates</body></html>')).toThrow(/ToC-Baum leer/);
   });
 });
 

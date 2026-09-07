@@ -76,7 +76,7 @@ function validiere(f: LohnfortzahlungInput): string[] {
 
 const BEISPIELE: { label: string; form: Partial<LohnfortzahlungInput> }[] = [
   { label: 'Krankheit 3. DJ (BS)', form: { vertragsbeginn: '2024-01-01', verhinderungBeginn: '2026-01-01', arbeitsunfaehigkeitProzent: 100, kanton: 'BS' } },
-  { label: 'Teil-AUF 50%', form: { vertragsbeginn: '2024-01-01', verhinderungBeginn: '2026-01-01', arbeitsunfaehigkeitProzent: 50, kanton: 'BS' } },
+  { label: 'Teil-AUF 50 %', form: { vertragsbeginn: '2024-01-01', verhinderungBeginn: '2026-01-01', arbeitsunfaehigkeitProzent: 50, kanton: 'BS' } },
   { label: 'DJ-übergreifend', form: { vertragsbeginn: '2024-01-01', verhinderungBeginn: '2025-12-01', verhinderungEnde: '2026-06-01', kanton: 'BS' } },
   { label: 'KTG vorhanden', form: { ktgGleichwertigVorhanden: true, kanton: 'ZH' } },
 ];
@@ -196,7 +196,7 @@ export function LohnfortzahlungForm() {
           />
         </Field>
 
-        <Field label="Monatslohn brutto (CHF, optional)" hint="Für Betragsangabe; kein Einfluss auf Dauer">
+        <Field label="Monatslohn brutto (CHF)" optional hint="Für Betragsangabe; kein Einfluss auf Dauer">
           <BetragsFeld
             value={form.monatslohnBrutto != null ? String(form.monatslohnBrutto) : ''}
             onChange={(v) => set('monatslohnBrutto', Number.isFinite(Number(v)) && v ? Number(v) : undefined)}
@@ -269,49 +269,45 @@ export function LohnfortzahlungForm() {
 
       {/* Erweiterte Eingaben – kein overflow-hidden, sonst wird das
           DatumsFeld-Popover abgeschnitten; Rundung trägt der Button selbst. */}
-      <div className="border border-line rounded-md">
+      <div className="border border-line ">
         <button type="button" onClick={() => setErweitert(!erweitert)}
           aria-expanded={erweitert} aria-controls="lf-erweiterte-eingaben"
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-md ${erweitert ? '' : 'rounded-b-md'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${erweitert ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Erweiterte Eingaben (Anspruch, DJ-übergreifend, Lohnbasis)</span>
           <span className="text-ink-500" aria-hidden="true">{erweitert ? '▲' : '▼'}</span>
         </button>
         {erweitert && (
           <div id="lf-erweiterte-eingaben" className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Field label="Ende der Verhinderung (optional)" hint="§2.1 für DJ-übergreifende Verhinderung (zwei Kredite)">
+            <Field label="Ende der Verhinderung" optional hint="§2.1 für DJ-übergreifende Verhinderung (zwei Kredite)">
               <DatumsFeld value={form.verhinderungEnde ?? ''} className={inputCls}
                 onChange={(v) => set('verhinderungEnde', v || undefined)} />
             </Field>
-            <Field label="Bereits bezogene Tage im laufenden Dienstjahr (optional)" hint="frühere Absenzen verbrauchen das Kontingent (SHK Art. 324a N 52)">
+            <Field label="Bereits bezogene Tage im laufenden Dienstjahr" optional hint="frühere Absenzen verbrauchen das Kontingent (SHK Art. 324a N 52)">
               <input type="number" inputMode="decimal" min={0} className={inputCls} placeholder="0"
                 value={form.bereitsBezogeneTageImDienstjahr ?? ''}
                 onChange={(e) => set('bereitsBezogeneTageImDienstjahr', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
-            <Field label="Ende des Arbeitsverhältnisses (optional)" hint="Lohnfortzahlung endet mit dem AV (BGE 127 III 318); KTG-Nachdeckung prüfen">
+            <Field label="Ende des Arbeitsverhältnisses" optional hint="Lohnfortzahlung endet mit dem AV (BGE 127 III 318); KTG-Nachdeckung prüfen">
               <DatumsFeld value={form.arbeitsverhaeltnisEnde ?? ''} className={inputCls}
                 onChange={(v) => set('arbeitsverhaeltnisEnde', v || undefined)} />
             </Field>
-            <Field label="Vereinbarte Kündigungsfrist (Monate, optional)" hint="§2.2 > 3 Monate → Anspruch ab Tag 1">
+            <Field label="Vereinbarte Kündigungsfrist (Monate)" optional hint="§2.2 > 3 Monate → Anspruch ab Tag 1">
               <input type="number" inputMode="decimal" min={0} className={inputCls} placeholder="Leer = Standard"
                 value={form.vereinbarteKuendigungsfristMonate ?? ''}
                 onChange={(e) => set('vereinbarteKuendigungsfristMonate', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
-            <Field label="Anrechenbare Vordienstzeit (Monate, optional)" hint="§2.2 Lehre/Praktikum/Folge-Befristung (SHK N 44)">
+            <Field label="Anrechenbare Vordienstzeit (Monate)" optional hint="§2.2 Lehre/Praktikum/Folge-Befristung (SHK N 44)">
               <input type="number" inputMode="decimal" min={0} className={inputCls} placeholder="0"
                 value={form.anrechenbareVordienstzeitMonate ?? ''}
                 onChange={(e) => set('anrechenbareVordienstzeitMonate', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
             <div className="flex flex-col justify-end gap-2">
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                <input type="checkbox" checked={form.befristetFest ?? false}
-                  onChange={(e) => set('befristetFest', e.target.checked)} />
-                Befristeter Vertrag fester Dauer &gt; 3 Monate
-              </label>
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                <input type="checkbox" checked={form.dreizehnterMonatslohn ?? false}
-                  onChange={(e) => set('dreizehnterMonatslohn', e.target.checked)} />
-                13. Monatslohn (anteilig) berücksichtigen
-              </label>
+              <Checkbox checked={form.befristetFest ?? false}
+                onChange={(v) => set('befristetFest', v)}
+                label="Befristeter Vertrag fester Dauer > 3 Monate" />
+              <Checkbox checked={form.dreizehnterMonatslohn ?? false}
+                onChange={(v) => set('dreizehnterMonatslohn', v)}
+                label="13. Monatslohn (anteilig) berücksichtigen" />
             </div>
           </div>
         )}

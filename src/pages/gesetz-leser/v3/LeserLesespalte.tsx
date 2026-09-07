@@ -6,6 +6,11 @@ import { ArtikelLeser, SektionKopf } from '../parts';
 import { istAnhangToken } from '../berechnungen';
 import { erlassPfad } from './erlassAnsicht';
 import type { LeserV3Modell } from './leserV3Modell';
+import { usePaneSteuerung } from '../../../components/layout/usePaneLayout';
+import { randNotizZiel } from '../randNotizOeffnen';
+import { useBezuegeZaehler } from '../bezuegeZaehler';
+import { useArtikelMaterialien } from '../artikelMaterialienLaden';
+import type { PanelBezuege } from './panelModell';
 
 // ─── Die Lesespalte (FAHRPLAN-LESER-V3 Kap. 1.3 «Kern-Grenze») ──────────────
 //
@@ -35,24 +40,51 @@ import type { LeserV3Modell } from './leserV3Modell';
 // Rahmen (`LeserRahmenV3`, «DIE DREI ERWEITERUNGS-SLOTS SIND GESTRICHEN»).
 // ── `trefferListe` IST GESTRICHEN (Ä76, 17.8.2026) ───────────────────────────
 // Der Prop hängte die Trefferliste INLINE über den Lesetext, angekündigt für den
-// Rand-Fall «keine Leiste, aber breit genug». Zwei Gründe, beide gemessen:
-//  · Er traf den falschen Fall. Die Bedingung im Rahmen lautete `!zweiSpalten`
-//    und schlug damit bei EINGEKLAPPTER Gliederung zu — dort lag die Liste 3596 px
-//    hoch bei y = 755 unter der Falz und schob den Gesetzestext um 3,6
-//    Bildschirmhöhen nach unten (Davids Befund «resultat ist versteckt»). Dieser
-//    Fall liegt jetzt im Blatt am Feld (`./LeserTrefferBlatt`).
-//  · Der angekündigte Fall ist unerreichbar. «Keine Leiste» heisst
-//    `eintraege.length === 0`, also kein Artikel — dann gibt es weder Treffer noch
-//    Lesetext. §17: gestrichen statt verengt.
-export function LeserLesespalte({ m }: {
+// Rand-Fall «keine Leiste, aber breit genug». Er traf den falschen Fall: bei
+// EINGEKLAPPTER Gliederung lag die Liste 3596 px hoch bei y = 755 unter der Falz
+// und schob den Gesetzestext um 3,6 Bildschirmhöhen nach unten (Davids Befund
+// «resultat ist versteckt»). Der angekündigte Fall war ohnehin unerreichbar:
+// «keine Leiste» heisst `eintraege.length === 0`, also kein Artikel — dann gibt
+// es weder Treffer noch Lesetext. §17: gestrichen statt verengt.
+// ── UND ER KOMMT MIT D38 NICHT ZURÜCK (7.9.2026) ─────────────────────────────
+// Seit D38 liegt die Trefferliste über der Lesespalte — aber als eigene Ebene
+// AUSSERHALB dieser Datei (`./LeserTrefferSpalte`, eingehängt in der Lese-Zelle
+// von `./LeserLeseZeile`). Genau das ist der Unterschied zum gestrichenen Prop:
+// die Liste steht nicht IM Fluss des Lesekörpers, sondern `absolute` darüber,
+// verschiebt also keinen Pixel und lässt die PX-Region hier unangetastet.
+export function LeserLesespalte({ m, bezuege, weckeBezuege, oeffneBlatt, bezuegeGeweckt = false }: {
   m: LeserV3Modell;
+  /** D30 · der Apparat des Panels — DIESELBE `useBezuege`-Instanz, kein zweiter
+   *  Lader (§5). `undefined` in der Ist-Hülle und in Tests, die die Spalte ohne
+   *  Rahmen mounten; dann verhält sich die Zeile wie vor D30. */
+  bezuege?: PanelBezuege;
+  /** D30 · Aufklappen der Bezüge-Zeile ⇒ Nachladen armieren (`weckeDaten`). */
+  weckeBezuege?: () => void;
+  /** D35-F2 · «im Blatt öffnen ›» der Rubrik «Entscheide» — referenz-stabil aus
+   *  `./panelModell` (`oeffneEntscheide`), sonst fiele die `memo`-Schranke von
+   *  `parts/ArtikelLeser` über alle Artikel (§15). */
+  oeffneBlatt?: () => void;
+  /** D30 · ist bereits jemand nach den Daten gefragt worden? Steuert die
+   *  Skelett-Zeile «lädt …» UND das Laden der Materialien. */
+  bezuegeGeweckt?: boolean;
 }) {
   const { erlass, eintraege, struktur, sektionen, ohneGliederung, basisPfad, vorher, nachher } = m;
   // Refs einzeln herausgezogen: die Lint-Regel `react-hooks/refs` erkennt einen
   // Ref am Namen, und `refs.leseRef` ist für sie ein Member-Zugriff im Render.
   const { leseRef, sekRef } = m.refs;
+  // W2·24-R6c: die ZAHLEN der Bezüge-Zeile aus der Zähl-Datei (ø 289 B) statt
+  // aus dem 2.2-MB-Bezugs-Shard — Herleitung in `../bezuegeZaehler`. Der Hook
+  // steht HIER und nicht im Modell: die Lesespalte ist sein einziger Konsument,
+  // und das Modell hält damit seine §6.6-Schwelle (`leser-v3-fundament`).
+  const bezuegeZaehler = useBezuegeZaehler(erlass?.key);
+  // D30 · die Materialien-LISTE zur bereits gezählten Materialien-ZAHL. Wie der
+  // Zähler: EIN Fetch je Erlass, im Leerlauf, hier und nicht im Modell (die
+  // Lesespalte ist der einzige Konsument, §6.6-Schwelle des Modells).
+  const artikelMaterialien = useArtikelMaterialien(erlass?.key, bezuegeGeweckt);
+  // Split-Regel der Randnotiz (s. `onClickCapture` unten): EIN Abo je Spalte.
+  // VOR dem Lade-Guard, weil Hooks nicht bedingt laufen dürfen.
+  const { oeffneDaneben, kannOeffnen, istOffen: paneOffen } = usePaneSteuerung();
   if (!erlass || !eintraege) return null;
-
   const fn = (tok: string) => struktur?.[tok]?.fussnoten;
   const istOffen = (id: string, defOpen: boolean) => m.offen[id] ?? defOpen;
   const toggle = (id: string, defOpen: boolean) =>
@@ -85,6 +117,33 @@ export function LeserLesespalte({ m }: {
     <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)}
       intern={m.internRefs} marg={m.margAnzeige.get(e.artikel)?.teile} margBasis={m.margAnzeige.get(e.artikel)?.ab}
       revision={m.revisionFuer(e.artikel)} historie={m.historieFuer(e.artikel)}
+      // W2·24-R6c: die ZAHLEN der Bezüge-Zeile aus der Zähl-Datei (289 B im
+      // Mittel) statt aus dem 2.2-MB-Shard — Herleitung in `../bezuegeZaehler`.
+      // Der Kern rendert wie bisher; das Öffnen der Zeile lädt weiterhin lazy.
+      zaehler={bezuegeZaehler(e.artikel)}
+      // ── D30 · POS. 12 IST NICHT ZURÜCK (und `bezuege` bleibt ungesetzt) ──
+      // D34 (7.9.2026): die Prop hiess bis D33 `bezuegeImKopf` — die Zeile stand
+      // damals unter der Artikelnummer, seit D34 steht sie am Artikelfuss. Nur
+      // der Name folgt dem Ort; der Ladevertrag darunter ist unverändert.
+      // Der Block darüber begründet, warum `bezuege` an dieser Stelle FIEL: die
+      // `BezuegeZeile` stand damals UNBEDINGT im Fliesstext, an jedem Artikel,
+      // und wuchs beim Eintreffen des Shards in den Lesekörper hinein. Beides
+      // ist hier nicht der Fall. Die Prop kommt nur, NACHDEM der Leser eine
+      // Bezüge-Zeile aufgeklappt hat (`bezuegeGeweckt`), und sie landet
+      // ausschliesslich INNERHALB des `<details>`, das er dafür geöffnet hat.
+      // Ein geschlossenes `<details>` rendert seinen Inhalt nicht — die 1685
+      // anderen Artikel bleiben unberührt, es gibt keinen dokumentweiten
+      // Layout-Sprung, und `leser-v3-kontext-cls` misst weiterhin dasselbe.
+      // `alleFuer`, nicht `bezuegeFuer`: die Zeile zeigt, was ihre Kopfzahl
+      // zählt — ungefiltert. Herleitung in `../bezuegeLaden` (D30).
+      bezuegeImFuss={bezuege?.alleFuer(e.artikel)}
+      materialien={artikelMaterialien(e.artikel)}
+      onBezuegeOeffnen={weckeBezuege}
+      onImBlatt={oeffneBlatt}
+      // «lädt …» heisst: geweckt, aber der Lade-VERSUCH ist noch nicht durch.
+      // `geladen` (nicht die Kanten) unterscheidet «unterwegs» von «leer» — die
+      // A1-Lehre aus `panelModell.ts`, hier dieselbe Quelle (§5).
+      bezuegeLaedt={bezuegeGeweckt && bezuege != null && !bezuege.geladen}
       istAnhang={istAnhangToken(e.artikel)} />
   );
 
@@ -133,6 +192,61 @@ export function LeserLesespalte({ m }: {
     );
   };
 
+  // ── F24 · DIE SPALTE LÄUFT DOKUMENTLINEAR (K-1a, W2·13-KANTONE, 31.8.2026) ─
+  //
+  // BIS HIERHER standen zwei Blöcke untereinander: erst ALLE Artikel aus
+  // `ohneGliederung` (`<div className="space-y-5 mb-6">`), dann alle Sektionen.
+  // Das stimmt genau so lange, wie die freien Artikel ein VORSPANN sind — und
+  // das sind sie nicht immer. `baueGliederungsbaum` legt einen Artikel in
+  // `ohneGliederung`, sobald er weder eine amtliche Gliederung noch eine
+  // GETEILTE Randtitel-Stufe trägt; eine fehlende oder nur EINTEILIGE Marginalie
+  // genügt. Solche Artikel stehen im Erlass mitten zwischen den Stufen — im
+  // Markup sprangen sie an den Anfang. GEMESSEN 31.8.2026 am committeten Korpus
+  // trifft das noch VIER Erlasse: BS-569.500 (§§ 3, 5, 7–9 vor §§ 1, 2, 4, 6,
+  // 10), GR-310.250, ZG-641.1 und bund/KKV (Art. 126z Ziff. 2, Position 181
+  // von 211, stand zuoberst — §9-Bug-Check 31.8. hat die Zählung unabhängig
+  // re-deriviert; Testfall KKV in leser-lesereihenfolge-k1a).
+  //
+  // Das ist keine Kosmetik, sondern eine Falschaussage über den Erlass (§8): der
+  // Leser liest eine Reihenfolge, die die amtliche Quelle nicht kennt.
+  //
+  // DERSELBE FIX, DEN DAS TOC-MODELL SEIT B2 (9.8.2026) HAT. `gliederungsModell`
+  // ordnet dieselbe Klasse dort als Vorspann/Mittelgruppe/Nachspann
+  // dokumentlinear ein — die Gliederungsleiste zeigte die Artikel also längst an
+  // der richtigen Stelle, während die Lesespalte sie vorne stapelte: zwei
+  // Aussagen über dieselbe Reihenfolge (§5). Massgeblich ist hier wie dort
+  // allein die Dokumentposition (`artIndex` für Artikel, `sekPos` für Sektionen
+  // = Index ihres ersten Artikels). Nichts wird geraten und nichts einer Sektion
+  // zugeschlagen, zu der der Artikel amtlich nicht gehört.
+  //
+  // MARKUP-TREUE (die PX-Grenze oben): aufeinanderfolgende freie Artikel bleiben
+  // EIN Block mit unverändertem `space-y-5 mb-6`. Liegen alle freien Artikel vor
+  // dem Baum — der Regelfall, insbesondere jeder Erlass ganz ohne Sektionen —,
+  // entsteht exakt dieselbe Elementfolge wie vorher; Keys erscheinen nicht im
+  // Markup. Nur die drei betroffenen Erlasse ändern sich, und genau dort ist die
+  // Änderung der Zweck. Wächter: `src/tests/leser-lesereihenfolge-k1a.test.tsx`.
+  const dokumentLinear = (): ReactNode[] => {
+    const posten = [
+      ...sektionen.map((s) => ({ pos: m.sekPos.get(s.id) ?? Infinity, sek: s, frei: null as (typeof eintraege)[number] | null })),
+      ...ohneGliederung.map((e) => ({ pos: m.artIndex.get(e.artikel) ?? 0, sek: null as Sektion | null, frei: e })),
+    ].sort((a, b) => a.pos - b.pos);
+
+    const bloecke: ReactNode[] = [];
+    let lauf: typeof ohneGliederung = [];
+    const spuele = () => {
+      if (lauf.length === 0) return;
+      bloecke.push(<div key={`frei-${lauf[0].artikel}`} className="space-y-5 mb-6">{lauf.map(artikel)}</div>);
+      lauf = [];
+    };
+    for (const p of posten) {
+      if (p.frei) { lauf.push(p.frei); continue; }
+      spuele();
+      bloecke.push(renderSektion(p.sek as Sektion, true));
+    }
+    spuele();
+    return bloecke;
+  };
+
   return (
     // ── Ä2 · SATZSPIEGEL V3 (historisch 40 rem; seit 21.8. LESEMASS_MAX 45 rem, seit 29.8. zusätzlich 1C-Zeichen-Deckel — massgeblich index.css --leser-zeilenmass) (Entscheid 16.8.2026, Design-Grundlage
     // Kap. 3) ──────────────────────────────────────────────────────────────
@@ -148,12 +262,27 @@ export function LeserLesespalte({ m }: {
     // A-7, V1 gegen V3) bei GLEICHER Artikelbreite mass, den Text-KERN also
     // unabhängig vom Satzspiegel bewies. Mit H5 (21.8.2026) gelöscht — V1, das
     // Vergleichsziel, gibt es nicht mehr.
-    <div ref={leseRef} id="lc-lesespalte" className="mx-auto w-full max-w-reading">
+    <div ref={leseRef} id="lc-lesespalte" className="mx-auto w-full max-w-reading"
+      // ── W2·24-R6 · SPLIT-REGEL DER RANDNOTIZ (Auftrag David 6.9.2026) ──────
+      // Ein Bezug am Rand öffnet in der ANDEREN Hälfte; der Artikel bleibt
+      // stehen. Die Regel selbst (Modifikatoren, externe Ziele, Dedup) ist rein
+      // und liegt in `../randNotizOeffnen` — hier steht nur die Verdrahtung.
+      //
+      // WARUM DELEGIERT UND NICHT AM LINK: `usePaneSteuerung` liefert bei jedem
+      // Shell-Render ein neues Objekt (`Shell.tsx`, Objektliteral). Ein Abo je
+      // Artikel hiesse auf dem OR 1'686 Abonnenten, die bei jedem
+      // Scroll-Spy-Takt neu rendern — genau die Bauart, die §15.4 an dieser
+      // Spalte verbietet. EIN Abo an der Spalte, ein Handler, kein Prop durch
+      // die memoisierte Artikelkette.
+      onClickCapture={(ev) => {
+        const ziel = (ev.target as HTMLElement | null)?.closest?.('a');
+        if (!ziel || !ziel.closest('.lr-notiz')) return;
+        if (randNotizZiel(ev, ziel.getAttribute('href'), kannOeffnen, paneOffen) !== 'daneben') return;
+        ev.preventDefault();
+        oeffneDaneben(ziel.getAttribute('href') as string);
+      }}>
       <div className="space-y-2">
-        {ohneGliederung.length > 0 && (
-          <div className="space-y-5 mb-6">{ohneGliederung.map(artikel)}</div>
-        )}
-        {sektionen.map((s) => renderSektion(s, true))}
+        {dokumentLinear()}
       </div>
 
       {/* ── B9 (Klick-Test) → B6 (H4-Nachzug 18.8.2026) · DIE SEITE LÄUFT QUER ─
@@ -185,7 +314,7 @@ export function LeserLesespalte({ m }: {
           Überlauf aus derselben Ursache (§5).
           Wächter: `e2e/leser-kein-seitenueberlauf.e2e.ts`, beide Hüllen. */}
       <nav className="mt-12 border-t border-line pt-5 flex justify-between gap-4 text-body-s" aria-label="Weitere Erlasse">
-        {vorher ? <Link to={erlassPfad(vorher)} className="min-w-0 text-brass-700 hover:underline [overflow-wrap:anywhere]">‹ {vorher.kuerzel}</Link> : <span />}
+        {vorher ? <Link to={erlassPfad(vorher)} className="min-w-0 text-brass-700 [overflow-wrap:anywhere]">‹ {vorher.kuerzel}</Link> : <span />}
         {/* ── Ä119 (Live-Ästhetik-Prüfung 18.8.2026) · «ÜBERSICHT» WAR DOPPELT
             BELEGT ───────────────────────────────────────────────────────────
             GEMESSEN am Live-Stand @1440: das Wort «Übersicht» bezeichnete auf
@@ -202,7 +331,7 @@ export function LeserLesespalte({ m }: {
             gibt in der Zeile nicht nach — nachgeben sollen die Erlass-Namen
             links und rechts, deren Länge aus den Daten kommt. */}
         <Link to="/gesetze" className="shrink-0 text-ink-500 hover:text-brass-700">Alle Gesetze</Link>
-        {nachher ? <Link to={erlassPfad(nachher)} className="min-w-0 text-right text-brass-700 hover:underline [overflow-wrap:anywhere]">{nachher.kuerzel} ›</Link> : <span />}
+        {nachher ? <Link to={erlassPfad(nachher)} className="min-w-0 text-right text-brass-700 [overflow-wrap:anywhere]">{nachher.kuerzel} ›</Link> : <span />}
       </nav>
     </div>
   );

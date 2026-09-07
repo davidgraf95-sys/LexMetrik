@@ -90,7 +90,7 @@ export function SuchBereichWahl({
             className={`min-h-8 flex-1 rounded px-1.5 py-1 text-micro transition-colors ${
               aktiv
                 ? 'bg-paper font-medium text-ink-800 shadow-sm'
-                : 'text-ink-600 hover:bg-paper/60 hover:text-brass-700'
+                : 'text-ink-600 lc-hover-flaeche hover:text-brass-700'
             }`}>
             {LABEL[b].kurz}
           </button>

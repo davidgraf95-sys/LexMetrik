@@ -11,7 +11,8 @@ einer älteren §9-/§12-/deploy-check-Erinnerung gewinnt **dieser Text**.
 *Diät 31.8.2026 (QS-EFFIZIENZ, Token-Dauerlast: der Skill lädt bei jeder
 Landung): Vorfalls-Erzählungen und Historie wörtlich nach `referenz-ci.md`
 bzw. `referenz-ausnahmen.md` verschoben — die REGELN hier sind vollzählig;
-wer einen Anlass nachlesen will, findet den Wortlaut dort.*
+wer einen Anlass nachlesen will, findet den Wortlaut dort; 5.9.2026
+Jules-Checkliste nach `referenz-jules.md`.*
 
 **Kernmodell (Weg 1):** **Der Merge nach `main` IST der Deploy** — kein
 separater Handschritt. Die gesamte §9-Sorgfalt (Tore grün, Bug-Check, Golden
@@ -140,6 +141,17 @@ npm run check:perf-budget  # liest dist, Chrome-frei
    `referenz-ausnahmen.md`). Rot = Stopp, kein «mergen und nachbessern».
    Realfall-Wortlaute (Tageslimit 15.8.): `referenz-ci.md`.
 
+7c. **Die Kette als Werkzeug:** `scripts/landung/landung-kette.sh <log> <PR>…`
+   fährt die Schritte 2–8 seriell (7.9.2026 über dreizehn Landungen benutzt).
+   Sie hält an, statt einen roten PR zu mergen, und löscht den Zweig erst,
+   nachdem `gh pr view --json state` MERGED meldet. Zwei Fallen sind darin
+   verdrahtet: **`gh run watch` bricht vorzeitig mit Exit 1 ab, obwohl der
+   Lauf noch läuft** — Status pollen (`gh run view --json status`), nie
+   watchen; und **ein PR im Zustand DIRTY bekommt von GitHub gar keinen
+   `pull_request`-Lauf** — «kein CI-Lauf» heisst darum zuerst «Konflikt?»,
+   nicht «Skip-CI-Marker?» (L-O8, 7.9.2026; bei DIRTY erst main im Worktree
+   in den Zweig mergen, Ziff. 3.4). Die Ziff. 0–2 ersetzt sie nicht.
+
 7b. **Ketten-Wächter (F2h):** prüft bei Risikopfad-Hand-Merges auf «alle
    Required grün» (Required-Liste per `gh api …/protection/
    required_status_checks`), nie auf `mergeStateStatus: CLEAN`;
@@ -155,10 +167,15 @@ npm run check:perf-budget  # liest dist, Chrome-frei
    Roadmap: <ID>
    Roadmap-Status: done|ready|parked(<token>)
    ```
-   `plan-buchung.yml` liest ihn nach dem Squash-Merge; halber Block = Lauf
-   laut rot. Commit-Trailer zusätzlich erlaubt, keine Pflicht. Fällt die
-   Auto-Buchung aus: `plan:set` im nächsten PR/Sammel-Push (kein direkter
-   main-Push). Form: Skill `auftrag` Ziff. 5; Historie: `referenz-ci.md`.
+   `plan-buchung.yml` liest ihn nach dem Squash-Merge; ein ECHTER halber
+   Block (`Roadmap-Status:` ohne `Roadmap:`, oder beide Zeilen in
+   verschiedenen Absätzen) = Lauf laut rot. Commit-Trailer zusätzlich
+   erlaubt, keine Pflicht. Fällt die Auto-Buchung aus: `plan:set` im
+   nächsten PR/Sammel-Push (kein direkter main-Push). Form: Skill `auftrag`
+   Ziff. 5; Historie: `referenz-ci.md`.
+   **Bleibt der Schritt nach der Landung `wip`:** im PR-Body nur
+   `Roadmap: <ID>`, kein Status — das Skript bucht dann nichts (seit
+   3.9.2026, Wurzel-Fix Workflow-Lauf 33694227189 bei PR #636).
 
 ### Auto-Merge ist auf Risiko-Pfaden gesperrt
 
@@ -177,6 +194,20 @@ Wer einen manuellen Deploy erwägt ODER sich beim Rationalisieren eines Red
 Flags ertappt, liest ZUERST `referenz-ausnahmen.md` (zwei Ausnahme-Prädikate,
 belegte Ausreden, Umgehungs-Aufzählung «Buchstabe = Geist»).
 
+### Fremde PRs (Jules) — vor der Reihe, nicht in ihr
+
+Ein PR eines fremden Agenten wird erst geprüft, dann eingereiht — Checkliste
+(8 Schritte + Entwurfs-Antwort) wörtlich in `referenz-jules.md`, dort lesen,
+sobald die Erkennung anschlägt:
+
+```
+gh pr list --state open --json number,headRefName \
+  -q '.[] | select(.headRefName|test("[0-9]{19}|^jules[-/]"))'
+```
+
+Nie Auto-Merge, nie `gh pr update-branch` auf einem Jules-PR (Beleg #710);
+Landung als Cherry-Pick.
+
 ### Red Flags — STOP
 
 - `npx vercel --prod` ohne erfülltes Ausnahme-Prädikat (ausdrückliche
@@ -190,6 +221,11 @@ belegte Ausreden, Umgehungs-Aufzählung «Buchstabe = Geist»).
 
 ## 4 · Nachkontrolle
 
+0. **Kein main-Push vor grünem Deploy-Job (F13, 2.9.2026):** Beleg #629 — der
+   Lauf des Merge-Commits endete «cancelled», nachdem ~30 s später ein Doku-Push
+   folgte; der Doku-Lauf deployt nicht, der Merge blieb unausgeliefert (Ursache
+   offen, siehe Skill `lehren` F13). Erst Nachkontrolle 1 abschliessen, dann
+   Doku pushen; ein gecancelter Merge-Lauf wird mit `gh run rerun <id>` geheilt.
 1. **Deploy dem Merge-Commit zuordnen:** Job «Deploy (Prod, Vercel CLI)» im
    Actions-Lauf des Merge-Commits grün — er verifiziert die Live-Kennung
    selbst (`<meta lexmetrik-build>`, 3×20 s). **Skipped ist hier NICHT grün**
@@ -205,5 +241,43 @@ belegte Ausreden, Umgehungs-Aufzählung «Buchstabe = Geist»).
    nach dem Merge (Solls: `fahrplaene/FAHRPLAN-PERFORMANCE.md`); manuell nur
    bei Verdacht.
 5. Aufräumen: gemergten Branch + Worktree entfernen (lokal + remote).
-6. Karten-ZEILE in `STRUKTUR.md` (deployter Stand, Commit-Hash) — Form:
+6. Hat der Merge `package-lock.json` geändert: `npm ci` im Haupt-Checkout
+   nachziehen (Beleg 3.9.2026: fehlende `valibot`/`date-holidays` machten
+   `npm test` in jedem neuen Worktree rot).
+7. Karten-ZEILE in `STRUKTUR.md` (deployter Stand, Commit-Hash) — Form:
    Skill `bauschritt` Station E.
+8. **Projektionen nachziehen:** `npm run projektionen` (Zähler/Feed/Historie +
+   `gen:e2e-shards`, seriell) — vor dem Öffnen eines PR, der Quelldaten
+   ändert, und nach einer Landekette mit mehreren Daten-PRs. Beleg: 5 CI-Läufe
+   verloren #694/#695/#689, 5.9.2026. Das Datenhaltungs-Manifest ist bewusst
+   NICHT dabei: `datenhaltung:manifest` pinnt den Ist-Zustand vor der
+   Drift-Prüfung — nur nach rotem `check:datenhaltung`, mit Begründung im
+   Commit (Gegenprüfung #717, §6.7).
+9. Prüf-Worktrees: nach `git worktree add` immer `npm ci` (frischer Checkout
+   trägt noch kein `node_modules`) — sonst laufen Tore/Tests dort nicht an
+   (Beleg gleiche Session, 5.9.2026).
+
+## Trailer- und PR-Formregeln (CI-Rot-Lehren 31.8./1.9.2026, §17)
+
+1. **Trailer nur im SCHLUSSBLOCK:** `Roadmap:`/`Roadmap-Status:`/`Gegenpruefung:`/
+   `Co-Authored-By:` in EINEM letzten Absatz ohne Leerzeilen dazwischen —
+   `git %(trailers)` liest nur den letzten Block (PR #604: Verdikt war da,
+   aber durch eine Leerzeile unsichtbar → Merge-Schutz rot). Vor jedem PR
+   lokal `npm run check:merge-schutz` (Sekunden, spart den CI-Lauf).
+2. **`Roadmap-Status: parked(<slug>)` nur mit REGISTRIERTEM Slug:** der Slug
+   muss VOR dem Merge im `@blockers`-Register der ROADMAP stehen, sonst
+   verweigert das Konsistenz-Tor die automatische Plan-Buchung (Main-CI rot,
+   PR #604). Reihenfolge: Blocker-Zeile im PR mitliefern, dann Status-Trailer.
+3. **PR zeigt «no checks reported» → ZUERST Mergeability prüfen**
+   (`gh pr view N --json mergeable`): bei CONFLICTING baut GitHub gar keinen
+   CI-Lauf (PR #605). Fix ist der main-Merge, nicht das Neu-Triggern.
+4. **Quittungs-Hash überlebt einen main-Merge**, solange der Merge den
+   Endinhalt der Risiko-Dateien des eigenen Diffs nicht ändert; ändert die
+   Regeneration eine Risiko-Projektion (register.json!), braucht der
+   Merge-Stand ein enges Nach-Verdikt derselben Prüf-Instanz (belegt 1.9.2026,
+   ZH-Tranche).
+5. **Der Roadmap-Trailer-Block muss der LETZTE Absatz im PR-Body sein — auch
+   nach der Zeile «🤖 Generated with …»:** Squash-Merges übernehmen den
+   PR-Body nicht in den Commit, und der Fallback in `plan-buchung.yml` liest
+   den letzten Absatz des Bodys; stand der Block davor, blieb die Buchung
+   aus («Kein vollständiger Buchungs-Trailer», PR #628, 2.9.2026).

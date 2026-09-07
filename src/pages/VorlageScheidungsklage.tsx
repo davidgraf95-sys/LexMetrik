@@ -8,7 +8,8 @@ import { KV_GERICHTE_BS } from '../lib/vorlagen/klageVereinfacht';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, ListenEditor, NICHT_GESPEICHERT_HINWEIS, inputCls } from '../components/vorlagen/ui';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { GerichtsWahlBlock } from '../components/vorlagen/GerichtsWahlBlock';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -108,22 +109,26 @@ export function VorlageScheidungsklage() {
             label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500"><NormText text={`(Rechtsbegehren zu den Kindern sind dann Mindestinhalt, Art. 290 lit. d ZPO)`} /></span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
-              {a.kinder.map((k, i) => (
-                <div key={i} className={pk('grid grid-cols-1 sm:grid-cols-[1fr_11rem_auto] gap-3 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_11rem_auto] gap-3 items-end')}>
-                  <Field label={`Kind ${i + 1} – Vorname`}>
-                    <input className={inputCls} value={k.vorname} onChange={(e) => kinderSetzen(i, { vorname: e.target.value })} />
-                  </Field>
-                  <Field label="Geburtsdatum">
-                    <DatumsFeld value={k.geburtsdatum} onChange={(v) => kinderSetzen(i, { geburtsdatum: v })} className={inputCls} />
-                  </Field>
-                  <button type="button" className="lc-btn-ghost lc-btn-sm mb-1"
-                    onClick={() => set('kinder', a.kinder.filter((_, j) => j !== i))}>Entfernen</button>
-                </div>
-              ))}
-              <button type="button" className="lc-btn-outline lc-btn-sm"
-                onClick={() => set('kinder', [...a.kinder, { vorname: '', geburtsdatum: '' }])}>
-                + Kind hinzufügen
-              </button>
+              {/* R2-F/F1-9: «Entfernen» stand hier als `lc-btn-ghost lc-btn-sm`
+                  in einer eigenen Grid-Spalte, der Knopf hiess «+ Kind
+                  hinzufügen». Kanon ist der ListenEditor; die Kind-Nummer
+                  trägt neu die Kopfzeile statt des Vornamen-Labels. */}
+              <ListenEditor
+                element="Kind"
+                eintraege={a.kinder}
+                onHinzufuegen={() => set('kinder', [...a.kinder, { vorname: '', geburtsdatum: '' }])}
+                onEntfernen={(i) => set('kinder', a.kinder.filter((_, j) => j !== i))}
+                kinder={(k, i) => (
+                  <div className={pk('grid grid-cols-1 sm:grid-cols-[1fr_11rem] gap-3 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_11rem] gap-3 items-end')}>
+                    <Field label="Vorname">
+                      <input className={inputCls} value={k.vorname} onChange={(e) => kinderSetzen(i, { vorname: e.target.value })} />
+                    </Field>
+                    <Field label="Geburtsdatum">
+                      <DatumsFeld value={k.geburtsdatum} onChange={(v) => kinderSetzen(i, { geburtsdatum: v })} className={inputCls} />
+                    </Field>
+                  </div>
+                )}
+              />
               <Field label="Obhut (Antrag)">
                 <SelectionGrid
                   className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
@@ -158,8 +163,8 @@ export function VorlageScheidungsklage() {
           </Field>
           {a.unterhaltEhegatte === 'beziffert' && (
             <Field label="Monatlicher Unterhalt (CHF)" hint="die Höhe ist Ihre eigene Würdigung — LexMetrik rechnet keinen Unterhalt (Ermessensfrage)">
-              <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.unterhaltBetrag}
-                onChange={(e) => set('unterhaltBetrag', e.target.value)} placeholder="z. B. 2500" />
+              <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.unterhaltBetrag}
+                onChange={(v) => set('unterhaltBetrag', v)} placeholder="z. B. 2'500" />
             </Field>
           )}
           <Checkbox
@@ -171,19 +176,22 @@ export function VorlageScheidungsklage() {
             onChange={(v) => set('vorsorgeausgleich', v)}
             label={<><span>Vorsorgeausgleich beantragen <span className="text-ink-500">(Art. 122 ff. ZGB)</span></span></>} />
           <Field label="Weitere Rechtsbegehren" optional>
-            <div className="space-y-2">
-              {a.weitereRechtsbegehren.map((r, i) => (
-                <div key={i} className="flex gap-2">
-                  <input className={inputCls} value={r}
+            {/* Wrapper-<div> bleibt: `Field` verknüpft nur ein Einzel-Control. */}
+            <div>
+              {/* R2-F/F1-9: das «×» im `lc-btn-ghost lc-btn-sm` war die vierte
+                  Entfernen-Bauform des Hauses — Kanon ist der Text-Link des
+                  ListenEditors mit sprechendem aria-label. */}
+              <ListenEditor
+                element="Begehren"
+                eintraege={a.weitereRechtsbegehren}
+                className="space-y-2"
+                onHinzufuegen={() => set('weitereRechtsbegehren', [...a.weitereRechtsbegehren, ''])}
+                onEntfernen={(i) => set('weitereRechtsbegehren', a.weitereRechtsbegehren.filter((_, j) => j !== i))}
+                kinder={(r, i) => (
+                  <input className={inputCls} value={r} aria-label={`Weiteres Rechtsbegehren ${i + 1}`}
                     onChange={(e) => set('weitereRechtsbegehren', a.weitereRechtsbegehren.map((x, j) => (j === i ? e.target.value : x)))} />
-                  <button type="button" className="lc-btn-ghost lc-btn-sm"
-                    onClick={() => set('weitereRechtsbegehren', a.weitereRechtsbegehren.filter((_, j) => j !== i))}>×</button>
-                </div>
-              ))}
-              <button type="button" className="lc-btn-outline lc-btn-sm"
-                onClick={() => set('weitereRechtsbegehren', [...a.weitereRechtsbegehren, ''])}>
-                + Begehren hinzufügen
-              </button>
+                )}
+              />
             </div>
           </Field>
         </div>
@@ -236,10 +244,11 @@ export function VorlageScheidungsklage() {
       intro="Die Scheidungsklage nach Art. 290 ZPO mit dem gesetzlichen Mindestinhalt — Scheidungsgrund (Art. 114/115 ZGB), Begehren zu Kindern, Unterhalt, Güterrecht und Vorsorgeausgleich. Der Zweijahres-Check ist berechnet; was Würdigung wäre (Art. 115, Unterhaltsbeträge), wird offengelegt, nie gerechnet."
       norms={card?.norms ?? []}
       badge="Zu unterzeichnen"
-      fussnote="Eingaben werden NICHT lokal gespeichert (Parteidaten)."
+      fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_SK, dateiName: 'Scheidungsklage.pdf' },

@@ -25,6 +25,7 @@ import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { getStandardKanton } from '../../lib/einstellungen';
 import { usePaneKlasse } from '../layout/PaneKontext';
+import type { EinfacheFristMeldung } from './einfacheFristTexte';
 
 
 const EINHEITEN: { code: SchkgEinheit; label: string }[] = [
@@ -79,7 +80,12 @@ const DEFAULTS: FormState = {
 // Spec seit FE-3 in lib/rechnerPermalinks.ts (eine Spec, zwei Nutzer: die
 // Form liest/teilt, der Preset-Index des Tagerechners baut dieselben Links).
 
-export function SchkgFristenForm() {
+export function SchkgFristenForm({ live }: {
+  /** Live-Brücke des Tagerechners (Auftrag David 1.9.2026): die oben
+   *  BERÜHRTEN Felder überschreiben die geteilten Felder hier, damit der
+   *  Rechenweg automatisch mitrechnet. */
+  live?: EinfacheFristMeldung;
+} = {}) {
   const ausLink = usePermalinkFelder(SCHKG_LINK_SPEC);
   const [form, setForm] = useState<FormState>(() => ({
     ...DEFAULTS,
@@ -100,6 +106,36 @@ export function SchkgFristenForm() {
   const [override, setOverride] = useState<SchkgModus | ''>((ausLink.override as SchkgModus | undefined) ?? '');
   const [hemmung, setHemmung] = useState<{ an: boolean; von: string; bis: string }>({ an: ausLink.hemmungAn ?? false, von: ausLink.hemmungVon ?? '', bis: ausLink.hemmungBis ?? '' });
   const [rechtsstillstand, setRechtsstillstand] = useState<{ an: boolean; von: string; bis: string }>({ an: ausLink.rsAn ?? false, von: ausLink.rsVon ?? '', bis: ausLink.rsBis ?? '' });
+
+  // Live-Brücke: Sync während des Renderns (Muster «adjusting state»);
+  // Referenzvergleich genügt, die Seite hält `live` im State. Anwendungsregel
+  // (GP-Befund B2): oben Berührtes gewinnt immer; Unberührtes füllt nur
+  // Felder, die hier weder aus dem Permalink stammen noch von Hand geändert
+  // wurden. Der aktive Preset fällt nur bei echter Wert-Änderung.
+  const ausLinkFelder = { ereignis: !!ausLink.ereignis, laenge: ausLink.laenge != null, einheit: !!ausLink.einheit, kanton: !!ausLink.kanton };
+  // Mount-Stand als einmaliger State-Snapshot (kein Ref — Refs sind im
+  // Render tabu, react-hooks/refs); nie aktualisiert, nur Vergleichsbasis.
+  const [mountForm] = useState(form);
+  const ZUORDNUNG = { start: 'ereignis', laenge: 'laenge', einheit: 'einheit', kanton: 'kanton' } as const;
+  const [letzterLive, setLetzterLive] = useState<EinfacheFristMeldung | undefined>(undefined);
+  if (live && live !== letzterLive) {
+    setLetzterLive(live);
+    const n = { ...form };
+    let geaendert = false;
+    (['start', 'laenge', 'einheit', 'kanton'] as const).forEach((k) => {
+      const feld = ZUORDNUNG[k];
+      // Einheit: der einfache Rechner bietet im SchKG-Regime keine Wochen
+      // an (einheitEffektiv) — der Cast engt denselben Wert nur typseitig ein.
+      const wert = k === 'einheit' ? (live.werte.einheit as SchkgEinheit) : live.werte[k];
+      if (live.beruehrt.includes(k) || (!ausLinkFelder[feld] && form[feld] === mountForm[feld])) {
+        if (n[feld] !== wert) { (n as Record<string, unknown>)[feld] = wert; geaendert = true; }
+      }
+    });
+    if (geaendert) {
+      setForm(n);
+      setAktiv(null);
+    }
+  }
 
   const pk = usePaneKlasse();
   const set = <K extends keyof FormState>(k: K, v: FormState[K]) => setForm((f) => ({ ...f, [k]: v }));
@@ -213,7 +249,7 @@ export function SchkgFristenForm() {
 
       {/* Frist-Preset — PRIMÄRWEG (UX B11): die Vorlage setzt alle Parameter;
           die manuellen Felder darunter sind der Kontroll-/Sonderfall-Weg. */}
-      <div className={pk('rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end', 'rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 @lg/pane:grid-cols-2 gap-4 items-end')}>
+      <div className={pk(' border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end', ' border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 @lg/pane:grid-cols-2 gap-4 items-end')}>
         <Field label="Frist-Vorlage (empfohlener Einstieg)" hint="Setzt Stillstand-Regime, Rechtsnatur, Länge und Auslöser automatisch — manuelle Felder unten nur für Sonderfälle">
           <select value={aktiv?.key ?? ''} onChange={(e) => { const p = presetsDerPhase.find((x) => x.key === e.target.value); if (p) ladePreset(p); else setAktiv(null); }} className={inputCls}>
             <option value="">– Vorlage wählen (oder manuell unten) –</option>
@@ -243,11 +279,19 @@ export function SchkgFristenForm() {
           <DatumsFeld value={form.ereignis} onChange={(v) => set('ereignis', v)} className={inputCls} />
         </Field>
 
+        {/* ZWEI Controls in EINEM Field: die sichtbare Beschriftung «Fristtyp
+            & Länge» steht über beiden und kann darum keinem von beiden per
+            `htmlFor` gehören (ein `label` beschriftet genau ein Control).
+            Beide bekommen deshalb einen eigenen zugänglichen Namen — sonst
+            sind sie für Screenreader und Sprachsteuerung namenlos (gemessen
+            am Flächen-Tor 5.9.2026: `label` + `select-name`, beide critical).
+            Die Namen wiederholen das Sichtbare und ergänzen die Rolle, damit
+            «Länge» und «Einheit» unterscheidbar bleiben. */}
         {!istDual && !istInfo && (
           <Field label="Fristtyp & Länge">
             <div className="flex gap-2">
-              <input type="number" inputMode="decimal" min={1} step={1} value={form.laenge} onChange={(e) => set('laenge', Number(e.target.value))} className={inputCls + ' w-24'} />
-              <select value={form.einheit} onChange={(e) => set('einheit', e.target.value as SchkgEinheit)} className={inputCls}>
+              <input type="number" inputMode="decimal" min={1} step={1} value={form.laenge} onChange={(e) => set('laenge', Number(e.target.value))} className={inputCls + ' w-24'} aria-label="Länge der Frist (Anzahl)" />
+              <select value={form.einheit} onChange={(e) => set('einheit', e.target.value as SchkgEinheit)} className={inputCls} aria-label="Einheit der Frist">
                 {EINHEITEN.map((u) => <option key={u.code} value={u.code}>{u.label}</option>)}
               </select>
             </div>
@@ -313,8 +357,14 @@ export function SchkgFristenForm() {
         )}
       </div>
 
+      {/* R9-2 (6.9.2026): `role="status"`, nicht `role="alert"`. Die Meldung
+          antwortet nicht auf einen Eingabefehler, sondern beschreibt eine
+          ABDECKUNGSGRENZE des Rechners (§8) — es gibt nichts zu beheben, also
+          unterbricht sie auch nichts. Die Blocker- und Mängellisten der Vorlagen
+          tragen aus demselben Grund `role="alert"`. Wächter:
+          `src/tests/design-r9-fehlerbox-baustein.test.ts`. */}
       {istInfo && aktiv && (
-        <div className="lc-notice-danger">
+        <div role="status" className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Keine berechenbare Frist – {aktiv.norm}</p>
           <p className="text-body-s text-danger-700">{aktiv.hinweis}</p>
         </div>
@@ -355,9 +405,22 @@ export function SchkgFristenForm() {
                     Art. 142 Abs. 1 (Tagesfrist) bzw. Abs. 2 (Monats-/Jahres-
                     frist). Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert. */}
                 <BegruendungSlot ergebnis={e} zusatz={fristbeginnZusatz(e.diesAQuoISO, e.fristbeginnNorm)} />
+                {/* ── LM-196 (W2·17-UI-BEFUNDE/B14) · EINE FORM JE ROLLE ────────
+                    Der Kalender-Export tritt in zwei Rollen auf, und die Rolle
+                    bestimmt die Stelle: SEITEN-Aktion (genau EIN Fristende je
+                    Seite → in der Aktionszeile neben «PDF-Rechenbericht», so in
+                    Verjährung, Erbfristen, BGG, Allgemeine Frist) und FRIST-Aktion
+                    (mehrere Fristenden gleichzeitig → bei SEINER Frist, so hier und
+                    in `EreignisFristen`). Die Positionsabweichung, die LM-196
+                    beobachtet, ist damit strukturell begründet: eine gemeinsame
+                    Seiten-Aktionszeile könnte nicht sagen, WELCHE der Fristen sie
+                    exportiert. Nicht begründet war die FORM — die Frist-Aktion
+                    stand hier auf dem vollen `lc-btn-outline`, in `EreignisFristen`
+                    auf `lc-btn-outline lc-btn-sm`. Angeglichen auf die kleine
+                    Variante: dieselbe Rolle, dieselbe Form (Muster-Konsistenz). */}
                 <IcsExportButton endISO={e.diesAdQuemISO} titel={`Fristende – ${a.titel}`}
                   aktenzeichen={aktenzeichen}
-                  query={schkgQuery}
+                  query={schkgQuery} className="lc-btn-outline lc-btn-sm"
                   beschreibung={e.ergebnis} dateiName="SchKG-Frist.ics" />
               </div>
             );

@@ -13,7 +13,7 @@ test('MaterialLeser einer neuen ESTV-MWST-DB-Karte zeigt den sichtbaren amtliche
   await expect(page.getByRole('heading', { name: /MWST-Info 02 Steuerpflicht/ })).toBeVisible()
 
   // Prominenter, sichtbarer Live-Link zur amtlichen Fassung (§7c) — stabile Portal-Kurz-URL.
-  const link = page.getByRole('link', { name: /Zur amtlichen Fassung/ })
+  const link = page.getByRole('link', { name: /Amtliche Fassung ↗/ })
   await expect(link).toBeVisible()
   const href = await link.getAttribute('href')
   expect(href).toContain('gate.estv.admin.ch/mwst-webpublikationen/public/MI/02')

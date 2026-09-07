@@ -70,6 +70,68 @@ export function nachRelevanz(erlasse: readonly BrowseErlass[]): BrowseErlass[] {
 // («Verordnung über das Verfassungsgericht» ist KEINE Verfassung). Ein Fehlgriff
 // wäre ohnehin nur eine Anzeige-Umsortierung (§3), nie ein Rechtsfehler.
 
+// ── F5/K-1f (W2·13-KANTONE, 31.8.2026) · DIE MUSTER SPRECHEN DREI SPRACHEN ───
+//
+// Die A14-Muster waren rein deutschsprachig. GEMESSEN 31.8.2026 an
+// `public/normtext/register.json`: 39 der 1231 kantonalen Erlasse stammen aus
+// den lateinischen Kantonen (FR GE JU NE TI VD VS) und trugen damit PAUSCHAL
+// «keine Kern-Kategorie» — ein Genfer Gerichtskostentarif rutschte hinter jede
+// beliebige Verordnung, obwohl sein Deutschschweizer Gegenstück zuoberst steht.
+// Dazu die vier Aargauer Erlasse, deren Erlassform «Dekret» heisst
+// («Gebührendekret», «Dekret über den Notariatstarif») und die deshalb an
+// `gebührenverordnung|gebührengesetz|…` vorbeiliefen.
+//
+// ADDITIV, NICHT UMGEBAUT: kein Bestandsmuster ist verändert; die Ausdrücke hier
+// treten mit `||` daneben. Im heutigen Bestand sortiert die Erweiterung nichts
+// um (Vorher/Nachher-Lauf über alle 1469 Keys, 31.8.2026: 38 Änderungen,
+// ausnahmslos «keine»→Kategorie). Als INVARIANTE trägt «nie umsortieren» aber
+// nicht: kantonKernRang nimmt den ersten Treffer, und ein Titel, der ein
+// Bestandsmuster einer späteren UND ein neues Muster einer früheren Kategorie
+// trifft, würde wechseln (Gegenprüfung 31.8.2026, Befund 3 — heute 0 Fälle).
+//
+// ZWEI ENTSCHEIDUNGEN, DIE BEGRÜNDUNG BRAUCHEN:
+//
+//  · «Dekret» steht NICHT allein im Muster. Ein Dekret ist im Aargau eine
+//    Erlassform wie anderswo die Verordnung — «Dekret über die Fischerei» wäre
+//    kein Kernerlass. Aufgenommen sind die zusammengesetzten Formen, die die
+//    SACHE nennen (`gebührendekret`, `notariatstarif`, `anwaltstarif`).
+//  · Gebühren- und Kostentarife («émolument», «tariffa», «tarif des frais /
+//    dépens / honoraires / notaires», Anwalts- und Notariatstarif) gehen in die
+//    Kategorie «Steuer- & Gebührenrecht» — dieselbe, in der «Gebührentarif» und
+//    «Gebührenverordnung» schon stehen. Der Anwaltstarif regelt die
+//    Parteientschädigung, also die Kostenseite des Verfahrens; David nennt in
+//    A14 ausdrücklich «Gebührentarife» als Kernklasse.
+//
+// NICHT AUFGENOMMEN, UND DAS IST ABSICHT (§8): «droits de mutation» / «droits
+// d'enregistrement» / «registre foncier». KORREKTUR (Gegenprüfung 31.8.2026,
+// Befund 1): die frühere Begründung «ihre deutschen Gegenstücke tragen ebenfalls
+// keine Kern-Kategorie» ist empirisch falsch — BE-215.326.2 heisst
+// «Handänderungssteuergesetz» und trifft als EIN Wort das Bestandsmuster
+// /steuergesetz/ (Rang 3), während «Gesetz über die Handänderungssteuer»
+// (LU-645, BS-650.100 …) und die romanischen Formen durchfallen. Die
+// Ungleichbehandlung ist eine Alt-Asymmetrie des Titel-Ratens, kein Grund, die
+// romanische Seite zusätzlich zu heben. Ob die Klasse insgesamt Kern ist, bleibt
+// eine fachliche Frage an David; Wurzel-Fix (Kern-Kategorie als deklariertes
+// Registerfeld statt Titel-Muster) ist als ROADMAP-Posten verbucht.
+//
+// Die NEUEN Muster laufen gegen Titel UND Kürzel, weil in den lateinischen
+// Kantonen und im Aargau das Kürzel oft die Sache trägt («Anwaltstarif», «LTar»,
+// «LTG») und der Titel die Erlassform («Dekret über die Entschädigung der
+// Anwälte»). Die BESTANDSMUSTER prüfen weiterhin nur den Titel — sie auch aufs
+// Kürzel zu heben, träfe 15 weitere (deutsche) Erlasse und ist damit keine
+// Spracherweiterung mehr, sondern eine eigene fachliche Änderung (Gegenprüfung
+// 31.8.2026, Befund 2; im ROADMAP-Wurzel-Fix-Posten mitverbucht).
+// Drei Ausdrücke sind Vorrat OHNE Bestandsanker (0 Treffer bei 1469 Keys am
+// 31.8.2026): «legge tributaria», «abgabengesetz», «organizzazione giudiziaria»
+// — fachlich erwartbare Formen für den kommenden Vollkorpus-Ausbau (K-G5),
+// nicht am heutigen Korpus gemessen.
+// Wächter: `src/tests/relevanz.test.ts` (echte Manifest-Titel als Fixtures;
+// die Vorrats-Ausdrücke mit als solchen markierten synthetischen Titeln).
+const KERN_TARIF_LATIN = /([ée]molument|tarif des (frais|d[ée]pens|honoraires|notaires)|tariffa|legge tributaria)/i;
+const KERN_TARIF_DE = /(geb[üu]hrendekret|anwaltstarif|notariatstarif|tarif der kosten|entsch[äa]digung der anw[äa]lte|grundbuchabgaben|abgabengesetz)/i;
+/** Gerichts-/Justizorganisation, wo sie «Reglement» heisst bzw. romanisch benannt ist. */
+const KERN_ORGANISATION_LATIN = /(justizreglement|r[èe]glement sur la justice|organizzazione giudiziaria)/i;
+
 /** Kern-Kategorien in Relevanz-Reihenfolge (Index = Rang; kleiner = wichtiger). */
 export const KANTON_KERN_KATEGORIEN: ReadonlyArray<{
   id: string;
@@ -96,16 +158,19 @@ export const KANTON_KERN_KATEGORIEN: ReadonlyArray<{
   {
     id: 'organisation',
     label: 'Gerichts- & Behördenorganisation, Verwaltungsrechtspflege',
-    beleg: 'Gerichtsorganisation/GOG, Justiz-, Gemeinde- und Verwaltungsverfahrensrecht — der institutionelle Rahmen (David A14: «GOG … zuerst»).',
-    trifft: (t) =>
-      /(gerichts(organisation|verfassung|gesetz)|justizgesetz|verwaltungsrechtspflege|verwaltungsverfahren|gemeindegesetz|kantonsratsgesetz|organisationsgesetz)/i.test(t),
+    beleg: 'Gerichtsorganisation/GOG, Justiz-, Gemeinde- und Verwaltungsverfahrensrecht — der institutionelle Rahmen (David A14: «GOG … zuerst»); seit F5/K-1f auch «Justizreglement» / «Règlement sur la justice» (FR).',
+    trifft: (t, k) =>
+      /(gerichts(organisation|verfassung|gesetz)|justizgesetz|verwaltungsrechtspflege|verwaltungsverfahren|gemeindegesetz|kantonsratsgesetz|organisationsgesetz)/i.test(t)
+      || KERN_ORGANISATION_LATIN.test(t) || KERN_ORGANISATION_LATIN.test(k),
   },
   {
     id: 'steuern-gebuehren',
     label: 'Steuer- & Gebührenrecht',
-    beleg: 'Steuergesetz/-verordnung und Gebührentarife/-verordnungen — die fiskalische Kern-Ordnung (David A14: «Steuergesetz / Gebührentarife zuerst»).',
-    trifft: (t) =>
-      /(steuergesetz|steuerverordnung|geb[üu]hrentarif|geb[üu]hrenverordnung|geb[üu]hrengesetz|geb[üu]hrenordnung)/i.test(t),
+    beleg: 'Steuergesetz/-verordnung und Gebührentarife/-verordnungen — die fiskalische Kern-Ordnung (David A14: «Steuergesetz / Gebührentarife zuerst»); seit F5/K-1f auch «émolument» / «tariffa» / «tarif des frais» / «legge tributaria» sowie Anwalts-, Notariats- und Gebührendekret-Tarife (AG).',
+    trifft: (t, k) =>
+      /(steuergesetz|steuerverordnung|geb[üu]hrentarif|geb[üu]hrenverordnung|geb[üu]hrengesetz|geb[üu]hrenordnung)/i.test(t)
+      || KERN_TARIF_LATIN.test(t) || KERN_TARIF_LATIN.test(k)
+      || KERN_TARIF_DE.test(t) || KERN_TARIF_DE.test(k),
   },
 ];
 

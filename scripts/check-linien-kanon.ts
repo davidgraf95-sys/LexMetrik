@@ -31,12 +31,28 @@
 // Ein `border-line/70` an einem markierten Element oder ein toter Rollen-Token
 // färbt das Tor ROT.
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const wurzel = resolve(import.meta.dirname ?? '.', '..');
 const lies = (p: string) => readFileSync(resolve(wurzel, p), 'utf8');
 const fehler: string[] = [];
+
+// QS-UI (5.9.2026, Nebenfund #663-Split, §6.7): der «toter Token»-Check unten
+// las nur `ArtikelBody.tsx` — nach dem Split (PR #663) leben Teile des
+// Normtext-Reader-Wortlauts auch in `ArtikelBody.zitier.tsx`/`.helfer.ts`;
+// eine dort verwendete Kanon-Klasse hätte das Tor fälschlich als «tot»
+// gemeldet. Glob statt fester Pfad: JEDE `ArtikelBody*.ts(x)` im Verzeichnis.
+const ARTIKELBODY_DATEIEN = readdirSync(resolve(wurzel, 'src/components/normtext'))
+  .filter((n) => /^ArtikelBody.*\.tsx?$/.test(n))
+  .sort()
+  .map((n) => `src/components/normtext/${n}`);
+
+// Leer-Treffer-Schutz 5.9.2026 (Gegenprüfung #719, §6.7 lit. b)
+if (!ARTIKELBODY_DATEIEN.length) {
+  console.error('check:linien-kanon ROT — Glob ArtikelBody.* traf keine Datei (Ordner/Name geändert?)');
+  process.exit(1);
+}
 
 // ─── Teil A · Linien-Kanon (marker-scoped) ───────────────────────────────────
 // QS-TOK/P5: parts.tsx ist ein Barrel — die markierten Struktur-Elemente
@@ -87,7 +103,7 @@ for (const datei of READER) {
 }
 if (markierteGesamt === 0) fehler.push(`Kein einziges \`${MARKER}\`-Element gefunden — der Linien-Kanon ist nicht verdrahtet.`);
 
-const reaederQuell = READER.map(lies).join('\n') + '\n' + lies('src/components/normtext/ArtikelBody.tsx');
+const reaederQuell = READER.map(lies).join('\n') + '\n' + ARTIKELBODY_DATEIEN.map(lies).join('\n');
 for (const k of KANON) {
   if (!kanonVerwendet.has(k) && !reaederQuell.includes(k)) {
     fehler.push(`Kanon-Klasse \`${k}\` wird im Normtext-Reader nirgends verwendet (toter Token, §13/F7).`);

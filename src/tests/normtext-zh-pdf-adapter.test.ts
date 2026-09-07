@@ -14,6 +14,7 @@ import {
   berechneZhQuelleHash,
   leseZhStand,
   leseZhStandAusUrl,
+  leseZhPublikationsdatum,
   leseAttachmentUrl,
   loeseRedirect,
 } from '../../scripts/normtext/adapter-zh-pdf.ts';
@@ -72,18 +73,20 @@ describe('ZH-PDF-Adapter — §-Parser (GebV OG, LS 211.11)', () => {
     // dem ersten Absatz zugeordnet → '1' statt früher fälschlich null.
     expect(a!.bloecke.map((b) => b.absatz)).toEqual(['1', '2', '3']);
     expect(a!.bloecke[0].text.startsWith('Die Gebühren betragen:')).toBe(true);
-    // Gebührentabelle bleibt im Text (Inhalt vorhanden, wenn auch Zahlen-eng).
+    // Gebührentabelle bleibt im Text (im Snapshot ersetzt die spaltenbewusste
+    // Staffel-Extraktion diesen Flachtext, s. extrahiereZhStreitwertStaffel).
     expect(a!.bloecke[0].text).toContain('25% des Streitwertes');
-    expect(a!.bloecke[0].text).toContain('120750');
-    // Entkleben (Bug-Fix 16.6.2026): Tarif-Tabellen-Fragmente werden an
-    // eindeutigen Grenzen getrennt — «bis1000» → «bis 1000», «zuzügl.20%des»
-    // → «zuzügl. 20% des», «Fr.1000» → «Fr. 1000», «)(» → «) (», Spaltenkopf
-    // «StreitwertGrundgebühr» → «Streitwert Grundgebühr».
-    expect(a!.bloecke[0].text).toContain('bis 1000');
+    // Wortabstand aus der PDF-Geometrie (Fix 31.8.2026, WORT_LUECKE_PT): die
+    // Tarifzeilen kommen so aus der Extraktion, wie sie gedruckt sind —
+    // inklusive Tausender-Zwischenraum. Der frühere nachträgliche «Entkleber»
+    // (entglueZhTarif) ist ersatzlos entfallen; er hatte diese Trennung nur
+    // näherungsweise rekonstruiert und dabei Abkürzungen zerschnitten.
+    expect(a!.bloecke[0].text).toContain('bis 1 000');
     expect(a!.bloecke[0].text).not.toContain('bis1000');
-    expect(a!.bloecke[0].text).toContain('über 1000');
+    expect(a!.bloecke[0].text).toContain('über 1 000');
     expect(a!.bloecke[0].text).toContain('zuzügl. 20% des');
-    expect(a!.bloecke[0].text).toContain('Fr. 1000 übersteigenden');
+    expect(a!.bloecke[0].text).toContain('Fr. 1 000 übersteigenden');
+    expect(a!.bloecke[0].text).toContain('120 750');
     expect(a!.bloecke[0].text).toContain('Streitwert Grundgebühr');
     expect(a!.bloecke[0].text).toContain('(in Franken) (in Franken)');
     // Absatz 2: Silbentrennung «Zeitaufwan-\ndes» → «Zeitaufwandes».
@@ -133,6 +136,21 @@ describe('ZH-PDF-Adapter — Stand', () => {
   it('leseZhStandAusUrl: liefert "" wenn das Slug-Muster nicht matcht (defensiv)', () => {
     expect(leseZhStandAusUrl('https://www.zh.ch/de/.../uebersicht.html')).toBe('');
   });
+
+  // FIX 2 (Befund E2-H4, 31.8.2026): `stand` ist das Publikationsdatum der
+  // geltenden Nachtragsfassung, nicht das Ur-Inkrafttreten aus dem URL-Slug und
+  // nicht die Loseblatt-Ausgabemarke aus dem PDF-Fussband.
+  it('leseZhPublikationsdatum: liest das amtliche Feld aus dem Registry-HTML', () => {
+    // Wörtliches Markup der Registry-Seite von LS 175.2 (abgerufen 31.8.2026).
+    const html =
+      '<dl class="mdl-descriptionlist">\n                <dt>Publikationsdatum</dt>\n' +
+      '                <dd>01.07.2026</dd>\n            </dl>';
+    expect(leseZhPublikationsdatum(html)).toBe('2026-07-01');
+  });
+
+  it('leseZhPublikationsdatum: liefert "" ohne das Feld (Fallback greift)', () => {
+    expect(leseZhPublikationsdatum('<dt>Erlassdatum</dt><dd>24.05.1959</dd>')).toBe('');
+  });
 });
 
 describe('ZH-PDF-Adapter — quelleHash (Drift-Token)', () => {
@@ -155,35 +173,32 @@ describe('ZH-PDF-Adapter — quelleHash (Drift-Token)', () => {
   });
 });
 
-// FIX 1 — 22.6.2026: «St PO» → «StPO» (Spalten-Lücken-Artefakt).
-// Der ZH-PDF-Adapter fügt an Spaltengrenz-Lücken ein Leerzeichen ein; bei der
-// Abkürzung «StPO» (Strafprozessordnung) in ZH-211.11 ergibt das fälschlich
-// «St PO». Die entglueZhTarif-Funktion (über extrahiereAlleZhParagraphen testbar)
-// korrigiert dieses Artefakt vor der Snapshot-Speicherung (§1-sicher: «St PO»
-// mit Leerzeichen kommt in korrekter ZH-Rechtsprosa nicht vor).
-describe('ZH-PDF-Adapter — StPO-Artefakt-Fix (St PO → StPO)', () => {
-  it('«St PO» im Fliesstext wird zu «StPO» (Spalten-Artefakt entfernt)', () => {
-    // Minimale, parser-kompatible Textbasis mit «§ 1.» Artikel und «St PO».
-    const textbasis = '§ 1.\nDieses Gesetz gilt für Verfahren nach der St PO und nach der ZPO.';
+// ABKÜRZUNGEN BLEIBEN UNVERSEHRT (31.8.2026, ersetzt den «St PO»-Artefakt-Fix
+// vom 22.6.2026).
+//
+// Der frühere Nachbesserer entglueZhTarif() trennte an jedem Übergang
+// Kleinbuchstabe→Grossbuchstabe und zerschnitt damit amtliche Abkürzungen:
+// «StGB» → «St GB», «JStPO» → «JSt PO», «SchKG» → «Sch KG», «PartG» →
+// «Part G», «BehiG» → «Behi G» (gemessen: 60+ Stellen in 13 ZH-Erlassen). Er
+// war nur nötig, weil die Zeilenmontage ein Leerzeichen erst ab 18 pt setzte.
+// Beide Ursachen sind weg; dieser Test hält fest, dass der Parser den Wortlaut
+// jetzt unangetastet durchreicht (§1).
+describe('ZH-PDF-Adapter — amtliche Abkürzungen bleiben unversehrt', () => {
+  it('trennt zusammengesetzte Abkürzungen nicht (StGB/JStPO/SchKG/PartG)', () => {
+    const textbasis =
+      '§ 1.\nDas Gericht wendet StGB, JStPO, SchKG und PartG an.';
     const alle = extrahiereAlleZhParagraphen(textbasis);
     expect(alle['1']).toBeDefined();
     const text = alle['1']!.bloecke[0].text;
-    expect(text).toContain('StPO');
-    expect(text).not.toContain('St PO');
+    expect(text).toBe('Das Gericht wendet StGB, JStPO, SchKG und PartG an.');
   });
 
-  it('«St PO» direkt vor Buchstaben («St PObemisst») → «StPO bemisst» (ZH-215.3-Stil)', () => {
-    const textbasis = '§ 1.\nVorverfahren nach Art. 299 ff. St PObemisst sich die Gebühr.';
+  it('lässt den lat. Suffix am Paragraphen-Bereich zusammen («§§ 137bis–144»)', () => {
+    const textbasis = '§ 1.\nAufgehoben sind die §§ 137bis–144 und §§ 235bis–235quater.';
     const alle = extrahiereAlleZhParagraphen(textbasis);
-    const text = alle['1']!.bloecke[0].text;
-    expect(text).toContain('StPO bemisst');
-    expect(text).not.toContain('St PO');
-  });
-
-  it('«StPO» (kein Leerzeichen) bleibt unverändert (idempotent)', () => {
-    const textbasis = '§ 1.\nRegelung nach der StPO.';
-    const alle = extrahiereAlleZhParagraphen(textbasis);
-    expect(alle['1']?.bloecke[0].text).toContain('StPO');
+    expect(alle['1']!.bloecke[0].text).toBe(
+      'Aufgehoben sind die §§ 137bis–144 und §§ 235bis–235quater.',
+    );
   });
 });
 

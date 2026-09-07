@@ -357,45 +357,6 @@
     },
     "cons": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/dl/proj/6018/32/cons_1"
-    },
-    "status": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
-    },
-    "titelDe": {
-      "type": "literal",
-      "xml:lang": "de",
-      "value": "Verordnungspaket Umwelt Frühling 2019"
-    },
-    "titelFr": {
-      "type": "literal",
-      "xml:lang": "fr",
-      "value": "Paquet d'ordonnances environnementales du printemps 2019"
-    },
-    "titelIt": {
-      "type": "literal",
-      "xml:lang": "it",
-      "value": "Pacchetto d'ordinanze in materia ambientale, primavera 2019"
-    },
-    "start": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-04-27"
-    },
-    "ende": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-08-22"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.81"
-    },
-    "cons": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/dl/proj/2021/126/cons_1"
     },
     "status": {
@@ -465,6 +426,45 @@
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
       "value": "2026-04-12"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.81"
+    },
+    "cons": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/6018/32/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Verordnungspaket Umwelt Frühling 2019"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Paquet d'ordonnances environnementales du printemps 2019"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Pacchetto d'ordinanze in materia ambientale, primavera 2019"
+    },
+    "start": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-04-27"
+    },
+    "ende": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-08-22"
     }
   },
   {

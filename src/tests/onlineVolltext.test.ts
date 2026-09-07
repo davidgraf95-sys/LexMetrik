@@ -50,6 +50,40 @@ const ARTIKEL_ANTWORT = {
   },
 };
 
+/** Kantonaler + eidgenössischer Artikel-Treffer in EINER Antwort (F35): die
+ *  hot-FTS trägt beide Ebenen, die Trefferliste muss sie unterscheiden. */
+const KANTON_ANTWORT = {
+  artikel: {
+    treffer: [
+      {
+        id: 'art:AG-291.150:art_1',
+        titel: '§ 1 AnwT',
+        snippet: '… Honorar …',
+        fundstelle: {
+          erlass: 'AG-291.150',
+          artikel: '1',
+          quelleUrl: 'https://gesetzessammlungen.ag.ch/app/de/texts_of_law/291.150',
+          ebene: 'kanton',
+          kanton: 'AG',
+        },
+      },
+      {
+        id: 'art:OR:art_330_a',
+        titel: 'Art. 330a OR',
+        snippet: '… Zeugnis …',
+        fundstelle: {
+          erlass: 'OR',
+          artikel: '330_a',
+          quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_330_a',
+          ebene: 'bund',
+        },
+      },
+    ],
+    gesamt: 2,
+    naechsteSeite: null,
+  },
+};
+
 beforeEach(() => {
   zuruecksetzenOnlineSperre();
 });
@@ -64,6 +98,45 @@ describe('onlineVolltext: URL-Bildung (aus bestehenden Helfern abgeleitet)', () 
   it('Entscheid → Entscheid-Route über die kanonische id (kodiert)', () => {
     expect(entscheidTrefferHref('bge-150-III-1')).toBe('/rechtsprechung/bge-150-III-1');
     expect(entscheidTrefferHref('BGer 4A_1/2020')).toBe('/rechtsprechung/BGer%204A_1%2F2020');
+  });
+
+  // ── W2·13-KANTONE K-3 (F35/F36): Kanton-Treffer auf die Kanton-Ebene ──────
+  //
+  // Vor dem Fix baute der Href über `erlassPfadVonKey(key)` OHNE Ebene — und
+  // dessen Fallback ist 'bund'. Die hot-FTS trägt aber auch kantonale Artikel:
+  // jeder kantonale Online-Treffer landete damit auf `/gesetze/bund/<kanton-key>`,
+  // also auf einer Adresse, die die falsche Ebene behauptet (§8).
+  it('Artikel (Kanton) → Kanton-Route aus der DTO-Ebene', () => {
+    expect(
+      artikelTrefferHref({ erlass: 'AG-291.150', artikel: '1', quelleUrl: 'x', ebene: 'kanton', kanton: 'AG' }),
+    ).toBe('/gesetze/kanton/AG-291.150#art-1');
+  });
+
+  it('DTO OHNE Ebene (gecachte Alt-Antwort) → kein Crash, richtige Ebene', () => {
+    expect(artikelTrefferHref({ erlass: 'OR', artikel: '330_a', quelleUrl: 'x' })).toBe('/gesetze/bund/OR#art-330_a');
+    // NACHGEZOGEN (W2·13-KANTONE K-3 Ebenen-Redirect, 31.8.2026): hier stand
+    // «weiterhin der Bund-Fallback (wie bisher)» — das galt, solange
+    // `routenEbeneVonKey` kantonale Schlüssel nicht kannte. Sie erkennt sie
+    // jetzt am Kantons-Präfix (erlassAdresse.ts, über den ganzen Bestand
+    // bewacht), also greift der Bund-Fallback auch OHNE DTO-Ebene nicht mehr:
+    // die gecachte Alt-Antwort landet ebenfalls auf der richtigen Ebene. 'bund'
+    // bleibt Fallback nur für Schlüssel, die weder im Register stehen noch ein
+    // Kantonskürzel tragen (unten geprüft).
+    expect(artikelTrefferHref({ erlass: 'AG-291.150', artikel: '1', quelleUrl: 'x' })).toBe(
+      '/gesetze/kanton/AG-291.150#art-1',
+    );
+    expect(artikelTrefferHref({ erlass: 'GIBTSNICHT', artikel: '1', quelleUrl: 'x' })).toBe(
+      '/gesetze/bund/GIBTSNICHT#art-1',
+    );
+  });
+
+  it('das REGISTER schlägt die DTO-Ebene (Staatsvertrag bleibt international)', () => {
+    // Befund 45 darf nicht zurückkehren: `CISG` trägt die Daten-Ebene 'bund',
+    // seine kanonische Adresse ist aber /gesetze/international/CISG. Die
+    // DTO-Ebene ist NUR Fallback für Schlüssel, die das Register nicht kennt.
+    expect(artikelTrefferHref({ erlass: 'CISG', artikel: '1', quelleUrl: 'x', ebene: 'bund' })).toBe(
+      '/gesetze/international/CISG#art-1',
+    );
   });
 });
 
@@ -87,6 +160,33 @@ describe('onlineVolltext: 200-Fall', () => {
     // hervor (SuchResultate.markiere); die Klammern wären doppelte Auszeichnung.
     expect(g!.treffer[1].untertitel).toBe('… Verjährung …');
     expect(g!.treffer[1].untertitel).not.toMatch(/[[\]]/);
+  });
+
+  it('Kanton-Treffer trägt Ebene-Route, Kürzel-Marke und Label-Suffix (F35/F36)', async () => {
+    const fetchImpl = vi.fn(async () => jsonRes(KANTON_ANTWORT));
+    const g = await holeOnlineTreffer('honorar', { fetchImpl, basisUrl: BASIS });
+    expect(g).not.toBeNull();
+    const t = g!.treffer[0];
+    expect(t.href).toBe('/gesetze/kanton/AG-291.150#art-1');
+    // Herkunft ehrlich (§8) — dasselbe Doppel-Idiom wie im statischen Index
+    // (artikelVolltext.treffer): Label-Suffix « · AG» PLUS Marke «AG», die
+    // anders als «Gesetz» NICHT als redundant ausgeblendet werden darf.
+    expect(t.label).toBe('§ 1 AnwT · AG');
+    expect(t.marke).toEqual({ text: 'AG', ton: 'soft' });
+    // Der Bund-Treffer derselben Antwort bleibt unverändert.
+    const b = g!.treffer[1];
+    expect(b.href).toBe('/gesetze/bund/OR#art-330_a');
+    expect(b.label).toBe('Art. 330a OR');
+    expect(b.marke).toEqual({ text: 'Gesetz', ton: 'soft', redundant: true });
+  });
+
+  it('F36: der Gruppen-Hinweis nennt Bund UND Kanton und sagt, dass es online läuft', async () => {
+    const fetchImpl = vi.fn(async () => jsonRes(ARTIKEL_ANTWORT));
+    const g = await holeOnlineTreffer('verjaehrung', { fetchImpl, basisUrl: BASIS });
+    expect(g!.hinweis).toMatch(/Bund/);
+    expect(g!.hinweis).toMatch(/[Kk]anton/);
+    expect(g!.hinweis).toMatch(/nur online/);
+    expect(g!.hinweis).toMatch(/verlassen dafür den Browser/);
   });
 
   it('200 mit leerer Antwort → GAR keine Gruppe (null)', async () => {

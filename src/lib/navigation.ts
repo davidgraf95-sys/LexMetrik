@@ -4,27 +4,33 @@
 // Schubladen-Menü. REINES, typisiertes Datenmodul: kein JSX, KEINE Rechtslogik
 // (CLAUDE.md §3) — nur die Navigations-Topologie.
 //
-// SSoT / «ableiten statt duplizieren» (Build-Plan Leitplanke 4): die Rechner-,
-// Vorlagen- und Gesetze-Einträge werden NICHT hier hartcodiert, sondern aus der
-// bestehenden Fachkonfiguration abgeleitet —
-//   · Rechner  ← OBERKATEGORIEN (oberkategorien.ts) ohne «vorlagen»
-//   · Vorlagen ← VORLAGE_SEKTIONEN (startseiteConfig.ts)
-//   · Gesetze  ← GEBIETE (normtext/register.ts) für die Bund-Rechtsgebiete
-// — sodass eine neue Kategorie/Sektion/ein neues Rechtsgebiet automatisch in
-// der Seitenleiste erscheint und nichts an zwei Stellen gepflegt wird (§5).
+// SSoT / «ableiten statt duplizieren» (Build-Plan Leitplanke 4): kein Eintrag
+// wird hier hartcodiert, alle leiten sich aus der bestehenden Fachkonfiguration
+// ab — seit D26 (6.9.2026) aus diesen Quellen:
+//   · Gesetze        ← kernerlasse.ts (Schlüssel) + Erlass-Register · KANTONE
+//                      · INTERNATIONAL_RUBRIKEN
+//   · Rechtsprechung ← startseiteZaehler.generated (Sachgebiete + Zahlen)
+//   · Materialien    ← startseiteZaehler.generated (Behörden + Zahlen)
+//   · Rechner        ← KATALOG_KARTEN (fünf geführte IDs, aufgelöst)
+//   · Vorlagen       ← VORLAGE_SEKTIONEN (startseiteConfig.ts)
+// — sodass ein neuer Erlass, ein neues Sachgebiet, eine neue Behörde oder
+// Vorlagen-Sektion automatisch erscheint und nichts an zwei Stellen gepflegt
+// wird (§5). Bis D26 spiegelten Rechner und Gesetze stattdessen OBERKATEGORIEN
+// bzw. SYSTEMATIK; beide Ordnungen leben unverändert auf ihren Übersichtsseiten.
 //
-// Nur die echten App-Texte (Start, Recherche) und die Meta-Ziele sind aus
-// keiner Fachkonfiguration ableitbar und stehen darum literal.
+// Nur die echten App-Texte (Start, «Alle …») und die Meta-Ziele sind aus keiner
+// Fachkonfiguration ableitbar und stehen darum literal.
 
-import { OBERKATEGORIEN } from './oberkategorien';
 import { KATALOG_KARTEN, VORLAGE_SEKTIONEN, istVerfuegbar } from './startseiteConfig';
-import { kategorieFuer } from './oberkategorien';
 import { istVorlage } from './vorlagenKategorie';
-import { SYSTEMATIK } from './normtext/systematik';
 import { INTERNATIONAL_RUBRIK_IDS } from './normtext/international-rubriken';
-import { GEBIETE } from './normtext/register';
 import { KANTONE, KANTON_NAMEN } from '../data/tarif/typen';
-import { BEHOERDEN } from './materialien/register';
+// D26 · die Kernerlass-Liste der Übersicht /gesetze (R12A) trägt jetzt AUCH die
+// Seitenleiste. Bewusst dieselbe Datei und keine zweite Liste (§5): dort stehen
+// nur die SCHLÜSSEL, Kürzel/Titel/Adresse kommen aus dem Erlass-Register. Das
+// Modul ist reine Daten («Daten, kein JSX», s. Kopf dort) — der Import aus
+// `components/` bringt darum kein JSX und keine Rechtslogik in die Landkarte (§3).
+import { kernerlasse } from '../components/gesetze/kernerlasse';
 // IA-7 (W2·5d §11.5): Erlass-Zahl-Badges an den 26 Kantonslinks — Zahl aus dem
 // generierten Zähler-SSoT (register.json → gen:zaehler, Drift-Tor check:zaehler;
 // build-time, KEIN Client-Fetch, §15.3), Zustands-Wort aus der IA-2-SSoT
@@ -99,8 +105,6 @@ const link = (label: string, ziel: string): NavLink => ({ art: 'link', label, zi
 // (mit eigener Seite) als Direktlinks sind — abgeleitet aus dem Katalog (§5),
 // nicht zweitgepflegt. Klicktiefe 1 von der Seitenleiste ins Werkzeug.
 
-const katVon = (k: typeof KATALOG_KARTEN[number]) => kategorieFuer(k) ?? 'vorlagen';
-
 // Verfügbare Karten EINER Kategorie als Werkzeug-Direktlinks (Katalog-Reihenfolge).
 const werkzeugeFuer = (pruefen: (k: typeof KATALOG_KARTEN[number]) => boolean): NavLink[] =>
   KATALOG_KARTEN.filter((k) => istVerfuegbar(k) && !!k.href && pruefen(k)).map((k) => link(k.title, k.href!));
@@ -108,27 +112,47 @@ const werkzeugeFuer = (pruefen: (k: typeof KATALOG_KARTEN[number]) => boolean): 
 const werkzeugGruppe = (label: string, kinder: NavLink[], ziel?: string): NavGruppe =>
   ({ art: 'gruppe', label, ziel, aufklappbar: true, standardOffen: false, kinder });
 
-// O2 (W2·10-UI-NAV-O · Sidebar-Konsistenz): Rechner- und Vorlagen-Gruppen tragen
-// jetzt ebenfalls ein `ziel` — wie Bund/Kantone/International. Das Gruppen-Label
-// navigiert damit ÜBERALL, der Chevron klappt überall. Sprungziel ist der
-// Übersichtsanker der jeweiligen Rubrikseite; beide Anker existierten bereits
-// und waren bis hierher unerreichbar:
-//   · `register-<kat.id>` — Katalog.tsx `KategorieSektion` (scroll-mt-28)
+// O2 (W2·10-UI-NAV-O · Sidebar-Konsistenz): die Vorlagen-Gruppen tragen ein
+// `ziel` — wie Kantone/International. Das Gruppen-Label navigiert damit ÜBERALL,
+// der Chevron klappt überall. Sprungziel ist der Übersichtsanker der Rubrikseite:
 //   · `vorlage-<sektion.id>` — Katalog.tsx `VorlagenRegister` (scroll-mt-24;
-//     der Kommentar dort nannte die Seitenleiste schon als Absender)
+//     der Kommentar dort nennt die Seitenleiste als Absender)
 // Den Sprung führt ScrollZuHash (App.tsx) aus — kein neuer Mechanismus (§5).
-const RECHNER_ANKER = (katId: string) => `/rechner#register-${katId}`;
+// Das Gegenstück `RECHNER_ANKER` (`/rechner#register-<kat.id>`) ist mit den
+// Rechner-Kategorie-Gruppen entfallen (D26); die Anker selbst rendert
+// `/rechner` unverändert.
 const VORLAGEN_ANKER = (sektionId: string) => `/vorlagen#vorlage-${sektionId}`;
 
-// Rechner: die drei Aufgaben-Oberkategorien ausser «Vorlagen» — je als
-// aufklappbare Gruppe mit ihren Rechnern.
-const RECHNER_KINDER: NavKnoten[] = OBERKATEGORIEN
-  .filter((k) => k.id !== 'vorlagen')
-  .map((kat) => werkzeugGruppe(
-    kat.titel,
-    werkzeugeFuer((k) => !istVorlage(k) && katVon(k) === kat.id),
-    RECHNER_ANKER(kat.id),
-  ));
+// ─── D26 (David 6.9.2026) · DIE LEISTE ZEIGT ZIELE, KEINE KATEGORIEN ────────
+//
+// «die seitenleiste, also die einklappbare, nochmals überarbeiten, was sie
+// anzeigt». Bis hierher war sie eine Kopie der Kategorien-Ordnung: unter
+// «Rechner» drei Oberkategorien, unter «Gesetze» die zwölf Systematik-Titel,
+// unter «Rechtsprechung»/«Materialien» je eine einzige Klapp-Zeile. Wer etwas
+// aufschlagen wollte, klappte erst auf und las dann eine Rubrik — die Leiste
+// wiederholte die Übersichtsseiten, statt an ihnen vorbeizuführen.
+//
+// NEU steht in jeder Rubrik das, was man täglich aufschlägt, als DIREKTES Ziel,
+// darunter genau eine Zeile «Alle …» in die Übersicht. Die Ordnungen selbst
+// (Systematik, Oberkategorien) verschwinden nicht — sie leben auf ihren
+// Übersichtsseiten weiter, wo sie hingehören und wo der Filter sie bedient.
+//
+// KEINE HANDPFLEGE (§5): jede Zeile leitet sich ab — Kernerlasse aus
+// `kernerlasse.ts`, Sachgebiete/Behörden/Zahlen aus dem Zähler-Generat, Rechner
+// und Vorlagen aus dem Katalog. Ein Schlüssel, den seine Quelle nicht kennt,
+// verschwindet still, statt ins Leere zu verlinken (§8).
+
+/** Rechner: die fünf meistgebrauchten (D26) — als KATALOG-IDs geführt, aufgelöst
+ *  über `KATALOG_KARTEN`. Nur die Auswahl steht hier, nie Titel oder Adresse. */
+const RECHNER_TOP_IDS = ['zpo-fristen', 'prozesskosten', 'verjaehrung', 'zustaendigkeit', 'verzugszins'] as const;
+
+const RECHNER_KINDER: NavKnoten[] = [
+  ...RECHNER_TOP_IDS.flatMap((id) => {
+    const k = KATALOG_KARTEN.find((x) => x.id === id);
+    return k && istVerfuegbar(k) && k.href ? [link(k.title, k.href)] : [];
+  }),
+  link('Alle Rechner', '/rechner'),
+];
 
 // Vorlagen: die fünf Dokument-Gruppen — je als aufklappbare Gruppe mit ihren
 // Vorlagen (nach Dokument-Typ `art`).
@@ -195,14 +219,13 @@ export function internationalAnkerAbbildung(hash: string): string {
 // 20.6.2026: Kantone gleich wie Bund, aufklappbar in die Kantone). Ziel = /gesetze
 // mit ?ebene= (Tab-Vorwahl) und Kategorie-Anker «sys-<id>» bzw. ?kt=<KT> (Vorwahl).
 const GESETZE_KINDER: NavKnoten[] = [
-  {
-    art: 'gruppe',
-    label: 'Bund',
-    ziel: '/gesetze?ebene=bund',
-    aufklappbar: true,
-    standardOffen: false,
-    kinder: SYSTEMATIK.map((k) => link(k.titel, `/gesetze?ebene=bund#sys-${k.id}`)),
-  },
+  // D26 · Kernerlasse als DIREKTE Ziele, ohne Zwischenklick. Beschriftet mit dem
+  // Kürzel (so schlägt man sie nach); der volle Titel steht im Accessible Name
+  // und im `title` — die Sicht-Beschriftung bleibt darin enthalten (WCAG 2.5.3).
+  // Die zwölf Systematik-Titel sind damit aus der Leiste raus: sie sind die
+  // Gliederung der Bund-Säule und werden dort gezeigt, nicht zweitgeführt.
+  ...kernerlasse().map((e) => ({ ...link(e.kuerzel, e.pfad), ariaLabel: `${e.kuerzel} — ${e.titel}` })),
+  link('Alle Bundeserlasse', '/gesetze?ebene=bund'),
   {
     art: 'gruppe',
     label: 'Kantone',
@@ -255,35 +278,39 @@ const GESETZE_KINDER: NavKnoten[] = [
   },
 ];
 
-// Rechtsprechung: gleichrangig zu «Gesetze». Die Sachgebiete (GEBIETE, dieselbe
-// Sach-Achse wie die Gesetze → Verzahnung) liegen in EINER einklappbaren Gruppe
-// «Nach Sachgebiet» — damit der Eintrag ein Dropdown ist wie Bund/Kantone unter
-// Gesetze (Auftrag David 24.6.2026), standardmässig zu. Ziel je Sachgebiet:
-// /rechtsprechung?rg=<gebiet> (Vorwahl, teilbar).
+// Rechtsprechung (D26): die Sachgebiete stehen DIREKT in der Leiste, jedes mit
+// seiner Entscheid-Zahl, dazu die Leitentscheide. Ordnung, Beschriftung und Zahl
+// kommen aus dem Zähler-Generat (`gen:zaehler`, Drift-Tor `check:zaehler`), das
+// nach derselben Regel zählt wie die Sachgebiets-Kacheln der Übersicht
+// (`zaehleSachgebiete`, Verweise raus) — es gibt keine zweite Zähl-Wahrheit (§5)
+// und keine Zahl ohne Einheit im Accessible Name (§8/O4).
+// 'international' ist die Sach-Achse der Staatsverträge, nicht der Rechtsprechung;
+// kein Entscheid trägt es, und das Generat lässt leere Sachgebiete darum weg.
 const RECHTSPRECHUNG_KINDER: NavKnoten[] = [
+  ...STARTSEITE_ZAEHLER.rechtsprechungSachgebiete.map((g) => ({
+    ...link(g.label, `/rechtsprechung?rg=${g.id}`),
+    zahl: g.anzahl,
+    ariaLabel: `${g.label} — ${g.anzahl} ${g.anzahl === 1 ? 'Entscheid' : 'Entscheide'}`,
+  })),
   {
-    art: 'gruppe',
-    label: 'Nach Sachgebiet',
-    aufklappbar: true,
-    standardOffen: false,
-    // 'international' ist die Sach-Achse der Rubrik «International» (Staatsverträge),
-    // nicht der Rechtsprechung — kein Entscheid trägt es. Aus der Rechtsprechungs-
-    // Navigation ausgeblendet (sonst leerer Sachgebiets-Link, §8).
-    kinder: GEBIETE.filter((g) => g.id !== 'international').map((g) => link(g.label, `/rechtsprechung?rg=${g.id}`)),
+    ...link('Leitentscheide', '/rechtsprechung?leit=1'),
+    zahl: STARTSEITE_ZAEHLER.rechtsprechungLeitentscheide,
+    ariaLabel: `Leitentscheide — ${STARTSEITE_ZAEHLER.rechtsprechungLeitentscheide} Entscheide`,
   },
 ];
 
-// Materialien: amtliche Ressourcen (Soft-Law) je Behörde — EINE einklappbare
-// Gruppe «Nach Behörde» (wie Rechtsprechung «Nach Sachgebiet»), standardmässig
-// zu. Ziel je Behörde: /materialien#b-<id> (Sprung-Anker der Übersicht).
+// Materialien (D26): die Behörden direkt, mit ihrer erfassten Zahl, dazu «Alle
+// Materialien». Reihenfolge/Zahl aus demselben Zähler-Generat wie die
+// Behörden-Liste der Startseite (§5); Behörden ohne Eintrag fehlen dort schon,
+// erscheinen hier also gar nicht erst (§8 — nie eine 0-Zeile behaupten).
+// Ziel je Behörde bleibt der Sprung-Anker der Übersicht: /materialien#b-<id>.
 const MATERIALIEN_KINDER: NavKnoten[] = [
-  {
-    art: 'gruppe',
-    label: 'Nach Behörde',
-    aufklappbar: true,
-    standardOffen: false,
-    kinder: BEHOERDEN.map((b) => link(b.kuerzel, `/materialien#b-${b.id}`)),
-  },
+  ...STARTSEITE_ZAEHLER.materialienBehoerden.map((b) => ({
+    ...link(b.kuerzel, `/materialien#b-${b.id}`),
+    zahl: b.anzahl,
+    ariaLabel: `${b.kuerzel} — ${b.name}, ${b.anzahl} ${b.anzahl === 1 ? 'Materialie' : 'Materialien'}`,
+  })),
+  link('Alle Materialien', '/materialien'),
 ];
 
 // ─── Hauptnavigation ─────────────────────────────────────────────────────────

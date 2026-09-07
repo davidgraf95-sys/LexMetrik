@@ -10,6 +10,7 @@
 // visuelle Wahrnehmbarkeit der focus-visible-Stile, fachliches Urteil zur
 // Tab-REIHENFOLGE.
 import { test, expect } from '@playwright/test'
+import { appGebootet } from './helpers/appGebootet'
 
 const aktivesIso = (page: import('@playwright/test').Page) =>
   page.evaluate(() => (document.activeElement as HTMLElement | null)?.dataset?.iso ?? null)
@@ -80,6 +81,12 @@ test('Monatsblättern ‹/›: Raster bleibt tabbar (Monatserster), kein Fokus-K
 
 test('Skip-Link: erstes Tab fokussiert «Zum Inhalt springen» und springt in den Inhalt', async ({ page }) => {
   await page.goto('/')
+  // MESSBEDINGUNG, kein Prüfschritt (§6.3): erst hochfahren lassen, dann tabben.
+  // Ein Tastendruck in das Startfenster hinein bewegt den Fokus gar nicht —
+  // gemessen 12/12 rot unter CPU-Drossel 20×, 0/12 mit diesem Helfer
+  // (Herleitung und Rot-Rezept: `helpers/appGebootet.ts`). Geprüft wird
+  // unverändert die TAB-REIHENFOLGE: der Skip-Link ist der erste Halt.
+  await appGebootet(page)
   await page.keyboard.press('Tab')
   const skip = page.getByRole('link', { name: 'Zum Inhalt springen' })
   await expect(skip).toBeFocused()
@@ -87,8 +94,16 @@ test('Skip-Link: erstes Tab fokussiert «Zum Inhalt springen» und springt in de
   await expect(page).toHaveURL(/#inhalt$/)
 })
 
+// ── §6.3-DEKLARATION (W2·23-STARTSEITE-V4 §6.1, 5.9.2026) ────────────────────
+// Die beiden folgenden Fälle prüfen die Kürzel-Mechanik der KOPF-Suche. Auf «/»
+// gibt es sie seit diesem Schritt nicht mehr — dort trägt der Hero die eine
+// Suche, und der Streifen leitet «/»/⌘K dorthin um. Die Fälle ziehen darum auf
+// eine Route um, auf der die Kopf-Suche steht (/gesetze); Assertion, Umfang und
+// Wortlaut bleiben unverändert. Der «/»-Fall (Umleitung auf die Hero-Suche)
+// wird NEU in `w223b-kopf-seitenleiste.e2e.ts` geprüft — kein Prüfpunkt geht
+// verloren, keiner steht doppelt.
 test('«/» fokussiert die Suche (Tastatur-Shortcut)', async ({ page }) => {
-  await page.goto('/')
+  await page.goto('/gesetze')
   await page.keyboard.press('/')
   // Die Header-Suche ist eine ARIA-Combobox (Vorschlags-Listbox), kein reiner
   // searchbox — der «/»-Shortcut fokussiert sie weiterhin.
@@ -99,7 +114,7 @@ test('«/» fokussiert die Suche (Tastatur-Shortcut)', async ({ page }) => {
 // Palette ist entfallen). Koexistenz zu «/» — beide fokussieren dasselbe Feld,
 // keiner öffnet ein Overlay. Sichert den KA4-Akzeptanzpunkt («/»-Koexistenz).
 test('⌘K/Ctrl-K und «/» koexistieren: beide fokussieren die HeaderSuche, kein Overlay', async ({ page }) => {
-  await page.goto('/')
+  await page.goto('/gesetze')
   const feld = page.getByRole('combobox', { name: /LexMetrik durchsuchen/ })
   // Ctrl-K fokussiert das Feld.
   await page.keyboard.press('Control+k')

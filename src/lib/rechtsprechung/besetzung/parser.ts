@@ -563,6 +563,27 @@ export function bereinigeBesetzungsFreitext(s: string): string {
     // («7B_950/2024et»), zwischen «4» und «e» steht dann keine Wortgrenze.
     .replace(/[.,;\s]*\b\d[A-Za-z]?_\d+\/\d{4}\s*(?:et|e|und)?\s*$/i, '')
     .replace(/\s+/g, ' ')
+    // ── Satzzeichen-Abstand (LM-127/LM-132, Datenschritt 5.9.2026) ────────────
+    // Der BS-Extraktor liest `display:none`-Spans BEWUSST als Text mit (belegte
+    // Regel in scripts/rechtsprechung/bs-besetzung.ts: das Entfernen erzeugte 23
+    // GLUE-Fehler). Diese Spans tragen laut derselben Erhebung fast ausnahmslos
+    // WHITESPACE — steht ein solcher Span unmittelbar VOR dem Trenn-Komma, liefert
+    // `textContent` «… von Aarburg , Dr. T. Fasnacht». Das `\s+`→' ' oben glättet
+    // die Folge, entfernt den Abstand vor dem Satzzeichen aber nicht: 324 solche
+    // Stellen in 309 BS-Entscheiden (Messung 5.9.2026, korpusweit; Bund und alle
+    // übrigen Kantone: 0).
+    //
+    // Regel: kein Whitespace VOR `,` `;` `:` `.`; nach `,` `;` `:` genau ein
+    // Leerzeichen. Nach `.` wird BEWUSST kein Leerzeichen erzwungen (Abweichung
+    // vom Auftrag, offengelegt nach §7): der Freitext besteht aus Titel-Abkürzungen
+    // («Dr.», «lic. iur.», «a.o.», «LL.M.»), ein erzwungenes Leerzeichen zerrisse
+    // sie zu «LL. M.» und erzeugte damit genau die Namens-Fabrikation, die §8
+    // verbietet. Das Entfernen des Abstands VOR dem Punkt bleibt, es ist harmlos.
+    //
+    // Reine Zeichenkette auf einem RUBRUM-Feld — Volltext, Regesten und Erwägungen
+    // laufen nie durch diese Funktion (§7 Zitattreue).
+    .replace(/\s+([,;:.])/g, '$1')
+    .replace(/([,;:])(?=\S)/g, '$1 ')
     .trim();
 }
 

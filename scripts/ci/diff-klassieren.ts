@@ -29,7 +29,7 @@
  * QS-PLAN-EINFACH 14.8.2026, Punkt 3 — 78 %-Messwert der Browser-Shards).
  * KONSERVATIV: jede andere Datei (auch package.json, e2e/**, scripts/** sonst)
  * bleibt `code`. */
-const CODE_FERNE_MUSTER: readonly RegExp[] = [
+export const CODE_FERNE_MUSTER: readonly RegExp[] = [
   /\.md$/,
   /^scripts\/plan\//,
   /^scripts\/cowork\//,
@@ -38,6 +38,21 @@ const CODE_FERNE_MUSTER: readonly RegExp[] = [
   /^bibliothek\//,
   /^messwerte\//,
   /^archiv\//,
+];
+
+/** Tragen die Endung `.md`, sind aber generierte Werkzeug-Konfiguration statt
+ * Doku — eine Änderung MUSS den Tore-Job (u. a. `check:dispatch-klausel`)
+ * durchlaufen. Anlass PR #619 (2.9.2026): `.claude/agents/lex-bau.md` wurde
+ * von Hand geändert, der reine-.md-Kurzschluss (unten) stufte den Diff als
+ * `doku` ein, der Tore-Job lief nicht — die Drift wurde erst auf fremden PRs
+ * rot (§6.7: ein Tor, das für genau den verursachenden Diff nicht läuft, kann
+ * nicht scheitern). Diese Dateien fallen dadurch NICHT aus `code-fern` heraus
+ * (sie bleiben über `CODE_FERNE_MUSTER` — `.claude/`/`docs/` — code-fern,
+ * Bau + alle Node-Tore laufen weiter voll), nur der `doku`-Kurzschluss greift
+ * für sie nicht mehr. */
+export const WERKZEUG_TROTZ_MD_MUSTER: readonly RegExp[] = [
+  /^\.claude\/agents\//,
+  /^docs\/token-oekonomie\/dispatch-template\.md$/,
 ];
 
 export type DiffArt = 'code-fern' | 'code';
@@ -66,8 +81,20 @@ export function klassifiziereDateien(dateien: readonly string[]): DiffArt {
  * NACHDEM sein eigener `.md`-Kurztest den reinen Doku-Fall schon behandelt hat.
  */
 export function klassifiziereDiff(dateien: readonly string[]): 'doku' | DiffArt {
-  if (dateien.every((d) => /\.md$/.test(d))) return 'doku';
+  if (istReinerDokuDiff(dateien)) return 'doku';
   return klassifiziereDateien(dateien);
+}
+
+/** Reiner Doku-Diff: ALLE Dateien enden auf `.md` UND keine davon ist
+ * Werkzeug-Konfiguration trotz `.md`-Endung (`WERKZEUG_TROTZ_MD_MUSTER`,
+ * Anlass PR #619 oben). Eine einzige Werkzeug-Datei genügt, um den
+ * Kurzschluss zu sperren — dieselbe Fehlerseite wie bei `klassifiziereDateien`
+ * (§6.7): lieber einmal zu viel geprüft als der auslösende Diff ungeprüft. */
+export function istReinerDokuDiff(dateien: readonly string[]): boolean {
+  return (
+    dateien.every((d) => /\.md$/.test(d)) &&
+    !dateien.some((d) => WERKZEUG_TROTZ_MD_MUSTER.some((re) => re.test(d)))
+  );
 }
 
 // CLI: liest eine Datei je Zeile von stdin (wie `pr-dateien.txt`/

@@ -13,7 +13,7 @@ import { KANTONE as KANTON_CODES } from '../lib/kantone';
 import type { KantonCode } from '../data/tarif/typen';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, ListenEditor } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -248,37 +248,42 @@ export function VorlageVorsorgeauftrag() {
               Pro Aufgabenbereich kann dieselbe oder eine andere Person bestimmt werden.
               <NormText text={` Für die medizinische Vertretung nach verbreiteter Lehre eine natürliche Person bezeichnen (vgl. Art. 370 Abs. 2 ZGB zur Patientenverfügung).`} />
             </p>
-            {a.beauftragte.map((b, i) => (
-              <div key={i} className="lc-card p-4 space-y-3">
-                <div className="grid grid-cols-1 sm:grid-cols-[1fr_10rem] gap-3">
-                  <Field label="Name (Person oder Organisation)">
-                    <input className={inputCls} value={b.name} onChange={(e) => setBeauftragte(i, { name: e.target.value })} />
+            {/* R2-F/F1-9: beide Repeater dieses Schritts (Beauftragte,
+                Ersatzpersonen) trugen `lc-card p-4` als Behälter und
+                «+ … hinzufügen» als Knopf; der Entfernen-Link hing per
+                `ml-auto` in der Bereichs-Zeile. Kanon ist der ListenEditor. */}
+            <ListenEditor
+              element="Beauftragte Person"
+              eintraege={a.beauftragte}
+              onHinzufuegen={() => set('beauftragte', [...a.beauftragte, { name: '', typ: 'natuerlich', angaben: '', bereiche: ['personensorge', 'vermoegenssorge', 'rechtsverkehr'] }])}
+              onEntfernen={(i) => set('beauftragte', a.beauftragte.filter((_, j) => j !== i))}
+              kinder={(b, i) => (
+                <div className="space-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-[1fr_10rem] gap-3">
+                    <Field label="Name (Person oder Organisation)">
+                      <input className={inputCls} value={b.name} onChange={(e) => setBeauftragte(i, { name: e.target.value })} />
+                    </Field>
+                    <Field label="Typ">
+                      <select className={inputCls} value={b.typ} onChange={(e) => setBeauftragte(i, { typ: e.target.value as VaBeauftragte['typ'] })}>
+                        <option value="natuerlich">natürliche Person</option>
+                        <option value="juristisch">juristische Person</option>
+                      </select>
+                    </Field>
+                  </div>
+                  <Field label={b.typ === 'juristisch' ? 'Sitz / Adresse' : 'Geburtsdatum / Adresse'} hint="genaue Bezeichnung erleichtert der KESB die Eignungsprüfung">
+                    <input className={inputCls} value={b.angaben} onChange={(e) => setBeauftragte(i, { angaben: e.target.value })} />
                   </Field>
-                  <Field label="Typ">
-                    <select className={inputCls} value={b.typ} onChange={(e) => setBeauftragte(i, { typ: e.target.value as VaBeauftragte['typ'] })}>
-                      <option value="natuerlich">natürliche Person</option>
-                      <option value="juristisch">juristische Person</option>
-                    </select>
-                  </Field>
+                  <div className="flex flex-wrap items-center gap-3">
+                    {VA_BEREICHE.map((ber) => (
+                      <label key={ber.id} className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
+                        <input type="checkbox" checked={b.bereiche.includes(ber.id)} onChange={() => toggleBereich(i, ber.id)} />
+                        {ber.label}
+                      </label>
+                    ))}
+                  </div>
                 </div>
-                <Field label={b.typ === 'juristisch' ? 'Sitz / Adresse' : 'Geburtsdatum / Adresse'} hint="genaue Bezeichnung erleichtert der KESB die Eignungsprüfung">
-                  <input className={inputCls} value={b.angaben} onChange={(e) => setBeauftragte(i, { angaben: e.target.value })} />
-                </Field>
-                <div className="flex flex-wrap items-center gap-3">
-                  {VA_BEREICHE.map((ber) => (
-                    <label key={ber.id} className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
-                      <input type="checkbox" checked={b.bereiche.includes(ber.id)} onChange={() => toggleBereich(i, ber.id)} />
-                      {ber.label}
-                    </label>
-                  ))}
-                  <button type="button" onClick={() => set('beauftragte', a.beauftragte.filter((_, j) => j !== i))}
-                    className="ml-auto text-body-s text-danger-700 hover:underline">entfernen</button>
-                </div>
-              </div>
-            ))}
-            <button type="button"
-              onClick={() => set('beauftragte', [...a.beauftragte, { name: '', typ: 'natuerlich', angaben: '', bereiche: ['personensorge', 'vermoegenssorge', 'rechtsverkehr'] }])}
-              className="lc-btn-outline">+ Beauftragte Person hinzufügen</button>
+              )}
+            />
           </div>
 
           {a.beauftragte.filter((b) => b.name.trim() && b.bereiche.length > 0).length > 1 && (
@@ -299,38 +304,39 @@ export function VorlageVorsorgeauftrag() {
 
           <div className="space-y-3">
             <GruppenTitel><NormText text={`Ersatzpersonen (Art. 360 Abs. 3 ZGB)`} /></GruppenTitel>
-            {a.ersatzpersonen.map((e, i) => (
-              <div key={i} className="lc-card p-4 space-y-3">
-                <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr_10rem] gap-3 items-end">
-                  <span className="num text-body-s text-ink-500 pb-2.5">{i + 1}.</span>
-                  <Field label="Name (Person oder Organisation)">
-                    <input className={inputCls} value={e.name} onChange={(ev) => setErsatz(i, { name: ev.target.value })} />
+            <ListenEditor
+              element="Ersatzperson"
+              eintraege={a.ersatzpersonen}
+              onHinzufuegen={() => set('ersatzpersonen', [...a.ersatzpersonen, { name: '', typ: 'natuerlich', angaben: '' }])}
+              onEntfernen={(i) => set('ersatzpersonen', a.ersatzpersonen.filter((_, j) => j !== i))}
+              kinder={(e, i) => (
+                <div className="space-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-[1fr_10rem] gap-3 items-end">
+                    <Field label="Name (Person oder Organisation)">
+                      <input className={inputCls} value={e.name} onChange={(ev) => setErsatz(i, { name: ev.target.value })} />
+                    </Field>
+                    <Field label="Typ">
+                      <select className={inputCls} value={e.typ} onChange={(ev) => setErsatz(i, { typ: ev.target.value as VaErsatzperson['typ'] })}>
+                        <option value="natuerlich">natürliche Person</option>
+                        <option value="juristisch">juristische Person</option>
+                      </select>
+                    </Field>
+                  </div>
+                  <Field label={e.typ === 'juristisch' ? 'Sitz / Adresse' : 'Geburtsdatum / Adresse'} optional>
+                    <input className={inputCls} value={e.angaben} onChange={(ev) => setErsatz(i, { angaben: ev.target.value })} />
                   </Field>
-                  <Field label="Typ">
-                    <select className={inputCls} value={e.typ} onChange={(ev) => setErsatz(i, { typ: ev.target.value as VaErsatzperson['typ'] })}>
-                      <option value="natuerlich">natürliche Person</option>
-                      <option value="juristisch">juristische Person</option>
-                    </select>
-                  </Field>
+                  <div className="flex flex-wrap items-center gap-3">
+                    {VA_BEREICHE.map((ber) => (
+                      <label key={ber.id} className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
+                        <input type="checkbox" checked={(e.bereiche ?? []).includes(ber.id)} onChange={() => toggleErsatzBereich(i, ber.id)} />
+                        {ber.label}
+                      </label>
+                    ))}
+                  </div>
+                  <p className="text-xs text-ink-500">Bereiche leer lassen = Ersatz für alle übertragenen Bereiche.</p>
                 </div>
-                <Field label={e.typ === 'juristisch' ? 'Sitz / Adresse' : 'Geburtsdatum / Adresse'} optional>
-                  <input className={inputCls} value={e.angaben} onChange={(ev) => setErsatz(i, { angaben: ev.target.value })} />
-                </Field>
-                <div className="flex flex-wrap items-center gap-3">
-                  {VA_BEREICHE.map((ber) => (
-                    <label key={ber.id} className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
-                      <input type="checkbox" checked={(e.bereiche ?? []).includes(ber.id)} onChange={() => toggleErsatzBereich(i, ber.id)} />
-                      {ber.label}
-                    </label>
-                  ))}
-                  <button type="button" onClick={() => set('ersatzpersonen', a.ersatzpersonen.filter((_, j) => j !== i))}
-                    className="ml-auto text-body-s text-danger-700 hover:underline">entfernen</button>
-                </div>
-                <p className="text-xs text-ink-500">Bereiche leer lassen = Ersatz für alle übertragenen Bereiche.</p>
-              </div>
-            ))}
-            <button type="button" onClick={() => set('ersatzpersonen', [...a.ersatzpersonen, { name: '', typ: 'natuerlich', angaben: '' }])}
-              className="lc-btn-outline">+ Ersatzperson hinzufügen</button>
+              )}
+            />
             <p className="text-xs text-ink-500">Empfehlung: Ersatzperson ausserhalb der Familie für Interessenkonfliktfälle.</p>
           </div>
         </div>
@@ -386,22 +392,23 @@ export function VorlageVorsorgeauftrag() {
           </Field>
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Entschädigung (Art. 366 ZGB)`} /></GruppenTitel>
-            <div className="flex flex-wrap gap-1.5" role="group" aria-label="Entschädigung">
-              {([
-                ['keine_angabe', 'keine Regelung (KESB legt fest)'],
-                ['unentgeltlich', 'unentgeltlich (Spesen ersetzt)'],
-                ['pauschale', 'Pauschale pro Jahr'],
-                ['nach_aufwand', 'nach Aufwand (CHF/Std.)'],
-              ] as const).map(([code, label]) => (
-                <button key={code} type="button" aria-pressed={a.entschaedigung === code}
-                  onClick={() => set('entschaedigung', code)}
-                  className={`px-3 py-1.5 rounded-full text-body-s font-medium border transition-colors ${
-                    a.entschaedigung === code ? 'bg-ink-900 border-ink-900 text-paper' : 'bg-surface border-line text-ink-600 hover:border-brass-400'
-                  }`}>
-                  {label}
-                </button>
-              ))}
-            </div>
+            {/* D-3 (31.8.2026): Pillen-Reihe über den geteilten Baustein
+                (`ui/SelectionGrid`, variant «pille») — die invertierte
+                ink-900-Füllung als Auswahl-Signal ist entfallen, es gilt der
+                Kanon `border-brass-500 bg-brass-100/60`. */}
+            <SelectionGrid
+              variant="pille"
+              gruppenLabel="Entschädigung"
+              className="flex flex-wrap gap-1.5"
+              items={[
+                { code: 'keine_angabe', label: 'keine Regelung (KESB legt fest)' },
+                { code: 'unentgeltlich', label: 'unentgeltlich (Spesen ersetzt)' },
+                { code: 'pauschale', label: 'Pauschale pro Jahr' },
+                { code: 'nach_aufwand', label: 'nach Aufwand (CHF/Std.)' },
+              ] as const}
+              value={a.entschaedigung ?? ''}
+              onSelect={(code) => set('entschaedigung', code)}
+            />
             {(a.entschaedigung === 'pauschale' || a.entschaedigung === 'nach_aufwand') && (
               <Field label={a.entschaedigung === 'pauschale' ? 'Betrag (CHF pro Jahr)' : 'Ansatz (CHF pro Stunde)'}>
                 <input type="number" min={0} className={inputCls + ' w-40'} value={a.entschaedigungBetrag ?? ''}
@@ -453,7 +460,7 @@ export function VorlageVorsorgeauftrag() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700"><NormText text={b} /></p>
             </div>
           ))}
@@ -545,6 +552,7 @@ export function VorlageVorsorgeauftrag() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: eigenhaendig

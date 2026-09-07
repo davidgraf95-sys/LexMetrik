@@ -1,4 +1,5 @@
 import { memo, useState } from 'react';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 // ─── V5 · Erwägungs-Navigation im Entscheid-Leser (W2·10-UI-NAV) ─────────────
 //
@@ -53,8 +54,20 @@ function Lupe() {
 /** Ein Sprungziel der Liste; `anzahl` nur in der Treffer-Sicht. */
 export interface RailPunkt { anker: string; marke: string; tiefe: number; anzahl?: number }
 
+// ── A-2 (W2·19-DESIGN-KONSISTENZ · B2/BAU-4, 31.8.2026) · IMPORT-FOLGE ──────
+//
+// Der Rail hing an einer BOOLEAN-Prop `imPane`: gesetzt ⇒ «es gibt hier keine
+// Spalte», also immer die aufklappbare Form. Das war richtig, solange der
+// EntscheidLeser im Pane grundsätzlich einspaltig blieb. Seit derselbe Leser
+// sein Zweispalten-Bild an der PANE-Breite ausrichtet (`@5xl/pane`, Herleitung
+// in `pages/EntscheidLeser.tsx`), wäre die Boolean eine zweite, widersprechende
+// Aussage: das Raster stellte eine zweite Spalte bereit, der Rail hielte sich
+// weiter für spaltenlos, und beide Kinder landeten in Spalte 1 übereinander.
+// Der Rail liest die Lage darum aus DERSELBEN Quelle wie sein Raster
+// (`usePaneKlasse`, §5) — und die Prop entfällt ersatzlos (§17-Rückbau: sie
+// trug keine Aussage mehr, die nicht der Kontext schon trägt).
 export const ErwaegungsRail = memo(function ErwaegungsRail({
-  gliederung, treffer, trefferGesamt, normen, suche, onSuche, springe, imPane = false,
+  gliederung, treffer, trefferGesamt, normen, suche, onSuche, springe,
 }: {
   /** Erwägungs-Gliederung der SICHTBAREN Fassung (`erwaegungsGliederung`). */
   gliederung: readonly RailPunkt[];
@@ -69,28 +82,30 @@ export const ErwaegungsRail = memo(function ErwaegungsRail({
   onSuche: (v: string) => void;
   /** Sprung + Hash-Spiegelung — dieselbe Funktion wie die Abschnitts-Chips. */
   springe: (anker: string) => void;
-  /** Im Split-View-Pane gibt es keine Rail-Spalte → immer die aufklappbare Form. */
-  imPane?: boolean;
 }) {
-  // Mobil (und im Pane) eingeklappt starten: der Lesetext gehört zuerst ans Auge.
-  // Auf Desktop entscheidet allein CSS — kein Media-Query in JS, damit Server-
-  // und Client-Markup nicht auseinanderlaufen.
+  // Mobil (und in der schmalen Pane) eingeklappt starten: der Lesetext gehört
+  // zuerst ans Auge. Ob die Spalte steht, entscheidet allein CSS — kein
+  // Media-Query in JS, damit Server- und Client-Markup nicht auseinanderlaufen.
   const [offen, setOffen] = useState(false);
+  const pk = usePaneKlasse();
 
   // Nichts zu navigieren ⇒ gar keine Fläche (kein leerer Kasten, §15.2/§13 F4).
   if (gliederung.length === 0 && normen.length === 0) return null;
 
   const trefferErw = treffer.reduce((n, t) => n + (t.anzahl ?? 0), 0);
-  const desktop = !imPane;
   const liste: readonly RailPunkt[] | null = suche.trim() === '' ? null : treffer;
 
   return (
     <aside
       data-erw-rail
-      className={desktop
-        ? 'order-1 min-w-0 xl:order-2 xl:col-start-2 xl:row-start-1 xl:sticky'
-        : 'order-1 min-w-0'}
-      style={desktop ? { top: 'calc(var(--rsp-stick, 7rem) + 0.5rem)' } : undefined}
+      className={pk(
+        'order-1 min-w-0 xl:order-2 xl:col-start-2 xl:row-start-1 xl:sticky',
+        'order-1 min-w-0 @5xl/pane:order-2 @5xl/pane:col-start-2 @5xl/pane:row-start-1 @5xl/pane:sticky',
+      )}
+      // `top` gilt nur, WENN die Spalte klebt — sonst ist es ein wirkungsloser
+      // Wert. Es steht darum unbedingt da: eine zweite Weiche für dieselbe
+      // Aussage wäre genau die Doppelung, die A-2 hier auflöst.
+      style={{ top: 'calc(var(--rsp-stick, 7rem) + 0.5rem)' }}
       aria-label="Navigation im Entscheid"
     >
       {/* Mobil/Pane: ein Griff. Auf Desktop ist der Rail immer offen — der Griff
@@ -98,7 +113,7 @@ export const ErwaegungsRail = memo(function ErwaegungsRail({
       <button type="button" data-erw-rail-griff
         onClick={() => setOffen((v) => !v)}
         aria-expanded={offen}
-        className={`lc-chip w-full justify-between ${desktop ? 'xl:hidden' : ''}`}>
+        className={pk('lc-chip w-full justify-between xl:hidden', 'lc-chip w-full justify-between @5xl/pane:hidden')}>
         {/* Wortwahl bewusst «Gliederung» statt «Erwägungen»: der Reader trägt
             bereits einen Abschnitts-Chip «Erwägungen» in der Sprungleiste; zwei
             gleichnamige Bedienelemente auf einer Seite sind für Screenreader und
@@ -107,7 +122,7 @@ export const ErwaegungsRail = memo(function ErwaegungsRail({
         <span aria-hidden className="text-base leading-none">{offen ? '▾' : '▸'}</span>
       </button>
 
-      <div className={`${offen ? 'mt-2 block' : 'hidden'} ${desktop ? 'xl:mt-0 xl:block' : ''} space-y-3`}>
+      <div className={`${offen ? 'mt-2 block' : 'hidden'} ${pk('xl:mt-0 xl:block', '@5xl/pane:mt-0 @5xl/pane:block')} space-y-3`}>
         {/* «Im Entscheid suchen» — Pendant zur In-Gesetz-Suche (A35). Das Feld
             markiert im Lesetext (Highlight-API, kein DOM-Eingriff) und listet
             hier die Erwägungen mit Treffern. */}
@@ -169,7 +184,7 @@ export const ErwaegungsRail = memo(function ErwaegungsRail({
                       e.preventDefault();
                       springe(p.anker);
                     }}
-                    className="num flex min-h-6 items-center gap-1.5 rounded px-1 text-xs tabular-nums text-ink-700 no-underline hover:bg-brass-100/40 hover:text-brass-700">
+                    className="num flex min-h-6 items-center gap-1.5 rounded px-1 text-xs text-ink-700 no-underline hover:bg-brass-100/40 hover:text-brass-700">
                     <span>{p.marke}</span>
                     {p.anzahl != null && (
                       <span className="ml-auto text-micro text-ink-500">{p.anzahl}</span>

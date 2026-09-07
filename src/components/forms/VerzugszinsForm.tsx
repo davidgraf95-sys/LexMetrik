@@ -1,4 +1,4 @@
-import { BeispielChips, EckdatenKachel, Field } from '../vorlagen/ui';
+import { BeispielChips, Checkbox, EckdatenKachel, Field, ListenEditor } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
@@ -18,6 +18,7 @@ import { usePermalinkFelder } from '../../hooks/usePermalinkFelder';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { VerzugszinsTimeline } from '../VerzugszinsTimeline';
 import { usePaneKlasse } from '../layout/PaneKontext';
+import { datumOderStrich } from '../ui/datumText';
 
 const VERZUGSZINS_DISCLAIMER =
   'Automatisierte Orientierungsberechnung des Verzugszinses nach Art. 104 OR – keine Rechtsberatung. ' +
@@ -30,7 +31,7 @@ const METHODEN: { code: VerzugszinsMethode; label: string }[] = [
   { code: '30E360', label: '30E/360 (kaufmännisch)' },
 ];
 const GRUENDE: { code: SatzGrund; label: string }[] = [
-  { code: 'gesetzlich', label: 'Gesetzlich – 5% (Art. 104 Abs. 1)' },
+  { code: 'gesetzlich', label: 'Gesetzlich – 5 % (Art. 104 Abs. 1)' },
   { code: 'vertraglich', label: 'Vertraglich höher (Art. 104 Abs. 2)' },
   { code: 'kaufmaennisch', label: 'Kaufmännischer Diskonto (Art. 104 Abs. 3)' },
 ];
@@ -60,9 +61,9 @@ const DEFAULTS: VerzugszinsInput = {
 type State = { form: VerzugszinsInput; rows: EreignisEingabe[]; zinsforderung: boolean };
 
 const BEISPIELE: { label: string; state: State }[] = [
-  { label: 'Rechnung offen, 5%', state: { form: { ...DEFAULTS, kapital: 5000, verzugsbeginn: '2025-03-01', stichtag: '2025-09-01' }, rows: [], zinsforderung: false } },
+  { label: 'Rechnung offen, 5 %', state: { form: { ...DEFAULTS, kapital: 5000, verzugsbeginn: '2025-03-01', stichtag: '2025-09-01' }, rows: [], zinsforderung: false } },
   { label: 'Mit Teilzahlung', state: { form: { ...DEFAULTS, kapital: 10000, verzugsbeginn: '2024-01-01', stichtag: '2025-01-01' }, rows: [{ typ: 'teilzahlung', datum: '2024-07-01', wert: 4000 }], zinsforderung: false } },
-  { label: 'Vertraglich 8%', state: { form: { ...DEFAULTS, kapital: 20000, zinssatzProzent: 8, satzGrund: 'vertraglich', verzugsbeginn: '2024-06-01', stichtag: '2025-06-01' }, rows: [], zinsforderung: false } },
+  { label: 'Vertraglich 8 %', state: { form: { ...DEFAULTS, kapital: 20000, zinssatzProzent: 8, satzGrund: 'vertraglich', verzugsbeginn: '2024-06-01', stichtag: '2025-06-01' }, rows: [], zinsforderung: false } },
   { label: 'Satzwechsel', state: { form: { ...DEFAULTS, kapital: 15000, verzugsbeginn: '2024-01-01', stichtag: '2025-06-30' }, rows: [{ typ: 'satzaenderung', datum: '2025-01-01', wert: 4 }], zinsforderung: false } },
 ];
 
@@ -127,7 +128,6 @@ export function VerzugszinsForm() {
   };
   const inputNum = 'lc-input num';
 
-  const fmtISO = (s: string) => (s ? s.split('-').reverse().join('.') : '–');
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
   const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
@@ -146,7 +146,7 @@ export function VerzugszinsForm() {
       hauptlabel: 'Verzugszins (gesamt)',
       hauptwert: `CHF ${ergebnis.zinsTotalCHF}`,
       nebenwerte: [{ label: 'Total inkl. Kapital', wert: `CHF ${ergebnis.totalOffenCHF}` }],
-      kontext: `${form.zinssatzProzent ?? 5} % auf CHF ${form.kapital} für ${ergebnis.tageTotal} Tage (${fmtISO(ergebnis.ersterZinstag)} – ${fmtISO(ergebnis.stichtag)})`,
+      kontext: `${form.zinssatzProzent ?? 5} % auf CHF ${form.kapital} für ${ergebnis.tageTotal} Tage (${datumOderStrich(ergebnis.ersterZinstag)} – ${datumOderStrich(ergebnis.stichtag)})`,
     } : undefined,
     sections: ergebnis ? [{ titel: 'Verzugszins (Art. 104 OR)', ergebnis }] : [],
     disclaimer: VERZUGSZINS_DISCLAIMER,
@@ -165,7 +165,7 @@ export function VerzugszinsForm() {
         <Field label="Geschuldeter Betrag (CHF)" hint="Verzugszins fällt nur auf dem tatsächlich geschuldeten Betrag an">
           <BetragsFeld value={form.kapital ? String(form.kapital) : ''} onChange={(v) => set('kapital', Number(v) || 0)} className={inputNum} placeholder="z. B. 10'000" />
         </Field>
-        <Field label="Zinssatz (%)" hint="Default 5% (Art. 104 Abs. 1 OR); z.B. ATSG 5%, Steuern variabel">
+        <Field label="Zinssatz (%)" hint="Default 5 % (Art. 104 Abs. 1 OR); z. B. ATSG 5 %, Steuern variabel">
           <input type="number" inputMode="decimal" min={0} step={0.25} value={form.zinssatzProzent ?? 5} onChange={(e) => set('zinssatzProzent', Number(e.target.value))} className={inputNum} />
         </Field>
 
@@ -181,7 +181,15 @@ export function VerzugszinsForm() {
         <Field label="Stichtag (Berechnung bis)" hint="Zahlung / Urteilstag / heute">
           <div className="flex gap-2">
             <DatumsFeld value={form.stichtag} onChange={(v) => set('stichtag', v)} className="lc-input" />
-            <button type="button" onClick={() => set('stichtag', heuteISO())} className="lc-btn-ghost whitespace-nowrap">heute</button>
+            {/* LM-099/LM-088 (W2·17-UI-BEFUNDE B17, 4.9.2026): war
+                `lc-btn-ghost` — gemessen 80×44 mit transparenter Fläche und
+                border 0, also fetter Text neben einem Eingabefeld und nicht
+                als anklickbare Abkürzung erkennbar. Die GRÖSSE stimmte schon
+                (44 px = Komfortmass, die Hälfte des Befunds ist damit
+                widerlegt); gefehlt hat allein die Affordanz. Sie kommt aus der
+                geteilten Knopf-Familie (`lc-btn-outline`, §13), nicht aus
+                einem Sonderstil an dieser Stelle (LM-087). */}
+            <button type="button" onClick={() => set('stichtag', heuteISO())} className="lc-btn-outline whitespace-nowrap">heute</button>
           </div>
         </Field>
         <Field label="Grundlage des Zinssatzes">
@@ -196,48 +204,53 @@ export function VerzugszinsForm() {
           </select>
         </Field>
         <Field label="Rückständige Zins-/Rentenforderung?">
-          <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer pt-2 text-ink-700">
-            <input type="checkbox" checked={zinsforderung} onChange={(e) => setZinsforderung(e.target.checked)} />
-            Ja – Verzinsung erst ab Betreibung/Klage (Art. 105 Abs. 1 OR)
-          </label>
+          <Checkbox
+            checked={zinsforderung}
+            onChange={setZinsforderung}
+            label="Ja – Verzinsung erst ab Betreibung/Klage (Art. 105 Abs. 1 OR)"
+            className="pt-2"
+          />
         </Field>
       </div>
 
       {/* Teilzahlungen & Satzänderungen */}
       <div className="space-y-3">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <h4 className="text-body-s font-semibold text-ink-700">Teilzahlungen &amp; Satzänderungen (Art. 85 OR)</h4>
-          <div className="flex gap-2">
-            <button type="button" onClick={() => addRow('teilzahlung')} className="lc-btn-outline lc-btn-sm">+ Teilzahlung</button>
-            <button type="button" onClick={() => addRow('satzaenderung')} className="lc-btn-outline lc-btn-sm">+ Satzänderung</button>
-          </div>
-        </div>
-        {rows.length === 0 && <p className="text-body-s text-ink-500 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
-        {rows.map((row, i) => (
-          <div key={row.id} className={pk('lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end', 'lc-panel p-3 grid grid-cols-1 @3xl/pane:grid-cols-4 gap-3 items-end')}>
-            <div className="space-y-1">
-              <label className="text-body-s font-medium text-ink-600">Typ</label>
-              <select value={row.typ} onChange={(e) => updateRow(i, { typ: e.target.value as EreignisRow['typ'] })} className="lc-input">
-                <option value="teilzahlung">Teilzahlung (CHF)</option>
-                <option value="satzaenderung">Satzänderung (%)</option>
-              </select>
+        <h4 className="text-body-s font-semibold text-ink-700">Teilzahlungen &amp; Satzänderungen (Art. 85 OR)</h4>
+        {/* R2-F/F1-9: EINE Liste, zwei Hinzufügen-Knöpfe — dafür trägt der
+            ListenEditor `weitere`. Die Knöpfe standen bisher ÜBER der Liste
+            (Kanon: darunter), das «Entfernen» war eine vierte Grid-Spalte.
+            Die drei rohen `<label>` sind `Field` gewichen (Label↔Control). */}
+        <ListenEditor
+          element="Teilzahlung"
+          weitere={[{ element: 'Satzänderung', onHinzufuegen: () => addRow('satzaenderung') }]}
+          eintraege={rows}
+          schluessel={(row) => row.id}
+          leer="Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum."
+          kopf={(row, i) => `${row.typ === 'teilzahlung' ? 'Teilzahlung' : 'Satzänderung'} ${i + 1}`}
+          onHinzufuegen={() => addRow('teilzahlung')}
+          onEntfernen={removeRow}
+          kinder={(row, i) => (
+            <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3 items-end', 'grid grid-cols-1 @3xl/pane:grid-cols-3 gap-3 items-end')}>
+              <Field label="Typ">
+                <select value={row.typ} onChange={(e) => updateRow(i, { typ: e.target.value as EreignisRow['typ'] })} className="lc-input">
+                  <option value="teilzahlung">Teilzahlung (CHF)</option>
+                  <option value="satzaenderung">Satzänderung (%)</option>
+                </select>
+              </Field>
+              <Field label="Datum">
+                <DatumsFeld value={row.datum} onChange={(v) => updateRow(i, { datum: v })} className="lc-input" />
+              </Field>
+              <Field label={row.typ === 'teilzahlung' ? 'Betrag (CHF)' : 'neuer Satz (%)'}>
+                {row.typ === 'teilzahlung' ? (
+                  <BetragsFeld value={row.wert ? String(row.wert) : ''} onChange={(v) => updateRow(i, { wert: Number(v) || 0 })} className={inputNum} />
+                ) : (
+                  <input type="number" inputMode="decimal" min={0} step={0.25} value={row.wert}
+                    onChange={(e) => updateRow(i, { wert: Number(e.target.value) })} className={inputNum} />
+                )}
+              </Field>
             </div>
-            <div className="space-y-1">
-              <label className="text-body-s font-medium text-ink-600">Datum</label>
-              <DatumsFeld value={row.datum} onChange={(v) => updateRow(i, { datum: v })} className="lc-input" />
-            </div>
-            <div className="space-y-1">
-              <label className="text-body-s font-medium text-ink-600">{row.typ === 'teilzahlung' ? 'Betrag (CHF)' : 'neuer Satz (%)'}</label>
-              {row.typ === 'teilzahlung' ? (
-                <BetragsFeld value={row.wert ? String(row.wert) : ''} onChange={(v) => updateRow(i, { wert: Number(v) || 0 })} className={inputNum} />
-              ) : (
-                <input type="number" inputMode="decimal" min={0} step={0.25} value={row.wert}
-                  onChange={(e) => updateRow(i, { wert: Number(e.target.value) })} className={inputNum} />
-              )}
-            </div>
-            <button type="button" onClick={() => removeRow(i)} className="text-body-s text-danger-700 hover:underline self-end pb-2 text-left">Entfernen</button>
-          </div>
-        ))}
+          )}
+        />
       </div>
 
       {ergebnis && (

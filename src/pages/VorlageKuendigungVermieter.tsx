@@ -12,6 +12,7 @@ import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
 import { usePaneKlasse } from '../components/layout/PaneKontext';
+import { SeitenTitel } from '../components/ui/SeitenTitel';
 
 // ─── Maske 2b: Vermieter-Kündigung — CHECKLISTE, bewusst KEINE Vollvorlage ──
 // Bauspezifikation: bibliothek/recherche/kuendigungs-masken.md (§8-Grenze):
@@ -50,12 +51,16 @@ export function VorlageKuendigungVermieter() {
   return (
     <div className="space-y-6">
       <Link to="/" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
-        <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
+        <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 border border-line bg-surface">←</span>
         Zurück zum Katalog
       </Link>
       <div className="space-y-3">
         <GruppenTitel>Miete · Checkliste</GruppenTitel>
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Kündigung durch Vermieter:in</h1>
+        {/* A-1/B3-6 (R3-α, 31.8.2026): war eine handgebaute H1 mit fester
+            `text-h1`. Sie ging am A-1-Wächter vorbei, weil der nur die
+            Kaskade `text-h2 …` kannte — und sie mass im Split-View den
+            Viewport statt der Pane-Breite. */}
+        <SeitenTitel>Kündigung durch Vermieter:in</SeitenTitel>
         <p className="text-body-l text-ink-600 max-w-reading">
           Bewusst KEINE ausfüllbare Vorlage: Die Vermieter-Kündigung von Wohn- und Geschäftsräumen ist nur
           mit dem vom Kanton genehmigten amtlichen Formular gültig — ein frei formuliertes Schreiben wäre

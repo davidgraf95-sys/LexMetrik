@@ -165,6 +165,7 @@ export function uebersichtsZeile(
 export function erlassPfad(erlass: Pick<BrowseErlass, 'ebene' | 'rechtsgebiet' | 'key'>): string {
   return adresse(erlass);
 }
+export const panelEbene = (e: Pick<BrowseErlass, 'ebene'>): BrowseErlass['ebene'] => e.ebene; // K-2b/F37 · Herleitung: ./LeserPanelZone, Prop `ebene`
 
 /**
  * Ä20 (H2b) — Platzhalter des Such-/Sprungfelds, aus dem Erlass abgeleitet.

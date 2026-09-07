@@ -1,4 +1,4 @@
-import { NEUER_TAB } from '../benennung';
+import { MASSGEBLICH_HALBSATZ, NEUER_TAB } from '../../../lib/benennung';
 import { formatiereDatum } from '../helpers';
 
 // W2·5d U-PDF / A12 — EINE Download-Aktion für das AMTLICHE PDF der gepinnten
@@ -13,6 +13,9 @@ import { formatiereDatum } from '../helpers';
 //     `download` erzwingt den Speicherdialog.
 // A9-DoD: `<a>` ist tastaturfokussierbar, `lc-chip` trägt das 24px-Tap-Ziel
 // (WCAG 2.2 §2.5.8); aria-label nennt Zweck + Fassungsdatum vollständig.
+// B-6 (31.8.2026): der Vorbehalt im `title` sagte «amtliche Quelle», der Kopf
+// zwei Zentimeter darüber «amtliche Fassung» — jetzt kommt beides aus derselben
+// Wortquelle (`lib/benennung.ts`, Zählung 10:5 zugunsten «Fassung»).
 export function AmtlichesPdf({ href, stand, extern, dateiname }: {
   href: string;
   /** Versionsdatum (ISO) des PDF — ehrliche «Fassung vom …»-Angabe. */
@@ -33,7 +36,7 @@ export function AmtlichesPdf({ href, stand, extern, dateiname }: {
         : { download: dateiname ?? true })}
       className="lc-chip hover:text-brass-700"
       aria-label={`Amtliches PDF${fassung} herunterladen${extern ? ` ${NEUER_TAB}` : ''}`}
-      title="Amtliches PDF der geltenden Fassung — massgeblich ist die amtliche Quelle"
+      title={`Amtliches PDF der geltenden Fassung — ${MASSGEBLICH_HALBSATZ}`}
     >
       ⬇ Amtliches PDF{fassung}
     </a>

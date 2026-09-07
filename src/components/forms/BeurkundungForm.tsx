@@ -26,6 +26,7 @@ import {
 import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
 import { getStandardKanton } from '../../lib/einstellungen';
 import { chfGanz as chf } from '../../lib/vorlagen/datum';
+import { Tabs } from '../ui/Tabs';
 
 // ─── Allgemeiner Beurkundungskosten-Rechner (alle Geschäftsarten) ───────────
 // Reine Darstellung (§3): gerechnet wird in lib/beurkundung.ts über die amtlich
@@ -271,18 +272,16 @@ export function BeurkundungForm() {
       <div className="space-y-6">
         <PflichtDisclaimer kurz="Notariats- und Grundbuchkosten nach Geschäftsart/Eintragungsart und kantonalem Tarif; wertbasiert, Sondersätze oder fix. Rahmentarife als Spanne." text={DISCLAIMER} />
 
-        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Bereich">
-          {BEREICHE.map((b) => (
-            <button
-              key={b.id} type="button" role="tab" aria-selected={bereich === b.id}
-              onClick={() => setBereich(b.id)}
-              className={`px-3 py-2 rounded-md text-body-s border transition-colors ${bereich === b.id ? 'border-brass-500 bg-surface-raised text-ink-900 font-medium' : 'border-line text-ink-600 hover:text-ink-900'}`}
-              title={b.hint}
-            >
-              {b.label}
-            </button>
-          ))}
-        </div>
+        {/* E-2-NACHZUG (R3-α, 31.8.2026): das hier war eine weitere Kopie der
+            Segmented-Control — mit `role="tablist"`/`role="tab"`, aber OHNE
+            das dazugehörige Tastaturverhalten (Pfeiltasten/Home/End, roving
+            tabindex). Ein ARIA-Versprechen ohne Verhalten ist schlechter als
+            keines: der Screenreader kündigt eine Reiterleiste an, die sich
+            nicht wie eine bedienen lässt. Der Baustein bringt beides mit; die
+            Kopie ist gelöscht (§5/§10), der `title`-Hinweis je Reiter wandert
+            als deklariertes Feld mit. */}
+        <Tabs items={BEREICHE.map((b) => ({ code: b.id, label: b.label, titel: b.hint }))}
+          value={bereich} onChange={setBereich} ariaLabel="Bereich" />
 
         {/* LM-170 (B6/K-15): der «RECHTLICHER HINWEIS»-Balken steht bereits oben
             für alle drei Tabs (Zeile 272) — ohneDisclaimer verhindert den

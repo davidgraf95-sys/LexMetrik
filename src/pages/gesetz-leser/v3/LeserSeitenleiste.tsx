@@ -4,34 +4,37 @@ import { AnfangSlot } from './anfangSlot';
 // ─── Seitenleiste V3 — feste Reihenfolge, nur der Baum klebt (Kap. 4b) ──────
 //
 //   ▸ Übersicht  (SR 312.0 · 480 Art. · Stand …)        scrollt MIT weg
-//   [ Suchen oder «Art. 429» …                    ⌘K ]  scrollt MIT weg
 //   Gliederung        [alles auf/zu]   [↑ Anfang]       ◀ ab hier sticky
 //    1. Teil … / 1. Titel …
+//
+// ── D28 (David 6.9.2026) · DIE GLIEDERUNG BEHÄLT NUR DIE GLIEDERUNG ─────────
+// Über dem Baum stand bis hierher das Such-/Sprungfeld (Entscheid ② unten,
+// Kap. 4b Pos. 4). Es ist in den klebenden Kopf-BLOCK des Lesers gezogen —
+// «oben am gesetz», wo es beim Ein-/Ausklappen dieser Leiste stehen bleibt
+// (Herleitung und Messung: `./SuchZone`, D28). Entscheid ② ist damit erledigt,
+// nicht verworfen: es gibt weiterhin GENAU EIN Feld für Suche und Sprung, es
+// steht nur nicht mehr hier. Die Leiste ist dadurch wieder eine Sache: der Baum.
 //
 // DREI ENTSCHEIDE, DIE HIER MARKUP WERDEN:
 //  ① EINE Übersichtsbox statt drei (Fedlex hat drei) — und sie klebt NICHT.
 //    Wer im Gesetz liest, braucht SR-Nummer und Stand einmal beim Ankommen,
 //    nicht dauerhaft; der Platz gehört dem Baum.
-//  ② Ein Feld für Suche und Sprung, ÜBER dem Baum (Kap. 4b, Pos. 4).
+//  ② (erledigt durch D28, s. o. — das Feld lebt im Leser-Kopf.)
 //  ③ Der Baum klebt ab seiner eigenen Kopfzeile — mit «alles auf/zu» als
 //    sichtbarem Knopf und OHNE Tastenkürzel: ein globales Auf/Zu ist im
 //    W3C-ARIA-APG kein Baum-Standard, ein erfundenes Kürzel wäre eine
 //    Behauptung von Vertrautheit, die es nicht gibt (Kap. 4b, Pos. 16).
 //
-// Die Leiste ist reine Anordnung (§3): Übersicht, Feld und Baum kommen als
-// fertige Elemente herein. Sie kennt weder Erlass noch Suchzustand — dadurch
-// ist sie in der Spalte (D/S) und im Bottom-Sheet (H) dasselbe Bauteil.
+// Die Leiste ist reine Anordnung (§3): Übersicht und Baum kommen als fertige
+// Elemente herein. Sie kennt weder Erlass noch Suchzustand — dadurch ist sie in
+// der Spalte (D/S) und im Bottom-Sheet (H) dasselbe Bauteil.
 
 export function LeserSeitenleiste({
-  uebersicht, suchFeld, baum, baumTitel, onAlleAuf, onAlleZu, onAnfang, alleOffen,
+  uebersicht, baum, baumTitel, onAlleAuf, onAlleZu, onAnfang, alleOffen,
   baumKnoepfe = true,
 }: {
   /** Übersichtsbox (Kap. 4b ①). `null` = noch nicht ladbar ⇒ Zeile entfällt. */
   uebersicht?: ReactNode;
-  /** Such-/Sprungfeld. `undefined` NUR im Bottom-Sheet: dessen eigene Anatomie
-   *  trägt das Feld bereits zuoberst (§5 — nie zwei Eingaben für dieselbe
-   *  Absicht, genau der Fehler K2, den Pos. 4 behebt). */
-  suchFeld?: ReactNode;
   /** Gliederungsbaum ODER — solange gesucht wird — die Trefferliste (Kap. 4b). */
   baum: ReactNode;
   /** Überschrift über dem klebenden Block; wechselt mit dem Inhalt.
@@ -106,7 +109,30 @@ export function LeserSeitenleiste({
           die aktive Baumzeile mitzuführen (P9b/A33) und um den
           Nutzer-Interaktions-Guard anzuhängen. Ohne die Marke lief beides in V3
           ins Leere — die Gliederung wäre beim Lesen still stehen geblieben. */}
-      <div data-toc data-v3-leiste-scroller className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
+      {/* ── LM-064 (B8, 31.8.2026) · DER SCHNITT IST JETZT ANGEKÜNDIGT ────────
+          BEFUND, am gebauten Stand reproduziert @1440 auf `/gesetze/bund/OR`:
+          dieser Scroller zeigt 728 px von 1'061 px Inhalt und schneidet dabei
+          GENAU EINE Baumzeile am unteren Rand mitten durch — bei
+          `border-bottom: 0px` und `mask-image: none`, hell wie dunkel. Ohne
+          jedes Zeichen liest sich der Schnitt als Darstellungsfehler, nicht als
+          «hier geht es weiter» (Befund-Wortlaut: «im Dunkelmodus wirkt der
+          Schnitt wie ein Darstellungsfehler»).
+          `lc-scrollrand-y` ist dieselbe geteilte Affordanz wie an den
+          waagrechten Leisten (§5, Herleitung im Regel-Block `lc-scrollrand` in
+          index.css) — der untere Schatten steht genau dann, wenn unter der
+          Kante wirklich noch Baum liegt, und weicht am Ende der Strecke.
+          OBERE KANTE: dort deckt der klebende Sockel (Zone A, `bg-paper`) den
+          Schatten ohnehin ab — Hintergrund liegt hinter dem Inhalt. Das ist
+          erwünscht und kein Sonderfall: an der oberen Kante sagt schon der
+          Sockel, dass man mitten im Baum steht.
+          NICHT GEBAUT und bewusst nicht: «schneidet keine Zeile an». Ein frei
+          scrollender Kasten kann an keiner Halteposition zeilenrein enden;
+          erzwungen würde das ein `scroll-snap`, das dem Scroll-Spy und dem
+          `scrollIntoView` der Gliederung (`tocAutoZuklappen`) in die Quere
+          käme. Der Anschnitt bleibt — er ist ab jetzt nur nicht mehr stumm.
+          Der im Befund zusätzlich genannte WAAGRECHTE Balken ist überholt:
+          gemessen `overflow-x: hidden`, `scrollWidth === clientWidth === 288`. */}
+      <div data-toc data-v3-leiste-scroller className="lc-scrollrand-y min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
         {uebersicht && (
           <div data-v3-leiste-uebersicht className="mb-3">{uebersicht}</div>
         )}
@@ -118,12 +144,11 @@ export function LeserSeitenleiste({
             darunter und meldete «sichtbar», was niemand sieht. */}
         {/* ── H2 · DAS FELD KLEBT MIT (David 16.8.2026) ─────────────────────
             «Das Suchfeld muss immer zugreifbar sein, auch wenn ich in der
-            Gliederung scrolle.» Bis hierher stand das Feld ÜBER dem klebenden
-            Block und scrollte mit der Übersichtsbox weg — wer tief im Baum der
-            StPO stand und suchen wollte, musste erst die Leiste hochscrollen.
-            Reihenfolge im klebenden Block, in dieser Folge (Präzisierung David
-            16.8.): 1. Such-/Sprungfeld ganz oben · 2. Gliederungs-Kopfzeile ·
-            3. der scrollbare Baum. Die Übersichtsbox bleibt darüber und scrollt
+            Gliederung scrolle.» Die Zusage GILT UNVERÄNDERT, sie wird seit D28
+            (6.9.2026) nur woanders eingelöst: das Feld klebt im Kopf-Block des
+            Lesers und ist damit auch dann erreichbar, wenn diese Leiste gar
+            nicht steht. Was hier bleibt: 1. Gliederungs-Kopfzeile · 2. der
+            scrollbare Baum. Die Übersichtsbox bleibt darüber und scrollt
             weiterhin weg — sie ist Ankunfts-Information, kein Werkzeug. */}
         {/* ── Ä5 (H2b) · DER SOCKEL TRÄGT DIE FLÄCHE SEINES BEHÄLTERS ──────────
             Bis H2 stand hier fest `bg-paper`. In der Spalte ist das richtig, im
@@ -143,9 +168,8 @@ export function LeserSeitenleiste({
             einem 10-px-Gespenst. Ihn wegzulassen hiesse, den Deckel auf seinem
             letzten Wert einfrieren zu lassen. */}
         <div ref={zoneARef} data-toc-zone-a data-v3-leiste-baumkopf
-          className={`lc-leiste-sockel sticky top-0 z-10 space-y-2 ${
-            suchFeld || zeigtZeile ? '-mt-0.5 pb-2 pt-0.5' : ''}`}>
-          {suchFeld && <div data-v3-leiste-feld>{suchFeld}</div>}
+          className={`lc-leiste-sockel sticky top-0 z-sticky space-y-2 ${
+            zeigtZeile ? '-mt-0.5 pb-2 pt-0.5' : ''}`}>
           {/* ── Ä32 (H2b-Nachzug) · «ALLES AUF» GEHÖRT DEM BAUM ────────────────
               BEFUND (Ästhetik-Prüfung 17.8.2026, `lugue-H-hell-suche-liste`): im
               Treffer-Blatt hing die Knopfgruppe «⌄ alles auf   ↑ Anfang»

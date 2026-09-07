@@ -64,8 +64,13 @@ describe('O5 · Scope-Label des lokalen Filterfelds (/materialien)', () => {
     expect(QUELLE).toContain('id="materialien-filter-scope"');
   });
 
+  // DEKLARIERTE ANPASSUNG (R12A/D22, 6.9.2026): die Zusicherung ist unverändert
+  // — Scope UND Weg zur grossen Suche stehen in der Zeile. Nur das führende
+  // «Nur » ist gefallen: die Zeile sitzt jetzt in der Filterhülle unter dem
+  // Feld (`.ub-filter-fuss`), wo sie ohnehin nichts anderes beschreibt als
+  // diesen Filter. Der Identitäts-Treffer greift darum die Aufzählung selbst.
   it('der Text nennt den Scope UND den Weg zur grossen Suche', () => {
-    expect(QUELLE).toContain('Nur Titel, Nummer, Behörde und Dokumenttyp dieser Rubrik');
+    expect(QUELLE).toContain('Titel, Nummer, Behörde und Dokumenttyp dieser Rubrik');
     expect(QUELLE).toContain('über die Suche oben');
   });
 });

@@ -85,6 +85,12 @@ oder Reihenfolge der Logik. Bauregeln und Logikverlust-Bewertung: Skill `perf`.
 - Die Lese-Verbote (`golden/*.json`, `dist/`, `package-lock.json`) erzwingt
   `lese-schutz.py` und nennt in der Fehlermeldung das richtige Werkzeug.
 
+**Vorher/Nachher-Messung nie per `git checkout <sha> -- <datei>` (2.9.2026, W2·22 Z5):**
+der Befehl überschreibt uncommittete Änderungen der Datei stillschweigend. Für
+Messungen gegen einen älteren Stand: eigenen Commit setzen (WIP) und danach
+`git diff`, oder `git stash push -- <datei>` … `git stash pop`, oder den alten
+Stand per `git show <sha>:<pfad> > /tmp/…` daneben legen.
+
 ## 7. Wann ein Tor ein Tor ist
 
 Ein `check:*` zählt erst als Tor, wenn alle vier Bedingungen erfüllt sind:

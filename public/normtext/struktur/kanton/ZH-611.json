@@ -1,0 +1,921 @@
+{
+  "erzeugt": "2026-09-02",
+  "kopf": {
+    "titel": "Gesetz über Controlling und Rechnungslegung (CRG) (LS 611)"
+  },
+  "artikel": {
+    "1": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "A. Allgemeine Bestimmungen"
+        }
+      ],
+      "marginalie": [
+        "Geltungsbereich"
+      ]
+    },
+    "2": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "A. Allgemeine Bestimmungen"
+        }
+      ],
+      "marginalie": [
+        "Allgemeine Grundsätze a. Grundsätze beim Controlling"
+      ]
+    },
+    "3": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "A. Allgemeine Bestimmungen"
+        }
+      ],
+      "marginalie": [
+        "b. Verursacherprinzip"
+      ]
+    },
+    "4": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "A. Allgemeine Bestimmungen"
+        }
+      ],
+      "marginalie": [
+        "c. Haushaltsgleichgewicht"
+      ]
+    },
+    "5": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "A. Allgemeine Bestimmungen"
+        }
+      ],
+      "marginalie": [
+        "d. Verbot der Zweckbindung von Hauptsteuern"
+      ]
+    },
+    "6": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "I. Allgemeines"
+        }
+      ],
+      "marginalie": [
+        "Controlling"
+      ]
+    },
+    "7": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "I. Allgemeines"
+        }
+      ],
+      "marginalie": [
+        "Controlling des Regierungsrates"
+      ]
+    },
+    "8": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "I. Allgemeines"
+        }
+      ],
+      "marginalie": [
+        "Controlling der Verwaltung"
+      ]
+    },
+    "9": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Konsolidierter Entwicklungs- und Finanzplan"
+        }
+      ],
+      "marginalie": [
+        "Begriff"
+      ]
+    },
+    "10": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Konsolidierter Entwicklungs- und Finanzplan"
+        }
+      ],
+      "marginalie": [
+        "Inhalt"
+      ]
+    },
+    "11": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Konsolidierter Entwicklungs- und Finanzplan"
+        }
+      ],
+      "marginalie": [
+        "Leistungsgruppen"
+      ]
+    },
+    "12": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Konsolidierter Entwicklungs- und Finanzplan"
+        }
+      ],
+      "marginalie": [
+        "Darstellung der Leistungsgruppen"
+      ]
+    },
+    "13": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Konsolidierter Entwicklungs- und Finanzplan"
+        }
+      ],
+      "marginalie": [
+        "Verfahren"
+      ]
+    },
+    "14": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "1. Allgemeines"
+        }
+      ],
+      "marginalie": [
+        "Begriff"
+      ]
+    },
+    "15": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "1. Allgemeines"
+        }
+      ],
+      "marginalie": [
+        "Inhalt"
+      ]
+    },
+    "16": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "1. Allgemeines"
+        }
+      ],
+      "marginalie": [
+        "Budgetierung noch nicht beschlossener Vorhaben"
+      ]
+    },
+    "17": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "2. Verfahren"
+        }
+      ],
+      "marginalie": [
+        "Budgetentwurf"
+      ]
+    },
+    "18": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "2. Verfahren"
+        }
+      ],
+      "marginalie": [
+        "Nachträge zum Budgetentwurf"
+      ]
+    },
+    "19": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "2. Verfahren"
+        }
+      ],
+      "marginalie": [
+        "Beschluss"
+      ]
+    },
+    "20": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "3. Nachtragskredite und Kreditüberschreitungen"
+        }
+      ],
+      "marginalie": [
+        "Grundsatz"
+      ]
+    },
+    "21": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "3. Nachtragskredite und Kreditüberschreitungen"
+        }
+      ],
+      "marginalie": [
+        "Nachtragskredite"
+      ]
+    },
+    "22": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Budget"
+        },
+        {
+          "ebene": 3,
+          "label": "3. Nachtragskredite und Kreditüberschreitungen"
+        }
+      ],
+      "marginalie": [
+        "Kreditüberschreitungen"
+      ]
+    },
+    "23": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "IV. Rücklagen und Kreditübertragung"
+        }
+      ],
+      "marginalie": [
+        "Rücklagen"
+      ]
+    },
+    "24": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "IV. Rücklagen und Kreditübertragung"
+        }
+      ],
+      "marginalie": [
+        "Ausserordentliche Rücklagen"
+      ]
+    },
+    "25": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "IV. Rücklagen und Kreditübertragung"
+        }
+      ],
+      "marginalie": [
+        "Kreditübertragung"
+      ]
+    },
+    "26": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "V. Berichterstattung"
+        }
+      ],
+      "marginalie": [
+        "Zwischenbericht"
+      ]
+    },
+    "27": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "V. Berichterstattung"
+        }
+      ],
+      "marginalie": [
+        "Geschäftsbericht"
+      ]
+    },
+    "28": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "VI. Kosten-Leistungs-Rechnung"
+        }
+      ],
+      "marginalie": [
+        "Allgemeines"
+      ]
+    },
+    "29": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "VI. Kosten-Leistungs-Rechnung"
+        }
+      ],
+      "marginalie": [
+        "Interne Verrechnungen"
+      ]
+    },
+    "30": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "VII. Sonderfragen der Leistungserbringung"
+        }
+      ],
+      "marginalie": [
+        "Gewerbliche Tätigkeiten"
+      ]
+    },
+    "31": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "VIII. Fonds"
+        }
+      ],
+      "marginalie": [
+        "Allgemeines"
+      ]
+    },
+    "32": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "VIII. Fonds"
+        }
+      ],
+      "marginalie": [
+        "Vorschüsse"
+      ]
+    },
+    "33": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "B. Controlling"
+        },
+        {
+          "ebene": 2,
+          "label": "VIII. Fonds"
+        }
+      ],
+      "marginalie": [
+        "Buchführung"
+      ]
+    },
+    "34": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "Begriff"
+      ]
+    },
+    "35": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "Voraussetzungen"
+      ]
+    },
+    "36": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "Ausgabenbewilligung"
+      ]
+    },
+    "37": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "Neue und gebundene Ausgaben"
+      ]
+    },
+    "38": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "Verpflichtungskredit a. Zweck"
+      ]
+    },
+    "39": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "b. Formen"
+      ]
+    },
+    "40": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "c. Grundsatz der Einheit"
+      ]
+    },
+    "41": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "d. Zusatzkredit"
+      ]
+    },
+    "42": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "e. Kürzung und Aufhebung"
+      ]
+    },
+    "43": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "f. Kontrolle und Abrechnung"
+      ]
+    },
+    "44": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "I. Zweck und Grundsätze"
+        }
+      ],
+      "marginalie": [
+        "Zweck"
+      ]
+    },
+    "45": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "I. Zweck und Grundsätze"
+        }
+      ],
+      "marginalie": [
+        "Grundsätze"
+      ]
+    },
+    "46": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "I. Zweck und Grundsätze"
+        }
+      ],
+      "marginalie": [
+        "Anwendbare Normen"
+      ]
+    },
+    "47": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Jahresrechnung"
+        }
+      ],
+      "marginalie": [
+        "Geltungsbereich"
+      ]
+    },
+    "48": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Jahresrechnung"
+        }
+      ],
+      "marginalie": [
+        "Elemente der Jahresrechnung"
+      ]
+    },
+    "49": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Jahresrechnung"
+        }
+      ],
+      "marginalie": [
+        "Bilanz"
+      ]
+    },
+    "50": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Jahresrechnung"
+        }
+      ],
+      "marginalie": [
+        "Erfolgsrechnung"
+      ]
+    },
+    "51": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Jahresrechnung"
+        }
+      ],
+      "marginalie": [
+        "Eigenkapitalnachweis"
+      ]
+    },
+    "52": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Jahresrechnung"
+        }
+      ],
+      "marginalie": [
+        "Geldflussrechnung"
+      ]
+    },
+    "53": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "II. Jahresrechnung"
+        }
+      ],
+      "marginalie": [
+        "Anhang"
+      ]
+    },
+    "54": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "III. Konsolidierte Rechnung"
+        }
+      ],
+      "marginalie": []
+    },
+    "55": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "IV. Bilanzierung und Bewertung"
+        }
+      ],
+      "marginalie": [
+        "Bilanzierungsgrundsätze"
+      ]
+    },
+    "56": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "IV. Bilanzierung und Bewertung"
+        }
+      ],
+      "marginalie": [
+        "Bewertungsgrundsätze"
+      ]
+    },
+    "57": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "D. Rechnungslegung"
+        },
+        {
+          "ebene": 2,
+          "label": "IV. Bilanzierung und Bewertung"
+        }
+      ],
+      "marginalie": [
+        "Abschreibungen und Wertminderungen"
+      ]
+    },
+    "58": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "E. Zuständigkeiten"
+        }
+      ],
+      "marginalie": [
+        "Regierungsrat"
+      ]
+    },
+    "59": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "E. Zuständigkeiten"
+        }
+      ],
+      "marginalie": [
+        "Direktionen und Staatskanzlei"
+      ]
+    },
+    "60": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "E. Zuständigkeiten"
+        }
+      ],
+      "marginalie": [
+        "Einzelne Direktionen"
+      ]
+    },
+    "61": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "E. Zuständigkeiten"
+        }
+      ],
+      "marginalie": []
+    },
+    "62": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "E. Zuständigkeiten"
+        }
+      ],
+      "marginalie": []
+    },
+    "63": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "F. Schlussbestimmungen"
+        }
+      ],
+      "marginalie": [
+        "Aufhebung bisherigen Rechts"
+      ]
+    },
+    "64": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "F. Schlussbestimmungen"
+        }
+      ],
+      "marginalie": [
+        "Änderung bisherigen Rechts"
+      ]
+    },
+    "43_a": {
+      "gliederung": [
+        {
+          "ebene": 1,
+          "label": "C. Ausgaben"
+        }
+      ],
+      "marginalie": [
+        "Zahlungsfristen"
+      ]
+    }
+  }
+}

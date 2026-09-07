@@ -4,6 +4,7 @@ import {
   abonniereRuecksprung, ermittleLesePosition, leseRuecksprung, setzeRuecksprung,
   springeZurueck, type Ruecksprung,
 } from '../../pages/gesetz-leser/scrollAnker';
+import { SchwebeMeldung } from '../ui/SchwebeMeldung';
 
 // ─── W2·10-UI-NAV/R5 · «↩ zurück zu Art. X» ──────────────────────────────────
 //
@@ -90,16 +91,18 @@ export function RuecksprungChip() {
   // keines lesbar, spricht der Chip neutral von der Leseposition (§8).
   const text = ziel.label ? `zurück zu ${ziel.label}` : 'zurück zur Leseposition';
   return (
-    // `aria-live="polite"`: der Chip erscheint ohne Fokuswechsel, Screenreader
-    // erfahren sonst nichts von ihm. Kein `role="alert"` — er unterbricht nicht.
-    <div aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-4 z-40 flex justify-center px-4">
+    // F2-5: Streifen, Pillen-Optik und die aria-live-Zusage kommen aus
+    // `ui/SchwebeMeldung` — dieselbe Geometrie trugen der R4-«Weiterlesen»-Chip
+    // und der Reiter-Toast des V3-Rahmens. Ohne `rolle`: der Chip ist ein
+    // ANGEBOT, keine Vollzugsmeldung; kein `role="alert"` — er unterbricht nicht.
+    <SchwebeMeldung kante="unten" ausrichtung="mitte">
       <button type="button" onClick={() => { if (!springeZurueck(ziel)) setZiel(null); }}
         // min-h-11 = 44 px Tap-Ziel (WCAG 2.5.8 / R6-Mass), auch auf dem Daumen
-        // treffbar; `pointer-events-auto` holt die Klickbarkeit zurück, die der
-        // Container abgeschaltet hat (der Streifen darf den Text nicht sperren).
-        className="lc-btn-outline lc-btn-sm pointer-events-auto inline-flex min-h-11 items-center gap-1.5 rounded-full bg-paper-raised px-4 shadow-lg">
+        // treffbar. Fläche, Rundung, Schatten und die Klickbarkeit im
+        // `pointer-events-none`-Streifen trägt seit F2-5 die Pille des Bausteins.
+        className="lc-btn-outline lc-btn-sm inline-flex min-h-11 items-center gap-1.5 rounded-full px-4">
         <span aria-hidden>↩</span>{text}
       </button>
-    </div>
+    </SchwebeMeldung>
   );
 }

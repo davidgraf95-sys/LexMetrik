@@ -10,6 +10,7 @@ import { basename, join } from 'node:path';
 import type { DatabaseSync } from 'node:sqlite';
 import type { NormSnapshot } from '../../src/lib/normtext/typen.ts';
 import { schreibeErlass, type ErlasseMeta } from './erlass-rows';
+import { parseRegister, type RegisterErlass as RegisterErlassTyp } from './validierung';
 
 // ── Datei-Klassen (Quell-Pfade) ────────────────────────────────────────────────
 export const BUND_DIR = 'public/normtext/bund';
@@ -52,6 +53,12 @@ export const RECHTSPRECHUNG_MANIFESTE = [
   // dem Laufzeitpfad (rechtsprechungFuerErlass), ist also gerade nicht die Datei,
   // die man ungedeckt lassen will.
   'public/rechtsprechung/norm-index-erlasse.json',
+  // normkeys-kanton.json (kantonale Zitat-Brücke, N0a) — dieselbe Lektion zum
+  // dritten Mal: eine NEUE committete Datei unter public/rechtsprechung/, die
+  // hier fehlt, liefe still an check:paritaet/check:datenhaltung vorbei. Sie
+  // stammt vom selben Schreiber wie register.json (entscheide-schreiben.ts) und
+  // ist reiner Dokument-Byte-Roundtrip.
+  'public/rechtsprechung/normkeys-kanton.json',
 ];
 // Schaufenster-Shards (Weiche B, §11.2): je Erlass eine committete Projektion des
 // norm-index (nur Erlasse mit Artikel-Treffern). Variable Datei-Menge → über den
@@ -162,20 +169,16 @@ export function ingestNormtext(db: DatabaseSync): Zaehler {
 // aus dem committeten Browse-Register (SSoT §5); die byte-tragende `abkuerzung` =
 // NormSnapshot.erlass. Register-Key: Bund == gesetzKey ('OR') == NormSnapshot.quelle;
 // Kanton == Dateiname-Stamm ('AG-291.150', mit Bindestrich) ≠ quelle 'AG' (E1-Rest B).
-interface RegisterErlass {
-  key: string;
-  ebene: 'bund' | 'kanton';
-  kanton: string | null;
-  sr: string | null;
-  titel: string;
-  rechtsgebiet: string;
-  status: string;
-}
+// V6 (QS-VERWENDEN): Typ + Formprüfung kommen aus validierung.ts (§5 — nicht
+// hier ein zweites Mal deklarieren). `ebene` bleibt in dieser Datei ein
+// String-Vergleich (`reg.ebene !== 'bund'`) — seit Gegenprüfung 2.9.2026 (H-4)
+// ist `RegisterErlass.ebene` wieder die literale Union `'bund' | 'kanton'`
+// (picklist statt string), der Vergleich bricht damit nicht.
+type RegisterErlass = RegisterErlassTyp;
 
 function ladeRegister(): Map<string, RegisterErlass> {
-  const reg = JSON.parse(readFileSync('public/normtext/register.json', 'utf8')) as {
-    erlasse: RegisterErlass[];
-  };
+  const pfad = 'public/normtext/register.json';
+  const reg = parseRegister(JSON.parse(readFileSync(pfad, 'utf8')), pfad);
   const m = new Map<string, RegisterErlass>();
   for (const e of reg.erlasse) m.set(e.key, e);
   return m;

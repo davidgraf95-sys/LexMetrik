@@ -29,7 +29,7 @@ export function VorlagenSprung({ karteId, link, zusatz, prefillHinweis }: {
       <GruppenTitel>Passende Vorlage für Ihre Eingabe</GruppenTitel>
       <p className="text-body-s text-ink-900 font-medium">
         {sansAmp(karte.title)}
-        {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">In Vorbereitung</span>}
+        {!gebaut && <span className="lc-badge-geplant ml-2 align-middle">In Vorbereitung</span>}
       </p>
       {zusatz && <p className="text-body-s text-ink-700">{zusatz}</p>}
       {ziel ? (

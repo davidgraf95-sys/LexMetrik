@@ -10,14 +10,32 @@
 // V3-Beschriftung. Die Namen bleiben unverändert, damit die 16 konsumierenden
 // Specs unangetastet bleiben (§6.3) — nur die Definitionen sind schlanker.
 
-/** Das aufgezogene Ansicht-Menü (die `role=group` mit den Schaltern) — trägt
- *  die Identität `data-v3-ansicht-panel`. Als Selektor-String, damit derselbe
- *  Ausdruck in `page.locator(...)` UND in `document.querySelector(...)`
- *  innerhalb von `page.evaluate` funktioniert. */
+/** Die aufgezogene Ansicht-Fläche — trägt die Identität `data-v3-ansicht-panel`.
+ *  Als Selektor-String, damit derselbe Ausdruck in `page.locator(...)` UND in
+ *  `document.querySelector(...)` innerhalb von `page.evaluate` funktioniert.
+ *  Sie war bis 7.9.2026 selbst die `role=group` mit den Schaltern; seit D4
+ *  (Gesamtprüfung W2·24) liegt die Rolle auf dem inneren Eintrags-Block
+ *  (`[data-v3-ansicht-menue]`, `role=menu`), weil der Schriftregler daneben
+ *  kein Menü-Eintrag ist. Der Selektor bleibt derselbe. */
 export const ANSICHT_PANEL = '[data-v3-ansicht-panel]';
 
-/** Der zugängliche Name desselben Menüs für `getByRole('group', { name: … })`. */
+/** Der zugängliche Name des Menüs. */
 export const ANSICHT_NAME = 'Ansicht';
+
+/**
+ * ── D4 (Gesamtprüfung W2·24, 7.9.2026) · DIE ROLLE DER DREI SCHALTER ─────────
+ * Sie waren `role="switch"` in einer `role="group"`. Gemessen war die Fläche
+ * damit für assistive Technik eine namenlose Knopf-Sammlung: `[role=menu]` 0,
+ * kein Eintrags-Zähler, keine Pfeiltasten. Seit D4 trägt der Eintrags-Block
+ * `role="menu"` — und ARIA lässt darin `switch` NICHT zu, sondern verlangt
+ * `menuitemcheckbox`. Dieselbe Auskunft, derselbe `aria-checked`, derselbe
+ * Accessible Name; nur die Rolle wechselt.
+ * ALS KONSTANTE, nicht 32-mal als Literal: genau diese 32 Fundstellen in acht
+ * Specs mussten beim Wechsel von Hand nachgezogen werden (§17 — dieselbe
+ * Störung darf einer künftigen Session nicht noch einmal Zeit kosten).
+ * Rot zu bekommen: auf `'switch'` zurückstellen ⇒ 12 Fälle rot.
+ */
+export const SCHALTER_ROLLE = 'menuitemcheckbox' as const;
 
 /**
  * Der zugängliche Name des Leser-Suchfelds («Im Erlass ‹Kürzel› suchen …»,
@@ -26,10 +44,29 @@ export const ANSICHT_NAME = 'Ansicht';
  */
 export const LESER_SUCHFELD_NAME = /^Im .+ suchen/;
 
-/** Der Schalter für die Fassungs-Zeile am Artikelfuss (Ä116 — heisst wie das
- *  Element, das er schaltet). Verankert (`^…$`), damit das Muster nicht in
- *  einen künftigen Schalter «Fassungs-Zeitleiste» o. ä. hineintrifft (§7). */
+/**
+ * ── D35-F3 (Entscheid David 7.9.2026) · AUS ZWEI SCHALTERN WIRD EINE WAHL ────
+ * «Fussnoten» und «Fassung» waren zwei unabhängige `menuitemcheckbox`. Seit dem
+ * Entscheid sind sie zwei von drei Stellungen EINER Radiogruppe «Änderungen
+ * anzeigen als» (`menuitemradio`, `v3/LeserAenderungsWahl.tsx`). Die NAMEN
+ * bleiben Wort für Wort — Ä116 gilt unverändert —, nur die Rolle wechselt.
+ * ALS KONSTANTE, aus demselben Grund wie `SCHALTER_ROLLE` darüber (§17).
+ * Rot zu bekommen: auf `'menuitemcheckbox'` zurückstellen ⇒ die Wahl-Fälle rot.
+ */
+export const WAHL_ROLLE = 'menuitemradio' as const;
+
+/** Die Stellung, die die Fassungs-Zeile am Artikel zeigt (Ä116 — heisst wie das
+ *  Element, das sie schaltet). Verankert (`^…$`), damit das Muster nicht in
+ *  eine künftige Stellung «Fassungs-Zeitleiste» o. ä. hineintrifft (§7). */
 export const VERMERKE_SCHALTER_NAME = /^Fassung$/;
+
+/** Die Stellung, die den vollen amtlichen Apparat zeigt. NICHT verankert: der
+ *  Accessible Name trägt seit A26/LM-025 den Erlass-Zähler («Fussnoten (932 im
+ *  Erlass)»), und der ist Teil der Auskunft, nicht des Namens. */
+export const FUSSNOTEN_WAHL_NAME = /^Fussnoten/;
+
+/** Die dritte Stellung: weder Fassungs-Zeile noch Änderungs-Fussnoten. */
+export const AUS_WAHL_NAME = /^aus$/;
 
 /** Der Schalter für die Rechtsprechung («Rechtsprechung in der Kopfzeile»,
  *  Ä115 — Substantiv wie seine beiden Nachbarn, benennt seit B2 seine

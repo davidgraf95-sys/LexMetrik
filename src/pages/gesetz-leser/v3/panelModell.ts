@@ -4,7 +4,6 @@ import { useBezuege } from '../bezuegeLaden';
 import { KLASSE_SCHALTER } from '../bezugAuswahl';
 import { bereichLabel, type Zeitbereich } from '../bezugZeit';
 import { bestimmungDativ, type BestimmungsWort } from './erlassAnsicht';
-import { useLeserOptionen } from '../leserOptionen';
 import { STATUS_RANG, type BezugStatus } from '../../../lib/verzahnung/facetten';
 import type { Bezug } from '../../../lib/rechtsprechung/bezuege';
 
@@ -82,66 +81,62 @@ export function reiterTitel(id: PanelReiter, wort: BestimmungsWort): string {
 export const OEFFNER_SELEKTOR = '[data-v3-panel-oeffner]';
 
 /**
- * Beschriftung des Panel-Öffners.
+ * Das Wort am Panel-Öffner — unveränderlich, in jeder Datenlage und jedem
+ * Zuschnitt.
  *
- * ── §8: KEINE ZAHL, DIE WIR NICHT HABEN ────────────────────────────────────
- * `null` heisst «noch nicht geladen» und ergibt «Rechtsprechung» ohne Zahl —
- * NICHT «0 Entscheide». Der Bezugs-Shard wird erst beim Öffnen geholt (s. o.),
- * und ein Korpus führt kein leichtes Zähl-Sidecar, aus dem die Zahl vorher
- * bekannt sein könnte. Eine 0 an dieser Stelle wäre eine Behauptung über den
- * Bestand, die wir aus Unwissen aufstellen.
+ * ── D35-F2 (Entscheid David 7.9.2026, Variante A) · «RECHTSPRECHUNG» → «ERLASS»
+ * Bis hierher hiess der Griff «Rechtsprechung» und trug daneben die Zahl der
+ * Entscheide DES ARTIKELS, an dem der Scroll-Spy gerade stand. Das war die
+ * Dopplung D-1 der D35-Untersuchung, gemessen 7.9.2026 auf EINEM Bildschirm:
+ * ZPO Art. 271 «⚖ Rechtsprechung 24» im Kopf gegen «24 Entscheide» in der
+ * Funktionszeile zwei Zentimeter darunter — dieselbe Zahl, dieselbe Quelle,
+ * zwei Orte (§5/§8).
  *
- * `0` heisst «geladen, dieser Artikel führt keine Entscheide» und ergibt
- * ebenfalls KEINEN Zähler: ein «0 Entscheide →» ist genau der leere Zähler, den
- * die Erlass-Neutralitäts-Regel verbietet (Kantonserlasse ohne Bezüge).
- * Der Öffner bleibt in beiden Fällen da — er führt zu allen Reitern der Leiste
- * (seit W2·7-VZUI vier), nicht nur zu den Entscheiden.
+ * DIE WURZEL WAR NICHT DER ZWEITE KNOPF, SONDERN DIE VERMISCHTE BEZUGSGRÖSSE.
+ * Das Blatt dahinter ist in drei von vier Reitern ERLASS-weit («Änderungen»,
+ * «Materialien», «Anwendung» — `reiterTitel` oben sagt es Wort für Wort); nur
+ * «Entscheide» ist artikelscharf. Der Kopf trägt seit Variante A, was für den
+ * ganzen Erlass gilt, die Funktionszeile am Artikelende, was für genau diesen
+ * Artikel gilt. Also heisst der Griff nach seiner Bezugsgrösse.
+ *
+ * DAS ▾ STATT DER ⚖: die Ikone stand für die Rechtsprechung, nicht für den
+ * Erlass — sie wäre nach der Umbenennung ein Bild, das etwas anderes sagt als
+ * das Wort daneben. Das ▾ sagt dasselbe wie am Nachbargriff «Ansicht ▾»: hier
+ * klappt etwas auf. F0.9 («jeder Kopf-Griff trägt ein Wort», G14) bleibt damit
+ * auf JEDER Breite eingelöst, und zwar mit demselben Wort auf allen.
  */
-export function oeffnerLabel(anzahl: number | null): string {
-  if (anzahl === null || anzahl <= 0) return 'Rechtsprechung';
-  return anzahl === 1 ? '1 Entscheid' : `${anzahl} Entscheide`;
-}
+export const OEFFNER_WORT = 'Erlass';
 
 /**
- * Dasselbe für den Handy-Zuschnitt: nur die ZAHL, ohne Zähl-Substantiv.
+ * Voller Accessible-Name des Öffners — er sagt, WAS sich öffnet.
  *
- * H4-II (17./18.8.2026). Auf `mini` ist die Kopfzeile innen 350 px breit
- * (gemessen @390, StPO) — «⚖ 14 Entscheide» misst dort 115 px, «⚖ 14» rund 50.
- * Die Ikone daneben sagt bereits, WOVON die Zahl handelt, und der volle
- * Wortlaut steht unverkürzt im Accessible Name (`oeffnerName`), also dort, wo
- * ihn ein Screenreader ohnehin liest.
- *
- * DIESELBE §8-SCHRANKE WIE OBEN, nicht eine zweite: keine Zahl, die wir nicht
- * haben. `null` (noch nicht geladen) und `0` (geladen, nichts erfasst) ergeben
- * die leere Zeichenkette — dann trägt der Chip nur die Ikone. Wer hier eine «0»
- * schriebe, behauptete auf dem engsten Zuschnitt genau das, was `oeffnerLabel`
- * auf den beiden anderen verbietet.
+ * Bis D35-F2 hiess er «Rechtsprechung und Kontext zu Art. 271 öffnen — 24
+ * Entscheide»: er nannte die Artikel-Zahl, also genau das, was der Griff jetzt
+ * nicht mehr behauptet. Ein Screenreader hörte damit die Zahl weiterhin doppelt
+ * (hier und an der Funktionszeile). Er nennt jetzt die vier Reiter des Blattes
+ * und keine Zahl — die Zahl steht an genau einem Ort, und das ist die
+ * Funktionszeile des Artikels.
  */
-export function oeffnerLabelKompakt(anzahl: number | null): string {
-  return anzahl !== null && anzahl > 0 ? String(anzahl) : '';
-}
+export const OEFFNER_NAME = 'Erlass-Blatt öffnen — Entscheide, Änderungen, Materialien und Anwendung';
 
 /**
- * Maschinell lesbarer Zähler am Öffner (`data-v3-panel-anzahl`).
+ * ── N1/D33 (7.9.2026) · HIER STANDEN DIE ZAHL-MARKE UND IHR ATTRIBUT ────────
+ * `oeffnerLabelKompakt`, `zaehlerAttribut` und `oeffnerName(anzahl, artikel)`
+ * bauten die Zahl am Kopf-Griff — samt der §8-Schranke «keine Zahl, die wir
+ * nicht haben» (`null`/`0` ⇒ leer) und der Zusage, dass Sichtbares und
+ * `data-v3-panel-anzahl` DIESELBE Wahrheit sagen. Beide Befunde bleiben richtig
+ * für ihren Stand (§0 Ziff. 2b, N1 vom 7.9.2026 — die Marke hat damals den
+ * Namenswechsel «Rechtsprechung» → «3 Entscheide» beseitigt); sie sind mit
+ * D35-F2 gegenstandslos geworden, weil der Kopf gar keine Artikel-Zahl mehr
+ * trägt. Ersatzlos gestrichen statt bewacht (§17-Gegengewicht) — mit ihnen fällt
+ * `artikelZahl`, die einzige Ableitung, die sie speiste — und mit ihr der
+ * Import `ZaehlerNachschlag`: diese Datei kennt die Zähl-Datei nicht mehr.
  *
- * DIESELBE WAHRHEIT WIE DAS LABEL, nicht eine zweite: `undefined` überall, wo
- * `oeffnerLabel` keine Zahl schreibt. Sonst stand am Kantonserlass sichtbar
- * «Rechtsprechung» und im Attribut «0» — zwei Aussagen an einem Knopf, und die
- * maschinelle war die falsche (gefunden beim ersten Lauf von
- * `leser-v3-panel-facetten` (d), 17.8.2026: «Öffner zeigt ‹0›»).
+ * DIE ZAHL SELBST IST NICHT WEG: sie steht an der Funktionszeile des Artikels
+ * (`parts/ArtikelLeser.bezuegeFuss.tsx`, aus derselben Zähl-Datei
+ * `../bezuegeZaehler`). Das ist der ganze Punkt von Variante A — ein Ort je
+ * Zahl. Bewacht von `e2e/w224-d35-f2-kopf.e2e.ts` (a).
  */
-export function zaehlerAttribut(anzahl: number | null): number | undefined {
-  return anzahl !== null && anzahl > 0 ? anzahl : undefined;
-}
-
-/** Voller Accessible-Name des Öffners — sagt, WAS sich öffnet und WORAUF sich
- *  die Zahl bezieht (der Zähler allein ist zweideutig: Artikel oder Erlass?). */
-export function oeffnerName(anzahl: number | null, artikelLabel: string | null): string {
-  const ort = artikelLabel ? ` zu ${artikelLabel}` : '';
-  if (anzahl === null) return `Rechtsprechung und Kontext${ort} öffnen`;
-  if (anzahl <= 0) return `Rechtsprechung und Kontext${ort} öffnen — keine Entscheide erfasst`;
-  return `Rechtsprechung und Kontext${ort} öffnen — ${anzahl} ${anzahl === 1 ? 'Entscheid' : 'Entscheide'}`;
-}
 
 /**
  * Kurzstand der Instanz-Wahl für die Filterzeile: «BGE» · «BGE +2» · «keine».
@@ -186,30 +181,53 @@ export function gruppiereKanten(kanten: readonly Bezug[]): [BezugStatus, Bezug[]
 
 export interface PanelZustand {
   /**
-   * REGEL DAVID 16.8.2026 (V-0-Entscheid F8), an EINER Stelle: Schalter
-   * «Rechtsprechung im Text» AUS ⇒ Zähler UND Randlasche weg.
-   *
-   * Der Schalter ist der umgewidmete `leitfaelle`-Schalter des «Ansicht ▾»
-   * (Kap. 4f, seit H1). Er steuert in V3 nicht mehr eine Zeile im Lesetext — die
-   * gibt es dort nicht mehr —, sondern die SICHTBARKEIT DER ÖFFNER. Das Panel
-   * bleibt dabei erreichbar: über «Ansicht ▾» wieder einschaltbar und über die
-   * Taste `r` (Kap. 4h, `LeserTastatur`) direkt aufziehbar. «Aus» heisst «ich
-   * will keinen Rechtsprechungs-Hinweis sehen», nicht «ich verzichte auf den
-   * Zugang».
+   * ── D35-F2 (7.9.2026) · HIER STAND `oeffnerSichtbar` ───────────────────────
+   * Das Feld las `leitfaelle === 'an'` und war die EINE Stelle, an der Davids
+   * F8-Regel vom 16.8.2026 (V-0-Entscheid) vollzogen wurde: Schalter
+   * «Rechtsprechung im Text» AUS ⇒ Zähler UND Randlasche weg, der Zugang blieb
+   * über «Ansicht ▾» und die Taste «r». Regel und Begründung bleiben als Beleg
+   * ihres Datums stehen (§0 Ziff. 2b) — sie sind mit D35-F2 gegenstandslos: der
+   * Schalter ist ersatzlos gefallen (`../leserOptionen`), weil der Kopf-Griff
+   * keine Artikel-Zahl mehr zeigt, die man verbergen wollte. Damit steht der
+   * Griff IMMER und der Menü-Eintrag «Entscheide & Kontext …» (Ä92, «ein Öffner
+   * je Breite») nie mehr; beide Zweige sind gestrichen statt bewacht
+   * (§17-Gegengewicht). Die Taste «r» bleibt der tastaturseitige Weg.
    */
-  oeffnerSichtbar: boolean;
   offen: boolean;
-  /** War das Panel in dieser Sitzung schon einmal offen? Steuert das Nachladen. */
+  /** War das Panel in dieser Sitzung schon einmal offen — oder hat jemand
+   *  ANDERS nach denselben Daten gefragt? Steuert das Nachladen.
+   *
+   *  D30 (6.9.2026): das Flag heisst weiterhin so, trägt aber seither zwei
+   *  Auslöser. Der zweite ist `weckeDaten()` unten. */
   jeGeoeffnet: boolean;
   reiter: PanelReiter;
   setReiter: (r: PanelReiter) => void;
   oeffne: (r?: PanelReiter) => void;
+  /** D35-F2 · `oeffne('entscheide')` als REFERENZ-STABILER Griff — der
+   *  Sekundär-Weg «im Blatt öffnen ›» der Funktionszeile hängt daran. */
+  oeffneEntscheide: () => void;
   schliesse: () => void;
   umschalten: () => void;
+  /**
+   * Die Daten holen, OHNE das Panel aufzuziehen (W2·24-R5-F1K, D30).
+   *
+   * Anlass, Davids Wortlaut: die Bezüge-Zeile am Artikelkopf «klappt auf, zeigt
+   * aber nur den Rechnen-Block; die gezählten Entscheide … werden nicht
+   * geladen». Sie sass am kurzen Ende von H3: der Bezugs-Shard wird seither erst
+   * beim Öffnen des Panels geholt, und die Zeile hatte keinen Weg, danach zu
+   * fragen. Die Zahl stand da (Zähl-Datei, R6c), der Apparat kam nie.
+   *
+   * DIESELBE STELLE, KEIN ZWEITER LADEPFAD (§5): das Aufklappen setzt genau das
+   * Flag, das auch das Panel setzt — `useBezuege` bekommt seinen Erlass-Key,
+   * `usePanelBezuege` und die Bezüge-Zeile lesen danach DIESELBE Hook-Instanz.
+   * Wer erst die Zeile aufklappt und dann das Panel öffnet, löst keinen zweiten
+   * Fetch aus; wer die Zeile wieder zuklappt, verliert die Daten nicht (der
+   * Grund, aus dem das Flag `jeGeoeffnet` heisst und nicht `offen`).
+   */
+  weckeDaten: () => void;
 }
 
 export function usePanelZustand(): PanelZustand {
-  const oeffnerSichtbar = useLeserOptionen().leitfaelle === 'an';
   const [offen, setOffen] = useState(false);
   const [jeGeoeffnet, setJeGeoeffnet] = useState(false);
   const [reiter, setReiter] = useState<PanelReiter>('entscheide');
@@ -220,6 +238,10 @@ export function usePanelZustand(): PanelZustand {
     setOffen(true);
   }, []);
   const schliesse = useCallback(() => setOffen(false), []);
+  // D30: nur das Lade-Flag, kein `setOffen` — das Panel bleibt zu.
+  // `setJeGeoeffnet(true)` auf einem bereits gesetzten Flag ist in React ein
+  // No-op (Bail-out), die Zeile darf also bei jedem Aufklappen rufen.
+  const weckeDaten = useCallback(() => setJeGeoeffnet(true), []);
   const umschalten = useCallback(() => {
     setOffen((o) => {
       if (!o) setJeGeoeffnet(true);
@@ -227,12 +249,12 @@ export function usePanelZustand(): PanelZustand {
     });
   }, []);
 
-  // `offen` ist BEWUSST NICHT mit `oeffnerSichtbar` verrechnet. Die F8-Regel
-  // nimmt die ÖFFNER weg, nicht den Zugang: «Panel bleibt über ‹Ansicht ▾› und
-  // Tastatur erreichbar». Wer `r` drückt, während der Schalter aus ist, bekommt
-  // das Panel — es hat dann nur keine Lasche und keinen Zähler, über die man es
-  // wieder zumachen könnte, wohl aber sein eigenes ✕ und Esc.
-  return { oeffnerSichtbar, offen, jeGeoeffnet, reiter, setReiter, oeffne, schliesse, umschalten };
+  // D35-F2 · EIN STABILER GRIFF FÜR DIE FUNKTIONSZEILE. `oeffne` bekommt seinen
+  // Reiter hier, nicht am Aufrufer: ein dort gebautes `() => oeffne('…')` wäre
+  // bei jedem Render des Rahmens eine neue Funktion und risse die
+  // `memo`-Schranke von `parts/ArtikelLeser` über alle 1686 Artikel (§15).
+  const oeffneEntscheide = useCallback(() => oeffne('entscheide'), [oeffne]);
+  return { offen, jeGeoeffnet, reiter, setReiter, oeffne, oeffneEntscheide, schliesse, umschalten, weckeDaten };
 }
 
 /**
@@ -249,32 +271,6 @@ export function usePanelBezuege(erlassKey: string | undefined, jeGeoeffnet: bool
   return useBezuege(jeGeoeffnet ? erlassKey : undefined);
 }
 
-/**
- * Trefferzahl am Öffner: Kanten des GELESENEN Artikels nach Facetten-Filter.
- *
- * `null` = wir wissen es nicht (Lade-Versuch noch offen) ⇒ der Öffner zeigt
- * keine Zahl (§8, siehe `oeffnerLabel`). Die Unterscheidung «lädt noch» gegen
- * «leer» kann NICHT aus `bezuegeFuer` kommen: die Hook gibt in beiden Fällen
- * `undefined` zurück (Begründung dort). Sie kommt darum aus `geladen` — und
- * zwar seit dem H3-Nachzug (A1) aus dem **Lade-Ende-Signal von `useBezuege`**,
- * nicht mehr aus dem Klassen-Zähler des Erlasses.
- *
- * ── WARUM DER KLASSEN-ZÄHLER DAFÜR UNTAUGLICH WAR (gemessen 17.8.2026) ──────
- * `shardGeladen(klassenImErlass)` hiess «nicht leer ⇒ ausgewertet». Ein Erlass
- * ohne Shard bekommt aber ein `{}`, das sich von «noch nicht geladen» nicht
- * unterscheidet — der Zustand blieb an 1149 von 1459 Erlassen (79 %) für immer
- * «lädt noch». Die Funktion ist darum gestrichen, nicht bewacht (§17): ein
- * Signal, das die entscheidende Lage nicht ausdrücken KANN, lässt sich nicht
- * durch einen Test retten.
- */
-export function trefferZahl(
-  bezuegeFuer: (artikel: string) => { kanten: readonly Bezug[] } | undefined,
-  geladen: boolean,
-  aktArtikel: string | null,
-): number | null {
-  if (!geladen || !aktArtikel) return null;
-  return bezuegeFuer(aktArtikel)?.kanten.length ?? 0;
-}
 
 /**
  * Auf WELCHEN Artikel bezieht sich das Panel?

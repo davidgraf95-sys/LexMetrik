@@ -6,123 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2008/1196"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2010/349"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2008-06-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "08.054"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Teilrevision des Bundesgesetzes über die technischen Handelshemmnisse"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision partielle de la loi fédérale sur les entraves techniques au commerce"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione parziale della legge federale sugli ostacoli tecnici al commercio"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "946.51"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2008/1196"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2010/349"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2008-06-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "08.054"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Teilrevision des Bundesgesetzes über die technischen Handelshemmnisse"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision partielle de la loi fédérale sur les entraves techniques au commerce"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione parziale della legge federale sugli ostacoli tecnici al commercio"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "946.51"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2008/1196"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2010/349"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2008-06-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "08.054"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Teilrevision des Bundesgesetzes über die technischen Handelshemmnisse"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision partielle de la loi fédérale sur les entraves techniques au commerce"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione parziale della legge federale sugli ostacoli tecnici al commercio"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "946.51"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2001/845"
     },
     "proj": {
@@ -231,6 +114,123 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente l'approvazione dell'Accordo del 21 giugno 2001 di emendamento della Convenzione del 4 gennaio 1960 istitutiva dell'Associazione europea di libero scambio (AELS) "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "946.51"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2008/1196"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2008-06-25"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "08.054"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Teilrevision des Bundesgesetzes über die technischen Handelshemmnisse"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision partielle de la loi fédérale sur les entraves techniques au commerce"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione parziale della legge federale sugli ostacoli tecnici al commercio"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "946.51"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2008/1196"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2008-06-25"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "08.054"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Teilrevision des Bundesgesetzes über die technischen Handelshemmnisse"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision partielle de la loi fédérale sur les entraves techniques au commerce"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione parziale della legge federale sugli ostacoli tecnici al commercio"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "946.51"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2008/1196"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2010/349"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2008-06-25"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "08.054"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Teilrevision des Bundesgesetzes über die technischen Handelshemmnisse"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision partielle de la loi fédérale sur les entraves techniques au commerce"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione parziale della legge federale sugli ostacoli tecnici al commercio"
     }
   }
 ]

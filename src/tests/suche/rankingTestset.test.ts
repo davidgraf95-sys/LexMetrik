@@ -17,6 +17,19 @@
 // sich denselben Recall-Pool (POOL=300) mit dem Bund, also muss sich hier zeigen,
 // ob kantonaler Zuwachs die Bund-Kernartikel aus den Top-Rängen drängt. Ein
 // bund-only gemessenes Ranking wäre ab jetzt eine Fiktion.
+//
+// ERGÄNZUNG 1.9.2026 (K3-Scharfschaltung, QS-BASIS (d)) — der Absatz darüber bleibt
+// als Beleg seines Datums stehen, er wird hier nicht nachgeführt (§2b). Seit heute
+// baut `baueIndex()` per Default NUR den Bund; dieses Tor misst also den Index, den
+// die Auslieferung wirklich trägt. Das ist bewusst so belassen:
+//   · Was ausgeliefert wird, ist bund-only — ein Ranking gegen einen Korpus zu
+//     messen, den kein Nutzer bekommt, wäre die neue Fiktion.
+//   · Die kantonale Rang-Qualität misst seit K2 der Edge-Pfad
+//     (scripts/datenhaltung/suche-rang.test.ts, S4-Testset im SQL-Kern).
+// Die schärfere Vollindex-Messung bleibt jederzeit fahrbar:
+//   `SUCHE_INDEX_EBENEN=bund,kanton npx vitest run src/tests/suche/rankingTestset.test.ts`
+// Gegenprüfung 1.9.2026 hat genau das getan: 11/11 grün, Ränge unverändert — der
+// Kanton drängt die Bund-Kernartikel also auch heute nicht aus den Top-Rängen.
 import { describe, it, expect, beforeAll } from 'vitest';
 import * as flex from 'flexsearch';
 import { baueIndex } from '../../../scripts/such-index-generieren';

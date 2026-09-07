@@ -6,8 +6,11 @@ import { istSchliessTaste } from '../lib/normtext/tasten';
 import { bestimmePassusZiel } from '../lib/normtext/passusZiel';
 import { usePaneSteuerung } from './layout/usePaneLayout';
 import { ArtikelBody } from './normtext/ArtikelBody';
+import { SchliessKnopf } from './ui/SchliessKnopf';
 import { VerweisKontext } from './kontext/VerweisKontext';
 import { erlassPfadVonKey } from '../lib/normtext/erlassAdresse';
+import { Datum } from './ui/Datum';
+import { QuellLink } from './ui/QuellLink';
 
 // Norm-Vorschau-Popover (§7 Zitat-Ausnahme): zeigt den Volltext des zitierten
 // Artikels aus einem Snapshot, die zitierte Stelle hervorgehoben, mit Stand +
@@ -22,10 +25,11 @@ import { erlassPfadVonKey } from '../lib/normtext/erlassAdresse';
 
 // Datum IMMER als DD.MM.YYYY anzeigen (Design-Regel David 17.6.2026). Snapshots
 // speichern ISO 'YYYY-MM-DD'; nicht-ISO-Werte (Altbestand) unverändert lassen.
-function formatiereDatum(iso: string): string {
-  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
-}
+// B-3 (31.8.2026): der lokale Formatierer stand hier als einer von FÜNF
+// byte-gleichen (dieselbe Regex, dieselbe Rückgabe) und war zusätzlich mit der
+// Mono-Auszeichnung `.num` verklebt, die nach der Design-Grundlage Kap. 2.1
+// SR-Nummern und Aktenzeichen vorbehalten ist. Beides ist gelöscht: Format UND
+// Auszeichnung kommen aus dem geteilten `ui/Datum` (§5).
 
 export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onClose }: {
   snapshot: NormSnapshot;
@@ -119,7 +123,7 @@ export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onC
       role={alsDialog ? 'dialog' : 'group'}
       {...(alsDialog ? { 'aria-modal': true as const, tabIndex: -1 } : {})}
       aria-label={alsDialog ? titel : `Norm-Vorschau ${titel}`}
-      className="lc-card w-full max-w-xl max-h-[80vh] overflow-y-auto p-0 text-left"
+      className="lc-popover w-full max-w-xl max-h-[80vh] overflow-y-auto p-0 text-left"
     >
       {/* Kopf */}
       <div className="flex items-start justify-between gap-3 border-b border-line px-5 py-3">
@@ -130,15 +134,12 @@ export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onC
             {sachtitel && <span className="text-ink-500 font-normal"> — {sachtitel}</span>}
           </h2>
         </div>
-        <button
-          ref={schliessRef}
-          type="button"
-          onClick={onClose}
-          aria-label="Schliessen"
-          className="lc-btn-ghost lc-btn-sm shrink-0 px-2"
-        >
-          ✕
-        </button>
+        {/* A3-1 (R3-β): EIN Schliess-✕ der App. `lc-btn-ghost lc-btn-sm` fällt
+            weg — ein Schliess-Griff ist kein Knopf mit Fläche (5 von 7
+            Fundstellen zeichneten ihn schon ohne). Der Name wird dabei konkret:
+            «Schliessen» allein sagt nicht, WAS zugeht (§8). */}
+        <SchliessKnopf ref={schliessRef} name="Norm-Vorschau schliessen"
+          onClick={onClose} klasse="-mr-1" />
       </div>
 
       {/* Body: alle Blöcke in Reihenfolge (Fedlex-Stil), zitierte Stelle
@@ -156,16 +157,12 @@ export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onC
         <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="text-xs text-ink-500">
             {snapshot.ebene === 'bund' ? 'Fassung vom: ' : 'In Kraft seit: '}
-            <span className="num">{formatiereDatum(snapshot.stand)}</span>
+            <Datum iso={snapshot.stand} />
           </span>
-          <a
-            href={liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="lc-chip no-underline hover:text-brass-700"
-          >
-            ↗ geltende Fassung
-          </a>
+          {/* B-1: hier stand «↗ geltende Fassung» — Pfeil vorne, klein
+              beginnend, drittes Wort für dasselbe Ziel. Kanon Ä110 über den
+              geteilten Baustein; die Chip-Grammatik des Fusses bleibt. */}
+          <QuellLink href={liveUrl} className="lc-chip no-underline hover:text-brass-700" />
         </div>
         {/* Brücke in die Lesesicht (Rubrik V): voller Erlass im Gesetzes-Reader,
             an der zitierten Stelle. Interner Pfad → normale Navigation. Daneben
@@ -185,7 +182,7 @@ export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onC
               onClick={() => { oeffneDaneben(readerLink); onClose(); }}
               title={`${titel} nebeneinander öffnen`} aria-label={`${titel} nebeneinander öffnen`}
               className="inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
-              <span aria-hidden className="text-base leading-none">⧉</span>
+              <span aria-hidden className="lc-griff-glyph">⧉</span>
             </button>
           )}
         </span>

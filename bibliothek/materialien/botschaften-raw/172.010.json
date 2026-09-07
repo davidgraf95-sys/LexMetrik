@@ -6,6 +6,357 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4938"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2000/56"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4938"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2000/56"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4938"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2000/56"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4936"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/21"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4936"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/21"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4936"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2001/21"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2004/2113"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2006/224"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2004-12-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "04.081"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Regierungs- und Verwaltungsorganisationsgesetzes (Genehmigung kantonaler Erlasse, Information über Verträge der Kantone unter sich oder mit dem Ausland) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'organisation du gouvernement et de l'administration (approbation du droit cantonal, information sur les conventions des cantons entre eux ou avec l'étranger) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione della legge sull'organizzazione del Governo e dell'amministrazione (approvazione degli atti legislativi cantonali, informazione in merito ai trattati tra Cantoni e con l'estero)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2004/2113"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2006/224"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2004-12-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "04.081"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Regierungs- und Verwaltungsorganisationsgesetzes (Genehmigung kantonaler Erlasse, Information über Verträge der Kantone unter sich oder mit dem Ausland) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'organisation du gouvernement et de l'administration (approbation du droit cantonal, information sur les conventions des cantons entre eux ou avec l'étranger) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione della legge sull'organizzazione del Governo e dell'amministrazione (approvazione degli atti legislativi cantonali, informazione in merito ai trattati tra Cantoni e con l'estero)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2004/2113"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2006/224"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2004-12-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "04.081"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Regierungs- und Verwaltungsorganisationsgesetzes (Genehmigung kantonaler Erlasse, Information über Verträge der Kantone unter sich oder mit dem Ausland) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'organisation du gouvernement et de l'administration (approbation du droit cantonal, information sur les conventions des cantons entre eux ou avec l'étranger) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione della legge sull'organizzazione del Governo e dell'amministrazione (approvazione degli atti legislativi cantonali, informazione in merito ai trattati tra Cantoni e con l'estero)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "172.010"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2007/1016"
     },
     "proj": {
@@ -240,123 +591,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2016/0910"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/573"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2016-05-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "16.045"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über das Stabilisierungsprogramm 20172019 sowie zum Bundesgesetz über Aufgaben, Organisation und Finanzierung der Eidgenössischen Stiftungsaufsicht"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur le programme de stabilisation 20172019 et à la loi fédérale sur les tâches, l'organisation et le financement de l'Autorité fédérale de surveillance des fondations"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul programma di stabilizzazione 20172019 e la legge federale sui compiti, l'organizzazione e il finanziamento dell'Autorità federale di vigilanza sulle fondazioni"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2016/0910"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/573"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2016-05-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "16.045"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über das Stabilisierungsprogramm 20172019 sowie zum Bundesgesetz über Aufgaben, Organisation und Finanzierung der Eidgenössischen Stiftungsaufsicht"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur le programme de stabilisation 20172019 et à la loi fédérale sur les tâches, l'organisation et le financement de l'Autorité fédérale de surveillance des fondations"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul programma di stabilizzazione 20172019 e la legge federale sui compiti, l'organizzazione e il finanziamento dell'Autorità federale di vigilanza sulle fondazioni"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2016/0910"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/573"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2016-05-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "16.045"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über das Stabilisierungsprogramm 20172019 sowie zum Bundesgesetz über Aufgaben, Organisation und Finanzierung der Eidgenössischen Stiftungsaufsicht"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur le programme de stabilisation 20172019 et à la loi fédérale sur les tâches, l'organisation et le financement de l'Autorité fédérale de surveillance des fondations"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul programma di stabilizzazione 20172019 e la legge federale sui compiti, l'organizzazione e il finanziamento dell'Autorità federale di vigilanza sulle fondazioni"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
     },
     "proj": {
@@ -465,123 +699,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio aggiuntivo concernente la riforma del Governo "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4936"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/21"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "1999.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4936"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/21"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "1999.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4936"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2001/21"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "1999.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
     }
   },
   {
@@ -708,36 +825,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4938"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2016/0910"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2000/56"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/573"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
+      "value": "2016-05-25"
     },
     "curia": {
       "type": "literal",
-      "value": "1999.057"
+      "value": "16.045"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+      "value": "Botschaft zum Bundesgesetz über das Stabilisierungsprogramm 20172019 sowie zum Bundesgesetz über Aufgaben, Organisation und Finanzierung der Eidgenössischen Stiftungsaufsicht"
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+      "value": "Message relatif à la loi fédérale sur le programme de stabilisation 20172019 et à la loi fédérale sur les tâches, l'organisation et le financement de l'Autorité fédérale de surveillance des fondations"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+      "value": "Messaggio concernente la legge federale sul programma di stabilizzazione 20172019 e la legge federale sui compiti, l'organizzazione e il finanziamento dell'Autorità federale di vigilanza sulle fondazioni"
     }
   },
   {
@@ -747,36 +864,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4938"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2016/0910"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2000/56"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/573"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
+      "value": "2016-05-25"
     },
     "curia": {
       "type": "literal",
-      "value": "1999.057"
+      "value": "16.045"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+      "value": "Botschaft zum Bundesgesetz über das Stabilisierungsprogramm 20172019 sowie zum Bundesgesetz über Aufgaben, Organisation und Finanzierung der Eidgenössischen Stiftungsaufsicht"
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+      "value": "Message relatif à la loi fédérale sur le programme de stabilisation 20172019 et à la loi fédérale sur les tâches, l'organisation et le financement de l'Autorité fédérale de surveillance des fondations"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+      "value": "Messaggio concernente la legge federale sul programma di stabilizzazione 20172019 e la legge federale sui compiti, l'organizzazione e il finanziamento dell'Autorità federale di vigilanza sulle fondazioni"
     }
   },
   {
@@ -786,153 +903,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4938"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2016/0910"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2000/56"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/573"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
+      "value": "2016-05-25"
     },
     "curia": {
       "type": "literal",
-      "value": "1999.057"
+      "value": "16.045"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+      "value": "Botschaft zum Bundesgesetz über das Stabilisierungsprogramm 20172019 sowie zum Bundesgesetz über Aufgaben, Organisation und Finanzierung der Eidgenössischen Stiftungsaufsicht"
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+      "value": "Message relatif à la loi fédérale sur le programme de stabilisation 20172019 et à la loi fédérale sur les tâches, l'organisation et le financement de l'Autorité fédérale de surveillance des fondations"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2004/2113"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2006/224"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2004-12-03"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "04.081"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Regierungs- und Verwaltungsorganisationsgesetzes (Genehmigung kantonaler Erlasse, Information über Verträge der Kantone unter sich oder mit dem Ausland) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'organisation du gouvernement et de l'administration (approbation du droit cantonal, information sur les conventions des cantons entre eux ou avec l'étranger) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione della legge sull'organizzazione del Governo e dell'amministrazione (approvazione degli atti legislativi cantonali, informazione in merito ai trattati tra Cantoni e con l'estero)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2004/2113"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2006/224"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2004-12-03"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "04.081"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Regierungs- und Verwaltungsorganisationsgesetzes (Genehmigung kantonaler Erlasse, Information über Verträge der Kantone unter sich oder mit dem Ausland) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'organisation du gouvernement et de l'administration (approbation du droit cantonal, information sur les conventions des cantons entre eux ou avec l'étranger) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione della legge sull'organizzazione del Governo e dell'amministrazione (approvazione degli atti legislativi cantonali, informazione in merito ai trattati tra Cantoni e con l'estero)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "172.010"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2004/2113"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2006/224"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2004-12-03"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "04.081"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Regierungs- und Verwaltungsorganisationsgesetzes (Genehmigung kantonaler Erlasse, Information über Verträge der Kantone unter sich oder mit dem Ausland) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'organisation du gouvernement et de l'administration (approbation du droit cantonal, information sur les conventions des cantons entre eux ou avec l'étranger) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione della legge sull'organizzazione del Governo e dell'amministrazione (approvazione degli atti legislativi cantonali, informazione in merito ai trattati tra Cantoni e con l'estero)"
+      "value": "Messaggio concernente la legge federale sul programma di stabilizzazione 20172019 e la legge federale sui compiti, l'organizzazione e il finanziamento dell'Autorità federale di vigilanza sulle fondazioni"
     }
   },
   {

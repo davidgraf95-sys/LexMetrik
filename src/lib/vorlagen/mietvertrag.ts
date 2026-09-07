@@ -25,7 +25,7 @@ import { MWST_NORMALSATZ_PROZENT } from '../../data/tarif/typen';
 
 // ── Wartbare, DATIERTE Parameter (Gutachten Stufe 4) ────────────────────────
 export const MV_PARAMETER = {
-  referenzzinssatz: { wert: 1.25, stand: '2.6.2026', quelle: 'BWO (gültig seit 2.9.2025, unverändert ab 2.6.2026; quartalsweise publiziert)' },
+  referenzzinssatz: { wert: 1.25, stand: '2.9.2026', quelle: 'BWO (gültig seit 2.9.2025, unverändert ab 2.9.2026, publiziert 1.9.2026, https://www.bwo.admin.ch/de/referenzzinssatz; quartalsweise publiziert)' },
   mwstSatz: { wert: MWST_NORMALSATZ_PROZENT, stand: '1.1.2024' },
 } as const;
 
@@ -46,7 +46,7 @@ export const MV_FORMULARPFLICHT: { kanton: string; umfang: 'ganz' | 'teilweise';
 
 export const MV_OFFENE_VERIFIKATIONEN: string[] = [
   'Formularpflicht-Kantone (Art. 270 Abs. 2 OR) sind dynamisch (jährlich per 1. November); Stand BWO-Verzeichnis 4.2.2026. Bern-Diskrepanz aufgelöst (Vertiefungs-Gutachten 5.6.2026): Miet-Initiative am 28.9.2025 angenommen, Formularpflicht ab 1.12.2025.',
-  'Referenzzinssatz 1.25 % (gültig seit 2.9.2025, unverändert ab 2.6.2026; nächste Anpassung erst bei Durchschnittszinssatz < 1.13 % oder > 1.37 %) – quartalsweise auf referenzzinssatz.admin.ch prüfen.',
+  'Referenzzinssatz 1.25 % (gültig seit 2.9.2025, unverändert ab 2.9.2026, publiziert 1.9.2026 [Durchschnittszinssatz per 30.6.2026: 1.31 %]; nächste Anpassung erst bei Durchschnittszinssatz < 1.13 % oder > 1.37 %; nächste Publikation 1.12.2026) – quartalsweise auf bwo.admin.ch/de/referenzzinssatz prüfen.',
   'MWST-Normalsatz 8.1 % (seit 1.1.2024) – bei Satzänderung Parameter nachführen.',
   'Geschäftsraum: Umsatzmiete und Konkurrenzschutz sind gesetzlich nicht spezifisch geregelt; Klauselpraxis vor Verwendung anwaltlich prüfen.',
   'Untermiete: BGE 119 II 353 (Gewinnverbot), BGE 134 III 446 (Kündigung 257f Abs. 3 nach Abmahnung) und der Praxis-Richtwert «~50 % Aufschlag ohne Mehrleistungen missbräuchlich» sind zu verifizieren; die abgelehnte Untermiete-Revision (Abstimmung 24.11.2024) darf NICHT als geltendes Recht übernommen werden.',

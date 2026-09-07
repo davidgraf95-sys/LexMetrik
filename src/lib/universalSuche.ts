@@ -58,6 +58,13 @@ export interface SuchGruppe {
    *  Kopfzeile sagt «mindestens N … wird noch durchsucht» statt eine Endzahl zu
    *  behaupten, die keine ist. */
   unvollstaendig?: boolean;
+  /** true, wenn die Gruppe DAUERHAFT nur einen Teil ihres Gegenstands abdeckt
+   *  (K3, 1.9.2026: der statische Artikel-Index trägt keine kantonalen Erlasse
+   *  mehr). Hält die Gruppe sichtbar, auch ohne Treffer — sonst verschwände mit
+   *  ihr der Hinweis, und eine kantonale Query läse sich als «nichts gefunden»
+   *  (§8). Bewusst NICHT `unvollstaendig`: dort wächst die Menge noch, hier
+   *  nicht — die Kopfzeile darf darum kein «wird noch ergänzt» versprechen. */
+  eingeschraenkt?: boolean;
   /** Einmalige, dezente §8-Offenlegung unter dem Gruppentitel (z. B. Online-Suche). */
   hinweis?: string;
   /** Externer Amtslink (öffnet in neuem Reiter) — z. B. BGE «nicht im Bestand»
@@ -288,20 +295,37 @@ const EBENEN_FEHLT: Record<string, string> = {
   bund: 'Bundeserlasse werden noch geladen — eidgenössische Treffer fehlen hier noch.',
 };
 
+/** Klartext für Ebenen, die der lokale Index GAR NICHT trägt (K3-Scharfschaltung
+ *  1.9.2026: der statische Suchindex ist Bund-only, kantonaler Volltext kommt aus
+ *  der Online-Suche). Bewusst ein ANDERER Satz als EBENEN_FEHLT: «wird noch
+ *  geladen» wäre hier schlicht falsch — es kommt nichts mehr nach. Und die
+ *  Offline-Folge steht mit im Satz, weil sie den Nutzer trifft, nicht die Technik:
+ *  ohne Verbindung ist die kantonale Ebene gar nicht durchsuchbar (§8). */
+const EBENEN_NUR_ONLINE: Record<string, string> = {
+  kanton: 'Kantonale Erlasse: Volltext nur über die Online-Suche — ohne Verbindung fehlen kantonale Treffer hier ganz.',
+  bund: 'Bundeserlasse: Volltext nur über die Online-Suche — ohne Verbindung fehlen eidgenössische Treffer hier ganz.',
+};
+
 export function artikelGruppe(
   treffer: SuchTreffer[] | null,
   kappung = KAPPUNG,
   q = '',
   fehlendeEbenen: readonly string[] = [],
+  nurOnlineEbenen: readonly string[] = [],
 ): SuchGruppe {
   if (treffer === null) return { id: 'artikel', titel: 'Gesetzestext', treffer: [], gesamt: 0, laedt: true };
   // Gestaffelter Index (W2·5): Treffer sind schon da, die Menge wächst aber noch.
   const fehlt = fehlendeEbenen.filter((eb) => EBENEN_FEHLT[eb]);
+  // K3: dauerhaft nicht im lokalen Index — kein «wächst noch», sondern eine
+  // stehende Einschränkung. Beide Listen können gleichzeitig belegt sein.
+  const online = nurOnlineEbenen.filter((eb) => EBENEN_NUR_ONLINE[eb]);
+  const saetze = [...fehlt.map((eb) => EBENEN_FEHLT[eb]), ...online.map((eb) => EBENEN_NUR_ONLINE[eb])];
   return {
     id: 'artikel', titel: 'Gesetzestext', treffer: treffer.slice(0, kappung), gesamt: treffer.length,
     mehrHref: q.trim() !== '' && treffer.length > kappung ? `/suche?q=${encodeURIComponent(q)}` : undefined,
     unvollstaendig: fehlt.length > 0 || undefined,
-    hinweis: fehlt.length > 0 ? fehlt.map((eb) => EBENEN_FEHLT[eb]).join(' ') : undefined,
+    eingeschraenkt: online.length > 0 || undefined,
+    hinweis: saetze.length > 0 ? saetze.join(' ') : undefined,
   };
 }
 
@@ -313,6 +337,9 @@ export interface SuchDaten {
   /** Ebenen, die im gestaffelt aufgebauten Artikel-Index noch fehlen (W2·5).
    *  Leer/undefiniert = vollständig. */
   artikelFehlendeEbenen?: readonly string[];
+  /** Ebenen, die der statische Artikel-Index gar nicht trägt und die nur die
+   *  Online-Suche abdeckt (K3, 1.9.2026). Leer/undefiniert = keine. */
+  artikelNurOnlineEbenen?: readonly string[];
   entscheide: BrowseEntscheid[] | null;
   materialien: BrowseMaterial[] | null;
 }
@@ -333,11 +360,11 @@ export function sucheAlles(q: string, daten: SuchDaten, kappung = KAPPUNG): Such
   if (q.trim() === '') return [];
   const gruppen = [
     gesetzGruppe(daten.gesetze, q, kappung),
-    artikelGruppe(daten.artikel, kappung, q, daten.artikelFehlendeEbenen ?? []),
+    artikelGruppe(daten.artikel, kappung, q, daten.artikelFehlendeEbenen ?? [], daten.artikelNurOnlineEbenen ?? []),
     entscheidGruppe(daten.entscheide, q, kappung),
     materialGruppe(daten.materialien, q, kappung),
     katalogGruppe(q, kappung),
     presetGruppe(daten.presets, kappung),
   ];
-  return gruppen.filter((g) => g.laedt || g.unvollstaendig || g.treffer.length > 0);
+  return gruppen.filter((g) => g.laedt || g.unvollstaendig || g.eingeschraenkt || g.treffer.length > 0);
 }

@@ -1,6 +1,7 @@
 // H-10 (§6.6 billig, B27): reiner Move aus Gesetze.tsx — Props/Verhalten unverändert.
 import { useMemo, useState } from 'react';
 import { usePaneKlasse } from '../../components/layout/PaneKontext';
+import { GruppenKopf } from '../../components/ui/GruppenKopf';
 import { type KantonGruppe } from '../../lib/normtext/browse';
 import { GROSSREGIONEN } from '../../data/grossregionen';
 // Kanton-Vollnamen: EINE Quelle (§5) — dieselbe Tabelle wie die Tarif-Domäne.
@@ -11,6 +12,7 @@ const KANTON_NAMEN: Record<string, string> = KANTON_NAMEN_TYP;
 import { KantonWappen } from '../../components/KantonWappen';
 import { SchweizKarte } from '../../components/SchweizKarte';
 import { StufeBadge } from '../../components/normtext/Erfassungsgrad';
+import { Tabs } from '../../components/ui/Tabs';
 import { erfassungsgrad, STUFE_RANG, STUFE_WORT } from '../../lib/normtext/erfassungsgrad';
 
 // Eine Kanton-Kachel des Auswahlrasters (Wappen · Vollname · Erlass-Zähler +
@@ -116,25 +118,44 @@ export function KantonAuswahl({ gruppen, alleKantone, onWaehle, ansicht, onAnsic
       </p>
 
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-        {/* §4.3.3 — Karte default sichtbar, gleichwertiger Einstieg neben dem Raster. */}
-        <div role="group" aria-label="Ansicht" className="inline-flex rounded-md border border-line bg-paper-sunken/50 p-0.5 text-body-s">
-          {(['karte', 'liste'] as const).map((a) => (
-            <button key={a} type="button" onClick={() => onAnsicht(a)} aria-pressed={ansicht === a}
-              className={`rounded px-3 py-1 font-medium transition-colors ${ansicht === a ? 'bg-paper text-ink-900 shadow-sm' : 'text-ink-500 hover:text-ink-800'}`}>
-              {a === 'karte' ? 'Karte' : 'Liste'}
-            </button>
-          ))}
-        </div>
-        {/* §4.3.2 — Sortierung des 26er-Rasters (nur in der Liste sinnvoll). */}
+        {/* §4.3.3 — Karte default sichtbar, gleichwertiger Einstieg neben dem Raster.
+            ── LM-054/LM-057 (B15, 4.9.2026) · EIN UMSCHALTER-BILD ──────────────
+            Hier stand die vierte Kopie der Segmented-Control — und sie war zum
+            Befund geworden, weil die Ebenen-Leiste darüber (`Gesetze.tsx`) mit
+            dem E-2-Nachzug (31.8.2026) auf den geteilten Baustein umgezogen ist
+            und die Kopie zurückblieb. GEMESSEN @1440 auf `/gesetze?ebene=kanton`
+            standen darum ZWEI Gestalten derselben Sache übereinander:
+              Ebene    Rahmen 12 px / 1 px Linie / bg-surface, aktiv 8 px, 1 px
+                       Linie, bg-surface-raised, Tinte brass-700 (130,98,37)
+              Ansicht  Rahmen 8 px / 1 px Linie / paper-sunken/50, aktiv 4 px,
+                       OHNE Linie, bg-paper, Tinte ink-900 (28,26,21)
+            Die Dedup-Notiz vom 31.7.2026 («dasselbe Bild») war damals richtig
+            und ist durch den Umzug überholt — der Stilbruch ist neu, nicht
+            widerlegt. Der Baustein kann diese Leiste unverändert: `mode="pressed"`
+            liefert `role="group"` + `aria-pressed` wie zuvor, `groesse="m"` die
+            bisherige Anatomie (px-3, text-body-s). Kein Zustand, keine
+            Bedienlogik berührt (§3); die Kopie fällt weg (§5/§17). */}
+        <Tabs
+          items={[{ code: 'karte', label: 'Karte' }, { code: 'liste', label: 'Liste' }] as const}
+          value={ansicht} onChange={onAnsicht} mode="pressed" ariaLabel="Ansicht" />
+        {/* §4.3.2 — Sortierung des 26er-Rasters (nur in der Liste sinnvoll).
+            LM-055 (B15, 4.9.2026): Label und Optionen standen im selben
+            `gap-1.5` — GEMESSEN 6 px zwischen «SORTIEREN» und der ersten
+            Option, exakt so viel wie zwischen zwei Optionen; das Label las sich
+            als fünfte Option. Jetzt trennt der Rhythmus: 12 px zum Label, 6 px
+            innerhalb der Reihe. Padding auf px-2.5 wie beim Gliederungs-
+            Umschalter derselben Seitengruppe (ein Bild, §5). */}
         {ansicht === 'liste' && (
-          <div role="group" aria-label="Sortierung" className="inline-flex flex-wrap items-center gap-1.5">
+          <div role="group" aria-label="Sortierung" className="inline-flex flex-wrap items-center gap-x-3 gap-y-1.5">
             <span className="lc-overline">Sortieren</span>
-            {([['alpha', 'Alphabet'], ['anzahl', 'Erlass-Zahl'], ['erfassung', 'Erfassungsgrad'], ['region', 'Region']] as const).map(([id, label]) => (
-              <button key={id} type="button" onClick={() => setSortierung(id)} aria-pressed={sortierung === id}
-                className={`rounded px-2 py-0.5 text-body-s font-medium transition-colors ${sortierung === id ? 'bg-brass-100 text-brass-800' : 'text-ink-500 hover:bg-paper-sunken hover:text-brass-700'}`}>
-                {label}
-              </button>
-            ))}
+            <div className="flex flex-wrap items-center gap-1.5">
+              {([['alpha', 'Alphabet'], ['anzahl', 'Erlass-Zahl'], ['erfassung', 'Erfassungsgrad'], ['region', 'Region']] as const).map(([id, label]) => (
+                <button key={id} type="button" onClick={() => setSortierung(id)} aria-pressed={sortierung === id}
+                  className={`rounded px-2.5 py-0.5 text-body-s font-medium transition-colors ${sortierung === id ? 'bg-brass-100 text-brass-800' : 'text-ink-500 lc-hover-flaeche hover:text-brass-700'}`}>
+                  {label}
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>
@@ -165,11 +186,7 @@ export function KantonAuswahl({ gruppen, alleKantone, onWaehle, ansicht, onAnsic
         <div className="space-y-5">
           {nachRegion.map((r) => (
             <section key={r.id} className="space-y-2.5">
-              <div className="flex items-center gap-3">
-                <h3 className="lc-overline text-brass-700">{r.name}</h3>
-                <span className="num text-xs text-ink-500">{r.eintraege.length}</span>
-                <span aria-hidden className="flex-1 h-px bg-line" />
-              </div>
+              <GruppenKopf titel={r.name} zahl={r.eintraege.length} />
               <div className={rasterKlasse}>{r.eintraege.map(kachel)}</div>
             </section>
           ))}

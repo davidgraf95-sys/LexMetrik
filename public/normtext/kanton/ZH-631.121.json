@@ -1,0 +1,349 @@
+{
+  "erzeugt": "2026-09-01",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/631.121/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Steueramt stellt den im Kanton Zürich steuerpflichtigen natürlichen und juristischen Personen über das Internet Applikationen zur elektronischen Einreichung der Steuererklärung zur Verfügung."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit diesen Applikationen kann die Steuererklärung gemäss den Vorgaben dieser Verordnung rechtsgültig elektronisch eingereicht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Steuererklärung kann auch in Papierform eingereicht werden. Diese Verordnung regelt nur die elektronische Einreichung."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "183d636d654d5aa95f96a2d574b1afc807e77db9607d87f34f89f66e78edc5e1"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das kantonale Steueramt speichert die mittels der Applikationen erfassten und elektronisch übermittelten Steuererklärungsdaten auf von ihm oder in seinem Auftrag betriebenen Servern."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "12580fd3c3d3899d40e815713d83b7042f60dc88462f096be146572780374f5c"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Steueramt trifft die erforderlichen Massnahmen,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "damit die zuständigen Steuerämter jederzeit auf die gemäss § 8 elektronisch eingereichten Steuererklärungsdaten zugreifen können,"
+            },
+            {
+              "marke": "b",
+              "text": "damit die elektronisch eingereichten Steuererklärungsdaten nicht verändert oder gelöscht werden können,"
+            },
+            {
+              "marke": "c",
+              "text": "damit das Steuergeheimnis gemäss § 120 StG gewährleistet ist und keine unberechtigten Personen Zugang zu den Daten haben und"
+            },
+            {
+              "marke": "d",
+              "text": "damit jederzeit nachvollzogen werden kann, welche Personen auf welche Daten zugegriffen haben."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Steuerämter dürfen die Steuererklärungsdaten erst einsehen und bearbeiten, wenn die steuerpflichtige Person sie gemäss § 8 eingereicht hat. Die erfassten Daten werden verschlüsselt übermittelt und auf dem Server abgelegt."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "f0ed80823647c32dc6ccbc55f361ec7f25e0f7835504bdc1220ffc1ad59b476b"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_4",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Steueramt sendet der steuerpflichtigen Person die zur Einreichung der Steuererklärung erforderlichen Angaben. Gemeinsam steuerpflichtige Ehegatten und eingetragene Partnerinnen und Partner erhalten eine gemeinsame Information."
+        },
+        {
+          "absatz": "2",
+          "text": "Das kantonale Steueramt veröffentlicht die Voraussetzungen für den Zugang zu den Applikationen auf seiner Webseite."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "d8821926a5e8f30a9d83e4cc90ec4b96afa2d811a433335369327a8e0c91f2da"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für den Zugang zur Applikation muss sich die steuerpflichtige Person gemäss den auf der Webseite des kantonalen Steueramtes veröffentlichten Vorgaben authentifizieren."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "62576d2f09bce013abfd7267b1b34d0067a85608d1ea771ccfa61068ba3fbf7f"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_6",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_7",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach erfolgter Authentifizierung kann die steuerpflichtige Person ihre Steuererklärungsdaten mittels der Applikation elektronisch erfassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Applikationen erlauben die Übernahme der aktuellen Stammdaten der steuerpflichtigen Person und von ausgewählten Steuererklärungsdaten der Vorperiode."
+        },
+        {
+          "absatz": "3",
+          "text": "Bis zur elektronischen Einreichung gemäss § 8 kann die steuerpflichtige Person die erfassten Daten jederzeit ändern oder löschen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "c18943e99b80544dfb8bc2b286c9949fcb5a4c87b57c7a804d1e22e2cd21db57"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_8",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuererklärung gilt als elektronisch eingereicht, wenn die steuerpflichtige Person die auf der Applikation erfasste Steuererklärung elektronisch an den Server übermittelt und dabei elektronisch bestätigt hat, dass die Steuererklärung wahrheitsgemäss und vollständig ausgefüllt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Gemeinsam steuerpflichtige Ehegatten und eingetragene Partnerinnen und Partner geben die elektronische Bestätigung gemeinsam ab."
+        },
+        {
+          "absatz": "3",
+          "text": "Juristische Personen führen in der Bestätigung die natürlichen Personen auf, welche die Bestätigung für die juristische Person abgeben."
+        },
+        {
+          "absatz": "4",
+          "text": "Die erforderlichen Beilagen sind zusammen mit der Steuererklärung elektronisch einzureichen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "d58bdbf7ac18f76cb936157db70f276437fb6f5b03b3f3f844549cbe16eb92a1"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_9",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nach der elektronischen Übermittlung gemäss § 8 kann die steuerpflichtige Person in der Applikation eine berichtigte Steuererklärung eröffnen, ausfüllen und gemäss § 8 einreichen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "5a4792e655c358a9a41dc62a79d4469e797033cd39f8c9690bff67a66322fa08"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_10",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die elektronisch eingereichten Steuererklärungsdaten werden zusammen mit den Beilagen im Steuererklärungsverfahren weiterbearbeitet und in elektronischer Form aufbewahrt."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "ebc4d3a6adb70c6d822b255d4659eecf6acba4a29272cb1717a9b2eea34bae9b"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_11",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die steuerpflichtige Person kann Drittpersonen durch Übergabe der Zugangsdaten bevollmächtigen, ihre Steuererklärungsdaten über die Applikation zu erfassen und die Steuererklärung elektronisch einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die steuerpflichtige Person kann die Vollmacht jederzeit widerrufen, indem sie vom kantonalen Steueramt einen neuen Zugangscode verlangt. Der neue Zugangscode wird per Post an die im Steuerregister aufgeführte Adresse der steuerpflichtigen Person gesandt."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "836f29d93954a9b54ff7e48f384aa80d4eb9587ced1c1c16942dc9328bdb7a6c"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_12",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unternehmen, welche über eine Unternehmens-Identifikationsnummer gemäss Bundesgesetz über die Unternehmens-Identifikationsnummer vom 18. Juni 2010 verfügen und gewerbsmässig Steuererklärungen für Dritte erstellen, können über die Transaktionsplattform ZHservices ihre Aufnahme in ein Register gewerbsmässiger Steuervertreter (Treuhänder-Register) beantragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das kantonale Steueramt überprüft die Unternehmens-Identifikationsnummer. Es verweigert Unternehmen, welche offensichtlich nicht gewerbsmässig Steuererklärungen für Dritte erstellen, die Aufnahme in das Register. Weitere Abklärungen werden nicht vorgenommen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die im Register eingetragenen Unternehmen sind verpflichtet, Änderungen ihrer Daten umgehend im Register einzutragen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Register ist nicht öffentlich. Die Aufnahme in das Register darf Dritten in Inseraten, auf Websites, Briefpapier oder in anderer werbewirksamer Form nicht bekannt gegeben werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Unternehmen, welche die vorstehenden Bestimmungen nicht einhalten, werden aus dem Register gestrichen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "4f4af048101bc3b353c24c7bf09456c1835f4f09ec8dd78c2ae7c99a4fea5a2e"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_13",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Steueramt erlässt die zur Umsetzung dieser Verordnung erforderlichen Ausführungsbestimmungen. Diese können als Weisungen an die Gemeindesteuerämter oder als Nutzungsvorschriften für die Steuerpflichtigen und deren Vertreter erlassen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Erfassung und Aufbewahrung der gemäss dieser Verordnung übermittelten Daten gilt die Weisung der Finanzdirektion über die elektronische Erfassung und Aufbewahrung von Steuerakten sowie die Vernichtung von Papierakten, soweit diese Verordnung keine abweichenden Bestimmungen enthält."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "2f121032ace63baaa9de446e7edbac8cabeab78061c882f44e2c9e913ca46a00"
+    },
+    {
+      "id": "kanton/ZH/631.121/art_14",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung der Steuererklärung (LS 631.121)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_121-2011_10_18-2013_01_01-129.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "329de1102a713269a246b375d113af13f4356383acee1aa177611d7b909ea0f9",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    }
+  ]
+}

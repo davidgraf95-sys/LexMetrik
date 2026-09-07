@@ -57,7 +57,7 @@ export interface LeserTrefferListeProps {
    *  B8 (H2b-Nachzug): Typ und Zählform kommen aus `./erlassAnsicht`, nicht mehr
    *  als Literal-Union je Datei. */
   bestimmungsWort: BestimmungsWort;
-  fussnotenAus: boolean;
+  aenderungenAus: boolean;
   /** 0-basierte laufende Fundstelle der ↑↓-Navigation; -1 = noch keine. */
   position: number;
   /** Artikel + Rang der laufenden Fundstelle — hebt GENAU EINE Zeile hervor. */
@@ -95,7 +95,7 @@ function Schnipsel({ a, einzeilig = false }: { a: Ausschnitt; einzeilig?: boolea
 }
 
 export function LeserTrefferListe({
-  treffer, begriff, fundstellen, bestimmungsWort, fussnotenAus, position, aktivStelle,
+  treffer, begriff, fundstellen, bestimmungsWort, aenderungenAus, position, aktivStelle,
   bereich, setzeBereich, fundstellenFuer, onZurueck, onVor, onSprung, onSprungStelle,
 }: LeserTrefferListeProps) {
   // Ä94: «↑ Anfang», wenn die Leiste ihn abgegeben hat — `null`, wo sie ihn
@@ -172,7 +172,7 @@ export function LeserTrefferListe({
 
       <ul className="space-y-0.5">
         {zeilen.map(({ t, kopf }) => {
-          const badges = badgesFuer(t, fussnotenAus);
+          const badges = badgesFuer(t, aenderungenAus);
           // Aufgeklappt ist ein Artikel, wenn die laufende Fundstelle in ihm
           // liegt ODER der Leser ihn selbst geöffnet hat. Der erste Teil ist der
           // wichtige: wer ↑↓ drückt, soll die Stelle SEHEN, zu der er springt —
@@ -212,7 +212,7 @@ export function LeserTrefferListe({
                   data-treffer-aktiv={aktiv ? '1' : undefined}
                   aria-current={aktiv ? 'location' : undefined}
                   aria-expanded={offen}
-                  className={`w-full rounded px-1.5 py-1.5 text-left transition-colors ${aktiv ? 'bg-paper-sunken/70' : 'hover:bg-paper-sunken/60'}`}>
+                  className={`w-full rounded px-1.5 py-1.5 text-left transition-colors ${aktiv ? 'bg-paper-sunken/70' : 'lc-hover-flaeche'}`}>
                   {/* ── Ä10/Ä26 (H2b-Nachzug) · DAS ETIKETT SPRENGT DIE LEISTE NICHT
                       Gemessen 17.8.2026 (LugÜ, Suche «Gericht»): `shrink-0` am
                       Etikett war für «Art. 47» richtig und für Anhänge falsch —
@@ -255,7 +255,7 @@ export function LeserTrefferListe({
                     {t.randtitel && (
                       <span data-treffer-randtitel className="line-clamp-2 min-w-0 flex-1 font-serif text-xs text-ink-600" title={t.randtitel}>{t.randtitel}</span>
                     )}
-                    <span className="ml-auto shrink-0 text-micro tabular-nums text-ink-500">{t.fundstellen}</span>
+                    <span className="ml-auto shrink-0 text-micro lc-ziffern text-ink-500">{t.fundstellen}</span>
                   </span>
                   {/* ── Ä17 (H2b) · DER SCHNIPSEL IST ZURÜCK ────────────────────
                       Gemessen 17.8.2026: im Ruhezustand zeigte die Liste NULL
@@ -303,8 +303,8 @@ export function LeserTrefferListe({
                             data-treffer-stelle-aktiv={stelleAktiv ? '1' : undefined}
                             aria-current={stelleAktiv ? 'location' : undefined}
                             className={`flex w-full items-baseline gap-1.5 rounded px-1.5 py-1 text-left transition-colors ${
-                              stelleAktiv ? 'bg-brass-100/60' : 'hover:bg-paper-sunken/60'}`}>
-                            <span aria-hidden className="shrink-0 text-micro tabular-nums text-ink-400">{f.rang + 1}</span>
+                              stelleAktiv ? 'bg-brass-100/60' : 'lc-hover-flaeche'}`}>
+                            <span aria-hidden className="shrink-0 text-micro lc-ziffern text-ink-400">{f.rang + 1}</span>
                             <Schnipsel a={f.ausschnitt} />
                           </button>
                         </li>
@@ -326,7 +326,7 @@ export function LeserTrefferListe({
             begriff, n: (g.begriff === begriff ? g.n : TREFFER_DECKEL) + TREFFER_DECKEL,
             auf: g.begriff === begriff ? g.auf : [],
           }))}
-          className="mt-2 flex min-h-11 w-full items-center justify-center rounded-md px-2 text-body-s text-ink-600 transition-colors hover:bg-paper-sunken/60 hover:text-brass-700">
+          className="mt-2 flex min-h-11 w-full items-center justify-center rounded-md px-2 text-body-s text-ink-600 transition-colors lc-hover-flaeche hover:text-brass-700">
           {rest} weitere anzeigen
         </button>
       )}

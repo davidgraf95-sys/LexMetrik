@@ -204,7 +204,7 @@ function SplitKnopf({ zitierung, onClick }: { zitierung: string; onClick: () => 
     <button type="button" onClick={onClick}
       title={`${zitierung} nebeneinander öffnen`} aria-label={`${zitierung} nebeneinander öffnen`}
       className="ml-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
-      <span aria-hidden className="text-base leading-none">⧉</span>
+      <span aria-hidden className="lc-griff-glyph">⧉</span>
     </button>
   );
 }

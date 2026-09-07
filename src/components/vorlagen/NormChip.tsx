@@ -6,9 +6,11 @@ import { bundSnapshotRef } from '../../lib/normtext/bundRef';
 import { ladeSnapshot } from '../../lib/normtext/laden';
 import { ladeStruktur } from '../../lib/normtext/browse';
 import { artikelSachtitel } from '../../lib/normtext/darstellung';
+import { SchliessKnopf } from '../ui/SchliessKnopf';
 import { naechsterFokus } from '../../lib/normtext/fokus';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { NormPopover } from '../NormPopover';
+import { QuellLink } from '../ui/QuellLink';
 import { readerHrefFuerRef } from './chipZiel';
 import { HOVER_OEFFNEN_MS, HOVER_SCHLIESSEN_MS, istHoverZeiger } from '../hoverVorschau';
 
@@ -417,7 +419,7 @@ export function NormPopoverOverlay({ children, onClose, triggerRef, modal = true
   );
 
   // ── BLOCKER B1 (Gegenprüfung 7.8.2026): KEIN Klick-Fänger auf dem Hover-Weg ─
-  // Der verankerte Backdrop (`fixed inset-0 z-50` + `onClick={onClose}`) ist auf
+  // Der verankerte Backdrop (`fixed inset-0 z-modal` + `onClick={onClose}`) ist auf
   // dem KLICK-Weg richtig: er schliesst den Dialog beim Danebenklicken. Auf dem
   // HOVER-Weg war er der Defekt — er legte sich über die ganze Seite, also auch
   // über den Chip. Zwei belegte Folgen: (1) der Chip verlor den Zeiger
@@ -435,7 +437,13 @@ export function NormPopoverOverlay({ children, onClose, triggerRef, modal = true
     <div
       // Verankert: transparenter Klick-Fänger (kein Dim, Popover-Charakter).
       // Zentriert (Altpfad): gedimmter, mittig gestellter Modal-Backdrop.
-      className={verankert ? 'fixed inset-0 z-50' : 'fixed inset-0 z-50 flex items-center justify-center bg-ink-900/40 p-4'}
+      //
+      // F2-1 (31.8.2026): das Dim war `bg-ink-900/40`. `--ink-900` flippt mit dem
+      // Thema (dunkel `#E9E7E2`) — im Dunkelmodus hellte dieser «Scrim» auf,
+      // statt abzudunkeln (Messung/Herleitung: `pages/gesetz-leser/v3/LeserScrim.tsx`,
+      // B7-N1). `.lc-scrim-dialog` ist die Rolle «zentrierter modaler Dialog»
+      // (src/index.css): schwarz statt Tinte, Deckung unverändert 40 %.
+      className={verankert ? 'fixed inset-0 z-modal' : 'lc-scrim-dialog fixed inset-0 z-modal flex items-center justify-center p-4'}
       onClick={onClose}
     >
       {/* Klicks im Dialog dürfen nicht zum Backdrop durchschlagen. */}
@@ -465,23 +473,30 @@ export function NormPopoverHuelle({ zustand, url, artikel, alsDialog = true, onC
     <div data-norm-vorschau role={alsDialog ? 'dialog' : 'group'}
       {...(alsDialog ? { 'aria-modal': true as const, tabIndex: -1 } : {})}
       aria-label={`Norm-Vorschau ${artikel}`}
-      className="lc-card w-full max-w-xl p-0 text-left">
+      className="lc-popover w-full max-w-xl p-0 text-left">
       <div className="flex items-start justify-between gap-3 border-b border-line px-5 py-3">
         <div className="min-w-0">
           <p className="lc-overline text-brass-700">Norm-Vorschau</p>
           <h2 className="text-body-l font-semibold text-ink-900 truncate">{artikel}</h2>
         </div>
-        <button ref={schliessRef} type="button" onClick={onClose} aria-label="Schliessen"
-          className="lc-btn-ghost lc-btn-sm shrink-0 px-2">✕</button>
+        {/* A3-1 (R3-β): EIN Schliess-✕ der App. Diese Fundstelle war die
+            zeichengleiche Kopie der `NormPopover`-Fassung (dieselbe Kopfzeile,
+            derselbe Knopf) — sie mitzuziehen war Pflicht, nicht Kür (§5). */}
+        <SchliessKnopf ref={schliessRef} name="Norm-Vorschau schliessen"
+          onClick={onClose} klasse="-mr-1" />
       </div>
       <div className="px-5 py-4">
         <p className="text-body-s text-ink-700">
           {zustand === 'laedt' ? 'Volltext wird geladen …' : 'Volltext nicht verfügbar.'}
         </p>
       </div>
+      {/* B-1 (31.8.2026): hier stand «↗ geltende Fassung auf Fedlex» — die
+          vierte Schreibweise desselben Ziels. Kanon Ä110 über den geteilten
+          `QuellLink`; «auf Fedlex» fällt weg, weil der Zusatz nur die Quelle
+          wiederholt, die dieser Fallback-Popover ohnehin ist (Ä121 gilt der
+          Panel-LISTE, wo mehrere Sammlungen nebeneinander stehen). */}
       <div className="border-t border-line px-5 py-3">
-        <a href={url} target="_blank" rel="noopener noreferrer"
-          className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung auf Fedlex</a>
+        <QuellLink href={url} className="lc-chip no-underline hover:text-brass-700" />
       </div>
     </div>
   );

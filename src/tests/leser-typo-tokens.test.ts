@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 // ─── LESER-TYPOGRAFIE: die Grösse ist ein TOKEN, nie ein roher Wert ──────────
@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 // W2·5m-LESER-V3 · S2 (Pos. 19), Entscheid David 17.8.2026 am Bildbogen
 // (`docs/ux-audit-2026-07/reader/leser-v3-s2/bogen.html`): F3 = V2 «amtsnah
 // kompakt», Fussnotenmarke hochgestellt. Der Leser-Fliesstext läuft seither auf
-// der Stufe `leser-text` (1.0625 rem / lh 1.55) statt auf `text-body-l` plus einem
+// der Stufe `leser-text` (1.125 rem / lh 1.62; bis R6c 1.0625 rem, lh bis R4 1.55) statt auf `text-body-l` plus einem
 // rohen `leading-[1.65]`-Override.
 //
 // WAS DIESER WÄCHTER HÄLT — und warum er nicht schon durch `check:design-tokens`
@@ -27,13 +27,32 @@ function lies(rel: string): string {
   return readFileSync(fileURLToPath(new URL(rel, import.meta.url)), 'utf8');
 }
 
+// QS-UI (5.9.2026, Nebenfund #663-Split, §6.7): der Wächter zeigte nach dem
+// Aufteilen von ArtikelBody.tsx (PR #663: ArtikelBody.zitier.tsx +
+// ArtikelBody.helfer.ts) nur auf die Ursprungsdatei plus den einen bereits
+// nachgetragenen Split-Teil — `ArtikelBody.helfer.ts` fehlte im Prüfbereich,
+// ein rohes `text-[…]`/`leading-[…]` dort wäre unbemerkt geblieben. Glob statt
+// fester Pfad: JEDE `ArtikelBody*.ts(x)` im Verzeichnis, damit ein künftiger
+// weiterer Split (oder eine neue Datei) automatisch mitgeprüft wird.
+const NORMTEXT_DIR = fileURLToPath(new URL('../components/normtext/', import.meta.url));
+const ARTIKELBODY_DATEIEN = readdirSync(NORMTEXT_DIR)
+  .filter((n) => /^ArtikelBody.*\.tsx?$/.test(n))
+  .sort()
+  .map((n) => `../components/normtext/${n}`);
+
 /** Die Dateien, die den Leser-WORTLAUT setzen (Fliesstext, Ingress, Apparat). */
 const WORTLAUT_DATEIEN = [
   '../pages/gesetz-leser/parts/ArtikelLeser.tsx',
+  // W2·24-F: der Randtitel (Sachüberschrift, `font-serif`/`text-leser-rand`)
+  // ist mit dem §6.6-Split hierher gezogen — er setzt Wortlaut-Typografie und
+  // gehört darum weiter in diesen Geltungsbereich. `ArtikelLeser.bezuegeZone`
+  // bewusst NICHT: sie ist Referenzschicht, kein Wortlaut (wie
+  // `ArtikelLeser.leitfaelle`, die hier ebenfalls nie stand).
+  '../pages/gesetz-leser/parts/ArtikelLeser.kopfteile.tsx',
   '../pages/gesetz-leser/parts/ErlassKopfBlock.tsx',
   '../pages/gesetz-leser/parts/SektionKopf.tsx',
   '../pages/gesetz-leser/helpers.tsx',
-  '../components/normtext/ArtikelBody.tsx',
+  ...ARTIKELBODY_DATEIEN,
 ] as const;
 
 // Der EINE zugelassene Arbitrary-Wert, und zwar als Token-Escape, nicht als Wert:
@@ -45,12 +64,28 @@ const WORTLAUT_DATEIEN = [
 const TOKEN_ESCAPE = /text-\[length:var\(--hochgestellt\)\]/g;
 
 describe('S2 · Leser-Typografie-Tokens', () => {
+  // Leer-Treffer-Schutz 5.9.2026 (Gegenprüfung #719, §6.7 lit. b)
+  it('Glob findet ArtikelBody-Dateien', () => {
+    expect(ARTIKELBODY_DATEIEN.length).toBeGreaterThan(0);
+  });
+
   it('die drei Leser-Stufen stehen mit den Werten des Entscheids in tailwind.config.js', () => {
     const cfg = lies('../../tailwind.config.js');
     // V2-Spalte des Fahrplans Kap. 8, mit der EINEN Abweichung beim Marker
     // (hochgestellt statt in Klammern — die betrifft `--hochgestellt`, nicht diese Stufen).
     const erwartet: Array<[string, string, string]> = [
-      ['leser-text', '1.0625rem', '1.55'],   // Fliesstext 17 px
+      // W2·24-R4 (6.9.2026): lh 1.55 → 1.62 — das freigegebene Referenzbild
+      // setzt den Normtext im Satzspiegel auf 1.62 (`abnahme/design-identitaet/
+      // vorschlag-freigegeben.html`, `.norm`). Die ABSICHT dieses Tors ist
+      // unberührt: es prüft weiterhin, dass Grösse UND Zeilenhöhe aus der Stufe
+      // kommen und nicht aus einem rohen Override im Markup.
+      // W2·24-R6c (6.9.2026): Grösse 1.0625rem → 1.125rem — DEKLARIERTE
+      // fachliche Änderung (§6.3), kein aufgeweichter Wächter: der Fall bindet
+      // weiterhin an EINEN festgelegten Wert und würde jede stille Verschiebung
+      // melden. Entschieden hat D20 (c) «Lesetext 18 px»; die Reglerstufen in
+      // `src/index.css` und `SCHRIFT_REM` sind mitgezogen und werden von
+      // `leser-schriftskala.test.ts` gegen genau diese Zahl gehalten.
+      ['leser-text', '1.125rem', '1.62'],    // Fliesstext 18 px
       ['leser-rand', '0.8125rem', '1.35'],   // Marginalie/Randtitel 13 px, Sans
       // Fussnoten-Apparat 11 px. ZEILENHÖHE 1.3 → 1.45 NACHGEFÜHRT (T3,
       // Design-Qualitäts-Pass 29.8.2026): deklarierte fachliche Änderung
@@ -125,6 +160,30 @@ describe('S2 · Leser-Typografie-Tokens', () => {
     }
     expect(funde, `Zeilenhöhe wird neben der Stufe ein zweites Mal gesetzt:\n${funde.join('\n')}`)
       .toEqual([]);
+  });
+
+  // ── D12 «Lesekomfort» (6.9.2026), DEKLARIERTE Erweiterung ─────────────────
+  // Die Runde entscheidet das Lesetext-GEWICHT (450 statt 400): Serifen wirken
+  // am Bildschirm duenner als im Druck. Bisher band dieses Tor Groesse und
+  // Zeilenhoehe der Stufe — das Gewicht war ungeschuetzt und konnte still auf
+  // 400 zurueckfallen, sobald jemand die `:where`-Regel oder das Token anfasst.
+  // Der Fall bindet beides, wie die drei Stufen oben.
+  // ROT ZU BEKOMMEN (§6.7): `--lese-gewicht:400` in index.css setzen (erste
+  // Zusicherung rot), oder die `:where([class~="font-serif"])`-Regel loeschen
+  // (zweite Zusicherung rot).
+  it('das Lesetext-Gewicht ist EIN Token (450) mit genau einem Konsumenten', () => {
+    const css = lies('../index.css');
+    const defs = [...css.matchAll(/--lese-gewicht\s*:\s*([^;]+);/g)].map((m) => m[1].trim());
+    expect(defs, 'Lesetext-Gewicht ist nicht genau einmal definiert (§5)').toHaveLength(1);
+    expect(defs[0], 'Lesetext-Gewicht abgewichen — D12 entschied 450 (Bildschirm-Serife)')
+      .toBe('450');
+    // Die Regel, die das Token ueberhaupt wirksam macht. Ohne sie ist das Token
+    // ein Wert ohne Verbraucher, und das Tor bewachte eine tote Zeile (§6.7).
+    // Auf einen BOOLEAN geprueft, nicht auf den CSS-Text: `toMatch` gegen eine
+    // 90-KB-Datei druckt im Fehlerfall das halbe Stylesheet in die Konsole und
+    // begraebt die eigentliche Aussage (einmal gesehen, 6.9.2026).
+    const regelDa = /:where\(\[class~="font-serif"\]\)\s*\{\s*font-weight:\s*var\(--lese-gewicht\)/.test(css);
+    expect(regelDa, 'die :where-Regel, die das Lesetext-Gewicht anwendet, fehlt in src/index.css').toBe(true);
   });
 
   it('--hochgestellt ist genau EINMAL definiert (§5) und em-relativ', () => {

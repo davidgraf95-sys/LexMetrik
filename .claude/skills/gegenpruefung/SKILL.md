@@ -33,6 +33,13 @@ Risiko-Datei, bis genau für diesen Diff ein `bestanden`-Nachweis vorliegt.
    (Artikel/§) + Link + Stand hinterlegen (Daueranweisung David: doppelt
    verifizieren, jeder Wert mit Norm-Anker).
 
+5. **Wer quittiert.** Das Verdikt schreibt der Prüfer, die Quittung
+   (`gegenpruefung:ok`, Register-Zeile, `Gegenpruefung:`-Trailer) setzt der
+   Orchestrator — **nie der Bauer**. Eine Selbstbescheinigung des Bau-Agenten
+   macht den Merge-Schutz formal grün und ist inhaltlich wertlos (Vorfall
+   PR #616, 2.9.2026: «Sonnet, Ladeschicht/Identitaet» vom Bauer selbst; erst
+   die Opus-Prüfung fand vier Auflagen, darunter einen toten Link 0/15).
+
 ## Minimum eines echten Durchgangs
 
 «Ernsthaft widerlegen» (Regel 3) und «echter Durchgang» heissen mindestens,
@@ -127,6 +134,14 @@ zustaendigkeit|straf|bger`).
 - Randfälle konstruieren: Grenzwerte der Staffeln, Rundung, Feiertags-/Computus-
   Verschiebung, Regime-Wechsel (§4 regime-treu — verschiedene Rechtsregimes
   dürfen nicht kollabiert sein).
+
+### Station Phase-3-Zählung (QS-FREMDAGENTEN)
+
+Läuft eine Prüfung Norm gegen Ausgabewert/Extrakt, kann der Prüfer zusätzlich
+einen Gemini-Durchgang als Diskrepanz-Finder fahren (Aufruf: Skill
+`korpus-werkstatt`); Verdikt bleibt beim Prüfer. Jeder Durchgang wird in
+`fahrplaene/FAHRPLAN-FREMDAGENTEN.md` §5 Tabelle «Phase 3» gezählt
+(echt/Schein/verpasst); nach fünf Durchgängen Rückbau-Schwelle §3 anwenden.
 
 ## Ergebnis
 

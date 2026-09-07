@@ -106,7 +106,30 @@ export function RichterFilter({ aktiv, aktivName, registerGeladen, optionen, onW
           onFocus={() => setOffen(true)}
           onBlur={() => setOffen(false)}
           onKeyDown={aufTaste}
-          placeholder="Name eingeben …"
+          /* LM-095 (W2·17-UI-BEFUNDE B10, 4.9.2026): nach der Wahl fällt das
+             Feld auf `setQ('')` zurück und stand danach mit «Name eingeben …»
+             da — es sah LEER aus, obwohl gefiltert wurde, und für EINEN Wert
+             standen zwei Bedienelemente nebeneinander (Feld + Aktiv-Chip).
+             Der Chip bleibt, wo er ist: dass er IN dieser Komponente lebt, ist
+             ein dokumentierter Entscheid (EntscheidFilter, «sonst doppelte
+             Repräsentation»), und `setQ('')` ist die Voraussetzung dafür, dass
+             man direkt den nächsten Namen tippen kann. Statt dessen TRITT DAS
+             FELD ZURÜCK: solange ein Name gesetzt ist, sagt es, was es dann
+             noch ist — eine Suche nach einem ANDEREN Namen. Der gesetzte Wert
+             steht damit an genau einer Stelle, dem Chip. Reine Beschriftung,
+             keine Änderung an Auswahl-, Filter- oder Tastaturlogik (§3). */
+          placeholder={aktiv ? 'Anderen Namen suchen …' : 'Name eingeben …'}
+          /* NACHZUG 5.9.2026 (CI «Browser-Smoke» Shard 2/8, PR #674). Der erste
+             Bau oben wechselte MIT dem Placeholder auch den zugänglichen Namen
+             auf «Nach anderer Richter:in filtern». Das war zu viel: der
+             zugängliche Name ist die IDENTITÄT des Bedienelements und darf
+             nicht mit seinem Zustand wechseln (WCAG 4.1.2) — sonst verliert
+             jede Referenz darauf ihr Ziel, sobald ein Richter gesetzt ist.
+             Belegt am 5.9.2026 lokal gegen dist: e2e/rechtsprechung-richter.e2e.ts
+             Zeile 149 und 176 fanden die Combobox nach
+             `?richter=<slug>` nicht mehr (2 failed / 10 passed). Der Name
+             bleibt darum konstant; das Zurücktreten aus LM-095 trägt allein
+             der sichtbare Placeholder, den Zustand trägt der Aktiv-Chip. */
           aria-label="Nach Richter:in filtern"
           autoComplete="off"
           role="combobox"
@@ -117,7 +140,7 @@ export function RichterFilter({ aktiv, aktivName, registerGeladen, optionen, onW
           className="lc-input lc-input-sm w-full"
         />
         {zeigtListe && (
-          <div ref={panel} className="lc-panel absolute left-0 right-0 top-full z-30 mt-1 shadow-md">
+          <div ref={panel} className="lc-panel absolute left-0 right-0 top-full z-dropdown mt-1 shadow-md">
             {sichtbar.length === 0 ? (
               // Leerzustand (F4): ehrliche Auskunft, keine Fehler-Optik — der
               // Name kommt schlicht im aktuellen Filterausschnitt nicht vor.

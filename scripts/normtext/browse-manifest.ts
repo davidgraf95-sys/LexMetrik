@@ -17,7 +17,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { NormSnapshotDatei } from '../../src/lib/normtext/typen.ts';
-import type { BrowseErlass, BrowseManifest } from '../../src/lib/normtext/browse-typen.ts';
+import type { BrowseErlass, BrowseManifest, SachgebietKanton } from '../../src/lib/normtext/browse-typen.ts';
 import {
   ERLASS_REGISTER, GEBIET_RANG, kantonGebiet,
   type ErlassRegistereintrag, type Sprache,
@@ -43,6 +43,134 @@ function ladeInkrafttreten(basis: string): Record<string, InkraftQuelle> {
   } catch {
     return {};
   }
+}
+
+// ─── N0b: Join Snapshot-key → amtlicher kantonaler Systematik-Baum ──────────
+//
+// Die Systematik-Nummer steckt bereits im Snapshot-key ('AR-146.1' → '146.1');
+// `kanton-systematik.json` führt je Kanton einen `index`, der eine Nummer auf
+// ihren Pfad `[wurzel, unter]` abbildet. Der Join ist damit reines Nachschlagen
+// — es wird KEIN Baum zweitgebaut und keine Zuordnung geraten (§2/§5).
+//
+// LÄNGSTER PRÄFIX, und zwar auf der GANZZAHL vor dem ersten Punkt. '146.1' steht
+// nicht im Index, '146' schon → ['1','14']. Die Kürzung läuft nur über die
+// führende Ganzzahl, weil genau sie die Hierarchie trägt (1 → 14 → 146); ein
+// Präfix über den Punkt hinweg ('146.1' → '146.') wäre keine Gliederungsstufe.
+//
+// STRIKT ZIFFERNHIERARCHISCH, sonst kein Feld. Glarus ordnet römisch
+// ('GL-III-C.1', 'GL-III B/7/1'); ein Ziffern-Filter darüber ergäbe '1' bzw.
+// '71' und damit eine FALSCHE Wurzel — ein stiller Fehlgriff wäre schlimmer als
+// die fehlende Angabe (§7/§8). Gemessen 31.8.2026: 5 GL-Erlasse bleiben so
+// ehrlich ohne Feld.
+//
+// GEMEINDE-PRÄFIX zuerst: Basel-Stadt führt Bettingen/Riehen als eigene
+// Teilsammlungen ('BS-BeE 786.100'), und 'BeE' IST der Wurzelknoten. Er wird vor
+// der Ziffern-Kürzung probiert, sonst zöge '786' eine kantonale Wurzel, die für
+// einen Gemeindeerlass nicht gilt.
+type SystematikBaum = {
+  roots: { nummer: string; name: string; kinder?: { nummer: string; name: string }[] }[];
+  index: Record<string, [string, string]>;
+};
+function ladeSystematik(basis: string): Record<string, SystematikBaum> {
+  try {
+    return JSON.parse(readFileSync(join(basis, 'kanton-systematik.json'), 'utf8')) as Record<string, SystematikBaum>;
+  } catch {
+    return {};
+  }
+}
+
+/** Sprach-Suffix kantonaler Zweisprachen-Keys ('FR-130.11-de'). Es gehört zur
+ *  Datei-Identität, nicht zur Systematik-Nummer, und muss vor dem Join weg. */
+const SPRACH_SUFFIX = /-(?:de|fr|it|rm)$/;
+
+export function sachgebietKantonFuer(
+  baum: SystematikBaum | undefined,
+  kanton: string,
+  stamm: string,
+): SachgebietKanton | undefined {
+  if (!baum) return undefined;
+  const nummer = decodeURIComponent(stamm.slice(kanton.length + 1)).replace(SPRACH_SUFFIX, '').trim();
+
+  const benenne = (top: string, sub: string): SachgebietKanton | undefined => {
+    const wurzel = baum.roots.find((r) => r.nummer === top);
+    if (!wurzel) return undefined;                       // Index ohne Wurzel = defekter Baum
+    const unter = sub ? wurzel.kinder?.find((k) => k.nummer === sub) : undefined;
+    return {
+      wurzel: { nummer: wurzel.nummer, name: wurzel.name },
+      ...(unter ? { unter: { nummer: unter.nummer, name: unter.name } } : {}),
+    };
+  };
+
+  // (1) Gemeinde-Teilsammlung ('BeE 786.100'). Diese Wurzeln stehen in `roots`,
+  //     aber NICHT im `index` (der führt nur die kantonalen Ziffern-Knoten) —
+  //     darum hier direkt gegen den Baum, nicht gegen die Index-Tabelle. Ihre
+  //     Unterknoten tragen den Präfix mit ('BeE 7'), die Kürzung läuft also über
+  //     'BeE ' + führende Ganzzahl.
+  const gem = nummer.match(/^([A-Za-z]+)\s+([0-9]+)/);
+  if (gem) {
+    const wurzel = baum.roots.find((r) => r.nummer === gem[1]);
+    if (!wurzel) return undefined;
+    for (let l = gem[2].length; l >= 1; l--) {
+      const unter = wurzel.kinder?.find((k) => k.nummer === `${gem[1]} ${gem[2].slice(0, l)}`);
+      if (unter) {
+        return {
+          wurzel: { nummer: wurzel.nummer, name: wurzel.name },
+          unter: { nummer: unter.nummer, name: unter.name },
+        };
+      }
+    }
+    return { wurzel: { nummer: wurzel.nummer, name: wurzel.name } };
+  }
+
+  // (2) Ziffernhierarchische Nummer.
+  if (!/^[0-9]+(\.[0-9]+)*$/.test(nummer)) return undefined;
+  const ganz = nummer.split('.')[0];
+
+  // (2a) DIREKTER Treffer — der Index führt genau diese Nummer. Er ist die
+  //      amtliche Zuordnung des Kantons und wird unbesehen übernommen (§5):
+  //      der Pfad eines Blattes zeigt auf seine VORFAHREN ('842' → ['8','84']),
+  //      der Schlüssel ist also normalerweise NICHT gleich dem Knoten.
+  if (baum.index[ganz]) return benenne(baum.index[ganz][0], baum.index[ganz][1]);
+
+  // (2b) GEKÜRZTER Treffer — hier fragt der Code etwas, was der Index nie
+  //      behauptet hat, und muss die Antwort deshalb prüfen. Zulässig ist sie
+  //      nur, wenn der zurückgegebene Pfad zum angefragten Schlüssel PASST:
+  //      beide Stufen müssen Präfixe von ihm sein ('66' → ['6','66'] ✓).
+  //
+  //      WAS DAS ABFÄNGT — gemessen 31.8.2026, nicht vermutet: Luzern gliedert
+  //      in 'Band 1…9' mit Buchstaben-Unterstufen, und sein Index trägt als
+  //      Ziffern-Schlüssel ORDINALZAHLEN, keine Systematik-Nummern. Ohne diese
+  //      Prüfung kürzte 'LU-258' auf '2' und landete auf ['Band 1','E'] —
+  //      fünf lautlose Fehleinordnungen, die im UI amtlich ausgesehen hätten.
+  //      Mit ihr trägt LU kein Feld: die richtige Antwort, solange sein Index
+  //      keine Erlass-Nummern kennt (§7/§8).
+  for (let l = ganz.length - 1; l >= 1; l--) {
+    const k = ganz.slice(0, l);
+    const treffer = baum.index[k];
+    if (!treffer) continue;
+    const passt = k.startsWith(treffer[0]) && (!treffer[1] || k.startsWith(treffer[1]));
+    return passt ? benenne(treffer[0], treffer[1]) : undefined;   // erster Treffer entscheidet
+  }
+
+  // (2c) BAND-ZWEIG (ZH, N0b-Nachtrag 1.9.2026, LU-Klasse — eine defensive
+  //      Zusatzprüfung wie (2b), kein Rateweg): ZH hat keine clex-Systematik
+  //      mit sparsamen Knoten-Nummern, sondern 14 ORDNER-BÄNDER (Nummernband
+  //      '101'–'176' → Ordner '1', …, s. zh-systematik.ts). Ihr Index ist
+  //      darum dicht auf jede Hauptnummer ('LS#101' … 'LS#954') vorgerechnet,
+  //      und zwar unter dem Namensraum 'LS#' — demselben, den
+  //      `systematikSchluessel()` (src/lib/normtext/systematik.ts) aus dem
+  //      Register-Feld `sr` ('LS 131.1') für den GLEICHEN Baum ableitet (§5
+  //      SSoT: ein Baum, zwei Konsumenten). Der Snapshot-`stamm` ('ZH-131.1')
+  //      trägt dieses 'LS'-Präfix nie, darum griffen (2a)/(2b) für ZH bisher
+  //      NIE (Befund 1.9.2026: 0/24). Reiner Zusatz-Zweig, additiv — ändert
+  //      nichts an (1)/(2a)/(2b) und damit nichts am Verhalten anderer
+  //      Kantone; die Hauptnummer ist bei ZH immer dreistellig, ein direkter
+  //      Treffer genügt (keine Kürzungs-Schleife nötig).
+  if (kanton === 'ZH') {
+    const treffer = baum.index[`LS#${ganz}`];
+    if (treffer) return benenne(treffer[0], treffer[1]);
+  }
+  return undefined;
 }
 
 function jsonDateien(verzeichnis: string): string[] {
@@ -171,7 +299,12 @@ function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei, pq?: 
   };
 }
 
-function kantonEintrag(stamm: string, datei: NormSnapshotDatei, pq?: PdfQuelle): BrowseErlass {
+function kantonEintrag(
+  stamm: string,
+  datei: NormSnapshotDatei,
+  pq?: PdfQuelle,
+  baum?: SystematikBaum,
+): BrowseErlass {
   const kanton = stamm.split('-')[0];
   const erstes = datei.eintraege[0];
   const { kuerzel, titel, sr } = identitaetAusErlass(erstes?.erlass ?? stamm);
@@ -186,7 +319,13 @@ function kantonEintrag(stamm: string, datei: NormSnapshotDatei, pq?: PdfQuelle):
     fassungsToken: erstes?.fassungsToken ?? '',
     pdfPfad: null,
     ...pdfFelder(pq),
+    ...sachgebietFelder(sachgebietKantonFuer(baum, kanton, stamm)),
   };
+}
+
+/** Additiv wie `pdfFelder`: kein Treffer ⇒ kein Feld (§8), nie `undefined` im JSON. */
+function sachgebietFelder(s: SachgebietKanton | undefined): { sachgebietKanton?: SachgebietKanton } {
+  return s ? { sachgebietKanton: s } : {};
 }
 
 function liveLinkEintrag(reg: ErlassRegistereintrag): BrowseErlass {
@@ -231,6 +370,7 @@ export function baueBrowseManifest(erzeugt: string, basis = NORMTEXT_DIR): Brows
   const bundReg = new Map(ERLASS_REGISTER.filter((r) => r.ebene === 'bund').map((r) => [r.key, r]));
   const pdfQuellen = ladePdfQuellen(basis);
   const inkrafttreten = ladeInkrafttreten(basis);
+  const systematik = ladeSystematik(basis);
   const erlasse: BrowseErlass[] = [];
 
   // Bund: jeder Snapshot MUSS einen Register-Eintrag haben (Orphan-Tor).
@@ -248,7 +388,7 @@ export function baueBrowseManifest(erzeugt: string, basis = NORMTEXT_DIR): Brows
     const stamm = f.replace(/\.json$/, '');
     const datei = ladeDatei(join(basis, 'kanton', f));
     if (!datei) continue;
-    erlasse.push(kantonEintrag(stamm, datei, pdfQuellen[stamm]));
+    erlasse.push(kantonEintrag(stamm, datei, pdfQuellen[stamm], systematik[stamm.split('-')[0]]));
   }
 
   // Register-Einträge ohne Snapshot ergänzen: 'nur-live-link' (externer Link) und

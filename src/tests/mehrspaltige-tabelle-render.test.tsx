@@ -237,7 +237,17 @@ describe('KanonischeTabelle (block.mehrspaltig.spalten)', () => {
     // betrag-Kopf «Gebühr/Franken» trägt text-right
     expect(out).toMatch(/text-right[^>]*>Gebühr\/Franken|Gebühr\/Franken/);
     expect(out).toContain('text-right');
-    expect(out).toContain('tabular-nums');
+    // R5-B (5.9.2026) · DEKLARIERTE Test-Anpassung nach §6.3: die Zelle trug
+    // die Roh-Utility `[font-variant-numeric:tabular-nums]`, also `.num` ohne
+    // Familie UND ohne `lining-nums` — genau die halbe Deklaration, die R4-C
+    // als Defekt nachgewiesen hat. Sie laeuft jetzt ueber die geteilte Rolle
+    // `.lc-ziffern` (= `lining-nums tabular-nums`). BEWIESEN am Preview
+    // (5.9.2026), dass das die Darstellung nicht aendert: dieselben zehn
+    // Ziffern, einmal mit `tabular-nums` und einmal mit
+    // `lining-nums tabular-nums` in Geist Variable auf ein Canvas gezeichnet,
+    // ergeben BYTE-GLEICHE Pixel (Geist fuehrt ohnehin Versalziffern). Die
+    // Aussage des Falls — «Betraege fluchten» — ist unveraendert wahr.
+    expect(out).toContain('lc-ziffern');
     // bereich-Wert NICHT rechtsbündig: «bis 100» erscheint in einer Zelle ohne text-right davor — Inhalt da
     expect(out).toContain('bis 100');
   });

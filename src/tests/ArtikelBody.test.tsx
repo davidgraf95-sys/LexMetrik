@@ -199,17 +199,31 @@ describe('Lesesicht H/I/J — Pop pro Element, kleinere Marken, feste Rinne', ()
     expect(o).not.toContain('hover:ring-');
     expect(o).not.toContain('hover:shadow-');
   });
+  // R5-D (5.9.2026) · DEKLARIERTE Test-Anpassung nach §6.3, Begruendung und
+  // Beweis: die drei Aussagen dieses Falls sind unveraendert — nur ihre
+  // Schreibweise ist es nicht mehr. Die neutrale Hover-Flaeche lag in der App
+  // in FUENF Schreibweisen vor (`hover:bg-paper-sunken` voll/60 %/70 %,
+  // `hover:bg-well`, `hover:bg-paper/60`) und laeuft seit R5-D ueber den
+  // geteilten Baustein `.lc-hover-flaeche` (DESIGN-REGLEMENT §G-j: EINE Regel,
+  // getragen von einer Rolle). GEMESSEN am Preview (`/gesetze/bund/OR`,
+  // 5.9.2026): die Zeile ruht auf `rgba(0, 0, 0, 0)` und wird beim Ueberfahren
+  // `rgb(246, 244, 238)` — Zeichen fuer Zeichen der Wert, den
+  // `bg-paper-sunken` vorher lieferte (`--well: #f6f4ee`). Die WIRKUNG ist
+  // also unveraendert; angepasst wird allein der Name, den der Fall zitiert.
   it('Ae8: der Hintergrund-Hover bleibt — aber in der ruhenden Flaeche, nicht in Brass', () => {
     const o = out();
     // Die Geste bleibt sichtbar (§8: der zitierbare Passus zeigt sich weiterhin) …
     expect(o, 'der Hover ist ganz verschwunden — die Zitierbarkeit waere unsichtbar')
-      .toContain('hover:bg-paper-sunken');
+      .toContain('lc-hover-flaeche');
     // … und Brass bleibt dem Signal vorbehalten (Treffer, aktive Zeile).
     expect(o, 'Brass als Hover-Flaeche entwertet die Treffer-Hervorhebung (Kap. 8 Nr. 3)')
       .not.toContain('hover:bg-brass-');
-    // Absatz und Aufzaehlungszeile tragen DIESELBE Flaeche (§5).
-    expect([...o.matchAll(/hover:bg-[a-z0-9/-]+/g)].map((t) => t[0]).filter((k, i, a) => a.indexOf(k) === i))
-      .toEqual(['hover:bg-paper-sunken']);
+    // Absatz und Aufzaehlungszeile tragen DIESELBE Flaeche (§5) — und zwar die
+    // des Bausteins: keine einzige eigene `hover:bg-`-Stufe bleibt uebrig.
+    expect([...o.matchAll(/hover:bg-[a-z0-9/-]+/g)].map((t) => t[0]))
+      .toEqual([]);
+    expect([...o.matchAll(/lc-hover-flaeche/g)].length, 'beide Zeilen tragen den Baustein')
+      .toBeGreaterThanOrEqual(1);
   });
   it('I/H: zk-Absatzmarke ist kleiner (text-body-s) und feste Rinnen-Box (inline-block w-9, kein mr-3)', () => {
     const o = renderToString(
@@ -240,6 +254,46 @@ describe('Lesesicht H/I/J — Pop pro Element, kleinere Marken, feste Rinne', ()
     expect(o).not.toContain('hover:bg-brass-200/60');
     expect(o).not.toContain('hover:ring-');
     expect(o).not.toContain('hover:shadow-');
+  });
+});
+
+// QS-UI (Gegenprüfung PR #658, gebaut PR #679, 4./5.9.2026): Fedlex setzt
+// echte Aufzählungsmarken («<dt>a. </dt>») UND Label-Listen («<dt>BE: </dt>»)
+// in dieselbe items[].marke-Struktur (extrahiere-fedlex.ts §Aufzählung).
+// Label-Marken sind KEINE lit.-Position — Beschriftung ohne «lit.»-Präfix,
+// mit «:» statt «.» wie im amtlichen <dt>. Real belegt: VZV Art. 3 Abs. 1,
+// marke "BE" (public/normtext/bund/VZV.json) — «Der Führerausweis wird für
+// folgende Kategorien erteilt: … BE Fahrzeugkombinationen …»; vorher zeigte
+// der Leser «BE.» und das Zitat «Art. 3 Abs. 1 lit. BE VZV» (fachlich falsch,
+// eine «lit. BE» gibt es in der VZV nicht).
+describe('QS-UI Marken-Präfix — Label-Marken ohne lit., mit «:» (VZV Art. 3 Abs. 1)', () => {
+  const vzvArt3Abs1: NormSnapshot['bloecke'] = [
+    {
+      absatz: '1', text: 'Der Führerausweis wird für folgende Kategorien erteilt:',
+      items: [
+        { marke: 'a', text: 'echte Aufzählungsposition;' },
+        { marke: 'BE', text: 'Fahrzeugkombinationen aus einem Zugfahrzeug der Kategorie B und einem Anhänger …' },
+      ],
+    },
+  ];
+  it('Anzeige: echte Aufzählungsmarke «a.» unverändert, Label-Marke «BE:» statt «BE.»', () => {
+    const out = renderToString(
+      <ArtikelBody bloecke={vzvArt3Abs1} artikel="3" passus={{ absatz: null }} />,
+    );
+    expect(out).toContain('>a.<');
+    expect(out).toContain('>BE:<');
+    expect(out).not.toContain('>BE.<');
+  });
+  it('Zitat (Lesesicht): echte Marke «Art. 3 Abs. 1 lit. a VZV», Label-Marke OHNE «lit.» («Art. 3 Abs. 1 BE VZV»)', () => {
+    const out = renderToString(
+      <ArtikelBody
+        bloecke={vzvArt3Abs1} artikel="3" passus={{ absatz: null }}
+        zitierKontext={{ artikelLabel: 'Art. 3', kuerzel: 'VZV' }}
+      />,
+    );
+    expect(out).toContain('Art. 3 Abs. 1 lit. a VZV — kopieren');
+    expect(out).toContain('Art. 3 Abs. 1 BE VZV — kopieren');
+    expect(out).not.toContain('Art. 3 Abs. 1 lit. BE VZV');
   });
 });
 

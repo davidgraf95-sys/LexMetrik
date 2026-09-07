@@ -1,5 +1,6 @@
 import type { SachgebietZaehler } from '../../lib/rechtsprechung/browse';
 import type { Rechtsgebiet } from '../../lib/normtext/register';
+import { zahlGruppiert } from '../typografie';
 
 // Sachgebiet-Navigation — die EINZIGE Sachgebiet-Steuerung (das alte Filter-
 // Select entfällt, Entdoppelung). Kontrastreiche, zählende Rail: der kuratierte
@@ -21,8 +22,23 @@ export function SachgebietKacheln({ zaehler, gesamt, aktiv, onWaehle }: {
   return (
     <nav aria-label="Sachgebiete" className="lg:sticky lg:top-20">
       {/* Desktop: vertikale Rail. Mobil/Tablet: scrollbares Chip-Band. */}
-      <div className="relative">
-      <ul className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-1 lg:overflow-visible lg:pb-0">
+      {/* ── LM-063 (B8, 31.8.2026) · DER STATISCHE VERLAUF IST ERSETZT ─────────
+          Bis hier lag unter der Liste ein absolut gesetzter Verlaufsstreifen
+          aus Papierfarbe (Responsive-Audit D10). Er stand IMMER — auch
+          ganz rechts am Ende der Strecke, wo nichts mehr kommt; damit
+          behauptete er «hier geht es weiter», wenn es nicht weiterging (§8).
+          Genau diese Lüge nennt die Notiz zu LM-061 (30.8.2026) als Grund,
+          die statische Form nicht weiter zu vervielfachen.
+          JETZT: die geteilte `lc-scrollrand-x` (index.css, Regel-Block
+          `lc-scrollrand`). Sie kennt den Scrollstand ohne JavaScript — der
+          Schatten steht nur an der Kante, hinter der wirklich noch Kacheln
+          liegen. GEMESSEN @720 vor dem Bau: 672 px sichtbar bei 1'169 px
+          Inhalt. Ab `lg` ist die Rail senkrecht und scrollt nicht (`lg:
+          overflow-visible`) — dort MUSS die Zeichnung weg (`lg:bg-none`),
+          sonst stünden beide Schatten dauerhaft an einer Liste, die gar nicht
+          scrollt. Mit dem Verlauf entfällt auch der `relative`-Rahmen, der
+          nur ihn getragen hat (§17-Rückbau). */}
+      <ul className="lc-scrollrand-x lg:bg-none flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-1 lg:overflow-visible lg:pb-0">
         {eintraege.map((e) => {
           const an = aktiv === e.id;
           return (
@@ -34,7 +50,7 @@ export function SachgebietKacheln({ zaehler, gesamt, aktiv, onWaehle }: {
                 className={`flex w-full items-center justify-between gap-2 whitespace-nowrap lg:whitespace-normal rounded-md border-l-2 px-3 py-2 text-left text-body-s transition-colors ${
                   an
                     ? 'border-brass-500 bg-brass-100 font-medium text-brass-800'
-                    : 'border-transparent text-ink-700 hover:bg-well'
+                    : 'border-transparent text-ink-700 lc-hover-flaeche'
                 }`}
               >
                 {/* lg (vertikale Leiste): Label voll umbrechen statt abschneiden
@@ -42,19 +58,12 @@ export function SachgebietKacheln({ zaehler, gesamt, aktiv, onWaehle }: {
                     versicherung & Abgaben»). Mobil (horizontale Scroll-Reihe)
                     bleibt es einzeilig. */}
                 <span className="truncate lg:overflow-visible lg:whitespace-normal lg:leading-snug">{e.label}</span>
-                <span className={`num text-xs ${an ? 'text-brass-700' : 'text-ink-500'}`}>{e.count}</span>
+                <span className={`num text-xs ${an ? 'text-brass-700' : 'text-ink-500'}`}>{zahlGruppiert(e.count)}</span>
               </button>
             </li>
           );
         })}
       </ul>
-      {/* Scroll-Affordance (Responsive-Audit D10): auf dem mobilen Chip-Band
-          war das seitliche Scrollen unsichtbar — das letzte Sachgebiet wirkte
-          mitten im Wort abgeschnitten («Strafr…»). Ein rechter Verlauf über den
-          Seitengrund signalisiert «hier geht es weiter». Ab lg ist die Rail
-          vertikal (kein Seitwärts-Scroll) → ausgeblendet. */}
-      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-paper to-transparent lg:hidden" />
-      </div>
     </nav>
   );
 }

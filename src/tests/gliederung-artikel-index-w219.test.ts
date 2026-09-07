@@ -8,7 +8,8 @@
  * vor dieser Slice lieferte `baueGliederungsModell` gar kein `artikelIndex`-Feld
  * — jeder dieser Tests wäre mit einem TypeScript-Fehler ODER `undefined` an der
  * ersten Assertion gescheitert. Belegt durch denselben Referenz-Erlass-Satz wie
- * S3 (VwVG/NHG/VMWG/AR-145.312/OR/ZH-243, `ladeNormFixture`), damit die Zahlen
+ * S3 (VwVG/NHG/VMWG/AR-145.312/OR/SG-2935 — bis 2.9.2026 ZH-243, s. u.,
+ * `ladeNormFixture`), damit die Zahlen
  * gegen den committeten Korpus stehen, nicht gegen erfundene Bäume (§7).
  */
 import { describe, it, expect } from 'vitest';
@@ -98,13 +99,22 @@ describe('S9 — Artikel-Index bleibt LEER ausserhalb B2/B4 (§15: kein unnötig
     expect(m.artikelIndex).toEqual([]);
   });
 
-  it('ZH-243 (T10, kein Sidecar): seit W2·18 b2-index — der Index ist der EINZIGE Zugang', () => {
+  it('SG-2935 (T10, kein Sidecar): seit W2·18 b2-index — der Index ist der EINZIGE Zugang', () => {
     // GEÄNDERTE ERWARTUNG, deklariert (Auftrag David 13.8.2026): bis hierher
     // stand hier b3-leer und ein leerer Index — «dieselbe Ehrlichkeit wie
     // knoten». Ehrlich war daran nur die Hälfte: dass die GLIEDERUNG fehlt,
-    // stimmt; dass es nichts zu zeigen gäbe, nicht. Die 18 Nicht-Anhang-Artikel
-    // stehen im Snapshot, die 132 Anhang-Einträge im Anhang-Ast.
-    const m = lade('kanton', 'ZH-243');
+    // stimmt; dass es nichts zu zeigen gäbe, nicht. Die Nicht-Anhang-Artikel
+    // stehen im Snapshot, die Anhang-Einträge im Anhang-Ast.
+    //
+    // FIXTURE-WECHSEL, deklariert (§6.3, 2.9.2026): der Fall stand auf ZH-243
+    // (damals 18 Nicht-Anhang-Zeilen ohne einen einzigen Randtitel, 132 im
+    // Anhang-Ast). Diese Messung von damals bleibt richtig — sie ist nur nicht
+    // mehr abrufbar: seit den ZH-Gliederungs-/Randtitel-Sidecars (R1) trägt
+    // ZH-243 ein Sidecar und alle 18 Zeilen einen Randtitel. Geprüft wird hier
+    // aber der sidecar-LOSE Erlass, nicht ZH-243 — die Erlass-Wahl war Zufall,
+    // die Eigenschaft ist die Regel. Nachfolger mit derselben Form (gemessen
+    // 2.9.2026): SG-2935, kein Sidecar, 112 Artikel, 78 % Anhang, 25 Zeilen.
+    const m = lade('kanton', 'SG-2935');
     expect(m.modus).toBe('b2-index');
     const alle = m.artikelIndex.flatMap((g) => g.zeilen);
     expect(alle.length).toBeGreaterThan(0);

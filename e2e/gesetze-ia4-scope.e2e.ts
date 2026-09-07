@@ -18,7 +18,12 @@ import { fehlerSammeln } from './helpers/fehlerSammeln'
 
 const scopeZeile = (page: Page) => page.locator('#gesetze-filter-scope')
 const chip = (page: Page) => page.getByRole('button', { name: 'auf alle Ebenen erweitern' })
-const feld = (page: Page) => page.getByRole('searchbox', { name: 'Gesetze durchsuchen (Kürzel, Titel, SR-Nr.)' })
+// DEKLARIERTE ANPASSUNG (R12A/D22, 6.9.2026): das Filterfeld auf /gesetze trägt
+// jetzt das sichtbare Label «Filtern» — und damit auch den zugänglichen Namen
+// (WCAG 2.5.3: sichtbarer Text IST der Name; das frühere `aria-label`
+// «Gesetze durchsuchen …» sagte etwas anderes als das Bild). Nur der Locator
+// zieht nach, die Zusicherung bleibt Wort für Wort dieselbe.
+const feld = (page: Page) => page.getByRole('searchbox', { name: 'Filtern' })
 
 test.describe('IA-4 · Scope-Label je Ebene + programmatische Verknüpfung', () => {
   test('Landeplatz: «alle Ebenen», kein Chip; Label per aria-describedby am Input', async ({ page }) => {

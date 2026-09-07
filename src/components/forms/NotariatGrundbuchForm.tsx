@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BeruehrtRahmen, ErgebnisPlatzhalter, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, ErgebnisPlatzhalter, Field, inputCls } from '../vorlagen/ui';
 import { zahlNichtNegativ as zahl } from './eingabe';
 import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
@@ -156,10 +156,7 @@ export function NotariatGrundbuchForm({ minimal = false, ohneDisclaimer = false 
 
       {!minimal && (
         <>
-          <label className="flex items-start gap-2 text-body-s text-ink-700">
-            <input type="checkbox" checked={pfand} onChange={(e) => setPfand(e.target.checked)} className="mt-0.5" />
-            <span>Grundpfand (Schuldbrief/Hypothek) mitberechnen</span>
-          </label>
+          <Checkbox checked={pfand} onChange={setPfand} label="Grundpfand (Schuldbrief/Hypothek) mitberechnen" />
           {pfand && (
             <Field label="Pfandsumme (CHF)" hint="Standard = Kaufpreis, falls leer">
               <BetragsFeld value={ps} onChange={setPs} className={inputCls} placeholder="z. B. 800'000" />
@@ -167,10 +164,7 @@ export function NotariatGrundbuchForm({ minimal = false, ohneDisclaimer = false 
           )}
         </>
       )}
-      <label className="flex items-start gap-2 text-body-s text-ink-700">
-        <input type="checkbox" checked={steuer} onChange={(e) => setSteuer(e.target.checked)} className="mt-0.5" />
-        <span>Handänderungssteuer einbeziehen (kantonale/kommunale Steuer)</span>
-      </label>
+      <Checkbox checked={steuer} onChange={setSteuer} label="Handänderungssteuer einbeziehen (kantonale/kommunale Steuer)" />
 
       {/* QS-UI 8b: Ergebnisplatz auch im Leerzustand angesagt (W2·10-UI-NAV/N0d·W1). */}
       {!ergebnis && (

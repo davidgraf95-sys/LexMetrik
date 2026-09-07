@@ -23,6 +23,8 @@ import { permalinkKodieren, istISO, istKanton, einerVon, type PermalinkSpec } fr
 import { usePermalinkFelder } from '../../hooks/usePermalinkFelder';
 import { IcsExportButton } from '../IcsExportButton';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { Tabs, type TabItem } from '../ui/Tabs';
+import { datumOderStrich } from '../ui/datumText';
 
 const GW_DISCLAIMER =
   'Automatisierte Orientierungsberechnung zu Gewährleistung und Mängelrüge (Art. 197 ff., 219/219a, 367 ff. OR; ' +
@@ -31,6 +33,12 @@ const GW_DISCLAIMER =
   '(Eviktion), SIA-118-Detailregelungen sowie die AT-Verjährungsmechanik (Stillstand/Unterbrechung/Verzicht – dafür der ' +
   'Verjährungsrechner). Umstritten bzw. offen: Beginn bei sukzessiver Ablieferung, Abgrenzung Werkvertrag/Kauf, Reichweite ' +
   'der «Integration» in ein Bauwerk. Der konkrete Fall ist fachlich zu prüfen.';
+
+// E-2: Beschriftungen der Mangeltyp-Wahl (Segmented-Control `ui/Tabs`).
+const MANGEL_TYPEN: readonly TabItem<GwMangelTyp>[] = [
+  { code: 'offen', label: 'offen erkennbar' },
+  { code: 'versteckt', label: 'versteckt' },
+];
 
 const TYPEN: { code: GwVertragstyp; label: string }[] = [
   { code: 'fahrniskauf', label: 'Fahrniskauf (Art. 197 ff. OR)' },
@@ -52,7 +60,6 @@ const OBJEKTE: Record<GwVertragstyp, { code: GwObjekt; label: string }[]> = {
 };
 
 
-const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 
 // Permalink (FAHRPLAN-PRAXIS 1.3)
 type GwLink = {
@@ -127,16 +134,16 @@ export function GewaehrleistungForm() {
 
   const eingaben: Record<string, string> = {
     'Vertragstyp': TYPEN.find((t) => t.code === typ)!.label,
-    'Vertragsschluss': fmtISO(vertragsdatum),
+    'Vertragsschluss': datumOderStrich(vertragsdatum),
     ...(istGrundstueck ? {} : { 'Objekt': objektOptionen.find((o) => o.code === objektEff)?.label ?? '' }),
-    [uebergabeLabel]: fmtISO(uebergabe),
-    ...(istGrundstueck && eigentumserwerb ? { 'Eigentumserwerb (Grundbuch)': fmtISO(eigentumserwerb) } : {}),
-    'Mangel': mangelTyp === 'versteckt' ? `versteckt, entdeckt am ${fmtISO(entdeckung)}` : 'offen erkennbar',
+    [uebergabeLabel]: datumOderStrich(uebergabe),
+    ...(istGrundstueck && eigentumserwerb ? { 'Eigentumserwerb (Grundbuch)': datumOderStrich(eigentumserwerb) } : {}),
+    'Mangel': mangelTyp === 'versteckt' ? `versteckt, entdeckt am ${datumOderStrich(entdeckung)}` : 'offen erkennbar',
     ...(arglist ? { 'Absichtliche Täuschung': 'ja' } : {}),
     ...(typ === 'fahrniskauf' && konsument ? { 'Konsumentenkauf (Art. 210 Abs. 4)': gebraucht ? 'ja, gebrauchte Sache' : 'ja' } : {}),
     ...(istWerk && sia ? { 'SIA-Norm 118': 'vereinbart' } : {}),
     ...(vereinbart ? { 'Vereinbarte Verjährungsfrist': `${vereinbart} Jahre` } : {}),
-    'Stichtag': fmtISO(stichtag),
+    'Stichtag': datumOderStrich(stichtag),
     'Kanton (Feiertage)': kanton,
   };
 
@@ -193,27 +200,22 @@ export function GewaehrleistungForm() {
       {/* Mangel */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Art des Mangels">
-          <div className="flex gap-1 p-1 bg-surface rounded-xl w-fit" role="group" aria-label="Mangeltyp">
-            {([['offen', 'offen erkennbar'], ['versteckt', 'versteckt']] as const).map(([code, label]) => (
-              <button key={code} type="button" onClick={() => setMangelTyp(code)}
-                aria-pressed={mangelTyp === code}
-                className={`px-3.5 py-2 rounded-lg text-body-s font-medium transition-all ${
-                  mangelTyp === code ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-                }`}>
-                {label}
-              </button>
-            ))}
-          </div>
+          {/* E-2 (Design-Konsistenz 31.8.2026): war eine wortgleiche Kopie der
+              Segmented-Control aus `ui/Tabs` (dieselben Zustands-Klassen).
+              Jetzt der geteilte Baustein in derselben Semantik wie zuvor
+              (aria-pressed + role=group, §5/§10). */}
+          <Tabs items={MANGEL_TYPEN} value={mangelTyp} onChange={setMangelTyp}
+            mode="pressed" ariaLabel="Mangeltyp" />
         </Field>
         {mangelTyp === 'versteckt' && (
           <Field label="Entdeckung des Mangels" hint="dies a quo der Rügefrist bei versteckten Mängeln">
             <DatumsFeld value={entdeckung} onChange={setEntdeckung} className={inputCls} />
           </Field>
         )}
-        <Field label="Rüge erhoben am (optional)" hint="prüft die Rechtzeitigkeit gegen Richtwerte bzw. 60-Tage-Frist">
+        <Field label="Rüge erhoben am" optional hint="prüft die Rechtzeitigkeit gegen Richtwerte bzw. 60-Tage-Frist">
           <DatumsFeld value={ruegeAm} onChange={setRuegeAm} className={inputCls} />
         </Field>
-        <Field label="Vereinbarte Verjährungsfrist (Jahre, optional)" hint="wird gegen Mindest- (Art. 210 Abs. 4, 219a Abs. 3, 371 Abs. 3) und Höchstdauern geprüft">
+        <Field label="Vereinbarte Verjährungsfrist (Jahre)" optional hint="wird gegen Mindest- (Art. 210 Abs. 4, 219a Abs. 3, 371 Abs. 3) und Höchstdauern geprüft">
           <input type="number" inputMode="decimal" min={0} step={0.5} value={vereinbart} onChange={(e) => setVereinbart(e.target.value)}
             placeholder="leer = gesetzliche Frist" className={inputCls} />
         </Field>
@@ -260,13 +262,13 @@ export function GewaehrleistungForm() {
                 <p className="text-body-l font-semibold text-ink-900"><NormText text={`entfällt (Arglist, Art. 203 OR)`} /></p>
               ) : ergebnis.ruege.art === 'sofort' ? (
                 <>
-                  <p className="text-body-l font-semibold text-ink-900 num">«sofort» – Richtwert {fmtISO(ergebnis.ruege.richtwertISO)}</p>
-                  <p className="text-xs text-ink-500 num">sicher: {fmtISO(ergebnis.ruege.sicherISO)} · äusserstens: {fmtISO(ergebnis.ruege.maximalISO)} (Einzelfall)</p>
+                  <p className="text-body-l font-semibold text-ink-900 num">«sofort» – Richtwert {datumOderStrich(ergebnis.ruege.richtwertISO)}</p>
+                  <p className="text-xs text-ink-500 num">sicher: {datumOderStrich(ergebnis.ruege.sicherISO)} · äusserstens: {datumOderStrich(ergebnis.ruege.maximalISO)} (Einzelfall)</p>
                 </>
               ) : (
                 <>
-                  <p className="text-body-l font-semibold text-ink-900 num">bis {fmtISO(ergebnis.ruege.endeISO)}</p>
-                  <p className="text-xs text-ink-500">{ergebnis.ruege.art === 'tage60' ? '60 Tage' : 'SIA-Garantiefrist (2 Jahre)'} ab {fmtISO(ergebnis.ruege.basisISO)}</p>
+                  <p className="text-body-l font-semibold text-ink-900 num">bis {datumOderStrich(ergebnis.ruege.endeISO)}</p>
+                  <p className="text-xs text-ink-500">{ergebnis.ruege.art === 'tage60' ? '60 Tage' : 'SIA-Garantiefrist (2 Jahre)'} ab {datumOderStrich(ergebnis.ruege.basisISO)}</p>
                 </>
               )}
               <p className="text-xs text-ink-500">Versäumnis = Genehmigungsfiktion; keine Unterbrechung/Hemmung</p>
@@ -279,12 +281,12 @@ export function GewaehrleistungForm() {
                 {ergebnis.verjaehrung.teilzwingend && <span className="lc-badge lc-badge-ok shrink-0">teilzwingend</span>}
               </div>
               <p className="text-body-l font-semibold text-ink-900 num">
-                {ergebnis.verjaehrung.jahre} Jahre → {fmtISO(ergebnis.verjaehrung.endeISO)}
+                {ergebnis.verjaehrung.jahre} Jahre → {datumOderStrich(ergebnis.verjaehrung.endeISO)}
               </p>
-              <p className="text-xs text-ink-500 num">ab {fmtISO(ergebnis.verjaehrung.beginnISO)} · am Stichtag:{' '}
+              <p className="text-xs text-ink-500 num">ab {datumOderStrich(ergebnis.verjaehrung.beginnISO)} · am Stichtag:{' '}
                 {ergebnis.verjaehrung.verjaehrtAmStichtag
                   ? <span className="text-danger-700 font-semibold">verjährt</span>
-                  : <span className="text-sage-700 font-semibold">nicht verjährt</span>}
+                  : <span className="text-ok-text font-semibold">nicht verjährt</span>}
               </p>
               <p className="text-xs text-ink-500">
                 Stillstand/Unterbrechung/Verzicht: <Link to="/rechner/verjaehrung" className="text-brass-700 no-underline hover:text-brass-600">Verjährungsrechner →</Link>
@@ -309,7 +311,7 @@ export function GewaehrleistungForm() {
       )}
 
       {ergebnis && ergebnis.status !== 'ok' && (
-        <div className="rounded-lg border border-line bg-danger-bg p-4">
+        <div role="alert" className="lc-notice lc-notice-danger">
           <p className="text-body-s text-danger-700">{ergebnis.ergebnis}</p>
         </div>
       )}

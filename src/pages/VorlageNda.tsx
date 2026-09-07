@@ -5,8 +5,10 @@ import {
 import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { VorlagenSeite, type SeiteCtx, type VorlagenSeitenConfig } from '../components/vorlagen/VorlagenSeite';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
 
 // ─── Vorlagen-Wizard: Geheimhaltungsvereinbarung (NDA) ──────────────────────
 // P1-Vorlage der Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V3).
@@ -37,30 +39,18 @@ function eingabeInhalt({ a, set }: SeiteCtx<NdaAntworten>, schritt: number) {
     case 'parteien': return (
       <div className="space-y-4">
         <Field label="Richtung der Geheimhaltung">
-          <div className="grid grid-cols-2 gap-2">
-            <button type="button" onClick={() => set('gegenseitig', true)}
-              className={`rounded-lg border px-3 py-2 text-left text-body-s ${a.gegenseitig ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
-              <span className="font-medium block">Gegenseitig</span>
-              {/* LM-176 (Fahrplan B5, §6): text-ink-500 auf getönter bg-brass-100
-                  (gewählter Zustand) lag bei 4.37:1 — knapp unter WCAG AA
-                  (gemessen, computed styles). ink-600 hebt auf 6.3:1, ohne
-                  den Präzedenzfall (Auftrag David 25.6.2026, .lc-fineprint
-                  ink-500→ink-600) zu verlassen; im unmarkierten (weissen)
-                  Zustand bleibt der Kontrast ebenfalls unverändert gut. */}
-              <span className="text-ink-600 text-xs">beide Parteien verpflichtet</span>
-            </button>
-            <button type="button" onClick={() => set('gegenseitig', false)}
-              className={`rounded-lg border px-3 py-2 text-left text-body-s ${!a.gegenseitig ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
-              <span className="font-medium block">Einseitig</span>
-              {/* LM-176 (Fahrplan B5, §6): text-ink-500 auf getönter bg-brass-100
-                  (gewählter Zustand) lag bei 4.37:1 — knapp unter WCAG AA
-                  (gemessen, computed styles). ink-600 hebt auf 6.3:1, ohne
-                  den Präzedenzfall (Auftrag David 25.6.2026, .lc-fineprint
-                  ink-500→ink-600) zu verlassen; im unmarkierten (weissen)
-                  Zustand bleibt der Kontrast ebenfalls unverändert gut. */}
-              <span className="text-ink-600 text-xs">nur Partei B verpflichtet</span>
-            </button>
-          </div>
+          {/* B3-4/A3-5 (R3-α, 31.8.2026): zwei handgezeichnete Kacheln ohne
+              `aria-pressed` — ein Boolean, als Auswahl von zweien dargestellt.
+              Er läuft jetzt über den EINEN Baustein; die LM-176-Messung
+              (Unterzeile ink-600 auf getönter Fläche) steht dort. */}
+          <SelectionGrid
+            className="grid grid-cols-2 gap-2" gruppenLabel="Richtung der Geheimhaltung"
+            items={[
+              { code: 'gegenseitig', label: 'Gegenseitig', sub: 'beide Parteien verpflichtet' },
+              { code: 'einseitig', label: 'Einseitig', sub: 'nur Partei B verpflichtet' },
+            ] as const}
+            value={a.gegenseitig ? 'gegenseitig' : 'einseitig'}
+            onSelect={(c) => set('gegenseitig', c === 'gegenseitig')} />
         </Field>
         <Field label={labelA(a)}>
           <input className={inputCls} value={a.parteiAName} onChange={(e) => set('parteiAName', e.target.value)} placeholder="Firma / Vorname Name" />
@@ -77,7 +67,11 @@ function eingabeInhalt({ a, set }: SeiteCtx<NdaAntworten>, schritt: number) {
       </div>
     );
 
-    case 'inhalt': return (
+    case 'inhalt': {
+      // Wert für die Nachwirkungs-Beschriftung (LM-115): nur wenn die Option
+      // an ist UND eine gültige Jahreszahl darin steht.
+      const nachwirkJahre = a.dauerErfassen && (zahl(a.dauerJahre) ?? 0) > 0 ? zahl(a.dauerJahre)! : null;
+      return (
       <div className="space-y-4">
         {/* LM-165 (B6/K-15): aria-invalid rollt dieselbe Feld-Markierung wie in den
             Fristen-Rechnern aus (§8) — sicher pristine, weil dieser Schritt nur nach
@@ -91,10 +85,16 @@ function eingabeInhalt({ a, set }: SeiteCtx<NdaAntworten>, schritt: number) {
         <Field label="Konkretisierung der vertraulichen Informationen" optional hint="zusätzlich zur allgemeinen Definition">
           <input className={inputCls} value={a.infoBeschrieb} onChange={(e) => set('infoBeschrieb', e.target.value)} placeholder="z. B. Quellcode, Kundenlisten, Preiskalkulationen" />
         </Field>
+        {/* B13/LM-115: die Beschriftung kündigt einen Wert an — also zeigt sie
+            den EINGESTELLTEN, nicht den Platzhalter «N». Solange nichts (oder
+            nichts Gültiges) gesetzt ist, verspricht sie keine Zahl, statt eine
+            zu behaupten (§8). Reine Darstellung: gerechnet wird nichts. */}
         <Checkbox
           checked={a.dauerErfassen}
           onChange={(v) => set('dauerErfassen', v)}
-          label={<><span><strong>Nachwirkungsfrist</strong> vereinbaren (Geheimhaltung gilt N Jahre über das Vorhaben hinaus)</span></>} />
+          label={<><span><strong>Nachwirkungsfrist</strong> vereinbaren {nachwirkJahre !== null
+            ? `(Geheimhaltung gilt ${nachwirkJahre} ${nachwirkJahre === 1 ? 'Jahr' : 'Jahre'} über das Vorhaben hinaus)`
+            : '(Geheimhaltung gilt über das Vorhaben hinaus — Dauer im Feld darunter)'}</span></>} />
         {a.dauerErfassen && (
           <Field label="Dauer nach Beendigung (Jahre)">
             <input className={inputCls + ' sm:max-w-[8rem]'} inputMode="numeric" value={a.dauerJahre}
@@ -112,13 +112,14 @@ function eingabeInhalt({ a, set }: SeiteCtx<NdaAntworten>, schritt: number) {
           label={<><span><strong>Konventionalstrafe</strong> vereinbaren <span className="text-ink-500"><NormText text={`(verfällt auch ohne Schaden; übermässige setzt der Richter herab, Art. 163 Abs. 3 OR)`} /></span></span></>} />
         {a.konventionalstrafe && (
           <Field label="Konventionalstrafe je Verletzung (CHF)">
-            <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.strafeCHF}
+            <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.strafeCHF}
               aria-invalid={zahl(a.strafeCHF) === null}
-              onChange={(e) => set('strafeCHF', e.target.value)} placeholder="z. B. 20000.00" />
+              onChange={(v) => set('strafeCHF', v)} placeholder="z. B. 20'000.00" />
           </Field>
         )}
       </div>
-    );
+      );
+    }
 
     default: return null;
   }

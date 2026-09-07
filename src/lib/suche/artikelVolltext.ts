@@ -36,9 +36,30 @@ const POOL = 300;
  *  Bestimmung» statt als «wird noch geladen» (§8, Auflage David 25.7.2026). */
 export interface ArtikelSuche {
   suche: (q: string, limit?: number) => SuchTreffer[];
-  /** Noch nicht im Index — leer, sobald alle Ebenen stehen. */
+  /** Noch nicht im Index — leer, sobald alle ERWARTETEN Ebenen stehen. */
   fehlendeEbenen: Ebene[];
+  /** Ebenen, die das Artefakt GAR NICHT trägt (K3-Scharfschaltung 1.9.2026:
+   *  «kanton»). Kategorisch verschieden von `fehlendeEbenen`: dort wird noch
+   *  geladen, hier kommt nichts mehr nach — die Ebene liegt ausschliesslich am
+   *  Edge. Zwei Felder statt eines Flags, weil die Oberfläche zwei VERSCHIEDENE
+   *  Sätze sagen muss: «wird noch geladen» ist eine Vertröstung, «nur online»
+   *  eine dauerhafte Einschränkung mit Offline-Folge (§8). Ein einziges Feld
+   *  hätte die beiden Fälle stillschweigend gleichgesetzt. */
+  nurOnlineEbenen: Ebene[];
 }
+
+/** Ersatz, wenn der Index-Abruf GANZ scheitert (Netz, 404, kaputtes JSON).
+ *  Meldet BEIDE Ebenen als «nur online» — nicht aus Vorsicht, sondern weil es
+ *  in diesem Zustand stimmt: lokal ist nichts durchsuchbar, die Edge-Suche
+ *  deckt Bund UND Kanton ab, also ist sie der einzige verbleibende Weg. Bis zum
+ *  1.9.2026 trug dieser Pfad `fehlendeEbenen: []` / keine Ebene — die
+ *  Gesetzestext-Gruppe fiel damit ohne Treffer aus der Liste und die Suche
+ *  verschwieg, dass ihr halber Bestand gar nicht geladen war (§8). */
+export const SUCHE_OHNE_INDEX: ArtikelSuche = {
+  suche: () => [],
+  fehlendeEbenen: [],
+  nurOnlineEbenen: ['bund', 'kanton'],
+};
 
 let fertig: ArtikelSuche | null = null;
 let ladePromise: Promise<ArtikelSuche> | null = null;
@@ -244,10 +265,15 @@ export function baueSucher(eintraege: IndexEintrag[], FlexSearch: FlexLike): Suc
   const gehoertZu = (e: IndexEintrag, eb: Ebene) =>
     e.eb === eb || (eb === 'bund' && e.eb !== 'kanton');
 
-  const fuegeEin = (doc: DocLike, eb: Ebene, von: number, bis: number) => {
+  /** @returns Zahl der eingefügten Einträge. Trägt die EBENEN-EHRLICHKEIT (§8, s.
+   *  `ergaenze`): eine Ebene, für die der Index nichts liefert, darf nicht als
+   *  bereit gelten — sonst meldete `fehlendeEbenen` sie als vorhanden. */
+  const fuegeEin = (doc: DocLike, eb: Ebene, von: number, bis: number): number => {
+    let anzahl = 0;
     for (let i = von; i < bis; i++) {
       const e = eintraege[i];
       if (!gehoertZu(e, eb)) continue;
+      anzahl++;
       doc.add({
         id: i,
         // Kürzel UND Routen-Key mitindexieren (z. B. «StGB» und «STGB», «ArGV 1»/«ARGV_1»).
@@ -260,6 +286,7 @@ export function baueSucher(eintraege: IndexEintrag[], FlexSearch: FlexLike): Suc
         f: (e.f ?? '').toLowerCase(),
       });
     }
+    return anzahl;
   };
 
   /** Neuen Ebenen-Index anlegen und in EBENEN_REIHE-Ordnung einhängen (Bund vor
@@ -329,15 +356,26 @@ export function baueSucher(eintraege: IndexEintrag[], FlexSearch: FlexLike): Suc
   };
 
   return {
+    // EBENE OHNE EINTRÄGE WIRD NICHT EINGEHÄNGT (K3-Vorbereitung, 31.8.2026).
+    //
+    // Heute verhaltensneutral: der ausgelieferte Index trägt beide Ebenen, die
+    // Zählung ist immer > 0, es ändert sich nichts. Die Regel greift erst, wenn
+    // der Generator eine Ebene weglässt (SUCHE_INDEX_EBENEN, s.
+    // scripts/such-index-generieren.ts) — dann MUSS `fehlendeEbenen` diese Ebene
+    // melden, damit die Oberfläche sie als fehlend ausweist statt Vollständigkeit
+    // zu behaupten (§8). Ohne diese Zeile hinge ein leerer Ebenen-Index im
+    // `indizes`-Array, `bereiteEbenen()` meldete ihn als bereit, `fehlendeEbenen`
+    // bliebe leer — und die Suche verschwiege 29 055 kantonale Artikel lautlos.
     ergaenze(eb) {
       const doc = neuesDoc();
-      fuegeEin(doc, eb, 0, eintraege.length);
+      if (fuegeEin(doc, eb, 0, eintraege.length) === 0) return;
       haengeEin(eb, doc);
     },
     async ergaenzeGestaffelt(eb) {
       const doc = neuesDoc();
+      let anzahl = 0;
       for (let von = 0; von < eintraege.length; von += HAEPPCHEN) {
-        fuegeEin(doc, eb, von, Math.min(von + HAEPPCHEN, eintraege.length));
+        anzahl += fuegeEin(doc, eb, von, Math.min(von + HAEPPCHEN, eintraege.length));
         // Kontrolle zurück an den Browser: Eingabe und Scrollen bleiben während
         // des Nachladens bedienbar. Erst NACH dem letzten Häppchen einhängen —
         // ein halb gefüllter Index würde sonst unvollständige Treffer liefern
@@ -345,6 +383,7 @@ export function baueSucher(eintraege: IndexEintrag[], FlexSearch: FlexLike): Suc
         // vermeiden soll (§8).
         await new Promise((r) => setTimeout(r, 0));
       }
+      if (anzahl === 0) return; // s. `ergaenze` — leere Ebene bleibt «fehlend»
       haengeEin(eb, doc);
     },
     bereiteEbenen: () => indizes.map((i) => i.eb),
@@ -381,17 +420,29 @@ async function baue(): Promise<ArtikelSuche> {
     import('flexsearch'),
     fetch(import.meta.env.BASE_URL + 'such-index/artikel.json').then((r) => {
       if (!r.ok) throw new Error('Index ' + r.status);
-      return r.json() as Promise<{ eintraege: IndexEintrag[] }>;
+      return r.json() as Promise<{ eintraege: IndexEintrag[]; ebenen?: Ebene[] }>;
     }),
   ]);
   const FlexSearch = ((flex as unknown as { default?: unknown }).default ?? flex) as FlexLike;
   const sucher = baueSucher(daten.eintraege, FlexSearch);
 
+  // WELCHE EBENEN DAS ARTEFAKT ÜBERHAUPT TRÄGT (K3-Scharfschaltung 1.9.2026).
+  // Der Generator schreibt sie in `ebenen` — genau dafür steht das Feld dort seit
+  // K3. Ohne diese Zeile müsste der Client aus der Abwesenheit von Einträgen
+  // RATEN, ob eine Ebene noch lädt oder gar nicht erst gebaut wurde; das sind zwei
+  // verschiedene Auskünfte an den Nutzer (§8). Fallback auf alle Ebenen nur für
+  // ein altes Artefakt ohne das Feld — dann verhält sich der Client wie vor K3.
+  const erwartet: readonly Ebene[] = daten.ebenen?.length
+    ? EBENEN_REIHE.filter((eb) => daten.ebenen!.includes(eb))
+    : EBENEN_REIHE;
+  const nurOnline = EBENEN_REIHE.filter((eb) => !erwartet.includes(eb));
+
   // Stufe 1: Bund — ab hier ist die Suche benutzbar.
   sucher.ergaenze('bund');
   const nachStufe = (): ArtikelSuche => ({
     suche: sucher.suche,
-    fehlendeEbenen: EBENEN_REIHE.filter((eb) => !sucher.bereiteEbenen().includes(eb)),
+    fehlendeEbenen: erwartet.filter((eb) => !sucher.bereiteEbenen().includes(eb)),
+    nurOnlineEbenen: [...nurOnline],
   });
   const erste = nachStufe();
 
@@ -401,7 +452,7 @@ async function baue(): Promise<ArtikelSuche> {
   // sagt dann dauerhaft, dass kantonale Treffer fehlen, statt Vollständigkeit
   // vorzutäuschen (§8).
   void (async () => {
-    for (const eb of EBENEN_REIHE) {
+    for (const eb of erwartet) {
       if (sucher.bereiteEbenen().includes(eb)) continue;
       try { await sucher.ergaenzeGestaffelt(eb); } catch { /* Ebene bleibt als fehlend gemeldet */ }
     }

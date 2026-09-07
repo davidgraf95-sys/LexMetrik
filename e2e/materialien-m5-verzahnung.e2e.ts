@@ -25,7 +25,7 @@ test('MaterialLeser-Karte trägt die nur-verweis-Badge (V3-Vorzug E6a·M5)', asy
   // role="img" mit aria-label «nur Verweis …» (StatusBadge voll, ohne Glyph).
   await expect(page.getByRole('img', { name: /nur Verweis/ })).toBeVisible()
   // Der prominente amtliche Live-Link bleibt (§7c).
-  await expect(page.getByRole('link', { name: /Zur amtlichen Fassung/ })).toBeVisible()
+  await expect(page.getByRole('link', { name: /Amtliche Fassung ↗/ })).toBeVisible()
 
   expect(fehler, `Konsolen-/Seitenfehler:\n${fehler.join('\n')}`).toEqual([])
 })

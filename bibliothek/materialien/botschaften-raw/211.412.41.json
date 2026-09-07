@@ -6,6 +6,123 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/674"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/0291"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2005/204"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-05-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.039"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi fédérale sur l'acquisition d'immeubles par des personnes à l'étranger"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge federale sull'acquisto di fondi da parte di persone all'estero"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "211.412.41"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/674"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/0291"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2005/204"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-05-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.039"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi fédérale sur l'acquisition d'immeubles par des personnes à l'étranger"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge federale sull'acquisto di fondi da parte di persone all'estero"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "211.412.41"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/674"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/0291"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2005/204"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-05-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.039"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi fédérale sur l'acquisition d'immeubles par des personnes à l'étranger"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge federale sull'acquisto di fondi da parte di persone all'estero"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "211.412.41"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2020/226"
     },
     "proj": {
@@ -75,123 +192,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente l'approvazione e l'attuazione dell'Accordo tra la Confederazione Svizzera e il Regno Unito di Gran Bretagna e Irlanda del Nord sui diritti dei cittadini in seguito al recesso del Regno Unito dall'Unione europea e dall'Accordo sulla libera circolazione delle persone"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "211.412.41"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/674"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/0291"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2005/204"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-05-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.039"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi fédérale sur l'acquisition d'immeubles par des personnes à l'étranger"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge federale sull'acquisto di fondi da parte di persone all'estero"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "211.412.41"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/674"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/0291"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2005/204"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-05-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.039"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi fédérale sur l'acquisition d'immeubles par des personnes à l'étranger"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge federale sull'acquisto di fondi da parte di persone all'estero"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "211.412.41"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/674"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/0291"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2005/204"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-05-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.039"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi fédérale sur l'acquisition d'immeubles par des personnes à l'étranger"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge federale sull'acquisto di fondi da parte di persone all'estero"
     }
   }
 ]

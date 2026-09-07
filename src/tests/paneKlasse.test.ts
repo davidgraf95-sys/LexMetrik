@@ -5,6 +5,7 @@
 // gepinnt: ändert ein Bau-Schritt sie versehentlich auf der Default-Seite,
 // schlägt dieser Test an.
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { paneKlasse } from '../components/layout/PaneKontext';
 
 // Die heutigen (Viewport-)Layout-Klassen der paneKlasse-fähigen Stellen.
@@ -34,5 +35,42 @@ describe('paneKlasse — Verhaltensneutralität des Default-Pfads', () => {
     for (const k of Object.keys(VIEWPORT) as (keyof typeof VIEWPORT)[]) {
       expect(paneKlasse(true, VIEWPORT[k], CONTAINER[k])).toBe(CONTAINER[k]);
     }
+  });
+});
+
+// ═══ A-2-WURZEL · der Pane-Wrapper misst die Pane, nicht das Fenster ════════
+//
+// R2-A (31.8.2026, FAHRPLAN-DESIGN-KONSISTENZ §3 «Runde-2-Liste»): der
+// Inhalts-Wrapper in `layout/Pane.tsx` polsterte mit `px-5 sm:px-6` — einer
+// VIEWPORT-Klasse, mitten in einem `@container/pane`. Ein schmales Pane auf
+// breitem Bildschirm bekam damit die weite Polsterung, ein breites Pane auf
+// schmalem Gerät die enge. Aus genau dieser Wurzel sind die zwei deklarierten
+// `sm:`-Ausnahmen des EntscheidLesers gewachsen (`entscheid-leser-b2.test.ts`,
+// `AUSNAHMEN`): seine klebende Leiste zieht mit `-mx-…/px-…` an DIESELBE Kante.
+//
+// DIE SCHWELLE IST TEIL DER ZUSAGE, nicht Geschmack: `@xl/pane` ist die
+// Haus-Abbildung von `sm:` (A-1/`ui/SeitenTitel`, gepinnt in `PAAR` derselben
+// Sonde). Stünde hier eine andere Zahl, hätten Wrapper und klebende Leiste zwei
+// Massstäbe für eine Kante — schlimmer als der alte Zustand.
+describe('A-2-Wurzel — die Polsterung des Pane-Wrappers hängt an der Pane', () => {
+  const PANE = readFileSync('src/components/layout/Pane.tsx', 'utf8');
+  const WRAPPER = /<div className="mx-auto w-full max-w-content ([^"]*)py-6">/;
+
+  it('POSITIV-SONDE: der Wrapper steht überhaupt noch da', () => {
+    expect(PANE).toMatch(WRAPPER);
+    // …und er sitzt in einem Container — sonst greift jede @-Klasse ins Leere.
+    expect(PANE).toContain('@container/pane');
+  });
+
+  it('polstert über die Container-Query, nicht über einen Viewport-Breakpoint', () => {
+    const polsterung = PANE.match(WRAPPER)![1];
+    expect(polsterung, 'Viewport-Breakpoint im Pane-Wrapper (Vorzustand: `px-5 sm:px-6`)')
+      .not.toMatch(/\b(?:sm|md|lg|xl|2xl):/);
+    expect(polsterung).toContain('@xl/pane:px-6');
+  });
+
+  it('NEGATIV-KONTROLLE: der Ausdruck findet den Vorzustand', () => {
+    const vorher = '<div className="mx-auto w-full max-w-content px-5 sm:px-6 py-6">';
+    expect(vorher.match(WRAPPER)![1]).toMatch(/\b(?:sm|md|lg|xl|2xl):/);
   });
 });

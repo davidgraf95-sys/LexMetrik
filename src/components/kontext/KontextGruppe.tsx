@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react';
+import { GruppenKopf } from '../ui/GruppenKopf';
 
 // ─── KontextGruppe · die EINE Gruppen-Hülle des Kontext-Panels ──────────────
 //
@@ -68,12 +69,22 @@ export function KontextGruppe({ titel, richtung, anzahl, children, hinweis, punk
           am Zeilenende und könnte weggeschnitten werden — MM1 verlangt ihn
           SICHTBAR, und ein unsichtbarer Zähler wäre §8-widrig. Der volle
           Wortlaut bleibt im `title` (kein stiller Verlust). */}
-      <h3 className={`lc-overline text-ink-600 ${rolle === 'wegweiser' ? 'truncate' : ''}`}
-        title={rolle === 'wegweiser' ? titel : undefined}>
-        {punktKlasse && <span className={punktKlasse} aria-hidden />}
-        {richtung && <span className="text-brass-700">{richtung} · </span>}
-        {titel}{anzahl !== undefined && <> <span className="num text-ink-500">{anzahl}</span></>}
-      </h3>
+      {/* B3-2 (R3-β, 31.8.2026): der Kopf lief über `ui/GruppenKopf` in seiner
+          DICHTEN Gestalt — dieselbe Anatomie wie die sechs Panel-Köpfe des
+          Lesers V3, die hier bis dahin je einzeln nachgezeichnet war. Der
+          Familien-Punkt ist die `marke` des Bausteins, das Richtungs-Label
+          gehört in den Titel (es ist Teil dessen, was die Gruppe SAGT, und muss
+          mit ihm zusammen gekappt werden). `text-ink-600` entfällt als
+          Utility: es ist die Grundfarbe von `.lc-overline` (index.css:1008),
+          wertidentisch. */}
+      <GruppenKopf
+        dicht
+        titel={<>{richtung && <span className="text-brass-700">{richtung} · </span>}{titel}</>}
+        zahl={anzahl}
+        marke={punktKlasse ? <span className={punktKlasse} aria-hidden /> : undefined}
+        title={rolle === 'wegweiser' ? titel : undefined}
+        className={rolle === 'wegweiser' ? 'truncate' : undefined}
+      />
       {children}
       {/* T2 (Design-Qualitäts-Pass 29.8.2026): der Hinweis-Slot trägt keine
           Halbzeile, sondern zwei bis drei ganze Sätze (Prüfstand-Angabe,

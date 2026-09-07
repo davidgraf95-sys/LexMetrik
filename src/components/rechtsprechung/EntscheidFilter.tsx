@@ -3,6 +3,7 @@ import type { EntscheidFilterWerte, SortModus } from '../../lib/rechtsprechung/b
 import { normLabel, filterEntscheide, richterHaeufigkeit, INSTANZ_ORDNUNG } from '../../lib/rechtsprechung/browse';
 import type { BrowseEntscheid, RichterRegister } from '../../lib/rechtsprechung/register';
 import { RichterFilter } from './RichterFilter';
+import { FacettenGruppe } from '../ui/FacettenGruppe';
 import { SORT_LABEL } from './zustand';
 
 // Schlanke Steuerleiste der Übersicht /rechtsprechung (ersetzt den schweren
@@ -19,42 +20,11 @@ function einzigartig<T>(werte: T[]): T[] {
   return [...new Set(werte)];
 }
 
-/** Eine Facetten-Achse (Auftrag 4/8) als Toggle-Chips mit Trefferzahl (Reglement
- *  R15: «Trefferzahl je Facette» gegen Null-Treffer-Klicks). Die primären Achsen
- *  sichtbar in der Ergebnis-Spalte statt im zugeklappten <details>. Reine Anzeige (§3). */
-function FacettenGruppe({ label, optionen }: {
-  label: string;
-  /** `voll` = ausgeschriebene a11y-/Tooltip-Bezeichnung, falls `text` eine Abkürzung ist. */
-  optionen: { id: string; text: string; voll?: string; n: number; aktiv: boolean; waehle: () => void }[];
-}) {
-  // lc-chip-zeile (LM-044/N1): Chip-Grammatik-Container — die Facetten sind
-  // <button>, tragen hier also den geschlossenen Hairline-Rahmen (drückbare Form)
-  // statt nur eine Farbnuance. Der Selected-Zustand (lc-chip-selected) bleibt
-  // unangetastet: die Grammatik setzt die Fläche ausdrücklich nur im Ruhezustand
-  // (:not(.lc-chip-selected) in index.css).
-  return (
-    <div role="group" aria-label={label} className="lc-chip-zeile flex flex-wrap items-center gap-x-2 gap-y-1.5">
-      <span aria-hidden className="lc-overline shrink-0">{label}</span>
-      {optionen.map((o) => (
-        <button key={o.id} type="button" aria-pressed={o.aktiv} onClick={o.waehle}
-          aria-label={`${label}: ${o.voll ?? o.text} (${o.n})`} title={o.voll}
-          className={`lc-chip ${o.aktiv ? 'lc-chip-selected' : ''}`}>
-          {/* ink-600 (nicht ink-500): 12px-Ziffer auf --well ≥4.5:1 (R4/WCAG 1.4.3,
-              Werte nicht runden — ink-500 lag bei 4.47:1). Aktiv erbt brass-700. */}
-          {/* LM-051: Beschriftung und Zahl brauchen einen Trenner im TEXTKNOTEN,
-              nicht nur den optischen Abstand (ml-1.5) — sonst liest/kopiert man
-              «BS3765». Das explizite Leerzeichen steht als eigener Textknoten
-              zwischen den beiden Flex-Items: es fällt mit dem vorangehenden
-              Label zu EINEM anonymen Flex-Item zusammen und wird dort als
-              Zeilenend-Leerraum entfernt — textContent «BS 3765», Darstellung
-              unverändert. Die aria-labels («Gemeinwesen: BS (3765)») bleiben
-              wie sie sind; sie waren nie das Problem. */}
-          {o.text}{' '}<span className={`num ml-1.5 ${o.aktiv ? '' : 'text-ink-600'}`}>{o.n}</span>
-        </button>
-      ))}
-    </div>
-  );
-}
+// Die Facetten-Achse (Auftrag 4/8: Toggle-Chips mit Trefferzahl, R15) lag hier
+// als lokale Komponente und war die zweite Kopie derselben Anatomie. Sie liegt
+// seit Runde 2 in `components/ui/FacettenGruppe` — dort steht auch ihre
+// vollständige Herleitung (LM-040/044/051). Die primären Achsen bleiben sichtbar
+// in der Ergebnis-Spalte statt im zugeklappten <details>.
 
 export function EntscheidFilter({
   werte, onChange, bestand, richterRegister, sort, onSort, dichte, onDichte, klappeOffen, onKlappe,
@@ -78,6 +48,31 @@ export function EntscheidFilter({
   const gerichte = einzigartig(bestand.map((e) => JSON.stringify({ id: e.gericht, name: e.gerichtName })))
     .map((s) => JSON.parse(s) as { id: string; name: string })
     .sort((a, b) => a.name.localeCompare(b.name, 'de'));
+  // ── LM-069 (B12, 4.9.2026) · ZWEI EINTRÄGE, EINE BESCHRIFTUNG ───────────────
+  // GEMESSEN am gebauten Stand (`/rechtsprechung` @1440, «Erweiterte Filter» →
+  // «Gericht»): die Liste führte «Bundesgericht (24)» UND «Bundesgericht (1259)»
+  // — zwei Werte, an ihrer Beschriftung nicht unterscheidbar. Die Zahlen sind
+  // richtig (§8), mehrdeutig ist nur der Name: der Bestand trägt für die
+  // Gerichts-IDs `bge` und `bger` denselben `gerichtName`.
+  // KEIN Sonderfall auf die IDs — die Unterscheidung wird aus dem BESTAND
+  // abgeleitet und steht darum auch dann richtig, wenn morgen zwei andere
+  // Gerichte denselben Namen tragen: nachgezählt im Artefakt
+  // `public/rechtsprechung/register.json` sind alle 1'259 `bge`-Einträge
+  // `leitcharakter: 'leitentscheid'` mit BGE-Fundstelle, alle 24 echten
+  // `bger`-Einträge `routine` ohne. Der Zusatz erscheint NUR bei mehrdeutigem
+  // Namen und benutzt die Hausformel dieser Datei («Leitentscheid == amtlicher
+  // BGE», Häkchen F4 weiter unten), erfindet also keine zweite Wahrheit (§5).
+  const nameMehrdeutig = new Set(
+    gerichte.map((g) => g.name).filter((n, i, arr) => arr.indexOf(n) !== i),
+  );
+  const nurLeitentscheide = (id: string) => {
+    const echte = bestand.filter((e) => !e.verweis && e.gericht === id);
+    return echte.length > 0 && echte.every((e) => e.leitcharakter === 'leitentscheid');
+  };
+  const gerichtLabel = (g: { id: string; name: string }) =>
+    (nameMehrdeutig.has(g.name)
+      ? `${g.name} — ${nurLeitentscheide(g.id) ? 'amtliche Sammlung (BGE)' : 'übrige Urteile'}`
+      : g.name);
   const kantone = einzigartig(bestand.map((e) => e.kanton)).sort();
   const sprachen = einzigartig(bestand.map((e) => e.sprache)).sort();
   // Verweis-Einträge (vollständige Urteile zu einem BGE) NICHT mitzählen — sonst
@@ -188,45 +183,70 @@ export function EntscheidFilter({
   // Beim Zurücksetzen das Sachgebiet (Rail/URL) bewahren — nur Sekundärfilter+Suche leeren.
   const zuruecksetzen = () => onChange({ sachgebiet: werte.sachgebiet ?? null });
 
+  // D22-Anatomie: Text-Schalter mit Registerstrich statt Kasten-Segment.
   const dichteBtn = (d: 'liste' | 'karten', label: string) => (
-    <button type="button" onClick={() => onDichte(d)} aria-pressed={dichte === d}
-      className={`px-2.5 py-1 text-xs transition-colors ${dichte === d ? 'bg-brass-100 text-brass-800 font-medium' : 'text-ink-500 hover:text-ink-700'}`}>
+    <button type="button" onClick={() => onDichte(d)} aria-pressed={dichte === d} className="ub-schalter">
       {label}
     </button>
   );
 
   return (
     <div className="space-y-2.5">
-      {/* Toolbar — eine Zeile (umbrechend auf Mobil). */}
-      <div className="flex flex-wrap items-center gap-2">
+      {/* ── D22 Ziff. 2 (Nachzug D24, 6.9.2026) · EIN FILTERFELD, VOLLE BREITE ─
+          /gesetze, /materialien und /rechner tragen diese Anatomie seit R12A;
+          /rechtsprechung und /vorlagen standen noch aussen vor (R12A §4: «beide
+          ausserhalb der Whitelist dieses Auftrags»). Hier stand das Feld in
+          einer `flex-wrap`-Toolbar, die es sich mit Sortierung und Ansichts-
+          Umschalter teilte — es bekam den Rest der Zeile, und die beiden
+          Nachbarn standen als Kästen daneben.
+          Neu: Label «Filtern» über dem Feld (`.ub-filter`), Feld über die volle
+          Inhaltsbreite, Umfang in der Fuss-Zeile (`aria-describedby`), und die
+          Ansichts-Wahl als Text-Schalter (`.ub-schalter`) statt als
+          Kasten-Gruppe. Die SORTIERUNG bleibt ein <select>: sie führt fünf
+          Optionen, und fünf Text-Schalter wären genau die Kasten-Wand, die D22
+          abräumt (dieselbe Begründung wie bei den Materialien-Facetten).
+          Der sichtbare Text IST der zugängliche Name (WCAG 2.5.3) — das frühere
+          `aria-label` («Rechtsprechung durchsuchen») sagte etwas anderes als
+          das, was auf dem Bild steht. */}
+      <div className="ub-filter">
+        <label htmlFor="rechtsprechung-filter" className="lc-overline">Filtern</label>
         <input
+          id="rechtsprechung-filter"
           type="search"
           value={werte.q ?? ''}
           onChange={(e) => setze({ q: e.target.value })}
-          placeholder="Suchen — Thema, Aktenzeichen, Norm, Gericht …"
-          aria-label="Rechtsprechung durchsuchen"
-          className="lc-input lc-input-sm min-w-[180px] flex-1"
+          placeholder="Thema, Aktenzeichen, Norm, Gericht …"
+          aria-describedby="rechtsprechung-filter-scope"
+          className="lc-input h-11 py-0 text-body-s w-full"
         />
-        <label className="flex shrink-0 items-center gap-1.5 text-xs text-ink-500">
-          <span className="hidden sm:inline">Sortierung</span>
-          {/* min-w + shrink-0: in der flex-wrap-Toolbar wurde der Select sonst
-              gestaucht und das längste Label («Leitentscheide zuerst») abgeschnitten. */}
-          <select className="lc-select lc-input-sm w-auto min-w-[13.75rem]" value={sort} onChange={(e) => onSort(e.target.value as SortModus)}
-            aria-label="Sortierung">
-            {(Object.keys(SORT_LABEL) as SortModus[]).map((s) => <option key={s} value={s}>{SORT_LABEL[s]}</option>)}
-          </select>
-        </label>
-        <div className="inline-flex shrink-0 overflow-hidden rounded-md border border-line" role="group" aria-label="Ansicht">
-          {dichteBtn('liste', 'Liste')}
-          {dichteBtn('karten', 'Karten')}
+        <p id="rechtsprechung-filter-scope" className="ub-filter-fuss min-h-5">
+          <span>Thema, Aktenzeichen, Norm und Gericht dieser Auswahl · Gesetzestext über die Suche oben</span>
+        </p>
+        <div className="mt-1 flex flex-wrap items-center gap-x-5 gap-y-2">
+          <label className="flex items-center gap-2 text-body-s text-ink-600">
+            <span>Sortierung</span>
+            {/* min-w: sonst wird der Select gestaucht und das längste Label
+                («Leitentscheide zuerst») abgeschnitten. */}
+            <select className="lc-select lc-input-sm w-auto min-w-[13.75rem]" value={sort} onChange={(e) => onSort(e.target.value as SortModus)}
+              aria-label="Sortierung">
+              {(Object.keys(SORT_LABEL) as SortModus[]).map((s) => <option key={s} value={s}>{SORT_LABEL[s]}</option>)}
+            </select>
+          </label>
+          <div className="flex items-center gap-x-4" role="group" aria-label="Ansicht">
+            {dichteBtn('liste', 'Liste')}
+            {dichteBtn('karten', 'Karten')}
+          </div>
         </div>
       </div>
 
       {/* Facetten-Leiste — die primären Achsen sichtbar (Auftrag 4 «Gemeinwesen»,
           Auftrag 8 «Sprache»), statt im <details> vergraben. Trefferzahl je Chip (R15). */}
-      {hatKantonal && gemeinwesenOpt.length > 1 && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} />}
-      {hatMehrereInstanzen && instanzOpt.length > 1 && <FacettenGruppe label="Instanz" optionen={instanzOpt} />}
-      {hatMehrsprachig && spracheOpt.length > 1 && <FacettenGruppe label="Sprache" optionen={spracheOpt} />}
+      {/* register="r": Registerfarbe «Rechtsprechung» am gewählten Text-Schalter
+          (D24-Nachzug, `ui/FacettenGruppe`) — dieselbe Marke wie die Seitenleiste
+          für diese Domäne führt. */}
+      {hatKantonal && gemeinwesenOpt.length > 1 && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} register="r" />}
+      {hatMehrereInstanzen && instanzOpt.length > 1 && <FacettenGruppe label="Instanz" optionen={instanzOpt} register="r" />}
+      {hatMehrsprachig && spracheOpt.length > 1 && <FacettenGruppe label="Sprache" optionen={spracheOpt} register="r" />}
       {/* Spruchkörper: Autocomplete statt Chip-Leiste (~180 Namen, s. RichterFilter).
           Die Achse erscheint nur, wenn der Ausschnitt überhaupt erfasste Besetzungen
           trägt — ein leeres Suchfeld über nichts wäre eine Fehlversprechung (§8).
@@ -259,24 +279,49 @@ export function EntscheidFilter({
               <select className="lc-input h-9 py-0 text-body-s" value={werte.gericht ?? ''}
                 onChange={(e) => setze({ gericht: e.target.value || null })}>
                 <option value="">Alle</option>
-                {gerichte.map((g) => <option key={g.id} value={g.id}>{g.name} ({gerichtN(g.id)})</option>)}
+                {gerichte.map((g) => <option key={g.id} value={g.id}>{gerichtLabel(g)} ({gerichtN(g.id)})</option>)}
               </select>
             </label>
           )}
+          {/* R2-E/F1-1-AUSNAHME (R3-α, 31.8.2026): Filter, kein fristauslösendes Feld.
+              F1-1 verbietet `type="date"` dort, wo der Wert ein fristauslösendes
+              Ereignis trägt — auf einem us-englischen Profil steht dann MM/DD/YYYY
+              an einem Datum, an dem eine Frist hängt. Diese zwei Felder grenzen
+              eine TREFFERLISTE ein: kein Wert erreicht eine Engine, ein Vertippen
+              zeigt eine andere Liste und sonst nichts. Dazu passt das Haus-
+              `DatumsFeld` hier nicht: es bringt Kalender-Popover und `pr-11`-
+              Reserve mit, die Filterzeile ist `h-9 py-0`. */}
           <label className="flex flex-col gap-1 text-xs text-ink-500">
-            <span>Urteil ab</span>
+            <span>Entscheid ab</span>
             <input type="date" lang="de-CH" className="lc-input h-9 py-0 text-body-s"
               value={werte.datumVon ?? ''} onChange={(e) => setze({ datumVon: e.target.value || null })} />
           </label>
           <label className="flex flex-col gap-1 text-xs text-ink-500">
-            <span>Urteil bis</span>
+            <span>Entscheid bis</span>
             <input type="date" lang="de-CH" className="lc-input h-9 py-0 text-body-s"
               value={werte.datumBis ?? ''} onChange={(e) => setze({ datumBis: e.target.value || null })} />
           </label>
           {/* F4: EIN zusammengeführter Filter (Leitentscheid == amtlicher BGE, deckungs-
               gleiche Menge) statt zweier redundanter Häkchen. */}
+          {/* ── LM-076 (B12, 4.9.2026) · DAS KÄSTCHEN WAR NICHT QUADRATISCH ───────────
+              GEMESSEN am gebauten Stand (`/rechtsprechung` @1440): 13.6 × 17.6 px —
+              der Befund hatte 13 × 15.8 px gesehen, der Defekt ist derselbe.
+              Die `h-4 w-4` standen längst da; sie trugen nur nicht: als Flex-Kind
+              OHNE `shrink-0` wurde die BREITE vom Umbruch der zweizeiligen
+              Beschriftung zusammengedrückt (17.6 → 13.6 px), die Höhe blieb. Darum
+              `shrink-0` statt einer grösseren Zahl — die Wurzel ist das Schrumpfen,
+              nicht das Mass; die Rüge «Browser-Standard» traf nicht zu (`accent-
+              brass-600` färbt es seit je ein).
+              NICHT geändert, weil am gebauten Stand nicht reproduzierbar: «das
+              Kästchen sitzt an der ersten [Zeile]». Gemessen sitzt es MITTIG zur
+              zweizeiligen Beschriftung (Oberkante 12.2 px in einem 46 px hohen
+              Label), und `self-end pb-1` setzt es bewusst auf die Höhe der
+              Eingabefelder der Nachbarspalten, die über sich noch eine Kopfzeile
+              tragen — diese Ausrichtung wird nicht gekippt (§0.2).
+              NICHT gebaut: die 24-px-Zielfläche aus WCAG 2.5.8 — sie sprengte die
+              36-px-Filterzeile; bedienbar ist ohnehin das ganze <label> (46 px). */}
           <label className="flex items-center gap-2 self-end pb-1 text-body-s text-ink-700">
-            <input type="checkbox" className="h-4 w-4 accent-brass-600"
+            <input type="checkbox" className="h-4 w-4 shrink-0 accent-brass-600"
               checked={!!werte.nurLeitentscheide} onChange={(e) => setze({ nurLeitentscheide: e.target.checked })} />
             Nur Leitentscheide (amtliche BGE)
           </label>
@@ -296,8 +341,18 @@ export function EntscheidFilter({
               {c.label}<span aria-hidden>×</span>
             </button>
           ))}
+          {/* LM-086 (W2·17-UI-BEFUNDE B10, 4.9.2026). Die ERSTE Hälfte des
+              Befunds ist überholt: dass die Zeile nur bei gesetzter
+              Richter-Auswahl erschien, hat `facettenAktiv` oben behoben —
+              nachgemessen an `?kanton=BS` und `?sprache=de`, beide zeigen die
+              Zeile. Die ZWEITE Hälfte war offen: der Knopf mass 76×17 px, ohne
+              Fläche und ohne Rahmen, in derselben Farbe wie ein Fliesstext-Link
+              — also unter der AA-Untergrenze (WCAG 2.5.8, 24 px) und ohne
+              Knopf-Anmutung. `.lc-btn-mini` gibt ihm Fläche, Haarlinie und
+              `--tap-ziel` als Mindesthöhe, ohne die Chip-Zeile zu sprengen;
+              die leise Stimme (text-xs, Messing) bleibt. */}
           <button type="button" onClick={zuruecksetzen}
-            className="text-xs font-medium text-brass-700 hover:text-brass-600">
+            className="lc-btn-mini text-xs font-medium text-brass-700 hover:text-brass-600">
             zurücksetzen
           </button>
         </div>

@@ -1,0 +1,796 @@
+{
+  "erzeugt": "2026-09-01",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/231.1/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat legt nach Anhörung der Gemeinden die Zivilstandskreise fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinden, die einen Zivilstandskreis bilden, vereinbaren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Sitz und die Bezeichnung des Zivilstandskreises,"
+            },
+            {
+              "marke": "b",
+              "text": "wem die Rechte und Pflichten zukommen, die nach Gesetz der Gemeinde oder einem Gemeindeorgan zukommen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Zuständig für den Vertragsabschluss sind die Gemeindevorstände. Die Vereinbarungen bedürfen der Genehmigung durch das Gemeindeamt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "42822d79bb30d391c3313653a9128c6ed1e0ab245dbfc27604274cd05a7d18ea"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_1_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "1_a",
+      "artikelLabel": "§ 1a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Kanton führt ein Sonderzivilstandsamt. Es wird vom Gemeindeamt geführt. Es hat Sitz in Zürich."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "b9c7757e1464a70f1de0bedff7be272f33f5a349f67989e324e20fcfddc42f1e"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Sitzgemeinde des Zivilstandsamtes sorgt für zweckdienliche Räumlichkeiten zur Ausübung der zivilstandsamtlichen Tätigkeiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Sitzgemeinde des Zivilstandsamtes stellt für Trauungen und zeremonielle Umwandlungen von eingetragenen Partnerschaften in Ehen unentgeltlich mindestens ein Lokal zur Verfügung. Daneben kann sie weitere Lokale festlegen und deren Benützung gegen Entgelt vorsehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Lokale für Trauungen und zeremonielle Umwandlungen von eingetragenen Partnerschaften in Ehen sind",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Anlass würdig,"
+            },
+            {
+              "marke": "b",
+              "text": "für alle Paare zu den gleichen Bedingungen benutzbar,"
+            },
+            {
+              "marke": "c",
+              "text": "dem Publikum kostenfrei zugänglich,"
+            },
+            {
+              "marke": "d",
+              "text": "für Personen mit Behinderung geeignet."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Sitzgemeinde des Zivilstandsamtes meldet dem Gemeindeamt die Lokale für Trauungen und zeremonielle Umwandlungen von eingetragenen Partnerschaften in Ehen vor ihrer Benützung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "c8c663f34db7f662acb7ab155df822c3367812691f547c96403884a73eee2144"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Zivilstandsamt legt im Einvernehmen mit dem Gemeindevorstand die Öffnungszeiten des Zivilstandsamtes und die Zeiten fest, während deren Trauungen und zeremonielle Umwandlungen von eingetragenen Partnerschaften in Ehen vorgenommen werden. Das Zivilstandsamt macht die Zeiten bekannt."
+        },
+        {
+          "absatz": "2",
+          "text": "An Sonn- und allgemeinen Feiertagen sowie an lokalen Feiertagen der Sitzgemeinde des Zivilstandsamtes werden keine Trauungen oder zeremonielle Umwandlungen von eingetragenen Partnerschaften in Ehen vorgenommen. Davon ausgenommen sind Nottrauungen nach Art. 62 Abs. 3 der eidgenössischen Zivilstandsverordnung vom 28. April 2004 (ZStV)."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "2364e5153098a77e83b3c23b14f8f79b87fdff58872ef6948358b1049de24820"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_4",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die gesetzlich vorgeschriebenen Zivilstandsformulare werden den Zivilstandsämtern auf Rechnung der Gemeinde durch den Staat geliefert."
+        },
+        {
+          "absatz": "2",
+          "text": "Formulare zur Anzeige zivilstandsrechtlicher Vorgänge werden den Anzeigepflichtigen vom zuständigen Zivilstandsamt unentgeltlich zur Verfügung gestellt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "cf83f69162b79ac68f032d22542eecf5f09e79716e8b5cb11dbea5c72f2b9b90"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gemeinde sorgt für eine sichere Aufbewahrung der Register, Belege, Mikrofilme und elektronischen Datenträger."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "481de52a08f9fc3cb60e9ffa5c8876456a3384728b7220c80a974fdef2d176a9"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_5_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "5_a",
+      "artikelLabel": "§ 5a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_6",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Personen, die den eidgenössischen Fachausweis erst nach ihrer Ernennung zur Zivilstandsbeamtin oder zum Zivilstandsbeamten erwerben werden (Art. 4 Abs. 4 ZStV), erhalten die Berechtigung zum elektronischen Abschliessen einer Beurkundung gemäss Art. 28 ZStV nur, wenn sie mindestens drei Monate auf einem Zivilstandsamt tätig gewesen sind. Die Leiterin oder der Leiter des Zivilstandsamtes kann die Frist auf sechs Monate verlängern."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "2de66d9bd3b5ad74def512c150c292b050ccea21acc271f01b0ece96e020df53"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_7",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Zustimmung des Gemeindevorstands eines andern Zivilstandskreises kann eine Zivilstandsbeamtin oder ein Zivilstandsbeamter dieses Amtes als Stellvertretung ernannt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind die Zivilstandsbeamtinnen und Zivilstandsbeamten eines Zivilstandsamtes wie auch deren Stellvertretung aus zwingenden Gründen während längerer Zeit verhindert, so bezeichnet das Gemeindeamt nach Anhörung des Gemeindevorstands eine ausserordentliche Stellvertretung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "04547637ad16eda80209ba67515945e351d057c72285f8d5d09bc4f5a2de77e6"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_8",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wechsel in der Person einer Zivilstandsbeamtin oder eines Zivilstandsbeamten, der Stellvertretung oder einer Sachbearbeiterin oder eines Sachbearbeiters des Zivilstandsamtes sind umgehend dem Gemeindeamt zu melden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "2f81a2aa2622b6cd65a1219e828e5154b3e7a5947678866add1fdcf6b4d72c60"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_9",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gemeinde stellt das für die Amtsführung erforderliche Personal zur Verfügung. Vor der Stellenbesetzung hört sie die Leiterin oder den Leiter des Zivilstandsamtes an."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "939a0782394914c320ecc28511ee2e033a711f06f0f2646923cea6c06886c381"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_10",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Gemeindeamt kann Aus- und Weiterbildungskurse für obligatorisch erklären."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "cfc1b3630c5ccb32b18356d98789b3ad3f3348c523e5b75ba4ea8f4e5301b822"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_11",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gemeindevorstand ist Aufsichts- und Beschwerdeinstanz, soweit die Organisation des Zivilstandsamtes in Frage steht."
+        },
+        {
+          "absatz": "2",
+          "text": ". . ."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "97abae88a7994aafc344de28d88097a2a8e5cd17c606177165ed6ee73285bd8c"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_12",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kantonale Aufsichtsbehörde ist das Gemeindeamt."
+        },
+        {
+          "absatz": "2",
+          "text": "Dem Gemeindeamt kommen die im Bundesrecht der kantonalen Aufsichtsbehörde übertragenen und folgende weitere Aufgaben zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Inspektion der Zivilstandsämter,"
+            },
+            {
+              "marke": "b",
+              "text": "fachliche Unterstützung der Zivilstandsämter,"
+            },
+            {
+              "marke": "c",
+              "text": "Benutzerverwaltung für Infostar und Vergabe der Benutzerrechte,"
+            },
+            {
+              "marke": "d",
+              "text": "periodische Prüfung der Vorkehrungen der Gemeinden zur Datensicherung,"
+            },
+            {
+              "marke": "e",
+              "text": "Mitteilungen gemäss Art. 1 Abs. 4 ZStV und Art. 1a Abs. 2 ZStV."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Gemeindeamt entscheidet in eigenem Namen."
+        },
+        {
+          "absatz": "4",
+          "text": "§ 12 a bleibt vorbehalten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "be3c9116771bc43b2bad1a2fd88a27fb0eb0cdedc38a8e4089b1645631e91d32"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_12_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "12_a",
+      "artikelLabel": "§ 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegenüber dem Sonderzivilstandsamt ist die Direktion der Justiz und des Innern (Direktion) kantonale Aufsichtsbehörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Direktion ist Beschwerdeinstanz gemäss Art. 90 Abs. 1 ZStV."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "ba5eb96376fde05547f5e51d581786ad65bb51357d34453c193fd387ed076820"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_13",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden tragen sämtliche Kosten ihres Zivilstandsamtes, einschliesslich die Kosten der obligatorisch erklärten Aus- und Weiterbildung."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kanton belastet den Zivilstandskreisen die ihm anfallenden Kosten für die zentrale Datenbank nach Massgabe der Bevölkerungszahl der Zivilstandskreise."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "8e56a47cc2d60b836e38c73416ccaf12dd0bbda755be84b970352b8fcb8d3f0b"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_13_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "13_a",
+      "artikelLabel": "§ 13a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Entgegennahme einer Erklärung über die Umwandlung der eingetragenen Partnerschaft in eine Ehe wird keine Gebühr erhoben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "f2d6248b25a6b237cad3d28b0282e4d0e74511236f411cab8927c66f6690e089"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_14",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Zivilstandsfälle, die im Kanton Zürich zu beurkunden sind, sind die Zivilstandsämter in folgender Reihenfolge zuständig:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "das Zivilstandsamt am zürcherischen Wohnsitz einer der beteiligten Personen,"
+            },
+            {
+              "marke": "2",
+              "text": "das Zivilstandsamt am zürcherischen Heimatort einer der beteiligten Personen,"
+            },
+            {
+              "marke": "3",
+              "text": "das Zivilstandsamt am Sitz der Behörde, die erstinstanzlich entschieden hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": ". . ."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "ea53edc7a9c7ea57f30ccef71584592d81ca5bc1723298418b26f5c140267eb2"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_14_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "14_a",
+      "artikelLabel": "§ 14a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Sonderzivilstandsamt beurkundet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Adoptionen und deren Aufhebung,"
+            },
+            {
+              "marke": "b",
+              "text": "Entlassungen aus dem Schweizer Bürgerrecht,"
+            },
+            {
+              "marke": "c",
+              "text": "Geschlechtsänderungen,"
+            },
+            {
+              "marke": "d",
+              "text": "Namensänderungen,"
+            },
+            {
+              "marke": "e",
+              "text": "testamentarische Anerkennungen von Kindern,"
+            },
+            {
+              "marke": "f",
+              "text": "Verschollenerklärungen und deren Aufhebung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Zivilstandsamt am Heimatort einer der beteiligten Personen beurkundet Verwaltungsverfügungen des Bundes gemäss Art. 22 Abs. 2 ZStV und ausländische Entscheide oder Urkunden gemäss Art. 23 Abs. 1 ZStV. Vorbehalten bleibt die Zuständigkeit gemäss Abs. 1."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Zivilstandsamt am Sitz der Entlassungsbehörde beurkundet Entlassungen aus dem Gemeindebürgerrecht oder dem Kantonsbürgerrecht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "f484f79126f09613d0b9007df71e6f5400c9c5d3518a91d32c38d230d68c4489"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_15",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gerichte, Verwaltungsbehörden und weitere Organe teilen ihre Entscheidungen dem gemäss §§ 14 und 14 a zuständigen Zivilstandsamt mit."
+        },
+        {
+          "absatz": "2",
+          "text": "Gerichte teilen dem Gemeindeamt Urteile über die Eintragung, Berichtigung und Löschung von Personendaten mit."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "f378051fc9690e0acdfcef8ac03762c1021f70966cc41f5e2efd61b84aecc648"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_16",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist eine ausländische Person nach Art. 15 a Abs. 2 ZStV in das Personenstandsregister aufzunehmen, sind die Akten dem Gemeindeamt zur Prüfung zu unterbreiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gemeindeamt kann von der Vorlegungspflicht ganz oder teilweise befreien."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "74afa88c41896ddff44899bdb097e1cc9fcefc3ec445e677ad0b7029aa28c1e1"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_16_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "16_a",
+      "artikelLabel": "§ 16a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Übergabe der Leitung eines Zivilstandsamtes erfolgt durch die kantonale Aufsichtsbehörde nach § 12 in Gegenwart der neuen und der bisherigen Leitung."
+        },
+        {
+          "absatz": "2",
+          "text": "Es wird ein Protokoll erstellt, das insbesondere über die Vollständigkeit der Register, die Lückenlosigkeit der Belege, den Stand der Registerführung und die übergebenen Dienstmaterialien informiert."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Protokoll wird von den Anwesenden unterzeichnet und dem zuständigen Gemeindevorstand zugestellt. Die Anwesenden erhalten eine Kopie."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "e1251dc1703e4f3644ccdd869b41479931f2b8f4dbe0d88b17c0b2784b0ab8b5"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_17",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer ein ausgesetztes Kind unbekannter oder unsicherer Herkunft findet, macht der Polizei des Fundortes sofort Anzeige."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese benachrichtigt umgehend das Zivilstandsamt und den Gemeindevorstand des Fundortes und Letzterer die Kindes- und Erwachsenenschutzbehörde."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Gemeindevorstand gibt dem Kind Familien- und Vorname, bestimmt dessen Geburtstermin und erteilt ihm das Gemeindebürgerrecht."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Beschluss des Gemeindevorstands ist dem Zivilstandsamt des Fundortes mitzuteilen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "191353feae41349a96cdbbe059bbbf6b569e8a7fa68bbcf0f3b4c5c9dfb25ba1"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_18",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_19",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_20",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_20_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "20_a",
+      "artikelLabel": "§ 20a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Beschwerdeentscheide der kantonalen Aufsichtsbehörde (§ 12 a Abs. 2) gemäss Art. 90 Abs. 2 ZStV können mit Beschwerde beim Verwaltungsgericht angefochten werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "9b8961bfce7cc39b3c4c287c2d863417c8f058d3cc62ae3e005d0fd60d250e01"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_21",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Direktion lässt die Angaben des Anhangs zu dieser Verordnung nachführen, wenn die zu einem Zivilstandskreis zusammengefassten Gemeinden den Namen oder den Sitz des Zivilstandskreises ändern."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "9e6ee3423cc46c840d1269ceacb7a13303734dc9852d0dfbad3718631208bed2"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_22",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zivilstandsverordnung vom 29. November 2000 wird aufgehoben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "76d7c0c71acf2f4c95493be8c2142fa90b81b1dce96659332dbd10a76218bc8b"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_23",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Neben der vom Bundesrat vorgeschriebenen ereignisbezogenen Rückerfassung erfolgt eine systematische Rückerfassung und Überführung von Personendaten in die zentrale Datenbank Infostar."
+        },
+        {
+          "absatz": "2",
+          "text": "Die systematische Rückerfassung ist bis 31. Dezember 2012 für alle lebenden Personen abzuschliessen."
+        },
+        {
+          "absatz": "3",
+          "text": "In erster Priorität werden Personendaten aufgrund eines zivilstandsamtlichen Ereignisses oder aufgrund eines Rückerfassungsauftrages aus einem anderen Zivilstandskreis in das neue System übertragen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Zivilstandsämter erstatten jährlich Bericht an das Gemeindeamt über den Stand der Rückerfassung in ihrem Zivilstandskreis."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "ac4f7f69bc45b820dacc028b8290d40e9ea8790fb530ad6bd0d7e26f866031de"
+    },
+    {
+      "id": "kanton/ZH/231.1/art_24",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Kantonale Zivilstandsverordnung (ZVO) (LS 231.1)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt nach Genehmigung durch den Bund auf den 1. Januar 2005 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "§ 15 tritt mit Art. 22 und 43 Abs. 1–3 ZStV in Kraft."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-231_1-2004_12_01-2005_01_01-127.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "996c5ff6bd3ab6d0d17658992a1c0f6370236c3fecdb31bbbe456d8a79574207",
+      "sha": "f635598f02450218102d9b53df8df83926dabda3981b2176d40187a822bb4ab0"
+    }
+  ]
+}

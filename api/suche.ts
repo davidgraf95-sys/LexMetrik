@@ -16,6 +16,9 @@
 // explizite Endungen verlangt und sie auf die .ts-Quelle mappt.
 import {
   baueFtsMatch,
+  baueFtsSpaltenMatch,
+  FTS_SPALTEN_HAUPT,
+  FTS_SPALTEN_NEBEN,
   klemmeFenster,
   naechsterOffset,
   formeArtikelTreffer,
@@ -96,9 +99,15 @@ async function sucheArtikelEdge(
   limit: number,
   offset: number,
 ): Promise<SucheAntwort<ArtikelTreffer>> {
+  // Topische Stufung (QS-BASIS (d) K2): zwei zusätzliche, spalten-eingeschränkte
+  // MATCH-Ausdrücke über dieselben Terme. Sie ordnen den Artikel, der dem Thema
+  // GEWIDMET ist, vor den blossen Texttreffer. bm25 allein legte OR 253 bei «Miete»
+  // auf Rang 128 von 165 — ausserhalb jedes Fensters, das die Antwort je zurückgibt.
+  const haupt = baueFtsSpaltenMatch(query, FTS_SPALTEN_HAUPT) ?? match;
+  const neben = baueFtsSpaltenMatch(query, FTS_SPALTEN_NEBEN) ?? match;
   const [countRows, treffRows] = await tursoAbfrage(url, token, [
     { sql: SQL_ARTIKEL_COUNT, args: [match] },
-    { sql: SQL_ARTIKEL_TREFFER, args: [match, limit, offset] },
+    { sql: SQL_ARTIKEL_TREFFER, args: [match, haupt, neben, limit, offset] },
   ]);
   const gesamt = Number(countRows[0]?.n ?? 0);
   // Snippet-Bau braucht den ORIGINAL-Query (nicht den FTS-Match) — explizit durchgereicht.

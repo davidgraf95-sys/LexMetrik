@@ -62,13 +62,26 @@ interface Lauf {
   stderr: string;
 }
 
-/** Führt einen der Hooks als Python-Prozess aus; Exit-Code wird nie geworfen. */
+/**
+ * Führt einen der Hooks als Python-Prozess aus; Exit-Code wird nie geworfen.
+ *
+ * Test-Hygiene 5.9.2026 (QS-EFFIZIENZ, Kondensat-Befund): `execFileSync` gibt
+ * stderr per Default an den ELTERNPROZESS weiter (Node inherited stderr bei
+ * Sync-Exec, damit ein Fehlschlag sichtbar bleibt) — hier landete so bei jedem
+ * Erfolgs-Fall (a) zweimal wörtlich der Block «SUBAGENT-WACHE (§14.7): Dein
+ * Bericht behauptet Erfolg …» in der Vitest-Ausgabe, obwohl der Hook per Design
+ * genau DAS auf stderr schreibt (kein Bug im Hook — nur unkontrolliertes
+ * Durchreichen im Test). `stdio: ['pipe','pipe','pipe']` fängt stderr wie
+ * stdout ab; Assertions unverändert, `err.stderr`/Rückgabe bleiben identisch
+ * befüllt.
+ */
 function laufe(skript: string, projektDir: string, stdinJson: string, args: string[] = []): Lauf {
   try {
     const stdout = execFileSync('python3', [skript, ...args], {
       input: stdinJson,
       env: { ...process.env, CLAUDE_PROJECT_DIR: projektDir },
       encoding: 'utf8',
+      stdio: ['pipe', 'pipe', 'pipe'],
     });
     return { status: 0, stdout, stderr: '' };
   } catch (e) {
@@ -368,6 +381,101 @@ describe('tor-schutz: MCP-Shell-Kanäle', () => {
   it('bleibt für Bash unverändert', () => {
     expect(hook('tor-schutz.py', { tool_name: 'Bash', tool_input: { command: 'npm run lint | tail' } })).toBe(2);
     expect(hook('tor-schutz.py', { tool_name: 'Bash', tool_input: { command: 'ls -la' } })).toBe(0);
+  });
+});
+
+// ─── Merge-Schutz: richtige Fläche, richtige Kommando-Erkennung ───────────────
+// §17-Wurzelfix 5.9.2026 (Beleg 02:30). Zwei belegte Defekte der Vorfassung:
+//   (a) `gh pr merge <nr>` prüfte die LOKALE Arbeitskopie. Stand das Checkout
+//       auf einem fremden Risiko-Branch, blockierte der Hook die Landung
+//       völlig anderer, reiner UI-PRs (#679/#685) — und umgekehrt liess er den
+//       Merge eines Risiko-PR (#687) DURCH, solange das Checkout sauber war.
+//   (b) Das Muster traf jedes TEXTvorkommen: ein `grep 'gh pr merge' src/`
+//       wurde blockiert (real reproduziert 5.9.2026).
+// Massgeblich ist jetzt die KOMMANDO-POSITION; bei genannter PR-Nummer prüft
+// der Hook den PR-Head (MERGE_SCHUTZ_KOPF). Die Fälle hier laufen OHNE Netz:
+// CLAUDE_PROJECT_DIR zeigt auf ein leeres tmp-Verzeichnis, in dem
+// `npm run check:merge-schutz` scheitert — ein erkanntes Merge-Kommando wird
+// dort also fail-closed geblockt (Exit 2), reiner Text läuft gar nicht erst an.
+describe('tor-schutz: Merge-Erkennung und Prüf-Fläche', () => {
+  /** Hook mit eigenem Projekt-Verzeichnis fahren (kein echtes Repo berühren). */
+  function hookIn(command: string, projekt: string): number {
+    const p = spawnSync('python3', [resolve(WURZEL, '.claude/hooks/tor-schutz.py')], {
+      input: JSON.stringify({ tool_name: 'Bash', tool_input: { command } }),
+      cwd: WURZEL,
+      encoding: 'utf8',
+      env: { ...process.env, CLAUDE_PROJECT_DIR: projekt },
+    });
+    return p.status ?? -1;
+  }
+
+  it('blockt ein echtes Merge-Kommando fail-closed (Tor nicht lauffähig)', () => {
+    const leer = neuesTmpDir();
+    // Ohne PR-Nummer: kein `gh`-Aufruf, kein Netz — und trotzdem geblockt.
+    expect(hookIn('gh pr merge --squash', leer)).toBe(2);
+    expect(hookIn('gh api -X PUT repos/o/r/pulls/315/merge', leer)).toBe(2);
+    expect(hookIn('cd /x && gh pr merge --admin', leer)).toBe(2);
+    expect(hookIn('bash -c "gh pr merge --squash"', leer)).toBe(2);
+  });
+
+  it('lässt reine Kommando-TEXTE durch (Fehlalarm 5.9.2026)', () => {
+    const leer = neuesTmpDir();
+    expect(hookIn("grep -rn 'gh pr merge' src/ | head -5", leer)).toBe(0);
+    expect(hookIn('rg "gh pr merge" .claude/hooks', leer)).toBe(0);
+    expect(hookIn('echo "gh pr merge 685"', leer)).toBe(0);
+    // Gegenprobe: ein grep VOR einem echten Merge blockt weiterhin.
+    expect(hookIn('grep -q x f && gh pr merge --squash', leer)).toBe(2);
+  });
+
+  // Kernbeweis für Defekt (a), OHNE Netz: ein Fixture-Repo als Projekt, ein
+  // `gh`-Stub auf dem PATH, der einen Head-SHA AUS DIESEM Repo meldet, und ein
+  // `check:merge-schutz`, das nur zurückmeldet, welchen Kopf es bekommen hat.
+  // Die Vorfassung reichte keinen Kopf durch und prüfte darum immer HEAD.
+  it('reicht bei genannter PR-Nummer den PR-Head an das Tor durch', () => {
+    const projekt = neuesTmpDir();
+    const g = (...a: string[]) => execFileSync('git', a, { cwd: projekt });
+    g('init', '-q');
+    g('config', 'user.email', 'test@example.invalid');
+    g('config', 'user.name', 'Test');
+    writeFileSync(join(projekt, 'a.txt'), 'x\n');
+    g('add', 'a.txt');
+    g('commit', '-q', '-m', 'init');
+    const kopf = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: projekt, encoding: 'utf8' }).trim();
+
+    writeFileSync(
+      join(projekt, 'package.json'),
+      JSON.stringify({
+        name: 'fixture',
+        scripts: { 'check:merge-schutz': "node -e \"console.log('KOPF=' + (process.env.MERGE_SCHUTZ_KOPF || 'KEINER')); process.exit(1)\"" },
+      }),
+    );
+    // `gh pr view <nr> --json headRefOid` → fester Head aus dem Fixture-Repo.
+    const bin = neuesTmpDir();
+    writeFileSync(join(bin, 'gh'), `#!/bin/sh\necho '{"headRefOid":"${kopf}"}'\n`, { mode: 0o755 });
+
+    const p = spawnSync('python3', [resolve(WURZEL, '.claude/hooks/tor-schutz.py')], {
+      input: JSON.stringify({ tool_name: 'Bash', tool_input: { command: 'gh pr merge 4242 --squash' } }),
+      cwd: WURZEL,
+      encoding: 'utf8',
+      env: { ...process.env, CLAUDE_PROJECT_DIR: projekt, PATH: `${bin}:${process.env.PATH}` },
+    });
+    expect(p.status).toBe(2);
+    expect(p.stderr).toContain(`KOPF=${kopf}`);          // Tor sah den PR-Head …
+    expect(p.stderr).toContain(`PR #4242 (Head ${kopf.slice(0, 8)})`); // … und sagt es
+    expect(p.stderr).not.toContain('KOPF=KEINER');
+  });
+
+  it('check:merge-schutz prüft den über MERGE_SCHUTZ_KOPF genannten Stand', () => {
+    // Der Hook setzt hier den PR-Head-SHA. Beweis, dass die Variable den
+    // geprüften Bereich wirklich verschiebt: das Tor nennt den Kopf im Ergebnis.
+    const lauf = (kopf: string) =>
+      spawnSync('npm', ['run', '--silent', 'check:merge-schutz'], {
+        cwd: WURZEL,
+        encoding: 'utf8',
+        env: { ...process.env, MERGE_SCHUTZ_BASIS: kopf, MERGE_SCHUTZ_KOPF: kopf },
+      }).stdout ?? '';
+    expect(lauf('HEAD')).toContain('..HEAD (');
+    expect(lauf('HEAD~1')).toContain('..HEAD~1 (');
   });
 });
 

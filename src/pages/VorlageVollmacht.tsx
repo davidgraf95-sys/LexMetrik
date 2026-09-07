@@ -9,7 +9,7 @@ import {
 } from '../lib/vorlagen/vollmacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, ListenEditor } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -157,26 +157,27 @@ export function VorlageVollmacht() {
         <div className="space-y-5">
           <div className="space-y-3">
             <GruppenTitel>Bevollmächtigte Person(en)</GruppenTitel>
-            {a.bevollmaechtigte.map((b, i) => (
-              <div key={i} className="lc-card p-4 space-y-3">
-                <Field label={istAnwalt ? 'Name (Anwältin/Anwalt bzw. Kanzlei)' : 'Name'}>
-                  <input className={inputCls} value={b.name}
-                    onChange={(e) => set('bevollmaechtigte', a.bevollmaechtigte.map((x, j) => j === i ? { ...x, name: e.target.value } : x))} />
-                </Field>
-                <div className="flex flex-wrap items-end gap-2">
-                  <div className="flex-1 min-w-[12rem]">
-                    <Field label="Geburtsdatum / Adresse" optional hint="genaue Angaben erleichtern den Ausweis gegenüber Dritten (Art. 33 Abs. 3 OR)">
-                      <input className={inputCls} value={b.angaben}
-                        onChange={(e) => set('bevollmaechtigte', a.bevollmaechtigte.map((x, j) => j === i ? { ...x, angaben: e.target.value } : x))} />
-                    </Field>
-                  </div>
-                  <button type="button" onClick={() => set('bevollmaechtigte', a.bevollmaechtigte.filter((_, j) => j !== i))}
-                    className="text-body-s text-danger-700 hover:underline pb-2.5">entfernen</button>
+            {/* R2-F/F1-9: Behälter war `lc-card p-4`, der Knopf ein nacktes
+                `lc-btn-outline` mit «+ … hinzufügen» — beides kommt neu aus
+                dem geteilten ListenEditor. */}
+            <ListenEditor
+              element="Bevollmächtigte Person"
+              eintraege={a.bevollmaechtigte}
+              onHinzufuegen={() => set('bevollmaechtigte', [...a.bevollmaechtigte, { name: '', angaben: '' }])}
+              onEntfernen={(i) => set('bevollmaechtigte', a.bevollmaechtigte.filter((_, j) => j !== i))}
+              kinder={(b, i) => (
+                <div className="space-y-3">
+                  <Field label={istAnwalt ? 'Name (Anwältin/Anwalt bzw. Kanzlei)' : 'Name'}>
+                    <input className={inputCls} value={b.name}
+                      onChange={(e) => set('bevollmaechtigte', a.bevollmaechtigte.map((x, j) => j === i ? { ...x, name: e.target.value } : x))} />
+                  </Field>
+                  <Field label="Geburtsdatum / Adresse" optional hint="genaue Angaben erleichtern den Ausweis gegenüber Dritten (Art. 33 Abs. 3 OR)">
+                    <input className={inputCls} value={b.angaben}
+                      onChange={(e) => set('bevollmaechtigte', a.bevollmaechtigte.map((x, j) => j === i ? { ...x, angaben: e.target.value } : x))} />
+                  </Field>
                 </div>
-              </div>
-            ))}
-            <button type="button" onClick={() => set('bevollmaechtigte', [...a.bevollmaechtigte, { name: '', angaben: '' }])}
-              className="lc-btn-outline">+ Bevollmächtigte Person hinzufügen</button>
+              )}
+            />
           </div>
 
           {a.bevollmaechtigte.filter((b) => b.name.trim()).length > 1 && (
@@ -289,7 +290,7 @@ export function VorlageVollmacht() {
               onChange={(v) => set('buergschaft', v)}
               label={<><span>Eingehung von Bürgschaften <span className="text-danger-700"><NormText text={`(Form-Gate: Art. 493 Abs. 6 OR – sperrt den Export, Notariat erforderlich)`} /></span></span></>} />
             {a.buergschaft && (
-              <div className="lc-notice-danger">
+              <div role="alert" className="lc-notice-danger">
                 <p className="text-body-s text-danger-700">
                   Die Bürgschaftsvollmacht bedarf derselben Form wie die Bürgschaft selbst (Art. 493 Abs. 6 OR);
                   bei natürlichen Personen über CHF 2000 heisst das öffentliche Beurkundung (Art. 493 Abs. 2 OR).
@@ -329,7 +330,7 @@ export function VorlageVollmacht() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700"><NormText text={b} /></p>
             </div>
           ))}
@@ -381,6 +382,7 @@ export function VorlageVollmacht() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_VOLLMACHT, dateiName: `${VOLLMACHT_TITEL[a.typ]}.pdf` },

@@ -1,7 +1,7 @@
 import type { Sperrereignis, SperrereignisTyp } from '../../types/legal';
 import { NormText } from '../NormText';
 import { DatumsFeld } from '../DatumsFeld';
-import { inputCls } from '../vorlagen/ui';
+import { Field, inputCls, ListenEditor } from '../vorlagen/ui';
 import { usePaneKlasse } from '../layout/PaneKontext';
 import { SPERREREIGNIS_TYPEN, MIT_NIEDERKUNFT, sperrereignisEntfernen } from './sperrereignisseShared';
 
@@ -32,51 +32,43 @@ export function SperrereignisseEditor({ wert, onChange, hinweis }: {
 
   return (
     <div className="space-y-3">
-      <div className="flex items-center justify-between">
-        <h4 className="text-body-s font-semibold text-ink-700">
-          Sperrereignisse (Art. 336c OR)
-          {hinweis && <span className="ml-2 text-xs font-normal text-ink-500">({hinweis})</span>}
-        </h4>
-        <button
-          type="button"
-          onClick={() => onChange([...wert, { typ: 'krankheit_unfall', von: '2025-04-01', bis: '2025-05-31' }])}
-          className="text-body-s px-3 py-1.5 bg-surface hover:bg-brass-100 text-ink-700 rounded-lg transition-colors"
-        >
-          + Ereignis
-        </button>
-      </div>
+      <h4 className="text-body-s font-semibold text-ink-700">
+        Sperrereignisse (Art. 336c OR)
+        {hinweis && <span className="ml-2 text-xs font-normal text-ink-500">({hinweis})</span>}
+      </h4>
 
-      {wert.length === 0 && (
-        <p className="text-body-s text-ink-500 italic">Keine Sperrereignisse erfasst.</p>
-      )}
-
-      {wert.map((e, i) => (
-        <div key={i} className="lc-panel p-4 space-y-3">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-ink-600">Ereignis {i + 1}</span>
-            <button type="button" onClick={() => onChange(sperrereignisEntfernen(wert, i))} className="text-body-s text-danger-700 hover:underline">Entfernen</button>
-          </div>
+      {/* R2-F/F1-9: der handgebaute Repeater (eigene Knopf-Optik `px-3 py-1.5
+          bg-surface hover:bg-brass-100`, Hinzufügen ÜBER der Liste, «Entfernen»
+          gross) ist durch den geteilten ListenEditor ersetzt. R2-F/F1-6: die
+          fünf handgeschriebenen `<label>` sind `Field` gewichen — damit trägt
+          «Niederkunft» das «optional» in der Prop statt im Text, und jedes
+          Feld ist erstmals mit seinem Label verknüpft (die rohen Labels hatten
+          weder htmlFor noch aria-labelledby). */}
+      <ListenEditor
+        element="Ereignis"
+        eintraege={wert}
+        leer="Keine Sperrereignisse erfasst."
+        onHinzufuegen={() => onChange([...wert, { typ: 'krankheit_unfall', von: '2025-04-01', bis: '2025-05-31' }])}
+        onEntfernen={(i) => onChange(sperrereignisEntfernen(wert, i))}
+        kinder={(e, i) => (
+        <>
           <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
-            <div className="space-y-1">
-              <label className="text-xs font-medium text-ink-600">Typ</label>
+            <Field label="Typ">
               <select value={e.typ} onChange={(ev) => update(i, { typ: ev.target.value as SperrereignisTyp })} className={inputCls + ' text-xs'}>
                 {SPERREREIGNIS_TYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
               </select>
-            </div>
-            <div className="space-y-1">
-              <label className="text-xs font-medium text-ink-600">Von</label>
+            </Field>
+            <Field label="Von">
               <DatumsFeld value={e.von} onChange={(v) => update(i, { von: v })} className={inputCls + ' text-xs'} />
-            </div>
-            <div className="space-y-1">
-              <label className="text-xs font-medium text-ink-600">Bis</label>
+            </Field>
+            <Field label="Bis">
               <DatumsFeld value={e.bis} onChange={(v) => update(i, { bis: v })} className={inputCls + ' text-xs'} />
-            </div>
+            </Field>
           </div>
           {MIT_NIEDERKUNFT.includes(e.typ) && (
-            <div className="space-y-1">
-              <label className="text-xs font-medium text-ink-600">Niederkunft (optional)</label>
+            <Field label="Niederkunft" optional>
               <DatumsFeld value={e.niederkunft ?? ''} onChange={(v) => update(i, { niederkunft: v })} className={inputCls + ' text-xs'} />
-            </div>
+            </Field>
           )}
           {e.typ === 'schwangerschaft' && (
             <p className="text-xs text-brass-700">
@@ -101,8 +93,7 @@ export function SperrereignisseEditor({ wert, onChange, hinweis }: {
             <p className="text-xs text-brass-700">Bei Dauer &gt; 11 Tage wird die Sperrfrist automatisch je 4 Wochen davor und danach erweitert (Art. 336c Abs. 1 lit. a OR).</p>
           )}
           {e.typ === 'krankheit_unfall' && i > 0 && (
-            <div className="space-y-1">
-              <label className="text-xs font-medium text-ink-600">Rückfall derselben Ursache wie … (§1.3)</label>
+            <Field label="Rückfall derselben Ursache wie … (§1.3)">
               <select
                 className={inputCls + ' text-xs'}
                 value={e.gleicheUrsacheWieEreignis ?? ''}
@@ -113,10 +104,11 @@ export function SperrereignisseEditor({ wert, onChange, hinweis }: {
                   <option key={j} value={j}>Rückfall wie Ereignis {j + 1} (keine neue Sperrfrist)</option>
                 ))}
               </select>
-            </div>
+            </Field>
           )}
-        </div>
-      ))}
+        </>
+        )}
+      />
     </div>
   );
 }

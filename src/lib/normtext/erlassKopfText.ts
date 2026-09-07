@@ -31,6 +31,18 @@
 // was trotzdem fehlt. §7/§8 bleiben gewahrt: «(maschinell)» bleibt tragend,
 // kein «gegengeprüft/verifiziert»-Wortfeld, und massgeblich ist stets die
 // amtliche Fassung.
+//
+// ─── B-6-Anbindung (Design-Konsistenz, 31.8.2026) ────────────────────────────
+// Der Vorbehalts-Halbsatz «massgeblich ist die amtliche Fassung» stand hier als
+// Literal — einer von mehreren Streuorten in zwei Substantiv-Varianten
+// (Herleitung und korrigierte Zählung: `lib/benennung.ts`, Gegenprüfung
+// 31.8.2026 N1). Seit B-6 hat er EINE Heimat; hier steht nur noch der Bezug. Die ERZEUGTEN Sätze
+// sind byte-gleich zum Stand davor — die Zusicherung darüber steht als
+// Wortlaut-Sonde in `src/tests/leser-benennung.test.ts`.
+// Kein Rechenpfad berührt (§2/§3): eine Zeichenkette wechselt den Ort, nicht
+// den Wert.
+
+import { MASSGEBLICH_HALBSATZ } from '../benennung';
 
 /** ISO-Datum `YYYY-MM-DD` → Schweizer Anzeigeform `TT.MM.JJJJ`; sonst unverändert. */
 export function datumCh(iso: string): string {
@@ -49,6 +61,38 @@ export function datumCh(iso: string): string {
 export function standausweisSatz(geprueftAmIso: string): string {
   return `gegen Fedlex-Konsolidierung geprüft am ${datumCh(geprueftAmIso)} (maschinell)`;
 }
+
+/**
+ * ZWEITE STUFE des Standausweises (K-2a/F26, W2·13-KANTONE, 31.8.2026).
+ *
+ * `standausweisSatz` setzt einen Currency-Beleg voraus. Den gibt es nur für
+ * Bundeserlasse: GEMESSEN am 31.8.2026 führt `public/normtext/currency.json`
+ * 224 Einträge, davon **0 kantonale** — bei 1231 kantonalen Registereinträgen.
+ * Ein Kantonserlass zeigte damit gar keinen Geltungs-Status: der Leser sah eine
+ * Stand-Zeile und hatte keinen Anhalt, dass dieser Stand nie gegen die amtliche
+ * Sammlung abgeglichen wurde. Das Schweigen las sich wie ein Häkchen (§8).
+ *
+ * Der Satz sagt genau so viel, wie wir wissen, und keinen Halbsatz mehr: die
+ * GELTUNG ist ungeprüft — nicht «veraltet», nicht «unzuverlässig». Kein Datum,
+ * weil es keines gibt (dieselbe Schranke wie `nichtKonsolidiertSatz(null)`);
+ * der Stand selbst steht als eigenes Segment daneben und wird hier nicht
+ * gedoppelt.
+ *
+ * Konstante statt Funktion: der Satz hat kein Argument, und `ANHANG_DOMINANZ`
+ * zeigt, dass argumentlose Werte in diesem Modul so leben.
+ */
+export const GELTUNG_UNGEPRUEFT_SATZ = 'Geltung ungeprüft';
+
+/**
+ * Ersatz für ein fehlendes Stand-Datum (K-2d/F27-Rest).
+ *
+ * Zwei Registereinträge tragen `stand: ''` (VD-vd-106879, VD-vd-128150 —
+ * gemessen 31.8.2026). Der Erlass-Kopf liess das Segment bis dahin still weg;
+ * wer die Zeile las, sah keinen Unterschied zwischen «kein Stand erfasst» und
+ * «Stand steht anderswo». Die Auslassung ist die unehrlichere der beiden
+ * Formen: sie verschweigt eine Lücke, statt sie zu benennen (§8).
+ */
+export const STAND_UNBEKANNT = 'Stand unbekannt';
 
 /**
  * Angekündigte, noch nicht geltende Konsolidierung: «nächste Fassung ab TT.MM.JJJJ».
@@ -75,7 +119,7 @@ export function naechsteFassungSatz(abIso: string): string {
 export function nichtKonsolidiertSatz(seitIso: string | null): string {
   const seit = seitIso ? ` seit ${datumCh(seitIso)}` : '';
   return `Fedlex hat eine${seit} geltende Änderung noch nicht in den Text eingearbeitet`
-    + ' — massgeblich ist die amtliche Fassung.';
+    + ` — ${MASSGEBLICH_HALBSATZ}.`;
 }
 
 /**

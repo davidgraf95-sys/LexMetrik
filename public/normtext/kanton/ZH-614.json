@@ -1,0 +1,906 @@
+{
+  "erzeugt": "2026-09-01",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/614/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzkontrolle ist das oberste Finanzaufsichtsorgan des Kantons."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist unabhängig und weisungsungebunden. In der Erfüllung ihrer Aufgaben ist sie Verfassung und Gesetz sowie allgemein anerkannten berufsständischen Grundsätzen der Revision und der Aufsicht verpflichtet."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie ist administrativ der Geschäftsleitung des Kantonsrates zugeordnet. Gegen Anordnungen der Leiterin oder des Leiters der Finanzkontrolle in personalrechtlichen oder administrativen Belangen kann bei der Verwaltungsdelegation der Geschäftsleitung des Kantonsrates Rekurs erhoben werden."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "4ec7e0ba3a92a7cea3db48f56bf2de95d5b16ac227730fbf4fc14763ec09529d"
+    },
+    {
+      "id": "kanton/ZH/614/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Finanzaufsicht durch die Finanzkontrolle unterstehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Kantonsrat, die Ombudsperson und die oder der Datenschutzbeauftragte,"
+            },
+            {
+              "marke": "b",
+              "text": "die kantonale Verwaltung,"
+            },
+            {
+              "marke": "c",
+              "text": "die Justizverwaltung,"
+            },
+            {
+              "marke": "d",
+              "text": "die öffentlich-rechtlichen Anstalten des Kantons,"
+            },
+            {
+              "marke": "e",
+              "text": "Dritte, denen von Stellen gemäss lit. a–d öffentliche Aufgaben übertragen werden oder an denen diese Stellen sich direkt oder indirekt beteiligen,"
+            },
+            {
+              "marke": "f",
+              "text": "Organisationen und Personen, die kantonale Leistungen gestützt auf das Staatsbeitragsgesetz oder andere kantonale Erlasse empfangen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Finanzaufsicht über die Gemeinden richtet sich nach dem Gemeindegesetz."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Finanzkontrolle übt die Finanzaufsicht auch dort aus, wo nach Gesetz oder Statuten eine eigene Revisionsstelle oder Kontrollstelle eingerichtet ist."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "75c0959552533517c1990dac078ac10745cbcd7bf04614519a20d861cefe5e14"
+    },
+    {
+      "id": "kanton/ZH/614/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Öffentliche Unternehmen, die unmittelbar durch Bundesorganisationen beaufsichtigt werden, unterstehen nicht der Aufsicht durch die Finanzkontrolle."
+        },
+        {
+          "absatz": "2",
+          "text": "Von der Aufsicht ausgeschlossen sind insbesondere",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zürcher Kantonalbank,"
+            },
+            {
+              "marke": "b",
+              "text": "die Sozialversicherungsanstalt, soweit sie Bundesaufgaben erfüllt."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "ba0b4379b2d056c2209d13b8e0e560795cfb8b8d1c90ad73f491e01d51658360"
+    },
+    {
+      "id": "kanton/ZH/614/art_4",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es wird ein Begleitender Ausschuss gebildet aus",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einem Mitglied der Geschäftsleitung des Kantonsrates,"
+            },
+            {
+              "marke": "b",
+              "text": "einem Mitglied der Finanzkommission des Kantonsrates,"
+            },
+            {
+              "marke": "c",
+              "text": "einem Mitglied des Regierungsrates,"
+            },
+            {
+              "marke": "d",
+              "text": "einer Vertretung der obersten kantonalen Gerichte,"
+            },
+            {
+              "marke": "e",
+              "text": "zwei von den übrigen Mitgliedern gewählten Fachpersonen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Geschäftsleitung, die Finanzkommission und der Regierungsrat bezeichnen ihre Vertreterin oder ihren Vertreter. Die Vertretung der obersten kantonalen Gerichte wird durch den Plenarausschuss der obersten kantonalen Gerichte gemäss § 70 GOG gewählt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Ausschuss konstituiert sich selbst; er überträgt einer der beiden Fachpersonen den Vorsitz. Bei Abstimmungen stimmt die oder der Vorsitzende mit. Bei gleichgeteilten Stimmen gilt derjenige Antrag als angenommen, für den die oder der Vorsitzende gestimmt hat."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Geschäftsleitung des Kantonsrates regelt die Entschädigung der Mitglieder des Ausschusses und bezeichnet dessen Sekretariat."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "6107bd445c421cb2fe09746c787f7ebaf394d2bb9de51fc2bd7863aa2cfefbd1"
+    },
+    {
+      "id": "kanton/ZH/614/art_4_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "4_a",
+      "artikelLabel": "§ 4a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Begleitende Ausschuss",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nimmt zuhanden des Kantonsrates zu Wahl und Wiederwahl der Leiterin oder des Leiters der Finanzkontrolle Stellung,"
+            },
+            {
+              "marke": "b",
+              "text": "kann Antrag auf Abwahl der Leiterin oder des Leiters der Finanzkontrolle stellen,"
+            },
+            {
+              "marke": "c",
+              "text": "bestimmt die externe Revisionsstelle der Finanzkontrolle,"
+            },
+            {
+              "marke": "d",
+              "text": "beauftragt eine fachlich geeignete Institution mit der periodischen Qualitätsbeurteilung der Finanzkontrolle,"
+            },
+            {
+              "marke": "e",
+              "text": "nimmt Kenntnis vom Tätigkeitsprogramm der Finanzkontrolle,"
+            },
+            {
+              "marke": "f",
+              "text": "nimmt Kenntnis von den Semesterberichten,"
+            },
+            {
+              "marke": "g",
+              "text": "nimmt zuhanden der Finanzkommission und des Regierungsrates Stellung zum Tätigkeitsbericht."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "d30d891cae72ff778d5f57f2651bc403eae61016167423ffa3d43be32fd51f52"
+    },
+    {
+      "id": "kanton/ZH/614/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Leiterin oder Leiter der Finanzkontrolle wird eine in Revisionsfragen ausgewiesene Fachperson gewählt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kantonsrat wählt die Leiterin oder den Leiter der Finanzkontrolle auf Antrag des Regierungsrates auf eine Amtsdauer von vier Jahren. Wiederwahl ist möglich."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kantonsrat kann die Leiterin oder den Leiter der Finanzkontrolle bei schwerwiegenden Amtspflichtverletzungen oder bei fachlichem Ungenügen auf Antrag des Begleitenden Ausschusses vor Ablauf der Amtsdauer abwählen. Für diesen Beschluss ist eine Mehrheit von zwei Dritteln der Mitglieder des Kantonsrates erforderlich."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Lohn der Leiterin oder des Leiters der Finanzkontrolle entspricht dem Höchstbetrag der obersten Lohnklasse der kantonalen Angestellten."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "4004df981cd27123b3d03119c3e4f815f59d89ebc6d88d7215d83812cf357156"
+    },
+    {
+      "id": "kanton/ZH/614/art_6",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Personalrecht des Kantons findet auf die Leiterin oder den Leiter sowie das Personal der Finanzkontrolle Anwendung. Vorbehalten bleiben die Bestimmungen dieses Gesetzes und vom Kantonsrat erlassene abweichende Regelungen aufgrund der besonderen Stellung der Finanzkontrolle."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leiterin oder der Leiter der Finanzkontrolle ist für die Einstellungen und Beförderungen des Personals der Finanzkontrolle im Rahmen des vom Kantonsrat genehmigten Budgets zuständig. Sie oder er hat im Übrigen die personalrechtliche Stellung einer Direktionsvorsteherin oder eines Direktionsvorstehers."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "3c20adcb1af738e519b5d1cd940a1534587d7e2d52bd005d066b4c6e26b8f6ac"
+    },
+    {
+      "id": "kanton/ZH/614/art_7",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Finanzkontrolle kann Sachverständige beiziehen, sofern die Durchführung ihrer Aufgaben besondere Fachkenntnisse erfordert oder mit ihrem ordentlichen Personal nicht gewährleistet werden kann."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "21e2537b6b3ebe92c08e5cad5b44b521ac88721d9c080f1d628cf73af91cc908"
+    },
+    {
+      "id": "kanton/ZH/614/art_8",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzkontrolle ist dem Gesetz über Controlling und Rechnungslegung (CRG) und den Ausführungserlassen des Regierungsrates zu diesem Gesetz unterstellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist bezüglich Ausgabenkompetenzen dem Regierungsrat gleichgestellt. §§ 19–25 des CRG gelten sinngemäss."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "7e4983aba302edde41a31bd36e995dae258ac5f44f65476177e11c117f6abf4f"
+    },
+    {
+      "id": "kanton/ZH/614/art_9",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Finanzkontrolle führt eine eigene Rechnung in Form einer Leistungsgruppenrechnung. Sie unterbreitet dem Kantonsrat jährlich eine Übersicht über die Entwicklung der Leistungen und Finanzen, einen Budgetentwurf sowie die Rechnung."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "cfc82a1bc0cffc833031a6a64228081510f7266c90e3f1ac68b2a01819691564"
+    },
+    {
+      "id": "kanton/ZH/614/art_10",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Finanzkontrolle stellt den öffentlich-rechtlichen Anstalten des Kantons sowie Organisationen im Sinn von § 15 c für ihre Aufwendungen zu marktüblichen Ansätzen Rechnung."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "7b2760c7f57013bbb937456eb8cafda6a17e57abf3a6a20374c0a489bc14c97a"
+    },
+    {
+      "id": "kanton/ZH/614/art_11",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Revisionsstelle prüft die Rechnung der Finanzkontrolle."
+        },
+        {
+          "absatz": "2",
+          "text": "Die mit der Qualitätssicherung beauftragte Stelle unterzieht die Finanzkontrolle mindestens alle fünf Jahre einer Qualitätsbeurteilung. Diese umfasst insbesondere die Einhaltung der berufsständischen Grundsätze, die Führung und Organisation der Finanzkontrolle sowie die Aufgabenerfüllung."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "acac9ae8085ae546cb749da33c0cd93861c2e505f9201c4f17914c76dc709b2d"
+    },
+    {
+      "id": "kanton/ZH/614/art_12",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzkontrolle verkehrt direkt mit denjenigen Stellen, die ihrer Finanzaufsicht unterstehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie koordiniert ihre Tätigkeit",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit anderen Organen, die Revisions- oder Finanzaufsichtsaufgaben wahrnehmen,"
+            },
+            {
+              "marke": "b",
+              "text": "mit den für das Controlling zuständigen Stellen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "7e6250d2f5629c8e090c4b0a48f96d06ac3a162c2bd6c2ca5eb2725cfd621d4e"
+    },
+    {
+      "id": "kanton/ZH/614/art_13",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/614/art_14",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/614/art_15",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzkontrolle nimmt die Aufgaben der Abschlussprüfung und der Finanzaufsicht gemäss diesem Gesetz wahr."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie unterstützt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Kantonsrat bei der Ausübung der Oberaufsicht,"
+            },
+            {
+              "marke": "b",
+              "text": "den Regierungsrat, seine Direktionen, die Staatskanzlei und die obersten kantonalen Gerichte bei der Ausübung der Aufsicht."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "e6e301345aa9fd0c57222b0b61e76285f7508173943ecf394fe9d2a08939ed52"
+    },
+    {
+      "id": "kanton/ZH/614/art_15_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "15_a",
+      "artikelLabel": "§ 15a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Finanzkontrolle legt jährlich ein Tätigkeitsprogramm fest und bringt dieses der Geschäftsleitung und der Finanzkommission des Kantonsrates, dem Regierungsrat, den obersten kantonalen Gerichten sowie ihrem Begleitenden Ausschuss zur Kenntnis."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "18b0a640bb39f19435a72021ef786d4ecfcb225df54820421417ed03ffaa8e88"
+    },
+    {
+      "id": "kanton/ZH/614/art_15_b",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "15_b",
+      "artikelLabel": "§ 15b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzkontrolle prüft die vom Regierungsrat vorgelegten Rechnungen auf allen Stufen des Vollzugs des Budgets."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie prüft die separaten Rechnungen der Behörden und konsolidierten Anstalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden konsolidierte Einheiten von Dritten geprüft, nimmt sie die Verantwortung als Konzernprüferin im Sinn der berufsständischen Grundsätze wahr."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "1b1fc60288ae9e5f75b2b3f469826a735e951656b1a449b66a4a24103fe15945"
+    },
+    {
+      "id": "kanton/ZH/614/art_15_c",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "15_c",
+      "artikelLabel": "§ 15c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzkontrolle kann als Revisionsstelle weitere Abschlussprüfungen vornehmen, soweit ein besonderes öffentliches Interesse besteht."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie nimmt Prüfungen im Auftrag des Bundes vor oder beauftragt Dritte damit."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie prüft und bestätigt die Existenz von internen Kontrollsystemen im Hinblick auf die finanzielle Berichterstattung."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "73ae1b1587f85551b4ddd2d35b88ca024595f0720d419167f5d2096dd4681f54"
+    },
+    {
+      "id": "kanton/ZH/614/art_15_d",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "15_d",
+      "artikelLabel": "§ 15d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzaufsicht der Finanzkontrolle umfasst die Prüfungen der Ordnungs- und Rechtmässigkeit sowie der Wirtschaftlichkeit im Rahmen der Haushaltsführung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie berücksichtigt dabei das Controlling der zuständigen Stellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie ist zuständig für Prüfungen der separaten finanzrelevanten Berichterstattungen von Organisationen, die der Finanzaufsicht durch die Finanzkontrolle unterstellt sind."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "991894cc95c7da213811ec656eda7ef65ff16f400141db18ed1ef5670f9e11d5"
+    },
+    {
+      "id": "kanton/ZH/614/art_16",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Parlamentarische Untersuchungskommissionen, die Aufsichtskommissionen des Kantonsrates, der Regierungsrat, die Direktionen, die Staatskanzlei, die obersten kantonalen Gerichte und die öffentlich-rechtlichen Anstalten können der Finanzkontrolle zur Unterstützung ihrer Oberaufsicht oder Dienstaufsicht besondere Prüfungsaufträge erteilen und sie als beratendes Organ in Fragen der Finanzaufsicht beiziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Finanzkontrolle kann Aufträge ablehnen, wenn die Abwicklung des ordentlichen Revisionsprogramms gefährdet wird. Aufträge von Parlamentarischen Untersuchungskommissionen können nicht abgelehnt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Gegen die Ablehnung kann die auftragerteilende Stelle innert zehn Tagen beim Begleitenden Ausschuss Beschwerde erheben. Der Begleitende Ausschuss entscheidet endgültig."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "747c459e7fd2ba278d3c202672a3dfde491d7e82bfd978b9597771299938de3f"
+    },
+    {
+      "id": "kanton/ZH/614/art_17",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach Abschluss der Prüfung bespricht die Finanzkontrolle die Ergebnisse der Prüfung mit den zuständigen Personen der geprüften Einheit. Die Finanzkontrolle teilt der geprüften und deren vorgesetzten Stelle die Ergebnisse der Prüfung auch schriftlich mit. Nicht berichtsrelevante Mängel, insbesondere Fehler formeller Art, werden in einer Gesprächsnotiz festgehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ergebnisse der Prüfung der Staatsrechnung werden der Finanzkommission, den Aufsichtskommissionen des Kantonsrates, soweit es diese direkt betrifft, sowie dem Regierungsrat und den obersten kantonalen Gerichten mitgeteilt. Die Ergebnisse der Prüfung der Jahresrechnung der öffentlich-rechtlichen Anstalten werden auch der Anstalt und der zuständigen Direktion mitgeteilt."
+        },
+        {
+          "absatz": "3",
+          "text": "Lassen Feststellungen der Finanzkontrolle ein sofortiges Handeln als geboten erscheinen, informiert die Finanzkontrolle unverzüglich die vorgesetzte Instanz der geprüften Stelle."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Prüfung von Organisationen und Personen ausserhalb der kantonalen Verwaltung werden die Ergebnisse der Prüfung sowohl diesen als auch der für den Verkehr mit den geprüften Organisationen und Personen zuständigen Stelle der kantonalen Verwaltung oder der obersten kantonalen Gerichte mitgeteilt."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei besonderen Aufträgen im Sinn von § 16 erfolgt die Berichterstattung an die auftraggebende Stelle."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "f5c411ebe51d07fa4d5d33074b84346853e8fb51b6196f0d9250fab49f969c90"
+    },
+    {
+      "id": "kanton/ZH/614/art_18",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Finanzkontrolle orientiert die Finanzkommission, die Aufsichtskommissionen des Kantonsrates, soweit es diese direkt betrifft, sowie den Regierungsrat, die obersten kantonalen Gerichte und den Begleitenden Ausschuss semesterweise über ihre Prüftätigkeit. Die Orientierung erfolgt erst, wenn die Stellungnahmen im Sinn von § 19 vorliegen oder die Frist zu ihrer Einreichung unbenutzt abgelaufen ist."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "4a97af1b601957137ad9bfeda0bfb5b3b0b549fdb0249b6e543dceb06cea577d"
+    },
+    {
+      "id": "kanton/ZH/614/art_19",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Stellt die Finanzkontrolle Mängel fest, fordert sie die geprüfte Stelle zu einer schriftlichen Stellungnahme innert 60 Tagen auf. Die Stellungnahme erfolgt auf dem Dienstweg. Diese gibt Auskunft über die getroffenen oder eingeleiteten Massnahmen, die Verantwortlichkeit für die Umsetzung sowie die zeitliche Erledigung."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "72859e0686b7529bf2a3b8c9b012e993aa40efc10770287e264f4d8ad1ccb96b"
+    },
+    {
+      "id": "kanton/ZH/614/art_20",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird der festgestellte Mangel durch die geprüfte Stelle nicht behoben oder werden keine Massnahmen zu seiner Behebung getroffen, entscheidet auf Antrag der Finanzkontrolle die vorgesetzte Stelle über die notwendigen Massnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Finanzkontrolle kann Mängel, welche die Ordnungsmässigkeit oder die Rechtmässigkeit berühren, formell feststellen. Sie kann den Regierungsrat, die zuständige Direktion oder das zuständige Organ der Organisation auffordern, die gebotenen Massnahmen zu treffen."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "623f4e2aba2e0b1c4bc226431b1ac2ac2e833cb24a3384aa6c4a74504740f29e"
+    },
+    {
+      "id": "kanton/ZH/614/art_21",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/614/art_22",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzkontrolle erstattet dem Kantonsrat und dem Regierungsrat jährlich einen Bericht über ihre Tätigkeit, in dem sie über den Umfang und die Schwerpunkte ihrer Revisions- und Aufsichtstätigkeit sowie über wichtige Feststellungen und Beurteilungen informiert."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bericht wird veröffentlicht."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "d6428b35a96e371e9c01801e3c295045d233c5abc513fcf6d026863b1239b281"
+    },
+    {
+      "id": "kanton/ZH/614/art_23",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ergeben sich Hinweise auf eine strafbare Handlung, meldet die Finanzkontrolle dies der zuständigen Direktion oder dem obersten Organ der betroffenen Organisation. Die informierten Instanzen sorgen unverzüglich für die gebotenen Massnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden keine ausreichenden Massnahmen ergriffen, informiert die Finanzkontrolle den Regierungsrat über die von ihr entdeckten Hinweise."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Finanzkontrolle ist zusätzlich zur Anzeige an die Strafverfolgungsbehörde berechtigt, aber nicht verpflichtet."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "2bd3033c9f918b863e4572efdb5c7b4000c8803f5112e2827b4bcc77b12235dd"
+    },
+    {
+      "id": "kanton/ZH/614/art_24",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bis zur endgültigen Erledigung einer Beanstandung und solange eine Untersuchung der Finanzkontrolle nicht abgeschlossen ist, dürfen ohne Zustimmung der Finanzkontrolle weder neue Verpflichtungen eingegangen noch Zahlungen geleistet werden, die Gegenstand des Verfahrens bilden."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "8114f881426e76d886f225f4416532de6bcd40d01c5edd5ee29d72c96a4a3e75"
+    },
+    {
+      "id": "kanton/ZH/614/art_25",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beschlüsse und Verfügungen des Kantonsrates, des Regierungsrates, der Rechtspflege, der Direktionen, der Staatskanzlei und der Amtsstellen sowie der selbstständigen öffentlich-rechtlichen Anstalten, die den Finanzhaushalt des Kantons betreffen, sind der Finanzkontrolle unaufgefordert verfügbar zu halten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Finanzkontrolle hat das Recht, die für die Wahrnehmung der Finanzaufsicht erforderlichen Daten einschliesslich Personendaten aus den Datensammlungen sowie massgebende interne Dokumentationen und Protokolle der ihrer Aufsicht unterstellten Organisationen abzurufen. Soweit die Daten für die Aufgabenerfüllung geeignet und erforderlich sind, erstreckt sich das Zugriffsrecht auch auf besondere Personendaten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Finanzkontrolle darf die ihr derart zur Kenntnis gebrachten Personendaten nur bis zum Abschluss des Revisionsverfahrens aufbewahren oder speichern. Die Zugriffe auf die verschiedenen Datensammlungen und die damit verfolgten Zwecke müssen dokumentiert werden."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "e121ec07eeb23d5dc93d02164d528a1a79fd7d781d2ab67529e6d81b801a4ed8"
+    },
+    {
+      "id": "kanton/ZH/614/art_26",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer der Aufsicht durch die Finanzkontrolle untersteht, unterstützt sie bei der Durchführung ihrer Aufgaben. Insbesondere legt er auf Verlangen die notwendigen Unterlagen vor und erteilt die erforderlichen Auskünfte."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "97c69ed420a4af8e778bbaaec720027d842cfda8449f89b5c769990c58346f2a"
+    },
+    {
+      "id": "kanton/ZH/614/art_27",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die der Finanzaufsicht durch die Finanzkontrolle unterstellten Einheiten haben Mängel von wesentlicher finanzieller Bedeutung und wesentliche Ordnungs- und Rechtswidrigkeiten auf dem Dienstweg unverzüglich der Finanzkontrolle zu melden."
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "c28b02a0984e7076edc0a039e302960f1a9e6c630701bf9dcc6abef02141832c"
+    },
+    {
+      "id": "kanton/ZH/614/art_28",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Finanzkontrollgesetz (FKG) (LS 614)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die nachstehenden Gesetze werden wie folgt geändert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Das Staatsbeitragsgesetz vom 1. April 1990:..."
+            },
+            {
+              "marke": "b",
+              "text": "Das Wahlgesetz vom 4. September 1983:..."
+            },
+            {
+              "marke": "c",
+              "text": "Das Haftungsgesetz vom 14. September 1969:..."
+            },
+            {
+              "marke": "d",
+              "text": "Das Kantonsratsgesetz vom 5. April 1981:..."
+            },
+            {
+              "marke": "e",
+              "text": "Das Gesetz betreffend die Organisation und Geschäftsordnung des Regierungsrates und seiner Direktionen vom 26. Februar 1899:..."
+            },
+            {
+              "marke": "f",
+              "text": "Das Verwaltungsrechtspflegegesetz vom 24. Mai 1959:..."
+            },
+            {
+              "marke": "g",
+              "text": "Das Finanzhaushaltsgesetz vom 2. September 1979:..."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-05-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-614-2000_10_30-2001_07_01-125.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "e364a0b29957c5e19717b5479fdfce9b605c0dca2eba417f79516d9845674083",
+      "sha": "783841346d792ee8abfa0d11d259d882f8aa2d930a9c432c53f9954413cfc674"
+    }
+  ]
+}

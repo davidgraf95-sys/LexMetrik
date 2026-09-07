@@ -101,7 +101,7 @@ export default function RegesteBlock({ regeste, amtlich, mitAnker = true }: Prop
       {/* Français / Italiano dezent einklappbar (A18: gruppiert mit Sprach-Label). */}
       {weitere.length > 0 && (
         <details className="group border-t border-line/60 pt-2">
-          <summary className="lc-overline flex cursor-pointer select-none list-none items-center gap-1.5 text-ink-600 marker:hidden hover:text-ink-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-600">
+          <summary className="lc-overline flex cursor-pointer select-none list-none items-center gap-1.5 text-ink-600 marker:hidden hover:text-ink-800">
             <span aria-hidden className="inline-block transition-transform group-open:rotate-90">▸</span>
             Weitere Sprachfassungen · {weitere.map((f) => SPRACH_LABEL[f.sprache]).join(' · ')}
           </summary>
@@ -121,7 +121,7 @@ export default function RegesteBlock({ regeste, amtlich, mitAnker = true }: Prop
           ? 'Amtliche Regeste der amtlichen Sammlung (DE · FR · IT) · Quelle: '
           : 'Automatisch übernommene Zusammenfassung · Quelle: '}
         <a href={quelleUrl} target="_blank" rel="noopener noreferrer"
-          className="underline decoration-line hover:text-ink-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-600">
+          className="underline decoration-line hover:text-ink-800">
           bger.ch ↗
         </a>
       </p>

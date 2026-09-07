@@ -22,11 +22,17 @@
 // ihn einmal mit leerer und einmal mit gefüllter Liste — die Sonde wird rot,
 // wenn er leer doch etwas rendert ODER gefüllt nichts.
 
-/** Gemeinsame Schalter-Optik der Streifen — wörtlich wie `BezugFacettenWahl`,
- *  damit der vierte Filter sich vom ersten nicht unterscheidet (§13). */
-const KNOPF = 'rounded px-1.5 py-0.5 text-xs transition-colors';
-const AKTIV = 'bg-brass-100/60 font-medium text-ink-900';
-const RUHIG = 'text-ink-500 hover:bg-brass-100/40';
+// ── W2·19-DESIGN-KONSISTENZ · D-2: DIE KOPIERTE OPTIK IST WEG ───────────────
+// Hier standen drei Konstanten (`KNOPF`/`AKTIV`/`RUHIG`) mit dem Kommentar
+// «wörtlich wie `BezugFacettenWahl`, damit der vierte Filter sich vom ersten
+// nicht unterscheidet (§13)». Die Absicht war richtig, das Mittel nicht: eine
+// byte-gleiche Kopie hält zwei Dateien nur so lange gleich, wie niemand eine
+// davon anfasst — und beide Kopien zeigten die Auswahl allein über eine
+// Farbfläche, ohne das ✓-Präfix aus LM-040/F4 (F2: «Farbe nie allein»).
+// Beide Streifen tragen jetzt denselben geteilten Baustein: `.lc-chip` /
+// `.lc-chip-selected` in einer `.lc-chip-zeile` (§5/§10, Definition
+// `src/index.css`). Der vierte Filter unterscheidet sich damit nicht mehr vom
+// ersten — und kann es strukturell auch nicht mehr.
 
 export function PanelSachgebiet({ gebiete, gewaehlt, onGebiete }: {
   /** Sachgebiete, zu denen DIESER Erlass wirklich Entscheide führt. Leer ⇒ der
@@ -39,16 +45,16 @@ export function PanelSachgebiet({ gebiete, gewaehlt, onGebiete }: {
   const alle = gewaehlt.length === 0;
   return (
     <div role="group" aria-label="Sachgebiete der Entscheide" data-v3-panel-sachgebiet
-      className="flex flex-wrap items-center gap-1 px-2.5 pt-1.5 pb-0.5">
+      className="lc-chip-zeile flex flex-wrap items-center gap-x-2 gap-y-1.5 px-2.5 pt-1.5 pb-0.5">
       <span className="lc-overline mr-1">Sachgebiet</span>
       <button type="button" aria-pressed={alle} onClick={() => onGebiete([])}
         title="Entscheide aus allen erfassten Sachgebieten zeigen"
-        className={`${KNOPF} ${alle ? AKTIV : RUHIG}`}>alle</button>
+        className={`lc-chip ${alle ? 'lc-chip-selected' : ''}`}>alle</button>
       {gebiete.map((g) => (
         <button key={g} type="button" aria-pressed={gewaehlt.includes(g)} data-v3-panel-gebiet={g}
           title={`Nur Entscheide aus dem Sachgebiet ${g} zeigen`}
           onClick={() => onGebiete(gewaehlt.includes(g) ? gewaehlt.filter((x) => x !== g) : [...gewaehlt, g])}
-          className={`${KNOPF} ${gewaehlt.includes(g) ? AKTIV : RUHIG}`}>{g}</button>
+          className={`lc-chip ${gewaehlt.includes(g) ? 'lc-chip-selected' : ''}`}>{g}</button>
       ))}
     </div>
   );

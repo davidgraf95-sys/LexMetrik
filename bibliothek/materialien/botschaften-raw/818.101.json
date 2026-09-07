@@ -6,123 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2020/1439"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2020/437"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2020-05-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "20.040"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer dringlichen Änderung des Epidemiengesetzes im Zusammenhang mit dem Coronavirus (Proximity-Tracing-System)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification urgente de la loi sur les épidémies en lien avec le coronavirus (Système de traçage de proximité)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica urgente della legge sulle epidemie in relazione al coronavirus (Sistema di tracciamento di prossimità)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "818.101"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2020/1439"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2020/437"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2020-05-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "20.040"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer dringlichen Änderung des Epidemiengesetzes im Zusammenhang mit dem Coronavirus (Proximity-Tracing-System)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification urgente de la loi sur les épidémies en lien avec le coronavirus (Système de traçage de proximité)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica urgente della legge sulle epidemie in relazione al coronavirus (Sistema di tracciamento di prossimità)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "818.101"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2020/1439"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2020/437"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2020-05-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "20.040"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer dringlichen Änderung des Epidemiengesetzes im Zusammenhang mit dem Coronavirus (Proximity-Tracing-System)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification urgente de la loi sur les épidémies en lien avec le coronavirus (Système de traçage de proximité)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica urgente della legge sulle epidemie in relazione al coronavirus (Sistema di tracciamento di prossimità)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "818.101"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2006/666"
     },
     "proj": {
@@ -231,6 +114,162 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la modifica della legge federale per la lotta contro le malattie trasmissibili dell'uomo (Legge sulle epidemie)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "818.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2011/43"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1012"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/297"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-12-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.107"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Revision des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur la lutte  contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione della legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "818.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2011/43"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1012"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/297"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-12-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.107"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Revision des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur la lutte  contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione della legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "818.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2011/43"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1012"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/297"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-12-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.107"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Revision des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur la lutte  contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione della legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "818.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2011/43"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1012"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/297"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-12-03"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.107"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Revision des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la révision de la loi fédérale sur la lutte  contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la revisione della legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
     }
   },
   {
@@ -357,36 +396,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2011/43"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1012"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2020/1439"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/297"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2020/437"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-12-03"
+      "value": "2020-05-20"
     },
     "curia": {
       "type": "literal",
-      "value": "10.107"
+      "value": "20.040"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Revision des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) "
+      "value": "Botschaft zu einer dringlichen Änderung des Epidemiengesetzes im Zusammenhang mit dem Coronavirus (Proximity-Tracing-System)"
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur la lutte  contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+      "value": "Message concernant la modification urgente de la loi sur les épidémies en lien avec le coronavirus (Système de traçage de proximité)"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente la revisione della legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
+      "value": "Messaggio concernente la modifica urgente della legge sulle epidemie in relazione al coronavirus (Sistema di tracciamento di prossimità)"
     }
   },
   {
@@ -396,36 +435,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2011/43"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1012"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2020/1439"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/297"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2020/437"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-12-03"
+      "value": "2020-05-20"
     },
     "curia": {
       "type": "literal",
-      "value": "10.107"
+      "value": "20.040"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Revision des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) "
+      "value": "Botschaft zu einer dringlichen Änderung des Epidemiengesetzes im Zusammenhang mit dem Coronavirus (Proximity-Tracing-System)"
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur la lutte  contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+      "value": "Message concernant la modification urgente de la loi sur les épidémies en lien avec le coronavirus (Système de traçage de proximité)"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente la revisione della legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
+      "value": "Messaggio concernente la modifica urgente della legge sulle epidemie in relazione al coronavirus (Sistema di tracciamento di prossimità)"
     }
   },
   {
@@ -435,75 +474,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2011/43"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1012"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2020/1439"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/297"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2020/437"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-12-03"
+      "value": "2020-05-20"
     },
     "curia": {
       "type": "literal",
-      "value": "10.107"
+      "value": "20.040"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Revision des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) "
+      "value": "Botschaft zu einer dringlichen Änderung des Epidemiengesetzes im Zusammenhang mit dem Coronavirus (Proximity-Tracing-System)"
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur la lutte  contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+      "value": "Message concernant la modification urgente de la loi sur les épidémies en lien avec le coronavirus (Système de traçage de proximité)"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente la revisione della legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "818.101"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2011/43"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1012"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/297"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-12-03"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "10.107"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Revision des Bundesgesetzes über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la révision de la loi fédérale sur la lutte  contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la revisione della legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
+      "value": "Messaggio concernente la modifica urgente della legge sulle epidemie in relazione al coronavirus (Sistema di tracciamento di prossimità)"
     }
   }
 ]

@@ -91,7 +91,8 @@ import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
 import { manifestDb } from './manifest';
-import { TOKENIZER } from './fts';
+import { parseDatenManifest } from './validierung';
+import { ddlFtsArtikel, ddlFtsEntscheide } from './fts';
 import { leseFtsSchatten, ftsDokumente } from './turso-fts-index';
 import {
   zeilenBytes,
@@ -396,11 +397,14 @@ async function integritaet(url: string, token: string, tabelle: string): Promise
   await pipeline(url, token, [{ sql: `INSERT INTO ${tabelle}(${tabelle}) VALUES('integrity-check')` }]);
 }
 
-// TOKENIZER kommt als Import aus fts.ts (SSoT) — eine lokale Kopie wäre seit dem
-// Umbau ein stiller Bruchvektor: bei Drift ginge der lokal gebaute Index in eine
-// Remote-Tabelle mit anderem Query-Tokenizer, contentless integrity-check und
-// Sync-Smoke blieben grün, jede Diakritik-Suche verlöre still alle Treffer
-// (Gegenprüfung 4.8.2026, Befund F1 mit empirischer Probe).
+// Die REMOTE-DDLs kommen ausnahmslos aus fts.ts (`ddlFtsArtikel`, `ddlFtsEntscheide`) —
+// derselben Quelle, die die lokalen Tabellen anlegt (§5). Eine lokale Kopie, und sei es
+// nur des TOKENIZER-Strings, wäre ein stiller Bruchvektor: bei Drift ginge der lokal
+// gebaute Index in eine Remote-Tabelle mit anderem Query-Tokenizer, contentless
+// integrity-check und Sync-Smoke blieben grün, jede Diakritik-Suche verlöre still alle
+// Treffer (Gegenprüfung 4.8.2026, Befund F1 mit empirischer Probe). Seit dem 31.8.2026
+// gilt das auch für die Entscheide-Tabelle, deren Spaltenliste hier bis dahin ein zweites
+// Mal von Hand stand.
 
 async function main(): Promise<void> {
   const { url, token } = ladeZugang();
@@ -425,10 +429,10 @@ async function main(): Promise<void> {
   //     (Gegenprüfung Runde 5, M1) — dieselbe Lücke, die im Wächter schon als «‹nicht leer›
   //     reicht nicht» erkannt worden war. Der sha kommt aus `manifestDb()`, also aus exakt
   //     derselben Kanonisierung, die `daten-manifest.json` erzeugt hat.
-  const manifest = JSON.parse(readFileSync(MANIFEST_DATEI, 'utf8')) as Record<
-    string,
-    Record<string, { zeilen: number; sha: string }>
-  >;
+  // V6 (QS-VERWENDEN): Formprüfung an der Grenze statt ungeprüftem Typ-Cast —
+  // ein verstümmeltes Manifest bricht hier klar ab, statt als `undefined`
+  // stillschweigend durch den Quell-Riegel unten zu rutschen.
+  const manifest = parseDatenManifest(JSON.parse(readFileSync(MANIFEST_DATEI, 'utf8')), MANIFEST_DATEI);
   const istNormtext = manifestDb(normtext);
   const istRspr = manifestDb(rspr);
   const zuPruefen: Array<[string, { zeilen: number; sha: string } | undefined, { zeilen: number; sha: string } | undefined]> = [
@@ -590,26 +594,35 @@ async function main(): Promise<void> {
   ]);
   }
 
-  // 3) FTS artikel: remote CONTENTLESS (content=''), rowid == artikel.rowid. Übertragen wird
+  // 3) FTS artikel: CONTENTLESS (content=''), rowid == artikel.rowid. Übertragen wird
   //    der FERTIGE lokale Index (fts.ts/baueFtsArtikel hat ihn beim `datenhaltung:build`
   //    gebaut) — es geht weder eine zweite Textkopie über den Draht noch tokenisiert die
-  //    Gegenseite noch einmal. Lokal liegt `fts_artikel` als external-content-Tabelle über
-  //    `artikel`, das Ziel ist contentless; die Index-Shadowtabellen beider Bauarten sind
-  //    byte-gleich (empirisch, festgehalten in turso-fts-index.test.ts).
-  await pipeline(url, token, [
-    { sql: `CREATE VIRTUAL TABLE fts_artikel_neu USING fts5(text, content='', tokenize='${TOKENIZER}')` },
-  ]);
+  //    Gegenseite noch einmal.
+  //
+  //    SECHS SPALTEN seit QS-BASIS (d) K1 (31.8.2026): text · marginalie · marginalie_n ·
+  //    gliederung · tabelle · fussnote. Die DDL kommt aus `ddlFtsArtikel()` in fts.ts —
+  //    DERSELBEN Funktion, die die lokale Tabelle anlegt (§5). Hier eine zweite
+  //    Spaltenliste von Hand zu führen wäre die klassische stille Falle: eine Abweichung
+  //    in Zahl oder Reihenfolge der Spalten liesse den Shadow-Transport NICHT scheitern,
+  //    sondern legte die bm25-Gewichte auf das falsche Feld.
+  //
+  //    Lokal ist die Tabelle seit K1 ebenfalls contentless (vorher: external content über
+  //    `artikel` — eine Deklaration, die eine dort nie existierende Spalte `text`
+  //    behauptete). Die frühere Bauart-Divergenz lokal/remote entfällt damit; die
+  //    Byte-Gleichheit beider Bauarten bleibt in turso-fts-index.test.ts dokumentiert,
+  //    wird vom Produktionspfad aber nicht mehr vorausgesetzt.
+  await pipeline(url, token, [{ sql: ddlFtsArtikel('fts_artikel_neu') }]);
   const nFtsArtikel = await ladeFtsIndex(url, token, normtext, 'fts_artikel', 'fts_artikel_neu', false);
 
   // 4) FTS Schaufenster-Entscheide: standalone (Text physisch gespeichert, native snippet()).
   //    Umfang = ALLE Einträge der rechtsprechung.db (Stand 20.7.2026: 5093) — kein Filter,
   //    damit die Suche denselben Korpus kennt, den der Reader zeigt (§8: keine stille Teilmenge).
-  await pipeline(url, token, [
-    {
-      sql: `CREATE VIRTUAL TABLE fts_entscheide_schaufenster_neu USING fts5(id UNINDEXED, titel,
-            regeste, text, quelle_url UNINDEXED, tokenize='${TOKENIZER}')`,
-    },
-  ]);
+  //
+  //    Die DDL kommt seit dem 31.8.2026 aus `ddlFtsEntscheide()` in fts.ts — DERSELBEN
+  //    Funktion, die die lokale Tabelle anlegt. Vorher stand die Spaltenliste hier ein
+  //    zweites Mal von Hand: genau die stille Falle, vor der der Kommentar zu `fts_artikel`
+  //    drei Absätze weiter oben warnt, nur für die Entscheide nie eingelöst.
+  await pipeline(url, token, [{ sql: ddlFtsEntscheide('fts_entscheide_schaufenster_neu') }]);
   //    Auch hier wandert der FERTIGE Index (inkl. `_content`, weil standalone) statt der
   //    Zeilen. Das war die teuerste Phase des Syncs — 22,3 der 32,8 Minuten des CI-Laufs
   //    29757068566 — und der Grund für diesen Umbau.

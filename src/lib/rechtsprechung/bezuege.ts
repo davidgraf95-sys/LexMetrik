@@ -21,6 +21,7 @@
 
 import type { BezugsFacetten, BezugStatus } from '../verzahnung/facetten';
 import { STATUS_RANG } from '../verzahnung/facetten';
+import { kodiereSchluessel } from '../normtext/dateiUrl';
 
 /** Dokument-Kopf — EINMAL je Shard, nicht je Artikel (§15, siehe Generator). */
 interface BezugsDokument {
@@ -91,7 +92,7 @@ export async function ladeBezugsShard(erlass: string): Promise<BezugsShard | nul
   if (!p) {
     p = (async () => {
       try {
-        const res = await fetch(`/rechtsprechung/bezuege/${encodeURIComponent(erlass)}.json`);
+        const res = await fetch(`/rechtsprechung/bezuege/${kodiereSchluessel(erlass)}.json`);
         if (res.status === 404) return null;
         if (!res.ok) { shardPromises.delete(erlass); return null; }
         return (await res.json()) as BezugsShard;

@@ -4,8 +4,12 @@
 # Zwei Wach-Ebenen:
 #  1. Rechtsstände (amtliche Quellen): `npm run check:netz` — die EINE Netz-Tor-
 #     Kette (Fedlex-Caches, Zitate, Konsolidierungs-Versionen, RSS-OC-Stale-
-#     Pending, Kantons-version_uid, PDF-Erreichbarkeit, PDF-Quellen, Materialien-,
-#     Botschaften-, Revisionen-, Vernehmlassungs- und Fedlex-Abkürzungs-Drift).
+#     Pending, Kantons-version_uid, ZH-Registry-Pins gegen die amtliche Suche
+#     [zh-quellen-aufloesen Prüfmodus, B3 31.8.2026: eine alte Registry-Seite
+#     liefert ewig HTTP 200 + altes PDF — ein NEUER Nachtrag bliebe dem
+#     Hash-Drift-Tor sonst unsichtbar], PDF-Erreichbarkeit, PDF-Quellen,
+#     Materialien-, Botschaften-, Revisionen-, Vernehmlassungs- und
+#     Fedlex-Abkürzungs-Drift).
 #     Vorher liefen nur 6 von 10 Toren einzeln (O-1.3) — Abdeckung ist jetzt
 #     = `check:netz` per Konstruktion.
 #     `check:rss-oc` kam am 7.8.2026 dazu (QS-SELBSTOPT, Ent-Regulierung): es war
@@ -27,7 +31,13 @@ name: Normen-Monitor
 
 on:
   schedule:
-    - cron: '17 5 * * 1' # montags 05:17 UTC (wöchentlich)
+    # Montags 07:17 UTC — seit 1.9.2026 2,5 h NACH dem Reparatur-Arm (fedlex-frische.yml,
+    # 04:43 UTC). Verfahrens-Gap QS-MONITOR-ROT: bei 05:17 lief der Detektor 34 min nach
+    # dem Reparatur-Lauf, dessen PR (CI ≈ 15 min + Auto-Merge) noch nicht auf main war —
+    # der Monitor meldete den Pin rot, den der Reparatur-Arm schon gehoben hatte (24.8.:
+    # 10 Pins, 31.8.: StGB). Reihenfolge-Entscheid: erst reparieren, dann messen; der
+    # Detektor prüft main, nicht den Reparatur-Branch.
+    - cron: '17 7 * * 1'
   workflow_dispatch:
 
 env:

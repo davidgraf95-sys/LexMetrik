@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
 import type { KopfDaten } from './InhaltsKopfKontext';
 import { RuecksprungChip } from './RuecksprungChip';
 import { DeepLinkSkeleton } from './DeepLinkSkeleton';
+import { OrtsAngabe, StandAngabe } from './OrtsAngabe';
+import { ortsLeistenKrumen } from './BrotkrumeRegel';
+import { SchliessKnopf } from '../ui/SchliessKnopf';
 
 // ─── Inhalts-Kopf (Einzelansicht «analog Split-View», ohne Verschiebe-Optionen) ─
 //
@@ -34,6 +36,11 @@ import { DeepLinkSkeleton } from './DeepLinkSkeleton';
 //     Gesetzes-Übersicht — dasselbe Ziel, das die Sektions-Krume «Gesetze»
 //     ansteuert), und nur die Blatt-Krume + der Artikel bleiben ausgeschrieben.
 //     Gekürzt wird als EINE Einheit, nie Zeichen für Zeichen je Krume.
+//     ── ERGÄNZT 31.8.2026 (A-4): Befund und Antwort gelten unverändert;
+//        gewandert ist nur die MESSGRÖSSE. Damals «unterhalb sm» (Viewport),
+//        seit A-4 «unterhalb 28 rem Ort-Zone» (`@md/ort`, Container-Query in
+//        `./OrtsAngabe`) — dieselbe Regel gilt seither auch im Split-View, wo
+//        der Viewport die falsche Zahl war.
 //
 //  ③ VIER ANATOMIEN → EINE. Die Griffe (☰, Suche, Rechtsprechung ▾, Ansicht ▾,
 //     ✕) trugen bordierte Knöpfe, `lc-chip` mit Messing-Tick, `lc-input` und
@@ -51,18 +58,14 @@ import { DeepLinkSkeleton } from './DeepLinkSkeleton';
 //    `InhaltsKopfKontext.ts` und am `if` unten). Alles darüber gilt unverändert
 //    für jede Seite, die das Feld nicht meldet.
 
-/** Artikel-Etikett ohne die Wiederholung des Erlass-Kürzels, das direkt davor
- *  in der Brotkrume steht («Art. 212 ZGB» → «Art. 212», wenn die Blatt-Krume
- *  «ZGB» heisst). Reine Anzeige-Ableitung: der Melde-Vertrag (`KopfDaten.artikel`)
- *  bleibt das volle Zitat, das der Split-View-Kopf (PaneKopf) unverändert
- *  ausgibt — dort steht das Kürzel nicht daneben. Greift nur bei exaktem
- *  Suffix-Treffer mit Wortgrenze; sonst bleibt das Etikett unangetastet. */
-function kuerzeArtikel(artikel: string | null | undefined, blatt: string | undefined): string | null {
-  if (!artikel) return null;
-  if (!blatt) return artikel;
-  const suffix = ` ${blatt}`;
-  return artikel.endsWith(suffix) ? artikel.slice(0, -suffix.length) : artikel;
-}
+// ── A-4 (31.8.2026): Krumen-Kette, Rücksprung, Artikel-Etikett und die
+//    Overflow-Regel dieser Leiste stehen nicht mehr hier, sondern in
+//    `./OrtsAngabe` — demselben Baustein, den seither auch der `PaneKopf`
+//    konsumiert (§5/§10). Die Herleitungen ② «schmale Breiten» und die
+//    Trenner-Messung C5 sind wörtlich mitgewandert; NEU ist allein, dass die
+//    Kaskade die ZONE misst statt den Viewport (Herleitung dort). `kuerzeArtikel`
+//    lebt ebenfalls dort und ist von hier verschwunden — es war die Ableitung
+//    dieser Anzeige, nicht dieser Datei.
 
 export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
   daten: KopfDaten;
@@ -70,14 +73,6 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
   breiteKlasse: string;
   onSchliessen: () => void;
 }) {
-  const letzter = daten.breadcrumb.length - 1;
-  const blatt = daten.breadcrumb[letzter];
-  // Rücksprung-Ziel für schmale Breiten: die NÄCHSTGELEGENE klickbare Krume
-  // oberhalb des Blatts. Bei Gesetzen ist das die Ebene-Krume («Bund» →
-  // /gesetze, «Kanton BS» → /gesetze?ebene=kanton&kt=BS) — also dieselbe
-  // Übersicht, auf die auch die Sektions-Krume führt: kein Ziel geht verloren.
-  const eltern = daten.breadcrumb.slice(0, letzter).reverse().find((b) => b.to);
-  const artikelKurz = kuerzeArtikel(daten.artikel, blatt?.label);
   // ── A-2 (David 17.8.2026) · EINE KOPFZEILE, NICHT ZWEI ────────────────────
   // Trägt die Inhaltsseite ihre Kopfzeile selbst (`kopfzeileSelbst`, Herleitung
   // im Vertrag), zeigt diese Leiste NICHTS mehr — keine Krume, keinen Stand,
@@ -111,95 +106,76 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
   // jenes Kopfes liegt und Klicks auf Krume und Griffe sonst schluckte; die zwei
   // Rückmeldungen holen sich die Klickbarkeit selbst zurück (beide tragen
   // `pointer-events-auto` an ihrem bedienbaren Element).
-  if (daten.kopfzeileSelbst) {
-    return (
-      <div data-inhalt-kopf-still
-        className="pointer-events-none sticky top-16 z-[19] h-9 border-b border-transparent">
-        <RuecksprungChip />
-        <DeepLinkSkeleton />
-      </div>
-    );
-  }
+  // ── WURZEL-FIX 1.9.2026 (QS-PERF/B5) · EIN TRÄGER, ZWEI ZUSTÄNDE ──────────
+  // Diese Datei hatte für «still» und «laut» ZWEI `return`-Zweige, und in beiden
+  // standen `RuecksprungChip` und `DeepLinkSkeleton`. React ordnet statische
+  // Kinder nach POSITION zu: im stillen Zweig lag der Chip an Index 0, im lauten
+  // an Index 1 — der Zweigwechsel war damit kein Update, sondern ein UNMOUNT +
+  // REMOUNT der beiden Rückmeldungen. Und dieser Zweigwechsel passiert bei JEDEM
+  // Leser-Einsprung: die Route `/gesetze/:ebene/:key` ist `lazy`, die Shell rät
+  // bis dahin aus dem Pfad eine laute Leiste (`kopfVonPfad`), und sobald der
+  // Leser steht, meldet er `kopfzeileSelbst`.
+  //
+  // FOLGE, gemessen (BV#art-8, 6× CPU-Drossel, rAF-Sampler, n=3): die
+  // «Springe zur verlinkten Stelle …»-Ansage ging beim Zweigwechsel AUS und
+  // 13–511 ms später wieder AN — ein sichtbares Blinken. Flanken und
+  // Zweigwechsel fielen auf die Millisekunde zusammen:
+  //     an 678 · aus 823 · an 836 · aus 1441   |  Zweig → still @ 823
+  //     an 495 · aus 666 · an 1177 · aus 1250  |  Zweig → still @ 666
+  //     an 501 · aus 672 · an 1186 · aus 1263  |  Zweig → still @ 672
+  // (Ziel `#art-8` im DOM erst bei 1177–1355 ms.) Der Effekt-Cleanup des
+  // sterbenden Skeletons rief `schliesse()`, die neue Instanz baute die Ansage
+  // neu auf. Kein Timing-Zufall, sondern eine Kopplung an den MONTAGEORT.
+  //
+  // Sichtbar wurde das erst, als der Leser schnell genug wurde, dass die Lücke
+  // VOR den Artikel-Render fiel — `e2e/leser-ruecksprung-r5-r7.e2e.ts` wartet
+  // auf «Ansage weg» und las dann in die Lücke hinein (Ziel noch nicht im DOM).
+  // Die Ursache lag aber immer hier, nicht am Tempo (§17: Wurzel, nicht Symptom).
+  //
+  // FIX: EIN Träger, dessen Zustand nur Attribute, Klassen und den VORDEREN
+  // Inhalt ändert; die zwei Rückmeldungen stehen in beiden Zuständen an
+  // derselben Position und behalten damit ihre Identität. Das gerenderte Markup
+  // ist in beiden Zuständen unverändert (der stille Zustand rendert `null` statt
+  // der Leisten-Zeile, `undefined`-Attribute lässt React weg) — Golden und die
+  // prerenderten Seiten bleiben byte-gleich.
+  const still = !!daten.kopfzeileSelbst;
   return (
     // Klebt unter der Topbar (sticky top-16 = 4rem), bleibt beim Scrollen sichtbar
     // (damit der Live-Artikel mitläuft). z ÜBER den Inhalts-Sticky-Leisten (Suche
-    // z-16 / Sektions-Kontextkopf z-15), damit das A26-«Ansicht»-Dropdown-Panel
-    // beim Aufklappen über sie legt statt dahinter zu verschwinden; die Leiste
-    // selbst überlappt sie nicht (sie sitzt 36 px höher), das z ist rein fürs Panel.
+    // z-reader-scrim=16 / Sektions-Kontextkopf z-entscheid-sticky=15), damit das
+    // A26-«Ansicht»-Dropdown-Panel beim Aufklappen über sie legt statt dahinter zu
+    // verschwinden; die Leiste selbst überlappt sie nicht (sie sitzt 36 px höher),
+    // das z ist rein fürs Panel.
     // A41 (David 16.7.2026, Overlay-Bug): z BEWUSST UNTER dem Topbar-Stapelkontext
-    // (Topbar sticky z-20). Vorher z-30 > 20 → dieser Kopf legte sich über das
-    // GANZE Topbar-Fenster inkl. des Header-Such-Dropdowns (dessen z-30 IM z-20-
-    // Topbar-Kontext gefangen ist) → «kopfzeile bei gesetzen verdeckt suchresultate
-    // aus dem header». z-[19] hält den Kopf weiter über den Reader-Sticky-Leisten
-    // (z-16/z-15 → A26-Panel bleibt oben), lässt aber das Header-Dropdown darüber.
-    <div data-inhalt-kopf className="sticky top-16 z-[19] border-b border-line bg-paper">
+    // (Topbar sticky z-leiste=20). Vorher z-dropdown(30) > 20 → dieser Kopf legte
+    // sich über das GANZE Topbar-Fenster inkl. des Header-Such-Dropdowns (dessen
+    // z-dropdown IM z-leiste-Topbar-Kontext gefangen ist) → «kopfzeile bei
+    // gesetzen verdeckt suchresultate aus dem header». z-inhalt-kopf (C3: benannte
+    // Rolle für den vormals rohen Wert 19) hält den Kopf weiter über den
+    // Reader-Sticky-Leisten (16/15 → A26-Panel bleibt oben), lässt aber das
+    // Header-Dropdown darüber.
+    // Der STILLE Zustand (A-2, `kopfzeileSelbst`) trägt denselben Träger mit
+    // `h-9` reserviertem, transparentem Band — die Herleitung dafür steht oben
+    // («UND WARUM ER SEINE HÖHE BEHÄLT»): fiele er auf 0 px zusammen, sprängen
+    // 37 px und das Bestands-Tor `leser-kopf-cls-s3` riss seine Schwelle.
+    <div data-inhalt-kopf={still ? undefined : true} data-inhalt-kopf-still={still ? true : undefined}
+      className={still
+        ? 'pointer-events-none sticky top-16 z-inhalt-kopf h-9 border-b border-transparent'
+        : 'sticky top-16 z-inhalt-kopf border-b border-line bg-paper'}>
       {/* `relative`: Anker für das mobile Overlay-Suchfeld (A35, sucheSlot) — es legt
           sich `absolute` über die Zeile, ohne etwas zu verschieben (§15.2). */}
+      {still ? null : (
       <div className={`${breiteKlasse} relative mx-auto flex h-9 items-center gap-1.5 px-5 sm:gap-2 sm:px-6 md:gap-3`}>
-        {/* ① ORT: Krumen und Artikel als EINE Angabe. `min-w-0` + `overflow-hidden`
-            machen sie zur einzigen schrumpfenden Zone der Leiste — die Griffe
-            rechts behalten damit in jeder Breite ihre Plätze (keine
-            Umbruch-Wanderung, CLS 0 beim Einlaufen des Live-Artikels). */}
-        <nav aria-label="Brotkrümel" className="flex min-w-0 flex-1 items-center gap-1 overflow-hidden whitespace-nowrap text-xs text-ink-500">
-          {/* ② Unter sm: EIN Rücksprung statt vier zerhackter Krumen. */}
-          {eltern?.to && (
-            <Link to={eltern.to} aria-label={`Zurück zu ${eltern.label}`} title={`Zurück zu ${eltern.label}`}
-              className="shrink-0 no-underline hover:text-brass-700 sm:hidden">‹</Link>
-          )}
-          {daten.breadcrumb.map((b, i) => (
-            <span key={`${i}-${b.label}`}
-              // Unter sm bleibt nur die Blatt-Krume — und auch die nur, solange
-              // KEIN Artikel läuft: sobald einer läuft, trägt sein volles Zitat
-              // («Art. 212 ZGB») das Kürzel bereits mit sich. Zwei Angaben
-              // desselben Erlasses auf 360 px wären die teuerste Dopplung der
-              // Leiste.
-              className={`min-w-0 items-center gap-1 ${
-                i < letzter || daten.artikel ? 'hidden sm:inline-flex' : 'inline-flex'
-              }`}>
-              {/* C5 (Design-Qualitäts-Pass 29.8.2026) · KRUMEN-TRENNER ink-300 →
-                  ink-400, gemeinsame Herleitung für alle fünf Trenner-Stellen
-                  (hier, PaneKopf, LeserKopf ›/‹, GliederungSheet). Gemessen
-                  gegen `--paper`: ink-300 hell 2.28:1 / dunkel 2.34:1 — der
-                  Trenner trägt die Gliederung der Ortsangabe und verschwand.
-                  ink-400 misst hell 3.30 / dunkel 3.65 (auf `--well` 3.13 /
-                  3.83) und hält die F2-Schwelle 3:1 in BEIDEN Themes.
-                  Bewusst NICHT ink-500 wie die Klapp-Dreiecke: die Krumen-Links
-                  selbst laufen auf ink-500 (PaneKopf.tsx) — ein gleich starker
-                  Trenner nähme ihnen die Hierarchie. Der Trenner ist Struktur,
-                  kein Bedienelement (aria-hidden). */}
-              {i > 0 && <span aria-hidden className="hidden text-ink-400 sm:inline">›</span>}
-              {b.to
-                ? <Link to={b.to} className="truncate no-underline hover:text-brass-700">{b.label}</Link>
-                : <span className={`truncate ${i === letzter ? 'font-medium text-ink-800' : ''}`}>{b.label}</span>}
-            </span>
-          ))}
-          {/* Live-Artikel als feinste Stufe derselben Ortsangabe — Mono/Micro,
-              damit er die Krumen nicht überstimmt (ruhigere Typo-Hierarchie).
-              Zwei Fassungen desselben Werts (§5: eine Quelle, zwei Zuschnitte —
-              nur je eine ist gerendert, die andere ist `display:none`):
-               · ab sm ohne das Kürzel, das die Krume daneben schon nennt, und
-                 `shrink-0` — beim Engerwerden gibt die Krume nach, nicht die
-                 genauere Angabe (gleiche Setzung wie im PaneKopf);
-               · unter sm als VOLLES Zitat und truncatend: dort steht keine
-                 Krume mehr daneben, und wenn der Platz nicht reicht, soll die
-                 Erlass-Abkürzung am Ende abgeschnitten werden — nie die
-                 Artikelnummer am Anfang. */}
-          {/* `data-ort-artikel` (Ä1, LESER-V3 H2b): die ORTSANGABE dieser Leiste,
-              adressierbar gemacht. Der Ästhetik-Review H1 meldete, sie nenne im
-              Split einen anderen Artikel als die Lesespalte — ein §7-Fehler, wenn
-              er zutrifft. Prüfbar war das nicht: die Angabe hing an einer
-              Utility-Klasse (`.num`), und die erste Mono-Zahl des Dokuments ist
-              woanders (SR-Nummer). Die Marke ist der Testanker für
-              `e2e/leser-v3-ortsangabe.e2e.ts`; sie ändert nichts an der Anzeige. */}
-          {daten.artikel && (
-            <>
-              <span data-ort-artikel className="num min-w-0 truncate text-micro font-medium text-ink-700 sm:hidden">{daten.artikel}</span>
-              <span data-ort-artikel className="num hidden shrink-0 text-micro font-medium text-ink-700 sm:inline">
-                <span aria-hidden className="mr-1 text-ink-300">·</span>{artikelKurz}
-              </span>
-            </>
-          )}
-        </nav>
+        {/* ① ORT: Krumen und Artikel als EINE Angabe — seit A-4 (31.8.2026)
+            aus dem geteilten Baustein `./OrtsAngabe`, den auch der `PaneKopf`
+            konsumiert. `mitLink`, weil in der Einzelansicht der globale Router
+            zuständig ist (im Pane ist es der Pane-eigene Navigator). */}
+        {/* GA-1 (W2·24, 7.9.2026): die Leiste zeigt NIE das Blatt, nur den
+            Rücksprung auf die Sektion — und den nur, wo die Seite keinen
+            eigenen trägt. Herleitung und Messung: `./BrotkrumeRegel`. Die
+            MELDUNG der Seiten bleibt vollständig (der `PaneKopf` braucht die
+            ganze Kette); gefiltert wird an der Leiste, die die Regel betrifft. */}
+        <OrtsAngabe breadcrumb={ortsLeistenKrumen(daten.breadcrumb)} artikel={daten.artikel} mitLink navLabel="Brotkrümel" />
         {/* ③ GRIFF-RIEGEL: drei Gruppen (finden · wählen · Blatt), innen gap-1,
             zwischen den Gruppen gap-3 — Nähe trägt die Gruppierung, nicht Linien
             (Reglement F1). */}
@@ -217,14 +193,23 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
               ausgeschrieben stehen — B6 setzt ihn nur leiser (Micro statt xs),
               versteckt ihn nicht. `ink-600` statt `ink-500`, weil 11-px-Text
               ≥ 4.5:1 tragen muss (F2). */}
-          {daten.stand && <span className="shrink-0 whitespace-nowrap text-micro text-ink-600">Stand <span className="num">{daten.stand}</span></span>}
-          <button type="button" onClick={onSchliessen}
-            aria-label="Schliessen (zur Startseite)" title="Schliessen (zur Startseite)"
-            className="lc-leiste-griff">
-            <span aria-hidden className="text-base leading-none">✕</span>
-          </button>
+          {daten.stand && <StandAngabe stand={daten.stand} />}
+          {/* A3-1 (R3-β): EIN Schliess-✕ der App — hier mit `ton="geerbt"`,
+              weil die Farbe aus `lc-leiste-griff` kommt: B6 (28.7.2026) hält
+              für ALLE Bedien-Elemente dieser Leiste EINE Anatomie fest, und
+              eine datierte Entscheidung mit Vorfall wird nicht von einem
+              späteren Sweep überschrieben. Neu ist auch hier die
+              Komfort-Trefferfläche des Bausteins. */}
+          <SchliessKnopf name="Schliessen (zur Startseite)" onClick={onSchliessen}
+            ton="geerbt" klasse="lc-leiste-griff"
+            /* `komfort={false}`: die Leiste steht dicht (Suche · Menüs · Stand ·
+               ✕) — 44 px lägen über der Stand-Angabe und dem Menü-Paar links
+               davon. B6 gibt der Leiste ihr Mass, hier gilt es auch für die
+               Fläche. */
+            komfort={false} />
         </div>
       </div>
+      )}
       {/* W2·10-UI-NAV/R5 + R7: die beiden Sprung-Rückmeldungen der Einzelansicht.
           Sie hängen HIER, weil dieser Kopf die einzige Klammer ist, die über allen
           Inhaltsseiten liegt und zugleich weiss, dass eine läuft — beide rendern

@@ -47,6 +47,11 @@
  * Lücke (§8), keine unbemerkte: sie kostet nichts ausser fehlenden Messpunkten,
  * und ein Tor hängt an dieser Zeitreihe ohnehin nie.
  */
+/*
+ * LEISE BEI GRÜN 5.9.2026 (QS-EFFIZIENZ): Bei Grün nur Kopf- und eine
+ * Summenzeile statt 48 Einzelzeilen; volle Liste weiterhin bei CI oder
+ * `--verbose`, rote Sub-Checks weiterhin einzeln + mit voller Ausgabe.
+ */
 import { spawn } from 'node:child_process';
 import { appendFileSync, readFileSync } from 'node:fs';
 import { cpus } from 'node:os';
@@ -118,6 +123,7 @@ async function main(): Promise<void> {
   const kette = leseCheckKette();
   const concurrency = Math.max(1, cpus().length - 1);
   const gesamtStart = performance.now();
+  const verbose = Boolean(process.env.CI) || process.argv.includes('--verbose');
 
   console.log(`check-parallel: ${kette.length} Sub-Checks, Concurrency ${concurrency} (CPU ${cpus().length}) …`);
 
@@ -132,9 +138,12 @@ async function main(): Promise<void> {
       const e = await laufeCheck(name);
       ergebnisse.set(name, e);
       protokolliere(name, e.code === 0);
-      // Live-Fortschritt (kompakt bei grün, Markierung bei rot).
-      const s = (e.dauerMs / 1000).toFixed(1);
-      console.log(`${e.code === 0 ? '  ✓' : '  ✗'} ${name.padEnd(28)} ${s.padStart(5)}s`);
+      // Live-Fortschritt: bei Grün nur mit --verbose/CI (sonst Summenzeile am
+      // Ende), rote Zeile immer sichtbar — unabhängig von --verbose/CI.
+      if (e.code !== 0 || verbose) {
+        const s = (e.dauerMs / 1000).toFixed(1);
+        console.log(`${e.code === 0 ? '  ✓' : '  ✗'} ${name.padEnd(28)} ${s.padStart(5)}s`);
+      }
     }
   }
   await Promise.all(Array.from({ length: Math.min(concurrency, kette.length) }, () => worker()));
@@ -152,7 +161,13 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  console.log(`\ncheck-parallel: alle ${kette.length} Sub-Checks GRÜN in ${gesamtS}s (seriell wäre die Summe der Einzeldauern).`);
+  const langsamste = kette
+    .map((n) => ergebnisse.get(n)!)
+    .sort((a, b) => b.dauerMs - a.dauerMs)
+    .slice(0, 3)
+    .map((e) => `${e.name} ${(e.dauerMs / 1000).toFixed(1)}s`)
+    .join(', ');
+  console.log(`\ncheck-parallel: alle ${kette.length} Sub-Checks GRÜN in ${gesamtS}s — langsamste: ${langsamste}`);
 }
 
 main().catch((err) => {

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { berechneAllgemeineFrist, type Einheit } from '../../lib/allgemeineFrist';
 import { berechneFrist } from '../../lib/zpoFristen';
@@ -10,11 +10,13 @@ import { KANTONE } from '../../lib/kantone';
 import { stillstandsperioden } from '../../data/zpoFeiertage';
 import type { Kanton } from '../../types/legal';
 import { ErgebnisBlock } from '../ErgebnisBlock';
+import { DatumsFeld } from '../DatumsFeld';
+import { ErgebnisPlatzhalter, FehlerBox, Field } from '../vorlagen/ui';
 import { IcsExportButton } from '../IcsExportButton';
-import type { FristMarkierung } from '../start/FristenKalender';
+import type { FristMarkierung } from './FristKalenderKompakt';
 import { getStandardKanton } from '../../lib/einstellungen';
 import { usePaneKlasse } from '../layout/PaneKontext';
-import { EINHEITEN, FERIEN_OPTIONEN, icsTitelSchnellrechner, type Ferien } from './einfacheFristTexte';
+import { EINHEITEN, FERIEN_OPTIONEN, icsTitelSchnellrechner, type EinfacheFristEingaben, type EinfacheFristMeldung, type Ferien } from './einfacheFristTexte';
 
 // ─── Einfacher Fristenrechner (S-5a FAHRPLAN-STRUKTUR-UMBAU) ────────────────
 //
@@ -67,17 +69,37 @@ function baueMarkierung(start: string, laenge: number, einheit: Einheit, ferien:
   }
 }
 
-export function EinfacheFristForm({ minimal = false, onErgebnis }: {
+export function EinfacheFristForm({ minimal = false, variante = 'block', onErgebnis, onEingaben }: {
   minimal?: boolean;
+  /** DARSTELLUNGS-Variante, additiv (W2·23-STARTSEITE-V4 §3 #3). `'block'`
+   *  (Default) ist die bisherige Anordnung, unverändert. `'zeile'` legt alle
+   *  fünf Eingaben in EINE Reihe und lässt den Rechenweg weg — die Startseite
+   *  hostet damit den ECHTEN Rechner (§5/§1: keine Kopie der Logik, keine
+   *  zweite Fristen-Wahrheit), nur enger gesetzt. Es ändert sich NICHTS an
+   *  Eingabe-Bedeutung, Default-Werten oder Engine-Aufruf. */
+  variante?: 'block' | 'zeile';
   /** #7: meldet die Kalender-Markierung (Ereignis + Fristende) nach oben — für
    *  ALLE Regimes (jede Engine liefert ein ISO-Enddatum); null bei Fehleingabe. */
   onErgebnis?: (e: { markierung: FristMarkierung; kanton: Kanton } | null) => void;
+  /** Live-Brücke (Auftrag David 1.9.2026): meldet gültige Eingaben nach
+   *  oben, damit der Tagerechner sie in das Voll-Formular (mit Rechenweg)
+   *  weiterreicht. Meldet erst ab der ersten ÄNDERUNG nach dem Mount und
+   *  kennzeichnet die tatsächlich BERÜHRTEN Felder — Permalink-/Preset-
+   *  hydratisierte Voll-Formulare würden sonst von unberührten Defaults
+   *  dieses Rechners überschrieben (GP-Befunde P0/B2, 1.9.2026). */
+  onEingaben?: (m: EinfacheFristMeldung) => void;
 } = {}) {
   // Datum-Default heute in LOKALER Zeit (Bug-Check §9, NIEDRIG: toISOString
   // wäre UTC — zwischen 00:00 und 02:00 Schweizer Zeit der Vortag). Auftrag David:
   // standardmässig heute, auch auf der Startseite. Die App hydratisiert nicht
   // (main.tsx createRoot render-then-replace) → kein date-input-Hydration-Mismatch.
   const heute = new Date().toLocaleDateString('sv-SE');
+  // `zeile` erbt alles, was `minimal` an KNAPPHEIT bedeutet (Ferien als
+  // Dropdown statt Radiokarten, Ergebnis ohne Rechenweg-Zeilen) — es ordnet nur
+  // zusätzlich anders an. Eine eigene Knappheits-Regel wäre eine zweite
+  // Wahrheit über denselben Sachverhalt (§5).
+  const zeile = variante === 'zeile';
+  const knapp = minimal || zeile;
   // Split-View: Grids richten sich nach der Pane-Breite (Container-Query) statt
   // nach dem Viewport. Ausserhalb eines Panes liefert pk den Viewport-String.
   const pk = usePaneKlasse();
@@ -160,6 +182,35 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
     onErgebnis(markierung ? { markierung, kanton } : null);
   }, [onErgebnis, markierung, kanton]);
 
+  // Live-Brücke: gemeldet wird erst, sobald sich mindestens EIN Wert gegenüber
+  // dem Mount-Stand geändert hat (wertbasiert statt «ersten Lauf überspringen» —
+  // StrictMode doppelt Mount-Effekte, ein Lauf-Zähler wäre dort undicht), und
+  // nur bei gültigen Eingaben (kein NaN/Leerdatum in die Voll-Formulare drücken).
+  // `beruehrt` trägt kumulativ die je angefassten Felder (GP-Befund B2) — ein
+  // einmal angefasstes Feld bleibt Nutzer-Absicht, auch wenn es später wieder
+  // auf dem Mount-Wert steht.
+  const mountEingaben = useRef<EinfacheFristEingaben | null>(null);
+  const beruehrt = useRef<Set<'start' | 'laenge' | 'einheit' | 'kanton'>>(new Set());
+  const brueckeAktiv = useRef(false);
+  useEffect(() => {
+    if (!onEingaben || !gueltig) return;
+    const e: EinfacheFristEingaben = { start, laenge, einheit: einheitEffektiv, ferien, kanton };
+    mountEingaben.current ??= e;
+    const i = mountEingaben.current;
+    (['start', 'laenge', 'einheit', 'kanton'] as const).forEach((k) => {
+      if (e[k] !== i[k]) beruehrt.current.add(k);
+    });
+    if (!brueckeAktiv.current) {
+      if (beruehrt.current.size === 0 && e.ferien === i.ferien) return;
+      brueckeAktiv.current = true; // ab der ersten echten Änderung meldet jede weitere
+    }
+    onEingaben({
+      ferien: e.ferien,
+      werte: { start: e.start, laenge: e.laenge, einheit: e.einheit, kanton: e.kanton },
+      beruehrt: [...beruehrt.current],
+    });
+  }, [onEingaben, gueltig, start, laenge, einheitEffektiv, ferien, kanton]);
+
   const verfeinernZiel = ferien === 'zpo'
     ? zpoFristenLink({ ereignis: start, einheit: einheitEffektiv, laenge, verfahren: 'ordentlich', kanton, fristnatur: 'gesetzlich' })
     : ferien === 'schkg'
@@ -177,53 +228,121 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
     <div className="space-y-4">
       {/* items-end: bei verschieden hohen Labels (z.B. zweizeilig) bleiben die
           Eingabefelder auf gleicher Höhe (Auftrag David). */}
-      <div className={`grid grid-cols-2 ${minimal ? '' : pk('sm:grid-cols-4', '@3xl/pane:grid-cols-4')} gap-3 max-w-2xl items-end`}>
-        <label className="block space-y-1">
-          <span className="lc-overline block">Datum (Ereignis)</span>
-          <input type="date" value={start} onChange={(e) => setStart(e.target.value)}
-            className={inputCls + ' w-full'} />
-        </label>
-        <label className="block space-y-1">
-          <span className="lc-overline block">Frist</span>
+      {/* `zeile`: fünf Eingaben in EINER Reihe (ab lg), darunter gestuft 2/3
+          Spalten — und ohne die `max-w-2xl`-Kappung, damit die Reihe die
+          Kartenbreite nutzt.
+          SPALTENBREITEN NAMENTLICH, nicht gleichverteilt (LM-074-Nachzug,
+          gemessen 5.9.2026 @1440 auf «/»): fünf gleiche Spalten gaben dem
+          Datumsfeld 150 px; abzüglich 14 px Innenabstand und der 44 px, die der
+          Kalenderknopf (`w-8` + `right-1.5`) reserviert, blieben 92 px für einen
+          87 px breiten Wert — «05.09.2026» wurde zu «05.09…» gekappt, und die
+          Ferien-Wahl zeigte «Gerichts…». Das ist genau der Befund, den
+          LM-074/B12 am Schnellrechner schon einmal geheilt hat: zu eng war die
+          SPALTE, nicht das Feld. 11.5rem geben dem Datum 126 px nutzbaren
+          Platz (87 px Wert), die fliessende letzte Spalte trägt die
+          Ferien-Wahl, deren Label das Rechtsregime nennt und darum nicht
+          ellipsiert werden darf (§1/§8).
+          BREAKPOINT xl, NICHT lg — gerechnet, nicht geraten: die fünf Spalten
+          brauchen mindestens 184+72+96+80+168 px + 4×12 px Abstand = 648 px.
+          Die Karte trägt 2/3 der Werkzeug-Reihe; das sind @1280 rund 659 px
+          und @1440 rund 765 px Innenbreite, @1024 aber nur ~509 px. Unter
+          1280 bleibt es darum bei drei bzw. zwei Spalten. */}
+      <div className={zeile
+        ? 'grid grid-cols-2 gap-3 items-end sm:grid-cols-3 xl:grid-cols-[11.5rem_4.5rem_6rem_5rem_minmax(10.5rem,1fr)]'
+        : `grid grid-cols-2 ${minimal ? '' : pk('sm:grid-cols-4', '@3xl/pane:grid-cols-4')} gap-3 max-w-2xl items-end`}>
+        {/* R2-E/F1-2: dieselbe `Field`-Anatomie wie in allen übrigen Rechner-
+            Formularen (ZPO, SchKG, Gewährleistung …) statt der hauseigenen
+            `<label><span class="lc-overline">`-Kopie — Label und Control sind
+            damit auch programmatisch verknüpft (htmlFor bzw. aria-labelledby
+            beim zusammengesetzten DatumsFeld). */}
+        <Field label="Datum (Ereignis)">
+          {/* R2-E/F1-1: kein natives `type="date"` mehr. Der Browser rendert es
+              in SEINER Locale — auf einem us-englischen Profil also MM/DD/YYYY,
+              und genau dieses Feld trägt das fristauslösende Ereignis. Das
+              Haus-DatumsFeld schreibt TT.MM.JJJJ fest; der Wert bleibt ISO
+              (yyyy-MM-dd), die Engines sehen also unverändert dasselbe. */}
+          <DatumsFeld value={start} onChange={setStart} className={inputCls + ' w-full'} />
+        </Field>
+        <Field label="Frist">
           <input type="number" min={1} step={1} value={Number.isNaN(laenge) ? '' : laenge}
             onChange={(e) => setLaenge(parseInt(e.target.value, 10))}
             className={inputCls + ' w-full'} />
-        </label>
-        <label className="block space-y-1">
-          <span className="lc-overline block">Einheit</span>
+        </Field>
+        <Field label="Einheit">
           <select value={einheitEffektiv} onChange={(e) => setEinheit(e.target.value as Einheit)}
             className={inputCls + ' w-full'}>
             {einheiten.map((e) => <option key={e.code} value={e.code}>{e.label}</option>)}
           </select>
-        </label>
-        <label className="block space-y-1">
-          <span className="lc-overline block">Kanton (Feiertage)</span>
+        </Field>
+        <Field label="Kanton (Feiertage)">
           <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)}
             className={inputCls + ' w-full'}>
             {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
           </select>
-        </label>
+        </Field>
+        {/* In der Zeile-Variante ist die Ferien-/Stillstand-Wahl die FÜNFTE
+            Zelle derselben Reihe. Sie bleibt sichtbar und wählbar: sie
+            entscheidet über das Rechtsregime und darf nie stillschweigend
+            gesetzt werden (§1). */}
+        {zeile && (
+          /* Volle Reihe auf zwei Spalten (bis sm): GEMESSEN @390 px war das
+             Select 148 px breit, das gewählte Label «Gerichtsferien (ZPO)»
+             braucht 146 px + Pfeil — es wäre zu «Gerichtsferien (…» gekappt
+             worden. Welches Regime rechnet, darf nie hinter einer Ellipse
+             stehen (§1/§8). */
+          <div className="col-span-2 sm:col-span-1">
+            <Field label="Ferien / Stillstand">
+              <select value={ferien} onChange={(e) => waehleFerien(e.target.value as Ferien)} className={inputCls + ' w-full'}>
+                {FERIEN_OPTIONEN.map((o) => <option key={o.code} value={o.code}>{o.label}</option>)}
+              </select>
+            </Field>
+          </div>
+        )}
       </div>
 
-      {minimal ? (
+      {zeile ? null : minimal ? (
         // Startseite-Schnellrechner: kompakte Verfahrens-/Ferien-Wahl als
         // Dropdown, ohne die Erläuterungstexte (Auftrag David: möglichst wenig).
-        <label className="block space-y-1 max-w-xs">
-          <span className="lc-overline block">Ferien / Stillstand</span>
-          <select value={ferien} onChange={(e) => waehleFerien(e.target.value as Ferien)} className={inputCls + ' w-full'}>
-            {FERIEN_OPTIONEN.map((o) => <option key={o.code} value={o.code}>{o.label}</option>)}
-          </select>
-        </label>
+        <div className="max-w-xs">
+          <Field label="Ferien / Stillstand">
+            <select value={ferien} onChange={(e) => waehleFerien(e.target.value as Ferien)} className={inputCls + ' w-full'}>
+              {FERIEN_OPTIONEN.map((o) => <option key={o.code} value={o.code}>{o.label}</option>)}
+            </select>
+          </Field>
+        </div>
       ) : (
         <fieldset className="space-y-1.5">
           <legend className="lc-overline">Ferien / Stillstand</legend>
-          <div className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-2 max-w-2xl`}>
+          {/* ── GB-20 (W2·24, Befund G20, 7.9.2026) · RADIO-ZEILEN STATT SECHS KAESTEN
+              GEMESSEN im ersten Bild des Fristenrechners, hell und dunkel, 1440
+              und 390: die Ferien-/Stillstand-Wahl war ein Raster aus SECHS
+              gerahmten Kaesten (`label.lc-card`, je 3-5 Zeilen Kleintext), der
+              gewaehlte zusaetzlich mit einem 2-px-Ring. F0.6 «Linien statt
+              Flaechen» und David 6.9.2026 («Linien statt Flaechen»).
+              NEU: eine Spalte, sechs Zeilen, 1-px-Trennlinie oben
+              (`lc-wahl-zeile`, index.css §GB-20); der gewaehlte Zustand traegt
+              den 3-px-Strich in `--reg-w` statt eines Rings — dieselbe Sprache,
+              die `.lc-wahl-kachel[aria-pressed]` seit R5 spricht (§5).
+              DIE SPALTENZAHL FAELLT WEG, nicht die Angabe: Titel, Untertext,
+              Radio, Reihenfolge, `name`, `checked`, `onChange` sind Wort fuer
+              Wort dieselben — die RECHENLOGIK ist unberuehrt (§3), gewaehlt
+              wird weiterhin genau ein Regime, und keine Option ist versteckt
+              (§1: welches Regime rechnet, darf nie hinter einer Ellipse oder
+              einem Mehr-Knopf stehen). Der `pk()`-Pane-Zweig entfaellt, weil er
+              nur die Spaltenzahl unterschied. */}
+          <div className="grid grid-cols-1 max-w-2xl">
             {FERIEN_OPTIONEN.map((o) => (
               <label key={o.code}
-                className={`lc-card px-3 py-2 cursor-pointer space-y-0.5 ${ferien === o.code ? 'ring-2 ring-brass-400' : ''}`}>
-                <span className="flex items-center gap-2">
+                className={`lc-wahl-zeile px-3 py-2 cursor-pointer space-y-0.5 ${ferien === o.code ? 'lc-wahl-zeile-gewaehlt' : ''}`}>
+                {/* LM-077/LM-082 (B19): items-start statt items-center — bei
+                    zweizeiligen Titeln (z. B. «Betreibungsferien (SchKG)»)
+                    zentrierte der Radiobutton sonst zwischen den Zeilen statt
+                    auf Höhe der ersten Zeile zu stehen; das versetzte die
+                    gesamte Karte gegenüber einzeiligen Nachbarn um ~11 px. */}
+                <span className="flex items-start gap-2">
                   <input type="radio" name="einfache-frist-ferien" value={o.code}
-                    checked={ferien === o.code} onChange={() => waehleFerien(o.code)} />
+                    checked={ferien === o.code} onChange={() => waehleFerien(o.code)}
+                    className="mt-0.5" />
                   <span className="text-body-s font-medium text-ink-900">{o.label}</span>
                 </span>
                 <span className="block text-xs text-ink-500 leading-snug">{o.sub}</span>
@@ -241,9 +360,15 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
       )}
 
       {!gueltig ? (
-        <p className="text-body-s text-ink-500">Datum und ganzzahlige Dauer eingeben – das Fristende erscheint sofort.</p>
+        /* R2-E/F1-3: der Leerzustand des Ergebnisplatzes ist der geteilte
+           `ErgebnisPlatzhalter` (R13) statt eines losen Satzes — er reserviert
+           die Fläche (CLS) und sagt an, WAS erscheint. Der Satz selbst ist
+           wörtlich unverändert. */
+        <ErgebnisPlatzhalter was="Datum und ganzzahlige Dauer eingeben – das Fristende erscheint sofort." />
       ) : fehler !== '' ? (
-        <p className="text-body-s text-danger-700">{fehler}</p>
+        /* R2-E/F1-4: Eingabefehler in der geteilten `FehlerBox` (R8) — sie
+           trägt role="alert", der lose Absatz tat es nicht. Wortlaut unverändert. */
+        <FehlerBox fehler={[fehler]} />
       ) : (
         /* R12-Schnellrechner: derselbe Ergebnis-Rahmen, aber ohne Sprungmarke
            (steht im ersten Viewport; im Tagerechner lebt darunter ein zweiter
@@ -253,14 +378,14 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
             <p className="lc-overline">Fristende</p>
             <p className="text-h3 font-semibold text-ink-900 num">{ende}</p>
             {endeZusatz !== '' && <p className="text-body-s text-ink-600">{endeZusatz}</p>}
-            {/* Im Minimal-Modus (Startseite) nur das Fristende — Rechenweg-Zeilen
+            {/* Knapp (Startseite/Zeile) nur das Fristende — Rechenweg-Zeilen
                 und Verfeinern-Links bleiben dem Voll-Rechner überlassen. */}
-            {!minimal && zeilen.length > 0 && (
+            {!knapp && zeilen.length > 0 && (
               <ul className="text-body-s text-ink-500 leading-relaxed list-disc pl-5 space-y-0.5">
                 {zeilen.map((z) => <li key={z}>{z}</li>)}
               </ul>
             )}
-            {!minimal && verfeinernZiel && (
+            {!knapp && verfeinernZiel && (
               <p className="text-body-s">
                 <Link to={verfeinernZiel} className="font-medium text-brass-700 hover:text-brass-600 no-underline">
                   Im {ferien === 'zpo' ? 'ZPO' : 'SchKG'}-Rechner verfeinern (Verfahren, Zustellart, Hemmung …) →

@@ -6,10 +6,12 @@ import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { ThemenEinstieg } from '../components/ThemenEinstieg';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { istIsoDatum } from '../components/vorlagen/seiteHelfer';
 import { VorlagenSeite, type SeiteCtx, type VorlagenSeitenConfig } from '../components/vorlagen/VorlagenSeite';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
 
 // ─── Vorlagen-Wizard: Werkvertrag (Art. 363 ff. OR) ─────────────────────────
 // P1-Grundtyp der Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V3).
@@ -71,42 +73,32 @@ function eingabeInhalt({ a, set }: SeiteCtx<WvAntworten>, schritt: number) {
           <textarea className={inputCls + ' min-h-[4.5rem]'} value={a.werkBeschrieb} onChange={(e) => set('werkBeschrieb', e.target.value)} placeholder="z. B. Einbau einer Küche gemäss Plan vom 1. März 2026" />
         </Field>
         <Field label="Art des Werks" hint="bestimmt Rügefrist und Verjährung">
-          <div className="grid grid-cols-2 gap-2">
-            {WERKART_OPTIONEN.map((w) => (
-              <button key={w.id} type="button"
-                onClick={() => set('werkArt', w.id)}
-                className={`rounded-lg border px-3 py-2 text-left text-body-s ${a.werkArt === w.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
-                <span className="font-medium block">{w.label}</span>
-                {/* LM-176 (Fahrplan B5, §6): ink-500 auf gewählter bg-brass-100
-                    lag bei 4.37:1 (unter WCAG AA) — Muster wie VorlageNda.tsx. */}
-                <span className="text-ink-600 text-xs">{w.hint}</span>
-              </button>
-            ))}
-          </div>
+{/* B3-4/A3-5 (R3-α, 31.8.2026): handgezeichnete Auswahl-Reihe ohne
+              `aria-pressed` — Kopie gelöscht (§5/§10), Optik aus dem Baustein. */}
+          <SelectionGrid
+            className="grid grid-cols-2 gap-2" gruppenLabel="Art des Werks"
+            items={WERKART_OPTIONEN.map((w) => ({ code: w.id, label: w.label, sub: w.hint }))}
+            value={a.werkArt} onSelect={(v) => set('werkArt', v)} />
         </Field>
         <Field label="Ablieferungstermin" optional>
           <DatumsFeld value={a.ablieferung} onChange={(v) => set('ablieferung', v)} className={inputCls} />
         </Field>
         <Field label="Vergütung">
-          <div className="grid grid-cols-2 gap-2">
-            {PREIS_OPTIONEN.map((p) => (
-              <button key={p.id} type="button"
-                onClick={() => set('preis', p.id)}
-                className={`rounded-lg border px-3 py-2 text-body-s ${a.preis === p.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
-                {p.label}
-              </button>
-            ))}
-          </div>
+          {/* dito B3-4/A3-5 — ohne Unterzeile. */}
+          <SelectionGrid
+            className="grid grid-cols-2 gap-2" gruppenLabel="Vergütung"
+            items={PREIS_OPTIONEN.map((o) => ({ code: o.id, label: o.label }))}
+            value={a.preis} onSelect={(v) => set('preis', v)} />
         </Field>
         {a.preis === 'pauschal' && (
           <Field label="Festpreis (CHF)" hint="bindet den Unternehmer (Art. 373 OR)">
-            <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.pauschalCHF} onChange={(e) => set('pauschalCHF', e.target.value)} placeholder="z. B. 12000.00" />
+            <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.pauschalCHF} onChange={(v) => set('pauschalCHF', v)} placeholder="z. B. 12'000.00" />
           </Field>
         )}
         {a.preis === 'aufwand' && (
           <div className="grid grid-cols-[1fr_1fr] gap-3">
             <Field label="Ansatz (CHF)">
-              <input className={inputCls} inputMode="decimal" value={a.ansatzCHF} onChange={(e) => set('ansatzCHF', e.target.value)} placeholder="z. B. 120.00" />
+              <BetragsFeld className={inputCls} value={a.ansatzCHF} onChange={(v) => set('ansatzCHF', v)} placeholder="z. B. 120.00" />
             </Field>
             <Field label="je Einheit">
               <input className={inputCls} value={a.ansatzEinheit} onChange={(e) => set('ansatzEinheit', e.target.value)} placeholder="pro Stunde" />
@@ -119,7 +111,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<WvAntworten>, schritt: number) {
           label={<><span><strong>Akontozahlung</strong> bei Vertragsschluss vereinbaren</span></>} />
         {a.anzahlung && (
           <Field label="Akontobetrag (CHF)">
-            <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.anzahlungCHF} onChange={(e) => set('anzahlungCHF', e.target.value)} placeholder="z. B. 4000.00" />
+            <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.anzahlungCHF} onChange={(v) => set('anzahlungCHF', v)} placeholder="z. B. 4'000.00" />
           </Field>
         )}
         <Checkbox

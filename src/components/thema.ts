@@ -67,7 +67,15 @@ export function wendeThemaAn(t: Thema): void {
       // vor das erste vorhandene theme-color-Tag (null → ans Kopf-Ende = appendChild)
       document.head.insertBefore(m, document.head.querySelector('meta[name="theme-color"]'));
     }
-    m.content = dunkel ? '#16150F' : '#F7F4EC';
+    // Die beiden Literale SIND die Seitenfläche `--paper` aus src/index.css
+    // (hell #FAF7F2 · dunkel #1B1917 — D12 «Lesekomfort», 6.9.2026) — hier steht ein Literal, weil auch
+    // `index.html` eines braucht (theme-color wirkt vor jedem JS) und beide
+    // Stellen denselben Wert tragen müssen. Dass sie ihn treffen, erzwingt
+    // `check:design-tokens` Prüfung 4 (E-3): hell stand hier bis 31.8.2026
+    // #F7F4EC, also 2.23 ΔE neben dem Papier — ein sichtbarer Kantensprung
+    // zwischen Browser-Rahmen und Seite. Nie von Hand abweichen, sondern
+    // --paper pflegen und den Wert hierher nachziehen (§5).
+    m.content = dunkel ? '#1B1917' : '#FAF7F2';
   } catch { /* SSR/Prerender ohne document.head — unkritisch */ }
 }
 

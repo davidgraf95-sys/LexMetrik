@@ -15,7 +15,7 @@
 //  – Routenzahl ≠ deklarierter Zähler → Katalog und Zähler nachführen
 //
 // Aufruf: npm run prerender (setzt frisches `vite build` voraus)
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { jsonLdFuerPfad, metaFuerPfad, prerenderRouten, SITE_URL } from '../src/lib/seo';
@@ -37,6 +37,7 @@ import {
   materialDetailHtml,
 } from '../src/lib/seo-detail';
 import { routenEbene } from '../src/lib/normtext/erlassAdresse';
+import { normtextDateiUrl } from '../src/lib/normtext/dateiUrl';
 import type { BrowseErlass } from '../src/lib/normtext/browse-typen';
 import type { NormSnapshotDatei } from '../src/lib/normtext/typen';
 import type { BrowseEntscheid } from '../src/lib/rechtsprechung/register';
@@ -57,7 +58,7 @@ import { renderRoute } from '../src/entry-server';
 // src/tests/routenManifest.test.ts gegated (Manifest === katalogRouten()).
 // Dieser Zähler bleibt als sekundärer Drift-Backstop (fängt auch statische
 // Seiten) — bei neuen Karten/Seiten weiter im selben Commit nachführen.
-const ERWARTETE_ROUTEN = 62; // +1: /gesetze (17.6.2026); +1: /rechtsprechung (23.6.2026); +1: /international (24.6.2026); +1: /materialien (27.6.2026); UI-Welle: −/recherche, +/rechner +/vorlagen (netto +1); +4: W2·7 Verzahnungs-Klingen (/rechner/gerichtszitat, /rechner/verjaehrung-board, /rechner/inkasso-strecke, /vorlagen/rubrum); +1: /abdeckung (UI-NAV S3/E1, 11.7.2026); +1: /suche (UI-NAV S5, 11.7.2026); −1: /international (IA-6 Stufe 2, 3.8.2026 — Alias aufgelöst, jetzt 308 auf /gesetze?ebene=international; eine Redirect-Quelle wird weder prerendert noch gesitemappt)
+const ERWARTETE_ROUTEN = 63; // +1: /gesetze (17.6.2026); +1: /rechtsprechung (23.6.2026); +1: /international (24.6.2026); +1: /materialien (27.6.2026); UI-Welle: −/recherche, +/rechner +/vorlagen (netto +1); +4: W2·7 Verzahnungs-Klingen (/rechner/gerichtszitat, /rechner/verjaehrung-board, /rechner/inkasso-strecke, /vorlagen/rubrum); +1: /abdeckung (UI-NAV S3/E1, 11.7.2026); +1: /suche (UI-NAV S5, 11.7.2026); −1: /international (IA-6 Stufe 2, 3.8.2026 — Alias aufgelöst, jetzt 308 auf /gesetze?ebene=international; eine Redirect-Quelle wird weder prerendert noch gesitemappt); +1: /einstellungen (QS-UI B14 #670, 5.9.2026 — fehlte im Register, erbte Startseiten-Meta)
 const NOT_FOUND_MARKER = '404 · Nicht gefunden'; // src/pages/NotFound.tsx
 // Stub-Tor (Bug-Check 11.6.2026): /rechner/:slug fängt Katalog-hrefs ohne
 // dedizierte Route VOR der 404-Seite ab — eine «in Vorbereitung»-Stub-Seite
@@ -93,6 +94,7 @@ function rendereTemplate(
   jsonLd: object | null,
   inhalt: string,
   kontext: string,
+  preloads: string[] = [],
 ): string {
   let out = template;
   out = out.replace(/<title>[^<]*<\/title>/, () => `<title>${esc(meta.titel)}</title>`);
@@ -113,9 +115,26 @@ function rendereTemplate(
   const ldTag = jsonLd
     ? `    <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>\n`
     : '';
+  // Vorab-Anforderung der Nutzlast, die diese Seite mit Sicherheit braucht
+  // (QS-PERF, 1.9.2026 — Kandidat K2 des Kanton-Reader-Profils in der Variante
+  // OHNE zweite Wahrheit). Der Prerender kennt die Pfade zur BAUZEIT aus
+  // demselben Manifest, das auch der Client liest; im Client bleibt das
+  // Register die einzige Quelle des Dateinamens (§5) — der Preload ist reines
+  // Cache-Vorwärmen und beeinflusst KEINE Auswahl. Ein falscher Preload wäre
+  // ein 404 im Netzpanel, nie ein falscher Inhalt.
+  // WELCHE Dateien vorgeladen werden (und welche bewusst nicht), steht an der
+  // Aufrufstelle bei den Erlass-Detailseiten.
+  //
+  // `as="fetch" crossorigin="anonymous"` ist Absicht: der Client holt die
+  // Dateien mit `fetch()` (mode cors, credentials same-origin). Ohne
+  // `crossorigin` legte der Preload eine no-cors-Anforderung an, die der
+  // spaetere `fetch()` NICHT wiederverwenden koennte — die Datei kaeme zweimal.
+  const preloadTags = preloads
+    .map((href) => `    <link rel="preload" as="fetch" crossorigin="anonymous" href="${esc(href)}" />\n`)
+    .join('');
   out = out.replace(
     '</head>',
-    `    <link rel="canonical" href="${meta.canonical}" />\n${ldTag}  </head>`,
+    `${preloadTags}    <link rel="canonical" href="${meta.canonical}" />\n${ldTag}  </head>`,
   );
   return out.replace(ROOT_MARKER, () => `<div id="root">${inhalt}</div>`);
 }
@@ -305,7 +324,47 @@ for (const e of snapshotErlasse) {
     const inhalt = erlassVolltextHtml(e, datei, currencyMap[e.key]);
     if (inhalt.includes('<script')) throw new Error('Inline-Script im Erlass-Volltext — Builder prüfen');
     const meta = metaFuerErlass(e);
-    const html = rendereTemplate(meta, jsonLdFuerErlass(e), inhalt, meta.pfad);
+    // Register und Struktur-Sidecar in den Kopf vorziehen. Ohne sie laufen sie
+    // erst nach den seriellen Chunk-Wellen an (CDP-Wasserfall 1.9.2026,
+    // /gesetze/bund/OR @4× CPU + langsames 4G: Register ab 2672 ms, Struktur ab
+    // 3923 ms von 10 009 ms).
+    // `e.ebene` ist die DATEN-Ebene (die Route kann abweichen, Befund 45) —
+    // genau die, die `datenEbeneVonRoute()` im Client herstellt.
+    //
+    // ── WARUM DER SNAPSHOT SELBST NICHT DABEI IST (Messbefund 1.9.2026) ───────
+    // `/normtext/${e.datei}` ist der grösste Posten (OR: 344 KB gzip) und wurde
+    // am spätesten angefordert (ab 5215 ms) — er wäre der lohnendste Preload.
+    // Er ist bewusst NICHT hier: mit ihm im Kopf fallen **20 Leser-Specs** in 8
+    // Dateien (Scroll-Spy, TOC-Ruhe, Weiterlesen-Chip, Kopf-Geometrie,
+    // Ortsangabe, Split-View-Faltung). Isoliert und dreifach belegt, je 49 Tests
+    // desselben Satzes, lokal, nichts sonst laufend:
+    //   Basis-Stand cd4dc65cb                          49 passed
+    //   + Shell-Fix, ohne Preload                      49 passed
+    //   + Preload Register/Struktur (dieser Stand)     49 passed
+    //   + Preload Register/Struktur/SNAPSHOT           29 passed, 20 failed
+    // Symptome u. a.: der Scroll-Spy schreibt die gelesene Stelle nie
+    // (`localStorage` bleibt null, Timeout 20 s) und der Abstand Kopf→Artikel
+    // wandert um 44 px. Der Preload verschiebt damit nicht nur das WANN, er
+    // ändert die Reihenfolge, in der der Leser Daten und Rahmen bekommt — und
+    // der Leser hängt daran. §15/§1: dort gewinnt die Treue, nicht das Tempo,
+    // und §6.3 verbietet, die Specs stattdessen anzupassen.
+    // Der eigentliche Fund ist die Reihenfolge-Abhängigkeit im Leser selbst;
+    // sie ist als eigener Posten in `fahrplaene/FAHRPLAN-PERFORMANCE.md` §1-N3
+    // hinterlegt. Wer sie behebt, kann diesen Preload nachziehen — mit genau
+    // diesem Spec-Satz als Beweis.
+    const strukturRel = `struktur/${e.ebene}/${e.key}.json`;
+    const preloads = ['/normtext/register.json'];
+    // Das Struktur-Sidecar ist optional (404 = Leser ohne Gliederung, kein
+    // Fehler). Nur vorladen, wenn es existiert — ein Preload auf eine fehlende
+    // Datei wäre eine Konsolenwarnung ohne Nutzen.
+    // Die URL des Preloads folgt derselben Adress-Regel wie der Fetch im Leser
+    // (`normtextDateiUrl`, §5) — sonst zeigte der Preload für die drei
+    // Schlüssel mit «%» in der Kanonik auf eine Datei, die es nicht gibt, und
+    // der Leser lüde dieselbe Datei ein zweites Mal unter der richtigen
+    // Adresse. Der Existenz-Test bleibt am ROHEN Pfad: er fragt das
+    // Dateisystem, nicht die Auslieferung.
+    if (existsSync(join(PUBLIC, 'normtext', strukturRel))) preloads.push(normtextDateiUrl(strukturRel));
+    const html = rendereTemplate(meta, jsonLdFuerErlass(e), inhalt, meta.pfad, preloads);
     // Die Datei liegt unter der ROUTEN-Ebene, nicht unter der Daten-Ebene — sonst
     // stünde die Seite nicht an ihrer eigenen canonical-URL (Befund 45).
     schreibeDetail(join(DIST, 'gesetze', routenEbene(e), `${e.key}.html`), html);

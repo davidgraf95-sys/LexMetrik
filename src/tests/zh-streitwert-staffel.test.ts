@@ -42,9 +42,11 @@ describe('extrahiereZhStreitwertStaffel — echte Fixture ZH-215.3 § 4', () => 
     expect(ergebnis).not.toBeNull();
   });
 
-  it('kopf = [Streitwert, Grundgebühr, Zuschlag]', () => {
+  // A2 (Fix-Runde 3): dritte Spalte ohne Quell-Titel — s. Begründung im
+  // Schwester-Test zu ZH-211.11 § 4 und im Kommentar in zh-tarif-geometrie.ts.
+  it('kopf = [Streitwert, Grundgebühr, «»] — dritte Spalte ohne Quell-Titel', () => {
     ergebnis = extrahiereZhStreitwertStaffel(STUECKE)!;
-    expect(ergebnis.kopf).toEqual(['Streitwert', 'Grundgebühr', 'Zuschlag']);
+    expect(ergebnis.kopf).toEqual(['Streitwert (in Franken)', 'Grundgebühr (in Franken)', '']);
   });
 
   it('liefert ≥10 Zeilen (Abs. 1 hat 12 Staffelzeilen)', () => {
@@ -87,14 +89,20 @@ describe('extrahiereZhStreitwertStaffel — echte Fixture ZH-215.3 § 4', () => 
     }
   });
 
-  it('erste Zeile: Streitwert enthält «bis» und «5» und «000»', () => {
-    // «bis 5 000 25% des Streitwertes, mind. aber Fr. 100» — alles in Spalte 1
-    // weil «5» und «000 25%» im x-Bereich der Streitwert-Spalte (x < threshold1) liegen.
+  it('erste Zeile: Streitwert und Grundgebühr stehen in getrennten Zellen (B-5)', () => {
+    // FACHLICHE KORREKTUR (Gegenprüfung Runde 2, 31.8.2026 — kein Refactoring,
+    // §6.3): Bis hierher stand die ganze Zeile in Spalte 1 («bis 5 000 25% des
+    // Streitwertes, mind. aber Fr. 100» mit zwei leeren Zellen daneben), und
+    // dieser Test schrieb den Defekt als Sollzustand fest — er prüfte nur
+    // `erste[0]` auf Teilstrings und konnte darum nie rot werden.
+    // Ursache: pdfjs liefert «000 25% des Streitwertes …» als EIN Fragment,
+    // das die am Spaltenkopf gemessene Grenze überläuft (s. teileAmSpaltenrand).
     ergebnis = extrahiereZhStreitwertStaffel(STUECKE)!;
-    const erste = ergebnis.zeilen[0];
-    expect(erste[0]).toContain('bis');
-    expect(erste[0]).toContain('5');
-    expect(erste[0]).toContain('000');
+    expect(ergebnis.zeilen[0]).toEqual([
+      'bis 5 000',
+      '25% des Streitwertes, mind. aber Fr. 100',
+      '',
+    ]);
   });
 
   it('Streitwert-Spalten enthalten nie reine Grundgebühr-Werte (keine verschmolzenen Werte)', () => {
