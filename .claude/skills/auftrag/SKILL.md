@@ -199,7 +199,7 @@ laufender Agent dieselben Dateien auf einem Branch hat; (c) keine
 main-Commits bei offener eigener Landekette (macht wartende PRs BEHIND, je
 Nachzug ein CI-Lauf); (d) keine Orchestrator-COMMITS in einem Worktree,
 solange ein Bau-Agent darin baut (geteilter git-Index — `git add -A` des
-Agenten nimmt fremde Edits mit); Datei-Edits ohne git sind das Maximum.
+Agenten nimmt fremde Edits mit); Datei-Edits ohne git sind das Maximum. **(e) Peer-Session-Sonde (F6, 3. Beleg 6.9.2026):** vor dem ersten Dispatch auf ein `feld:` die laufenden Peer-Sessions prüfen (ListAgents bzw. `list_sessions`) und bei einer aktiven Session auf demselben Feld ZUERST per `send_message` koordinieren, wer den Zweig hält — eine Übergabe-Datei, die «gelandet» sagt, ersetzt die Sonde nicht (W2·24: Übergabe behauptete die Landung, der Zweig lag noch bei der Vorgänger-Session; drei Fixer mussten gestoppt werden).
 
 **Modellwahl nach Stufen** (Abbildung Stufe → Modell nur in `PALETTE`,
 `scripts/dispatch.ts`): anspruchsvoller Bau **stark** · eng umrissener
