@@ -90,6 +90,10 @@ test.describe('IA-6 Stufe 2 · Interne Nav zeigt direkt auf die Säule (R-SCOPE-
     // interne Navigation auf die SÄULE zeigt und nicht auf den Alias.
     await seitenleisteOeffnen(page)
     const nav = page.getByRole('navigation', { name: 'Hauptnavigation' })
+    // D37 (deklariert, §6.3): der Abschnitt «Gesetze» startet jetzt selbst zu
+    // (nur der Abschnitt der aktiven Route startet offen, auf «/» keiner) —
+    // Vorbedingung herstellen, damit «International» überhaupt im DOM steht.
+    await nav.getByRole('button', { name: 'Gesetze aufklappen' }).click()
     const kopf = nav.getByRole('link', { name: 'International', exact: true })
     await expect(kopf).toHaveAttribute('href', '/gesetze?ebene=international')
     await nav.getByRole('button', { name: 'International aufklappen' }).click()

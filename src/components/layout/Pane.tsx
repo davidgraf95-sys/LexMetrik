@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from 'react';
+import { useCallback, useContext, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent, type ReactNode } from 'react';
 import { createPath, parsePath, UNSAFE_NavigationContext, type Location, type To } from 'react-router-dom';
 import { RouteSwitch } from '../../RouteSwitch';
 import { PaneProvider } from './PaneKontext';
@@ -33,6 +33,9 @@ function toStr(to: To): string {
 export interface SekundaerPaneProps {
   pfad: string;
   label: string;
+  /** L6: der Name dieses Fensters als fertiges Element — s. `PaneKopf.kurzform`.
+   *  Wird nur durchgereicht; gebaut wird er in `./PaneName` (§5/§15). */
+  kurzform?: ReactNode;
   stand?: string | null;
   onSchliessen: () => void;
   onHauptfenster: () => void;
@@ -59,7 +62,7 @@ export interface SekundaerPaneProps {
 }
 
 export function SekundaerPane(props: SekundaerPaneProps) {
-  const { pfad, label, stand, onSchliessen, onHauptfenster, onTeilen, teilenKopiert, onLinks, onRechts,
+  const { pfad, label, kurzform, stand, onSchliessen, onHauptfenster, onTeilen, teilenKopiert, onLinks, onRechts,
     kannLinks, kannRechts, ziehbar, style, onNavigiert, onDragStart, onDragEnd, onDragOver, onDrop, ueber } = props;
   const wurzel = useRef<HTMLElement>(null);
   const overlayWurzel = useRef<HTMLDivElement>(null);
@@ -108,7 +111,7 @@ export function SekundaerPane(props: SekundaerPaneProps) {
         className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-rule' : 'border-rule-soft'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
       >
         <PaneKopf
-          label={label} stand={stand} breadcrumb={kopf?.breadcrumb} onBreadcrumb={navigiere} artikel={kopf?.artikel} rolle="sekundaer"
+          label={label} kurzform={kurzform} stand={stand} breadcrumb={kopf?.breadcrumb} onBreadcrumb={navigiere} artikel={kopf?.artikel} rolle="sekundaer"
           // A-2: trägt der Pane-Inhalt seine Kopfzeile selbst, bleibt hier die
           // reine Fenster-Steuerung (Vertrag `KopfDaten.kopfzeileSelbst`).
           nurSteuerung={kopf?.kopfzeileSelbst}

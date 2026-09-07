@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, type Location } from 'react-router-dom';
 import {
-  NAVIGATION, alleNavLinks, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
+  NAVIGATION, NAVIGATION_META, alleNavLinks, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
 } from '../../lib/navigation';
 import { STUFE_WORT } from '../../lib/normtext/erfassungsgrad';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
@@ -13,6 +13,13 @@ import { registerVonPfad, REG_FLAECHE, REG_HOVER_FLAECHE_BLATT } from './bereich
 // Single-Entry-Seiten mit internen Hash-Tabs wie /rechner/tagerechner#zpo ihre
 // Aktiv-Markierung).
 const NAV_ZIELE = new Set(alleNavLinks().map((l) => l.ziel));
+
+// D36 (David 7.9.2026) · «Einstellungen» wieder unten in der Seitenleiste,
+// abgesetzt durch eine Haarlinie — separat von den vier übrigen Meta-Zielen
+// (Methodik/Über/Kontakt/Datenschutz), die seit D26 im Footer bleiben. Aus
+// derselben SSoT gelesen wie zuvor (`NAVIGATION_META`, §5) statt neu
+// hartcodiert — sonst zwei Wahrheiten für dasselbe Ziel.
+const EINSTELLUNGEN = NAVIGATION_META.find((l) => l.ziel === '/einstellungen')!;
 
 // ─── App-Shell-Seitenleiste (Build-Plan App-Shell, Phase 3) ─────────────────
 //
@@ -63,6 +70,46 @@ function istAktiv(ziel: string, loc: Location): boolean {
     if (cur !== val) return false;
   }
   return true; // Pfad (+ Anker + alle Query-Diskriminatoren) treffen.
+}
+
+/** D37 (David 7.9.2026) · trägt EIN Blatt an IRGENDEINER Tiefe unter `kinder`
+ *  die aktive Route? Rekursiv über verschachtelte Gruppen (z.B. Gesetze →
+ *  Bund/Kantone → Erlass), damit ein Abschnitt erkennt, dass die aktuelle
+ *  Seite irgendwo in ihm liegt — nicht nur an seiner eigenen Übersichts-Route. */
+function knotenEnthaeltAktiv(kinder: NavKnoten[], loc: Location): boolean {
+  return kinder.some((kk) => (kk.art === 'link' ? istAktiv(kk.ziel, loc) : knotenEnthaeltAktiv(kk.kinder, loc)));
+}
+
+// ── D37 · Auf-/Zuklapp-Wahl je ABSCHNITT für die laufende Sitzung ───────────
+//
+// Anders als `useSeitenleiste.ts` (localStorage, sitzungsübergreifend) merkt
+// sich diese Wahl NUR die laufende Sitzung (Auftrag David 7.9.2026: «nicht
+// dauerhaft») — sessionStorage statt localStorage, sonst dieselbe Mechanik:
+// `null` = keine Wahl getroffen ⇒ der Aufrufer nimmt seinen Vorgabewert
+// (aktiver Abschnitt startet offen, alle anderen zu). Guard + try/catch wie
+// dort (privater Modus/gesperrter Speicher darf den Bau nicht zum Absturz
+// bringen — der Zustand bleibt dann einfach nur im Arbeitsspeicher der
+// Sitzung).
+const ABSCHNITT_OFFEN_PREFIX = 'lexmetrik-sidebar-abschnitt-offen.';
+
+function abschnittSchluessel(titel: string): string {
+  return ABSCHNITT_OFFEN_PREFIX + titel.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+}
+
+function ladeAbschnittOffen(titel: string): boolean | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const v = window.sessionStorage.getItem(abschnittSchluessel(titel));
+    return v === '1' ? true : v === '0' ? false : null;
+  } catch {
+    return null;
+  }
+}
+
+function speichereAbschnittOffen(titel: string, offen: boolean) {
+  try {
+    window.sessionStorage.setItem(abschnittSchluessel(titel), offen ? '1' : '0');
+  } catch { /* Speicher gesperrt — Zustand bleibt nur für die laufende Sitzung im Speicher */ }
 }
 
 function Blatt({ k, loc, onNavigate, klein }: {
@@ -223,13 +270,43 @@ function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigat
   );
 }
 
-// Ein Sidebar-Abschnitt (Rechner/Vorlagen/Gesetze). Anfangszustand offen.
+// Ein Sidebar-Abschnitt (Rechner/Vorlagen/Gesetze).
+//
+// ── D37 (David 7.9.2026) · ANFANGSZUSTAND ZUGEKLAPPT, NUR DER AKTIVE OFFEN ──
+// Vorher startete JEDER Abschnitt offen (`useState(true)`) — bei fünf
+// Abschnitten mit teils tiefen Baum-Ästen (Gesetze: Bund/Kantone/Erlasse) eine
+// lange Leiste ohne Fokus. Jetzt startet nur der Abschnitt offen, in dem die
+// aktuelle Route liegt (`aktiv` = eigene Übersichts-Route, `kindAktiv` =
+// irgendein Blatt darunter, beliebig tief) — Orientierung bleibt, `aria-current`
+// bleibt sichtbar, ohne die ganze Leiste aufzublättern. Eine echte Nutzerwahl
+// (Chevron-Klick) gewinnt darüber und bleibt für die SITZUNG gemerkt
+// (sessionStorage, s. o. — bewusst nicht dauerhaft wie `useSeitenleiste.ts`).
+// Die STEIGENDE Flanke von `aktiv || kindAktiv` klappt zusätzlich automatisch
+// auf (SPA-Navigation ohne Remount, z.B. über die Kopf-Suche in einen gerade
+// zugeklappten Abschnitt) — dieselbe Mechanik wie schon bei `Gruppe` (O2),
+// jetzt eine Ebene höher, weil Abschnitte seit D37 erstmals zuklappbar sind.
+// Automatische Öffnungen gelten NICHT als Wahl und werden nicht gespeichert —
+// nur der Chevron-Klick tut das (Auftrag: «Auf-/Zuklappen je Gruppe wird
+// gemerkt», nicht «jeder Zustand»).
 // Die Überschrift ist KLICKBAR zur Gesamtübersicht (a.ziel, Auftrag David
 // 20.6.2026); ein separater Chevron-Knopf klappt die Kinder ein/aus. Bewusst
 // KEIN natives <details>: ein Link in <summary> würde beim Klick zugleich
 // navigieren UND umschalten (preventDefault könnte beides nicht trennen).
 function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: Location; onNavigate?: () => void }) {
-  const [offen, setOffen] = useState(true);
+  const aktiv = a.ziel != null && (loc.pathname + loc.search === a.ziel || (a.ziel === '/gesetze' && loc.pathname.startsWith('/gesetze')));
+  const kindAktiv = knotenEnthaeltAktiv(a.kinder, loc);
+  const [offen, setOffen] = useState(() => {
+    const gewaehlt = a.titel ? ladeAbschnittOffen(a.titel) : null;
+    return gewaehlt ?? (aktiv || kindAktiv);
+  });
+  // Nur die STEIGENDE Flanke expandiert automatisch (§ Kommentar oben) — die
+  // Warnung «bewusst zugeklappt bleibt zu» aus O2 gilt hier unverändert.
+  const warAktiv = useRef(aktiv || kindAktiv);
+  useEffect(() => {
+    const jetztAktiv = aktiv || kindAktiv;
+    if (jetztAktiv && !warAktiv.current) setOffen(true);
+    warAktiv.current = jetztAktiv;
+  }, [aktiv, kindAktiv]);
   // Klick auf die Abschnitts-Überschrift (z.B. «Gesetze») klappt alle Untergruppen
   // wieder zu (Auftrag David): der hochgezählte Schlüssel remountet die Kinder, die
   // sich dann auf ihren Default (standardOffen=false) re-initialisieren.
@@ -241,7 +318,6 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
       </div>
     );
   }
-  const aktiv = a.ziel != null && (loc.pathname + loc.search === a.ziel || (a.ziel === '/gesetze' && loc.pathname.startsWith('/gesetze')));
   // F2 · DER GRUPPENKOPF TRÄGT SEINE REGISTERFARBE DAUERHAFT (David 6.9.2026:
   // «nicht trist»). Der Strich sitzt auf derselben Achse wie die Aktiv-Marken
   // der Blätter darunter (px-2.5 · 2 px · 10 px Abstand) — die Leiste bekommt
@@ -259,7 +335,11 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
         ) : (
           <span className="lc-overline flex-1">{a.titel}</span>
         )}
-        <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
+        <button type="button" onClick={() => setOffen((o) => {
+            const neu = !o;
+            speichereAbschnittOffen(a.titel as string, neu);
+            return neu;
+          })} aria-expanded={offen}
           aria-label={`${a.titel} ${offen ? 'einklappen' : 'aufklappen'}`}
           className="shrink-0 p-0.5 text-ink-500 hover:text-ink-900 transition-colors">
           <Chevron offen={offen} />
@@ -307,16 +387,26 @@ export function Sidebar({ onNavigate, markeZeigen = false }: { onNavigate?: () =
         <Abschnitt key={i} a={abschnitt} loc={loc} onNavigate={onNavigate} />
       ))}
 
-      {/* Fuss der Leiste — abgesetzt durch Hairline.
-          ── D26 (David 6.9.2026) · DIE META-ZIELE STEHEN IM SEITENFUSS ────────
-          Einstellungen · Methodik · Über · Kontakt · Datenschutz standen hier als
-          fünf gleichrangige Zeilen unter den Inhalts-Rubriken und beanspruchten
-          in einer Leiste, die «zeigen soll, was man aufschlägt», ein Fünftel der
-          Höhe für Dinge, die man einmal im Jahr braucht. Sie sind NICHT weg —
+      {/* Fuss der Leiste — abgesetzt durch Hairline, am unteren Rand verankert
+          (`mt-auto` im `flex-col min-h-full`-Nav: kein Sprung, sitzt auch bei
+          kurzem Inhalt unten).
+          ── D26 (David 6.9.2026) · DIE VIER PFLICHT-/VERTRAUENSZIELE STEHEN IM
+          SEITENFUSS. Einstellungen · Methodik · Über · Kontakt · Datenschutz
+          standen hier als fünf gleichrangige Zeilen unter den Inhalts-Rubriken
+          und beanspruchten in einer Leiste, die «zeigen soll, was man
+          aufschlägt», ein Fünftel der Höhe für Dinge, die man einmal im Jahr
+          braucht. Methodik/Über/Kontakt/Datenschutz sind darum NICHT weg —
           `Footer.tsx` führt dieselbe SSoT-Liste (`NAVIGATION_META`), und der
-          Seitenfuss steht auf jeder Route. `NAVIGATION_META` bleibt darum
-          unverändert exportiert; nur die Leiste rendert es nicht mehr. */}
+          Seitenfuss steht auf jeder Route.
+          ── D36 (David 7.9.2026) · «EINSTELLUNGEN» KEHRT ZURÜCK, ALLEIN ───────
+          Anders als die vier übrigen Meta-Ziele braucht man Einstellungen
+          (Schriftgrösse, Thema, Sprache) häufig genug, dass sie in die
+          Leiste gehört, wo man ohnehin navigiert — nicht erst in den Fuss der
+          Seite scrollen. Bleibt trotzdem aus derselben `NAVIGATION_META`-SSoT
+          abgeleitet (§5); im Footer entfällt der Eintrag darum, statt ihn ein
+          zweites Mal zu zeigen (D4: jede Angabe einmal). */}
       <div className="mt-auto pt-3 border-t border-rule-soft flex flex-col gap-0.5">
+        <Blatt k={EINSTELLUNGEN} loc={loc} onNavigate={onNavigate} />
         {/* W2·23-STARTSEITE-V4 §6.3 · Fuss «Stand des Korpus». Dieselbe Wahrheit
             wie die Korpus-Stand-Zeile auf «/» — EIN Baustein, zwei Konsumenten
             (§5), kein zweiter Datumssatz in der Leiste. Auf Mobil trägt die
