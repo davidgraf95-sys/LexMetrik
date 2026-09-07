@@ -85,7 +85,7 @@ export function roheKnoepfe(quelle: string): number {
  *  einen Knopf kürzer, nicht umgebucht. */
 const HOECHSTZAHL: Readonly<Record<string, number>> = {
 
-  // LESER (20 Dateien, 34 Knoepfe)
+  // LESER (19 Dateien, 33 Knoepfe) — D38: LeserTrefferBlatt.tsx gelöscht
   'pages/gesetz-leser/parts/ArtikelIndex.tsx': 1,
   'pages/gesetz-leser/parts/ArtikelLeser.tsx': 2,
   'pages/gesetz-leser/parts/ArtikelSprungFeld.tsx': 1,
@@ -99,7 +99,6 @@ const HOECHSTZAHL: Readonly<Record<string, number>> = {
   'pages/gesetz-leser/v3/LeserPanelOeffner.tsx': 1,
   'pages/gesetz-leser/v3/LeserRahmenV3.tsx': 1,
   'pages/gesetz-leser/v3/LeserSeitenleiste.tsx': 2,
-  'pages/gesetz-leser/v3/LeserTrefferBlatt.tsx': 1,
   'pages/gesetz-leser/v3/LeserTrefferListe.tsx': 3,
   'pages/gesetz-leser/v3/PanelFilterZeile.tsx': 1,
   'pages/gesetz-leser/v3/SuchBereichWahl.tsx': 1,
@@ -206,9 +205,13 @@ describe('B-K1 · jeder Knopf traegt einen Baustein — oder steht mit Zahl in d
     ).toEqual([]);
   });
 
-  it('die Ratsche kennt ihren eigenen Stand (7.9.2026: 140 in 82 Dateien)', () => {
-    expect(Object.keys(HOECHSTZAHL).length, 'Dateien in der Ratsche').toBe(82);
-    expect(SUMME_IST, 'Summe der Hoechstzahlen — sie darf nur sinken').toBeLessThanOrEqual(141);
+  // D38 (7.9.2026): 82 → 81 Dateien. `v3/LeserTrefferBlatt.tsx` ist gelöscht —
+  // die Trefferliste liegt seither über der Lesespalte statt als Blatt am Feld.
+  // Die Ratsche darf nur SINKEN; sie sinkt hier, weil eine Datei ging, nicht
+  // weil ein Knopf umgebucht wurde.
+  it('die Ratsche kennt ihren eigenen Stand (7.9.2026: 139 in 81 Dateien)', () => {
+    expect(Object.keys(HOECHSTZAHL).length, 'Dateien in der Ratsche').toBe(81);
+    expect(SUMME_IST, 'Summe der Hoechstzahlen — sie darf nur sinken').toBeLessThanOrEqual(140);
   });
 
   it('ROT-BEWEIS: der Zaehler erkennt den rohen Knopf und uebersieht den Baustein nicht', () => {
