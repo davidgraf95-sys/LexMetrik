@@ -93,6 +93,24 @@ export function davidFragen(md: string): { frage: string; quelle: string }[] {
   return out;
 }
 
+/**
+ * Zahl der `@david-fragen`-Zeilen, die `davidFragen` NICHT lesen konnte.
+ *
+ * Der Regex dort verlangt `<schlüssel>: <Frage> · quelle: <Ort>`; eine Zeile
+ * ohne `· quelle:` fiel bisher stumm aus der Anzeige. Verifiziert 8.9.2026:
+ * die einzige eingetragene Frage (`zgb-a36-anhang`, mit fertiger Empfehlung)
+ * war David nie sichtbar — stumm schlucken ist die Fehlerklasse (§8, §17).
+ * Diese Funktion macht den Verlust ZÄHLBAR, damit die Seite ihn ausweisen
+ * kann; der tolerante Regex bzw. der `check:plan`-Wächter ist ein eigener,
+ * deklarierter Schritt.
+ */
+export function davidFragenVerworfen(md: string): number {
+  const block = md.match(/<!--\s*@david-fragen\n([\s\S]*?)-->/);
+  if (!block) return 0;
+  const roh = block[1].split('\n').filter((z) => /^\s*[\w§ÄÖÜäöü-]+:\s*\S/.test(z)).length;
+  return Math.max(0, roh - davidFragen(md).length);
+}
+
 /** Marker, der eine Kappung im Prompt UNÜBERSEHBAR macht. Ein blosses «…»
  *  las sich wie ein Auslassungszeichen im Zitat — der Prüf-Agent 4.8.2026
  *  bemerkte darum nicht, dass QS-EXTQUELLEN die David-Lizenzfrage und
@@ -164,6 +182,25 @@ export function ersterSatz(prosa: string, maxLen = 170): string {
   const luecke = roh.lastIndexOf(' ');
   const geschnitten = luecke > maxLen * 0.6 ? roh.slice(0, luecke) : roh;
   return `${geschnitten.replace(/[\s,;:·—–-]+$/, '')}…`;
+}
+
+/**
+ * Ein-Satz-Ziel für die Hauptseite: wie `ersterSatz`, aber OHNE den
+ * Herkunfts-Vermerk, mit dem jeder Auftrags-Wortlaut im Bestand öffnet
+ * («(W2·13-KANTONE-DATEN, Aufteilung 8.8.2026, sortenrein) Skill …»).
+ *
+ * Der Vermerk ist Plan-Buchhaltung: er nennt Schritt-ID und Entstehungsdatum.
+ * Auf der Hauptseite ist er genau das Kürzel, das dort nicht stehen soll
+ * (Auftrag David 8.9.2026) — und ohne ihn beginnt die Vorschau beim Ziel
+ * statt bei der Herkunft. Gekappt wird nur, wenn die Klammer TATSÄCHLICH mit
+ * der ID dieses Schritts öffnet: sonst schnitte die Funktion einem Wortlaut,
+ * der mit einer inhaltlichen Klammer beginnt, den Anfang weg (§8).
+ */
+export function zielSatz(prosa: string, id: string, maxLen = 95): string | null {
+  if (!prosa) return null;
+  const vermerk = prosa.match(/^\(([^()]*)\)\s*/);
+  const rest = vermerk && vermerk[1].startsWith(id) ? prosa.slice(vermerk[0].length) : prosa;
+  return ersterSatz(rest, maxLen) || null;
 }
 
 /** Markdown-Zeile(n) → Klartext (Links auf ihren Text, Auszeichnung weg). */

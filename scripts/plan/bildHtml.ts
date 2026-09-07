@@ -21,6 +21,7 @@ export function esc(s: string): string {
  *  Verweise relativ und funktionieren auch unter `file://`. */
 export const SEITEN = [
   { schluessel: 'lagebild', suffix: '', titel: 'Lagebild' },
+  { schluessel: 'bau', suffix: '-bau', titel: 'Bau-Details' },
   { schluessel: 'projekt', suffix: '-projekt', titel: 'Projekt & Produkt' },
   { schluessel: 'geschichte', suffix: '-geschichte', titel: 'Geschichte' },
   { schluessel: 'methode', suffix: '-methode', titel: 'Arbeitsweise' },
@@ -193,6 +194,17 @@ export const STIL = `
   .monat > b { font-family:Charter,Georgia,serif; font-size:1rem; }
   .monat ul { margin:.3rem 0 0; padding-left:1.1rem; font-size:.85rem; color:var(--soft); }
   .monat ul li { margin:.12rem 0; }
+  /* --- Lagebild «schlank» (8.9.2026): Entscheid-Karten + kompakte Zeilen ---
+     Keine neuen Farben — die Karten nutzen die bestehende Ampel-Semantik
+     (warn = wartet auf eine Entscheidung, slate = bewusst zurückgestellt). */
+  .gate { border:1px solid var(--warn); border-left-width:5px; border-radius:6px; background:var(--warn-bg); padding:.85rem 1.05rem; margin-top:.7rem; }
+  .gate h3 { color:var(--warn); font-size:1.02rem; }
+  .gate p { margin:.35rem 0; font-size:.92rem; }
+  .gate .haengt { color:var(--soft); font-size:.85rem; }
+  .zeilen { list-style:none; margin:.9rem 0 0; padding:0; }
+  .zeilen li { display:flex; gap:.6rem; align-items:baseline; padding:.5rem .1rem; border-bottom:1px solid var(--line); }
+  .zeilen li:last-child { border-bottom:none; }
+  .zeilen li > div { flex:1; }
 `;
 
 // ---------------------------------------------------------------------------
@@ -573,139 +585,138 @@ export function schrittLabel(titel: string, id: string, fett = true): string {
   return `${fett ? `<b>${t}</b>` : t} <span class="id">(${esc(id)})</span>`;
 }
 
-/**
- * Klartext-Fortschritt einer Dach-Checkliste, z. B. «3 von 14 Positionen offen»
- * (Auftrag David 14.8.2026 — Checklisten-Fortschritt auf einen Blick). `null`
- * heisst «kein Dach-Schritt» (keine Checkliste unter dem Etikett).
- */
-export function checklisteText(chk: { offen: number; gesamt: number } | null | undefined): string | null {
-  if (!chk) return null;
-  return chk.offen === 0
-    ? `alle ${chk.gesamt} Position${chk.gesamt === 1 ? '' : 'en'} erledigt`
-    : `${chk.offen} von ${chk.gesamt} Position${chk.gesamt === 1 ? '' : 'en'} offen`;
-}
+// ---------------------------------------------------------------------------
+// Lagebild «schlank» — Bausteine der fünf Klartext-Blöcke
+// (Auftrag David 8.9.2026: «mach es schlanker und übersichtlicher für mich»)
+//
+// Alles hier ist REIN: die Funktionen formulieren aus bereits erhobenen Werten,
+// sie erheben nichts und rechnen nichts nach (§2). Der Vorgänger dieses
+// Abschnitts war der Laien-Block `wasGeradePassiert` — er ist mit demselben
+// Auftrag ersatzlos zurückgebaut (§17-Gegengewicht), weil die Blöcke 1/3/5
+// seine Funktion übernehmen und zwei Erzählungen derselben Lage zwei
+// Wahrheiten wären (§5).
+// ---------------------------------------------------------------------------
 
 /**
- * Kompakte Verknüpfungs-Zeile eines Schritts: dep-Richtung, gleiches Baufeld,
- * gleicher Fahrplan (Auftrag David 14.8.2026 — «zeigen was miteinander
- * verknüpft ist», ohne Graphik-Bibliothek). Reine Darstellung über bereits
- * erhobene IDs (s. `verknuepfungenAusEinheiten` in bildDaten.ts); jede Liste
- * wird auf `max` Einträge gekappt («+N weitere»), damit ein breit geteilter
- * Pfad (z. B. «src/pages») die Zeile nicht sprengt. Leer, wenn der Schritt
- * keine der vier Kanten trägt — dann erscheint keine Zeile (§8: nichts
- * Erfundenes anzeigen).
+ * Ein Schritt im FLIESSTEXT der Hauptseite: nur der Klartext-Titel, das Kürzel
+ * ausschliesslich als `title`-Attribut (Auftrag David 8.9.2026 — auf der
+ * Hauptseite stand alle 29 Wörter ein Kürzel). `schrittLabel` mit sichtbarer
+ * Klammer-ID bleibt unverändert bestehen und trägt weiterhin die Bau-Details-
+ * Seite, deren Publikum die Kürzel als Verweis-Anker BRAUCHT.
  */
-export function verknuepfungenZeile(
-  v: { wartetAuf: string[]; blockiert: string[]; feldPartner: string[]; fahrplanPartner: string[] },
-  titelVon: (id: string) => string,
-  max = 3,
-): string {
-  const teil = (label: string, ids: string[]): string => {
-    if (!ids.length) return '';
-    const zeig = ids
-      .slice(0, max)
-      .map((id) => schrittLabel(titelVon(id), id, false))
-      .join(' · ');
-    const rest = ids.length - Math.min(ids.length, max);
-    return `<b>${label}:</b> ${zeig}${rest > 0 ? ` · +${rest} weitere` : ''}`;
-  };
-  const teile = [
-    teil('wartet auf', v.wartetAuf),
-    teil('blockiert', v.blockiert),
-    teil('nicht parallel mit', v.feldPartner),
-    teil('gleiche Baustelle', v.fahrplanPartner),
-  ].filter(Boolean);
-  return teile.length ? `<p class="sub">${teile.join(' &nbsp;·&nbsp; ')}</p>` : '';
+export function klartextLabel(titel: string, id: string, fett = true): string {
+  const t = esc(titel);
+  return fett ? `<b title="${esc(id)}">${t}</b>` : `<span title="${esc(id)}">${t}</span>`;
 }
 
-/** Was der Block anzeigt. Alle Felder sind bereits erhoben — die Funktion rechnet nicht. */
-export interface WasPassiert {
-  /** Schritte auf `wip`: Klartext-Titel, Kürzel und ihr Baufeld (`null` = keines deklariert). */
-  imBau: { titel: string; id: string; feld: string | null }[];
-  /** Parallele Bau-Plätze (Worktrees ohne Haupt-Repo); `null` = nicht abfragbar. */
-  bauplaetze: number | null;
-  /** Letzte `main`-Commits; `null` = git nicht abfragbar. */
-  gelandet: { datum: string; betreff: string }[] | null;
-  /** Schritte, deren Blocker-NAME David nennt. */
-  wartetAufDavid: { titel: string; id: string; blocker: string; feld: string | null }[];
-  /**
-   * Übrige blockierte Schritte — Blocker-Name ohne «david».
-   *
-   * Sie werden GEZÄHLT statt verschwiegen: die Kopfzeile derselben Seite nennt
-   * die Gesamtzahl der Blockierten, und ein Block, der weniger zeigt, sähe nach
-   * einem Widerspruch aus. Belegter Fall 5.8.2026 — `richter-analytik-gate`
-   * verlangt laut `@blockers`-Register ausdrücklich «bewusste Freigabe Davids»,
-   * trägt seinen Namen aber ohne «david». Die Namens-Erkennung untertreibt hier
-   * also; die Zahl macht das sichtbar, ohne dass der Generator raten müsste,
-   * was ein David-Gate ist (§8).
-   */
-  weitereBlockierte: number;
-  /** Relativer Verweis auf die Seite «Arbeitsweise & Glossar». */
-  methodeDatei: string;
-  /** Erzeugungs-Zeitpunkt im Klartext — der Wahrheitsanker der ganzen Seite. */
-  stand: string;
+/**
+ * Ist dieser `@blockers`-Text ein Entscheid, der bei David liegt?
+ *
+ * Mechanisch am Wortlaut des Registers, nicht an einer gepflegten Zweitliste
+ * (die still veraltete). Vier Marker, alle im Bestand belegt; die ausdrückliche
+ * VERNEINUNG («Kein David-Gate — Sequenz-Marker für die Plan-Buchung»,
+ * `zh-tranche-laeuft`) schlägt jeden Marker, sonst zählte die Seite reine
+ * Ablauf-Vermerke als Entscheidungen.
+ *
+ * `Freigabe David` steht bewusst mit in der Liste, obwohl der Auftrag nur drei
+ * Marker nannte (§7 — abweichen und offenlegen): `richter-analytik-gate`
+ * verlangt laut Register «bewusste Freigabe Davids», ist also ein echtes Gate;
+ * ohne diesen Marker verschwände es von der Seite, statt sichtbar zu warten.
+ */
+export const DAVID_GATE_MARKER: readonly RegExp[] = [/David-Gate/i, /Entscheid David/i, /wartet auf David/i, /Freigabe David/i];
+const KEIN_DAVID_GATE = /kein(?:e|er|es)?\s+(?:echtes\s+)?David-Gate/i;
+
+export function istDavidGate(text: string): boolean {
+  if (KEIN_DAVID_GATE.test(text)) return false;
+  return DAVID_GATE_MARKER.some((r) => r.test(text));
 }
 
-/** Ein Satz über die parallelen Bau-Plätze — die drei Fälle sind fest formuliert. */
-function bauplatzSatz(n: number | null): string {
-  if (n === null) return 'Wie viele Bauplätze gerade offen sind, lässt sich auf diesem Rechner nicht abfragen.';
-  if (n === 0) return 'Sonst keine parallelen Bauplätze — es läuft höchstens eine Arbeit auf einmal.';
-  if (n === 1) return '1 weiterer Bauplatz ist aktiv: dort wird gleichzeitig an etwas anderem gearbeitet.';
-  return `${n} weitere Bauplätze sind aktiv: dort wird gleichzeitig an anderem gearbeitet.`;
+/**
+ * Sagt das Gate selbst, dass es bewusst liegen bleibt? Dann ist «wartet seit
+ * N Tagen» kein Hinweis, sondern falscher Druck (Befund der Ist-Analyse
+ * 8.9.2026: `vps-bestellung-david` trug «wartet seit 49 Tagen», obwohl David
+ * am 8.8.2026 ausdrücklich zurückgestellt hat).
+ */
+export function istZurueckgestellt(text: string): boolean {
+  return /zur(?:ü|ue)ckgestellt|geparkt|vertagt/i.test(text);
 }
 
-/** Der Block «Was gerade passiert» — reine Funktion über bereits erhobenen Daten. */
-export function wasGeradePassiert(d: WasPassiert): string {
-  const imBau = d.imBau.length
-    ? d.imBau
-        .map((s) => {
-          const worte = flaechenKlartext(feldPfade(s.feld));
-          const betrifft = worte.length
-            ? `Betrifft: ${esc(worte.join(' · '))}`
-            : 'Betrifft: das ganze Projekt — für dieses Arbeitspaket ist kein Bereich eingegrenzt.';
-          return `<li><span class="s wip"></span><div>${schrittLabel(s.titel, s.id)}${bereichsBadges(s.feld)}<br><span class="sub">${betrifft}</span></div></li>`;
-        })
-        .join('\n')
-    : '<li><span class="s ready"></span><div>An keinem Arbeitspaket wird gerade gebaut.</div></li>';
+/**
+ * Strukturiertes Feld aus der Gate-Prosa (`Frage: …`, `Optionen: …`,
+ * `Empfehlung: …`). Fehlt es, kommt `null` zurück — der Block zeigt dann
+ * nichts an dieser Stelle, statt etwas zu erfinden (§8). Die geplante
+ * `@blockers`-Erweiterung um genau diese drei Felder ist ein eigener Schritt;
+ * bis dahin findet die Funktion, was die Prosa ohnehin schon so schreibt.
+ */
+const FELD_LABEL: Record<'frage' | 'optionen' | 'empfehlung', string> = {
+  frage: 'Frage',
+  optionen: 'Optionen',
+  empfehlung: 'Empfehlung',
+};
 
-  const gelandet =
-    d.gelandet === null
-      ? '<li><span class="s ready"></span><div>Die Projekt-Geschichte lässt sich auf diesem Rechner gerade nicht abfragen (git nicht verfügbar).</div></li>'
-      : d.gelandet.length === 0
-        ? '<li><span class="s ready"></span><div>Noch nichts fertig geworden.</div></li>'
-        : d.gelandet
-            .map((c) => `<li><span class="s done"></span><div>${esc(c.betreff)}<br><span class="sub">fertig am ${esc(c.datum)}</span></div></li>`)
-            .join('\n');
+export function gateFeld(text: string, feld: 'frage' | 'optionen' | 'empfehlung'): string | null {
+  const m = text.match(new RegExp(`(?:^|[·;(]\\s*|\\s)${FELD_LABEL[feld]}:\\s*(.+?)(?=\\s+·\\s|$)`, 'is'));
+  return m ? m[1].trim() : null;
+}
 
-  const david = d.wartetAufDavid.length
-    ? d.wartetAufDavid
-        .map((s) => `<li><span class="s block"></span><div>${schrittLabel(s.titel, s.id)}${bereichsBadges(s.feld)}<br><span class="sub">wartet auf deine Entscheidung: ${esc(s.blocker)}</span></div></li>`)
-        .join('\n')
-    : '<li><span class="s done"></span><div>Nichts — im Moment hält kein Arbeitspaket auf deine Entscheidung.</div></li>';
+/** Die Zahlen, aus denen Block 1 seine drei Sätze bildet. */
+export interface LageZahlen {
+  offen: number;
+  baubar: number;
+  imBau: number;
+  /** Zahl der ENTSCHEIDE (Gates), nicht der daran hängenden Arbeitspakete. */
+  entscheide: number;
+  ampel: { gruen: boolean; name: string; wann: string } | null;
+  zuletzt: { titel: string; wann: string } | null;
+}
 
-  return `<section id="jetzt">
-  <p class="eyebrow">In einfachen Worten</p>
-  <h2>Was gerade passiert</h2>
-  <p class="lage"><b>Stand: ${esc(d.stand)}</b></p>
-  <p class="lede">Drei Fragen, ohne Fachsprache beantwortet: Woran wird gerade gearbeitet, was ist zuletzt
-  fertig geworden, und was liegt bei dir. Die Fachfassung derselben Lage steht weiter unten auf dieser Seite.
-  Die farbigen Schilder nennen den <b>Wirkungsbereich</b> — welchen Teil des Projekts ein Arbeitspaket berührt (je Bereich eine Farbe);
-  alle sechs sind auf der Seite <a href="${esc(d.methodeDatei)}">Arbeitsweise &amp; Glossar</a> erklärt.</p>
+/** Zahl + Bezugswort in korrektem Deutsch; die Null bekommt ihre eigene Form
+ *  («keines ist im Bau» statt «0 sind im Bau»). Jede Form steht ausgeschrieben
+ *  da — eine generische Pluralregel produziert im Deutschen verlässlich Unsinn. */
+function zahlwort(n: number, null_: string, ein: string, mehr: string): string {
+  return n === 0 ? null_ : n === 1 ? `1 ${ein}` : `${n} ${mehr}`;
+}
 
-  <h3>Gerade im Bau</h3>
-  <ul class="liste">${imBau}</ul>
-  <p class="hinweis">${esc(bauplatzSatz(d.bauplaetze))} Ein «Bauplatz» ist eine eigene Arbeitskopie des Projekts:
-  zwei Arbeiten laufen darin gleichzeitig, ohne sich in die Dateien zu greifen.</p>
+/**
+ * Block 1 «Wo stehen wir» — drei Sätze, jeder Wert mechanisch belegt.
+ * Satzschablonen stehen STATISCH hier: gleicher Repo-Stand ergibt gleichen
+ * Text (§2), kein Modell zur Laufzeit.
+ */
+export function lageSaetze(d: LageZahlen): string[] {
+  const ampel = d.ampel
+    ? d.ampel.gruen
+      ? `Der Hauptstand des Projekts ist gesund: der letzte abgeschlossene Prüflauf («${d.ampel.name}», ${d.ampel.wann}) war grün.`
+      : `Der Hauptstand ist gerade ROT — der letzte abgeschlossene Prüflauf («${d.ampel.name}», ${d.ampel.wann}) ist gescheitert; das geht allem anderen vor.`
+    : 'Ob der Hauptstand gerade gesund ist, lässt sich auf diesem Rechner nicht abfragen (GitHub-Kommandozeile nicht verfügbar).';
+  const zahlen =
+    `${zahlwort(d.offen, 'Kein Arbeitspaket ist offen', 'Arbeitspaket ist offen', 'Arbeitspakete sind offen')} — ` +
+    `${zahlwort(d.baubar, 'keines davon könnte sofort starten', 'davon könnte sofort starten', 'davon könnten sofort starten')}, ` +
+    `${zahlwort(d.imBau, 'keines ist gerade im Bau', 'ist gerade im Bau', 'sind gerade im Bau')}.`;
+  const rest = zahlwort(
+    d.entscheide,
+    'Nichts hält gerade auf deine Entscheidung.',
+    'Entscheidung wartet auf dich (gleich darunter).',
+    'Entscheidungen warten auf dich (gleich darunter).',
+  );
+  const zuletzt = d.zuletzt ? ` Zuletzt fertig geworden: «${d.zuletzt.titel}» (${d.zuletzt.wann}).` : '';
+  return [ampel, zahlen, `${rest}${zuletzt}`];
+}
 
-  <h3>Zuletzt fertig geworden</h3>
-  <p class="sub">Die letzten fünf gelandeten Arbeitspakete — die Titel sind Fachtitel und stehen unverändert da.</p>
-  <ul class="liste">${gelandet}</ul>
-
-  <h3>Wartet auf David</h3>
-  <ul class="liste">${david}</ul>
-  ${d.weitereBlockierte > 0 ? `<p class="hinweis">Dazu ${d.weitereBlockierte === 1 ? 'wartet 1 weiteres Arbeitspaket' : `warten ${d.weitereBlockierte} weitere Arbeitspakete`} auf eine Klärung, die nicht schon im Namen bei dir liegt — vollständig unter <a href="#david">Wartet auf dich, David</a>.</p>\n  ` : ''}<p class="hinweis">Diese Angaben stammen vom letzten <span class="id">npm run plan:bild</span>-Lauf (${esc(d.stand)}).
-  Jeden Fachbegriff dieser Seite erklärt die Seite <a href="${esc(d.methodeDatei)}">Arbeitsweise &amp; Glossar</a> in je einem Satz.</p>
-</section>`;
+/**
+ * Sichtbare Wörter einer erzeugten Seite — das Mass des Wortbudgets
+ * (Auftrag David 8.9.2026: die Hauptseite trug 1714 sichtbare Wörter).
+ *
+ * «Sichtbar» heisst: beim Öffnen der Seite lesbar. Skript und Stylesheet
+ * zählen nicht, und von einem `<details>` zählt nur sein `<summary>` — der
+ * eingeklappte Rest ist Angebot, nicht Last. Die Zerlegung ist bewusst
+ * einfach (kein HTML-Parser): sie setzt voraus, dass `<details>` nicht
+ * verschachtelt werden — im Generator ist das nirgends der Fall.
+ */
+export function sichtbareWorte(html: string): number {
+  const ohneCode = html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ');
+  const ohneDetails = ohneCode.replace(/<details[\s\S]*?<\/details>/gi, (blk) => (blk.match(/<summary[\s\S]*?<\/summary>/i) ?? [' '])[0]);
+  const text = ohneDetails.replace(/<[^>]+>/g, ' ').replace(/&(?:[a-z]+|#\d+);/gi, ' ');
+  return text.split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
 }
 
 // ---------------------------------------------------------------------------

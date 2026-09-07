@@ -183,7 +183,10 @@ export function methodeSeite(o: SeitenOpts): string {
 <section id="glossar">
   <p class="eyebrow">Glossar</p>
   <h2>Die Begriffe in einem Satz</h2>
-  <dl class="glossar">${glossar}</dl>
+  <p class="lede">Ein Nachschlagewerk, keine Lektüre — eingeklappt, damit die Seite lesbar bleibt
+  (Umbau «Lagebild schlank» 8.9.2026: diese Seite trug 1488 Wörter ohne eine einzige Klappe).</p>
+  <details><summary>Alle Begriffe anzeigen</summary>
+  <dl class="glossar">${glossar}</dl></details>
 </section>
 
 ${fussnote('Diese Seite ist bewusst statischer Text: Sie beschreibt das Verfahren, nicht den Messstand.')}`;
