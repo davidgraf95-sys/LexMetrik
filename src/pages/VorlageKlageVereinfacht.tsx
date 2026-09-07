@@ -423,6 +423,7 @@ export function VorlageKlageVereinfacht() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       weiterDeaktiviert={stopp && schritt === 0}
       inhalt={inhalt()}
       vorschau={stopp

@@ -77,7 +77,12 @@ export function roheKnoepfe(quelle: string): number {
   return n;
 }
 
-/** Ist-Stand 6.9.2026, gemessen mit `roheKnoepfe`. Zahlen sinken, nie steigen. */
+/** Ist-Stand 6.9.2026, gemessen mit `roheKnoepfe`. Zahlen sinken, nie steigen.
+ *  7.9.2026 (D5, W2·24): `pages/VorlageSchlichtungsgesuchBs.tsx` ist raus — ihr
+ *  einziger roher Knopf war die «zum Schritt →»-Zeile ihrer handgeschriebenen
+ *  Mängelliste, und die ist mit der Liste selbst in den geteilten `PruefBefund`
+ *  gewandert, dort als `lc-btn-ghost`. Die Ratsche ist damit um eine Datei und
+ *  einen Knopf kürzer, nicht umgebucht. */
 const HOECHSTZAHL: Readonly<Record<string, number>> = {
 
   // LESER (20 Dateien, 34 Knoepfe)
@@ -130,7 +135,6 @@ const HOECHSTZAHL: Readonly<Record<string, number>> = {
   'components/vorlagen/ui.tsx': 3,
   'components/vorlagen/wizard.tsx': 1,
   'pages/VorlageAgGruendung.tsx': 2,
-  'pages/VorlageSchlichtungsgesuchBs.tsx': 1,
   'pages/VorlageVorsorgeauftrag.tsx': 1,
 
   // UI (6 Dateien, 7 Knoepfe)
@@ -202,8 +206,8 @@ describe('B-K1 · jeder Knopf traegt einen Baustein — oder steht mit Zahl in d
     ).toEqual([]);
   });
 
-  it('die Ratsche kennt ihren eigenen Stand (Messwert 6.9.2026: 141 in 83 Dateien)', () => {
-    expect(Object.keys(HOECHSTZAHL).length, 'Dateien in der Ratsche').toBe(83);
+  it('die Ratsche kennt ihren eigenen Stand (7.9.2026: 140 in 82 Dateien)', () => {
+    expect(Object.keys(HOECHSTZAHL).length, 'Dateien in der Ratsche').toBe(82);
     expect(SUMME_IST, 'Summe der Hoechstzahlen — sie darf nur sinken').toBeLessThanOrEqual(141);
   });
 

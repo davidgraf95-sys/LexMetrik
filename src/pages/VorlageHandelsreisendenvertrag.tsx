@@ -223,6 +223,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       kopfSchalter={<div className="space-y-3">
         {kopf}
         <VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />

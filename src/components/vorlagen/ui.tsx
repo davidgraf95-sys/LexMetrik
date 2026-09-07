@@ -26,12 +26,20 @@ export const NICHT_GESPEICHERT_HINWEIS =
  *  Steuert, wann `Field` `htmlFor` setzen darf (siehe dort). */
 const BESCHRIFTBAR = ['input', 'select', 'textarea'];
 
-export function Field({ label, children, hint, optional }: {
+export function Field({ label, children, hint, optional, fehlt }: {
   /** Beschriftung. `ReactNode` (R2-E/F1-2), weil einzelne Felder dem Namen eine
    *  leise Präzisierung nachstellen («Zugang Kündigung (Stichtag B/C)») — die
    *  gehörte bis dahin zu den Gründen, warum ein Formular am Baustein
    *  vorbeibaute. Der Normalfall bleibt ein String. */
   label: React.ReactNode; children: React.ReactNode; hint?: string; optional?: boolean;
+  /** D5 (W2·24): Meldung zu genau DIESEM Feld. Gesetzt heisst «Pflichtangabe
+   *  fehlt/ist ungültig» — das native Control bekommt `aria-invalid` und eine
+   *  Fehlerzeile, auf die es per `aria-describedby` zeigt. Bis D5 trug ein
+   *  Vorlagen-Formular seine Fehler AUSSCHLIESSLICH in der Sammel-Box am Fuss
+   *  der Karte; gemessen am 6./7.9.2026 (Befund D5) waren es auf
+   *  `/vorlagen/schlichtungsgesuch-bs` 0 × `aria-invalid` im ganzen Wizard.
+   *  Wer die Prop nicht setzt, bekommt exakt das bisherige Feld (§6). */
+  fehlt?: string;
 }) {
   // Label↔Control-Verknüpfung (FAHRPLAN-DESIGN 3.6): native Einzel-Controls
   // (input/select/textarea) bekommen automatisch id + htmlFor; zusammengesetzte
@@ -54,8 +62,17 @@ export function Field({ label, children, hint, optional }: {
   const komposit = isValidElement(children) && typeof children.type !== 'string'
     && (children.props as Record<string, unknown>)['aria-label'] === undefined
     && (children.props as Record<string, unknown>)['aria-labelledby'] === undefined;
+  // D5: `aria-invalid`/`aria-describedby` NUR auf ein natives Control — ein
+  // zusammengesetztes Kind (DatumsFeld, BetragsFeld) reicht unbekannte Props
+  // nicht an sein inneres <input> weiter, das Attribut landete dann auf einem
+  // Wrapper-DIV und wäre eine Behauptung ohne Wirkung (§8). Dort bleibt die
+  // sichtbare Fehlerzeile die ganze Aussage.
+  const fehlerId = `${id}-fehler`;
+  const invalid = nativ && fehlt
+    ? { 'aria-invalid': true as const, 'aria-describedby': fehlerId }
+    : {};
   const control = nativ
-    ? cloneElement(children as React.ReactElement<{ id?: string }>, { id })
+    ? cloneElement(children as React.ReactElement<{ id?: string }>, { id, ...invalid })
     : komposit
       ? cloneElement(children as React.ReactElement<{ 'aria-labelledby'?: string }>, { 'aria-labelledby': `${id}-label` })
       : children;
@@ -74,6 +91,11 @@ export function Field({ label, children, hint, optional }: {
           liefert dort 6.35:1 und auf `--paper` 7.4:1 — AA auf JEDER Fläche des
           Hauses, statt einer Ausnahme je Kasten. */}
       {hint && <p className="text-xs text-ink-600"><NormText text={hint} /></p>}
+      {/* D5: die Fehlerzeile steht AM Feld, nicht nur in der Sammel-Box —
+          `role=alert` bleibt der Sammel-Box vorbehalten (sonst rufen bei einem
+          leeren Formular ein Dutzend Zeilen gleichzeitig), die Verbindung zum
+          Control macht `aria-describedby`. */}
+      {fehlt && <p id={fehlerId} className="text-xs text-danger-700"><NormText text={fehlt} /></p>}
     </div>
   );
 }

@@ -382,6 +382,7 @@ export function VorlageVollmacht() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_VOLLMACHT, dateiName: `${VOLLMACHT_TITEL[a.typ]}.pdf` },

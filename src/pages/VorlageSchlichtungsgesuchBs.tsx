@@ -509,20 +509,14 @@ export function VorlageSchlichtungsgesuchBs() {
         <div className="space-y-5">
           {stopp && stoppKarte()}
 
-          {!stopp && maengel.length > 0 && (
-            <div className="lc-notice lc-notice-danger space-y-1.5" role="alert">
-              <p className="lc-overline text-danger-700">Mängelliste – vor dem Download zu beheben</p>
-              {maengel.map((m, i) => (
-                <p key={i} className="text-body-s text-danger-700">
-                  • {m.text}{' '}
-                  <button type="button" onClick={() => setSchritt(m.schritt)} className="underline underline-offset-2 hover:opacity-80">
-                    zum Schritt →
-                  </button>
-                </p>
-              ))}
-            </div>
-          )}
-
+          {/* D5 (W2·24, §17-Gegengewicht): Hier stand eine eigene «Mängelliste»
+              — role=alert, Aufzählung, «zum Schritt →» je Zeile. Genau das
+              leistet seit D5 der geteilte `PruefBefund` im Wizard-Rahmen, aus
+              derselben Quelle (`sgMaengel` über `fehlerJeSchritt`). Der
+              Zweitbau ist darum gestrichen, nicht bewacht (§5/§10): die Liste
+              erscheint unverändert, jetzt gruppiert nach Schritt und mit dem
+              Fokus-Sprung des Rahmens. Der Stopp-Fall (Art. 198 ZPO) rendert
+              gar keinen Wizard-Inhalt und bleibt unberührt. */}
           {!stopp && hinweise.map((h, i) => (
             <div key={i} className="lc-notice text-body-s">{h}</div>
           ))}
@@ -587,6 +581,12 @@ export function VorlageSchlichtungsgesuchBs() {
       fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
+      // Bewusst OHNE `fehler`: `weiterDeaktiviert={stopp}` ist die
+      // Navigations-Regel dieser Fläche (Art. 198 ZPO), und sie bleibt.
+      // `fehlerJeSchritt` ändert die Navigation nicht — es sagt nur, was im
+      // Prüfen-Schritt offen ist. Im Stopp-Fall entsteht kein Dokument, dann
+      // ist auch der Befund gegenstandslos.
+      fehlerJeSchritt={stopp ? undefined : (i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       weiterDeaktiviert={stopp}
       inhalt={inhalt()}
       vorschau={stopp

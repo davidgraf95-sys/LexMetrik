@@ -158,6 +158,9 @@ export function VorlagenSeite<
   const docxZiel = (label: string) =>
     docxAktiv(card) ? { label, banner: config.banner, dateiName: `${config.dateiBasis}.docx` } : undefined;
 
+  const ortFehlt = a.ort.trim() ? '' : config.ortFehler;
+  const datumFehlt = istIsoDatum(a.datum) ? '' : config.datumFehler;
+
   const pruefenInhalt = (
     <div className="space-y-5">
       {/* §8 (QS-UI 8b Teil 2): Bis hierher hing das Rendern der Engine-Warnungen an
@@ -177,9 +180,16 @@ export function VorlagenSeite<
         <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
       ))}
 
-      <Field label={config.ortDatumLabel}>
+      {/* D5 (W2·24): Ort und Datum sind die einzigen Pflichtangaben, die IN
+          diesem Schritt stehen — sie bekommen die Rückmeldung am Feld selbst
+          (`aria-invalid` am nativen Ort-Feld über die `fehlt`-Prop; das
+          DatumsFeld trägt die Fehlerzeile, siehe Field-Kommentar). Alles
+          Übrige liegt in früheren Schritten und wird oben im Sammel-Befund
+          samt Sprung angezeigt. */}
+      <Field label={config.ortDatumLabel} fehlt={ortFehlt || datumFehlt ? [ortFehlt, datumFehlt].filter(Boolean).join(' · ') : undefined}>
         <div className="grid grid-cols-[1fr_11rem] gap-3">
-          <input className={inputCls} value={a.ort} onChange={(e) => set('ort', e.target.value as T['ort'])} placeholder={config.ortPlaceholder} />
+          <input className={inputCls} aria-invalid={ortFehlt ? true : undefined}
+            value={a.ort} onChange={(e) => set('ort', e.target.value as T['ort'])} placeholder={config.ortPlaceholder} />
           <DatumsFeld value={a.datum} onChange={(v) => set('datum', v as T['datum'])} className={inputCls} />
         </div>
       </Field>
@@ -211,6 +221,7 @@ export function VorlagenSeite<
       zuruecksetzen={zuruecksetzen}
       schritte={config.schritte} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       kopfSchalter={config.kopfSchalter?.(ctx)}
       inhalt={inhalt}
       fussnote={config.fussnote}
