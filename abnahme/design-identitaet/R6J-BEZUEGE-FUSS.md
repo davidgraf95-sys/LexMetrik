@@ -151,3 +151,68 @@ die Deklaration am Fundort:
 2. `src/tests/leser-benennung.test.ts` — der Wächter-Pfad heisst
    `parts/ArtikelLeser.bezuegeFuss.tsx` statt `…bezuegeZone.tsx`. Gleiche
    Datei, gleicher Geltungsbereich, gleiche Wörter.
+
+## 9 Nachzug 7.9.2026 — CI-Rot 34111127560 (Shard 5) und sein Wurzel-Fix
+
+Der PR-Lauf war an **einer** Sonde rot:
+`e2e/leser-ruecksprung-r5-r7.e2e.ts:225` (R7, «Einsprung über `#art-…`»),
+Meldung `Ziel steht 203 px statt am Landepunkt 154 px` (Toleranz 24). Lokal
+byte-gleich nachgestellt: `dist/`-Preview, Chromium 1440×900, 6× CPU-Drossel,
+`/gesetze/bund/BV#art-8`, Abweichung exakt **49 px**.
+
+**Wurzel (gemessen, rAF-Sampler je Frame):**
+
+| t | Ziel-`top` | `.lr7-bez` im Dokument | davon über dem Ziel | `docH` |
+|---|---|---|---|---|
+| 6046 ms | 154 px (Landepunkt) | 0 | 0 | 118 314 |
+| 7099 ms | **203 px** | 145 | 7 (à 33 px + 16 px Abstand) | 119 000 |
+
+Die Zähl-Datei (`src/pages/gesetz-leser/bezuegeZaehler.ts`) entscheidet, **ob**
+ein Artikel überhaupt eine Bezüge-Zeile bekommt — ohne echte Zahl steht dort
+nichts (§8). Bei der BV führt vor ihrem Eintreffen kein einziger Artikel eine
+Zahl aus statischer Quelle (weder «Verweise» noch «Rechner»). Seit D34 ist diese
+Zeile der Artikel**fuss** und 49 px hoch; ihr Zuwachs liegt damit **zwischen**
+dem Scroll-Anker des Browsers und dem Ziel. Was oberhalb des Ankers wächst,
+fängt die Scroll-Verankerung auf — dieses Stück nicht. Vor D34 stand dieselbe
+Zeile am Artikel**kopf**, also oberhalb des Ankers: derselbe Zuwachs, aber
+kompensiert. Das ist der ganze Unterschied zwischen grün auf `main` und rot hier.
+
+**Verworfener Weg (probiert, gemessen):** die Zähl-Datei früher laden
+(`beiLeerlauf` heraus). Netz-Zeitleiste: die Datei ist bei **t 1116 ms** fertig,
+also 5 s vor dem Einschwing-Ende. Es fehlt nicht das Byte, sondern die **zweite
+Render-Runde** — ein Fetch-Ergebnis kann frühestens im Folge-Render stehen, und
+der lag unter Last hinter dem Sprung. Die Messung nach der Änderung war
+unverändert 203 px; die Änderung ist darum zurückgenommen (§17-Gegengewicht:
+kein Zusatz, der den gemessenen Defekt nicht bewegt).
+
+**Gebauter Fix** — `src/pages/gesetz-leser/inhalt-hooks-tieflink.tsx`, keine
+zweite Mechanik: dieselbe rAF-Schleife, die den Sprung einschwingen lässt, endet
+nicht mehr beim Aufdecken, sondern läuft als **Nachzug** weiter. Verdeckt zieht
+sie wie bisher jeden Frame nach; aufgedeckt fasst sie nichts an, ausser das Ziel
+ist von seiner eingeschwungenen Lage weggelaufen — dann stellt sie es einmal
+zurück. Gemessen wird weiterhin der Abstand zur **letzten Lage**, nicht zum
+Landepunkt: `scroll-margin-top` gilt gegen den Scroll-Container, im sekundären
+Pane wäre der absolute Vergleich falsch. Auch `scrollIntoView` steht jetzt an
+genau einer Stelle für Erstsprung, Einschwingen und Nachzug (§5).
+
+Zwei Klammern: `NACHZUG_MS = 4000` (gemessener Verzug 1053 bzw. 1665 ms; rund
+das Doppelte des schlechteren, für den 2-vCPU-Runner) und die **Übernahme** —
+`wheel`/`touchstart`/`keydown`/`pointerdown` beenden den Nachzug sofort, dieselben
+vier Ereignisse, mit denen auch die Zielansage aufhört
+(`components/layout/DeepLinkSkeleton.tsx`). Ein Nachzug, der gegen den Leser
+scrollt, wäre schlimmer als der Versatz, den er heilt.
+
+**Wirkung, gemessen nach dem Fix** (gleiche Bedingung): t 3969 ms Ziel 203 px →
+t 3986 ms (Folge-Frame) Ziel wieder **154 px**; Endstand `top = 154`,
+`scroll-margin-top = 154`. Sichtbar ist das ein Scroll, der einen Zuwachs
+oberhalb ausgleicht, also kein zweites Bild.
+
+**Sonde unverändert** (§6.3): an `e2e/leser-ruecksprung-r5-r7.e2e.ts` ist keine
+Zeile angefasst.
+
+**Tore nach dem Fix:** die vier Specs
+(`leser-ruecksprung-r5-r7`, `leser-bezuege-fuss-d34`, `leser-v3-kontext-cls`,
+`leser-r1-r2`) mit `--repeat-each=3 --workers=2` **75 passed** · `npm run test`
+7454 grün · `npx tsc -b` 0 · lint 0 Fehler (1 Bestands-Warnung) ·
+`golden:vergleich` 256 Fälle byte-gleich · `check:golden-normtext` 60 257 Knoten
+· `check:perf-lighthouse` (PERF_RUNS=1) grün, OR-CLS **0.002** (≤ 0.05).
