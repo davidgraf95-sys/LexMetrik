@@ -342,11 +342,19 @@ test.describe('M8 — der Erlass-Kopf öffnet wirklich das Fenster', () => {
 // ═══ R1/R2/R5 (Prüfer R11, 6.9.2026) · DIE LEISTE SELBST ════════════════════
 
 test.describe('R2 — die Leiste ohne Reiter', () => {
+  // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ──────
+  // Dieser Fall stand auf «/» — dort war die Leiste bis R14 leer. Seit R14 ist
+  // die Sammlung ein Reiter, «/» trägt also immer einen; der 0-Reiter-Zustand
+  // gibt es nur noch auf den Meta-Routen, und dort ist er die wahre Auskunft.
+  // Die ZUSAGEN sind unverändert (kein Strich unter dem Nichts · «+» am linken
+  // Inhaltsrand · CLS 0 beim ersten Reiter) — gemessen wird sie jetzt von
+  // `/kontakt` aus, derselben Startroute, die dieser Spec ohnehin benutzt.
+  // Zusätzlich hält der Fall die R14-Zusage fest, dass «/» selbst nie leer ist.
   test('kein durchgehender Unterstrich, «+» am linken Inhaltsrand, Höhe reserviert', async ({ page }) => {
     // GEMESSEN am Stand `c91541617`: auf «/» stand ein leerer 34-px-Streifen
     // mit `border-b` über die volle Breite — eine Trennlinie, die nichts trennt.
     await page.setViewportSize({ width: 1440, height: 900 })
-    await page.goto('/')
+    await page.goto(START)
     const leiste = page.locator(REITER)
     await expect(leiste).toHaveAttribute('data-reiter-leer', '')
     const leer = await leiste.evaluate((e) => ({
@@ -369,6 +377,15 @@ test.describe('R2 — die Leiste ohne Reiter', () => {
     const voll = await leiste.evaluate((e) => Math.round(e.getBoundingClientRect().height))
     expect(voll, `leer ${leer.hoehe} px · mit Reiter ${voll} px`).toBe(leer.hoehe)
     await expect(leiste).toHaveAttribute('data-reiter-leer', /^$/ , { timeout: 1 }).catch(() => {})
+  })
+
+  // R14: die Sammlung selbst ist nie ohne Reiter — der Zustand, den der Fall
+  // darüber misst, ist auf «/» nicht mehr erreichbar.
+  test('R14 — auf «/» trägt die Leiste immer mindestens einen Reiter', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.goto('/')
+    await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`)).toHaveCount(1)
+    await expect(page.locator(`${REITER}[data-reiter-leer]`)).toHaveCount(0)
   })
 })
 
