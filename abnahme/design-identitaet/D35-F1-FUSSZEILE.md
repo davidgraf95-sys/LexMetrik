@@ -12,47 +12,89 @@
 Am Ende jedes Artikels steht EINE Zeile. Links die Rubriken dieses Artikels mit
 ihren Zahlen, rechts seine Aktionen:
 
-    Bezüge  11 Entscheide ›  1 Rechner ›            Zitat · Link · Amtliche Fassung ↗
+    Bezüge  11 Entscheide ›  1 Rechner ›   Zitat · Link · Amtliche Fassung ↗ · ⧉ Daneben öffnen
 
-Vier Zusagen aus dem Entscheid, je einzeln gemessen:
+Fünf Zusagen aus dem Entscheid, je einzeln gemessen:
 
 1. **Zu beim Laden.** Keine Rubrik steht offen. Der Merker der D34-Zeile
    (`lm.leser.bezuege-offen`) ist ersatzlos gelöscht — läge er noch, wäre «nur
    auf Klick» eine Absicht statt einer Zusage.
 2. **Je Rubrik ein eigener Griff.** Ein Klick öffnet genau seine Rubrik. Bis D34
    öffnete EIN `<details>` alle vier zugleich.
-3. **Aktionen dauerhaft sichtbar.** «Zitat · Link · Amtliche Fassung ↗» stehen
-   mit Deckkraft 1 und WCAG-2.5.8-Höhe da, ohne dass die Maus etwas berührt —
-   und GENAU EINMAL je Artikel: die alte Kopf-Variante unter `opacity-0` ist
-   gelöscht, nicht gedoppelt (§5).
+3. **Aktionen dauerhaft sichtbar.** «Zitat · Link · Amtliche Fassung ↗ · ⧉
+   Daneben öffnen» stehen mit Deckkraft 1 und WCAG-2.5.8-Höhe da, ohne dass die
+   Maus etwas berührt — und GENAU EINMAL je Artikel: die alte Kopf-Variante
+   unter `opacity-0` ist gelöscht, nicht gedoppelt (§5).
 4. **Zähler = Liste.** Die Zahl auf dem Griff ist die Länge dessen, was er
    aufklappt (§8). Die M-6-Wurzel ist mit behoben: die CSS-Regel
    `html[data-leitfaelle=aus] .lc-leser [data-leitfall-zeile]` ist gestrichen —
    die Zeile zeigt, was sie zählt, auch bei «Rechtsprechung im Kopf aus».
 
-## 2 · Abweichung vom Auftrag, offengelegt (§7): «⧉ Daneben öffnen» fehlt
+## 2 · «⧉ Daneben öffnen»: eine falsche Streichung und ihre Korrektur (§7)
 
-Der Auftrag nennt als vierte Aktion «daneben öffnen». Der Knopf wurde gebaut und
-GEMESSEN (7.9.2026, Preview :4435, `/gesetze/bund/OR#art-336_c` @1440) — er kann
-an einem Artikel **nie erscheinen**:
+Der Auftrag nennt als vierte Aktion «daneben öffnen». Sie war am 7.9.2026
+**gebaut, dann wieder gestrichen** worden (Commit `7baaf70d5`). Die Streichung
+war **falsch** und ist mit diesem Nachfix rückgängig gemacht.
+
+**Die Messung von damals bleibt gültig und wird nicht nachgeführt** (Beleg-Regel:
+ein datierter Befund wird ergänzt, nie umgeschrieben). Sie lautete — gemessen
+7.9.2026, Preview `:4435`, `/gesetze/bund/OR#art-336_c` @1440:
 
 - `istOffen` vergleicht `tabSchluessel(pathname + search)` (`Shell.tsx:301-303`).
 - `tabSchluessel` streift den `#hash` ab (`usePaneLayout.ts:26`).
 - `/gesetze/bund/OR#art-336_c` ist damit für die Pane-Steuerung derselbe Pfad wie
   `/gesetze/bund/OR` — und der steht immer offen, sonst stünde dieser Artikel gar
   nicht auf dem Schirm.
-- `kannOeffnen && !istOffen(…)` ist an JEDEM Artikel jedes Erlasses false; der
-  Knopf renderte nicht ein einziges Mal. Und würde er es doch, bliebe er
-  wirkungslos: `Shell.tsx:357` führt dieselbe Sperre im Klick-Pfad noch einmal.
+- Mit der Bedingung `kannOeffnen && !istOffen(panePfad)` renderte der Knopf an
+  keinem Artikel; `Shell.tsx:357` verwarf zusätzlich den Klick.
 
-**Ein Knopf, der nie erscheinen kann, wird nicht gebaut** (§8; §17-Gegengewicht:
-was nicht wirken kann, wird gestrichen statt bewacht). Der Weg, der WIRKEN würde,
-wäre eine zweite Instanz desselben Erlasses (`?r=`-Diskriminator — `tabSchluessel`
-behält ihn ausdrücklich); die Vergabe dieser Instanz-Nummer gehört der Fenster-
-und Reiter-Mechanik (R13), nicht dieser Zeile. **Der Auftrag ist insoweit OFFEN**
-und im PR als solcher gemeldet, nicht still übergangen. Der Weg zum zweiten
-Fenster bleibt unterdessen, wo er heute steht: am Erlass-Kopf und an jedem
-Norm-Popover.
+**Falsch war der Schluss, nicht die Messung.** Aus «diese Bedingung ist an jedem
+Artikel false» wurde «ein Knopf, der nie erscheint, wird nicht gebaut» — und
+damit fiel eine Funktion weg, statt dass eine falsche Bedingung korrigiert wurde.
+Die App löst genau diese Frage **eine Ebene höher seit M8** (Prüfbefund R11 #28,
+6.9.2026): der Erlass-Kopf öffnet nicht den eigenen Pfad, sondern
+`naechsteInstanz(pfad)` — «…/OR?r=2», den Instanz-Diskriminator, den
+`tabSchluessel` ausdrücklich **behält** (`src/pages/gesetz-leser/v3/ReiterAktion.tsx`,
+`src/lib/tabs.ts:710`). Damit ist der Pfad nie «schon offen», `istOffen` ist
+gegenstandslos, und `kannOeffnen` (≥ lg + freie Kapazität) bleibt die einzige,
+richtige Bedingung.
+
+**Der Nachfix benutzt genau diesen Weg** — kein zweiter Mechanismus (§5):
+dieselbe Steuerung (`usePaneSteuerung`), dieselbe Instanz-Vergabe
+(`lib/tabs.naechsteInstanz`), dasselbe Wort («Daneben öffnen», Ä118/M8). Der
+einzige Unterschied zum Erlass-Kopf ist der **Anker**: dort `pathname + search +
+hash`, hier der eigene Artikel (`#art-<token>`) — «Art. 336c neben Art. 335c» ist
+genau die Geste, für die es die zweite Instanz gibt.
+
+**Gemessen nach dem Nachfix** (7.9.2026, Preview `:4435` aus eigenem `dist/`,
+`/gesetze/bund/OR#art-336_c`): @1440 steht der Knopf genau einmal, Deckkraft 1;
+sein Klick öffnet `[data-pane="sekundaer"]`, und Art. 336c steht darin 92 px
+unter der Fensteroberkante (Anker gehalten). @1023 und @390 ist er abwesend
+(`kannOeffnen` false) — kein Knopf ohne Wirkung (§8). Wächter: Fall (f) der
+Sonde, zwei Rot-Proben in §3.
+
+## 2a · Wie der Fehlschluss den CI rot machte — und was daran NICHT die Ursache war
+
+Der CI-Lauf `34134684969` (Shard 8) meldete
+`e2e/leser-v3-split-a34-bugs.e2e.ts` rot: «element(s) not found». Die naheliegende
+Zuschreibung an die gestrichene Aktion ist **falsch** — jene Sonde fasst den
+Artikelfuss überhaupt nicht an. Gemessen (7.9.2026, beide Stände als eigener
+Build, Preview aus eigenem `dist/`, ZGB @1440):
+
+| Stand | Art. 683 (y) | Art. 684 (y) | aktiv an der Bezugslinie (154 px) | Panel |
+|---|---|---|---|---|
+| main `8d398874e` | −24 … **108** | 205 … 709 | **Art. 684** (683 endet über der Linie und fällt aus dem Kandidatensatz) | 3 Entscheide |
+| D35-F1 | 24 … **199** | 296 … 801 | **Art. 683** | 0 Entscheide |
+
+Ursache ist die Funktionszeile selbst: sie macht **jeden** Artikel rund 43 px
+höher, und Art. 683 reicht damit über die Bezugslinie. Der Scroll-Spy arbeitet
+korrekt; was kippte, war eine **unausgesprochene Vorbedingung der Sonde**
+(`scrollIntoViewIfNeeded` scrollt minimal und sagt nur zu, dass Art. 684
+*sichtbar* ist, nicht, dass er *an der Linie steht*). Der Setup-Schritt stellt
+Art. 684 jetzt ausdrücklich an die Linie (`scrollIntoView({ block: 'start' })`
+landet über die `.nt-anker`-`scroll-margin-top` genau dort). **Keine Assertion und
+keine Zusage der Sonde ist berührt** (§6.3) — die Änderung ist in der Datei
+begründet und hier deklariert.
 
 ## 3 · Rot-Proben (§6.7) — jede einzeln gefahren
 
@@ -60,7 +102,9 @@ Messbedingung durchgehend: eigener Worktree, Preview `:4435` aus **eigenem
 `dist/`**, vor jeder Probe `npm run build` (Exit 0) und Neustart des
 Preview-Servers — F11 (stale `dist/`) damit ausgeschlossen. `--workers=2`.
 
-**Grün-Grundlage vor den Proben:** 6/6 grün (12.3 s).
+**Grün-Grundlage vor den Proben:** 6/6 grün (12.3 s) — für die vier ersten
+Proben. Nach dem «Daneben öffnen»-Nachfix (7.9.2026): 8/8 grün (19.5 s); die
+beiden letzten Zeilen der Tabelle sind gegen diesen Stand gefahren.
 
 | Fall | Mutation | Ergebnis | Meldung der Sonde |
 |---|---|---|---|
@@ -68,6 +112,8 @@ Preview-Servers — F11 (stale `dist/`) damit ausgeschlossen. `--workers=2`.
 | (b) je Rubrik ein Griff | `BezuegeKopf.tsx`: `setOffen((s) => ({ ...s, [m.reg]: jetzt }))` → `setOffen({ r: jetzt, m: jetzt, g: jetzt, w: jetzt })` (D34-Sammelschalter) | **ROT** | `#art-271 .lr7-bez-block` — Expected 1, Received **2** |
 | (d) Aktionen ohne Hover | `ArtikelAktionen.tsx`: Gruppe `<span className="lr7-bez-aktionen">` → `… opacity-0` (D34-Kopf-Kette) | **ROT** | «‹Zitat› steht mit Deckkraft 0 da» — Expected 1, Received **0** |
 | (e) Skelett überreserviert nicht | `tailwind.config.js`: `'bez-skelett': '3rem'` → `'40rem'` | **ROT** | «Skelett 640 px, geladen 530 px — der Block SCHRUMPFT beim Laden, der Sprung ist nur verlegt» |
+| (f) «Daneben öffnen» WIRKT | `ArtikelAktionen.tsx`: `oeffneDaneben(naechsteInstanz(panePfad))` → `oeffneDaneben(panePfad)` (der eigene, immer offene Pfad) | **ROT** | «der Klick öffnet kein zweites Fenster» — `[data-pane="sekundaer"]` nicht gefunden |
+| (f)+(d) «Daneben öffnen» IST DA | `ArtikelAktionen.tsx`: `{kannOeffnen && (` → `{kannOeffnen && false && (` (= die Streichung vom 7.9.2026) | **ROT** | (f): «die vierte Aktion des Auftrags fehlt am Artikel» — Expected 1, Received 0 · (d): «/daneben öffnen$/ steht nicht genau einmal am Artikel» |
 
 ### 3a · Ein Tor, das nicht scheitern konnte — und der Fix
 
@@ -84,7 +130,7 @@ darum ausdrücklich die **Gruppe**, nicht die Knöpfe.
 die Gleichung Zähler ↔ Listenlänge an ZPO 271 gemessen — der Rubrik «Verweise»,
 die ohne jeden Shard auskommt und darum keine wartende Zusage ist.)*
 
-## 4 · Screenshots (4)
+## 4 · Screenshots (5)
 
 - `d35f1-1440-hell-zu.jpg` — @1440 hell, **zu**: die Zeile am Ende von OR 336c,
   links «Bezüge · 11 Entscheide › · 1 Rechner ›», rechts «Zitat · Link ·
@@ -96,7 +142,13 @@ die ohne jeden Shard auskommt und darum keine wartende Zusage ist.)*
 - `d35f1-390-hell-zu.jpg` — @390 hell, zu: dieselbe Zeile, die Aktionen brechen
   unter die Rubriken um; kein waagrechter Überlauf (von der Sonde gemessen).
 
-Auf keinem der vier Screens ein vierter Aktions-Knopf (Ziff. 2).
+- `d35f1-1440-hell-daneben.jpg` — @1440 hell, **nach dem Nachfix**: dieselbe
+  Zeile mit allen VIER Aktionen «Zitat · Link · Amtliche Fassung ↗ · ⧉ Daneben
+  öffnen».
+
+Die vier ERSTEN Screens sind vor dem Nachfix entstanden und zeigen darum keinen
+vierten Aktions-Knopf. Sie werden nicht neu aufgenommen — sie belegen ihren
+Stand (Ziff. 2); den heutigen belegt der fünfte.
 
 ## 5 · Deklarierte Sonden-Anpassung (§6.3)
 
@@ -112,6 +164,12 @@ für Wort unverändert, nur der Weg zum Aufklappen ist ein anderer**:
 | `popover-lesbar-d31.e2e.ts` | «r» (Entscheide) |
 | `verweis-u.e2e.ts` | «g» (Verweise) |
 
+Dazu kommt mit dem Nachfix eine **fünfte**, andersartige Anpassung:
+`leser-v3-split-a34-bugs.e2e.ts` stellt Art. 684 im SETUP ausdrücklich an die
+Bezugslinie (`scrollIntoView({ block: 'start' })` statt
+`scrollIntoViewIfNeeded()`). Grund, Messung und Nachweis, dass keine Assertion
+berührt ist: Ziff. 2a.
+
 In `leser-bezuege-inhalt-d30` ist zusätzlich vermerkt, dass einer der dortigen
 Rot-Wege (`ref`-Ruf entfernen ⇒ (a) rot bei gemerkt offener Zeile)
 **gegenstandslos** geworden ist — der gemerkte Zustand existiert nicht mehr. Der
@@ -124,6 +182,8 @@ ergänzt ist nur, welche Rot-Wege heute an seine Stelle treten.
 `parts/BezuegeKopf.tsx`, `parts/ArtikelLeser.bezuegeFuss.tsx`,
 `parts/ArtikelAktionen.tsx` (neu), `src/index.css`, `tailwind.config.js`,
 `src/tests/leser-adresse-lm202.test.ts`, `src/tests/v2-c2-farbwoerterbuch.test.tsx`,
-`e2e/leser-d35-f1-funktionszeile.e2e.ts` (neuer Wächter), die vier Sonden aus
-Ziff. 5, `e2e/shard-gruppen.json` (Projektion, `gen:e2e-shards`), diese Datei,
-vier Screenshots.
+`e2e/leser-d35-f1-funktionszeile.e2e.ts` (neuer Wächter, Fall (f) mit dem
+Nachfix), die vier Sonden aus Ziff. 5 sowie
+`e2e/leser-v3-split-a34-bugs.e2e.ts` (Setup, Ziff. 2a),
+`e2e/shard-gruppen.json` (Projektion, `gen:e2e-shards`), diese Datei,
+fünf Screenshots.
