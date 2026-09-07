@@ -140,8 +140,9 @@ test.describe('Ä52 bleibt unangetastet — Beiwerk bekommt KEINEN Scrim', () =>
         'Beiwerk-Panel hat wieder eine Vollflächen-Abdunklung (Ä52)').toBe(0)
 
       // ── D41 · und jetzt das Menü aufziehen ──────────────────────────────
-      // ROT-PROBE auf 40c2e47e8 (dem Stand vor D41), gemessen: `vollflaechig`
-      // 1 statt 0 und `[data-v3-ansicht-scrim]` count 1 statt 0.
+      // ROT-PROBE, vorgeführt am 7.9.2026 auf dem Stand vor D41 (§6.7):
+      // `[data-v3-ansicht-scrim]` count 1 statt 0, in hell UND dunkel — genau
+      // die Stufe, die den 1080 px breiten Kopf als helle Insel stehen liess.
       await ansichtOeffner(page).click()
       await expect(ansichtPanel(page)).toBeVisible()
       await expect(ansichtScrim(page),
@@ -264,10 +265,15 @@ async function paneBleibtBedienbar(page: Page, lage: string) {
 
 test.describe('D42 · Split: das Gesetzes-Pane bleibt bedienbar', () => {
   for (const thema of ['light', 'dark'] as const) {
-    // ROT-PROBE auf dem Stand vor D42, gemessen: `[data-v3-panel-scrim]` count 1
-    // statt 0, `data-v3-panel-modal="ja"`, `role="dialog"` — und die Sonde
-    // meldete für Ansicht-Öffner, ⚖-Öffner, Suchfeld und Textabsatz je
-    // `div[data-v3-panel-scrim]` statt des Ziels.
+    // ── ROT-PROBE, vorgeführt am 7.9.2026 (§6.7) ────────────────────────────
+    // Auf dem Stand vor D42 (Quelldateien auf 7db4880d5 zurückgesetzt, `dist`
+    // neu gebaut): 6 von 8 Fällen dieser Datei rot, `[data-v3-panel-scrim]`
+    // count 1 statt 0. Weil der Zähler zuerst zuschlägt, ist die TREFFER-SONDE
+    // eigens rot gemessen worden — sonst wäre sie ein Tor, das nie gefallen ist:
+    //   (a) Split beim Laden : 4 Ziele gemessen, 4 nicht treffbar
+    //   (b) Übergang         : 4 Ziele gemessen, 4 nicht treffbar
+    // In beiden Aufbauten lieferte `elementFromPoint` für Ansicht-Öffner,
+    // ⚖-Öffner, Suchfeld UND Artikel-Absatz je `div[data-v3-panel-scrim]`.
     test(`(a) Split beim Laden, dann ⚖ im primären Pane (${thema})`, async ({ page }) => {
       const fehler = fehlerSammeln(page)
       await page.emulateMedia({ colorScheme: thema })
