@@ -30,8 +30,10 @@
 //  · dort `setOffen((s) => ({ ...s, [m.reg]: jetzt }))` durch
 //    `setOffen({ r: jetzt, m: jetzt, g: jetzt, w: jetzt })` ersetzen (= der
 //    D34-Sammelschalter)                                          ⇒ (b) rot
-//  · in `parts/ArtikelAktionen.tsx` `className="lc-btn-mini …"` um `opacity-0`
-//    ergänzen (= die Kopf-Kette von D34)                          ⇒ (d) rot
+//  · in `parts/ArtikelAktionen.tsx` die GRUPPE `<span className="lr7-bez-
+//    aktionen">` um `opacity-0` ergänzen (= die Kopf-Kette von D34) ⇒ (d) rot
+//    Bewusst die Gruppe, nicht die Knöpfe: genau dieser Fall liess die
+//    Erstfassung der Sonde falsch grün (s. den Absatz bei (d) unten).
 //  · in `tailwind.config.js` `'bez-skelett': '3rem'` auf `'40rem'` setzen
 //    (= das Skelett reserviert mehr, als der Inhalt braucht)      ⇒ (e) rot
 import { test, expect, type Page } from '@playwright/test';
