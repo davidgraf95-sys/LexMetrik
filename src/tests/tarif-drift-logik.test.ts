@@ -69,11 +69,25 @@ describe('beurteile — Verdikt je Tarif-Eintrag', () => {
     expect(beurteile(hinterlegt('1.1.2024'), null, null).verdikt).toBe('unklar');
   });
 
-  it('8. Exit-Code: DRIFT ist hart; unklar/unerreichbar erst mit --streng', () => {
+  it('8. Exit-Code: DRIFT ist hart; unklar kippt erst mit --streng', () => {
     expect(exitCode(zaehle(['aktuell', 'unklar']), false)).toBe(0);
     expect(exitCode(zaehle(['aktuell', 'unklar']), true)).toBe(1);
     expect(exitCode(zaehle(['aktuell', 'DRIFT']), false)).toBe(1);
     expect(exitCode(zaehle(['aktuell']), true)).toBe(0);
+  });
+
+  // Gegenprüfung 7.9.2026, Befund 2: `unerreichbar` kippte das Tor nur mit
+  // --streng, und `check:netz:kette` ruft das Tor OHNE --streng. Ein totaler
+  // Netzausfall lief damit als Grün durch — genau das «stille Grün», das der
+  // Kopfkommentar der Datei ausschliesst. Seither: unerreichbar ⇒ Exit 1,
+  // unabhängig vom Modus.
+  it('8b. Netzausfall ist nie grün: unerreichbar > 0 ⇒ Exit 1 auch ohne --streng', () => {
+    expect(exitCode(zaehle(['aktuell', 'unerreichbar']), false)).toBe(1);
+    expect(exitCode(zaehle(['aktuell', 'unerreichbar']), true)).toBe(1);
+    // Der Probe-Fall des Prüfers: alle 954 Einträge unerreichbar.
+    expect(exitCode({ aktuell: 0, DRIFT: 0, unklar: 0, unerreichbar: 954 }, false)).toBe(1);
+    // Gegenprobe: `unklar` allein bleibt Exit 0 (wird nur ausgewiesen).
+    expect(exitCode({ aktuell: 643, DRIFT: 0, unklar: 311, unerreichbar: 0 }, false)).toBe(0);
   });
 });
 

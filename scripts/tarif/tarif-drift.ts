@@ -11,7 +11,11 @@
  * WAS es prüft: je Eintrag die hinterlegte Fassung (Fassungskennung aus der
  * `quelleUrl` bzw. das Datum aus `stand`, projiziert über `stand.ts`) gegen die
  * amtlich geltende Fassung der Quelle. Verdikte: aktuell · DRIFT · unklar ·
- * unerreichbar. «unklar» und «unerreichbar» sind NIE grün (§8).
+ * unerreichbar. DRIFT und unerreichbar sind IMMER rot (Exit 1) — ein Eintrag,
+ * dessen Quelle nicht erreichbar war, ist ungeprüft, und ein Netzausfall darf
+ * nie als Grün gelten (Gegenprüfung 7.9.2026, Befund 2). «unklar» läuft grün
+ * mit — es ist ein bekannter Rückstand an Adaptern, kein Drift-Befund —, wird
+ * aber in der Schlusszeile als «N Einträge ungeprüft» ausgewiesen (§8).
  *
  * WAS es NICHT prüft: Tarif-WERTE. Ein DRIFT-Befund sagt «die zitierte Fassung
  * ist überholt», nicht «die Zahl ist falsch» — die Nachverifikation der Werte
@@ -32,17 +36,19 @@
  *     `zh-quellen-aufloesen.ts` als Teil von `check:normtext-netz` (Rot-Beweis
  *     dort 31.8.2026) — darum hier ohne eigenen Netz-Zugriff.
  *   · alles Übrige (lexfind, rsn.ne, silgeneve, m3.ti, PDF-Ablagen, rsju,
- *     prestations.vd) → «unklar: kein Adapter». Ehrlich statt still grün.
+ *     prestations.vd) → «unklar: kein Adapter». Grün, aber ausgewiesen —
+ *     ehrlich statt still grün.
  *
  * NETZ-DISZIPLIN (§ Auftrag): höchstens EINE Abfrage je distinkter Quelle pro
  * Lauf (Ergebnis-Cache über den Quell-Schlüssel), serieller Abstand, Timeout,
- * Retry-Limit aus `netz-retry.ts`. Fehler = «unerreichbar», nie stilles Grün.
+ * Retry-Limit aus `netz-retry.ts`. Fehler = «unerreichbar» ⇒ Exit 1, nie grün.
  *
  * AUFRUF
- *   npm run check:tarif-drift                 # Netz, Tabelle, Exit 1 bei DRIFT
+ *   npm run check:tarif-drift                 # Netz, Tabelle; Exit 1 bei DRIFT
+ *                                             # ODER unerreichbar
  *   npm run check:tarif-drift -- --offline    # nur die offline entscheidbaren
  *                                             # Adapter (ZH) + Stand-Projektion
- *   npm run check:tarif-drift -- --streng     # unklar/unerreichbar kippen auch
+ *   npm run check:tarif-drift -- --streng     # auch «unklar» kippt das Tor
  *   npm run check:tarif-drift -- --nur=SG     # auf einen Kanton eingrenzen
  *
  * §2: keine Rechenlogik, kein Date.now in der Beurteilung (drift-logik.ts ist rein).
@@ -371,7 +377,7 @@ function drucke(zeilen: Zeile[], offline: boolean, streng: boolean): void {
   if (unerreichbar.length) {
     const nachGrund = new Map<string, number>();
     for (const r of unerreichbar) nachGrund.set(r.begruendung, (nachGrund.get(r.begruendung) ?? 0) + 1);
-    console.log('unerreichbar (nie grün):');
+    console.log('unerreichbar (Exit 1 — ungeprüft, nie grün):');
     for (const [g, n] of [...nachGrund].sort((a, b) => b[1] - a[1])) console.log(`  ${String(n).padStart(4)}×  ${g}`);
     console.log('');
   }
@@ -380,13 +386,21 @@ function drucke(zeilen: Zeile[], offline: boolean, streng: boolean): void {
   if (unklar.length) {
     const nachGrund = new Map<string, number>();
     for (const r of unklar) nachGrund.set(r.begruendung, (nachGrund.get(r.begruendung) ?? 0) + 1);
-    console.log('unklar (nie grün):');
+    console.log('unklar (kein Beweis — läuft grün mit, aber ungeprüft):');
     for (const [g, n] of [...nachGrund].sort((a, b) => b[1] - a[1]).slice(0, 25)) console.log(`  ${String(n).padStart(4)}×  ${g}`);
     if (nachGrund.size > 25) console.log(`  … ${nachGrund.size - 25} weitere Gründe`);
     console.log('');
   }
 
   console.log(`aktuell ${z.aktuell} · DRIFT ${z.DRIFT} · unklar ${z.unklar} · unerreichbar ${z.unerreichbar}`);
+  if (z.unklar > 0) {
+    console.log(`unklar = kein Beweis, ${z.unklar} Einträge ungeprüft (fehlender Adapter oder Stand`);
+    console.log('ohne entscheidbares Datum). Der Lauf sagt über diese Einträge NICHTS aus.');
+  }
+  if (z.unerreichbar > 0) {
+    console.log(`\nFEHLER: ${z.unerreichbar} Einträge waren nicht abfragbar — ungeprüft, darum rot.`);
+    console.log('Ein Netzausfall ist kein Grün (Gegenprüfung 7.9.2026, Befund 2).');
+  }
   if (z.DRIFT > 0) {
     console.log(`\nFEHLER: ${z.DRIFT} Einträge zitieren eine überholte Fassung. Nachverifikation der`);
     console.log('Werte gegen die amtliche Quelle ist fachliche Arbeit (§7) — dieses Tor ändert nichts.');
