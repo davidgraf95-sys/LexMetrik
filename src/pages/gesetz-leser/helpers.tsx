@@ -619,7 +619,24 @@ export function margStufeStil(level: number, istBlatt: boolean): string {
   // scheitern kann, wird gestrichen statt bewacht (§17-Gegengewicht). Die Stufe
   // behält ihr `font-medium` — sie ist weiterhin die oberste Randtitel-Stufe,
   // nur ohne Versalien.
+  // ── GB-2 (W2·24, Befund G2, 7.9.2026) · DIE VORFAHREN SIND KURSIVE LITERATA
+  // GEMESSEN im ersten Bild, hell und dunkel, 1440 und 390: `Literata italic`
+  // kam auf 8 von 9 Routen GAR NICHT vor, der Erlass-Leser trug zugleich nur
+  // 2 Registerfarb-Traeger (Referenz «/»: 14). FAHRPLAN §5 nennt die kursive
+  // Literata ausdruecklich als Akzent «an Begruessung und RANDTITELN».
+  // Geaendert ist allein die KLASSENZEILE der Vorfahren-Stufen: `font-sans` →
+  // `lc-randtitel` (index.css §GB-2: Literata kursiv + Registerfarbe der Route
+  // ueber `data-reg`). Stufe, Groesse (`text-leser-rand` 13 px), Gewicht,
+  // Einzug und Hierarchie bleiben Wort fuer Wort.
+  // DAS BLATT BLEIBT SANS — ausdruecklich (§7, ein Beleg altert nicht): David
+  // hat am Bildbogen 17.8.2026 die Spalte «Marginalie/Randtitel 0.8125 rem,
+  // SANS» gewaehlt, und der Auftrag vom 26.6.2026 verlangt, dass die
+  // Sachueberschrift nicht «zu einem blassen Abschnittslabel verkuemmert»;
+  // ~83 % aller 1792 Randtitel sind Blaetter. Der Akzent kommt auf den 17 %
+  // Vorfahren zurueck, ohne die datierte Entscheidung zu ueberschreiben — und
+  // die Drei-Stufen-Hierarchie gewinnt sogar, weil die Stimmen sich jetzt
+  // zusaetzlich in Schrift und Farbe unterscheiden.
   if (istBlatt) return `${hang} font-sans text-leser-rand font-semibold text-ink-800`;
-  if (level <= 0) return `${hang} font-sans text-leser-rand font-medium text-ink-600`;
-  return `${hang} font-sans text-leser-rand text-ink-600`;
+  if (level <= 0) return `${hang} lc-randtitel text-leser-rand font-medium text-ink-600`;
+  return `${hang} lc-randtitel text-leser-rand text-ink-600`;
 }

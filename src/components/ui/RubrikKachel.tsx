@@ -64,7 +64,15 @@ export function RubrikKachel({ ziel, onWahl, icon, zahl, einheit, titel, nutzen,
         // `flex-wrap`: lange Einheiten («amtliche Materialien erfasst») rutschen
         // unter die Zahl, statt die Kachel zu sprengen — kurze bleiben daneben.
         <span className="flex flex-wrap items-baseline gap-2">
-          <span className="num font-display text-h1 leading-none text-brass-700">{zahl}</span>
+          {/* GB-1 (W2·24, Befund G1, 7.9.2026): die ZAEHLER-MARKE traegt die
+              Registerfarbe der Route. Messing sagte auf allen vier Registern
+              dasselbe — also nichts; die Zahl ist auf den Uebersichten das
+              groesste Element im ersten Bild und damit der Ort, an dem die
+              Marke der Domaene sichtbar wird (FAHRPLAN §5). `text-brass-700`
+              bleibt als Grundton stehen: ausserhalb einer Route mit Register
+              (Meta-Seiten) faerbt nichts, und die Kachel darf nie eine
+              geratene Farbe tragen (§8). Regel: index.css §GB-1b. */}
+          <span className="lc-zaehler-marke num font-display text-h1 leading-none text-brass-700">{zahl}</span>
           {einheit && <span className="lc-overline">{einheit}</span>}
         </span>
       )}

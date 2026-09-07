@@ -44,7 +44,11 @@ describe('A-6 — die drei Zusagen stehen genau einmal', () => {
 
   it('die Hülle bindet BEIDE Schlüssel an `schluessel` (Fehler-Reset + Fade)', () => {
     expect(huelle).toContain('<ErrorBoundary key={schluessel}>');
-    expect(huelle).toContain('<div key={schluessel} className="lc-route">');
+    // GB-1 (W2·24, 7.9.2026): die Huelle sagt zusaetzlich das Register des
+    // Pfades an (`data-reg`, Herleitung in `RouteHuelle.tsx`). Die ZUSAGE
+    // dieses Tests ist unveraendert — beide Schluessel haengen weiterhin an
+    // `schluessel`; erweitert ist allein das Attribut dazwischen.
+    expect(huelle).toContain('<div key={schluessel} className="lc-route" data-reg=');
   });
 
   it('die Hülle reserviert die Ladehöhe — je Fläche die passende Zahl', () => {

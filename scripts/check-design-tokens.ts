@@ -74,6 +74,29 @@ const FOKUS_ARB_RE = /\bfocus(?:-visible)?:-?(?:outline|ring|ring-offset)-\[(?!v
 // ausdrückliches `text-ink-500` am Etikett ist heute ein No-op und morgen ein
 // stiller Vorgriff auf eine Rekalibrierung, 400/300 bleiben unter AA.
 const OVERLINE_DIM_RE = /\blc-overline\b[^"'`]*\btext-ink-(?:500|400|300)\b|\btext-ink-(?:500|400|300)\b[^"'`]*\blc-overline\b/;
+// ── GB-13 (W2·24, 7.9.2026) · KEIN VERSAL-ETIKETT AM BADGE ──────────────────
+// F0.7 («Kein ALL-CAPS-Etikett mehr») galt bis hierher nur der `.lc-overline`;
+// GEMESSEN am gebauten Stand 6.9.2026 trugen 53 + 1 `span.lc-badge` auf
+// /rechtsprechung und im Entscheid-Leser die Utility `uppercase` mit Inhalt
+// «fr»/«it» — dieselbe Regel, andere Klasse, unbewacht. Die WIRKUNG ist seit
+// GB-13 an `.lc-badge { text-transform: none }` gekappt (src/index.css); diese
+// Schranke hält die QUELLE sauber, damit niemand ein `uppercase` schreibt, das
+// still nichts tut (F7: ein No-op im Markup ist eine Lüge über die Absicht).
+// ABGRENZUNG: nicht betroffen ist `uppercase` an einem Sprach-/ISO-CODE ausser
+// halb der Badge-Achse (`SprachUmschalter`: «DE» ist ein Kürzel, kein Etikett).
+const BADGE_VERSAL_RE = /\blc-badge(?:-[a-z]+)?\b[^"'`]*\buppercase\b|\buppercase\b[^"'`]*\blc-badge(?:-[a-z]+)?\b/;
+/** BEFRISTETE AUSNAHME, Kollisions-Vorsicht (7.9.2026): `pages/EntscheidLeser`
+ *  liegt in der Hand des parallel laufenden Fixers GA (Befunde G3/G4 derselben
+ *  Prüfrunde) und ist für GB ausdrücklich TABU. Die WIRKUNG ist bereits gekappt
+ *  — `.lc-badge { text-transform: none }` (src/index.css §GB-13) entversalt das
+ *  Etikett auch dort, die e2e-Sonde `w224-gb-register` misst genau das an der
+ *  berechneten Formatierung und deckt die Seite mit ab. Offen ist allein die
+ *  QUELLEN-Hygiene: das Wort «uppercase» steht dort noch und tut nichts.
+ *  FÄLLT WEG, sobald GA gelandet ist — dann die eine Utility streichen und
+ *  diesen Eintrag mit ihr (§17: ein Workaround ohne hinterlegten Wurzel-Fix
+ *  wäre ein offener Mangel, hier ist der Fix ein Wort und der Grund eine
+ *  Bau-Kollision, kein technisches Hindernis). */
+const BADGE_VERSAL_AUSNAHMEN = new Set(['src/pages/EntscheidLeser.tsx']);
 // ── Verbot: Reinweiss als Fläche (§13-Nachtrag d / Befund 41) ──────────────
 // Lese-/Arbeitsflächen tragen --paper*/--surface*, nie #FFFFFF. Kein
 // bg-white/text-white/…-white und kein #fff/#ffffff im Inline-Style
@@ -148,6 +171,8 @@ for (const datei of dateien(WURZEL)) {
       while ((fm = re.exec(zeile)) !== null)
         fehler.push(`${datei}:${i + 1} — eigene Fokusring-Farbe «${fm[0]}» (E-1, §13 F3). Der Ring hat EINE Rolle (--focus) und kommt aus der globalen «:focus-visible»-Regel in src/index.css: Farb- und Breiten-Utilities ersatzlos streichen, nur einen wirklich nötigen Offset (focus-visible:-outline-offset-2) behalten.`);
     }
+    if (BADGE_VERSAL_RE.test(zeile) && !BADGE_VERSAL_AUSNAHMEN.has(datei))
+      fehler.push(`${datei}:${i + 1} — Versal-Etikett an einer lc-badge (F0.7 «Kein ALL-CAPS-Etikett mehr», Befund G13). Die Utility «uppercase» ersatzlos streichen: .lc-badge traegt seit GB-13 text-transform:none (src/index.css), das Markup-Wort ist damit ein stiller No-op (F7). Der volle Wortlaut gehoert in den title (§8).`);
     if (OVERLINE_DIM_RE.test(zeile))
       fehler.push(`${datei}:${i + 1} — lc-overline mit text-ink-500/400/300 gedimmt (AA-Fail bei 11px, D-1.2/E1). Override strippen — lc-overline trägt die kalibrierte ink-600-Basis.`);
     let wm: RegExpExecArray | null;

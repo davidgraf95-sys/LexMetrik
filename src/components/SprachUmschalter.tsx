@@ -34,7 +34,12 @@ export function SprachUmschalter() {
     <div ref={ref} className="relative">
       <button ref={triggerRef} type="button" onClick={() => setOffen((o) => !o)}
         aria-expanded={offen} aria-label="Sprache wählen"
-        className="inline-flex items-center gap-1 h-11 min-w-11 justify-center px-2.5 rounded-lg border border-line bg-surface num text-xs text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors uppercase">
+        /* GB-15 (W2·24): eine Knopf-Form für alle Griffe des Titelblatts
+           (Herleitung an `layout/Topbar`, Rezept index.css §GB-15). `uppercase`
+           bleibt: der Sprachcode «DE» ist ein Kürzel, kein Etikett — F0.7 zielt
+           auf Versal-ETIKETTEN (`.lc-overline`/`.lc-badge`), nicht auf die
+           Schreibung eines ISO-Codes. */
+        className="lc-topbar-griff gap-1 px-2.5 num text-xs uppercase">
         {locale}
         <span aria-hidden className={`text-ink-500 transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
       </button>

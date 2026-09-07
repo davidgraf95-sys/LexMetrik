@@ -348,7 +348,9 @@ export function HeaderSuche({ onFokusModus, onFokusZurueck }: {
           onClick={fokussiere}
           aria-label="LexMetrik durchsuchen oder zur Norm springen"
           aria-keyshortcuts="/ Meta+K Control+K"
-          className="hidden max-[480px]:inline-flex shrink-0 min-h-11 min-w-11 items-center justify-center rounded-lg border border-line bg-surface text-ink-600 transition-colors hover:text-ink-900"
+          /* GB-15 (W2·24): eine Knopf-Form für alle Griffe des Titelblatts
+             (Herleitung an `layout/Topbar`, Rezept index.css §GB-15). */
+          className="lc-topbar-griff hidden max-[480px]:inline-flex shrink-0"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
             <circle cx="11" cy="11" r="6.5" stroke="currentColor" strokeWidth="1.8" />

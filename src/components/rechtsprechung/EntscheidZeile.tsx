@@ -67,13 +67,27 @@ export function EntscheidZeile({ e, onNorm }: {
               title="Betreff/Titel aus dem amtlichen Portal — keine Regeste">amtl. Betreff</span>
           )}
           {e.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
-          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
+          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
           {/* lc-chip-zeile (LM-044/N1): Aktions-Form an der ROLLE (span[role=button]),
               gleiche Grammatik wie in der Karten-Ansicht und der Filterleiste (§23).
               C3 (5.9.2026, R6-C): `z-10` → `z-sticky` (Schichtungs-Skala,
               index.css), Wert unverändert (10), nur benannt. */}
+          {/* ── GB-12/13 (W2·24, Befunde G12/G13, 7.9.2026) · KLARTEXT STATT KASTEN
+              GEMESSEN: 12 gerahmte Chips im ersten Bild von /rechtsprechung, im
+              DOM 847 `span.lc-chip` + 392 `span.lc-badge` (davon 53 versale
+              Sprach-Etiketten «fr»/«it»). Den Rahmen setzt die Chip-Grammatik
+              der KOPF-Metazeilen (`.lc-chip-zeile`, index.css): dort stehen drei
+              Element-Arten nebeneinander und die Form muss sie trennen (LM-044)
+              — in der Trefferliste steht nur EINE Art, 847-fach; dort trennt die
+              Form nichts, sie rahmt nur (F0.6 «Linien statt Flächen»).
+              `lc-normzeile` steht NEBEN `lc-chip-zeile`, nicht statt ihr: die
+              Link-/Knopf-Grammatik bleibt gültig, GB-12 nimmt ihr nur den
+              Kasten (Rezept + Kontrastnachweis: index.css §GB-12).
+              Das `uppercase` am Sprach-Badge ist ersatzlos weg (F0.7); die
+              Regel steht seit GB-13 EINMAL an `.lc-badge`, der volle Sprachname
+              bleibt im `title` (§8). */}
           {e.normKeys.length > 0 && (
-            <span className="lc-chip-zeile relative z-sticky flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span className="lc-chip-zeile lc-normzeile relative z-sticky flex flex-wrap items-center gap-x-2 gap-y-1">
               {e.normKeys.slice(0, 5).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
               {/* LM-049 (gleiche Formensprache wie die Karte): Zähler, nicht
                   Bedienelement — «+3 weitere» statt nackter «+3». */}

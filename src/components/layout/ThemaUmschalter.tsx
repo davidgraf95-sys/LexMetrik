@@ -51,7 +51,9 @@ export function ThemaUmschalter() {
       onClick={umschalten}
       aria-label={`Farbschema: ${meta.label} — weiterschalten`}
       title={meta.label}
-      className="inline-flex items-center justify-center h-11 w-11 rounded-lg border border-line bg-surface text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors"
+      /* GB-15 (W2·24): eine Knopf-Form für alle Griffe des Titelblatts
+         (Herleitung an `layout/Topbar`, Rezept index.css §GB-15). */
+      className="lc-topbar-griff"
     >
       <span aria-hidden className="lc-griff-glyph">{meta.icon}</span>
     </button>

@@ -126,13 +126,23 @@ export function VorlagenWizardRahmen({
           {norms.map((n) => (
             <NormChip key={n.label} artikel={n.label} hrefOverride={fedlexLokalisiert(n.url, locale)} />
           ))}
-          {/* `data-formgate`: Tor-Griff (qsui-hierarchie I10). Das Badge trägt die
-              Formvorschrift der Vorlage («Eigenhändig abzuschreiben», «Papierform ·
-              eigenhändig unterzeichnen») und ist damit die §8-Ansage, die NICHT
-              hinter der Eingabestrecke stehen darf. Es steht im Kopf, also im
-              ersten Viewport — das Tor nagelt genau das fest. */}
-          <span data-formgate className="lc-badge lc-badge-warn">{badge}</span>
         </div>
+        {/* ── GB-21 (W2·24, Befund G21, 7.9.2026) · DIE FORMVORSCHRIFT IST EINE ZEILE
+            GEMESSEN: `span.lc-badge.lc-badge-warn` «Zu unterzeichnen» stand als
+            EINZIGER farbiger Kasten mitten in einer Reihe unterstrichener
+            Normlinks — zwei Grammatiken (Link-Chip und gefüllter Warn-Kasten)
+            in einer Zeile, und der Kasten gewann optisch gegen die Norm-Anker,
+            die die Zeile eigentlich führt.
+            NEU: eigene Zeile UNTER der Linkreihe. Was NICHT wandert, ist die
+            §8-Aussage selbst: `data-formgate` (Tor-Griff qsui-hierarchie I10)
+            und die Lage IM KOPF, also im ersten Viewport — die Formvorschrift
+            darf nie hinter der Eingabestrecke stehen. Das Tor misst die
+            Sichtbarkeit im ersten Bild, nicht die Zeilennummer; die Ansage
+            bleibt darum vollständig gedeckt.
+            Die warn-FÜLLUNG bleibt: sie trägt Bedeutung, nicht Dekor (der
+            Block-Kommentar an `.lc-badge-warn` hält das ausdrücklich fest) —
+            gewandert ist der ORT, nicht der Ton. */}
+        <p><span data-formgate className="lc-badge lc-badge-warn">{badge}</span></p>
         {/* V6 (W2·10-UI-NAV): Weg zum passenden Rechner — «Frist zuerst
             rechnen». Rendert nur, wenn die Registry für DIESE Vorlage eine
             Rechner-Kante führt; sonst gibt die Komponente null zurück und der
