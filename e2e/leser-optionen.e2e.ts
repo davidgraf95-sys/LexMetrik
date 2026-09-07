@@ -1,6 +1,6 @@
 // @shard-gruppe: 5
 import { test, expect, type Page } from '@playwright/test';
-import { ANSICHT_PANEL, RECHTSPRECHUNG_SCHALTER_NAME, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
+import { ANSICHT_PANEL, RECHTSPRECHUNG_SCHALTER_NAME, SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
 
 // W2·5d G2a — Leser-Options-Leiste: reine data-*-/CSS-Toggles am <html>,
 // persistent (localStorage) + Pre-Paint (main.tsx, CSP-konform ohne
@@ -77,7 +77,10 @@ async function ansichtOeffnen(page: Page): Promise<void> {
   await expect(page.locator(ANSICHT_PANEL).first()).toBeVisible();
 }
 
-test('Options-Leiste: drei role=switch (Fussnoten/Änderungsvermerke/Rechtsprechung anzeigen) — «Entscheide» via Panel, «Linien» und «Verweise» entfallen', async ({ page }) => {
+// D4 (7.9.2026): die drei hiessen bis dahin `role=switch`. Seit das Menü
+// `role="menu"` trägt, verlangt ARIA dort `menuitemcheckbox` — dieselbe
+// Auskunft, derselbe `aria-checked`, derselbe Name (`SCHALTER_ROLLE`).
+test('Options-Leiste: drei Schalter (Fussnoten/Änderungsvermerke/Rechtsprechung anzeigen) — «Entscheide» via Panel, «Linien» und «Verweise» entfallen', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator(ANSICHT_PANEL).first();
@@ -99,13 +102,13 @@ test('Options-Leiste: drei role=switch (Fussnoten/Änderungsvermerke/Rechtsprech
   // weniger») ist unverändert. Herleitung: `v3/LeserAnsichtV3.tsx`.
   // Ä115/Ä116: zwei der drei Namen sind in V3 gewechselt (helpers/leserBeschriftung).
   for (const name of [/^Fussnoten/, VERMERKE_SCHALTER_NAME, RECHTSPRECHUNG_SCHALTER_NAME]) {
-    await expect(gruppe.getByRole('switch', { name })).toHaveAttribute('aria-checked', 'true');
+    await expect(gruppe.getByRole(SCHALTER_ROLLE, { name })).toHaveAttribute('aria-checked', 'true');
   }
-  await expect(gruppe.getByRole('switch')).toHaveCount(3);
-  await expect(gruppe.getByRole('switch', { name: 'Linien' })).toHaveCount(0);
+  await expect(gruppe.getByRole(SCHALTER_ROLLE)).toHaveCount(3);
+  await expect(gruppe.getByRole(SCHALTER_ROLLE, { name: 'Linien' })).toHaveCount(0);
   // Negativ-Sonde gegen die Rückkehr: eine entfernte Steuerung, die niemand
   // vermisst, schleicht sich beim nächsten Merge sonst wieder ein.
-  await expect(gruppe.getByRole('switch', { name: 'Verweise' })).toHaveCount(0);
+  await expect(gruppe.getByRole(SCHALTER_ROLLE, { name: 'Verweise' })).toHaveCount(0);
   const html = page.locator('html');
   // Kein `data-linien` mehr am <html> — das Attribut existierte nur für die Linie.
   await expect(html).not.toHaveAttribute('data-linien', /.*/);
@@ -148,14 +151,14 @@ test('Ä69: kein Hinweis mehr am Vermerke-Schalter — er hängt in keiner Stell
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator(ANSICHT_PANEL).first();
-  const vermerke = gruppe.getByRole('switch', { name: VERMERKE_SCHALTER_NAME });
+  const vermerke = gruppe.getByRole(SCHALTER_ROLLE, { name: VERMERKE_SCHALTER_NAME });
   await expect(vermerke).toHaveCount(1);
 
   // (1) In BEIDEN Stellungen des Fussnoten-Schalters keine Hinweiszeile — und
   // auch kein verwaistes `aria-describedby`, das auf ein leeres Element zeigt.
   for (const stellung of ['an', 'aus'] as const) {
     if (stellung === 'aus') {
-      await gruppe.getByRole('switch', { name: 'Fussnoten' }).click();
+      await gruppe.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
     }
     await expect(page.locator('html')).toHaveAttribute('data-fussnoten', stellung);
     await expect(gruppe.getByText(ALT_HINWEIS)).toHaveCount(0);
@@ -209,7 +212,7 @@ test('Fussnoten-Toggle: AN sichtbar → AUS VERSCHWINDEN (A1, David 5.7.2026), T
 
   // NEGATIV: «Fussnoten» AUS → Marker + Apparat visuell WEG (display:none), aber
   // der Marker bleibt im DOM (Text abfragbar), niemals gelöscht.
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
+  await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
   await expect(marker).toBeHidden();
   expect(await marker.evaluate((el) => getComputedStyle(el).display)).toBe('none');
@@ -218,7 +221,7 @@ test('Fussnoten-Toggle: AN sichtbar → AUS VERSCHWINDEN (A1, David 5.7.2026), T
   await expect(page.locator('.lc-leser [data-fn-apparat]').first()).toBeHidden();
 
   // POSITIV zurück: «Fussnoten» AN → Marker wieder sichtbar (Wiederherstellung).
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
+  await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'an');
   await expect(marker).toBeVisible();
 

@@ -42,6 +42,33 @@ R13-Stand **12 von 12 grün**.
 15 Reiter @1440, aktiv #14 → #15: Fenster `5/10/15` → `6/10/15` — zusammenhängend,
 um genau einen Platz gerückt («ArG» bleibt).
 
+### Nachzug G23 (7.9.2026) — der Seed war nicht kanonisch, die Zahlen darum zu klein
+
+Die Zeile darüber und die Tabelle davor bleiben als Befund vom 6.9.2026 stehen
+(§0 Ziff. 2b). Sie sind mit einem Seed gemessen, der fünf Erlass-Schlüssel in
+gemischter Schreibung trug — `StGB` · `SchKG` · `ArG` · `StPO` · `VwVG` —,
+während das Register (`dist/normtext/register.json`, 1'576 Erlasse) sie
+ausschliesslich versal führt. Die ROUTE löst beide Schreibungen auf (nachgemessen
+7.9.2026: alle zehn Adressen zeigen denselben Erlass), die Reiter-BESCHRIFTUNG
+nicht — sie schlägt den Schlüssel exakt nach. Gemessen am Vorstand `72b39d50c`,
+15 Reiter @1440, aktiv KKG: **drei der neun sichtbaren Reiter** hiessen «Gesetz
+nicht gefunden» (Positionen 8/10/12 = ArG · StPO · VwVG; StGB und SchKG lagen
+ausserhalb des Fensters, also fünf im Speicher). Weil diese Ersatz-Aufschrift
+rund dreimal so breit ist wie ein Kürzel, mass die Sonde damit nicht die Leiste,
+sondern ihren eigenen Seed.
+
+Mit kanonischem Seed, sonst unveränderten Assertions, @1440 hell:
+
+| Lage | `scrollW / clientW` | `data-reiter-fenster` | sichtbar | «Gesetz nicht gefunden» |
+|---|---|---|---|---|
+| 15 Reiter, aktiv #14 (KKG) | 1275 / 1275 | `2/13/15` | **13 von 15** (vorher 9) | 0 (vorher 3) |
+| dann aktiv #15 (KVG) | 1275 / 1275 | `3/12/15` | 12 von 15 | 0 |
+
+Letzte Reiterkante 1275 ≤ 1275 — kein Anschnitt. Das Fenster rückt weiterhin um
+genau einen Platz und bleibt zusammenhängend (`ARG` bleibt im Streifen); die
+R13-3-Zusage ist unberührt, nur schärfer belegt. Screen:
+`r6g-reiter-1440-kanonisch.jpg`, Protokoll `R6G-LESER.md`.
+
 ## Zwei Fallen, die der Bau selbst erzeugt hat (und ihr Wurzel-Fix)
 
 1. **Rückkopplung Knopf ↔ Überlauf.** Der «+N»-Knopf erschien erst BEI Überlauf,

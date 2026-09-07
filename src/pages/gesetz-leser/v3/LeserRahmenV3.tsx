@@ -253,9 +253,9 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
   // wieder nur ein und schliesst nichts mehr (`schieneHoltPlatz` gestrichen).
   const schieneAuf = () => setzeTocOffen(true);
   // ☰ nur, wenn die Gliederung gerade NICHT als Spalte steht — sonst ein Knopf
-  // ohne Wirkung (Design-Grundlage Kap. 6, Icon-Flut-Verbot).
-  // Ä90: dieselbe Bauform wie ⚖ und «Ansicht» (`kopfStufen.kopfGriffKlassen`) —
-  // bis 17.8. war dies der einzige NACKTE Griff der Zeile.
+  // ohne Wirkung (Kap. 6, Icon-Flut-Verbot). Ä90: dieselbe Bauform wie ⚖ und
+  // «Ansicht»; bis 17.8. der einzige NACKTE Griff der Zeile, bis G14 (7.9.2026)
+  // @390 der einzige ganz OHNE Wort — Messreihe in `./LeserPanelOeffner`.
   const gliederungKnopf = hatLeiste && !zweiSpalten && !schieneSteht
     ? (
       <button type="button" data-v3-gliederung-auf
@@ -263,14 +263,13 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
         onClick={() => { if (umgebung.istXl) setzeTocOffen(true); else m.setTocAuf((v) => !v); }}
         // ── Ä111 (18.8.2026) · ZWEI ☰, ZWEI ZIELE ──────────────────────────
         // GEMESSEN @390: zwei ☰ in derselben Kopfzone — links das der App-Topbar
-        // («Navigation öffnen»), rechts dieses. Der Name sagte nur, WAS
-        // dahinterliegt, nicht was der Klick tut; ein Screenreader las an beiden
-        // ein Substantiv. JETZT nennt er die Handlung, wortgleich mit
-        // «Gliederung ausblenden» (`LeserLeseZeile`) und «Gliederung einblenden»
-        // (Schiene). Die GLYPHE bleibt: ein zweites Zeichen wäre eine
-        // Entscheidung über das App-Icon-Set (`Icon.tsx`) und damit H5.
-        title="Gliederung öffnen" aria-label="Gliederung öffnen" className={kopfGriffKlassen(stufe === 'mini')}>
-        <span aria-hidden className={kopfGlypheKlassen(stufe === 'mini')}>☰</span>
+        // («Navigation öffnen»), rechts dieses; beide Namen waren Substantive,
+        // keiner sagte, was der Klick tut. JETZT nennt er die Handlung,
+        // wortgleich mit «Gliederung ausblenden»/«einblenden» (`LeserLeseZeile`,
+        // Schiene). Die Glyphe blieb damals — ein zweites ZEICHEN wäre eine
+        // Icon-Set-Entscheidung und damit H5; seit G14 weicht sie @390 dem WORT.
+        title="Gliederung öffnen" aria-label="Gliederung öffnen" className={`${kopfGriffKlassen(stufe === 'mini')} ${stufe === 'mini' ? 'px-1.5' : ''}`}>
+        {stufe === 'mini' ? <span className="whitespace-nowrap">Gliederung</span> : <span aria-hidden className={kopfGlypheKlassen(false)}>☰</span>}
       </button>
     )
     : undefined;

@@ -1,6 +1,6 @@
 // @shard-gruppe: 2
 import { test, expect, type Page } from '@playwright/test';
-import { ANSICHT_PANEL, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
+import { ANSICHT_PANEL, SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
 
 // ══ WELCHE HÜLLE PRÜFT DIESE DATEI? (Nachzug 17.8.2026, Arch-Prüfer 7;
 //    KORRIGIERT 21.8.2026 nach dem H4-Flip) ═══════════════════════════════════
@@ -370,7 +370,7 @@ test.describe('S2 · Schalter-Rundlauf ist verlustfrei (A1-konform)', () => {
       await page.getByRole('button', { name: 'Ansicht' }).first().click();
       const gruppe = page.locator(ANSICHT_PANEL).first();
       await expect(gruppe).toBeVisible();
-      await gruppe.getByRole('switch', { name }).click();
+      await gruppe.getByRole(SCHALTER_ROLLE, { name }).click();
       await page.keyboard.press('Escape');
       await page.waitForTimeout(150);
     };
