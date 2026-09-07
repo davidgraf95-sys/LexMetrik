@@ -31,6 +31,7 @@ import { suchFeldName, suchPlatzhalter } from './erlassAnsicht';
 
 export function SuchSprungFeld({
   wert, setzeWert, loeseArtikel, onSprung, feldRef, onVor, onZurueck, hatTreffer = false,
+  onBestaetigt,
   // Ä126: die Vorgaben sind KEINE dritten Literale, sondern dieselbe Quelle
   // ohne Erlass-Kürzel (§5) — sonst trüge ein Aufrufer ohne Erlass die Wörter
   // der Ist-Hülle («Im Gesetz suchen») mitten in die V3-Fläche.
@@ -61,6 +62,18 @@ export function SuchSprungFeld({
   /** Gibt es überhaupt Fundstellen? Ohne sie tun ↑↓ und Enter nichts — und das
    *  Feld verspricht sie dann auch nicht (§8). */
   hatTreffer?: boolean;
+  /** ── D38 (7.9.2026) · ENTER IST DIE BESTÄTIGUNG, NICHT NUR EIN SCHRITT ────
+   *  Seit D38 liegt die Trefferliste über der Lesespalte, solange im Feld etwas
+   *  steht (`./LeserTrefferSpalte`). Damit gibt es eine Frage, die es vorher
+   *  nicht gab: WOMIT verlässt man die Liste und kommt beim Text an?
+   *  ↑↓ können es nicht sein — sie durchmustern die Treffer, und wer die Liste
+   *  bei jedem Schritt verlöre, könnte sie gar nicht durchmustern. Enter kann es:
+   *  die Taste sagt in jeder Oberfläche «das da, nimm es», und sie tut hier
+   *  ohnehin schon das Zielführende (Artikel-Sprung bzw. nächste Fundstelle).
+   *  `onBestaetigt` läuft NACH beiden Enter-Zweigen und in beiden, denn beide
+   *  sind eine Wahl: «Art. 429» meint diesen Artikel, ↵ ohne Token die nächste
+   *  Fundstelle. Ungesetzt (Sonden, andere Aufrufer) ändert sich nichts. */
+  onBestaetigt?: () => void;
   /** ── A2 (H2b-Nachzug) · WEM GEHÖRT `Esc`? ─────────────────────────────────
    *  Vorgabe `true` = das Ist-Verhalten von Pos. 14: Esc leert das Feld, springt
    *  nicht, und hält den Tastendruck bei sich (`stopPropagation`).
@@ -138,6 +151,10 @@ export function SuchSprungFeld({
               // immer das, was das Feld gerade anbietet, und nie nichts.
               if (token) onSprung(token);
               else if (hatTreffer) onVor?.();
+              // D38: der Sprung ist gewählt ⇒ die Trefferliste gibt die
+              // Lesefläche frei. Auch OHNE Token und ohne Treffer: sonst bliebe
+              // eine Liste stehen, die der Leser gerade wegbestätigt hat.
+              onBestaetigt?.();
             }
           }}
           placeholder={platzhalter}

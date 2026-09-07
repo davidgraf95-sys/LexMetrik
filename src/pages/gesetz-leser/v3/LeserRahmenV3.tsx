@@ -11,11 +11,9 @@ import { LadeAnzeige, FruehAnsicht } from '../inhalt-ansichten';
 import { WeiterlesenChip } from '../parts/WeiterlesenChip';
 import { LeserTastatur } from '../parts/LeserTastatur';
 import { LeserKopf } from './LeserKopf';
-import { LeserSeitenleiste } from './LeserSeitenleiste';
-import { LeserGliederung } from './LeserGliederung';
+import { gliederungsSheetAufbau, leisteAufbau } from './leisteAufbau';
 import { LeserLesespalte } from './LeserLesespalte';
 import { LeserLeseZeile } from './LeserLeseZeile';
-import { LeserLeisteSheet } from './LeserLeisteSheet';
 import { LeserErlassKopfZone } from './LeserErlassKopfZone';
 import { LeserPanelZone } from './LeserPanelZone';
 import { PanelZaehler } from './LeserPanelOeffner';
@@ -24,7 +22,8 @@ import { useBezuegeZaehler } from '../bezuegeZaehler';
 import { SuchSprungFeld } from './SuchSprungFeld';
 import { suchZoneAufbau } from './suchZoneAufbau';
 import { SchwebeMeldung } from '../../../components/ui/SchwebeMeldung';
-import { useTrefferBlatt } from './useTrefferBlatt';
+import { useTrefferSicht } from './useTrefferSicht';
+import { LeserTrefferSpalte } from './LeserTrefferSpalte';
 import { useKopfAnspruch } from './useKopfAnspruch';
 import { useStickAusgleich } from './useStickAusgleich';
 import { leserCssVariablen } from './leserGeometrie';
@@ -127,9 +126,11 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
   // bzw. offenes Blatt), es ist also nichts zu öffnen (§17 Rückbau).
   const suchFeldRef = useRef<HTMLInputElement>(null);
   useSuchSprungKuerzel({ feldRef: suchFeldRef, imSekundaerenPane: umgebung.istSekundaer });
-  // Ä76: Offen-Zustand des Treffer-Blattes (Herleitung in `./LeserTrefferBlatt`).
-  // Vor den frühen Rückgaben — Hooks laufen nicht bedingt.
-  const trefferBlatt = useTrefferBlatt(m.sucheBegriff);
+  // D38: Liegt die Trefferliste über der Lesespalte? (`./LeserTrefferSpalte`.)
+  // Vor den frühen Rückgaben — Hooks laufen nicht bedingt. Schlüssel ist der
+  // ROHE Feldwert: wer nach dem Wegschalten weitertippt, bekommt sie sofort
+  // zurück, nicht erst nach der Entprellung.
+  const trefferSicht = useTrefferSicht(m.suche.trim());
 
   // Frühe Ansichten (Fehlseite · Currency-Pin · pdf-embed · nur-live-link) und
   // der Ladezustand — dieselben Bausteine wie die Ist-Hülle (§5).
@@ -182,40 +183,32 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
       // ↑↓-Knöpfe im Kopf der Trefferliste — EIN Weg, zwei Bedienarten (§5).
       hatTreffer={m.fundstellen > 0}
       onVor={() => m.springeZuFundstelle?.(1)}
-      onZurueck={() => m.springeZuFundstelle?.(-1)} />
-  );
-
-  const leiste = (imSheet: boolean) => (
-    <LeserSeitenleiste
-      // Ä32: im TREFFER-Blatt keine Ankunfts-Übersicht über der Trefferliste.
-      uebersicht={imSheet && m.sucheAktiv ? undefined : <LeserUebersicht m={m} bestimmungsWort={bestimmungsWort} />}
-      // D28: kein Feld in der Leiste (`./SuchZone`); im Sheet: `sprungFeld` (A2).
-      baum={<LeserGliederung m={m} bestimmungsWort={bestimmungsWort} />}
-      baumKnoepfe={!m.sucheAktiv} // Ä32: «alles auf/zu» nur zum Baum
-      // Ä10: im Sheet benennt der Sheet-Kopf die Zone (sonst «Gliederung» doppelt).
-      baumTitel={imSheet ? undefined : (m.sucheAktiv ? 'Treffer' : 'Gliederung')}
-      onAlleAuf={() => m.setTocBaum((o) => ({ ...o, ...Object.fromEntries(m.alleKnotenIds.map((id) => [id, true])) }))}
-      onAlleZu={() => m.setTocBaum((o) => ({ ...o, ...Object.fromEntries(m.alleKnotenIds.map((id) => [id, false])) }))}
-      alleOffen={m.alleKnotenIds.length > 0 && m.alleKnotenIds.every((id) => m.tocBaum[id] === true)}
-      onAnfang={m.zumAnfang} />
+      onZurueck={() => m.springeZuFundstelle?.(-1)}
+      // D38: ↵ ist die Wahl — die Liste gibt die Lesefläche frei (`./SuchSprungFeld`).
+      onBestaetigt={trefferSicht.schliesse} />
   );
 
   // D28 (6.9.2026): der Kopf-Block trägt das Feld IMMER — bis hierher stand
   // `&& !zweiSpalten`, und dieses Hin-und-Her war der Mangel (`./SuchZone`).
   const suchZoneKlebt = hatLeiste;
+  // D38 · ZWEI FRAGEN, ZWEI NAMEN (dieselbe Trennung wie W2·24-F): `feldGefuellt`
+  // ist GEOMETRIE und sofort — daran hängen Zonenhöhe und Erscheinen der Liste,
+  // beides eingabe-nah (Messreihe in `./leserGeometrie`, `zoneHoch`).
+  // `m.sucheAktiv` ist die entprellte DATENLAGE und sagt nur, ob in der Liste
+  // schon Treffer oder noch «sucht …» stehen.
+  const feldGefuellt = m.suche.trim() !== '';
+  const trefferSteht = hatLeiste && feldGefuellt && trefferSicht.offen;
   // Zusammensetzung in `./suchZoneAufbau` (§6.6-Auslagerung 17.8.2026); der
   // Rahmen sagt, OB die Zone klebt und WAS darin steht.
   const suchZone = suchZoneAufbau({
-    klebt: suchZoneKlebt, istXl: umgebung.istXl, sucheAktiv: m.sucheAktiv,
-    // `blattOffen` = Prop-Name von `suchZoneAufbau`; Quelle davor umbenannt.
-    blattOffen: gliederungsSheetOffen, suchFeld, bestimmungsWort,
-    liste: <LeserGliederung m={m} bestimmungsWort={bestimmungsWort} />,
+    klebt: suchZoneKlebt, sucheAktiv: m.sucheAktiv,
+    feldImSheet: gliederungsSheetOffen, suchFeld, bestimmungsWort,
     bestimmungen: m.treffer.length, fundstellen: m.fundstellen,
-    trefferBlatt, onSheet: () => m.setTocAuf(true),
+    onListe: trefferSicht.oeffne,
     // D28 · ‹ ›: dieselben Callbacks wie ↑↓ im Feld (§5, eine Folge).
     onVor: () => m.springeZuFundstelle?.(1),
     onZurueck: () => m.springeZuFundstelle?.(-1),
-    listeSteht: zweiSpalten, // D28-Nachzug, Herleitung in `./SuchZone`
+    listeSteht: trefferSteht, // D38, Herleitung in `./SuchZone`
   });
   // N4: die Zone zieht genau dann in die Kopfzeile, wenn links eine Spur steht
   // — nur dort hat das Feld eine Kante (D32) und daneben Platz für die Griffe
@@ -286,8 +279,11 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
       style={{
         ...leserCssVariablen({
           stufe, vollflaechig: !umgebung.imPane, suchZoneKlebt,
-          // D28 + W2·24-F: nur bei stehender Zähler-Zeile, roher Feldwert (`zoneHoch`).
-          zoneHoch: m.suche.trim() !== '' && !zweiSpalten,
+          // W2·24-F: roher Feldwert (`zoneHoch`). D38 strich `&& !zweiSpalten`:
+          // die Zone ist hoch, sobald im Feld etwas steht — auch wenn die
+          // Zähler-Zeile schweigt, weil die Liste dasteht. RESERVIERT statt
+          // gefüllt, sonst spränge `--nt-stick` bei jedem Wechsel um 24 px.
+          zoneHoch: feldGefuellt,
           suchInZeile, spurVersatzRem: bild.spurVersatzRem,
         }),
         // D33: Rahmen-Aufweitung und dynamischer Lesemass-Deckel sind mit der
@@ -321,20 +317,12 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
         suchZone={suchZone} />
 
       {/* Handy/schmales Pane: die GANZE Seitenleiste als Bottom-Sheet hinter ☰
-          (Kap. 4b). Wiederverwendet wird die bestehende Sheet-Anatomie
-          (Dialog-Rolle, Fokusfang, Esc, Portal in die Pane-Overlay-Schicht) —
-          §5, kein zweiter Overlay-Mechanismus. Portal-Vertrag und Pane-Rolle:
-          `./LeserLeisteSheet` (H3-Auslagerung = B10-Auflage des H2b-Nachzugs,
+          (Kap. 4b). Aufbau und Herleitung: `./leisteAufbau` (D38-Auslagerung,
           §6.6); der Rahmen entscheidet OB, WOHIN und WAS darin steht. */}
-      {gliederungsSheetOffen && (
-        <LeserLeisteSheet ziel={overlayZiel} paneRolle={paneRolle}
-          sheetRef={m.refs.tocDrawerRef} onSchliessen={() => m.setTocAuf(false)}
-          pfad={m.siePfad} aktArtikelLabel={m.siePfadArtikel}
-          // A2/Ä32: DASSELBE Feld zuoberst im Blatt (Fokus-Falle, WCAG 2.4.3;
-          // die Such-Zone gibt es solange her) · «Sie sind hier» nur zum Baum.
-          sprungFeld={suchFeld} feldZuoberst ortAnzeigen={!m.sucheAktiv}
-          titel={m.sucheAktiv ? 'Treffer' : 'Gliederung'} baum={leiste(true)} />
-      )}
+      {gliederungsSheetOffen && gliederungsSheetAufbau({
+        m, bestimmungsWort, ziel: overlayZiel, paneRolle,
+        sheetRef: m.refs.tocDrawerRef, suchFeld,
+      })}
 
       {/* Die Lese-Zeile — die drei Spuren nebeneinander (`./LeserLeseZeile`,
           Auslagerung H4-Nachzug 18.8.2026, §6.6). Der Rahmen entscheidet ihre
@@ -342,19 +330,26 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
           Spuren stehen, steht dort. */}
       <LeserLeseZeile bild={bild} vollflaechig={!umgebung.imPane}
         onSchieneAuf={schieneAuf}
-        leiste={leiste(false)}
+        leiste={leisteAufbau(m, bestimmungsWort, false)}
         zelle={<>
           {/* Der geteilte Erlass-Kopf (Kap. 4e) — Prop-Weitergabe in
               `./LeserErlassKopfZone` (H3-Auslagerung, §6.6). */}
           <LeserErlassKopfZone m={m} erlass={erlass} artikelAnzahl={eintraege.length}
             bestimmungsWort={bestimmungsWort} />
           {m.kopf && <ErlassKopfBlock kopf={m.kopf} intern={m.internRefs} />}
-          {/* Ä76: der `trefferListe`-Prop ist gestrichen — er traf die
-              EINGEKLAPPTE Spalte statt des angekündigten Rand-Falls, und der ist
-              unerreichbar. Herleitung samt Messreihe steht am Bauteil, das sie
-              betrifft (`./LeserLesespalte`, `./LeserTrefferBlatt`). */}
+          {/* D38: der Text bleibt IMMER gerendert, die Trefferliste legt sich
+              darüber (`trefferSpalte` unten) — Warum: `./LeserTrefferSpalte`. */}
           <LeserLesespalte m={m} bezuege={bezuege} weckeBezuege={rohPanel.weckeDaten} bezuegeGeweckt={rohPanel.jeGeoeffnet} />
         </>}
+        // D38 · Trefferliste über der Lesespalte — `absolute`, ohne Platz im
+        // Fluss; der Rahmen sagt nur, OB sie da ist (`./LeserTrefferSpalte`).
+        trefferSpalte={trefferSteht
+          ? (
+            <LeserTrefferSpalte m={m} bestimmungsWort={bestimmungsWort}
+              vollflaechig={!umgebung.imPane}
+              onSprung={trefferSicht.schliesse} onSchliessen={trefferSicht.schliesse} />
+          )
+          : null}
         // H3 · Panel/Lasche. EIN Aufrufpunkt für beide Modi: im Spalten-Modus
         // füllt die Zone die dritte Grid-Spur, im Blatt-Modus hat sie keine Box
         // und liegt ausserhalb des Flusses.
