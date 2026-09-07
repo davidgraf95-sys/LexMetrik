@@ -175,7 +175,10 @@ describe('§7 — PaneKopf.stand: erreichbar, darum nicht gestrichen', () => {
   it('(c) die Shell reicht dann `nurSteuerung: undefined` UND einen Stand durch', () => {
     const quelle = readFileSync('src/components/layout/Shell.tsx', 'utf8');
     expect(quelle).toContain('nurSteuerung={kopfDaten?.kopfzeileSelbst}');
-    expect(quelle).toContain('<PaneKopf {...titelVon(pathname)}');
+    // L6 (7.9.2026): das Argument ist seither `pathname + search` — die
+    // Reiter-Identität, die `PaneName` braucht (`?r=2`). Für `stand` ändert das
+    // nichts (`erlassVonPfad` schneidet die Query ab); die Kette (a)–(d) bleibt.
+    expect(quelle).toContain('<PaneKopf {...titelVon(pathname + search)}');
   });
 
   it('(d) bei fehlendem `nurSteuerung` STEHT der Stand in der Leiste', () => {
