@@ -16,7 +16,7 @@ import { usePaneDnd } from './usePaneDnd';
 import { PaneProvider } from './PaneKontext';
 import { InhaltsKopf } from './InhaltsKopf';
 import { InhaltsKopfMeldeProvider, istInhaltsPfad, kopfVonPfad, type KopfDaten } from './InhaltsKopfKontext';
-import { tabSchluessel, merkeTab, ersetzeTab, istReiterPfad } from '../../lib/tabs';
+import { tabSchluessel, merkeTab, ersetzeTab } from '../../lib/tabs';
 import { PaneName } from './PaneName';
 import { verlaufLabel, erlassVonPfad, gesetzPfad, entscheidPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { useDialogFokus } from './useDialogFokus';
@@ -325,7 +325,10 @@ export function Shell({ children }: { children: ReactNode }) {
     for (const seed of pane.sekundaer) {
       gesehen.add(seed);
       const pfad = liveLocs[seed] ?? seed;
-      if (!istReiterPfad(pfad)) continue;
+      // R14b (7.9.2026): hier stand `if (!istReiterPfad(pfad)) continue;` —
+      // ein Fenster auf einer Meta-Route bekam keinen Reiter. Die Ausnahme ist
+      // ersatzlos weg (`lib/tabs.ts`, Block «R14b»); jedes Fenster führt jetzt
+      // seinen Reiter, egal was darin steht.
       const vorher = paneReiter.current[seed];
       // `merkeTab` ist idempotent (`gleich()`), aber der Vergleich hier spart
       // schon den Speicher-Lesevorgang bei jedem Shell-Render.

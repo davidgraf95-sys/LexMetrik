@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useLocation, useNavigationType } from 'react-router-dom';
-import { ersetzeTab, istReiterPfad, merkeTab } from '../lib/tabs';
+import { ersetzeTab, merkeTab } from '../lib/tabs';
 import { labelAusMeta } from '../lib/verlaufLabel';
 import { kanonisierePfad } from '../lib/normtext/erlassAdresse';
 
@@ -8,9 +8,10 @@ import { kanonisierePfad } from '../lib/normtext/erlassAdresse';
 // Inhalts-Item (Auftrag David) — ein bestimmter Rechner/Engine, ein bestimmtes
 // Gesetz, eine bestimmte Vorlage oder ein konkreter Entscheid (zweite Pfadebene
 // unter einer Inhalts-Rubrik). Seit D7 tragen auch die fünf Bereichs-Übersichten
-// einen Reiter, seit R14 (7.9.2026) die Sammlung «/»; ohne Reiter bleiben allein
-// die Info-/Meta-Seiten (/ueber, /methodik, /einstellungen, /kontakt).
-// Reines localStorage-Schreiben (§3).
+// einen Reiter, seit R14 (7.9.2026) die Sammlung «/»; ohne Reiter blieben bis
+// R14b allein die Info-/Meta-Seiten (/ueber, /methodik, /einstellungen,
+// /kontakt) — seit R14b trägt JEDE Route einen Reiter (Herleitung in
+// `lib/tabs.ts`, Block «R14b»). Reines localStorage-Schreiben (§3).
 //
 // ── W2·24 §5a Ziff. 3 (R2-NACHZUG) · NAVIGATION ERSETZT, SIE HÄUFT NICHT AN ──
 // Bis 6.9.2026 hängte JEDE Navigation einen Reiter an (`merkeTab`). GEMESSEN
@@ -38,6 +39,13 @@ import { kanonisierePfad } from '../lib/normtext/erlassAdresse';
 //     §1.4). Damit erzeugt der Aufrufer endlich den Fall 3, den der Vertrag von
 //     `lib/tabs.ersetzeTab` seit dem R2-Nachzug beschreibt.
 //
+// ── R14b (Nachzug 7.9.2026) · DER ZWEITE SATZ IST WEGGEFALLEN ──────────────
+// Der Absatz darüber bleibt als datierter Beleg (§0 Ziff. 2b): er galt bis
+// `8d398874e`. Seit R14b gibt es keine Nicht-Reiter-Route mehr, also auch
+// keinen Zweig, der den aktiven Reiter als Herkunft wegwirft — die Meta-Seiten
+// ERSETZEN den aktiven Reiter wie jedes andere Dokument. Der Fall 3 von
+// `ersetzeTab` («kein aktiver Reiter») bleibt erreichbar: er ist der Kaltstart.
+//
 // ── D7 (David 6.9.2026) · DIE BEREICHS-ÜBERSICHTEN ZÄHLEN MIT ───────────────
 // «achte darauf dass der reiter bei gesetz mitzählt». WELCHER Pfad einen Reiter
 // trägt, entscheidet seit diesem Nachzug `lib/tabs.ts` (`istReiterPfad`) —
@@ -63,13 +71,8 @@ export function TabTracker() {
   // Reiter aktualisiert bzw. angehängt — die Persistenz bleibt unberührt.
   const aktiv = useRef<string | null>(null);
   useEffect(() => {
-    if (!istReiterPfad(pathname)) {
-      // R14: Meta-Routen tragen keinen Reiter — und lassen darum auch keinen
-      // als Herkunft zurück (Herleitung oben). Bis R14 stand hier der
-      // D19-Sonderfall für den leeren «+»-Reiter; er ist ersatzlos weg.
-      aktiv.current = null;
-      return;
-    }
+    // R14b: hier stand der Meta-Zweig (`aktiv.current = null`). Er ist
+    // ersatzlos weg — jede Route läuft jetzt denselben Weg.
     // pathname + ?search: der Instanz-Diskriminator ?r=<n> (dasselbe Gesetz
     // mehrfach offen, Auftrag David) gehört zur Reiter-Identität; merkeTab/
     // tabSchluessel ignorieren übrige Query-Parameter für die Dedup-Identität.
@@ -110,11 +113,12 @@ export function TabTracker() {
  *  erreichbar, und weil die Reiter im localStorage derselben Herkunft liegen,
  *  sieht ein zweites Browser-Fenster dieselbe Liste.
  *
- *  Nur Reiter-Ziele (dieselbe Regel wie oben, `istReiterPfad`): ein Mittelklick
- *  auf «Über uns» hat in der App kein Reiter-Ziel und bleibt darum beim
- *  Browser. Seit D7 gehören die fünf Bereichs-Übersichten dazu — ein
- *  Ctrl-Klick auf «Gesetze» legt jetzt also einen Hintergrund-Reiter an,
- *  genau wie auf einen Erlass. */
+ *  Ziel ist jeder app-eigene, absolute Pfad. Bis R14b filterte hier zusätzlich
+ *  `istReiterPfad`, weil ein Mittelklick auf «Über uns» kein Reiter-Ziel hatte;
+ *  seit R14b gibt es diesen Fall nicht mehr — jede In-App-Adresse ist ein
+ *  Reiter, genau wie im Browser jeder Link ein Tab werden kann. Externe Ziele
+ *  (http(s), mailto, `target="_blank"`, Downloads) bleiben unverändert beim
+ *  Browser; das prüft die Bedingung unten. */
 function useNeuerReiterGeste(): void {
   useEffect(() => {
     const geste = (e: MouseEvent) => {
@@ -129,7 +133,6 @@ function useNeuerReiterGeste(): void {
       if (!href.startsWith('/')) return;
       const [vorHash, ankerTeil] = href.split('#');
       const pfad = vorHash.split('?')[0];
-      if (!istReiterPfad(pfad)) return;
       e.preventDefault();
       e.stopPropagation();
       merkeTab(

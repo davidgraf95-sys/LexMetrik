@@ -45,7 +45,15 @@ import { test, expect, type Page } from '@playwright/test'
 const LEISTE = 'nav[aria-label="Offene Reiter"]'
 /** Startroute BEWUSST ohne eigenen Reiter (`lib/tabs.istReiterPfad`) — sonst
  *  stünde die Leiste schon beim Laden nicht leer und der Fall «der erste
- *  Reiter entsteht» wäre gar nicht messbar. Muster aus `w224-r11-reiterleiste`. */
+ *  Reiter entsteht» wäre gar nicht messbar. Muster aus `w224-r11-reiterleiste`.
+ *
+ *  ── DEKLARIERTE SONDEN-ÄNDERUNG (§6.3) · R14b, 7.9.2026 ──────────────────
+ *  Seit R14b trägt `/kontakt` den Reiter «Kontakt» — der 0-Reiter-Zustand ist
+ *  ersatzlos weg, `data-reiter-leer` existiert nicht mehr. Der GEGENSTAND
+ *  beider Fälle bleibt unverändert: dass «+», Blatt und Streifen ihren Platz,
+ *  ihre Breite und ihre Höhe halten, wenn der Reiter-Bestand wechselt.
+ *  Gemessen wird jetzt der Wechsel Meta-Reiter → Gesetzes-Reiter statt
+ *  0 Reiter → 1 Reiter; die Zahlen, die verglichen werden, sind dieselben. */
 const START = '/kontakt'
 const ZGB = '/gesetze/bund/ZGB'
 const OR = '/gesetze/bund/OR'
@@ -120,7 +128,13 @@ test.describe('R13B — Reiterleiste: CLS 0 über Öffnen, Schliessen, Hover und
     await beobachten(page)
     await page.goto(START)
     await expect(page.locator(LEISTE)).toBeVisible({ timeout: 45_000 })
-    await expect(page.locator(`${LEISTE}[data-reiter-leer]`)).toHaveCount(1)
+    // R14b: genau EIN Reiter, und er heisst «Kontakt» — statt des früheren
+    // `[data-reiter-leer]`-Attributs, das es nicht mehr gibt (§6.7: kein Tor,
+    // das nicht scheitern kann). Der Speicher wird danach geleert, damit das
+    // folgende `page.goto` (ein KALTSTART, der nichts ersetzt) wieder bei
+    // genau EINEM Reiter landet — sonst mässe der Fall 1 gegen 2 Reiter.
+    await expect(page.locator('[data-reiter-streifen] [data-reiter-schluessel]')).toHaveCount(1)
+    await page.evaluate(() => localStorage.removeItem('lexmetrik-tabs'))
     await page.waitForTimeout(1200)
     const leer = await masse(page)
     await lesen(page)
@@ -215,6 +229,10 @@ test.describe('R13B — Reiterleiste: CLS 0 über Öffnen, Schliessen, Hover und
     await beobachten(page)
     await page.goto(START)
     await expect(page.locator(LEISTE)).toBeVisible({ timeout: 45_000 })
+    // R14b (s. Fall darüber): Speicher leeren, damit der Kaltstart auf ZGB
+    // wieder GENAU EINEN Reiter trägt und der letzte ✕ ihn auch trifft.
+    await expect(page.locator('[data-reiter-streifen] [data-reiter-schluessel]')).toHaveCount(1)
+    await page.evaluate(() => localStorage.removeItem('lexmetrik-tabs'))
     await page.waitForTimeout(1200)
     const leerVorher = await masse(page)
 
@@ -231,7 +249,9 @@ test.describe('R13B — Reiterleiste: CLS 0 über Öffnen, Schliessen, Hover und
     // schärfer geworden, weil jetzt der Wechsel Dokument → Sammlung gemessen
     // wird und nicht der Rückfall in einen Leerzustand.
     await expect(page.locator(`${LEISTE} [data-reiter-schluessel="/"]`)).toHaveCount(1, { timeout: 20_000 })
-    await expect(page.locator(`${LEISTE}[data-reiter-leer]`)).toHaveCount(0)
+    // R14b: `[data-reiter-leer]` ist ersatzlos gestrichen; die Zusage lautet
+    // jetzt positiv — nach dem letzten ✕ steht genau EIN Reiter.
+    await expect(page.locator('[data-reiter-streifen] [data-reiter-schluessel]')).toHaveCount(1)
     await page.waitForTimeout(900)
     const leerNachher = await masse(page)
 

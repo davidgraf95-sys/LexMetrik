@@ -3,7 +3,7 @@ import {
   ladeTabs, merkeTab, ersetzeTab, schliesseTab, leereTabs, ordneTabsUm, naechsteInstanz,
   aktualisiereTabArtikel,
   schliesseAndere, schliesseRechtsVon, stelleLetztenWiederHer, letzterGeschlossener,
-  istReiterPfad,
+  reiterKurzform, reiterKurzformText,
 } from '../lib/tabs';
 
 // In-App-Reiter (lib/tabs.ts): Persistenz, stabile Reihenfolge, Dublette per
@@ -258,29 +258,43 @@ describe('tabs.ts — offene Reiter', () => {
       expect(ladeTabs()).toEqual([{ path: '/' }]);
     });
   });
-  // ═══ M2 · MATERIALIEN TRAGEN EINEN REITER (Prüfbefund R11 #23) ════════════
+  // ═══ R14b · JEDE ROUTE IST EIN REITER (Nachzug 7.9.2026) ═════════════════
   //
-  // ROT ZU BEKOMMEN (§6.7): in `lib/tabs.istReiterPfad` das Wort `materialien`
-  // aus dem Regex streichen ⇒ der erste Fall unten misst `false`.
-  describe('M2 — Materialien sind reiterfähig', () => {
-    it('eine Material-Detailseite trägt einen Reiter', () => {
-      expect(istReiterPfad('/materialien/BJ-EHRA-PM-2025-01')).toBe(true);
+  // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14b, 7.9.2026 ─────────────────────
+  // Hier stand der Block «M2 — Materialien sind reiterfähig» mit drei Fällen
+  // über `lib/tabs.istReiterPfad` (`'/materialien/…' === true`,
+  // `'/' === true`, `'/ueber' === false`). Die Funktion ist mit R14b ERSATZLOS
+  // gestrichen — es gibt keine Liste mehr, die entscheidet, welcher Pfad einen
+  // Reiter trägt (Herleitung in `lib/tabs.ts`, Block «R14b»). Drei Fälle, die
+  // nach dem Rückbau nicht mehr scheitern können, bleiben nicht als Attrappe
+  // stehen (§6.7). Was die M2-Zusage inhaltlich schützte — «ein Material-Reiter
+  // heisst nicht «Material öffnen»» — misst unverändert
+  // `src/tests/reiterKurzformD27.test.ts`; dass die Leiste auf JEDER Route
+  // mindestens einen Reiter trägt, misst `e2e/w224-r14b-meta-reiter.e2e.ts`.
+  //
+  // ROT ZU BEKOMMEN (§6.7): in `lib/tabs.KURZFORM` die Zeile `'/einstellungen'`
+  // streichen ⇒ der erste Fall unten misst `null` statt «Einstellungen», und
+  // der Reiter hiesse im Bild «Einstellungen — LexMetrik» (SEO-Titel).
+  describe('R14b — Meta-Routen tragen eine Reiter-Kurzform', () => {
+    it('die fünf Meta-Routen haben eine kanonische Kurzform, nicht den SEO-Titel', () => {
+      expect(reiterKurzform('/einstellungen')).toBe('Einstellungen');
+      expect(reiterKurzform('/ueber')).toBe('Über');
+      expect(reiterKurzform('/methodik')).toBe('Methodik');
+      expect(reiterKurzform('/kontakt')).toBe('Kontakt');
+      expect(reiterKurzform('/datenschutz')).toBe('Datenschutz');
     });
 
-    // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, 7.9.2026 ────────────────────
-    // Alter Wortlaut: «die Rubrik-Übersicht /materialien trägt weiterhin einen
-    // Reiter (D7), die Startseite weiterhin keinen» mit
-    // `expect(istReiterPfad('/')).toBe(false)`. Die Startseite IST seit R14 ein
-    // Reiter (Entscheid David 7.9.2026, Herleitung in `lib/tabs`); der Fall
-    // dreht sich darum um. Die D7-Zusage für /materialien bleibt unberührt.
-    it('die Rubrik-Übersicht /materialien trägt einen Reiter (D7), die Sammlung «/» seit R14 auch', () => {
-      expect(istReiterPfad('/materialien')).toBe(true);
-      expect(istReiterPfad('/')).toBe(true);
+    it('die Kurzform überlebt ?query und #hash — der Reiter heisst gleich', () => {
+      expect(reiterKurzform('/einstellungen?r=2')).toBe('Einstellungen');
+      expect(reiterKurzform('/methodik#regeln')).toBe('Methodik');
     });
 
-    it('Meta-Seiten bleiben ohne Reiter — der Regex öffnet nur die fünf Rubriken', () => {
-      expect(istReiterPfad('/ueber')).toBe(false);
-      expect(istReiterPfad('/materialienxyz/abc')).toBe(false);
+    // ROT ZU BEKOMMEN (§6.7): in `lib/tabs.basisKurzform` den R14b-Zweig
+    // «EINE ROUTE OHNE TITEL TRÄGT IHRE ADRESSE» entfernen ⇒ der Reiter hiesse
+    // «Zuletzt geöffnet», also ein Name, den die Seite nicht hat (§8).
+    it('eine Route ohne Titel (404) trägt ihre Adresse, nicht «Zuletzt geöffnet»', () => {
+      expect(reiterKurzformText({ path: '/gibt-es-nicht' }, {})).toBe('/gibt-es-nicht');
+      expect(reiterKurzformText({ path: '/gibt-es-nicht?r=2' }, {})).toBe('/gibt-es-nicht (2)');
     });
   });
 
