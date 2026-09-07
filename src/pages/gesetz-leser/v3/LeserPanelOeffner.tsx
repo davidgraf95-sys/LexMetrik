@@ -115,11 +115,40 @@ export function PanelZaehler({ anzahl, artikelLabel, offen, panelId, form, onKli
       // aus `kopfStufen`, nicht aus einer Klassenliste je Griff (§5).
       className={`${kopfGriffKlassen(kompakt)} ${kompakt ? 'gap-0.5 px-1' : 'gap-1 px-1.5'}`}
     >
-      <span aria-hidden className={kopfGlypheKlassen(kompakt)}>⚖</span>
-      {/* N1 (7.9.2026): DAS WORT steht fest, die Zahl ist eine Marke daneben —
-          Herleitung in `./panelModell` (`OEFFNER_WORT`). Auf `mini` bleibt es
-          bei Ikone + Zahl (H4-II: die Kopfzeile misst dort innen 350 px). */}
-      {!kompakt && <span className="whitespace-nowrap">{OEFFNER_WORT}</span>}
+      {/* ── G14 (Gesamtprüfung W2·24, 7.9.2026) · AUF `mini` STAND HIER EIN
+             NACKTES ⚖ ─────────────────────────────────────────────────────────
+          GEMESSEN am Vorstand `72b39d50c` @390 (STPO #art-429): die drei
+          Kopf-Griffe waren «⚖ 163» · «☰» · «···», drei 44-px-Zellen mit blossen
+          Zeichen. Der Fahrplan hat diesen Rest 18.8.2026 selbst benannt
+          («≤ 2 reine Icons bleibt @390 mit ⚖ · ☰ · ··· gerissen … kein
+          Fortschritt; als offener Punkt geführt») — F0.9 löst ihn ein: JEDER
+          Kopf-Griff trägt mindestens ein Wort.
+
+          DAS WORT IST `OEFFNER_WORT`, NICHT «Entscheide». Der Auftrag schlug
+          «Entscheide 16» vor; das ist die kürzere Beschriftung (gemessen 79 px
+          gegen 105 px), aber sie gäbe DEMSELBEN Knopf auf @390 einen anderen
+          Namen als auf @1440 — genau die Falle, die N1 einen Tag zuvor an
+          dieser Stelle beseitigt hat («Zwei Namen für denselben Knopf sind eine
+          Falle, §8»). §7-Abweichung, offengelegt: das Budget trägt das lange
+          Wort. Gemessen 7.9.2026 an der 350-px-Kopfzeile @390 (Archivo 11 px):
+          «Rechtsprechung 11» 105 · «Gliederung» 63 · «Ansicht ▾» 53, dazu
+          2 × 4 px `gap` = **229 px**; @320 bleiben der Ort-Zone damit 51 px, und
+          weil sie `min-w-0 truncate` trägt, kann die Zeile auf keiner Breite
+          überlaufen.
+
+          DIE IKONE FÄLLT DAFÜR — und nur auf `mini`. Sie misst dort 20 px
+          (`kopfGlypheKlassen(true)` = `text-h3`, das Komfort-Ziel braucht die
+          Grösse) und sagt neben dem ausgeschriebenen Wort nichts mehr, was das
+          Wort nicht schon sagt. Auf `voll`/`kompakt` bleibt sie: dort ist Platz,
+          und ein beschriftetes Zeichen ist kein «reines Icon» im Sinn von
+          Kap. 6. Die Zahl bleibt auf `mini` ohne Breiten-Reserve (N1: «auf
+          `mini` gibt es keine Reserve») — unverändert zum Vorstand.
+          BEWACHT: `e2e/leser-w224-g.e2e.ts` (G14) verlangt @320 und @390 an
+          JEDEM Griff der Kopfzeile ein Wort mit ≥ 3 Buchstaben und misst die
+          Zeile auf Überlauf. Rot zu bekommen: das Wort unten wieder hinter
+          `{!kompakt && …}` stellen — dann steht @390 erneut nur die Ikone. */}
+      {!kompakt && <span aria-hidden className={kopfGlypheKlassen(kompakt)}>⚖</span>}
+      <span className="whitespace-nowrap">{OEFFNER_WORT}</span>
       {/* `tabular-nums` (`num`) + `whitespace-nowrap`: die Zahl wechselt mit der
           Leseposition (Scroll-Spy). Proportionale Ziffern liessen den Knopf bei
           jedem Artikelwechsel um Bruchteile atmen und schöben die Nachbarn —

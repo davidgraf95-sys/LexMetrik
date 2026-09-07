@@ -36,11 +36,29 @@ const VORLAGE = '/vorlagen/arbeitsvertrag'
  *  Zahl, bei der die feste Grenze `SICHTBAR_MAX = 8` bis R13 gerade noch nicht
  *  griff und der Überlauf darum stumm war. */
 const ACHT = [OR, BGE, RECHNER, VORLAGE, '/gesetze/bund/ZGB', '/gesetze/bund/ZPO',
-  '/gesetze/bund/StGB', '/gesetze/bund/URG']
+  '/gesetze/bund/STGB', '/gesetze/bund/URG']
+// ── G23 (Gesamtprüfung W2·24, 7.9.2026) · DER SEED WAR NICHT KANONISCH ───────
+// Diese beiden Listen trugen fünf Erlass-Schlüssel in gemischter Schreibung —
+// `StGB`, `SchKG`, `ArG`, `StPO`, `VwVG`. Das REGISTER
+// (`dist/normtext/register.json`, 1'576 Erlasse) führt sie ausschliesslich
+// versal: `STGB`, `SCHKG`, `ARG`, `STPO`, `VWVG`. Die ROUTE löst beide
+// Schreibungen auf (nachgemessen 7.9.2026: alle zehn Adressen zeigen denselben
+// Erlass) — die Reiter-BESCHRIFTUNG nicht: sie schlägt den Schlüssel exakt nach.
+// GEMESSEN am Vorstand `72b39d50c`, 15 Reiter @1440, aktiv KKG: von den neun
+// sichtbaren Reitern trugen DREI die Aufschrift «Gesetz nicht gefunden»
+// (Positionen 8/10/12 = ArG · StPO · VwVG; StGB und SchKG lagen ausserhalb des
+// Fensters, also fünf im Speicher). Der Fehler war doppelt teuer: die
+// Ersatz-Aufschrift ist ~3× breiter als ein Kürzel, deshalb passten nur 9 von 15
+// Reitern ins Bild — die Sonde mass also nicht die Leiste, sondern ihren
+// eigenen Seed. Mit kanonischem Seed sind es 13 von 15 (`data-reiter-fenster`
+// 5/9/15 → 2/13/15), und die Messtabelle in
+// `abnahme/design-identitaet/R13-REITER.md` trägt dazu eine datierte
+// Nachzug-Zeile. Die ASSERTIONS sind unberührt (§6.3) — nur die Eingabe ist
+// jetzt die, die der Befund gemeint hat.
 const FUENFZEHN = ['/gesetze/bund/OR', '/gesetze/bund/ZGB', '/gesetze/bund/ZPO',
-  '/gesetze/bund/StGB', '/gesetze/bund/SchKG', '/gesetze/bund/BV', '/gesetze/bund/DSG',
-  '/gesetze/bund/ArG', '/gesetze/bund/URG', '/gesetze/bund/StPO', '/gesetze/bund/BGG',
-  '/gesetze/bund/VwVG', '/gesetze/bund/IPRG', '/gesetze/bund/KKG', '/gesetze/bund/KVG']
+  '/gesetze/bund/STGB', '/gesetze/bund/SCHKG', '/gesetze/bund/BV', '/gesetze/bund/DSG',
+  '/gesetze/bund/ARG', '/gesetze/bund/URG', '/gesetze/bund/STPO', '/gesetze/bund/BGG',
+  '/gesetze/bund/VWVG', '/gesetze/bund/IPRG', '/gesetze/bund/KKG', '/gesetze/bund/KVG']
 
 test.describe.configure({ timeout: 120_000 })
 
@@ -242,7 +260,7 @@ test.describe('R13-7/R13-8 — Tastatur', () => {
     const dritter = page.locator('[data-reiter-schluessel="/gesetze/bund/ZPO"]')
     await expect(dritter).toHaveAttribute('title', /Alt\+3/)
     await expect(dritter.locator('button').first()).toHaveAttribute('aria-keyshortcuts', 'Alt+3')
-    const letzter = page.locator('[data-reiter-schluessel="/gesetze/bund/StGB"]')
+    const letzter = page.locator('[data-reiter-schluessel="/gesetze/bund/STGB"]')
     await expect(letzter.locator('button').first()).toHaveAttribute('aria-keyshortcuts', /Alt\+9/)
   })
 
@@ -257,6 +275,10 @@ test.describe('R13-7/R13-8 — Tastatur', () => {
     // die Route liefert den Erlass-Key nach einer Navigation in seiner
     // kanonischen Schreibung (`VWVG`), während der Speicher die geseedete trägt.
     // Geprüft wird hier die REIHENFOLGE, nicht die Schreibweise.
+    // NACHTRAG G23 (7.9.2026): der Seed IST seither kanonisch, die beiden
+    // Schreibungen fallen hier also zusammen. Der Vergleich bleibt
+    // schreibungsblind — er prüft die Reihenfolge, und er soll nicht rot werden,
+    // wenn eine Route ihre Adresse einmal anders normalisiert.
     const aktiv = async () => (await page.locator(`${STREIFEN} [data-reiter-aktiv="true"]`)
       .getAttribute('data-reiter-schluessel'))?.toLowerCase()
     await page.keyboard.press('Alt+9')

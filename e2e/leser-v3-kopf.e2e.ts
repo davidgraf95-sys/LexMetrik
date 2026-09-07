@@ -506,9 +506,19 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
   })
 
   test('(e) Ä91 · der Ansicht-Öffner hat ZWEI Gesichter, nicht drei — und @720 hält der Deckel', async ({ page }) => {
-    // Ein Gesicht je Zuschnitt: «···» auf `mini`, «◧ Ansicht ▾» sonst. Die
+    // Ein Gesicht je Zuschnitt: «Ansicht ▾» auf `mini`, «◧ Ansicht ▾» sonst. Die
     // frühere dritte Gestalt «◧▾» trat genau zwischen 640 und 1023 px auf; die
     // Breiten unten liegen darum beidseits dieser Lücke.
+    // ── NACHZUG G14 (Gesamtprüfung W2·24, 7.9.2026) ─────────────────────────
+    // Das Handy-Gesicht war bis zu diesem Datum «···» — DREI Punkte ohne ein
+    // Wort, gemessen am Vorstand `72b39d50c` neben «⚖ 163» und «☰» als dritte
+    // nackte Glyphe der Zeile. Die ZUSAGE dieses Falls ist unberührt und wird
+    // hier nicht gelockert: ZWEI Gesichter, nie drei, und «Ansicht» steht auf
+    // jeder Breite über 640 px. Neu ist, dass das Wort auch DARUNTER steht —
+    // die Erwartung @390 wandert deshalb von «···» auf «Ansicht▾» (fachliche
+    // Änderung, §6.3: deklariert, nicht beiläufig). Herleitung, Messreihe und
+    // die §7-Abweichung zum Auftragswortlaut: `v3/LeserPanelOeffner.tsx`;
+    // der eigene Wächter steht in `e2e/leser-w224-g.e2e.ts` (G14).
     const gesichter = new Map<number, string>()
     for (const [w, h] of [[390, 844], [720, 900], [900, 900], [1024, 800], [1440, 900]] as const) {
       await page.setViewportSize({ width: w, height: h })
@@ -532,12 +542,15 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
     const verschiedene = new Set(gesichter.values())
     expect(verschiedene.size,
       `Ansicht-Öffner zeigt ${verschiedene.size} Gesichter: ${JSON.stringify([...gesichter])}`).toBe(2)
-    expect(gesichter.get(390)).toBe('···')
+    expect(gesichter.get(390)).toBe('Ansicht▾')
     // Und das Wort steht ÜBERALL sonst — auch unter 1024 px, wo das `lg:`-Präfix
     // es verschluckte (das ist der Kern von Ä91).
     for (const w of [720, 900, 1024, 1440]) {
       expect(gesichter.get(w), `@${w}: der Öffner zeigt «${gesichter.get(w)}»`).toContain('Ansicht')
     }
+    // G14: … und seit 7.9.2026 auch @390 — dort ohne das ◧, das die zwei
+    // Gesichter weiterhin unterscheidet.
+    expect(gesichter.get(390), 'auch @390 steht das Wort').toContain('Ansicht')
   })
 
   test('(f) Ä90 · @390 tragen alle Kopf-Griffe EINE Bauform und ein 32-px-Ziel', async ({ page }) => {
@@ -553,7 +566,10 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
         const cs = getComputedStyle(e)
         return { w: Math.round(r.width), h: Math.round(r.height), bg: cs.backgroundColor, radius: cs.borderTopLeftRadius }
       }))
-    expect(griffe.length, 'auf `mini` stehen drei Griffe: ⚖ · ☰ · ···').toBe(3)
+    // G14 (7.9.2026): die drei heissen seither «Rechtsprechung N» · «Gliederung»
+    // · «Ansicht ▾». Ihre ZAHL ist unverändert drei — nur die Beschriftung fiel
+    // vorher weg (Wächter `e2e/leser-w224-g.e2e.ts`).
+    expect(griffe.length, 'auf `mini` stehen drei Griffe').toBe(3)
     // EINE Bauform: gleiche Fläche, gleiche Rundung, gleiche Höhe.
     expect(new Set(griffe.map((g) => g.bg)).size, `Flächen: ${griffe.map((g) => g.bg).join(' | ')}`).toBe(1)
     expect(new Set(griffe.map((g) => g.radius)).size).toBe(1)
