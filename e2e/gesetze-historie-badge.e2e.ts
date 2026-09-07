@@ -1,7 +1,21 @@
 // @shard-gruppe: 1
 import { test, expect, type Page } from '@playwright/test';
 import { clsBeobachtenInstallieren, clsAuslesen } from './helpers/cls';
+import { F_BLOCK, F_MARKE, fassungAufklappen, fassungsMarke } from './helpers/fassungsRubrik';
 
+// ── §6.3-DEKLARATION · W2·24-D40 (David 7.9.2026) · DER ORT HAT GEWECHSELT ──
+// Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Die Auskunft
+// steht seither in der Funktionszeile am Artikelende, als Rubrik «n Fassungen ›»
+// (`helpers/fassungsRubrik.ts`); der Kopf-Slot `[data-hist-slot]` samt seiner
+// 24-px-Reserve ist ersatzlos gefallen. Diese Sonde folgt dem Ort — jede ZUSAGE
+// darunter bleibt dieselbe: Badge-Text, Zeitleiste, kein Badge ohne Eintrag,
+// kein Badge ohne Shard, kein CLS beim Aufklappen, kein Sprung beim Einwuchs.
+//
+// EINE Zusage ist SCHÄRFER geworden, nicht schwächer: der Einwuchs-Test misst
+// jetzt die Geometrie beim Eintreffen der MARKE (und nicht mehr die einer
+// Reservierung, die es nicht mehr gibt). Gemessen 7.9.2026 an fünf Erlassen
+// @1440 (BGBM/ZPO/OR/StPO/ZGB): 0 verschobene Artikel, CLS 0.00000.
+//
 // G-HIST-UI — «Gilt seit»-Badge + aufklappbare Fassungs-Timeline aus dem erlass-
 // lokalen Historie-Shard (public/normtext/historie/<KEY>.json, G-HIST #286).
 //   · Badge zeigt das In-Kraft-Datum der aktuellen Fassung eines Artikels mit
@@ -109,18 +123,22 @@ test('Badge zeigt das In-Kraft-Datum der aktuellen Fassung (BGBM Art. 2)', async
   await warteReader(page, '/gesetze/bund/BGBM', 'art-2');
   const art = page.locator('#art-2');
   await art.scrollIntoViewIfNeeded();
-  const zeile = art.locator('[data-historie-zeile]');
-  // Der Badge wächst mit dem idle-Shard-Resolve ein (below-fold).
-  await expect(zeile).toBeVisible({ timeout: 15000 });
+  // D40: die Marke wächst mit dem idle-Shard-Resolve in die Funktionszeile ein
+  // und nennt die Zahl der Fassungen; das Datum steht im Block darunter.
+  const marke = await fassungsMarke(art);
+  await expect(marke).toHaveText(/\d+\s*Fassung(en)?/);
+  const zeile = await fassungAufklappen(art);
   await expect(zeile.getByText('Fassung', { exact: true })).toBeVisible();
-  await expect(zeile.getByRole('button', { name: /Gilt seit\s+01\.01\.2025/ })).toBeVisible();
+  await expect(zeile.getByText(/Gilt seit\s+01\.01\.2025/)).toBeVisible();
 });
 
 test('Timeline klappt auf und listet Fassungs-Ereignisse; Aufklappen ohne CLS', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-2');
   const art = page.locator('#art-2');
   await art.scrollIntoViewIfNeeded();
-  const badge = art.getByRole('button', { name: /Gilt seit/ });
+  // D40: der Griff ist die Rubrik-Marke, nicht mehr ein Knopf IN der Zeile —
+  // ein zweiter Knopf im aufgeklappten Block täte dasselbe noch einmal (§5).
+  const badge = art.locator(F_MARKE);
   await expect(badge).toBeVisible({ timeout: 15000 });
   await expect(badge).toHaveAttribute('aria-expanded', 'false');
 
@@ -139,7 +157,7 @@ test('Timeline klappt auf und listet Fassungs-Ereignisse; Aufklappen ohne CLS', 
   await badge.click();
   await expect(badge).toHaveAttribute('aria-expanded', 'true');
   // Aufgeklappte Timeline: die Ereignis-Liste ist da und trägt ≥1 datierten Eintrag.
-  const liste = art.locator('ol[id^="hist-"]');
+  const liste = art.locator(`${F_BLOCK} ol`);
   await expect(liste).toBeVisible();
   await expect(liste.locator('li').first()).toBeVisible();
   await expect(liste.getByText(/in Kraft seit\s+01\.01\.2025/).first()).toBeVisible();
@@ -147,7 +165,10 @@ test('Timeline klappt auf und listet Fassungs-Ereignisse; Aufklappen ohne CLS', 
   // Wieder einklappen.
   await badge.click();
   await expect(badge).toHaveAttribute('aria-expanded', 'false');
-  await expect(liste).toBeHidden();
+  // D40: eine zugeklappte Rubrik rendert ihren Inhalt GAR NICHT (D35-F1) — das
+  // ist schärfer als `toBeHidden` und zugleich der Grund, warum das Aufklappen
+  // nichts kosten kann, solange niemand klickt.
+  await expect(liste).toHaveCount(0);
 
   const { cls, bericht } = await clsAuslesen(page);
   expect(cls, `CLS über das Timeline-Auf-/Zuklappen muss 0 sein · ${bericht}`).toBe(0);
@@ -157,8 +178,12 @@ test('Artikel ohne Historie-Eintrag zeigt kein Badge (BGBM Art. 6)', async ({ pa
   await warteReader(page, '/gesetze/bund/BGBM', 'art-6');
   const art = page.locator('#art-6');
   await art.scrollIntoViewIfNeeded();
-  // Shard ist geladen (Art. 2 hat ein Badge), aber Art. 6 trägt keinen Eintrag.
-  await expect(page.locator('#art-2 [data-historie-zeile]')).toBeVisible({ timeout: 15000 });
+  // Shard ist geladen (Art. 2 trägt seine Marke), aber Art. 6 hat keinen Eintrag.
+  await fassungsMarke(page.locator('#art-2'));
+  // D40: WEDER eine Rubrik in der Zeile (§8 — keine Rubrik ohne echte Zahl)
+  // NOCH eine Druck-Projektion. Beides zusammen ist die Zusage: ein Artikel
+  // ohne Eintrag zeigt die Fassung nirgends, auch nicht auf dem Papier.
+  await expect(art.locator(F_MARKE)).toHaveCount(0);
   await expect(art.locator('[data-historie-zeile]')).toHaveCount(0);
 });
 
@@ -169,7 +194,7 @@ test('Erlass ohne Historie-Shard zeigt nirgends ein Badge (CISG)', async ({ page
   await expect(page.locator('[data-historie-zeile]')).toHaveCount(0);
 });
 
-test('Badge-Einwuchs verschiebt nichts: die Reservierung hält (§15.2)', async ({ page }) => {
+test('Marken-Einwuchs verschiebt nichts (§15.2)', async ({ page }) => {
   // Wurzel-Fix des bekannten Flakes — Diagnose und Messreihen am Datei-Kopf.
   //
   // Der Shard wird angehalten, damit der Einwuchs ein KONTROLLIERTES Ereignis ist
@@ -196,13 +221,26 @@ test('Badge-Einwuchs verschiebt nichts: die Reservierung hält (§15.2)', async 
     .catch(() => { /* der Shard hängt absichtlich — erwarteter Fall */ });
   await page.waitForTimeout(700);
 
-  // Der Badge ist NOCH NICHT da — sonst prüfte der Test einen bereits
+  // Die Marke ist NOCH NICHT da — sonst prüfte der Test einen bereits
   // abgeschlossenen Einwuchs (§6.7: ein Tor, das nicht scheitern kann).
-  await expect(page.locator('[data-historie-zeile]')).toHaveCount(0);
+  await expect(page.locator(F_MARKE)).toHaveCount(0);
 
   // Referenzgeometrie: die y-Position zweier FOLGENDER Artikel und die Seitenhöhe.
-  // Genau sie darf der Einwuchs nicht bewegen — das ist die Zusage der
-  // Reservierung, und sie ist exakt prüfbar statt nur budgetiert.
+  // Genau sie darf der Einwuchs nicht bewegen — exakt prüfbar statt budgetiert.
+  //
+  // D40 · WAS DIESE ZEILEN SEITHER BEWACHEN. Bis D40 war es die Reservierung
+  // (`mt-4 min-h-beiwerk`) am Kopf-Slot. Der Slot ist gefallen, die Zusage
+  // nicht: die Marke wächst in eine Zeile hinein, die es schon gibt, und darf
+  // sie nicht umbrechen lassen. Gemessen 7.9.2026 @1440 an BGBM · ZPO · OR ·
+  // StPO · ZGB: 0 verschobene Artikel, Seitenhöhe unverändert, CLS 0.00000.
+  //
+  // BEFUND, benannt statt versteckt (§8): @390 bricht die Zeile auf dem BGBM
+  // sehr wohl um (art-2 2041→2073, Seite +64 px) — aber NICHT wegen D40. Die
+  // Gegenprobe auf demselben Stand, mit angehaltener Zähl-Datei statt
+  // angehaltenem Historie-Shard, zeigt denselben Umbruch aus den Marken
+  // «Entscheide»/«Materialien» (BGBM +64 px, ZPO +70, StPO +102). Das ist die
+  // Bauart der Funktionszeile seit D35-F1 und ein eigener Befund; CLS bleibt in
+  // allen Fällen 0.00000, weil die Stellen below-fold liegen.
   const geometrie = () => page.evaluate(() => ({
     art2: Math.round(document.querySelector('#art-2')!.getBoundingClientRect().y),
     art3: Math.round(document.querySelector('#art-3')!.getBoundingClientRect().y),
@@ -212,7 +250,7 @@ test('Badge-Einwuchs verschiebt nichts: die Reservierung hält (§15.2)', async 
 
   freigabe();
   // POSITIV: der Einwuchs hat wirklich stattgefunden (sonst messen wir Stillstand).
-  await expect(page.locator('#art-2 [data-historie-zeile]')).toBeVisible({ timeout: 15000 });
+  await fassungsMarke(page.locator('#art-2'));
   await page.waitForTimeout(600);
 
   const nachher = await geometrie();
