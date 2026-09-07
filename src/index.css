@@ -3357,7 +3357,20 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
 }
 
 /* ── (b) DIE BEZÜGE-ZEILE: EINGEKLAPPT EINE ZEILE ─────────────────────────── */
-.lr7-bez { margin: 0.25rem 0 0; }
+/* W2·24-D34 (David 7.9.2026): die Zeile steht am ARTIKELENDE, unter dem letzten
+   Absatz und dem Fussnoten-Apparat — nicht mehr direkt unter der Artikelnummer.
+   Dort braucht sie eine eigene Grenze nach oben, sonst klebt sie am Fliesstext,
+   den sie nicht mehr fortsetzt. Es ist die LEISESTE Rolle des Linien-Kanons
+   (`--rule-soft`, dieselbe wie am Rubrik-Strich darunter), nicht der
+   Artikel-Trenner: der trennt ZWEI Artikel, diese hier trennt den Wortlaut von
+   seinem Apparat. Eine Linie, kein Kasten und keine Fläche (F0.6). Der Abstand
+   davor ist grösser als der dahinter — die Zeile gehört nach unten zu dem, was
+   sie aufklappt, nicht nach oben zum Wortlaut. */
+.lr7-bez {
+  margin: 1rem 0 0;
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 0.5rem;
+}
 .lr7-bez-zeile {
   display: flex;
   flex-wrap: wrap;
