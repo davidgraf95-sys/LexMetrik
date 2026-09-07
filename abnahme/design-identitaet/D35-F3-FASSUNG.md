@@ -197,3 +197,22 @@ Zurückgenommen, danach 6/6 grün. *(Nebenbefund mitbehoben: die Zusicherung lie
 über `expect(css).not.toContain(...)` und warf im Fehlerfall den Diff einer
 4100-Zeilen-Datei aus — jetzt `expect(css.includes(...)).toBe(false)`, T5.)*
 
+---
+
+## 9 CLS: warum die neue Vorgabe keinen Hydrations-Sprung erzeugt
+
+Die Sorge liegt nahe: bis 7.9.2026 emittierte der Grundzustand **keine**
+CSS-Regel (R6), jetzt ist die Vorgabe eine entschiedene Stellung, und ihre Regel
+greift, sobald `wendeLeserOptionenAn()` das Attribut setzt. Wäre der Apparat im
+ausgelieferten HTML enthalten, sähe der Leser ihn kurz und dann verschwinden —
+ein Shift ohne Eingabe, also CLS.
+
+**Gemessen am gebauten `dist/` (7.9.2026):** `dist/gesetze/bund/ZPO.html`
+(222 842 Bytes) enthält **0** `data-fn-apparat` und **0** `data-fn-klasse`. Der
+Artikelkörper samt Apparat kommt aus dem lazy geladenen Snapshot, also **nach**
+dem Modul-Script, das das Attribut setzt. Es gibt keinen Zwischenzustand «Apparat
+gemalt, Attribut fehlt».
+
+Der Umschalt-Reflow ist klick-getrieben und damit input-exkludiert; eng gemessen
+in `e2e/leser-optionen.e2e.ts` (Beobachter installiert, EIN Umschaltvorgang):
+**0.0**.
