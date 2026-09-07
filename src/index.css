@@ -703,6 +703,56 @@
      eine Regel und kein Eingriff an ~40 Aufrufstellen (§5/§10). */
   :where([class~="font-serif"]) { font-weight: var(--lese-gewicht); }
   h1, h2, h3 { font-family: var(--font-display), system-ui, sans-serif; font-weight: 600; letter-spacing: -0.015em; color: var(--ink-900); }
+
+  /* ══ W2·24-NACHZUG R6I (7.9.2026) · DIE VORSCHAU-INSEL SCHWENKT NIE UM ═════
+     `#root > main` ist AUSSCHLIESSLICH die prerenderte Vorschau-Insel
+     (`lib/seo-detail.ts`: `erlassVolltextHtml`, `entscheidVolltextHtml`,
+     `materialDetailHtml` liefern je ein nacktes `<main>` in `#root`). Sobald
+     React uebernimmt, ist das einzige Kind von `#root` ein `div.min-h-screen`
+     — gemessen 7.9.2026 auf `/`, `/gesetze`, `/rechtsprechung` und
+     `/gesetze/bund/OR`. Die Regel kann darum nichts treffen, was der Leser
+     nach der Uebernahme sieht.
+
+     BEFUND, der sie ausgeloest hat (Perf-Tor rot auf main, Lauf 34086372353):
+     `check:perf-lighthouse` mass `/gesetze/bund/OR` mit **CLS 0.057 > 0.05**.
+     Davon waren **0.05502 EIN einziger Sprung** — lokal dreimal byte-gleich
+     reproduziert (Lighthouse-Mobil 412x823, Drossel 4x, PERF_RUNS=3, Median
+     0.0567; Trace-Ereignis t=105 ms, Knoten `<section>` der Insel:
+     `[0,179,412,644]` -> `[0,154,412,669]`).
+
+     URSACHE: die Insel erbt `--font-sans` (seit R1 Archivo) und rendert bis
+     zum Eintreffen der woff2 in der metrik-angepassten `'Archivo Fallback'`.
+     `size-adjust` haelt den ZEILENKASTEN gleich, nicht den Umbruch: die
+     Provenienz-Zeile («OR · SR 220 · Stand … · amtliche Fassung (geltend) ·
+     gegen Fedlex-Konsolidierung geprueft am … · naechste Fassung ab …») steht
+     @412 dicht an einer Umbruchgrenze und faellt beim Swap von VIER auf DREI
+     Zeilen — `<p>` 102 -> 77 px. Die 25 px schieben die gesamte Insel darunter
+     (930 KB Normtext) nach oben; das ist der ganze Sprung.
+     GEGENPROBE (7.9.2026, Playwright 412x823, Drossel 4x + langsames 4G):
+     mit woff2 CLS 0.1224 mit einem Ereignis 0.05502 bei t=2292 ms — mit
+     abgebrochenen woff2-Antworten CLS 0.0674 und dieses Ereignis FEHLT. Der
+     Webfont-Swap war der Sprung, nicht der Erlass.
+
+     DER FIX IST DIE ABWESENHEIT EINER LADBAREN SCHRIFT: die Insel bekommt
+     ausschliesslich lokal aufloesbare Familien. Was nicht nachgeladen wird,
+     kann auch nicht umbrechen — CLS 0 hier ist damit eine Eigenschaft der
+     Regel, keine Messglueck-Frage. Arial zuerst, weil die Fallback-Metriken
+     dieses Repos ohnehin auf Arial getunt sind (Block ganz oben).
+     WARUM NICHT PRELOAD der woff2: das verkleinert das Fenster, schliesst es
+     aber nicht — auf einem langsamen Netz bleibt der Swap moeglich, und ein
+     Fix, der nur meistens wirkt, ist keiner (§6.7).
+     KEIN LOGIKVERLUST (§15): der Inhalt der Insel ist byte-gleich (kein
+     Markup beruehrt, `check:golden-normtext`/SEO-Tests unberuehrt), Ctrl+F,
+     Anker, Druck und Crawler sehen dasselbe DOM. Geaendert ist allein, in
+     welcher Schrift die Vorschau in den ~1-4 s bis zur React-Uebernahme
+     erscheint — eine Flaeche, die ohnehin ohne Designtokens rendert.
+     ROT ZU BEKOMMEN (§6.7): `--font-sans` hier wieder einsetzen ⇒
+     `e2e/w224-r6i-vorschau-schrift.e2e.ts` meldet den Umbruch-Sprung.
+     Der Nachsatz `*` ist noetig, weil `h1, h2, h3` oben eine EIGENE
+     `font-family` setzt — Vererbung allein verliert gegen eine direkte Regel. */
+  #root > main, #root > main * {
+    font-family: Arial, 'Liberation Sans', Arimo, system-ui, sans-serif;
+  }
   a { color: var(--brass-700); text-underline-offset: 2px; }
   /* Hover DUNKELT den Link (brass-800) statt ihn aufzuhellen (brass-600 war
      hell, 3.71:1 — Auftrag David 25.6.2026 Lesbarkeit). Im Dunkelmodus ist
