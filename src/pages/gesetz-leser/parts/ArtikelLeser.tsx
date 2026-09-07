@@ -272,7 +272,8 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // neben dem Randtitel, nicht mehr in einer eigenen Randspalte und nicht mehr
   // unten im Beiwerk.
   // Verlagert wird der SLOT samt `data-hist-slot`, nicht sein Inhalt — der
-  // Schalter «Änderungsvermerke» (`index.css`, `html[data-histansicht="aus"]`)
+  // Schalter «Änderungsvermerke» (`index.css`; seit D35-F3 7.9.2026 die Stellung
+  // `html[data-vermerke]`, bis dahin `html[data-histansicht="aus"]`)
   // greift unverändert, und die 24-px-Reserve (`min-h-beiwerk`, CLS) steht
   // weiter am selben Element. Im Kopf kann sie sogar nicht mehr schieben: die
   // Artikelhöhe kommt aus der Textspalte.

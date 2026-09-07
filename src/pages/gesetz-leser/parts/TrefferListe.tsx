@@ -36,7 +36,9 @@ export interface TrefferListeProps {
   begriff: string;
   /** Datenseitige Gesamtzahl der Fundstellen (§4.4 Ziff. 1). */
   fundstellen: number;
-  /** `html[data-fussnoten="aus"]` — steuert allein die BADGE-Ehrlichkeit. */
+  /** D35-F3: `html[data-vermerke]` steht auf «fassung» oder «aus», die
+   *  Änderungs-Fussnoten sind also gedämpft — steuert allein die
+   *  BADGE-Ehrlichkeit (bis 7.9.2026 `html[data-fussnoten="aus"]`). */
   aenderungenAus: boolean;
   /** 0-basierte laufende Fundstelle der ↑↓-Navigation; -1 = noch keine. */
   position: number;

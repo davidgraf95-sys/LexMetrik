@@ -184,7 +184,7 @@ test.describe('D35-F3 — §8: ein Erlass ohne kl-Klassifikation sagt es hin', (
     // AUCH die Fassungs-Zeile — die Wahl wird darum gar nicht erst angeboten
     // (D1); dieser Fall steht in `hist-ansicht-w25i.e2e.ts`.
     await page.setViewportSize({ width: 1440, height: 900 });
-    await leser(page, '/gesetze/bund/MONTREAL', 'art-21');
+    await leser(page, '/gesetze/international/MONTREAL', 'art-21');
     await ansichtAuf(page);
     const panel = page.locator(ANSICHT_PANEL).first();
     const gruppe = panel.locator('[data-v3-vermerke-wahl]');
