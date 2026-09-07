@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useZuletzt } from './useZuletzt';
 import { leereZuletzt } from '../../lib/zuletztVerwendet';
 import { gruppiereVerlauf } from '../../lib/verlaufGruppen';
-import { MenueTitel, MenueZeile } from '../ui/Menue';
+import { MenueGruppe, MenueTitel, MenueZeile } from '../ui/Menue';
 import { useDialogFokus } from './useDialogFokus';
 
 // ─── «Verlauf»-Übersicht in der Topbar (UI-NAV O1, Schritt 3) ───────────────
@@ -116,8 +116,14 @@ export function VerlaufUebersicht() {
               gerade der Registerfarbe gewichen ist (D9). Gerüst und Werte
               kommen aus `ui/Menue` bzw. `.lc-menu-*`; die Verlaufs-LOGIK
               (Gruppen, Reihenfolge, Leeren) ist unberührt. */}
+          {/* D35-F4 (7.9.2026): die Gruppen-Klammer trägt jetzt `MenueGruppe`.
+              Vorher war es ein nacktes `<div>`, und weil die Haarlinie
+              seither ZWISCHEN Gruppen steht statt unter jeder Zeile, hätte
+              sie ohne diese Klammer nirgends mehr angesetzt (der Gruppentitel
+              ist innerhalb seines `<div>` `:first-child`). Reihenfolge,
+              Gruppierung und Verlaufs-Logik sind unberührt. */}
           {gruppen.map((g) => (
-            <div key={g.id}>
+            <MenueGruppe key={g.id}>
               <MenueTitel>{g.label}</MenueTitel>
               <ul>
                 {g.eintraege.map((e) => (
@@ -127,7 +133,7 @@ export function VerlaufUebersicht() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </MenueGruppe>
           ))}
 
           <div className="mt-1 flex items-center justify-between gap-2 border-t border-rule-soft px-1 pt-1.5">

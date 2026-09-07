@@ -222,15 +222,24 @@ test.describe('R13B — Reiterleiste: CLS 0 über Öffnen, Schliessen, Hover und
     await expect(page.locator('#art-1')).toBeVisible({ timeout: 45_000 })
     await page.waitForTimeout(2500)
     await page.locator(`${LEISTE} .lc-schliessknopf`).first().click()
-    await expect(page.locator(`${LEISTE}[data-reiter-leer]`)).toHaveCount(1, { timeout: 20_000 })
+    // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ────
+    // Hier stand `toHaveCount(1)` auf `[data-reiter-leer]`: der letzte ✕ liess
+    // die Leiste LEER zurück. Seit R14 tritt die Sammlung an die Stelle des
+    // letzten Reiters — die Leiste ist nie leer. Die geprüfte ZUSAGE bleibt die
+    // Geometrie: das «+», der Streifen und das Blatt stehen nach dem
+    // Schliessen genau dort, wo sie vorher standen. Sie ist damit sogar
+    // schärfer geworden, weil jetzt der Wechsel Dokument → Sammlung gemessen
+    // wird und nicht der Rückfall in einen Leerzustand.
+    await expect(page.locator(`${LEISTE} [data-reiter-schluessel="/"]`)).toHaveCount(1, { timeout: 20_000 })
+    await expect(page.locator(`${LEISTE}[data-reiter-leer]`)).toHaveCount(0)
     await page.waitForTimeout(900)
     const leerNachher = await masse(page)
 
     // Der Klick selbst ist eine diskrete Eingabe (`hadRecentInput`), sein
     // Folge-Shift wäre CLS-exkludiert — die ZUSAGE ist darum die Geometrie:
-    // die leere Leiste sieht nach dem Schliessen aus wie vor dem Öffnen.
+    // die Leiste sieht nach dem Schliessen aus wie vor dem Öffnen.
     expect(leerVorher.plus, 'das «+» steht nach dem Schliessen wieder genau dort').toEqual(leerNachher.plus)
     expect(leerVorher.streifen, 'der Streifen kehrt in seine Masse zurück').toEqual(leerNachher.streifen)
-    expect(leerVorher.blatt!.x, 'das Blatt hält seinen Platz auch leer').toBe(leerNachher.blatt!.x)
+    expect(leerVorher.blatt!.x, 'das Blatt hält seinen Platz').toBe(leerNachher.blatt!.x)
   })
 })

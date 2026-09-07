@@ -471,6 +471,22 @@
        KONSUMENT: `.lc-leiste-griff-komfort` (unten). Der Wert steht EINMAL
        hier. */
     --tap-ziel-komfort:44px;
+    /* ── EINE ZEILENHÖHE FÜR JEDE MENÜZEILE (W2·24 D35-F4) ─────────────────
+       BEFUND, gemessen 7.9.2026 im Ansicht-Menü des Lesers: die vier Zeilen
+       massen 38 / 38 / 37 / 52 px. Die 37 war die letzte Zeile (ihr fehlte die
+       trennende Haarlinie), die 52 der Schriftregler (`py-2` plus ein
+       35-px-Knopfkasten). Drei verschiedene Höhen in einer Liste sind genau
+       das unruhige Bild, das Fahrplan §F0 abstellt — und keine davon war
+       gewollt, alle drei waren Nebenwirkungen.
+       DER WERT: 2.375 rem = 38 px bei Wurzel 16 (die Höhe, die drei der vier
+       Zeilen ohnehin trugen; kein neues Mass, sondern das gemessene). Er steht
+       als `min-height` an `.lc-menu-zeile` UND `.lc-menu-regler`, damit die
+       Höhe nicht mehr aus Innenabstand + Inhalt + Rahmen entsteht, sondern
+       deklariert ist. In `rem`, damit er mit dem globalen Schriftregler
+       mitwächst (WCAG 1.4.4) — eine px-Zahl fröre die Zeile ein.
+       Der Wert steht EINMAL hier; die Komponenten greifen ihn als Variable
+       (§5/D2, dieselbe Regel wie `--tap-ziel`). */
+    --menu-zeile-h:2.375rem;
     /* ── ABDUNKELNDE FLÄCHE HINTER EINEM OVERLAY (Scrim) · F2-1 ─────────────
        DREI ROLLEN, DREI DECKUNGEN, EINE FARBE. Die Farbe ist `black` und NICHT
        `--ink-900`: das Tinten-Token flippt mit dem Thema (hell #201E16, dunkel
@@ -2902,19 +2918,28 @@
      `.lc-schwebeflaeche` — wo ein Menü liegt, entscheidet sein Anker, nicht
      seine Anatomie. */
 
-  /* Die Zeile: volle Breite, EINE Höhe, Trennung nach unten über eine
-     Haarlinie (die letzte Zeile trägt keine). Kein Radius — ein abgerundeter
-     Hover-Kasten ist genau das Kissen, das Fahrplan §5 abschafft. */
+  /* ── D35-F4 (7.9.2026) · DIE ZEILE HAT EINE HÖHE UND KEINE EIGENE LINIE ──
+     BEFUND, gemessen im Ansicht-Menü: 38 / 38 / 37 / 52 px. Die 37 kam daher,
+     dass die LETZTE Zeile ihre Haarlinie verlor (`:last-child`) — die Trennung
+     bezahlte also die Höhe. Und eine Linie UNTER JEDER Zeile ist nicht
+     «Linien statt Flächen» (F0.6), sondern ein Gitter: sie trennt Dinge, die
+     zusammengehören (drei Schalter derselben Gruppe), genauso stark wie Dinge,
+     die es nicht tun.
+     JETZT: die Höhe kommt deklariert aus `--menu-zeile-h` (Herleitung am
+     Token), die Trennung steht ZWISCHEN GRUPPEN (`.lc-menu-gruppe`,
+     `.lc-menu-titel`, `.lc-menu-regler` — alle drei unten). `py-2` bleibt als
+     Innenabstand stehen, ist aber nicht mehr das Mass: `min-height` ist es.
+     Kein Radius — ein abgerundeter Hover-Kasten ist genau das Kissen, das
+     Fahrplan §5 abschafft. */
   .lc-menu-zeile {
     @apply flex w-full items-center gap-2.5 px-3 py-2 text-left text-body-s text-ink-700 transition-colors;
-    border-bottom: 1px solid var(--rule-soft);
+    min-height: var(--menu-zeile-h);
     border-radius: 0;
     /* «keine Umbrüche in Menüzeilen»: die Beschriftung bleibt einzeilig und
        wird notfalls mit Auslassung gekappt — die volle Aussage steht im
        `title`, wie an jeder anderen gekappten Stelle der App (LM-067). */
     white-space: nowrap;
   }
-  .lc-menu-zeile:last-child { border-bottom: 0; }
   .lc-menu-zeile:hover { background: var(--well); color: var(--ink-900); }
   /* FOKUS ALS STRICH, NICHT ALS KASTEN. Die globale `:focus-visible`-Regel legt
      einen 2-px-Rahmen um das Element — an einer Menüzeile, die die volle Breite
@@ -2925,13 +2950,66 @@
   .lc-menu-zeile:focus-visible { outline: none; box-shadow: inset 0 -2px 0 0 var(--focus); }
   /* Die Beschriftung kappt, die Zustands-Marke links tut es nie. */
   .lc-menu-label { @apply min-w-0 flex-1 overflow-hidden text-ellipsis; }
-  /* Zustands-Marke LINKS (Häkchen/Leerstelle) — feste Breite, damit die
-     Beschriftungen aller Zeilen fluchten, ob geschaltet oder nicht. Sie ersetzt
-     das «✓ an»-Doppel rechts: EIN Zeichen für EINEN Zustand. */
-  .lc-menu-marke { @apply inline-flex w-4 shrink-0 items-center justify-center leading-none; color: var(--brass-700); }
+  /* Zustands-Marke LINKS — feste Breite, damit die Beschriftungen aller Zeilen
+     fluchten, ob geschaltet oder nicht. Sie ersetzt das «✓ an»-Doppel rechts:
+     EIN Zeichen für EINEN Zustand. Tinte statt Messing (D35-F4): der Zustand
+     ist keine Marken-Auskunft, und `--ink-900` ist der Ton, in dem das Haus
+     Entschiedenes schreibt. */
+  .lc-menu-marke { @apply inline-flex w-4 shrink-0 items-center justify-center leading-none; color: var(--ink-900); }
+
+  /* ── D35-F4 · DER AUS-ZUSTAND IST SICHTBAR ────────────────────────────────
+     BEFUND, wörtlich aus Davids Bild: «Fussnoten» und «Fassung» lasen sich wie
+     RUBRIKEN, nicht wie Schalter. Gemessen war das exakt richtig — der
+     Aus-Zustand rendert bis hierher einen LEEREN Hakenplatz, der einzige
+     Unterschied zwischen an und aus war die Tintenstufe der Beschriftung
+     (`text-ink-900` / `text-ink-600`). Eine Farbe allein trägt nie eine
+     Auskunft (§13/F2), und wer das Menü zum ersten Mal öffnet, sieht bei drei
+     ausgeschalteten Zeilen gar keinen Schalter.
+     JETZT: eine FORM, die in beiden Stellungen dasteht — leeres Kästchen in
+     `--ink-500` (aus) bzw. Kästchen mit Haken in `--ink-900` (an). Das ist
+     dieselbe Grammatik, die `.lc-menu-punkt` für eine Radio-Gruppe führt (ein
+     Kreis statt eines Kästchens, gefüllt statt gehakt) — EINE Anatomie, zwei
+     Wahl-Arten, damit ein künftiges Menü mit Dreier-Wahl (F1/F3) ohne Umbau
+     hineinpasst.
+     Masse in `rem`, nicht in px: die Form wächst mit dem globalen
+     Schriftregler mit (WCAG 1.4.4), wie die Zeile, in der sie steht. */
+  .lc-menu-kasten {
+    @apply inline-flex shrink-0 items-center justify-center;
+    width: .8125rem; height: .8125rem;
+    border: 1px solid var(--ink-500);
+    color: var(--ink-900);
+    font-size: .625rem; line-height: 1;
+  }
+  /* An: die Kante wird so dunkel wie der Haken — Form UND Tinte sagen dasselbe. */
+  .lc-menu-kasten[data-an='an'] { border-color: var(--ink-900); }
+  /* Radio-Variante: derselbe Rahmen, rund. Der gewählte Zustand ist ein
+     gefüllter Kern, kein Haken (die Konvention, die jede Radio-Gruppe führt). */
+  .lc-menu-punkt-form { border-radius: 9999px; }
+  .lc-menu-punkt-kern { width: .375rem; height: .375rem; border-radius: 9999px; background: var(--ink-900); }
+
+  /* ── D35-F4 · DIE LINIE TRENNT GRUPPEN, NICHT ZEILEN ──────────────────────
+     `.lc-menu-gruppe` ist die Klammer um Zeilen, die zusammen EINE Frage
+     beantworten (drei Schalter der Ansicht; eine Radio-Gruppe; ein Block
+     Verlaufseinträge). Die Haarlinie steht zwischen zwei solchen Klammern und
+     vor einem Gruppentitel — nirgends sonst. Der Regler bringt seine eigene
+     mit, er IST eine eigene Gruppe. */
+  .lc-menu-gruppe { @apply flex w-full flex-col; }
+  .lc-menu-gruppe + .lc-menu-gruppe,
+  .lc-menu-gruppe + .lc-menu-regler,
+  .lc-menu-titel:not(:first-child) { border-top: 1px solid var(--rule-soft); }
+
+  /* Gruppentitel: kursive Literata-Zeile (`.lc-randtitel`, GB-2) — die Stimme,
+     die im Haus einen Abschnitt BENENNT. Bis hierher trug er `.lc-overline`
+     (Archivo); damit sahen Gruppenkopf und Schalterzeile nach zwei Systemen
+     aus. Grösse und Tinte stehen hier, die Familie kommt aus `.lc-randtitel`. */
+  .lc-menu-titel { @apply px-3 py-1.5; font-size: .8125rem; line-height: 1.4; color: var(--ink-500); }
+
   /* Der Regler bekommt seine eigene Zeile mit Label — er wird nicht mehr neben
-     eine zweizeilig umbrechende Beschriftung gequetscht. */
-  .lc-menu-regler { @apply flex w-full items-center justify-between gap-2 px-3 py-2; border-top: 1px solid var(--rule-soft); }
+     eine zweizeilig umbrechende Beschriftung gequetscht. D35-F4: dieselbe
+     Zeilenhöhe wie jede andere Zeile (gemessen war er 52 px hoch, also 14 px
+     mehr als seine Nachbarn); `py-1` statt `py-2`, weil der Steller darin
+     seine eigene Trefferfläche (`--tap-ziel`) mitbringt. */
+  .lc-menu-regler { @apply flex w-full items-center justify-between gap-2 px-3 py-1; min-height: var(--menu-zeile-h); border-top: 1px solid var(--rule-soft); }
 
   /* ═══ B-R1 (R9-1, 6.9.2026) · DAS EINE REITER-REZEPT ═════════════════════════
      BEFUND (r9-befunde-b.md B-R1, gemessen 6.9.2026): `ui/Tabs.tsx` trug den
