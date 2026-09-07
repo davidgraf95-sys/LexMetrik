@@ -50,7 +50,20 @@ export function EntscheidZeile({ e, onNorm }: {
             className={`min-w-0 flex-1 truncate text-body-s ${synth ? 'text-ink-700' : 'font-medium text-ink-900'} group-hover:text-brass-700`}>
             {bezeichnung}
           </span>
-          <span className={`num shrink-0 text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>
+          {/* R8 (7.9.2026) · EINE IDENTITAET, DIE NICHT MEHR IN DIE ZEILE PASST.
+              `shrink-0` haelt die Kennung vollstaendig — richtig, solange sie
+              EINE Geschaeftsnummer ist. Traegt ein Entscheid deren mehrere
+              («S2024_005, S2024_006, S2024_007 …»), wuchs der Kasten auf 197 px
+              und wurde vom `overflow-hidden` des `lc-panel` glatt abgeschnitten:
+              gemessen /rechtsprechung @320, Panel 280 px, Inhalt 321 px — die
+              letzten 41 px waren weder sichtbar noch erreichbar (§8).
+              `max-w`-Anteil + `truncate` + `title` loest beides: kurze Kennungen
+              stehen unveraendert voll da (sie bleiben unter dem Anteil), lange
+              kuerzen sichtbar per Ellipse und geben den vollen Wortlaut per
+              Hover und im A11y-Baum her. Ein Anteil statt einer Pixelzahl,
+              damit die Regel ueber alle Viewports gilt. */}
+          <span title={hauptIdentitaet(e)}
+            className={`num shrink-0 max-w-[60%] truncate text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>
             {hauptIdentitaet(e)}
           </span>
         </div>
