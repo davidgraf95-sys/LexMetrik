@@ -117,7 +117,13 @@ for (const [breite, hoehe] of [[1440, 900], [390, 844]] as const) {
 
 test.describe('Etiketten ohne Versalien (F0.7, Befund G13)', () => {
   test.use({ viewport: { width: 1440, height: 900 } })
-  for (const pfad of ['/rechtsprechung', '/materialien', '/gesetze']) {
+  // Der ENTSCHEID-LESER steht bewusst mit in der Liste: er ist die einzige
+  // Stelle, an der die Utility «uppercase» im Markup noch steht (Datei liegt
+  // bei Fixer GA, befristete Ausnahme in `scripts/check-design-tokens.ts`).
+  // Nur hier kann diese Sonde die WIRKUNG der CSS-Regel beweisen — an den
+  // uebrigen Routen ist das Wort schon aus der Quelle verschwunden, dort
+  // koennte der Test auch ohne die Regel nicht rot werden (§6.7).
+  for (const pfad of ['/rechtsprechung', '/rechtsprechung/ag_gerichte_HOR_2024_19', '/materialien', '/gesetze']) {
     test(`kein uppercase an .lc-badge — ${pfad}`, async ({ page }) => {
       await page.goto(pfad)
       await page.waitForLoadState('networkidle')

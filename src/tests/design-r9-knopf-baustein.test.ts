@@ -46,7 +46,12 @@ import { describe, it, expect } from 'vitest';
 import { alleTsx, liesRoh, ohneKommentare, rel } from './appDateien';
 
 /** Eine dieser Marken am oeffnenden Tag macht den Knopf zum Baustein-Konsum. */
-const BAUSTEIN = /\b(?:lc-btn|lc-chip|fc-schalter|lc-tab|ub-schalter|lc-menu-zeile|lc-menu-regler)\b|role=(?:"tab"|\{[^}]*['"]tab['"][^}]*\})/;
+// GB-15 (W2·24, Befund G15, 7.9.2026): `lc-topbar-griff` ist der Baustein der
+// Titelblatt-Griffe (ein Rezept in `src/index.css` §GB-15, vier Konsumenten:
+// Topbar ☰ + Seitenleisten-Schalter, HeaderSuche 🔍, ThemaUmschalter ◐,
+// SprachUmschalter «DE ▾»). Vorher trugen dieselben fuenf Knoepfe DREI
+// Anatomien in einer Zeile — genau die Rezept-Familie, die B-K1 abraeumt.
+const BAUSTEIN = /\b(?:lc-btn|lc-chip|fc-schalter|lc-tab|ub-schalter|lc-menu-zeile|lc-menu-regler|lc-topbar-griff)\b|role=(?:"tab"|\{[^}]*['"]tab['"][^}]*\})/;
 
 /**
  * Zaehlt die `<button>` einer Quelle, deren OEFFNENDES TAG keine Baustein-Marke
