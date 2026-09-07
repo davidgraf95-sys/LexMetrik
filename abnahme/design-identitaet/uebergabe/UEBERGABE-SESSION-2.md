@@ -1,5 +1,9 @@
 # Übergabe an Session 2 — W2·24-DESIGN-IDENTITAET
 
+> **HISTORISCH — Entscheid David 7.9.2026: Die Session bringt alles selbst zu Ende; die Übergabe
+> an eine zweite Session ist entfallen. Aktueller Stand: STRUKTUR-Karte «Session 6./7.9.2026».
+> Der Text darunter ist unverändert und beschreibt den Stand vom 6.9.2026.**
+
 Für eine Session mit leerem Kontext. Massgeblich bleibt `fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md`
 (§5 Zielbild + Nachträge, §5a Reiterleiste, §6 Rundenplan); dieses Dokument ist Übergabe, kein Ersatz.
 

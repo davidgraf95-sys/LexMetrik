@@ -222,6 +222,46 @@ Pakete deinstallieren; `--font-mono` bleibt für Rechenweg/Code, `.num` wird
 
 ### Rundenplan
 
+**Stand 7.9.2026 — alle Runden erledigt, gelandet in PR #739** (Protokolle in
+`abnahme/design-identitaet/`; die Spezifikation der Runden R1–R5 darunter bleibt als Wortlaut
+stehen, sie ist der Massstab, an dem geprüft wurde). Nachträge D30–D33 und R13 sind nach der
+Freigabe §5 hinzugekommen, die Gesamtprüfung ist der Schluss-Auftrag David 7.9.2026 («am ende
+mache nochmals einen kompletten fix indem du selbst auf die webseite gehst»).
+
+| Runde | Gegenstand | Stand | Protokoll |
+|---|---|---|---|
+| R1 | Grundschicht (Papier/Tinte, Registerfarben, Literata/Archivo, Radien 0) | erledigt | `KONTRAST-R1.md` |
+| R2 | Rahmen (Titelblatt, Arbeitsleiste = Reiterleiste, Seitenleiste) | erledigt + Nachzug | `R2-RAHMEN.md`, `R2-NACHZUG.md` |
+| R3 | Startseite als Inhaltsverzeichnis + Sprach-Diät | erledigt + Nachzug | `R3-STARTSEITE.md`, `R3-NACHZUG.md` |
+| R4 | Gesetzesleser (Satzspiegel, Randtitel, Bezüge) | erledigt | `R4-LESER.md` |
+| R5 | Rest-Sweep Übersichten/Rechner/Vorlagen/Leser (F1–F1K, F2) | erledigt | `R5-F1.md` … `R5-F1K.md`, `R5-F2.md` |
+| R6 | «Gesetzesdarsteller»: Ort und Verzahnung (Zusatzrunde David 6.9.) | erledigt (A–G) | `R6-LESER.md`, `R6-NACHZUG.md`, `R6C.md`, `R6D.md`, `R6E-LESER.md`, `R6F-LESER.md`, `R6G-LESER.md` |
+| R7 | Beschriftungen | erledigt | `R7-BESCHRIFTUNGEN.md` |
+| R8 | «Nichts abgeschnitten» | erledigt | `R8-ABSCHNITT.md`, `R8-REPORT-0.md` |
+| R9 | Einheitlichkeit (gleiches Format für Gleiches) | erledigt (zwei Wellen) | `R9-1.md`, `R9-2.md` |
+| R10 | Startseite «Pult» — modular steuerbar | erledigt + 3 Nachzüge | `R10-PULT.md`, `R10-NACHZUG.md`, `R10-NACHZUG-3.md` |
+| R11 | Reiterleiste: Bedienbarkeit und Nützlichkeit | erledigt (M5 → `W2·25`) | `R11-REITER.md`, `uebergabe/R11-PLAN.md` |
+| R12 | Wege verkürzen (Köpfe, Listen) | erledigt | `R12A-KOEPFE.md`, `R12B-LISTEN.md` |
+| R13 | Reiter nützlicher und intuitiver (zweite Reiter-Runde, David 7.9.) | erledigt | `R13-REITER.md` |
+
+**Nachträge D30–D33** (Befunde David am Bild/Dev-Server, Wortlaut im Befundregister der Session):
+D30 Bezüge-Zeile klappt auf, zeigt aber nur den Rechnen-Block → Entscheide + Materialien lazy mit
+Skelettzeile; D31 Norm-Popover nicht lesbar (kein Papier-Hintergrund/z-Ebene) → EIN Popover-Rezept;
+D32 Erlass-Suche von der Gliederungs- auf die Gesetzesspalte, **Entscheid 7.9.: das Suchfeld folgt
+der Lesespalte** (auch bei eingeklappter Gliederung; ersetzt den D28-Wortlaut), mit N4 in EINER
+Kopfzeile zusammen mit den Griffen ⚖/Ansicht (−44 px); D33 «Ansicht Rechtsprechung» oben rechts →
+**Entscheid 7.9.: Variante A**, Panel als überlagerndes Blatt mit Δ=0 (Variante C «zweites Pane»
+als Folgeschritt, §8). N1: der Kopfzähler ist die Bezugsgrösse (gleiche Zahl wie die Bezüge-Zeile),
+gefiltert wird nur im Panel. Protokoll: `R6E-LESER.md`, `R6F-LESER.md`, `R6G-LESER.md`.
+
+**Gesamtprüfung (Schluss, 7.9.2026).** Zwei Linsen: (a) Ästhetik hell/dunkel über alle Bereiche —
+11 hoch/11 mittel, abgearbeitet in den Fixern GA (Köpfe, Dopplungen, Übersichten) und GB (Leben,
+Registerfarbe, Kästen), Protokolle `GA-KOEPFE.md`, `GB-LEBEN.md`; (b) Funktions-Inventar im
+Browser — **90 OK · 6 Defekt · 0 verloren**, Defekte behoben in `KF-KLEINFUNDE.md` (Tagerechner,
+Kopf-Suche/Esc), `D5-VORLAGEN.md` (Pflichtprüfung) und `D6-GESETZE.md` (Schnellzugriff beim
+Filtern). Damit ist Davids Auflage «keine schwer erarbeitete Funktion darf verloren gehen» belegt,
+nicht behauptet.
+
 Reihenfolge wie vorgeschlagen — nach (b) kippt R1 allein 202+141+89 Dateien optisch, ohne
 sie anzufassen. Einzige Abweichung zum Zielbild: `.lc-glass` wird **nicht entfernt/umbenannt**,
 nur entkernt (Druck-Tor, (f)).
@@ -297,6 +337,14 @@ Ziff. 9 (Arbeitsmappe) · `abnahme/design-identitaet/uebergabe/R11-PLAN.md` M5 u
 Der Schritt hängt an der Landung von `W2·24-DESIGN-IDENTITAET` (`dep`), weil beide
 dieselbe Datei-Fläche berühren.
 
+**Nachtrag 7.9.2026 (R13).** Die zweite Reiter-Runde hat Anheften erneut als Kandidat geprüft und
+bewusst hier gelassen: `W2·25` bleibt ein eigener Schritt, weil Anheften den flachen Reiter-Speicher
+umsortieren muss (Risiko D16) und nicht als zweite Anzeige-Ordnung nebenherlaufen darf. Ebenfalls
+aus R13 entschieden und für `W2·25` bindend: «+» erzeugt keinen zweiten leeren Reiter, solange ein
+leerer offen ist; ein Klick auf den bereits aktiven Reiter tut nichts (Browser-Norm); der leere
+Reiterstreifen auf «/» behält seine reservierte Höhe (CLS 0) — die Frage, ob der «+»-Knopf allein
+genügt, liegt bei David.
+
 **Ziel (zwei Teile, in dieser Reihenfolge).**
 1. **Anheften.** OR/ZGB/ZPO … lassen sich anheften: schmaler Reiter nur mit Kürzel, ganz
    links, ohne ✕ (Schliessen nur über das Kontextmenü), überlebt «Alle schliessen» und den
@@ -329,3 +377,30 @@ inkl. Lesestellung. **Rot-Probe Pflicht** (heute kein `fest`-Feld auf HEAD).
 **Offen, wartet auf David (nie selbst entscheiden):** ob der leere 34-px-Reiterstreifen auf
 «/» mit dem «+»-Knopf allein genügt (R11-Auflage R2) — das ist der Ort, an dem der feste
 Reiter zuerst sichtbar würde.
+
+## §8 · Folgeschritte nach der Landung (Stand 7.9.2026)
+
+Gebucht in `ROADMAP.md` unter `W2·24-DESIGN-IDENTITAET` als eigene Zeilen; hier steht das Detail.
+
+1. **`W2·24-C` · ⚖ öffnet Entscheide im zweiten Pane (Variante C zu D33).** Heute Variante A
+   (überlagerndes Blatt, Δ=0 — gewählt, weil sie ohne Layout-Sprung auskommt). Variante C legt das
+   Rechtsprechungs-Panel als echtes zweites Pane an (Split-Regel M3): Zustand in der Adresse,
+   erneuter Klick schliesst, Reiter für beide Panes. Voraussetzung: Pane-Kopf-Name (L6) entschieden.
+2. **Bezüge-Zeile: Kopfzähler gefiltert vs. ungefiltert** (`R5-F1K` §7). Entscheid N1 vom 7.9.2026:
+   der Kopfzähler ist die Bezugsgrösse, gefiltert wird nur im Panel. Offen ist, ob beide Zahlen
+   sichtbar werden sollen («11 · 3 gefiltert») — Produktentscheid David. Löst den alten Punkt D20 ab.
+3. **R13-11 · Reiter-Adress-Kern.** Reiter werden an mehreren Stellen über Pfad-Vergleiche
+   identifiziert (Wiederherstellen, Dublettenerkennung, Kurzform, Lesestellung). Ein gemeinsamer
+   Adress-/Identitäts-Kern macht die vier Stellen zu einer; verhaltensneutral (§6), Golden unberührt.
+4. **Rechtsprechung: Geschäftsnummer-Kurzform statt Allowlist-Eintrag.** Lange Geschäftsnummern
+   reissen die R8-Regel «nichts abgeschnitten» und stehen darum heute in
+   `e2e/kein-abschnitt.allow.json`. Richtig wäre eine Kurzform-Regel im Rubrum; die Allowlist-Zeile
+   fällt dann weg (Rückbau statt Bewachung, §17-Gegengewicht).
+5. **`StatusBadge` «maschinell».** Die Gesamtprüfung GB fand Angaben, die maschinell erzeugt sind
+   und heute als «entwurf» laufen — §8 Ehrlichkeit verlangt einen eigenen, sichtbaren Zustand.
+   Fachliche Abnahme David, weil es die Statuslehre berührt.
+6. **`qsui-hierarchie`: Vorlagen-Schranke 1.2533.** Die Schranke wurde für die Vorlagen-Köpfe
+   gesetzt; nach R7/R9 prüfen, ob sie auf den Regelwert zurück kann — sonst begründet festschreiben.
+
+Ausserdem gebucht, aber eigene Schritte: `W2·25-ARBEITSMAPPE` (Anheften, §7 dieses Fahrplans) und
+`W2·24-PERF-REST` (`fremdRoutingFormB`/`artikelnPluralVerweise`, erst verifizieren, dann fixen).

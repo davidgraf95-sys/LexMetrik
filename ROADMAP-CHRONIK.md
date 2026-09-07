@@ -3053,3 +3053,46 @@ unverändert weiter.*
 
   - [ ] **K-13 · Systematik-Bäume 7 Kantone** *(F6≡F43)* — **ZH erledigt 31.8.2026** (14 amtliche Ordner aus der server-gerenderten Suchseite, `scripts/normtext/zh-systematik.ts` → Generator-Zweig; Zuordnung über das Nummernband, 20/20 gegen den amtlichen JSON-Endpunkt bestätigt). Offen: GE/VD/TI/SZ/NE/JU (+GL-Index-Ordinalzahlen, +ZH-Band-Zweig); Quell-Erhebung je Kanton empirisch und browserlos. §1-A.
 
+# Umschichtung 7.9.2026 — erledigte Schritte und Teilerfolge aus dem Steuerungsplan
+
+*Anlass: Buchung `W2·24-DESIGN-IDENTITAET` (PR #739) riss den ROADMAP-Deckel (102.3 / 100 KB vor
+der Buchung). Wörtlich übernommen, nicht zusammengefasst. `W2·23-STARTSEITE-V4` und
+`W3-TARIF-STAND` behalten im Plan einen ✅-Einzeiler samt `@meta` — der erste, weil er der einzige
+Link auf `FAHRPLAN-STARTSEITE-V4.md` ist (`check:plan` Regel FAHRPLAN-Link), der zweite, weil
+offene Folgeschritte unter ihm hängen.*
+
+## W2·23-STARTSEITE-V4 — Startseite V4 «Werkbank» *(done, verschoben 7.9.2026)*
+
+- [x] **Startseite V4 «Werkbank»: Einstieg mit Gesetzes-Schwerpunkt, persönliche Begrüssung, Kopf- und Seitenleiste** *(`W2·23-STARTSEITE-V4`, Auftrag David 5.9.2026)*
+  <!-- @meta id: W2·23-STARTSEITE-V4 · status: done · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-STARTSEITE-V4.md -->
+  Die Startseite erklärt auf dem ersten Bildschirm «Schweizer Recht an einem Ort» (Gesetze
+  Bund + Kantone, Entscheide, Materialien — verzahnt), begrüsst persönlich (Tageszeit-Pool,
+  Wunsch David), macht Norm · Entscheid · Frist mit einem Zug erreichbar; Schnellrechner
+  schrumpft auf eine Zeile, News wird ehrlich «Jüngste Entscheide im Korpus» mit Korpus-Stand;
+  Topbar auf «/» ohne Zweitsuche, Schriftregler nach `/einstellungen`, Seitenleiste mit
+  Korpus-Stand. Council-Schalter V3 durch David geöffnet (Chat 5.9.2026). Grenzen §1/§3/§8.
+  **Detail:** [FAHRPLAN-STARTSEITE-V4.md](fahrplaene/FAHRPLAN-STARTSEITE-V4.md) §1.
+
+## W3-TARIF-STAND — Tarif-Stammdaten: Stand maschinenlesbar + Drift-Tor *(done, Rumpf verschoben 7.9.2026)*
+
+- [x] **Tarif-Stammdaten: Stand maschinenlesbar + Drift-Tor** *(`W3-TARIF-STAND`, Rules-as-Code-Sichtung 5.9.2026, Entscheid David 5.9.2026)*
+  <!-- @meta id: W3-TARIF-STAND · status: done · blocker: null · dep: [] · feld: werkzeuge -->
+  Ziel: die ~950 Tarif-Einträge in `src/data/tarif/**` werden maschinell auf Fassungs-Drift prüfbar
+  (§7 d für Tarifzahlen — heute nur für Normtext): `stand` als ISO-Datum plus Fassungskennung der
+  Quelle je Eintrag, Tor `check:tarif-drift` mit Rot-Beweis am SG-2808-Fall, Verfallsregister aus dem
+  Tor statt aus Handzeilen. **Grenzen:** verhaltensneutral (Golden byte-gleich), keine Tarifwert-
+  Änderung, keine Zeitachse und kein Stichtag in den Engines — das ist ein eigener Folgeschritt mit
+  offener Vorfrage (frühere Fassungen bei lexfind/zh.ch/belex adressierbar?). Risikopfad ⇒ Gegenprüfung.
+  **Detail:** [rules-as-code-sichtung-2026-09-05.md](bibliothek/recherche/rules-as-code-sichtung-2026-09-05.md) §6.
+
+## W2·24-DESIGN-IDENTITAET — Zielbeschreibung vor der Landung *(Rumpf verschoben 7.9.2026)*
+
+- [~] **Design-Identität: eigene Farb- und Schrift-Handschrift** *(`W2·24-DESIGN-IDENTITAET`, David 5.9.2026)*
+  <!-- @meta id: W2·24-DESIGN-IDENTITAET · status: wip · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
+  Weg von Creme+Gold, Versal-Etiketten und weichen Karten (Verwechselbarkeit mit legaldeadline.ch):
+  Token-Tausch, flip-reversibel; erst drei Varianten-Bilder nach Landung W2·23, David wählt.
+  **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §1.
+  - [ ] **Bezüge-Zeile am Artikel: Umfang und Form** (D20) — nach R9 prüfen, ob Entscheide/Materialien am Rand noch stimmen. **Wartet auf David.**
+
+*(D20 ist mit der Landung 7.9.2026 in die Zeile «Bezüge-Zeile: Kopfzähler gefiltert/ungefiltert»
+aufgegangen — Entscheid N1 vom 7.9.2026: Kopfzähler = Bezugsgrösse, Filter nur im Panel.)*

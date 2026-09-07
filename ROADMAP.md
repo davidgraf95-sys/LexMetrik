@@ -464,24 +464,25 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
 
 - [x] **Startseite V4 «Werkbank»: Einstieg mit Gesetzes-Schwerpunkt, persönliche Begrüssung, Kopf- und Seitenleiste** *(`W2·23-STARTSEITE-V4`, Auftrag David 5.9.2026)*
   <!-- @meta id: W2·23-STARTSEITE-V4 · status: done · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-STARTSEITE-V4.md -->
-  Die Startseite erklärt auf dem ersten Bildschirm «Schweizer Recht an einem Ort» (Gesetze
-  Bund + Kantone, Entscheide, Materialien — verzahnt), begrüsst persönlich (Tageszeit-Pool,
-  Wunsch David), macht Norm · Entscheid · Frist mit einem Zug erreichbar; Schnellrechner
-  schrumpft auf eine Zeile, News wird ehrlich «Jüngste Entscheide im Korpus» mit Korpus-Stand;
-  Topbar auf «/» ohne Zweitsuche, Schriftregler nach `/einstellungen`, Seitenleiste mit
-  Korpus-Stand. Council-Schalter V3 durch David geöffnet (Chat 5.9.2026). Grenzen §1/§3/§8.
+  ✅ gelandet 5.9.2026 (#730/#732) — Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026. Der
+  Eintrag bleibt hier, bis `FAHRPLAN-STARTSEITE-V4.md` archiviert ist (einziger Link, `check:plan`).
   **Detail:** [FAHRPLAN-STARTSEITE-V4.md](fahrplaene/FAHRPLAN-STARTSEITE-V4.md) §1.
 
-- [~] **Design-Identität: eigene Farb- und Schrift-Handschrift** *(`W2·24-DESIGN-IDENTITAET`, David 5.9.2026)*
-  <!-- @meta id: W2·24-DESIGN-IDENTITAET · status: wip · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
-  Weg von Creme+Gold, Versal-Etiketten und weichen Karten (Verwechselbarkeit mit legaldeadline.ch):
-  Token-Tausch, flip-reversibel; erst drei Varianten-Bilder nach Landung W2·23, David wählt.
-  **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §1.
+- [x] **Design-Identität: eigene Farb- und Schrift-Handschrift** *(`W2·24-DESIGN-IDENTITAET`, David 5.9.2026)*
+  <!-- @meta id: W2·24-DESIGN-IDENTITAET · status: done · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
+  ✅ **erledigt 7.9.2026 (PR #739)** — Handschrift «Sammlung»: R1–R13 samt Nachzügen, Gesamtprüfung
+  (Ästhetik + Funktions-Inventar 90 OK / 0 verloren), Reglement §F0. Protokolle
+  `abnahme/design-identitaet/`; Zielbeschreibung: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026.
+  **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §1 — Stand je Runde dort in §6, Folgeschritte in §8.
+  - [ ] **⚖ öffnet Entscheide im zweiten Pane** *(`W2·24-C`, Variante C zu D33)* — heute Variante A (überlagerndes Blatt, Δ=0); C = echtes zweites Pane (Split-Regel M3). Fahrplan §8.
+  - [ ] **Bezüge-Zeile: Kopfzähler gefiltert/ungefiltert** *(R5-F1K §7; löst D20 ab)* — Kopfzähler = Bezugsgrösse (Entscheid N1), Panel filtert; Anzeige beider Zahlen offen.
+  - [ ] **Nachzüge aus R13 und Gesamtprüfung** — R13-11 Reiter-Adress-Kern · Geschäftsnummer-Kurzform statt R8-Allowlist · `StatusBadge` «maschinell» (§8) · `qsui-hierarchie` Vorlagen-Schranke 1.2533. Fahrplan §8.
   - [ ] **L6 · PaneKopf-Name vs. «keine Doppelkrume»** (17.8.2026) — primäres Pane ohne eigenen Namen, Platzhalter «(aktuelle Adresse)»; Kurzform-Vorschlag offen. **Wartet auf David.**
-  - [ ] **Leerer 34-px-Reiterstreifen auf «/»** (R11-Auflage R2) — Höhe bleibt reserviert (CLS 0); offen ist, ob der «+»-Knopf allein genügt. **Wartet auf David.**
-  - [ ] **Bezüge-Zeile am Artikel: Umfang und Form** (D20) — nach R9 prüfen, ob Entscheide/Materialien am Rand noch stimmen. **Wartet auf David.**
+  - [ ] **Leerer 34-px-Reiterstreifen auf «/»** (R11-Auflage R2, R13 bestätigt) — Höhe bleibt reserviert (CLS 0); offen ist, ob der «+»-Knopf allein genügt. **Wartet auf David.**
+  - [ ] **ZGB-Reiter am Dokumentanfang** — @900 px zeigt «ZGB» statt «Art. 1 ZGB» (44-px-Kopf, R6d). **Wartet auf David.**
+  - [ ] **Bestätigung der Orchestrator-Entscheide 7.9.2026** (D33 A · D32 · N1 · N4 · R13 — Liste in der STRUKTUR-Karte 6./7.9.). **Wartet auf David.**
   - [ ] **Budget-Entscheid Entry 99,5 %** (59.7 / 60.0 KB) — der nächste Kopf-Bau reisst das Budget: Lazy-Laden oder Budget-Hebung (§15). **Wartet auf David.**
-  - [ ] **Jules-Kandidaten** (grüne Spur/Jules, nach Landung W2·24): toter CSS-Rückbau `[data-lr-spiegel]`/`.lr-notiz*`/alte Druckregeln in `index.css` · Datei-Splits `ArtikelLeser.tsx` (> 800 Z.) und `Reiterleiste.tsx` (627 Z., gemessen 6.9.: 855) · Typ-Härtungen `lib/tabs.ts`/`tabGruppen.ts` · Allowlist-Pflege `e2e/kein-abschnitt.allow.json`.
+  - [ ] **Jules-Kandidaten** (grüne Spur, nach Landung W2·24): toter CSS-Rückbau `[data-lr-spiegel]`/`.lr-notiz*`/alte Druckregeln in `index.css` · Typ-Härtungen `lib/tabs.ts`/`tabGruppen.ts` · Allowlist-Pflege `e2e/kein-abschnitt.allow.json`. Datei-Splits erledigt (ArtikelLeser R6F; `Reiterleiste.tsx` 7.9. gemessen 650 Z.).
 
 - [ ] **Reiter anheften und Arbeitsmappe** *(`W2·25-ARBEITSMAPPE`, §5a Ziff. 5/9 · R11-M5)*
   <!-- @meta id: W2·25-ARBEITSMAPPE · status: ready · blocker: null · dep: [W2·24-DESIGN-IDENTITAET] · feld: design · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
@@ -605,12 +606,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
 
 - [x] **Tarif-Stammdaten: Stand maschinenlesbar + Drift-Tor** *(`W3-TARIF-STAND`, Rules-as-Code-Sichtung 5.9.2026, Entscheid David 5.9.2026)*
   <!-- @meta id: W3-TARIF-STAND · status: done · blocker: null · dep: [] · feld: werkzeuge -->
-  Ziel: die ~950 Tarif-Einträge in `src/data/tarif/**` werden maschinell auf Fassungs-Drift prüfbar
-  (§7 d für Tarifzahlen — heute nur für Normtext): `stand` als ISO-Datum plus Fassungskennung der
-  Quelle je Eintrag, Tor `check:tarif-drift` mit Rot-Beweis am SG-2808-Fall, Verfallsregister aus dem
-  Tor statt aus Handzeilen. **Grenzen:** verhaltensneutral (Golden byte-gleich), keine Tarifwert-
-  Änderung, keine Zeitachse und kein Stichtag in den Engines — das ist ein eigener Folgeschritt mit
-  offener Vorfrage (frühere Fassungen bei lexfind/zh.ch/belex adressierbar?). Risikopfad ⇒ Gegenprüfung.
+  ✅ gelandet 6.9.2026 (#734) — Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026. Die offenen
+  Folgeschritte darunter bleiben unverändert stehen.
   **Detail:** [rules-as-code-sichtung-2026-09-05.md](bibliothek/recherche/rules-as-code-sichtung-2026-09-05.md) §6.
   - [ ] **Folgeschritt A · Wert-Zeitreihe je Tarif** *(nicht vor dem Tor)* — `{ab, wert, quelle, stand}` je Eintrag, UI-Eingabe «massgebender Zeitpunkt», Zeitreihen-Golden (ein Sachverhalt über alle Rechtsstände, Muster OpenFisca `tests/rates_rebates/time.yaml`); Vorfrage: frühere Fassungen bei lexfind/zh.ch/belex stabil adressierbar? Typ-Muster bitemporal (`nicia-ai/typegraph`, MIT). Quelle: Rules-as-Code-Sichtung 5.9.2026 §5/§6.
   - [ ] **Folgeschritt B · Rechtsstand als Datumsbedingung neben der Regel** — `erbteilung.ts:200` und `gewaehrleistung.ts:71` von der `if datum >= …`-Weiche im Rumpf auf zwei nebeneinanderstehende, je mit Norm-Anker und Geltungsintervall versehene Regeln umstellen (verhaltensneutral, bestehende Mehr-Rechtsstand-Tests bleiben unverändert §6.3); Konvention dazu: nicht codierte Teilnormen als Kommentar mit Grund stehen lassen (Muster OpenFisca `CONTRIBUTING.md`). Risikopfad ⇒ Gegenprüfung. Quelle: Rules-as-Code-Sichtung 5.9.2026 §4/§5.
