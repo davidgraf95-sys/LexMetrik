@@ -287,8 +287,8 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
       style={{
         ...leserCssVariablen({
           stufe, vollflaechig: !umgebung.imPane, suchZoneKlebt,
-          // D28-Nachzug: hoch nur, wenn die Zähler-Zeile wirklich steht.
-          sucheAktiv: m.sucheAktiv && !zweiSpalten,
+          // D28 + W2·24-F: nur bei stehender Zähler-Zeile, roher Feldwert (`zoneHoch`).
+          zoneHoch: m.suche.trim() !== '' && !zweiSpalten,
           suchInZeile, spurVersatzRem: bild.spurVersatzRem,
         }),
         // D33: Rahmen-Aufweitung und dynamischer Lesemass-Deckel sind mit der

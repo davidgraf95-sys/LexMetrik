@@ -93,8 +93,42 @@ export interface LeserGeometrieLage {
   vollflaechig: boolean;
   /** Trägt der klebende Kopf-BLOCK die Such-Zone? (Ä19: nur ohne Spalte.) */
   suchZoneKlebt: boolean;
-  /** Läuft eine Suche? Die Zone ist dann höher (zweite Zeile mit den Zahlen). */
-  sucheAktiv: boolean;
+  /** ── W2·24-F (7.9.2026) · DIE ZONE IST HOCH, SOBALD IM FELD ETWAS STEHT ───
+   *  Die Zone ist höher, wenn die Zähler-Zeile darunter Platz braucht. Die
+   *  Frage LAUTETE bis hierher «läuft eine Suche?» und wurde vom ENTPRELLTEN
+   *  Suchwert beantwortet (`m.sucheAktiv`, 200 ms). Das war der Defekt:
+   *
+   *  GEMESSEN 7.9.2026, Preview 4410, `/gesetze/bund/BV` @390, Drossel 20×,
+   *  Geste `pressSequentially('Kanton', 60 ms)` wie in `e2e/leser-r1-r2.e2e.ts`
+   *  (A9-DoD): `--leser-v3-such-h` sprang 2.75rem → 4.25rem, der klebende Kopf
+   *  93 → 117 px, und die Lesespalte darunter (`LeserLeseZeile.tsx:136`,
+   *  `DIV.relative min-w-0`) rutschte mit — **CLS 0.019140**, `hadRecentInput
+   *  = false`, fremd 0. Auf schneller CPU verfällt die Entprellung NACH dem
+   *  letzten Tastendruck und der Sprung fällt ins 500-ms-Eingabefenster; auf
+   *  langsamer CPU dauert EIN Tastendruck länger als 200 ms, die Entprellung
+   *  feuert MITTEN im Tippen, und der Browser verbucht den Sprung als
+   *  eingabefrei. Dasselbe sieht ein Leser auf einem schwachen Telefon.
+   *
+   *  DER WERT KOMMT DARUM VOM ROHEN FELDWERT (`m.suche.trim() !== ''`, Rahmen —
+   *  `.trim()`, damit ein reines Leerzeichen die Zone nicht dauerhaft hochstellt,
+   *  ohne dass je eine Zähler-Zeile käme; im Ruhezustand deckungsgleich mit
+   *  `sucheFeldLeer` des Modells, das dieselbe Frage für die Treffer stellt):
+   *  die Höhe wächst in DERSELBEN Eingabe-Aufgabe wie der Tastendruck, also
+   *  eingabe-nah. Der Name sagt jetzt, was er meint — die Zone ist HOCH, nicht
+   *  «die Suche läuft»; das eine ist Geometrie und sofort, das andere ist die
+   *  Datenlage und entprellt. Zwei Fragen, zwei Namen (§5).
+   *
+   *  PREIS, offengelegt (§8): zwischen erstem Zeichen und Entprellung steht die
+   *  Zone 200 ms lang hoch, aber ohne Zähler-Zeile — reservierter Platz statt
+   *  falscher Zahlen. Eine sofort mitgerenderte Zeile müsste «0 Artikel»
+   *  behaupten, solange die entprellten Treffer fehlen. Der Ruhezustand ist
+   *  unberührt: leeres Feld ⇒ `SUCH_H_RUHE` wie bisher (Leeren wirkt ohnehin
+   *  sofort, `inhalt-zustand.tsx` entprellt nur das Tippen).
+   *  VERWORFEN (Weg 1 vom 18.8.2026): 24 px dauerhaft reservieren — das nimmt
+   *  jedem Leser, der nie sucht, Lesehöhe @390.
+   *  ROT ZU BEKOMMEN (§6.7): hier wieder `m.sucheAktiv` einsetzen ⇒ die
+   *  A9-DoD-Sonde misst unter Drossel 20× erneut CLS 0.01914. */
+  zoneHoch: boolean;
   /** ── N4 (David 7.9.2026) · EINE KOPFZEILE STATT ZWEIER REIHEN ─────────────
    *  Steht die Such-Zone IN der Kopfzeile (statt als zweite Reihe darunter)?
    *  Gemessen 7.9.2026 @1440: der klebende Block war 100 px hoch — Kopfzeile
@@ -118,7 +152,7 @@ export interface LeserGeometrieLage {
  * `leser-v3-kopf-buendig` und `leser-v3-suchfeld-ueberall` messen beide Enden).
  */
 export function leserCssVariablen(lage: LeserGeometrieLage): CSSProperties {
-  const { stufe, vollflaechig, suchZoneKlebt, sucheAktiv, suchInZeile, spurVersatzRem } = lage;
+  const { stufe, vollflaechig, suchZoneKlebt, zoneHoch, suchInZeile, spurVersatzRem } = lage;
   return {
     '--leser-v3-kopf-h': kopfHoehe(stufe),
     // A-2: in der Einzelansicht klebt der Kopf direkt unter der Topbar — die
@@ -128,7 +162,7 @@ export function leserCssVariablen(lage: LeserGeometrieLage): CSSProperties {
     // Ä19: Höhe der Such-Zone — 0, wo die Leiste als Spalte das Feld trägt.
     // Zwei feste Werte, damit `--nt-stick` unten aus derselben Quelle rechnet.
     // B9: die zwei Werte gehören der Zone (`./SuchZone`), nicht dieser Datei.
-    '--leser-v3-such-h': suchZoneKlebt ? (sucheAktiv ? SUCH_H_AKTIV : SUCH_H_RUHE) : '0rem',
+    '--leser-v3-such-h': suchZoneKlebt ? (zoneHoch ? SUCH_H_AKTIV : SUCH_H_RUHE) : '0rem',
     // Ä1: Wrapper-Polsterung, die der Kopf verschluckt. Vorgabe in index.css
     // (Shell `py-8 sm:py-12`); im Pane sind es `py-6` (Pane.tsx).
     ...(vollflaechig ? {} : { '--leser-v3-kopf-luecke': '1.5rem' }),
