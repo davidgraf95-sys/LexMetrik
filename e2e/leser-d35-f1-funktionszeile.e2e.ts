@@ -13,10 +13,20 @@
 //  (c) ZÄHLER = LISTE. Die Zahl auf dem Griff ist die Länge dessen, was er
 //      aufklappt (§8) — hier an der Rubrik «Verweise» gemessen, die ohne jeden
 //      Shard auskommt und darum eine harte, nicht wartende Gleichung ist.
-//  (d) AKTIONEN OHNE HOVER. «Zitat · Link · Amtliche Fassung ↗» stehen in der
-//      Zeile mit Deckkraft 1 und WCAG-2.5.8-Höhe, ohne dass die Maus etwas
-//      berührt — und sie stehen dort GENAU EINMAL: die alte Kopf-Variante ist
-//      weg, nicht zusätzlich (§5).
+//  (d) AKTIONEN OHNE HOVER. «Zitat · Link · Amtliche Fassung ↗ · ⧉ Daneben
+//      öffnen» stehen in der Zeile mit Deckkraft 1 und WCAG-2.5.8-Höhe, ohne
+//      dass die Maus etwas berührt — und sie stehen dort GENAU EINMAL: die alte
+//      Kopf-Variante ist weg, nicht zusätzlich (§5).
+//  (f) «⧉ DANEBEN ÖFFNEN» IST DA UND WIRKT. Die vierte Aktion des Auftrags. Sie
+//      war am 7.9.2026 gestrichen worden, weil die Bedingung
+//      `kannOeffnen && !istOffen(pfad + '#art-…')` an keinem Artikel wahr wird
+//      (`tabSchluessel` streift den Hash) — der Schluss war falsch, nicht die
+//      Messung: die App löst dieselbe Frage am Erlass-Kopf seit M8 über
+//      `naechsteInstanz` («…?r=2»), und diese Zeile benutzt jetzt denselben Weg
+//      (§5). Gemessen wird beides: der Knopf STEHT mit Deckkraft 1 an ≥ lg, und
+//      sein Klick öffnet wirklich ein zweites Fenster (`[data-pane="sekundaer"]`)
+//      mit diesem Artikel darin. Unter lg ist er ABWESEND — dort geht kein
+//      Fenster auf, und eine Zusage ohne Wirkung wäre §8-widrig.
 //  (e) DAS SKELETT ÜBERRESERVIERT NICHT. Während der Entscheid-Shard unterwegs
 //      ist, hält die Rubrik einen Boden frei (`min-h-bez-skelett`). Er ist ein
 //      BODEN: der Block darf beim Eintreffen der Liste nur WACHSEN, nie
@@ -36,6 +46,11 @@
 //    Erstfassung der Sonde falsch grün (s. den Absatz bei (d) unten).
 //  · in `tailwind.config.js` `'bez-skelett': '3rem'` auf `'40rem'` setzen
 //    (= das Skelett reserviert mehr, als der Inhalt braucht)      ⇒ (e) rot
+//  · in `parts/ArtikelAktionen.tsx` `naechsteInstanz(panePfad)` durch
+//    `panePfad` ersetzen (= der eigene, immer offene Pfad; `Shell.tsx:357`
+//    verwirft ihn stillschweigend)                                ⇒ (f) rot
+//  · dort die Bedingung `{kannOeffnen && (` um `&& false` ergänzen (= die
+//    Streichung vom 7.9.2026)                                     ⇒ (f)+(d) rot
 import { test, expect, type Page } from '@playwright/test';
 
 const ORT = '/gesetze/bund/OR#art-336_c';
@@ -124,7 +139,7 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     await oeffne(page);
     const artikel = page.locator(`#art-${ART}`);
     // GENAU EINMAL je Artikel: die Kopf-Variante ist gelöscht, nicht gedoppelt.
-    for (const name of [/^Zitat kopieren:/, /^Permalink kopieren$/, /^Amtliche Fassung von /]) {
+    for (const name of [/^Zitat kopieren:/, /^Permalink kopieren$/, /^Amtliche Fassung von /, /daneben öffnen$/]) {
       expect(await artikel.getByLabel(name).count(), `«${name}» steht nicht genau einmal am Artikel`).toBe(1);
     }
     // Ohne jede Maus-Berührung sichtbar, mit Trefferfläche nach WCAG 2.5.8.
@@ -149,7 +164,9 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
         sichtbar: (el as HTMLElement).checkVisibility({ opacityProperty: true, visibilityProperty: true }),
       };
     }));
-    expect(mess.length, 'keine Aktionsgruppe in der Funktionszeile').toBe(3);
+    // VIER an ≥ lg: die drei Kopier-/Outbound-Aktionen und «⧉ Daneben öffnen».
+    // Der vierte Knopf steht NUR hier — unter lg fällt er weg (s. Fall (f)).
+    expect(mess.length, 'keine Aktionsgruppe in der Funktionszeile').toBe(4);
     for (const a of mess) {
       expect(a.deckkraft, `«${a.text}» steht mit Deckkraft ${a.deckkraft} da`).toBe(1);
       expect(a.hoehe, `«${a.text}» misst ${a.hoehe} px hoch (WCAG 2.5.8: ≥ 24)`).toBeGreaterThanOrEqual(24);
@@ -190,6 +207,51 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     // Und der Boden ist ein Boden: er hält überhaupt Platz frei (sonst wäre die
     // Reservierung eine Zusage ohne Wirkung).
     expect(hoeheSkelett, 'das Skelett reserviert gar nichts').toBeGreaterThanOrEqual(48);
+  });
+
+  test('(f) «⧉ Daneben öffnen» steht sichtbar da — und öffnet wirklich ein zweites Fenster', async ({ page }) => {
+    await oeffne(page);
+    const artikel = page.locator(`#art-${ART}`);
+    const knopf = artikel.getByRole('button', { name: /^Art\. 336c OR daneben öffnen$/ });
+    // (1) ER IST DA. Genau einmal, sichtbar, ohne Hover, mit voller Deckkraft
+    //     über die ganze Vorfahren-Kette (dieselbe Messweise wie (d) — Deckkraft
+    //     ist kumulativ, nicht vererbt).
+    await expect(knopf, 'die vierte Aktion des Auftrags fehlt am Artikel').toHaveCount(1);
+    await expect(knopf).toBeVisible();
+    const deckkraft = await knopf.evaluate((el) => {
+      let d = 1;
+      for (let n: Element | null = el; n && n !== document.body; n = n.parentElement) d *= Number(getComputedStyle(n).opacity);
+      return d;
+    });
+    expect(deckkraft, `«Daneben öffnen» steht mit Deckkraft ${deckkraft} da`).toBe(1);
+    expect((await knopf.boundingBox())!.height, 'WCAG 2.5.8: ≥ 24 px hoch').toBeGreaterThanOrEqual(24);
+
+    // (2) ER WIRKT. Vor dem Klick gibt es kein zweites Fenster; danach steht
+    //     eines da, und DIESER Artikel steht darin. Genau das konnte die
+    //     gestrichene Fassung nicht: `Shell.tsx:357` verwirft einen Pfad, der
+    //     schon offen ist — der eigene ist es immer.
+    await expect(page.locator('[data-pane="sekundaer"]')).toHaveCount(0);
+    await knopf.click();
+    const sek = page.locator('[data-pane="sekundaer"]');
+    await expect(sek, 'der Klick öffnet kein zweites Fenster').toBeVisible({ timeout: 15_000 });
+    await expect(sek.locator(`#art-${ART}`)).toBeVisible({ timeout: 20_000 });
+    // Und er landet AM ANKER, nicht am Erlassanfang: der Artikel steht im
+    // oberen Drittel des Fensters, nicht 149'000 px tiefer.
+    const abstand = await sek.evaluate((s) => {
+      const a = s.querySelector('#art-336_c')!.getBoundingClientRect();
+      return Math.round(a.top - s.getBoundingClientRect().top);
+    });
+    expect(abstand, `Art. 336c steht ${abstand} px unter der Fensteroberkante — der Anker ging verloren`)
+      .toBeLessThan(400);
+  });
+
+  test('(f) @1023: kein Knopf, wo kein Fenster aufgeht (§8)', async ({ page }) => {
+    // `kannOeffnen` ist erst ab lg (1024) wahr. Ein Knopf, der nichts bewirken
+    // kann, wäre eine Zusage ohne Wirkung — er darf unter lg NICHT stehen.
+    await page.setViewportSize({ width: 1023, height: 900 });
+    await oeffne(page);
+    await expect(page.locator(`#art-${ART}`).getByRole('button', { name: /daneben öffnen$/ }))
+      .toHaveCount(0);
   });
 
   test('(a)+(d) @390: dieselbe Zeile, derselbe Baustein', async ({ page }) => {

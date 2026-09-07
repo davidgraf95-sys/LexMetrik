@@ -42,8 +42,30 @@ test('V3/A34/Bug1 (≥lg): Split-View öffnen erhält die Leseposition, springt 
   await expect(page.locator('[data-v3-kopf]')).toBeVisible({ timeout: 20_000 })
   await expect(page.locator('#art-1')).toBeAttached()
   // … dann weit nach unten zu Art. 684 lesen (Hash bleibt #art-1).
+  //
+  // ── SETUP-NACHZUG W2·24-D35-F1 (7.9.2026, §6.3 deklariert) ────────────────
+  // Der Einstieg unten braucht den Panel-Eintrag des AKTIVEN Artikels, und
+  // «aktiv» ist der Artikel AN der Bezugslinie (`ankerLandepunkt`, gemessen
+  // 154 px unter der Container-Oberkante — `inhalt-hooks.tsx`, Zwischenraum-
+  // Regel: Artikel, die oberhalb der Linie bereits geendet haben, fallen aus
+  // dem Kandidatensatz). `scrollIntoViewIfNeeded` scrollt MINIMAL: es sagt nur
+  // zu, dass Art. 684 SICHTBAR ist — WELCHER Artikel dann an der Linie steht,
+  // hängt an der Höhe des VORGÄNGERS. Genau das war bisher Zufall, nicht Zusage.
+  //   GEMESSEN 7.9.2026 (ZGB @1440, Preview aus eigenem `dist/`):
+  //   · main 8d398874e — Art. 683 = y −24…108, endet ÜBER der Linie, fällt aus
+  //     dem Satz; Art. 684 (y 205) wird aktiv. Der Test lief grün.
+  //   · mit der Funktionszeile am Artikelende (D35-F1, +43 px je Artikel) —
+  //     Art. 683 = y 24…199, steht damit AN der Linie und ist aktiv. Sein Panel
+  //     ist leer («Zu Art. 683 ist kein Entscheid … erfasst»), der Einstieg fand
+  //     keinen Chip: «element(s) not found» (CI 34134684969, Shard 8).
+  // Der Fall prüft den SPLIT-EINSTIEG und die Leseposition, nicht die
+  // Höhenzufälligkeit des Vorgänger-Artikels. Er stellt Art. 684 darum
+  // ausdrücklich an die Linie: `block: 'start'` landet über die
+  // `.nt-anker`-`scroll-margin-top` (= derselbe `ankerLandepunkt`) genau dort.
+  // KEINE Assertion und keine Zusage berührt (§6.3) — nur die Vorbedingung, die
+  // der Fall immer schon MEINTE, steht jetzt da, statt sich zu ergeben.
   const ziel = page.locator('#art-684')
-  await ziel.scrollIntoViewIfNeeded()
+  await ziel.evaluate((el) => el.scrollIntoView({ block: 'start' }))
   await page.waitForTimeout(400)
   const scrollVor = await page.evaluate(() => window.scrollY)
   expect(scrollVor).toBeGreaterThan(5000) // wirklich tief im Erlass
