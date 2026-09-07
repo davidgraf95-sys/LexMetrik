@@ -19,7 +19,7 @@ import { SatzspiegelKontext } from './satzspiegel';
 // Inhalte kommen als Slots herein, sie kennt weder Modell noch Erlass.
 
 export function LeserLeseZeile({
-  bild, vollflaechig, onSchieneAuf, leiste, zelle, panelZone,
+  bild, vollflaechig, onSchieneAuf, leiste, zelle, panelZone, trefferSpalte,
 }: {
   /** Die Breiten-Entscheidung. `bild.spalten === undefined` = kein Grid, alles
    *  steht untereinander wie vor Ä60 (c). */
@@ -42,6 +42,18 @@ export function LeserLeseZeile({
   /** Panel-Zone — im Spalten-Modus die dritte Spur, sonst ohne Box und
    *  ausserhalb des Flusses. `null`, solange es weder Öffner noch Panel gibt. */
   panelZone: ReactNode;
+  /** D38 · Die Trefferliste, solange sie über der Lesespalte liegt.
+   *
+   *  EIGENER SLOT, nicht in `zelle` mitgegeben, und das ist kein Geschmack: die
+   *  Zelle steht in einem `space-y-5`-Fluss, dessen `> * + *`-Regel jedem
+   *  weiteren Kind einen `margin-top` gäbe — auch einem absolut gesetzten, denn
+   *  Margins verschieben eine absolute Box gegenüber ihrem `inset`. Die Liste
+   *  läge damit 20 px zu tief, ohne dass jemand eine Zahl geschrieben hätte.
+   *  Hier steht sie als LETZTES Kind der `relative`-Zelle — ihrem Bezugsrahmen
+   *  (`absolute inset-0`) — und über den beiden Verlaufskanten, damit über der
+   *  Liste kein zweiter Schleier liegt. `null` im Ruhezustand: kein Element,
+   *  kein Kasten, kein Platz. */
+  trefferSpalte?: ReactNode;
 }) {
   return (
     <div
@@ -145,10 +157,18 @@ export function LeserLeseZeile({
           style={{ top: 'var(--nt-stick)' }}>
           <div className="h-4 bg-gradient-to-b from-paper/70 to-transparent" />
         </div>
-        <div className="space-y-5">{zelle}</div>
+        {/* D38 · `inert`, solange die Trefferliste darüberliegt: der Text ist
+            dann VERDECKT, und was verdeckt ist, darf weder den Tab-Fokus
+            aufnehmen noch vorgelesen werden. Ohne das wanderte der Fokus hinter
+            eine opake Fläche — der klassische «wo bin ich»-Fehler eines
+            Overlays (WCAG 2.4.3/2.4.7). `inert` berührt Layout und Geometrie
+            NICHT: der Sprung zu `#art-…` misst und scrollt unverändert, und die
+            Liste gibt die Fläche ohnehin frei, bevor er ankommt. */}
+        <div className="space-y-5" inert={trefferSpalte ? true : undefined}>{zelle}</div>
         <div aria-hidden data-v3-blur="unten" className="pointer-events-none sticky bottom-0 z-sticky h-0 overflow-visible print:hidden">
           <div className="-mt-4 h-4 bg-gradient-to-t from-paper/70 to-transparent" />
         </div>
+        {trefferSpalte}
       </div>
       </SatzspiegelKontext.Provider>
     </div>

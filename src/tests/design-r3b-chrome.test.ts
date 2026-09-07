@@ -150,7 +150,6 @@ describe('B3-1/B3-2 · dichte Gruppenköpfe laufen über `ui/GruppenKopf`', () =
 const X_AUSNAHMEN: Record<string, string> = {
   'components/ui/SchliessKnopf.tsx': 'der Baustein selbst',
   'components/rechtsprechung/LesemodusOverlay.tsx': '(a) beschrifteter Chip «✕ schliessen»',
-  'pages/gesetz-leser/v3/LeserTrefferBlatt.tsx': '(a) beschrifteter Griff «✕ ausblenden»',
   'pages/Suche.tsx': '(b) «Suche leeren»',
   'pages/gesetz-leser/v3/SuchSprungFeld.tsx': '(b) «Suche leeren (Esc)»',
   'pages/gesetz-leser/parts/WeiterlesenChip.tsx': '(b) «Angebot verwerfen» — verwirft, schliesst nicht',
@@ -591,7 +590,7 @@ describe('A3-2 · schwebende Flächen teilen EINE Anatomie', () => {
     expect(vorher.includes('shadow-lg') && !vorher.includes('lc-schwebeflaeche')).toBe(true);
   });
 
-  it('die acht Konsumenten tragen die Klasse — samt der beiden Fixes', () => {
+  it('die sieben Konsumenten tragen die Klasse — samt des verbliebenen Fixes', () => {
     const konsumenten = [
       'components/SprachUmschalter.tsx',
       'components/DatumsFeld.tsx',
@@ -601,7 +600,12 @@ describe('A3-2 · schwebende Flächen teilen EINE Anatomie', () => {
       'components/layout/reiterleiste/ReiterBlatt.tsx',
       'pages/gesetz-leser/v3/LeserAnsichtV3.tsx',
       'pages/gesetz-leser/v3/LeserPanel.tsx',
-      'pages/gesetz-leser/v3/LeserTrefferBlatt.tsx',
+      // D38 (7.9.2026): `LeserTrefferBlatt.tsx` ist gelöscht — die Trefferliste
+      // liegt seither über der Lesespalte statt als Blatt am Feld
+      // (`v3/LeserTrefferSpalte.tsx`, keine schwebende Fläche mehr). Die
+      // NEGATIV-KONTROLLE oben behält ihren historischen Wortlaut: sie ist ein
+      // String im Test, kein Verweis auf eine Datei (§2b — ein Beleg wird nicht
+      // an den neuen Ist-Stand nachgeführt).
       'components/normtext/ArtikelBody.tsx',
     ];
     for (const r of konsumenten) {
@@ -610,7 +614,7 @@ describe('A3-2 · schwebende Flächen teilen EINE Anatomie', () => {
     // Die zwei Fixes: keine schwebende Fläche steht mehr in der GRUNDfarbe der
     // Seite — ein Schatten über `--paper` behauptet eine Ebene, die die Fläche
     // dementiert.
-    for (const r of ['pages/gesetz-leser/v3/LeserTrefferBlatt.tsx', 'components/normtext/ArtikelBody.tsx']) {
+    for (const r of ['components/normtext/ArtikelBody.tsx']) {
       expect(ohneKommentare(lies(r)), `${r}: nicht mehr bg-paper`).not.toMatch(/bg-paper[^-]/);
     }
   });
