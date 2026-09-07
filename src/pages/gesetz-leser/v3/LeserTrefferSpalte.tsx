@@ -122,7 +122,7 @@ export function LeserTrefferSpalte({ m, bestimmungsWort, vollflaechig, onSprung,
           ? (
             <LeserTrefferListe treffer={m.treffer} begriff={m.sucheBegriff} fundstellen={m.fundstellen}
               bestimmungsWort={bestimmungsWort}
-              fussnotenAus={m.fussnotenAus} position={m.trefferPos} aktivStelle={m.aktivStelle}
+              aenderungenAus={m.aenderungenAus} position={m.trefferPos} aktivStelle={m.aktivStelle}
               bereich={m.suchBereich} setzeBereich={m.setzeSuchBereich}
               fundstellenFuer={m.fundstellenFuer}
               onZurueck={() => m.springeZuFundstelle?.(-1)} onVor={() => m.springeZuFundstelle?.(1)}
