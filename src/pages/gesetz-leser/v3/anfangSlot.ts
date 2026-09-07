@@ -30,6 +30,20 @@ import { createContext, useContext } from 'react';
 // «Treffer»-Überschrift; Treffer-Blatt am Feld, das ganz ohne Leiste steht),
 // findet die Trefferliste `null` und rendert nichts.
 
+// ── D38 (7.9.2026) · DER SLOT IST DERZEIT UNBESETZT — OFFENER RÜCKBAU ───────
+// Der Anlass von Ä94 war die Lage «Bottom-Sheet zeigt die TREFFERLISTE»: dort
+// trug Zone A nichts ausser dem Knopf. Seit D38 zeigt das Sheet in jedem
+// Zustand die GLIEDERUNG, `baumKnoepfe` ist damit immer wahr und `zeigtZeile`
+// (`./LeserSeitenleiste`) ebenfalls — die Leiste gibt den Knopf nie mehr ab,
+// `useAnfangSlot()` liefert überall `null`. Die Invariante «genau EIN Knopf pro
+// Seite» (Pos. 15) hält unverändert, sie hält jetzt nur einfacher: die Leiste
+// zeigt ihn selbst.
+// §17 verlangt hier den RÜCKBAU (was nicht mehr feuern kann, wird gestrichen,
+// nicht bewacht). Er ist NICHT Teil von D38, und zwar aus einem Grund, nicht aus
+// Bequemlichkeit: er berührt `LeserSeitenleiste.tsx` und `TrefferLeiste.tsx`,
+// und an der Seitenleiste bauen am 7.9.2026 zwei parallele Einheiten (D36/D37).
+// §0 Ziff. 5 — kein Doppelbau. Der Rückbau ist als Nachzug übergeben.
+
 /** Der abgegebene «↑ Anfang»-Knopf: `null` = die Leiste zeigt ihn selbst. */
 export const AnfangSlot = createContext<(() => void) | null>(null);
 

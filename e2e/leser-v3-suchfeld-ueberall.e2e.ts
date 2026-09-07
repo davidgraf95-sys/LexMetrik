@@ -200,9 +200,26 @@ test.describe('Ä19 — das Such-/Sprungfeld ist in jeder Breite erreichbar', ()
       .toBeLessThanOrEqual(RESERVE_MAX)
 
     // Mit laufender Suche wächst die Zone um die Zähler-Zeile — der zweite Wert.
+    //
+    // ── §6.3-NACHZUG D38 (7.9.2026) · ZWEI ZUSTÄNDE STATT EINEM ──────────────
+    // Seit D38 liegt die Trefferliste über der Lesespalte, und solange sie dort
+    // liegt, SCHWEIGT die Zähler-Zeile (ihre Zahlen stehen im Listenkopf, §5).
+    // Die Zone behält ihre Höhe trotzdem: der Platz wird für die ganze Dauer
+    // einer Eingabe RESERVIERT, sonst spränge sie bei jedem Wechsel
+    // Text↔Treffer um 24 px (`v3/LeserRahmenV3.tsx`, `zoneHoch`).
+    // Beide Zustände werden geprüft, statt einen wegzudefinieren (§8):
+    //  · Liste steht  ⇒ die Höhe ist dieselbe wie mit Zeile (reserviert).
+    //  · Liste weg    ⇒ die Zeile füllt sie, und zwar ohne Luft (≤ RESERVE_MAX).
     await page.locator('[data-v3-such-zone] input').fill('Anwalt')
+    await expect(page.locator('[data-treffer-liste]')).toBeVisible({ timeout: 20_000 })
+    const reserviert = await mass()
+    // ↵ ist die Wahl (D38): die Liste gibt die Lesefläche frei, die Zeile kommt.
+    await page.locator('[data-v3-such-zone] input').press('Enter')
     await expect(page.locator('[data-v3-treffer-weg]')).toBeVisible({ timeout: 15_000 })
     const aktiv = await mass()
+    expect(reserviert!.ausgelegt,
+      `die Zone springt beim Umschalten: ${reserviert!.ausgelegt} → ${aktiv!.ausgelegt} px`)
+      .toBe(aktiv!.ausgelegt)
     expect(aktiv!.ausgelegt,
       `mit Suche: ausgelegt ${aktiv!.roh} = ${aktiv!.ausgelegt} px deckt die natürlichen ${aktiv!.natuerlich} px nicht`)
       .toBeGreaterThanOrEqual(aktiv!.natuerlich)

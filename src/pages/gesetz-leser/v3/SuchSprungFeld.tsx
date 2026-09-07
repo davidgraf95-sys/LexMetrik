@@ -149,12 +149,15 @@ export function SuchSprungFeld({
               // genau diesen Artikel und keine Fundstelle darin. Sonst rückt
               // Enter auf die nächste Fundstelle vor — die Taste tut damit
               // immer das, was das Feld gerade anbietet, und nie nichts.
-              if (token) onSprung(token);
-              else if (hatTreffer) onVor?.();
               // D38: der Sprung ist gewählt ⇒ die Trefferliste gibt die
-              // Lesefläche frei. Auch OHNE Token und ohne Treffer: sonst bliebe
-              // eine Liste stehen, die der Leser gerade wegbestätigt hat.
-              onBestaetigt?.();
+              // Lesefläche frei. NUR DANN — «Art. 99999» ohne auflösbares Ziel
+              // und ohne Fundstelle bestätigt nichts, und die Liste trägt dann
+              // die ehrliche Absage «Kein Artikel gefunden für …» (§8). Sie
+              // wegzuschalten hiesse, die Antwort auf die Eingabe zu verbergen;
+              // gemessen am Zwischenstand (`leser-r1-r2`, Quickjump @390: die
+              // Absage war nach ↵ nicht mehr auffindbar).
+              if (token) { onSprung(token); onBestaetigt?.(); }
+              else if (hatTreffer) { onVor?.(); onBestaetigt?.(); }
             }
           }}
           placeholder={platzhalter}

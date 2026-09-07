@@ -54,7 +54,13 @@ test.describe('FL-5 — EIN Feld für Suchen und Springen', () => {
     expect(fehler).toEqual([])
   })
 
-  test('(b) Volltext-Begriff «Entschädigung»: kein Sprung-Hinweis, Seitenleiste zeigt Trefferliste', async ({ page }) => {
+  // §6.3-UMSTELLUNG D38 (David 7.9.2026): der Fall hiess «… Seitenleiste zeigt
+  // Trefferliste» und wartete darauf, dass die Überschrift der Leiste von
+  // «Gliederung» auf «Treffer» wechselt. Genau diesen Wechsel hat David
+  // beanstandet — die Treffer liegen seither über der Lesespalte, die Leiste
+  // behält ihren Baum. Was der Fall prüft, ist unverändert: ein Volltext-Begriff
+  // erzeugt KEINEN Sprung-Hinweis und sehr wohl eine Trefferliste.
+  test('(b) Volltext-Begriff «Entschädigung»: kein Sprung-Hinweis, Trefferliste über der Lesespalte', async ({ page }) => {
     test.slow()
     const fehler = await oeffneStPO(page)
 
@@ -62,10 +68,12 @@ test.describe('FL-5 — EIN Feld für Suchen und Springen', () => {
     // Kein Sprung möglich — «Entschädigung» löst nicht auf keinen Artikel-Token.
     await expect(page.locator('[data-v3-sprung-hinweis]')).toHaveCount(0)
 
-    // Die Seitenleiste wechselt von «Gliederung» auf «Treffer» (Debounce ~200 ms).
+    // Die Liste erscheint über der Lesespalte (Debounce ~200 ms) …
+    await expect(page.locator('[data-v3-treffer-spalte] [data-treffer-liste]'))
+      .toBeVisible({ timeout: 10_000 })
+    // … und die Seitenleiste bleibt, was sie ist (D38).
     const baumkopf = page.locator('[data-v3-leiste-baumkopf]')
-    await expect(baumkopf.locator('h2')).toHaveText('Treffer', { timeout: 10_000 })
-    await expect(page.locator('[data-treffer-liste]')).toBeVisible({ timeout: 10_000 })
+    await expect(baumkopf.locator('h2')).toHaveText('Gliederung', { timeout: 10_000 })
 
     expect(fehler).toEqual([])
   })
