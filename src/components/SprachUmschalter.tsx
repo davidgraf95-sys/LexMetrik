@@ -45,7 +45,14 @@ export function SprachUmschalter() {
       </button>
 
       {offen && (
-        <div role="group" aria-label="Sprache wählen" className="lc-schwebeflaeche absolute right-0 top-full mt-1.5 w-56 p-1 z-dropdown">
+        /* D35-F4 (7.9.2026): 14 rem → 18 rem. GEMESSEN nach dem Umbau
+           (Screen `d35-f4-1440-hell-sprache`): mit der Zustands-Marke links
+           blieb den Sprachnamen neben der «In Vorbereitung»-Marke so wenig
+           Platz, dass sie als «E…» / «Fr…» / «Ital…» kappten. 18 rem (288 px)
+           trägt «IT Italiano» samt Marke ganz und bleibt unter dem
+           320-px-Deckel, den das Menü-Rezept für eine schwebende Fläche
+           setzt. */
+        <div role="group" aria-label="Sprache wählen" className="lc-schwebeflaeche absolute right-0 top-full mt-1.5 w-72 max-w-[calc(100vw-1rem)] p-1 z-dropdown">
           {LOCALES.map((l) => {
             const aktiv = l.code === locale;
             return (
