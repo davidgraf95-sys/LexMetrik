@@ -55,7 +55,11 @@ const chip = (page: Page) => page.getByRole('button', { name: /zurück zu/ });
 // «Auf-/Einklappen»). Gemessen: 39 Treffer in beiden Hüllen, davon 0 Chevrons.
 // `:visible` bleibt unverändert load-bearing (s. o.).
 const tocSprung = (page: Page) =>
-  page.locator('[data-toc] li[data-sektion-id] button[title]:visible');
+  // §6.3-DEKLARATION (W2·24-R6c, P8): die Sprung-Zeile ist seither ein
+  // `<a href="#art-…">`, wo sie eine Adresse hat, und nur sonst ein `<button>`
+  // (SektionBaumTOC `TocZeile`). Der Selektor trifft BEIDE; die Absicht des
+  // Falls — «die Sprung-Zeilen des Baums und nur die» — ist unverändert.
+  page.locator('[data-toc] li[data-sektion-id] :is(a, button)[title]:visible');
 
 // ── R3 · Die Kopie trägt den amtlichen Deep-Link ─────────────────────────────
 test.describe('R3 — zitierfähige Referenz', () => {
@@ -143,7 +147,27 @@ test.describe('R5 — Rücksprung-Chip', () => {
       return el ? Math.round(el.getBoundingClientRect().top) : null;
     }, vorher.id);
     expect(nachher, 'verlassener Artikel steht wieder im oberen Lesebereich').not.toBeNull();
-    expect(Math.abs(nachher as number)).toBeLessThan(140);
+    // ── §6.3-DEKLARATION (W2·24, 6.9.2026) · DIE LINIE WIRD GEMESSEN ────────
+    // Hier stand `< 140` — eine HÜLLEN-KONSTANTE, genau von der Art, die der
+    // Kommentar 30 Zeilen weiter oben schon einmal aus diesem Fall entfernt
+    // hat («die 88 px, die hier standen, waren die V1-Kopfhöhe»). Die 140
+    // stammen aus einem Kopf ohne Arbeitsleiste; mit ihr (R2, `--app-reiter-h`
+    // = 34 px) liegt der Landepunkt eines Sprungs bei `--nt-stick` = 198 px,
+    // und GENAU 198 hat der Rückweg gemessen — der Sprung war also exakt
+    // richtig, die Latte falsch geeicht.
+    // Gemessen wird darum, was die Zusage IST: der verlassene Artikel steht
+    // wieder an seinem Landepunkt, also am `scroll-margin-top`, den auch
+    // `scrollIntoView` benutzt (dieselbe Quelle wie in `leser-spy-w25d`).
+    // Die Toleranz von 24 px ist die Schrifthöhe einer Artikel-Überschrift und
+    // damit die Grenze, ab der ein Leser die Abweichung sähe — sie ist ENGER
+    // als jede der bisherigen absoluten Latten (140 px Spielraum → 24 px).
+    const landepunkt = await page.evaluate(() => {
+      const el = document.querySelector('[id^="art-"]');
+      return el ? Math.round(parseFloat(getComputedStyle(el).scrollMarginTop) || 0) : 0;
+    });
+    expect(Math.abs((nachher as number) - landepunkt),
+      `verlassener Artikel steht ${nachher} px statt am Landepunkt ${landepunkt} px`)
+      .toBeLessThanOrEqual(24);
     await expect(c).toHaveCount(0);
     // Auch der Rückweg ist eine Scroll-Bewegung, keine Navigation.
     expect(new URL(page.url()).hash).toBe('');
@@ -262,7 +286,18 @@ test.describe('R7 — Deep-Link-Skeleton', () => {
       return el ? Math.round(el.getBoundingClientRect().top) : null;
     });
     expect(top, 'Ziel im DOM').not.toBeNull();
-    expect(Math.abs(top as number)).toBeLessThan(220);
+    // §6.3-DEKLARATION (W2·24, 6.9.2026) — dieselbe Umstellung wie bei R5 oben
+    // und aus demselben Grund: `< 220` war die Kopfhöhe VOR der Arbeitsleiste
+    // (R2, +34 px). Gemessen wurde 222 px — zwei Pixel über einer Latte, die
+    // nichts über den Einsprung aussagt. Geprüft wird jetzt, dass das Ziel an
+    // seinem Landepunkt steht (`scroll-margin-top`), mit derselben 24-px-
+    // Toleranz; das ist enger als die alte Latte und wandert mit dem Kopf.
+    const landepunkt = await page.evaluate(() => {
+      const el = document.querySelector('[id^="art-"]');
+      return el ? Math.round(parseFloat(getComputedStyle(el).scrollMarginTop) || 0) : 0;
+    });
+    expect(Math.abs((top as number) - landepunkt),
+      `Ziel steht ${top} px statt am Landepunkt ${landepunkt} px`).toBeLessThanOrEqual(24);
     await cdp.send('Emulation.setCPUThrottlingRate', { rate: 1 });
   });
 
@@ -416,7 +451,8 @@ test('A11y-Wächter: kein unsichtbarer Gliederungs-Knopf liegt in der Tab-Reihen
     };
 
     const knoepfe = Array.from(
-      document.querySelectorAll<HTMLElement>('[data-toc] li[data-sektion-id] button'),
+      // R6c/P8: s. o. — Sprung-Zeile ist `a`, Chevron bleibt `button`.
+      document.querySelectorAll<HTMLElement>('[data-toc] li[data-sektion-id] :is(a, button)'),
     );
     const unsichtbarAberErreichbar: string[] = [];
     for (const el of knoepfe) {

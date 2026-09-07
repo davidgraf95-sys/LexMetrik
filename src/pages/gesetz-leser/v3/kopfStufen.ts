@@ -101,46 +101,17 @@ export interface KopfElemente {
   /** Öffner «Ansicht ▾» bzw. «···». Bleibt IMMER (Fahrplan Kap. 4a). */
   ansicht: true;
   /**
-   * H3/Ä11 — Zähler «⚖ 14 Entscheide» in der Kopfzeile.
-   *
-   * ── H4-II (17./18.8.2026) · ER SCHRUMPFT, ER FÄLLT NICHT ──────────────────
-   * Das Feld war bis hierher ein `boolean` und auf `mini` `false`: die
-   * Design-Grundlage Kap. 6 deckelt die Ruhezustand-Kopfzeile auf VIER
-   * Elemente, und dort standen bereits Ort · ☰ · ··· · ✕. Die Randlasche, die
-   * den Zähler auf dem Handy ersetzen sollte, ist im H3-Nachzug gestrichen
-   * worden (sie lag gemessen 16 px IM Normtext) — seither führte auf `mini`
-   * kein Öffner mehr in der Kopfzeile zur Rechtsprechung. Gemessen
-   * 17.8.2026 @390 (StPO Art. 429): `[data-v3-panel-oeffner]` sichtbar **0**,
-   * der Weg über «···» → «Entscheide & Kontext …» kostete **2 Taps** gegen
-   * einen auf D/S (NM-2 des Kontaktbogens H4, dort der Flip-Blocker).
-   *
-   * DARUM ZWEI WERTE statt eines Flags — dieselbe Bauform wie `krume` (V2), und
-   * aus demselben Grund: ein Zuschnitt, der eine Handlung auf einer von drei
-   * Breiten ENTFERNT, ist keiner.
-   *   'voll'     «⚖ 14 Entscheide» — Ikone, Zahl, Zähl-Substantiv;
-   *   'kompakt'  «⚖ 14» — Ikone und Zahl, ohne Wort. Gemessen @390 bleiben in
-   *              der Ort-Zone 115 px frei (Zeile 350 px, Ort-Inhalt 144 px,
-   *              Griff-Zone 84 px); der Chip misst 24 px ohne und rund 45 px
-   *              mit Zahl.
-   *              EHRLICHER REST, gemessen 18.8.2026: im RUHEZUSTAND trägt er
-   *              nur die Ikone — die Zahl kennt niemand, bevor der Bezugs-Shard
-   *              geladen ist, und eine erfundene 0 verbietet §8
-   *              (`panelModell.oeffnerLabelKompakt`, dieselbe Schranke wie bei
-   *              `oeffnerLabel`, das auf D/S solange «Rechtsprechung» schreibt).
-   *              Er ist damit auf `mini` bis zum ersten Öffnen ein reines Icon,
-   *              und die zweite Hälfte der Design-Grundlage Kap. 6 («≤ 2 reine
-   *              Icons») bleibt @390 mit ⚖ · ☰ · ··· gerissen — genauso wie
-   *              vorher mit ☰ · ··· · ✕. Kein Rückschritt, aber auch kein
-   *              Fortschritt; als offener Punkt im Kontaktbogen geführt.
-   * Einen dritten Wert «weg» gibt es nicht, und genau das prüft
-   * `leser-v3-kopfstufen.test.ts` über jede Breite — eine Aussage über den
-   * Rückgabewert, nicht über abwesenden Code (§6.7).
-   *
-   * DAS ELEMENT-BUDGET HÄLT TROTZDEM: das ✕ weicht, weil es das Duplikat des
-   * sichtbaren Rücksprungs «‹ Gesetze» ist — seit dem H4-Nachzug auf JEDER
-   * Breite (Ä87/Ä91, Herleitung und Messreihe im Block unter dieser Funktion).
+   * ── D35-F2 (7.9.2026) · HIER STAND `panel: 'voll' | 'kompakt'` ────────────
+   * Das Feld entschied die GESTALT des Kopf-Zählers — «⚖ 14 Entscheide» auf
+   * D/S, «⚖ 14» auf `mini` (H3/Ä11, H4-II). Es hatte genau einen Zweck: den
+   * NM-2-Befund vom 17.8.2026 einzulösen, dass auf `mini` überhaupt ein Öffner
+   * in der Kopfzeile steht (gemessen `[data-v3-panel-oeffner]` 0, zwei Taps
+   * statt einem). Der Befund und seine Messreihe bleiben in der Historie dieser
+   * Datei stehen (§0 Ziff. 2b); eingelöst ist er seither STÄRKER, nicht
+   * schwächer: seit D35-F2 trägt der Griff «Erlass ▾» auf JEDER Breite dasselbe
+   * Wort, es gibt also keine Gestalt-Frage mehr zu beantworten. Ein Feld ohne
+   * Frage ist gestrichen, nicht bewacht (§17-Gegengewicht).
    */
-  panel: 'voll' | 'kompakt';
 }
 
 export function kopfElemente(stufe: KopfStufe): KopfElemente {
@@ -150,7 +121,6 @@ export function kopfElemente(stufe: KopfStufe): KopfElemente {
     kuerzel: true,
     artikel: true,
     ansicht: true,
-    panel: stufe === 'mini' ? 'kompakt' : 'voll',
   };
 }
 

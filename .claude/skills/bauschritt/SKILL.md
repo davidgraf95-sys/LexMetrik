@@ -52,6 +52,10 @@ ohne Rückfrage nach diesem Zyklus.
   David-Anmerkungen) bekommen einen frischen Agent mit frischem Kontext als
   eigenen Nachzug — nie in den laufenden Bau nachschieben (16.8.2026:
   H2-Agent lieferte nach ~470k Token sichtbar weniger als beauftragt).
+- **Im «run till dry» nie mit leerer Antwort enden.** Nach jeder Agenten-Rückmeldung
+  folgt der nächste Zug oder ein ausdrücklicher Zwischenstand — eine leere Antwort
+  archiviert die Session, und der Bau steht bis zum nächsten Menschen still (Nacht
+  5./6.9.2026).
 - **Nebenfunde in den Plan**, nie in diese Session oder als Chip:
   Checklisten-Zeile im Dach-Schritt, sonst ROADMAP-Schritt (Skill `auftrag`
   Ziff. 3), weiterbauen.

@@ -16,6 +16,7 @@
 // §11.6.9 Mobil @390 (kollabiert, keine Wucherung). Läuft gegen `vite preview`.
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
+import { sprungZeile } from './helpers/kopfSuche'
 
 // CI-Härtung 19.7.2026 (BEFUND 3a): die IA-1-Walks laden EINMAL den ~4-MB-Artikel-
 // Index und warten per 20-s-Latch auf den «Sprung»-Treffer (sprungWalk). Auf dem
@@ -42,7 +43,11 @@ async function sprungWalk(page: Page, query: string): Promise<{ interaktionen: n
   // Schwester-Spec norm-sprung nutzt für denselben Index-Latch bereits 20 s. Reine
   // Lade-Synchronisation, kein Prüfschritt — der Interaktions-Beweis (Enter → URL)
   // bleibt eng gebunden und unverändert.
-  await expect(listbox(page).getByText('Sprung', { exact: true })).toBeVisible({ timeout: 20_000 })
+  // §6.3-DEKLARATION 6.9.2026 (W2·24 · Treffer-Anatomie D23/F1): das gerahmte
+  // «Sprung»-Etikett ist entfallen, der Griff «↵» der Sprung-Zeile ist an seine
+  // Stelle getreten (Herleitung an EINER Stelle: `helpers/kopfSuche.sprungZeile`).
+  // Gewartet wird auf DASSELBE: die Sprung-Zeile steht in der Trefferliste.
+  await expect(sprungZeile(page)).toBeVisible({ timeout: 20_000 })
   await feld.press('Enter')
   return { interaktionen: 1 } // Eingabe+Enter = 1
 }

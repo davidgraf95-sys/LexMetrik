@@ -32,7 +32,7 @@ import type { EntscheidSnapshot } from '../../lib/rechtsprechung/typen';
 // Urteilsdatums (ein echtes Urteil datiert nie auf den 1.1. — Feiertag). Diese ehrlich
 // als «BGE-Jahrgang» zeigen statt eines fingierten «1.1.» (§8). Sentinel = das
 // Platzhalterdatum selbst, NICHT azaUrteil (Bug-Check 26.6.: Auszug-BGE können ein
-// echtes Datum tragen trotz fehlendem azaUrteil — die zeigen korrekt «Urteil vom …»).
+// echtes Datum tragen trotz fehlendem azaUrteil — die zeigen korrekt «Entscheid vom …»).
 function istBandjahr(snap: EntscheidSnapshot): boolean {
   return snap.gericht === 'bge' && /-01-01$/.test(snap.datum);
 }
@@ -121,7 +121,7 @@ export function MassgeblicheFassung({ url, titel, fehlt, className }: {
 // 1) datumUnbekannt (BS §7.2): die amtliche Quelle publiziert KEIN Entscheiddatum
 //    → das Platzhalterdatum (<GN-Jahr>-01-01) nie als echtes Datum zeigen (§8);
 //    stattdessen ehrlich «Entscheiddatum nicht publiziert» + Erstpublikation.
-// 2) BGE-Bandjahr-Platzhalter → «BGE-Jahrgang». 3) sonst «Urteil vom …».
+// 2) BGE-Bandjahr-Platzhalter → «BGE-Jahrgang». 3) sonst «Entscheid vom …».
 export function DatumMeta({ snap }: { snap: EntscheidSnapshot }) {
   if (snap.datumUnbekannt) {
     return (
@@ -137,5 +137,5 @@ export function DatumMeta({ snap }: { snap: EntscheidSnapshot }) {
   // `Datum` reicht einen Nicht-ISO-Wert (hier die nackte Jahreszahl)
   // unverändert durch und setzt nur `tabular-nums` (Vertrag des Bausteins).
   if (istBandjahr(snap)) return <span>BGE-Jahrgang <Datum iso={bgeJahrgang(snap)} /></span>;
-  return <span>Urteil vom <Datum iso={snap.datum} /></span>;
+  return <span>Entscheid vom <Datum iso={snap.datum} /></span>;
 }

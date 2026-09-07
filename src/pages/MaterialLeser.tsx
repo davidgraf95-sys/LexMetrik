@@ -128,7 +128,11 @@ export function MaterialLeser() {
           { text: m.nummer ? `${m.doktypLabel} ${m.nummer}` : m.doktypLabel, rolle: 'art' },
           { text: GEBIET_LABEL[m.rechtsgebiet] ?? m.rechtsgebiet, rolle: 'sachgebiet' },
         ]} />}
-        titel={<SeitenTitel>{m.titel}</SeitenTitel>}
+        /* G3 (Gesamtprüfung 6.9.2026): dieselbe Serif-Stimme wie Erlass-,
+           Entscheid- und Vorlagen-Leser. Ein Material ist gelesener Quelltext,
+           kein Bedienelement — die Stimmen-Wahl ist die einzige, die dieser
+           Kopf noch von den drei anderen Lesern unterschied. */
+        titel={<SeitenTitel stimme="serif">{m.titel}</SeitenTitel>}
         fakten={[
           m.behoerdeName,
           // B-3: das Datum lief hier in der Mono-Stimme (`.num`) — die ist nach

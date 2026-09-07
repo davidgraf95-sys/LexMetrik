@@ -1,14 +1,29 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-// LexMetrik-Typografie: Geist (UI + Display) + Geist Mono (Anzeige), selbst
-// gehostet. Fraunces entfernt (Wunsch David 6.6.2026 – Geist überall).
-import '@fontsource-variable/geist/index.css'
-import '@fontsource-variable/geist-mono/index.css'
-// Source Serif 4 (variabel, selbst gehostet): Lese-Schrift NUR für den Gesetzes-
-// Volltext (Rubrik V) — editorial, „Gesetzbuch“; UI/Marginalien bleiben Geist
-// (Entscheid David 17.6.2026).
-import '@fontsource-variable/source-serif-4/index.css'
+// LexMetrik-Typografie (W2·24-DESIGN-IDENTITAET R1, 6.9.2026): ZWEI Stimmen,
+// beide OFL und selbst gehostet (kein Google-Fonts-Request zur Laufzeit).
+//   · Archivo  = Bedienung (Reiter, Knöpfe, Marginalien, Meta-Zeilen)
+//   · Literata = alles Gelesene (Normtext, Entscheide, Titel)
+// Geist/Geist Mono/Source Serif 4 sind mit der Creme-Gold-Signatur gegangen.
+// Geladen wird bewusst NUR die `wght`-Achse: die `wdth`-Achse von Archivo
+// (Bedienbreite 87.5 % im Referenzbild) kostet im latin-Subset 90.1 KB statt
+// 34.9 KB — +158 % Erstlast für eine Breitenstufe (§15). Entscheid dazu ist in
+// R2/R5 offen; die Rückkehr wäre ein Import-Wechsel auf `wdth.css` plus
+// `font-stretch: 87.5%`.
+import '@fontsource-variable/archivo/wght.css'
+import '@fontsource-variable/archivo/wght-italic.css'
+// D12 «Lesekomfort» (6.9.2026): Literata AUFRECHT laeuft neu auf der
+// `opsz`-Achse (optische Groesse). Serifen am Bildschirm brauchen sie — der
+// Browser stellt mit `font-optical-sizing: auto` (index.css) den Schnitt auf die
+// tatsaechliche Schriftgroesse ein, statt eine Textgroesse hochzuskalieren.
+// Gemessen im latin-Subset: 110 080 B statt 52 496 B, also +57.6 KB. Das ist
+// die eine bewusst gekaufte Erstlast dieser Runde.
+// Die KURSIVE bleibt auf `wght`: sie traegt Randtitel und Gruss, nie
+// Langlese-Fliesstext, und die opsz-Kursive kostete noch einmal +58.2 KB —
+// das waere Budget fuer eine Achse, die an keiner Lesestelle wirkt (§15).
+import '@fontsource-variable/literata/opsz.css'
+import '@fontsource-variable/literata/wght-italic.css'
 import './index.css'
 import App from './App.tsx'
 import { effektivesThema, wendeThemaAn } from './components/thema'

@@ -326,7 +326,8 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
     await expect(toc).toBeVisible({ timeout: 10000 })
 
     // Einen Top-Level-Gliederungs-Sprungknopf anklicken (nicht das Chevron).
-    const eintrag = toc.locator('button[data-toc-aktiv], button[aria-current]').first()
+    // R6c/P8: s. u. — Sprung-Zeile ist `<a href>`, Chevron bleibt `<button>`.
+    const eintrag = toc.locator(':is(a, button)[data-toc-aktiv], :is(a, button)[aria-current]').first()
     // Falls (noch) kein aktiver Eintrag: irgendeinen Sprungknopf mit Label nehmen.
     // W2·19-GLIEDERUNG/S4 — deklarierte Anpassung (Bau-Spec §2/§10, e2e-Freigabe
     // David 8.8.2026): der Fallback war `toc.getByRole('button').nth(1)` und traf
@@ -341,7 +342,9 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
     // im Scroller steht. Die geprüfte Invariante bleibt unverändert.
     const ziel = (await eintrag.count()) > 0
       ? eintrag
-      : toc.locator('li[data-sektion-id] button').nth(1)
+      // §6.3-DEKLARATION (W2·24-R6c, P8): die Zeile ist ein `<a href>`, der
+      // Chevron daneben bleibt `<button>` — beide treffen, Reihenfolge gleich.
+      : toc.locator('li[data-sektion-id] :is(a, button)').nth(1)
     await ziel.scrollIntoViewIfNeeded()
     const box1 = await ziel.boundingBox()
     await ziel.click()
@@ -349,7 +352,11 @@ test.describe('A33 — Ruhige Gliederung (Scroll-Spy / TOC)', () => {
     // (aktiver Highlight vorhanden) und der Knopf ist weiterhin bedienbar/stabil.
     await page.waitForTimeout(700)
     await expect(page.locator('[data-toc] [data-toc-aktiv]').first()).toBeVisible({ timeout: 10000 })
-    const box2 = await toc.locator('button[data-toc-aktiv]').first().boundingBox()
+    // §6.3-DEKLARATION (W2·24-R6c, P8): die Marken-Zeile ist seither ein
+    // `<a href="#art-…">`, wo sie eine Adresse hat (SektionBaumTOC `TocZeile`).
+    // Der Selektor trifft beide Tags; die Absicht — «die aktive Zeile hat nach
+    // dem Klick eine Geometrie» — ist unverändert.
+    const box2 = await toc.locator(':is(a, button)[data-toc-aktiv]').first().boundingBox()
     expect(box1).not.toBeNull()
     expect(box2).not.toBeNull()
     expect(fehler).toEqual([])

@@ -170,3 +170,10 @@ nicht nachbauen; Unterschied bleibt Text-Treue, Leser, Verzahnung, Kantone, Zür
 | Steuerfüsse-Zeitreihe, kantonale Vernehmlassungen | nicht aufgenommen | Vernehmlassungen decken `W3-AUSBAU` «Gesetzgebungs-Tracking» ab; Steuerfüsse ohne Werkzeug-Bedarf |
 | opencaselaw-Delta, RIS-AT | `W2·21-ZULIEFERER`, `W2·13-KANTONE-DATEN` | schon verankert |
 
+
+## Nachtrag 6.9.2026 (abends) — zwei Repos aus Davids Hinweisen
+
+| Quelle | Was es ist (Stand 6.9.2026) | Lizenz | Nutzen für LexMetrik | Geltung/Grenze | Pflege |
+|---|---|---|---|---|---|
+| github.com/swiss/fedlex-sparql | SPARQL-Tutorial der Bundeskanzlei, JupyterLite, letzter Push 22.11.2024, keine Lizenzdatei, 3★ | keine | keiner — bereits als «SwissFederalArchives/LD-Tutorials (→ swiss/fedlex-sparql)» in der Haupttabelle erfasst; Abfragemuster identisch zu unseren | nichts Neues gegenüber dem bestehenden Eintrag | — |
+| github.com/gemeinde-bister/openmun-lex | Gemeinde Bister VS + Firntec GmbH, Python (Starlette/Tantivy/ProseMirror), Akoma-Ntoso-Leser und -Editor für Bund (4700 Erlasse, Fedlex-Sync dreisprachig de/fr/it), Kanton Wallis (685 Erlasse aus lex.vs.ch REST-API, Fassungen je Datum) und Gemeindereglemente (ELI-Schema `/eli/mun/{bfs}/…`); erstellt 12.2.2026, Push 7.8.2026, 0★ | EUPL-1.2 (Copyleft → nur Blaupause, kein Code); Daten OGD | `lex.vs.ch` als zweiter Kanton mit sauberer API nach BS (→ `W2·13-KANTONE-DATEN`); dreisprachiger Fedlex-Sync als Blaupause für FR/IT (→ `W3-AUSBAU` FR/IT); Gemeinde-Ebene = Produktentscheid David | für Materialien irrelevant (keine Botschaften, keine Historie) | — |

@@ -158,6 +158,26 @@ test.describe('A7 — strukturiertes Verweis-Popover (Wortlaut → Entscheide �
     await page.goto('/gesetze/bund/SCHKG#art-312');
     const art = page.locator('#art-312');
     await expect(art).toBeAttached();
+    // ── §6.3-DEKLARATION (W2·24-R6b, 6.9.2026) · DIE BEZÜGE STEHEN GEFALTET ──
+    // Der Verweis-Chip stand bis R6b offen am Artikelfuss bzw. in der
+    // Randspalte. Auf Auftrag David 6.9.2026 («der platz rechts und links neben
+    // dem gesetz … nimmt viel platz vom gesetzestext weg») sind beide Randspuren
+    // gefallen; die Bezüge stehen seither als EINE aufklappbare Zeile unter dem
+    // Artikelkopf (`parts/BezuegeKopf.tsx`, `<details>`). Eingeklappt ist der
+    // Chip nicht gerendert — `getByRole` fand darum nichts (gemessen: 0 statt 1;
+    // der zweite Treffer «Art. 20 OR» im Fliesstext ist der EXTERNE Fedlex-Link
+    // und trägt über `.lc-verweis-aussen::after` ein «↗» im Namen, passt also
+    // bewusst nicht auf `/^Art\. 20 OR$/`).
+    // Der Prüfpunkt bleibt Wort für Wort derselbe: der interne Verweis-Chip
+    // öffnet das strukturierte Popover mit den Leitfall-Kanten. Neu ist EIN
+    // Handgriff davor — genau der, den ein Leser seit R6b auch tut.
+    // D35-F1 (7.9.2026, §6.3): die Zeile klappt je RUBRIK auf. Der Verweis-Chip
+    // «Art. 20 OR» hängt an der Rubrik «Verweise» (`data-reg="g"`) — genau die
+    // wird hier geöffnet, nicht mehr die ganze Zeile.
+    const bezuege = art.locator('.lr7-bez-marke[data-reg="g"]').first();
+    if (await bezuege.count() > 0 && await bezuege.getAttribute('aria-expanded') !== 'true') {
+      await bezuege.click();
+    }
     const chip = art.getByRole('link', { name: /^Art\. 20 OR$/ }).first();
     await expect(chip).toBeVisible({ timeout: 10_000 });
     await chip.click();

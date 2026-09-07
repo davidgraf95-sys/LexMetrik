@@ -145,7 +145,13 @@ export function AzRegister({ erlasse }: { erlasse: BrowseErlass[] }) {
           <span className="text-body-s text-ink-500">
             <span className="num">{zahlGruppiert(erlasse.length)}</span> Erlasse nach Titel
           </span>
-          <span aria-hidden className={`ml-auto text-ink-500 transition-transform ${offen ? 'rotate-90' : ''}`}>›</span>
+          {/* R8 (7.9.2026): der Pfeil dreht per `rotate-90`. Ein Transform
+              aendert die LAYOUT-Breite nicht, wohl aber den gezeichneten
+              Kasten — das hohe, schmale Glyphen-Feld wurde gedreht zum
+              breiten und ragte 10 px ueber die Karte hinaus (gemessen
+              /gesetze @768–1440, h2 690/680 px). Ein QUADRATISCHES Feld ist
+              drehneutral: gedreht misst es dieselben Kanten wie ungedreht. */}
+          <span aria-hidden className={`ml-auto inline-flex size-5 shrink-0 items-center justify-center leading-none text-ink-500 transition-transform ${offen ? 'rotate-90' : ''}`}>›</span>
         </button>
       </h2>
 

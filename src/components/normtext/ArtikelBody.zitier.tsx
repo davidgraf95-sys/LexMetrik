@@ -33,7 +33,7 @@ export function ZitierMarke({ zitat, ausweis, sup, klasse, children }: {
   // 2.2:1 gedrückt (#b9a683 auf Papier), weit unter AA. Ein gedämpfter
   // Ruhezustand wäre eine neue Design-Entscheidung — die trifft nicht D0.
   const knopf = (
-    <button type="button" onClick={kopiere} title={`${zitat} — kopieren`}
+    <button type="button" onClick={kopiere} title={`${zitat} — kopieren`} aria-label={`${zitat} — kopieren`}
       className={`num font-semibold cursor-pointer text-brass-700 hover:underline decoration-dotted underline-offset-2 ${klasse ?? ''}`}>
       {ok ? '✓' : children}
     </button>

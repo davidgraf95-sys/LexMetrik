@@ -606,9 +606,37 @@ export function margStufeStil(level: number, istBlatt: boolean): string {
   // sind genau dieser Fall. ink-800 gegen ink-600 ist eine Kontrast-ERHÖHUNG
   // (13.94 : 1 gegen 7.36 : 1, Grundlage Kap. 4), also nie ein A11y-Risiko; die
   // Hierarchie trägt hier das Gewicht, nicht die Farbe.
-  // Stufe 0 gewinnt zugleich Kontrast: ink-500 → ink-600 (V2-Spalte; 5.10 : 1 →
-  // 7.36 : 1, damit AAA statt knapp AA bei 13 px Versalien).
+  // Stufe 0 gewinnt zugleich Kontrast: ink-500 → ink-600 (V2-Spalte).
+  //
+  // ── W2·24-R6/L17 · DER VERSAL-ZWEIG IST GESTRICHEN ────────────────────────
+  // Bis hierher trug `level <= 0` zusätzlich `uppercase tracking-wide`. GEMESSEN
+  // am gebauten Stand (Finder R5, 6.9.2026, über 1792 Randtitel: OR 641 · ZGB 664
+  // · ZPO 403 · BS-640.100 84 · CISG 0): **0** Elemente mit `text-transform:
+  // uppercase`, `letter-spacing` durchweg `normal` — der Zweig hat mit den
+  // heutigen Daten nie gefeuert. Und feuern SOLL er auch nicht mehr: §5 des
+  // Fahrplans nimmt Versalien und Tracking aus der Identität
+  // («Overlines/Versal-Etiketten → normale kleine Grotesk-Zeilen»). Was nicht
+  // scheitern kann, wird gestrichen statt bewacht (§17-Gegengewicht). Die Stufe
+  // behält ihr `font-medium` — sie ist weiterhin die oberste Randtitel-Stufe,
+  // nur ohne Versalien.
+  // ── GB-2 (W2·24, Befund G2, 7.9.2026) · DIE VORFAHREN SIND KURSIVE LITERATA
+  // GEMESSEN im ersten Bild, hell und dunkel, 1440 und 390: `Literata italic`
+  // kam auf 8 von 9 Routen GAR NICHT vor, der Erlass-Leser trug zugleich nur
+  // 2 Registerfarb-Traeger (Referenz «/»: 14). FAHRPLAN §5 nennt die kursive
+  // Literata ausdruecklich als Akzent «an Begruessung und RANDTITELN».
+  // Geaendert ist allein die KLASSENZEILE der Vorfahren-Stufen: `font-sans` →
+  // `lc-randtitel` (index.css §GB-2: Literata kursiv + Registerfarbe der Route
+  // ueber `data-reg`). Stufe, Groesse (`text-leser-rand` 13 px), Gewicht,
+  // Einzug und Hierarchie bleiben Wort fuer Wort.
+  // DAS BLATT BLEIBT SANS — ausdruecklich (§7, ein Beleg altert nicht): David
+  // hat am Bildbogen 17.8.2026 die Spalte «Marginalie/Randtitel 0.8125 rem,
+  // SANS» gewaehlt, und der Auftrag vom 26.6.2026 verlangt, dass die
+  // Sachueberschrift nicht «zu einem blassen Abschnittslabel verkuemmert»;
+  // ~83 % aller 1792 Randtitel sind Blaetter. Der Akzent kommt auf den 17 %
+  // Vorfahren zurueck, ohne die datierte Entscheidung zu ueberschreiben — und
+  // die Drei-Stufen-Hierarchie gewinnt sogar, weil die Stimmen sich jetzt
+  // zusaetzlich in Schrift und Farbe unterscheiden.
   if (istBlatt) return `${hang} font-sans text-leser-rand font-semibold text-ink-800`;
-  if (level <= 0) return `${hang} font-sans text-leser-rand font-medium uppercase tracking-wide text-ink-600`;
-  return `${hang} font-sans text-leser-rand text-ink-600`;
+  if (level <= 0) return `${hang} lc-randtitel text-leser-rand font-medium text-ink-600`;
+  return `${hang} lc-randtitel text-leser-rand text-ink-600`;
 }

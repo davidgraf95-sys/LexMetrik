@@ -79,7 +79,7 @@ export function ZeichenLegende() {
         role="status"
         id={id}
         className={offen
-          ? 'lc-card absolute left-0 top-full z-dropdown mt-1 block w-72 max-w-[80vw] p-3 text-left text-body-s font-normal normal-case tracking-normal text-ink-700'
+          ? 'lc-popover absolute left-0 top-full z-dropdown mt-1 block w-72 max-w-[80vw] p-3 text-left text-body-s font-normal normal-case tracking-normal text-ink-700'
           : undefined}
       >
         {offen && (

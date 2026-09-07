@@ -375,7 +375,7 @@ export function VorlageKlageVereinfacht() {
       case 'pruefen': return (
         <div className="space-y-5">
           {maengel.map((m, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700">{m.text}</p>
             </div>
           ))}
@@ -423,6 +423,7 @@ export function VorlageKlageVereinfacht() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       weiterDeaktiviert={stopp && schritt === 0}
       inhalt={inhalt()}
       vorschau={stopp

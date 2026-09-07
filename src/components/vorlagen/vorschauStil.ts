@@ -44,8 +44,15 @@ export const VORSCHAU = {
   rubrum: { marginBottom: r(1.6) } as CSSProperties,
   // MODERN (Variante A): Parteirolle als ruhige Overline – «— klagende Partei —»
   // wird zum kleinen, gesperrten Versal-Label (Em-Striche nur Anzeige-seitig weg).
+  // R5-F2 (6.9.2026): `fontFamily: var(--font-mono)` gestrichen. PDF und DOCX
+  // setzen dieses Etikett in der GRUNDSCHRIFT des Dokuments (Arial/Helvetica,
+  // `ROLLEN_PDF`/`ROLLEN_DOCX` — nur Grösse, Grau und Sperrung sind eigen); die
+  // Vorschau war die einzige Stelle mit einer Schreibmaschinenschrift und hat
+  // damit ein Ausgabe-Merkmal behauptet, das die Ausgabe nicht hat. Versalien
+  // und Sperrung bleiben — die trägt der Export ebenfalls (`toUpperCase()`,
+  // `rolleLabelSperrung`), sie sind Dokument-Typografie, nicht UI-Versalien.
   rubrumRolle: {
-    textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: '0.72em',
+    textAlign: 'center', fontSize: '0.72em',
     letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink-500)',
     marginTop: r(0.55), marginBottom: r(0.2),
   } as CSSProperties,

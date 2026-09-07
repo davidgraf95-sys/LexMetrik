@@ -381,6 +381,28 @@ jobs:
         run: npm run check:merge-schutz
       - name: Testtreue (§6.3 — refactor-Commits ändern keine Tests)
         run: npm run check:testtreue
+      # Squash-Falle (Beleg 7.9.2026, PR #739): GitHub setzt beim Squash-Merge ALLE
+      # Commit-Betreffs des PR in die Commit-Message von main. Trägt EINER davon
+      # `[skip ci]`, überspringt GitHub auf main jeden Workflow — kein CI, KEIN
+      # DEPLOY, keine Plan-Buchung; der nächste Doku-Push meldet dann art=doku und
+      # deployt ebenfalls nicht. e2ac7def9 (287 Dateien) lag so unausgeliefert.
+      # Darum Required-Tor: kein Commit im PR darf `[skip ci]`/`[ci skip]` tragen.
+      - name: Squash-Schutz (kein [skip ci] in PR-Commits)
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          treffer=$(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR}/commits" --paginate \
+            --jq '.[] | select(.commit.message | test("\\[(skip ci|ci skip)\\]"; "i")) | "\(.sha[0:9]) \(.commit.message | split("\n")[0])"' || true)
+          if [ -n "$treffer" ]; then
+            echo "::error::Squash-Schutz ROT — Commits mit [skip ci] im PR (landen sonst in der main-Message und schalten CI+Deploy stumm):"
+            echo "$treffer"
+            echo "Abhilfe: Betreff umschreiben (Rebase) oder den PR mit --merge/--rebase statt Squash landen."
+            exit 1
+          fi
+          echo "Squash-Schutz grün — kein [skip ci] in den PR-Commits."
       # Fremd-PR-Tor (T6, 3.9.2026, fahrplaene/FAHRPLAN-FREMDAGENTEN.md §2
       # Phase 1): nur Branches im Jules-Muster (19-stellige Task-ID im Namen oder
       # Präfix `jules-`/`jules/`) sind
@@ -581,7 +603,7 @@ jobs:
         run: npm run check:zyklen
       - name: Normtext-Projektionen (Vollständigkeit · Zähler · Historie · Revisionen)
         if: needs.diff.outputs.art != 'doku'
-        run: npm run check:vollstaendigkeit && npm run check:zaehler && npm run check:historie && npm run check:revisionen && npm run check:artikel-revisionen
+        run: npm run check:vollstaendigkeit && npm run check:zaehler && npm run check:bezuege-zaehler && npm run check:historie && npm run check:revisionen && npm run check:artikel-revisionen
       - name: Normtext-Struktur (Tabellen · Grundart · Invarianten)
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:tabellen && npm run check:grundart && npm run check:invarianten
@@ -706,7 +728,7 @@ jobs:
         run: npm run check:e2e-shards
       - name: dist-Artefakt herunterladen (aus `bau`, nicht neu bauen)
         if: needs.diff.outputs.art == 'code'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist
@@ -822,7 +844,7 @@ jobs:
           cache: npm
       - run: npx -y npm@11 ci
       - name: dist-Artefakt herunterladen (aus `bau`, nicht neu bauen)
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist

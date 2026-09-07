@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { LeserGliederungSchiene } from './LeserGliederungSchiene';
 import type { RahmenBild } from './rahmenSpalten';
+import { SatzspiegelKontext } from './satzspiegel';
 
 // ─── Die Lese-Zeile: Gliederung/Schiene · Text · Beiwerk-Spur ────────────────
 //
@@ -18,7 +19,7 @@ import type { RahmenBild } from './rahmenSpalten';
 // Inhalte kommen als Slots herein, sie kennt weder Modell noch Erlass.
 
 export function LeserLeseZeile({
-  bild, vollflaechig, tocOffen, onSchieneAuf, onGliederungZu, leiste, zelle, panelZone,
+  bild, vollflaechig, onSchieneAuf, leiste, zelle, panelZone, trefferSpalte,
 }: {
   /** Die Breiten-Entscheidung. `bild.spalten === undefined` = kein Grid, alles
    *  steht untereinander wie vor Ä60 (c). */
@@ -30,14 +31,10 @@ export function LeserLeseZeile({
    *  Datei, die den Hüllen-Zustand selbst liest, verzweigt auf ihn. Diese Datei
    *  verzweigt auf eine EIGENSCHAFT DER FLÄCHE, die ihr der Rahmen mitteilt. */
   vollflaechig: boolean;
-  /** Zustand für `aria-expanded` am «Gliederung ausblenden»-Griff. */
-  tocOffen: boolean;
-  /** Klick auf die Schiene. Was er alles tut (Blatt schliessen, wenn es ihren
-   *  Platz hat), entscheidet der Rahmen aus `bild.schieneHoltPlatz`. */
+  /** Klick auf die Schiene — läuft im Rahmen durch den Stick-Ausgleich.
+   *  D33 (7.9.2026): er holt keinen Platz mehr vom Blatt zurück, weil das Blatt
+   *  keine Spur mehr belegt (`bild.schieneHoltPlatz` ist mit ihr gefallen). */
   onSchieneAuf: () => void;
-  /** Klick auf «‹ Gliederung ausblenden». Läuft im Rahmen durch den
-   *  Stick-Ausgleich, sonst kostete das Einklappen die Leseposition (V6). */
-  onGliederungZu: () => void;
   /** Inhalt der Gliederungsspalte (Übersicht · Feld · Baum). */
   leiste: ReactNode;
   /** Rechte Zelle: Erlass-Kopf, Ingress und Lesekörper. */
@@ -45,6 +42,18 @@ export function LeserLeseZeile({
   /** Panel-Zone — im Spalten-Modus die dritte Spur, sonst ohne Box und
    *  ausserhalb des Flusses. `null`, solange es weder Öffner noch Panel gibt. */
   panelZone: ReactNode;
+  /** D38 · Die Trefferliste, solange sie über der Lesespalte liegt.
+   *
+   *  EIGENER SLOT, nicht in `zelle` mitgegeben, und das ist kein Geschmack: die
+   *  Zelle steht in einem `space-y-5`-Fluss, dessen `> * + *`-Regel jedem
+   *  weiteren Kind einen `margin-top` gäbe — auch einem absolut gesetzten, denn
+   *  Margins verschieben eine absolute Box gegenüber ihrem `inset`. Die Liste
+   *  läge damit 20 px zu tief, ohne dass jemand eine Zahl geschrieben hätte.
+   *  Hier steht sie als LETZTES Kind der `relative`-Zelle — ihrem Bezugsrahmen
+   *  (`absolute inset-0`) — und über den beiden Verlaufskanten, damit über der
+   *  Liste kein zweiter Schleier liegt. `null` im Ruhezustand: kein Element,
+   *  kein Kasten, kein Platz. */
+  trefferSpalte?: ReactNode;
 }) {
   return (
     <div
@@ -77,26 +86,25 @@ export function LeserLeseZeile({
           // eine Maximalhöhe nicht auf, der Scroller wüchse auf die volle
           // Inhaltshöhe und der Überschuss würde stumm abgeschnitten
           // (reproduziert am OR @1440×900).
-          className="sticky flex min-h-0 flex-col self-start"
+          // W2·24-R6/L16: Der Ausdruck trägt kein Inhaltsverzeichnis und kein
+          // Suchfeld. GEMESSEN 6.9.2026 (`emulateMedia('print')`, ZPO): die
+          // Spalte druckte mit `display:flex`, 288×506 px, samt «Im Erlass
+          // suchen …» — Bedienung auf Papier. Titelblatt, Reiterleiste und
+          // Pane-Köpfe waren schon still; hier fehlte die Regel.
+          className="sticky flex min-h-0 flex-col self-start print:hidden"
           style={{
             top: 'var(--nt-stick)',
             maxHeight: vollflaechig
               ? 'calc(100vh - var(--nt-stick) - 1.5rem)'
               : 'calc(100dvh - var(--leser-kopf-h) - var(--leser-sub-h) - 1rem)',
           }}>
-          <div className="flex items-center justify-end pb-1">
-            <button type="button" data-v3-gliederung-zu onClick={onGliederungZu}
-              aria-expanded={tocOffen} title="Gliederung ausblenden"
-              className="lc-leiste-griff gap-1 px-1.5 text-micro">
-              {/* Ä12 (Ästhetik-Review 16.8.2026): hier stand nur «ausblenden» —
-                  Wort für Wort dasselbe wie «Seitenleiste ausblenden» der
-                  App-Leiste zwei Zentimeter weiter oben, aber mit anderer
-                  Wirkung. Zwei gleich beschriftete Knöpfe, die Verschiedenes
-                  tun, sind eine Falle (§8). Der Knopf sagt jetzt, WAS er
-                  ausblendet. */}
-              <span aria-hidden>‹</span><span>Gliederung ausblenden</span>
-            </button>
-          </div>
+          {/* D32 (7.9.2026): der Griff «‹ Gliederung ausblenden» stand hier als
+              eigene 28-px-Zeile über der Gliederung. Er ist in den linken
+              Streifen der Kopfzeile gezogen (`./LeserKopf`, `gliederungGriff`),
+              der seit D32 genau die Breite dieser Spur hat und sonst leer
+              stünde — Beschriftung, Ä12-Herleitung und `aria-expanded`
+              unverändert mitgenommen, nur der Ort ist neu. Folge, gewollt und
+              in den Bildbogen aufgenommen: die Gliederung beginnt 28 px höher. */}
           {leiste}
         </aside>
       )}
@@ -130,18 +138,39 @@ export function LeserLeseZeile({
           `EntscheidLeser.tsx` `bg-paper/95`, `SuchBereichWahl.tsx`
           `bg-paper/60`). `-mt-4` zieht mit der neuen Höhe mit, sonst
           verschöbe sich der untere Streifen vom Viewport-Rand weg. */}
-      <div className="relative min-w-0">
+      {/* W2·24-R4 · der Satzspiegel-Anker sitzt AN DER LESE-ZELLE, nicht am
+          Leser-Wurzelelement: die Ausbaustufe ist eine Aussage über DIESE
+          Fläche (`bild.satzspiegel` ist aus ihrer Breite gerechnet), und der
+          Kontext daneben reicht sie an `parts/ArtikelLeser` weiter. Beides
+          zusammen an einem Ort — `index.css` (Block «SATZSPIEGEL») und
+          `ArtikelLeser` lesen dieselbe Quelle. */}
+      <SatzspiegelKontext.Provider value={bild.satzspiegel}>
+      <div className="relative min-w-0" data-lr-spiegel={bild.satzspiegel}>
+        {/* D33 (7.9.2026): die Panel-Zone steht IN der Lese-Zelle, nicht neben
+            ihr. Ihre klebende Gestalt braucht einen `relative`-Bezug und eine
+            natürliche Lage unter dem Kopf-Block — beides gibt genau diese Zelle
+            her (Herleitung in `./LeserPanelZone`). Sie nimmt keinen Platz: im
+            Ruhezustand ist sie `display: contents` ohne Kinder, offen eine
+            0-Höhen-Hülle mit absolut gesetztem Blatt. */}
+        {panelZone}
         <div aria-hidden data-v3-blur="oben" className="pointer-events-none sticky z-sticky h-0 overflow-visible print:hidden"
           style={{ top: 'var(--nt-stick)' }}>
           <div className="h-4 bg-gradient-to-b from-paper/70 to-transparent" />
         </div>
-        <div className="space-y-5">{zelle}</div>
+        {/* D38 · `inert`, solange die Trefferliste darüberliegt: der Text ist
+            dann VERDECKT, und was verdeckt ist, darf weder den Tab-Fokus
+            aufnehmen noch vorgelesen werden. Ohne das wanderte der Fokus hinter
+            eine opake Fläche — der klassische «wo bin ich»-Fehler eines
+            Overlays (WCAG 2.4.3/2.4.7). `inert` berührt Layout und Geometrie
+            NICHT: der Sprung zu `#art-…` misst und scrollt unverändert, und die
+            Liste gibt die Fläche ohnehin frei, bevor er ankommt. */}
+        <div className="space-y-5" inert={trefferSpalte ? true : undefined}>{zelle}</div>
         <div aria-hidden data-v3-blur="unten" className="pointer-events-none sticky bottom-0 z-sticky h-0 overflow-visible print:hidden">
           <div className="-mt-4 h-4 bg-gradient-to-t from-paper/70 to-transparent" />
         </div>
+        {trefferSpalte}
       </div>
-
-      {panelZone}
+      </SatzspiegelKontext.Provider>
     </div>
   );
 }

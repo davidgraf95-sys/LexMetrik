@@ -123,7 +123,7 @@ export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onC
       role={alsDialog ? 'dialog' : 'group'}
       {...(alsDialog ? { 'aria-modal': true as const, tabIndex: -1 } : {})}
       aria-label={alsDialog ? titel : `Norm-Vorschau ${titel}`}
-      className="lc-card w-full max-w-xl max-h-[80vh] overflow-y-auto p-0 text-left"
+      className="lc-popover w-full max-w-xl max-h-[80vh] overflow-y-auto p-0 text-left"
     >
       {/* Kopf */}
       <div className="flex items-start justify-between gap-3 border-b border-line px-5 py-3">

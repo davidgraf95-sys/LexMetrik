@@ -186,6 +186,19 @@ abgeschlossen/zurückgezogen), Frist aus `ConsultationPhase`; Reichweite ~2000�
 `check:vernehmlassungen-netz` + Offline-Assertion `laufend && fristEnde<heute ⇒ rot`. Maschinell
 zugeordnet (grob bei Mantelvorlagen, §8); fachliche Abnahme David offen.
 
+**Entstehung am Artikel — Recherche-Runde 6.9.2026:** [materialien/entstehung-2026-09-06/README.md](materialien/entstehung-2026-09-06/README.md) —
+sieben Sonnet-Recherchen (read-only, Live-Abrufe 6.9.2026) zu Materialien-
+Verzahnung und Gesetzgebungsprozess: Fedlex-Wissensgraph `type-projet`-Kette
+(7299 Botschaften / 4931 Beschlüsse / 1868 Referendumsfristen / 629
+Abstimmungstermine, SPARQL); BBl-Volltext mit `art_`-Ankern nur ab 2022 (44/
+58/77/80/41 Treffer je Jahrgang 2022–2026); Curia Vista OData ohne Schlüssel
+(49 Entitäten, `Objective`/`Voting`/`Resolution` als Join-Pfad, harte
+1000er-Serverpaginierung). Kantonal: BS `data.bs.ch` CC BY 4.0 reichhaltig,
+ZH nur CMI-Rohfeed ohne Materialien-Link. Bund-Wegleitungen: Top-8 BSV-Werke
+priorisiert vor den übrigen Ämtern. Vorbild buzer.de-Muster (Point-in-Time-URL
+je Paragraphenfassung, Absatz-Synopse). Maschinell recherchiert; fachliche
+Abnahme David offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |
@@ -392,3 +405,4 @@ im Verfallsregister («Amtliche Muster-Suiten»).
 - [Fremdnutzen-Suchrunde 2 (6.9.2026) — amtliche Rechner als Orakel · amtliche Sprachdaten · Bedienmuster der Gesetzesportale](recherche/fremdnutzen-suchrunde-2-2026-09-06.md) — drei parallele Sonnet-Recherchen (Auftrag David «können wir sonst noch von fremden sachen profitieren?»): (1) **Negativbefund** kein interaktiver amtlicher Gebührenrechner in 26 Kantonen/BGer, Golden nur VS-Excel 2025, SG-Notariatstabelle, BGer-Tarif, kantonale Existenzminimum-PDF; (2) TERMDAT via LINDAS-SPARQL (Lizenz offen), Fedlex-eId-Konsistenz DE/FR/IT unbelegt, MIT-Stemmer für die Suche, rcds-Korpora nur als Testdaten; (3) 12 Bedienmuster aus 8 live geprüften Portalen, 3 neu in die Roadmap (Nachbar-Artikel-Pfeile, Rohdaten-Link, Diff-Tab), BEKJ ohne Formatvorgabe, kein Zotero-Translator für fedlex/bger. ERSTRECHERCHE 6.9.2026; wartet auf David: TERMDAT-Lizenzanfrage, FR/IT-Reihenfolge.
 - `recherche/fedlex-abkuerzungen-titleshort.md` — amtliche DE/FR/IT-Erlass-Abkürzungen aus Fedlex `jolux:titleShort`: die verifizierte SPARQL-Kette hinter `src/lib/normtext/abk-aliase.generated.ts` (W2·6-NKEY b) — Datentyp-IRI-Pflicht, Currency-Fenster gegen Schatten-Abstracts, COUNT-Gate gegen stille Teilergebnisse, Regenerier-Befehl; 200/230 SR, 28.7.2026. Nachtrag: Drift-Tor `check:fedlex-abk-netz` (zwei verschieden zusammengesetzte Nachfragen + Positivkontrollen) + Regel 5 (stille, zusammensetzungsabhängige Kappung mit passendem COUNT), Divergenz GFK/FK offen, 30 SR ohne `titleShort` namentlich, Korpus-Kandidaten
 - [Agenten-Bauplanung SotA 08/2026 (QS-EFFIZIENZ · BAUPLAN-UMBAU)](betrieb/agenten-bauplanung-sota-2026-08-15.md) — Web-Recherche 15.8.2026 vor dem Bauplan-Umbau: OpenSpec-Muster «Delta-Spec + archive on apply» (→ Fahrplan-§-Diät aufraeumen.md §4b), Status-Pflege als Teil des Task-Abschlusses (Beads/Backlog.md), ETH-Studie gegen nacherzählende Kontextdateien (→ Kurzkarten-Default); «ein Task pro Session» bewusst nicht übernommen (Massstab 15.8.). **Status: entwurf** (Prozess-Wissen, keine Abnahme nötig).
+- [Design-Identität, Nicht-KI-Webdesign, Bildschirm-Lesbarkeit — Fremdagenten-Recherche 5./6.9.2026 (W2·24-DESIGN-IDENTITAET)](recherche/design-identitaet-2026-09.md) — drei Aufträge parallel Gemini ∥ Sonnet: (1) Farb-/Schriftidentität Amtlich-Schweiz (nur Gemini belegt, Sonnet-Gegencheck fehlt), (2) Nicht-KI-Webdesign-Merkmale/Gegenmittel/Referenzen (Sonnet 15+15 Punkte je einzelbelegt, 35 849 Token/125 s; Gemini 10+10 mit Sammelquelle), (3) Bildschirm-Lesbarkeit/D12-Token-Werte (Sonnet 45 162 Token/167 s, selbst nachgerechnete WCAG-Werte; beide Agenten inhaltlich deckungsgleich). Divergenzen aufgelöst: Inter als neutral UND KI-Verwechslungssignal (beides belegt, kein Widerspruch), Creme/Gold als KI-Signal bei Gemini behauptet, bei Sonnet ausdrücklich unbelegt (§7: Sonnet massgeblich), Fedlex/NZZ als Referenz bei beiden ohne Fundstelle zur konkreten Behauptung (offen). D12-Token-Werte (Papier/Tinte hell+dunkel, Gewicht 450–500, opsz) direkt aus Sonnet-Lesbarkeitsrecherche in `w224-pruef-r2-funde.md` §D12 übernommen. **Status: einfach belegt je Aussage, keine eigene Gegenprüfung** — Abnahme David, Bau W2·24.

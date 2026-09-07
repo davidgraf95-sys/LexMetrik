@@ -1,8 +1,9 @@
-import { Fragment, useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
+import { Fragment, useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent, type DragEvent as ReactDragEvent, type ReactNode } from 'react';
 import { useKopieren } from '../useKopieren';
 import { createPortal } from 'react-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Topbar } from './Topbar';
+import { Topbar, AusgabeZeile } from './Topbar';
+import { Reiterleiste, REITER_MIME } from './Reiterleiste';
 import { SchliessKnopf } from '../ui/SchliessKnopf';
 import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
@@ -14,8 +15,9 @@ import { PaneKopf } from './PaneKopf';
 import { usePaneDnd } from './usePaneDnd';
 import { PaneProvider } from './PaneKontext';
 import { InhaltsKopf } from './InhaltsKopf';
-import { InhaltsKopfMeldeProvider, istGesetzLeserPfad, istInhaltsPfad, kopfVonPfad, type KopfDaten } from './InhaltsKopfKontext';
-import { tabSchluessel } from '../../lib/tabs';
+import { InhaltsKopfMeldeProvider, istInhaltsPfad, kopfVonPfad, type KopfDaten } from './InhaltsKopfKontext';
+import { tabSchluessel, merkeTab, ersetzeTab } from '../../lib/tabs';
+import { PaneName } from './PaneName';
 import { verlaufLabel, erlassVonPfad, gesetzPfad, entscheidPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { useDialogFokus } from './useDialogFokus';
 
@@ -93,18 +95,16 @@ export function Shell({ children }: { children: ReactNode }) {
   const schubladeRef = useRef<HTMLDivElement>(null);
   const primaerWurzel = useRef<HTMLElement>(null); // Scroll-/Query-Wurzel des primären Panes (B-2.5)
   const primaerOverlay = useRef<HTMLDivElement>(null); // Overlay-Schicht des primären Panes (Drawer)
-  // ── Ä1c (LESER-V3 H2b) · im Gesetz-Leser startet die App-Leiste eingeklappt ──
-  // Der Leser trägt seine eigene Hauptnavigation (die Gliederung) unmittelbar
-  // daneben; die 256 px der App-Leiste gingen dort dem Lesetext verloren, ohne
-  // etwas beizutragen (Design-Grundlage Kap. 1 Nr. 1: ≥ 60 % der Fläche gehören
-  // dem Normtext). Es ist eine VORGABE, keine Sperre: `useSeitenleiste`
-  // unterscheidet seit H2b «noch nicht gewählt» von «gewählt», und eine einmal
-  // getroffene Nutzerwahl gewinnt hier wie überall.
-  // Bewusst der Gesetz-Leser und nicht «jede Inhaltsseite»: nur er hat eine
-  // zweite, gleichwertige Navigationsspalte. Und bewusst OHNE Kenntnis des
-  // V3-Flags — die Vorgabe gilt für beide Hüllen, der Befund ist in beiden derselbe
-  // (FL-1: das Flag hat genau einen Schaltpunkt, und der ist nicht hier).
-  const seitenleiste = useSeitenleiste({ vorgabeEingeklappt: istGesetzLeserPfad(pathname) });
+  // Vorgabe «eingeklappt» + Nutzerwahl liegen vollständig in `useSeitenleiste`
+  // (D25, 6.9.2026 — dort steht auch der Ä1c-Befund vom 17.8.2026, den D25 abgelöst hat).
+  const seitenleiste = useSeitenleiste();
+  // ── D17 (David 6.9.2026) · DIE SEITENLEISTE STEHT ÜBERALL, AUCH AUF «/» ────
+  // «ich mochte die seitenleiste. können wir die behalten. und das oben
+  // entfernen?» Die R2-Regel «auf / entfällt sie» (§6 (d) des Fahrplans) ist
+  // damit zurückgenommen — sie hatte ihren Grund allein darin, dass die
+  // Bereiche zusätzlich als Reiter im Titelblatt standen; die sind mit D17
+  // weg (`layout/Topbar.tsx`). Es bleibt EINE Landkarte, und die ist auf jeder
+  // Route dieselbe. Kein Sonderfall mehr, darum keine Bedingung mehr.
   // R3 (Auftrag David 30.6.2026): die globale Schriftskala (A−/A+) ersetzte den
   // Inhaltsbreite-Umschalter; die zentrale Inhaltsspalte läuft seither fest auf
   // `max-w-content` (= die frühere Default-Breite «kompakt», Golden byte-gleich).
@@ -283,10 +283,18 @@ export function Shell({ children }: { children: ReactNode }) {
     })();
     return () => { lebt = false; };
   }, [multipane, kopfMoeglich, brauchtGesetze, brauchtEntscheide]);
+  // L6 (Entscheid David 7.9.2026): der Pane-Kopf nennt das Dokument, sobald die
+  // Inhaltsseite die Krume selbst trägt. Der Name ist ein fertiges Element
+  // (`./PaneName`) und KEIN Feld dieser Ableitung — sein Abonnement auf die
+  // Lesestellung soll die App-Hülle nicht mit-rendern (§15, Herleitung dort).
   const titelVon = (pfad: string) => {
     const stand = erlassVonPfad(pfad, manifeste)?.stand ?? null;
     const m = stand && /^(\d{4})-(\d{2})-(\d{2})/.exec(stand);
-    return { label: verlaufLabel(pfad, manifeste), stand: m ? `${m[3]}.${m[2]}.${m[1]}` : stand };
+    return {
+      label: verlaufLabel(pfad, manifeste),
+      kurzform: <PaneName pfad={pfad} manifeste={manifeste} />,
+      stand: m ? `${m[3]}.${m[2]}.${m[1]}` : stand,
+    };
   };
 
   // Dedup gegen ALLE offenen Panes (Primär-URL inkl., Sekundäre live) — kein Doppel.
@@ -294,12 +302,48 @@ export function Shell({ children }: { children: ReactNode }) {
     const n = tabSchluessel(pfad);
     return tabSchluessel(pathname + search) === n || liveSek.some((x) => tabSchluessel(x) === n);
   };
-  // B-2: «daneben öffnen» nur ab lg + Kapazität; kein Doppel.
-  const paneSteuerung = {
-    oeffneDaneben: (pfad: string) => { if (!istOffen(pfad)) pane.oeffneDaneben(pfad); },
-    kannOeffnen: istLg && pane.sekundaer.length < MAX_SEKUNDAER,
-    istOffen,
-  };
+  // ── M1 · JEDER PFAD IN EINEM FENSTER HAT SEINEN REITER (P4) ───────────────
+  //
+  // GEMESSEN am Stand `c0f2972ba` (Prüfbefund R11 #16, Screen `pruef-r11-05`):
+  // `panes = ["/rechtsprechung/bge_146_III_1"]` neben `tabs = [OR, Rechner]`
+  // ergab eine Leiste mit ZWEI Reitern und nur EINER Marke «Fenster links:◧» —
+  // rechts stand nachweislich BGE 146 III 1, und die Leiste verschwieg ihn.
+  // Der Anwalt konnte diesen Entscheid von dort weder wechseln noch schliessen.
+  // §5a Ziff. 4 verlangt zwei Marken; die Leiste kann sie nicht zeichnen, weil
+  // sie nur zeigt, was der SPEICHER trägt (D16) — der Fix gehört also hierher,
+  // an die Stelle, die das Fenster füllt, nicht in die Leiste.
+  //
+  // WARUM `ersetzeTab` UND NICHT NUR `merkeTab`: ein Fenster navigiert weiter
+  // (Link im Entscheid, Sprung in den Erlass). Jede dieser Navigationen mit
+  // `merkeTab` hinge einen weiteren Reiter an — genau der «Reiter-Wildwuchs»,
+  // den §5a Ziff. 3 fürs Hauptfenster ausgeschlossen hat. Der Ref hält darum je
+  // Fenster den zuletzt gemerkten Pfad; die Folge-Navigation ERSETZT ihn, wie
+  // `components/TabTracker.tsx` es fürs Hauptfenster tut.
+  const paneReiter = useRef<Record<string, string>>({});
+  useEffect(() => {
+    const gesehen = new Set<string>();
+    for (const seed of pane.sekundaer) {
+      gesehen.add(seed);
+      const pfad = liveLocs[seed] ?? seed;
+      // R14b (7.9.2026): hier stand `if (!istReiterPfad(pfad)) continue;` —
+      // ein Fenster auf einer Meta-Route bekam keinen Reiter. Die Ausnahme ist
+      // ersatzlos weg (`lib/tabs.ts`, Block «R14b»); jedes Fenster führt jetzt
+      // seinen Reiter, egal was darin steht.
+      const vorher = paneReiter.current[seed];
+      // `merkeTab` ist idempotent (`gleich()`), aber der Vergleich hier spart
+      // schon den Speicher-Lesevorgang bei jedem Shell-Render.
+      if (vorher === pfad) continue;
+      if (vorher) ersetzeTab(vorher, pfad); else merkeTab(pfad);
+      paneReiter.current[seed] = pfad;
+    }
+    // Geschlossene Fenster aus der Buchführung nehmen — ihr REITER bleibt
+    // stehen (nichts wird still geschlossen, §5a Ziff. 5); nur die Zuordnung
+    // «dieses Fenster zeigt diesen Reiter» endet.
+    for (const seed of Object.keys(paneReiter.current)) {
+      if (!gesehen.has(seed)) delete paneReiter.current[seed];
+    }
+  }, [pane.sekundaer, liveLocs]);
+
   // liveLocs-Eintrag eines (entfernten/ersetzten) Seed-Pfads aufräumen (sonst Leak +
   // kurz veraltetes Label, wenn derselbe Seed später erneut geöffnet wird).
   const raeumeLiveLoc = (seed: string) =>
@@ -310,6 +354,19 @@ export function Shell({ children }: { children: ReactNode }) {
     pane.schliesse(i);
     raeumeLiveLoc(seed);
     requestAnimationFrame(() => document.getElementById('inhalt')?.focus());
+  };
+  // B-2: «daneben öffnen» nur ab lg + Kapazität; kein Doppel.
+  const paneSteuerung = {
+    oeffneDaneben: (pfad: string) => { if (!istOffen(pfad)) pane.oeffneDaneben(pfad); },
+    kannOeffnen: istLg && pane.sekundaer.length < MAX_SEKUNDAER,
+    istOffen,
+    // M1: das ✕ eines Reiters, der gerade in einem zweiten Fenster steht,
+    // nimmt dieses Fenster mit (Herleitung an `PaneSteuerung.schliessePane`).
+    schliessePane: (pfad: string) => {
+      const n = tabSchluessel(pfad);
+      const i = liveSek.findIndex((x) => tabSchluessel(x) === n);
+      if (i !== -1) schliesseUndFokus(i);
+    },
   };
   // Sekundär → Hauptfenster: dieses Pane wird die URL, das alte Hauptfenster rutscht an seinen Platz.
   const zumHauptfenster = (i: number) => {
@@ -341,7 +398,15 @@ export function Shell({ children }: { children: ReactNode }) {
     else if (nach === 0) zumHauptfenster(von - 1);  // Pane auf das Hauptfenster → befördern
     else pane.verschiebe(von - 1, nach - 1);        // Sekundär ↔ Sekundär
   };
-  const dnd = usePaneDnd(verschiebePane);
+  // §5a Ziff. 4: ein Reiter, in ein Fenster gezogen, landet DORT — auf dem
+  // Hauptfenster als Navigation, auf einem sekundären Pane als dessen neuer
+  // Inhalt. Bereits offene Pfade werden nicht doppelt geöffnet (`istOffen`).
+  const reiterInPane = (pfad: string, ziel: number) => {
+    if (istOffen(pfad)) return;
+    if (ziel === 0) navigate(pfad);
+    else pane.ersetze(ziel - 1, pfad);
+  };
+  const dnd = usePaneDnd(verschiebePane, reiterInPane, REITER_MIME);
 
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
@@ -401,6 +466,22 @@ export function Shell({ children }: { children: ReactNode }) {
             seitenleisteEingeklappt={seitenleiste.eingeklappt}
             onSeitenleisteUmschalten={seitenleiste.umschalten}
           />
+          {/* Arbeitsleiste + Ausgabe-Zeile (W2·24 R2, §5a). Beide laufen im
+              normalen Fluss — nicht klebend; die Herleitung steht am Kopf von
+              `Topbar.tsx` (die Sprung-Offsets des Lesers rechnen mit einer
+              4-rem-Krone, und ihre Quelle gehört R4).
+              ── F8 (Prüfbefund 6.9.2026) · REIHENFOLGE GETAUSCHT. Bis hierher
+              stand die Ausgabe-Zeile (0–64 · 64–95) ZWISCHEN Titelblatt und
+              Arbeitsleiste (95–129) — §5a Ziff. 1 verlangt aber zwei Zeilen,
+              die zusammengehören: Bereiche oben, offene Dokumente DIREKT
+              darunter. Das Referenzbild zeichnet die Ausgabe-Zeile zwar unter
+              dem Titelblatt, kennt die Arbeitsleiste aber gar nicht; wo beides
+              nicht zugleich geht, hat die gebaute Ziffer Vorrang. Die
+              Ausgabe-Zeile verliert dabei nichts: sie ist dieselbe Angabe wie
+              im Fuss der Seitenleiste (`ui/KorpusStand`, §5) und steht jetzt
+              als Abschluss der Kopfzone. */}
+          <Reiterleiste paneSchluessel={[tabSchluessel(pathname + search), ...liveSek.map(tabSchluessel)]} />
+          <AusgabeZeile />
 
           {/* Persistenter Hinweis bei Nicht-DE-Locale: Inhalte fallen auf Deutsch zurück. */}
           {locale !== 'de' && (
@@ -441,9 +522,16 @@ export function Shell({ children }: { children: ReactNode }) {
                   (nicht Vorfahren von {children}). */}
               <div {...(multipane ? { onDragOver: dnd.spalte(0).onDragOver, onDrop: dnd.spalte(0).onDrop } : {})}
                 style={multipane ? wachstum(0) : undefined}
-                className={multipane ? `flex flex-col flex-1 min-w-0 border-l-2 ${dnd.spalte(0).ueber ? 'border-l-brass-700' : 'border-l-transparent'} max-lg:flex-none max-lg:w-full max-lg:snap-start` : 'contents'}>
+                className={multipane ? `flex flex-col flex-1 min-w-0 border-l-2 ${dnd.spalte(0).ueber ? 'border-l-ink-900' : 'border-l-transparent'} max-lg:flex-none max-lg:w-full max-lg:snap-start` : 'contents'}>
+                {/* L6: `titelVon(pathname + search)` statt `titelVon(pathname)`
+                    — dieselbe Reiter-Identität, mit der die Leiste oben ihre
+                    Marken zeichnet (`paneSchluessel`). Ohne den Diskriminator
+                    `?r=2` fände `kurzformVon` bei zwei offenen Instanzen
+                    desselben Erlasses die ERSTE und zeigte deren Lesestellung.
+                    `label` und `stand` sind davon unberührt: beide Ableitungen
+                    schneiden die Query ohnehin ab (`pfadTeil`). */}
                 {multipane && (
-                  <PaneKopf {...titelVon(pathname)} breadcrumb={kopfDaten?.breadcrumb} onBreadcrumb={(to) => navigate(to)} artikel={kopfDaten?.artikel}
+                  <PaneKopf {...titelVon(pathname + search)} breadcrumb={kopfDaten?.breadcrumb} onBreadcrumb={(to) => navigate(to)} artikel={kopfDaten?.artikel}
                     nurSteuerung={kopfDaten?.kopfzeileSelbst}
                     rolle="primaer" onSchliessen={schliesseHaupt}
                     onRechts={() => verschiebePane(0, 1)} kannRechts={pane.sekundaer.length > 0}
@@ -453,6 +541,25 @@ export function Shell({ children }: { children: ReactNode }) {
                   <PaneProvider value={multipane ? { imPane: true, rolle: 'primaer', wurzel: primaerWurzel, overlayWurzel: primaerOverlay } : KEIN_PANE}>
                     <main ref={primaerWurzel} id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
                       data-pane={multipane ? 'primaer' : undefined}
+                      // §5a Ziff. 4 im 1-Pane-Fall: es gibt noch keine zweite
+                      // Spalte, auf die man zielen könnte — also ist die RECHTE
+                      // HÄLFTE des Inhalts das Ziel («in die zweite Hälfte
+                      // ziehen»). Nur wenn ein Pane überhaupt aufgehen kann
+                      // (`kannOeffnen`: ab lg, freie Kapazität); links fallen
+                      // gelassen passiert nichts.
+                      {...(!multipane && paneSteuerung.kannOeffnen ? {
+                        onDragOver: (e: ReactDragEvent) => {
+                          if (!e.dataTransfer.types.includes(REITER_MIME)) return;
+                          const r = e.currentTarget.getBoundingClientRect();
+                          if (e.clientX > r.left + r.width * 0.6) e.preventDefault();
+                        },
+                        onDrop: (e: ReactDragEvent) => {
+                          const pfad = e.dataTransfer.getData(REITER_MIME);
+                          if (!pfad) return;
+                          e.preventDefault();
+                          paneSteuerung.oeffneDaneben(pfad);
+                        },
+                      } : {})}
                       // Ring/Farbe aus der globalen `:focus-visible`-Regel
                       // (index.css, Rolle --focus); lokal bleibt NUR der negative
                       // Offset (Scroll-Container, Herleitung in Pane.tsx).

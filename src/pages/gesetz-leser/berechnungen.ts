@@ -163,6 +163,10 @@ export function schaetzeArtikelHoehe(e: NormSnapshot): number {
   // `aus`, blendet `html[data-histansicht="aus"] .lc-leser [data-hist-slot]`
   // (index.css) den SLOT aus — dann sind diese 40 px nicht da, und die Schätzung
   // überreserviert um 40 px je off-screen-Artikel.
+  // NACHTRAG D35-F3 (7.9.2026, §0 Ziff. 2b — ergänzt, nicht nachgeführt): der
+  // Schalter heisst jetzt eine Stellung, die Weiche `html[data-vermerke]`. Der
+  // Sachverhalt ist unverändert; die Stellungen «fussnoten» und «aus» nehmen
+  // den Slot, «fassung» zeigt ihn.
   //
   // KORREKTUR S2 · Ä26 (17.8.2026): «bei JEDEM Artikel» stimmt jetzt auch OHNE
   // Schalter nicht mehr. Der Slot trägt seine Mindesthöhe nur noch, wenn der
@@ -184,8 +188,17 @@ export function schaetzeArtikelHoehe(e: NormSnapshot): number {
   // Darstellungs-Store zu binden und die `contain-intrinsic-size` jedes Artikels
   // beim Umschalten neu zu schreiben — genau der Re-Render des Normtexts, den die
   // CSS-Mechanik vermeidet (§15). Nur der Kommentar zieht nach.
+  //
+  // NACHTRAG W2·24-D40 (7.9.2026, §0 Ziff. 2b — ERGÄNZT, nicht nachgeführt):
+  // den Fassungs-Slot gibt es nicht mehr; die Auskunft steht als Rubrik in der
+  // Funktionszeile am Artikelende (David: «und wieso ist fassung nicht auch
+  // unten am artikel?»). Die 40 px BLEIBEN stehen und heissen jetzt: Platz für
+  // die Funktionszeile, die unter jedem Artikel steht. Das ist keine Kosmetik,
+  // sondern dieselbe Rechnung wie oben — die Zusage lautet «echte Höhe ≤
+  // Schätzung», und zu HOCH ist die tolerierte Richtung. Der Name der Konstante
+  // bleibt ebenfalls: er ist der Anker der Messreihen von 2026.
   const HIST_SLOT = 40;
-  let h = 104 + HIST_SLOT; // Artikelkopf: «Art. N» + Trenner (border-t + pt-7 mt-7) + Basisabstand + Fassungs-Slot
+  let h = 104 + HIST_SLOT; // Artikelkopf: «Art. N» + Trenner (border-t + pt-7 mt-7) + Basisabstand + Beiwerk-Zuschlag
   if (e.titel) h += 30;    // amtlicher Randtitel/Sachüberschrift (eine Zeile)
   for (const b of e.bloecke) {
     // M13-Annex-Zwischenüberschrift (titel = Heading-Tiefe): kompakte Titelzeile.

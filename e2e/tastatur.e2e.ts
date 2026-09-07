@@ -10,6 +10,7 @@
 // visuelle Wahrnehmbarkeit der focus-visible-Stile, fachliches Urteil zur
 // Tab-REIHENFOLGE.
 import { test, expect } from '@playwright/test'
+import { appGebootet } from './helpers/appGebootet'
 
 const aktivesIso = (page: import('@playwright/test').Page) =>
   page.evaluate(() => (document.activeElement as HTMLElement | null)?.dataset?.iso ?? null)
@@ -80,6 +81,12 @@ test('Monatsblättern ‹/›: Raster bleibt tabbar (Monatserster), kein Fokus-K
 
 test('Skip-Link: erstes Tab fokussiert «Zum Inhalt springen» und springt in den Inhalt', async ({ page }) => {
   await page.goto('/')
+  // MESSBEDINGUNG, kein Prüfschritt (§6.3): erst hochfahren lassen, dann tabben.
+  // Ein Tastendruck in das Startfenster hinein bewegt den Fokus gar nicht —
+  // gemessen 12/12 rot unter CPU-Drossel 20×, 0/12 mit diesem Helfer
+  // (Herleitung und Rot-Rezept: `helpers/appGebootet.ts`). Geprüft wird
+  // unverändert die TAB-REIHENFOLGE: der Skip-Link ist der erste Halt.
+  await appGebootet(page)
   await page.keyboard.press('Tab')
   const skip = page.getByRole('link', { name: 'Zum Inhalt springen' })
   await expect(skip).toBeFocused()

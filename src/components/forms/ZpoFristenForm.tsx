@@ -225,8 +225,14 @@ export function ZpoFristenForm({ live }: {
         <Tabs items={PHASEN.map((p) => ({ code: p.code, label: p.label }))} value={phase} onChange={(c) => { setPhase(c); setPresetKey(''); setPresetHinweis(null); }} mode="pressed" ariaLabel="Verfahrensphase" />
       </div>
 
+      {/* R9-2 (6.9.2026): `role="status"`, nicht `role="alert"`. Die Meldung
+          antwortet nicht auf einen Eingabefehler, sondern beschreibt eine
+          ABDECKUNGSGRENZE des Rechners (§8) — es gibt nichts zu beheben, also
+          unterbricht sie auch nichts. Die Blocker- und Mängellisten der Vorlagen
+          tragen aus demselben Grund `role="alert"`. Wächter:
+          `src/tests/design-r9-fehlerbox-baustein.test.ts`. */}
       {phase === 'materiell' ? (
-        <div className="lc-notice-danger">
+        <div role="status" className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Materielle Frist – nicht von diesem Rechner erfasst</p>
           <p className="text-body-s text-danger-700">{MATERIELL_WARNUNG}</p>
         </div>
@@ -312,9 +318,9 @@ export function ZpoFristenForm({ live }: {
 
       {/* Optionale / erweiterte Funktionen – kein overflow-hidden, sonst wird
           das DatumsFeld-Popover (Zustellfiktion) abgeschnitten. */}
-      <div className="border border-line rounded-lg">
+      <div className="border border-line ">
         <button type="button" onClick={() => setErweitert(!erweitert)}
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${erweitert ? '' : 'rounded-b-lg'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${erweitert ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
           <span className="text-ink-500">{erweitert ? '▲' : '▼'}</span>
         </button>
@@ -353,7 +359,7 @@ export function ZpoFristenForm({ live }: {
                 <DatumsFeld value={fiktionDatum} onChange={(v) => setFiktionDatum(v)} className={inputCls} />
                 <button type="button" disabled={!fiktionDatum}
                   onClick={() => set('ereignis', zustellfiktion(fiktionDatum))}
-                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 rounded-lg whitespace-nowrap">
+                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 whitespace-nowrap">
                   → als Ereignis übernehmen
                 </button>
               </div>
@@ -377,7 +383,7 @@ export function ZpoFristenForm({ live }: {
             ))}
           </div>
           {ergebnis.erstrecktBis && (
-            <div className="rounded-lg border border-line bg-ok-bg p-3 text-body-s text-ok-text">
+            <div className=" border border-line bg-ok-bg p-3 text-body-s text-ok-text">
               Nach Erstreckung: <strong>{ergebnis.erstrecktBis}</strong> (24.00 Uhr).
             </div>
           )}
