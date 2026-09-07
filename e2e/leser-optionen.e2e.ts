@@ -90,7 +90,7 @@ async function ansichtOeffnen(page: Page): Promise<void> {
 // D4 (7.9.2026): die drei hiessen bis dahin `role=switch`. Seit das Menü
 // `role="menu"` trägt, verlangt ARIA dort `menuitemcheckbox` — dieselbe
 // Auskunft, derselbe `aria-checked`, derselbe Name (`SCHALTER_ROLLE`).
-test('Options-Leiste: drei Schalter (Fussnoten/Änderungsvermerke/Rechtsprechung anzeigen) — «Entscheide» via Panel, «Linien» und «Verweise» entfallen', async ({ page }) => {
+test('Options-Leiste: die Änderungs-Wahl + fünf Rubriken-Schalter — «Linien» und «Verweise» entfallen', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator(ANSICHT_PANEL).first();
@@ -117,9 +117,20 @@ test('Options-Leiste: drei Schalter (Fussnoten/Änderungsvermerke/Rechtsprechung
   // Aussage bleibt dieselbe («genau diese Bedienungen, keine mehr, keine
   // weniger»), nur die Rollen trennen sich: EINE Checkbox (Rechtsprechung) und
   // DREI Radios (die Änderungs-Wahl). Herleitung: `v3/LeserAenderungsWahl.tsx`.
+  // ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ────────────────────
+  // Die eine verbliebene Checkbox war «Rechtsprechung im Kopf». Sie ist mit
+  // Variante A ERSATZLOS gefallen: der Kopf trägt keine Artikel-Zahl mehr, die
+  // sie hätte verbergen können (Herleitung in `v3/LeserAnsichtV3.tsx` und
+  // `v3/panelModell.ts`). An ihre Stelle treten FÜNF Checkboxen — die
+  // Rubriken-Wahl «An diesem Artikel zeigen» (Davids Nachtrag «man soll mittels
+  // ansicht alles einzelne abwählen können»). Die geprüfte Aussage ist
+  // unverändert der Deckel: genau diese Bedienungen, keine mehr, keine weniger.
   await expect(gruppe.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }))
-    .toHaveAttribute('aria-checked', 'true');
-  await expect(gruppe.getByRole(SCHALTER_ROLLE)).toHaveCount(1);
+    .toHaveCount(0);
+  for (const name of [/^Entscheide$/, /^Materialien$/, /^Verweise$/, /^Rechner$/, /^Aktionen$/]) {
+    await expect(gruppe.getByRole(SCHALTER_ROLLE, { name })).toHaveAttribute('aria-checked', 'true');
+  }
+  await expect(gruppe.getByRole(SCHALTER_ROLLE)).toHaveCount(5);
   for (const name of [/^Fussnoten/, VERMERKE_SCHALTER_NAME, AUS_WAHL_NAME]) {
     await expect(gruppe.getByRole(WAHL_ROLLE, { name })).toHaveCount(1);
   }
@@ -127,7 +138,11 @@ test('Options-Leiste: drei Schalter (Fussnoten/Änderungsvermerke/Rechtsprechung
   await expect(gruppe.getByRole(SCHALTER_ROLLE, { name: 'Linien' })).toHaveCount(0);
   // Negativ-Sonde gegen die Rückkehr: eine entfernte Steuerung, die niemand
   // vermisst, schleicht sich beim nächsten Merge sonst wieder ein.
-  await expect(gruppe.getByRole(SCHALTER_ROLLE, { name: 'Verweise' })).toHaveCount(0);
+  // D35-F2: der Name «Verweise» ist seither VERGEBEN — an eine Rubrik der
+  // Funktionszeile, nicht an den gestrichenen S1-Schalter. Die Negativ-Sonde
+  // greift darum am Attribut `data-verweise` unten, das der Alt-Schalter
+  // schaltete und die Rubrik nicht kennt; eine Namensprüfung wäre hier seit
+  // D35-F2 mehrdeutig (§7: Identität, nicht Substring).
   const html = page.locator('html');
   // Kein `data-linien` mehr am <html> — das Attribut existierte nur für die Linie.
   await expect(html).not.toHaveAttribute('data-linien', /.*/);
@@ -141,6 +156,10 @@ test('Options-Leiste: drei Schalter (Fussnoten/Änderungsvermerke/Rechtsprechung
   await expect(html).toHaveAttribute('data-vermerke', 'fassung');
   await expect(html).not.toHaveAttribute('data-fussnoten', /.*/);
   await expect(html).not.toHaveAttribute('data-histansicht', /.*/);
+  // D35-F2: dieselbe Sorge am gestrichenen `leitfaelle` — und das eine neue
+  // Attribut steht im Grundzustand LEER, emittiert also keine Regel (R6/§6).
+  await expect(html).not.toHaveAttribute('data-leitfaelle', /.*/);
+  await expect(html).toHaveAttribute('data-fuss-aus', '');
 });
 
 // ── S1-NACHZUG B3 · GELÖSCHT IN H4 (Flip 18.8.2026) ─────────────────────────

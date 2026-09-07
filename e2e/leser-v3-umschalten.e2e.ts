@@ -48,19 +48,29 @@ test.describe('Ansicht-Menü — D1/B3', () => {
     // Ausblenden gibt es nicht mehr (verlustfrei). Drei Stellungen mit
     // identischer Wirkung anzubieten wäre das tote Steuerelement, das D1
     // abgeschafft hat (§8).
+    //
+    // ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ─────────────────
+    // Die EINE `menuitemcheckbox` war «Rechtsprechung im Kopf». Sie ist mit
+    // Variante A ersatzlos gefallen; an ihrer Stelle stehen die FÜNF Schalter
+    // der Rubriken-Wahl. Die Aussage des Falls bleibt Wort für Wort dieselbe —
+    // die Historie-Bedienung erscheint nur an Erlassen mit Vermerken, und der
+    // Rest des Menüs steht unabhängig davon —, nur die Zahl der Nachbarn
+    // wechselt von 1 auf 5. Sie ist bewusst als LITERAL geprüft und nicht aus
+    // `FUSS_RUBRIKEN` abgeleitet: ein Wächter, der seine Erwartung aus dem
+    // Prüfling zieht, prüft nichts (§6.7).
 
     // POSITIV — StPO: 187 von 283 Fussnoten sind `kl:'A'`, dazu ein
     // Historie-Shard. Die Wahl steht vollzählig, dazu die eine Checkbox.
     await oeffne('/gesetze/bund/STPO')
     await expect(panel.getByRole(WAHL_ROLLE, { name: VERMERKE_SCHALTER_NAME })).toHaveCount(1)
     await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(3)
-    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(1)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(5)
 
     // NEGATIV 1 — BS-640.100 (StG BS): 16 Fussnoten, KEINE klassifiziert, kein
-    // Historie-Shard. Keine Wahl; «Rechtsprechung im Kopf» bleibt.
+    // Historie-Shard. Keine Wahl; die fünf Rubriken-Schalter bleiben.
     await oeffne('/gesetze/kanton/BS-640.100')
     await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(0)
-    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(1)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(5)
     // §8: nichts weggeblendet — es gibt hier wirklich keine Fassungs-Zeile …
     await expect(page.locator('[data-historie-zeile]')).toHaveCount(0)
     // … und die 16 klassenlosen Fussnoten stehen vollständig da (verlustfrei).
@@ -76,7 +86,7 @@ test.describe('Ansicht-Menü — D1/B3', () => {
     await page.locator('[data-v3-ansicht]').click()
     await expect(panel).toBeVisible()
     await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(0)
-    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(1)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(5)
 
     expect(fehler, fehler.join('\n')).toEqual([])
   })

@@ -22,15 +22,10 @@ async function warteLeser(page: Page): Promise<void> {
   await expect(page.locator('[data-v3-kopf]')).toBeVisible({ timeout: 20_000 })
 }
 
-async function schalterAus(page: Page): Promise<void> {
-  await page.evaluate(() => {
-    localStorage.setItem('lm.leser.optionen', JSON.stringify({
-      fussnoten: 'an', verweise: 'an', leitfaelle: 'aus', hist: 'fussnoten',
-    }))
-  })
-  await page.reload()
-  await warteLeser(page)
-}
+// D35-F2 (7.9.2026): hier stand `schalterAus(page)`, der den Store auf
+// `leitfaelle: 'aus'` setzte und neu lud. Das Feld gibt es nicht mehr
+// (`v3/leserOptionen.ts`); der Helfer hatte danach null Aufrufer und ist
+// gestrichen statt bewacht (§17-Gegengewicht).
 
 test.describe('H3-Nachzug — Panel: Lade-Ende, Erreichbarkeit, Gestalt', () => {
   test('(a) A1 · Erlass OHNE Bezugs-Shard: der Satz kommt, nicht der Ladebalken', async ({ page }) => {
@@ -65,31 +60,16 @@ test.describe('H3-Nachzug — Panel: Lade-Ende, Erreichbarkeit, Gestalt', () => 
     expect(fehler, fehler.join('\n')).toEqual([])
   })
 
-  test('(b) A2 · @390 mit «Rechtsprechung im Text: aus» führt «Ansicht» ins Panel', async ({ page }) => {
-    // VORHER, gemessen @390: nach dem Ausschalten war die Kopfzeile ohne Zähler
-    // (richtig, F8) — und im «···»-Menü stand KEIN Öffner. Ohne Hardware-Tastatur
-    // war die Fläche damit unerreichbar, obwohl Davids F8-Regel ausdrücklich
-    // verspricht: «Panel bleibt über ‹Ansicht ▾› und Tastatur erreichbar».
-    // ROT: `onPanelOeffnen` im Rahmen nicht setzen ⇒ «locator
-    // ('[data-v3-ansicht-panel-auf]') expected visible, got count 0».
-    const fehler = fehlerSammeln(page)
-    await page.setViewportSize({ width: 390, height: 844 })
-    await page.goto('/gesetze/bund/STPO')
-    await warteLeser(page)
-    await schalterAus(page)
-
-    // F8 gilt unverändert: kein Zähler in der Kopfzeile.
-    await expect(page.locator('[data-v3-panel-zaehler]')).toHaveCount(0)
-    // Der Weg über das Menü steht — MIT ausgeschaltetem Schalter.
-    await page.locator('[data-v3-ansicht]').click()
-    const eintrag = page.locator('[data-v3-ansicht-panel-auf]')
-    await expect(eintrag).toBeVisible()
-    await eintrag.click()
-    await expect(page.locator('[data-v3-panel]')).toBeVisible({ timeout: 20_000 })
-    // Das Menü macht sich zu — sonst stünde es über der Fläche, die es öffnet.
-    await expect(page.locator('[data-v3-ansicht-panel]')).toHaveCount(0)
-    expect(fehler, fehler.join('\n')).toEqual([])
-  })
+  // ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ───────────────────
+  // Hier stand «(b) A2 · @390 mit ‹Rechtsprechung im Text: aus› führt ‹Ansicht›
+  // ins Panel». Die A2-Messung vom 17.8.2026 (@390 nach dem Ausschalten kein
+  // Öffner in der Kopfzeile, Fläche ohne Hardware-Tastatur unerreichbar) bleibt
+  // als Beleg ihres Datums stehen (§0 Ziff. 2b). Mit Variante A gibt es die
+  // Lage nicht mehr: der Schalter ist ersatzlos gefallen, der Kopf-Griff
+  // «Erlass ▾» steht auf jeder Breite, und der Menü-Eintrag, der ihn vertrat,
+  // ist mit ihm gestrichen (§17-Gegengewicht). Die A2-SORGE selbst — «@390
+  // führt ein Weg aus der Kopfzeile zur Fläche» — prüft
+  // `e2e/leser-v3-kopf.e2e.ts` (a3), jetzt ohne Vorbedingung und mit EINEM Tap.
 
   test('(c) A3 · der Öffner ist ein bewusster Umschalter, mit gültigem aria-controls', async ({ page }) => {
     // VORHER, gemessen @1024 und @1440: `aria-controls` am Kopf-Zähler war `null`
