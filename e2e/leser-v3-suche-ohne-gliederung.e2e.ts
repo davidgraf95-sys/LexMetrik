@@ -1,5 +1,5 @@
 // @shard-gruppe: 7
-// ─── Ä76 (David-Befund 17.8.2026 abends) · SUCHE BEI EINGEKLAPPTER GLIEDERUNG ─
+// ─── Ä76 (David 17.8.2026) · SUCHE BEI EINGEKLAPPTER GLIEDERUNG ──────────────
 //
 // BEFUND, wörtlich: «wenn die gliederung ausgeblendet ist funktioniert suche
 // nicht mehr resp. resultat ist versteckt. andere lösung finden.»
@@ -12,27 +12,36 @@
 //                  INLINE über dem Lesetext
 // Formal sichtbar, faktisch verschwunden: die Liste begann unter der Falz
 // (Viewport 900) und schob den gesamten Gesetzestext um 3,6 Bildschirmhöhen nach
-// unten. Ursache war der `trefferListe`-Zweig der Lesespalte, dessen Bedingung
-// (`!zweiSpalten`) auch die EINGEKLAPPTE Spalte traf — ein Zweig, der etwas
-// anderes tat als sein Kommentar behauptete.
+// unten. Der Befund BLEIBT der Massstab dieser Spec; nur die Antwort darauf hat
+// gewechselt (§2b — ein Beleg wird nicht nachgeführt, er wird ergänzt):
 //
-// DIE GEPRÜFTE REGEL: **Die Trefferliste steht dort, wo das Feld steht.** Fehlt
-// die Spalte, ist aber Platz neben dem Text (Desktop/breites Pane), liegt sie als
-// Blatt DIREKT unter dem Suchfeld — ausserhalb des Flusses, damit die Suche den
-// Satzspiegel um exakt 0 px verschiebt (die verworfene Alternative «Spalte
-// automatisch aufziehen» hätte den Lesetext @1440 um 126 px seitwärts bewegt,
-// zweimal pro Suche; Herleitung in `src/pages/gesetz-leser/v3/LeserTrefferBlatt.tsx`).
+//  · Ä76 (17.8.2026) antwortete mit dem TREFFER-BLATT am Feld — 18 rem breit,
+//    halbe Fensterhöhe, ausserhalb des Flusses.
+//  · D38 (7.9.2026) antwortet mit der LESESPALTE: «die suchresultate … sollen
+//    den gesetzestext ersetzen». Das Blatt ist damit gefallen, und mit ihm die
+//    Frage, die es beantwortete — ob die Gliederung steht oder nicht, ändert am
+//    ORT der Liste nichts mehr.
+//
+// §6.3-UMSTELLUNG, deklariert: die Zeugen dieser Spec heissen seither
+// `[data-v3-treffer-spalte]` statt `[data-v3-treffer-blatt]`. Was sie MESSEN,
+// ist unverändert Davids Frage — sieht man das Ergebnis, ohne es suchen zu
+// müssen, und bewegt sich der Lesetext dabei nicht. Die Breiten-/Höhen-Zusagen
+// des Blattes (b) sind ersatzlos weg: die Liste soll den Text jetzt ERSETZEN,
+// nicht neben ihm stehen — eine Zusicherung «schmal genug, damit der Text
+// daneben sichtbar bleibt» widerspräche dem Auftrag. Was sie schützte (der Text
+// darf nicht wegrutschen), prüft (e) unverändert weiter.
+// Die Ortsfrage selbst — «in der Lesespalte, nicht in der Gliederung» — trägt
+// `leser-d38-treffer-lesespalte.e2e.ts`; hier steht sie nur als Vorbedingung.
 //
 // WARUM IM BROWSER: geprüft werden Rechtecke gegen den Viewport, eine gerechnete
 // Breiten-Weiche (ResizeObserver auf der Pane-Wurzel) und Stapelung. Nichts davon
 // sieht ein Unit-Test — «im DOM und isVisible()» war beim Prod-Stand ja wahr.
 //
-// ROT ZU BEKOMMEN (§6.7): in `LeserRahmenV3.tsx` die Prop `blatt={…}` an der
-// `<SuchZone>` entfernen. Dann ist die Liste bei eingeklappter Spalte nirgends
-// mehr — (a) fällt auf 0 sichtbare Listen, (c) und (d) finden ihr Blatt nicht.
-// Umgekehrt bringt das Wiederherstellen des Inline-Zweigs (a) zu Fall, weil das
-// Listen-Rechteck dann wieder unter der Falz beginnt und (e) einen Textsprung
-// meldet.
+// ROT ZU BEKOMMEN (§6.7): in `LeserRahmenV3.tsx` den Prop `trefferSpalte={…}`
+// an der `<LeserLeseZeile>` weglassen. Dann ist die Liste nirgends mehr — (a),
+// (c) und (f) finden sie nicht. Umgekehrt bringt ein Wiederherstellen des
+// Inline-Zweigs von damals (a) und (e) zu Fall, weil das Listen-Rechteck dann
+// wieder unter der Falz beginnt und der Satzspiegel wandert.
 import { test, expect, type Page } from '@playwright/test'
 
 const BEGRIFF = 'Entschädigung'
@@ -57,37 +66,27 @@ async function gliederungZu(page: Page): Promise<void> {
 /**
  * Suchen und warten, bis der Begriff durch das Debounce im Modell ist.
  *
- * WORAUF gewartet wird, hängt von der Lage ab — und das ist keine Feinheit,
- * sondern ein beim Bau gesehener Fehlschlag: `[data-v3-treffer-weg]` (die
- * Zähler-Zeile) lebt in der Such-ZONE, und die gibt es nur OHNE stehende Spalte.
- * Mit Spalte wartete der Helfer auf ein Element, das dort nie erscheint.
- *
- * Ä78/V5 (Nachzug 17.8.2026): ohne Spalte ist der Zeuge das BLATT, nicht mehr die
- * Zähler-Zeile. Das Blatt öffnet sich mit der Suche selbst, und seither schweigt
- * die Zähler-Zeile, solange es offen ist — auf ihr Erscheinen zu warten hiesse
- * jetzt, auf den geschlossenen Zustand zu warten. Unterhalb von 1024 px (Handy,
- * schmales Pane) gibt es kein Blatt; dort bleibt die Zähler-Zeile der Zeuge,
- * darum die Oder-Auswahl statt eines dritten Schalters.
+ * D38: EIN Zeuge für jede Lage — die Liste steht in jeder Breite und mit wie
+ * ohne Spalte über der Lesespalte. Die frühere Oder-Auswahl (Blatt @≥1024,
+ * Zähler-Zeile darunter, Liste mit Spalte) ist mit den drei Orten weggefallen.
  */
-async function suche(page: Page, wort = BEGRIFF, mitSpalte = false): Promise<void> {
+async function suche(page: Page, wort = BEGRIFF): Promise<void> {
   const feld = page.locator('[data-v3-suchsprung] input').first()
   await feld.click()
   await feld.fill(wort)
-  const zeuge = mitSpalte ? '[data-treffer-liste]' : '[data-v3-treffer-blatt], [data-v3-treffer-weg]'
-  await expect(page.locator(zeuge).first()).toBeVisible({ timeout: 15000 })
+  await expect(page.locator('[data-treffer-liste]').first()).toBeVisible({ timeout: 20000 })
 }
 
 /**
  * Liegt das Rechteck VOLLSTÄNDIG im Viewport? Genau das war beim Prod-Stand
  * falsch, während `isVisible()` true meldete.
  *
- * GEMESSEN WIRD DAS BLATT, NICHT DIE LISTE. Beim ersten Lauf dieser Fassung stand
- * hier `[data-treffer-liste]` — und die ist im Blatt 4519 px hoch (StPO,
- * «Entschädigung»), weil sie darin SCROLLT. Die Zusicherung wäre damit nur
- * erfüllbar gewesen, wenn das Blatt jede Trefferzeile gleichzeitig zeigt; das
- * verlangt niemand und widerspräche dem Höhendeckel aus Ä19. Die Frage, die
- * Davids Befund stellt, lautet: sieht man das Ergebnis, ohne suchen zu müssen —
- * also ist die FLÄCHE im Bild und steht oben drin etwas Lesbares.
+ * GEMESSEN WIRD DER SCROLLER, NICHT DIE LISTE. Die Liste ist darin mehrere
+ * tausend Pixel hoch (StPO, «Entschädigung»), weil sie SCROLLT; die
+ * Zusicherung wäre nur erfüllbar, wenn jede Trefferzeile gleichzeitig im Bild
+ * stünde. Die Frage, die Davids Befund stellt, lautet: sieht man das Ergebnis,
+ * ohne suchen zu müssen — also ist die FLÄCHE im Bild und steht oben drin
+ * etwas Lesbares.
  */
 async function imViewport(page: Page, wahl: string): Promise<{ drin: boolean; box: unknown }> {
   return page.locator(wahl).first().evaluate((el) => {
@@ -114,39 +113,61 @@ for (const breite of [1024, 1440]) {
 
     // DER KERN DES BEFUNDS: nicht «im DOM», sondern «im Bild». Beim Prod-Stand
     // begann das Rechteck bei y = 755 und war 3596 px hoch — es begann also
-    // unterhalb der Falz. Gemessen wird die FLÄCHE, auf der die Liste liegt.
-    const { drin, box } = await imViewport(page, '[data-v3-treffer-blatt]')
-    expect(drin, `Treffer-Blatt nicht vollständig im Viewport: ${JSON.stringify(box)}`).toBe(true)
+    // unterhalb der Falz. Gemessen wird der SCROLLER, auf dem die Liste liegt.
+    //
+    // ── ZWEI ZUSTÄNDE, WEIL `position: sticky` ZWEI HAT (gemessen 7.9.2026) ──
+    // Die Fläche klebt am selben Anschlag wie die Gliederungs-Spalte und
+    // rechnet ihren Höhen-Deckel aus demselben Ausdruck
+    // (`calc(100vh - var(--nt-stick) - 1.5rem)`, §5 — eine Geometrie für beide
+    // Spuren). Bei scrollY 0 ist sie aber noch NICHT geklebt: sie beginnt am
+    // Kopf der Lese-Zelle (y = 218 statt 166) und ragt damit um genau diese
+    // 52 px, gedeckelt sichtbar als 28 px, unter die Falz. Das ist keine
+    // Eigenheit von D38 — die Gliederungs-Spalte tut seit je dasselbe, und ein
+    // zweiter Höhen-Ausdruck nur für diese Fläche wäre die zweite
+    // Geometrie-Quelle, die LM-003 verbietet.
+    // GEPRÜFT WIRD DARUM BEIDES, statt einen Zustand wegzudefinieren (§8):
+    //  · UNGEKLEBT (scrollY 0): der KOPF der Fläche steht im oberen Drittel des
+    //    Bildes und die erste Trefferzeile ganz darin — genau das, was beim
+    //    Prod-Stand (y = 755 von 900) falsch war.
+    //  · GEKLEBT (nach einem Stück Scrollen): die Fläche passt vollständig.
+    const ungeklebt = await imViewport(page, '[data-v3-treffer-spalte-scroller]')
+    const kopfY = (ungeklebt.box as { t: number; vh: number })
+    expect(kopfY.t, `Treffer-Fläche beginnt unter der Falz: ${JSON.stringify(ungeklebt.box)}`)
+      .toBeLessThan(kopfY.vh / 3)
+    expect(kopfY.t, `Treffer-Fläche über dem Fensterrand: ${JSON.stringify(ungeklebt.box)}`)
+      .toBeGreaterThanOrEqual(0)
 
     // Und darin steht wirklich etwas Lesbares: die erste Trefferzeile liegt
-    // ebenfalls ganz im Bild. Ohne diese zweite Sonde wäre ein leeres,
-    // korrekt platziertes Blatt grün (§6.7).
-    const ersteZeile = await imViewport(page, '[data-v3-treffer-blatt] [data-treffer-artikel]')
+    // ebenfalls ganz im Bild. Ohne diese zweite Sonde wäre eine leere,
+    // korrekt platzierte Fläche grün (§6.7).
+    const ersteZeile = await imViewport(page, '[data-v3-treffer-spalte] [data-treffer-artikel]')
     expect(ersteZeile.drin, `erste Trefferzeile nicht im Bild: ${JSON.stringify(ersteZeile.box)}`).toBe(true)
 
-    // Sie hängt am FELD, nicht irgendwo: dasselbe Blatt, und das Blatt liegt in
-    // der Such-Zone (die einzige Stelle, die ohne Spalte klebt).
-    await expect(page.locator('[data-v3-such-zone] [data-v3-treffer-blatt] [data-treffer-liste]')).toHaveCount(1)
+    // Und im geklebten Zustand passt die ganze Fläche.
+    await page.evaluate(() => window.scrollTo(0, 600))
+    await expect.poll(async () => page.evaluate(() => window.scrollY)).toBeGreaterThan(100)
+    const { drin, box } = await imViewport(page, '[data-v3-treffer-spalte-scroller]')
+    expect(drin, `geklebte Treffer-Fläche nicht vollständig im Viewport: ${JSON.stringify(box)}`).toBe(true)
 
-    // ── Ä78 / V5 (Nachzug 17.8.2026) · DER ZÄHLER STEHT GENAU EINMAL ────────
-    // Befund des Ästhetik-Reviews: bei OFFENEM Blatt sagte die Zeile am Feld
+    // ── Ä78 / V5 (17.8.2026), fortgeschrieben mit D38 · DER ZÄHLER STEHT
+    //    GENAU EINMAL ────────────────────────────────────────────────────────
+    // Befund des Ästhetik-Reviews: bei offener Liste sagte die Zeile am Feld
     // «N Artikel · M Fundstellen · Treffer anzeigen →» — und zwei Zentimeter
-    // darunter sagte der Listenkopf des Blattes dasselbe. Der Weg war zudem
-    // schon gegangen: ein Knopf, der ein offenes Blatt öffnet.
-    // Geprüft in BEIDE Richtungen (sonst wäre «weg» auch mit kaputter Suche grün):
-    // solange das Blatt offen ist, schweigt die Zeile und die Zahlen stehen im
-    // Blatt; nach ✕ ist sie wieder da und nennt dieselben Zahlen (§5).
-    // ROT ZU BEKOMMEN (§6.7): in `v3/suchZoneAufbau.tsx` das Prop `blattOffen`
-    // weglassen ⇒ beide Zähler stehen gleichzeitig.
+    // darunter sagte der Listenkopf dasselbe. Der Weg war zudem schon gegangen:
+    // ein Knopf, der eine offene Liste öffnet. Geprüft in BEIDE Richtungen
+    // (sonst wäre «weg» auch mit kaputter Suche grün): solange die Liste steht,
+    // schweigt die Zeile und die Zahlen stehen in der Liste; nach ↵ ist sie
+    // wieder da und nennt dieselben Zahlen (§5).
+    // ROT ZU BEKOMMEN (§6.7): in `LeserRahmenV3.tsx` `listeSteht: trefferSteht`
+    // auf `false` setzen ⇒ beide Zähler stehen gleichzeitig.
     await expect(page.locator('[data-v3-treffer-weg]'),
-      'Zähler-Zeile steht neben dem offenen Blatt — der Zähler doppelt').toHaveCount(0)
-    const imBlatt = (await page.locator('[data-v3-treffer-blatt] [data-treffer-liste]').innerText())
-      .replace(/\s+/g, ' ')
-    expect(imBlatt, `Listenkopf ohne Artikel-Zahl: ${imBlatt}`).toMatch(/\d+ (Artikel|Paragraphen)/)
-    expect(imBlatt, `Listenkopf ohne Fundstellen-Zahl: ${imBlatt}`).toMatch(/\d+ Fundstellen?/)
+      'Zähler-Zeile steht neben der offenen Liste — der Zähler doppelt').toHaveCount(0)
+    const inListe = (await liste.innerText()).replace(/\s+/g, ' ')
+    expect(inListe, `Listenkopf ohne Artikel-Zahl: ${inListe}`).toMatch(/\d+ (Artikel|Paragraphen)/)
+    expect(inListe, `Listenkopf ohne Fundstellen-Zahl: ${inListe}`).toMatch(/\d+ Fundstellen?/)
 
-    // Blatt zu ⇒ die Zeile kommt zurück, mit denselben Zahlen und dem Weg hinein.
-    await page.locator('[data-v3-treffer-blatt-zu]').click()
+    // Liste weg ⇒ die Zeile kommt zurück, mit denselben Zahlen und dem Weg hinein.
+    await page.locator('[data-v3-suchsprung] input').first().press('Enter')
     const weg = page.locator('[data-v3-treffer-weg]')
     await expect(weg).toBeVisible()
     const zaehler = (await weg.innerText()).replace(/\s+/g, ' ')
@@ -156,54 +177,34 @@ for (const breite of [1024, 1440]) {
   })
 }
 
-test('(b) das Blatt bleibt schmal und deckelt seine Höhe — der Lesetext bleibt daneben sichtbar', async ({ page }) => {
-  // Ä19 in Zahlen: «schmales Blatt am Feld, max-h ~50 %, kein Vollflächen-Scrim».
+test('(c) Klick auf einen Treffer springt — und gibt den Text frei', async ({ page }) => {
+  // §6.3-UMSTELLUNG (D38): bis 7.9.2026 verlangte dieser Fall das GEGENTEIL —
+  // «das Blatt bleibt offen, sonst müsste man für jeden zweiten Treffer neu
+  // suchen». Die Begründung galt, solange die Liste NEBEN dem Text lag. Über
+  // dem Text darf sie nicht stehenbleiben: der Sprung führt in den Wortlaut,
+  // und eine Liste, die ihn danach weiter verdeckt, hätte den Sprung umsonst
+  // gemacht. Der Einwand von damals bleibt beantwortet: die Suche und der
+  // Begriff bleiben stehen, die Zähler-Zeile am Feld führt mit «Treffer
+  // anzeigen →» in einem Klick zurück, und ‹ › schreiten durch die Fundstellen,
+  // ohne die Liste überhaupt zu brauchen.
   await page.setViewportSize({ width: 1440, height: 900 })
   await warteLeser(page)
   await gliederungZu(page)
   await suche(page)
 
-  const mass = await page.locator('[data-v3-treffer-blatt]').evaluate((el) => {
-    const r = el.getBoundingClientRect()
-    return { w: Math.round(r.width), h: Math.round(r.height), vh: window.innerHeight, vw: window.innerWidth }
-  })
-  expect(mass.w, `Blatt zu breit (${mass.w} px) — es soll den Text nicht ersetzen`).toBeLessThanOrEqual(340)
-  expect(mass.h, `Blatt höher als die halbe Fensterhöhe (${mass.h}/${mass.vh})`).toBeLessThanOrEqual(Math.round(mass.vh / 2) + 2)
-
-  // KEIN Vollflächen-Scrim: nichts liegt über dem Lesetext ausser dem Blatt
-  // selbst. Gemessen an einem Punkt WEIT rechts im Satzspiegel — dort muss der
-  // Text getroffen werden, nicht ein Overlay.
-  const treffer = await page.evaluate(() => {
-    const spalte = document.querySelector('#lc-lesespalte')
-    if (!spalte) return 'keine Lesespalte'
-    const r = spalte.getBoundingClientRect()
-    const el = document.elementFromPoint(Math.round(r.right - 20), Math.round(window.innerHeight / 2))
-    return el?.closest('[data-v3-treffer-blatt]') ? 'BLATT' : 'text'
-  })
-  expect(treffer, 'am rechten Rand des Satzspiegels liegt ein Overlay').toBe('text')
-})
-
-test('(c) Klick auf einen Treffer springt — und lässt das Blatt offen (wie in der Spalte)', async ({ page }) => {
-  await page.setViewportSize({ width: 1440, height: 900 })
-  await warteLeser(page)
-  await gliederungZu(page)
-  await suche(page)
-
-  const blatt = page.locator('[data-v3-treffer-blatt]')
-  const erster = blatt.locator('[data-treffer-artikel]').first()
+  const spalte = page.locator('[data-v3-treffer-spalte]')
+  const erster = spalte.locator('[data-treffer-artikel]').first()
   await expect(erster, 'kein Treffer zum Klicken — Vorbedingung fehlt (§6.7)').toHaveCount(1)
-  const token = await erster.getAttribute('data-treffer-artikel')
-  expect(token).toBeTruthy()
 
   const vorher = await page.evaluate(() => window.scrollY)
   await erster.locator('button, a').first().click()
   // Der Sprung ist der Zweck: die Seite bewegt sich.
   await expect.poll(async () => page.evaluate(() => window.scrollY), { timeout: 10000 })
     .not.toBe(vorher)
-  // Und das Blatt steht weiter — sonst müsste man für jeden zweiten Treffer neu
-  // suchen (dieselbe Zusage wie in der Spalte).
-  await expect(blatt).toBeVisible()
-  await expect(blatt.locator('[data-treffer-liste]')).toHaveCount(1)
+  // Und der Wortlaut ist frei — sonst wäre der Sprung ins Verdeckte gegangen.
+  await expect(spalte).toHaveCount(0)
+  await expect(page.locator('[data-v3-suchsprung] input').first()).toHaveValue(BEGRIFF)
+  await expect(page.locator('[data-v3-treffer-weg]'), 'kein Weg zurück zur Liste').toBeVisible()
 })
 
 test('(d) Esc schliesst ohne Sprung — der gelesene Text bleibt exakt stehen', async ({ page }) => {
@@ -214,19 +215,12 @@ test('(d) Esc schliesst ohne Sprung — der gelesene Text bleibt exakt stehen', 
   // `SUCH_H_AKTIV` (4.25 rem) auf `SUCH_H_RUHE` (2.75 rem), also um exakt diese
   // 24 px (`v3/SuchZone.tsx`, B9). Alles darunter rückt 24 px hoch, und Chromes
   // Scroll-Anchoring zieht `scrollY` um dieselben 24 px nach — damit der Leser
-  // NICHTS wandern sieht.
-  //
-  // Eine Zusicherung auf gleichbleibendes `scrollY` würde hier also das Gegenteil
-  // dessen verlangen, was Pos. 14 verspricht: sie wäre nur erfüllbar, wenn der
-  // Text tatsächlich springt. Gemessen wird darum die Grösse, um die es geht —
-  // die Lage eines Artikels IM BILD. (Die ältere Spec
-  // `leser-v3-esc-ohne-sprung` misst weiter `scrollY` und ist dort richtig: mit
-  // stehender Gliederungs-Spalte gibt es gar keine Such-Zone, die wachsen kann.)
+  // NICHTS wandern sieht. Gemessen wird darum die Lage eines Artikels IM BILD.
   await page.setViewportSize({ width: 1440, height: 900 })
   await warteLeser(page)
   await gliederungZu(page)
   await suche(page)
-  await expect(page.locator('[data-v3-treffer-blatt]')).toBeVisible()
+  await expect(page.locator('[data-v3-treffer-spalte]')).toBeVisible()
 
   // Erst ein Stück lesen, damit «kein Sprung» überhaupt etwas behauptet: bei
   // scrollY 0 wäre die Zusicherung trivial erfüllt (§6.7).
@@ -240,8 +234,8 @@ test('(d) Esc schliesst ohne Sprung — der gelesene Text bleibt exakt stehen', 
 
   await page.locator('[data-v3-suchsprung] input').first().press('Escape')
   // Esc IM FELD ist Pos. 14: leeren, nicht springen. Damit endet die Suche und
-  // das Blatt ist weg.
-  await expect(page.locator('[data-v3-treffer-blatt]')).toHaveCount(0)
+  // die Liste ist weg.
+  await expect(page.locator('[data-v3-treffer-spalte]')).toHaveCount(0)
   await expect(page.locator('[data-v3-suchsprung] input').first()).toHaveValue('')
   const nachher = await lage()
   expect(
@@ -249,22 +243,17 @@ test('(d) Esc schliesst ohne Sprung — der gelesene Text bleibt exakt stehen', 
     `Esc hat den Lesetext bewegt: ${vorher} px → ${nachher} px im Bild`,
   ).toBeLessThanOrEqual(2)
 
-  // Der zweite Weg heraus: ✕ am Blatt nimmt NUR das Blatt, die Suche bleibt —
-  // und «Treffer anzeigen →» holt es zurück. Auch das ohne Scroll.
+  // Der zweite Weg heraus: ↵ nimmt NUR die Liste, die Suche bleibt — und
+  // «Treffer anzeigen →» holt sie zurück. Beides ohne Positionsverlust.
   await suche(page)
-  await expect(page.locator('[data-v3-treffer-blatt]')).toBeVisible()
-  await page.evaluate(() => window.scrollTo(0, 900))
-  const vorher2 = await page.evaluate(() => window.scrollY)
-  await page.locator('[data-v3-treffer-blatt-zu]').click()
-  await expect(page.locator('[data-v3-treffer-blatt]')).toHaveCount(0)
-  await expect(page.locator('[data-v3-suchsprung] input').first()).not.toHaveValue('')
-  expect(await page.evaluate(() => window.scrollY), '✕ hat gescrollt').toBe(vorher2)
-  await page.locator('[data-v3-treffer-weg]').click()
-  await expect(page.locator('[data-v3-treffer-blatt]')).toBeVisible()
-  expect(await page.evaluate(() => window.scrollY), '«Treffer anzeigen» hat gescrollt').toBe(vorher2)
+  await expect(page.locator('[data-v3-treffer-spalte]')).toBeVisible()
+  const vorher2 = await lage()
+  await page.locator('[data-v3-suchsprung] input').first().press('Escape')
+  await expect(page.locator('[data-v3-treffer-spalte]')).toHaveCount(0)
+  expect(Math.abs(await lage() - vorher2), 'Esc hat gescrollt').toBeLessThanOrEqual(2)
 })
 
-test('(e) das Öffnen verschiebt den Lesetext um 0 px — darum ein Blatt und keine aufziehende Spalte', async ({ page }) => {
+test('(e) das Öffnen verschiebt den Lesetext um 0 px — darum eine Ebene und keine aufziehende Spalte', async ({ page }) => {
   // Das ist die MESSUNG, die die Alternative ausgeschlossen hat: «Spalte beim
   // Suchen aufziehen» hätte den Satzspiegel @1440 um 126 px seitwärts bewegt.
   await page.setViewportSize({ width: 1440, height: 900 })
@@ -277,31 +266,32 @@ test('(e) das Öffnen verschiebt den Lesetext um 0 px — darum ein Blatt und ke
   })
   const vorher = await kasten()
   await suche(page)
-  await expect(page.locator('[data-v3-treffer-blatt]')).toBeVisible()
+  await expect(page.locator('[data-v3-treffer-spalte]')).toBeVisible()
   const nachher = await kasten()
   expect(nachher, `Satzspiegel verschoben: ${JSON.stringify(vorher)} → ${JSON.stringify(nachher)}`)
     .toEqual(vorher)
 })
 
-test('(f) mit STEHENDER Spalte gibt es kein Blatt — nie zwei Listen', async ({ page }) => {
-  // Die Kehrseite von (a): das Blatt ist der Ersatz für die fehlende Spalte, nicht
-  // ein zweiter Ort daneben. Zwei Listen gleichzeitig wären die Doppelwahrheit,
-  // die `LeserGliederung` ausdrücklich ausschliesst (§5).
+test('(f) mit STEHENDER Spalte gibt es genau eine Liste — und sie steht nicht in der Gliederung', async ({ page }) => {
+  // Die Kehrseite von (a): die Liste hat EINEN Ort, nicht zwei nebeneinander.
+  // Zwei Listen gleichzeitig wären die Doppelwahrheit, die schon vor D38
+  // ausgeschlossen war (§5) — nur stand die eine damals in der Gliederung.
   await page.setViewportSize({ width: 1440, height: 900 })
   await warteLeser(page)
-  await suche(page, BEGRIFF, true)
+  await suche(page)
 
   await expect(page.locator('[data-v3-aside]')).toHaveCount(1)
-  await expect(page.locator('[data-v3-treffer-blatt]')).toHaveCount(0)
   await expect(page.locator('[data-treffer-liste]')).toHaveCount(1)
+  await expect(page.locator('[data-v3-aside] [data-treffer-liste]')).toHaveCount(0)
+  await expect(page.locator('[data-v3-treffer-spalte] [data-treffer-liste]')).toHaveCount(1)
 })
 
-test('(g) Split-Pane: schmale Panes behalten das Bottom-Sheet, und nie beides', async ({ page }) => {
-  // Im Split @1600 misst jedes Pane rund 590 px und unterschreitet damit die
-  // xl-Schwelle — dort gibt es keinen Platz für ein Blatt NEBEN dem Text, und der
-  // Weg zur Liste bleibt das Bottom-Sheet (Kap. 4b). Geprüft wird, dass die
-  // Blatt-Weiche diese Breite nicht mit erwischt: sonst hinge das Blatt in einem
-  // 590-px-Pane und verdeckte genau den Text, für den Ä19 es gebaut hat.
+test('(g) Split-Pane: jedes Pane trägt seine Liste über der eigenen Lesespalte', async ({ page }) => {
+  // Im Split @1600 misst jedes Pane rund 590 px und unterschreitet die
+  // xl-Schwelle. Vor D38 entschied genau diese Schwelle zwischen Blatt und
+  // Bottom-Sheet; seither gibt es keine Weiche mehr — die Liste liegt in jeder
+  // Breite über der Lesespalte DES EIGENEN Panes. Geprüft wird darum, dass die
+  // Suche im primären Pane das sekundäre nicht anfasst.
   test.slow() // zwei volle Leser-Instanzen
   await page.setViewportSize({ width: 1600, height: 900 })
   await page.goto('/gesetze/bund/STPO?leser=v3&p=/gesetze/bund/BGBM%3Fleser%3Dv3')
@@ -312,57 +302,42 @@ test('(g) Split-Pane: schmale Panes behalten das Bottom-Sheet, und nie beides', 
   const feld = page.locator('[data-pane="primaer"] [data-v3-suchsprung] input')
   await feld.click()
   await feld.fill(BEGRIFF)
-  // Der Zähler-Weg steht auch hier — die Liste ist erreichbar, nur anders.
-  await expect(page.locator('[data-pane="primaer"] [data-v3-treffer-weg]')).toBeVisible({ timeout: 15000 })
-  await expect(page.locator('[data-v3-treffer-blatt]'), 'Blatt im schmalen Pane').toHaveCount(0)
+  await expect(page.locator('[data-pane="primaer"] [data-v3-treffer-spalte] [data-treffer-liste]'))
+    .toBeVisible({ timeout: 20000 })
+  await expect(page.locator('[data-pane="sekundaer"] [data-v3-treffer-spalte]'),
+    'die Suche im linken Pane hat das rechte verdeckt').toHaveCount(0)
+  await expect(page.locator('[data-gliederung-sheet]'),
+    'im Split zieht die Suche ein Sheet auf').toHaveCount(0)
 })
 
 // ═══ Ä84 (Ästhetik-Prüfer 17.8.2026) · DAS SEGMENT WÄCHST NICHT MIT ═══════════
 //
-// GEMESSEN am Ist-Stand (StPO, «Entschädigung», chromium, Projekt `leser-v3`):
+// GEMESSEN am damaligen Stand (StPO, «Entschädigung», chromium): das
+// Suchbereich-Segment ist für die 18-rem-Leiste kalibriert (vier kurze Wörter,
+// je `flex-1`) und dehnte sich ohne Deckel auf die Breite seines Behälters —
+// @720 auf das 2,5-fache. Vier Schalter über 688 px sind keine Werkzeugzeile
+// mehr: die Trefferliste darunter bleibt schmal, und das Segment liest sich als
+// Reiter-Leiste einer Zone, die es nicht gibt.
 //
-//   Breite                Suchbereich-Segment   Blatt-Kopf
-//   ──────────────────────────────────────────────────────────────────────────
-//   D-Blatt @1440              270 px           «Treffer» | «✕ ausblenden»
-//   H-Blatt @390               358 px           NUR «↑ Anfang», rechts, x = 308
-//   Split/Sheet @720           688 px           NUR «↑ Anfang», rechts, x = 638
-//
-// Ä84 nennt zwei Dinge. GEPRÜFT WIRD HIER DAS EINE, DAS OHNE WIDERSPRUCH ZU
-// HEILEN WAR: das Segment ist für die 18-rem-Leiste kalibriert (vier kurze
-// Wörter, je `flex-1`) und dehnte sich ohne Deckel auf die Breite seines
-// Behälters — @720 auf das 2,5-fache. Vier Schalter über 688 px sind keine
-// Werkzeugzeile mehr: die Trefferliste darunter bleibt schmal, und das Segment
-// liest sich als Reiter-Leiste einer Zone, die es nicht gibt.
-//
-// NICHT GEHEILT, und das ist ein Befund, keine Lücke: das allein stehende
-// «↑ Anfang» im Blatt-Kopf. Es zu entfernen war gebaut und ist an **Ä32**
-// gescheitert — `e2e/leser-v3-blatt` (d) hält ausdrücklich fest, dass der Knopf
-// im Treffer-Blatt BLEIBT («es bezieht sich auf den Erlass, nicht auf den
-// Baum», Pos. 15). Das Tor hat den Widerspruch gefangen (1 failed, 149 passed).
-// Einen ehrlichen Partner für die linke Hälfte gibt es nicht: den Zonen-Namen
-// trägt der Sheet-Kopf bereits (Ä10), und der Zähler steht eine Zeile tiefer in
-// der Trefferliste — ihn zu wiederholen wäre Ä78. Der Punkt bleibt darum offen
-// und ist im Vermerk «H4-Vorbereitung II» als Entscheid übergeben.
+// D38 ändert den BEHÄLTER (Lesespalte statt Blatt/Sheet), nicht die Zusage: der
+// Deckel ist weiterhin nötig, weil die Lesespalte @1440 volle 640 px breit ist.
 //
 // ROT ZU BEKOMMEN (§6.7): in `v3/SuchBereichWahl.tsx` die Breiten-Klasse
-// `w-[min(100%,18rem)]` entfernen ⇒ (h) meldet 358 px @390 bzw. 688 px @720.
+// `w-[min(100%,18rem)]` entfernen ⇒ (h) meldet die volle Behälterbreite.
 // So gemessen, bevor der Deckel gebaut wurde.
 for (const breite of [390, 720]) {
   test(`(h) @${breite}: das Suchbereich-Segment behält seine Kalibrierung`, async ({ page }) => {
     await page.setViewportSize({ width: breite, height: 844 })
     await warteLeser(page)
-    // Ohne Spalte trägt die Such-Zone das Feld; der Weg zur Liste ist das Sheet.
     await suche(page)
-    await page.locator('[data-v3-treffer-weg]').click()
-    const leiste = page.locator('[data-v3-leiste]')
-    await expect(leiste).toBeVisible({ timeout: 15000 })
-    // POSITIV-Vorbedingung: es ist wirklich die TREFFERLISTE im Blatt, nicht der
-    // Baum — sonst prüfte alles Weitere den falschen Zustand (§6.7).
-    await expect(leiste.locator('[data-treffer-liste]')).toHaveCount(1)
+    // POSITIV-Vorbedingung: es ist wirklich die TREFFERLISTE über der
+    // Lesespalte — sonst prüfte alles Weitere den falschen Zustand (§6.7).
+    const flaeche = page.locator('[data-v3-treffer-spalte]')
+    await expect(flaeche.locator('[data-treffer-liste]')).toHaveCount(1)
 
     const befund = await page.evaluate(() => {
-      const seg = document.querySelector('[data-v3-leiste] [data-v3-suchbereich]') as HTMLElement | null
-      const scroller = document.querySelector('[data-v3-leiste-scroller]') as HTMLElement | null
+      const seg = document.querySelector('[data-v3-treffer-spalte] [data-v3-suchbereich]') as HTMLElement | null
+      const scroller = document.querySelector('[data-v3-treffer-spalte-scroller]') as HTMLElement | null
       return {
         segBreite: seg ? Math.round(seg.getBoundingClientRect().width) : null,
         segEltern: seg?.parentElement ? Math.round(seg.parentElement.getBoundingClientRect().width) : null,
@@ -374,8 +349,8 @@ for (const breite of [390, 720]) {
     // 18 rem = 288 px; die 1-px-Toleranz fängt das Sub-Pixel-Runden.
     expect(befund.segBreite!,
       `Segment ${befund.segBreite} px in ${befund.segEltern} px Behälter`).toBeLessThanOrEqual(289)
-    // Und es schrumpft mit, wo weniger Platz ist — sonst risse es das Blatt auf.
+    // Und es schrumpft mit, wo weniger Platz ist — sonst risse es die Fläche auf.
     expect(befund.segBreite!).toBeLessThanOrEqual((befund.segEltern ?? 0) + 1)
-    expect(befund.ueberlauf, 'das Blatt scrollt waagrecht').toBeLessThanOrEqual(1)
+    expect(befund.ueberlauf, 'die Treffer-Fläche scrollt waagrecht').toBeLessThanOrEqual(1)
   })
 }

@@ -1,5 +1,5 @@
 import {
-  pfadTeil, entscheidPfad, erlassVonPfad, verlaufLabel, katalogKurzform,
+  pfadTeil, entscheidPfad, erlassVonPfad, gesetzPfad, verlaufLabel, katalogKurzform,
   type VerlaufManifeste,
 } from './verlaufLabel';
 import { reiterKategorie, artikelLabelVonPfad } from './tabGruppen';
@@ -210,7 +210,33 @@ function basisKurzform(t: TabEintrag, m: VerlaufManifeste): KurzformTeile {
   const fest = reiterKurzform(t.path);
   if (fest) return { kopf: '', kern: fest, stelle: null };
   const kat = reiterKategorie(t.path);
-  const kuerzel = kat === 'gesetze' ? erlassVonPfad(t.path, m)?.kuerzel : null;
+  // ── R13B (Prüfbefund PR #743 §8 b / Fixer D34, 7.9.2026) · DIE VORLÄUFIGE
+  //    AUFSCHRIFT IST DER SCHLÜSSEL DER ADRESSE, NICHT EINE AUFFORDERUNG ─────
+  //  Das Browse-Manifest kommt lazy (`Reiterleiste.tsx`, `ladeBrowseManifest`);
+  //  bis dahin lieferte `erlassVonPfad` null, der Reiter fiel auf `verlaufLabel`
+  //  zurück und trug «Gesetz öffnen». GEMESSEN am Stand `cfa8a9f81` (gebautes
+  //  dist/, Preview 4429, Chromium @1280, `/gesetze/bund/ZGB`): der Reiter stand
+  //  bei t=243 ms mit 131 px da und sprang bei t=260 ms auf 80 px, sobald das
+  //  Manifest eintraf — 51 px, die das Schliess-✕ (127 → 69) und jeden Reiter
+  //  rechts davon mitnahmen (Layout-Shift 0.000046 bei einem, 0.000521 beim
+  //  zweiten Reiter, input-frei).
+  //  Reserviert werden kann diese Breite nicht: WIE breit die Aufschrift wird,
+  //  weiss erst das Manifest. Also darf die vorläufige Aufschrift nicht breiter
+  //  sein als die endgültige — und der Schlüssel der ADRESSE ist genau das:
+  //  keine Schätzung (§2/§7), sondern die Zeichenkette, die der Nutzer
+  //  angeklickt hat und die in der Adresszeile steht.
+  //  GEMESSEN gegen `dist/normtext/register.json` (1'576 Erlasse): 123 tragen
+  //  Schlüssel und Kürzel identisch, 212 in gleicher LÄNGE; die grosse Mehrheit
+  //  der Bundes-Abweichungen ist reine Schreibung (`HREGV`→`HRegV`,
+  //  `FUSG`→`FusG`) und damit im Bereich weniger Pixel. Kantonale Erlasse
+  //  (`AG-291.150`→`Anwaltstarif`) weichen weiter ab — auch dort ist der
+  //  Schlüssel näher an der Endbreite als die 131-px-Aufforderung, und er nennt
+  //  das Dokument statt es zu verschweigen (§8).
+  //  NUR solange das Manifest FEHLT. Ist es da und kennt den Erlass nicht,
+  //  bleibt es bei «Gesetz nicht gefunden» (`verlaufLabel`, G23) — ein Irrtum
+  //  wird ausgewiesen, nicht mit dem Rohschlüssel überdeckt.
+  const vorlaeufig = kat === 'gesetze' && !m.gesetze ? gesetzPfad(t.path)?.key ?? null : null;
+  const kuerzel = kat === 'gesetze' ? erlassVonPfad(t.path, m)?.kuerzel ?? vorlaeufig : null;
   if (kuerzel) {
     // Gesetze: EIN kurzer Block («Art. 336c OR») — hier gibt es nichts, was
     // gegen die Kürzung geschützt werden müsste, der ganze Text ist die Marke.

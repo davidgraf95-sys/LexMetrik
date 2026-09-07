@@ -2524,6 +2524,37 @@
      verschiebt seit R13-2 nichts mehr: die Reiter schrumpfen gemeinsam, die
      Gesamtbreite des Streifens ist gedeckelt. */
   .rl-stelle:empty { display: none; }
+  /* ── R13B (Prüfbefund PR #743 §8 b / Fixer D34, 7.9.2026) · DER REITER, IN
+     DEM GELESEN WIRD, HÄLT SEINEN PLATZ ────────────────────────────────────
+     R13-4 (oben) hat den leeren Platzhalter gestrichen, weil er an JEDEM
+     Gesetzes-Reiter stand und dort ein 60-px-Loch war. Damit kam die andere
+     Hälfte von D27 zurück, die R13-4 für erledigt hielt («springt seit R13-2
+     nichts mehr: die Reiter schrumpfen gemeinsam»):
+     GEMESSEN am Stand `cfa8a9f81` (gebautes dist/, Preview 4429, Chromium
+     @1280, /gesetze/bund/ZGB, PerformanceObserver `layout-shift`): der Reiter
+     stand bei 80 px, und beim ERSTEN Scrollen — dann erst meldet der Spy, s.
+     `inhalt-hooks.tsx` `if (gescrollt.current)` — mountete `.rl-stelle` und
+     weitete ihn auf 137 px; das Schliess-✕ wanderte 69 → 133. Der Satz stimmt
+     nur bei VOLLEM Streifen; bei einem Reiter in 1116 px wächst er frei.
+     Scrollen ist keine diskrete Eingabe, der Sprung fällt also nicht unter die
+     `hadRecentInput`-Ausnahme der CLS-Definition — und unter Drossel landet die
+     200-ms-Entprellung mal innerhalb, mal ausserhalb des 500-ms-Fensters eines
+     vorangegangenen Klicks. Das ist die 1–2-von-3-Flake des Fixers D34.
+     DIE RESERVE GILT DARUM GENAU DORT, WO EINE STELLUNG ENTSTEHEN KANN: am
+     Reiter, der gerade gelesen wird (aktiv oder in einem Pane). Ein
+     Hintergrund-Reiter ohne Stellung bleibt schmal — das war R13-4s Befund,
+     und er bleibt gültig (die Sonde R13-4 misst genau diesen Fall).
+     `::before` mit geschütztem Leerzeichen: ein leerer inline-block hat keine
+     Zeilenbox, seine Baseline läge in der `items-baseline`-Zeile an der
+     Unterkante und schöbe sie auseinander (Befund 6.9.2026, Reiter-Knopf 39 px
+     statt 33 px in einer 34-px-Leiste). Die Kur ist dieselbe wie damals — nur
+     trägt sie jetzt der EINE Fall, der sie braucht, statt aller. */
+  .rl-stelle-frei {
+    display: inline-block;
+    min-width: var(--app-reiter-stelle-b);
+    flex-shrink: 0;
+  }
+  .rl-stelle-frei::before { content: '\00a0'; }
   /* ── W2·24-CI · DIE RESERVE WAR HÖHER ALS IHR INHALT (HISTORIE) ──────────
      BEFUND 6.9.2026 (Repro `scratchpad/diag17.cjs` gegen `dist`, StPO @1280):
      die leere Reservierung deckte die BREITE, nicht die HÖHE — ein leerer

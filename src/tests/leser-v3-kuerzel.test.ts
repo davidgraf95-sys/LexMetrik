@@ -53,6 +53,12 @@ describe('Die Vorrangregel lebt in zwei Dateien und ist nur als Paar wahr', () =
   const HEADER = readFileSync('src/components/layout/HeaderSuche.tsx', 'utf8');
   const FELD = readFileSync('src/pages/gesetz-leser/v3/SuchSprungFeld.tsx', 'utf8');
   const RAHMEN = readFileSync('src/pages/gesetz-leser/v3/LeserRahmenV3.tsx', 'utf8');
+  // §6.3-NACHZUG D38 (7.9.2026): der Aufbau des Gliederungs-Sheets ist aus dem
+  // Rahmen ausgelagert (`leisteAufbau.tsx`, 420-Zeilen-Sonde). Das FELD, um das
+  // es hier geht, wird weiterhin im Rahmen gebaut und durchgereicht — die Sonde
+  // liest darum beide Dateien statt nur eine. Sie wird dadurch nicht weicher:
+  // sie verlangt UNVERÄNDERT, dass genau ein `sprungFeld={…}` das Sheet erreicht.
+  const LEISTE = readFileSync('src/pages/gesetz-leser/v3/leisteAufbau.tsx', 'utf8');
   // A2 (H3-Nachzug): die Pane-Vorrangregel und ihr zweiter Verbraucher.
   const PANE_PRIO = readFileSync('src/pages/gesetz-leser/panePrioritaet.ts', 'utf8');
   const TASTATUR = readFileSync('src/pages/gesetz-leser/parts/LeserTastatur.tsx', 'utf8');
@@ -151,6 +157,7 @@ describe('Die Vorrangregel lebt in zwei Dateien und ist nur als Paar wahr', () =
     // Sonde wird dadurch STRENGER, nicht weicher: sie schliesst jetzt auch den
     // Fall aus, dass das Feld bei stehender Spalte wieder in die Leiste rutscht.
     expect(RAHMEN).toContain('const suchZoneKlebt = hatLeiste;');
-    expect(RAHMEN, 'das Blatt bekommt das Feld nicht').toContain('sprungFeld={suchFeld}');
+    expect(RAHMEN, 'der Rahmen reicht das Feld nicht ins Sheet').toContain('suchFeld,');
+    expect(LEISTE, 'das Sheet bekommt das Feld nicht').toContain('sprungFeld={a.suchFeld}');
   });
 });

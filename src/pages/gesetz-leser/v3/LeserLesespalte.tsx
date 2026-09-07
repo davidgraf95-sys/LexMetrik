@@ -40,15 +40,18 @@ import type { PanelBezuege } from './panelModell';
 // Rahmen (`LeserRahmenV3`, «DIE DREI ERWEITERUNGS-SLOTS SIND GESTRICHEN»).
 // ── `trefferListe` IST GESTRICHEN (Ä76, 17.8.2026) ───────────────────────────
 // Der Prop hängte die Trefferliste INLINE über den Lesetext, angekündigt für den
-// Rand-Fall «keine Leiste, aber breit genug». Zwei Gründe, beide gemessen:
-//  · Er traf den falschen Fall. Die Bedingung im Rahmen lautete `!zweiSpalten`
-//    und schlug damit bei EINGEKLAPPTER Gliederung zu — dort lag die Liste 3596 px
-//    hoch bei y = 755 unter der Falz und schob den Gesetzestext um 3,6
-//    Bildschirmhöhen nach unten (Davids Befund «resultat ist versteckt»). Dieser
-//    Fall liegt jetzt im Blatt am Feld (`./LeserTrefferBlatt`).
-//  · Der angekündigte Fall ist unerreichbar. «Keine Leiste» heisst
-//    `eintraege.length === 0`, also kein Artikel — dann gibt es weder Treffer noch
-//    Lesetext. §17: gestrichen statt verengt.
+// Rand-Fall «keine Leiste, aber breit genug». Er traf den falschen Fall: bei
+// EINGEKLAPPTER Gliederung lag die Liste 3596 px hoch bei y = 755 unter der Falz
+// und schob den Gesetzestext um 3,6 Bildschirmhöhen nach unten (Davids Befund
+// «resultat ist versteckt»). Der angekündigte Fall war ohnehin unerreichbar:
+// «keine Leiste» heisst `eintraege.length === 0`, also kein Artikel — dann gibt
+// es weder Treffer noch Lesetext. §17: gestrichen statt verengt.
+// ── UND ER KOMMT MIT D38 NICHT ZURÜCK (7.9.2026) ─────────────────────────────
+// Seit D38 liegt die Trefferliste über der Lesespalte — aber als eigene Ebene
+// AUSSERHALB dieser Datei (`./LeserTrefferSpalte`, eingehängt in der Lese-Zelle
+// von `./LeserLeseZeile`). Genau das ist der Unterschied zum gestrichenen Prop:
+// die Liste steht nicht IM Fluss des Lesekörpers, sondern `absolute` darüber,
+// verschiebt also keinen Pixel und lässt die PX-Region hier unangetastet.
 export function LeserLesespalte({ m, bezuege, weckeBezuege, bezuegeGeweckt = false }: {
   m: LeserV3Modell;
   /** D30 · der Apparat des Panels — DIESELBE `useBezuege`-Instanz, kein zweiter
