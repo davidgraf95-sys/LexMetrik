@@ -46,9 +46,11 @@ import { naechsteInstanz } from '../../../lib/tabs';
 // Kapazität) bleibt die einzige, richtige Bedingung.
 //
 // §5 — KEIN ZWEITER MECHANISMUS: dieselbe Steuerung (`usePaneSteuerung`),
-// dieselbe Instanz-Vergabe (`lib/tabs.naechsteInstanz`), dasselbe Wort
-// («Daneben öffnen», Ä118/M8) wie am Erlass-Kopf, in der Arbeitsleiste und im
-// Reiter-Kontextmenü. Der Unterschied ist allein der ANKER: der Erlass-Kopf
+// dieselbe Instanz-Vergabe (`lib/tabs.naechsteInstanz`) wie am Erlass-Kopf, in
+// der Arbeitsleiste und im Reiter-Kontextmenü. Der Unterschied ist allein der
+// ANKER — und weil er ein anderer ist, trägt der Griff hier seit dem Nachfix
+// vom 7.9.2026 ein eigenes Wort («Artikel daneben» statt «Daneben öffnen»,
+// Herleitung unten am Knopf). Der ANKER: der Erlass-Kopf
 // nimmt `pathname + search + hash` (die Stelle, an der die Adresse steht),
 // diese Zeile nimmt IHREN Artikel (`#art-<token>`) — «Art. 336c neben
 // Art. 335c» ist genau die Geste, für die es die zweite Instanz gibt.
@@ -136,17 +138,40 @@ export function ArtikelAktionen({ artikel, basisPfad, zitat, zitatVoll, amtlich 
           aria-label={`Amtliche Fassung von ${zitat} auf Fedlex öffnen ${NEUER_TAB}`}
           title="Amtliche Fassung an genau dieser Stelle (Fedlex)">Amtliche Fassung ↗</a>
       )}
-      {/* Ä118/M8: das Wort sagt die Wirkung — «Daneben öffnen», wie an den
-          vier anderen Stellen mit derselben Wirkung. Die Glyphe steht NEBEN
-          ihrem Wort und folgt dessen Type (R3-B, «beschriftet»); sie trägt
-          darum keine eigene Typo-Klasse. Geöffnet wird die NÄCHSTE Instanz
-          dieses Erlasses AN DIESEM ANKER (`?r=<n>#art-…`), nie der eigene
-          Pfad — Herleitung im Kopf (3). */}
+      {/* Ä118/M8: das Wort sagt die Wirkung. Die Glyphe steht NEBEN ihrem Wort
+          und folgt dessen Type (R3-B, «beschriftet»); sie trägt darum keine
+          eigene Typo-Klasse. Geöffnet wird die NÄCHSTE Instanz dieses Erlasses
+          AN DIESEM ANKER (`?r=<n>#art-…`), nie der eigene Pfad — Herleitung im
+          Kopf (3).
+
+          ── NACHFIX 7.9.2026 · ZWEI BEZÜGE BRAUCHEN ZWEI WÖRTER ──────────────
+          Bis hierher hiess dieser Knopf wortgleich «Daneben öffnen» und trug
+          den Accessible Name `«Art. n OR» daneben öffnen`. GEMESSEN am Stand
+          `bb99937aa` (lokal, `vite preview` auf dem gebauten `dist/`,
+          /gesetze/bund/OR @1440): `getByRole('button', { name:
+          /daneben öffnen/i })` löste auf 1687 Elemente auf — den EINEN Griff
+          des Erlass-Kopfs (`v3/ReiterAktion.tsx`) und 1686 Artikel-Griffe. Die
+          M8-Sonde (`e2e/w224-r11-reiterleiste.e2e.ts:347`) meint den Kopf-Griff
+          und lief in die strict-mode-Verletzung; deren Aufbereitung dauerte
+          gemessene 105 s und riss darum vorher den 30-s-Timeout mit der
+          irreführenden Meldung «element(s) not found». Auf `origin/main`
+          (5b350cb4f) trägt KEIN Artikel diesen Namen — die Mehrdeutigkeit
+          entsteht erst mit dieser Zeile.
+
+          Ä118 («ein Feature, ein Wort») ist damit NICHT verletzt und wird auch
+          nicht nachgeführt: der Kopf-Griff öffnet den ERLASS (`pathname +
+          search + hash` — die Stelle, an der die Adresse gerade steht), dieser
+          hier stellt DIESEN ARTIKEL daneben (`#art-<token>`, D4). Zwei
+          verschiedene Bezüge, zwei Wörter — «Daneben öffnen» bleibt dem
+          Erlass-Kopf, hier steht «Artikel daneben». Die Wirkung, die Steuerung
+          (`usePaneSteuerung`) und die Instanz-Vergabe (`naechsteInstanz`) sind
+          unverändert dieselben (§5). */}
       {kannOeffnen && (
         <button type="button" onClick={() => oeffneDaneben(naechsteInstanz(panePfad))}
           className="lc-btn-mini text-micro text-ink-500 hover:text-brass-700 whitespace-nowrap"
-          title={`${zitat} daneben öffnen`} aria-label={`${zitat} daneben öffnen`}>
-          <span aria-hidden>⧉</span>&nbsp;Daneben öffnen</button>
+          title={`${zitat} daneben stellen — zusätzlich im zweiten Fenster, an genau dieser Stelle`}
+          aria-label={`Artikel ${zitat} daneben stellen`}>
+          <span aria-hidden>⧉</span>&nbsp;Artikel daneben</button>
       )}
     </span>
   );

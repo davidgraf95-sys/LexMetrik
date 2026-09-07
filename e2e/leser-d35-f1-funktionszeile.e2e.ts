@@ -13,11 +13,11 @@
 //  (c) ZÄHLER = LISTE. Die Zahl auf dem Griff ist die Länge dessen, was er
 //      aufklappt (§8) — hier an der Rubrik «Verweise» gemessen, die ohne jeden
 //      Shard auskommt und darum eine harte, nicht wartende Gleichung ist.
-//  (d) AKTIONEN OHNE HOVER. «Zitat · Link · Amtliche Fassung ↗ · ⧉ Daneben
-//      öffnen» stehen in der Zeile mit Deckkraft 1 und WCAG-2.5.8-Höhe, ohne
+//  (d) AKTIONEN OHNE HOVER. «Zitat · Link · Amtliche Fassung ↗ · ⧉ Artikel
+//      daneben» stehen in der Zeile mit Deckkraft 1 und WCAG-2.5.8-Höhe, ohne
 //      dass die Maus etwas berührt — und sie stehen dort GENAU EINMAL: die alte
 //      Kopf-Variante ist weg, nicht zusätzlich (§5).
-//  (f) «⧉ DANEBEN ÖFFNEN» IST DA UND WIRKT. Die vierte Aktion des Auftrags. Sie
+//  (f) «⧉ ARTIKEL DANEBEN» IST DA UND WIRKT. Die vierte Aktion des Auftrags. Sie
 //      war am 7.9.2026 gestrichen worden, weil die Bedingung
 //      `kannOeffnen && !istOffen(pfad + '#art-…')` an keinem Artikel wahr wird
 //      (`tabSchluessel` streift den Hash) — der Schluss war falsch, nicht die
@@ -139,7 +139,7 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     await oeffne(page);
     const artikel = page.locator(`#art-${ART}`);
     // GENAU EINMAL je Artikel: die Kopf-Variante ist gelöscht, nicht gedoppelt.
-    for (const name of [/^Zitat kopieren:/, /^Permalink kopieren$/, /^Amtliche Fassung von /, /daneben öffnen$/]) {
+    for (const name of [/^Zitat kopieren:/, /^Permalink kopieren$/, /^Amtliche Fassung von /, /^Artikel .* daneben stellen$/]) {
       expect(await artikel.getByLabel(name).count(), `«${name}» steht nicht genau einmal am Artikel`).toBe(1);
     }
     // Ohne jede Maus-Berührung sichtbar, mit Trefferfläche nach WCAG 2.5.8.
@@ -164,7 +164,7 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
         sichtbar: (el as HTMLElement).checkVisibility({ opacityProperty: true, visibilityProperty: true }),
       };
     }));
-    // VIER an ≥ lg: die drei Kopier-/Outbound-Aktionen und «⧉ Daneben öffnen».
+    // VIER an ≥ lg: die drei Kopier-/Outbound-Aktionen und «⧉ Artikel daneben».
     // Der vierte Knopf steht NUR hier — unter lg fällt er weg (s. Fall (f)).
     expect(mess.length, 'keine Aktionsgruppe in der Funktionszeile').toBe(4);
     for (const a of mess) {
@@ -209,10 +209,17 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     expect(hoeheSkelett, 'das Skelett reserviert gar nichts').toBeGreaterThanOrEqual(48);
   });
 
-  test('(f) «⧉ Daneben öffnen» steht sichtbar da — und öffnet wirklich ein zweites Fenster', async ({ page }) => {
+  // ── DEKLARIERTE BENENNUNGS-ÄNDERUNG (§6.3, Nachfix 7.9.2026) ─────────────
+  // Der Knopf hiess bis `bb99937aa` wortgleich wie der Griff des ERLASS-KOPFS
+  // («Daneben öffnen», Accessible Name `Art. 336c OR daneben öffnen`). Damit
+  // löste die M8-Sonde (`w224-r11-reiterleiste.e2e.ts:347`), die den Kopf-Griff
+  // meint, auf GEMESSENE 1687 Elemente auf. Geändert ist allein das WORT, nicht
+  // eine Zusage dieses Falls: Vorhandensein, Deckkraft, Trefferfläche, Wirkung
+  // und Anker werden unverändert geprüft (Herleitung in `ArtikelAktionen.tsx`).
+  test('(f) «⧉ Artikel daneben» steht sichtbar da — und öffnet wirklich ein zweites Fenster', async ({ page }) => {
     await oeffne(page);
     const artikel = page.locator(`#art-${ART}`);
-    const knopf = artikel.getByRole('button', { name: /^Art\. 336c OR daneben öffnen$/ });
+    const knopf = artikel.getByRole('button', { name: /^Artikel Art\. 336c OR daneben stellen$/ });
     // (1) ER IST DA. Genau einmal, sichtbar, ohne Hover, mit voller Deckkraft
     //     über die ganze Vorfahren-Kette (dieselbe Messweise wie (d) — Deckkraft
     //     ist kumulativ, nicht vererbt).
@@ -223,7 +230,7 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
       for (let n: Element | null = el; n && n !== document.body; n = n.parentElement) d *= Number(getComputedStyle(n).opacity);
       return d;
     });
-    expect(deckkraft, `«Daneben öffnen» steht mit Deckkraft ${deckkraft} da`).toBe(1);
+    expect(deckkraft, `«Artikel daneben» steht mit Deckkraft ${deckkraft} da`).toBe(1);
     expect((await knopf.boundingBox())!.height, 'WCAG 2.5.8: ≥ 24 px hoch').toBeGreaterThanOrEqual(24);
 
     // (2) ER WIRKT. Vor dem Klick gibt es kein zweites Fenster; danach steht
@@ -250,7 +257,7 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     // kann, wäre eine Zusage ohne Wirkung — er darf unter lg NICHT stehen.
     await page.setViewportSize({ width: 1023, height: 900 });
     await oeffne(page);
-    await expect(page.locator(`#art-${ART}`).getByRole('button', { name: /daneben öffnen$/ }))
+    await expect(page.locator(`#art-${ART}`).getByRole('button', { name: /daneben stellen$/ }))
       .toHaveCount(0);
   });
 
