@@ -239,7 +239,7 @@ export function ErlassUebersicht({
         )}
         {erlass.pdfUrl && (
           <>{erlass.quelleUrl && PUNKT}
-            <a href={erlass.pdfUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">↗ amtliches PDF</a>
+            <a href={erlass.pdfUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700">↗ amtliches PDF</a>
           </>
         )}
         {!erlass.quelleUrl && !erlass.pdfUrl && <span className="text-ink-500">keine amtliche Quelle hinterlegt</span>}

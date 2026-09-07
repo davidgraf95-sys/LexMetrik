@@ -78,14 +78,14 @@ export function Ueber() {
           Die juristische Prüfung nimmt LexMetrik niemandem ab, und es ersetzt keine
           Rechtsberatung. Aber es liefert eine Grundlage, die sich in Minuten kontrollieren lässt.
           Was in welcher Tiefe abgedeckt ist, zeigt die Seite{' '}
-          <Link to="/abdeckung" className="text-brass-700 hover:text-brass-600">Abdeckung</Link>,
+          <Link to="/abdeckung" className="text-brass-700 underline hover:text-brass-600">Abdeckung</Link>,
           die Arbeitsweise im Detail die Seite{' '}
-          <Link to="/methodik" className="text-brass-700 hover:text-brass-600">Methodik</Link>.
+          <Link to="/methodik" className="text-brass-700 underline hover:text-brass-600">Methodik</Link>.
         </p>
         <p>
           LexMetrik bleibt in Entwicklung. Rückmeldungen sind willkommen – besonders dann, wenn
           etwas nicht stimmt:{' '}
-          <Link to="/kontakt" className="text-brass-700 hover:text-brass-600">Kontakt</Link>.
+          <Link to="/kontakt" className="text-brass-700 underline hover:text-brass-600">Kontakt</Link>.
         </p>
         {/* Signatur – externe Verlinkung wie übrige externe Links (neues Tab) */}
         <p className="pt-2">

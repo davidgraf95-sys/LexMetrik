@@ -15,7 +15,9 @@
 // die Linie enthält, sonst kleinste Distanz» (`src/lib/normtext/aktuellerArtikel.ts`)
 // über die Kandidaten, die an der Linie noch nicht zu Ende sind
 // (Zwischenraum-Regel, `inhalt-hooks.tsx`). Der Test rechnet dieses Soll bei jedem
-// Halt über ALLE Artikel im DOM aus und vergleicht es mit dem Ist der Kopfzeile.
+// Halt über ALLE Artikel im DOM aus und vergleicht es mit dem Ist, das der Spy
+// meldet (bis 6.9.2026 die Kopfzeile, seit D27 das Reiter-Signal — Herleitung an
+// der Messfunktion unten).
 // Er kennt darum keinen Artikel auswendig und überlebt jede Korpus-Regeneration.
 //
 // NACHTRAG 9.8.2026 (Sprung-Fix, deklarierte Änderung): zwei Zeilen der Sonde
@@ -39,7 +41,7 @@ interface Probe {
   y: number; bezug: number; soll: string | null; ist: string | null; ueber: number | null; kandidaten: number
 }
 
-// Eine Messung im Seitenkontext: Soll (aus dem DOM) gegen Ist (Kopfzeile).
+// Eine Messung im Seitenkontext: Soll (aus dem DOM) gegen Ist (Reiter-Signal).
 async function messen(page: Page): Promise<Probe> {
   return page.evaluate(() => {
     const rects = [...document.querySelectorAll('[id^="art-"]')].map((el) => {
@@ -78,7 +80,24 @@ async function messen(page: Page): Promise<Probe> {
     // 149 px UNTER der Linie in einem 200 px hohen Sichtfeld).
     const hoehe = document.documentElement.clientHeight
     const kandidaten = rects.filter((e) => e.bottom > bezug && e.top < hoehe)
-    const wahl = kandidaten.length > 0 ? kandidaten : rects
+    // ── §6.3-DEKLARATION (W2·24, 6.9.2026) · DER RÜCKFALL BLEIBT IM BILD ────
+    // Hier stand `: rects` — ALLE Artikel des Erlasses, auch die 1'600, die
+    // gerade gar nicht auf dem Schirm sind. Damit konnte das Orakel einen
+    // Artikel als «Soll» ausrufen, den der Leser nachweislich nicht sieht, und
+    // genau das tat es im Fall H6-a (320×200, 400 % Zoom): mit der
+    // Arbeitsleiste (R2) liegt die Bezugslinie bei 198 px in einem 200 px
+    // hohen Sichtfeld, der Kandidatensatz ist dann ein 2-px-Fenster und
+    // praktisch immer leer. Gemessen y=20744: das Orakel verlangte «40_b»,
+    // dessen Oberkante 10 px UNTER dem unteren Bildrand lag, während der Spy
+    // «40_a» meldete — den letzten Artikel, der oberhalb der Linie geendet
+    // hat, also die einzige Antwort, die der Leser überhaupt sehen kann.
+    // Der Rückfall bleibt darum im SICHTBAREN Satz. Das ist eine Verschärfung,
+    // keine Aufweichung: ein Signal, das auf einen Artikel ausserhalb des
+    // Bildes zeigt, wird ab jetzt gemeldet statt bestätigt — vorher war genau
+    // das das «Soll». Die Zusage des Falls («der Artikel an der Linie bleibt
+    // sichtbar») steht damit erstmals im Orakel selbst.
+    const sichtbar = rects.filter((e) => e.bottom > 0 && e.top < hoehe)
+    const wahl = kandidaten.length > 0 ? kandidaten : (sichtbar.length > 0 ? sichtbar : rects)
     let soll: string | null = null
     let besteDist = Infinity
     for (const e of wahl) {
@@ -86,12 +105,44 @@ async function messen(page: Page): Promise<Probe> {
       if (dist === 0) { soll = e.token; break }
       if (dist < besteDist) { besteDist = dist; soll = e.token }
     }
-    // Ist: der Live-Artikel der Inhalts-Kopfzeile («· Art. 40d» bzw. «Art. 40d OR»).
-    const kopf = [...document.querySelectorAll('nav .num')].map((e) => (e.textContent ?? '').trim()).filter(Boolean)
-    const m = kopf.map((t) => t.match(/Art\.\s*([^\s·]+)/)).find(Boolean)
+    // ── §6.3-DEKLARATION D27 (David 6.9.2026) · DAS IST STEHT WOANDERS ──────
+    // Bis 6.9. war das Ist der Live-Artikel der Inhalts-KOPFZEILE («· Art. 40d»),
+    // gelesen aus `nav .num`. Die Kopfzeile trägt ihn nicht mehr — «diese
+    // funktion, dass es anzeigt, in welchem artikel wir sind, soll der tab
+    // bekommen; es kann dann direkt im gesetz raus». Der Spy selbst ist
+    // UNVERÄNDERT, und genau ihn misst dieser Fall; gemessen wird darum ab hier
+    // sein verbliebener Abnehmer: das Reiter-Signal, das
+    // `aktualisiereTabArtikel` (`lib/tabs.ts`) in `localStorage['lexmetrik-tabs']`
+    // schreibt und aus dem die Arbeitsleiste ihre Lesestellung zieht.
+    // DIE MESSUNG WIRD DABEI SCHÄRFER, nicht weicher: verglichen wird jetzt
+    // Token gegen Token (`335_c`) statt Token gegen Anzeige-Label («335c») —
+    // `norm()` unten deckt beide Formen ab, aber Schlusstitel-Token
+    // (`disp_u1_art_3`) waren als Label gar nicht rückrechenbar (M13).
+    // ZEITVERHALTEN: der Schreiber ist mit 200 ms entprellt (vorher 150 ms für
+    // das Kopf-Label). Der Nachmess-Zweig unten wartet 900 ms und deckt das ab.
+    // NULLPROBE (§0 Nr. 3, 6.9.2026): mit dieser Umstellung meldet der Fall
+    // H6-a bitgleich dieselbe Abweichung wie der Ausgangsstand mit der alten
+    // Messung (y=20744, «40_a» statt «40_b») — die Umstellung ist damit
+    // verhaltensneutral belegt, und die Abweichung ist ein Altbefund.
+    // Der Pfadteil wird EXAKT verglichen: im Split trägt der Reiter des primären
+    // Panes die Adresse des zweiten im Query mit, ein `includes` träfe den
+    // falschen (gemessen 6.9.2026 in `leser-v3-ortsangabe`).
+    const ist: string | null = (() => {
+      try {
+        const roh = localStorage.getItem('lexmetrik-tabs')
+        const arr = roh ? JSON.parse(roh) : []
+        const hier = location.pathname.toLowerCase()
+        const treffer = Array.isArray(arr)
+          ? arr.find((e: { path?: string }) => typeof e?.path === 'string'
+            && e.path.split('?')[0].split('#')[0].toLowerCase() === hier)
+          : null
+        const anker = treffer ? /#art-(.+)$/.exec(treffer.path) : null
+        return anker ? decodeURIComponent(anker[1]) : null
+      } catch { return null }
+    })()
     const sollR = rects.find((r) => r.token === soll)
     return {
-      y: Math.round(window.scrollY), bezug, soll, ist: m ? m[1] : null,
+      y: Math.round(window.scrollY), bezug, soll, ist,
       ueber: sollR ? Math.round(bezug - sollR.top) : null, kandidaten: rects.length,
     }
   })
@@ -123,7 +174,7 @@ async function scrollProbe(page: Page, delta: number, warteMs: number): Promise<
 function abweichungen(proben: Probe[]): string[] {
   return proben
     .filter((p) => p.ist && norm(p.ist) !== norm(p.soll))
-    .map((p) => `y=${p.y}: Kopf zeigt «${p.ist}», an der Bezugslinie (${p.bezug}px) liegt «${p.soll}» (Oberkante ${p.ueber}px über der Linie)`)
+    .map((p) => `y=${p.y}: Signal meldet «${p.ist}», an der Bezugslinie (${p.bezug}px) liegt «${p.soll}» (Oberkante ${p.ueber}px über der Linie)`)
 }
 
 // ── N4 (Wächter-Härte, Bug-Check 3.8.2026) ──────────────────────────────────
@@ -147,14 +198,14 @@ function istQuote(proben: Probe[]): number {
 }
 
 function quoteMeldung(proben: Probe[]): string {
-  return `nur ${proben.filter((p) => p.ist != null).length}/${proben.length} Proben mit Ist-Wert — zeigt die Kopfzeile überhaupt noch einen Artikel?`
+  return `nur ${proben.filter((p) => p.ist != null).length}/${proben.length} Proben mit Ist-Wert — schreibt der Spy überhaupt noch ein Reiter-Signal?`
 }
 
 test.describe('W2·5d-SPY — Bezugslinie entscheidet, nicht das Beobachtungs-Band', () => {
   // ── H6-b: der Wechsel muss AN der Linie fallen, nicht am Band-Rand ──────────
   // Flacher Erlass (BGFA, 40 Artikel): dort war der Verzug am grössten (bis 65 px),
   // weil zwischen zwei Band-Ereignissen viel Scrollweg liegt.
-  test('H6-b — flacher Erlass: Kopf-Artikel folgt der Bezugslinie ohne Verzug', async ({ page }) => {
+  test('H6-b — flacher Erlass: Lesestellung folgt der Bezugslinie ohne Verzug', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('/gesetze/bund/BGFA')
@@ -168,12 +219,12 @@ test.describe('W2·5d-SPY — Bezugslinie entscheidet, nicht das Beobachtungs-Ba
     // Der Lauf muss überhaupt durch Artikelgrenzen gegangen sein, sonst prüft er nichts.
     expect(new Set(proben.map((p) => p.soll)).size, 'Sonde hat keine Artikelgrenze überquert').toBeGreaterThan(2)
     expect(istQuote(proben), quoteMeldung(proben)).toBeGreaterThanOrEqual(MIN_IST_QUOTE) // N4
-    expect(abweichungen(proben), 'Kopf-Artikel weicht von der Bezugslinie ab').toEqual([])
+    expect(abweichungen(proben), 'Lesestellung weicht von der Bezugslinie ab').toEqual([])
     expect(fehler).toEqual([])
   })
 
   // ── H6-b im tiefen Kodex (OR, 1686 Artikel, content-visibility) ─────────────
-  test('H6-b — tiefer Kodex: Kopf-Artikel folgt der Bezugslinie ohne Verzug', async ({ page }) => {
+  test('H6-b — tiefer Kodex: Lesestellung folgt der Bezugslinie ohne Verzug', async ({ page }) => {
     test.setTimeout(process.env.CI ? 180_000 : 90_000)
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 900 })
@@ -187,7 +238,7 @@ test.describe('W2·5d-SPY — Bezugslinie entscheidet, nicht das Beobachtungs-Ba
     for (let i = 0; i < 24; i++) proben.push(await scrollProbe(page, 43, 450))
     expect(new Set(proben.map((p) => p.soll)).size, 'Sonde hat keine Artikelgrenze überquert').toBeGreaterThan(1)
     expect(istQuote(proben), quoteMeldung(proben)).toBeGreaterThanOrEqual(MIN_IST_QUOTE) // N4
-    expect(abweichungen(proben), 'Kopf-Artikel weicht von der Bezugslinie ab').toEqual([])
+    expect(abweichungen(proben), 'Lesestellung weicht von der Bezugslinie ab').toEqual([])
     expect(fehler).toEqual([])
   })
 
@@ -208,7 +259,7 @@ test.describe('W2·5d-SPY — Bezugslinie entscheidet, nicht das Beobachtungs-Ba
     const proben: Probe[] = []
     for (let i = 0; i < 24; i++) proben.push(await scrollProbe(page, 31, 450))
     expect(istQuote(proben), quoteMeldung(proben)).toBeGreaterThanOrEqual(MIN_IST_QUOTE) // N4
-    expect(abweichungen(proben), 'Kopf-Artikel weicht von der Bezugslinie ab (Band verfehlt die Linie)').toEqual([])
+    expect(abweichungen(proben), 'Lesestellung weicht von der Bezugslinie ab (Band verfehlt die Linie)').toEqual([])
     expect(fehler).toEqual([])
   })
 
@@ -240,7 +291,7 @@ test.describe('W2·5d-SPY — Bezugslinie entscheidet, nicht das Beobachtungs-Ba
       else proben.push(p)
     }
     expect(istQuote(proben), quoteMeldung(proben)).toBeGreaterThanOrEqual(MIN_IST_QUOTE) // N4
-    expect(abweichungen(proben), 'Kopf-Artikel weicht unter 6× Drossel von der Bezugslinie ab').toEqual([])
+    expect(abweichungen(proben), 'Lesestellung weicht unter 6× Drossel von der Bezugslinie ab').toEqual([])
 
     // aria: der aktive Gliederungs-Eintrag ist als solcher ausgezeichnet.
     // W2·19-GLIEDERUNG/S4 (F5) — deklarierte Anpassung, und zwar eine
@@ -273,7 +324,8 @@ test.describe('W2·5d-SPY — Bezugslinie entscheidet, nicht das Beobachtungs-Ba
     // `title`: den trägt der Titel-Knopf (voller Etikett-Text), das Chevron
     // nicht (es hat nur `aria-label`). Die geprüfte Sache ist unverändert — ein
     // Gliederungs-Eintrag ist fokussierbar und springt per Enter.
-    const ziel = page.locator('[data-toc] li[data-sektion-id] button[title]:visible').first()
+    // §6.3-DEKLARATION (W2·24-R6c, P8): Sprung-Zeile = `<a href>`, sonst `button`.
+    const ziel = page.locator('[data-toc] li[data-sektion-id] :is(a, button)[title]:visible').first()
     await ziel.focus()
     await expect(ziel).toBeFocused()
     const vorher = await page.evaluate(() => Math.round(window.scrollY))
@@ -290,7 +342,7 @@ test.describe('W2·5d-SPY — Bezugslinie entscheidet, nicht das Beobachtungs-Ba
     const nachSprung = await scrollProbe(page, 0, 900)
     // N4: hier zwingend ein Ist — sonst prüfte `abweichungen` an einer leeren
     // Kopfzeile vorbei und die N2-Aussage wäre leer.
-    expect(nachSprung.ist, 'nach dem Sprung zeigt die Kopfzeile gar keinen Artikel').not.toBeNull()
+    expect(nachSprung.ist, 'nach dem Sprung meldet der Spy gar keine Lesestellung').not.toBeNull()
     expect(abweichungen([nachSprung]), 'nach dem Gliederungs-Sprung folgt der Kopf der Bezugslinie nicht mehr (jumpLock ohne Nachlauf?)').toEqual([])
 
     await cdp.send('Emulation.setCPUThrottlingRate', { rate: 1 })

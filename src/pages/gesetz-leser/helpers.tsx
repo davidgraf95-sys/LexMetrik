@@ -606,9 +606,20 @@ export function margStufeStil(level: number, istBlatt: boolean): string {
   // sind genau dieser Fall. ink-800 gegen ink-600 ist eine Kontrast-ERHÖHUNG
   // (13.94 : 1 gegen 7.36 : 1, Grundlage Kap. 4), also nie ein A11y-Risiko; die
   // Hierarchie trägt hier das Gewicht, nicht die Farbe.
-  // Stufe 0 gewinnt zugleich Kontrast: ink-500 → ink-600 (V2-Spalte; 5.10 : 1 →
-  // 7.36 : 1, damit AAA statt knapp AA bei 13 px Versalien).
+  // Stufe 0 gewinnt zugleich Kontrast: ink-500 → ink-600 (V2-Spalte).
+  //
+  // ── W2·24-R6/L17 · DER VERSAL-ZWEIG IST GESTRICHEN ────────────────────────
+  // Bis hierher trug `level <= 0` zusätzlich `uppercase tracking-wide`. GEMESSEN
+  // am gebauten Stand (Finder R5, 6.9.2026, über 1792 Randtitel: OR 641 · ZGB 664
+  // · ZPO 403 · BS-640.100 84 · CISG 0): **0** Elemente mit `text-transform:
+  // uppercase`, `letter-spacing` durchweg `normal` — der Zweig hat mit den
+  // heutigen Daten nie gefeuert. Und feuern SOLL er auch nicht mehr: §5 des
+  // Fahrplans nimmt Versalien und Tracking aus der Identität
+  // («Overlines/Versal-Etiketten → normale kleine Grotesk-Zeilen»). Was nicht
+  // scheitern kann, wird gestrichen statt bewacht (§17-Gegengewicht). Die Stufe
+  // behält ihr `font-medium` — sie ist weiterhin die oberste Randtitel-Stufe,
+  // nur ohne Versalien.
   if (istBlatt) return `${hang} font-sans text-leser-rand font-semibold text-ink-800`;
-  if (level <= 0) return `${hang} font-sans text-leser-rand font-medium uppercase tracking-wide text-ink-600`;
+  if (level <= 0) return `${hang} font-sans text-leser-rand font-medium text-ink-600`;
   return `${hang} font-sans text-leser-rand text-ink-600`;
 }

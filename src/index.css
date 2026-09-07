@@ -3,48 +3,51 @@
 @tailwind utilities;
 
 /* Rank 11 (QS-PERF, §15/2): metrik-angepasste Fallback-Fonts. Solange der Webfont
-   (Geist / Source Serif 4) via font-display:swap lädt, rendert der System-Fallback
+   (Archivo / Literata) via font-display:swap lädt, rendert der System-Fallback
    (Arial / Georgia) mit exakt angepasstem Zeilenkasten — size-adjust/ascent-/descent-/
    line-gap-override sind aus den ECHTEN fontsource-woff2 GEMESSEN (nicht geraten):
    scripts/gen-font-fallbacks.ts (@capsizecss). Damit erzeugt der Swap keinen
    Reflow-Sprung mehr (CLS). Webfont-Version wechselt → Script neu laufen lassen.
-   Reine Darstellung, kein Inhaltseffekt (§3). */
+   Reine Darstellung, kein Inhaltseffekt (§3).
+   W2·24-DESIGN-IDENTITAET R1 (6.9.2026): Geist → Archivo (Bedienung),
+   Source Serif 4 → Literata (Lesetext); Werte am 6.9.2026 aus
+   archivo-latin-wght-normal.woff2 / literata-latin-wght-normal.woff2 gemessen. */
 @font-face {
-  font-family: 'Geist Fallback';
-  /* Linux-Härtung (A9-Forensik 19.7.2026): Arial fehlt auf dem CI-Image → ohne
-     Arimo/Liberation Sans (metrik-identische Arial-Klone) fiele der metrik-
-     angepasste Fallback aus und der Sans-Swap könnte umbrechen. Die Arial-
-     getunten Overrides gelten für Arimo/Liberation Sans 1:1 (gleiche Laufweite). */
+  font-family: 'Archivo Fallback';
+  /* Linux-Härtung (A9-Forensik 19.7.2026, für Archivo unverändert gültig): Arial
+     fehlt auf dem CI-Image → ohne Arimo/Liberation Sans (metrik-identische
+     Arial-Klone) fiele der metrik-angepasste Fallback aus und der Sans-Swap
+     könnte umbrechen. Die Arial-getunten Overrides gelten für Arimo/Liberation
+     Sans 1:1 (gleiche Laufweite). */
   src: local('Arial'), local('ArialMT'), local('Arimo'), local('Liberation Sans');
-  ascent-override: 95.9379%;
-  descent-override: 28.1609%;
+  ascent-override: 85.8362%;
+  descent-override: 20.5303%;
   line-gap-override: 0%;
-  size-adjust: 104.7553%;
+  size-adjust: 102.2878%;
 }
 @font-face {
-  font-family: 'Source Serif 4 Fallback';
+  font-family: 'Literata Fallback';
   src: local('Georgia');
-  ascent-override: 96.4195%;
-  descent-override: 31.1781%;
-  size-adjust: 107.4471%;
+  ascent-override: 109.3141%;
+  descent-override: 28.6056%;
+  size-adjust: 107.6714%;
 }
 @font-face {
-  font-family: 'Source Serif Times Fallback';
+  font-family: 'Literata Times Fallback';
   /* Linux-Härtung (R5-Forensik 19.7.2026): das CI-Image hat KEIN Georgia/Charter →
-     die Georgia-getunte 'Source Serif 4 Fallback' greift dort nicht, generic
-     `serif` = Liberation Serif (Times-Metrik, SCHMAL) trug die Lesespalte untuned →
-     77 statt ≤75 ch. Liberation Serif / Tinos sind metrik-IDENTISCH zu Times New
+     die Georgia-getunte 'Literata Fallback' greift dort nicht, generic `serif` =
+     Liberation Serif (Times-Metrik, SCHMAL) trüge die Lesespalte untuned → zu viele
+     Zeichen pro Zeile. Liberation Serif / Tinos sind metrik-IDENTISCH zu Times New
      Roman (wie Arimo/Liberation Sans zu Arial) → dieselben Times-getunten Overrides
-     gelten 1:1 (gleiche Laufweite); size-adjust hebt die horizontale Advance auf
-     Source Serif 4. Overrides GEMESSEN, nicht geraten: scripts/gen-font-fallbacks.ts
-     (@capsizecss, timesNewRoman-Metrik). macOS erreicht diese Familie nie (Georgia
-     löst davor) → dort unverändert. */
+     gelten 1:1; size-adjust hebt die horizontale Advance auf Literata. Overrides
+     GEMESSEN, nicht geraten: scripts/gen-font-fallbacks.ts (@capsizecss,
+     timesNewRoman-Metrik). macOS erreicht diese Familie nie (Georgia löst davor). */
   src: local('Liberation Serif'), local('Tinos'), local('Times New Roman'),
        local('TimesNewRomanPSMT'), local('Times'), local('Nimbus Roman');
-  ascent-override: 87.8653%;
-  descent-override: 28.4121%;
+  ascent-override: 99.6159%;
+  descent-override: 26.0677%;
   line-gap-override: 0%;
-  size-adjust: 117.9077%;
+  size-adjust: 118.1538%;
 }
 
 @layer base {
@@ -63,14 +66,26 @@
        Chroma = flache Glocke (C≈0.008 Enden, ~0.012–0.015 Mitten 600–400 — dort sitzt
        Meta-/Sekundärtext, die sichtbarste Wärme-Fläche). Haarlinien erben via
        color-mix-Rezepten automatisch. Hue-Drift jetzt HART im check:farbwelt (Span 1.3°). */
-    --ink-fixed-dark:#1C1A15;
+    /* D12 «Lesekomfort» (6.9.2026): der Solitär wandert von #151515 (17.65:1 auf
+       Papier) auf #25231F — warmes Dunkelgrau, 14.68:1. Grund gemessen, nicht
+       geschmacklich: Maximalkontrast erzeugt am Bildschirm Halation (heller
+       Grund «blutet» in die Buchstabenkanten), Zielband für Langlese-Fliesstext
+       ~12–15:1. Der Wert speist weiterhin ink-900 hell UND --auf-gold. */
+    --ink-fixed-dark:#25231F;
     /* C2-Gegenstück (5.9.2026): --ink-fixed-light für Text auf einer Fläche,
        die STETS mittel-dunkel bleibt (--ok-solid/--sage-500 flippt bewusst
        NICHT, s. Zeile ~1042-Kommentar) — Wert = helles --paper, hier nicht
        überschrieben. Speist --auf-sage (unten). */
-    --ink-fixed-light:#FCFAF6;
-    --ink-900:var(--ink-fixed-dark); --ink-800:#2B2924; --ink-700:#3C3932; --ink-600:#56534C; --ink-500:#6F6B61;
-    --ink-400:#8D8A83; --ink-300:#AAA8A3;
+    --ink-fixed-light:#FAF7F2;
+    /* W2·24-DESIGN-IDENTITAET R1 (6.9.2026): die Rampe ist CHROMAFREI (C = 0,
+       reines Neutralgrau) — die frühere Wärme (Hue 88°) WAR die halbe
+       Creme-Gold-Signatur. Der Hue-Drift-Wächter (check:farbwelt (b), HART für
+       ink) greift bei C = 0 nicht mehr, weil OKLCH dort keinen Hue kennt; die
+       L-Monotonie bleibt geprüft. ink-500 ist mit #696969 bewusst dunkler als
+       die Referenz-Tinte #767676 (die läge auf --well bei 4.44:1) — gemessen
+       4.85:1 auf --well, 5.34:1 auf --paper. */
+    --ink-900:var(--ink-fixed-dark); --ink-800:#32302C; --ink-700:#3B3832; --ink-600:#5C564A; --ink-500:#6A665E;
+    --ink-400:#8D887E; --ink-300:#B0ADA7;
     /* Eigener Platzhalter-Ton (Auftrag David 25.6.2026, max. Lesbarkeit):
        ink-300 war auf dem Well nur ~2:1 → quasi unsichtbar. Eigenes Token
        4.75:1 auf --well (WCAG 1.4.3 AA erfüllt), ohne den Haarlinien-/Deko-Ton
@@ -81,7 +96,7 @@
        ≥4.5:1 auf --well bleibt erfüllt (4.76:1, vorher 4.75:1).
        D-5/A38 (16.7.2026): --well wurde heller/weisser (#F2EFE6→#F6F4EE) →
        --placeholder/well steigt 4.76→4.98:1 (Ton unverändert, Kontrast-Gewinn). */
-    --placeholder:#6D695F;
+    --placeholder:#69655D;
     /* Papier – Flächen. Token-Landkarte (Regel, ohne Wertänderung):
        --paper*   = SEITENHINTERGRUND (Body, grosse Flächen)
        --surface* = KARTEN/Panels (lc-card, lc-tile, lc-panel)
@@ -112,12 +127,24 @@
        Richtung) — alle WCAG-Pflichtpaare hell steigen (s. §F2b-Nachtrag D-5). Fixpunkt
        im Tor auf #FCFAF6 nachgezogen (scharf, nicht entkernt). DUNKEL bleibt
        UNBERÜHRT (A38 betrifft nur die helle Fläche; D-6 kommt separat). */
-    --paper:#FCFAF6; --paper-raised:#FFFEFC; --paper-sunken:#F6F4EE;
-    --surface:#FEFCFA; --surface-raised:var(--paper-raised);
+    /* W2·24-R1: Papier ist WEISS statt creme — die Flächen-Leiter
+       well < paper < surface < paper-raised bleibt (check:farbwelt FAIL-Regel),
+       nur eben chromafrei und mit fast unsichtbaren Stufen: das neue Bild trennt
+       über LINIEN, nicht über Flächen-Tönung. paper-raised ist das Reinweiss der
+       schwebenden Ebene (Menü/Dialog), das Blatt selbst liegt eine Spur darunter. */
+    --paper:#FAF7F2; --paper-raised:#FFFFFF; --paper-sunken:#F3F0EA;
+    --surface:#FCFAF6; --surface-raised:var(--paper-raised);
     --well:var(--paper-sunken);
     /* Haarlinien */
     --line:color-mix(in oklab, var(--ink-900) 10%, transparent);
     --line-strong:color-mix(in oklab, var(--ink-900) 18%, transparent);
+    /* W2·24-DESIGN-IDENTITAET R1 · DIE ZWEI TRENNLINIEN DES NEUEN BILDES.
+       Anders als --line/--line-strong (transparente Mischungen, die sich der
+       Fläche darunter anpassen) sind das zwei SOLIDE Töne: --rule-soft ist die
+       1-px-Zeilentrennung im Satzspiegel, --rule die 2-px-Kante unter der
+       Titelblatt-Zeile. Hier als Grundschicht definiert; Konsumenten ab R2. */
+    --rule:var(--ink-900);
+    --rule-soft:#DDDAD4;
     /* Gesetzes-Reader — EINE Linien-Sprache (W2·5d G1, DESIGN-REGLEMENT-NORMTEXT
        §Linien-Kanon): benannte Rollen statt frei gewählter Ad-hoc-Opazitäten von
        --line (Artikel /70, Sektion voll|/50, Tabellenzeile/Fussnoten). Werte am
@@ -130,14 +157,37 @@
     --rule-artikel:color-mix(in oklab, var(--ink-900) 10%, transparent);
     --rule-struktur:color-mix(in oklab, var(--ink-900) 14%, transparent);
     /* Messing – der eine Akzent (= gravierte Skala) */
-    --brass-800:#654C1E; /* a11y: ≥4.5 Kontrast auf brass-100 (12px) */
+    /* W2·24-DESIGN-IDENTITAET R1 (6.9.2026): DIE MESSING-SKALA IST NEUTRAL
+       GEWORDEN. Die 202 `*-brass-*`-Konsumenten bleiben unangetastet (§6 (b) des
+       Fahrplans) — sie färben über diese acht Werte um. Der Klassenname lügt
+       damit bewusst bis zum R5-Sweep (Umbenennung in die Rollen-/Registernamen);
+       die Werte hier sind die Wahrheit. Rollen: 800 = stärkster Akzenttext /
+       Hover, 700 = Link/Akzent (= Tinte, im Bild unterstrichen statt farbig),
+       600 = Punkt/Decor, 500 = Linie & --focus, 400–100 = Flächen. */
+    --brass-800:#1D1B17; /* a11y: ≥4.5 Kontrast auf brass-100 (12px) — D12: 15.39:1 */
     /* brass-700 a11y-kalibriert (Entscheid David 26.6.2026): WCAG 4.5:1 für
        Kleintext auf ALLEN hellen Flächen — min 4.63:1 auch auf brass-100/
        paper-sunken (vorher #8A6A2F = 4.37 auf paper-sunken → axe serious).
        Marke praktisch unverändert. Dunkel-brass-700 ist separat (s. html.dark). */
-    --brass-700:#826225; --brass-500:#B08D4A; --brass-300:#DDC9A0;
-    --brass-600:#9D7B3C; --brass-400:#C7AB75;
-    --brass-200:#E6D7B8; --brass-100:#F1E8D6;
+    /* D12: brass-700 IST die Tinte (Rolle «Link/Akzent»); seit hier per var()
+       aus demselben Solitär gespeist, statt den Wert ein zweites Mal zu
+       schreiben (§5) — vorher standen #151515 hier und dort, D12 hätte sie
+       auseinanderlaufen lassen. Die übrigen Stufen halten ihre Helligkeit und
+       tragen nur die Wärme nach (Hue 84.6°, L unverändert ±0.001). */
+    --brass-700:var(--ink-fixed-dark); --brass-500:#7A766E; --brass-300:#CAC7C1;
+    --brass-600:#4D4A44; --brass-400:#A6A39D;
+    --brass-200:#E6E4E0; --brass-100:#F3F1ED;
+    /* ── REGISTERFARBEN (W2·24-DESIGN-IDENTITAET R1, Referenzbild §5) ───────
+       Die EINZIGE Farbe im neuen Bild: vier stumpfe Töne, je einer pro Register
+       der Sammlung — Gesetze · Rechtsprechung · Materialien · Werkzeuge. Sie
+       stehen als Strich, Reiter-Unterkante und Randmarke, nie als Fläche unter
+       Fliesstext. Werte aus dem freigegebenen Referenzbild
+       (abnahme/design-identitaet/vorschlag-freigegeben.html), Kontraste gemessen
+       in abnahme/design-identitaet/KONTRAST-R1.md. Konsumenten kommen ab R2. */
+    --reg-g:#1D4E89;  /* Gesetze — David 6.9.: eine Stufe kräftiger (8.1:1 auf Papier) */
+    --reg-r:#7A1F2B;  /* Rechtsprechung — bewusst dezent (David 6.9.: «dezenter rot einsetzen») */
+    --reg-m:#2F7A3E;  /* Materialien — kräftiger (5.1:1 auf Papier) */
+    --reg-w:#8F5E0E;  /* Werkzeuge — kräftiger, bleibt ≥ 4.5 auf Well (4.97) */
     /* Fixe dunkle Tinte für Text auf STETS hellen Gold-Flächen (brass-300 ist
        in BEIDEN Modi hell). Flippt bewusst NICHT mit dem Thema — sonst kippt
        z. B. das Timeline-Label im Dunkel auf hell und wird unlesbar (~1.3:1).
@@ -266,9 +316,13 @@
        nennen Zahl und Zustands-Wort (§11.6.8). Kein neuer Farbwert — ein Ton,
        drei Helligkeiten (§13/B3). Die Zuordnung Stufe→Token liegt EINMAL in
        SchweizKarte.tsx, die Stufe selbst in lib/normtext/erfassungsgrad.ts (§5). */
-    --karte-duenn:hsl(39 34% 87%);
-    --karte-auswahl:hsl(39 50% 71%);
-    --karte-voll:hsl(39 60% 52%);
+    /* W2·24-R1: der Erfassungsgrad kodiert kantonale GESETZE → die Füllungen
+       tragen jetzt die Registerfarbe «Gesetze» (--reg-g, Hue ≈ 215) statt Gold.
+       Die drei Helligkeitsstufen und ihre Bedeutung sind unverändert; die
+       Kanten-Trennung gegen --karte-kante bleibt Pflichtpaar (check:farbwelt). */
+    --karte-duenn:hsl(215 32% 88%);
+    --karte-auswahl:hsl(215 38% 74%);
+    --karte-voll:hsl(215 42% 60%);
     /* Kantone ohne erfasste Erlasse: neutral (chromafrei) UND schraffiert — die
        Schraffur trägt den Unterschied auch ohne Farbwahrnehmung (§11.6.8
        «nie nur Farbe»); die Luminanz allein täte es nicht (gemessen 1.18:1
@@ -286,10 +340,14 @@
        Strichstärke (3–6 statt 1 viewBox-Punkt). Gemessen Kern gegen Gehäuse:
        3.70:1 hell, 1.74:1 dunkel — dunkel trägt darum die Strichstärke die
        Unterscheidung, nicht die Luminanz. Kein Dunkel-Override nötig. */
-    --karte-marke:var(--brass-line);
-    /* Radien – zurückhaltend; xl/2xl nur für grosse Container (Sektionen, Dialoge) */
-    --radius-sm:4px; --radius-md:8px; --radius-lg:12px;
-    --radius-xl:16px; --radius-2xl:24px;
+    --karte-marke:var(--reg-g);
+    /* Radien – W2·24-R1: KANTEN STATT KISSEN. Alle fünf Stufen sind 0; die
+       Skala bleibt als EIN Ort bestehen (tailwind borderRadius mappt sm…2xl
+       darauf, 89 Dateien färben ohne Edit um). AUSGENOMMEN ist `rounded-full`
+       (Tailwind-Default 9999px, 46 Fundstellen) — runde Marken, Punkte und
+       Avatare bleiben rund; ihr Aufräumen ist R5. */
+    --radius-sm:0px; --radius-md:0px; --radius-lg:0px;
+    --radius-xl:0px; --radius-2xl:0px;
     /* ── Schichtungs-Skala (C3, 5.9.2026, Design-Review R6) ────────────────
        VORHER: 65 Fundstellen in ~30 Dateien trugen rohe `z-<Zahl>`/`z-[<Zahl>]`
        ohne Skala — Reihenfolgen liessen sich nur durch Ausprobieren rekon-
@@ -313,14 +371,59 @@
        Wächter: Prüfung 5 in `scripts/check-design-tokens.ts` verbietet neue
        rohe `z-[…]`/Tailwind-Zahlen-Utilities ausserhalb dieser Skala —
        vollständig migriert (5.9.2026, Runde 6), keine Ausnahmen. */
+    /* ── W2·24-R4 · DIE APP-KRONE ALS EINE ZAHL ────────────────────────────
+       R2 hat die Arbeitsleiste (`layout/Reiterleiste.tsx`) BEWUSST nicht kleben
+       lassen: die Kopfhöhe stand als Konstante `APP_TOPBAR_H = '4rem'` in
+       `pages/gesetz-leser/v3/leserGeometrie.ts` (R4-Fläche, in R2 TABU), und
+       eine höhere klebende Krone ohne Nachzug dort hätte jeden `#art-…`-Anker
+       um die Differenz zu hoch abgesetzt (R2-Protokoll §2).
+       Hier steht die Krone jetzt EINMAL, in zwei Stücken:
+         --app-krone-h  Höhe der Titelblatt-Zeile (`layout/Topbar.tsx`, h-16 mit
+                        der 2-px-Kante am inneren Träger, also INNERHALB — in R2
+                        auf exakt 64 px gemessen).
+         --app-reiter-h Höhe der klebenden Arbeitsleiste. Fester Wert, weil ein
+                        klebender Streifen eine Höhe HABEN muss, bevor etwas
+                        unter ihm rechnet; `Reiterleiste.tsx` trägt ihn als
+                        `h-[…]`, damit Soll und Ist nicht auseinanderlaufen
+                        können. 2.125rem = 34 px = die in R2 gemessene Zeile
+                        (Reiter-Knopf `py-1.5 text-body-s`) samt Unterkante.
+         --app-kopf-h   die Summe — der Anschlag, unter dem der Leser-Kopf klebt
+                        und aus dem `--nt-stick` folgt (`leserGeometrie.ts`).
+       Die Ausgabe-Zeile (`Topbar.tsx` AusgabeZeile) liegt DAZWISCHEN und läuft
+       weiter im Fluss mit: sie trägt eine Angabe (Korpus-Stand), keine
+       Bedienung, und scrollt darum weg wie Fliesstext. */
+    --app-krone-h:4rem;
+    --app-reiter-h:2.125rem;
+    /* --app-reiter-stelle-b · D27 (David 6.9.2026): die BREITE, die ein
+       Gesetzes-Reiter für die Lesestellung freihält («Art. 336c»). Sie steht
+       hier und nicht als Zahl in der Klasse, weil sie dieselbe Sorge trägt wie
+       `--app-reiter-h`: ein Mass, das die Arbeitsleiste RESERVIERT, damit sich
+       beim Nachführen nichts verschiebt (D2 «keine Magic-Numbers», §5).
+       GEMESSEN 6.9.2026 (Preview 4373, Chromium @1440, Reiter-Schriftgrad
+       `text-body-s`, Archivo): «Art. 1» 33.8 px · «Art. 97» 41.8 · «Art. 28g»
+       49.8 · «Art. 336c» 57.3 · «Art. 1013» 57.9 · «Art. 31–32» 64.9.
+       3.75rem = 60 px deckt damit jede EINZEL-Stelle ab — nur die selteneren
+       Bereichs-Labels («Art. 31–32») wachsen darüber hinaus, und dann wächst
+       der Reiter EINMAL statt bei jedem Artikelwechsel. Grösser wäre ehrlicher
+       gegen den Ausreisser, aber jedes zusätzliche Pixel steht als Leerraum in
+       JEDEM Gesetzes-Reiter — 60 px ist die Stelle, an der beides zusammen am
+       kleinsten wird. `min-width`, nie `width`: die Stelle darf nicht
+       verstümmeln (§8). */
+    --app-reiter-stelle-b:3.75rem;
+    --app-kopf-h:calc(var(--app-krone-h) + var(--app-reiter-h));
     --z-base:0; --z-sticky:10; --z-entscheid-sticky:15;
     --z-reader-scrim:16; --z-reader-kopf:17; --z-inhalt-kopf:19;
     --z-leiste:20; --z-dropdown:30; --z-overlay:40; --z-modal:50;
-    /* Schatten – sehr weich, niedrig; sm/md differenziert (Design-Review
+    /* Schatten – W2·24-R1: NUR NOCH SCHWEBENDE EBENEN. Karten und Kacheln
+       tragen keinen Schatten mehr (sm/md = none, die Utilities bleiben als
+       No-op stehen, damit die 18 `shadow-*`-Fundstellen ohne Edit verstummen
+       — ihr Aufräumen ist R5); --shadow-lg trägt weiterhin Menü, Popover und
+       Dialog, weil dort die Ebene über dem Blatt ABLESBAR sein muss.
+       Historie (Design-Review
        6.6.2026: vorher identische Tokens) */
-    --shadow-sm:0 1px 2px rgba(26,26,23,.04);
-    --shadow-md:0 1px 2px rgba(26,26,23,.04), 0 2px 8px rgba(26,26,23,.05);
-    --shadow-lg:0 2px 4px rgba(26,26,23,.05), 0 8px 24px rgba(26,26,23,.06);
+    --shadow-sm:none;
+    --shadow-md:none;
+    --shadow-lg:0 8px 24px rgb(0 0 0 / .12);
     /* Motion – mechanisch-präzise, kein Overshoot */
     --dur-fast:120ms; --dur-base:160ms; --dur-slow:220ms; --dur-stage:420ms;
     --ease:cubic-bezier(.2,.6,.2,1);
@@ -385,7 +488,7 @@
        eine Messung statt einer Annahme. */
     --sheet-anschlag:calc(4rem + 2.25rem);
     /* Typografie */
-    --tracking-overline:.12em;
+    --tracking-overline:0em;  /* W2·24-R1: Versal-Etiketten sind weg (siehe .lc-overline) */
     /* Off-Skala-Schriftgrössen, die bewusst nicht aus der Typo-Skala stammen,
        als Token geführt statt roh im Inline-Style (§13/B2): Stoppuhr-Anzeige
        (Zeiterfassung) und Wizard-Vorschau-Papier. */
@@ -435,16 +538,27 @@
        dort nicht vom Schriftregler: `rem` hängt an der Wurzel-Schriftgrösse,
        und genau die verstellt der A−/A+-Regler der Topbar (R3). */
     --hochgestellt:max(.72em,.6875rem);
-    /* Display = Geist (Wunsch David 6.6.2026): die Serife Fraunces ist aus
-       der UI entfernt; PDF-Berichte behalten ihre eingebetteten Schriften. */
-    /* Rank 11: 'Geist Fallback'/'Source Serif 4 Fallback' (metrik-angepasstes
+    /* W2·24-DESIGN-IDENTITAET R1 (6.9.2026) · ZWEI STIMMEN STATT EINER:
+       Archivo (Grotesk) trägt die BEDIENUNG — Reiter, Knöpfe, Marginalien,
+       Meta-Zeilen; Literata (Serife) trägt alles GELESENE — Normtext, Entscheide,
+       Titel. Beide OFL, beide self-hosted über @fontsource-variable (kein
+       Google-Fonts-Request zur Laufzeit), Import in src/main.tsx.
+       Rank 11: 'Archivo Fallback'/'Literata Fallback' (metrik-angepasstes
        Arial/Georgia, @font-face oben) direkt HINTER dem Webfont — sie tragen den
-       Zeilenkasten während font-display:swap CLS-frei, bis der Webfont da ist. */
-    --font-display:'Geist Variable','Geist Fallback','Hanken Grotesk';
-    --font-sans:'Geist Variable','Geist Fallback','Hanken Grotesk';
-    --font-mono:'Geist Mono Variable','IBM Plex Mono';
-    /* Lese-Serif NUR für den Gesetzes-Volltext (Rubrik V). */
-    --font-serif:'Source Serif 4 Variable','Source Serif 4 Fallback','Source Serif Times Fallback','Charter','Georgia';
+       Zeilenkasten während font-display:swap CLS-frei, bis der Webfont da ist.
+       --font-mono trägt NUR noch, was fachlich Monospace braucht (Rechenweg,
+       Code, Tausender-Gruppen): eine SYSTEM-Kette ohne eigenes Paket — Geist
+       Mono ist mit Geist gegangen, und eine dritte Webfont-Ladung für
+       Ziffernkolonnen wäre Geräte-Last ohne Gegenwert (§15). */
+    --font-display:'Archivo Variable','Archivo Fallback','Arimo';
+    --font-sans:'Archivo Variable','Archivo Fallback','Arimo';
+    --font-mono:ui-monospace,'SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono';
+    /* Lese-Serif: Normtext, Entscheide und Titel (Rubrik V und, ab R3/R4, mehr). */
+    --font-serif:'Literata Variable','Literata Fallback','Literata Times Fallback','Charter','Georgia';
+    /* D12 (6.9.2026): das Gewicht des Lesetexts als EIN Token — Konsument ist
+       die `:where`-Regel unten in @layer base; `src/tests/leser-typo-tokens.
+       test.ts` bindet den Wert, damit er nicht still zurueckwandert. */
+    --lese-gewicht:450;
     /* Fein-Typo der Leser/Chrome (25.6.2026, DESIGN-REGLEMENT B2): die zuvor
        12 rohen text-[…rem]-Sonderwerte sind auf die bestehende Skala
        (micro/xs/body-s/base/body-l/h3) verdichtet — keine Sondertokens mehr,
@@ -465,13 +579,16 @@
     /* D-4 (Ink-Wärme, 13.7.2026): Dunkel-Rampe auf denselben Ziel-Hue 88°
        normalisiert (vorher 84–90° gestreut), L gehalten, Chroma-Glocke wie hell.
        Alle Kontraste F2-gemessen: ink-500 ≥5.2:1 auf paper/surface/well. */
-    --ink-900:#E9E7E2; --ink-800:#DCD9D2; --ink-700:#CFCCC5; --ink-600:#B2AEA4; --ink-500:#918D83;
-    --ink-400:#726F68; --ink-300:#54524D;
-    --placeholder:#89857B; /* Platzhalter dunkel: ≥4.4:1 auf --well (#100F0A) — D-4: 5.2:1 */
-    /* Papier → warmes Dunkel (kein Reinschwarz — die Papier-Wärme bleibt) */
-    --paper:#16150F; --paper-raised:#201E16; --paper-sunken:#100F0A;
-    --surface:#1D1B14; --surface-raised:var(--paper-raised);
-    --well:#100F0A;
+    /* W2·24-R1: dunkle Rampe ebenfalls chromafrei (C = 0). */
+    --ink-900:#E2E0DC; --ink-800:#D2CEC6; --ink-700:#BFBAB0; --ink-600:#A59E90; --ink-500:#938D81;
+    --ink-400:#6F6B63; --ink-300:#534F47;
+    --placeholder:#8A857B; /* Platzhalter dunkel: gemessen 5.10:1 auf --well (#131211), KONTRAST-R1.md §D12 */
+    /* Papier → neutrales Dunkel (W2·24-R1: die Wärme ist raus, kein Reinschwarz
+       — #151515 ist der Referenzbild-Wert; die Flächen-Leiter bleibt gültig). */
+    --paper:#1B1917; --paper-raised:#282521; --paper-sunken:#131211;
+    --surface:#201E1B; --surface-raised:var(--paper-raised);
+    --well:#131211;
+    --rule-soft:#35332F;
     /* Haarlinien etwas kräftiger (helle Tinte auf Dunkel wirkt sonst zu fein) */
     --line:color-mix(in oklab, var(--ink-900) 14%, transparent);
     --line-strong:color-mix(in oklab, var(--ink-900) 24%, transparent);
@@ -481,13 +598,25 @@
     --rule-struktur:color-mix(in oklab, var(--ink-900) 20%, transparent);
     /* Messing: Text-Töne (800–600) hell, Flächen-Töne (100/200) dunkel,
        Linien/Skala (500/400/300) bleiben Gold. */
-    --brass-800:#EAD6A4; --brass-700:#D8BD78; --brass-600:#E6CD8C;
-    --brass-500:#B89653; --brass-400:#9C7C3C;
-    --brass-300:#CBB17B; --brass-200:#574A2C; --brass-100:#2C2616;
+    /* Registerfarben dunkel: aufgehellte Pendants (Referenzbild §5) — dieselbe
+       Rolle, dieselbe Reihenfolge, für die dunkle Fläche kalibriert. */
+    --reg-g:#8FB8F0; --reg-r:#E39AA6; --reg-m:#9AD489; --reg-w:#E6B95A; /* dunkel: kräftiger, Rot dezent (David 6.9.) */
+    /* W2·24-R1: dieselbe Rollenlogik, neutral — Text-Töne hell, Flächen dunkel. */
+    --brass-800:#F6F4F0; --brass-700:var(--ink-900); --brass-600:#CDC9C1;
+    --brass-500:#949088; --brass-400:#716E68;
+    --brass-300:#514F4B; --brass-200:#302E2A; --brass-100:#242321;
     /* Status: Text-Töne (-700) hell; -bg folgt aus Papier+Tönung; -500 bleibt.
        Tönung etwas stärker, damit die Flächen auf Dunkel lesbar bleiben. */
     --status-tint:18%;
     --sage-700:#AEC6A2; --slate-700:#A9B8BF; --warn-700:#E3AC5E; --danger-700:#E29280;
+    /* D12 (6.9.2026), §17-Wurzelfix statt Baseline-Absenkung: das dunkle Papier
+       wird von #151515 auf #1B1917 gehoben — dadurch faellt das ALTBEKANNTE
+       Riss-Paar danger-500/paper dunkel von 2.72:1 auf 2.61:1. Ein bekannter
+       Riss darf nicht tiefer sinken (Baseline-Guard). Statt die Baseline
+       nachzuziehen, wird der Ton im DUNKELMODUS um dieselbe Stufe mitgehoben
+       (L 0.488 -> 0.504, Hue/Chroma unveraendert): gemessen 2.80:1, also BESSER
+       als vor D12. Hell bleibt #9A3F30 unangetastet. */
+    --danger-500:#9F4434;
     /* Fokus im Dunkel: brass-500 (#B89653) ist hier hell genug für ≥3:1 auf
        dem dunklen Papier; brass-700 wäre als Outline zu hell/grell. */
     --focus:var(--brass-500);
@@ -513,13 +642,14 @@
        Kante gegen Füllung 3.06 / 4.34 / 6.61 / 11.96:1, Stufen untereinander
        1.42–1.52:1. «vollständig» steht auf 36 %, nicht höher — ab 37 % fällt die
        Kante auf 2.92:1 und reisst die F2-Schwelle. */
-    --karte-duenn:hsl(39 30% 22%);
-    --karte-auswahl:hsl(39 42% 30%);
-    --karte-voll:hsl(39 55% 36%);
-    /* Schatten tiefer für Dunkel-Tiefe (Karten heben sich sonst nicht ab) */
-    --shadow-sm:0 1px 2px rgba(0,0,0,.30);
-    --shadow-md:0 1px 2px rgba(0,0,0,.30), 0 2px 8px rgba(0,0,0,.36);
-    --shadow-lg:0 2px 4px rgba(0,0,0,.34), 0 8px 24px rgba(0,0,0,.44);
+    --karte-duenn:hsl(215 28% 20%);
+    --karte-auswahl:hsl(215 34% 27%);
+    --karte-voll:hsl(215 40% 34%);
+    /* W2·24-R1: sm/md bleiben auch dunkel leer (Karten tragen Linien, keine
+       Tiefe); nur die schwebende Ebene behält ihren Schatten, dunkel tiefer. */
+    --shadow-sm:none;
+    --shadow-md:none;
+    --shadow-lg:0 8px 24px rgb(0 0 0 / .55);
   }
 
   html { color-scheme: light; }
@@ -531,7 +661,19 @@
     font-size: 1rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    /* D12 «Lesekomfort» (6.9.2026): Literata traegt seit hier die opsz-Achse
+       (main.tsx). `auto` ist zwar der CSS-Vorgabewert, steht aber ausdruecklich
+       da, weil er den Zweck der +57.6 KB Nutzlast benennt — ohne die Achse
+       waere die Zeile wirkungslos, ohne die Zeile die Achse unbelegt. */
+    font-optical-sizing: auto;
   }
+  /* D12: LESETEXT-GEWICHT. Serifen wirken am Bildschirm bei 400 duenner als im
+     Druck; die Recherche (6.9.2026) nennt 450–500 fuer Bildschirm-Langlesetext.
+     `:where()` haelt die Spezifitaet auf NULL — jede Tailwind-Gewichts-Utility
+     (`font-semibold` an Titeln, `font-normal`, `font-medium`) gewinnt weiterhin,
+     nur der Fliesstext ohne eigene Gewichtsangabe erbt die 450. Darum steht hier
+     eine Regel und kein Eingriff an ~40 Aufrufstellen (§5/§10). */
+  :where([class~="font-serif"]) { font-weight: var(--lese-gewicht); }
   h1, h2, h3 { font-family: var(--font-display), system-ui, sans-serif; font-weight: 600; letter-spacing: -0.015em; color: var(--ink-900); }
   a { color: var(--brass-700); text-underline-offset: 2px; }
   /* Hover DUNKELT den Link (brass-800) statt ihn aufzuhellen (brass-600 war
@@ -770,14 +912,22 @@
      der Leser eine eigene Basis, also greifen sie jetzt:
        normal 1.0625 rem (17.00 px) · mittel 1.1475 (18.36) ·
        gross 1.25375 (20.06) · sehr-gross 1.38125 (22.10)
+     — DIESE ZAHLEN GALTEN BIS W2·24-R6c (6.9.2026); seither steht die Basis auf
+     1.125 rem, s. den Nachtrag direkt über den drei Regeln (§0-2b: der Beleg
+     von S2 wird ergänzt, nicht überschrieben).
      Anzeigewerte damit 100 · 108 · 118 · 130 %. Die Werte sind in
      `pages/gesetz-leser/leserSchrift.ts` (`SCHRIFT_REM`) gespiegelt, weil dort
      der Anzeigewert entsteht; `src/tests/leser-schriftskala.test.ts` prüft beide
      Listen gegeneinander UND die Vorgabestufe gegen `tailwind.config.js`, so
      dass sie nicht auseinanderlaufen können (§5). ── */
-  html[data-leserschrift="mittel"]     { --lm-leser-schrift: 1.1475rem; }
-  html[data-leserschrift="gross"]      { --lm-leser-schrift: 1.25375rem; }
-  html[data-leserschrift="sehr-gross"] { --lm-leser-schrift: 1.38125rem; }
+  /* W2·24-R6c: die BASIS steht seit D20 (c) auf 1.125 rem (18 px), die drei
+     Stufen sind dieselben Faktoren 1.08 / 1.18 / 1.30 darüber:
+       normal 1.125 rem (18.00 px) · mittel 1.215 (19.44) ·
+       gross 1.3275 (21.24) · sehr-gross 1.4625 (23.40)
+     Anzeigewerte unverändert 100 · 108 · 118 · 130 %. */
+  html[data-leserschrift="mittel"]     { --lm-leser-schrift: 1.215rem; }
+  html[data-leserschrift="gross"]      { --lm-leser-schrift: 1.3275rem; }
+  html[data-leserschrift="sehr-gross"] { --lm-leser-schrift: 1.4625rem; }
   /* FL-4-NACHZUG (Pruefer-Befund zu PR #539, 16.8.2026): `data-leserschrift` wird
      GLOBAL am <html> gesetzt, unabhaengig davon, ob die V3-Huelle aktiv ist. Ohne
      zusaetzlichen Scope traf die Regel auch `.lc-leser` in der Ist-Huelle (V1) —
@@ -787,7 +937,7 @@
      Regel greift damit KONSTRUKTIV nur, wenn V3 aktiv ist; in V1 fehlt das
      Attribut, der Selektor kann nie treffen. */
   html[data-leserschrift]:not([data-leserschrift="normal"]) .lc-leser[data-leser-v3="rahmen"] .nt-art-cv [data-lese] {
-    font-size: var(--lm-leser-schrift, 1.0625rem);
+    font-size: var(--lm-leser-schrift, 1.125rem);
   }
 
   /* Auftrag David 21.8.2026 · LESEMASS-DECKEL STATT VOLLBREITE (Herleitung,
@@ -865,11 +1015,19 @@
      indem `--leser-zeichen` hochgesetzt oder die `min()`-Klammer entfernt
      wird. */
   .lc-leser[data-leser-v3="rahmen"] {
-    --leser-zeichen: 68;
+    /* W2·24-R6c: 68 → 70 (D20 (c), Spanne 65–72 CPL). Herleitung: die Konstante
+       RECHNET mit `--leser-zeichen`, das Tor `e2e/leser-lesemass.e2e.ts` MISST
+       Zeichen je Zeile am dichtesten Absatz — und misst systematisch tiefer,
+       weil `--leser-zeichenbreite` am Schlechtfall kalibriert ist. Mit 68 lag
+       die gemessene Untergrenze bei 63 ch (R6b-Messreihe, `abnahme/design-
+       identitaet/R6-NACHZUG.md` §2.1) und damit unter der Spanne. Die
+       Nachkalibrierung hebt die Rechengrösse, nicht die Messmethode; die
+       gemessene Spanne nach R6c steht in `abnahme/design-identitaet/R6C.md`. */
+    --leser-zeichen: 70;
     --leser-zeichenbreite: 0.4805;
     --leser-rinne: 2.25rem;
     --leser-zeilenmass: calc(
-      var(--leser-zeichen) * var(--leser-zeichenbreite) * var(--lm-leser-schrift, 1.0625rem)
+      var(--leser-zeichen) * var(--leser-zeichenbreite) * var(--lm-leser-schrift, 1.125rem)
       + var(--leser-rinne));
   }
   .lc-leser[data-leser-v3="rahmen"] #lc-lesespalte,
@@ -879,6 +1037,65 @@
        auf none — nicht auf 45rem (Bug-Check #570, Mitdenken 29.8.2026). */
     max-width: min(var(--leser-lesemass-max, 45rem), var(--leser-zeilenmass, 45rem));
   }
+
+  /* ═══ ZEILENFORM: DIE ZWEI REGELN, DIE DEN ARTIKEL TRAGEN ════════════════
+     W2·24-R6c, RÜCKBAU (§17-Gegengewicht). Bis R6b stand hier der R4-Block
+     «SATZSPIEGEL: MARGINALIE · NORMTEXT · RANDNOTIZEN»: 118 Zeilen Regeln auf
+     `[data-lr-spiegel="marg"]` und `[data-lr-spiegel="voll"]`, dazu `.lr-notiz`,
+     `.lr-notiz-titel`, `.lr-notiz-block`, die vier Register-Varianten und die
+     Variablen `--lr-marg` / `--lr-notiz` / `--lr-rinne` / `--lr-textmass`.
+     R6b hat die beiden Randspuren gestrichen (D20 (a)/(b)); seither kennt
+     `pages/gesetz-leser/v3/satzspiegel.ts` nur noch die Werte `'zeile'` und
+     `'breit'` (`Satzspiegel`-Typ, `satzspiegelFuer`) — KEIN Selektor des Blocks
+     konnte danach je wieder greifen, und keine der vier Variablen wurde
+     ausserhalb davon gelesen. R6b durfte ihn nicht räumen (`index.css`-Bestand
+     war dort TABU) und hat den toten Bestand stattdessen im `.lr7-`-Block am
+     Dateiende vermerkt; dieser Nachzug räumt ihn ersatzlos.
+     Was BLEIBT, sind die zwei formunabhängigen Regeln, die auch die Zeilenform
+     braucht — sie standen im alten Block ohne Spiegel-Scope: */
+  /* Die Textspalte des Artikels darf schrumpfen (sonst sprengt ein langes Wort
+     das Raster; `ArtikelLeser` setzt `.lr-text`). */
+  .lr-text { min-width: 0; }
+  /* Der Registerstrich am Artikelkopf ist in der Zeilenform 0 px hoch und ohne
+     Aussenrand — er darf die Ist-Form nicht um eine Zeile verschieben (§6). */
+  .lr-reg { display: block; height: 0; }
+
+  /* ═══ P3 · TEXTLINKS IM LESER TRAGEN EINEN UNTERSTRICH ═══════════════════
+     Prüfer-Befund R6 (6.9.2026): von 6'291 Links im Gesetzesleser trugen 3'673
+     keinen Unterstrich — darunter «Amtliche Fassung ↗», «⬇ Amtliches PDF» und
+     die Links der Bezüge. Ein Link, den nur die Farbe ausweist, ist für
+     Farbfehlsichtige kein Link (WCAG 1.4.1 «Use of Color»; derselbe Befund
+     traf auf der Startseite als R3-F1 mit axe «link-in-text-block» auf).
+
+     DIE REGEL STEHT EINMAL, UND ZWAR HIER — nicht an den ~40 Aufrufstellen.
+     `:where()` hält die Spezifität auf NULL, und die Regel liegt in einer
+     Cascade-Layer: die Tailwind-Utility `no-underline` (Layer `utilities`)
+     gewinnt damit IMMER, ganz gleich, was hier steht. Das ist die Bauform, die
+     der Befund verlangt: unterstrichen ist die VORGABE, und wer ohne Unterstrich
+     stehen soll, sagt es im Markup ausdrücklich.
+
+     WER SCHON HEUTE OHNE STEHT (und deshalb unberührt bleibt): die Brotkrume
+     (`no-underline` am Link), die Artikelnummer-Anker (`num … no-underline`,
+     ArtikelLeser), die Gliederungs-Einträge (`no-underline`), sowie alles, was
+     `.lc-chip` oder `.lc-btn-mini` trägt (beide führen `no-underline` in ihrem
+     `@apply`). Navigation, Listenzeilen und Knöpfe tragen ihre Affordanz aus der
+     Form — nur der TEXTlink braucht den Strich.
+
+     WÄCHTER (§6.7): `e2e/leser-links-p3.e2e.ts` misst am gebauten Leser, dass
+     kein `a[href]` ohne Unterstrich UND ohne eine der erklärten Ausnahmen
+     dasteht. Rot zu bekommen, indem diese Regel entfernt wird. */
+  .lc-leser :where(a[href]) {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  /* Der DRUCK fällt in die Zeilenform zurück — die Regeln dafür stehen im
+     einen `@media print`-Block dieser Datei (Suchwort «SATZSPIEGEL IM DRUCK»),
+     nicht hier: `src/tests/druck-fundstellen.test.ts` liest den ERSTEN
+     print-Block der Datei und prüft an ihm die Druck-Zusagen. Ein zweiter,
+     früher stehender Block hat ihm am 6.9.2026 genau die drei Regeln
+     verdeckt, die er sichern soll. Eine Stelle für den Druck (§5). */
 
   /* W2.8: lange Erlasse (OR/ZGB ~1099 Art.) — off-screen-Artikel überspringen
      Layout/Paint. Inhalt bleibt im DOM (Suche/Anker/Screenreader/Crawler
@@ -993,6 +1210,18 @@
       overflow-wrap: anywhere;
     }
 
+    /* ── SATZSPIEGEL IM DRUCK — GESTRICHEN (W2·24-R6c, §17-Gegengewicht) ──
+       Hier standen vier Regeln, die den Ausdruck aus dem Satzspiegel
+       (`[data-lr-spiegel="marg"|"voll"]`) in die Zeilenform zurückholten. Mit
+       dem Fall der Randspuren (R6b, D20) gibt es diese beiden Spiegel-Werte
+       nicht mehr (`v3/satzspiegel.ts` kennt nur `'zeile'` und `'breit'`) — die
+       Regeln konnten seither nicht mehr greifen. Der Bildschirm STEHT bereits
+       in der Zeilenform, der Druck erbt sie; die Druck-Zusagen dieses Blocks
+       (Fundstellen, Link-Ausschrift, kein Zuschnitt) sind davon unberührt und
+       werden weiter von `e2e/druck-fundstellen-z2.e2e.ts` und
+       `src/tests/druck-fundstellen.test.ts` gehalten. */
+
+
     /* Nichts wird auf den sichtbaren Ausschnitt zugeschnitten: weder durch
        ausgelagertes Rendering (content-visibility) noch durch die
        Scroll-Panes/Overlays des Split-Views.
@@ -1041,7 +1270,8 @@
      zweites Mal (§5/F9). `.lc-ziffern` ist die Rolle ohne Familie, `.num`
      bleibt Rolle + Familie und ist Zeichen für Zeichen wirkungsgleich. */
   .num, .lc-ziffern { font-variant-numeric: lining-nums tabular-nums; }
-  .num { font-family: var(--font-mono), ui-monospace, monospace; }
+  /* W2·24-R1-Nachzug (Prüfer R1-1, 6.9.2026): `.num` trägt nur noch Tabellenziffern, keine
+     Mono-Familie mehr — Wörter in `.num`-Zeilen liefen sonst als Schreibmaschine. */
 
   /* «&» in Display-Titeln: ruhige Sans-Glyphe (Geist) statt der
      verschnörkelten Fraunces-Form; leicht reduziert für optischen Ausgleich. */
@@ -1057,10 +1287,20 @@
      (components/typografie.tsx); die Ziffern bleiben Mono/tabular. */
   .lc-apo { font-family: var(--font-sans), system-ui, sans-serif; }
 
+  /* W2·24-DESIGN-IDENTITAET R1 (6.9.2026) · DAS ETIKETT VERLIERT DIE VERSALIEN.
+     Gold-Versal-Overlines mit weitem Tracking waren die dritte der drei
+     Signaturen, die LexMetrik mit jeder anderen KI-gebauten Juristenseite teilte
+     (Fahrplan §1). Neu: eine kleine, ruhige Grotesk-Zeile — gemischtschriftlich,
+     Tracking normal, 12 px statt 11 px (die Versalien trugen die Lesbarkeit der
+     11 px mit; ohne sie braucht die Zeile den Punkt zurück). EINE Regel, 141
+     Konsumenten ohne Edit. Farbe: ink-500 (Referenzbild --ink-3) — bei 12 px
+     gemischtschriftlich gemessen 5.34:1 auf --paper, 4.85:1 auf --well, AA
+     überall (KONTRAST-R1.md). Der frühere ink-600-Boden gehörte zur 11-px-Versal-
+     Anatomie; check-design-tokens verbietet weiterhin ein Dimmen unter ink-500. */
   .lc-overline {
-    font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: .6875rem; line-height: 1.4; letter-spacing: var(--tracking-overline);
-    text-transform: uppercase; color: var(--ink-600); /* ink-500→ink-600 (Auftrag David 25.6.2026): 11px-Overline auf well 4.48:1→6.65:1, AA überall */
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: .75rem; line-height: 1.4; letter-spacing: var(--tracking-overline);
+    text-transform: none; color: var(--ink-500);
   }
   /* Gemischtschriftliche Overline (Mono-Label, aber nicht VERSAL) — ersetzt das
      zuvor 3× kopierte `lc-overline normal-case` + Inline letterSpacing:0.04em.
@@ -1139,7 +1379,25 @@
     background:linear-gradient(90deg, var(--brass-500), var(--brass-300));
   }
 
-  .lc-card { @apply bg-surface border border-line rounded-lg shadow-md; }
+  /* ── U2 (Prüfbefund W2·24-R5, 6.9.2026) · LINIEN STATT FLÄCHEN ────────────
+     GEMESSEN auf 9 von 14 Übersichts-Routen (hell+dunkel @1440): `.lc-card`
+     trug Rahmen auf allen VIER Seiten UND eine eigene Füllung (`--surface`
+     #FDFDFD hell) gegen ein Papier von #FBFBFB — ein Unterschied von 2/255,
+     also eine Fläche, die niemand sieht, und ein Kasten, den jeder sieht.
+     Radius und Schatten waren mit R1 schon auf 0 bzw. `none` (`--radius-lg`,
+     `--shadow-md`); geblieben war die reine Kasten-ANATOMIE, ohne dass
+     irgendwo begründet gewesen wäre, warum sie sie behalten darf.
+     Fahrplan §5 dieser Runde: «Trennung über Linien (1 px `--rule-soft`, 2 px
+     `--rule` für Kopfzeilen)». Genau das steht jetzt hier: KEIN Seitenrahmen,
+     KEINE eigene Füllung, die Abgrenzung trägt je eine Haarlinie oben und
+     unten, der Abstand trägt Weissraum.
+     WAS NICHT MITKOMMT: schwebende Ebenen (Menü, Dialog, Popover, das
+     Suchpanel) behalten ihre Umrandung — sie liegen ÜBER fremdem Inhalt und
+     brauchen eine Kante, um nicht mit ihm zu verschmelzen. Ihre Anatomie ist
+     `.lc-schwebeflaeche` (unten), nicht `.lc-card`; die betroffenen
+     Fundstellen sind dorthin gezogen, nicht hier ausgenommen. */
+  .lc-card { background: transparent; border: 0;
+    border-top: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft); }
   /* EINE Karten-Hover-Grammatik (Design-Konsistenz C-3, 31.8.2026).
      GEMESSEN waren drei: (a) Farbstufe `hover:border-brass-400` (Erlass-,
      Material-, Entscheid-Karte), (b) Lift + Schlagschatten
@@ -1160,6 +1418,9 @@
      als Geschwister über dem Link liegen müssen). */
   :is(a, button, [role='button'], [data-aktiv]).lc-card { @apply transition-colors; }
   :is(a, button, [role='button'], [data-aktiv]).lc-card:hover { border-color: var(--brass-400); }
+  /* U2: die Hover-Grammatik bleibt Wort für Wort — sie färbt jetzt die beiden
+     Haarlinien statt vier Rahmenseiten. Der Zustand ist damit dezenter, aber
+     nach derselben Regel (§G-j «eine Flexoki-Stufe tiefer»). */
 
   /* ── R5-D (5.9.2026) · EINE neutrale Hover-Fläche ─────────────────────────
      Das Gegenstück zur Karten-Grammatik darüber: die anklickbare ZEILE
@@ -1191,7 +1452,12 @@
   .lc-hover-flaeche { @apply transition-colors; }
   .lc-hover-flaeche:hover { background-color: var(--well); }
   /* Ergebnis-Kachel (Hauptwerte in Ergebnisblöcken) — eine Anatomie überall */
-  .lc-tile { @apply bg-surface-raised border border-line rounded-xl p-4; }
+  /* U2: dieselbe Umstellung wie `.lc-card`. Die Ergebnis-Kachel steht in
+     Reihen nebeneinander; ihre Abgrenzung ist die Oberlinie, nicht der Kasten
+     (die Akzent-Oberkante `.lc-akzent-*` unten setzt genau dort an und wird
+     dadurch erst richtig lesbar). */
+  .lc-tile { background: transparent; border: 0;
+    border-top: 1px solid var(--rule-soft); @apply p-4; }
   /* Akzent-Oberkante (massgeblich) — EINE Quelle statt 6×
      inline border-t-[3px]; die Bedeutung trägt die Farbe, nicht die Stelle. */
   /* LM-033 (B11-Karten, 4.9.2026): die Akzent-Oberkante ist 3 px stark, der
@@ -1230,15 +1496,40 @@
      Fristablauf im Fristenkontrollbuch — Papier-Spalt + Haarlinien-Ring
      in der Farbe des Markers (currentColor der Kreisfläche via CSS-Var). */
   /* F1: Termin-Ring = Zustand «ok» → --ok-solid (wertidentisch zu sage-500). */
-  .lc-termin-ring { box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--ring-farbe, var(--ok-solid)); }
+  /* R-4 (Prüfbefund W2·24-R5, 6.9.2026): der Doppelring lief über einen echten
+     `box-shadow` (0/0/0 2px Papier + 0/0/0 3px Ringfarbe) — gemessen 6× auf
+     `/rechner/tagerechner` und `/rechner/kuendigung`, also ein Schatten
+     ausserhalb von Menü/Dialog/Popover, den Fahrplan §5 der Runde ausschliesst.
+     `outline` + `outline-offset` malt DIESELBE Figur (2 px Papierspalt, 1 px
+     Ring) ohne Schatten-Semantik und folgt dem `rounded-full`-Radius. */
+  .lc-termin-ring { outline: 1px solid var(--ring-farbe, var(--ok-solid)); outline-offset: 2px; }
 
   /* Sanftes Auf-/Zuklappen aller <details> (auch .lc-sektion): EIN
      @supports-Block am Dateiende — die frühere lc-sektion-Sonderregel war
      ein Duplikat (Design-Review 6.6.2026, verhaltensneutral entfernt). */
 
+  /* ── W2·24-DESIGN-IDENTITAET R3-Nachzug (6.9.2026, Prüfbefund R3-F3) ────────
+     UNTERSTRICH STATT KASTEN. `.lc-input` WAR die Kissen-Anatomie, die §5 dieses
+     Fahrplans ablöst: getönte Fläche (`bg-well`), umlaufender Rahmen, Radius.
+     Das Referenzbild kennt keine Feldfläche — `abnahme/design-identitaet/
+     vorschlag-freigegeben.html`, Marke `.werk input`: `border:0; border-bottom:
+     1px solid var(--ink); background:transparent; padding:5px 0`.
+     ZENTRAL, nicht in `start/`: die Anatomie gilt für alle 27 Konsumenten
+     (Rechner-Formulare, Vorlagen-Assistenten, Filterzeilen). Ein Sonderweg nur
+     für die Startseite wäre die zweite Feld-Anatomie neben der ersten (§5).
+     METRIK-NEUTRAL, mit Absicht: die Feldhöhe bleibt Pixel für Pixel dieselbe —
+     vorher 12 + 12 Polster + 2 × 1 px Rahmen, jetzt 12 + 13 Polster + 1 px
+     Unterstrich. Kein Formular springt, kein CLS-Wächter und keine
+     Leser-Geometrie (`leserGeometrie.ts`, `SUCH_H_*`) zieht mit. Waagrecht
+     fällt das Polster auf 0: der Wert steht damit unter seinem Label, wie im
+     Referenzbild (`.werk label` = Grid aus Label über Feld).
+     Der FOKUS ist unten definiert (2-px-Unterstrich statt Doppelring). */
   .lc-input {
-    @apply w-full bg-well border border-line rounded-md text-base text-ink-900 transition-colors;
-    padding: 12px 14px;
+    @apply w-full bg-transparent text-base text-ink-900 transition-colors;
+    border: 0;
+    border-bottom: 1px solid var(--rule);
+    border-radius: 0;
+    padding: 12px 0 13px;
     /* ── LM-067/LM-068 (B12, 4.9.2026) · WO GEKÜRZT WIRD, IST DIE KÜRZUNG SICHTBAR ──
        GEMESSEN am gebauten Stand: `/rechner/zpo-fristen` @720 kappte drei
        Select-Werte hart im Wort — «– Vorlage wählen (oder manuell u» (Textbreite
@@ -1256,9 +1547,19 @@
     text-overflow: ellipsis;
   }
   .lc-input::placeholder { color: var(--placeholder); }
+  /* Fokus = der Unterstrich verdoppelt sich und wechselt in die Fokus-Rolle
+     (Referenzbild `.frage input:focus-visible{box-shadow:0 2px 0 0 var(--ink)}`).
+     Der zweite Pixel kommt als `box-shadow` UNTER die Kante, nicht als zweite
+     Rahmenbreite: ein `border-bottom: 2px` würde das Feld um 1 px stauchen (und
+     bei `.lc-input-sm` mit fester Höhe den Text verschieben). Schatten nehmen
+     keinen Platz ein — die Feldhöhe bleibt in beiden Zuständen gleich.
+     Der frühere Doppelring (`--ring`) entfällt: er war die Fokus-Form des
+     Kastens und legte einen abgesetzten Saum um eine Fläche, die es nicht mehr
+     gibt. `--ring` bleibt für seine übrigen Konsumenten unangetastet. */
   .lc-input:focus, .lc-input:focus-visible {
-    outline: none; border-color: var(--brass-600);
-    box-shadow: var(--ring); /* abgesetzter Doppelring — klar sichtbar auf Papier */
+    outline: none;
+    border-bottom-color: var(--focus);
+    box-shadow: 0 1px 0 0 var(--focus);
   }
   /* ── Ä14 (LESER-V3 H2b) · EIN Fokusring statt drei Kanten ───────────────────
      `.lc-input:focus` setzt drei Dinge zugleich: Rahmenfarbe, 2-px-Papier-Saum
@@ -1326,10 +1627,18 @@
      — die Fehlermeldung stand dadurch beziehungslos irgendwo auf der Seite. EINE
      Regel für ALLE lc-input (§5), Danger-Linie theme-fest über --danger-line. Gilt
      nur, wenn ein Aufrufer das Attribut tatsächlich setzt (opt-in je Feld) — ein
-     leeres Pristine-Formular bleibt unmarkiert (C2, DESIGN-REGLEMENT). */
-  .lc-input[aria-invalid="true"] { border-color: var(--danger-line); }
+     leeres Pristine-Formular bleibt unmarkiert (C2, DESIGN-REGLEMENT).
+     R3-Nachzug 6.9.2026: aus der Rahmenfarbe ist der DANGER-UNTERSTRICH
+     geworden — dieselbe Rolle, an der einzigen Kante, die das Feld noch hat,
+     und in derselben doppelten Stärke wie der Fokus (die Markierung darf nicht
+     schwächer sein als der Zustand «hier steht der Cursor»). */
+  .lc-input[aria-invalid="true"] {
+    border-bottom-color: var(--danger-line);
+    box-shadow: 0 1px 0 0 var(--danger-line);
+  }
   .lc-input[aria-invalid="true"]:focus, .lc-input[aria-invalid="true"]:focus-visible {
-    border-color: var(--danger-line);
+    border-bottom-color: var(--danger-line);
+    box-shadow: 0 1px 0 0 var(--danger-line);
   }
   /* Windows High Contrast / forced-colors: box-shadow wird vom UA neutralisiert
      → der Doppelring verschwindet. Ein gegateter Outline-Fallback hält den Fokus
@@ -1339,7 +1648,10 @@
   }
   /* Kompakte Eingabe-Variante (Zeilen/Toolbars) — analog .lc-btn-sm; löst die
      ad-hoc h-10/rounded-lg/ring-Inseln (EinfacheFrist/Tagerechner) ab. */
-  .lc-input-sm { height: 36px; padding: 0 12px; font-size: .875rem; }
+  /* R3-Nachzug: waagrechtes Polster 12 → 0, wie bei `.lc-input` (der Kasten,
+     den es polsterte, ist weg). Die feste Höhe 36 px bleibt — sie ist die
+     Anatomie der Zeile, nicht die des Rahmens (`tap-ziel-token.test.ts`). */
+  .lc-input-sm { height: 36px; padding: 0; font-size: .875rem; }
   /* Select-Chevron (Redesign): JEDER <select> mit lc-input (= alle Selects der
      App) bekommt den Messing-Chevron statt des nativen OS-Pfeils — ein Rollout
      über den Element-Selektor, ohne ~150 Call-Sites anzufassen. .lc-select
@@ -1347,18 +1659,33 @@
   select.lc-input, .lc-select {
     appearance: none; -webkit-appearance: none;
     padding-right: 38px;
-    /* Chevron-Hex = --brass-700 (#826225, a11y-Kalibrierung 26.6.2026) — bei
-       Rekalibrierung MITZIEHEN (D-1.6: data-URI kann kein var() tragen; die
-       CSS-mask-Variante ist am nackten <select> nicht machbar, weil background
-       bereits die Well-Füllung trägt — verworfen, s. FAHRPLAN §3). */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23826225' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;
+    /* ── R3-F2 (6.9.2026) · DER LETZTE GOLDREST ─────────────────────────────
+       Der Chevron lag zweimal als data-URI mit HARTEM Gold-Hex im Blatt
+       (hell `stroke='%23826225'`, dunkel `%23D8BD78`) — nach dem Token-Tausch
+       R1 die einzige Stelle der Farbwelt, die noch Messing malte, und zugleich
+       eine zweite Wahrheit neben den Tokens (§5): eine Rekalibrierung hätte sie
+       stumm zurückgelassen. Die alte Notiz nannte beide Auswege als verbaut —
+       eine data-URI kann `currentColor` nicht auflösen (eigenes SVG-Dokument
+       ohne Vererbung), und eine CSS-`mask` maskiert am nackten <select> auch
+       Text und Unterstrich weg. Der dritte Weg trägt: ein FARBVERLAUF liegt im
+       Dokument des Elements, also gilt dort `currentColor`. Zwei gekreuzte
+       Verläufe von je 6 × 6 px, Kante an Kante gesetzt, ergeben das «v» —
+       in der Tinte des Feldes, mit EINER Regel für beide Themen. Die
+       html.dark-Kopie darunter entfällt damit ersatzlos (§17-Gegengewicht).
+       Geometrie wie zuvor: 12 px breit, 6 px hoch, rechter Rand 12 px.
+       Wächter: `check:farbwelt` verbietet seit diesem Nachzug jeden
+       `%23`-Hexwert in `src/index.css` (Rot-Probe im Commit). */
+    background-image:
+      linear-gradient(45deg, transparent 0 42%, currentColor 42% 58%, transparent 58% 100%),
+      linear-gradient(-45deg, transparent 0 42%, currentColor 42% 58%, transparent 58% 100%);
+    background-repeat: no-repeat;
+    background-position: right 18px center, right 12px center;
+    background-size: 6px 6px;
   }
-  /* Dunkelmodus: heller Messing-Chevron (der Light-SVG ist auf Dunkel blind).
-     Hex = dunkles --brass-700 (#D8BD78) — bei Rekalibrierung mitziehen. */
-  html.dark select.lc-input, html.dark .lc-select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23D8BD78' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
-  }
+  /* Die frühere `html.dark`-Kopie des Chevrons ist ERSATZLOS gestrichen
+     (R3-F2): sie existierte nur, weil die data-URI ihre Farbe nicht erben
+     konnte. Der Verlaufs-Chevron erbt `currentColor` und ist damit im Dunkel
+     von sich aus richtig — eine Regel weniger, kein Wächter nötig. */
   .lc-select { @apply lc-input; }
   /* Kompaktes Select (lc-select + lc-input-sm): .lc-select bringt via @apply die
      12px-Vertikal-Polsterung von .lc-input mit und steht in der Quelle NACH
@@ -1442,16 +1769,29 @@
      (`[class*='lc-btn']`, s. o.) mit erfasst wird — eine Hover-Aktionszeile
      hat auf Papier nichts verloren. */
   .lc-btn-mini {
-    @apply inline-flex shrink-0 items-center justify-center rounded border bg-surface no-underline transition-colors;
+    /* L5 (6.9.2026): die Ruhe-FÜLLUNG (`bg-surface`) faellt weg — sie war 2/255
+       gegen das Papier, also keine Flaeche, sondern eine Behauptung (dasselbe
+       Argument, mit dem U2 die `.lc-notice`-Fuellung gestrichen hat). Die
+       Haarlinie bleibt: SIE ist die Anatomie. Der HOVER behaelt seine Flaeche —
+       dort ist sie Zustandsauskunft, nicht Dauer-Form (§G-j). */
+    @apply inline-flex shrink-0 items-center justify-center rounded border bg-transparent no-underline transition-colors;
     border-color: var(--line);
     min-height: var(--tap-ziel); padding: 0 6px;
   }
   .lc-btn-mini:hover { border-color: var(--brass-400); background: var(--brass-100); }
 
+  /* L5 (6.9.2026): die `bg-well`-FUELLUNG faellt weg. Der Chip trug damit zwei
+     Signale fuer eine Sache — Flaeche UND Tick; das Zielbild laesst den Tick
+     stehen (er IST die Linie) und nimmt die Flaeche. Tinte gemessen: ink-700
+     auf --paper 10.93:1 hell / 9.07:1 dunkel, auf --well 10.27/9.68 — der
+     Wegfall der Flaeche senkt den Kontrast an keiner Stelle unter AA.
+     GEFUELLT BLEIBEN die ZUSTAENDE `-selected`/`-aktuell` (brass-100): dort ist
+     die Flaeche eine Auskunft ueber den Zustand, keine Dauer-Anatomie. */
   .lc-chip {
-    @apply inline-flex items-center rounded-sm bg-well text-ink-700; /* Tinte: 4.5:1 auf Well; Akzent traegt der Tick */
-    border-left: 2px solid var(--brass-500); /* Messing-Tick (gravierte Skala) */
-    font-family: var(--font-mono), ui-monospace, monospace;
+    @apply inline-flex items-center rounded-sm text-ink-700; /* Tinte: 10.93:1 auf Papier; Akzent traegt der Tick */
+    background: transparent;
+    border-left: 2px solid var(--brass-500); /* Tick (R1-7: Registerfarbe folgt in R3/R5) */
+    font-family: var(--font-sans), system-ui, sans-serif; font-variant-numeric: tabular-nums; /* R1-2: kein Mono */
     font-size: .75rem; font-weight: 500; padding: 2px 8px;
     min-height: var(--tap-ziel); /* WCAG 2.2 Target-Size (2.5.8): ≥24px Tap-Ziel (Auftrag David 26.6.2026); seit R4 aus dem EINEN Token statt roher Zahl (F9) */
   }
@@ -1584,7 +1924,11 @@
      weiterhin für BEIDE Zustände — «gewählt» addiert, es nimmt nichts weg. */
   .lc-chip-zeile button.lc-chip:not(.lc-chip-selected),
   .lc-chip-zeile [role="button"].lc-chip:not(.lc-chip-selected) {
-    background: var(--surface);
+    /* L5: war `--surface` — die «erhabene Flaeche im Ruhezustand». Sie liegt
+       2/255 ueber dem Papier und traegt nichts, was der Rahmen oben nicht
+       schon traegt. Der :not()-Schutz fuer `-selected` BLEIBT stehen: dort
+       gewinnt sonst die Container-Grammatik gegen das Auswahl-Signal. */
+    background: transparent;
   }
 
   /* ─── Aussen-Anzeige des Inline-Verweises (V-4, W2·20-VERWEIS-SCHAERFE) ────
@@ -1764,7 +2108,7 @@
      `lc-input` (Suche) und blanker Text (Stand) — in zwei Radien (sm/md) und
      zwei Schriftgraden. Genau diese Unruhe ist das, was B6 abstellt: gleiche
      Höhe (24 px = WCAG 2.5.8 Target-Size), gleicher Radius, gleiche
-     Mono-Micro-Beschriftung.
+     Micro-Beschriftung in der Grotesk (bis L3/6.9.2026: Mono).
 
      Gruppiert wird über WEISSRAUM, nicht über Rahmen (DESIGN-REGLEMENT F1) —
      darum ist die Grundform randlos und trägt ihre Fläche erst im Hover. Nur
@@ -1779,13 +2123,30 @@
      statt «versenken», in beiden Modi gleichgerichtet). */
   .lc-leiste-griff {
     @apply inline-flex shrink-0 items-center justify-center gap-1 rounded-md text-ink-600 transition-colors;
-    font-family: var(--font-mono), ui-monospace, monospace;
+    /* L3 (Finder D, 6.9.2026): war `--font-mono`. Das WAR der letzte
+       CSS-Konsument der Monospace-Familie ausserhalb des Rechenwegs — und stand
+       damit im Widerspruch zur eigenen Token-Definition oben («--font-mono
+       traegt NUR noch, was fachlich Monospace braucht»). Griff-Beschriftungen
+       («Ansicht», «8 Entscheide») sind Bedienung, nicht Zahlenkolonne: sie
+       gehoeren in die Grotesk-Stimme wie jede andere Bedienzeile. */
+    font-family: var(--font-sans), system-ui, sans-serif;
     font-size: .6875rem; font-weight: 500; line-height: 1.2;
     min-height: var(--tap-ziel); min-width: var(--tap-ziel); padding: 0 4px;
   }
   .lc-leiste-griff:hover { background: var(--well); color: var(--brass-700); }
-  .lc-leiste-griff-fest { background: var(--well); color: var(--ink-700); padding: 0 6px; }
-  .lc-leiste-griff-fest:hover { background: var(--surface); color: var(--brass-700); }
+  /* ── D5 (David 6.9.2026, Bild Leser-Kopf) · TEXTKNOPF, KEIN CHIP ──────────
+     «Knöpfe ‹⌂ 8 Entscheide› und ‹◧ Ansicht› als Chips mit Kasten» — Soll:
+     «Leser-Kopf-Knöpfe als Textknöpfe mit Unterstrich, nicht als Chips».
+     Der einzige Konsument dieser Klasse ist `KOPF_GRIFF` (v3/kopfStufen.ts),
+     also genau die drei Griffe der Leser-Kopfzeile (⚖ · ☰ · «Ansicht») —
+     die Änderung trifft sie alle drei gemeinsam und nichts sonst.
+     Die Füllung `--well` fällt weg (sie war der Kasten); an ihre Stelle tritt
+     die 1-px-Unterkante, die im Referenzbild jeden Textknopf trägt. Der
+     Ruhezustand ist damit eine Linie statt einer Fläche; der HOVER behält seine
+     eingespielte Grammatik (Fläche `--well` + wärmere Tinte, §G-j) — dort ist
+     die Fläche eine Zustandsauskunft und keine Dauer-Anatomie. */
+  .lc-leiste-griff-fest { color: var(--ink-700); padding: 0 6px; border-bottom: 1px solid var(--rule-soft); border-radius: 0; }
+  .lc-leiste-griff-fest:hover { background: var(--well); color: var(--brass-700); border-bottom-color: var(--brass-500); }
   /* KOMFORT-Stufe des Griffs (F2-6): auf dem Handy-Zuschnitt, wo der Finger das
      einzige Werkzeug ist, hebt sie die Untergrenze vom WCAG-2.5.8-Minimum
      (`--tap-ziel`, 24 px) auf das AAA-Komfortmass `--tap-ziel-komfort` (44 px).
@@ -1891,6 +2252,15 @@
   .lc-griff-glyph {
     font-family: var(--font-sans), system-ui, sans-serif;
     font-size: 1rem; line-height: 1;
+    /* NEBENFUND des R3-Prüfers (6.9.2026), bestätigt am Screenshot
+       `r5f1-hero-suche-treffer-1440-hell`: «✕» (U+2715) fiel im hellen Modus
+       auf eine FARBIGE Emoji-Schnittschrift zurück — ein blaues Zeichen mitten
+       in einer schwarz-weissen Sammlung, und zwar unabhängig von der
+       Textfarbe, weil eine Farb-Glyphe `color` ignoriert. `font-variant-emoji:
+       text` verlangt die Text-Darstellung; wo der Browser die Eigenschaft noch
+       nicht kennt (Safari < 17), tut die Angabe nichts und das Bild bleibt wie
+       bisher — ein reiner Gewinn ohne Rückfall-Risiko. */
+    font-variant-emoji: text;
   }
   .lc-schliessknopf-komfort::after {
     content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
@@ -1926,25 +2296,157 @@
      --z-base). Eine Klasse, die das mitbrächte, wäre an genau
      einer der sieben Fundstellen richtig. Rollen und Herleitung der drei
      Deckungen: bei den Tokens oben. */
+  /* ── W2·24-DESIGN-IDENTITAET R2 · Reiter-/Bereichszeilen dürfen scrollen,
+     ohne eine Scrollleiste in den Kopf zu zeichnen ───────────────────────────
+     Konsumenten: die Bereichs-Reiter der Titelblatt-Zeile (`Topbar`) und die
+     Arbeitsleiste (`Reiterleiste`). Beide sind waagrecht scrollbar (§5a
+     Ziff. 8 und die Regel des Referenzbildes `.masthead nav{overflow-x:auto}`),
+     aber eine sichtbare Leiste in einer 28-px-Zeile frisst die halbe Höhe.
+     Gescrollt wird weiter — nur die Leiste ist unsichtbar; Tastatur und
+     Touch-Wisch bleiben unberührt, und der aktive Reiter wird von der
+     Komponente selbst ins Bild geholt (`scrollIntoView`), damit die
+     Unsichtbarkeit keine Unerreichbarkeit wird. */
+  .lc-reiter-scroll { scrollbar-width: none; -ms-overflow-style: none; }
+  .lc-reiter-scroll::-webkit-scrollbar { display: none; }
+
+  /* ── D19 (David 6.9.2026, «mit plus einen neuen reiter erzeugen») · DER
+     BROWSER-«+» AM ENDE DER ARBEITSLEISTE ─────────────────────────────────
+     Eigene, kleine Klasse statt Tailwind-Utilities allein: die 34-px-Höhe
+     kommt aus `items-stretch` des Elternflusses (`Reiterleiste.tsx`, keine
+     feste Höhe hier nötig), diese Klasse trägt nur, was sich sonst wiederholt
+     hätte (Breite, Zentrierung, Hover-Fläche). Die Glyphe selbst führt
+     `.lc-griff-glyph` (Archivo, «die Glyphe IST das ganze Bedienelement»,
+     s. oben) — hier steht nichts doppelt. */
+  .rl-plus {
+    @apply flex w-9 shrink-0 items-center justify-center border-l border-rule-soft text-ink-500 transition-colors hover:bg-well hover:text-ink-900;
+  }
+  /* R2 (Prüfbefund R11, 6.9.2026): ohne Reiter steht das «+» LINKS am
+     Inhaltsrand — dort trennt seine linke Kante nichts von nichts. */
+  .rl-plus-solo { border-left: 0; }
+
+  /* ── D27 (David 6.9.2026) · DIE LESESTELLUNG IM REITER, OHNE ZUCKEN ───────
+     Der Reiter eines Gesetzes trägt seit D27 den Artikel, in dem man gerade
+     liest («Art. 43a ZGB»), und der wandert beim Scrollen. Ohne reservierte
+     Breite verschöbe JEDER Artikelwechsel alle Reiter rechts davon — «ZGB» →
+     «Art. 1 ZGB» ist ein Sprung von rund 55 px, «Art. 9» → «Art. 336c» noch
+     einer von rund 20 px.
+     Das Mass steht als Token `--app-reiter-stelle-b` bei den übrigen
+     Arbeitsleisten-Massen (oben, D2/§5) — dort auch die Messreihe, aus der
+     es stammt.
+     `min-width` statt `width`, damit nichts abgeschnitten wird (§8: die
+     Stelle ist die Auskunft, sie darf nicht verstümmeln) — die Ziffern stehen
+     via `.num` ohnehin auf tabellarischer Breite, also ruckt es auch
+     innerhalb der Reservierung nicht. Der leere Fall (Stellung noch nicht
+     gemeldet) hält denselben Platz: die Leiste steht schon vor dem ersten
+     Spy-Lauf da, wo sie danach steht. */
+  .rl-stelle { display: inline-block; min-width: var(--app-reiter-stelle-b); flex-shrink: 0; }
+  /* ── W2·24-CI · DIE RESERVE WAR HÖHER ALS IHR INHALT ──────────────────────
+     BEFUND 6.9.2026 (Repro `scratchpad/diag17.cjs` gegen `dist`, StPO @1280):
+     die Reservierung oben deckte die BREITE, nicht die HÖHE. Solange die
+     Stellung leer ist (`stelle === ''`), hat der inline-block keine Zeilenbox;
+     in der baseline-ausgerichteten Reiter-Zeile (`items-baseline`) liegt seine
+     Baseline damit an der Unterkante und schiebt die Zeile auseinander.
+     GEMESSEN: der Reiter-Knopf ist vor dem ersten Spy-Lauf 39 px hoch, danach
+     33 px — in einer Leiste, die `--app-reiter-h` = 34 px hoch ist. Die leere
+     Reservierung war also 6 px HÖHER als der gefüllte Zustand und lief über
+     ihre eigene Leiste hinaus, bis der Spy die Stelle meldete.
+     Das nicht-brechende Leerzeichen gibt dem leeren Feld genau EINE Zeilenbox
+     mit normaler Text-Baseline — dieselbe Kur wie am Fassungs-Slot des
+     Artikelkopfs (`.lr7-fassung [data-hist-slot]:empty`, unten): reservierte
+     und gefüllte Höhe fallen zusammen (gemessen 33 px vorher wie nachher). Es
+     greift NUR im leeren Zustand, das gefüllte Bild ist unverändert (§6).
+     WAS HIER NICHT DER GRUND WAR (Beleg altert nicht, §0 Ziff. 2b): die erste
+     Fassung dieser Zeile stand als `min-height: 1lh` und war mit der Vermutung
+     begründet, dieser Höhensprung unterdrücke nach css-scroll-anchoring-1 §3.2
+     das Scroll-Anchoring des Dokuments und erkläre damit die 66–70 px, um die
+     ein roher `element.scrollIntoView()` an der StPO wegdriftet. Die Vermutung
+     ist FALSIFIZIERT: mit der Reservierung repariert (Reiter-Knopf stabil bei
+     33 px) und selbst mit KOMPLETT ausgeblendeter Arbeitsleiste
+     (`display:none`) driftet derselbe rohe Scroll unverändert von 198 px auf
+     133 px. Die Drift hat eine andere, noch offene Ursache; der PRODUKT-Weg
+     (Deep-Link `#art-429`, TOC-Sprung) landet auf beiden Ständen exakt und
+     bleibt stehen (gemessen Abstand −1 px über 4 s, PR wie origin/main). */
+  .rl-stelle:empty::before { content: "\a0"; }
+
+  /* ─── W2·24 · AUSWAHL-KACHEL (SelectionGrid) · KANTIG, LINIE, HAEKCHEN ─────
+     Prueferbefund Fixer 2 (6.9.2026): die Kacheln standen als abgerundete
+     Kaesten mit Vollrahmen UND Fuellung, der gewaehlte Zustand als zweite
+     Fuellung (`bg-brass-100/60`) — im Zielbild (§5) traegt die Auswahl eine
+     LINIE in der Registerfarbe, nicht eine Flaeche.
+       · kantig: `border-radius: 0` (dieselbe Entscheidung wie R1-3 «Kanten
+         statt Pille» bei den Badges).
+       · gewaehlt: 3-px-Strich links in `--reg-w` (Register «Werkzeuge» — jeder
+         Konsument dieses Bausteins ist ein Rechner oder ein Vorlagen-Assistent,
+         nachgezaehlt 6.9.2026) plus ein Haekchen oben rechts.
+     ALS INNENSCHATTEN, NICHT ALS BREITERER RAHMEN: eine 3-px-Kante links
+     verschoebe den Kachelinhalt beim Waehlen um 2 px — der Zustandswechsel
+     darf den Satz nicht bewegen. `inset` legt den Strich in die vorhandene Box.
+     PLATZ FUER DAS HAEKCHEN steht IMMER (`pr-6` an der Kachel, nicht erst im
+     gewaehlten Zustand): gemessen am Bild `r5f1b-arbeitsvertrag-1440-hell.jpg`
+     lief das Zeichen sonst in die Titelzeile schmaler Kacheln
+     («Einzelarbeitsvertrag»). Reservierter Platz statt Zustands-Padding —
+     sonst rueckte der Satz beim Waehlen, und genau das vermeidet auch der
+     Innenschatten oben.
+     DAS HAEKCHEN ALS PSEUDO-ELEMENT, aus demselben Grund wie bei
+     `.lc-chip-selected::before`: es steht im Bild, nicht im Text — der
+     Accessible Name bleibt das Label, den Zustand traegt `aria-pressed`.
+     KONTRAST gemessen (culori, KONTRAST-R1.md §D12): reg-w auf --paper
+     5.21:1 hell / 9.56:1 dunkel, auf --surface 5.34/9.07, auf --well
+     4.89/9.62 — als Nicht-Text-Strich (≥3:1) und als Haekchen-Text (≥4.5:1)
+     in beiden Modi und auf allen drei Flaechen erfuellt. */
+  .lc-wahl-kachel { position: relative; border-radius: 0; }
+  .lc-wahl-kachel[aria-pressed="true"] { box-shadow: inset 3px 0 0 var(--reg-w); }
+  .lc-wahl-kachel[aria-pressed="true"]::after {
+    content: '\2713';
+    position: absolute; top: 6px; right: 8px;
+    font-size: .75rem; font-weight: 600; line-height: 1;
+    color: var(--reg-w);
+  }
+  /* Die Pille traegt denselben Strich, aber kein Haekchen: sie steht in einer
+     Reihe kurzer Antworten («ja» / «nein»), wo ein Zeichen am Rand mit dem
+     Nachbarn kollidiert. Radius wie `.lc-chip` (rounded-sm), nicht Vollkreis. */
+  .lc-wahl-pille { border-radius: .125rem; }
+  .lc-wahl-pille[aria-pressed="true"] { box-shadow: inset 3px 0 0 var(--reg-w); }
+
   .lc-scrim { background-color: var(--scrim); }
   .lc-scrim-dialog { background-color: var(--scrim-dialog); }
   .lc-scrim-voll { background-color: var(--scrim-voll); }
+  /* ─── L5 (Finder D, 6.9.2026) · DIE BADGE-ANATOMIE IST EINE LINIE ─────────
+     Vorher trugen `-ok`, `-massgeblich` und `-soft` eine FÜLLUNG, `-entwurf`
+     und `-geplant` einen UMRISS — zwei Anatomien für dieselbe Sache, und die
+     Füllung war die lautere. Das Zielbild (§5) trennt über Linien. Die Umriss-
+     Form war also schon da; sie wird hier zur EINEN Form und steht ab jetzt
+     genau einmal, an `.lc-badge` selbst. Die Varianten setzen nur noch die
+     Farbe (`--badge-linie` + `color`), nicht mehr die Anatomie (§5/§10).
+
+     GRÖSSENNEUTRAL, nicht «etwa gleich»: die 1-px-Kante kommt hinzu, das
+     Innenmass geht um genau 1 px zurück (padding 2/10 → 1/9). Die äussere
+     Box misst danach unverändert, es verschiebt sich keine Zeile.
+
+     WAS SEINE FÜLLUNG BEHÄLT — und warum das keine Ausnahme «weil schwierig»
+     ist: `-warn` und `-danger`. Für sie gilt dieselbe datierte Regel wie für
+     `.lc-notice` weiter unten (U2): «die Status-Varianten behalten ihre
+     Füllung — dort trägt die Farbe eine BEDEUTUNG (§13/F2: Warnung/Gefahr),
+     nicht eine Kante.» Ein Sachvorbehalt, der so leise wird wie ein Etikett,
+     verliert genau das, was §8 von ihm verlangt. */
   .lc-badge {
-    @apply inline-flex items-center rounded-full;
-    font-size: .75rem; font-weight: 500; padding: 2px 10px;
+    @apply inline-flex items-center rounded-sm; /* R1-3: Kanten statt Pille (392 Badges) */
+    font-size: .75rem; font-weight: 500; padding: 1px 9px;
+    background: transparent;
+    border: 1px solid var(--badge-linie, var(--rule-soft));
+    color: var(--ink-700);
   }
   /* F1 (§4b-B-i): Zustand «ok», nicht Materialien-sage → --ok-Rolle (wertidentisch). */
-  .lc-badge-ok { @apply bg-ok-bg text-ok-text; }
+  .lc-badge-ok { --badge-linie: var(--ok-line); color: var(--ok-text); }
   /* «massgeblich»-Hervorhebung (Messing) — eigene Klasse statt Inline-Override von lc-badge-ok */
-  .lc-badge-massgeblich { @apply bg-brass-100 text-brass-700; }
-  .lc-badge-warn { @apply bg-warn-bg text-warn-700; }
+  .lc-badge-massgeblich { --badge-linie: var(--brass-line); color: var(--brass-700); }
+  /* Füllung BEHALTEN (s. Block-Kommentar): warn trägt Bedeutung, nicht Dekor. */
+  .lc-badge-warn { @apply bg-warn-bg text-warn-700; --badge-linie: var(--warn-line); }
   /* Status-Badge «Entwurf» (Katalog): Outline statt Füllung — die Information
      bleibt (§8), die Lautstärke sinkt; das Flächensignal trägt die warn-
-     Oberkante der Karte. (Design-Review 6.6.2026, Freigabe David) */
-  .lc-badge-entwurf {
-    @apply lc-badge bg-transparent text-warn-700;
-    border: 1px solid color-mix(in oklab, var(--warn-500) var(--status-outline), transparent);
-  }
+     Oberkante der Karte. (Design-Review 6.6.2026, Freigabe David)
+     L5: die Anatomie steht jetzt an `.lc-badge`; hier bleibt nur die Farbe. */
+  .lc-badge-entwurf { @apply lc-badge; --badge-linie: var(--warn-line); color: var(--warn-700); }
   /* «geplant» (Status-Modell §8) — Entscheid David 31.8.2026 (W2·19/D-5,
      wörtlich «bau deinen vorschlag (umriss grau)»): Umriss-Form wie
      lc-badge-entwurf, aber in der neutralen slate-Rolle. Beide Alt-Töne
@@ -1952,28 +2454,40 @@
      (DESIGN-REGLEMENT-NORMTEXT §Farb-Wörterbuch: slate ≠ «in Vorbereitung»,
      warn = echter Sach-/Fassungsvorbehalt). Kanonischer Wortlaut:
      «In Vorbereitung» — Wächter: design-konsistenz-chips-marken. */
-  .lc-badge-geplant {
-    @apply lc-badge bg-transparent;
-    color: var(--slate-700);
-    border: 1px solid color-mix(in oklab, var(--slate-500) var(--status-outline), transparent);
-  }
-  .lc-badge-danger { @apply bg-danger-bg text-danger-700; }
-  .lc-badge-soft { background: var(--slate-bg); color: var(--slate-700); border: 1px solid color-mix(in oklab, var(--slate-500) var(--status-border-soft), transparent); }
+  .lc-badge-geplant { @apply lc-badge; --badge-linie: var(--slate-line); color: var(--slate-700); }
+  /* Füllung BEHALTEN (s. Block-Kommentar oben): danger trägt Bedeutung. */
+  .lc-badge-danger { @apply bg-danger-bg text-danger-700; --badge-linie: var(--danger-line); }
+  /* L5: die slate-Tönung war Dekor (neutrale Rolle, keine Warnung) → Linie. */
+  .lc-badge-soft { --badge-linie: var(--slate-line); color: var(--slate-700); }
 
   /* Notices: Varianten sind eigenständig (Basis-Anatomie immer gleich —
      kein Inline-Nachbau von Padding/Border mehr nötig) */
-  .lc-notice { @apply bg-surface rounded-md text-ink-600; border-left: 3px solid var(--brass-line); padding: 12px 16px; }
+  /* U2: die Füllung fällt weg (sie war `--surface`, also 2/255 gegen Papier —
+     keine Fläche, nur eine Behauptung); der 3-px-Markenstrich links BLEIBT: er
+     ist kein Kasten, sondern das Zeichen, das den Hinweis vom Fliesstext
+     abhebt. Die Status-Varianten darunter behalten ihre Füllung — dort trägt
+     die Farbe eine Bedeutung (§13/F2: Warnung/Gefahr), nicht eine Kante. */
+  .lc-notice { @apply rounded-md text-ink-600; background: transparent; border-left: 3px solid var(--brass-line); padding: 12px 16px; }
   .lc-notice-warn { @apply lc-notice bg-warn-bg text-warn-700; border-left-color: var(--warn-line); }
   .lc-notice-danger { @apply lc-notice bg-danger-bg text-danger-700; border-left-color: var(--danger-line); }
 
   /* Messing-Hervorhebungsbox (Form-Gates der Vorlagen: «damit Ihre Vorlage
      wirkt») — vorher 12× wortgleich inline nachgebaut (FAHRPLAN-DESIGN 2.1). */
-  .lc-highlight { @apply rounded-xl border-2 border-brass-500 bg-brass-100 p-5; }
+  /* U2: aus dem 2-px-Vollrahmen mit Messing-Wash werden zwei 2-px-Kanten
+     (die «Kopfzeilen-Stärke» aus Fahrplan §5) ohne Füllung. Die Hervorhebung
+     bleibt die stärkste Trennung der Seite — sie ist jetzt eine Kante, keine
+     Fläche. */
+  .lc-highlight { background: transparent; border: 0;
+    border-top: 2px solid var(--brass-500); border-bottom: 2px solid var(--brass-500);
+    @apply p-5; }
 
   /* Leichter Container (Zeilen-Editoren, Eingabe-Gruppen): Karte ohne
      Schatten — dritte Stufe neben lc-card/lc-tile (FAHRPLAN-DESIGN 2.3).
      Padding bewusst beim Verwender (p-3 dichte Zeilen, p-4 Gruppen). */
-  .lc-panel { @apply bg-surface border border-line rounded-lg; }
+  /* U2: siehe `.lc-card`. Der leichte Container trennt Zeilen-Editoren und
+     Eingabe-Gruppen jetzt über Linien statt über einen Kasten. */
+  .lc-panel { background: transparent; border: 0;
+    border-top: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft); }
 
   /* ─── Schwebefläche (A3-2, R3-β 31.8.2026) ────────────────────────────────
      Die EINE Anatomie für alles, was ÜBER dem Inhalt steht und dorthin
@@ -2000,7 +2514,203 @@
      Position, z-Index und Breite bleiben beim Aufrufer: WO die Fläche liegt,
      entscheidet ihr Anker, nicht ihre Anatomie (dieselbe Trennung wie beim
      `.lc-scrim`). */
-  .lc-schwebeflaeche { @apply bg-paper-raised border border-line rounded-lg shadow-lg; }
+  /* ── R6/R7 (Prüfer D23/R11, 6.9.2026) · DIE SCHWEBEFLÄCHE IST EIN BLATT ────
+     GEMESSEN am Stand `c91541617`: die Klasse trug `bg-paper-raised` (im Dunkel
+     eine WEISSE Tafel gegen `--paper`), `rounded-lg` und `shadow-lg` — also
+     Kissen, Radius und Schlagschatten, genau die drei Mittel, die §5 dieser
+     Runde für die ganze Oberfläche abgeschafft hat. Konsumenten sind alle
+     Menüs/Popover der App (Verlauf, Reiter-Kontextmenü, Ansicht-Menü,
+     Überlauf-Blatt, Sprache, Datumsfeld, Leser-Panels): ein Grund mehr, dass
+     die Anatomie hier EINMAL steht und nicht je Fläche.
+     JETZT: Papier, 1 px `--rule` rundum, Radius 0, kein Schatten — dieselbe
+     Anatomie wie `.lc-suchpanel-huelle` (unten), die D23 für das Such-Panel
+     bereits gewählt hat. Zwei schwebende Anatomien wären die Inkonsistenz, die
+     David am Dropdown gerügt hat («dropdown menu nochmals optisch überarbeiten
+     … in welcher ebene»).
+     WARUM PAPIER TRÄGT, WO FRÜHER `--paper-raised` NÖTIG WAR: die A3-2-Regel
+     («eine schwebende Fläche nie in der Grundfarbe der Seite») war die Antwort
+     auf einen SCHATTEN, der eine Ebene behauptete, die die Fläche dementierte.
+     Ohne Schatten trägt die Trennung die 1-px-Kante in `--rule` (= `--ink-900`,
+     der stärkste Linienton des Hauses) — sie ist in beiden Themes die
+     kontraststärkste Kante überhaupt und braucht keine zweite Flächenstufe.
+     ENTSCHEID zur Ausnahme «schwebende Ebenen dürfen einen sehr flachen
+     Schatten tragen»: keiner. Der Rahmen reicht (Auftrag, 6.9.2026).
+     Position, z-Index und Breite bleiben unverändert beim Aufrufer. */
+  .lc-schwebeflaeche {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* ── D31 (David 6.9.2026) · DAS EINE POPOVER-REZEPT ───────────────────────
+     BEFUND, wörtlich: «Hover-Popover über einem Artikel-/Norm-Verweis ist nicht
+     lesbar — hebt sich nicht vom Hintergrund ab, überlappt mit dem Text
+     dahinter.»
+
+     WURZEL, gemessen: alle Vorschau-Flächen des Hauses trugen `.lc-card` —
+     NormPopover (V2-Hover + Klick-Dialog), NormPopoverHuelle, RegestePopover
+     (Entscheid-Vorschau am Bezugs-Chip), Begriff, ZeichenLegende,
+     EntwurfLegende. `.lc-card` ist im «Kästen zu Linien»-Umbau (Zeile 1399)
+     auf `background: transparent; border: 0` gestellt worden — richtig für
+     eine Karte IM FLUSS der Seite, tödlich für eine Fläche, die ÜBER dem
+     Lesetext liegt: sie hatte danach keinen eigenen Grund mehr, der Artikel
+     stand durch die Vorschau hindurch.
+
+     WARUM EINE EIGENE KLASSE UND NICHT `.lc-schwebeflaeche`: das sind zwei
+     Rollen mit verschiedenem Grund DAHINTER. Die Schwebefläche hängt an einer
+     Kante (Kopf-Menü, Reiter-Blatt) und liegt über der Papierfläche der Seite —
+     `--paper` plus 1-px-`--rule` trennt sie dort sichtbar. Das Popover liegt
+     über LAUFENDEM TEXT; dieselbe Tönung wie der Grund liesse die Zeilen
+     dahinter mitlesen, und genau das ist der Befund. Es bekommt darum die eine
+     Stufe darüber (`--paper-raised`, Token-Kette Zeile 135/588) — Davids
+     Wortlaut. Der Rahmen bleibt `--rule` (stärkste Kante des Hauses), der
+     Radius 0 und der Schatten aus: die R6/R7-Entscheidung «Rahmen statt
+     Schatten» gilt hier unverändert weiter.
+
+     ABWEICHUNG, offengelegt (§7): der Auftrag nennt ein Token `--z-popover`.
+     Die Schichtungs-Skala führt die Ebene bereits als `--z-dropdown` («Popover/
+     Tooltips/Menüs», Zeile 366) — ein zweiter Name für dieselbe Ebene wäre eine
+     zweite Wahrheit (§5). Das Rezept setzt darum `--z-dropdown`; wer eine
+     andere Ebene braucht (Dialog über Scrim), überschreibt sie wie bisher am
+     Aufrufer, weil Utilities über der Komponenten-Schicht liegen.
+
+     `isolation: isolate` ist der Grund, aus dem die Fläche DECKT und nicht nur
+     obenauf behauptet: sie bildet einen eigenen Stapelkontext, in dem kein
+     Nachbar-Element des Lesetexts mehr nach vorne treten kann.
+     Position, Breite und Innenabstand bleiben beim Aufrufer (dieselbe Trennung
+     wie oben) — nur ein `max-width`-Deckel steht hier, damit kein Konsument
+     eine Vorschau über die ganze Fensterbreite aufziehen kann. */
+  .lc-popover {
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    z-index: var(--z-dropdown);
+    isolation: isolate;
+    max-width: min(36rem, calc(100vw - 1rem));
+  }
+
+  /* ── D9 (David 6.9.2026) · DIE EINE ANATOMIE DES SUCH-PANELS ──────────────
+     Das Trefferpanel und der Leerzustand erscheinen an ZWEI Orten: im Titelblatt
+     (schwebend unter dem Kopf-Suchfeld) und auf der Startseite unter der
+     Hero-Zeile (im Fluss der Seite, ebenso auf `/suche`). Bis hierher trugen sie
+     dafür `.lc-card` — also im Fluss eine Kasten-Anatomie mit eigener Füllung,
+     und im Kopf denselben Kasten NOCH EINMAL innerhalb der schwebenden Hülle
+     (zwei Rahmen übereinander).
+     Jetzt trägt der Inhalt gar keine Kante mehr: die Gruppen trennen sich
+     untereinander über Haarlinien (`border-t border-line`, in `SuchResultate`
+     und `SucheLeerzustand`), und die AUSSEN-Kante gehört dem Ort — im Kopf der
+     schwebenden `.lc-schwebeflaeche`, im Fluss der Papierfläche der Seite. Damit
+     ist das Panel an beiden Orten dasselbe Ding, wie §5 es verlangt. */
+  .lc-suchpanel { background: transparent; border: 0; }
+
+  /* ── D23 (David 6.9.2026, Bild «Kopf-Suche im Leerzustand») · FELD UND PANEL
+        SIND EIN OBJEKT ─────────────────────────────────────────────────────
+     Davids Wortlaut zum Bild: «schau mal wie das aussieht mit der suche. sehr
+     unästhetisch». GEMESSEN am Stand `c0f2972ba`: das Panel hing als
+     `.lc-schwebeflaeche` (weisse Tafel, Radius, `shadow-lg`) mit 6 px Abstand
+     unter dem Feld, trug einen eigenen `min-w-[22rem]`-Boden und war damit an
+     jeder Breite unter 22 rem BREITER als das Feld — zwei Objekte, die
+     nichts miteinander zu tun haben, quer über der Reiterleiste.
+     Die Antwort ist die Anatomie des Referenzbildes (`.frage`, ein Feld mit
+     Unterstrich): das Panel ist die FORTSETZUNG des Feldes nach unten. Es
+     erbt seine Kanten (`inset-x-0` am Anker, kein eigener Mindest-/Höchstwert),
+     setzt ohne Abstand an (`top-full`, kein `mt`), und die Kante des Feldes
+     (`.lc-input`, `border-bottom: 1px solid var(--rule)`) IST seine Oberkante —
+     darum `border-top: 0`. Kein Schatten, kein Radius: was am Feld hängt,
+     schwebt nicht. Papier statt `--paper-raised` aus demselben Grund (die
+     A3-2-Regel «schwebende Fläche nie in der Grundfarbe» greift genau dort
+     nicht, wo nichts schwebt — hier trägt die 1-px-Kante die Trennung).
+     Kein `overflow-hidden`/Radius nötig: die Zeilen enden an der Kante. */
+  .lc-suchpanel-huelle {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-top: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* ── F5 (Prüfer D23, 6.9.2026) · DIE NAHT ZWISCHEN FELD UND PANEL ─────────
+     GEMESSEN im Dunkelmodus am Stand `c91541617`: der Unterstrich des
+     Kopf-Suchfeldes stand auf rgb(148,144,136), der Rahmen des Panels
+     unmittelbar darunter auf rgb(226,224,220) — zwei verschiedene Linien, die
+     sich an derselben Kante treffen. D23 verlangt aber, dass Feld und Panel EIN
+     Objekt sind; eine Naht in zwei Farben dementiert genau das.
+     URSACHE: das Feld ist immer FOKUSSIERT, wenn das Panel offen ist, und
+     `.lc-input:focus` färbt den Unterstrich in `--focus` (dunkel `--brass-500`
+     = #949088). Der Panel-Rahmen führt `--rule` (= `--ink-900`).
+     FIX: solange das Panel offen ist (`aria-expanded="true"` am Combobox-Feld —
+     dieselbe Bedingung, die das Panel rendert), trägt der Unterstrich `--rule`.
+     Beide Kanten sind dann dieselbe Linie.
+     FOKUS BLEIBT SICHTBAR (WCAG 2.4.7): der Indikator ist unverändert die
+     VERDOPPELUNG des Unterstrichs (1 px Rahmen + 1 px `box-shadow` = 2 px),
+     nur in `--rule` statt in `--focus` — und `--rule` ist in beiden Themes der
+     kontraststärkere Ton (hell `--ink-900` auf Papier, dunkel `--ink-900` auf
+     dunklem Papier), der Indikator verliert also keinen Kontrast, sondern
+     gewinnt. Dazu kommt das geöffnete Panel selbst als Zustandsauskunft.
+     Ohne offenes Panel (Feld fokussiert, Panel zu) bleibt `--focus` unberührt —
+     dort gibt es keine Naht, die zusammenpassen müsste. */
+  .lc-suchpanel-feld[aria-expanded="true"]:focus,
+  .lc-suchpanel-feld[aria-expanded="true"]:focus-visible {
+    border-bottom-color: var(--rule);
+    box-shadow: 0 1px 0 0 var(--rule);
+  }
+
+  /* Tastaturauswahl im Such-Panel: eine FLÄCHE (`--well`, die eingesenkte
+     Papierstufe) plus ein Strich an der linken Kante — kein Kastenrahmen und
+     keine Messing-Tönung. `box-shadow: inset` statt `border-left`, damit die
+     Zeile beim Wandern der Auswahl nicht um 2 px einrückt (CLS 0, §15.2).
+     Der Hover läuft über `.lc-hover-flaeche` auf DERSELBEN Fläche — ein
+     Zustand, zwei Anlässe. */
+  .hs-aktiv { background-color: var(--well); box-shadow: inset 2px 0 0 0 var(--rule); }
+
+  /* ═══ D5 (David 6.9.2026, Bild Leser-«Ansicht»-Menü) · MENÜ-ANATOMIE ═══════
+     Davids Befund am Bild, Punkt für Punkt: «Einträge mit ‹✓ an› rechts, erster
+     Eintrag mit hartem 2-px-Fokusrahmen als Kasten, letzter Eintrag zweizeilig
+     umgebrochen mit eingequetschtem Schriftregler, Knöpfe als Chips mit
+     Kasten.» Soll: «ruhige Liste mit Linien, Zustandswort links oder als
+     Schalter, kein ‹✓ an›-Doppel, Fokus als Unterstrich/Strich statt Kasten,
+     Regler in eigener Zeile mit Label in Archivo, keine Umbrüche in
+     Menüzeilen» — und ausdrücklich «Gilt als Muster für ALLE Menüs/Popover
+     (Verlauf, Reiter-Blatt, Sprache, Thema)».
+     Darum steht die Anatomie HIER und nicht im Leser: die Konsumenten sind
+     `components/ui/Menue.tsx` (das Gerüst) und über ihn das Ansicht-Menü, der
+     Verlauf und das Reiter-Blatt. Die schwebende HÜLLE bleibt
+     `.lc-schwebeflaeche` — wo ein Menü liegt, entscheidet sein Anker, nicht
+     seine Anatomie. */
+
+  /* Die Zeile: volle Breite, EINE Höhe, Trennung nach unten über eine
+     Haarlinie (die letzte Zeile trägt keine). Kein Radius — ein abgerundeter
+     Hover-Kasten ist genau das Kissen, das Fahrplan §5 abschafft. */
+  .lc-menu-zeile {
+    @apply flex w-full items-center gap-2.5 px-3 py-2 text-left text-body-s text-ink-700 transition-colors;
+    border-bottom: 1px solid var(--rule-soft);
+    border-radius: 0;
+    /* «keine Umbrüche in Menüzeilen»: die Beschriftung bleibt einzeilig und
+       wird notfalls mit Auslassung gekappt — die volle Aussage steht im
+       `title`, wie an jeder anderen gekappten Stelle der App (LM-067). */
+    white-space: nowrap;
+  }
+  .lc-menu-zeile:last-child { border-bottom: 0; }
+  .lc-menu-zeile:hover { background: var(--well); color: var(--ink-900); }
+  /* FOKUS ALS STRICH, NICHT ALS KASTEN. Die globale `:focus-visible`-Regel legt
+     einen 2-px-Rahmen um das Element — an einer Menüzeile, die die volle Breite
+     einnimmt, ist das der «harte Kasten» aus Davids Befund. Hier tritt an seine
+     Stelle ein 2-px-Strich an der Unterkante in derselben Rolle `--focus`
+     (dieselbe Form, die `.lc-input:focus` seit R3-F3 trägt — EIN Fokus-Bild für
+     die ganze App). `inset`, damit er die Zeilenhöhe nicht ändert. */
+  .lc-menu-zeile:focus-visible { outline: none; box-shadow: inset 0 -2px 0 0 var(--focus); }
+  /* Die Beschriftung kappt, die Zustands-Marke links tut es nie. */
+  .lc-menu-label { @apply min-w-0 flex-1 overflow-hidden text-ellipsis; }
+  /* Zustands-Marke LINKS (Häkchen/Leerstelle) — feste Breite, damit die
+     Beschriftungen aller Zeilen fluchten, ob geschaltet oder nicht. Sie ersetzt
+     das «✓ an»-Doppel rechts: EIN Zeichen für EINEN Zustand. */
+  .lc-menu-marke { @apply inline-flex w-4 shrink-0 items-center justify-center leading-none; color: var(--brass-700); }
+  /* Der Regler bekommt seine eigene Zeile mit Label — er wird nicht mehr neben
+     eine zweizeilig umbrechende Beschriftung gequetscht. */
+  .lc-menu-regler { @apply flex w-full items-center justify-between gap-2 px-3 py-2; border-top: 1px solid var(--rule-soft); }
 
   /* Referenzwerk-Liste: Messing-Gedankenstrich als Marker (FAHRPLAN-DESIGN
      5.5) — für Hinweis-Listen der Vorlagen (Preflight nimmt Browser-Bullets
@@ -2009,21 +2719,14 @@
   .lc-list > li { position: relative; padding-left: 1.25rem; }
   .lc-list > li::before { content: '–'; position: absolute; left: 0; color: var(--brass-600); }
 
-  /* ── LM-141 (W2·17-UI-BEFUNDE/B16) · ZWEISPALTIGE LISTE, DIE VON OBEN NACH
-     UNTEN LIEST ─────────────────────────────────────────────────────────────
-     Lange Erlasslisten standen in einem `grid … sm:grid-cols-2`. Ein Grid füllt
-     ZEILENWEISE: Eintrag 1 links, Eintrag 2 rechts, Eintrag 3 wieder links —
-     wer die Liste liest, springt bei jedem Eintrag über die Spalte. Gemessen
-     4.9.2026 @1440 auf /gesetze?ebene=kanton&kt=BS (859 Erlasse, Preview von
-     origin/main). Mehrspaltensatz (`columns`) füllt dagegen SPALTENWEISE: erst
-     die linke Spalte von oben nach unten, dann die rechte — dieselbe Platz-
-     ausnutzung, aber eine Liste, der man folgen kann.
-     Die Klasse liegt hier und nicht als Utility-Kette am Aufrufer, weil
-     `break-inside` je KIND gesetzt sein muss (sonst reisst ein zweizeiliger
-     Titel am Spaltenende auseinander) und der Bestand keine `[&>*]:`-Variants
-     kennt — eine benannte Klasse statt eines neuen Utility-Musters. */
-  .lc-listenspalten { column-gap: 1.25rem; }
-  .lc-listenspalten > * { break-inside: avoid; margin-bottom: .5rem; }
+  /* ── LM-141 · `.lc-listenspalten` ENTFERNT (D24, 6.9.2026) ────────────────
+     Die Klasse trug den Mehrspaltensatz (`columns`) der Erlasslisten samt
+     `break-inside: avoid`. Sie hat ihre Aufgabe — spaltenweise Leserichtung —
+     an `.tb-raster` abgegeben (Block am Dateiende), das dieselbe Leserichtung
+     über EIN Raster erreicht und dabei zusätzlich die Zeilenhöhen der beiden
+     Spalten koppelt (D24: «beide spalten jeweils zeile auf selber höhe»). Kein
+     Aufrufer verwendet sie mehr; sie wird gelöscht statt bewacht (§17-Rückbau).
+     Der LM-141-BEFUND selbst bleibt gültig und ist im neuen Block zitiert. */
 
   /* Live-Berechnung: dezentes Einblenden des Ergebnisses */
   .lc-reveal { animation: lc-fade var(--dur-slow) var(--ease); }
@@ -2141,7 +2844,7 @@
   /* Sprung-Hervorhebung: Ziel-Artikel kurz mit Messing-Fläche markieren
      (Hash-Sprung aus dem Popover / TOC, Rubrik V «Gesetze»). */
   @keyframes lc-ziel-blink { 0% { background: var(--brass-100); } 100% { background: transparent; } }
-  .lc-ziel-blink { animation: lc-ziel-blink 2.4s var(--ease); border-radius: .375rem; }
+  .lc-ziel-blink { animation: lc-ziel-blink 2.4s var(--ease); border-radius: 0; } /* R1-11 */
 
   /* A35 (David 16.7.2026): Treffer-Highlight der In-Gesetz-Suche («Vertrag» im OR
      gehighlighted). Reine PAINT-Schicht über die bestehenden Text-Knoten (CSS
@@ -2220,3 +2923,552 @@
    keine Links → Scope auf .lc-overline, nicht auf a. Unlayered (wie .rsp-prose),
    damit es die Utility text-brass-700 schlägt (Layer-Reihenfolge sonst Utility). */
 .lc-highlight .lc-overline { color: var(--brass-800); }
+
+/* ─── Suchzeile der Startseite (W2·24-DESIGN-IDENTITAET R3) ──────────────────
+   Das Referenzbild (`abnahme/design-identitaet/vorschlag-freigegeben.html`,
+   Marke `.frage`) setzt die Universal-Suche als EINE Zeile Literata über einer
+   2-px-Kante — nicht als gerahmten Kasten. Das ist die einzige Form dieser
+   Runde, die `lc-input` nicht abbilden kann: `lc-input` IST der Kasten (Rahmen,
+   Innenabstand, Fokus-Saum), und ihn hier zu überschreiben hiesse, jede seiner
+   Eigenschaften einzeln zurückzunehmen. Darum eine eigene, kleine Regel — sie
+   gilt ausschliesslich der Startseite (Konsument: `start/UniversalSuche.tsx`).
+   Additiv angehängt (Parallel-Bau R4 arbeitet in derselben Datei).
+   Die Schriftgrösse setzt die Utility am Feld (`text-h3 sm:text-h1`), nicht
+   diese Regel — die Typo-Skala bleibt die eine Quelle (B2). */
+.st-frage { border-bottom: 2px solid var(--rule); }
+.st-frage-feld {
+  border: 0;
+  background: transparent;
+  color: var(--ink-900);
+  font-family: var(--font-serif), Georgia, serif;
+  padding: .25rem 0 .5rem;
+}
+.st-frage-feld::placeholder { color: var(--placeholder); }
+/* ── D9/D5-NACHZUG (6.9.2026) · FOKUS ALS STRICH, NICHT ALS KASTEN ──────────
+   Hier stand nur ein `outline-offset: 1px` — der globale `:focus-visible`-Ring
+   legte also einen 2-px-KASTEN um eine Zeile, die ausdrücklich kein Kasten
+   sein soll (Fahrplan §5: «Kanten statt Kissen»). GESEHEN am Screenshot
+   `r5f1-hero-suche-treffer-1440-hell` vom 6.9.2026: die Suchzeile der
+   Startseite stand im Fokus als gerahmtes Rechteck da, während dieselbe
+   Handlung im Formularfeld (`.lc-input:focus`) und in der Menüzeile
+   (`.lc-menu-zeile:focus-visible`) einen Unterstrich bekommt — drei Fokus-
+   Bilder für eine Sache.
+   Jetzt trägt sie dasselbe Bild wie die beiden anderen und wie das
+   Referenzbild (`.frage input:focus-visible{box-shadow:0 2px 0 0 var(--ink)}`):
+   die 2-px-Kante der Zeile wechselt in die Rolle `--focus` und verdoppelt sich
+   über einen Schatten UNTER der Kante — kein Platzverbrauch, keine
+   Höhenänderung, und der Indikator bleibt 2 px stark in einer Rolle, die das
+   Farbwelt-Tor als Nicht-Text-Kontrast führt (WCAG 2.4.11).
+   Der Schatten sitzt an der HÜLLE `.st-frage` (dort liegt die Kante), gesteuert
+   über `:focus-within` — das Feld selbst hat keine eigene Linie. */
+.st-frage-feld:focus-visible { outline: none; }
+.st-frage:focus-within { border-bottom-color: var(--focus); box-shadow: 0 2px 0 -1px var(--focus); }
+
+/* ── R3-NACHZUG (David-Befund D1, 6.9.2026) · DIE ZEILE MUSS SICH ALS SUCHE ──
+   ZU ERKENNEN GEBEN. Wortlaut David zum Bild vom 6.9.2026: die grosse Zeile
+   «liest sich als Überschrift, nicht als Eingabefeld». Sie trug nur einen
+   Platzhalter in grosser Literata — dieselbe Schrift und Grösse, in der
+   daneben die Begrüssung steht. Zwei Zeichen holen sie zurück, beide leise:
+   eine LUPE in der Zeile (SVG in `currentColor`, `start/UniversalSuche.tsx`)
+   und ein LABEL «Suchen» in Archivo darüber (12 px, Meta-Ton) — dieselbe
+   Anordnung «kleines Label über dem Feld», die das Referenzbild für seine
+   Werkzeug-Felder benutzt (`.werk label{display:grid;gap:3px}`).
+   NACHTRAG zur Notiz oben (§2b — die dortige Messung bleibt, wie sie war):
+   seit dem R3-F3-Nachzug ist `.lc-input` selbst ein Unterstrich-Feld. `.st-frage`
+   bleibt trotzdem eine eigene Regel: sie trägt die 2-px-Kante der Kopfzeile,
+   Literata statt Archivo und die Titelgrösse — das ist die Suchzeile des
+   Titelblatts, nicht das Formularfeld. */
+.st-frage { display: flex; align-items: center; gap: .5rem; }
+.st-frage-lupe { flex: none; width: 1.375rem; height: 1.375rem; color: var(--ink-500); }
+.st-frage-feld {
+  flex: 1 1 auto;
+  min-width: 0;
+  /* Wie `.lc-input` (LM-067/LM-068): wo gekürzt wird, ist die Kürzung sichtbar.
+     GEMESSEN 6.9.2026 @390: der Platzhalter brach mitten im Wort ab
+     («Kündigungsfri») — eine Auslassung sagt «hier steht mehr», ein hartes
+     Wortende liest sich wie ein Datenfehler (§8, Prüfbefund R3-F6). */
+  text-overflow: ellipsis;
+}
+
+/* ── R10-NACHZUG (David 6.9.2026, D14 «begrüssung prominenter und suche
+   kleiner») · Token statt roher Arbitrary-Grösse (B2, `check:design-tokens`
+   verbietet `text-[…rem]`): 22 px liegt zwischen h3 (20) und h2 (25.6),
+   keiner der beiden trägt die Stufe glaubwürdig — eigener Wert, als Variable
+   geführt (eigener :root-Block, additiv, fasst den grossen :root oben nicht an). */
+:root { --pult-suche-gross: 1.375rem; }
+
+/* ADDITIV, `.st-frage-feld` bleibt unverändert (Parallel-Bau in
+   dieser Datei, R10-Nachzug-Whitelist erlaubt hier nur `.pult-*`-Zusätze).
+   `.st-frage-feld` setzt `padding: .25rem 0 .5rem` für die vorherige, grosse
+   Stufe (bis 32 px); bei 22 px liest sich dasselbe Polster als zu knapp
+   (Feldhöhe fiele unter die Ziel-Höhe ~48 px). Diese Klasse trägt NUR das
+   Polster nach — Kante, Fokus-Schatten, Ellipsis, Platzhalterfarbe bleiben an
+   `.st-frage`/`.st-frage-feld`. Beide Klassen haben dieselbe Spezifität
+   (0,1,0); da diese Regel WEITER UNTEN im Stylesheet steht, gewinnt sie für
+   `padding` unabhängig von der Reihenfolge der Klassen im `className`.
+   GEMESSEN (Textzeile 22 px, `leading-[1.3]` ⇒ Zeilenbox 28.6 px): 28.6 +
+   Polster 18 px + 2-px-Kante (`.st-frage`) ≈ 48.6 px. */
+.pult-suche-feld { padding: .5rem 0 .625rem; }
+
+/* ═══ W2·24-R6 · ZUSATZ AM DATEIENDE (Bau-Fläche R6, Präfix `.lr6-`) ══════════
+   Additiv und ohne Berührung des Bestands: an `index.css` bauen in derselben
+   Runde drei Agenten, und ein `.lr6-`-Präfix am Dateiende kollidiert mit keinem
+   von ihnen. Fällt der Block weg, sieht der Leser dieselbe Liste ohne Feinsatz —
+   keine der Regeln trägt Bedeutung, nur Form. */
+
+/* «Rechnen» in der Randnotiz (ArtikelLeser). Die 210-px-Spalte trägt keine
+   Chips (Herleitung am Konsumenten): Textzeilen in derselben Grotesk-Feinschrift
+   wie die übrigen Rand-Rubriken, eingerückt auf die Fluchtlinie, die
+   `.lr-notiz-titel` mit seinem 3-px-Registerstrich vorgibt. */
+.lr6-notiz-liste {
+  margin: 0;
+  padding-left: 0.625rem;
+  list-style: none;
+  display: grid;
+  gap: 0.25rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+}
+.lr6-notiz-liste > li { display: grid; }
+.lr6-notiz-art { font-size: 0.6875rem; line-height: 1.3; color: var(--ink-500); }
+
+/* W2·24-R6/L1 · Die Lesespalte wird nicht gemalt, solange der Tieflink-Sprung
+   einschwingt (Herleitung samt Messreihe am Konsumenten, `inhalt-hooks.tsx`).
+   `visibility` und NICHT `display`/`opacity`: die Spalte behält ihren Platz
+   (keine Höhenänderung, also selbst kein Sprung), wird aber nicht gemalt — und
+   was nicht gemalt wird, zählt der Browser nicht als Verschiebung. Sie ist
+   Millisekunden aktiv und hat drei Klammern gegen ein Steckenbleiben. */
+html[data-lr6-anker-warten] #lc-lesespalte,
+html[data-lr6-anker-warten] footer { visibility: hidden; }
+
+/* ═══ W2·24-R6b · ZUSATZ AM DATEIENDE (Bau-Fläche R6-Nachzug, Präfix `.lr7-`) ══
+   Auftrag David 6.9.2026, wörtlich: «der platz rechts und links neben dem gesetz
+   für bspw. rechner oder fassung nimmt viel platz vom gesetzestext weg. kannst du
+   das besser gestalten.»
+
+   Die beiden Randspuren des Satzspiegels (Marginalie 150 px links, Randnotizen
+   210 px rechts) sind gefallen; ihr Inhalt steht jetzt im Artikelkopf. Diese
+   Regeln geben ihm dort seine Form. Additiv und ohne Berührung des Bestands: an
+   `index.css` bauen in derselben Runde mehrere Agenten, und ein `.lr7-`-Präfix am
+   Dateiende kollidiert mit keinem von ihnen.
+
+   ERLEDIGT IN R6c: der Hinweis, der hier stand («der R4-Block SATZSPIEGEL ist
+   tot, räume ihn»), ist eingelöst — der Block und seine vier `@media print`-
+   Regeln sind ersatzlos gestrichen (Suchwort «ZEILENFORM: DIE ZWEI REGELN»).
+   Stehen geblieben sind nur `.lr-text` und `.lr-reg`, die auch die Zeilenform
+   braucht.
+
+   ── (a) DER ARTIKELKOPF: RANDTITEL LINKS, FASSUNG KLEIN DANEBEN ────────────── */
+.lr7-kopf {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.125rem;
+}
+.lr7-kopf-titel { min-width: 0; }
+/* Der Randtitel des Artikels (die Sachüberschrift) in der Lese-Serife und
+   kursiv — dieselbe Auszeichnung, die bis R6 die Marginalie trug (Referenzbild
+   `.artikel .rand .rt`). Die Vorfahren-Stufen bleiben in der Grotesk: zwei
+   Stimmen, wie bisher (Design-Grundlage Kap. 2.1). */
+.lr7-kopf-titel .lr-blatt {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  /* KEIN eigenes `font-weight`. Das Referenzbild setzt die 150-px-Marginalie auf
+     500; im Artikelkopf steht dieselbe Sachüberschrift aber auf voller Breite und
+     unter der Ä7-Stufe (13 px semibold ink-800, `e2e/gesetze-marginalie`). Zwei
+     Gewichte für EINE Rolle wären eine zweite Wahrheit (§5) — Familie und Schnitt
+     kommen von hier, das Gewicht bleibt, wo es abgenommen ist. */
+}
+/* Das Fassungsdatum: klein, leise, rechts an der Textkante — «Archivo 12,
+   ink-500» (Auftrag (a)). Der Slot behält seine 24-px-Reserve (`min-h-beiwerk`);
+   `flex-shrink:0` hält ihn auf EINER Zeile, damit die Reserve stimmt. */
+.lr7-fassung {
+  flex: 0 0 auto;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--ink-500);
+  text-align: right;
+}
+/* ── W2·24-CI · DIE RESERVE DARF NICHT GRÖSSER SEIN ALS IHR INHALT ──────────
+   BEFUND 6.9.2026 (Repro `scratchpad/diag15.cjs`, BGBM Art. 2, Historie-Shard
+   angehalten und dann freigegeben — dieselbe Bedingung wie
+   `e2e/gesetze-historie-badge`): der reservierte, aber noch LEERE Slot machte
+   den Artikelkopf HÖHER als der gefüllte. Gemessen `.lr7-kopf`
+   31.55 px leer → 24.00 px gefüllt, Artikel 3 sprang dabei 3'077 → 3'069 px.
+   Ursache ist die Baseline-Ausrichtung dieser Zeile (`.lr7-kopf`,
+   `align-items: baseline`): ein leerer Block hat keine Zeilenbox, seine
+   Baseline ist die Unterkante — mit `min-h-beiwerk` (24 px) sitzt sie also
+   24 px unter der Oberkante und schiebt die Zeile auf 31.55 px auseinander.
+   Der Slot wanderte mit R6b aus dem Artikelfuss (dort war der Kasten NICHT
+   baseline-ausgerichtet, darum trug die Reserve) in diesen Kopf; die
+   Reservierung ist mitgewandert, ihre Voraussetzung nicht.
+   Das nicht-brechende Leerzeichen gibt dem leeren Slot genau EINE Zeilenbox
+   von der Höhe, die der gefüllte ohnehin hat — reservierte und gefüllte Höhe
+   fallen wieder exakt zusammen (§15.2). Es greift NUR im leeren Zustand
+   (`:empty`), das gefüllte Bild ist byte-gleich (§6); gemessen 24.00 px vorher
+   wie nachher, Artikel 3 unverändert 3'069 px.
+   NICHT `align-self: flex-start` am Slot (misst sich gleich): das hätte die
+   Baseline-Ausrichtung des GEFÜLLTEN Falls mit erledigt — Fassungsdatum und
+   Randtitel stünden nicht mehr auf einer Linie (index.css oben, Auftrag (a)). */
+.lr7-fassung [data-hist-slot]:empty::before {
+  content: "\a0";
+  display: inline-block;
+  line-height: 1.5rem; /* = min-h-beiwerk */
+}
+
+/* ── (b) DIE BEZÜGE-ZEILE: EINGEKLAPPT EINE ZEILE ─────────────────────────── */
+.lr7-bez { margin: 0.25rem 0 0; }
+.lr7-bez-zeile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  list-style: none; /* Firefox: das Dreieck der <summary> */
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.5rem; /* = min-h-beiwerk: die Zeile ist so hoch wie eine Chip-Zeile */
+  color: var(--ink-500);
+}
+.lr7-bez-zeile::-webkit-details-marker { display: none; }
+.lr7-bez-zeile:hover { color: var(--brass-700); }
+/* Sichtbarer Fokus (WCAG 2.4.7) — dieselbe Ringfarbe wie im Haus. */
+.lr7-bez-zeile:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.lr7-bez-wort { font-weight: 500; color: var(--ink-600); }
+/* Registerfarben-Marke je Rubrik: derselbe 3-px-Strich, der bis R6 am
+   `.lr-notiz-titel` stand — die einzige Farbe am Artikel. */
+.lr7-bez-marke {
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--ink-900);
+  white-space: nowrap;
+}
+.lr7-bez-marke[data-reg="r"] { border-left-color: var(--reg-r); }
+/* W2·24-R6c: die Rubrik «Materialien» hat mit der Zähl-Datei eine echte Zahl
+   bekommen und darum auch ihre Registerfarbe (dieselbe Farbe wie überall sonst;
+   die Vierer-Leiter r/m/g/w ist die eine Landkarte, §5). */
+.lr7-bez-marke[data-reg="m"] { border-left-color: var(--reg-m); }
+.lr7-bez-marke[data-reg="g"] { border-left-color: var(--reg-g); }
+.lr7-bez-marke[data-reg="w"] { border-left-color: var(--reg-w); }
+/* Der Pfeil steht direkt hinter der letzten Marke, nicht am Zeilenende: er
+   gehört zur Aufzählung («… · Rechner ›»), nicht an den rechten Rand — dort
+   löste er sich optisch von dem, was er aufklappt (gesehen am Bild r6b-1440,
+   6.9.2026). */
+.lr7-bez-pfeil { display: inline-block; transition: transform var(--dur-fast, 120ms) var(--ease, ease); }
+.lr7-bez[open] .lr7-bez-pfeil { transform: rotate(90deg); }
+.lr7-bez-inhalt {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--rule-artikel);
+}
+.lr7-bez-block[data-reg] { min-width: 0; }
+
+/* ── D30 (David 6.9.2026) · DER AUFGEKLAPPTE APPARAT ────────────────────────
+   Befund: die Zeile zählte «11 Entscheide» und zeigte beim Aufklappen nur den
+   Rechnen-Block. Der Bau dazu steht in `parts/BezuegeKopf.tsx` und
+   `v3/panelModell.ts`; hier steht nur, wie das Aufgeklappte AUSSIEHT.
+
+   REGISTERSTRICH JE RUBRIK statt einem für alle: die Klammer links
+   (`.lr7-bez-inhalt`, `--rule-artikel`) sagt «das gehört zu diesem Artikel».
+   Welcher ART ein Block ist, sagt seither nur das Wort darüber. Der Strich am
+   Block trägt die Registerfarbe, die die Marke in der Zeile schon führt
+   (`--reg-r/m/g/w`, dieselben Token, §5) — die Rubrik in der Kopfzeile und ihr
+   Block darunter sind damit sichtbar dasselbe Ding. Kein Kasten, kein
+   Hintergrund: eine Linie, wie überall im Haus. */
+.lr7-bez-block[data-reg] { padding-left: 0.625rem; border-left: 2px solid var(--rule-soft); }
+.lr7-bez-block[data-reg="r"] { border-left-color: var(--reg-r); }
+.lr7-bez-block[data-reg="m"] { border-left-color: var(--reg-m); }
+.lr7-bez-block[data-reg="g"] { border-left-color: var(--reg-g); }
+.lr7-bez-block[data-reg="w"] { border-left-color: var(--reg-w); }
+
+/* D30 · Ein Entscheid-Eintrag der aufgeklappten Liste: Zitierung (Chip) und
+   darunter die amtliche Kurzregeste. Der Chip bleibt, was er ist — die Regeste
+   hängt an ihm, nicht neben ihm, darum `display: grid` mit `justify-items:
+   start` statt einer Flex-Zeile (sonst zöge der Chip die Regeste auf seine
+   Höhe). Zwei Zeilen sind der Deckel: die Kurzregeste des Shards läuft
+   gelegentlich über 300 Zeichen, und eine Liste, in der ein Eintrag acht Zeilen
+   hoch ist, ist keine Liste mehr. Wer mehr will, öffnet den Entscheid (Klick)
+   oder den Hover-Kasten, der sie vollständig führt. */
+.lr7-bez-eintrag { display: grid; justify-items: start; gap: 0.125rem; min-width: 0; }
+.lr7-bez-regeste {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--ink-600);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ═══ W2·24-R12A · ÜBERSICHTS-KÖPFE (Präfix `.ub-`, additiv am Dateiende) ═════
+   D22 (David 6.9.2026, Bild /gesetze @~1160): «hier hat es wieder komische
+   lücken». Drei Ursachen, alle in der Kopf-Zone der fünf Übersichten:
+   die Ausgabe-Zeile stand ÜBER dem Titel und war durch die halbe Haarlinie
+   (`scale-rule`) von ihm getrennt; das Filterfeld sass rechtsbündig in einer
+   halbleeren Zeile; darunter stand ein Kasten mit einer DRITTEN Suche.
+   Dieser Block trägt die Ersatz-Anatomie: eine Ausgabe-Zeile unter dem Titel,
+   EINE Filterzeile über die volle Inhaltsbreite (Label über Feld, wie
+   `.werk label` im Referenzbild) und Facetten als Text-Schalter mit
+   Unterstrich statt als Kästen. Kein Bestand berührt — fällt der Block weg,
+   stehen dieselben Elemente ungestylt, aber vollständig da.
+   Additiv am Dateiende, weil an `index.css` in dieser Runde mehrere Agenten
+   bauen (dieselbe Begründung wie beim `.lr6-`-Block darüber). */
+
+/* Ausgabe-Zeile unter der H1: Archivo 13 px, ink-500 (Zähler aus dem
+   Register — die Zahlen tragen `.num` am Konsumenten). */
+.ub-ausgabe {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+/* Filterzeile: Label über Feld, volle Inhaltsbreite. Das Feld selbst bleibt
+   `.lc-input` (Unterstrich-Anatomie, R3-F3) — hier steht nur die Hülle. */
+.ub-filter { display: grid; gap: 0.25rem; width: 100%; }
+.ub-filter-fuss {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 0.25rem 1rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.75rem; line-height: 1.5; color: var(--ink-500);
+  margin: 0;
+}
+
+/* Facetten als TEXT-Schalter (D22: «keine Kästen»). Der aktive Zustand trägt
+   den 2-px-Registerstrich der Domäne, der ruhende einen unsichtbaren Platz-
+   halter derselben Stärke — die Zeile springt beim Umschalten nicht. */
+.ub-schalter {
+  appearance: none; background: none; border: 0; border-radius: 0;
+  padding: 0.25rem 0; cursor: pointer;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.8125rem; line-height: 1.5; font-weight: 500;
+  color: var(--ink-500);
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.ub-schalter:hover { color: var(--ink-900); }
+.ub-schalter[aria-selected="true"], .ub-schalter[aria-pressed="true"] {
+  color: var(--ink-900); border-bottom-color: var(--reg-g);
+}
+.ub-schalter:focus-visible { outline: none; color: var(--ink-900); border-bottom-color: var(--focus); }
+
+/* Kernerlasse: eine Zeile Links, keine Kacheln. Der Bereich trägt den
+   Registerstrich «Gesetze» als linke Kante — dieselbe Marke, die die
+   Seitenleiste führt. */
+.ub-kern { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; align-items: baseline; margin: 0; padding: 0; list-style: none; }
+.ub-kern a {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.875rem; font-weight: 500; line-height: 1.5;
+  color: var(--ink-900);
+  /* Unterstrichen wie jeder Link (§5/R3-F1) — nur die Linie ist ruhig. */
+  text-decoration: underline; text-decoration-color: var(--rule-soft); text-underline-offset: 3px;
+}
+.ub-kern a:hover { text-decoration-color: var(--reg-g); }
+
+/* ═══ W2·24-R12B · LISTEN-TABELLE (Präfix `.tb-`, additiv am Dateiende) ═══════
+   D24 (David 6.9.2026, Bild Kantons-Erlassliste BS «Relevanz»): «das hier soll
+   tabellarisch aufgebaut sein sodass beide spalten jeweils zeile auf selber
+   höhe haben».
+   GEMESSEN vorher (Preview `dist`, /gesetze?ebene=kanton&kt=BS&gliederung=
+   relevanz, 859 Erlasse): zwei unabhängige CSS-`columns`-Fragmente, Zeile i
+   links gegen Zeile i rechts @1440 bis 105 px versetzt, @1280 bis 126 px.
+   Der Ersatz ist EIN Raster über beide Spalten: die Zeile ist eine GRID-Zeile,
+   links und rechts also dieselbe — gleich hoch by construction. Gefüllt wird
+   spaltenweise (`grid-auto-flow: column` + explizite Zeilenzahl), damit die
+   Leserichtung aus LM-141 (erst links ganz hinunter, dann rechts) bleibt.
+   Die Umschaltung ein-/zweispaltig hängt an einer CONTAINER-Abfrage, nicht an
+   der Fensterbreite: dieselbe Liste steht auch in der halben Pane-Breite
+   (`PaneKontext`), und dort ist die Fensterbreite die falsche Auskunft.
+   Additiv am Dateiende — an `index.css` bauen in dieser Runde mehrere Agenten
+   (dieselbe Begründung wie beim `.ub-`-Block darüber). Fällt der Block weg,
+   steht dieselbe Liste ungestylt, aber vollständig da. */
+
+.tb-huelle { container-type: inline-size; }
+
+.tb-raster {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+  padding: 0 0 0 0.75rem;
+  list-style: none;
+  /* Registerfarbe der Domäne als linke Kante des Listenblocks — dieselbe
+     Marke, die die Seitenleiste führt. Innerhalb der Liste bleiben die
+     Haarlinien waagrecht (Referenzbild `.syst`/`.liste`). */
+  border-left: 2px solid var(--reg-g);
+  border-top: 1px solid var(--rule-soft);
+}
+.tb-raster[data-reg="r"] { border-left-color: var(--reg-r); }
+.tb-raster[data-reg="m"] { border-left-color: var(--reg-m); }
+.tb-raster[data-reg="w"] { border-left-color: var(--reg-w); }
+
+/* Die Zeile ist das Grid-Kind: sie füllt die Rasterzeile (Default `stretch`),
+   darum sitzt ihre Haarlinie auf der Unterkante der ZEILE, nicht auf der
+   Unterkante ihres Inhalts — links und rechts also auf derselben Linie. */
+.tb-zeile {
+  display: grid;
+  min-width: 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.tb-link {
+  display: grid;
+  align-content: start;
+  gap: 0 0.75rem;
+  padding: 0.375rem 0.5rem;
+  /* Schmal: Nummer und Meta teilen die erste Zeile, der Titel steht darunter —
+     kein H-Overflow @390, keine Quetschspalte von 7 rem. */
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "nr meta" "titel titel";
+  color: var(--ink-700);
+  text-decoration: none;
+  transition: background-color .15s, color .15s;
+}
+.tb-link:hover { background-color: var(--well); color: var(--brass-700); }
+.tb-link:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+
+.tb-nr {
+  grid-area: nr;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--ink-500);
+  overflow-wrap: anywhere;
+}
+.tb-titel {
+  grid-area: titel;
+  min-width: 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  /* Zwei Zeilen: der volle Wortlaut bleibt über `title` erreichbar (§8), aber
+     ein einzelner 276-Zeichen-Titel diktiert nicht mehr die Zeilenhöhe. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+.tb-meta {
+  grid-area: meta;
+  justify-self: end;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0 0.5rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--ink-500);
+}
+/* «↗» = führt aus der App hinaus (amtliche Fremdquelle) — dieselbe Glyphe und
+   dieselbe Farbe wie an den Quell-Links (§8). */
+.tb-extern { color: var(--brass-700); }
+
+/* Ab dieser CONTAINER-Breite trägt die Zeile alle drei Spuren nebeneinander. */
+@container (width >= 30rem) {
+  .tb-link {
+    grid-template-columns: var(--tb-nr, 5.5rem) minmax(0, 1fr) auto;
+    grid-template-areas: "nr titel meta";
+  }
+}
+
+/* Zwei Spalten erst, wenn beide Spalten je ~29 rem tragen (≈ Fenster 1280 px
+   auf der Übersichtsbreite). Darunter bleibt die Liste einspaltig in voller
+   Breite — Lesbarkeit vor Dichte (D24). */
+@container (width >= 60rem) {
+  .tb-raster-2 {
+    grid-auto-flow: column;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: repeat(var(--tb-zeilen), auto);
+    column-gap: 2rem;
+  }
+}
+
+/* ═══ Facetten-Text-Schalter (Präfix `.fc-`, additiv am Dateiende) ═══════════
+   Fixer 1h, 6.9.2026 — Prüfbefund «Aus D24 (offen)»: `ui/FacettenGruppe`
+   (bedient /rechtsprechung UND /suche) trug die Achsen weiterhin als
+   `.lc-chip`-Kästen, obwohl D22 die Kasten-Optik an der Filterzeile schon
+   abgeräumt hatte («keine Kästen»). Vorbild ist die dortige Text-Schalter-
+   Sprache (`.ub-schalter`, EntscheidFilter.tsx «Liste/Karten») — EIGENES
+   Präfix statt Wiederverwendung, weil `.ub-schalter` den Registerstrich fest
+   auf `--reg-g` verdrahtet (er entstand nur für /gesetze). Die Facetten-Achse
+   braucht ihn JE DOMÄNE — `data-reg` am `role=group`-Wrapper, dasselbe Muster
+   wie `ui/ListenTabelle`/`tb-raster[data-reg]` weiter oben in dieser Datei.
+
+   RUHEZUSTAND: ink-500 (bereits PFLICHT-Paar auf --paper, farbwelt-tabellen.ts),
+   ein UNSICHTBARER 2-px-Platzhalter unten — die Zeile springt beim Umschalten
+   nicht (wie `.ub-schalter`). GEWÄHLT: ink-900 + der 2-px-Registerstrich unten
+   + ✓-Präfix (Form-Signal, kein reiner Farbvergleich — F2/F4, Vorbild
+   `.lc-chip-selected::before`; der Tick erbt die Textfarbe wie dort, KEINE
+   zweite Registerfarbe am Glyphen). Kein Rahmen, keine Fläche (D22).
+   `min-height: var(--tap-ziel)` bleibt trotzdem stehen — WCAG 2.5.8 gilt auch
+   ausserhalb der heute gemessenen a11y-Sweep-Liste (e2e/a11y.e2e.ts TAP_FLAECHEN
+   deckt `.fc-schalter` bewusst noch nicht ab: die Sweeps laufen nur auf den
+   Leser-Seiten, nicht auf /rechtsprechung oder /suche — kein Regressions-Loch,
+   weil vorher `.lc-chip-zeile button` dort ebenfalls nie gemessen wurde). */
+.fc-schalter {
+  appearance: none; background: none; border: 0; border-radius: 0;
+  display: inline-flex; align-items: baseline; gap: 0.25rem;
+  min-height: var(--tap-ziel);
+  padding: 0.25rem 0;
+  cursor: pointer;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.8125rem; line-height: 1.5; font-weight: 500;
+  color: var(--ink-500);
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.fc-schalter:hover { color: var(--ink-900); }
+.fc-schalter:focus-visible { outline: none; color: var(--ink-900); border-bottom-color: var(--focus); }
+.fc-schalter[aria-pressed="true"] { color: var(--ink-900); }
+.fc-schalter[aria-pressed="true"]::before { content: '✓'; font-weight: 600; }
+.fc-zeile[data-reg="g"] .fc-schalter[aria-pressed="true"] { border-bottom-color: var(--reg-g); }
+.fc-zeile[data-reg="r"] .fc-schalter[aria-pressed="true"] { border-bottom-color: var(--reg-r); }
+.fc-zeile[data-reg="m"] .fc-schalter[aria-pressed="true"] { border-bottom-color: var(--reg-m); }
+.fc-zeile[data-reg="w"] .fc-schalter[aria-pressed="true"] { border-bottom-color: var(--reg-w); }
+
+/* ═══ R6d/D28 · DIE ERLASS-SUCHE IM LESER-KOPF ═══════════════════════════════
+   David 6.9.2026: «die suchleiste im gesetz … will ich oben am gesetz». Das
+   Feld selbst ist unverändert `.lc-input .lc-v3-feld` (Unterstrich-Anatomie
+   R3-F3) — hier stehen nur die zwei Griffe, die D28 zusätzlich verlangt
+   («Treffer-Navigation ‹ › und Zähler in derselben Zeile»).
+
+   REGISTERFARBE GESETZE (`--reg-g`), nicht Messing: die Zone gehört sichtbar
+   zum Register, in dem man liest — dieselbe Zuordnung, die die Reiter und die
+   Bezugs-Marken tragen (`.lr7-bez-marke[data-reg="g"]`, `.tb-raster`). Die
+   Ruhefarbe bleibt `--ink-500`: eine Navigations-Hilfe, die im Ruhezustand
+   farbig leuchtet, zöge den Blick vom Gesetzestext ab (Design-Grundlage Kap. 8).
+   20 px hoch wie die Zähler-Zeile daneben (`min-h-5`) — die Zeile wächst durch
+   die Griffe NICHT, `--leser-v3-such-h` bleibt Zeichen für Zeichen dieselbe. */
+.lr8-erlasssuche-schritt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  color: var(--ink-500);
+  line-height: 1;
+  transition: color 120ms ease, background-color 120ms ease;
+}
+.lr8-erlasssuche-schritt:hover { color: var(--reg-g); background: var(--well); }
+.lr8-erlasssuche-schritt:focus-visible { color: var(--reg-g); }
+
+/* D28 · «Druck ohne Feld». Eine Suchleiste auf Papier ist ein Bedienelement
+   ohne Bedienung — dieselbe Begründung, mit der der Druck-Block oben
+   `nav`/`button`/`.lc-btn*` fallen lässt. Die Zone fällt GANZ (Feld, Zähler,
+   Schritt-Griffe), nicht nur ihre Knöpfe: der Pauschal-Selektor `button` hätte
+   das Eingabefeld und die Trefferzahlen stehen gelassen.
+   Ungeschichtet am Dateiende und darum stärker als jede Layer-Regel — hier ist
+   das erwünscht, es gibt genau eine Aussage über diese Zone im Druck. */
+@media print {
+  .lr8-erlasssuche { display: none !important; }
+}

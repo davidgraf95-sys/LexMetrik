@@ -37,8 +37,9 @@
 //     hängt — ein Vertrag statt eines Utility-Namens, die Lehre des A-1-Wurzelfix.
 //  ② DIE STUFENWERTE. Die Skala lag auf 18/20/22/24 px (absolute rem-Werte);
 //     A-1 zieht sie auf die Faktoren der Design-Grundlage Kap. 2.3
-//     ([1.0, 1.08, 1.18, 1.3], Entscheid D-A) über der neuen Basis 1.0625 rem.
-//     Erwartet sind darum 17 / 18.36 / 20.06 / 22.1 px (`STUFEN_PX` unten). Dass
+//     ([1.0, 1.08, 1.18, 1.3], Entscheid D-A) über der Basis `leser-text`
+//     (S2: 1.0625 rem; seit R6c 1.125 rem). Erwartet sind darum die vier Werte
+//     in `STUFEN_PX` unten. Dass
 //     diese Werte zu `SCHRIFT_REM` und zu `tailwind.config.js` passen, bewacht
 //     `src/tests/leser-schriftskala.test.ts` — hier zählt die gerenderte Wirkung.
 import { test, expect, type Page } from '@playwright/test'
@@ -46,10 +47,17 @@ import { fehlerSammeln } from './helpers/fehlerSammeln'
 
 /**
  * Die vier Stufen in gerechneten Pixeln bei 16-px-Wurzel (S2 · A-1):
- * 1.0625 · 1.1475 · 1.25375 · 1.38125 rem. Bruchwerte sind gewollt — sie sind das
+ * 1.125 · 1.215 · 1.3275 · 1.4625 rem. Bruchwerte sind gewollt — sie sind das
  * Produkt der Grundlagen-FAKTOREN, nicht handgesetzte Rundwerte.
  */
-const STUFEN_PX = [17, 18.36, 20.06, 22.1] as const
+// §6.3-DEKLARATION (W2·24-R6c, 6.9.2026): die vier Zahlen wandern von
+// 17 / 18.36 / 20.06 / 22.1 auf 18 / 19.44 / 21.24 / 23.4 px. Nicht der Regler
+// hat sich geändert, sondern seine BASIS — D20 (c) hebt `leser-text` auf
+// 1.125 rem. Die Faktoren [1.0, 1.08, 1.18, 1.3] und damit die Anzeigewerte
+// 100 · 108 · 118 · 130 % sind unverändert; die Zusage dieses Falls («die
+// Treppe trifft exakt diese vier Werte, und Kopf/Leiste rühren sich nie»)
+// bleibt Wort für Wort dieselbe.
+const STUFEN_PX = [18, 19.44, 21.24, 23.4] as const
 
 /** Der Normtext selbst — der Fliesstext-Container von Art. 1, nicht die
  *  Überschrift und nicht der Fussnoten-Apparat. */
@@ -155,7 +163,7 @@ test.describe('Leser-Schriftskala — der Regler bewegt NUR den Normtext', () =>
     const kopfStart = await schriftgroesse(kopf(page))
     const leisteStart = await schriftgroesse(leiste(page))
     // Die Vorgabestufe IST die Fliesstext-Stufe des Lesers (S2: `leser-text` =
-    // 1.0625 rem bei 16-px-Wurzel = 17 px; bis S2 `text-body-l` = 18 px). Wäre das
+    // R6c: `leser-text` = 1.125 rem bei 16-px-Wurzel = 18 px). Wäre das
     // nicht so, verschöbe der REGLER die Grundeinstellung — und der
     // Pixelvergleich der V3-Paritätsspecs wäre hinfällig.
     expect(start, 'Vorgabestufe verschiebt die Normtext-Grösse').toBe(STUFEN_PX[0])

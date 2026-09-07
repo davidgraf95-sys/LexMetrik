@@ -55,8 +55,16 @@ const TON_AKTIV: Record<SelectionTon, string> = {
   ablehnung: 'bg-danger-bg border-danger-line text-danger-700',
   vorbehalt: 'bg-warn-bg border-warn-500 text-warn-700',
 };
-const KANON_AKTIV = 'border-brass-500 bg-brass-100/60 text-ink-900';
-const RUHE = 'border-line bg-surface hover:border-brass-400';
+// ─── W2·24 (6.9.2026) · AUSWAHL IST EINE LINIE, KEINE FLAECHE ───────────────
+// Vorher: gewaehlt = zweite Fuellung (`bg-brass-100/60`) auf einer Kachel, die
+// schon eine Fuellung (`bg-surface`) und einen Vollrahmen trug. Jetzt traegt die
+// Ruhe nur die Haarlinie, und die Auswahl den 3-px-Registerstrich samt Haekchen
+// (Anatomie in index.css, `.lc-wahl-kachel`). Die semantischen Toene unten
+// BEHALTEN ihre Fuellung — dort ist die Farbe eine Aussage (zustimmen/ablehnen/
+// Vorbehalt), nicht ein Auswahl-Signal; dieselbe Grenze wie bei `.lc-badge-warn`
+// und `.lc-notice` (§13/F2, §8).
+const KANON_AKTIV = 'border-line text-ink-900';
+const RUHE = 'border-line hover:border-brass-400';
 /** Gesperrte Kachel — sichtbar, aber nicht wählbar (§8, s. `disabled`).
  *
  *  LM-093 (W2·17-UI-BEFUNDE B17, 4.9.2026): stand als `bg-surface
@@ -70,7 +78,7 @@ const RUHE = 'border-line bg-surface hover:border-brass-400';
  *  über wechselndem Untergrund ist kein Zustand, sondern ein Zufall.
  *  §8/§3 unberührt: die «In Vorbereitung»-Marke bleibt die Aussage, die Sperre
  *  bleibt beim Aufrufer (`disabled`). */
-const GESPERRT = 'border-line bg-well cursor-not-allowed';
+const GESPERRT = 'border-line bg-well cursor-not-allowed';  // Fuellung BLEIBT: sie IST hier der Zustand (LM-093).
 
 /**
  * Trefferfläche der PILLE (A3-5, R3-α 31.8.2026).
@@ -121,9 +129,9 @@ export function SelectionGrid<T extends string>({
             onClick={() => !it.disabled && onSelect(it.code)}
             aria-pressed={aktiv}
             className={pille
-              ? `${PILLE_HITBOX} px-3 py-1.5 rounded-full text-body-s font-medium border transition-colors ${
+              ? `lc-wahl-pille ${PILLE_HITBOX} px-3 py-1.5 text-body-s font-medium border transition-colors ${
                 aktiv ? aktivKlasse : `${ruhe} text-ink-600`}`
-              : `text-left p-3 min-h-11 rounded-lg border transition-colors ${aktiv ? aktivKlasse : ruhe}`}
+              : `lc-wahl-kachel text-left p-3 pr-6 min-h-11 border transition-colors ${aktiv ? aktivKlasse : ruhe}`}
           >
             {pille ? it.label : (
               <>

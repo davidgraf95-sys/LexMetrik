@@ -217,7 +217,7 @@ export function MietrechtForm() {
             {MONATE.map((m, i) => (
               <button key={m} type="button" aria-pressed={monate.includes(i + 1)}
                 onClick={() => setMonate((arr) => (arr.includes(i + 1) ? arr.filter((x) => x !== i + 1) : [...arr, i + 1].sort((a, b) => a - b)))}
-                className={`px-2.5 py-1.5 rounded-md text-body-s border transition-colors ${monate.includes(i + 1) ? 'border-brass-500 bg-brass-100/60 text-ink-900 font-medium' : 'border-line bg-surface text-ink-700 hover:border-brass-400'}`}>
+                className={`px-2.5 py-1.5 text-body-s border transition-colors ${monate.includes(i + 1) ? 'border-brass-500 bg-brass-100/60 text-ink-900 font-medium' : 'border-line bg-surface text-ink-700 hover:border-brass-400'}`}>
                 {m}
               </button>
             ))}

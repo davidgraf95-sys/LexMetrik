@@ -312,9 +312,9 @@ export function ZpoFristenForm({ live }: {
 
       {/* Optionale / erweiterte Funktionen – kein overflow-hidden, sonst wird
           das DatumsFeld-Popover (Zustellfiktion) abgeschnitten. */}
-      <div className="border border-line rounded-lg">
+      <div className="border border-line ">
         <button type="button" onClick={() => setErweitert(!erweitert)}
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${erweitert ? '' : 'rounded-b-lg'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${erweitert ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
           <span className="text-ink-500">{erweitert ? '▲' : '▼'}</span>
         </button>
@@ -353,7 +353,7 @@ export function ZpoFristenForm({ live }: {
                 <DatumsFeld value={fiktionDatum} onChange={(v) => setFiktionDatum(v)} className={inputCls} />
                 <button type="button" disabled={!fiktionDatum}
                   onClick={() => set('ereignis', zustellfiktion(fiktionDatum))}
-                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 rounded-lg whitespace-nowrap">
+                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 whitespace-nowrap">
                   → als Ereignis übernehmen
                 </button>
               </div>
@@ -377,7 +377,7 @@ export function ZpoFristenForm({ live }: {
             ))}
           </div>
           {ergebnis.erstrecktBis && (
-            <div className="rounded-lg border border-line bg-ok-bg p-3 text-body-s text-ok-text">
+            <div className=" border border-line bg-ok-bg p-3 text-body-s text-ok-text">
               Nach Erstreckung: <strong>{ergebnis.erstrecktBis}</strong> (24.00 Uhr).
             </div>
           )}

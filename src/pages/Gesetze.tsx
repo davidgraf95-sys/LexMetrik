@@ -3,6 +3,7 @@ import { useSearchParams, useLocation, Link } from 'react-router-dom';
 import { useSucheAusUrl } from '../components/suche/useSucheAusUrl';
 import { dedupErlasse } from '../lib/universalSuche';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
+import { STARTSEITE_ZAEHLER } from '../data/startseiteZaehler.generated';
 import { InternationalRubriken } from '../components/normtext/InternationalRubriken';
 import { RechtsgebietSicht } from '../components/normtext/RechtsgebietSicht';
 import {
@@ -51,31 +52,68 @@ import { loeseFilterScope, scopeLabel, scopeBasis } from './gesetze-teile/filter
 // (A15-Mechanik) — parse-seitig sofort wirksam, die URL wird per Effect auf die
 // kanonische Form gebracht (kein Router-Redirect, Leitplanke E.4).
 import { istRechtsgebietAlias, normalisiereAnsicht } from './gesetze-teile/ansicht-alias';
-import { Tabs } from '../components/ui/Tabs';
+// R12A (D22 Ziff. 5, R12 «Wege verkürzen»): die zehn Kernerlasse als Link-Zeile.
+// Ziel-Adresse über die EINE Ableitung (`erlassPfadVonKey`, §5), Kürzel und
+// Existenz aus dem Register — keine zweite Erlass-Liste im Code.
+import { kernerlasse } from '../components/gesetze/kernerlasse';
+
+/** Zahlen der Ausgabe-Zeile in Schweizer Schreibweise (1'338) — dieselbe
+ *  Ein-Zeilen-Form, die die Startseiten-Bausteine seit W2·23 führen. */
+const nf = (n: number) => n.toLocaleString('de-CH');
+
 
 type Ebene = 'bund' | 'kanton' | 'international';
 
-function Segment({ aktiv, onWahl }: { aktiv: Ebene; onWahl: (e: Ebene) => void }) {
-  const opt: { id: Ebene; label: string }[] = [
+// ─── D22 (David 6.9.2026) · DIE EBENE IST EINE FACETTE, KEIN KASTEN ──────────
+//
+// Hier stand die Segmented-Control aus `ui/Tabs` — eine Leiste mit Rahmen,
+// Radius, Fläche und Schatten am aktiven Reiter, die nur nach Säulen-Wahl
+// erschien und daneben einen zweiten Knopf «← Übersicht» brauchte, um wieder
+// herauszukommen. Zwei Bedienelemente für EINE Achse, beide als Kästen.
+// Neu: vier Text-Schalter (`.ub-schalter`) unter dem Filterfeld — «Alle» ist
+// der Landeplatz, die drei anderen die Säulen. Der Zustand steht als
+// Unterstrich in der Registerfarbe, nicht als Kasten.
+//
+// `aria-pressed` statt `role=tab`: die Schalter sind IMMER sichtbar, das
+// zugehörige Panel rendert aber nur nach einer Wahl. Ein `role=tab` mit
+// `aria-controls` auf eine dann fehlende `id` wäre ein gebrochenes
+// ARIA-Versprechen (§8) — gedrückte Schalter sagen dasselbe ohne die Zusage.
+// `ui/Tabs` bleibt unangetastet: die Kasten-Anatomie ist dort für Reiter
+// richtig; hier wird gefiltert, nicht geblättert.
+function EbenenSchalter({ aktiv, onWahl, onAlle }: {
+  aktiv: Ebene | null; onWahl: (e: Ebene) => void; onAlle: () => void;
+}) {
+  const opt: { id: Ebene | null; label: string }[] = [
+    { id: null, label: 'Alle' },
     { id: 'bund', label: 'Bund' },
     { id: 'kanton', label: 'Kantone' },
     { id: 'international', label: 'International' },
   ];
-  // E-2-NACHZUG (R3-α, 31.8.2026): hier stand die dritte Kopie der
-  // Segmented-Control — inklusive einer WORTGLEICHEN zweiten Umsetzung des
-  // APG-Tastaturmusters (roving tabindex + Pfeiltasten/Home/End), die der
-  // Kommentar sogar als «analog src/components/ui/Tabs.tsx» auswies. Genau
-  // dieses «analog» ist der Befund: dieselbe Zusage, zweimal gepflegt. Der
-  // einzige echte Unterschied — `id`/`aria-controls` je Reiter, mit denen
-  // diese Leiste ihre Panels benennt — ist jetzt ein Feld des Bausteins
-  // (§5/§10: erst den Rahmen, dann die Fläche darauf).
   return (
-    <Tabs
-      items={opt.map((o) => ({
-        code: o.id, label: o.label,
-        id: `ebene-tab-${o.id}`, ariaControls: `ebene-panel-${o.id}`,
-      }))}
-      value={aktiv} onChange={onWahl} ariaLabel="Ebene" />
+    <div role="group" aria-label="Ebene" className="flex flex-wrap items-baseline gap-x-5 gap-y-1 print:hidden">
+      {opt.map((o) => (
+        <button key={o.id ?? 'alle'} type="button" className="ub-schalter"
+          aria-pressed={aktiv === o.id}
+          onClick={() => (o.id === null ? onAlle() : onWahl(o.id))}>
+          {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function Kernerlasse() {
+  return (
+    <div className="space-y-1.5">
+      <p className="lc-overline">Kernerlasse</p>
+      <ul className="ub-kern">
+        {kernerlasse().map((e) => (
+          <li key={e.key}>
+            <Link to={e.pfad} title={e.titel}>{e.kuerzel}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -84,9 +122,9 @@ function Segment({ aktiv, onWahl }: { aktiv: Ebene; onWahl: (e: Ebene) => void }
 // 5.7.2026, keine eigene Palette mehr) + drei gleichwertige Einstiegskacheln mit
 // Kurz-Statistik. Löst die frühere Dreifach-Redundanz (Overline + Tab-Leiste +
 // Sidebar) auf: EINE Steuerung, kein stiller Bund-Default. Reine Darstellung (§3).
-function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, onWahl, onBefehl }: {
+function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, onWahl }: {
   bund: number; bundArtikel: number; kantone: number; kantonErlasse: number; international: number;
-  onWahl: (e: Ebene) => void; onBefehl: () => void;
+  onWahl: (e: Ebene) => void;
 }) {
   const pk = usePaneKlasse();
   const kacheln: { id: Ebene; titel: string; zahl: number; einheit: string; sub: string; legende?: boolean }[] = [
@@ -96,23 +134,20 @@ function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, on
   ];
   return (
     <div className="space-y-6">
-      {/* Prominenter Artikel-Sprung / Suche (§4.2 · A5): fokussiert die HeaderSuche. */}
-      <button
-        type="button"
-        onClick={onBefehl}
-        className="group flex w-full items-center gap-3 rounded-lg border border-line bg-paper-sunken/40 px-4 py-3.5 text-left transition-colors hover:border-brass-400 hover:bg-brass-100/30"
-      >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden className="shrink-0 text-ink-500 group-hover:text-brass-700">
-          <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.7" />
-          <path d="M20 20l-3.6-3.6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-        </svg>
-        <span className="min-w-0 flex-1">
-          <span className="block text-body-l text-ink-700">Direkt zum Artikel springen — z. B. «OR 257d», «Art. 5 AIG»</span>
-          <span className="block text-body-s text-ink-500">oder Stichwort suchen über Gesetze, Rechtsprechung und Werkzeuge</span>
-        </span>
-        <kbd className="hidden sm:inline num shrink-0 rounded border border-line bg-paper px-1.5 py-0.5 text-micro font-medium text-ink-500">⌘K</kbd>
-      </button>
-
+      {/* ── D22 Ziff. 3 (David 6.9.2026) · DIE DRITTE SUCHE IST WEG ────────────
+          Hier stand ein Kasten (Rahmen + Füllung + Lupe + ⌘K-Kürzel) mit den
+          Zeilen «Direkt zum Artikel springen — z. B. «OR 257d»» und «oder
+          Stichwort suchen über Gesetze, Rechtsprechung und Werkzeuge». Er war
+          das dritte Suchangebot auf derselben Seite (Kopf-Suche, Filterfeld,
+          dieser Kasten) und tat selbst nichts: sein Klick fokussierte bloss die
+          Kopf-Suche (`lm:suche-fokus`).
+          NICHTS GEHT VERLOREN — der Norm-Sprung IST die Kopf-Suche (A5, David
+          5.7.2026: keine eigene Palette mehr). Sie steht auf jeder Route, hört
+          auf «/» und ⌘K/Ctrl-K und trägt die Sprung-Gruppe als obersten
+          Treffer; der Hinweis darauf steht jetzt als Halbsatz an der Filterzeile
+          (`gesetze-filter-scope`), nicht als eigener Kasten. Beweis, dass der
+          Weg trägt: `e2e/norm-sprung.e2e.ts` («OR 257d» → Art. 257d OR ab
+          /gesetze, ohne den Kasten). */}
       <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @2xl/pane:grid-cols-3 gap-3')}>
         {/* C-5 (31.8.2026): diese Kachel-Anatomie IST der Kanon — sie liegt seit
             Runde 2 in `ui/RubrikKachel` und trägt dort auch die Startseiten-
@@ -131,7 +166,19 @@ function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, on
 
 export function Gesetze() {
   const [erlasse, setErlasse] = useState<BrowseErlass[] | null>(null);
-  const [systematik, setSystematik] = useState<Record<string, KantonSystematikBaum>>({});
+  // ── §15.2/§8-BEFUND 6.9.2026 (CI-Flake `gesetze-footer-cls`) · «NOCH NICHT
+  //    GELADEN» IST NICHT «KEIN BAUM» ────────────────────────────────────────
+  // GEMESSEN @1440×900 unter CPU-Drossel 6× auf `/gesetze?ebene=kanton&kt=ZH`:
+  // die Zeile «Alle aufklappen» stand erst bei y=828, dann bei y=774 — ein
+  // input-freier Sprung um 54 px, weil ÜBER ihr der Hinweis «Die amtliche
+  // Systematik dieses Kantons ist noch nicht hinterlegt» erschien und wieder
+  // verschwand. Ursache war der Startwert `{}`: bis die Bäume da waren, sah
+  // jeder Kanton wie einer OHNE Baum aus. Das ist zweimal falsch — ein
+  // Layout-Shift (§15.2) UND eine unwahre Auskunft über den Bestand (§8), die
+  // 19 der 26 Kantone für einen Moment traf.
+  // `null` = noch nicht geladen, `{}` = geladen und leer. Der Unterschied ist
+  // die ganze Korrektur; sie kostet nichts und macht die Aussage ehrlich.
+  const [systematik, setSystematik] = useState<Record<string, KantonSystematikBaum> | null>(null);
   const [fehler, setFehler] = useState(false);
   // ?q= (Startseiten-Rubrik «Gesetze» #6, «alle N →» aus der Universal-Suche
   // UI-NAV S1) füllt die Suche vor. Über useSucheAusUrl statt Lazy-Init: der
@@ -268,14 +315,76 @@ export function Gesetze() {
   );
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
+      {/* D22 Ziff. 4 · DIE ABSTÄNDE DER ÜBERSICHT SIND GEDECKELT.
+          Gemessen (Playwright, Preview, 6.9.2026, @1440/@1160/@1024/@390):
+          die grösste senkrechte Leerfläche zwischen zwei Inhaltsblöcken lag
+          auf den fünf Übersichten bei 64/49/57/74/56 px. Das Budget ist
+          48 px — der Seitenrhythmus geht darum von `space-y-8` (32) auf
+          `space-y-6` (24). Nur Abstand, kein Inhalt, keine Reihenfolge. */}
+      {/* ── D11 (David 6.9.2026, Bild /gesetze) · DER KOPF NENNT DEN BEREICH ──
+          Bis hierher standen drei Angaben übereinander: eine Overline
+          («Rechtssammlung Schweiz»), eine H1, die dasselbe noch einmal sagte
+          («Schweizer Gesetzessammlung»), und ein Erklär-Absatz, der die Seite
+          beschrieb, statt sie zu zeigen. Neu trägt die H1 den BEREICHSNAMEN —
+          dasselbe Wort, das der Reiter und die Navigation führen (§5: eine
+          Sache heisst überall gleich) —, und darüber steht EINE Ausgabe-Zeile
+          mit den Zahlen aus dem Register. Der §8-Vorbehalt («massgeblich ist
+          die amtliche Fassung») steht im Seitenfuss, wo er den Einstieg nicht
+          mehr zustellt.
+          KEINE ZAHL OHNE DECKUNG: das Datum des jüngsten Inhalts (D8) hat im
+          generierten Zähler noch kein Feld — die Zeile führt darum nur, was
+          gezählt ist, und nicht «jüngster Stand …» (§8). */}
       <SeitenKopf
-        overline="Rechtssammlung Schweiz"
-        titel="Schweizer Gesetzessammlung"
-        // B-6-Nachzug (R2-A, 31.8.2026): «geltende Fassung» und «amtliche
-        // Quelle» standen in EINEM Satz — das Nomen kommt aus der Wortquelle.
-        intro={`Volltext der in LexMetrik verwendeten Bundesgesetze und kantonalen Erlasse — geltende Fassung, mit Stand und amtlichem Live-Link — sowie die für die Schweiz massgeblichen Staatsverträge und EU-Verordnungen (International). Massgeblich bleibt stets ${AMTLICHE_FASSUNG_NOMEN}.`}
+        titel="Gesetze"
+        ausgabe={`${nf(STARTSEITE_ZAEHLER.gesetzeBundVolltext)} Bundeserlasse · ${nf(STARTSEITE_ZAEHLER.gesetzeKantonVolltext)} Kantonserlasse · ${nf(STARTSEITE_ZAEHLER.gesetzeInternationalVolltext)} Staatsverträge im Volltext`}
       />
+
+      {/* ── D22 Ziff. 2 · EIN FILTERFELD, VOLLE BREITE, MIT LABEL ─────────────
+          Das Feld sass in einer `justify-between`-Zeile rechts (`max-w-sm`) und
+          liess links 60 % der Zeile leer — die Lücke, die David gesehen hat.
+          Neu: Label über Feld (`.ub-filter`, Anatomie des Referenzbilds), Feld
+          über die volle Inhaltsbreite, Facetten als Text-Schalter darunter.
+          DAS FELD STEHT JETZT IMMER — auch während das Manifest lädt. Es
+          braucht die Daten nicht (es hält nur den Suchbegriff), und wer es erst
+          nach dem Laden einsetzt, schiebt beim Eintreffen des Manifests den
+          halben Seiteninhalt (§15.2). Der reservierte Inhaltsbereich darunter
+          bleibt unverändert.
+          Der sichtbare Text IST der zugängliche Name (WCAG 2.5.3): das frühere
+          `aria-label` («Gesetze durchsuchen …») sagte etwas anderes als das,
+          was auf dem Bild steht; der Umfang steht in der Fuss-Zeile und ist
+          über `aria-describedby` verknüpft. */}
+      <div className="ub-filter">
+        <label htmlFor="gesetze-filter" className="lc-overline">Filtern</label>
+        <input
+          id="gesetze-filter"
+          type="search"
+          value={suche}
+          onChange={(e) => setSuche(e.target.value)}
+          placeholder="Kürzel, Titel, SR-Nr. …"
+          aria-describedby="gesetze-filter-scope"
+          className="lc-input h-11 py-0 text-body-s w-full"
+        />
+        <p id="gesetze-filter-scope" className="ub-filter-fuss min-h-5">
+          <span>{scopeLabel(filterScope, (k) => KANTON_NAMEN[k] ?? k)}</span>
+          {/* Chip nur, wo ein enger Default-Scope existiert (aktive Säule/
+              Kanton) — auf dem Landeplatz ist «alle Ebenen» bereits der Scope.
+              Als Text-Schalter, nicht mehr als Chip mit Rahmen (D22). */}
+          {gewaehlt !== null && (
+            <button type="button" aria-pressed={alleEbenen} className="ub-schalter"
+              onClick={() => setAlleEbenen((a) => !a)}>
+              auf alle Ebenen erweitern
+            </button>
+          )}
+          <span>Artikel-Sprung über die Suche oben (⌘K)</span>
+        </p>
+        <div className="mt-1">
+          <EbenenSchalter aktiv={gewaehlt} onWahl={setzeEbene} onAlle={zurUebersicht} />
+        </div>
+      </div>
+
+      {/* D22 Ziff. 5 / R12: Kernerlasse direkt unter dem Filter — ein Klick. */}
+      <Kernerlasse />
 
       {/* B2 (Bug-Check #565): auch der Fehlerpfad reserviert die Inhaltshöhe —
           sonst kollabiert die Fläche auf die Notice und der Footer springt
@@ -308,55 +417,6 @@ export function Gesetze() {
 
       {erlasse && (
         <>
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            {/* Steuerung nur NACH Säulen-Wahl (G4 · §4.1): auf dem Landeplatz
-                tragen die drei Kacheln die Steuerung, kein Tab-/Overline-Dopplung. */}
-            {!suche.trim() && gewaehlt !== null ? (
-              <div className="flex flex-wrap items-center gap-3">
-                <button type="button" onClick={zurUebersicht}
-                  className="text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
-                  ← Übersicht
-                </button>
-                <Segment aktiv={ebene} onWahl={setzeEbene} />
-              </div>
-            ) : <span />}
-            {/* IA-4 (§11.5/O5): Scope-Label + Chip sind von Anfang an im Layout
-                (§15.2, kein CLS) und programmatisch mit dem Input verknüpft
-                (aria-describedby). Der Chip ändert nur den SCOPE des BESTEHENDEN
-                Filters — kein dritter Suchpfad (A5), kein zweiter Index (K10). */}
-            <div className="w-full max-w-sm space-y-1.5">
-              <input
-                type="search"
-                value={suche}
-                onChange={(e) => setSuche(e.target.value)}
-                placeholder="Suchen — Kürzel, Titel, SR-Nr. …"
-                aria-label="Gesetze durchsuchen (Kürzel, Titel, SR-Nr.)"
-                aria-describedby="gesetze-filter-scope"
-                className="lc-input h-11 py-0 text-body-s w-full"
-              />
-              <p id="gesetze-filter-scope" className="m-0 flex min-h-5 flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-500">
-                <span>{scopeLabel(filterScope, (k) => KANTON_NAMEN[k] ?? k)}</span>
-                {/* Chip nur, wo ein enger Default-Scope existiert (aktive Säule/
-                    Kanton) — auf dem Landeplatz ist «alle Ebenen» bereits der
-                    Scope, ein Chip wäre wirkungslos (§3.1 keine Wucherung). */}
-                {gewaehlt !== null && (
-                  <button
-                    type="button"
-                    aria-pressed={alleEbenen}
-                    onClick={() => setAlleEbenen((a) => !a)}
-                    className={`rounded border px-2 py-0.5 text-xs font-medium transition-colors ${
-                      alleEbenen
-                        ? 'border-brass-400 bg-brass-100 text-brass-800'
-                        : 'border-line text-ink-500 hover:border-brass-400 hover:text-brass-700'
-                    }`}
-                  >
-                    auf alle Ebenen erweitern
-                  </button>
-                )}
-              </p>
-            </div>
-          </div>
-
           {/* Footer-CLS (§15.2, David 25.7.2026): EIN Rahmen um die drei
               exklusiven Inhalts-Zustände (Landeplatz / Trefferregion /
               Ebenen-Panel) reserviert von Anfang an gut eine Viewport-Höhe
@@ -371,7 +431,7 @@ export function Gesetze() {
               Kurz-Statistik statt stillem Bund-Default. Prominenter Sprung-/
               Such-Hinweis (Cmd/Ctrl-K, §4.2) darüber. */}
           {!suche.trim() && gewaehlt === null && (
-            <div className="space-y-4">
+            <div className="space-y-3">
               <Einstieg
                 bund={gefiltert.length}
                 bundArtikel={gefiltert.reduce((a, e) => a + e.artikelAnzahl, 0)}
@@ -379,7 +439,6 @@ export function Gesetze() {
                 kantonErlasse={erlasse.filter((e) => e.ebene === 'kanton').length}
                 international={international.length}
                 onWahl={setzeEbene}
-                onBefehl={() => { if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('lm:suche-fokus')); }}
               />
               {/* Y-A (§11.8, David 16.7.2026 Auswahl-Dialog: JA): die frühere 4.
                   Einstiegskachel «Nach Rechtsgebiet & Thema» ist zum reinen
@@ -470,8 +529,13 @@ export function Gesetze() {
           {/* Ein Tab-Panel pro Ebene (nur das aktive rendert); id/aria-labelledby
               folgen der aktiven Ebene und verbinden es mit dem gewählten Tab.
               Erst NACH Säulen-Wahl (gewaehlt !== null) — davor trägt der Landeplatz. */}
+          {/* D22: hier stand `role=tabpanel` + `aria-labelledby` auf die Reiter
+              der Segmented-Control. Die Ebene ist jetzt eine Facette mit
+              gedrückten Text-Schaltern (s. `EbenenSchalter`) — ein Panel ohne
+              Reiter darf die Rolle nicht behalten, sonst verspricht es eine
+              Beziehung, die es nicht mehr gibt (§8). */}
           {!suche.trim() && gewaehlt !== null && (
-          <div role="tabpanel" id={`ebene-panel-${ebene}`} aria-labelledby={`ebene-tab-${ebene}`}>
+          <div>
           {ebene === 'bund' && (
             gefiltert.length === 0
               /* W2·19-DESIGN-KONSISTENZ · D-7: dieser Zweig läuft NUR bei leerem
@@ -615,12 +679,12 @@ export function Gesetze() {
                     </div>
                     {(() => {
                       const eig = kantGefiltert.filter((e) => e.kanton === kanton);
-                      const sys = systematik[kanton];
+                      const sys = systematik?.[kanton];
                       return gliederung === 'relevanz'
                         ? <KantonRelevanzListe erlasse={eig} sys={sys} />
                         : gliederung === 'rechtsgebiet'
                           ? <KantonGebietGruppen erlasse={eig} />
-                          : <KantonSystematik erlasse={eig} sys={sys} />;
+                          : <KantonSystematik erlasse={eig} sys={sys} sysGeladen={systematik !== null} />;
                     })()}
                   </section>
                 </>
@@ -646,6 +710,10 @@ export function Gesetze() {
           </div>
         </>
       )}
+      {/* D11: der §8-Vorbehalt gehört an den Fuss, nicht in den Einstieg. */}
+      <p className="border-t border-line/60 pt-3 text-micro text-ink-500 max-w-reading">
+        Geltende Fassung mit Stand und amtlichem Live-Link je Erlass; massgeblich bleibt stets {AMTLICHE_FASSUNG_NOMEN}.
+      </p>
     </div>
   );
 }

@@ -399,7 +399,7 @@ export function ZustErgebnisEinleitung({ z }: { z: ZustaendigkeitFormModell }) {
                 <ol className="space-y-2.5">
                   {fahrplan.map((s, i) => (
                     <li key={s.titel} className="flex gap-3">
-                      <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
+                      <span aria-hidden className="shrink-0 w-6 h-6 bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
                       <span>
                         <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
                         <span className="block text-body-s text-ink-600">{s.text}</span>

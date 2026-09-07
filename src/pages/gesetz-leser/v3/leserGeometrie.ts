@@ -39,10 +39,29 @@ import { LESEMASS_MAX } from './rahmenSpalten';
 // steht im Rahmen — dieselbe Regel und derselbe Grund wie bei `panelForm`
 // (Zurückweisung durch die Sonde am 17.8.2026).
 
-/** Höhe der App-Topbar (`components/layout/Topbar.tsx`, `sticky top-0` + h-16).
- *  EINMAL benannt, zweimal gebraucht (Kopf-Anschlag und Pane-Chrome) — ein
- *  zweites `4rem`-Literal wäre die Sorte Zahl, die still auseinanderläuft. */
-const APP_TOPBAR_H = '4rem';
+/**
+ * Höhe der klebenden App-Krone über dem Leser.
+ *
+ * ── W2·24-R4 · VOM LITERAL ZUM GETEILTEN TOKEN ──────────────────────────────
+ * Hier stand bis zum 6.9.2026 `'4rem'` — die Höhe der Titelblatt-Zeile allein.
+ * Solange sie das einzige klebende Stück war, war das richtig; mit der
+ * Arbeitsleiste aus R2 (`components/layout/Reiterleiste.tsx`, §5a) ist es das
+ * nicht mehr. R2 hat die Leiste deshalb im Fluss mitlaufen lassen und den
+ * Nachzug ausdrücklich hierher gelegt (R2-Protokoll §2: «aus `APP_TOPBAR_H` ein
+ * geteiltes Token machen, dann kann sie kleben»).
+ *
+ * Die Zahl lebt jetzt in `src/index.css` als `--app-kopf-h` (= `--app-krone-h`
+ * + `--app-reiter-h`) und wird von BEIDEN Seiten gelesen: die Leiste klebt auf
+ * `--app-krone-h` und ist `--app-reiter-h` hoch, der Leser setzt seinen
+ * Kopf-Anschlag und `--nt-stick` aus der Summe. Ein zweites Literal auf einer
+ * der beiden Seiten wäre genau die Zahl, die still auseinanderläuft — und der
+ * Preis dafür ist nicht theoretisch: sie verschiebt jeden `#art-…`-Sprung.
+ *
+ * Bewusst KEIN `calc()` hier: der Wert wird ausschliesslich in CSS-Ausdrücke
+ * eingesetzt, die die Variable selbst auflösen. Der Fallback deckt den einen
+ * Fall ab, in dem die Regel nicht geladen ist (Vitest ohne Stylesheet).
+ */
+const APP_TOPBAR_H = 'var(--app-kopf-h, 4rem)';
 /** Höhe der Pane-Titelleiste (`components/layout/PaneKopf.tsx`, `h-9`). */
 const PANE_LEISTE_H = '2.25rem';
 /**

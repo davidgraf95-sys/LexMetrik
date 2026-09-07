@@ -9,16 +9,11 @@ import type { FlacherTreffer } from './trefferAuswahl';
 // wie `InhaltsKopfKontext.ts` neben `InhaltsKopf.tsx`: Verhalten byte-gleich,
 // nur der Ort wechselt.
 //
-// Kuratierte Einstiege = stabile Übersichts-Routen (reine Navigation, keine
-// Rechtswerte, §13): der schnelle Sprung in die vier Korpus-Rubriken + Rechner.
-
-export const EINSTIEGE: ReadonlyArray<{ route: string; label: string }> = [
-  { route: '/gesetze', label: 'Gesetze' },
-  { route: '/rechtsprechung', label: 'Rechtsprechung' },
-  { route: '/materialien', label: 'Materialien' },
-  { route: '/rechner', label: 'Rechner' },
-  { route: '/vorlagen', label: 'Vorlagen' },
-];
+// ── D23 (6.9.2026) · die Konstante `EINSTIEGE` ist ersatzlos gefallen ────────
+// Sie führte die fünf Übersichts-Routen als zweite Navigationsliste im
+// Such-Panel — dieselben fünf, die seit D17 auf JEDER Route in der Seitenleiste
+// stehen. Mit dem Block fällt die Tabelle (Rückbau statt Bewachung,
+// §17-Gegengewicht); die flache Options-Liste ist damit exakt der Verlauf.
 
 // Cowork-Befund 38 (21.8.2026): der Leerzustand rendere früher jede Zeile als
 // echten `<Link>` — ein Tastatur-Nutzer, der per Tab ins Suchfeld gelangt,
@@ -28,10 +23,7 @@ export const EINSTIEGE: ReadonlyArray<{ route: string; label: string }> = [
 // (role=option, Pfeiltasten + Enter über die STEUERNDE Eingabe, Tab verlässt das
 // Feld sofort). `leerOptionen` liefert die dazu passende flache Options-Liste —
 // dieselben generischen Helfer (aktivePosition/naechsterKey/…, trefferAuswahl.ts)
-// wie die Trefferliste, nur mit eigenem Gruppen-Namensraum («verlauf»/«einstieg»).
+// wie die Trefferliste, nur mit eigenem Gruppen-Namensraum («verlauf»).
 export function leerOptionen(verlauf: ZuletztEintrag[], listboxId: string): FlacherTreffer[] {
-  return [
-    ...verlauf.map((e) => ({ oid: suchOptionId(listboxId, 'verlauf', e.route), href: e.route })),
-    ...EINSTIEGE.map((e) => ({ oid: suchOptionId(listboxId, 'einstieg', e.route), href: e.route })),
-  ];
+  return verlauf.map((e) => ({ oid: suchOptionId(listboxId, 'verlauf', e.route), href: e.route }));
 }

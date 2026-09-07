@@ -2,14 +2,18 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { renderToString } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
 import { LocaleProvider } from '../components/locale';
-import { ReiterUebersicht } from '../components/layout/ReiterUebersicht';
+import { Reiterleiste } from '../components/layout/Reiterleiste';
 
-// ReiterUebersicht-SSR: die «Alle Reiter»-Übersicht in der Topbar ist CLIENT-ONLY
-// — das Flyout hängt per createPortal an <body> und ist initial zu
-// (panelOffen=false). Im SSR/Prerender erscheint daher höchstens der
-// Trigger-Knopf, NIE ein Dialog/eine tablist (golden/prerender byte-gleich).
-// Fachliche Änderung ggü. dem früheren TabStreifen: kein role=tablist mehr, kein
-// horizontaler Streifen, sondern ein Knopf mit aria-haspopup="dialog".
+// ── W2·24-DESIGN-IDENTITAET R2 · DASSELBE VERSPRECHEN, NEUER TRÄGER ──────────
+// Bis 6.9.2026 mass diese Datei `ReiterUebersicht` (☰-Trigger + Flyout). Der
+// Baustein ist mit R2 GELÖSCHT — die offenen Reiter stehen jetzt sichtbar in
+// der Arbeitsleiste (`Reiterleiste`, §5a des Fahrplans, Wunsch David 6.9.2026).
+// Die GEPRÜFTE EIGENSCHAFT ist unverändert und darum hier erhalten, nicht
+// aufgeweicht: die schwebende Ebene (früher Flyout, heute das «+N»-Blatt) ist
+// CLIENT-ONLY — sie hängt per createPortal an <body> und ist beim ersten Render
+// zu. Im SSR/Prerender erscheint darum NIE ein Dialog (golden/prerender
+// byte-gleich). Neu hinzu kommt, was die Ablösung sichtbar ändert: die Reiter
+// selbst stehen jetzt IM Markup, nicht mehr hinter einem Knopf.
 // SSR via renderToString (Effekt läuft nicht; der useState(ladeTabs)-Initialwert
 // liefert die geseedeten Reiter).
 beforeEach(() => {
@@ -28,34 +32,56 @@ const html = (eintraege: { path: string; label?: string }[], url = '/') => {
   localStorage.setItem('lexmetrik-tabs', JSON.stringify(eintraege));
   return renderToString(
     <MemoryRouter initialEntries={[url]}>
-      <LocaleProvider><ReiterUebersicht /></LocaleProvider>
+      <LocaleProvider><Reiterleiste /></LocaleProvider>
     </MemoryRouter>,
   );
 };
 
-describe('ReiterUebersicht — Trigger + Client-only-Flyout', () => {
-  it('rendert NICHTS bei 0 Reitern; AB dem 1. Reiter den Trigger-Knopf', () => {
-    expect(html([])).toBe('');
+describe('Reiterleiste — sichtbare Reiter + client-only Überlauf-Blatt', () => {
+  // ── DEKLARIERTE ANPASSUNG (§6.3, W2·24-R5-F1C, R10-Befund, 6.9.2026) ──────
+  // Hier stand `expect(html([])).toBe('')` — «keine Reiter, kein Markup». Genau
+  // das war die CLS-Ursache: der Prerender kennt keinen Speicher, lieferte also
+  // keine Leiste, und nach der Hydration wuchs sie um 34 px in die Seite hinein
+  // (gemessen auf /rechner/tagerechner, CLS 0.025, `ics-export-z1` A9). Die
+  // Leiste reserviert ihre Höhe jetzt immer.
+  //
+  // ── DEKLARIERTE ANPASSUNG 2 (§6.3, D19, 6.9.2026) ─────────────────────────
+  // Zwischenzeitlich war die geprüfte Eigenschaft noch schärfer: ohne Reiter
+  // keine Navigations-Landmark und kein Reiter im Markup — nur ein stummer,
+  // `aria-hidden`-Platzhalter. Seit dem Browser-«+» (David: «mit plus einen
+  // neuen reiter erzeugen können») gibt es aber IMMER ein Ziel, auch bei 0
+  // Reitern: den «+», mit dem man den ERSTEN Reiter überhaupt anlegt. Eine
+  // `<nav>` ohne EIN Ziel wäre ein leeres Versprechen gewesen — eine `<nav>`
+  // mit dem «+»-Knopf ist es nicht mehr, darum trägt jetzt auch der 0-Reiter-
+  // Fall die Landmark. Was UNVERÄNDERT gilt: kein Reiter im Markup, dieselbe
+  // Geometrie/Höhe wie mit Reitern (CLS bleibt 0).
+  it('reserviert bei 0 Reitern die Höhe UND den «+»; AB dem 1. Reiter zusätzlich den Reiter', () => {
+    const leer = html([]);
+    expect(leer).toContain('h-[var(--app-reiter-h)]');
+    expect(leer).toContain('aria-label="Offene Reiter"');
+    expect(leer).toContain('aria-label="Neuer Reiter"');
+    expect(leer).not.toContain('aria-label="Reiter «');
     const eins = html([{ path: '/rechner/tagerechner' }], '/rechner/tagerechner');
-    // Trigger-Knopf mit Dialog-Semantik, initial zu.
-    expect(eins).toContain('aria-haspopup="dialog"');
-    expect(eins).toContain('aria-expanded="false"');
-    expect(eins).toContain('aria-label="Alle geöffneten Reiter"');
+    expect(eins).toContain('aria-label="Offene Reiter"');
+    // Der Reiter steht im Markup — genau das ist die Ablösung des ☰-Flyouts.
+    expect(eins).toContain('aria-label="Reiter «');
+    expect(eins).toContain('aria-current="page"');
   });
 
-  it('Flyout ist client-only: im SSR KEIN Dialog/keine tablist, nur der Trigger mit Zähler', () => {
+  it('Überlauf-Blatt ist client-only: im SSR KEIN Dialog, nur der Trigger', () => {
     const out = html(
-      [{ path: '/rechner/tagerechner' }, { path: '/gesetze/bund/or' }],
+      [{ path: '/rechner/tagerechner' }, { path: '/gesetze/bund/or' }, { path: '/vorlagen/kuendigung' }],
       '/rechner/tagerechner',
     );
-    // KEIN ausgeklapptes Flyout im SSR → kein role=dialog/tablist/tab, keine
-    // Schliessen-Knöpfe (die leben im TabPanel, das erst beim Öffnen rendert).
+    // KEIN ausgeklapptes Blatt im SSR → kein role=dialog (und damit auch keine
+    // gruppierte TabPanel-Liste, die erst beim Öffnen rendert).
     expect(out).not.toContain('role="dialog"');
     expect(out).not.toContain('role="tablist"');
     expect(out).not.toContain('role="tab"');
-    expect(out).not.toContain('aria-label="Reiter «');
-    // Der Trigger trägt den Reiter-Zähler (hier 2).
+    // Der Trigger trägt Dialog-Semantik und ist zu; die Zahl nennt ALLE Reiter.
     expect(out).toContain('aria-haspopup="dialog"');
-    expect(out).toContain('>2<');
+    expect(out).toContain('aria-expanded="false"');
+    expect(out).toContain('aria-label="Alle 3 offenen Reiter"');
+    expect(out).toContain('>3 offen<');
   });
 });

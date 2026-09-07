@@ -160,7 +160,7 @@ export function VorlageTestament() {
             <div className="flex items-center justify-between">
               <GruppenTitel>Erbinnen und Erben</GruppenTitel>
               {a.erben.length > 0 && (
-                <span className={`num text-xs rounded-full px-2 py-0.5 ${Math.abs(erbenSumme - 100) < 0.01 ? 'bg-ok-bg text-ok-text' : 'bg-warn-bg text-warn-700'}`}>
+                <span className={`num text-xs px-2 py-0.5 ${Math.abs(erbenSumme - 100) < 0.01 ? 'bg-ok-bg text-ok-text' : 'bg-warn-bg text-warn-700'}`}>
                   Summe {erbenSumme} %
                 </span>
               )}

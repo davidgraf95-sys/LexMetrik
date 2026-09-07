@@ -69,6 +69,12 @@ function modellFuer(eintraege: NormSnapshot[], struktur: StrukturMap): LeserV3Mo
     setOffen: () => {},
     revisionFuer: () => undefined,
     historieFuer: () => undefined,
+    // §6.3-DEKLARATION (W2·24-R6c): das Modell führt seit der Zähl-Datei einen
+    // dritten Nachschlag je Artikel (`bezuegeZaehler`, `../pages/gesetz-leser/
+    // bezuegeZaehler`). Das Doppel gibt ihn wie die beiden anderen leer zurück —
+    // dieser Fall prüft die REIHENFOLGE des Markups, nicht die Bezüge; ohne den
+    // Eintrag stürzt der Renderer ab, statt etwas zu messen.
+    bezuegeZaehler: () => undefined,
     refs: { leseRef: createRef<HTMLDivElement>(), sekRef: { current: new Map() } },
   } as unknown as LeserV3Modell;
 }

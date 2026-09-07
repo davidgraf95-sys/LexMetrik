@@ -5,6 +5,7 @@ import { kopfGlypheKlassen, kopfGriffKlassen } from './kopfStufen';
 import { setzeOption, useLeserOptionen, type OptFeld } from '../leserOptionen';
 import { LeserScrim } from './LeserScrim';
 import { SchriftgroessenRegler } from '../../../components/ui/SchriftgroessenRegler';
+import { MenueRegler, MenueSchalter, MenueTitel, MenueZeile } from '../../../components/ui/Menue';
 
 // ─── «Ansicht ▾» der V3-Kopfzeile (FAHRPLAN-LESER-V3 Kap. 4a/4f, H1) ─────────
 //
@@ -50,34 +51,16 @@ import { SchriftgroessenRegler } from '../../../components/ui/SchriftgroessenReg
 // fallen `useId`, `aria-describedby` und der Geschwister-`<p>`; tritt je wieder
 // eine echte Abhängigkeit zwischen zwei Schaltern auf, steht die Anatomie samt
 // ihrer Accessible-Name-Herleitung in der Historie.
-function V3Switch({ an, label, titel, onKlick, ariaLabel }: {
-  an: boolean;
-  label: string;
-  titel: string;
-  onKlick: () => void;
-  ariaLabel?: string;
-}) {
-  return (
-    <button
-      type="button"
-      role="switch"
-      aria-checked={an}
-      aria-label={ariaLabel}
-      title={titel}
-      onClick={onKlick}
-      className={`flex w-full items-center justify-between gap-3 rounded-md px-2.5 py-1.5 text-left text-body-s transition-colors hover:bg-brass-100/40 ${
-        an ? 'text-ink-900' : 'text-ink-600'
-      }`}
-    >
-      <span>{label}</span>
-      {/* `ink-500` statt `ink-400`: der AUS-Zustand ist Text und muss AA tragen
-          (derselbe axe-Befund wie im Ist-Menü, 26.7.2026). */}
-      <span aria-hidden className={`shrink-0 inline-flex items-center gap-1 text-xs ${an ? 'text-brass-700' : 'text-ink-500'}`}>
-        {an ? '✓' : '○'} {an ? 'an' : 'aus'}
-      </span>
-    </button>
-  );
-}
+// ── D5-NACHZUG (6.9.2026) · DIE HÜLLE IST JETZT GETEILT ─────────────────────
+// Hier stand ein eigener `V3Switch` mit eigenem Klassen-String und einem
+// Zustands-DOPPEL rechts («✓ an» / «○ aus»). Beides ist in den geteilten
+// Baustein `components/ui/Menue` gewandert (dort die Herleitung samt Davids
+// Befund): Zustand als EIN Häkchen LINKS, Fokus als Strich statt Kasten, Zeilen
+// durch Haarlinien getrennt, keine Umbrüche. Die SCHALTLOGIK ist Zeile für
+// Zeile unberührt — `schalte(...)` und der geteilte Store bleiben, wie sie
+// waren; `aria-checked`, `role="switch"`, `aria-label` und `title` gehen
+// unverändert durch (der Baustein setzt sie an derselben Stelle).
+const V3Switch = MenueSchalter;
 
 export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke, onPanelOeffnen }: {
   /** `true` = Handy-Zuschnitt: der Öffner zeigt «···» statt «Ansicht ▾»
@@ -211,11 +194,17 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
           role="group"
           aria-label="Ansicht"
           data-v3-ansicht-panel
-          className="lc-schwebeflaeche absolute right-0 top-full z-overlay mt-1.5 flex w-[15rem] max-w-[calc(100vw-2rem)] flex-col gap-0.5 p-1.5"
+          /* D5: 15 rem war die Breite, in der «Rechtsprechung im Kopf» und «Nur
+             Gesetzestext» umbrachen (Davids Befund «letzter Eintrag zweizeilig
+             umgebrochen»). 17 rem trägt beide einzeilig; die Zeilen kappen
+             notfalls mit Auslassung (`.lc-menu-zeile`), sie brechen nicht.
+             `gap`/`p` fallen weg: die Trennung tragen jetzt die Haarlinien der
+             Zeilen, nicht Zwischenräume. */
+          className="lc-schwebeflaeche absolute right-0 top-full z-overlay mt-1.5 flex w-[19rem] max-w-[calc(100vw-2rem)] flex-col py-1"
         >
           {/* Ä114: dasselbe Wort wie am Öffner und im `aria-label` — der
               Glossar-Eintrag «Menü der Darstellungsschalter → Ansicht». */}
-          <p className="lc-overline px-2.5 pb-1 pt-0.5">Ansicht</p>
+          <MenueTitel>Ansicht</MenueTitel>
           <V3Switch
             an={opt.fussnoten === 'an'}
             label="Fussnoten"
@@ -373,8 +362,11 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
               `components/layout/Topbar.tsx`, «Nur Gesetzestext» hier. Das «Nur»
               ist kein Füllwort — es ist die Abgrenzung, die den Unterschied ohne
               Screenreader lesbar macht (§8). */}
-          <div role="group" aria-label="Grösse nur des Gesetzestexts" className="mt-1 flex items-center justify-between gap-3 border-t border-line px-2.5 pb-0.5 pt-2">
-            <span className="text-body-s text-ink-700">Nur Gesetzestext</span>
+          {/* D5: eigene Zeile mit Label statt neben eine umbrechende
+              Beschriftung gequetscht — die Anatomie steht im geteilten
+              `MenueRegler`, der Wortlaut bleibt (Entscheid David 5B: «Nur»
+              ist das tragende Wort). */}
+          <MenueRegler label="Nur Gesetzestext" ariaLabel="Grösse nur des Gesetzestexts">
             <SchriftgroessenRegler
               schrift={schrift}
               kleinerLabel="Gesetzestext verkleinern"
@@ -384,7 +376,7 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
               groesserTitle="Gesetzestext vergrössern — die Anwendung bleibt gleich gross"
               groesserAttrs={{ 'data-v3-schrift': 'groesser' }}
             />
-          </div>
+          </MenueRegler>
 
           {/* ── A2 · Der Weg zum Panel, der keine Tastatur braucht ────────────
               KEIN `role="menuitem"`: das Panel ist eine ehrliche Disclosure
@@ -394,13 +386,12 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
               Er SCHLIESST das Menü mit — sonst stünde das Dropdown über der
               Fläche, die es gerade geöffnet hat (dieselbe Falle wie Ä19). */}
           {onPanelOeffnen && (
-            <button type="button" data-v3-ansicht-panel-auf data-v3-panel-oeffner
-              onClick={() => { setOffen(false); onPanelOeffnen(); }}
-              title="Gerichtsentscheide, Änderungen und Materialien zur gelesenen Bestimmung"
-              className="mt-1 flex w-full items-center justify-between gap-3 rounded-md border-t border-line px-2.5 pb-0.5 pt-2 text-left text-body-s text-ink-700 transition-colors hover:bg-brass-100/40 hover:text-brass-700">
-              <span>Entscheide &amp; Kontext …</span>
-              <span aria-hidden className="shrink-0 text-brass-700">⚖</span>
-            </button>
+            <MenueZeile
+              label="Entscheide & Kontext …"
+              marke="⚖"
+              titel="Gerichtsentscheide, Änderungen und Materialien zur gelesenen Bestimmung"
+              onKlick={() => { setOffen(false); onPanelOeffnen(); }}
+              attrs={{ 'data-v3-ansicht-panel-auf': '', 'data-v3-panel-oeffner': '' }} />
           )}
         </div>
       )}

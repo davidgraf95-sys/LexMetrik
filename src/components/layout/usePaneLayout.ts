@@ -167,9 +167,18 @@ export interface PaneSteuerung {
   kannOeffnen: boolean;
   /** true, wenn der Pfad bereits offen ist (Primär-URL oder ein Pane) → kein Doppel. */
   istOffen: (pfad: string) => boolean;
+  /** ── M1 · P4 RÜCKWÄRTS (Prüfbefund R6/R11 #16) ───────────────────────────
+   *  Schliesst das SEKUNDÄRE Fenster, das genau diesen Pfad zeigt; sonst
+   *  no-op. Seit M1 hat jeder Pfad in einem Fenster auch einen Reiter — dann
+   *  MUSS das ✕ dieses Reiters das Fenster mitnehmen. Täte es das nicht,
+   *  stünde rechts wieder ein Dokument, das die Leiste nicht mehr führt: genau
+   *  der gemessene P4-Zustand, nur von der anderen Seite. */
+  schliessePane: (pfad: string) => void;
 }
 
-const PaneSteuerungContext = createContext<PaneSteuerung>({ oeffneDaneben: () => {}, kannOeffnen: false, istOffen: () => false });
+const PaneSteuerungContext = createContext<PaneSteuerung>({
+  oeffneDaneben: () => {}, kannOeffnen: false, istOffen: () => false, schliessePane: () => {},
+});
 
 export const PaneSteuerungProvider = PaneSteuerungContext.Provider;
 

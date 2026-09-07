@@ -40,7 +40,14 @@ export function EntscheidZeile({ e, onNorm }: {
       <div className="min-w-0 flex-1 space-y-1.5">
         {/* Bezeichnung — Thema/Leitsatz führt; BGE-Nummer als Identität rechtsbündig. */}
         <div className="flex items-baseline gap-3">
-          <span className={`min-w-0 flex-1 truncate text-body-s ${synth ? 'text-ink-700' : 'font-medium text-ink-900'} group-hover:text-brass-700`}>
+          {/* U3 (Prüfbefund W2·24-R5, 6.9.2026): `truncate` OHNE `title` — gemessen
+              63 gekappte Bezeichnungen @1440 (scrollWidth 1006 gegen clientWidth
+              596) und 325 @390 (bis 360/132, also ~37 % sichtbar). Der volle
+              Wortlaut war weder per Hover noch im A11y-Baum erreichbar. Das
+              Muster steht eine Zeile darüber am `datumUnbekannt`-Titel; hier
+              fehlte es. Reine Ergänzung, kein Layout-Eingriff. */}
+          <span title={bezeichnung}
+            className={`min-w-0 flex-1 truncate text-body-s ${synth ? 'text-ink-700' : 'font-medium text-ink-900'} group-hover:text-brass-700`}>
             {bezeichnung}
           </span>
           <span className={`num shrink-0 text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>

@@ -190,7 +190,11 @@ describe('Leser-Schriftskala — Treue-Grenze und §5-Spiegel', () => {
     expect(stufe, 'Stufe «leser-text» steht nicht mehr in tailwind.config.js').not.toBeNull();
     expect(schrift.SCHRIFT_REM.normal, 'Regler-Basis und Fliesstext-Stufe laufen auseinander (§5)')
       .toBe(Number(stufe![1]));
-    expect(schrift.SCHRIFT_REM.normal).toBe(1.0625);
+    // W2·24-R6c (6.9.2026): 1.0625 → 1.125 — DEKLARIERTE fachliche Änderung
+    // (§6.3) nach D20 (c) «Lesetext 18 px». Die Verschärfung darüber (Wert aus
+    // der Config GELESEN statt abgeschrieben) bleibt unberührt; diese Zeile ist
+    // die zweite Klammer, die verhindert, dass beide Orte GEMEINSAM wandern.
+    expect(schrift.SCHRIFT_REM.normal).toBe(1.125);
   });
 
   it('«normal» ist aus dem CSS-Selektor ausgenommen ⇒ keine Regel im Grundzustand (R6)', () => {

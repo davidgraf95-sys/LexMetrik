@@ -69,20 +69,50 @@ function renderKopf(props: Partial<Parameters<typeof LeserKopf>[0]> & { stufe: K
           die Kopfzeile trägt auf keiner Breite mehr ein ✕, ihr Ziel steht als
           beschrifteter Rücksprung in der Ort-Zone (Herleitung in
           `v3/kopfStufen.ts`, Zusage geprüft in `erlassAnsicht.hatRuecksprung`). */}
-      <LeserKopf erlass={ERLASS} aktArtikel="Art. 429" fussnotenAnzahl={3}
+      {/* D27 (6.9.2026): die Prop `aktArtikel` ist weg — der laufende Artikel
+          steht im Reiter, nicht mehr in dieser Zeile (Herleitung in
+          `v3/LeserKopf.tsx`). */}
+      <LeserKopf erlass={ERLASS} fussnotenAnzahl={3}
         hatAenderungsvermerke {...props} />
     </MemoryRouter>,
   );
 }
 
-describe('LeserKopf — Kürzel, laufender Artikel, Ansicht-Öffner sind IMMER da', () => {
-  it.each<KopfStufe>(['voll', 'kompakt', 'mini'])('Stufe "%s": alle drei Kernelemente stehen', (stufe) => {
+// ── §6.3-DEKLARATION (D27, David 6.9.2026) ─────────────────────────────────
+// «diese funktion, dass es anzeigt in welchem artikel wir sind, soll der tab
+// bekommen. es kann dann direkt im gesetz raus.» Der Fall prüfte bis hierher
+// drei Kernelemente, darunter den LAUFENDEN ARTIKEL. Zwei davon (Kürzel,
+// Ansicht-Öffner) sind unverändert; der dritte ist eine fachliche Änderung mit
+// eigener Begründung und wird darum nicht stillschweigend gestrichen, sondern
+// umgedreht: er steht als Zusage «die Zeile trägt den Ort NICHT MEHR» darunter.
+describe('LeserKopf — Kürzel und Ansicht-Öffner sind IMMER da', () => {
+  it.each<KopfStufe>(['voll', 'kompakt', 'mini'])('Stufe "%s": beide Kernelemente stehen', (stufe) => {
     const html = renderKopf({ stufe });
     expect(html).toContain('data-v3-kopf-kuerzel');
     expect(html).toContain('OR');
-    expect(html).toContain('data-v3-kopf-artikel');
-    expect(html).toContain('Art. 429');
     expect(html).toContain('data-v3-ansicht');
+  });
+});
+
+describe('D27 — die Kopfzeile trägt keine Brotkrume und keine Lesestellung', () => {
+  it.each<KopfStufe>(['voll', 'kompakt', 'mini'])('Stufe "%s": weder Kette noch Rücksprung noch Artikel', (stufe) => {
+    const html = renderKopf({ stufe });
+    // Die Kette «Gesetze › Bund ›» und ihr enger Ersatz «‹ Gesetze». Geprüft
+    // an den KETTEN-GLIEDERN, nicht am blossen Wort «Gesetze» — das steht auch
+    // im `title` des Ansicht-Knopfes («… nur des Gesetzestexts») und wäre dort
+    // ein Fehlalarm.
+    expect(html).not.toContain('data-v3-kopf-krume-kurz');
+    expect(html).not.toContain('>Gesetze<');
+    expect(html).not.toContain('href="/gesetze"');
+    expect(html).not.toContain('>Bund<');
+    expect(html).not.toContain('&#x203A;'); // ›
+    // Der laufende Artikel — er steht seit D27 im Reiter (`lib/tabs`).
+    expect(html).not.toContain('data-v3-kopf-artikel');
+    // Die Landmarke ist mit ihrem Inhalt gegangen: eine `nav` ohne Ziel wäre
+    // für einen Screenreader eine leere Verheissung (§8).
+    expect(html).not.toContain('Ort im Gesetz');
+    // Die ZONE bleibt — sie ist die linke Spur, gegen die die Klapp-Sonde misst.
+    expect(html).toContain('data-v3-kopf-ort');
   });
 });
 
@@ -113,33 +143,27 @@ describe('LeserAnsichtV3 — `aria-controls` zeigt nie auf ein Panel, das es nic
 // Aussage: was fällt, ist die KETTE (Ebene-Stufe + «›») und der Volltitel — der
 // Rücksprung bleibt. Kein Aufweichen: die Ebene-Stufe wird auf beiden engen
 // Zuschnitten weiterhin ausdrücklich als abwesend geprüft.
-describe('LeserKopf — die Kette und der Volltitel fallen unter 900 px, die Krume nicht', () => {
-  it('Stufe "voll": ganze Kette (Gesetze › Bund ›) UND Volltitel sind da', () => {
-    const html = renderKopf({ stufe: 'voll' });
-    expect(html).toContain('>Gesetze<');
-    expect(html).toContain('>Bund<');
-    expect(html).toContain('Obligationenrecht');
-    // Die volle Kette ist NICHT der Rücksprung — sonst prüften die zwei Tests
-    // unten dasselbe Element unter anderem Namen.
-    expect(html).not.toContain('data-v3-kopf-krume-kurz');
-  });
-
-  it('Stufe "kompakt": Kette und Volltitel weg, Rücksprung «‹ Gesetze» da', () => {
-    const html = renderKopf({ stufe: 'kompakt' });
-    expect(html).not.toContain('>Bund<');
-    expect(html).not.toContain('Obligationenrecht');
-    expect(html).toContain('data-v3-kopf-krume-kurz');
-    expect(html).toContain('href="/gesetze"');
-  });
-
-  it('Stufe "mini": dasselbe — auch auf dem engsten Zuschnitt bleibt der Weg nach oben', () => {
-    const html = renderKopf({ stufe: 'mini' });
-    expect(html).not.toContain('>Bund<');
-    expect(html).not.toContain('Obligationenrecht');
-    expect(html).toContain('data-v3-kopf-krume-kurz');
-    expect(html).toContain('href="/gesetze"');
-  });
-});
+// ── §6.3-DEKLARATION (W2·24-R6/L10, 6.9.2026) · DER VOLLTITEL IST WEG ───────
+// Die drei Fälle prüften bis hierher «Kette UND Volltitel». Der Volltitel steht
+// seit R6 nicht mehr in der Kopfzeile — er stand dort DOPPELT: über der H1
+// «Bundesgesetz betreffend die Ergänzung des ZGB (OR)» wiederholte die Krume
+// denselben Namen, auf dem CISG zusätzlich abgeschnitten («… (Wiener
+// Kaufrec…»). Das ist eine deklarierte fachliche Änderung, kein Refactoring:
+// die ERWARTUNG des Tests ändert sich, nicht seine Absicht. Was er weiterhin
+// misst, ist die Stufen-Mechanik der Kette — sie ist unberührt, und die beiden
+// engen Stufen unten stehen byte-gleich (dort war der Volltitel schon vorher
+// abwesend, die Zusage gilt jetzt für alle drei Stufen).
+// ── §6.3-DEKLARATION (D27, David 6.9.2026) · DIE KETTE IST GANZ WEG ─────────
+// Hier standen drei Fälle zur STUFEN-MECHANIK der Krume: «voll» trug die ganze
+// Kette (Gesetze › Bund ›), «kompakt» und «mini» statt ihrer den Rücksprung
+// «‹ Gesetze». Mit D27 gibt es weder das eine noch das andere — der Ort steht
+// im Reiter, der Rücksprung in der Hauptnavigation. Die Stufen-Mechanik, die
+// diese drei Fälle massen, existiert damit nicht mehr; sie stehenzulassen
+// hiesse, ein Tor zu behalten, das nichts mehr bewachen kann (§6.7/§17).
+// Die Zusage, die BLEIBT, steht im Fall «D27 — die Kopfzeile trägt keine
+// Brotkrume und keine Lesestellung» weiter oben und prüft alle drei Stufen.
+// Was die Kopf-STUFEN sonst noch entscheiden (Volltitel-Regel des Kürzels,
+// Panel-Gestalt), ist unberührt und in `leser-v3-kopfstufen.test.ts` bewacht.
 
 describe('LeserKopf — panelOeffner-Slot', () => {
   it('gesetzt: der Slot rendert seinen Inhalt', () => {
@@ -187,31 +211,30 @@ describe('LeserSeitenleiste — feste Dokument-Reihenfolge', () => {
   // Etappen) — die Reihenfolge-Zusage endet darum beim Baum. Die tragende Aussage
   // des Falls («das Feld liegt IM klebenden Block, nicht davor») bleibt Wort für
   // Wort dieselbe; nur das nicht mehr existierende Element fällt aus der Kette.
-  it('Übersicht → [Feld → Baumkopf] klebend → Baum', () => {
-    const html = renderLeiste({
-      uebersicht: <div data-marker-u>U</div>,
-      suchFeld: <div data-marker-f>F</div>,
-    });
+  // ── §6.3-DEKLARATION (D28, David 6.9.2026) ────────────────────────────────
+  // «die suchleiste im gesetz, welche sich oben an der gliederung befindet, will
+  // ich oben am gesetz». Der Fall prüfte die Reihenfolge Übersicht → [Feld →
+  // Baumkopf] → Baum. Das FELD ist aus dieser Leiste heraus (es sitzt im
+  // klebenden Kopf-Block, `v3/SuchZone.tsx`); die Reihenfolge-Zusage der übrigen
+  // Elemente bleibt Wort für Wort dieselbe, die Feld-Zusage wird umgedreht.
+  it('Übersicht → Baumkopf klebend → Baum', () => {
+    const html = renderLeiste({ uebersicht: <div data-marker-u>U</div> });
     const iU = html.indexOf('data-marker-u');
-    const iF = html.indexOf('data-marker-f');
     const iBaumkopf = html.indexOf('data-v3-leiste-baumkopf');
     const iB = html.indexOf('data-marker-baum');
-    expect([iU, iF, iBaumkopf, iB].every((i) => i >= 0)).toBe(true);
+    expect([iU, iBaumkopf, iB].every((i) => i >= 0)).toBe(true);
     // Die Übersichtsbox bleibt oben und ausserhalb — sie ist
     // Ankunfts-Information, kein Werkzeug, und darf wegscrollen.
     expect(iU).toBeLessThan(iBaumkopf);
-    // DAS FELD LIEGT IM KLEBENDEN BLOCK, nicht davor: sein Marker steht im
-    // Markup NACH dem Blockanfang. Genau diese Zeile hätte den Vorzustand rot
-    // gemacht — dort stand das Feld davor.
-    expect(iBaumkopf).toBeLessThan(iF);
-    // … und darin ZUOBERST, vor der Gliederungs-Kopfzeile.
-    expect(iF).toBeLessThan(html.indexOf('data-v3-alle'));
-    expect(iF).toBeLessThan(iB);
+    expect(iBaumkopf).toBeLessThan(iB);
   });
 
-  it('suchFeld={undefined} (Sheet-Fall): [data-v3-leiste-feld] fehlt GANZ', () => {
-    const html = renderLeiste({ uebersicht: <div data-marker-u>U</div>, suchFeld: undefined });
+  it('D28: die Gliederung trägt KEIN Suchfeld mehr — auf keinem Weg', () => {
+    // Kein Slot, keine Hülle, kein Rest-Markup. Rot-Beweis: mit dem alten
+    // Bauteil (Feld im Sockel) stand `data-v3-leiste-feld` im Markup.
+    const html = renderLeiste({ uebersicht: <div data-marker-u>U</div> });
     expect(html).not.toContain('data-v3-leiste-feld');
+    expect(html).not.toContain('data-v3-suchsprung');
   });
 
   // C4: der Slot ist weg — die Zone kann darum nicht mehr erscheinen. Die Sonde

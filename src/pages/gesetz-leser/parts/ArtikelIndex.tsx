@@ -54,7 +54,7 @@ function Zeile({ z, aktiv, onSprung }: {
       <div className="flex items-start">
         {/* F5-Marke — dieselbe 2-px-Messingkante wie im Gliederungsbaum
             (SektionBaumTOC), immer im Markup (CLS 0, §15.2). */}
-        <span aria-hidden className={`mt-1 h-3.5 w-0.5 shrink-0 rounded-full ${aktiv ? 'bg-brass-600' : 'bg-transparent'}`} />
+        <span aria-hidden className={`mt-1 h-3.5 w-0.5 shrink-0 ${aktiv ? 'bg-brass-600' : 'bg-transparent'}`} />
         <button type="button"
           onClick={() => { merkeRuecksprungVonDom(); onSprung(z.token); }}
           data-toc-aktiv={aktiv ? '1' : undefined}

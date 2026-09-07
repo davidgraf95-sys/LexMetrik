@@ -21,10 +21,25 @@
 // Schreibweise; hier steht die Frage, die David gestellt hat: ist etwas
 // abgeschnitten.
 //
-// DREI LAGEN, weil das Feld drei Zuhause hat (Ä19): Spalte (dort trat der Befund
-// auf), Kopf-Zone bei eingeklappter Gliederung, und die Spalte im GESCROLLTEN
-// Zustand — dort führt der klebende Sockel nur 2 px über dem Feld, die OBERE
-// Kante war also derselbe Fall wie die linke.
+// DREI LAGEN, weil das Feld drei Zuhause hatte (Ä19): Spalte (dort trat der
+// Befund auf), Kopf-Zone bei eingeklappter Gliederung, und die Spalte im
+// GESCROLLTEN Zustand — dort führte der klebende Sockel nur 2 px über dem Feld,
+// die OBERE Kante war also derselbe Fall wie die linke.
+//
+// ── §6.3-DEKLARATION D28 (David 6.9.2026) · DAS FELD HAT NUR NOCH EIN ZUHAUSE ─
+// «die suchleiste im gesetz … will ich oben am gesetz.» Das Feld sitzt seither
+// in JEDER Lage im klebenden Kopf-Block und damit in KEINEM scrollenden
+// Behälter mehr — der Ort des Befunds (der Leisten-Scroller) existiert für das
+// Feld nicht mehr. Die Vorbedingung «es liegt in einem clippenden Scroller»
+// wird darum fallengelassen; sie beschriebe eine Lage, die es nicht gibt, und
+// machte den Fall rot, ohne dass etwas abgeschnitten wäre.
+// WAS AN IHRE STELLE TRITT und den Fall scharf hält: die Zusage, die den Ring
+// überall immun macht — er wird INNERHALB der Border-Box gezeichnet
+// (`outline-offset <= -outline-width`). Das ist prüfbar, es ist die Ursache des
+// Fixes statt seiner Wirkung an einer Stelle, und es fällt genau bei der
+// Rot-Probe unten (`outline-offset: 0`). Die Kanten-Messung gegen einen
+// clippenden Vorfahren BLEIBT — sie greift, sobald das Feld je wieder in einen
+// scrollenden Behälter gerät.
 //
 // ROT ZU BEKOMMEN (§6.7): in `src/index.css` beim Selektor
 // `.lc-input.lc-v3-feld:focus` den Wert `outline-offset: -2px` auf `0` setzen —
@@ -104,6 +119,30 @@ async function warteLeser(page: Page): Promise<void> {
   await page.evaluate(() => document.fonts?.ready)
 }
 
+/**
+ * D28-Nachzug: der Ring liegt INNERHALB der Border-Box des Feldes.
+ *
+ * Das ist die Eigenschaft, die ihn in jedem Behälter unbeschneidbar macht —
+ * gemessen an den `outline`-Werten des fokussierten Feldes, nicht an der
+ * CSS-Schreibweise. Rot, sobald `outline-offset` auf 0 (oder positiv) geht.
+ */
+async function ringLiegtInnen(page: Page): Promise<{ ow: number; oo: number }> {
+  return page.evaluate(() => {
+    const inp = document.querySelector('[data-v3-suchsprung] input') as HTMLElement | null
+    if (!inp) throw new Error('kein Suchfeld im DOM')
+    const cs = getComputedStyle(inp)
+    return { ow: parseFloat(cs.outlineWidth) || 0, oo: parseFloat(cs.outlineOffset) || 0 }
+  })
+}
+
+function pruefeInnen(m: { ow: number; oo: number }, lage: string): void {
+  // Positiv-Sonde: es gibt überhaupt einen Ring. Ohne sie wäre «nicht
+  // beschnitten» bei fehlendem Fokusring trivial erfüllt (§6.7).
+  expect(m.ow, `${lage}: gar kein Fokusring (outline-width 0)`).toBeGreaterThan(0)
+  expect(m.oo, `${lage}: Ring liegt aussen (outline-offset ${m.oo}, width ${m.ow}) — in jedem Scroller angreifbar`)
+    .toBeLessThanOrEqual(-m.ow)
+}
+
 async function fokussiere(page: Page): Promise<void> {
   const feld = page.locator('[data-v3-suchsprung] input').first()
   await feld.click()
@@ -116,13 +155,13 @@ for (const schema of ['light', 'dark'] as const) {
     await page.emulateMedia({ colorScheme: schema, reducedMotion: 'reduce' })
     await page.setViewportSize({ width: 1440, height: 900 })
     await warteLeser(page)
-    // Vorbedingung: die Gliederung STEHT als Spalte, das Feld liegt also im
-    // Leisten-Scroller — genau die Lage, in der David geklickt hat.
+    // Vorbedingung: die Gliederung STEHT als Spalte — die Lage, in der David
+    // geklickt hat. Das Feld liegt seit D28 nicht mehr IN ihr, sondern im
+    // Kopf-Block darüber; geprüft wird beides, die Lage und der Ring.
     await expect(page.locator('[data-v3-aside]')).toHaveCount(1)
     await fokussiere(page)
-    const k = await ringKanten(page)
-    expect(k.clipMarke, 'Vorbedingung: das Feld liegt in einem clippenden Scroller').not.toBe('(keiner)')
-    pruefeGanz(k, `Spalte/${schema}`)
+    pruefeInnen(await ringLiegtInnen(page), `Spalte/${schema}`)
+    pruefeGanz(await ringKanten(page), `Spalte/${schema}`)
   })
 }
 
@@ -134,6 +173,7 @@ test('(b) Kopf-Zone bei eingeklappter Gliederung: Ring vollständig sichtbar', a
   await zu.click()
   await expect(page.locator('[data-v3-such-zone] input')).toHaveCount(1)
   await fokussiere(page)
+  pruefeInnen(await ringLiegtInnen(page), 'Kopf-Zone')
   pruefeGanz(await ringKanten(page), 'Kopf-Zone')
 })
 
@@ -160,6 +200,7 @@ test('(c) Spalte GESCROLLT: auch die obere Kante bleibt ganz', async ({ page }) 
   await scroller.evaluate((el) => { el.scrollTop = el.scrollHeight })
   await expect.poll(async () => scroller.evaluate((el) => el.scrollTop)).toBeGreaterThan(100)
   await fokussiere(page)
+  pruefeInnen(await ringLiegtInnen(page), 'Spalte gescrollt')
   pruefeGanz(await ringKanten(page), 'Spalte gescrollt')
 })
 

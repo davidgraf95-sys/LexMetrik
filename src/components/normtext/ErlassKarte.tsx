@@ -5,6 +5,7 @@ import { useErlassOeffnen, istErlassOffen } from '../../lib/useErlassOeffnen';
 import { werkzeugeFuerNorm } from '../../lib/normtext/werkzeuge';
 import { erlassPfad } from '../../lib/normtext/erlassAdresse';
 import { StandChip } from '../ui/StandChip';
+import { ListenTabelle, type ListenZeileDaten } from '../ui/ListenTabelle';
 
 // Klick-Handler für eine Erlass-Verlinkung (Punkt G): der <Link> trägt weiter den
 // nackten Basispfad (SEO/Mittelklick/Cmd-Klick/Copy-Link). Nur der EINFACHE
@@ -117,48 +118,24 @@ function KarteInhalt({ e }: { e: BrowseErlass }) {
   );
 }
 
-// Kompakte Zeile für untergeordnetes Ausführungsrecht (Verordnungen/Reglemente):
-// dezent, einzeilig — damit die Leitgesetze (Karten) prominent bleiben
-// (Praktikabilität, Auftrag David). Gleiche Verlinkung wie die Karte.
+// ─── D24 (David 6.9.2026) · EINE TABELLARISCHE ERLASSLISTE ───────────────────
 //
-// `variant='leitgesetz'` (J3-Nachzug, Auftrag David 21.8.2026): für Listen, in
-// denen die Zeile selbst das Leitgesetz ist (Rechtsgebiets-Übersicht /gesetze)
-// kehrt sich die Hierarchie um — der ausgeschriebene Titel ist die Hauptaussage
-// (bestehende `text-body-s`, umbricht statt `truncate`/Abschneiden), Kürzel +
-// SR-Nr. rücken als sekundäre Mono-Angabe dahinter. Default (`'kompakt'`,
-// unverändert) bleibt für RechtsgebietSicht/geteilt.tsx, wo die Verordnung nur
-// über ihr Leitgesetz identifiziert werden muss, nicht über den eigenen Titel.
-export function ErlassZeile({ e, variant = 'kompakt' }: { e: BrowseErlass; variant?: 'kompakt' | 'leitgesetz' }) {
-  const inhalt = variant === 'leitgesetz' ? (
-    <>
-      <span className="text-body-s text-ink-800 leading-snug break-words">{e.titel}</span>
-      <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5 num text-micro text-ink-500">
-        <span className="font-medium text-ink-600">{e.kuerzel}</span>
-        {e.sr && <span>SR {e.sr}</span>}
-        {/* §8: aufgehobener Erlass sichtbar markiert, bleibt aber verlinkt/lesbar. */}
-        {e.aufgehoben && <span className="lc-badge lc-badge-danger">aufgehoben</span>}
-        {e.status === 'nur-live-link' && <span aria-hidden className="text-brass-700">↗ Live-Link</span>}
-      </span>
-    </>
-  ) : (
-    <>
-      <span className="font-medium text-ink-700 shrink-0">{e.kuerzel}</span>
-      {/* §8: aufgehobener Erlass sichtbar markiert, bleibt aber verlinkt/lesbar. */}
-      {e.aufgehoben && <span className="lc-badge lc-badge-danger shrink-0">aufgehoben</span>}
-      <span className="text-ink-500 truncate">{e.titel}</span>
-      {e.sr && <span className="num text-xs text-ink-500 shrink-0 ml-auto">SR {e.sr}</span>}
-      {e.status === 'nur-live-link' && <span aria-hidden className="text-xs text-brass-700 shrink-0">↗</span>}
-    </>
-  );
-  const cls = variant === 'leitgesetz'
-    ? 'flex flex-col gap-0.5 text-body-s no-underline rounded px-2 py-1.5 hover:bg-brass-100/30 transition-colors min-w-0'
-    : 'flex items-baseline gap-2 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors min-w-0';
-  const oeffne = useErlassOeffnen();
-  const basePath = erlassPfad(e);
-  return istLesbar(e)
-    ? <Link to={basePath} onClick={macheOeffnenHandler(e, basePath, oeffne)} className={cls}>{inhalt}</Link>
-    : <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>;
-}
+// Hier standen ZWEI Zeilen-Bauformen für dieselbe Inhaltsklasse: `ErlassZeile`
+// (Kürzel · Titel · SR, in zwei Varianten `kompakt`/`leitgesetz`) und
+// `SysZeile` (SR · Titel · Artikelzahl/Jahr). Beide sind auf den EINEN
+// Listen-Baustein `ui/ListenTabelle` gezogen, die Kopien sind gelöscht, nicht
+// angeglichen (§5/§10) — die Variante `leitgesetz` löst sich dabei ganz auf:
+// ihre Umkehrung «Titel führt, Kürzel sekundär» IST die Spaltenordnung der
+// Tabelle (Nummer · Titel · Meta), sie braucht keinen Schalter mehr.
+//
+// Was der Zusammenzug fachlich bewahrt: die Verlinkung samt Zweit-Instanz-
+// Handler, der amtliche Aussen-Link für `nur-live-link` (§8, mit «↗»), die
+// «aufgehoben»-Markierung, Artikelzahl, Stand-Jahr, SR-Nummer.
+
+/** Woraus die Nummern-Spalte gespeist wird. Kantonale «kuerzel» sind oft der
+ *  ganze (bis 276 Zeichen lange) Titel — dort trägt die systematische Nummer
+ *  die Spalte; beim Bund ist das Kürzel der Identitäts-Anker. */
+export type ErlassListenArt = 'kanton' | 'bund';
 
 // Stand-Jahr (ISO «YYYY-…») — reine Anzeige. Sehr alte Stände (vor 1990) werden
 // dezent markiert: ein sehr alter Stand ist für die Anwältin ein nützliches
@@ -167,47 +144,78 @@ export function ErlassZeile({ e, variant = 'kompakt' }: { e: BrowseErlass; varia
 const standJahr = (stand: string): string | null =>
   stand.slice(0, 4).match(/^\d{4}$/)?.[0] ?? null;
 
-// Kompakte, überlaufsichere Erlass-Zeile für die Kanton-Sichten (Systematik +
-// Relevanz + Rechtsgebiet): SR-Nr fix links (tabellarisch), dann der Titel, dann
-// die Meta (Artikelzahl · Stand-Jahr) rechts. Bewusst NICHT ErlassZeile —
-// kantonale «kuerzel» sind oft der ganze (bis 276 Z.) Titel.
-//
-// A14 (David 5.7.2026): der lange amtliche Titel wird NICHT MEHR abgeschnitten
-// (kein `truncate` → «aktuell viel abgeschnitten»). Drei-Spalten-Grid
-// (SR · Titel · Meta) mit `items-baseline`: der Titel umbricht in der mittleren
-// Spalte auf beliebig viele Zeilen (`break-words`, `minmax(0,1fr)` gegen
-// Overflow), SR und Meta bleiben auf der ersten Grundlinie. So bleibt der ganze
-// Titel lesbar — auch @390 — ohne H-Overflow.
-export function SysZeile({ e }: { e: BrowseErlass }) {
-  const jahr = standJahr(e.stand);
-  const altDezent = jahr != null && Number(jahr) < 1990;
-  const inhalt = (
-    <>
-      <span className="num text-xs text-ink-500 shrink-0 w-20 truncate">{e.sr}</span>
-      <span className="text-ink-700 break-words group-hover/z:text-brass-700 min-w-0">{e.titel}</span>
-      {istLesbar(e) ? (
-        <span className="shrink-0 flex items-baseline gap-2 num text-xs">
-          {e.artikelAnzahl > 0 && <span className="text-ink-500">{e.artikelAnzahl} Art.</span>}
-          {/* Sehr alte Stände dezent (italic) statt blass — Kontrast (S10/WCAG) bleibt gewahrt. */}
-          {jahr && <span className={`hidden sm:inline text-ink-500${altDezent ? ' italic' : ''}`}>{jahr}</span>}
-        </span>
-      ) : (
-        <span aria-hidden className="text-xs text-brass-700 shrink-0">↗</span>
-      )}
-    </>
-  );
-  const cls = 'group/z grid grid-cols-[auto_minmax(0,1fr)_auto] items-baseline gap-3 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors';
+// D24: «Klammer-Nummer im Titel entfällt, da eigene Spalte». Der Titel trug die
+// systematische Nummer ein zweites Mal («Abfallverordnung (786.100)») — im
+// Register GEMESSEN am 6.9.2026: 587 Titel enden auf eine Klammer-Zahl, und in
+// ALLEN 587 Fällen sind deren Ziffern zeichengleich mit den Ziffern der
+// SR-/Systematik-Nummer derselben Zeile (0 Abweichungen). Nur dieser bewiesene
+// Identitätsfall wird entfernt — keine Heuristik auf «sieht aus wie eine
+// Nummer», sondern der Abgleich gegen das Datum der Nachbarspalte. Das Datum
+// selbst bleibt unangetastet (die Doppelung im Feld `titel` gehört in die
+// Korpus-Werkstatt, §5); hier fällt nur die zweite ANZEIGE derselben Zahl.
+const KLAMMER_NUMMER = /\s*\(([0-9][0-9.]*)\)\s*$/;
+function ohneDoppelteNummer(titel: string, nummer: string | null | undefined): string {
+  const m = KLAMMER_NUMMER.exec(titel);
+  if (!m || !nummer) return titel;
+  const imTitel = m[1].replace(/\D/g, '');
+  const inSpalte = nummer.replace(/\D/g, '');
+  return imTitel && imTitel === inSpalte ? titel.slice(0, m.index) : titel;
+}
+
+/** Die Erlassliste als EINE Tabelle: Nummer/Kürzel · Titel · Meta, Zeile i
+ *  links und rechts auf derselben Höhe (D24). */
+export function ErlassTabelle({ erlasse, art, spaltig = true, beschriftung }: {
+  erlasse: BrowseErlass[];
+  art: ErlassListenArt;
+  /** `false` erzwingt eine Spalte (kurze Listen, enge Flächen). */
+  spaltig?: boolean;
+  beschriftung: string;
+}) {
+  // Ein Hook-Aufruf für die ganze Liste (Rules of Hooks) — die Zeilen bekommen
+  // den fertigen Handler als Wert.
   const oeffne = useErlassOeffnen();
-  const basePath = erlassPfad(e);
-  return !istLesbar(e)
-    ? <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>
-    : (
-      <Link
-        to={basePath}
-        onClick={macheOeffnenHandler(e, basePath, oeffne)}
-        className={cls}
-      >{inhalt}</Link>
+  const zeilen: ListenZeileDaten[] = erlasse.map((e) => {
+    const nummer = art === 'kanton' ? (e.sr ?? null) : e.kuerzel;
+    const jahr = standJahr(e.stand);
+    const altDezent = jahr != null && Number(jahr) < 1990;
+    const lesbar = istLesbar(e);
+    const meta = (
+      <>
+        {art === 'kanton' ? (
+          <>
+            {e.artikelAnzahl > 0 && <span>{e.artikelAnzahl} Art.</span>}
+            {/* Sehr alte Stände dezent (italic) statt blass — Kontrast (S10/WCAG) bleibt gewahrt. */}
+            {jahr && <span className={altDezent ? 'italic' : undefined}>{jahr}</span>}
+          </>
+        ) : (
+          e.sr && <span>SR {e.sr}</span>
+        )}
+        {/* §8: führt aus der App hinaus (amtliche Fassung), gleiche Glyphe wie an den Quell-Links. */}
+        {!lesbar && <span aria-hidden className="tb-extern">↗</span>}
+      </>
     );
+    const basePath = erlassPfad(e);
+    return {
+      id: e.key,
+      nummer,
+      titel: ohneDoppelteNummer(e.titel, nummer),
+      // §8: ganz aufgehobener Erlass bleibt auffindbar, ist aber sichtbar markiert.
+      marken: e.aufgehoben ? <span className="lc-badge lc-badge-danger mr-1.5">aufgehoben</span> : undefined,
+      meta,
+      href: lesbar ? basePath : e.quelleUrl,
+      extern: !lesbar,
+      onClick: lesbar ? macheOeffnenHandler(e, basePath, oeffne) : undefined,
+    };
+  });
+  return (
+    <ListenTabelle
+      zeilen={zeilen}
+      register="g"
+      spaltig={spaltig}
+      nrBreite={art === 'kanton' ? '6.5rem' : '7rem'}
+      beschriftung={beschriftung}
+    />
+  );
 }
 
 export function ErlassKarte({ e }: { e: BrowseErlass }) {

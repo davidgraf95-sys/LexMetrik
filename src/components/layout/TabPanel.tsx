@@ -1,13 +1,13 @@
 import { useRef, useState } from 'react';
 import { SchliessKnopf } from '../ui/SchliessKnopf';
-import { ordneTabsUm, tabSchluessel, type TabEintrag } from '../../lib/tabs';
-import { erlassVonPfad, verlaufLabel, type VerlaufManifeste } from '../../lib/verlaufLabel';
+import { ordneTabsUm, tabSchluessel, type TabEintrag, reiterKurzformText, reiterTitel } from '../../lib/tabs';
+import { type VerlaufManifeste } from '../../lib/verlaufLabel';
 import {
-  reiterKategorie, herkunftVon, kantonVonPfad, artikelLabelVonPfad, gleicheReiterGruppe,
+  reiterKategorie, herkunftVon, artikelLabelVonPfad, gleicheReiterGruppe,
   KAT_META, KAT_ORDER, HERKUNFT_ORDER, HERKUNFT_LABEL,
   type Herkunft,
 } from '../../lib/tabGruppen';
-import { HerkunftIcon } from '../HerkunftIcon';
+import { RegisterMarke } from '../suche/RegisterMarke';
 
 // ─── Vertikales Reiter-Panel (Auftrag David 26.6.2026, P3) ──────────────────
 //
@@ -73,15 +73,18 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
   // Eine Reiter-Zeile: dreispaltig (Icon · Name · Artikel) + Schliessen-Knopf.
   // `liste`/`idx` sind die Blatt-Liste dieser Zeile und ihre Position darin —
   // daraus leiten sich die Nachbarn für die ▲/▼-Tasten ab (immer dieselbe Gruppe).
-  const zeile = (t: TabEintrag, alsGesetz: boolean, kat: typeof KAT_ORDER[number], liste: TabEintrag[], idx: number) => {
+  const zeile = (t: TabEintrag, alsGesetz: boolean, liste: TabEintrag[], idx: number) => {
     const aktiv = tabSchluessel(t.path) === aktivSchluessel;
-    const e = alsGesetz ? erlassVonPfad(t.path, manifeste) : null;
-    const name = (alsGesetz && e?.kuerzel) ? e.kuerzel : verlaufLabel(t.path, manifeste);
+    // ── R3 (Prüfbefund R11, 6.9.2026) · DIESELBE BESCHRIFTUNG WIE DIE LEISTE ─
+    // GEMESSEN @390: das Blatt baute seine Namen selbst (`verlaufLabel`) und
+    // zeigte darum den Volltitel, wo die Leiste die Kurzform trägt —
+    // «Verfahrens- & Rechtsmittelfristen» statt «Fristenrechner», und für
+    // Entscheide die volle Zitierung samt Urteilsdatum. Zwei Beschriftungen
+    // für dieselbe Sache sind eine zweite Wahrheit (§5). Beide Flächen lesen
+    // jetzt `lib/tabs` — Kurzform in der Zeile, Volltitel im `title`.
+    const name = reiterKurzformText(t, manifeste);
+    const titel = reiterTitel(t, manifeste);
     const art = alsGesetz ? artikelLabelVonPfad(t.path) : null;
-    // herkunft kann null sein, wenn das Manifest noch nicht geladen ist → dann
-    // KEIN (falsches) Schweizerkreuz, sondern das neutrale Kategorie-Piktogramm.
-    const herkunft = alsGesetz ? herkunftVon(t.path, manifeste) : null;
-    const kanton = alsGesetz ? kantonVonPfad(t.path, manifeste) : null;
     const ueber = ueberPath === t.path;
     const vorher = liste[idx - 1];
     const nachher = liste[idx + 1];
@@ -107,13 +110,19 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
         onDragEnd={() => { gezogenRef.current = null; setUeberPath(null); }}
         className={`flex items-center rounded-md ${ueber ? 'border-t-2 border-brass-400' : ''} ${aktiv ? 'bg-brass-100/50' : 'hover:bg-brass-100/30'}`}>
         <button type="button" aria-current={aktiv ? 'page' : undefined}
-          onClick={() => onNavigate(t.path)}
-          className={`grid flex-1 min-w-0 grid-cols-[1rem_1fr_auto] items-center gap-2 text-left px-2 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>
-          {/* Spalte 1 — Herkunft/Kategorie-Icon */}
-          {alsGesetz && herkunft
-            ? <HerkunftIcon herkunft={herkunft} kanton={kanton} className="h-4 w-4" />
-            : <span aria-hidden className="text-center text-ink-500">{KAT_META[kat].pikto}</span>}
-          {/* Spalte 2 — Name/Abkürzung */}
+          onClick={() => onNavigate(t.path)} title={titel}
+          className={`grid flex-1 min-w-0 grid-cols-[3px_1fr_auto] items-center gap-2 text-left px-2 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>
+          {/* ── R4 · SPALTE 1 IST DER REGISTERSTRICH, KEIN BILD ──────────────
+              GEMESSEN @390: die Zeile führte ein Kantonswappen als <img>, sonst
+              ein Kategorie-Piktogramm (⚖ ✎ ∑) — zwei Bildsprachen in einer
+              Spalte, und die Wappen zogen als einzige Farbflächen der ganzen
+              Liste den Blick auf sich. Der Registerstrich ist dasselbe Zeichen
+              wie in der Leiste darüber und im Such-Panel: EINE Marke, EINE
+              Quelle (`layout/bereiche`, §5). Die HERKUNFT geht nicht verloren —
+              sie ist die Untergruppe, unter der die Zeile steht («Bund»,
+              «Kanton», «International»), und steht im `title`. */}
+          <RegisterMarke route={t.path} />
+          {/* Spalte 2 — Kurzform */}
           <span className="truncate">{name}</span>
           {/* Spalte 3 — aktueller Artikel (nur Gesetze) */}
           {art ? <span className="num shrink-0 text-micro text-ink-500">{art}</span> : <span />}
@@ -176,7 +185,9 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
     <button type="button" onClick={() => toggle(id)} aria-expanded={offen(id)}
       className={`flex w-full items-center gap-1.5 rounded px-1.5 py-1 text-left transition-colors lc-hover-flaeche ${tief ? 'text-xs pl-3' : 'lc-overline'}`}>
       <span aria-hidden className={`text-micro text-ink-400 transition-transform ${offen(id) ? '' : '-rotate-90'}`}>▾</span>
-      <span className="flex-1 truncate">{label}</span>
+      {/* R3 · «kein Abschnitt ohne title»: der Gruppenname wird gekappt, sobald
+          das Blatt schmal wird — der Tooltip gibt ihn ganz zurück (§8). */}
+      <span className="flex-1 truncate" title={label}>{label}</span>
       <span className="num text-micro text-ink-400">{anzahl}</span>
     </button>
   );
@@ -209,15 +220,15 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
                           return (
                             <div key={h}>
                               {kopf(subId, HERKUNFT_LABEL[h], subItems.length, true)}
-                              {offen(subId) && <ul className="mt-0.5 space-y-0.5">{subItems.map((t, i) => zeile(t, true, kat, subItems, i))}</ul>}
+                              {offen(subId) && <ul className="mt-0.5 space-y-0.5">{subItems.map((t, i) => zeile(t, true, subItems, i))}</ul>}
                             </div>
                           );
                         })}
-                        {ungeklaert.length > 0 && <ul className="mt-0.5 space-y-0.5">{ungeklaert.map((t, i) => zeile(t, true, kat, ungeklaert, i))}</ul>}
+                        {ungeklaert.length > 0 && <ul className="mt-0.5 space-y-0.5">{ungeklaert.map((t, i) => zeile(t, true, ungeklaert, i))}</ul>}
                       </div>
                     );
                   })()
-                : <ul className="mt-0.5 space-y-0.5 pl-2">{items.map((t, i) => zeile(t, false, kat, items, i))}</ul>
+                : <ul className="mt-0.5 space-y-0.5 pl-2">{items.map((t, i) => zeile(t, false, items, i))}</ul>
             )}
           </div>
         );

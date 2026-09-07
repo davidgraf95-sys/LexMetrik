@@ -329,7 +329,12 @@ export function retteFokusVorZuklapp(tocCont: HTMLElement | null, schliessen: st
 
   // F3b: die sichtbare Marken-Zeile schlägt die (off-screen liegende) Elternzeile.
   const marke = tocCont.querySelector('[data-toc-aktiv]') as HTMLElement | null;
-  const ersatz = (aeusserster.zeile.querySelector(':scope > div > button[title]')
+  // P8-NACHZUG (W2·24-R6c): die Sprung-Zeile ist seither ein `<a href="#art-…">`,
+  // wo sie eine Adresse hat, und nur sonst noch ein `<button>` — der Selektor
+  // muss BEIDE treffen, sonst fände die Fokus-Rettung ihr Ziel nicht mehr und
+  // der Fokus fiele wieder an `<body>` (WCAG 2.4.3). Der Chevron daneben bleibt
+  // ein Knopf und ist der zweite Ersatzweg.
+  const ersatz = (aeusserster.zeile.querySelector(':scope > div > :is(a, button)[title]')
     ?? aeusserster.zeile.querySelector(':scope > div > button[aria-expanded]')) as HTMLElement | null;
   const ziel = marke ?? ersatz;
   if (!ziel || ziel === aktiv) return false;

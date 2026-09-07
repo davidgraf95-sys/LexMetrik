@@ -85,7 +85,7 @@ import {
  * Beides zusammen, nicht eines statt des anderen: wer nur tabbt, käme sonst nur
  * an die bereits gerenderten Chips.
  */
-const StatusGruppe = memo(function StatusGruppe({ status, kanten, gesamtRoh, filter, normZitat, revision }: {
+const StatusGruppe = memo(function StatusGruppe({ status, kanten, gesamtRoh, filter, normZitat, revision, form = 'zeile' }: {
   status: BezugStatus;
   kanten: readonly Bezug[];
   gesamtRoh: number | undefined;
@@ -93,6 +93,8 @@ const StatusGruppe = memo(function StatusGruppe({ status, kanten, gesamtRoh, fil
   filter: Verkuerzung | null;
   normZitat: string;
   revision?: ArtikelRevision | null;
+  /** Gestalt der Gruppe — s. `BezuegeZeile`. */
+  form?: BezuegeForm;
 }) {
   const [sichtbar, setSichtbar] = useState(PRO_SCHRITT);
   const linieRef = useRef<HTMLDivElement>(null);
@@ -139,7 +141,13 @@ const StatusGruppe = memo(function StatusGruppe({ status, kanten, gesamtRoh, fil
     : `${STATUS_LABEL[status]} — ${zahl(gezeigt)} von ${zahl(anzahl)} gezeigt`;
 
   return (
-    <div data-bezug-gruppe={status} className="flex flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-2">
+    <div data-bezug-gruppe={status}
+      // R4-Randform: Kopf IMMER über der Liste (die 210-px-Spalte trägt kein
+      // Nebeneinander) — dieselbe Anordnung, die die Zeile unter `sm` ohnehin
+      // fährt; nur der `sm:`-Umbruch entfällt.
+      className={form === 'rand'
+        ? 'flex flex-col gap-1'
+        : 'flex flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-2'}>
       {/* Der Kopf steht FEST und scrollt nicht mit: er sagt, WAS in der Linie
           steht, und diese Auskunft darf nicht wegscrollen (§8).
           MOBIL ÜBER der Linie, ab sm daneben — gemessen 29.7.2026 bei 375 px:
@@ -160,14 +168,29 @@ const StatusGruppe = memo(function StatusGruppe({ status, kanten, gesamtRoh, fil
           oben), Typo und Zähler-Anatomie kommen jetzt aus dem Baustein.
           `als="span"`: der Kopf ist eine Zelle dieser Flex-Zeile. */}
       <GruppenKopf dicht als="span" titel={KLASSE_KURZ[status]} zahl={zahlZeile}
-        title={kopfTitel} className="shrink-0 whitespace-nowrap sm:min-w-[11rem]" />
+        title={kopfTitel}
+        className={form === 'rand'
+          ? 'lr-notiz-kopf shrink-0'
+          : 'shrink-0 whitespace-nowrap sm:min-w-[11rem]'} />
       <div
         data-bezug-linie={status}
         ref={linieRef}
-        className="lc-bezug-linie flex h-7 min-w-0 flex-1 items-center gap-1.5 overflow-x-auto overflow-y-hidden"
+        // W2·24-R4 · ZWEI GESTALTEN, EINE DATENQUELLE. In der Randnotiz-Spalte
+        // (210 px) kann die waagrecht scrollbare Linie nicht stehen — zwei Chips
+        // passen nebeneinander, der Rest läge hinter einer Scrollachse, die in
+        // einer Randspalte niemand sucht. Sie stapelt dort senkrecht. Alles
+        // andere ist zeichengleich: dieselben Kanten, dieselbe Ordnung, dieselbe
+        // Portionierung, derselbe Zähler (§6 (e): keine neue Logik).
+        // Das `aria-label` folgt der Gestalt mit — es beschreibt die Bedienung,
+        // und «waagrecht scrollbar» wäre in der Randform schlicht unwahr (§8).
+        className={form === 'rand'
+          ? 'lc-bezug-linie flex min-w-0 flex-1 flex-col items-start gap-1.5'
+          : 'lc-bezug-linie flex h-7 min-w-0 flex-1 items-center gap-1.5 overflow-x-auto overflow-y-hidden'}
         tabIndex={0}
         role="group"
-        aria-label={`${zahlZeile} — ${STATUS_LABEL[status]}, waagrecht scrollbare Liste, chronologisch vom neusten zum ältesten`}
+        aria-label={`${zahlZeile} — ${STATUS_LABEL[status]}, ${
+          form === 'rand' ? 'Liste' : 'waagrecht scrollbare Liste'
+        }, chronologisch vom neusten zum ältesten`}
       >
         {liste.map((b) => {
           // ?norm= trägt die Fundstellen-Absicht (wie in der LeitfallZeile): das
@@ -177,7 +200,7 @@ const StatusGruppe = memo(function StatusGruppe({ status, kanten, gesamtRoh, fil
           // die Entscheid-Präzision (BGE-Bandjahr-Platzhalter ⇒ Jahresvergleich).
           const revidiert = klassifiziereFassungsBezug(entscheidDatum(b.datum, b.facetten.gericht), revision) === 'revidiert'
             ? (revision ?? null) : null;
-          return (
+          const kante = (
             <KanteMitVorschau key={b.key} ziel={ziel} zitierung={b.zitierung}
               kurztext={b.regesteKurz}
               leitentscheid={b.facetten.status === 'bge'}
@@ -185,6 +208,25 @@ const StatusGruppe = memo(function StatusGruppe({ status, kanten, gesamtRoh, fil
               statusLabel={STATUS_LABEL[b.facetten.status]}
               titel={b.regesteKurz ?? `${b.zitierung} — ${STATUS_LABEL[b.facetten.status]}`}
               className="shrink-0" />
+          );
+          // ── D30 (David 6.9.2026) · «ZITIERUNG + REGESTE-ZEILE» ────────────
+          // In der ZEILEN-Form bleibt es beim blossen Chip: dort stehen die
+          // Kanten in einer 28 px hohen waagrechten Linie, ein zweizeiliger
+          // Eintrag sprengte sie (und mit ihr die CLS-0-Zusage oben).
+          // In der RAND-Form — seit R6b nur noch die aufgeklappte Bezüge-Zeile
+          // am Artikelkopf — ist die Lage umgekehrt: der Leser hat sie
+          // aufgeklappt, um zu ERKENNEN, welcher Entscheid welcher ist, und ein
+          // Zitat allein sagt das nicht. Die Regeste stand bis hierher nur im
+          // `title` und im Hover-Kasten, war also für Tastatur und Touch
+          // unsichtbar. Sie ist die amtliche Kurzregeste aus dem Shard, wörtlich
+          // übernommen (§7) — hier nur angezeigt, nicht gekürzt oder gebildet;
+          // die optische Begrenzung auf zwei Zeilen macht `.lr7-bez-regeste`.
+          if (form !== 'rand') return kante;
+          return (
+            <span key={b.key} className="lr7-bez-eintrag">
+              {kante}
+              {b.regesteKurz && <span className="lr7-bez-regeste">{b.regesteKurz}</span>}
+            </span>
           );
         })}
         {/* ── «weitere 5» — das eine Klick-Element am Linienende ──────────────
@@ -234,7 +276,13 @@ const StatusGruppe = memo(function StatusGruppe({ status, kanten, gesamtRoh, fil
  * aus — er muss die erweiterte Form genauso treffen wie die schlanke, sonst
  * hätte das Zuschalten einer Facette einen Schalter still ausgehebelt (§13 F4).
  */
-export const BezuegeZeile = memo(function BezuegeZeile({ kanten, gesamt, zeitAktiv = false, kantonAktiv = false, normZitat, revision }: {
+export type BezuegeForm =
+  /** Ist-Form am Artikelfuss: je Klasse eine waagrecht scrollbare Linie. */
+  | 'zeile'
+  /** W2·24-R4: dieselben Gruppen senkrecht gestapelt, für die Randnotiz-Spalte. */
+  | 'rand';
+
+export const BezuegeZeile = memo(function BezuegeZeile({ kanten, gesamt, zeitAktiv = false, kantonAktiv = false, normZitat, revision, form = 'zeile' }: {
   /** Kanten dieses Artikels NACH Facetten-Filter, in Shard-Ordnung. */
   kanten?: readonly Bezug[];
   /** Kanten je Status an diesem Artikel, OHNE UI-Filter — die Bezugsgrösse (§8). */
@@ -249,6 +297,8 @@ export const BezuegeZeile = memo(function BezuegeZeile({ kanten, gesamt, zeitAkt
   /** Voll zitierfähige Norm («Art. 429 StPO») für den Fundstellen-Sprung. */
   normZitat: string;
   revision?: ArtikelRevision | null;
+  /** Gestalt: Zeile am Artikelfuss (Vorgabe) oder Stapel in der Randnotiz (R4). */
+  form?: BezuegeForm;
 }) {
   // Keine Kanten ⇒ NICHTS. Kein Platzhalter, kein Hinweis, keine Overline —
   // null Pixel Verzahnungs-UI im Lesetext-Bereich (Vorgabe David 28.7.2026:
@@ -273,10 +323,11 @@ export const BezuegeZeile = memo(function BezuegeZeile({ kanten, gesamt, zeitAkt
   const filter = verkuerzungAus(zeitAktiv, kantonAktiv);
 
   return (
-    <div data-leitfall-zeile data-bezuege-zeile className="mt-4 flex flex-col gap-1.5">
+    <div data-leitfall-zeile data-bezuege-zeile data-bezuege-form={form}
+      className={form === 'rand' ? 'flex flex-col gap-2.5' : 'mt-4 flex flex-col gap-1.5'}>
       {geordnet.map(([status, liste]) => (
         <StatusGruppe key={status} status={status} kanten={liste} gesamtRoh={gesamt?.[status]}
-          filter={filter} normZitat={normZitat} revision={revision} />
+          filter={filter} normZitat={normZitat} revision={revision} form={form} />
       ))}
     </div>
   );

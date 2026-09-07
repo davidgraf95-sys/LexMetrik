@@ -6,6 +6,11 @@ import { ArtikelLeser, SektionKopf } from '../parts';
 import { istAnhangToken } from '../berechnungen';
 import { erlassPfad } from './erlassAnsicht';
 import type { LeserV3Modell } from './leserV3Modell';
+import { usePaneSteuerung } from '../../../components/layout/usePaneLayout';
+import { randNotizZiel } from '../randNotizOeffnen';
+import { useBezuegeZaehler } from '../bezuegeZaehler';
+import { useArtikelMaterialien } from '../artikelMaterialienLaden';
+import type { PanelBezuege } from './panelModell';
 
 // ─── Die Lesespalte (FAHRPLAN-LESER-V3 Kap. 1.3 «Kern-Grenze») ──────────────
 //
@@ -44,15 +49,35 @@ import type { LeserV3Modell } from './leserV3Modell';
 //  · Der angekündigte Fall ist unerreichbar. «Keine Leiste» heisst
 //    `eintraege.length === 0`, also kein Artikel — dann gibt es weder Treffer noch
 //    Lesetext. §17: gestrichen statt verengt.
-export function LeserLesespalte({ m }: {
+export function LeserLesespalte({ m, bezuege, weckeBezuege, bezuegeGeweckt = false }: {
   m: LeserV3Modell;
+  /** D30 · der Apparat des Panels — DIESELBE `useBezuege`-Instanz, kein zweiter
+   *  Lader (§5). `undefined` in der Ist-Hülle und in Tests, die die Spalte ohne
+   *  Rahmen mounten; dann verhält sich die Zeile wie vor D30. */
+  bezuege?: PanelBezuege;
+  /** D30 · Aufklappen der Bezüge-Zeile ⇒ Nachladen armieren (`weckeDaten`). */
+  weckeBezuege?: () => void;
+  /** D30 · ist bereits jemand nach den Daten gefragt worden? Steuert die
+   *  Skelett-Zeile «lädt …» UND das Laden der Materialien. */
+  bezuegeGeweckt?: boolean;
 }) {
   const { erlass, eintraege, struktur, sektionen, ohneGliederung, basisPfad, vorher, nachher } = m;
   // Refs einzeln herausgezogen: die Lint-Regel `react-hooks/refs` erkennt einen
   // Ref am Namen, und `refs.leseRef` ist für sie ein Member-Zugriff im Render.
   const { leseRef, sekRef } = m.refs;
+  // W2·24-R6c: die ZAHLEN der Bezüge-Zeile aus der Zähl-Datei (ø 289 B) statt
+  // aus dem 2.2-MB-Bezugs-Shard — Herleitung in `../bezuegeZaehler`. Der Hook
+  // steht HIER und nicht im Modell: die Lesespalte ist sein einziger Konsument,
+  // und das Modell hält damit seine §6.6-Schwelle (`leser-v3-fundament`).
+  const bezuegeZaehler = useBezuegeZaehler(erlass?.key);
+  // D30 · die Materialien-LISTE zur bereits gezählten Materialien-ZAHL. Wie der
+  // Zähler: EIN Fetch je Erlass, im Leerlauf, hier und nicht im Modell (die
+  // Lesespalte ist der einzige Konsument, §6.6-Schwelle des Modells).
+  const artikelMaterialien = useArtikelMaterialien(erlass?.key, bezuegeGeweckt);
+  // Split-Regel der Randnotiz (s. `onClickCapture` unten): EIN Abo je Spalte.
+  // VOR dem Lade-Guard, weil Hooks nicht bedingt laufen dürfen.
+  const { oeffneDaneben, kannOeffnen, istOffen: paneOffen } = usePaneSteuerung();
   if (!erlass || !eintraege) return null;
-
   const fn = (tok: string) => struktur?.[tok]?.fussnoten;
   const istOffen = (id: string, defOpen: boolean) => m.offen[id] ?? defOpen;
   const toggle = (id: string, defOpen: boolean) =>
@@ -85,6 +110,29 @@ export function LeserLesespalte({ m }: {
     <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)}
       intern={m.internRefs} marg={m.margAnzeige.get(e.artikel)?.teile} margBasis={m.margAnzeige.get(e.artikel)?.ab}
       revision={m.revisionFuer(e.artikel)} historie={m.historieFuer(e.artikel)}
+      // W2·24-R6c: die ZAHLEN der Bezüge-Zeile aus der Zähl-Datei (289 B im
+      // Mittel) statt aus dem 2.2-MB-Shard — Herleitung in `../bezuegeZaehler`.
+      // Der Kern rendert wie bisher; das Öffnen der Zeile lädt weiterhin lazy.
+      zaehler={bezuegeZaehler(e.artikel)}
+      // ── D30 · POS. 12 IST NICHT ZURÜCK (und `bezuege` bleibt ungesetzt) ──
+      // Der Block darüber begründet, warum `bezuege` an dieser Stelle FIEL: die
+      // `BezuegeZeile` stand damals UNBEDINGT im Fliesstext, an jedem Artikel,
+      // und wuchs beim Eintreffen des Shards in den Lesekörper hinein. Beides
+      // ist hier nicht der Fall. Die Prop kommt nur, NACHDEM der Leser eine
+      // Bezüge-Zeile aufgeklappt hat (`bezuegeGeweckt`), und sie landet
+      // ausschliesslich INNERHALB des `<details>`, das er dafür geöffnet hat.
+      // Ein geschlossenes `<details>` rendert seinen Inhalt nicht — die 1685
+      // anderen Artikel bleiben unberührt, es gibt keinen dokumentweiten
+      // Layout-Sprung, und `leser-v3-kontext-cls` misst weiterhin dasselbe.
+      // `alleFuer`, nicht `bezuegeFuer`: die Zeile zeigt, was ihre Kopfzahl
+      // zählt — ungefiltert. Herleitung in `../bezuegeLaden` (D30).
+      bezuegeImKopf={bezuege?.alleFuer(e.artikel)}
+      materialien={artikelMaterialien(e.artikel)}
+      onBezuegeOeffnen={weckeBezuege}
+      // «lädt …» heisst: geweckt, aber der Lade-VERSUCH ist noch nicht durch.
+      // `geladen` (nicht die Kanten) unterscheidet «unterwegs» von «leer» — die
+      // A1-Lehre aus `panelModell.ts`, hier dieselbe Quelle (§5).
+      bezuegeLaedt={bezuegeGeweckt && bezuege != null && !bezuege.geladen}
       istAnhang={istAnhangToken(e.artikel)} />
   );
 
@@ -203,7 +251,25 @@ export function LeserLesespalte({ m }: {
     // A-7, V1 gegen V3) bei GLEICHER Artikelbreite mass, den Text-KERN also
     // unabhängig vom Satzspiegel bewies. Mit H5 (21.8.2026) gelöscht — V1, das
     // Vergleichsziel, gibt es nicht mehr.
-    <div ref={leseRef} id="lc-lesespalte" className="mx-auto w-full max-w-reading">
+    <div ref={leseRef} id="lc-lesespalte" className="mx-auto w-full max-w-reading"
+      // ── W2·24-R6 · SPLIT-REGEL DER RANDNOTIZ (Auftrag David 6.9.2026) ──────
+      // Ein Bezug am Rand öffnet in der ANDEREN Hälfte; der Artikel bleibt
+      // stehen. Die Regel selbst (Modifikatoren, externe Ziele, Dedup) ist rein
+      // und liegt in `../randNotizOeffnen` — hier steht nur die Verdrahtung.
+      //
+      // WARUM DELEGIERT UND NICHT AM LINK: `usePaneSteuerung` liefert bei jedem
+      // Shell-Render ein neues Objekt (`Shell.tsx`, Objektliteral). Ein Abo je
+      // Artikel hiesse auf dem OR 1'686 Abonnenten, die bei jedem
+      // Scroll-Spy-Takt neu rendern — genau die Bauart, die §15.4 an dieser
+      // Spalte verbietet. EIN Abo an der Spalte, ein Handler, kein Prop durch
+      // die memoisierte Artikelkette.
+      onClickCapture={(ev) => {
+        const ziel = (ev.target as HTMLElement | null)?.closest?.('a');
+        if (!ziel || !ziel.closest('.lr-notiz')) return;
+        if (randNotizZiel(ev, ziel.getAttribute('href'), kannOeffnen, paneOffen) !== 'daneben') return;
+        ev.preventDefault();
+        oeffneDaneben(ziel.getAttribute('href') as string);
+      }}>
       <div className="space-y-2">
         {dokumentLinear()}
       </div>
@@ -237,7 +303,7 @@ export function LeserLesespalte({ m }: {
           Überlauf aus derselben Ursache (§5).
           Wächter: `e2e/leser-kein-seitenueberlauf.e2e.ts`, beide Hüllen. */}
       <nav className="mt-12 border-t border-line pt-5 flex justify-between gap-4 text-body-s" aria-label="Weitere Erlasse">
-        {vorher ? <Link to={erlassPfad(vorher)} className="min-w-0 text-brass-700 hover:underline [overflow-wrap:anywhere]">‹ {vorher.kuerzel}</Link> : <span />}
+        {vorher ? <Link to={erlassPfad(vorher)} className="min-w-0 text-brass-700 [overflow-wrap:anywhere]">‹ {vorher.kuerzel}</Link> : <span />}
         {/* ── Ä119 (Live-Ästhetik-Prüfung 18.8.2026) · «ÜBERSICHT» WAR DOPPELT
             BELEGT ───────────────────────────────────────────────────────────
             GEMESSEN am Live-Stand @1440: das Wort «Übersicht» bezeichnete auf
@@ -254,7 +320,7 @@ export function LeserLesespalte({ m }: {
             gibt in der Zeile nicht nach — nachgeben sollen die Erlass-Namen
             links und rechts, deren Länge aus den Daten kommt. */}
         <Link to="/gesetze" className="shrink-0 text-ink-500 hover:text-brass-700">Alle Gesetze</Link>
-        {nachher ? <Link to={erlassPfad(nachher)} className="min-w-0 text-right text-brass-700 hover:underline [overflow-wrap:anywhere]">{nachher.kuerzel} ›</Link> : <span />}
+        {nachher ? <Link to={erlassPfad(nachher)} className="min-w-0 text-right text-brass-700 [overflow-wrap:anywhere]">{nachher.kuerzel} ›</Link> : <span />}
       </nav>
     </div>
   );

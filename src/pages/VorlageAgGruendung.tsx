@@ -121,7 +121,7 @@ export function VorlageAgGruendung() {
   // Praxis-Runde (Auftrag David): Blocker klickbar — Klick springt zum
   // Schritt, in dem die Eingabe liegt (Bereichs-Tag aus den Engine-Gates).
   const blockerKlickbar = (titel: string) => mappe.gates.blockerDetails.length === 0 ? null : (
-    <div className="rounded-md bg-danger-bg p-3 space-y-1.5" role="alert">
+    <div className="bg-danger-bg p-3 space-y-1.5" role="alert">
       <p className="text-body-s font-medium text-danger-700">{titel}</p>
       {mappe.gates.blockerDetails.map((b) => (
         <button key={b.text} type="button"
@@ -363,7 +363,7 @@ export function VorlageAgGruendung() {
           fehlen, trägt oben eine rote Sektion mit SEINEN Blockern
           (Zuordnung aus den Engine-Bereichs-Tags, §3). */}
       {mappe.gates.blockerDetails.some((b) => BEREICH_SCHRITT[b.bereich] === i) && (
-        <div className="rounded-md border border-danger-700/40 bg-danger-bg p-3 space-y-1" role="alert">
+        <div className="border border-danger-700/40 bg-danger-bg p-3 space-y-1" role="alert">
           <p className="text-body-s font-medium text-danger-700">In diesem Schritt noch offen:</p>
           {mappe.gates.blockerDetails.filter((b) => BEREICH_SCHRITT[b.bereich] === i).map((b) => (
             <p key={b.text} className="text-body-s text-danger-700">• {b.text}</p>
@@ -372,7 +372,7 @@ export function VorlageAgGruendung() {
       )}
       {inhalt}
       {mappe.gates.blockerDetails.length > 0 && (
-        <details className="rounded-md border border-line bg-surface p-3">
+        <details className="border border-line bg-surface p-3">
           <summary className="cursor-pointer select-none text-body-s text-ink-700">
             Für die Dokumente noch offen: {mappe.gates.blockerDetails.length} Punkt{mappe.gates.blockerDetails.length === 1 ? '' : 'e'}
           </summary>

@@ -401,21 +401,33 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
       {/* Rechtsgebiet-Filter (Redesign 24.6.2026): EIN Dropdown statt ~14 Pillen —
           macht die Vorlagen-«Wand» scanbar; die Auswahl engt alle Gruppen live ein.
           Die «Nur verfügbare»-Pille entfällt: der Hauptbereich zeigt ohnehin nur
-          Einsatzbereite, Geplantes liegt im Sammelblock unten. */}
+          Einsatzbereite, Geplantes liegt im Sammelblock unten.
+          ── D22 Ziff. 2 (Nachzug D24, 6.9.2026) · DIE HÜLLE DER FILTERZEILE ───
+          R12A §4 hatte /vorlagen ausdrücklich offengelassen. Die Zeile trägt
+          jetzt dieselbe Anatomie wie /gesetze, /materialien und /rechner:
+          sichtbares Label «Filtern» über dem Feld (`.ub-filter`), Feld über die
+          Inhaltsbreite, Umfang und Zähler in der Fuss-Zeile (`.ub-filter-fuss`,
+          per `aria-describedby` verknüpft) — statt einer halbleeren Flex-Zeile
+          mit inline-Etikett.
+          BEWUSST KEIN Text-Schalter je Facette: die Achse führt ~14
+          Rechtsgebiete. Dieselbe Begründung wie bei den Materialien-Facetten in
+          R12A — ein Schalter je Wert wäre genau die Wand, die D22 abräumt.
+          Das <select> bleibt, es bekommt nur die Hülle. */}
       {filterAktiv && vorhandeneGebiete.length > 1 && (
-        <div className="flex flex-wrap items-center gap-3" role="group" aria-label="Vorlagen nach Rechtsgebiet filtern">
-          <label className="flex flex-wrap items-center gap-2 text-body-s text-ink-600">
-            <span>Rechtsgebiet</span>
-            <select value={[...aktiveGebiete][0] ?? ''}
-              onChange={(e) => setzeFilter(e.target.value ? new Set([e.target.value]) : new Set(), false)}
-              className="lc-select lc-input-sm w-full min-w-0 sm:w-auto sm:min-w-[12rem]">
-              <option value="">Alle</option>
-              {vorhandeneGebiete.map((g) => <option key={g} value={g}>{g}</option>)}
-            </select>
-          </label>
-          <span className="lc-overline num">
-            <span className="text-brass-700">{verfuegbar.length}</span> verfügbar
-          </span>
+        <div className="ub-filter" role="group" aria-label="Vorlagen nach Rechtsgebiet filtern">
+          <label htmlFor={`vorlagen-filter-${kat.id}`} className="lc-overline">Filtern</label>
+          <select id={`vorlagen-filter-${kat.id}`}
+            value={[...aktiveGebiete][0] ?? ''}
+            onChange={(e) => setzeFilter(e.target.value ? new Set([e.target.value]) : new Set(), false)}
+            aria-describedby={`vorlagen-filter-scope-${kat.id}`}
+            className="lc-select h-11 py-0 text-body-s w-full">
+            <option value="">Alle Rechtsgebiete</option>
+            {vorhandeneGebiete.map((g) => <option key={g} value={g}>{g}</option>)}
+          </select>
+          <p id={`vorlagen-filter-scope-${kat.id}`} className="ub-filter-fuss min-h-5">
+            <span>Rechtsgebiet dieser Vorlagen · Gesetzes- und Entscheidtext über die Suche oben</span>
+            <span className="num"><span className="text-brass-700">{verfuegbar.length}</span> verfügbar</span>
+          </p>
         </div>
       )}
 

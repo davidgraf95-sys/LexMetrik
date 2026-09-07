@@ -18,8 +18,8 @@ import {
 import { ERLASS_REGISTER } from './normtext/register';
 import { rechtsprechungFuerErlass, leitfaelleFuerArtikel, type EntscheidRef, type LeitfallRef } from './rechtsprechung/norm-index';
 import { ladeMaterialManifest } from './materialien/browse';
-import { ladeKantenShard } from './materialien/kanten-shard';
-import type { BrowseMaterial } from './materialien/typen';
+import { ladeKantenShard, type KantenShard } from './materialien/kanten-shard';
+import type { BrowseMaterial, MaterialManifest } from './materialien/typen';
 import type { Herkunft } from './verzahnung/typen';
 import { erlassPfad } from './normtext/erlassAdresse';
 
@@ -288,6 +288,25 @@ export interface ArtikelKontext {
  */
 export async function materialienFuerArtikel(erlassKey: string, artikelToken: string): Promise<MaterialBezug[]> {
   const [shard, manifest] = await Promise.all([ladeKantenShard(erlassKey), ladeMaterialManifest()]);
+  return projiziereMaterialien(shard, manifest, artikelToken);
+}
+
+/**
+ * Die reine Projektion hinter `materialienFuerArtikel` — dieselbe Rechnung, nur
+ * ohne das Laden davor.
+ *
+ * HERAUSGEZOGEN IN W2·24-R5-F1K (D30, 6.9.2026), OHNE EINE ZEILE ZU ÄNDERN: die
+ * Bezüge-Zeile am Artikelkopf braucht die Materialien VIELER Artikel desselben
+ * Erlasses. Über die async-Fassung hiesse das ein `await` je Artikel — und, weil
+ * jeder Aufruf beide Loader erneut anfragt, ein Effekt je Artikel-Komponente
+ * (im OR 1686 davon, §15). Mit der Projektion lädt der Leser Shard und Manifest
+ * EINMAL je Erlass (dasselbe Muster wie die Zähl-Datei) und schlägt danach
+ * synchron nach. Zwei Aufrufer, EINE Rechnung (§5) — die async-Fassung ist jetzt
+ * ihr Wrapper, ihr Verhalten ist unverändert.
+ */
+export function projiziereMaterialien(
+  shard: KantenShard | null, manifest: MaterialManifest | null, artikelToken: string,
+): MaterialBezug[] {
   if (!shard || !manifest) return [];
   const regByKey = new Map<string, BrowseMaterial>(manifest.materialien.map((m) => [m.key, m]));
   const proDok = new Map<string, DokSammler>();

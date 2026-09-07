@@ -41,6 +41,14 @@ export function materialPfad(path: string): { key: string } | null {
   return m ? { key: decodeURIComponent(m[1]) } : null;
 }
 
+/** ── M7 · KATALOG-KURZFORM EINER RECHNER-/VORLAGEN-ROUTE ────────────────────
+ *  Liest das Feld `kurz` der Karte, die diese Route vertritt (SSoT §5:
+ *  `startseiteConfig`), oder null — dann steht der volle Titel im Reiter.
+ *  Rein und synchron; kein Manifest, kein Netz. */
+export function katalogKurzform(path: string): string | null {
+  return metaFuerPfad(pfadTeil(path))?.karte?.kurz ?? null;
+}
+
 /** Synchron auflösbares Label (Katalog/statisch) — sonst null. */
 export function labelAusMeta(path: string): string | null {
   const meta = metaFuerPfad(pfadTeil(path));

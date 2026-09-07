@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useZuletzt } from './useZuletzt';
 import { leereZuletzt } from '../../lib/zuletztVerwendet';
 import { gruppiereVerlauf } from '../../lib/verlaufGruppen';
-import { VerlaufIcon } from './VerlaufIcon';
+import { MenueTitel, MenueZeile } from '../ui/Menue';
 import { useDialogFokus } from './useDialogFokus';
 
 // ─── «Verlauf»-Übersicht in der Topbar (UI-NAV O1, Schritt 3) ───────────────
@@ -105,29 +105,32 @@ export function VerlaufUebersicht() {
           role="dialog"
           aria-label="Verlauf – zuletzt geöffnet"
           style={{ top: pos.top, left: pos.left }}
-          className="lc-schwebeflaeche fixed z-overlay w-[20rem] max-w-[calc(100vw-1rem)] p-2 max-h-[70vh] overflow-y-auto focus:outline-none"
+          className="lc-schwebeflaeche fixed z-overlay w-[20rem] max-w-[calc(100vw-1rem)] py-1 max-h-[70vh] overflow-y-auto focus:outline-none"
         >
+          {/* ── D5-NACHZUG (6.9.2026) · DIESELBE MENÜ-ANATOMIE WIE DAS ────────
+              ANSICHT-MENÜ. Davids Befund gilt ausdrücklich «für ALLE Menüs/
+              Popover (Verlauf, Reiter-Blatt, Sprache, Thema)»: ruhige Liste mit
+              Linien, EIN Zeichen je Zeile, Fokus als Strich. Hier waren es
+              abgerundete Hover-Kästen mit Zwischenräumen und ein zweites
+              Icon-System (`VerlaufIcon`) — dasselbe, das im Such-Leerzustand
+              gerade der Registerfarbe gewichen ist (D9). Gerüst und Werte
+              kommen aus `ui/Menue` bzw. `.lc-menu-*`; die Verlaufs-LOGIK
+              (Gruppen, Reihenfolge, Leeren) ist unberührt. */}
           {gruppen.map((g) => (
-            <div key={g.id} className="mb-1 last:mb-0">
-              <p className="lc-overline px-2 pt-1.5 pb-1">{g.label}</p>
-              <ul className="space-y-0.5">
+            <div key={g.id}>
+              <MenueTitel>{g.label}</MenueTitel>
+              <ul>
                 {g.eintraege.map((e) => (
                   <li key={e.route}>
-                    <button
-                      type="button"
-                      onClick={() => { navigate(e.route); setPanelOffen(false); }}
-                      className="flex w-full items-center gap-2.5 rounded px-2 py-1.5 text-left text-body-s text-ink-700 transition-colors lc-hover-flaeche hover:text-brass-700"
-                    >
-                      <VerlaufIcon typ={e.typ} className="shrink-0 text-ink-500" />
-                      <span className="min-w-0 flex-1 truncate">{e.titel}</span>
-                    </button>
+                    <MenueZeile label={e.titel} titel={e.titel}
+                      onKlick={() => { navigate(e.route); setPanelOffen(false); }} />
                   </li>
                 ))}
               </ul>
             </div>
           ))}
 
-          <div className="mt-1 flex items-center justify-between gap-2 border-t border-line pt-1.5">
+          <div className="mt-1 flex items-center justify-between gap-2 border-t border-rule-soft px-1 pt-1.5">
             {/* §8: Ehrlichkeit — der Verlauf ist rein lokal. */}
             <span className="px-2 text-micro leading-snug text-ink-500">Nur auf diesem Gerät</span>
             {/* LM-088 (W2·17-UI-BEFUNDE B17, 4.9.2026): stand als reiner Text

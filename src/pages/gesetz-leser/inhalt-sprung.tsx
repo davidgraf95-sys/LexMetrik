@@ -13,6 +13,7 @@ import { grundartMeta, pfadZu } from './helpers';
 import { istHashVerbraucht } from './scrollAnker';
 import { paneRoot } from './berechnungen';
 import { loeseSpyNachlauf } from './inhalt-hooks';
+import { useTiefLinkZweig } from './v3/tiefLinkZweig';
 
 // ═══ ABSCHNITT · Sektions-Sprung, Instanz-Navigation, Suche-Scroll (§6.6-Split,
 // QS-TOK/T14) ════════════════════════════════════════════════════════════════
@@ -61,6 +62,9 @@ export function useSektionSprung(opts: {
     jumpLockRef: MutableRefObject<boolean>;
     autoOffenRef: MutableRefObject<Set<string>>;
     autoTickRef: MutableRefObject<Map<string, number>>;
+    /** Laufender Pfadwechsel-Tick (W2·24-R6c: der Tieflink-Zweig braucht ihn,
+     *  damit sein Ast denselben Nachlauf bekommt wie ein vom Spy geöffneter). */
+    autoTickNowRef: MutableRefObject<number>;
     manuellOffenRef: MutableRefObject<Set<string>>;
     manuellZuRef: MutableRefObject<Set<string>>;
     tocBaumTimer: MutableRefObject<number | null>;
@@ -70,8 +74,16 @@ export function useSektionSprung(opts: {
     sektionen, sekRefs, location, istSekundaer, imPane, wurzel, sucheDebounced, springeZuArtikel,
     setOffen, setTocBaum, setAktivIds, setTocAuf, scrollVorSucheRef, sucheVorherRef,
     scrollBeiSuchwechsel = true,
-    refs: { jumpLockRef, autoOffenRef, autoTickRef, manuellOffenRef, manuellZuRef, tocBaumTimer },
+    refs: { jumpLockRef, autoOffenRef, autoTickRef, autoTickNowRef, manuellOffenRef, manuellZuRef, tocBaumTimer },
   } = opts;
+
+  // W2·24-R6c · D21-Nebenfund: der Tieflink öffnet seinen Gliederungszweig VOR
+  // dem ersten Bild — er gehört zu den Sprüngen und steht darum hier. Befund,
+  // Messreihe und Herleitung: `./v3/tiefLinkZweig`.
+  useTiefLinkZweig({
+    hash: location.hash, sektionen, erlassMarke: location.key,
+    setTocBaum, autoOffenRef, autoTickRef, autoTickNowRef, manuellOffenRef, manuellZuRef,
+  });
 
   // Sprung aus dem Gliederungs-Baum (TOC): Pfad öffnen, markieren, scrollen. Beim
   // Sprung den mobilen Drawer schliessen (analog Seitenleiste). Rank 4 (QS-PERF,

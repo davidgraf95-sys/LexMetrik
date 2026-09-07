@@ -82,8 +82,13 @@ describe('A-1 — keine zweite Titel-Anatomie mehr (§5/§10)', () => {
   // ausserhalb von beidem (VorlageKuendigungVermieter, VorlageKapitalerhoehung,
   // VorlageGmbhGruendung) — der Wächter war grün. Jetzt: KEIN `<h1` in der App
   // ausser im Baustein und in der einen begründeten Ausnahme.
+  // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R10, 6.9.2026, §6.3): die
+  // Ausnahme ist DIESELBE und trägt dieselbe Begründung — nur ist aus
+  // `start/Hero` (Titelblatt-Zeile des Satzspiegels) der `start/SuchBlock`
+  // (erste Ebene des Pults) geworden. Umfang und Assertion unverändert: genau
+  // eine handgebaute <h1> in der App, und die trägt ihre Begründung am Fundort.
   const AUSNAHMEN = [{
-    datei: 'components/start/Hero.tsx',
+    datei: 'components/start/SuchBlock.tsx',
     begruendung: 'A-1-AUSNAHME (R3-α, 31.8.2026)',
   }] as const;
 

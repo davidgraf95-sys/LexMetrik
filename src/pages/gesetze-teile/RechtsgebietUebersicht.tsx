@@ -21,12 +21,10 @@
 // Kantone-Einstieg nach amtlicher Systematik erschlossen.
 import { gruppiereNachRechtsgebiet } from './rechtsgebiet-gruppierung';
 import { type BrowseErlass } from '../../lib/normtext/browse-typen';
-import { ErlassZeile } from '../../components/normtext/ErlassKarte';
-import { usePaneKlasse } from '../../components/layout/PaneKontext';
+import { ErlassTabelle } from '../../components/normtext/ErlassKarte';
 import { GruppenKopf } from '../../components/ui/GruppenKopf';
 
 export function RechtsgebietUebersicht({ erlasse }: { erlasse: BrowseErlass[] }) {
-  const pk = usePaneKlasse();
   const bund = erlasse.filter((e) => e.ebene === 'bund');
   const gruppen = gruppiereNachRechtsgebiet(bund);
   if (gruppen.length === 0) return null;
@@ -47,29 +45,20 @@ export function RechtsgebietUebersicht({ erlasse }: { erlasse: BrowseErlass[] })
         {gruppen.map((g) => (
           <div key={g.gebiet} className="space-y-2">
             <GruppenKopf titel={g.label} zahl={g.erlasse.length} />
-            {/* L6 (Design-Qualitäts-Pass 29.8.2026) · ZEILEN-GAP. Das Raster
-                setzte nur `gap-x-5`; `row-gap` blieb damit auf `normal` = 0 und
-                die Zeilen stiessen aneinander — gemessen @1440 Zeilenoberkanten
-                863/930/998/1085 px, also Abstände 67/68/87 px allein aus den
-                unterschiedlich hoch umbrechenden Titeln. Sichtbar wird das an
-                den Hover-Flächen (`hover:bg-brass-100/30` an jeder Zeile), die
-                ohne Zwischenraum zu einem Block verschmelzen. `gap-y-2` = 8 px
-                ist die Stufe des 8er-Abstandsrasters; das Karten-Gitter
-                nebenan (`geteilt.tsx` Gitter) trägt mit `gap-3` seit je einen
-                Zeilenabstand — die LISTEN-Raster waren die Ausreisser (§5).
-                Vier Schwester-Raster mit demselben Defekt (GesetzeGliederung
-                2×, RechtsgebietSicht 2×, KantonSystematik, geteilt.tsx
-                Verordnungs-Liste) sind mitgezogen.
-                OFFEN BLEIBT: die Metazeilen fluchten weiterhin nicht auf einer
-                Linie — Ursache sind ein- vs. zweizeilige Titel, das löst kein
-                Gap, sondern nur eine feste Titelhöhe (Design-Entscheid, nicht
-                Teil dieses Lesbarkeits-Passes). */}
-            <div className={pk(
-              'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-2',
-              'grid grid-cols-1 @lg/pane:grid-cols-2 @3xl/pane:grid-cols-3 gap-x-5 gap-y-2',
-            )}>
-              {g.erlasse.map((e) => <ErlassZeile key={e.key} e={e} variant="leitgesetz" />)}
-            </div>
+            {/* ── D24 (David 6.9.2026) · DER L6-RESTPUNKT IST HIER GELÖST ────
+                L6 (29.8.2026) hatte den Zeilen-Gap gesetzt und ausdrücklich
+                offengelassen: «die Metazeilen fluchten weiterhin nicht auf
+                einer Linie — Ursache sind ein- vs. zweizeilige Titel, das löst
+                kein Gap, sondern nur eine feste Titelhöhe». Genau das tut
+                `ui/ListenTabelle`: gemeinsame Spaltenspuren, Titel auf zwei
+                Zeilen gekappt (voller Wortlaut im `title`, §8), Zeile i in
+                beiden Spalten dieselbe Grid-Zeile.
+                Die frühere Variante `leitgesetz` von `ErlassZeile` entfällt
+                dabei ersatzlos: ihre Umkehrung «Titel führt, Kürzel sekundär»
+                IST die Spaltenordnung der Tabelle (§5/§10-Rückbau). */}
+            <ErlassTabelle erlasse={g.erlasse} art="bund"
+              beschriftung={`${g.label} — Kürzel, Titel, SR-Nummer`} />
+
           </div>
         ))}
       </div>

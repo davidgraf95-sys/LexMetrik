@@ -106,11 +106,14 @@ export interface PaneKopfProps {
 // Der Baustein `ui/SchliessKnopf` hat für diese Aussage einen NAMEN —
 // `ton="destruktiv"` — und trägt denselben Wert: die gemalte Farbe bleibt
 // unverändert, sie ist nur nicht mehr zufällig.
-const GRIFF_BOX = 'inline-flex h-7 w-7 items-center justify-center rounded-md transition-colors';
+// W2·24 R2: Radius 0 (§5 «Form: Radien 0»); die Box selbst bleibt 28 px.
+const GRIFF_BOX = 'inline-flex h-7 w-7 items-center justify-center transition-colors';
 /** Hover-Fläche der Leiste — B6-Anatomie (28.7.2026), sie gilt für ALLE Griffe
  *  dieser Zeile und ist darum auch das, was das ✕ als `klasse` mitbekommt. */
-const GRIFF_FLAECHE = 'hover:bg-brass-100/40';
-const knopf = `${GRIFF_BOX} ${GRIFF_FLAECHE} text-ink-500 hover:text-brass-700 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink-500`;
+// R5-D/§G-j: die Hover-Fläche ist EINE Regel, getragen von der Rolle
+// `.lc-hover-flaeche` (index.css) — keine eigene Alpha-Stärke daneben.
+const GRIFF_FLAECHE = 'lc-hover-flaeche';
+const knopf = `${GRIFF_BOX} ${GRIFF_FLAECHE} text-ink-500 hover:text-ink-900 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink-500`;
 
 export function PaneKopf({ icon, label, stand, breadcrumb, onBreadcrumb, artikel, rolle, onSchliessen, onHauptfenster, onTeilen, teilenKopiert, onLinks, onRechts, kannLinks, kannRechts, nurSteuerung, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
   // A-2: eine Zeile, ein Zuständiger. Trägt die Seite ihre Kopfzeile selbst,
@@ -124,7 +127,9 @@ export function PaneKopf({ icon, label, stand, breadcrumb, onBreadcrumb, artikel
     // Gebraucht von `e2e/leser-v3-eine-kopfzeile.e2e.ts` (d), das messen muss, ob
     // hier noch Identität steht. Reine Kennzeichnung, keine Anzeige-Änderung.
     <div data-pane-kopf data-pane-rolle={rolle}
-      className={`shrink-0 grid grid-cols-[1fr_auto] items-center gap-2 h-9 px-1.5 border-b border-line bg-paper ${rolle === 'primaer' ? 'border-l-2 border-l-brass-700' : ''}`}>
+      // W2·24 R2: die Kopfzeile eines Fensters ist eine KANTE (2 px `--rule`),
+      // die Trennung darunter eine Linie — dieselbe Grammatik wie im Titelblatt.
+      className={`shrink-0 grid grid-cols-[1fr_auto] items-center gap-2 h-9 px-1.5 border-b border-rule-soft bg-paper ${rolle === 'primaer' ? 'border-l-2 border-l-rule' : ''}`}>
       {/* Links: Identität (Icon · Label · Stand). pl-0 + enger gap → der Breadcrumb-
           Text fluchtet mit dem Inhalts-Gutter darunter (☰-Knopf/Artikeltext), statt
           vom ⠿-Griff nach rechts geschoben zu werden (Wunsch David: links bündig). */}
@@ -136,7 +141,7 @@ export function PaneKopf({ icon, label, stand, breadcrumb, onBreadcrumb, artikel
             onDragEnd={onDragEnd}
             aria-hidden
             title="Zum Verschieben ziehen"
-            className="lc-griff-glyph shrink-0 cursor-grab active:cursor-grabbing select-none px-0.5 text-ink-400 hover:text-brass-600"
+            className="lc-griff-glyph shrink-0 cursor-grab active:cursor-grabbing select-none px-0.5 text-ink-400 hover:text-ink-900"
           >⠿</span>
         )}
         {zeigeIdentitaet && icon && <span className="shrink-0">{icon}</span>}

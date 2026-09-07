@@ -206,7 +206,7 @@ export function ListenEditor<T>({
 /** Sektions-Kopf innerhalb eines Wizard-Schritts (Redesign, Entscheid David):
  *  Overline (Messing) + Haarlinie — gleiche Anatomie wie die Abschnitts-Köpfe
  *  der Rechner/des Katalogs, damit lange Schritte in lesbare Sektionen
- *  zerfallen. Ersetzt das zuvor leise <p className="lc-overline">-Muster.
+ * zerfallen. Ersetzt das zuvor leise <p className="lc-overline">-Muster.
  *
  *  B3-1 (R3-β, 31.8.2026): «gleiche Anatomie wie …» war bis hierher eine
  *  zeichengleiche KOPIE der Anatomie von `ui/GruppenKopf` — ohne dessen
@@ -260,13 +260,19 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
           <span className="lc-overline shrink-0">Schritt <span className="num">{aktiv + 1}</span>/<span className="num">{schritte.length}</span></span>
           <span className="text-body-s font-medium text-ink-700 truncate text-right">{schritte[aktiv].label}</span>
         </div>
-        <div className="h-1 rounded-full bg-well overflow-hidden"
+        <div className="h-1 bg-well overflow-hidden"
           role="progressbar" aria-valuenow={aktiv + 1} aria-valuemin={1} aria-valuemax={schritte.length}>
           <div className="h-full bg-brass-500 origin-left transition-transform motion-reduce:transition-none" style={{ transform: `scaleX(${anteil})` }} />
         </div>
       </div>
-      {/* Desktop: klickbare Schritt-Chips */}
-      <div className="hidden sm:flex flex-wrap gap-x-1 gap-y-2">
+      {/* Desktop: klickbare Schritt-Chips.
+          R5-F2 (6.9.2026, D6): `flex-wrap` liess bei 7 Schritten den letzten
+          («Prüfen & Download») unter die Zeile fallen, sobald die Fläche schmaler
+          als ~1250 px war (Pane, 1024, gezoomt) — eine zweizeilige Leiste liest
+          sich wie zwei Gruppen. Eine Schrittfolge ist EINE Zeile: statt Umbruch
+          jetzt waagrechter Scroll mit sichtbarem Rand (`lc-scrollrand-x`, die
+          Haus-Affordanz für jeden Scroller). */}
+      <div className="hidden sm:flex gap-x-1 overflow-x-auto lc-scrollrand-x">
         {schritte.map((s, i) => {
           const erledigt = i < aktiv;
           const istAktiv = i === aktiv;
@@ -287,13 +293,21 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
               // Klick-Sperre bleibt Wort für Wort dieselbe.
               aria-disabled={i > aktiv ? true : undefined}
               title={i > aktiv ? 'Noch nicht erreichbar — vorherige Schritte zuerst ausfüllen' : undefined}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                istAktiv ? 'bg-surface-raised border border-line text-brass-700 shadow-sm'
-                : erledigt ? 'text-ink-700 hover:bg-brass-100/50'
-                : 'text-ink-500 cursor-not-allowed'
+              // R5-F2/V5 (6.9.2026): der aktive Schritt war ein Kasten
+              // (Rahmen + Radius + eigene Füllung + Schatten-Utility). Im
+              // Zielbild markiert eine LINIE die Stelle, an der man steht —
+              // Radius und Fläche fallen weg, der Unterstrich trägt den
+              // Zustand. Klickverhalten, ARIA und Reihenfolge unverändert.
+              className={`inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap border-b-2 px-2.5 py-1.5 text-xs font-medium transition-colors ${
+                istAktiv ? 'border-rule text-ink-900'
+                : erledigt ? 'border-transparent text-ink-700 hover:border-line-strong'
+                : 'border-transparent text-ink-500 cursor-not-allowed'
               }`}>
-              <span className={`num inline-flex items-center justify-center w-5 h-5 rounded-full text-micro ${
-                erledigt ? 'bg-brass-500 text-ink-900' : istAktiv ? 'border border-brass-500 text-brass-700' : 'border border-line text-ink-500'
+              {/* Nummern-Marke: `rounded-full` (20 px) war der einzige Radius in
+                  der Leiste — über der 12-px-Ausnahme für «echte Punkte» (§5).
+                  Jetzt kantig; erledigt = gefüllt, aktiv = umrandet. */}
+              <span className={`num inline-flex h-5 w-5 items-center justify-center text-micro ${
+                erledigt ? 'bg-ink-900 text-paper' : istAktiv ? 'border border-ink-900 text-ink-900' : 'border border-line text-ink-500'
               }`}>{erledigt ? '✓' : i + 1}</span>
               {s.label}
             </button>
@@ -343,7 +357,7 @@ export function FehlerBox({ fehler }: { fehler: string[] }) {
   const beruehrt = useContext(BeruehrtContext);
   if (!beruehrt || fehler.length === 0) return null;
   return (
-    <div role="alert" className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
+    <div role="alert" className="border border-line bg-danger-bg p-4 space-y-1">
       <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
       {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={f} /></p>)}
     </div>

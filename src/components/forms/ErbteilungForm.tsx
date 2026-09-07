@@ -270,9 +270,9 @@ export function ErbteilungForm() {
       )}
 
       {/* Güterrechtliche Herleitung (optional) – übersteuert das Direktfeld oben */}
-      <div className="border border-line rounded-lg">
+      <div className="border border-line ">
         <button type="button" onClick={() => setGueterrechtAn(!gueterrechtAn)}
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${gueterrechtAn ? '' : 'rounded-b-lg'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${gueterrechtAn ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Güterrechtliche Vorstufe – Nachlass herleiten (optional)</span>
           <span className="text-ink-500">{gueterrechtAn ? '▲' : '▼'}</span>
         </button>
@@ -375,7 +375,7 @@ export function ErbteilungForm() {
               Ansicht aus reinen Divs (R4 Ziff. 3, `data-ansicht`). */}
           <div data-ansicht="quoten-balken" className="lc-card p-5">
             <p className="lc-overline mb-3">Gebundene vs. verfügbare Quote</p>
-            <div className="flex h-7 rounded-md overflow-hidden border border-line">
+            <div className="flex h-7 overflow-hidden border border-line">
               {ergebnis.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => {
                 const breite = zahl(e.pflichtteil) * (e.anzahl ?? 1) * 100;
                 return (

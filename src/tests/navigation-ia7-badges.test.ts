@@ -14,8 +14,12 @@ import { KANTONE, KANTON_NAMEN } from '../data/tarif/typen';
 import { STARTSEITE_ZAEHLER } from '../data/startseiteZaehler.generated';
 import { erfassungsgrad, STUFE_WORT } from '../lib/normtext/erfassungsgrad';
 
+// D26 (deklariert, §6.3): Positionsindex durch Label-Suche ersetzt — vor den
+// Gruppen stehen jetzt die Kernerlasse, und ein Index wäre eine stille Kopplung
+// an deren Zahl. Was der Test prüft, ist unverändert.
 const kantonGruppe = () =>
-  NAVIGATION.find((a) => a.titel === 'Gesetze')!.kinder[1] as NavGruppe;
+  NAVIGATION.find((a) => a.titel === 'Gesetze')!.kinder
+    .find((k) => k.art === 'gruppe' && k.label === 'Kantone') as NavGruppe;
 
 describe('IA-7 · Sidebar-Kantonsliste-Badges', () => {
   it('der Zähler-SSoT trägt eine Erlass-Zahl je Kanton (Record, deterministisch)', () => {
@@ -68,11 +72,20 @@ describe('IA-7 · Sidebar-Kantonsliste-Badges', () => {
     expect(STUFE_WORT[g.stufe]).toBe('dünn');
   });
 
-  it('nur die Kantonsliste trägt Badges — Bund-/International-Kinder bleiben zahllos', () => {
+  // D26 (deklariert, §6.3): der Geltungsbereich ist jetzt AUSDRÜCKLICH der
+  // Abschnitt «Gesetze». Rechtsprechung und Materialien tragen seit D26 selbst
+  // Zahlen (Entscheide je Sachgebiet, Materialien je Behörde) — ein Test, der
+  // «nur die Kantone haben Badges» app-weit behauptete, wäre damit falsch
+  // geworden. Innerhalb der Gesetze gilt die Aussage unverändert: die
+  // Kernerlasse und die International-Rubriken bleiben zahllos, weil für sie
+  // keine gezählte Menge existiert, die man ehrlich nennen könnte (§8).
+  it('im Abschnitt Gesetze trägt NUR die Kantonsliste Badges', () => {
     const gesetze = NAVIGATION.find((a) => a.titel === 'Gesetze')!.kinder;
-    for (const gruppe of [gesetze[0], gesetze[2]] as NavGruppe[]) {
-      for (const k of gruppe.kinder) {
-        if (k.art === 'link') expect(k.zahl, `${gruppe.label} › ${k.label}`).toBeUndefined();
+    for (const k of gesetze) {
+      if (k.art === 'link') { expect(k.zahl, `Gesetze › ${k.label}`).toBeUndefined(); continue; }
+      if (k.label === 'Kantone') continue;
+      for (const kk of k.kinder) {
+        if (kk.art === 'link') expect(kk.zahl, `${k.label} › ${kk.label}`).toBeUndefined();
       }
     }
   });

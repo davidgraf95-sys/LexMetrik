@@ -46,7 +46,10 @@ test.describe('S1 · Query-Durchreichung ?q=', () => {
     await mehr.click()
     // Kern von S1: die Query steht in der Adresse UND im Filterfeld der Zielseite.
     await expect(page).toHaveURL(/[?&]q=recht/)
-    const zielFeld = page.getByRole('searchbox', { name: /durchsuchen/ })
+    // DEKLARIERTE LOCATOR-ANPASSUNG (R12A/D22, 6.9.2026): das Filterfeld auf
+    // /gesetze heisst am Bild «Filtern» und trägt diesen Namen jetzt auch
+    // zugänglich (WCAG 2.5.3). Zusicherung unverändert: der Begriff kommt an.
+    const zielFeld = page.getByRole('searchbox', { name: 'Filtern' })
     await expect(zielFeld.first()).toHaveValue('recht')
   })
 
@@ -60,18 +63,20 @@ test.describe('S1 · Query-Durchreichung ?q=', () => {
     await mehr.click()
     // Ohne den laufenden ?q=-Abgleich bliebe das Feld hier leer (Lazy-Init greift
     // nur beim Mount — /gesetze → /gesetze mountet nicht neu).
-    await expect(page.getByRole('searchbox', { name: /Gesetze durchsuchen/ })).toHaveValue('recht')
+    // DEKLARIERTE ANPASSUNG (R12A/D22, 6.9.2026): Locator folgt dem sichtbaren
+    // Label «Filtern» (WCAG 2.5.3) — geprüft wird unverändert der ?q=-Abgleich.
+    await expect(page.getByRole('searchbox', { name: 'Filtern' })).toHaveValue('recht')
   })
 
   test('Rechtsprechung: getippter Begriff landet in der Adresse und übersteht das Neuladen (rg UND q)', async ({ page }) => {
     await page.goto('/rechtsprechung?rg=zpo')
-    const feld = page.getByRole('searchbox', { name: 'Rechtsprechung durchsuchen' })
+    const feld = page.getByRole('searchbox', { name: 'Filtern' })
     await feld.fill('Kündigung')
     // Entprellt (300 ms) — die Adresse zieht kurz danach nach.
     await expect(page).toHaveURL(/[?&]q=K%C3%BCndigung/)
     await expect(page).toHaveURL(/[?&]rg=zpo/)
     await page.reload()
-    await expect(page.getByRole('searchbox', { name: 'Rechtsprechung durchsuchen' })).toHaveValue('Kündigung')
+    await expect(page.getByRole('searchbox', { name: 'Filtern' })).toHaveValue('Kündigung')
     await expect(page).toHaveURL(/[?&]rg=zpo/)
   })
 
@@ -82,7 +87,7 @@ test.describe('S1 · Query-Durchreichung ?q=', () => {
   // src/tests/useSucheAusUrl.test.ts einzeln festgenagelt.
   test('Zurück-Taste stellt den früheren Begriff wieder her und bleibt stehen', async ({ page }) => {
     await page.goto('/rechtsprechung')
-    const feld = page.getByRole('searchbox', { name: 'Rechtsprechung durchsuchen' })
+    const feld = page.getByRole('searchbox', { name: 'Filtern' })
     await feld.fill('miete')
     await expect(page).toHaveURL(/[?&]q=miete/)
     // Fremde Adressänderung auf denselben Achsen (Header-Sprung-Äquivalent).
@@ -206,12 +211,16 @@ test.describe('S6 · Fokusmodus im Band 480–639 px (dort trägt der Streifen d
 // dieselbe ARIA-Listbox wie die Trefferliste (role=option, Pfeiltasten + Enter
 // über das steuernde Feld) — TAB verlässt das Feld wie jedes normale Kontrollelement.
 test.describe('Tastaturfalle in der globalen Suche (Cowork-Befund 38)', () => {
-  test('Tab verlässt das leere Suchfeld (Verlauf/Einstiege-Fenster) in ≤3 Schritten', async ({ page }) => {
+  // §6.3-DEKLARATION (D23, 6.9.2026): das Panel heisst jetzt «Suche — zuletzt
+  // geöffnet» statt «Suche — Verlauf und Einstiege», weil der Einstiege-Block
+  // ersatzlos gefallen ist. Geprüft wird unverändert die TASTATURFALLE, nicht
+  // der Name; der Regex zieht nur nach.
+  test('Tab verlässt das leere Suchfeld (Verlauf-Fenster) in ≤3 Schritten', async ({ page }) => {
     await page.goto('/kontakt')
     const feld = sucheFeld(page)
     await feld.click()
     // Leerzustand offen (kein Text getippt) — genau der Befund-38-Auslöser.
-    await expect(page.getByRole('listbox', { name: /Verlauf und Einstiege/ })).toBeVisible()
+    await expect(page.getByRole('listbox', { name: /zuletzt geöffnet/i })).toBeVisible()
     await expect(feld).toBeFocused()
 
     let verlassen = false
@@ -225,11 +234,20 @@ test.describe('Tastaturfalle in der globalen Suche (Cowork-Befund 38)', () => {
     await expect(page.locator(':focus')).not.toHaveAttribute('role', 'option')
   })
 
+  // §6.3-DEKLARATION (D23, 6.9.2026): der Leerzustand führt seit D23 NUR noch
+  // den Verlauf (der «Einstiege»-Block ist gefallen, er wiederholte die
+  // Seitenleiste). Ohne Verlauf hat das leere Panel darum keine Optionen mehr,
+  // und ein Pfeiltasten-Fall ohne Optionen prüft nichts. Der Fall legt sich
+  // seinen Verlauf jetzt selbst an — geprüft wird unverändert das
+  // Combobox-Muster (aria-activedescendant folgt der Pfeiltaste, der Fokus
+  // bleibt im Feld), nicht mehr und nicht weniger.
   test('Pfeiltasten navigieren die Vorschläge weiterhin (Combobox-Muster bleibt intakt)', async ({ page }) => {
+    await page.goto('/rechner/tagerechner')
+    await expect(page.locator('h1').first()).toBeVisible()
     await page.goto('/kontakt')
     const feld = sucheFeld(page)
     await feld.click()
-    const box = page.getByRole('listbox', { name: /Verlauf und Einstiege/ })
+    const box = page.getByRole('listbox', { name: /zuletzt geöffnet/i })
     await expect(box).toBeVisible()
     await expect(feld).toHaveAttribute('aria-expanded', 'true')
     await page.keyboard.press('ArrowDown')
@@ -241,4 +259,86 @@ test.describe('Tastaturfalle in der globalen Suche (Cowork-Befund 38)', () => {
     // Der Fokus selbst bleibt beim Pfeil-Navigieren im Feld (Combobox-Muster).
     await expect(feld).toBeFocused()
   })
+})
+
+// ═══ D10/D18 · AUF «/» GIBT ES GENAU EINE SUCHE — UND ZWAR DIE IM KOPF ══════
+//
+// ── DEKLARIERTE TEST-ÄNDERUNG (§6.3, W2·24-R5-F1C, 6.9.2026) ────────────────
+// Der Fall stand hier als D10-Wächter mit UMGEKEHRTEM Vorzeichen: auf «/» sollte
+// das eine Suchfeld der HERO sein und der Kopf keines tragen. David hat die
+// Frage am 6.9.2026 anders entschieden — «insgesamt braucht es auf der
+// startseite keine suche. nur oben reicht» (D18). Die geprüfte ZUSAGE ist
+// unverändert und war immer die eigentliche: auf «/» gibt es GENAU EIN
+// Suchfeld, der Fokus bleibt dort, das Kürzel «/» zielt darauf und das
+// Trefferpanel öffnet an diesem Feld. Gedreht ist nur, WELCHES Feld das ist.
+// Umfang und Breiten (@1440/@1030/@390) bleiben; die Prüfung wird dabei nicht
+// schwächer, sondern schärfer — sie gilt jetzt für dasselbe Feld wie auf jeder
+// anderen Route (§5: ein Suchweg).
+//
+// ROT ZU BEKOMMEN (§6.7 — einmal gefahren, 6.9.2026): in `layout/Topbar.tsx`
+// die HeaderSuche wieder hinter `{!aufStartseite && …}` legen ⇒ «/» trägt kein
+// Feld mehr, alle vier Fälle reissen.
+test.describe('D18 · «/» trägt EIN Suchfeld, und es steht im Titelblatt', () => {
+  const KOPF = 'header [role="search"] input[type="search"]'
+
+  for (const breite of [1440, 1030]) {
+    test(`@${breite}: ein Feld, Klick und «/» landen im Kopf`, async ({ page }) => {
+      await page.setViewportSize({ width: breite, height: 860 })
+      await page.goto('/')
+      await expect(page.locator(KOPF)).toBeVisible({ timeout: 20_000 })
+      // (1) Es gibt kein zweites Suchfeld — insbesondere keines im Inhalt.
+      await expect(page.locator('[role="search"] input')).toHaveCount(1)
+      await expect(page.locator('main [role="search"] input')).toHaveCount(0)
+      // (2) Ein Klick bleibt, wo er hingehört — auch ein paar Frames später.
+      await page.locator(KOPF).click()
+      await page.waitForTimeout(900)
+      expect(await page.evaluate(() => document.activeElement?.closest('header') !== null)).toBe(true)
+      // (3) Das Kürzel «/» zielt auf dasselbe Feld.
+      await page.locator(KOPF).blur()
+      await page.keyboard.press('/')
+      await expect(page.locator(KOPF)).toBeFocused({ timeout: 10_000 })
+    })
+  }
+
+  // @390 trägt der Streifen im Ruhezustand die Lupe statt des Feldes
+  // (C1/B10/L3) — die Zusage «genau eine Suche, und sie ist im Kopf» gilt dort
+  // über den Lupen-Weg. Gemessen wird darum der geöffnete Zustand.
+  test('@390: die Lupe im Kopf öffnet das eine Feld', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 860 })
+    await page.goto('/')
+    await expect(page.locator('header [data-suche-lupe]')).toBeVisible({ timeout: 20_000 })
+    await expect(page.locator('main [role="search"] input')).toHaveCount(0)
+    const feld = await kopfSucheOeffnen(page)
+    await expect(feld).toBeFocused()
+    expect(await feld.evaluate((el) => el.closest('header') !== null)).toBe(true)
+  })
+
+  test('@1440: das Treffer-Panel öffnet AM Kopf-Feld, nicht im Inhalt', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.goto('/')
+    await page.locator(KOPF).click()
+    await page.locator(KOPF).fill('kündigung')
+    const panel = page.locator('[role="listbox"]').first()
+    await expect(panel).toBeVisible({ timeout: 20_000 })
+    const lage = await page.evaluate((sel) => {
+      const f = document.querySelector(sel)!.getBoundingClientRect()
+      const p = document.querySelector('[role="listbox"]')!.getBoundingClientRect()
+      return { unterFeld: p.top >= f.bottom - 1, imKopf: !!document.querySelector('header [role="listbox"]') }
+    }, KOPF)
+    expect(lage.imKopf, 'das Panel hängt nicht am Kopf-Feld').toBe(true)
+    expect(lage.unterFeld, 'das Panel steht nicht unter dem Feld').toBe(true)
+  })
+})
+
+// ── D18 · DER `?q=`-PERMALINK GEHT NICHT VERLOREN ───────────────────────────
+// Die Hero-Suche schrieb ihren Begriff in `/?q=…`; solche Adressen sind geteilt
+// worden und müssen weiter tragen (David: «keine funktion darf verloren
+// gehen»). Die Kopf-Suche ist bewusst ein Dropdown OHNE Adress-Kopplung — der
+// Permalink zieht darum auf die Volltext-Suche, die `?q=` seit jeher liest.
+// ROT ZU BEKOMMEN: die Weiterleitung in `components/start/SuchBlock.tsx`
+// entfernen ⇒ `/?q=…` bleibt auf «/» stehen und filtert nichts.
+test('D18 · `/?q=…` führt auf die Volltext-Suche mit demselben Begriff', async ({ page }) => {
+  await page.goto('/?q=k%C3%BCndigung')
+  await expect(page).toHaveURL(/\/suche\?q=k%C3%BCndigung/, { timeout: 20_000 })
+  await expect(page.getByRole('searchbox', { name: /durchsuchen/ }).first()).toHaveValue('kündigung')
 })

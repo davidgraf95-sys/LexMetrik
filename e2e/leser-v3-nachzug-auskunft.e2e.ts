@@ -71,13 +71,26 @@ test.describe('A1 — die Leser-Vorgabe wirkt auch für Bestandsnutzer', () => {
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })
 
-  test('(c) ausserhalb des Lesers bleibt die Leiste offen und nichts wird geschrieben', async ({ page }) => {
+  test('(c) ausserhalb des Lesers gilt dieselbe Vorgabe und nichts wird geschrieben', async ({ page }) => {
+    // ── §6.3-DEKLARATION (W2·24-D25, 6.9.2026) · DIE VORGABE GILT ÜBERALL ────
+    // Der Fall verlangte «> 200 px», also eine OFFENE App-Leiste ausserhalb des
+    // Lesers. Das war die Ä1c-Regel vom 17.8.2026 («nur im Gesetz-Leser
+    // eingeklappt»). D25 hat sie durch einen ausdrücklichen Entscheid David
+    // 6.9.2026 abgelöst — «seitenleiste soll als default zuerst eingeklappt
+    // sein» —, nachzulesen im Kopf von `components/layout/useSeitenleiste.ts`
+    // (`VORGABE_EINGEKLAPPT = true`, kein bereichsabhängiger Vorgabewert mehr).
+    // Der Fall behält seine EIGENTLICHE Aussage, die von D25 unberührt ist und
+    // die den «Alt-Fehler» bewacht: ohne Nutzerhandlung wird NICHTS gespeichert.
+    // Die Breiten-Zeile prüft ab jetzt die neue Zusage — dass die Vorgabe
+    // wirklich für jede Route gilt und nicht nur für den Leser. Käme ein
+    // bereichsabhängiger Vorgabewert zurück, wäre der Fall wieder rot.
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('/gesetze')
     await expect(page.locator('main')).toBeVisible({ timeout: 20_000 })
 
-    expect(await appLeisteBreite(page), 'die Übersicht startet ohne Seitenleiste').toBeGreaterThan(200)
+    expect(await appLeisteBreite(page),
+      'die Übersicht startet mit offener Seitenleiste — die D25-Vorgabe greift nur im Leser').toBe(0)
     expect(await page.evaluate(() => localStorage.getItem('lexmetrik-seitenleiste-eingeklappt.v2')),
       'ohne Nutzerhandlung wurde eine Wahl gespeichert — genau der Alt-Fehler').toBe(null)
 

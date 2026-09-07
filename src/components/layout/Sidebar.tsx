@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, type Location } from 'react-router-dom';
 import {
-  NAVIGATION, NAVIGATION_META, alleNavLinks, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
+  NAVIGATION, alleNavLinks, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
 } from '../../lib/navigation';
 import { STUFE_WORT } from '../../lib/normtext/erfassungsgrad';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 import { KorpusStand } from '../ui/KorpusStand';
+import { registerVonPfad, REG_FLAECHE, REG_HOVER_FLAECHE_BLATT } from './bereiche';
 
 // Alle Nav-Ziele inkl. #Anker (statisch) — zum Erkennen, ob ein aktiver Hash
 // überhaupt einem Geschwister-Eintrag entspricht (Bug-Fix 26.6.: sonst verlieren
@@ -31,6 +32,14 @@ function istAktiv(ziel: string, loc: Location): boolean {
 
   const pfadOk = pfad === '/gesetze' ? loc.pathname.startsWith('/gesetze') : loc.pathname === pfad;
   if (!pfadOk) return false;
+  // D26 · DER SPEZIFISCHERE EINTRAG GEWINNT. Seit die Kernerlasse als eigene
+  // Ziele in der Leiste stehen (`/gesetze/bund/or`), trafen auf einer Leser-Route
+  // ZWEI Einträge zu: der Erlass selbst (exakter Pfad) und «Alle Bundeserlasse»
+  // bzw. der Kantonslink über die `startsWith`-Regel oben — zwei Aktiv-Marken
+  // sagen nicht mehr, wo man ist. Trägt der aktuelle Pfad selbst einen Eintrag,
+  // gehört ihm die Marke allein; die `startsWith`-Regel bleibt für alles übrige
+  // (Leser ohne eigenen Eintrag ⇒ die Rubrik leuchtet weiter).
+  if (pfad === '/gesetze' && loc.pathname !== '/gesetze' && NAV_ZIELE.has(loc.pathname)) return false;
   // Trägt das Ziel einen Anker, muss er stimmen (Vorlagen-Gruppe / Bund-Gebiet).
   if (hash && loc.hash !== `#${hash}`) return false;
   // Hash-LOSES Ziel auf exaktem Pfad (z.B. «Zivilprozess» /rechner/zustaendigkeit)
@@ -60,20 +69,36 @@ function Blatt({ k, loc, onNavigate, klein }: {
   k: NavLinkT; loc: Location; onNavigate?: () => void; klein?: boolean;
 }) {
   const aktiv = istAktiv(k.ziel, loc);
+  const reg = registerVonPfad(k.ziel);
   return (
     <Link
       to={k.ziel}
       onClick={onNavigate}
       aria-current={aktiv ? 'page' : undefined}
       aria-label={k.ariaLabel}
-      className={`group/blatt flex items-center gap-2.5 rounded-md no-underline transition-colors ${klein ? 'px-2.5 py-1.5 text-body-s' : 'px-2.5 py-2 text-body-s font-medium'} ${
-        aktiv ? 'bg-brass-100 text-brass-800' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
+      // W2·24 R2: Linien statt Flächen (§5). Der aktive Eintrag trug eine
+      // Messing-FÜLLUNG — seit R1 ist das ein neutrales Grau, das nur noch
+      // «irgendwas ist hier» sagt. Jetzt sagt die MARKE, WAS hier ist: der
+      // 2-px-Strich trägt die Registerfarbe der Domäne des Ziels
+      // (`./bereiche`), dieselbe Farbe wie der Bereichs-Reiter im Titelblatt
+      // und der Reiter-Strich in der Arbeitsleiste. Fläche nur noch als
+      // Hover-Andeutung des Papiers, kein Radius.
+      className={`group/blatt flex items-center gap-2.5 no-underline transition-colors ${klein ? 'px-2.5 py-1.5 text-body-s' : 'px-2.5 py-2 text-body-s font-medium'} ${
+        aktiv ? 'text-ink-900 font-medium' : 'text-ink-600 hover:text-ink-900'
       }`}
     >
-      {/* Messing-Skalenstrich als Aktiv-Marke (greift das Siegel-Motiv auf);
-          transparent reserviert den Platz → kein Layout-Sprung beim Wechsel. */}
-      <span aria-hidden className={`h-3.5 w-0.5 rounded-full shrink-0 transition-colors ${
-        aktiv ? 'bg-brass-600' : 'bg-transparent group-hover/blatt:bg-brass-300'
+      {/* Registerfarben-Strich als Aktiv-Marke; transparent reserviert den
+          Platz → kein Layout-Sprung beim Wechsel.
+          F2 (Prüfbefund 6.9.2026): die HOVER-Marke war `rule-soft`, also grau —
+          auf den Übersichtsrouten blieb die Leiste damit farblos, obwohl jeder
+          Eintrag einem Register angehört. Der Hover zeigt jetzt die Farbe des
+          Ziels; unterschieden bleiben die Zustände über die Schrift (aktiv
+          `ink-900`/`font-medium`) und `aria-current`, nicht über die Farbe
+          allein (§11.6.8). */}
+      <span aria-hidden className={`h-4 w-0.5 shrink-0 transition-colors ${
+        aktiv
+          ? (reg ? REG_FLAECHE[reg] : 'bg-ink-900')
+          : `bg-transparent ${reg ? REG_HOVER_FLAECHE_BLATT[reg] : 'group-hover/blatt:bg-rule-soft'}`
       }`} />
       <span className="leading-snug" title={k.label}>{k.label}</span>
       {/* IA-7 (§11.5): Erlass-Zahl-Badge (Kantonslinks) — rechtsbündig, von
@@ -95,8 +120,10 @@ function Blatt({ k, loc, onNavigate, klein }: {
               «Auswahl» und «dünn» auf — «vollständig» setzt einen
               Enumerations-Beleg voraus, und ENUMERATIONS_BELEGE ist leer (§8:
               wir behaupten keine Vollständigkeit, die wir nicht belegt haben). */}
-          {/* ink-600 statt -500: auf der aktiven brass-Zeile misst axe für
-              11-px-Text sonst 4.36:1 < 4.5 (CI-Fund 29.8.2026, Shard 1/7). */}
+          {/* ink-600 statt -500: auf der aktiven Zeile misst axe für 11-px-Text
+              sonst 4.36:1 < 4.5 (CI-Fund 29.8.2026, Shard 1/7). Die damalige
+              Fläche (brass-100) ist seit R2 weg; der Ton bleibt, weil er auf
+              dem Papier erst recht hält. */}
           {k.stufe && <span className="text-micro text-ink-600">{STUFE_WORT[k.stufe]}</span>}
           {/* aria-hidden auch am Badge selbst: der IA-7-Wächter prüft das
               Attribut an span.num (Eigenschaft identisch — der Wrapper trägt es
@@ -158,7 +185,7 @@ function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigat
 
   const aktiv = k.ziel != null && istAktiv(k.ziel, loc);
   const kinder = (
-    <div className="mt-0.5 ml-3.5 pl-2 border-l border-line flex flex-col gap-0.5">
+    <div className="mt-0.5 ml-3.5 pl-2 border-l border-rule-soft flex flex-col gap-0.5">
       {k.kinder.map((kk, i) => (
         kk.art === 'link'
           ? <Blatt key={i} k={kk} loc={loc} onNavigate={onNavigate} klein />
@@ -169,17 +196,17 @@ function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigat
 
   return (
     <div className="flex flex-col">
-      <div className="flex items-center gap-1 rounded-md px-2.5 py-2 hover:bg-brass-100/40">
+      <div className="flex items-center gap-1 px-2.5 py-2">
         {k.ziel ? (
           <>
             {/* KEIN natives <details>: ein Link in <summary> würde beim Klick
                 zugleich navigieren UND umschalten. */}
             <Link to={k.ziel} onClick={onNavigate} aria-current={aktiv ? 'page' : undefined}
-              className={`flex-1 leading-snug text-body-s font-medium no-underline transition-colors ${aktiv ? 'text-brass-700' : 'text-ink-600 hover:text-ink-900'}`}
+              className={`flex-1 leading-snug text-body-s font-medium no-underline transition-colors ${aktiv ? 'text-ink-900' : 'text-ink-600 hover:text-ink-900'}`}
               title={k.label}>{k.label}</Link>
             <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
               aria-label={`${k.label} ${offen ? 'einklappen' : 'aufklappen'}`}
-              className="shrink-0 p-0.5 text-ink-500 hover:text-brass-700 transition-colors">
+              className="shrink-0 p-0.5 text-ink-500 hover:text-ink-900 transition-colors">
               <Chevron offen={offen} />
             </button>
           </>
@@ -215,12 +242,18 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
     );
   }
   const aktiv = a.ziel != null && (loc.pathname + loc.search === a.ziel || (a.ziel === '/gesetze' && loc.pathname.startsWith('/gesetze')));
+  // F2 · DER GRUPPENKOPF TRÄGT SEINE REGISTERFARBE DAUERHAFT (David 6.9.2026:
+  // «nicht trist»). Der Strich sitzt auf derselben Achse wie die Aktiv-Marken
+  // der Blätter darunter (px-2.5 · 2 px · 10 px Abstand) — die Leiste bekommt
+  // damit eine durchgehende Registerspalte statt vier grauer Überschriften.
+  const reg = a.ziel ? registerVonPfad(a.ziel) : null;
   return (
     <div className="flex flex-col">
-      <div className="flex items-center gap-1 px-2.5 pt-1 pb-1.5 rounded-md hover:bg-brass-100/30">
+      <div className="flex items-center gap-1 px-2.5 pt-1 pb-1.5 border-b border-rule-soft">
+        <span aria-hidden className={`h-3.5 w-0.5 shrink-0 mr-2.5 ${reg ? REG_FLAECHE[reg] : 'bg-rule-soft'}`} />
         {a.ziel ? (
           <Link to={a.ziel} onClick={() => { onNavigate?.(); setZuklappGen((g) => g + 1); }} aria-current={aktiv ? 'page' : undefined}
-            className={`lc-overline flex-1 no-underline transition-colors ${aktiv ? 'text-brass-700' : ' hover:text-brass-700'}`}>
+            className={`lc-overline flex-1 no-underline transition-colors ${aktiv ? 'text-ink-900' : ' hover:text-ink-900'}`}>
             {a.titel}
           </Link>
         ) : (
@@ -228,7 +261,7 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
         )}
         <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
           aria-label={`${a.titel} ${offen ? 'einklappen' : 'aufklappen'}`}
-          className="shrink-0 p-0.5 text-ink-500 hover:text-brass-700 transition-colors">
+          className="shrink-0 p-0.5 text-ink-500 hover:text-ink-900 transition-colors">
           <Chevron offen={offen} />
         </button>
       </div>
@@ -241,12 +274,14 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
   );
 }
 
-export function Sidebar({ onNavigate, markeZeigen = true }: { onNavigate?: () => void; markeZeigen?: boolean }) {
+export function Sidebar({ onNavigate, markeZeigen = false }: { onNavigate?: () => void; markeZeigen?: boolean }) {
   const loc = useLocation();
   return (
     <nav aria-label="Hauptnavigation" className="flex flex-col gap-5 p-4 min-h-full">
-      {/* Marke am Kopf der Seitenleiste (Prototyp V2). Auf Mobil trägt der
-          Top-Streifen das Logo (Schublade kann es ausblenden).
+      {/* W2·24 R2: Die Marke steht seit dem Titelblatt-Umbau IM KOPF, auf jeder
+          Breite (`Topbar.tsx`) — die persistente Leiste zeigt sie darum nicht
+          mehr (Vorgabe `markeZeigen = false`); zwei Marken auf einem Bildschirm
+          sind eine Dopplung, kein Angebot.
           ── C2 (29.8.2026) · UNTER 480 px TRÄGT SIE DIE SCHUBLADE ────────────
           Dort hat der Streifen keinen Platz mehr für acht 44-px-Ziele und lässt
           das Logo weg (Messreihe in `Topbar.tsx`). Die Marke fällt deswegen
@@ -266,17 +301,22 @@ export function Sidebar({ onNavigate, markeZeigen = true }: { onNavigate?: () =>
         {NAVIGATION[0].kinder.map((k, j) => <Knoten key={j} k={k} loc={loc} onNavigate={onNavigate} />)}
       </div>
 
-      <div aria-hidden className="h-px bg-line -mt-2.5" />
+      <div aria-hidden className="h-px bg-rule-soft -mt-2.5" />
 
       {NAVIGATION.slice(1).map((abschnitt, i) => (
         <Abschnitt key={i} a={abschnitt} loc={loc} onNavigate={onNavigate} />
       ))}
 
-      {/* Utility/Meta unten — abgesetzt durch Hairline. */}
-      <div className="mt-auto pt-3 border-t border-line flex flex-col gap-0.5">
-        {NAVIGATION_META.map((k, i) => (
-          <Blatt key={i} k={k} loc={loc} onNavigate={onNavigate} klein />
-        ))}
+      {/* Fuss der Leiste — abgesetzt durch Hairline.
+          ── D26 (David 6.9.2026) · DIE META-ZIELE STEHEN IM SEITENFUSS ────────
+          Einstellungen · Methodik · Über · Kontakt · Datenschutz standen hier als
+          fünf gleichrangige Zeilen unter den Inhalts-Rubriken und beanspruchten
+          in einer Leiste, die «zeigen soll, was man aufschlägt», ein Fünftel der
+          Höhe für Dinge, die man einmal im Jahr braucht. Sie sind NICHT weg —
+          `Footer.tsx` führt dieselbe SSoT-Liste (`NAVIGATION_META`), und der
+          Seitenfuss steht auf jeder Route. `NAVIGATION_META` bleibt darum
+          unverändert exportiert; nur die Leiste rendert es nicht mehr. */}
+      <div className="mt-auto pt-3 border-t border-rule-soft flex flex-col gap-0.5">
         {/* W2·23-STARTSEITE-V4 §6.3 · Fuss «Stand des Korpus». Dieselbe Wahrheit
             wie die Korpus-Stand-Zeile auf «/» — EIN Baustein, zwei Konsumenten
             (§5), kein zweiter Datumssatz in der Leiste. Auf Mobil trägt die

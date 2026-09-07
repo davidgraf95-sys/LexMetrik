@@ -85,21 +85,38 @@ test.describe('V2/V4 — Norm-Chip: Hover-Vorschau und interner href', () => {
     expect(fehler).toEqual([])
   })
 
-  test('(e) V4: Cmd-/Ctrl-Klick landet intern im eigenen Reader, nicht im Popover', async ({ page, context }) => {
+  test('(e) V4: Cmd-/Ctrl-Klick landet intern im eigenen Reader, nicht im Popover', async ({ page }) => {
+    // ── §6.3-DEKLARATION (W2·24-R2/D7, 6.9.2026) · WO «DER NEUE TAB» LANDET ──
+    // Der Fall wartete auf ein BROWSER-Tab (`context.waitForEvent('page')`).
+    // Seit der Arbeitsleiste fängt `components/TabTracker.tsx`
+    // (`useNeuerReiterGeste`) die Geste selbst ab und legt einen
+    // HINTERGRUND-REITER der App an — der dortige Kopfkommentar sagt es
+    // wörtlich: «Der Vorgabe-Weg des Browsers (ein neues BROWSER-Fenster/-Tab)
+    // wird dabei unterdrückt». Damit lief der Fall in seine eigene 5-s-Falle:
+    // der Zeiger blieb während des vergeblichen Wartens auf dem Chip stehen,
+    // die HOVER-Vorschau (V2, Fall (b) — genau so gewollt) ging auf, und die
+    // Zeile darunter meldete sie als «Popover nach Modifier-Klick» (gemessen:
+    // «24 × locator resolved to 1 element»). Sie mass also V2, nicht V4.
+    // Die Zusage von V4 ist unverändert und wird ab hier VOLLSTÄNDIG geprüft,
+    // statt nur «sofern die Plattform ihn öffnet»: das Ziel ist intern, es ist
+    // nicht Fedlex, es trägt den Anker, die Seite bleibt stehen, und es ist
+    // KEIN Klick-Dialog aufgegangen. Das ist strenger als vorher — der interne
+    // Pfad war bisher nur bedingt geprüft.
     await page.goto(SEITE)
     const chip = page.locator(CHIP).first()
-    const [neu] = await Promise.all([
-      context.waitForEvent('page', { timeout: 5_000 }).catch(() => null),
-      chip.click({ modifiers: ['ControlOrMeta'] }),
-    ])
-    // Der Modifier-Klick wird NICHT abgefangen → kein Popover auf dieser Seite.
-    await expect(page.locator(VORSCHAU)).toHaveCount(0)
-    // Der neue Tab (sofern die Plattform ihn öffnet) zeigt in den eigenen Reader.
-    if (neu) {
-      expect(neu.url()).toContain('/gesetze/bund/OR')
-      expect(neu.url()).not.toContain('fedlex')
-      await neu.close()
-    }
+    await chip.click({ modifiers: ['ControlOrMeta'] })
+    // Der Klick-Dialog geht NICHT auf (die Hover-Karte darf, s. Fall (b)).
+    await expect(page.locator(`${VORSCHAU}[role="dialog"]`)).toHaveCount(0)
+    // Die Ausgangsseite bleibt stehen — der Hintergrund-Reiter navigiert nicht.
+    expect(new URL(page.url()).pathname).toBe(SEITE)
+    // Und der neue Reiter zeigt in den eigenen Reader, mit dem Anker der Norm.
+    const reiter = await page.evaluate(() => {
+      try { return JSON.parse(localStorage.getItem('lexmetrik-tabs') ?? '[]') as { path?: string }[] }
+      catch { return [] }
+    })
+    const pfade = reiter.map((r) => r.path ?? '')
+    expect(pfade, `Reiter: ${JSON.stringify(pfade)}`).toContain('/gesetze/bund/OR#art-102')
+    expect(pfade.join(' ')).not.toContain('fedlex')
   })
 
   test('(g) V2/B1: die offene Hover-Karte legt NICHTS über die Seite', async ({ page }) => {

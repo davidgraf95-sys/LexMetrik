@@ -90,11 +90,18 @@ describe('O2 · Sidebar-Konsistenz', () => {
   });
 
   it('Deep-Link auf ein Werkzeug klappt seine Gruppe auf (Auto-Expandieren, Mount-Fall)', () => {
-    // Ein Werkzeug, das unter einer standardmässig ZUGEKLAPPTEN Gruppe hängt.
+    // D26 (deklariert, §6.3): die Rechner-Kategorien sind keine Gruppen mehr —
+    // die Leiste zeigt dort fünf direkte Ziele + «Alle Rechner». Die geprüfte
+    // MECHANIK (eine zugeklappte Gruppe öffnet sich, wenn man per Deep-Link auf
+    // eines ihrer Kinder landet) ist unverändert und wird jetzt an der
+    // nächstliegenden verbliebenen Werkzeug-Gruppe belegt — den Vorlagen.
+    // Bewusst NICHT auf eine Namensliste festgenagelt: gesucht wird die erste
+    // zugeklappte Gruppe mit einem Werkzeug-Kind, egal welcher Rubrik.
+    const istWerkzeug = (z: string) => z.startsWith('/rechner/') || z.startsWith('/vorlagen/');
     const gruppe = alleGruppen().find((g) =>
-      !g.standardOffen && g.kinder.some((k) => k.art === 'link' && k.ziel.startsWith('/rechner/')))!;
-    expect(gruppe, 'keine zugeklappte Rechner-Gruppe gefunden').toBeTruthy();
-    const kind = gruppe.kinder.find((k) => k.art === 'link' && k.ziel.startsWith('/rechner/'))!;
+      !g.standardOffen && g.kinder.some((k) => k.art === 'link' && istWerkzeug(k.ziel)))!;
+    expect(gruppe, 'keine zugeklappte Werkzeug-Gruppe gefunden').toBeTruthy();
+    const kind = gruppe.kinder.find((k) => k.art === 'link' && istWerkzeug(k.ziel))!;
     const kindLabel = (kind as { label: string }).label;
 
     // Auf einer fremden Seite ist das Kind NICHT gerendert (Gruppe zu) …

@@ -21,7 +21,7 @@ export function NotariatsHinweis({ kanton }: { kanton: string }) {
   const n = NOTARIATE[kanton as Kanton];
   if (!n) return null;
   return (
-    <div className="rounded-md bg-surface border border-line p-3 space-y-1">
+    <div className="bg-surface border border-line p-3 space-y-1">
       <p className="text-body-s text-ink-700 max-w-reading">
         <span className="font-medium text-ink-900">Beurkundung im Kanton {kanton}:</span>{' '}
         {NOTARIAT_SYSTEM_LABEL[n.system]} —{' '}
@@ -40,7 +40,7 @@ export function HrAmtHinweis({ kanton }: { kanton: string }) {
   const a = HR_AEMTER[kanton as Kanton];
   if (!a) return null;
   return (
-    <div className="rounded-md bg-surface border border-line p-3 space-y-1">
+    <div className="bg-surface border border-line p-3 space-y-1">
       <p className="text-body-s text-ink-700 max-w-reading">
         <span className="font-medium text-ink-900">Anmeldung beim Handelsregisteramt ({kanton}):</span>{' '}
         <a href={a.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:text-brass-600">{a.name}</a>
@@ -62,7 +62,7 @@ export function MappenGates({ gates }: { gates: { blocker: string[]; warnungen: 
   return (
     <>
       {gates.blocker.length > 0 && (
-        <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
+        <div className="bg-danger-bg p-3 space-y-0.5">
           {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700 max-w-reading">• <NormText text={b} /></p>)}
         </div>
       )}

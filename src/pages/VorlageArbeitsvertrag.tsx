@@ -63,8 +63,10 @@ const REGIME_OPTIONEN: { id: AvRegime; label: string; sub: string }[] = [
 // Kader) zeigt den Vertragstyp dagegen GEMEINSAM mit dem Detailgrad in EINER
 // VariantenKopf-Karte (Redesign: keine Schalter-Stapelung mehr).
 function VertragstypWahl({ regime, onWahl }: { regime: AvRegime; onWahl: (v: AvRegime) => void }) {
+  // R5-F2: dieselbe Umstellung wie in `VariantenKopf` — der Schalter-Block
+  // trägt Linien statt Kasten (§5).
   return (
-    <fieldset className="rounded-xl border border-line bg-surface-raised p-4 space-y-1.5">
+    <fieldset className="border-y border-rule-soft py-4 space-y-1.5">
       <legend className="lc-overline">Vertragstyp</legend>
       {/* B3-4 (R3-α, 31.8.2026): eigene Kachel-Anatomie (eigenes Padding,
           `bg-brass-100` statt `/60`, kein `min-h-11`) → der EINE Baustein.

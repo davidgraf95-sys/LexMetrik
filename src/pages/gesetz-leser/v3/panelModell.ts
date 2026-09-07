@@ -199,13 +199,34 @@ export interface PanelZustand {
    */
   oeffnerSichtbar: boolean;
   offen: boolean;
-  /** War das Panel in dieser Sitzung schon einmal offen? Steuert das Nachladen. */
+  /** War das Panel in dieser Sitzung schon einmal offen — oder hat jemand
+   *  ANDERS nach denselben Daten gefragt? Steuert das Nachladen.
+   *
+   *  D30 (6.9.2026): das Flag heisst weiterhin so, trägt aber seither zwei
+   *  Auslöser. Der zweite ist `weckeDaten()` unten. */
   jeGeoeffnet: boolean;
   reiter: PanelReiter;
   setReiter: (r: PanelReiter) => void;
   oeffne: (r?: PanelReiter) => void;
   schliesse: () => void;
   umschalten: () => void;
+  /**
+   * Die Daten holen, OHNE das Panel aufzuziehen (W2·24-R5-F1K, D30).
+   *
+   * Anlass, Davids Wortlaut: die Bezüge-Zeile am Artikelkopf «klappt auf, zeigt
+   * aber nur den Rechnen-Block; die gezählten Entscheide … werden nicht
+   * geladen». Sie sass am kurzen Ende von H3: der Bezugs-Shard wird seither erst
+   * beim Öffnen des Panels geholt, und die Zeile hatte keinen Weg, danach zu
+   * fragen. Die Zahl stand da (Zähl-Datei, R6c), der Apparat kam nie.
+   *
+   * DIESELBE STELLE, KEIN ZWEITER LADEPFAD (§5): das Aufklappen setzt genau das
+   * Flag, das auch das Panel setzt — `useBezuege` bekommt seinen Erlass-Key,
+   * `usePanelBezuege` und die Bezüge-Zeile lesen danach DIESELBE Hook-Instanz.
+   * Wer erst die Zeile aufklappt und dann das Panel öffnet, löst keinen zweiten
+   * Fetch aus; wer die Zeile wieder zuklappt, verliert die Daten nicht (der
+   * Grund, aus dem das Flag `jeGeoeffnet` heisst und nicht `offen`).
+   */
+  weckeDaten: () => void;
 }
 
 export function usePanelZustand(): PanelZustand {
@@ -220,6 +241,10 @@ export function usePanelZustand(): PanelZustand {
     setOffen(true);
   }, []);
   const schliesse = useCallback(() => setOffen(false), []);
+  // D30: nur das Lade-Flag, kein `setOffen` — das Panel bleibt zu.
+  // `setJeGeoeffnet(true)` auf einem bereits gesetzten Flag ist in React ein
+  // No-op (Bail-out), die Zeile darf also bei jedem Aufklappen rufen.
+  const weckeDaten = useCallback(() => setJeGeoeffnet(true), []);
   const umschalten = useCallback(() => {
     setOffen((o) => {
       if (!o) setJeGeoeffnet(true);
@@ -232,7 +257,7 @@ export function usePanelZustand(): PanelZustand {
   // Tastatur erreichbar». Wer `r` drückt, während der Schalter aus ist, bekommt
   // das Panel — es hat dann nur keine Lasche und keinen Zähler, über die man es
   // wieder zumachen könnte, wohl aber sein eigenes ✕ und Esc.
-  return { oeffnerSichtbar, offen, jeGeoeffnet, reiter, setReiter, oeffne, schliesse, umschalten };
+  return { oeffnerSichtbar, offen, jeGeoeffnet, reiter, setReiter, oeffne, schliesse, umschalten, weckeDaten };
 }
 
 /**

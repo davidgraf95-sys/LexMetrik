@@ -51,7 +51,15 @@ export default {
         // Linien-Sprache — vertikaler Gliederungs-Guide, Artikel-Trenner (fein),
         // Struktur-Trenner (oberste Sektionen, eine Spur kräftiger). Nur im
         // Normtext-Reader verwendet; Chrome-Borders bleiben `border-line`.
-        rule: { artikel: 'var(--rule-artikel)', struktur: 'var(--rule-struktur)' },
+        // W2·24-R1 ergänzt DEFAULT/soft: die zwei SOLIDEN Trennlinien des neuen
+        // Bildes (1 px weich im Satzspiegel, 2 px hart unter der Titelblatt-Zeile)
+        // — dieselbe `rule`-Familie, weil es dieselbe Sache ist: Trennung durch
+        // Linie statt durch Fläche. Ein zweiter `rule:`-Schlüssel hätte diesen
+        // hier still überschrieben (JS-Objektliteral, letzter gewinnt).
+        rule: {
+          DEFAULT: 'var(--rule)', soft: 'var(--rule-soft)',
+          artikel: 'var(--rule-artikel)', struktur: 'var(--rule-struktur)',
+        },
         // raised/sunken ergänzt 7.6.2026: bg-paper-raised wurde in
         // FristenKalender/wizard bereits verwendet, war aber nie generiert
         // (stiller No-op — die Kreise/Flächen blieben transparent).
@@ -78,6 +86,12 @@ export default {
         // C2-Gegenstück: Text auf --ok-solid (flippt bewusst nicht) braucht die
         // STETS helle Tinte (--auf-sage, aus --ink-fixed-light gespeist).
         auf: { gold: 'var(--auf-gold)', sage: 'var(--auf-sage)' },
+        // ── REGISTERFARBEN (W2·24-DESIGN-IDENTITAET R1, 6.9.2026) ───────────
+        // Die vier Register der Sammlung — Gesetze · Rechtsprechung ·
+        // Materialien · Werkzeuge. Werte in src/index.css (:root + html.dark).
+        // Hier registriert, damit sie ab R2 als Utility greifbar sind UND das
+        // Farbwelt-Tor sie als Pflichtpaare prüfen kann (sonst stiller No-op, F7).
+        reg: { g: 'var(--reg-g)', r: 'var(--reg-r)', m: 'var(--reg-m)', w: 'var(--reg-w)' },
         // ── Rollen-Alias-Schicht (D-2, Radix-Muster) ──────────────────────
         // Wertidentische Rollen über den Basis-Skalen (Werte in src/index.css).
         // NEUE Komponenten greifen die Rolle (text-accent-text, bg-accent-bg,
@@ -114,7 +128,9 @@ export default {
       // fremde Zeilenhöhen; body-s/body-l sind die Pendants mit System-lh.
       fontSize: {
         micro: ['0.6875rem', { lineHeight: '1.2' }],
-        overline: ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.12em' }],
+        // W2·24-R1: die Overline ist entversalt — 12 px, Tracking normal
+        // (Rezept .lc-overline in src/index.css; hier der Utility-Zwilling).
+        overline: ['0.75rem', { lineHeight: '1.4', letterSpacing: '0em' }],
         xs: ['0.75rem', { lineHeight: '1.4' }],
         'body-s': ['0.875rem', { lineHeight: '1.5' }],
         'body-l': ['1.125rem', { lineHeight: '1.6' }],
@@ -142,7 +158,8 @@ export default {
         // zu vergrössern hätte David am Bogen nicht gesehen (Ä7 wird über die
         // Randtitel-Seite gelöst, s. `helpers.tsx` margStufeStil).
         //
-        //  · `leser-text` 17 px / lh 1.55 — Normtext-Fliesstext. Ersetzt das
+        //  · `leser-text` 18 px / lh 1.62 (bis R6c 17 px / 1.55) — Normtext-
+        //    Fliesstext. Ersetzt das
         //    Paar `text-body-l leading-[1.65]` (18 px / 1.65) am Artikel-Körper:
         //    der rohe `leading-[…]`-Override fällt damit weg, die Zeilenhöhe
         //    gehört zur Stufe (Grundlage Kap. 8 Nr. 4 «kein fixer Leading-Wert
@@ -164,7 +181,30 @@ export default {
         //    Fliesstext) für Blocktext verlangt — knapp darunter, weil der
         //    Apparat Referenz-, kein Lesetext ist. Die GRÖSSE bleibt
         //    unangetastet (0.6875 rem, Entscheid David 17.8.2026 am Bildbogen).
-        'leser-text': ['1.0625rem', { lineHeight: '1.55' }],
+        // W2·24-R4 · ZEILENHÖHE 1.55 → 1.62 (deklarierte Typo-Änderung, kein
+        // Refactoring). Das freigegebene Referenzbild (`abnahme/design-
+        // identitaet/vorschlag-freigegeben.html`, `.norm { font-size:17px;
+        // line-height:1.62 }`) setzt den Normtext im Satzspiegel auf 1.62; die
+        // Grösse (17 px) bleibt unangetastet. Die Zahl muss HIER stehen und
+        // kann nirgends sonst gesetzt werden: `src/tests/leser-typo-tokens.
+        // test.ts` verbietet jedes `leading-…` am Fliesstext-Markup, weil die
+        // Zeilenhöhe zur Stufe gehört (Grundlage Kap. 8 Nr. 4) — die Tabelle
+        // dort ist mit derselben Änderung nachgezogen.
+        // WCAG 1.4.8 unverändert eingehalten: 1.62 ≥ 1.5 (Zusage von
+        // `e2e/leser-lesemass.e2e.ts`), das Zeilenmass rechnet nicht mit der
+        // Zeilenhöhe und bleibt Zeichen für Zeichen, was es war.
+        // W2·24-R6c · GRÖSSE 17 → 18 px (deklarierte Typo-Änderung, kein
+        // Refactoring). D20 (c) verlangt «Lesetext 18 px»; R6b konnte die Zahl
+        // nicht setzen, weil `src/index.css` dort TABU war und ein Alleingang an
+        // der Basis den Schriftregler zerbrochen hätte (die Stufe «mittel» wäre
+        // von 108 % auf 102 % kollabiert — Herleitung in `abnahme/design-
+        // identitaet/R6-NACHZUG.md` §4). R6c setzt die Basis UND die drei
+        // Reglerstufen in EINEM Zug: `index.css` (Block LESER-SCHRIFTSKALA) und
+        // `pages/gesetz-leser/leserSchrift.ts` (`SCHRIFT_REM`) tragen dieselben
+        // Faktoren 1.08 / 1.18 / 1.30 über der neuen Basis, die Anzeigewerte
+        // bleiben 100 · 108 · 118 · 130 %. `src/tests/leser-schriftskala.test.ts`
+        // hält die drei Orte gegeneinander.
+        'leser-text': ['1.125rem', { lineHeight: '1.62' }],
         'leser-rand': ['0.8125rem', { lineHeight: '1.35' }],
         'leser-fn': ['0.6875rem', { lineHeight: '1.45' }],
       },

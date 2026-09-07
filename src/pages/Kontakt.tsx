@@ -68,7 +68,7 @@ export function Kontakt() {
           <input type="checkbox" className="mt-0.5" checked={einwilligung} onChange={(ev) => { setBeruehrt(true); setEinwilligung(ev.target.checked); }} />
           <span>
             Ich willige ein, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden.
-            Details in der <Link to="/datenschutz" className="text-brass-700 hover:text-brass-600">Datenschutzerklärung</Link>.
+            Details in der <Link to="/datenschutz" className="text-brass-700 underline hover:text-brass-600">Datenschutzerklärung</Link>.
           </span>
         </label>
 

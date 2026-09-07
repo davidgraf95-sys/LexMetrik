@@ -44,9 +44,15 @@ import { SCHRIFT_STUFEN, setzeLeserSchrift, useLeserSchriftStufe, type LeserSchr
  * Vitest-Datei `src/tests/leser-schriftskala.test.ts` prüft die Spiegelung
  * gegen die CSS-Datei, damit die beiden nicht auseinanderlaufen können (§5).
  *
- * `normal` = 1.0625 rem ist KEIN frei gewählter Wert, sondern exakt die
- * Fliesstext-Stufe `leser-text` aus tailwind.config.js (F3 = V2, David
- * 17.8.2026) — die Grösse, die der Leser ohne Regler zeigt.
+ * `normal` = 1.125 rem ist KEIN frei gewählter Wert, sondern exakt die
+ * Fliesstext-Stufe `leser-text` aus tailwind.config.js — die Grösse, die der
+ * Leser ohne Regler zeigt.
+ *
+ * W2·24-R6c: die Basis stand von S2 (F3 = V2, David 17.8.2026) bis R6b auf
+ * 1.0625 rem (17 px); D20 (c) hebt sie auf 1.125 rem (18 px). Die FAKTOREN
+ * bleiben unangetastet — nur ihre Basis wandert, damit der Regler nicht
+ * kollabiert (die alte Stufe «mittel» wäre über der neuen Basis auf 102 %
+ * gefallen; Herleitung: `abnahme/design-identitaet/R6-NACHZUG.md` §4).
  *
  * S2 · A-1-NACHZUG: die drei Oberstufen sind die FAKTOREN der Design-Grundlage
  * Kap. 2.3 auf dieser Basis — `[1.0, 1.08, 1.18, 1.3]`, Entscheid D-A, Vorbild
@@ -58,10 +64,10 @@ import { SCHRIFT_STUFEN, setzeLeserSchrift, useLeserSchriftStufe, type LeserSchr
  * Regel in `index.css` auf das V3-Root gescopt ist (FL-4).
  */
 export const SCHRIFT_REM: Readonly<Record<LeserSchrift, number>> = {
-  normal: 1.0625,
-  mittel: 1.1475,
-  gross: 1.25375,
-  'sehr-gross': 1.38125,
+  normal: 1.125,
+  mittel: 1.215,
+  gross: 1.3275,
+  'sehr-gross': 1.4625,
 };
 
 /** Anzeigewert in Prozent, bezogen auf die Vorgabestufe: 100 · 108 · 118 · 130. */

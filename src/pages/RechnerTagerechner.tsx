@@ -204,7 +204,7 @@ export function RechnerTagerechner() {
             ) : (
               <div className="space-y-2 max-w-xl">
                 {treffer.length > 0 && (
-                  <ul className="border border-line rounded-lg divide-y divide-line bg-surface overflow-hidden">
+                  <ul className="border border-line divide-y divide-line bg-surface overflow-hidden">
                     {treffer.map((e) => (
                       <li key={e.key}>
                         <button type="button" onClick={() => waehlePreset(e)}

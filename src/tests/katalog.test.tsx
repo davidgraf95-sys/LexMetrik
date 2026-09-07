@@ -6,7 +6,7 @@ import { Startseite } from '../pages/Startseite';
 import { RechnerUebersicht } from '../pages/RechnerUebersicht';
 import { VorlagenUebersicht } from '../pages/VorlagenUebersicht';
 import { HeaderSuche } from '../components/layout/HeaderSuche';
-import { HERO_TITEL } from '../lib/seo';
+import { SAMMLUNG_TITEL } from '../lib/seo';
 
 // Akzeptanztests Katalog/Rubriken. Stand UI-Welle (deklarierte Anpassung
 // §6 Ziff. 3): /recherche ist aufgelöst — die Rechner-/Vorlagen-Register leben
@@ -20,6 +20,13 @@ import { HERO_TITEL } from '../lib/seo';
 // zurückgebaut (nur noch die Fristen-ZEILE + zwei Link-Karten unter
 // «Werkzeuge»), «Gesetze» hat eine eigene Schwerpunkt-Sektion, und die
 // Landkarte heisst «Weitere Bereiche».
+// W2·24-DESIGN-IDENTITAET R3 (6.9.2026, DEKLARIERTE Änderung §6.3): die
+// Startseite ist das INHALTSVERZEICHNIS der Sammlung — Satzspiegel mit
+// Marginalie statt Hero-Kasten, Listen statt Kacheln. Was sie ZEIGT, ist
+// dasselbe (Suche, Bund, Kantone, Entscheide, Materialien, Frist-Zeile,
+// Vertrauens-Sätze); geprüft wird darum unverändert der Bestand, nur an seiner
+// neuen Form. Ebenfalls deklariert: die Sprach-Diät (Fahrplan §6 (h)) — die
+// Value-Proposition-H1 «Schweizer Recht an einem Ort» ist gestrichen.
 
 // Minimaler localStorage-Mock (Node hat keinen)
 beforeEach(() => {
@@ -141,10 +148,16 @@ describe('Vorlagen-Übersicht /vorlagen (UI-Welle)', () => {
     expect(html).not.toContain('aria-label="Oberkategorien"');
   });
 
-  it('eine verfügbare Vorlage ist direkt verlinkt; Filter-Reset «Alle» vorhanden', () => {
+  it('eine verfügbare Vorlage ist direkt verlinkt; Filter-Reset «Alle Rechtsgebiete» vorhanden', () => {
     const html = vorlagenHtml();
     expect(html).toContain('href="/vorlagen/mahnung"');
-    expect(html).toContain('>Alle<');
+    // Deklarierte Anpassung (D22-Nachzug D24, 6.9.2026): die Filterzeile trägt
+    // jetzt das sichtbare Label «Filtern» (D22-Anatomie, wie /gesetze und
+    // /materialien). Damit stünde die Achse nirgends mehr im Bedienelement —
+    // die Reset-Option benennt sie darum selbst: «Alle Rechtsgebiete» statt
+    // «Alle». Die ZUSICHERUNG des Falls ist unverändert: die Reset-Option
+    // existiert im gerenderten Markup.
+    expect(html).toContain('>Alle Rechtsgebiete<');
   });
 });
 
@@ -173,54 +186,91 @@ describe('Globale Suche im Top-Streifen (UI-Welle: Dropdown überall, §6.3)', (
   });
 });
 
-describe('Startseite V4 — Hero · Gesetze-Schwerpunkt · Werkzeuge (deklarierte Anpassung §6.3)', () => {
-  it('zeigt Hero-H1, Begrüssung, Gesetze-Block und die Landkarte — KEIN Katalog-Deckblatt', () => {
+describe('Startseite R3 — Inhaltsverzeichnis der Sammlung (deklarierte Anpassung §6.3)', () => {
+  it('Titelblatt-Zeile: EINE H1 «Sammlung», Begrüssung mit Datum, Bestands-Aufzählung — kein Slogan', () => {
     const html = startHtml('/');
-    // Der Hero trägt die Value-Proposition-H1 (aus seo.ts) UND — neu in V4,
-    // Auftrag David 5.9.2026 — wieder eine wechselnde Begrüssung samt Datum
-    // «Wochentag, T. Monat JJJJ», weiterhin OHNE tickende Uhr.
-    expect(html).toContain(HERO_TITEL);
-    expect(html).toMatch(/\d{1,2}\.\s(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s\d{4}/);
+    // Genau eine H1, und sie trägt den Titelblatt-Begriff (nicht mehr die
+    // Value Proposition). `e2e/a11y.e2e.ts` prüft zusätzlich, dass sie SICHTBAR
+    // ist — eine sr-only-H1 wäre dort rot.
+    expect(html.match(/<h1[\s>]/g) ?? []).toHaveLength(1);
+    expect(html).toContain(SAMMLUNG_TITEL);
+    // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R10, 6.9.2026, §6.3): hier
+    // stand zusätzlich `toContain(SAMMLUNG_BESTAND)` — «Gesetze, Entscheide,
+    // Materialien, Rechner, Vorlagen.». Genau diese fünf stehen seit R10 als
+    // BEREICHS-REIHE mit ihren gemessenen Zahlen unmittelbar unter der Suche
+    // (Referenzbild `pult-freigegeben.html`, Marke `.bereiche`); der Satz war
+    // dieselbe Auskunft ein zweites Mal und ist Teil dessen, was David am
+    // 6.9.2026 als «zu viel text» gesehen hat. Die AUSSAGE geht nicht verloren,
+    // sie wird nur einmal statt zweimal gemacht — die fünf Bereiche werden
+    // unten geprüft, und die Konstante selbst trägt unverändert der Seitenfuss
+    // (`layout/Footer`, auf jeder Seite).
+    for (const bereich of ['Gesetze', 'Rechtsprechung', 'Materialien', 'Rechner', 'Vorlagen']) {
+      expect(html, `Bereichs-Reihe: ${bereich}`).toContain(`>${bereich}</span>`);
+    }
+    expect(html, 'Bereichs-Reihe trägt die Navigations-Ziele').toContain('href="/rechtsprechung"');
+    // Sprach-Diät (§6 (h)): die beiden getilgten Wendungen stehen nirgends mehr.
+    expect(html).not.toContain('an einem Ort');
+    expect(html).not.toContain('miteinander verzahnt');
     expect(html).not.toContain('Berechnung statt KI');
-    // Sektionen des Cockpits: der Gesetze-Schwerpunkt, die Werkzeuge-Zeile und
-    // die (auf vier Kacheln gekürzte) Landkarte.
-    expect(html).toContain('Gesetze — Bund und Kantone');
-    expect(html).toContain('Werkzeuge');
-    expect(html).toContain('Weitere Bereiche');
-    expect(html).not.toContain('Alle Bereiche');
-    // Direktzugriff-Chips Bund + der bezifferte Link auf die Vollsicht.
-    expect(html).toContain('href="/gesetze/bund/OR"');
-    expect(html).toContain('Bundeserlasse');
-    // Kantons-Chips mit dem Bestands-Ziel `?ebene=kanton&kt=<KT>` (nie erfunden).
+    // Begrüssung + Datum «T. Monat JJJJ» (weiterhin ohne tickende Uhr).
+    expect(html).toMatch(/\d{1,2}\.\s(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s\d{4}/);
+    // ── DEKLARIERTE ANPASSUNG (§6.3, W2·24-R5-F1C, David-Befund D18, 6.9.2026)
+    // «insgesamt braucht es auf der startseite keine suche. nur oben reicht».
+    // Hier standen drei Erwartungen an die Hero-Suche (`role="search"`,
+    // `type="search"`) und an die Beispiel-Verweise unter ihr
+    // (Art. 336c OR · BGE 152 V 52 · Arbeitsvertrag). Beides ist mit D18
+    // entfallen: die EINE Suche steht im Titelblatt (`layout/HeaderSuche`, auf
+    // JEDER Route — der `sucheHtml`-Block oben in dieser Datei prüft sie
+    // unverändert, auch für die Adresse «/»), die Beispiel-Links fielen der
+    // Sprach-Diät zum Opfer. Statt die Erwartungen zu streichen, werden sie
+    // UMGEDREHT: die Startseite trägt jetzt nachweislich KEIN eigenes Suchfeld
+    // — sonst wären es wieder zwei, und genau das war Davids Befund.
+    expect(html, 'die Startseite trägt kein eigenes Suchfeld mehr (D18)').not.toContain('role="search"');
+    expect(html).not.toContain('type="search"');
+  });
+
+  it('die vier Bestände stehen als Listen mit Zahlen — keine Kachel-Optik mehr', () => {
+    const html = startHtml('/');
+    // Die Zeilen-Titel des Satzspiegels.
+    expect(html).toContain('Systematische Ordnung');
+    expect(html).toContain('Kantone, erfasste Erlasse');
+    expect(html).toContain('Amtliche Materialien nach Behörde');
+    expect(html).toContain('Frist berechnen');
+    // Bund: die Systematik-Ordnung der Gesetze-Übersicht mit ihren Ankern.
+    expect(html).toContain('href="/gesetze?ebene=bund#sys-privatrecht"');
+    // Kantone: Bestands-Ziel `?ebene=kanton&kt=<KT>` (nie erfunden).
     expect(html).toContain('/gesetze?ebene=kanton&amp;kt=BS');
-    // Favoriten (5.6.) + Zeiterfassung (→ /rechner) sind nicht mehr auf «/».
+    // Materialien: Behörden-Sprungmarke der Übersicht.
+    expect(html).toContain('href="/materialien#b-ESTV"');
+    // Kachel-Optik ist weg (RubrikKachel/lc-tile auf «/»), Landkarte ebenso.
+    expect(html).not.toContain('lc-tile');
+    expect(html).not.toContain('Weitere Bereiche');
+    expect(html).not.toContain('Alle Bereiche');
+    // Favoriten (5.6.) + Zeiterfassung (→ /rechner) sind nicht auf «/».
     expect(html).not.toContain('Favoriten');
     expect(html).not.toContain('Zeiterfassung');
-    // Die Fristen-Zeile rechnet live (echte Engine, keine Kopie).
-    expect(html).toContain('Live-Berechnung');
-    // Vertrauens-Fuss trägt den Pflichthinweis (§8).
-    expect(html).toContain('Rechtlicher Hinweis');
-    // Der Katalog (vier Oberkategorien) ist NICHT mehr auf der Startseite.
+    // Der Katalog (vier Oberkategorien) ist NICHT auf der Startseite.
     expect(html).not.toContain('aria-label="Oberkategorien"');
   });
 
-  it('«Werkzeuge» ist EINE Fristen-Zeile plus zwei Link-Karten — kein Tab-Kasten mehr', () => {
+  it('«Frist berechnen» ist die ECHTE Engine-Zeile — kein Tab-Kasten, keine Kopie', () => {
     const html = startHtml('/');
-    // V4-Rückbau: der dreifache Reiter (und die zweite, anders gestaltete
-    // Tab-Leiste der Gebührenart) ist von «/» verschwunden.
+    // V4-Rückbau, unverändert: kein dreifacher Reiter, keine zweite Tab-Leiste.
     expect(html).not.toContain('role="tablist"');
     expect(html).not.toMatch(/role="tab"/);
-    // Statt eingebetteter Zweit-Formulare zwei Einstiege in die Voll-Rechner.
+    // Die Fristen-Zeile rechnet live (echte Engine, keine Kopie).
+    expect(html).toContain('Live-Berechnung');
+    // Statt eingebetteter Zweit-Formulare Text-Verweise in die Voll-Rechner.
     expect(html).toContain('href="/rechner/tagerechner"');
     expect(html).toContain('href="/rechner/prozesskosten"');
     expect(html).toContain('href="/rechner/zustaendigkeit"');
   });
 
-  it('die Beispiel-Chips des Hero zeigen auf echte Korpus-Ziele', () => {
+  it('§8: die Vertrauens-Sätze und der Pflichthinweis stehen wörtlich im Schluss', () => {
     const html = startHtml('/');
-    expect(html).toContain('href="/gesetze/bund/OR#art-336_c"');
-    expect(html).toContain('href="/rechtsprechung/bge_152_V_52"');
-    expect(html).toContain('href="/vorlagen/arbeitsvertrag"');
+    expect(html).toContain('Rechtlicher Hinweis');
+    expect(html).toContain('keine Rechtsberatung');
+    expect(html).toContain('Kein Sprachmodell schätzt Ergebnisse');
   });
 });
 

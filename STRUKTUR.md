@@ -33,6 +33,13 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 6.9.2026 (Tag) — W2·24 Design-Identität «Sammlung»: Landung 1 (PR #739), Übergabe der Sweeps an Session «W2·24 Design-Identität Sweeps»
+**Auftrag David (wörtlich, Chat 5./6.9.):** «home seite nochmals komplett überarbeiten» · «ich öffne alles» (Council-Schalter V3) · «was können wir machen um designtechnisch nicht so auszusehen» (legaldeadline.ch) · «ja bau das, run till dry … recherchiere was du dafür alles ändern musst … lass zwischen den runden einen ästhetikprüfer darüber schauen … split screen» · «alles angleichen», «nicht trist», «keine schwer erarbeitete Funktion darf verloren gehen», «analog Browser», «spare Tokens», «schnell und effizient». Fable orchestrierte ausschliesslich; Bau Opus/Sonnet in ~30 Worktrees, Prüfer Opus, Recherche Sonnet + Gemini (Messzeilen im Fremdagenten-Fahrplan).
+**Gelandet (eine PR):** R1 Grundschicht (Literata opsz 450 + Archivo, Papier/Tinte D12 14.7:1, vier Registerfarben, Radien 0, Overlines ohne Versalien, 146 Kontrastpaare) · R2 Rahmen (Titelblatt ohne Bereichs-Reiter, Arbeitsleiste = Reiterleiste: frei ziehbar, «+», Alt-Kürzel, Rechtsklick-Menü, Reiter für beide Panes, Materialien reiterfähig, Kurzform folgt der Lesestellung, Höhe reserviert; Seitenleiste überall, Standard eingeklappt, Inhalt als direkte Ziele) · R10 Startseite «Pult» (Begrüssung, fünf Bereiche, Zuletzt, schaltbare Module, keine eigene Suche) · Kopf-Suche als ein Objekt · R6 Leser (Satzspiegel ohne Randspalten, Randtitel im Kopf, Bezüge-Zeile mit Zähl-Datei je Erlass, Erlass-Suche im Kopf, Brotkrume weg, Gliederung als Links, CLS-Fix Tieflink 1.17→0.04) · R12 (Übersichts-Köpfe, ein Filter, Kernerlasse mit einem Klick, Listen als Tabelle, Facetten als Text-Schalter) · R5 (Wizard ohne Leerflächen, Menü-Baustein, Karten auf Linien) · Perf-Fix fedlex/spannen (Gegenprüfung Opus bestanden; «14.8 s LCP» war Messfehler neben Builds) · Bibliothek «design-identitaet-2026-09» (drei Recherchen) · Übergabe `abnahme/design-identitaet/uebergabe/`.
+**Prüfer-Verdikte:** R1/R2/R3/R6/D23+R11 je «bestanden mit Auflagen», Auflagen eingebaut; Funktions-Inventare (42 Reiter-Funktionen, 13 Leser-Handgriffe, Startseite) per Browser ausgeführt: nichts verloren.
+**Übergeben (Session 2, eigenständig):** R9 Einheitlichkeit, R7 Beschriftungen, R8 Abschneide-Lauf (Tor-Zweig `feat/w2-24-r8-abschnitt`), Gesamtprüfung, Reglement-Nachzug, Folgeschritte (Anheften/Arbeitsmappe, Entscheide+Materialien am Rand, Perf-Rest fremdRoutingFormB/artikelnPluralVerweise, Kürzel-Links im Zähler-Generator, istRisikoPfad für bezuege-zaehler, Jules-Tickets Datei-Splits). Offene David-Entscheide: L6 Pane-Name vs. «keine Doppelkrume», leerer Reiterstreifen.
+**Lehren (verankert per Skill `lehren`):** L-O1 Worktree vor dem Dispatch als eigener Schritt (nie hinter Tore ketten) · L-O2 `git worktree add` nur mit absolutem Pfad (verschachtelte Worktrees f1b/f1c) · L-O3 Shards nach jedem Merge regenerieren · L-O4 im «run till dry» nie mit leerer Antwort enden (Nacht 5./6.9.: Session archiviert, Bau stand) · L-O5 keine Perf-Messung neben Builds · L-O6 Prüfer-Modell = Bauer-Modell (Opus/Opus) war unvermeidbar (Fable gesperrt, Sonnet unter Mindeststufe) — offengelegt.
+
 ## Session 6.9.2026 (Nachmittag/Abend) — «Entstehung am Artikel»: Zielbild, 7 Erst-Recherchen, klickbarer Entwurf, 5 Tiefen-Runden, 2 Kritik-Runden, Spec §11 Fassung 4 — NUR PLAN, kein Code (David: «anfangen erst auf mein Go»)
 **Auftrag David:** «Materialien und Wegleitungen maximal sinnvoll verzahnen … Gesetzgebungsprozesse … suche mit mehreren Agenten und Gemini», «Vorbilder auf GitHub, verschiedene Länder, bspw. Deutschland», buzer.de analysieren, «jetzt der Plan … auch wie die Verzahnung optisch dargestellt wird», Design-Freigabe zum Entwurf («passt so grundsätzlich; nicht überladen, nur auf Wunsch sichtbar»), dann «noch keinen Code, nur planen, tief recherchieren, mehrere Runden», «zuerst Bundesebene».
 **Recherche (Bibliothek `materialien/entstehung-2026-09-06/`, 18 Dateien, alle ERSTRECHERCHE, Abnahme David offen):** Curia Vista OData ohne Schlüssel (`Objective` = Join Botschaft→Schlussabstimmung→AS→Referendumsfrist; Lizenz-Auflage Quellenangabe) · Fedlex-Graph trägt die Verfahrenskette `type-projet` (7299 Botschaften/4931 Beschlüsse/1868 Referendumsfristen/629 Abstimmungstermine) · BBl-HTML mit `art_`-Ankern nur 22 % der Botschaften und erst ab 16.4.2025 · historische Konsolidierungen als HTML erst ab 1.1.2021 (Synopse = Fenster) · kein `<mod>` im AS-XML · BS data.bs.ch CC BY 4.0 reif, ZH nur CMI-Rohfeed, VS lex.vs.ch REST (Neufund via `gemeinde-bister/openmun-lex`) · Top-8 Wegleitungen (BSV zuerst, FINMA ohne ID-Schema) · kein Portal in DE/AT/UK/EU/FR/US/NL/CH verknüpft Artikel mit ganzer Entstehung + Praxis (Lücke) · buzer.de = Vorbild Änderungshistorie je Paragraph + satzgenaue Synopse · **Repo-Fund: G-HIST existiert** (`public/normtext/historie/`, 26 686 Ereignisse mit AS/BBl-Links, `ArtikelHistorie.tsx`, `W2·5i-HIST-ANSICHT` 26.7.2026) — M15 damit erledigt.
@@ -86,57 +93,6 @@ werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 **Messung:** ~27 PRs in ~11 h, 0 Rollbacks; CI-Rot fast ausschliesslich Nachzug-Klassen (Projektionen, Test-Helfer, Runner-Stall), 1 echter Regressionsfang durch e2e (#674 aria-label).
 
-## Session 4.9.2026 — QS-FREMDAGENTEN Phase 1 + 2 gelandet, SEO-BASIS Nullbefund, Landungskette 645–650
-
-Gelandet: #641 Phase-0-Ergebnisse (AST-Assertion-Diff, Plan-Buchung-Fix inkl. Fence-Zitate,
-Opus-Zweitblick 2×), #645 Fremd-PR-Tor als CI-Shell-Step (Rückbau statt Deckel-Anhebung),
-#649 Jules-Branch-Muster, #647/#648 Jules-Piloten 2+3 (Test-Splits, 3/3 ohne Code-Nacharbeit,
-Tor lief scharf grün), #650 Gemini-Diskrepanz-Finder (Opus widerlegte Fassung 1 — Label-/
-Tabellen-/Aufhebungs-Scheinfunde, stille Berichte; Nachbesserung mit deterministischem
-Erstfilter, 10 neue Tests Rot/Grün, Pilot AMBV 8/8, Bauleiter-Kontrolllauf). Nullbefund
-`SEO-BASIS`: Sitemap existiert seit 11.6.2026 — Faktencheck vom 3.9. war falsch, Schritt `done`,
-Lehre in Skill `auftrag` Ziff. 6. Korpus-Funde unter `QS-KORPUS` gebucht (AMBV Silbentrennung,
-VZV Art. 3 Marken). `QS-FREMDAGENTEN` ⇒ `ready` (offen: Phase 3 Zweitblick-Messung, Phase 4
-Skalierung). E2E-Shards 2/8 einmal geflackert (Rerun grün).
-
-**Nachtrag, dieselbe Session weiter (4.9.2026, 17 Landungen heute, #641–#666):**
-#660 Abnahme-Lücken geschlossen (Landungs-Checkliste, Gemini-Recherche-Regel, Phase-3-Zählung),
-#658 Fedlex-Adapter dt-Marken/Namensraum-Tags (Korpus-Fix, Gegenprüfung bestanden, live
-`846e53dcc`), #664 Fremd-PR-Tor Regel 3 Kommentar-Bilanz (Beleg #662), #665 Kontingent-
-Erkennung Jules/Antigravity (`fremdagenten:messung --kontingent`, Exit 3, `agy-status.ts`),
-#659/#661/#663 Phase-4-Tickets (Test-Splits `plan-check`/`zustaendigkeit` 25/33 min landbar,
-Komponenten-Split `ArtikelBody.tsx` 59 min landbar), #666 Selbstopt-Kreislauf für Fremdagenten
-(Stufe-1-Erhebung, Retro-Regeln a–g, Lehren-Formregel) — **Kreislauf verankert**: Messung →
-Zeitreihe → `retro:17`-Deutung → Roadmap-Vorschlag, ohne Auto-Entscheid. **#662 EntscheidLeser-
-Split ABGELEHNT** (197 Kommentarzeilen gelöscht, ein Nutzer-String verstümmelt). Google-
-Recherche-Weg aktiv (agy `read_url(*)`, Gemini-Diskrepanz-Finder Phase 2/3 nutzt ihn produktiv).
-
-## Session 3.9.2026 — QS-FREMDAGENTEN Phase 0 abgeschlossen (T1–T6), zwei Wurzel-Fixes, Opus-Gegenprüfung bestanden
-
-Gelandet: #636 Grundlagen (`AGENTS.md`, Fahrplan, Testphase, SEO-BASIS), #639
-Jules-Pilot (Testdatei `gruendungAgDokumente` in 3 Dateien + Hilfsdatei
-aufgeteilt, 16/56/280 Testnamen/expect identisch). Geschlossen (Proben, nie
-gemergt): #638 T5-Prüfer-Probe (abgeschwächter Matcher beim Lesen gefunden —
-Zählwerte allein hätten ihn nicht gefangen), #642 T6-Tabu-Probe (27 min,
-Plan ohne Rückfrage freigegeben, Produktionswert UND Test-Assertion
-geändert — **`AGENTS.md` hält nicht als Zaun**, 0 von 1 Ablehnungen), Issue
-#640 geschlossen. Issue #637 Jules-Pilot-Auftrag. Phase 0 damit fertig
-(T4/NotebookLM bleibt Davids Sache). **Zwei Wurzel-Fixes (§17), beide vom
-Opus-Prüfer erst widerlegt und dann bestanden:**
-`scripts/analyse/test-assertion-diff.ts` (AST-basiert, TypeScript Compiler
-API statt Klammerzählung — die erste, zeichenweise Fassung riss bei einem
-Regex-Literal mit `)` im Inhalt den Statement-Umfang auf; ausserdem
-MULTIMENGE statt Menge, sonst übersieht der Diff ein entferntes Duplikat
-neben einem verbleibenden); `scripts/plan/buchung.ts` — `Roadmap:` ohne
-JEDE `Roadmap-Status:`-Zeile im GANZEN Body ist kein Fehler mehr (Anlass:
-Workflow 33694227189 rot bei PR #636) — die erste Fassung prüfte nur den
-extrahierten Schlussblock und übersah zwei stille Regressionen (Status in
-früherem Absatz; Status mit leerem Wert im selben Absatz), beide jetzt mit
-Testfall abgedeckt (`src/tests/plan-schreiben.test.ts`, 68 grün). Skill
-`landung` und `FAHRPLAN-FREMDAGENTEN.md` §2/§4/§5 auf den neuen Stand
-gebracht; neuer, noch nicht gebauter Phase-1-Punkt «Fremd-PR-Tor in CI»
-(Anlass T6).
-
 ## Session lexmetrik-a1, 2.9.2026 — «Verwenden statt bauen»: Sichtung 19 Quellen (PR #617)
 
 Gelandet: #622 Lizenz-Tor `check:lizenzen` (`9e8ca343a`), #621 Turso-DB-Cache
@@ -152,51 +108,6 @@ apca-w3/colorparsley, MCP-Server-Entscheid.
 **Nachtrag:** Weiterbau 2.9. nachmittags: QS-VERWENDEN V1b+V4 (#630), V3 Raw-Store
 (#631), V5 Feed + V6 valibot (#632, GP), V7 Feiertags-Gegenprobe (#633, 1 Skip GL
 2027 wartet auf David), V8 Spike (Notiz). Dossier #617 gelandet 442376f89.
-
-## Session 1./2.9.2026 (Abend+Nacht) — Zielbild Gesetzesleser: Plan-Umbau, Block 1 gelandet, Zürich 111 Erlasse live (15 PRs, 8 Gegenprüfungen)
-
-**Gelandet + live (Live-Kennung zuletzt `2758c5246`):** Auftrag David 1.9.2026
-(«gesetzesleser im vordergrund … bester gesetzesdarsteller für schweizer juristen»,
-«fundament zuerst», «bau bis ich stop sage», «nur deutschschweiz, zh und bs zuerst»,
-2.9.: «marginale extrahieren und in der gliederung darstellen», «alles sauber fertig
-und abschliessen»). Orchestrator-Session (Fable orchestriert nur, Weisung 1.9.: Unter-
-agenten ohne Fable, Obergrenze Opus). **Plan:** Vier-Block-Queue, 11 Schritte geparkt
-(`zielbild-gesetzesleser`), Deutschschweiz-Reihenfolge ZH→BS→BE→AG→SG→LU, Quellen-
-Sichtung (9 Repos/Datensätze, Dossier `bibliothek/recherche/fremdquellen-sichtung-
-2026-09-01.md`) → neue Schritte `W2·5n-BUND-VOLL`, `W2·21-ZULIEFERER`, `W3·12`-Methode.
-**Zürich:** Tranche A 111 Erlasse/4356 Einträge (amtlich 170 in Ordner 3/10/4, 68
-ausgewiesen zurückgestellt; GP 11/11 live gegen zh.ch, Mutationsprobe rot), Sachgebiet-
-Join per Ordner-Band 111/111 (GP 24/24 + 111/111 nachgerechnet, 14/14 Ordner live
-wortgleich), Kanton-Lücken-Hinweis im Erlass-Kopf mit amtlichem Link (GP nach Fix-
-Runde: Link zog am falschen Feld, 0/15). **Fundament:** K3 Suche-Edge scharf (statischer
-Index −46,8 %, Kanton nur online, §8-Hinweis), Leser-Tempo −22…−28 % unter Drossel +
-Wurzel-Fix blinkender Deep-Link-Hinweis (Nebenbefund: OR ungedrosselt 0,8 s — der 17,2-s-
-Wert vom 17.8. ist überholt), Normen-Monitor: Rotgründe A/B/C getrennt, Reparatur-Arm
-ohne Kanton-Churn, Cron 07:17 UTC, Tafel 12 Verdikte, ESTV 48/48 Stand-Proben, StGB
-html-4 kanonisch (html-0 = 9-KB-Shell), PR #596 geschlossen. Verweis-Schärfe V-7/V-8:
-+1 148 Fremdlinks, −198 falsche Selbstlinks; GP fand Präfix-Bindung (BS-132.100 → BPR
-statt BPRAS) + Zeit-Kante (4 Fassungs-Falschlinks) → Fix-Runde, ~11 richtige Links
-bewusst mit weg (§1, Fahrplan §1a). Referenzzins 1,25 % unverändert, Termin 1.12.2026
-(GP-Blocker: `gen:verfall` fehlte → nachgezogen). Playwright baut lokal vor dem Preview.
-**Belege:** #608 `df9395aba` · #609 `ab009b2a3` · #610 `cd4dc65cb` · #611 `d856f0150` · #612 `3c0ea33ec` · #613 `127a65b24` · #614 `6ca58c301` · #615 `d49b9e3d8` · #616 `349f6c671` · #618 `2758c5246` · #619 `1e0d446a2` · #620 `ac4db5fd8` · #623 `fecd59c76` · #624 `309a034b6` · #625 `37e97782a`.
-
-**§17-Lehren (verankert):** F10 Bauer-Selbstquittung (Skill gegenpruefung Regel 5,
-dispatch.ts QUITTUNG-Klausel — erst als Hand-Edit der generierten Agentendefinitionen,
-Wurzel-Fix #624 in die Quelle; Palette spitze=opus), F11 Prüfen gegen altes Bundle
-(webServer baut lokal, #620; auftrag Ziff. 6 Umgebungs-Fallen: Scratchpad geteilt,
-preview_start im Haupt-Checkout, Bash-Timeout 10 min, CI-Wächter je SHA), F12 Doku-
-Klassierung überspringt das Tor (Parallel-Session lexmetrik-a1, PR #626), O8
-Regenerations-Kaskade Kanton (`gen:zaehler` fehlte nach Register-Nachzug, #613 rot),
-§17-Zeile Generat-Checks vor Merge-Schutz (#618). Sitzungslimit 00:50 brach zwei
-Agenten ab — Resume per SendMessage trug (Worktree-Stand blieb).
-
-**Nachtrag:** ZH-Randtitel R1 gelandet (#629, GP Opus bestanden: 645/669 §§ wörtlich, 0 Verschiebungen;
-3405/4356 §§ mit Randtitel, Gliederung mit Abschnitten; Auflage ZH-615 §§ 1–2 als Restposten).
-**Offen (steuert Folge-Session):** Tag-Leser-Rest (Silbentrennung
-«Grenzund», ≥48 Stellen); Monitor-Auflagen (Stand-Wächter 34/48, Delay-Doku) und F4
-(Lücken-Hinweis fehlt im Prerender) als ROADMAP-Zeilen; Pflegetermin 1.10.2026 (14
-«Künftige Fassung»); David-Entscheid Merge-Queue (BEHIND-Ping-Pong kostete heute Nacht
-mehr Zeit als der Bau). Parallel-Session lexmetrik-a1 landet #622/#621/#626 seriell.
 
 ## Session 7.–8.8.2026 (Nacht) — W2·10-UI-NAV -S/-V/-O/-J gelandet + QS-GP-BEREICH + 3 Sicherheits-Patches (#463–#467)
 

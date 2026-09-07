@@ -99,11 +99,19 @@ describe('B8 · geteilte Scroll-Affordanz (LM-063/LM-064)', () => {
     ['src/components/rechtsprechung/SachgebietKacheln.tsx', 'lc-scrollrand-x'],
     ['src/pages/gesetz-leser/v3/LeserPanel.tsx', 'lc-scrollrand-x'],
     ['src/pages/gesetz-leser/v3/LeserSeitenleiste.tsx', 'lc-scrollrand-y'],
-    // LM-061 (Entscheid David 31.8.2026, revidiert D11): beide Startseiten-
-    // Streifen tragen die Scrollstand-Affordanz statt der angeschnittenen
-    // Karte als einziger Auskunft über ~2'600 px verborgenen Inhalt.
-    ['src/components/start/NewsHeader.tsx', 'lc-scrollrand-x'],
-    ['src/components/start/ZuletztVerwendet.tsx', 'lc-scrollrand-x'],
+    // LM-061 (Entscheid David 31.8.2026, revidiert D11) galt zusätzlich den
+    // BEIDEN Startseiten-Streifen — sie trugen die Scrollstand-Affordanz statt
+    // der angeschnittenen Karte als einziger Auskunft über ~2'600 px
+    // verborgenen Inhalt. Der Beleg altert nicht (§2b): er beschreibt den Stand
+    // vom 31.8.2026 richtig.
+    // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R3, 6.9.2026, §6.3): auf
+    // «/» gibt es diese zwei Streifen nicht mehr. «Jüngste Entscheide» ist eine
+    // LISTE (`start/EntscheideListe.tsx`), «Zuletzt geöffnet» eine umbrechende
+    // TEXTZEILE (`start/ZuletztVerwendet.tsx`) — beide ohne waagrechte
+    // Scroll-Achse. Ein Wächter, der eine Affordanz für einen Scrollstand
+    // verlangt, den es nicht mehr gibt, prüft nichts (§6.7): die zwei Anker
+    // sind darum gestrichen, nicht umgehängt. Die Klasse selbst hat vier
+    // weitere Konsumenten und bleibt bewacht.
   ];
   for (const [datei, klasse] of ANKER) {
     it(`${datei} nutzt ${klasse}`, () => {

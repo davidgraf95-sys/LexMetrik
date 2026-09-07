@@ -1,27 +1,46 @@
 import { Link } from 'react-router-dom';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
-import { HERO_TITEL, SITE_KURZFORM } from '../../lib/seo';
+import { SAMMLUNG_BESTAND, SITE_KURZFORM } from '../../lib/seo';
+import { NAVIGATION_META } from '../../lib/navigation';
 
 // Footer (ausgebaut): dreispaltig – Marke + Kurzbeschrieb, Navigation,
 // Hinweise; darunter Mono-Feinschriftzeile. Paper-Grund, obere Hairline.
 
+// ── D26 (David 6.9.2026) · DER FUSS TRÄGT DIE META-ZIELE, UND ZWAR DIE EINE LISTE ──
+// Die Seitenleiste zeigt seit D26 nur noch Inhalt; Einstellungen · Methodik ·
+// Über · Kontakt · Datenschutz sind hierher gewandert. Sie werden dabei NICHT
+// abgeschrieben, sondern aus derselben SSoT gelesen, die sie vorher in der
+// Leiste zeichnete (`NAVIGATION_META`, lib/navigation.ts) — sonst gäbe es nach
+// dem Umzug zwei Meta-Listen, die auseinanderlaufen können (§5). Vorher fehlte
+// im Fuss ausgerechnet «Einstellungen»; mit der Ableitung kann das nicht mehr
+// passieren.
+//
+// Die beiden Übersichts-Ziele (Rechner · Vorlagen) sind KEINE Meta-Ziele und
+// stehen darum weiter literal davor:
+//   Free/Pro-Zweiteilung aufgehoben (FAHRPLAN-EINE-HAUPTSEITE; Bug-Check
+//   7.6.2026 M-2: die alten zwei Einträge zeigten auf dieselbe Seite).
+//   W2·10-UI-NAV/N0a: der eine «Rechner & Vorlagen»-Eintrag zeigte auf «/»
+//   (Startseite), nicht auf die Übersichten, die das Label verspricht — die tote
+//   Verbindung ist zu zwei ehrlichen Zielen aufgelöst (/rechner · /vorlagen).
+//
+// Zwei Beschriftungen bleiben im Fuss länger als in der Leiste («Über
+// LexMetrik», «Datenschutzerklärung»): der Fuss ist der Ort, an dem eine
+// Pflichtseite mit ihrem vollen Namen stehen muss. Die Abweichung ist darum
+// deklariert und nicht abgeleitet — sie betrifft nur den Text, nie das Ziel.
+const FUSS_TEXT: Record<string, string> = {
+  '/ueber': 'Über LexMetrik',
+  '/datenschutz': 'Datenschutzerklärung',
+};
+
 const NAVIGATION = [
-  // Free/Pro-Zweiteilung aufgehoben (FAHRPLAN-EINE-HAUPTSEITE; Bug-Check
-  // 7.6.2026 M-2: die alten zwei Einträge zeigten auf dieselbe Seite).
-  // W2·10-UI-NAV/N0a: der eine «Rechner & Vorlagen»-Eintrag zeigte auf «/»
-  // (Startseite), nicht auf die Übersichten, die das Label verspricht — die tote
-  // Verbindung ist zu zwei ehrlichen Zielen aufgelöst (/rechner · /vorlagen).
   { to: '/rechner', label: 'Rechner' },
   { to: '/vorlagen', label: 'Vorlagen' },
-  { to: '/methodik', label: 'Methodik' },
-  { to: '/ueber', label: 'Über LexMetrik' },
-  { to: '/kontakt', label: 'Kontakt' },
-  { to: '/datenschutz', label: 'Datenschutzerklärung' },
+  ...NAVIGATION_META.map((l) => ({ to: l.ziel, label: FUSS_TEXT[l.ziel] ?? l.label })),
 ];
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-paper mt-16">
+    <footer className="border-t-2 border-rule bg-paper mt-16">
       <div className="max-w-content mx-auto px-5 sm:px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr] gap-x-12 gap-y-8">
         {/* Marke */}
         <div className="space-y-3">
@@ -29,10 +48,13 @@ export function Footer() {
             <LexMetrikSiegel size={26} />
             <LexMetrikWortmarke />
           </Link>
-          {/* Marken-Kurzbeschrieb aus der I2-SSoT (seo.ts, §5) — Value Proposition
-              + Methodik-Kurzform statt einer zweitgepflegten Marketing-Zeile. */}
+          {/* Marken-Kurzbeschrieb aus der I2-SSoT (seo.ts, §5) — Bestands-
+              Aufzählung + Methodik-Kurzform statt einer zweitgepflegten
+              Marketing-Zeile. W2·24-R3 (Sprach-Diät, Fahrplan §6 (h)): hier stand
+              `HERO_TITEL` = «Schweizer Recht an einem Ort»; die Konstante ist
+              mit dem Slogan gestrichen, der Fuss nennt jetzt den Bestand. */}
           <p className="text-body-s text-ink-500 leading-relaxed max-w-[34ch]">
-            {HERO_TITEL}. {SITE_KURZFORM}
+            {SAMMLUNG_BESTAND} {SITE_KURZFORM}
           </p>
         </div>
 
@@ -56,7 +78,7 @@ export function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
             {NAVIGATION.map((n) => (
               <Link key={n.label} to={n.to}
-                className="flex items-center min-h-11 text-body-s text-ink-600 hover:text-brass-700 no-underline transition-colors">
+                className="flex items-center min-h-11 text-body-s text-ink-600 hover:text-ink-900 underline underline-offset-2 decoration-rule-soft hover:decoration-ink-900 transition-colors">
                 {n.label}
               </Link>
             ))}
@@ -73,7 +95,7 @@ export function Footer() {
           <p className="text-body-s text-ink-500 leading-relaxed">
             Normverweise führen auf die amtliche Sammlung:{' '}
             <a href="https://www.fedlex.admin.ch" target="_blank" rel="noopener noreferrer"
-              className="text-brass-700 hover:text-brass-600 no-underline">fedlex.admin.ch</a>
+              className="text-ink-900 underline underline-offset-2">fedlex.admin.ch</a>
           </p>
           {/* Präzisiert (Cowork-Befund 31, 18.8.2026): der Pauschalsatz «Ihre
               Eingaben verlassen den Browser nicht» stand im Widerspruch zur
@@ -89,7 +111,7 @@ export function Footer() {
       </div>
 
       {/* Feinschriftzeile */}
-      <div className="border-t border-line">
+      <div className="border-t border-rule-soft">
         <div className="max-w-content mx-auto px-5 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           <p className="lc-fineprint">© 2026 LexMetrik</p>
           <p className="lc-fineprint sm:text-right">

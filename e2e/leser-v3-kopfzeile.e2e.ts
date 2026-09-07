@@ -77,18 +77,62 @@ async function chrome(page: Page) {
     }
     const topbar = kasten('header.sticky')
     const kopf = kasten('[data-v3-kopf]')
+    // ── §6.3-DEKLARATION (W2·24-R6c, 6.9.2026) · DER BEZUGSPUNKT WANDERT ─────
+    // Bis hierher mass dieser Fall gegen die UNTERKANTE DER TOPBAR — richtig,
+    // solange zwischen Topbar und Leser-Kopf nichts stand. Seit R2/D19 steht
+    // dort die ARBEITSLEISTE (Reiter, Auftrag David «in der tab zeile oben soll
+    // man mit plus einen neuen reiter erzeugen können») und seit R6/M10 die
+    // AUSGABE-ZEILE («Jüngster Eintrag: …», D8) — zusammen 65 px @1440.
+    // Gemessen am Bau-Stand von R6c: Topbar 0–64, Arbeitsleiste 64–98,
+    // Ausgabe-Zeile 98–129, Leser-Kopf 129–186. Der Kopf klebt also weiterhin
+    // BÜNDIG an dem, was über ihm steht (Lücke 0 px) — die Sonde verglich nur
+    // mit der falschen Kante.
+    // KEINE AUFWEICHUNG: die Zusage bleibt «keine Leerzone über dem Leser-Kopf»
+    // und «der Leser bringt nicht mehr eigenes Chrome mit als vor A-2». Neu ist
+    // nur, dass beide gegen die Unterkante des CHROME-STAPELS gemessen werden
+    // statt gegen eine einzelne, inzwischen nicht mehr benachbarte Leiste. Die
+    // Sonde wird dadurch anatomie-neutral: sie meldet auch die NÄCHSTE Leiste,
+    // die jemand dazwischenschiebt, statt beim ersten Zuwachs blind zu werden.
+    const stapel = (() => {
+      if (!topbar || !kopf) return null
+      let unten = topbar.bottom
+      for (const el of document.querySelectorAll('body *')) {
+        const b = el.getBoundingClientRect()
+        if (b.height < 4 || b.width < window.innerWidth * 0.9) continue
+        if (b.top >= topbar.bottom - 1 && b.bottom <= kopf.top + 1 && b.bottom > unten) unten = b.bottom
+      }
+      return Math.round(unten)
+    })()
     return {
       topbarUnten: topbar ? Math.round(topbar.bottom) : null,
+      /** Unterkante des klebenden Chrome-Stapels ÜBER dem Leser-Kopf. */
+      stapelUnten: stapel,
       kopfOben: kopf ? Math.round(kopf.top) : null,
       kopfUnten: kopf ? Math.round(kopf.bottom) : null,
       appLeisten: document.querySelectorAll('[data-inhalt-kopf]').length,
       appKrumen: document.querySelectorAll('nav[aria-label="Brotkrümel"]').length,
-      leserKrumen: document.querySelectorAll('nav[aria-label="Ort im Gesetz"]').length,
+      // §6.3-NACHZUG D27 (6.9.2026): die Ortsangabe ist keine `nav` mehr — die
+      // Krume ist weg, geblieben ist die Kennungs-ZONE des Kopfes. Gezählt wird
+      // ab hier sie; die Aussage «genau EINE Kopf-Ortszone je Lesefläche, und
+      // keine App-Krumenleiste daneben» bleibt unverändert prüfbar.
+      leserKrumen: document.querySelectorAll('[data-v3-kopf-ort]').length,
       // Schliess-Griffe im Ruhezustand: ein Knopf, dessen sichtbarer Text genau
       // «✕» ist. Deckt App-✕, Pane-✕ und Leser-✕ gleichermassen, ohne sich auf
       // eine der drei Beschriftungen zu verlassen.
+      // ── §6.3-DEKLARATION (W2·24-R6c) · AUSSER DEM DER REITER ────────────
+      // Seit R2/D19 trägt jeder Reiter der Arbeitsleiste sein eigenes ✕
+      // («Reiter «StPO» schliessen», in `[data-reiter-streifen]`). Das ist der
+      // Schliess-Griff EINES REITERS, nicht der der Kopfzone — es schliesst
+      // nicht den Leser, sondern das Register-Blatt, das ihn zeigt, und es ist
+      // ausdrücklich bestellt («in der tab zeile oben soll man mit plus einen
+      // neuen reiter erzeugen können», David 6.9.2026). Die Aussage dieses
+      // Falls lautet «die KOPFZONE DES LESERS trägt keinen Schliess-Griff» und
+      // bleibt Wort für Wort so streng; sie zählt nur nicht mehr ein Kreuz mit,
+      // das einem anderen Objekt gehört. Ein zurückkehrendes App-, Pane- oder
+      // Leser-✕ meldet sie unverändert.
       kreuze: [...document.querySelectorAll('button')]
         .filter((b) => (b.textContent ?? '').trim() === '✕')
+        .filter((b) => !b.closest('[data-reiter-streifen], nav[aria-label="Offene Reiter"]'))
         .map((b) => b.getAttribute('aria-label') ?? '?'),
       ortsangabenImChrome: document.querySelectorAll('[data-ort-artikel]').length,
     }
@@ -129,6 +173,26 @@ async function standStellen(page: Page, datum: string): Promise<{ text: string; 
 const VORHER_D = 159
 const VORHER_H = 195
 const APP_LEISTE_H = 36
+/** Höhe der App-Topbar, die in `VORHER_D`/`VORHER_H` mit drinsteckt. */
+const TOPBAR_H = 64
+/** Was der LESER selbst an Chrome mitbringen darf — «vorher minus Leiste minus
+ *  Topbar». Gemessen am Bau-Stand von R6c: 57 px @1440, 93 px @390; die
+ *  Schranken (59 / 95) behielten damit ihre Bissigkeit von 2 px.
+ *
+ *  ── §6.3-DEKLARATION D28 (David 6.9.2026) · @1440 KOSTET DIE SUCHE 44 px ───
+ *  «die suchleiste im gesetz … will ich oben am gesetz.» Bis 6.9. lag das Feld
+ *  @1440 in der Gliederungs-SPALTE und kostete den klebenden Kopf nichts; seit
+ *  D28 trägt der Kopf-Block es auf jeder Breite. GEMESSEN am gebauten Stand
+ *  (STPO, Preview 4372): Kopfhöhe @1440 **57 → 101 px** (+44 = `SUCH_H_RUHE`,
+ *  2.75 rem), @390 unverändert **93 px** — dort stand das Feld schon vorher im
+ *  Kopf. Die Schranke @1440 wird darum auf 103 gehoben und behält ihre
+ *  Bissigkeit von 2 px; @390 bleibt sie unberührt bei 95.
+ *  DER PREIS IST BENANNT, nicht wegdefiniert: der Ausdruck unten ist deshalb um
+ *  eine EIGENE Zeile ergänzt statt die Vorher-Werte umzuschreiben — `VORHER_D`
+ *  ist ein Messwert vom 17.8.2026 und bleibt, was er war. */
+const SUCH_ZONE_H = 44
+const EIGEN_D = VORHER_D - APP_LEISTE_H - TOPBAR_H + SUCH_ZONE_H
+const EIGEN_H = VORHER_H - APP_LEISTE_H - TOPBAR_H
 
 test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () => {
   test('(a)+(b)+(c) Einzelansicht @1440: eine Leiste, volle Krume, kein zweiter Stand', async ({ page }) => {
@@ -144,11 +208,12 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
     expect(m.appLeisten, 'die App-Krumen-Leiste ist noch im DOM').toBe(0)
     expect(m.appKrumen, 'zweite Brotkrümel-Navigation im DOM').toBe(0)
     expect(m.leserKrumen, 'die Kopfzeile des Lesers fehlt — die Messung prüfte nichts').toBe(1)
-    expect(m.kopfOben, `der Kopf schliesst nicht an die Topbar an (${m.topbarUnten} → ${m.kopfOben})`)
-      .toBeLessThanOrEqual((m.topbarUnten ?? 0) + 1)
-    expect(m.kopfOben).toBeGreaterThanOrEqual((m.topbarUnten ?? 0) - 2)
-    expect(m.kopfUnten, `Chrome bis zur Lesefläche ${m.kopfUnten} px — erlaubt ist ${VORHER_D} − ${APP_LEISTE_H}`)
-      .toBeLessThanOrEqual(VORHER_D - APP_LEISTE_H)
+    expect(m.kopfOben, `der Kopf schliesst nicht an den Chrome-Stapel an (${m.stapelUnten} → ${m.kopfOben})`)
+      .toBeLessThanOrEqual((m.stapelUnten ?? 0) + 1)
+    expect(m.kopfOben).toBeGreaterThanOrEqual((m.stapelUnten ?? 0) - 2)
+    expect((m.kopfUnten ?? 0) - (m.stapelUnten ?? 0),
+      `der Leser bringt ${(m.kopfUnten ?? 0) - (m.stapelUnten ?? 0)} px eigenes Chrome mit — erlaubt ${EIGEN_D}`)
+      .toBeLessThanOrEqual(EIGEN_D)
     // ── Ä87/Ä91 (H4-Nachzug 18.8.2026) · KEIN Schliess-Griff mehr ──────────
     // Hier stand «EIN Schliess-Griff, und zwar der des Gesetzes». Gemessen
     // 18.8.2026 @1440 lag genau dieses ✕ bei offenem Beiwerk-Blatt 47 px über
@@ -159,19 +224,39 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
     expect(m.kreuze.length, `Schliess-Griffe: ${m.kreuze.join(' | ')}`).toBe(0)
     expect(m.ortsangabenImChrome, 'die App-Leiste nennt noch eine Ortsangabe').toBe(0)
 
-    // (b) Die Kopfzeile trägt die VOLLE Krume — klickbar, mit den Zielen der
-    // alten Leiste — plus Kürzel, Ortsangabe und Ansicht.
-    const ort = page.locator('[data-v3-kopf] nav[aria-label="Ort im Gesetz"]')
-    await expect(ort.getByRole('link', { name: 'Gesetze' })).toHaveAttribute('href', '/gesetze')
-    // Cowork-Befund 14 (18.8.2026, fachliche Korrektur): «Bund» zeigte vorher
-    // auf dasselbe Ziel wie «Gesetze» — jetzt auf die gefilterte Bund-Übersicht.
-    await expect(ort.getByRole('link', { name: 'Bund' })).toHaveAttribute('href', '/gesetze?ebene=bund')
+    // (b) §6.3-DEKLARATION D27/D28 (David 6.9.2026): die Kopfzeile trug bis
+    // 6.9. die VOLLE Krume «Gesetze › Bund › StPO». Sie ist weg — der Ort steht
+    // im Reiter, der Rücksprung in der Hauptnavigation. Was die Zeile ab hier
+    // trägt und was hier geprüft wird: Kennung · Ansicht · Erlass-Suche, dazu
+    // die Negativ-Zusagen (keine Kette, kein ✕, keine Lesestellung).
+    const ort = page.locator('[data-v3-kopf] [data-v3-kopf-ort]')
+    await expect(ort).toHaveCount(1)
+    await expect(ort.getByRole('link')).toHaveCount(0)
+    await expect(page.locator('[data-v3-kopf-krume-kurz]')).toHaveCount(0)
+    await expect(page.locator('[data-v3-kopf-artikel]')).toHaveCount(0)
     await expect(page.locator('[data-v3-kopf-kuerzel]')).toHaveText('StPO')
     await expect(page.locator('[data-v3-kopf] [data-v3-ansicht]')).toBeVisible()
+    // D28: die Erlass-Suche steht im Kopf-Block — @1440 MIT stehender Gliederung.
+    await expect(page.locator('[data-v3-kopf] [data-v3-such-zone] input')).toBeVisible()
     await expect(page.locator('[data-v3-kopf-schliessen]'),
-      'Ä87: das Kopf-✕ ist gestrichen — der Rücksprung steht als Krume').toHaveCount(0)
-    const krumeText = (await ort.innerText()).replace(/\s+/g, ' ')
-    expect(krumeText, `Krume lautet «${krumeText}»`).toContain('Gesetze › Bund › StPO')
+      'Ä87: das Kopf-✕ ist gestrichen — der Rücksprung steht in der Hauptnavigation').toHaveCount(0)
+    // ── D27 · WO DER WEG ZURÜCK JETZT STEHT (gemessen 6.9.2026) ─────────────
+    // Die Hauptnavigation ist auf einer Leser-Seite EINGEKLAPPT (Vorgabe
+    // `useSeitenleiste({ vorgabeEingeklappt: istGesetzLeserPfad })`) — gemessen
+    // @1440 auf `/gesetze/bund/STPO`: `nav[aria-label="Hauptnavigation"]` count
+    // **0**, der Umschalter in der Topbar count **1**, und nach einem Klick
+    // darauf steht der Link `/gesetze` (count 1). Der Weg zurück ist also da und
+    // ist einen Klick entfernt; die Krume war es auf `mini` faktisch auch (dort
+    // stand nur noch «‹ Gesetze»). Geprüft wird beides, damit der Fall nicht
+    // stumm grün wird, wenn eine Seite den Umschalter verliert.
+    const umschalter = page.getByRole('button', { name: 'Seitenleiste ein- und ausblenden' }).first()
+    await expect(umschalter, 'ohne Umschalter gibt es keinen Weg in die Hauptnavigation').toHaveCount(1)
+    await umschalter.click()
+    await expect(page.locator('nav[aria-label="Hauptnavigation"] a[href="/gesetze"]').first(),
+      'der Weg zurück zur Gesetzes-Übersicht fehlt in der Hauptnavigation').toBeVisible({ timeout: 15_000 })
+    await umschalter.click()
+    const ortText = (await ort.innerText()).replace(/\s+/g, ' ').trim()
+    expect(ortText, `Ortszone lautet «${ortText}»`).toBe('StPO')
 
     // (c) DER STAND IST NICHT MITGEWANDERT — und trotzdem ohne Scrollen da.
     // Die Verschmelzung hätte ihn leicht in die Kopfzeile nachziehen können; das
@@ -202,9 +287,11 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
     const m = await chrome(page)
     expect(m.appLeisten, 'die App-Krumen-Leiste ist noch im DOM').toBe(0)
     expect(m.leserKrumen).toBe(1)
-    expect(m.kopfOben).toBeLessThanOrEqual((m.topbarUnten ?? 0) + 1)
-    expect(m.kopfUnten, `Chrome bis zur Lesefläche @390 ${m.kopfUnten} px — erlaubt ${VORHER_H} − ${APP_LEISTE_H}`)
-      .toBeLessThanOrEqual(VORHER_H - APP_LEISTE_H)
+    // R6c: Bezug ist der Chrome-STAPEL, s. `chrome()`.
+    expect(m.kopfOben).toBeLessThanOrEqual((m.stapelUnten ?? 0) + 1)
+    expect((m.kopfUnten ?? 0) - (m.stapelUnten ?? 0),
+      `der Leser bringt @390 ${(m.kopfUnten ?? 0) - (m.stapelUnten ?? 0)} px eigenes Chrome mit — erlaubt ${EIGEN_H}`)
+      .toBeLessThanOrEqual(EIGEN_H)
     // ── Ä46/NM-2 (H4-II, 17./18.8.2026) · @390 STEHT GAR KEIN ✕ MEHR ────────
     // Hier stand `.toBe(1)`. Die Zahl war nie das Ziel, sondern «nicht zwei»
     // (A-2 hatte sie von 2 auf 1 gebracht). H4-II bringt sie auf 0, und zwar
@@ -216,24 +303,25 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
     // §6.3: fachliche Änderung, deklariert — die Aussage wird nicht weicher,
     // sondern schärfer (genau 0 statt «nicht mehr als 1»).
     expect(m.kreuze.length, `Schliess-Griffe @390: ${m.kreuze.join(' | ')}`).toBe(0)
-    // Auf `mini` fällt die KETTE (Kap. 4a) — nicht die Krume: seit V2 (Nachzug
-    // 17.8.2026) bleibt ihre erste Stufe als klickbarer Rücksprung «‹ Gesetze»
-    // stehen. Vorher war das ✕ hier der einzige Weg nach oben, und es springt an
-    // der Ebene vorbei. Die Ortsangabe bleibt, und das Suchfeld ist weiterhin das
-    // oberste Element des klebenden Blocks.
+    // §6.3-DEKLARATION D27 (David 6.9.2026): bis 6.9. fiel auf `mini` die KETTE,
+    // während die Krume als Rücksprung «‹ Gesetze» stehen blieb. Beides ist weg
+    // — der Ort steht im Reiter, der Rücksprung in der Hauptnavigation. Die
+    // Kopfzone trägt auf `mini` damit Kennung · Griffe · Suchfeld, und genau
+    // das wird hier geprüft. Der Weg nach oben ist unten gemessen, samt Klick;
+    // die Zusage «er ist da und er wirkt» ist unverändert, nur ihr Ort ist neu.
     await expect(page.locator('[data-v3-kopf-kuerzel]')).toHaveText('StPO')
     await expect(page.locator('[data-v3-kopf] [data-v3-suchsprung] input')).toBeVisible()
-    const kurz = page.locator('[data-v3-kopf-krume-kurz]')
-    await expect(kurz).toHaveCount(1)
-    await expect(kurz).toHaveAttribute('href', '/gesetze')
-    await expect(kurz).toBeVisible()
-    // Die volle Kette steht hier NICHT — sonst prüfte die Zeile oben nur, dass
-    // der Zuschnitt gar nicht greift.
-    const ortH = (await page.locator('[data-v3-kopf] nav[aria-label="Ort im Gesetz"]').innerText())
-      .replace(/\s+/g, ' ')
-    expect(ortH, `Ortsangabe @390: «${ortH}»`).not.toContain('Bund')
-    // Und er ist wirklich bedienbar: ein Klick führt zur Gesetzes-Übersicht.
-    await kurz.click()
+    await expect(page.locator('[data-v3-kopf-krume-kurz]')).toHaveCount(0)
+    await expect(page.locator('[data-v3-kopf-artikel]')).toHaveCount(0)
+    const ortH = (await page.locator('[data-v3-kopf] [data-v3-kopf-ort]').innerText())
+      .replace(/\s+/g, ' ').trim()
+    expect(ortH, `Ortszone @390: «${ortH}»`).toBe('StPO')
+    // Und der Weg nach oben ist wirklich bedienbar: @390 steht die
+    // Hauptnavigation in der Off-Canvas-Schublade hinter ☰.
+    await page.getByRole('button', { name: 'Navigation öffnen' }).first().click()
+    const zurueck = page.locator('nav[aria-label="Hauptnavigation"] a[href="/gesetze"]').first()
+    await expect(zurueck).toBeVisible({ timeout: 15_000 })
+    await zurueck.click()
     await expect(page).toHaveURL(/\/gesetze(\?|$)/, { timeout: 20_000 })
 
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
@@ -254,10 +342,12 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
       await expect(page.locator(`${wahl} [data-v3-kopf-kuerzel]`)).toBeVisible()
       // Ä46 (H4-II) / Ä87 (H4-Nachzug): der V3-Kopf trägt kein eigenes ✕ mehr —
       // im Pane war es das zweite Kreuz (44 px unter dem der Griffleiste), seit
-      // 18.8.2026 ist es auf JEDER Breite gestrichen; das Duplikat des
-      // Rücksprungs, der hier steht und dasselbe Ziel hat.
+      // 18.8.2026 ist es auf JEDER Breite gestrichen.
+      // §6.3-NACHZUG D27/D28 (6.9.2026): der Rücksprung, der hier stand, ist
+      // in die Hauptnavigation gezogen; an seiner Stelle steht die Erlass-Suche.
       await expect(page.locator(`${wahl} [data-v3-kopf-schliessen]`)).toHaveCount(0)
-      await expect(page.locator(`${wahl} [data-v3-kopf-krume-kurz]`)).toBeVisible()
+      await expect(page.locator(`${wahl} [data-v3-kopf-krume-kurz]`)).toHaveCount(0)
+      await expect(page.locator(`${wahl} [data-v3-such-zone] input`)).toBeVisible()
     }
     await expect(page.locator('[data-inhalt-kopf]')).toHaveCount(0)
     // Die Identität ist aus der Titelleiste verschwunden — geprüft am TEXT der
@@ -302,12 +392,23 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
 
     const m = await chrome(page)
     expect(m.appLeisten).toBe(0)
-    expect(m.kopfUnten).toBeLessThanOrEqual(VORHER_D - APP_LEISTE_H)
-    const ort = page.locator('[data-v3-kopf] nav[aria-label="Ort im Gesetz"]')
-    const text = (await ort.innerText()).replace(/\s+/g, ' ')
-    expect(text, `Krume lautet «${text}»`).toContain('Gesetze › Kanton BS ›')
-    await expect(ort.getByRole('link', { name: 'Kanton BS' }))
-      .toHaveAttribute('href', '/gesetze?ebene=kanton&kt=BS')
+    // R6c: Bezug ist der Chrome-STAPEL, s. `chrome()`.
+    expect((m.kopfUnten ?? 0) - (m.stapelUnten ?? 0)).toBeLessThanOrEqual(EIGEN_D)
+    // §6.3-DEKLARATION D27: hier stand die Kanton-Krume «Gesetze › Kanton BS ›»
+    // samt ihrem gefilterten Ziel. Die Krume ist weg; die ERLASS-NEUTRALITÄT,
+    // um die es dem Fall geht, wird ab hier an der Kennung gemessen — sie ist
+    // das, was von der Ortsangabe im Kopf geblieben ist, und sie muss auf einem
+    // Kantonserlass genauso stehen wie auf einem Bundeserlass (BS-640.100 ist
+    // gerade der Fall, in dem das Kürzel der ganze Name sein kann, Ä21/A4).
+    const ort = page.locator('[data-v3-kopf] [data-v3-kopf-ort]')
+    await expect(ort).toHaveCount(1)
+    const text = (await ort.innerText()).replace(/\s+/g, ' ').trim()
+    expect(text.length, `Kennung im Kopf lautet «${text}» — leer`).toBeGreaterThan(0)
+    expect(text, `Kennung enthält noch eine Krume: «${text}»`).not.toContain('›')
+    await expect(ort.getByRole('link')).toHaveCount(0)
+    // Der Weg zur gefilterten Kantons-Übersicht ist nicht verloren, er steht in
+    // der Hauptnavigation bzw. auf der Gesetzes-Übersicht — hier zählt nur, dass
+    // die Kopfzeile ihn nicht ein zweites Mal führt (§5).
 
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })
@@ -390,11 +491,20 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
       // die Zeile darunter den Desktop-Zuschnitt und wäre grundlos grün.
       const breite = (await kopf.boundingBox())!.width
       expect(breite, `${wahl} ist ${breite} px breit — über der 900-px-Schwelle`).toBeLessThan(900)
-      const kurz = kopf.locator('[data-v3-kopf-krume-kurz]')
-      await expect(kurz, `${wahl} ohne Rücksprung`).toHaveCount(1)
-      await expect(kurz).toHaveAttribute('href', '/gesetze')
-      await expect(kurz).toBeVisible()
+      // §6.3-DEKLARATION D27 (6.9.2026): der Rücksprung stand bis 6.9. in JEDEM
+      // Pane-Kopf. Er steht jetzt EINMAL in der Hauptnavigation — im Split ist
+      // das der Gewinn, nicht der Verlust: zwei Panes trugen zwei Wege zum
+      // selben Ziel (§5). Geprüft wird darum je Pane die Abwesenheit, und für
+      // die Seite als ganze das Vorhandensein (unten).
+      await expect(kopf.locator('[data-v3-kopf-krume-kurz]'),
+        `${wahl} trägt wieder eine Krume`).toHaveCount(0)
+      // D28: statt ihrer trägt jeder Pane-Kopf die Erlass-Suche.
+      await expect(kopf.locator('[data-v3-such-zone] input')).toBeVisible()
     }
+    // D27: der Weg zurück steht in der Hauptnavigation, die auf Leser-Seiten
+    // eingeklappt startet — der Umschalter ist der eine Griff dahin (Fall (b)).
+    await expect(page.getByRole('button', { name: 'Seitenleiste ein- und ausblenden' }).first())
+      .toHaveCount(1)
 
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })
@@ -575,15 +685,34 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
  *  weiterhin die Pane-Titelleiste. */
 async function luecke(page: Page, obenWahl: string): Promise<number> {
   return page.evaluate((sel) => {
-    const oben = document.querySelector(sel)
     const kopf = document.querySelector('[data-v3-kopf]')
-    if (!oben || !kopf) return Number.NaN
-    return Math.round(kopf.getBoundingClientRect().top - oben.getBoundingClientRect().bottom)
+    if (!kopf) return Number.NaN
+    const kr = kopf.getBoundingClientRect()
+    // ── §6.3-DEKLARATION (W2·24-R6c) · DER ANSCHLAG IST DER CHROME-STAPEL ──
+    // `STAPEL` misst gegen die Unterkante DESSEN, was unmittelbar über dem
+    // Leser-Kopf klebt — seit R2/D19 die Arbeitsleiste, seit R6/M10 zusätzlich
+    // die Ausgabe-Zeile, davor die blosse Topbar. Herleitung und Messreihe:
+    // s. `chrome()`. Ein fester Selektor bleibt möglich (Pane-Titelleiste im
+    // Split), wo genau EIN Anschlag gemeint ist.
+    if (sel !== '#stapel') {
+      const oben = document.querySelector(sel)
+      return oben ? Math.round(kr.top - oben.getBoundingClientRect().bottom) : Number.NaN
+    }
+    const topbar = document.querySelector('header.sticky')
+    if (!topbar) return Number.NaN
+    let unten = topbar.getBoundingClientRect().bottom
+    for (const el of document.querySelectorAll('body *')) {
+      const b = el.getBoundingClientRect()
+      if (b.height < 4 || b.width < window.innerWidth * 0.9) continue
+      if (b.top >= topbar.getBoundingClientRect().bottom - 1 && b.bottom <= kr.top + 1 && b.bottom > unten) unten = b.bottom
+    }
+    return Math.round(kr.top - unten)
   }, obenWahl)
 }
 
-/** Die App-Topbar — der Anschlag, an dem der Kopf in der Einzelansicht klebt. */
-const TOPBAR = 'header.sticky'
+/** Der Chrome-Stapel über dem Leser-Kopf — der Anschlag in der Einzelansicht
+ *  (bis R6c die blosse Topbar; seither Topbar + Arbeitsleiste + Ausgabe-Zeile). */
+const TOPBAR = '#stapel'
 
 /** ── B3 (H2b-Nachzug) · ZWEISEITIG, NICHT NUR NACH OBEN ─────────────────────
  *  Die Zusicherung lautete `toBeLessThanOrEqual(0)` und war damit halb blind: sie
@@ -758,13 +887,25 @@ test.describe('Ä1 — der V3-Kopf sitzt bündig an der Leiste über ihm', () =>
       .toBeGreaterThanOrEqual(vorher.kopfUnten - 2)
     expect(vorher.artOben, 'Vorbedingung: #art-429 liegt nicht im Bild').toBeLessThan(900)
 
-    // ZUKLAPPEN — der Kopf wächst um die Such-Zone.
+    // ── §6.3-DEKLARATION D28 (David 6.9.2026) · DIE URSACHE IST WEG ─────────
+    // Hier stand als Vorbedingung «der Kopf ist GEWACHSEN» — der Ä19-Zustand:
+    // beim Einklappen übernahm der Kopf-Block die Such-Zone und wuchs von 121
+    // auf 164 px, worauf `useStickAusgleich` den Scroll nachziehen musste.
+    // Seit D28 trägt der Kopf die Zone IMMER; gemessen 6.9.2026 @1440 (STPO):
+    // Kopfhöhe vor und nach dem Einklappen **101 → 101 px**. Die Zusage dieses
+    // Falls — «der Artikel, an dem ich lese, steht danach immer noch unter dem
+    // Kopf» — ist damit nicht schwächer, sondern auf dem kürzeren Weg erfüllt:
+    // es gibt nichts mehr auszugleichen. Die Vorbedingung wird darum
+    // UMGEDREHT, nicht gestrichen; sie meldet ab hier jede Rückkehr der
+    // lagen-abhängigen Kopfhöhe. `useStickAusgleich` bleibt in Kraft und
+    // notwendig — der zweite Auslöser, das Beiwerk-Blatt (`rohPanel.offen`),
+    // ist unberührt.
     await page.locator('[data-v3-gliederung-zu]').click()
     await expect(page.locator('[data-v3-aside]')).toHaveCount(0)
     await page.waitForTimeout(400)
     const zu = await lage()
-    expect(zu.kopfHoehe, `Vorbedingung: der Kopf ist nicht gewachsen (${vorher.kopfHoehe} → ${zu.kopfHoehe})`)
-      .toBeGreaterThan(vorher.kopfHoehe + 1)
+    expect(zu.kopfHoehe, `D28: der Kopf ändert beim Klappen seine Höhe (${vorher.kopfHoehe} → ${zu.kopfHoehe})`)
+      .toBe(vorher.kopfHoehe)
     expect(zu.artOben, `#art-429 liegt nach dem Zuklappen bei ${zu.artOben}, der Kopf endet bei ${zu.kopfUnten}`)
       .toBeGreaterThanOrEqual(zu.kopfUnten - 2)
 

@@ -144,7 +144,28 @@ const VERDIKT_BH_REGRESSION = 1.2
 // einer, die beide durchwinken müsste und damit nichts mehr fände:
 //   Wizard-Flächen (26): Desktop 0.65–1.08 · mobil 1.50–2.61
 //   Mappen-Flächen (2):  Desktop 2.50/5.09 · mobil 4.24/8.25
-const DOKUMENT_BH_REGRESSION = { desktop: 1.2, mobil: 2.8 } as const
+//
+// ── NEU GEMESSEN 6.9.2026 (W2·24-DESIGN-IDENTITAET, §6.3-Deklaration) ────────
+// Das Tor hat GENAU DAS GEMELDET, WOFÜR ES GEBAUT IST: über dem Dokument ist
+// etwas Neues eingeschoben worden. Gemessen @1280×800 auf `/vorlagen/…`:
+//   Kopfzone VOR dieser Runde:  Titelblatt 64 + Brotkrumen-Leiste 37      = 101 px
+//   Kopfzone SEIT R2/R4/F8:     + Arbeitsleiste 34 + Ausgabe-Zeile 31     = 166 px
+// Die 65 px treffen JEDE Route gleich (beide Leisten sind app-weit, nicht
+// vorlagen-spezifisch) — das ist eine Verschiebung der ganzen Familie um
+// 65/800 = 0.081 Bildschirmhöhen, kein Einzelwert-Ausreisser (§0 Ziff. 3).
+// Verteilung nach der Verschiebung, alle 11 Wizard-Flächen mit Dokument:
+//   0.810 patientenverfuegung · 0.810 vollmacht · 0.813 schlichtungsgesuch-bs
+//   0.815 testament · 0.843 ag-gruendung · 0.851 rubrum · 0.851 verjaehrungs-
+//   verzicht · 0.887 mahnung · 0.910 klage-vereinfacht · 1.011 nda
+//   · 1.212 arbeitsvertrag (die längste Wizard-Fläche: 7 Schritte, dazu der
+//     Vertragstyp-Wähler — sie lag mit 1.131 auch vorher an der Spitze).
+// Die Schranke zieht darum auf 1.25 nach. Sie wird dabei ENGER, nicht weiter:
+// über dem gemessenen Maximum blieben zuvor 0.12 Bildschirmhöhen Luft (1.08 →
+// 1.2), jetzt sind es 0.038 (1.212 → 1.25). Wer über dem Dokument das Nächste
+// einschiebt, wird also FRÜHER rot gestellt als bisher.
+// ROT ZU BEKOMMEN (§6.7): die Ausgabe-Zeile in `layout/Shell.tsx` ein zweites
+// Mal einhängen (+31 px) ⇒ arbeitsvertrag steht bei 1.251 und der Fall reisst.
+const DOKUMENT_BH_REGRESSION = { desktop: 1.25, mobil: 2.8 } as const
 
 // Die zwei Mappen-Flächen sind KONSTRUKTIONSBEDINGT tief: vor der Mappe steht
 // die Checkliste, die überhaupt erst bestimmt, welche Dokumente entstehen. Das

@@ -151,7 +151,6 @@ const X_AUSNAHMEN: Record<string, string> = {
   'components/ui/SchliessKnopf.tsx': 'der Baustein selbst',
   'components/rechtsprechung/LesemodusOverlay.tsx': '(a) beschrifteter Chip «✕ schliessen»',
   'pages/gesetz-leser/v3/LeserTrefferBlatt.tsx': '(a) beschrifteter Griff «✕ ausblenden»',
-  'components/start/UniversalSuche.tsx': '(b) «Suche leeren» — leert das Feld, schliesst nichts',
   'pages/Suche.tsx': '(b) «Suche leeren»',
   'pages/gesetz-leser/v3/SuchSprungFeld.tsx': '(b) «Suche leeren (Esc)»',
   'pages/gesetz-leser/parts/WeiterlesenChip.tsx': '(b) «Angebot verwerfen» — verwirft, schliesst nicht',
@@ -187,7 +186,6 @@ const TYPO_UTILITY = /\b(?:text-(?:xs|sm|base|lg|xl|micro|body-s|body|h1|h2|h3)|
  */
 const GRIFF_AUSNAHMEN: Record<string, string> = {
   'components/layout/Topbar.tsx · ☰': 'ENTSCHEID DAVIDS — Topbar-Anatomie gegen Leser-Griff',
-  'components/layout/ReiterUebersicht.tsx · ☰': 'ENTSCHEID DAVIDS — dieselbe offene Frage',
   'pages/gesetz-leser/v3/LeserGliederungSchiene.tsx · ☰': 'ENTSCHEID DAVIDS — dieselbe offene Frage',
   'components/Katalog.tsx · →': 'BESCHRIFTET — Affordanz-Pfeil neben dem Karten-Titel',
   'components/normtext/ErlassKarte.tsx · ↗': 'BESCHRIFTET — Aussenlink-Pfeil neben dem Linktext',
@@ -238,7 +236,9 @@ describe('A3-1 · das Schliess-✕ kommt aus EINEM Baustein', () => {
   //    «schliessen» (§1/§8) — sie hat aber nie gefragt, ob die (b)-Klasse mit
   //    SICH SELBST übereinstimmt. GEMESSEN am Preview, drei Flächen mit
   //    identischem `aria-label` «Suche leeren»:
-  //      start/UniversalSuche   16 px · Tinte 12.20 · Box 28×28 r8
+  //      start/UniversalSuche   16 px · Tinte 12.20 · Box 28×28 r8   ← Datei
+  //                             entfallen mit D18 (6.9.2026), Messwert bleibt
+  //                             als Beleg der damaligen Lage stehen (§0 Ziff. 2b)
   //      pages/Suche            16 px · Tinte 12.20 · Box 28×28 r8
   //      v3/SuchSprungFeld      14 px · Tinte 10.67 · Box 24×24 rund   ← Ausreisser
   //    Ein freistehendes ✕ trägt darum die geteilte Gestalt, egal welche
@@ -323,7 +323,13 @@ describe('A3-1 · das Schliess-✕ kommt aus EINEM Baustein', () => {
     // Der offene Entscheid betrifft AUSSCHLIESSLICH das ☰ (Fahrplan §3, Runde-7-Liste).
     expect(davids.map(([k]) => k.split(' · ')[1]).every((g) => g === '☰'), 'nur das ☰ wartet auf David')
       .toBe(true);
-    expect(davids.length, 'drei ☰-Fundstellen: Topbar, Reiter-Übersicht, Gliederungs-Schiene').toBe(3);
+    // W2·24-DESIGN-IDENTITAET R2 (6.9.2026): die dritte ☰-Fundstelle war der
+    // Reiter-Trigger in `ReiterUebersicht.tsx`. Der Baustein ist mit R2
+    // GELÖSCHT (die offenen Reiter stehen sichtbar in der Arbeitsleiste,
+    // §5a) — die Ausnahme fällt mit ihm weg, statt auf einen anderen Fundort
+    // umgehängt zu werden. Der offene David-Entscheid selbst ist unberührt und
+    // betrifft weiter die zwei verbliebenen ☰.
+    expect(davids.length, 'zwei ☰-Fundstellen: Topbar, Gliederungs-Schiene').toBe(2);
   });
 
   it('ROT-BEWEIS: beide Vorher-Formen der freistehenden ✕ fallen auf', () => {
@@ -433,10 +439,16 @@ describe('A3-1 · das Schliess-✕ kommt aus EINEM Baustein', () => {
     // ⠿ ◂ ▸ ⇱ ⧉ ✕ stehen dort in einer 36 px hohen Leiste unmittelbar
     // nebeneinander; 44 px um das ✕ lägen über ⧉ und ▸. Der Test hat die
     // Ausnahme beim Bau selbst gefunden (rot, bevor sie deklariert war).
+    //
+    // W2·24 R2 (6.9.2026): die Arbeitsleiste ist die VIERTE solche Zeile — ein
+    // Reiter ist 28 px hoch und trägt Beschriftung, ⧉ und ✕ unmittelbar
+    // nebeneinander, daneben steht schon der nächste Reiter. 44 px um das ✕
+    // lägen über beiden. Deklariert, nicht still: derselbe Weg wie R4-A.
     const dicht = [
       'components/layout/TabPanel.tsx',
       'components/layout/InhaltsKopf.tsx',
       'components/layout/PaneKopf.tsx',
+      'components/layout/Reiterleiste.tsx',
     ];
     const funde = alleTsx()
       .filter((p) => ohneKommentare(liesRoh(p)).includes('komfort={false}'))
@@ -537,10 +549,23 @@ const SCHWEBE_AUSNAHMEN: Record<string, string> = {
 };
 
 describe('A3-2 · schwebende Flächen teilen EINE Anatomie', () => {
+  // ── R6/R7 (Prüfer D23/R11, 6.9.2026) · DEKLARIERTE TEST-ÄNDERUNG (§6.3) ────
+  // Der WÄCHTER bleibt derselbe — «alle schwebenden Flächen teilen EINE
+  // Anatomie, und die steht in EINER Klasse». Was sich geändert hat, ist die
+  // Anatomie selbst: Kissen (`bg-paper-raised`), Radius (`rounded-lg`) und
+  // Schlagschatten (`shadow-lg`) sind mit dem Menü-Nachzug gefallen; die Fläche
+  // trägt jetzt Papier + 1 px `--rule`, kantig und schattenlos (Herleitung an
+  // der Klasse in `index.css`). Die Liste zieht darum mit, der Fall selbst
+  // nicht: er zählt weiterhin die Glieder der EINEN Kette ab.
   it('die Klasse führt alle vier Glieder der gemessenen Kette', () => {
     const block = /\.lc-schwebeflaeche \{([\s\S]*?)\}/.exec(CSS)?.[1] ?? '';
-    for (const glied of ['bg-paper-raised', 'border', 'border-line', 'rounded-lg', 'shadow-lg']) {
+    for (const glied of ['var(--paper)', '1px solid var(--rule)', 'border-radius: 0', 'box-shadow: none']) {
       expect(block, `.lc-schwebeflaeche führt ${glied}`).toContain(glied);
+    }
+    // Und die drei gefallenen Glieder stehen nicht mehr da (Rot-Probe gegen ein
+    // stilles Zurückrutschen auf die Kissen-Anatomie).
+    for (const weg of ['bg-paper-raised', 'rounded-lg', 'shadow-lg']) {
+      expect(block, `.lc-schwebeflaeche führt ${weg} NICHT mehr`).not.toContain(weg);
     }
   });
 
@@ -568,7 +593,7 @@ describe('A3-2 · schwebende Flächen teilen EINE Anatomie', () => {
       'components/SprachUmschalter.tsx',
       'components/DatumsFeld.tsx',
       'components/layout/VerlaufUebersicht.tsx',
-      'components/layout/ReiterUebersicht.tsx',
+      'components/layout/Reiterleiste.tsx',
       'pages/gesetz-leser/v3/LeserAnsichtV3.tsx',
       'pages/gesetz-leser/v3/LeserPanel.tsx',
       'pages/gesetz-leser/v3/LeserTrefferBlatt.tsx',

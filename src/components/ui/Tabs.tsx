@@ -96,7 +96,23 @@ export function Tabs<T extends string>({
       // Strecke. Kein JavaScript, kein Listener, kein Re-Render (§2/§15).
       // `lc-scrollrand-grund-surface`, weil die Leiste auf `bg-surface` sitzt:
       // der Deckel muss die Farbe der Fläche haben, die er abdeckt.
-      className={`print:hidden flex ${HOEHE[groesse]} items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit max-w-full overflow-x-auto lc-scrollrand-x lc-scrollrand-grund-surface`}
+      // ── R-1 (Fixer 2 → 1b, 6.9.2026) · UNTER 400 px WIRD UMBROCHEN, NICHT
+      //    GESCHOBEN ──────────────────────────────────────────────────────────
+      // Die Affordanz oben sagt zwar, dass es weitergeht — aber GEMESSEN am
+      // gebauten Stand (Playwright, Preview, 6.9.2026):
+      //   /rechner/schkg-fristen @390: 300 px sichtbar bei 1157 px Inhalt →
+      //     857 px verborgen, also 8 von 9 Verfahrensphasen ausserhalb des
+      //     Bildes. Der Nutzer muss wischen, um ueberhaupt zu SEHEN, dass es
+      //     neun sind.
+      //   /rechner/kuendigung @390: 348/415, 67 px verborgen (3 Knoepfe).
+      // Ein Schieber, der drei Viertel seines Inhalts versteckt, ist keine
+      // Affordanz-Frage mehr, sondern eine Auffindbarkeits-Frage. Unter 400 px
+      // bricht die Leiste darum um: alle Optionen stehen im Bild, mehrzeilig.
+      // Ab 400 px bleibt alles exakt wie bisher — `flex-wrap` und `h-auto`
+      // greifen nur unterhalb der Schranke, der Schieber daher ebenso.
+      // `min-h-11` an den Knoepfen (unten) haelt das 44-px-Fingermass, das die
+      // feste Container-Hoehe im umgebrochenen Zustand nicht mehr geben kann.
+      className={`print:hidden flex ${HOEHE[groesse]} items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit max-w-full overflow-x-auto lc-scrollrand-x lc-scrollrand-grund-surface max-[400px]:flex-wrap max-[400px]:h-auto max-[400px]:overflow-x-visible`}
     >
       {items.map((it, i) => {
         const aktiv = value === it.code;
@@ -133,7 +149,7 @@ export function Tabs<T extends string>({
             // Container geclippt und wäre wirkungslos. h-8/h-9 erfüllen
             // WCAG 2.2 AA (≥24px); AAA (44px) ist in einer scrollbaren
             // Segmented-Control ohne Redesign nicht erreichbar.
-            className={`shrink-0 whitespace-nowrap ${KNOPF[groesse]} ${aktiv ? AKTIV : INAKTIV}`}
+            className={`shrink-0 whitespace-nowrap max-[400px]:min-h-11 ${KNOPF[groesse]} ${aktiv ? AKTIV : INAKTIV}`}
           >
             {it.label}
           </button>

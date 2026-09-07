@@ -88,7 +88,9 @@ async function markeImAst(page: Page, sekId: string): Promise<{ imAst: boolean; 
 
 /** Die anklickbare Sprung-Schaltfläche der Gliederungszeile (nicht das Chevron). */
 function zeile(page: Page, sekId: string) {
-  return page.locator(`[data-toc] [data-sektion-id="${sekId}"] button[title]`).first()
+  // §6.3-DEKLARATION (W2·24-R6c, P8): Sprung-Zeile = `<a href="#art-…">`,
+  // sonst `<button>` (SektionBaumTOC `TocZeile`). Beide treffen, Absicht gleich.
+  return page.locator(`[data-toc] [data-sektion-id="${sekId}"] :is(a, button)[title]`).first()
 }
 
 test.describe('TOC-Sprung — der Klick landet AUF dem Abschnitt, nicht davor', () => {

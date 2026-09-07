@@ -136,7 +136,7 @@ test.describe('/rechtsprechung — Richter-Facette', () => {
     await page.goto('/rechtsprechung')
     await waehleRichter(page)
     // Freitext-Achse mit einem Begriff, den kein Entscheid dieser Person trägt.
-    await page.getByRole('searchbox', { name: 'Rechtsprechung durchsuchen' }).fill('zzzzzzzq')
+    await page.getByRole('searchbox', { name: 'Filtern' }).fill('zzzzzzzq')
     await expect(page.getByText('Kein Entscheid gefunden', { exact: false })).toBeVisible()
     // §8: der Richter-Filter wird NICHT stillschweigend fallen gelassen, nur weil
     // die Schnittmenge leer ist — er bleibt sichtbar und in der URL.

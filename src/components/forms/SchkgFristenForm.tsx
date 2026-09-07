@@ -249,7 +249,7 @@ export function SchkgFristenForm({ live }: {
 
       {/* Frist-Preset — PRIMÄRWEG (UX B11): die Vorlage setzt alle Parameter;
           die manuellen Felder darunter sind der Kontroll-/Sonderfall-Weg. */}
-      <div className={pk('rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end', 'rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 @lg/pane:grid-cols-2 gap-4 items-end')}>
+      <div className={pk(' border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end', ' border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 @lg/pane:grid-cols-2 gap-4 items-end')}>
         <Field label="Frist-Vorlage (empfohlener Einstieg)" hint="Setzt Stillstand-Regime, Rechtsnatur, Länge und Auslöser automatisch — manuelle Felder unten nur für Sonderfälle">
           <select value={aktiv?.key ?? ''} onChange={(e) => { const p = presetsDerPhase.find((x) => x.key === e.target.value); if (p) ladePreset(p); else setAktiv(null); }} className={inputCls}>
             <option value="">– Vorlage wählen (oder manuell unten) –</option>

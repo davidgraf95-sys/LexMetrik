@@ -136,7 +136,7 @@ export function FnRef({ artikel, nr, klasse, kl }: {
              Radius · Schatten). FIX dabei zweierlei: `--paper` statt der
              Ebene darüber (`--paper-raised`) und `rounded-md` als einziger
              Ausreisser unter acht Schwebeflächen. */
-          className="lc-schwebeflaeche fixed z-dropdown block w-72 max-w-[78vw] cursor-auto p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 [&_a]:text-brass-700 [&_a]:underline" />,
+          className="lc-popover fixed z-dropdown block w-72 max-w-[78vw] cursor-auto p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 [&_a]:text-brass-700 [&_a]:underline" />,
         document.body,
       )}
     </span>

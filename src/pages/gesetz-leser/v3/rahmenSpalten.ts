@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState, type CSSProperties } from 'react';
+import { satzspiegelFuer, type Satzspiegel } from './satzspiegel';
 
 // ═══ Ä60 (c) · WIE BREIT DER LESER IST UND WELCHE SPUREN ER TRÄGT ════════════
 //
@@ -243,6 +244,7 @@ export interface RahmenBild {
    * ersten Render derselbe wie nach jedem Klick auf den Panel-Zähler.
    */
   lesemassMaxRem: number;
+  satzspiegel: Satzspiegel; // Artikelform (W2·24-R6b) — Herleitung in `./satzspiegel`
 }
 
 /**
@@ -269,10 +271,7 @@ export function rahmenBild(lage: RahmenLage): RahmenBild {
   const blattSpurMoeglich = ruheForm === 'rechts' && spaltenLage && passt;
   const gliederungWennOffen = spaltenLage && tocOffen && vollesLesemass;
   const seiteWennOffenRem = gliederungWennOffen ? SPUR_GLIEDERUNG : SPUR_SCHIENE;
-  // Der Rahmen selbst wüchse (`aufweitung`) auch nur bis `LESER_MAX_REM`, nie
-  // über den echten Raum hinaus — dieselbe Klammer wie dort, nachgerechnet für
-  // die Zelle statt für den Wurzel-Kasten (kein Duplikat: `aufweitung` liefert
-  // hier keinen Wert zurück, sie hängt an `blattOffen`).
+  // Klammer wie `aufweitung`: bis `LESER_MAX_REM`, nie über den echten Raum.
   const rootWennOffenPx = raum
     ? Math.max(raum.ruhePx, Math.min(LESER_MAX_REM * rem, raum.raumPx))
     : null;
@@ -280,6 +279,11 @@ export function rahmenBild(lage: RahmenLage): RahmenBild {
     ? Math.min(LESEMASS_MAX, rootWennOffenPx / rem - seiteWennOffenRem - 2 * SPUR_ABSTAND - SPUR_BLATT)
     : LESEMASS_MAX;
 
+  const spurenPx = spaltenLage ? ((gliederungSpalte ? SPUR_GLIEDERUNG : SPUR_SCHIENE) + SPUR_ABSTAND + (blattSpur ? SPUR_BLATT + SPUR_ABSTAND : 0)) * rem : 0;
+  // W2·24-R6b: die Lese-Zelle entscheidet die Artikelform (`./satzspiegel`); die
+  // R6-Aufweitung für die Randnotiz ist mit ihr gestrichen (`lesemassMaxRem` deckelt den Text ohnehin).
+  const zellePx = raum == null ? null : (blattSpur ? (rootWennOffenPx ?? raum.ruhePx) : raum.ruhePx) - spurenPx;
+  const satzspiegel = satzspiegelFuer(zellePx, rem, spaltenLage && ruheForm === 'rechts');
   return {
     blattForm: blattSpur ? 'spalte' : ruheForm,
     gliederungSpalte,
@@ -293,6 +297,7 @@ export function rahmenBild(lage: RahmenLage): RahmenBild {
       : undefined,
     breite: blattSpur && raum ? aufweitung(raum, LESER_MAX_REM * rem) : undefined,
     lesemassMaxRem,
+    satzspiegel,
   };
 }
 

@@ -90,6 +90,44 @@ function ladeEingeklappt(): boolean | null {
   );
 }
 
+// ── Ä1c (LESER-V3 H2b, 17.8.2026) · DER ABGELÖSTE BEFUND, WÖRTLICH ──────────
+// Aus `Shell.tsx` hierher verschoben, als D25 den bereichsabhängigen Vorgabewert
+// abschaffte (Beleg altert nicht, er wird ergänzt — er begründete die Mechanik,
+// die D25 weiterbenutzt):
+//   «Der Leser trägt seine eigene Hauptnavigation (die Gliederung) unmittelbar
+//    daneben; die 256 px der App-Leiste gingen dort dem Lesetext verloren, ohne
+//    etwas beizutragen (Design-Grundlage Kap. 1 Nr. 1: ≥ 60 % der Fläche gehören
+//    dem Normtext). Es ist eine VORGABE, keine Sperre: `useSeitenleiste`
+//    unterscheidet seit H2b «noch nicht gewählt» von «gewählt», und eine einmal
+//    getroffene Nutzerwahl gewinnt hier wie überall.
+//    Bewusst der Gesetz-Leser und nicht «jede Inhaltsseite»: nur er hat eine
+//    zweite, gleichwertige Navigationsspalte. Und bewusst OHNE Kenntnis des
+//    V3-Flags — die Vorgabe gilt für beide Hüllen, der Befund ist in beiden
+//    derselbe (FL-1: das Flag hat genau einen Schaltpunkt, und der ist nicht hier).»
+// Gemessen blieb, was gemessen wurde; nur der GELTUNGSBEREICH ist seit D25 «alle
+// Routen» statt «nur der Leser».
+
+// ── D25 (David 6.9.2026) · DIE LEISTE STARTET ÜBERALL EINGEKLAPPT ───────────
+// «seitenleiste soll als default zuerst eingeklappt sein». Damit ist die
+// Ä1c-Vorgabe von 2026-08-17 («nur im Gesetz-Leser eingeklappt») nicht
+// verschärft, sondern ABGELÖST: die Unterscheidung «Leser vs. Rest» hatte ihren
+// Grund allein darin, dass der Leser eine zweite Navigationsspalte trägt — jetzt
+// gilt für JEDE Route dasselbe, und ein bereichsabhängiger Vorgabewert wäre eine
+// Regel ohne Fall. Der Aufrufer bestimmt darum nichts mehr (der Parameter ist
+// mit dieser Zeile weggefallen, §17-Gegengewicht: was nicht scheitern kann,
+// wird gestrichen statt bewacht).
+//
+// WAS SICH NICHT ÄNDERT: `null` = «noch nicht gewählt». Wer den Schalter im
+// Titelblatt einmal betätigt, dessen Wahl gewinnt überall und für immer —
+// dieselbe Mechanik wie seit H2b, nur mit anderem Vorgabewert.
+//
+// PRERENDER: `ladeEingeklappt()` liefert ohne `window` null ⇒ der Vorgabewert
+// greift ⇒ das prerenderte HTML trägt KEINE Seitenleiste, die Inhaltsspalte hat
+// ab dem ersten Frame die volle Breite. Der erste Client-Render liest
+// localStorage synchron (kein Hydrations-Mismatch, s. Kopf dieser Datei), also
+// springt auch bei getroffener Wahl nichts nach.
+export const VORGABE_EINGEKLAPPT = true;
+
 export interface SeitenleisteLayout {
   breite: number;
   setBreite: (b: number) => void;
@@ -97,11 +135,7 @@ export interface SeitenleisteLayout {
   umschalten: () => void;
 }
 
-export function useSeitenleiste({ vorgabeEingeklappt = false }: {
-  /** Vorgabe, solange der Nutzer NICHT selbst umgeschaltet hat. Darf sich mit
-   *  dem Bereich ändern (im Gesetz-Leser `true`, sonst `false`). */
-  vorgabeEingeklappt?: boolean;
-} = {}): SeitenleisteLayout {
+export function useSeitenleiste(): SeitenleisteLayout {
   const [breite, setBreiteRoh] = useState(ladeBreite);
   const [wahl, setWahl] = useState<boolean | null>(ladeEingeklappt);
 
@@ -109,10 +143,7 @@ export function useSeitenleiste({ vorgabeEingeklappt = false }: {
   // Umschalten heisst: ab jetzt gibt es eine Wahl. Sie bezieht sich auf das, was
   // gerade zu sehen ist — darum kippt sie den WIRKSAMEN Zustand, nicht die
   // gespeicherte `null`.
-  const umschalten = useCallback(
-    () => setWahl((w) => !(w ?? vorgabeEingeklappt)),
-    [vorgabeEingeklappt],
-  );
+  const umschalten = useCallback(() => setWahl((w) => !(w ?? VORGABE_EINGEKLAPPT)), []);
 
   useEffect(() => {
     try { window.localStorage.setItem(BREITE_KEY, String(breite)); } catch { /* Speicher gesperrt — Zustand bleibt nur für die Sitzung */ }
@@ -125,5 +156,5 @@ export function useSeitenleiste({ vorgabeEingeklappt = false }: {
     try { window.localStorage.setItem(EIN_KEY, wahl ? '1' : '0'); } catch { /* s. o. */ }
   }, [wahl]);
 
-  return { breite, setBreite, eingeklappt: wahl ?? vorgabeEingeklappt, umschalten };
+  return { breite, setBreite, eingeklappt: wahl ?? VORGABE_EINGEKLAPPT, umschalten };
 }

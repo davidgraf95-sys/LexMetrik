@@ -18,6 +18,7 @@
 // src/tests/international-redirect.test.ts ab (Konfig-Tor), prod deckt
 // scripts/betrieb/prod-smoke.ts ab (308 gegen die Live-Domain).
 import { test, expect, type Page } from '@playwright/test'
+import { seitenleisteOeffnen } from './helpers/seitenleiste'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 
 const SITE_URL = 'https://lexmetrik.vercel.app'
@@ -81,6 +82,13 @@ test.describe('IA-6 Stufe 2 · Interne Nav zeigt direkt auf die Säule (R-SCOPE-
   test('Gruppen-Kopf und alle 5 Anker-Kinder verlinken die Säule; der Klick scrollt zur Sektion', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/')
+    // §6.3-DEKLARATION 6.9.2026 (W2·24 · D25): die persistente Seitenleiste
+    // startet seit «seitenleiste soll als default zuerst eingeklappt sein»
+    // eingeklappt — die Hauptnavigation ist damit nicht mehr ohne Zutun im DOM.
+    // Der Wächter macht sie darum erst auf (Vorbedingung, eine Stelle:
+    // `helpers/seitenleiste`); GEPRÜFT wird unverändert dasselbe — dass die
+    // interne Navigation auf die SÄULE zeigt und nicht auf den Alias.
+    await seitenleisteOeffnen(page)
     const nav = page.getByRole('navigation', { name: 'Hauptnavigation' })
     const kopf = nav.getByRole('link', { name: 'International', exact: true })
     await expect(kopf).toHaveAttribute('href', '/gesetze?ebene=international')

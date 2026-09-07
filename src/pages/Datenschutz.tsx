@@ -32,7 +32,7 @@ export function Datenschutz() {
         <p>
           Verantwortlich für die Datenbearbeitung im Zusammenhang mit dieser Website ist:
           <br /><span className="text-warn-700">[Name und Adresse der verantwortlichen Person/Firma – wird ergänzt]</span>.
-          Anfragen zum Datenschutz richten Sie bitte über die <Link to="/kontakt" className="text-brass-700 hover:text-brass-600">Kontaktseite</Link> an uns.
+          Anfragen zum Datenschutz richten Sie bitte über die <Link to="/kontakt" className="text-brass-700 underline hover:text-brass-600">Kontaktseite</Link> an uns.
         </p>
       </Abschnitt>
 

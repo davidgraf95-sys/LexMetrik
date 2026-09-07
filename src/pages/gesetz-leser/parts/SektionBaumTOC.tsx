@@ -1,4 +1,4 @@
-import { memo, useMemo, type ReactNode } from 'react';
+import { memo, useMemo, type KeyboardEvent, type MouseEvent, type ReactNode } from 'react';
 import { romanFrei, margLabel } from '../helpers';
 import { merkeRuecksprungVonDom } from '../scrollAnker';
 import { zeileIstOffen, artikelKinderOffen, findeMarke, type GliederungsKnoten } from '../gliederungsModell';
@@ -160,6 +160,53 @@ interface ZeilenProps {
   stimmeGedaempft?: boolean;
 }
 
+// ─── P8 · DIE GLIEDERUNGSZEILE IST EIN LINK, KEIN KNOPF ─────────────────────
+//
+// BEFUND (Prüfer R6, 6.9.2026): der Gliederungsbaum bestand aus 39 `button` und
+// 2 `a`. Ein Knopf hat keine Adresse — ⌘-/Strg-Klick öffnete keinen neuen
+// Reiter, der Mittelklick tat nichts, «Link-Adresse kopieren» fehlte im
+// Kontextmenü. Für ein Verzeichnis, dessen einziger Zweck das Springen an eine
+// Stelle des Erlasses ist, ist das der falsche Grundbaustein.
+//
+// WELCHE ADRESSE (§8 — nie ein toter Link): `#art-<token>` des ERSTEN Artikels
+// im Teilbaum. `GliederungsKnoten.ersterArtikel` führt den Token ausdrücklich
+// als «Sprungziel, Anker `art-<token>`» (gliederungsTypen.ts), und genau diesen
+// Anker kennt der Leser schon — es ist dieselbe Adresse, die ein Tieflink von
+// aussen trägt. Eine Zeile OHNE `ersterArtikel` hat keine Adresse, die beim
+// Neuladen wieder dort landet; sie bleibt ein `button`, statt eine zu erfinden.
+//
+// ZWEI ZWEIGE STATT EINES UMGESCHALTETEN TAGS: `<a>` und `<button>` haben
+// verschiedene Pflicht-Attribute; ein dynamisches Tag bräuchte ein `as any` und
+// schaltete die Typprüfung genau dort ab, wo sie etwas hält. Die Ereignis-
+// Handler sind auf `HTMLElement` typisiert und passen damit auf beide Zweige.
+interface TocZeileProps {
+  /** Gesetzt = die Zeile ist ein Link. Ungesetzt = sie bleibt ein Knopf. */
+  href?: string;
+  onClick: (ev: MouseEvent<HTMLElement>) => void;
+  onKeyDown?: (ev: KeyboardEvent<HTMLElement>) => void;
+  'aria-expanded'?: boolean;
+  'aria-current'?: 'location';
+  'data-toc-aktiv'?: string;
+  title: string;
+  'aria-label': string;
+  className: string;
+  children: ReactNode;
+}
+function TocZeile({ href, children, ...rest }: TocZeileProps) {
+  return href
+    ? <a href={href} {...rest}>{children}</a>
+    : <button type="button" {...rest}>{children}</button>;
+}
+
+/**
+ * Gehört dieser Klick dem SPRUNG oder dem BROWSER? Mit Modifikatortaste oder
+ * mittlerer Taste ist er die Bitte «öffne das woanders» — dann lässt der
+ * Handler los, und der Link tut, was ein Link tut.
+ */
+function istSchlichterKlick(ev: MouseEvent<HTMLElement>): boolean {
+  return ev.button === 0 && !ev.metaKey && !ev.ctrlKey && !ev.shiftKey && !ev.altKey;
+}
+
 // ─── F3 (Teil 1 von 2): EINE Zeile = EIN memoisiertes Bauteil ────────────────
 // BEFUND (Perf-Diagnose 8.8.2026, U3): der Baum war EIN einziges memo-Bauteil,
 // das seine 11 075 Knoten in einer Closure-Rekursion erzeugte — jede Änderung an
@@ -228,6 +275,8 @@ const Zeile = memo(function Zeile({
   // Baum mehrfach als Chevron-Titel vorkommt (klappNamen.ts) — sonst bleibt
   // der Name unverändert, wie im Auftrag verlangt.
   const klappNamenKontext = klappKontext.get(k.id);
+  // P8: die Adresse DIESER Zeile — oder `undefined`, wenn sie keine hat.
+  const sprungZiel = k.ersterArtikel ? `#art-${k.ersterArtikel}` : undefined;
 
   return (
     // data-sektion-id nur an echten Sektionszeilen: der Auto-Zuklapp-Pfad
@@ -307,9 +356,17 @@ const Zeile = memo(function Zeile({
             ≥ 3:1» (Spec §9) reisst brass-500 im HELLEN Modus um zwei
             Hundertstel — und eine Positionsmarke, die man nicht sieht, ist keine.
             Darum brass-600, also genau der Ton des zitierten Musters. */}
-        <span aria-hidden className={`mt-1 h-3.5 w-0.5 shrink-0 rounded-full ${istMarke ? 'bg-brass-600' : 'bg-transparent'}`} />
-        <button
-          type="button"
+        <span aria-hidden className={`mt-1 h-3.5 w-0.5 shrink-0 ${istMarke ? 'bg-brass-600' : 'bg-transparent'}`} />
+        <TocZeile
+          href={sprungZiel}
+          // TASTATUR: `Enter` löst am Link `onClick` aus wie am Knopf; die
+          // LEERTASTE tut es nicht (sie scrollt). Sie wird darum ausdrücklich
+          // nachgereicht — niemand soll eine Bedienung verlieren, die er hatte.
+          onKeyDown={sprungZiel ? (ev) => {
+            if (ev.key !== ' ') return;
+            ev.preventDefault();
+            ev.currentTarget.click();
+          } : undefined}
           // H2 (David 16.8.2026): ein Klick auf den TITEL klappt den Ast auf UND
           // springt. Befund am gebauten Stand: der Titel löste NUR den Sprung
           // aus, aufklappen konnte man ausschliesslich über den 16-px-Pfeil
@@ -321,7 +378,11 @@ const Zeile = memo(function Zeile({
           // Abschnitt, zu dem er eben gesprungen ist. Zuklappen bleibt beim
           // Pfeil — der behält seine volle Umschaltfunktion.
           aria-expanded={hatKinder && titelKlapptAuf ? auf : undefined}
-          onClick={() => {
+          onClick={(ev) => {
+            // Modifikator-/Mittelklick gehört dem Browser (neuer Reiter, neues
+            // Fenster) — nur der schlichte Linksklick ist der Sprung.
+            if (sprungZiel && !istSchlichterKlick(ev)) return;
+            ev.preventDefault();
             // W2·10-UI-NAV/R5: die verlassene Leseposition VOR dem Sprung
             // vormerken — der TOC-Sprung erzeugt bewusst keinen History-Eintrag
             // (LM-202), ohne diese Notiz gäbe es keinen Rückweg.
@@ -343,7 +404,10 @@ const Zeile = memo(function Zeile({
           // (--well) mass hier nur 1.055:1 auf --paper — kaum sichtbar. Übernommen
           // statt neu erfunden: dieselbe Stufe wie die Trefferzeilen
           // (SuchResultate.tsx `hover:bg-brass-100/40`), kein neuer Farbwert.
-          className={`flex-1 min-w-0 text-left rounded px-1.5 py-0.5 leading-snug transition-colors ${stimme.form} ${tinte} ${istMarke ? '' : 'hover:text-ink-900 hover:bg-brass-100/40'}`}>
+          // Gliederung ist NAVIGATION: kein Unterstrich (die P3-Regel in
+          // `index.css` unterstreicht Textlinks — hier steht die Ausnahme
+          // ausdrücklich im Markup, wie die Regel es verlangt).
+          className={`flex-1 min-w-0 text-left no-underline rounded px-1.5 py-0.5 leading-snug transition-colors ${stimme.form} ${tinte} ${istMarke ? '' : 'hover:text-ink-900 hover:bg-brass-100/40'}`}>
           {/* line-clamp-2 (§3.3): Labels bis 280 Zeichen sind belegt — ohne
               Klammer wuchs eine einzige Zeile auf sechs und schob den ganzen
               Baum. Der volle Text bleibt über title/aria-label erreichbar.
@@ -380,7 +444,7 @@ const Zeile = memo(function Zeile({
               sichtbarer Text, nicht nur `title`. Statisch je Knoten ⇒ kein CLS. */}
           {/* B5: s. o. — auch dieser Zusatz ist TEXT und braucht 4.5:1. */}
           {k.aufgehoben && <span className="ml-1 text-micro text-ink-500">aufgehoben</span>}
-        </button>
+        </TocZeile>
         {/* Hier stand bis zum 9.8.2026 der adaptive Zählwert — gestrichen auf
             Entscheid David («keine relevante Information»), Herleitung oben. */}
       </div>

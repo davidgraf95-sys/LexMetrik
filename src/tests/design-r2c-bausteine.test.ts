@@ -46,11 +46,31 @@ describe('C-4 · Treffer-Zeilen laufen über EINEN Baustein', () => {
   const katalog = lies('components/Katalog.tsx');
   const suche = lies('components/suche/SuchResultate.tsx');
 
-  it('beide Flächen konsumieren `ui/TrefferZeile` samt gemeinsamem Rahmen', () => {
-    for (const [name, q] of [['Katalog', katalog], ['SuchResultate', suche]] as const) {
-      expect(q, `${name}: rendert den Baustein`).toContain('<TrefferZeile');
-      expect(q, `${name}: teilt die Flex-Geometrie/den Gruppen-Namen`).toContain('TREFFER_ZEILE_RAHMEN');
+  // ── F1 (Prüfer D23, 6.9.2026) · DEKLARIERTE TEST-ÄNDERUNG (§6.3) ──────────
+  // C-4 hatte Katalog UND Suche auf EINEN Baustein gezogen, weil beide
+  // «anklickbare Zeile mit Titel, zweiter Zeile, Marke und Pfeil» zeigten. Mit
+  // D23 zeigen sie das NICHT mehr beide: das Such-Panel trägt seit F1 die
+  // Anatomie seines eigenen Leerzustands (Registerstrich · Kurzform · Art als
+  // Text) — eine Streifen-Zeile fester Höhe, keine Karten-Zeile. Gemessen war
+  // genau die Vermischung der Befund: Volltitel, mehrzeiliges Snippet und
+  // gerahmtes Etikett ergaben Zeilenhöhen von 37 bis 266 px in EINER Liste.
+  // §1 gilt hier gegen die Abstraktion: zwei verschiedene Fälle dürfen nicht
+  // stillschweigend gleich behandelt werden, nur weil sie einmal gleich aussahen.
+  // Der Wächter behält seine Zähne — er prüft jetzt je Fläche, dass sie DIE
+  // EINE für sie kanonische Anatomie konsumiert und keine dritte erfindet.
+  it('der Katalog konsumiert `ui/TrefferZeile` samt gemeinsamem Rahmen', () => {
+    expect(katalog, 'Katalog: rendert den Baustein').toContain('<TrefferZeile');
+    expect(katalog, 'Katalog: teilt die Flex-Geometrie/den Gruppen-Namen').toContain('TREFFER_ZEILE_RAHMEN');
+  });
+
+  it('das Such-Panel trägt die D23-Anatomie seines Leerzustands', () => {
+    // Dieselben drei Glieder wie `SucheLeerzustand.tsx`, aus denselben Quellen:
+    // Registerstrich (`RegisterMarke`, §5), Kurzform, Art rechts als Text.
+    for (const glied of ['<RegisterMarke', 'trefferKurzform', 'trefferArt']) {
+      expect(suche, `SuchResultate: führt ${glied}`).toContain(glied);
     }
+    // Und KEINE Karten-Anatomie mehr — weder der Baustein noch eine Kopie.
+    expect(ohneKommentare(suche), 'SuchResultate: keine Karten-Zeile mehr').not.toContain('<TrefferZeile');
   });
 
   it('keine der beiden zeichnet Titel/Untertitel/Pfeil noch selbst', () => {
@@ -88,52 +108,83 @@ describe('C-4 · Treffer-Zeilen laufen über EINEN Baustein', () => {
 // ─── C-5 · EINE Rubrik-Kachel ───────────────────────────────────────────────
 
 describe('C-5 · Einstiegs-Kacheln laufen über EINEN Baustein', () => {
-  const start = lies('components/start/RubrikKacheln.tsx');
+  // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R3, 6.9.2026, §6.3): die
+  // Startseite hat KEINE Kachel-Landkarte mehr — «/» ist das
+  // Inhaltsverzeichnis der Sammlung geworden (Listen im Satzspiegel,
+  // Referenzbild `abnahme/design-identitaet/vorschlag-freigegeben.html`).
+  // `components/start/RubrikKacheln.tsx` ist damit gelöscht, und C-5 hat nur
+  // noch EINE Fläche: den /gesetze-Einstieg. Der Kanon selbst — «die
+  // Kachel-Anatomie steht genau einmal» — ist unverändert scharf und wird
+  // unten weiterhin app-weit geprüft; was wegfällt, ist die zweite Fläche,
+  // nicht die Regel. Der §8-Zähler-Wortlaut ist mitgewandert und wird an
+  // seinem neuen Ort geprüft (letzter Fall).
   const gesetze = lies('pages/Gesetze.tsx');
 
-  it('beide Flächen konsumieren `ui/RubrikKachel`', () => {
-    for (const [name, q] of [['RubrikKacheln', start], ['Gesetze', gesetze]] as const) {
-      expect(q, `${name}: rendert den Baustein`).toContain('<RubrikKachel');
-    }
+  it('der /gesetze-Einstieg konsumiert `ui/RubrikKachel`', () => {
+    expect(gesetze, 'Gesetze: rendert den Baustein').toContain('<RubrikKachel');
   });
 
-  it('keine der beiden zeichnet die Kachel-Anatomie noch selbst', () => {
-    // Der Kachel-Kopf (grosse Zahl + Einheit-Overline) und die Startseiten-
-    // Fusszeile stehen nur noch im Baustein.
+  it('die Fläche zeichnet die Kachel-Anatomie nicht selbst', () => {
     const eigenerZahlKopf = /className="num font-display text-h1 leading-none text-brass-700"/;
-    const eigeneZaehlerFusszeile = /className="block text-micro num text-ink-500"/;
     expect(gesetze, 'Gesetze: eigener Zahl-Kopf').not.toMatch(eigenerZahlKopf);
-    expect(start, 'RubrikKacheln: eigene Zähler-Fusszeile').not.toMatch(eigeneZaehlerFusszeile);
-    // Die Landkarten-Kachel ist `lc-card` (und erbt damit die EINE Hover-Regel
-    // aus C-3), nicht mehr `lc-tile` mit eigener Hover-Kette.
-    expect(start, 'RubrikKacheln: keine eigene lc-tile-Kachel').not.toContain('lc-tile');
+  });
+
+  it('die Startseite trägt gar keine Kachel-Optik mehr', () => {
+    // R3: weder der Baustein noch das alte `lc-tile`-Rezept stehen auf «/».
+    for (const rel of ['pages/Startseite.tsx', 'lib/startseiteModule.tsx']) {
+      expect(lies(rel), `${rel}: keine RubrikKachel`).not.toContain('<RubrikKachel');
+    }
+    const startDateien = alleQuellen().filter((d) => d.includes('/components/start/'));
+    expect(startDateien.length, 'Startseiten-Bausteine gefunden').toBeGreaterThan(0);
+    for (const d of startDateien) {
+      const q = ohneKommentare(liesRoh(d));
+      expect(q, `${d.slice(WURZEL.length + 1)}: keine Kachel`).not.toContain('<RubrikKachel');
+      expect(q, `${d.slice(WURZEL.length + 1)}: kein lc-tile`).not.toContain('lc-tile');
+    }
   });
 
   it('NEGATIV-KONTROLLE: die Ausdrücke finden die Vorher-Formen', () => {
     expect('<span className="num font-display text-h1 leading-none text-brass-700">{k.zahl}</span>')
       .toMatch(/className="num font-display text-h1 leading-none text-brass-700"/);
-    expect('<span className="block text-micro num text-ink-500">{r.zaehler}</span>')
-      .toMatch(/className="block text-micro num text-ink-500"/);
+    // So stand die Landkarte bis R3 in `components/start/RubrikKacheln.tsx`.
+    expect('<RubrikKachel key={a.ziel} ziel={a.ziel!} titel={a.titel}').toContain('<RubrikKachel');
   });
 
   it('§8: der Zähler-Wortlaut ist gewandert, nicht abgeschwächt', () => {
     // «erfasst» für die bibliografischen Materialien, «im Volltext» für die
-    // echten Volltexte (E6a·M5) — der Umbau darf die Aussage nicht glätten.
-    expect(start).toContain('amtliche Materialien erfasst');
-    expect(start).toContain('Entscheide im Volltext');
-    // DEKLARIERTE ANPASSUNG (W2·23-STARTSEITE-V4 §3, 5.9.2026, §6.3): der
-    // Erlass-Zähler steht nicht mehr in der Landkarte — «Gesetze» hat mit V4
-    // eine eigene Schwerpunkt-Sektion. Geprüft wird darum dort, WO die Zahl
-    // heute steht; die §8-Aussage selbst ist unverändert scharf.
-    const gesetzeBund = lies('components/start/GesetzeChips.tsx');
-    const gesetzeBlock = lies('components/start/GesetzeBlock.tsx');
-    expect(start, 'Landkarte führt den Erlass-Zähler nicht mehr').not.toContain('Erlasse im Volltext');
-    expect(gesetzeBund, 'Bund-Zeile: Zähler mit Scope').toMatch(/erlasse im Volltext/i);
-    expect(gesetzeBlock, 'Kanton-Zeile: Zähler mit Scope').toMatch(/erlasse im Volltext/i);
-    // §8 am Kantons-Chip: Zustands-Wort im Accessible Name, nie «vollständig»
-    // aus eigener Kraft (erfassungsgrad.ts bleibt die eine Quelle).
-    expect(gesetzeBlock).toContain('STUFE_WORT');
-    expect(gesetzeBlock).toContain('erfasst');
+    // echten Volltexte (E6a·M5) — jeder Umbau darf die Aussage nur an einen
+    // anderen Ort tragen, nie glätten.
+    //
+    // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R10, 6.9.2026, §6.3): die
+    // Zähler standen bis R3 in der MARGINALIE jeder Modulzeile («1'565
+    // Erlasse<br/>im Volltext»). Die Marginalienspalte gibt es auf dem Pult
+    // nicht mehr; die Bestandszahl steht jetzt EINMAL in der Bereichs-Reihe
+    // (`start/BereichsReihe`) und, wo das Modul sie zusätzlich braucht, in
+    // seiner Fuss-Zeile. Der PRÜFPUNKT ist unverändert derselbe — Zahl NIE ohne
+    // Scope-Wort, «erfasst» nie zu «Volltext» geglättet —, er wird nur am neuen
+    // Ort geprüft. Die Ausdrücke bleiben scharf: die Negativ-Kontrolle darüber
+    // und `not.toContain('im Volltext')` unten fallen weiterhin auf jede
+    // Abschwächung.
+    const bereiche = lies('components/start/BereichsReihe.tsx');
+    const bund = lies('components/start/SystematikListe.tsx');
+    const kantone = lies('components/start/KantoneRaster.tsx');
+    const entscheide = lies('components/start/EntscheideListe.tsx');
+    const materialien = lies('components/start/MaterialienListe.tsx');
+    expect(bereiche, 'Bereich Gesetze: Zähler mit Scope')
+      .toMatch(/Erlasse im Volltext, Bund und Kantone/);
+    expect(bereiche, 'Bereich Rechtsprechung: Zähler mit Scope')
+      .toMatch(/Entscheide im Volltext/);
+    expect(bereiche, 'Bereich Materialien: «erfasst», nie «Volltext»')
+      .toMatch(/amtliche Materialien erfasst/);
+    expect(bund, 'Bund-Modul: Zähler mit Scope').toMatch(/erfasste Volltext \({nf\(z\.gesetzeBundVolltext\)} Erlasse\)/);
+    expect(kantone, 'Kanton-Modul: Zähler mit Scope').toMatch(/Erlasse im Volltext/);
+    expect(entscheide, 'Entscheide-Modul: Zähler mit Scope').toMatch(/Entscheide im Volltext/);
+    expect(materialien, 'Materialien: «erfasst», nie «Volltext»').toMatch(/Materialien erfasst/);
+    expect(materialien, 'Materialien behaupten keinen Volltext').not.toContain('im Volltext');
+    // §8 am Kantons-Eintrag: Zustands-Wort im Accessible Name, nie
+    // «vollständig» aus eigener Kraft (erfassungsgrad.ts bleibt die Quelle).
+    expect(kantone).toContain('STUFE_WORT');
+    expect(kantone).toContain('erfasst');
   });
 
   it('der Baustein ist genau einmal definiert', () => {
@@ -149,8 +200,17 @@ describe('C-5 · Einstiegs-Kacheln laufen über EINEN Baustein', () => {
 describe('D-3 · Auswahl-Pillen laufen über SelectionGrid', () => {
   /** Die invertierte Füllung, mit der vier Wizard-Stellen die Auswahl zeigten. */
   const INVERS = 'bg-ink-900 border-ink-900 text-paper';
-  /** Die Pillen-Anatomie — sie darf nur noch im Baustein stehen. */
-  const PILLE = /px-3 py-1\.5 rounded-full text-body-s font-medium border transition-colors/;
+  /** Die Pillen-Anatomie — sie darf nur noch im Baustein stehen.
+   *
+   *  W2·24 (6.9.2026) NACHGEFUEHRT, deklarierte Design-Aenderung (§6.3): die
+   *  Pille ist nicht mehr `rounded-full`, sondern kantig wie `.lc-chip`
+   *  (Klasse `lc-wahl-pille`, index.css) — «Kanten statt Pille» ist seit R1-3
+   *  die Hausform. Die ABSICHT dieses Waechters ist unberuehrt: er prueft
+   *  weiterhin, dass die Anatomie genau EINMAL steht, naemlich im Baustein.
+   *  Nur der Ausdruck folgt der neuen Form; die Vorher-Form steht in der
+   *  Negativ-Kontrolle unten weiter als Zitat (§2b).
+   */
+  const PILLE = /lc-wahl-pille [^`]*px-3 py-1\.5 text-body-s font-medium border transition-colors/;
 
   it('die invertierte ink-900-Füllung als Auswahl-Signal ist nirgends mehr', () => {
     const funde = alleQuellen()
@@ -166,11 +226,17 @@ describe('D-3 · Auswahl-Pillen laufen über SelectionGrid', () => {
     expect(funde).toEqual(['components/ui/SelectionGrid.tsx']);
   });
 
-  it('NEGATIV-KONTROLLE: die Ausdrücke finden die Vorher-Form', () => {
+  it('NEGATIV-KONTROLLE: die Ausdrücke finden die Form, gegen die sie gebaut sind', () => {
+    // Die INVERS-Kontrolle zitiert unveraendert die Vorher-Form von D-3
+    // (31.8.2026) — ein datierter Beleg wird nicht nachgefuehrt (§2b).
     const vorher = 'className={`px-3 py-1.5 rounded-full text-body-s font-medium border transition-colors ${'
       + "a.entschaedigung === code ? 'bg-ink-900 border-ink-900 text-paper' : 'bg-surface border-line text-ink-600 hover:border-brass-400'}`}";
     expect(vorher).toContain(INVERS);
-    expect(PILLE.test(vorher)).toBe(true);
+    // Die PILLE-Kontrolle prueft die HEUTIGE Anatomie: ein Ausdruck, der nichts
+    // mehr findet, ist ein Tor, das nicht scheitern kann (§6.7).
+    const heute = 'className={`lc-wahl-pille ${PILLE_HITBOX} px-3 py-1.5 text-body-s font-medium border transition-colors ${';
+    expect(PILLE.test(heute)).toBe(true);
+    expect(PILLE.test(vorher), 'die alte Pillenform darf NICHT mehr matchen').toBe(false);
   });
 
   it('die vier Fundstellen konsumieren die Pillen-Variante', () => {

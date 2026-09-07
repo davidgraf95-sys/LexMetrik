@@ -103,7 +103,9 @@ test.describe('FL-5 — EIN Feld für Suchen und Springen', () => {
   // `.lc-card` innerhalb `[role="search"]`. Bewusst NICHT `aria-expanded`: das
   // steht bei leerem Feld auch dann auf `false`, wenn der Leerzustand sichtbar
   // aufgezogen ist, und der Test wäre grün, ohne etwas zu prüfen (§6.7).
-  const headerDropdown = (page: Page) => page.locator('[role="search"] .lc-card')
+  // §6.3-DEKLARATION (W2·24-R5-F1/D9, 6.9.2026): `.lc-card` → `.lc-suchpanel`
+  // — dasselbe Element, neuer Klassenname (EINE Panel-Anatomie für Kopf und Hero).
+  const headerDropdown = (page: Page) => page.locator('[role="search"] .lc-suchpanel')
 
   test('(d) ⌘K/Ctrl+K und «/» fokussieren das Feld — und NUR dieses', async ({ page }) => {
     test.slow()

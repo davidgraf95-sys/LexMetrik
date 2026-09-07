@@ -164,7 +164,7 @@ test.describe('W2·10-UI-NAV-J · Rechtsprechungs-Seiten', () => {
     await expect(ausloeser).toBeVisible()
     await expect(ausloeser).toHaveAttribute('aria-expanded', 'false')
     // Der Filterblock ist mobil NICHT vorab sichtbar (das ist der ganze Zweck).
-    await expect(page.getByRole('searchbox', { name: 'Rechtsprechung durchsuchen' })).toHaveCount(0)
+    await expect(page.getByRole('searchbox', { name: 'Filtern' })).toHaveCount(0)
 
     await ausloeser.click()
     const sheet = page.getByRole('dialog', { name: 'Filter' })
@@ -178,7 +178,7 @@ test.describe('W2·10-UI-NAV-J · Rechtsprechungs-Seiten', () => {
       { message: 'Fokus liegt im Sheet' },
     ).toBe(true)
     // Der Filterblock ist jetzt erreichbar.
-    await expect(page.getByRole('searchbox', { name: 'Rechtsprechung durchsuchen' })).toBeVisible()
+    await expect(page.getByRole('searchbox', { name: 'Filtern' })).toBeVisible()
 
     // Escape schliesst und gibt den Fokus an den Auslöser zurück.
     await page.keyboard.press('Escape')
@@ -191,39 +191,43 @@ test.describe('W2·10-UI-NAV-J · Rechtsprechungs-Seiten', () => {
     expect(fehler, fehler.join('\n')).toEqual([])
   })
 
-  // ── J4 · News-Karten der Startseite ───────────────────────────────────────
-  test('News-Karten: Rechtsgebiet-Badge, Datum einmal je Gruppe, keine Gericht-Fusszeile', async ({ page }) => {
+  // ── J4 · Entscheid-Liste der Startseite ───────────────────────────────────
+  test('Entscheid-Liste: Gebiet je Zeile, Datum einmal je Gruppe, keine Gericht-Fusszeile', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/')
     // DEKLARIERTE ANPASSUNG (W2·23-STARTSEITE-V4 §3 #6, 5.9.2026, §6.3): die
     // Sektion heisst nicht mehr «Neue Bundesgerichtsentscheide» (aria-label),
     // sondern trägt eine echte <h2> «Jüngste Entscheide im Korpus» — ein
     // §8-Wortlaut-Fix (der Korpus endet ggf. Monate zurück, «neu» versprach
-    // Aktualität, die die Daten nicht tragen). Geprüft wird derselbe Streifen.
-    const streifen = page.getByRole('region', { name: 'Jüngste Entscheide im Korpus' })
-    await expect(streifen).toBeVisible()
-    await expect(streifen.getByRole('listitem').first()).toBeVisible()
+    // Aktualität, die die Daten nicht tragen).
+    // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R3, 6.9.2026, §6.3): aus
+    // dem waagrechten KARTENSTREIFEN ist die LISTE des Referenzbildes geworden
+    // (Datum · Zitierung · Gebiet/Regeste). Geprüft werden dieselben drei
+    // Zusicherungen an ihrer neuen Form — (a) Datum-Dedupe, (b) jede Zeile
+    // nennt ihr Rechtsgebiet, (c) keine «Bundesgericht»-Fusszeile. Der
+    // Gebiets-Träger ist nicht mehr ein `.lc-overline`-Badge IM Link, sondern
+    // die dritte Spalte der Zeile; sie trägt dafür ein stabiles `data-gebiet`.
+    const liste = page.getByRole('region', { name: 'Jüngste Entscheide im Korpus' })
+    await expect(liste).toBeVisible()
+    await expect(liste.getByRole('listitem').first()).toBeVisible()
 
-    // (a) Datum-Dedupe: jedes Datum steht im Streifen GENAU EINMAL.
-    const daten = await streifen.locator('li > p').allTextContents()
+    // (a) Datum-Dedupe: jedes Datum steht in der Liste GENAU EINMAL.
+    const daten = await liste.locator('li > p').allTextContents()
     expect(daten.length, 'mindestens eine Datums-Gruppe').toBeGreaterThan(0)
     expect(new Set(daten).size, `Daten doppelt: ${daten.join(', ')}`).toBe(daten.length)
 
-    // (b) Jede Karte trägt genau einen Rechtsgebiets-Badge, und der ist nicht leer.
-    const karten = streifen.locator('a[href^="/rechtsprechung/"]')
-    const anzahl = await karten.count()
+    // (b) Jede Zeile trägt genau ein Rechtsgebiet, und das ist nicht leer.
+    const zeilen = liste.locator('a[href^="/rechtsprechung/"]')
+    const anzahl = await zeilen.count()
     expect(anzahl).toBeGreaterThan(0)
+    const gebiete = liste.locator('[data-gebiet]')
+    expect(await gebiete.count(), 'ein Gebiet je Entscheid-Zeile').toBe(anzahl)
     for (let i = 0; i < anzahl; i++) {
-      const badge = karten.nth(i).locator('.lc-overline')
-      await expect(badge).toHaveCount(1)
-      expect((await badge.textContent())?.trim()).toBeTruthy()
+      expect((await gebiete.nth(i).textContent())?.trim()).toBeTruthy()
     }
 
     // (c) Die «Bundesgericht»-Fusszeile ist weg — sie wiederholte den Titel.
-    // Der Titel selbst steht ausserhalb der Karten.
-    for (let i = 0; i < anzahl; i++) {
-      expect(await karten.nth(i).textContent()).not.toContain('Bundesgericht')
-    }
+    expect(await liste.textContent()).not.toContain('Bundesgericht')
 
     expect(fehler, fehler.join('\n')).toEqual([])
   })

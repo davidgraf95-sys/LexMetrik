@@ -151,6 +151,48 @@ export const PFLICHT: Paar[] = [
   NICHT('sage-line', 'surface', 'D-1.3 border-sage-line (Patientenverfügung u. a.)'),
   NICHT('slate-line', 'surface', 'D-1.3 --slate-line-Alias'),
   NICHT('danger-line', 'paper', 'D-1.3 border-t-danger-line/SperrtageZaehler-Balken'),
+  // ── W2·24 · L5 (6.9.2026) · DIE BADGE-UMRISSE SIND NEUE NICHT-TEXT-KANTEN ─
+  // `.lc-badge` traegt seit L5 statt einer Fuellung eine 1-px-Kante in der
+  // Farbe seiner Rolle (`--badge-linie`). Badges stehen im Katalog auf dem
+  // PAPIER, in Karten auf `--surface`, auf der schwebenden Ebene und in
+  // Chip-Zeilen ueber `--well` — vier Gruende, alle vier Flaechen zu binden.
+  // Bis hier war je Ton NUR das Paar gegen `--surface` gefuehrt; eine Kante,
+  // die neu auf drei weiteren Flaechen steht, waere sonst ungemessen (§6.7).
+  NICHT('sage-line', 'paper', 'L5 lc-badge-ok Umriss auf Papier (Katalog)'),
+  NICHT('sage-line', 'well', 'L5 lc-badge-ok Umriss in der Chip-/Feldzeile'),
+  NICHT('sage-line', 'paper-raised', 'L5 lc-badge-ok Umriss auf schwebender Ebene'),
+  NICHT('slate-line', 'paper', 'L5 lc-badge-geplant/-soft Umriss auf Papier'),
+  NICHT('slate-line', 'well', 'L5 lc-badge-geplant/-soft Umriss in der Chip-/Feldzeile'),
+  NICHT('slate-line', 'paper-raised', 'L5 lc-badge-geplant/-soft auf schwebender Ebene'),
+  NICHT('warn-line', 'paper', 'L5 lc-badge-entwurf Umriss auf Papier (Katalog)'),
+  NICHT('warn-line', 'paper-raised', 'L5 lc-badge-entwurf auf schwebender Ebene'),
+  NICHT('brass-line', 'paper', 'L5 lc-badge-massgeblich Umriss auf Papier'),
+  NICHT('brass-line', 'paper-raised', 'L5 lc-badge-massgeblich auf schwebender Ebene'),
+  // ── W2·24-DESIGN-IDENTITAET R1 (6.9.2026) · DIE VIER REGISTERFARBEN ────────
+  // Sie sind ab jetzt die EINZIGE Farbe im Bild (Fahrplan §5) und tragen
+  // Register-Zugehörigkeit als Strich, Reiter-Unterkante, Randmarke und — ab
+  // R2/R3 — als Kopfzeile/Label-Text. Genau deshalb stehen sie hier als TEXT-
+  // Pflichtpaare (4.5:1) und nicht bloss als Nicht-Text-Kanten: eine spätere
+  // Verschiebung eines der vier Töne muss das Tor sehen, nicht das Auge.
+  // GELTUNGSBEREICH bewusst dreiflächig (paper · surface · paper-raised) — das
+  // sind die Flächen, auf denen ein Register-Ton je steht. NICHT dabei: --well
+  // (Eingabefeld). Grund ist kein Wunsch, sondern eine Messung: reg-w/well hell
+  // = 4.43:1, also unter AA — Registerfarbe gehört nicht in ein Eingabefeld, und
+  // ein Pflichtpaar ohne Konsumenten wäre ein erfundener Befund (§7/§8).
+  // Gemessen 6.9.2026 (culori, hell·dunkel), Protokoll:
+  // abnahme/design-identitaet/KONTRAST-R1.md.
+  TEXT('reg-g', 'paper', 'W2·24-R1: Register «Gesetze» auf Papier'),
+  TEXT('reg-g', 'surface', 'W2·24-R1: Register «Gesetze» auf Karte'),
+  TEXT('reg-g', 'paper-raised', 'W2·24-R1: Register «Gesetze» im Popover/Dialog'),
+  TEXT('reg-r', 'paper', 'W2·24-R1: Register «Rechtsprechung» auf Papier'),
+  TEXT('reg-r', 'surface', 'W2·24-R1: Register «Rechtsprechung» auf Karte'),
+  TEXT('reg-r', 'paper-raised', 'W2·24-R1: Register «Rechtsprechung» im Popover/Dialog'),
+  TEXT('reg-m', 'paper', 'W2·24-R1: Register «Materialien» auf Papier'),
+  TEXT('reg-m', 'surface', 'W2·24-R1: Register «Materialien» auf Karte'),
+  TEXT('reg-m', 'paper-raised', 'W2·24-R1: Register «Materialien» im Popover/Dialog'),
+  TEXT('reg-w', 'paper', 'W2·24-R1: Register «Werkzeuge» auf Papier — der knappste der vier (4.88 hell)'),
+  TEXT('reg-w', 'surface', 'W2·24-R1: Register «Werkzeuge» auf Karte'),
+  TEXT('reg-w', 'paper-raised', 'W2·24-R1: Register «Werkzeuge» im Popover/Dialog'),
 ];
 
 // (Referenz) C-1/C-2/C-3-Farb-Wörterbuch (§4b-B) — dokumentierte Zahlen als
@@ -165,10 +207,21 @@ export const REF_TOL = 0.06;
 // D-5/A38 (16.7.): --well heller/weisser (#F2EFE6→#F6F4EE) → die HELL-Werte steigen
 // (hellerer Grund = mehr Kontrast); DUNKEL unverändert (dunkle Fläche unberührt, A38).
 // Neu deterministisch gemessen (culori) und in §4b-B/§F2b nachgezogen.
+// W2·24-DESIGN-IDENTITAET R1 (6.9.2026): --well ist von #F6F4EE auf #F0F0F0
+// (hell) bzw. von #100F0A auf #0E0E0E (dunkel) gewandert und --brass-700 von
+// Messing (#826225/#D8BD78) auf Tinte (#151515/#EDEDED). Alle drei Zeilen sind
+// darum NEU GEMESSEN, nicht «nachgeführt» — die alten Zahlen bleiben als
+// Herkunft stehen (§2b: ein datierter Beleg altert nicht, er wird ergänzt).
+// W2·24 D12 «Lesekomfort» (6.9.2026): --well wandert von #F0F0F0/#0E0E0E auf
+// die warm getoenten #F3F0EA/#131211 und --brass-700 mit der Tinte von #151515
+// auf #25231F (Halations-Daempfung, s. index.css). Alle drei Zeilen sind darum
+// NEU GEMESSEN (scripts/farbwelt-messung, culori). Die R1-Zahlen bleiben als
+// Herkunft in dieser Quelle-Spalte stehen — ein datierter Beleg altert nicht,
+// er wird ergaenzt (§2b).
 export const REFERENZ: Ref[] = [
-  { fg: 'slate-500', bg: 'well', hell: 5.03, dunkel: 3.47, quelle: 'C-1 lc-chip-entscheid Tick (§4b-B; hell D-5: 4.81→5.03)' },
-  { fg: 'warn-700', bg: 'well', hell: 5.48, dunkel: 9.43, quelle: 'C-2 Currency-Chip warn (§4b-B; hell D-5: 5.24→5.48)' },
-  { fg: 'brass-700', bg: 'well', hell: 5.13, dunkel: 10.48, quelle: 'C-3 brass-Tick (§4b-B; hell D-5: 4.91→5.13)' },
+  { fg: 'slate-500', bg: 'well', hell: 4.86, dunkel: 3.38, quelle: 'C-1 lc-chip-entscheid Tick (§4b-B; D-5 war 5.03 → R1 4.86/3.47 → D12 4.86/3.38)' },
+  { fg: 'warn-700', bg: 'well', hell: 5.30, dunkel: 9.20, quelle: 'C-2 Currency-Chip warn (§4b-B; D-5 war 5.48/9.43 → R1 5.29/9.49 → D12 5.30/9.20)' },
+  { fg: 'brass-700', bg: 'well', hell: 13.79, dunkel: 14.19, quelle: 'C-3 Akzent-Tick = Tinte (D-5 war 5.13/10.48 Messing → R1 16.02/16.49 → D12 13.79/14.19)' },
 ];
 
 // (Fixpunkt) --paper hell/dunkel sind unantastbare Anker (Fixpunkt 1).
@@ -176,9 +229,22 @@ export const REFERENZ: Ref[] = [
 // Direktive «ganze Website heller und weisser» ausdrücklich überschrieben → neuer,
 // hellerer/weisserer Hell-Anker #FCFAF6 (deklariert, Tor bleibt scharf). DUNKEL bleibt
 // unantastbar (A38 betrifft nur die helle Fläche; D-6 kommt separat).
+// W2·24-DESIGN-IDENTITAET R1 (6.9.2026), Freigabe David 6.9.: das Papier ist
+// nicht mehr creme, sondern weiss (hell) bzw. neutral-dunkel — Werte aus dem
+// freigegebenen Referenzbild abnahme/design-identitaet/vorschlag-freigegeben.html.
+// Hell weicht um eine Stufe vom Referenz-Reinweiss #FFFFFF ab, weil die
+// Flächen-L-Leiter well<paper<surface<paper-raised (FAIL-Regel in
+// check-farbwelt.ts) über dem Papier noch zwei hellere Flächen braucht;
+// #FFFFFF ist jetzt --paper-raised, die schwebende Ebene.
+// W2·24 D12 «Lesekomfort» (6.9.2026): beide Anker sind DEKLARIERT versetzt —
+// #FBFBFB/#151515 waren die R1-Werte (Referenzbild, chromafrei). D12 toent das
+// Papier warm (Piepenbrock/Buchner: leichte Toenung senkt die Blendung ohne
+// Verlust der positiven Polaritaet) und hebt das dunkle Papier vom Fast-Schwarz
+// weg. Die R1-Zahlen bleiben als Herkunft im Kommentar stehen (§2b), sie sind
+// nicht falsch geworden, sondern abgeloest.
 export const FIXPUNKT: { token: string; mode: Mode; soll: string }[] = [
-  { token: 'paper', mode: 'hell', soll: '#FCFAF6' },
-  { token: 'paper', mode: 'dunkel', soll: '#16150F' },
+  { token: 'paper', mode: 'hell', soll: '#FAF7F2' },
+  { token: 'paper', mode: 'dunkel', soll: '#1B1917' },
 ];
 
 // (Baseline) BEKANNTE RISSE (D-1-Input): heute unter Schwelle → WARNUNG, FAIL nur
@@ -229,4 +295,6 @@ export const APCA_PROBEN: { fg: string; bg: string; label: string; ziel: number 
   { fg: 'ink-600', bg: 'paper', label: 'Meta/Sekundär', ziel: 60 },
   { fg: 'brass-700', bg: 'paper', label: 'Link/Akzent', ziel: 60 },
   { fg: 'focus', bg: 'paper', label: 'Nicht-Text Fokus', ziel: 45 },
+  // W2·24-R1: der knappste der vier Registertöne als beratende APCA-Sonde.
+  { fg: 'reg-w', bg: 'paper', label: 'Register Werkzeuge', ziel: 60 },
 ];

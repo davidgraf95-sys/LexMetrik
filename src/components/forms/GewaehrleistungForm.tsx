@@ -311,7 +311,7 @@ export function GewaehrleistungForm() {
       )}
 
       {ergebnis && ergebnis.status !== 'ok' && (
-        <div className="rounded-lg border border-line bg-danger-bg p-4">
+        <div className=" border border-line bg-danger-bg p-4">
           <p className="text-body-s text-danger-700">{ergebnis.ergebnis}</p>
         </div>
       )}

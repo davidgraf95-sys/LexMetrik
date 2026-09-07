@@ -94,10 +94,28 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
       <div className="scale-rule" aria-hidden />
       <div className="bg-surface border border-line rounded-b-lg rounded-t-none shadow-md overflow-hidden">
       {/* Header */}
-      <div className="border-b border-line px-6 py-4 flex items-start justify-between gap-3">
-        <div>
+      {/* R5-F2 (6.9.2026): GEMESSEN @390 auf 8 der 20 Rechner-Routen lief diese
+          Kopfzeile über ihre Spalte hinaus (`/rechner/mietrecht` 355 px in einer
+          355→298-px-Zelle, `/rechner/erb-fristen` 341, `/rechner/kuendigung`
+          326) — der Titel-Block ist ein Flex-Kind mit `min-width:auto` und
+          konnte darum nicht unter seine längste Zeile schrumpfen; der Rest
+          wurde vom `overflow-hidden` der Karte abgeschnitten. `min-w-0` gibt
+          dem Titel die Umbrucherlaubnis zurück, `flex-wrap` schickt den
+          Kopier-Knopf (`shrink-0`, breite Beschriftung) auf einer engen Zelle in
+          die zweite Zeile, statt dem Titel 95 px zu lassen. Anatomie und
+          Reihenfolge unverändert (§3). */}
+      <div className="border-b border-line px-6 py-4 flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0">
           <p className="lc-overline">Ergebnis</p>
-          <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{sansAmp(titel)}</h3>
+          {/* R5-F2 (6.9.2026, Befund R-3): der Ergebnis-Titel war ein `h3`
+              direkt unter dem Seiten-`h1` — axe `heading-order`, gemessen auf
+              `/rechner/verjaehrung` («Verjährung (Art. 60, 67, 127 ff. OR)») und
+              `/rechner/kuendigung` («Lohnfortzahlung (Art. 324a OR)»). Der
+              Ergebnisblock IST die zweite Ebene der Seite (auf /rechner/kuendigung
+              steht die Schwester-Sektion «Ereignis-Fristen» längst als `h2`), also
+              wird die Stufe richtiggestellt. Die GRÖSSE bleibt `text-h3` — es
+              ändert sich die Gliederung, nicht das Bild (§3). */}
+          <h2 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{sansAmp(titel)}</h2>
         </div>
         {/* R2-E/F1-10: der geteilte KopierButton — vorher eine dritte Optik
             (`lc-btn-ghost`) mit dem nackten «Kopieren», das offenliess, WAS in

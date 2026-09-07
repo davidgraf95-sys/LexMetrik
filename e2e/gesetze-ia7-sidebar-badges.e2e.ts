@@ -13,6 +13,7 @@
 // Läuft gegen `vite preview` (dist).
 import { test, expect } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
+import { seitenleisteOeffnen } from './helpers/seitenleiste'
 import { STARTSEITE_ZAEHLER } from '../src/data/startseiteZaehler.generated'
 import { erfassungsgrad, STUFE_WORT } from '../src/lib/normtext/erfassungsgrad'
 
@@ -29,11 +30,21 @@ test.describe('IA-7 · Erlass-Zahl-Badges an den Sidebar-Kantonslinks', () => {
   test('Desktop: 26 Kantonslinks mit sichtbarer Badge-Zahl + vollem aria-label', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/')
+    // D25 (deklariert, §6.3): die Leiste startet eingeklappt — Vorbedingung
+    // herstellen, gemessen wird danach unverändert.
+    await seitenleisteOeffnen(page)
     const nav = page.getByRole('navigation', { name: 'Hauptnavigation' })
     await nav.getByRole('button', { name: 'Kantone aufklappen' }).click()
 
     // Alle 26 Kantonslinks tragen den vollen Accessible Name (Name+Zahl+Wort).
-    const kantonLinks = nav.getByRole('link').filter({ has: page.locator('span.num') })
+    // D26 (deklariert, §6.3): Zahlen tragen seit D26 auch die Sachgebiete der
+    // Rechtsprechung und die Behörden der Materialien — die Zählung wird darum
+    // auf die KANTONSGRUPPE eingegrenzt statt auf die ganze Leiste. Die Aussage
+    // («jeder der 26 Kantone trägt eine Badge-Zahl») ist unverändert.
+    const kantonListe = nav.locator('div.flex.flex-col').filter({
+      has: page.getByRole('link', { name: /^Zürich —/ }),
+    }).last()
+    const kantonLinks = kantonListe.getByRole('link').filter({ has: page.locator('span.num') })
     await expect(kantonLinks).toHaveCount(26)
 
     // Stichproben quer über die Stufen (aus der SSoT abgeleitet, nie hartcodiert):

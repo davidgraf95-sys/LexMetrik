@@ -155,7 +155,7 @@ export function VorlageSchlichtungsgesuchBs() {
   const stoppKarte = () => {
     if (!routing || routing.dokument) return null;
     if (routing.stopp === 'art198') return (
-      <div className="lc-notice-warn rounded-xl p-5 space-y-2">
+      <div className="lc-notice-warn p-5 space-y-2">
         <p className="lc-overline text-warn-700">Kein Schlichtungsverfahren</p>
         <p className="text-body-s text-ink-700">
           In diesem Fall findet kein Schlichtungsverfahren statt; die Klage ist direkt beim
@@ -510,7 +510,7 @@ export function VorlageSchlichtungsgesuchBs() {
           {stopp && stoppKarte()}
 
           {!stopp && maengel.length > 0 && (
-            <div className="rounded-lg border bg-danger-bg p-4 space-y-1.5" role="alert">
+            <div className="border bg-danger-bg p-4 space-y-1.5" role="alert">
               <p className="lc-overline text-danger-700">Mängelliste – vor dem Download zu beheben</p>
               {maengel.map((m, i) => (
                 <p key={i} className="text-body-s text-danger-700">

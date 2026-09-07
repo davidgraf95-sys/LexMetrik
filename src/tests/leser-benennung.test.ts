@@ -177,9 +177,25 @@ const GLOSSAR: GlossarEintrag[] = [
     ],
   },
   {
-    sache: 'Split-Fläche (Ä118) — «Reiter» bleibt dem Panel',
-    gewaehlt: /In neuem Fenster/,
-    verworfen: [{ wort: /In neuem Reiter/, statt: '«In neuem Fenster»' }],
+    // ── DEKLARIERTE FACHLICHE ÄNDERUNG (M8, 6.9.2026 — §6.3, kein Refactoring)
+    // Ä118 hat 18.8.2026 «In neuem Fenster» gewählt, weil «Reiter» im Browser
+    // besetzt sei und die Split-Sache «Fenster» heisse. Der Beleg gilt für
+    // seinen Stand unverändert weiter — DAMALS gab es weder eine Reiterleiste
+    // noch Pane-Marken. Seit dem R2-Nachzug trägt die Arbeitsleiste messbar
+    // `title="Fenster links"`/`"Fenster rechts"`, und GEMESSEN 6.9.2026
+    // (Prüfbefund R11 #28) öffnete der so beschriftete Knopf gar kein Fenster:
+    // `panes: []`, keine `[data-pane]`-Spalte, stattdessen ein zweiter Reiter.
+    // Der Knopf tut jetzt, was er sagt (`oeffneDaneben`), und heisst wie die
+    // vier anderen Stellen mit derselben Wirkung: «Daneben öffnen».
+    // Das Wort-VERBOT bleibt unverändert bestehen: «In neuem Reiter» kommt
+    // nicht zurück. Neu verboten ist zusätzlich das alte «In neuem Fenster» —
+    // es beschrieb eine Wirkung, die der Knopf nicht hatte.
+    sache: 'Split-Fläche (Ä118/M8) — «Reiter» bleibt dem Panel, das Wort sagt die Wirkung',
+    gewaehlt: /Daneben öffnen/,
+    verworfen: [
+      { wort: /In neuem Reiter/, statt: '«Daneben öffnen»' },
+      { wort: /In neuem Fenster/, statt: '«Daneben öffnen»' },
+    ],
   },
   {
     sache: 'Fassungs-Zeile ↔ ihr Schalter (Ä116)',

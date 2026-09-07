@@ -1,26 +1,31 @@
 import { VERTRAUENS_SATZ, STATUS_SATZ } from '../../lib/seo';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
-// ─── Vertrauens-Fuss der Startseite (Startseite V4, Modul #7) ───────────────
+// ─── Schluss-Zeile der Startseite (W2·24-R3, vormals Vertrauens-Fuss) ───────
 //
-// Bündelt die früher verstreuten Vertrauens-Aussagen an EINER Stelle (§3): der
-// gescopte Anti-KI-/Rechenweg-Satz + der ehrliche Status-Satz (beide SSoT
-// seo.ts, §6) und daneben der Pflicht-§8-Hinweis «keine Rechtsberatung». Reine
-// Darstellung (§3); kein Absolutum, kein «geprüft»-Siegel, keine Badge (§9/1).
+// Bündelt die Vertrauens-Aussagen an EINER Stelle (§3): der gescopte
+// Anti-KI-/Rechenweg-Satz + der ehrliche Status-Satz (beide SSoT seo.ts) und
+// daneben der Pflicht-§8-Hinweis «keine Rechtsberatung».
 //
-// V4: KOMPAKTER, nicht kürzer — beide Sätze und der `lc-notice`-Hinweis bleiben
-// WÖRTLICH stehen (§8: Ehrlichkeitstexte werden nie gestrafft), sie stehen ab
-// `md` nur nebeneinander statt untereinander. Das spart auf dem Desktop rund
-// eine halbe Bildschirmhöhe am Seitenfuss.
+// §8 · DIE DREI TEXTE SIND WÖRTLICH UNVERÄNDERT. Das Referenzbild trägt an
+// dieser Stelle eine gekürzte Fassung; Ehrlichkeitstexte werden nie gestrafft —
+// gekürzt wurde die FORM (kein `lc-notice`-Kasten mehr, zwei Spalten Feinschrift
+// unter einer Kante, wie `.schluss` im Referenzbild), nicht die Aussage.
+//
+// Die Zeile spannt BEIDE Spalten des Satzspiegels: sie hat keine Marginalie, und
+// ein einzelnes Grid-Kind läge sonst in der Marginalienspalte.
 export function VertrauensFuss() {
+  const pk = usePaneKlasse();
   return (
-    <div className="grid gap-4 md:grid-cols-2 md:items-start">
-      <div className="max-w-reading space-y-2">
-        <p className="text-body-s text-ink-700 leading-relaxed">{VERTRAUENS_SATZ}</p>
-        <p className="text-body-s text-ink-600 leading-relaxed">{STATUS_SATZ}</p>
+    <div className={`col-span-full grid gap-x-6 gap-y-3 pt-5 font-sans text-xs leading-relaxed text-ink-500 ${pk(
+      'md:grid-cols-2', '@2xl/pane:grid-cols-2',
+    )}`}>
+      <div className="max-w-reading space-y-1.5">
+        <p>{VERTRAUENS_SATZ}</p>
+        <p>{STATUS_SATZ}</p>
       </div>
-      <section className="lc-notice max-w-reading">
-        <p className="lc-overline mb-1">Rechtlicher Hinweis</p>
-        <p className="text-body-s text-ink-600">
+      <section aria-label="Rechtlicher Hinweis" className="max-w-reading">
+        <p>
           Alle Rechner liefern automatisierte Orientierungsberechnungen und keine Rechtsberatung. Massgeblich
           sind Gesetz, GAV, Vertrag und der konkrete Sachverhalt. Für die Wahrung einer Frist im Einzelfall ist
           allein die nutzende Person verantwortlich.

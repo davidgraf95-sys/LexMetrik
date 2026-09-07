@@ -59,7 +59,12 @@ export function TrefferZeile({ titel, untertitel, meta, marke, pfeil = '→', st
   /** `↵` = «Enter springt» (Norm-Sprung der Suche); `↗` = führt aus der App
    *  hinaus (amtliche Fremdquelle, dieselbe Glyphe wie an den Quell-Links);
    *  `null` = nicht anklickbar. */
-  pfeil?: '→' | '↵' | '↗' | null;
+  /*  D9 (David 6.9.2026, «kein →»): `false` = die Zeile IST anklickbar, trägt
+   *  aber kein Pfeil-Zeichen. Im Such-Panel war der Pfeil an jeder einzelnen
+   *  Zeile das «Pfeil-Muster», das David gerügt hat — die Klickbarkeit sagt
+   *  dort die Hover-Fläche und die Listbox-Semantik. `null` bleibt, was es war:
+   *  gar nicht anklickbar (dann fällt auch das Hover-Signal weg). */
+  pfeil?: '→' | '↵' | '↗' | null | false;
   /** Zeile in einem Streifen fester Höhe (Such-Panel): Titel ab `sm` gekappt. */
   streifen?: boolean;
 }) {

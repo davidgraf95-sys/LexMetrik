@@ -49,6 +49,19 @@ interface BaseItem {
   rechtsgebiet: string;   // Filterwert (z. B. «Miete», «Zivilprozess (ZPO)»)
   rechtsbereich: Rechtsbereich; // Rechner: Gliederung · Vorlagen: Filter
   title: string;
+  /** ── M7 (Prüfbefund R11 #21, 6.9.2026) · KANONISCHE KURZFORM ──────────────
+   *  Der Katalog-`title` ist eine BESCHREIBUNG («Verfahrens- &
+   *  Rechtsmittelfristen»); §5a Ziff. 2 verlangt für einen Reiter die
+   *  KURZFORM. GEMESSEN (Preview 4362, 1440 px): der Reiter dieser Karte war
+   *  mit 268 px der breiteste der ganzen Leiste — 19 % der Fensterbreite und
+   *  so viel wie zwei Gesetzes-Reiter zusammen.
+   *  OPTIONAL UND NIE GERATEN (§7): fehlt das Feld, steht der volle Titel im
+   *  Reiter — es gibt keine zweite, heuristische Kürzung. Und es steht HIER,
+   *  im Katalog, nicht in der Leiste: eine Kurzform-Tabelle in der
+   *  Darstellungsschicht wäre eine zweite Wahrheit (§5).
+   *  Der volle Titel bleibt überall sonst sichtbar (`title` des Reiters,
+   *  Reiter-Liste, Seitenkopf, Suche). */
+  kurz?: string;
   description: string;
   status: Status;
   norms: NormRef[];       // nur bei 'geprüft' befüllt/angezeigt

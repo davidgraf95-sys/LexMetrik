@@ -68,7 +68,15 @@ test.describe('H4-Nachzug — die Gliederung führt dorthin, wo sie hinzeigt', (
     const blatt = page.locator('[data-gliederung-sheet]')
     await expect(blatt).toBeVisible({ timeout: 10_000 })
     // Erste Zeile, die KEIN Artikel-Etikett trägt (bei der StPO ein Titel).
-    const sektion = page.locator('[data-gliederung-sheet] button[aria-label^="1. Titel"]').first()
+    // §6.3-DEKLARATION (W2·24, 6.9.2026): die Gliederungs-ZEILE ist seit P8 ein
+    // Link (`a[href="#art-…"]`, neue Spec `leser-gliederung-p8`); `button`
+    // trägt jetzt nur noch das Klapp-Chevron daneben, und dessen Etikett heisst
+    // ««1. Titel: …» auf- und zuklappen» — der alte Selektor traf also nichts
+    // mehr (gemessen im Blatt @390, StPO). Geprüft wird unverändert die
+    // SEKTIONS-Zeile und dass ihr Tap das Blatt schliesst; nur ihr Element hat
+    // sich geändert. Ein Klick auf das Chevron wäre der falsche Fall: es
+    // klappt auf, es springt nicht.
+    const sektion = page.locator('[data-gliederung-sheet] a[aria-label^="1. Titel"]').first()
     await expect(sektion).toBeVisible()
     await sektion.click()
     await expect(blatt).toHaveCount(0, { timeout: 10_000 })

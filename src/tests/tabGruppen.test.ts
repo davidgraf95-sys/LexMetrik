@@ -35,6 +35,33 @@ describe('reiterKategorie', () => {
   it('ignoriert ?search und #hash', () => {
     expect(reiterKategorie('/gesetze/bund/or?r=2#art-41')).toBe('gesetze');
   });
+
+  // ── Aus Fixer 1i (Prüfbefund 6.9.2026) · DIE ÜBERSICHT GEHÖRT IN IHRE GRUPPE
+  // GEMESSEN: der Reiter `/gesetze` stand im Überlauf-Blatt (`layout/TabPanel`)
+  // unter «Weitere» statt unter «Gesetze» — die Prüfung verlangte einen
+  // Schrägstrich NACH dem Bereich, und den trägt die Übersicht nicht. Seit D7
+  // ist sie ein Reiter wie jedes andere Dokument.
+  // ROT ZU BEKOMMEN (§6.7, einmal gefahren): in `lib/tabGruppen.reiterKategorie`
+  // das Glied `p === \`/${kat}\`` streichen ⇒ alle fünf Zeilen messen
+  // «sonstiges».
+  it('die Bereichs-Übersicht steht in ihrer eigenen Gruppe, nicht unter «Weitere»', () => {
+    expect(reiterKategorie('/gesetze')).toBe('gesetze');
+    expect(reiterKategorie('/rechtsprechung')).toBe('rechtsprechung');
+    expect(reiterKategorie('/materialien')).toBe('materialien');
+    expect(reiterKategorie('/vorlagen')).toBe('vorlagen');
+    expect(reiterKategorie('/rechner')).toBe('rechner');
+  });
+
+  it('ein Präfix ist kein Bereich, wenn der Pfad nur so ANFÄNGT', () => {
+    // «/gesetzestexte» ist kein Unterpfad von «/gesetze» — die Prüfung darf
+    // nicht auf blosse Zeichenketten-Präsenz hereinfallen (§7).
+    expect(reiterKategorie('/gesetzestexte')).toBe('sonstiges');
+    expect(reiterKategorie('/rechnerei/x')).toBe('sonstiges');
+  });
+
+  it('die Übersicht behält Kategorie auch mit Query/Anker', () => {
+    expect(reiterKategorie('/materialien?seite=2')).toBe('materialien');
+  });
 });
 
 describe('herkunftVon', () => {

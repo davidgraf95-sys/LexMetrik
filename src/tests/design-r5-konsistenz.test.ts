@@ -146,8 +146,16 @@ describe('R5-B · der Ziffernsatz hat EINE Deklaration', () => {
   it('index.css führt die Rolle ohne Familie und die Rolle mit Familie getrennt', () => {
     expect(CSS, '`.lc-ziffern` ist die Rolle ohne Monospace-Familie')
       .toContain('.num, .lc-ziffern { font-variant-numeric: lining-nums tabular-nums; }');
-    expect(CSS, '`.num` bleibt Rolle + Familie')
-      .toContain('.num { font-family: var(--font-mono), ui-monospace, monospace; }');
+    // NACHZUG W2·24-DESIGN-IDENTITAET R1 (6.9.2026, DEKLARIERTE Änderung §6.3 —
+    // hier am 6.9.2026 im R3-Lauf nachgeholt, weil der R1-Nachzug-Commit
+    // 0aa7e3244 diesen Wächter rot zurückliess): `.num` trägt KEINE
+    // Monospace-Familie mehr. Grund am Fundort (index.css, Zeile «R1-Nachzug»):
+    // die Klasse steht auch auf Zeilen mit Wörtern, die dann als Schreibmaschine
+    // liefen; Mono bleibt --font-mono für Rechenweg/Code vorbehalten. Der Fall
+    // prüft weiterhin die SACHE — dass `.num` und `.lc-ziffern` getrennt geführt
+    // sind —, nur ist die Familie kein Bestandteil von `.num` mehr.
+    expect(CSS, '`.num` trägt seit R1 KEINE Monospace-Familie mehr')
+      .not.toMatch(/\.num\s*\{[^}]*font-family/);
   });
 
   it('keine App-Datei schreibt den Ziffernsatz noch roh hin', () => {

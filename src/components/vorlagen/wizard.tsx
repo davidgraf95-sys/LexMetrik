@@ -102,7 +102,7 @@ export function VorlagenWizardRahmen({
       {/* Kopf */}
       <div className="space-y-3">
         <Link to={zurueckHref} className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
-          <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
+          <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 border border-line bg-surface">←</span>
           Zurück zum Katalog
         </Link>
         <p className="lc-overline">{overline}</p>
@@ -112,8 +112,13 @@ export function VorlagenWizardRahmen({
         {/* A-1: EIN Titel-Baustein (`ui/SeitenTitel`); die Umbruch-Regeln bleiben
             hier, weil sie diesem Titel gehören (lange Komposita), nicht der
             Titel-Anatomie. */}
-        <SeitenTitel className="[overflow-wrap:anywhere] hyphens-auto">{titel}</SeitenTitel>
-        <p className="text-body-l text-ink-600 max-w-reading">{intro}</p>
+        {/* V2 (R5-F2, 6.9.2026): `stimme="serif"` — der Vorlagen-Titel ist
+            Lesetext, nicht Bedienelement (§5: Literata für alles Gelesene).
+            Der Baustein trägt die Stimme bereits; sie war hier nur nie gewählt.
+            Der Lead folgt ihm (Fliesstext); Chips, Knöpfe, Stepper bleiben
+            Archivo — die UI-Hülle wechselt die Schrift NICHT. */}
+        <SeitenTitel stimme="serif" className="[overflow-wrap:anywhere] hyphens-auto">{titel}</SeitenTitel>
+        <p className="font-serif text-body-l text-ink-600 max-w-reading">{intro}</p>
         {/* lc-chip-zeile (LM-044/N1): Norm-Chips sind <a> (unterstrichen); der
             Status-Badge daneben liegt auf der lc-badge-Achse (Pille, kein Tick)
             und bleibt von der Chip-Grammatik unberührt. */}
@@ -168,23 +173,38 @@ export function VorlagenWizardRahmen({
 
       {/* Zweispaltig: Formular links, klebende Vorschau rechts;
           mobil einspaltig mit einklappbarer Vorschau.
-          W2·19-DESIGN-KONSISTENZ R6-D1 (5.9.2026): kein `items-start` mehr —
-          beide Spalten strecken sich (Grid-Default `stretch`) auf die Höhe
-          der jeweils längeren; die Formular-Karte wird in ihrer Zelle
-          vertikal zentriert statt oben angeschlagen. Gemessen auf
-          `/vorlagen/testament`: Schritt «Person» liess vorher 200 px, Schritt
-          «Erbeinsetzung» 336 px unregelmässige Leerfläche zwischen Karte und
-          Fusszeile (Vorschau-Spalte blieb bei 683 px konstant) — beide Werte
-          nach dem Fix 0 px, weil die Karte die Zellenhöhe füllt/zentriert
-          statt eine Lücke darunter offenzulassen. */}
-      <div className={`grid grid-cols-1 ${pk('md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]', '@3xl/pane:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]')} gap-6 ${pk('md:gap-8', '@3xl/pane:gap-8')}`}>
-        <div className={`flex flex-col ${pk('md:justify-center', '@3xl/pane:justify-center')}`}>
-        <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5"
+          ── W2·24-DESIGN-IDENTITAET R5-F2 (6.9.2026) · V1/D6 ─────────────
+          Vorgänger-Kommentar (R6-D1, 5.9.2026) behauptete für `md:justify-center`
+          «0 px Leerfläche». Nachgemessen (Skript `.scratch/f2-leer.mjs`, Band-Scan
+          über die linke Grid-Hälfte, @1440×900, dist von HEAD 0834cbd7b): die
+          Zentrierung hat die eine Lücke UNTER der Karte in zwei halb so grosse
+          Lücken über UND unter ihr übersetzt — `/vorlagen/mietvertrag` 1180 px,
+          `/vorlagen/arbeitsvertrag` 1175 px, `/vorlagen/nda` 802 px. Der Grund
+          liegt eine Ebene höher: die Vorschau-Spalte trägt das GANZE Dokument
+          (2–3 Bildschirmhöhen), das Grid streckt die Formular-Zelle auf diese
+          Höhe, und `md:sticky` blieb wirkungslos, weil ein Sticky-Element, das
+          höher ist als der Viewport, nie klebt.
+          Der Fix setzt an der Ursache an, nicht an der Ausrichtung:
+          (a) `items-start` — die Karte schlägt oben an (Lücke über der Karte 0);
+          (b) die klebende Vorschau bekommt eine Viewport-Decke mit eigenem
+              Scroller (`max-h`/`overflow-y-auto`) — damit klebt sie wirklich UND
+              die Grid-Zeile ist auf eine Bildschirmhöhe gedeckelt statt auf die
+              Dokumentlänge. Rest-Weissraum neben der Karte = Spaltendifferenz
+              innerhalb EINES Bildschirms, gemessen in `abnahme/design-identitaet/
+              R5-F2.md`. */}
+      <div data-wizard-grid className={`grid grid-cols-1 items-start ${pk('md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]', '@3xl/pane:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]')} gap-6 ${pk('md:gap-8', '@3xl/pane:gap-8')}`}>
+        <div className="flex min-w-0 flex-col">
+        {/* V3 (R5-F2): kein 4-seitiger Kasten mehr — Zielbild «Linien statt
+            Flächen» (§5). Die Formularstrecke trägt eine harte Kopflinie (2 px
+            `--rule`) und eine weiche Schlusslinie (1 px `--rule-soft`); Füllung,
+            Radius und Seitenkanten fallen weg. `data-formular-karte` ist der
+            Messgriff des Leerflächen-Skripts. */}
+        <div data-formular-karte className="border-t-2 border-b border-t-rule border-b-rule-soft pt-5 pb-6 space-y-5"
           onInput={merkeEingabe} onChange={merkeEingabe}>
           {/* key={schritt}: re-mountet den Schrittinhalt → dezenter Einblende-
               Fade beim Schrittwechsel (Redesign E8); Fehlerbox/Buttons bleiben ruhig. */}
           <div key={schritt} className="lc-route space-y-5">
-            <h2 className="text-h3 font-display font-semibold text-ink-900">{schritte[schritt].label}</h2>
+            <h2 className="text-h3 font-serif font-semibold text-ink-900">{schritte[schritt].label}</h2>
             {inhalt}
           </div>
 
@@ -224,7 +244,7 @@ export function VorlagenWizardRahmen({
 
         {/* Vorschau – mobil einklappbar, Desktop klebend; identischer Inhalt
             zweimal platziert (kein Remount, wie bisheriger Funktionsaufruf) */}
-        <details id="wizard-vorschau" className={`${pk('md:hidden', '@3xl/pane:hidden')} bg-surface border border-line rounded-xl scroll-mt-24`}
+        <details id="wizard-vorschau" className={`${pk('md:hidden', '@3xl/pane:hidden')} bg-surface border border-line scroll-mt-24`}
           open={vorschauOffen} onToggle={(e) => setVorschauOffen((e.currentTarget as HTMLDetailsElement).open)}>
           {/* `data-dokument-platz`: Auf schmalen Schirmen ist das Dokument
               zugeklappt — die STELLE des Dokuments ist dann dieser beschriftete
@@ -245,8 +265,43 @@ export function VorlagenWizardRahmen({
           </summary>
           <div className="px-4 pb-4">{vorschau}</div>
         </details>
-        <div className={pk('hidden md:block md:sticky md:top-28', 'hidden @3xl/pane:block @3xl/pane:sticky @3xl/pane:top-28')}>
-          {vorschau}
+        {/* R5-F2 (V1-Ursache, 6.9.2026): Die Vorschau-Spalte war so hoch wie das
+            ganze Dokument — `sticky` blieb wirkungslos (ein Sticky-Kasten, der
+            höher als der Viewport ist, klebt nie) und die Grid-Zeile wuchs auf
+            Dokumentlänge, was die Formular-Spalte leer mitzog. Deckel auf eine
+            Bildschirmhöhe + eigener Scroller: die Vorschau klebt jetzt wirklich,
+            das Dokument bleibt vollständig lesbar (Scroll im Panel), und die
+            Zeilenhöhe ist gedeckelt. `tabIndex`/`aria-label`: ein scrollbarer
+            Bereich muss per Tastatur erreichbar und benannt sein
+            (axe `scrollable-region-focusable`). */}
+        {/* Die Vorschau-Zelle trägt ihren Inhalt ABSOLUT: ein absolut
+            positioniertes Kind zählt bei der Zeilenhöhe nicht mit, also bemisst
+            sich die Grid-Zeile allein an der Formular-Spalte (plus einem
+            Mindestmass, damit das Dokument bei sehr kurzen Schritten nicht zum
+            Guckloch wird). Genau das ist der Kern von V1: vorher bestimmte das
+            2–3 Bildschirme hohe Dokument die Zeilenhöhe und zog die kurze
+            Formular-Spalte als Weissfläche mit. Der innere Kasten füllt die
+            Zelle (`inset-0`), klebt im Bild (`sticky`) und deckelt sich auf
+            Bildschirmhöhe ODER Zellenhöhe — je nachdem, was kleiner ist, damit
+            er nie über die Zeile hinausläuft.
+            `print:`-Kette: im Ausdruck fällt die ganze Mechanik weg, sonst
+            druckte sich nur der sichtbare Ausschnitt (Funktionsverlust).
+            KEIN `lc-scrollrand-y`: die Haus-Affordanz malt einen Farbverlauf auf
+            den HINTERGRUND des Scrollers — das Dokument-Blatt (`bg-paper-raised`,
+            volle Breite) liegt darüber und deckt ihn vollständig zu. Die Marke
+            wäre hier eine Klasse ohne Wirkung; die Affordanz trägt der
+            angeschnittene Text plus die native Bildlaufleiste. */}
+        <div className={pk(
+          'hidden md:block md:relative md:self-stretch md:min-h-[26rem]',
+          'hidden @3xl/pane:block @3xl/pane:relative @3xl/pane:self-stretch @3xl/pane:min-h-[26rem]')}>
+          <div className={pk('md:absolute md:inset-0 print:static', '@3xl/pane:absolute @3xl/pane:inset-0 print:static')}>
+            <div tabIndex={0} aria-label="Dokument-Vorschau"
+              className={pk(
+                'md:sticky md:top-28 md:max-h-[min(calc(100dvh-8rem),100%)] md:overflow-y-auto md:overscroll-contain print:static print:max-h-none print:overflow-visible',
+                '@3xl/pane:sticky @3xl/pane:top-28 @3xl/pane:max-h-[min(calc(100dvh-8rem),100%)] @3xl/pane:overflow-y-auto @3xl/pane:overscroll-contain print:static print:max-h-none print:overflow-visible')}>
+              {vorschau}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -268,7 +323,7 @@ export function VorlagenWizardRahmen({
           Utility am Element überlebt jede künftige Umformulierung des Blocks. */}
       {!vorschauImBild && (
         <button type="button" onClick={zurVorschau} data-verdikt-sprung
-          className={`${pk('md:hidden', '@3xl/pane:hidden')} print:hidden fixed bottom-4 right-4 z-dropdown lc-btn-primary lc-btn-sm rounded-full px-4 shadow-lg`}>
+          className={`${pk('md:hidden', '@3xl/pane:hidden')} print:hidden fixed bottom-4 right-4 z-dropdown lc-btn-primary lc-btn-sm px-4 shadow-lg`}>
           Vorschau ↓
         </button>
       )}
@@ -450,15 +505,20 @@ function DirektExportZeile({ ergebnis, pdf, docx, blocker }: {
 // Wirkt zugleich auf Vorschau UND Export (geteilter Store, ausgabeStil.ts).
 function StilUmschalter({ stil }: { stil: AusgabeStil }) {
   return (
-    <div className="inline-flex shrink-0 overflow-hidden rounded-md border border-line text-xs" role="group" aria-label="Ausgabe-Stil">
+    // R5-F2 (6.9.2026): Segment-Kasten (Rahmen + Radius + Füllung für den
+    // aktiven Reiter) → zwei Textknöpfe, die Wahl trägt der Unterstrich (§5:
+    // Linien statt Flächen, Links/Wahlen unterstrichen). Zustand, Reihenfolge,
+    // `aria-pressed`, Titel-Erklärungen und der Aufruf von `setAusgabeStil`
+    // bleiben Wort für Wort — nur die Anatomie wechselt (§3).
+    <div className="inline-flex shrink-0 items-center gap-3 text-xs" role="group" aria-label="Ausgabe-Stil">
       {(['nuechtern', 'modern'] as const).map((s) => (
         <button key={s} type="button"
           aria-pressed={stil === s}
           title={s === 'nuechtern' ? 'Klassisch-gerichtstauglich (traditionelles Rubrum mit Gedankenstrichen)' : 'Variante A «Dokument-Handwerk» (ruhige Versal-Labels)'}
           onClick={() => setAusgabeStil(s)}
           className={stil === s
-            ? 'bg-brass-100 px-2.5 py-1 font-medium text-brass-800'
-            : 'bg-surface px-2.5 py-1 text-ink-600 hover:text-ink-900'}>
+            ? 'py-1 font-medium text-ink-900 underline decoration-2 underline-offset-4'
+            : 'py-1 text-ink-600 underline decoration-transparent underline-offset-4 hover:text-ink-900 hover:decoration-line-strong'}>
           {s === 'nuechtern' ? 'Nüchtern' : 'Modern'}
         </button>
       ))}
@@ -491,7 +551,11 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen, dire
           identisch auf Vorschau und Export. */}
       {/* `data-dokument`: Tor-Griff (qsui-hierarchie I8/I9) — DAS ist auf einer
           Vorlagen-Fläche das Verdikt: das fertige Dokument, nicht die Eingabe. */}
-      <section data-dokument aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-5 sm:p-9">
+      {/* `rounded-lg shadow-md` entfernt (R5-F2): `--radius-*` steht seit R1 auf
+          0 und `--shadow-md` auf `none` — die beiden Utilities waren wirkungslos
+          und lasen sich beim Nachschlagen wie eine Absicht. Das Blatt bleibt ein
+          Blatt (Fläche + Kante), das ist im Zielbild das Dokument selbst. */}
+      <section data-dokument aria-label="Vorschau" className="bg-paper-raised border border-line p-5 sm:p-9">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
           <p className="lc-overline">
             Vorschau · aktualisiert sich live

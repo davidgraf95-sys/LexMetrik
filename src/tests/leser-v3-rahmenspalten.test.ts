@@ -69,11 +69,40 @@ describe('Ä60 (c) · das Blatt bekommt eine eigene Spur — und wo nicht', () =
     }
   });
 
-  it('geschlossenes Blatt = der Rahmen von heute, Zeichen für Zeichen', () => {
+  // ── §6.3-DEKLARATION (W2·24-R6b, 6.9.2026) · DIE ZWEI RANDSPUREN SIND WEG ──
+  // R6/M1 hatte hier einen ZWEITEN Grund zur Rahmen-Aufweitung eingezogen: die
+  // Randnotiz-Spalte des Satzspiegels. Auf Davids Befund vom 6.9.2026 («der
+  // platz rechts und links neben dem gesetz … nimmt viel platz vom gesetzestext
+  // weg») sind BEIDE Randspuren ersatzlos gefallen — damit fällt auch ihr
+  // Aufweitungs-Grund, und der Fall prüft wieder, was er vor R6 geprüft hat:
+  // ohne Blatt keine Blatt-Spur UND keine Aufweitung. Deklarierte fachliche
+  // Änderung, kein Refactoring; die Aufweitung fürs BLATT bewachen die Fälle
+  // darüber und darunter unverändert.
+  it('geschlossenes Blatt: keine Blatt-Spur, keine Aufweitung', () => {
     const b = rahmenBild({ ...LAGE, blattOffen: false });
     expect(b.blattForm).toBe('rechts');
-    expect(b.breite, 'ohne offenes Blatt darf nichts aufgeweitet werden').toBeUndefined();
     expect(b.spalten).toBe('18rem minmax(0,1fr)');
+    expect(b.breite, 'ohne Blatt-Spur wird der Rahmen nicht angefasst').toBeUndefined();
+  });
+
+  // ── §6.3-DEKLARATION (W2·24-R6b) · DIE ARTIKELFORM AN IHRER SCHWELLE ───────
+  // NEU statt des alten «zu schmal für die Randnotiz»-Falls: die Randnotiz gibt
+  // es nicht mehr, ihre Schwelle auch nicht. Was bleibt, ist die eine Schwelle,
+  // die `satzspiegel.ts` noch führt — ab wann der Artikel die Breitform trägt
+  // (Randtitel + Fassung im Kopf, Bezüge als eine Zeile). Beide Richtungen, sonst
+  // wäre es ein Tor, das nicht scheitern kann (§6.7).
+  it('die Artikelform kippt an SPIEGEL_MIN_BREIT — und im Pane nie', () => {
+    // @1440: Zelle = 1072 − 308 = 764 px ≥ 448 ⇒ Breitform.
+    expect(rahmenBild({ ...LAGE, blattOffen: false }).satzspiegel).toBe('breit');
+    // Enge Lage (Fenster 1024 mit ausgeklappter App-Seitenleiste: 1024 − 256 −
+    // 48 = 720 px Raum): nach der Gliederungsspur bleiben der Zelle 720 − 308 =
+    // 412 px, unter SPIEGEL_MIN_BREIT (28 rem = 448) ⇒ Zeilenform.
+    const engRaum = { raumPx: 720, ruhePx: 720, remPx: REM };
+    expect(rahmenBild({ ...LAGE, raum: engRaum }).satzspiegel).toBe('zeile');
+    // Ohne Spalten-Lage (Handy) und im Pane immer die Zeilenform — dieselbe
+    // Form in beiden Hälften des Split-Views (Auftrag David, (d)).
+    expect(rahmenBild({ ...LAGE, spaltenLage: false, raum: raumFuer(1000) }).satzspiegel).toBe('zeile');
+    expect(rahmenBild({ ...LAGE, ruheForm: 'unten', raum: raumFuer(2560) }).satzspiegel).toBe('zeile');
   });
 
   it('ohne Spalten-Lage (unter 1024 px) und im Pane bleibt alles beim Alten', () => {
@@ -87,6 +116,8 @@ describe('Ä60 (c) · das Blatt bekommt eine eigene Spur — und wo nicht', () =
     const pane = rahmenBild({ ...LAGE, ruheForm: 'unten', raum: raumFuer(2560) });
     expect(pane.blattForm).toBe('unten');
     expect(pane.breite).toBeUndefined();
+    // R6b: und der Artikel bleibt im Pane in der Zeilenform (Auftrag (d)).
+    expect(pane.satzspiegel, 'im Pane dieselbe Form wie in der anderen Hälfte').toBe('zeile');
   });
 
   it('zu wenig Raum für Text + Blatt ⇒ keine Spur (ausgeklappte App-Seitenleiste)', () => {

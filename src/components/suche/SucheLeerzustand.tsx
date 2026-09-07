@@ -1,28 +1,52 @@
-import type { ReactNode } from 'react';
 import type { ZuletztEintrag } from '../../lib/zuletztVerwendet';
-import { VerlaufIcon } from '../layout/VerlaufIcon';
+import { reiterKurzform } from '../../lib/tabs';
 import { suchOptionId } from './suchOptionId';
-import { EINSTIEGE } from './SucheLeerzustandKontext';
+import { RegisterMarke } from './RegisterMarke';
+import { artVonRoute } from './suchArt';
 
 // ─── Leerzustand der Suche (⌘K / Fokus ohne Eingabe) — UI-NAV O1, Schritt 2 ──
 //
 // Erscheint, wenn das Suchfeld fokussiert, aber leer ist: die zuletzt geöffneten
 // Inhalte (aus DERSELBEN Verlauf-Quelle wie Startseiten-Chips und Topbar-Verlauf,
-// §5) plus einige kuratierte Einstiege. Reine Darstellung/Navigation (§3).
+// §5). Reine Darstellung/Navigation (§3).
 //
 // Synchron/CLS-frei: das Panel erscheint nur auf Fokus (Nutzer-Interaktion, nie im
 // ersten Paint) → keine localStorage-/Hydration-Divergenz im Prerender (§15.2).
 // `verlauf` kommt als Prop vom Aufrufer (EIN `useZuletzt()`-Aufruf, geteilt mit
-// der Tastatur-Navigation — Cowork-Befund 38, 21.8.2026, s. unten).
+// der Tastatur-Navigation — Cowork-Befund 38, 21.8.2026).
 //
-// `EINSTIEGE` (kuratierte Übersichts-Routen) und `leerOptionen` (flache
-// Options-Liste für die Tastatur-Navigation) stehen in
+// `leerOptionen` (flache Options-Liste für die Tastatur-Navigation) steht in
 // `SucheLeerzustandKontext.ts` (react-refresh/only-export-components — Muster
 // wie `InhaltsKopfKontext.ts` neben `InhaltsKopf.tsx`).
+//
+// ── D23 (David 6.9.2026, Bild «Kopf-Suche im Leerzustand nach ‹+›») ──────────
+// Wortlaut: «schau mal wie das aussieht mit der suche. sehr unästhetisch».
+// Drei Dinge am Panel-INHALT, Punkt für Punkt:
+//  · DAS ETIKETT STEHT ÜBER DER LISTE. «Zuletzt geöffnet» stand zwar oben, die
+//    §8-Fussnote «Nur auf diesem Gerät» aber im selben Block und optisch als
+//    zweites Etikett — im Bild las sich die Liste, als trüge sie GAR KEINE
+//    Überschrift und darunter eine. Jetzt: Etikett oben (`.lc-overline`,
+//    Archivo 12, ink-500), Liste, Fussnote als kleine Micro-Zeile darunter.
+//  · DIE ZEILE TRÄGT DIE KURZFORM, NICHT DEN SEO-TITEL. `labelAusMeta` liefert
+//    für die Übersichts-/Startseiten-Routen die Metadaten-Zeichenkette («Schweizer
+//    Recht an einem Ort: …»); `lib/tabs.reiterKurzform` ist die kanonische
+//    Kurzform derselben Routen (R3-F7, §5) — dieselbe Quelle wie die
+//    Arbeitsleiste. Rechts daneben, ruhig in ink-500, die ART (Gesetz ·
+//    Entscheid · Materialie · Rechner · Vorlage, `suchArt.ts`). Damit ist die
+//    Liste sortierbar zu lesen, statt als Wortsalat («CEDAW/ZGB/BGE/OR/…»).
+//  · «EINSTIEGE» IST ERSATZLOS GEFALLEN. Der Block wiederholte Zeile für Zeile
+//    die Seitenleiste (Gesetze · Rechtsprechung · Materialien · Rechner ·
+//    Vorlagen), die seit D17 auf JEDER Route steht — die Wiederholung war die
+//    «Inkonsistenz», die David gerügt hat. Rückbau statt Bewachung
+//    (§17-Gegengewicht): mit ihm fällt die Konstante `EINSTIEGE`.
+//    NICHTS geht verloren: der Weg in die fünf Bereiche ist die Seitenleiste,
+//    und die Suche selbst findet sie über den Namen.
+// Der Registerstrich ist auf 3 px vereinheitlicht und wohnt jetzt in
+// `RegisterMarke.tsx`, weil die TREFFER-Zeilen ihn seit D23 ebenfalls tragen.
 
-const ZEILE_CLS = 'group/z flex items-center gap-2.5 px-4 py-2 text-body-s text-ink-700 transition-colors hover:bg-brass-100/40 hover:text-brass-800 cursor-pointer';
+const ZEILE_CLS = 'lc-hover-flaeche flex items-center gap-3 px-4 py-2 text-body-s text-ink-900 transition-colors cursor-pointer';
 
-export function SucheLeerzustand({ verlauf, listboxId, aktivId, onNavigate }: {
+export function SucheLeerzustand({ verlauf, listboxId, aktivId, onNavigate, panelKlasse }: {
   /** Verlauf-Einträge (bereits auf 5 gekappt) — EIN geteilter useZuletzt()-Aufruf
    *  beim Aufrufer, damit Anzeige und Tastatur-Navigation (leerOptionen) exakt
    *  dieselbe Liste sehen. */
@@ -34,45 +58,38 @@ export function SucheLeerzustand({ verlauf, listboxId, aktivId, onNavigate }: {
   aktivId?: string;
   /** Maus/Touch-Navigation (Optionen sind keine `<a>` mehr, s. SuchResultate). */
   onNavigate: (href: string) => void;
+  /** Zusatzklassen an der Listbox (Kopf-Dropdown: Scroll-Kappung) — Herleitung
+   *  bei `SuchResultate.panelKlasse` (axe `scrollable-region-focusable`). */
+  panelKlasse?: string;
 }) {
-  const zeile = (oid: string, href: string, inhalt: ReactNode) => (
-    <li key={oid} role="option" id={oid} aria-selected={oid === aktivId}
-      onClick={() => onNavigate(href)}
-      className={`${ZEILE_CLS}${oid === aktivId ? ' bg-brass-100/40' : ''}`}>
-      {inhalt}
-    </li>
-  );
-
   return (
-    <div className="lc-card overflow-hidden" role="listbox" id={listboxId} aria-label="Suche — Verlauf und Einstiege">
-      {verlauf.length > 0 && (
-        <div role="group" aria-label="Zuletzt geöffnet" className="border-b border-line">
-          <p className="lc-overline px-4 pt-3 pb-1">Zuletzt geöffnet</p>
-          <ul role="none" className="pb-1.5">
-            {verlauf.map((e) => zeile(suchOptionId(listboxId, 'verlauf', e.route), e.route, (
-              <>
-                <VerlaufIcon typ={e.typ} className="shrink-0 text-ink-500" />
-                <span className="min-w-0 flex-1 truncate">{e.titel}</span>
-                <span aria-hidden className="text-ink-300 transition-all group-hover/z:translate-x-0.5 group-hover/z:text-brass-500">→</span>
-              </>
-            )))}
-          </ul>
-          {/* §8: der Verlauf liegt nur lokal. */}
-          <p className="px-4 pb-2 text-micro leading-snug text-ink-500">Nur auf diesem Gerät</p>
-        </div>
-      )}
-
-      <div role="group" aria-label="Einstieg">
-        <p className="lc-overline px-4 pt-3 pb-1">Einstieg</p>
-        <ul role="none" className="pb-1.5">
-          {EINSTIEGE.map((e) => zeile(suchOptionId(listboxId, 'einstieg', e.route), e.route, (
-            <>
-              <span className="min-w-0 flex-1 truncate">{e.label}</span>
-              <span aria-hidden className="text-ink-300 transition-all group-hover/z:translate-x-0.5 group-hover/z:text-brass-500">→</span>
-            </>
-          )))}
-        </ul>
-      </div>
+    <div className={`lc-suchpanel${panelKlasse ? ` ${panelKlasse}` : ''}`} role="listbox" id={listboxId} aria-label="Suche — zuletzt geöffnet">
+      <p className="lc-overline px-4 pt-3 pb-1.5">Zuletzt geöffnet</p>
+      {verlauf.length === 0
+        // §8: ehrlich statt leer — der Verlauf ist noch keiner. KEINE Ersatz-Liste
+        // (das wären die «Einstiege», die genau hier gefallen sind).
+        ? <p className="px-4 pb-3 text-body-s text-ink-500">Noch nichts geöffnet.</p>
+        : (
+          <>
+            <ul role="none" className="pb-1">
+              {verlauf.map((e) => {
+                const oid = suchOptionId(listboxId, 'verlauf', e.route);
+                const art = artVonRoute(e.route);
+                return (
+                  <li key={oid} role="option" id={oid} aria-selected={oid === aktivId}
+                    onClick={() => onNavigate(e.route)}
+                    className={`${ZEILE_CLS}${oid === aktivId ? ' hs-aktiv' : ''}`}>
+                    <RegisterMarke route={e.route} />
+                    <span className="min-w-0 flex-1 truncate" title={e.titel}>{reiterKurzform(e.route) ?? e.titel}</span>
+                    {art && <span className="shrink-0 text-xs text-ink-500">{art}</span>}
+                  </li>
+                );
+              })}
+            </ul>
+            {/* §8: der Verlauf liegt nur lokal — als Fussnote UNTER der Liste. */}
+            <p className="px-4 pb-2.5 text-micro leading-snug text-ink-500">Nur auf diesem Gerät</p>
+          </>
+        )}
     </div>
   );
 }

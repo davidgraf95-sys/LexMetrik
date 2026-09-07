@@ -183,45 +183,70 @@ export function EntscheidFilter({
   // Beim Zurücksetzen das Sachgebiet (Rail/URL) bewahren — nur Sekundärfilter+Suche leeren.
   const zuruecksetzen = () => onChange({ sachgebiet: werte.sachgebiet ?? null });
 
+  // D22-Anatomie: Text-Schalter mit Registerstrich statt Kasten-Segment.
   const dichteBtn = (d: 'liste' | 'karten', label: string) => (
-    <button type="button" onClick={() => onDichte(d)} aria-pressed={dichte === d}
-      className={`px-2.5 py-1 text-xs transition-colors ${dichte === d ? 'bg-brass-100 text-brass-800 font-medium' : 'text-ink-500 hover:text-ink-700'}`}>
+    <button type="button" onClick={() => onDichte(d)} aria-pressed={dichte === d} className="ub-schalter">
       {label}
     </button>
   );
 
   return (
     <div className="space-y-2.5">
-      {/* Toolbar — eine Zeile (umbrechend auf Mobil). */}
-      <div className="flex flex-wrap items-center gap-2">
+      {/* ── D22 Ziff. 2 (Nachzug D24, 6.9.2026) · EIN FILTERFELD, VOLLE BREITE ─
+          /gesetze, /materialien und /rechner tragen diese Anatomie seit R12A;
+          /rechtsprechung und /vorlagen standen noch aussen vor (R12A §4: «beide
+          ausserhalb der Whitelist dieses Auftrags»). Hier stand das Feld in
+          einer `flex-wrap`-Toolbar, die es sich mit Sortierung und Ansichts-
+          Umschalter teilte — es bekam den Rest der Zeile, und die beiden
+          Nachbarn standen als Kästen daneben.
+          Neu: Label «Filtern» über dem Feld (`.ub-filter`), Feld über die volle
+          Inhaltsbreite, Umfang in der Fuss-Zeile (`aria-describedby`), und die
+          Ansichts-Wahl als Text-Schalter (`.ub-schalter`) statt als
+          Kasten-Gruppe. Die SORTIERUNG bleibt ein <select>: sie führt fünf
+          Optionen, und fünf Text-Schalter wären genau die Kasten-Wand, die D22
+          abräumt (dieselbe Begründung wie bei den Materialien-Facetten).
+          Der sichtbare Text IST der zugängliche Name (WCAG 2.5.3) — das frühere
+          `aria-label` («Rechtsprechung durchsuchen») sagte etwas anderes als
+          das, was auf dem Bild steht. */}
+      <div className="ub-filter">
+        <label htmlFor="rechtsprechung-filter" className="lc-overline">Filtern</label>
         <input
+          id="rechtsprechung-filter"
           type="search"
           value={werte.q ?? ''}
           onChange={(e) => setze({ q: e.target.value })}
-          placeholder="Suchen — Thema, Aktenzeichen, Norm, Gericht …"
-          aria-label="Rechtsprechung durchsuchen"
-          className="lc-input lc-input-sm min-w-[180px] flex-1"
+          placeholder="Thema, Aktenzeichen, Norm, Gericht …"
+          aria-describedby="rechtsprechung-filter-scope"
+          className="lc-input h-11 py-0 text-body-s w-full"
         />
-        <label className="flex shrink-0 items-center gap-1.5 text-xs text-ink-500">
-          <span className="hidden sm:inline">Sortierung</span>
-          {/* min-w + shrink-0: in der flex-wrap-Toolbar wurde der Select sonst
-              gestaucht und das längste Label («Leitentscheide zuerst») abgeschnitten. */}
-          <select className="lc-select lc-input-sm w-auto min-w-[13.75rem]" value={sort} onChange={(e) => onSort(e.target.value as SortModus)}
-            aria-label="Sortierung">
-            {(Object.keys(SORT_LABEL) as SortModus[]).map((s) => <option key={s} value={s}>{SORT_LABEL[s]}</option>)}
-          </select>
-        </label>
-        <div className="inline-flex shrink-0 overflow-hidden rounded-md border border-line" role="group" aria-label="Ansicht">
-          {dichteBtn('liste', 'Liste')}
-          {dichteBtn('karten', 'Karten')}
+        <p id="rechtsprechung-filter-scope" className="ub-filter-fuss min-h-5">
+          <span>Thema, Aktenzeichen, Norm und Gericht dieser Auswahl · Gesetzestext über die Suche oben</span>
+        </p>
+        <div className="mt-1 flex flex-wrap items-center gap-x-5 gap-y-2">
+          <label className="flex items-center gap-2 text-body-s text-ink-600">
+            <span>Sortierung</span>
+            {/* min-w: sonst wird der Select gestaucht und das längste Label
+                («Leitentscheide zuerst») abgeschnitten. */}
+            <select className="lc-select lc-input-sm w-auto min-w-[13.75rem]" value={sort} onChange={(e) => onSort(e.target.value as SortModus)}
+              aria-label="Sortierung">
+              {(Object.keys(SORT_LABEL) as SortModus[]).map((s) => <option key={s} value={s}>{SORT_LABEL[s]}</option>)}
+            </select>
+          </label>
+          <div className="flex items-center gap-x-4" role="group" aria-label="Ansicht">
+            {dichteBtn('liste', 'Liste')}
+            {dichteBtn('karten', 'Karten')}
+          </div>
         </div>
       </div>
 
       {/* Facetten-Leiste — die primären Achsen sichtbar (Auftrag 4 «Gemeinwesen»,
           Auftrag 8 «Sprache»), statt im <details> vergraben. Trefferzahl je Chip (R15). */}
-      {hatKantonal && gemeinwesenOpt.length > 1 && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} />}
-      {hatMehrereInstanzen && instanzOpt.length > 1 && <FacettenGruppe label="Instanz" optionen={instanzOpt} />}
-      {hatMehrsprachig && spracheOpt.length > 1 && <FacettenGruppe label="Sprache" optionen={spracheOpt} />}
+      {/* register="r": Registerfarbe «Rechtsprechung» am gewählten Text-Schalter
+          (D24-Nachzug, `ui/FacettenGruppe`) — dieselbe Marke wie die Seitenleiste
+          für diese Domäne führt. */}
+      {hatKantonal && gemeinwesenOpt.length > 1 && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} register="r" />}
+      {hatMehrereInstanzen && instanzOpt.length > 1 && <FacettenGruppe label="Instanz" optionen={instanzOpt} register="r" />}
+      {hatMehrsprachig && spracheOpt.length > 1 && <FacettenGruppe label="Sprache" optionen={spracheOpt} register="r" />}
       {/* Spruchkörper: Autocomplete statt Chip-Leiste (~180 Namen, s. RichterFilter).
           Die Achse erscheint nur, wenn der Ausschnitt überhaupt erfasste Besetzungen
           trägt — ein leeres Suchfeld über nichts wäre eine Fehlversprechung (§8).

@@ -10,33 +10,44 @@
 // aufklappbare Werkzeug-Gruppen unter ihrer Kategorie (Klicktiefe 1).
 import { describe, expect, it } from 'vitest';
 import { NAVIGATION, NAVIGATION_META, alleNavLinks, type NavGruppe } from '../lib/navigation';
-import { OBERKATEGORIEN, kategorieFuer } from '../lib/oberkategorien';
 import { VORLAGE_SEKTIONEN, KATALOG_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 import { istVorlage } from '../lib/vorlagenKategorie';
-import { SYSTEMATIK, SYSTEMATIK_VON_KEY } from '../lib/normtext/systematik';
+import { SYSTEMATIK_VON_KEY } from '../lib/normtext/systematik';
 import { ERLASS_REGISTER } from '../lib/normtext/register';
+import { kernerlasse } from '../components/gesetze/kernerlasse';
+import { erlassPfadVonKey } from '../lib/normtext/erlassAdresse';
 import { KANTONE, KANTON_NAMEN } from '../data/tarif/typen';
 import { ROUTEN_MANIFEST } from '../routesManifest';
 
 const abschnitt = (titel: string) => NAVIGATION.find((a) => a.titel === titel)!;
-const katVon = (k: typeof KATALOG_KARTEN[number]) => kategorieFuer(k) ?? 'vorlagen';
 
 describe('Navigations-SSoT', () => {
-  it('Rechner = OBERKATEGORIEN ohne «vorlagen» als aufklappbare Werkzeug-Gruppen', () => {
-    const gruppen = abschnitt('Rechner').kinder as NavGruppe[];
-    const erwarteteKats = OBERKATEGORIEN.filter((k) => k.id !== 'vorlagen');
-    expect(gruppen.map((g) => g.label)).toEqual(erwarteteKats.map((k) => k.titel));
-    // Jede Gruppe trägt genau die verfügbaren Rechner ihrer Kategorie als
-    // Direktlinks (aus dem Katalog abgeleitet), mit passendem Zähler.
-    erwarteteKats.forEach((kat, i) => {
-      const g = gruppen[i];
-      expect(g.art).toBe('gruppe');
-      expect(g.aufklappbar).toBe(true);
-      const erwartet = KATALOG_KARTEN
-        .filter((k) => istVerfuegbar(k) && !!k.href && !istVorlage(k) && katVon(k) === kat.id)
-        .map((k) => ({ label: k.title, ziel: k.href! }));
-      expect(g.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null))).toEqual(erwartet);
-    });
+  // ── D26 (David 6.9.2026), DEKLARIERTE FACHLICHE ÄNDERUNG (§6.3) ────────────
+  // Bis hierher verlangte dieser Test unter «Rechner» die drei Oberkategorien
+  // als aufklappbare Gruppen. D26 («nochmals überarbeiten, was sie anzeigt»)
+  // ersetzt sie durch fünf DIREKTE Ziele + «Alle Rechner»: die Leiste soll
+  // öffnen, was man täglich braucht, statt die Kategorien-Ordnung der
+  // Übersichtsseite zu wiederholen. Die Kategorien selbst sind unverändert —
+  // sie leben in `OBERKATEGORIEN` und auf `/rechner` weiter, nur nicht mehr in
+  // der Leiste. Was der Test SCHÜTZT, bleibt dasselbe: die Einträge sind aus dem
+  // Katalog abgeleitet, nicht zweitgepflegt (Leitplanke 4).
+  it('Rechner = fünf geführte Katalog-IDs (aufgelöst, nicht abgeschrieben) + «Alle Rechner»', () => {
+    const kinder = abschnitt('Rechner').kinder;
+    // Keine Gruppen mehr — nur Blätter.
+    expect(kinder.every((k) => k.art === 'link')).toBe(true);
+    const links = kinder as { label: string; ziel: string }[];
+    expect(links.at(-1)).toEqual({ art: 'link', label: 'Alle Rechner', ziel: '/rechner' });
+    // Jedes der fünf Ziele ist eine VERFÜGBARE Katalog-Karte mit eigener Seite,
+    // und Beschriftung wie Adresse stammen aus dem Katalog — nicht aus der Nav.
+    const werkzeuge = links.slice(0, -1);
+    expect(werkzeuge).toHaveLength(5);
+    for (const l of werkzeuge) {
+      const k = KATALOG_KARTEN.find((x) => x.href === l.ziel);
+      expect(k, `kein Katalog-Eintrag zu ${l.ziel}`).toBeTruthy();
+      expect(istVerfuegbar(k!)).toBe(true);
+      expect(istVorlage(k!)).toBe(false);
+      expect(l.label).toBe(k!.title);
+    }
   });
 
   it('Vorlagen = VORLAGE_SEKTIONEN als aufklappbare Gruppen mit ihren Vorlagen', () => {
@@ -51,18 +62,30 @@ describe('Navigations-SSoT', () => {
     });
   });
 
-  it('Gesetze › Bund = SYSTEMATIK-Kategorien; Kantone = Kantone (beide aufklappbar)', () => {
+  // ── D26, DEKLARIERTE FACHLICHE ÄNDERUNG (§6.3) ────────────────────────────
+  // Statt der zwölf SYSTEMATIK-Titel unter einer Gruppe «Bund» stehen jetzt die
+  // Kernerlasse direkt in der Leiste, darunter EIN Ziel «Alle Bundeserlasse».
+  // Die Systematik ist damit nicht verschwunden: sie ist die Gliederung der
+  // Bund-Säule und wird auf `/gesetze?ebene=bund` gezeigt. Die Kernerlass-Liste
+  // wird NICHT hier geführt, sondern aus `components/gesetze/kernerlasse.ts`
+  // gelesen — derselben Liste, die die Übersicht zeigt (§5).
+  it('Gesetze = Kernerlasse (aus kernerlasse.ts) + «Alle Bundeserlasse»; Kantone aufklappbar', () => {
     const gesetze = abschnitt('Gesetze').kinder;
-    const bund = gesetze[0] as NavGruppe;
-    expect(bund.art).toBe('gruppe');
-    expect(bund.aufklappbar).toBe(true);
-    expect(bund.standardOffen).toBe(false);
-    expect(bund.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null)))
-      .toEqual(SYSTEMATIK.map((s) => ({ label: s.titel, ziel: `/gesetze?ebene=bund#sys-${s.id}` })));
-    // Kantone gleich wie Bund: aufklappbare Gruppe mit den 26 Kantonen (Auftrag David 20.6.2026).
+    const kern = kernerlasse();
+    expect(kern.length).toBeGreaterThan(0); // Nulltest-Schutz (§6.7)
+    expect(gesetze.slice(0, kern.length).map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null)))
+      .toEqual(kern.map((e) => ({ label: e.kuerzel, ziel: e.pfad })));
+    // Der volle Titel steht im Accessible Name (die Sicht-Beschriftung ist darin
+    // enthalten — WCAG 2.5.3), nie nur das Kürzel.
+    for (let i = 0; i < kern.length; i++) {
+      const k = gesetze[i];
+      expect(k.art === 'link' && k.ariaLabel).toBe(`${kern[i].kuerzel} — ${kern[i].titel}`);
+    }
+    expect(gesetze[kern.length]).toEqual({ art: 'link', label: 'Alle Bundeserlasse', ziel: '/gesetze?ebene=bund' });
+    // Kantone unverändert: aufklappbare Gruppe mit den 26 Kantonen (Auftrag David 20.6.2026).
     // Gesetzes-UX G5 · §4.3.4: ALPHABETISCH nach Vollnamen (nicht mehr föderal),
     // Vollname als Label — dieselbe Ordnung wie das Kantonsraster der Übersicht.
-    const kantone = gesetze[1] as NavGruppe;
+    const kantone = gesetze.find((k) => k.art === 'gruppe' && k.label === 'Kantone') as NavGruppe;
     expect(kantone.art).toBe('gruppe');
     expect(kantone.aufklappbar).toBe(true);
     expect(kantone.standardOffen).toBe(false);
@@ -99,7 +122,10 @@ describe('Navigations-SSoT', () => {
   // zielen auf die kanonische Säule. Deklarierte fachliche Änderung dieses
   // Tests (§6.3, kein Refactoring: Stufe 1 hielt die Kinder bewusst am Alias).
   it('IA-6 Stufe 2: Gesetze › International — Kopf UND die 5 Anker zielen auf die kanonische Säule', () => {
-    const international = abschnitt('Gesetze').kinder[2] as NavGruppe;
+    // D26: Positionsindex durch Label-Suche ersetzt — die Kernerlasse stehen
+    // jetzt vor den Gruppen, und ein Index wäre eine stille Kopplung an ihre Zahl.
+    const international = abschnitt('Gesetze').kinder
+      .find((k) => k.art === 'gruppe' && k.label === 'International') as NavGruppe;
     expect(international.art).toBe('gruppe');
     expect(international.label).toBe('International');
     expect(international.ziel).toBe('/gesetze?ebene=international');
@@ -125,6 +151,12 @@ describe('Navigations-SSoT', () => {
       // Redirect-Route, kein Nav-Ziel (der Test oben verbietet es ausdrücklich).
       '/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/materialien', '/einstellungen', '/methodik', '/ueber', '/kontakt', '/datenschutz',
       ...ROUTEN_MANIFEST.map((r) => r.pfad),
+      // D26 (deklariert, §6.3): die Leiste verlinkt jetzt Erlass-Leser-Routen
+      // direkt (`/gesetze/<ebene>/<key>`). Massstab ist das Erlass-Register —
+      // also genau die Menge, die der Leser bedient und der Prerender erzeugt;
+      // ein Kernerlass-Schlüssel ohne Register-Eintrag fällt in `kernerlasse()`
+      // ohnehin schon weg und käme hier gar nicht an.
+      ...ERLASS_REGISTER.map((r) => erlassPfadVonKey(r.key)),
     ]);
     for (const l of alleNavLinks()) {
       const pfad = l.ziel.split('?')[0].split('#')[0];

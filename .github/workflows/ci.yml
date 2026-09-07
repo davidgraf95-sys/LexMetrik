@@ -581,7 +581,7 @@ jobs:
         run: npm run check:zyklen
       - name: Normtext-Projektionen (Vollständigkeit · Zähler · Historie · Revisionen)
         if: needs.diff.outputs.art != 'doku'
-        run: npm run check:vollstaendigkeit && npm run check:zaehler && npm run check:historie && npm run check:revisionen && npm run check:artikel-revisionen
+        run: npm run check:vollstaendigkeit && npm run check:zaehler && npm run check:bezuege-zaehler && npm run check:historie && npm run check:revisionen && npm run check:artikel-revisionen
       - name: Normtext-Struktur (Tabellen · Grundart · Invarianten)
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:tabellen && npm run check:grundart && npm run check:invarianten

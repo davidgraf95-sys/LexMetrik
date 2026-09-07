@@ -53,10 +53,14 @@ import { DROSSEL, REAKTIONS_BUDGET, REAKTIONS_LATTE, CONTAINER_BUDGET_CI, CONTAI
 //     tiefer (`v3/LeserErlassKopfZone`). Gemessen 18.8.2026 an BV @1440:
 //     direktes Kind 0 (V3) / 1 (V1), Nachfahre 1 in BEIDEN.
 // (2) Die «immer sichtbare Positionsleiste» heisst in V3 anders: die Krume
-//     trägt dort `aria-label="Ort im Gesetz"` statt `"Brotkrümel"` (gemessen:
+//     trug dort `aria-label="Ort im Gesetz"` statt `"Brotkrümel"` (gemessen:
 //     V1 → Brotkrümel, V3 → Ort im Gesetz). Der Selektor nennt beide Namen; die
 //     AUSSAGE — der Ansicht-Öffner steht in der klebenden Ortsleiste und NICHT
 //     im wegscrollenden Erlass-Kopf (A26) — bleibt Wort für Wort dieselbe.
+//     §6.3-NACHZUG D27 (David 6.9.2026): in V3 gibt es die `nav` nicht mehr,
+//     die Ortsangabe ist in den Reiter gezogen. Die klebende Zone selbst gibt
+//     es weiterhin (`[data-v3-kopf-ort]`) — der Selektor nennt sie als dritte
+//     Alternative, die A26-Aussage bleibt damit unverändert prüfbar.
 // (3) `aria-controls` setzt V3 bewusst nur im GEÖFFNETEN Zustand
 //     (`v3/LeserAnsichtV3.tsx`: «kein Sprung, der ins Leere führt», §8). Die
 //     Prüfung wandert deshalb hinter das Öffnen — und wird dort STRENGER: statt
@@ -68,7 +72,7 @@ import { DROSSEL, REAKTIONS_BUDGET, REAKTIONS_LATTE, CONTAINER_BUDGET_CI, CONTAI
 // Damit ist die Datei wieder paritätsfähig und steht seit H4 in `N_SPECS`.
 const KOPF = '.lc-leser header';
 /** Die klebende Ortsleiste, in beiden Hüllen (A26). */
-const ORTSLEISTE = 'nav[aria-label="Brotkrümel"], nav[aria-label="Ort im Gesetz"]';
+const ORTSLEISTE = 'nav[aria-label="Brotkrümel"], nav[aria-label="Ort im Gesetz"], [data-v3-kopf-ort]';
 
 async function warteReader(page: Page, url: string): Promise<void> {
   await page.goto(url);
@@ -380,14 +384,30 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
       expect(kreuze[rolle][0]).toMatch(/schliessen/)
     }
 
-    // DIE HANDLUNG IST NICHT VERLOREN, sie steht sichtbar und BENANNT: der
-    // Rücksprung «‹ Gesetze» in der Ort-Zone desselben Kopfes, mit demselben
-    // Ziel, das der V3-✕ ansteuerte (gemessen: beide `/gesetze`).
-    for (const wahl of ['[data-pane="primaer"]', '[data-pane="sekundaer"]']) {
-      const kurz = page.locator(`${wahl} [data-v3-kopf-krume-kurz]`)
-      await expect(kurz).toHaveCount(1)
-      await expect(kurz).toHaveAttribute('href', '/gesetze')
-    }
+    // DIE HANDLUNG IST NICHT VERLOREN, sie steht sichtbar und BENANNT — seit
+    // D27 (David 6.9.2026) nicht mehr als «‹ Gesetze» in der Ort-Zone des
+    // Kopfes, sondern EINMAL für die ganze App in der Hauptnavigation. Das ist
+    // die §6.3-Deklaration zu diesem Fall: dieselbe Zusage («der Weg zurück ist
+    // benannt und da»), an dem Ort, an dem sie seither eingelöst wird — und
+    // nicht mehr je Pane doppelt.
+    await expect(page.locator('[data-v3-kopf-krume-kurz]'),
+      'die Kopfzeile trägt wieder eine Brotkrume (D27)').toHaveCount(0)
+    // ── D27 · WO DER WEG ZURÜCK JETZT STEHT (gemessen 6.9.2026) ─────────────
+    // Die Hauptnavigation ist auf einer Leser-Seite EINGEKLAPPT (Vorgabe
+    // `useSeitenleiste({ vorgabeEingeklappt: istGesetzLeserPfad })`) — gemessen
+    // @1440 auf `/gesetze/bund/STPO`: `nav[aria-label="Hauptnavigation"]` count
+    // **0**, der Umschalter in der Topbar count **1**, und nach einem Klick
+    // darauf steht der Link `/gesetze` (count 1). Der Weg zurück ist also da und
+    // ist einen Klick entfernt; die Krume war es auf `mini` faktisch auch (dort
+    // stand nur noch «‹ Gesetze»). Geprüft wird beides, damit der Fall nicht
+    // stumm grün wird, wenn eine Seite den Umschalter verliert.
+    const umschalter = page.getByRole('button', { name: 'Seitenleiste ein- und ausblenden' }).first()
+    await expect(umschalter, 'ohne Umschalter gibt es keinen Weg in die Hauptnavigation').toHaveCount(1)
+    await umschalter.click()
+    await expect(page.locator('nav[aria-label="Hauptnavigation"] a[href="/gesetze"]').first(),
+      'der Weg zurück zur Gesetzes-Übersicht fehlt in der Hauptnavigation').toBeVisible({ timeout: 15_000 })
+    await umschalter.click()
+
     expect(fehler, fehler.join(' | ')).toEqual([])
   })
 
@@ -441,17 +461,44 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
     await page.goto('/gesetze/bund/STPO#art-429')
     await warteLeser(page)
     await page.waitForTimeout(400)
-    // Ruhezustand: gar kein ✕ — der Rücksprung steht als Wort in der Ort-Zone.
+    // Ruhezustand: gar kein ✕. D27 (§6.3): der Rücksprung steht seit 6.9.2026
+    // nicht mehr in der Ort-Zone des Kopfes, sondern in der Hauptnavigation —
+    // dieselbe Zusage, ein Ort statt je Lesefläche einer.
     await expect(page.locator('[data-v3-kopf-schliessen]')).toHaveCount(0)
-    await expect(page.locator('[data-v3-kopf] nav[aria-label="Ort im Gesetz"]')
-      .getByRole('link', { name: 'Gesetze' })).toHaveAttribute('href', '/gesetze')
+    await expect(page.locator('[data-v3-kopf]').getByRole('link', { name: 'Gesetze' }))
+      .toHaveCount(0)
+    // ── D27 · WO DER WEG ZURÜCK JETZT STEHT (gemessen 6.9.2026) ─────────────
+    // Die Hauptnavigation ist auf einer Leser-Seite EINGEKLAPPT (Vorgabe
+    // `useSeitenleiste({ vorgabeEingeklappt: istGesetzLeserPfad })`) — gemessen
+    // @1440 auf `/gesetze/bund/STPO`: `nav[aria-label="Hauptnavigation"]` count
+    // **0**, der Umschalter in der Topbar count **1**, und nach einem Klick
+    // darauf steht der Link `/gesetze` (count 1). Der Weg zurück ist also da und
+    // ist einen Klick entfernt; die Krume war es auf `mini` faktisch auch (dort
+    // stand nur noch «‹ Gesetze»). Geprüft wird beides, damit der Fall nicht
+    // stumm grün wird, wenn eine Seite den Umschalter verliert.
+    const umschalter = page.getByRole('button', { name: 'Seitenleiste ein- und ausblenden' }).first()
+    await expect(umschalter, 'ohne Umschalter gibt es keinen Weg in die Hauptnavigation').toHaveCount(1)
+    await umschalter.click()
+    await expect(page.locator('nav[aria-label="Hauptnavigation"] a[href="/gesetze"]').first(),
+      'der Weg zurück zur Gesetzes-Übersicht fehlt in der Hauptnavigation').toBeVisible({ timeout: 15_000 })
+    await umschalter.click()
+
 
     await page.locator('[data-v3-panel-zaehler]').click()
     await expect(page.locator('[data-v3-panel]')).toBeVisible({ timeout: 20_000 })
     // Und mit offenem Blatt: genau eines, und zwar das des Blatts.
+    // ── §6.3-DEKLARATION (W2·24-R6c, 6.9.2026) · OHNE DAS ✕ DER REITER ──────
+    // Seit R2/D19 trägt jeder Reiter der Arbeitsleiste sein eigenes ✕ («Reiter
+    // «Art. 429 StPO» schliessen», in `[data-reiter-streifen]`). Das schliesst
+    // nicht den Leser oder sein Blatt, sondern das Register-Blatt, das ihn
+    // zeigt — ein anderes Objekt, ausdrücklich bestellt (David 6.9.2026, D19).
+    // Die Aussage dieses Falls — «mit offenem Blatt steht GENAU EIN ✕, und es
+    // gehört dem Blatt» — bleibt Wort für Wort dieselbe und würde jedes
+    // zurückkehrende Kopf-✕ unverändert melden.
     const kreuze = await page.evaluate(() => [...document.querySelectorAll('button')]
       .filter((b) => (b.textContent ?? '').trim() === '✕'
-        && b.getBoundingClientRect().width > 0)
+        && b.getBoundingClientRect().width > 0
+        && !b.closest('[data-reiter-streifen], nav[aria-label="Offene Reiter"]'))
       .map((b) => ({ name: b.getAttribute('aria-label') ?? '?', y: Math.round(b.getBoundingClientRect().y) })))
     expect(kreuze.length, `✕ @1440 mit offenem Blatt: ${JSON.stringify(kreuze)}`).toBe(1)
     expect(kreuze[0].name).toMatch(/Rechtsprechung und Kontext schliessen/)
@@ -734,19 +781,27 @@ test('H1 — beide Split-View-Panes tragen denselben V3-Kopf (Kürzel, Ansicht-�
   await expect(primaer.locator('[data-v3-kopf]')).toBeVisible()
   await expect(pane.locator('[data-v3-kopf]')).toBeVisible()
 
-  // Das Element-Inventar: Kürzel · Ansicht-Öffner · Rücksprung — in BEIDEN Panes.
+  // Das Element-Inventar: Kürzel · Ansicht-Öffner · Such-Zone — in BEIDEN Panes.
+  // §6.3-DEKLARATION D27/D28 (David 6.9.2026): der Rücksprung «‹ Gesetze» war
+  // bis 6.9. Teil dieses Inventars; er steht seither einmal in der
+  // Hauptnavigation (Prüfung unten). An seine Stelle tritt die Erlass-Suche —
+  // die ist mit D28 in JEDEM Pane im Kopf-Block, auch mit stehender Gliederung.
   for (const wurzel of [primaer, pane]) {
     const kopf = wurzel.locator('[data-v3-kopf]')
     await expect(kopf.locator('[data-v3-kopf-kuerzel]')).toBeVisible()
     await expect(kopf.locator('[data-v3-ansicht]')).toBeVisible()
-    // Ä46: der Weg zurück zur Übersicht, benannt statt als zweites ✕. Beide
-    // Panes liegen unter 900 px Elementbreite, tragen also die kurze Form.
-    const zurueck = kopf.locator('[data-v3-kopf-krume-kurz]')
-    await expect(zurueck).toBeVisible()
-    await expect(zurueck).toHaveAttribute('href', '/gesetze')
+    await expect(kopf.locator('[data-v3-such-zone] input')).toBeVisible()
+    // D27: keine Brotkrume, keine Lesestellung mehr in dieser Zeile.
+    await expect(kopf.locator('[data-v3-kopf-krume-kurz]')).toHaveCount(0)
+    await expect(kopf.locator('[data-v3-kopf-artikel]')).toHaveCount(0)
     // Und der V3-Kopf trägt hier kein ✕ mehr — sonst stünden wieder zwei.
     await expect(kopf.locator('[data-v3-kopf-schliessen]')).toHaveCount(0)
   }
+  // D27: der Weg zurück steht in der Hauptnavigation, die auf Leser-Seiten
+  // eingeklappt startet — der Umschalter in der Topbar ist der eine Griff dahin
+  // (Messung im Fall (b) dieser Datei).
+  await expect(page.getByRole('button', { name: 'Seitenleiste ein- und ausblenden' }).first())
+    .toHaveCount(1)
   // Und die Kürzel unterscheiden sich inhaltlich (zwei verschiedene Gesetze,
   // keine zufällige Doppelung, die den Vergleich entwerten würde).
   const kuerzelPrimaer = (await primaer.locator('[data-v3-kopf-kuerzel]').textContent())?.trim()

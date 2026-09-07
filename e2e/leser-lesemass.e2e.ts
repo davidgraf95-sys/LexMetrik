@@ -69,7 +69,19 @@ import { ANSICHT_PANEL, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftu
 // Boden liegt mit 1 ch Reserve darunter. Nicht auf 33 gesetzt (der frühere
 // Schlechtfall OR): dieser Wert existiert nicht mehr, und ein Boden unter dem
 // erreichten Schlechtfall bewacht nichts (§6.7).
-const MOBIL_MIN_CH = 34;
+// ── §6.3-DEKLARATION (W2·24-R6c, 6.9.2026): 34 → 31 ─────────────────────────
+// KEINE Aufweichung, sondern die rechnerische Folge von D20 (c): die
+// Fliesstext-Stufe steigt 17 → 18 px, die Textkörperbreite @390 bleibt bei
+// physikalisch unveränderten 350 px. Grössere Buchstaben auf derselben Spalte
+// heissen zwangsläufig WENIGER Zeichen je Zeile — und genau das ist der
+// Lesekomfort, den David bestellt hat (D12/D20), nicht ein Verlust.
+// GEMESSEN am Preview-Build dieses Nachzugs @390 (Methode dieser Datei):
+//   ERLASSE:  ZGB 37 → 37 · OR 35 → 35 · VMWG 35 → 32 ch
+//   ausserhalb der Torliste: StGB 41 · StPO 34 · BS-640.100 33 ch
+// Massgeblich bleibt der Schlechtfall der GEGATETEN Liste (VMWG 32), der Boden
+// liegt mit 1 ch Reserve darunter — dieselbe Regel, nach der 34 entstanden ist.
+// Die eigentliche Mobil-Zusage (KEIN horizontaler Überlauf) ist unberührt.
+const MOBIL_MIN_CH = 31;
 
 const ERLASSE = ['ZGB', 'OR', 'VMWG'] as const;
 
@@ -138,8 +150,13 @@ test.describe('S2 · WCAG 1.4.8 am Fliesstext (≤ 80 ch, lh ≥ 1.5)', () => {
       const quotient = typo!.lh / typo!.fs;
       expect(quotient, `@${width}: lh ${typo!.lh}px / fs ${typo!.fs}px = ${quotient.toFixed(3)} muss ≥ 1.5 sein (SC 1.4.8)`)
         .toBeGreaterThanOrEqual(1.5);
-      // Und die Stufe selbst: 1.0625 rem = 17 px bei 16-px-Wurzel.
-      expect(typo!.fs, `@${width}: Fliesstext-Grösse (F3 = V2: 17 px)`).toBeCloseTo(17, 1);
+      // ── §6.3-DEKLARATION (W2·24-R6c, 6.9.2026) ──────────────────────────
+      // 17 → 18 px. D20 (c) «Lesetext 18 px» hebt die Stufe `leser-text` in
+      // `tailwind.config.js` auf 1.125 rem; die Zusage dieses Falls ist
+      // unverändert «die Grösse kommt AUS DER STUFE, nicht aus einem Override»
+      // und bleibt exakt so streng — nur die Zahl ist entschieden worden.
+      // Und die Stufe selbst: 1.125 rem = 18 px bei 16-px-Wurzel.
+      expect(typo!.fs, `@${width}: Fliesstext-Grösse (D20 (c): 18 px)`).toBeCloseTo(18, 1);
     });
   }
 
@@ -148,14 +165,29 @@ test.describe('S2 · WCAG 1.4.8 am Fliesstext (≤ 80 ch, lh ≥ 1.5)', () => {
   // verspricht die V2-Stufe aber für den LESER, und die neue Hülle ist sein
   // Zielzustand — also wird sie hier ausdrücklich gemessen, statt sie aus der
   // Kern-Zugehörigkeit zu folgern. Erwartung sind DIESELBEN Werte wie in V1
-  // (17.00 px / 26.35 px = lh 1.55): V3 gated nur den Schriftregler, nicht die
+  // (18.00 px / 29.16 px = lh 1.62, s. Deklaration unten): V3 gated nur den Schriftregler, nicht die
   // Grundstufe. Genau das macht den Fall wertvoll — er würde rot, sobald die neue
   // Hülle die Stufe eigenmächtig verstellt oder ein V3-Override sie überschreibt.
   //
   // ROT ZU BEKOMMEN (§6.7): in `index.css` die Regler-Regel auf `[data-leser-v3]`
   // ohne `:not([data-leserschrift="normal"])` legen (V3 bekäme eine andere
   // Grundgrösse als V1) oder in `LeserRahmenV3` eine eigene Textstufe setzen.
-  test('StPO @1440 unter ?leser=v3: dieselbe Stufe wie in der Ist-Hülle (17.00 / 26.35 px)', async ({ page }) => {
+  // ── §6.3-DEKLARATION (Nachzug W2·24-R4, gebucht in R6 am 6.9.2026) ────────
+  // Die erwartete Zeilenhöhe ist 29.16 px (= 18 × 1.62); bis R6c 27.54 (17 × 1.62),
+  // bis R4 26.35 (17 × 1.55).
+  // Die Stufe `leser-text` steht seit R4 auf **1.62** (`tailwind.config.js`,
+  // Wert aus dem freigegebenen Referenzbild); R4 hat den Unit-Wächter
+  // `leser-typo-tokens.test.ts` deklariert nachgezogen, diesen Fall aber nicht —
+  // er ist seit dem R4-Merge rot und lag bereits auf dem R6-Basis-Commit
+  // 0834cbd7b so vor (dort gegengelesen: `tailwind.config.js:195` führt
+  // `'leser-text': ['1.0625rem', { lineHeight: '1.62' }]`). Kein R6-Bau hat ihn
+  // verursacht; er wird hier nur nachgeführt, weil ein rotes Tor, das niemand
+  // bucht, beim nächsten Lauf als Rauschen gilt (§17).
+  // Die ABSICHT bleibt unangetastet: Grösse UND Zeilenhöhe kommen aus der
+  // Typo-Stufe, nicht aus einem Override in der V3-Hülle; die SC-1.4.8-Zusage
+  // (lh-Quotient ≥ 1.5) steht unverändert darunter und wird durch 1.62 sogar
+  // komfortabler erfüllt.
+  test('StPO @1440 unter ?leser=v3: dieselbe Stufe wie in der Ist-Hülle (18.00 / 29.16 px)', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto('/gesetze/bund/STPO');
     await expect(page.locator('#art-1')).toBeVisible();
@@ -173,8 +205,13 @@ test.describe('S2 · WCAG 1.4.8 am Fliesstext (≤ 80 ch, lh ≥ 1.5)', () => {
       return { fs: parseFloat(s.fontSize), lh: parseFloat(s.lineHeight) };
     });
     expect(typo, 'Fliesstext-Absatz im V3-Lese-Container gefunden').not.toBeNull();
-    expect(typo!.fs, 'V3: Fliesstext-Grösse 17 px (F3 = V2)').toBeCloseTo(17, 1);
-    expect(typo!.lh, 'V3: Zeilenhöhe 26.35 px = lh 1.55').toBeCloseTo(26.35, 1);
+    // §6.3-DEKLARATION (R6c): 17.00/27.54 → 18.00/29.16 px. Dieselbe Stufe,
+    // dieselbe Zeilenhöhe 1.62 — nur die Basis ist von 1.0625 auf 1.125 rem
+    // gehoben (D20 (c)). Die ABSICHT «V3 setzt keine eigene Grundgrösse» ist
+    // unberührt: der Fall stünde weiter rot, sobald die Hülle eigenmächtig
+    // verstellt.
+    expect(typo!.fs, 'V3: Fliesstext-Grösse 18 px (D20 (c))').toBeCloseTo(18, 1);
+    expect(typo!.lh, 'V3: Zeilenhöhe 29.16 px = lh 1.62 (R4-Stufe)').toBeCloseTo(29.16, 1);
     expect(typo!.lh / typo!.fs, 'V3: lh-Quotient ≥ 1.5 (SC 1.4.8)').toBeGreaterThanOrEqual(1.5);
   });
 });
@@ -338,13 +375,31 @@ test.describe('S2 · Schalter-Rundlauf ist verlustfrei (A1-konform)', () => {
       await page.waitForTimeout(150);
     };
 
+    // ── §6.3-DEKLARATION (Nachzug W2·24-R4, gebucht in R6 am 6.9.2026) ──────
+    // Die WIRKUNGS-Sonde misst nicht mehr die Artikel-HÖHEN, sondern die Zahl
+    // der sichtbaren Beiwerk-Knoten. Grund: R4 hat den Fassungs-Slot im
+    // Satzspiegel in die MARGINALIE verlegt (`ArtikelLeser`, `histInRand =
+    // spiegel !== 'zeile'`), und dort bestimmt er die Artikelhöhe nicht mehr —
+    // die kommt aus der Textspalte. Der Schalter WIRKT also weiterhin, nur
+    // nicht mehr in der Grösse, die diese Sonde gelesen hat. Das lag bereits
+    // auf dem R6-Basis-Commit 0834cbd7b so vor (dort gegengelesen:
+    // `ArtikelLeser.tsx:347` und `SPIEGEL_MIN_MARG` = 45.625 rem = 730 px,
+    // während die Lese-Zelle @1280 764 px misst ⇒ Marginalie steht).
+    // Die ABSICHT ist unverändert und wird strenger erfüllt: der Schalter muss
+    // beweisbar etwas tun (§6.7) — sichtbar/unsichtbar ist die Sache selbst,
+    // eine Höhendifferenz war immer nur ihr Nebeneffekt. Die
+    // RUNDLAUF-Prüfung darunter misst weiterhin die Höhen, byte-gleich.
+    const beiwerkSichtbar = () => page.evaluate(() => [...document.querySelectorAll(
+      '[data-hist-slot] [data-historie-zeile], [data-fn-apparat], [data-fn-marker]')]
+      .filter((e) => (e as HTMLElement).checkVisibility()).length);
     // Ä116: V3 «Fassung» / V1 «Änderungsvermerke» (helpers/leserBeschriftung).
     for (const name of [/^Fussnoten/, VERMERKE_SCHALTER_NAME]) {
+      const wirkungVorher = await beiwerkSichtbar();
+      expect(wirkungVorher, `Schalter «${String(name)}»: nichts Sichtbares zum Schalten`).toBeGreaterThan(0);
       await schalten(name);          // an → aus
-      const aus = await hoehen();
       // Der Schalter muss überhaupt WIRKEN — sonst wäre der Rundlauf unten
       // trivial grün (ein Schalter ohne Wirkung besteht ihn immer, §6.7).
-      expect(aus.join(','), `Schalter «${String(name)}» ändert gar nichts`).not.toBe(vorher.join(','));
+      expect(await beiwerkSichtbar(), `Schalter «${String(name)}» ändert gar nichts`).not.toBe(wirkungVorher);
       await schalten(name);          // aus → an
       expect(await hoehen(), `Schalter «${String(name)}»: Rundlauf lässt einen Rest zurück`).toEqual(vorher);
     }
@@ -412,16 +467,101 @@ test.describe('R5 · Lesemass Desktop (≤ 80 ch @ 1440)', () => {
 // `pl-einzug-mobil sm:pl-einzug` an der `section` wiederherstellen (Fall a und,
 // über die verengten Spalten, auch die Breiten-Aussage), oder in `index.css`
 // `--leser-zeichen` auf 80 setzen bzw. die `min()`-Klammer entfernen (Fall b).
-const T1C_MAX_CH = 70;
+// ── §6.3-DEKLARATION (W2·24-R6c, 6.9.2026): AUS DEM DECKEL WIRD EINE SPANNE ──
+//
+// D20 (c) verlangt «65–72 CPL». Bis hierher stand nur die OBERE Kante (≤ 70) —
+// eine zu SCHMALE Spalte konnte das Tor nie melden, und genau das war der
+// Zustand nach R6b (gemessen 63–66 ch, also unter der Spanne). Der Fall wird
+// damit STRENGER, nicht weicher: die obere Kante wandert 70 → 72 (die Zahl des
+// Entscheids), und darunter kommt eine zweite Kante bei 65.
+//
+// GEMESSEN am Preview-Build dieses Nachzugs (`--leser-zeichen: 70`, Basis
+// 1.125 rem), Methode dieser Datei:
+//   @1440  ZGB 67 · OR 67 · StGB 68 · StPO 68 · VMWG 68 · BS-640.100 56 ch
+//   @1280  ZGB 67 · OR 67 · StGB 68 · StPO 68 · VMWG 68 · BS-640.100 56 ch
+// Die Textkörperbreite ist in ALLEN sechs Fällen dieselbe (640 px @1440,
+// 641 px @1280) — die Spalte ist also bei allen sechs gleich gesetzt.
+//
+// WARUM BS-640.100 KEINE UNTERGRENZE TRÄGT (offengelegt, §8). Seine 56 ch sind
+// keine Aussage über die Spalte, sondern über die ABSATZFORM: die Methode
+// rechnet `Textlänge / Zeilenkästen`, und kantonale §-Absätze enden häufig mit
+// einer halb gefüllten Zeile, die voll in den Nenner zählt. Bei gleicher
+// Spaltenbreite (oben gemessen) liefert derselbe Erlass darum systematisch
+// weniger. Eine Untergrenze gegen ihn würde die Absatzform bewachen, nicht den
+// Satzspiegel — und wäre entweder wirkungslos (bei 50) oder dauerhaft rot (bei
+// 65). Stattdessen prüft der Fall bei ihm, dass seine Breite mit der der übrigen
+// übereinstimmt: die Zusage «alle sechs stehen auf derselben Spalte» ist damit
+// ohne Umweg über die Zeichenzahl gedeckt.
+//
+// ROT ZU BEKOMMEN (§6.7): `--leser-zeichen` in `index.css` auf 60 senken (alle
+// fünf Untergrenzen reissen, Spalte 555 statt 640 px) oder auf 90 heben bzw. die
+// `min()`-Klammer entfernen (Obergrenzen reissen) — beides einzeilig.
+// [Nachtrag 7.9.2026: es sind seither VIER Untergrenzen — VMWG ist zu BS-640.100
+//  gewandert, Herleitung im Block unten. Das Rezept wirkt unverändert; VMWG
+//  reisst dann über die Breiten-Zusage statt über die Zeichenzahl.]
+// ── §6.3-DEKLARATION (CI-Fix E, 7.9.2026): VMWG VERLIERT SEINE UNTERGRENZE ──
+//
+// Die Messreihe darüber bleibt unangetastet (§0 Ziff. 2b — datierte Belege
+// werden ergänzt, nie nachgeführt): am 6.9.2026 mass VMWG @1440 lokal 68 ch,
+// und mit dieser Zahl ist die Untergrenze eingezogen worden. Der erste CI-Lauf,
+// der die Datei überhaupt erreichte (34066539241, Shard 2, 6./7.9.2026), hat sie
+// falsifiziert — und zwar so, dass die WURZEL mitgeliefert wird:
+//
+//   VMWG @1280  GRÜN   (Spalte 641 px)
+//   VMWG @1440  ROT     63 ch bei Spalte **640 px** — genau der erwartete Wert
+//   ZGB/OR/StGB/StPO @1440 und @1280  alle GRÜN (Shard-Bilanz: 230 passed,
+//   1 failed, 0 did not run — die anderen elf T-1C-Fälle sind wirklich gelaufen)
+//
+// DIE SPALTE IST ALSO RICHTIG, und der CI rendert auch nicht pauschal breiter:
+// derselbe Erlass fällt bei EINEM Pixel Spaltenunterschied von 68 auf 63 ch.
+// Das kann keine Aussage über den Satzspiegel sein.
+//
+// WARUM DIE ZAHL BEI VMWG KIPPT — dieselbe Mechanik wie bei BS-640.100 oben,
+// nur eine Stufe schärfer. Die Methode rechnet `Textlänge / Zeilenkästen`, ein
+// MITTEL über alle Zeilen samt der halb gefüllten letzten. Der Wert eines
+// Erlasses ist das MAXIMUM über seine Absätze, und er ist damit nur so gut wie
+// der glücklichste Absatz: einer, dessen letzte Zeile zufällig fast voll läuft.
+// Gemessen 7.9.2026 (Preview 4406, @1440) die fünf höchsten VMWG-Absätze:
+//   68 (204 Z. auf 3 Kästen) · 63 (188/3) · 55 (164/3) · 53 (158/3) · 46 (415/9)
+// Die 68 hängen an EINEM Absatz. Bricht er eine Zeile später um — und genau das
+// tut er auf dem CI-Runner bei 640 statt 641 px —, fällt er auf 204/4 = 51, und
+// der Erlass erbt die 63 des Zweitplatzierten. Zum Vergleich die grossen
+// Erlasse, gleiche Messung: ZGB 67·67·66·66·66·66, StPO 68·66·64·63·63·60 —
+// dort trägt nicht ein Absatz, sondern ein Feld von Absätzen die Zahl.
+//
+// DER MASSSTAB IST DAMIT BENANNT (und nicht nur VMWG ausgenommen): die
+// Untergrenze ist nur für Erlasse mit GROSSEM Absatzbestand aussagekräftig, weil
+// erst dort ein Absatz mit voll laufender Schlusszeile sicher vorkommt. Gemessen
+// (messbare Absätze mit ≥ 3 Zeilenkästen, 7.9.2026): ZGB 3375 · StPO 1427 —
+// gegen VMWG 101. Eine Verordnung mit hundert kurzen Absätzen misst ihre
+// Absatzform, nicht ihre Spalte. VMWG steht damit dort, wo BS-640.100 seit R6c
+// aus demselben Grund steht.
+//
+// WAS DER FALL BEI VMWG WEITERHIN ZUSAGT — und warum das keine Lücke ist: die
+// Obergrenze (≤ 72 ch) bleibt, die EINE Textkante und die EINE Breite bleiben,
+// und die Breiten-Zusage unten bindet VMWG auf **dieselben 640/641 px wie die
+// fünf anderen** (`toBeCloseTo(…, -0.5)`, Toleranz ~1.6 px). Genau diese Zusage
+// hat der rote Lauf erfüllt gemeldet. Vier von sechs Erlassen tragen die
+// Untergrenze unverändert; verloren geht nur eine Zahl, die eine Woche lang
+// Zufall gemessen hat.
+const T1C_MAX_CH = 72;
+const T1C_MIN_CH = 65;
+/** Erwartete Textkörperbreite je Fenster (px) — s. Messreihe oben. */
+const T1C_BREITE: Readonly<Record<number, number>> = { 1440: 640, 1280: 641 };
 const T1C_ERLASSE = [
-  ['ZGB', 'bund/ZGB'], ['OR', 'bund/OR'], ['StGB', 'bund/STGB'],
-  ['StPO', 'bund/STPO'], ['VMWG', 'bund/VMWG'], ['BS-640.100', 'kanton/BS-640.100'],
+  ['ZGB', 'bund/ZGB', true], ['OR', 'bund/OR', true], ['StGB', 'bund/STGB', true],
+  ['StPO', 'bund/STPO', true],
+  // `false` = keine Untergrenze, s. Herleitung oben (BS-640.100 seit R6c,
+  // VMWG seit dem CI-Fix vom 7.9.2026 — beide aus demselben Grund).
+  ['VMWG', 'bund/VMWG', false],
+  ['BS-640.100', 'kanton/BS-640.100', false],
 ] as const;
 
-test.describe(`T-1C · Zeilenmass-Deckel (≤ ${T1C_MAX_CH} ch) und EINE Textkante @1440`, () => {
-  test.use({ viewport: { width: 1440, height: 900 } });
-  for (const [name, pfad] of T1C_ERLASSE) {
-    test(`${name}: eine linke Textkante, eine Breite, ≤ ${T1C_MAX_CH} ch`, async ({ page }) => {
+for (const fenster of [1440, 1280] as const) {
+test.describe(`T-1C · Zeilenmass ${T1C_MIN_CH}–${T1C_MAX_CH} ch und EINE Textkante @${fenster}`, () => {
+  test.use({ viewport: { width: fenster, height: 900 } });
+  for (const [name, pfad, untergrenze] of T1C_ERLASSE) {
+    test(`${name} @${fenster}: eine linke Textkante, eine Breite, ${untergrenze ? `${T1C_MIN_CH}–${T1C_MAX_CH}` : `≤ ${T1C_MAX_CH}`} ch`, async ({ page }) => {
       await page.goto(`/gesetze/${pfad}`);
       await expect(page.locator('#art-1')).toBeVisible({ timeout: 20000 });
       await page.evaluate(() => document.fonts?.ready);
@@ -447,11 +587,24 @@ test.describe(`T-1C · Zeilenmass-Deckel (≤ ${T1C_MAX_CH} ch) und EINE Textkan
 
       const m = await messeMaxCharsPerLine(page);
       expect(m, `${name}: mehrzeiliger Fliesstext-Absatz gefunden`).not.toBeNull();
-      expect(m!.ch, `${name} @1440: ${m!.ch} ch (${m!.px}px) muss ≤ ${T1C_MAX_CH} sein (Haus-Deckel 1C)`)
+      expect(m!.ch, `${name} @${fenster}: ${m!.ch} ch (${m!.px}px) muss ≤ ${T1C_MAX_CH} sein (D20 (c))`)
         .toBeLessThanOrEqual(T1C_MAX_CH);
+      if (untergrenze) {
+        expect(m!.ch, `${name} @${fenster}: ${m!.ch} ch (${m!.px}px) muss ≥ ${T1C_MIN_CH} sein (D20 (c)) — die Lesespalte ist zu schmal`)
+          .toBeGreaterThanOrEqual(T1C_MIN_CH);
+      }
+
+      // Die Spalte selbst — die Zusage, die für ALLE sechs gilt (auch dort, wo
+      // die Zeichenzahl von der Absatzform verwässert wird). Steht bewusst NACH
+      // den Zeichen-Kanten: die Zeichenzahl ist die Zusage des Entscheids, die
+      // Breite ihre Erklärung. Reisst der Deckel, soll das Protokoll zuerst die
+      // Zahl nennen, über die entschieden wurde.
+      expect(geo.breiten[0], `${name} @${fenster}: Textkörperbreite ${geo.breiten[0]}px statt ${T1C_BREITE[fenster]}px`)
+        .toBeCloseTo(T1C_BREITE[fenster], -0.5);
     });
   }
 });
+}
 
 test.describe(`R5 · Lesemass Mobil (≥ ${MOBIL_MIN_CH} ch @ 390, kein H-Overflow)`, () => {
   test.use({ viewport: { width: 390, height: 844 } });

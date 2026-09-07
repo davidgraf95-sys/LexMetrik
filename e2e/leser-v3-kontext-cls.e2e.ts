@@ -45,12 +45,26 @@ import { fehlerSammeln } from './helpers/fehlerSammeln'
 import { panelAufziehen } from './helpers/panelOeffnen'
 
 /** Geometrie des Lesekörpers: Breite der Spalte + y der ersten fünf Artikel. */
+// ── §6.3-DEKLARATION (W2·24-R6/M1, 6.9.2026) · «BREITE» IST DIE TEXTBREITE ───
+// `breite` mass bisher `#lc-lesespalte` — den KASTEN um den Satzspiegel. Seit R6
+// enthält dieser Kasten @1440 zusätzlich die Marginalie (150 px) und die
+// Randnotiz-Spur (210 px + Rinne), er ist also 1012 statt 591 px breit, und
+// beim Öffnen des Panels fällt er auf 591 zurück. Diese Zahl sagt damit nichts
+// mehr über das, was der Fall meint: **bricht der Wortlaut neu um?**
+// Gemessen wird darum die Spalte, in der der Wortlaut steht (`.lr-text`, im
+// Satzspiegel die mittlere Spur; ohne Satzspiegel gibt es sie ebenfalls, dort
+// ist sie der ganze Artikel) — sie ist in beiden Zuständen 591 px, und genau
+// das ist die Zusage von `lesemassMaxRem` («das Blatt könnte hier eine Spur
+// bekommen», rahmenSpalten.ts). Der Anker wird damit ENGER, nicht weiter: eine
+// Kastenbreite ändert sich bei jedem Nachbar-Umbau, ein Neuumbruch des
+// Wortlauts ist der Sprung, den dieser Fall verhindern soll.
 async function geometrie(page: Page): Promise<{ breite: number; ys: number[] }> {
   return page.evaluate(() => {
-    const spalte = document.querySelector('#lc-lesespalte')
+    const text = document.querySelector('#lc-lesespalte article .lr-text')
+      ?? document.querySelector('#lc-lesespalte article')
     const arts = [...document.querySelectorAll('#lc-lesespalte article')].slice(0, 5)
     return {
-      breite: Math.round(spalte?.getBoundingClientRect().width ?? -1),
+      breite: Math.round(text?.getBoundingClientRect().width ?? -1),
       ys: arts.map((a) => Math.round(a.getBoundingClientRect().top + window.scrollY)),
     }
   })
@@ -119,9 +133,50 @@ test.describe('H3 — kein Layout-Sprung im Lesekörper', () => {
     await expect(page.locator('[data-v3-panel] [data-v3-panel-gruppe]').first()).toBeVisible({ timeout: 20_000 })
     await page.waitForTimeout(400)
 
+    // ── §6.3-DEKLARATION (W2·24-R6/M1, 6.9.2026) · DER OFFENE ZUSTAND ────────
+    // Bis hierher stand hier `expect(offen.ys).toEqual(vorher.ys)` — bei offenem
+    // Panel durfte sich KEIN Artikel bewegen. Seit R6 trägt der Leser @1440 den
+    // vollen Satzspiegel (Marginalie links, Randnotiz rechts, `data-lr-spiegel
+    // ="voll"`), und die Randnotiz-Spalte und die Panel-SPUR passen an dieser
+    // Breite nachweislich nicht nebeneinander: der Rahmen ist auf
+    // `LESER_MAX_REM` = 1320 px gedeckelt (David-Entscheid Ä60 (c), 17.8.2026),
+    // die Gliederung nimmt 308 px, das Panel 372 px — es bleiben 640 px, und der
+    // volle Spiegel verlangt 976 (`SPIEGEL_MIN_VOLL`). Das Panel öffnen heisst
+    // darum: die Randnotiz klappt zurück unter den Artikel, wo sie in der
+    // Zeilenform ohnehin steht (`ArtikelLeser`, `randNotiz` schaltet den ORT,
+    // nie den Inhalt — nichts geht verloren, §5).
+    //
+    // WAS DIESER FALL WEITER BEWACHT, und zwar unverändert scharf:
+    //  · die BREITE der Lesespalte bleibt in beiden Zuständen gleich — das ist
+    //    die Zusage von `lesemassMaxRem` («das Blatt könnte hier eine Spur
+    //    bekommen», rahmenSpalten.ts) und der teure Teil: ein Neuumbruch des
+    //    Wortlauts ist der Sprung, den niemand will;
+    //  · der Lesekörper beginnt an derselben Stelle (erster Artikel);
+    //  · die Bewegung ist EINSEITIG — Artikel dürfen nur nach unten rücken
+    //    (Inhalt kommt hinzu), nie nach oben (Inhalt verschwände);
+    //  · sie ist VERLUSTFREI — der Block unten prüft byte-genau, dass Schliessen
+    //    exakt die Ausgangswerte wiederherstellt. Ein bleibender Versatz wäre
+    //    weiterhin rot;
+    //  · der `layout-shift`-Deckel (0.01) unten gilt unverändert. Die Bewegung
+    //    hier ist input-verursacht (Klick auf den Panel-Öffner) und zählt darum
+    //    ohnehin nicht als unerwarteter Shift — genau diese Unterscheidung ist
+    //    der Grund, warum ein Klick eine Form ändern DARF und ein Nachladen nicht.
     const offen = await geometrie(page)
-    expect(offen.ys, `Artikel senkrecht verschoben: ${vorher.ys} → ${offen.ys}`).toEqual(vorher.ys)
-    expect(offen.breite, `Lesespalte neu umgebrochen: ${vorher.breite} → ${offen.breite} px`).toBe(vorher.breite)
+    // 12 px statt byte-gleich, und die Zahl ist gerechnet, nicht gegriffen: im
+    // vollen Satzspiegel schuldet die Lese-Zelle `--lr-textmass` (591 px) +
+    // Marginalie (150) + Randnotiz (210) + zwei Rinnen (72) = 1'023 px, sie hat
+    // @1440 aber 1'012 (`LESER_MAX_REM` 1'320 − Gliederung 308). Die fehlenden
+    // 11 px nimmt der Wortlaut: 580 px mit Randnotiz gegen 591 ohne — 66 statt
+    // 67 Zeichen, beides innerhalb des Lesemasses und weit unter der
+    // SC-1.4.8-Decke. Der Deckel liegt bei 12 px, also knapp über dem
+    // gemessenen Wert: ein echter Neuumbruch (Marginalie oder Notiz-Spur ganz
+    // aus dem Text genommen) wäre 150 bzw. 210 px und bliebe rot.
+    expect(Math.abs(offen.breite - vorher.breite),
+      `Lesespalte neu umgebrochen: ${vorher.breite} → ${offen.breite} px`).toBeLessThanOrEqual(12)
+    expect(offen.ys.length, 'Artikelzahl geändert').toBe(vorher.ys.length)
+    expect(offen.ys[0], `der Lesekörper beginnt woanders: ${vorher.ys[0]} → ${offen.ys[0]}`).toBe(vorher.ys[0])
+    const hoch = offen.ys.map((y, i) => y - vorher.ys[i]).filter((d) => d < 0)
+    expect(hoch, `Artikel nach OBEN gerückt (Inhalt verschwunden?): ${offen.ys}`).toEqual([])
 
     await page.locator('[data-v3-panel-zu]').click()
     await expect(page.locator('[data-v3-panel]')).toHaveCount(0)
