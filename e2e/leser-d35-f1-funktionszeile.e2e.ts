@@ -89,7 +89,7 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     // Zähler ↔ Liste ist damit sofort und ohne Wartefenster messbar.
     const griffG = page.locator(`#art-${ART_G} .lr7-bez-marke[data-reg="g"]`);
     await expect(griffG, 'ZPO 271 führt keine Verweis-Rubrik mehr').toHaveCount(1);
-    const zahl = Number(/(\d+)/.exec((await griffG.innerText()).replace(/ /g, ' '))![1]);
+    const zahl = Number(/(\d+)/.exec((await griffG.innerText()).replace(/\u00A0/g, ' '))![1]);
     await griffG.click();
 
     // (b) GENAU EINE Rubrik offen — die geklickte.
