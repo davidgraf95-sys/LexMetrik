@@ -31,6 +31,30 @@
 // ROT ZU BEKOMMEN (§6.7): in `src/index.css` den Block «TEXTLINKS IM LESER»
 // entfernen — Fall (b) reisst sofort mit den Bezüge-Links. Belegt am
 // 6.9.2026 im Bau von R6c.
+//
+// ── (b) GRIFF BIS ZUM 7.9.2026 AM FALSCHEN ELEMENT ──────────────────────────
+// Der Absatz darüber bleibt stehen, wie er am 6.9. geschrieben wurde — er
+// beschreibt den damaligen Stand richtig (§0 Ziff. 2b). Seit D30 stimmt seine
+// STELLE nicht mehr:
+//   GEMESSEN 7.9.2026 (Preview 4410, `/gesetze/bund/OR#art-336_c` @1440,
+//   Bezüge-Zeile aufgeklappt): 9 Links in `.lr7-bez`, davon 8 im Block
+//   `data-reg="r"` mit `class="lc-chip lc-chip-entscheid num no-underline"`
+//   («BGE 152 III 23★» usw.) und `text-decoration-line: none`. Der erste
+//   `a[href]` der Zone — und damit das, was (b) mass — war also ein CHIP.
+// Chips sind die im Kopf dieser Datei AUSDRÜCKLICH erklärte Ausnahme: ihre
+// Affordanz ist die Kante, nicht die Farbe (WCAG 1.4.1 verlangt ein
+// nicht-farbliches Merkmal, keinen Unterstrich im Besonderen). (b) verlangte
+// von ihnen einen Strich, den (a) ihnen im selben Atemzug erlässt — der Fall
+// widersprach sich selbst, sobald D30 die Entscheide als Chips in die Zone
+// stellte (Reihenfolge der Blöcke: r · m · g · w).
+// KEINE LOCKERUNG: (b) wählt jetzt denselben Ausschluss wie (a) und misst den
+// ersten TEXTLINK der Zone. Für OR 336c ist das genau einer — der
+// Rechnen-Eintrag «Kündigung & Fristen im Arbeitsverhältnis» (Block
+// `data-reg="w"`), gemessen `underline`. Bleibt die Zone ohne Textlink, wird
+// `bezugDa` rot; der Leer-Treffer-Schutz ist also schärfer als vorher, nicht
+// weicher.
+// ROT ZU BEKOMMEN (dieselbe Zeile wie oben): den `index.css`-Block entfernen —
+// der Rechnen-Eintrag verliert seinen Strich, (b) reisst.
 import { test, expect } from '@playwright/test';
 
 const ORT = '/gesetze/bund/OR#art-336_c';
@@ -63,8 +87,12 @@ test.describe('P3 · Links im Gesetzesleser', () => {
         if (/(^|\s)no-underline(\s|$)/.test(c) || a.closest('.lc-chip, .lc-btn-mini')) return;
         if (nackt.length < 12) nackt.push(`${(a.textContent ?? '').trim().slice(0, 40)} [${c.slice(0, 60)}]`);
       });
-      // (b) die benannten Textlinks
-      const bezug = document.querySelector('#art-336_c .lr7-bez a[href]');
+      // (b) die benannten Textlinks — mit DEMSELBEN Ausschluss wie (a):
+      // Chip und Mini-Knopf sind erklärte Ausnahmen, an ihnen ist ein
+      // fehlender Strich kein Befund (Herleitung im Kopf, 7.9.2026).
+      const istText = (a: Element) => !/(^|\s)no-underline(\s|$)/.test(String(a.className))
+        && !a.closest('.lc-chip, .lc-btn-mini');
+      const bezug = [...document.querySelectorAll('#art-336_c .lr7-bez a[href]')].find(istText);
       const kopf = [...document.querySelectorAll('.lc-leser a[href]')]
         .find((a) => /Amtliche Fassung/.test(a.textContent ?? '') && !a.closest('.lc-chip, .lc-btn-mini'));
       const strich = (el: Element | null | undefined) =>
@@ -78,7 +106,7 @@ test.describe('P3 · Links im Gesetzesleser', () => {
     expect(mess.nackt, `Links ohne Unterstrich und ohne erklärte Ausnahme:\n${mess.nackt.join('\n')}`)
       .toEqual([]);
     // (b) — ohne diese Hälfte wäre (a) mit `no-underline` überall erfüllbar.
-    expect(mess.bezugDa, 'kein Link in der Bezüge-Zeile von OR 336c gefunden — der Positiv-Fall misst nichts').toBe(true);
+    expect(mess.bezugDa, 'kein TEXTLINK in der Bezüge-Zeile von OR 336c gefunden (nur Chips?) — der Positiv-Fall misst nichts').toBe(true);
     expect(mess.bezugStrich, 'die Links der Bezüge-Zeile stehen wieder ohne Unterstrich').toBe(true);
     expect(mess.kopfDa, 'kein Fedlex-Textlink gefunden — der Positiv-Fall misst nichts').toBe(true);
     expect(mess.kopfStrich, '«Amtliche Fassung ↗» steht wieder ohne Unterstrich').toBe(true);
