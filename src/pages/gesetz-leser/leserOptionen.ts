@@ -83,9 +83,10 @@ type ZweiWert = 'an' | 'aus';
  * Die Buchstaben sind DIESELBEN wie das `data-reg` der Funktionszeile
  * (`parts/BezuegeKopf.tsx`, Registerfarben r/m/g/w) — eine Rubrik, ein
  * Buchstabe, an beiden Enden derselbe (§5). `a` ist die Aktionsgruppe rechts
- * («Zitat · Link · Amtliche Fassung ↗ · ⧉ Artikel daneben»,
- * `parts/ArtikelAktionen.tsx`); sie hat keine Registerfarbe, aber dieselbe
- * Frage «steht das an meinem Artikel?».
+ * («Zitat · Link · Amtliche Fassung ↗», `parts/ArtikelAktionen.tsx` — eine
+ * vierte Aktion «⧉ Artikel daneben» ist mit D44, David 7.9.2026, ersatzlos
+ * gestrichen); sie hat keine Registerfarbe, aber dieselbe Frage «steht das
+ * an meinem Artikel?».
  *
  * EIN Attribut statt fuenf: `data-fuss-aus` traegt die ABGEWAEHLTEN Buchstaben,
  * und weil jeder Buchstabe genau einmal vorkommt, ist `[data-fuss-aus*="r"]`

@@ -8,7 +8,10 @@ import { useState, type ReactNode } from 'react';
 // die Rubriken dieses Artikels mit ihren Zahlen und RECHTS seine Aktionen:
 //
 //     Bezüge  11 Entscheide › · 2 Materialien › · 6 Verweise › · 1 Rechner ›
-//                             Zitat · Link · Amtliche Fassung ↗ · ⧉ Artikel daneben
+//                             Zitat · Link · Amtliche Fassung ↗
+//
+// (D44, David 7.9.2026: die vierte Aktion «⧉ Artikel daneben» ist ersatzlos
+// gestrichen — Herleitung in `./ArtikelAktionen.tsx`.)
 //
 // DREI ÄNDERUNGEN GEGENÜBER D34, jede mit eigenem Grund:
 //

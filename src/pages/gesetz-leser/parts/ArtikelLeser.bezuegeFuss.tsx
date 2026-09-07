@@ -46,9 +46,11 @@ import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen
 // klick aufklappbar sein». Diese Datei RECHNET die Zahlen und liefert je Rubrik
 // den Inhalt, den ihr Griff aufklappt; die Zeile selbst (Griffe, Zustand,
 // Aktions-Slot) steht in `./BezuegeKopf.tsx`. Neu ist der Slot `aktionen`: die
-// Artikel-Aktionen «Zitat · Link · Amtliche Fassung ↗ · ⧉ Artikel daneben»
-// stehen seither RECHTS in derselben Zeile und dauerhaft sichtbar, statt in der
-// Artikel-Kopfzeile unter `opacity-0` (Herleitung in `./ArtikelAktionen.tsx`).
+// Artikel-Aktionen «Zitat · Link · Amtliche Fassung ↗» stehen seither RECHTS
+// in derselben Zeile und dauerhaft sichtbar, statt in der Artikel-Kopfzeile
+// unter `opacity-0` (Herleitung in `./ArtikelAktionen.tsx`; eine vierte
+// Aktion «⧉ Artikel daneben» stand hier testweise und ist mit D44, David
+// 7.9.2026, ersatzlos gestrichen).
 //
 // Der D34-Satz über das geschlossene `<details>` gilt für seinen Stand
 // unverändert weiter (§2b) — der Bau ist seit D35-F1 noch strenger: eine
