@@ -235,7 +235,14 @@ export function LeserKopf({
             // und ein langes Kantons-Kürzel (ZH-211.11) kürzt dort. Der volle
             // Name steht zwei Zeilen tiefer im Erlass-Kopf; der `title` gibt
             // ihn am Griff selbst her, statt ihn zu verschweigen.
-            title={suchInZeile ? erlass.kuerzel : undefined}>{erlass.kuerzel}</span>
+            // R8 (7.9.2026): der `title` hing an `suchInZeile` — die Kennung
+            // kappt aber in JEDEM `min-w-0 truncate`-Zweig. Gemessen auf
+            // /gesetze/kanton/ZH-211.11 @320: 132 von 276 px sichtbar
+            // («Gebuehrenverordnung des Obergerichts (GebV OG)»), der Rest war
+            // ohne Suchzeile nirgends abrufbar. Jetzt traegt ihn jeder Zweig,
+            // der kappen kann; nur der `shrink-0`-Zweig (voller Name steht
+            // daneben) braucht ihn nicht.
+            title={el.volltitel && zeigeVolltitel(erlass) && !suchInZeile ? undefined : erlass.kuerzel}>{erlass.kuerzel}</span>
         </div>
           {/* D32: der Griff endet über der GLIEDERUNG, nicht über dem Text —
               darum die Spur-Lücke als rechtes Polster (`--leser-spur-abstand`,

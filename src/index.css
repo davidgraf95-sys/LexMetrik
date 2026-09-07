@@ -666,6 +666,21 @@
        da, weil er den Zweck der +57.6 KB Nutzlast benennt — ohne die Achse
        waere die Zeile wirkungslos, ohne die Zeile die Achse unbelegt. */
     font-optical-sizing: auto;
+    /* ── R8 «Nichts abgeschnitten» (7.9.2026) · DIE UNTERGRENZE, DIE NIE STOERT ──
+       `overflow-wrap: break-word` greift AUSSCHLIESSLICH dann, wenn ein Wort
+       sonst aus seinem Kasten liefe — Text, der passt, bricht damit keinen
+       Deut anders. Genau deshalb darf die Regel global stehen: sie kann kein
+       bestehendes Satzbild veraendern, nur einen Ueberlauf verhindern.
+       Anlass: der R8-Sweep fand denselben Defekt in einem Dutzend Komponenten
+       @320 — Kartentitel, Beschreibungsabsaetze, Etiketten, Vorschau-Kaesten.
+       Das einzeln zu flicken hiesse, ihn beim naechsten neuen Baustein wieder
+       zu bauen (§10); als Hausregel ist er ein fuer alle Mal weg.
+       ABGRENZUNG zu `.lc-wortumbruch`: dort kommt `hyphens: auto` DAZU, das die
+       Trennung an die Silbengrenze legt und damit das Satzbild sehr wohl
+       veraendert. Diese schoenere Fassung bleibt bewusst opt-in an den geteilten
+       Bausteinen und wird NICHT global gesetzt — der Normtext-Satzspiegel
+       gehoert nicht pauschal umgehaengt (§1/§7). */
+    overflow-wrap: break-word;
   }
   /* D12: LESETEXT-GEWICHT. Serifen wirken am Bildschirm bei 400 duenner als im
      Druck; die Recherche (6.9.2026) nennt 450–500 fuer Bildschirm-Langlesetext.
