@@ -193,7 +193,6 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
       {offen && (
         <div
           ref={panelRef}
-          id={panelId}
           tabIndex={-1}
           onKeyDown={menueTastenFahrt}  /* D4, s. `./menueTasten` */
           data-v3-ansicht-panel
@@ -211,8 +210,9 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
           {/* D4 · DIE ROLLE SITZT INNEN: auf der ganzen Fläche meldete axe
               critical `aria-required-children` («span[aria-live]» = die
               Prozent-Anzeige des Reglers). PREIS (§8): «Entscheide & Kontext …»
-              steht seither ÜBER dem Steller — sie gehört ins Menü, er nicht. */}
-          <div role="menu" aria-label="Ansicht" data-v3-ansicht-menue className="flex flex-col">
+              steht seither ÜBER dem Steller. `aria-controls` des Öffners zeigt
+              auf DIESEN Block — er trägt Rolle und Namen (A4-Sonde). */}
+          <div id={panelId} role="menu" aria-label="Ansicht" data-v3-ansicht-menue className="flex flex-col">
           <V3Switch
             an={opt.fussnoten === 'an'}
             label="Fussnoten"

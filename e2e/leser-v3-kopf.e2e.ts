@@ -28,7 +28,7 @@
 // Beleg: bibliothek/betrieb/testapparat-fang-historie-2026-08-31.md §1.
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
-import { ANSICHT_PANEL, VERMERKE_SCHALTER_NAME, RECHTSPRECHUNG_SCHALTER_NAME } from './helpers/leserBeschriftung'
+import { ANSICHT_PANEL, SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME, RECHTSPRECHUNG_SCHALTER_NAME } from './helpers/leserBeschriftung'
 import { DROSSEL, REAKTIONS_BUDGET, REAKTIONS_LATTE, CONTAINER_BUDGET_CI, CONTAINER_LOKAL_READER } from './helpers/budgets'
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -357,7 +357,7 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
     // «Rechtsprechung im Text» war eine Zusage, die V3 nicht einlöst (0
     // Bezugs-Zeilen im Lesetext, gemessen). Wortlaut-Herleitung in
     // `v3/LeserAnsichtV3.tsx`.
-    await page.getByRole('switch', { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
+    await page.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
     await page.keyboard.press('Escape')
     await expect(page.locator('[data-v3-panel-zaehler]')).toHaveCount(0)
 
@@ -596,7 +596,7 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
         `@${w}: Menü-Eintrag steht neben dem Chip`).toHaveCount(0)
       // Ohne Zähler (F8-Regel): der Eintrag tritt an seine Stelle — der Zugang
       // bleibt, die Doppelung verschwindet.
-      await page.getByRole('switch', { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
+      await page.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
       await expect(page.locator('[data-v3-panel-zaehler]')).toHaveCount(0)
       await expect(page.locator('[data-v3-ansicht-panel-auf]')).toHaveCount(1)
       await page.locator('[data-v3-ansicht-panel-auf]').click()
@@ -604,7 +604,7 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
       // Zurückstellen — der Store ist geteilt und überlebt die Navigation.
       await page.locator('[data-v3-panel-zu]').click()
       await page.locator('[data-v3-ansicht]').click()
-      await page.getByRole('switch', { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
+      await page.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
       await page.keyboard.press('Escape')
     }
   })
@@ -686,7 +686,7 @@ test('A9: «Ansicht»-Dropdown + Gliederungs-Sprung flüssig unter CPU-Throttle,
   // Ist-Hülle weiter «Änderungsvermerke» (helpers/leserBeschriftung).
   for (const name of [/^Fussnoten/, VERMERKE_SCHALTER_NAME] as const) {
     t0 = Date.now();
-    const sw = gruppe.getByRole('switch', { name });
+    const sw = gruppe.getByRole(SCHALTER_ROLLE, { name });
     const vorher = await sw.getAttribute('aria-checked');
     await sw.click();
     await expect(sw).not.toHaveAttribute('aria-checked', vorher ?? '', { timeout: REAKTIONS_LATTE });

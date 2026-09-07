@@ -10,7 +10,7 @@
 // ausschliesslich V3-eigenes Verhalten, ohne je nach V1 zu wechseln.
 import { test, expect } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
-import { VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
+import { SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
 
 test.describe('Ansicht-Menü — D1/B3', () => {
   // ── D1 (S1-Rest, gebaut im H3-Nachzug 17.8.2026) ──────────────────────────
@@ -38,16 +38,16 @@ test.describe('Ansicht-Menü — D1/B3', () => {
     // POSITIV — StPO: 187 von 283 Fussnoten sind `kl:'A'`, dazu ein
     // Historie-Shard. Alle drei V3-Schalter stehen.
     await oeffne('/gesetze/bund/STPO')
-    await expect(panel.getByRole('switch', { name: VERMERKE_SCHALTER_NAME })).toHaveCount(1)
-    await expect(panel.getByRole('switch')).toHaveCount(3)
+    await expect(panel.getByRole(SCHALTER_ROLLE, { name: VERMERKE_SCHALTER_NAME })).toHaveCount(1)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(3)
 
     // NEGATIV 1 — BS-640.100 (StG BS): 16 Fussnoten, KEINE klassifiziert, kein
     // Historie-Shard. Der Fussnoten-Schalter bleibt (die 16 sind da und er
     // blendet sie wirklich aus), «Rechtsprechung im Text» auch.
     await oeffne('/gesetze/kanton/BS-640.100')
-    await expect(panel.getByRole('switch', { name: VERMERKE_SCHALTER_NAME })).toHaveCount(0)
-    await expect(panel.getByRole('switch', { name: 'Fussnoten' })).toHaveCount(1)
-    await expect(panel.getByRole('switch')).toHaveCount(2)
+    await expect(panel.getByRole(SCHALTER_ROLLE, { name: VERMERKE_SCHALTER_NAME })).toHaveCount(0)
+    await expect(panel.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' })).toHaveCount(1)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(2)
     // §8: nichts weggeblendet — es gibt hier wirklich keine Fassungs-Zeile.
     await expect(page.locator('[data-historie-zeile]')).toHaveCount(0)
 
@@ -60,8 +60,8 @@ test.describe('Ansicht-Menü — D1/B3', () => {
     await expect(page.locator('.lc-leser article').first()).toBeVisible({ timeout: 20_000 })
     await page.locator('[data-v3-ansicht]').click()
     await expect(panel).toBeVisible()
-    await expect(panel.getByRole('switch', { name: VERMERKE_SCHALTER_NAME })).toHaveCount(0)
-    await expect(panel.getByRole('switch')).toHaveCount(2)
+    await expect(panel.getByRole(SCHALTER_ROLLE, { name: VERMERKE_SCHALTER_NAME })).toHaveCount(0)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(2)
 
     expect(fehler, fehler.join('\n')).toEqual([])
   })

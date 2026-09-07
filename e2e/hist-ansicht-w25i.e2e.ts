@@ -1,7 +1,7 @@
 // @shard-gruppe: 5
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { ANSICHT_PANEL, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
+import { ANSICHT_PANEL, SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
 
 // ÄNDERUNGSVERMERKE: AN/AUS — zweiwertig seit S1, ENTKOPPELT seit Ä68
 // (Entscheid David 17.8.2026 abends, FAHRPLAN-LESER-V3 Kap. 4f/7).
@@ -77,7 +77,7 @@ async function ansichtOeffnen(page: Page): Promise<void> {
 
 /** Der EINE zweiwertige Schalter (S1) — kein Streifen mit drei Knöpfen mehr. */
 function vermerkeSchalter(page: Page) {
-  return page.getByRole('switch', { name: VERMERKE_SCHALTER_NAME });
+  return page.getByRole(SCHALTER_ROLLE, { name: VERMERKE_SCHALTER_NAME });
 }
 
 /** Apparat-Zeile einer Fussnote dieses Artikels (id = fn-<artikel>-<nr>). */
@@ -159,7 +159,7 @@ test('Ä68: «aus» blendet KEINE Fussnote aus — A, V und Z bleiben alle sicht
   // Ohne diese Gegenprobe könnte der Fix «alles immer sichtbar» bedeuten und die
   // Zusicherung oben wäre kein Tor mehr (§6.7).
   await ansichtOeffnen(page);
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
+  await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
   await expect(a12, 'A-Eintrag folgt dem Fussnoten-Schalter nicht').toBeHidden();
   await expect(v13, 'V-Eintrag folgt dem Fussnoten-Schalter nicht').toBeHidden();
@@ -168,7 +168,7 @@ test('Ä68: «aus» blendet KEINE Fussnote aus — A, V und Z bleiben alle sicht
   expect((await a12.textContent())?.trim() ?? '').toContain('Aufgehoben durch');
   expect(await a12.count()).toBe(1);
   await ansichtOeffnen(page);
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
+  await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'an');
   await expect(a12).toBeVisible();
 
@@ -217,7 +217,7 @@ test('Ä68: «aus» lässt die A-MARKER im Wortlaut stehen — sie hängen am Fu
 
   // ZWEISEITIG: der Fussnoten-Schalter nimmt sie sehr wohl — beide Klassen (§6.7).
   await ansichtOeffnen(page);
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
+  await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
   await expect(aMarker.first()).toBeHidden();
   await expect(vMarker.first()).toBeHidden();
@@ -270,7 +270,7 @@ test('Ä68 · 2×2-MATRIX: die beiden Schalter sind entkoppelt (Bund UND Kanton)
 
     // Fussnoten AUS ⇒ Apparat und Marker weg, in JEDER Vermerke-Stellung.
     await ansichtOeffnen(page);
-    await page.getByRole('switch', { name: 'Fussnoten' }).click();
+    await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
     await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
     const ausAus = await zaehle();
     expect(ausAus.apparat, `${name}: Fussnoten=aus lässt Apparat-Zeilen stehen`).toBe(0);
@@ -289,7 +289,7 @@ test('Ä68 · 2×2-MATRIX: die beiden Schalter sind entkoppelt (Bund UND Kanton)
 
     // Und zurück auf «alles an»: vollständige Wiederherstellung (A1).
     await ansichtOeffnen(page);
-    await page.getByRole('switch', { name: 'Fussnoten' }).click();
+    await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
     await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'an');
     const zurueck = await zaehle();
     expect(zurueck.apparat, `${name}: Apparat nicht vollständig wiederhergestellt`).toBe(anAn.apparat);
@@ -473,7 +473,7 @@ test('Ä68: KEINE Klasse folgt dem Vermerke-Schalter — A, G und U auf einem Ar
   // ZWEISEITIG: alle drei folgen dem FUSSNOTEN-Schalter (§6.7 — sonst wäre die
   // Zusicherung oben mit «nichts ist je ausblendbar» erfüllbar).
   await ansichtOeffnen(page);
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
+  await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
   for (const l of [a34, u35, g41]) await expect(l).toBeHidden();
 });
@@ -494,7 +494,7 @@ test('Der Schalter bleibt bei «Fussnoten aus» stehen — weil er dort weiter w
   await expect(fassung).toBeVisible({ timeout: 15000 });
 
   await ansichtOeffnen(page);
-  await page.getByRole('switch', { name: 'Fussnoten' }).click();
+  await page.getByRole(SCHALTER_ROLLE, { name: 'Fussnoten' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
 
   // POSITIV — der Beweis der Wirksamkeit: bei «Fussnoten aus» steht die
