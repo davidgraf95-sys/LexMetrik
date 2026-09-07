@@ -3,7 +3,7 @@ import {
   KOPF_SCHWELLE_KOMPAKT, KOPF_SCHWELLE_MINI,
   kopfElemente, kopfHoehe, kopfStufe,
 } from '../pages/gesetz-leser/v3/kopfStufen';
-import { OEFFNER_WORT, oeffnerLabelKompakt, oeffnerName } from '../pages/gesetz-leser/v3/panelModell';
+import { OEFFNER_NAME, OEFFNER_WORT } from '../pages/gesetz-leser/v3/panelModell';
 
 // FAHRPLAN-LESER-V3 Kap. 4a — die Overflow-Regel der V3-Kopfzeile:
 //
@@ -75,42 +75,24 @@ describe('Overflow-Regel der V3-Kopfzeile (Kap. 4a)', () => {
     }
   });
 
-  // ── H4-II (17./18.8.2026) · NM-2: DER PANEL-ÖFFNER FÄLLT AUF KEINER BREITE ──
-  // BEFUND (Kontaktbogen H4 §2, gemessen @390 an StPO Art. 429): `panel` war ein
-  // `boolean` und auf `mini` `false` — im Ruhezustand stand dort KEIN Öffner in
-  // der Kopfzeile (`[data-v3-panel-oeffner]` sichtbar 0), der Weg zu den
-  // Entscheiden kostete zwei Taps statt einem. Neu schrumpft der Zähler, wie
-  // vorher schon die Krume: 'voll' | 'kompakt', kein Wert «weg».
-  // §6.3-DEKLARATION: das ist eine fachliche Änderung, keine Test-Anpassung an
-  // den Bau — die Aussage wird SCHÄRFER (vorher gar keine über `panel`).
-  // Rot zu bekommen: in `kopfElemente` `panel` für `mini` wieder auf einen
-  // dritten Wert bzw. `false` setzen.
-  it('auf JEDER Breite trägt der Kopf einen Panel-Zähler — voll oder als Chip', () => {
-    for (let b = 280; b <= 2000; b += 1) {
-      const el = kopfElemente(kopfStufe(b));
-      expect(['voll', 'kompakt'], `Panel-Öffner fehlt bei ${b} px`).toContain(el.panel);
-    }
-    expect(kopfElemente('voll').panel).toBe('voll');
-    expect(kopfElemente('kompakt').panel).toBe('voll');
-    expect(kopfElemente('mini').panel).toBe('kompakt');
-  });
-
-  // Der Chip trägt eine ZAHL oder nichts — nie eine erfundene 0 (§8).
-  // §6.3-DEKLARATION (N1, 7.9.2026): `oeffnerLabel` ist gestrichen (Herleitung
-  // in `leser-v3-panel.test.tsx`), die Marke ist auf JEDEM Zuschnitt dieselbe
-  // Ableitung — die zwei Gestalten können damit gar nicht mehr auseinanderlaufen
-  // (§5), und geprüft wird nur noch die Schranke selbst.
-  it('der kompakte Zähler behauptet keine Zahl, die wir nicht haben', () => {
-    expect(oeffnerLabelKompakt(null)).toBe('');
-    expect(oeffnerLabelKompakt(0)).toBe('');
-    expect(oeffnerLabelKompakt(1)).toBe('1');
-    expect(oeffnerLabelKompakt(14)).toBe('14');
-    // Das Wort daneben steht in jeder Datenlage — es ist keine Aussage über
-    // den Bestand, sondern der Name des Knopfes.
-    expect(OEFFNER_WORT).toBe('Rechtsprechung');
-    // Der volle Wortlaut bleibt im Accessible Name — er ist es, der die
-    // Kürzung auf dem Handy überhaupt zulässig macht.
-    expect(oeffnerName(14, 'Art. 429')).toContain('14 Entscheide');
+  // ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ───────────────────
+  // Hier standen zwei Fälle: «auf JEDER Breite trägt der Kopf einen
+  // Panel-Zähler — voll oder als Chip» (`kopfElemente(...).panel`) und «der
+  // kompakte Zähler behauptet keine Zahl, die wir nicht haben»
+  // (`oeffnerLabelKompakt`). Beide prüften Zusagen über eine ZAHL im Kopf. Mit
+  // Variante A trägt der Kopf keine Artikel-Zahl mehr, und der Griff hat auf
+  // jeder Breite dieselbe Gestalt — die Fallunterscheidung, die sie bewachten,
+  // existiert nicht mehr (§17-Gegengewicht: gestrichen statt umgeschrieben).
+  // Die dahinterliegende NM-2-Sorge («auf `mini` steht kein Öffner in der
+  // Kopfzeile») bleibt geprüft, und zwar schärfer: sie hängt jetzt an keiner
+  // Bedingung mehr, und `e2e/leser-w224-g.e2e.ts` (G14) misst @320/@390, dass
+  // jeder Kopf-Griff ein Wort trägt und die Zeile nicht überläuft.
+  //
+  // WAS BLEIBT: das Wort selbst ist eine Aussage über einen Rückgabewert und
+  // steht darum weiter hier. Rot zu bekommen: `OEFFNER_WORT` ändern.
+  it('der Kopf-Griff heisst auf jeder Breite «Erlass» und nennt keine Zahl', () => {
+    expect(OEFFNER_WORT).toBe('Erlass');
+    expect(OEFFNER_NAME).not.toMatch(/\d/);
   });
 
   // ── Ä87/Ä91 (H4-Nachzug 18.8.2026) · DAS ✕ IST WEG, DER RÜCKSPRUNG BLEIBT ──

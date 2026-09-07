@@ -1,14 +1,17 @@
 import type { ReactNode } from 'react';
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import { LeserAnsichtV3 } from './LeserAnsichtV3';
-import { zeigeVolltitel } from './erlassAnsicht';
+import { zeigeVolltitel, type BestimmungsWort } from './erlassAnsicht';
 import { kopfElemente, type KopfStufe } from './kopfStufen';
 
 // ─── Die EINE Kopfzeile des Lesers V3 (FAHRPLAN-LESER-V3 Kap. 4a, H1) ────────
 //
-//   D  │ StPO                              ⚖ 14 Entscheide  Ansicht ▾ │
-//   S  │ StPO                       ⚖ 14 Entscheide  ☰  Ansicht ▾│
-//   H  │ StPO                    ⚖  ☰  ···│
+//   D  │ StPO                                     Erlass ▾  Ansicht ▾ │
+//   S  │ StPO                         Erlass ▾  Gliederung  Ansicht ▾│
+//   H  │ StPO              Erlass ▾ Gliederung Ansicht ▾│
+//   (D35-F2, 7.9.2026: der Zähler «⚖ 14 Entscheide» ist zum Erlass-Griff
+//    geworden — die Skizze zeigt den Ist-Stand, die Herleitung steht in
+//    `./LeserPanelOeffner` und `./panelModell`.)
 //     │ [ Im Erlass suchen …                                    ⌘K ] │
 //
 // ── D27 (David 6.9.2026) · DIE BROTKRUME IST WEG ────────────────────────────
@@ -85,8 +88,8 @@ import { kopfElemente, type KopfStufe } from './kopfStufen';
 // je Kopfzeile» in `./kopfStufen` ist unberührt.
 
 export function LeserKopf({
-  erlass, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, stufe, gliederungKnopf,
-  panelOeffner, onPanelOeffnen, suchZone, suchInZeile, tocOffen, onGliederungZu,
+  erlass, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, bestimmungsWort, stufe, gliederungKnopf,
+  panelOeffner, suchZone, suchInZeile, tocOffen, onGliederungZu,
 }: {
   erlass: BrowseErlass;
   // D27: `aktArtikel` ist hier ersatzlos gestrichen. Die Lesestellung ist damit
@@ -99,18 +102,23 @@ export function LeserKopf({
   /** D35-F3 · durchgereicht ans Ansicht-Menü (§8-Hinweis auf unklassifizierten
    *  Erlassen). Der Kopf wertet sie nicht aus — er ist die Leitung, nicht der Ort. */
   aenderungsFussnoten: number | null;
+  /** D35-F2 · durchgereicht ans Ansicht-Menü (Kopf der Rubriken-Gruppe). Der
+   *  Kopf leitet nichts ab — er ist die Leitung, nicht der Ort (§5/B8). */
+  bestimmungsWort: BestimmungsWort;
   stufe: KopfStufe;
   /** ☰-Öffner der Gliederung — der Rahmen baut ihn, wenn die Seitenleiste
    *  gerade NICHT als Spalte steht. `undefined` = die Gliederung ist sichtbar,
    *  ein Öffner wäre ein Knopf ohne Wirkung. */
   gliederungKnopf?: ReactNode;
-  /** H3 — Öffner des Rechtsprechungs-Panels («⚖ 14 Entscheide →»). Leer
-   *  gelassen kostet er nichts: kein Platzhalter, keine reservierte Fläche. */
+  /** H3 — Öffner des Erlass-Blatts («Erlass ▾», seit D35-F2). Leer gelassen
+   *  kostet er nichts: kein Platzhalter, keine reservierte Fläche.
+   *
+   *  D35-F2: die Schwester-Prop `onPanelOeffnen` ist ersatzlos gefallen. Sie
+   *  reichte den Menü-Eintrag «Entscheide & Kontext …» herein — den zweiten
+   *  Öffner für die Lage, in der die F8-Regel den Zähler wegnahm. Diese Lage
+   *  gibt es seit D35-F2 nicht mehr (`../leserOptionen`, `./panelModell`), also
+   *  gibt es auch den zweiten Öffner nicht mehr (§17-Gegengewicht). */
   panelOeffner?: ReactNode;
-  /** A2 (H3-Nachzug) — dieselbe Fläche, geöffnet aus dem «Ansicht ▾»-Menü. Der
-   *  Weg, der bleibt, wenn der Zähler nach der F8-Regel weg ist und keine
-   *  Tastatur da ist; Herleitung in `./LeserAnsichtV3`. */
-  onPanelOeffnen?: () => void;
   /** ── Ä19 (H2b) · zweite Zeile des klebenden Kopf-BLOCKS ────────────────────
    *  Das Such-/Sprungfeld, wo die Gliederung NICHT als Spalte steht (Handy,
    *  Split-Pane, Desktop mit eingeklappter Gliederung). Vorher gab es in genau
@@ -285,7 +293,7 @@ export function LeserKopf({
             die vier trägt. Sein Ziel `/gesetze` steht links als beschriftetes
             Wort (Krume bzw. «‹ Gesetze»); Herleitung, Messreihe und die neue
             Auflage «höchstens ein ✕ je Kopfzeile» in `./kopfStufen`. Damit
-            ergibt jede Stufe höchstens Ort · ⚖ · ☰ · Ansicht = vier. */}
+            ergibt jede Stufe höchstens Ort · Erlass · Gliederung · Ansicht = vier. */}
         <div data-v3-kopf-griffe
           className={suchInZeile
             ? 'flex shrink-0 items-center gap-1 pl-2 sm:gap-1.5 sm:pl-3'
@@ -294,7 +302,7 @@ export function LeserKopf({
           {gliederungKnopf}
           <LeserAnsichtV3 kompakt={stufe === 'mini'} fussnotenAnzahl={fussnotenAnzahl}
             hatAenderungsvermerke={hatAenderungsvermerke} aenderungsFussnoten={aenderungsFussnoten}
-            onPanelOeffnen={onPanelOeffnen} />
+            bestimmungsWort={bestimmungsWort} />
         </div>
       </div>
       {/* Ä19: die Such-Zone als zweite Zeile DESSELBEN klebenden Blocks — nicht

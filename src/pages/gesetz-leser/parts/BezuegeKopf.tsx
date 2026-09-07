@@ -67,6 +67,21 @@ export interface BezugsMarke {
   /** Hängt der Inhalt an einem nachzuladenden Shard? Dann fragt das Aufklappen
    *  danach (`onOeffnen`) und zeigt bis dahin das Skelett. */
   brauchtDaten?: boolean;
+  /**
+   * D35-F2 · Ein Sekundär-Griff am FUSS des aufgeklappten Blocks.
+   *
+   * Entscheid David 7.9.2026 zur Frage «aufklappen ODER ins Blatt öffnen»:
+   * BEIDES. Die Rubrik verhält sich unverändert (aufklappen + Ladepfad
+   * armieren, D30/D35-F1), und wer die Liste lieber neben dem Text hat,
+   * bekommt sie über diesen Griff. Er steht INNERHALB des aufgeklappten
+   * Blocks, nicht in der Zeile: in der Zeile wäre er ein zweiter Knopf pro
+   * Rubrik im Ruhezustand — und die Zeile trägt schon vier Rubriken und vier
+   * Aktionen.
+   *
+   * WER ihn baut, entscheidet `./ArtikelLeser.bezuegeFuss.tsx`; diese Datei
+   * rendert nur (§3).
+   */
+  nebenGriff?: ReactNode;
 }
 
 /**
@@ -160,6 +175,7 @@ export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false 
                   </span>
                 )
                 : m.inhalt}
+              {m.nebenGriff}
             </div>
           ))}
         </div>

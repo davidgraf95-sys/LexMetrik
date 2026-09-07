@@ -16,9 +16,8 @@ import { LeserLesespalte } from './LeserLesespalte';
 import { LeserLeseZeile } from './LeserLeseZeile';
 import { LeserErlassKopfZone } from './LeserErlassKopfZone';
 import { LeserPanelZone } from './LeserPanelZone';
-import { PanelZaehler } from './LeserPanelOeffner';
-import { artikelZahl, normZitat, panelBezug, usePanelBezuege, usePanelZustand } from './panelModell';
-import { useBezuegeZaehler } from '../bezuegeZaehler';
+import { ErlassGriff } from './LeserPanelOeffner';
+import { normZitat, panelBezug, usePanelBezuege, usePanelZustand } from './panelModell';
 import { SuchSprungFeld } from './SuchSprungFeld';
 import { suchZoneAufbau } from './suchZoneAufbau';
 import { SchwebeMeldung } from '../../../components/ui/SchwebeMeldung';
@@ -28,7 +27,7 @@ import { useKopfAnspruch } from './useKopfAnspruch';
 import { useStickAusgleich } from './useStickAusgleich';
 import { leserCssVariablen } from './leserGeometrie';
 import { rahmenBild, useRahmenRaum } from './rahmenSpalten';
-import { kopfElemente, kopfGlypheKlassen, kopfGriffKlassen, panelForm, useKopfStufe } from './kopfStufen';
+import { kopfGlypheKlassen, kopfGriffKlassen, panelForm, useKopfStufe } from './kopfStufen';
 import { useSuchSprungKuerzel } from './suchKuerzel';
 import { bestimmungsWort as bestimmungsWortVon, panelEbene, suchFeldName, suchPlatzhalter } from './erlassAnsicht';
 import { LeserUebersicht } from './LeserUebersicht';
@@ -91,9 +90,13 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
   // war, und ohne Key lädt die Bezugs-Hook nicht (Nachladen, Kap. 7).
   const rohPanel = usePanelZustand();
   const bezuege = usePanelBezuege(m.erlass?.key, rohPanel.jeGeoeffnet);
-  // N1 (7.9.2026): zweiter Konsument der Zähl-Datei neben der Lesespalte; EIN
-  // Fetch bleibt es trotzdem (Modul-Cache in `../bezuegeZaehler`).
-  const bezuegeZaehler = useBezuegeZaehler(m.erlass?.key);
+  // ── D35-F2 (7.9.2026) · HIER STAND DER ZWEITE KONSUMENT DER ZÄHL-DATEI ───
+  // N1 (7.9.2026) hatte den Kopf-Zähler auf `useBezuegeZaehler` umgestellt,
+  // damit er DIESELBE Bezugsgrösse nennt wie die Zeile am Artikel (Befund:
+  // «11 Entscheide» gegen «⚖ 3 Entscheide» auf einem Bildschirm). Der Befund
+  // bleibt richtig für seinen Stand (§0 Ziff. 2b); D35-F2 löst ihn eine Ebene
+  // höher — der Kopf nennt gar keine Artikel-Zahl mehr, es gibt also nur noch
+  // EINEN Konsumenten (`./LeserLesespalte`, für die Funktionszeile).
   // V6/Ä88: Höhenausgleich, wenn der klebende Kopf-Block wächst — Befund,
   // Messreihe und der Vertrag von `mitAusgleich`/`wurzelRef`:
   // `./useStickAusgleich`. Scroller aus derselben `paneRoot`-Auflösung wie
@@ -228,14 +231,12 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
   // (Begründung und Befund in `./panelModell`, `panelBezug`).
   const panelZiel = panelBezug(m.aktArtikel, m.aktivToken, eintraege[0]);
   const panelArtikel = panelZiel.label;
-  // Die Zone steht, solange ein Öffner sichtbar IST oder das Panel offen ist —
-  // das zweite ist der F8-Fall: mit «Rechtsprechung im Text: aus» gibt es keine
-  // Lasche und keinen Zähler, das per `r` geöffnete Panel muss trotzdem rendern
-  // (`panelModell`, `offen` ist bewusst nicht mit `oeffnerSichtbar` verrechnet).
-  const panelZone = panel.oeffnerSichtbar || panel.offen;
-  // N1: dieselbe Zahl wie die Bezüge-Zeile am Artikel — Befund und Begründung
-  // stehen bei der Ableitung (`./panelModell`, `artikelZahl`).
-  const panelZahl = artikelZahl(bezuegeZaehler, panelZiel.token);
+  // D35-F2: die Zone steht immer. Bis hierher hing sie an
+  // `panel.oeffnerSichtbar || panel.offen` — der zweite Zweig war der F8-Fall
+  // (Schalter aus, Panel per «r» aufgezogen). Mit dem Wegfall des Schalters ist
+  // der erste Zweig konstant `true`, und ein konstanter Ausdruck ist keine
+  // Bedingung mehr (§17-Gegengewicht). Die Zahl `panelZahl` fällt mit ihm: der
+  // Kopf nennt keine Artikel-Zahl mehr (Herleitung in `./LeserPanelOeffner`).
 
   // Ä79 (H4-II): steht die Schiene, ist SIE der eine Griff — die Herleitung samt
   // Messreihe steht am Bauteil, das sie betrifft (`./LeserGliederungSchiene`).
@@ -293,27 +294,18 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
       {/* D27: kein `aktArtikel` mehr — Herleitung in `./LeserKopf`. */}
       <LeserKopf erlass={erlass} fussnotenAnzahl={m.fussnotenAnzahl}
         hatAenderungsvermerke={m.hatAenderungsvermerke} aenderungsFussnoten={m.aenderungsFussnoten}
-        stufe={stufe} gliederungKnopf={gliederungKnopf}
+        bestimmungsWort={bestimmungsWort} stufe={stufe} gliederungKnopf={gliederungKnopf}
         suchInZeile={suchInZeile} tocOffen={m.tocOffen}
         onGliederungZu={zweiSpalten ? () => setzeTocOffen(false) : undefined}
-        // F8-Regel David 16.8.2026 («Rechtsprechung im Text» aus ⇒ Zähler weg):
-        // unverändert der EINE wirksame Torwächter, `panel.oeffnerSichtbar`.
-        // H4-II: die Stufe entscheidet nur noch die GESTALT des Zählers, nicht
-        // sein Dasein (`kopfElemente(stufe).panel`, Herleitung dort).
-        panelOeffner={panel.oeffnerSichtbar
-          ? (
-            <PanelZaehler anzahl={panelZahl} artikelLabel={panelArtikel} offen={panel.offen}
-              form={kopfElemente(stufe).panel}
-              // A3: dieselbe Id wie die Fläche — sonst ist `aria-controls` null.
-              panelId={panel.offen ? panelId : undefined}
-              onKlick={panel.umschalten} />
-          )
-          : undefined}
-        // A2/Ä92: der Weg zum Panel OHNE Tastatur und ohne Zähler — und genau
-        // dann, wenn kein Zähler dasteht. «Ein Öffner je Breite» (Fahrplan
-        // Kap. 7): derselbe Torwächter `panel.oeffnerSichtbar` entscheidet
-        // BEIDE Öffner, damit sie nie zugleich stehen und nie zugleich fehlen.
-        onPanelOeffnen={panel.oeffnerSichtbar ? undefined : () => panel.oeffne('entscheide')}
+        // D35-F2: der Griff steht UNBEDINGT — «ein Öffner je Breite» (Ä92) ist
+        // damit trivial erfüllt, und der Menü-Eintrag «Entscheide & Kontext …»,
+        // der ihn in der F8-Lage vertrat, ist mit ihr gefallen.
+        panelOeffner={(
+          <ErlassGriff offen={panel.offen} kompakt={stufe === 'mini'}
+            // A3: dieselbe Id wie die Fläche — sonst ist `aria-controls` null.
+            panelId={panel.offen ? panelId : undefined}
+            onKlick={panel.umschalten} />
+        )}
         suchZone={suchZone} />
 
       {/* Handy/schmales Pane: die GANZE Seitenleiste als Bottom-Sheet hinter ☰
@@ -339,7 +331,8 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
           {m.kopf && <ErlassKopfBlock kopf={m.kopf} intern={m.internRefs} />}
           {/* D38: der Text bleibt IMMER gerendert, die Trefferliste legt sich
               darüber (`trefferSpalte` unten) — Warum: `./LeserTrefferSpalte`. */}
-          <LeserLesespalte m={m} bezuege={bezuege} weckeBezuege={rohPanel.weckeDaten} bezuegeGeweckt={rohPanel.jeGeoeffnet} />
+          <LeserLesespalte m={m} bezuege={bezuege} weckeBezuege={rohPanel.weckeDaten}
+            oeffneBlatt={rohPanel.oeffneEntscheide} bezuegeGeweckt={rohPanel.jeGeoeffnet} />
         </>}
         // D38 · Trefferliste über der Lesespalte — `absolute`, ohne Platz im
         // Fluss; der Rahmen sagt nur, OB sie da ist (`./LeserTrefferSpalte`).
@@ -357,8 +350,7 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
         // H3 · Panel/Lasche. EIN Aufrufpunkt für beide Modi: im Spalten-Modus
         // füllt die Zone die dritte Grid-Spur, im Blatt-Modus hat sie keine Box
         // und liegt ausserhalb des Flusses.
-        panelZone={panelZone
-          ? (
+        panelZone={(
             <LeserPanelZone form={bild.blattForm} panelId={panelId}
               paneZiel={overlayZiel} paneRolle={paneRolle}
               zustand={panel} bezuege={bezuege} erlassKey={erlass.key} quelleUrl={erlass.quelleUrl}
@@ -366,8 +358,7 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
               artikelLabel={panelArtikel} erlassKuerzel={erlass.kuerzel}
               bestimmungsWort={bestimmungsWort} aktArtikel={panelZiel.token} ebene={panelEbene(erlass)}
               steckbrief={leisteSteht ? null : <LeserUebersicht m={m} bestimmungsWort={bestimmungsWort} />} />
-          )
-          : null} />
+          )} />
 
       {/* R4 «Weiterlesen» + R8 Tastatur — dieselben BAUSTEINE wie die Ist-Hülle
           (Kap. 4h: KEINE zweite Tastaturebene), direkt aus `parts/` statt über
@@ -399,8 +390,8 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
             onWeiterlesen={m.weiterlesenSprung} onVerwerfen={m.weiterlesenVerwerfen} />
         )}
         {/* H3 · «r» zieht das Panel auf (KEINE zweite Tastaturebene, Kap. 4h) —
-            der Weg, der bleibt, wenn der Zähler nach der F8-Regel weg ist; darum
-            UNABHÄNGIG von `oeffnerSichtbar` gesetzt.
+            der zweite Weg neben dem Kopf-Griff; bis D35-F2 war er der einzige,
+            wenn die F8-Regel den Zähler wegnahm (Herleitung in `./panelModell`).
             A2 (Nachzug): der Listener läuft jetzt in BEIDEN Panes. Vorher stand er
             unter `!istSekundaer` — mit der Folge, dass «r» aus dem sekundären Pane
             das PRIMÄRE Panel aufzog (gemessen 17.8.2026). Doppelte j/k-Sprünge

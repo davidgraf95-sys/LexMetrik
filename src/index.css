@@ -3601,6 +3601,59 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
   gap: 0.5rem;
   margin-left: auto;
 }
+/* ══ W2·24-D35-F2 (Nachtrag David 7.9.2026) · «alles einzelne abwählen» ══════
+   Davids Wortlaut: «man soll mittels ansicht alles einzelne abwählen können».
+   Die Wahl steht im Ansicht-Menü (`v3/LeserRubrikenWahl.tsx`) und landet als EIN
+   Attribut am <html> (`leserOptionen.ts`, `data-fuss-aus`).
+
+   WARUM CSS UND NICHT REACT (§15): der Erlass OR trägt 1686 Artikel. Ein Abo je
+   Artikel wären 1686 Neu-Renderings je Klick — dieselbe Rechnung, an der schon
+   der gemerkte Aufklapp-Zustand der Zeile gefallen ist (D35-F1). Der Umschalter
+   rendert so nur die fünf Menüzeilen neu.
+
+   WARUM DAS ATTRIBUT DIE ABGEWÄHLTEN TRÄGT: der Grundzustand ist «alles steht»
+   und damit die LEERE Zeichenkette; `[data-fuss-aus*="r"]` trifft dann nichts.
+   Mit den GEWÄHLTEN hätte die Regel `html:not([data-fuss-an*="r"])` lauten
+   müssen — und die greift auch, solange es das Attribut noch gar nicht gibt,
+   also am prerenderten HTML VOR dem Bündel: der Leser sähe für einen Moment
+   einen Artikel ganz ohne Funktionszeile. So bleibt der Grundzustand ohne jede
+   Regel und das ausgelieferte Markup byte-gleich (R6/§6).
+
+   ZÄHLER UND INHALT FALLEN GEMEINSAM. Eine Rubrik, deren Griff verschwindet und
+   deren Block bliebe, wäre ein Block ohne Weg zurück; ein Griff ohne Block wäre
+   die Zusage einer Liste, die nicht kommt (§8, derselbe Mangel wie M-6 der
+   D35-Untersuchung). `display:none` nimmt den Griff zugleich aus Tab-Reihenfolge
+   und Screenreader-Baum — abgewählt heisst abgewählt, nicht «unsichtbar da».
+
+   CLS: klick-getrieben (Reflow binnen 500 ms nach der Eingabe, input-exkludiert),
+   nichts wird nachgeladen und kein Artikel neu gerendert (§15). */
+html[data-fuss-aus*="r"] .lc-leser .lr7-bez-marke[data-reg="r"],
+html[data-fuss-aus*="r"] .lc-leser .lr7-bez-block[data-reg="r"],
+html[data-fuss-aus*="m"] .lc-leser .lr7-bez-marke[data-reg="m"],
+html[data-fuss-aus*="m"] .lc-leser .lr7-bez-block[data-reg="m"],
+html[data-fuss-aus*="g"] .lc-leser .lr7-bez-marke[data-reg="g"],
+html[data-fuss-aus*="g"] .lc-leser .lr7-bez-block[data-reg="g"],
+html[data-fuss-aus*="w"] .lc-leser .lr7-bez-marke[data-reg="w"],
+html[data-fuss-aus*="w"] .lc-leser .lr7-bez-block[data-reg="w"],
+html[data-fuss-aus*="a"] .lc-leser .lr7-bez-aktionen {
+  display: none;
+}
+/* Das Wort «Bezüge» gehört den VIER Rubriken, nicht den Aktionen: stehen nur
+   noch «Zitat · Link · …» in der Zeile, benennt es nichts mehr. */
+html[data-fuss-aus*="r"][data-fuss-aus*="m"][data-fuss-aus*="g"][data-fuss-aus*="w"] .lc-leser .lr7-bez-wort {
+  display: none;
+}
+/* Alles abgewählt ⇒ die Zeile selbst geht, samt ihrer Trennlinie und ihrem
+   Abstand. Eine leere Linie unter jedem Artikel wäre ein Rahmen ohne Inhalt
+   (F0.6). Der Vergleich ist EXAKT, nicht `*=`: die Buchstaben stehen immer in
+   der kanonischen Reihenfolge (`setzeFussRubriken` normalisiert, §2). */
+html[data-fuss-aus="rmgwa"] .lc-leser .lr7-bez {
+  display: none;
+}
+/* D35-F2 · «im Blatt öffnen ›» am Fuss der aufgeklappten Rubrik «Entscheide».
+   Eine eigene Zeile unter der Liste, nicht ein Anhängsel an ihre letzte —
+   sonst läse er sich als Teil des letzten Entscheids. */
+.lr7-bez-nebengriff { display: inline-flex; margin-top: 0.5rem; }
 .lr7-bez-marke[data-reg="r"] { border-left-color: var(--reg-r); }
 /* W2·24-R6c: die Rubrik «Materialien» hat mit der Zähl-Datei eine echte Zahl
    bekommen und darum auch ihre Registerfarbe (dieselbe Farbe wie überall sonst;
