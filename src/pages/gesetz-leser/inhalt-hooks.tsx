@@ -275,6 +275,32 @@ export function useLeserSprungSpy(opts: {
   // allein, ausgewertet pro Scroll-Frame. Herleitung + Messprotokoll unten am
   // Observer.
   const letzterArtToken = useRef<string | null>(null);
+  // ── LH (D27, Zusage 2) · DIE GESPEICHERTE LESESTELLUNG GEHÖRT DEM LESEN,
+  //    NICHT DEM AUFSETZEN DES SPYS ──────────────────────────────────────────
+  // BEFUND (7.9.2026, gebautes `dist/`, Preview 4417, ZGB @1440×900): 1500 px
+  // scrollen ⇒ Reiter `#art-3`; Reload ⇒ ~150 ms später steht `#art-1` darin.
+  // Der Leser springt beim Neustart bewusst NICHT zurück (W2·10-UI-NAV/R4,
+  // `lesePosition.ts`: kein Auto-Sprung, nur ein Chip) — der Spy setzte beim
+  // Aufsetzen am Dokumentanfang trotzdem `#art-1` und LÖSCHTE damit genau die
+  // Stelle, die den Neustart tragen soll.
+  // BISECT (je eigener Build, dieselbe Sonde, art-1.top bei scrollY 0):
+  //   0ba97c5d6 (Nullprobe) 921 px ⇒ Spy meldet nichts ⇒ `#art-3` bleibt · GRÜN
+  //   a60dd7f75 (D30/D31)   921 px ⇒ GRÜN
+  //   7e71a5dd2 (D32/N4)    877 px ⇒ Spy meldet «1» ⇒ `#art-1` · ROT
+  // D32 («Suche über dem Gesetz») hat den 44-px-Kopf aus R6d aus der Lese-
+  // spalte genommen; `art-1` fällt dadurch bei 900 px Fensterhöhe wieder ÜBER
+  // die Bezugslinie. Der Kopf ist damit der Auslöser, nicht die Wurzel: die
+  // Wurzel ist der ungeschützte Schreibpfad unten — er hing allein an einer
+  // Fensterhöhe, was seit dem F1G-Stand (877 px, dieselbe Lage) latent war.
+  // REGEL: der Reiter-Anker folgt dem Lesen. Vor dem ersten Scrollen IN DIESEM
+  // Dokument schreibt der Spy nichts; die Kopfzeile (Zweig (a) unten) meldet
+  // «Art. 1» unverändert — sie ist Darstellung, nicht Persistenz (§3).
+  const gescrollt = useRef(false);
+  // Zurück auf «noch nicht gelesen», sobald ein ANDERES Dokument/Pane-Instanz
+  // im Fenster steht: sonst trüge ein SPA-Wechsel die Scroll-Erlaubnis des
+  // Vorgängers weiter und der neue Leser überschriebe dessen gespeicherte
+  // Stelle beim Aufsetzen (genau die Kalt-/SPA-Asymmetrie des F5-Befunds).
+  useEffect(() => { gescrollt.current = false; }, [basisPfad, paneLocationSearch]);
   useEffect(() => {
     // C (Auftrag David 26.6.2026): auch starten, wenn der Erlass KEINE Gliederung
     // hat (kantonale Erlasse → alle Artikel in `ohneGliederung`). Sonst lief der
@@ -350,9 +376,13 @@ export function useLeserSprungSpy(opts: {
       // `location.search`, s. o.) macht auch für das Sekundär-Pane den
       // richtigen Reiter-Treffer möglich — ohne window.location zu lesen,
       // bleibt die Änderung rein pane-lokal/darstellend (§3).
-      const tabZiel = `${basisPfad}${paneLocationSearch}#art-${token}`;
-      if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
-      tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
+      //     LH (s. o.): NUR nach dem ersten echten Scrollen in diesem Dokument —
+      //     vor dem ersten Lese-Griff ist der gespeicherte Anker die Wahrheit.
+      if (gescrollt.current) {
+        const tabZiel = `${basisPfad}${paneLocationSearch}#art-${token}`;
+        if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
+        tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
+      }
       // (a) Gliederung: aktiven Pfad markieren + den Zweig automatisch AUFklappen
       //     und beim Verlassen wieder ZUklappen (K, Auftrag David 26.6.2026) —
       //     aber nur Zweige, die der Spy selbst geöffnet hat (autoOffenRef);
@@ -550,7 +580,11 @@ export function useLeserSprungSpy(opts: {
     // Leser gerade», nicht «hat irgendetwas den Spy geweckt». Der Nachlauf-Wecker
     // unten ist kein Scroll — zählte er mit, verzögerte er den Aufklapp nach einem
     // Klick-Sprung ohne jeden Grund.
-    const beiScroll = () => { letzterScroll = Date.now(); wecke(); };
+    // `gescrollt` (LH, s. o.) latcht HIER — beim echten Scroll-Ereignis, das dem
+    // rAF-Kranz vorausgeht: der Spy sieht die Erlaubnis darum schon im ersten
+    // Frame nach dem Rad, und ein Klick-/TOC-Sprung (scrollt programmatisch,
+    // feuert also `scroll`) gibt sie ebenso frei.
+    const beiScroll = () => { gescrollt.current = true; letzterScroll = Date.now(); wecke(); };
     scrollZiel.addEventListener('scroll', beiScroll, { passive: true });
     // N2: dritter Auslöser — das Lösen des jumpLock (Herleitung oben bei
     // `spyNachlauf`). Derselbe rAF-Kranz wie Observer und Scroll.
