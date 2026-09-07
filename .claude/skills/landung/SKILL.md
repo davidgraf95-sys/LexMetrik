@@ -141,6 +141,17 @@ npm run check:perf-budget  # liest dist, Chrome-frei
    `referenz-ausnahmen.md`). Rot = Stopp, kein «mergen und nachbessern».
    Realfall-Wortlaute (Tageslimit 15.8.): `referenz-ci.md`.
 
+7c. **Die Kette als Werkzeug:** `scripts/landung/landung-kette.sh <log> <PR>…`
+   fährt die Schritte 2–8 seriell (7.9.2026 über dreizehn Landungen benutzt).
+   Sie hält an, statt einen roten PR zu mergen, und löscht den Zweig erst,
+   nachdem `gh pr view --json state` MERGED meldet. Zwei Fallen sind darin
+   verdrahtet: **`gh run watch` bricht vorzeitig mit Exit 1 ab, obwohl der
+   Lauf noch läuft** — Status pollen (`gh run view --json status`), nie
+   watchen; und **ein PR im Zustand DIRTY bekommt von GitHub gar keinen
+   `pull_request`-Lauf** — «kein CI-Lauf» heisst darum zuerst «Konflikt?»,
+   nicht «Skip-CI-Marker?» (L-O8, 7.9.2026; bei DIRTY erst main im Worktree
+   in den Zweig mergen, Ziff. 3.4). Die Ziff. 0–2 ersetzt sie nicht.
+
 7b. **Ketten-Wächter (F2h):** prüft bei Risikopfad-Hand-Merges auf «alle
    Required grün» (Required-Liste per `gh api …/protection/
    required_status_checks`), nie auf `mergeStateStatus: CLEAN`;
