@@ -1,5 +1,6 @@
 import {
   pfadTeil, entscheidPfad, erlassVonPfad, gesetzPfad, verlaufLabel, katalogKurzform,
+  labelAusMeta,
   type VerlaufManifeste,
 } from './verlaufLabel';
 import { reiterKategorie, artikelLabelVonPfad } from './tabGruppen';
@@ -95,31 +96,40 @@ export interface TabEintrag {
 // Meta- und Infoseiten (/ueber, /methodik, /einstellungen, /kontakt) bleiben
 // unverändert ohne Reiter — sie sind kein Bestandteil der Sammlung, und dort
 // ist «kein Reiter» die wahre Auskunft, nicht eine Lücke.
-export const BEREICHS_UEBERSICHTEN = [
-  '/gesetze', '/rechtsprechung', '/materialien', '/rechner', '/vorlagen',
-] as const;
-
-/** Trägt dieser Pfad einen eigenen Reiter? EIN Ort für die Regel (§5) —
- *  gelesen von `components/TabTracker.tsx`. `path` darf ?query/#hash tragen.
- *
- *  ── M2 (Prüfbefund R11 #23, 6.9.2026) · MATERIALIEN GEHÖREN DAZU ───────────
- *  GEMESSEN (Preview 4362, `/materialien/BJ-EHRA-PM-2025-01`, Titel
- *  «Praxismitteilung EHRA 1/25»): die Leiste blieb bei ihren fünf Reitern, ein
- *  sechster entstand nicht — die Rubrik fehlte in diesem einen Regex. Damit
- *  waren 1'561 prerenderte Material-Detailseiten reiterlos: wer eine Botschaft
- *  nachschlägt, verliert sie beim nächsten Klick, und die Übersicht
- *  `/materialien` (seit D7 ein Reiter) führte zu Detailseiten, die keiner mehr
- *  sind. Die D7-Regel sagt es bereits im Satz darüber — «die fünf
- *  Bereichs-Übersichten sind Reiter wie jedes andere Dokument»; ihre
- *  Detailseiten erst recht. */
-export function istReiterPfad(path: string): boolean {
-  const p = path.split('#')[0].split('?')[0];
-  // R14: die Sammlung zuerst — sie ist der Reiter, in dem man landet, wenn
-  // sonst keiner offen ist (Neuer-Reiter-Seite, Herleitung im Block oben).
-  return p === '/'
-    || /^\/(rechner|vorlagen|gesetze|rechtsprechung|materialien)\/.+/.test(p)
-    || (BEREICHS_UEBERSICHTEN as readonly string[]).includes(p);
-}
+//
+// ── R14b (Nachzug 7.9.2026) · AUCH DIESE LETZTE AUSNAHME IST AUFGEHOBEN ─────
+//
+// Die drei Zeilen darüber bleiben als DATIERTER BELEG stehen (§0 Ziff. 2b) —
+// sie beschreiben den Stand bis `8d398874e`. R14 hatte die Grenze selbst
+// offengelegt (`abnahme/design-identitaet/R14-REITER-MODELL.md`, «Offengelegte
+// Grenze»): auf `/ueber`, `/methodik`, `/einstellungen`, `/kontakt` stand beim
+// Kaltstart mit leerem Speicher weiter der 0-Reiter-Zustand — leerer 34-px-
+// Streifen, `data-reiter-leer`, und `components/TabTracker.tsx` warf dort den
+// aktiven Reiter als Herkunft weg (`aktiv.current = null`).
+//
+// Das war eine Ausnahme mit zwei Preisen. Erstens die Regel selbst: «alles ist
+// ein Reiter» galt für 99 % der Routen und für fünf nicht — eine Zweiteilung
+// derselben Bauart, die R14 als Wurzel des Reiter-Verlusts nachgewiesen hat
+// (der Ref zeigte auf ein verlassenes Dokument, die nächste Navigation traf
+// DESSEN Reiter). Zweitens der Zustand «App offen, kein Reiter aktiv», den es
+// im Browser nicht gibt: wer die Einstellungen öffnet, verliert im Browser
+// nicht sein Reiterband.
+//
+// NEUE REGEL, in einem Satz: **JEDE Route der App ist Reiterinhalt.** Es gibt
+// keine Liste mehr, die entscheidet, welcher Pfad einen Reiter trägt — die
+// Funktion `istReiterPfad` ist damit ERSATZLOS gestrichen (§17-Gegengewicht:
+// was nicht scheitern kann, wird gestrichen, nicht bewacht), und mit ihr der
+// 0-Reiter-Zweig in `components/TabTracker.tsx`, die Guard in
+// `components/layout/Shell.tsx` und `data-reiter-leer` samt allen vier
+// `leer`-Zweigen in `components/layout/Reiterleiste.tsx`.
+// Was BLEIBT: die Kurzform-Tabelle unten — sie trägt jetzt auch die Meta- und
+// Dienst-Routen, damit ein Reiter «Einstellungen» heisst und nicht
+// «Einstellungen — LexMetrik» (R3-F7, Herleitung dort).
+// R14b: hier stand `export const BEREICHS_UEBERSICHTEN` — die Liste, die
+// `istReiterPfad` neben dem Rubrik-Regex abfragte. Mit der Funktion ist auch
+// sie ohne Leser (§17-Gegengewicht: was niemand mehr liest, wird gestrichen,
+// nicht aufbewahrt). Die REIHENFOLGE der fünf Bereiche, die sie nebenbei
+// festhielt, steht unverändert in `lib/tabGruppen.KAT_ORDER`.
 
 // ─── R3-F7 (Prüfbefund 6.9.2026) · KURZFORM STATT SEO-TITEL ─────────────────
 //
@@ -138,6 +148,17 @@ const KURZFORM: Record<string, string> = {
   '/materialien': 'Materialien',
   '/rechner': 'Rechner',
   '/vorlagen': 'Vorlagen',
+  // R14b (7.9.2026): die Meta- und Dienst-Routen tragen seit dem Wegfall der
+  // Ausnahme ebenfalls Reiter. Ohne Eintrag hiessen sie nach `labelAusMeta`
+  // «Wie LexMetrik rechnet», «Kontakt aufnehmen», «Datenschutzerklärung» oder
+  // «Was ist durchsuchbar» — SEO-Titel, keine Reiter-Aufschriften (§5a Ziff. 2).
+  '/ueber': 'Über',
+  '/methodik': 'Methodik',
+  '/kontakt': 'Kontakt',
+  '/datenschutz': 'Datenschutz',
+  '/einstellungen': 'Einstellungen',
+  '/abdeckung': 'Abdeckung',
+  '/suche': 'Suche',
 };
 
 /** Kanonische Kurzform einer Übersichts-/Startseiten-Route — oder null, wenn
@@ -280,6 +301,17 @@ function basisKurzform(t: TabEintrag, m: VerlaufManifeste): KurzformTeile {
   // «Verfahrens- & Rechtsmittelfristen» mit 268 px der breiteste Reiter der
   // ganzen Leiste. Die Quelle bleibt der Katalog (§5); fehlt das Feld, steht
   // wie bisher der volle Titel da, nichts wird geraten (§7).
+  // ── R14b (7.9.2026) · EINE ROUTE OHNE TITEL TRÄGT IHRE ADRESSE ────────────
+  // Seit R14b ist JEDE Route ein Reiter — also auch eine, die es gar nicht
+  // gibt (404) oder die nur weiterleitet (/pro, /international). `metaFuerPfad`
+  // liefert für sie null, und `verlaufLabel` fällt dann auf die generische
+  // Sammel-Aufschrift «Zuletzt geöffnet» zurück: im Verlauf richtig, auf einem
+  // Reiter falsch — er behauptete einen Namen, den die Seite nicht hat (§8).
+  // Der Browser zeigt in genau diesem Fall die ADRESSE; das tut die Leiste
+  // jetzt auch. Deterministisch (§2) und ohne Raten (§7).
+  if (kat === 'sonstiges' && labelAusMeta(t.path) === null && katalogKurzform(t.path) === null) {
+    return { kopf: '', kern: pfadTeil(t.path), stelle: null };
+  }
   return { kopf: '', kern: katalogKurzform(t.path) ?? ohneUntertitel(voll), stelle: null };
 }
 

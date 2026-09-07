@@ -62,12 +62,20 @@ const FUENFZEHN = ['/gesetze/bund/OR', '/gesetze/bund/ZGB', '/gesetze/bund/ZPO',
 
 test.describe.configure({ timeout: 120_000 })
 
-async function seed(page: Page, tabs: string[], ziel = START): Promise<void> {
+// ── DEKLARIERTE SONDEN-ÄNDERUNG (§6.3) · R14b, 7.9.2026 ─────────────────────
+// `/kontakt` war die Startroute, WEIL sie keinen Reiter trug. Seit R14b trägt
+// JEDE Route einen (`lib/tabs.ts`, Block «R14b»; `istReiterPfad` ist ersatzlos
+// gestrichen) — der Seed landet darum auf dem ZULETZT geseedeten Reiter statt
+// auf einer reiterlosen Meta-Route. Damit bleibt die Reiterzahl exakt die
+// geseedete, und keine Zählung dieser Datei verschiebt sich. `/kontakt` bleibt
+// nur noch der Ort, an dem der Speicher überhaupt erreichbar ist (localStorage
+// braucht eine geladene Herkunft), bevor er überschrieben wird.
+async function seed(page: Page, tabs: string[], ziel?: string): Promise<void> {
   await page.goto(START)
   await page.evaluate((t) => {
     localStorage.setItem('lexmetrik-tabs', JSON.stringify(t.map((path) => ({ path }))))
   }, tabs)
-  await page.goto(ziel)
+  await page.goto(ziel ?? tabs[tabs.length - 1] ?? '/')
   if (tabs.length > 0) {
     await expect(page.locator(`${STREIFEN} [data-reiter-schluessel]`).first()).toBeVisible({ timeout: 45_000 })
   }
