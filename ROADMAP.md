@@ -455,14 +455,25 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   ✅ **erledigt 7.9.2026 (PR #739, e2ac7def9)** — Handschrift «Sammlung»: R1–R13 samt Nachzügen, Gesamtprüfung
   (Ästhetik + Funktions-Inventar 90 OK / 0 verloren), Reglement §F0. Protokolle
   `abnahme/design-identitaet/`; Zielbeschreibung: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026.
+  **Nachwünsche 7.9. (Tag):** 13 weitere PRs #744–#758 (D34–D39, D35-F1…F4, L6, R13B, R14, R14b) —
+  Tabelle Thema/PR/SHA/Protokoll in STRUKTUR.md, Abschnitt «Nachwünsche 7.9.»; #759 (D41/D42),
+  #760 (D44) und D40 waren beim Buchen noch in Landung.
   **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §1 — Stand je Runde dort in §6, Folgeschritte in §8.
-  - [ ] **⚖ öffnet Entscheide im zweiten Pane** *(`W2·24-C`, Variante C zu D33)* — heute Variante A (überlagerndes Blatt, Δ=0); C = echtes zweites Pane (Split-Regel M3). Fahrplan §8.
+  - [ ] **⚖ öffnet Entscheide im zweiten Pane** *(`W2·24-C`, Variante C zu D33)* — heute Variante A (überlagerndes Blatt, Δ=0); C = echtes zweites Pane (Split-Regel M3). **Zuerst prüfen, ob D35-F2 (#758, Erlass-Blatt) das schon abdeckt** — sonst doppelter Weg zum selben Inhalt. Fahrplan §8.
   - [ ] **Bezüge-Zeile: Kopfzähler gefiltert/ungefiltert** *(R5-F1K §7; löst D20 ab)* — Kopfzähler = Bezugsgrösse (Entscheid N1), Panel filtert; Anzeige beider Zahlen offen.
   - [ ] **Nachzüge aus R13 und Gesamtprüfung** — R13-11 Reiter-Adress-Kern · Geschäftsnummer-Kurzform statt R8-Allowlist · `StatusBadge` «maschinell» (§8) · `qsui-hierarchie` Vorlagen-Schranke 1.2533. Fahrplan §8.
-  - [ ] **L6 · PaneKopf-Name** — David 7.9.2026: Kurzform des Erlasses im primären Pane. **Bau läuft (W2·24-L6).**
+  - [x] **L6 · PaneKopf-Name** — ✅ gelandet 7.9.2026 (PR #746, `d32e5bf80`), Protokoll `L6-PANEKOPF.md`.
   - [x] **Leerer 34-px-Reiterstreifen auf «/»** — bleibt (David 7.9.2026, wie empfohlen).
   - [x] **ZGB-Reiter am Dokumentanfang** — «ZGB» bleibt (David 7.9.2026, wie empfohlen).
   - [x] **Orchestrator-Entscheide 7.9.2026 bestätigt** (D33 A · D32 · N1 · N4 · R13; David «alles wie empfohlen»).
+  - [ ] **Orchestrator-Entscheide vom Tag 7.9. bestätigen — wartet auf David:** Meta-Routen sind ebenfalls Reiter, «ohne Ausnahme» (R14b) · kein separater Fussnoten-Apparat-Schalter, die Dreier-Wahl deckt ihn ab (F3) · das Ansicht-Menü klebt am Griff und ragt 61 px über die Lesespalte (F4) · der Menü-Eintrag heisst «Alles ausblenden»/«Alles zeigen» statt «Nur Gesetzestext» (F2, Name vom Schriftregler belegt).
+  - [ ] **D45 · Entscheid-Klick in der Fusszeile öffnet daneben** — heute navigiert er die ganze Seite (`randNotizZiel` greift nur in `.lr-notiz`, `v3/LeserLesespalte.tsx`); Soll nach D30-Spec/Split-Regel M3, ⌘-Klick neuer Reiter.
+  - [ ] **«Daneben öffnen» mit `?r=`-Instanz** *(F1-Rest)* — die Aktion fiel aus der Funktionszeile, weil `istOffen()` den Hash streift und an jedem Artikel `false` liefert.
+  - [ ] **Bezüge-Zähler in den Erlass-Payload** *(D34-Nachfix, Korpus ⇒ **Gegenprüfung Pflicht**)* — statt eigenem Fetch; heute entstehen die 145 Fuss-Zeilen erst in der zweiten Render-Runde.
+  - [ ] **OR-Leser trägt 15'239 Knöpfe im DOM** *(§15, seit F1 sichtbar)* — 1686 Artikel × ~4 Aktionen; Rollen-Abfragen und Screenreader werden teuer. Aktionen erst beim Aufklappen/Hover rendern oder Ereignis-Delegation.
+  - [ ] **Rest-CLS 0.0003 im Leser-Kopf** — `LeserKopf.tsx:289` (`data-v3-kopf-griffe`, Klassenwechsel `gap`/`pl`); klein, aber der einzige verbliebene Sprung in `leser-r1-r2`.
+  - [ ] **«OR» dreimal untereinander @1440** *(L6-Nebenbefund)* — Reiter · Pane-Titel · Leser-Kennung; der V3-Leser sollte sein Kürzel im Pane abgeben.
+  - [ ] **Leser-Mount auf langsamem Netz messen** — Nachlauf zu #743/L2 (grosser Erlass: Ankersprung erst nach der zweiten Ladung, Anker-Oberkante 433 px statt 193 px).
   - [ ] **Budget-Entscheid Entry 99,5 %** (59.7 / 60.0 KB) — der nächste Kopf-Bau reisst das Budget: Lazy-Laden oder Budget-Hebung (§15). **Wartet auf David.**
   - [ ] **Jules-Kandidaten** (grüne Spur, nach Landung W2·24): toter CSS-Rückbau `[data-lr-spiegel]`/`.lr-notiz*`/alte Druckregeln in `index.css` · Typ-Härtungen `lib/tabs.ts`/`tabGruppen.ts` · Allowlist-Pflege `e2e/kein-abschnitt.allow.json`. Datei-Splits erledigt (ArtikelLeser R6F; `Reiterleiste.tsx` 7.9. gemessen 650 Z.).
 
