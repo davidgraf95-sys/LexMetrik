@@ -1,6 +1,5 @@
 import { useState, memo } from 'react';
 import { ArtikelBody, FnRef } from '../../../components/normtext/ArtikelBody';
-import { WJ } from '../../../components/normtext/wortverbinder';
 import { type InternRefs } from '../../../components/NormText';
 import { labelMitBereich, artikelGanzAufgehoben } from '../../../lib/normtext/darstellung';
 import type { Fussnote } from '../../../lib/normtext/browse';
@@ -14,21 +13,20 @@ import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../../lib/normtext/typen';
 import { verifizierLinkArtikel } from '../../../lib/normtext/verifikationslink';
 import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
-import { ArtikelHistorieZeile } from './ArtikelHistorie';
-import { margStufeStil, fnTextMitLinks, baueZitat, margLabel } from '../helpers';
+import { fnTextMitLinks, baueZitat } from '../helpers';
 import { SUCH_META } from '../suchHighlight';
 import { zitatMitAusweis, heuteIso } from '../../../lib/format';
 import { schaetzeArtikelHoehe } from '../berechnungen';
 import { LeitfallZeile } from './ArtikelLeser.leitfaelle';
 import { fussnotenAnzeige, verteileFussnoten, sammleVerweise } from './ArtikelLeser.fussnoten';
 import { BezuegeZeile } from './BezuegeZeile';
-import { BezuegeKopf, type BezugsMarke } from './BezuegeKopf';
 import { useSatzspiegel } from '../v3/satzspiegel';
 import type { ArtikelBezuege } from '../bezuegeLaden';
 import { urlMitHash } from '../../../lib/liveUrlSync';
 import { usePaneKontext } from '../../../components/layout/PaneKontext';
-import { Link } from 'react-router-dom';
 import { werkzeugeAmArtikel } from '../randNotizWerkzeuge';
+import { HistSlot, RandTitel } from './ArtikelLeser.kopfteile';
+import { ArtikelBezuegeZone } from './ArtikelLeser.bezuegeZone';
 import type { Werkzeug } from '../../../lib/normtext/werkzeuge';
 
 // Ein Artikel im Lesefluss (Richtung A): zweispaltig wie die amtliche Druckfassung —
@@ -279,92 +277,27 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // weiter am selben Element. Im Kopf kann sie sogar nicht mehr schieben: die
   // Artikelhöhe kommt aus der Textspalte.
   const histImKopf = kopfForm;
+  // Randtitel und Fassungs-Slot stehen seit dem §6.6-Split (W2·24-F) als
+  // Bauteile in `./ArtikelLeser.kopfteile` — beide Satzspiegel-Formen zeigen
+  // DASSELBE Markup an zwei verschiedenen Orten, und genau darum sind es
+  // Bauteile (Herleitung dort). Hier bleiben sie Werte, weil jede Form sie an
+  // ihrer eigenen Stelle einsetzt.
   /** Trägt die Randtitel-Zeile der ZEILENFORM überhaupt etwas? Ohne das stünde
    *  der Registerfarben-Strich als Balken über einer leeren Zeile — Lärm statt
    *  Gliederung. In React entschieden und nicht per `:has()`: eine
    *  `:has()`-Regel über 1686 Artikel ist genau die Bauart, die
-   *  W2·19-GLIEDERUNG/F1 als Scroll-Bremse nachgewiesen hat. */
+   *  W2·19-GLIEDERUNG/F1 als Scroll-Bremse nachgewiesen hat.
+   *  Wertgleich mit der Null-Bedingung von `RandTitel` — die Breitform prüft
+   *  darum ebenfalls hiergegen (§6-Split W2·24-F, Herleitung dort). */
   const randInhalt = (marg != null && marg.length > 0) || !!e.titel;
   const histSlot = (
-    <div {...{ [SUCH_META]: '' }} data-hist-slot
-      className={fussAnzeige.length > 0 || historie
-        ? `min-h-beiwerk${histImKopf ? '' : ' mt-4'}`
-        : undefined}>
-      <ArtikelHistorieZeile historie={historie} artikel={e.artikel} />
-    </div>
+    <HistSlot historie={historie} artikel={e.artikel} imKopf={histImKopf}
+      reserviert={fussAnzeige.length > 0 || !!historie} />
   );
-  /** Die Randtitel selbst — in beiden Formen DASSELBE Markup, nur an einem
-   *  anderen Ort (§5: eine Quelle für die Stufen-Stimme, `helpers.tsx`). */
-  const randTitel = marg && marg.length > 0 ? (
-    <div className="mb-1 space-y-0.5 font-serif leading-snug">
-      {marg.map((m, i) => (
-        // `lr-blatt` markiert die unterste Stufe (die Sachüberschrift des
-        // Artikels). Nur sie wird in der Breitform zur kursiven Serifen-Zeile;
-        // die Vorfahren-Stufen bleiben Grotesk.
-        <div key={i} className={`${margStufeStil((margBasis ?? 0) + i, i === marg.length - 1)}${i === marg.length - 1 ? ' lr-blatt' : ''}`}>
-          {/* A30: bis/ter-Suffix des Enumerators hochgestellt (margLabel). */}
-          {margLabel(m)}
-          {/* G11: section-heading-Fussnoten-Marker an der passenden Randtitel-
-              Zeile (blatt im Volltext, ganze Kette in der Suchsicht). G2b:
-              immer (an artOffen gebunden), Prominenz via data-fussnoten-CSS.
-              A31: Wort-Verbinder (U+2060) klebt den Marker DIREKT an den
-              Randtitel (kein Abstand, kein Umbruch auf eine eigene Zeile). */}
-          {artOffen && fnProSektion[m]?.map((nr, j) => (
-            <span key={nr} data-fn-marker data-fn-klasse={fnKlasse[nr]}>{WJ}{j > 0 && <span className="align-super text-[length:var(--hochgestellt)] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
-          ))}
-        </div>
-      ))}
-    </div>
-  ) : e.titel ? (
-    /* S2 · Ä7: derselbe Stil wie das Randtitel-BLATT in `margStufeStil`
-       (dort steht die Herleitung) — es ist dieselbe Rolle, nur aus der
-       anderen Quelle (`article_title` statt `marg`). Beide müssen gleich
-       aussehen, sonst wechselt die Sachüberschrift zwischen Artikeln ihre
-       Stimme (§5). */
-    <div className="lr-blatt mb-1 font-sans text-leser-rand font-semibold text-ink-800">
-      {e.titel}
-    </div>
-  ) : null;
-  /** Die Zahlen der Bezüge-Zeile — ausschliesslich aus Daten, die der Artikel
-   *  ohnehin führt (§8: keine Rubrik ohne echte Zahl, keine neue Ladelogik). */
-  // W2·24-R6c: die Zähl-Datei schlägt beide bisherigen Quellen — sie ist
-  // GEZÄHLT, nicht gefiltert, und deshalb dieselbe Zahl vor und nach dem Laden
-  // des Shards (die Zeile springt nicht mehr um, sobald der Apparat eintrifft).
-  // Ohne Datei bleibt die frühere Reihenfolge unverändert bestehen: gefilterte
-  // Kanten, sonst Leitfälle.
-  // ── D30 (David 6.9.2026) · «ZÄHLER = LISTENLÄNGE NACH DEM LADEN» ──────────
-  // Die Reihenfolge unten bleibt die von R6c (Zähl-Datei zuerst) — sie ist der
-  // Grund, aus dem die Zahl beim Eintreffen des Shards nicht umspringt.
-  //
-  // DAVIDS REGEL IST DAMIT NICHT UMGANGEN, SONDERN AN DER WURZEL ERFÜLLT: die
-  // Zähl-Datei zählt `gesamtProArtikel` des Shards, also OHNE UI-Filter
-  // (`scripts/gen-bezuege-zaehler.ts`), und die Liste bezieht ihre Kanten seit
-  // D30 aus `alleFuer` — ebenfalls ohne UI-Filter. Beide Wege zählen dasselbe;
-  // die Zahl kann also gar nicht mehr springen, egal welcher zuerst da ist.
-  // (Bis D30 tat sie es: gemessen OR 336c «11 Entscheide» im Kopf gegen 3
-  // gezeigte, weil `bezuegeFuer` die Panel-Facetten anwandte — Herleitung in
-  // `../bezuegeLaden`.) Dass die beiden Wege übereinstimmen, ist eine ZUSAGE
-  // und keine Hoffnung: `e2e/leser-bezuege-inhalt-d30.e2e.ts` (b) misst
-  // Kopfzahl gegen die Zahl der gerenderten Zeilen.
-  //
-  // Der Fallback nimmt `bezuegeImKopf` VOR `bezuege`: in der Kopf-Form ist das
-  // die Quelle, die auch die Liste darunter zeigt — die Zahl beschriebe sonst
-  // eine andere Menge als das, was daneben steht.
-  const bezugsMarken: BezugsMarke[] = [
-    {
-      reg: 'r',
-      anzahl: zaehler ? zaehler.entscheide : ((bezuegeImKopf ?? bezuege) ? (bezuegeImKopf ?? bezuege)!.kanten.length : (leitfaelle?.length ?? 0)),
-      wort: ['Entscheid', 'Entscheide'],
-    },
-    // Die Rubrik erscheint NUR mit echter Zahl (`anzahl > 0` filtert sie sonst
-    // in `BezuegeKopf` heraus) — ohne Zähl-Datei steht sie also gar nicht da,
-    // statt eine Null zu behaupten (§8). Dieselbe Deckungsgleichheit wie oben:
-    // die Zähl-Datei entdoppelt die Material-Kanten nach Dokument, und genau so
-    // baut `projiziereMaterialien` die Liste (ein Eintrag je Dokument).
-    { reg: 'm', anzahl: zaehler?.materialien ?? (materialien?.length ?? 0), wort: ['Materialie', 'Materialien'] },
-    { reg: 'g', anzahl: verweise.length, wort: ['Verweis', 'Verweise'] },
-    { reg: 'w', anzahl: werkzeuge.length, wort: ['Rechner', 'Rechner'] },
-  ];
+  const randTitel = (
+    <RandTitel marg={marg} margBasis={margBasis} titel={e.titel} artikel={e.artikel}
+      markerOffen={artOffen} fnProSektion={fnProSektion} fnKlasse={fnKlasse} />
+  );
   // W2·5d G3b (③/⑤): Anhang/Protokoll tragen einen kräftigeren Struktur-Trenner
   // (rule-struktur statt rule-artikel) + mehr Weissraum — so hebt sich jeder
   // Anhang-Block klar vom Normtext und vom Vor-Anhang ab (Linien-Kanon-Rolle
@@ -430,7 +363,12 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             Fassungs-Slot wandert MIT SEINER RESERVE (`min-h-beiwerk`), damit der
             späte Shard-Resolve weiter reservierten Platz füllt statt zu schieben
             (§15.2). */}
-        {kopfForm && (randTitel || fussAnzeige.length > 0 || historie) && (
+        {/* W2·24-F: `randInhalt` statt `randTitel` — seit dem §6.6-Split ist der
+            Randtitel ein Bauteil und damit immer ein Element; die Frage «steht
+            überhaupt etwas darin?» beantwortet der Wert, den die Zeilenform
+            oben ohnehin schon bildet (wertgleich mit der Null-Bedingung von
+            `RandTitel`). */}
+        {kopfForm && (randInhalt || fussAnzeige.length > 0 || historie) && (
           <div className="lr7-kopf">
             <div className="lr7-kopf-titel">{randTitel}</div>
             <div className="lr7-fassung">{histSlot}</div>
@@ -563,81 +501,16 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
         {/* ── (b) BREITFORM: die Bezüge als EINE Zeile unter dem Artikelkopf ──
             Dieselben Blöcke, die bis R6 in der Randspalte standen — eingeklappt
             eine Zeile mit Registerfarben-Marken, aufgeklappt der volle Apparat.
-            `data-such-meta`: Bezüge sind Referenzschicht, kein Wortlaut (§4.4).
-            Ausserhalb von `artOffen`, genau wie die Randspalte vorher: der
-            Apparat gehört zum Artikel, nicht zu seinem entfalteten Wortlaut. */}
+            Markup und Rechnung stehen seit dem §6.6-Split (W2·24-F) in
+            `./ArtikelLeser.bezuegeZone`; die Herleitung ist wörtlich mit
+            umgezogen. Ausserhalb von `artOffen`, genau wie die Randspalte
+            vorher: der Apparat gehört zum Artikel, nicht zu seinem entfalteten
+            Wortlaut. */}
         {kopfForm && (
-          <div {...{ [SUCH_META]: '' }}>
-            <BezuegeKopf marken={bezugsMarken} zitat={zitat}
-              onOeffnen={onBezuegeOeffnen} laedt={bezuegeLaedt && !bezuege}>
-              {/* ── D30 · DIE ENTSCHEIDE, DIE DER ZÄHLER VERSPRICHT ─────────
-                  `form="rand"`: senkrecht gestapelte Zeilen mit Zitierung und
-                  Regeste, Leitentscheide zuerst (die Gruppen laufen nach
-                  `STATUS_RANG`, BGE vor allem anderen). Das ist DIESELBE
-                  Komponente und dieselbe Portionierung wie überall sonst — nur
-                  die Gestalt, die R4 für die schmale Randspalte gebaut hat und
-                  die hier aus demselben Grund richtig ist: in einer aufgeklappten
-                  Liste unter dem Artikelkopf sucht niemand eine waagrechte
-                  Scrollachse. Der Klick öffnet daneben (Split-Regel M3) — das
-                  bringt `KanteMitVorschau` mit, nicht diese Stelle. */}
-              {((bezuegeImKopf ?? bezuege) || (leitfaelle && leitfaelle.length > 0)) && (
-                <div className="lr7-bez-block" data-reg="r">
-                  {(() => {
-                    const b = bezuegeImKopf ?? bezuege;
-                    return b
-                      ? <BezuegeZeile kanten={b.kanten} gesamt={b.gesamt}
-                          zeitAktiv={b.zeitAktiv} kantonAktiv={b.kantonAktiv}
-                          normZitat={zitat} revision={revision} form="rand" />
-                      : <LeitfallZeile refs={leitfaelle} normZitat={zitat} revision={revision} />;
-                  })()}
-                </div>
-              )}
-              {/* ── D30 · MATERIALIEN, dieselbe Anatomie wie «Rechnen» ───────
-                  Ein Titel je Dokument, daneben die Art (Behörde + Doktyp) —
-                  dieselbe Zeilenform wie der Rechnen-Block unten (§5), damit die
-                  drei Rubriken der aufgeklappten Zeile EINE Liste sind und nicht
-                  drei Gestalten. `sublabel` ist die amtliche Fundstelle-Ziffer
-                  im Dokument; sie steht nur, wenn der Kanten-Shard sie führt. */}
-              {materialien && materialien.length > 0 && (
-                <div className="lr7-bez-block" data-reg="m">
-                  <span className="lc-overline mr-1"><span className="lc-punkt" aria-hidden />Materialien</span>
-                  <ul className="lr6-notiz-liste">
-                    {materialien.map((mat) => (
-                      <li key={mat.key} data-bez-material>
-                        <Link to={mat.pfad}>{mat.titel}</Link>
-                        <span className="lr6-notiz-art">
-                          {mat.behoerdeKuerzel} {mat.doktypLabel}{mat.sublabel ? ` · ${mat.sublabel}` : ''}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {verweise.length > 0 && (
-                <div className="lr7-bez-block" data-reg="g">
-                  <span className="lc-overline mr-1"><span className="lc-punkt" aria-hidden />Verweise</span>
-                  <span className="inline-flex flex-wrap items-center gap-1.5 align-middle">
-                    {verweise.map((v) => <NormChip key={v} artikel={v} />)}
-                  </span>
-                </div>
-              )}
-              {werkzeuge.length > 0 && (
-                <div className="lr7-bez-block" data-reg="w">
-                  <span className="lc-overline mr-1"><span className="lc-punkt" aria-hidden />Rechnen</span>
-                  <ul className="lr6-notiz-liste">
-                    {werkzeuge.map((w) => (
-                      <li key={w.id}>
-                        <Link to={w.href}>{w.titel}</Link>
-                        {/* Art des Werkzeugs: ein Rechner rechnet, eine Vorlage
-                            füllt ein Dokument — für die Auswahl der Unterschied. */}
-                        <span className="lr6-notiz-art">{w.modus === 'vorlage' ? 'Vorlage' : 'Rechner'}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </BezuegeKopf>
-          </div>
+          <ArtikelBezuegeZone bezuege={bezuege} bezuegeImKopf={bezuegeImKopf}
+            leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
+            werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}
+            onOeffnen={onBezuegeOeffnen} laedt={bezuegeLaedt && !bezuege} />
         )}
         {/* Rechte Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
             overflow-x-clip + min-w-0: bei geteiltem/schmalem Bildschirm darf der
