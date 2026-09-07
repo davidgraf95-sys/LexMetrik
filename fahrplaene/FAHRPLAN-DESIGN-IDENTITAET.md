@@ -402,5 +402,15 @@ Gebucht in `ROADMAP.md` unter `W2·24-DESIGN-IDENTITAET` als eigene Zeilen; hier
 6. **`qsui-hierarchie`: Vorlagen-Schranke 1.2533.** Die Schranke wurde für die Vorlagen-Köpfe
    gesetzt; nach R7/R9 prüfen, ob sie auf den Regelwert zurück kann — sonst begründet festschreiben.
 
+7. **Leser-Mount auf langsamem Netz: 68-px-Sprung** (CLS 0.066 nur unter langsamem 4G, PR #743
+   §8 a): `LadeAnzeige` reserviert den Vorgriff nicht, den `LeserKopf` per negativem Margin
+   verschluckt — braucht eine Höhenquelle, die auch im Ladezustand gilt (§5). Kein W2·24-Rückschritt.
+8. **Reiterstreifen 0.0014 CLS** (PR #743 §8 b): das führende «+» fällt beim ersten Reiter weg —
+   berührt R11/R13-Sonden, eigener kleiner Schritt.
+9. **Vorlagen-Hierarchie am Anschlag** (FD 7.9.: `arbeitsvertrag` 1.2135 gegen 1.25): Einleitungsblock
+   452 px + Hauswirtschafts-Zeile «Eingaben zurücksetzen» über dem Formular — eigener Hierarchie-Schritt.
+10. **OR-Erstsprung > 7 s auf Produktion** (Live-Sicht 7.9.): 2,2-MB-Erlass lädt vor dem Ankersprung
+   vollständig — gehört zu `W2·24-PERF-REST` (Messung erst, dann Fix).
+
 Ausserdem gebucht, aber eigene Schritte: `W2·25-ARBEITSMAPPE` (Anheften, §7 dieses Fahrplans) und
 `W2·24-PERF-REST` (`fremdRoutingFormB`/`artikelnPluralVerweise`, erst verifizieren, dann fixen).
