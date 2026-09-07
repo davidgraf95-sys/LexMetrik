@@ -118,7 +118,12 @@ describe('Leser-Schriftskala — Persistenz und Migration', () => {
     optionen.setzeLeserSchrift('sehr-gross');
     const o = JSON.parse(speicher.get('lm.leser.optionen')!);
     expect(o.schrift).toBe('sehr-gross');
-    expect(o.leitfaelle).toBe('an');
+    // §6.3-DEKLARATION (D35-F2, 7.9.2026): hier stand `o.leitfaelle === 'an'`.
+    // Das Feld ist ersatzlos gestrichen (`leserOptionen.ts`) und wird beim
+    // Schreiben abgeräumt wie jeder Alt-Schlüssel. Die Aussage des Falls — der
+    // Schrift-Setzer rührt die FREMDEN Felder desselben Speichers nicht an —
+    // steht unverändert, jetzt am nachgerückten Feld.
+    expect(o.fussRubriken).toEqual(['r', 'm', 'g', 'w', 'a']);
     expect(o.bezugKantone).toEqual(['BS']);
     // S1 (deklarierte fachliche Änderung, §6.3): `hist: 'aus'` stand als
     // `histansicht: 'aus'` im neuen Speicher — die Nutzerwahl erhalten, nur

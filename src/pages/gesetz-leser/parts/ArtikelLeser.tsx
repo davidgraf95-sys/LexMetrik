@@ -26,7 +26,7 @@ import { ArtikelAktionen } from './ArtikelAktionen';
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
 
-export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, bezuege, bezuegeImFuss, materialien, onBezuegeOeffnen, bezuegeLaedt, revision, historie, zaehler, istAnhang = false }: {
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, bezuege, bezuegeImFuss, materialien, onBezuegeOeffnen, onImBlatt, bezuegeLaedt, revision, historie, zaehler, istAnhang = false }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; intern?: InternRefs;
   marg?: string[];
   /** G-HIST-UI: Fassungshistorie dieses Artikels aus dem erlass-lokalen Shard
@@ -98,6 +98,11 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
    *  bestehenden Ladepfad (`v3/panelModell.ts` → `weckeDaten`). Ohne die Prop
    *  bleibt die Zeile, was sie war (Ist-Hülle, Tests, Druck). */
   onBezuegeOeffnen?: () => void;
+  /** D35-F2 · «im Blatt öffnen ›» in der aufgeklappten Rubrik «Entscheide»
+   *  (Herleitung in `./ArtikelLeser.bezuegeFuss.tsx`). MUSS referenz-stabil
+   *  sein — diese Komponente ist `memo`, und 1686 neue Funktionen je Render des
+   *  Rahmens hoben die Schranke auf (§15, `../v3/panelModell.oeffneEntscheide`). */
+  onImBlatt?: () => void;
   /** D30 · der Apparat ist unterwegs ⇒ Skelett-Zeile «lädt …» statt Leere. */
   bezuegeLaedt?: boolean;
   /** Revision r(a) dieses Artikels (§V1c) — an die LeitfallZeile durchgereicht. */
@@ -644,7 +649,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
         <ArtikelBezuegeFuss bezuege={bezuege} bezuegeImFuss={bezuegeImFuss}
           leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
           werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}
-          onOeffnen={onBezuegeOeffnen} laedt={bezuegeLaedt && !bezuege}
+          onOeffnen={onBezuegeOeffnen} onImBlatt={onImBlatt} laedt={bezuegeLaedt && !bezuege}
           aktionen={<ArtikelAktionen artikel={e.artikel} basisPfad={basisPfad}
             zitat={zitat} zitatVoll={zitatVoll} amtlich={amtlich} />} />
       </div>

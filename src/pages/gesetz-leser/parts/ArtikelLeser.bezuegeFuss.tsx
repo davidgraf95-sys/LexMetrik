@@ -63,7 +63,7 @@ import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen
 
 export function ArtikelBezuegeFuss({
   bezuege, bezuegeImFuss, leitfaelle, materialien, verweise, werkzeuge, zaehler,
-  zitat, revision, onOeffnen, laedt, aktionen,
+  zitat, revision, onOeffnen, laedt, aktionen, onImBlatt,
 }: {
   bezuege?: ArtikelBezuege;
   bezuegeImFuss?: ArtikelBezuege;
@@ -81,6 +81,23 @@ export function ArtikelBezuegeFuss({
   laedt?: boolean;
   /** D35-F1 · die Artikel-Aktionen rechts in derselben Zeile. */
   aktionen?: ReactNode;
+  /**
+   * D35-F2 · «im Blatt öffnen ›» am Fuss der aufgeklappten Rubrik «Entscheide».
+   *
+   * Der Entscheid war «beides»: die Rubrik klappt auf UND armiert wie bisher
+   * (`onOeffnen`), und dieser Griff öffnet dieselbe Liste zusätzlich im
+   * Erlass-Blatt auf dem Reiter «Entscheide» (`../v3/panelModell`,
+   * `oeffneEntscheide`). KEIN zweiter Ladepfad und keine zweite Auswahl: das
+   * Blatt liest dieselbe Hook-Instanz, die das Aufklappen schon geweckt hat
+   * (§5, D30).
+   *
+   * NUR AN DER RUBRIK «ENTSCHEIDE»: sie ist die einzige, die im Blatt eine
+   * eigene, artikelscharfe Fläche hat. «Materialien», «Verweise» und «Rechnen»
+   * hätten dort nur ihre ERLASS-weiten Nachbarn — ein Griff, der woandershin
+   * führt als er verspricht, wäre die Scope-Verwechslung D-3/D-4, die dieser
+   * Schritt gerade abräumt (§8).
+   */
+  onImBlatt?: () => void;
 }) {
   /** Die Zahlen der Funktionszeile — ausschliesslich aus Daten, die der Artikel
    *  ohnehin führt (§8: keine Rubrik ohne echte Zahl, keine neue Ladelogik). */
@@ -132,6 +149,18 @@ export function ArtikelBezuegeFuss({
         : (leitfaelle && leitfaelle.length > 0
             ? <LeitfallZeile refs={leitfaelle} normZitat={zitat} revision={revision} />
             : null),
+      nebenGriff: onImBlatt
+        ? (
+          <button type="button" onClick={onImBlatt}
+            className="lc-btn-mini lr7-bez-nebengriff text-micro text-ink-500 hover:text-brass-700"
+            /* WCAG 4.1.2 · derselbe Massstab wie an den Rubrik-Griffen: auf
+               einer Seite mit 1686 Artikeln ist «im Blatt öffnen» allein in der
+               Knopfliste eines Screenreaders nicht auffindbar. */
+            aria-label={`Entscheide zu ${zitat} im Erlass-Blatt öffnen`}
+            data-v3-bez-imblatt>
+            im Blatt öffnen<span aria-hidden className="lr7-bez-pfeil">&nbsp;›</span></button>
+        )
+        : undefined,
     },
     // Die Rubrik erscheint NUR mit echter Zahl (`anzahl > 0` filtert sie sonst
     // in `BezuegeKopf` heraus) — ohne Zähl-Datei steht sie also gar nicht da,

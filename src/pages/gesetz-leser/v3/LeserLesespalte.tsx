@@ -52,7 +52,7 @@ import type { PanelBezuege } from './panelModell';
 // von `./LeserLeseZeile`). Genau das ist der Unterschied zum gestrichenen Prop:
 // die Liste steht nicht IM Fluss des Lesekörpers, sondern `absolute` darüber,
 // verschiebt also keinen Pixel und lässt die PX-Region hier unangetastet.
-export function LeserLesespalte({ m, bezuege, weckeBezuege, bezuegeGeweckt = false }: {
+export function LeserLesespalte({ m, bezuege, weckeBezuege, oeffneBlatt, bezuegeGeweckt = false }: {
   m: LeserV3Modell;
   /** D30 · der Apparat des Panels — DIESELBE `useBezuege`-Instanz, kein zweiter
    *  Lader (§5). `undefined` in der Ist-Hülle und in Tests, die die Spalte ohne
@@ -60,6 +60,10 @@ export function LeserLesespalte({ m, bezuege, weckeBezuege, bezuegeGeweckt = fal
   bezuege?: PanelBezuege;
   /** D30 · Aufklappen der Bezüge-Zeile ⇒ Nachladen armieren (`weckeDaten`). */
   weckeBezuege?: () => void;
+  /** D35-F2 · «im Blatt öffnen ›» der Rubrik «Entscheide» — referenz-stabil aus
+   *  `./panelModell` (`oeffneEntscheide`), sonst fiele die `memo`-Schranke von
+   *  `parts/ArtikelLeser` über alle Artikel (§15). */
+  oeffneBlatt?: () => void;
   /** D30 · ist bereits jemand nach den Daten gefragt worden? Steuert die
    *  Skelett-Zeile «lädt …» UND das Laden der Materialien. */
   bezuegeGeweckt?: boolean;
@@ -135,6 +139,7 @@ export function LeserLesespalte({ m, bezuege, weckeBezuege, bezuegeGeweckt = fal
       bezuegeImFuss={bezuege?.alleFuer(e.artikel)}
       materialien={artikelMaterialien(e.artikel)}
       onBezuegeOeffnen={weckeBezuege}
+      onImBlatt={oeffneBlatt}
       // «lädt …» heisst: geweckt, aber der Lade-VERSUCH ist noch nicht durch.
       // `geladen` (nicht die Kanten) unterscheidet «unterwegs» von «leer» — die
       // A1-Lehre aus `panelModell.ts`, hier dieselbe Quelle (§5).

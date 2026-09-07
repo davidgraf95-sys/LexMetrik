@@ -24,6 +24,10 @@
 //        (Bezugsgrösse, Zähl-Datei), Kopf-Zähler «3 Entscheide» (gefilterte
 //        Kanten). SOLL: dieselbe Zahl aus derselben Quelle, und die
 //        Beschriftung wechselt nicht, sobald der Lazy-Shard eintrifft.
+//        NACHTRAG D35-F2 (7.9.2026, ERGÄNZUNG statt Nachführung, §0 Ziff. 2b):
+//        seither trägt der Kopf-Griff überhaupt keine Artikel-Zahl mehr — die
+//        Zahl steht an genau einem Ort, der Funktionszeile am Artikelende
+//        (Variante A, `e2e/w224-d35-f2-kopf.e2e.ts`).
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 
@@ -217,8 +221,24 @@ test.describe('D33 — «Rechtsprechung» öffnet ein Blatt und verschiebt nicht
   })
 })
 
-test.describe('N1 — der Kopf-Zähler nennt dieselbe Zahl wie die Bezüge-Zeile', () => {
-  test('(k) OR Art. 336c: Kopf-Zähler = Marke der Bezüge-Zeile', async ({ page }) => {
+// ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ─────────────────────
+// Der Block hiess «N1 — der Kopf-Zähler nennt dieselbe Zahl wie die Bezüge-Zeile»
+// und verlangte Gleichheit der beiden Zahlen. Die N1-Messung vom 7.9.2026 (OR
+// Art. 336c @1440: Kopf «3», Zeile «11») bleibt richtig für ihren Stand und wird
+// NICHT nachgeführt (§0 Ziff. 2b) — N1 hat sie behoben, indem beide Orte
+// dieselbe Zähl-Datei lasen.
+//
+// D35-F2 (Variante A) geht eine Ebene höher: nicht dieselbe Zahl an zwei Orten,
+// sondern EIN Ort. Der Kopf-Griff heisst «Erlass ▾» und trägt gar keine
+// Artikel-Zahl mehr; die Zahl steht ausschliesslich an der Funktionszeile des
+// Artikels. Die Zusage ist damit strenger als N1, nicht schwächer — die
+// Gleichheits-Prüfung hat keinen zweiten Operanden mehr.
+// Die neue Fassung steht als eigene Sonde in `e2e/w224-d35-f2-kopf.e2e.ts` (a)
+// («genau ein Ort nennt die Entscheid-Zahl je Artikel», mit Rot-Probe); hier
+// bleibt der ORTS-Teil der Zusage, weil er zu D32/D33 gehört: die Zeile trägt
+// die Zahl, der Kopf nicht.
+test.describe('N1/D35-F2 — die Entscheid-Zahl steht am Artikel, nicht im Kopf', () => {
+  test('(k) OR Art. 336c: die Funktionszeile trägt die Zahl, der Kopf-Griff keine', async ({ page }) => {
     test.slow()
     const fehler = await oeffne(page, '/gesetze/bund/OR#art-336_c', 1440)
     // Die Zähl-Datei kommt im Leerlauf; die Marke ist ihr sichtbarer Beleg.
@@ -229,10 +249,14 @@ test.describe('N1 — der Kopf-Zähler nennt dieselbe Zahl wie die Bezüge-Zeile
     const ausMarke = Number((((await marke.textContent()) ?? '').match(/\d+/) ?? ['0'])[0])
     expect(ausMarke, 'die Bezüge-Zeile nennt keine Entscheid-Zahl — der Fall trägt nicht').toBeGreaterThan(0)
 
-    const zaehler = page.locator(ZAEHLER).first()
-    await expect(zaehler).toBeVisible()
-    const ausKopf = Number(await zaehler.getAttribute('data-v3-panel-anzahl'))
-    expect(ausKopf, `Kopf-Zähler ${ausKopf} ≠ Bezüge-Zeile ${ausMarke} (Ist-Stand: 3 gegen 11)`).toBe(ausMarke)
+    // Der Griff steht (Positiv-Sonde §6.7 — sonst prüfte der Fall eine leere
+    // Kopfzeile) und nennt keine Zahl, weder sichtbar noch im Attribut.
+    const griff = page.locator(ZAEHLER).first()
+    await expect(griff).toBeVisible()
+    expect(await griff.getAttribute('data-v3-panel-anzahl'),
+      `der Kopf-Griff trägt wieder eine Zahl — die Zeile nennt bereits ${ausMarke}`).toBeNull()
+    expect((await griff.textContent()) ?? '', 'der Kopf-Griff schreibt wieder eine Zahl hin')
+      .not.toMatch(/\d/)
 
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })

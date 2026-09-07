@@ -67,6 +67,21 @@ export interface BezugsMarke {
   /** Hängt der Inhalt an einem nachzuladenden Shard? Dann fragt das Aufklappen
    *  danach (`onOeffnen`) und zeigt bis dahin das Skelett. */
   brauchtDaten?: boolean;
+  /**
+   * D35-F2 · Ein Sekundär-Griff am FUSS des aufgeklappten Blocks.
+   *
+   * Entscheid David 7.9.2026 zur Frage «aufklappen ODER ins Blatt öffnen»:
+   * BEIDES. Die Rubrik verhält sich unverändert (aufklappen + Ladepfad
+   * armieren, D30/D35-F1), und wer die Liste lieber neben dem Text hat,
+   * bekommt sie über diesen Griff. Er steht INNERHALB des aufgeklappten
+   * Blocks, nicht in der Zeile: in der Zeile wäre er ein zweiter Knopf pro
+   * Rubrik im Ruhezustand — und die Zeile trägt schon vier Rubriken und vier
+   * Aktionen.
+   *
+   * WER ihn baut, entscheidet `./ArtikelLeser.bezuegeFuss.tsx`; diese Datei
+   * rendert nur (§3).
+   */
+  nebenGriff?: ReactNode;
 }
 
 /**
@@ -119,7 +134,16 @@ export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false 
   return (
     // `print:hidden`: im Ausdruck trägt der Artikelkopf den Randtitel, die
     // Funktionszeile ist Bedienung und gehört nicht aufs Papier.
-    <div className="lr7-bez print:hidden">
+    // D35-F2 · WELCHE Rubriken dieser Artikel überhaupt führt, als Buchstaben.
+    // Der Artikel weiss das (er hat gerade gezählt), der Store weiss es nicht —
+    // und das Wort «Bezüge» links darf nur stehen, solange mindestens EINE der
+    // gezählten Rubriken auch gezeigt wird. Ohne diese Angabe stünde es an einem
+    // Artikel mit nur EINER Rubrik weiter da, nachdem der Nutzer genau sie
+    // abgewählt hat: eine Überschrift über nichts (§8, gesehen am Bild
+    // `d35-f2-c` vom 7.9.2026, ZPO Art. 272). Die Regel dazu steht in
+    // `src/index.css` und ist eine ANSCHALT-Liste, keine Ausschalt-Liste — vier
+    // Zeilen statt der sechzehn Teilmengen, die die Umkehrung gekostet hätte.
+    <div className="lr7-bez print:hidden" data-bez-marken={sichtbar.map((m) => m.reg).join('')}>
       <div className="lr7-bez-zeile">
         {sichtbar.length > 0 && <span className="lr7-bez-wort">Bezüge</span>}
         {sichtbar.map((m) => {
@@ -160,6 +184,7 @@ export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false 
                   </span>
                 )
                 : m.inhalt}
+              {m.nebenGriff}
             </div>
           ))}
         </div>

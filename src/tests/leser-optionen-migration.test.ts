@@ -67,8 +67,13 @@ describe('D35-F3: zwei Bestands-Schalter → eine Dreier-Wahl', () => {
     }
   });
 
-  it('leerer Speicher ⇒ Vorgabe: Fassung sichtbar, Rechtsprechung im Kopf an', () => {
-    expect(migriereOptFelder({})).toEqual({ leitfaelle: 'an', vermerke: 'fassung' });
+  // §6.3-DEKLARATION (D35-F2, 7.9.2026): der Fall hiess «… Rechtsprechung im
+  // Kopf an» und prüfte `leitfaelle: 'an'`. Der Schalter ist ersatzlos
+  // gestrichen (Herleitung in `leserOptionen.ts`); an seiner Stelle steht der
+  // Grundzustand der Rubriken-Wahl, und die Aussage bleibt dieselbe: ein leerer
+  // Speicher ergibt die Vorgabe, nichts Halbes.
+  it('leerer Speicher ⇒ Vorgabe: Fassung sichtbar, alle Rubriken am Artikel', () => {
+    expect(migriereOptFelder({})).toEqual({ vermerke: 'fassung', fussRubriken: ['r', 'm', 'g', 'w', 'a'] });
   });
 
   it('das Ergebnis trägt GENAU die zwei heutigen Schlüssel', () => {
@@ -79,8 +84,12 @@ describe('D35-F3: zwei Bestands-Schalter → eine Dreier-Wahl', () => {
       verweise: 'aus', linien: 'auto', zeitraum: '10', hist: 'chronologie',
       fussnoten: 'aus', histansicht: 'aus', leitfaelle: 'aus',
     });
-    expect(Object.keys(ergebnis).sort()).toEqual(['leitfaelle', 'vermerke']);
-    expect(ergebnis.leitfaelle).toBe('aus');
+    // §6.3-DEKLARATION (D35-F2, 7.9.2026): `leitfaelle` ist selbst gestrichen
+    // (Herleitung in `leserOptionen.ts`) und steht darum jetzt in der Liste der
+    // Alt-Schlüssel, die NICHT durchrutschen dürfen; an seine Stelle tritt
+    // `fussRubriken`. Die Aussage des Falls ist unverändert: aus dem
+    // Bestands-Speicher kommt genau der Feldsatz heraus, den der Store führt.
+    expect(Object.keys(ergebnis).sort()).toEqual(['fussRubriken', 'vermerke']);
   });
 });
 
@@ -119,9 +128,26 @@ describe('S1-Migration: hist (dreiwertig) speist die Wahl weiter', () => {
 });
 
 describe('Migration: das unveränderte Feld und der reale Bestand', () => {
-  it('leitfaelle wird wortwörtlich übernommen', () => {
-    for (const wert of ['an', 'aus'] as const) {
-      expect(migriereOptFelder({ leitfaelle: wert }).leitfaelle).toBe(wert);
+  // §6.3-DEKLARATION (D35-F2, 7.9.2026): der Fall hiess «leitfaelle wird
+  // wortwörtlich übernommen». Das Feld ist ersatzlos gestrichen; an seiner
+  // Stelle steht die Rubriken-Wahl, und für sie gilt dieselbe §8-Regel, die den
+  // alten Fall trug — eine getroffene Nutzerwahl kippt nicht still.
+  it('fussRubriken: fehlt der Schlüssel, steht alles; ein leeres Array bleibt leer', () => {
+    // Jeder Bestands-Speicher vor D35-F2 hat den Schlüssel nicht — Grundzustand.
+    expect(migriereOptFelder({}).fussRubriken).toEqual(['r', 'm', 'g', 'w', 'a']);
+    // «Alles ausblenden» ist eine WAHL, kein fehlender Wert (§8).
+    expect(migriereOptFelder({ fussRubriken: [] }).fussRubriken).toEqual([]);
+  });
+
+  it('fussRubriken: unbekannte Buchstaben rutschen nicht durch, die Ordnung ist kanonisch', () => {
+    // Ein unbekannter Buchstabe landete sonst als `data-fuss-aus="…"` am <html>,
+    // wo keine Regel ihn kennt — dieselbe Whitelist-Sicherung wie bei `vermerke`.
+    expect(migriereOptFelder({ fussRubriken: ['a', 'x', 'r', 42, null] }).fussRubriken)
+      .toEqual(['r', 'a']);
+    // Kein Array ⇒ Grundzustand, ohne zu werfen.
+    for (const unfug of [null, 'rmgwa', 7, {}] as unknown[]) {
+      expect(() => migriereOptFelder({ fussRubriken: unfug })).not.toThrow();
+      expect(migriereOptFelder({ fussRubriken: unfug }).fussRubriken).toEqual(['r', 'm', 'g', 'w', 'a']);
     }
   });
 
@@ -135,6 +161,9 @@ describe('Migration: das unveränderte Feld und der reale Bestand', () => {
       fussnoten: 'aus', verweise: 'aus', leitfaelle: 'an',
       hist: 'chronologie', linien: 'auto', zeitraum: '10', schrift: 'gross',
     };
-    expect(migriereOptFelder(bestand)).toEqual({ leitfaelle: 'an', vermerke: 'fassung' });
+    // D35-F2: `leitfaelle: 'an'` im Bestand wird nicht mehr übernommen — das
+    // Feld gibt es nicht mehr; die Rubriken-Wahl fehlt im Speicher und fällt
+    // darum auf ihren Grundzustand.
+    expect(migriereOptFelder(bestand)).toEqual({ vermerke: 'fassung', fussRubriken: ['r', 'm', 'g', 'w', 'a'] });
   });
 });

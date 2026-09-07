@@ -28,7 +28,7 @@
 // Beleg: bibliothek/betrieb/testapparat-fang-historie-2026-08-31.md §1.
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
-import { ANSICHT_PANEL, SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME, RECHTSPRECHUNG_SCHALTER_NAME, WAHL_ROLLE } from './helpers/leserBeschriftung'
+import { ANSICHT_PANEL, VERMERKE_SCHALTER_NAME, WAHL_ROLLE } from './helpers/leserBeschriftung'
 import { DROSSEL, REAKTIONS_BUDGET, REAKTIONS_LATTE, CONTAINER_BUDGET_CI, CONTAINER_LOKAL_READER } from './helpers/budgets'
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -342,29 +342,32 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
     expect(m.breiteGriffe).toBeLessThan(m.breiteZeile)
   })
 
-  test('(a3) NM-2 · F8-Regel unberührt: Schalter aus ⇒ kein Zähler, Menü-Weg bleibt', async ({ page }) => {
-    // Regel David 16.8.2026: «Rechtsprechung im Text» AUS ⇒ Zähler weg; Panel
-    // bleibt über «Ansicht ▾» und Taste «r» erreichbar. Der neue Chip auf `mini`
-    // darf diese Regel nicht aushebeln — er hängt an derselben einen Stelle
-    // (`panelModell.oeffnerSichtbar`).
+  // ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ───────────────────
+  // Der Fall hiess «(a3) NM-2 · F8-Regel unberührt: Schalter aus ⇒ kein Zähler,
+  // Menü-Weg bleibt» und legte dafür den Schalter «Rechtsprechung im Kopf» um.
+  // Davids F8-Regel vom 16.8.2026 und ihre Messung bleiben als Beleg ihres
+  // Datums stehen (§0 Ziff. 2b); der Schalter ist mit Variante A ERSATZLOS
+  // gefallen, weil der Kopf keine Artikel-Zahl mehr trägt, die er hätte
+  // verbergen können (`v3/leserOptionen.ts`, `v3/panelModell.ts`).
+  // Was die NM-2-Sorge wirklich meinte — «auf `mini` führt ein Weg aus der
+  // Kopfzeile zur Rechtsprechung» —, ist damit STÄRKER eingelöst: der Griff
+  // steht dort unbedingt. Genau das prüft der Fall jetzt, und zusätzlich, dass
+  // der tastaturlose Weg («r») unverändert daneben besteht.
+  test('(a3) NM-2 · @390 steht der Weg zum Blatt unbedingt in der Kopfzeile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto('/gesetze/bund/STPO')
     await warteLeser(page)
     await expect(page.locator('[data-v3-panel-zaehler]')).toHaveCount(1)
-
-    await page.locator('[data-v3-ansicht]').click()
-    // B2 (H4-Nachzug 18.8.2026): der Schalter heisst nach seiner WIRKUNG —
-    // «Rechtsprechung im Text» war eine Zusage, die V3 nicht einlöst (0
-    // Bezugs-Zeilen im Lesetext, gemessen). Wortlaut-Herleitung in
-    // `v3/LeserAnsichtV3.tsx`.
-    await page.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
-    await page.keyboard.press('Escape')
-    await expect(page.locator('[data-v3-panel-zaehler]')).toHaveCount(0)
-
-    // … und der Menü-Weg trägt weiter.
-    await page.locator('[data-v3-ansicht]').click()
-    await page.locator('[data-v3-ansicht-panel-auf]').click()
+    // Ein Tap, nicht zwei (der NM-2-Blocker war der Zwei-Tap-Weg übers Menü).
+    await page.locator('[data-v3-panel-zaehler]').click()
     await expect(page.locator('[data-v3-panel]')).toBeVisible({ timeout: 20_000 })
+    await page.locator('[data-v3-panel-zu]').click()
+
+    // Und im Menü steht kein ZWEITER Öffner daneben (Ä92, jetzt trivial erfüllt).
+    await page.locator('[data-v3-ansicht]').click()
+    await expect(page.locator('[data-v3-ansicht-panel]')).toBeVisible()
+    await expect(page.locator('[data-v3-ansicht-panel-auf]')).toHaveCount(0)
+    await page.keyboard.press('Escape')
   })
 
   // ── (b) Ä46 · ein ✕ je Pane ───────────────────────────────────────────────
@@ -569,6 +572,8 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
     // G14 (7.9.2026): die drei heissen seither «Rechtsprechung N» · «Gliederung»
     // · «Ansicht ▾». Ihre ZAHL ist unverändert drei — nur die Beschriftung fiel
     // vorher weg (Wächter `e2e/leser-w224-g.e2e.ts`).
+    // D35-F2 (7.9.2026, ERGÄNZUNG): der erste heisst seither «Erlass ▾» und
+    // trägt keine Zahl mehr; die Zahl DREI ist unverändert.
     expect(griffe.length, 'auf `mini` stehen drei Griffe').toBe(3)
     // EINE Bauform: gleiche Fläche, gleiche Rundung, gleiche Höhe.
     expect(new Set(griffe.map((g) => g.bg)).size, `Flächen: ${griffe.map((g) => g.bg).join(' | ')}`).toBe(1)
@@ -581,31 +586,33 @@ test.describe('H4-II — ein Weg je Handlung aus der V3-Kopfzeile', () => {
     }
   })
 
-  test('(g) Ä92 · ein Öffner je Breite: Chip ODER Menü-Eintrag, nie beide', async ({ page }) => {
+  // ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ───────────────────
+  // Der Fall hiess «Chip ODER Menü-Eintrag, nie beide» und schaltete dafür
+  // zwischen den zwei Lagen hin und her. Die Ä92-Messung vom 18.8.2026 (chip 1
+  // UND Eintrag 1 = zwei Öffner für eine Fläche) bleibt stehen (§0 Ziff. 2b).
+  // Mit D35-F2 gibt es nur noch EINE Lage: der Griff steht auf jeder Breite,
+  // der Menü-Eintrag «Entscheide & Kontext …» ist ersatzlos gestrichen. Die
+  // Zusage «ein Öffner je Breite» wird damit strenger geprüft als vorher —
+  // «genau einer», ohne Fallunterscheidung.
+  test('(g) Ä92 · genau EIN Öffner je Breite, ohne Fallunterscheidung', async ({ page }) => {
     for (const [w, h] of [[390, 844], [1440, 900]] as const) {
       await page.setViewportSize({ width: w, height: h })
       await page.goto('/gesetze/bund/STPO')
       await warteLeser(page)
       await page.waitForTimeout(300)
-      // Mit Zähler: der Menü-Eintrag fehlt — auch bei AUFGEZOGENEM Menü, denn
-      // genau dort standen bis 18.8.2026 beide (gemessen: chip 1, Eintrag 1).
       await expect(page.locator('[data-v3-panel-zaehler]')).toHaveCount(1)
       await page.locator('[data-v3-ansicht]').click()
       await expect(page.locator('[data-v3-ansicht-panel]')).toBeVisible()
       await expect(page.locator('[data-v3-ansicht-panel-auf]'),
-        `@${w}: Menü-Eintrag steht neben dem Chip`).toHaveCount(0)
-      // Ohne Zähler (F8-Regel): der Eintrag tritt an seine Stelle — der Zugang
-      // bleibt, die Doppelung verschwindet.
-      await page.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
-      await expect(page.locator('[data-v3-panel-zaehler]')).toHaveCount(0)
-      await expect(page.locator('[data-v3-ansicht-panel-auf]')).toHaveCount(1)
-      await page.locator('[data-v3-ansicht-panel-auf]').click()
-      await expect(page.locator('[data-v3-panel]')).toBeVisible({ timeout: 20_000 })
-      // Zurückstellen — der Store ist geteilt und überlebt die Navigation.
-      await page.locator('[data-v3-panel-zu]').click()
-      await page.locator('[data-v3-ansicht]').click()
-      await page.getByRole(SCHALTER_ROLLE, { name: RECHTSPRECHUNG_SCHALTER_NAME }).click()
+        `@${w}: Menü-Eintrag steht neben dem Griff`).toHaveCount(0)
       await page.keyboard.press('Escape')
+      // Der Sammel-Marker zählt ALLE Öffner (`OEFFNER_SELEKTOR`, `panelModell`)
+      // — er ist der Grund, aus dem ein dritter nicht unbemerkt entstehen kann.
+      await expect(page.locator('[data-v3-panel-oeffner]'),
+        `@${w}: mehr als ein Öffner für dieselbe Fläche`).toHaveCount(1)
+      await page.locator('[data-v3-panel-zaehler]').click()
+      await expect(page.locator('[data-v3-panel]')).toBeVisible({ timeout: 20_000 })
+      await page.locator('[data-v3-panel-zu]').click()
     }
   })
 
