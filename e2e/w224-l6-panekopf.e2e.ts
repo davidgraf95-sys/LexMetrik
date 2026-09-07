@@ -141,9 +141,20 @@ test.describe('L6 — der Pane-Kopf nennt die Kurzform (Entscheid David 7.9.2026
 
     // D27: der Scroll-Spy schiebt die Lesestellung in den Reiter — und die
     // Titelleiste liest DENSELBEN Eintrag, nicht eine eigene Ableitung.
-    await page.mouse.move(400, 500)
-    await page.mouse.wheel(0, 4000)
-    await expect(page.locator(PRIMAER_NAME)).toHaveText(/^Art\. \S+ OR$/)
+    //
+    // GESCROLLT WIRD IN DER SCHLEIFE, nicht einmal (Flake gemessen 7.9.2026,
+    // 1 von 2 Läufen unter `--repeat-each=2 --workers=2`: der Name blieb 14
+    // Abfragen lang «OR»). Ein einzelnes `wheel` trifft ins Leere, solange der
+    // Snapshot des Erlasses noch lädt — die Spalte ist dann kürzer als der
+    // Scrollweg, und danach scrollt niemand mehr. Die Schleife wiederholt die
+    // GESTE, nicht bloss die Abfrage; sie ist damit unabhängig von der Ladezeit
+    // und misst weiterhin genau eines: dass die Stellung im Kopf ankommt.
+    await expect.poll(async () => {
+      await page.mouse.move(400, 500)
+      await page.mouse.wheel(0, 2000)
+      return (await page.locator(PRIMAER_NAME).innerText()).replace(/\s+/g, ' ').trim()
+    }, { timeout: 30_000, message: 'die Lesestellung erreicht den Pane-Kopf nicht' })
+      .toMatch(/^Art\. \S+ OR$/)
     const warm = await lies(page)
     expect(warm.koepfe.map((k) => k.name), 'Kopf und Reiter driften auseinander (§5)')
       .toEqual(warm.reiter)

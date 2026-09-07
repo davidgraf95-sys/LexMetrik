@@ -350,17 +350,26 @@ test.describe('A-2 — unter ?leser=v3 trägt der Leser die eine Kopfzeile', () 
       await expect(page.locator(`${wahl} [data-v3-such-zone] input`)).toBeVisible()
     }
     await expect(page.locator('[data-inhalt-kopf]')).toHaveCount(0)
-    // Die Identität ist aus der Titelleiste verschwunden — geprüft am TEXT der
-    // Leiste, nicht nur an der abgeschalteten Meldung: `titelVon(pathname)` gibt
-    // ihr weiterhin ein `label`, sie würde es ohne `nurSteuerung` als Titel
-    // ausgeben. Ein Test, der nur `[data-ort-artikel]` zählt, bliebe grün, wenn
-    // die Leiste stattdessen «StPO» schreibt (am 17.8.2026 genau so gemessen —
-    // darum diese scharfere Fassung).
+    // ── §6.3-DEKLARATION L6 (Entscheid David 7.9.2026) ─────────────────────
+    // Bis 7.9. stand hier «die Leiste nennt gar nichts mehr» — geprüft als
+    // `not.toMatch(/StPO|BGFA|Gesetze|Stand/)`. Gemessen war das Ergebnis zwei
+    // NAMENLOSE Fenster nebeneinander («⠿ ◂ ▸ ⇱ ⧉ ✕»), während der
+    // Reiterstreifen darüber beide Erlasse nennt (Befund L6, 17.8.2026).
+    // Davids Entscheid gibt der Titelleiste ihren NAMEN zurück — die Kurzform,
+    // nicht die Krume. Die Aussage dieses Falls wird dadurch nicht weicher,
+    // sondern genauer: was A-2 abgeben wollte, war die DOPPELTE ORTSANGABE
+    // (Krumen-Kette, Artikel-Zitat, Stand) — nicht der Name des Fensters.
+    // Genau so steht es jetzt hier, und die Doppelkrume bleibt verboten.
     const leisten = page.locator('[data-pane-kopf]')
     await expect(leisten).toHaveCount(2)
-    for (let i = 0; i < 2; i++) {
+    for (const [i, name] of ['StPO', 'BGFA'].entries()) {
       const text = (await leisten.nth(i).innerText()).replace(/\s+/g, ' ').trim()
-      expect(text, `Pane-Titelleiste ${i} nennt noch Identität: «${text}»`).not.toMatch(/StPO|BGFA|Gesetze|Stand/)
+      // Krume, Sektion und Stand bleiben weg — das ist der A-2-Kern.
+      expect(text, `Pane-Titelleiste ${i} trägt wieder Ortsangabe: «${text}»`)
+        .not.toMatch(/Gesetze|Bund|Stand|›/)
+      // L6: der Name steht — und genau einmal.
+      expect(text.split(name).length - 1, `Pane-Titelleiste ${i}: «${text}»`).toBe(1)
+      await expect(leisten.nth(i).locator('[data-pane-name]')).toHaveText(name)
     }
     await expect(page.locator('[data-ort-artikel]')).toHaveCount(0)
     // Höhe unverändert 36 px: die Leiste verliert Inhalt, nicht ihren Platz —
