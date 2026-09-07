@@ -216,3 +216,22 @@ gemalt, Attribut fehlt».
 Der Umschalt-Reflow ist klick-getrieben und damit input-exkludiert; eng gemessen
 in `e2e/leser-optionen.e2e.ts` (Beobachter installiert, EIN Umschaltvorgang):
 **0.0**.
+### R-3 / R-4 · Radiogruppe und §8-Hinweis (E2E, gefahren 7.9.2026)
+
+Eingriff (beide zugleich): in `v3/LeserAenderungsWahl.tsx` die Rolle auf
+`menuitemcheckbox` zurückgestellt **und** die Hinweiszeile samt
+`aria-describedby` abgeklemmt. Neu gebaut, gegen `:4434` gefahren.
+
+```
+Running 7 tests using 2 workers
+  1) … ↑/↓ erreichen die Wahl        Error: die Pfeiltaste überspringt die Radiogruppe
+                                     Expected value: "menuitemradio"
+                                     Received array: ["menuitemcheckbox"]
+  2) … menuitemradio, Kreis-Marke    getByRole('menuitemradio') — Expected: 3 / Received: 0
+  3-6) … Migration (4 Fälle)         menuitemradio { name: … } — element(s) not found
+  7) … MONTREAL: Hinweis da          getByText('keine klassifizierten Änderungs-Fussnoten')
+                                     — element(s) not found
+  7 failed
+```
+
+Zurückgenommen (`git checkout`), neu gebaut, danach 7/7 grün.
