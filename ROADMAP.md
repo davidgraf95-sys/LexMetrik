@@ -477,10 +477,10 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **⚖ öffnet Entscheide im zweiten Pane** *(`W2·24-C`, Variante C zu D33)* — heute Variante A (überlagerndes Blatt, Δ=0); C = echtes zweites Pane (Split-Regel M3). Fahrplan §8.
   - [ ] **Bezüge-Zeile: Kopfzähler gefiltert/ungefiltert** *(R5-F1K §7; löst D20 ab)* — Kopfzähler = Bezugsgrösse (Entscheid N1), Panel filtert; Anzeige beider Zahlen offen.
   - [ ] **Nachzüge aus R13 und Gesamtprüfung** — R13-11 Reiter-Adress-Kern · Geschäftsnummer-Kurzform statt R8-Allowlist · `StatusBadge` «maschinell» (§8) · `qsui-hierarchie` Vorlagen-Schranke 1.2533. Fahrplan §8.
-  - [ ] **L6 · PaneKopf-Name vs. «keine Doppelkrume»** (17.8.2026) — primäres Pane ohne eigenen Namen, Platzhalter «(aktuelle Adresse)»; Kurzform-Vorschlag offen. **Wartet auf David.**
-  - [ ] **Leerer 34-px-Reiterstreifen auf «/»** (R11-Auflage R2, R13 bestätigt) — Höhe bleibt reserviert (CLS 0); offen ist, ob der «+»-Knopf allein genügt. **Wartet auf David.**
-  - [ ] **ZGB-Reiter am Dokumentanfang** — @900 px zeigt «ZGB» statt «Art. 1 ZGB» (44-px-Kopf, R6d). **Wartet auf David.**
-  - [ ] **Bestätigung der Orchestrator-Entscheide 7.9.2026** (D33 A · D32 · N1 · N4 · R13 — Liste in der STRUKTUR-Karte 6./7.9.). **Wartet auf David.**
+  - [ ] **L6 · PaneKopf-Name** — David 7.9.2026: Kurzform des Erlasses im primären Pane. **Bau läuft (W2·24-L6).**
+  - [x] **Leerer 34-px-Reiterstreifen auf «/»** — bleibt (David 7.9.2026, wie empfohlen).
+  - [x] **ZGB-Reiter am Dokumentanfang** — «ZGB» bleibt (David 7.9.2026, wie empfohlen).
+  - [x] **Orchestrator-Entscheide 7.9.2026 bestätigt** (D33 A · D32 · N1 · N4 · R13; David «alles wie empfohlen»).
   - [ ] **Budget-Entscheid Entry 99,5 %** (59.7 / 60.0 KB) — der nächste Kopf-Bau reisst das Budget: Lazy-Laden oder Budget-Hebung (§15). **Wartet auf David.**
   - [ ] **Jules-Kandidaten** (grüne Spur, nach Landung W2·24): toter CSS-Rückbau `[data-lr-spiegel]`/`.lr-notiz*`/alte Druckregeln in `index.css` · Typ-Härtungen `lib/tabs.ts`/`tabGruppen.ts` · Allowlist-Pflege `e2e/kein-abschnitt.allow.json`. Datei-Splits erledigt (ArtikelLeser R6F; `Reiterleiste.tsx` 7.9. gemessen 650 Z.).
 
