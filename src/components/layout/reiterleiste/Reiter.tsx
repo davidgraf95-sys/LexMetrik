@@ -147,7 +147,7 @@ export function Reiter({
         // gekürzte Gericht) kürzt sich weg, die Untergrenze ist sein
         // `min-content` — die Geschäftsnummer bleibt ungekürzt (F6, unten).
         // Was auch dann nicht mehr passt, zieht ins Blatt (`useReiterFenster`).
-        className={`group/reiter relative flex cursor-grab items-center border-r border-rule-soft active:cursor-grabbing ${
+        className={`group/reiter relative flex min-w-0 cursor-grab items-center border-r border-rule-soft active:cursor-grabbing ${
         zieht === t.path ? 'opacity-40' : ''
       } ${aktiv ? (reg ? REG_TON[reg] : 'bg-paper-raised') : ''}`}>
       {/* EINFÜGEMARKE (D15): 2 px in der Registerfarbe des GEZOGENEN Reiters,
@@ -216,7 +216,16 @@ export function Reiter({
             byte-gleich, die Lücke macht weiter `gap-1`), im Text steht er.
             Gilt für BEIDE Fugen — die zum Kopf hatte den Defekt schon
             vorher («OGer AGHOR.2024.19»). */}
-        {kopf && <span className="truncate max-w-[9rem]">{kopf}</span>}
+        {/* R8 (7.9.2026) · `min-w-0`, SONST SCHRUMPFT DER REITER NICHT WIRKLICH.
+            Ein `truncate`-Span setzt `white-space: nowrap`; als Flex-Kind ist
+            seine `min-content`-Breite damit der GANZE Text, nicht die Ellipse.
+            Der Reiter konnte deshalb nicht unter diese Breite — gemessen auf
+            /gesetze/kanton/ZH-211.11 @320: Reiterkasten 171 px, Inhalt 283 px,
+            der Rest lief in den Nachbarn. `min-w-0` hebt genau diese Sperre auf
+            und stellt her, was der Kommentar oben schon beschreibt («der Kopf
+            kuerzt sich weg, die Geschaeftsnummer bleibt»). Die max-w-Deckel
+            bleiben, sie begrenzen nach OBEN. */}
+        {kopf && <span className="min-w-0 truncate max-w-[9rem]">{kopf}</span>}
         {kopf && ' '}
         {/* ── D27 (David 6.9.2026) · DIE LESESTELLUNG STEHT IM REITER ──────
             «diese funktion, dass es anzeigt in welchem artikel wir sind,
@@ -243,7 +252,7 @@ export function Reiter({
             gemeinsam, die Gesamtbreite des Streifens ändert sich nicht. */}
         {stelle ? <span className="rl-stelle num">{stelle}</span> : null}
         {stelle ? ' ' : null}
-        <span className={kopf ? 'shrink-0' : 'truncate max-w-[15rem]'}>{kern}</span>
+        <span className={kopf ? 'shrink-0' : 'min-w-0 truncate max-w-[15rem]'}>{kern}</span>
         {paneWort && <span className="sr-only">{` (Fenster ${paneWort})`}</span>}
       </button>
       {/* Fenster-Marke: zeigt, welcher Reiter links bzw. rechts steht. */}
