@@ -347,7 +347,11 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
           ? (
             <LeserTrefferSpalte m={m} bestimmungsWort={bestimmungsWort}
               vollflaechig={!umgebung.imPane}
-              onSprung={trefferSicht.schliesse} onSchliessen={trefferSicht.schliesse} />
+              // Esc ist eine TASTATUR-Geste ⇒ Fokus zurück ins Feld, sonst fiele
+              // er auf den Body. Beim KLICK nicht: ein Fokus im Feld öffnete
+              // @390 die Bildschirmtastatur über dem eben geholten Text.
+              onSprung={trefferSicht.schliesse}
+              onSchliessen={() => { trefferSicht.schliesse(); suchFeldRef.current?.focus(); }} />
           )
           : null}
         // H3 · Panel/Lasche. EIN Aufrufpunkt für beide Modi: im Spalten-Modus

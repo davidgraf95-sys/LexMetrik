@@ -157,7 +157,14 @@ export function LeserLeseZeile({
           style={{ top: 'var(--nt-stick)' }}>
           <div className="h-4 bg-gradient-to-b from-paper/70 to-transparent" />
         </div>
-        <div className="space-y-5">{zelle}</div>
+        {/* D38 · `inert`, solange die Trefferliste darüberliegt: der Text ist
+            dann VERDECKT, und was verdeckt ist, darf weder den Tab-Fokus
+            aufnehmen noch vorgelesen werden. Ohne das wanderte der Fokus hinter
+            eine opake Fläche — der klassische «wo bin ich»-Fehler eines
+            Overlays (WCAG 2.4.3/2.4.7). `inert` berührt Layout und Geometrie
+            NICHT: der Sprung zu `#art-…` misst und scrollt unverändert, und die
+            Liste gibt die Fläche ohnehin frei, bevor er ankommt. */}
+        <div className="space-y-5" inert={trefferSpalte ? true : undefined}>{zelle}</div>
         <div aria-hidden data-v3-blur="unten" className="pointer-events-none sticky bottom-0 z-sticky h-0 overflow-visible print:hidden">
           <div className="-mt-4 h-4 bg-gradient-to-t from-paper/70 to-transparent" />
         </div>

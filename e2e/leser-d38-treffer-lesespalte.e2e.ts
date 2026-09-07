@@ -11,6 +11,9 @@
 //  (c) SPRUNG ZURÜCK OHNE POSITIONSVERLUST. Suchen und wieder verlassen (Esc)
 //      lässt den Lesetext auf den Pixel dort, wo er stand.
 //  (d) LAYOUT-SHIFT 0 beim Umschalten Text↔Treffer.
+//  (f) ↑↓ FÜHREN DIE LAUFENDE STELLE MIT. Solange die Liste die Lesefläche hat,
+//      ist sie das, was der Leser beim Schreiten ANSIEHT — eine Hervorhebung
+//      ausserhalb ihres Scrollers wäre eine Rückmeldung, die niemand bekommt.
 //
 // WARUM IM BROWSER: (a) ist eine Frage nach Vorfahren im gerenderten Baum, (c)
 // misst Rechtecke gegen den Viewport, (d) ist eine Browser-Metrik. Nichts davon
@@ -34,6 +37,9 @@
 //      der Inhalt oberhalb des Sichtfelds, und Chromes Scroll-Anchoring hält
 //      die Bildlage von selbst — grün. Nur der Austausch nimmt dem Dokument
 //      seine Höhe, und genau das ist der Fall, den (c) ausschliesst.
+//  (f) in `v3/LeserTrefferSpalte.tsx` den `useEffect` mit der `scrollTop`-
+//      Rechnung entfernen ⇒ die aktive Zeile wandert beim Schreiten aus dem
+//      Scroller heraus und (f) meldet ihre Lage.
 //  (d) in `LeserRahmenV3.tsx` `zoneHoch: feldGefuellt` gegen
 //      `zoneHoch: feldGefuellt && !trefferSteht` tauschen ⇒ die Such-Zone springt
 //      beim Umschalten um 24 px und (d) meldet die Verschiebung.
@@ -259,4 +265,30 @@ test('(e) @390: die Treffer stehen in der Lesespalte, das Sheet bleibt die Glied
   await expect(sheet.locator('[data-treffer-liste]'), 'im Sheet steht die Trefferliste').toHaveCount(0)
   await expect(sheet.locator('[data-v3-leiste-baum] button').first()).toBeVisible()
   await expect(page.locator('[data-v3-alle]'), '«alles auf/zu» fehlt im Sheet').toHaveCount(1)
+})
+
+test('(f) ↑↓ führen die laufende Fundstelle in der Liste mit', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await warteLeser(page)
+  await suche(page)
+
+  const scroller = page.locator('[data-v3-treffer-spalte-scroller]')
+  const vor = page.locator('[data-treffer-vor]')
+  await expect(vor, 'kein ↓-Griff — Vorbedingung fehlt (§6.7)').toHaveCount(1)
+
+  // Weit genug schreiten, dass die aktive Zeile ohne Mitführen längst unter der
+  // Kante des Scrollers läge (die Liste ist auf dem OR mehrere tausend Pixel
+  // hoch, der Scroller rund 710).
+  for (let i = 0; i < 12; i += 1) await vor.click()
+  await page.waitForTimeout(400)
+
+  const lage = await scroller.evaluate((s) => {
+    const el = s.querySelector('[data-treffer-stelle-aktiv], [data-treffer-aktiv]')
+    if (!el) return null
+    const z = el.getBoundingClientRect()
+    const k = s.getBoundingClientRect()
+    return { drin: z.top >= k.top - 1 && z.bottom <= k.bottom + 1, z: Math.round(z.top), k: Math.round(k.top), kb: Math.round(k.bottom) }
+  })
+  expect(lage, 'keine aktive Zeile in der Liste').not.toBeNull()
+  expect(lage!.drin, `aktive Zeile ausserhalb des Scrollers: ${JSON.stringify(lage)}`).toBe(true)
 })
