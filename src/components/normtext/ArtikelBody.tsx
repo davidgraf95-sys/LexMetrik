@@ -122,11 +122,13 @@ export function FnRef({ artikel, nr, klasse, kl }: {
     // jetzt redundant, aber zeichen- und wirkungsneutral.
     <span ref={ankerRef} className="relative whitespace-nowrap" data-fn-klasse={kl}>
       {WJ}
-      {/* `data-fn-ref` ist die MASCHINEN-Kennung des Fussnoten-Markers: der
-          `data-fussnoten`-Toggle in `index.css` greift darüber und nie über den
-          accessible name (Treuebruch 16.8.2026 — die frühere Namensregel traf
-          auch den Schalter «Fussnoten (N)» im Ansicht-Menü). Wächter:
-          `src/tests/fussnoten-toggle-huellenneutral.test.ts`. */}
+      {/* `data-fn-ref` ist die MASCHINEN-Kennung des Fussnoten-Markers: eine
+          CSS-Regel greift darüber und nie über den accessible name (Treuebruch
+          16.8.2026 — die frühere Namensregel traf auch den Schalter «Fussnoten
+          (N)» im Ansicht-Menü). Den `data-fussnoten`-Toggle, der sie damals
+          benutzte, gibt es seit D35-F3 (7.9.2026) nicht mehr; die Kennung
+          bleibt, weil sie der Nachweis der textfreien Adressierung ist.
+          Wächter: `src/tests/fussnoten-toggle-huellenneutral.test.ts`. */}
       <button type="button" data-fn-ref onClick={umschalten} aria-expanded={auf} aria-label={`Fussnote ${nr}`}
         className={`num align-super text-[length:var(--hochgestellt)] font-medium text-brass-700 hover:text-brass-800 ${klasse ?? ''}`}>{nr}</button>
       {auf && html && pos && typeof document !== 'undefined' && createPortal(

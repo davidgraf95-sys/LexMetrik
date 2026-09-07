@@ -84,8 +84,23 @@ for (const thema of ['light', 'dark'] as const) {
     test('(a)+(b)+(c) Fussnoten-Popover über dem Gesetzestext', async ({ page }) => {
       await page.goto('/gesetze/bund/OR#art-336_c');
       await expect(page.locator('#art-1')).toBeVisible({ timeout: 20_000 });
-      const marker = page.locator('#lc-lesespalte [data-fn-marker] :is(a, button)').first();
-      await expect(marker, 'kein Fussnoten-Marker im Lesetext').toBeVisible({ timeout: 20_000 });
+      // ── D35-F3 (Entscheid David 7.9.2026, §6.3 DEKLARIERT) · DER GRUNDZUSTAND
+      //    ZEIGT NICHT MEHR JEDEN MARKER ────────────────────────────────────
+      // Bis hierher nahm die Sonde schlicht den ERSTEN Marker der Lesespalte.
+      // Das war richtig, solange der Grundzustand den ganzen Apparat zeigte
+      // (§0 Ziff. 2b — der damalige Messwert bleibt stehen). Seit D35-F3 ist
+      // die Vorgabe die Stellung «Fassung»: die Änderungs-Fussnoten (`kl:'A'`)
+      // sind dann samt Markern `display:none`. GEMESSEN am gebauten Stand
+      // (OR, @1440, 7.9.2026): 371 Marker in der Lesespalte, davon 100
+      // sichtbar; die ersten fünf tragen alle `kl:'A'` und sind unsichtbar —
+      // `.first()` griff also einen ausgeblendeten Marker.
+      // Die ZUSAGE dieser Sonde ist unverändert («Popover deckt und ist
+      // lesbar»), und sie gilt für jede Fussnote: gemessen wird darum der
+      // erste SICHTBARE Marker — im Grundzustand, den der Leser wirklich
+      // sieht, statt in einer erst herzustellenden Stellung.
+      const marker = page.locator('#lc-lesespalte [data-fn-marker] :is(a, button)')
+        .filter({ visible: true }).first();
+      await expect(marker, 'kein sichtbarer Fussnoten-Marker im Lesetext').toBeVisible({ timeout: 20_000 });
       await marker.scrollIntoViewIfNeeded();
       await marker.click();
       const popover = page.locator('.lc-popover').first();

@@ -19,7 +19,7 @@
 //
 // Läuft gegen `vite preview` (dist). Reine UI-Einheit (golden-neutral).
 import { test, expect, type Page } from '@playwright/test'
-import { SCHALTER_ROLLE } from './helpers/leserBeschriftung'
+import { WAHL_ROLLE } from './helpers/leserBeschriftung'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 import { panelAufziehen } from './helpers/panelOeffnen'
 
@@ -115,13 +115,16 @@ test('V3/A34/Bug2 (≥lg): «Ansicht»-Menü im Split-View bleibt beim Scrollen 
     return r.top >= pr.top - 2 && r.bottom <= pr.bottom + 2
   })
   expect(imBlick).toBe(true)
-  // Es schaltet auch wirklich: Menü öffnen und den «Fussnoten»-Schalter umlegen —
-  // Beweis über den globalen Options-State (<html data-fussnoten>, leserOptionen.ts).
+  // Es schaltet auch wirklich: Menü öffnen und die Stellung «Fussnoten» wählen —
+  // Beweis über den globalen Options-State (<html data-vermerke>, leserOptionen.ts).
+  // D35-F3 (§6.3): das Attribut heisst neu, der geprüfte Sachverhalt («der
+  // Öffner im Pane bedient wirklich den geteilten Store») ist unverändert.
   await ansicht.click()
   await expect(primaer.locator('[data-v3-ansicht-panel]')).toBeVisible()
-  const vorher = await page.evaluate(() => document.documentElement.getAttribute('data-fussnoten') ?? 'an')
-  await primaer.getByRole(SCHALTER_ROLLE, { name: /Fussnoten/ }).first().click()
-  await expect.poll(() => page.evaluate(() => document.documentElement.getAttribute('data-fussnoten') ?? 'an'))
-    .toBe(vorher === 'aus' ? 'an' : 'aus')
+  const vorher = await page.evaluate(() => document.documentElement.getAttribute('data-vermerke') ?? 'fassung')
+  const ziel = vorher === 'fussnoten' ? 'aus' : 'fussnoten'
+  await primaer.getByRole(WAHL_ROLLE, { name: ziel === 'aus' ? /^aus$/ : /^Fussnoten/ }).first().click()
+  await expect.poll(() => page.evaluate(() => document.documentElement.getAttribute('data-vermerke') ?? 'fassung'))
+    .toBe(ziel)
   expect(fehler).toEqual([])
 })

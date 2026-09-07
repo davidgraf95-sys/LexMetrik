@@ -44,10 +44,29 @@ export const SCHALTER_ROLLE = 'menuitemcheckbox' as const;
  */
 export const LESER_SUCHFELD_NAME = /^Im .+ suchen/;
 
-/** Der Schalter für die Fassungs-Zeile am Artikelfuss (Ä116 — heisst wie das
- *  Element, das er schaltet). Verankert (`^…$`), damit das Muster nicht in
- *  einen künftigen Schalter «Fassungs-Zeitleiste» o. ä. hineintrifft (§7). */
+/**
+ * ── D35-F3 (Entscheid David 7.9.2026) · AUS ZWEI SCHALTERN WIRD EINE WAHL ────
+ * «Fussnoten» und «Fassung» waren zwei unabhängige `menuitemcheckbox`. Seit dem
+ * Entscheid sind sie zwei von drei Stellungen EINER Radiogruppe «Änderungen
+ * anzeigen als» (`menuitemradio`, `v3/LeserAenderungsWahl.tsx`). Die NAMEN
+ * bleiben Wort für Wort — Ä116 gilt unverändert —, nur die Rolle wechselt.
+ * ALS KONSTANTE, aus demselben Grund wie `SCHALTER_ROLLE` darüber (§17).
+ * Rot zu bekommen: auf `'menuitemcheckbox'` zurückstellen ⇒ die Wahl-Fälle rot.
+ */
+export const WAHL_ROLLE = 'menuitemradio' as const;
+
+/** Die Stellung, die die Fassungs-Zeile am Artikel zeigt (Ä116 — heisst wie das
+ *  Element, das sie schaltet). Verankert (`^…$`), damit das Muster nicht in
+ *  eine künftige Stellung «Fassungs-Zeitleiste» o. ä. hineintrifft (§7). */
 export const VERMERKE_SCHALTER_NAME = /^Fassung$/;
+
+/** Die Stellung, die den vollen amtlichen Apparat zeigt. NICHT verankert: der
+ *  Accessible Name trägt seit A26/LM-025 den Erlass-Zähler («Fussnoten (932 im
+ *  Erlass)»), und der ist Teil der Auskunft, nicht des Namens. */
+export const FUSSNOTEN_WAHL_NAME = /^Fussnoten/;
+
+/** Die dritte Stellung: weder Fassungs-Zeile noch Änderungs-Fussnoten. */
+export const AUS_WAHL_NAME = /^aus$/;
 
 /** Der Schalter für die Rechtsprechung («Rechtsprechung in der Kopfzeile»,
  *  Ä115 — Substantiv wie seine beiden Nachbarn, benennt seit B2 seine

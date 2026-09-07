@@ -14,6 +14,16 @@
 // fällt der Marker ans Blockende zurück und die Reihenfolgen-Asserts hier
 // werden rot.
 import { test, expect } from '@playwright/test'
+import { vollerApparat } from './helpers/vollerApparat'
+
+// ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ─────────────────────
+// Die Vorgabe der Ansicht ist seither «Fassung», und dort sind die als `kl:'A'`
+// klassifizierten Änderungs-Fussnoten samt ihren Markern gedämpft (beim
+// Bundesrecht die Mehrheit: ZGB 719 von 809, StPO 187 von 283). Diese Sonde
+// prüft die EXTRAKTION, nicht die Ansicht — sie stellt darum den vollen
+// Apparat ein. Die geprüfte Aussage ist Wort für Wort unverändert.
+test.beforeEach(async ({ page }) => { await vollerApparat(page) })
+
 
 test('ZGB Art. 798a: fn 667 sitzt nach «1991» mitten im Satz, nicht am Absatzende', async ({ page }) => {
   await page.goto('/gesetze/bund/ZGB#art-798_a')

@@ -210,9 +210,17 @@ const GLOSSAR: GlossarEintrag[] = [
     ],
   },
   {
-    sache: 'Fassungs-Zeile ↔ ihr Schalter (Ä116)',
-    gewaehlt: /label="Fassung"/,
-    verworfen: [{ wort: /label="Änderungsvermerke"/, statt: 'label="Fassung"' }],
+    // §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026): der Schalter ist eine
+    // Stellung der Radiogruppe «Änderungen anzeigen als» geworden, seine
+    // Beschriftung steht darum als Tabellen-Eintrag statt als JSX-Attribut
+    // (`v3/LeserAenderungsWahl.tsx`). Das GLOSSAR-WORT ist unverändert
+    // «Fassung» — Ä116 gilt Wort für Wort weiter, nur die Fundstelle wandert.
+    sache: 'Fassungs-Zeile ↔ ihre Stellung in der Änderungs-Wahl (Ä116)',
+    gewaehlt: /label: 'Fassung'/,
+    verworfen: [
+      { wort: /label="Änderungsvermerke"/, statt: "label: 'Fassung'" },
+      { wort: /label: 'Änderungsvermerke'/, statt: "label: 'Fassung'" },
+    ],
   },
   {
     sache: 'Suchbereich «Überschriften» (Ä120)',

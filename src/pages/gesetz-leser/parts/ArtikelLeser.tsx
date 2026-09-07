@@ -205,7 +205,8 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // neben dem Randtitel, nicht mehr in einer eigenen Randspalte und nicht mehr
   // unten im Beiwerk.
   // Verlagert wird der SLOT samt `data-hist-slot`, nicht sein Inhalt — der
-  // Schalter «Änderungsvermerke» (`index.css`, `html[data-histansicht="aus"]`)
+  // Schalter «Änderungsvermerke» (`index.css`; seit D35-F3 7.9.2026 die Stellung
+  // `html[data-vermerke]`, bis dahin `html[data-histansicht="aus"]`)
   // greift unverändert, und die 24-px-Reserve (`min-h-beiwerk`, CLS) steht
   // weiter am selben Element. Im Kopf kann sie sogar nicht mehr schieben: die
   // Artikelhöhe kommt aus der Textspalte.
@@ -574,7 +575,18 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               der data-fussnoten-CSS-Toggle dämpft ihn bei «AUS» (data-fn-apparat),
               versteckt ihn nie. Marker + Apparat = EINE Bedienung (Options-Leiste). */}
           {fussAnzeige.length > 0 && (
-            <div data-fn-apparat className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
+            /* D35-F3 (7.9.2026) · `data-fn-nur-a`: trägt dieser Apparat AUSSCHLIESSLICH
+               Änderungs-Fussnoten? Dann nimmt die Wahl «Fassung»/«aus» den ganzen
+               Kasten mit, statt eine nackte Haarlinie über nichts stehen zu lassen.
+               Die Frage wird HIER beantwortet und nicht per `:has()` in der CSS —
+               eine Nachbarschafts-Anfrage über bis zu 1686 Artikel ist genau die
+               Bauart, die W2·19-GLIEDERUNG/F1 als Scroll-Bremse nachgewiesen hat
+               (§15, dieselbe Begründung wie bei `randInhalt` oben).
+               `undefined` statt `false`: React lässt das Attribut dann ganz weg —
+               ein `data-fn-nur-a="false"` wäre für den Attribut-Selektor ein
+               TREFFER und blendete jeden Apparat aus. */
+            <div data-fn-apparat data-fn-nur-a={fussAnzeige.every((f) => f.kl === 'A') ? '' : undefined}
+              className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
                 <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} data-fn-klasse={fn.kl}
                   /* S2 (V2-Spalte «Fussnoten-Body 0.6875 rem / lh 1.3»): `text-leser-fn`

@@ -834,11 +834,25 @@
      (Der DOM-Walker in `suchHighlight.ts` benutzt noch dieselbe Namensregel, ist
      aber von Haus aus auf den Artikel-Container beschränkt — dort ist sie
      unbedenklich und bleibt unverändert.) */
-  html[data-fussnoten="aus"] .lc-leser [data-fn-ref],
-  html[data-fussnoten="aus"] .lc-leser [data-fn-marker],
-  html[data-fussnoten="aus"] .lc-leser [data-fn-apparat] {
-    display: none;
-  }
+  /* ── D35-F3 (Entscheid David 7.9.2026, «A und verlustfrei») · DIESE REGEL IST
+     ERSATZLOS GESTRICHEN ──────────────────────────────────────────────────────
+     Der Block darüber beschreibt den Stand bis 7.9.2026 und bleibt als Herleitung
+     stehen (§0 Ziff. 2b: ein Beleg wird ergänzt, nie nachgeführt) — die REGEL
+     `html[data-fussnoten="aus"] … { display:none }` gibt es nicht mehr, und mit
+     ihr keinen Zustand, in dem die Oberfläche den amtlichen Fussnoten-Apparat als
+     GANZES verbirgt.
+     Davids Wortlaut: «es soll entweder fassung oder fussnoten angezeigt werden.
+     also entweder fassung, fussnoten oder aus», Entscheid dazu: VERLUSTFREI.
+     Gemessen am ZPO-Apparat (D35-Bericht Teil 3, 7.9.2026): `kl:A` 212, `kl:V` 96,
+     `kl:U` 3 — 99 von 311 Einträgen (32 %) sind KEINE Änderungsvermerke. Eine
+     Dreier-Wahl, die «Fassung» als «Fussnoten aus» liest, hätte genau diese 99
+     amtlichen Fussnoten mitgenommen (§7/§8, und H0-Auflage 1 gebrochen).
+     WAS DIE WAHL STATTDESSEN SCHALTET, steht im Block darunter: ausschliesslich
+     die Änderungshistorie — `[data-fn-klasse="A"]` und den daraus abgeleiteten
+     `[data-hist-slot]`. Der Marker-Träger `[data-fn-ref]` behält seine Kennung
+     (H2-Wurzelfix, `src/components/normtext/ArtikelBody.tsx`): sie ist der
+     Nachweis, dass kein Selektor hier je wieder über den Accessible Name greift,
+     und `src/tests/fussnoten-toggle-huellenneutral.test.ts` bewacht genau das. */
 
   /* ── ÄNDERUNGSVERMERKE an/aus (§14-Intake David 20.7.2026, gebaut 26.7.2026
      nach dem H0-Verdikt `bibliothek/normen/hist-ansicht-h0-trennbarkeit.md`;
@@ -921,8 +935,63 @@
      der Slot reserviert 16+24 px ab dem ersten Render (§15.2, CLS) und bliebe
      sonst als Phantom-Lücke unter jedem Artikel zurück. Inhalt bleibt im DOM
      (A1-Mechanik), «an» stellt ihn vollständig wieder her. */
-  html[data-histansicht="aus"] .lc-leser [data-hist-slot] {
+  /* ══ D35-F3 (7.9.2026) · DIE EINE WAHL: FASSUNG | FUSSNOTEN | AUS ═══════════
+     Bis hierher hingen die zwei Flächen an zwei unabhängigen Attributen
+     (`data-fussnoten` · `data-histansicht`, vier erreichbare Kombinationen).
+     Jetzt trägt EIN Attribut `data-vermerke` alle drei Stellungen — die Frage
+     ist eine, also ist die Weiche eine (§5).
+
+     DIE MATRIX, Wort für Wort aus dem Entscheid:
+       fassung    Slot «Gilt seit …» + Zeitleiste SICHTBAR · `kl:A` gedämpft
+       fussnoten  Slot aus · `kl:A` sichtbar (der volle amtliche Apparat)
+       aus        Slot aus · `kl:A` gedämpft
+     In JEDER Stellung sichtbar: `kl:V`/`G`/`Z`/`U` und jede Fussnote OHNE
+     Klasse — das ist die Verlustfreiheit, und zugleich H0-Auflage 1 («A ist die
+     EINZIGE Klasse, welche die Änderungs-Ansicht dämpfen darf»,
+     `bibliothek/normen/hist-ansicht-h0-trennbarkeit.md`).
+
+     KANTONSRECHT: die Sidecars tragen kein `kl` (`lib/normtext/browse.ts`) ⇒
+     die A-Regeln finden dort nichts, «Fassung» verhält sich wie vor D35-F3
+     (Slot an, Apparat an). Das Menü sagt das hin (§8, Hinweiszeile in
+     `v3/LeserAnsichtV3.tsx`) statt eine Wirkung zu behaupten, die es nicht gibt.
+
+     WARUM `@media screen` um die A-Regeln: ein AUSDRUCK ohne amtliche
+     Änderungs-Fussnoten wäre ein unvollständiges Dokument, und der Nutzer sieht
+     ihm die Bildschirm-Einstellung nicht an (§7/§8). Der Fassungs-Slot ist
+     dagegen ABGELEITET — er folgt der Wahl auch im Druck, genau wie bisher unter
+     `data-histansicht`.
+
+     WARUM `[data-fn-nur-a]` statt `:has()`: bleibt in einem Artikel nach der
+     Dämpfung KEIN Eintrag übrig, stünde der Kasten als nackte Haarlinie da. Wer
+     das per `:has()` prüfte, legte eine Nachbarschafts-Anfrage über bis zu 1686
+     Artikel — genau die Bauart, die W2·19-GLIEDERUNG/F1 als Scroll-Bremse
+     nachgewiesen hat (§15). Die Frage «trägt dieser Apparat NUR A-Einträge?»
+     beantwortet darum React einmal beim Rendern
+     (`parts/ArtikelLeser.tsx`, `parts/ErlassKopfBlock.tsx` trägt sie nie: der
+     Kopf-Apparat hat kein `data-fn-klasse` und bleibt vollständig).
+
+     CLS: klick-getrieben ⇒ der Reflow liegt binnen 500 ms nach der Eingabe
+     (input-exkludiert), es wird nichts nachgeladen und kein Artikel neu
+     gerendert (§15). Inhalt bleibt im DOM (A1-Mechanik) — «Fussnoten» stellt
+     ihn vollständig wieder her.
+
+     KEIN GRUNDZUSTAND OHNE REGEL: die Vorgabe ist «fassung» und emittiert damit
+     bewusst eine Regel. R6 («Default emittiert keine Regel») galt für zwei
+     Schalter, deren Vorgabe «alles zeigen» war; die Vorgabe ist jetzt eine
+     ENTSCHIEDENE Stellung. Byte-Gleichheit bleibt gewahrt, wo sie zählt: das
+     ausgelieferte Markup ist unverändert (`check:golden-normtext`), das Attribut
+     entsteht erst zur Laufzeit in `wendeLeserOptionenAn`. ══════════════════ */
+  html[data-vermerke="fussnoten"] .lc-leser [data-hist-slot],
+  html[data-vermerke="aus"] .lc-leser [data-hist-slot] {
     display: none;
+  }
+  @media screen {
+    html[data-vermerke="fassung"] .lc-leser [data-fn-klasse="A"],
+    html[data-vermerke="aus"] .lc-leser [data-fn-klasse="A"],
+    html[data-vermerke="fassung"] .lc-leser [data-fn-apparat][data-fn-nur-a],
+    html[data-vermerke="aus"] .lc-leser [data-fn-apparat][data-fn-nur-a] {
+      display: none;
+    }
   }
 
   /* ── W2·24-D35-F1 (7.9.2026) · HIER STAND EINE REGEL, DIE GELOGEN HAT ────

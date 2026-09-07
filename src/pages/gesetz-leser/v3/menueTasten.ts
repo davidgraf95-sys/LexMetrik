@@ -19,7 +19,12 @@ import type { KeyboardEvent } from 'react';
 // dem EREIGNIS (`currentTarget`) und nicht aus einem Ref — ein Ref, das im
 // Render an eine Funktion gereicht wird, meldet `react-hooks/refs` (rot gesehen
 // 7.9.2026), und gebraucht wird er ohnehin erst beim Tastendruck.
-const EINTRAG = '[role="menuitem"], [role="menuitemcheckbox"]';
+// D35-F3 (7.9.2026): `menuitemradio` gehört dazu. Ohne diesen Selektor sprängen
+// ↑/↓ über die Dreier-Wahl «Änderungen anzeigen als» hinweg — genau die
+// Teil-Bedienung, wegen der M-4 den Schriftregler als «nicht Teil des Menüs»
+// gemessen hat. `querySelectorAll` findet sie auch INNERHALB der `role="group"`,
+// die die Wahl klammert; die Reihenfolge bleibt die Dokument-Reihenfolge.
+const EINTRAG = '[role="menuitem"], [role="menuitemcheckbox"], [role="menuitemradio"]';
 
 export function menueTastenFahrt(e: KeyboardEvent<HTMLElement>): void {
   const zeilen = Array.from(e.currentTarget.querySelectorAll<HTMLElement>(EINTRAG));

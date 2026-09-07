@@ -5,8 +5,9 @@ import { menueTastenFahrt } from './menueTasten';
 import { kopfGriffKlassen } from './kopfStufen';
 import { setzeOption, useLeserOptionen, type OptFeld } from '../leserOptionen';
 import { LeserScrim } from './LeserScrim';
+import { LeserAenderungsWahl } from './LeserAenderungsWahl';
 import { SchriftgroessenRegler } from '../../../components/ui/SchriftgroessenRegler';
-import { MenueRegler, MenueSchalter, MenueTitel, MenueZeile } from '../../../components/ui/Menue';
+import { MenueGruppe, MenueRegler, MenueSchalter, MenueTitel, MenueZeile } from '../../../components/ui/Menue';
 
 // ─── «Ansicht ▾» der V3-Kopfzeile (FAHRPLAN-LESER-V3 Kap. 4a/4f, H1) ─────────
 //
@@ -62,7 +63,7 @@ import { MenueRegler, MenueSchalter, MenueTitel, MenueZeile } from '../../../com
 // unverändert durch (der Baustein setzt sie an derselben Stelle).
 const V3Switch = MenueSchalter;
 
-export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke, onPanelOeffnen }: {
+export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, onPanelOeffnen }: {
   /** `true` = Handy-Zuschnitt: der Öffner zeigt «···» statt «Ansicht ▾»
    *  (Fahrplan Kap. 4a). Reine Beschriftung — der Accessible-Name bleibt in
    *  beiden Zuschnitten «Ansicht», und die Elemente des Panels sind identisch. */
@@ -79,6 +80,18 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
    * zweite Wahrheit, und sie liefe beim ersten Nachjustieren auseinander.
    */
   hatAenderungsvermerke: boolean;
+  /**
+   * D35-F3 (7.9.2026) · Zahl der als `kl:'A'` klassifizierten Fussnoten des
+   * Erlasses (`zaehleAenderungsvermerke`, `../berechnungen` — dieselbe Quelle,
+   * aus der `hatAenderungsvermerke` mitgespeist wird, §5). `null` = Struktur
+   * noch nicht geladen, bewusst UNTERSCHIEDEN von 0.
+   *
+   * Gebraucht wird sie für genau eine Aussage: `0` heisst «dieser Erlass führt
+   * keine klassifizierte Änderungshistorie» — auf Kantonsrecht der Regelfall
+   * (`lib/normtext/browse.ts`) —, und dann dämpft die Stellung «Fassung» nichts.
+   * Das sagt das Menü hin (§8), statt es den Nutzer ausprobieren zu lassen.
+   */
+  aenderungsFussnoten: number | null;
   /**
    * A2 (H3-Nachzug) · «Entscheide & Kontext …» — der Weg zum Panel, der bleibt,
    * wenn der Zähler weg ist.
@@ -162,7 +175,11 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
         // enthält — stünde hier «Grösse des Gesetzestexts» und drinnen «Nur
         // Gesetzestext», trüge dieselbe Sache im selben Menü zwei Namen, genau
         // der Ä114-Fehler eine Ebene tiefer.
-        title={`Ansicht: Fussnoten${hatAenderungsvermerke ? ' · Fassung' : ''} · Rechtsprechung · Grösse nur des Gesetzestexts`}
+        // D35-F3: der Öffner kündigt an, was drinsteht — und drin steht seit dem
+        // Entscheid EINE Wahl, keine zwei Schalter. Trägt der Erlass keine
+        // Vermerke, wird sie gar nicht angeboten, also nennt der Tooltip sie
+        // dann auch nicht (dieselbe D1-Ehrlichkeit wie unten).
+        title={`Ansicht: ${hatAenderungsvermerke ? 'Änderungen als Fassung, Fussnoten oder aus · ' : ''}Rechtsprechung · Grösse nur des Gesetzestexts`}
       >
         {/* ── Ä91 (H4-Nachzug 18.8.2026) · ZWEI GESICHTER, NICHT DREI ────────
             Gemessen 18.8.2026 trug dieser Öffner DREI verschiedene Gestalten:
@@ -216,72 +233,35 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
               das Rezept (Trennlinie zur nächsten Gruppe, Spaltenfluss); die
               Rolle und der Name bleiben Wort für Wort, wo sie standen. */}
           <div id={panelId} role="menu" aria-label="Ansicht" data-v3-ansicht-menue className="lc-menu-gruppe">
-          <V3Switch
-            an={opt.fussnoten === 'an'}
-            label="Fussnoten"
-            // ── LM-025 (B8, 31.8.2026) · DIE ZAHL SAGT JETZT, WAS SIE ZÄHLT ──
-            // Der Befund («neben ‹Fussnoten› steht eine unerklärte Zahl (932)»)
-            // ist SICHTBAR überholt — im V3-Menü steht keine Ziffer mehr, die
-            // A26-Zahl lebt nur noch im Accessible Name. Genau dort war sie
-            // aber weiterhin unerklärt: ein Screenreader las «Fussnoten 932»,
-            // ohne dass irgendetwas sagte, worauf sich die 932 bezieht — für
-            // diese Nutzer war der Befund unverändert reproduzierbar.
-            // Sie ist keine Zahl am Artikel, sondern die Summe über den GANZEN
-            // Erlass (`leserV3Modell.ts` → `fussnotenAnzahl`, Summe der
-            // `fussnoten` aller Struktur-Einträge; am OR gegen das gebaute
-            // Artefakt nachgezählt: 1'686 Artikel, 932 Fussnoten). Der Zusatz
-            // «im Erlass» ist damit keine Schmückung, sondern die
-            // Bezugsgrösse — ohne sie liest sich dieselbe Zahl als «932 hier»
-            // (§8). Entfernen wäre der andere Weg gewesen und kollidiert mit
-            // Davids Entscheid A26 (11.7.2026, Zähler N am Fussnoten-Schalter);
-            // der bleibt unangetastet, er bekommt nur seine Einheit dazu.
-            ariaLabel={fussnotenAnzahl != null && fussnotenAnzahl > 0 ? `Fussnoten (${fussnotenAnzahl} im Erlass)` : undefined}
-            // Ä68: dieser Schalter trägt Marker UND Apparat, und zwar ALLE
-            // Klassen — auch `kl:'A'`. Er ist damit der einzige, der amtlichen
-            // Fussnotentext ausblendet.
-            // LM-025 · dieselbe Erklärung auch für Sehende: der Accessible Name
-            // trägt die Zahl, der Tooltip trägt ihre Bedeutung — ein Wortlaut,
-            // zwei Kanäle (§5). Ohne Zahl (Struktur noch nicht geladen) bleibt
-            // der Satz exakt der bisherige.
-            titel={`Amtlicher Fussnoten-Apparat am Artikelfuss ein- oder ausblenden — Marker und Apparat, alle Fussnoten${
-              fussnotenAnzahl != null && fussnotenAnzahl > 0 ? ` (${fussnotenAnzahl} in diesem Erlass)` : ''}`}
-            onKlick={() => schalte('fussnoten', opt.fussnoten === 'an')}
-            /* D4: `attrs` überschreibt `role="switch"` (`ui/Menue`: «die Rollen
-               setzt der Aufrufer»); `aria-checked` trägt der Schalter schon. */
-            attrs={{ role: 'menuitemcheckbox' }}
-          />
-          {/* Ä68 (Entscheid David 17.8.2026) · ENTKOPPELT. Der Schalter blendet
-              AUSSCHLIESSLICH die abgeleitete Fassungs-Zeile aus
-              (`[data-hist-slot]`) — nie eine Fussnote. Bis 17.8. nahm er `kl:'A'`
-              mit, und weil das beim Bundesrecht die Regel ist (StPO 187/285,
-              ZGB 719/809), verschwand mit ihm fast der ganze Apparat: Davids
-              Befund «wenn änderungsvermerke abgewählt wird dann verschwinden auch
-              fussnoten». Herleitung und Messreihe: index.css, Regel-Block Ä68. */}
-          {/* D1: … und nur, wenn dieser Erlass Vermerke TRÄGT. Auf BS-640.100 und
-              ZH-211.11 blieb dem Schalter sonst eine Layout-Raffung von 40 px je
-              Artikel — die Beschriftung versprach mehr, als sie hielt (§8). Die
-              Stellung im geteilten Store bleibt unberührt: nicht angeboten heisst
-              nicht zurückgesetzt (`leser-v3-umschalten` (a3)). */}
+          {/* ── D35-F3 (Entscheid David 7.9.2026) · EINE WAHL STATT ZWEIER SCHALTER
+              Hier standen «Fussnoten» (amtlicher Apparat samt Markern, alle
+              Klassen — Ä68) und «Fassung» (nur der abgeleitete Slot «Gilt seit …»
+              — Ä116) als zwei unabhängige `menuitemcheckbox`. Beide Historien
+              bleiben, wo sie stehen (`src/index.css` am Regelblock, §0 Ziff. 2b);
+              gemessen waren die vier Kombinationen alle erreichbar, und genau
+              das war Davids Befund: «es soll entweder fassung oder fussnoten
+              angezeigt werden. also entweder fassung, fussnoten oder aus.»
+              Die Radiogruppe samt Verlustfreiheits-Herleitung, A26-Zähler und
+              §8-Hinweis für unklassifizierte Erlasse steht in
+              `./LeserAenderungsWahl` (eigene Datei: diese hier stand bei 418 der
+              420 zulässigen Zeilen, Fundament-Sonde §6.6).
+              D1 UNVERÄNDERT: angeboten wird die Wahl nur, wenn der Erlass
+              Änderungsvermerke TRÄGT. Sonst gäbe es nichts zu wählen — die
+              Fassungs-Zeile fehlt, und `kl:'A'` gibt es nicht; drei Stellungen
+              mit identischer Wirkung wären der §8-Fall, den D1 gerade behebt.
+              Der Wert im geteilten Store bleibt dabei unberührt: nicht angeboten
+              heisst nicht zurückgesetzt (`leser-v3-umschalten` (a3)). */}
           {hatAenderungsvermerke && (
-          <V3Switch
-            an={opt.histansicht === 'an'}
-            label="Fassung"
-            // Ä68: derselbe Wortlaut wie in V1 (§5) — und er beschreibt jetzt die
-            // ganze Wirkung, nicht mehr einen Teil davon.
-            // ── Ä116 (18.8.2026) · SCHALTER UND ELEMENT HEISSEN GLEICH ────
-            // Der Schalter hiess «Änderungsvermerke», das Element, das er
-            // schaltet, trägt die Overline «FASSUNG · Gilt seit …». Wer den
-            // Schalter umlegte, musste erraten, dass die Zeile mit dem anderen
-            // Namen gemeint war. Ä68 hat die WIRKUNG schon geklärt (nur die
-            // Fassungs-Zeile, nie eine Fussnote) — jetzt folgt ihr der Name.
-            // Glossar: «Fassungs-Zeile → Fassung» überall.
-            titel="Fassungs-Zeile am Artikelfuss ein- oder ausblenden («Gilt seit …» samt Zeitleiste) — der amtliche Fussnoten-Apparat bleibt in beiden Stellungen sichtbar"
-            // Ä69: die Ä27-Hinweiszeile ist gestrichen — die Kreuz-Abhängigkeit,
-            // die sie erklärte, gibt es nicht mehr (`../leserOptionen`).
-            onKlick={() => schalte('histansicht', opt.histansicht === 'an')}
-            attrs={{ role: 'menuitemcheckbox' }}
-          />
+            <LeserAenderungsWahl wahl={opt.vermerke} fussnotenAnzahl={fussnotenAnzahl}
+              ohneKlassifikation={aenderungsFussnoten === 0} />
           )}
+          {/* Die zweite Gruppe trägt ebenfalls `role="group"`, und das ist keine
+              Zierde: `role="menu"` erlaubt als Kinder nur `menuitem*` und
+              `group`: ein nacktes `<div>` dazwischen ist genau der
+              `aria-required-children`-Verstoss, an dem axe den ersten D4-Bau
+              gekippt hat (Kommentar oben). Der Name sagt, was die beiden
+              Zeilen gemeinsam haben. */}
+          <MenueGruppe attrs={{ role: 'group', 'aria-label': 'Rechtsprechung' }}>
           {/* ── B2 (Klick-Test 18.8.2026) · DIE BESCHRIFTUNG WAR EINE ZUSAGE,
                  DIE V3 NICHT EINLÖST ────────────────────────────────────────
               Hier stand «Rechtsprechung im Text», Tooltip «Hinweise auf
@@ -342,6 +322,7 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
               onKlick={() => { setOffen(false); onPanelOeffnen(); }}
               attrs={{ 'data-v3-ansicht-panel-auf': '', 'data-v3-panel-oeffner': '', role: 'menuitem' }} />
           )}
+          </MenueGruppe>
           </div>
 
           {/* ── Schriftgrösse ────────────────────────────────────────────────

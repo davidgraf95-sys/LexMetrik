@@ -60,14 +60,17 @@ describe('Leser-Schriftskala — Persistenz und Migration', () => {
     expect(el.attrs['data-leserschrift']).toBe('normal');
     // Die anderen Felder desselben Speichers bleiben unberührt — der neue
     // Schlüssel darf keinen Alt-Zustand überschreiben (§8).
-    expect(el.attrs['data-fussnoten']).toBe('aus');
-    // S1 (deklarierte fachliche Änderung, §6.3): derselbe Alt-Speicher, aber
-    // `histansicht` ist seit dem Optionen-Rückbau zweiwertig — 'chronologie'
-    // bedeutete «Vermerke sichtbar» und migriert darum auf 'an' (nie auf 'aus';
-    // der Nutzer hatte sie ausdrücklich bestellt, §8). Die Migrations-Regeln
-    // selbst stehen unter `src/tests/leser-optionen-migration.test.ts`; hier
-    // zählt nur, dass der Schrift-Schlüssel sie nicht stört.
-    expect(el.attrs['data-histansicht']).toBe('an');
+    // S1 (deklarierte fachliche Änderung, §6.3): 'chronologie' bedeutete
+    // «Vermerke sichtbar» und migriert darum nie auf «aus» — der Nutzer hatte
+    // sie ausdrücklich bestellt (§8).
+    // D35-F3 (deklarierte fachliche Änderung, §6.3, Entscheid David 7.9.2026):
+    // `data-fussnoten`/`data-histansicht` sind zu EINEM `data-vermerke`
+    // geworden. «Vermerke sichtbar» ist dort die Stellung «fassung»; das
+    // abgewählte `fussnoten` spielt in diesem Zweig keine Rolle mehr, weil es
+    // den Apparat-Schalter nicht mehr gibt. Die Migrations-Regeln selbst stehen
+    // unter `src/tests/leser-optionen-migration.test.ts`; hier zählt nur, dass
+    // der Schrift-Schlüssel sie nicht stört.
+    expect(el.attrs['data-vermerke']).toBe('fassung');
   });
 
   it('unbekannter Wert ⇒ Vorgabestufe (nicht durchgereicht)', async () => {
@@ -115,18 +118,23 @@ describe('Leser-Schriftskala — Persistenz und Migration', () => {
     optionen.setzeLeserSchrift('sehr-gross');
     const o = JSON.parse(speicher.get('lm.leser.optionen')!);
     expect(o.schrift).toBe('sehr-gross');
-    expect(o.fussnoten).toBe('aus');
     expect(o.leitfaelle).toBe('an');
     expect(o.bezugKantone).toEqual(['BS']);
-    // S1 (deklarierte fachliche Änderung, §6.3): `hist: 'aus'` steht als
-    // `histansicht: 'aus'` im neuen Speicher — die Nutzerwahl ist erhalten, nur
-    // unter dem neuen Schlüssel. Der mit S1 gestrichene `verweise` und der
-    // Alt-Schlüssel `hist` werden beim Schreiben ABGERÄUMT (dieselbe Mechanik wie
-    // `linien` und `zeitraum`): ein weitergeschleppter Alt-Wert liesse die
-    // Migration bei jedem Laden neu greifen.
-    expect(o.histansicht).toBe('aus');
+    // S1 (deklarierte fachliche Änderung, §6.3): `hist: 'aus'` stand als
+    // `histansicht: 'aus'` im neuen Speicher — die Nutzerwahl erhalten, nur
+    // unter neuem Schlüssel.
+    // D35-F3 (deklarierte fachliche Änderung, §6.3, Entscheid David 7.9.2026):
+    // dieselbe Wahl trägt jetzt EIN Feld. `fussnoten:'aus'` + `hist:'aus'` ist
+    // Zeile 4 der Entscheid-Tabelle und landet auf «aus» — die Nutzerwahl bleibt
+    // erhalten, sie heisst nur anders (Tabelle in `leserOptionen.ts`).
+    expect(o.vermerke).toBe('aus');
+    // Die gestrichenen Schlüssel werden beim Schreiben ABGERÄUMT (dieselbe
+    // Mechanik wie `linien` und `zeitraum`): ein weitergeschleppter Alt-Wert
+    // liesse die Migration bei jedem Laden neu greifen.
     expect(o.hist).toBeUndefined();
     expect(o.verweise).toBeUndefined();
+    expect(o.fussnoten).toBeUndefined();
+    expect(o.histansicht).toBeUndefined();
   });
 
   it('dieselbe Stufe noch einmal setzen weckt die Hörer NICHT (§15)', async () => {
